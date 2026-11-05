@@ -38,7 +38,7 @@ n.d(
                 return void ((t = e.body?.message ?? e.message),
                 (0, a.P0)({ text: E.intl.formatToPlainString(E.t.PsJmUe, { error: t }), variant: "critical" }));
             }
-            let { limit: d, isUpgradable: A } = (0, u.ZG)("ScheduledMessagesCreateRoadblock");
+            let { limit: d, isUpgradable: A } = (0, u.ZG)();
             A
                 ? (0, s.mM)(async () => {
                       let { default: e } = await Promise.all([n.e(454048), n.e(300699), n.e(717907), n.e(952582)]).then(

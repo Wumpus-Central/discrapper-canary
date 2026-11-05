@@ -1,4 +1,4 @@
-n.d(t, { default: () => eC });
+n.d(t, { default: () => eh });
 var l,
     a = n(477900),
     i = n(582128),
@@ -21,53 +21,52 @@ var l,
     w = n(139286),
     E = n(723702),
     x = n(551640),
-    k = n(566908),
-    I = n(970244),
-    v = n(969632);
+    k = n(970244),
+    I = n(969632);
 (n(323874), n(14289), n(35956));
-var P = n(744593),
-    N = n(608461),
-    S = n(412136);
-function y(e, t) {
+var v = n(744593),
+    P = n(608461),
+    N = n(412136);
+function S(e, t) {
     let n = decodeURIComponent(t).split("/").pop() ?? "temp.gif";
     return `${e}-${n}`;
 }
-var D = (((l = {}).PREPARING = "PREPARING"), (l.READY_TO_UPLOAD = "READY_TO_UPLOAD"), (l.ERROR = "ERROR"), l),
-    O = n(608299),
-    T = n(274652),
-    _ = n(31717);
-function L(e, t, n) {
-    let l = { id: t, channelId: e, file: n, platform: T.x.WEB, origin: "unknown:poll_attachment" };
-    O.A.addFile({ file: l, channelId: e, draftType: _.C.Poll });
+var y = (((l = {}).PREPARING = "PREPARING"), (l.READY_TO_UPLOAD = "READY_TO_UPLOAD"), (l.ERROR = "ERROR"), l),
+    D = n(608299),
+    O = n(274652),
+    T = n(31717);
+function _(e, t, n) {
+    let l = { id: t, channelId: e, file: n, platform: O.x.WEB, origin: "unknown:poll_attachment" };
+    D.A.addFile({ file: l, channelId: e, draftType: T.C.Poll });
 }
-var U = n(180662),
-    K = n(792996);
-function Y(e, t) {
+var L = n(180662),
+    U = n(792996);
+function K(e, t) {
     return { mediaAttachmentState: { status: t, mediaURL: e }, emoji: void 0, stickerId: void 0 };
 }
-var q = n(149468),
-    G = n(652215),
-    z = n(503698),
-    B = n.n(z),
-    H = n(855986),
-    M = n(165862),
-    V = n(477782),
-    F = n(289873),
-    W = n(460905),
-    $ = n(265872),
-    X = n(939249),
-    Z = n(22231),
-    Q = n(95477),
-    J = n(241326),
-    ee = n(565645),
-    et = n(920134),
-    en = n(770335),
-    el = n(734057),
-    ea = n(522602),
-    ei = n(307731),
-    er = n(698279),
-    eo = n(406255);
-function es(e) {
+var Y = n(149468),
+    q = n(652215),
+    G = n(503698),
+    z = n.n(G),
+    B = n(855986),
+    H = n(165862),
+    M = n(477782),
+    V = n(289873),
+    F = n(460905),
+    W = n(265872),
+    $ = n(939249),
+    X = n(22231),
+    Z = n(95477),
+    Q = n(241326),
+    J = n(565645),
+    ee = n(920134),
+    et = n(770335),
+    en = n(734057),
+    el = n(522602),
+    ea = n(307731),
+    ei = n(698279),
+    er = n(406255);
+function eo(e) {
     let {
         hasUpload: t,
         mediaUrl: n,
@@ -80,30 +79,30 @@ function es(e) {
     return t
         ? (0, a.jsx)("img", { src: n, alt: l, className: i })
         : null != r
-          ? (0, a.jsx)(ee.A, {
+          ? (0, a.jsx)(J.A, {
                 className: o,
                 emojiId: r.id,
-                emojiName: r.type === en.i.UNICODE ? r.optionallyDiverseSequence : r.name,
+                emojiName: r.type === et.i.UNICODE ? r.optionallyDiverseSequence : r.name,
                 animated: r.animated,
             })
           : s;
 }
-function ec(e) {
+function es(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: i } = e;
     return (0, a.jsx)("div", {
-        className: eo.li,
-        children: (0, a.jsx)(M.W, {
+        className: er.li,
+        children: (0, a.jsx)(H.W, {
             "data-menu-migrated-auto": !0,
             navId: "poll-media-edit-menu",
             onClose: i,
-            "aria-label": K.intl.string(K.t["cV+h7B"]),
+            "aria-label": U.intl.string(U.t["cV+h7B"]),
             onSelect: t,
-            children: (0, a.jsxs)(V.rX, {
+            children: (0, a.jsxs)(M.rX, {
                 children: [
-                    (0, a.jsx)(V.Dr, { id: "poll-media-replace", label: K.intl.string(K.t.CZeRhU), action: n }),
-                    (0, a.jsx)(V.Dr, {
+                    (0, a.jsx)(M.Dr, { id: "poll-media-replace", label: U.intl.string(U.t.CZeRhU), action: n }),
+                    (0, a.jsx)(M.Dr, {
                         id: "poll-media-delete",
-                        label: K.intl.string(K.t.IhMxgu),
+                        label: U.intl.string(U.t.IhMxgu),
                         action: l,
                         color: "danger",
                     }),
@@ -112,7 +111,7 @@ function ec(e) {
         }),
     });
 }
-function eu(e) {
+function ec(e) {
     let {
             channelId: t,
             localCreationAnswerId: n,
@@ -125,7 +124,7 @@ function eu(e) {
             containerRef: m,
         } = e,
         d = i.useRef(null),
-        f = (0, H.bG)([el.A], () => el.A.getChannel(t)),
+        f = (0, B.bG)([en.A], () => en.A.getChannel(t)),
         {
             emoji: g,
             isLoadingMedia: h,
@@ -135,8 +134,8 @@ function eu(e) {
         } = (function (e) {
             let { channelId: t, localCreationAnswerId: n, image: l } = e,
                 a = l?.emoji,
-                r = l?.mediaAttachmentState?.status === D.PREPARING,
-                o = (0, H.bG)([ea.A], () => ea.A.getUpload(t, n, _.C.Poll)),
+                r = l?.mediaAttachmentState?.status === y.PREPARING,
+                o = (0, B.bG)([el.A], () => el.A.getUpload(t, n, T.C.Poll)),
                 [s, c] = i.useState(),
                 [u, m] = i.useState("");
             return (
@@ -161,20 +160,20 @@ function eu(e) {
         j = i.useMemo(
             () =>
                 C
-                    ? K.intl.formatToPlainString(K.t.vcC7Qn, { imageName: (0, v.Kj)(R), answerNumber: s + 1 })
+                    ? U.intl.formatToPlainString(U.t.vcC7Qn, { imageName: (0, I.Kj)(R), answerNumber: s + 1 })
                     : null != g
-                      ? K.intl.formatToPlainString(K.t.ncOAha, { emojiName: g.name, answerNumber: s + 1 })
-                      : K.intl.formatToPlainString(K.t.emdpNo, { answerNumber: s + 1 }),
+                      ? U.intl.formatToPlainString(U.t.ncOAha, { emojiName: g.name, answerNumber: s + 1 })
+                      : U.intl.formatToPlainString(U.t.emdpNo, { answerNumber: s + 1 }),
             [C, g, s, R],
         ),
         w = i.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, a.jsx)("div", {
-                    className: eo.Fb,
-                    children: (0, a.jsx)(et.A, {
+                    className: er.Fb,
+                    children: (0, a.jsx)(ee.A, {
                         channel: f,
-                        pickerIntention: ei.EmojiIntention.POLLS,
+                        pickerIntention: ea.EmojiIntention.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
@@ -189,40 +188,40 @@ function eu(e) {
         E = i.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, a.jsx)(ec, { onSelect: t, onEditMedia: u, onDeleteMedia: A, closePopout: t });
+                return (0, a.jsx)(es, { onSelect: t, onEditMedia: u, onDeleteMedia: A, closePopout: t });
             },
             [A, u],
         ),
         x = h
-            ? (0, a.jsx)(F.y, { className: eo.EC })
-            : (0, a.jsx)(es, {
+            ? (0, a.jsx)(V.y, { className: er.EC })
+            : (0, a.jsx)(eo, {
                   hasUpload: C,
                   mediaUrl: b,
                   mediaFilename: R,
-                  imageClassName: B()(eo.$_, eo.qX),
+                  imageClassName: z()(er.$_, er.qX),
                   emoji: g,
-                  emojiClassName: B()(eo.$_, eo.qZ),
-                  fallback: (0, a.jsx)(W.n, { size: "sm", color: "currentColor", className: eo.vr }),
+                  emojiClassName: z()(er.$_, er.qZ),
+                  fallback: (0, a.jsx)(F.n, { size: "sm", color: "currentColor", className: er.vr }),
               }),
-        k = B()(er.VQ, eo.GB, { [eo.ZV]: p });
-    return (0, a.jsx)($.Y, {
+        k = z()(ei.VQ, er.GB, { [er.ZV]: p });
+    return (0, a.jsx)(W.Y, {
         targetElementRef: m,
         renderPopout: w,
         shouldShow: c,
         onRequestClose: u,
-        animation: $.Y.Animation.NONE,
+        animation: W.Y.Animation.NONE,
         position: "bottom",
         spacing: 2,
         children: (e) => {
             let { "aria-controls": t, "aria-expanded": n, ...l } = e;
-            return (0, a.jsx)($.Y, {
+            return (0, a.jsx)(W.Y, {
                 targetElementRef: d,
-                animation: $.Y.Animation.NONE,
+                animation: W.Y.Animation.NONE,
                 position: "bottom",
                 renderPopout: E,
                 children: (e) => {
                     let { onClick: l, "aria-controls": i, "aria-expanded": r, ...o } = e;
-                    return (0, a.jsxs)(X.D, {
+                    return (0, a.jsxs)($.D, {
                         innerRef: d,
                         ...o,
                         className: k,
@@ -233,10 +232,10 @@ function eu(e) {
                         children: [
                             x,
                             p &&
-                                (0, a.jsx)(Z.PencilIcon, {
+                                (0, a.jsx)(X.PencilIcon, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: eo.IZ,
+                                    className: er.IZ,
                                     "aria-hidden": !0,
                                 }),
                         ],
@@ -246,7 +245,7 @@ function eu(e) {
         },
     });
 }
-function em(e) {
+function eu(e) {
     let {
             channelId: t,
             answer: n,
@@ -282,7 +281,7 @@ function em(e) {
                     case "enter":
                         (r &&
                             (e.preventDefault(),
-                            ((0, v.ND)(n) || "macos" !== (0, E.R0)() ? t : a) ? (e.stopPropagation(), f()) : d()),
+                            ((0, I.ND)(n) || "macos" !== (0, E.R0)() ? t : a) ? (e.stopPropagation(), f()) : d()),
                             C.current[l + 1]?.focusInput());
                         break;
                     case "e":
@@ -291,7 +290,7 @@ function em(e) {
             },
             [d, n, C, l, r, f, w],
         ),
-        k = (0, a.jsx)(eu, {
+        k = (0, a.jsx)(ec, {
             containerRef: b,
             channelId: t,
             buttonImage: n.image,
@@ -304,19 +303,19 @@ function em(e) {
         });
     return (0, a.jsx)("div", {
         ref: b,
-        children: (0, a.jsx)(Q.k, {
+        children: (0, a.jsx)(Z.k, {
             error: g,
             leading: { type: "emoji", button: k },
             trailing: u
                 ? {
-                      "aria-label": K.intl.formatToPlainString(K.t["22fjEc"], { answerNumber: l + 1 }),
-                      icon: J.TrashIcon,
+                      "aria-label": U.intl.formatToPlainString(U.t["22fjEc"], { answerNumber: l + 1 }),
+                      icon: Q.TrashIcon,
                       onClick: () => m(l),
                       buttonRef: R,
                   }
                 : void 0,
-            "aria-label": K.intl.formatToPlainString(K.t["3+V8G9"], { answerNumber: l + 1 }),
-            placeholder: K.intl.string(K.t.NNHVlv),
+            "aria-label": U.intl.formatToPlainString(U.t["3+V8G9"], { answerNumber: l + 1 }),
+            placeholder: U.intl.string(U.t.NNHVlv),
             value: n.text,
             onChange: (e) => o({ text: e, index: l, localCreationAnswerId: n.localCreationAnswerId }),
             onKeyDown: x,
@@ -325,14 +324,14 @@ function em(e) {
         }),
     });
 }
-var ed = n(412728),
-    ef = n(590923);
-function eg(e) {
+var em = n(412728),
+    ed = n(590923);
+function ef(e) {
     let { question: t, onChange: n, error: l, inputRef: i } = e;
     return (0, a.jsx)(u.f, {
-        label: K.intl.string(K.t.WBiKnI),
+        label: U.intl.string(U.t.WBiKnI),
         inputRef: i,
-        placeholder: K.intl.string(K.t["/uQqJW"]),
+        placeholder: U.intl.string(U.t["/uQqJW"]),
         value: t,
         onChange: n,
         maxLength: 300,
@@ -343,23 +342,23 @@ function eg(e) {
         showCharacterCount: !0,
     });
 }
-function eh(e) {
+function eg(e) {
     let { selectedDuration: t, onSelect: n } = e,
         l = Object.freeze({
-            [S.fT.ONE_HOUR]: K.intl.formatToPlainString(K.t["b/mgtw"], { num: 1 }),
-            [S.fT.FOUR_HOURS]: K.intl.formatToPlainString(K.t["b/mgtw"], { num: 4 }),
-            [S.fT.EIGHT_HOURS]: K.intl.formatToPlainString(K.t["b/mgtw"], { num: 8 }),
-            [S.fT.ONE_DAY]: K.intl.formatToPlainString(K.t["b/mgtw"], { num: 24 }),
-            [S.fT.THREE_DAYS]: K.intl.string(K.t.Xn5rX3),
-            [S.fT.SEVEN_DAYS]: K.intl.string(K.t["Lmq+rj"]),
-            [S.fT.FOURTEEN_DAYS]: K.intl.string(K.t["mb8A/O"]),
+            [N.fT.ONE_HOUR]: U.intl.formatToPlainString(U.t["b/mgtw"], { num: 1 }),
+            [N.fT.FOUR_HOURS]: U.intl.formatToPlainString(U.t["b/mgtw"], { num: 4 }),
+            [N.fT.EIGHT_HOURS]: U.intl.formatToPlainString(U.t["b/mgtw"], { num: 8 }),
+            [N.fT.ONE_DAY]: U.intl.formatToPlainString(U.t["b/mgtw"], { num: 24 }),
+            [N.fT.THREE_DAYS]: U.intl.string(U.t.Xn5rX3),
+            [N.fT.SEVEN_DAYS]: U.intl.string(U.t["Lmq+rj"]),
+            [N.fT.FOURTEEN_DAYS]: U.intl.string(U.t["mb8A/O"]),
         }),
         i = l[t];
     return (0, a.jsx)("div", {
-        className: ef.p0,
+        className: ed.p0,
         children: (0, a.jsx)(m.l, {
-            label: K.intl.string(K.t.bGHzxb),
-            "aria-label": K.intl.formatToPlainString(K.t.nXNHNJ, { duration: i }),
+            label: U.intl.string(U.t.bGHzxb),
+            "aria-label": U.intl.formatToPlainString(U.t.nXNHNJ, { duration: i }),
             options: Object.entries(l).map((e) => {
                 let [t, n] = e;
                 return { id: t.toString(), label: n, value: parseInt(t) };
@@ -371,54 +370,54 @@ function eh(e) {
         }),
     });
 }
-function eC(e) {
+function eh(e) {
     var t;
     let n,
-        { channel: l, transitionState: r, onClose: u, initialQuestion: m, initialAnswers: T, initialDuration: z } = e;
-    (0, w.A)({ type: ed.z.MODAL, name: s.IJ.POLL_EDITOR_VIEWED });
-    let B = i.useRef(null),
-        H = i.useRef([]),
-        M = i.useRef(null),
+        { channel: l, transitionState: r, onClose: u, initialQuestion: m, initialAnswers: O, initialDuration: G } = e;
+    (0, w.A)({ type: em.z.MODAL, name: s.IJ.POLL_EDITOR_VIEWED });
+    let z = i.useRef(null),
+        B = i.useRef([]),
+        H = i.useRef(null),
         {
-            answers: V,
-            question: F,
-            allowMultiSelect: W,
-            setAllowMultiSelect: $,
-            duration: X,
-            setDuration: Z,
-            scheduledTimestamp: Q,
-            setScheduledTimestamp: J,
-            handleQuestionChange: ee,
-            handleAnswerTextChange: et,
-            handleEmojiSelect: en,
-            canAddMoreAnswers: el,
-            handleRemoveAnswerImage: ea,
-            canRemoveMoreAnswers: ei,
-            handleAddAnswer: er,
-            handleRemoveAnswer: eo,
-            createPollError: es,
-            handleSubmitPoll: ec,
-            fieldErrors: eu,
-            submitting: eb,
-            shouldFocusOnInvalidField: eR,
-            setShouldFocusOnInvalidField: ep,
+            answers: M,
+            question: V,
+            allowMultiSelect: F,
+            setAllowMultiSelect: W,
+            duration: $,
+            setDuration: X,
+            scheduledTimestamp: Z,
+            setScheduledTimestamp: Q,
+            handleQuestionChange: J,
+            handleAnswerTextChange: ee,
+            handleEmojiSelect: et,
+            canAddMoreAnswers: en,
+            handleRemoveAnswerImage: el,
+            canRemoveMoreAnswers: ea,
+            handleAddAnswer: ei,
+            handleRemoveAnswer: er,
+            createPollError: eo,
+            handleSubmitPoll: es,
+            fieldErrors: ec,
+            submitting: eC,
+            shouldFocusOnInvalidField: eb,
+            setShouldFocusOnInvalidField: eR,
         } = (function (e, t, n, l) {
             let a = e.id,
                 [r, o] = i.useState(
-                    () => l?.initialAnswers?.map((e) => ({ ...(0, v.YP)(), ...e })) ?? [(0, v.YP)(), (0, v.YP)()],
+                    () => l?.initialAnswers?.map((e) => ({ ...(0, I.YP)(), ...e })) ?? [(0, I.YP)(), (0, I.YP)()],
                 ),
                 [s, c] = i.useState(l?.initialQuestion ?? ""),
                 [u, m] = i.useState(!1),
-                [d, f] = i.useState(l?.initialDuration ?? S.fT.ONE_DAY),
+                [d, f] = i.useState(l?.initialDuration ?? N.fT.ONE_DAY),
                 [g, h] = i.useState(),
                 [C, b] = i.useState({}),
                 [R, p] = i.useState(!1),
-                A = r.filter((e) => (0, v.ND)(e)),
-                j = r.filter((e) => (0, v.VD)(e)),
+                A = r.filter((e) => (0, I.ND)(e)),
+                j = r.filter((e) => (0, I.VD)(e)),
                 w = s.length > 0 && A.length >= 1 && 0 === j.length,
-                [E, { error: x, loading: k }] = (0, N.A)(U.A.createPoll),
-                I = r.length < 10,
-                T = r.length > 1,
+                [E, { error: x, loading: k }] = (0, P.A)(L.A.createPoll),
+                O = r.length < 10,
+                Y = r.length > 1,
                 q = i.useCallback((e) => {
                     (b((e) => {
                         let t = { ...e };
@@ -450,8 +449,8 @@ function eC(e) {
                         null != a &&
                             a.mediaURL !== n &&
                             (async function (e, t, n) {
-                                O.A.remove(e, t, _.C.Poll);
-                            })(e, l.localCreationAnswerId, y(l.localCreationAnswerId, a.mediaURL));
+                                D.A.remove(e, t, T.C.Poll);
+                            })(e, l.localCreationAnswerId, S(l.localCreationAnswerId, a.mediaURL));
                     },
                     [r],
                 ),
@@ -459,15 +458,15 @@ function eC(e) {
                     async (e, t, n) => {
                         let l = r[t].localCreationAnswerId;
                         (B(e, t),
-                        z(Y(n, D.PREPARING), t),
+                        z(K(n, y.PREPARING), t),
                         null ==
                             (await (async function (e, t, n) {
-                                let l = y(t, n),
+                                let l = S(t, n),
                                     a = await fetch(n);
-                                return (L(e, t, new File([await a.blob()], l, { type: "image/gif" })), n);
+                                return (_(e, t, new File([await a.blob()], l, { type: "image/gif" })), n);
                             })(e, l, n)))
-                            ? z(Y(n, D.ERROR), t)
-                            : z(Y(n, D.READY_TO_UPLOAD), t);
+                            ? z(K(n, y.ERROR), t)
+                            : z(K(n, y.READY_TO_UPLOAD), t);
                     },
                     [r, z, B],
                 ),
@@ -475,7 +474,7 @@ function eC(e) {
                     (e, t, n) => {
                         let l = r[t].localCreationAnswerId,
                             a = URL.createObjectURL(n);
-                        (B(e, t), z(Y(a, D.PREPARING), t), L(e, l, n), z(Y(a, D.READY_TO_UPLOAD), t));
+                        (B(e, t), z(K(a, y.PREPARING), t), _(e, l, n), z(K(a, y.READY_TO_UPLOAD), t));
                     },
                     [r, z, B],
                 ),
@@ -492,11 +491,11 @@ function eC(e) {
                     });
                 }, []),
                 W = i.useCallback(() => {
-                    I && o((e) => [...e, (0, v.YP)()]);
-                }, [I]),
+                    O && o((e) => [...e, (0, I.YP)()]);
+                }, [O]),
                 $ = i.useCallback(
                     (e) => {
-                        if (!T) return;
+                        if (!Y) return;
                         let t = r.length;
                         (B(a, e),
                             o((t) => {
@@ -505,12 +504,12 @@ function eC(e) {
                             }),
                             n?.({ indexToRemove: e, numberOfAnswers: t }));
                     },
-                    [r.length, T, a, n, B],
+                    [r.length, Y, a, n, B],
                 );
             i.useEffect(
                 () => () => {
                     !(async function (e) {
-                        O.A.clearAll(e, _.C.Poll);
+                        D.A.clearAll(e, T.C.Poll);
                     })(a);
                 },
                 [a],
@@ -519,12 +518,12 @@ function eC(e) {
                     let e = !0,
                         t = {};
                     return (
-                        0 === s.trim().length && ((e = !1), (t.question = K.intl.string(K.t.gPX3oI))),
-                        r.filter((e) => (0, v.ND)(e)).length < 1 &&
-                            ((e = !1), (t[`answer-${r[0].localCreationAnswerId}`] = K.intl.string(K.t.fYvzEX))),
+                        0 === s.trim().length && ((e = !1), (t.question = U.intl.string(U.t.gPX3oI))),
+                        r.filter((e) => (0, I.ND)(e)).length < 1 &&
+                            ((e = !1), (t[`answer-${r[0].localCreationAnswerId}`] = U.intl.string(U.t.fYvzEX))),
                         r.forEach((n) => {
-                            (0, v.VD)(n) &&
-                                ((e = !1), (t[`answer-${n.localCreationAnswerId}`] = K.intl.string(K.t["8Qqkc+"])));
+                            (0, I.VD)(n) &&
+                                ((e = !1), (t[`answer-${n.localCreationAnswerId}`] = U.intl.string(U.t["8Qqkc+"])));
                         }),
                         b(t),
                         p(!e),
@@ -538,7 +537,7 @@ function eC(e) {
                         answers: A,
                         allowMultiSelect: u,
                         duration: d,
-                        layout: P.Z.DEFAULT,
+                        layout: v.Z.DEFAULT,
                         onClose: t,
                         scheduledTimestamp: g,
                     });
@@ -557,8 +556,8 @@ function eC(e) {
                 scheduledTimestamp: g,
                 setScheduledTimestamp: h,
                 canPost: w,
-                canAddMoreAnswers: I,
-                canRemoveMoreAnswers: T,
+                canAddMoreAnswers: O,
+                canRemoveMoreAnswers: Y,
                 handleQuestionChange: q,
                 handleAnswerTextChange: G,
                 handleGifSelect: H,
@@ -580,16 +579,16 @@ function eC(e) {
             u,
             i.useCallback((e) => {
                 let { indexToRemove: t, numberOfAnswers: n } = e;
-                2 === n ? M.current?.focus() : H.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
+                2 === n ? H.current?.focus() : B.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
             }, []),
-            { initialQuestion: m, initialAnswers: T, initialDuration: z },
+            { initialQuestion: m, initialAnswers: O, initialDuration: G },
         ),
-        { trackPollCreationCancelled: eA } = {
+        { trackPollCreationCancelled: ep } = {
             trackPollCreationCancelled: i.useCallback(() => {
                 let e = 0,
                     t = 0,
                     n = 0;
-                (V.forEach((l) => {
+                (M.forEach((l) => {
                     let a = l.image;
                     null != a &&
                         (null != a.emoji
@@ -598,68 +597,67 @@ function eC(e) {
                               ? (n += 1)
                               : null != a.mediaAttachmentState && (e += 1));
                 }),
-                    q.Ay.trackWithMetadata(G.HAw.POLL_CREATION_CANCELLED, {
-                        answers_count: V.length,
+                    Y.Ay.trackWithMetadata(q.HAw.POLL_CREATION_CANCELLED, {
+                        answers_count: M.length,
                         attachments_count: e,
                         emojis_count: t,
                         stickers_count: n,
-                        allow_multiselect: W,
-                        layout_type: P.Z.DEFAULT,
+                        allow_multiselect: F,
+                        layout_type: v.Z.DEFAULT,
                     }));
-            }, [V, W]),
+            }, [M, F]),
         },
-        ej = (0, k.Sc)(),
-        ew = i.useRef(V.length),
-        eE = i.useCallback(() => {
-            (eA(), u());
-        }, [u, eA]),
-        ex = i.useCallback(() => {
-            (0, v.Wn)(F, V)
-                ? eE()
+        eA = i.useRef(M.length),
+        ej = i.useCallback(() => {
+            (ep(), u());
+        }, [u, ep]),
+        ew = i.useCallback(() => {
+            (0, I.Wn)(V, M)
+                ? ej()
                 : j.A.show({
-                      title: K.intl.string(K.t.HMrgcp),
-                      body: K.intl.string(K.t["Wxa/j8"]),
-                      confirmText: K.intl.string(K.t.TzJA4g),
+                      title: U.intl.string(U.t.HMrgcp),
+                      body: U.intl.string(U.t["Wxa/j8"]),
+                      confirmText: U.intl.string(U.t.TzJA4g),
                       confirmVariant: "critical-primary",
-                      cancelText: K.intl.string(K.t["2BR5R2"]),
+                      cancelText: U.intl.string(U.t["2BR5R2"]),
                       onConfirm: () => {
-                          eE();
+                          ej();
                       },
                   });
-        }, [eE, V, F]);
+        }, [ej, M, V]);
     (i.useEffect(() => {
-        (0, d.zb)(S.sm, (e) => (0, a.jsx)(eC, { ...e, channel: l }), ex);
-    }, [ex, l]),
+        (0, d.zb)(N.sm, (e) => (0, a.jsx)(eh, { ...e, channel: l }), ew);
+    }, [ew, l]),
         i.useEffect(() => {
-            (V.length > ew.current && H.current[V.length - 1]?.focusInput(), (ew.current = V.length));
-        }, [V.length]),
+            (M.length > eA.current && B.current[M.length - 1]?.focusInput(), (eA.current = M.length));
+        }, [M.length]),
         i.useEffect(() => {
-            if (eR) {
-                if (eu?.question != null) B.current?.focus();
+            if (eb) {
+                if (ec?.question != null) z.current?.focus();
                 else {
-                    let e = V.findIndex((e) => !!eu[`answer-${e.localCreationAnswerId}`]);
-                    -1 !== e && H.current[e]?.focusInput();
+                    let e = M.findIndex((e) => !!ec[`answer-${e.localCreationAnswerId}`]);
+                    -1 !== e && B.current[e]?.focusInput();
                 }
-                ep(!1);
+                eR(!1);
             }
-        }, [eu, V, eR, ep, H]));
-    let ek = i.useCallback(() => {
-            r === f.ip.ENTERED && ec();
-        }, [ec, r]),
-        eI = i.useCallback(
+        }, [ec, M, eb, eR, B]));
+    let eE = i.useCallback(() => {
+            r === f.ip.ENTERED && es();
+        }, [es, r]),
+        ex = i.useCallback(
             () =>
-                (0, I.e0)({
+                (0, k.e0)({
                     channel: l,
-                    defaultValue: null != Q ? o()(Q) : void 0,
-                    onSubmit: J,
-                    onClear: null != Q ? () => J(void 0) : void 0,
+                    defaultValue: null != Z ? o()(Z) : void 0,
+                    onSubmit: Q,
+                    onClear: null != Z ? () => Q(void 0) : void 0,
                     entryPoint: x.t.POLL_CREATION,
-                    isEditing: null != Q,
+                    isEditing: null != Z,
                 }),
-            [l, Q, J],
+            [l, Z, Q],
         ),
-        ev =
-            ((t = { disabled: eb, onSubmit: ek }),
+        ek =
+            ((t = { disabled: eC, onSubmit: eE }),
             (n = i.useRef(t)),
             i.useEffect(() => {
                 n.current = t;
@@ -670,85 +668,81 @@ function eC(e) {
                     { disabled: a = !1, onSubmit: i } = n.current;
                 "enter" === e.key.toLowerCase() && ("macos" === (0, E.R0)() ? l : t) && !a && (e.preventDefault(), i());
             }, [])),
-        eP = i.useMemo(
+        eI = i.useMemo(
             () => [
-                ...(ej
-                    ? [
-                          {
-                              variant: null != Q ? "active" : "secondary",
-                              icon: g.U,
-                              text: void 0,
-                              fullWidth: !1,
-                              "aria-label":
-                                  null != Q
-                                      ? K.intl.formatToPlainString(K.t.ZN3tIx, { timestamp: new Date(Q).valueOf() })
-                                      : K.intl.string(K.t.rlf0tb),
-                              onClick: eI,
-                              disabled: eb,
-                          },
-                      ]
-                    : []),
-                { variant: "primary", onClick: ek, submitting: eb, text: K.intl.string(K.t.JOj8Zk), autoFocus: !1 },
+                {
+                    variant: null != Z ? "active" : "secondary",
+                    icon: g.U,
+                    text: void 0,
+                    fullWidth: !1,
+                    "aria-label":
+                        null != Z
+                            ? U.intl.formatToPlainString(U.t.ZN3tIx, { timestamp: new Date(Z).valueOf() })
+                            : U.intl.string(U.t.rlf0tb),
+                    onClick: ex,
+                    disabled: eC,
+                },
+                { variant: "primary", onClick: eE, submitting: eC, text: U.intl.string(U.t.JOj8Zk), autoFocus: !1 },
             ],
-            [ek, eb, ej, Q, eI],
+            [eE, eC, Z, ex],
         );
     return (0, a.jsx)(c.a, {
         transitionState: r,
         onClose: u,
-        title: K.intl.string(K.t["GD/8X8"]),
-        actions: eP,
-        actionBarInput: (0, a.jsx)(h.S, { checked: W, onChange: (e) => $(e), label: K.intl.string(K.t["Ux+iQU"]) }),
+        title: U.intl.string(U.t["GD/8X8"]),
+        actions: eI,
+        actionBarInput: (0, a.jsx)(h.S, { checked: F, onChange: (e) => W(e), label: U.intl.string(U.t["Ux+iQU"]) }),
         children: (0, a.jsxs)("div", {
-            className: ef.Qs,
-            onKeyDown: ev,
+            className: ed.Qs,
+            onKeyDown: ek,
             children: [
-                null != es && (0, a.jsx)(C.w, { type: "critical", message: es.getAnyErrorMessage(), role: "alert" }),
-                (0, a.jsx)(eg, { question: F, onChange: ee, error: eu?.question, inputRef: B }),
+                null != eo && (0, a.jsx)(C.w, { type: "critical", message: eo.getAnyErrorMessage(), role: "alert" }),
+                (0, a.jsx)(ef, { question: V, onChange: J, error: ec?.question, inputRef: z }),
                 (0, a.jsx)(b.h, { size: 26 }),
                 (0, a.jsxs)(R.D, {
                     role: "group",
-                    label: K.intl.string(K.t.oMBfeS),
+                    label: U.intl.string(U.t.oMBfeS),
                     children: [
-                        V.map((e, t) =>
+                        M.map((e, t) =>
                             (0, a.jsx)(
-                                em,
+                                eu,
                                 {
                                     answer: e,
                                     channelId: l.id,
                                     index: t,
-                                    isLastAnswer: t === V.length - 1,
-                                    onEmojiSelect: en,
-                                    onEmojiRemove: ea,
-                                    onAnswerTextChange: et,
-                                    onRemoveAnswer: eo,
-                                    addAnswer: er,
-                                    submitPoll: ek,
-                                    answerRowRefs: H,
-                                    error: eu?.[`answer-${e.localCreationAnswerId}`],
-                                    canRemoveAnswer: ei,
+                                    isLastAnswer: t === M.length - 1,
+                                    onEmojiSelect: et,
+                                    onEmojiRemove: el,
+                                    onAnswerTextChange: ee,
+                                    onRemoveAnswer: er,
+                                    addAnswer: ei,
+                                    submitPoll: eE,
+                                    answerRowRefs: B,
+                                    error: ec?.[`answer-${e.localCreationAnswerId}`],
+                                    canRemoveAnswer: ea,
                                     ref: (e) => {
-                                        H.current[t] = e;
+                                        B.current[t] = e;
                                     },
                                 },
                                 e.localCreationAnswerId,
                             ),
                         ),
-                        el &&
+                        en &&
                             (0, a.jsx)("div", {
-                                className: ef.Ox,
+                                className: ed.Ox,
                                 children: (0, a.jsx)(p.$, {
                                     icon: A.j,
                                     variant: "secondary",
-                                    onClick: er,
-                                    "aria-label": K.intl.string(K.t.B2Uvme),
-                                    buttonRef: M,
-                                    text: K.intl.string(K.t.B2Uvme),
+                                    onClick: ei,
+                                    "aria-label": U.intl.string(U.t.B2Uvme),
+                                    buttonRef: H,
+                                    text: U.intl.string(U.t.B2Uvme),
                                 }),
                             }),
                     ],
                 }),
                 (0, a.jsx)(b.h, { size: 18 }),
-                (0, a.jsx)(eh, { selectedDuration: X, onSelect: Z }),
+                (0, a.jsx)(eg, { selectedDuration: $, onSelect: X }),
             ],
         }),
     });

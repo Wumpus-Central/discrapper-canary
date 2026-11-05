@@ -8,12 +8,11 @@ var i = n(477900),
     c = n(268218),
     u = n(335180),
     _ = n(85109),
-    E = n(566908),
-    A = n(594061),
-    h = n(617617),
-    f = n(188567),
-    I = n(652215);
-let p = (0, c.Fe)({
+    E = n(594061),
+    A = n(617617),
+    h = n(188567),
+    f = n(652215);
+let I = (0, c.Fe)({
     createPromise: () =>
         Promise.all([
             n.e(578667),
@@ -484,97 +483,95 @@ n.d(
                 {
                     onOpen: c,
                     onClose: u,
-                    children: m,
-                    popoutPosition: g,
-                    popoutAlign: T,
-                    targetElementRef: S,
-                    spacing: N,
-                    dialogClassName: C,
+                    children: p,
+                    popoutPosition: m,
+                    popoutAlign: g,
+                    targetElementRef: T,
+                    spacing: S,
+                    dialogClassName: N,
                 } = e,
-                { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
-                [R, L] = r.useState(!1),
-                [y, D] = [
-                    (0, a.bG)([h.A], () => h.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
+                { analyticsLocations: C } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+                [O, R] = r.useState(!1),
+                [L, y] = [
+                    (0, a.bG)([A.A], () => A.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
                     r.useCallback((e) => {
-                        A.wc.updateAsync(
+                        E.wc.updateAsync(
                             "inbox",
                             (t) => {
                                 if (t.currentTab === e) return !1;
                                 t.currentTab = e;
                             },
-                            A.Sb.FREQUENT_USER_ACTION,
+                            E.Sb.FREQUENT_USER_ACTION,
                         );
                     }, []),
                 ],
-                { showTutorial: b, setSeenTutorial: v } =
-                    ((t = (0, a.bG)([h.A], () => h.A.settings.inbox?.viewedTutorial ?? !1)),
+                { showTutorial: D, setSeenTutorial: b } =
+                    ((t = (0, a.bG)([A.A], () => A.A.settings.inbox?.viewedTutorial ?? !1)),
                     (n = r.useCallback(() => {
-                        A.wc.updateAsync(
+                        E.wc.updateAsync(
                             "inbox",
                             (e) => {
                                 e.viewedTutorial = !0;
                             },
-                            A.Sb.INFREQUENT_USER_ACTION,
+                            E.Sb.INFREQUENT_USER_ACTION,
                         );
                     }, [])),
-                    { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
-                P = r.useCallback(() => {
-                    (L(!1), R && u?.());
-                }, [u, R]),
-                M = r.useCallback(
+                    { showTutorial: !t && L === s.Y2.UNREADS, setSeenTutorial: n }),
+                v = r.useCallback(() => {
+                    (R(!1), O && u?.());
+                }, [u, O]),
+                P = r.useCallback(
                     (e) => {
-                        (L(!R), null != e && "number" == typeof e && D(e), R ? u?.() : c?.());
+                        (R(!O), null != e && "number" == typeof e && y(e), O ? u?.() : c?.());
                     },
-                    [u, c, R, D],
+                    [u, c, O, y],
                 );
             r.useEffect(
                 () => (
-                    f._.subscribe(I.jej.TOGGLE_INBOX, M),
+                    h._.subscribe(f.jej.TOGGLE_INBOX, P),
                     () => {
-                        f._.unsubscribe(I.jej.TOGGLE_INBOX, M);
+                        h._.unsubscribe(f.jej.TOGGLE_INBOX, P);
                     }
                 ),
-                [M],
+                [P],
             );
-            let U = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
+            let M = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
             r.useEffect(() => {
-                (y === s.Y2.GAME_INVITES || y === s.Y2.FOR_YOU) && D(s.Y2.UNREADS);
+                (L === s.Y2.GAME_INVITES || L === s.Y2.FOR_YOU) && y(s.Y2.UNREADS);
             });
-            let w = r.useCallback(
-                    (e) => {
-                        e.shiftKey || P();
-                    },
-                    [P],
-                ),
-                G = (0, E.Sc)();
+            let U = r.useCallback(
+                (e) => {
+                    e.shiftKey || v();
+                },
+                [v],
+            );
             return (0, i.jsx)(d.f5, {
-                value: O,
+                value: C,
                 children: (0, i.jsx)(l.Y, {
-                    targetElementRef: S,
+                    targetElementRef: T,
                     animation: l.Y.Animation.NONE,
-                    position: g,
-                    align: T,
+                    position: m,
+                    align: g,
                     autoInvert: !1,
-                    shouldShow: R,
-                    onRequestClose: P,
+                    shouldShow: O,
+                    onRequestClose: v,
                     renderPopout: function () {
-                        return (0, i.jsx)(p, {
-                            dialogClassName: C,
-                            isScheduledMessagesEnabled: G,
-                            tab: y,
-                            setTab: D,
-                            closePopout: P,
-                            handleMentionsJump: w,
-                            showTutorial: b,
-                            setSeenTutorial: v,
+                        return (0, i.jsx)(I, {
+                            dialogClassName: N,
+                            tab: L,
+                            setTab: y,
+                            closePopout: v,
+                            handleMentionsJump: U,
+                            showTutorial: D,
+                            setSeenTutorial: b,
                         });
                     },
                     ignoreModalClicks: !0,
-                    spacing: N,
+                    spacing: S,
                     clickTrap: !0,
                     children: (e, t) => {
                         let { isShown: n } = t;
-                        return m(M, n, e, U);
+                        return p(P, n, e, M);
                     },
                 }),
             });

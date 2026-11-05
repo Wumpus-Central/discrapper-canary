@@ -144,7 +144,7 @@ let S = [
         ],
         predicate: (e) => {
             let { channel: t } = e;
-            return null != t && (0, E.kJ)(t, "ApplicationCommandBuiltInCommands");
+            return null != t && (0, E.kJ)(t);
         },
         execute: (e, t) => {
             let { channel: n } = t,

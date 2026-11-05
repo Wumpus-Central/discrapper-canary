@@ -1,74 +1,51 @@
 n(938796);
-var i = n(284009),
+var i = n(536637),
     r = n.n(i),
-    a = n(536637),
-    s = n.n(a),
-    l = n(665260),
-    o = n(855986),
-    d = n(626584),
-    c = n(945810),
-    u = n(432005),
-    _ = n(677413),
-    E = n(576705),
-    A = n(287809),
-    h = n(129230),
-    f = n(403362),
-    I = n(474090),
-    p = n(811091),
-    m = n(551640),
-    g = n(652215),
-    T = n(682901),
-    S = n(853297),
-    N = n(792996);
-let C = new d.A("Scheduled Messages");
-class O {
-    enabled = !1;
-    limit = 0;
-    constructor(e, t) {
-        (r()(null != t.limit, "Config is missing scheduled message limit"), (this.enabled = e), (this.limit = t.limit));
-    }
+    a = n(665260),
+    s = n(855986),
+    l = n(626584),
+    o = n(432005),
+    d = n(677413),
+    c = n(576705),
+    u = n(287809),
+    _ = n(129230),
+    E = n(403362),
+    A = n(474090),
+    h = n(811091),
+    f = n(551640),
+    I = n(652215),
+    p = n(682901),
+    m = n(853297),
+    g = n(792996);
+let T = new l.A("Scheduled Messages");
+function S() {
+    return r()().add(600, "seconds");
 }
-let R = (0, c.mj)({
-    name: "2026-08-scheduled-messages",
-    kind: "user",
-    defaultConfig: new O(!1, { limit: 0 }),
-    variations: { 1: (e) => new O(!0, JSON.parse(e)), 2: (e) => new O(!0, JSON.parse(e)) },
-});
-function L() {
-    return R.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
-}
-function y() {
-    return s()().add(600, "seconds");
-}
-function D(e) {
-    let t = s()().add(691200, "seconds");
+function N(e) {
+    let t = r()().add(691200, "seconds");
     if (null == e) return t;
-    let n = s()(p.default.extractTimestamp(e));
-    return s().min(t, n.add(S.a, "seconds"));
+    let n = r()(h.default.extractTimestamp(e));
+    return r().min(t, n.add(m.a, "seconds"));
 }
-function b(e, t) {
-    return e.enabled
-        ? t
-            ? { limit: 25, isUpgradable: !1 }
-            : { limit: e.limit, isUpgradable: !0 }
-        : { limit: 0, isUpgradable: !1 };
+function C(e) {
+    return e ? { limit: 25, isUpgradable: !1 } : { limit: 1, isUpgradable: !0 };
 }
 n.d(
     t,
     {},
     {
         FF: function () {
-            let e = y(),
-                t = s()().startOf("day").set("hours", 9),
-                n = s()().startOf("day").set("hours", 13);
+            let e = S(),
+                t = r()().startOf("day").set("hours", 9),
+                n = r()().startOf("day").set("hours", 13);
             return [
                 t.isAfter(e)
-                    ? { label: N.intl.string(N.t["qINKo/"]), value: t }
-                    : { label: N.intl.string(N.t.tjIn9i), value: t.add(1, "day") },
+                    ? { label: g.intl.string(g.t["qINKo/"]), value: t }
+                    : { label: g.intl.string(g.t.tjIn9i), value: t.add(1, "day") },
                 n.isAfter(e)
-                    ? { label: N.intl.string(N.t.qT6LjY), value: n }
-                    : { label: N.intl.string(N.t.EMRZyS), value: n.add(1, "day") },
-                { label: N.intl.string(N.t["+P5MmK"]), value: s()().startOf("isoWeek").add(1, "week").set("hours", 9) },
+                    ? { label: g.intl.string(g.t.qT6LjY), value: n }
+                    : { label: g.intl.string(g.t.EMRZyS), value: n.add(1, "day") },
+                { label: g.intl.string(g.t["+P5MmK"]), value: r()().startOf("isoWeek").add(1, "week").set("hours", 9) },
             ];
         },
         Lg: function (e) {
@@ -91,72 +68,65 @@ n.d(
                     description: e.description,
                     title: e.title,
                 })),
-                record: (0, u.rh)({ ...e.message_preview, timestamp: e.send_at_timestamp }),
+                record: (0, o.rh)({ ...e.message_preview, timestamp: e.send_at_timestamp }),
             };
         },
-        Sc: L,
         UF: function (e) {
             let { content: t, flags: n } = e,
-                [i, r] = (0, _.Ay)(t);
-            return i ? [r, (0, l.UI)(n ?? 0, g.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
+                [i, r] = (0, d.Ay)(t);
+            return i ? [r, (0, a.UI)(n ?? 0, I.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
         },
         US: function () {
-            let e = s()().startOf("hour").add(1, "hour");
-            return e.isBefore(y()) ? e.add(1, "hour") : e;
+            let e = r()().startOf("hour").add(1, "hour");
+            return e.isBefore(S()) ? e.add(1, "hour") : e;
         },
         Vf: function (e, t) {
-            return e.isBefore(y()) ? N.intl.string(N.t["w/fgvh"]) : e.isAfter(D(t)) ? N.intl.string(N.t.Nt0tz7) : null;
+            return e.isBefore(S()) ? g.intl.string(g.t["w/fgvh"]) : e.isAfter(N(t)) ? g.intl.string(g.t.Nt0tz7) : null;
         },
         Y8: function (e) {
             switch (e) {
-                case m.A.SCHEDULED:
-                    return { isError: !1, stateMessage: N.intl.string(N.t.Fn6Odn) };
-                case m.A.ERROR_CHANNEL_NOT_FOUND:
-                    return { isError: !0, stateMessage: N.intl.string(N.t.v5O2dK) };
-                case m.A.ERROR_USER_NOT_FOUND:
-                    return { isError: !0, stateMessage: N.intl.string(N.t.j8uIfG) };
-                case m.A.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
-                    return { isError: !0, stateMessage: N.intl.string(N.t["w6zHX/"]) };
-                case m.A.ERROR_SEND_FAILED:
-                    return { isError: !0, stateMessage: N.intl.string(N.t.pflV7z) };
-                case m.A.ERROR_SCHEDULED_MESSAGES_DISABLED:
-                    return { isError: !0, stateMessage: N.intl.string(N.t.j8uIfG) };
+                case f.A.SCHEDULED:
+                    return { isError: !1, stateMessage: g.intl.string(g.t.Fn6Odn) };
+                case f.A.ERROR_CHANNEL_NOT_FOUND:
+                    return { isError: !0, stateMessage: g.intl.string(g.t.v5O2dK) };
+                case f.A.ERROR_USER_NOT_FOUND:
+                    return { isError: !0, stateMessage: g.intl.string(g.t.j8uIfG) };
+                case f.A.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
+                    return { isError: !0, stateMessage: g.intl.string(g.t["w6zHX/"]) };
+                case f.A.ERROR_SEND_FAILED:
+                    return { isError: !0, stateMessage: g.intl.string(g.t.pflV7z) };
+                case f.A.ERROR_SCHEDULED_MESSAGES_DISABLED:
+                    return { isError: !0, stateMessage: g.intl.string(g.t.j8uIfG) };
                 default:
-                    (0, f.xb)(e);
+                    (0, E.xb)(e);
             }
         },
-        ZG: function (e) {
-            let t = (0, I.ki)(A.default.getCurrentUser(), T.PremiumTypes.TIER_2);
-            return b(R.getConfig({ location: e }), t);
+        ZG: function () {
+            return C((0, A.ki)(u.default.getCurrentUser(), p.PremiumTypes.TIER_2));
         },
-        _O: y,
-        dx: C,
-        kJ: function (e, t) {
-            return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(g.xBc.SEND_MESSAGES, e));
+        _O: S,
+        dx: T,
+        kJ: function (e) {
+            return !!e.isPrivate() || c.A.can(I.xBc.SEND_MESSAGES, e);
         },
         q8: function (e) {
             let { entryPoint: t, isEditing: n, channelId: i } = e;
-            h.default.track(g.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, {
+            _.default.track(I.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, {
                 entry_point: t,
                 is_editing: n,
                 channel_id: i,
             });
         },
         vK: function (e) {
-            let t = L(),
-                n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(g.xBc.SEND_MESSAGES, e)));
-            return t && n;
+            return (0, s.bG)([c.A], () => null != e && (!!e.isPrivate() || c.A.can(I.xBc.SEND_MESSAGES, e)));
         },
-        yp: D,
-        yz: function (e) {
-            return b(
-                R.useConfig({ location: e }),
-                (0, o.bG)([A.default], () => (0, I.ki)(A.default.getCurrentUser(), T.PremiumTypes.TIER_2)),
-            );
+        yp: N,
+        yz: function () {
+            return C((0, s.bG)([u.default], () => (0, A.ki)(u.default.getCurrentUser(), p.PremiumTypes.TIER_2)));
         },
         zs: function (e) {
             let { content: t, flags: n } = e;
-            return (0, l.Lt)(n ?? 0, g.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
+            return (0, a.Lt)(n ?? 0, I.pr7.SUPPRESS_NOTIFICATIONS) ? `${d.f5} ${t}` : t;
         },
     },
 );

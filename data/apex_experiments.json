@@ -3297,19 +3297,6 @@
     }
   },
   {
-    "name": "2026-08-scheduled-messages",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": null,
-      "2": null
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-08-show-expressive-modal-subtitle-alt",
     "defaultConfig": {
