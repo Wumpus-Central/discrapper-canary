@@ -7,12 +7,10 @@ e.exports = {
     Nr: "card_dyTp5R",
     rF: "effortCard_dyTp5R",
     wx: "header_dyTp5R",
-    y6: "headerToggle_dyTp5R",
-    vg: "headerChevron_dyTp5R",
     Z: "headerValue_dyTp5R",
     xQ: "headerValueExit_dyTp5R",
     lm: "headerValueEnter_dyTp5R",
     hs: "scale_dyTp5R",
-    Nb: "scaleEnds_dyTp5R",
+    XF: "staffOptions_dyTp5R",
     hZ: "trigger_dyTp5R",
 };

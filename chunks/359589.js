@@ -1,55 +1,57 @@
-var r = n(477900),
-    l = n(582128),
+var l = n(477900),
+    r = n(582128),
     i = n(691885),
     a = n(143129),
     s = n(834730),
-    o = n(534554),
-    u = n(56681),
-    d = n(392208),
-    c = n(590221),
-    f = n(191850),
-    h = n(792996),
-    m = n(944847);
-function p(e) {
-    let { settings: t, tiers: n, choices: s, disabled: d, onChange: c } = e,
-        m = l.useMemo(
+    o = n(123292),
+    u = n(534554),
+    d = n(56681),
+    c = n(392208),
+    f = n(2372),
+    h = n(590221),
+    p = n(191850),
+    m = n(792996),
+    x = n(944847);
+function g(e) {
+    let { settings: t, tiers: n, choices: s, disabled: o, onChange: c } = e,
+        f = r.useMemo(
             () => s.main.map((e) => ({ id: String(e.id), label: e.label, value: e.id, description: e.provider_label })),
             [s.main],
         ),
-        p = l.useMemo(() => s.thinking.map((e) => ({ id: e, label: u.hW[e] ?? e, value: e })), [s.thinking]);
-    function g(e) {
-        c((0, o.CM)(e));
+        h = r.useMemo(() => s.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [s.thinking]);
+    function x(e) {
+        c((0, u.CM)(e));
     }
-    let x = (0, o.Id)(t, n, t.tier);
-    return (0, r.jsxs)(r.Fragment, {
+    let g = (0, u.Id)(t, n, t.tier);
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, o.hl)(s) && null != x
-                ? (0, r.jsx)(i.l, {
-                      label: h.intl.string(f.default["59TDiR"]),
-                      options: m,
-                      value: x,
-                      onSelectionChange: (e) => g((0, o.t7)(t, t.tier, e)),
+            null != g
+                ? (0, l.jsx)(i.l, {
+                      label: m.intl.string(p.default["59TDiR"]),
+                      options: f,
+                      value: g,
+                      onSelectionChange: (e) => x((0, u.t7)(t, t.tier, e)),
                       selectionMode: "single",
-                      disabled: d,
+                      disabled: o,
                       fullWidth: !0,
                   })
                 : null,
-            (0, r.jsx)(i.l, {
-                label: h.intl.string(f.default.fpdVCO),
-                options: p,
+            (0, l.jsx)(i.l, {
+                label: m.intl.string(p.default.fpdVCO),
+                options: h,
                 value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
-                onSelectionChange: (e) => g({ ...t, thinking: e }),
+                onSelectionChange: (e) => x({ ...t, thinking: e }),
                 selectionMode: "single",
-                disabled: d,
+                disabled: o,
                 fullWidth: !0,
             }),
-            (0, o.gz)(t, n, s.main)
-                ? (0, r.jsx)(a.d, {
-                      label: h.intl.string(f.default["5AblQX"]),
-                      description: h.intl.string(f.default.QnUV8M),
+            (0, u.gz)(t, n, s.main)
+                ? (0, l.jsx)(a.d, {
+                      label: m.intl.string(p.default["5AblQX"]),
+                      description: m.intl.string(p.default.QnUV8M),
                       checked: !0 === t.fast,
-                      disabled: d,
-                      onChange: (e) => g({ ...t, fast: e }),
+                      disabled: o,
+                      onChange: (e) => x({ ...t, fast: e }),
                   })
                 : null,
         ],
@@ -60,64 +62,63 @@ n.d(
     {},
     {
         A: function (e) {
-            let { settings: t, tiers: n, choices: l, disabled: i, onChange: a } = e,
-                u = d.P.indexOf(t.tier);
-            return (0, r.jsxs)("div", {
-                className: m.OA,
+            let { settings: t, tiers: n, choices: i, disabled: a, onChange: d } = e,
+                v = c.P.indexOf(t.tier),
+                b = (0, u.hl)(i),
+                [y, M] = r.useState(!1);
+            return (0, l.jsxs)("div", {
+                className: x.OA,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: m.hs,
+                    (0, l.jsxs)("div", {
+                        className: x.hs,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: m.UT,
+                            (0, l.jsxs)("div", {
+                                className: x.UT,
                                 children: [
-                                    (0, r.jsx)(s.E, {
+                                    (0, l.jsx)(s.E, {
                                         tag: "span",
                                         variant: "body-md/medium",
                                         color: "text-default",
-                                        children: h.intl.string(f.default.aBPQxX),
+                                        children: m.intl.string(p.default.aBPQxX),
                                     }),
-                                    (0, r.jsx)(s.E, {
+                                    (0, l.jsx)(s.E, {
                                         tag: "span",
                                         variant: "body-sm/normal",
                                         color: "text-muted",
-                                        children: (0, o.Tc)(t.tier),
+                                        children: (0, u.Tc)(t.tier),
                                     }),
                                 ],
                             }),
-                            (0, r.jsxs)("div", {
-                                className: m.Nb,
-                                children: [
-                                    (0, r.jsx)(s.E, {
-                                        tag: "span",
-                                        variant: "body-sm/medium",
-                                        color: "text-subtle",
-                                        children: h.intl.string(f.default["/tlOR5"]),
-                                    }),
-                                    (0, r.jsx)(s.E, {
-                                        tag: "span",
-                                        variant: "body-sm/medium",
-                                        color: "text-subtle",
-                                        children: h.intl.string(f.default.FxoUwB),
-                                    }),
-                                ],
-                            }),
-                            (0, r.jsx)(c.A, {
-                                activeIndex: u,
-                                stops: d.P.map(o.D0),
-                                ariaLabel: h.intl.string(f.default.aBPQxX),
-                                disabled: i,
+                            (0, l.jsx)(f.A, {}),
+                            (0, l.jsx)(h.A, {
+                                activeIndex: v,
+                                stops: c.P.map(u.pL),
+                                lockedStops: u.bt,
+                                ariaLabel: m.intl.string(p.default.aBPQxX),
+                                disabled: a,
                                 onSelect: function (e) {
-                                    let n = d.P[e];
-                                    null != n && n !== t.tier && a((0, o.CM)((0, o.j6)(t, n)));
+                                    let n = c.P[e];
+                                    null != n && n !== t.tier && (0, u.g_)(n) && d((0, u.CM)((0, u.j6)(t, n)));
                                 },
                             }),
                         ],
                     }),
-                    (0, r.jsx)(p, { settings: t, tiers: n, choices: l, disabled: i, onChange: a }),
+                    b
+                        ? (0, l.jsx)("div", {
+                              className: x.XF,
+                              children: (0, l.jsx)(o.Q, {
+                                  text: m.intl.string(p.default.YLHRzA),
+                                  variant: "secondary",
+                                  textVariant: "body-sm/medium",
+                                  "aria-expanded": y,
+                                  onClick: () => M((e) => !e),
+                              }),
+                          })
+                        : null,
+                    b && y ? (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: a, onChange: d }) : null,
                 ],
             });
         },
-        b: p,
+        b: g,
     },
 );

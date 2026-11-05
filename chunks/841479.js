@@ -11,4 +11,5 @@ e.exports = {
     jz: "handlePreview_2kXYLF",
     ds: "stop_2kXYLF",
     Om: "dot_2kXYLF",
+    $2: "stopLocked_2kXYLF",
 };
