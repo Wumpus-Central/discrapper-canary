@@ -115,8 +115,10 @@ let U = i.memo(function (e) {
                                                         l.e(159957),
                                                         l.e(728136),
                                                         l.e(680029),
-                                                        l.e(966623),
-                                                    ]).then(l.bind(l, 660194));
+                                                        l.e(635864),
+                                                        l.e(447864),
+                                                        l.e(794704),
+                                                    ]).then(l.bind(l, 137811));
                                                     return (n) =>
                                                         (0, s.jsx)(e, { ...n, guild: t, source: V.PE1.GUILD_HOME });
                                                 });

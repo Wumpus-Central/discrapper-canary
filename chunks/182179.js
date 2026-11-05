@@ -229,8 +229,10 @@ function ei(e) {
                           t.e(159957),
                           t.e(728136),
                           t.e(680029),
-                          t.e(966623),
-                      ]).then(t.bind(t, 660194));
+                          t.e(635864),
+                          t.e(447864),
+                          t.e(794704),
+                      ]).then(t.bind(t, 137811));
                       return (n) => (0, s.jsx)(e, { ...n, guild: a, source: Z.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, g.mM)(async () => {

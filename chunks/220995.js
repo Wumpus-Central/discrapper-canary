@@ -81,8 +81,10 @@ t.d(
                                 t.e(159957),
                                 t.e(728136),
                                 t.e(680029),
-                                t.e(966623),
-                            ]).then(t.bind(t, 660194));
+                                t.e(635864),
+                                t.e(447864),
+                                t.e(794704),
+                            ]).then(t.bind(t, 137811));
                             return (t) =>
                                 (0, n.jsx)(e, { ...t, guild: F, channel: i, source: j.PE1.VOICE_INVITE_SUGGESTIONS });
                         });

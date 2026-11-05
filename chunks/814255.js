@@ -62,8 +62,10 @@ let C = [
                         n.e(159957),
                         n.e(728136),
                         n.e(680029),
-                        n.e(966623),
-                    ]).then(n.bind(n, 660194));
+                        n.e(635864),
+                        n.e(447864),
+                        n.e(794704),
+                    ]).then(n.bind(n, 137811));
                     return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: f.PE1.HUB_SIDEBAR });
                 }),
         },

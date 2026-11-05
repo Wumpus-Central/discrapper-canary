@@ -1,0 +1,24 @@
+.status_iMtCVa {
+    height: var(--space-192);
+    justify-content: center;
+    text-align: center
+}
+
+.row_iMtCVa,
+.status_iMtCVa {
+    align-items: center;
+    display: flex
+}
+
+.row_iMtCVa {
+    gap: var(--space-12);
+    height: var(--space-48);
+    padding-inline-start: var(--space-12)
+}
+
+.rowText_iMtCVa {
+    flex: 1;
+    min-width: 0
+}
+
+/*# sourceMappingURL=79f5fd94ce503b41.css.map*/

@@ -99,8 +99,10 @@ function D(e) {
                     n.e(159957),
                     n.e(728136),
                     n.e(680029),
-                    n.e(966623),
-                ]).then(n.bind(n, 660194));
+                    n.e(635864),
+                    n.e(447864),
+                    n.e(794704),
+                ]).then(n.bind(n, 137811));
                 return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: L.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
             { contextKey: r ? "popout" : A.SY },

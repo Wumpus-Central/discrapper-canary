@@ -531,7 +531,7 @@ function eD(e) {
 let eF = function (e) {
     let { collectionId: l, sessionId: s } = e,
         i = n.useRef(null),
-        { selectedTab: a, transitionToTab: r, transitionState: o } = (0, A.o)(ei.G2.COLLECTION_INDEX);
+        { selectedTab: a, transitionToTab: r, transitionState: o } = (0, A.oI)(ei.G2.COLLECTION_INDEX);
     (0, k.Wg)(!0);
     let c = (0, _.A)("shop_include_unpublished"),
         { category: d, state: u } = (0, v.A)(l, { includeUnpublished: c, includePricing: !0 }),
