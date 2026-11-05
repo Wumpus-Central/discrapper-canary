@@ -7,7 +7,7 @@ var r = n(503698),
     u = n(549677);
 function c(e) {
     let { className: t, onClick: n, children: r } = e;
-    return (0, l.jsx)(a.Anchor, { onClick: n, className: i()(u.nf, t), children: r });
+    return (0, l.jsx)(a.Anchor, { onClick: n, className: i()(u.n, t), children: r });
 }
 n.d(
     t,

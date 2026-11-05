@@ -4,5 +4,5 @@ s.exports = {
     Cb: "orbAsset_mGvcDs",
     kx: "linkContainer_mGvcDs",
     D5: "linkPreText_mGvcDs",
-    CU: "learnMoreLink_mGvcDs body-xs/normal_mGvcDs",
+    CU: "learnMoreLink_mGvcDs " + r(736541)["body-xs/normal"],
 };
