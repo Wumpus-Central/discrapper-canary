@@ -467,14 +467,14 @@ var eZ = n(404778),
     eY = n(962125),
     eJ = n(286509),
     e0 = n(414872),
-    e1 = n(879610),
+    e1 = n(722178),
     e2 = n(631576),
     e5 = n(369163),
     e3 = n(123292),
     e8 = n(631305),
     e6 = n(727419),
-    e9 = n(931991),
-    e7 = n(473145),
+    e7 = n(931991),
+    e9 = n(473145),
     e4 = n(598933),
     te = n(136123);
 let tt = function (e) {
@@ -482,8 +482,8 @@ let tt = function (e) {
         { location: u } = (0, U.p)(),
         { analyticsLocations: c } = (0, W.Ay)(),
         h = (0, d.bG)([ep.A], () => ep.A.getGuild(n)),
-        { canManageAllExpressions: m } = (0, e9.nr)(h),
-        f = null != h && 0 === (0, e7.aG)(h.premiumTier) && !h.features.has(eC.GuildFeatures.MORE_STICKERS);
+        { canManageAllExpressions: m } = (0, e7.nr)(h),
+        f = null != h && 0 === (0, e9.aG)(h.premiumTier) && !h.features.has(eC.GuildFeatures.MORE_STICKERS);
     return (i.useEffect(() => {
         m &&
             f &&
@@ -508,7 +508,7 @@ let tt = function (e) {
                           color: "interactive-text-default",
                           className: te.rf,
                           variant: "body-sm/normal",
-                          children: eb.intl.format(eb.t.AXWla1, { count: (0, e7.aG)(eC.TVA.TIER_1) }),
+                          children: eb.intl.format(eb.t.AXWla1, { count: (0, e9.aG)(eC.TVA.TIER_1) }),
                       }),
                       (0, l.jsx)(e3.Q, {
                           variant: "primary",
@@ -1603,8 +1603,8 @@ function t3(e) {
 }
 var t8 = n(970099);
 let t6 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    t9 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    t7 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    t7 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    t9 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     t4 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     ne = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     nt = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
@@ -1634,7 +1634,7 @@ function na(e) {
             gridWrapperRef: p,
             containerWidth: t,
             showingEmptyState: v,
-            listPaddingLeft: t9,
+            listPaddingLeft: t7,
             listScrollbarWidth: 8,
         }),
         T = $.tP.useSetting(),
@@ -1684,7 +1684,7 @@ function na(e) {
             collapsedStickersCategories: k,
             collapsePremiumSearchSection: u && k.has(tV),
             listWidth: N,
-            listPaddingRight: t7,
+            listPaddingRight: t9,
             stickerNodeMargin: Y ? t4 : ne,
             stickerNodeWidth: Y ? nl : ni,
         }),

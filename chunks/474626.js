@@ -1,7 +1,7 @@
 n.d(t, { A: () => _ });
 var i = n(71393),
     r = n(474090),
-    a = n(879610),
+    a = n(722178),
     s = n(400845),
     l = n(753070);
 let o = { maxBitrate: null, maxResolution: null, maxFPS: null, maskReportedQuality: !1 },

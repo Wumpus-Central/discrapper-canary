@@ -1,6 +1,6 @@
 var i = n(855986),
     r = n(287809),
-    a = n(879610);
+    a = n(722178);
 function s(e) {
     return a.Ay.canUseIncreasedMessageLength(e.getCurrentUser()) ? 4e3 : 2e3;
 }

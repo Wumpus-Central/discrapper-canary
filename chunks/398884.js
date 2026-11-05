@@ -1,7 +1,7 @@
 (n(855986), n(450510));
 var i = n(71393),
     r = n(287809),
-    a = n(879610);
+    a = n(722178);
 function s(e) {
     return a.Ay.canUseIncreasedGuildCap(e) || e?.isStaff() === !0;
 }

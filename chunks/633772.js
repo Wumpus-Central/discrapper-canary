@@ -4,7 +4,7 @@ var i = n(477900),
     s = n.n(l),
     a = n(855986),
     u = n(287809),
-    p = n(879610),
+    p = n(722178),
     o = n(885377),
     c = n(792996);
 class d extends r.Component {

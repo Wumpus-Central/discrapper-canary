@@ -37,7 +37,7 @@ var x = n(613412),
     D = n(887695),
     U = n(435558),
     V = n(962125),
-    W = n(879610),
+    W = n(722178),
     F = n(240864),
     B = n(212633);
 let G = (0, U.throttle)(
@@ -659,8 +659,8 @@ var e0 = n(554146),
     e3 = n(695366),
     e8 = n(834730),
     e6 = n(789645),
-    e9 = n(565645),
-    e7 = n(775602),
+    e7 = n(565645),
+    e9 = n(775602),
     e4 = n(826673),
     te = n(371680),
     tt = n(532624),
@@ -673,14 +673,14 @@ function ts(e) {
         r = (0, d.RQ)((e) => e.searchQuery),
         s = (0, m.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
         a = (0, m.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
-        o = (0, m.bG)([e7.Ay], () => e7.Ay.useReducedMotion, []),
+        o = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion, []),
         u = (0, m.bG)([tn.A], () => tn.A.isFocused()),
         c = (0, m.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(ev.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
         return (0, l.jsx)(te.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, l.jsx)(e9.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
+                    ? (0, l.jsx)(e7.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
                     : (0, l.jsx)(e1.ImageIcon, { size: "md", color: "currentColor", className: tr.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(M.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
@@ -1305,8 +1305,8 @@ function tA(e) {
             let e = (0, W.Dd)(ej.PremiumTypes.TIER_2);
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
         }, [e8]),
-        e9 = i.useCallback((e) => (e3(e, t) ? 65 : 32), [t, e3]),
-        e7 = i.useCallback(
+        e7 = i.useCallback((e) => (e3(e, t) ? 65 : 32), [t, e3]),
+        e9 = i.useCallback(
             (e) => {
                 let t = e === eK.length - 1;
                 return eq && t ? 70 : ez && e === eH ? 20 : 0;
@@ -1402,9 +1402,9 @@ function tA(e) {
                     inExpressionPicker: v,
                     newSoundCountByGuildId: eD ? eo : void 0,
                     isNewSound: Z,
-                    getSectionHeaderHeight: e9,
+                    getSectionHeaderHeight: e7,
                 }),
-            [q, C, ez, t, v, eD, eo, Z, e9],
+            [q, C, ez, t, v, eD, eo, Z, e7],
         ),
         to = i.useCallback(() => {
             let e = (0, Y.qD)();
@@ -1496,8 +1496,8 @@ function tA(e) {
                     renderCategoryList: ta,
                     renderHeaderAccessories: tr,
                     rowHeight: 48,
-                    sectionHeaderHeight: e9,
-                    sectionFooterHeight: e7,
+                    sectionHeaderHeight: e7,
+                    sectionFooterHeight: e9,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,
                     renderEmptySearchState: tS,

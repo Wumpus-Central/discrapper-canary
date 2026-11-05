@@ -31,10 +31,6 @@ n.d(
                   : s.S9.SELECTABLE;
         },
         YY: l,
-        j5: function (e, t) {
-            let n = (0, r.kQ)(e?.perks, s.Sp[t]);
-            return null != n && n.length > 0 && n.every((e) => e === i.g$.SOURCE_HEXAGON_CAMPAIGN);
-        },
         oB: function (e) {
             return null != e && s.xG.has(e);
         },

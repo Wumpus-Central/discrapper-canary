@@ -35,7 +35,7 @@ var b = n(319437),
     x = n(672619),
     U = n(97352),
     L = n(45938),
-    Y = n(879610),
+    Y = n(722178),
     F = n(418200),
     H = n(566980),
     j = n(800471),
@@ -197,8 +197,8 @@ function ee(e) {
         e5 = "sm";
     ef ? (e5 = "xl") : (eA || e6 === A.pn.ADD_PAYMENT_STEPS) && (e5 = "md");
     let e3 = null != e8 ? e8.modalSizeGetter : void 0,
-        e9 = (0, g.O)(),
-        e7 = null != X && !eQ && (0, w.U9)(e9, X),
+        e7 = (0, g.O)(),
+        e9 = null != X && !eQ && (0, w.U9)(e7, X),
         [te, tt] = l.useState({
             load_id: ew.loadId,
             discovery_session_id: ew.discoverySessionId,
@@ -215,7 +215,7 @@ function ee(e) {
             guild_id: e_,
             payment_modal_version: ey,
             activity_session_id: eJ,
-            eligible_for_discount: e7,
+            eligible_for_discount: e9,
             sku_product_line: eB?.productLine,
             quantity: eG,
             checkout_design: d.r.UNIFIED,
@@ -254,7 +254,7 @@ function ee(e) {
                 continue_session_initial_step: eP,
                 custom_checkout_flow: eH,
                 has_saved_payment_source: eM,
-                discount_id: null != e9 ? e9.discountId : ts,
+                discount_id: null != e7 ? e7.discountId : ts,
             });
         }),
         l.useEffect(() => {

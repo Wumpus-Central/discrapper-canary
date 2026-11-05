@@ -41,8 +41,8 @@ n.d(
             let { limit: d, isUpgradable: A } = (0, u.ZG)("ScheduledMessagesCreateRoadblock");
             A
                 ? (0, s.mM)(async () => {
-                      let { default: e } = await Promise.all([n.e(454048), n.e(300699), n.e(717907), n.e(9203)]).then(
-                          n.bind(n, 15422),
+                      let { default: e } = await Promise.all([n.e(454048), n.e(300699), n.e(717907), n.e(952582)]).then(
+                          n.bind(n, 853861),
                       );
                       return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: [o.A.SCHEDULED_MESSAGES_ROADBLOCK] });
                   })
