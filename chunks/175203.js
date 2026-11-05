@@ -3,7 +3,7 @@ var i = s(477900),
     t = s(582128),
     n = s(503698),
     a = s.n(n),
-    o = s(736819),
+    o = s(120692),
     d = s(738678),
     c = s(12470),
     r = s(855986),
@@ -208,18 +208,18 @@ let ew = [eP.lp.ACTIVITY],
                 },
                 [y, x],
             ),
-            e7 = t.useCallback(
+            e2 = t.useCallback(
                 (e, l, s) => {
                     T?.(x, e, l, s);
                 },
                 [T, x],
             ),
-            e2 = null,
+            e7 = null,
             e5 = null,
             e4 = "";
         switch (x.type) {
             case eP.lp.STREAM:
-                ((e2 = (0, i.jsx)(eO.A, {
+                ((e7 = (0, i.jsx)(eO.A, {
                     participant: x,
                     selected: R,
                     popoutType: I,
@@ -239,7 +239,7 @@ let ew = [eP.lp.ACTIVITY],
                     (e4 = eU.intl.formatToPlainString(eU.t.gHPz3Q, { streamerName: x.user.username })));
                 break;
             case eP.lp.USER:
-                ((e2 = (0, i.jsx)(eR.A, {
+                ((e7 = (0, i.jsx)(eR.A, {
                     channel: C,
                     inCall: O,
                     participant: x,
@@ -263,11 +263,11 @@ let ew = [eP.lp.ACTIVITY],
                     (e4 = eU.intl.formatToPlainString(eU.t["iC/x/Q"], { username: x.user.username })));
                 break;
             case eP.lp.ACTIVITY:
-                ((e2 = (0, i.jsx)(eC.Ay, { interactible: k, participant: x, selected: R, channel: C, width: S })),
+                ((e7 = (0, i.jsx)(eC.Ay, { interactible: k, participant: x, selected: R, channel: C, width: S })),
                     (e4 = eU.intl.formatToPlainString(eU.t.YCvOsO, { activityName: eN?.name })));
                 break;
             case eP.lp.HIDDEN_STREAM:
-                e2 = (0, i.jsx)(eO.A, {
+                e7 = (0, i.jsx)(eO.A, {
                     participant: x,
                     selected: R,
                     width: S,
@@ -316,7 +316,7 @@ let ew = [eP.lp.ACTIVITY],
                                     "aria-label": e4,
                                     className: eG.lG,
                                     onDoubleClick: e6,
-                                    onContextMenu: (e) => e7(e, x.type === eP.lp.STREAM),
+                                    onContextMenu: (e) => e2(e, x.type === eP.lp.STREAM),
                                     onClick: e8,
                                     onMouseDown: N,
                                     onKeyDown: f,
@@ -340,7 +340,7 @@ let ew = [eP.lp.ACTIVITY],
                                                   }),
                                               })
                                             : null,
-                                        e2,
+                                        e7,
                                         V ? null : (0, i.jsx)("div", { className: eG.hD, children: e5 }),
                                         R
                                             ? (0, i.jsx)("div", {
@@ -370,7 +370,7 @@ let ew = [eP.lp.ACTIVITY],
                                                   localVideoDisabled: eV,
                                                   videoToggleState: ez,
                                                   hideAudioIcon: eF,
-                                                  onContextMenu: e7,
+                                                  onContextMenu: e2,
                                                   onToggleMute: e1,
                                                   participantUserId: ej,
                                                   channel: C,

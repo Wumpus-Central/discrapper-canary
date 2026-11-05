@@ -1,3 +1,109 @@
+.secretCard_kTUrgI {
+    box-sizing: border-box;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    width: 100%;
+    word-break: break-word
+}
+
+.secretCard_kTUrgI,
+.secretCardActions_kTUrgI {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.secretCardActions_kTUrgI {
+    align-items: center;
+    margin-top: var(--space-4)
+}
+
+.dockedPanel_kTUrgI {
+    border-color: var(--background-brand)
+}
+
+.dockedBody_kTUrgI {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-block-size: 0;
+    overflow-wrap: anywhere;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--space-12)
+}
+
+.dockedFooterHint_kTUrgI {
+    min-width: 0
+}
+
+.secretCardStatus_kTUrgI {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.secretCardStatusIcon_kTUrgI {
+    display: flex
+}
+
+@keyframes conjure-secret-card-enter_kTUrgI {
+    0% {
+        opacity: 0;
+        transform: translateY(-4px)
+    }
+}
+
+@keyframes conjure-secret-card-check-enter_kTUrgI {
+    0% {
+        opacity: 0;
+        transform: scale(.5)
+    }
+}
+
+.full-motion .secretCardEnter_kTUrgI {
+    animation: conjure-secret-card-enter_kTUrgI var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+}
+
+.full-motion .secretCardEnter_kTUrgI .secretCardStatusIcon_kTUrgI {
+    animation: conjure-secret-card-check-enter_kTUrgI var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+}
+
+.settingsForm_mpFQHm {
+    gap: var(--space-12)
+}
+
+.settingsForm_mpFQHm,
+.settingsSelect_mpFQHm {
+    display: flex;
+    flex-direction: column
+}
+
+.settingsSelect_mpFQHm {
+    gap: var(--space-4)
+}
+
+.secretRow_mpFQHm {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
+.secretRowInfo_mpFQHm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.settingsLoading_mpFQHm {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-16)
+}
+
 .settingsCard_vqUbC0 {
     box-sizing: border-box;
     display: flex;
@@ -266,4 +372,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=8bea6f1ee8e55281.css.map*/
+/*# sourceMappingURL=5c926cf91dcb0a67.css.map*/

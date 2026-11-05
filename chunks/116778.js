@@ -971,9 +971,9 @@ function e9(e) {
         : null;
 }
 var e8 = s(856768),
-    e3 = s(736819),
+    e2 = s(120692),
     e1 = s(164636),
-    e2 = s(717421),
+    e3 = s(717421),
     le = s(636496),
     ll = s(406318),
     ls = s(189552),
@@ -983,10 +983,10 @@ var e8 = s(856768),
 function lr(e) {
     let { guild: l } = e,
         s = (0, le.Ms)(l.id),
-        t = (0, e2.z)({ height: 3 * !!s, config: e3.config.stiff });
+        t = (0, e3.z)({ height: 3 * !!s, config: e2.config.stiff });
     return (0, n.jsx)("div", {
         className: eD.NQ,
-        children: (0, n.jsx)(e3.animated.div, { className: eD.b0, style: t }),
+        children: (0, n.jsx)(e2.animated.div, { className: eD.b0, style: t }),
     });
 }
 function la(e) {

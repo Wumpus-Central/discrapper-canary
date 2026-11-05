@@ -9,8 +9,8 @@ var r = n(477900),
     l = n(582128),
     a = n(503698),
     i = n.n(a),
-    u = n(736819),
-    o = n(621466),
+    o = n(120692),
+    u = n(621466),
     s = n(337836),
     c = n(855986),
     d = n(876230),
@@ -70,8 +70,8 @@ function Z(e) {
             onEnded: el,
             onError: ea,
             maxSeekableTimeSec: ei,
-            captionTrackUrl: eu,
-            transcriptText: eo,
+            captionTrackUrl: eo,
+            transcriptText: eu,
             renderEndScreen: es,
             renderVideo: ec = $.v,
             onPlayerStateChange: ed,
@@ -133,7 +133,7 @@ function Z(e) {
         tn = T ?? q,
         tr = eQ ?? U.u,
         { focused: tl, focusedChanged: ta } = (0, H.A7)(),
-        { visible: ti, visibleChanged: tu, targetRef: to } = (0, H.O7)(),
+        { visible: ti, visibleChanged: to, targetRef: tu } = (0, H.O7)(),
         [ts, tc] = l.useState(n ? d.Q6.PLAYING : d.Q6.PAUSED),
         [td, tm] = l.useState(!1),
         [tf, tp] = l.useState(!1),
@@ -188,14 +188,14 @@ function Z(e) {
         );
     (0, _.A)({ videoRef: ni, canvasRef: t7, enabled: tO && e4 && !t4, canvasWidth: 32, canvasHeight: 18 });
     let {
-            showStats: nu,
-            videoStats: no,
+            showStats: no,
+            videoStats: nu,
             onCloseStats: ns,
         } = (function (e) {
             let { videoRef: t, src: n, fileSizeBytes: r } = e,
                 a = null != n && "" !== n,
                 i = (0, c.bG)([K.Ay], () => !!a && K.Ay.isVideoStatsEnabled(n)),
-                [u, o] = l.useState(null);
+                [o, u] = l.useState(null);
             return (
                 l.useEffect(() => {
                     if (!i) return;
@@ -206,7 +206,7 @@ function Z(e) {
                     }
                     let l = new Q.s(e, r ?? void 0);
                     return (
-                        l.startTracking(o, { emitInitial: !0 }),
+                        l.startTracking(u, { emitInitial: !0 }),
                         () => {
                             l.destroy();
                         }
@@ -220,7 +220,7 @@ function Z(e) {
                 ),
                 {
                     showStats: i,
-                    videoStats: i ? u : null,
+                    videoStats: i ? o : null,
                     onCloseStats: l.useCallback(() => {
                         a && (0, K.Vh)(n, !1);
                     }, [n, a]),
@@ -234,15 +234,15 @@ function Z(e) {
             [ea],
         ),
         { isHlsActive: nd, hls: nm } = (function (e, t) {
-            let { src: n, initialTimeSec: r = 0, onError: a, onHlsInstance: i, crossOrigin: u = "anonymous" } = t,
-                o = l.useRef(null),
+            let { src: n, initialTimeSec: r = 0, onError: a, onHlsInstance: i, crossOrigin: o = "anonymous" } = t,
+                u = l.useRef(null),
                 [s, c] = l.useState(null),
                 m = l.useRef(r);
             m.current = r;
             let f = l.useRef(a),
                 p = l.useRef(i),
-                h = l.useRef(u);
-            ((h.current = u),
+                h = l.useRef(o);
+            ((h.current = o),
                 l.useEffect(() => {
                     f.current = a;
                 }, [a]),
@@ -284,8 +284,8 @@ function Z(e) {
                                     new Request(e.url, t)
                                 ),
                             }));
-                            ((o.current = i), c(i), p.current?.(i));
-                            let u = 0;
+                            ((u.current = i), c(i), p.current?.(i));
+                            let o = 0;
                             ((a = () => {
                                 i.mainForwardBufferInfo?.len === 0 &&
                                     i.trigger(e.Events.BUFFER_FLUSHING, {
@@ -318,11 +318,11 @@ function Z(e) {
                                         ),
                                         n.fatal)
                                     ) {
-                                        if (u >= 3) {
-                                            (i.destroy(), (o.current = null), c(null), p.current?.(null));
+                                        if (o >= 3) {
+                                            (i.destroy(), (u.current = null), c(null), p.current?.(null));
                                             return;
                                         }
-                                        switch ((u++, n.type)) {
+                                        switch ((o++, n.type)) {
                                             case e.ErrorTypes.NETWORK_ERROR:
                                                 i.startLoad();
                                                 break;
@@ -330,7 +330,7 @@ function Z(e) {
                                                 i.recoverMediaError();
                                                 break;
                                             default:
-                                                (i.destroy(), (o.current = null), p.current?.(null));
+                                                (i.destroy(), (u.current = null), p.current?.(null));
                                         }
                                     }
                                 }),
@@ -342,13 +342,13 @@ function Z(e) {
                             ((r = !0),
                                 null != a && t.removeEventListener("seeking", a),
                                 null != l &&
-                                    (o.current === l && (l.destroy(), (o.current = null), c(null), p.current?.(null)),
+                                    (u.current === l && (l.destroy(), (u.current = null), c(null), p.current?.(null)),
                                     t.removeAttribute("src"),
                                     t.load()));
                         }
                     );
                 }, [g, n, e]),
-                { isHlsActive: g, hlsRef: o, hls: s }
+                { isHlsActive: g, hlsRef: u, hls: s }
             );
         })(ni, { src: tn, initialTimeSec: en, onError: nc, onHlsInstance: eM, crossOrigin: e6 }),
         { isReady: nf } = (0, N.A)({ videoRef: ni, hls: nm, contentMetadata: e7, isHls: nd }),
@@ -397,13 +397,13 @@ function Z(e) {
     (l.useEffect(() => {
         if (!eV) return;
         let e = null != t && (t === m.ip.HIDDEN || t === m.ip.EXITING || t === m.ip.EXITED),
-            n = null != t && tu && !ti,
+            n = null != t && to && !ti,
             r = ta && !tl;
         if ((e || n || r) && null != t9.current && ts === d.Q6.PLAYING) {
             let t = e || n ? d.KB.VISIBILITY : d.KB.FOCUS;
             (nn(t), nT(d.Q6.PAUSED, t));
         }
-    }, [eV, t, tl, ta, ti, tu, ts, nT]),
+    }, [eV, t, tl, ta, ti, to, ts, nT]),
         (0, O.A)({
             videoRef: ni,
             enabled: eV,
@@ -418,8 +418,8 @@ function Z(e) {
             ta && eC?.(tl, ts);
         }, [tl, ta, ts, eC]),
         l.useEffect(() => {
-            tu && ew?.(ti, ts);
-        }, [ti, tu, ts, ew]));
+            to && ew?.(ti, ts);
+        }, [ti, to, ts, ew]));
     let [nM, nk] = l.useState(!1),
         nj = l.useRef(null),
         nD = l.useRef(0);
@@ -467,7 +467,7 @@ function Z(e) {
         tx(!0);
     }
     function nU(e) {
-        ((0, o.vq)(e.relatedTarget, Node) && e.currentTarget.contains(e.relatedTarget)) || tx(!1);
+        ((0, u.vq)(e.relatedTarget, Node) && e.currentTarget.contains(e.relatedTarget)) || tx(!1);
     }
     let n_ = l.useRef(!1);
     l.useEffect(() => {
@@ -640,9 +640,9 @@ function Z(e) {
                 (e) => {
                     t9.current = e;
                     let t = (0, $.c)(e);
-                    ((to.current = t), "function" == typeof tt ? tt(t) : null != tt && (tt.current = t));
+                    ((tu.current = t), "function" == typeof tt ? tt(t) : null != tt && (tt.current = t));
                 },
-                [tt, to],
+                [tt, tu],
             ),
             alt: Z,
             playsInline: !0,
@@ -720,10 +720,10 @@ function Z(e) {
             isScrubbing: tk,
             children: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != eu &&
+                    null != eo &&
                         (0, r.jsx)("track", {
                             ref: t5,
-                            src: eu,
+                            src: eo,
                             label: "English",
                             kind: "captions",
                             srcLang: "en",
@@ -801,21 +801,21 @@ function Z(e) {
                                 message: tr({ hasVideoAsset: null != tn, playerState: ts, pauseReason: nt }),
                                 showOverlay: null == tn,
                             }),
-                            nu &&
-                                null != no &&
+                            no &&
+                                null != nu &&
                                 (0, r.jsx)(l.Suspense, {
                                     fallback: null,
-                                    children: (0, r.jsx)(Y, { stats: no, onClose: ns }),
+                                    children: (0, r.jsx)(Y, { stats: nu, onClose: ns }),
                                 }),
                             null != eR &&
-                                (0, r.jsx)(u.animated.div, {
+                                (0, r.jsx)(o.animated.div, {
                                     className: X.MU,
                                     style: {
-                                        opacity: (0, u.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
-                                        visibility: (0, u.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                        opacity: (0, o.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
+                                        visibility: (0, o.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                             e < 0.1 ? "hidden" : "visible",
                                         ),
-                                        pointerEvents: (0, u.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                        pointerEvents: (0, o.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                             e < 0.3 ? "none" : "auto",
                                         ),
                                     },
@@ -832,7 +832,7 @@ function Z(e) {
                                 }),
                             tq &&
                                 ts !== d.Q6.ENDED &&
-                                null != eo &&
+                                null != eu &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(p.D, {
@@ -842,17 +842,17 @@ function Z(e) {
                                             tabIndex: -1,
                                             children: (0, r.jsx)("div", { className: X.BG }),
                                         }),
-                                        (0, r.jsx)(u.animated.div, {
+                                        (0, r.jsx)(o.animated.div, {
                                             className: i()(X.xr, eT, { [X.MZ]: "portrait" === a }),
                                             "data-testid": "discord-web-video-player-transcript",
                                             style: {
-                                                marginBottom: (0, u.to)(
+                                                marginBottom: (0, o.to)(
                                                     [nJ, n2],
                                                     (e, t) => `${e * nN.barHeightPx + t}px`,
                                                 ),
                                             },
                                             children: (0, r.jsx)(F.X, {
-                                                text: eo,
+                                                text: eu,
                                                 onClose: function () {
                                                     tJ(!1);
                                                 },
@@ -861,10 +861,10 @@ function Z(e) {
                                     ],
                                 }),
                             tO &&
-                                (0, r.jsx)(u.animated.div, {
+                                (0, r.jsx)(o.animated.div, {
                                     className: X.Jp,
                                     style: {
-                                        opacity: (0, u.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
+                                        opacity: (0, o.to)([nJ.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
                                     },
                                 }),
                             (0, r.jsx)(
@@ -885,12 +885,12 @@ function Z(e) {
                             t0 &&
                                 null != nh &&
                                 !n4 &&
-                                (0, r.jsx)(u.animated.div, {
+                                (0, r.jsx)(o.animated.div, {
                                     className: X.o$,
                                     ref: n1,
                                     "data-testid": "discord-web-video-player-captions",
                                     style: {
-                                        translateY: (0, u.to)(
+                                        translateY: (0, o.to)(
                                             [nJ.to({ range: [0, 1], output: [-nA, -nN.barHeightPx] })],
                                             (e) => `${e}px`,
                                         ),
@@ -903,10 +903,10 @@ function Z(e) {
                                     }),
                                 }),
                             tO &&
-                                (0, r.jsxs)(u.animated.div, {
+                                (0, r.jsxs)(o.animated.div, {
                                     className: X.r8,
                                     style: {
-                                        height: (0, u.to)(
+                                        height: (0, o.to)(
                                             [nJ.to({ range: [0, 1], output: [0, nN.barHeightPx] })],
                                             (e) => `${e}px`,
                                         ),
@@ -914,15 +914,15 @@ function Z(e) {
                                     onFocus: nH,
                                     onBlur: nU,
                                     children: [
-                                        (0, r.jsx)(u.animated.div, {
+                                        (0, r.jsx)(o.animated.div, {
                                             className: X.oB,
                                             style: {
-                                                opacity: (0, u.to)([nJ], (e) => `${eX ? 1 : e}`),
+                                                opacity: (0, o.to)([nJ], (e) => `${eX ? 1 : e}`),
                                                 visibility:
                                                     eX || n$ || tk
                                                         ? void 0
                                                         : nJ.to((e) => (0 === e ? "hidden" : "visible")),
-                                                transform: (0, u.to)(
+                                                transform: (0, o.to)(
                                                     [nJ.to({ range: [1, 0], output: [0, 1] })],
                                                     (e) => `translateY(-${e * nA}px)`,
                                                 ),
@@ -978,19 +978,19 @@ function Z(e) {
                                                 "data-testid": "discord-web-video-player-timeline",
                                             }),
                                         }),
-                                        (0, r.jsx)(u.animated.div, {
+                                        (0, r.jsx)(o.animated.div, {
                                             className: X.EG,
                                             "data-testid": "discord-web-video-player-controls",
                                             style: {
-                                                paddingTop: (0, u.to)(
+                                                paddingTop: (0, o.to)(
                                                     [nJ.to({ range: [0, 1], output: [0, 1] })],
                                                     (e) => `${e * e * nA}px`,
                                                 ),
-                                                paddingBottom: (0, u.to)(
+                                                paddingBottom: (0, o.to)(
                                                     [nJ.to({ range: [0, 1], output: [0, 1] })],
                                                     (e) => `${e * e * nA}px`,
                                                 ),
-                                                pointerEvents: (0, u.to)(
+                                                pointerEvents: (0, o.to)(
                                                     [nJ.to({ range: [0, 1], output: [0, 1] })],
                                                     (e) => (e < 0.3 ? "none" : "auto"),
                                                 ),
@@ -1001,8 +1001,8 @@ function Z(e) {
                                                 visible: n$,
                                                 seekForwardEnabled:
                                                     null == ei || (t9.current?.currentTime ?? 0) + 1 < nP,
-                                                hideCaptionBtn: null == eu,
-                                                hideTranscriptBtn: null == eo,
+                                                hideCaptionBtn: null == eo,
+                                                hideTranscriptBtn: null == eu,
                                                 hideFullScreenBtn: e$,
                                                 hidePlaybackSpeedBtn: e_,
                                                 hideSkipButtons: eH ?? "portrait" === a,

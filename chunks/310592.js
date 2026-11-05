@@ -8,15 +8,15 @@ var i = n(477900),
     c = n(652664),
     u = n(77692),
     _ = n(677654),
-    E = n(736819),
+    E = n(120692),
     A = n(399522),
     h = n(717421),
     f = n(844222),
     I = n(559106),
     p = n(452027),
     m = n(866665),
-    T = n(77232);
-let g = new Set(["ArrowUp", "ArrowDown"]);
+    g = n(77232);
+let T = new Set(["ArrowUp", "ArrowDown"]);
 function S(e, t) {
     let n = 0;
     for (let i = 1; i < e.length; i++) Math.abs(e[i] - t) < Math.abs(e[n] - t) && (n = i);
@@ -53,7 +53,7 @@ function N(e) {
         W = k ?? j,
         [Y, K] = r.useState(!1),
         { keyboardModeEnabled: $ } = r.useContext(f.C),
-        z = r.useMemo(
+        X = r.useMemo(
             () =>
                 (M ?? [])
                     .map((e) =>
@@ -64,10 +64,10 @@ function N(e) {
                     .sort((e, t) => e.value - t.value),
             [M],
         ),
-        X = r.useMemo(() => z.map((e) => e.value), [z]),
-        q = U && X.length > 1;
+        z = r.useMemo(() => X.map((e) => e.value), [X]),
+        q = U && z.length > 1;
     function Z(e) {
-        return null != e && q ? S(X, e) : e;
+        return null != e && q ? S(z, e) : e;
     }
     function Q(e) {
         return Math.min(Math.max(((e - L) / (y - L)) * 100, 0), 100);
@@ -80,12 +80,12 @@ function N(e) {
             value: Z(O),
             defaultValue: Z(R),
             minValue: q ? 0 : L,
-            maxValue: q ? X.length - 1 : y,
+            maxValue: q ? z.length - 1 : y,
             step: q ? 1 : D,
             isDisabled: a,
             numberFormatter: J,
-            onChange: (e) => b?.(q ? X[e] : e),
-            onChangeEnd: (e) => v?.(q ? X[e] : e),
+            onChange: (e) => b?.(q ? z[e] : e),
+            onChangeEnd: (e) => v?.(q ? z[e] : e),
         }),
         { groupProps: en, trackProps: ei } = (0, o.P)({ "aria-label": G, "aria-labelledby": p, isDisabled: a }, et, V),
         {
@@ -126,15 +126,15 @@ function N(e) {
                     t.isThumbDragging(0) && t.setThumbDragging(0, !1);
                 },
             };
-        })({ state: et, trackRef: V, inputRef: W, sortedMarks: X, minValue: L, maxValue: y, disabled: a }),
-        ed = ((t = et.getThumbValue(0)), q ? X[t] : t),
+        })({ state: et, trackRef: V, inputRef: W, sortedMarks: z, minValue: L, maxValue: y, disabled: a }),
+        ed = ((t = et.getThumbValue(0)), q ? z[t] : t),
         ec = ee(ed),
         eu = `${Q(ed)}%`,
         e_ = el && $,
         eE = !a && (e_ || es || Y);
     function eA(e) {
         return (t) => {
-            x && g.has(t.key) ? t.preventDefault() : e?.(t);
+            x && T.has(t.key) ? t.preventDefault() : e?.(t);
         };
     }
     let eh = (0, c.v)(en, q ? eo : ei),
@@ -150,24 +150,24 @@ function N(e) {
             ...eh,
             onKeyDown: eA(eh.onKeyDown),
             ref: B,
-            className: s()(T.aw, { [T.ZF]: X.length > 0, [T.r9]: a }),
+            className: s()(g.aw, { [g.ZF]: z.length > 0, [g.r9]: a }),
             style: { ...ef, touchAction: "none" },
             onMouseEnter: () => K(!0),
             onMouseLeave: () => K(!1),
             children: [
                 (0, i.jsx)("div", {
-                    className: T.u4,
-                    children: z.map((e) => {
+                    className: g.u4,
+                    children: X.map((e) => {
                         let t = e.usesFormatValue ? ee(e.value) : e.label;
                         return (0, i.jsxs)(
                             "div",
                             {
                                 "aria-hidden": !0,
-                                className: s()(T.Gy, T.zt, { [T.Jh]: e.value === w }),
+                                className: s()(g.Gy, g.zt, { [g.Jh]: e.value === w }),
                                 style: { insetInlineStart: `${Q(e.value)}%` },
                                 children: [
-                                    (0, i.jsx)("div", { className: T.nj, children: t }),
-                                    null != t ? (0, i.jsx)("div", { className: T.gf }) : null,
+                                    (0, i.jsx)("div", { className: g.nj, children: t }),
+                                    null != t ? (0, i.jsx)("div", { className: g.gf }) : null,
                                 ],
                             },
                             e.value,
@@ -175,11 +175,11 @@ function N(e) {
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: T.M0,
-                    children: (0, i.jsx)("div", { className: T.pP, style: { width: eu } }),
+                    className: g.M0,
+                    children: (0, i.jsx)("div", { className: g.pP, style: { width: eu } }),
                 }),
                 (0, i.jsx)("div", {
-                    className: T.u4,
+                    className: g.u4,
                     ref: V,
                     children: (0, i.jsx)(m.m, {
                         text: q ? null : ec,
@@ -191,7 +191,7 @@ function N(e) {
                             ...(q ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
                             onKeyDown: eA(er.onKeyDown),
                             ref: H,
-                            className: T.Ub,
+                            className: g.Ub,
                             style: { insetInlineStart: eu, touchAction: "none" },
                             children: (0, i.jsx)(u.s, {
                                 children: (0, i.jsx)("input", {
@@ -204,8 +204,8 @@ function N(e) {
                                     "aria-errormessage": C,
                                     "aria-invalid": null != C,
                                     "aria-valuetext": ec,
-                                    "aria-valuemin": q ? X[0] : L,
-                                    "aria-valuemax": q ? X[X.length - 1] : y,
+                                    "aria-valuemin": q ? z[0] : L,
+                                    "aria-valuemax": q ? z[z.length - 1] : y,
                                     "aria-valuenow": ed,
                                 }),
                             }),

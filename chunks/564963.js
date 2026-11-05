@@ -1,7 +1,7 @@
 var l = n(582128),
     r = n(886540),
-    a = n(191850),
-    i = n(792996);
+    i = n(191850),
+    a = n(792996);
 let s = new Set();
 function u(e, t) {
     return { cardId: e, status: "pending" === t ? null : t };
@@ -24,7 +24,7 @@ n.d(
                         c ||
                         (function (e) {
                             let t = e.content.trim();
-                            return t === i.intl.string(a.default.UGqnoV) || t === i.intl.string(a.default.sMQt5O);
+                            return t === a.intl.string(i.default.UGqnoV) || t === a.intl.string(i.default.sMQt5O);
                         })(d);
                     continue;
                 }
@@ -50,6 +50,13 @@ n.d(
                 ((o = !0), (c = !1));
             }
             return l;
+        },
+        Qr: function (e, t) {
+            for (let n = e.length - 1; n >= 0; n--) {
+                let l = e[n];
+                if (l?.secretRequest != null && "open" === t.get(l.render_id)) return l;
+            }
+            return null;
         },
         bB: function (e, t) {
             let [n, r] = l.useState(() => u(e, t));

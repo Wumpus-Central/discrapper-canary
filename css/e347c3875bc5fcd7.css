@@ -417,59 +417,6 @@
     color: var(--text-muted)
 }
 
-.secretCard_kTUrgI {
-    box-sizing: border-box;
-    flex-direction: column;
-    max-width: 100%;
-    min-width: 0;
-    overflow-wrap: anywhere;
-    width: 100%;
-    word-break: break-word
-}
-
-.secretCard_kTUrgI,
-.secretCardActions_kTUrgI {
-    display: flex;
-    gap: var(--space-8)
-}
-
-.secretCardActions_kTUrgI {
-    align-items: center;
-    margin-top: var(--space-4)
-}
-
-.secretCardStatus_kTUrgI {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4)
-}
-
-.secretCardStatusIcon_kTUrgI {
-    display: flex
-}
-
-@keyframes conjure-secret-card-enter_kTUrgI {
-    0% {
-        opacity: 0;
-        transform: translateY(-4px)
-    }
-}
-
-@keyframes conjure-secret-card-check-enter_kTUrgI {
-    0% {
-        opacity: 0;
-        transform: scale(.5)
-    }
-}
-
-.full-motion .secretCardEnter_kTUrgI {
-    animation: conjure-secret-card-enter_kTUrgI var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
-}
-
-.full-motion .secretCardEnter_kTUrgI .secretCardStatusIcon_kTUrgI {
-    animation: conjure-secret-card-check-enter_kTUrgI var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
-}
-
 .awaitingSurface_3HZf4Z {
     border-color: var(--background-brand);
     position: relative
@@ -501,4 +448,4 @@
     }
 }
 
-/*# sourceMappingURL=2399fe9531d48ef0.css.map*/
+/*# sourceMappingURL=e347c3875bc5fcd7.css.map*/

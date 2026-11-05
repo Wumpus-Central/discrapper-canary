@@ -30,38 +30,4 @@
     width: 1em
 }
 
-.settingsForm_mpFQHm {
-    gap: var(--space-12)
-}
-
-.settingsForm_mpFQHm,
-.settingsSelect_mpFQHm {
-    display: flex;
-    flex-direction: column
-}
-
-.settingsSelect_mpFQHm {
-    gap: var(--space-4)
-}
-
-.secretRow_mpFQHm {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8);
-    justify-content: space-between
-}
-
-.secretRowInfo_mpFQHm {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0
-}
-
-.settingsLoading_mpFQHm {
-    display: flex;
-    justify-content: center;
-    padding-block: var(--space-16)
-}
-
-/*# sourceMappingURL=fc5802ad44da5cf3.css.map*/
+/*# sourceMappingURL=85ab2eb78c0d72d3.css.map*/
