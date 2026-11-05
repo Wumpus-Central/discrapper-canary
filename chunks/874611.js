@@ -559,21 +559,61 @@ var eJ = n(284009),
 function ts(e) {
     let { children: t, className: n, flashKey: l } = e,
         [i, s] = r.useState(!1),
-        o = r.useRef(null);
+        [o, d] = r.useState(null),
+        u = r.useRef(null),
+        h = r.useRef(null);
     return (
-        r.useEffect(
-            () => (
-                s(!0),
-                (o.current = window.setTimeout(() => {
+        r.useEffect(() => {
+            (s(!0),
+                (u.current = window.setTimeout(() => {
                     s(!1);
-                }, 2e3)),
-                () => {
-                    null != o.current && clearTimeout(o.current);
-                }
-            ),
-            [l],
-        ),
-        (0, a.jsx)("div", { "data-flash": i, className: c()(ti.j, n), children: t })
+                }, 2e3)));
+            let e =
+                null == h.current || j.Ay.useReducedMotion
+                    ? null
+                    : (function (e, t) {
+                          let n = e.ownerDocument.defaultView ?? window,
+                              l = !1,
+                              i = -1,
+                              s = null,
+                              a = null,
+                              r = 0,
+                              o = null == n.IntersectionObserver,
+                              c =
+                                  null != n.IntersectionObserver
+                                      ? new n.IntersectionObserver((e) => {
+                                            o = e[e.length - 1]?.isIntersecting ?? o;
+                                        })
+                                      : null;
+                          function d() {
+                              ((l = !0), n.cancelAnimationFrame(i), c?.disconnect());
+                          }
+                          return (
+                              c?.observe(e),
+                              (i = n.requestAnimationFrame(function c(u) {
+                                  if (l) return;
+                                  if (((s ??= u), u - s >= 1e3)) return void d();
+                                  let { top: h, left: m } = e.getBoundingClientRect(),
+                                      g = null == a || h !== a.top || m !== a.left;
+                                  if (((r = o && !g ? r + 1 : 0), (a = { top: h, left: m }), r >= 3)) {
+                                      (d(), t());
+                                      return;
+                                  }
+                                  i = n.requestAnimationFrame(c);
+                              })),
+                              d
+                          );
+                      })(h.current, () => d(l));
+            return () => {
+                (null != u.current && clearTimeout(u.current), e?.());
+            };
+        }, [l]),
+        (0, a.jsxs)("div", {
+            ref: h,
+            "data-flash": i,
+            className: c()(ti.jl, n),
+            children: [t, (0, a.jsx)("span", { "data-pulse": o === l, className: ti.Vv, "aria-hidden": "true" }, l)],
+        })
     );
 }
 var ta = n(491182),
@@ -3867,7 +3907,7 @@ function iv(e) {
             suppressBorder: !0,
         }),
     });
-    return null != l ? (0, a.jsx)(ts, { flashKey: l, children: h }) : h;
+    return null != l ? (0, a.jsx)(ts, { flashKey: l, className: ij.j, children: h }) : h;
 }
 var iT = n(495273),
     iN = n(885071),
