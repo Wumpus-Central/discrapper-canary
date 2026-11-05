@@ -1441,7 +1441,7 @@ function nW(e) {
             (0, s.jsx)(eg.$, {
                 variant: "secondary",
                 text: K.intl.string(nF.default["UsUa/c"]),
-                onClick: () => (0, nw.A)(t, n),
+                onClick: () => (0, nw.A)(t, n, "copy"),
             }),
         ],
     });

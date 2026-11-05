@@ -36,6 +36,9 @@ function o(e) {
         "context_boundary" === e.kind
     );
 }
+function d(e) {
+    return "user" === e.role && "" === e.content && (e.attachments?.length ?? 0) === 0;
+}
 n.d(
     t,
     {},
@@ -54,6 +57,7 @@ n.d(
         B5: o,
         BL: r,
         Ji: a,
+        ST: d,
         Si: function (e, t) {
             let n = l(e, t);
             if (-1 !== n) return n;
@@ -68,6 +72,9 @@ n.d(
             return ((i[t] = n), i);
         },
         gi: l,
+        i_: function (e) {
+            return e.some((e) => !d(e));
+        },
         lb: function (e) {
             return null != e.turn_id ? e.turn_id : e.id.startsWith("turn:") ? e.id.slice(5) : null;
         },

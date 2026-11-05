@@ -9979,10 +9979,11 @@ let o0 = a.memo(function (e) {
                         }
                         if ("user" === e.role)
                             return (
-                                r(
-                                    { kind: "user", key: e.render_id, message: e, groupStart: !1 },
-                                    { actor: "user", authorId: e.user_id, boundary: void 0 },
-                                ),
+                                (0, tB.ST)(e) ||
+                                    r(
+                                        { kind: "user", key: e.render_id, message: e, groupStart: !1 },
+                                        { actor: "user", authorId: e.user_id, boundary: void 0 },
+                                    ),
                                 l
                             );
                         if ("publish_notice" === e.kind) {
@@ -10424,7 +10425,7 @@ let o0 = a.memo(function (e) {
         es = (0, c.bG)([lZ.A], () => lZ.A.getSettings(t)?.secrets, [t]),
         eu = (0, s5.WT)(t),
         eo = a.useMemo(() => (0, lG.Mv)(n, es), [n, es]);
-    if (0 === n.length) {
+    if (!(0, tB.i_)(n)) {
         if ("loading" === l)
             return (0, i.jsx)("ol", {
                 className: o()(s6.x7, s6.jH),
@@ -11148,7 +11149,7 @@ function cv(e) {
     }, [H, m]);
     let V = a.useRef(!H);
     (a.useLayoutEffect(() => {
-        if (V.current || 0 === j.length) return;
+        if (V.current || !(0, tB.i_)(j)) return;
         V.current = !0;
         let e = Z.A.getProjectView(m).chatScroll;
         null != e && _.current?.restore(e) !== !0 && null != M.current && (M.current.position = null);
@@ -11438,29 +11439,30 @@ function cv(e) {
             historyUnavailable: (0, c.bG)([lE.A], () => lE.A.isHistoryUnavailable(m), [m]),
             connState: b,
         }),
-        tr = "loading" === tl && 0 === j.length,
-        ti = a.useMemo(() => {
+        tr = !(0, tB.i_)(j),
+        ti = "loading" === tl && tr,
+        ta = a.useMemo(() => {
             let e = 0;
             for (let t = 0; t < m.length; t++) e = (31 * e + m.charCodeAt(t)) % 0x7fffffff;
             return cx[e % cx.length];
         }, [m]),
-        ta = ex ? T.intl.string(R.default.Zc7gML) : "greeting" === tl && 0 === j.length ? ti : null,
-        ts = a.useMemo(() => {
+        ts = ex ? T.intl.string(R.default.Zc7gML) : "greeting" === tl && tr ? ta : null,
+        tu = a.useMemo(() => {
             for (let e = j.length - 1; e >= 0; e--) {
                 let t = j[e];
                 if ("assistant" === t.role && !(0, tB.BL)(t)) return t;
             }
         }, [j]),
-        tu = null != ts,
-        to = a.useMemo(() => j.filter((e) => "user" === e.role && "queued" === e.disposition), [j]),
-        tc = null != ts ? (0, rt.S)(ts) : void 0,
-        td = ex && eg ? ef : void 0,
-        tm = a.useCallback(() => (0, nc.RQ)(m, T.intl.string(R.default.EMgIuY)), [m]),
-        [tf, th] = a.useState(null),
-        [tg, tp] = a.useState(tu);
-    (tg !== tu && (tp(tu), tu || th(null)),
+        to = null != tu,
+        tc = a.useMemo(() => j.filter((e) => "user" === e.role && "queued" === e.disposition), [j]),
+        td = null != tu ? (0, rt.S)(tu) : void 0,
+        tm = ex && eg ? ef : void 0,
+        tf = a.useCallback(() => (0, nc.RQ)(m, T.intl.string(R.default.EMgIuY)), [m]),
+        [th, tg] = a.useState(null),
+        [tp, tx] = a.useState(to);
+    (tp !== to && (tx(to), to || tg(null)),
         a.useEffect(() => {
-            if (!tu) return;
+            if (!to) return;
             let e = I.current?.getScrollerNode(),
                 t = e?.querySelector('[data-conjure-turn-status="true"][data-live="true"]');
             if (null == e || null == t) return;
@@ -11468,22 +11470,22 @@ function cv(e) {
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? th(null)
-                        : th(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? tg(null)
+                        : tg(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return (n.observe(t), () => n.disconnect());
-        }, [tu, ts?.steps, F]));
-    let tx = F ? tf : "bottom",
-        tv = a.useMemo(() => (null != ts ? (0, tH.b9)(ts.steps) : ""), [ts]),
-        tj = a.useMemo(() => (null != ts ? ((0, tU.lt)(ts.steps) ?? ts.todos) : void 0), [ts]),
-        tb = ts?.provisionalTodo,
-        ty = null != ts && tK(ts),
-        tk = a.useMemo(() => {
+        }, [to, tu?.steps, F]));
+    let tv = F ? th : "bottom",
+        tj = a.useMemo(() => (null != tu ? (0, tH.b9)(tu.steps) : ""), [tu]),
+        tb = a.useMemo(() => (null != tu ? ((0, tU.lt)(tu.steps) ?? tu.todos) : void 0), [tu]),
+        ty = tu?.provisionalTodo,
+        tk = null != tu && tK(tu),
+        tw = a.useMemo(() => {
             var e;
-            return null != ts ? ((e = ts.steps), rk((0, tU.Jf)(e, !0).tasks)) : void 0;
-        }, [ts]);
+            return null != tu ? ((e = tu.steps), rk((0, tU.Jf)(e, !0).tasks)) : void 0;
+        }, [tu]);
     return (0, i.jsxs)("section", {
         ref: N,
         "data-conjure-chat": !0,
@@ -11499,12 +11501,12 @@ function cv(e) {
                 : null,
             (0, i.jsx)(nl, {
                 onJumpToActivity: B,
-                line: tv,
-                placement: tu && "top" === tx ? "top" : null,
-                todos: tj,
-                todosLive: ty,
-                provisionalTodo: tb,
-                agents: tk,
+                line: tj,
+                placement: to && "top" === tv ? "top" : null,
+                todos: tb,
+                todosLive: tk,
+                provisionalTodo: ty,
+                agents: tw,
             }),
             (0, i.jsxs)("div", {
                 className: cp.JX,
@@ -11512,7 +11514,7 @@ function cv(e) {
                     (0, i.jsx)(tF.Ch, {
                         ref: I,
                         onScroll: K,
-                        scrollbarGutter: tr ? "both-edges" : "stable",
+                        scrollbarGutter: ti ? "both-edges" : "stable",
                         className: [cp.N$, $ ? null : cp.hB, eV ? cp.J9 : null].filter(Boolean).join(" "),
                         children: (0, i.jsx)(rn.Fu.Provider, {
                             value: m,
@@ -11526,8 +11528,8 @@ function cv(e) {
                                 onPickIdea: eg ? ei : void 0,
                                 onAskForIdeas: eg ? eu : void 0,
                                 draftHasText: ea,
-                                onApprovePlan: eg ? tm : void 0,
-                                onRestoreVersion: eh || tu ? void 0 : h,
+                                onApprovePlan: eg ? tf : void 0,
+                                onRestoreVersion: eh || to ? void 0 : h,
                                 scrollerRef: I,
                                 stickToBottomRef: P,
                                 pinned: L,
@@ -11541,17 +11543,17 @@ function cv(e) {
                         className: cp.NJ,
                         children: (0, i.jsx)(ch, {
                             projectId: m,
-                            thinking: tu,
-                            turnStartedAt: tc,
+                            thinking: to,
+                            turnStartedAt: td,
                             restoring: eh,
                             remixStartedAt: et,
-                            recalling: tr,
+                            recalling: ti,
                             thinkingActivity: k,
                             compacting: w,
                             saving: S,
                             projectUsage: y,
                             connState: b,
-                            queued: to,
+                            queued: tc,
                         }),
                     }),
                     A
@@ -11631,12 +11633,12 @@ function cv(e) {
                 children: [
                     (0, i.jsx)(nl, {
                         onJumpToActivity: B,
-                        line: tv,
-                        placement: tu && "bottom" === tx ? "bottom" : null,
-                        todos: tj,
-                        todosLive: ty,
-                        provisionalTodo: tb,
-                        agents: tk,
+                        line: tj,
+                        placement: to && "bottom" === tv ? "bottom" : null,
+                        todos: tb,
+                        todosLive: tk,
+                        provisionalTodo: ty,
+                        agents: tw,
                     }),
                     0 === W.annotations.length
                         ? null
@@ -11713,7 +11715,7 @@ function cv(e) {
                             projectId: m,
                             escapeScopeRef: p,
                             canSend: eg,
-                            running: tu,
+                            running: to,
                             restoring: eh,
                             onSend: el,
                             hasPendingContext: W.annotations.length > 0,
@@ -11721,8 +11723,8 @@ function cv(e) {
                             onUploadFile: ed,
                             onImport: g,
                             onSendToOtherProjects: e6 ? void 0 : eA.open,
-                            onApprove: td,
-                            suggestion: ta,
+                            onApprove: tm,
+                            suggestion: ts,
                             questionOpen: e6,
                             secretPending: null != e3,
                             modelSettings: C,

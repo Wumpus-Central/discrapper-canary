@@ -375,6 +375,7 @@ function z(e) {
                                                     {
                                                         templateId: e.templateId,
                                                         remix: e.remix,
+                                                        copy: e.copy,
                                                         clarificationAnswers: e.clarificationAnswers,
                                                         linkEmbeds: e.linkEmbeds,
                                                     },
@@ -520,37 +521,40 @@ function er(e, t, n) {
     let {
             templateId: r,
             remix: s,
-            clarificationAnswers: i,
-            nonce: l,
+            copy: i,
+            clarificationAnswers: l,
+            nonce: a,
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        a = t.trim(),
-        c = null != n && n.length > 0 ? n : void 0;
-    if ("" === a && null == c) return !1;
-    let p = (0, u.aN)(a),
-        h = {
-            content: a,
-            nonce: l ?? (0, o.m)(),
-            attachments: c,
+        c = t.trim(),
+        p = null != n && n.length > 0 ? n : void 0;
+    if ("" === c && null == p && !0 !== i) return !1;
+    let h = (0, u.aN)(c),
+        _ = {
+            content: c,
+            nonce: a ?? (0, o.m)(),
+            attachments: p,
             templateId: r,
             remix: s,
-            ...(null != i ? { clarificationAnswers: i } : {}),
-            ...(null != p ? { linkEmbeds: p } : {}),
+            copy: i,
+            ...(null != l ? { clarificationAnswers: l } : {}),
+            ...(null != h ? { linkEmbeds: h } : {}),
         },
-        _ = H.get(e);
-    if (null != _ && ("connecting" === x.get(e) || _.reconnectPending)) return (_.pendingSends.push(h), !0);
-    q(e, h);
+        f = H.get(e);
+    if (null != f && ("connecting" === x.get(e) || f.reconnectPending)) return (f.pendingSends.push(_), !0);
+    q(e, _);
     try {
-        if (null == _) throw Error("Not connected");
+        if (null == f) throw Error("Not connected");
         return (
-            _.ws.sendUserMessage(
-                h.content,
-                h.nonce,
-                h.attachments?.map((e) => e.id),
+            f.ws.sendUserMessage(
+                _.content,
+                _.nonce,
+                _.attachments?.map((e) => e.id),
                 {
-                    templateId: h.templateId,
-                    remix: h.remix,
-                    clarificationAnswers: h.clarificationAnswers,
-                    linkEmbeds: h.linkEmbeds,
+                    templateId: _.templateId,
+                    remix: _.remix,
+                    copy: _.copy,
+                    clarificationAnswers: _.clarificationAnswers,
+                    linkEmbeds: _.linkEmbeds,
                 },
             ),
             !0
@@ -558,7 +562,7 @@ function er(e, t, n) {
     } catch (n) {
         console.error("[conjure] send failed", n);
         let t = n instanceof Error ? n.message : "send failed";
-        return (null == l && (0, d.Gu)(e, t), !1);
+        return (null == a && (0, d.Gu)(e, t), !1);
     }
 }
 function es(e, t, n) {

@@ -48,8 +48,9 @@
                     let {
                         templateId: r,
                         remix: s,
-                        clarificationAnswers: i,
-                        linkEmbeds: o,
+                        copy: i,
+                        clarificationAnswers: o,
+                        linkEmbeds: l,
                     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
                         throw Error("WebSocket not open");
@@ -61,8 +62,9 @@
                             attachment_ids: n,
                             template_id: r,
                             remix: s,
-                            clarification_answers: i,
-                            link_embeds: o,
+                            copy: i,
+                            clarification_answers: o,
+                            link_embeds: l,
                         }),
                     );
                 }

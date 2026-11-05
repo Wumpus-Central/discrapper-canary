@@ -25,8 +25,8 @@ i.d(
                 });
             let { application: m } = j,
                 g = "ready" === j.type && j.canRemix ? j.project : null;
-            function f() {
-                null != g && (x(), (0, s.A)(g, i));
+            function f(t) {
+                null != g && (x(), (0, s.A)(g, i, t));
             }
             return (0, e.jsx)(a.a, {
                 transitionState: u,
@@ -37,8 +37,16 @@ i.d(
                     null == g
                         ? [y]
                         : [
-                              { text: p.intl.string(d.default["6RGR3m"]), variant: "secondary", onClick: f },
-                              { text: p.intl.string(d.default["UsUa/c"]), variant: "primary", onClick: f },
+                              {
+                                  text: p.intl.string(d.default["6RGR3m"]),
+                                  variant: "secondary",
+                                  onClick: () => f("remix"),
+                              },
+                              {
+                                  text: p.intl.string(d.default["UsUa/c"]),
+                                  variant: "primary",
+                                  onClick: () => f("copy"),
+                              },
                           ],
                 children: (0, e.jsxs)(r.B, {
                     gap: 16,
