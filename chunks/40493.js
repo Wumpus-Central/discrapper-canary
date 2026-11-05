@@ -20,13 +20,13 @@ t.d(
                 I = (0, d.T)(p?.asset),
                 { enabled: h } = g.J.useConfig({ location: "GiftPromotionPopout" }),
                 T = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
-                N = (0, c.dA)(T?.endDate),
-                k = null != N,
-                _ = (0, u.Ay)(k),
-                j = l.useRef(null);
+                k = (0, c.dA)(T?.endDate),
+                N = null != k,
+                j = (0, u.Ay)(N),
+                _ = l.useRef(null);
             l.useEffect(() => {
-                !0 !== _ || k || (n(), A(C.i.AUTO_DISMISS));
-            }, [_, k, n, A]);
+                !0 !== j || N || (n(), A(C.i.AUTO_DISMISS));
+            }, [j, N, n, A]);
             let x = {
                 text: m.intl.string(m.t.Ve9Ge6),
                 icon: o.GiftIcon,
@@ -36,9 +36,9 @@ t.d(
             };
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { ref: j, children: b }),
+                    (0, i.jsx)("div", { ref: _, children: b }),
                     (0, i.jsx)(r.H, {
-                        targetElementRef: j,
+                        targetElementRef: _,
                         shouldShow: !0,
                         disableMediaViewer: !0,
                         position: "top",
@@ -47,8 +47,8 @@ t.d(
                         body: p?.body ?? "",
                         assetUrl: I ?? "",
                         badge:
-                            h && null != N
-                                ? { type: { text: N.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
+                            h && null != k
+                                ? { type: { text: k.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
                                 : void 0,
                         action: x,
                         caretConfig: { align: "center" },

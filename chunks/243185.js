@@ -74,15 +74,15 @@ let m = {
                 onDoubleClick: I,
                 isActive: h,
                 onMouseEnter: T,
-                onMouseLeave: N,
-                onFocus: k,
-                onBlur: _,
-                pulse: j,
+                onMouseLeave: k,
+                onFocus: N,
+                onBlur: j,
+                pulse: _,
                 sparkle: x,
-                notification: G,
-                "aria-label": v,
-                "aria-expanded": y,
-                "aria-haspopup": R,
+                notification: v,
+                "aria-label": y,
+                "aria-expanded": R,
+                "aria-haspopup": G,
                 "aria-controls": M,
                 "aria-keyshortcuts": O,
                 noHover: S,
@@ -90,7 +90,7 @@ let m = {
             E = (0, s.p)(null != p, { ...m, keys: (e) => (e ? "children" : "icon") });
         function D(e) {
             let { component: n } = e;
-            return null != G
+            return null != v
                 ? (0, i.jsxs)("div", {
                       className: C.IO,
                       children: [
@@ -108,20 +108,20 @@ let m = {
         }
         return (0, i.jsxs)(u.D, {
             innerRef: n,
-            "aria-label": v,
-            "aria-expanded": y,
-            "aria-haspopup": R,
+            "aria-label": y,
+            "aria-expanded": R,
+            "aria-haspopup": G,
             "aria-controls": M,
             "aria-keyshortcuts": O,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: r()(t, C.x6, { [C.vu]: h, [C.CK]: S, [C.s0]: j, [C.r9]: l }),
+            className: r()(t, C.x6, { [C.vu]: h, [C.CK]: S, [C.s0]: _, [C.r9]: l }),
             onClick: l ? void 0 : b,
             onDoubleClick: l ? void 0 : I,
             onMouseEnter: T,
-            onMouseLeave: N,
-            onFocus: k,
-            onBlur: _,
+            onMouseLeave: k,
+            onFocus: N,
+            onBlur: j,
             focusProps: { offset: { top: 4, bottom: 4 } },
             children: [
                 E((e, n, t) => {
@@ -140,7 +140,7 @@ let m = {
                                     className: r()(C._o, a),
                                     children: D({
                                         component: (0, i.jsx)(A, {
-                                            className: r()(C.Kk, d, { [C.d1]: j }),
+                                            className: r()(C.Kk, d, { [C.d1]: _ }),
                                             color: "currentColor",
                                         }),
                                     }),

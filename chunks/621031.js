@@ -20,19 +20,19 @@ var i = n(477900),
     x = n(688810),
     _ = n(781300),
     I = n(160946),
-    N = n(351906),
-    b = n(295405),
+    b = n(351906),
+    N = n(295405),
     C = n(97352),
     y = n(722178),
     v = n(83617),
     j = n(615396),
     O = n(543767),
-    L = n(793574),
-    R = n(166532),
+    R = n(793574),
+    L = n(166532),
     D = n(778705);
 function P(e) {
     let { dropdownProps: t, subscription: n, openInvoice: l } = e,
-        { analyticsLocations: s } = (0, x.Ay)(L.A.SUBSCRIPTION_DETAILS);
+        { analyticsLocations: s } = (0, x.Ay)(R.A.SUBSCRIPTION_DETAILS);
     return null == l
         ? (0, i.jsx)(f.Ay, { ...t, disabled: !0 })
         : (0, i.jsx)(f.Ay, {
@@ -51,7 +51,7 @@ function P(e) {
                       initialPlanId: n.planIdFromItems,
                       openInvoiceId: l.id,
                       analyticsLocations: s,
-                      startingStepOverride: R.pn.ADD_PAYMENT_STEPS,
+                      startingStepOverride: L.pn.ADD_PAYMENT_STEPS,
                   });
               },
           });
@@ -65,30 +65,30 @@ function k(e) {
             subscription: t,
             onPaymentSourceAdded: s,
             highlightAddPaymentMethodButton: a,
-            analyticsLocation: L,
-            currentInvoicePreview: R,
+            analyticsLocation: R,
+            currentInvoicePreview: L,
             disabled: D = !1,
             openInvoice: k,
         } = e,
-        w = (0, u.bG)([N.A], () => N.A.hidePersonalInformation),
-        [F, B, X] = (0, u.yK)([b.A], () => [
-            b.A.paymentSources,
-            b.A.hasFetchedPaymentSources,
-            b.A.paymentSourceFetchError,
+        w = (0, u.bG)([b.A], () => b.A.hidePersonalInformation),
+        [F, B, X] = (0, u.yK)([N.A], () => [
+            N.A.paymentSources,
+            N.A.hasFetchedPaymentSources,
+            N.A.paymentSourceFetchError,
         ]),
         z = (0, I.Y)((0, j.MP)(t)),
         { analyticsLocations: H } = (0, x.Ay)(),
         Y = l.useMemo(() => {
-            let e = R.checkoutContext;
+            let e = L.checkoutContext;
             if (null == e) return Object.values(F).filter((e) => !e.invalid);
             let t = new Set(e.payment_sources.filter((e) => e.enabled).map((e) => e.id));
             return Object.values(F).filter((e) => !e.invalid && t.has(e.id));
-        }, [F, R.checkoutContext]),
+        }, [F, L.checkoutContext]),
         [K, W] = l.useState(!1),
         [Z, q] = l.useState(t.currency);
     async function Q(e, n, i) {
         if (null == t) throw Error("missing subscription and paymentSource");
-        (null == e ? await S.r6(t, n, i, H, L) : await S.uK(t, e, i, H, L), W(!1), q(n));
+        (null == e ? await S.r6(t, n, i, H, R) : await S.uK(t, e, i, H, R), W(!1), q(n));
     }
     async function J(e, l, s) {
         W(!0);
@@ -98,10 +98,10 @@ function k(e) {
                 renewal: !0,
                 currency: null != e ? void 0 : l,
                 analyticsLocations: H,
-                analyticsLocation: L,
+                analyticsLocation: R,
             }),
             a = { amount: r.subtotal, currency: r.currency };
-        R.currency !== r.currency || (R.currency === r.currency && R.total !== r.total)
+        L.currency !== r.currency || (L.currency === r.currency && L.total !== r.total)
             ? await (async function (e, t, l) {
                   let s = await (0, d.mM)(
                       async () => {
@@ -132,7 +132,7 @@ function k(e) {
             "function" == typeof s && s(e.id));
     }
     let ee = () => {
-        (0, d.mM)(async () => (e) => (0, i.jsx)(T.default, { ...e, onAddPaymentSource: $, analyticsLocation: L }), {
+        (0, d.mM)(async () => (e) => (0, i.jsx)(T.default, { ...e, onAddPaymentSource: $, analyticsLocation: R }), {
             onCloseCallback: () => {
                 (0, h.ET)();
             },
@@ -158,7 +158,7 @@ function k(e) {
             n,
             l = C.A.get(t.planIdForCurrencies);
         o()(null != l, "Unable to fetch plan");
-        let s = null != R.checkoutContext ? R.checkoutContext.allowed_currencies : null,
+        let s = null != L.checkoutContext ? L.checkoutContext.allowed_currencies : null,
             a = null != s && s.length > 0 ? s : (0, v._w)(l, t.paymentSourceId, !1),
             u = null != t.paymentSourceId ? Y.find((e) => e.id === t.paymentSourceId) : null,
             d = u?.type === G.hes.TDS_WALLET;

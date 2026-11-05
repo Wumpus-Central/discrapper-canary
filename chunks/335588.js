@@ -22,8 +22,8 @@ var i = n(477900),
     y = n(82498),
     x = n(77528),
     T = n(369805),
-    j = n(728666),
-    O = n(632150),
+    O = n(728666),
+    j = n(632150),
     S = n(792656),
     b = n(682901),
     R = n(652215),
@@ -43,8 +43,8 @@ function k(e) {
             onClose: G,
             onDisplay: F,
             onUpsellClicked: J,
-            isEmojiPickerOverlay: V = !1,
-            graphic: K,
+            isEmojiPickerOverlay: K = !1,
+            graphic: V,
             useNitroGradient: B = !1,
         } = e;
     s.useEffect(() => {
@@ -57,15 +57,15 @@ function k(e) {
     let H = (0, x.V)(),
         W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
         X = (0, T.A)(b.pe.TIER_2),
-        z = (0, j.O9)();
-    t = V
+        z = (0, O.O9)();
+    t = K
         ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
             : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
         : (0, _.TM)()
           ? D.A
           : w.A;
-    let Z = V || B ? "nitro-pink" : "green";
+    let Z = K || B ? "nitro-pink" : "green";
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.p, { onClick: G, isVisible: !0 }),
@@ -86,7 +86,7 @@ function k(e) {
                                         (0, i.jsx)("div", {
                                             className: M.headerGraphic,
                                             children:
-                                                K ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
+                                                V ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
                                         null != X && (0, i.jsx)(m.E, { type: { text: X }, variant: "primary" }),
                                         (0, i.jsx)(f.D, {
@@ -103,11 +103,11 @@ function k(e) {
                                         }),
                                     ],
                                 }),
-                                V &&
+                                K &&
                                     z &&
                                     (0, i.jsx)("div", {
                                         className: P.Zr,
-                                        children: (0, i.jsx)(O.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
+                                        children: (0, i.jsx)(j.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
                                     }),
                             ],
                         }),

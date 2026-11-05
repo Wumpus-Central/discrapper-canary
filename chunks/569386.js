@@ -29,8 +29,8 @@ var g = n(503698),
     x = n(996254),
     _ = n(830543),
     I = n(738419),
-    N = n(958904),
-    b = n(325600),
+    b = n(958904),
+    N = n(325600),
     C = n(114149);
 function y(e) {
     let { className: t } = e,
@@ -40,20 +40,20 @@ function y(e) {
         type: A.ImpressionTypes.VIEW,
         properties: { location_stack: n },
     });
-    let i = (0, x.X)({ "en-US": N.default["f/cLEi"], "en-GB": N.default["f/cLEi"] }, N.default.CARxAC);
+    let i = (0, x.X)({ "en-US": b.default["f/cLEi"], "en-GB": b.default["f/cLEi"] }, b.default.CARxAC);
     return (0, c.jsxs)("div", {
-        className: m()(b.kL, t),
+        className: m()(N.kL, t),
         children: [
-            (0, c.jsx)("div", { className: b.zc, children: (0, c.jsx)("img", { src: C.A, className: b._e, alt: "" }) }),
+            (0, c.jsx)("div", { className: N.zc, children: (0, c.jsx)("img", { src: C.A, className: N._e, alt: "" }) }),
             (0, c.jsxs)("div", {
-                className: b.P_,
+                className: N.P_,
                 children: [
                     (0, c.jsx)(h.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
-                    (0, c.jsx)(S.E, { variant: "body-sm/normal", children: u.intl.string(N.default.nla4RG) }),
+                    (0, c.jsx)(S.E, { variant: "body-sm/normal", children: u.intl.string(b.default.nla4RG) }),
                 ],
             }),
             (0, c.jsx)("div", {
-                className: b.UD,
+                className: N.UD,
                 children: (0, c.jsx)(E.$, {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
@@ -70,7 +70,7 @@ function y(e) {
 let v = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     Component: function () {
-        return (0, c.jsx)(y, { className: b.YH });
+        return (0, c.jsx)(y, { className: N.YH });
     },
     usePredicate: () => {
         let e = (0, a.V)(),
@@ -80,8 +80,8 @@ let v = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
 });
 var j = n(366010),
     O = n(775602),
-    L = n(875317),
-    R = n(97469),
+    R = n(875317),
+    L = n(97469),
     D = n(413599),
     P = n(253932),
     G = n(818348);
@@ -89,7 +89,7 @@ let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
-        let e = (0, R.qo)();
+        let e = (0, L.qo)();
         return (0, s.bG)([D.A, O.Ay], () => {
             let t = D.A.theme,
                 n = O.Ay.useForcedColors;
@@ -98,7 +98,7 @@ let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     },
     usePredicate: function () {
         let e = null != P.eh.useSetting().customUserThemeSettings,
-            t = null != (0, L.Q)(),
+            t = null != (0, R.Q)(),
             n = (0, a.V)();
         return (0, s.bG)([D.A, r.A], () => {
             let i = D.A.theme,

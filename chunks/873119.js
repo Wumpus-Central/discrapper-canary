@@ -1,81 +1,81 @@
 let l;
-r.d(t, { W9: () => h, F: () => v, Q4: () => E });
-var n = r(126919);
-let o = new Map(),
+n.d(t, { W9: () => d, F: () => f, Q4: () => p });
+var r = n(126919);
+let u = new Map(),
     i = new Map(),
-    u = new Set(),
+    s = new Set(),
     a = Promise.resolve();
-function s(e) {
-    let t = o.get(e);
+function o(e) {
+    let t = u.get(e);
     if (null != t) return t;
-    if (!(e in n.pb)) {
+    if (!(e in r.pb)) {
         let t = Promise.resolve(null);
-        return (o.set(e, t), t);
+        return (u.set(e, t), t);
     }
     return (
         (a = (t = a
             .then(async () => {
                 let t = await (null == l &&
                     (l = Promise.resolve()
-                        .then(() => (0, n.A)())
+                        .then(() => (0, r.A)())
                         .catch(() => null)
                         .then((e) => (null == e && (l = void 0), e))),
                 l);
-                return null == t ? null : t.loadGrammar(n.pb[e]);
+                return null == t ? null : t.loadGrammar(r.pb[e]);
             })
             .then((t) => {
-                if (null == t) return (o.delete(e), i.delete(e), null);
-                for (let r of (i.set(e, t), u)) r(e);
+                if (null == t) return (u.delete(e), i.delete(e), null);
+                for (let n of (i.set(e, t), s)) n(e);
                 return t;
             })
-            .catch(() => (o.delete(e), i.delete(e), null))).then(
+            .catch(() => (u.delete(e), i.delete(e), null))).then(
             () => {},
             () => {},
         )),
-        o.set(e, t),
+        u.set(e, t),
         t
     );
 }
-function d(e) {
+function c(e) {
     return {
         highlightToHtml(t) {
-            let r = e.createSession();
+            let n = e.createSession();
             try {
-                r.setText(
+                n.setText(
                     t.endsWith("\n")
                         ? t
                         : `${t}
 `,
                 );
-                let { html: e, missingInjections: l } = r.highlightToHtml();
+                let { html: e, missingInjections: l } = n.highlightToHtml();
                 return { html: e, missingInjections: l.sort() };
             } finally {
-                r.free();
+                n.free();
             }
         },
     };
 }
-let c = new Map();
-function h(e) {
-    let t = c.get(e);
+let h = new Map();
+function d(e) {
+    let t = h.get(e);
     return (
         null == t &&
             ((t = (async function (e) {
                 try {
-                    let t = await s(e);
-                    return null == t ? null : d(t);
+                    let t = await o(e);
+                    return null == t ? null : c(t);
                 } catch {
                     return null;
                 }
             })(e)),
-            c.set(e, t)),
+            h.set(e, t)),
         t
     );
 }
-function v(e) {
-    let t = i.has(e) ? (i.get(e) ?? null) : (s(e), null);
-    return null != t ? d(t) : null;
+function f(e) {
+    let t = i.has(e) ? (i.get(e) ?? null) : (o(e), null);
+    return null != t ? c(t) : null;
 }
-function E(e) {
-    return (u.add(e), () => u.delete(e));
+function p(e) {
+    return (s.add(e), () => s.delete(e));
 }

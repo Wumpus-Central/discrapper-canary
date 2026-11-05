@@ -34,11 +34,11 @@ function g(e) {
         { enabled: I } = u.useConfig({ location: b }),
         { enabled: h } = c.useConfig({ location: b }),
         T = (0, o.F5)(b),
-        N = (0, a.tA)({ isGift: !0, giftRecipient: n }),
-        k = I && null != n,
-        _ = h && null == n,
-        j = k || _,
-        x = N && null != n;
+        k = (0, a.tA)({ isGift: !0, giftRecipient: n }),
+        N = I && null != n,
+        j = h && null == n,
+        _ = N || j,
+        x = k && null != n;
     return {
         openGiftModal: i.useCallback(() => {
             null != p
@@ -67,7 +67,7 @@ function g(e) {
                             analyticsObject: g ?? s,
                             giftMessage: A,
                         })
-                  : k && null != n
+                  : N && null != n
                     ? (0, d.A)({
                           giftRecipient: n,
                           analyticsLocations: t,
@@ -75,7 +75,7 @@ function g(e) {
                           analyticsObject: g ?? s,
                           giftMessage: A,
                       })
-                    : _
+                    : j
                       ? (0, d.A)({
                             analyticsLocations: t,
                             analyticsLocation: m,
@@ -100,8 +100,8 @@ function g(e) {
                               analyticsObject: C ?? s,
                               giftMessage: A,
                           });
-        }, [T, k, _, x, n, t, m, s, g, C, A, p]),
+        }, [T, N, j, x, n, t, m, s, g, C, A, p]),
         shouldShowWishlistModal: x,
-        shouldShowGiftSelectionModal: j,
+        shouldShowGiftSelectionModal: _,
     };
 }

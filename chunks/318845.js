@@ -50,8 +50,8 @@ let p = function (e) {
             rowCount: y,
             getScrollOffsetForIndex: x,
             getScrollOffsetForCategory: T,
-            categoryHeight: j,
-            onScroll: O,
+            categoryHeight: O,
+            onScroll: j,
             renderCategoryListItem: S,
             rowCountBySection: b,
             renderSection: R,
@@ -140,7 +140,7 @@ let p = function (e) {
                     let e = E(l) ?? g.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
-                j = (0, u.Ay)({
+                O = (0, u.Ay)({
                     id: t,
                     isEnabled: p,
                     setFocus: _,
@@ -149,7 +149,7 @@ let p = function (e) {
                     onNavigateNextAtEnd: x,
                     onNavigatePreviousAtStart: T,
                 }),
-                O = j.setFocus;
+                j = O.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= r) return;
@@ -158,14 +158,14 @@ let p = function (e) {
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), O(i(a)));
+                                ((g.current = a), j(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, c, i, O, r]),
-                j
+                }, [a, n, c, i, j, r]),
+                O
             );
         })({
             navId: v ?? "expression-picker-categories-disabled",
@@ -202,10 +202,10 @@ let p = function (e) {
             [n, d, T],
         ),
         G = s.useCallback((e) => S(l[e], e, () => U(e), P === e), [P, l, U, S]),
-        F = s.useMemo(() => ("function" == typeof j ? (e) => j(l[e], e) : j), [l, j]),
+        F = s.useMemo(() => ("function" == typeof O ? (e) => O(l[e], e) : O), [l, O]),
         J = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: O,
+            onScroll: j,
             ref: t,
             renderListHeader: A,
             listHeaderHeight: _,
@@ -217,7 +217,7 @@ let p = function (e) {
             renderSection: R,
             role: M ? "none presentation" : void 0,
         }),
-        V = (0, i.jsxs)("div", {
+        K = (0, i.jsxs)("div", {
             className: r()(h.i, N),
             children: [
                 M
@@ -231,5 +231,5 @@ let p = function (e) {
                 p?.(U),
             ],
         });
-    return M ? (0, i.jsx)(a.hD, { navigator: k, children: V }) : V;
+    return M ? (0, i.jsx)(a.hD, { navigator: k, children: K }) : K;
 };
