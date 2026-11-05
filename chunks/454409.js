@@ -29,8 +29,10 @@ class o {
 }
 class d {
     shouldCollectSignal;
-    constructor(e) {
-        this.shouldCollectSignal = e;
+    consentRevokedIOS;
+    consentRevokedAndroid;
+    constructor(e, t = !1, n = !1) {
+        ((this.shouldCollectSignal = e), (this.consentRevokedIOS = t), (this.consentRevokedAndroid = n));
     }
 }
 class c {
@@ -68,12 +70,19 @@ class u {
     isMediaTakedownRegulation(e) {
         return this.mediaTakedown.isRegulation(e);
     }
+    isAppStoreConsentRevoked(e) {
+        return "ios" === e ? this.appStore.consentRevokedIOS : this.appStore.consentRevokedAndroid;
+    }
     static fromConnectionOpen(e) {
         let t = e.media_takedown_regulation;
         return new u(
             new l(e.teen_by_default_settings),
             new o(e.age_gated_features),
-            new d(!0 === e.should_collect_app_store_signal),
+            new d(
+                !0 === e.should_collect_app_store_signal,
+                !0 === e.app_store_consent_revoked_ios,
+                !0 === e.app_store_consent_revoked_android,
+            ),
             new c((0, s.c)(t) ? t : null),
         );
     }
@@ -106,6 +115,9 @@ class h extends i.Ay.Store {
     }
     isMediaTakedownRegulation(e) {
         return _?.isMediaTakedownRegulation(e) ?? !1;
+    }
+    isAppStoreConsentRevoked(e) {
+        return _?.isAppStoreConsentRevoked(e) ?? !1;
     }
     getUserCountryCode() {
         return E;
