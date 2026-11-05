@@ -15,15 +15,16 @@ var o = i(355097);
                 let {
                         guild: e,
                         scrollPosition: t,
-                        analyticsLocations: a,
+                        initialTab: a,
+                        analyticsLocations: r,
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    r = (0, l.X)("useOpenProfileSettings");
+                    u = (0, l.X)("useOpenProfileSettings");
                 return (0, E.useCallback)(() => {
-                    if (r) {
+                    if (u) {
                         let t = n.default.getCurrentUser();
                         if (null != t) {
                             let { openUserProfileModal: E } = i(702476);
-                            E({ userId: t.id, guildId: e?.id, sourceAnalyticsLocations: a });
+                            E({ userId: t.id, guildId: e?.id, sourceAnalyticsLocations: r });
                             return;
                         }
                     }
@@ -31,9 +32,9 @@ var o = i(355097);
                         s.A.setState({ subsection: null != e ? o.Eq.GUILD : o.Eq.USER_PROFILE, scrollPosition: t }));
                     {
                         let { openUserSettings: e } = i(766075);
-                        e(d.X.PROFILE_PANEL, { analyticsLocations: a });
+                        e(d.X.PROFILE_PANEL, { analyticsLocations: r });
                     }
-                }, [e, t, a, r]);
+                }, [e, t, a, r, u]);
             },
         },
     ));
