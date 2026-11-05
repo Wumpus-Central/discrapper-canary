@@ -283,7 +283,6 @@
 }
 
 .statRow_bcgTHb .statIcon_bcgTHb {
-    border: 1px solid #000;
     box-sizing: border-box;
     height: 16px;
     width: 16px
@@ -291,7 +290,6 @@
 
 .statRow_bcgTHb .guildAcronymIcon_bcgTHb {
     background-color: rgba(0, 0, 0, .2);
-    border: 1px solid #000;
     box-sizing: border-box;
     display: grid;
     height: 16px;
@@ -1393,4 +1391,4 @@
     top: var(--space-32)
 }
 
-/*# sourceMappingURL=937139.28fa18c6856a02ea.css.map*/
+/*# sourceMappingURL=937139.3af05a01f63b2634.css.map*/
