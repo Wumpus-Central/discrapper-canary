@@ -274,7 +274,7 @@ function B(e) {
         }),
     });
 }
-var D = n(235640),
+var D = n(722074),
     k = n(767589);
 function F(e, t) {
     return D.m.create({ contentIdentifier: e, properties: t });
