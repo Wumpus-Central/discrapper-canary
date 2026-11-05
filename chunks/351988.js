@@ -1,4 +1,4 @@
-l.d(i, { default: () => T });
+l.d(i, { default: () => m });
 var r = l(477900),
     n = l(582128),
     t = l(165862),
@@ -7,32 +7,32 @@ var r = l(477900),
     o = l(793574),
     a = l(122088),
     s = l(766075),
-    u = l(635842),
+    u = l(158935),
     v = l(855986),
     b = l(406810),
-    p = l(848847),
-    h = l(148810),
+    h = l(848847),
+    p = l(148810),
     y = l(521502),
     k = l(380610),
-    A = l(390486),
-    g = l(540999),
+    g = l(390486),
+    A = l(540999),
     x = l(792996),
     j = l(650956),
     f = l(949091);
-let T = (0, c.A)(
+let m = (0, c.A)(
     function (e) {
         let i = (function () {
                 let e = (0, v.bG)([y.A], () =>
                         (0, k.kK)() ? y.A.getCurrentBuildOverride().overrides?.discord_web : null,
                     ),
-                    i = (0, v.bG)([g.A], () => g.A.isDeveloper),
-                    l = n.useMemo(() => (i ? (0, A.H)() : []), [i]),
+                    i = (0, v.bG)([A.A], () => A.A.isDeveloper),
+                    l = n.useMemo(() => (i ? (0, g.HP)() : []), [i]),
                     [t, c] = n.useState(!1);
                 async function o(i) {
                     if (null == i || i.id !== e?.id)
                         try {
                             (c(!0),
-                                (null != i ? await (0, h.oA)(i.payload) : await (0, h.iD)()).ok &&
+                                (null != i ? await (0, g.mk)(i) : (await (0, p.iD)()).ok) &&
                                     window.location.reload(!0));
                         } finally {
                             c(!1);
@@ -70,8 +70,8 @@ let T = (0, c.A)(
                                 {
                                     id: "clear-build-override",
                                     disabled: t,
-                                    leadingAccessory: { type: "icon", icon: p.H },
-                                    iconLeft: p.H,
+                                    leadingAccessory: { type: "icon", icon: h.H },
+                                    iconLeft: h.H,
                                     label: x.intl.string(x.t["/Nz9rY"]),
                                     subtext: (0, r.jsx)("div", {
                                         className: j.Z,

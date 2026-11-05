@@ -450,6 +450,11 @@ let r = {
         ],
         inlineRequire: () => n(415202).A,
     },
+    RecentBuildOverridesManager: {
+        actions: ["POST_CONNECTION_OPEN", "CURRENT_BUILD_OVERRIDE_RESOLVED"],
+        inlineRequire: () => n(782169).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(441711).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(36851).A },
     RTCReconnectTimeoutManager: { actions: ["VOICE_STATE_UPDATES"], inlineRequire: () => n(940950).A },
