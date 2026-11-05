@@ -2642,7 +2642,6 @@ var nF =
         (eo.QUEST_PREVIEW_TOOL_2 = "Quest Preview Tool 2"),
         (eo.QUEST_TILE_CTA = "Quest Tile CTA"),
         (eo.QUEST_MINOR_REWARD_CAPPING_CONFIG = "Quest Minor Reward Capping Config"),
-        (eo.ATT_PREPROMPT_MODAL = "ATT Pre Prompt Modal"),
         (eo.GUILD_POWERUPS_MARKETING_PERKS_SECTION = "Guild Powerups Marketing Perks Section"),
         (eo.GUILD_POWERUPS_OVERVIEW_SIDEBAR = "Guild Powerups Overview Sidebar"),
         (eo.GUILD_POWERUPS_OVERVIEW_CARD = "Powerups Overview Card"),
