@@ -1,57 +1,57 @@
-var i = t(477900),
-    n = t(582128),
-    s = t(503698),
-    l = t.n(s),
-    r = t(935462),
-    c = t(192308),
-    d = t(825484),
-    o = t(821609),
-    u = t(789645),
-    p = t(548411),
-    f = t(663417),
-    h = t(393033),
-    m = t(171576),
-    g = t(36149),
-    k = t(40449),
-    v = t(664188),
-    x = t(792996),
-    C = t(511002),
-    b = t(679017);
-t.d(
-    a,
+var i = a(477900),
+    n = a(582128),
+    s = a(503698),
+    l = a.n(s),
+    r = a(935462),
+    d = a(192308),
+    c = a(825484),
+    o = a(821609),
+    u = a(789645),
+    p = a(548411),
+    f = a(663417),
+    m = a(393033),
+    g = a(171576),
+    h = a(36149),
+    k = a(40449),
+    v = a(664188),
+    x = a(792996),
+    b = a(511002),
+    C = a(679017);
+a.d(
+    t,
     {},
     {
         default: function (e) {
             let {
-                    onClose: a,
-                    onComplete: t,
+                    onClose: t,
+                    onComplete: a,
                     transitionState: s,
-                    webviewUrl: j,
-                    isExpressiveModalV2: E,
-                    entryPoint: w,
+                    webviewUrl: w,
+                    isExpressiveModalV2: j,
+                    entryPoint: E,
                 } = e,
-                y = (0, h.W$)(),
+                y = (0, m.W$)(),
                 [W, T] = n.useState(0),
                 M = n.useCallback(() => {
-                    (t(), a());
-                }, [t, a]),
+                    (a(), t());
+                }, [a, t]),
                 R = n.useCallback(() => {
-                    (0, c.kB)(k.SW) && !E && M();
-                }, [M, E]);
-            (0, g.dZ)(R);
+                    (0, d.kB)(k.SW) && !j && M();
+                }, [M, j]);
+            (0, h.dZ)(R);
             let I = n.useCallback(
                     (e) => {
-                        if ("" !== j) {
-                            if (!E) {
+                        if ("" !== w) {
+                            if (!j) {
                                 y && e?.data?.eventType === "Verification.Result" && M();
                                 return;
                             }
                             e?.data?.eventType === "Verification.Result"
-                                ? t()
-                                : e?.data?.eventType === "Widget.ExitReview" && a();
+                                ? a()
+                                : e?.data?.eventType === "Widget.ExitReview" && t();
                         }
                     },
-                    [j, E, y, M, t, a],
+                    [w, j, y, M, a, t],
                 ),
                 N = n.useCallback(() => {
                     T(W + 1);
@@ -65,24 +65,26 @@ t.d(
                 ),
                 [I],
             );
-            let V = w === m.q1.MANUAL_REVIEW;
+            let V = E === g.q1.MANUAL_REVIEW;
             return (0, i.jsxs)(r.EO, {
                 "data-migration-pending": !0,
                 transitionState: s,
-                className: l()(b.zr, C.rh),
+                className: l()(C.zr, b.rh),
                 parentComponent: "AgeVerificationExpressiveModal",
                 size: r.rI.MEDIUM,
+                "aria-label": x.intl.string(v.default.eKo6mw),
                 children: [
                     (0, i.jsx)(r.$m, {
                         "data-migration-pending": !0,
-                        className: l()(b.Qs, b.WM),
+                        className: l()(C.Qs, C.WM),
                         scrollbarType: "none",
                         children: (0, i.jsx)(
                             "iframe",
                             {
                                 id: "frame",
-                                src: j,
-                                className: b.pU,
+                                title: x.intl.string(v.default.eKo6mw),
+                                src: w,
+                                className: C.pU,
                                 allow: "camera; microphone;publickey-credentials-get;publickey-credentials-create",
                             },
                             W,
@@ -90,7 +92,7 @@ t.d(
                     }),
                     (0, i.jsx)(r.jl, {
                         "data-migration-pending": !0,
-                        children: (0, i.jsxs)(d.e, {
+                        children: (0, i.jsxs)(c.e, {
                             fullWidth: !0,
                             children: [
                                 (0, i.jsx)(o.$, {
@@ -98,7 +100,7 @@ t.d(
                                     variant: "secondary",
                                     icon: V ? u.P : p.Z,
                                     text: x.intl.string(V ? x.t.cpT0Cq : v.default.b7Oqdu),
-                                    onClick: a,
+                                    onClick: t,
                                 }),
                                 (0, i.jsx)(o.$, {
                                     fullWidth: !0,

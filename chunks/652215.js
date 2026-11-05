@@ -1708,6 +1708,7 @@ let nL = Object.freeze({
         QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
         GAME_ANNOUNCEMENTS: (e) => `/games/${e}/announcements`,
         GAME_ORGANIZATION: (e) => `/guilds/${e}/game-organizations`,
+        LINKABLE_GAME_ORGANIZATIONS: (e) => `/game-organizations/linkable/@me/${e}`,
         GAME_ORGANIZATION_INVITES: (e, t) => `/game-organizations/${e}/${t}/invites`,
         GAME_ORGANIZATION_INVITE: (e) => `/game-organization-invites/${e}`,
         GAME_ORGANIZATION_INVITE_JOIN: (e) => `/game-organization-invites/${e}/join`,

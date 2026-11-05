@@ -1,61 +1,63 @@
-var a = i(477900);
-i(582128);
-var e = i(503698),
-    s = i.n(e),
-    r = i(935462),
-    l = i(123292),
-    d = i(825484),
-    c = i(792996),
-    o = i(679017);
-i.d(
+var i = a(477900);
+a(582128);
+var e = a(503698),
+    l = a.n(e),
+    r = a(935462),
+    s = a(123292),
+    d = a(825484),
+    c = a(664188),
+    o = a(792996),
+    p = a(679017);
+a.d(
     t,
     {},
     {
         A: function (n) {
             let {
                     parentComponent: t,
-                    transitionState: i,
+                    transitionState: a,
                     onBackToStart: e,
-                    onCancel: p,
-                    footerRightSlot: u,
-                    hideFooter: h = !1,
-                    children: g,
+                    onCancel: u,
+                    footerRightSlot: h,
+                    hideFooter: g = !1,
+                    children: j,
                 } = n,
-                j =
-                    u ??
-                    (null != p
-                        ? (0, a.jsx)(l.Q, { variant: "secondary", text: c.intl.string(c.t["4gTnU0"]), onClick: p })
+                m =
+                    h ??
+                    (null != u
+                        ? (0, i.jsx)(s.Q, { variant: "secondary", text: o.intl.string(o.t["4gTnU0"]), onClick: u })
                         : null),
-                x = !h,
-                m = x || null != j;
-            return (0, a.jsxs)(r.EO, {
+                x = !g,
+                k = x || null != m;
+            return (0, i.jsxs)(r.EO, {
                 "data-migration-pending": !0,
-                transitionState: i,
-                className: s()(o.zr, o.rh),
+                transitionState: a,
+                className: l()(p.zr, p.rh),
                 parentComponent: t,
                 size: r.rI.MEDIUM,
+                "aria-label": o.intl.string(c.default.eKo6mw),
                 children: [
-                    (0, a.jsx)(r.$m, {
+                    (0, i.jsx)(r.$m, {
                         "data-migration-pending": !0,
-                        className: s()(o.Qs, o.WM),
+                        className: l()(p.Qs, p.WM),
                         scrollbarType: "none",
-                        children: g,
+                        children: j,
                     }),
-                    m
-                        ? (0, a.jsx)(r.jl, {
+                    k
+                        ? (0, i.jsx)(r.jl, {
                               "data-migration-pending": !0,
-                              children: (0, a.jsxs)(d.e, {
+                              children: (0, i.jsxs)(d.e, {
                                   justify: x ? "space-between" : "end",
                                   fullWidthContainer: !0,
                                   children: [
                                       x
-                                          ? (0, a.jsx)(l.Q, {
+                                          ? (0, i.jsx)(s.Q, {
                                                 variant: "secondary",
-                                                text: c.intl.string(c.t.fjKFae),
+                                                text: o.intl.string(o.t.fjKFae),
                                                 onClick: e,
                                             })
                                           : null,
-                                      j,
+                                      m,
                                   ],
                               }),
                           })

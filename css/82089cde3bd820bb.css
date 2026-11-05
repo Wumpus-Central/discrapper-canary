@@ -1,0 +1,51 @@
+.organizationIcon_wogUjp {
+    border-radius: var(--space-4);
+    height: var(--space-48);
+    width: var(--space-48)
+}
+
+.organizationChoices_ed1nUm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.organizationChoice_ed1nUm {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.organizationChoice_ed1nUm:not(.disabled_ed1nUm) {
+    cursor: pointer
+}
+
+.organizationChoice_ed1nUm.selected_ed1nUm {
+    border: 1px solid var(--border-subtle)
+}
+
+.organizationChoice_ed1nUm.disabled_ed1nUm {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.organizationDetails_ed1nUm {
+    flex-direction: column
+}
+
+.organizationDetails_ed1nUm,
+.organizationMemberCount_ed1nUm,
+.organizationMetadataAndError_ed1nUm {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.organizationMemberCount_ed1nUm {
+    align-items: center
+}
+
+/*# sourceMappingURL=82089cde3bd820bb.css.map*/

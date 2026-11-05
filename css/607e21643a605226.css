@@ -179,158 +179,160 @@
 }
 
 .previews_LuYMto li {
-    align-items: center;
     aspect-ratio: 1;
     background-color: var(--background-base-lower);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    display: flex;
     flex: 1;
     justify-content: center
 }
 
-.previews_LuYMto .reactions_LuYMto {
+.previews_LuYMto .reactions_LuYMto,
+.previews_LuYMto li {
     align-items: center;
+    box-sizing: border-box;
+    display: flex
+}
+
+.previews_LuYMto .reactions_LuYMto {
     background-color: var(--background-mod-subtle);
     border-radius: 8px;
-    box-sizing: border-box;
     color: var(--font-primary);
-    display: flex;
     height: 30px;
-    padding: 2px 6px;
+    padding: 2px 6px
+}
 
-    .previews_LuYMto .reactions_LuYMto img {
-        height: 20px;
-        margin: 2px;
-        max-height: 20px;
-        max-width: 20px;
-        width: 20px
-    }
+.previews_LuYMto .reactions_LuYMto img {
+    height: 20px;
+    margin: 2px;
+    max-height: 20px;
+    max-width: 20px;
+    width: 20px
+}
 
-    .previews_LuYMto .reactions_LuYMto span {
-        font-weight: var(--font-weight-semibold);
-        margin-inline-start: .375rem;
-        min-width: 12px;
-        text-align: center
-    }
+.previews_LuYMto .reactions_LuYMto span {
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: .375rem;
+    min-width: 12px;
+    text-align: center
+}
 
-    .previews_LuYMto .reactions_LuYMto .previewPlaceholder_LuYMto {
-        height: 20px;
-        width: 20px
-    }
+.previews_LuYMto .reactions_LuYMto .previewPlaceholder_LuYMto {
+    height: 20px;
+    width: 20px
+}
 
-    .previews_LuYMto .jumbo_LuYMto img {
-        height: 48px;
-        max-height: 48px;
-        max-width: 48px;
-        width: 48px
-    }
+.previews_LuYMto .jumbo_LuYMto img {
+    height: 48px;
+    max-height: 48px;
+    max-width: 48px;
+    width: 48px
+}
 
-    .previewPlaceholder_LuYMto {
-        background: url("/assets/83762ac0469037e2.svg") no-repeat 50%;
-        background-size: contain;
-        display: inline-block;
-        height: 48px;
-        opacity: .161;
-        width: 48px
-    }
+.previewPlaceholder_LuYMto {
+    background: url("/assets/83762ac0469037e2.svg") no-repeat 50%;
+    background-size: contain;
+    display: inline-block;
+    height: 48px;
+    opacity: .161;
+    width: 48px
+}
 
-    .foot_LuYMto {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-block-start: auto
-    }
+.foot_LuYMto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-block-start: auto
+}
 
-    .editor_LuYMto {
-        height: 100%;
-        position: relative;
-        width: 100%
-    }
+.editor_LuYMto {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
 
-    .editor_LuYMto,
-    .titleBar_LuYMto {
-        box-sizing: border-box
-    }
+.editor_LuYMto,
+.titleBar_LuYMto {
+    box-sizing: border-box
+}
 
-    .titleBar_LuYMto {
-        align-items: center;
-        display: flex;
-        height: 40px;
-        justify-content: center;
-        position: absolute;
-        top: 20px;
-        inset-inline: 0;
-        inset-inline-end: 0;
-        z-index: var(--custom-zindex-emoji-studio-top)
-    }
+.titleBar_LuYMto {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    inset-inline: 0;
+    inset-inline-end: 0;
+    z-index: var(--custom-zindex-emoji-studio-top)
+}
 
-    .title_LuYMto {
-        flex-shrink: 0
-    }
+.title_LuYMto {
+    flex-shrink: 0
+}
 
-    .closeButton_LuYMto,
-    .resetButton_LuYMto {
-        position: absolute;
-        top: 20px;
-        z-index: var(--custom-zindex-emoji-studio-top)
-    }
+.closeButton_LuYMto,
+.resetButton_LuYMto {
+    position: absolute;
+    top: 20px;
+    z-index: var(--custom-zindex-emoji-studio-top)
+}
 
-    .closeButton_LuYMto {
-        inset-inline-start: 20px
-    }
+.closeButton_LuYMto {
+    inset-inline-start: 20px
+}
 
-    .resetButton_LuYMto {
-        inset-inline-end: 20px
-    }
+.resetButton_LuYMto {
+    inset-inline-end: 20px
+}
 
-    .guildSelectorContainer_LuYMto {
-        display: flex;
-        flex-direction: column;
-        gap: 4px
-    }
+.guildSelectorContainer_LuYMto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
 
-    :root {
-        --custom-zindex-emoji-studio-top: 3;
-        --custom-zindex-emoji-studio-middle: 2;
-        --custom-zindex-emoji-studio-bottom: 1
-    }
+:root {
+    --custom-zindex-emoji-studio-top: 3;
+    --custom-zindex-emoji-studio-middle: 2;
+    --custom-zindex-emoji-studio-bottom: 1
+}
 
-    .modalRoot_emg1jO {
-        height: 100%;
-        min-height: min(672px, calc(100vh - 80px));
-        width: min(960px, calc(100vw - 80px))
-    }
+.modalRoot_emg1jO {
+    height: 100%;
+    min-height: min(672px, calc(100vh - 80px));
+    width: min(960px, calc(100vw - 80px))
+}
 
-    .modalContent_emg1jO {
-        color: var(--text-strong);
-        overflow: hidden;
-        padding: 0;
-        position: relative
-    }
+.modalContent_emg1jO {
+    color: var(--text-strong);
+    overflow: hidden;
+    padding: 0;
+    position: relative
+}
 
-    .closeButton_emg1jO {
-        align-items: center;
-        display: flex;
-        height: 32px;
-        inset-inline-end: 24px;
-        justify-content: center;
-        max-height: 32px;
-        max-width: 32px;
-        padding: 0;
-        position: absolute;
-        top: 12px;
-        width: 32px;
-        z-index: 5
-    }
+.closeButton_emg1jO {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    inset-inline-end: 24px;
+    justify-content: center;
+    max-height: 32px;
+    max-width: 32px;
+    padding: 0;
+    position: absolute;
+    top: 12px;
+    width: 32px;
+    z-index: 5
+}
 
-    .closeButton_emg1jO>div {
-        align-items: center;
-        display: flex;
-        height: 32px;
-        justify-content: center;
-        width: 32px
-    }
+.closeButton_emg1jO>div {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
 
-    /*# sourceMappingURL=55ea482f9287a77d.css.map*/
+/*# sourceMappingURL=607e21643a605226.css.map*/

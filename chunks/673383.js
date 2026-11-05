@@ -1,11 +1,13 @@
 var i,
     r,
     a,
-    s = (((i = {}).RESOLVING = "RESOLVING"), (i.RESOLVED = "RESOLVED"), (i.ERROR = "ERROR"), i),
-    l =
-        (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (r[(r.SINGLE = 1)] = "SINGLE"),
-        (r[(r.MULTI = 2)] = "MULTI"),
-        r),
-    o = (((a = {})[(a.JOINED = 1)] = "JOINED"), (a[(a.FAILED = 2)] = "FAILED"), a);
-n.d(t, {}, { Ti: o, Wy: l, Zb: s });
+    s,
+    l = (((i = {}).RESOLVING = "RESOLVING"), (i.RESOLVED = "RESOLVED"), (i.ERROR = "ERROR"), i),
+    o = (((r = {}).GUILD = "GUILD"), r),
+    d =
+        (((a = {})[(a.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (a[(a.SINGLE = 1)] = "SINGLE"),
+        (a[(a.MULTI = 2)] = "MULTI"),
+        a),
+    c = (((s = {})[(s.JOINED = 1)] = "JOINED"), (s[(s.FAILED = 2)] = "FAILED"), s);
+n.d(t, {}, { Ti: c, Wy: d, XG: o, Zb: l });

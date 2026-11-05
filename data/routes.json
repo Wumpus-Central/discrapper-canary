@@ -887,6 +887,7 @@
   "QUESTS_APP_STORE_METADATA": "/quests/appstore-metadata",
   "GAME_ANNOUNCEMENTS": "/games/:param/announcements",
   "GAME_ORGANIZATION": "/guilds/:param/game-organizations",
+  "LINKABLE_GAME_ORGANIZATIONS": "/game-organizations/linkable/@me/:param",
   "GAME_ORGANIZATION_INVITES": "/game-organizations/:param/:param/invites",
   "GAME_ORGANIZATION_INVITE": "/game-organization-invites/:param",
   "GAME_ORGANIZATION_INVITE_JOIN": "/game-organization-invites/:param/join",

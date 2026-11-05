@@ -3,48 +3,51 @@ var n = t(477900),
     i = t(192308),
     o = t(393033),
     r = t(36149),
-    c = t(793163),
-    l = t(40449),
-    d = t(679017);
+    l = t(793163),
+    c = t(40449),
+    d = t(664188),
+    u = t(792996),
+    p = t(679017);
 t.d(
     a,
     {},
     {
         default: function (e) {
-            let { onClose: a, onComplete: t, onCancel: p, transitionState: u, webviewUrl: k } = e,
-                m = (0, o.W$)(),
-                f = s.useCallback(() => {
+            let { onClose: a, onComplete: t, onCancel: m, transitionState: f, webviewUrl: k } = e,
+                w = (0, o.W$)(),
+                C = s.useCallback(() => {
                     (t(), a());
                 }, [t, a]),
-                C = s.useCallback(() => {
-                    (0, i.kB)(l.SW) && f();
-                }, [f]);
-            (0, r.dZ)(C);
-            let h = s.useCallback(
+                h = s.useCallback(() => {
+                    (0, i.kB)(c.SW) && C();
+                }, [C]);
+            (0, r.dZ)(h);
+            let b = s.useCallback(
                 (e) => {
-                    m && "" !== k && e?.data?.eventType === "Verification.Result" && f();
+                    w && "" !== k && e?.data?.eventType === "Verification.Result" && C();
                 },
-                [k, f, m],
+                [k, C, w],
             );
             return (
                 s.useEffect(
                     () => (
-                        window.addEventListener("message", h),
+                        window.addEventListener("message", b),
                         () => {
-                            window.removeEventListener("message", h);
+                            window.removeEventListener("message", b);
                         }
                     ),
-                    [h],
+                    [b],
                 ),
-                (0, n.jsx)(c.A, {
+                (0, n.jsx)(l.A, {
                     parentComponent: "AgeVerificationModal",
-                    transitionState: u,
+                    transitionState: f,
                     onBackToStart: a,
-                    onCancel: p,
+                    onCancel: m,
                     children: (0, n.jsx)("iframe", {
                         id: "frame",
+                        title: u.intl.string(d.default.eKo6mw),
                         src: k,
-                        className: d.pU,
+                        className: p.pU,
                         allow: "camera; microphone",
                     }),
                 })
