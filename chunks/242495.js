@@ -16764,7 +16764,6 @@ function mB(e) {
                 var e;
                 ((e = {
                     projectId: s.id,
-                    installScope: s.install_scope,
                     restoreDisabled: ef?.status === "restoring",
                     onRestoreVersion: (e, t) => em(e, t, !0),
                 }),

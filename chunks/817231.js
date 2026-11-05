@@ -714,7 +714,8 @@ function tl(t) {
         j,
         b,
         v,
-        { projectId: p, installScope: y, restoreDisabled: C, onRestoreVersion: w, transitionState: k, onClose: S } = t,
+        p,
+        { projectId: y, restoreDisabled: C, onRestoreVersion: w, transitionState: k, onClose: S } = t,
         [D, z] = l.useState("versions"),
         {
             sharedDatabase: L,
@@ -724,37 +725,38 @@ function tl(t) {
             previewBackupsLoading: V,
             refreshAllBackups: q,
             versionTitles: G,
-        } = ((a = (e = l.useMemo(() => ("user" === y ? ["stable"] : ["stable", "preview"]), [y])).includes("preview")),
-        (s = I(l.useCallback(() => (0, M.Du)(p), [p]))),
-        (i = I(
+        } = ((e = (0, P.A)(y)),
+        (s = (a = l.useMemo(() => (e ? ["stable", "preview"] : ["stable"]), [e])).includes("preview")),
+        (i = I(l.useCallback(() => (0, M.Du)(y), [y]))),
+        (r = I(
             l.useCallback(() => {
                 var t;
                 return (
                     (t = "stable"),
-                    Promise.all([(0, M.DM)(p, t), (0, M.ms)(p, t)]).then((t) => {
+                    Promise.all([(0, M.DM)(y, t), (0, M.ms)(y, t)]).then((t) => {
                         let [e, a] = t;
                         return { points: e, window: a };
                     })
                 );
-            }, [p]),
+            }, [y]),
         )),
-        (r = I(l.useCallback(() => (a ? (0, M.DM)(p, "preview") : Promise.resolve(B)), [p, a]))),
-        (u = I(l.useCallback(() => (a ? (0, M.ms)(p, "preview") : Promise.resolve(null)), [p, a]))),
-        (m = i.refresh),
+        (u = I(l.useCallback(() => (s ? (0, M.DM)(y, "preview") : Promise.resolve(B)), [y, s]))),
+        (m = I(l.useCallback(() => (s ? (0, M.ms)(y, "preview") : Promise.resolve(null)), [y, s]))),
         (f = r.refresh),
         (h = u.refresh),
-        (x = l.useCallback(() => {
-            (m(), f(), h());
-        }, [m, f, h])),
-        (g = e.map((t) => {
+        (x = m.refresh),
+        (g = l.useCallback(() => {
+            (f(), h(), x());
+        }, [f, h, x])),
+        (j = a.map((t) => {
             var e, a;
             let n, l;
             return {
                 environment: t,
                 backups:
                     "preview" === t
-                        ? ((e = r),
-                          (a = u),
+                        ? ((e = u),
+                          (a = m),
                           (n = e.state),
                           (l = a.state),
                           {
@@ -777,26 +779,26 @@ function tl(t) {
                                   (e.refresh(), a.refresh());
                               },
                           })
-                        : i,
+                        : r,
             };
         })),
-        (j = s.state),
-        (b = l.useMemo(() => {
+        (b = i.state),
+        (v = l.useMemo(() => {
             let t = new Map();
-            if ("loaded" === j.status) for (let e of j.data.entries) t.set(e.sha, (0, T.T4)(e.subject).short);
+            if ("loaded" === b.status) for (let e of b.data.entries) t.set(e.sha, (0, T.T4)(e.subject).short);
             return t;
-        }, [j])),
+        }, [b])),
         {
-            sharedDatabase: !a,
-            versions: s,
-            databases: g,
-            previewBackups: "loaded" === (v = r.state).status ? v.data : B,
-            previewBackupsLoading: "loading" === v.status,
-            refreshAllBackups: x,
-            versionTitles: b,
+            sharedDatabase: !s,
+            versions: i,
+            databases: j,
+            previewBackups: "loaded" === (p = u.state).status ? p.data : B,
+            previewBackupsLoading: "loading" === p.status,
+            refreshAllBackups: g,
+            versionTitles: v,
         }),
-        Q = (0, N.u)(p),
-        X = (0, P.A)(p),
+        Q = (0, N.u)(y),
+        X = (0, P.A)(y),
         Y = l.useCallback(
             (t, e) => {
                 (S(), w(t, e));
@@ -806,14 +808,14 @@ function tl(t) {
         F = l.useCallback(
             (t, e) => {
                 U({
-                    projectId: p,
+                    projectId: y,
                     environment: t.environment,
                     targetMs: e,
-                    execute: () => (0, M.$D)(p, t.id),
+                    execute: () => (0, M.$D)(y, t.id),
                     onSettled: q,
                 });
             },
-            [p, q],
+            [y, q],
         );
     return (0, n.jsxs)(d.a, {
         transitionState: k,
@@ -847,7 +849,7 @@ function tl(t) {
                               onRestore: Y,
                           })
                         : "publishes" === D
-                          ? (0, n.jsx)(K, { projectId: p }, p)
+                          ? (0, n.jsx)(K, { projectId: y }, y)
                           : (0, n.jsxs)(o.B, {
                                 gap: 24,
                                 children: [
@@ -860,7 +862,7 @@ function tl(t) {
                                         (0, n.jsx)(
                                             ta,
                                             {
-                                                projectId: p,
+                                                projectId: y,
                                                 database: t,
                                                 sharedDatabase: L,
                                                 versionTitles: G,
