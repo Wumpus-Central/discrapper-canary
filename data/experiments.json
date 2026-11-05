@@ -351,23 +351,6 @@
     ]
   },
   {
-    "kind": "user",
-    "id": "2025-11_tida_webform",
-    "label": "Tida Webform",
-    "defaultConfig": {
-      "tidaWebformEnabled": false
-    },
-    "treatments": [
-      {
-        "id": 1,
-        "label": "Enabled",
-        "config": {
-          "tidaWebformEnabled": true
-        }
-      }
-    ]
-  },
-  {
     "kind": "guild",
     "id": "2025-12_voice_channel_hoisting",
     "label": "Voice Channel Hoisting",

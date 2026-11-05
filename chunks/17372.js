@@ -3,7 +3,7 @@ var i,
     _,
     r,
     d,
-    l,
+    l = n(362645),
     o =
         (((i = {}).GUILD = "guild"),
         (i.GUILD_DISCOVERY = "guild_discovery"),
@@ -23,42 +23,22 @@ var i,
         (_.GUILD = "guild_urf"),
         (_.MEDIA_TAKEDOWN = "media_takedown"),
         _),
-    c = /^2(2155|7706)2$/.test(n.j)
-        ? (((r = {}).TIDA = "tida"),
-          (r.UK_STOPNCII = "uk_stopncii"),
-          (r.BRAZIL_ONLINE_SAFETY_OF_WOMEN = "brazil_online_safety_of_women"),
-          r)
-        : null,
+    c =
+        (((r = {}).SUB_SPAM = "sub_spam"),
+        (r.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),
+        (r.SUB_SEXUALLY_DEGRADING_CONTENT = "sub_sexually_degrading_content"),
+        (r.SUB_NCP = "sub_ncp"),
+        (r.SUB_LOLI = "sub_loli"),
+        (r.SUB_CSAM = "sub_csam"),
+        (r.SUB_GENERAL_HARASSMENT = "sub_general_harassment"),
+        (r.SUB_VULGAR_LANGUAGE = "sub_vulgar_language"),
+        (r.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY = "sub_racist_or_discriminatory_language_or_imagery"),
+        (r.SUB_GORE = "sub_gore"),
+        (r.SUB_GLORIFYING_VIOLENCE = "sub_glorifying_violence"),
+        r),
     E =
-        (((d = {}).SUB_SPAM = "sub_spam"),
-        (d.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),
-        (d.SUB_SEXUALLY_DEGRADING_CONTENT = "sub_sexually_degrading_content"),
-        (d.SUB_NCP = "sub_ncp"),
-        (d.SUB_LOLI = "sub_loli"),
-        (d.SUB_CSAM = "sub_csam"),
-        (d.SUB_GENERAL_HARASSMENT = "sub_general_harassment"),
-        (d.SUB_VULGAR_LANGUAGE = "sub_vulgar_language"),
-        (d.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY = "sub_racist_or_discriminatory_language_or_imagery"),
-        (d.SUB_GORE = "sub_gore"),
-        (d.SUB_GLORIFYING_VIOLENCE = "sub_glorifying_violence"),
-        d),
-    m =
-        (((l = {}).SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
-        (l.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
-        (l.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
-        l);
-n.d(
-    t,
-    {},
-    {
-        TS: E,
-        Wb: m,
-        Yw: u,
-        c7: function (e) {
-            return Object.values(c).includes(e);
-        },
-        sl: c,
-        t0: o,
-        tY: s,
-    },
-);
+        (((d = {}).SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
+        (d.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
+        (d.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
+        d);
+n.d(t, { c7: () => l.c, sl: () => l.s }, { TS: c, Wb: E, Yw: u, t0: o, tY: s });

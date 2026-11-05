@@ -26,8 +26,8 @@ var i = t(477900),
     D = t(961973),
     I = t(289873),
     y = t(834730),
-    P = t(821609),
-    k = t(554830),
+    k = t(821609),
+    P = t(554830),
     G = t(793574),
     L = t(149468),
     S = t(733110),
@@ -160,7 +160,7 @@ function F(e) {
                                   (0, i.jsx)("div", {}),
                                   (0, i.jsx)("div", {
                                       className: q.E3,
-                                      children: (0, i.jsx)(P.$, {
+                                      children: (0, i.jsx)(k.$, {
                                           variant: g ? "primary" : "secondary",
                                           onClick: h,
                                           text: g
@@ -170,7 +170,7 @@ function F(e) {
                                               : $.intl.string($.t["5Wxrcd"]),
                                           disabled: r,
                                           loading: r,
-                                          icon: l ? void 0 : k.K,
+                                          icon: l ? void 0 : P.K,
                                           iconPosition: "end",
                                       }),
                                   }),
@@ -364,7 +364,7 @@ function el(e) {
                             className: ei.X1,
                             children:
                                 (s > 0 || d) &&
-                                (0, i.jsx)(P.$, {
+                                (0, i.jsx)(k.$, {
                                     variant: "secondary",
                                     size: "md",
                                     text: $.intl.string($.t["13/7kX"]),
@@ -385,7 +385,7 @@ function el(e) {
                                 (0, i.jsx)(J.m, {
                                     asContainer: !0,
                                     text: p ? $.intl.string($.t.dA1dSf) : null,
-                                    children: (0, i.jsx)(P.$, {
+                                    children: (0, i.jsx)(k.$, {
                                         variant: _ ? "secondary" : "primary",
                                         size: "md",
                                         text: l
@@ -396,7 +396,7 @@ function el(e) {
                                         onClick: () => (l ? h() : g(x.length)),
                                         disabled: p || o,
                                         loading: o,
-                                        icon: l ? void 0 : k.K,
+                                        icon: l ? void 0 : P.K,
                                         iconPosition: "end",
                                     }),
                                 }),
@@ -501,7 +501,7 @@ function er(e) {
                             className: ei.X1,
                             children:
                                 (s > 0 || d) &&
-                                (0, i.jsx)(P.$, {
+                                (0, i.jsx)(k.$, {
                                     variant: "secondary",
                                     size: "md",
                                     text: $.intl.string($.t["13/7kX"]),
@@ -522,7 +522,7 @@ function er(e) {
                                 (0, i.jsx)(J.m, {
                                     asContainer: !0,
                                     text: p ? $.intl.string($.t.dA1dSf) : null,
-                                    children: (0, i.jsx)(P.$, {
+                                    children: (0, i.jsx)(k.$, {
                                         variant: _ ? "secondary" : "primary",
                                         size: "md",
                                         text: l
@@ -533,7 +533,7 @@ function er(e) {
                                         onClick: () => (l ? h() : g(x.length)),
                                         disabled: p || o,
                                         loading: o,
-                                        icon: l ? void 0 : k.K,
+                                        icon: l ? void 0 : P.K,
                                         iconPosition: "end",
                                     }),
                                 }),
@@ -747,7 +747,7 @@ function ec(e) {
                                   children:
                                       -1 !== d &&
                                       "cover" !== d &&
-                                      (0, i.jsx)(P.$, {
+                                      (0, i.jsx)(k.$, {
                                           variant: "secondary",
                                           size: "md",
                                           text: $.intl.string($.t["13/7kX"]),
@@ -784,7 +784,7 @@ function ec(e) {
                                           color: "text-muted",
                                           children: m ? $.intl.string($.t.arAe3I) : $.intl.string($.t.D0CVAc),
                                       }),
-                                      (0, i.jsx)(P.$, {
+                                      (0, i.jsx)(k.$, {
                                           variant: "primary",
                                           size: "md",
                                           text: `${$.intl.string($.t["8SuVoE"])} \u{1F389}`,
@@ -804,8 +804,8 @@ var eu = t(660238);
 function em(e) {
     let { guildId: n } = e,
         { ref: l, width: I, height: y } = (0, g.Ay)(),
-        P = (0, d.yK)([O.A], () => O.A.getOnboardingPromptsForOnboarding(n)),
-        k = (0, d.bG)([O.A], () => O.A.getEnabled(n)),
+        k = (0, d.yK)([O.A], () => O.A.getOnboardingPromptsForOnboarding(n)),
+        P = (0, d.bG)([O.A], () => O.A.getEnabled(n)),
         G = (0, d.bG)([O.A], () => O.A.getOnboardingConnections(n)),
         L = (0, d.bG)([p.A], () => p.A.getRulesPrompt(n)),
         S = s.useCallback(
@@ -815,8 +815,8 @@ function em(e) {
             [n],
         ),
         T = s.useCallback(() => {
-            E.A.completeOnboarding(n, P);
-        }, [n, P]),
+            E.A.completeOnboarding(n, k);
+        }, [n, k]),
         R = (0, d.bG)([b.A], () => b.A.getGuild(n)),
         H = s.useMemo(() => (null == R ? null : j.Ay.getGuildSplashURL({ id: R.id, splash: R.splash })), [R]),
         w = (0, x.S)(H),
@@ -826,7 +826,7 @@ function em(e) {
                 null == H ||
                     (null != q.current && q.current.contains(e.target)) ||
                     (0, u.L3)(e, async () => {
-                        let { default: e } = await Promise.all([t.e(95340), t.e(895813)]).then(t.bind(t, 977700));
+                        let { default: e } = await t.e(895813).then(t.bind(t, 977700));
                         return (n) => (0, i.jsx)(e, { ...n, splashUrl: H });
                     });
             },
@@ -843,10 +843,10 @@ function em(e) {
         ),
         Z = (0, d.bG)([A.A], () => A.A.isFullServerPreview(n)),
         Q = (0, d.bG)([C.Ay], () => C.Ay.getOnboardingStatus(n)),
-        Y = null != P && P.length > 0,
+        Y = null != k && k.length > 0,
         ee = s.useCallback(() => {
-            (0, C.eg)(Q) && k && (Y || 0 !== G.length) ? (G.length > 0 ? J("connections") : J(0)) : T();
-        }, [Q, k, Y, G.length, J, T]);
+            (0, C.eg)(Q) && P && (Y || 0 !== G.length) ? (G.length > 0 ? J("connections") : J(0)) : T();
+        }, [Q, P, Y, G.length, J, T]);
     s.useEffect(() => {
         if (!C.Ay.shouldShowOnboarding(n)) return m.A.escapeToDefaultChannel(n);
         (0, v.L)(n);
@@ -905,11 +905,11 @@ function em(e) {
                                               case "connections":
                                                   return (0, i.jsx)(F, {
                                                       guildId: n,
-                                                      isLastStep: 0 === P.length && !(0, D.L1)(R, L),
+                                                      isLastStep: 0 === k.length && !(0, D.L1)(R, L),
                                                       isSubmitting: X,
                                                       disableTracking: Z,
                                                       onComplete: () => {
-                                                          P.length > 0
+                                                          k.length > 0
                                                               ? J(0)
                                                               : (0, D.L1)(R, L)
                                                                 ? J("rules")
@@ -920,13 +920,13 @@ function em(e) {
                                                   return (0, i.jsx)(ec, {
                                                       setCurrentStep: J,
                                                       previousPromptIndex:
-                                                          P.length > 0
-                                                              ? P.length - 1
+                                                          k.length > 0
+                                                              ? k.length - 1
                                                               : G.length > 0
                                                                 ? "connections"
                                                                 : "cover",
                                                       guild: R,
-                                                      prompts: P,
+                                                      prompts: k,
                                                       completeOnboarding: T,
                                                       disableTracking: Z,
                                                   });
@@ -935,7 +935,7 @@ function em(e) {
                                               default:
                                                   return (0, i.jsx)(ea, {
                                                       guild: R,
-                                                      prompts: P,
+                                                      prompts: k,
                                                       step: M,
                                                       selectOption: S,
                                                       completeOnboarding: T,

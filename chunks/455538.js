@@ -1,41 +1,38 @@
-var t = i(477900),
-    o = i(582128),
-    c = i(165862),
-    a = i(477782),
-    l = i(173936),
-    r = i(442433),
-    s = i(486503),
-    u = i(253932),
-    d = i(957565),
-    p = i(792996);
-i.d(
-    e,
+var t = e(477900),
+    c = e(582128),
+    l = e(165862),
+    a = e(477782),
+    o = e(173936),
+    s = e(442433),
+    r = e(207560),
+    d = e(253932),
+    u = e(957565),
+    p = e(792996);
+e.d(
+    i,
     {},
     {
         default: function (n) {
-            let { imageUrl: e, onSelect: i } = n,
-                k = u.Q_.useSetting(),
-                { tidaWebformEnabled: x } = s.A.useExperiment(
-                    { location: "RoleIconContextMenu" },
-                    { autoTrackExposure: !1 },
-                ),
-                h = o.useCallback(() => {
-                    (0, d.C)(e);
-                }, [e]);
-            return d.p5 && k && x
-                ? (0, t.jsx)(c.W, {
+            let { imageUrl: i, onSelect: e } = n,
+                k = d.Q_.useSetting(),
+                h = (0, r.lF)(),
+                g = c.useCallback(() => {
+                    (0, u.C)(i);
+                }, [i]);
+            return u.p5 && k && h
+                ? (0, t.jsx)(l.W, {
                       "data-menu-migrated": !0,
                       navId: "role-icon-context",
-                      onClose: r.Z_,
-                      onSelect: i,
+                      onClose: s.Z_,
+                      onSelect: e,
                       "aria-label": p.intl.string(p.t.Zow2V5),
                       children: (0, t.jsx)(a.rX, {
                           children: (0, t.jsx)(a.Dr, {
                               id: "copy-image-link",
                               label: p.intl.string(p.t["8xHmxo"]),
-                              action: h,
-                              icon: l.LinkIcon,
-                              leadingAccessory: { type: "icon", icon: l.LinkIcon },
+                              action: g,
+                              icon: o.LinkIcon,
+                              leadingAccessory: { type: "icon", icon: o.LinkIcon },
                           }),
                       }),
                   })

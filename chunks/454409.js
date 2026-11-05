@@ -1,8 +1,9 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => f });
 var i = n(855986),
     r = n(73153),
-    a = n(956956);
-class s {
+    a = n(956956),
+    s = n(362645);
+class l {
     teenByDefault;
     constructor(e) {
         this.teenByDefault = e;
@@ -14,7 +15,7 @@ class s {
         return (this.teenByDefault ?? 0) !== 0;
     }
 }
-class l {
+class o {
     gatedFeatures;
     constructor(e) {
         this.gatedFeatures = e;
@@ -26,18 +27,28 @@ class l {
         return (this.gatedFeatures ?? 0) !== 0;
     }
 }
-class o {
+class d {
     shouldCollectSignal;
     constructor(e) {
         this.shouldCollectSignal = e;
     }
 }
-class d {
+class c {
+    regulation;
+    constructor(e) {
+        this.regulation = e;
+    }
+    isRegulation(e) {
+        return this.regulation === e;
+    }
+}
+class u {
     settings;
     ageVerification;
     appStore;
-    constructor(e, t, n) {
-        ((this.settings = e), (this.ageVerification = t), (this.appStore = n));
+    mediaTakedown;
+    constructor(e, t, n, i) {
+        ((this.settings = e), (this.ageVerification = t), (this.appStore = n), (this.mediaTakedown = i));
     }
     isFeatureAgeGated(e) {
         return this.ageVerification.isFeatureAgeGated(e);
@@ -54,51 +65,59 @@ class d {
     shouldCollectAppStoreSignal() {
         return this.appStore.shouldCollectSignal;
     }
+    isMediaTakedownRegulation(e) {
+        return this.mediaTakedown.isRegulation(e);
+    }
     static fromConnectionOpen(e) {
-        return new d(
-            new s(e.teen_by_default_settings),
-            new l(e.age_gated_features),
-            new o(!0 === e.should_collect_app_store_signal),
+        let t = e.media_takedown_regulation;
+        return new u(
+            new l(e.teen_by_default_settings),
+            new o(e.age_gated_features),
+            new d(!0 === e.should_collect_app_store_signal),
+            new c((0, s.c)(t) ? t : null),
         );
     }
 }
-let c = null,
-    u = null;
-function _(e) {
+let _ = null,
+    E = null;
+function A(e) {
     if (null == e) return !1;
-    u = (0, a.XF)(e) ?? (0, a.rE)();
+    E = (0, a.XF)(e) ?? (0, a.rE)();
 }
-class E extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "RegionalFeatureConfigStore";
     getRegionalFeatureConfig() {
-        return c;
+        return _;
     }
     isFeatureAgeGated(e) {
-        return c?.isFeatureAgeGated(e) ?? !1;
+        return _?.isFeatureAgeGated(e) ?? !1;
     }
     isSettingTeenByDefault(e) {
-        return c?.isFeatureTeenByDefault(e) ?? !1;
+        return _?.isFeatureTeenByDefault(e) ?? !1;
     }
     hasAgeGatedFeatures() {
-        return c?.hasAgeGatedFeatures() ?? !1;
+        return _?.hasAgeGatedFeatures() ?? !1;
     }
     hasTeenDefaults() {
-        return c?.hasTeenDefaults() ?? !1;
+        return _?.hasTeenDefaults() ?? !1;
     }
     shouldCollectAppStoreSignal() {
-        return c?.shouldCollectAppStoreSignal() ?? !1;
+        return _?.shouldCollectAppStoreSignal() ?? !1;
+    }
+    isMediaTakedownRegulation(e) {
+        return _?.isMediaTakedownRegulation(e) ?? !1;
     }
     getUserCountryCode() {
-        return u;
+        return E;
     }
 }
-let A = new E(r.h, {
+let f = new h(r.h, {
     CONNECTION_OPEN: function (e) {
-        (_(e.countryCode),
-            (c = null != e.regionalFeatureConfig ? d.fromConnectionOpen(e.regionalFeatureConfig) : null));
+        (A(e.countryCode),
+            (_ = null != e.regionalFeatureConfig ? u.fromConnectionOpen(e.regionalFeatureConfig) : null));
     },
     SET_LOCATION_METADATA: function (e) {
         let { countryCode: t } = e;
-        return _(t);
+        return A(t);
     },
 });

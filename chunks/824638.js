@@ -1,4 +1,4 @@
-n.d(t, { yo: () => eF, Zt: () => eL });
+n.d(t, { yo: () => eF, Zt: () => eU });
 var l,
     i,
     r = n(477900),
@@ -10,14 +10,14 @@ var l,
     d = n(793574),
     f = n(688810),
     E = n(855986),
-    p = n(540737),
-    R = n(527212),
+    R = n(540737),
+    p = n(527212),
     g = n(287809),
     A = n(259464),
     m = n(449582);
 function I(e, t) {
     let n = (0, E.bG)([g.default], () => g.default.getUser(e), [e]),
-        l = (0, R.Ay)(e, t),
+        l = (0, p.Ay)(e, t),
         i = (0, A.Z)(n, t),
         r = (0, m.r)({ user: n, guildId: t }),
         a = i?.skuId,
@@ -65,13 +65,13 @@ var S =
         (i[(i.INTERNAL = 5)] = "INTERNAL"),
         i),
     P = n(856383),
-    T = n(503698),
-    M = n.n(T),
+    M = n(503698),
+    T = n.n(M),
     y = n(834730),
     k = n(682301),
     D = n(623373),
-    U = n(536572),
-    L = n(14702),
+    L = n(536572),
+    U = n(14702),
     G = n(792996),
     F = n(728500);
 function w() {
@@ -81,7 +81,7 @@ function w() {
         children: [
             (0, r.jsx)("div", { className: F.VH, children: (0, r.jsx)("div", { className: F.Qc }) }),
             (0, r.jsxs)("div", {
-                className: M()(F.Qq, F.Um),
+                className: T()(F.Qq, F.Um),
                 children: [(0, r.jsx)("div", { className: F.Iz }), (0, r.jsx)("div", { className: F.wS })],
             }),
         ],
@@ -129,13 +129,13 @@ function V(e) {
                   })(c)
                 : void 0;
     return (0, r.jsxs)("div", {
-        className: M()(F.nM, { [F.r9]: n }),
+        className: T()(F.nM, { [F.r9]: n }),
         children: [
-            (0, r.jsx)("div", { className: F.VH, children: (0, r.jsx)(L.O, { product: i, sku: s }) }),
+            (0, r.jsx)("div", { className: F.VH, children: (0, r.jsx)(U.O, { product: i, sku: s }) }),
             (0, r.jsxs)("div", {
                 className: F.Qq,
                 children: [
-                    (0, r.jsx)(y.E, { variant: "body-sm/medium", color: "text-default", children: (0, U.VG)(i) }),
+                    (0, r.jsx)(y.E, { variant: "body-sm/medium", color: "text-default", children: (0, L.VG)(i) }),
                     null != d && (0, r.jsx)(y.E, { variant: "body-xs/normal", color: "text-subtle", children: d }),
                 ],
             }),
@@ -207,12 +207,12 @@ let ef = (0, n(945810).mj)({
     variations: { 0: !1, 1: !0 },
 });
 var eE = n(834708),
-    ep = n(154486),
-    eR = n(239211),
+    eR = n(154486),
+    ep = n(239211),
     eg = n(284009),
     eA = n.n(eg),
     em = n(50268),
-    eI = n(486503),
+    eI = n(207560),
     eb = n(342053),
     e_ = n(640794),
     ex = n(253932),
@@ -230,12 +230,12 @@ let eS = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
 });
 var eP = n(183555),
-    eT = n(256847),
-    eM = n(939496),
+    eM = n(256847),
+    eT = n(939496),
     ey = n(993401),
     ek = n(996988),
     eD = n(207566);
-function eU(e) {
+function eL(e) {
     var t;
     let l,
         {
@@ -243,19 +243,19 @@ function eU(e) {
             guildId: A,
             viewProfileItem: m,
             appContext: N,
-            popoutTargetRef: T,
-            shouldShow: M,
+            popoutTargetRef: M,
+            shouldShow: T,
             onRequestOpen: y,
             onRequestClose: k,
             children: D,
         } = e,
-        { themeType: U } = (0, eM.E)(),
-        { trackUserProfileAction: L } = (0, eP.NJ)(),
+        { themeType: L } = (0, eT.E)(),
+        { trackUserProfileAction: U } = (0, eP.NJ)(),
         { analyticsLocations: F, newestAnalyticsLocation: w } = (0, f.Ay)(d.A.USER_PROFILE_OVERFLOW_MENU);
     ((t = i.id),
         (l = I(t, A)),
         o.useEffect(() => {
-            0 !== l.length && (0, p.tu)({ skuIds: l });
+            0 !== l.length && (0, R.tu)({ skuIds: l });
         }, [!0, l]));
     let K = {
             action: eN.pt.PRESS_OPTIONS,
@@ -266,7 +266,7 @@ function eU(e) {
         Q = (0, ev.A)({
             user: i,
             guildId: A,
-            onAction: () => L({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: F }),
+            onAction: () => U({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: F }),
         }),
         q = (function (e) {
             let t,
@@ -310,23 +310,23 @@ function eU(e) {
                   })
                 : null;
         })({ user: i }),
-        Y = (0, eR.A)({
+        Y = (0, ep.A)({
             user: i,
             guildId: A,
             location: w,
             appContext: N,
-            onBlock: () => L({ action: "BLOCK", analyticsLocations: F }),
-            onIgnore: () => L({ action: "IGNORE", analyticsLocations: F }),
-            onUnblock: () => L({ action: "UNBLOCK", analyticsLocations: F }),
+            onBlock: () => U({ action: "BLOCK", analyticsLocations: F }),
+            onIgnore: () => U({ action: "IGNORE", analyticsLocations: F }),
+            onUnblock: () => U({ action: "UNBLOCK", analyticsLocations: F }),
         }),
         z = (0, eh.A)({
             user: i,
             guildId: A,
             location: w,
             appContext: N,
-            onBlock: () => L({ action: "BLOCK", analyticsLocations: F }),
-            onIgnore: () => L({ action: "IGNORE", analyticsLocations: F }),
-            onUnignore: () => L({ action: "UNIGNORE", analyticsLocations: F }),
+            onBlock: () => U({ action: "BLOCK", analyticsLocations: F }),
+            onIgnore: () => U({ action: "IGNORE", analyticsLocations: F }),
+            onUnignore: () => U({ action: "UNIGNORE", analyticsLocations: F }),
         }),
         $ = (function (e) {
             let { user: t, guildId: n, color: l, onAction: i, location: o = d.A.CONTEXT_MENU, appContext: a } = e,
@@ -346,7 +346,7 @@ function eU(e) {
             location: w,
             appContext: N,
             color: "danger",
-            onAction: () => L({ action: "REPORT", analyticsLocations: F }),
+            onAction: () => U({ action: "REPORT", analyticsLocations: F }),
         }),
         X = (function (e) {
             let { user: t, guildId: n, color: l, onAction: i, appContext: o } = e,
@@ -366,16 +366,13 @@ function eU(e) {
             location: w,
             appContext: N,
             color: "danger",
-            onAction: () => L({ action: "REPORT", analyticsLocations: F }),
+            onAction: () => U({ action: "REPORT", analyticsLocations: F }),
         }),
         Z = (function (e) {
             let { user: t, guildId: n, onSuccess: l } = e,
-                i = (0, R.Ay)(t.id, n ?? void 0),
+                i = (0, p.Ay)(t.id, n ?? void 0),
                 a = ex.Q_.useSetting(),
-                { tidaWebformEnabled: s } = eI.A.useExperiment(
-                    { location: "useCopyUserInfoItem" },
-                    { autoTrackExposure: !1 },
-                ),
+                s = (0, eI.lF)(),
                 u = (0, eb.g)("useCopyUserInfoItem"),
                 d = (0, em.A)({
                     id: t.id,
@@ -386,7 +383,7 @@ function eU(e) {
                 E = o.useCallback(() => {
                     ((0, eO.C)(t.id), l?.(eN.pt.COPY_USER_ID));
                 }, [t.id, l]),
-                p = o.useCallback(() => {
+                R = o.useCallback(() => {
                     ((0, eO.C)((0, e_.A)(t.id)), l?.(eN.pt.COPY_PROFILE_LINK));
                 }, [t.id, l]),
                 g = o.useCallback(() => {
@@ -407,7 +404,7 @@ function eU(e) {
                                   (0, r.jsx)(c.Dr, {
                                       id: "copy-user-profile-link",
                                       label: G.intl.string(G.t["E+rSVy"]),
-                                      action: p,
+                                      action: R,
                                   }),
                               (null != t.avatar || t.hasAvatarForGuild(n)) &&
                                   (0, r.jsx)(c.Dr, {
@@ -425,7 +422,7 @@ function eU(e) {
                       })
                     : d
                 : null;
-        })({ user: i, guildId: A, onSuccess: (e) => L({ action: e, analyticsLocations: F }) }),
+        })({ user: i, guildId: A, onSuccess: (e) => U({ action: e, analyticsLocations: F }) }),
         J = (function (e, t, n) {
             let l = (0, E.bG)([x.default], () => x.default.getId() === e.id),
                 i = I(e.id, t),
@@ -456,10 +453,10 @@ function eU(e) {
                 ),
                 u = i.length > 0 || null != a;
             if (l || !u) return null;
-            let p = null != a ? G.intl.string(W.default["2PKrQO"]) : G.intl.string(G.t.xNdRDO);
+            let R = null != a ? G.intl.string(W.default["2PKrQO"]) : G.intl.string(G.t.xNdRDO);
             return (0, r.jsxs)(c.Dr, {
                 id: "shop-this-look",
-                label: p,
+                label: R,
                 children: [
                     a,
                     (0, r.jsx)(c.rX, {
@@ -499,12 +496,12 @@ function eU(e) {
                     }),
                 ],
             });
-        })(i, A, U),
+        })(i, A, L),
         ee = (0, b.p7)(i, A),
         et = [
             [
                 m,
-                (0, eT.A)({ user: i, location: "UserProfileOverflowMenuButton" }),
+                (0, eM.A)({ user: i, location: "UserProfileOverflowMenuButton" }),
                 ee,
                 J,
                 Q,
@@ -513,7 +510,7 @@ function eU(e) {
                     let { user: t } = e,
                         l = ef.useConfig({ location: "user_profile_overflow_menu" }),
                         i = (0, eE.d)(t),
-                        a = (0, ep.p)(l && i ? t.id : null),
+                        a = (0, eR.p)(l && i ? t.id : null),
                         { analyticsLocations: s } = (0, f.Ay)(d.A.USER_PROFILE_OVERFLOW_MENU),
                         u = o.useCallback(() => {
                             (h.default.track(v.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: s }),
@@ -555,8 +552,8 @@ function eU(e) {
         : (0, r.jsx)(f.f5, {
               value: F,
               children: (0, r.jsx)(s.Y, {
-                  targetElementRef: T,
-                  shouldShow: M,
+                  targetElementRef: M,
+                  shouldShow: T,
                   onRequestOpen: y,
                   onRequestClose: k,
                   renderPopout: (e) => {
@@ -574,13 +571,13 @@ function eU(e) {
               }),
           });
 }
-function eL(e) {
+function eU(e) {
     let t = o.useRef(null);
     return (0, r.jsx)(K.ZQ, {
         user: e.user,
         guildId: e.guildId,
         location: "UserProfileOverflowMenuIconButton",
-        children: (0, r.jsx)(eU, {
+        children: (0, r.jsx)(eL, {
             ...e,
             popoutTargetRef: t,
             children: (e) => (0, r.jsx)(ey.q3, { buttonRef: t, ...e }),
@@ -589,7 +586,7 @@ function eL(e) {
 }
 function eG(e) {
     let t = o.useRef(null),
-        { themeType: n } = (0, eM.E)(),
+        { themeType: n } = (0, eT.E)(),
         l = n === ek.d.POPOUT,
         { isVisible: i, markAsDismissed: a } = (function (e) {
             let [t, n] = (0, q.kn)(e ? [Q.M.DISPLAY_NAME_STYLES_TRY_COACHMARK] : []);
@@ -604,7 +601,7 @@ function eG(e) {
         children: [
             (0, r.jsx)("div", {
                 className: i ? eD.t8 : void 0,
-                children: (0, r.jsx)(eU, {
+                children: (0, r.jsx)(eL, {
                     ...e,
                     popoutTargetRef: t,
                     shouldShow: l ? s : void 0,
