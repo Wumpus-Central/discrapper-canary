@@ -118,7 +118,7 @@ var l = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
     u = /^(@+)?(\+|#+)?[rs]?$/g,
     c = /(\*)(0+)|(#+)(0+)|(0+)/g,
     f = /^(0+)$/;
-function p(e) {
+function d(e) {
     var t = {};
     return (
         "r" === e[e.length - 1]
@@ -140,7 +140,7 @@ function p(e) {
         t
     );
 }
-function d(e) {
+function p(e) {
     switch (e) {
         case "sign-auto":
             return { signDisplay: "auto" };
@@ -165,7 +165,7 @@ function d(e) {
     }
 }
 function h(e) {
-    var t = d(e);
+    var t = p(e);
     return t || {};
 }
 function m(e) {
@@ -288,14 +288,14 @@ function m(e) {
             var i = n.options[0];
             "w" === i
                 ? (t = (0, o.Cl)((0, o.Cl)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
-                : i && (t = (0, o.Cl)((0, o.Cl)({}, t), p(i)));
+                : i && (t = (0, o.Cl)((0, o.Cl)({}, t), d(i)));
             continue;
         }
         if (u.test(n.stem)) {
-            t = (0, o.Cl)((0, o.Cl)({}, t), p(n.stem));
+            t = (0, o.Cl)((0, o.Cl)({}, t), d(n.stem));
             continue;
         }
-        var a = d(n.stem);
+        var a = p(n.stem);
         a && (t = (0, o.Cl)((0, o.Cl)({}, t), a));
         var s = (function (e) {
             var t;

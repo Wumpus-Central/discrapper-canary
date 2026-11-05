@@ -58,13 +58,13 @@ let n = Symbol.for("@ts-pattern/matcher"),
     c = (e, t) => e.reduce((e, r) => e.concat(t(r)), []);
 function f(e) {
     return Object.assign(e, {
-        optional: () => p(e),
-        and: (t) => d(e, t),
+        optional: () => d(e),
+        and: (t) => p(e, t),
         or: (t) => h(e, t),
         select: (t) => (void 0 === t ? v(e) : v(t, e)),
     });
 }
-function p(e) {
+function d(e) {
     return f({
         [n]: () => ({
             match: (t) => {
@@ -81,7 +81,7 @@ function p(e) {
         }),
     });
 }
-function d(...e) {
+function p(...e) {
     return f({
         [n]: () => ({
             match: (t) => {
@@ -152,42 +152,42 @@ let w = f(
         Object.assign(f(e), {
             startsWith: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.startsWith(t)),
                     ),
                 ),
             endsWith: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.endsWith(t)),
                     ),
                 ),
             minLength: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.length >= t),
                     ),
                 ),
             maxLength: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.length <= t),
                     ),
                 ),
             includes: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && e.includes(t)),
                     ),
                 ),
             regex: (t) =>
                 _(
-                    d(
+                    p(
                         e,
                         m((e) => g(e) && !!e.match(t)),
                     ),
@@ -196,24 +196,24 @@ let w = f(
     S = _(m(g)),
     E = (e, t) => m((r) => y(r) && e <= r && t >= r),
     x = (e) => m((t) => y(t) && t < e),
-    k = (e) => m((t) => y(t) && t > e),
-    C = (e) => m((t) => y(t) && t <= e),
+    C = (e) => m((t) => y(t) && t > e),
+    k = (e) => m((t) => y(t) && t <= e),
     T = (e) => m((t) => y(t) && t >= e),
-    M = () => m((e) => y(e) && Number.isInteger(e)),
-    P = () => m((e) => y(e) && Number.isFinite(e)),
-    A = () => m((e) => y(e) && e > 0),
-    I = () => m((e) => y(e) && e < 0),
+    P = () => m((e) => y(e) && Number.isInteger(e)),
+    A = () => m((e) => y(e) && Number.isFinite(e)),
+    I = () => m((e) => y(e) && e > 0),
+    M = () => m((e) => y(e) && e < 0),
     O = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => O(d(e, E(t, r))),
-            lt: (t) => O(d(e, x(t))),
-            gt: (t) => O(d(e, k(t))),
-            lte: (t) => O(d(e, C(t))),
-            gte: (t) => O(d(e, T(t))),
-            int: () => O(d(e, M())),
-            finite: () => O(d(e, P())),
-            positive: () => O(d(e, A())),
-            negative: () => O(d(e, I())),
+            between: (t, r) => O(p(e, E(t, r))),
+            lt: (t) => O(p(e, x(t))),
+            gt: (t) => O(p(e, C(t))),
+            lte: (t) => O(p(e, k(t))),
+            gte: (t) => O(p(e, T(t))),
+            int: () => O(p(e, P())),
+            finite: () => O(p(e, A())),
+            positive: () => O(p(e, I())),
+            negative: () => O(p(e, M())),
         }),
     R = O(m(y)),
     L = (e, t) => m((r) => b(r) && e <= r && t >= r),
@@ -222,19 +222,19 @@ let w = f(
     N = (e) => m((t) => b(t) && t <= e),
     j = (e) => m((t) => b(t) && t >= e),
     B = () => m((e) => b(e) && e > 0),
-    K = () => m((e) => b(e) && e < 0),
-    U = (e) =>
+    U = () => m((e) => b(e) && e < 0),
+    V = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => U(d(e, L(t, r))),
-            lt: (t) => U(d(e, D(t))),
-            gt: (t) => U(d(e, F(t))),
-            lte: (t) => U(d(e, N(t))),
-            gte: (t) => U(d(e, j(t))),
-            positive: () => U(d(e, B())),
-            negative: () => U(d(e, K())),
+            between: (t, r) => V(p(e, L(t, r))),
+            lt: (t) => V(p(e, D(t))),
+            gt: (t) => V(p(e, F(t))),
+            lte: (t) => V(p(e, N(t))),
+            gte: (t) => V(p(e, j(t))),
+            positive: () => V(p(e, B())),
+            negative: () => V(p(e, U())),
         }),
-    V = U(m(b)),
-    $ = f(
+    $ = V(m(b)),
+    K = f(
         m(function (e) {
             return "boolean" == typeof e;
         }),
@@ -305,7 +305,7 @@ r.d(
         P: {
             __proto__: null,
             matcher: n,
-            optional: p,
+            optional: d,
             array: function (...e) {
                 return (function e(t) {
                     return Object.assign(
@@ -314,7 +314,7 @@ r.d(
                                 yield Object.assign(t, { [i]: !0 });
                             },
                         }),
-                        { optional: () => e(p(t)), select: (r) => e(void 0 === r ? v(t) : v(r, t)) },
+                        { optional: () => e(d(t)), select: (r) => e(void 0 === r ? v(t) : v(r, t)) },
                     );
                 })({
                     [n]: () => ({
@@ -396,7 +396,7 @@ r.d(
                     }),
                 });
             },
-            intersection: d,
+            intersection: p,
             union: h,
             not: function (e) {
                 return f({
@@ -414,13 +414,13 @@ r.d(
             string: S,
             between: E,
             lt: x,
-            gt: k,
-            lte: C,
+            gt: C,
+            lte: k,
             gte: T,
-            int: M,
-            finite: P,
-            positive: A,
-            negative: I,
+            int: P,
+            finite: A,
+            positive: I,
+            negative: M,
             number: R,
             betweenBigInt: L,
             ltBigInt: D,
@@ -428,9 +428,9 @@ r.d(
             lteBigInt: N,
             gteBigInt: j,
             positiveBigInt: B,
-            negativeBigInt: K,
-            bigint: V,
-            boolean: $,
+            negativeBigInt: U,
+            bigint: $,
+            boolean: K,
             symbol: H,
             nullish: z,
             instanceOf: function (e) {

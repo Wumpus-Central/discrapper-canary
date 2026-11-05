@@ -1,4 +1,5 @@
 !(function (t) {
+    "use strict";
     var r,
         n = Object.prototype,
         i = n.hasOwnProperty,
@@ -21,12 +22,12 @@
             (o = e),
             (a = n),
             (s = new T(i || [])),
-            (l = p),
+            (l = d),
             (u._invoke = function (e, t) {
-                if (l === d) throw Error("Generator is already running");
+                if (l === p) throw Error("Generator is already running");
                 if (l === h) {
                     if ("throw" === e) throw t;
-                    return P();
+                    return A();
                 }
                 for (s.method = e, s.arg = t; ;) {
                     var n = s.delegate;
@@ -69,10 +70,10 @@
                     }
                     if ("next" === s.method) s.sent = s._sent = s.arg;
                     else if ("throw" === s.method) {
-                        if (l === p) throw ((l = h), s.arg);
+                        if (l === d) throw ((l = h), s.arg);
                         s.dispatchException(s.arg);
                     } else "return" === s.method && s.abrupt("return", s.arg);
-                    l = d;
+                    l = p;
                     var u = f(o, a, s);
                     if ("normal" === u.type) {
                         if (((l = s.done ? h : "suspendedYield"), u.arg === m)) continue;
@@ -92,8 +93,8 @@
         }
     }
     (u = t.regeneratorRuntime = e.exports).wrap = c;
-    var p = "suspendedStart",
-        d = "executing",
+    var d = "suspendedStart",
+        p = "executing",
         h = "completed",
         m = {};
     function v() {}
@@ -104,7 +105,7 @@
         return this;
     };
     var w = Object.getPrototypeOf,
-        _ = w && w(w(M([])));
+        _ = w && w(w(P([])));
     _ && _ !== n && i.call(_, a) && (b = _);
     var S = (g.prototype = v.prototype = Object.create(b));
     function E(e) {
@@ -149,20 +150,20 @@
             return (t = t ? t.then(o, o) : o());
         };
     }
-    function k(e) {
+    function C(e) {
         var t = { tryLoc: e[0] };
         (1 in e && (t.catchLoc = e[1]),
             2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])),
             this.tryEntries.push(t));
     }
-    function C(e) {
+    function k(e) {
         var t = e.completion || {};
         ((t.type = "normal"), delete t.arg, (e.completion = t));
     }
     function T(e) {
-        ((this.tryEntries = [{ tryLoc: "root" }]), e.forEach(k, this), this.reset(!0));
+        ((this.tryEntries = [{ tryLoc: "root" }]), e.forEach(C, this), this.reset(!0));
     }
-    function M(e) {
+    function P(e) {
         if (e) {
             var t = e[a];
             if (t) return t.call(e);
@@ -176,9 +177,9 @@
                 return (o.next = o);
             }
         }
-        return { next: P };
+        return { next: A };
     }
-    function P() {
+    function A() {
         return { value: r, done: !0 };
     }
     ((y.prototype = S.constructor = g),
@@ -235,7 +236,7 @@
                 }
             );
         }),
-        (u.values = M),
+        (u.values = P),
         (T.prototype = {
             constructor: T,
             reset: function (e) {
@@ -247,7 +248,7 @@
                     (this.delegate = null),
                     (this.method = "next"),
                     (this.arg = r),
-                    this.tryEntries.forEach(C),
+                    this.tryEntries.forEach(k),
                     !e)
                 )
                     for (var t in this) "t" === t.charAt(0) && i.call(this, t) && !isNaN(+t.slice(1)) && (this[t] = r);
@@ -312,7 +313,7 @@
             finish: function (e) {
                 for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                     var r = this.tryEntries[t];
-                    if (r.finallyLoc === e) return (this.complete(r.completion, r.afterLoc), C(r), m);
+                    if (r.finallyLoc === e) return (this.complete(r.completion, r.afterLoc), k(r), m);
                 }
             },
             catch: function (e) {
@@ -322,7 +323,7 @@
                         var n = r.completion;
                         if ("throw" === n.type) {
                             var i = n.arg;
-                            C(r);
+                            k(r);
                         }
                         return i;
                     }
@@ -331,7 +332,7 @@
             },
             delegateYield: function (e, t, n) {
                 return (
-                    (this.delegate = { iterator: M(e), resultName: t, nextLoc: n }),
+                    (this.delegate = { iterator: P(e), resultName: t, nextLoc: n }),
                     "next" === this.method && (this.arg = r),
                     m
                 );

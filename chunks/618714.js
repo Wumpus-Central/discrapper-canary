@@ -1,5 +1,6 @@
 var n;
 ((n = function () {
+    "use strict";
     var e,
         t,
         n,
@@ -11,8 +12,8 @@ var n;
         u = "u" > typeof window ? window : (r.g, r.g),
         c = (u.cancelRequestAnimationFrame && u.requestAnimationFrame) || setTimeout,
         f = u.cancelRequestAnimationFrame || clearTimeout,
-        p = [],
-        d = 0,
+        d = [],
+        p = 0,
         h = !1,
         m = 7,
         v = 35,
@@ -41,37 +42,37 @@ var n;
                 ((n = Date.now()), t || (t = setTimeout(i, 99)));
             });
     function E() {
-        (125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), C())), S());
+        (125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), k())), S());
     }
     function x() {
         ((l = null), (s = setTimeout(T, 0)));
     }
-    function k() {
+    function C() {
         ((s = null), c(x));
     }
-    function C() {
+    function k() {
         h ||
             ((a = y - (Date.now() - b)),
             (o = Date.now()),
             (h = !0),
             v && a < v && (a = v),
-            a > 9 ? (s = setTimeout(k, a)) : ((a = 0), k()));
+            a > 9 ? (s = setTimeout(C, a)) : ((a = 0), C()));
     }
     function T() {
         var e,
             t,
             r,
             n = m > 9 ? 9 : 1;
-        if (((b = Date.now()), (h = !1), (s = null), d > 2 || b - a - 50 < o))
-            for (t = 0, r = p.length; t < r && _.timeRemaining() > n; t++) ((e = p.shift()), w++, e && e(_));
-        p.length ? C() : (d = 0);
-    }
-    function M(e) {
-        return (g++, p.push(e), C(), g);
+        if (((b = Date.now()), (h = !1), (s = null), p > 2 || b - a - 50 < o))
+            for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) ((e = d.shift()), w++, e && e(_));
+        d.length ? k() : (p = 0);
     }
     function P(e) {
+        return (g++, d.push(e), k(), g);
+    }
+    function A(e) {
         var t = e - 1 - w;
-        p[t] && (p[t] = null);
+        d[t] && (d[t] = null);
     }
     if (u.requestIdleCallback && u.cancelIdleCallback)
         try {
@@ -97,8 +98,8 @@ var n;
             })(u.requestIdleCallback);
         }
     else
-        ((u.requestIdleCallback = M),
-            (u.cancelIdleCallback = P),
+        ((u.requestIdleCallback = P),
+            (u.cancelIdleCallback = A),
             u.document &&
                 document.addEventListener &&
                 (u.addEventListener("scroll", E, !0),
@@ -114,7 +115,7 @@ var n;
                         subtree: !0,
                         attributes: !0,
                     })));
-    return { request: M, cancel: P };
+    return { request: P, cancel: A };
 }),
     "function" == typeof define && define.amd
         ? define([], n)

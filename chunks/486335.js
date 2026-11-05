@@ -22,9 +22,9 @@ if (o) {
             }
         }));
 } else {
-    var p = i("Object.prototype.toString");
+    var d = i("Object.prototype.toString");
     n = function (e) {
-        return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === p(e);
+        return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === d(e);
     };
 }
 e.exports = n;

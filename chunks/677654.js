@@ -48,18 +48,18 @@ function u() {
 }
 let c = u(),
     f = new Set();
-function p() {
+function d() {
     for (let e of ((c = u()), f)) e(c);
 }
-function d() {
+function p() {
     let e = (0, a.wR)(),
         [t, r] = (0, s.useState)(c);
     return ((0, s.useEffect)(
         () => (
-            0 === f.size && window.addEventListener("languagechange", p),
+            0 === f.size && window.addEventListener("languagechange", d),
             f.add(r),
             () => {
-                (f.delete(r), 0 === f.size && window.removeEventListener("languagechange", p));
+                (f.delete(r), 0 === f.size && window.removeEventListener("languagechange", d));
             }
         ),
         [],
@@ -76,7 +76,7 @@ function m(e) {
 }
 function v(e) {
     let { children: t } = e,
-        r = d();
+        r = p();
     return s.createElement(h.Provider, { value: r }, t);
 }
 function y(e) {
@@ -84,6 +84,6 @@ function y(e) {
     return t ? s.createElement(m, { locale: t, children: r }) : s.createElement(v, { children: r });
 }
 function g() {
-    let e = d();
+    let e = p();
     return (0, s.useContext)(h) || e;
 }

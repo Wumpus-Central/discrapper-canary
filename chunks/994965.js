@@ -20,19 +20,19 @@ let c = u.createContext(null);
                 let { focusProps: r } = (0, o.i)(e),
                     { keyboardProps: s } = (0, a.d)(e),
                     f = (0, i.v)(r, s),
-                    p = (function (e) {
+                    d = (function (e) {
                         let t = (0, u.useContext)(c) || {};
                         (0, l.w)(t, e);
                         let { ref: r, ...n } = t;
                         return n;
                     })(t),
-                    d = e.isDisabled ? {} : p,
+                    p = e.isDisabled ? {} : d,
                     h = (0, u.useRef)(e.autoFocus);
                 (0, u.useEffect)(() => {
                     (h.current && t.current && (0, n.l)(t.current), (h.current = !1));
                 }, [t]);
                 let m = e.excludeFromTabOrder ? -1 : 0;
-                return (e.isDisabled && (m = void 0), { focusableProps: (0, i.v)({ ...f, tabIndex: m }, d) });
+                return (e.isDisabled && (m = void 0), { focusableProps: (0, i.v)({ ...f, tabIndex: m }, p) });
             },
             gY: c,
         },

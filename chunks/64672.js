@@ -5,15 +5,15 @@ let { MAX_SAFE_COMPONENT_LENGTH: n, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
     u = (t.src = []),
     c = (t.t = {}),
     f = 0,
-    p = "[a-zA-Z0-9-]",
-    d = [
+    d = "[a-zA-Z0-9-]",
+    p = [
         ["\\s", 1],
         ["\\d", o],
-        [p, i],
+        [d, i],
     ],
     h = (e, t, r) => {
         let n = ((e) => {
-                for (let [t, r] of d) e = e.split(`${t}*`).join(`${t}{0,${r}}`).split(`${t}+`).join(`${t}{1,${r}}`);
+                for (let [t, r] of p) e = e.split(`${t}*`).join(`${t}{0,${r}}`).split(`${t}+`).join(`${t}{1,${r}}`);
                 return e;
             })(t),
             i = f++;
@@ -25,7 +25,7 @@ let { MAX_SAFE_COMPONENT_LENGTH: n, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
     };
 (h("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
     h("NUMERICIDENTIFIERLOOSE", "\\d+"),
-    h("NONNUMERICIDENTIFIER", `\\d*[a-zA-Z-]${p}*`),
+    h("NONNUMERICIDENTIFIER", `\\d*[a-zA-Z-]${d}*`),
     h("MAINVERSION", `(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})`),
     h(
         "MAINVERSIONLOOSE",
@@ -35,7 +35,7 @@ let { MAX_SAFE_COMPONENT_LENGTH: n, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
     h("PRERELEASEIDENTIFIERLOOSE", `(?:${u[c.NUMERICIDENTIFIERLOOSE]}|${u[c.NONNUMERICIDENTIFIER]})`),
     h("PRERELEASE", `(?:-(${u[c.PRERELEASEIDENTIFIER]}(?:\\.${u[c.PRERELEASEIDENTIFIER]})*))`),
     h("PRERELEASELOOSE", `(?:-?(${u[c.PRERELEASEIDENTIFIERLOOSE]}(?:\\.${u[c.PRERELEASEIDENTIFIERLOOSE]})*))`),
-    h("BUILDIDENTIFIER", `${p}+`),
+    h("BUILDIDENTIFIER", `${d}+`),
     h("BUILD", `(?:\\+(${u[c.BUILDIDENTIFIER]}(?:\\.${u[c.BUILDIDENTIFIER]})*))`),
     h("FULLPLAIN", `v?${u[c.MAINVERSION]}${u[c.PRERELEASE]}?${u[c.BUILD]}?`),
     h("FULL", `^${u[c.FULLPLAIN]}$`),

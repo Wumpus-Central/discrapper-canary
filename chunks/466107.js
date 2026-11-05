@@ -45,30 +45,30 @@ var n = r(589841),
         if (t.throwOnLimitExceeded && c.length > u)
             throw RangeError("Parameter limit exceeded. Only " + u + " parameter" + (1 === u ? "" : "s") + " allowed.");
         var f = -1,
-            p = t.charset;
+            d = t.charset;
         if (t.charsetSentinel)
-            for (d = 0; d < c.length; ++d)
-                0 === c[d].indexOf("utf8=") &&
-                    ("utf8=%E2%9C%93" === c[d] ? (p = "utf-8") : "utf8=%26%2310003%3B" === c[d] && (p = "iso-8859-1"),
-                    (f = d),
-                    (d = c.length));
-        for (d = 0; d < c.length; ++d)
-            if (d !== f) {
-                var d,
+            for (p = 0; p < c.length; ++p)
+                0 === c[p].indexOf("utf8=") &&
+                    ("utf8=%E2%9C%93" === c[p] ? (d = "utf-8") : "utf8=%26%2310003%3B" === c[p] && (d = "iso-8859-1"),
+                    (f = p),
+                    (p = c.length));
+        for (p = 0; p < c.length; ++p)
+            if (p !== f) {
+                var p,
                     h,
                     m,
-                    v = c[d],
+                    v = c[p],
                     y = v.indexOf("]="),
                     g = -1 === y ? v.indexOf("=") : y + 1;
                 (-1 === g
-                    ? ((h = t.decoder(v, a.decoder, p, "key")), (m = t.strictNullHandling ? null : ""))
-                    : ((h = t.decoder(v.slice(0, g), a.decoder, p, "key")),
+                    ? ((h = t.decoder(v, a.decoder, d, "key")), (m = t.strictNullHandling ? null : ""))
+                    : ((h = t.decoder(v.slice(0, g), a.decoder, d, "key")),
                       (m = n.maybeMap(s(v.slice(g + 1), t, o(r[h]) ? r[h].length : 0), function (e) {
-                          return t.decoder(e, a.decoder, p, "value");
+                          return t.decoder(e, a.decoder, d, "value");
                       }))),
                     m &&
                         t.interpretNumericEntities &&
-                        "iso-8859-1" === p &&
+                        "iso-8859-1" === d &&
                         (m = String(m).replace(/&#(\d+);/g, function (e, t) {
                             return String.fromCharCode(parseInt(t, 10));
                         })),
@@ -93,13 +93,13 @@ var n = r(589841),
                 c = r.allowEmptyArrays && ("" === l || (r.strictNullHandling && null === l)) ? [] : n.combine([], l);
             else {
                 c = r.plainObjects ? { __proto__: null } : {};
-                var p = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) : f,
-                    d = r.decodeDotInKeys ? p.replace(/%2E/g, ".") : p,
-                    h = parseInt(d, 10);
-                r.parseArrays || "" !== d
-                    ? !isNaN(h) && f !== d && String(h) === d && h >= 0 && r.parseArrays && h <= r.arrayLimit
+                var d = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) : f,
+                    p = r.decodeDotInKeys ? d.replace(/%2E/g, ".") : d,
+                    h = parseInt(p, 10);
+                r.parseArrays || "" !== p
+                    ? !isNaN(h) && f !== p && String(h) === p && h >= 0 && r.parseArrays && h <= r.arrayLimit
                         ? ((c = [])[h] = l)
-                        : "__proto__" !== d && (c[d] = l)
+                        : "__proto__" !== p && (c[p] = l)
                     : (c = { 0: l });
             }
             l = c;
@@ -185,8 +185,8 @@ e.exports = function (e, t) {
         ++s
     ) {
         var u = a[s],
-            p = c(u, i[u], r, "string" == typeof e);
-        o = n.merge(o, p, r);
+            d = c(u, i[u], r, "string" == typeof e);
+        o = n.merge(o, d, r);
     }
     return !0 === r.allowSparse ? o : n.compact(o);
 };

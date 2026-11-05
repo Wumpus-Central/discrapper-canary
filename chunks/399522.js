@@ -23,9 +23,9 @@ r.d(
                     maxValue: u = 100,
                     numberFormatter: c,
                     step: f = 1,
-                    orientation: p = "horizontal",
+                    orientation: d = "horizontal",
                 } = e,
-                d = (0, o.useMemo)(() => {
+                p = (0, o.useMemo)(() => {
                     let e = (u - r) / 10;
                     return Math.max((e = (0, n.BU)(e, 0, e + f, f)), f);
                 }, [f, u, r]),
@@ -46,16 +46,16 @@ r.d(
                 [_] = (0, o.useState)(b),
                 [S, E] = (0, o.useState)(Array(b.length).fill(!1)),
                 x = (0, o.useRef)(Array(b.length).fill(!0)),
-                [k, C] = (0, o.useState)(void 0),
+                [C, k] = (0, o.useState)(void 0),
                 T = (0, o.useRef)(b),
-                M = (0, o.useRef)(S);
-            function P(e) {
+                P = (0, o.useRef)(S);
+            function A(e) {
                 return (e - r) / (u - r);
             }
-            function A(e) {
+            function I(e) {
                 return 0 === e ? r : b[e - 1];
             }
-            function I(e) {
+            function M(e) {
                 return e === b.length - 1 ? u : b[e + 1];
             }
             function O(e) {
@@ -63,8 +63,8 @@ r.d(
             }
             function R(e, r) {
                 if (t || !O(e)) return;
-                let i = A(e),
-                    o = I(e);
+                let i = I(e),
+                    o = M(e);
                 r = (0, n.BU)(r, i, o, f);
                 let s = a(T.current, e, r);
                 ((T.current = s), w(s));
@@ -107,21 +107,21 @@ r.d(
                     var n;
                     if (t || !O(e)) return;
                     r && (T.current = b);
-                    let i = M.current[e];
-                    ((M.current = a(M.current, e, r)),
-                        (n = M.current),
-                        (M.current = n),
+                    let i = P.current[e];
+                    ((P.current = a(P.current, e, r)),
+                        (n = P.current),
+                        (P.current = n),
                         E(n),
-                        g && i && !M.current.some(Boolean) && g(T.current));
+                        g && i && !P.current.some(Boolean) && g(T.current));
                 },
-                focusedThumb: k,
-                setFocusedThumb: C,
-                getThumbPercent: (e) => P(b[e]),
-                getValuePercent: P,
+                focusedThumb: C,
+                setFocusedThumb: k,
+                getThumbPercent: (e) => A(b[e]),
+                getValuePercent: A,
                 getThumbValueLabel: (e) => D(b[e]),
                 getFormattedValue: D,
-                getThumbMinValue: A,
-                getThumbMaxValue: I,
+                getThumbMinValue: I,
+                getThumbMaxValue: M,
                 getPercentValue: F,
                 isThumbEditable: O,
                 setThumbEditable: function (e, t) {
@@ -138,8 +138,8 @@ r.d(
                     R(e, (0, n.BU)(b[e] - i, r, u, f));
                 },
                 step: f,
-                pageSize: d,
-                orientation: p,
+                pageSize: p,
+                orientation: d,
                 isDisabled: t,
             };
         },

@@ -23,10 +23,10 @@ e.exports = function (e, i, o, a) {
                               u = n(l, e, o);
                           if (u >= 0.001) {
                               for (var c = l, f = 0; f < 4; ++f) {
-                                  var p = n(c, e, o);
-                                  if (0 === p) break;
-                                  var d = r(c, e, o) - t;
-                                  c -= d / p;
+                                  var d = n(c, e, o);
+                                  if (0 === d) break;
+                                  var p = r(c, e, o) - t;
+                                  c -= p / d;
                               }
                               return c;
                           }

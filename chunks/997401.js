@@ -63,15 +63,15 @@ r.d(
                     validationState: r,
                     name: i,
                     value: l,
-                    builtinValidation: p,
-                    validate: d,
+                    builtinValidation: d,
+                    validate: p,
                     validationBehavior: h = "aria",
                 } = e;
                 r && (t ||= "invalid" === r);
                 let m = void 0 !== t ? { isInvalid: t, validationErrors: [], validationDetails: o } : null,
                     v = (0, n.useMemo)(
                         () =>
-                            d && null != l
+                            p && null != l
                                 ? c(
                                       (function (e, t) {
                                           if ("function" == typeof e) {
@@ -79,12 +79,12 @@ r.d(
                                               if (r && "boolean" != typeof r) return u(r);
                                           }
                                           return [];
-                                      })(d, l),
+                                      })(p, l),
                                   )
                                 : null,
-                        [d, l],
+                        [p, l],
                     );
-                p?.validationDetails.valid && (p = void 0);
+                d?.validationDetails.valid && (d = void 0);
                 let y = (0, n.useContext)(s),
                     g = (0, n.useMemo)(
                         () => (i ? (Array.isArray(i) ? i.flatMap((e) => u(y[e])) : u(y[i])) : []),
@@ -95,27 +95,27 @@ r.d(
                 y !== b && (w(y), S(!1));
                 let E = (0, n.useMemo)(() => c(_ ? [] : g), [_, g]),
                     x = (0, n.useRef)(a),
-                    [k, C] = (0, n.useState)(a),
+                    [C, k] = (0, n.useState)(a),
                     T = (0, n.useRef)(a),
-                    [M, P] = (0, n.useState)(!1);
+                    [P, A] = (0, n.useState)(!1);
                 return (
                     (0, n.useEffect)(() => {
-                        if (!M) return;
-                        P(!1);
-                        let e = v || p || x.current;
-                        f(e, T.current) || ((T.current = e), C(e));
+                        if (!P) return;
+                        A(!1);
+                        let e = v || d || x.current;
+                        f(e, T.current) || ((T.current = e), k(e));
                     }),
                     {
-                        realtimeValidation: m || E || v || p || a,
-                        displayValidation: "native" === h ? m || E || k : m || E || v || p || k,
+                        realtimeValidation: m || E || v || d || a,
+                        displayValidation: "native" === h ? m || E || C : m || E || v || d || C,
                         updateValidation(e) {
-                            "aria" !== h || f(k, e) ? (x.current = e) : C(e);
+                            "aria" !== h || f(C, e) ? (x.current = e) : k(e);
                         },
                         resetValidation() {
-                            (f(a, T.current) || ((T.current = a), C(a)), "native" === h && P(!1), S(!0));
+                            (f(a, T.current) || ((T.current = a), k(a)), "native" === h && A(!1), S(!0));
                         },
                         commitValidation() {
-                            ("native" === h && P(!0), S(!0));
+                            ("native" === h && A(!0), S(!0));
                         },
                     }
                 );

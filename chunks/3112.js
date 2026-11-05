@@ -5,7 +5,7 @@ var n = r(980807),
     s = r(808529);
 let l = (0, o.createContext)(null),
     u = (0, o.forwardRef)(function (e, t) {
-        let { name: r, isVisible: u = !0, children: c, className: f, style: p, render: d, ...h } = e,
+        let { name: r, isVisible: u = !0, children: c, className: f, style: d, render: p, ...h } = e,
             [m, v] = (0, o.useState)(u ? "visible" : "hidden"),
             y = (0, o.useContext)(l);
         if (!y) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
@@ -66,8 +66,8 @@ let l = (0, o.createContext)(null),
         let g = (0, n.Sl)({
             children: c,
             className: f,
-            style: p,
-            render: d,
+            style: d,
+            render: p,
             values: { isEntering: "entering" === m, isExiting: "exiting" === m },
         });
         return "hidden" === m

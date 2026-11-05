@@ -42,7 +42,7 @@ r.d(
                 f = (0, o.J)(() => {
                     c.current || t.resetValidation();
                 }),
-                p = (0, o.J)((e) => {
+                d = (0, o.J)((e) => {
                     t.displayValidation.isInvalid || t.commitValidation();
                     let n = r?.current?.form;
                     (!e.defaultPrevented &&
@@ -58,7 +58,7 @@ r.d(
                         (u ? u() : r.current?.focus(), (0, i.Cl)("keyboard")),
                         e.preventDefault());
                 }),
-                d = (0, o.J)(() => {
+                p = (0, o.J)(() => {
                     t.commitValidation();
                 });
             (0, s.useEffect)(() => {
@@ -75,12 +75,12 @@ r.d(
                                 i?.call(t),
                                 (c.current = !1));
                         }),
-                    e.addEventListener("invalid", p),
-                    e.addEventListener("change", d),
+                    e.addEventListener("invalid", d),
+                    e.addEventListener("change", p),
                     t?.addEventListener("reset", f),
                     () => {
-                        (e.removeEventListener("invalid", p),
-                            e.removeEventListener("change", d),
+                        (e.removeEventListener("invalid", d),
+                            e.removeEventListener("change", p),
                             t?.removeEventListener("reset", f),
                             t && (t.reset = i));
                     }

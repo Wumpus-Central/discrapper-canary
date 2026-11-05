@@ -37,8 +37,8 @@ function f() {
     return e.join(" ");
 }
 u.exports ? ((f.default = f), (u.exports = f)) : (window.classNames = f);
-let p = u.exports;
-var d = function (e, t, r, n, i, o, a, s) {
+let d = u.exports;
+var p = function (e, t, r, n, i, o, a, s) {
     if (!e) {
         var l;
         if (void 0 === t)
@@ -145,18 +145,18 @@ class v {
                 c = (s + l) / 2,
                 f = u > 0 ? u / (1 - Math.abs(2 * c - 1)) : 0;
             if (0 === u) return { hue: 0, saturation: f, lightness: c, alpha: n };
-            let p = 0;
+            let d = 0;
             switch (s) {
                 case i:
-                    p = ((o - a) / u) % 6;
+                    d = ((o - a) / u) % 6;
                     break;
                 case o:
-                    p = (a - i) / u + 2;
+                    d = (a - i) / u + 2;
                     break;
                 case a:
-                    p = (o - a) / u + 4;
+                    d = (o - a) / u + 4;
             }
-            return { hue: 60 * p, saturation: f, lightness: c, alpha: n };
+            return { hue: 60 * d, saturation: f, lightness: c, alpha: n };
         })({ red: this.red, green: this.green, blue: this.blue, alpha: this.alpha });
     }
     getRelativeLuminance() {
@@ -245,8 +245,8 @@ class b {
         let u = null != (r = g(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? r : "0",
             c = null != (i = g(null == (n = e.styles[0]) ? void 0 : n.borderTopRightRadius)) ? i : "0",
             f = null != (a = g(null == (o = e.styles[0]) ? void 0 : o.borderBottomRightRadius)) ? a : "0",
-            p = null != (l = g(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : "0";
-        if ("0" !== u || "0" !== c || "0" !== f || "0" !== p) return `${u} ${c} ${f} ${p}`;
+            d = null != (l = g(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : "0";
+        if ("0" !== u || "0" !== c || "0" !== f || "0" !== d) return `${u} ${c} ${f} ${d}`;
     }
     makePositionFromDOMRect(e) {
         var t, r, n, i;
@@ -255,20 +255,20 @@ class b {
             { scrollTop: a, scrollLeft: s, clientTop: l, clientLeft: u } = this.container,
             c = 0,
             f = 0,
-            p = 0,
-            d = 0;
+            d = 0,
+            p = 0;
         return (
             "number" == typeof this.offset
-                ? ((c = this.offset), (f = this.offset), (p = this.offset), (d = this.offset))
+                ? ((c = this.offset), (f = this.offset), (d = this.offset), (p = this.offset))
                 : ((c = null != (t = this.offset.top) ? t : 0),
                   (f = null != (r = this.offset.right) ? r : 0),
-                  (p = null != (n = this.offset.bottom) ? n : 0),
-                  (d = null != (i = this.offset.left) ? i : 0)),
+                  (d = null != (n = this.offset.bottom) ? n : 0),
+                  (p = null != (i = this.offset.left) ? i : 0)),
             {
                 top: a + e.top - (o.top + l) + c,
-                width: e.width - (f + d),
-                height: e.height - (p + c),
-                left: s + e.left - (o.left + u) + d,
+                width: e.width - (f + p),
+                height: e.height - (d + c),
+                left: s + e.left - (o.left + u) + p,
             }
         );
     }
@@ -334,15 +334,15 @@ var S = function (e, t, r, n) {
 };
 let E = !1,
     x,
-    k = {};
-function C() {
+    C = {};
+function k() {
     if (!E) return;
     let e = null == n ? void 0 : n.getStyle();
-    (null == e || S(e, k) ? null != x && cancelAnimationFrame(x) : ((k = e), null == n || n.invalidate()),
-        (x = requestAnimationFrame(C)));
+    (null == e || S(e, C) ? null != x && cancelAnimationFrame(x) : ((C = e), null == n || n.invalidate()),
+        (x = requestAnimationFrame(k)));
 }
 let T = !1,
-    M = {
+    P = {
         get ringsEnabled() {
             return T;
         },
@@ -350,13 +350,13 @@ let T = !1,
             ((T = e), null == n || n.invalidate());
         },
         enableAnimationTracking() {
-            ((E = !0), (x = requestAnimationFrame(C)));
+            ((E = !0), (x = requestAnimationFrame(k)));
         },
         disableAnimationTracking() {
             ((E = !1), null != x && cancelAnimationFrame(x));
         },
     };
-function P() {
+function A() {
     let e = o.useContext(_),
         [, t] = o.useState({});
     return (
@@ -369,12 +369,12 @@ function P() {
             ),
             [e],
         ),
-        M.ringsEnabled && e.visible
-            ? (0, a.jsx)("div", { className: p("focus-rings-ring", e.className), style: e.getStyle() })
+        P.ringsEnabled && e.visible
+            ? (0, a.jsx)("div", { className: d("focus-rings-ring", e.className), style: e.getStyle() })
             : null
     );
 }
-let A =
+let I =
     "u" > typeof window && (null == (i = window.document) ? void 0 : i.createElement) != null
         ? o.useLayoutEffect
         : o.useEffect;
@@ -382,7 +382,7 @@ r.d(
     t,
     {},
     {
-        oP: M,
+        oP: P,
         vN: function (e) {
             let {
                 within: t = !1,
@@ -397,12 +397,12 @@ r.d(
                 children: f,
             } = e;
             (null != a &&
-                d(
+                p(
                     null != s,
                     "FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.",
                 ),
                 null != n &&
-                    d(
+                    p(
                         null != s,
                         "FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.",
                     ));
@@ -412,7 +412,7 @@ r.d(
                 g = o.Children.only(f),
                 { onBlur: b, onFocus: w, ...S } = g.props,
                 E = o.useMemo(() => ({ className: l, offset: i }), [l, i]);
-            (A(() => {
+            (I(() => {
                 r && y.invalidate();
             }),
                 o.useEffect(() => {
@@ -428,7 +428,7 @@ r.d(
                     let e = null == s ? void 0 : s.current;
                     null == n || null == e || ((h.current = n), n ? y.showElement(e, E) : !1 === n && y.hide());
                 }, [n, E, y, s]),
-                A(() => {
+                I(() => {
                     if (null != n) return;
                     let e = null == a ? void 0 : a.current,
                         r = null == s ? void 0 : s.current;
@@ -459,7 +459,7 @@ r.d(
                     },
                     [b, y],
                 ),
-                k = o.useCallback(
+                C = o.useCallback(
                     (e) => {
                         let r = null == s ? void 0 : s.current;
                         (e.currentTarget === e.target
@@ -472,9 +472,9 @@ r.d(
             return r && null == a && null == n
                 ? o.cloneElement(g, {
                       ...S,
-                      className: p(S.className, h.current ? u : void 0, m ? c : void 0),
+                      className: d(S.className, h.current ? u : void 0, m ? c : void 0),
                       onBlur: x,
-                      onFocus: k,
+                      onFocus: C,
                   })
                 : g;
         },
@@ -485,7 +485,7 @@ r.d(
                 o.useEffect(() => {
                     (i.current.setContainer(t.current), i.current.setThemeOptions(n));
                 }, [t.current]),
-                (0, a.jsxs)(_.Provider, { value: i.current, children: [r, (0, a.jsx)(P, {})] })
+                (0, a.jsxs)(_.Provider, { value: i.current, children: [r, (0, a.jsx)(A, {})] })
             );
         },
     },

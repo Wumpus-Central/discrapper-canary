@@ -95,8 +95,8 @@ r.d(
                 c = t.disableReturnRef,
                 f = t.attachTo;
             void 0 === f && (f = document);
-            var p = t.disable,
-                d = f instanceof HTMLElement ? f.ownerDocument : f,
+            var d = t.disable,
+                p = f instanceof HTMLElement ? f.ownerDocument : f,
                 h =
                     ((r = (0, n.useState)(function () {
                         return "lock-" + s++;
@@ -118,9 +118,9 @@ r.d(
                     i);
             ((0, n.useEffect)(
                 function () {
-                    p && (h.current = !1);
+                    d && (h.current = !1);
                 },
-                [p, h],
+                [d, h],
             ),
                 (0, n.useLayoutEffect)(
                     function () {
@@ -130,7 +130,7 @@ r.d(
                                 if (h.current) {
                                     var r = e.current;
                                     if (null != r) {
-                                        var n = t.target || d.body;
+                                        var n = t.target || p.body;
                                         r.contains(n) || (t.preventDefault(), t.stopImmediatePropagation(), o(r, n));
                                     }
                                 }
@@ -140,19 +140,19 @@ r.d(
                             if (h.current) {
                                 var r = e.current;
                                 if (null != r) {
-                                    (null != t.relatedTarget && t.relatedTarget !== d.body) ||
+                                    (null != t.relatedTarget && t.relatedTarget !== p.body) ||
                                         (t.preventDefault(), r.focus());
-                                    var n = t.target || d.body;
+                                    var n = t.target || p.body;
                                     r.contains(n) || o(r, n);
                                 }
                             }
                         }
                         return (
                             null == t ||
-                                null == d.activeElement ||
-                                t.contains(d.activeElement) ||
+                                null == p.activeElement ||
+                                t.contains(p.activeElement) ||
                                 null != t.querySelector("[autofocus]") ||
-                                o(t, d.activeElement, !0),
+                                o(t, p.activeElement, !0),
                             f.addEventListener("focusin", r, { capture: !0 }),
                             f.addEventListener("focusout", n, { capture: !0 }),
                             function () {
@@ -161,7 +161,7 @@ r.d(
                             }
                         );
                     },
-                    [f, d, e, h],
+                    [f, p, e, h],
                 ),
                 (l = (0, n.useRef)(document.activeElement)),
                 (0, n.useLayoutEffect)(function () {

@@ -18,8 +18,8 @@ r.d(
                 } = e,
                 c = (0, o.useRef)(!1),
                 [, f] = (0, o.useState)(!1),
-                p = (0, o.useRef)(null),
                 d = (0, o.useRef)(null),
+                p = (0, o.useRef)(null),
                 [, h] = (0, o.useState)(null),
                 m = (0, o.useMemo)(() => a(e.selectedKeys), [e.selectedKeys]),
                 v = (0, o.useMemo)(() => a(e.defaultSelectedKeys, new (0, n.L)()), [e.defaultSelectedKeys]),
@@ -44,14 +44,14 @@ r.d(
                         ((c.current = e), f(e));
                     },
                     get focusedKey() {
-                        return p.current;
+                        return d.current;
                     },
                     get childFocusStrategy() {
-                        return d.current;
+                        return p.current;
                     },
                     setFocusedKey(e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "first";
-                        ((p.current = e), (d.current = t), h(e));
+                        ((d.current = e), (p.current = t), h(e));
                     },
                     selectedKeys: y,
                     setSelectedKeys(e) {

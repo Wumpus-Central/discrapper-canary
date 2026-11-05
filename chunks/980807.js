@@ -27,7 +27,7 @@ function c(e, t, r) {
     return n ? n(c, void 0) : o.createElement(e, c);
 }
 let f = {},
-    p = new Proxy(
+    d = new Proxy(
         {},
         {
             get(e, t) {
@@ -115,6 +115,6 @@ r.d(
                 [i, t]
             );
         },
-        tT: p,
+        tT: d,
     },
 );

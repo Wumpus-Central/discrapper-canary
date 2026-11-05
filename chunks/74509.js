@@ -54,16 +54,16 @@ e.exports = class e {
         if (r) return r;
         let n = this.options.loose,
             o = n ? u[c.HYPHENRANGELOOSE] : u[c.HYPHENRANGE];
-        (s("hyphen replace", (e = e.replace(o, P(this.options.includePrerelease)))),
+        (s("hyphen replace", (e = e.replace(o, A(this.options.includePrerelease)))),
             s("comparator trim", (e = e.replace(u[c.COMPARATORTRIM], f))),
-            s("tilde trim", (e = e.replace(u[c.TILDETRIM], p))),
-            s("caret trim", (e = e.replace(u[c.CARETTRIM], d))));
+            s("tilde trim", (e = e.replace(u[c.TILDETRIM], d))),
+            s("caret trim", (e = e.replace(u[c.CARETTRIM], p))));
         let l = e
             .split(" ")
             .map((e) => b(e, this.options))
             .join(" ")
             .split(/\s+/)
-            .map((e) => M(e, this.options));
+            .map((e) => P(e, this.options));
         (n && (l = l.filter((e) => (s("loose invalid filter", e, this.options), !!e.match(u[c.COMPARATORLOOSE])))),
             s("range list", l));
         let y = new Map();
@@ -89,7 +89,7 @@ e.exports = class e {
             } catch (e) {
                 return !1;
             }
-        for (let t = 0; t < this.set.length; t++) if (A(this.set[t], e, this.options)) return !0;
+        for (let t = 0; t < this.set.length; t++) if (I(this.set[t], e, this.options)) return !0;
         return !1;
     }
 };
@@ -98,7 +98,7 @@ let i = new (r(678884))(),
     a = r(46666),
     s = r(692714),
     l = r(864886),
-    { safeRe: u, t: c, comparatorTrimReplace: f, tildeTrimReplace: p, caretTrimReplace: d } = r(64672),
+    { safeRe: u, t: c, comparatorTrimReplace: f, tildeTrimReplace: d, caretTrimReplace: p } = r(64672),
     { FLAG_INCLUDE_PRERELEASE: h, FLAG_LOOSE: m } = r(376780),
     v = (e) => "<0.0.0-0" === e.value,
     y = (e) => "" === e.value,
@@ -113,7 +113,7 @@ let i = new (r(678884))(),
         s("comp", e, t),
         s("caret", (e = E(e, t))),
         s("tildes", (e = _(e, t))),
-        s("xrange", (e = k(e, t))),
+        s("xrange", (e = C(e, t))),
         s("stars", (e = T(e, t))),
         e
     ),
@@ -187,14 +187,14 @@ let i = new (r(678884))(),
             );
         });
     },
-    k = (e, t) => (
+    C = (e, t) => (
         s("replaceXRanges", e, t),
         e
             .split(/\s+/)
-            .map((e) => C(e, t))
+            .map((e) => k(e, t))
             .join(" ")
     ),
-    C = (e, t) => {
+    k = (e, t) => {
         e = e.trim();
         let r = t.loose ? u[c.XRANGELOOSE] : u[c.XRANGE];
         return e.replace(r, (r, n, i, o, a, l) => {
@@ -224,8 +224,8 @@ let i = new (r(678884))(),
         });
     },
     T = (e, t) => (s("replaceStars", e, t), e.trim().replace(u[c.STAR], "")),
-    M = (e, t) => (s("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? c.GTE0PRE : c.GTE0], "")),
-    P = (e) => (t, r, n, i, o, a, s, l, u, c, f, p) => (
+    P = (e, t) => (s("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? c.GTE0PRE : c.GTE0], "")),
+    A = (e) => (t, r, n, i, o, a, s, l, u, c, f, d) => (
         (r = w(n)
             ? ""
             : w(i)
@@ -241,14 +241,14 @@ let i = new (r(678884))(),
               ? `<${+u + 1}.0.0-0`
               : w(f)
                 ? `<${u}.${+c + 1}.0-0`
-                : p
-                  ? `<=${u}.${c}.${f}-${p}`
+                : d
+                  ? `<=${u}.${c}.${f}-${d}`
                   : e
                     ? `<${u}.${c}.${+f + 1}-0`
                     : `<=${l}`),
         `${r} ${l}`.trim()
     ),
-    A = (e, t, r) => {
+    I = (e, t, r) => {
         for (let r = 0; r < e.length; r++) if (!e[r].test(t)) return !1;
         if (t.prerelease.length && !r.includePrerelease) {
             for (let r = 0; r < e.length; r++)

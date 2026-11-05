@@ -7,14 +7,14 @@ var i = r(518206),
     u = r(62998),
     c = r(922446),
     f = r(582128);
-let p = null,
-    d = new Set(),
+let d = null,
+    p = new Set(),
     h = new Map(),
     m = !1,
     v = !1,
     y = { Tab: !0, Escape: !0 };
 function g(e, t) {
-    for (let r of d) r(e, t);
+    for (let r of p) r(e, t);
 }
 function b(e) {
     ((m = !0),
@@ -25,15 +25,15 @@ function b(e) {
             "Control" === e.key ||
             "Shift" === e.key ||
             "Meta" === e.key ||
-            ((p = "keyboard"), g("keyboard", e)));
+            ((d = "keyboard"), g("keyboard", e)));
 }
 function w(e) {
-    ((p = "pointer"),
+    ((d = "pointer"),
         "pointerType" in e && e.pointerType,
         ("mousedown" === e.type || "pointerdown" === e.type) && ((m = !0), g("pointer", e)));
 }
 function _(e) {
-    !u.Fe.isOpening && (0, l.Y)(e) && ((m = !0), (p = "virtual"));
+    !u.Fe.isOpening && (0, l.Y)(e) && ((m = !0), (d = "virtual"));
 }
 function S(e) {
     let t = (0, o.mD)((0, i.wt)(e)),
@@ -42,7 +42,7 @@ function S(e) {
         (0, i.wt)(e) !== r &&
         !a.lR &&
         e.isTrusted &&
-        (m || v || ((p = "virtual"), g("virtual", e)), (m = !1), (v = !1));
+        (m || v || ((d = "virtual"), g("virtual", e)), (m = !1), (v = !1));
 }
 function E() {
     a.lR || ((m = !1), (v = !0));
@@ -72,13 +72,13 @@ function x(e) {
         t.addEventListener(
             "beforeunload",
             () => {
-                k(e);
+                C(e);
             },
             { once: !0 },
         ),
         h.set(t, { focus: n }));
 }
-let k = (e, t) => {
+let C = (e, t) => {
     let r = (0, o.mD)(e),
         n = (0, o.TW)(e);
     (t && n.removeEventListener("DOMContentLoaded", t),
@@ -99,8 +99,8 @@ let k = (e, t) => {
                 n.removeEventListener("pointerup", w, !0)),
             h.delete(r)));
 };
-function C() {
-    return "pointer" !== p;
+function k() {
+    return "pointer" !== d;
 }
 "u" > typeof document &&
     ("loading" !== (n = (0, o.TW)(void 0)).readyState
@@ -114,7 +114,7 @@ r.d(
     {},
     {
         Cl: function (e) {
-            ((p = e), g(e, null));
+            ((d = e), g(e, null));
         },
         K7: function (e, t, r) {
             (x(),
@@ -122,54 +122,54 @@ r.d(
                     if (r?.enabled === !1) return;
                     let t = (t, n) => {
                         var a;
-                        let s, l, u, c, f, p, d, h;
+                        let s, l, u, c, f, d, p, h;
                         ((a = !!r?.isTextInput),
                             (s = n ? (0, i.wt)(n) : void 0),
                             (l = (0, o.TW)(s)),
                             (c = void 0 !== (u = (0, o.mD)(s)) ? u.HTMLInputElement : HTMLInputElement),
                             (f = void 0 !== u ? u.HTMLTextAreaElement : HTMLTextAreaElement),
-                            (p = void 0 !== u ? u.HTMLElement : HTMLElement),
-                            (d = void 0 !== u ? u.KeyboardEvent : KeyboardEvent),
+                            (d = void 0 !== u ? u.HTMLElement : HTMLElement),
+                            (p = void 0 !== u ? u.KeyboardEvent : KeyboardEvent),
                             (h = (0, i.bq)(l)),
                             ((a =
                                 a ||
                                 (h instanceof c && !T.has(h.type)) ||
                                 h instanceof f ||
-                                (h instanceof p && h.isContentEditable)) &&
+                                (h instanceof d && h.isContentEditable)) &&
                                 "keyboard" === t &&
-                                n instanceof d &&
+                                n instanceof p &&
                                 !y[n.key]) ||
-                                e(C()));
+                                e(k()));
                     };
                     return (
-                        d.add(t),
+                        p.add(t),
                         () => {
-                            d.delete(t);
+                            p.delete(t);
                         }
                     );
                 }, t));
         },
         ME: function () {
-            return p;
+            return d;
         },
         lb: function () {
             x();
-            let [e, t] = (0, f.useState)(p);
+            let [e, t] = (0, f.useState)(d);
             return (
                 (0, f.useEffect)(() => {
                     let e = () => {
-                        t(p);
+                        t(d);
                     };
                     return (
-                        d.add(e),
+                        p.add(e),
                         () => {
-                            d.delete(e);
+                            p.delete(e);
                         }
                     );
                 }, []),
                 (0, c.wR)() ? null : e
             );
         },
-        pP: C,
+        pP: k,
     },
 );

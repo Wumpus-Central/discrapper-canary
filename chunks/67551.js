@@ -30,18 +30,18 @@ let a = o(function () {
         return a() || u();
     }),
     f = o(function () {
-        return n(/AppleWebKit/i) && (u() || !p());
+        return n(/AppleWebKit/i) && (u() || !d());
     });
 o(function () {
-    return f() && !p() && !h();
+    return f() && !d() && !h();
 });
-let p = o(function () {
+let d = o(function () {
         return n(/Chrome|CriOS|CrMo/i);
     }),
-    d = o(function () {
+    p = o(function () {
         return n(/Android/i);
     }),
     h = o(function () {
         return n(/(Firefox|FxiOS)/i);
     });
-r.d(t, {}, { H8: p, Tc: f, bh: l, cX: a, gm: h, lg: c, m0: d, un: u });
+r.d(t, {}, { H8: d, Tc: f, bh: l, cX: a, gm: h, lg: c, m0: p, un: u });

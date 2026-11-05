@@ -1,5 +1,6 @@
 var n = r(72290);
 !(function (e) {
+    "use strict";
     if (!e.setImmediate) {
         var t,
             r,
@@ -15,7 +16,7 @@ var n = r(72290);
             "[object process]" === {}.toString.call(e.process)
                 ? (a = function (e) {
                       n.nextTick(function () {
-                          d(e);
+                          p(e);
                       });
                   })
                 : (function () {
@@ -37,7 +38,7 @@ var n = r(72290);
                         r.source === e &&
                             "string" == typeof r.data &&
                             0 === r.data.indexOf(t) &&
-                            d(+r.data.slice(t.length));
+                            p(+r.data.slice(t.length));
                     }),
                     e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r),
                     (a = function (r) {
@@ -45,7 +46,7 @@ var n = r(72290);
                     }))
                   : e.MessageChannel
                     ? (((i = new MessageChannel()).port1.onmessage = function (e) {
-                          d(e.data);
+                          p(e.data);
                       }),
                       (a = function (e) {
                           i.port2.postMessage(e);
@@ -55,12 +56,12 @@ var n = r(72290);
                         (a = function (e) {
                             var t = c.createElement("script");
                             ((t.onreadystatechange = function () {
-                                (d(e), (t.onreadystatechange = null), o.removeChild(t), (t = null));
+                                (p(e), (t.onreadystatechange = null), o.removeChild(t), (t = null));
                             }),
                                 o.appendChild(t));
                         }))
                       : (a = function (e) {
-                            setTimeout(d, 0, e);
+                            setTimeout(p, 0, e);
                         }),
             (f.setImmediate = function (e) {
                 "function" != typeof e && (e = Function("" + e));
@@ -68,13 +69,13 @@ var n = r(72290);
                 var n = { callback: e, args: t };
                 return ((l[s] = n), a(s), s++);
             }),
-            (f.clearImmediate = p));
-    }
-    function p(e) {
-        delete l[e];
+            (f.clearImmediate = d));
     }
     function d(e) {
-        if (u) setTimeout(d, 0, e);
+        delete l[e];
+    }
+    function p(e) {
+        if (u) setTimeout(p, 0, e);
         else {
             var t = l[e];
             if (t) {
@@ -99,7 +100,7 @@ var n = r(72290);
                             r.apply(void 0, n);
                     }
                 } finally {
-                    (p(e), (u = !1));
+                    (d(e), (u = !1));
                 }
             }
         }

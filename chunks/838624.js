@@ -12,10 +12,10 @@ r.d(
     {},
     {
         P: function (e, t, r) {
-            let { labelProps: p, fieldProps: d } = (0, s.M)(e),
+            let { labelProps: d, fieldProps: p } = (0, s.M)(e),
                 h = "vertical" === e.orientation;
             n.S.set(t, {
-                id: p.id ?? d.id,
+                id: d.id ?? p.id,
                 "aria-describedby": e["aria-describedby"],
                 "aria-details": e["aria-details"],
             });
@@ -51,22 +51,22 @@ r.d(
                             { height: s, width: l, top: u, left: c } = r.current.getBoundingClientRect(),
                             f = ((h ? a : o) - (h ? u : c)) / (h ? s : l);
                         ("rtl" === m || h) && (f = 1 - f);
-                        let p = t.getPercentValue(f),
-                            d = t.values.findIndex((e) => p - e < 0);
+                        let d = t.getPercentValue(f),
+                            p = t.values.findIndex((e) => d - e < 0);
                         (e =
-                            0 === d
-                                ? d
-                                : -1 === d
+                            0 === p
+                                ? p
+                                : -1 === p
                                   ? t.values.length - 1
-                                  : Math.abs(t.values[d - 1] - p) < Math.abs(t.values[d] - p)
-                                    ? d - 1
-                                    : d) >= 0 && t.isThumbEditable(e)
+                                  : Math.abs(t.values[p - 1] - d) < Math.abs(t.values[p] - d)
+                                    ? p - 1
+                                    : p) >= 0 && t.isThumbEditable(e)
                             ? (n.preventDefault(),
                               (g.current = e),
                               t.setFocusedThumb(e),
                               (S.current = i),
                               t.setThumbDragging(g.current, !0),
-                              t.setThumbValue(e, p),
+                              t.setThumbValue(e, d),
                               v(window, "mouseup", x, !1),
                               v(window, "touchend", x, !1),
                               v(window, "pointerup", x, !1))
@@ -81,15 +81,15 @@ r.d(
                         y(window, "pointerup", x, !1));
                 };
             return (
-                "htmlFor" in p &&
-                    p.htmlFor &&
-                    (delete p.htmlFor,
-                    (p.onClick = () => {
+                "htmlFor" in d &&
+                    d.htmlFor &&
+                    (delete d.htmlFor,
+                    (d.onClick = () => {
                         (document.getElementById((0, n.h)(t, 0))?.focus(), (0, o.Cl)("keyboard"));
                     })),
                 {
-                    labelProps: p,
-                    groupProps: { role: "group", ...d },
+                    labelProps: d,
+                    groupProps: { role: "group", ...p },
                     trackProps: (0, i.v)(
                         {
                             onMouseDown(e) {

@@ -1,4 +1,4 @@
-r.d(t, { d: () => p });
+r.d(t, { d: () => d });
 var n = r(685485);
 function i(e) {
     if (e)
@@ -43,10 +43,10 @@ let c = {
     pagedown: "pagedown",
 };
 var f = r(518206);
-function p(e) {
+function d(e) {
     let t,
         r,
-        { shortcuts: s, allowRepeats: p = !1, allowComposing: d = !1 } = e;
+        { shortcuts: s, allowRepeats: d = !1, allowComposing: p = !1 } = e;
     if (s) {
         let h = (function (e) {
                 let t = new Map();
@@ -124,14 +124,14 @@ function p(e) {
             })(s),
             m = i((e) => {
                 !(0, f.sD)(e.currentTarget, (0, f.wt)(e)) ||
-                (e.nativeEvent?.repeat && !p) ||
-                (e.nativeEvent?.isComposing && !d)
+                (e.nativeEvent?.repeat && !d) ||
+                (e.nativeEvent?.isComposing && !p)
                     ? e.continuePropagation()
                     : h(e);
             }),
             v = i((e) => {
                 (!(0, f.sD)(e.currentTarget, (0, f.wt)(e)) ||
-                    (e.nativeEvent?.repeat && !p) ||
+                    (e.nativeEvent?.repeat && !d) ||
                     e.nativeEvent?.isComposing,
                     e.continuePropagation());
             });

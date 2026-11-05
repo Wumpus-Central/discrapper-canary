@@ -52,8 +52,8 @@ r.d(
                 u = !1,
                 c = new Set(),
                 f = new Set(),
-                p = l.storage;
-            if (!p)
+                d = l.storage;
+            if (!d)
                 return e(
                     (...e) => {
                         (console.warn(
@@ -64,24 +64,24 @@ r.d(
                     o,
                     a,
                 );
-            let d = () => {
+            let p = () => {
                     let e = l.partialize({ ...o() });
-                    return p.setItem(l.name, { state: e, version: l.version });
+                    return d.setItem(l.name, { state: e, version: l.version });
                 },
                 h = a.setState;
-            a.setState = (e, t) => (h(e, t), d());
-            let m = e((...e) => (r(...e), d()), o, a);
+            a.setState = (e, t) => (h(e, t), p());
+            let m = e((...e) => (r(...e), p()), o, a);
             a.getInitialState = () => m;
             let v = () => {
                 var e, t;
-                if (!p) return;
+                if (!d) return;
                 ((u = !1),
                     c.forEach((e) => {
                         var t;
                         return e(null != (t = o()) ? t : m);
                     }));
                 let n = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = o()) ? e : m)) || void 0;
-                return i(p.getItem.bind(p))(l.name)
+                return i(d.getItem.bind(d))(l.name)
                     .then((e) => {
                         if (e)
                             if ("number" != typeof e.version || e.version === l.version) return [!1, e.state];
@@ -99,7 +99,7 @@ r.d(
                     .then((e) => {
                         var t;
                         let [n, i] = e;
-                        if ((r((s = l.merge(i, null != (t = o()) ? t : m)), !0), n)) return d();
+                        if ((r((s = l.merge(i, null != (t = o()) ? t : m)), !0), n)) return p();
                     })
                     .then(() => {
                         (null == n || n(s, void 0), (s = o()), (u = !0), f.forEach((e) => e(s)));
@@ -111,10 +111,10 @@ r.d(
             return (
                 (a.persist = {
                     setOptions: (e) => {
-                        ((l = { ...l, ...e }), e.storage && (p = e.storage));
+                        ((l = { ...l, ...e }), e.storage && (d = e.storage));
                     },
                     clearStorage: () => {
-                        null == p || p.removeItem(l.name);
+                        null == d || d.removeItem(l.name);
                     },
                     getOptions: () => l,
                     rehydrate: () => v(),

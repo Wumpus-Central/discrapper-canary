@@ -11,22 +11,22 @@ var l = t(477900),
     m = t(436283),
     f = t(964363),
     p = t(652215),
-    g = t(792996),
-    x = t(389760);
+    x = t(792996),
+    g = t(389760);
 function v(e) {
-    return { text: e, icon: (0, l.jsx)(o.n, { className: x.Kk, dotRadius: 3.5, themed: !0 }) };
+    return { text: e, icon: (0, l.jsx)(o.n, { className: g.Kk, dotRadius: 3.5, themed: !0 }) };
 }
 function j(e) {
     return {
-        text: e ?? g.intl.string(g.t.VCsUJu),
+        text: e ?? x.intl.string(x.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, l.jsx)(c.E, { size: "xs", color: "currentColor", className: a()(x.Kk, x.ik) }),
+        icon: (0, l.jsx)(c.E, { size: "xs", color: "currentColor", className: a()(g.Kk, g.ik) }),
     };
 }
 function I(e) {
     let { className: n, icon: t, text: r, color: i } = e;
     return (0, l.jsxs)("div", {
-        className: a()(x.iE, n),
+        className: a()(g.iE, n),
         children: [
             t,
             (0, l.jsx)(d.E, { variant: "body-md/normal", color: i, scaleFontToUserSetting: !0, children: r }),
@@ -52,11 +52,11 @@ let y = r.memo(function (e) {
         c = (function (e, n) {
             switch ((0, f.fK)(n, e)) {
                 case f.h0.SENDING:
-                    return v(g.intl.string(g.t.RiLfBY));
+                    return v(x.intl.string(x.t.RiLfBY));
                 case f.h0.CREATED:
-                    return v(g.intl.formatToPlainString(g.t["7ePV4t"], { applicationName: n.author.username }));
+                    return v(x.intl.formatToPlainString(x.t["7ePV4t"], { applicationName: n.author.username }));
                 case f.h0.TIMED_OUT:
-                    return j(g.intl.string(g.t.h8hzPd));
+                    return j(x.intl.string(x.t.h8hzPd));
                 case f.h0.FAILED:
                     return j(n.interactionError);
             }
@@ -66,7 +66,7 @@ let y = r.memo(function (e) {
         null != e && (c = j(e));
     }
     if (null == c) return null;
-    let { text: d, icon: x, color: y } = c;
-    return (0, l.jsx)(I, { icon: x, text: d, className: t, color: y });
+    let { text: d, icon: g, color: y } = c;
+    return (0, l.jsx)(I, { icon: g, text: d, className: t, color: y });
 });
 t.d(n, {}, { Ay: y, PS: j, S0: I });

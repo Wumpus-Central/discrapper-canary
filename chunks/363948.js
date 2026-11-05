@@ -11,8 +11,8 @@ r.d(
         f: function (e) {
             let { onMoveStart: t, onMove: r, onMoveEnd: u } = e,
                 c = (0, l.useRef)({ didMove: !1, lastPosition: null, id: null }),
-                { addGlobalListener: f, removeGlobalListener: p } = (0, s.A)(),
-                d = (0, l.useCallback)(
+                { addGlobalListener: f, removeGlobalListener: d } = (0, s.A)(),
+                p = (0, l.useCallback)(
                     (e, n, i, o) => {
                         (0 !== i || 0 !== o) &&
                             (c.current.didMove ||
@@ -38,7 +38,7 @@ r.d(
                     },
                     [t, r, c],
                 ),
-                h = (0, a.J)(d),
+                h = (0, a.J)(p),
                 m = (0, l.useCallback)(
                     (e, t) => {
                         ((0, n.E)(),
@@ -79,9 +79,9 @@ r.d(
                                     let t = e.pointerType || "mouse";
                                     (v(e, t), (c.current.id = null));
                                     let a = (0, o.mD)((0, i.wt)(e));
-                                    (p(a, "pointermove", r, !1),
-                                        p(a, "pointerup", n, !1),
-                                        p(a, "pointercancel", n, !1));
+                                    (d(a, "pointermove", r, !1),
+                                        d(a, "pointerup", n, !1),
+                                        d(a, "pointercancel", n, !1));
                                 }
                             };
                         e.onPointerDown = (e) => {
@@ -121,7 +121,7 @@ r.d(
                         }),
                         e
                     );
-                }, [f, p, c]),
+                }, [f, d, c]),
             };
         },
     },

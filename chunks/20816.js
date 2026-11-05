@@ -70,9 +70,9 @@ function s() {
             for (u = 1, l = Array(f - 1); u < f; u++) l[u - 1] = arguments[u];
             c.fn.apply(c.context, l);
         } else {
-            var p,
-                d = c.length;
-            for (u = 0; u < d; u++)
+            var d,
+                p = c.length;
+            for (u = 0; u < p; u++)
                 switch ((c[u].once && this.removeListener(e, c[u].fn, void 0, !0), f)) {
                     case 1:
                         c[u].fn.call(c[u].context);
@@ -87,7 +87,7 @@ function s() {
                         c[u].fn.call(c[u].context, t, n, i);
                         break;
                     default:
-                        if (!l) for (p = 1, l = Array(f - 1); p < f; p++) l[p - 1] = arguments[p];
+                        if (!l) for (d = 1, l = Array(f - 1); d < f; d++) l[d - 1] = arguments[d];
                         c[u].fn.apply(c[u].context, l);
                 }
         }

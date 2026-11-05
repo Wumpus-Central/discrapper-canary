@@ -7,7 +7,7 @@ let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
         "function" == typeof n.useId
             ? function (e) {
                   let t = n.useId(),
-                      [r] = (0, n.useState)(p()),
+                      [r] = (0, n.useState)(d()),
                       o = r ? "react-aria" : `react-aria${i.prefix}`;
                   return e || `${o}-${t}`;
               }
@@ -41,7 +41,7 @@ function c() {
 function f(e) {
     return () => {};
 }
-function p() {
+function d() {
     return "function" == typeof n.useSyncExternalStore ? n.useSyncExternalStore(f, u, c) : (0, n.useContext)(a);
 }
-r.d(t, {}, { Cc: l, wR: p });
+r.d(t, {}, { Cc: l, wR: d });

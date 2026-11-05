@@ -1,7 +1,7 @@
 var n = r(721207),
-    o = r(582128),
-    a = r(655972),
-    i = r.n(a),
+    a = r(582128),
+    o = r(655972),
+    i = r.n(o),
     s = r(830845),
     l = r(258635),
     c = r(542113),
@@ -10,16 +10,16 @@ var n = r(721207),
 (r(53635), r(725664), r(833871));
 var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : void 0 !== r.g ? r.g : {},
     d =
-        o.createContext ||
+        a.createContext ||
         function (e, t) {
             var r,
-                a,
+                o,
                 s = "__create-react-context-" + (f.__global_unique_id__ = (f.__global_unique_id__ || 0) + 1) + "__",
                 l = (function (e) {
                     function r() {
-                        for (var t, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
+                        for (var t, r, n, a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
                         return (
-                            (r = (t = e.call.apply(e, [this].concat(a)) || this).props.value),
+                            (r = (t = e.call.apply(e, [this].concat(o)) || this).props.value),
                             (n = []),
                             (t.emitter = {
                                 on: function (e) {
@@ -44,33 +44,33 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
                         );
                     }
                     (0, n.A)(r, e);
-                    var o = r.prototype;
+                    var a = r.prototype;
                     return (
-                        (o.getChildContext = function () {
+                        (a.getChildContext = function () {
                             var e;
                             return (((e = {})[s] = this.emitter), e);
                         }),
-                        (o.componentWillReceiveProps = function (e) {
+                        (a.componentWillReceiveProps = function (e) {
                             if (this.props.value !== e.value) {
                                 var r,
                                     n = this.props.value,
-                                    o = e.value;
-                                (n === o ? 0 !== n || 1 / n == 1 / o : n != n && o != o)
+                                    a = e.value;
+                                (n === a ? 0 !== n || 1 / n == 1 / a : n != n && a != a)
                                     ? (r = 0)
-                                    : 0 != (r = ("function" == typeof t ? t(n, o) : 0x3fffffff) | 0) &&
+                                    : 0 != (r = ("function" == typeof t ? t(n, a) : 0x3fffffff) | 0) &&
                                       this.emitter.set(e.value, r);
                             }
                         }),
-                        (o.render = function () {
+                        (a.render = function () {
                             return this.props.children;
                         }),
                         r
                     );
-                })(o.Component);
+                })(a.Component);
             (((r = {})[s] = i().object.isRequired), (l.childContextTypes = r));
             var c = (function (t) {
                 function r() {
-                    for (var e, r = arguments.length, n = Array(r), o = 0; o < r; o++) n[o] = arguments[o];
+                    for (var e, r = arguments.length, n = Array(r), a = 0; a < r; a++) n[a] = arguments[a];
                     return (
                         ((e = t.call.apply(t, [this].concat(n)) || this).observedBits = void 0),
                         (e.state = { value: e.getValue() }),
@@ -81,38 +81,38 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
                     );
                 }
                 (0, n.A)(r, t);
-                var o = r.prototype;
+                var a = r.prototype;
                 return (
-                    (o.componentWillReceiveProps = function (e) {
+                    (a.componentWillReceiveProps = function (e) {
                         var t = e.observedBits;
                         this.observedBits = null == t ? 0x3fffffff : t;
                     }),
-                    (o.componentDidMount = function () {
+                    (a.componentDidMount = function () {
                         this.context[s] && this.context[s].on(this.onUpdate);
                         var e = this.props.observedBits;
                         this.observedBits = null == e ? 0x3fffffff : e;
                     }),
-                    (o.componentWillUnmount = function () {
+                    (a.componentWillUnmount = function () {
                         this.context[s] && this.context[s].off(this.onUpdate);
                     }),
-                    (o.getValue = function () {
+                    (a.getValue = function () {
                         return this.context[s] ? this.context[s].get() : e;
                     }),
-                    (o.render = function () {
+                    (a.render = function () {
                         var e;
                         return (Array.isArray((e = this.props.children)) ? e[0] : e)(this.state.value);
                     }),
                     r
                 );
-            })(o.Component);
-            return (((a = {})[s] = i().object), (c.contextTypes = a), { Provider: l, Consumer: c });
+            })(a.Component);
+            return (((o = {})[s] = i().object), (c.contextTypes = o), { Provider: l, Consumer: c });
         },
     p = function (e) {
         var t = d();
         return ((t.displayName = e), t);
     },
-    g = p("Router-History"),
-    m = p("Router"),
+    m = p("Router-History"),
+    g = p("Router"),
     b = (function (e) {
         function t(t) {
             var r;
@@ -147,8 +147,8 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
                 this.unlisten && (this.unlisten(), (this._isMounted = !1), (this._pendingLocation = null));
             }),
             (r.render = function () {
-                return o.createElement(
-                    m.Provider,
+                return a.createElement(
+                    g.Provider,
                     {
                         value: {
                             history: this.props.history,
@@ -157,14 +157,14 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
                             staticContext: this.props.staticContext,
                         },
                     },
-                    o.createElement(g.Provider, { children: this.props.children || null, value: this.props.history }),
+                    a.createElement(m.Provider, { children: this.props.children || null, value: this.props.history }),
                 );
             }),
             t
         );
-    })(o.Component);
-o.Component;
-var _ = (function (e) {
+    })(a.Component);
+a.Component;
+var y = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -185,8 +185,8 @@ var _ = (function (e) {
             }),
             t
         );
-    })(o.Component),
-    y = {},
+    })(a.Component),
+    _ = {},
     w = 0;
 function v(e, t) {
     return (
@@ -195,9 +195,9 @@ function v(e, t) {
         "/" === e
             ? e
             : (function (e) {
-                  if (y[e]) return y[e];
+                  if (_[e]) return _[e];
                   var t = h().compile(e);
-                  return (w < 1e4 && ((y[e] = t), w++), t);
+                  return (w < 1e4 && ((_[e] = t), w++), t);
               })(e)(t, { pretty: !0 })
     );
 }
@@ -207,8 +207,8 @@ function C(e, t) {
     (void 0 === t && (t = {}), ("string" == typeof t || Array.isArray(t)) && (t = { path: t }));
     var r = t,
         n = r.path,
-        o = r.exact,
-        a = void 0 !== o && o,
+        a = r.exact,
+        o = void 0 !== a && a,
         i = r.strict,
         s = void 0 !== i && i,
         l = r.sensitive,
@@ -220,18 +220,18 @@ function C(e, t) {
                 var r = "" + t.end + t.strict + t.sensitive,
                     n = M[r] || (M[r] = {});
                 if (n[e]) return n[e];
-                var o = [],
-                    a = { regexp: h()(e, o, t), keys: o };
-                return (x < 1e4 && ((n[e] = a), x++), a);
-            })(r, { end: a, strict: s, sensitive: c }),
-            o = n.regexp,
+                var a = [],
+                    o = { regexp: h()(e, a, t), keys: a };
+                return (x < 1e4 && ((n[e] = o), x++), o);
+            })(r, { end: o, strict: s, sensitive: c }),
+            a = n.regexp,
             i = n.keys,
-            l = o.exec(e);
+            l = a.exec(e);
         if (!l) return null;
         var u = l[0],
             f = l.slice(1),
             d = e === u;
-        return a && !d
+        return o && !d
             ? null
             : {
                   path: r,
@@ -251,20 +251,20 @@ var R = (function (e) {
         (0, n.A)(t, e),
         (t.prototype.render = function () {
             var e = this;
-            return o.createElement(m.Consumer, null, function (t) {
+            return a.createElement(g.Consumer, null, function (t) {
                 t || (0, l.A)(!1);
                 var r,
                     n = e.props.location || t.location,
-                    a = e.props.computedMatch ? e.props.computedMatch : e.props.path ? C(n.pathname, e.props) : t.match,
-                    i = (0, c.A)({}, t, { location: n, match: a }),
+                    o = e.props.computedMatch ? e.props.computedMatch : e.props.path ? C(n.pathname, e.props) : t.match,
+                    i = (0, c.A)({}, t, { location: n, match: o }),
                     s = e.props,
                     u = s.children,
                     h = s.component,
                     f = s.render;
                 return (
-                    Array.isArray(u) && ((r = u), 0 === o.Children.count(r)) && (u = null),
-                    o.createElement(
-                        m.Provider,
+                    Array.isArray(u) && ((r = u), 0 === a.Children.count(r)) && (u = null),
+                    a.createElement(
+                        g.Provider,
                         { value: i },
                         i.match
                             ? u
@@ -272,7 +272,7 @@ var R = (function (e) {
                                     ? u(i)
                                     : u
                                 : h
-                                  ? o.createElement(h, i)
+                                  ? a.createElement(h, i)
                                   : f
                                     ? f(i)
                                     : null
@@ -285,9 +285,9 @@ var R = (function (e) {
         }),
         t
     );
-})(o.Component);
-o.Component;
-var S = (function (e) {
+})(a.Component);
+a.Component;
+var E = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -295,29 +295,29 @@ var S = (function (e) {
             (0, n.A)(t, e),
             (t.prototype.render = function () {
                 var e = this;
-                return o.createElement(m.Consumer, null, function (t) {
+                return a.createElement(g.Consumer, null, function (t) {
                     t || (0, l.A)(!1);
                     var r,
                         n,
-                        a = e.props.location || t.location;
+                        o = e.props.location || t.location;
                     return (
-                        o.Children.forEach(e.props.children, function (e) {
-                            if (null == n && o.isValidElement(e)) {
+                        a.Children.forEach(e.props.children, function (e) {
+                            if (null == n && a.isValidElement(e)) {
                                 r = e;
                                 var i = e.props.path || e.props.from;
-                                n = i ? C(a.pathname, (0, c.A)({}, e.props, { path: i })) : t.match;
+                                n = i ? C(o.pathname, (0, c.A)({}, e.props, { path: i })) : t.match;
                             }
                         }),
-                        n ? o.cloneElement(r, { location: a, computedMatch: n }) : null
+                        n ? a.cloneElement(r, { location: o, computedMatch: n }) : null
                     );
                 });
             }),
             t
         );
-    })(o.Component),
-    E = o.useContext;
+    })(a.Component),
+    S = a.useContext;
 function A() {
-    return E(m).location;
+    return S(g).location;
 }
 r.d(
     t,
@@ -327,16 +327,16 @@ r.d(
         Ix: b,
         W5: function (e) {
             var t = A(),
-                r = E(m).match;
+                r = S(g).match;
             return e ? C(t.pathname, e) : r;
         },
         W6: function () {
-            return E(g);
+            return S(m);
         },
-        XZ: m,
-        dO: S,
+        XZ: g,
+        dO: E,
         g: function () {
-            var e = E(m).match;
+            var e = S(g).match;
             return e ? e.params : {};
         },
         qh: R,
@@ -344,12 +344,12 @@ r.d(
             var t = e.computedMatch,
                 r = e.to,
                 n = e.push,
-                a = void 0 !== n && n;
-            return o.createElement(m.Consumer, null, function (e) {
+                o = void 0 !== n && n;
+            return a.createElement(g.Consumer, null, function (e) {
                 e || (0, l.A)(!1);
                 var n = e.history,
                     i = e.staticContext,
-                    u = a ? n.push : n.replace,
+                    u = o ? n.push : n.replace,
                     h = (0, s.yJ)(
                         t
                             ? "string" == typeof r
@@ -359,7 +359,7 @@ r.d(
                     );
                 return i
                     ? (u(h), null)
-                    : o.createElement(_, {
+                    : a.createElement(y, {
                           onMount: function () {
                               u(h);
                           },

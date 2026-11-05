@@ -1,4 +1,4 @@
-r.d(t, { pM: () => k, GQ: () => v, yq: () => S, KU: () => _ });
+r.d(t, { pM: () => C, GQ: () => v, yq: () => S, KU: () => _ });
 var n = r(959681);
 class i {
     constructor(e) {
@@ -291,31 +291,31 @@ var s = r(230240),
     u = r(805206),
     c = r(922446),
     f = r(333007),
-    p = r(582128),
-    d = r(937787);
-let h = (0, p.createContext)(!1),
-    m = (0, p.createContext)(null);
+    d = r(582128),
+    p = r(937787);
+let h = (0, d.createContext)(!1),
+    m = (0, d.createContext)(null);
 function v(e) {
-    if ((0, p.useContext)(m)) return e.content;
+    if ((0, d.useContext)(m)) return e.content;
     let { collection: t, document: r } = (function (e) {
-        let [t] = (0, p.useState)(() => new a(e?.() || new (0, n.Wk)()));
+        let [t] = (0, d.useState)(() => new a(e?.() || new (0, n.Wk)()));
         return {
             collection: g(
-                (0, p.useCallback)((e) => t.subscribe(e), [t]),
-                (0, p.useCallback)(() => {
+                (0, d.useCallback)((e) => t.subscribe(e), [t]),
+                (0, d.useCallback)(() => {
                     let e = t.getCollection();
                     return (t.isSSR && t.resetAfterSSR(), e);
                 }, [t]),
-                (0, p.useCallback)(() => ((t.isSSR = !0), t.getCollection()), [t]),
+                (0, d.useCallback)(() => ((t.isSSR = !0), t.getCollection()), [t]),
             ),
             document: t,
         };
     })(e.createCollection);
-    return p.createElement(
-        p.Fragment,
+    return d.createElement(
+        d.Fragment,
         null,
-        p.createElement(u.jZ, null, p.createElement(m.Provider, { value: r }, e.content)),
-        p.createElement(y, { render: e.children, collection: t }),
+        d.createElement(u.jZ, null, d.createElement(m.Provider, { value: r }, e.content)),
+        d.createElement(y, { render: e.children, collection: t }),
     );
 }
 function y(e) {
@@ -323,16 +323,16 @@ function y(e) {
     return r(t);
 }
 let g =
-        "function" == typeof p.useSyncExternalStore
-            ? p.useSyncExternalStore
+        "function" == typeof d.useSyncExternalStore
+            ? d.useSyncExternalStore
             : function (e, t, r) {
                   let n = (0, c.wR)(),
-                      i = (0, p.useRef)(n);
+                      i = (0, d.useRef)(n);
                   i.current = n;
-                  let o = (0, p.useCallback)(() => (i.current ? r() : t()), [t, r]);
-                  return (0, d.useSyncExternalStore)(e, o);
+                  let o = (0, d.useCallback)(() => (i.current ? r() : t()), [t, r]);
+                  return (0, p.useSyncExternalStore)(e, o);
               },
-    b = (0, p.createContext)(null);
+    b = (0, d.createContext)(null);
 function w(e, t, r, i, o, a) {
     "string" == typeof e &&
         (e = (function (e) {
@@ -340,13 +340,13 @@ function w(e, t, r, i, o, a) {
                 static #l = (this.type = e);
             };
         })(e));
-    let s = (0, p.useCallback)(
+    let s = (0, d.useCallback)(
             (n) => {
                 n?.setProps(t, r, e, i, a);
             },
             [t, r, i, a, e],
         ),
-        l = (0, p.useContext)(b);
+        l = (0, d.useContext)(b);
     if (l) {
         let n = l.ownerDocument.nodesByProps.get(t);
         return (
@@ -355,24 +355,24 @@ function w(e, t, r, i, o, a) {
                 l.appendChild(n),
                 l.ownerDocument.updateCollection(),
                 l.ownerDocument.nodesByProps.set(t, n)),
-            o ? p.createElement(b.Provider, { value: n }, o) : null
+            o ? d.createElement(b.Provider, { value: n }, o) : null
         );
     }
-    return p.createElement(e.type, { ref: s }, o);
+    return d.createElement(e.type, { ref: s }, o);
 }
 function _(e, t) {
     let r = (e) => {
             let { node: r } = e;
             return t(r.props, r.props.ref, r);
         },
-        n = (0, p.forwardRef)((n, i) => {
-            let o = (0, p.useContext)(l.gY);
-            if (!(0, p.useContext)(h)) {
+        n = (0, d.forwardRef)((n, i) => {
+            let o = (0, d.useContext)(l.gY);
+            if (!(0, d.useContext)(h)) {
                 if (t.length >= 3) throw Error(t.name + " cannot be rendered outside a collection.");
                 return t(n, i);
             }
             return w(e, n, i, "children" in n ? n.children : null, null, (e) =>
-                p.createElement(l.gY.Provider, { value: o }, p.createElement(r, { node: e })),
+                d.createElement(l.gY.Provider, { value: o }, d.createElement(r, { node: e })),
             );
         });
     return ((n.displayName = t.name), n);
@@ -383,33 +383,33 @@ function S(e, t) {
             let { node: r } = e;
             return t(r.props, r.props.ref, r);
         },
-        i = (0, p.forwardRef)((t, i) => {
+        i = (0, d.forwardRef)((t, i) => {
             let o = r(t);
-            return w(e, t, i, null, o, (e) => p.createElement(n, { node: e })) ?? p.createElement(p.Fragment, null);
+            return w(e, t, i, null, o, (e) => d.createElement(n, { node: e })) ?? d.createElement(d.Fragment, null);
         });
     return ((i.displayName = t.name), i);
 }
 function E(e) {
     return (0, s.p)({ ...e, addIdAndValue: !0 });
 }
-let x = (0, p.createContext)(null);
-function k(e) {
-    let t = (0, p.useContext)(x),
+let x = (0, d.createContext)(null);
+function C(e) {
+    let t = (0, d.useContext)(x),
         r = (t?.dependencies || []).concat(e.dependencies),
         n = e.idScope ?? t?.idScope,
         i = E({ ...e, idScope: n, dependencies: r });
     return (
-        (0, p.useContext)(m) && (i = p.createElement(C, null, i)),
-        (t = (0, p.useMemo)(() => ({ dependencies: r, idScope: n }), [n, ...r])),
-        p.createElement(x.Provider, { value: t }, i)
+        (0, d.useContext)(m) && (i = d.createElement(k, null, i)),
+        (t = (0, d.useMemo)(() => ({ dependencies: r, idScope: n }), [n, ...r])),
+        d.createElement(x.Provider, { value: t }, i)
     );
 }
-function C(e) {
+function k(e) {
     let { children: t } = e,
-        r = (0, p.useContext)(m),
-        n = (0, p.useMemo)(
-            () => p.createElement(m.Provider, { value: null }, p.createElement(h.Provider, { value: !0 }, t)),
+        r = (0, d.useContext)(m),
+        n = (0, d.useMemo)(
+            () => d.createElement(m.Provider, { value: null }, d.createElement(h.Provider, { value: !0 }, t)),
             [t],
         );
-    return (0, c.wR)() ? p.createElement(b.Provider, { value: r }, n) : (0, f.createPortal)(n, r);
+    return (0, c.wR)() ? d.createElement(b.Provider, { value: r }, n) : (0, f.createPortal)(n, r);
 }

@@ -25,8 +25,8 @@ function a(e) {
         nodes: u,
         locales: c,
         values: f,
-        dataFormatters: p,
-        formatConfig: d,
+        dataFormatters: d,
+        formatConfig: p,
         currentPluralValue: h,
         keyPrefix: m,
     } = e;
@@ -40,7 +40,7 @@ function a(e) {
         let y = v[0];
         if (y === i.FormatJsNodeType.Pound) {
             if ("number" == typeof h) {
-                let e = p.formatNumber(h);
+                let e = d.formatNumber(h);
                 r.pushLiteralText(e);
             }
             continue;
@@ -54,26 +54,26 @@ function a(e) {
                 break;
             case i.FormatJsNodeType.Date: {
                 let e = v[2],
-                    t = e in d.date ? d.date[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
-                r.pushLiteralText(p.formatDate(b, t));
+                    t = e in p.date ? p.date[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
+                r.pushLiteralText(d.formatDate(b, t));
                 break;
             }
             case i.FormatJsNodeType.Time: {
                 let e = v[2],
-                    t = e in d.time ? d.time[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
-                r.pushLiteralText(p.formatTime(b, t));
+                    t = e in p.time ? p.time[e] : null != e ? (0, n.parseDateTimeSkeleton)(e) : void 0;
+                r.pushLiteralText(d.formatTime(b, t));
                 break;
             }
             case i.FormatJsNodeType.Number: {
                 let e = v[2],
                     i =
-                        e in d.number
-                            ? d.number[e]
+                        e in p.number
+                            ? p.number[e]
                             : null != e
                               ? (0, n.parseNumberSkeleton)((0, n.parseNumberSkeletonFromString)(e))
                               : void 0,
                     o = "number" != typeof b ? b : b * (null != (t = null == i ? void 0 : i.scale) ? t : 1);
-                r.pushLiteralText(p.formatNumber(o, i));
+                r.pushLiteralText(d.formatNumber(o, i));
                 break;
             }
             case i.FormatJsNodeType.Tag: {
@@ -83,8 +83,8 @@ function a(e) {
                         Builder: r.constructor,
                         nodes: t,
                         locales: c,
-                        dataFormatters: p,
-                        formatConfig: d,
+                        dataFormatters: d,
+                        formatConfig: p,
                         values: f,
                         currentPluralValue: h,
                         keyPrefix: `${m}.${e}`,
@@ -95,8 +95,8 @@ function a(e) {
                                   Builder: r.constructor,
                                   nodes: n,
                                   locales: c,
-                                  dataFormatters: p,
-                                  formatConfig: d,
+                                  dataFormatters: d,
+                                  formatConfig: p,
                                   values: f,
                                   currentPluralValue: h,
                                   keyPrefix: `${m}.${e}-control`,
@@ -121,8 +121,8 @@ function a(e) {
                     builder: r,
                     nodes: n,
                     locales: c,
-                    dataFormatters: p,
-                    formatConfig: d,
+                    dataFormatters: d,
+                    formatConfig: p,
                     values: f,
                     keyPrefix: `${m}.${e}`,
                 });
@@ -137,7 +137,7 @@ function a(e) {
                         let r = `=${b}`;
                         return r in t
                             ? t[r]
-                            : null != (e = t[p.getPluralRules({ type: i }).select(b - (null != n ? n : 0))])
+                            : null != (e = t[d.getPluralRules({ type: i }).select(b - (null != n ? n : 0))])
                               ? e
                               : t.other;
                     })();
@@ -147,8 +147,8 @@ function a(e) {
                     builder: r,
                     nodes: o,
                     locales: c,
-                    dataFormatters: p,
-                    formatConfig: d,
+                    dataFormatters: d,
+                    formatConfig: p,
                     values: f,
                     currentPluralValue: b - (null != n ? n : 0),
                     keyPrefix: `${m}.${e}`,

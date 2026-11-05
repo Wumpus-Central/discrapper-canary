@@ -32,8 +32,8 @@ e.exports = function (e) {
         })),
         s.prototype)
     ) {
-        var p = function () {};
-        ((p.prototype = s.prototype), (a.prototype = new p()), (p.prototype = null));
+        var d = function () {};
+        ((d.prototype = s.prototype), (a.prototype = new d()), (d.prototype = null));
     }
     return a;
 };

@@ -45,8 +45,8 @@ r.d(
     {
         $: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                { labelable: r, isLink: u, global: c, events: f = c, propNames: p } = t,
-                d = {};
+                { labelable: r, isLink: u, global: c, events: f = c, propNames: d } = t,
+                p = {};
             for (let t in e)
                 Object.prototype.hasOwnProperty.call(e, t) &&
                     (n.has(t) ||
@@ -54,10 +54,10 @@ r.d(
                         (u && o.has(t)) ||
                         (c && a.has(t)) ||
                         (f && (s.has(t) || (t.endsWith("Capture") && s.has(t.slice(0, -7))))) ||
-                        p?.has(t) ||
+                        d?.has(t) ||
                         l.test(t)) &&
-                    (d[t] = e[t]);
-            return d;
+                    (p[t] = e[t]);
+            return p;
         },
     },
 );

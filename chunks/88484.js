@@ -1,4 +1,4 @@
-t.d(n, { Ay: () => y, Wz: () => j, $J: () => I, p3: () => x, ld: () => v });
+t.d(n, { Ay: () => y, Wz: () => j, $J: () => I, p3: () => g, ld: () => v });
 var l = t(477900),
     r = t(582128),
     i = t(146849),
@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(594808),
     f = t(652215),
     p = t(792996),
-    g = t(910379);
-function x(e) {
+    x = t(910379);
+function g(e) {
     let {
         hideSimpleEmbedContent: n = !0,
         formatInline: t = !1,
@@ -59,7 +59,7 @@ function I(e) {
         return { content: (0, l.jsx)(m.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
     if (e.type === f.lAJ.CHANGELOG) {
         let { renderChangelogMessageMarkup: n } = t(550997);
-        return n(e, g, {
+        return n(e, x, {
             track: (e, n) => {
                 u.default.track(e, n);
             },
@@ -69,12 +69,12 @@ function I(e) {
 }
 function y(e) {
     let { message: n, options: t, parsed: i } = e,
-        u = x(t),
+        u = g(t),
         c = v(u, "MessageRenderedContent"),
         h = n.id,
         m = n.channel_id,
         p = (0, s.U)(n),
-        g = n.author?.id,
+        x = n.author?.id,
         { viewingChannelId: y, formatInline: A, noStyleAndInteraction: C } = u,
         k = r.useMemo(
             () => ({
@@ -82,11 +82,11 @@ function y(e) {
                 channelId: m,
                 viewingChannelId: y,
                 guildId: p,
-                authorId: g,
+                authorId: x,
                 formatInline: A,
                 noStyleAndInteraction: C,
             }),
-            [h, m, y, p, g, A, C],
+            [h, m, y, p, x, A, C],
         );
     return r.useMemo(() => {
         let e = I(n);

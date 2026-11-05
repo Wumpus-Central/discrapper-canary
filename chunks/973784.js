@@ -12,17 +12,17 @@ e.exports = function (e, t, r, n) {
         var u,
             c,
             f,
-            p,
-            d = e[l].replace(o, "%20"),
-            h = d.indexOf(r);
-        (h >= 0 ? ((u = d.substr(0, h)), (c = d.substr(h + 1))) : ((u = d), (c = "")),
+            d,
+            p = e[l].replace(o, "%20"),
+            h = p.indexOf(r);
+        (h >= 0 ? ((u = p.substr(0, h)), (c = p.substr(h + 1))) : ((u = p), (c = "")),
         (f = decodeURIComponent(u)),
-        (p = decodeURIComponent(c)),
+        (d = decodeURIComponent(c)),
         Object.prototype.hasOwnProperty.call(i, f))
             ? Array.isArray(i[f])
-                ? i[f].push(p)
-                : (i[f] = [i[f], p])
-            : (i[f] = p);
+                ? i[f].push(d)
+                : (i[f] = [i[f], d])
+            : (i[f] = d);
     }
     return i;
 };

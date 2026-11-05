@@ -10,10 +10,10 @@ var i = r(675106),
     u = r(582128),
     c = r(209801),
     f = Symbol.for("Animated:node"),
-    p = function (e) {
+    d = function (e) {
         return !!e && e[f] === e;
     },
-    d = function (e, t) {
+    p = function (e, t) {
         return i.defineHidden(e, f, t);
     },
     h = function (e) {
@@ -21,7 +21,7 @@ var i = r(675106),
     },
     m = (function () {
         function e() {
-            ((this.payload = void 0), d(this, this));
+            ((this.payload = void 0), p(this, this));
         }
         return (
             (e.prototype.getPayload = function () {
@@ -127,7 +127,7 @@ var i = r(675106),
                 var t = {};
                 return (
                     i.each(this.source, function (r, n) {
-                        if (p(r)) t[n] = r.getValue(e);
+                        if (d(r)) t[n] = r.getValue(e);
                         else {
                             var o = i.getFluidConfig(r);
                             o ? (t[n] = o.get()) : e || (t[n] = r);
@@ -243,16 +243,16 @@ var i = r(675106),
                     var e = o.current;
                     (!a || e) && !1 === (!!e && t.applyAnimatedValues(e, f.getValue(!0))) && l();
                 }),
-                p = new Set();
+                d = new Set();
             return (
-                f.setValue(r, { dependencies: p, host: t }),
+                f.setValue(r, { dependencies: d, host: t }),
                 c.useLayoutEffect(function () {
                     return (
-                        i.each(p, function (e) {
+                        i.each(d, function (e) {
                             return e.addChild(f);
                         }),
                         function () {
-                            return i.each(p, function (e) {
+                            return i.each(d, function (e) {
                                 return e.removeChild(f);
                             });
                         }
@@ -325,5 +325,5 @@ var i = r(675106),
         return e && e[f];
     }),
     (t.getPayload = h),
-    (t.isAnimated = p),
-    (t.setAnimated = d));
+    (t.isAnimated = d),
+    (t.setAnimated = p));

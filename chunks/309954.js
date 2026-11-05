@@ -10,7 +10,7 @@ r.d(
             let {
                 balance: t,
                 isFetching: r,
-                error: d,
+                error: c,
             } = (0, l.cf)([i.A], () => ({
                 balance: i.A.balance,
                 isFetching: i.A.isFetchingBalance,
@@ -18,9 +18,9 @@ r.d(
             }));
             return (
                 (0, n.useEffect)(() => {
-                    e?.disableFetch || null !== t || null !== d || i.A.isFetchingBalance || (0, a.Bf)();
-                }, [t, d, e?.disableFetch]),
-                { balance: t, isFetching: r, error: d }
+                    e?.disableFetch || null !== t || null !== c || i.A.isFetchingBalance || (0, a.Bf)();
+                }, [t, c, e?.disableFetch]),
+                { balance: t, isFetching: r, error: c }
             );
         },
     },

@@ -117,16 +117,16 @@ var f = r(965413);
             return f.MessageLoader;
         },
     }));
-var p = r(146750);
+var d = r(146750);
 (Object.defineProperty(t, "chainMessagesObjects", {
     enumerable: !0,
     get: function () {
-        return p.chainMessagesObjects;
+        return d.chainMessagesObjects;
     },
 }),
     Object.defineProperty(t, "makeMessagesProxy", {
         enumerable: !0,
         get: function () {
-            return p.makeMessagesProxy;
+            return d.makeMessagesProxy;
         },
     }));

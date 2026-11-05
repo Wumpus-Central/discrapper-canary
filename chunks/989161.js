@@ -739,8 +739,8 @@ function e6(e) {
         ],
     });
 }
-var e9 = n(709372),
-    e7 = n(984680);
+var e7 = n(709372),
+    e9 = n(984680);
 let e4 = i.memo(function (e) {
     var t;
     let { channelId: n } = e,
@@ -748,7 +748,7 @@ let e4 = i.memo(function (e) {
     i.useEffect(() => {
         r.current?.focus();
     }, []);
-    let a = (0, e9.om)(n),
+    let a = (0, e7.om)(n),
         o = a?.phase === "recording",
         u = a?.phase === "recorded";
     i.useEffect(() => {
@@ -815,14 +815,14 @@ let e4 = i.memo(function (e) {
         T = S ? x : f,
         j = S && null == T;
     return (0, l.jsxs)("div", {
-        className: e7.M0,
+        className: e9.M0,
         role: "group",
         "aria-label": k.intl.string(k.t.lwy6aX),
         children: [
             null != T
                 ? (0, l.jsx)(e6, { playback: T, durationSecs: a.recordedDurationSecs ?? 0, animateWaveformEntrance: S })
                 : (0, l.jsxs)("div", {
-                      className: e7.Fg,
+                      className: e9.Fg,
                       children: [
                           o
                               ? (0, l.jsx)(Y.m, {
@@ -841,19 +841,19 @@ let e4 = i.memo(function (e) {
                               : null,
                           (0, l.jsx)(eZ, {
                               channelId: n,
-                              className: e7.ou,
+                              className: e9.ou,
                               recording: o,
                               reducedMotion: d,
                               collapsing: j,
                               onCollapseComplete: C,
                           }),
                           (0, l.jsxs)("div", {
-                              className: e7.RE,
+                              className: e9.RE,
                               children: [
-                                  (0, l.jsx)("div", { className: s()(e7.Zz, { [e7.Py]: !o }), "aria-hidden": !0 }),
+                                  (0, l.jsx)("div", { className: s()(e9.Zz, { [e9.Py]: !o }), "aria-hidden": !0 }),
                                   (0, l.jsx)(eF.E, {
                                       variant: "body-sm/normal",
-                                      className: s()(e7.O1, { [e7.w2]: h }),
+                                      className: s()(e9.O1, { [e9.w2]: h }),
                                       tabularNumbers: !0,
                                       children: (0, eH.rB)(v),
                                   }),
@@ -861,7 +861,7 @@ let e4 = i.memo(function (e) {
                           }),
                       ],
                   }),
-            (0, l.jsx)("div", { className: e7.yF, "aria-hidden": !0 }),
+            (0, l.jsx)("div", { className: e9.yF, "aria-hidden": !0 }),
             (0, l.jsx)(Y.m, {
                 text: k.intl.string(k.t.oyYWHE),
                 children: (0, l.jsx)("div", {
@@ -882,8 +882,8 @@ let e4 = i.memo(function (e) {
                     onKeyDown: I,
                     children: (0, l.jsx)(eK.A, {
                         ref: r,
-                        className: e7.jo,
-                        childClassName: s()(e7.Jp, { [e7.Tq]: !N }),
+                        className: e9.jo,
+                        childClassName: s()(e9.Jp, { [e9.Tq]: !N }),
                         onClick: N ? b : void 0,
                         disabled: !N,
                         noHover: !N,
@@ -892,7 +892,7 @@ let e4 = i.memo(function (e) {
                         children: (0, l.jsx)(eG.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: e7.AO,
+                            className: e9.AO,
                         }),
                     }),
                 }),
@@ -1364,7 +1364,7 @@ function t6(e) {
         }),
     });
 }
-function t9(e) {
+function t7(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, l.jsx)("div", { children: e }, t)),
         r = t.floating.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t));
@@ -1377,7 +1377,7 @@ function t9(e) {
               ],
           });
 }
-var t7 = n(4025),
+var t9 = n(4025),
     t4 = n(102077),
     ne = n(246049),
     nt = n(135261),
@@ -1859,7 +1859,7 @@ let nA = i.memo(function (e) {
             [D, k.commands?.enabled, eY],
         ),
         { submitting: e5, submit: e3, handleSubmit: e6 } = nc(B, k, eS, eb, T.id),
-        { autocompleteRef: e7, handleMaybeShowAutocomplete: tt, handleHideAutocomplete: tn } = ng(),
+        { autocompleteRef: e9, handleMaybeShowAutocomplete: tt, handleHideAutocomplete: tn } = ng(),
         tr = nd(e3, k, eS),
         ta = nh(eS),
         to = nm({ editorRef: eS, disabled: eF, textValue: r, channelId: T.id, chatInputType: k, submit: B }),
@@ -1889,20 +1889,20 @@ let nA = i.memo(function (e) {
             handleSpace: ty,
             handleMoveSelection: tS,
         } = ((t = i.useCallback(
-            () => !!(!e$ && eh.current?.onTabOrEnter(!1)) || e7.current?.onTabOrEnter(!1) || !1,
-            [e$, eh, e7],
+            () => !!(!e$ && eh.current?.onTabOrEnter(!1)) || e9.current?.onTabOrEnter(!1) || !1,
+            [e$, eh, e9],
         )),
         (n = i.useCallback(
-            () => !!(!e$ && eh.current?.onTabOrEnter(!0)) || e7.current?.onTabOrEnter(!0) || !1,
-            [e$, eh, e7],
+            () => !!(!e$ && eh.current?.onTabOrEnter(!0)) || e9.current?.onTabOrEnter(!0) || !1,
+            [e$, eh, e9],
         )),
         {
             handleTab: t,
             handleEnter: n,
-            handleSpace: i.useCallback(() => e7.current?.onSpace() || !1, [e7]),
+            handleSpace: i.useCallback(() => e9.current?.onSpace() || !1, [e9]),
             handleMoveSelection: i.useCallback(
-                (e) => !!(!e$ && eh.current?.onMoveSelection(e)) || e7.current?.onMoveSelection(e) || !1,
-                [e$, eh, e7],
+                (e) => !!(!e$ && eh.current?.onMoveSelection(e)) || e9.current?.onMoveSelection(e) || !1,
+                [e$, eh, e9],
             ),
         }),
         { expressionPickerView: tC, shouldHideExpressionPicker: tA, handleOuterClick: tb } = nS(k, eS, T.id),
@@ -2017,10 +2017,10 @@ let nA = i.memo(function (e) {
             selectedAutocompleteInputError: tv,
         }),
         tF = 0 === r.trim().length,
-        tG = null != (0, e9.om)(T.id);
+        tG = null != (0, e7.om)(T.id);
     i.useEffect(
         () => () => {
-            let e = (0, e9.Mk)(T.id);
+            let e = (0, e7.Mk)(T.id);
             e?.phase === "recording" ? (0, eq.yx)(T.id) : e?.phase === "requesting" && (0, eq.eT)(T.id);
         },
         [T.id],
@@ -2037,7 +2037,7 @@ let nA = i.memo(function (e) {
         t2 =
             null != M
                 ? M()
-                : (0, l.jsx)(t7.A, {
+                : (0, l.jsx)(t9.A, {
                       type: k,
                       disabled: eF,
                       channel: T,
@@ -2083,7 +2083,7 @@ let nA = i.memo(function (e) {
                             [e8.z3]: null != _,
                         }),
                         children: [
-                            tZ || tX ? null : (0, l.jsx)(t9, { bars: tW }),
+                            tZ || tX ? null : (0, l.jsx)(t7, { bars: tW }),
                             (0, l.jsxs)("div", {
                                 ref: eA,
                                 onScroll: tf,
@@ -2172,7 +2172,7 @@ let nA = i.memo(function (e) {
                             }),
                             e$ ? null : (0, l.jsx)(ed, { ref: eh, channel: T, canOnlyUseTextCommands: t_ }),
                             (0, l.jsx)(ef.A, {
-                                ref: e7,
+                                ref: e9,
                                 channel: T,
                                 canMentionRoles: H,
                                 canMentionChannels: z,

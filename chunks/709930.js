@@ -9,8 +9,8 @@ var l = "u" > typeof BigInt,
     u = "u" > typeof Symbol,
     c = s(Object.prototype.toString),
     f = s(Number.prototype.valueOf),
-    p = s(String.prototype.valueOf),
-    d = s(Boolean.prototype.valueOf);
+    d = s(String.prototype.valueOf),
+    p = s(Boolean.prototype.valueOf);
 if (l) var h = s(BigInt.prototype.valueOf);
 if (u) var m = s(Symbol.prototype.valueOf);
 function v(e, t) {
@@ -110,23 +110,23 @@ function x(e) {
     (t.isArrayBuffer = S),
     (E.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && E(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = x));
-var k = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-function C(e) {
+var C = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+function k(e) {
     return "[object SharedArrayBuffer]" === c(e);
 }
 function T(e) {
-    return void 0 !== k && (void 0 === C.working && (C.working = C(new k())), C.working ? C(e) : e instanceof k);
-}
-function M(e) {
-    return v(e, f);
+    return void 0 !== C && (void 0 === k.working && (k.working = k(new C())), k.working ? k(e) : e instanceof C);
 }
 function P(e) {
-    return v(e, p);
+    return v(e, f);
 }
 function A(e) {
     return v(e, d);
 }
 function I(e) {
+    return v(e, p);
+}
+function M(e) {
     return l && v(e, h);
 }
 function O(e) {
@@ -148,13 +148,13 @@ function O(e) {
     (t.isWebAssemblyCompiledModule = function (e) {
         return "[object WebAssembly.Module]" === c(e);
     }),
-    (t.isNumberObject = M),
-    (t.isStringObject = P),
-    (t.isBooleanObject = A),
-    (t.isBigIntObject = I),
+    (t.isNumberObject = P),
+    (t.isStringObject = A),
+    (t.isBooleanObject = I),
+    (t.isBigIntObject = M),
     (t.isSymbolObject = O),
     (t.isBoxedPrimitive = function (e) {
-        return M(e) || P(e) || A(e) || I(e) || O(e);
+        return P(e) || A(e) || I(e) || M(e) || O(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
         return "u" > typeof Uint8Array && (S(e) || T(e));
