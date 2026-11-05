@@ -85,7 +85,7 @@ function T(e) {
             null != t
                 ? (m.set(t.channel_id, t.id, { state: 0, message: (0, u.rh)(t) }),
                   e.type === A.lAJ.THREAD_STARTER_MESSAGE && T(t))
-                : m.set(e.channel_id, i, { state: 2 });
+                : m.set(n.channel_id, i, { state: 2 });
         } else {
             let e = E.A.getMessage(n.channel_id, i) ?? o.A.getMessage(n.channel_id, i) ?? d.A.getMessage(i);
             null != e ? m.set(n.channel_id, i, { state: 0, message: e }) : m.set(n.channel_id, i, h);
