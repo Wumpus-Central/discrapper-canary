@@ -20,8 +20,8 @@ var l = t(477900),
     T = t(558740),
     x = t(120700),
     I = t(822764),
-    _ = t(56763),
-    v = t(516106),
+    v = t(56763),
+    _ = t(516106),
     f = t(783327),
     R = t(705822),
     L = t(652215),
@@ -42,15 +42,15 @@ function O(e) {
         Z = n.useRef(null),
         {
             checkoutInvoicePreview: U,
-            checkoutPaymentSources: Y,
-            expressCheckoutLoading: B,
+            checkoutPaymentSources: B,
+            expressCheckoutLoading: Y,
             setExpressCheckoutStatus: G,
             markExpressCheckoutReady: K,
             shouldMountExpressCheckoutElement: F,
             setPurchaseError: W,
             contextMetadata: V,
             unifiedCheckoutFlow: X,
-        } = (0, v.t4)((e) => {
+        } = (0, _.t4)((e) => {
             let a = e.getExpressCheckoutVisibilityState();
             return {
                 checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -92,9 +92,10 @@ function O(e) {
                     ),
                     l = Error(t.error_message);
                 ((l.name = "ExpressCheckoutLoadError"),
-                    (0, M.pM)(l, { tags: { source: "express_checkout" }, extra: t }));
+                    (0, M.pM)(l, { tags: { source: "express_checkout" }, extra: t }),
+                    G(R.i.UNAVAILABLE));
             },
-            [z, X],
+            [z, X, G],
         ),
         q = null != g && null != E && null != U && F;
     n.useEffect(() => {
@@ -121,8 +122,8 @@ function O(e) {
         ),
         et = n.useCallback(() => {
             let e = L.current;
-            if (null == S || null == Y || null == U) return;
-            let a = Y.find((e) => e.id === S.id);
+            if (null == S || null == B || null == U) return;
+            let a = B.find((e) => e.id === S.id);
             if (null != a) {
                 if (w.current === S.id) return;
                 w.current = S.id;
@@ -150,7 +151,7 @@ function O(e) {
                           Q(!1))
                         : ea(S));
             }
-        }, [S, Y, U, ea, Q, z, X]),
+        }, [S, B, U, ea, Q, z, X]),
         el = n.useCallback(
             async (e, a) => {
                 let { stripe: t, elements: l, currentAmountDue: n } = a;
@@ -198,19 +199,13 @@ function O(e) {
             },
             [Q, O, ee, W, z],
         ),
-        en = n.useCallback(
-            (e) => {
-                ((L.current = a), e.resolve());
-            },
-            [a],
-        ),
-        er = (function (e) {
+        en = (function (e) {
             let {
                     checkoutInvoicePreview: a,
                     renewalInvoicePreview: t,
                     selectedSkuId: l,
                     unifiedCheckoutFlow: r,
-                } = (0, v.t4)((e) => ({
+                } = (0, _.t4)((e) => ({
                     checkoutInvoicePreview: e.checkoutInvoicePreview,
                     renewalInvoicePreview: e.renewalInvoicePreview,
                     selectedSkuId: e.selectedSkuId,
@@ -251,19 +246,19 @@ function O(e) {
                         };
                     })(a);
                     if (null == e) return null;
-                    let { planDisplayName: n, recurringPaymentIntervalUnit: r, recurringPaymentIntervalCount: s } = e,
-                        i = null != t ? t.subtotal : l;
+                    let { planDisplayName: l, recurringPaymentIntervalUnit: n, recurringPaymentIntervalCount: r } = e,
+                        s = null != t ? t.total : i;
                     return {
-                        lineItems: A(n),
+                        lineItems: A(l),
                         applePay: {
                             recurringPaymentRequest: {
-                                paymentDescription: n,
+                                paymentDescription: l,
                                 managementURL: `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`,
                                 regularBilling: {
-                                    amount: i,
-                                    label: n,
-                                    recurringPaymentIntervalUnit: r,
-                                    recurringPaymentIntervalCount: s,
+                                    amount: s,
+                                    label: l,
+                                    recurringPaymentIntervalUnit: n,
+                                    recurringPaymentIntervalCount: r,
                                 },
                             },
                         },
@@ -271,13 +266,19 @@ function O(e) {
                 }
                 return { lineItems: null != s ? A(s) : [] };
             }, [a, t, s, e, r]);
-        })(a);
+        })(a),
+        er = n.useCallback(
+            (e) => {
+                ((L.current = a), e.resolve(en ?? void 0));
+            },
+            [a, en],
+        );
     n.useEffect(() => {
         null != S && et();
     }, [S, et]);
     let es = n.useMemo(() => {
-        if (null == U || null == er) return {};
-        let { lineItems: e, applePay: a } = er;
+        if (null == U || null == en) return {};
+        let { lineItems: e, applePay: a } = en;
         return {
             paymentMethodOrder: ["applePay", "googlePay", "card"],
             billingAddressRequired: !0,
@@ -287,19 +288,19 @@ function O(e) {
             lineItems: e,
             applePay: a,
         };
-    }, [U, er]);
+    }, [U, en]);
     if (null == g || null == E || null == U || !q) return null;
-    let ei = s || B;
+    let ei = s || Y;
     return (0, l.jsxs)("div", {
         className: i()(N.Pr, p),
         children: [
-            ei && (0, l.jsx)(_.I, {}),
+            ei && (0, l.jsx)(v.I, {}),
             (0, l.jsx)("div", {
                 className: i()({ [N.lX]: ei }),
                 children: (0, l.jsx)(r.ExpressCheckoutElement, {
                     onLoadError: J,
                     onReady: $,
-                    onClick: en,
+                    onClick: er,
                     onConfirm: (e) => el(e, { stripe: g, elements: E, currentAmountDue: U.getAmountDue() }),
                     onCancel: ee,
                     options: es,
@@ -330,7 +331,7 @@ t.d(
             let a = (0, f.S)(),
                 { elementsAppearance: t } = (0, p.E)(),
                 s = (0, T.PU)(),
-                { checkoutInvoicePreview: i, isPurchaseDisabled: h } = (0, v.t4)((e) => ({
+                { checkoutInvoicePreview: i, isPurchaseDisabled: h } = (0, _.t4)((e) => ({
                     checkoutInvoicePreview: e.checkoutInvoicePreview,
                     isPurchaseDisabled: e.getIsPurchaseDisabled(),
                 })),
@@ -360,7 +361,7 @@ t.d(
         },
         Zr: function (e) {
             let { stripeExpressCheckoutComponent: a, fallbackComponent: t, showDividerBelow: n = !1 } = e,
-                { shouldExpressCheckoutBeVisible: r } = (0, v.t4)((e) => ({
+                { shouldExpressCheckoutBeVisible: r } = (0, _.t4)((e) => ({
                     shouldExpressCheckoutBeVisible:
                         e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
                 }));
@@ -375,7 +376,7 @@ t.d(
             });
         },
         rI: function () {
-            let e = (0, v.t4)((e) => e.checkoutInvoicePreview),
+            let e = (0, _.t4)((e) => e.checkoutInvoicePreview),
                 a = n.useMemo(
                     () =>
                         null != e && e.hasGiftCardBalanceApplied

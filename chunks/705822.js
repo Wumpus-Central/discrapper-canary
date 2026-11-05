@@ -49,22 +49,23 @@ n.d(
                         a = e.getExpressCheckoutLoading(),
                         s = e.getIsPlanSwitchLoading(),
                         l = e.startingIsInPastDueCheckout && !e.hasAddedPaymentSourceThisSession,
-                        o = !i || l || r,
-                        d = o && !s && "unavailable" !== e.expressCheckoutStatus,
-                        c = "review_footer" === n.configurationType;
+                        o = i || e.getIsInvoiceTotalPaidByWallet(),
+                        d = !o || l || r,
+                        c = d && !s && "unavailable" !== e.expressCheckoutStatus,
+                        u = "review_footer" === n.configurationType;
                     return {
-                        shouldMountExpressCheckoutElement: o,
-                        shouldExpressCheckoutBeVisible: d,
+                        shouldMountExpressCheckoutElement: d,
+                        shouldExpressCheckoutBeVisible: c,
                         shouldDisablePaymentSelect: (
-                            e.startingIsInPastDueCheckout ? e.hasAddedPaymentSourceThisSession : i
+                            e.startingIsInPastDueCheckout ? e.hasAddedPaymentSourceThisSession : o
                         )
                             ? r
                             : a,
                         isLoading: a,
                         isSubmitting: r,
-                        isExpressCheckoutEnabledForFooter: c,
+                        isExpressCheckoutEnabledForFooter: u,
                         isExpressCheckoutEnabledForPaymentSelect: "payment_selector" === n.configurationType,
-                        isExpressCheckoutVisibleInFooter: c && d,
+                        isExpressCheckoutVisibleInFooter: u && c,
                     };
                 },
                 getExpressCheckoutConfig: (e) => {

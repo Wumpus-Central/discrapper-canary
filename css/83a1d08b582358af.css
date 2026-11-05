@@ -180,10 +180,22 @@
     width: 180px
 }
 
+.clickable_Oyz7Y6 {
+    cursor: pointer
+}
+
 .cover_Oyz7Y6 {
     aspect-ratio: 3/4;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-low)
+    box-shadow: var(--shadow-low);
+    overflow: hidden;
+    position: relative
+}
+
+.coverArt_Oyz7Y6 {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%
 }
 
 .name_Oyz7Y6 {
@@ -385,4 +397,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=fc99ee9edc32c23b.css.map*/
+/*# sourceMappingURL=83a1d08b582358af.css.map*/

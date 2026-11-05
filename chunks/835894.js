@@ -14087,7 +14087,6 @@ let cj = [
         { id: "none", value: "none", label: "No Override (use server assignment)" },
         { id: "0", value: "0", label: "Control (0) \u2014 Express checkout disabled" },
         { id: "1", value: "1", label: "Treatment (1) \u2014 Express checkout enabled: Review Footer" },
-        { id: "2", value: "2", label: "Treatment (2) \u2014 Express checkout enabled: Payment Select" },
     ];
 function cE(e) {
     let { experimentName: t, options: a = cj } = e,

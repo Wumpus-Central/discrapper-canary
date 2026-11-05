@@ -238,21 +238,22 @@ function R(e) {
             shouldExpressCheckoutBeVisible: z,
             isExpressCheckoutEnabledForPaymentSelect: $,
             shouldDisablePaymentSelect: Q,
+            isLoading: J,
         } = K,
-        { dropdownCurrencies: J, displayCurrency: X } = (0, v.Jn)(),
-        ee = i.useCallback(() => {
+        { dropdownCurrencies: X, displayCurrency: ee } = (0, v.Jn)(),
+        et = i.useCallback(() => {
             (k(!0), q());
         }, [q]),
-        et = i.useMemo(() => Z || Q || (C ?? !1), [Z, Q, C]),
-        { giftCardCheckboxProps: en, disabled: el } = i.useMemo(
+        en = i.useMemo(() => Z || Q || (C ?? !1), [Z, Q, C]),
+        { giftCardCheckboxProps: el, disabled: ei } = i.useMemo(
             () =>
                 null != T
-                    ? T({ giftCardCheckboxProps: D, disabled: et }, { isSubscriptionPaidByWallet: B })
-                    : { giftCardCheckboxProps: D, disabled: et },
-            [et, T, D, B],
+                    ? T({ giftCardCheckboxProps: D, disabled: en }, { isSubscriptionPaidByWallet: B })
+                    : { giftCardCheckboxProps: D, disabled: en },
+            [en, T, D, B],
         ),
-        ei = null != en && !0 === en.locked,
-        er = i.useMemo(() => {
+        er = null != el && !0 === el.locked,
+        ea = i.useMemo(() => {
             if (null != R)
                 return R({
                     isSubscriptionPaidByWallet: B,
@@ -260,41 +261,42 @@ function R(e) {
                     hidePersonalInformation: H,
                 });
         }, [R, B, F, H]),
-        ea = i.useMemo(() => {
+        es = i.useMemo(() => {
             if (!I)
                 return {
                     label: g.intl.string(g.t["/AAR02"]),
-                    selectedCurrency: V.currency ?? X,
-                    currencies: J,
+                    selectedCurrency: V.currency ?? ee,
+                    currencies: X,
                     onChange: Y,
-                    disabled: el,
+                    disabled: ei,
                 };
-        }, [I, V.currency, X, J, Y, el]),
-        es = i.useMemo(() => ({ ...F, ...p, onPaymentSourceAdd: E }), [F, E, p]),
-        eo = null != en && en.checked,
-        eu = W || U || ei,
-        ec = i.useMemo(() => {
-            if (!w || null == en) return null;
-            let e = eu ? j.r : j.K,
-                t = en.disabled || el;
-            return (0, l.jsx)("div", { className: e, children: (0, l.jsx)(x.o, { ...en, disabled: t }) });
-        }, [w, en, eu, el]),
-        ed = w && eo,
-        em = ed && W && G,
-        ep = ed && !W && eu,
-        eC = null != er,
-        eh = em && es.paymentSources.length > 0,
-        ef = i.useMemo(() => {
-            if (null != er) return er;
-            let e = z ? g.intl.string(S.default.BLu9EI) : void 0;
+        }, [I, V.currency, ee, X, Y, ei]),
+        eo = i.useMemo(() => ({ ...F, ...p, onPaymentSourceAdd: E }), [F, E, p]),
+        eu = null != el && el.checked,
+        ec = W || U || er,
+        ed = i.useMemo(() => {
+            if (!w || null == el) return null;
+            let e = ec ? j.r : j.K,
+                t = el.disabled || ei;
+            return (0, l.jsx)("div", { className: e, children: (0, l.jsx)(x.o, { ...el, disabled: t }) });
+        }, [w, el, ec, ei]),
+        em = w && eu,
+        ep = em && W && G,
+        eC = em && !W && ec,
+        eh = null != ea,
+        ef = ep && eo.paymentSources.length > 0,
+        eE = i.useMemo(() => {
+            if (null != ea) return ea;
+            let e = z ? g.intl.string(S.default.BLu9EI) : void 0,
+                t = z || J;
             return (0, l.jsx)(s.Ay, {
-                ...es,
-                disabled: el || eh,
-                addPaymentSourceVariant: em || z ? "secondary" : "primary",
+                ...eo,
+                disabled: ei || ef,
+                addPaymentSourceVariant: ep || t ? "secondary" : "primary",
                 addPaymentSourceText: e,
             });
-        }, [er, el, eh, em, es, z]),
-        [eE, eS] = i.useState(!1);
+        }, [ea, ei, ef, ep, eo, z, J]),
+        [eS, eg] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(a.D, {
@@ -305,19 +307,19 @@ function R(e) {
                             stripeExpressCheckoutComponent: (0, l.jsx)(m.E1, {
                                 className: N.KV,
                                 type: "vault_only",
-                                isSubmitting: eE,
-                                setIsSubmitting: eS,
+                                isSubmitting: eS,
+                                setIsSubmitting: eg,
                             }),
                             fallbackComponent: null,
-                            showDividerBelow: !ep,
+                            showDividerBelow: !eC,
                         }),
-                    eu && ec,
-                    !ep && ef,
-                    !eu && ec,
-                    !eC && !ed && void 0 !== ea && (0, l.jsx)(b.q, { ...ea }),
+                    ec && ed,
+                    !eC && eE,
+                    !ec && ed,
+                    !eh && !em && void 0 !== es && (0, l.jsx)(b.q, { ...es }),
                 ],
             }),
-            w ? (0, l.jsx)(A, { onGiftCardRedeemed: ee }) : null,
+            w ? (0, l.jsx)(A, { onGiftCardRedeemed: et }) : null,
             (0, l.jsx)(P, { onPaymentSourceAdd: E }),
             (0, l.jsx)(_.B, {}),
         ],

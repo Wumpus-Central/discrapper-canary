@@ -578,6 +578,19 @@ function eo(e) {
                         !r.getDropdownPaymentSources().some((e) => e.enabled)
                     );
                 },
+                getIsInvoiceTotalPaidByWallet: () => {
+                    let e = i(),
+                        t = e.getGiftCardWallet();
+                    if (null == t || !t.enabled) return !1;
+                    let { checkoutInvoicePreview: n, paymentSourceId: r, applyWalletBalance: a } = e,
+                        s =
+                            (null === a || !0 === a) &&
+                            null != n &&
+                            n.hasGiftCardBalanceApplied &&
+                            0 >= n.getAmountDue(),
+                        l = r === t.id;
+                    return s || l;
+                },
             }),
             ...(function (e) {
                 let t = [],
