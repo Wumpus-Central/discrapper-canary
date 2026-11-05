@@ -258,7 +258,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
         (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("665181", 10))) || (s.client_build_number = I),
+    isNaN((I = parseInt("665183", 10))) || (s.client_build_number = I),
     null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
