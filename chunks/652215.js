@@ -4153,6 +4153,7 @@ var ih =
         (eP.GUILD_WELCOME_SCREEN_OPTION_SELECTED = "guild_welcome_screen_option_selected"),
         (eP.MESSAGE_REPORTED = "message_reported"),
         (eP.EXPRESSION_PICKER_TAB_CLICKED = "expression_picker_tab_clicked"),
+        (eP.EXPRESSION_PICKER_ADD_EMOJI_CLICKED = "expression_picker_add_emoji_clicked"),
         (eP.EXPRESSION_PICKER_KAOMOJI_SELECTED = "expression_picker_kaomoji_selected"),
         (eP.EXPRESSION_PICKER_OPENED = "expression_picker_opened"),
         (eP.EXPRESSION_PICKER_CATEGORY_SELECTED = "expression_picker_category_selected"),
