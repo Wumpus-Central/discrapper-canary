@@ -1,4 +1,4 @@
-(n.d(t, { A: () => w }), n(574332));
+(n.d(t, { A: () => G }), n(574332));
 var i = n(439372);
 (n(372058), n(975460), n(627363), n(587895), n(712440), n(733110));
 var r = n(855986),
@@ -6,8 +6,9 @@ var r = n(855986),
     s = n(951217),
     l = n(653868),
     o = n(673383);
-let d = new Map();
-class c extends r.Ay.Store {
+let d = new Map(),
+    c = new Set();
+class u extends r.Ay.Store {
     static displayName = "GameOrganizationInviteStore";
     getInvite(e) {
         return d.get(e) ?? null;
@@ -15,8 +16,14 @@ class c extends r.Ay.Store {
     getInvites() {
         return d;
     }
+    isJoinFlowPending(e) {
+        return c.has(e);
+    }
+    getPendingJoinFlowCodes() {
+        return c;
+    }
 }
-let u = new c(a.h, {
+let _ = new u(a.h, {
     GAME_ORGANIZATION_INVITE_RESOLVE: function (e) {
         let { code: t } = e;
         if (d.get(t)?.state === o.Zb.RESOLVED) return !1;
@@ -54,100 +61,106 @@ let u = new c(a.h, {
         if (n?.state !== o.Zb.RESOLVED) return !1;
         (d = new Map(d)).set(t, { ...n, accepted: !0 });
     },
+    GAME_ORGANIZATION_JOIN_FLOW_PENDING: function (e) {
+        let { code: t, pending: n } = e;
+        if (c.has(t) === n) return !1;
+        let i = new Set(c);
+        (n ? i.add(t) : i.delete(t), (c = i));
+    },
 });
-var _ = n(927813),
-    E = n(664947),
-    A = n(489452),
-    h = n(652215);
-((0, r.UT)(u, {
-    getQueryId: h.fic.GAME_ORGANIZATION_INVITE,
-    staleAfter: 5 * _.A.Seconds.MINUTE,
-    failureStaleAfter: 5 * _.A.Seconds.MINUTE,
-    retryConfig: { retryableErrors: A.A },
+var E = n(927813),
+    A = n(664947),
+    h = n(489452),
+    f = n(652215);
+((0, r.UT)(_, {
+    getQueryId: f.fic.GAME_ORGANIZATION_INVITE,
+    staleAfter: 5 * E.A.Seconds.MINUTE,
+    failureStaleAfter: 5 * E.A.Seconds.MINUTE,
+    retryConfig: { retryableErrors: h.A },
     get: (e) => {
-        let t = u.getInvite(e);
+        let t = _.getInvite(e);
         return t?.state === o.Zb.RESOLVED ? t : null;
     },
     load: async (e) => {
-        await E.A.resolveGameOrganizationInvite(e);
+        await A.A.resolveGameOrganizationInvite(e);
     },
 }),
     n(503406));
-var f = n(292572),
-    I = n(122906),
-    p = n(128391),
-    m = n(167189),
+var I = n(292572),
+    p = n(122906),
+    m = n(128391),
+    g = n(167189),
     T = n(254160),
-    g = n(67480),
-    S = n(733391),
-    N = n(945810);
-((0, N.mj)({
+    S = n(67480),
+    N = n(733391),
+    C = n(945810);
+((0, C.mj)({
     name: "2026-08-social-layer-storefront-mobile-embed",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 }),
-    (0, N.mj)({
+    (0, C.mj)({
         name: "2026-10-social-layer-storefront-mobile-multi-sku-embed",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }));
-var C = n(637893),
-    O = n(227327);
-let R = new Set();
-function L(e, t) {
-    R.has(e) ||
-        (R.add(e),
+var O = n(637893),
+    R = n(227327);
+let L = new Set();
+function y(e, t) {
+    L.has(e) ||
+        (L.add(e),
         (0, T.f)(async () => {
             try {
                 await t();
             } finally {
-                R.delete(e);
+                L.delete(e);
             }
         }));
 }
-var y = n(168543),
-    D = n(917445),
-    b = n(734057);
+var D = n(168543),
+    b = n(917445),
+    v = n(734057);
 n(299091);
-var v = n(486889);
-function P(e, t) {
-    let n = (0, v.Ay)(e);
+var P = n(486889);
+function M(e, t) {
+    let n = (0, P.Ay)(e);
     null != n &&
         0 !== n.length &&
         n.forEach((e) => {
             let { type: n, code: i } = e;
             switch (n) {
-                case m.I.INVITE:
+                case g.I.INVITE:
                     break;
-                case m.I.TEMPLATE:
+                case g.I.TEMPLATE:
                     (0, T.f)(async () => {
-                        null == I.A.getGuildTemplate(i) && (await f.A.resolveGuildTemplate(i));
+                        null == p.A.getGuildTemplate(i) && (await I.A.resolveGuildTemplate(i));
                     });
                     break;
-                case m.I.BUILD_OVERRIDE:
-                case m.I.MANUAL_BUILD_OVERRIDE:
-                case m.I.EVENT:
-                case m.I.CHANNEL_LINK:
-                case m.I.ACTIVITY_BOOKMARK:
-                case m.I.EMBEDDED_ACTIVITY_INVITE:
-                case m.I.GUILD_PRODUCT:
-                case m.I.SERVER_SHOP:
-                case m.I.QUESTS_EMBED:
-                case m.I.APP_DIRECTORY_STOREFRONT:
-                case m.I.APP_DIRECTORY_STOREFRONT_SKU:
-                case m.I.APP_OAUTH2_LINK:
-                case m.I.COLLECTIBLES_SHOP:
-                case m.I.EXPERIMENT:
-                case m.I.GAME_PROFILE:
-                case m.I.GAME_SERVER_SHARE:
+                case g.I.BUILD_OVERRIDE:
+                case g.I.MANUAL_BUILD_OVERRIDE:
+                case g.I.EVENT:
+                case g.I.CHANNEL_LINK:
+                case g.I.ACTIVITY_BOOKMARK:
+                case g.I.EMBEDDED_ACTIVITY_INVITE:
+                case g.I.GUILD_PRODUCT:
+                case g.I.SERVER_SHOP:
+                case g.I.QUESTS_EMBED:
+                case g.I.APP_DIRECTORY_STOREFRONT:
+                case g.I.APP_DIRECTORY_STOREFRONT_SKU:
+                case g.I.APP_OAUTH2_LINK:
+                case g.I.COLLECTIBLES_SHOP:
+                case g.I.EXPERIMENT:
+                case g.I.GAME_PROFILE:
+                case g.I.GAME_SERVER_SHARE:
                     break;
-                case m.I.USER_PROFILE:
-                    if ((0, y.l)("MessageCodedLinkManager")) {
-                        let e = null == t ? null : b.A.getChannel(t);
+                case g.I.USER_PROFILE:
+                    if ((0, D.l)("MessageCodedLinkManager")) {
+                        let e = null == t ? null : v.A.getChannel(t);
                         (0, T.f)(async () => {
-                            await (0, D.A)(i, void 0, {
+                            await (0, b.A)(i, void 0, {
                                 guildId: e?.guild_id ?? void 0,
                                 withMutualGuilds: !0,
                                 withMutualFriends: !0,
@@ -155,57 +168,57 @@ function P(e, t) {
                         });
                     }
                     break;
-                case m.I.GAME_ORGANIZATION_INVITE:
+                case g.I.GAME_ORGANIZATION_INVITE:
                     break;
-                case m.I.SOCIAL_LAYER_STOREFRONT:
-                case m.I.SOCIAL_LAYER_STOREFRONT_APP:
+                case g.I.SOCIAL_LAYER_STOREFRONT:
+                case g.I.SOCIAL_LAYER_STOREFRONT_APP:
                     !(function (e, t) {
-                        let n = (0, O.rg)(t);
+                        let n = (0, R.rg)(t);
                         if (null == n) return;
                         let i =
-                            e === m.I.SOCIAL_LAYER_STOREFRONT_APP
+                            e === g.I.SOCIAL_LAYER_STOREFRONT_APP
                                 ? { type: "application", applicationId: n.scopeId }
                                 : { type: "guild", guildId: n.scopeId };
                         if (n.skuIds.length > 1) {
-                            if (!(0, C.x)("resolveStorefrontCodedLink")) return;
-                            L(`${e}:${n.scopeId}`, async () => {
+                            if (!(0, O.x)("resolveStorefrontCodedLink")) return;
+                            y(`${e}:${n.scopeId}`, async () => {
                                 "application" === i.type
-                                    ? await (0, S.ap)(i.applicationId, { eager: !1 })
-                                    : await (0, S.Rw)(i.guildId, { eager: !1 });
+                                    ? await (0, N.ap)(i.applicationId, { eager: !1 })
+                                    : await (0, N.Rw)(i.guildId, { eager: !1 });
                             });
                             return;
                         }
                         let [r] = n.skuIds;
-                        null != g.A.get(r) ||
-                            g.A.isFetching(r) ||
-                            g.A.didFetchingSkuFail(r) ||
+                        null != S.A.get(r) ||
+                            S.A.isFetching(r) ||
+                            S.A.didFetchingSkuFail(r) ||
                             (a.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
-                            L((0, O.m5)([r], n.scopeId), async () => {
+                            y((0, R.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
-                                    ? await (0, S.Pp)(i.applicationId, r, e)
-                                    : await (0, S.qf)(i.guildId, r, e);
+                                    ? await (0, N.Pp)(i.applicationId, r, e)
+                                    : await (0, N.qf)(i.guildId, r, e);
                             }));
                     })(n, i);
                     break;
-                case m.I.APP_DIRECTORY_PROFILE:
+                case g.I.APP_DIRECTORY_PROFILE:
                     break;
                 default:
                     throw Error(`Unknown coded link type: ${n}`);
             }
         });
 }
-function M(e) {
-    (P(e.content ?? null, e.channel_id),
+function U(e) {
+    (M(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
-            return P(n.content, e.channel_id);
+            return M(n.content, e.channel_id);
         }));
 }
 n(818348);
-class U extends i.A {
+class w extends i.A {
     constructor() {
-        (super(), (0, p.A)(this, M));
+        (super(), (0, m.A)(this, U));
     }
 }
-let w = new U();
+let G = new w();
