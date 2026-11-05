@@ -126,8 +126,7 @@ function y(e, t) {
     n(570885),
     n(29274),
     n(525919),
-    delete n.g.IntlMessageFormat,
-    "u" < typeof Intl && n(426586));
+    delete n.g.IntlMessageFormat);
 let D = "en-US";
 class b {
     _context = { messages: {}, defaultMessages: {}, locale: D };
@@ -188,13 +187,12 @@ class M extends a.EventEmitter {
     _chosenLocale = "";
     _requestedLocale;
     _getMessages;
-    constructor({ initialLocale: e, getMessages: t, getLanguages: i }) {
+    constructor({ initialLocale: e, getMessages: t, getLanguages: n }) {
         (super(),
             (this.initialLanguageLoad = new Promise((e, t) => {
                 this.resolveLanguageLoaded = e;
             })),
-            Intl.__addLocaleData && Intl.__addLocaleData(n(217671)),
-            (this._languages = i()),
+            (this._languages = n()),
             (this._provider = null != window.Proxy ? new P(this._getParsedMessages) : new v(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
             (this._getMessages = t));
