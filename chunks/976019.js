@@ -55,7 +55,7 @@ s.d(
                             renderContent: () => {
                                 let e = t.config.messages.gameTitle;
                                 if (!0 === s)
-                                    return (0, i.jsx)(u.L5, {
+                                    return (0, i.jsx)(u.L, {
                                         children: h.intl.formatToPlainString(h.t.C45G4B, { gameTitle: e }),
                                     });
                                 let n = a === x.qh.WEB,
@@ -66,13 +66,13 @@ s.d(
                                                   gameTitle: e,
                                                   onClickGameTitle: r,
                                               });
-                                return (0, i.jsx)(u.L5, { children: l });
+                                return (0, i.jsx)(u.L, { children: l });
                             },
                             isComplete: (s ?? !1) || d,
                         },
                         {
                             renderContent: () =>
-                                (0, i.jsx)(u.L5, {
+                                (0, i.jsx)(u.L, {
                                     children:
                                         !0 !== s || d || null == r
                                             ? h.intl.formatToPlainString(h.t.nP1hFd, {
@@ -92,7 +92,7 @@ s.d(
                     ],
                     [a, s, d, t.config, o, r, g],
                 );
-            return (0, i.jsx)(u.Ay, {
+            return (0, i.jsx)(u.A, {
                 heading: h.intl.string(h.t.dc9w4N),
                 steps: f,
                 children:

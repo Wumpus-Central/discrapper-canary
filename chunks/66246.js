@@ -1044,7 +1044,7 @@ function tl(e) {
 }
 function tu(e) {
     return (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(ti.L5, { children: ed.intl.string(ed.t.EJFSvD) }), (0, s.jsx)(tl, { ...e })],
+        children: [(0, s.jsx)(ti.L, { children: ed.intl.string(ed.t.EJFSvD) }), (0, s.jsx)(tl, { ...e })],
     });
 }
 var tc = n(607886);
@@ -1187,7 +1187,7 @@ let tC = function (e) {
                     },
                     {
                         renderContent: () =>
-                            (0, s.jsx)(ti.L5, {
+                            (0, s.jsx)(ti.L, {
                                 children: (0, er.ui)(t)
                                     ? ed.intl.string(ed.t["5tXqFe"])
                                     : ed.intl.formatToPlainString(ed.t["+8JB6Y"], { gameTitle: i }),
@@ -1196,7 +1196,7 @@ let tC = function (e) {
                     },
                     {
                         renderContent: () =>
-                            (0, s.jsx)(ti.L5, {
+                            (0, s.jsx)(ti.L, {
                                 children: ed.intl.formatToPlainString(ed.t.HhfrYS, { numMinutes: n.targetMinutes }),
                             }),
                         isComplete: o,
@@ -1207,7 +1207,7 @@ let tC = function (e) {
                 isQuestComplete: o,
             };
         }, [a, l.length, t, n.targetMinutes]);
-    return (0, s.jsx)(ti.Ay, {
+    return (0, s.jsx)(ti.A, {
         heading: ed.intl.string(ed.t.UPWlJu),
         steps: u,
         children: c && !C && !m && (0, s.jsx)(tx, { useReducedMotion: i, quest: t }),

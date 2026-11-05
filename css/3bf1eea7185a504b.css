@@ -98,24 +98,6 @@
     opacity: .5
 }
 
-.rewardsListWrapper_g2YoxE {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin-top: 12px
-}
-
-.rewardsListBody_g2YoxE {
-    list-style-type: none
-}
-
-.rewardsListPremiumDurationExtension_g2YoxE {
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(90deg, var(--premium-tier-2-purple) 0, var(--premium-tier-2-pink) 100%);
-    color: transparent
-}
-
 .notice_zV869I {
     border-top: 1px solid var(--interactive-background-hover);
     display: flex;
@@ -135,4 +117,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=26d6efa3a144f041.css.map*/
+/*# sourceMappingURL=3bf1eea7185a504b.css.map*/

@@ -2934,7 +2934,7 @@ function s5(e) {
 var s8 = i(315629),
     s9 = i(783420),
     s4 = i(204413),
-    ne = i(245383),
+    ne = i(572079),
     nt = i(824069),
     ni = i(785007),
     ns = i(947910);
@@ -3504,6 +3504,7 @@ let nI = function (e) {
             className: nC.UD,
             children: [
                 (0, c.jsx)(eb.A, {
+                    enableMarketingSubscribeCopyTest: !a,
                     size: "md",
                     subscriptionTier: i,
                     hasActivePromotion: !!s,
@@ -3975,6 +3976,7 @@ let n5 = o.memo(function (e) {
                                         className: T ? n7.es : n7.UJ,
                                         children: [
                                             (0, c.jsx)(eb.A, {
+                                                enableMarketingSubscribeCopyTest: !l,
                                                 size: "md",
                                                 fullWidth: T,
                                                 hasActivePromotion: !!s,

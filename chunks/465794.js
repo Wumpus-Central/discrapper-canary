@@ -19,15 +19,17 @@ e.d(
                     defaultTextOverride: k,
                     iconOverride: b,
                     variantOverride: o,
-                    disabled: C,
-                    ...j
+                    enableMarketingSubscribeCopyTest: C = !1,
+                    disabled: j,
+                    ...w
                 } = s,
-                { subscribeButtonProps: w } = (0, c.B)({
+                { subscribeButtonProps: x } = (0, c.B)({
                     subscriptionTier: d,
                     buttonTextOverride: l,
                     defaultTextOverride: k,
                     iconOverride: b,
                     variantOverride: o,
+                    enableMarketingSubscribeCopyTest: C,
                 });
             return (0, i.jsx)(t.A, {
                 onClick: e,
@@ -39,7 +41,7 @@ e.d(
                 confirmationFooter: h,
                 children: (s) => {
                     let { onClick: d } = s;
-                    return (0, i.jsx)(r.$, { onClick: d, ...w, ...j, disabled: !0 === w.disabled || !0 === C });
+                    return (0, i.jsx)(r.$, { onClick: d, ...x, ...w, disabled: !0 === x.disabled || !0 === j });
                 },
             });
         },

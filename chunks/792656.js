@@ -15,9 +15,10 @@ r.d(
                     defaultTextOverride: a,
                     iconOverride: d,
                     variantOverride: h,
-                    ...o
+                    enableMarketingSubscribeCopyTest: o = !1,
+                    ...b
                 } = i,
-                { subscribeButtonProps: b, subscriptionTier: k } = (0, c.$)({
+                { subscribeButtonProps: k, subscriptionTier: w } = (0, c.$)({
                     subscriptionTier: s,
                     hasActivePromotion: r,
                     useShorterCTA: u,
@@ -26,8 +27,9 @@ r.d(
                     defaultTextOverride: a,
                     iconOverride: d,
                     variantOverride: h,
+                    enableMarketingSubscribeCopyTest: o,
                 });
-            return (0, p.jsx)(t.A, { ...o, ...b, subscriptionTier: k });
+            return (0, p.jsx)(t.A, { ...b, ...k, subscriptionTier: w });
         },
     },
 );

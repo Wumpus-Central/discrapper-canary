@@ -1,14 +1,12 @@
 var i = s(477900),
     n = s(582128),
     l = s(503698),
-    r = s.n(l);
-s(855986);
-var a = s(947641),
+    r = s.n(l),
+    a = s(947641),
     o = s(646514),
     c = s(834730),
-    d = s(534514);
-(s(287809), s(870273), s(417404), s(792996));
-var m = s(56999);
+    d = s(534514),
+    m = s(56999);
 let u = n.createContext({ isCurrent: !1 });
 function x(e) {
     let { children: t, isComplete: s, isCurrent: l, hasNextStep: c } = e,
@@ -34,7 +32,7 @@ s.d(
     t,
     {},
     {
-        Ay: function (e) {
+        A: function (e) {
             let { children: t, heading: s, steps: n, className: l } = e,
                 a = n.findIndex((e) => !e.isComplete);
             return (0, i.jsxs)("div", {
@@ -70,7 +68,7 @@ s.d(
                 ],
             });
         },
-        L5: function (e) {
+        L: function (e) {
             let { children: t } = e,
                 { isCurrent: s } = n.useContext(u);
             return (0, i.jsx)(c.E, {
