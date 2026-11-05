@@ -1773,7 +1773,7 @@ var np = n(396655),
     nC = n(616740),
     nI = n(182179),
     n_ = n(846930),
-    nN = n(688879),
+    nN = n(483364),
     nT = n(366811),
     nO = n(924985),
     nj = n(945886),
@@ -2252,7 +2252,7 @@ class ia extends a.PureComponent {
                     (0, l.jsx)("section", {
                         className: il.C3,
                         "aria-label": U.intl.string(U.t.StREWK),
-                        children: (0, l.jsx)(nN.A, { guildId: n.id }),
+                        children: (0, l.jsx)(nN.A, {}),
                     }),
             ],
         });
@@ -2335,7 +2335,7 @@ let ih = a.memo(function () {
             (0, l.jsx)("section", {
                 className: ic.C3,
                 "aria-label": U.intl.string(U.t.StREWK),
-                children: (0, l.jsx)(nN.A, { guildId: null }),
+                children: (0, l.jsx)(nN.A, {}),
             }),
         ],
     });

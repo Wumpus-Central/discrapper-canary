@@ -1946,18 +1946,18 @@ class eV extends p.A {
     }
     processMLSProposals(e, t) {
         let n = this.mlsSession.ProcessProposals(e);
-        n && t(n);
+        null != n && t(n);
     }
     prepareMLSCommitTransition(e, t, n) {
         let i = this.mlsSession.ProcessCommit(t),
             r = null != i.rosterUpdate;
         (r && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()),
-            i.ignored || n(r, this.mlsSession.GetProtocolVersion(), i.rosterUpdate));
+            i.ignored || n(r, this.mlsSession.GetProtocolVersion(), i.rosterUpdate ?? {}));
     }
     processMLSWelcome(e, t, n) {
         let i = this.mlsSession.ProcessWelcome(t);
-        (i && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()),
-            n(null != i, this.mlsSession.GetProtocolVersion(), i));
+        (null != i && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()),
+            n(null != i, this.mlsSession.GetProtocolVersion(), i ?? {}));
     }
     setupEncryptionWorker() {
         let e = new Worker(
@@ -1995,14 +1995,12 @@ class eV extends p.A {
         } else throw Error("Encoded transforms not supported");
     }
     setupKeyRatchetForUser(e, t, n) {
-        let i = this.makeUserKeyRatchet(e, t);
-        this.encryptionWorker.postMessage({
-            type: ex.SET_KEY_RATCHET,
-            userId: e,
-            operation: n,
-            protocolVersion: t,
-            keyRatchet: i,
-        });
+        let i = this.makeUserKeyRatchet(e, t),
+            r = i?.baseSecret;
+        this.encryptionWorker.postMessage(
+            { type: ex.SET_KEY_RATCHET, userId: e, operation: n, protocolVersion: t, keyRatchet: i },
+            r instanceof ArrayBuffer ? [r] : [],
+        );
     }
     prepareSecureFramesRatchets(e, t) {
         for (let e of this.remoteUserIds) this.setupKeyRatchetForUser(e, t, ek.DECRYPT);

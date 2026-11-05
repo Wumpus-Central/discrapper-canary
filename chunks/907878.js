@@ -64,13 +64,6 @@ n.d(
                 r.default.track(u.HAw.GAME_SERVER_GAME_SELECT_OPENED, { guild_id: e, type: t });
             }, [e, t]);
         },
-        gU: function (e) {
-            let { guildId: t, gameApplicationId: n } = e;
-            r.default.track(u.HAw.GAME_SERVER_ACTIVITY_BUTTON_GUILD_SELECTED, {
-                guild_id: t,
-                game_application_id: n ?? null,
-            });
-        },
         oT: function (e, t, n, i) {
             r.default.track(u.HAw.GAME_SERVER_GAME_CLICKED, {
                 guild_id: e,

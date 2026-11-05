@@ -12,8 +12,8 @@ var i,
         (i[(i.UPDATE_CODECS = 4)] = "UPDATE_CODECS"),
         (i[(i.DESTROY_USER = 5)] = "DESTROY_USER"),
         i),
-    s = (((l = {})[(l.ENCRYPT = 0)] = "ENCRYPT"), (l[(l.DECRYPT = 1)] = "DECRYPT"), l),
-    f = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
+    f = (((l = {})[(l.ENCRYPT = 0)] = "ENCRYPT"), (l[(l.DECRYPT = 1)] = "DECRYPT"), l),
+    s = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
     p = t(214958),
     y = t.n(p);
 let S = parseInt(y().version ?? "0", 10),
@@ -42,44 +42,44 @@ let S = parseInt(y().version ?? "0", 10),
         ("Opera" === y().name && S >= 60) ||
         y().name);
 let T = new d.Vy("LibDaveManager"),
-    R = null,
-    m = {
+    E = null,
+    R = {
         onRuntimeInitialized: () => {
             T.info("DAVE loaded");
         },
     },
-    E = new d.Vy("EncryptionWorker");
+    h = new d.Vy("EncryptionWorker");
 (0, d.$o)(d.gZ);
-let b = "uninitialized",
-    h = null,
+let m = "uninitialized",
+    b = null,
     w = new Map(),
-    g = new Map(),
-    A = [];
+    A = new Map(),
+    g = [];
 function O(e) {
     let r,
         { operation: t, readable: n, writable: o } = e;
     switch (t) {
-        case s.ENCRYPT:
+        case f.ENCRYPT:
             r = v;
             break;
-        case s.DECRYPT:
+        case f.DECRYPT:
             r = _;
             break;
         default:
-            (E.error("DAVE worker transform with unknown operation", t), (r = () => {}));
+            (h.error("DAVE worker transform with unknown operation", t), (r = () => {}));
     }
     let a = new TransformStream({ transform: r });
     n.pipeThrough(a).pipeTo(o);
 }
 function P(e) {
-    postMessage({ type: f.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
+    postMessage({ type: s.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
 }
 function v(e, r) {
     try {
-        let t = h;
+        let t = b;
         if (null == t) return;
         let i = e.getMetadata().synchronizationSource;
-        if (null == i) return void E.warn("no ssrc found in frame metadata");
+        if (null == i) return void h.warn("no ssrc found in frame metadata");
         let l = (function (e, r, t) {
             if (0 === e.data.byteLength) return e;
             let i = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -103,19 +103,19 @@ function v(e, r) {
         if (null == l) return;
         r.enqueue(l);
     } catch (e) {
-        E.warn("error encrypting frame", e);
+        h.warn("error encrypting frame", e);
     }
 }
 function _(e, r) {
     try {
         let t = e.getMetadata().synchronizationSource;
-        if (null == t) return void E.warn("no ssrc found in frame metadata");
+        if (null == t) return void h.warn("no ssrc found in frame metadata");
         let o = w.get(t);
-        if (null == o) return void E.warn("no userId found for ssrc", t);
-        let a = g.get(o);
-        if (null == a) return void E.warn("no user found for userId", o);
+        if (null == o) return void h.warn("no userId found for ssrc", t);
+        let a = A.get(o);
+        if (null == a) return void h.warn("no user found for userId", o);
         let i = a.decryptor;
-        if (null == i) return void E.warn("no decryptor found for userId", o);
+        if (null == i) return void h.warn("no decryptor found for userId", o);
         let l = (function (e, r) {
             if (0 === e.data.byteLength) return e;
             let t = e instanceof RTCEncodedAudioFrame ? n.MediaType.Audio : n.MediaType.Video,
@@ -136,7 +136,7 @@ function _(e, r) {
         if (null == l) return;
         r.enqueue(l);
     } catch (e) {
-        E.warn("error decrypting frame", e);
+        h.warn("error decrypting frame", e);
     }
 }
 function D(e) {
@@ -160,15 +160,15 @@ function D(e) {
 ((self.onmessage = (e) => {
     !(function e(r) {
         let { data: i } = r;
-        if ("initialized" !== b && i.type !== c.INITIALIZE) return void A.push(r);
+        if ("initialized" !== m && i.type !== c.INITIALIZE) return void g.push(r);
         switch (i.type) {
             case c.INITIALIZE:
                 !(async function () {
-                    if ("uninitialized" === b)
-                        for (let r of ((b = "initializing"),
-                        (n = await (null != R
-                            ? R
-                            : (R = (async function () {
+                    if ("uninitialized" === m)
+                        for (let r of ((m = "initializing"),
+                        (n = await (null != E
+                            ? E
+                            : (E = (async function () {
                                   let e;
                                   try {
                                       e = await Promise.all([
@@ -182,14 +182,14 @@ function D(e) {
                                       throw (T.error("Failed to load DAVE module", e), e);
                                   }
                                   try {
-                                      let r = await e.DaveModuleFactory(m);
+                                      let r = await e.DaveModuleFactory(R);
                                       return (T.info("Successfully initialized DAVE"), r);
                                   } catch (e) {
                                       throw (T.error("Failed to initialize DAVE", e), e);
                                   }
                               })()))),
-                        (b = "initialized"),
-                        A))
+                        (m = "initialized"),
+                        g))
                             e(r);
                 })();
                 break;
@@ -200,27 +200,37 @@ function D(e) {
                 !(function (e) {
                     let { userId: r, operation: t, protocolVersion: o, keyRatchet: a } = e,
                         i = !a && o === n.kDisabledVersion;
-                    if (t === s.ENCRYPT) {
+                    if (t === f.ENCRYPT) {
                         let e = (function () {
-                            if (null == h) {
+                            if (null == b) {
                                 let e = new n.Encryptor();
                                 (e.SetProtocolVersionChangedCallback(() => {
                                     P(e.GetProtocolVersion());
                                 }),
                                     P(e.GetProtocolVersion()),
-                                    (h = e));
+                                    (b = e));
                             }
-                            return h;
+                            return b;
                         })();
-                        (e.SetPassthroughMode(i), e.SetKeyRatchet(a));
+                        e.SetPassthroughMode(i);
+                        try {
+                            e.SetKeyRatchet(a);
+                        } catch (e) {
+                            h.error("DAVE worker failed to set encryptor key ratchet", e);
+                        }
                     } else {
                         let e,
                             t =
-                                (null == (e = g.get(r)) &&
-                                    ((e = { audioSSRC: 0, videoSSRCs: [], decryptor: null }), g.set(r, e)),
+                                (null == (e = A.get(r)) &&
+                                    ((e = { audioSSRC: 0, videoSSRCs: [], decryptor: null }), A.set(r, e)),
                                 null == e.decryptor && (e.decryptor = new n.Decryptor()),
                                 e.decryptor);
-                        (t.TransitionToPassthroughMode(i), t.TransitionToKeyRatchet(a));
+                        t.TransitionToPassthroughMode(i);
+                        try {
+                            t.TransitionToKeyRatchet(a);
+                        } catch (e) {
+                            h.error(`DAVE worker failed to set decryptor key ratchet for ${r}`, e);
+                        }
                     }
                 })(i);
                 break;
@@ -231,12 +241,12 @@ function D(e) {
                     for (let e of o) {
                         let t = w.get(e);
                         if (e > 0 && null != t && t !== r)
-                            return void E.error(
+                            return void h.error(
                                 `DAVE worker refusing SSRC update for ${r}, SSRC ${e} is owned by ${t}`,
                             );
                     }
-                    let a = g.get(r);
-                    for (let e of (null == a && ((a = { audioSSRC: t, videoSSRCs: n, decryptor: null }), g.set(r, a)),
+                    let a = A.get(r);
+                    for (let e of (null == a && ((a = { audioSSRC: t, videoSSRCs: n, decryptor: null }), A.set(r, a)),
                     [a.audioSSRC, ...a.videoSSRCs]))
                         o.includes(e) || w.get(e) !== r || w.delete(e);
                     for (let e of o) e > 0 && w.set(e, r);
@@ -252,15 +262,15 @@ function D(e) {
             case c.DESTROY_USER:
                 !(function (e) {
                     let { userId: r } = e,
-                        t = g.get(r);
+                        t = A.get(r);
                     if (null == t) return;
-                    g.delete(r);
+                    A.delete(r);
                     let { audioSSRC: n, videoSSRCs: o } = t;
                     for (let e of [n, ...o]) w.get(e) === r && w.delete(e);
                 })(i);
                 break;
             default:
-                throw (E.error("DAVE worker unknown message type"), Error("Unsupported message type"));
+                throw (h.error("DAVE worker unknown message type"), Error("Unsupported message type"));
         }
     })(e);
 }),
