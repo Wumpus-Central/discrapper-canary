@@ -46,12 +46,12 @@ let E = o().once(() =>
     m = o().once(() => d(i.Ay.EMBED_TITLE_RULES, [(0, a.Ay)(h)])),
     v = o().once(() => o().omit(d(i.Ay.EMBED_TITLE_RULES, [(0, a.Ay)(h)]), A)),
     L = o().once(() => d(i.Ay.INLINE_REPLY_RULES, [(0, a.Ay)(h)])),
-    I = o().once(() => d(i.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, a.Ay)(h)])),
-    R = o().once(() => {
+    R = o().once(() => d(i.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, a.Ay)(h)])),
+    I = o().once(() => {
         let e = { ...h, shouldStopPropagation: !0 };
         return d(i.Ay.GUILD_EVENT_RULES, [(0, a.Ay)(e)], e);
     }),
-    b = o().once(() => o().omit(R(), "subtext")),
+    b = o().once(() => o().omit(I(), "subtext")),
     C = o().once(() => d(i.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Ay)(h)])),
     _ = o().once(() =>
         o().omit(
@@ -77,8 +77,8 @@ let E = o().once(() =>
     P = o().once(() => c(m())),
     j = o().once(() => c(v())),
     G = o().once(() => c(L())),
-    O = o().once(() => c(I())),
-    D = o().once(() => c(R())),
+    O = o().once(() => c(R())),
+    D = o().once(() => c(I())),
     B = o().once(() => c(C())),
     F = o().once(() => c(p())),
     V = o().once(() => l.X(y())),
@@ -94,8 +94,11 @@ let E = o().once(() =>
         get defaultRules() {
             return y();
         },
+        get topicRules() {
+            return E();
+        },
         get guildEventRules() {
-            return R();
+            return I();
         },
         get guildEventLocationRules() {
             return b();
