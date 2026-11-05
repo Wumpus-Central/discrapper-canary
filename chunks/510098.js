@@ -3342,6 +3342,9 @@ class ti extends p.A {
         }
     }
     setAudioMixerOptions(e) {}
+    getSpatialAudioVersion() {
+        return 0;
+    }
     getSpatialAudioHrtfFiles() {
         return { directory: null, files: [] };
     }

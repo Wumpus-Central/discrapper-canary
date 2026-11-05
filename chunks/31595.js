@@ -2088,6 +2088,9 @@ class ei extends d.A {
             ? ((0, v.lE)().getSpatialAudioHrtfFiles?.() ?? { directory: null, files: [] })
             : { directory: null, files: [] };
     }
+    getSpatialAudioVersion() {
+        return (0, v.lE)().getSpatialAudioVersion?.() ?? 0;
+    }
     setAudioInputBypassSystemProcessing(e) {
         (0, v.lE)().setTransportOptions({ bypassSystemProcessing: e });
     }

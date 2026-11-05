@@ -28,6 +28,9 @@ class o extends i.A {
         return Promise.resolve();
     }
     setAudioMixerOptions(e) {}
+    getSpatialAudioVersion() {
+        return 0;
+    }
     getSpatialAudioHrtfFiles() {
         return { directory: null, files: [] };
     }
