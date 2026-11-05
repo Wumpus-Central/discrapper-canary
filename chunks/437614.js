@@ -2,7 +2,7 @@ var i,
     r,
     a,
     s,
-    l = (((i = {}).RUST_2026_10 = "rust-2026-10"), i),
+    l = (((i = {}).RUST_2026_10 = "rust-2026-10"), (i.BLOONS_2026_11 = "bloons-2026-11"), i),
     o = (((r = {}).PENDING = "pending"), (r.READY = "ready"), (r.PREVIEW = "preview"), r),
     d =
         (((a = {}).QUEST_BAR = "quest_bar"),

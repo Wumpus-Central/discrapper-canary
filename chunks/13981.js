@@ -1,7 +1,7 @@
 var i = n(196765),
     r = n(129230),
     a = n(716761),
-    s = n(30512),
+    s = n(636116),
     l = n(437614),
     o = n(652215);
 let d = { campaignId: null, status: l.yY.PENDING, wasShown: !1 },
