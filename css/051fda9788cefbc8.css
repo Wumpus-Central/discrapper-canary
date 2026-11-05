@@ -262,7 +262,7 @@
     backdrop-filter: var(--custom-countdown-banner-backdrop-filter);
     background: var(--custom-countdown-banner-background);
     border: var(--custom-countdown-banner-border);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--custom-countdown-banner-shadow);
     color: var(--custom-countdown-copy-color);
     display: flex;
@@ -275,7 +275,7 @@
 }
 
 .light_oX1O9t {
-    --custom-countdown-banner-border: 2px solid rgba(0, 0, 0, .08);
+    --custom-countdown-banner-border: 2px solid var(--opacity-black-8);
     --custom-countdown-banner-background: hsla(0, 0%, 100%, .5);
     --custom-countdown-banner-backdrop-filter: blur(2px);
     --custom-countdown-banner-shadow: 0 0 26px hsla(0, 0%, 100%, .5), 0 8px 24px rgba(0, 0, 0, .45);
@@ -285,7 +285,6 @@
     --custom-countdown-colon-color: var(--neutral-95);
     --custom-countdown-copy-color: var(--neutral-95);
     --custom-countdown-copy-shadow: none;
-    --custom-countdown-cta-shadow: 0 12px 32px rgba(0, 0, 0, .24);
     --control-overlay-primary-background-default: var(--neutral-95);
     --control-overlay-primary-background-hover: var(--neutral-90);
     --control-overlay-primary-background-active: var(--neutral-85);
@@ -300,13 +299,12 @@
     --custom-countdown-banner-background: rgba(0, 0, 0, .5);
     --custom-countdown-banner-backdrop-filter: blur(4px);
     --custom-countdown-banner-shadow: 0 0 26px hsla(0, 0%, 100%, .5), var(--shadow-high);
-    --custom-countdown-filter: drop-shadow(0 0 6px hsla(0, 0%, 100%, .4));
+    --custom-countdown-filter: drop-shadow(0 0 6px var(--opacity-white-40));
     --custom-countdown-tile-background: var(--white);
     --custom-countdown-numeral-color: var(--black);
     --custom-countdown-colon-color: var(--white);
     --custom-countdown-copy-color: var(--neutral-2);
-    --custom-countdown-copy-shadow: 0 1px 8px rgba(0, 0, 0, .6);
-    --custom-countdown-cta-shadow: 0 12px 32px rgba(0, 0, 0, .24)
+    --custom-countdown-copy-shadow: 0 1px 8px var(--opacity-black-60)
 }
 
 .gradientV1_oX1O9t {
@@ -324,20 +322,20 @@
 
 .gradientV1_oX1O9t:before {
     background: radial-gradient(closest-side, rgba(60, 80, 229, .5), rgba(60, 80, 229, 0));
-    height: 270.62px;
-    inset-inline-start: -366.29px;
-    top: -158.02px;
-    transform: rotate(-28.33deg);
-    width: 741.72px
+    height: 270px;
+    inset-inline-start: -366px;
+    top: -158px;
+    transform: rotate(-28deg);
+    width: 742px
 }
 
 .gradientV1_oX1O9t:after {
     background: radial-gradient(closest-side, rgba(128, 55, 170, .8), rgba(128, 55, 170, 0));
-    height: 261.38px;
-    inset-inline-start: 26.65px;
-    top: -166.75px;
-    transform: rotate(27.17deg);
-    width: 480.7px
+    height: 260px;
+    inset-inline-start: 28px;
+    top: -166px;
+    transform: rotate(28deg);
+    width: 480px
 }
 
 .countdown_oX1O9t {
@@ -345,7 +343,7 @@
     align-self: center;
     display: flex;
     filter: var(--custom-countdown-filter);
-    gap: 6px
+    gap: var(--space-6)
 }
 
 .digitGroup_oX1O9t {
@@ -360,9 +358,9 @@
     background-color: var(--custom-countdown-tile-background);
     border-radius: 6px;
     box-sizing: border-box;
-    height: 32px;
+    height: var(--size-32);
     justify-content: center;
-    padding: 6px;
+    padding: var(--space-6);
     width: 22px
 }
 
@@ -374,7 +372,7 @@
 
 .colon_oX1O9t {
     flex-direction: column;
-    height: 16px;
+    height: var(--size-16);
     justify-content: space-between;
     width: 6px
 }
@@ -395,8 +393,8 @@
 }
 
 .cta_oX1O9t {
-    border-radius: 4px;
-    box-shadow: var(--custom-countdown-cta-shadow)
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-button-overlay)
 }
 
 .heroBlock_sIa-bu {
@@ -523,4 +521,4 @@
     width: 246px
 }
 
-/*# sourceMappingURL=be9bb97ff9ba0248.css.map*/
+/*# sourceMappingURL=051fda9788cefbc8.css.map*/
