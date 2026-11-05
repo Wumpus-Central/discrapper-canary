@@ -20,9 +20,14 @@ function h() {
         fetchedAt: null,
         driftBackoff: null,
         driftFetchGateUntil: null,
+        acks: new Map(),
     };
 }
-class f extends s.Ay.Store {
+function f(e, t, n) {
+    let i = e.acks.get(t);
+    return null != i && n < i;
+}
+class I extends s.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
@@ -75,20 +80,25 @@ class f extends s.Ay.Store {
         return n?.threshold == null ? 0 : Math.max(0, n.threshold - n.current);
     }
 }
-let I = new f(l.h, {
+let p = new I(l.h, {
     BADGE_DIRECTORY_FETCH_START: function (e) {
         let { userId: t } = e,
             n = A.get(t);
         null != n && (n.fetchError = !1);
     },
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
-        let { userId: t, badges: n } = e,
-            i = A.peek(t) ?? h();
-        ((i.badges = new Map(n.map((e) => [e.badge_id, e]))),
-            (i.catalogFetched = !0),
-            (i.fetchError = !1),
-            (i.fetchedAt = Date.now()),
-            A.set(t, i));
+        let { userId: t, badges: n, requestedAt: i } = e,
+            r = A.peek(t) ?? h();
+        ((r.badges = new Map(
+            n.map((e) => {
+                let t = f(r, e.badge_id, i) ? r.badges.get(e.badge_id) : null;
+                return [e.badge_id, t ?? e];
+            }),
+        )),
+            (r.catalogFetched = !0),
+            (r.fetchError = !1),
+            (r.fetchedAt = Date.now()),
+            A.set(t, r));
     },
     BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
         let { userId: t } = e,
@@ -96,26 +106,30 @@ let I = new f(l.h, {
         ((n.fetchError = !0), A.set(t, n));
     },
     BADGE_FETCH_SUCCESS: function (e) {
-        let { userId: t, badge: n } = e,
-            i = A.peek(t) ?? h();
-        (i.badges.set(n.badge_id, n), A.set(t, i));
+        let { userId: t, badge: n, requestedAt: i } = e,
+            r = A.peek(t) ?? h();
+        if (f(r, n.badge_id, i)) return !1;
+        (r.badges.set(n.badge_id, n), A.set(t, r));
     },
     BADGE_SUMMARY_FETCH_SUCCESS: function (e) {
-        let { userId: t, badge: n } = e,
-            i = A.peek(t) ?? h(),
-            r = i.badges.get(n.badge_id);
-        (i.badges.set(n.badge_id, {
+        let { userId: t, badge: n, requestedAt: i } = e,
+            r = A.peek(t) ?? h();
+        if (f(r, n.badge_id, i)) return !1;
+        let a = r.badges.get(n.badge_id);
+        (r.badges.set(n.badge_id, {
             ...n,
-            progress: n.progress ?? r?.progress,
-            info_label: n.info_label ?? r?.info_label,
+            progress: n.progress ?? a?.progress,
+            info_label: n.info_label ?? a?.info_label,
         }),
-            A.set(t, i));
+            A.set(t, r));
     },
     BADGE_ACK_SUCCESS: function (e) {
         let { userId: t, badgeId: n } = e,
-            i = A.peek(t),
-            r = i?.badges.get(n);
-        if (null == i || r?.has_updates !== !0) return !1;
+            i = A.peek(t);
+        if (null == i) return !1;
+        i.acks.set(n, Date.now());
+        let r = i.badges.get(n);
+        if (r?.has_updates !== !0) return !1;
         i.badges.set(n, { ...r, has_updates: !1, previous_acked_tier: null });
     },
     USER_PROFILE_FETCH_SUCCESS: function (e) {
@@ -143,7 +157,7 @@ n.d(
     t,
     {},
     {
-        Ay: I,
+        Ay: p,
         H5: _,
         rL: function (e) {
             return e?.requirements[0]?.threshold ?? 0;
