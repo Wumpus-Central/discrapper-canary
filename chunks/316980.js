@@ -1,62 +1,69 @@
-t.d(n, { A: () => c });
-var l = t(582128),
-    r = t(855986),
-    o = t(11044),
-    a = t(287809),
-    u = t(503275),
-    s = t(499466),
-    d = t(233470),
-    i = t(260498);
-function c(e, n, t) {
+l.d(n, { A: () => c });
+var t = l(582128),
+    r = l(855986),
+    o = l(11044),
+    u = l(287809),
+    a = l(503275),
+    s = l(499466),
+    i = l(233470),
+    d = l(260498);
+function c(e, n, l) {
     let {
             project: c,
             remixProject: v,
-            isSettled: m,
-        } = (function (e, n, t) {
+            editProject: m,
+            isSettled: f,
+        } = (function (e, n, l) {
             let o = (0, s.m0)({ guildId: n ?? void 0, location: "ConjureAppHoverCard" }) && null != n;
-            l.useEffect(() => {
-                t && null != e && (0, d.tF)([e]);
-            }, [t, e]);
-            let { project: a, isUnavailable: u } = (0, r.cf)(
-                [i.Ay],
+            t.useEffect(() => {
+                l && null != e && (0, i.tF)([e]);
+            }, [l, e]);
+            let { project: u, isUnavailable: a } = (0, r.cf)(
+                [d.Ay],
                 () => ({
-                    project: null != e ? (i.Ay.getProject(e) ?? null) : null,
-                    isUnavailable: null != e && (0, d.su)(e),
+                    project: null != e ? (d.Ay.getProject(e) ?? null) : null,
+                    isUnavailable: null != e && (0, i.su)(e),
                 }),
                 [e],
             );
-            return l.useMemo(
+            return t.useMemo(
                 () => ({
-                    project: a,
-                    remixProject: o && null != a && (0, i.H_)(a) ? a : null,
-                    isSettled: null == e || null != a || u,
+                    project: u,
+                    remixProject: o && null != u && (0, d.H_)(u) ? u : null,
+                    editProject: null != u && (0, d.PV)(u) ? u : null,
+                    isSettled: null == e || null != u || a,
                 }),
-                [a, o, e, u],
+                [u, o, e, a],
             );
-        })(e?.conjureProjectId ?? null, n, t),
-        f = c?.owner_user_id ?? null,
-        [g, p] = l.useState(null);
-    l.useEffect(() => {
-        if (!t || null == f) return;
+        })(e?.conjureProjectId ?? null, n, l),
+        g = c?.owner_user_id ?? null,
+        [p, j] = t.useState(null);
+    t.useEffect(() => {
+        if (!l || null == g) return;
         let e = !0;
         return (
             !(async function (n) {
-                (await (0, u.Y_)(n), e && null == a.default.getUser(n) && p(n));
-            })(f),
+                (await (0, a.Y_)(n), e && null == u.default.getUser(n) && j(n));
+            })(g),
             () => {
                 e = !1;
             }
         );
-    }, [t, f]);
-    let j = (0, r.bG)([a.default], () => (null != f ? (a.default.getUser(f) ?? null) : null), [f]),
-        x = j?.getAvatarURL(n, 32);
+    }, [l, g]);
+    let x = (0, r.bG)([u.default], () => (null != g ? (u.default.getUser(g) ?? null) : null), [g]),
+        C = x?.getAvatarURL(n, 32);
     return (
-        l.useEffect(() => {
-            t && null != x && (0, o.N)(x);
-        }, [t, x]),
-        l.useMemo(
-            () => ({ creator: j, remixProject: v, isSettled: null != e && m && (null == f || null != j || g === f) }),
-            [j, v, e, m, f, g],
+        t.useEffect(() => {
+            l && null != C && (0, o.N)(C);
+        }, [l, C]),
+        t.useMemo(
+            () => ({
+                creator: x,
+                remixProject: v,
+                editProject: m,
+                isSettled: null != e && f && (null == g || null != x || p === g),
+            }),
+            [x, v, m, e, f, g, p],
         )
     );
 }

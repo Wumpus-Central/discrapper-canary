@@ -1,66 +1,86 @@
-var l = t(477900);
-t(582128);
-var r = t(939249),
-    o = t(97808),
-    a = t(778712),
-    u = t(834730),
-    s = t(821609),
-    d = t(702476),
-    i = t(427262),
-    c = t(318774),
-    v = t(95264),
-    m = t(652215),
-    f = t(191850),
-    g = t(792996),
-    p = t(41799);
-t.d(
+var t = l(477900);
+l(582128);
+var r = l(939249),
+    o = l(97808),
+    u = l(778712),
+    a = l(834730),
+    s = l(825484),
+    i = l(821609),
+    d = l(152367),
+    c = l(702476),
+    v = l(427262),
+    m = l(318774),
+    f = l(32639),
+    g = l(95264),
+    p = l(652215),
+    j = l(191850),
+    x = l(792996),
+    C = l(41799);
+l.d(
     n,
     {},
     {
         A: function (e) {
-            let { creator: n, remixProject: t, guildId: j, onClose: x } = e;
-            return (0, l.jsxs)("div", {
-                className: p.qr,
+            let { applicationId: n, creator: l, remixProject: h, editProject: E, guildId: A, onClose: H } = e;
+            return (0, t.jsxs)("div", {
+                className: C.qr,
                 children: [
-                    (0, l.jsx)("div", { className: p.xX, children: (0, l.jsx)(c.Al, {}) }),
-                    (0, l.jsxs)("div", {
-                        className: p.OZ,
+                    (0, t.jsx)("div", { className: C.xX, children: (0, t.jsx)(m.Al, {}) }),
+                    (0, t.jsxs)("div", {
+                        className: C.OZ,
                         children: [
-                            null != n
-                                ? (0, l.jsxs)(r.D, {
-                                      className: p.xL,
+                            null != l
+                                ? (0, t.jsxs)(r.D, {
+                                      className: C.xL,
                                       onClick: function () {
-                                          null != n &&
-                                              (x(),
-                                              (0, d.openUserProfileModal)({
-                                                  userId: n.id,
-                                                  guildId: j ?? void 0,
-                                                  appContext: m.BRT.APP,
+                                          null != l &&
+                                              (H(),
+                                              (0, c.openUserProfileModal)({
+                                                  userId: l.id,
+                                                  guildId: A ?? void 0,
+                                                  appContext: p.BRT.APP,
                                               }));
                                       },
                                       children: [
-                                          (0, l.jsx)(o.eu, {
-                                              src: n.getAvatarURL(j, 40),
-                                              size: a._3.SIZE_20,
+                                          (0, t.jsx)(o.eu, {
+                                              src: l.getAvatarURL(A, 40),
+                                              size: u._3.SIZE_20,
                                               "aria-hidden": !0,
                                           }),
-                                          (0, l.jsx)(u.E, {
+                                          (0, t.jsx)(a.E, {
                                               variant: "body-sm/normal",
                                               color: "none",
                                               lineClamp: 1,
-                                              children: g.intl.format(f.default["6/x9LD"], { name: (0, i.mG)(n) }),
+                                              children: x.intl.format(j.default["6/x9LD"], { name: (0, v.mG)(l) }),
                                           }),
                                       ],
                                   })
-                                : (0, l.jsx)("span", {}),
-                            null != t
-                                ? (0, l.jsx)(s.$, {
-                                      variant: "secondary",
+                                : (0, t.jsx)("span", {}),
+                            null != E || null != h
+                                ? (0, t.jsxs)(s.e, {
                                       size: "sm",
-                                      text: g.intl.string(f.default["276ll6"]),
-                                      onClick: function () {
-                                          null != t && null != j && (x(), (0, v.A)(t, j));
-                                      },
+                                      wrap: !1,
+                                      children: [
+                                          null != E
+                                              ? (0, t.jsx)(i.$, {
+                                                    variant: "secondary",
+                                                    icon: d.MagicWandIcon,
+                                                    text: x.intl.string(x.t.bt75uw),
+                                                    onClick: function () {
+                                                        null != E && (H(), (0, f.A)(E, n));
+                                                    },
+                                                })
+                                              : null,
+                                          null != h
+                                              ? (0, t.jsx)(i.$, {
+                                                    variant: "secondary",
+                                                    text: x.intl.string(j.default["276ll6"]),
+                                                    onClick: function () {
+                                                        null != h && null != A && (H(), (0, g.A)(h, A));
+                                                    },
+                                                })
+                                              : null,
+                                      ],
                                   })
                                 : null,
                         ],
