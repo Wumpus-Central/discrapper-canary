@@ -260,13 +260,14 @@ class f {
                     ...i,
                 });
             }),
-            E.A.increment({
-                name: h.K.QUEST_CONTENT_IMPRESSION,
-                tags: [
-                    `quest_content:${(0, _.jO)(this.questContent)}`,
-                    `ad_creative_type:${o.p[this.entity.adCreativeType]}`,
-                ],
-            }),
+            this.entity.adCreativeType !== o.p.NO_FILL &&
+                E.A.increment({
+                    name: h.K.QUEST_CONTENT_IMPRESSION,
+                    tags: [
+                        `quest_content:${(0, _.jO)(this.questContent)}`,
+                        `ad_creative_type:${o.p[this.entity.adCreativeType]}`,
+                    ],
+                }),
             (this.isRunning = !0));
     };
     stop = (() => {
@@ -282,7 +283,7 @@ class f {
         };
     })();
 }
-function B(t) {
+function N(t) {
     let { visible: e, visibleChanged: n, focused: a, reference: r, focusedChanged: u, sourceQuestContent: l } = t,
         h = (0, R.iY)(t),
         c = t.adCreativeType === o.p.QUEST ? void 0 : t.relatedQuestId,
@@ -342,7 +343,7 @@ function B(t) {
         (0, i.jsx)(k.n.Provider, { value: y, children: t.children(r, y) })
     );
 }
-let N = s.memo(function (t) {
+let B = s.memo(function (t) {
     let e,
         n,
         i,
@@ -364,12 +365,12 @@ let N = s.memo(function (t) {
         { key: y, adContentIds: I } = (0, R.RC)(t),
         p = { ...t, focused: l, focusedChanged: h, visible: C, visibleChanged: c, reference: m };
     return "questOrQuests" in t
-        ? (0, s.createElement)(B, { ...p, key: y, adContentIds: I, adCreativeType: o.p.QUEST })
-        : (0, s.createElement)(B, { ...p, key: y, adContentIds: I, adCreativeType: t.adCreativeType });
+        ? (0, s.createElement)(N, { ...p, key: y, adContentIds: I, adCreativeType: o.p.QUEST })
+        : (0, s.createElement)(N, { ...p, key: y, adContentIds: I, adCreativeType: t.adCreativeType });
 });
 function V(t) {
-    return (0, i.jsx)(N, { ...t });
+    return (0, i.jsx)(B, { ...t });
 }
 function M(t) {
-    return (0, i.jsx)(N, { ...t });
+    return (0, i.jsx)(B, { ...t });
 }
