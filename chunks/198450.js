@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     uK: "option_o2hjBM",
     R4: "leading_o2hjBM",
     ZY: "trailing_o2hjBM",

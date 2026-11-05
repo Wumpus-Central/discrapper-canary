@@ -36,11 +36,11 @@ function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (u.test(e) || (t && I.has(e.toLowerCase())));
 }
-function T(e) {
+function g(e) {
     let t = (0, o.fb)();
     return null != t && e === `media--${t}`;
 }
-function g(e) {
+function T(e) {
     return null != e && "discord:" === e;
 }
 function S(e) {
@@ -51,7 +51,7 @@ function S(e) {
     return (
         null != i &&
         ((!!(0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname)) ||
-            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || T(t)))) ||
+            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || g(t)))) ||
             i.hostname === window.GLOBAL_ENV.CDN_HOST ||
             _.test(i.hostname))
     );
@@ -63,7 +63,7 @@ function N(e, t, n) {
         null != i &&
         (!!(
             ((0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
-            ((0, o.iT)() && T(i.hostname))
+            ((0, o.iT)() && g(i.hostname))
         ) ||
             E.test(i.hostname))
     );
@@ -82,7 +82,7 @@ function O(e) {
     return !1;
 }
 function R(e) {
-    return null != e && g(l.qg(e).protocol);
+    return null != e && T(l.qg(e).protocol);
 }
 let L = {
     URL_REGEX: f,
@@ -95,7 +95,7 @@ let L = {
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: g,
+    isDiscordProtocol: T,
     isDiscordUrl: O,
     isDiscordUri: R,
     isDiscordCdnUrl: function (e) {

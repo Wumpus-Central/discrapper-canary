@@ -1,5 +1,5 @@
-n.r(
-    (e.exports = {
+e.r(
+    (o.exports = {
         icon: "icon_qqAqr1",
         guildIconBadge: "guildIconBadge_qqAqr1",
         iconInactive: "iconInactive_qqAqr1",

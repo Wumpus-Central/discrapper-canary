@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     AS: "botPermissions_TGqBg_",
     RH: "permissionsList_TGqBg_",
     EK: "permission_TGqBg_",

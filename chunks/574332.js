@@ -16,7 +16,7 @@ var i = n(481613),
     I = n(181658),
     p = n(178253),
     m = n(811024);
-function T(e) {
+function g(e) {
     let { channelId: t, applicationId: n, intent: i, inviterUserId: r, analyticsLocations: a, commandOrigin: s } = e;
     f.h.dispatch({
         type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
@@ -28,7 +28,7 @@ function T(e) {
         commandOrigin: s,
     });
 }
-var g = n(612200),
+var T = n(612200),
     S = n(323073),
     N = n(45645),
     C = n(392054),
@@ -55,8 +55,8 @@ var g = n(612200),
     Y = n(71393),
     K = n(958590),
     $ = n(299091),
-    z = n(576705),
-    X = n(994500),
+    X = n(576705),
+    z = n(994500),
     q = n(967198),
     Z = n(287809),
     Q = n(129230),
@@ -140,19 +140,19 @@ function e_(e, t) {
                                   let i = n?.targetChannelId;
                                   if (null != i) {
                                       let e = H.A.getChannel(i);
-                                      if (null != e && z.A.can((0, B.TA)(e.type), e)) return i;
+                                      if (null != e && X.A.can((0, B.TA)(e.type), e)) return i;
                                   }
                                   if (n?.targetType == null && !(0, B.QE)(t.type) && (0, D.K)(e))
                                       return es.VV.GUILD_HOME;
                                   let r = H.A.getChannel(t.id),
                                       a = (0, B.TA)(t.type);
-                                  return z.A.can(a, r)
+                                  return X.A.can(a, r)
                                       ? t.id
                                       : (j.A.getDefaultChannel(e, !0, er.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
                               })(t, i, r),
                               p = h === er.rbe.GUILD_STAGE_VOICE,
-                              g = r?.targetChannelId != null && I === r.targetChannelId,
-                              S = g ? r?.targetMessageId : void 0,
+                              T = r?.targetChannelId != null && I === r.targetChannelId,
+                              S = T ? r?.targetMessageId : void 0,
                               N = er.BVt.CHANNEL(t, I, S);
                           (I === i.id && (0, B.QE)(h) && r?.autoJoin !== !1
                               ? (0, R.B)(() => {
@@ -180,7 +180,7 @@ function e_(e, t) {
                                                     c === o.y.EMBEDDED_APPLICATION &&
                                                         null != u &&
                                                         ((0, k.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
-                                                        T({
+                                                        g({
                                                             channelId: I,
                                                             applicationId: u,
                                                             intent: r?.intent,
@@ -196,7 +196,7 @@ function e_(e, t) {
                                 c === o.y.EMBEDDED_APPLICATION &&
                                 null != u &&
                                 ((0, k.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
-                                T({
+                                g({
                                     channelId: I,
                                     applicationId: u,
                                     intent: r?.intent,
@@ -220,7 +220,7 @@ function e_(e, t) {
                               })(
                                   i,
                                   r,
-                                  g,
+                                  T,
                               )(N));
                       })({ guildId: r.getGuildId() ?? er.ME, channel: r, options: t, analyticsLocations: i }),
                 !1))
@@ -396,14 +396,14 @@ let ef = {
             let e = (0, U.y$)(o);
             ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
-        let T = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
+        let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
             S = Z.default.getCurrentUser();
         return S?.hasFlag(er.nhx.QUARANTINED)
             ? ((0, G.default)(), new Promise((e, t) => t(Error())))
             : (f.h.dispatch({ type: "INVITE_ACCEPT", code: o }),
               E.Bo.post({
                   url: er.Rsh.INVITE(A),
-                  context: T,
+                  context: g,
                   oldFormErrors: !0,
                   body: { session_id: h, invite_instance_id: c.invite_instance_id, received_installation_id: I },
                   rejectWithError: (0, E.fT)(),
@@ -429,7 +429,7 @@ let ef = {
                   (e) => {
                       throw (
                           e.body?.code === er.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                              (0, g.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
+                              (0, T.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           e.body?.code === er.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED &&
                               (0, N.e)(m?.guild?.id),
                           f.h.dispatch({
@@ -462,7 +462,7 @@ let ef = {
             { transitionTo: n, muteOnJoinVoiceChannel: i, intent: r, forceTransition: a } = t,
             { channel: s, guild: o, inviter: c } = e;
         if (null == s && null == o && null != c) {
-            let e = X.A.isFriend(c.id) ? H.A.getDMFromUserId(c.id) : null;
+            let e = z.A.isFriend(c.id) ? H.A.getDMFromUserId(c.id) : null;
             null != e && e_(e, t);
             return;
         }

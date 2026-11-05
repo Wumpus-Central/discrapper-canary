@@ -16,8 +16,8 @@ var i,
     I = n(766034),
     p = n(958824),
     m = n(214771),
-    T = n(937724),
-    g = n(626584),
+    g = n(937724),
+    T = n(626584),
     S = n(913379),
     N = n(935564),
     C = n(111162),
@@ -143,7 +143,7 @@ class x {
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new g.A("GatewayCompressionHandler").error(
+                    return void new T.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -251,8 +251,8 @@ let B = BigInt(0),
     Y = BigInt(128),
     K = BigInt(256),
     $ = BigInt(65536),
-    z = BigInt(0x1000000),
-    X = BigInt(0x80000000),
+    X = BigInt(0x1000000),
+    z = BigInt(0x80000000),
     q = BigInt(0x100000000),
     Z = BigInt(0x10000000000),
     Q = BigInt(0x1000000000000),
@@ -444,7 +444,7 @@ let el = new (class {
                     let t = e < B,
                         n = t ? -e : e;
                     if (n < et)
-                        if ((this._expand(11), 1 === this._safeBigIntEncoding && n < X))
+                        if ((this._expand(11), 1 === this._safeBigIntEncoding && n < z))
                             n < K && !t
                                 ? ((this._u[this._i++] = 97), this._v.setBigUint64(this._i++, n, !0))
                                 : ((this._u[this._i++] = 98),
@@ -511,7 +511,7 @@ let el = new (class {
                                         ? r < K
                                             ? 7
                                             : 6
-                                        : r < z
+                                        : r < X
                                           ? 5
                                           : 4
                                     : r < Q
@@ -1023,7 +1023,7 @@ let el = new (class {
                         } catch (n) {
                             throw (
                                 D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                new T.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                     erlpackUnpackError: n,
                                     erlpackDataPreview: null != e ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: t.length,
@@ -1099,8 +1099,8 @@ n(667532);
 var eI = n(499979),
     ep = n(877166),
     em = n(365971),
-    eT = n(435558),
-    eg =
+    eg = n(435558),
+    eT =
         (((i = {}).LONGER_DISPATCH = "longer_dispatch"),
         (i.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
         (i.FIRED_DUE_TO_MAX_TIMEOUT = "fired_due_to_max_timeout"),
@@ -1141,16 +1141,16 @@ let eC = Object.freeze({
         skip_idle_callback_due_to_backgrounded: 0,
     });
 class ey {
-    _timeTracking = (0, eT.cloneDeep)(eC);
-    _timingStats = (0, eT.cloneDeep)(eO);
-    _measurements = (0, eT.cloneDeep)(eR);
-    _eventCounts = (0, eT.cloneDeep)(eL);
+    _timeTracking = (0, eg.cloneDeep)(eC);
+    _timingStats = (0, eg.cloneDeep)(eO);
+    _measurements = (0, eg.cloneDeep)(eR);
+    _eventCounts = (0, eg.cloneDeep)(eL);
     _enabled = !1;
     reset() {
-        ((this._timeTracking = (0, eT.cloneDeep)(eC)),
-            (this._timingStats = (0, eT.cloneDeep)(eO)),
-            (this._measurements = (0, eT.cloneDeep)(eR)),
-            (this._eventCounts = (0, eT.cloneDeep)(eL)));
+        ((this._timeTracking = (0, eg.cloneDeep)(eC)),
+            (this._timingStats = (0, eg.cloneDeep)(eO)),
+            (this._measurements = (0, eg.cloneDeep)(eR)),
+            (this._eventCounts = (0, eg.cloneDeep)(eL)));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -1238,7 +1238,7 @@ class eM {
         };
     }
 }
-let eU = new g.A("DispatcherWorkScheduler");
+let eU = new T.A("DispatcherWorkScheduler");
 class ew {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1255,7 +1255,7 @@ class ew {
             ((this._isBackgrounded = e),
             this._isBackgrounded &&
                 this.hasWorkScheduled &&
-                (this.telemetry.track(eg.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
+                (this.telemetry.track(eT.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
     }
     _queueIdleCallback() {
         throw Error("Not implemented");
@@ -1273,7 +1273,7 @@ class ew {
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
                 this.telemetry.measure(eN.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
-                this.telemetry.track(eg.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
+                this.telemetry.track(eT.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
                 (this._nextDispatchTimeout = eP));
             return;
@@ -1322,14 +1322,14 @@ class ew {
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eS.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eP && this.telemetry.track(eg.LONGER_DISPATCH),
+                this._nextDispatchTimeout === eP && this.telemetry.track(eT.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
                 if ((o()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
                     return (
-                        this.telemetry.track(eg.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()
+                        this.telemetry.track(eT.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()
                     );
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
@@ -1363,7 +1363,7 @@ class eF extends ew {
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        (this.telemetry.track(eg.FIRED_DUE_TO_MAX_TIMEOUT),
+                        (this.telemetry.track(eT.FIRED_DUE_TO_MAX_TIMEOUT),
                             this.telemetry.clearTime(eS.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._processWorkCallback());
                         return;
@@ -1410,7 +1410,7 @@ class eF extends ew {
     }
 }
 n(945810);
-let eB = new g.A("GatewaySocket"),
+let eB = new T.A("GatewaySocket"),
     eV = new Set(["INITIAL_GUILD", "READY"]),
     eH = new Set(["READY", "INITIAL_GUILD"]),
     ej = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
@@ -1619,8 +1619,8 @@ class e$ {
                         I = [],
                         p = [],
                         m = [],
-                        T = [],
                         g = [],
+                        T = [],
                         S = [];
                     return (
                         n.forEach((e) => {
@@ -1632,8 +1632,8 @@ class e$ {
                                 I.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 m.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                T.push(t),
-                                g.push(r),
+                                g.push(t),
+                                T.push(r),
                                 S.push(a, n));
                         }),
                         {
@@ -1653,8 +1653,8 @@ class e$ {
                             guild_emojis_size: JSON.stringify(I).length,
                             guild_threads_size: JSON.stringify(p).length,
                             guild_stickers_size: JSON.stringify(m).length,
-                            guild_events_size: JSON.stringify(g).length,
-                            guild_features_size: JSON.stringify(T).length,
+                            guild_events_size: JSON.stringify(T).length,
+                            guild_features_size: JSON.stringify(g).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -1752,8 +1752,8 @@ class e$ {
     }
 }
 n(938796);
-var ez = n(143236),
-    eX = n(873985),
+var eX = n(143236),
+    ez = n(873985),
     eq = n(811091),
     eZ =
         (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
@@ -1789,7 +1789,7 @@ var ez = n(143236),
         (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         s);
-class eQ extends ez.EventEmitter {
+class eQ extends eX.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(eZ.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1806,7 +1806,7 @@ class eQ extends ez.EventEmitter {
                 flags: d = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
-        (null != n && eX.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+        (null != n && ez.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(eZ.VOICE_STATE_UPDATE, c));
     }
@@ -2088,8 +2088,8 @@ class tn extends e5.G {
 new tn();
 var ti = n(767589),
     tr = n(193799);
-let ta = new g.A("QOS"),
-    ts = new g.A("GatewaySocket"),
+let ta = new T.A("QOS"),
+    ts = new T.A("GatewaySocket"),
     tl = new e_(),
     to = null;
 function td(e) {
@@ -2573,9 +2573,9 @@ class tf extends eQ {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, T.O)() ? I.A.getCommittedVersions() : {},
-                (0, T.O)() ? m.A.getCommittedVersions() : {},
-                !!(0, T.O)() && p.A.canUseGuildVersions(),
+                (0, g.O)() ? I.A.getCommittedVersions() : {},
+                (0, g.O)() ? m.A.getCommittedVersions() : {},
+                !!(0, g.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;

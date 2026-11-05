@@ -31,7 +31,7 @@ function m(e, t) {
         { computedPermissions: a, hasBaseAccessPermissions: n, hasSendMessagesPermission: i }
     );
 }
-function T(e) {
+function g(e) {
     return e instanceof d.YB ? e.guild_id : e.id;
 }
 n.d(
@@ -42,7 +42,7 @@ n.d(
             let n,
                 i =
                     null != (n = e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e)
-                        ? T(n)
+                        ? g(n)
                         : void 0,
                 r = (0, o.S9)(),
                 a = u.default.getId(),
@@ -50,7 +50,7 @@ n.d(
                 h = null != i ? (E.Ay.getMember(i, a)?.roles ?? []) : [],
                 I = l.A.isViewingRoles(i),
                 {
-                    computedPermissions: g,
+                    computedPermissions: T,
                     hasBaseAccessPermissions: S,
                     hasSendMessagesPermission: N,
                 } = m(n, e instanceof d.YB && e.isThread());
@@ -60,7 +60,7 @@ n.d(
                 roleIds: h,
                 isImpersonating: I,
                 commandTypes: t,
-                computedPermissions: g,
+                computedPermissions: T,
                 hasBaseAccessPermissions: S,
                 hasSendMessagesPermission: N,
                 allowNsfw: p(n, s, r, (0, c.wh)(A.A.getGuild(i))),
@@ -68,11 +68,11 @@ n.d(
         },
         MW: function (e, t) {
             let n = i.useMemo(() => (e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e), [e]),
-                r = null != n ? T(n) : void 0,
+                r = null != n ? g(n) : void 0,
                 s = (0, o.hT)(),
                 h = (0, a.bG)([u.default], () => u.default.getId()),
                 I = (0, a.bG)([f.default], () => f.default.getCurrentUser()?.nsfwAllowed ?? !1),
-                g = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, h)?.roles ?? []) : [])),
+                T = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, h)?.roles ?? []) : [])),
                 S = (0, a.bG)([l.A], () => l.A.isViewingRoles(r)),
                 N = p(
                     n,
@@ -89,7 +89,7 @@ n.d(
                 return {
                     context: n,
                     userId: h,
-                    roleIds: g,
+                    roleIds: T,
                     commandTypes: t,
                     isImpersonating: S,
                     computedPermissions: i,
@@ -97,7 +97,7 @@ n.d(
                     hasSendMessagesPermission: a,
                     allowNsfw: N,
                 };
-            }, [t, n, S, g, h, N, e]);
+            }, [t, n, S, T, h, N, e]);
         },
         ud: function (e, t) {
             return e instanceof d.YB && e?.guild_id == null
@@ -106,6 +106,6 @@ n.d(
                     : s.OL.PRIVATE_CHANNEL
                 : s.OL.GUILD;
         },
-        wz: T,
+        wz: g,
     },
 );

@@ -30,10 +30,10 @@ function m(e) {
     }
     return (A.set(e, i), f.set(e, E), h.set(e, r), !0);
 }
-function T() {
+function g() {
     (A.clear(), f.clear(), h.clear(), I.clear(), (p = null));
 }
-function g(e) {
+function T(e) {
     let {
         guild: { id: t },
     } = e;
@@ -84,9 +84,9 @@ class N extends i.Ay.Store {
     }
 }
 let C = new N(r.h, {
-    CONNECTION_OPEN: T,
-    LOGOUT: T,
-    GUILD_CREATE: g,
+    CONNECTION_OPEN: g,
+    LOGOUT: g,
+    GUILD_CREATE: T,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
@@ -95,7 +95,7 @@ let C = new N(r.h, {
         let n = new Set(p);
         (n.delete(t), (p = n));
     },
-    GUILD_UPDATE: g,
+    GUILD_UPDATE: T,
     GUILD_ROLE_CREATE: S,
     GUILD_ROLE_UPDATE: S,
     GUILD_ROLE_DELETE: S,

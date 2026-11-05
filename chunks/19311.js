@@ -10,8 +10,8 @@ var r = n(503698),
     d = n(331322),
     m = n(999784),
     p = n(792996),
-    h = n(88045),
-    C =
+    C = n(88045),
+    h =
         (((l = {})[(l.CONTINUE = 0)] = "CONTINUE"),
         (l[(l.UPGRADE = 1)] = "UPGRADE"),
         (l[(l.PURCHASE = 2)] = "PURCHASE"),
@@ -33,7 +33,7 @@ function E(e) {
             type: l,
             disabled: a,
             onClick: u,
-            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: h.C4 }),
+            icon: null == t ? void 0 : () => (0, i.jsx)(t, { color: "currentColor", className: C.C4 }),
             loading: o,
             text: r,
         };
@@ -46,7 +46,7 @@ function S(e) {
             primaryIcon: l,
             primaryCTA: r,
             primaryType: s,
-            primaryText: C,
+            primaryText: h,
             primaryTooltip: f,
             primaryDisabled: S,
             primarySubmitting: g,
@@ -65,12 +65,12 @@ function S(e) {
             children: [
                 (0, i.jsx)(m.A, {}),
                 (function () {
-                    if (null == r || null == C) return null;
+                    if (null == r || null == h) return null;
                     let e = {
                         primaryIcon: l,
                         primaryCTA: r,
                         primaryType: s,
-                        primaryText: C,
+                        primaryText: h,
                         primaryDisabled: S,
                         primarySubmitting: g,
                         onPrimary: y,
@@ -82,7 +82,7 @@ function S(e) {
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == I }), children: [I, A] }),
+        children: (0, i.jsxs)("div", { className: a()(C.eT, { [C.T$]: null == I }), children: [I, A] }),
     });
 }
-((S.CTAType = C), n.d(t, {}, { Ay: S, CY: f, ti: C }));
+((S.CTAType = h), n.d(t, {}, { Ay: S, CY: f, ti: h }));

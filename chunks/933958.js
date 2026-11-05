@@ -16,8 +16,8 @@ var r = n(855986),
     I = n(956518),
     p = n(878549),
     m = n(969151),
-    T = n(847381),
-    g = n(108959),
+    g = n(847381),
+    T = n(108959),
     S = n(487887),
     N = n(5867),
     C = n(652215);
@@ -85,10 +85,10 @@ function $(e, t) {
     let n = e.get(t);
     return (null == n && ((n = new y()), e.set(t, n)), n);
 }
-function z(e) {
+function X(e) {
     return { userId: e.user_id, sessionId: e.session_id, nonce: e.nonce };
 }
-function X(e) {
+function z(e) {
     var t;
     let n,
         {
@@ -103,11 +103,11 @@ function X(e) {
             launchId: e.launch_id,
             compositeInstanceId: e.composite_instance_id,
             location: e.location,
-            participants: e.participants.map(z),
+            participants: e.participants.map(X),
             contentClassification: e.content_classification,
         },
-        T = (0, I.Ay)(r);
-    if (null == T) return;
+        g = (0, I.Ay)(r);
+    if (null == g) return;
     let S = (0, m.H)(o),
         O = 0 === (null != S ? (v.get(S)?.getItems("all") ?? R) : R).length,
         L = (P.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
@@ -124,7 +124,7 @@ function X(e) {
             location: o,
             launchId: s,
             compositeInstanceId: l,
-            url: T,
+            url: g,
             userIds: new Set(y),
             participants: A,
             contentClassification: f,
@@ -152,7 +152,7 @@ function X(e) {
                               isStart: A,
                               referrerId: f,
                               customId: p,
-                              inviterUserId: T,
+                              inviterUserId: g,
                               proxyTicket: S,
                               renderInFramePool: O,
                           } = e,
@@ -186,14 +186,14 @@ function X(e) {
                               isStart: A,
                               participants: l,
                               embeddedActivity: P,
-                              inviterUserId: T,
+                              inviterUserId: g,
                           }));
                       let M = (0, h.f)();
                       (!0 === O
                           ? (j = N.Gd.DISCONNECTED)
                           : M
                             ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW), a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }))
-                            : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
+                            : (j = y !== u.Ay.getChannelId() || (0, T.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
                                   return `${e}:${t}`;
@@ -221,7 +221,7 @@ function X(e) {
 }
 function q(e) {
     e.activity_instances?.forEach((e) => {
-        X(e);
+        z(e);
     });
 }
 function Z(e) {
@@ -458,7 +458,7 @@ let ee = new J(a.h, {
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { instance: t } = e;
-        X(t);
+        z(t);
     },
     LOCAL_ACTIVITY_UPDATE: function (e) {
         let { activity: t } = e;
@@ -486,7 +486,7 @@ let ee = new J(a.h, {
         let r = Date.now();
         (!(function (e) {
             let { activities: t, now: n } = e,
-                i = (0, T.A)((0, A.R0)()),
+                i = (0, g.A)((0, A.R0)()),
                 r = t.reduce((e, t) => {
                     let r = t.client_platform_config[i];
                     if (null == r.label_from || null == r.label_until) return e;

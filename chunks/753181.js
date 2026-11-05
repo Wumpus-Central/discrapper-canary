@@ -79,8 +79,8 @@ class f {
 var I = n(419490),
     p = n(572164),
     m = n(680725),
-    T = n(973522),
-    g = n(967347),
+    g = n(973522),
+    T = n(967347),
     S = n(929921),
     N = n(46653),
     C = n(734057),
@@ -388,19 +388,19 @@ class j extends A.A {
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, T.wH)(y),
+                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, g.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
-                            (0, g.w)().then((T) => {
-                                let g =
-                                        null != T
+                            (0, T.w)().then((g) => {
+                                let T =
+                                        null != g
                                             ? {
-                                                  cpu_brand: T.cpu_brand,
-                                                  cpu_vendor: T.cpu_vendor,
-                                                  cpu_memory: T.cpu_memory,
-                                                  gpu_brand: T.gpu_brand,
-                                                  gpu_memory: T.gpu_memory,
+                                                  cpu_brand: g.cpu_brand,
+                                                  cpu_vendor: g.cpu_vendor,
+                                                  cpu_memory: g.cpu_memory,
+                                                  gpu_brand: g.gpu_brand,
+                                                  gpu_memory: g.gpu_memory,
                                               }
                                             : null,
                                     y =
@@ -456,7 +456,7 @@ class j extends A.A {
                                     pipewire_frames: O,
                                     x11_frames: R,
                                     videohook_backend: L,
-                                    ...g,
+                                    ...T,
                                 });
                             });
                         },
@@ -644,7 +644,7 @@ class j extends A.A {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: a } = this.streamContext,
             s = D.A.getRegion(y.A.getHostname()),
-            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, T.wH)(t);
+            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, g.wH)(t);
         return {
             channel_id: this.channelId,
             rtc_connection_id: this.getRTCConnectionId(),
@@ -774,8 +774,8 @@ var W = n(834757),
     Y = n(254057),
     K = n(723702),
     $ = n(290863),
-    z = n(55010);
-let X = {},
+    X = n(55010);
+let z = {},
     q = {},
     Z = {},
     Q = {},
@@ -883,7 +883,7 @@ let es = new ea(
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function (e) {
                   let { context: t, wants: n, userId: i, guildId: r, channelId: a } = e,
                       s = (0, G._z)({
-                          streamType: null == r ? z.U4.CALL : z.U4.GUILD,
+                          streamType: null == r ? X.U4.CALL : X.U4.GUILD,
                           guildId: r,
                           channelId: a,
                           ownerId: i,
@@ -914,7 +914,7 @@ let es = new ea(
                       } = e,
                       E = (0, G._z)({ streamType: t, guildId: n, channelId: i, ownerId: N.default.getId() });
                   if (
-                      ((X[E] = { appContext: r, analyticsLocations: _ }),
+                      ((z[E] = { appContext: r, analyticsLocations: _ }),
                       l().forEach(en, (e) => {
                           let { analyticsContext: t, isOwner: n } = e;
                           (t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart());
@@ -940,7 +940,7 @@ let es = new ea(
               },
               STREAM_STOP: function (e) {
                   let { appContext: t, streamKey: n } = e;
-                  ((X[n] = { appContext: t, analyticsLocations: void 0 }),
+                  ((z[n] = { appContext: t, analyticsLocations: void 0 }),
                       l().forEach(en, (e) => {
                           let { analyticsContext: n, isOwner: i } = e;
                           (n.setActionContext(t), i && n.trackEnd());
@@ -971,10 +971,10 @@ let es = new ea(
                               else if (platform?.name === "Safari") return "window";
                               return "unknown";
                           })(Q[t]),
-                          actionContext: X[t]?.appContext,
+                          actionContext: z[t]?.appContext,
                           numViewers: null != l ? l.length : 0,
                           goLiveModalDurationMs: J[t],
-                          analyticsLocations: X[t]?.analyticsLocations,
+                          analyticsLocations: z[t]?.analyticsLocations,
                       });
                       (a()(null != i, "Creating RTCConnection without session."),
                           (o = new j({

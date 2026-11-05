@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(310419),
     p = n(976860),
     m = n(345942),
-    T = n(734057),
-    g = n(576705),
+    g = n(734057),
+    T = n(576705),
     S = n(309010),
     N = n(129230),
     C = n(486020),
@@ -165,8 +165,8 @@ n.d(
                                 }));
                         }));
                 }, [n?.id, s, o]),
-                E = (0, d.bG)([S.Ay, T.A], () => T.A.getChannel(S.Ay.getChannelId())),
-                A = (0, d.bG)([g.A], () => g.A.can(y.xBc.SEND_MESSAGES, E)),
+                E = (0, d.bG)([S.Ay, g.A], () => g.A.getChannel(S.Ay.getChannelId())),
+                A = (0, d.bG)([T.A], () => T.A.can(y.xBc.SEND_MESSAGES, E)),
                 h = null != t,
                 f = null == t && A && (!u || null != o),
                 C = [];

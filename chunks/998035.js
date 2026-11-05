@@ -26,8 +26,8 @@ var l = n(477900),
     R = n(531536),
     T = n(404885),
     M = n(812020),
-    L = n(7133),
-    b = n(994500),
+    b = n(7133),
+    L = n(994500),
     j = n(351906),
     N = n(287809),
     k = n(957565),
@@ -36,11 +36,11 @@ var l = n(477900),
     H = n(427262),
     O = n(418200),
     F = n(482132),
-    D = n(331322),
-    B = n(834730),
+    B = n(331322),
+    D = n(834730),
     G = n(683071),
-    Z = n(696208),
-    K = n(869038),
+    K = n(696208),
+    Z = n(869038),
     W = n(793574),
     Y = n(688810),
     q = n(590180),
@@ -77,7 +77,7 @@ function er(e) {
                     isLoading: M.A.isFetching(),
                 })),
                 n = r.useMemo(() => Array.from(e.keys()).sort((e, t) => M.A.compare(e, t)), [e]),
-                l = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
+                l = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
                 i = r.useMemo(() => [...n, ...u().difference(l, n)], [l, n]);
             return {
                 isLoading: t,
@@ -93,12 +93,12 @@ function er(e) {
             };
         })(),
         { analyticsLocations: R } = (0, Y.Ay)(W.A.PREMIUM_GIFT_SUCCESS_MODAL),
-        L = (0, c.yK)([N.default], () => C.map(N.default.getUser).filter(J.Vq), [C]),
+        b = (0, c.yK)([N.default], () => C.map(N.default.getUser).filter(J.Vq), [C]),
         j = i > 1,
         k = j ? !s : null == t,
         U = 1 === C.length,
         w = C.length > 1 && null == a,
-        O = S || 0 === C.length || C.length > i || L.length !== C.length || (U ? null == t : !s) || w,
+        O = S || 0 === C.length || C.length > i || b.length !== C.length || (U ? null == t : !s) || w,
         er = v.map((e) => ({
             id: e.id,
             value: e.id,
@@ -120,21 +120,21 @@ function er(e) {
                         className: el.OA,
                         children: [
                             j
-                                ? (0, l.jsxs)(D.B, {
+                                ? (0, l.jsxs)(B.B, {
                                       gap: 8,
                                       children: [
-                                          (0, l.jsxs)(D.B, {
+                                          (0, l.jsxs)(B.B, {
                                               direction: "horizontal",
                                               align: "center",
                                               justify: "space-between",
                                               children: [
-                                                  (0, l.jsx)(B.E, {
+                                                  (0, l.jsx)(D.E, {
                                                       variant: "body-md/medium",
                                                       color: "text-strong",
                                                       "aria-hidden": !0,
                                                       children: et.intl.string(en.default.ZolTTE),
                                                   }),
-                                                  (0, l.jsx)(B.E, {
+                                                  (0, l.jsx)(D.E, {
                                                       variant: "body-md/medium",
                                                       color: "text-strong",
                                                       tabularNumbers: !0,
@@ -186,7 +186,7 @@ function er(e) {
                 ],
             }),
             (0, l.jsx)(F.UX, {
-                children: (0, l.jsx)(Z.H, {
+                children: (0, l.jsx)(K.H, {
                     actionsFullWidth: !0,
                     actions: [
                         {
@@ -219,20 +219,20 @@ function er(e) {
                                 A(!0);
                                 try {
                                     if (U) {
-                                        let e = L[0];
+                                        let e = b[0];
                                         (await (0, x.UN)(e, t), (r = { recipients: [e], failedRecipients: [] }));
                                     } else {
                                         if (null == a) throw Error("Checkout session ID must be defined");
-                                        let e = await (0, K.kW)(C, a),
+                                        let e = await (0, Z.kW)(C, a),
                                             t = new Set(e.successful_recipient_ids),
                                             n = new Set(e.failed_recipient_ids);
                                         r = {
-                                            recipients: L.filter((e) => t.has(e.id)),
-                                            failedRecipients: L.filter((e) => n.has(e.id)),
+                                            recipients: b.filter((e) => t.has(e.id)),
+                                            failedRecipients: b.filter((e) => n.has(e.id)),
                                         };
                                     }
                                 } catch {
-                                    r = { recipients: [], failedRecipients: L };
+                                    r = { recipients: [], failedRecipients: b };
                                 } finally {
                                     A(!1);
                                 }
@@ -287,13 +287,13 @@ function ec(e) {
             onClose: R,
             hasSentMessage: T,
             giftRecipient: M,
-            giftMessageError: b,
+            giftMessageError: L,
             isSendingMessage: N,
         } = e,
-        [D, B] = r.useState(h.e.Modes.DEFAULT),
+        [B, D] = r.useState(h.e.Modes.DEFAULT),
         G = (0, S.t4)((e) => e.getIsRecurringGiftCheckout()),
-        Z = (0, c.bG)([j.A], () => j.A.enabled),
-        K = T || (null != x && null != M),
+        K = (0, c.bG)([j.A], () => j.A.enabled),
+        Z = T || (null != x && null != M),
         W = g?.productLine === ea.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: Y,
@@ -307,18 +307,18 @@ function ec(e) {
     }
     function $() {
         let e;
-        return null != b
+        return null != L
             ? et.intl.string(et.t.qB8aya)
             : null == A
               ? null
               : ((e =
-                    A.interval === es.WT.MONTH ? (K ? et.t["4ZJ+7Z"] : et.t["P+z55d"]) : K ? et.t.p0pZXP : et.t.bXqk3o),
+                    A.interval === es.WT.MONTH ? (Z ? et.t["4ZJ+7Z"] : et.t["P+z55d"]) : Z ? et.t.p0pZXP : et.t.bXqk3o),
                 et.intl.format(e, { skuName: (0, w.RH)(A.id), intervalCount: A.intervalCount }));
     }
     function J() {
         let e;
         if (null == t) return null;
-        switch (D) {
+        switch (B) {
             case h.e.Modes.SUCCESS:
                 e = et.intl.string(et.t.XVvPjU);
                 break;
@@ -331,19 +331,19 @@ function ec(e) {
         return (0, l.jsx)(m.D, {
             label: et.intl.string(et.t["/dG4NA"]),
             children: (0, l.jsx)(h.e, {
-                hideMessage: Z ? et.intl.string(et.t["0RLn47"]) : null,
+                hideMessage: K ? et.intl.string(et.t["0RLn47"]) : null,
                 value: (0, U.Zq)(t),
-                mode: D,
+                mode: B,
                 text: e,
                 onCopy: (e) => {
-                    (null != g && (0, U.AK)(new L.A({ code: t, maxUses: 1 }), g),
+                    (null != g && (0, U.AK)(new b.A({ code: t, maxUses: 1 }), g),
                         (0, k.C)(
                             e,
-                            () => B(h.e.Modes.SUCCESS),
-                            () => B(h.e.Modes.ERROR),
+                            () => D(h.e.Modes.SUCCESS),
+                            () => D(h.e.Modes.ERROR),
                         ),
                         setTimeout(() => {
-                            B(h.e.Modes.DEFAULT);
+                            D(h.e.Modes.DEFAULT);
                         }, 1500));
                 },
                 supportsCopy: k.p5,
@@ -394,13 +394,13 @@ function ec(e) {
                                 children:
                                     G && null != M
                                         ? et.intl.string(en.default.yizhZK)
-                                        : null != M || (T && null == b)
+                                        : null != M || (T && null == L)
                                           ? et.intl.string(et.t.zOmK9N)
-                                          : null != b
+                                          : null != L
                                             ? et.intl.string(et.t.d1lrmU)
                                             : et.intl.string(et.t["/s1xR7"]),
                             }),
-                            (T && null != M && null == b) || K
+                            (T && null != M && null == L) || Z
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsxs)("div", {
@@ -419,7 +419,7 @@ function ec(e) {
                                 : (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsx)("div", { className: eu.I0, children: $() }),
-                                          null == b &&
+                                          null == L &&
                                               (0, l.jsx)(ed, {
                                                   giftCode: t,
                                                   onClose: () => {
@@ -493,7 +493,7 @@ function ed(e) {
             isLoading: M.A.isFetching(),
         })),
         y = Array.from(m.keys()).sort((e, t) => M.A.compare(e, t)),
-        _ = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
+        _ = (0, c.bG)([L.A], () => L.A.getFriendIDs()),
         S = u().difference(_, y),
         A = [...y, ...S],
         P = (0, c.bG)([N.default], () => N.default.filter((e) => A.includes(e.id) && !e.bot), [A]);

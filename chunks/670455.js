@@ -69,7 +69,7 @@ var f =
         (o.UNABLE_TO_ENABLE_DEVICE = "UNABLE_TO_ENABLE_DEVICE"),
         (o.DESYNC = "DESYNC"),
         o),
-    T =
+    g =
         (((d = {}).FREEFORM = "FREEFORM"),
         (d.COULD_NOT_LOAD = "COULD_NOT_LOAD"),
         (d.BLACK_SCREEN = "BLACK_SCREEN"),
@@ -82,10 +82,10 @@ var f =
         (d.DESYNC = "DESYNC"),
         (d.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
         d),
-    g = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
+    T = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
     S = (((u = {}).UNSPECIFIED = "UNSPECIFIED"), (u.SELF = "SELF"), (u.SOMEONE = "SOMEONE"), (u.OTHERS = "OTHERS"), u);
 n.d(
     t,
     { MW: () => _.iL },
-    { AO: m, CW: g, Eq: f, P0: E, Rj: ["bad", "neutral", "good"], UV: S, X: p, bO: I, fs: 864e13, h0: A, j6: T, uf: h },
+    { AO: m, CW: T, Eq: f, P0: E, Rj: ["bad", "neutral", "good"], UV: S, X: p, bO: I, fs: 864e13, h0: A, j6: g, uf: h },
 );

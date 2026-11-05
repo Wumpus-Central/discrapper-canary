@@ -6,9 +6,9 @@ n.d(t, {
     gN: () => S,
     as: () => E,
     Xr: () => C,
-    UZ: () => T,
+    UZ: () => g,
     eT: () => N,
-    mT: () => g,
+    mT: () => T,
     nO: () => m,
     A5: () => c,
     xo: () => h,
@@ -93,14 +93,14 @@ function p(e) {
 }
 function m(e) {
     let t = e[0];
-    if (null == t) return T(0);
+    if (null == t) return g(0);
     let [n] = I(t);
-    return T(h(n - f[0].hueShift));
-}
-function T(e) {
-    return r().hsl(e, 0.78, 0.72).num();
+    return g(h(n - f[0].hueShift));
 }
 function g(e) {
+    return r().hsl(e, 0.78, 0.72).num();
+}
+function T(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
 function S(e, t) {

@@ -65,7 +65,7 @@ class m extends a.Ay.Store {
         return u.has(e);
     }
 }
-let T = new m(s.h, {
+let g = new m(s.h, {
     CONNECTION_OPEN: function (e) {
         ((c = {}),
             u.clear(),
@@ -108,4 +108,4 @@ let T = new m(s.h, {
         ((c[t.guild_id] = { ...c[t.guild_id] }), delete c[t.guild_id][t.id]);
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

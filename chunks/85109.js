@@ -31,9 +31,9 @@ let c = new r.J(
     I = !1,
     p = null,
     m = new Set(),
-    T = new Map();
-function g(e) {
-    let t = T.get(e);
+    g = new Map();
+function T(e) {
+    let t = g.get(e);
     return null != t && t.size > 0;
 }
 function S(e) {
@@ -46,14 +46,14 @@ function N(e) {
     let n = e.saveData.messageId;
     null == e.saveData.dueAt ? A.add(n) : A.delete(n);
     let i = e.saveData.channelId,
-        r = T.get(i) ?? new Set();
+        r = g.get(i) ?? new Set();
     (r.add(n),
-        T.set(i, r),
+        g.set(i, r),
         null == e.message && m.add(n),
         null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(n) : E.delete(n));
 }
 function C(e) {
-    for (let t of (c.clear(), T.clear(), m.clear(), A.clear(), e)) A.add(t);
+    for (let t of (c.clear(), g.clear(), m.clear(), A.clear(), e)) A.add(t);
     ((h = null), (p = null), (I = !1), (f = A.size > 0 ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED));
 }
 function O(e) {
@@ -157,7 +157,7 @@ let y = new L(a.h, {
                 ? A.delete(n)
                 : (c.delete(t),
                   A.delete(n),
-                  T.get(i.saveData.channelId)?.delete(n),
+                  g.get(i.saveData.channelId)?.delete(n),
                   m.delete(n),
                   E.delete(n),
                   (_ = Date.now()),
@@ -201,19 +201,19 @@ let y = new L(a.h, {
     GUILD_DELETE: R,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (0 === m.size || u || !g(t.id)) return !1;
+        if (0 === m.size || u || !T(t.id)) return !1;
         u = !0;
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         if (0 === m.size || u) return !1;
         let n = !1;
-        for (let e of t) g(e.id) && ((u = !0), (n = !0));
+        for (let e of t) T(e.id) && ((u = !0), (n = !0));
         return n;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        if (0 === m.size || u || !g(t.id)) return !1;
+        if (0 === m.size || u || !T(t.id)) return !1;
         u = !0;
     },
     GUILD_MEMBER_UPDATE: function (e) {

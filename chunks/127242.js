@@ -26,7 +26,7 @@ function m(e) {
         return (I.reset(), d.default.fromTimestampWithSequence(t, I));
     }
 }
-let T = new l.J(
+let g = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = p(e);
@@ -36,9 +36,9 @@ let T = new l.J(
             return -e.timestamp;
         },
     ),
-    g = 0;
+    T = 0;
 function S(e) {
-    return T.set(e.id, e);
+    return g.set(e.id, e);
 }
 class N extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
@@ -55,7 +55,7 @@ class N extends s.Ay.Store {
         return A;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [T.values(e, !0), T.version];
+        return [g.values(e, !0), g.version];
     }
     isModuleLoggingEnabled() {
         return null != f;
@@ -129,15 +129,15 @@ let C = new N(
                           ? null == f &&
                             (f = setInterval(() => {
                                 let e = E?.getLastAssociatedPID() ?? null;
-                                E?.getNativeBreadcrumbs({ minBreadcrumbId: g }, (t) => {
+                                E?.getNativeBreadcrumbs({ minBreadcrumbId: T }, (t) => {
                                     let { breadcrumbs: n } = t;
                                     for (let t of n)
                                         !(function (e, t, n) {
                                             let i,
                                                 r = p(e);
                                             if (null == r) throw Error("Native breadcrumb has no native id");
-                                            T.size(r) > 0 ||
-                                                ((g = Math.max(g, Number(e.id))),
+                                            g.size(r) > 0 ||
+                                                ((T = Math.max(T, Number(e.id))),
                                                 S({
                                                     id: (i = m(e.timestamp)),
                                                     key: i,

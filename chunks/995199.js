@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(28863),
     p = n(417098),
     m = n(95362),
-    T = n(398590),
-    g = n(58736),
+    g = n(398590),
+    T = n(58736),
     S = n(471245),
     N = n(269880),
     C = n(25044),
@@ -324,8 +324,8 @@ function $(e) {
         ],
     });
 }
-var z = n(818348),
-    X = n(792996);
+var X = n(818348),
+    z = n(792996);
 function q() {
     let e = (0, N.A)(),
         t = (0, S.A)(),
@@ -367,19 +367,19 @@ function q() {
         );
     return (0, i.jsxs)(u.W, {
         "data-menu-migrated": !0,
-        onSelect: z.tE,
+        onSelect: X.tE,
         navId: "playground-settings-menu",
-        onClose: z.tE,
+        onClose: X.tE,
         "aria-label": "Playground Settings",
         children: [
             (0, i.jsx)(c.Dr, {
                 id: "appearance",
-                label: X.intl.string(X.t["iHH+ky"]),
+                label: z.intl.string(z.t["iHH+ky"]),
                 children: [...e.filter((e) => null != e), s],
             }),
             (0, i.jsx)(c.Dr, {
                 id: "accessibility",
-                label: X.intl.string(X.t.G0neg7),
+                label: z.intl.string(z.t.G0neg7),
                 children: t.filter((e) => null != e),
             }),
             (0, i.jsx)(c.Dr, { id: "experiments", label: "Experiments", children: n.filter((e) => null != e) }),
@@ -446,7 +446,7 @@ function ee(e) {
                           let { closePopout: t } = e;
                           return (0, i.jsxs)(u.W, {
                               "data-menu-migrated": !0,
-                              onSelect: z.tE,
+                              onSelect: X.tE,
                               navId: "playground-copy-link-menu",
                               onClose: t,
                               "aria-label": "Copy link options",
@@ -552,23 +552,23 @@ function et(e) {
             (0, i.jsxs)("div", {
                 className: B.Qs,
                 children: [
-                    (0, i.jsxs)(g.Ay, {
+                    (0, i.jsxs)(T.Ay, {
                         className: B.wx,
                         children: [
-                            null != E ? (0, i.jsx)(g.Ay.Title, { children: E }) : null,
+                            null != E ? (0, i.jsx)(T.Ay.Title, { children: E }) : null,
                             null != S
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          null != E ? (0, i.jsx)(g.Ay.Caret, { className: B.zN }) : null,
-                                          (0, i.jsx)(g.Ay.Title, { children: S }),
+                                          null != E ? (0, i.jsx)(T.Ay.Caret, { className: B.zN }) : null,
+                                          (0, i.jsx)(T.Ay.Title, { children: S }),
                                       ],
                                   })
                                 : null,
                             _?.docs != null
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(g.Ay.Divider, { className: B.zN }),
-                                          (0, i.jsx)(g.Ay.Title, {
+                                          (0, i.jsx)(T.Ay.Divider, { className: B.zN }),
+                                          (0, i.jsx)(T.Ay.Title, {
                                               children: (0, i.jsx)(I.Anchor, { href: _.docs, children: "Docs" }),
                                           }),
                                       ],
@@ -583,9 +583,9 @@ function et(e) {
                                     (0, i.jsx)(d.K, {
                                         size: "sm",
                                         icon: o.P,
-                                        "aria-label": X.intl.string(X.t.cpT0Cq),
+                                        "aria-label": z.intl.string(z.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: T.jH,
+                                        onClick: g.jH,
                                     }),
                                 ],
                             }),

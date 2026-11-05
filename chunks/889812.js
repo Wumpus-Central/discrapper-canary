@@ -25,12 +25,12 @@ var h = n(576705),
     I = n(543465),
     p = n(287809),
     m = n(927813),
-    T = n(149468),
-    g = n(746080);
+    g = n(149468),
+    T = n(746080);
 function S(e) {
     var t;
     let n, _;
-    if ((0, g.jq)(e)) return { channel_static_route: e };
+    if ((0, T.jq)(e)) return { channel_static_route: e };
     let E = r.A.getChannel(e);
     if (null == E) return { channel_id: e };
     let S = s.A.getGuild(E.guild_id);
@@ -40,7 +40,7 @@ function S(e) {
             let e = p.default.getUser(E.recipients[0]);
             null != e && (t = e.bot);
         }
-        let n = E.isDM() || E.isGroupDM() ? (0, T.g4)(E.recipients) : null;
+        let n = E.isDM() || E.isGroupDM() ? (0, g.g4)(E.recipients) : null;
         return {
             channel_id: e,
             is_app_dm: t,

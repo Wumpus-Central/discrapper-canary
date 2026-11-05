@@ -16,8 +16,8 @@ var i = n(350835),
     I = n(636889),
     p = n(427262),
     m = n(736347),
-    T = n(303911);
-let g = { key: "active_now", type: m.ik.ACTIVE_NOW },
+    g = n(303911);
+let T = { key: "active_now", type: m.ik.ACTIVE_NOW },
     S = { key: "online", type: m.ik.ONLINE },
     N = { key: "offline", type: m.ik.OFFLINE },
     C = Object.freeze([]),
@@ -60,8 +60,8 @@ function P(e) {
 function M(e, t) {
     switch (t) {
         case m.Vj.ACTIVE_NOW:
-            if ((0, T.iX)(e.status)) return N;
-            if (null != e.gameName || null != e.voiceChannelId) return g;
+            if ((0, g.iX)(e.status)) return N;
+            if (null != e.gameName || null != e.voiceChannelId) return T;
             return S;
         case m.Vj.GAME:
             if (null != e.gameName)
@@ -72,7 +72,7 @@ function M(e, t) {
                     gameAssetUrl: e.gameAssetUrl,
                     label: e.gameName ?? void 0,
                 };
-            return (0, T.iX)(e.status) ? N : S;
+            return (0, g.iX)(e.status) ? N : S;
         case m.Vj.ALPHABETICAL: {
             let t = e.name.normalize("NFD").match(/^\s*(\p{L})/u),
                 n = t?.[1].toLocaleUpperCase(o.default.locale) ?? "#";
@@ -81,10 +81,10 @@ function M(e, t) {
     }
 }
 function U(e) {
-    return R && (0, T.kR)(O) ? e.voiceChannelId : null;
+    return R && (0, g.kR)(O) ? e.voiceChannelId : null;
 }
 function w(e, t) {
-    return (0, T.fz)(e, t, !(0, T.kR)(O));
+    return (0, g.fz)(e, t, !(0, g.kR)(O));
 }
 function G(e, t) {
     return e.isListening !== t.isListening ? (e.isListening ? -1 : 1) : w(e, t);
@@ -107,7 +107,7 @@ function F(e) {
         rows: [],
         snapshot: null,
     };
-    return (D.set(t.key, t), I.Yr(b, t, T.Ut), (v = null), t);
+    return (D.set(t.key, t), I.Yr(b, t, g.Ut), (v = null), t);
 }
 function B(e, t) {
     let n = e.groupsByChannelId.get(t);
@@ -233,12 +233,12 @@ function $(e) {
         !0)
     );
 }
-function z(e) {
+function X(e) {
     let t = !1;
     for (let n of e) _.A.isFriend(n) && (t = $(n) || t);
     return t;
 }
-function X() {
+function z() {
     return W(() =>
         (function () {
             let e = !1;
@@ -304,10 +304,10 @@ let et = new ee(s.h, {
     LOGOUT: function () {
         ((O = m.Vj.ACTIVE_NOW), (R = !0), K());
     },
-    CONNECTION_OPEN_SUPPLEMENTAL: X,
-    PRESENCES_REPLACE: X,
-    GUILD_CREATE: X,
-    GUILD_DELETE: X,
+    CONNECTION_OPEN_SUPPLEMENTAL: z,
+    PRESENCES_REPLACE: z,
+    GUILD_CREATE: z,
+    GUILD_DELETE: z,
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
         return W(() => {
@@ -344,9 +344,9 @@ let et = new ee(s.h, {
     PASSIVE_UPDATE_V2: function (e) {
         let { guildId: t, voiceStates: n, removedVoiceStateUsers: i } = e;
         return W(() => {
-            let e = z(n.map((e) => e.userId));
+            let e = X(n.map((e) => e.userId));
             return (
-                (e = z(i) || e),
+                (e = X(i) || e),
                 (n.length > 0 || i.length > 0) &&
                     (e =
                         (function (e) {

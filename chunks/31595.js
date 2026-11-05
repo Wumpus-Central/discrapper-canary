@@ -17,8 +17,8 @@ var A = n(404144),
     I = n.n(f),
     p = n(811315),
     m = n.n(p),
-    T = n(119469),
-    g = n.n(T),
+    g = n(119469),
+    T = n.n(g),
     S = n(141697),
     N = n(904986);
 n(618792);
@@ -1177,20 +1177,20 @@ class j extends N.A {
                     useGraphicsCaptureDirtyRegions: I,
                     videoHookAllowDx12: p,
                     minCaptureWidth: m,
-                    minCaptureHeight: T,
+                    minCaptureHeight: g,
                 } = e.desktopDescription;
                 this.setSoundshareSource(a, s);
-                let [g, S] = null != r ? r.split(":") : ["", ""];
+                let [T, S] = null != r ? r.split(":") : ["", ""];
                 (null != r
                     ? this.logger.info(
-                          `capturing desktop (type: ${g}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
+                          `capturing desktop (type: ${T}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
                       )
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != r
                             ? (this.setDesktopEncodingOptions(i, t, n),
                               this.conn.setDesktopSourceWithOptions({
-                                  type: g,
+                                  type: T,
                                   sourceId: S,
                                   useVideoHook: l,
                                   useGraphicsCapture: c,
@@ -1205,10 +1205,10 @@ class j extends N.A {
                                   useGraphicsCaptureDirtyRegions: I,
                                   videoHookAllowDx12: p,
                                   minCaptureWidth: m,
-                                  minCaptureHeight: T,
+                                  minCaptureHeight: g,
                               }))
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource(`wumpus-${S}`, l, g));
+                        : this.conn.setDesktopSource(`wumpus-${S}`, l, T));
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
@@ -1582,12 +1582,12 @@ class j extends N.A {
         if (this.connectionState === O.$I.DISCONNECTED) return void this.off(u.y.Stats, this.handleStats);
         if (null != e) {
             if (null != this.stats) {
-                let t = g()(
+                let t = T()(
                         e.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
                     ),
-                    n = g()(
+                    n = T()(
                         this.stats.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
@@ -1754,9 +1754,9 @@ function K() {
 }
 n(667532);
 var $ = n(477900),
-    z = n(582128),
-    X = n(503698),
-    q = n.n(X),
+    X = n(582128),
+    z = n(503698),
+    q = n.n(z),
     Z = n(229209);
 let Q = new c.Vy("DirectVideo");
 function J(e) {
@@ -1770,12 +1770,12 @@ function J(e) {
                 className: l,
                 ...o
             } = e,
-            d = z.useRef(null),
-            c = z.useRef(null),
-            u = z.useRef({ width: 0, height: 0 }),
-            _ = z.useRef({ streamId: n, paused: i, onReady: r, onResize: a, onContainerResized: t });
+            d = X.useRef(null),
+            c = X.useRef(null),
+            u = X.useRef({ width: 0, height: 0 }),
+            _ = X.useRef({ streamId: n, paused: i, onReady: r, onResize: a, onContainerResized: t });
         return (
-            z.useLayoutEffect(() => {
+            X.useLayoutEffect(() => {
                 let { current: e } = d,
                     t = new (e?.ownerDocument?.defaultView ?? window).ResizeObserver((e) => {
                         if (s)
@@ -1820,10 +1820,10 @@ function J(e) {
                         (c.current = n));
                 }
             }, [s]),
-            z.useEffect(() => {
+            X.useEffect(() => {
                 ((_.current.streamId = n), (_.current.paused = i), (_.current.onReady = r), (_.current.onResize = a));
             }),
-            z.useEffect(() => {
+            X.useEffect(() => {
                 let e = c.current;
                 if (null != e)
                     if (i) null != e.srcObject && (e.srcObject = null);

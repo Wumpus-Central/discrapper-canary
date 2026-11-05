@@ -1,5 +1,5 @@
 (n.d(t, {
-    i2: () => T,
+    i2: () => g,
     fY: () => p,
     WV: () => P,
     UX: () => b,
@@ -51,13 +51,13 @@ var p =
 function m(e, t) {
     return null != e ? e : t;
 }
-var T =
+var g =
     (((r = {})[(r.TIER_1 = 1)] = "TIER_1"),
     (r[(r.TIER_2 = 2)] = "TIER_2"),
     (r[(r.TIER_3 = 3)] = "TIER_3"),
     (r[(r.TIER_4 = 4)] = "TIER_4"),
     r);
-let g = {
+let T = {
         video_player_video: { variant: "video", property: "url" },
         video_player_video_low_res: { variant: "videoLowRes", property: "url" },
         video_player_video_hls: { variant: "videoHls", property: "url" },
@@ -76,33 +76,33 @@ function N(e, t, n, i, r) {
     let A,
         f,
         p,
-        T,
+        g,
         N = !1,
         C = !1;
     switch (t) {
         case "hero":
-            T = m(e.config.assets.heroVideo, e.config.assets.hero);
+            g = m(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case "hero_image":
-            T = e.config.assets.hero;
+            g = e.config.assets.hero;
             break;
         case "hero_video": {
             let t = e.config.assets.heroVideo;
             if (null == t) return null;
-            T = t;
+            g = t;
             break;
         }
         case "quest_bar_hero":
-            T = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            g = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case "quest_bar_hero_video": {
             let t = e.config.assets.questBarHeroVideo;
             if (null == t) return null;
-            T = t;
+            g = t;
             break;
         }
         case "quest_bar_hero_image":
-            T = e.config.assets.questBarHero;
+            g = e.config.assets.questBarHero;
             break;
         case "reward": {
             let t = (0, d.sn)(e);
@@ -113,41 +113,41 @@ function N(e, t, n, i, r) {
                     ? { url: E.A, mimetype: "video/mp4", isAnimated: !0 }
                     : { url: _.A, mimetype: "video/webm", isAnimated: !0 };
             }
-            T = m(t.assetVideo, t.asset);
+            g = m(t.assetVideo, t.asset);
             break;
         }
         case "reward_image": {
             let t = (0, d.sn)(e);
             if (t.type === s.l.VIRTUAL_CURRENCY) return null;
-            T = t.asset;
+            g = t.asset;
             break;
         }
         case "game_tile": {
             let t = h(n);
             "dark" === t && null != e.config.assets.gameTileDark
-                ? (T = e.config.assets.gameTileDark)
+                ? (g = e.config.assets.gameTileDark)
                 : "light" === t && null != e.config.assets.gameTileLight
-                  ? (T = e.config.assets.gameTileLight)
-                  : ((T = e.config.assets.gameTile), (N = !0));
+                  ? (g = e.config.assets.gameTileLight)
+                  : ((g = e.config.assets.gameTile), (N = !0));
             break;
         }
         case "logo_type": {
             let t = h(n);
             "dark" === t && null != e.config.assets.logotypeDark
-                ? (T = e.config.assets.logotypeDark)
+                ? (g = e.config.assets.logotypeDark)
                 : "light" === t && null != e.config.assets.logotypeLight
-                  ? (T = e.config.assets.logotypeLight)
-                  : ((T = e.config.assets.logotype), (N = !0));
+                  ? (g = e.config.assets.logotypeLight)
+                  : ((g = e.config.assets.logotype), (N = !0));
             break;
         }
         case "cosponsor_logo_type": {
             if (null == e.config.cosponsorMetadata) return null;
             let t = h(n);
             "dark" === t && null != e.config.cosponsorMetadata.logotypeDark
-                ? (T = e.config.cosponsorMetadata.logotypeDark)
+                ? (g = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === t && null != e.config.cosponsorMetadata.logotypeLight
-                  ? (T = e.config.cosponsorMetadata.logotypeLight)
-                  : ((T = e.config.cosponsorMetadata.logotype), (N = !0));
+                  ? (g = e.config.cosponsorMetadata.logotypeLight)
+                  : ((g = e.config.cosponsorMetadata.logotype), (N = !0));
             break;
         }
         case "video_player_video":
@@ -158,15 +158,15 @@ function N(e, t, n, i, r) {
         case "video_player_transcript": {
             if (!("taskConfigV2" in e.config)) return null;
             let n = e.config.taskConfigV2.tasks[i ? a.n.WATCH_VIDEO_ON_MOBILE : a.n.WATCH_VIDEO],
-                r = g[t],
+                r = T[t],
                 s = n?.assets[r.variant]?.[r.property];
             if (null == s) return null;
-            ((T = s), (C = !0));
+            ((g = s), (C = !0));
         }
     }
     let O =
         ((l = e.id),
-        (o = T),
+        (o = g),
         (u = { theme: N ? h(n) : void 0 }),
         (A = (function (e, t, n) {
             if (t.startsWith("blob:")) return t.split("?", 1).at(0) ?? t;

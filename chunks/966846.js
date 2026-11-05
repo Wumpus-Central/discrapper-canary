@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(613057);
 let p = [I.Hi.AUTHENTICATION_FAILED, I.Hi.NOT_ENTITLED],
     m = "DispatchManagerStore",
-    T = [],
     g = [],
+    T = [],
     S = !1,
     N = null,
     C = null,
@@ -26,11 +26,11 @@ let p = [I.Hi.AUTHENTICATION_FAILED, I.Hi.NOT_ENTITLED],
     L = !1,
     y = null;
 function D() {
-    let e = { queue: T, paused: S, userActions: Array.from(R) };
+    let e = { queue: g, paused: S, userActions: Array.from(R) };
     s.w.set(m, e);
 }
 function b() {
-    let e = T[0];
+    let e = g[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
             { applicationId: i, branchId: r } = (0, _.r0)(t);
@@ -48,29 +48,29 @@ function b() {
 }
 function v(e, t) {
     let n = (0, _.gW)(e, t);
-    return T.findIndex((e) => e.comboId === n);
+    return g.findIndex((e) => e.comboId === n);
 }
 function P(e, t, n, i) {
     let r = (0, _.gW)(e, t),
         a = { comboId: r, action: i },
-        s = g.indexOf(r);
-    -1 !== s && g.splice(s, 1);
+        s = T.indexOf(r);
+    -1 !== s && T.splice(s, 1);
     let l = v(e, t);
-    (0 !== l && (n ? -1 === l && (T.push(a), b()) : (l > 0 && T.splice(l, 1), T.unshift(a), b())),
+    (0 !== l && (n ? -1 === l && (g.push(a), b()) : (l > 0 && g.splice(l, 1), g.unshift(a), b())),
         !n && S && E.A.resume(),
         D());
 }
 function M(e, t) {
     let n = (0, _.gW)(e, t),
-        i = g.indexOf(n);
-    -1 !== i && g.splice(i, 1);
+        i = T.indexOf(n);
+    -1 !== i && T.splice(i, 1);
     let r = v(e, t);
-    (-1 !== r && (T.splice(r, 1), D()), b());
+    (-1 !== r && (g.splice(r, 1), D()), b());
 }
 function U(e, t) {
     let n = (0, _.gW)(e, t),
-        i = g.indexOf(n);
-    -1 !== i && g.splice(i, 1);
+        i = T.indexOf(n);
+    -1 !== i && T.splice(i, 1);
 }
 function w() {
     let e = c.default.getToken(),
@@ -86,7 +86,7 @@ class x extends a.Ay.Store {
     static displayName = "DispatchManagerStore";
     initialize() {
         let e = s.w.get(m) ?? { queue: null, paused: null, userActions: null };
-        (null != e.queue && (T = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
+        (null != e.queue && (g = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
             null != e.paused && (S = e.paused),
             null != e.userActions && (R = new Map(Array.from(e.userActions))),
             this.waitFor(h.A, d.Ay),
@@ -94,13 +94,13 @@ class x extends a.Ay.Store {
             this.waitFor(u.A, c.default, h.A));
     }
     get activeItems() {
-        return T.map((e) => {
+        return g.map((e) => {
             let { comboId: t } = e;
             return (0, _.r0)(t);
         });
     }
     get finishedItems() {
-        return g.map(_.r0);
+        return T.map(_.r0);
     }
     get paused() {
         return S;
@@ -137,7 +137,7 @@ let k = new x(l.h, {
         let { applicationId: t, branchId: n } = e,
             i = v(t, n);
         if (i < 1) return !1;
-        (T.splice(0, 0, T.splice(i, 1)[0]), b(), S && E.A.resume(), D());
+        (g.splice(0, 0, g.splice(i, 1)[0]), b(), S && E.A.resume(), D());
     },
     DISPATCH_APPLICATION_REMOVE_FINISHED: function (e) {
         let { applicationId: t, branchId: n } = e;
@@ -149,7 +149,7 @@ let k = new x(l.h, {
         let n = S;
         ((S = t.paused), (N = t.currentTask), (C = t.nextTask));
         let i = !1;
-        ((T = T.filter((e) => {
+        ((g = g.filter((e) => {
             let { comboId: t } = e,
                 { applicationId: n, branchId: a } = (0, _.r0)(t),
                 s = h.A.getState(n, a),
@@ -163,7 +163,7 @@ let k = new x(l.h, {
                 r().isEqual(s.manifestIds, s.targetManifestIds) &&
                 r().isEqual(s.manifestIds, d)
             ) {
-                if ((g.push(t), R.has(t))) {
+                if ((T.push(t), R.has(t))) {
                     switch (R.get(t)) {
                         case "Install":
                             o.BK(n, s);

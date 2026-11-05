@@ -1,5 +1,5 @@
 (n.d(t, {
-    XH: () => g,
+    XH: () => T,
     UI: () => C,
     CD: () => S,
     wd: () => L,
@@ -34,8 +34,8 @@ let f = (0, n(945810).mj)({
 var I = n(527212),
     p = n(518477),
     m = n(652215),
-    T = n(818348);
-function g(e) {
+    g = n(818348);
+function T(e) {
     let { user: t, userProfile: n, guildMember: i, guildMemberProfile: r } = e,
         a = n ?? r,
         s = [];
@@ -58,7 +58,7 @@ function g(e) {
 function S(e) {
     let t = c.A.getStatus(e),
         n = c.A.isMobileOnline(e);
-    return t === T.cl.ONLINE && n ? `${t}-mobile` : t === T.cl.ONLINE ? `${t}-desktop` : t;
+    return t === g.cl.ONLINE && n ? `${t}-mobile` : t === g.cl.ONLINE ? `${t}-desktop` : t;
 }
 function N(e) {
     let { layout: t, userId: n, guildId: i, sessionId: r, sourceSessionId: a, showGuildProfile: s = !0 } = e,
@@ -70,8 +70,8 @@ function N(e) {
         profile_layout: t,
         profile_session_id: r,
         source_profile_session_id: a,
-        profile_properties: g({ user: l, userProfile: o?._userProfile }),
-        guild_profile_properties: g({ guildMember: u, guildMemberProfile: o?._guildMemberProfile }),
+        profile_properties: T({ user: l, userProfile: o?._userProfile }),
+        guild_profile_properties: T({ guildMember: u, guildMemberProfile: o?._guildMemberProfile }),
         profile_activity_types: c.A.getActivities(l.id)
             .map((e) => {
                 let { type: t } = e;

@@ -1,4 +1,4 @@
-n.d(t, { U: () => m, _: () => _ });
+n.d(t, { U: () => _, _: () => m });
 var i = n(477900),
     s = n(582128),
     r = n(858899),
@@ -70,7 +70,7 @@ function g(e) {
 function E(e) {
     let { achievement: t, unlocked: n } = e,
         { name: r, description: l, rarity: o, hideDescriptionUntilUnlock: E, onAction: p } = t,
-        { color: _ } = (0, a.ag)(o);
+        { color: m } = (0, a.ag)(o);
     s.useEffect(() => {
         let e = setTimeout(() => {
             h.A.playAchievementUnlockSound();
@@ -79,12 +79,12 @@ function E(e) {
             clearTimeout(e);
         };
     }, []);
-    let m = null != p && n,
-        f = m ? d.D : "div";
+    let _ = null != p && n,
+        f = _ ? d.D : "div";
     return (0, i.jsxs)(f, {
-        className: c()(A.kL, m && A.b),
+        className: c()(A.kL, _ && A.b),
         onClick: function () {
-            m && p();
+            _ && p();
         },
         children: [
             (0, i.jsx)("div", {
@@ -102,15 +102,15 @@ function E(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: A.Db, children: (0, i.jsx)(g, { color: _ }) }),
+            (0, i.jsx)("div", { className: A.Db, children: (0, i.jsx)(g, { color: m }) }),
         ],
     });
 }
 var p = n(792996);
-function _(e) {
+function m(e) {
     l.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
 }
-function m(e, t) {
+function _(e, t) {
     let n = (0, a.vM)(e);
     null != n &&
         (0, r.P0)({

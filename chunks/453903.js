@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(267102),
     p = n(712687),
     m = n(856383),
-    T = n(292036),
-    g = n(652215);
+    g = n(292036),
+    T = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
     N = r.createContext(null),
     C = new Set(["Spacebar", " ", "Enter"]);
@@ -25,7 +25,7 @@ class O extends r.Component {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
         spacing: 0,
-        loadingComponent: (0, i.jsx)(T.s, {}),
+        loadingComponent: (0, i.jsx)(g.s, {}),
         closeOnClickOutside: !0,
     };
     domElementRef = r.createRef();
@@ -81,7 +81,7 @@ class O extends r.Component {
         return e;
     }
     get closeAction() {
-        return this.props.ignoreModalClicks ? g.jej.POPOUT_CLOSE_AFTER_MODALS : g.jej.POPOUT_CLOSE;
+        return this.props.ignoreModalClicks ? T.jej.POPOUT_CLOSE_AFTER_MODALS : T.jej.POPOUT_CLOSE;
     }
     setupShowPopout() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -119,8 +119,8 @@ class O extends r.Component {
             e.ownerDocument?.removeEventListener("click", this.handleDocumentClick, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleStickyScroll, !0)),
-            this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE, this.handleEscapeClose),
-            this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(T.jej.POPOUT_CLOSE, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(T.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
             this.unsubscribeModalChanges?.(),
             (this.unsubscribeModalChanges = null));
     }
@@ -168,8 +168,8 @@ class O extends r.Component {
                 layerContext: I,
                 clickTrap: p = !1,
             } = this.props,
-            { isLoading: m, shouldShowLoadingState: T } = this.state;
-        return m && !T
+            { isLoading: m, shouldShowLoadingState: g } = this.state;
+        return m && !g
             ? null
             : (0, i.jsx)(u.Wd, {
                   layerContext: I ?? f.uY,
@@ -204,10 +204,10 @@ class O extends r.Component {
               });
     }
     handlePopoutShow = () => {
-        this.context.windowDispatch.dispatch(g.jej.POPOUT_SHOW, this.props.popoutKey);
+        this.context.windowDispatch.dispatch(T.jej.POPOUT_SHOW, this.props.popoutKey);
     };
     handlePopoutHide = () => {
-        this.context.windowDispatch.dispatch(g.jej.POPOUT_HIDE, this.props.popoutKey);
+        this.context.windowDispatch.dispatch(T.jej.POPOUT_HIDE, this.props.popoutKey);
     };
     handleSetPopoutRef = (e) => {
         null != e && (this.popoutRef.current = e);

@@ -51,8 +51,8 @@ class f {
 var I = n(572164),
     p = n(395378),
     m = n(489496),
-    T = n(31048),
-    g = n(997649),
+    g = n(31048),
+    T = n(997649),
     S = n(73153),
     N = n(311043),
     C = n(129230),
@@ -99,12 +99,12 @@ function U(e, t) {
 class w extends l.A {
     timeline;
     scheduledClips = [];
-    decisionSignals = (0, g.A)();
+    decisionSignals = (0, T.A)();
     sessionEndTimeout = new s.Ep();
     currentSessionGameKey = null;
     pendingSessionGameKey = null;
     constructor() {
-        (super(), (this.timeline = new f(Math.max(h.Ay.getSettings().clipsLength, 6e4), T.l)));
+        (super(), (this.timeline = new f(Math.max(h.Ay.getSettings().clipsLength, 6e4), g.l)));
     }
     actions = {
         CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
@@ -202,7 +202,7 @@ class w extends l.A {
     }
     calculateWindowedAutoclipRequest(e) {
         let t = e.endMs - e.startMs <= 3e4 ? (e.startMs + e.endMs + 3e4) / 2 : e.endMs,
-            n = Math.max(Math.min(t + 15e3, e.startMs + 6e4), t, (0, T.l)()),
+            n = Math.max(Math.min(t + 15e3, e.startMs + 6e4), t, (0, g.l)()),
             i = n - 6e4;
         return {
             startMs: Math.round(i),
@@ -230,7 +230,7 @@ class w extends l.A {
             }
             return i;
         }
-        let o = (0, g.p)(this.decisionSignals.gameEventData, i, a);
+        let o = (0, T.p)(this.decisionSignals.gameEventData, i, a);
         {
             let e = o.length > 0 ? Math.min(...o.map((e) => e.timestamp_ms)) : null,
                 t = i + 5e3;
@@ -247,7 +247,7 @@ class w extends l.A {
         );
     }
     process(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, T.l)();
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, g.l)();
         switch ((this.timeline.add({ signal: e, timestamp: t }), e.type)) {
             case M.Gy.MANUAL:
             case M.Gy.DISTRIBUTED:
@@ -263,8 +263,8 @@ class w extends l.A {
                     n =
                         null != (i = e.clipWindow ?? null)
                             ? this.calculateWindowedAutoclipRequest(i)
-                            : this.calculateAutoclipRequest(Math.max((0, T.l)(), t + 1e4));
-                } else n = this.calculateAutoclipRequest((0, T.l)() + 1e4);
+                            : this.calculateAutoclipRequest(Math.max((0, g.l)(), t + 1e4));
+                } else n = this.calculateAutoclipRequest((0, g.l)() + 1e4);
                 if (
                     this.scheduledClips.some(
                         (e) =>
@@ -289,7 +289,7 @@ class w extends l.A {
         this.unscheduleClip();
         let e = h.Ay.getActiveClipsSession(),
             t = this.decisionSignals;
-        ((this.decisionSignals = (0, g.A)()), await e?.finalize(t));
+        ((this.decisionSignals = (0, T.A)()), await e?.finalize(t));
     }
     async clear() {
         (M.GU.info(
@@ -319,7 +319,7 @@ class w extends l.A {
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             r = h.Ay.getActiveClipsSession();
         if (n && !this.canScheduleClipCandidate(e, r)) return;
-        let a = (0, T.l)(),
+        let a = (0, g.l)(),
             l = t?.endMs != null ? t.endMs : a,
             o = t?.startMs != null ? t.startMs : l - Number(h.Ay.getSettings().clipsLength),
             d = {
@@ -341,7 +341,7 @@ class w extends l.A {
                             clipMethod: e.type === M.Gy.MANUAL ? "manual" : "auto",
                             request: t,
                             timeline: [...this.timeline.read(t.startMs, t.endMs)],
-                            decision: { signal: e, timestamp: (0, T.l)() },
+                            decision: { signal: e, timestamp: (0, g.l)() },
                             isCandidate: n,
                             session: r,
                             decisionSignals: n ? this.decisionSignals : void 0,
@@ -456,7 +456,7 @@ class w extends l.A {
     debugCreateRankableLaughterClip() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.default.getId(),
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e4,
-            n = (0, T.l)(),
+            n = (0, g.l)(),
             i = this.decisionSignals.audioModelDataPerUser[e];
         if (null != i) {
             for (let e of i.laughterData) e.timestamp_ms >= n - t && (e.value = 1);

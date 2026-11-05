@@ -1,4 +1,4 @@
-(n.d(t, { hh: () => c, Ls: () => I, z9: () => d, uh: () => T, iW: () => S, Be: () => C, AR: () => R, CV: () => l }),
+(n.d(t, { hh: () => c, Ls: () => I, z9: () => d, uh: () => g, iW: () => S, Be: () => C, AR: () => R, CV: () => l }),
     new (class {
         callback = null;
         raise(e) {
@@ -379,7 +379,7 @@ class p {
 (n(321073), n(61090));
 var m = n(611599);
 (n(72290).env.KV_STORAGE_LOGGING, new m.Vy("Runtime"));
-class T {
+class g {
     originalPrefix;
     table;
     get prefix() {
@@ -389,7 +389,7 @@ class T {
         ((this.originalPrefix = e), (this.table = new h([e], t, n, i)));
     }
     withoutLogging() {
-        return new T(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new g(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e) {
         return this.table.get([e]);
@@ -427,10 +427,10 @@ class T {
         return this.transaction((t) => t.delete(e), `${this.prefix} delete`);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new g(t)), t);
+        return this.table.transaction((t) => e(new T(t)), t);
     }
     upgradeTransaction(e) {
-        return new g(this.table.upgradeTransaction(e));
+        return new T(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e) {
         return this.table.getManySyncUnsafe([], e);
@@ -442,22 +442,22 @@ class T {
         return { key: [e.id], data: e, generation: t };
     }
 }
-class g {
+class T {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new g(new f(e, t, n));
+        return new T(new f(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Replace;
-        return this.transaction.put(T.cell(e, null), t);
+        return this.transaction.put(g.cell(e, null), t);
     }
     putAll(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Replace;
         return this.transaction.putAll(
-            e.map((e) => T.cell(e, null)),
+            e.map((e) => g.cell(e, null)),
             t,
         );
     }

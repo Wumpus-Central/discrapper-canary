@@ -210,7 +210,7 @@ n.d(
                 u.current = e;
             });
             let m = JSON.stringify(e),
-                T = (0, i.useCallback)(() => {
+                g = (0, i.useCallback)(() => {
                     let e = u.current,
                         t = h.current ? e : { ...e, paymentSourceId: null };
                     if ("subscriptionId" in t) return ((h.current = !0), E(t));
@@ -270,7 +270,7 @@ n.d(
                               })(t).then((n) => (p(n, e, t.paymentSourceId), n));
                     }
                 }, [m, f, I, p]);
-            return A(e, T, t);
+            return A(e, g, t);
         },
         sL: function (e) {
             let t = e.subscriptionPlanPrice;

@@ -31,9 +31,9 @@ function I(e) {
     if (null == r || null == l || (!A && !I) || (0, s.bM)(r, l)) return;
     let m = o.Ay.getMember(r.id, l.id);
     if (null != m && (0, i.Lt)(m.flags ?? 0, E.D.BYPASSES_VERIFICATION)) return;
-    let T = !1;
-    I && null != m && (T = !m.roles.includes(r.verificationRoleId)) && (t = d.A.getRole(r.id, r.verificationRoleId));
-    let g = !1,
+    let g = !1;
+    I && null != m && (g = !m.roles.includes(r.verificationRoleId)) && (t = d.A.getRole(r.id, r.verificationRoleId));
+    let T = !1,
         S = !1,
         N = !1,
         C = !1,
@@ -56,7 +56,7 @@ function I(e) {
         !e &&
             ((R = +l.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
             (L = +r.joinedAt + 6e4 * _.$8o.MEMBER_AGE - Date.now()),
-            (g = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
+            (T = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
             l.isStaff() ||
                 ((S = r.verificationLevel >= _.PvD.LOW && !l.verified),
                 (N = r.verificationLevel >= _.PvD.VERY_HIGH),
@@ -69,14 +69,14 @@ function I(e) {
         y.length > 0 &&
             (n = setTimeout(() => a.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...y))),
         (f[e] = {
-            notClaimed: g,
+            notClaimed: T,
             notEmailVerified: S,
             notPhoneVerified: N,
             newAccount: C,
             newMember: O,
-            missingVerificationRole: T,
+            missingVerificationRole: g,
             verificationRole: t,
-            canChat: !(g || S || N || C || O || T),
+            canChat: !(T || S || N || C || O || g),
             accountDeadline: new Date(Date.now() + R),
             memberDeadline: new Date(Date.now() + L),
             timeoutRef: n,
@@ -89,7 +89,7 @@ function p(e) {
 function m(e) {
     (h.delete(e.guild.id), I(e.guild.id));
 }
-class T extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "GuildVerificationStore";
     initialize() {
         this.waitFor(o.Ay, d.A, c.A, u.default);
@@ -101,7 +101,7 @@ class T extends r.Ay.Store {
         return this.getCheck(e).canChat;
     }
 }
-let g = new T(a.h, {
+let T = new g(a.h, {
     CONNECTION_OPEN: function () {
         for (let e in (h.clear(), f)) p(e);
     },
@@ -127,4 +127,4 @@ let g = new T(a.h, {
         I(t);
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

@@ -21,8 +21,8 @@ function A(e) {
             onOpenChange: I,
             id: p,
             className: m,
-            reference: T,
-            overrideTargetRect: g,
+            reference: g,
+            overrideTargetRect: T,
             placement: S = "bottom",
             spacing: N = 8,
             alignmentSpacing: C,
@@ -84,18 +84,18 @@ function A(e) {
             whileElementsMounted: k
                 ? (e, t, n) =>
                       (0, l.ll)(e, t, n, {
-                          ancestorScroll: null == g,
-                          ancestorResize: null == g,
-                          layoutShift: null == g,
+                          ancestorScroll: null == T,
+                          ancestorResize: null == T,
+                          layoutShift: null == T,
                       })
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != g ? H.setPositionReference({ getBoundingClientRect: () => g }) : null != T && H.setReference(T);
-    }, [H, g, T]);
-    let z = (0, s.s9)($, { escapeKey: A }),
-        X = (0, s.Mk)($, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === G, handleClose: (0, s.iB)() }),
-        { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([z, X]),
+        null != T ? H.setPositionReference({ getBoundingClientRect: () => T }) : null != g && H.setReference(g);
+    }, [H, T, g]);
+    let X = (0, s.s9)($, { escapeKey: A }),
+        z = (0, s.Mk)($, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === G, handleClose: (0, s.iB)() }),
+        { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([X, z]),
         Q = Y.hide?.referenceHidden ? "hidden" : "visible",
         J = D ? c.sM : r.Fragment,
         ee = r.useMemo(() => ({ focus: n }), [n]);

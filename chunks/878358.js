@@ -39,14 +39,14 @@ function M(e) {
 function D() {
     return (0, i.jsx)(d._, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
 }
-function k(e) {
+function L(e) {
     let { character: t } = e;
     return (0, i.jsx)("div", {
         className: O.Ij,
         children: (0, i.jsx)(l.E, { variant: "footnote/normal", color: "text-overlay-dark", children: t }),
     });
 }
-function L(e) {
+function k(e) {
     let { icon: t, stat: a } = e;
     return (0, i.jsxs)("li", {
         className: O.N8,
@@ -77,39 +77,39 @@ function P(e) {
                     : void 0,
             [d],
         ),
-        p = r.useMemo(() => (null != l ? (0, i.jsx)(M, { src: l }) : (0, i.jsx)(k, { character: s })), [l, s]);
+        p = r.useMemo(() => (null != l ? (0, i.jsx)(M, { src: l }) : (0, i.jsx)(L, { character: s })), [l, s]);
     return (0, i.jsxs)("ul", {
         className: O.M1,
         children: [
-            (0, i.jsx)(L, {
+            (0, i.jsx)(k, {
                 icon: (0, i.jsx)(u.MicrophoneIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.voice,
             }),
-            (0, i.jsx)(L, {
+            (0, i.jsx)(k, {
                 icon: (0, i.jsx)(h.ChatIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.messages,
             }),
-            null != t.topGuildName ? (0, i.jsx)(L, { icon: p, stat: t.topGuildName }) : null,
-            (0, i.jsx)(L, {
+            null != t.topGuildName ? (0, i.jsx)(k, { icon: p, stat: t.topGuildName }) : null,
+            (0, i.jsx)(k, {
                 icon: (0, i.jsx)(f.R, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.topGuildDaysInteracted,
             }),
-            (0, i.jsx)(L, {
+            (0, i.jsx)(k, {
                 icon: (0, i.jsx)(b.n, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.reactions,
             }),
             null != t.topEmojiName && null != n
-                ? (0, i.jsx)(L, {
+                ? (0, i.jsx)(k, {
                       icon: (0, i.jsx)(m.A, { emojiId: n.emojiId, emojiName: n.emojiName, alt: "", className: O.Gl }),
                       stat: t.topEmojiName,
                   })
                 : null,
-            (0, i.jsx)(L, {
+            (0, i.jsx)(k, {
                 icon: (0, i.jsx)(_.GameControllerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.daysPlayed,
             }),
             null != t.topGameName
-                ? (0, i.jsx)(L, {
+                ? (0, i.jsx)(k, {
                       icon: null != o ? (0, i.jsx)(M, { src: o }) : (0, i.jsx)(D, {}),
                       stat: t.topGameName,
                   })
@@ -137,7 +137,7 @@ function G(e) {
         ],
     });
 }
-function H(e) {
+function U(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
         ? (0, i.jsx)(x.D, {
@@ -176,7 +176,7 @@ a.d(
                         : null,
                     null != s ? (0, i.jsx)(v.A, { character: s }) : null,
                     null != h ? (0, i.jsx)(P, { stats: h }) : null,
-                    (0, i.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
+                    (0, i.jsx)(U, { isCheckpointEnabled: u, onClick: a }),
                 ],
             });
         },

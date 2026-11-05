@@ -43,15 +43,15 @@ function I(e) {
 }
 var p = n(457421),
     m = n(4227),
-    T = n(993408),
-    g = n(442007),
+    g = n(993408),
+    T = n(442007),
     S = n(510801);
 class N {
     categories;
     collections;
     constructor(e) {
         ((this.categories = e.categories.map((e) => S.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => g.A.fromServer(e))));
+            (this.collections = e.collections.map((e) => T.A.fromServer(e))));
     }
     static fromServer(e) {
         return new N(e);
@@ -440,8 +440,8 @@ class W {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, T.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, T.f6)(e.logo_display_config)));
+            (this.bannerDisplayConfig = (0, g.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, g.f6)(e.logo_display_config)));
     }
     static fromServer(e) {
         return new W(e);
@@ -523,7 +523,7 @@ class $ {
         return new $(e);
     }
 }
-class z {
+class X {
     title;
     body;
     categoryStoreListingId;
@@ -554,10 +554,10 @@ class z {
             (this.dismissibleContentVersion = e.dismissible_content_version));
     }
     static fromServer(e) {
-        return new z(e);
+        return new X(e);
     }
 }
-class X {
+class z {
     shopBlocks;
     categories;
     constructor(e) {
@@ -571,7 +571,7 @@ class X {
                     case x.g.FEED:
                         return H.fromServer(e);
                     case x.g.WIDE_BANNER:
-                        return z.fromServer(e);
+                        return X.fromServer(e);
                     case x.g.SHELF:
                         return K.fromServer(e);
                     case x.g.COUNTDOWN_TIMER:
@@ -590,7 +590,7 @@ class X {
             (this.categories = e.categories.map((e) => S.A.fromServer(e))));
     }
     static fromServer(e) {
-        return new X(e);
+        return new z(e);
     }
 }
 var q = n(100057),
@@ -713,7 +713,7 @@ async function ea(e, t) {
 }
 function es(e) {
     let t = Date.now();
-    for (let n of (0, T.XS)([e]))
+    for (let n of (0, g.XS)([e]))
         null == h.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }
@@ -803,7 +803,7 @@ async function eu(e, t, n) {
                 unpublishedCategoriesShown: t?.includeUnpublished,
                 cacheDisabled: t?.noCache,
             }),
-            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: X.fromServer(r.body) }));
+            o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: z.fromServer(r.body) }));
     } catch (n) {
         let t = new d.LG(n);
         ((0, u.o)(t), o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t }));

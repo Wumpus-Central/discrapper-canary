@@ -16,8 +16,8 @@ var i = n(284009),
     I = n(474090),
     p = n(811091),
     m = n(551640),
-    T = n(652215),
-    g = n(682901),
+    g = n(652215),
+    T = n(682901),
     S = n(853297),
     N = n(792996);
 let C = new d.A("Scheduled Messages");
@@ -98,7 +98,7 @@ n.d(
         UF: function (e) {
             let { content: t, flags: n } = e,
                 [i, r] = (0, _.Ay)(t);
-            return i ? [r, (0, l.UI)(n ?? 0, T.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
+            return i ? [r, (0, l.UI)(n ?? 0, g.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
         },
         US: function () {
             let e = s()().startOf("hour").add(1, "hour");
@@ -126,17 +126,17 @@ n.d(
             }
         },
         ZG: function (e) {
-            let t = (0, I.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2);
+            let t = (0, I.ki)(A.default.getCurrentUser(), T.PremiumTypes.TIER_2);
             return b(R.getConfig({ location: e }), t);
         },
         _O: y,
         dx: C,
         kJ: function (e, t) {
-            return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(T.xBc.SEND_MESSAGES, e));
+            return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(g.xBc.SEND_MESSAGES, e));
         },
         q8: function (e) {
             let { entryPoint: t, isEditing: n, channelId: i } = e;
-            h.default.track(T.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, {
+            h.default.track(g.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, {
                 entry_point: t,
                 is_editing: n,
                 channel_id: i,
@@ -144,19 +144,19 @@ n.d(
         },
         vK: function (e) {
             let t = L(),
-                n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(T.xBc.SEND_MESSAGES, e)));
+                n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(g.xBc.SEND_MESSAGES, e)));
             return t && n;
         },
         yp: D,
         yz: function (e) {
             return b(
                 R.useConfig({ location: e }),
-                (0, o.bG)([A.default], () => (0, I.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2)),
+                (0, o.bG)([A.default], () => (0, I.ki)(A.default.getCurrentUser(), T.PremiumTypes.TIER_2)),
             );
         },
         zs: function (e) {
             let { content: t, flags: n } = e;
-            return (0, l.Lt)(n ?? 0, T.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
+            return (0, l.Lt)(n ?? 0, g.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
         },
     },
 );

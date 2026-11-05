@@ -15,8 +15,8 @@ function g(e) {
     var t;
     let { location: n, countGiftCardWallet: g, canFetchPaymentSources: E = !0 } = e,
         { enabled: p } = (0, d.K)({ location: n }),
-        _ = (0, s.bG)([l.default], () => l.default.getId()),
-        m = null != (t = (0, s.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
+        m = (0, s.bG)([l.default], () => l.default.getId()),
+        _ = null != (t = (0, s.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
         { hasFetchedPaymentSources: f, hasValidPaymentMethod: T } = (0, s.cf)(
             [o.A],
             () => ({
@@ -30,19 +30,19 @@ function g(e) {
             }),
             [g],
         ),
-        v = p && m,
+        v = p && _,
         N = v && E;
     return (
         i.useEffect(() => {
             !N ||
-                C === _ ||
+                C === m ||
                 o.A.hasFetchedPaymentSources ||
                 a.A.isPaymentSourceFetching ||
-                ((C = _),
+                ((C = m),
                 r.$o().then((e) => {
-                    null == e && (A = _);
+                    null == e && (A = m);
                 }));
-        }, [N, _]),
-        v && A !== _ && f && !T
+        }, [N, m]),
+        v && A !== m && f && !T
     );
 }

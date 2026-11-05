@@ -1,22 +1,22 @@
-var i = e(477900);
-e(582128);
-var r = e(477782),
-    a = e(7909),
-    l = e(406704),
-    d = e(652215),
-    s = e(792996);
-e.d(
-    n,
+var i = t(477900);
+t(582128);
+var r = t(477782),
+    l = t(7909),
+    a = t(406704),
+    d = t(652215),
+    o = t(792996);
+t.d(
+    e,
     {},
     {
-        A: function (t) {
-            if (!(0, l.H_)(t) || t.type !== d.rbe.PRIVATE_THREAD) return null;
-            let n = t.threadMetadata?.invitable ?? !0;
+        A: function (n) {
+            if (!(0, a.H_)(n) || n.type !== d.rbe.PRIVATE_THREAD) return null;
+            let e = n.threadMetadata?.invitable ?? !0;
             return (0, i.jsx)(r.sL, {
                 id: "toggle-thread-invitable",
-                label: s.intl.string(s.t.s2rpNf),
-                checked: n,
-                action: () => a.A.setInvitable(t, !n),
+                label: o.intl.string(o.t.s2rpNf),
+                checked: e,
+                action: () => l.A.setInvitable(n, !e),
             });
         },
     },

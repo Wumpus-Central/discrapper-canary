@@ -24,8 +24,8 @@ var i = n(477900),
     g = n(323384),
     E = n(625903),
     p = n(659421),
-    _ = n(329308),
-    m = n(571694),
+    m = n(329308),
+    _ = n(571694),
     f = n(47167),
     T = n(713654),
     v = n(503698),
@@ -221,7 +221,7 @@ class F extends s.Component {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
             className: V.IU,
-            children: (0, i.jsx)(l.eu, { src: (0, m.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
+            children: (0, i.jsx)(l.eu, { src: (0, _.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
         });
     }
     renderName() {
@@ -445,30 +445,30 @@ class W extends s.Component {
             t,
             { navigationRecord: n, children: s } = this.props;
         switch (n.type) {
-            case _.t1.SHOP:
+            case m.t1.SHOP:
                 ((e = k.intl.string(k.t.pWG4ze)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.SHOP_ORBS_TAB:
+            case m.t1.SHOP_ORBS_TAB:
                 ((e = k.intl.string(k.t.fG3RIg)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.QUEST_ORBS:
+            case m.t1.QUEST_ORBS:
                 ((e = `${k.intl.string(k.t.ElYQFS)} ${k.intl.string(k.t.JALI2K)}`),
                     (t = (0, i.jsx)(C.r, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.NITRO_HOME:
+            case m.t1.NITRO_HOME:
                 ((e = k.intl.string(k.t.Ipxkog)), (t = (0, i.jsx)(A.t, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.QUEST_HOME:
+            case m.t1.QUEST_HOME:
                 ((e = k.intl.string(k.t.JALI2K)), (t = (0, i.jsx)(C.r, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.APPS_HOME:
+            case m.t1.APPS_HOME:
                 ((e = k.intl.string(k.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.SETTINGS:
+            case m.t1.SETTINGS:
                 ((e = n.label ?? k.intl.string(k.t["3D5yo/"])),
                     (t = (0, i.jsx)(E.SettingsIcon, { size: "xs", color: "currentColor" })));
                 break;
-            case _.t1.PLAYGROUND:
+            case m.t1.PLAYGROUND:
                 if (((e = n.label ?? `${n.collectionId} Playground`), null != n.IconComponent)) {
                     let e = n.IconComponent;
                     t = (0, i.jsx)(e, { size: "xs", color: "currentColor" });

@@ -117,7 +117,7 @@ function m(e) {
         i = u.A.getChannel(t);
     return null != i && null != i.guild_id && p(i.guild_id, n);
 }
-function T(e) {
+function g(e) {
     let { guildId: t, data: n } = e;
     if (null == t) return !1;
     let i = [];
@@ -133,7 +133,7 @@ function T(e) {
         p(t, i)
     );
 }
-class g extends r.Ay.Store {
+class T extends r.Ay.Store {
     static displayName = "GuildMemberRequesterStore";
     initialize() {
         this.waitFor(u.A, _.Ay, E.Ay);
@@ -148,7 +148,7 @@ class g extends r.Ay.Store {
         return A.getDebugState(e);
     }
 }
-let S = new g(a.h, {
+let S = new T(a.h, {
     CONNECTION_CLOSED: h,
     CONNECTION_OPEN: h,
     CONNECTION_RESUMED: function () {
@@ -167,12 +167,12 @@ let S = new g(a.h, {
                     }));
         return n;
     },
-    SEARCH_MESSAGES_SUCCESS: T,
+    SEARCH_MESSAGES_SUCCESS: g,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, messages: n } = e;
         return p(t.guildId, n);
     },
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: T,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: g,
     LOCAL_MESSAGES_LOADED: m,
     LOAD_MESSAGES_SUCCESS: m,
     LOAD_MESSAGES_AROUND_SUCCESS: m,

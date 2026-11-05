@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(580133),
     m = n(516106),
     p = n(242874),
-    h = n(573359),
-    C = n(163074),
+    C = n(573359),
+    h = n(163074),
     f = n(742655),
     E = n(892349),
     S = n(35587),
@@ -39,19 +39,19 @@ function R(e) {
             purchaseState: e.purchaseState,
             quantity: e.quantity,
         })),
-        O = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
+        O = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
         { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, o.i)(),
         D = (0, c.S3)(),
         U = (0, u.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
-        { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
+        { enabled: W } = h.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
         V = D?.productLine === x.EZt.COLLECTIBLES,
         Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.MW)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        q = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
-        Z = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
-        z = null != U && !Z.includes(U) && null != n,
+        Z = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
+        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
+        z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == U) return;
@@ -69,7 +69,7 @@ function R(e) {
                           skuName: null != d ? (0, A.RH)(d) : "",
                       }),
                   }))
-                : q
+                : Z
                   ? (e = (0, l.jsxs)("div", {
                         className: N.kL,
                         children: [
@@ -107,7 +107,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, S, n, U, k, w, R, d, K, q, H, z, G, B, M, O, L]);
+    }, [F, $, S, n, U, k, w, R, d, K, Z, H, z, G, B, M, O, L]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({

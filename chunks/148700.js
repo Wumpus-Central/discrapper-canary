@@ -5,7 +5,7 @@ n.d(t, {
     Mr: () => et,
     jz: () => J,
     mn: () => $,
-    HW: () => K,
+    HW: () => z,
     bo: () => X,
     UB: () => W,
     lw: () => Y,
@@ -65,9 +65,9 @@ var L = n(742534),
     k = n(792996),
     B = n(105518),
     F = n(120336);
-let z =
+let K =
     "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png";
-function K(e) {
+function z(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: s } = e;
     return (0, l.jsx)(en, {
         asset: (0, l.jsx)(G.b, { className: r()(F.Sl, F.SV) }),
@@ -150,7 +150,7 @@ function Y(e) {
 function X(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         r = n.find((e) => e.skuId === a.d0),
-        o = (0, I.A)(r, !0) ?? z,
+        o = (0, I.A)(r, !0) ?? K,
         d = n.find((e) => e.skuId === a.FB);
     if (null != r)
         return (0, l.jsx)(en, {
@@ -351,7 +351,7 @@ function q(e) {
 function Z(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         s = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
-        r = (0, I.A)(s, !0) ?? z,
+        r = (0, I.A)(s, !0) ?? K,
         { available: d } = (0, b.A)(t),
         c = 3 - d,
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);

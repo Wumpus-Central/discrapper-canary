@@ -2,10 +2,10 @@ n.d(t, {
     KB: () => f,
     Fo: () => p,
     iU: () => I,
-    uW: () => T,
+    uW: () => g,
     xJ: () => m,
     Mn: () => S,
-    C$: () => g,
+    C$: () => T,
     G9: () => C,
     Yj: () => N,
 });
@@ -43,11 +43,11 @@ function p(e) {
 function m(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumPost();
 }
-function T(e) {
+function g(e) {
     return null != e && (p(e) || m(e));
 }
-function g(e) {
-    if (null == e || !(0, o.L)() || !T(d.A.getChannel(e))) return !0;
+function T(e) {
+    if (null == e || !(0, o.L)() || !g(d.A.getChannel(e))) return !0;
     let { loaded: t, firstMessage: n } = l.A.getMessage(e);
     return !t || null == n || !(0, a.y5)(n, r.LO.EXPLICIT);
 }

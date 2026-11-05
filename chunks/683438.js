@@ -25,7 +25,7 @@ n.d(
                     "aria-label": p,
                     ref: m,
                 } = e,
-                { i18n: T } = (0, a.G9)();
+                { i18n: g } = (0, a.G9)();
             return (0, i.jsx)(s.k, {
                 role: "searchbox",
                 ...f,
@@ -34,11 +34,11 @@ n.d(
                 value: t,
                 onChange: _,
                 onKeyDown: d,
-                placeholder: o ?? T.SEARCH,
+                placeholder: o ?? g.SEARCH,
                 disabled: u,
                 autoFocus: n,
                 autoComplete: h,
-                "aria-label": p ?? T.SEARCH,
+                "aria-label": p ?? g.SEARCH,
                 inputRef: m,
                 leading: r.MagnifyingGlassIcon,
                 onClear: l,

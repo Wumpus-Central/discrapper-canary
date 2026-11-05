@@ -62,8 +62,8 @@ n.d(
                 screenMessage: A,
                 hideControls: f = !1,
                 className: m,
-                innerClassName: T,
-                videoControlsClassName: g,
+                innerClassName: g,
+                videoControlsClassName: T,
                 ...S
             } = e;
             return (0, i.jsxs)("div", {
@@ -73,11 +73,11 @@ n.d(
                 className: a()(I.Hu, { [I.N7]: n }, m),
                 onDoubleClick: r,
                 children: [
-                    (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: T, children: t }, s) }),
+                    (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: g, children: t }, s) }),
                     null != A ? (0, i.jsx)(h.A, { size: "small", ...A }) : null,
                     !f &&
                         (0, i.jsxs)("div", {
-                            className: a()(I._v, g, "theme-dark"),
+                            className: a()(I._v, T, "theme-dark"),
                             children: [
                                 (0, i.jsx)("div", {
                                     className: I.K1,

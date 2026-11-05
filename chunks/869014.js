@@ -19,8 +19,8 @@ function m(e) {
         if (!(!I.has(t.overlayMethod) || p.has(t.state)) && (!e || t.state === c.AR.OVERLAY_RENDERING)) return !0;
     return !1;
 }
-let T = null,
-    g = !1,
+let g = null,
+    T = !1,
     S = !1,
     N = !1,
     C = -1,
@@ -67,19 +67,19 @@ function P() {
 function M(e) {
     try {
         let t = P();
-        if (null == t) return ((T = "OverlayNotAvailable"), v(e));
-        if (N && !l.A.isVisible()) return ((T = "MainWindowHidden"), b(e, t));
-        if (!S) return ((T = "MainWindowFocused"), v(e));
-        if (!m(!0)) return ((T = "NoOverlayRendering"), v(e));
+        if (null == t) return ((g = "OverlayNotAvailable"), v(e));
+        if (N && !l.A.isVisible()) return ((g = "MainWindowHidden"), b(e, t));
+        if (!S) return ((g = "MainWindowFocused"), v(e));
+        if (!m(!0)) return ((g = "NoOverlayRendering"), v(e));
         let n = null !== _.A.getFocusedRunningGame(),
             i = l.A.isFocused((0, o.Q2)(t));
         if ((l.A.isFocused() && A.error("Main window is reported as focused when it should not be!"), n || i))
-            return ((T = n ? "OverlayGameFocused" : "OverlayWindowFocused"), b(e, t));
+            return ((g = n ? "OverlayGameFocused" : "OverlayWindowFocused"), b(e, t));
     } catch (e) {
         (A.error("RAF redirect failed, falling back to original. Cause:", e),
             (0, d.pj)(e, u.default.getOverlayMethod(_.A.getTargetPID())));
     }
-    return ((T = "None"), v(e));
+    return ((g = "None"), v(e));
 }
 function U() {
     ((N = (0, a.ZT)("overlay_window_raf_manager")),
@@ -115,12 +115,12 @@ class F extends i.A {
         ((window.requestAnimationFrame = h), G());
     }
     getLastRAFCallbackReason() {
-        return T;
+        return g;
     }
     handleUpdateOverlayMethod() {
         if (!__OVERLAY__) {
-            if (!g && !m(!1)) {
-                ((window.requestAnimationFrame = h), (T = "NoOverlayRendering"), G());
+            if (!T && !m(!1)) {
+                ((window.requestAnimationFrame = h), (g = "NoOverlayRendering"), G());
                 return;
             }
             (A.info("Patching window RAF to use overlay window"), U(), x());
@@ -131,7 +131,7 @@ class F extends i.A {
     }
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
-        n === c.x7.OverlayRafManagerForceEnabled && ((g = t), t ? U() : S || ((window.requestAnimationFrame = h), G()));
+        n === c.x7.OverlayRafManagerForceEnabled && ((T = t), t ? U() : S || ((window.requestAnimationFrame = h), G()));
     }
     actions = {
         OVERLAY_UPDATE_OVERLAY_METHOD: this.handleUpdateOverlayMethod,

@@ -21,8 +21,8 @@ function I() {
 n(321073);
 var p = n(869431),
     m = n(594615);
-let T = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    g = T + 4,
+let g = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    T = g + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -67,9 +67,9 @@ function C(e) {
             preserveFocusPosition: !1,
             useVirtualFocus: -1 === a,
         }),
-        z = r.useRef(C);
+        X = r.useRef(C);
     (r.useLayoutEffect(() => {
-        z.current = C;
+        X.current = C;
     }, [C]),
         r.useEffect(() => {
             requestAnimationFrame(() => {
@@ -82,19 +82,19 @@ function C(e) {
                             n += r;
                         }
                         return [0, t];
-                    })(z.current, b);
+                    })(X.current, b);
                     V.current?.scrollToIndex({ section: e, row: t });
                 }
             });
         }, [B, b]));
-    let { activeIndex: X, handleKeyDown: q } = R(k, H);
+    let { activeIndex: z, handleKeyDown: q } = R(k, H);
     r.useEffect(() => {
-        if (null != X && k && -1 !== a) {
-            let e = (0, o.t$)(B, I(B, X)),
+        if (null != z && k && -1 !== a) {
+            let e = (0, o.t$)(B, I(B, z)),
                 t = document.querySelector((0, o.Mz)(e));
             t?.focus();
         }
-    }, [X, H, k, B, a]);
+    }, [z, H, k, B, a]);
     let Z = r.useCallback(
             (e, t) =>
                 N(
@@ -106,8 +106,8 @@ function C(e) {
                         })(C, e, t)
                     ],
                 )
-                    ? g
-                    : T,
+                    ? T
+                    : g,
             [H, C],
         ),
         Q = r.useCallback(
@@ -160,7 +160,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : T), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? T : g), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,

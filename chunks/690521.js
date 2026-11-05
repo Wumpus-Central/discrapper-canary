@@ -16,13 +16,13 @@ var i = n(836039),
     I = n(682901);
 let p = new Set([f.Am.PREMIUM_LOCKED, f.Am.ROLE_SUBSCRIPTION_LOCKED]),
     m = new Set([...p, f.Am.GUILD_SUBSCRIPTION_UNAVAILABLE, f.Am.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-    T = new Set([
+    g = new Set([
         f.Am.DISALLOW_CUSTOM,
         f.Am.DISALLOW_EXTERNAL,
         f.Am.GUILD_SUBSCRIPTION_UNAVAILABLE,
         f.Am.ONLY_GUILD_EMOJIS_ALLOWED,
     ]);
-function g(e) {
+function T(e) {
     switch (e.type) {
         case r.i.GUILD:
         case r.i.PACK:
@@ -32,7 +32,7 @@ function g(e) {
     }
 }
 function S(e, t) {
-    return null != e && null != t && (!g(e) || t === e.guildId);
+    return null != e && null != t && (!T(e) || t === e.guildId);
 }
 function N(e) {
     let {
@@ -53,15 +53,15 @@ function N(e) {
                       : f.Am.PREMIUM_LOCKED
                   : f.Am.DISALLOW_CUSTOM
               : f.Am.DISALLOW_EXTERNAL;
-    if (!g(t)) return null;
+    if (!T(t)) return null;
     if (u === f.EmojiIntention.GUILD_PROFILE || u === f.EmojiIntention.NO_CUSTOM_EMOJI) return f.Am.DISALLOW_CUSTOM;
     let m = null != n && (0, l.ke)(n.type),
-        T = null != n && (0, l.ay)(n.type),
+        g = null != n && (0, l.ay)(n.type),
         N = S(t, c),
         C = o.A.can(h.xBc.USE_EXTERNAL_EMOJIS, n);
     if (u === f.EmojiIntention.COMMUNITY_CONTENT)
         return N && null != t.guildId && t.available ? null : f.Am.DISALLOW_EXTERNAL;
-    if ((!(0, f.Re)(u) && !S(t, c) && !_) || ((m || T) && !N && !C)) return f.Am.DISALLOW_EXTERNAL;
+    if ((!(0, f.Re)(u) && !S(t, c) && !_) || ((m || g) && !N && !C)) return f.Am.DISALLOW_EXTERNAL;
     if (null != t.id && !t.available) return f.Am.GUILD_SUBSCRIPTION_UNAVAILABLE;
     let O = d.default.getCurrentUser();
     if (!(p || A.Ay.canUseEmojisEverywhere(O)) && !N) {
@@ -85,7 +85,7 @@ let C = {
     getURL: u.A.getURL,
     isInternalEmojiForGuildId: S,
     getEmojiUnavailableReason: N,
-    isCustomEmoji: g,
+    isCustomEmoji: T,
     getEmojiUnavailableReasons(e) {
         let { categoryEmojis: t, channel: n, guildId: i, intention: r, bypassPremiumEmojiEntitlement: a } = e,
             s = new Set(),
@@ -98,7 +98,7 @@ let C = {
                 l.push(e);
                 continue;
             }
-            (T.has(t) || l.push(e),
+            (g.has(t) || l.push(e),
                 m.has(t) &&
                     (null != e.id && s.add(e.id), p.has(t) && (d || t !== f.Am.PREMIUM_LOCKED || (d = !0), o++)));
         }
@@ -106,7 +106,7 @@ let C = {
     },
     isEmojiFiltered(e) {
         let t = N(e);
-        return T.has(t);
+        return g.has(t);
     },
     isEmojiPremiumLocked(e) {
         let t = N(e);

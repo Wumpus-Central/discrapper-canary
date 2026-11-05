@@ -15,8 +15,8 @@ var i = n(367513),
     I = n(72314),
     p = n(31717),
     m = n(580745),
-    T = n(596344),
-    g = n(218461),
+    g = n(596344),
+    T = n(218461),
     S = n(309010),
     N = n(967198),
     C = n(712687),
@@ -77,8 +77,8 @@ function b(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        T.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, 30), (t = !0)),
-        g.Ay.hasUnread(e) &&
+        g.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, 30), (t = !0)),
+        T.Ay.hasUnread(e) &&
             ((0, s.I_)(e, { object: L.ZSU.MARK_CHANNEL_AS_READ_KEYBIND, objectType: L.btD.ACK_MANUAL }), (t = !0)),
         (0, s.fb)(e),
         t

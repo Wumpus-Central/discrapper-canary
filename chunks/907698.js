@@ -23,8 +23,8 @@ let A = a.A.Millis.DAY,
     I = 30 * a.A.Millis.MINUTE,
     p = 5 * a.A.Millis.MINUTE,
     m = 12 * a.A.Millis.HOUR,
-    T = 5 * a.A.Millis.MINUTE;
-class g extends i.A {
+    g = 5 * a.A.Millis.MINUTE;
+class T extends i.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
     initialQuestHomeHeroFetchTimerId = null;
@@ -85,7 +85,7 @@ class g extends i.A {
             r = Math.floor(Math.random() * n);
         if (
             ((this.initialFetchTimerId = window.setTimeout(() => {
-                Date.now() - d.A.lastFetchedCurrentQuests <= T || this._fetch("post_connect_initial");
+                Date.now() - d.A.lastFetchedCurrentQuests <= g || this._fetch("post_connect_initial");
             }, r)),
             e)
         ) {
@@ -133,4 +133,4 @@ class g extends i.A {
         LOGOUT: this.handleLogout,
     };
 }
-let S = new g();
+let S = new T();

@@ -20,8 +20,8 @@ let d = new Map(),
     I = new Set(),
     p = !1,
     m = null,
-    T = 0,
-    g = !1,
+    g = 0,
+    T = !1,
     S = null,
     N = !1,
     C = null,
@@ -45,13 +45,13 @@ class y extends i.Ay.Store {
         return I.has(e);
     }
     hasFetchedOwnedProjects() {
-        return g;
+        return T;
     }
     isReconnectListPending() {
         return p;
     }
     getSessionGeneration() {
-        return T;
+        return g;
     }
     getMissingProjectsCheckedUserId() {
         return m;
@@ -111,7 +111,7 @@ class y extends i.Ay.Store {
 let D = new y(r.h, {
     LOGOUT: function () {
         if (
-            (T++,
+            (g++,
             0 === d.size &&
                 0 === c.size &&
                 0 === u.size &&
@@ -142,7 +142,7 @@ let D = new y(r.h, {
             O.clear(),
             R.clear(),
             (C = null),
-            (g = !1),
+            (T = !1),
             (L = "unattempted"),
             (S = null),
             (N = !1));
@@ -165,7 +165,7 @@ let D = new y(r.h, {
         c.keys()))
             d.has(e) || c.delete(e);
         for (let [e, t] of u) d.has(t) || u.delete(e);
-        ((g = !0), (L = "success"), (C = { type: "success", fetchedAt: Date.now() }));
+        ((T = !0), (L = "success"), (C = { type: "success", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
@@ -197,7 +197,7 @@ let D = new y(r.h, {
     },
     CONNECTION_OPEN: function () {
         if (0 === I.size) return !1;
-        (I.clear(), g && (p = !0));
+        (I.clear(), T && (p = !0));
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;

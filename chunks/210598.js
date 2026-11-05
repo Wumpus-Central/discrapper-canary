@@ -34,7 +34,7 @@ function m(e) {
     if (null != e && "file_id" in e)
         return { fileId: e.file_id, width: e.width, height: e.height, isAnimated: e.is_animated ?? !1 };
 }
-function T(e) {
+function g(e) {
     let t = m(e.image);
     return {
         key: h(),
@@ -44,7 +44,7 @@ function T(e) {
         hideImage: null == t || void 0,
     };
 }
-function g(e) {
+function T(e) {
     if (null != e)
         return "localDataUri" in e
             ? { filename: e.filename, original_hash: e.originalHash }
@@ -53,11 +53,11 @@ function g(e) {
 function S(e) {
     switch (e.type) {
         case a.K.COVER:
-            return { type: e.type, title: e.title, subtitle: e.subtitle, image: g(e.image) };
+            return { type: e.type, title: e.title, subtitle: e.subtitle, image: T(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
                 .filter((e) => !I(e))
-                .map((e) => ({ title: e.title, description: e.description, image: g(e.image) }));
+                .map((e) => ({ title: e.title, description: e.description, image: T(e.image) }));
             return { type: e.type, fields: t };
         }
         default:
@@ -176,7 +176,7 @@ n.d(
                                           image: m(e.image),
                                       };
                                   case a.K.FIELDS:
-                                      return { type: e.type, fields: e.fields.map(T) };
+                                      return { type: e.type, fields: e.fields.map(g) };
                                   default:
                                       return;
                               }

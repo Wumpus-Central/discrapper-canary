@@ -17,8 +17,8 @@ var i,
     p = n(446600),
     m = n(105530);
 n(855986);
-var T = n(71393),
-    g = n(488926),
+var g = n(71393),
+    T = n(488926),
     S =
         (((i = {}).SPEAKER = "SPEAKER"),
         (i.AUDIENCE = "AUDIENCE"),
@@ -86,12 +86,12 @@ class y {
                 comparator: (0, h.hz)(r, S),
                 voiceState: r,
                 role: (function (e, t) {
-                    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [T.A, u.Ay];
+                    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [g.A, u.Ay];
                     if (null == e || null == t) return null;
                     let r = n.getGuild(e);
                     if (null == r) return null;
                     let a = i.getMember(r.id, t);
-                    return null == a ? null : g.li(r, a);
+                    return null == a ? null : T.li(r, a);
                 })(this.guildId, e),
                 speaker: I.Ay.isSpeaker(e, this.channelId),
                 member: d,

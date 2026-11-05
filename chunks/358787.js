@@ -122,8 +122,8 @@ var w = n(327479),
     z = n(601107),
     H = n(704277);
 let Y = new T.A("SubscriptionHeader.tsx"),
-    W = { page: X.liQ.USER_SETTINGS, section: X.JJy.SETTINGS_PREMIUM, object: X.ZSU.CARD },
-    K = [X.Dmq.PAUSED, X.Dmq.PAUSE_PENDING, X.Dmq.BILLING_RETRY];
+    K = { page: X.liQ.USER_SETTINGS, section: X.JJy.SETTINGS_PREMIUM, object: X.ZSU.CARD },
+    W = [X.Dmq.PAUSED, X.Dmq.PAUSE_PENDING, X.Dmq.BILLING_RETRY];
 function Z(e) {
     let {
         wordMark: t,
@@ -227,7 +227,7 @@ function J() {
         subscriptionInfo: (0, i.jsx)("div", { className: H.MS, children: U.intl.string(U.t.R0GJL2) }),
         buttons: (0, i.jsx)(w.A, {
             className: H.au,
-            onClick: () => (0, p.A)({ subscriptionTier: B.pe.TIER_1, analyticsLocations: e, analyticsObject: W }),
+            onClick: () => (0, p.A)({ subscriptionTier: B.pe.TIER_1, analyticsLocations: e, analyticsObject: K }),
             text: U.intl.string(U.t["/ygMUY"]),
         }),
         statusClasses: { [H.aS]: !0 },
@@ -291,7 +291,7 @@ let $ = function (e) {
                     initialPlanId: t.premiumPlanIdFromItems,
                     analyticsLocations: G,
                     analyticsLocation: P,
-                    analyticsObject: W,
+                    analyticsObject: K,
                     subscription: t,
                 });
             else {
@@ -345,13 +345,13 @@ let $ = function (e) {
         }
     }
     function eo() {
-        K.includes(t.status) && null != t.pauseEndsAt
+        W.includes(t.status) && null != t.pauseEndsAt
             ? t.status === X.Dmq.PAUSED && t.pauseReason !== z.qf.USER_TEMPORARY_BAN
                 ? (0, p.A)({
                       initialPlanId: t.premiumPlanIdFromItems,
                       analyticsLocations: G,
                       analyticsLocation: P,
-                      analyticsObject: W,
+                      analyticsObject: K,
                       subscription: t,
                       skipConfirm: !0,
                   })
@@ -396,7 +396,7 @@ let $ = function (e) {
         case B.PremiumTypes.TIER_2:
             eE = (0, i.jsx)(I, { className: H.V6, "aria-label": U.intl.string(U.t.lpNrPu) });
     }
-    let eh = K.includes(t.status) && !J ? q : Z;
+    let eh = W.includes(t.status) && !J ? q : Z;
     return (0, i.jsx)(eh, {
         wordMark: eE,
         subscriptionInfo:
@@ -444,7 +444,7 @@ let $ = function (e) {
                                 (0, p.A)({
                                     analyticsLocations: G,
                                     analyticsLocation: P,
-                                    analyticsObject: W,
+                                    analyticsObject: K,
                                     subscription: t,
                                 });
                             },

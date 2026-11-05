@@ -33,7 +33,7 @@ function m(e) {
         null != t && (0, a.pX)(f.BVt.CHANNEL(e, t.id));
     }
 }
-function T(e, t, n) {
+function g(e, t, n) {
     let i = new Set(_.Ay.getOptedInChannels(e));
     (t.forEach((e) => i.add(e)), n.forEach((e) => i.delete(e)), p(e, { type: h._.NEW_MEMBER, optInChannels: i }));
 }
@@ -41,7 +41,7 @@ n.d(
     t,
     {},
     {
-        $u: T,
+        $u: g,
         IA: p,
         ID: function (e, t) {
             let n, i;
@@ -54,7 +54,7 @@ n.d(
                     let r = [...l.A.getSelectableChannelIds(e), ...l.A.getVocalChannelIds(e)].filter(
                         (e) => !n.includes(e),
                     );
-                    return (r.length > 0 && T(e, r, []), !1);
+                    return (r.length > 0 && g(e, r, []), !1);
                 }));
             let r = {};
             for (let n of d.A.getManyRoles(e, t)) r[n.id] = n;

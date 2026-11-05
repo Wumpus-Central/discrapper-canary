@@ -89,7 +89,7 @@ function m(e) {
             : n.removeReaction(r, s, i);
     });
 }
-class T extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "SearchMessageStore";
     initialize() {
         this.waitFor(o.default, d.A, c.A);
@@ -131,7 +131,7 @@ class T extends i.Ay.Store {
         return E.has(e);
     }
 }
-let g = new T(r.h, {
+let T = new g(r.h, {
     SEARCH_MESSAGES_START: function (e) {
         e.ids.forEach((e) => {
             I(e).handleSearchStart();
@@ -200,4 +200,4 @@ let g = new T(r.h, {
         ((E = new Map()), (A = new Map()), (h = new Map()));
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

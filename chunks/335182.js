@@ -55,8 +55,8 @@ function m(e, t) {
     let i = t.get(n[0]);
     return null == i || i > e.timestamp_ms ? null : i;
 }
-var T = n(598213);
-let g = new Map([
+var g = n(598213);
+let T = new Map([
         [i.C.Kill, { beforeMs: 3e3, afterMs: 2e3 }],
         [i.C.Death, { beforeMs: 3e3, afterMs: 2e3 }],
         [i.C.MultiKill, { beforeMs: 3e3, afterMs: 2e3 }],
@@ -89,7 +89,7 @@ function y(e) {
     return 1e3 * Math.floor(e / 1e3);
 }
 function D(e) {
-    let t = (0, T.lQ)(e.clip);
+    let t = (0, g.lQ)(e.clip);
     return { startMs: t + e.videoStartMs, endMs: t + e.videoEndMs };
 }
 function b(e) {
@@ -164,7 +164,7 @@ let w = {
             applicationIds: a.E.applicationIds,
             kind: "custom",
             build: function (e, t, n) {
-                let r = { ...T.yC, fps: t.fps, audioTrackLabel: "0:all", blendMs: 300 },
+                let r = { ...g.yC, fps: t.fps, audioTrackLabel: "0:all", blendMs: 300 },
                     a = (function (e) {
                         let t,
                             n,
@@ -242,7 +242,7 @@ let w = {
                             );
                         let u = (function (e, t) {
                                 let n = e.startMs + 23e3,
-                                    r = [(0, T.Wp)({ startMs: n, endMs: n }, S, { label: `r${e.number} context` })],
+                                    r = [(0, g.Wp)({ startMs: n, endMs: n }, S, { label: `r${e.number} context` })],
                                     a = R(t, n, !1),
                                     s = R(t, e.endMs, !0),
                                     l = t.slice(a, s),
@@ -251,23 +251,23 @@ let w = {
                                 for (let t of l) {
                                     let n = t.eventName;
                                     if (null == n) continue;
-                                    let a = g.get(n);
+                                    let a = T.get(n);
                                     if (null == a) continue;
                                     let s = `r${e.number} ${n}`;
                                     if (n === i.C.MultiKill) {
                                         if (!d.has(t)) continue;
                                         let e = m(t, o) ?? t.timestamp_ms;
-                                        r.push((0, T.Wp)({ startMs: e, endMs: t.timestamp_ms }, a, { label: s }));
+                                        r.push((0, g.Wp)({ startMs: e, endMs: t.timestamp_ms }, a, { label: s }));
                                     } else
                                         r.push(
-                                            (0, T.Wp)({ startMs: t.timestamp_ms, endMs: t.timestamp_ms }, a, {
+                                            (0, g.Wp)({ startMs: t.timestamp_ms, endMs: t.timestamp_ms }, a, {
                                                 label: s,
                                             }),
                                         );
                                 }
                                 return (
                                     r.push(
-                                        (0, T.Wp)({ startMs: e.endMs, endMs: e.endMs }, N, {
+                                        (0, g.Wp)({ startMs: e.endMs, endMs: e.endMs }, N, {
                                             label: `r${e.number} round end`,
                                         }),
                                     ),
@@ -275,15 +275,15 @@ let w = {
                                     r
                                 );
                             })(c.round, a),
-                            _ = (0, T.X0)(u),
-                            { resolved: E, skipped: A } = (0, T.z2)(_, e.clipCandidates);
+                            _ = (0, g.X0)(u),
+                            { resolved: E, skipped: A } = (0, g.z2)(_, e.clipCandidates);
                         return 0 === E.length
                             ? (h.GU.info(
                                   `automontage: no candidate clip covers any of the ${_.length} sections of best round ${c.round.number} (candidates=${e.clipCandidates.length}) - skipping round summary`,
                               ),
                               null)
                             : {
-                                  durationMs: (0, T.s_)(E, e.config.blendMs),
+                                  durationMs: (0, g.s_)(E, e.config.blendMs),
                                   resolved: E,
                                   skipped: A,
                                   bestRound: c,
@@ -471,12 +471,12 @@ function W(e) {
                                       a = e.clipWindow?.endMs ?? e.timestamp_ms;
                                   f(r, a) && l.push({ startMs: r, endMs: a, kind: "game", padding: n });
                               }
-                              let T = new Map();
+                              let g = new Map();
                               for (let e of _) {
                                   let t = i[`audio:${e}`];
-                                  null != t && T.set(e, t);
+                                  null != t && g.set(e, t);
                               }
-                              if (T.size > 0)
+                              if (g.size > 0)
                                   for (let e of (function (e, t, n, i) {
                                       let { includeOtherUsers: r, laughterThreshold: a, shoutingThreshold: s } = n;
                                       if (0 === i.length) return [];
@@ -515,7 +515,7 @@ function W(e) {
                                           },
                                           p = l.map((t) => h(e[t].rmsData)),
                                           m = (0, u.kV)(p, f),
-                                          T = [];
+                                          g = [];
                                       for (let t of i) {
                                           let n = l.map((n) => h(e[n][E[t]])),
                                               i = (0, u.br)(n, f, I[t]),
@@ -534,7 +534,7 @@ function W(e) {
                                                   return t;
                                               })(r[n]))
                                                   i.endChunk - i.startChunk + 1 < f.minConsecutiveChunks ||
-                                                      T.push({
+                                                      g.push({
                                                           kind: t,
                                                           userId: e,
                                                           startMs: o + 1e3 * i.startChunk,
@@ -542,9 +542,9 @@ function W(e) {
                                                       });
                                           });
                                       }
-                                      return (T.sort((e, t) => e.startMs - t.startMs), T);
-                                  })(t, r, s, Array.from(T.keys()))) {
-                                      let t = T.get(e.kind);
+                                      return (g.sort((e, t) => e.startMs - t.startMs), g);
+                                  })(t, r, s, Array.from(g.keys()))) {
+                                      let t = g.get(e.kind);
                                       null != t &&
                                           f(e.startMs, e.endMs) &&
                                           l.push({ startMs: e.startMs, endMs: e.endMs, kind: "audio", padding: t });
@@ -569,7 +569,7 @@ function W(e) {
                               ),
                               null
                           );
-                      let g =
+                      let T =
                               t.startOnSilence || t.endOnSilence
                                   ? ((r = (function (e) {
                                         let t = new Set(),
@@ -625,7 +625,7 @@ function W(e) {
                                     (a = n.localUserId),
                                     t.includeOtherUsers ? [...r] : r.filter((e) => e.userId === a))
                                   : [],
-                          S = { ...T.yC, fps: n.fps, blendMs: t.blendMs },
+                          S = { ...g.yC, fps: n.fps, blendMs: t.blendMs },
                           N = (function (e) {
                               let {
                                       selected: t,
@@ -641,7 +641,7 @@ function W(e) {
                                   c = (function (e, t, n, i) {
                                       let r = [];
                                       for (let a of e) {
-                                          let e = (0, T.Wp)(a, a.padding, {
+                                          let e = (0, g.Wp)(a, a.padding, {
                                               hasGame: "game" === a.kind,
                                               hasAudio: "audio" === a.kind,
                                           });
@@ -678,13 +678,13 @@ function W(e) {
                                       a,
                                       s,
                                   ),
-                                  u = (0, T.X0)(c),
+                                  u = (0, g.X0)(c),
                                   _ = l ? u.filter((e) => !0 === e.hasGame && !0 === e.hasAudio) : u,
                                   E = [],
                                   f = [];
                               for (let e of _) e.srcEndMs - e.srcStartMs < 1e3 ? E.push(e) : f.push(e);
-                              let { resolved: I, skipped: p } = (0, T.z2)(f, n),
-                                  { kept: m, removed: g } = (function (e, t, n, i) {
+                              let { resolved: I, skipped: p } = (0, g.z2)(f, n),
+                                  { kept: m, removed: T } = (function (e, t, n, i) {
                                       let r = [...e],
                                           a = e
                                               .map((e, t) => {
@@ -708,17 +708,17 @@ function W(e) {
                                       );
                                   })(I, i.blendMs, o, d);
                               return {
-                                  durationMs: (0, T.s_)(m, i.blendMs),
+                                  durationMs: (0, g.s_)(m, i.blendMs),
                                   resolved: m,
-                                  skipped: [...E, ...p, ...g.map(b)],
+                                  skipped: [...E, ...p, ...T.map(b)],
                                   requestedSectionCount: _.length,
-                                  trimmedSectionCount: g.length,
+                                  trimmedSectionCount: T.length,
                               };
                           })({
                               selected: f,
                               clipCandidates: i,
                               config: S,
-                              speakingSpans: g,
+                              speakingSpans: T,
                               startOnSilence: t.startOnSilence,
                               endOnSilence: t.endOnSilence,
                               requireVoiceGamePair: t.requireVoiceGamePair,
@@ -785,5 +785,5 @@ function W(e) {
     return null;
 }
 function Y(e, t, n) {
-    return (0, T.BA)(e.resolved, t, e.config, n);
+    return (0, g.BA)(e.resolved, t, e.config, n);
 }

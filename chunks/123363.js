@@ -17,8 +17,8 @@ var u = n(343328),
     I = n(95701),
     p = n(799704),
     m = n(734057),
-    T = n(71393),
-    g = n(218461),
+    g = n(71393),
+    T = n(218461),
     S = n(309010),
     N = n(967198),
     C = n(927813),
@@ -58,9 +58,9 @@ function P(e) {
         (!d || E.A.isConnected() || N.loadingMore
             ? N.loadingMore || (N.ready && !N.cached)
                 ? null != a && (C = !0)
-                : (null == t || null != T.A.getGuild(t)) && (C = !0)
+                : (null == t || null != g.A.getGuild(t)) && (C = !0)
             : (C = !0),
-        (0, u.A)(n) && g.Ay.hasUnread(n) && (C = !0),
+        (0, u.A)(n) && T.Ay.hasUnread(n) && (C = !0),
         C)
     )
         if ((c.A.commit(N.mutate({ loadingMore: !0 })), null != a))
@@ -77,7 +77,7 @@ function P(e) {
         else if (
             S?.isThread() &&
             (function (e) {
-                if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
+                if (T.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
                 i[e] = Date.now();
                 let t = Date.now() - M;
                 for (let e in i) i[e] < t && delete i[e];
@@ -96,8 +96,8 @@ function P(e) {
                     fetchKey: f,
                 })
             );
-        else if (S?.isThread() && g.Ay.hasTrackedUnread(S.id) && !N.ready) {
-            let e = g.Ay.getTrackedAckMessageId(S.id);
+        else if (S?.isThread() && T.Ay.hasTrackedUnread(S.id) && !N.ready) {
+            let e = T.Ay.getTrackedAckMessageId(S.id);
             return (
                 v.log(`Jumping to most recent message in thread ${S.id} - ${e}`),
                 l.A.fetchMessages({
@@ -212,7 +212,7 @@ function $(e) {
         d &&
         l.A.fetchMessages({ channelId: t, limit: (0, R.h)("MessageManager.staleFetch"), jump: n });
 }
-function z(e) {
+function X(e) {
     let { channelId: t, messageId: n, reason: i, noSendFailed: r, shouldSendNotification: s } = e;
     null == n ||
         (!0 !== r &&
@@ -224,7 +224,7 @@ function z(e) {
                 shouldNotify: !1,
             }));
 }
-function X() {
+function z() {
     let e = S.Ay.getChannelId();
     if (null == e) return !1;
     l.A.fetchNewLocalMessages(e, 30);
@@ -234,7 +234,7 @@ class q extends d.A {
     loadSelectedChannelIfNecessary = x;
     stores = new Map().set(p.Ay, H);
     actions = {
-        APP_STATE_UPDATE_WILL_BECOME_ACTIVE: X,
+        APP_STATE_UPDATE_WILL_BECOME_ACTIVE: z,
         OVERLAY_INITIALIZE: G,
         CHANNEL_SELECT: k,
         VOICE_CHANNEL_SELECT: F,
@@ -245,7 +245,7 @@ class q extends d.A {
         GUILD_CREATE: () => x(),
         MESSAGE_END_EDIT: Y,
         LOAD_MESSAGES_SUCCESS: $,
-        UPLOAD_FAIL: z,
+        UPLOAD_FAIL: X,
         CHANNEL_DELETE: () => x(),
         THREAD_DELETE: () => x(),
         CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: B,

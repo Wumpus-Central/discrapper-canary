@@ -1,34 +1,34 @@
 var n,
-    i = t(477900);
-t(582128);
-var a = t(503698),
-    r = t.n(a),
-    s = t(607399),
-    o = t(939249),
-    c = t(285796),
-    d = t(789645),
-    u = t(834730),
-    h = t(792996),
-    T = t(563744),
+    a = l(477900);
+l(582128);
+var i = l(503698),
+    r = l.n(i),
+    s = l(607399),
+    o = l(939249),
+    c = l(285796),
+    d = l(789645),
+    h = l(834730),
+    u = l(792996),
+    T = l(563744),
     E = (((n = E || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
 function N(e) {
-    let { closeAction: l, variant: t = "", keybind: n, className: a } = e;
-    return (0, i.jsxs)("div", {
-        className: r()(T.kL, a),
+    let { closeAction: t, variant: l = "", keybind: n, className: i } = e;
+    return (0, a.jsxs)("div", {
+        className: r()(T.kL, i),
         children: [
-            (0, i.jsx)(o.D, {
-                className: r()(T.b, { [T.EH]: "Bold" === t, [T.O3]: "Solid" === t }),
-                onClick: l,
-                "aria-label": h.intl.string(h.t.cpT0Cq),
+            (0, a.jsx)(o.D, {
+                className: r()(T.b, { [T.EH]: "Bold" === l, [T.O3]: "Solid" === l }),
+                onClick: t,
+                "aria-label": u.intl.string(u.t.cpT0Cq),
                 children:
-                    "Solid" === t
-                        ? (0, i.jsx)(c.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, i.jsx)(d.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === l
+                        ? (0, a.jsx)(c.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, a.jsx)(d.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
             s.Fr
                 ? null
-                : (0, i.jsx)(u.E, { variant: "body-xs/semibold", className: T.P, "aria-hidden": !0, children: n }),
+                : (0, a.jsx)(h.E, { variant: "body-xs/semibold", className: T.P, "aria-hidden": !0, children: n }),
         ],
     });
 }
-((N.Variants = E), t.d(l, {}, { A: N }));
+((N.Variants = E), l.d(t, {}, { A: N }));

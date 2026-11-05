@@ -24,7 +24,7 @@ var i,
         (s.SEARCH_BAR_CLEAR = "search bar clear"),
         s),
     m = (((l = {}).SEARCH = "SEARCH"), (l.SEARCH_SUGGESTION = "search suggestion"), l),
-    T =
+    g =
         (((o = {}).HOME = "home"),
         (o.CATALOG = "catalog"),
         (o.ORBS = "orbs"),
@@ -40,7 +40,7 @@ var i,
         (o.GAME_SHOPS = "game-shops"),
         (o.GAME_SERVERS = "game-servers"),
         o);
-let g = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
+let T = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
 var S =
     (((d = {})[(d.FIAT = 0)] = "FIAT"),
     (d[(d.ORB = 1)] = "ORB"),
@@ -98,7 +98,7 @@ n.d(
         EZ: function (e) {
             return A.I.ALL.has(e);
         },
-        G2: T,
+        G2: g,
         Hi: h,
         MS: [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }],
         P1: "category",
@@ -447,7 +447,7 @@ n.d(
             return null != e && "home" !== e && "catalog" !== e && "game-shops" !== e;
         },
         dF: function (e) {
-            return g.includes(e);
+            return T.includes(e);
         },
         gs: S,
         hE: I,

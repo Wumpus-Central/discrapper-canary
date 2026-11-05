@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(11939),
     m = n(158317),
     p = n(184684),
-    h = n(418200),
-    C = n(158032),
+    C = n(418200),
+    h = n(158032),
     f = n(830382),
     E = n(191115),
     S = n(879610),
@@ -56,11 +56,11 @@ function Y(e, t) {
     return null == n || n.id !== t.id || n.revision <= t.revision || n.status === V.Re.SIGNING_IN_PROGRESS ? null : n;
 }
 let K = [1e3, 2e3, 4e3, 8e3, 1e4];
-function q(e, t) {
+function Z(e, t) {
     let { order: n, setOrder: l } = e.getState();
     null != n && n.id === t.id && t.revision > n.revision && l(t);
 }
-var Z = n(792996);
+var q = n(792996);
 function z(e) {
     let {
         renderFooter: t,
@@ -89,11 +89,11 @@ function z(e) {
                 d = (0, M.bG)([L.A], () => L.A.getFetchState()),
                 m = (0, k.W)(c, O.U.MAIN) && d === L.$.LOADING,
                 p = l ?? !1,
-                h = r ?? !1,
-                C = (0, U.t4)((e) =>
+                C = r ?? !1,
+                h = (0, U.t4)((e) =>
                     e.getCheckoutReviewButtonProps({
                         tenantProvidedReviewButtonProps: s,
-                        isReviewButtonDisabled: h,
+                        isReviewButtonDisabled: C,
                         isReviewButtonLoading: p,
                         needsPaymentSource: n,
                         hasPaymentSources: o,
@@ -104,9 +104,9 @@ function z(e) {
                 );
             return (
                 i.useEffect(() => {
-                    u(C.text);
-                }, [C.text, u]),
-                C
+                    u(h.text);
+                }, [h.text, u]),
+                h
             );
         })({
             onReviewButtonClick: l,
@@ -148,8 +148,8 @@ function $(e) {
             setPurchaseError: ed,
             priceOptions: em,
             purchaseType: ep,
-            referralCode: eh,
-            quantity: eC,
+            referralCode: eC,
+            quantity: eh,
             setEntitlementsGranted: ef,
             setAppliedUserDiscounts: eE,
             setUpdatedSubscription: eS,
@@ -200,7 +200,7 @@ function $(e) {
             soundEffect: ek,
             giftRecipient: ew,
             selectedGiftingPromotionRewards: eD,
-        } = (0, h.Pv)(),
+        } = (0, C.Pv)(),
         eU = (0, v.Mq)(eN),
         eG = (0, N.lo)(ew),
         eF = {};
@@ -218,7 +218,7 @@ function $(e) {
         eW = (0, P.W)(eb, ec),
         { giftCardBalance: eV, giftCardCurrency: eY } = (0, d.h)(),
         { balance: eK } = (0, _.W0)(),
-        [eq, eZ] = i.useState(!1),
+        [eZ, eq] = i.useState(!1),
         [ez, e$] = i.useState(!1),
         eQ = i.useRef(!0),
         eJ = i.useRef(!1);
@@ -237,7 +237,7 @@ function $(e) {
     let e2 = i.useCallback(() => {
             (eo(A.h.PURCHASING),
                 es(!0),
-                eZ(!0),
+                eq(!0),
                 (0, s.ET)(),
                 ed(null),
                 T.default.track(g.HAw.PAYMENT_FLOW_COMPLETED, {
@@ -288,7 +288,7 @@ function $(e) {
             [eo],
         ),
         e6 = i.useCallback(() => {
-            ez || eZ(!1);
+            ez || eq(!1);
         }, [ez]),
         e5 = i.useCallback(
             (e, t, n) => {
@@ -333,7 +333,7 @@ function $(e) {
                                 "signed" === t.type
                                     ? t.order
                                     : await (async function (e) {
-                                          (q(eT, e),
+                                          (Z(eT, e),
                                               (async function (e, t, n) {
                                                   for (let l = 0; ; l++) {
                                                       if (
@@ -344,12 +344,12 @@ function $(e) {
                                                       )
                                                           return;
                                                       let i = await (0, m.r$)(t.id);
-                                                      null != i && n() && q(e, i);
+                                                      null != i && n() && Z(e, i);
                                                   }
                                               })(eT, e, () => eQ.current));
                                           let t = await W(eT, (t) => Y(t, e));
                                           return t.status !== V.Re.SIGNED
-                                              ? (e1(new o.Ay(Z.intl.string(Z.t.khEaRI))), null)
+                                              ? (e1(new o.Ay(q.intl.string(q.t.khEaRI))), null)
                                               : t;
                                       })(t.order);
                             if (null != n)
@@ -385,7 +385,7 @@ function $(e) {
                 subscriptionPlan: d,
                 planGroup: m,
                 trialId: p,
-                priceOptions: h,
+                priceOptions: C,
                 paymentSource: I,
                 openInvoiceId: A,
                 premiumSubscription: P,
@@ -428,17 +428,17 @@ function $(e) {
                         (a()(null != O, "Missing renewalInvoicePreview"),
                             (t = { amount: O.subtotal, currency: O.currency }));
                     else {
-                        let e = (0, S.l6)(h, R.checkoutContext?.available_plans);
+                        let e = (0, S.l6)(C, R.checkoutContext?.available_plans);
                         if (((t = (0, S.$Q)((0, S.y8)(d.id, !1, !1, e))), null != P)) {
-                            let e = h.currency ?? R.currency,
+                            let e = C.currency ?? R.currency,
                                 n = (0, S.Pg)(P, d.id, 1, new Set(m));
-                            ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), h.paymentSourceId)));
+                            ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), C.paymentSourceId)));
                         }
                     }
                     if (null != M)
-                        e = await (0, C.B1)({
+                        e = await (0, h.B1)({
                             planId: M,
-                            currency: h.currency ?? R.currency,
+                            currency: C.currency ?? R.currency,
                             paymentSource: I,
                             loadId: N,
                             giftInfoOptions: j,
@@ -461,20 +461,20 @@ function $(e) {
                             expectedPaymentLegs: D,
                         });
                     } else if (null != I && null != P && P.status === g.Dmq.PAST_DUE && null != A) {
-                        let l = h.currency ?? R.currency;
+                        let l = C.currency ?? R.currency;
                         e = g.AD1.has(I.type)
                             ? await (0, c.LD)(P, A, I, l, N)
                             : await (0, c.nV)(P, { paymentSource: I, currency: l }, n, t, u, o, N);
                     } else if (null != P) {
                         let l = (0, S.Pg)(P, d.id, 1, new Set(m)),
-                            i = { paymentSource: I, currency: h.currency ?? R.currency };
+                            i = { paymentSource: I, currency: C.currency ?? R.currency };
                         (P.status === g.Dmq.PAUSED && (i.status = g.Dmq.ACTIVE),
                             P.isPausedAllowsResumeButNotUpdates || (i.items = l),
                             (e = await (0, c.nV)(P, i, n, t, u, o, N)));
                     } else
-                        e = await (0, C.B1)({
+                        e = await (0, h.B1)({
                             planId: d.id,
-                            currency: h.currency ?? R.currency,
+                            currency: C.currency ?? R.currency,
                             paymentSource: I,
                             trialId: p,
                             metadata: x,
@@ -520,13 +520,13 @@ function $(e) {
             metadata: k,
             sku: e0,
             purchaseType: ep,
-            referralCode: eh,
+            referralCode: eC,
             loadId: eu.loadId,
             giftInfoOptions: eF,
             invoicePreview: el,
             renewalInvoicePreview: ei,
             giftSubscriptionPlanId: ea,
-            quantity: eC,
+            quantity: eh,
             applyWalletBalance: ev ?? el?.applyWalletBalance,
         });
     }
@@ -541,8 +541,8 @@ function $(e) {
                   type: "purchase_if_possible",
                   disablePurchase: $,
                   makePurchase: e8,
-                  isSubmitting: eq,
-                  setIsSubmitting: eZ,
+                  isSubmitting: eZ,
+                  setIsSubmitting: eq,
               })
             : null;
     return eA
@@ -557,7 +557,7 @@ function $(e) {
               },
               tenantProvidedReviewButtonProps: ee,
               disableSubmit: $,
-              isSubmitting: eq,
+              isSubmitting: eZ,
               onReviewButtonClick: function () {
                   return e8();
               },

@@ -84,14 +84,14 @@ function k(e) {
             let t = new Set(e.payment_sources.filter((e) => e.enabled).map((e) => e.id));
             return Object.values(F).filter((e) => !e.invalid && t.has(e.id));
         }, [F, R.checkoutContext]),
-        [W, K] = l.useState(!1),
+        [K, W] = l.useState(!1),
         [Z, q] = l.useState(t.currency);
     async function Q(e, n, i) {
         if (null == t) throw Error("missing subscription and paymentSource");
-        (null == e ? await S.r6(t, n, i, H, L) : await S.uK(t, e, i, H, L), K(!1), q(n));
+        (null == e ? await S.r6(t, n, i, H, L) : await S.uK(t, e, i, H, L), W(!1), q(n));
     }
     async function J(e, l, s) {
-        K(!0);
+        W(!0);
         let r = await (0, O.OQ)({
                 subscriptionId: t.id,
                 paymentSourceId: e?.id,
@@ -120,7 +120,7 @@ function k(e) {
                       s(e, r.currency, a);
                   },
                   () => {
-                      K(!1);
+                      W(!1);
                   },
               )
             : s(e, r.currency, a);
@@ -174,7 +174,7 @@ function k(e) {
                         null != e && J(e, void 0, Q);
                     },
                     onPaymentSourceAdd: ee,
-                    dropdownLoading: W,
+                    dropdownLoading: K,
                     disabled: D,
                     paymentGatewayRestrictions: t.eligiblePaymentGateways,
                 }),

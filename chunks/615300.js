@@ -36,13 +36,13 @@ function A(e, t) {
             ...p
         } = t,
         m = e._value,
-        T = E(t.duration, f, I),
-        g = E(t.toValue, r, a),
-        S = i[_](e, { ...p, toValue: g, tension: s, friction: l, duration: T }),
+        g = E(t.duration, f, I),
+        T = E(t.toValue, r, a),
+        S = i[_](e, { ...p, toValue: T, tension: s, friction: l, duration: g }),
         N = S;
     if (d || c) {
         let r = E(t.duration, f, I);
-        ((n = i[_](e, { ...p, toValue: d ? m : -g, tension: s, friction: l, duration: r })), (N = i.sequence([S, n])));
+        ((n = i[_](e, { ...p, toValue: d ? m : -T, tension: s, friction: l, duration: r })), (N = i.sequence([S, n])));
     }
     o
         ? N.start(() => {

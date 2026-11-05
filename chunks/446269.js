@@ -54,8 +54,8 @@ function f(e) {
 var I = n(775602),
     p = n(989395),
     m = n(71855),
-    T = n(267102),
-    g = n(652215);
+    g = n(267102),
+    T = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
 var N = n(534409),
     C = n(945810);
@@ -101,8 +101,8 @@ function H(e) {
             saturation: f,
             desaturateUserColors: p,
             useForcedColors: m,
-            systemForcedColors: T,
-            useReducedMotion: g,
+            systemForcedColors: g,
+            useReducedMotion: T,
             alwaysShowLinkDecorations: S,
             hardwareAccelerationEnabled: N,
             highContrastMode: C,
@@ -150,8 +150,8 @@ function H(e) {
         }, [Y]));
     let K = (0, c.bG)([B.Ay], () => B.Ay.hdrDynamicRange),
         $ = (0, G.BX)("RootElementContextProvider"),
-        z = k.useConfig({ location: "RootElementContextProvider" }).enabled,
-        X = `font-size: ${_}%; --saturation-factor: ${f}; dynamic-range-limit: ${K}; ${D}`,
+        X = k.useConfig({ location: "RootElementContextProvider" }).enabled,
+        z = `font-size: ${_}%; --saturation-factor: ${f}; dynamic-range-limit: ${K}; ${D}`,
         q = o()(
             ((t = ""),
             (0, x.uF)()
@@ -172,12 +172,12 @@ function H(e) {
                 "no-webkit-scrollbar": !L,
                 "has-webkit-scrollbar": L,
                 "mouse-mode": A,
-                "reduce-motion": g,
-                "full-motion": !g,
+                "reduce-motion": T,
+                "full-motion": !T,
                 "is-mobile": M.Fr,
                 "app-focused": u,
                 "desaturate-user-colors": p,
-                "disable-forced-colors": !m && "active" === T,
+                "disable-forced-colors": !m && "active" === g,
                 "enable-forced-colors": m,
                 "visual-refresh": !0,
                 "hardware-acceleration-disabled": !N,
@@ -190,11 +190,11 @@ function H(e) {
                 "highlight-void-buttons": W,
                 "high-contrast-mode": C,
                 "enlarge-target-size": $,
-                "mana-badge-refresh": z,
+                "mana-badge-refresh": X,
             },
             i,
         ),
-        Z = a.useMemo(() => ({ lang: s, style: X, className: q, focused: u }), [s, X, q, u]);
+        Z = a.useMemo(() => ({ lang: s, style: z, className: q, focused: u }), [s, z, q, u]);
     return (
         (0, w.Ay)(() => {
             v.Ay.setTrafficLightPosition({ x: 9, y: 9 });
@@ -224,7 +224,7 @@ function K(e) {
             systemForcedColors: V,
             useReducedMotion: K,
             alwaysShowLinkDecorations: $,
-            highContrastMode: z,
+            highContrastMode: X,
         } = (0, c.cf)([y.default, I.Ay, D.A, L.A, b.A], () => ({
             locale: y.default.locale,
             theme: n ?? D.A.theme,
@@ -242,9 +242,9 @@ function K(e) {
             alwaysShowLinkDecorations: I.Ay.alwaysShowLinkDecorations,
             highContrastMode: I.Ay.isHighContrastModeEnabled,
         })),
-        X = (function (e, t) {
+        z = (function (e, t) {
             let [n, i] = a.useState(0),
-                r = (0, T.aL)();
+                r = (0, g.aL)();
             a.useEffect(() => {
                 function e() {
                     return i((e) => e + 1);
@@ -253,10 +253,10 @@ function K(e) {
                     return i((e) => Math.max(0, e - 1));
                 }
                 return (
-                    r.subscribe(g.jej.POPOUT_SHOW, e),
-                    r.subscribe(g.jej.POPOUT_HIDE, t),
+                    r.subscribe(T.jej.POPOUT_SHOW, e),
+                    r.subscribe(T.jej.POPOUT_HIDE, t),
                     () => {
-                        (r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t));
+                        (r.unsubscribe(T.jej.POPOUT_SHOW, e), r.unsubscribe(T.jej.POPOUT_HIDE, t));
                     }
                 );
             }, [r]);
@@ -430,7 +430,7 @@ function K(e) {
                 fontScale: w,
                 fontScaleClass: G,
                 keyboardModeEnabled: x,
-                mouseMode: X,
+                mouseMode: z,
                 saturation: k,
                 desaturateUserColors: F,
                 useForcedColors: B,
@@ -438,7 +438,7 @@ function K(e) {
                 useReducedMotion: K,
                 alwaysShowLinkDecorations: $,
                 hardwareAccelerationEnabled: d,
-                highContrastMode: z,
+                highContrastMode: X,
                 isPopoutWindow: l,
                 rootClassName: o()(en, {
                     "refresh-fast-follow-avatars": Q,

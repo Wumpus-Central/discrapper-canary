@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(628983),
     p = n(477754),
     m = n(303227),
-    T = n(558076),
-    g = n(360729),
+    g = n(558076),
+    T = n(360729),
     S = n(976860),
     N = n(272812),
     C = n(461782),
@@ -48,8 +48,8 @@ function Y(e) {
         Y = (0, l.bG)([D.Ay], () => null != v && D.Ay.isProxyTicketRefreshing(v), [v]),
         K = (0, l.bG)([D.Ay], () => D.Ay.getActivityPanelMode()),
         $ = (0, h.h)(v),
-        z = A?.launchId,
-        X = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
+        X = A?.launchId,
+        z = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
         { dockedRect: q, isHidden: Z } = (0, l.cf)([O.A], () => {
             let e = O.A.pipWindow;
             return { dockedRect: null != e ? O.A.getDockedRect(e.id) : null, isHidden: O.A.isEmbeddedActivityHidden() };
@@ -70,12 +70,12 @@ function Y(e) {
             selectedParticipant: null != t ? I.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && I.A.getParticipantsOpen(t.id),
         })),
-        en = X || null != Q,
+        en = z || null != Q,
         ei = (0, M.A)(t?.id),
         er = t?.id,
         ea = t?.getGuildId(),
-        { enabled: es } = (0, g.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
-        el = (0, l.bG)([T.A], () => null != er && T.A.isVisible(er), [er]),
+        { enabled: es } = (0, T.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        el = (0, l.bG)([g.A], () => null != er && g.A.isVisible(er), [er]),
         eo = ei && es && el,
         ed = ei && ee?.type !== B.lp.ACTIVITY,
         ec = !ei && K === k.Gd.PIP,
@@ -104,7 +104,7 @@ function Y(e) {
                 d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: v });
             }
         }, [v, eu]),
-        null == A || null == z || ((0, M.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
+        null == A || null == X || ((0, M.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
     )
         return null;
     let eh = Array.from(A.userIds)
@@ -200,7 +200,7 @@ function Y(e) {
                                   [H.ST]: eu && a,
                                   [H.v8]: eu && !A.config?.useInteractivePIP,
                               }),
-                              shouldRefocus: !eu && X,
+                              shouldRefocus: !eu && z,
                               onIframeMount: (e) => (0, G.hN)(A.applicationId, e),
                               onIframeUnmount: (e) => (0, G.WO)(A.applicationId, e),
                           }),

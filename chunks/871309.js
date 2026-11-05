@@ -31,10 +31,10 @@ var f = n(36149),
     I = n(462924),
     p = n(895595),
     m = n(40449);
-function T(e) {
+function g(e) {
     if (null != e) return (0, f.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
-function g(e) {
+function T(e) {
     var t;
     let { entryPoint: r, onClose: s, onComplete: o, onCancel: d, incodeParameters: c } = e,
         u = (t = c?.method) === m.VF.FACIAL_AGE_ESTIMATION || t === m.VF.ID_VERIFICATION ? c.method : null,
@@ -79,7 +79,7 @@ function g(e) {
                       })
                     : (0, i.jsx)(e, { pickerMode: !0, entryPoint: r, onComplete: o, onCancel: d, ...t });
         },
-        { modalKey: m.SW, onCloseCallback: s, backdropStyle: T(r), Layer: l.Ay },
+        { modalKey: m.SW, onCloseCallback: s, backdropStyle: g(r), Layer: l.Ay },
     );
 }
 function S(e) {
@@ -100,12 +100,12 @@ function S(e) {
                     (e) => "string" == typeof c[e] && c[e].length > 0,
                 )
             ) &&
-            (g({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
+            (T({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
         );
     if (null == o) return !1;
     let _ = s || E(r),
         A = _ && (0, I.d)(r),
-        f = { modalKey: m.SW, onCloseCallback: t, backdropStyle: T(r), Layer: l.Ay, dismissable: !A };
+        f = { modalKey: m.SW, onCloseCallback: t, backdropStyle: g(r), Layer: l.Ay, dismissable: !A };
     return (
         _
             ? (0, a.mM)(async () => {
@@ -133,7 +133,7 @@ function N(e, t) {
             let { default: e } = await Promise.all([n.e(585503), n.e(409609)]).then(n.bind(n, 475376));
             return (t) => (0, i.jsx)(e, { ...t });
         },
-        { modalKey: m.NC, backdropStyle: T(e), Layer: l.Ay, onCloseCallback: t },
+        { modalKey: m.NC, backdropStyle: g(e), Layer: l.Ay, onCloseCallback: t },
     );
 }
 let C = {
@@ -146,7 +146,7 @@ let C = {
                 s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
             }
             (s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
-                g({
+                T({
                     entryPoint: r,
                     onClose: () => {
                         (c(), t?.());
@@ -174,7 +174,7 @@ let C = {
                                 ]).then(n.bind(n, 12247));
                                 return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                             },
-                            { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                            { modalKey: m.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                         );
               })()
             : (0, f.Q9)() && (0, o.u0)()
@@ -192,7 +192,7 @@ let C = {
                         ]).then(n.bind(n, 297102));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                    { modalKey: m.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                 )
               : E(r)
                 ? (0, a.mM)(
@@ -211,7 +211,7 @@ let C = {
                           ]).then(n.bind(n, 962877));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: m.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                   )
                 : (0, a.mM)(
                       async () => {
@@ -227,7 +227,7 @@ let C = {
                           ]).then(n.bind(n, 929180));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: m.NC, backdropStyle: T(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: m.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                   );
     },
     showManualReviewWebview: function (e, t) {

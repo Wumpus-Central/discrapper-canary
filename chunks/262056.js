@@ -18,15 +18,15 @@ n.d(
     {},
     {
         A: function (e) {
-            let { current: t, target: n, progressColor: r = d, segmentGap: p = 4, children: x } = e,
-                f = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+            let { current: t, target: n, progressColor: r = d, segmentGap: p = 4, children: f } = e,
+                x = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 E = Math.round(n);
             if (E > 1 && E <= 12) {
                 let e, n, i;
                 return (0, l.jsxs)("div", {
                     className: c.iE,
                     children: [
-                        x,
+                        f,
                         (0, l.jsx)("svg", {
                             className: c.hN,
                             viewBox: "0 0 120 120",
@@ -47,7 +47,7 @@ n.d(
                                         children: [
                                             (0, l.jsx)("path", { className: c.u4, d: e.d, strokeWidth: 6, stroke: m }),
                                             (0, l.jsx)("path", {
-                                                className: s()(c.mX, { [c.Vr]: !f }),
+                                                className: s()(c.mX, { [c.Vr]: !x }),
                                                 d: e.d,
                                                 strokeWidth: 6,
                                                 stroke: r,
@@ -68,14 +68,14 @@ n.d(
             return (0, l.jsxs)("div", {
                 className: c.iE,
                 children: [
-                    x,
+                    f,
                     (0, l.jsxs)("svg", {
                         className: c.hN,
                         viewBox: "0 0 120 120",
                         children: [
                             (0, l.jsx)("circle", { className: c.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: m }),
                             (0, l.jsx)("circle", {
-                                className: s()(c.M0, { [c.Vr]: !f }),
+                                className: s()(c.M0, { [c.Vr]: !x }),
                                 cx: 60,
                                 cy: 60,
                                 r: 57,

@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(65406),
     p = n(70074);
 let m = { xs: "body-xs/medium", sm: "body-sm/medium", md: "body-md/medium" },
-    T = { xs: "xxs", sm: "xs", md: "refresh_sm" },
-    g = { xs: "sm", sm: "sm", md: "md" };
+    g = { xs: "xxs", sm: "xs", md: "refresh_sm" },
+    T = { xs: "sm", sm: "sm", md: "md" };
 function S(e) {
     let { children: t, loading: n, size: a } = e,
         l = r.useRef(null),
@@ -136,7 +136,7 @@ function C(e) {
                 }
                 return {};
             })(),
-            size: T[s],
+            size: g[s],
             className: I.icon,
         });
     } else if (null != t)
@@ -146,13 +146,13 @@ function C(e) {
                 d = (0, i.jsx)(e, {
                     ...t.riveProps,
                     eventTargetRef: l,
-                    style: { width: _.E[T[s]], height: _.E[T[s]] },
+                    style: { width: _.E[g[s]], height: _.E[g[s]] },
                 });
                 break;
             }
             case "sticker": {
                 let e = t.component;
-                d = (0, i.jsx)(e, { size: _.E[g[s]], sticker: t.asset, isInteracting: c });
+                d = (0, i.jsx)(e, { size: _.E[T[s]], sticker: t.asset, isInteracting: c });
             }
         }
     return d;
@@ -169,8 +169,8 @@ n.d(
                     text: _,
                     icon: A,
                     iconPosition: h = "start",
-                    iconOpticalOffsetMargin: T = 0,
-                    fullWidth: g = !1,
+                    iconOpticalOffsetMargin: g = 0,
+                    fullWidth: T = !1,
                     focusProps: O,
                     loading: R,
                     loadingStartedLabel: L,
@@ -194,13 +194,13 @@ n.d(
                 } = e,
                 Y = (0, c.C)(),
                 K = Y?.size ?? a,
-                $ = Y?.fullWidth ?? g,
-                z = null != _,
-                X = r.useRef(null),
-                q = j ?? X,
+                $ = Y?.fullWidth ?? T,
+                X = null != _,
+                z = r.useRef(null),
+                q = j ?? z,
                 Z = (0, i.jsx)(C, {
                     icon: A,
-                    iconOpticalOffsetMargin: T,
+                    iconOpticalOffsetMargin: g,
                     iconPosition: h,
                     size: K,
                     ref: q,
@@ -221,7 +221,7 @@ n.d(
                     className: s()(I.buttonChildren, { [I.loading]: R }),
                     children: [
                         null != Z && "start" === h && Z,
-                        z && (0, i.jsx)(f.E, { tag: "span", variant: m[K], color: "none", lineClamp: 1, children: _ }),
+                        X && (0, i.jsx)(f.E, { tag: "span", variant: m[K], color: "none", lineClamp: 1, children: _ }),
                         null != Z && "end" === h && Z,
                     ],
                 }),
@@ -248,8 +248,8 @@ n.d(
                                 default:
                                     return I[e];
                             }
-                        })(n, z),
-                        { [I.hasText]: z, [I.fullWidth]: $, [I.rounded]: D },
+                        })(n, X),
+                        { [I.hasText]: X, [I.fullWidth]: $, [I.rounded]: D },
                     ),
                     ref: q,
                     rel: v,
@@ -280,7 +280,7 @@ n.d(
             });
             return Q
                 ? (0, i.jsx)("div", {
-                      className: s()(I.expressiveWrapper, { [I.fullWidth]: $, [I.hasText]: z }),
+                      className: s()(I.expressiveWrapper, { [I.fullWidth]: $, [I.hasText]: X }),
                       children: el,
                   })
                 : el;

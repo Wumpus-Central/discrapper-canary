@@ -63,9 +63,9 @@ let { createLoader: d } = n(95498),
     I = (0, a.chainMessagesObjects)(o.A, (0, a.chainMessagesObjects)(_, f));
 var p = n(226536);
 let { createLoader: m } = n(95498),
-    T = m({ "en-US": () => n.e(19777).then(n.bind(n, 731352)) }, "en-US"),
-    { makeMessagesProxy: g } = n(95498),
-    S = g(T);
+    g = m({ "en-US": () => n.e(19777).then(n.bind(n, 731352)) }, "en-US"),
+    { makeMessagesProxy: T } = n(95498),
+    S = T(g);
 function N(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,

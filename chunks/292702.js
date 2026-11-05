@@ -26,15 +26,15 @@ let f = new h(_.h, {
 var I = n(962052),
     p = n(723702),
     m = n(998218),
-    T = n(253400);
-let g = new r.A("Games"),
+    g = n(253400);
+let T = new r.A("Games"),
     S = null;
 function N() {
     return null != S
         ? Promise.resolve(S)
         : (0, p.xl)()
-          ? T.Ay.ensureModule("discord_game_utils").then(() => {
-                let e = T.Ay.getGameUtils();
+          ? g.Ay.ensureModule("discord_game_utils").then(() => {
+                let e = g.Ay.getGameUtils();
                 return null != e && null != e.findLaunchable
                     ? ((S = e), e)
                     : Promise.reject(Error("game utils not found"));
@@ -84,7 +84,7 @@ function R(e, t, n) {
 }
 function L(e) {
     return (
-        g.info("launch", e),
+        T.info("launch", e),
         new Promise((t, n) => {
             null == m.A.safeParseWithQuery(e.launchTarget)
                 ? n(Error(`Failed to parse launch target. ${e.launchTarget}`))

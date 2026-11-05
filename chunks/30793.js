@@ -15,8 +15,8 @@ let _ = {},
     I = new Set(),
     p = {},
     m = {},
-    T = new Set();
-function g(e) {
+    g = new Set();
+function T(e) {
     let t = d.A.createFromServer(e),
         n = t.code;
     if (E.has(n)) E.set(n, E.get(n).merge(t));
@@ -38,7 +38,7 @@ function g(e) {
 }
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t && !T.has(e.channel_id)) return !1;
+    if (t && !g.has(e.channel_id)) return !1;
     let n = (0, c.pF)(e) ? (0, c.e7)(e?.embeds != null ? e?.embeds[0].url : void 0) : (0, c.e7)(e.content);
     return (
         0 !== n.length &&
@@ -58,7 +58,7 @@ function C(e) {
 }
 function O(e) {
     let { channelId: t, messages: n } = e;
-    (T.add(t), n.forEach((e) => S(e, !0)));
+    (g.add(t), n.forEach((e) => S(e, !0)));
 }
 function R(e) {
     let { firstMessages: t } = e;
@@ -106,16 +106,16 @@ class L extends a.Ay.Store {
 }
 let y = new L(l.h, {
     CONNECTION_OPEN: function () {
-        return (T.clear(), !1);
+        return (g.clear(), !1);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (null != t && T.add(t), !1);
+        return (null != t && g.add(t), !1);
     },
     GIFT_CODE_RESOLVE: N,
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
-        return ((A = A.filter((e) => e !== t.code)), f.includes(t.code) || (f = [...f, t.code]), g(t));
+        return ((A = A.filter((e) => e !== t.code)), f.includes(t.code) || (f = [...f, t.code]), T(t));
     },
     GIFT_CODE_RESOLVE_FAILURE: function (e) {
         let { code: t, error: n } = e;
@@ -152,7 +152,7 @@ let y = new L(l.h, {
     },
     GIFT_CODE_CREATE_SUCCESS: function (e) {
         let { giftCode: t } = e;
-        g(t);
+        T(t);
     },
     GIFT_CODES_FETCH: function (e) {
         let { skuId: t, subscriptionPlanId: n } = e;
@@ -160,7 +160,7 @@ let y = new L(l.h, {
     },
     GIFT_CODES_FETCH_SUCCESS: function (e) {
         let { giftCodes: t, skuId: n, subscriptionPlanId: i } = e;
-        t.forEach(g);
+        t.forEach(T);
         let r = (0, c.Kx)(n, i);
         ((p[r] = Date.now()), I.delete(r));
     },

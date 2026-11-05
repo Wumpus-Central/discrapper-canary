@@ -1,28 +1,28 @@
-var n = t(477900);
-t(582128);
-var i = t(646514),
-    a = t(996682),
-    r = t(27989);
-t.d(
-    l,
+var n = l(477900);
+l(582128);
+var a = l(646514),
+    i = l(996682),
+    r = l(27989);
+l.d(
+    t,
     {},
     {
         m: function (e) {
             let {
-                    size: l = "md",
-                    width: t,
+                    size: t = "md",
+                    width: l,
                     height: s,
-                    color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: c = "",
                     ...d
                 } = e,
-                u = (0, r.J)(l),
-                h = u?.width ?? t,
-                T = u?.height ?? s;
+                h = (0, r.J)(t),
+                u = h?.width ?? l,
+                T = h?.height ?? s;
             return (0, n.jsx)("svg", {
-                ...(0, a.A)(d),
+                ...(0, i.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: h,
+                width: u,
                 height: T,
                 fill: "none",
                 viewBox: "0 0 24 24",

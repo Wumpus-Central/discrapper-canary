@@ -1,4 +1,4 @@
-o.exports = {
+r.exports = {
     kL: "container_sYzG8R",
     cy: "author_sYzG8R",
     ut: "closeIcon_sYzG8R",

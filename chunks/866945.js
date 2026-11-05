@@ -16,17 +16,17 @@ n.d(
     {},
     {
         e: function (e) {
-            let { label: t, labelHook: n, count: r, dismissNotice: E, className: p, noticeType: _ } = e,
-                m = null != E;
+            let { label: t, labelHook: n, count: r, dismissNotice: E, className: p, noticeType: m } = e,
+                _ = null != E;
             s.useEffect(() => {
-                (0, h.N)(_, C.YX.VIEWED);
-            }, [_]);
+                (0, h.N)(m, C.YX.VIEWED);
+            }, [m]);
             let f = s.useCallback(() => {
-                    null != E && (E(), (0, h.N)(_, C.YX.DISMISS));
-                }, [_, E]),
+                    null != E && (E(), (0, h.N)(m, C.YX.DISMISS));
+                }, [m, E]),
                 T = s.useCallback(() => {
-                    (n(), (0, h.N)(_, C.YX.LEARN_MORE));
-                }, [_, n]);
+                    (n(), (0, h.N)(m, C.YX.LEARN_MORE));
+                }, [m, n]);
             return (0, i.jsxs)("div", {
                 className: l()(g.I, p),
                 children: [
@@ -44,7 +44,7 @@ n.d(
                                       hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: T, children: e }, t),
                                   }),
                     }),
-                    m && (0, i.jsx)(d.D, { className: g.b, onClick: f, children: (0, i.jsx)(u.P, {}) }),
+                    _ && (0, i.jsx)(d.D, { className: g.b, onClick: f, children: (0, i.jsx)(u.P, {}) }),
                 ],
             });
         },

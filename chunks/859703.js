@@ -1,4 +1,4 @@
-let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, T, g, S, N, C, O, R, L;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, g, T, S, N, C, O, R, L;
 var y = n(435558),
     D = n(412703),
     b = n(440703),
@@ -35,8 +35,8 @@ function K() {
         (H = new Map()),
         (p = new Map()),
         (m = new Map()),
-        (T = new Map()),
         (g = new Map()),
+        (T = new Map()),
         (S = new Map()),
         (I = new Set()),
         (N = new Map()),
@@ -70,12 +70,12 @@ function $(e, t) {
         }
     }
 }
-function z(e, t) {
+function X(e, t) {
     let n = new Map(p);
     (n.set(e, t), (p = n));
 }
-function X(e) {
-    null != T.get(e) && (T = new Map(T)).delete(e);
+function z(e) {
+    null != g.get(e) && (g = new Map(g)).delete(e);
 }
 function q(e) {
     let t = new Set(u);
@@ -120,7 +120,7 @@ class et extends v.Ay.Store {
         return c;
     }
     getQuestPreviewOverride(e) {
-        let t = g.get(e);
+        let t = T.get(e);
         return null == t ? void 0 : l.get(t);
     }
     get questEnrollmentBlockedUntil() {
@@ -157,7 +157,7 @@ class et extends v.Ay.Store {
         return m.get(e);
     }
     getStreamHeartbeatFailure(e) {
-        return T.get(e);
+        return g.get(e);
     }
     getQuest(e) {
         return l.get(e);
@@ -308,13 +308,13 @@ let en = new et(P.h, {
     },
     QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
         let { questId: t, streamKey: n, userStatus: i } = e;
-        (I.add(t), $(t, { userStatus: i }), null != n && X(n));
+        (I.add(t), $(t, { userStatus: i }), null != n && z(n));
     },
     QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
         let { questId: t, streamKey: n } = e;
         null != n &&
-            null == T.get(n) &&
-            (T = new Map(T)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
+            null == g.get(n) &&
+            (g = new Map(g)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
     },
     QUESTS_ENROLL_BEGIN: function (e) {
         let { questId: t } = e,
@@ -341,7 +341,7 @@ let en = new et(P.h, {
             a = new Set(E);
         (a.delete(i),
             (E = a),
-            z(i, r),
+            X(i, r),
             (t = l.get(i)),
             null != (n = t?.userStatus) &&
                 null == n.claimedAt &&
@@ -371,7 +371,7 @@ let en = new et(P.h, {
                     n = t.items[0].tenantMetadata?.questRewards.reward;
                 return n?.tag !== b.l.REWARD_CODE ? null : n.rewardCode;
             })({ entitlements: n });
-            (null != e && z(t, e),
+            (null != e && X(t, e),
                 $(t, { userStatus: { ...s, claimedAt: n.claimedAt, claimedTier: e?.tier ?? null } }));
         }
     },
@@ -384,10 +384,10 @@ let en = new et(P.h, {
         let { questId: t } = e,
             n = new Set(A);
         (n.add(t), (A = n));
-        let i = new Map(g),
+        let i = new Map(T),
             r = !1;
         for (let [e, n] of i) n === t && (i.delete(e), (r = !0));
-        r && (g = i);
+        r && (T = i);
     },
     QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
         let { dismissedQuestUserStatus: t } = e;
@@ -433,11 +433,11 @@ let en = new et(P.h, {
     },
     STREAM_CLOSE: function (e) {
         let { streamKey: t } = e;
-        X(t);
+        z(t);
     },
     QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function (e) {
         let { streamKey: t } = e;
-        X(t);
+        z(t);
     },
     QUESTS_PREVIEW_UPDATE_SUCCESS: function (e) {
         let { previewQuestUserStatus: t } = e;
@@ -452,8 +452,8 @@ let en = new et(P.h, {
     },
     QUESTS_PREVIEW_OVERRIDE: function (e) {
         let { placement: t, questId: n } = e,
-            i = new Map(g);
-        (i.get(t) === n ? i.delete(t) : i.set(t, n), (g = i));
+            i = new Map(T);
+        (i.get(t) === n ? i.delete(t) : i.set(t, n), (T = i));
     },
     QUESTS_SELECT_TASK_PLATFORM: function (e) {
         let { questId: t, platform: n } = e;

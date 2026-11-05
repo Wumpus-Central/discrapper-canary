@@ -49,7 +49,7 @@ class m extends i.Ay.PersistedStore {
         return E === e ? -1 : h[e];
     }
 }
-let T = new m(r.h, {
+let g = new m(r.h, {
     CONNECTION_OPEN: f,
     OVERLAY_INITIALIZE: function (e) {
         ((E = e.selectedGuildId), (A = void 0), f());
@@ -73,4 +73,4 @@ let T = new m(r.h, {
         ((E = null), (A = null));
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

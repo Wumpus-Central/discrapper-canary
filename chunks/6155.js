@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(616356),
     p = n(334463),
     m = n(287809),
-    T = n(652215),
-    g = n(806931),
+    g = n(652215),
+    T = n(806931),
     S = n(792996),
     N = n(967481);
 function C(e) {
@@ -36,7 +36,7 @@ function C(e) {
         onClose: r,
         onSelect: u,
         children: ((t = []),
-        null != (n = d.find((e) => e.component === T.o1q.VIDEO)) &&
+        null != (n = d.find((e) => e.component === g.o1q.VIDEO)) &&
             O.forEach((e) => {
                 let i = I.A.getActiveStreamForApplicationStream(e.stream),
                     r = e.id === C?.id && N?.id === n.id;
@@ -46,13 +46,13 @@ function C(e) {
             let t = e.pipWindow.id,
                 n = e.participant?.id,
                 r = (function (e) {
-                    if (e.pipWindow.component === T.o1q.ACTIVITY && null != m) {
+                    if (e.pipWindow.component === g.o1q.ACTIVITY && null != m) {
                         let e = h.A.getApplication(m.applicationId)?.name;
                         return null == e
                             ? S.intl.string(S.t["8raC1P"])
                             : S.intl.formatToPlainString(S.t["a9+V+V"], { activityName: e });
                     }
-                    return null == e.participant || e.participant.type !== g.lp.STREAM
+                    return null == e.participant || e.participant.type !== T.lp.STREAM
                         ? S.intl.string(S.t["ng/Kwl"])
                         : S.intl.formatToPlainString(S.t.sqmFRg, { username: e.participant.userNick });
                 })(e),
@@ -68,7 +68,7 @@ function C(e) {
                             N?.id !== e.pipWindow.id && (0, E.mf)(e.pipWindow.id),
                             void (
                                 null != (t = e.participant) &&
-                                t.type !== g.lp.ACTIVITY &&
+                                t.type !== T.lp.ACTIVITY &&
                                 _.A.selectParticipant(c, t.id)
                             )
                         );
@@ -87,12 +87,12 @@ n.d(
             let { voiceChannelId: t, idle: n } = e,
                 l = r.useRef(null),
                 o = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter(
-                    (e) => e.component !== T.o1q.ACTIVITY,
+                    (e) => e.component !== g.o1q.ACTIVITY,
                 ),
                 _ = (0, a.yK)([I.A], () => I.A.getAllActiveStreamsForChannel(t)).filter(
                     (e) => e.ownerId !== m.default.getCurrentUser()?.id && e.channelId === t,
                 ),
-                E = (1 === o.length && o[0].component === T.o1q.ACTIVITY) || 0 === _.length,
+                E = (1 === o.length && o[0].component === g.o1q.ACTIVITY) || 0 === _.length,
                 A = 1 === o.length && _.length <= 1;
             return E || A
                 ? null

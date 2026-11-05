@@ -78,12 +78,12 @@ async function m(e, t) {
         a.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: e });
     }
 }
-let T = 5 * o.A.Millis.MINUTE,
-    g = 30 * o.A.Millis.SECOND,
+let g = 5 * o.A.Millis.MINUTE,
+    T = 30 * o.A.Millis.SECOND,
     S = 5 * o.A.Millis.MINUTE;
 function N(e, t) {
     let n = e.get(t);
-    return (null == n && ((n = new i.A(g, S)), e.set(t, n)), n);
+    return (null == n && ((n = new i.A(T, S)), e.set(t, n)), n);
 }
 let C = new Map(),
     O = new Map();
@@ -128,7 +128,7 @@ n.d(
             let n = N(C, e);
             if (
                 !(t?.state === "error" && Date.now() - t.fetchedAt < n.current) &&
-                !(t?.state === "fetched" && Date.now() - t.fetchedAt < T)
+                !(t?.state === "fetched" && Date.now() - t.fetchedAt < g)
             )
                 try {
                     a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD", applicationId: e });

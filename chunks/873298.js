@@ -16,8 +16,8 @@ var i,
     I,
     p,
     m,
-    T,
     g,
+    T,
     S,
     N,
     C,
@@ -109,8 +109,8 @@ var i,
         (h[(h.FRIENDS_AND_SMALL_GUILDS = 2)] = "FRIENDS_AND_SMALL_GUILDS"),
         (h[(h.FRIENDS_AND_ALL_GUILDS = 3)] = "FRIENDS_AND_ALL_GUILDS"),
         h),
-    z = (((f = {})[(f.UNSPECIFIED = 0)] = "UNSPECIFIED"), (f[(f.REAL_MONEY_GAMING = 1)] = "REAL_MONEY_GAMING"), f),
-    X =
+    X = (((f = {})[(f.UNSPECIFIED = 0)] = "UNSPECIFIED"), (f[(f.REAL_MONEY_GAMING = 1)] = "REAL_MONEY_GAMING"), f),
+    z =
         (((I = {})[(I.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (I[(I.PERSONAL = 1)] = "PERSONAL"),
         (I[(I.GUILD = 2)] = "GUILD"),
@@ -130,32 +130,32 @@ var i,
         (m[(m.MIDNIGHT = 4)] = "MIDNIGHT"),
         m),
     Q =
-        (((T = {})[(T.MINT_APPLE = 0)] = "MINT_APPLE"),
-        (T[(T.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
-        (T[(T.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
-        (T[(T.HANAMI = 3)] = "HANAMI"),
-        (T[(T.SUNRISE = 4)] = "SUNRISE"),
-        (T[(T.COTTON_CANDY = 5)] = "COTTON_CANDY"),
-        (T[(T.LOFI_VIBES = 6)] = "LOFI_VIBES"),
-        (T[(T.DESERT_KHAKI = 7)] = "DESERT_KHAKI"),
-        (T[(T.SUNSET = 8)] = "SUNSET"),
-        (T[(T.CHROMA_GLOW = 9)] = "CHROMA_GLOW"),
-        (T[(T.FOREST = 10)] = "FOREST"),
-        (T[(T.CRIMSON_MOON = 11)] = "CRIMSON_MOON"),
-        (T[(T.MIDNIGHT_BLURPLE = 12)] = "MIDNIGHT_BLURPLE"),
-        (T[(T.MARS = 13)] = "MARS"),
-        (T[(T.DUSK = 14)] = "DUSK"),
-        (T[(T.UNDER_THE_SEA = 15)] = "UNDER_THE_SEA"),
-        (T[(T.EASTER_EGG = 16)] = "EASTER_EGG"),
-        (T[(T.RETRO_STORM = 17)] = "RETRO_STORM"),
-        (T[(T.NEON_NIGHTS = 18)] = "NEON_NIGHTS"),
-        (T[(T.SEPIA = 19)] = "SEPIA"),
-        (T[(T.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
-        (T[(T.AURORA = 21)] = "AURORA"),
-        (T[(T.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
-        (T[(T.HEXAGON = 23)] = "HEXAGON"),
-        T),
-    J = (((g = {})[(g.AUTO = 0)] = "AUTO"), (g[(g.H12 = 1)] = "H12"), (g[(g.H23 = 2)] = "H23"), g),
+        (((g = {})[(g.MINT_APPLE = 0)] = "MINT_APPLE"),
+        (g[(g.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
+        (g[(g.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
+        (g[(g.HANAMI = 3)] = "HANAMI"),
+        (g[(g.SUNRISE = 4)] = "SUNRISE"),
+        (g[(g.COTTON_CANDY = 5)] = "COTTON_CANDY"),
+        (g[(g.LOFI_VIBES = 6)] = "LOFI_VIBES"),
+        (g[(g.DESERT_KHAKI = 7)] = "DESERT_KHAKI"),
+        (g[(g.SUNSET = 8)] = "SUNSET"),
+        (g[(g.CHROMA_GLOW = 9)] = "CHROMA_GLOW"),
+        (g[(g.FOREST = 10)] = "FOREST"),
+        (g[(g.CRIMSON_MOON = 11)] = "CRIMSON_MOON"),
+        (g[(g.MIDNIGHT_BLURPLE = 12)] = "MIDNIGHT_BLURPLE"),
+        (g[(g.MARS = 13)] = "MARS"),
+        (g[(g.DUSK = 14)] = "DUSK"),
+        (g[(g.UNDER_THE_SEA = 15)] = "UNDER_THE_SEA"),
+        (g[(g.EASTER_EGG = 16)] = "EASTER_EGG"),
+        (g[(g.RETRO_STORM = 17)] = "RETRO_STORM"),
+        (g[(g.NEON_NIGHTS = 18)] = "NEON_NIGHTS"),
+        (g[(g.SEPIA = 19)] = "SEPIA"),
+        (g[(g.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
+        (g[(g.AURORA = 21)] = "AURORA"),
+        (g[(g.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
+        (g[(g.HEXAGON = 23)] = "HEXAGON"),
+        g),
+    J = (((T = {})[(T.AUTO = 0)] = "AUTO"), (T[(T.H12 = 1)] = "H12"), (T[(T.H23 = 2)] = "H23"), T),
     ee =
         (((S = {})[(S.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
         (S[(S.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = "LAUNCH_PAD_GESTURE_FULL_SCREEN"),
@@ -206,7 +206,7 @@ class es extends v.G {
             { no: 7, name: "notifications", kind: "message", T: () => ej },
             { no: 8, name: "privacy", kind: "message", T: () => eY },
             { no: 9, name: "debug", kind: "message", T: () => e$ },
-            { no: 10, name: "game_library", kind: "message", T: () => eX },
+            { no: 10, name: "game_library", kind: "message", T: () => ez },
             { no: 11, name: "status", kind: "message", T: () => eZ },
             { no: 12, name: "localization", kind: "message", T: () => e1 },
             { no: 13, name: "appearance", kind: "message", T: () => e5 },
@@ -215,14 +215,14 @@ class es extends v.G {
             { no: 16, name: "audio_context_settings", kind: "message", T: () => tu },
             { no: 17, name: "communities", kind: "message", T: () => tE },
             { no: 18, name: "broadcast", kind: "message", T: () => tm },
-            { no: 19, name: "clips", kind: "message", T: () => tg },
+            { no: 19, name: "clips", kind: "message", T: () => tT },
             { no: 20, name: "for_later", kind: "message", T: () => tD },
             { no: 21, name: "safety_settings", kind: "message", T: () => tL },
             { no: 22, name: "icymi_settings", kind: "message", T: () => tv },
             { no: 23, name: "applications", kind: "message", T: () => tM },
             { no: 24, name: "ads", kind: "message", T: () => tV },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
-            { no: 26, name: "app_version_settings", kind: "message", T: () => tX },
+            { no: 26, name: "app_version_settings", kind: "message", T: () => tz },
             { no: 27, name: "conjure", kind: "message", T: () => tZ },
         ]);
     }
@@ -268,7 +268,7 @@ class es extends v.G {
                     r.debug = e$.internalBinaryRead(e, e.uint32(), n, r.debug);
                     break;
                 case 10:
-                    r.gameLibrary = eX.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
+                    r.gameLibrary = ez.internalBinaryRead(e, e.uint32(), n, r.gameLibrary);
                     break;
                 case 11:
                     r.status = eZ.internalBinaryRead(e, e.uint32(), n, r.status);
@@ -295,7 +295,7 @@ class es extends v.G {
                     r.broadcast = tm.internalBinaryRead(e, e.uint32(), n, r.broadcast);
                     break;
                 case 19:
-                    r.clips = tg.internalBinaryRead(e, e.uint32(), n, r.clips);
+                    r.clips = tT.internalBinaryRead(e, e.uint32(), n, r.clips);
                     break;
                 case 20:
                     r.forLater = tD.internalBinaryRead(e, e.uint32(), n, r.forLater);
@@ -316,7 +316,7 @@ class es extends v.G {
                     r.inAppFeedbackSettings = t$.internalBinaryRead(e, e.uint32(), n, r.inAppFeedbackSettings);
                     break;
                 case 26:
-                    r.appVersionSettings = tX.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
+                    r.appVersionSettings = tz.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
                     break;
                 case 27:
                     r.conjure = tZ.internalBinaryRead(e, e.uint32(), n, r.conjure);
@@ -341,7 +341,7 @@ class es extends v.G {
             e.notifications && ej.internalBinaryWrite(e.notifications, t.tag(7, y.O0.LengthDelimited).fork(), n).join(),
             e.privacy && eY.internalBinaryWrite(e.privacy, t.tag(8, y.O0.LengthDelimited).fork(), n).join(),
             e.debug && e$.internalBinaryWrite(e.debug, t.tag(9, y.O0.LengthDelimited).fork(), n).join(),
-            e.gameLibrary && eX.internalBinaryWrite(e.gameLibrary, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
+            e.gameLibrary && ez.internalBinaryWrite(e.gameLibrary, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
             e.status && eZ.internalBinaryWrite(e.status, t.tag(11, y.O0.LengthDelimited).fork(), n).join(),
             e.localization && e1.internalBinaryWrite(e.localization, t.tag(12, y.O0.LengthDelimited).fork(), n).join(),
             e.appearance && e5.internalBinaryWrite(e.appearance, t.tag(13, y.O0.LengthDelimited).fork(), n).join(),
@@ -351,7 +351,7 @@ class es extends v.G {
                 tu.internalBinaryWrite(e.audioContextSettings, t.tag(16, y.O0.LengthDelimited).fork(), n).join(),
             e.communities && tE.internalBinaryWrite(e.communities, t.tag(17, y.O0.LengthDelimited).fork(), n).join(),
             e.broadcast && tm.internalBinaryWrite(e.broadcast, t.tag(18, y.O0.LengthDelimited).fork(), n).join(),
-            e.clips && tg.internalBinaryWrite(e.clips, t.tag(19, y.O0.LengthDelimited).fork(), n).join(),
+            e.clips && tT.internalBinaryWrite(e.clips, t.tag(19, y.O0.LengthDelimited).fork(), n).join(),
             e.forLater && tD.internalBinaryWrite(e.forLater, t.tag(20, y.O0.LengthDelimited).fork(), n).join(),
             e.safetySettings &&
                 tL.internalBinaryWrite(e.safetySettings, t.tag(21, y.O0.LengthDelimited).fork(), n).join(),
@@ -362,7 +362,7 @@ class es extends v.G {
             e.inAppFeedbackSettings &&
                 t$.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, y.O0.LengthDelimited).fork(), n).join(),
             e.appVersionSettings &&
-                tX.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join(),
+                tz.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join(),
             e.conjure && tZ.internalBinaryWrite(e.conjure, t.tag(27, y.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
@@ -560,7 +560,7 @@ class eA extends v.G {
             { no: 7, name: "mobile_redesign_channel_list_settings", kind: "message", T: () => e3 },
             { no: 8, name: "disable_raid_alert_push", kind: "scalar", T: 8 },
             { no: 9, name: "disable_raid_alert_nag", kind: "scalar", T: 8 },
-            { no: 10, name: "custom_notification_sound_config", kind: "message", T: () => eg },
+            { no: 10, name: "custom_notification_sound_config", kind: "message", T: () => eT },
             { no: 11, name: "leaderboards_disabled", kind: "scalar", T: 8 },
             {
                 no: 12,
@@ -575,7 +575,7 @@ class eA extends v.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-                    X,
+                    z,
                     "GUILD_THEME_SOURCE_PREFERENCE_",
                 ],
             },
@@ -638,7 +638,7 @@ class eA extends v.G {
                     r.disableRaidAlertNag = e.bool();
                     break;
                 case 10:
-                    r.customNotificationSoundConfig = eg.internalBinaryRead(
+                    r.customNotificationSoundConfig = eT.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -727,7 +727,7 @@ class eA extends v.G {
         !1 !== e.disableRaidAlertPush && t.tag(8, y.O0.Varint).bool(e.disableRaidAlertPush),
         !1 !== e.disableRaidAlertNag && t.tag(9, y.O0.Varint).bool(e.disableRaidAlertNag),
         e.customNotificationSoundConfig &&
-            eg.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
+            eT.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
         !1 !== e.leaderboardsDisabled && t.tag(11, y.O0.Varint).bool(e.leaderboardsDisabled),
         Object.keys(e.guildDismissibleContentStates)))
             (t.tag(12, y.O0.LengthDelimited).fork().tag(1, y.O0.Varint).int32(parseInt(i)),
@@ -795,7 +795,7 @@ class ep extends v.G {
         super("discord_protos.discord_users.v1.ChannelSettings", [
             { no: 1, name: "collapsed_in_inbox", kind: "scalar", T: 8 },
             { no: 2, name: "icon_emoji", kind: "message", T: () => eI },
-            { no: 3, name: "custom_notification_sound_config", kind: "message", T: () => eg },
+            { no: 3, name: "custom_notification_sound_config", kind: "message", T: () => eT },
         ]);
     }
     create(e) {
@@ -819,7 +819,7 @@ class ep extends v.G {
                     r.iconEmoji = eI.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
                     break;
                 case 3:
-                    r.customNotificationSoundConfig = eg.internalBinaryRead(
+                    r.customNotificationSoundConfig = eT.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -840,7 +840,7 @@ class ep extends v.G {
         (!1 !== e.collapsedInInbox && t.tag(1, y.O0.Varint).bool(e.collapsedInInbox),
             e.iconEmoji && eI.internalBinaryWrite(e.iconEmoji, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
             e.customNotificationSoundConfig &&
-                eg
+                eT
                     .internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, y.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;
@@ -848,7 +848,7 @@ class ep extends v.G {
     }
 }
 let em = new ep();
-class eT extends v.G {
+class eg extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomNotificationSoundConfig", [
             { no: 1, name: "notification_sound_pack_id", kind: "message", T: () => P.hU },
@@ -886,7 +886,7 @@ class eT extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eg = new eT();
+let eT = new eg();
 class eS extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.RecurringDismissibleContentState", [
@@ -2303,7 +2303,7 @@ class eW extends v.G {
                 name: "ad_topic_opt_outs",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.discord_users.v1.AdTopic", z, "AD_TOPIC_"],
+                T: () => ["discord_protos.discord_users.v1.AdTopic", X, "AD_TOPIC_"],
             },
             { no: 35, name: "swp_message_promotion_opted_out", kind: "message", T: () => P._t },
             { no: 36, name: "personal_access_opted_out", kind: "message", T: () => P._t },
@@ -2641,7 +2641,7 @@ class eK extends v.G {
     }
 }
 let e$ = new eK();
-class ez extends v.G {
+class eX extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.GameLibrarySettings", [
             { no: 1, name: "install_shortcut_desktop", kind: "message", T: () => P._t },
@@ -2693,7 +2693,7 @@ class ez extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eX = new ez();
+let ez = new eX();
 class eq extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
@@ -2955,7 +2955,7 @@ class e6 extends v.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_users.v1.GuildThemeSourcePreference",
-                    X,
+                    z,
                     "GUILD_THEME_SOURCE_PREFERENCE_",
                 ],
             },
@@ -3809,7 +3809,7 @@ class tp extends v.G {
     }
 }
 let tm = new tp();
-class tT extends v.G {
+class tg extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClipsSettings", [
             { no: 1, name: "allow_voice_recording", kind: "message", T: () => P._t },
@@ -3846,7 +3846,7 @@ class tT extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tg = new tT();
+let tT = new tg();
 class tS extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.SpendingLimit", [
@@ -4449,7 +4449,7 @@ class tK extends v.G {
     }
 }
 let t$ = new tK();
-class tz extends v.G {
+class tX extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppVersionSettings", [
             { no: 1, name: "is_using_outdated_mobile_version", kind: "scalar", T: 8 },
@@ -4485,7 +4485,7 @@ class tz extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tX = new tz();
+let tz = new tX();
 class tq extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureSettings", [
@@ -4602,7 +4602,7 @@ n.d(
         Ar: ee,
         DQ: V,
         E: eY,
-        F1: eX,
+        F1: ez,
         GY: ev,
         Ip: en,
         Ju: em,
@@ -4631,8 +4631,8 @@ n.d(
         nx: eh,
         oJ: eV,
         oP: td,
-        tI: X,
-        tR: z,
+        tI: z,
+        tR: X,
         te: tO,
         uK: tN,
         wL: tl,

@@ -21,7 +21,7 @@ class m extends f.Ay.Store {
         return p[e];
     }
 }
-let T = new m(o.h, {
+let g = new m(o.h, {
     AUTH_INVITE_UPDATE: function (e) {
         let { invite: t } = e,
             n = t.guild;
@@ -29,7 +29,7 @@ let T = new m(o.h, {
         p[n.id] = (0, I.DY)(n);
     },
 });
-var g = n(498642),
+var T = n(498642),
     S = n(71393),
     N = n(927813),
     C = n(811091);
@@ -71,28 +71,28 @@ let L = {
     [s().v3("guild_member_count_range")]: (e) => {
         let { min: t, max: n } = R(e);
         return (e) => {
-            let i = g.A.getMemberCount(e);
+            let i = T.A.getMemberCount(e);
             return null != i && O(i, t, n);
         };
     },
     [s().v3("guild_has_feature")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? T.getGuild(e);
+            let n = S.A.getGuild(e) ?? g.getGuild(e);
             return null != n && t.some((e) => n.features.has(e));
         };
     },
     [s().v3("guild_hub_types")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? T.getGuild(e);
+            let n = S.A.getGuild(e) ?? g.getGuild(e);
             return null != n && "number" == typeof n.hubType && t.some((e) => n.hubType === e);
         };
     },
     [s().v3("guild_has_vanity_url")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? T.getGuild(e);
+            let n = S.A.getGuild(e) ?? g.getGuild(e);
             return null != n && t === (null != n.vanityURLCode);
         };
     },
@@ -132,7 +132,7 @@ let b = "scientist:triggered",
     Y = null,
     K = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, d.kK)(),
     $ = {};
-function z(e) {
+function X(e) {
     let t = $[e];
     if (void 0 !== t) return t;
     {
@@ -140,7 +140,7 @@ function z(e) {
         return (($[e] = t), t);
     }
 }
-function X(e) {
+function z(e) {
     return ((e.flags ?? 0) & D.nhx.STAFF) === D.nhx.STAFF || null != e.personal_connection_id;
 }
 function q(e, t, n, i) {
@@ -158,9 +158,9 @@ function q(e, t, n, i) {
 function Z(e) {
     switch (e.type) {
         case y.Vh.USER:
-            return z(`${e.bucket}|${e.revision}`);
+            return X(`${e.bucket}|${e.revision}`);
         case y.Vh.GUILD:
-            return z(`${e.bucket}|${e.revision}|${e.guildId}`);
+            return X(`${e.bucket}|${e.revision}|${e.guildId}`);
         default:
             throw Error(`Unknown experiment type: ${e}`);
     }
@@ -286,7 +286,7 @@ function et(e) {
     };
 }
 function en(e) {
-    (!K && "CONNECTION_OPEN" === e.type && X(e.user) && (K = !0),
+    (!K && "CONNECTION_OPEN" === e.type && z(e.user) && (K = !0),
         "EXPERIMENTS_FETCH_SUCCESS" === e.type &&
             w &&
             "ready_payload" === F.source &&
@@ -391,7 +391,7 @@ function ea(e) {
 }
 function es(e) {
     let { serializedExperimentStore: t, user: n } = e;
-    (!K && X(n) && (K = !0),
+    (!K && z(n) && (K = !0),
         (w = t.hasLoadedExperiments),
         (G = t.trackedExposureExperiments),
         (B = t.loadedUserExperiments),
@@ -581,7 +581,7 @@ class ef extends _.A {
             let t = j[e];
             if (null != t) return t;
         }
-        let t = z(e);
+        let t = X(e);
         return B[`${t}`];
     }
     getGuildExperimentDescriptor(e, t) {
@@ -591,7 +591,7 @@ class ef extends _.A {
         let r = `${n}:${e}`;
         if (r in H) return H[r];
         let a = (function e(t, n) {
-            let i = z(n),
+            let i = X(n),
                 r = V[`${i}`];
             if (null == r) return null;
             let { revision: a, aaMode: s } = r,
@@ -609,7 +609,7 @@ class ef extends _.A {
                           hashResult: -1,
                           triggerDebuggingEnabled: o,
                       };
-            let d = z(`${r.hashKey ?? n}:${t}`) % 1e4,
+            let d = X(`${r.hashKey ?? n}:${t}`) % 1e4,
                 c = null;
             for (let e of r.overridesFormatted ?? [])
                 if (null !== (c = er(t, e, d)))
@@ -667,10 +667,10 @@ class ef extends _.A {
         return V;
     }
     getLoadedUserExperiment(e) {
-        return B[z(e)];
+        return B[X(e)];
     }
     getLoadedGuildExperiment(e) {
-        return V[z(e)];
+        return V[X(e)];
     }
     getRecentExposures(e, t) {
         let n = `${e}|${t}|`;
@@ -697,7 +697,7 @@ class ef extends _.A {
         let e = {},
             t = {};
         for (let n in (Object.keys(k).forEach((e) => {
-            t[z(`${e}`)] = e;
+            t[X(`${e}`)] = e;
         }),
         B)) {
             let i = t[n];

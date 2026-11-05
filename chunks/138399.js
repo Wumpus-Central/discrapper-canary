@@ -1,4 +1,4 @@
-(n.d(t, { A: () => ez }), n(801541), n(938796));
+(n.d(t, { A: () => eX }), n(801541), n(938796));
 var i = n(889137),
     r = n(696292),
     a = n(665260),
@@ -17,8 +17,8 @@ n(695870);
 var I = n(53677),
     p = n(76349),
     m = n(167189),
-    T = n(486889),
-    g = n(626584),
+    g = n(486889),
+    T = n(626584),
     S = n(390248),
     N = n(225123),
     C = n(607399),
@@ -53,14 +53,14 @@ var b = n(834757),
     Y = n(734057),
     K = n(498642),
     $ = n(544180);
-let z = new g.A("MessageRoundtripTrackerStore");
-function X(e) {
+let X = new T.A("MessageRoundtripTrackerStore");
+function z(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
 function q(e) {
     let t = Y.A.getBasicChannel(e.channelId);
     if (null == t)
-        return void z.warn(`Ignoring a messageData for channel ${e.channelId} because we can't find that channel.`);
+        return void X.warn(`Ignoring a messageData for channel ${e.channelId} because we can't find that channel.`);
     if (Math.random() > 0.1) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
@@ -103,14 +103,14 @@ class Z extends H.Ay.Store {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, apiResponseTimestamp: Date.now() };
-            X(n) ? (q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            z(n) ? (q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, gatewaySeenTimestamp: Date.now() };
-            X(n) ? (q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            z(n) ? (q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
 }
@@ -147,8 +147,8 @@ var e_ = n(9842),
     eI = n(677413),
     ep = n(7909),
     em = n(935564),
-    eT = n(616356),
-    eg = n(46653);
+    eg = n(616356),
+    eT = n(46653);
 n(580745);
 var eS = n(71393),
     eN = n(299091),
@@ -169,8 +169,8 @@ var eS = n(71393),
     ek = n(401755),
     eF = n(381941),
     eB = n(792996);
-let eV = new g.A("MessageActionCreators"),
-    eH = new g.A("MessageQueue"),
+let eV = new T.A("MessageActionCreators"),
+    eH = new T.A("MessageQueue"),
     ej = !1;
 class eW {
     completed = !1;
@@ -187,7 +187,7 @@ function eY(e) {
             inviteAnalyticsMetadata: a,
             overrideProperties: s = {},
         } = e,
-        l = eg.default.getId(),
+        l = eT.default.getId(),
         o = eN.A.getInvite(t),
         d = (0, w.y$)(t),
         c = null != o && (0, G.oK)(o),
@@ -205,7 +205,7 @@ function eY(e) {
                 (t.invite_channel_type = n.type),
                 null != o.inviter && (t.invite_inviter_id = o.inviter.id),
                 null != o.target_application && (t.application_id = o.target_application.id));
-            let i = eT.A.getLastActiveStream();
+            let i = eg.A.getLastActiveStream();
             if (null != i && i.channelId === n.id) {
                 ((e = y.G2g.STREAM), (t.destination_user_id = i.ownerId));
                 let n = (0, b.Ee)(i, eR.A);
@@ -506,8 +506,8 @@ let eK = {
                     nitroPrefetchKey: p,
                 } = e,
                 m = Y.A.getChannel(n),
-                T = N.A.isConnectedOrOverlay(),
-                g = Date.now();
+                g = N.A.isConnectedOrOverlay(),
+                T = Date.now();
             if (null != m && m.type === y.rbe.GUILD_STORE) return !1;
             if (
                 "131" === n ||
@@ -523,7 +523,7 @@ let eK = {
                 }))
             )
                 return;
-            (em.A.fetchMessages.recordStart(), k.A.recordChannelFetchStart(n, I ?? g, i, r, a));
+            (em.A.fetchMessages.recordStart(), k.A.recordChannelFetchStart(n, I ?? T, i, r, a));
             let S = l ?? void 0;
             null == S && null != d && (S = { ...d });
             let C = c.A.getOrCreate(n).loadStart(S);
@@ -532,7 +532,7 @@ let eK = {
             null != p && (O = void 0);
             let R = new eW();
             return (
-                _ || this.fetchLocalMessages(n, I ?? g, i, r, a, R),
+                _ || this.fetchLocalMessages(n, I ?? T, i, r, a, R),
                 null != p && (t = { prefetchKey: p }),
                 s.Bo.get({
                     url: y.Rsh.MESSAGES(n),
@@ -584,12 +584,12 @@ let eK = {
                                     limit: a,
                                     jump: l,
                                     forICYMI: A,
-                                    isStale: !T || N.A.lastTimeConnectedChanged() >= g,
+                                    isStale: !g || N.A.lastTimeConnectedChanged() >= T,
                                     truncate: E,
                                     avoidInitialScroll: h,
-                                    requestStartTime: g,
+                                    requestStartTime: T,
                                 }),
-                                k.A.recordChannelFetchedNetwork(n, I ?? g, i, r, a, t));
+                                k.A.recordChannelFetchedNetwork(n, I ?? T, i, r, a, t));
                         }),
                         !0
                     ),
@@ -857,7 +857,7 @@ ${a}`),
                 {
                     activityAction: A,
                     location: h,
-                    inviteAnalyticsMetadata: g,
+                    inviteAnalyticsMetadata: T,
                     stickerIds: N,
                     messageReference: C,
                     allowedMentions: O,
@@ -873,8 +873,8 @@ ${a}`),
                     scheduledTimestamp: K,
                 } = n,
                 $ = n.flags ?? 0,
-                [z, X] = (0, eI.Ay)(l);
-            z && ((l = X), ($ = (0, a.UI)($, y.pr7.SUPPRESS_NOTIFICATIONS)));
+                [X, z] = (0, eI.Ay)(l);
+            X && ((l = z), ($ = (0, a.UI)($, y.pr7.SUPPRESS_NOTIFICATIONS)));
             let q = Y.A.getChannel(e),
                 Z = eS.A.getGuild(q?.guild_id);
             (0, V.Zv)(Z, q, "_sendMessage") && ($ = (0, a.UI)($, y.pr7.IS_GUILD_OFFICIAL));
@@ -922,7 +922,7 @@ ${a}`),
                     { errorMessage: n, errorMessageName: i } = e$.validateMessage(d, t, e);
                 e$.sendBotMessage(e, n, i);
             }
-            let eT = {
+            let eg = {
                 type: null != H ? u.AZ.SEND_ANNOUNCEMENT : u.AZ.SEND,
                 message: {
                     channelId: e,
@@ -936,11 +936,11 @@ ${a}`),
                 },
             };
             if (
-                (null != t.components && (eT.message.components = t.components),
+                (null != t.components && (eg.message.components = t.components),
                 null != H &&
-                    ((eT.message.create_thread = H.createThread),
-                    (eT.message.title = H.threadName),
-                    (eT.message.publish = H.publish ?? !1)),
+                    ((eg.message.create_thread = H.createThread),
+                    (eg.message.title = H.threadName),
+                    (eg.message.publish = H.publish ?? !1)),
                 null != A)
             ) {
                 let e,
@@ -956,24 +956,24 @@ ${a}`),
                     (e =
                         A.type === y.xL.JOIN_REQUEST || (A.type === y.xL.STREAM_REQUEST && null != n) || null != n
                             ? n
-                            : eg.default.getSessionId())
+                            : eT.default.getSessionId())
                 ) {
                     let t = { type: A.type, session_id: e, target_user_id: A.targetUserId },
                         { activity: n } = A;
                     (n?.party != null && null != n.party.id && (t.party_id = n.party.id),
-                        (eT.message.application_id = n?.application_id),
-                        (eT.message.activity = t));
+                        (eg.message.application_id = n?.application_id),
+                        (eg.message.activity = t));
                 }
             }
             if (
-                (null != R && (eT.message.poll = R),
-                null != b && (eT.message.shared_client_theme = b),
-                null != N && (eT.message.sticker_ids = N),
-                ea.A.isEnabled() && (eT.message.has_poggermode_enabled = !0),
-                null != j && (eT.message.checkpoint_card_type = j),
-                null != w && (eT.message.content_inventory_entry = w),
-                null != W && (eT.message.media_mention = W),
-                null != G && G.length > 0 && (eT.message.attachments = G),
+                (null != R && (eg.message.poll = R),
+                null != b && (eg.message.shared_client_theme = b),
+                null != N && (eg.message.sticker_ids = N),
+                ea.A.isEnabled() && (eg.message.has_poggermode_enabled = !0),
+                null != j && (eg.message.checkpoint_card_type = j),
+                null != w && (eg.message.content_inventory_entry = w),
+                null != W && (eg.message.media_mention = W),
+                null != G && G.length > 0 && (eg.message.attachments = G),
                 null != x && x.length > 0)
             )
                 try {
@@ -1012,7 +1012,7 @@ ${a}`),
                     if (null == t) return;
                     let r = t.attachments;
                     if (((i = t.uploader), ei && (null == r || 0 === r.length))) return;
-                    null != r && (eT.message.attachments = r.map((e, t) => (0, ew.OW)(e, t)));
+                    null != r && (eg.message.attachments = r.map((e, t) => (0, ew.OW)(e, t)));
                 } catch (r) {
                     let { file: e, code: t, reason: n, responseBody: i } = r;
                     ((0, en.O)({ fileItems: e.items, failureCode: t, errorMessage: n?.msg }), k?.(e, t, n, i));
@@ -1020,7 +1020,7 @@ ${a}`),
                 }
             if (null != K)
                 try {
-                    let t = await (0, eA.pr)({ channelId: e, scheduledTimestamp: K, messageSendData: eT.message });
+                    let t = await (0, eA.pr)({ channelId: e, scheduledTimestamp: K, messageSendData: eg.message });
                     return (
                         null != i &&
                             o.h.dispatch({ type: "UPLOAD_COMPLETE", channelId: e, file: i._file, aborted: !1 }),
@@ -1047,7 +1047,7 @@ ${a}`),
                     E = Math.floor(1e4 * Math.random());
                 (eH.info(`Queueing message to be sent LogId:${E}`),
                     u.Ay.enqueue(
-                        eT,
+                        eg,
                         (E) => {
                             let A = Date.now() - s;
                             if (E.ok) {
@@ -1091,8 +1091,8 @@ ${a}`),
                                                 inviteAnalyticsMetadata: s,
                                                 overrideProperties: l = {},
                                             } = e,
-                                            o = eg.default.getId();
-                                        (0, T.Ay)(t).forEach((e) => {
+                                            o = eT.default.getId();
+                                        (0, g.Ay)(t).forEach((e) => {
                                             let { type: t, code: d, url: c } = e;
                                             if ((0, p.Yf)(t)) {
                                                 let e = (0, p.kK)(t, d, c);
@@ -1199,7 +1199,7 @@ ${a}`),
                                         channelId: e,
                                         messageId: E.body.id,
                                         location: h ?? "chat_input",
-                                        inviteAnalyticsMetadata: g,
+                                        inviteAnalyticsMetadata: T,
                                     }),
                                     (O = l),
                                     (b = E.body.id),
@@ -1306,7 +1306,7 @@ ${a}`),
                                         v.yf.has(E.body.code)
                                             ? o.h.dispatch({
                                                   type: "MESSAGE_SEND_FAILED_AUTOMOD",
-                                                  messageData: eT,
+                                                  messageData: eg,
                                                   errorResponseBody: { code: E.body.code, message: E.body.message },
                                               })
                                             : E.body.code === y.t02.POGGERMODE_TEMPORARILY_DISABLED
@@ -1492,4 +1492,4 @@ ${a}`),
         },
         trackInvite: eY,
     },
-    ez = e$;
+    eX = e$;

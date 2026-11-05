@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(587895),
     p = n(626584),
     m = n(225123),
-    T = n(294857),
-    g = n(361686),
+    g = n(294857),
+    T = n(361686),
     S = n(812020),
     N = n(57985),
     C = n(907459),
@@ -44,8 +44,8 @@ let V = !1,
     Y = new Map(),
     K = {},
     $ = new Set(),
-    z = new Set();
-function X() {
+    X = new Set();
+function z() {
     let e = w.A.getFriendIDs();
     return new Set(
         b.A.hasConsented(F.YAq.PERSONALIZATION)
@@ -69,7 +69,7 @@ function Q(e) {
     return (null == K[e] && (K = { ...K, [e]: new R.A({ url: e }) }), K[e]);
 }
 function J(e) {
-    z.has(e) || $.add(e);
+    X.has(e) || $.add(e);
 }
 function ee(e) {
     if ((0, _.A)(e)) return O.HT;
@@ -108,7 +108,7 @@ function ei(e, t, n) {
         if ((0, h.qR)(n)) continue;
         let i = q(e.id);
         if ((null != t && w.push({ stream: t, streamUser: e, activity: i }), null == i)) continue;
-        let a = (0, T.A)(i);
+        let a = (0, g.A)(i);
         if (null == a) continue;
         b = a === O.WY;
         let l = (function (e) {
@@ -146,7 +146,7 @@ function ei(e, t, n) {
             )
                 continue;
         }
-        if (!g.IS(i) || null == l || L.has(l.id)) continue;
+        if (!T.IS(i) || null == l || L.has(l.id)) continue;
         let E = null != i ? ee(i) : null;
         (null == E || E.id !== l.id) && (i = null);
         let A = [];
@@ -247,7 +247,7 @@ let es = r().throttle(() => {
         if (ea()) {
             if (
                 ($.clear(),
-                (W = (j = ((e = Array.from(X()).reduce((e, t) => {
+                (W = (j = ((e = Array.from(z()).reduce((e, t) => {
                     let n = G.default.getUser(t);
                     return (null == n || n.bot || e.push(n), e);
                 }, [])),
@@ -256,7 +256,7 @@ let es = r().throttle(() => {
                         n = q(e.id);
                     return null != t ? `channel-${t}` : n?.party?.id != null ? `party-${n.party.id}` : `user-${e.id}`;
                 })),
-                (n = X()),
+                (n = z()),
                 (i = ei.bind(null, n)),
                 r()(t).mapValues(i))
                     .values()
@@ -305,7 +305,7 @@ let es = r().throttle(() => {
                 $.size > 0)
             ) {
                 let e = Array.from($);
-                (f.Ay.fetchApplications(e).catch(F.tEg), e.forEach((e) => z.add(e)), $.clear());
+                (f.Ay.fetchApplications(e).catch(F.tEg), e.forEach((e) => X.add(e)), $.clear());
             }
             H = !0;
         }
@@ -336,7 +336,7 @@ class eo extends s.Ay.Store {
 }
 let ed = new eo(l.h, {
     LOGOUT: function () {
-        ((V = !1), (j = []), (W = []), $.clear(), z.clear(), Y.clear());
+        ((V = !1), (j = []), (W = []), $.clear(), X.clear(), Y.clear());
     },
     NOW_PLAYING_MOUNTED: function () {
         ((V = !0), es());

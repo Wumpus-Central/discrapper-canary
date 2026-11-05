@@ -1,4 +1,4 @@
-_.exports = {
+r.exports = {
     kR: "cards_Ff_24N",
     Nr: "card_Ff_24N",
     Gt: "frame_Ff_24N",

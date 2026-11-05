@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(951001),
     p = n(775602),
     m = n(793574),
-    T = n(149468),
-    g = n(688810),
+    g = n(149468),
+    T = n(688810),
     S = n(660387),
     N = n(343328),
     C = n(485947),
@@ -100,8 +100,8 @@ var W = n(97469),
     Y = n(734057),
     K = n(290863),
     $ = n(645959),
-    z = n(181254),
-    X = n(652215),
+    X = n(181254),
+    z = n(652215),
     q = n(307636);
 let Z = r.memo(function () {
     return (0, i.jsxs)("svg", {
@@ -188,7 +188,7 @@ class Q extends r.Component {
                 num_users_visible_with_mobile_indicator: l.filter((e) => null != e && K.A.isMobileOnline(e)).length,
             };
         ((this.hasReportedAnalytics = !0),
-            T.Ay.trackWithMetadata(X.HAw.DM_LIST_VIEWED, {
+            g.Ay.trackWithMetadata(z.HAw.DM_LIST_VIEWED, {
                 ...d,
                 ...(0, S.F)(),
                 visible_user_ids: l.filter((e) => null != e),
@@ -199,7 +199,7 @@ class Q extends r.Component {
     handleScroll = o()(() => {
         if (null != this._list) {
             let e = this._list.getScrollerNode();
-            null != e && I.A.updateChannelListScroll(X.ME, e.scrollTop);
+            null != e && I.A.updateChannelListScroll(z.ME, e.scrollTop);
         }
         void 0 !== this.props.onHandleScroll && this.props.onHandleScroll();
     }, 100);
@@ -210,7 +210,7 @@ class Q extends r.Component {
         return null == o
             ? null
             : (0, i.jsx)(
-                  z.Ay,
+                  X.Ay,
                   { channel: o, selected: o.id === a, "aria-posinset": l + t + 1, "aria-setsize": s },
                   o.id,
               );
@@ -315,9 +315,9 @@ let J = function (e) {
             return (0, P.eh)(e, [v.A, M.A]);
         });
     (0, D.P)(y);
-    let { analyticsLocations: h } = (0, g.Ay)(m.A.CONTACTS_LIST),
+    let { analyticsLocations: h } = (0, T.Ay)(m.A.CONTACTS_LIST),
         I = (0, W.NC)(),
-        { keyboardModeEnabled: T, version: S } = (0, u.cf)([p.Ay, Y.A], () => ({
+        { keyboardModeEnabled: g, version: S } = (0, u.cf)([p.Ay, Y.A], () => ({
             keyboardModeEnabled: p.Ay.keyboardModeEnabled,
             version: null != n ? `${n}:${Y.A.getPrivateChannelsVersion()}` : Y.A.getPrivateChannelsVersion(),
         })),
@@ -363,13 +363,13 @@ let J = function (e) {
         U = (0, O.GV)(),
         w = (0, c.Ay)({
             id: `private-channels-${U}`,
-            isEnabled: T,
+            isEnabled: g,
             scrollToStart: L,
             scrollToEnd: b,
             defaultFocused: (o + 1).toString(),
             setFocus: R,
         });
-    return (0, i.jsx)(g.f5, {
+    return (0, i.jsx)(T.f5, {
         value: h,
         children: (0, i.jsx)(d.hD, {
             navigator: w,

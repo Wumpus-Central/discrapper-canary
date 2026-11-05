@@ -16,8 +16,8 @@ let c = null,
     I = null,
     p = U(),
     m = !1,
-    T = !1,
     g = !1,
+    T = !1,
     S = null,
     N = null,
     C = [],
@@ -114,14 +114,14 @@ function H(e) {
     v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function j() {
-    ((T = !0), (g = !1));
+    ((g = !0), (T = !1));
 }
 function W() {
-    if (!T) return !1;
-    ((T = !1), (g = !0));
+    if (!g) return !1;
+    ((g = !1), (T = !0));
 }
 function Y() {
-    T = !1;
+    g = !1;
 }
 function K(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -155,8 +155,8 @@ function K(e) {
         (y = f ?? null),
         (D = I ?? null),
         (P = i ?? null),
-        (T = !1),
         (g = !1),
+        (T = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (m = !0));
 }
@@ -164,11 +164,11 @@ function $(e) {
     let { linkedUsers: t } = e;
     x(t);
 }
-function z(e) {
+function X(e) {
     let { linkedUsers: t } = e;
     x(t);
 }
-function X(e) {
+function z(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return !1;
     let {
@@ -195,7 +195,7 @@ function X(e) {
         null != h && H(h),
         (C = o),
         (O = d),
-        (T = !1),
+        (g = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (R = _),
         (L = E),
@@ -252,8 +252,8 @@ function er() {
         (A = w()),
         (h = G()),
         (M = {}),
-        (T = !1),
         (g = !1),
+        (T = !1),
         (S = null),
         (p = U()),
         (E = !1),
@@ -280,10 +280,10 @@ class ea extends r.A {
             FAMILY_CENTER_FETCH_START: j,
             FAMILY_CENTER_INITIAL_LOAD_FAILURE: W,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: $,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: X,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: z,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_FAILURE: Y,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: q,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: z,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: X,
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: Z,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Q,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: J,
@@ -374,10 +374,10 @@ class ea extends r.A {
         return N;
     }
     isLoading() {
-        return T;
+        return g;
     }
     hasInitialLoadFailed() {
-        return g;
+        return T;
     }
     getTopUserActivities() {
         return C;

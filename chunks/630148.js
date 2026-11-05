@@ -21,8 +21,8 @@ let p = {
         animateStickers: { value: f.BJ.ANIMATE_ON_INTERACTION, reasonKey: I._A.GAME_MODE },
     },
     m = Object.keys(p),
-    T = new i.Ep(),
     g = new i.Ep(),
+    T = new i.Ep(),
     S = new i.Ep(),
     N = 0,
     C = 0,
@@ -35,14 +35,14 @@ function y(e) {
     r.h.dispatch({ type: "GAME_MODE_DISCORD_HOVER_CHANGE", hovered: e });
 }
 function D() {
-    (g.stop(), y(!0));
+    (T.stop(), y(!0));
 }
 function b() {
-    g.start(2e3, () => y(!1));
+    T.start(2e3, () => y(!1));
 }
 function v() {
     ((R = !1),
-        g.stop(),
+        T.stop(),
         document.documentElement.removeEventListener("mouseenter", D),
         document.documentElement.removeEventListener("mouseleave", b));
 }
@@ -77,7 +77,7 @@ function w() {
     r.h.isDispatching() ? S.start(0, U, !1) : U();
 }
 function G() {
-    (v(), T.stop(), S.stop(), P(0), M(0));
+    (v(), g.stop(), S.stop(), P(0), M(0));
 }
 class x extends s.A {
     actions = {
@@ -87,7 +87,7 @@ class x extends s.A {
             });
         },
         WINDOW_FOCUS: () => {
-            T.start(2e3, L);
+            g.start(2e3, L);
         },
         LOGOUT: () => G(),
     };

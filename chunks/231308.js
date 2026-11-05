@@ -1,4 +1,4 @@
-n.d(t, { Rs: () => B, fw: () => Z, Ay: () => G });
+n.d(t, { Rs: () => D, fw: () => K, Ay: () => G });
 var l,
     r = n(477900),
     i = n(582128),
@@ -68,7 +68,7 @@ function T(e) {
     });
 }
 var M = n(13792);
-let L = function (e) {
+let b = function (e) {
     let { type: t, theme: n } = e;
     return (0, r.jsx)("div", {
         className: M.Eq,
@@ -90,7 +90,7 @@ let L = function (e) {
         }),
     });
 };
-var b = n(585121),
+var L = n(585121),
     j = n(682901),
     N = n(88001),
     k = n(652215),
@@ -99,7 +99,7 @@ var b = n(585121),
     H = n(792996),
     O = n(379912),
     F = n(896554);
-function D(e) {
+function B(e) {
     let t,
         { planId: n, startingPremiumSubscriptionPlanId: l, paymentSourceType: i } = e,
         [a, o] = (0, u.yK)([E.A], () => [E.A.get(l), E.A.get(n)]);
@@ -157,7 +157,7 @@ function D(e) {
         children: t,
     });
 }
-var B = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
+var D = (((l = {}).DEEPLINK_TO_DESKTOP_APP = "deeplink_to_desktop_app"), l);
 function G(e) {
     let t,
         n,
@@ -175,20 +175,20 @@ function G(e) {
         } = e,
         M = (0, u.bG)([A.A], () => A.A.isDisplayingWowMomentConfirmation),
         {
-            isPremiumGroupPurchase: B,
+            isPremiumGroupPurchase: D,
             customCheckoutFlow: G,
-            startingIsInPastDueCheckout: Z,
+            startingIsInPastDueCheckout: K,
         } = (0, m.t4)((e) => ({
             isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
-        { theme: K } = (0, o.wR)(),
+        { theme: Z } = (0, o.wR)(),
         W = (0, u.bG)([_.A], () => (null != p ? _.A.get(p.id) : null)),
         Y = (0, S.b2)(R),
         q = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function z(e) {
-        return B
+        return D
             ? H.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, N.DP)(), totalSeats: 5 })
             : e.skuId === j.pe.TIER_0
               ? k.NcF.has(v ?? k.hes.UNKNOWN)
@@ -208,7 +208,7 @@ function G(e) {
             let { applicationId: e, id: t } = p;
             (0, f.EX)(e, t).catch(k.FXj);
         }, [p, W]),
-        Z)
+        K)
     )
         t = (0, r.jsx)(c.E, {
             variant: "body-md/medium",
@@ -261,7 +261,7 @@ function G(e) {
                           }),
                       ],
                   })));
-    } else if (null != a) t = (0, r.jsx)(D, { planId: l, startingPremiumSubscriptionPlanId: a });
+    } else if (null != a) t = (0, r.jsx)(B, { planId: l, startingPremiumSubscriptionPlanId: a });
     else if (null != P) {
         let e = E.A.get(l);
         (s()(null != e, "Missing plan"),
@@ -303,7 +303,7 @@ function G(e) {
               : x.Ay.Types.PREMIUM_ACTIVATED;
     }
     if (
-        ((n = B
+        ((n = D
             ? H.intl.string(w.default.clIveA)
             : "deeplink_to_desktop_app" === T || G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? H.intl.string(H.t.sRApon)
@@ -316,12 +316,12 @@ function G(e) {
                     : H.intl.string(H.t.TkTvBz)),
         M)
     )
-        return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
+        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
     let J = (0, I.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
-            !J && (0, r.jsx)(L, { type: $(), theme: K }),
+            !J && (0, r.jsx)(b, { type: $(), theme: Z }),
             t,
             y || q
                 ? null
@@ -333,7 +333,7 @@ function G(e) {
         ],
     });
 }
-function Z(e) {
+function K(e) {
     let { planId: t, onClose: n, shouldUsePostPurchaseRecipientDelivery: l = !1 } = e,
         {
             giftRecipient: i,

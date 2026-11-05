@@ -20,14 +20,14 @@ function p() {
 function m() {
     ((f = l.XlH.CLOSED), (I = {}));
 }
-function T() {
+function g() {
     h = u;
 }
-function g() {
+function T() {
     ((A = {}), (I = {}));
 }
 function S() {
-    (g(), T(), m());
+    (T(), g(), m());
 }
 class N extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -184,8 +184,8 @@ let C = new N(a.h, {
             }),
         );
     },
-    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: g,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: T,
+    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: g,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
         if ((A[l.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
         A[l.ME] = { ...A[l.ME], pendingLegacyUsernameDisabled: void 0 };

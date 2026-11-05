@@ -9,7 +9,7 @@ var l = n(477900),
     d = n(516106),
     m = n(67480),
     p = n(418200),
-    h = n(652215);
+    C = n(652215);
 n.d(
     t,
     {},
@@ -22,7 +22,7 @@ n.d(
                     isGift: o,
                     checkoutLegalType: p = c.I0.GiftGameShop,
                 } = e,
-                { immediateDelivery: C } = (0, u.U)(),
+                { immediateDelivery: h } = (0, u.U)(),
                 f = (function (e) {
                     let {
                             skuId: t,
@@ -35,22 +35,22 @@ n.d(
                         })),
                         u = (0, r.bG)([m.A], () => m.A.get(t), [t]),
                         p = u?.productLine,
-                        C = u?.applicationId,
+                        h = u?.applicationId,
                         f = (0, r.bG)(
                             [s.A],
-                            () => (p === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(C) : null),
-                            [C, p],
+                            () => (p === C.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(h) : null),
+                            [h, p],
                         ),
                         { fetched: E, hasAlreadyLinked: S } = (0, a.RD)(f);
                     return {
                         type: l,
                         purchaseButtonText: n ?? o,
                         applicationName: f?.name,
-                        applicationId: C,
+                        applicationId: h,
                         shouldAppendDisclaimer: i || (E && S),
                     };
                 })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: p });
-            return (0, l.jsx)(c._P, { variant: f, paymentSourceType: n, immediateDelivery: C });
+            return (0, l.jsx)(c._P, { variant: f, paymentSourceType: n, immediateDelivery: h });
         },
         T3: function (e) {
             let { paymentSourceType: t } = e,
@@ -66,7 +66,7 @@ n.d(
                 })),
                 { isGift: s } = (0, p.Pv)(),
                 { immediateDelivery: m } = (0, u.U)(),
-                h = i.useMemo(
+                C = i.useMemo(
                     () =>
                         n === o.C.PREMIUM_APPS_OTP_CHECKOUT
                             ? { type: c.I0.PremiumAppsOneTimePurchase, purchaseButtonText: r }
@@ -77,7 +77,7 @@ n.d(
                                 : { type: c.I0.Shop, purchaseButtonText: r },
                     [n, r, s],
                 );
-            return (0, l.jsx)(c._P, { variant: h, paymentSourceType: t, immediateDelivery: m, isExpressCheckout: a });
+            return (0, l.jsx)(c._P, { variant: C, paymentSourceType: t, immediateDelivery: m, isExpressCheckout: a });
         },
     },
 );

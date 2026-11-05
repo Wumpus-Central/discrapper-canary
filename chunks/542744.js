@@ -1,10 +1,10 @@
-var t = l(73153);
-l.d(
+var l = t(73153);
+t.d(
     n,
     {},
     {
         G: function (e) {
-            t.h.dispatch({ type: "PINOT_MEMBER_NOTICE_ACK", channelId: e });
+            l.h.dispatch({ type: "PINOT_MEMBER_NOTICE_ACK", channelId: e });
         },
     },
 );

@@ -11,8 +11,8 @@ var l = n(477900),
     g = n(484469),
     h = n(792996),
     p = n(105499);
-let x = { flattenProductVariants: !1 };
-function f(e) {
+let f = { flattenProductVariants: !1 };
+function x(e) {
     return String(e);
 }
 function E(e) {
@@ -29,7 +29,7 @@ function v(e) {
         : (0, l.jsx)("div", {
               className: p.hm,
               children: (0, l.jsx)(m.v3.Provider, {
-                  value: x,
+                  value: f,
                   children: n.map((e, t) => (0, l.jsx)(C, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
@@ -44,12 +44,12 @@ function _(e) {
             gap: "xl",
             "aria-label": i,
             items: e,
-            getItemKey: f,
+            getItemKey: x,
             renderItem: (e) => (0, l.jsx)(g.A, {}, e),
         });
     }
     return (0, l.jsx)(m.v3.Provider, {
-        value: x,
+        value: f,
         children: (0, l.jsx)(s.A, {
             gap: "xl",
             "aria-label": i,
@@ -90,13 +90,13 @@ n.d(
                         a.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
                     [g, a.rankedSkuIds, h.length],
                 ),
-                x = g || p,
-                f = r.useMemo(() => h.filter((e) => null != i.A.getCategoryForProduct(e.skuId)), [h]);
+                f = g || p,
+                x = r.useMemo(() => h.filter((e) => null != i.A.getCategoryForProduct(e.skuId)), [h]);
             switch (d) {
                 case "feed":
-                    return (0, l.jsx)(v, { isLoading: x, products: f, tab: m });
+                    return (0, l.jsx)(v, { isLoading: f, products: x, tab: m });
                 case "hscroll":
-                    return (0, l.jsx)(_, { isLoading: x, products: f, tab: m });
+                    return (0, l.jsx)(_, { isLoading: f, products: x, tab: m });
             }
         },
     },

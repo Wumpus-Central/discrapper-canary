@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(855986),
     r = n(73153),
     a = n(573648),
@@ -51,7 +51,7 @@ let u = new Set([n(652215).fg2.CONTACTS]),
 function m(e) {
     ((E = e.filter((e) => !u.has(e.type) && a.A.isSupported(e.type))), (A = e.filter((e) => u.has(e.type))), (_ = !1));
 }
-class T extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "ConnectedAccountsStore";
     isJoining(e) {
         return h[e] || !1;
@@ -87,7 +87,7 @@ class T extends i.Ay.Store {
         return f.has(e);
     }
 }
-let g = new T(r.h, {
+let T = new g(r.h, {
     CONNECTION_OPEN: function (e) {
         m(e.connectedAccounts.map((e) => new d(e)));
     },

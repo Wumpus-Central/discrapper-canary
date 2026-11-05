@@ -20,8 +20,8 @@ let u = Array.from(d.qW)
     m = RegExp(
         `^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|${o.ME})(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?`,
     ),
-    T = RegExp("[\\w%=&+-]+"),
-    g = RegExp(`${m.source}(?:\\?(${T.source}))?`),
+    g = RegExp("[\\w%=&+-]+"),
+    T = RegExp(`${m.source}(?:\\?(${g.source}))?`),
     S = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );
@@ -32,7 +32,7 @@ n.d(
     t,
     {},
     {
-        BM: g,
+        BM: T,
         En: S,
         FM: function (e) {
             if (null == e) return null;

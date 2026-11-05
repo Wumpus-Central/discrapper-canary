@@ -147,8 +147,8 @@ var F = n(873298),
     z = n(653523),
     H = n(973654),
     Y = n(185928),
-    W = n(652215),
-    K = n(448600);
+    K = n(652215),
+    W = n(448600);
 let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
@@ -169,7 +169,7 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
         let g = o ? [] : k.G$.filter(k.Qm),
             m = o ? [] : k.iA.filter(k.Qm);
         return (0, c.jsxs)("div", {
-            className: K.k,
+            className: W.k,
             children: [
                 (0, c.jsxs)(V.Ay, {
                     type: V.v0.SETTINGS,
@@ -186,10 +186,10 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                             padding: { top: 16 },
                             children: [
                                 (0, c.jsx)(z.zy, {
-                                    theme: W.NJ8.LIGHT,
+                                    theme: K.NJ8.LIGHT,
                                     size: k.ni.SIZE_48,
-                                    isSelected: ((e = W.NJ8.LIGHT), (o || null == l) && n === e),
-                                    onSelect: () => d(Y.Fc.LIGHT, W.NJ8.LIGHT, void 0),
+                                    isSelected: ((e = K.NJ8.LIGHT), (o || null == l) && n === e),
+                                    onSelect: () => d(Y.Fc.LIGHT, K.NJ8.LIGHT, void 0),
                                 }),
                                 g.map((e) =>
                                     (0, c.jsx)(

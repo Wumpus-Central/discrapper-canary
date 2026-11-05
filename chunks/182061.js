@@ -1,29 +1,29 @@
-var i = e(477900);
-e(582128);
-var r = e(477782),
-    a = e(715757),
-    l = e(7909),
-    d = e(406704),
-    s = e(792996);
-e.d(
-    n,
+var a = r(477900);
+r(582128);
+var e = r(477782),
+    s = r(715757),
+    n = r(7909),
+    d = r(406704),
+    h = r(792996);
+r.d(
+    t,
     {},
     {
-        A: function (t) {
-            let n = (0, a.V)(t),
-                e = (0, d.NI)(t),
-                o = (0, d.lK)(t);
-            if ((t.isArchivedThread() ? o : e) && !n)
-                return t.threadMetadata?.archived
-                    ? (0, i.jsx)(r.Dr, {
+        A: function (i) {
+            let t = (0, s.V)(i),
+                r = (0, d.NI)(i),
+                c = (0, d.lK)(i);
+            if ((i.isArchivedThread() ? c : r) && !t)
+                return i.threadMetadata?.archived
+                    ? (0, a.jsx)(e.Dr, {
                           id: "unarchive-thread",
-                          label: t.isForumPost() ? s.intl.string(s.t.cnRubV) : s.intl.string(s.t.S9E4G7),
-                          action: () => l.A.unarchiveThread(t, !1),
+                          label: i.isForumPost() ? h.intl.string(h.t.cnRubV) : h.intl.string(h.t.S9E4G7),
+                          action: () => n.A.unarchiveThread(i, !1),
                       })
-                    : (0, i.jsx)(r.Dr, {
+                    : (0, a.jsx)(e.Dr, {
                           id: "archive-thread",
-                          label: t.isForumPost() ? s.intl.string(s.t.BTs4Kb) : s.intl.string(s.t.wiIevd),
-                          action: () => l.A.archiveThread(t, !1),
+                          label: i.isForumPost() ? h.intl.string(h.t.BTs4Kb) : h.intl.string(h.t.wiIevd),
+                          action: () => n.A.archiveThread(i, !1),
                       });
         },
     },

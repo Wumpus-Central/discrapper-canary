@@ -13,13 +13,13 @@ n.d(
         c: function (e) {
             let { relocationCountry: t, relocationCurrencyCode: n, willForfeitGiftCardBalance: c = !1, role: d } = e,
                 m = (0, a.j7)(t),
-                p = c ? s.default["DE+C4G"] : s.default.vcs3zU,
-                f = u.intl.formatToMarkdownString(p, {
+                f = c ? s.default["DE+C4G"] : s.default.vcs3zU,
+                p = u.intl.formatToMarkdownString(f, {
                     country: m,
                     currency: n?.toUpperCase() ?? "",
                     willForfeitGiftCardBalance: c ? "true" : "false",
                 }),
-                v = l.A.parse(f, !1, { allowList: !0 });
+                v = l.A.parse(p, !1, { allowList: !0 });
             return null == v
                 ? null
                 : (0, r.jsx)("div", {

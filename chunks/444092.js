@@ -51,14 +51,14 @@ function _() {
                 return Promise.reject(Error("guild event fetch is backing off"));
             if ("background" === h && e.size >= 1024)
                 return Promise.reject(Error("too many pending guild event fetches"));
-            function T() {
-                return e.get(f)?.request === g;
+            function g() {
+                return e.get(f)?.request === T;
             }
-            let g = Promise.resolve()
+            let T = Promise.resolve()
                 .then(A)
-                .then((e) => (T() && (t.get(f)?.succeed(), t.delete(f), n.delete(f)), e))
+                .then((e) => (g() && (t.get(f)?.succeed(), t.delete(f), n.delete(f)), e))
                 .catch((e) => {
-                    if (e instanceof s.wH || !T()) throw e;
+                    if (e instanceof s.wH || !g()) throw e;
                     if (u(e)) {
                         for (t.get(f)?.cancel(), t.delete(f), n.delete(f), n.add(f); n.size > 1024;) {
                             let e = n.values().next().value;
@@ -71,9 +71,9 @@ function _() {
                     throw (_(f, a), a.cancel(), a.fail(() => queueMicrotask(() => o(f))), e);
                 })
                 .finally(() => {
-                    T() && e.delete(f);
+                    g() && e.delete(f);
                 });
-            return (e.set(f, { request: g, priority: h }), "foreground" === h && c(f, g), g);
+            return (e.set(f, { request: T, priority: h }), "foreground" === h && c(f, T), T);
         },
         onRetryable: function (e, t) {
             let n = l.get(e);

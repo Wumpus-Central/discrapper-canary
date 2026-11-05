@@ -16,8 +16,8 @@ var r = n(435558),
     I = n(799704),
     p = n(734057),
     m = n(31717),
-    T = n(808728),
-    g = n(696451),
+    g = n(808728),
+    T = n(696451),
     S = n(71393),
     N = n(576705),
     C = n(218461),
@@ -66,7 +66,7 @@ function $(e) {
     } else if (null != k && k !== t.type) return null;
     return t;
 }
-function z(e) {
+function X(e) {
     let { query: t, queryMode: n } = e,
         r = t.trim(),
         a = R.A.getGuildId() ?? void 0,
@@ -81,7 +81,7 @@ function z(e) {
         (k = n),
         i.search(r));
 }
-function X(e) {
+function z(e) {
     ((j = j.filter((t) => t !== e)).unshift(e), j.length > 8 && (j.length = 8));
 }
 function q(e, t) {
@@ -182,7 +182,7 @@ function q(e, t) {
                               E))
                                   (a.add(t.record.id), a.add(e), r.push(t));
                           if (null != n) {
-                              let e = T.A.getSelectableChannelIds(n)
+                              let e = g.A.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.A.getChannel(e);
                                       return (
@@ -272,7 +272,7 @@ class J extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        (this.waitFor(A.A, f.default, I.Ay, p.A, m.A, u.A, T.A, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
+        (this.waitFor(A.A, f.default, I.Ay, p.A, m.A, u.A, g.A, T.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
             this.syncWith([h.A], () => !0),
             (G = l.w.get(P) || !1),
             (j = e?.channelHistory ?? []));
@@ -321,8 +321,8 @@ class J extends s.Ay.PersistedStore {
 let ee = new J(o.h, {
     CONNECTION_OPEN: K,
     CONNECTION_OPEN_SUPPLEMENTAL: K,
-    QUICKSWITCHER_SHOW: z,
-    SHOW_ACTION_SHEET_QUICK_SWITCHER: z,
+    QUICKSWITCHER_SHOW: X,
+    SHOW_ACTION_SHEET_QUICK_SWITCHER: X,
     QUICKSWITCHER_HIDE: Z,
     OVERLAY_SET_INPUT_LOCKED: Z,
     HIDE_ACTION_SHEET_QUICK_SWITCHER: Z,
@@ -355,7 +355,7 @@ let ee = new J(o.h, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (((W = null), null == n)) return !1;
-        X(n);
+        z(n);
         let i = I.Ay.getSidebarState(n);
         if (
             i?.type !== E.PE.VIEW_CHANNEL ||
@@ -365,7 +365,7 @@ let ee = new J(o.h, {
         )
             return;
         let r = j;
-        X(i.channelId);
+        z(i.channelId);
         let a = { parentId: n, channelId: i.channelId, historyBeforeRestore: r };
         ((W = a),
             queueMicrotask(() => {
@@ -376,7 +376,7 @@ let ee = new J(o.h, {
         let t = W;
         if (((W = null), e.sidebarType !== E.PE.VIEW_CHANNEL)) return !1;
         (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
-            X(e.channelId));
+            z(e.channelId));
     },
     GAME_AUTOCOMPLETE_FETCH_SUCCESS: Q,
     GAME_AUTOCOMPLETE_FETCH_FAILURE: Q,

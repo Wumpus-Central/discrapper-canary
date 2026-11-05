@@ -17,8 +17,8 @@ var i = n(435558),
 n(705751);
 let p = 10 + Math.random() * (10 * E.A.Millis.SECOND),
     m = 2 * E.A.Millis.HOUR + Math.floor(Math.random() * (10 * E.A.Millis.MINUTE)),
-    T = null,
-    g = !1;
+    g = null,
+    T = !1;
 class S extends s.A {
     actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: O, APP_STATE_UPDATE: C };
     _initialize() {
@@ -108,13 +108,13 @@ class S extends s.A {
     }
 }
 function N() {
-    ((g = !0), L(p, !0));
+    ((T = !0), L(p, !0));
 }
 function C(e) {
-    g && "active" !== e.state && (clearTimeout(T), (T = null), R(!1));
+    T && "active" !== e.state && (clearTimeout(g), (g = null), R(!1));
 }
 function O() {
-    g && (clearTimeout(T), (T = null), R(!1));
+    T && (clearTimeout(g), (g = null), R(!1));
 }
 async function R(e) {
     (L(m, !1),
@@ -131,7 +131,7 @@ async function R(e) {
         }));
 }
 function L(e, t) {
-    (null != T && clearTimeout(T), (T = setTimeout(() => R(t), e)));
+    (null != g && clearTimeout(g), (g = setTimeout(() => R(t), e)));
 }
 let y = new S();
 n.d(t, {}, { A: y });

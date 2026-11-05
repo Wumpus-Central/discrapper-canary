@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(879610),
     m = n(615396),
     p = n(660505),
-    h = n(463376),
-    C = n(558620),
+    C = n(463376),
+    h = n(558620),
     f = n(516106),
     E = n(379912),
     S = n(792996);
@@ -19,7 +19,7 @@ n.d(
     {},
     {
         E: function (e) {
-            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, h.i)(),
+            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, C.i)(),
                 {
                     activeSubscription: y,
                     isPremium: I,
@@ -41,14 +41,14 @@ n.d(
                     effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
                     isRecurringGiftCheckout: n.getIsRecurringGiftCheckout(),
                 })),
-                N = (0, C.A)(),
+                N = (0, h.A)(),
                 j = e.handlePaymentSourceAdd,
                 R = null != e.openInvoiceId,
                 O = null == e.initialPlanId && null == e.subscriptionTier,
                 M = i.useMemo(() => !x && (v ? O && I : I), [v, O, I, x]),
                 L = e.handleStepChange,
                 k = (0, d.J$)(P.paymentSourceId),
-                w = (0, h.R)({ hasOpenInvoice: R ?? !1 }),
+                w = (0, C.R)({ hasOpenInvoice: R ?? !1 }),
                 D = null != y && !A,
                 U = i.useCallback(
                     () =>

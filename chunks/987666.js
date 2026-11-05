@@ -18,8 +18,8 @@ n.d(
                     discriminatedInvoicePreview: d,
                     overrideRenewalDate: m,
                     fractionalPremiumInfo: p,
-                    isInvoiceBilledImmediately: h = !0,
-                    unifiedLegalType: C,
+                    isInvoiceBilledImmediately: C = !0,
+                    unifiedLegalType: h,
                     discountOffer: f,
                     subscriptionTrial: E,
                 } = e,
@@ -34,7 +34,7 @@ n.d(
                 A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
                 P = (0, r.de)({
                     overrideRenewalDate: m,
-                    currentInvoice: h ? I : void 0,
+                    currentInvoice: C ? I : void 0,
                     renewalInvoice: A,
                     isSubscriptionUpdate: null != c,
                     fractionalPremiumInfo: p,
@@ -45,7 +45,7 @@ n.d(
                 }),
                 _ = {
                     purchaseButtonText: g,
-                    totalDue: h ? I.total : 0,
+                    totalDue: C ? I.total : 0,
                     renewalPrice: v,
                     multiPeriodDiscountAttributes: x,
                     currency: I.currency,
@@ -54,7 +54,7 @@ n.d(
                     startDate: P,
                 };
             return (0, l.jsx)(o._P, {
-                variant: { type: C, ..._ },
+                variant: { type: h, ..._ },
                 paymentSourceType: n,
                 immediateDelivery: S,
                 isExpressCheckout: y,

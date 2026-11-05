@@ -128,8 +128,8 @@ let h = new a.A("OverlayActionCreators"),
             let I = c.A.windowSize(),
                 p = { width: 0, height: 0 },
                 m = { top: 0, left: 0, right: 0, bottom: 0 },
-                T = { width: 312, height: 0 },
-                g = { top: 0, left: 0, right: 0, bottom: 0 },
+                g = { width: 312, height: 0 },
+                T = { top: 0, left: 0, right: 0, bottom: 0 },
                 S = { width: 0, height: 0 };
             if (
                 (n.forEach((e) => {
@@ -139,18 +139,18 @@ let h = new a.A("OverlayActionCreators"),
                             ((p = (0, u.fd)(r, I)), (0, E.uv)(n));
                             break;
                         case A.uss.GUILDS:
-                            ((m = (0, u.NR)(i, r, I)), (T = (0, u.fd)(r, I)), (0, E.uv)(n));
+                            ((m = (0, u.NR)(i, r, I)), (g = (0, u.fd)(r, I)), (0, E.uv)(n));
                             break;
                         case A.uss.GUILDS_TEXT:
-                            ((g = (0, u.NR)(i, r, I)), (S = (0, u.fd)(r, I)), (0, E.uv)(n));
+                            ((T = (0, u.NR)(i, r, I)), (S = (0, u.fd)(r, I)), (0, E.uv)(n));
                     }
                 }),
                 e)
             ) {
                 let e = "auto" === S.width ? d.minSize.width : S.width;
                 e -= h.minSize.width;
-                let [n, r] = (0, u.M4)(g, { ...S, width: h.minSize.width }, I),
-                    [a, s] = (0, u.n7)(g, { ...S, width: e }, I, { x: 10, y: 10 }),
+                let [n, r] = (0, u.M4)(T, { ...S, width: h.minSize.width }, I),
+                    [a, s] = (0, u.n7)(T, { ...S, width: e }, I, { x: 10, y: 10 }),
                     l = o.A.getWidgetDefaultSettings(A.uss.TEXT);
                 if (null == l) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
                 (0, E.jn)({ ...l, type: A.uss.TEXT, id: (0, i.A)(), size: s, anchor: a, layoutId: t });
@@ -160,7 +160,7 @@ let h = new a.A("OverlayActionCreators"),
             } else {
                 let e = "auto" === p.width ? f.minSize.width : p.width;
                 e += h.minSize.width;
-                let [n, r] = (0, u.M4)(m, { height: T.height, width: e }, I),
+                let [n, r] = (0, u.M4)(m, { height: g.height, width: e }, I),
                     a = o.A.getWidgetDefaultSettings(A.uss.GUILDS_TEXT);
                 if (null == a) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
                 (0, E.jn)({ ...a, type: A.uss.GUILDS_TEXT, id: (0, i.A)(), layoutId: t, anchor: n, size: r });

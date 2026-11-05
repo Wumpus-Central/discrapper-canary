@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     zr: "verified_tbg0LG background_tbg0LG",
     PF: "staff_tbg0LG background_tbg0LG",
     _I: "partnered_tbg0LG background_tbg0LG",

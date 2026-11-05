@@ -2,8 +2,8 @@ var r = n(477900),
     l = n(855986),
     a = n(876230),
     i = n(366010),
-    u = n(834730),
-    o = n(413599),
+    o = n(834730),
+    u = n(413599),
     s = n(302034),
     c = n(792996),
     d = n(862649);
@@ -13,7 +13,7 @@ n.d(
     {
         A: function (e) {
             let { message: t, showOverlay: n = !1 } = e,
-                a = (0, l.bG)([o.A], () => o.A.getState().theme);
+                a = (0, l.bG)([u.A], () => u.A.getState().theme);
             return null == t
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -22,7 +22,7 @@ n.d(
                           (0, r.jsx)("div", {
                               className: d.zG,
                               style: { background: (0, i.M)(a) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
-                              children: (0, r.jsx)(u.E, {
+                              children: (0, r.jsx)(o.E, {
                                   variant: "body-sm/normal",
                                   color: "text-default",
                                   children: t,

@@ -17,7 +17,7 @@ var i = n(582128),
     p = n(746080);
 n(253913);
 let m = "No Mic";
-function T(e) {
+function g(e) {
     return (0, l.bG)(
         [f.A],
         () =>
@@ -27,7 +27,7 @@ function T(e) {
             (f.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
     );
 }
-function g(e) {
+function T(e) {
     return e.size >= 5;
 }
 n.d(
@@ -36,7 +36,7 @@ n.d(
     {
         IO: function (e) {
             let t = (0, _.kt)(e);
-            return !!T(e) && !t.some((e) => e.name === m);
+            return !!g(e) && !t.some((e) => e.name === m);
         },
         Ij: function (e) {
             return e.type === s.$.PLAYING && (0, d.A)(e, I.jUm.JOIN);
@@ -44,7 +44,7 @@ n.d(
         Qq: function (e, t) {
             let n = (0, i.useMemo)(() => e?.find((e) => e.name === m), [e]),
                 r = null == n || !t.has(n.id),
-                a = null == n || (g(t) && !t.has(n.id));
+                a = null == n || (T(t) && !t.has(n.id));
             return { noMicTag: n, voiceChatEnabled: r, voiceToggleDisabled: a };
         },
         WP: function (e, t, n) {
@@ -61,7 +61,7 @@ n.d(
                 return { activeThreadIds: i, archivedThreadIds: [...a, ...n] };
             }, [r, t, n]);
         },
-        YG: T,
+        YG: g,
         Zu: function (e) {
             let t = e.trim().split("\n")[0] ?? "";
             return (0, h.A)(t.slice(0, 100), !0);
@@ -82,7 +82,7 @@ n.d(
         n5: function (e, t) {
             return (0, u.OA)(e, { enabled: t, allowArchived: !0 });
         },
-        t4: g,
+        t4: T,
         yk: function (e, t) {
             let n = e.isGameInvitesChannel(),
                 r = (0, l.yK)(

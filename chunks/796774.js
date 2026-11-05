@@ -17,7 +17,7 @@ var f = n(652215),
     I = n(355097),
     p = n(792996);
 let m = !1;
-function T(e) {
+function g(e) {
     return new Promise((t) => {
         s.h.subscribe(e, function n() {
             (s.h.unsubscribe(e, n), setTimeout(t, 0));
@@ -39,7 +39,7 @@ n.d(
                 (function () {
                     if (!E.A.shouldFetchDefaultSounds()) return Promise.resolve();
                     s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
-                    let e = T("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+                    let e = g("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
                     return (
                         !(async function () {
                             try {
@@ -61,7 +61,7 @@ n.d(
                 (function () {
                     let e = (0, h.I)();
                     if (0 === e.length) return Promise.resolve();
-                    let t = T("SOUNDBOARD_SOUNDS_RECEIVED");
+                    let t = g("SOUNDBOARD_SOUNDS_RECEIVED");
                     return (
                         s.h.dispatch({ type: "GUILD_SOUNDBOARD_FETCH" }),
                         s.h.dispatch({ type: "REQUEST_SOUNDBOARD_SOUNDS", guildIds: e }),

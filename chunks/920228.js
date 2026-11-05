@@ -6,10 +6,10 @@ n.d(
         A: function (e) {
             let { videoRef: t, enabled: n, onPipPause: l, onHiddenPause: a } = e,
                 i = r.useRef(l),
-                u = r.useRef(a),
-                o = r.useRef(!1);
+                o = r.useRef(a),
+                u = r.useRef(!1);
             (r.useEffect(() => {
-                ((i.current = l), (u.current = a));
+                ((i.current = l), (o.current = a));
             }, [l, a]),
                 r.useEffect(() => {
                     if (!n) return;
@@ -26,17 +26,17 @@ n.d(
                             }
                         );
                     function r() {
-                        o.current || i.current();
+                        u.current || i.current();
                     }
                     function l() {
                         document.pictureInPictureElement === e
                             ? i.current()
                             : "hidden" === document.visibilityState
-                              ? u.current()
-                              : (o.current = !1);
+                              ? o.current()
+                              : (u.current = !1);
                     }
                     function a() {
-                        o.current = !0;
+                        u.current = !0;
                     }
                 }, [t, n]));
         },

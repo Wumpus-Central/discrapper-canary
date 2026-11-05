@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(718197),
     p = n(495867),
     m = n(873985),
-    T = n(309010),
-    g = n(894768),
+    g = n(309010),
+    T = n(894768),
     S = n(753181),
     N = n(723702),
     C = n(175306),
@@ -78,10 +78,10 @@ let k = new c.A("ConnectionStore"),
             (super(!1), (this.socket = e));
         }
         getInitialState() {
-            return g.A.getLocalPresence();
+            return T.A.getLocalPresence();
         }
         getNextState() {
-            return g.A.getLocalPresence();
+            return T.A.getLocalPresence();
         }
         shouldCommit() {
             return this.socket.isSessionEstablished();
@@ -235,8 +235,8 @@ var W = n(73825),
     Y = n(803306),
     K = n(821956),
     $ = n(628856),
-    z = n(870600),
-    X = n(501803),
+    X = n(870600),
+    z = n(501803),
     q = n(996512),
     Z = n(518782),
     Q = n(257249),
@@ -271,8 +271,8 @@ var ei = n(159993),
     eI = n(284009),
     ep = n.n(eI),
     em = n(723176),
-    eT = n(766034),
-    eg = n(958824),
+    eg = n(766034),
+    eT = n(958824),
     eS = n(531743),
     eN = n(732040),
     eC = n(937724);
@@ -537,8 +537,8 @@ function eW(e, t, n) {
         } = n,
         I = eu.Ay.getMember(e, t.id),
         p = (0, $.t)(A),
-        m = (0, X.mT)(h),
-        T = (0, Z.Rt)(f);
+        m = (0, z.mT)(h),
+        g = (0, Z.Rt)(f);
     (null != I &&
         I.nick === a &&
         I.avatar === s &&
@@ -552,7 +552,7 @@ function eW(e, t, n) {
         (I.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(I.collectibles ?? null, p ?? null) &&
         r().isEqual(I.displayNameStyles ?? null, m ?? null) &&
-        r().isEqual(I.gamingLeaderboardData ?? null, T ?? null)) ||
+        r().isEqual(I.gamingLeaderboardData ?? null, g ?? null)) ||
         ej({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -569,7 +569,7 @@ function eW(e, t, n) {
             flags: o,
             collectibles: p,
             displayNameStyles: m,
-            gamingLeaderboardData: T,
+            gamingLeaderboardData: g,
         });
 }
 function eY(e) {
@@ -594,9 +594,9 @@ function eK(e) {
     }));
 }
 function e$(e, t) {
-    return e.map((e) => ez(e, t));
+    return e.map((e) => eX(e, t));
 }
-function ez(e, t) {
+function eX(e, t) {
     let n = (function (e, t) {
         let n = [],
             i = [];
@@ -615,7 +615,7 @@ function ez(e, t) {
         processedAtTimestamp: e.processed_at_timestamp,
     };
 }
-function eX(e) {
+function ez(e) {
     ek.add(e);
 }
 (eV(
@@ -719,11 +719,11 @@ function eX(e) {
                 n,
                 i =
                     ((t = em.A.database()),
-                    (n = (0, eC.O)() ? eT.A.getCommittedVersions() : Promise.resolve({})),
+                    (n = (0, eC.O)() ? eg.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
                         (0, eC.O)() ? eS.A.getGuildIds() : Promise.resolve(new Set()),
-                        null != t ? eg.A.okAsync(t) : Promise.resolve(!1),
+                        null != t ? eT.A.okAsync(t) : Promise.resolve(!1),
                     ]).then((e) => {
                         let [t, n, i] = e;
                         return { guildVersions: t, guildChannels: n, databaseOk: i };
@@ -875,7 +875,7 @@ function eX(e) {
                 guildId: e.guild_id,
                 channelId: e.channel_id,
                 userId: e.user_id,
-                customTypingIndicatorConfig: (0, z.cE)(e.typing_indicator_style),
+                customTypingIndicatorConfig: (0, X.cE)(e.typing_indicator_style),
             }));
     }),
     eB(["ACTIVITY_START"], (e) => {
@@ -1149,14 +1149,14 @@ function eX(e) {
     eB(["GUILD_MEMBERS_CHUNK"], (e) => {
         a.Ay.Emitter.batched(() => {
             (ex.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
-                null != e.presences && e$(e.presences, e.guild_id).forEach(eX),
+                null != e.presences && e$(e.presences, e.guild_id).forEach(ez),
                 eP.A.flush("GUILD_MEMBERS_CHUNK"));
         });
     }),
     eB(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
         a.Ay.Emitter.batched(() => {
             (ej({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
-                null != e.presences && e$(e.presences, e.guild_id).forEach(eX),
+                null != e.presences && e$(e.presences, e.guild_id).forEach(ez),
                 eP.A.flush());
         });
     }),
@@ -1178,7 +1178,7 @@ function eX(e) {
                 unusualDMActivityUntil: e.unusual_dm_activity_until,
                 flags: e.flags,
                 collectibles: (0, $.t)(e.collectibles),
-                displayNameStyles: (0, X.mT)(e.display_name_styles),
+                displayNameStyles: (0, z.mT)(e.display_name_styles),
                 gamingLeaderboardData: (0, Z.Rt)(e.member_gaming_leaderboard_data),
             });
         },
@@ -1304,7 +1304,7 @@ function eX(e) {
         ej({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
     }),
     eB(["PRESENCE_UPDATE"], (e) => {
-        eX(ez(e, e.guild_id));
+        ez(eX(e, e.guild_id));
     }),
     eB(["PRESENCES_REPLACE"], (e) => {
         ej({ type: "PRESENCES_REPLACE", presences: e$(e, void 0) });
@@ -1503,7 +1503,7 @@ function eX(e) {
                 let { member: n } = t;
                 if ((eW(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: i } = n;
-                eX(ez(i, e.guild_id));
+                ez(eX(i, e.guild_id));
             }
             (e.ops.forEach((e) => {
                 switch (e.op) {
@@ -2047,9 +2047,9 @@ function e8(e) {
 class e7 extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(A.default, h.A, f.A, I.Ay, p.A, m.A, T.Ay, g.A, S.A, E.A),
+        (this.waitFor(A.default, h.A, f.A, I.Ay, p.A, m.A, g.Ay, T.A, S.A, E.A),
             this.syncWith([I.Ay], e5),
-            this.syncWith([g.A], e4));
+            this.syncWith([T.A], e4));
     }
     getSocket() {
         return F;
@@ -2098,7 +2098,7 @@ let e9 = new e7(l.h, {
                 n = s.w.get("discord_update_restart_timestamp"),
                 i = null != n && Date.now() - parseInt(n, 10) < 3e5;
             s.w.remove("discord_update_restart_timestamp");
-            let r = T.Ay.getVoiceChannelId();
+            let r = g.Ay.getVoiceChannelId();
             if (null != r) {
                 let e = s.w.get("discord_watchdog_restart_timestamp"),
                     n = null != e && Date.now() - parseInt(e, 10) < 6e4;

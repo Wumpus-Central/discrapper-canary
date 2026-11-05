@@ -16,8 +16,8 @@ var i = n(607399),
     I = n(366430),
     p = n(707592),
     m = n(698441),
-    T = n(268313),
-    g = n(21599),
+    g = n(268313),
+    T = n(21599),
     S = n(376943),
     N = n(362280),
     C = n(971276),
@@ -58,7 +58,7 @@ function Y(e) {
             e?.preventDefault(),
             !(async function (e, t) {
                 let n = e.code,
-                    i = (0, g._U)(n, t),
+                    i = (0, T._U)(n, t),
                     r = U.A.getInvite(n);
                 if (null == r || r.state === H.elq.ERROR) {
                     let { invite: e } = await o.Ay.resolveInvite(n, "Markdown Link", { inviteInstanceId: i });
@@ -113,7 +113,7 @@ function Y(e) {
                               t({
                                   tab: i.APPS,
                                   applicationId: a,
-                                  section: (0, T.A)(r, $.type === h.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
+                                  section: (0, g.A)(r, $.type === h.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
                                   skuId: s,
                               });
                           })),
@@ -255,8 +255,8 @@ function Y(e) {
                 !0
             );
         };
-    let { host: z, hostname: X, pathname: q, search: Z, hash: Q } = B.A.toURLSafe(e) ?? {},
-        J = B.A.isDiscordHostname(X ?? null) || B.A.isDiscordLocalhost(z ?? null, X ?? null);
+    let { host: X, hostname: z, pathname: q, search: Z, hash: Q } = B.A.toURLSafe(e) ?? {},
+        J = B.A.isDiscordHostname(z ?? null) || B.A.isDiscordLocalhost(X ?? null, z ?? null);
     if (J && (q?.startsWith("/application-directory") || q?.startsWith("/discovery/applications"))) {
         let e = q.split("/"),
             t = q?.startsWith("/discovery/applications"),

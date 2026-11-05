@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(431527),
     p = n(95477),
     m = n(991957),
-    T = n(44482);
-function g() {}
+    g = n(44482);
+function T() {}
 function S() {
     return r.useContext(N);
 }
@@ -28,17 +28,17 @@ let N = r.createContext({
     filteredOptions: [],
     groups: [],
     query: "",
-    setQuery: g,
+    setQuery: T,
     activeDescendantIndex: null,
-    setActiveDescendantIndex: g,
+    setActiveDescendantIndex: T,
     loading: !1,
     selectionMode: "single",
-    handleSelectionChange: g,
-    onSelectionChange: g,
+    handleSelectionChange: T,
+    onSelectionChange: T,
     isOpen: !1,
-    setIsOpen: g,
+    setIsOpen: T,
     isEditing: !1,
-    setIsEditing: g,
+    setIsEditing: T,
 });
 var C = n(601973),
     O = n(483084),
@@ -66,9 +66,9 @@ function b(e) {
             value: I,
             customMatchSorter: p,
             matchSorterOptions: m,
-            required: T,
+            required: g,
         } = c,
-        g = r.useId(),
+        T = r.useId(),
         S = r.useRef(null),
         [C, R] = r.useState(null),
         [L, y] = r.useState(!1),
@@ -123,7 +123,7 @@ function b(e) {
     let W = _ || E,
         Y = r.useCallback(
             (e) => {
-                if (W || (T && 0 === e.length)) return;
+                if (W || (g && 0 === e.length)) return;
                 let t = Array.from(e);
                 ("multiple" === u && t.length < 1
                     ? f([])
@@ -134,14 +134,14 @@ function b(e) {
                     A && s && o?.(!1),
                     y(!1));
             },
-            [W, u, n, f, A, s, o, T, k],
+            [W, u, n, f, A, s, o, g, k],
         ),
         K = j.length > 0;
     return (0, i.jsx)(N.Provider, {
         value: {
             activeDescendantIndex: C,
             setActiveDescendantIndex: R,
-            listBoxId: g,
+            listBoxId: T,
             inputFieldRef: S,
             isInert: W,
             isCollapsible: n,
@@ -188,7 +188,7 @@ function P(e) {
             showChevronButton: _ = !1,
             onQueryChange: A,
             onFocus: h,
-            onBlur: g,
+            onBlur: T,
             onKeyDown: N,
             wrapTags: O,
             ref: D,
@@ -212,8 +212,8 @@ function P(e) {
             shouldFocusWrap: Y,
             isInert: K,
             isCollapsible: $,
-            hasValue: z,
-            handleSelectionChange: X,
+            hasValue: X,
+            handleSelectionChange: z,
             onSelectionChange: q,
             isOpen: Z,
             setIsOpen: Q,
@@ -225,7 +225,7 @@ function P(e) {
             isEditing: er,
             setIsEditing: ea,
         } = S(),
-        es = "multiple" === x && z,
+        es = "multiple" === x && X,
         el = es && !0 !== l,
         eo = null != w ? (0, R.ZN)(j, w) : void 0,
         ed = r.useCallback(() => {
@@ -245,9 +245,9 @@ function P(e) {
         }, [Q, K]),
         eE = r.useCallback(
             (e) => {
-                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), g?.(e));
+                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Q?.(!1), T?.(e));
             },
-            [g, Q, j, ea],
+            [T, Q, j, ea],
         );
     r.useEffect(() => {
         es &&
@@ -266,9 +266,9 @@ function P(e) {
             (e) => {
                 if (K) return;
                 let t = Array.from(e)[0];
-                X(ee.filter((e) => e.id !== t));
+                z(ee.filter((e) => e.id !== t));
             },
-            [X, ee, K],
+            [z, ee, K],
         ),
         eI = r.useCallback(
             (e) => {
@@ -308,8 +308,8 @@ function P(e) {
                         if (null == w || t - 1 < w) return;
                         let i = et[w];
                         if (null == i || !0 === i.disabled) return;
-                        if (H && 1 === ee.length && ee.includes(i)) return void X(ee);
-                        X("single" === x ? [i] : (0, R.qH)(x, ee, i));
+                        if (H && 1 === ee.length && ee.includes(i)) return void z(ee);
+                        z("single" === x ? [i] : (0, R.qH)(x, ee, i));
                         break;
                     case "Backspace":
                         "multiple" === x &&
@@ -319,7 +319,7 @@ function P(e) {
                             (e.preventDefault(), e.stopPropagation(), b.current.lastChild?.focus());
                         break;
                     case "Escape":
-                        z && V && (e.preventDefault(), e.stopPropagation(), ec());
+                        X && V && (e.preventDefault(), e.stopPropagation(), ec());
                         break;
                     case "Home":
                         if ((e.preventDefault(), 0 === t)) return;
@@ -330,7 +330,7 @@ function P(e) {
                         G(t - 1);
                 }
             },
-            [x, H, V, z, Y, Z, N, ec, X, ee, en, Q, et, w, G],
+            [x, H, V, X, Y, Z, N, ec, z, ee, en, Q, et, w, G],
         ),
         ep = r.useCallback(
             (e) => {
@@ -345,7 +345,7 @@ function P(e) {
                 let e = Array.from(ee)[0];
                 return (0, i.jsx)("div", {
                     className: y.OS,
-                    children: (0, i.jsx)(T.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
+                    children: (0, i.jsx)(g.c, { ...e, onClick: eh, "aria-hidden": !0, inInput: !0 }),
                 });
             }
             if (l) return null;
@@ -370,11 +370,11 @@ function P(e) {
                 onRemove: ef,
             });
         }, [x, k, eh, ef, er, ee, l, U]),
-        eT = (0, o.A)(W, D);
+        eg = (0, o.A)(W, D);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(C.p, {
-                ref: eT,
+                ref: eg,
                 disabled: k,
                 readOnly: F,
                 loading: B,
@@ -383,7 +383,7 @@ function P(e) {
                 showChevronButton: _,
                 isOpen: !!Z,
                 isInert: K,
-                hasValue: z,
+                hasValue: X,
                 hasError: M?.errorMessageId != null,
                 handleToggle: ed,
                 handleClear: ec,
@@ -399,7 +399,7 @@ function P(e) {
                                 children: (0, i.jsx)(p.p, {
                                     ref: v,
                                     id: t,
-                                    className: s()(L.input, y.kk, { [y.kK]: "single" === x && z && !er }),
+                                    className: s()(L.input, y.kk, { [y.kK]: "single" === x && X && !er }),
                                     autoFocus: n,
                                     placeholder: el ? void 0 : (a ?? U.SELECT_PLACEHOLDER),
                                     role: "combobox",
@@ -434,7 +434,7 @@ function P(e) {
                 disabled: K,
                 selectionMode: x,
                 selectedItems: ee,
-                onSelectionChange: X,
+                onSelectionChange: z,
                 listItems: J,
             }),
         ],
@@ -454,9 +454,9 @@ function M(e) {
             disabled: I,
             handleSelectionChange: p,
             query: m,
-            loading: T,
+            loading: g,
         } = S(),
-        { i18n: g } = r.useContext(f.VO);
+        { i18n: T } = r.useContext(f.VO);
     return (0, i.jsx)(A.q, {
         id: _,
         required: E,
@@ -473,9 +473,9 @@ function M(e) {
             n ??
             (() =>
                 (0, i.jsx)(h.o, {
-                    message: null == m || "" === m ? g.LISTBOX_EMPTY_STATE : g.LISTBOX_EMPTY_STATE_WITH_QUERY(m),
+                    message: null == m || "" === m ? T.LISTBOX_EMPTY_STATE : T.LISTBOX_EMPTY_STATE_WITH_QUERY(m),
                 })),
         maxVisibleItems: a,
-        loading: T,
+        loading: g,
     });
 }

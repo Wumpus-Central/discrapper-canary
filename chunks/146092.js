@@ -32,8 +32,8 @@ var i = n(435558),
     I = n(309010),
     p = n(967198),
     m = n(927813),
-    T = n(811091),
-    g = n(181079);
+    g = n(811091),
+    T = n(181079);
 n(321073);
 var S = n(353202),
     N = n(826767),
@@ -41,7 +41,7 @@ var S = n(353202),
     O = n(349828),
     R = n(818348);
 function L(e) {
-    return Object.values(g.A.getFavoriteChannels())
+    return Object.values(T.A.getFavoriteChannels())
         .filter((t) => {
             if (t.type !== s.Ip.REFERENCE_ORIGINAL || (null != e && t.parentId !== e)) return !1;
             let n = h.A.getChannel(t.id);
@@ -174,21 +174,21 @@ function K(e) {
     return _.wc.updateAsync("favorites", t, n ? _.Sb.FREQUENT_USER_ACTION : _.Sb.INFREQUENT_USER_ACTION, Y);
 }
 function $(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.default.fromTimestamp(Date.now());
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.default.fromTimestamp(Date.now());
     return ((e[n] = s.wL.create({ nickname: t, type: s.Ip.CATEGORY, position: k(e), parentId: "0" })), n);
 }
-function z(e, t) {
+function X(e, t) {
     let n = t.trim().toLowerCase();
     for (let t in e) {
         let i = e[t];
         if (i.type === s.Ip.CATEGORY && i.nickname.trim().toLowerCase() === n) return t;
     }
 }
-async function X(e, t, n) {
+async function z(e, t, n) {
     let { silent: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        r = e.filter((e) => !g.A.isFavorite(e));
+        r = e.filter((e) => !T.A.isFavorite(e));
     if (0 === r.length) return;
-    let a = !g.A.favoriteGuildEnabled;
+    let a = !T.A.favoriteGuildEnabled;
     (await K({
         update: (e) => {
             let o = !1,
@@ -200,7 +200,7 @@ async function X(e, t, n) {
                     break;
                 }
                 if ("categoryName" in t && !o) {
-                    d = z(e.favoriteChannels, t.categoryName) ?? $(e.favoriteChannels, t.categoryName);
+                    d = X(e.favoriteChannels, t.categoryName) ?? $(e.favoriteChannels, t.categoryName);
                     let n = j(e.favoriteChannels, s.Ip.REFERENCE_ORIGINAL);
                     if (null != n) return (i || W(n), !1);
                 }
@@ -220,15 +220,15 @@ async function X(e, t, n) {
             o && a && !i && ((e.guildVisible = l._t.create({ value: !0 })), (0, P.uS)("auto", !0));
         },
     }),
-        !i && r.some((e) => g.A.isFavorite(e)) && (0, U.P0)({ text: G.intl.string(G.t["4tSWQg"]), icon: w.StarIcon }));
+        !i && r.some((e) => T.A.isFavorite(e)) && (0, U.P0)({ text: G.intl.string(G.t["4tSWQg"]), icon: w.StarIcon }));
 }
 async function q(e) {
     let { channelIds: t, parentId: n, source: i } = e;
-    await X(t, { parentId: n ?? null }, i);
+    await z(t, { parentId: n ?? null }, i);
 }
 function Z(e) {
     let { trackAnalytics: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = g.A.getFavorite(e);
+        n = T.A.getFavorite(e);
     null != n &&
         (F(new Set([e])),
         K({
@@ -246,7 +246,7 @@ function Z(e) {
         }));
 }
 function Q(e, t) {
-    g.A.isFavorite(e) &&
+    T.A.isFavorite(e) &&
         K({
             update: (n) => {
                 n.favoriteChannels[e].nickname = t ?? "";
@@ -254,7 +254,7 @@ function Q(e, t) {
         });
 }
 function J() {
-    return g.A.pruneInactiveThreads;
+    return T.A.pruneInactiveThreads;
 }
 let ee = 0,
     et = null;
@@ -263,23 +263,23 @@ async function en() {
         t,
         n = A.default.getId();
     if (!J() || (n === et && Date.now() - ee < m.A.Millis.DAY)) return;
-    let i = g.A.pruneInactiveThreadsScope,
+    let i = T.A.pruneInactiveThreadsScope,
         r =
             i === O.l0
                 ? ((e = O.A.toLowerCase()),
-                  (t = Object.values(g.A.getFavoriteChannels()).find(
+                  (t = Object.values(T.A.getFavoriteChannels()).find(
                       (t) => t.type === s.Ip.CATEGORY && t.nickname?.trim().toLowerCase() === e,
                   )),
                   t?.id ?? null)
                 : i;
     if (null == r) return;
     ((ee = Date.now()), (et = n));
-    let a = { days: g.A.pruneInactiveThreadsDays, categoryId: "all" === r ? null : r };
+    let a = { days: T.A.pruneInactiveThreadsDays, categoryId: "all" === r ? null : r };
     if (
         (await (async function (e) {
             await S.A.loadThreadsBulk(L(e));
         })(a.categoryId),
-        !J() || g.A.pruneInactiveThreadsScope !== i)
+        !J() || T.A.pruneInactiveThreadsScope !== i)
     )
         return;
     let l = I.Ay.getChannelId(),
@@ -302,7 +302,7 @@ async function en() {
 async function ei(e) {
     if (!(0, v.QN)(e)) return null;
     let t = e.trim(),
-        n = T.default.fromTimestamp(Date.now());
+        n = g.default.fromTimestamp(Date.now());
     return (
         await K({
             update: (e) => {
@@ -311,23 +311,23 @@ async function ei(e) {
                 $(e.favoriteChannels, t, n);
             },
         }),
-        null != g.A.getFavorite(n) ? n : null
+        null != T.A.getFavorite(n) ? n : null
     );
 }
 async function er(e) {
     let { channelIds: t, categoryName: n, source: i } = e;
-    await X(t, { categoryName: n }, i);
+    await z(t, { categoryName: n }, i);
 }
 function ea(e) {
     Z(e);
 }
 async function es(e) {
-    if (!g.A.autoAddJoinedThreads || g.A.isFavorite(e)) return;
+    if (!T.A.autoAddJoinedThreads || T.A.isFavorite(e)) return;
     let t = h.A.getChannel(e);
     null == t ||
         !t.isThread() ||
         ((t.isPrivate() || f.A.can(R.xB.VIEW_CHANNEL, t)) &&
-            (await X([e], { categoryName: O.A }, "auto_thread_join", { silent: !0 })));
+            (await z([e], { categoryName: O.A }, "auto_thread_join", { silent: !0 })));
 }
 function el(e) {
     K({
@@ -337,7 +337,7 @@ function el(e) {
                 (e &&
                     null ==
                         (function (e) {
-                            let t = z(e, O.A);
+                            let t = X(e, O.A);
                             if (null != t) return t;
                             let n = j(e, s.Ip.CATEGORY);
                             return null != n ? void W(n) : $(e, O.A);

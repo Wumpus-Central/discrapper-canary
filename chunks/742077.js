@@ -15,8 +15,8 @@ var i = n(91871),
     I = n(189081),
     p = n(351906),
     m = n(90165),
-    T = n(268387),
-    g = n(659096),
+    g = n(268387),
+    T = n(659096),
     S = n(966846),
     N = n(927813),
     C = n(583613),
@@ -64,7 +64,7 @@ let x = {
         e.filter(
             (e) =>
                 null != e.libraryApplication &&
-                g.A.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId),
+                T.A.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId),
         ),
     ),
     B = (0, C.L_)((e, t) => e.filter((e) => r()(t.toLowerCase(), e.application.name.toLowerCase()))),
@@ -96,27 +96,27 @@ function W() {
                     let a = u.A.getApplication(e.id);
                     if (null == a) return null;
                     let s = j(a, n);
-                    return (t.add(e.id), (0, R.XZ)(e) || g.A.isInstalled(e.id, e.branchId))
+                    return (t.add(e.id), (0, R.XZ)(e) || T.A.isInstalled(e.id, e.branchId))
                         ? {
                               key: `${e.id}-${e.branchId}`,
                               application: a,
                               libraryApplication: e,
                               lastPlayed: s,
-                              supportsCloudSync: null != e && g.A.supportsCloudSync(e.id, e.branchId),
+                              supportsCloudSync: null != e && T.A.supportsCloudSync(e.id, e.branchId),
                               isNew: null != e && o()(e.createdAt).isAfter(P) && 0 === s,
                               isLaunching: E.A.launchingGames.has(e.id),
                               isRunning: i.has(e.id),
                               isLaunchable: (0, D.A)({
                                   LibraryApplicationStore: I.A,
                                   LaunchableGameStore: E.A,
-                                  DispatchApplicationStore: g.A,
+                                  DispatchApplicationStore: T.A,
                                   ConnectedAppsStore: h.A,
                                   applicationId: e.id,
                                   branchId: e.branchId,
                               }),
                               isUpdatingFlags: I.A.isUpdatingFlags(e.id, e.branchId),
                               shouldShowInLibrary: (0, R.Tr)(a, e, p.A),
-                              defaultAction: (0, b.F)(e, g.A, S.A),
+                              defaultAction: (0, b.F)(e, T.A, S.A),
                           }
                         : null;
                 })(i, n, t, e, !0),
@@ -142,7 +142,7 @@ function W() {
                                 isLaunchable: (0, D.A)({
                                     LibraryApplicationStore: I.A,
                                     LaunchableGameStore: E.A,
-                                    DispatchApplicationStore: g.A,
+                                    DispatchApplicationStore: T.A,
                                     ConnectedAppsStore: h.A,
                                     applicationId: e,
                                     branchId: null,
@@ -174,8 +174,8 @@ function W() {
 class Y extends d.Ay.Store {
     static displayName = "ApplicationViewStore";
     initialize() {
-        (this.syncWith([u.A, f.A, E.A, _.Ay, g.A, S.A, I.A, m.A, p.A, h.A], W, 200),
-            this.syncWith([T.A, A.default], () => !0));
+        (this.syncWith([u.A, f.A, E.A, _.Ay, T.A, S.A, I.A, m.A, p.A, h.A], W, 200),
+            this.syncWith([g.A, A.default], () => !0));
     }
     get applicationFilterQuery() {
         return U;
@@ -193,7 +193,7 @@ class Y extends d.Ay.Store {
         return B(this.libraryApplicationViewItems, U);
     }
     get sortedFilteredLibraryApplicationViewItems() {
-        return V(this.filteredLibraryApplicationViewItems, T.A.sortKey, T.A.sortDirection, A.default.locale);
+        return V(this.filteredLibraryApplicationViewItems, g.A.sortKey, g.A.sortDirection, A.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
         return H(M);

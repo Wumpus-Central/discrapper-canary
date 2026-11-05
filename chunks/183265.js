@@ -1,4 +1,4 @@
-e.exports = {
+r.exports = {
     Ek: "settingsForm_mpFQHm",
     _6: "settingsSelect_mpFQHm",
     tx: "secretRow_mpFQHm",

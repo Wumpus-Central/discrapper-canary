@@ -80,7 +80,7 @@ class m extends a.Ay.Store {
         return _;
     }
 }
-let T = new m(s.h, {
+let g = new m(s.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;
@@ -137,4 +137,4 @@ let T = new m(s.h, {
         }
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

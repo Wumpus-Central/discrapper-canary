@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(834730),
     m = n(150934),
     p = n(939249),
-    h = n(516106),
-    C = n(418200),
+    C = n(516106),
+    h = n(418200),
     f = n(773669),
     E = n(97352),
     S = n(45938),
@@ -40,12 +40,12 @@ function N(e) {
             setSelectedPlanId: f,
             isRecurringGift: E,
             setIsRecurringGift: S,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             setSelectedPlanId: e.setSelectedPlanId,
             isRecurringGift: e.isRecurringGift,
             setIsRecurringGift: e.setIsRecurringGift,
         })),
-        { setSelectedGiftingPromotionRewards: g } = (0, C.Pv)(),
+        { setSelectedGiftingPromotionRewards: g } = (0, h.Pv)(),
         y = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
         I = i.useMemo(
             () => [
@@ -165,21 +165,21 @@ function w(e) {
             setSelectedPlanId: W,
             setIsRecurringGift: V,
             isGift: Y,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             discountInfo: e.premiumDiscountInfo,
             setSelectedPlanId: e.setSelectedPlanId,
             setIsRecurringGift: e.setIsRecurringGift,
             isGift: e.isGift,
         })),
-        { giftRecipient: K } = (0, C.Pv)(),
-        q = Y && (0, S.Ik)(K),
-        { discountOffer: Z, discountAmountOff: z, applicablePlan: $ } = H,
+        { giftRecipient: K } = (0, h.Pv)(),
+        Z = Y && (0, S.Ik)(K),
+        { discountOffer: q, discountAmountOff: z, applicablePlan: $ } = H,
         Q = (0, c.bG)([E.A], () => E.A.get(u));
     o()(null != Q, "Missing subscriptionPlan");
     let J = (0, g.m6)(Q.id),
-        X = q && J === v.PremiumTypes.TIER_2,
+        X = Z && J === v.PremiumTypes.TIER_2,
         ee = (0, A.qi)({ location: `PremiumSwitchPlanSelectOption${X ? "" : "-DISABLED"}` }),
-        et = q && (!X || !ee || T),
+        et = Z && (!X || !ee || T),
         en = (0, j.Sq)(),
         el = (0, g.L_)({ planId: u, isGift: Y, priceOptions: b, subscriptionPlan: Q }),
         ei = (0, g.y8)(u, !1, Y, b),
@@ -209,12 +209,12 @@ function w(e) {
                   : null;
         }, [B, en, Q, s, er, Y, u, el, b, D]),
         es = i.useMemo(
-            () => (0, g.D8)(Q.interval, Y, R, Q.intervalCount, q, J),
-            [Q.interval, Q.intervalCount, Y, R, q, J],
+            () => (0, g.D8)(Q.interval, Y, R, Q.intervalCount, Z, J),
+            [Q.interval, Q.intervalCount, Y, R, Z, J],
         ),
-        eo = F && q && (0, I.dI)(u),
+        eo = F && Z && (0, I.dI)(u),
         eu =
-            ((t = (0, h.t4)((e) => e.isRecurringGift)),
+            ((t = (0, C.t4)((e) => e.isRecurringGift)),
             (n = T && t),
             (r = Q.interval === v.WT.YEAR),
             {
@@ -245,7 +245,7 @@ function w(e) {
                         (0, l.jsxs)("div", {
                             className: O.l,
                             children: [
-                                !q &&
+                                !Z &&
                                     (0, l.jsx)("div", {
                                         className: O.E2,
                                         children: (0, l.jsx)(m.S, {
@@ -259,8 +259,8 @@ function w(e) {
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsxs)("div", {
-                                            className: a()(O.Gl, { [O.h4]: T || q, [O.ox]: L && (T || q) }),
-                                            children: [es, q && ea()],
+                                            className: a()(O.Gl, { [O.h4]: T || Z, [O.ox]: L && (T || Z) }),
+                                            children: [es, Z && ea()],
                                         }),
                                         et &&
                                             (0, l.jsx)("div", {
@@ -278,13 +278,13 @@ function w(e) {
                                         className: O.bq,
                                         children: ["(", _.intl.string(_.t.ymSxhy), ")"],
                                     }),
-                                !q && ea(),
+                                !Z && ea(),
                             ],
                         }),
                         L
                             ? (0, l.jsx)("div", { className: a()({ [O.kb]: T }), children: em })
                             : (0, l.jsxs)("div", {
-                                  className: a()({ [O.h4]: T || q }),
+                                  className: a()({ [O.h4]: T || Z }),
                                   children: [
                                       em,
                                       eo &&
@@ -342,7 +342,7 @@ function w(e) {
                                 isEligibleForDiscount: w,
                                 isEligibleForTrial: D,
                                 discountAmountOff: z,
-                                discountOffer: Z,
+                                discountOffer: q,
                                 isDiscountApplicableToPlan: ec,
                                 savingsPercent: el,
                             }),
@@ -367,7 +367,7 @@ function w(e) {
               tabIndex: T ? 0 : -1,
               focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
               onClick: ed,
-              className: a()(O.G_, { [O.vW]: q && T, [O.Gb]: q }),
+              className: a()(O.G_, { [O.vW]: Z && T, [O.Gb]: Z }),
               children: ep,
           });
 }

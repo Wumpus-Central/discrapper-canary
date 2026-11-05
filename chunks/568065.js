@@ -17,7 +17,7 @@ n(628049);
 var I = n(792996),
     p = (((i = {}).PERK = "perk"), (i.LEVEL = "level"), i);
 let m = new Set([c.ec, c.RV, c.YG, c.SL, c.aN, c.OJ, c.jF, c.Ht, c.tv]),
-    T = new Set([
+    g = new Set([
         f.GuildFeatures.GUILD_TAGS,
         f.GuildFeatures.ENHANCED_ROLE_COLORS,
         f.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS,
@@ -25,7 +25,7 @@ let m = new Set([c.ec, c.RV, c.YG, c.SL, c.aN, c.OJ, c.jF, c.Ht, c.tv]),
         f.GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT,
         f.GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES,
     ]),
-    g = { [f.TVA.TIER_1]: c.ec, [f.TVA.TIER_2]: c.RV, [f.TVA.TIER_3]: c.YG, [f.TVA.NONE]: void 0 },
+    T = { [f.TVA.TIER_1]: c.ec, [f.TVA.TIER_2]: c.RV, [f.TVA.TIER_3]: c.YG, [f.TVA.NONE]: void 0 },
     S = { [c.ec]: f.TVA.TIER_1, [c.RV]: f.TVA.TIER_2, [c.YG]: f.TVA.TIER_3 },
     N = {
         [f.TVA.TIER_1]: u.V.GUILD_POWERUP_LEVEL_1_COACHMARK,
@@ -88,7 +88,7 @@ n.d(
         QS: v,
         Wb: "1340102344645283891",
         YV: y,
-        a8: g,
+        a8: T,
         aH: P,
         b_: b,
         mB: "525479941211684874",
@@ -138,7 +138,7 @@ n.d(
                 description: I.intl.formatToPlainString(I.t.aFRl53, { uploadSizeLimit: I.intl.string(I.t.yMOW8D) }),
             },
         }),
-        wc: T,
+        wc: g,
         wr: D,
         y7: S,
         yG: w,

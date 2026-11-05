@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     RJ: "formNotice_LiOD7I",
     $G: "formNoticeTitle_LiOD7I",
     Vz: "formNoticeBody_LiOD7I",

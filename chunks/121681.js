@@ -116,10 +116,10 @@ let I = new (n(626584).A)("GuildEmojis"),
             return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
         }
     }),
-    T = function (e) {
+    g = function (e) {
         m.setParams(e);
     },
-    g = function (e) {
+    T = function (e) {
         let t = m.get();
         return void 0 !== t ? t[e] : [];
     };
@@ -151,8 +151,8 @@ var y = n(773669),
     Y = n(635222),
     K = n(307731),
     $ = n(732139),
-    z = n(355097);
-let X = [
+    X = n(355097);
+let z = [
         $.R2.TOP_GUILD_EMOJI.toString(),
         $.R2.FAVORITES.toString(),
         $.R2.RECENT.toString(),
@@ -218,7 +218,7 @@ let J = F.default.fromTimestamp(Date.now() - 60 * w.A.Millis.DAY),
     et = [],
     en = new Set(),
     ei = 2,
-    er = [...X],
+    er = [...z],
     ea = {},
     es = {},
     el = new Map();
@@ -250,7 +250,7 @@ function eu(e) {
             return null != n && j.A.isPackEmojiUsable(n) ? n : void 0;
         },
         afterCompute: () => {
-            (e(), (er = [...X]), o().some(ea, (e) => e.hasUsableEmoji()) || er.splice(X.indexOf($.R2.CUSTOM), 1));
+            (e(), (er = [...z]), o().some(ea, (e) => e.hasUsableEmoji()) || er.splice(z.indexOf($.R2.CUSTOM), 1));
         },
         numFrequentlyItems: 42,
     };
@@ -473,7 +473,7 @@ class e_ {
             let { names: n, name: i } = t,
                 r = null != n && o().some(n, e),
                 a = null != i && e(i),
-                s = null != i && o().some(g(i), e);
+                s = null != i && o().some(T(i), e);
             return r || a || s;
         });
     }
@@ -509,7 +509,7 @@ function em(e) {
     let i = !!(0, L.un)() && !1;
     ea[e] = new Q(e, n.id, t, i);
 }
-function eT() {
+function eg() {
     let e = D.A.settings,
         t = e.textAndImages?.diversitySurrogate?.value;
     (null != t && H.Ay.setDefaultDiversitySurrogate(t), e_.reset());
@@ -524,7 +524,7 @@ function eT() {
             o().mapValues(r, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
             q.emojiReactionPendingUsages,
         ));
-    if (o().isEmpty(i) && o().isEmpty(q.pendingUsages) && D.A.hasLoaded(z.oD.FRECENCY_AND_FAVORITES_SETTINGS))
+    if (o().isEmpty(i) && o().isEmpty(q.pendingUsages) && D.A.hasLoaded(X.oD.FRECENCY_AND_FAVORITES_SETTINGS))
         for (let e of [
             "thumbsup",
             "eyes",
@@ -541,7 +541,7 @@ function eT() {
     if (
         o().isEmpty(r) &&
         o().isEmpty(q.emojiReactionPendingUsages) &&
-        D.A.hasLoaded(z.oD.FRECENCY_AND_FAVORITES_SETTINGS)
+        D.A.hasLoaded(X.oD.FRECENCY_AND_FAVORITES_SETTINGS)
     )
         for (let e of [
             "100",
@@ -560,7 +560,7 @@ function eT() {
         ])
             eh.track(e);
 }
-function eg(e) {
+function eT(e) {
     if (null == e) return !1;
     for (let t of e) {
         let e = t.id ?? t.uniqueName ?? t.name;
@@ -589,7 +589,7 @@ class eN extends _.Ay.PersistedStore {
                 null != e.expandedSectionsByGuildIds &&
                     (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))),
             (Z = j.A.getIndexablePackEmojis()),
-            this.syncWith([D.A], eT),
+            this.syncWith([D.A], eg),
             this.syncWith([j.A], eE));
     }
     getState() {
@@ -791,18 +791,18 @@ let eC = new eN(E.h, {
                 e.length > 0 && 2 === ei && eh.compute();
             }
         })([t]),
-            eg([t]));
+            eT([t]));
     },
     EMOJI_TRACK_USAGE: function (e) {
         let { emojiUsed: t } = e;
-        eg(t);
+        eT(t);
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if ((T(y.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+        if ((g(y.default.locale), t !== X.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
         ((q.pendingUsages = []), (q.emojiReactionPendingUsages = []));
     },
     GUILD_ROLE_CREATE: eS,

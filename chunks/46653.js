@@ -18,8 +18,8 @@ let p = function () {
     return !0;
 };
 var m = n(252919),
-    T = n(129230),
-    g = n(612181),
+    g = n(129230),
+    T = n(612181),
     S = n(856383),
     N = n(115036),
     C = n(536802),
@@ -46,8 +46,8 @@ let R = new A.A("AuthenticationStore"),
     Y = !1,
     K = null,
     $ = null,
-    z = !1,
     X = !1,
+    z = !1,
     q = [];
 function Z(e) {
     let t = null != a.getToken(),
@@ -71,7 +71,7 @@ function J() {
 function ee(e) {
     let { withGuildExperiments: t } = e,
         n = {},
-        i = T.default.getSuperPropertiesBase64();
+        i = g.default.getSuperPropertiesBase64();
     return (
         null != i && (n["X-Super-Properties"] = i),
         null != U && (n["X-Fingerprint"] = U),
@@ -171,8 +171,8 @@ function eo(e) {
         (V = ""),
         (j = null),
         (H = !1),
-        (z = !1),
         (X = !1),
+        (z = !1),
         ea());
 }
 class ed extends l.Ay.Store {
@@ -211,10 +211,10 @@ class ed extends l.Ay.Store {
         return M;
     }
     getToken() {
-        return (0, g.gf)();
+        return (0, T.gf)();
     }
     isAuthenticated() {
-        return (0, g.wR)();
+        return (0, T.wR)();
     }
     getFingerprint() {
         return U;
@@ -248,10 +248,10 @@ class ed extends l.Ay.Store {
         return $;
     }
     getIsPasswordlessActive() {
-        return z;
+        return X;
     }
     attemptedPasswordLogin() {
-        return X;
+        return z;
     }
 }
 let ec = new ed(
@@ -295,7 +295,7 @@ let ec = new ed(
             let i = n(192308).kB;
             if (4004 === t) {
                 if (F || i(O.jc) || i(O.Uy)) return void el();
-                (T.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(D) }),
+                (g.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(D) }),
                     eo(),
                     setImmediate(() => (0, I.pX)(f.BVt.DEFAULT_LOGGED_OUT)));
             }
@@ -306,11 +306,11 @@ let ec = new ed(
         },
         LOGIN: function (e) {
             let { isPasswordAttempt: t } = e;
-            ((k = f.aUe.LOGGING_IN), (X = X || !0 === t));
+            ((k = f.aUe.LOGGING_IN), (z = z || !0 === t));
         },
         LOGIN_SUCCESS: function (e) {
             let { token: t } = e;
-            ((k = f.aUe.NONE), en(t), et(), (V = ""), (H = !1), (j = null), (r = null), ea(), (z = !1), ($ = null));
+            ((k = f.aUe.NONE), en(t), et(), (V = ""), (H = !1), (j = null), (r = null), ea(), (X = !1), ($ = null));
         },
         LOGIN_FAILURE: function (e) {
             let { error: t } = e;
@@ -349,14 +349,14 @@ let ec = new ed(
         },
         LOGIN_SUSPENDED_USER: function (e) {
             let { suspendedUserToken: t } = e;
-            ((z = !1), ($ = t), setImmediate(() => (0, I.pX)(f.BVt.ACCOUNT_STANDING)));
+            ((X = !1), ($ = t), setImmediate(() => (0, I.pX)(f.BVt.ACCOUNT_STANDING)));
         },
         LOGOUT: eo,
         FINGERPRINT: function (e) {
             let t = e.fingerprint;
             null == U
                 ? null != t
-                    ? (T.default.track(f.HAw.USER_FINGERPRINT_CHANGED, {
+                    ? (g.default.track(f.HAw.USER_FINGERPRINT_CHANGED, {
                           old_fingerprint: null != w ? (0, s.d)(w) : null,
                           new_fingerprint: (0, s.d)(t),
                       }),
@@ -366,7 +366,7 @@ let ec = new ed(
                     : J()
                 : null != t &&
                   U !== t &&
-                  T.default.track(f.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
+                  g.default.track(f.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
                       fingerprint: (0, s.d)(U),
                       dropped_fingerprint: (0, s.d)(t),
                   });
@@ -402,12 +402,12 @@ let ec = new ed(
             ((V = ""),
                 (H = !1),
                 (j = null),
-                (z = !1),
+                (X = !1),
                 (r = null),
                 (k = t instanceof c.A && null != (0, _.W)(t).date_of_birth ? f.aUe.LOGIN_AGE_GATE : f.aUe.NONE));
         },
         PASSWORDLESS_START: function () {
-            z = !0;
+            X = !0;
         },
     },
     d.A.Early,

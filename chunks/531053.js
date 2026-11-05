@@ -62,7 +62,7 @@ function m(e) {
         className: f.aC,
     });
 }
-function T(e) {
+function g(e) {
     let { name: t, targetNode: n, onDragOverChanged: a } = e,
         [{ canDrop: l, isOver: o }, c] = (0, d.H)(() => p([_.PJ.GUILD], n, !0, !0));
     r.useEffect(() => {
@@ -86,7 +86,7 @@ function T(e) {
         }),
     });
 }
-let g = r.memo(function (e) {
+let T = r.memo(function (e) {
     let { name: t, targetNode: n, noCombine: r = !1, below: a = !1, onDragOverChanged: s } = e,
         l = !r && null == n.parentId;
     return (0, i.jsxs)("div", {
@@ -94,7 +94,7 @@ let g = r.memo(function (e) {
         "aria-hidden": !0,
         children: [
             (0, i.jsx)(m, { name: t, targetNode: n, below: a }),
-            l ? (0, i.jsx)(T, { name: t, targetNode: n, onDragOverChanged: s }) : null,
+            l ? (0, i.jsx)(g, { name: t, targetNode: n, onDragOverChanged: s }) : null,
         ],
     });
 });
@@ -102,7 +102,7 @@ n.d(
     t,
     {},
     {
-        Ay: g,
+        Ay: T,
         g4: function (e) {
             let { children: t } = e,
                 [, n] = (0, d.H)({ accept: [] });

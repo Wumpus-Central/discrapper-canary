@@ -37,13 +37,13 @@ function g(e) {
         T = null != u && null != u.primaryColor && null != u.secondaryColor,
         x = w && T,
         {
-            gradientStyle: G,
-            gradientClassname: I,
+            gradientStyle: I,
+            gradientClassname: G,
             gradientGlowClassname: N,
         } = (0, f.v5)({ colorStrings: u, roleStyle: "username", animateGradient: A || y || b?.animate }),
         H = (0, f.CR)(n),
-        L = { className: a()(E.UU, m, S, { [E.Xh]: w, [I]: x }), children: H },
-        C = { className: a()(E.lD, N, S), children: n },
+        C = { className: a()(E.UU, m, S, { [E.Xh]: w, [G]: x }), children: H },
+        L = { className: a()(E.lD, N, S), children: n },
         v =
             "dot" === t
                 ? (0, l.jsx)(_.W, {
@@ -62,11 +62,11 @@ function g(e) {
             "left" === c && v,
             (0, l.jsxs)("span", {
                 className: a()(E.VW, { [E.mO]: h }),
-                style: { color: w && !T && null != i ? i : void 0, ...(x ? G : {}) },
+                style: { color: w && !T && null != i ? i : void 0, ...(x ? I : {}) },
                 children: [
                     null != p
-                        ? (0, l.jsx)(s.E, { tag: "span", color: "currentColor", variant: p, ...L })
-                        : (0, l.jsx)("span", { ...L }),
+                        ? (0, l.jsx)(s.E, { tag: "span", color: "currentColor", variant: p, ...C })
+                        : (0, l.jsx)("span", { ...C }),
                     x &&
                         (null != p
                             ? (0, l.jsx)(s.E, {
@@ -74,9 +74,9 @@ function g(e) {
                                   color: "currentColor",
                                   "aria-hidden": !0,
                                   variant: p,
-                                  ...C,
+                                  ...L,
                               })
-                            : (0, l.jsx)("span", { "aria-hidden": !0, ...C })),
+                            : (0, l.jsx)("span", { "aria-hidden": !0, ...L })),
                 ],
             }),
             "right" === c && v,

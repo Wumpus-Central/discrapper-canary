@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(793574),
     p = n(149468),
     m = n(628983),
-    T = n(94247),
-    g = n(520698),
+    g = n(94247),
+    T = n(520698),
     S = n(525788),
     N = n(384059),
     C = n(47167),
@@ -43,8 +43,8 @@ var i = n(477900),
     Y = n(718197),
     K = n(994500),
     $ = n(287809),
-    z = n(803301),
-    X = n(531685),
+    X = n(803301),
+    z = n(531685),
     q = n(129230),
     Z = n(562153),
     Q = n(427262),
@@ -276,14 +276,14 @@ n.d(
     {
         A: function (e) {
             let { channel: t, width: n } = e,
-                r = (0, d.bG)([T.A], () => T.A.getSpeaker(t.id)),
+                r = (0, d.bG)([g.A], () => g.A.getSpeaker(t.id)),
                 a = (0, d.bG)([m.A], () => m.A.getParticipant(t.id, r), [t.id, r]),
                 s = (0, d.bG)([Y.Ay], () => o()(Y.Ay.getVideoDevices()).values().first()),
                 l = (0, d.bG)(
-                    [z.A],
+                    [X.A],
                     () =>
                         null != a && a.type !== el.lp.ACTIVITY && a.type !== el.lp.HIDDEN_STREAM
-                            ? z.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
+                            ? X.A.getStreamId(a.user.id, t.getGuildId(), (0, T.A)(a.type))
                             : null,
                     [a, t],
                 ),
@@ -297,7 +297,7 @@ n.d(
                 p = (0, R.A)(a?.type === el.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, I),
                 S = (0, O.A)(I),
                 N = (0, d.yK)([j.A], () => j.A.getAllActiveStreams()),
-                C = (0, d.bG)([X.A], () => X.A.isFocused());
+                C = (0, d.bG)([z.A], () => z.A.isFocused());
             return (0, i.jsx)(ec, {
                 channel: t,
                 streamId: l,

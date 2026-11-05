@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     Wu: "scopes_hSg5_A",
     bc: "noDivider_hSg5_A",
     z8: "scope_hSg5_A",

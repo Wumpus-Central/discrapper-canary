@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(939249),
     m = n(7807),
     p = n(807348),
-    h = n(327289),
-    C = n(792996),
+    C = n(327289),
+    h = n(792996),
     f = n(649028);
 let E = [54, 8, 8, 8];
 n.d(
@@ -32,8 +32,8 @@ n.d(
                         (0, l.jsxs)("div", {
                             className: f.__invalid_customGiftHeaderText,
                             children: [
-                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: C.intl.string(C.t.aThJz8) }),
-                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: C.intl.string(C.t.stGFA3) }),
+                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: h.intl.string(h.t.aThJz8) }),
+                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: h.intl.string(h.t.stGFA3) }),
                             ],
                         }),
                         (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -49,7 +49,7 @@ n.d(
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
-                        children: (0, l.jsx)(h.A, {
+                        children: (0, l.jsx)(C.A, {
                             suppressPlaySound: !0,
                             shouldShowLockedSounds: !1,
                             guildId: null,
@@ -85,7 +85,7 @@ n.d(
                                               className: y,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
-                                              children: C.intl.string(C.t.aThJz8),
+                                              children: h.intl.string(h.t.aThJz8),
                                           }),
                                       ],
                                   })

@@ -12,8 +12,8 @@ var l = n(477900),
     g = n(331322),
     h = n(834730),
     p = n(821609),
-    x = n(793574),
-    f = n(688810),
+    f = n(793574),
+    x = n(688810),
     E = n(321538),
     v = n(604913),
     _ = n(773669),
@@ -67,9 +67,9 @@ let V = (e) => {
             onVisibilityChange: K,
             badge: W,
             hideButton: z = !1,
-            hideCards: Y = !1,
+            hideCards: X = !1,
         } = e,
-        X = (0, i.K)(
+        Y = (0, i.K)(
             (e) => {
                 K?.(e);
             },
@@ -81,7 +81,7 @@ let V = (e) => {
         J = (0, u.bG)([y.default], () => y.default.getCurrentUser()),
         Q = (0, u.bG)([_.default], () => _.default.locale),
         ee = (0, S.uM)(),
-        { analyticsLocations: et } = (0, f.Ay)(x.A.COLLECTIBLES_SHOP_HERO),
+        { analyticsLocations: et } = (0, x.Ay)(f.A.COLLECTIBLES_SHOP_HERO),
         en = (0, j.ST)(),
         el = r.useMemo(
             () =>
@@ -118,11 +118,11 @@ let V = (e) => {
             heroLogo: eg,
             heroBannerStatic: eh,
             heroBannerAnimated: ep,
-            heroBannerRive: ex,
+            heroBannerRive: ef,
         } = (0, T.Kk)(eu),
-        ef = ed?.responsive ?? !1,
+        ex = ed?.responsive ?? !1,
         eE = ed?.backgroundStyle,
-        ev = null != ex && !eo,
+        ev = null != ef && !eo,
         e_ = V === w.G2.ORBS,
         eC = null != s && s.isOrbsExclusive,
         ey = V === w.G2.COLLECTION_INDEX ? P.S.COLLECTION_INDEX : P.S.HOME,
@@ -154,23 +154,23 @@ let V = (e) => {
     function eI() {
         return t || z ? null : (0, l.jsx)(p.$, { variant: "overlay-primary", onClick: eS, text: eb });
     }
-    return (0, l.jsx)(f.f5, {
+    return (0, l.jsx)(x.f5, {
         value: et,
         children: (0, l.jsxs)("div", {
-            ref: X,
+            ref: Y,
             className: G.os,
             children: [
                 ev ? (0, R.VA)({ isCustomCursorEnabled: Z, className: G.Xt, riveEventTargetRef: q }) : null,
                 (0, l.jsx)("div", {
-                    className: a()(G.vK, { [G.cN]: ev, [G.no]: ef }),
+                    className: a()(G.vK, { [G.cN]: ev, [G.no]: ex }),
                     style: null != eE ? { background: eE } : void 0,
                     children:
                         null != eh &&
                         (0, l.jsx)(D.A, {
                             bannerStatic: eh,
                             bannerAnimated: ep,
-                            bannerRive: ev ? ex : void 0,
-                            isResponsive: ef,
+                            bannerRive: ev ? ef : void 0,
+                            isResponsive: ex,
                             eventTargetRef: q,
                         }),
                 }),
@@ -180,7 +180,7 @@ let V = (e) => {
                         ev
                             ? (0, l.jsx)("div", { className: G.fy, children: eI() })
                             : (0, l.jsxs)("div", {
-                                  className: a()(G.uZ, { [G.no]: ef, [G.RD]: ec }),
+                                  className: a()(G.uZ, { [G.no]: ex, [G.RD]: ec }),
                                   children: [
                                       t
                                           ? (0, l.jsx)("div", { className: G.Hw })
@@ -249,7 +249,7 @@ let V = (e) => {
                                       !z && !t && (0, l.jsx)("div", { className: G.IS, children: eI() }),
                                   ],
                               }),
-                        !Y &&
+                        !X &&
                             (V === w.G2.ORBS
                                 ? (0, l.jsx)(F, { heroBlockRecord: eu, isBlockLoading: t })
                                 : (0, l.jsx)(B.A, {

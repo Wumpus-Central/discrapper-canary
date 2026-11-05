@@ -186,8 +186,8 @@ function H() {
 var k = n(866665),
     B = n(939249),
     F = n(789645),
-    z = n(821609),
-    K = n(47167),
+    K = n(821609),
+    z = n(47167),
     W = n(485947),
     Y = n(61916),
     X = n(223863),
@@ -234,7 +234,7 @@ function Q(e) {
                                       Y.N,
                                       {
                                           result: e,
-                                          trailing: (0, l.jsx)(z.$, {
+                                          trailing: (0, l.jsx)(K.$, {
                                               variant: "secondary",
                                               size: "sm",
                                               text: O.intl.string(O.t.OYkgVk),
@@ -242,7 +242,7 @@ function Q(e) {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? q.Ay.getName(e.record)
-                                                          : (0, K.m1)(e.record, $.default, J.A),
+                                                          : (0, z.m1)(e.record, $.default, J.A),
                                               }),
                                               onClick: () =>
                                                   (async function (e) {

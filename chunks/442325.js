@@ -43,7 +43,7 @@ function m(e) {
     if (null == i) return !1;
     c = c.map((e) => (e.id === u ? f(e, i, e.entries, n) : e));
 }
-function T(e) {
+function g(e) {
     let { channel: t } = e;
     if (!A()) return !1;
     function n(e) {
@@ -57,7 +57,7 @@ function T(e) {
     }
     c = i;
 }
-class g extends r.Ay.PersistedStore {
+class T extends r.Ay.PersistedStore {
     static displayName = "ChannelTabsStore";
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
@@ -112,7 +112,7 @@ class g extends r.Ay.PersistedStore {
         return null != e && e.index < e.entries.length - 1;
     }
 }
-let S = new g(a.h, {
+let S = new T(a.h, {
     CHANNEL_TABS_OPEN: function (e) {
         if (c.length >= 25) return !1;
         if (0 === c.length) {
@@ -228,8 +228,8 @@ let S = new g(a.h, {
                   })))
         );
     },
-    CHANNEL_DELETE: T,
-    THREAD_DELETE: T,
+    CHANNEL_DELETE: g,
+    THREAD_DELETE: g,
     LOGOUT: function () {
         if (0 === c.length) return !1;
         ((c = []), (u = null));

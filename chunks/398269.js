@@ -16,8 +16,8 @@ var i = n(284009),
     I = n(808728),
     p = n(596344),
     m = n(218461),
-    T = n(994500),
-    g = n(711014),
+    g = n(994500),
+    T = n(711014),
     S = n(543465),
     N = n(287809),
     C = n(645959),
@@ -121,14 +121,14 @@ let w = {},
     Y = null,
     K = null,
     $ = !0;
-function z(e) {
+function X(e) {
     if (!p.A.isReady(e)) return;
     let t = f.A.getBasicChannel(e),
         n = p.A.getMessages(e);
     if (n.hasPresent() && 0 !== n.length)
         return (k.addChannelMessages({ channel: t, channelMessages: n, userId: N.default.getCurrentUser()?.id }), n);
 }
-function X() {
+function z() {
     if (null == G) {
         j = O.default.fromTimestamp(Date.now());
         return;
@@ -144,7 +144,7 @@ function X() {
 }
 function q() {
     let { notifyingChannelIds: e, staleChannelIds: t } = (function () {
-        let e = g.Ay.getFlattenedGuildIds().flatMap((e) => I.A.getSelectableChannelIds(e)),
+        let e = T.Ay.getFlattenedGuildIds().flatMap((e) => I.A.getSelectableChannelIds(e)),
             t = u.A.getAllActiveJoinedThreads();
         function n(e) {
             if (P.kvI.ALL_DMS.has(e.type)) {
@@ -152,7 +152,7 @@ function q() {
                 if (e.type === P.rbe.DM) {
                     let t = f.A.getChannel(e.id),
                         n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
-                    if (null != n && T.A.isBlocked(n)) return !1;
+                    if (null != n && g.A.isBlocked(n)) return !1;
                 }
                 return !0;
             }
@@ -220,11 +220,11 @@ function q() {
     for (let e of i) delete w[e];
     for (let e of n)
         if (((w[e] = { loadState: b.Ve.UNLOADED, mostRecentMessageId: m.Ay.lastMessageId(e) }), p.A.isReady(e))) {
-            let t = z(e);
+            let t = X(e);
             null != t &&
                 ((w[e].loadState = b.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? w[e].mostRecentMessageId));
         }
-    (k.updateChannelIds(G), X());
+    (k.updateChannelIds(G), z());
 }
 function Z() {
     ((w = {}),
@@ -244,10 +244,10 @@ function Q() {
     if (null == (0, R.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
         return !1;
     for (let e of (Z(), q(), G ?? [])) {
-        let t = z(e);
+        let t = X(e);
         null != t && ((w[e].loadState = b.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? null));
     }
-    X();
+    z();
     let e = d.Ay.getSettingsFilteredMentions() ?? [];
     k.addMessages(
         e.map((e) => ({
@@ -296,7 +296,7 @@ function et(e) {
 class en extends a.Ay.Store {
     static displayName = "NotificationsInboxStore";
     initialize() {
-        this.waitFor(o.A, u.A, f.A, I.A, _.A, p.A, C.A, m.Ay, d.Ay, T.A, g.Ay, S.Ay, N.default);
+        this.waitFor(o.A, u.A, f.A, I.A, _.A, p.A, C.A, m.Ay, d.Ay, g.A, T.Ay, S.Ay, N.default);
     }
     canLoadMore(e) {
         let { preload: t } = e;
@@ -368,7 +368,7 @@ let ei = new en(s.h, {
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { channelId: t } = e;
         if (!G?.includes(t)) return !1;
-        let n = z(t);
+        let n = X(t);
         if (null == n) return !1;
         let i = n.length >= 50 || (n.hasFetched && !n.hasMoreBefore);
         w[t].loadState !== b.Ve.LOADED && (w[t].loadState = i ? b.Ve.LOADED : b.Ve.LOADED_UNREAD);
@@ -447,7 +447,7 @@ let ei = new en(s.h, {
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: function (e) {
         let { preload: t, hasMoreToLoad: n, analyticsPayload: i } = e;
-        ((F = !1), t && (H = !0), null != n && (W = n), t || (V = !0), X(), (K = i ?? null));
+        ((F = !1), t && (H = !0), null != n && (W = n), t || (V = !0), z(), (K = i ?? null));
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: function () {
         ((F = !1), (K = null), (B = !0));

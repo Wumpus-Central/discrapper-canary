@@ -1,4 +1,4 @@
-r.exports = {
+e.exports = {
     kL: "container_SeV6PM",
     o5: "bannerPadding_SeV6PM",
     L1: "category_SeV6PM",

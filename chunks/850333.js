@@ -17,8 +17,8 @@ var a = n(855986),
 function m() {
     return h.Ay.useSystemTheme === p.Q_.ON && A.A.isSameAsDeviceThemeEnabled();
 }
-var T = n(95701),
-    g = n(734057),
+var g = n(95701),
+    T = n(734057),
     S = n(287809),
     N = n(879610),
     C = n(427262),
@@ -97,7 +97,7 @@ class B extends a.Ay.PersistedStore {
     initialize(e) {
         ((b = !1),
             null != e && ((i = P(e.gradientPresetId)), (y = !0 !== e.canUseClientThemes)),
-            this.waitFor(g.A, _.A, A.A, h.Ay, I.A, S.default),
+            this.waitFor(T.A, _.A, A.A, h.Ay, I.A, S.default),
             this.syncWith([S.default], w),
             this.syncWith([_.A], G));
     }
@@ -157,8 +157,8 @@ let V = new B(l.h, {
         let { channelId: t, guildId: n } = e,
             i = S.default.getCurrentUser();
         if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, C.G2)(i)) return;
-        let r = g.A.getChannel(t);
-        null != r && (0, T.ke)(r.type) && (D = !0);
+        let r = T.A.getChannel(t);
+        null != r && (0, g.ke)(r.type) && (D = !0);
     },
     LOGOUT: U,
     CACHE_LOADED: F,

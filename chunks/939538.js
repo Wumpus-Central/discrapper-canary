@@ -28,8 +28,8 @@ function E(e) {
         I = r.useMemo(() => t.toDate(), [t]),
         p = r.useMemo(() => a?.toDate(), [a]),
         m = r.useMemo(() => n?.toDate(), [n]),
-        T = (0, d.bG)([u.default], () => u.default.locale),
-        g = (0, c.QO)(),
+        g = (0, d.bG)([u.default], () => u.default.locale),
+        T = (0, c.QO)(),
         S = r.useRef(null),
         N = r.useCallback((e) => {
             let t = e.currentTarget;
@@ -50,8 +50,8 @@ function E(e) {
             autoFocus: A,
             fixedHeight: !0,
             inline: !0,
-            locale: T,
-            calendarStartDay: g.options?.weekStartsOn ?? 0,
+            locale: g,
+            calendarStartDay: T.options?.weekStartsOn ?? 0,
             maxDate: p,
             minDate: m,
             onKeyDown: N,

@@ -25,8 +25,8 @@ n.d(
                     "aria-label": I,
                     "aria-expanded": p,
                     "aria-haspopup": m,
-                    "data-jump-section": T,
-                    ref: g,
+                    "data-jump-section": g,
+                    ref: T,
                 } = e,
                 S = (0, i.jsx)(t, { size: "sm", color: E ?? "currentColor", colorClass: A });
             return (0, i.jsx)(l.m, {
@@ -34,7 +34,7 @@ n.d(
                 text: h,
                 ariaHidden: !0,
                 children: (0, i.jsxs)(o.D, {
-                    innerRef: g,
+                    innerRef: T,
                     tag: "div",
                     onClick: _ ? void 0 : n,
                     className: a()(c.vk, { [c.wH]: r, [c.r9]: _ }),
@@ -42,7 +42,7 @@ n.d(
                     "aria-label": null != I ? I : h,
                     "aria-haspopup": m,
                     "aria-expanded": p,
-                    "data-jump-section": T,
+                    "data-jump-section": g,
                     "aria-disabled": _,
                     children: [
                         u

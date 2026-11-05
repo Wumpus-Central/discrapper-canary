@@ -50,7 +50,7 @@ async function m(e, t) {
             3 === p && E.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function T(e) {
+function g(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -64,7 +64,7 @@ function T(e) {
     }
     return t;
 }
-function g(e) {
+function T(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
@@ -145,8 +145,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.log(...t), null != A))
                         try {
-                            let e = T(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => T(e))
                                 .join(" ");
                             A.log(e);
                         } catch (e) {
@@ -157,8 +157,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.info(...t), null != A))
                         try {
-                            let e = T(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => T(e))
                                 .join(" ");
                             A.info(e);
                         } catch (e) {
@@ -169,8 +169,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.warn(...t), null != A))
                         try {
-                            let e = T(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => T(e))
                                 .join(" ");
                             A.warn(e);
                         } catch (e) {
@@ -181,8 +181,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.error(...t), null != A))
                         try {
-                            let e = T(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => T(e))
                                 .join(" ");
                             A.error(e);
                         } catch (e) {}
@@ -451,8 +451,8 @@ function $(e) {
                     (x = !1));
         }
 }
-let z = new Map();
-class X extends i.Ay.PersistedStore {
+let X = new Map();
+class z extends i.Ay.PersistedStore {
     static displayName = "OverlayStore";
     static persistKey = "OverlayStoreV2";
     static migrations = [
@@ -561,10 +561,10 @@ class X extends i.Ay.PersistedStore {
         return B;
     }
     getTrackedGame(e) {
-        return z.get(e) ?? null;
+        return X.get(e) ?? null;
     }
 }
-let q = new X(a.h, {
+let q = new z(a.h, {
     LOGOUT: function (e) {
         e.isSwitchingAccount || (M = {});
     },
@@ -607,7 +607,7 @@ let q = new X(a.h, {
         ((P = t),
             __OVERLAY__ &&
                 (n.forEach((e) => {
-                    z.set(e.pid, e);
+                    X.set(e.pid, e);
                 }),
                 o.x.update({ legacyEnabled: i.legacyEnabled, oopEnabled: i.oopEnabled })));
     },
@@ -710,6 +710,6 @@ let q = new X(a.h, {
         w.delete(e.previousAssociatedGamePID);
     },
     OVERLAY_TRACKED_GAME_UPDATE: function (e) {
-        __OVERLAY__ && (null != e.trackedGame ? z.set(e.pid, e.trackedGame) : z.delete(e.pid));
+        __OVERLAY__ && (null != e.trackedGame ? X.set(e.pid, e.trackedGame) : X.delete(e.pid));
     },
 });

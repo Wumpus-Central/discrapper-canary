@@ -1,7 +1,7 @@
-function t(e, n) {
+function l(e, n) {
     return e.eligible && e.included !== n.includedChannelIds.has(e.channelId);
 }
-l.d(
+t.d(
     n,
     {},
     {
@@ -15,15 +15,15 @@ l.d(
             };
         },
         Pg: function (e, n) {
-            let l = {};
-            e.enabled !== n.enabled && (l.enabled = n.enabled);
+            let t = {};
+            e.enabled !== n.enabled && (t.enabled = n.enabled);
             let i = e.channels
-                .filter((e) => t(e, n))
+                .filter((e) => l(e, n))
                 .map((e) => ({ channel_id: e.channelId, included: n.includedChannelIds.has(e.channelId) }));
-            return (i.length > 0 && (l.channels = i), l);
+            return (i.length > 0 && (t.channels = i), t);
         },
         wX: function (e, n) {
-            return e.enabled !== n.enabled || e.channels.some((e) => t(e, n));
+            return e.enabled !== n.enabled || e.channels.some((e) => l(e, n));
         },
     },
 );

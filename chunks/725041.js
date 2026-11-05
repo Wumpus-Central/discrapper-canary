@@ -17,15 +17,15 @@ var l = n(477900),
     C = n(652215),
     x = n(49999),
     _ = n(135294),
-    v = n(792996),
-    b = n(636531);
+    b = n(792996),
+    v = n(636531);
 function S(e) {
     let { icon: t, title: n, description: r } = e;
     return (0, l.jsxs)(a.B, {
         direction: "horizontal",
         gap: 12,
         children: [
-            (0, l.jsx)("div", { className: b.z, children: t }),
+            (0, l.jsx)("div", { className: v.z, children: t }),
             (0, l.jsxs)(a.B, {
                 gap: 0,
                 children: [
@@ -42,7 +42,7 @@ n.d(
     {
         J: "GUILD_SPACE_NUX_MODAL",
         default: function (e) {
-            let { guildId: t, markAsDismissed: n, transitionState: s, onClose: b } = e,
+            let { guildId: t, markAsDismissed: n, transitionState: s, onClose: v } = e,
                 I = (0, i.bG)([E.A], () => E.A.getGuildId()),
                 y = (0, i.bG)([m.A], () => m.A.getGuild(t)?.guildSpaceSettings?.publish_status === A.B.PUBLISHED, [t]),
                 D = r.useRef(I === t);
@@ -50,20 +50,20 @@ n.d(
                 D.current && n(x.i.AUTO_DISMISS);
             }),
                 r.useEffect(() => {
-                    I !== t && b();
-                }, [t, b, I]));
+                    I !== t && v();
+                }, [t, v, I]));
             let j = r.useCallback(async () => {
-                    ((0, p.Wd)(t), await b());
-                }, [t, b]),
+                    ((0, p.Wd)(t), await v());
+                }, [t, v]),
                 w = r.useCallback(async () => {
-                    (h.A.open(t, C.BEX.ENGAGEMENT, void 0, C.nd0.ENGAGEMENT_GUILD_SPACE), await b());
-                }, [t, b]);
+                    (h.A.open(t, C.BEX.ENGAGEMENT, void 0, C.nd0.ENGAGEMENT_GUILD_SPACE), await v());
+                }, [t, v]);
             return I !== t
                 ? null
                 : (0, l.jsx)(u.k, {
                       size: "md",
                       transitionState: s,
-                      onClose: b,
+                      onClose: v,
                       gradientColor: "blue",
                       graphic: {
                           type: "rive",
@@ -71,35 +71,35 @@ n.d(
                           aspectRatio: "16/9",
                           props: { dataBinding: { on: !0 }, withReducedMotion: "halt", fit: "contain" },
                       },
-                      title: v.intl.string(_.default.x9aorn),
-                      subtitle: v.intl.string(_.default.HXmZlY),
+                      title: b.intl.string(_.default.x9aorn),
+                      subtitle: b.intl.string(_.default.HXmZlY),
                       actions: [
-                          ...(y ? [{ text: v.intl.string(v.t["154/bL"]), variant: "secondary", onClick: w }] : []),
-                          { text: v.intl.string(_.default["/Ld1Ju"]), variant: "primary", onClick: j },
+                          ...(y ? [{ text: b.intl.string(b.t["154/bL"]), variant: "secondary", onClick: w }] : []),
+                          { text: b.intl.string(_.default["/Ld1Ju"]), variant: "primary", onClick: j },
                       ],
                       children: (0, l.jsxs)(a.B, {
                           gap: 16,
                           children: [
                               (0, l.jsx)(S, {
                                   icon: (0, l.jsx)(c.u, { size: "sm", color: "currentColor" }),
-                                  title: v.intl.string(_.default.BNSdWl),
-                                  description: v.intl.string(_.default["2AoJt6"]),
+                                  title: b.intl.string(_.default.BNSdWl),
+                                  description: b.intl.string(_.default["2AoJt6"]),
                               }),
                               (0, l.jsx)(S, {
                                   icon: (0, l.jsx)(o.RefreshIcon, { size: "sm", color: "currentColor" }),
-                                  title: v.intl.string(_.default.OTYC2K),
-                                  description: v.intl.string(_.default.aQUPiQ),
+                                  title: b.intl.string(_.default.OTYC2K),
+                                  description: b.intl.string(_.default.aQUPiQ),
                               }),
                               y
                                   ? (0, l.jsx)(S, {
                                         icon: (0, l.jsx)(g.M, { size: "sm", color: "currentColor" }),
-                                        title: v.intl.string(_.default.GMgGSC),
-                                        description: v.intl.string(_.default.FurWLH),
+                                        title: b.intl.string(_.default.GMgGSC),
+                                        description: b.intl.string(_.default.FurWLH),
                                     })
                                   : (0, l.jsx)(S, {
                                         icon: (0, l.jsx)(g.M, { size: "sm", color: "currentColor" }),
-                                        title: v.intl.string(_.default.Hk5K1P),
-                                        description: v.intl.string(_.default["vloG7/"]),
+                                        title: b.intl.string(_.default.Hk5K1P),
+                                        description: b.intl.string(_.default["vloG7/"]),
                                     }),
                           ],
                       }),

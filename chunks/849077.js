@@ -19,14 +19,14 @@ var h = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YEST
         a);
 let p = { UNREAD: E.t.sRUdB8, TODAY: E.t.F4jZQs, YESTERDAY: E.t.gnv4pE, OLDER: E.t.exrPZv };
 var m = (((s = {}).UNLOADED = "unloaded"), (s.LOADED = "loaded"), (s.LOADED_UNREAD = "loadedUnread"), s),
-    T =
+    g =
         (((l = {}).AUTO_LOAD = "auto_load"),
         (l.ON_OPEN = "on_open"),
         (l.FILL_SCROLLER = "fill_scroller"),
         (l.USER_SCROLL = "user_scroll"),
         (l.UNKNOWN = "unknown"),
         l),
-    g =
+    T =
         (((o = {}).MENTION = "MENTION"),
         (o.REPLY = "REPLY"),
         (o.REACTION = "REACTION"),
@@ -40,10 +40,10 @@ n.d(
     {
         Hy: "notifications_inbox_guild_id",
         Io: f,
-        Th: g,
+        Th: T,
         Ur: h,
         V$: A,
-        VA: T,
+        VA: g,
         Ve: m,
         XU: "Notifications Inbox",
         Yw: function (e) {

@@ -15,8 +15,8 @@ var i = n(508602),
     I = n(36149),
     p = n(277861),
     m = n(652215),
-    T = n(835002);
-let g = new l.A("AgeVerificationManager");
+    g = n(835002);
+let T = new l.A("AgeVerificationManager");
 function S(e) {
     let { channelId: t, message: n } = e,
         r = _.A.getMessage(t, n.id);
@@ -24,17 +24,17 @@ function S(e) {
     let a = r?.embeds?.[0]?.fields?.find((e) => e.rawName === f.uN.CONTENT_TYPE);
     (a?.rawValue === f.Wv.MANUAL_REVIEW_SUBMITTED && (0, p.xf)(),
         a?.rawValue === f.Wv.ERROR
-            ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_ERROR), (0, h.Vh)(h.oQ.ERROR))
+            ? (d.A.showFailedToast(g.OB.AGE_VERIFICATION_ERROR), (0, h.Vh)(h.oQ.ERROR))
             : a?.rawValue === f.Wv.FAE_FAILED
-              ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_FAE_FAILED), (0, h.Vh)(h.oQ.FAE_FAILED))
+              ? (d.A.showFailedToast(g.OB.AGE_VERIFICATION_FAE_FAILED), (0, h.Vh)(h.oQ.FAE_FAILED))
               : a?.rawValue === f.Wv.ID_FAILED
-                ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_ID_FAILED), (0, h.Vh)(h.oQ.ID_FAILED))
+                ? (d.A.showFailedToast(g.OB.AGE_VERIFICATION_ID_FAILED), (0, h.Vh)(h.oQ.ID_FAILED))
                 : a?.rawValue === f.Wv.UNDERAGE
-                  ? (d.A.showFailedToast(T.OB.AGE_VERIFICATION_UNDERAGE), (0, h.Vh)(h.oQ.UNDERAGE))
+                  ? (d.A.showFailedToast(g.OB.AGE_VERIFICATION_UNDERAGE), (0, h.Vh)(h.oQ.UNDERAGE))
                   : a?.rawValue === f.Wv.VERIFIED_ADULT
-                    ? (d.A.showSuccessToast(T.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_ADULT))
+                    ? (d.A.showSuccessToast(g.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_ADULT))
                     : a?.rawValue === f.Wv.VERIFIED_TEEN &&
-                      (d.A.showSuccessToast(T.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
+                      (d.A.showSuccessToast(g.OB.AGE_VERIFICATION_VERIFIED), (0, h.Vh)(h.oQ.VERIFIED_TEEN)));
 }
 function N(e) {
     r.A.fetchMessages({ channelId: e, limit: 30 });
@@ -67,7 +67,7 @@ class C extends a.A {
                 }
             }
         } catch (e) {
-            g.warn("Error clearing cache and refetching messages", e);
+            T.warn("Error clearing cache and refetching messages", e);
         } finally {
             this._previousAgeVerificationStatus = n;
         }

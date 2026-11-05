@@ -16,8 +16,8 @@ let s = new r.Vy("NativeFrameView"),
     I = !1,
     p = null,
     m = null,
-    T = null,
-    g = new WeakSet(),
+    g = null,
+    T = new WeakSet(),
     S = new Set();
 function N() {
     let e = !1;
@@ -69,8 +69,8 @@ let j = null,
     Y = "data-native-frame-view-covered",
     K = "data-native-frame-view-mask",
     $ = "data-native-frame-view-floating",
-    z = "data-native-frame-view-pointer-scope",
-    X = `[${z}]`.repeat(4),
+    X = "data-native-frame-view-pointer-scope",
+    z = `[${X}]`.repeat(4),
     q = ["color", "image", "size", "position", "repeat", "x", "y", "width", "height"],
     Z = `
 ${q.map((e) => `@property --native-frame-view-hole-${e} { syntax: '*'; inherits: false; }`).join("\n")}
@@ -109,7 +109,7 @@ ${q.map((e) => `@property --native-frame-view-hole-${e} { syntax: '*'; inherits:
   mask-composite: subtract;
 }
 /* Specific enough to win over the important rules that turn pointer events off, like Discord's animating layers. */
-html body ${X}, html body ${X} * {
+html body ${z}, html body ${z} * {
   pointer-events: auto !important;
 }`,
     Q = [
@@ -180,7 +180,7 @@ function e_(e) {
     return (null == t && ((t = P++), v.set(e, t)), t);
 }
 function eE() {
-    if (null != T) return T;
+    if (null != g) return g;
     for (let e of l.values()) return e.iframe;
     return null;
 }
@@ -263,13 +263,13 @@ function em(e) {
         s = e.getBoundingClientRect();
     return s.right > t && s.left < t + r && s.bottom > n && s.top < n + a;
 }
-function eT(e) {
+function eg(e) {
     if (null == e || e === document || e === window) return !0;
     if (!(0, i.vq)(e, Element)) return !1;
     for (let t of l.values()) if (e.contains(t.iframe)) return !0;
     return !1;
 }
-function eg(e) {
+function eT(e) {
     let t = eS(e);
     if (null == t) return !1;
     for (let n of [...J.keys(), ...ee.keys(), ...et]) if (t.contains(n) && !n.contains(e)) return !0;
@@ -284,11 +284,11 @@ function eS(e) {
 function eN(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
     let r = [...C, ...n].filter((e) => e?.isConnected === !0);
-    for (let e of r) e.setAttribute(z, "");
+    for (let e of r) e.setAttribute(X, "");
     try {
         return e();
     } finally {
-        for (let e of r) e.removeAttribute(z);
+        for (let e of r) e.removeAttribute(X);
     }
 }
 function eC(e) {
@@ -318,15 +318,15 @@ function eC(e) {
     }, eS(t));
 }
 function eO() {
-    let e = T;
-    if (null != e && eg(e)) return ((D = !0), !0);
+    let e = g;
+    if (null != e && eT(e)) return ((D = !0), !0);
     if (D || null == R || null == e) return !1;
     for (let t of l.values()) if (t.iframe !== e && e5(t.iframe)?.clip != null) return !1;
     let t = e5(e);
     return t?.clip != null && JSON.stringify(t) === R.layout && eC({ iframe: e, clip: t.clip }) === R.value;
 }
 function eR(e) {
-    if (((I = !1), (m = e[0]?.clip ?? null), (T = 1 === e.length ? e[0].iframe : null), (f = performance.now()), x)) {
+    if (((I = !1), (m = e[0]?.clip ?? null), (g = 1 === e.length ? e[0].iframe : null), (f = performance.now()), x)) {
         for (let e of ((x = !1), ee.keys())) e.removeAttribute(Y);
         for (let [e, t] of (ee.clear(), [...J])) ea(e, t);
     }
@@ -468,7 +468,7 @@ function eR(e) {
     p = u.size > 0 && 1 === e.length ? E : null;
     let A = new WeakSet([...t.keys(), ...n]);
     for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) A.add(e);
-    ((g = A),
+    ((T = A),
         (function (e, t) {
             if (null == M) return;
             let n = "";
@@ -533,11 +533,11 @@ function eF(e) {
 function eB() {
     let e = eD,
         t = e3();
-    if (null == e || ev === e || null != ey || null != c || t?.setOnTop == null || (null != T && eg(T))) return;
+    if (null == e || ev === e || null != ey || null != c || t?.setOnTop == null || (null != g && eT(g))) return;
     let n = l.get(e),
         i = n?.inputTarget,
         r = n?.input;
-    if (null == n || n.iframe !== T || null == i || null == r || n.inputSuspended || !r.idle() || null == m || N())
+    if (null == n || n.iframe !== g || null == i || null == r || n.inputSuspended || !r.idle() || null == m || N())
         return;
     for (let e of C) e.isConnected || C.delete(e);
     for (let e of eG) ep(e) || eG.delete(e);
@@ -592,7 +592,7 @@ function eH(e) {
                     if (JSON.stringify(e5(e.iframe)) !== e.lastLayout) return void eV();
                     for (let n of t.keys())
                         if (
-                            !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || g.has(n)) &&
+                            !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || T.has(n)) &&
                             eA(n, t.get(n) ?? 0)
                         ) {
                             (eG.add(n), eV());
@@ -628,7 +628,7 @@ function eW(e) {
             (_ = 0),
             null != u && (clearTimeout(u), (u = null)),
             (E = 0),
-            (c ??= requestAnimationFrame(ez)));
+            (c ??= requestAnimationFrame(eX)));
     }
 }
 function eY() {
@@ -653,11 +653,11 @@ function e$() {
         }
         ((A = !0),
             (E = 9),
-            (_ = ez() ? 0 : Math.min(_ + 1, d.length - 1)),
+            (_ = eX() ? 0 : Math.min(_ + 1, d.length - 1)),
             null != u && (clearTimeout(u), (u = null), eK()));
     }
 }
-function ez() {
+function eX() {
     c = null;
     let e = e3();
     if (null == e) return !1;
@@ -673,7 +673,7 @@ function ez() {
     let i = A;
     ((A = !1), (h = !1));
     let r = n || x || i,
-        a = 1 === t.length && eg(t[0].iframe);
+        a = 1 === t.length && eT(t[0].iframe);
     if (a) (r && eL(t[0].clip), (r = !1), (D = !0));
     else if (D) {
         for (let e of ((D = !1), (r = !0), b)) {
@@ -695,7 +695,7 @@ function ez() {
     }
     if ((r && eR(t), 0 === l.size)) return n;
     let o = n || h;
-    if ((E = o ? 0 : E + 1) < 10 || N()) c = requestAnimationFrame(ez);
+    if ((E = o ? 0 : E + 1) < 10 || N()) c = requestAnimationFrame(eX);
     else {
         if (a) return (eK(), o);
         (I && eR(t),
@@ -712,7 +712,7 @@ function ez() {
     }
     return o;
 }
-function eX(e) {
+function ez(e) {
     if (null != ey) {
         let t = 200,
             n = !1;
@@ -758,7 +758,7 @@ function eX(e) {
                                     if ((a--, !em(i))) continue;
                                     let e = getComputedStyle(i);
                                     if ("none" === e.pointerEvents && er(e)) {
-                                        if ((r ??= null != t && eg(t))) {
+                                        if ((r ??= null != t && eT(t))) {
                                             b.add(i);
                                             continue;
                                         }
@@ -783,8 +783,8 @@ function eX(e) {
             )
                 return void eW(!0);
             if ("childList" === t.type) {
-                if (n.some((e) => (0, i.vq)(e, Element) && (null != m || eT(e)))) return void eW(!0);
-            } else if ((0, i.vq)(e, Element) && (g.has(e) || eT(e))) return void eW(!0);
+                if (n.some((e) => (0, i.vq)(e, Element) && (null != m || eg(e)))) return void eW(!0);
+            } else if ((0, i.vq)(e, Element) && (T.has(e) || eg(e))) return void eW(!0);
         }
         e.some((e) => "attributes" === e.type) && eY();
     }
@@ -1113,18 +1113,18 @@ n.d(
                                       (null != n && f({ ...p("mouseUp", e), button: n, clickCount: e.detail }),
                                           eD === t && eB());
                                   }));
-                              let T = !1;
+                              let g = !1;
                               for (let e of (n.addEventListener(
                                   "pointerrawupdate",
                                   (e) => {
-                                      (T = "mouse" === e.pointerType) &&
+                                      (g = "mouse" === e.pointerType) &&
                                           !a &&
                                           ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
                                   },
                                   { signal: r },
                               ),
                               I("mousemove", (e) => {
-                                  T || ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
+                                  g || ((u = e.buttons), h(p("mouseMove", e)), ek(t, !0));
                               }),
                               I("mouseenter", (e) => {
                                   (f(p("mouseEnter", e)), ek(t, !0));
@@ -1194,7 +1194,7 @@ n.d(
             function N() {
                 l.get(t) === I &&
                     (l.delete(t),
-                    T === e && (T = null),
+                    g === e && (g = null),
                     ey === t && (ey = null),
                     eP++,
                     eD === t && (eD = null),
@@ -1260,7 +1260,7 @@ n.d(
                         r = { capture: !0, passive: !0, signal: t };
                     for (let n of ((M = {
                         controller: e,
-                        mutations: new MutationObserver(eX),
+                        mutations: new MutationObserver(ez),
                         ancestors: "u" > typeof ResizeObserver ? new ResizeObserver(ej) : null,
                         containers: "u" > typeof ResizeObserver ? new ResizeObserver(eY) : null,
                         visibility:
@@ -1280,7 +1280,7 @@ n.d(
                     document.addEventListener(
                         "scroll",
                         (e) => {
-                            eT(e.target) && eW(!1);
+                            eg(e.target) && eW(!1);
                         },
                         r,
                     ),
@@ -1310,7 +1310,7 @@ n.d(
                                             }
                                         }
                                     })(n),
-                                        eT(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && g.has(n) && eW(!0));
+                                        eg(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && T.has(n) && eW(!0));
                                 }
                             },
                             n,

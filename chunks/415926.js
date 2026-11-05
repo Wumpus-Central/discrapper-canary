@@ -32,8 +32,8 @@ n.d(
                 { analyticsSource: g } = (0, i.lC)(t),
                 h = (0, r.I)(d, 5e3, [], { trailing: !0 }),
                 p = (0, a.uM)(),
-                x = p?.sessionId,
-                f =
+                f = p?.sessionId,
+                x =
                     ((n = l.useRef(0)),
                     (s = l.useRef(!1)),
                     (c = l.useRef(!1)),
@@ -84,17 +84,17 @@ n.d(
                     ));
             return {
                 handleScroll: l.useCallback(() => {
-                    if (f() && null != e.current) {
+                    if (x() && null != e.current) {
                         let t = e.current.getScrollerNode();
                         null != t &&
-                            h(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != x ? x : "", g, {
+                            h(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != f ? f : "", g, {
                                 scrollTop: t.scrollTop,
                                 scrollOffset: t.offsetHeight,
                                 scrollHeight: t.scrollHeight,
                                 scrollWidth: t.scrollWidth,
                             });
                     }
-                }, [h, g, x, e, f]),
+                }, [h, g, f, e, x]),
             };
         },
     },

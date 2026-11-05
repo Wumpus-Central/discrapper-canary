@@ -190,7 +190,7 @@ class p extends o.G {
     }
 }
 let m = new p();
-class T extends o.G {
+class g extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.MarketingPageBentoBox", [
             { no: 1, name: "asset", kind: "message", T: () => d.i },
@@ -226,7 +226,7 @@ class T extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let g = new T();
+let T = new g();
 class S extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumHomePerkCard", [
@@ -1086,8 +1086,8 @@ class $ extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let z = new $();
-class X extends o.G {
+let X = new $();
+class z extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTabTooltip", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -1148,7 +1148,7 @@ class X extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let q = new X();
+let q = new z();
 class Z extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderCoachmark", [
@@ -1576,7 +1576,7 @@ class ef extends o.G {
             { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => ee },
             { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => Q },
             { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => q },
-            { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => z },
+            { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => X },
             { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => K },
             { no: 19, name: "plan_select_card_banner", kind: "message", oneof: "properties", T: () => W },
             { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => H.h },
@@ -1588,7 +1588,7 @@ class ef extends o.G {
             { no: 26, name: "guild_boost_tab_banner", kind: "message", oneof: "properties", T: () => y },
             { no: 27, name: "shop_tab_tooltip", kind: "message", oneof: "properties", T: () => O },
             { no: 28, name: "premium_home_rewards_perk_card", kind: "message", oneof: "properties", T: () => N },
-            { no: 29, name: "marketing_page_rewards_bento_box", kind: "message", oneof: "properties", T: () => g },
+            { no: 29, name: "marketing_page_rewards_bento_box", kind: "message", oneof: "properties", T: () => T },
             { no: 30, name: "outbound_promotion_popover", kind: "message", oneof: "properties", T: () => m },
             { no: 31, name: "outbound_promotion_claim_modal_card", kind: "message", oneof: "properties", T: () => I },
             { no: 32, name: "shop_coachmark", kind: "message", oneof: "properties", T: () => h.I },
@@ -1725,7 +1725,7 @@ class ef extends o.G {
                 case 16:
                     r.properties = {
                         oneofKind: "premiumTabPopover",
-                        premiumTabPopover: z.internalBinaryRead(e, e.uint32(), n, r.properties.premiumTabPopover),
+                        premiumTabPopover: X.internalBinaryRead(e, e.uint32(), n, r.properties.premiumTabPopover),
                     };
                     break;
                 case 17:
@@ -1822,7 +1822,7 @@ class ef extends o.G {
                 case 29:
                     r.properties = {
                         oneofKind: "marketingPageRewardsBentoBox",
-                        marketingPageRewardsBentoBox: g.internalBinaryRead(
+                        marketingPageRewardsBentoBox: T.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -1945,7 +1945,7 @@ class ef extends o.G {
             "premiumTabTooltip" === e.properties.oneofKind &&
                 q.internalBinaryWrite(e.properties.premiumTabTooltip, t.tag(15, a.O0.LengthDelimited).fork(), n).join(),
             "premiumTabPopover" === e.properties.oneofKind &&
-                z.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, a.O0.LengthDelimited).fork(), n).join(),
+                X.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, a.O0.LengthDelimited).fork(), n).join(),
             "nagbar" === e.properties.oneofKind &&
                 K.internalBinaryWrite(e.properties.nagbar, t.tag(17, a.O0.LengthDelimited).fork(), n).join(),
             "planSelectCardBanner" === e.properties.oneofKind &&
@@ -2001,13 +2001,11 @@ class ef extends o.G {
                     n,
                 ).join(),
             "marketingPageRewardsBentoBox" === e.properties.oneofKind &&
-                g
-                    .internalBinaryWrite(
-                        e.properties.marketingPageRewardsBentoBox,
-                        t.tag(29, a.O0.LengthDelimited).fork(),
-                        n,
-                    )
-                    .join(),
+                T.internalBinaryWrite(
+                    e.properties.marketingPageRewardsBentoBox,
+                    t.tag(29, a.O0.LengthDelimited).fork(),
+                    n,
+                ).join(),
             "outboundPromotionPopover" === e.properties.oneofKind &&
                 m
                     .internalBinaryWrite(

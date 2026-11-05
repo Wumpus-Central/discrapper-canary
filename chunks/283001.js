@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(534409),
     p = n(711014),
     m = n(240248),
-    T = n(263715),
-    g = n(941971),
+    g = n(263715),
+    T = n(941971),
     S = n(855986),
     N = n(695366),
     C = n(678708),
@@ -85,8 +85,8 @@ function k(e) {
             onHoverChange: f,
             onKeyDown: I,
             treeItemProps: { onFocus: p, ...m },
-            "aria-setsize": T,
-            "aria-posinset": g,
+            "aria-setsize": g,
+            "aria-posinset": T,
         } = e,
         [S, N] = r.useState(!1),
         C = r.useCallback(() => {
@@ -118,8 +118,8 @@ function k(e) {
                 focusProps: { enabled: !1 },
                 ...m,
                 role: "treeitem",
-                "aria-setsize": T,
-                "aria-posinset": g,
+                "aria-setsize": g,
+                "aria-posinset": T,
                 "aria-expanded": n,
                 "aria-owns": u,
                 children: [
@@ -177,8 +177,8 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                 onHeaderClick: G,
                 onContextMenu: x,
                 renderChildNode: $,
-                folderButtonSize: z,
-                folderButtonContent: X,
+                folderButtonSize: X,
+                folderButtonContent: z,
                 "aria-setsize": q,
                 "aria-posinset": Z,
             } = e,
@@ -191,8 +191,8 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             b && en(!1);
         }, [b]);
         let [{ dragging: el }, eo] = (0, l.i)({
-                type: T.PJ.FOLDER,
-                item: () => (v?.(), { type: T.PJ.FOLDER, nodeId: E.id }),
+                type: g.PJ.FOLDER,
+                item: () => (v?.(), { type: g.PJ.FOLDER, nodeId: E.id }),
                 end() {
                     (P?.(), (0, h.um)(p.Ay.getCompatibleGuildFolders()));
                 },
@@ -224,7 +224,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             ef = r.useCallback((e) => f?.(Q, e), [f, Q]),
             eI = (0, i.jsxs)(V.c, {
                 children: [
-                    (0, i.jsx)(g.A, {
+                    (0, i.jsx)(T.A, {
                         overlay: !0,
                         disabled: el || (S && null == G),
                         hovered: et,
@@ -242,7 +242,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       eo(e);
                                   }
                                 : void 0,
-                            className: s()(w.MJ, { [w.L0]: "icon" === z || es, [W.oR]: !el && ei && !S }),
+                            className: s()(w.MJ, { [w.L0]: "icon" === X || es, [W.oR]: !el && ei && !S }),
                             "data-dnd-name": eu,
                             children: el
                                 ? (0, i.jsx)(B.A, { isFolder: !0 })
@@ -261,7 +261,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       onHoverChange: en,
                                       onKeyDown: ec,
                                       treeItemProps: e_,
-                                      folderButtonContent: X,
+                                      folderButtonContent: z,
                                       "aria-setsize": q,
                                       "aria-posinset": Z,
                                   }),

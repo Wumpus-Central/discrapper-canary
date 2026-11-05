@@ -65,7 +65,7 @@ let A = {
 function m(e) {
     return (0, o.nb)(e.trait, e.optionId);
 }
-function T(e) {
+function g(e) {
     let { trait: t, rarity: n } = e;
     if (null == n) {
         let n = I[t];
@@ -80,7 +80,7 @@ function T(e) {
     let { commonMessage: i, topMessage: o } = p[t];
     return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.ei[n] });
 }
-let g = {
+let T = {
     [r.V.FACE]: u.default["4IdR/H"],
     [r.V.OUTFIT]: u.default.NuujPd,
     [r.V.HAT]: u.default.o1Zign,
@@ -94,10 +94,10 @@ n.d(
     {
         C5: m,
         Cz: function (e) {
-            let t = g[e];
+            let t = T[e];
             return null != t ? _.intl.string(t) : void 0;
         },
-        Oq: T,
+        Oq: g,
         Ux: function (e) {
             switch (e) {
                 case "base":
@@ -135,7 +135,7 @@ n.d(
                 !t)
             ) {
                 null != e.rarity && n.push(_.intl.string(c.iG[e.rarity]));
-                let t = T(e);
+                let t = g(e);
                 null != t && n.push(t);
             }
             return n.join(", ");

@@ -3,14 +3,14 @@ let i;
     Au: () => Y,
     Ir: () => W,
     wH: () => H,
-    fh: () => z,
+    fh: () => X,
     CZ: () => $,
     Ak: () => K,
     Dv: () => q,
     ND: () => J,
     Ni: () => ee,
     un: () => Z,
-    VE: () => X,
+    VE: () => z,
 }),
     n(321073));
 var r = n(164636),
@@ -29,17 +29,17 @@ var r = n(164636),
     I = n(807348),
     p = n(986322),
     m = n(734057),
-    T = n(495867),
-    g = n(309010),
+    g = n(495867),
+    T = n(309010),
     S = n(129230);
 n(980504);
 var N = n(652215),
     C = n(682901);
 function O(e, t, n, i, r) {
-    let a = m.A.getChannel(g.Ay.getVoiceChannelId()),
+    let a = m.A.getChannel(T.Ay.getVoiceChannelId()),
         s = a?.getGuildId(),
-        l = T.A.getMediaSessionId(),
-        o = T.A.getRTCConnectionId(),
+        l = g.A.getMediaSessionId(),
+        o = g.A.getRTCConnectionId(),
         d = p.Ay.getCurrentGameForAnalytics()?.name,
         c = s !== n.guildId && "0" !== n.guildId,
         u = "0" === n.guildId ? "default" : c ? "custom-external" : "custom",
@@ -82,7 +82,7 @@ var b = n(716365);
 function v(e) {
     let t = new AbortController(),
         n = (0, E.throttle)((n) => {
-            g.Ay.getVoiceChannelId() !== e && t.abort();
+            T.Ay.getVoiceChannelId() !== e && t.abort();
         }, 1e3);
     return { abortController: t, onRequestProgress: n };
 }
@@ -155,7 +155,7 @@ function $(e, t, n) {
         })(t, e, __OVERLAY__, n),
         s.h.dispatch({ type: "SOUNDBOARD_TRACK_USAGE", soundId: e.soundId }));
 }
-async function z(e) {
+async function X(e) {
     let t = U.default.getCurrentUser(),
         n = (0, o.A)(),
         i = (0, B.z0)(e);
@@ -185,7 +185,7 @@ async function z(e) {
             })(s, a, __OVERLAY__));
     }
 }
-function X(e) {
+function z(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, r.bG)([U.default], () => U.default.getCurrentUser()),
         i = [];

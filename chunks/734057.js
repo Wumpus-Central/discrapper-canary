@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(403362),
     p = n(811091),
     m = n(46653),
-    T = n(71393),
-    g = n(287809),
+    g = n(71393),
+    T = n(287809),
     S = n(652215),
     N = n(746080);
 let C = new A.A("ChannelStore"),
@@ -40,7 +40,7 @@ let C = new A.A("ChannelStore"),
     V = 0;
 class H {
     static loadAllMissingChannels() {
-        let e = T.A.getGuildIds().filter((e) => !G.has(e));
+        let e = g.A.getGuildIds().filter((e) => !G.has(e));
         return this.loadGuildIds(e);
     }
     static loadGuildFromChannelId(e) {
@@ -123,16 +123,16 @@ function K(e) {
 function $(e) {
     return (W(e, 1, "getChannel"), R[e] ?? y[e] ?? b[e] ?? w[e] ?? F[e]);
 }
-function z(e) {
+function X(e) {
     if (e.isPrivate()) {
         if (e.hasFlag(N.lx.UNLISTED)) {
             F[e.id] = e;
             return;
         }
-        (delete F[e.id], X(e));
+        (delete F[e.id], z(e));
     } else e.isThread() ? q(e) : f.uL.has(e.type) && Z(e);
 }
-function X(e) {
+function z(e) {
     if (null != e.recipients.find((e) => (0, E.A)(e))) return !1;
     ((y[e.id] = e), e.type === S.rbe.DM && (P[e.getRecipientId()] = e.id), (M += 1));
 }
@@ -169,12 +169,12 @@ function Q(e) {
 function J(e) {
     if (!f.A_.has(e.channel.type)) return !1;
     let t = $(e.channel.id);
-    z((t = null == t ? e.channel : t.merge({ ...e.channel.toJS(), bitrate: e.channel.bitrate ?? t.bitrate })));
+    X((t = null == t ? e.channel : t.merge({ ...e.channel.toJS(), bitrate: e.channel.bitrate ?? t.bitrate })));
 }
 function ee(e) {
     let { threads: t } = e;
     t.forEach((e) => {
-        f.A_.has(e.type) && z((0, f.UE)(e));
+        f.A_.has(e.type) && X((0, f.UE)(e));
     });
 }
 function et(e) {
@@ -218,7 +218,7 @@ function er(e) {
                 let t = (0, f.UE)(e),
                     n = null != $(e.id),
                     i = null != F[e.id];
-                t.isPrivate() && (!n || i) ? (F[t.id] = t) : n || z(t);
+                t.isPrivate() && (!n || i) ? (F[t.id] = t) : n || X(t);
             }));
     });
 }
@@ -234,7 +234,7 @@ function es() {
 class el extends s.Ay.Store {
     static displayName = "ChannelStore";
     initialize() {
-        (this.waitFor(m.default, u.A, h.A, T.A, g.default), this.syncWith([h.A], es));
+        (this.waitFor(m.default, u.A, h.A, g.A, T.default), this.syncWith([h.A], es));
     }
     hasChannel(e) {
         return null != K(e);
@@ -246,7 +246,7 @@ class el extends s.Ay.Store {
         if (null != e) return $(e);
     }
     loadAllGuildAndPrivateChannelsFromDisk() {
-        for (let e of T.A.getGuildIds()) j(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
+        for (let e of g.A.getGuildIds()) j(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
         return { ...R, ...y };
     }
     getChannelIds(e) {
@@ -348,39 +348,39 @@ let ed = new el(l.h, {
     CACHE_LOADED_LAZY: function (e) {
         for (let [t, n] of ((B = Math.max(B, e.guilds.length)), e.guildChannels))
             for (let e of (C.fileOnly(`Lazy cache contained full guild channels for ${t} #:${n.length}`), G.add(t), n))
-                z((0, f.oh)(e));
+                X((0, f.oh)(e));
     },
     CACHE_LOADED: function (e) {
         B = Math.max(B, e.guilds.length);
         let { privateChannels: t, initialGuildChannels: n } = e;
-        for (let e of [t, n]) for (let t of e) z((0, _.n2)((0, f.oh)(t)));
+        for (let e of [t, n]) for (let t of e) X((0, _.n2)((0, f.oh)(t)));
         let i = n[0]?.guild_id;
         null != i && (C.fileOnly(`Early cache contained full guild channels for ${i}`), G.add(i));
     },
     CHANNEL_CREATE: function (e) {
-        z(e.channel);
+        X(e.channel);
     },
     CHANNEL_DELETE: en,
     CHANNEL_RECIPIENT_ADD: function (e) {
         let t = $(e.channelId),
             n = m.default.getId();
-        return !!t?.isPrivate() && (z(t.addRecipient(e.user.id, e.nick, n)), !0);
+        return !!t?.isPrivate() && (X(t.addRecipient(e.user.id, e.nick, n)), !0);
     },
     CHANNEL_RECIPIENT_REMOVE: function (e) {
         let t = $(e.channelId);
-        return !!t?.isPrivate() && (z(t.removeRecipient(e.user.id)), !0);
+        return !!t?.isPrivate() && (X(t.removeRecipient(e.user.id)), !0);
     },
     CHANNEL_UPDATES: function (e) {
         let t = e.channels.some((e) => {
             let t = $(e.id);
             return e.nsfw !== t?.nsfw || e.type !== t?.type;
         });
-        for (let t of e.channels) z(t);
-        t && Object.values(b).forEach((e) => z(e));
+        for (let t of e.channels) X(t);
+        t && Object.values(b).forEach((e) => X(e));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { lazyPrivateChannels: t } = e;
-        (null != D && ((y = {}), D.forEach(X)), t.forEach(X));
+        (null != D && ((y = {}), D.forEach(z)), t.forEach(z));
     },
     CONNECTION_OPEN: function (e) {
         let t = L;
@@ -394,7 +394,7 @@ let ed = new el(l.h, {
         (x = {}),
         (k = Date.now()),
         (D = e.initialPrivateChannels),
-        e.initialPrivateChannels.forEach(X),
+        e.initialPrivateChannels.forEach(z),
         e.guilds))
             ("partial" === n.dataMode &&
                 (r().forEach(t[n.id], Z), C.fileOnly(`Restoring guild channels for ${n.id} #:${eo(n.id)}`)),
@@ -405,14 +405,14 @@ let ed = new el(l.h, {
         let { channelId: t, overwrite: n } = e,
             i = $(t);
         if (null == i) return !1;
-        z(i.set("permissionOverwrites", { ...i.permissionOverwrites, [n.id]: n }));
+        X(i.set("permissionOverwrites", { ...i.permissionOverwrites, [n.id]: n }));
     },
     CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: function (e) {
         let { channelId: t, overwriteId: n } = e,
             i = $(t);
         if (null == i) return !1;
         let r = { ...i.permissionOverwrites };
-        (delete r[n], z(i.set("permissionOverwrites", r)));
+        (delete r[n], X(i.set("permissionOverwrites", r)));
     },
     GUILD_CREATE: function (e) {
         Q(e.guild);
@@ -449,7 +449,7 @@ let ed = new el(l.h, {
             (k = Date.now()));
     },
     OVERLAY_INITIALIZE: function (e) {
-        for (let t of e.channels) z((0, _.n2)((0, f.oh)(t)));
+        for (let t of e.channels) X((0, _.n2)((0, f.oh)(t)));
     },
     SEARCH_MESSAGES_SUCCESS: er,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: er,
@@ -458,7 +458,7 @@ let ed = new el(l.h, {
     THREAD_LIST_SYNC: function (e) {
         let { threads: t } = e;
         t.forEach((e) => {
-            f.A_.has(e.type) && z(e);
+            f.A_.has(e.type) && X(e);
         });
     },
     THREAD_UPDATE: J,

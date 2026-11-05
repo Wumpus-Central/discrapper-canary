@@ -49,8 +49,8 @@ function m(e, t) {
         }),
     );
 }
-let T = u.ej.create(),
-    g = !1,
+let g = u.ej.create(),
+    T = !1,
     S = 0,
     N = !1,
     C = !1,
@@ -67,14 +67,14 @@ function y() {
         a === l &&
         i.arm === (R ? "treatment" : "control") &&
         i.account_id === h.default.getId() &&
-        (null != o || i.declarative_data_version >= (T.versions?.dataVersion ?? 0)) &&
+        (null != o || i.declarative_data_version >= (g.versions?.dataVersion ?? 0)) &&
         r === m(i, E.A.settings)
     );
 }
 function D(e) {
     if (
         e.account_id !== h.default.getId() ||
-        e.declarative_data_version < (T.versions?.dataVersion ?? 0) ||
+        e.declarative_data_version < (g.versions?.dataVersion ?? 0) ||
         (i?.account_id === e.account_id && e.declarative_data_version < i.declarative_data_version) ||
         e.legacy_data_version < (E.A.settings.versions?.dataVersion ?? 0)
     )
@@ -88,7 +88,7 @@ function v() {
     (b(), (d = void 0));
 }
 function P(e) {
-    let t = T.versions?.dataVersion ?? 0;
+    let t = g.versions?.dataVersion ?? 0;
     return "proto" === e.versionSource
         ? t
         : null != i && i.account_id === h.default.getId()
@@ -132,7 +132,7 @@ class U extends c.Ay.PersistedStore {
                                 ? e.effectiveSettingsAssignment
                                 : void 0)));
                 let s = (0, A.ii)(u.ej, e.proto ?? null);
-                null != s && (T = s);
+                null != s && (g = s);
                 let l = (0, A.ii)(u.ej, e.protoToSave ?? null);
                 null != l &&
                     (d = {
@@ -144,7 +144,7 @@ class U extends c.Ay.PersistedStore {
     }
     getState() {
         let e = {
-                proto: (0, A.ob)(u.ej, T),
+                proto: (0, A.ob)(u.ej, g),
                 effectiveSettings: i,
                 effectiveFetchedAt: S,
                 effectiveSourceFingerprint: r,
@@ -160,7 +160,7 @@ class U extends c.Ay.PersistedStore {
         return e;
     }
     get hasLoaded() {
-        return g;
+        return T;
     }
     get pendingEdit() {
         return d;
@@ -205,7 +205,7 @@ class U extends c.Ay.PersistedStore {
         return (
             d ?? {
                 partialSettings: u.ej.create(),
-                offlineEditDataVersion: e ?? T.versions?.dataVersion ?? 0,
+                offlineEditDataVersion: e ?? g.versions?.dataVersion ?? 0,
                 versionSource: null != e ? "effective" : "proto",
             }
         );
@@ -214,10 +214,10 @@ class U extends c.Ay.PersistedStore {
         return y() ? i?.declarative_data_version : void 0;
     }
     get dataVersion() {
-        return T.versions?.dataVersion ?? 0;
+        return g.versions?.dataVersion ?? 0;
     }
     getSetting(e) {
-        return d?.partialSettings?.values[e] ?? o?.partialSettings?.values[e] ?? T.values[e];
+        return d?.partialSettings?.values[e] ?? o?.partialSettings?.values[e] ?? g.values[e];
     }
 }
 new U(_.h, {
@@ -225,10 +225,10 @@ new U(_.h, {
         let { notificationSettings: t } = e;
         ((s = void 0),
             (C = !1),
-            null != t.declarativeSettings && (T = t.declarativeSettings),
+            null != t.declarativeSettings && (g = t.declarativeSettings),
             null != d && d.offlineEditDataVersion !== P(d) && v(),
             null != o && o.offlineEditDataVersion !== P(o) && (o = void 0),
-            (g = !0));
+            (T = !0));
     },
     CONNECTION_CLOSED: function () {
         if (d?.timeout == null) return !1;
@@ -238,7 +238,7 @@ new U(_.h, {
         let { settings: t } = e,
             n = t.declarativeSettings;
         if (null == n) return !1;
-        T = n;
+        g = n;
     },
     DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE: function (e) {
         let {
@@ -249,11 +249,11 @@ new U(_.h, {
             effectiveSettingsAssignment: a,
         } = e;
         if ((null == t && null == n) || n !== o) return !1;
-        if (null != r && r.declarative_data_version < (T.versions?.dataVersion ?? 0)) {
+        if (null != r && r.declarative_data_version < (g.versions?.dataVersion ?? 0)) {
             o = void 0;
             return;
         }
-        (null != t && (T = t), (o = void 0), null != r && null != a && a === l && D(r), i && v());
+        (null != t && (g = t), (o = void 0), null != r && null != a && a === l && D(r), i && v());
     },
     DECLARATIVE_NOTIFICATION_SETTINGS_EDIT: function (e) {
         let { edit: t, isApplying: n } = e;
@@ -273,10 +273,10 @@ new U(_.h, {
         (n ? v() : (d = null == d ? t : { ...d, partialSettings: M(t, d) }), (o = void 0));
     },
     LOGOUT: function () {
-        ((T = u.ej.create()),
+        ((g = u.ej.create()),
             v(),
             (o = void 0),
-            (g = !1),
+            (T = !1),
             (i = void 0),
             (S = 0),
             (r = void 0),

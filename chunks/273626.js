@@ -16,13 +16,13 @@ var i = n(488428),
     I = n(760751),
     p = n(499785),
     m = n(403362),
-    T = n(652215);
-let g = (0, m.iT)() ? void 0 : window.GLOBAL_ENV.CDN_HOST;
+    g = n(652215);
+let T = (0, m.iT)() ? void 0 : window.GLOBAL_ENV.CDN_HOST;
 function S(e, t) {
-    return null != g ? `https://${g}${e}` : t;
+    return null != T ? `https://${T}${e}` : t;
 }
-let N = S("/detectables/games.json", T.Rsh.GAMES_DETECTABLE),
-    C = S("/detectables/non-games.json", T.Rsh.NON_GAMES_DETECTABLE);
+let N = S("/detectables/games.json", g.Rsh.GAMES_DETECTABLE),
+    C = S("/detectables/non-games.json", g.Rsh.NON_GAMES_DETECTABLE);
 var O = n(651743),
     R = n(773669),
     L = n(134861),
@@ -98,14 +98,14 @@ var W = n(969151),
     Y = n(277344),
     K = n(55730),
     $ = n(10532);
-async function z(e) {
+async function X(e) {
     if (!_.A.isHydrated(e))
         try {
             await (0, u.TA)(e);
         } catch {}
     return _.A.getApplication(e);
 }
-var X = n(878014),
+var z = n(878014),
     q = n(568598),
     Z = n(628983),
     Q = n(577483),
@@ -149,7 +149,7 @@ function ec(e) {
         let e = _.A.getApplication(t);
         if (e?.deepLinkUri != null) {
             let i = e.deepLinkUri.replace(/\/+$/, ""),
-                r = `${i}${T.O3O.GAME_INVITE_FRAGMENT}${n}`;
+                r = `${i}${g.O3O.GAME_INVITE_FRAGMENT}${n}`;
             try {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
@@ -184,7 +184,7 @@ function ec(e) {
             return (
                 null != i &&
                     v.A.waitParentConnected(i)
-                        .then(() => v.A.waitParentSubscribed(i, T.ZE4.ACTIVITY_JOIN))
+                        .then(() => v.A.waitParentSubscribed(i, g.ZE4.ACTIVITY_JOIN))
                         .then(() => {
                             d.h.dispatch({
                                 type: "ACTIVITY_JOIN",
@@ -200,7 +200,7 @@ function ec(e) {
                 v.A.waitConnected(t).then(
                     () => (
                         d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
-                        v.A.waitSubscribed(t, T.ZE4.ACTIVITY_JOIN)
+                        v.A.waitSubscribed(t, g.ZE4.ACTIVITY_JOIN)
                     ),
                 )
             );
@@ -232,7 +232,7 @@ function eu(e) {
         let o = y.A.getLibraryApplication(t, n);
         if (null == o) throw Error("Missing library application when launching");
         r = l.Bo.post({
-            url: T.Rsh.OAUTH2_AUTHORIZE,
+            url: g.Rsh.OAUTH2_AUTHORIZE,
             query: { client_id: t, response_type: "token", scope: [a.F.IDENTIFY].join(" ") },
             retries: 3,
             body: { authorize: !0 },
@@ -271,7 +271,7 @@ function eu(e) {
                   d.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
               })
               .catch((e) => {
-                  (es.A.show(T.kqX.LAUNCH_GAME_FAILURE, eo.intl.string(eo.t.YZEBdj)),
+                  (es.A.show(g.kqX.LAUNCH_GAME_FAILURE, eo.intl.string(eo.t.YZEBdj)),
                       d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: s }));
               }))
         : (d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: s }), Promise.reject(s));
@@ -282,7 +282,7 @@ function e_(e) {
 let eE = {
     addGame(e, t) {
         (d.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
-            b.default.track(T.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t }));
+            b.default.track(g.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t }));
     },
     toggleOverlay(e, t, n) {
         let i = (0, f.Zh)(e),
@@ -291,10 +291,10 @@ let eE = {
             let e = y.A.getActiveLibraryApplication(r.id);
             if (null != e) {
                 let i = e.getFlags(),
-                    r = s.Lt(i, T.hM6.OVERLAY_DISABLED);
-                t && r !== t && (i = s.PQ(i, T.hM6.OVERLAY_DISABLED));
-                let a = s.Lt(i, T.hM6.OVERLAY_V3_DISABLED);
-                (null != n && n !== a && (i = s.PQ(i, T.hM6.OVERLAY_V3_DISABLED)), ea.V(e.id, e.branchId, i));
+                    r = s.Lt(i, g.hM6.OVERLAY_DISABLED);
+                t && r !== t && (i = s.PQ(i, g.hM6.OVERLAY_DISABLED));
+                let a = s.Lt(i, g.hM6.OVERLAY_V3_DISABLED);
+                (null != n && n !== a && (i = s.PQ(i, g.hM6.OVERLAY_V3_DISABLED)), ea.V(e.id, e.branchId, i));
                 return;
             }
         }
@@ -343,7 +343,7 @@ let eE = {
             d.h.dispatch({ type: "GAMES_DATABASE_FETCH" });
             try {
                 e = await p.A.get({
-                    url: null != g ? `https://${g}/detectables/games-v1.json` : N,
+                    url: null != T ? `https://${T}/detectables/games-v1.json` : N,
                     headers: { "If-None-Match": t },
                     retries: 1,
                     oldFormErrors: !0,
@@ -366,7 +366,7 @@ let eE = {
         let e = I.A.blocklistEtag;
         (d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             l.Bo.get({
-                url: T.Rsh.GAMES_BLOCKLIST,
+                url: g.Rsh.GAMES_BLOCKLIST,
                 headers: { "If-None-Match": e },
                 oldFormErrors: !0,
                 rejectWithError: (0, l.fT)(),
@@ -402,7 +402,7 @@ let eE = {
         let e = h.A.etag;
         (d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
             p.A.get({
-                url: null != g ? `https://${g}/detectables/non-games-v1.json` : C,
+                url: null != T ? `https://${T}/detectables/non-games-v1.json` : C,
                 headers: { "If-None-Match": e },
                 retries: 1,
                 trackedActionData: {
@@ -431,7 +431,7 @@ let eE = {
     },
     launch: async function (e) {
         let t = await (async function (e) {
-            let t = await z(e.applicationId);
+            let t = await X(e.applicationId);
             return (0, et.U4)(t)
                 ? (async function (e, t) {
                       let {
@@ -483,7 +483,7 @@ let eE = {
                       }
                   })(e, t)
                 : !(0, et.VS)(t) &&
-                      (null != t && (0, X.W)(t, w.U.MAIN)
+                      (null != t && (0, z.W)(t, w.U.MAIN)
                           ? (async function (e, t) {
                                 let n,
                                     {
@@ -572,7 +572,7 @@ let eE = {
         let A = await (async function (e) {
             let { userId: t, sessionId: n, applicationId: i, channelId: r, messageId: a, intent: s } = e,
                 l = e.activity ?? en.A.getApplicationActivity(t, i);
-            if (!(e.embedded ?? (0, K.A)(l, T.jUm.EMBEDDED)) || !(0, et.VS)(await z(i))) return null;
+            if (!(e.embedded ?? (0, K.A)(l, g.jUm.EMBEDDED)) || !(0, et.VS)(await X(i))) return null;
             let o = G.Ay.getEmbeddedActivityForUserId(t, i, !0);
             return null != o
                 ? (0, c.A)({

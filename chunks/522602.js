@@ -44,7 +44,7 @@ class m extends a.Ay.Store {
         return f(e, t).find(n);
     }
 }
-let T = new m(s.h, {
+let g = new m(s.h, {
     UPLOAD_ATTACHMENT_POP_FILE: function (e) {
         let { channelId: t } = e,
             n = [...f(t, u.C.ChannelMessage)];
@@ -112,4 +112,4 @@ let T = new m(s.h, {
         (l.upload(), s.push(l), p(t, r, s));
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

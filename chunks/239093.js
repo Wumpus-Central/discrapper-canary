@@ -52,14 +52,14 @@ var p =
         (o[(o.GUILD_OWNER = 2)] = "GUILD_OWNER"),
         (o[(o.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
         o),
-    T =
+    g =
         (((d = {})[(d.PENDING = 1)] = "PENDING"),
         (d[(d.UNBANNED = 2)] = "UNBANNED"),
         (d[(d.VERIFIED_OTHER_VIOLATIONS_REMAIN = 3)] = "VERIFIED_OTHER_VIOLATIONS_REMAIN"),
         (d[(d.UNDERAGE = 4)] = "UNDERAGE"),
         (d[(d.UNDERAGE_MANUAL_REVIEW = 5)] = "UNDERAGE_MANUAL_REVIEW"),
         d),
-    g =
+    T =
         (((c = {}).LOADING = "loading"),
         (c.ERROR = "error"),
         (c.SUCCESS = "success"),
@@ -88,7 +88,7 @@ n.d(
         Qv: [0, 1, 2, 3],
         XN: h,
         ZU: A,
-        aC: T,
+        aC: g,
         d$: class {
             static TOS_LINK = "https://discord.com/terms";
             static COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
@@ -112,7 +112,7 @@ n.d(
             static CLASSIFICATION_ID = "classification_id";
         },
         nY: I,
-        qN: g,
+        qN: T,
         w$: m,
         xw: E,
         yN: p,

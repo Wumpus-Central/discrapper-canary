@@ -15,16 +15,16 @@ let A = {},
     I = {},
     p = !1,
     m = !1,
-    T = !1,
-    g = new Map();
+    g = !1,
+    T = new Map();
 function S(e) {
     return e.toLowerCase();
 }
 function N(e) {
     let { inviteCode: t } = e,
         n = S(t);
-    if (!g.has(n)) return !1;
-    (g = new Map(g)).delete(n);
+    if (!T.has(n)) return !1;
+    (T = new Map(T)).delete(n);
 }
 class C extends u.Ay.Store {
     static displayName = "InstantInviteStore";
@@ -47,15 +47,15 @@ class C extends u.Ay.Store {
         return p;
     }
     canRevokeFriendInvite() {
-        return null != i && !m && !T;
+        return null != i && !m && !g;
     }
     getReceivedInstallationIdForInviteCode(e) {
-        return g.get(S(e));
+        return T.get(S(e));
     }
 }
 let O = new C(_.h, {
     CONNECTION_OPEN: function () {
-        ((A = {}), (h = {}), (f = {}), (I = {}), (i = null), (m = !1), (T = !1), (p = !1));
+        ((A = {}), (h = {}), (f = {}), (I = {}), (i = null), (m = !1), (g = !1), (p = !1));
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -64,10 +64,10 @@ let O = new C(_.h, {
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
         ((I[e.invite.code] = E.A.createFromServer(e.invite)),
             (i = a()(l()(d()(Object.values(I), "createdAt"))) ?? null),
-            (T = !1));
+            (g = !1));
     },
     FRIEND_INVITE_CREATE_FAILURE: function () {
-        T = !1;
+        g = !1;
     },
     FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
         (null != e.invites &&
@@ -98,7 +98,7 @@ let O = new C(_.h, {
         m = !0;
     },
     FRIEND_INVITE_CREATE_REQUEST: function () {
-        T = !0;
+        g = !0;
     },
     FRIEND_INVITES_FETCH_REQUEST: function () {
         p = !0;
@@ -115,7 +115,7 @@ let O = new C(_.h, {
         delete A[e.channelId];
     },
     INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET: function (e) {
-        (g = new Map(g)).set(S(e.inviteCode), e.receivedInstallationId);
+        (T = new Map(T)).set(S(e.inviteCode), e.receivedInstallationId);
     },
     INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR: N,
     INVITE_MODAL_CLOSE: function (e) {
@@ -123,8 +123,8 @@ let O = new C(_.h, {
         return null != t && N({ inviteCode: t });
     },
     LOGOUT: function () {
-        if (0 === g.size) return !1;
-        g = new Map();
+        if (0 === T.size) return !1;
+        T = new Map();
     },
 });
 n.d(t, {}, { A: O });

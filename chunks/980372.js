@@ -58,8 +58,8 @@ function p() {
     }
 }
 var m = n(963169),
-    T = n(345942),
-    g = n(309010),
+    g = n(345942),
+    T = n(309010),
     S = n(967198),
     N = n(723702);
 let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) },
@@ -72,9 +72,9 @@ let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) 
             if (null != S.A.getGuildId()) e = h.ME;
             else {
                 let t = S.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, A.i)(t, g.Ay.getChannelId(t)));
+                null != t && ((e = t), (0, A.i)(t, T.Ay.getChannelId(t)));
             }
-            return (null != e && (0, T.u)(e), !1);
+            return (null != e && (0, g.u)(e), !1);
         },
     },
     L = {

@@ -16,8 +16,8 @@ var i = n(607399),
     I = n(188567),
     p = n(811091),
     m = n(71393),
-    T = n(576705),
-    g = n(309010),
+    g = n(576705),
+    T = n(309010),
     S = n(967198),
     N = n(287809),
     C = n(746080),
@@ -61,7 +61,7 @@ function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = !1;
     w && ((w = !1), (n = !0));
-    let i = x(g.Ay.getChannelId());
+    let i = x(T.Ay.getChannelId());
     (null != i && i in M && (delete M[i], (n = !0)), t && V() && F() && (n = !0));
     let r = n && e ? e : !e;
     return (r && t && H(!1, { trackClose: !0 }), r);
@@ -72,7 +72,7 @@ function W() {
         let n = M[t];
         if (n.type === f.PE.VIEW_CHANNEL) {
             let i = o.A.getChannel(n.channelId);
-            (null != i && T.A.can(O.xB.VIEW_CHANNEL, i)) || (delete M[t], (e = !0));
+            (null != i && g.A.can(O.xB.VIEW_CHANNEL, i)) || (delete M[t], (e = !0));
         }
     }
     return e;
@@ -104,8 +104,8 @@ class K extends r.Ay.PersistedStore {
             (v = e.isAppBarToggleOpen ?? !1),
             (M = e.sidebars ?? {}),
             (U = e.guildSidebars ?? {})),
-            this.syncWith([T.A], W),
-            this.waitFor(c.A, o.A, u.A, _.Bt, m.A, T.A, h.A, g.Ay, S.A, N.default));
+            this.syncWith([g.A], W),
+            this.waitFor(c.A, o.A, u.A, _.Bt, m.A, g.A, h.A, T.Ay, S.A, N.default));
     }
     getState() {
         return {
@@ -219,7 +219,7 @@ let $ = new K(a.h, {
     FRIENDS_SIDEBAR_SET_COLLAPSED: function (e) {
         let { collapsed: t } = e;
         if ((H(!t), !t)) {
-            let e = g.Ay.getChannelId();
+            let e = T.Ay.getChannelId();
             (null != e && delete M[e], w && (I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), (w = !1)));
         }
     },

@@ -7,14 +7,14 @@
         detachFrameHostWindow: () => v,
         detachFrameIframe: () => D,
         launchFrame: () => I,
-        promoteFrame: () => T,
+        promoteFrame: () => g,
         refreshProxyTicket: () => P,
         resetFrameGuestClaims: () => C,
         resetFrameLayoutModes: () => L,
         setFramePictureInPictureInteractive: () => N,
         setFrameRunsInBackground: () => S,
         setFrameUserMuted: () => O,
-        updateFrameLayoutMode: () => g,
+        updateFrameLayoutMode: () => T,
         updateFramePanelMode: () => R,
     }));
 var i = n(73153),
@@ -46,7 +46,7 @@ async function I(e) {
         } = e,
         m = (0, A.VA)(t, n),
         S = _.A.getFrame(m);
-    if (null != S) return (S.intent === A.sV.MAIN && (T(m), g({ frameId: m, layoutMode: A.y0.FOCUSED })), m);
+    if (null != S) return (S.intent === A.sV.MAIN && (g(m), T({ frameId: m, layoutMode: A.y0.FOCUSED })), m);
     (0, A.Yf)(n) === A.sV.MAIN && (o(), p());
     let N = ++f;
     i.h.dispatch({
@@ -101,12 +101,12 @@ function p() {
 function m(e) {
     _.A.getMainFrame()?.id === e && (L(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
 }
-function T(e) {
+function g(e) {
     null != _.A.getFrame(e) &&
         _.A.getMainFrame()?.id !== e &&
         (o(), p(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));
 }
-function g(e) {
+function T(e) {
     let { frameId: t, layoutMode: n } = e,
         r = _.A.getFrame(t);
     null != r &&
@@ -128,7 +128,7 @@ function R(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
 function L(e) {
-    (g({ frameId: e, layoutMode: A.y0.FOCUSED }), R(e, h.Gd.PANEL));
+    (T({ frameId: e, layoutMode: A.y0.FOCUSED }), R(e, h.Gd.PANEL));
 }
 function y(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });

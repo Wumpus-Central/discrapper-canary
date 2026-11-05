@@ -16,8 +16,8 @@ var i = n(115560),
     I = n(373954),
     p = n(129230),
     m = n(253400),
-    T = n(9302),
-    g = n(365971),
+    g = n(9302),
+    T = n(365971),
     S = n(427603),
     N = n(506774);
 class C {
@@ -324,7 +324,7 @@ class P {
             (this.overlayMethod = this.overlayStatus?.overlayMethod ?? null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),
             P.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(),
-            z.hasConnection() && this.rtcConnectionTimer.start());
+            X.hasConnection() && this.rtcConnectionTimer.start());
     }
     getQunsName(e) {
         let t = e ?? s.YL.QUNS_UNKNOWN;
@@ -531,7 +531,7 @@ function U(e) {
     for (let t of e.removed) (P.destroy(t), L.verbose("handleRunningGamesChange removed", t));
 }
 function w(e) {
-    if (e.pid === T.DEV_PID) return;
+    if (e.pid === g.DEV_PID) return;
     let t = P.getByPid(e.pid);
     (L.verbose("OVERLAY_SET_INPUT_LOCKED", t), null == t)
         ? L.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, P.debug)
@@ -557,14 +557,14 @@ function x(e) {
 }
 function k(e) {
     if (
-        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === T.DEV_PID || -1 === e.pid)
+        (L.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid || e.pid === g.DEV_PID || -1 === e.pid)
     )
         return;
     let t = P.getByPid(e.pid);
     null == t ? L.error("OVERLAY_FOCUSED: Game not found", e, P.debug) : t.gameSetFocused(!0);
 }
 function F(e) {
-    if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === T.DEV_PID)) return;
+    if ((L.verbose("SOUNDBOARD_SET_OVERLAY_ENABLED", e), e.pid === g.DEV_PID)) return;
     let t = P.getByPid(e.pid);
     null == t
         ? L.error("SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found", e, P.debug)
@@ -609,17 +609,17 @@ function H(e) {
 }
 function j(e) {
     let t = (0, S.A)();
-    null != t && t !== T.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
+    null != t && t !== g.DEV_PID && -1 !== t && (L.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled());
 }
 function W(e) {
     L.verbose("WINDOW_FOCUS", e);
-    let t = (0, g.Xg)();
+    let t = (0, T.Xg)();
     e.windowId !== t
         ? L.verbose("WINDOW_FOCUS: Not main window", { action: e, mainWindowId: t })
         : P.desktopSetFocused(e.focused);
 }
 function Y(e) {
-    if (e.pid === T.DEV_PID || -1 === e.pid) return;
+    if (e.pid === g.DEV_PID || -1 === e.pid) return;
     let t = P.getByPid(e.pid);
     null == t ? L.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, P.debug) : (t.successfullyShown = !0);
 }
@@ -638,26 +638,26 @@ function $(e) {
         t.setOverlayState(e.newState, e.reason, !1);
     }
 }
-class z {
+class X {
     static connections = new Set();
     static previousHasConnection = !1;
     static hasConnection() {
-        return z.connections.size > 0;
+        return X.connections.size > 0;
     }
     static handleRTCConnectionState(e) {
         let t = (e.channelId ?? "unknown") + e.context;
         switch (e.state) {
             case O.S7L.RTC_CONNECTED:
-                z.connections.add(t);
+                X.connections.add(t);
                 break;
             case O.S7L.DISCONNECTED:
-                z.connections.delete(t);
+                X.connections.delete(t);
         }
-        let n = z.hasConnection();
-        z.previousHasConnection !== n && (P.toggleRtcConnection(n), (z.previousHasConnection = n));
+        let n = X.hasConnection();
+        X.previousHasConnection !== n && (P.toggleRtcConnection(n), (X.previousHasConnection = n));
     }
 }
-class X {
+class z {
     static handleMessageAcked(e) {
         L.verbose("MESSAGE_ACKED", e);
         let t = h.A.getGame();
@@ -681,7 +681,7 @@ class X {
 }
 class q extends l.A {
     actions = __OVERLAY__
-        ? { MESSAGE_ACKED: X.handleMessageAcked, MESSAGE_CREATE: X.handleMessageCreate }
+        ? { MESSAGE_ACKED: z.handleMessageAcked, MESSAGE_CREATE: z.handleMessageCreate }
         : {
               OVERLAY_FOCUSED: k,
               OVERLAY_NOTIFICATION_EVENT: G,
@@ -693,7 +693,7 @@ class q extends l.A {
               MESSAGE_ACKED: V,
               MESSAGE_CREATE: H,
               WINDOW_FOCUS: W,
-              RTC_CONNECTION_STATE: z.handleRTCConnectionState,
+              RTC_CONNECTION_STATE: X.handleRTCConnectionState,
               AUDIO_TOGGLE_SELF_MUTE: j,
               OVERLAY_SUCCESSFULLY_SHOWN: Y,
               OVERLAY_UPDATE_OVERLAY_METHOD: K,

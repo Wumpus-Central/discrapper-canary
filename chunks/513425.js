@@ -18,8 +18,8 @@ let E = new Map(),
     I = new Map(),
     p = new Map(),
     m = new Set(),
-    T = new Set(),
-    g = [];
+    g = new Set(),
+    T = [];
 function S(e, t, n) {
     let i = E.get(e);
     if (null == i) return;
@@ -78,7 +78,7 @@ function O(e) {
         s = I.delete(e),
         l = p.delete(e),
         o = m.delete(e),
-        d = T.delete(e),
+        d = g.delete(e),
         c = f.indexOf(e);
     return (-1 !== c && f.splice(c, 1), t || n || i || r || a || s || l || o || d || -1 !== c);
 }
@@ -87,7 +87,7 @@ class R extends i.Ay.Store {
         this.waitFor(a.Ay);
     }
     getMessages(e) {
-        return E.get(e) ?? g;
+        return E.get(e) ?? T;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -119,7 +119,7 @@ class R extends i.Ay.Store {
         return m.has(e);
     }
     isSaving(e) {
-        return T.has(e);
+        return g.has(e);
     }
     getActivityOrderedProjectIds() {
         return f.slice();
@@ -166,7 +166,7 @@ let M = new R(r.h, {
             0 === I.size &&
             0 === p.size &&
             0 === m.size &&
-            0 === T.size &&
+            0 === g.size &&
             0 === L.size &&
             0 === y.size &&
             0 === f.length
@@ -178,7 +178,7 @@ let M = new R(r.h, {
             I.clear(),
             p.clear(),
             m.clear(),
-            T.clear(),
+            g.clear(),
             L.clear(),
             y.clear(),
             (f.length = 0));
@@ -188,7 +188,7 @@ let M = new R(r.h, {
         D.set(t, (D.get(t) ?? 0) + 1);
         let a = L.get(t),
             s = L.has(t) ? (E.get(t) ?? []) : [];
-        (L.set(t, i ?? null), !0 === r ? y.add(t) : y.delete(t), p.delete(t), m.delete(t), T.delete(t));
+        (L.set(t, i ?? null), !0 === r ? y.add(t) : y.delete(t), p.delete(t), m.delete(t), g.delete(t));
         let l = new Set(),
             d = n.filter((e) => null == e.id || (!l.has(e.id) && (l.add(e.id), !0))),
             c = (0, o.Bd)(d),
@@ -364,7 +364,7 @@ let M = new R(r.h, {
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
             N(t) || (p.delete(t), m.delete(t)),
-            T.delete(t),
+            g.delete(t),
             C(t));
     },
     CONJURE_CHAT_INTERRUPTED: function (e) {
@@ -419,8 +419,8 @@ let M = new R(r.h, {
     },
     CONJURE_CHAT_SAVING_SET: function (e) {
         let { projectId: t, saving: n } = e;
-        if (n === T.has(t)) return !1;
-        n ? T.add(t) : T.delete(t);
+        if (n === g.has(t)) return !1;
+        n ? g.add(t) : g.delete(t);
     },
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, project: n } = e;
@@ -438,7 +438,7 @@ let M = new R(r.h, {
         let { projectId: t, connState: n } = e;
         if ("closed" !== n && "failed" !== n) return !1;
         let i = m.delete(t),
-            r = T.delete(t),
+            r = g.delete(t),
             a = p.delete(t),
             s = E.get(t);
         if (null == s || !s.some((e) => "assistant" === e.role && !(0, d.BL)(e))) return (!!a || !!i || !!r) && void 0;

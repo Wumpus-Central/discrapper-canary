@@ -1,4 +1,4 @@
-n.d(t, { Hc: () => v, _J: () => p, U5: () => m, DK: () => f });
+n.d(t, { Hc: () => v, _J: () => f, U5: () => m, DK: () => p });
 var r = n(477900),
     i = n(582128);
 n(855986);
@@ -15,12 +15,12 @@ var d = n(652215);
 function m(e) {
     return e.currency === d.Yri.USD ? (0, o.$g)(e.total, e.currency) : `${(0, o.$g)(e.total, e.currency)}*`;
 }
-function p(e) {
+function f(e) {
     let { invoice: t, isPrepaidPaymentSource: n } = e,
         { lineItems: i } = (0, s.Ig)(t, { includeTaxLineItem: !0, isPrepaidPaymentSource: n });
     return (0, r.jsx)(l.Vm, { label: c.intl.string(c.t["2eh+Co"]), lineItems: i, currency: t.currency });
 }
-function f(e) {
+function p(e) {
     let { proratedInvoice: t, renewalInvoice: n, overrideRenewalDate: r } = e,
         { intervalType: i, intervalCount: a } = (0, u.Ge)(t),
         { intervalType: l, intervalCount: s } = (0, u.Ge)(n);

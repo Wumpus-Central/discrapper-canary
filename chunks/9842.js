@@ -73,7 +73,7 @@ let m = new (class {
         this._channelCaches.clear();
     }
 })();
-function T(e) {
+function g(e) {
     let t = !1;
     if ((m.updateExistingMessageIfCached(e) && (t = !0), A.sl8.has(e.type))) {
         let n = e.message_reference;
@@ -84,7 +84,7 @@ function T(e) {
             let t = e.referenced_message;
             null != t
                 ? (m.set(t.channel_id, t.id, { state: 0, message: (0, u.rh)(t) }),
-                  e.type === A.lAJ.THREAD_STARTER_MESSAGE && T(t))
+                  e.type === A.lAJ.THREAD_STARTER_MESSAGE && g(t))
                 : m.set(e.channel_id, i, { state: 2 });
         } else {
             let e = E.A.getMessage(n.channel_id, i) ?? o.A.getMessage(n.channel_id, i) ?? d.A.getMessage(i);
@@ -94,20 +94,20 @@ function T(e) {
     }
     return t;
 }
-function g(e, t) {
+function T(e, t) {
     let n = !1;
     for (let i of e) n = !1 !== t(i) || n;
     return n;
 }
 function S(e) {
     let { messages: t } = e;
-    return g(t, (e) => T(e));
+    return T(t, (e) => g(e));
 }
 function N(e) {
     let { data: t } = e;
-    return g(t, (e) => {
+    return T(t, (e) => {
         let { messages: t } = e;
-        return g(t, (e) => g(e, (e) => T(e)));
+        return T(t, (e) => T(e, (e) => g(e)));
     });
 }
 function C(e) {
@@ -122,7 +122,7 @@ function R() {
 }
 function L(e) {
     let { firstMessages: t } = e;
-    return null != t && g(t, (e) => T(e));
+    return null != t && T(t, (e) => g(e));
 }
 class y extends s.Ay.Store {
     static displayName = "ReferencedMessageStore";
@@ -144,7 +144,7 @@ class y extends s.Ay.Store {
 let D = new y(l.h, {
     CACHE_LOADED: function (e) {
         let { messages: t } = e;
-        return g(Object.values(t), (e) => g(Object.values(e), (e) => T(e)));
+        return T(Object.values(t), (e) => T(Object.values(e), (e) => g(e)));
     },
     LOCAL_MESSAGES_LOADED: S,
     LOAD_MESSAGES_SUCCESS: S,
@@ -152,18 +152,18 @@ let D = new y(l.h, {
     SEARCH_MESSAGES_SUCCESS: N,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { messages: t } = e;
-        return g(t, (e) => T(e));
+        return T(t, (e) => g(e));
     },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { messages: t, messageReferences: n } = e;
-        return g(t.concat(n), (e) => T(e));
+        return T(t.concat(n), (e) => g(e));
     },
     CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { rawConversations: t } = e;
-        return g(t, (e) => {
+        return T(t, (e) => {
             let { messages: t } = e;
-            return g(t ?? [], (e) => T(e));
+            return T(t ?? [], (e) => g(e));
         });
     },
     LOAD_THREADS_SUCCESS: L,
@@ -177,14 +177,14 @@ let D = new y(l.h, {
     },
     LOAD_FORUM_POSTS: function (e) {
         let { threads: t } = e;
-        return g(Object.values(t), (e) => {
+        return T(Object.values(t), (e) => {
             let { first_message: t } = e;
-            return null != t && T(t);
+            return null != t && g(t);
         });
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        return !!E.A.getMessages(t.channel_id).ready && T(t);
+        return !!E.A.getMessages(t.channel_id).ready && g(t);
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e,
@@ -201,7 +201,7 @@ let D = new y(l.h, {
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e;
-        return g(t, (e) => O(n, e));
+        return T(t, (e) => O(n, e));
     },
     CREATE_PENDING_REPLY: function (e) {
         let { message: t } = e;

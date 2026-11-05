@@ -18,8 +18,8 @@ var _ = n(46653),
     I = n(856383),
     p = n(70298),
     m = n(973522),
-    T = n(986322),
-    g = n(321034),
+    g = n(986322),
+    T = n(321034),
     S = n(789999),
     N = n(976860),
     C = n(569745);
@@ -79,10 +79,10 @@ async function Y() {
         client_heartbeat_version: 31,
         ...{
             ...((e = {}),
-            null != (t = g.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
-            null != (n = g.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
+            null != (t = T.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
+            null != (n = T.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
                 (e.client_heartbeat_renderer_memory_used_heap = n),
-            null != (i = g.A.getMemoryUsageElectronProcessTypeDetails()) &&
+            null != (i = T.A.getMemoryUsageElectronProcessTypeDetails()) &&
                 ((e.electron_process_memory_private = [
                     i.unknown?.wss_priv_kb ?? -1,
                     i.main?.wss_priv_kb ?? -1,
@@ -103,7 +103,7 @@ async function Y() {
                 ])),
             e),
             ...((r = {}),
-            null != (a = T.Ay.getCurrentGameForAnalytics()) &&
+            null != (a = g.Ay.getCurrentGameForAnalytics()) &&
                 ((r.client_heartbeat_current_game_id = a.id),
                 (r.client_heartbeat_current_game_name = a.name),
                 (r.client_heartbeat_current_game_executable = (0, m.Ic)(a.exePath)),
@@ -132,7 +132,7 @@ function K() {
 function $() {
     return K().active;
 }
-function z() {
+function X() {
     ($()
         ? (function () {
               if (null != w) return;
@@ -156,7 +156,7 @@ function z() {
         : W(),
         c.A.getSocket()?.handleActiveStateChange(K()));
 }
-function X(e) {
+function z(e) {
     return null == e
         ? null
         : 1 !== e.version
@@ -169,24 +169,24 @@ async function q() {
 }
 function Z() {
     let e = _.default.getToken();
-    (j !== e && ((j = e), s.w.remove(P), (F = { state: "loaded", session: null }), W(), (k = 0)), z());
+    (j !== e && ((j = e), s.w.remove(P), (F = { state: "loaded", session: null }), W(), (k = 0)), X());
 }
 function Q() {
     let e = A.A.getState();
-    B !== e && ((B = e), z());
+    B !== e && ((B = e), X());
 }
 function J(e) {
     let { focused: t } = e;
-    V !== t && ((V = t), z());
+    V !== t && ((V = t), X());
 }
 function ee() {
     let e = O();
-    H !== e && ((H = e), z());
+    H !== e && ((H = e), X());
 }
 function et(e) {
     let { state: t } = e,
         n = t === D.g6G.ACTIVE;
-    V !== n && ((V = n), z());
+    V !== n && ((V = n), X());
 }
 function en() {
     ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), Z());
@@ -199,7 +199,7 @@ function ei() {
         l.h.subscribe("APP_STATE_UPDATE", et),
         l.h.subscribe("CONNECTION_OPEN", q),
         (0, N.JK)().listen(ee),
-        z(),
+        X(),
         null == G &&
             (G = {
                 id: setInterval(() => {
@@ -217,7 +217,7 @@ async function er() {
         t = null,
         n = "loaded" === F.state ? F.session?.uuid : null;
     try {
-        t = "uninitialized" === F.state ? X(await s.w.getAfterRefresh(P)) : F.session;
+        t = "uninitialized" === F.state ? z(await s.w.getAfterRefresh(P)) : F.session;
     } catch (e) {
         I.A.captureException(e);
     }
@@ -245,6 +245,6 @@ async function er() {
     );
 }
 function ea() {
-    let e = "uninitialized" === F.state ? X(s.w.get(P)) : F.session;
+    let e = "uninitialized" === F.state ? z(s.w.get(P)) : F.session;
     return null == e || (0, R.aE)(e) ? null : e;
 }

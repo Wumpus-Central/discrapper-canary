@@ -1,8 +1,8 @@
 n.d(t, { gG: () => b, j_: () => w, ZL: () => y, EG: () => j, HJ: () => k, AV: () => A, KK: () => N });
 var l = n(582128),
     r = n(158390),
-    a = n(73153),
-    i = n(643210);
+    i = n(73153),
+    a = n(643210);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(323874), n(14289), n(35956));
 var s = n(472119);
 let u = new Set([401, 403, 404]);
@@ -22,10 +22,10 @@ class o {
     }
     async connect() {
         let { projectId: e, sessionId: t, mode: n, maxFps: l, width: r } = this.options,
-            { ticket: a, baseUrl: i } = await (0, s.dv)(e);
+            { ticket: i, baseUrl: a } = await (0, s.dv)(e);
         if (this.stopped) return;
-        let u = new URL(`/agent/browser-stream/${encodeURIComponent(t)}`, i.replace(/^http/, "ws"));
-        (u.searchParams.set("ticket", a),
+        let u = new URL(`/agent/browser-stream/${encodeURIComponent(t)}`, a.replace(/^http/, "ws"));
+        (u.searchParams.set("ticket", i),
             u.searchParams.set("mode", n),
             u.searchParams.set("maxFps", String(l)),
             r > 0 && u.searchParams.set("width", String(r)));
@@ -83,7 +83,7 @@ function f(e, t) {
     let n = `${e}:${t}`,
         l = d.get(n);
     if (null == l) {
-        let a = {
+        let i = {
             projectId: e,
             sessionId: t,
             startedAt: g(e, t),
@@ -100,10 +100,10 @@ function f(e, t) {
             stateListeners: new Set(),
             backoff: new r.A(500, 8e3),
             retry: () => {
-                ((a.socketKey = null), x(a));
+                ((i.socketKey = null), x(i));
             },
         };
-        ((l = a), d.set(n, l));
+        ((l = i), d.set(n, l));
     }
     return l;
 }
@@ -114,7 +114,7 @@ function h(e, t) {
     if (e.controlState !== t) for (let n of ((e.controlState = t), e.controlListeners)) n(t);
 }
 function g(e, t) {
-    return i.A.getSessions(e).find((e) => e.id === t)?.started_at ?? null;
+    return a.A.getSessions(e).find((e) => e.id === t)?.started_at ?? null;
 }
 function p(e) {
     (e.backoff.cancel(),
@@ -132,29 +132,29 @@ function x(e) {
         n = Math.max(...t.map((e) => e.fps)),
         l = t.some((e) => 0 === e.width) ? 0 : Math.max(...t.map((e) => e.width)),
         r = e.control ? "control" : "view",
-        a = `${r}:${n}:${l}`;
-    if (e.socketKey === a && (null != e.socket || e.backoff.pending)) return;
-    (p(e), (e.socketKey = a));
-    let i = new o({
+        i = `${r}:${n}:${l}`;
+    if (e.socketKey === i && (null != e.socket || e.backoff.pending)) return;
+    (p(e), (e.socketKey = i));
+    let a = new o({
         projectId: e.projectId,
         sessionId: e.sessionId,
         mode: r,
         maxFps: n,
         width: l,
         onFrame: async (t) => {
-            e.socket === i &&
+            e.socket === a &&
                 ((e.lastFrame = t),
                 e.backoff.succeed(),
                 m(e, "live"),
                 await Promise.allSettled([...e.subscribers].map((e) => e.onFrame(t))));
         },
         onMode: (t) => {
-            e.socket === i &&
+            e.socket === a &&
                 e.control &&
                 ("control" === t ? h(e, "granted") : ((e.control = !1), h(e, "denied"), x(e)));
         },
         onClosed: (t) => {
-            if (e.socket !== i) return;
+            if (e.socket !== a) return;
             if ((p(e), 4403 === t))
                 return void (function (e) {
                     for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), m(t, "connecting"));
@@ -162,10 +162,10 @@ function x(e) {
             let n = 4409 === t && e.control;
             (n && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
                 m(e, "connecting"),
-                0 !== e.subscribers.size && null != e.startedAt && (n || (e.socketKey = a), e.backoff.fail(e.retry)));
+                0 !== e.subscribers.size && null != e.startedAt && (n || (e.socketKey = i), e.backoff.fail(e.retry)));
         },
     });
-    ((e.socket = i), i.open());
+    ((e.socket = a), a.open());
 }
 function v(e) {
     ((e.control = !1), h(e, "off"));
@@ -217,7 +217,7 @@ function A(e, t) {
     );
 }
 function N(e, t, n) {
-    let { fps: r, onFrame: a, enabled: i = !0, width: s = 0 } = n,
+    let { fps: r, onFrame: i, enabled: a = !0, width: s = 0 } = n,
         u = l.useCallback(
             (n) => {
                 let l = f(e, t);
@@ -234,8 +234,8 @@ function N(e, t, n) {
     return (
         l.useEffect(() => {
             let n = f(e, t);
-            if ((null != n.lastFrame && Promise.resolve(a(n.lastFrame)).catch(() => void 0), !i)) return;
-            let l = { fps: r, width: s, onFrame: a };
+            if ((null != n.lastFrame && Promise.resolve(i(n.lastFrame)).catch(() => void 0), !a)) return;
+            let l = { fps: r, width: s, onFrame: i };
             return (
                 n.subscribers.add(l),
                 x(n),
@@ -243,11 +243,11 @@ function N(e, t, n) {
                     (n.subscribers.delete(l), x(n));
                 }
             );
-        }, [e, t, r, a, i, s]),
+        }, [e, t, r, i, a, s]),
         o
     );
 }
-(i.A.addChangeListener(function () {
+(a.A.addChangeListener(function () {
     for (let e of d.values()) {
         let t = g(e.projectId, e.sessionId);
         if (t !== e.startedAt) {
@@ -260,7 +260,7 @@ function N(e, t, n) {
         }
     }
 }),
-    a.h.subscribe("CONJURE_BROWSER_SESSIONS_SET", function (e) {
+    i.h.subscribe("CONJURE_BROWSER_SESSIONS_SET", function (e) {
         let { projectId: t } = e;
         if (c.delete(t)) for (let e of d.values()) e.projectId === t && (e.backoff.succeed(), x(e));
     }));

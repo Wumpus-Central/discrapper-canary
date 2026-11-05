@@ -9,7 +9,7 @@ var r,
     c = n(637956),
     d = n(352224),
     m = n(509115),
-    p =
+    f =
         (((r = {}).UNKNOWN = "unknown"),
         (r.VISA = "visa"),
         (r.DISCOVER = "discover"),
@@ -41,16 +41,16 @@ var r,
         (r.GIFT_CARD = "gift_card"),
         (r.PIX = "pix"),
         r);
-let f = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
+let p = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
 class v extends a.PureComponent {
-    static Types = p;
-    static Sizes = f;
+    static Types = f;
+    static Sizes = p;
     static getType(e) {
         if (null == e) return "unknown";
         let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
-        return Object.hasOwn(p, t) ? p[t] : "unknown";
+        return Object.hasOwn(f, t) ? f[t] : "unknown";
     }
-    static defaultProps = { size: f.SMALL, flipped: !1 };
+    static defaultProps = { size: p.SMALL, flipped: !1 };
     render() {
         let { flipped: e, type: t, className: n, size: r } = this.props;
         return "bank" === t
@@ -73,7 +73,7 @@ n.d(
     {},
     {
         Ay: v,
-        Be: p,
+        Be: f,
         Nj: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
             if ("light" === t) {
@@ -131,6 +131,6 @@ n.d(
                     return n(511403);
             }
         },
-        y3: f,
+        y3: p,
     },
 );

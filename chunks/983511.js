@@ -110,15 +110,15 @@ function k(e) {
             analyticsLocations: H,
             analyticsLocation: h.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
         }),
-        W = null != z ? (0, O.Om)(t, w[0]?.quantity ?? 0, z.id) : null,
-        [K] = (0, _.YV)({
+        K = null != z ? (0, O.Om)(t, w[0]?.quantity ?? 0, z.id) : null,
+        [W] = (0, _.YV)({
             subscriptionId: t.id,
-            items: W,
+            items: K,
             renewal: !0,
             analyticsLocations: H,
             analyticsLocation: h.A.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         });
-    if (null == K || null == X || null == z || null == Y)
+    if (null == W || null == X || null == z || null == Y)
         return (0, i.jsxs)(u.d, {
             transitionState: o,
             onClose: R,
@@ -142,9 +142,9 @@ function k(e) {
             let { planId: t } = e;
             return P.pW.has(t);
         }),
-        Q = Z || q ? K.total - Y.total : -Y.total,
+        Q = Z || q ? W.total - Y.total : -Y.total,
         { interval: J, intervalCount: $ } = X,
-        ee = M.intl.format(M.t["0W23cu"], { endDate: K.subscriptionPeriodStart });
+        ee = M.intl.format(M.t["0W23cu"], { endDate: W.subscriptionPeriodStart });
     return (
         t.isPausedForFractionalPremium &&
             s.fetched &&
@@ -174,11 +174,11 @@ function k(e) {
                                         value: (0, L.CE)((0, L.$g)(Q, t.currency), J, $),
                                         className: U.Au,
                                     }),
-                                    null != W && W.length > 0
+                                    null != K && K.length > 0
                                         ? (0, i.jsxs)("div", {
                                               children: [
                                                   (0, i.jsx)(N.pK, {}),
-                                                  (0, i.jsx)(b.Hc, { renewalInvoice: K, isUpdate: !0 }),
+                                                  (0, i.jsx)(b.Hc, { renewalInvoice: W, isUpdate: !0 }),
                                               ],
                                           })
                                         : null,

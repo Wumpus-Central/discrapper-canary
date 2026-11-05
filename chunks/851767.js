@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(711014),
     p = n(403362),
     m = n(419731),
-    T = n(439174),
-    g = n(633075),
+    g = n(439174),
+    T = n(633075),
     S = n(646976),
     N = n(289173),
     C = n(210598);
@@ -64,7 +64,7 @@ function F(e) {
                 i = r().uniqBy(n, "gameId");
             return new N.Yy({ id: e.id, type: t, games: i });
         case s.x.APPLICATION:
-            return new g.R({ id: e.id, applicationId: e.data.application_id });
+            return new T.R({ id: e.id, applicationId: e.data.application_id });
         case s.x.PERSONAL:
             return new C.Tu({ id: e.id, header: e.data.header ?? "", sections: (0, C.wv)(e.data.sections) });
         case s.x.CLIPS_GALLERY:
@@ -106,7 +106,7 @@ function B(e) {
         }
         case s.x.APPLICATION: {
             let { id: t, applicationId: n } = e;
-            return new g.R({ id: t, applicationId: n });
+            return new T.R({ id: t, applicationId: n });
         }
         case s.x.PERSONAL: {
             let { id: t, header: n, sections: i } = e;
@@ -174,10 +174,10 @@ function $(e) {
         })
         .value();
 }
-function z(e) {
+function X(e) {
     (b.delete(e.userId), U.set(e.userId, $(e.mutualFriends)), w.set(e.userId, e.mutualFriends.length));
 }
-function X(e) {
+function z(e) {
     let { userProfile: t, fetchStartedAt: n, guildId: i } = e,
         r = i ?? t.guild_member_profile?.guild_id ?? y;
     if ((D.get(t.user.id)?.delete(r), b.delete(t.user.id), null != t.mutual_guilds)) {
@@ -205,7 +205,7 @@ function X(e) {
         o =
             null != t.badges
                 ? t.badges.map((e) => {
-                      let t = (0, T.e0)(e.id);
+                      let t = (0, g.e0)(e.id);
                       if (("premium" === e.id || null != t) && null != a) {
                           let n = L.intl.formatToPlainString(L.t["8zbGNR"], { date: a });
                           return (
@@ -447,7 +447,7 @@ class eu extends h.A {
             CACHE_LOADED_LAZY: () => this.loadCache(),
             USER_PROFILE_FETCH_START: Z,
             USER_PROFILE_FETCH_FAILURE: Q,
-            USER_PROFILE_FETCH_SUCCESS: X,
+            USER_PROFILE_FETCH_SUCCESS: z,
             USER_PROFILE_UPDATE_START: J,
             USER_PROFILE_UPDATE_SUCCESS: ee,
             USER_PROFILE_UPDATE_FAILURE: et,
@@ -455,7 +455,7 @@ class eu extends h.A {
             PROFILE_READ_STATE_ACK: ei,
             USER_PROFILE_PIN_BADGES_ON_CLIENT: er,
             MUTUAL_FRIENDS_FETCH_START: Y,
-            MUTUAL_FRIENDS_FETCH_SUCCESS: z,
+            MUTUAL_FRIENDS_FETCH_SUCCESS: X,
             MUTUAL_FRIENDS_FETCH_FAILURE: K,
             USER_UPDATE: ea,
             GUILD_MEMBER_UPDATE: ea,

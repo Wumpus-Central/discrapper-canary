@@ -54,9 +54,9 @@ function I(e) {
             hasSelection: I,
             radioPosition: p = "left",
             icon: m,
-            withTransparentBackground: T,
+            withTransparentBackground: g,
         } = e,
-        g = r.color ?? "",
+        T = r.color ?? "",
         S = n || !I,
         N = (0, i.jsx)(f, { checked: n, disabled: t, radioItemIconClassName: E, icon: m });
     return (0, i.jsx)(o.D, {
@@ -66,9 +66,9 @@ function I(e) {
         "aria-label": "string" == typeof r.name ? r.name : void 0,
         onClick: t ? void 0 : l,
         tabIndex: !t && S ? 0 : -1,
-        className: s()(A.AS, { [A.r9]: t, [A.EO]: !T }, _),
+        className: s()(A.AS, { [A.r9]: t, [A.EO]: !g }, _),
         children: (0, i.jsxs)("div", {
-            style: { "--radio-bar-accent-color": g, padding: a },
+            style: { "--radio-bar-accent-color": T, padding: a },
             className: s()(A.tG, { [A.go]: "left" === p, [A.Xe]: "right" === p }, h),
             children: [
                 "left" === p ? N : null,
@@ -168,7 +168,7 @@ function m() {
         "aria-disabled": t,
     };
 }
-function T(e) {
+function g(e) {
     let {
             itemInfoClassName: t,
             itemTitleClassName: n,
@@ -180,14 +180,14 @@ function T(e) {
             radioPosition: E = "left",
             onChange: f = _.tE,
             disabled: I = !1,
-            options: T = [],
-            "aria-labelledby": g,
+            options: g = [],
+            "aria-labelledby": T,
             orientation: S,
             withTransparentBackground: N,
         } = e,
         C = r.useContext(c._),
-        { ref: O, ...R } = m({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: I }),
-        L = T.some((e) => e.value === d);
+        { ref: O, ...R } = m({ labelledBy: T ?? C?.labelId, orientation: S, isDisabled: I }),
+        L = g.some((e) => e.value === d);
     return (0, i.jsx)("div", {
         ...R,
         ref: O,
@@ -196,7 +196,7 @@ function T(e) {
         "aria-describedby": C?.describedById,
         "aria-errormessage": C?.errorMessageId,
         "aria-invalid": C?.errorMessageId != null,
-        children: T.map((e) =>
+        children: g.map((e) =>
             (0, i.jsx)(
                 p,
                 {
@@ -231,7 +231,7 @@ n.d(
                 description: n,
                 required: r,
                 errorMessage: a,
-                children: (0, i.jsx)(T, { ...s }),
+                children: (0, i.jsx)(g, { ...s }),
             });
         },
         Gx: function (e) {

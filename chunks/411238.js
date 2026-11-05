@@ -1,4 +1,4 @@
-(n.d(t, { TB: () => J, lx: () => $, Wv: () => K, q1: () => X, nR: () => q, kY: () => z }), n(938796));
+(n.d(t, { TB: () => J, lx: () => $, Wv: () => K, q1: () => z, nR: () => q, kY: () => X }), n(938796));
 var i = n(665260),
     r = n(855986),
     a = n(155718),
@@ -20,8 +20,8 @@ n(250953);
 var I = n(380335),
     p = n(451909),
     m = n(465856),
-    T = n(451919),
-    g = n(143413);
+    g = n(451919),
+    T = n(143413);
 n(622794);
 var S = n(152007),
     N = n(607508),
@@ -206,7 +206,7 @@ function $(e, t) {
         return (
             t !== W.CP.NO_MESSAGES &&
             (t === W.CP.ALL_MESSAGES ||
-                (0, T.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
+                (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
         );
     }
     {
@@ -214,10 +214,10 @@ function $(e, t) {
         if (M.Ay.allowAllMessages(l) && t) return !0;
         let n = M.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
             i = M.Ay.isSuppressRolesEnabled(l.getGuildId());
-        return (0, T.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
+        return (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
-function z(e, t) {
+function X(e, t) {
     if (c.Ay.getChannelId(u.A.getGuildId()) !== t) return !1;
     let n = y.A.getChannel(t);
     e.type === j.lAJ.THREAD_STARTER_MESSAGE && (n = y.A.getChannel(n?.parent_id));
@@ -236,7 +236,7 @@ function z(e, t) {
         M.Ay.allowNoMessages(n)
     );
 }
-function X(e, t) {
+function z(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = U.default.getCurrentUser(),
@@ -308,7 +308,7 @@ function J(e, t, n) {
             let o = y.A.getChannel(e.parent_id);
             t.type === j.lAJ.THREAD_STARTER_MESSAGE && null != o
                 ? (l = Z(l, o, y.A.getChannel(o.parent_id)))
-                : (0, g.A)(t)
+                : (0, T.A)(t)
                   ? null != D.A.getGuild(e.getGuildId()) && (l = Z(l, e, o))
                   : (l = Z(l, e, o));
             break;
@@ -316,7 +316,7 @@ function J(e, t, n) {
             (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, v.A)) || (l = Z(l, e));
     }
     let d = t.content;
-    if ((0, g.A)(t) && null == (d = G.A.stringify(t, e)))
+    if ((0, T.A)(t) && null == (d = G.A.stringify(t, e)))
         throw (
             new A.A("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,

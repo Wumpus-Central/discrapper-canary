@@ -16,8 +16,8 @@ var r = n(435558),
     I = n(343446),
     p = n(148883),
     m = n(311043),
-    T = n(830012),
-    g = n(211753),
+    g = n(830012),
+    T = n(211753),
     S = n(206885),
     N = n(41984),
     C = n(918825),
@@ -51,7 +51,7 @@ let W = new f.A("RunningGameStore"),
     Y = "RunningGameStore",
     K = !__OVERLAY__ && ((0, k.xl)() || S.O),
     $ = [],
-    z = [
+    X = [
         {
             executables: [
                 { os: "win32", name: "obs/obs.exe" },
@@ -99,7 +99,7 @@ let W = new f.A("RunningGameStore"),
             name: A.A.get(j.fg2.SPOTIFY).name,
         },
     ],
-    X = [],
+    z = [],
     q = !0,
     Z = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
     Q = new Set(),
@@ -124,8 +124,8 @@ let W = new f.A("RunningGameStore"),
     eI = null,
     ep = {},
     em = {},
-    eT = new Set(),
     eg = new Set(),
+    eT = new Set(),
     eS = null,
     eN = null,
     eC = null,
@@ -187,7 +187,7 @@ function ew(e) {
     let t = null != e.name ? e.name : "";
     return `${e.exePath}:${t}`;
 }
-z.forEach((e) => {
+X.forEach((e) => {
     (eR.set(e.name.toLowerCase(), e),
         (e.executables ?? []).forEach((t) => {
             eO.set(t.name.toLowerCase(), e);
@@ -257,7 +257,7 @@ function eV(e) {
     }
     let o = (0, F.T6)() && !n,
         d = ex("id" in (t = l ?? s) ? (t.id ?? null) : (b.A.findGame(t)?.id ?? null)),
-        c = g.x.legacyEnabled,
+        c = T.x.legacyEnabled,
         u = o && !d,
         _ = e_.enableOverlay[ew(s)],
         E = e_.enableOverlayV3[ew(s)];
@@ -353,7 +353,7 @@ function e$() {
         R.Ay.setGameCandidateOverrides(e);
     }
 }
-function ez(e) {
+function eX(e) {
     null != e &&
         0 !== e.length &&
         (e.forEach((e) => {
@@ -418,9 +418,9 @@ function ez(e) {
         }),
         e_.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         eW(),
-        G.A.setRecentGames(eX().map((e) => eY(e, eQ, b.A, v.A))));
+        G.A.setRecentGames(ez().map((e) => eY(e, eQ, b.A, v.A))));
 }
-function eX() {
+function ez() {
     let e = a().values(e_.gameOverrides);
     return e_.gamesSeen.filter((e) => void 0 === e_.gameOverrides[ew(e)]).concat(e);
 }
@@ -432,14 +432,14 @@ if (K) {
         let n = b.A.games,
             r = B.A.nonGames,
             a = new Set();
-        (z.forEach((e) => {
+        (X.forEach((e) => {
             (e.executables ?? []).forEach((e) => {
                 a.add(e.name.toLowerCase());
             });
         }),
             [
                 ...[...n, ...r].filter((e) => !(e.executables ?? []).some((e) => eO.has(e.name.toLowerCase()))),
-                ...z,
+                ...X,
             ].forEach((n) => {
                 let i = null != n.executables ? n.executables : [],
                     r = {};
@@ -602,7 +602,7 @@ if (K) {
     };
 }
 function eq() {
-    I.A.hasLoadedExperiments && $.length > 0 && (ez($), ($ = []));
+    I.A.hasLoadedExperiments && $.length > 0 && (eX($), ($ = []));
 }
 class eZ extends c.Ay.Store {
     static displayName = "RunningGameStore";
@@ -717,11 +717,11 @@ class eZ extends c.Ay.Store {
         return 0 === $.length;
     }
     isGameSeen(e) {
-        return eX().some((t) => t.id === e);
+        return ez().some((t) => t.id === e);
     }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = eX();
+            n = ez();
         if (e) {
             let e = this.getVisibleGame();
             if (null != e) {
@@ -758,7 +758,7 @@ class eZ extends c.Ay.Store {
         return n.enabledLegacy || n.enabledOOP ? n : null;
     }
     getObservedAppNameForWindow(e) {
-        return ed.find((t) => (0, T.A)(e, t.windowHandle))?.name ?? null;
+        return ed.find((t) => (0, g.A)(e, t.windowHandle))?.name ?? null;
     }
     get canShowAdminWarning() {
         return q && !this.isSystemServiceInitialized("input-service");
@@ -767,7 +767,7 @@ class eZ extends c.Ay.Store {
         return eH(e);
     }
     addExecutableTrackedByAnalytics(e) {
-        eg.add((0, h.v)(e) ?? e);
+        eT.add((0, h.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
         return Z[e] ?? { state: "unknown" };
@@ -778,7 +778,7 @@ class eZ extends c.Ay.Store {
 }
 let eQ = new eZ(_.h, {
         RUNNING_GAMES_CHANGE: function (e) {
-            ez(et);
+            eX(et);
         },
         RUNNING_NON_GAMES_CHANGE: function () {},
         CANDIDATE_GAMES_CHANGE: function (e) {
@@ -810,7 +810,7 @@ let eQ = new eZ(_.h, {
             } else ((t = ew(i)), i.hidden && (eu[t] = !0), (i.hidden = !1));
             ((null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)),
                 (e_.gameOverrides[t] = { ...i, add: !0 }),
-                ez(et),
+                eX(et),
                 e$(),
                 eW(),
                 eU());
@@ -902,20 +902,20 @@ let eQ = new eZ(_.h, {
             ((eS = e.level), (eN = e.intervalSeconds));
         },
         GAME_DETECTION_DEBUGGING_STOP: function () {
-            ((eS = null), (eN = null), eT.clear());
+            ((eS = null), (eN = null), eg.clear());
         },
         GAME_DETECTION_DEBUGGING_TICK: function (e) {
             let t = e.processes
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, h.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
-                    if (eT.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
-                    let t = X.some((t) => e.cleanedExePath.includes(t));
-                    return (t && eT.add(e.pid), t);
+                    if (eg.has(e.pid) || eT.has(e.cleanedExePath)) return !1;
+                    let t = z.some((t) => e.cleanedExePath.includes(t));
+                    return (t && eg.add(e.pid), t);
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
                 U.default.track(j.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
-                    keywords: X,
+                    keywords: z,
                     paths: t,
                     debugging_level: eS,
                     interval_seconds: eN,

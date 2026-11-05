@@ -18,8 +18,8 @@ var u = n(817379),
     I = n(792996);
 let p = [a.pJ.HOURS, a.pJ.MINUTES],
     m = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
-    T = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
-function g(e) {
+    g = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
+function T(e) {
     return new Intl.NumberFormat(I.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
 }
 function S(e) {
@@ -35,7 +35,7 @@ n.d(
                 version: A.wk.V2026,
                 character: m.has(e) ? (t ?? void 0) : void 0,
                 stats:
-                    T.has(e) && null != n
+                    g.has(e) && null != n
                         ? ((i = n.guilds?.guilds[0]),
                           (r = n.emojis?.emojis[0]),
                           (a = n.games?.games[0]?.game),
@@ -65,11 +65,11 @@ n.d(
                 cardColorPalette: (0, c.o)(t),
             };
         },
-        Le: g,
+        Le: T,
         R8: function (e) {
             let t;
             return {
-                powerLevel: g(e.powerLevel),
+                powerLevel: T(e.powerLevel),
                 powerLevelUnits: S(e.powerLevelPercentile),
                 voice: {
                     text:

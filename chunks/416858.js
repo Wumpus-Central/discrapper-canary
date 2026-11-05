@@ -18,8 +18,8 @@ n.d(t, {
     cS: () => y,
     G5: () => Y,
     x: () => F,
-    He: () => g,
-    GS: () => T,
+    He: () => T,
+    GS: () => g,
     sj: () => w,
     II: () => U,
     u6: () => W,
@@ -99,8 +99,8 @@ class I extends d {
 }
 let p = new I(r.w.ANIMATED_EMOJIS),
     m = new I(r.w.EMOJIS_EVERYWHERE),
-    T = new I(r.w.STICKERS_EVERYWHERE),
-    g = new I(r.w.SOUNDBOARD_EVERYWHERE),
+    g = new I(r.w.STICKERS_EVERYWHERE),
+    T = new I(r.w.SOUNDBOARD_EVERYWHERE),
     S = new I(r.w.CUSTOM_CALL_SOUNDS),
     N = new I(r.w.PREMIUM_VOICE_FILTERS),
     C = new I(r.w.ANIMATED_AVATAR),
@@ -127,13 +127,13 @@ let V = new I(r.w.INCREASED_GUILD_LIMIT),
     W = new I("uploadLargeFiles"),
     Y = new I(r.w.QUEST_ORB_MULTIPLIER),
     K = Object.freeze({
-        [h.pe.TIER_0]: new c(h.pe.TIER_0, [p, m, T, L, B, j, W, b]),
+        [h.pe.TIER_0]: new c(h.pe.TIER_0, [p, m, g, L, B, j, W, b]),
         [h.pe.TIER_1]: new c(h.pe.TIER_1, [p, m, C, O, L, P, U, x, j, W, b]),
         [h.pe.TIER_2]: new c(h.pe.TIER_2, [
             p,
             m,
-            T,
             g,
+            T,
             S,
             C,
             O,
@@ -161,13 +161,13 @@ let V = new I(r.w.INCREASED_GUILD_LIMIT),
         ]),
     }),
     $ = [P, M],
-    z = [Y],
-    X = [],
+    X = [Y],
+    z = [],
     q = new Map([
         [p, a.bb.ANIMATED_EMOJIS],
         [m, a.bb.EMOJIS_EVERYWHERE],
-        [T, a.bb.STICKERS_EVERYWHERE],
-        [g, a.bb.SOUNDBOARD_EVERYWHERE],
+        [g, a.bb.STICKERS_EVERYWHERE],
+        [T, a.bb.SOUNDBOARD_EVERYWHERE],
         [S, a.bb.CUSTOM_CALL_SOUNDS],
         [N, a.bb.PREMIUM_VOICE_FILTERS],
         [C, a.bb.ANIMATED_AVATAR],
@@ -192,8 +192,8 @@ let V = new I(r.w.INCREASED_GUILD_LIMIT),
 function Z(e, t, n) {
     if (
         (null != t && t.isPremiumWithFractionalPremiumOnly() && $.includes(e)) ||
-        (null != t && t.isFractionalPremiumWithNoStandardSub() && z.includes(e)) ||
-        (n && X.includes(e))
+        (null != t && t.isFractionalPremiumWithNoStandardSub() && X.includes(e)) ||
+        (n && z.includes(e))
     )
         return !1;
     if (o.A.hasPremiumTypeOverride(t)) return e.getFeatureValue(t);

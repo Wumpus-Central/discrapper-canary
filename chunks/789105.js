@@ -58,5 +58,5 @@ class m extends i.A {
         THREAD_MEMBER_UPDATE: p,
     };
 }
-let T = new m();
-n.d(t, {}, { A: T });
+let g = new m();
+n.d(t, {}, { A: g });

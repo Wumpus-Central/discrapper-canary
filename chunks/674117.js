@@ -1,4 +1,4 @@
-r.exports = {
+e.exports = {
     Qw: "downloadProgressCircle_u88IQl",
     QI: "hideGameUpdateProgressIndicator_u88IQl",
     AB: "privateChannels_u88IQl",

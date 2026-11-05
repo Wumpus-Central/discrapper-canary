@@ -7,7 +7,7 @@ n.d(t, {
     uz: () => B,
     yr: () => F,
     ej: () => P,
-    TY: () => T,
+    TY: () => g,
     K3: () => K,
     zO: () => Y,
     aJ: () => G,
@@ -26,11 +26,11 @@ n.d(t, {
     kL: () => $,
     fO: () => R,
     Li: () => h.L,
-    rE: () => g,
+    rE: () => T,
     mg: () => M,
-    BQ: () => X,
+    BQ: () => z,
     pc: () => Q,
-    Pc: () => z,
+    Pc: () => X,
     WQ: () => q,
 });
 var i,
@@ -53,7 +53,7 @@ var i,
     I = n(620632),
     p = n(927813),
     m = n(506988);
-let T = {
+let g = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -61,7 +61,7 @@ let T = {
     ACTIVITY_PANEL: 4,
     QUEST_LIVE_STREAM: 8,
 };
-var g =
+var T =
     (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
     (r.QUESTS_MANAGER = "quests_manager"),
     (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
@@ -187,16 +187,16 @@ var $ =
         (d.EXPIRING_SOON = "expiring_soon"),
         (d.RECENTLY_ENROLLED = "recently_enrolled"),
         d),
-    z = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
-    X =
+    X = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
+    z =
         (((u = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
         (u.COLLECTIBLE = "reward_collectible"),
         (u.IN_GAME = "reward_in_game"),
         u);
 function q(e) {
-    return Object.values(z).includes(e)
+    return Object.values(X).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(X).includes(e)
+        : Object.values(z).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }

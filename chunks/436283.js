@@ -28,7 +28,7 @@ function m(e) {
         delete f[e],
         (I[e] = { insertedAt: Date.now(), nonce: e, messageId: n, interaction: t }));
 }
-class T extends a.Ay.Store {
+class g extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, d.A);
     }
@@ -60,7 +60,7 @@ class T extends a.Ay.Store {
         if (null != n) return { interaction: n.interaction, messageId: n.messageId };
     }
 }
-let g = new T(s.h, {
+let T = new g(s.h, {
     LOGOUT: function () {
         ((A = {}),
             (h = {}),
@@ -143,4 +143,4 @@ let g = new T(s.h, {
                 (m(d.nonce), null != t && "channelId" in n.data && l.A.deleteMessage(n.data.channelId, t, !0)));
     },
 });
-n.d(t, {}, { Ay: g });
+n.d(t, {}, { Ay: T });

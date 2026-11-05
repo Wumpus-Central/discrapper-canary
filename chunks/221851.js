@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     Gf: "marginReset_cWXVcV",
     a5: "marginTop4_cWXVcV",
     Q5: "marginBottom4_cWXVcV",

@@ -34,8 +34,8 @@ let h = n.n(A)().v4().source,
 function m(e) {
     return e.replace(p, "");
 }
-var T = n(652215),
-    g = n(758836);
+var g = n(652215),
+    T = n(758836);
 let S = /^\/([a-zA-Z0-9-]+)$/,
     N = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     C = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
@@ -55,13 +55,13 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     x = /^\/oauth2\/authorize/,
     k = /^#itemSkuId=([0-9]+)$/,
     F = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-    B = X(window.GLOBAL_ENV.INVITE_HOST),
-    V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    H = X(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${T.U2_}`),
-    j = X(`//canary.${T.U2_}`),
-    W = X(`//ptb.${T.U2_}`),
-    Y = X("discordapp.com"),
-    K = X("discord.com"),
+    B = z(window.GLOBAL_ENV.INVITE_HOST),
+    V = z(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+    H = z(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${g.U2_}`),
+    j = z(`//canary.${g.U2_}`),
+    W = z(`//ptb.${g.U2_}`),
+    Y = z("discordapp.com"),
+    K = z("discord.com"),
     $ = [
         _.A.escape(B.host ?? ""),
         _.A.escape(V.host ?? ""),
@@ -69,8 +69,8 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
         _.A.escape(Y.host ?? ""),
         _.A.escape(K.host ?? ""),
     ].filter(Boolean),
-    z = RegExp(`((https?://[^ ]*)|^|\\s)(${$.join("|")})`, "g");
-function X(e) {
+    X = RegExp(`((https?://[^ ]*)|^|\\s)(${$.join("|")})`, "g");
+function z(e) {
     if (null == e) return { host: null, pathPrefix: null };
     if (e.indexOf("/") >= 0) {
         let t = (0, r.qg)(e, void 0, !0);
@@ -119,7 +119,7 @@ function et(e) {
     let t;
     if (null == e) return [];
     let n =
-            ((t = (e = e.replace(z, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(I, " ").match(f)),
+            ((t = (e = e.replace(X, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(I, " ").match(f)),
             t?.map(m) ?? []),
         r = e.match(F);
     return (function (e) {
@@ -183,10 +183,10 @@ function et(e) {
                 let e = m[2];
                 r(E.I.APP_DIRECTORY_PROFILE, e);
             }
-            let T = h?.match(L);
-            if (null != T) {
-                let e = T[2],
-                    t = T[3];
+            let g = h?.match(L);
+            if (null != g) {
+                let e = g[2],
+                    t = g[3];
                 if (null != t) {
                     let n = (0, s.L)(e, t);
                     r(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
@@ -226,7 +226,7 @@ function et(e) {
                 let t = null != f ? (0, i.qg)(f) : null,
                     n = t?.tab,
                     a = t?.applicationId,
-                    s = n === g.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
+                    s = n === T.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
                 if ("string" == typeof a && s.length > 0) r(E.I.SOCIAL_LAYER_STOREFRONT_APP, (0, c.m5)(s, a));
                 else {
                     let t = e.hash?.match(k);

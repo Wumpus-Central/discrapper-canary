@@ -11,8 +11,8 @@ var l = n(477900),
     g = n(440938),
     h = n(590180),
     p = n(993408),
-    x = n(304210),
-    f = n(597783),
+    f = n(304210),
+    x = n(597783),
     E = n(347478),
     v = n(325802),
     _ = n(212407),
@@ -22,7 +22,7 @@ var l = n(477900),
     S = n(105499);
 function I(e) {
     let { skuId: t, unpublishedAt: n } = e,
-        r = (0, x.ty)(t),
+        r = (0, f.ty)(t),
         s = (0, E.$)(r) ? r : null,
         a = null;
     return (
@@ -44,13 +44,13 @@ n.d(
                     enablePreview: s,
                     pageType: o = C.G2.HOME,
                     className: p,
-                    handleTransition: x,
+                    handleTransition: f,
                     listItemProps: E,
                 } = e,
                 v = n?.categorySkuId;
             null == v && null != n && (v = h.A.getCategoryByStoreListingId(n?.categoryStoreListingId)?.skuId);
             let A = v ?? t?.skuId ?? "",
-                { handleCardVisibilityChange: j } = (0, f.Z)(A, o, "marketing featured block"),
+                { handleCardVisibilityChange: j } = (0, x.Z)(A, o, "marketing featured block"),
                 L = (0, _.s4)(t, n, s),
                 k = r.useRef(null),
                 N = n?.bodyText,
@@ -67,7 +67,7 @@ n.d(
                     style: { ...(null != L && { backgroundImage: `url(${L})` }) },
                     ...E,
                     onClick: () => {
-                        (x({
+                        (f({
                             sourceButton: "shop marketing tile",
                             categorySkuId: A,
                             isInternalShopDeeplink: !0,
@@ -106,7 +106,7 @@ n.d(
                                 "aria-label": T,
                                 tabIndex: E?.tabIndex,
                                 onClick: (e) => {
-                                    (x({
+                                    (f({
                                         sourceButton: "shop marketing take me there button",
                                         categorySkuId: A,
                                         isInternalShopDeeplink: !0,

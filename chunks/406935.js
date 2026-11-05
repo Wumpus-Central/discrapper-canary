@@ -294,8 +294,8 @@ class m extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let T = new m();
-class g extends l.G {
+let g = new m();
+class T extends l.G {
     constructor() {
         super("google.protobuf.StringValue", [{ no: 1, name: "value", kind: "scalar", T: 9 }]);
     }
@@ -335,7 +335,7 @@ class g extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let S = new g();
+let S = new T();
 class N extends l.G {
     constructor() {
         super("google.protobuf.BytesValue", [{ no: 1, name: "value", kind: "scalar", T: 12 }]);
@@ -376,4 +376,4 @@ class N extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-(new N(), n.d(t, {}, { ZQ: p, _t: T, as: f, hU: S, j1: _, ol: A, uN: c }));
+(new N(), n.d(t, {}, { ZQ: p, _t: g, as: f, hU: S, j1: _, ol: A, uN: c }));

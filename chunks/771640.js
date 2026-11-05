@@ -16,8 +16,8 @@ var r = n(503698),
     I = n(983851),
     p = n(323384),
     m = n(152367),
-    T = n(513461),
-    g = n(791606),
+    g = n(513461),
+    T = n(791606),
     S = n(260727);
 function N(e) {
     let t,
@@ -57,11 +57,11 @@ n.d(
             let { guildJoinRequestStatus: t } = e,
                 [n, i] = (function (e) {
                     switch (e) {
-                        case T.B5.SUBMITTED:
+                        case g.B5.SUBMITTED:
                             return [void 0, l.ClockIcon];
-                        case T.B5.REJECTED:
+                        case g.B5.REJECTED:
                             return [s.A.unsafe_rawColors.RED_400.css, o.P];
-                        case T.B5.APPROVED:
+                        case g.B5.APPROVED:
                             return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
                         default:
                             return [void 0, c.PencilIcon];
@@ -72,7 +72,7 @@ n.d(
         hP: function (e) {
             let { unavailable: t, conjureWorking: n, mediaState: r } = e;
             return t
-                ? (0, i.jsx)(u.fk, { icon: (0, _.k)(g.A), disableColor: !0, className: S.yk })
+                ? (0, i.jsx)(u.fk, { icon: (0, _.k)(T.A), disableColor: !0, className: S.yk })
                 : n
                   ? C({ icon: m.D, className: S.lE })
                   : null != r

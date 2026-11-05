@@ -1,8 +1,8 @@
-n.d(t, { _m: () => c, DM: () => u, ms: () => o, Du: () => i, $D: () => f, dz: () => m, oB: () => s });
+n.d(t, { _m: () => c, DM: () => u, ms: () => o, Du: () => a, $D: () => f, dz: () => m, oB: () => s });
 var l = n(688954),
     r = n(513845),
-    a = n(664619);
-async function i(e) {
+    i = n(664619);
+async function a(e) {
     let t = await (0, l.h)(e, "/agent/source-history");
     if (!t.ok) throw Error(`version history failed (${t.status})`);
     let n = await t.json();
@@ -22,7 +22,7 @@ async function s(e, t) {
     if (null == r.entry) throw Error("version restore returned no commit");
     return (
         !0 === r.live ||
-            (0, a.tZ)(e, { isPreview: !0 }).catch((t) => {
+            (0, i.tZ)(e, { isPreview: !0 }).catch((t) => {
                 console.error("[conjure] post-version-restore refresh failed", e, t);
             }),
         r.entry
@@ -45,27 +45,27 @@ async function c(e, t, n) {
         json: null != n && "" !== n.trim() ? { environment: t, label: n } : { environment: t },
     });
     if (!r.ok) throw Error(`restore point create failed (${r.status})`);
-    let a = await r.json();
-    if (null == a.restorePoint) throw Error("restore point create returned nothing");
-    return a.restorePoint;
+    let i = await r.json();
+    if (null == i.restorePoint) throw Error("restore point create returned nothing");
+    return i.restorePoint;
 }
 async function d(e, t) {
     var n;
     let l = t.ok && 202 !== t.status ? "" : (await t.text()).trim(),
-        a =
+        i =
             ((n = t.status),
             202 === n
                 ? { ok: !1, code: "unconfirmed", message: l }
                 : n >= 200 && n < 300
                   ? { ok: !0 }
                   : { ok: !1, code: 410 === n ? "expired" : "failed", message: l });
-    if (a.ok)
+    if (i.ok)
         try {
             (0, r.BD)(e);
         } catch (t) {
             console.error("[conjure] post-data-restore frame reload failed", e, t);
         }
-    return a;
+    return i;
 }
 async function f(e, t) {
     let n = await (0, l.h)(e, `/agent/database/restore-points/${encodeURIComponent(t)}/restore`, { method: "POST" });

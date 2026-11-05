@@ -1,4 +1,4 @@
-(n.d(t, { Id: () => k, Ay: () => z, Ng: () => Y }), n(321073), n(323874), n(14289), n(35956), n(142703));
+(n.d(t, { Id: () => k, Ay: () => X, Ng: () => Y }), n(321073), n(323874), n(14289), n(35956), n(142703));
 var i = n(435558),
     r = n.n(i),
     a = n(481613),
@@ -26,8 +26,8 @@ var f = n(400492),
     I = n(312671),
     p = n(458640),
     m = n(734057),
-    T = n(803224),
-    g = n(994500),
+    g = n(803224),
+    T = n(994500),
     S = n(351906),
     N = n(287809),
     C = n(129230),
@@ -194,7 +194,7 @@ function $(e) {
         n = arguments.length > 2 ? arguments[2] : void 0;
     e.includes("message") ? V(e, t, n) : B(e, t, n);
 }
-let z = {
+let X = {
     hasPermission: K,
     requestPermission: function (e) {
         if (o.A?.features.supports("notifications"))
@@ -278,7 +278,7 @@ let z = {
                             e(o.src);
                         }));
                 }))),
-            b && T.A.taskbarFlash && y.Ay.flashFrame(!0));
+            b && g.A.taskbarFlash && y.Ay.flashFrame(!0));
         let V = null;
         if (u) {
             let a = { title: t, body: n };
@@ -294,7 +294,7 @@ let z = {
                     t = r.messageRecord.author;
                 a.threadIdentifier = e;
                 let n = m.A.getChannel(e);
-                null != n && (a.groupName = (0, d.m1)(n, N.default, g.A));
+                null != n && (a.groupName = (0, d.m1)(n, N.default, T.A));
                 let i = n?.getGuildId();
                 ((a.senderIdentifier = t.id),
                     (a.senderDisplayName = R.Ay.getName(i, e, t)),
@@ -339,21 +339,21 @@ let z = {
         }
         null != r.sound && u && ($(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0));
         let H = { icon: e, body: n, tag: v, silent: !0 },
-            z = L.isPlatformEmbedded && (0, L.cX)();
-        if (z) {
-            let { result: e, reason: t } = h({ embeddedMac: z, constructed: !1, nativeFailureReason: V });
+            X = L.isPlatformEmbedded && (0, L.cX)();
+        if (X) {
+            let { result: e, reason: t } = h({ embeddedMac: X, constructed: !1, nativeFailureReason: V });
             w(e, t, "html5");
             return;
         }
         try {
             l = new j(t, H);
         } catch (n) {
-            let { result: e, reason: t } = h({ embeddedMac: z, constructed: !1, nativeFailureReason: V });
+            let { result: e, reason: t } = h({ embeddedMac: X, constructed: !1, nativeFailureReason: V });
             w(e, t, "html5");
             return;
         }
-        let { result: X, reason: q } = h({ embeddedMac: z, constructed: !0, nativeFailureReason: V });
-        return (w(X, q, "html5"),
+        let { result: z, reason: q } = h({ embeddedMac: X, constructed: !0, nativeFailureReason: V });
+        return (w(z, q, "html5"),
         B(l, i),
         (l.onclick = (e) => {
             (L.isPlatformEmbedded ? y.Ay.focus() : (window.focus(), l.close()),

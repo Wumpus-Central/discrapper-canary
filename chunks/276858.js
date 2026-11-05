@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(550238),
     m = n(648335),
     p = n(211528),
-    h = n(516106),
-    C = n(783327),
+    C = n(516106),
+    h = n(783327),
     f = n(856383),
     E = n(240248),
     S = n(166532),
@@ -36,8 +36,8 @@ function x(e) {
             stripeElementsRef: c,
             paymentElementSelectedType: d,
             paymentMethodOrder: m,
-            addressElementKey: h,
-            analyticsContext: C,
+            addressElementKey: C,
+            analyticsContext: h,
             paymentElementFooter: f,
         } = e,
         E = (0, r.useElements)();
@@ -78,7 +78,7 @@ function x(e) {
                         paymentMethodOrder: m,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
-                        analyticsContext: C,
+                        analyticsContext: h,
                     }),
                     v && f,
                 ],
@@ -87,7 +87,7 @@ function x(e) {
                 className: s()(I.K_, x ? I.RK : [I.R, I.vg]),
                 children: (0, l.jsx)(p.KS, {
                     ...u,
-                    internalKey: h,
+                    internalKey: C,
                     renderAsStandaloneElement: T,
                     billingAddressInfo: n,
                 }),
@@ -116,7 +116,7 @@ n.d(
                     customPaymentMethodIdsToSourceTypes: o,
                     paymentMethodOrder: u,
                 } = (0, c.p)({ onSetupError: t }),
-                d = (0, C.S)();
+                d = (0, h.S)();
             return a || null != s || null == d
                 ? (0, l.jsx)(_, {})
                 : (0, l.jsx)(r.Elements, {
@@ -136,7 +136,7 @@ n.d(
                     continueSessionToInitialStep: o,
                 } = e,
                 c = i.useRef(null),
-                C = i.useRef(null),
+                h = i.useRef(null),
                 [g, I] = i.useState(!1),
                 [A, P] = i.useState(!1),
                 x = o === S.pn.CREDIT_CARD_INFORMATION || o === S.pn.PAYMENT_ELEMENT,
@@ -151,9 +151,9 @@ n.d(
                     O(Date.now().toString());
                 }, []);
             i.useEffect(() => {
-                t === S.pn.PAYMENT_ELEMENT && (C.current = null);
+                t === S.pn.PAYMENT_ELEMENT && (h.current = null);
             }, [t]);
-            let k = (0, h.t4)((e) => e.linkWalletEnabled),
+            let k = (0, C.t4)((e) => e.linkWalletEnabled),
                 w = i.useMemo(() => (k ? T : T.filter((e) => "link" !== e)), [k]),
                 D = i.useMemo(
                     () => ({
@@ -264,7 +264,7 @@ n.d(
                 stripePaymentElementProps: D,
                 stripeAddressElementProps: U,
                 stripeElementsRef: c,
-                lastConfirmedSetupIntentRef: C,
+                lastConfirmedSetupIntentRef: h,
                 paymentElementReady: g,
                 paymentElementLoaded: A,
                 paymentElementSelectedType: _,

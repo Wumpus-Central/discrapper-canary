@@ -15,12 +15,12 @@ let h = {},
     I = r().cloneDeep(E.X),
     p = A.D1.UNKNOWN,
     m = !1;
-function T() {
+function g() {
     let e = l.w.get("MediaEngineStore"),
         t = e?.[A.x.DEFAULT];
     return (t?.audioMixerSettingsVersion ?? 0) < 3 ? {} : t?.audioMixerSettings?.enabled === !1 ? { enabled: !1 } : {};
 }
-function g() {
+function T() {
     return c.A.getConfig({ location: "SpatialAudioStore" });
 }
 function S() {
@@ -30,7 +30,7 @@ function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (function () {
             let e = r().merge(r().cloneDeep(E.X), r().cloneDeep(f)),
-                { enabled: t } = g();
+                { enabled: t } = T();
             return ((e.isSpatial = (f.isSpatial ?? (t && S())) && u.Ay.supports(A.O5.SPATIAL_AUDIO)), e);
         })();
     if (!e && r().isEqual(t, I)) return !1;
@@ -46,12 +46,12 @@ function N() {
 }
 function C() {
     let e = S();
-    return ((m = g().defaultOn), N() || S() !== e);
+    return ((m = T().defaultOn), N() || S() !== e);
 }
 class O extends a.Ay.DeviceSettingsStore {
     static displayName = "SpatialAudioStore";
     static persistKey = "SpatialAudioStore";
-    static migrations = [T];
+    static migrations = [g];
     initialize(e) {
         ((h = { enabled: e?.enabled }), this.waitFor(d.A, u.Ay, _.A), this.syncWith([d.A], C));
         let t = u.Ay.getMediaEngine();
@@ -59,7 +59,7 @@ class O extends a.Ay.DeviceSettingsStore {
             t.on(s.bg.SpatialAudioStatus, (e) => {
                 e !== p && ((p = e), 1) && this.emitChange();
             }),
-            (m = g().defaultOn),
+            (m = T().defaultOn),
             N(!0));
     }
     getUserAgnosticState() {

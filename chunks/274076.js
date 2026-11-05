@@ -19,8 +19,8 @@ n.d(
                 {
                     giftRecipient: n,
                     selectedGiftStyle: i,
-                    emojiConfetti: h,
-                    soundEffect: C,
+                    emojiConfetti: C,
+                    soundEffect: h,
                     setEmojiConfetti: f,
                     setSoundEffect: E,
                 } = (0, s.Pv)(),
@@ -52,14 +52,14 @@ n.d(
                                         className: r()(p.b7, p.Ow),
                                         children: [
                                             (0, l.jsx)(o.A, {
-                                                sound: C,
+                                                sound: h,
                                                 onSelect: function (e) {
                                                     null != E && E(null == e ? void 0 : e);
                                                 },
                                             }),
                                             (0, l.jsx)(m.A, {
                                                 setEmojiConfetti: f,
-                                                emojiConfetti: null == h ? void 0 : h,
+                                                emojiConfetti: null == C ? void 0 : C,
                                             }),
                                         ],
                                     }),

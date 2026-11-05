@@ -15,8 +15,8 @@ var i = n(435558),
     I = n(537975),
     p = n(488926),
     m = n(734057),
-    T = n(696451),
-    g = n(71393),
+    g = n(696451),
+    T = n(71393),
     S = n(287809),
     N = n(652215),
     C = n(402655);
@@ -30,7 +30,7 @@ function D(e) {
     if (null != n) return n;
     let i = S.default.getCurrentUser();
     if (null == i) return p.x3;
-    let r = g.A.getGuild(e);
+    let r = T.A.getGuild(e);
     return null == r ? p.x3 : (O[e] = p.cc({ user: i, context: r, checkElevated: t }));
 }
 function b(e) {
@@ -40,7 +40,7 @@ function b(e) {
     let i = m.A.getChannel(e);
     if (null == i) return p.x3;
     let a = i.getGuildId(),
-        s = null != a && (d.A.isLurking(a) || T.Ay.getMember(a, n.id)?.isPending);
+        s = null != a && (d.A.isLurking(a) || g.Ay.getMember(a, n.id)?.isPending);
     return !i.isScheduledForDeletion() && !s && r().isEmpty(i.permissionOverwrites) && null != a
         ? D(a)
         : p.cc({ user: n, context: i, checkElevated: t });
@@ -112,7 +112,7 @@ function H(e, t, n, i) {
     if (e instanceof E.YB) {
         if (E.Le.has(e.type)) {
             let r = m.A.getChannel(e.parent_id);
-            return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), T.Ay.isCurrentUserGuest(e.guild_id));
+            return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), g.Ay.isCurrentUserGuest(e.guild_id));
         }
         r = v(e.id);
     } else (0, I.fh)(e) && (r = D(e.id));
@@ -130,7 +130,7 @@ function H(e, t, n, i) {
 class j extends s.Ay.Store {
     static displayName = "PermissionStore";
     initialize() {
-        this.waitFor(m.A, T.Ay, g.A, o.A, u.A, d.A, c.A, S.default);
+        this.waitFor(m.A, g.Ay, T.A, o.A, u.A, d.A, c.A, S.default);
     }
     getChannelPermissions(e) {
         return E.Le.has(e.type) ? b(e.id) : v(e.id);
@@ -168,7 +168,7 @@ class j extends s.Ay.Store {
     canWithPartialContext(e, t) {
         return "channelId" in t && "string" == typeof t.channelId
             ? this.can(e, m.A.getChannel(t.channelId))
-            : "guildId" in t && "string" == typeof t.guildId && this.can(e, g.A.getGuild(t.guildId));
+            : "guildId" in t && "string" == typeof t.guildId && this.can(e, T.A.getGuild(t.guildId));
     }
     can(e, t, n, i, r) {
         let s = H(t, n, i, r);

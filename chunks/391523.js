@@ -1,6 +1,6 @@
-var t = l(129230),
-    i = l(210470),
-    a = l(652215);
+var l = t(129230),
+    i = t(210470),
+    a = t(652215);
 function r(e) {
     if ("member_channel" === e.noticeType) {
         let { channel: n } = e;
@@ -8,30 +8,30 @@ function r(e) {
     }
     return { guild_id: e.guildId, notice_type: e.noticeType };
 }
-l.d(
+t.d(
     n,
     {},
     {
-        Dv: function (e, n, l, r, u) {
-            let s = (0, i.Dq)(r),
-                d =
-                    null != u
-                        ? s.filter((e) => u.includedChannelIds.has(e))
+        Dv: function (e, n, t, r, s) {
+            let d = (0, i.Dq)(r),
+                u =
+                    null != s
+                        ? d.filter((e) => s.includedChannelIds.has(e))
                         : r.channels.filter((e) => e.eligible && e.included);
-            t.default.track(a.HAw.SWP_SETTINGS_VIEWED, {
+            l.default.track(a.HAw.SWP_SETTINGS_VIEWED, {
                 guild_id: e,
                 view: n,
-                feature_key: l,
+                feature_key: t,
                 feature_enabled: r.enabled,
-                eligible_channel_count: s.length,
-                included_channel_count: d.length,
+                eligible_channel_count: d.length,
+                included_channel_count: u.length,
             });
         },
         Ws: function (e) {
-            t.default.track(a.HAw.SWP_NOTICE_VIEWED, r(e));
+            l.default.track(a.HAw.SWP_NOTICE_VIEWED, r(e));
         },
         Yy: function (e, n) {
-            t.default.track(a.HAw.SWP_NOTICE_ACTION, { ...r(e), action: n });
+            l.default.track(a.HAw.SWP_NOTICE_ACTION, { ...r(e), action: n });
         },
     },
 );

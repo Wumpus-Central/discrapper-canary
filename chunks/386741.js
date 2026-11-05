@@ -15,8 +15,8 @@ var i = n(435558),
     I = n(386723),
     p = n(731854);
 let m = (e) => `AudioContextSettingsMigrated:${e}`,
-    T = (e) => (e === p.x.STREAM ? a.i.STREAM : a.i.USER);
-function g() {
+    g = (e) => (e === p.x.STREAM ? a.i.STREAM : a.i.USER);
+function T() {
     l.w.get(m(_.default.getId())) ||
         h.wc.updateAsync(
             "audioContextSettings",
@@ -29,7 +29,7 @@ function g() {
                         s = String(Date.now()),
                         l = {};
                     for (let [e, t] of Object.entries(i.localMutes))
-                        l[e] = { muted: t, volume: T(n), modifiedAt: s, soundboardMuted: !1 };
+                        l[e] = { muted: t, volume: g(n), modifiedAt: s, soundboardMuted: !1 };
                     for (let [e, t] of Object.entries(i.localVolumes)) {
                         let i = l[e];
                         l[e] = { ...(i ?? { muted: !1, modifiedAt: s }), volume: (0, I.z)(t, n) };
@@ -62,10 +62,10 @@ function C() {
                         if (null == a) return !1;
                         let l = e[a];
                         return (
-                            (l[t] = l[t] ?? s.oP.create({ muted: !1, volume: T(n) })),
+                            (l[t] = l[t] ?? s.oP.create({ muted: !1, volume: g(n) })),
                             i(l[t]),
                             (l[t].modifiedAt = String(Date.now())),
-                            r && (l[t].volume !== T(n) || l[t].muted || l[t].soundboardMuted || delete l[t]),
+                            r && (l[t].volume !== g(n) || l[t].muted || l[t].soundboardMuted || delete l[t]),
                             !(function (e) {
                                 let t = A.default.entries(e),
                                     n = t.length;
@@ -126,7 +126,7 @@ function y(e) {
 }
 class D extends o.A {
     actions = {
-        POST_CONNECTION_OPEN: g,
+        POST_CONNECTION_OPEN: T,
         AUDIO_SET_LOCAL_VOLUME: O,
         AUDIO_TOGGLE_LOCAL_MUTE: R,
         AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: L,

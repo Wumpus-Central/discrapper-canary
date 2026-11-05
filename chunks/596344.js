@@ -19,9 +19,9 @@ function f(e) {
 var I = n(164956),
     p = n(931480),
     m = n(432005),
-    T = n(697470);
+    g = n(697470);
 n(763754);
-var g = n(491001),
+var T = n(491001),
     S = n(815807),
     N = n(773669),
     C = n(811091),
@@ -108,7 +108,7 @@ function $() {
         null == R.A.getChannel(t) && c.A.clear(t);
     });
 }
-function z() {
+function X() {
     let e = !1;
     return (
         c.A.forEach((t) => {
@@ -129,7 +129,7 @@ function z() {
         e
     );
 }
-function X(e) {
+function z(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = c.A.get(n);
     if (null == l || !(0, S.vp)(e)) return !1;
@@ -183,7 +183,7 @@ class Z extends l.Ay.Store {
         let t = w.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, T.A)(e, t?.id));
+            .find((e) => (0, g.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
         let t = w.default.getCurrentUser();
@@ -368,7 +368,7 @@ let Q = new Z(o.h, {
                 s = c.A.getOrCreate(t),
                 l = n(225123).A.isConnected();
             return a
-                ? (0, g.K)()
+                ? (0, T.K)()
                     ? (!(async function (e, t, n) {
                           let i = _.A.database(),
                               r = R.A.getBasicChannel(e);
@@ -511,19 +511,19 @@ let Q = new Z(o.h, {
         CHANNEL_DELETE: $,
         THREAD_DELETE: $,
         GUILD_DELETE: $,
-        RELATIONSHIP_ADD: z,
-        RELATIONSHIP_UPDATE: z,
-        RELATIONSHIP_REMOVE: z,
+        RELATIONSHIP_ADD: X,
+        RELATIONSHIP_UPDATE: X,
+        RELATIONSHIP_REMOVE: X,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},
-        MESSAGE_REACTION_ADD: X,
+        MESSAGE_REACTION_ADD: z,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { channelId: t, messageId: n, reactions: i } = e,
                 r = c.A.get(t);
             if (null == r) return !1;
             ((r = r.update(n, (e) => e.addReactionBatch(i, w.default.getCurrentUser()?.id))), c.A.commit(r));
         },
-        MESSAGE_REACTION_REMOVE: X,
+        MESSAGE_REACTION_REMOVE: z,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { channelId: t, messageId: n } = e,
                 i = c.A.get(t);

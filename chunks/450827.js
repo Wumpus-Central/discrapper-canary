@@ -39,17 +39,17 @@ function m(e) {
         t
     );
 }
-function T(e, t, n) {
+function g(e, t, n) {
     null != e && (e.nicknames[t] = null != n && "" !== n ? n : null);
 }
-function g(e) {
+function T(e) {
     let t = [];
     if (null == e || !(0, o.Gw)(e.type)) return t;
     let { recipients: n = [] } = e;
     return (
         n.forEach((n) => {
             let i = m(E.default.getUser(n));
-            (null != e && T(i, e.id), t.push(i));
+            (null != e && g(i, e.id), t.push(i));
         }),
         t
     );
@@ -59,7 +59,7 @@ function S(e, t) {
     return (
         e.forEach((e) => {
             let i = m(e.user);
-            null != i && (T(i, t, e.nick), n.push(i));
+            null != i && (g(i, t, e.nick), n.push(i));
         }),
         n
     );
@@ -71,12 +71,12 @@ function N(e) {
         a = [];
     if (null != t.author) {
         let e = m(t.author);
-        null != e && (a.push(e), null != r && T(e, r));
+        null != e && (a.push(e), null != r && g(e, r));
     }
     return (
         t.mentions?.forEach((e) => {
             let t = m(e);
-            null != t && (a.push(t), null != r && T(t, r));
+            null != t && (a.push(t), null != r && g(t, r));
         }),
         a
     );
@@ -268,7 +268,7 @@ class O extends l.A {
                 for (let t in i[e]) {
                     let r = n[t],
                         a = i[e][t]?.nick ?? I.Ay.getGlobalName(r);
-                    null != r && T(r, e, a);
+                    null != r && g(r, e, a);
                 }
             this.updateUsers(Object.values(n), "connection_open");
         }, 3e3);
@@ -285,7 +285,7 @@ class O extends l.A {
                                 let i = n.member;
                                 if (null != i) {
                                     let n = m(i.user);
-                                    null != n && (T(n, e.id, i.nick), t.push(n));
+                                    null != n && (g(n, e.id, i.nick), t.push(n));
                                 }
                             });
                         }),
@@ -305,7 +305,7 @@ class O extends l.A {
                 for (let n of f.default.keys(t)) {
                     let r = i.get(n),
                         a = t[n];
-                    null != r && null != a && null != a.nick && (T(r, e, a.nick), i.set(n, r));
+                    null != r && null != a && null != a.nick && (g(r, e, a.nick), i.set(n, r));
                 }
         }
         (this.updateUsers(Array.from(i.values()), "overlay_initialize"), i.clear());
@@ -329,7 +329,7 @@ class O extends l.A {
     _handleGuildMemberUpdate = (e) => {
         let { guildId: t, user: n, nick: i } = e,
             r = m(n);
-        null != r && (T(r, t, i), this.updateUsers([r], "guild_member_update"));
+        null != r && (g(r, t, i), this.updateUsers([r], "guild_member_update"));
     };
     _handlePassiveUpdateV2 = (e) => {
         this.updateUsers(S(e.members, e.guildId), "passive_update_v2");
@@ -350,25 +350,25 @@ class O extends l.A {
         let {
                 channel: { id: t },
             } = e,
-            n = g(c.A.getChannel(t));
+            n = T(c.A.getChannel(t));
         if (0 === n.length) return;
         let i = m(E.default.getCurrentUser());
-        (T(i, t), n.push(i), this.updateUsers(n, "dm_create"));
+        (g(i, t), n.push(i), this.updateUsers(n, "dm_create"));
     };
     _handleDMUpdates = (e) => {
         let { channels: t } = e;
         for (let e of t) {
-            let t = g(c.A.getChannel(e.id));
+            let t = T(c.A.getChannel(e.id));
             if (0 === t.length) continue;
             let n = m(E.default.getCurrentUser());
-            (T(n, e.id), t.push(n), this.updateUsers(t, "dm_updates"));
+            (g(n, e.id), t.push(n), this.updateUsers(t, "dm_updates"));
         }
     };
     _handleRecipientChanges = (e) => {
         let { channelId: t, user: n, isMember: i } = e;
         if (!i) return;
         let r = m(n);
-        (T(r, t), this.updateUsers([r], "recipient_changes"));
+        (g(r, t), this.updateUsers([r], "recipient_changes"));
     };
     _handleThreadListSync = (e) => {
         let { guildId: t, mostRecentMessages: n } = e;
@@ -439,7 +439,7 @@ class O extends l.A {
         (n.forEach((e) => {
             let { user: n, member: r } = e,
                 a = m(n);
-            null != a && (T(a, t, r?.nick), i.push(a));
+            null != a && (g(a, t, r?.nick), i.push(a));
         }),
             this.updateUsers(i, "guild_scheduled_event_users_fetch_success"));
     };

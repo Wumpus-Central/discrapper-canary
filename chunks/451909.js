@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(863005),
     p = n(253932),
     m = n(734057),
-    T = n(808728),
-    g = n(696451),
+    g = n(808728),
+    T = n(696451),
     S = n(317525),
     N = n(71393),
     C = n(576705),
@@ -199,7 +199,7 @@ let F = E.Ay.RULES,
                       : null,
         },
     },
-    z = {
+    X = {
         inlineCode: x(F.inlineCode),
         codeBlock: x(F.codeBlock),
         mention: {
@@ -284,12 +284,12 @@ let F = E.Ay.RULES,
         },
         text: { ...B },
     };
-[$, z].forEach((e) => {
+[$, X].forEach((e) => {
     Object.keys(e).forEach((t, n) => {
         e[t].order = n;
     });
 });
-let X = s().parserFor($),
+let z = s().parserFor($),
     q = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 function Z(e, t, n, i) {
     let r = "",
@@ -347,7 +347,7 @@ function Q(e, t) {
     } else
         n =
             null != i
-                ? g.Ay.getMembers(i).map((e) => {
+                ? T.Ay.getMembers(i).map((e) => {
                       let { userId: t, nick: n } = e;
                       return { userId: t, nick: n };
                   })
@@ -368,16 +368,16 @@ function Q(e, t) {
                 let { id: t, name: n } = e;
                 return { id: t, text: n };
             }),
-        u = r()(T.A.getTextChannelNameDisambiguations(i)).map((e) => {
+        u = r()(g.A.getTextChannelNameDisambiguations(i)).map((e) => {
             let { id: t, name: n } = e;
             return { id: t, text: n };
         }),
         _ =
             null != i
                 ? r()(y.L3)
-                      .filter((e) => e !== T.I)
+                      .filter((e) => e !== g.I)
                       .flatMap((e) =>
-                          T.A.getChannels(i)[e].map((e) =>
+                          g.A.getChannels(i)[e].map((e) =>
                               e.channel.isCategory() && !C.A.can(M.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, L.default, O.A) },
@@ -415,7 +415,7 @@ function ee(e, t, n) {
     let i = m.A.getChannel(t),
         a = null != i ? i.getGuildId() : null,
         l = null != a ? N.A.getGuild(a) : null,
-        o = n ? z : r().omit(z, ["spoiler", "timestamp", "unicodeEmoji"]),
+        o = n ? X : r().omit(X, ["spoiler", "timestamp", "unicodeEmoji"]),
         d = n ? J : u.Ay.translateSurrogatesToInlineEmoji,
         c = s().parserFor(o),
         _ = { inline: !0, guild: l, channelId: t, isNotification: n };
@@ -439,11 +439,11 @@ n.d(
                             ? l.invalidEmojis.push(t)
                             : n || l.validNonShortcutEmojis.push(t);
                     }),
-                    (l.content = Z(X(n, s), s, u.Ay.translateInlineEmojiToSurrogates, i).content),
+                    (l.content = Z(z(n, s), s, u.Ay.translateInlineEmojiToSurrogates, i).content),
                     l
                 );
             },
-            parsePreprocessor: (e, t) => X(t, Q(e)),
+            parsePreprocessor: (e, t) => z(t, Q(e)),
             unparse: (e, t, n) => ee(e, t, n).content,
             unparseWithMeta: ee,
         },

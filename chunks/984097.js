@@ -1,4 +1,4 @@
-_.exports = {
+r.exports = {
     nM: "row_K0N-Ah",
     HV: "blockedRow_K0N-Ah",
     my: "avatar_K0N-Ah",

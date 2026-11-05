@@ -16,8 +16,8 @@ var i = n(858899),
     I = n(741394),
     p = n(734066),
     m = n(205693),
-    T = n(439372),
-    g = n(967347),
+    g = n(439372),
+    T = n(967347),
     S = n(253932),
     N = n(617617),
     C = n(734057),
@@ -42,7 +42,7 @@ var P = n(419490),
 function k() {
     return f.Ay.getMediaEngine().supports(x.O5.UNIFIED_CAPTURE_BROKER);
 }
-class F extends T.A {
+class F extends g.A {
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
         RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -195,7 +195,7 @@ class F extends T.A {
     async classifyHardwareAndTrack() {
         try {
             let { gpuModels: e, classification: t } = await (async () => {
-                let e = await (0, g.w)();
+                let e = await (0, T.w)();
                 if (e?.gpus != null) {
                     let t = e.gpus.map((e) => e.brand).filter((e) => null != e && "" !== e),
                         n = this.classifyHardware(t);
@@ -266,8 +266,8 @@ var j = n(160759),
     Y = n(409067),
     K = n(227628),
     $ = n(468550),
-    z = n(171251),
-    X = n(826685),
+    X = n(171251),
+    z = n(826685),
     q = n(190443),
     Z = n(792996);
 let Q = new (class extends F {
@@ -298,7 +298,7 @@ let Q = new (class extends F {
         (super.handlePostConnectionOpen(), this.installGameEventIntegrations());
     }
     async installGameEventIntegrations() {
-        (0, B.s)() && (await W.b.fetchMany([z.w], [X.b], [q.e]));
+        (0, B.s)() && (await W.b.fetchMany([X.w], [z.b], [q.e]));
         let e = (0, M.T)() && P.Ay.getEnableAutoclipping();
         ((0, _.se)(e), (0, E.eZ)(e), (0, V.B)(e));
     }

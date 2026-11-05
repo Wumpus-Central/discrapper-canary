@@ -16,8 +16,8 @@ let h = +u.A.Millis.MINUTE,
     I = /live_user_(.*)-\{width\}/,
     p = null,
     m = 0,
-    T = null,
-    g = new Set(),
+    g = null,
+    T = new Set(),
     S = {};
 function N(e, t, n) {
     return s.Bo.get({
@@ -38,7 +38,7 @@ let C = new (class {
     }
     stop() {
         ((this._started = !1),
-            (T = null),
+            (g = null),
             (m = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             l.h.dispatch({ type: "STREAMING_UPDATE", stream: null }));
@@ -84,7 +84,7 @@ let C = new (class {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((T = null), e.revoked || g.has(e.id))) return null;
+        if (((g = null), e.revoked || T.has(e.id))) return null;
         try {
             let {
                 body: { items: n },
@@ -102,7 +102,7 @@ let C = new (class {
                 } = n[0],
                 l = { large_image: (0, c.Di)(A.fg2.YOUTUBE, a.high.url) ?? void 0 },
                 o = null != r && "" !== r ? r.slice(0, 128) : void 0;
-            return (T = {
+            return (g = {
                 url: `https://youtube.com/watch?v=${i}`,
                 name: d.A.get(A.fg2.YOUTUBE).name,
                 details: o,
@@ -113,7 +113,7 @@ let C = new (class {
                 return o.A.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return (403 === n.status && g.add(e.id), null);
+            return (403 === n.status && T.add(e.id), null);
         }
     }
     _check() {
@@ -131,7 +131,7 @@ let C = new (class {
             ).then((e) => {
                 if (this._started) {
                     let t = e.find((e) => "fulfilled" === e.status && null != e.value)?.value;
-                    (null == t && null != T && (t = T), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
+                    (null == t && null != g && (t = g), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
                 }
                 this._scheduleCheck();
             }));

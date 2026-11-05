@@ -1,5 +1,5 @@
 n.d(t, {
-    rw: () => T,
+    rw: () => g,
     wH: () => O,
     G4: () => D,
     gG: () => L,
@@ -12,7 +12,7 @@ n.d(t, {
     Uu: () => C,
     ss: () => N,
     bQ: () => S,
-    getDismissedRecurringDismissibleContentState: () => g,
+    getDismissedRecurringDismissibleContentState: () => T,
     Sx: () => W,
     J8: () => Y,
     NZ: () => F,
@@ -23,10 +23,10 @@ n.d(t, {
     YV: () => V,
     d6: () => j,
     qr: () => $,
-    uh: () => z,
+    uh: () => X,
     $l: () => K,
     Vh: () => B,
-    Wx: () => X,
+    Wx: () => z,
     cN: () => w,
 });
 var i = n(855986),
@@ -46,13 +46,13 @@ var i = n(855986),
     I = n(643421),
     p = n(652215),
     m = n(49999);
-let T = 2592e6;
-function g(e) {
+let g = 2592e6;
+function T(e) {
     let t = l.A.settings.userContent?.recurringDismissibleContentStates[e];
     return {
         lastDismissedVersion: (0, h.L0)(e) ? (0, I.c)(e) : 0,
         lastDismissedAtMs: new Date().getTime().toString(),
-        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + T) : "0",
+        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + g) : "0",
         numTimesDismissed: t?.numTimesDismissed ?? 0,
     };
 }
@@ -200,7 +200,7 @@ function B(e, t, n, i) {
             content: e,
             groupName: t?.groupName,
             onAdded: (n) => {
-                ((0, _.rF)(e, t?.guildId), X(e, t, n), t?.onShown?.());
+                ((0, _.rF)(e, t?.guildId), z(e, t, n), t?.onShown?.());
             },
         }));
 }
@@ -270,11 +270,11 @@ async function $(e, t, n) {
     let i = Y(e, n);
     (V(e, { ...n, snowflakeId: t }), await C(e, t, i), H(e, n));
 }
-async function z(e, t) {
+async function X(e, t) {
     let n = Y(e, t);
     (V(e, t), await N(e, n), H(e, t));
 }
-function X(e, t) {
+function z(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [i, a] = (0, A.oF)();
     o.default.track(p.HAw.DISMISSIBLE_CONTENT_SHOWN, {

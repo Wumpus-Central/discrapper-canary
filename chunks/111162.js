@@ -72,10 +72,10 @@ let E = (() => {
 function m(e) {
     ((f = { ...h, ...f, ...e }), E.set(f.sourceMapsEnabled), l.w.set(A, f));
 }
-function T(e) {
+function g(e) {
     ((p = e), l.w.set(I, p));
 }
-class g extends a.Ay.Store {
+class T extends a.Ay.Store {
     static displayName = "DeveloperOptionsStore";
     initialize() {
         let e = l.w.get(A);
@@ -155,9 +155,9 @@ class g extends a.Ay.Store {
         return 0 === p.length ? null : p.join(",");
     }
 }
-let S = new g(o.h, {
+let S = new T(o.h, {
     LOGOUT: function (e) {
-        (m(h), T([]));
+        (m(h), g([]));
     },
     CONNECTION_OPEN: function (e) {
         let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
@@ -170,7 +170,7 @@ let S = new g(o.h, {
     },
     DEVELOPER_OPTIONS_SET_ROUTING_KEY: function (e) {
         let { tags: t } = e;
-        T(t);
+        g(t);
     },
 });
 n.d(t, {}, { default: S });

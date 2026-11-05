@@ -16,8 +16,8 @@ var r,
     I = n(46653),
     p = n(153488),
     m = n(353835),
-    T = n(499785),
-    g = n(136969),
+    g = n(499785),
+    T = n(136969),
     S = n(652215),
     N = n(516780);
 let C = new _.A("AuthenticationActionCreators"),
@@ -34,7 +34,7 @@ function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
     if ((L(), null == t)) return;
     let n = (0, E.Y)();
-    null == n ? (0, A.pX)(t, { source: e }) : (g.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
+    null == n ? (0, A.pX)(t, { source: e }) : (T.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
 }
 n.d(
     t,
@@ -56,7 +56,7 @@ n.d(
                 } = e;
                 return (
                     d.h.dispatch({ type: "LOGIN", isPasswordAttempt: !0 }),
-                    T.A.post({
+                    g.A.post({
                         url: S.Rsh.LOGIN,
                         body: { login: t, password: n, undelete: i, login_source: r, gift_code_sku_id: s },
                         retries: 2,
@@ -143,7 +143,7 @@ n.d(
                     mfaType: l,
                     loginInstanceId: o,
                 } = e;
-                return T.A.post({
+                return g.A.post({
                     url: S.Rsh.LOGIN_MFA(l),
                     body: {
                         code: t,
@@ -208,7 +208,7 @@ n.d(
             },
             loginWebAuthn(e) {
                 let { ticket: t, credential: n, source: i, giftCodeSKUId: r, isMultiAccount: s } = e;
-                return T.A.post({
+                return g.A.post({
                     url: S.Rsh.WEBAUTHN_CONDITIONAL_UI_LOGIN,
                     body: { credential: n, ticket: t, source: i, giftCodeSKUId: r },
                     retries: 1,
@@ -249,7 +249,7 @@ n.d(
                 d.h.dispatch({ type: "LOGIN" });
                 try {
                     let t = (
-                        await T.A.post({
+                        await g.A.post({
                             url: S.Rsh.ONE_TIME_LOGIN,
                             body: { ticket: e },
                             oldFormErrors: !0,
@@ -275,7 +275,7 @@ n.d(
             logout(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT,
                     n = arguments.length > 2 ? arguments[2] : void 0;
-                return T.A.post({
+                return g.A.post({
                     url: S.Rsh.LOGOUT,
                     body: {
                         provider: (0, N.oH)(),
@@ -314,7 +314,7 @@ n.d(
                 );
             },
             async verify(e) {
-                let t = await T.A.post({
+                let t = await g.A.post({
                     url: S.Rsh.VERIFY,
                     body: { token: e },
                     trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
@@ -323,21 +323,21 @@ n.d(
                 return (d.h.dispatch({ type: "LOGIN_SUCCESS", token: t.body.token }), t.body.user_id);
             },
             authorizePayment: (e) =>
-                T.A.post({
+                g.A.post({
                     url: S.Rsh.AUTHORIZE_PAYMENT,
                     body: { token: e },
                     trackedActionData: { event: a.NetworkActionNames.AUTHORIZE_PAYMENT },
                     rejectWithError: !0,
                 }),
             authorizeIPAddress: (e) =>
-                T.A.post({
+                g.A.post({
                     url: S.Rsh.AUTHORIZE_IP,
                     body: { token: e },
                     trackedActionData: { event: a.NetworkActionNames.AUTHORIZE_IP },
                     rejectWithError: !0,
                 }),
             verifyResend: () =>
-                T.A.post({
+                g.A.post({
                     url: S.Rsh.VERIFY_RESEND,
                     oldFormErrors: !0,
                     trackedActionData: { event: a.NetworkActionNames.USER_VERIFY_RESEND },
@@ -359,7 +359,7 @@ n.d(
                         backup: o,
                         totp: d,
                     } = (
-                        await T.A.post({
+                        await g.A.post({
                             url: S.Rsh.RESET_PASSWORD,
                             body: i,
                             oldFormErrors: !0,
@@ -384,7 +384,7 @@ n.d(
             async resetPasswordMFAv2(e) {
                 let { method: t, code: n, ticket: i, password: r, token: s, source: l } = e;
                 d.h.dispatch({ type: "LOGIN_MFA" });
-                let o = await T.A.post({
+                let o = await g.A.post({
                     url: S.Rsh.RESET_PASSWORD,
                     body: { code: n, ticket: i, password: r, token: s, source: l, method: t },
                     oldFormErrors: !0,
@@ -396,7 +396,7 @@ n.d(
             async forgotPassword(e) {
                 d.h.dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
                 try {
-                    let t = await T.A.post({
+                    let t = await g.A.post({
                         url: S.Rsh.FORGOT_PASSWORD,
                         body: { login: e },
                         oldFormErrors: !0,

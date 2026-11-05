@@ -16,8 +16,8 @@ var i = n(582128),
     I = n(594061),
     p = n(46653),
     m = n(734057),
-    T = n(696451),
-    g = n(71393),
+    g = n(696451),
+    T = n(71393),
     S = n(287809),
     N = n(129230),
     C = n(12115),
@@ -78,11 +78,11 @@ function $(e) {
         n = J.indices[t];
     (n?.fetchState.fetching && n.fetchState.abort.abort(), delete J.indices[t]);
 }
-function z() {
+function X() {
     for (let e of Object.values(J.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
     J.indices = {};
 }
-async function X(e) {
+async function z(e) {
     let t = new AbortController(),
         n = new o.K();
     K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0);
@@ -177,11 +177,11 @@ class Q extends d.Ay.Store {
     collator = new Intl.Collator(f.default.locale, H);
     initialize() {
         (this.waitFor(f.default),
-            this.waitFor(R.Ay, E.A, p.default, m.A, T.Ay, g.A, S.default),
+            this.waitFor(R.Ay, E.A, p.default, m.A, g.Ay, T.A, S.default),
             this.syncWith([f.default], () => {
                 let e;
                 (e = f.default.locale) !== J.oldLocale &&
-                    (z(),
+                    (X(),
                     (J.collator = new Intl.Collator(e, { sensitivity: "accent", numeric: !0 })),
                     (J.oldLocale = e));
             }));
@@ -270,7 +270,7 @@ class Q extends d.Ay.Store {
     }
 }
 let J = new Q(c.h, {
-    LOGOUT: z,
+    LOGOUT: X,
     CONNECTION_OPEN: function () {
         for (let e of Object.values(J.indices)) e.serverVersion = x;
         for (let e of W) q(e);
@@ -279,7 +279,7 @@ let J = new Q(c.h, {
     APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
         let { target: t } = e,
             n = Y(t);
-        el(J.indices[n] ?? V) && X(t);
+        el(J.indices[n] ?? V) && z(t);
     },
     APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: q,
     APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
@@ -461,7 +461,7 @@ function er(e) {
         f = a?.toLowerCase(),
         p = f?.split(" "),
         m = s === y.n.ONLY_TEXT,
-        T = s !== y.n.DENY ? (0, C.Ez)(h, !0, m) : [],
+        g = s !== y.n.DENY ? (0, C.Ez)(h, !0, m) : [],
         S = [],
         N = {
             permissionContext: t,
@@ -535,15 +535,15 @@ function er(e) {
             }
             return eu(e.section.name, t.section.name);
         }),
-        T.length > 0 || !0 === c)
+        g.length > 0 || !0 === c)
     ) {
-        let e = ea(C.gZ[M.Ik.BUILT_IN], T, !0, !0, N);
+        let e = ea(C.gZ[M.Ik.BUILT_IN], g, !0, !0, N);
         null != e && S.push(e);
     }
     let v = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = g.A.getGuild(t?.context?.guild_id),
+            n = T.A.getGuild(t?.context?.guild_id),
             i = S.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
         _.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;
@@ -793,7 +793,7 @@ n.d(
                 }
                 return n;
             }
-            return (await X(e), J.indices[t] ?? V);
+            return (await z(e), J.indices[t] ?? V);
         },
     },
 );
