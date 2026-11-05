@@ -1,8 +1,8 @@
-t.d(n, { A: () => eK, N: () => eO });
+t.d(n, { A: () => eK, N: () => eW });
 var l = t(477900),
     r = t(582128),
-    i = t(733004),
-    a = t(914710),
+    i = t(516029),
+    a = t(714414),
     u = t(292442),
     s = t(834730),
     o = t(791606),
@@ -12,8 +12,8 @@ var l = t(477900),
     m = t(503698),
     f = t.n(m),
     p = t(939249),
-    g = t(933832),
-    x = t(624479),
+    x = t(933832),
+    g = t(624479),
     v = t(143145),
     j = t(441136),
     I = t(957565),
@@ -31,8 +31,8 @@ function C(e) {
             );
         },
         children: t
-            ? (0, l.jsx)(g.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
-            : (0, l.jsx)(x.CopyIcon, { size: "xs", color: "currentColor" }),
+            ? (0, l.jsx)(x.CheckmarkLargeIcon, { size: "xs", color: "currentColor" })
+            : (0, l.jsx)(g.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
 var k = t(855986),
@@ -84,7 +84,7 @@ var z = t(588975),
     U = t(734057),
     q = t(889558),
     B = t(376943);
-function O(e) {
+function W(e) {
     let n = B.En.exec(e);
     if (null != n) {
         let [, e, t, l, r] = n;
@@ -97,7 +97,7 @@ function O(e) {
         ? null
         : { guildId: l, channelId: r, messageId: i, parentChannelId: void 0, conversationId: (0, B.te)(a) };
 }
-var W = t(333421),
+var O = t(333421),
     K = t(100392),
     V = t(836156);
 let Z = /^dev:\/\//i,
@@ -131,7 +131,7 @@ function en(e) {
                   ? (0, l.jsx)(Y, { url: n })
                   : (0, V.i)(n)
                     ? (0, l.jsx)(X, { url: n })
-                    : (0, W.my)(n)
+                    : (0, O.my)(n)
                       ? (0, l.jsx)(ee, { url: n })
                       : null;
     return null == t ? null : (0, l.jsx)(r.Suspense, { fallback: null, children: t });
@@ -150,8 +150,8 @@ var et = t(192308),
     em = t(593284),
     ef = t(288539),
     ep = t(317525),
-    eg = t(71393),
-    ex = t(994500),
+    ex = t(71393),
+    eg = t(994500),
     ev = t(287809),
     ej = t(147036),
     eI = t(403362);
@@ -167,11 +167,11 @@ function eC(e) {
             isForumPost: c,
             hasAccess: h,
         } = (0, k.cf)(
-            [U.A, ev.default, ex.A],
+            [U.A, ev.default, eg.A],
             () => {
                 let e = U.A.getChannel(n);
                 return {
-                    name: null != e ? (0, el.m1)(e, ev.default, ex.A) : void 0,
+                    name: null != e ? (0, el.m1)(e, ev.default, eg.A) : void 0,
                     iconType: (0, ej.QG)(e),
                     isForumPost: e?.isForumPost(),
                     hasAccess: null == e || (0, B.nc)(e),
@@ -183,7 +183,7 @@ function eC(e) {
         f = m?.noStyleAndInteraction !== !0;
     if (null == o) return;
     let p = r === m?.guildId || null == r,
-        g =
+        x =
             h || u.isSubscriptionGated
                 ? p || null == s
                     ? (0, l.jsx)(eo.A, {
@@ -192,10 +192,10 @@ function eC(e) {
                       })
                     : (0, l.jsx)(ek, { guildId: r, children: s })
                 : (0, l.jsx)(eo.A, { iconType: "locked", children: eA.intl.string(eA.t["/YzI63"]) }),
-        x = null;
+        g = null;
     return (
         null != i &&
-            (x = (0, l.jsxs)(l.Fragment, {
+            (g = (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(eh.A, {}), (0, l.jsx)(eo.A, { iconType: c ? "post" : "message" })],
             })),
         (0, l.jsxs)(H.A, {
@@ -224,13 +224,13 @@ function eC(e) {
                   }
                 : void 0,
             className: "channelMention",
-            children: [g, x],
+            children: [x, g],
         })
     );
 }
 function ek(e) {
     let { guildId: n, children: t } = e,
-        r = (0, k.bG)([eg.A], () => eg.A.getGuild(n), [n]);
+        r = (0, k.bG)([ex.A], () => ex.A.getGuild(n), [n]);
     return (0, l.jsxs)(ed.A, { guild: r, children: [r?.name, null != r ? (0, l.jsx)(eh.A, {}) : null, t] });
 }
 function eb(e) {
@@ -374,7 +374,7 @@ function eJ(e) {
 function eU(e) {
     switch (e.type) {
         case "link":
-            if ((null == e.value.text || 0 === e.value.text.length) && null != O(e.value.url)) return e;
+            if ((null == e.value.text || 0 === e.value.text.length) && null != W(e.value.url)) return e;
             return { type: "code", value: e.value.url };
         case "emoji":
             return "custom" === e.value.type ? { type: "text", value: (0, e_.u)(e.value.value.name) } : e;
@@ -391,7 +391,7 @@ function eU(e) {
 }
 var eq = t(254221);
 let eB = [];
-function eO(e, n) {
+function eW(e, n) {
     let { enabled: t, syntax: l } = n,
         i = (0, eF.n9)(t);
     return r.useMemo(() => {
@@ -403,7 +403,7 @@ function eO(e, n) {
         }
     }, [t, i, e, l]);
 }
-let eW = {
+let eO = {
     text: function (e) {
         let { node: n } = e;
         return (0, l.jsx)(h.z, { text: n.value });
@@ -435,7 +435,7 @@ let eW = {
             u = a?.noStyleAndInteraction === !0,
             s = null == n || 0 === n.length;
         if (s) {
-            let e = O(t);
+            let e = W(t);
             if (null != e) return (0, l.jsx)(eL, { ...e });
             let n = (0, _.h)(t);
             if (null != n) return (0, l.jsx)(ez, { url: t, name: n.name, interactive: !u });
@@ -679,7 +679,7 @@ function eV(e) {
         );
     return (0, l.jsx)(E.Provider, {
         value: d,
-        children: (0, l.jsx)(eG.L1, { children: (0, l.jsx)(i.$, { nodes: h, renderers: eW }) }, n),
+        children: (0, l.jsx)(eG.L1, { children: (0, l.jsx)(i.$, { nodes: h, renderers: eO }) }, n),
     });
 }
 function eZ(e) {

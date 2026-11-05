@@ -1,5 +1,5 @@
-t.d(
-    n,
+n.d(
+    t,
     {},
     {
         J: function () {

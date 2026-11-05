@@ -2297,7 +2297,7 @@ function ls(e) {
         }),
     };
 }
-var la = n(516029);
+var la = n(738410);
 function lr(e) {
     let { command: t, application: n, onClick: l, query: i, searchResultsPosition: s } = e,
         a = o.useCallback(

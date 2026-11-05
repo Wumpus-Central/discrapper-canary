@@ -1,71 +1,71 @@
 let r;
-t.d(n, {
-    Ts: () => f,
+n.d(t, {
+    Ts: () => c,
     tJ: () =>
-        function* e(n) {
-            for (let t of n)
-                switch ((yield t, t.type)) {
+        function* e(t) {
+            for (let n of t)
+                switch ((yield n, n.type)) {
                     case "paragraph":
                     case "strikethrough":
                     case "underline":
                     case "italic":
                     case "bold":
                     case "quote":
-                        yield* e(t.value);
+                        yield* e(n.value);
                         break;
                     case "spoiler":
                     case "heading":
                     case "small":
-                        yield* e(t.value.content);
+                        yield* e(n.value.content);
                         break;
                     case "list":
-                        for (let n of t.value.items) yield* e(n.content);
+                        for (let t of n.value.items) yield* e(t.content);
                         break;
                     case "link":
-                        t.text && (yield* e(t.text));
+                        n.text && (yield* e(n.text));
                 }
         },
-    qg: () => b,
-    IS: () => s,
+    qg: () => l,
+    IS: () => f,
 });
-var _ = t(882498),
-    i = t(451076),
-    o = t(971673);
-t(849324);
-let a = !1,
-    c = null;
-function f() {
-    return a
+var i = n(124499),
+    o = n(553731),
+    a = n(712982);
+n(87391);
+let _ = !1,
+    s = null;
+function c() {
+    return _
         ? Promise.resolve()
-        : (c ??= (async function () {
+        : (s ??= (async function () {
               var e;
               return (
                   (e = await (async function () {
-                      return (r || (r = await (0, _.i)()), r);
+                      return (r || (r = await (0, i.i)()), r);
                   })()),
-                  (0, o.Ay)({ module_or_path: e })
+                  (0, a.Ay)({ module_or_path: e })
               );
           })().then(
               () => {
-                  a = !0;
+                  _ = !0;
               },
               (e) => {
-                  throw ((c = null), e);
+                  throw ((s = null), e);
               },
           ));
 }
 function u() {
-    if (a) return;
-    let e = (r || (r = (0, i.J)()), r);
+    if (_) return;
+    let e = (r || (r = (0, o.J)()), r);
     if (!e)
         throw Error(
             "@discord/markdown-wasm is not initialised. Await init() once before parsing, or hand already-compiled wasm to initSync().",
         );
-    ((0, o.QR)({ module: e }), (a = !0));
+    ((0, a.QR)({ module: e }), (_ = !0));
 }
-function b(e, n) {
-    return (u(), (0, o.qg)(e, n));
+function l(e, t) {
+    return (u(), (0, a.qg)(e, t));
 }
-function s(e, n) {
-    return (u(), (0, o.IS)(e, n));
+function f(e, t) {
+    return (u(), (0, a.IS)(e, t));
 }
