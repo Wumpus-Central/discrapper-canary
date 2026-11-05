@@ -174,7 +174,9 @@
 }
 
 .scroller_7XCsmI {
-    max-height: 30vh
+    margin: calc(var(--space-4)*-1);
+    max-height: 30vh;
+    padding: var(--space-4)
 }
 
 .searchInputContainer_JVBo8P {
@@ -247,4 +249,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=fd688fcff2a617ec.css.map*/
+/*# sourceMappingURL=2a7458b6d5f2ae1e.css.map*/
