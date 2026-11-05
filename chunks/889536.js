@@ -1,6 +1,6 @@
 e.d(n, { default: () => tl });
-var a = e(477900),
-    i = e(582128),
+var i = e(477900),
+    a = e(582128),
     r = e(189213),
     l = e(331322),
     s = e(534514),
@@ -23,9 +23,9 @@ var p = e(765178),
     A = e(121894);
 let N = (0, I.v)(() => ({}));
 function E(t, n, e) {
-    let a = N.getState();
+    let i = N.getState();
     (0, A.r)(() => {
-        N.setState({ ...a, [t]: { ...a[t], [n]: e } });
+        N.setState({ ...i, [t]: { ...i[t], [n]: e } });
     });
 }
 var v = e(620632),
@@ -37,12 +37,12 @@ var v = e(620632),
 let S = {
     async createInvite(t, n, e) {
         try {
-            let { body: a } = await v.Bo.post({
+            let { body: i } = await v.Bo.post({
                 url: y.Rsh.GAME_ORGANIZATION_INVITES(t, n),
                 body: { target_user_id: e },
                 rejectWithError: !0,
             });
-            return a.code;
+            return i.code;
         } catch (t) {
             throw new O.A(t);
         }
@@ -94,9 +94,9 @@ class U extends d.Ay.Store {
 let V = new U(M.h, {
     INVITABLE_GAME_ORGANIZATIONS_FETCH_SUCCESS: function (t) {
         let { guildIds: n, gameOrganizations: e } = t,
-            a = y.fic.INVITABLE_GAME_ORGANIZATIONS(n);
-        if (null == a) return !1;
-        ((L = e.map($)), k.set(a, L));
+            i = y.fic.INVITABLE_GAME_ORGANIZATIONS(n);
+        if (null == i) return !1;
+        ((L = e.map($)), k.set(i, L));
     },
     LOGOUT: function () {
         if (null == L) return !1;
@@ -125,8 +125,8 @@ var K = e(646514),
     Y = e(821609);
 function tt(t) {
     let { sendState: n, onInvite: e, nameId: r } = t,
-        l = i.useId();
-    return (0, a.jsx)(Y.$, {
+        l = a.useId();
+    return (0, i.jsx)(Y.$, {
         id: l,
         variant: "secondary",
         size: "sm",
@@ -147,84 +147,81 @@ function tt(t) {
     });
 }
 var tn = e(752222),
-    te = e(428314);
-let ta = "/assets/61b811529d456f5f.svg",
-    ti = i.memo(function (t) {
-        let { organization: n, userId: e, onInvite: r } = t,
-            s = i.useId(),
-            c = f(m(n)),
-            u = N((t) => t[c]?.[e] ?? null),
-            d = i.useCallback(() => r(n), [r, n]),
-            g = i.useRef(null),
-            p = u === _.iu.SENT,
-            I = i.useRef(p);
-        i.useEffect(() => {
-            let t = document.activeElement;
-            (p &&
-                !I.current &&
-                (null == t || t === document.body || g.current?.contains(t) === !0) &&
-                g.current?.focus(),
-                (I.current = p));
-        }, [p]);
-        let { memberCount: A, maxMembers: E } = n;
-        return (0, a.jsxs)("div", {
-            ref: g,
-            tabIndex: -1,
-            className: te.nM,
-            children: [
-                (0, a.jsx)("img", { src: n.iconUrl ?? ta, alt: "", className: te.HE }),
-                (0, a.jsxs)(l.B, {
-                    gap: 0,
-                    className: te.qg,
-                    children: [
-                        (0, a.jsx)(o.E, {
-                            id: s,
-                            variant: "body-md/medium",
-                            color: "text-strong",
-                            lineClamp: 1,
-                            children: n.name,
-                        }),
-                        null != A && null != E
-                            ? (0, a.jsxs)(l.B, {
-                                  direction: "horizontal",
-                                  gap: 4,
-                                  align: "center",
-                                  children: [
-                                      (0, a.jsx)(Q.n, { size: "xs", color: K.A.colors.ICON_SUBTLE }),
-                                      (0, a.jsx)(o.E, {
-                                          variant: "body-xs/normal",
-                                          color: "text-subtle",
-                                          children: j.intl.formatToPlainString(tn.default.VuENGl, { count: A, max: E }),
-                                      }),
-                                  ],
-                              })
-                            : null,
-                    ],
-                }),
-                (0, a.jsx)(tt, { sendState: u, onInvite: d, nameId: s }),
-            ],
-        });
+    te = e(428314),
+    ti = e(598414);
+let ta = a.memo(function (t) {
+    let { organization: n, userId: e, onInvite: r } = t,
+        s = a.useId(),
+        c = f(m(n)),
+        u = N((t) => t[c]?.[e] ?? null),
+        d = a.useCallback(() => r(n), [r, n]),
+        g = a.useRef(null),
+        p = u === _.iu.SENT,
+        I = a.useRef(p);
+    a.useEffect(() => {
+        let t = document.activeElement;
+        (p && !I.current && (null == t || t === document.body || g.current?.contains(t) === !0) && g.current?.focus(),
+            (I.current = p));
+    }, [p]);
+    let { memberCount: A, maxMembers: E } = n;
+    return (0, i.jsxs)("div", {
+        ref: g,
+        tabIndex: -1,
+        className: te.nM,
+        children: [
+            (0, i.jsx)("img", { src: n.iconUrl ?? ti, alt: "", className: te.HE }),
+            (0, i.jsxs)(l.B, {
+                gap: 0,
+                className: te.qg,
+                children: [
+                    (0, i.jsx)(o.E, {
+                        id: s,
+                        variant: "body-md/medium",
+                        color: "text-strong",
+                        lineClamp: 1,
+                        children: n.name,
+                    }),
+                    null != A && null != E
+                        ? (0, i.jsxs)(l.B, {
+                              direction: "horizontal",
+                              gap: 4,
+                              align: "center",
+                              children: [
+                                  (0, i.jsx)(Q.n, { size: "xs", color: K.A.colors.ICON_SUBTLE }),
+                                  (0, i.jsx)(o.E, {
+                                      variant: "body-xs/normal",
+                                      color: "text-subtle",
+                                      children: j.intl.formatToPlainString(tn.default.VuENGl, { count: A, max: E }),
+                                  }),
+                              ],
+                          })
+                        : null,
+                ],
+            }),
+            (0, i.jsx)(tt, { sendState: u, onInvite: d, nameId: s }),
+        ],
     });
+});
 function tr(t) {
-    let { group: n, userId: e, onInvite: i } = t,
+    let { group: n, userId: e, onInvite: a } = t,
         { application: r } = n;
-    return (0, a.jsxs)(l.B, {
+    return (0, i.jsxs)(l.B, {
         gap: 8,
         children: [
-            (0, a.jsxs)(l.B, {
+            (0, i.jsxs)(l.B, {
                 direction: "horizontal",
                 gap: 4,
                 align: "center",
                 children: [
-                    (0, a.jsx)("img", { src: r.iconUrl ?? ta, alt: "", className: te.Gt }),
-                    (0, a.jsx)(s.D, { variant: "body-sm/medium", color: "text-subtle", children: r.name }),
+                    (0, i.jsx)("img", { src: r.iconUrl ?? ti, alt: "", className: te.Gt }),
+                    (0, i.jsx)(s.D, { variant: "body-sm/medium", color: "text-subtle", children: r.name }),
                 ],
             }),
-            (0, a.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: te.Nr,
                 children: n.gameOrganizations.map((t) => {
                     let { organization: n } = t;
-                    return (0, a.jsx)(ti, { organization: n, userId: e, onInvite: i }, n.id);
+                    return (0, i.jsx)(ta, { organization: n, userId: e, onInvite: a }, n.id);
                 }),
             }),
         ],
@@ -241,7 +238,7 @@ function tl(t) {
         } = (function (t) {
             let n,
                 e = (0, d.bG)([g.default], () => g.default.getUser(t)),
-                { data: a, error: r } = F(
+                { data: i, error: r } = F(
                     ((n = (0, X.E9)("game_organization_invite_picker")),
                     (0, d.yK)(
                         [J.A, D.Ay, H.A, W.A],
@@ -255,9 +252,9 @@ function tl(t) {
                         [n],
                     )),
                 ),
-                l = i.useMemo(
+                l = a.useMemo(
                     () =>
-                        null != a
+                        null != i
                             ? (function (t) {
                                   let n = new Map();
                                   for (let e of t) {
@@ -270,28 +267,28 @@ function tl(t) {
                                             });
                                   }
                                   return Array.from(n.values());
-                              })(a)
+                              })(i)
                             : null,
-                    [a],
+                    [i],
                 ),
-                s = i.useCallback(
+                s = a.useCallback(
                     (t) => {
                         if (null == e) return;
                         let n = m(t);
-                        !(async function (t, n, e, a) {
+                        !(async function (t, n, e, i) {
                             (E(t, e.id, _.iu.SENDING), p.O.announce(j.intl.string(j.t.kC3ZRG)));
                             try {
-                                let a = `${t}:${e.id}`,
-                                    i = T.get(a);
-                                (null == i &&
-                                    ((i = await S.createInvite(n.applicationId, n.gameOrganizationId, e.id)),
-                                    T.set(a, i)),
-                                    await S.sendInvite(e.id, i),
-                                    T.delete(a),
+                                let i = `${t}:${e.id}`,
+                                    a = T.get(i);
+                                (null == a &&
+                                    ((a = await S.createInvite(n.applicationId, n.gameOrganizationId, e.id)),
+                                    T.set(i, a)),
+                                    await S.sendInvite(e.id, a),
+                                    T.delete(i),
                                     E(t, e.id, _.iu.SENT),
                                     p.O.announce(j.intl.string(j.t.PuLLzP)));
                             } catch {
-                                (E(t, e.id, _.iu.ERROR), p.O.announce(j.intl.string(j.t.fEptJP)), a());
+                                (E(t, e.id, _.iu.ERROR), p.O.announce(j.intl.string(j.t.fEptJP)), i());
                             }
                         })(f(n), n, e, z);
                     },
@@ -303,25 +300,25 @@ function tl(t) {
         (n =
             null == A
                 ? null != N
-                    ? (0, a.jsx)(o.E, {
+                    ? (0, i.jsx)(o.E, {
                           variant: "body-sm/medium",
                           color: "text-muted",
                           className: te.h5,
                           children: j.intl.string(j.t.fEptJP),
                       })
-                    : (0, a.jsx)(c.y, { className: te.h5 })
+                    : (0, i.jsx)(c.y, { className: te.h5 })
                 : 0 === A.length
-                  ? (0, a.jsx)(o.E, {
+                  ? (0, i.jsx)(o.E, {
                         variant: "body-sm/medium",
                         color: "text-muted",
                         className: te.h5,
                         children: j.intl.string(tn.default.v7A3HG),
                     })
-                  : (0, a.jsx)(l.B, {
+                  : (0, i.jsx)(l.B, {
                         gap: 24,
-                        children: A.map((t) => (0, a.jsx)(tr, { group: t, userId: e, onInvite: v }, t.application.id)),
+                        children: A.map((t) => (0, i.jsx)(tr, { group: t, userId: e, onInvite: v }, t.application.id)),
                     })),
-        (0, a.jsx)(r.a, {
+        (0, i.jsx)(r.a, {
             ...s,
             title: j.intl.string(tn.default["wkSug+"]),
             subtitle: j.intl.formatToPlainString(tn.default.txHfjn, { username: u.Ay.getName(I) ?? "", days: 7 }),

@@ -300,8 +300,8 @@ function eL(e) {
                           return (
                               (e = l.id),
                               void (0, ec.mM)(async () => {
-                                  let { default: t } = await Promise.all([n.e(740775), n.e(282445)]).then(
-                                      n.bind(n, 813535),
+                                  let { default: t } = await Promise.all([n.e(740775), n.e(787139), n.e(46937)]).then(
+                                      n.bind(n, 889536),
                                   );
                                   return (n) => (0, r.jsx)(t, { userId: e, ...n });
                               })

@@ -195,6 +195,7 @@
 .header_Yg_nqe {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-12);
     min-height: var(--size-32)
 }
@@ -203,11 +204,17 @@
     background-color: var(--card-background-default);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    overflow: hidden
+    overflow-x: auto
+}
+
+.tableContainer_Yg_nqe:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: -2px
 }
 
 .table_Yg_nqe {
     border-collapse: collapse;
+    min-inline-size: 960px;
     table-layout: fixed;
     width: 100%
 }
@@ -217,7 +224,7 @@
 }
 
 .gameColumn_Yg_nqe {
-    width: 36%
+    width: 28%
 }
 
 .playsColumn_Yg_nqe {
@@ -225,7 +232,7 @@
 }
 
 .categoryColumn_Yg_nqe {
-    width: 20%
+    width: 18%
 }
 
 .columnHeader_Yg_nqe {
@@ -242,10 +249,20 @@
     vertical-align: middle
 }
 
+.cell_Yg_nqe:first-child,
+.columnHeader_Yg_nqe:first-child {
+    text-align: center
+}
+
 .cellContent_Yg_nqe {
     align-items: center;
     display: flex;
     gap: var(--space-12);
+    min-width: 0
+}
+
+.gameNameContainer_Yg_nqe {
+    flex: 1;
     min-width: 0
 }
 
@@ -260,6 +277,7 @@
 }
 
 .rank_Yg_nqe {
+    margin-inline: auto;
     width: var(--space-16)
 }
 
@@ -267,7 +285,7 @@
     aspect-ratio: 3/4;
     border-radius: var(--radius-xs);
     flex-shrink: 0;
-    width: 36px
+    width: calc(var(--space-32) + var(--space-4))
 }
 
 .gameName_Yg_nqe {
@@ -317,6 +335,21 @@
     width: 72px
 }
 
+.serverHeading_Yg_nqe {
+    gap: var(--space-4)
+}
+
+.serverHeading_Yg_nqe,
+.status_Yg_nqe {
+    align-items: center;
+    display: flex
+}
+
+.status_Yg_nqe {
+    justify-content: center;
+    padding-block: var(--space-24)
+}
+
 .container_hFJ_PX {
     display: flex;
     flex: 1;
@@ -352,4 +385,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=fedd6d9b6159a699.css.map*/
+/*# sourceMappingURL=fc99ee9edc32c23b.css.map*/

@@ -97,6 +97,8 @@ var i,
         (r.GuildSpacePopularGames = "guild_space_popular_games"),
         (r.GuildSpaceLeaderboard = "guild_space_leaderboard"),
         (r.GlobalDiscoveryGamesBecauseYouPlayed = "global_discovery_games_because_you_played"),
+        (r.GlobalDiscoveryGamesTrendingShelf = "global_discovery_games_trending_shelf"),
+        (r.GlobalDiscoveryGamesTrendingTab = "global_discovery_games_trending_tab"),
         r),
     E = (((a = {}).FullProfile = "full_profile"), (a.MiniProfile = "mini_profile"), a);
 n.d(

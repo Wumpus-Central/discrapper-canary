@@ -10,6 +10,7 @@ e.exports = {
     nM: "row_Yg_nqe",
     Hn: "cell_Yg_nqe",
     AY: "cellContent_Yg_nqe",
+    t1: "gameNameContainer_Yg_nqe",
     Qq: "text_Yg_nqe",
     Tm: "rank_Yg_nqe",
     xn: "thumbnail_Yg_nqe",
@@ -22,4 +23,6 @@ e.exports = {
     L5: "serverName_Yg_nqe",
     Z4: "serverOnline_Yg_nqe",
     x6: "button_Yg_nqe",
+    oH: "serverHeading_Yg_nqe",
+    h5: "status_Yg_nqe",
 };

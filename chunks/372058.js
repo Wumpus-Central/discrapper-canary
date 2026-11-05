@@ -11,5 +11,8 @@ n.d(
         E9: function (e) {
             return i.useConfig({ location: e }).enabled;
         },
+        bz: function (e) {
+            return i.getConfig({ location: e }).enabled;
+        },
     },
 );
