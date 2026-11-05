@@ -4,7 +4,7 @@ var i = n(439372),
     a = n(927813),
     s = n(723702),
     l = n(856383),
-    o = n(7891),
+    o = n(343559),
     d = n(859703),
     c = n(945810);
 let u = { questFetchJitterMs: 5 * a.A.Millis.SECOND, questHomeHeroJitterMs: 5 * a.A.Millis.SECOND },
@@ -18,13 +18,13 @@ let u = { questFetchJitterMs: 5 * a.A.Millis.SECOND, questHomeHeroJitterMs: 5 * 
     });
 var E = n(971276);
 let A = a.A.Millis.DAY,
-    h = a.A.Millis.HOUR,
-    f = 5 * a.A.Millis.MINUTE,
+    f = a.A.Millis.HOUR,
+    h = 5 * a.A.Millis.MINUTE,
     I = 30 * a.A.Millis.MINUTE,
     p = 5 * a.A.Millis.MINUTE,
     m = 12 * a.A.Millis.HOUR,
-    g = 5 * a.A.Millis.MINUTE;
-class T extends i.A {
+    T = 5 * a.A.Millis.MINUTE;
+class g extends i.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
     initialQuestHomeHeroFetchTimerId = null;
@@ -66,7 +66,7 @@ class T extends i.A {
             (this.recurringFetchTimerId = window.setInterval(async () => {
                 if (
                     (Date.now() - this.lastFetchAttemptedAt > A && this._fetch("post_connect_recurring"),
-                    (0, E.s)() && Date.now() - this.lastQuestHomeHeroFetchAttemptedAt >= h - f)
+                    (0, E.s)() && Date.now() - this.lastQuestHomeHeroFetchAttemptedAt >= f - h)
                 )
                     try {
                         await (0, o.Yf)();
@@ -85,7 +85,7 @@ class T extends i.A {
             r = Math.floor(Math.random() * n);
         if (
             ((this.initialFetchTimerId = window.setTimeout(() => {
-                Date.now() - d.A.lastFetchedCurrentQuests <= g || this._fetch("post_connect_initial");
+                Date.now() - d.A.lastFetchedCurrentQuests <= T || this._fetch("post_connect_initial");
             }, r)),
             e)
         ) {
@@ -133,4 +133,4 @@ class T extends i.A {
         LOGOUT: this.handleLogout,
     };
 }
-let S = new T();
+let S = new g();

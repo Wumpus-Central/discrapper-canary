@@ -1,4 +1,4 @@
-(n.d(t, { I: () => T }), n(323874), n(14289), n(35956));
+(n.d(t, { I: () => g }), n(323874), n(14289), n(35956));
 var i = n(582128),
     r = n(806163),
     a = n(323889),
@@ -53,7 +53,7 @@ class A extends s.Ay.PersistedStore {
         return u.get(e)?.has(t) ?? !1;
     }
 }
-let h = new A(l.h, {
+let f = new A(l.h, {
     AD_CONTENT_MARK_SEEN: function (e) {
         let t = _(e.adCreativeType),
             n = !1;
@@ -68,33 +68,33 @@ let h = new A(l.h, {
         return n;
     },
 });
-var f = n(7891),
+var h = n(343559),
     I = n(61387),
     p = n(201805);
 function m(e) {
     return null != e && "" !== e;
 }
-function g(e) {
+function T(e) {
     return m(e?.start) && m(e?.end);
 }
-function T() {
+function g() {
     let e = (0, p.T2)(),
         t = e?.id,
         { search: n } = (0, r.zy)(),
         l = i.useMemo(() => new URLSearchParams(n).get(I.L1.AD_CREATIVE_IDS), [n]),
         o = i.useMemo(() => null != l && null != t && l.includes(t), [l, t]),
-        d = (0, s.bG)([h], () => null != t && h.hasSeen(a.p.QUEST_HOME_HERO, t), [t]),
+        d = (0, s.bG)([f], () => null != t && f.hasSeen(a.p.QUEST_HOME_HERO, t), [t]),
         c = (function (e) {
             if (null == e) return !1;
             let t = m(e.tooltipTitle) && m(e.tooltipSubtitle);
-            return m(e.image) || g(e.linearGradient) || g(e.radialGradient) || t;
+            return m(e.image) || T(e.linearGradient) || T(e.radialGradient) || t;
         })(e?.questHomeEntrypoint),
         u = c && (o || !d);
     return {
         shouldShowQuestHomeHeroContent: c,
         shouldShowQuestHomeHeroBadge: u,
         dismissQuestHomeHeroContent: i.useCallback(() => {
-            o || (null != t && (0, f.zh)(a.p.QUEST_HOME_HERO, [t]));
+            o || (null != t && (0, h.zh)(a.p.QUEST_HOME_HERO, [t]));
         }, [t, o]),
         questHomeHero: e,
     };
