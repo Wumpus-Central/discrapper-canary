@@ -51,6 +51,13 @@ n.d(
             }
             return l;
         },
+        Qr: function (e, t) {
+            for (let n = e.length - 1; n >= 0; n--) {
+                let l = e[n];
+                if (l?.secretRequest != null && "open" === t.get(l.render_id)) return l;
+            }
+            return null;
+        },
         bB: function (e, t) {
             let [n, r] = l.useState(() => u(e, t));
             return n.cardId !== e || (null == n.status && "pending" !== t)

@@ -18576,7 +18576,11 @@ function pH(e, t) {
     let a = {};
     for (let [n, l] of Object.entries(t)) {
         let t = e[n];
-        if (e3().isPlainObject(l)) {
+        if (e3().isPlainObject(l) && e3().isEmpty(l)) {
+            if (!e3().isPlainObject(t)) continue;
+            let e = e3().pickBy(t, (e) => "number" == typeof e && Number.isFinite(e));
+            e3().isEmpty(e) || (a[n] = e);
+        } else if (e3().isPlainObject(l)) {
             let e = pH(t, l);
             e3().isEmpty(e) || (a[n] = e);
         } else typeof t == typeof l && ("number" != typeof t || Number.isFinite(t)) && (a[n] = t);
@@ -18592,7 +18596,7 @@ function pK(e, t) {
         let [l, i] = n,
             s = e3().get(e, l),
             r = e3().get(t, l);
-        return !e3().isPlainObject(i) || ["x", "low", "absorption"].some((e) => e in i)
+        return !e3().isPlainObject(i) || e3().isEmpty(i) || ["x", "low", "absorption"].some((e) => e in i)
             ? a + +!e3().isEqual(s, r)
             : a + pK(s ?? {}, r ?? {}, i);
     }, 0);

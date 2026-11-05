@@ -1454,7 +1454,7 @@ function tJ(e) {
               children: [
                   null != t &&
                       (0, n.jsx)(p.D, {
-                          variant: "heading-xs/semibold",
+                          variant: "heading-sm/semibold",
                           color: "text-default",
                           className: tq.w,
                           children: t,
