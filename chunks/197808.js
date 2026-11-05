@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(108959),
     E = n(449571),
     A = n(628983),
-    h = n(71855),
-    f = n(91242),
+    f = n(71855),
+    h = n(91242),
     I = n(326843),
     p = n(210954),
     m = n(457864),
-    g = n(699426),
-    T = n(853757),
+    T = n(699426),
+    g = n(853757),
     S = n(869146),
     N = n(964404),
     C = n(806911),
@@ -46,7 +46,7 @@ let w = (0, a.Fe)({
                 n.e(505866),
                 n.e(291329),
                 n.e(64769),
-                n.e(329172),
+                n.e(506933),
                 n.e(992956),
                 n.e(880150),
                 n.e(490743),
@@ -170,13 +170,13 @@ class F extends r.PureComponent {
                 activityPIPWindow: _,
                 chatOpen: E,
                 callChatSidebarWidth: A,
-                showConjureAppPictureInPictures: h,
+                showConjureAppPictureInPictures: f,
             } = this.props,
-            { selectedPIPWindowHeight: f } = this.state,
+            { selectedPIPWindowHeight: h } = this.state,
             I = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
             p = "" !== I ? parseInt(I, 10) : 240,
-            T = c.width - p - (E ? A : 0);
-        return (0, i.jsxs)(g.ic, {
+            g = c.width - p - (E ? A : 0);
+        return (0, i.jsxs)(T.ic, {
             children: [
                 (0, i.jsx)(m.Ay, {
                     pictureInPictureComponents: G,
@@ -194,16 +194,16 @@ class F extends r.PureComponent {
                     resizeConfig: x,
                     getDockedRectPositionY: d,
                 }),
-                h
+                f
                     ? (0, i.jsx)(w, {
                           maxX: r,
                           maxY: a,
                           appContext: l,
                           floatingPictureInPicture:
-                              null != e && !0 !== e.hidden && null == s ? { position: e.position, height: f } : null,
+                              null != e && !0 !== e.hidden && null == s ? { position: e.position, height: h } : null,
                       })
                     : null,
-                (0, i.jsx)(g.Md, { className: !u && null != _ && E && T < 550 ? U.ah : void 0 }),
+                (0, i.jsx)(T.Md, { className: !u && null != _ && E && g < 550 ? U.ah : void 0 }),
             ],
         });
     }
@@ -217,7 +217,7 @@ class F extends r.PureComponent {
         this.setState({ selectedPIPWindowHeight: e });
     };
 }
-let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e) => {
+let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, h.A], (e) => {
     let t,
         { popoutWindowKey: n, popoutWindowHasTitleBar: i = !1, showConjureAppPictureInPictures: r = !1 } = e,
         a = S.A.getWindowOpen(b.MLl.CHANNEL_CALL_POPOUT),
@@ -226,9 +226,9 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         E = (0, u.H)(o?.location),
         p = null != o && !(0, _.A)(E, O.A, L.Ay),
         m = d.Ay.getActivityPanelMode(),
-        g = p && m === v.Gd.PANEL,
+        T = p && m === v.Gd.PANEL,
         C = null != o && null != E && A.A.getSelectedParticipant(E)?.type === P.lp.ACTIVITY,
-        U = (0, M.ny)(f.A.getMainFrame()),
+        U = (0, M.ny)(h.A.getMainFrame()),
         w = U?.data.layoutMode === M.y0.FOCUSED,
         G = null != n,
         x = G ? S.A.getWindow(n) : null,
@@ -240,7 +240,7 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         (null != o && l) || (G && p) || (G && null != U)
             ? null
             : G || !a || p || null != U
-              ? null != o && g
+              ? null != o && T
                   ? (R.A.pipActivityWindow ?? R.A.pipVideoWindow)
                   : null != U && w
                     ? (R.A.pipFrameWindow ?? R.A.pipVideoWindow ?? R.A.pipActivityWindow)
@@ -255,9 +255,9 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         X = L.Ay.getVoiceChannelId(),
         z = L.Ay.getChannelId() === X,
         q = null != X && A.A.getChatOpen(X),
-        Z = g || C,
-        Q = Z && null != o && (0, c.q)(o.applicationId),
-        J = !Z && null != t && z;
+        Q = T || C,
+        Z = Q && null != o && (0, c.q)(o.applicationId),
+        J = !Q && null != t && z;
     return {
         selectedPIPWindow: t,
         pipWindows: 0 === K.length ? k : K,
@@ -266,17 +266,17 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, f.A], (e)
         maxY: B.height,
         dockedRect: R.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {
-            return G && (0, T.q)({ withTitleBar: i, isFullScreen: F }) ? e - (0, h.LI)({ isPopoutWindow: G }) : e;
+            return G && (0, g.q)({ withTitleBar: i, isFullScreen: F }) ? e - (0, f.LI)({ isPopoutWindow: G }) : e;
         },
         appContext: V,
-        roundCorners: !Q,
+        roundCorners: !Z,
         windowSize: B,
         inPopoutWindow: G,
         activityPIPWindow: Y,
         chatOpen: q,
         callChatSidebarWidth: $,
         showConjureAppPictureInPictures:
-            r && f.A.getAllFrames().some((e) => e.surface.type === s.U.APP_CHANNEL && (0, I.A)(e, N.Ay)),
+            r && h.A.getAllFrames().some((e) => e.surface.type === s.U.APP_CHANNEL && (0, I.A)(e, N.Ay)),
     };
 })(F);
 n.d(t, {}, { A: B });

@@ -1,0 +1,81 @@
+.krispTesterRow_qsJZ7C {
+    margin-bottom: var(--space-8)
+}
+
+.innerPanel_qsJZ7C {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16)
+}
+
+.container_qpHMhc {
+    gap: var(--space-24);
+    padding: var(--space-16)
+}
+
+.container_qpHMhc,
+.row_qpHMhc {
+    display: flex;
+    flex-direction: column
+}
+
+.row_qpHMhc {
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-inline-start: 3px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.overridden_qpHMhc {
+    border-inline-start-color: var(--control-brand-foreground)
+}
+
+.toggleRow_qpHMhc {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-12)
+}
+
+.toggle_qpHMhc {
+    flex: 1;
+    min-width: 0
+}
+
+.rowHeader_qpHMhc {
+    align-items: baseline;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.rowLabel_qpHMhc {
+    flex: 1;
+    min-width: 0
+}
+
+.reset_qpHMhc {
+    flex-shrink: 0
+}
+
+.resetHidden_qpHMhc {
+    visibility: hidden
+}
+
+.slider_qpHMhc {
+    margin-top: var(--space-4)
+}
+
+.numberGrid_qpHMhc {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr))
+}
+
+.profileSelect_qpHMhc {
+    flex: 1;
+    min-width: 200px
+}
+
+/*# sourceMappingURL=15a0ef554bc2b647.css.map*/

@@ -11,13 +11,13 @@ var r = n(646865),
     _ = n(447404),
     E = n(271195),
     A = n(128286),
-    h = n(625180),
-    f = n(262579),
+    f = n(625180),
+    h = n(262579),
     I = n(241696),
     p = n(746726),
     m = n(165610),
-    g = n(652215),
-    T = n(977747),
+    T = n(652215),
+    g = n(977747),
     S = n(967481);
 n.d(
     t,
@@ -27,14 +27,14 @@ n.d(
             let { frame: t, idle: N, onMouseDown: C, onMouseMove: O, onMouseLeave: R } = e,
                 L = (0, o.h)(t.applicationId),
                 y = (0, p.A)(t),
-                D = (0, u.Us)() === g.BRT.POPOUT,
+                D = (0, u.Us)() === T.BRT.POPOUT,
                 { parentAnalyticsLocation: b } = (0, l.Ay)();
             function v() {
                 (y.isShownInCall &&
                     null != y.channelId &&
                     null != y.participantId &&
                     (0, a.A)(y.channelId, y.participantId),
-                    h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: m.y0.FOCUSED }));
+                    f.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: m.y0.FOCUSED }));
             }
             return (0, i.jsxs)("div", {
                 className: S._v,
@@ -63,7 +63,7 @@ n.d(
                                     n.e(505866),
                                     n.e(291329),
                                     n.e(64769),
-                                    n.e(329172),
+                                    n.e(506933),
                                     n.e(992956),
                                     n.e(880150),
                                     n.e(490743),
@@ -169,15 +169,15 @@ n.d(
                                 D || (0, r.f)()
                                     ? null
                                     : (0, i.jsx)(A.A, {
-                                          className: T.BD,
+                                          className: g.BD,
                                           popoutOpen: !1,
                                           onOpenPopout: function () {
                                               ((0, d.XJ)(b, d.OP.POPOUT, !0),
                                                   (0, s.A)({ onConfirm: () => (0, I.A)(t.id) }));
                                           },
-                                          onClosePopout: g.FXj,
+                                          onClosePopout: T.FXj,
                                       }),
-                                (0, i.jsx)(f.A, { frameId: t.id, className: T.BD }),
+                                (0, i.jsx)(h.A, { frameId: t.id, className: g.BD }),
                             ],
                         }),
                     }),

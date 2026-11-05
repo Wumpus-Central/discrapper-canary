@@ -23,5 +23,6 @@ var i,
         (i.GAME_SERVER_SHARE = "GAME_SERVER_SHARE"),
         (i.USER_PROFILE = "USER_PROFILE"),
         (i.GAME_ORGANIZATION_INVITE = "GAME_ORGANIZATION_INVITE"),
+        (i.CONJURE_PROJECT = "CONJURE_PROJECT"),
         i);
 n.d(t, {}, { I: r });

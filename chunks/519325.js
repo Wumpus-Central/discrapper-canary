@@ -18,13 +18,13 @@ function u(e, t) {
 var _ = n(27184),
     E = n(251363),
     A = n(192888),
-    h = n(621466);
-let f = !1;
-(document.addEventListener("compositionstart", () => (f = !0), !0),
-    document.addEventListener("compositionend", () => (f = !1), !0));
+    f = n(621466);
+let h = !1;
+(document.addEventListener("compositionstart", () => (h = !0), !0),
+    document.addEventListener("compositionend", () => (h = !1), !0));
 let I = null;
 function p(e) {
-    if ((0, h.vq)(e, HTMLInputElement) || (0, h.vq)(e, HTMLTextAreaElement)) {
+    if ((0, f.vq)(e, HTMLInputElement) || (0, f.vq)(e, HTMLTextAreaElement)) {
         let { selectionStart: t, selectionEnd: n, selectionDirection: i } = e;
         return null == t || null == n ? null : () => e.setSelectionRange(t, n, i ?? void 0);
     }
@@ -43,16 +43,16 @@ function m(e) {
             (function e(t) {
                 let n = document.activeElement;
                 if (t.element.isConnected && n !== t.element && (n === t.iframe || n === document.body)) {
-                    if (f)
+                    if (h)
                         return void document.addEventListener("compositionend", () => e(t), { capture: !0, once: !0 });
                     (t.element.focus({ preventScroll: !0 }), t.restoreSelection?.());
                 }
             })(e));
 }
-function g() {
+function T() {
     null != I && ((I.released = !0), 0 === I.active && m(I));
 }
-var T = n(853555);
+var g = n(853555);
 (n(323874), n(14289), n(35956));
 var S = n(539197),
     N = n(873715);
@@ -164,7 +164,7 @@ async function j(e, t) {
     for (let t = Date.now() + 1500; Date.now() < t; await B(50)) {
         var a, s;
         let t =
-            (a = n = (0, T.UJ)(e) ?? n).isConnected && a.getClientRects().length > 0 && a.clientWidth > 0
+            (a = n = (0, g.UJ)(e) ?? n).isConnected && a.getClientRects().length > 0 && a.clientWidth > 0
                 ? { width: a.clientWidth, height: a.clientHeight }
                 : null;
         if (null == t) continue;
@@ -229,14 +229,14 @@ let K = (function (e) {
         drain: (e) => t.get(e)?.drain() ?? [],
     };
 })((e) => {
-    let t = (0, T.UJ)(e);
+    let t = (0, g.UJ)(e);
     return null == t
         ? null
         : { identity: (0, M.B0)(t), dismiss: () => (0, M.op)(t), open: () => (0, M._q)(t, { beneathBatches: !0 }) };
 });
 (0, c.h2)((e) => {
-    (P(e), g());
-    let t = (0, T.UJ)(e);
+    (P(e), T());
+    let t = (0, g.UJ)(e);
     null != t &&
         (0, A.W)(
             t,
@@ -290,7 +290,7 @@ let $ = {
     },
     relayPreviewCapture: async function (e, t, i) {
         let { probe: r, spec: a, build: s, onAccepted: l, resolveUploadUrl: o } = i;
-        if (!0 === r) return { status: (0, T.rQ)(e) ? "accepted" : "unavailable" };
+        if (!0 === r) return { status: (0, g.rQ)(e) ? "accepted" : "unavailable" };
         if (a?.mode === "widget") {
             let { captureConjureProfileWidget: i } = await Promise.all([
                 n.e(644013),
@@ -308,7 +308,7 @@ let $ = {
                 n.e(505866),
                 n.e(291329),
                 n.e(64769),
-                n.e(329172),
+                n.e(506933),
                 n.e(992956),
                 n.e(880150),
                 n.e(490743),
@@ -405,9 +405,9 @@ let $ = {
                 n.e(821198),
                 n.e(466322),
                 n.e(133179),
+                n.e(661008),
                 n.e(454625),
                 n.e(826240),
-                n.e(661008),
                 n.e(180657),
                 n.e(455924),
                 n.e(250478),
@@ -424,9 +424,10 @@ let $ = {
                 n.e(246969),
                 n.e(566976),
                 n.e(908081),
+                n.e(80077),
                 n.e(165211),
                 n.e(829260),
-                n.e(80077),
+                n.e(471488),
                 n.e(504098),
                 n.e(182141),
                 n.e(746479),
@@ -441,7 +442,7 @@ let $ = {
         }
         let d = (0, c.Wg)(e);
         try {
-            let n = await (0, T.o$)(e, 6e3);
+            let n = await (0, g.o$)(e, 6e3);
             if (null == n) return { status: "unavailable" };
             let i = null == l ? { uploadToken: void 0 } : await l();
             if (null == i) return { status: "unavailable" };
@@ -460,10 +461,10 @@ let $ = {
         }
     },
     relayPreviewControl: async function (e, t, n, i) {
-        if (!(0, T.rQ)(e)) return { status: "unavailable" };
+        if (!(0, g.rQ)(e)) return { status: "unavailable" };
         let r = (0, c.Wg)(e);
         try {
-            let r = await (0, T.o$)(e, 6e3);
+            let r = await (0, g.o$)(e, 6e3);
             if (null == r) return { status: "unavailable" };
             let a = await i?.();
             if (!1 === a) return { status: "unavailable" };
@@ -473,13 +474,13 @@ let $ = {
                 let i = !1,
                     r = await (async function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => null;
-                        null != I && I.iframe !== e && g();
+                        null != I && I.iframe !== e && T();
                         let i =
                             I?.iframe === e
                                 ? I
                                 : (function (e) {
                                       let t = document.activeElement;
-                                      if (!(0, h.vq)(t, HTMLElement) || t === e || t === document.body) return null;
+                                      if (!(0, f.vq)(t, HTMLElement) || t === e || t === document.body) return null;
                                       let n = {
                                           iframe: e,
                                           element: t,
@@ -494,7 +495,7 @@ let $ = {
                                           },
                                       };
                                       function i(e) {
-                                          (0, h.vq)(e.target, Node) &&
+                                          (0, f.vq)(e.target, Node) &&
                                               n.element.contains(e.target) &&
                                               (n.restoreSelection = p(n.element) ?? n.restoreSelection);
                                       }
@@ -621,8 +622,8 @@ let $ = {
         }
     },
     abortPreviewControl: function (e) {
-        (P(e), g());
-        let t = (0, T.UJ)(e);
+        (P(e), T());
+        let t = (0, g.UJ)(e);
         null != t &&
             (0, A.W)(
                 t,
@@ -637,7 +638,7 @@ let $ = {
                 if (null == D() || R.has(e)) return;
                 let t = { cancelled: !1 };
                 (R.set(e, t),
-                    (0, T.o$)(e, 6e3)
+                    (0, g.o$)(e, 6e3)
                         .then((n) => (null == n || t.cancelled ? null : b(e, n)))
                         .catch(() => {})
                         .finally(() => {
@@ -646,7 +647,7 @@ let $ = {
             })(e));
     },
     endPreviewOperation: function (e) {
-        (K.end(e), P(e), g());
+        (K.end(e), P(e), T());
     },
     releasePreviewControl: function (e) {
         (0, c.GU)(e);

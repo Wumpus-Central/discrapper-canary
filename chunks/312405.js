@@ -12,8 +12,8 @@ var n = l(477900),
     f = l(711014);
 l(951178);
 var h = l(246338),
-    v = l(73153),
-    m = l(195880),
+    m = l(73153),
+    v = l(195880),
     g = l(540665),
     k = l(472119),
     _ = l(233470),
@@ -22,7 +22,7 @@ var h = l(246338),
     C = l(792996);
 let w = " (Copy)",
     j = new Map();
-v.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
+m.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
     let { nonce: t, projectId: l, wsTicket: n } = e;
     j.get(t)?.(l, n);
 });
@@ -51,7 +51,7 @@ function M(e) {
 var P = l(858899),
     T = l(381991);
 function B(e) {
-    let { project: t, currentGuildId: l, transitionState: v, onClose: y } = e,
+    let { project: t, currentGuildId: l, transitionState: m, onClose: y } = e,
         [A, S] = i.useState(l),
         [E, I] = i.useState(""),
         [R, B] = i.useState(() => {
@@ -87,7 +87,7 @@ function B(e) {
                                             (0, g.ensureConnection)(e), (u ??= (0, b.Io)(r, e).catch(() => "rejected"))
                                         );
                                     }
-                                    let p = (0, m.m)();
+                                    let p = (0, v.m)();
                                     j.set(p, (e, t) => {
                                         (j.delete(p), (d = e), (0, k.vG)(e, t), c(e));
                                     });
@@ -163,30 +163,37 @@ function B(e) {
                 })),
             [W],
         ),
-        F = R.trim().length >= 2,
-        H = i.useCallback(async () => {
-            if (!F) return;
+        F = null != A && W.some((e) => e.id === A) ? A : (W[0]?.id ?? null),
+        H = R.trim().length >= 2,
+        J = i.useCallback(async () => {
+            if (!H || null == F) return;
             N(!0);
             let e = await (async function (e, t, l) {
                 let n = await e.confirm(t, l);
                 return null == n
                     ? null
                     : (n.ok ? (0, T.A)(n.projectId, "remix") : (0, P.P0)({ text: n.message, variant: "critical" }), n);
-            })(O, A, { name: R, prompt: E });
+            })(O, F, { name: R, prompt: E });
             if (null != e) {
                 if (e.ok) return void (await y());
                 N(!1);
             }
-        }, [O, A, R, F, E, y]);
+        }, [O, F, R, H, E, y]);
     return (0, n.jsx)(r.a, {
-        transitionState: v,
+        transitionState: m,
         onClose: y,
         title: C.intl.string(x.default["276ll6"]),
         subtitle: C.intl.formatToPlainString(x.default["QN8T+C"], { projectName: t.name }),
         size: "md",
         actions: [
             { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: y, disabled: G },
-            { text: C.intl.string(x.default["276ll6"]), variant: "primary", onClick: H, loading: G, disabled: !F },
+            {
+                text: C.intl.string(x.default["276ll6"]),
+                variant: "primary",
+                onClick: J,
+                loading: G,
+                disabled: !H || null == F,
+            },
         ],
         children: (0, n.jsxs)(u.B, {
             gap: 16,
@@ -211,7 +218,7 @@ function B(e) {
                     selectionMode: "single",
                     label: C.intl.string(x.default.cIWtCk),
                     options: z,
-                    value: A,
+                    value: F,
                     onSelectionChange: S,
                     disabled: G,
                     fullWidth: !0,

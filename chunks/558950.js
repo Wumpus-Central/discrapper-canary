@@ -11,13 +11,13 @@ var i = n(439372),
     _ = n(855986),
     E = n(927813),
     A = n(664947),
-    h = n(489452),
-    f = n(652215);
+    f = n(489452),
+    h = n(652215);
 let I = (0, _.UT)(c.A, {
-    getQueryId: f.fic.GAME_ORGANIZATION_INVITE,
+    getQueryId: h.fic.GAME_ORGANIZATION_INVITE,
     staleAfter: 5 * E.A.Seconds.MINUTE,
     failureStaleAfter: 5 * E.A.Seconds.MINUTE,
-    retryConfig: { retryableErrors: h.A },
+    retryConfig: { retryableErrors: f.A },
     get: (e) => {
         let t = c.A.getInvite(e);
         return t?.state === u.Zb.RESOLVED ? t : null;
@@ -29,8 +29,8 @@ let I = (0, _.UT)(c.A, {
 n(503406);
 var p = n(292572),
     m = n(122906),
-    g = n(128391),
-    T = n(73153),
+    T = n(128391),
+    g = n(73153),
     S = n(167189),
     N = n(254160),
     C = n(67480),
@@ -98,6 +98,7 @@ function G(e, t) {
                 case S.I.EXPERIMENT:
                 case S.I.GAME_PROFILE:
                 case S.I.GAME_SERVER_SHARE:
+                case S.I.CONJURE_PROJECT:
                     break;
                 case S.I.USER_PROFILE:
                     if ((0, v.l)("MessageCodedLinkManager")) {
@@ -153,7 +154,7 @@ function G(e, t) {
                         null != C.A.get(r) ||
                             C.A.isFetching(r) ||
                             C.A.didFetchingSkuFail(r) ||
-                            (T.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
+                            (g.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
                             b((0, y.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
@@ -178,7 +179,7 @@ function x(e) {
 }
 class k extends i.A {
     constructor() {
-        (super(), (0, g.A)(this, x));
+        (super(), (0, T.A)(this, x));
     }
 }
 let F = new k();

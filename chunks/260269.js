@@ -271,12 +271,12 @@ var ej = n(128376),
     eJ = n(807098),
     e0 = n(637706),
     e1 = n(788883),
-    e3 = n(7667);
-function e6(e) {
+    e6 = n(7667);
+function e3(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: a, targetElementRef: r, markAsDismissed: d } = e,
         { analyticsLocations: u } = (0, C.Ay)(),
         c = (0, eJ.T)(a.asset),
-        { terms: A } = (0, e3.A)(i),
+        { terms: A } = (0, e6.A)(i),
         h = l.useCallback(() => {
             d(el.i.DISMISS);
         }, [d]),
@@ -503,7 +503,7 @@ let td = l.memo(function (e) {
                     if (null == e) return i();
                     return (0, s.jsx)(to, {
                         renderPopout: (t) =>
-                            (0, s.jsx)(e6, {
+                            (0, s.jsx)(e3, {
                                 guildId: n.id,
                                 componentId: e.componentId,
                                 promotionId: e.promotionId,
@@ -792,8 +792,8 @@ var tz = n(503698),
     tJ = n(116085),
     t0 = n(597601),
     t1 = n(451394),
-    t3 = n(104171),
-    t6 = n(47167),
+    t6 = n(104171),
+    t3 = n(47167),
     t8 = n(713654),
     t7 = n(976860),
     t2 = n(129095),
@@ -878,7 +878,7 @@ let nA = l.memo(function (e) {
 });
 function nh(e) {
     let { guildEvent: t, channel: n } = e,
-        i = (0, t6.Ay)(n),
+        i = (0, t3.Ay)(n),
         l = (0, r.yK)(
             [R.Ay],
             () =>
@@ -923,7 +923,7 @@ function nE(e) {
         i = (0, no.oF)(t),
         a = null != i ? (0, na.y)(i, !0) : null,
         r = (0, no.WN)(t),
-        o = (0, t6.Ay)(r),
+        o = (0, t3.Ay)(r),
         d = (0, t8.gU)(r),
         { startTime: u, endTime: c } = (0, nr.Ay)(t),
         { startDateTimeString: A, upcomingEvent: h, diffMinutes: m } = (0, nd.CC)(u.toISOString(), c?.toISOString()),
@@ -1064,7 +1064,7 @@ function nC(e) {
 }
 function n_(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, t6.Ay)(n),
+        i = (0, t3.Ay)(n),
         l = (0, r.yK)([N.A], () => [...new Set(N.A.getMutableParticipants(n.id, p.ip.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
@@ -1132,7 +1132,7 @@ function nN(e) {
                       ? (0, s.jsxs)("div", {
                             className: tQ()(nc.fI, nc.pF),
                             children: [
-                                (0, s.jsx)(t3.Ay, { guildId: o, users: d, showUserPopout: !0, size: t3.DN.SIZE_16 }),
+                                (0, s.jsx)(t6.Ay, { guildId: o, users: d, showUserPopout: !0, size: t6.DN.SIZE_16 }),
                                 (0, s.jsx)(tn.E, {
                                     color: "none",
                                     variant: "body-xs/normal",
@@ -1467,7 +1467,7 @@ class nJ extends r.Ay.Store {
 }
 let n0 = new nJ(E.h),
     n1 = "lastHiddenChannelNotice",
-    n3 = [
+    n6 = [
         {
             type: j.n5X.GUILD_BOOSTING,
             store: nZ,
@@ -1479,7 +1479,7 @@ let n0 = new nJ(E.h),
         { type: j.n5X.QUICKSWITCHER, store: nW.A, dismissibleContentType: o.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: j.n5X.GAME_CLAIM, dismissibleContentType: o.M.GAME_CLAIM_COACHMARK },
     ],
-    n6 = n3.map((e) => e.store).filter(nt.Vq),
+    n3 = n6.map((e) => e.store).filter(nt.Vq),
     n8 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n7(e) {
     e.stopPropagation();
@@ -1513,11 +1513,11 @@ function n5(e) {
         [g, I] = (0, q.ww)(E, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
         _ = (0, r.yK)(
-            n6,
+            n3,
             () =>
                 C
                     ? []
-                    : n3
+                    : n6
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
                               return !0 === n?.channelNoticePredicate(A, h) && !n8.has(t);
@@ -1669,7 +1669,7 @@ class ir extends l.PureComponent {
                     n.e(8159),
                     n.e(24312),
                     n.e(361922),
-                    n.e(179028),
+                    n.e(65764),
                     n.e(307564),
                     n.e(597622),
                     n.e(965886),
@@ -1765,11 +1765,12 @@ class ir extends l.PureComponent {
                     n.e(528311),
                     n.e(411938),
                     n.e(653383),
-                    n.e(217991),
+                    n.e(277838),
                     n.e(9796),
                     n.e(952068),
                     n.e(768289),
                     n.e(772565),
+                    n.e(758531),
                     n.e(533781),
                     n.e(328276),
                     n.e(592e3),
@@ -1873,7 +1874,8 @@ class ir extends l.PureComponent {
                     n.e(622936),
                     n.e(45268),
                     n.e(617281),
-                    n.e(733199),
+                    n.e(164716),
+                    n.e(170282),
                     n.e(603977),
                     n.e(655327),
                     n.e(335532),
@@ -2090,6 +2092,7 @@ class ir extends l.PureComponent {
                     n.e(608032),
                     n.e(852617),
                     n.e(477970),
+                    n.e(256769),
                     n.e(125964),
                     n.e(737021),
                     n.e(775951),
@@ -2101,6 +2104,7 @@ class ir extends l.PureComponent {
                     n.e(976516),
                     n.e(400501),
                     n.e(985794),
+                    n.e(596286),
                     n.e(695358),
                     n.e(767837),
                     n.e(473384),
@@ -2113,6 +2117,7 @@ class ir extends l.PureComponent {
                     n.e(823300),
                     n.e(709371),
                     n.e(787139),
+                    n.e(330724),
                     n.e(599719),
                     n.e(764180),
                     n.e(67422),
@@ -2563,7 +2568,7 @@ function io(e) {
         w = (0, r.bG)([eX.A], () => eX.A.isUnavailable(L)),
         B = (0, r.bG)([eE.default], () => eE.default.getCurrentUser()),
         { analyticsLocations: k } = (0, C.Ay)(I.A.GUILD_HEADER),
-        X = (0, Q.Ay)((e) => n3.some((t) => e.currentlyShown.has(t.dismissibleContentType))),
+        X = (0, Q.Ay)((e) => n6.some((t) => e.currentlyShown.has(t.dismissibleContentType))),
         V = z(G),
         K = (0, m.re)(m.DX),
         F = (0, r.bG)([eK.A], () => eK.A.hasLayers()),
@@ -2713,17 +2718,17 @@ function io(e) {
         eJ = (0, ex.A)(L),
         e0 = !1 === eV && e$ && null != eJ,
         e1 = (0, eG.A)(L),
-        e3 = !1 === eV && e$ && null != e1,
-        e6 = [];
-    (J && e6.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-        Z && e6.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        ea && e6.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === eV && e6.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
-        ez && e6.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
-        eq && e6.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        ep && e6.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
+        e6 = !1 === eV && e$ && null != e1,
+        e3 = [];
+    (J && e3.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+        Z && e3.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+        ea && e3.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        !1 === eV && e3.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
+        ez && e3.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
+        eq && e3.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        ep && e3.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let e8 = (0, Q.uW)([
-            ...e6,
+            ...e3,
             o.M.GUILD_HEADER_COACHMARK,
             o.M.GAME_SERVER_NEW_GAMES_COACHMARK,
             o.M.BOOST_TO_UNLOCK_COACHMARK,
@@ -2750,7 +2755,7 @@ function io(e) {
                 markAsDismissed: l,
             };
         })(e7 ? null : L),
-        [e5, e9] = (0, q.kn)(e7 ? [] : e6, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [e5, e9] = (0, q.kn)(e7 ? [] : e3, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
         [e4, te] = (0, eD.vB)(eQ && !1 === eV && !(0, $.ai)(L) && !e7, el.m.GUILD_HEADER_TOOLTIPS),
         [tt, tn] = (0, q.D8)(
             e0 && !e7 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
@@ -2759,7 +2764,7 @@ function io(e) {
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ti, ts] = (0, q.D8)(
-            e3 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e6 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             L,
             { cooldownDurationMs: eb.mD },
             el.m.GUILD_HEADER_TOOLTIPS,

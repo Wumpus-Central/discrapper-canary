@@ -15,20 +15,21 @@ let d = new Map(),
     _ = null,
     E = new Map(),
     A = new Set(),
-    h = new Set(),
     f = new Set(),
+    h = new Set(),
     I = new Set(),
     p = !1,
     m = null,
-    g = 0,
-    T = !1,
+    T = 0,
+    g = !1,
     S = null,
     N = !1,
     C = null,
-    O = new Set(),
-    R = new Map(),
-    L = "unattempted";
-class y extends i.Ay.Store {
+    O = null,
+    R = new Set(),
+    L = new Map(),
+    y = "unattempted";
+class D extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -36,22 +37,22 @@ class y extends i.Ay.Store {
         return Array.from(d.values()).filter(l);
     }
     getRailProjects() {
-        return Array.from(d.values()).filter((e) => l(e) || f.has(e.id));
+        return Array.from(d.values()).filter((e) => l(e) || h.has(e.id));
     }
     getUnloadedParticipatingProjectIds() {
-        return Array.from(f).filter((e) => !d.has(e));
+        return Array.from(h).filter((e) => !d.has(e));
     }
     isProjectRunning(e) {
         return I.has(e);
     }
     hasFetchedOwnedProjects() {
-        return T;
+        return g;
     }
     isReconnectListPending() {
         return p;
     }
     getSessionGeneration() {
-        return g;
+        return T;
     }
     getMissingProjectsCheckedUserId() {
         return m;
@@ -61,6 +62,9 @@ class y extends i.Ay.Store {
     }
     hasFetchedProjectLimit() {
         return N;
+    }
+    getProjectLimitFailureCode() {
+        return C;
     }
     getProject(e) {
         return d.get(e) ?? null;
@@ -93,37 +97,37 @@ class y extends i.Ay.Store {
         return E.get(e) ?? null;
     }
     getProjectsFetchState() {
-        return C;
+        return O;
     }
     hasFetchedGuildProjects(e) {
-        return O.has(e);
+        return R.has(e);
     }
     getGuildProjectsFetchState(e) {
-        return R.get(e) ?? "unattempted";
+        return L.get(e) ?? "unattempted";
     }
     getOwnedProjectsFetchState() {
-        return L;
+        return y;
     }
     isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-let D = new y(r.h, {
+let b = new D(r.h, {
     LOGOUT: function () {
         if (
-            (g++,
+            (T++,
             0 === d.size &&
                 0 === c.size &&
                 0 === u.size &&
                 null == _ &&
                 0 === E.size &&
                 0 === A.size &&
-                0 === f.size &&
+                0 === h.size &&
                 0 === I.size &&
                 !p &&
                 null == m &&
-                0 === O.size &&
-                null == C &&
+                0 === R.size &&
+                null == O &&
                 null == S &&
                 !N)
         )
@@ -134,49 +138,50 @@ let D = new y(r.h, {
             (_ = null),
             E.clear(),
             A.clear(),
-            h.clear(),
             f.clear(),
+            h.clear(),
             I.clear(),
             (p = !1),
             (m = null),
-            O.clear(),
             R.clear(),
-            (C = null),
-            (T = !1),
-            (L = "unattempted"),
+            L.clear(),
+            (O = null),
+            (g = !1),
+            (y = "unattempted"),
             (S = null),
-            (N = !1));
+            (N = !1),
+            (C = null));
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t ? R.set(t, "loading") : ((L = "loading"), (p = !1)), (C = { type: "loading" }));
+        (null != t ? L.set(t, "loading") : ((y = "loading"), (p = !1)), (O = { type: "loading" }));
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = t.filter((e) => !0 !== e.view_only),
             r = new Set(i.map((e) => e.id));
         for (let [e, t] of d)
-            !(r.has(e) || h.has(e)) && (l(t) || (null != n && t.guild_id === n)) && (d.delete(e), I.delete(e));
-        for (let e of i) (d.set(e.id, e), h.delete(e.id));
+            !(r.has(e) || f.has(e)) && (l(t) || (null != n && t.guild_id === n)) && (d.delete(e), I.delete(e));
+        for (let e of i) (d.set(e.id, e), f.delete(e.id));
         for (let e of ((function (e) {
             for (let t of e) !0 === t.running ? I.add(t.id) : I.delete(t.id);
         })(i),
-        null != n && (O.add(n), R.set(n, "success")),
+        null != n && (R.add(n), L.set(n, "success")),
         c.keys()))
             d.has(e) || c.delete(e);
         for (let [e, t] of u) d.has(t) || u.delete(e);
-        ((T = !0), (L = "success"), (C = { type: "success", fetchedAt: Date.now() }));
+        ((g = !0), (y = "success"), (O = { type: "success", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t ? R.set(t, "error") : (L = "error"), (C = { type: "error", fetchedAt: Date.now() }));
+        (null != t ? L.set(t, "error") : (y = "error"), (O = { type: "error", fetchedAt: Date.now() }));
     },
     CONJURE_PARTICIPATING_PROJECTS_MARK: function (e) {
         let { projectIds: t } = e,
             n = !1;
         for (let e of t) {
             let t = d.get(e);
-            null == t || l(t) || f.has(e) || (f.add(e), (n = !0));
+            null == t || l(t) || h.has(e) || (h.add(e), (n = !0));
         }
         return n;
     },
@@ -187,25 +192,25 @@ let D = new y(r.h, {
     },
     CONJURE_PROJECT_RUNNING_UPDATE: function (e) {
         let { projectId: t, running: n } = e;
-        if (f.has(t) && I.has(t) === n) return !1;
-        (f.add(t), n ? I.add(t) : I.delete(t));
+        if (h.has(t) && I.has(t) === n) return !1;
+        (h.add(t), n ? I.add(t) : I.delete(t));
     },
     CONJURE_TURN_SETTLED: function (e) {
         let { projectId: t } = e;
-        if (f.has(t)) return !1;
-        f.add(t);
+        if (h.has(t)) return !1;
+        h.add(t);
     },
     CONNECTION_OPEN: function () {
         if (0 === I.size) return !1;
-        (I.clear(), T && (p = !0));
+        (I.clear(), g && (p = !0));
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
-        let { maxProjects: t } = e;
-        ((S = t), (N = !0));
+        let { maxProjects: t, failureCode: n } = e;
+        ((S = t), (N = !0), (C = n));
     },
     CONJURE_PROJECT_CREATE_SUCCESS: function (e) {
         let { project: t } = e;
-        (d.set(t.id, t), h.add(t.id));
+        (d.set(t.id, t), f.add(t.id));
     },
     CONJURE_PROJECT_UPDATE_SUCCESS: function (e) {
         let { project: t } = e;
@@ -221,8 +226,8 @@ let D = new y(r.h, {
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        for (let [e, n] of (A.delete(t), d.delete(t), h.delete(t), c.delete(t), u)) n === t && u.delete(e);
-        (_ === t && (_ = null), E.delete(t), f.delete(t), I.delete(t));
+        for (let [e, n] of (A.delete(t), d.delete(t), f.delete(t), c.delete(t), u)) n === t && u.delete(e);
+        (_ === t && (_ = null), E.delete(t), h.delete(t), I.delete(t));
     },
     CONJURE_PROJECT_DELETE_FAIL: function (e) {
         let { projectId: t } = e;
@@ -253,7 +258,7 @@ n.d(
     t,
     {},
     {
-        Ay: D,
+        Ay: b,
         H_: function (e) {
             return l(e) || o(e) || (0, s.XE)(e);
         },
