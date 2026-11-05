@@ -107,11 +107,11 @@ function M() {
     });
 }
 var D = a(964486),
-    k = a(920495),
-    L = a(739187);
+    L = a(920495),
+    k = a(739187);
 function P(e) {
     let t = (0, v.Cz)(e);
-    null != t && ((0, L.V)(), (0, s.P0)({ text: t, variant: "critical" }));
+    null != t && ((0, k.V)(), (0, s.P0)({ text: t, variant: "critical" }));
 }
 function G(e) {
     let t = (0, p.bG)([l.A], () => l.A.isMuted),
@@ -127,14 +127,14 @@ function G(e) {
         }, [t])
     );
 }
-var H = a(299619),
-    U = a(775602),
+var U = a(299619),
+    H = a(775602),
     F = a(818348),
     K = a(11435);
 function B(e) {
     let { isVisible: t } = e,
         a = h.useRef(null),
-        i = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion),
+        i = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion),
         s = t && !i;
     return (
         h.useEffect(() => {
@@ -148,7 +148,7 @@ function B(e) {
             className: b()(K.Tp, { [K.R]: !t }),
             "aria-hidden": !0,
             children: [
-                (0, r.jsx)(H.A, {
+                (0, r.jsx)(U.A, {
                     ref: a,
                     className: K.Ki,
                     src: "https://cdn.discordapp.com/assets/content/a7a4300630ed2733eca4a8bb584c3086a66063d78e2f829faf465d96ff388a93.webm",
@@ -190,7 +190,7 @@ function W(e) {
 }
 function Y(e) {
     let { animatedSrc: t, staticSrc: a, className: i } = e,
-        s = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion);
+        s = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion);
     return (0, r.jsx)("img", { src: s ? a : t, alt: "", className: i });
 }
 var Z = a(740281),
@@ -394,8 +394,8 @@ function eD(e) {
         ],
     });
 }
-var ek = a(509063);
-function eL(e) {
+var eL = a(509063);
+function ek(e) {
     let {
             customizationOption: t,
             traitOptions: a,
@@ -416,10 +416,10 @@ function eL(e) {
         ),
         f = h.useCallback((e) => em({ hoveredOption: e.optionId !== i?.optionId ? e : void 0, isDelayed: !0 }), [i]);
     return (0, r.jsxs)("div", {
-        className: ek.Nz,
+        className: eL.Nz,
         children: [
             (0, r.jsxs)("div", {
-                className: ek.fF,
+                className: eL.fF,
                 children: [
                     c,
                     (0, r.jsx)("div", {
@@ -427,7 +427,7 @@ function eL(e) {
                         children: (0, r.jsx)("div", {
                             role: "radiogroup",
                             "aria-label": (0, v.cq)(t),
-                            className: ek.Vg,
+                            className: eL.Vg,
                             children: a.map((e) =>
                                 (0, r.jsx)(
                                     eD,
@@ -454,10 +454,10 @@ function eL(e) {
 a(321073);
 var eP = a(51104),
     eG = a(67915);
-function eH(e, t) {
+function eU(e, t) {
     return e === v.v7.OUTFIT ? (null != t ? (0, y.FA)(t) : void 0) : t;
 }
-function eU(e) {
+function eH(e) {
     let { customizationOption: t } = e,
         {
             optionIds: a,
@@ -468,8 +468,8 @@ function eU(e) {
             let { customizationOption: t, onSelectOption: a } = e,
                 i = v.hw[t],
                 { selectedOptionId: r, savedOptionId: s } = (0, p.cf)([l.A], () => ({
-                    selectedOptionId: eH(t, l.A.selectedCharacterTraits[i]),
-                    savedOptionId: eH(t, l.A.character?.[i]),
+                    selectedOptionId: eU(t, l.A.selectedCharacterTraits[i]),
+                    savedOptionId: eU(t, l.A.character?.[i]),
                 })),
                 n = h.useCallback(
                     (e, t) => {
@@ -568,8 +568,8 @@ function eF(e) {
             totalCount: s,
             earnedCount: n,
             onSelectOption: c,
-        } = eU({ customizationOption: t });
-    return (0, r.jsx)(eL, {
+        } = eH({ customizationOption: t });
+    return (0, r.jsx)(ek, {
         customizationOption: t,
         traitOptions: a,
         selectedOption: i,
@@ -598,10 +598,11 @@ function ez() {
 }
 var eV = a(534514),
     eW = a(265872),
-    eY = a(320448),
-    eZ = a(315710),
-    eq = a(444927);
-let eX = {
+    eY = a(320448);
+let eZ = [v.v7.BASE, v.v7.OUTFIT_COLOR];
+var eq = a(315710),
+    eX = a(444927);
+let eJ = {
     "--custom-checkpoint-primary": eI.Kr,
     "--custom-checkpoint-dark-cyan": eI.ow,
     "--custom-checkpoint-button-border": eI.ow,
@@ -610,17 +611,17 @@ let eX = {
     "--custom-checkpoint-guild-card-background": eI.LM,
     "--custom-checkpoint-background-gradient-start": eI.bI,
 };
-var eJ = a(580814);
-function eQ(e) {
+var eQ = a(580814);
+function e$(e) {
     let { options: t, activeCustomizationOption: a, returnRef: i, onSelectOption: s, onClose: n } = e,
         c = h.useRef(null),
         d = h.useRef([]),
-        l = (0, eq.A)(() => Math.max(t.indexOf(a), 0));
+        l = (0, eX.A)(() => Math.max(t.indexOf(a), 0));
     function o(e) {
         d.current[(e + t.length) % t.length]?.focus();
     }
     return (
-        (0, eZ.tj)(c, { returnRef: i }),
+        (0, eq.tj)(c, { returnRef: i }),
         h.useEffect(() => {
             d.current[l]?.focus();
         }, [l]),
@@ -629,8 +630,8 @@ function eQ(e) {
             role: "menu",
             tabIndex: -1,
             "aria-label": en.intl.string(es.default.Zl5vPW),
-            className: eJ.M,
-            style: eX,
+            className: eQ.M,
+            style: eJ,
             onKeyDown: function (e) {
                 e.stopPropagation();
                 let a = d.current.indexOf(e.target);
@@ -663,7 +664,7 @@ function eQ(e) {
                         role: "menuitemradio",
                         "aria-checked": e === a,
                         tabIndex: -1,
-                        className: eJ.A,
+                        className: eQ.A,
                         onClick: () => s(e),
                         onMouseEnter: (e) => e.currentTarget.focus(),
                         children: (0, r.jsx)(ee.E, {
@@ -679,9 +680,8 @@ function eQ(e) {
         })
     );
 }
-var e$ = a(769909);
-let e0 = [v.v7.BASE, v.v7.OUTFIT_COLOR],
-    e1 = [v.v7.AURA, v.v7.WEARABLE, v.v7.SHOES, v.v7.HAT, v.v7.OUTFIT, v.v7.FACE];
+var e0 = a(769909);
+let e1 = [v.v7.AURA, v.v7.WEARABLE, v.v7.SHOES, v.v7.HAT, v.v7.OUTFIT, v.v7.FACE];
 function e5(e) {
     let {
             activeCustomizationOption: t,
@@ -699,7 +699,7 @@ function e5(e) {
         spacing: 8,
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, r.jsx)(eQ, {
+            return (0, r.jsx)(e$, {
                 options: e1,
                 activeCustomizationOption: t,
                 returnRef: c,
@@ -725,7 +725,7 @@ function e5(e) {
                 onKeyDown: (t) => {
                     (e.onKeyDown(t), ("ArrowLeft" === t.key || "ArrowRight" === t.key) && t.stopPropagation());
                 },
-                className: b()(e$.Mf, e$.OS, { [e$.vu]: d || l }),
+                className: b()(e0.Mf, e0.OS, { [e0.vu]: d || l }),
                 children: [
                     (0, r.jsx)(ee.E, {
                         tag: "span",
@@ -740,34 +740,46 @@ function e5(e) {
     });
 }
 function e6(e) {
-    let { activeCustomizationOption: t, onSelectOption: a, blockedTrait: i, disabled: s = !1 } = e,
-        n = h.useId(),
-        c = h.useId(),
-        d = null != i ? c : void 0;
+    let t,
+        a,
+        { activeCustomizationOption: i, onSelectOption: s, blockedTrait: n, disabled: c = !1 } = e,
+        d = h.useId(),
+        o =
+            ((t = (0, p.yK)([l.A], () => {
+                let e = l.A.selectedCharacterTraits[T.V.OUTFIT];
+                return null == e || (0, y.nb)(T.V.OUTFIT, e) ? eZ.filter((e) => e !== v.v7.OUTFIT_COLOR) : eZ;
+            })),
+            (a = i === v.v7.OUTFIT_COLOR && !t.includes(v.v7.OUTFIT_COLOR)),
+            h.useEffect(() => {
+                a && s(v.v7.BASE);
+            }, [a, s]),
+            t),
+        u = h.useId(),
+        f = null != n ? u : void 0;
     return (0, r.jsxs)("div", {
-        className: e$.vR,
+        className: e0.vR,
         children: [
             (0, r.jsx)("div", {
                 role: "radiogroup",
                 "aria-label": en.intl.string(es.default.Zl5vPW),
-                className: e$.vR,
-                children: e0.map((e) => {
-                    let c = e === t;
+                className: e0.vR,
+                children: o.map((e) => {
+                    let t = e === i;
                     return (0, r.jsxs)(
                         "label",
                         {
-                            className: b()(e$.Mf, { [e$.vu]: c }),
+                            className: b()(e0.Mf, { [e0.vu]: t }),
                             children: [
                                 (0, r.jsx)(g.A, {
                                     children: (0, r.jsx)("input", {
                                         type: "radio",
-                                        name: n,
-                                        checked: c,
-                                        disabled: s,
-                                        "aria-disabled": null != i,
-                                        "aria-describedby": d,
+                                        name: d,
+                                        checked: t,
+                                        disabled: c,
+                                        "aria-disabled": null != n,
+                                        "aria-describedby": f,
                                         onChange: () => {
-                                            null != i ? P(i) : a(e);
+                                            null != n ? P(n) : s(e);
                                         },
                                     }),
                                 }),
@@ -784,20 +796,20 @@ function e6(e) {
                 }),
             }),
             (0, r.jsx)(e5, {
-                activeCustomizationOption: t,
-                onSelectOption: a,
-                blockedTrait: i,
-                blockedTraitDescriptionId: d,
-                disabled: s,
+                activeCustomizationOption: i,
+                onSelectOption: s,
+                blockedTrait: n,
+                blockedTraitDescriptionId: f,
+                disabled: c,
             }),
-            null != i && (0, r.jsx)(g.A, { id: c, children: (0, v.Cz)(i) }),
+            null != n && (0, r.jsx)(g.A, { id: u, children: (0, v.Cz)(n) }),
         ],
     });
 }
 var e2 = a(195464);
-function e4() {
+function e3() {
     let [e, t] = h.useState(v.v7.BASE),
-        { traitOptions: a, selectedOption: i, onSelectOption: s } = eU({ customizationOption: e }),
+        { traitOptions: a, selectedOption: i, onSelectOption: s } = eH({ customizationOption: e }),
         n = M().find((t) => t === v.hw[e]),
         c = (0, p.bG)([l.A], () => l.A.isSaving);
     return (0, r.jsxs)(eB, {
@@ -810,7 +822,7 @@ function e4() {
                 children: en.intl.string(es.default["q2nj/Z"]),
             }),
             (0, r.jsx)(e6, { activeCustomizationOption: e, onSelectOption: t, blockedTrait: n, disabled: c }),
-            (0, r.jsx)(eL, {
+            (0, r.jsx)(ek, {
                 customizationOption: e,
                 traitOptions: a,
                 selectedOption: i,
@@ -820,13 +832,13 @@ function e4() {
         ],
     });
 }
-var e3 = a(81466);
+var e4 = a(81466);
 function e8() {
     let e = (0, p.bG)([l.A], () => l.A.stats?.games);
     return (0, r.jsxs)(eB, {
         children: [
             (0, r.jsx)(eo, {
-                icon: e3.CalendarIcon,
+                icon: e4.CalendarIcon,
                 value: Math.round(e?.totalDaysPlayed ?? 0),
                 topPercent: (0, I.bD)(e?.totalDaysPlayedPercentile),
                 children: en.intl.string(es.default["4N5p4D"]),
@@ -913,7 +925,7 @@ function tc(e) {
         case w.gr.GAME_TIME_AURA:
             return (0, r.jsx)(e8, {});
         case w.gr.FINALIZE_CHARACTER:
-            return (0, r.jsx)(e4, {});
+            return (0, r.jsx)(e3, {});
         default:
             return null;
     }
@@ -1163,7 +1175,7 @@ function tM(e) {
     return (0, r.jsx)("div", { className: tO.n, style: ty, children: t });
 }
 var tD = a(639331);
-function tk() {
+function tL() {
     let e = (0, p.bG)([l.A], () => l.A.fetchState !== l.T.SUCCESS || null != l.A.stats);
     return (0, r.jsx)(tM, {
         children: (0, r.jsxs)("div", {
@@ -1194,11 +1206,11 @@ function tk() {
     });
 }
 (a(134528), a(947204));
-var tL = a(675970),
+var tk = a(675970),
     tP = a(559106),
     tG = a(366056),
-    tH = a(292801),
-    tU = a(155718),
+    tU = a(292801),
+    tH = a(155718),
     tF = a(294454),
     tK = a(489414),
     tB = a(878358),
@@ -1246,11 +1258,11 @@ function tQ() {
             return ((a = e),
             (i = t),
             null != a && null != i
-                ? [tL.Q.CHARACTER_ONLY, tL.Q.DEFAULT, tL.Q.STATS_ONLY]
+                ? [tk.Q.CHARACTER_ONLY, tk.Q.DEFAULT, tk.Q.STATS_ONLY]
                 : null != a
-                  ? [tL.Q.CHARACTER_ONLY]
+                  ? [tk.Q.CHARACTER_ONLY]
                   : null != i
-                    ? [tL.Q.STATS_ONLY]
+                    ? [tk.Q.STATS_ONLY]
                     : []).map((a) => ({ cardType: a, checkpointData: (0, tV.Go)(a, e, t) }));
         }, [e, t]),
         [n, c] = h.useState(
@@ -1258,7 +1270,7 @@ function tQ() {
                 (
                     i.find((e) => {
                         let { cardType: t } = e;
-                        return t === tL.Q.DEFAULT;
+                        return t === tk.Q.DEFAULT;
                     }) ?? i.at(0)
                 )?.cardType,
         ),
@@ -1304,11 +1316,11 @@ function tQ() {
                                       name: a,
                                       label: (function (e) {
                                           switch (e) {
-                                              case tL.Q.CHARACTER_ONLY:
+                                              case tk.Q.CHARACTER_ONLY:
                                                   return en.intl.string(es.default.tUU3fe);
-                                              case tL.Q.DEFAULT:
+                                              case tk.Q.DEFAULT:
                                                   return en.intl.string(es.default.DZQzJn);
-                                              case tL.Q.STATS_ONLY:
+                                              case tk.Q.STATS_ONLY:
                                                   return en.intl.string(es.default.e2UHGT);
                                           }
                                       })(t),
@@ -1331,7 +1343,7 @@ function tQ() {
                                   message: new tz.Ay({
                                       content: "",
                                       components: [
-                                          { type: tU.I5.CHECKPOINT_CARD, id: (0, tK.X1)("0"), checkpointData: t },
+                                          { type: tH.I5.CHECKPOINT_CARD, id: (0, tK.X1)("0"), checkpointData: t },
                                       ],
                                   }),
                                   source: "checkpoint",
@@ -1358,7 +1370,7 @@ function tQ() {
                                   className: tX.RC,
                                   children: en.intl.string(en.t.I3ltXO),
                               }),
-                              (0, r.jsx)(tH.t, { size: "refresh_sm", color: "currentColor" }),
+                              (0, r.jsx)(tU.t, { size: "refresh_sm", color: "currentColor" }),
                           ],
                       }),
                   ],
@@ -1371,29 +1383,29 @@ var t$ = a(206701),
     t5 = a(975571),
     t6 = a(427262),
     t2 = a(652215),
-    t4 = a(438389);
-let t3 = (0, t1.j5)(eI.Kr);
+    t3 = a(438389);
+let t4 = (0, t1.j5)(eI.Kr);
 function t8(e) {
     let { onStart: t } = e,
         a = (0, p.bG)([R.default], () => R.default.getCurrentUser()),
         i = (0, t6.tx)(a),
-        s = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion);
+        s = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion);
     return (
         tx("ArrowRight", t),
         (0, r.jsxs)(tM, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: t4.Qs,
+                    className: t3.Qs,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: t4.wx,
+                            className: t3.wx,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: t4.Qq,
+                                    className: t3.Qq,
                                     children: [
                                         (0, r.jsx)(ea, {
                                             variant: "display-lg",
-                                            className: t4.DD,
+                                            className: t3.DD,
                                             children: en.intl.string(tt.default["CdU/PF"]),
                                         }),
                                         (0, r.jsx)(ea, {
@@ -1403,27 +1415,27 @@ function t8(e) {
                                     ],
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: t4.CB,
+                                    className: t3.CB,
                                     children: (0, r.jsx)(t$.U, {
                                         artboard: "Entry",
-                                        className: t4.lW,
+                                        className: t3.lW,
                                         fit: "contain",
                                         withReducedMotion: "short-loop",
-                                        dataBinding: { iconColor: t3, reducedMotion: s },
+                                        dataBinding: { iconColor: t4, reducedMotion: s },
                                     }),
                                 }),
                             ],
                         }),
                         (0, r.jsxs)(W, {
                             size: "custom",
-                            className: t4.ni,
+                            className: t3.ni,
                             "aria-label": en.intl.string(en.t.I0v0Qv),
                             onClick: t,
                             children: [
                                 (0, r.jsx)(t0.PlayIcon, { size: "refresh_sm", color: "currentColor" }),
                                 (0, r.jsx)(ea, {
                                     variant: "mono-md/normal",
-                                    className: t4.qK,
+                                    className: t3.qK,
                                     children: en.intl.string(en.t.I0v0Qv),
                                 }),
                             ],
@@ -1431,17 +1443,17 @@ function t8(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: t4.qr,
+                    className: t3.qr,
                     children: [
                         (0, r.jsx)(ea, {
                             variant: "body-sm/medium",
-                            className: t4.ed,
+                            className: t3.ed,
                             children: en.intl.format(es.default.hcNhyq, {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
                                         eg.Anchor,
                                         {
-                                            className: t4.nf,
+                                            className: t3.nf,
                                             href: t5.A.getArticleURL(t2.MVz.CHECKPOINT_2026),
                                             useDefaultUnderlineStyles: !1,
                                             children: e,
@@ -1452,7 +1464,7 @@ function t8(e) {
                         }),
                         (0, r.jsx)(ea, {
                             variant: "body-md/medium",
-                            className: t4.al,
+                            className: t3.al,
                             children: en.intl.format(tt.default.g476ZL, { name: "Exyl" }),
                         }),
                     ],
@@ -1474,7 +1486,7 @@ var at = a(765671),
 let as = (0, t1.j5)(eI.Kr);
 function an(e) {
     let { value: t, alignment: a = "left" } = e,
-        i = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion),
+        i = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion),
         [s, n] = h.useState(0),
         c = i ? t : s;
     h.useEffect(() => {
@@ -1608,7 +1620,7 @@ function aw(e) {
         x = h.useRef(0),
         m = h.useRef(45),
         g = h.useRef(45),
-        A = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion),
+        A = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion),
         v = 70 * !A,
         w = 40 * !A,
         I = h.useRef(v),
@@ -1869,7 +1881,7 @@ function aS() {
 }
 function aC(e) {
     let { emoji: t, rank: a, isActive: i, onClick: s } = e,
-        n = !(0, p.bG)([U.Ay], () => U.Ay.useReducedMotion) && !0 === t.animated;
+        n = !(0, p.bG)([H.Ay], () => H.Ay.useReducedMotion) && !0 === t.animated;
     return (0, r.jsxs)(V, {
         size: "custom",
         className: aI._X,
@@ -1888,27 +1900,27 @@ var aT = a(360450),
     ay = a(597770),
     aM = a(559647),
     aD = a(95369),
-    ak = a(570287),
-    aL = a(486020),
+    aL = a(570287),
+    ak = a(486020),
     aP = a(801305);
 let aG = [],
-    aH = (0, t1.j5)(eI.Kr),
-    aU = { r: 0, g: 0, b: 0, a: 1 },
+    aU = (0, t1.j5)(eI.Kr),
+    aH = { r: 0, g: 0, b: 0, a: 1 },
     aF = {
-        "Avatar01/Stroke": aU,
-        "Avatar01/Fill": aH,
-        "Avatar02/Stroke": aU,
-        "Avatar02/Fill": aH,
-        "Avatar03/Stroke": aU,
-        "Avatar03/Fill": aH,
-        "Avatar04/Stroke": aU,
-        "Avatar04/Fill": aH,
-        "Avatar05/Stroke": aU,
-        "Avatar05/Fill": aH,
-        ConnectorColor: aH,
+        "Avatar01/Stroke": aH,
+        "Avatar01/Fill": aU,
+        "Avatar02/Stroke": aH,
+        "Avatar02/Fill": aU,
+        "Avatar03/Stroke": aH,
+        "Avatar03/Fill": aU,
+        "Avatar04/Stroke": aH,
+        "Avatar04/Fill": aU,
+        "Avatar05/Stroke": aH,
+        "Avatar05/Fill": aU,
+        ConnectorColor: aU,
     };
 function aK(e) {
-    return null != e ? aL.Ay.getUserAvatarURL(e, !1, 160, "png") : void 0;
+    return null != e ? ak.Ay.getUserAvatarURL(e, !1, 160, "png") : void 0;
 }
 function aB(e) {
     let t,
@@ -1916,7 +1928,7 @@ function aB(e) {
         n = (0, p.bG)([l.A], () => l.A.stats?.users ?? aG),
         c = (0, p.bG)([l.A], () => l.A.stats?.sidekick),
         d = (0, p.bG)([R.default], () => R.default.getCurrentUser()),
-        o = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion),
+        o = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion),
         u = h.useRef(null),
         f = h.useRef(void 0),
         _ = (function (e, t) {
@@ -2085,7 +2097,7 @@ function aW(e) {
         [i, n] = h.useState(""),
         [c, l] = h.useState(!1),
         [o, f] = h.useState(!1),
-        _ = (0, ak.A)(t.id),
+        _ = (0, aL.A)(t.id),
         p = i.length > 0 && i.length <= 250 && !c && !o,
         x = c ? en.intl.string(en.t.fjcCk5) : en.intl.formatToPlainString(en.t["0ZQw/X"], { name: a });
     return _
@@ -2149,7 +2161,7 @@ function aZ(e) {
             (0, r.jsxs)("div", {
                 className: aY.dJ,
                 children: [
-                    (0, r.jsx)(tq, { icon: e3.CalendarIcon, children: en.intl.string(es.default["4N5p4D"]) }),
+                    (0, r.jsx)(tq, { icon: e4.CalendarIcon, children: en.intl.string(es.default["4N5p4D"]) }),
                     (0, r.jsx)(an, { value: a }),
                 ],
             }),
@@ -2173,7 +2185,7 @@ function aq(e) {
             (0, r.jsxs)("div", {
                 className: aY.dJ,
                 children: [
-                    (0, r.jsx)(tq, { icon: e3.CalendarIcon, children: en.intl.string(es.default["dx4+NI"]) }),
+                    (0, r.jsx)(tq, { icon: e4.CalendarIcon, children: en.intl.string(es.default["dx4+NI"]) }),
                     (0, r.jsx)(al, { value: t }),
                 ],
             }),
@@ -2219,8 +2231,8 @@ function a6(e) {
     return (0, r.jsxs)(er, { className: b()(a5.T, a), children: ["#", t] });
 }
 var a2 = a(497357);
-let a4 = "/assets/e74703a44e087adc.svg";
-function a3(e) {
+let a3 = "/assets/e74703a44e087adc.svg";
+function a4(e) {
     let {
             game: { id: t, name: a, coverImageHash: i },
             rank: s,
@@ -2232,7 +2244,7 @@ function a3(e) {
             [a1.A],
             () =>
                 a1.A.getGame(t)?.getCoverURL(300) ??
-                aL.Ay.getApplicationIconURL({ id: t, icon: i, size: 300, fallbackAvatar: !1 }),
+                ak.Ay.getApplicationIconURL({ id: t, icon: i, size: 300, fallbackAvatar: !1 }),
         );
     return (0, r.jsxs)("div", {
         className: b()(a2.LO, d),
@@ -2262,11 +2274,11 @@ function a3(e) {
 }
 function a8(e) {
     let { numSessions: t, ...a } = e;
-    return (0, r.jsx)(a3, { ...a, label: Math.round(t), shellImage: a4 });
+    return (0, r.jsx)(a4, { ...a, label: Math.round(t), shellImage: a3 });
 }
 function a9(e) {
     let { numSessions: t, ...a } = e;
-    return (0, r.jsx)(a3, {
+    return (0, r.jsx)(a4, {
         ...a,
         rank: 1,
         label: Math.round(t),
@@ -2275,7 +2287,7 @@ function a9(e) {
     });
 }
 function a7(e) {
-    return (0, r.jsx)(a3, { ...e, shellImage: a4 });
+    return (0, r.jsx)(a4, { ...e, shellImage: a3 });
 }
 var ie = a(842807);
 let it = [];
@@ -2628,7 +2640,7 @@ function iM(e) {
     });
 }
 var iD = a(58410);
-function ik() {
+function iL() {
     let e = (0, p.bG)([l.A], () => l.A.stats),
         t = (0, p.bG)([l.A], () => l.A.character),
         a = e?.guilds?.guilds[0],
@@ -2636,7 +2648,7 @@ function ik() {
         s = e?.games?.games[0]?.game,
         n =
             null != s
-                ? aL.Ay.getApplicationIconURL({ id: s.id, icon: s.iconHash, size: 40, fallbackAvatar: !1 })
+                ? ak.Ay.getApplicationIconURL({ id: s.id, icon: s.iconHash, size: 40, fallbackAvatar: !1 })
                 : void 0;
     return (0, r.jsx)(tM, {
         children: (0, r.jsxs)("div", {
@@ -2660,15 +2672,15 @@ function ik() {
                         (0, r.jsxs)("div", {
                             className: iD.M1,
                             children: [
-                                (0, r.jsx)(iL, {
+                                (0, r.jsx)(ik, {
                                     label: en.intl.string(es.default.MSrV9z),
                                     value: e?.voice?.totalVoiceMinutes,
                                 }),
-                                (0, r.jsx)(iL, {
+                                (0, r.jsx)(ik, {
                                     label: en.intl.string(es.default.hhh11L),
                                     value: e?.messages?.numMessagesSent,
                                 }),
-                                (0, r.jsx)(iL, {
+                                (0, r.jsx)(ik, {
                                     label: en.intl.string(es.default["f5S+pt"]),
                                     value: a?.numDaysInteracted,
                                 }),
@@ -2677,7 +2689,7 @@ function ik() {
                                     icon: null != a ? (0, r.jsx)(ib, { guild: a.guild, size: 40 }) : (0, r.jsx)(iG, {}),
                                     name: null != a ? a.guild.name : en.intl.string(es.default.GultYJ),
                                 }),
-                                (0, r.jsx)(iL, {
+                                (0, r.jsx)(ik, {
                                     label: en.intl.string(es.default.xVSlv3),
                                     value: e?.emojis?.numEmojisSent,
                                 }),
@@ -2700,7 +2712,7 @@ function ik() {
                                               ? iN.Ay.convertSurrogateToName(i.name)
                                               : `:${i.name}:`,
                                 }),
-                                (0, r.jsx)(iL, {
+                                (0, r.jsx)(ik, {
                                     label: en.intl.string(es.default.y2Y1DD),
                                     value: e?.games?.totalDaysPlayed,
                                 }),
@@ -2720,7 +2732,7 @@ function ik() {
         }),
     });
 }
-function iL(e) {
+function ik(e) {
     let { label: t, value: a } = e;
     return (0, r.jsxs)("div", {
         className: iD.dJ,
@@ -2756,20 +2768,20 @@ function iG() {
         children: (0, r.jsx)(a0._, { size: "md", color: "currentColor" }),
     });
 }
-var iH = a(651946);
-function iU() {
+var iU = a(651946);
+function iH() {
     let e = (0, p.bG)([l.A], () => l.A.stats?.guilds?.guilds[0]),
         t = Math.round(e?.numDaysInteracted ?? 0),
         a = (0, I.bD)(e?.numDaysInteractedPercentile);
     return (0, r.jsx)(tM, {
         children: (0, r.jsxs)("div", {
-            className: iH.kL,
+            className: iU.kL,
             children: [
                 (0, r.jsxs)("div", {
-                    className: iH.wx,
+                    className: iU.wx,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: iH.R_,
+                            className: iU.R_,
                             children: [
                                 (0, r.jsx)(tq, { icon: ti.R, children: en.intl.string(es.default["M+a+t1"]) }),
                                 (0, r.jsx)(an, { value: t }),
@@ -2789,18 +2801,18 @@ function iU() {
                 }),
                 null != e &&
                     (0, r.jsx)("div", {
-                        className: iH.bU,
+                        className: iU.bU,
                         children: (0, r.jsxs)("div", {
-                            className: iH.Nr,
+                            className: iU.Nr,
                             style: { width: 360 },
                             children: [
                                 (0, r.jsx)(ib, { guild: e.guild, size: 360 }),
                                 (0, r.jsxs)("div", {
-                                    className: iH.zH,
+                                    className: iU.zH,
                                     children: [
                                         (0, r.jsx)(ea, {
                                             variant: "heading-xxl/medium",
-                                            className: iH.J5,
+                                            className: iU.J5,
                                             lineClamp: 1,
                                             children: e.guild.name,
                                         }),
@@ -2884,7 +2896,7 @@ function iz() {
 function iV(e) {
     let { route: t, onNextStep: a, onPreviousStep: i } = e;
     if (t === w.gr.HOME) return (0, r.jsx)(t8, { onStart: a });
-    if (t === w.gr.INTRODUCTION) return (0, r.jsx)(tk, {});
+    if (t === w.gr.INTRODUCTION) return (0, r.jsx)(tL, {});
     let { statsScreen: s } = (0, w.UG)(t);
     switch (s) {
         case w.oI.VOICE_INTRO:
@@ -2912,7 +2924,7 @@ function iV(e) {
         case w.oI.SERVERS:
             return (0, r.jsx)(iI, {});
         case w.oI.TOP_SERVER:
-            return (0, r.jsx)(iU, {});
+            return (0, r.jsx)(iH, {});
         case w.oI.EMOJI_INTRO:
             return (0, r.jsx)(ij, {
                 icon: $.o,
@@ -2935,7 +2947,7 @@ function iV(e) {
         case w.oI.SIDEKICK:
             return (0, r.jsx)(aB, { route: t, onNextStep: a, onPreviousStep: i });
         case w.oI.SUMMARY:
-            return (0, r.jsx)(ik, {});
+            return (0, r.jsx)(iL, {});
         case w.oI.SHARE:
             return (0, r.jsx)(tQ, {});
         default:
@@ -2951,7 +2963,7 @@ let iq = {
     [w.s9.HEADWEAR]: { icon: ti.R, label: en.t["7hB4kg"] },
     [w.s9.SHOES]: { icon: $.o, label: en.t.sMOuuS },
     [w.s9.WEARABLE]: { icon: e9.GameControllerIcon, label: en.t.URyqtP },
-    [w.s9.AURA]: { icon: e3.CalendarIcon, label: es.default.y2Y1DD },
+    [w.s9.AURA]: { icon: e4.CalendarIcon, label: es.default.y2Y1DD },
     [w.s9.ASSEMBLED]: { icon: aR.$, label: en.t.TdEu5X },
     [w.s9.FINALIZE]: { icon: iW.PaintPaletteIcon, label: es.default.gmMD2I },
     [w.s9.SUMMARY]: { icon: tG.M, label: tt.default.y4M1na },
@@ -3040,7 +3052,7 @@ var iQ = a(516749),
     i5 = a(706121),
     i6 = a(985747),
     i2 = a(118531);
-let i4 = {
+let i3 = {
     tex_aura_01_blossom: {
         url: "https://cdn.discordapp.com/assets/content/e2b0577c5815a08ed970f8192b862231a1ffe18387dcd7dcec888e9c3027199a.webp",
         riveId: 6946196,
@@ -4181,10 +4193,10 @@ let i4 = {
         widthAt1x: 2016,
     },
 };
-function i3(e) {
-    return { name: e, url: i4[e].url };
+function i4(e) {
+    return { name: e, url: i3[e].url };
 }
-let i8 = i3("tex_none"),
+let i8 = i4("tex_none"),
     i9 = {
         [i6.N.NONE]: 0,
         [i6.N.CAP]: 7,
@@ -4221,110 +4233,110 @@ let i8 = i3("tex_none"),
     },
     re = {
         [i1.X.NONE]: i8,
-        [i1.X.BLAZE]: i3("tex_aura_04_blaze"),
-        [i1.X.BLOSSOM]: i3("tex_aura_01_blossom"),
-        [i1.X.PRISM]: i3("tex_aura_02_prism"),
-        [i1.X.SHOCK]: i3("tex_aura_03_shock"),
-        [i1.X.FATED]: i3("tex_aura_05_fated"),
-        [i1.X.LUSTER]: i3("tex_aura_06_luster"),
-        [i1.X.BUBBLES]: i3("tex_aura_07_bubbly"),
-        [i1.X.SPOOKY]: i3("tex_aura_08_spooky"),
-        [i1.X.CURSED]: i3("tex_aura_09_cursed"),
-        [i1.X.MAGNETIC]: i3("tex_aura_10_magnetic"),
-        [i1.X.RADIOACTIVE]: i3("tex_aura_11_radioactive"),
-        [i1.X.ELEMENTAL]: i3("tex_aura_12_elemental"),
-        [i1.X.SHIMMER]: i3("tex_aura_13_shimmer"),
-        [i1.X.WITCHY]: i3("tex_aura_14_witchy"),
+        [i1.X.BLAZE]: i4("tex_aura_04_blaze"),
+        [i1.X.BLOSSOM]: i4("tex_aura_01_blossom"),
+        [i1.X.PRISM]: i4("tex_aura_02_prism"),
+        [i1.X.SHOCK]: i4("tex_aura_03_shock"),
+        [i1.X.FATED]: i4("tex_aura_05_fated"),
+        [i1.X.LUSTER]: i4("tex_aura_06_luster"),
+        [i1.X.BUBBLES]: i4("tex_aura_07_bubbly"),
+        [i1.X.SPOOKY]: i4("tex_aura_08_spooky"),
+        [i1.X.CURSED]: i4("tex_aura_09_cursed"),
+        [i1.X.MAGNETIC]: i4("tex_aura_10_magnetic"),
+        [i1.X.RADIOACTIVE]: i4("tex_aura_11_radioactive"),
+        [i1.X.ELEMENTAL]: i4("tex_aura_12_elemental"),
+        [i1.X.SHIMMER]: i4("tex_aura_13_shimmer"),
+        [i1.X.WITCHY]: i4("tex_aura_14_witchy"),
     },
     rt = {
-        [i5.R.ICY]: i3("tex_base_01_icy"),
-        [i5.R.CRIMSON]: i3("tex_base_02_crimson"),
-        [i5.R.CHROME]: i3("tex_base_03_chrome"),
-        [i5.R.GALACTIC]: i3("tex_base_04_galactic"),
-        [i5.R.FOREST]: i3("tex_base_05_forrest"),
-        [i5.R.MIDNIGHT]: i3("tex_base_06_mighnight"),
-        [i5.R.GLACIER]: i3("tex_base_07_glacier"),
-        [i5.R.ORANGE]: i3("tex_base_08_orange"),
-        [i5.R.PURPLE]: i3("tex_base_09_pink"),
-        [i5.R.RED]: i3("tex_base_10_red"),
-        [i5.R.COBALT]: i3("tex_base_11_cobalt"),
-        [i5.R.X_RAY]: i3("tex_base_12_x-ray"),
-        [i5.R.LIQUID]: i3("tex_base_13_liquid"),
-        [i5.R.BUTTER]: i3("tex_base_14_butter"),
-        [i5.R.IRIDESCENT]: i3("tex_base_15_iridescent"),
+        [i5.R.ICY]: i4("tex_base_01_icy"),
+        [i5.R.CRIMSON]: i4("tex_base_02_crimson"),
+        [i5.R.CHROME]: i4("tex_base_03_chrome"),
+        [i5.R.GALACTIC]: i4("tex_base_04_galactic"),
+        [i5.R.FOREST]: i4("tex_base_05_forrest"),
+        [i5.R.MIDNIGHT]: i4("tex_base_06_mighnight"),
+        [i5.R.GLACIER]: i4("tex_base_07_glacier"),
+        [i5.R.ORANGE]: i4("tex_base_08_orange"),
+        [i5.R.PURPLE]: i4("tex_base_09_pink"),
+        [i5.R.RED]: i4("tex_base_10_red"),
+        [i5.R.COBALT]: i4("tex_base_11_cobalt"),
+        [i5.R.X_RAY]: i4("tex_base_12_x-ray"),
+        [i5.R.LIQUID]: i4("tex_base_13_liquid"),
+        [i5.R.BUTTER]: i4("tex_base_14_butter"),
+        [i5.R.IRIDESCENT]: i4("tex_base_15_iridescent"),
     },
     ra = {
         [eG.r.NONE]: null,
-        [eG.r.BADDIE_DEFAULT]: { riveId: 1, texture: i3("tex_outfit_01_baddie") },
-        [eG.r.TRAVELER_DEFAULT]: { riveId: 10, texture: i3("tex_outfit_10_traveler") },
-        [eG.r.STREAMER_DEFAULT]: { riveId: 3, texture: i3("tex_outfit_03_streamer") },
-        [eG.r.CAMPER_DEFAULT]: { riveId: 4, texture: i3("tex_outfit_04_camper") },
-        [eG.r.ATHLETE_DEFAULT]: { riveId: 5, texture: i3("tex_outfit_05_athlete") },
-        [eG.r.COWPOKE_DEFAULT]: { riveId: 6, texture: i3("tex_outfit_06_cowpoke") },
-        [eG.r.GOTH_DEFAULT]: { riveId: 7, texture: i3("tex_outfit_07_goth") },
-        [eG.r.ASTRONAUT_DEFAULT]: { riveId: 8, texture: i3("tex_outfit_08_astronaut") },
-        [eG.r.JESTER_DEFAULT]: { riveId: 9, texture: i3("tex_outfit_09_jester") },
-        [eG.r.TRASH_CAN_DEFAULT]: { riveId: 2, texture: i3("tex_outfit_02_trash") },
-        [eG.r.MAGE_DEFAULT]: { riveId: 11, texture: i3("tex_outfit_11_mage") },
-        [eG.r.MECH_DEFAULT]: { riveId: 12, texture: i3("tex_outfit_12_mech") },
-        [eG.r.KNIGHT_DEFAULT]: { riveId: 13, texture: i3("tex_outfit_13_knight") },
-        [eG.r.MAGICAL_DEFAULT]: { riveId: 14, texture: i3("tex_outfit_14_magical") },
-        [eG.r.BADDIE_MONOCHROME]: { riveId: 1, texture: i3("tex_outfit_01_baddie_monochrome") },
-        [eG.r.BADDIE_VIOLET]: { riveId: 1, texture: i3("tex_outfit_01_baddie_violet") },
-        [eG.r.BADDIE_PASTEL]: { riveId: 1, texture: i3("tex_outfit_01_baddie_pastel") },
-        [eG.r.BADDIE_SUNSET]: { riveId: 1, texture: i3("tex_outfit_01_baddie_sunset") },
-        [eG.r.TRAVELER_HAZE]: { riveId: 10, texture: i3("tex_outfit_10_traveler_haze") },
-        [eG.r.TRAVELER_MOSS]: { riveId: 10, texture: i3("tex_outfit_10_traveler_moss") },
-        [eG.r.TRAVELER_CHRONO]: { riveId: 10, texture: i3("tex_outfit_10_traveler_chrono") },
-        [eG.r.TRAVELER_UMBER]: { riveId: 10, texture: i3("tex_outfit_10_traveler_umber") },
-        [eG.r.STREAMER_FLAMES]: { riveId: 3, texture: i3("tex_outfit_03_streamer_flames") },
-        [eG.r.STREAMER_STRIPES]: { riveId: 3, texture: i3("tex_outfit_03_streamer_stripes") },
-        [eG.r.STREAMER_SMILEY]: { riveId: 3, texture: i3("tex_outfit_03_streamer_smiley") },
-        [eG.r.STREAMER_VINTAGE]: { riveId: 3, texture: i3("tex_outfit_03_streamer_vintage") },
-        [eG.r.CAMPER_PLAID]: { riveId: 4, texture: i3("tex_outfit_04_camper_plaid") },
-        [eG.r.CAMPER_SWAMP]: { riveId: 4, texture: i3("tex_outfit_04_camper_swamp") },
-        [eG.r.CAMPER_GLAMP]: { riveId: 4, texture: i3("tex_outfit_04_camper_glamp") },
-        [eG.r.CAMPER_AMBER]: { riveId: 4, texture: i3("tex_outfit_04_camper_amber") },
-        [eG.r.ATHLETE_BLOCKED]: { riveId: 5, texture: i3("tex_outfit_05_athlete_blocked") },
-        [eG.r.ATHLETE_FADED]: { riveId: 5, texture: i3("tex_outfit_05_athlete_faded") },
-        [eG.r.ATHLETE_CHECKERED]: { riveId: 5, texture: i3("tex_outfit_05_athlete_checkered") },
-        [eG.r.ATHLETE_LINED]: { riveId: 5, texture: i3("tex_outfit_05_athlete_lined") },
-        [eG.r.COWPOKE_ONYX]: { riveId: 6, texture: i3("tex_outfit_06_cowpoke_onyx") },
-        [eG.r.COWPOKE_STEEL]: { riveId: 6, texture: i3("tex_outfit_06_cowpoke_steel") },
-        [eG.r.COWPOKE_DENIM]: { riveId: 6, texture: i3("tex_outfit_06_cowpoke_denim") },
-        [eG.r.COWPOKE_BLUSH]: { riveId: 6, texture: i3("tex_outfit_06_cowpoke_blush") },
-        [eG.r.GOTH_SIREN]: { riveId: 7, texture: i3("tex_outfit_07_goth_siren") },
-        [eG.r.GOTH_SERPENT]: { riveId: 7, texture: i3("tex_outfit_07_goth_serpent") },
-        [eG.r.GOTH_RAVEN]: { riveId: 7, texture: i3("tex_outfit_07_goth_raven") },
-        [eG.r.GOTH_VAMP]: { riveId: 7, texture: i3("tex_outfit_07_goth_vamp") },
-        [eG.r.ASTRONAUT_STARDUST]: { riveId: 8, texture: i3("tex_outfit_08_astronaut_stardust") },
-        [eG.r.ASTRONAUT_MARTIAN]: { riveId: 8, texture: i3("tex_outfit_08_astronaut_martian") },
-        [eG.r.ASTRONAUT_SOLAR]: { riveId: 8, texture: i3("tex_outfit_08_astronaut_solar") },
-        [eG.r.ASTRONAUT_COSMIC]: { riveId: 8, texture: i3("tex_outfit_08_astronaut_cosmic") },
-        [eG.r.JESTER_CONFETTI]: { riveId: 9, texture: i3("tex_outfit_09_jester_confetti") },
-        [eG.r.JESTER_CARNIVAL]: { riveId: 9, texture: i3("tex_outfit_09_jester_carnival") },
-        [eG.r.JESTER_SUNRISE]: { riveId: 9, texture: i3("tex_outfit_09_jester_sunrise") },
-        [eG.r.JESTER_NIGHTFALL]: { riveId: 9, texture: i3("tex_outfit_09_jester_nightfall") },
-        [eG.r.TRASH_CAN_BLACKOUT]: { riveId: 2, texture: i3("tex_outfit_02_trash_blackout") },
-        [eG.r.TRASH_CAN_CAUTION]: { riveId: 2, texture: i3("tex_outfit_02_trash_caution") },
-        [eG.r.TRASH_CAN_BUBBLEGUM]: { riveId: 2, texture: i3("tex_outfit_02_trash_bubblegum") },
-        [eG.r.TRASH_CAN_TOXIC]: { riveId: 2, texture: i3("tex_outfit_02_trash_toxic") },
-        [eG.r.MAGE_SHADOW]: { riveId: 11, texture: i3("tex_outfit_11_mage_shadow") },
-        [eG.r.MAGE_DUSK]: { riveId: 11, texture: i3("tex_outfit_11_mage_dusk") },
-        [eG.r.MAGE_WILDWOOD]: { riveId: 11, texture: i3("tex_outfit_11_mage_wildwood") },
-        [eG.r.MAGE_WINTER]: { riveId: 11, texture: i3("tex_outfit_11_mage_winter") },
-        [eG.r.MECH_AERO]: { riveId: 12, texture: i3("tex_outfit_12_mech_aero") },
-        [eG.r.MECH_VIPER]: { riveId: 12, texture: i3("tex_outfit_12_mech_viper") },
-        [eG.r.MECH_ULTRAVIOLET]: { riveId: 12, texture: i3("tex_outfit_12_mech_ultraviolet") },
-        [eG.r.MECH_SANDSTORM]: { riveId: 12, texture: i3("tex_outfit_12_mech_sandstorm") },
-        [eG.r.KNIGHT_IRON]: { riveId: 13, texture: i3("tex_outfit_13_knight_iron") },
-        [eG.r.KNIGHT_RUST]: { riveId: 13, texture: i3("tex_outfit_13_knight_rust") },
-        [eG.r.KNIGHT_PETAL]: { riveId: 13, texture: i3("tex_outfit_13_knight_petal") },
-        [eG.r.KNIGHT_GLACIER]: { riveId: 13, texture: i3("tex_outfit_13_knight_glacier") },
-        [eG.r.MAGICAL_SAPPHIRE]: { riveId: 14, texture: i3("tex_outfit_14_magical_sapphire") },
-        [eG.r.MAGICAL_AMETHYST]: { riveId: 14, texture: i3("tex_outfit_14_magical_amethyst") },
-        [eG.r.MAGICAL_FROST]: { riveId: 14, texture: i3("tex_outfit_14_magical_frost") },
-        [eG.r.MAGICAL_CITRINE]: { riveId: 14, texture: i3("tex_outfit_14_magical_citrine") },
+        [eG.r.BADDIE_DEFAULT]: { riveId: 1, texture: i4("tex_outfit_01_baddie") },
+        [eG.r.TRAVELER_DEFAULT]: { riveId: 10, texture: i4("tex_outfit_10_traveler") },
+        [eG.r.STREAMER_DEFAULT]: { riveId: 3, texture: i4("tex_outfit_03_streamer") },
+        [eG.r.CAMPER_DEFAULT]: { riveId: 4, texture: i4("tex_outfit_04_camper") },
+        [eG.r.ATHLETE_DEFAULT]: { riveId: 5, texture: i4("tex_outfit_05_athlete") },
+        [eG.r.COWPOKE_DEFAULT]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke") },
+        [eG.r.GOTH_DEFAULT]: { riveId: 7, texture: i4("tex_outfit_07_goth") },
+        [eG.r.ASTRONAUT_DEFAULT]: { riveId: 8, texture: i4("tex_outfit_08_astronaut") },
+        [eG.r.JESTER_DEFAULT]: { riveId: 9, texture: i4("tex_outfit_09_jester") },
+        [eG.r.TRASH_CAN_DEFAULT]: { riveId: 2, texture: i4("tex_outfit_02_trash") },
+        [eG.r.MAGE_DEFAULT]: { riveId: 11, texture: i4("tex_outfit_11_mage") },
+        [eG.r.MECH_DEFAULT]: { riveId: 12, texture: i4("tex_outfit_12_mech") },
+        [eG.r.KNIGHT_DEFAULT]: { riveId: 13, texture: i4("tex_outfit_13_knight") },
+        [eG.r.MAGICAL_DEFAULT]: { riveId: 14, texture: i4("tex_outfit_14_magical") },
+        [eG.r.BADDIE_MONOCHROME]: { riveId: 1, texture: i4("tex_outfit_01_baddie_monochrome") },
+        [eG.r.BADDIE_VIOLET]: { riveId: 1, texture: i4("tex_outfit_01_baddie_violet") },
+        [eG.r.BADDIE_PASTEL]: { riveId: 1, texture: i4("tex_outfit_01_baddie_pastel") },
+        [eG.r.BADDIE_SUNSET]: { riveId: 1, texture: i4("tex_outfit_01_baddie_sunset") },
+        [eG.r.TRAVELER_HAZE]: { riveId: 10, texture: i4("tex_outfit_10_traveler_haze") },
+        [eG.r.TRAVELER_MOSS]: { riveId: 10, texture: i4("tex_outfit_10_traveler_moss") },
+        [eG.r.TRAVELER_CHRONO]: { riveId: 10, texture: i4("tex_outfit_10_traveler_chrono") },
+        [eG.r.TRAVELER_UMBER]: { riveId: 10, texture: i4("tex_outfit_10_traveler_umber") },
+        [eG.r.STREAMER_FLAMES]: { riveId: 3, texture: i4("tex_outfit_03_streamer_flames") },
+        [eG.r.STREAMER_STRIPES]: { riveId: 3, texture: i4("tex_outfit_03_streamer_stripes") },
+        [eG.r.STREAMER_SMILEY]: { riveId: 3, texture: i4("tex_outfit_03_streamer_smiley") },
+        [eG.r.STREAMER_VINTAGE]: { riveId: 3, texture: i4("tex_outfit_03_streamer_vintage") },
+        [eG.r.CAMPER_PLAID]: { riveId: 4, texture: i4("tex_outfit_04_camper_plaid") },
+        [eG.r.CAMPER_SWAMP]: { riveId: 4, texture: i4("tex_outfit_04_camper_swamp") },
+        [eG.r.CAMPER_GLAMP]: { riveId: 4, texture: i4("tex_outfit_04_camper_glamp") },
+        [eG.r.CAMPER_AMBER]: { riveId: 4, texture: i4("tex_outfit_04_camper_amber") },
+        [eG.r.ATHLETE_BLOCKED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_blocked") },
+        [eG.r.ATHLETE_FADED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_faded") },
+        [eG.r.ATHLETE_CHECKERED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_checkered") },
+        [eG.r.ATHLETE_LINED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_lined") },
+        [eG.r.COWPOKE_ONYX]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_onyx") },
+        [eG.r.COWPOKE_STEEL]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_steel") },
+        [eG.r.COWPOKE_DENIM]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_denim") },
+        [eG.r.COWPOKE_BLUSH]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_blush") },
+        [eG.r.GOTH_SIREN]: { riveId: 7, texture: i4("tex_outfit_07_goth_siren") },
+        [eG.r.GOTH_SERPENT]: { riveId: 7, texture: i4("tex_outfit_07_goth_serpent") },
+        [eG.r.GOTH_RAVEN]: { riveId: 7, texture: i4("tex_outfit_07_goth_raven") },
+        [eG.r.GOTH_VAMP]: { riveId: 7, texture: i4("tex_outfit_07_goth_vamp") },
+        [eG.r.ASTRONAUT_STARDUST]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_stardust") },
+        [eG.r.ASTRONAUT_MARTIAN]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_martian") },
+        [eG.r.ASTRONAUT_SOLAR]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_solar") },
+        [eG.r.ASTRONAUT_COSMIC]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_cosmic") },
+        [eG.r.JESTER_CONFETTI]: { riveId: 9, texture: i4("tex_outfit_09_jester_confetti") },
+        [eG.r.JESTER_CARNIVAL]: { riveId: 9, texture: i4("tex_outfit_09_jester_carnival") },
+        [eG.r.JESTER_SUNRISE]: { riveId: 9, texture: i4("tex_outfit_09_jester_sunrise") },
+        [eG.r.JESTER_NIGHTFALL]: { riveId: 9, texture: i4("tex_outfit_09_jester_nightfall") },
+        [eG.r.TRASH_CAN_BLACKOUT]: { riveId: 2, texture: i4("tex_outfit_02_trash_blackout") },
+        [eG.r.TRASH_CAN_CAUTION]: { riveId: 2, texture: i4("tex_outfit_02_trash_caution") },
+        [eG.r.TRASH_CAN_BUBBLEGUM]: { riveId: 2, texture: i4("tex_outfit_02_trash_bubblegum") },
+        [eG.r.TRASH_CAN_TOXIC]: { riveId: 2, texture: i4("tex_outfit_02_trash_toxic") },
+        [eG.r.MAGE_SHADOW]: { riveId: 11, texture: i4("tex_outfit_11_mage_shadow") },
+        [eG.r.MAGE_DUSK]: { riveId: 11, texture: i4("tex_outfit_11_mage_dusk") },
+        [eG.r.MAGE_WILDWOOD]: { riveId: 11, texture: i4("tex_outfit_11_mage_wildwood") },
+        [eG.r.MAGE_WINTER]: { riveId: 11, texture: i4("tex_outfit_11_mage_winter") },
+        [eG.r.MECH_AERO]: { riveId: 12, texture: i4("tex_outfit_12_mech_aero") },
+        [eG.r.MECH_VIPER]: { riveId: 12, texture: i4("tex_outfit_12_mech_viper") },
+        [eG.r.MECH_ULTRAVIOLET]: { riveId: 12, texture: i4("tex_outfit_12_mech_ultraviolet") },
+        [eG.r.MECH_SANDSTORM]: { riveId: 12, texture: i4("tex_outfit_12_mech_sandstorm") },
+        [eG.r.KNIGHT_IRON]: { riveId: 13, texture: i4("tex_outfit_13_knight_iron") },
+        [eG.r.KNIGHT_RUST]: { riveId: 13, texture: i4("tex_outfit_13_knight_rust") },
+        [eG.r.KNIGHT_PETAL]: { riveId: 13, texture: i4("tex_outfit_13_knight_petal") },
+        [eG.r.KNIGHT_GLACIER]: { riveId: 13, texture: i4("tex_outfit_13_knight_glacier") },
+        [eG.r.MAGICAL_SAPPHIRE]: { riveId: 14, texture: i4("tex_outfit_14_magical_sapphire") },
+        [eG.r.MAGICAL_AMETHYST]: { riveId: 14, texture: i4("tex_outfit_14_magical_amethyst") },
+        [eG.r.MAGICAL_FROST]: { riveId: 14, texture: i4("tex_outfit_14_magical_frost") },
+        [eG.r.MAGICAL_CITRINE]: { riveId: 14, texture: i4("tex_outfit_14_magical_citrine") },
     };
 var ri = (((i = {}).SLOT = "slot"), (i.TRAIT = "trait"), (i.LAYOUT = "layout"), (i.ALWAYS = "always"), i);
 let rr = /^tex_(aura|base_\d+|outfit)_/,
@@ -4383,7 +4395,7 @@ let rr = /^tex_(aura|base_\d+|outfit)_/,
     rf = [1, 1.25, 1.5, 1.75, 2, 3],
     rb = Math.max(...rf);
 function r_(e, t) {
-    let { url: a, width: i, height: r, widthAt1x: s } = i4[e];
+    let { url: a, width: i, height: r, widthAt1x: s } = i3[e];
     if (null == s) return a;
     let n = (t * s) / i;
     if (n >= 1) return a;
@@ -4442,7 +4454,7 @@ let rp = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"
     rA = { ...rg.MobilePortrait, gradientTopPosition: 55, gradientBottomPosition: 90 };
 var rv = a(574381);
 let rw = new Set([1]),
-    rI = Object.keys(i4).map((e) => ({
+    rI = Object.keys(i3).map((e) => ({
         name: e,
         role: (function (e) {
             if (rr.test(e)) return { type: "slot" };
@@ -4454,7 +4466,7 @@ let rw = new Set([1]),
                 r = null != i ? rd[i[1].toLowerCase()] : void 0;
             return null != r ? { type: "trait", path: "faceID", riveId: r } : { type: "always" };
         })(e),
-        swapKey: (0, rv.un)() ? `${e}-${i4[e].riveId}` : e,
+        swapKey: (0, rv.un)() ? `${e}-${i3[e].riveId}` : e,
     }));
 function rE(e) {
     let { faceID: t, headwearID: a, shoesID: i, wearableID: r, chapterID: s, device: n } = e;
@@ -4515,7 +4527,7 @@ function rC(e) {
             ((t = (0, p.bG)([l.A], () => l.A.selectedCharacterTraits)),
             (a = ep((e) => e.hoveredOption)),
             h.useMemo(() => (null != a ? { ...t, [a.trait]: a.optionId } : t), [t, a])),
-        u = (0, p.bG)([U.Ay], () => U.Ay.useReducedMotion),
+        u = (0, p.bG)([H.Ay], () => H.Ay.useReducedMotion),
         f = h.useMemo(
             () =>
                 (function (e) {
@@ -4586,7 +4598,7 @@ function rC(e) {
         } = (function () {
             let e = h.useRef(new Map()),
                 [t, a] = h.useState(null),
-                i = h.useCallback((t) => !!t.isImage && t.name in i4 && (e.current.set(t.name, t), !0), []);
+                i = h.useCallback((t) => !!t.isImage && t.name in i3 && (e.current.set(t.name, t), !0), []);
             return {
                 assetLoader: i,
                 onLoad: h.useCallback(() => {
@@ -4741,7 +4753,7 @@ function rR(e) {
             (e === l.T.INIT || e === l.T.ERROR) && (0, d.nX)();
         }, []),
         (0, h.useEffect)(() => {
-            (0, k.E)(a);
+            (0, L.E)(a);
         }, [a]));
     let n = i ? w.Np.SHARED_DATA : w.Np.NO_SHARED_DATA,
         [c, f] = (function (e) {
@@ -4780,23 +4792,23 @@ function rR(e) {
                             let a = (0, A.o)(t),
                                 { primaryBackgroundColor: i, shadowColor: r } = (0, A.j)(a);
                             return {
-                                ...eX,
+                                ...eJ,
                                 "--custom-checkpoint-primary": i,
                                 "--custom-checkpoint-button-border": i,
                                 "--custom-checkpoint-button-shadow": r,
                                 "--custom-checkpoint-background-gradient-start": i,
                             };
                         default:
-                            return eX;
+                            return eJ;
                     }
                 })(c, T),
             [c, T],
         ),
         O = G(_),
         y = M(),
-        L = (0, v.k0)(c, y),
-        H = h.useId(),
-        U = null != L ? H : void 0,
+        k = (0, v.k0)(c, y),
+        U = h.useId(),
+        H = null != k ? U : void 0,
         K = h.useCallback(
             (e) => {
                 let t = (function (e) {
@@ -4818,11 +4830,11 @@ function rR(e) {
         Y = h.useCallback(
             (e) => {
                 if (!l.A.isSaving) {
-                    if (null != L) return void P(L);
+                    if (null != k) return void P(k);
                     (O(), f(e));
                 }
             },
-            [L, O, f],
+            [k, O, f],
         );
     return (0, r.jsx)(x.N, {
         theme: F.NJ.DARK,
@@ -4860,18 +4872,18 @@ function rR(e) {
                         flow: n,
                         stats: S,
                         activeRoute: c,
-                        isRouteBlocked: null != L,
-                        blockedTraitDescriptionId: U,
+                        isRouteBlocked: null != k,
+                        blockedTraitDescriptionId: H,
                         onRouteClick: Y,
                     }),
                     (0, r.jsx)(tT, {
                         activeRoute: c,
-                        blockedTrait: L,
-                        blockedTraitDescriptionId: U,
+                        blockedTrait: k,
+                        blockedTraitDescriptionId: H,
                         onBack: z,
                         onNext: W,
                     }),
-                    null != L && (0, r.jsx)(g.A, { id: H, children: (0, v.Cz)(L) }),
+                    null != k && (0, r.jsx)(g.A, { id: U, children: (0, v.Cz)(k) }),
                 ],
             }),
     });
