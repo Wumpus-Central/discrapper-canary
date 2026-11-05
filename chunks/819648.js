@@ -9,20 +9,20 @@ n(835517);
 var d = n(989238),
     c = n(373955);
 n(399667);
-var u = n(817379),
-    _ = n(142617),
-    E = n(407905),
-    A = n(532294),
-    h = n(350363),
-    f = n(852717),
-    I = n(792996);
-let p = [a.pJ.HOURS, a.pJ.MINUTES],
-    m = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
-    g = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
-function T(e) {
-    return new Intl.NumberFormat(I.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
+var u = n(817379);
+n(142617);
+var _ = n(407905),
+    E = n(532294),
+    A = n(350363),
+    h = n(852717),
+    f = n(792996);
+let I = [a.pJ.HOURS, a.pJ.MINUTES],
+    p = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
+    m = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
+function g(e) {
+    return new Intl.NumberFormat(f.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
 }
-function S(e) {
+function T(e) {
     return Math.min(Math.max(Math.round((e / 100) * 6), 1), 5);
 }
 n.d(
@@ -32,10 +32,10 @@ n.d(
         Go: function (e, t, n) {
             let i, r, a;
             return {
-                version: A.wk.V2026,
-                character: m.has(e) ? (t ?? void 0) : void 0,
+                version: E.wk.V2026,
+                character: p.has(e) ? (t ?? void 0) : void 0,
                 stats:
-                    g.has(e) && null != n
+                    m.has(e) && null != n
                         ? ((i = n.guilds?.guilds[0]),
                           (r = n.emojis?.emojis[0]),
                           (a = n.games?.games[0]?.game),
@@ -65,40 +65,40 @@ n.d(
                 cardColorPalette: (0, c.o)(t),
             };
         },
-        Le: T,
+        Le: g,
         R8: function (e) {
             let t;
             return {
-                powerLevel: T(e.powerLevel),
-                powerLevelUnits: S(e.powerLevelPercentile),
+                powerLevel: g(e.powerLevel),
+                powerLevelUnits: T(e.powerLevelPercentile),
                 voice: {
                     text:
                         (t = Math.round(e.totalVoiceMinutes)) > 0
                             ? (function (e) {
-                                  let { unit: t, time: n } = (0, a.$l)(e, p),
+                                  let { unit: t, time: n } = (0, a.$l)(e, I),
                                       i = Math.round(n ?? 0);
                                   return t === a.pJ.HOURS
-                                      ? I.intl.formatToPlainString(f.default.CQfBsB, { hours: i })
-                                      : I.intl.formatToPlainString(f.default.yRfTht, { minutes: i });
+                                      ? f.intl.formatToPlainString(h.default.CQfBsB, { hours: i })
+                                      : f.intl.formatToPlainString(h.default.yRfTht, { minutes: i });
                               })(t)
-                            : I.intl.formatToPlainString(f.default.x7PkHm, { minutes: t }),
-                    accessibilityLabel: I.intl.formatToPlainString(f.default.lw35aH, { duration: (0, d.GM)(t) }),
+                            : f.intl.formatToPlainString(h.default.x7PkHm, { minutes: t }),
+                    accessibilityLabel: f.intl.formatToPlainString(h.default.lw35aH, { duration: (0, d.GM)(t) }),
                 },
                 messages: {
                     text:
                         e.numMessagesSent > 0
-                            ? e.numMessagesSent.toLocaleString(I.intl.currentLocale)
-                            : I.intl.formatToPlainString(f.default.foKBCN, { count: e.numMessagesSent }),
-                    accessibilityLabel: I.intl.formatToPlainString(f.default.IdRUAC, { count: e.numMessagesSent }),
+                            ? e.numMessagesSent.toLocaleString(f.intl.currentLocale)
+                            : f.intl.formatToPlainString(h.default.foKBCN, { count: e.numMessagesSent }),
+                    accessibilityLabel: f.intl.formatToPlainString(h.default.IdRUAC, { count: e.numMessagesSent }),
                 },
                 topGuildDaysInteracted: (function (e) {
                     if (null == e.topGuild) {
                         var t;
-                        return { text: (t = I.intl.string(f.default.GultYJ)), accessibilityLabel: t };
+                        return { text: (t = f.intl.string(h.default.GultYJ)), accessibilityLabel: t };
                     }
                     return {
-                        text: I.intl.formatToPlainString(f.default.cQXIkj, { days: e.topGuildNumDaysInteracted }),
-                        accessibilityLabel: I.intl.formatToPlainString(f.default.MpSH8v, {
+                        text: f.intl.formatToPlainString(h.default.cQXIkj, { days: e.topGuildNumDaysInteracted }),
+                        accessibilityLabel: f.intl.formatToPlainString(h.default.MpSH8v, {
                             days: e.topGuildNumDaysInteracted,
                         }),
                     };
@@ -107,7 +107,7 @@ n.d(
                     if (null != e.topGuild)
                         return {
                             text: e.topGuild.guildName,
-                            accessibilityLabel: I.intl.formatToPlainString(f.default["9UTJ+t"], {
+                            accessibilityLabel: f.intl.formatToPlainString(h.default["9UTJ+t"], {
                                 guildName: e.topGuild.guildName,
                             }),
                         };
@@ -115,9 +115,9 @@ n.d(
                 reactions: {
                     text:
                         e.numEmojisSent > 0
-                            ? e.numEmojisSent.toLocaleString(I.intl.currentLocale)
-                            : I.intl.formatToPlainString(f.default.RHYx1k, { count: e.numEmojisSent }),
-                    accessibilityLabel: I.intl.formatToPlainString(f.default["36qpUG"], { count: e.numEmojisSent }),
+                            ? e.numEmojisSent.toLocaleString(f.intl.currentLocale)
+                            : f.intl.formatToPlainString(h.default.RHYx1k, { count: e.numEmojisSent }),
+                    accessibilityLabel: f.intl.formatToPlainString(h.default["36qpUG"], { count: e.numEmojisSent }),
                 },
                 topEmojiName: (function (e) {
                     if (!(e.numEmojisSent <= 0) && null != e.topEmoji)
@@ -126,7 +126,7 @@ n.d(
                                 null == e.topEmoji.emojiId
                                     ? l.Ay.convertSurrogateToName(e.topEmoji.emojiName)
                                     : `:${e.topEmoji.emojiName}:`,
-                            accessibilityLabel: I.intl.formatToPlainString(f.default.CcBo8C, {
+                            accessibilityLabel: f.intl.formatToPlainString(h.default.CcBo8C, {
                                 emojiName: e.topEmoji.emojiName,
                             }),
                         };
@@ -134,22 +134,22 @@ n.d(
                 daysPlayed: {
                     text:
                         e.totalDaysPlayed > 0
-                            ? I.intl.formatToPlainString(f.default.cQXIkj, { days: e.totalDaysPlayed })
-                            : I.intl.string(f.default.mg1NPe),
-                    accessibilityLabel: I.intl.formatToPlainString(f.default.LYcKX7, { days: e.totalDaysPlayed }),
+                            ? f.intl.formatToPlainString(h.default.cQXIkj, { days: e.totalDaysPlayed })
+                            : f.intl.string(h.default.mg1NPe),
+                    accessibilityLabel: f.intl.formatToPlainString(h.default.LYcKX7, { days: e.totalDaysPlayed }),
                 },
                 topGameName: (function (e) {
                     if (!(e.totalDaysPlayed <= 0) && null != e.topGame)
                         return {
                             text: e.topGame.applicationName,
-                            accessibilityLabel: I.intl.formatToPlainString(f.default.kLqpNC, {
+                            accessibilityLabel: f.intl.formatToPlainString(h.default.kLqpNC, {
                                 gameName: e.topGame.applicationName,
                             }),
                         };
                 })(e),
                 topEmoji: e.topEmoji,
                 topGuild: e.topGuild,
-                topGuildAcronymCharacter: null != e.topGuild ? (0, E.oW)(e.topGuild.guildName) : void 0,
+                topGuildAcronymCharacter: null != e.topGuild ? (0, _.oW)(e.topGuild.guildName) : void 0,
                 topGame: e.topGame,
             };
         },
@@ -159,17 +159,18 @@ n.d(
         },
         b5: function (e) {
             switch (e.version) {
-                case A.wk.V2025:
-                    return I.intl.string(h.default.goiR2u);
-                case A.wk.V2026:
+                case E.wk.V2025:
+                    return f.intl.string(A.default.goiR2u);
+                case E.wk.V2026:
                 default:
                     return null;
             }
         },
         q6: function (e) {
             var t, n;
-            return (0, _.wV)("transformCheckpoint2026CardComponent") && (null != e.character || null != e.stats)
-                ? {
+            return null == e.character && null == e.stats
+                ? null
+                : {
                       version: e.version,
                       character:
                           null != e.character
@@ -221,10 +222,9 @@ n.d(
                                 }
                               : void 0,
                       cardColorPalette: e.card_color_palette ?? i.h.NONE,
-                  }
-                : null;
+                  };
         },
-        sX: S,
+        sX: T,
         vF: function (e, t) {
             let n = [];
             return (

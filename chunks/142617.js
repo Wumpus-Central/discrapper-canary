@@ -37,9 +37,5 @@ n.d(
             let { enabled: t } = r.getConfig({ location: e });
             return t;
         },
-        wV: function (e) {
-            let { enabled: t } = a.getConfig({ location: e });
-            return t;
-        },
     },
 );

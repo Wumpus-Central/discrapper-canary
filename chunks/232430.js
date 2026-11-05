@@ -1535,7 +1535,8 @@ var ns = n(878358),
 function nu(e) {
     let { checkpointData: t } = e,
         n = (0, h.jc)()?.message,
-        l =
+        l = (0, tQ.Hd)("CheckpointCardDisplayComponent"),
+        r =
             null != n
                 ? () =>
                       (function (e) {
@@ -1548,7 +1549,8 @@ function nu(e) {
         case no.wk.V2025:
             return (0, i.jsx)(ni, { checkpointData: t });
         case no.wk.V2026:
-            return (0, i.jsx)(ns.A, { checkpointData: t, onFooterClick: l });
+            if (!l) return (0, i.jsx)(tJ, {});
+            return (0, i.jsx)(ns.A, { checkpointData: t, onFooterClick: r });
         default:
             return (0, i.jsx)(tJ, {});
     }
