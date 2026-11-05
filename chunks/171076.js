@@ -10,13 +10,13 @@ var i = n(684013),
     _ = n(287809),
     E = n(856383),
     A = n(288641),
-    h = n(41984),
-    f = n(267355),
+    f = n(41984),
+    h = n(267355),
     I = n(956753),
     p = n(861862),
     m = n(887287),
-    g = n(222506),
-    T = n(897720),
+    T = n(222506),
+    g = n(897720),
     S = n(145567),
     N = n(652215);
 function C(e) {
@@ -369,7 +369,7 @@ async function y() {
                 n.e(912773),
                 n.e(180657),
                 n.e(35403),
-                n.e(68904),
+                n.e(846523),
                 n.e(796867),
                 n.e(919307),
                 n.e(565617),
@@ -417,6 +417,7 @@ async function y() {
                 n.e(324622),
                 n.e(795093),
                 n.e(446800),
+                n.e(660249),
                 n.e(356821),
                 n.e(957506),
                 n.e(539319),
@@ -469,7 +470,6 @@ async function y() {
                 n.e(499118),
                 n.e(55266),
                 n.e(336611),
-                n.e(660249),
                 n.e(849113),
                 n.e(561065),
                 n.e(105539),
@@ -495,8 +495,8 @@ function D(e) {
 }
 async function b(e) {
     let t = await y();
-    if (!(null == t || g.A.isInputLocked(m.A.getTargetPID())))
-        for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
+    if (!(null == t || T.A.isInputLocked(m.A.getTargetPID())))
+        for (let n of t.getNotificationsForChannel(e, g.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
 function v() {
     !(function () {
@@ -519,7 +519,7 @@ function P(e) {
     if (i.isPrivate()) {
         if (u.Ay.isChannelMuted(null, t)) return;
     } else if (u.Ay.isChannelMuted(i.getGuildId(), t) || !(0, s.lx)(n, t, !0)) return;
-    let a = i.isPrivate() ? h.B9.INCOMING_DM_MESSAGE : h.B9.INCOMING_MENTION_MESSAGE,
+    let a = i.isPrivate() ? f.B9.INCOMING_DM_MESSAGE : f.B9.INCOMING_MENTION_MESSAGE,
         l = (function (e) {
             if (null == e.timestamp) return Date.now();
             let t = new Date(e.timestamp).getTime();
@@ -534,7 +534,7 @@ function M(e) {
 }
 function U(e) {
     let { channelId: t, guildId: n, messageId: i, source: r } = e;
-    (r !== h.B9.AUTOMATIC_CHANNEL_SELECT && ((L = !0), b(t)), D({ channelId: t, guildId: n, messageId: i }));
+    (r !== f.B9.AUTOMATIC_CHANNEL_SELECT && ((L = !0), b(t)), D({ channelId: t, guildId: n, messageId: i }));
 }
 function w(e) {
     let { channelId: t } = e,
@@ -566,13 +566,13 @@ function k(e) {
         A.A.getSelectedChannelId() !== e &&
         (0, S.D$)({
             target: { kind: S.bB.CHANNEL, channelId: e, guildId: t.getGuildId(), messageId: null },
-            source: h.B9.AUTOMATIC_CHANNEL_SELECT,
+            source: f.B9.AUTOMATIC_CHANNEL_SELECT,
             widgetType: null,
         });
 }
 function F(e) {
     let { channelId: t } = e;
-    !p.default.isAnyOverlayRendering() || null == t || ((0, f.D)() && k(t));
+    !p.default.isAnyOverlayRendering() || null == t || ((0, h.D)() && k(t));
 }
 async function B(e) {
     if (e.locked) {

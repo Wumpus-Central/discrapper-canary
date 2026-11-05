@@ -1,38 +1,39 @@
-var n = i(477900);
-i(582128);
-var l = i(646514),
-    s = i(996682),
-    c = i(27989);
-i.d(
-    t,
+t.r(e);
+var i = t(477900);
+t(582128);
+var c = t(646514),
+    l = t(996682),
+    s = t(27989);
+t.d(
+    e,
     {},
     {
-        L: function (e) {
+        IdIcon: function (n) {
             let {
-                    size: t = "md",
-                    width: i,
+                    size: e = "md",
+                    width: t,
                     height: o,
-                    color: d = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    color: d = c.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: a = "",
                     ...h
-                } = e,
-                r = (0, c.J)(t),
-                u = r?.width ?? i,
+                } = n,
+                r = (0, s.J)(e),
+                u = r?.width ?? t,
                 p = r?.height ?? o;
-            return (0, n.jsxs)("svg", {
-                ...(0, s.A)(h),
+            return (0, i.jsxs)("svg", {
+                ...(0, l.A)(h),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: u,
                 height: p,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, n.jsx)("path", {
+                    (0, i.jsx)("path", {
                         fill: "string" == typeof d ? d : d.css,
                         d: "M15.3 14.48c-.46.45-1.08.67-1.86.67h-1.39V9.2h1.39c.78 0 1.4.22 1.86.67.46.45.68 1.22.68 2.31 0 1.1-.22 1.86-.68 2.31Z",
                         className: a,
                     }),
-                    (0, n.jsx)("path", {
+                    (0, i.jsx)("path", {
                         fill: "string" == typeof d ? d : d.css,
                         fillRule: "evenodd",
                         d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm1 15h2.04V7.34H6V17Zm4-9.66V17h3.44c1.46 0 2.6-.42 3.38-1.25.8-.83 1.2-2.02 1.2-3.58s-.4-2.75-1.2-3.58c-.79-.83-1.92-1.25-3.38-1.25H10Z",

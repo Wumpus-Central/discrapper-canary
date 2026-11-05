@@ -13,23 +13,23 @@ let _ = "USER_PROFILE_MODAL_KEY:",
 function A(e, t) {
     return `${_}${e}:${null == t ? "" : t}`;
 }
-async function h(e) {
+async function f(e) {
     let {
             userId: t,
             tabSection: r,
             scrollTarget: l,
             guildId: _,
-            originGuildId: h,
-            channelId: f,
+            originGuildId: f,
+            channelId: h,
             appContext: I,
             customStatusPrompt: p,
             onModalOpen: m,
-            onModalClose: g,
-            ...T
+            onModalClose: T,
+            ...g
         } = e,
         S = d.default.getUser(t),
         N = d.default.getCurrentUser();
-    if (null == S || null == N) return void g?.();
+    if (null == S || null == N) return void T?.();
     let C = A(t, _),
         O = a()();
     try {
@@ -402,6 +402,10 @@ async function h(e) {
                             n.e(257980),
                             n.e(960235),
                             n.e(585968),
+                            n.e(486137),
+                            n.e(80421),
+                            n.e(206027),
+                            n.e(393471),
                             n.e(177641),
                             n.e(198329),
                             n.e(678157),
@@ -414,6 +418,7 @@ async function h(e) {
                             n.e(733115),
                             n.e(397270),
                             n.e(406222),
+                            n.e(761597),
                             n.e(373122),
                             n.e(649408),
                             n.e(221856),
@@ -450,6 +455,7 @@ async function h(e) {
                             n.e(398125),
                             n.e(990189),
                             n.e(221825),
+                            n.e(713708),
                             n.e(930758),
                             n.e(776195),
                             n.e(862782),
@@ -579,6 +585,7 @@ async function h(e) {
                             n.e(54953),
                             n.e(958428),
                             n.e(317225),
+                            n.e(918024),
                             n.e(53374),
                             n.e(482815),
                             n.e(56021),
@@ -588,6 +595,7 @@ async function h(e) {
                             n.e(124060),
                             n.e(88599),
                             n.e(240511),
+                            n.e(780262),
                             n.e(718573),
                             n.e(146566),
                             n.e(693832),
@@ -622,6 +630,7 @@ async function h(e) {
                             n.e(610449),
                             n.e(952548),
                             n.e(32781),
+                            n.e(893917),
                             n.e(996218),
                             n.e(231578),
                             n.e(454625),
@@ -642,11 +651,12 @@ async function h(e) {
                             n.e(371482),
                             n.e(912773),
                             n.e(180657),
+                            n.e(889638),
                             n.e(35403),
                             n.e(553984),
                             n.e(884601),
                             n.e(782969),
-                            n.e(68904),
+                            n.e(846523),
                             n.e(796867),
                             n.e(919307),
                             n.e(565617),
@@ -691,6 +701,7 @@ async function h(e) {
                             n.e(496715),
                             n.e(115754),
                             n.e(474055),
+                            n.e(736926),
                             n.e(744385),
                             n.e(59413),
                             n.e(29664),
@@ -712,6 +723,7 @@ async function h(e) {
                             n.e(795093),
                             n.e(963584),
                             n.e(446800),
+                            n.e(440142),
                             n.e(896137),
                             n.e(356821),
                             n.e(993610),
@@ -777,11 +789,13 @@ async function h(e) {
                             n.e(800311),
                             n.e(349644),
                             n.e(22330),
-                            n.e(317315),
+                            n.e(197238),
                             n.e(144179),
                             n.e(474907),
                             n.e(649520),
                             n.e(118917),
+                            n.e(838090),
+                            n.e(536973),
                             n.e(562168),
                             n.e(791824),
                             n.e(757598),
@@ -796,6 +810,7 @@ async function h(e) {
                             n.e(472289),
                             n.e(566976),
                             n.e(908081),
+                            n.e(914248),
                             n.e(922606),
                             n.e(647177),
                             n.e(600607),
@@ -803,15 +818,14 @@ async function h(e) {
                             n.e(165211),
                             n.e(829260),
                             n.e(43358),
-                            n.e(918024),
                             n.e(80077),
                             n.e(817551),
                             n.e(627323),
                             n.e(913823),
-                            n.e(287988),
                             n.e(965061),
                             n.e(672877),
                             n.e(599141),
+                            n.e(736674),
                             n.e(504098),
                             n.e(182141),
                             n.e(746479),
@@ -838,18 +852,16 @@ async function h(e) {
                             n.e(101465),
                             n.e(173547),
                             n.e(639163),
+                            n.e(671367),
                             n.e(86467),
                             n.e(664430),
                             n.e(375234),
                             n.e(841157),
                             n.e(134504),
                             n.e(995813),
-                            n.e(893917),
-                            n.e(780262),
-                            n.e(838090),
                             n.e(945699),
                             n.e(248985),
-                            n.e(933281),
+                            n.e(612933),
                             n.e(717460),
                             n.e(553683),
                             n.e(280098),
@@ -857,7 +869,6 @@ async function h(e) {
                             n.e(703168),
                             n.e(560075),
                             n.e(181162),
-                            n.e(736926),
                             n.e(499118),
                             n.e(704374),
                             n.e(186546),
@@ -867,8 +878,6 @@ async function h(e) {
                             n.e(336611),
                             n.e(571294),
                             n.e(154791),
-                            n.e(440142),
-                            n.e(536973),
                             n.e(598421),
                             n.e(746623),
                             n.e(443256),
@@ -878,6 +887,7 @@ async function h(e) {
                             n.e(909063),
                             n.e(958262),
                             n.e(720161),
+                            n.e(825650),
                             n.e(561065),
                             n.e(247339),
                             n.e(421778),
@@ -888,7 +898,6 @@ async function h(e) {
                             n.e(607652),
                             n.e(653308),
                             n.e(787320),
-                            n.e(914248),
                             n.e(239367),
                             n.e(124981),
                             n.e(272887),
@@ -898,7 +907,6 @@ async function h(e) {
                             n.e(295841),
                             n.e(677407),
                             n.e(550260),
-                            n.e(671367),
                             n.e(61849),
                             n.e(166222),
                             n.e(209195),
@@ -914,7 +922,7 @@ async function h(e) {
                             n.e(49282),
                             n.e(235683),
                             n.e(936572),
-                            n.e(924753),
+                            n.e(468705),
                         ]).then(n.bind(n, 148540))
                     ).default;
                     return (t) =>
@@ -924,13 +932,13 @@ async function h(e) {
                                 user: S,
                                 currentUser: N,
                                 guildId: _,
-                                originGuildId: h ?? _,
+                                originGuildId: f ?? _,
                                 initialTabSection: r,
                                 initialScrollTarget: l,
-                                channelId: f,
+                                channelId: h,
                                 customStatusPrompt: p,
                                 ...t,
-                                ...T,
+                                ...g,
                             },
                             O,
                         );
@@ -944,17 +952,17 @@ async function h(e) {
                         });
                     },
                     onCloseCallback: () => {
-                        (E.delete(C), g?.());
+                        (E.delete(C), T?.());
                     },
                 },
             ),
         ),
             m?.());
     } catch (e) {
-        throw (g?.(), e);
+        throw (T?.(), e);
     }
 }
-function f() {
+function h() {
     if (0 === E.size) return;
     let e = d.default.getCurrentUser();
     for (let t of E) {
@@ -971,7 +979,7 @@ function f() {
     }
 }
 class I extends l.A {
-    actions = { USER_PROFILE_MODAL_OPEN: h, USER_PROFILE_MODAL_CLOSE: f };
+    actions = { USER_PROFILE_MODAL_OPEN: f, USER_PROFILE_MODAL_CLOSE: h };
 }
 let p = new I();
 n.d(

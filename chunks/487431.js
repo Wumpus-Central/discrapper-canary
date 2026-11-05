@@ -1,125 +1,125 @@
-var l,
-    r = t(477900),
-    i = t(503698),
-    n = t.n(i),
-    c = t(855986),
-    a = t(646514),
-    o = t(143129),
-    d = t(834730),
-    u = t(123292),
-    x = t(628284),
-    m = t(285796),
-    A = t(478016),
-    j = t(738188),
-    h = t(789645),
-    E = t(975807),
-    C = t(878118),
-    O = t(281020),
-    b = t(86495),
-    N = t(792996),
-    I = t(614965),
+var t,
+    r = l(477900),
+    c = l(503698),
+    i = l.n(c),
+    n = l(855986),
+    a = l(646514),
+    o = l(143129),
+    d = l(834730),
+    u = l(123292),
+    m = l(628284),
+    x = l(285796),
+    A = l(478016),
+    h = l(738188),
+    j = l(789645),
+    C = l(975807),
+    E = l(878118),
+    I = l(281020),
+    O = l(86495),
+    b = l(792996),
+    N = l(614965),
     _ =
-        (((l = {})[(l.OVERALL_GOOD = 0)] = "OVERALL_GOOD"),
-        (l[(l.OVERALL_BAD = 1)] = "OVERALL_BAD"),
-        (l[(l.GOOD = 2)] = "GOOD"),
-        (l[(l.WARN = 3)] = "WARN"),
-        (l[(l.BAD = 4)] = "BAD"),
-        l);
+        (((t = {})[(t.OVERALL_GOOD = 0)] = "OVERALL_GOOD"),
+        (t[(t.OVERALL_BAD = 1)] = "OVERALL_BAD"),
+        (t[(t.GOOD = 2)] = "GOOD"),
+        (t[(t.WARN = 3)] = "WARN"),
+        (t[(t.BAD = 4)] = "BAD"),
+        t);
 function v(s) {
-    let { text: e, status: t } = s;
+    let { text: e, status: l } = s;
     return (0, r.jsxs)("div", {
-        className: I.Km,
+        className: N.Km,
         children: [
             (0, r.jsx)(d.E, { variant: "body-md/semibold", color: "text-subtle", children: e }),
-            (0, r.jsx)(f, { status: t }),
+            (0, r.jsx)(k, { status: l }),
         ],
     });
 }
 function D(s) {
-    let { status: e, text: t, description: l, learnMoreLink: i } = s;
+    let { status: e, text: l, description: t, learnMoreLink: c } = s;
     return (0, r.jsxs)("div", {
-        className: I.jf,
+        className: N.jf,
         children: [
-            (0, r.jsx)(f, { status: e }),
+            (0, r.jsx)(k, { status: e }),
             (0, r.jsxs)("div", {
-                className: I.bc,
+                className: N.bc,
                 children: [
-                    (0, r.jsx)(d.E, { variant: "body-md/medium", children: t }),
-                    null != l && (0, r.jsx)(d.E, { variant: "body-sm/medium", color: "text-subtle", children: l }),
-                    null != i &&
+                    (0, r.jsx)(d.E, { variant: "body-md/medium", children: l }),
+                    null != t && (0, r.jsx)(d.E, { variant: "body-sm/medium", color: "text-subtle", children: t }),
+                    null != c &&
                         (0, r.jsx)(u.Q, {
                             textVariant: "body-sm/medium",
-                            text: N.intl.string(N.t.hvVgAZ),
-                            onClick: () => (0, E.A)(i),
+                            text: b.intl.string(b.t.hvVgAZ),
+                            onClick: () => (0, C.A)(c),
                         }),
                 ],
             }),
         ],
     });
 }
-function f(s) {
+function k(s) {
     let { status: e } = s,
-        t = { size: "sm", className: I.I8 };
+        l = { size: "sm", className: N.I8 };
     switch (e) {
         case 0:
-            return (0, r.jsx)(x.y, { ...t, color: a.A.colors.ICON_FEEDBACK_POSITIVE });
+            return (0, r.jsx)(m.CircleCheckIcon, { ...l, color: a.A.colors.ICON_FEEDBACK_POSITIVE });
         case 1:
-            return (0, r.jsx)(m.a, { ...t, color: a.A.colors.ICON_FEEDBACK_CRITICAL });
+            return (0, r.jsx)(x.CircleXIcon, { ...l, color: a.A.colors.ICON_FEEDBACK_CRITICAL });
         case 2:
-            return (0, r.jsx)(A.U, { ...t, color: a.A.colors.ICON_FEEDBACK_POSITIVE });
+            return (0, r.jsx)(A.CheckmarkSmallIcon, { ...l, color: a.A.colors.ICON_FEEDBACK_POSITIVE });
         case 3:
-            return (0, r.jsx)(j.WarningIcon, { ...t, color: a.A.colors.ICON_FEEDBACK_WARNING });
+            return (0, r.jsx)(h.WarningIcon, { ...l, color: a.A.colors.ICON_FEEDBACK_WARNING });
         case 4:
-            return (0, r.jsx)(h.P, { ...t, color: a.A.colors.ICON_FEEDBACK_CRITICAL });
+            return (0, r.jsx)(j.XSmallIcon, { ...l, color: a.A.colors.ICON_FEEDBACK_CRITICAL });
     }
 }
-t.d(
+l.d(
     e,
     {},
     {
         Sy: v,
         VT: function (s) {
-            let { overallStatus: e, flow: t, name: l, steps: i, isChosen: a, showGlobalFlowToggle: u = !1 } = s,
-                x = (0, c.bG)([C.A], () => C.A.getGloballyDisabledAuthorizationFlows()),
-                m = x.has(t);
+            let { overallStatus: e, flow: l, name: t, steps: c, isChosen: a, showGlobalFlowToggle: u = !1 } = s,
+                m = (0, n.bG)([E.A], () => E.A.getGloballyDisabledAuthorizationFlows()),
+                x = m.has(l);
             return (0, r.jsxs)("div", {
-                className: I.Wk,
+                className: N.Wk,
                 children: [
                     u &&
                         (0, r.jsx)("div", {
-                            className: I.WV,
+                            className: N.WV,
                             children: (0, r.jsx)(o.d, {
-                                label: N.intl.string(b.default.DWC99q),
-                                checked: !m,
+                                label: b.intl.string(O.default.DWC99q),
+                                checked: !x,
                                 onChange: () => {
-                                    m ? O.zi([...x].filter((s) => s !== t)) : O.zi([...x, t]);
+                                    x ? I.zi([...m].filter((s) => s !== l)) : I.zi([...m, l]);
                                 },
                             }),
                         }),
-                    (0, r.jsx)(v, { status: e, text: l }),
-                    i.map((s, e) => (0, r.jsx)(D, { ...s }, e)),
+                    (0, r.jsx)(v, { status: e, text: t }),
+                    c.map((s, e) => (0, r.jsx)(D, { ...s }, e)),
                     a &&
                         (0, r.jsx)("div", {
-                            className: I.MH,
+                            className: N.MH,
                             children: (0, r.jsx)(d.E, {
                                 variant: "body-sm/medium",
                                 color: "text-subtle",
-                                children: N.intl.string(b.default.OEkrCx),
+                                children: b.intl.string(O.default.OEkrCx),
                             }),
                         }),
-                    m &&
+                    x &&
                         (0, r.jsx)("div", {
-                            className: n()(I.MH, I.vi),
+                            className: i()(N.MH, N.vi),
                             children: (0, r.jsx)(d.E, {
                                 variant: "body-sm/medium",
                                 color: "text-subtle",
-                                children: N.intl.string(b.default.mgsmfY),
+                                children: b.intl.string(O.default.mgsmfY),
                             }),
                         }),
                 ],
             });
         },
-        kW: f,
+        kW: k,
         nW: _,
     },
 );

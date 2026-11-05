@@ -6,17 +6,17 @@ var e = n(503698),
     i = n(534514),
     t = n(834730),
     d = n(289873),
-    u = n(199457);
+    o = n(199457);
 n.d(
     s,
     {},
     {
         A: function (l) {
-            let { icon: s, heading: n, description: e, error: d, action: o, className: m } = l;
+            let { icon: s, heading: n, description: e, error: d, action: u, className: m } = l;
             return (0, a.jsxs)("div", {
-                className: r()(u.vV, m),
+                className: r()(o.vV, m),
                 children: [
-                    s ?? (0, a.jsx)(c.k, { size: "lg", color: "var(--icon-muted)" }),
+                    s ?? (0, a.jsx)(c.AppsIcon, { size: "lg", color: "var(--icon-muted)" }),
                     null != n
                         ? (0, a.jsx)(i.D, { variant: "heading-sm/semibold", color: "text-default", children: n })
                         : null,
@@ -24,7 +24,7 @@ n.d(
                         ? (0, a.jsx)(t.E, {
                               variant: "body-sm/normal",
                               color: "text-muted",
-                              className: u.r9,
+                              className: o.r9,
                               children: e,
                           })
                         : null,
@@ -32,17 +32,17 @@ n.d(
                         ? (0, a.jsx)(t.E, {
                               variant: "body-sm/normal",
                               color: "text-feedback-critical",
-                              className: u.r9,
+                              className: o.r9,
                               children: d,
                           })
                         : null,
-                    null != o ? (0, a.jsx)("div", { className: u.XI, children: o }) : null,
+                    null != u ? (0, a.jsx)("div", { className: o.XI, children: u }) : null,
                 ],
             });
         },
         j: function (l) {
             let { className: s } = l;
-            return (0, a.jsx)("div", { className: r()(u.vV, s), children: (0, a.jsx)(d.y, {}) });
+            return (0, a.jsx)("div", { className: r()(o.vV, s), children: (0, a.jsx)(d.y, {}) });
         },
     },
 );

@@ -5,15 +5,15 @@ var r = n(503698),
     s = n(855986),
     a = n(821609),
     o = n(866665),
-    u = n(408278),
-    c = n(622631),
+    c = n(408278),
+    u = n(622631),
     d = n(401843),
     m = n(616356),
     h = n(46653),
     g = n(200749),
     f = n(792996),
-    p = n(604889);
-let A = n(913516);
+    A = n(604889);
+let p = n(913516);
 n.d(
     t,
     {},
@@ -28,10 +28,10 @@ n.d(
                     }),
                 );
             return (0, i.jsx)("div", {
-                className: l()(p.Qs, p.FY),
+                className: l()(A.Qs, A.FY),
                 children: (0, i.jsx)(g.A, {
-                    className: p.FP,
-                    artURL: A,
+                    className: A.FP,
+                    artURL: p,
                     noArt: r,
                     selected: E,
                     size: (0, g.J)(n),
@@ -39,10 +39,10 @@ n.d(
                     description: E
                         ? null
                         : (0, i.jsxs)("div", {
-                              className: l()(p.t2, { [p.y8]: !b }),
+                              className: l()(A.t2, { [A.y8]: !b }),
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: p.lO,
+                                      className: A.lO,
                                       children: (0, i.jsx)(a.$, {
                                           variant: "secondary",
                                           size: b ? "sm" : "md",
@@ -51,13 +51,13 @@ n.d(
                                   }),
                                   C
                                       ? (0, i.jsx)("div", {
-                                            className: l()(p.lO, p.EU),
+                                            className: l()(A.lO, A.EU),
                                             children: (0, i.jsx)(o.m, {
                                                 text: f.intl.string(f.t.wCrzut),
-                                                children: (0, i.jsx)(u.K, {
+                                                children: (0, i.jsx)(c.K, {
                                                     variant: "secondary",
                                                     size: b ? "sm" : "md",
-                                                    icon: c.v,
+                                                    icon: u.EyePlusIcon,
                                                     "aria-label": f.intl.string(f.t.wCrzut),
                                                     onClick: (e) => {
                                                         (e.stopPropagation(),

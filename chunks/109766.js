@@ -15,8 +15,8 @@ var l = i(477900),
     p = i(235986),
     _ = i(915089),
     T = i(362311),
-    j = i(632656),
-    I = i(424912),
+    I = i(632656),
+    j = i(424912),
     C = i(209322),
     A = i(287809),
     g = i(129230),
@@ -72,7 +72,7 @@ function W(e) {
                   m(!1);
               },
               children: [
-                  (0, l.jsx)(O.p, {
+                  (0, l.jsx)(O.ClydeIcon, {
                       size: "custom",
                       width: 56,
                       height: 40,
@@ -215,7 +215,7 @@ function ea(e) {
             },
             [H, b],
         ),
-        { content: eo, footer: ed } = (0, j.u)({
+        { content: eo, footer: ed } = (0, I.u)({
             hasFooter: !1,
             onBack: () => {
                 (H(null), b(X.i.CHOOSE_TEMPLATE));
@@ -224,7 +224,7 @@ function ea(e) {
                 (ee(e === en.IR.COMMUNITY), b(X.i.CUSTOMIZE_GUILD));
             },
         }),
-        { content: ec, footer: em } = (0, I.D)({
+        { content: ec, footer: em } = (0, j.D)({
             guildTemplate: w,
             titleClassName: el.RH,
             hasFooter: !1,

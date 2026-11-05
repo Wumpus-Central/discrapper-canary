@@ -20,8 +20,8 @@ n.d(
                     subtitle: b,
                     graphic: k,
                     guildBoostProps: v,
-                    onClose: C,
-                    onSecondaryClick: h,
+                    onClose: h,
+                    onSecondaryClick: C,
                     secondaryCTA: T,
                     gradientColor: x = "nitro-pink",
                     badgeType: g = null,
@@ -32,15 +32,15 @@ n.d(
                 _ = (0, o.V)(),
                 f = (0, s.O)(),
                 j = !m && (_?.subscriptionTrial?.skuId === y || (0, u.U9)(f, y)) && null == v,
-                z = d.intl.string(d.t.pj0XBN);
+                I = d.intl.string(d.t.pj0XBN);
             j &&
                 (null != _
-                    ? (z = (0, l.FY)({
+                    ? (I = (0, l.FY)({
                           intervalType: _?.subscriptionTrial?.interval,
                           intervalCount: _?.subscriptionTrial?.intervalCount,
                       }))
-                    : null != f && (z = d.intl.formatToPlainString(d.t.bkQ4bH, { percent: f.discount.amount })));
-            let A = "beta" === g ? "beta" : null != _ ? "free_trial" : g;
+                    : null != f && (I = d.intl.formatToPlainString(d.t.bkQ4bH, { percent: f.discount.amount })));
+            let z = "beta" === g ? "beta" : null != _ ? "free_trial" : g;
             return (0, e.jsx)(c.A, {
                 subscriptionTier: y,
                 children: (t) => {
@@ -51,20 +51,20 @@ n.d(
                         graphic: k,
                         gradientColor: x,
                         transitionState: i,
-                        onClose: async () => await C(),
+                        onClose: async () => await h(),
                         actions: [
-                            { text: T, variant: "secondary", size: "md", onClick: h },
+                            { text: T, variant: "secondary", size: "md", onClick: C },
                             {
-                                text: z,
+                                text: I,
                                 variant: "expressive",
                                 size: "md",
                                 onClick: async (t) => {
-                                    (await C(), l(t));
+                                    (await h(), l(t));
                                 },
-                                icon: r.t,
+                                icon: r.NitroWheelIcon,
                             },
                         ],
-                        ...(null !== A && { badge: { type: A, variant: "expressive" } }),
+                        ...(null !== z && { badge: { type: z, variant: "expressive" } }),
                         children: w,
                     });
                 },

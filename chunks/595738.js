@@ -1,12 +1,12 @@
 var r = n(477900);
 n(582128);
-var e = n(503698),
-    a = n.n(e),
+var a = n(503698),
+    e = n.n(a),
     i = n(534514),
     c = n(933832),
     d = n(834730),
-    t = n(789645),
-    o = n(376092),
+    o = n(789645),
+    t = n(376092),
     h = n(750382);
 n.d(
     l,
@@ -16,21 +16,21 @@ n.d(
             let {
                 grantedPermissions: l,
                 disabledPermissions: n,
-                grantedPermissionsHeader: e,
+                grantedPermissionsHeader: a,
                 disabledPermissionsHeader: x,
                 className: m,
             } = s;
             return (0, r.jsxs)("div", {
-                className: a()(h.p_, m),
+                className: e()(h.p_, m),
                 children: [
                     null != l && l.length > 0
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  null != e
+                                  null != a
                                       ? (0, r.jsx)(i.D, {
                                             variant: "heading-xs/semibold",
                                             color: "text-strong",
-                                            children: e,
+                                            children: a,
                                         })
                                       : null,
                                   (0, r.jsx)("div", {
@@ -48,7 +48,7 @@ n.d(
                                                       }),
                                                       (0, r.jsx)(d.E, {
                                                           variant: "body-sm/normal",
-                                                          children: (0, o.hx)(s),
+                                                          children: (0, t.hx)(s),
                                                       }),
                                                   ],
                                               },
@@ -77,14 +77,14 @@ n.d(
                                               {
                                                   className: h.EK,
                                                   children: [
-                                                      (0, r.jsx)(t.P, {
+                                                      (0, r.jsx)(o.XSmallIcon, {
                                                           size: "xs",
                                                           color: "currentColor",
                                                           className: h.$A,
                                                       }),
                                                       (0, r.jsx)(d.E, {
                                                           variant: "body-sm/normal",
-                                                          children: (0, o.hx)(s),
+                                                          children: (0, t.hx)(s),
                                                       }),
                                                   ],
                                               },

@@ -14,8 +14,8 @@ var l = n(477900),
     g = n(775602),
     x = n(776231),
     E = n(750506),
-    y = n(218394),
-    S = n(256449),
+    S = n(218394),
+    y = n(256449),
     C = n(832628),
     A = n(378058),
     b = n(792996),
@@ -48,7 +48,7 @@ function _(e) {
                 ? (0, l.jsxs)("div", {
                       className: I.z3,
                       children: [
-                          (0, l.jsx)(h.d, {
+                          (0, l.jsx)(h.StickerSadIcon, {
                               size: "custom",
                               width: 20,
                               height: 20,
@@ -85,7 +85,7 @@ function R(e) {
         } = e,
         g = i.useRef(null),
         E = i.useRef(null),
-        [y, S] = i.useState(!0),
+        [S, y] = i.useState(!0),
         [C, v] = i.useState(!1),
         N = i.useRef(!1);
     N.current = t && c;
@@ -107,10 +107,10 @@ function R(e) {
                         assetUrl: T,
                         assetData: u,
                         onInitialDraw: () => {
-                            t || S(!1);
+                            t || y(!1);
                         },
                         onError: () => {
-                            t || (S(!1), v(!0), p?.());
+                            t || (y(!1), v(!0), p?.());
                         },
                     })),
                     N.current && E.current.setState(!0));
@@ -133,7 +133,7 @@ function R(e) {
               ref: m,
               children: (0, l.jsx)(_, {
                   hasError: C,
-                  isLoading: y,
+                  isLoading: S,
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: f,
@@ -155,19 +155,19 @@ let w = (e) => {
             } = e,
             [f, p] = i.useState(!1),
             [g, x] = i.useState(!0),
-            [E, y] = i.useState(!1),
-            S = i.useRef(null),
+            [E, S] = i.useState(!1),
+            y = i.useRef(null),
             C = i.useRef(null),
             b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
             N = i.useCallback(() => {
                 x(!1);
             }, []),
             T = i.useCallback(() => {
-                y(!0);
+                S(!0);
             }, []);
         return (i.useEffect(() => {
-            if (null != S.current) {
-                let { isVisible: e } = S.current;
+            if (null != y.current) {
+                let { isVisible: e } = y.current;
                 p(e);
             }
         }, []),
@@ -178,7 +178,7 @@ let w = (e) => {
             ? null
             : (0, l.jsx)(d.L, {
                   innerRef: c,
-                  ref: S,
+                  ref: y,
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
@@ -219,8 +219,8 @@ let w = (e) => {
             } = e,
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
-            y = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            S = (0, f.p)(s, { ref: x, from: y, enter: { transform: "scale(1)", opacity: 1 }, leave: y, config: N }),
+            S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
+            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: N }),
             C = i.useRef(null),
             A = (0, p.z)(
                 { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
@@ -228,7 +228,7 @@ let w = (e) => {
             );
         return (
             (0, u.useChain)(s ? [x, C] : [C, x], s ? [0, 0.0625] : [0, 0]),
-            S(
+            y(
                 (e, i) =>
                     i &&
                     (0, l.jsx)(E.nE, {
@@ -287,8 +287,8 @@ function L(e) {
             fileUri: f,
             onError: p,
         } = e,
-        g = (0, y.j)(),
-        x = (0, S.Th)(t) && !n,
+        g = (0, S.j)(),
+        x = (0, y.Th)(t) && !n,
         E = i.useRef(null);
     if (null == c) return null;
     let A = c.format_type === C.TG.LOTTIE ? R : w;

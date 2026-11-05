@@ -1,8 +1,8 @@
 n.r(t);
 var o = n(477900),
     s = n(582128),
-    r = n(165862),
-    a = n(477782),
+    a = n(165862),
+    r = n(477782),
     i = n(265872),
     l = n(306471),
     u = n(189252),
@@ -10,19 +10,19 @@ var o = n(477900),
     c = n(786574),
     p = n(835894),
     h = n(949091);
-function v(e) {
+function f(e) {
     let { onClose: t } = e,
         n = (0, p.x)(),
         s = (0, c.N)(n, d.Ft),
         i = (0, h.A)();
-    return (0, o.jsxs)(r.W, {
+    return (0, o.jsxs)(a.W, {
         "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "devtools-popout",
         variant: "fixed",
         onClose: t,
         "aria-label": "DevTools Actions",
-        children: [s, (0, o.jsx)(a.rX, { "aria-label": "Playgrounds", children: i })],
+        children: [s, (0, o.jsx)(r.rX, { "aria-label": "Playgrounds", children: i })],
     });
 }
 n.d(
@@ -31,14 +31,14 @@ n.d(
     {
         default: function (e) {
             let { focusSectionProps: t } = e,
-                [n, r] = s.useState(!1),
-                [a, c] = s.useState(0),
+                [n, a] = s.useState(!1),
+                [r, c] = s.useState(0),
                 p = s.useRef(null);
             function h(e) {
-                (clearTimeout(a),
+                (clearTimeout(r),
                     c(
                         setTimeout(() => {
-                            r(e);
+                            a(e);
                         }, 100),
                     ));
             }
@@ -52,15 +52,15 @@ n.d(
                     position: "bottom",
                     align: "right",
                     autoInvert: !1,
-                    onRequestOpen: () => r(!0),
-                    onRequestClose: () => r(!1),
-                    renderPopout: () => (0, o.jsx)(v, { onClose: () => r(!1) }),
+                    onRequestOpen: () => a(!0),
+                    onRequestClose: () => a(!1),
+                    renderPopout: () => (0, o.jsx)(f, { onClose: () => a(!1) }),
                     children: (e, n) => {
                         let { isShown: s } = n;
                         return (0, o.jsx)(u.A, {
                             ref: p,
                             onClick: () => (0, d.Ft)(),
-                            icon: l.V,
+                            icon: l.StaffBadgeIcon,
                             "aria-label": "DevTools",
                             selected: s,
                             ...t,

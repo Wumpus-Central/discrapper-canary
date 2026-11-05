@@ -48,12 +48,15 @@ n.d(
                                       className: h.Gv,
                                       onClick: b,
                                       "aria-label": C,
-                                      children: (0, r.jsx)(i.Z, { size: "refresh_sm", color: "currentColor" }),
+                                      children: (0, r.jsx)(i.ArrowLargeLeftIcon, {
+                                          size: "refresh_sm",
+                                          color: "currentColor",
+                                      }),
                                   }),
                               })
                             : null,
                         null == x
-                            ? (0, r.jsx)(s.D, {
+                            ? (0, r.jsx)(s.MagicWandIcon, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,

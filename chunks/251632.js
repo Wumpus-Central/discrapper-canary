@@ -20,18 +20,18 @@ var t = l(477900),
     y = l(265872),
     C = l(771871),
     N = l(565645),
-    S = l(475743),
-    f = l(47167),
-    T = l(713654),
-    I = l(920134),
+    I = l(475743),
+    S = l(47167),
+    f = l(713654),
+    T = l(920134),
     E = l(374084),
     M = l(946274),
     k = l(734057),
     D = l(808728),
     w = l(71393),
     R = l(994500),
-    G = l(287809),
-    P = l(486020),
+    P = l(287809),
+    G = l(486020),
     _ = l(403362),
     L = l(488926),
     U = l(199940),
@@ -85,8 +85,8 @@ l.d(
     {},
     {
         default: function (e) {
-            let { transitionState: n, onClose: l, guildId: _, action: L, onSave: X, onDelete: q } = e,
-                Q = i.useRef(null),
+            let { transitionState: n, onClose: l, guildId: _, action: L, onSave: q, onDelete: Q } = e,
+                X = i.useRef(null),
                 Z = i.useRef(null),
                 K = null == L || null == k.A.getChannel(L.channelId) ? null : L.channelId,
                 [$, ee] = i.useState(K),
@@ -125,14 +125,14 @@ l.d(
                     null != ej && null != ej.iconData
                         ? ej.iconData
                         : null != ep && null != $
-                          ? P.Ay.getNewMemberActionIconURL({ channelId: $, icon: ep })
+                          ? G.Ay.getNewMemberActionIconURL({ channelId: $, icon: ep })
                           : null,
                 ),
-                eA = (0, S.Ay)(eh),
-                ey = (0, S.Ay)(ev),
+                eA = (0, I.Ay)(eh),
+                ey = (0, I.Ay)(ev),
                 eC = null == es || 0 === es.length || null == er || null == $,
                 eN = Object.values(ei).flat().length > 0,
-                eS = i.useCallback(() => {
+                eI = i.useCallback(() => {
                     if (null == $ || null == er || es.length <= 0) return;
                     let e = void 0 !== ex && $ !== ex,
                         n = void 0 !== ej,
@@ -141,7 +141,7 @@ l.d(
                     (e || (n && t)) && (n && (0, U.Rp)(ex), (0, U.J4)($, i));
                     let a = eh !== eA,
                         s = ev !== ey;
-                    (X(
+                    (q(
                         {
                             channelId: $,
                             title: es,
@@ -154,11 +154,11 @@ l.d(
                         (a || s) && !e,
                     ),
                         l());
-                }, [X, l, es, er, $, eh, ep, ev, eA, ey, ex, ej]),
-                ef = i.useCallback(() => {
-                    (q?.(), l());
-                }, [q, l]),
-                eT = i.useCallback(
+                }, [q, l, es, er, $, eh, ep, ev, eA, ey, ex, ej]),
+                eS = i.useCallback(() => {
+                    (Q?.(), l());
+                }, [Q, l]),
+                ef = i.useCallback(
                     (e) => {
                         (eo(e),
                             ea(
@@ -173,7 +173,7 @@ l.d(
                     },
                     [eo, ea, $, er, eh],
                 ),
-                eI = i.useCallback(
+                eT = i.useCallback(
                     (e) => {
                         (ee(e),
                             ea(
@@ -209,11 +209,11 @@ l.d(
                             .filter((e) => !ec.has(e.channel.id) && (0, E.Rc)(e.channel))
                             .map((e) => {
                                 let n = w.A.getGuild(_),
-                                    l = (0, T.gU)(e.channel, n);
+                                    l = (0, f.gU)(e.channel, n);
                                 return {
                                     id: e.channel.id,
                                     value: e.channel.id,
-                                    label: (0, f.m1)(e.channel, G.default, R.A),
+                                    label: (0, S.m1)(e.channel, P.default, R.A),
                                     leading: l ?? void 0,
                                 };
                             }),
@@ -231,22 +231,22 @@ l.d(
                     [ek],
                 ),
                 eR = i.useId(),
-                eG = i.useId(),
-                eP = i.useMemo(
+                eP = i.useId(),
+                eG = i.useMemo(
                     () => [
                         { text: B.intl.string(B.t["ETE/oC"]), onClick: l, variant: "secondary" },
-                        { text: B.intl.string(B.t["R3BPH+"]), variant: "primary", onClick: eS, disabled: eC || eN },
+                        { text: B.intl.string(B.t["R3BPH+"]), variant: "primary", onClick: eI, disabled: eC || eN },
                     ],
-                    [eS, eN, eC, l],
+                    [eI, eN, eC, l],
                 );
             return (0, t.jsxs)(s.a, {
                 title: B.intl.string(B.t.ncTLSo),
                 transitionState: n,
                 onClose: l,
-                actions: eP,
+                actions: eG,
                 actionBarInput:
                     null != L
-                        ? (0, t.jsx)(x.Q, { text: B.intl.string(B.t.N86XcP), onClick: ef, variant: "critical" })
+                        ? (0, t.jsx)(x.Q, { text: B.intl.string(B.t.N86XcP), onClick: eS, variant: "critical" })
                         : void 0,
                 children: [
                     (0, t.jsxs)("div", {
@@ -260,7 +260,7 @@ l.d(
                             (0, t.jsx)(v.k, {
                                 value: es,
                                 error: (es?.length ?? 0) > 0 ? ei.title.join(", ") : null,
-                                onChange: eT,
+                                onChange: ef,
                                 placeholder: B.intl.string(B.t.oN1Sm2),
                                 maxLength: 60,
                             }),
@@ -279,7 +279,7 @@ l.d(
                                 selectionMode: "single",
                                 value: $ ?? void 0,
                                 options: eM,
-                                onSelectionChange: eI,
+                                onSelectionChange: eT,
                             }),
                             (0, t.jsx)(A.E, {
                                 variant: "body-xs/medium",
@@ -323,7 +323,7 @@ l.d(
                                                     (0, t.jsx)(c.Dr, {
                                                         id: "emoji",
                                                         label: B.intl.string(B.t["amsyN+"]),
-                                                        leadingAccessory: { type: "icon", icon: r.n },
+                                                        leadingAccessory: { type: "icon", icon: r.ReactionIcon },
                                                         action: () => {
                                                             em(!0);
                                                         },
@@ -333,7 +333,7 @@ l.d(
                                                         label: B.intl.string(B.t["2YKkdd"]),
                                                         leadingAccessory: { type: "icon", icon: d.UploadIcon },
                                                         action: () => {
-                                                            Q.current?.activateUploadDialogue();
+                                                            X.current?.activateUploadDialogue();
                                                         },
                                                     }),
                                                     null != eD || null != eh
@@ -365,7 +365,7 @@ l.d(
                                                                     className: J.VU,
                                                                     children: [
                                                                         (0, t.jsx)(m.A, {
-                                                                            id: eG,
+                                                                            id: eP,
                                                                             children: B.intl.formatToPlainString(
                                                                                 B.t.uA3dAs,
                                                                                 { name: eD },
@@ -385,7 +385,7 @@ l.d(
                                                                     className: J.VU,
                                                                     children: [
                                                                         (0, t.jsx)(m.A, {
-                                                                            id: eG,
+                                                                            id: eP,
                                                                             children: B.intl.formatToPlainString(
                                                                                 B.t["8bCGTO"],
                                                                                 { name: eh.name },
@@ -408,10 +408,10 @@ l.d(
                                                                     "aria-label": n
                                                                         ? B.intl.string(B.t.bt75uw)
                                                                         : B.intl.string(B.t.XqMe3N),
-                                                                    "aria-describedby": `${eR} ${eG}`,
+                                                                    "aria-describedby": `${eR} ${eP}`,
                                                                     "aria-haspopup": "menu",
                                                                     variant: n ? "overlay-secondary" : "secondary",
-                                                                    icon: n ? g.PencilIcon : p.X,
+                                                                    icon: n ? g.PencilIcon : p.ImagePlusIcon,
                                                                     size: n ? "sm" : "md",
                                                                     onClick: (n) => {
                                                                         (n.stopPropagation(), e.onClick());
@@ -427,7 +427,7 @@ l.d(
                                     (0, t.jsx)("div", {
                                         className: J.uJ,
                                         children: (0, t.jsx)(M.Ay, {
-                                            ref: Q,
+                                            ref: X,
                                             "aria-hidden": !0,
                                             onChange: (e) => {
                                                 ew(e);
@@ -444,7 +444,7 @@ l.d(
                                         renderPopout: (e) => {
                                             var n;
                                             let { closePopout: l } = e;
-                                            return (0, t.jsx)(I.A, {
+                                            return (0, t.jsx)(T.A, {
                                                 closePopout: () => {
                                                     l();
                                                 },

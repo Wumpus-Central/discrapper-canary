@@ -1,8 +1,8 @@
 var i = t(477900);
 t(582128);
-var r = t(307301),
+var l = t(307301),
     s = t(834730),
-    l = t(866665),
+    r = t(866665),
     o = t(939249),
     a = t(972748);
 t.d(
@@ -15,7 +15,7 @@ t.d(
                 ? (0, i.jsxs)("div", {
                       className: a.k,
                       children: [
-                          (0, i.jsx)(r.j, { size: "md", color: "currentColor", className: a.K }),
+                          (0, i.jsx)(l.PlusSmallIcon, { size: "md", color: "currentColor", className: a.K }),
                           (0, i.jsx)(s.E, {
                               color: "interactive-text-active",
                               variant: "body-md/semibold",
@@ -23,14 +23,14 @@ t.d(
                           }),
                       ],
                   })
-                : (0, i.jsx)(l.m, {
+                : (0, i.jsx)(r.m, {
                       text: t,
                       shouldShow: null != t,
                       children: (0, i.jsxs)(o.D, {
                           className: a.k,
                           onClick: c,
                           children: [
-                              (0, i.jsx)(r.j, { size: "md", color: "currentColor", className: a.K }),
+                              (0, i.jsx)(l.PlusSmallIcon, { size: "md", color: "currentColor", className: a.K }),
                               (0, i.jsx)(s.E, {
                                   color: "interactive-text-active",
                                   variant: "body-md/semibold",

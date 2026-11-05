@@ -1,3 +1,4 @@
+e.r(n);
 var i = e(477900);
 e(582128);
 var l = e(646514),
@@ -7,22 +8,22 @@ e.d(
     n,
     {},
     {
-        J: function (t) {
+        UserPlayIcon: function (t) {
             let {
                     size: n = "md",
                     width: e,
                     height: s,
                     color: c = l.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: u = "",
-                    ...d
+                    ...o
                 } = t,
-                h = (0, a.J)(n),
-                o = h?.width ?? e,
-                g = h?.height ?? s;
+                d = (0, a.J)(n),
+                h = d?.width ?? e,
+                g = d?.height ?? s;
             return (0, i.jsxs)("svg", {
-                ...(0, r.A)(d),
+                ...(0, r.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
+                width: h,
                 height: g,
                 fill: "none",
                 viewBox: "0 0 24 24",

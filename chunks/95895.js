@@ -36,7 +36,7 @@ var x = i(748562),
 function j(n) {
     let { onContinue: t, onClose: i } = n,
         r = N.A.getArticleURL(c.MVz.CRUNCHYROLL_CONNECTION),
-        s = o.useMemo(() => [{ label: h.intl.string(h.t["2TXHQd"]), icon: x.U }], []);
+        s = o.useMemo(() => [{ label: h.intl.string(h.t["2TXHQd"]), icon: x.TvIcon }], []);
     return (0, e.jsx)(p.B, {
         platformType: c.fg2.CRUNCHYROLL,
         headerConnect: h.intl.string(h.t["Da+3NJ"]),
@@ -97,7 +97,7 @@ function E() {
         }),
     });
 }
-function k(n) {
+function T(n) {
     let { onClose: t } = n;
     return (0, e.jsx)(L.b, {
         img: (0, e.jsx)("img", { src: "/assets/f57d187b12fee97a.png", width: "224", height: "104", alt: "" }),
@@ -107,8 +107,8 @@ function k(n) {
         onClose: t,
     });
 }
-var O = i(52643),
-    T = i(844768);
+var k = i(52643),
+    O = i(844768);
 function _(n) {
     let { transitionState: t, onClose: i, analyticsLocation: o } = n,
         {
@@ -122,7 +122,7 @@ function _(n) {
         } = (0, l.m)(o, c.fg2.CRUNCHYROLL);
     return (0, e.jsx)(r.EO, {
         "data-migration-pending": !0,
-        className: T.yl,
+        className: O.yl,
         transitionState: t,
         disableTrack: !0,
         parentComponent: "CrunchyrollLinkModal",
@@ -130,9 +130,9 @@ function _(n) {
             activeSlide: a,
             width: 408,
             children: [
-                (0, e.jsx)(s.q, { id: O.N.LANDING, children: (0, e.jsx)(j, { onContinue: d, onClose: i }) }),
+                (0, e.jsx)(s.q, { id: k.N.LANDING, children: (0, e.jsx)(j, { onContinue: d, onClose: i }) }),
                 (0, e.jsx)(s.q, {
-                    id: O.N.PRE_CONNECT,
+                    id: k.N.PRE_CONNECT,
                     children: (0, e.jsx)(b, {
                         isWaitingForConnection: !1,
                         onWaitingForConnection: h,
@@ -142,7 +142,7 @@ function _(n) {
                     }),
                 }),
                 (0, e.jsx)(s.q, {
-                    id: O.N.PRE_CONNECT_WAITING,
+                    id: k.N.PRE_CONNECT_WAITING,
                     children: (0, e.jsx)(b, {
                         isWaitingForConnection: !0,
                         expectedCallbackState: N,
@@ -152,11 +152,11 @@ function _(n) {
                     }),
                 }),
                 (0, e.jsx)(s.q, {
-                    id: O.N.DISCORD_CONSENT,
+                    id: k.N.DISCORD_CONSENT,
                     children: (0, e.jsx)(C, { authToken: p, onContinue: d, onError: g, onClose: i }),
                 }),
-                (0, e.jsx)(s.q, { id: O.N.ERROR, children: (0, e.jsx)(u, { onContinue: d, onClose: i }) }),
-                (0, e.jsx)(s.q, { id: O.N.SUCCESS, children: (0, e.jsx)(k, { onClose: i }) }),
+                (0, e.jsx)(s.q, { id: k.N.ERROR, children: (0, e.jsx)(u, { onContinue: d, onClose: i }) }),
+                (0, e.jsx)(s.q, { id: k.N.SUCCESS, children: (0, e.jsx)(T, { onClose: i }) }),
             ],
         }),
     });

@@ -2,8 +2,8 @@ var e = n(477900);
 n(582128);
 var i = n(503698),
     r = n.n(i),
-    t = n(939249),
-    l = n(289873),
+    l = n(939249),
+    t = n(289873),
     c = n(7689),
     o = n(789645),
     d = n(792996),
@@ -14,7 +14,7 @@ n.d(
     {
         B: function (a) {
             let { hasContent: s, onClear: n, className: i, isLoading: h, size: u = "sm" } = a;
-            return (0, e.jsx)(t.D, {
+            return (0, e.jsx)(l.D, {
                 className: r()(i, p.Qm, { [p.Wn]: s }),
                 "data-size": u,
                 onClick: (a) => {
@@ -28,7 +28,7 @@ n.d(
                 children: (0, e.jsx)("div", {
                     className: p.zc,
                     children: h
-                        ? (0, e.jsx)(l.y, { type: l.y.Type.SPINNING_CIRCLE, className: r()(p.Kk, p.RK) })
+                        ? (0, e.jsx)(t.y, { type: t.y.Type.SPINNING_CIRCLE, className: r()(p.Kk, p.RK) })
                         : (0, e.jsxs)(e.Fragment, {
                               children: [
                                   (0, e.jsx)(c.MagnifyingGlassIcon, {
@@ -37,7 +37,7 @@ n.d(
                                       "aria-label": d.intl.string(d.t["5h0QOP"]),
                                       "aria-hidden": s,
                                   }),
-                                  (0, e.jsx)(o.P, {
+                                  (0, e.jsx)(o.XSmallIcon, {
                                       color: "currentColor",
                                       className: r()(p.IU, { [p.RK]: s }),
                                       "aria-label": d.intl.string(d.t.VkKicb),

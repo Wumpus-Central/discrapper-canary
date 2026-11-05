@@ -127,7 +127,10 @@ function q(e) {
                           (0, i.jsxs)("div", {
                               className: X._A,
                               children: [
-                                  (0, i.jsx)(p._, { size: "xs", color: b.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, i.jsx)(p.BoostGemIcon, {
+                                      size: "xs",
+                                      color: b.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                  }),
                                   (0, i.jsx)(g.E, {
                                       variant: "body-xs/medium",
                                       children: J.intl.format(W.default.kOMlHs, { boostCount: s.cost }),
@@ -140,7 +143,7 @@ function q(e) {
               ],
           });
 }
-function Y(e) {
+function B(e) {
     let { region: s, selected: l, disabled: a, className: n } = e,
         { pingText: t, pingCircleStyle: d } = (0, O.b)(s.pingUrl);
     return null == s
@@ -170,7 +173,7 @@ function Y(e) {
               ],
           });
 }
-function Z() {
+function Y() {
     let {
         guildId: e,
         currentGame: s,
@@ -202,7 +205,7 @@ function Z() {
         w = a.useMemo(() => b.some((e) => "" !== e.pingUrl), [b]),
         L = a.useMemo(() => s?.plans.map((e) => ({ value: e, label: e.name })) ?? [], [s]),
         O = (0, U.l)(),
-        { isValid: Z, errors: B } = (0, U.u)(d),
+        { isValid: Y, errors: Z } = (0, U.u)(d),
         $ = null != n,
         ee = (0, H.A)(n),
         es = (0, Q.A)(p),
@@ -247,7 +250,7 @@ function Z() {
                                               placeholder: J.intl.string(W.default.ElVYr3),
                                               maxLength: 32,
                                               disabled: h || !ee,
-                                              error: B.name,
+                                              error: Z.name,
                                           }),
                                       ],
                                   }),
@@ -306,7 +309,7 @@ function Z() {
                                                     select: (e) => t(e.id),
                                                     placeholder: J.intl.string(W.default["k+RTIm"]),
                                                     renderOptionLabel: (e) =>
-                                                        (0, i.jsx)(Y, {
+                                                        (0, i.jsx)(B, {
                                                             region: e.value,
                                                             selected: e.value.id === l,
                                                             disabled: e.disabled ?? !1,
@@ -314,7 +317,7 @@ function Z() {
                                                     renderOptionValue: (e) =>
                                                         null == e[0]
                                                             ? null
-                                                            : (0, i.jsx)(Y, {
+                                                            : (0, i.jsx)(B, {
                                                                   region: e[0].value,
                                                                   selected: e[0].value.id === l,
                                                                   disabled: e[0].disabled ?? !1,
@@ -420,12 +423,12 @@ function Z() {
                   (0, i.jsxs)(D.N4, {
                       step: F.HS.SERVER_SETTINGS,
                       className: X.xQ,
-                      children: [(0, i.jsx)(D.AI, {}), (0, i.jsx)(D.cp, { disabled: !O || !Z })],
+                      children: [(0, i.jsx)(D.AI, {}), (0, i.jsx)(D.cp, { disabled: !O || !Y })],
                   }),
               ],
           });
 }
-var B = l(207381);
+var Z = l(207381);
 function $(e) {
     let { step: s, setFooterNode: l } = (0, V.bv)(),
         a = (0, m.U)("GameServerSetupModal"),
@@ -445,11 +448,11 @@ function $(e) {
             (0, i.jsx)(t.rQ, { title: c, subtitle: x }),
             a &&
                 (0, i.jsx)("div", {
-                    className: B.M,
+                    className: Z.M,
                     children: (0, i.jsx)(o.A, { look: o.k.WARNING, children: J.intl.format(W.default.XzXjK2, {}) }),
                 }),
             (0, i.jsx)(d.Ip, {
-                className: B.j,
+                className: Z.j,
                 style: { width: 680 },
                 children: (0, i.jsx)("div", {
                     style: { padding: 24 },
@@ -460,7 +463,7 @@ function $(e) {
                             (0, i.jsx)(r.q, { id: F.HS.SELECT_GAME, children: (0, i.jsx)(u.A, {}) }, F.HS.SELECT_GAME),
                             (0, i.jsx)(
                                 r.q,
-                                { id: F.HS.SERVER_SETTINGS, children: (0, i.jsx)(Z, {}) },
+                                { id: F.HS.SERVER_SETTINGS, children: (0, i.jsx)(Y, {}) },
                                 F.HS.SERVER_SETTINGS,
                             ),
                         ],

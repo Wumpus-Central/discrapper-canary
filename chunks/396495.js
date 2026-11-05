@@ -6,8 +6,8 @@ var l = t(503698),
     r = t(862482),
     o = t(789645),
     c = t(834730),
-    d = t(403581),
-    u = t(139286),
+    u = t(403581),
+    d = t(139286),
     A = t(129230),
     h = t(222643),
     m = t(652215),
@@ -16,7 +16,7 @@ var l = t(503698),
 function C(e) {
     let { hidden: n, onDismiss: t } = e;
     return (
-        (0, u.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
+        (0, d.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
             n,
         ]),
         (0, i.jsxs)("div", {
@@ -36,7 +36,7 @@ function C(e) {
                     onClick: () => {
                         (t(), A.default.track(m.HAw.HD_STREAMING_POPOUT_DISMISSED));
                     },
-                    children: (0, i.jsx)(o.P, { size: "xs", className: x.ut, color: "white" }),
+                    children: (0, i.jsx)(o.XSmallIcon, { size: "xs", className: x.ut, color: "white" }),
                 }),
                 (0, i.jsx)("div", {
                     className: x.Gm,
@@ -51,7 +51,7 @@ function C(e) {
                             (0, i.jsxs)("div", {
                                 className: x.vX,
                                 children: [
-                                    (0, i.jsx)(d.t, { size: "xs" }),
+                                    (0, i.jsx)(u.NitroWheelIcon, { size: "xs" }),
                                     (0, i.jsx)(c.E, {
                                         className: x.aV,
                                         variant: "body-sm/medium",

@@ -1,34 +1,34 @@
-var n = e(477900);
-e(582128);
-var a = e(855986),
-    i = e(978940),
-    o = e(808107),
-    r = e(451394),
-    s = e(512474),
-    u = e(146151),
-    p = e(983851),
-    c = e(148719),
-    d = e(576705),
-    A = e(818348);
-e.d(
+var e = n(477900);
+n(582128);
+var a = n(855986),
+    i = n(978940),
+    o = n(808107),
+    r = n(451394),
+    s = n(512474),
+    u = n(146151),
+    c = n(983851),
+    p = n(148719),
+    d = n(576705),
+    A = n(818348);
+n.d(
     l,
     {},
     {
         A: function (t) {
-            let { channel: l, ...e } = t,
+            let { channel: l, ...n } = t,
                 m = (0, a.bG)([d.A], () => l.isPrivate() || d.A.can(A.xB.CONNECT, l));
-            if (l.isDM() || l.isGroupDM()) return (0, n.jsx)(i._, { ...e });
+            if (l.isDM() || l.isGroupDM()) return (0, e.jsx)(i.PhoneCallIcon, { ...n });
             let x = l.isGuildStageVoice(),
-                T = !m || (0, c.A)(l);
-            return x && T
-                ? (0, n.jsx)(o.D, { ...e })
+                I = !m || (0, p.A)(l);
+            return x && I
+                ? (0, e.jsx)(o.StageLockIcon, { ...n })
                 : x
-                  ? (0, n.jsx)(r.q, { ...e })
+                  ? (0, e.jsx)(r.StageIcon, { ...n })
                   : l.isNSFW()
-                    ? (0, n.jsx)(s.O, { ...e })
-                    : T
-                      ? (0, n.jsx)(u.t, { ...e })
-                      : (0, n.jsx)(p.H, { ...e });
+                    ? (0, e.jsx)(s.VoiceWarningIcon, { ...n })
+                    : I
+                      ? (0, e.jsx)(u.VoiceLockIcon, { ...n })
+                      : (0, e.jsx)(c.VoiceNormalIcon, { ...n });
         },
     },
 );

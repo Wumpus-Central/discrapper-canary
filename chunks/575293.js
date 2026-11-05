@@ -14,8 +14,8 @@ var l = n(477900),
     g = n(775602),
     x = n(47167),
     E = n(713654),
-    y = n(418842),
-    S = n(734057),
+    S = n(418842),
+    y = n(734057),
     C = n(696451),
     A = n(71393),
     b = n(225142),
@@ -29,7 +29,7 @@ var l = n(477900),
 let R = { compact: 58, cozy: 74, default: 64 };
 function w(e) {
     let { action: t } = e,
-        n = (0, o.bG)([S.A], () => S.A.getChannel(t.channelId)),
+        n = (0, o.bG)([y.A], () => y.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
     return null == n
         ? (0, l.jsx)(u.E, {
@@ -45,9 +45,9 @@ function w(e) {
 }
 function O(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
-        r = (0, o.bG)([S.A], () => S.A.getChannel(t));
+        r = (0, o.bG)([y.A], () => y.A.getChannel(t));
     if (null == r) return null;
-    let s = (0, E.gU)(r) ?? c.N;
+    let s = (0, E.gU)(r) ?? c.TextIcon;
     return (0, l.jsx)(T.A, {
         emojiId: n,
         emojiName: i,
@@ -59,23 +59,23 @@ function L(e) {
     let { guildId: t, channel: n, className: r } = e,
         { channelAction: c, completed: x } = (0, v.j4)(t, n),
         E = (0, v.Lr)(t, c?.channelId),
-        S = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         C = c?.actionType === I.NewMemberActionTypes.VIEW,
         A = (0, d.r)(h.A.colors.WHITE),
-        N = R[(0, y.C)()],
+        N = R[(0, S.C)()],
         [T, k] = i.useState(!1),
         [L] = i.useState(new a.A.Value(0)),
         [M] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
-            ? a.A.timing(L, { toValue: 0, duration: S ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
+            ? a.A.timing(L, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
                   k(!0),
               )
-            : a.A.timing(L, { toValue: 1, duration: S ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, L, C, S]),
+            : a.A.timing(L, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, L, C, y]),
         i.useEffect(() => {
-            x && T && a.A.timing(M, { toValue: 1, duration: 350 * !S, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, M, T, S]));
+            x && T && a.A.timing(M, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, M, T, y]));
     let P = i.useCallback(() => {
         null != E && (0, b.qo)(t, E.channelId);
     }, [t, E]);
@@ -109,7 +109,11 @@ function L(e) {
                                     }),
                                     (0, l.jsx)("div", {
                                         className: _.kJ,
-                                        children: (0, l.jsx)(f.E, { size: "xs", color: A.hex(), className: _.fz }),
+                                        children: (0, l.jsx)(f.ArrowSmallRightIcon, {
+                                            size: "xs",
+                                            color: A.hex(),
+                                            className: _.fz,
+                                        }),
                                     }),
                                 ],
                             }),
@@ -139,7 +143,7 @@ function L(e) {
                                     ],
                                 }),
                                 x
-                                    ? (0, l.jsx)(p.y, {
+                                    ? (0, l.jsx)(p.CircleCheckIcon, {
                                           size: "custom",
                                           color: "currentColor",
                                           className: _.so,

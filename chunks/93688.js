@@ -1,3 +1,4 @@
+e.r(s);
 var i = e(477900);
 e(582128);
 var t = e(646514),
@@ -7,37 +8,37 @@ e.d(
     s,
     {},
     {
-        W: function (a) {
+        BrowserIcon: function (a) {
             let {
                     size: s = "md",
                     width: e,
                     height: d,
-                    color: c = t.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: n = "",
-                    ...p
+                    color: r = t.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: c = "",
+                    ...n
                 } = a,
                 o = (0, l.J)(s),
-                r = o?.width ?? e,
-                v = o?.height ?? d;
+                p = o?.width ?? e,
+                w = o?.height ?? d;
             return (0, i.jsxs)("svg", {
-                ...(0, h.A)(p),
+                ...(0, h.A)(n),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
-                height: v,
+                width: p,
+                height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
                     (0, i.jsx)("path", {
-                        fill: "string" == typeof c ? c : c.css,
+                        fill: "string" == typeof r ? r : r.css,
                         d: "M20 3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h16ZM4 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z",
-                        className: n,
+                        className: c,
                     }),
                     (0, i.jsx)("path", {
-                        fill: "string" == typeof c ? c : c.css,
+                        fill: "string" == typeof r ? r : r.css,
                         fillRule: "evenodd",
                         d: "M20 3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h16ZM4 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z",
                         clipRule: "evenodd",
-                        className: n,
+                        className: c,
                     }),
                 ],
             });

@@ -31,9 +31,9 @@ n.d(
                     new Promise((l) => {
                         (0, i.mM)(async () => {
                             let { default: i } = await Promise.all([
-                                    n.e(163069),
                                     n.e(727779),
                                     n.e(93907),
+                                    n.e(163069),
                                     n.e(965341),
                                 ]).then(n.bind(n, 158956)),
                                 d = t.actions.find((e) => e.type === o.AH.FLAG_TO_CHANNEL);
@@ -55,9 +55,9 @@ n.d(
                     new Promise((a) => {
                         (0, i.mM)(async () => {
                             let { default: i } = await Promise.all([
-                                    n.e(163069),
                                     n.e(727779),
                                     n.e(93907),
+                                    n.e(163069),
                                     n.e(821932),
                                 ]).then(n.bind(n, 16039)),
                                 l = e.actions.find((e) => e.type === o.AH.USER_COMMUNICATION_DISABLED);

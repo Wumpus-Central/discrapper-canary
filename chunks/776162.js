@@ -136,7 +136,7 @@ n.d(
                                 (0, i.jsx)(u.m, {
                                     text: f,
                                     children: (0, i.jsx)(c.K, {
-                                        icon: h.P,
+                                        icon: h.XSmallIcon,
                                         variant: "icon-only",
                                         size: "sm",
                                         "aria-label": f,

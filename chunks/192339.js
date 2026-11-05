@@ -13,7 +13,11 @@ a.d(
             let { size: e } = (0, d.Z)();
             return (0, i.jsx)("div", {
                 className: s()(l.logo, l[e]),
-                children: (0, i.jsx)(c.p, { color: n.A.colors.ICON_OVERLAY_DARK, size: "custom", className: l.icon }),
+                children: (0, i.jsx)(c.ClydeIcon, {
+                    color: n.A.colors.ICON_OVERLAY_DARK,
+                    size: "custom",
+                    className: l.icon,
+                }),
             });
         },
     },

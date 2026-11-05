@@ -1,3 +1,4 @@
+c.r(a);
 var t = c(477900);
 c(582128);
 var h = c(646514),
@@ -7,35 +8,35 @@ c.d(
     a,
     {},
     {
-        _: function (s) {
+        UserPlatformIcon: function (s) {
             let {
                     size: a = "md",
                     width: c,
                     height: e,
-                    color: p = h.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: r = "",
-                    ...d
+                    color: r = h.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
+                    ...o
                 } = s,
-                n = (0, l.J)(a),
-                o = n?.width ?? c,
-                w = n?.height ?? e;
+                p = (0, l.J)(a),
+                d = p?.width ?? c,
+                w = p?.height ?? e;
             return (0, t.jsxs)("svg", {
-                ...(0, i.A)(d),
+                ...(0, i.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
+                width: d,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
                     (0, t.jsx)("path", {
-                        fill: "string" == typeof p ? p : p.css,
+                        fill: "string" == typeof r ? r : r.css,
                         d: "M15.02 13.43c-.25.1-.5.2-.75.35a3.92 3.92 0 0 0-1.87 2.56c-.17.7-.4 1.97-.4 3.69V21a1 1 0 0 1-1 1H6.15a.5.5 0 0 1-.5-.55l.27-2.6c.02-.26-.27-.37-.41-.16a10.3 10.3 0 0 0-1.32 2.9.53.53 0 0 1-.5.41h-.22C2.67 22 2 21.38 2 20.59A9.53 9.53 0 0 1 11.53 11h.94c1.38 0 2.7.3 3.9.83.65.3.3 1.22-.4 1.34-.32.06-.64.14-.95.26ZM12 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z",
-                        className: r,
+                        className: n,
                     }),
                     (0, t.jsx)("path", {
-                        fill: "string" == typeof p ? p : p.css,
+                        fill: "string" == typeof r ? r : r.css,
                         d: "M23.66 16.47c.13.57.34 1.69.34 3.23v2.23a1.4 1.4 0 0 1-2.66.63l-.8-1.6a.5.5 0 0 0-.56-.25c-.26.06-.62.12-.98.12s-.72-.06-.98-.12a.5.5 0 0 0-.56.25l-.8 1.6a1.4 1.4 0 0 1-2.66-.63V19.7c0-1.54.2-2.66.34-3.23.31-1.3 1.36-1.55 2.46-1.79.23-.05.46.03.61.18.17.16.36.33.59.32a19.34 19.34 0 0 1 2 0c.23 0 .42-.16.58-.32a.68.68 0 0 1 .62-.18c1.1.24 2.15.5 2.46 1.8Z",
-                        className: r,
+                        className: n,
                     }),
                 ],
             });

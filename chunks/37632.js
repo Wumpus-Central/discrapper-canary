@@ -7,7 +7,7 @@ t.d(
     {},
     {
         A: function () {
-            return (0, s.jsx)(i._, { size: "md", color: "currentColor", className: l.K });
+            return (0, s.jsx)(i.ChevronSmallRightIcon, { size: "md", color: "currentColor", className: l.K });
         },
     },
 );

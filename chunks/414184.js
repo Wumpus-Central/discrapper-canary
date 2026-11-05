@@ -1,8 +1,8 @@
 i.d(t, { s: () => g, A: () => T });
 var s = i(477900);
 i(582128);
-var r = i(503698),
-    n = i.n(r),
+var n = i(503698),
+    r = i.n(n),
     a = i(104510),
     l = i(957485),
     o = i(926268),
@@ -11,21 +11,21 @@ var r = i(503698),
     u = i(792996),
     m = i(778072);
 let g = [
-    { icon: a._, getText: () => u.intl.string(u.t.TZigSO) },
+    { icon: a.BoostGemIcon, getText: () => u.intl.string(u.t.TZigSO) },
     {
         icon: function (e) {
             let { className: t } = e;
-            return (0, s.jsx)("img", { className: n()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
+            return (0, s.jsx)("img", { className: r()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
         },
         getText: () => u.intl.string(u.t.hjQuV2),
     },
-    { icon: l.i, getText: () => u.intl.string(u.t["2RUcaM"]) },
+    { icon: l.ShieldUserIcon, getText: () => u.intl.string(u.t["2RUcaM"]) },
     { icon: o.HeartIcon, getText: () => u.intl.string(u.t.bJoZKV) },
 ];
 function T(e) {
     let { className: t } = e;
     return (0, s.jsxs)("div", {
-        className: n()(m.iE, t),
+        className: r()(m.iE, t),
         children: [
             (0, s.jsx)(c.D, { className: m.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
             (0, s.jsx)("div", {

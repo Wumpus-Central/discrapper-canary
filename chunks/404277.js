@@ -1,38 +1,43 @@
-var s = a(477900),
-    t = a(582128),
-    n = a(574211),
-    l = a(31300),
-    i = a(646270),
-    o = a(687966),
-    d = a(924895),
-    h = a(140735),
-    c = a(773669),
-    m = a(418151),
-    u = a(468039);
-let p = { [n.Z.DESKTOP]: l.k, [n.Z.MOBILE]: i.u, [n.Z.CONSOLE]: o.GameControllerIcon, [n.Z.ROBLOX]: d.H };
-a.d(
+var a = n(477900),
+    t = n(582128),
+    o = n(574211),
+    s = n(31300),
+    l = n(646270),
+    i = n(687966),
+    c = n(924895),
+    h = n(140735),
+    d = n(773669),
+    m = n(418151),
+    u = n(468039);
+let x = {
+    [o.Z.DESKTOP]: s.ScreenIcon,
+    [o.Z.MOBILE]: l.MobilePhoneIcon,
+    [o.Z.CONSOLE]: i.GameControllerIcon,
+    [o.Z.ROBLOX]: c.RobloxNeutralIcon,
+};
+n.d(
     r,
     {},
     {
         A: function (e) {
             let { platforms: r } = e,
-                a = t.useMemo(() => (0, m.RV)(r), [r]),
-                n = t.useMemo(() => new Intl.ListFormat(c.default.locale).format(a.map(m.n7)), [a]);
-            return (0, s.jsxs)(s.Fragment, {
+                n = t.useMemo(() => (0, m.RV)(r), [r]),
+                o = t.useMemo(() => new Intl.ListFormat(d.default.locale).format(n.map(m.n7)), [n]);
+            return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, s.jsx)("span", {
+                    (0, a.jsx)("span", {
                         className: u.B,
                         "aria-hidden": !0,
-                        children: a.map((e) => {
-                            let r = p[e];
-                            return (0, s.jsx)(
+                        children: n.map((e) => {
+                            let r = x[e];
+                            return (0, a.jsx)(
                                 "span",
-                                { className: u.t, children: (0, s.jsx)(r, { size: "xs", color: "currentColor" }) },
+                                { className: u.t, children: (0, a.jsx)(r, { size: "xs", color: "currentColor" }) },
                                 e,
                             );
                         }),
                     }),
-                    a.length > 0 && (0, s.jsx)(h.A, { children: n }),
+                    n.length > 0 && (0, a.jsx)(h.A, { children: o }),
                 ],
             });
         },

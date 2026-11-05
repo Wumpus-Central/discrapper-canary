@@ -19,14 +19,14 @@ n.d(
                     disabled: _ = !1,
                     displayOnly: E,
                     label: A,
-                    labeledBy: h,
-                    leadingIcon: f,
+                    labeledBy: f,
+                    leadingIcon: h,
                     value: I,
                     labelType: p = "primary",
                     usageVariant: m = "single",
                 } = e,
-                g = (0, r.useRef)(null),
                 T = (0, r.useRef)(null),
+                g = (0, r.useRef)(null),
                 S = (0, r.useRef)(null),
                 N = r.useId(),
                 C = `${N}label`,
@@ -35,7 +35,7 @@ n.d(
                 y = (0, r.useRef)(!1),
                 D = null != A && "" !== A,
                 b = null != n && "" !== n,
-                v = null != f ? f : null;
+                v = null != h ? h : null;
             (0, r.useEffect)(() => {
                 if (!y.current) {
                     y.current = !0;
@@ -54,7 +54,7 @@ n.d(
                     children: [
                         (0, i.jsxs)("div", {
                             className: u.fb,
-                            ref: g,
+                            ref: T,
                             "aria-hidden": !0,
                             children: [
                                 (0, i.jsx)("svg", {
@@ -72,7 +72,11 @@ n.d(
                                         fill: "currentColor",
                                     }),
                                 }),
-                                (0, i.jsx)(d.B, { className: u.Ho, size: "sm", color: "currentColor" }),
+                                (0, i.jsx)(d.CheckmarkSmallBoldIcon, {
+                                    className: u.Ho,
+                                    size: "sm",
+                                    color: "currentColor",
+                                }),
                             ],
                         }),
                         D &&
@@ -114,12 +118,12 @@ n.d(
                       children: M,
                   })
                 : (0, i.jsx)(o.vN, {
-                      focusTarget: T,
+                      focusTarget: g,
                       ringTarget: S,
                       children: (0, i.jsx)(l.Sc, {
                           ref: S,
-                          inputRef: T,
-                          "aria-labelledby": h ?? (D ? C : void 0),
+                          inputRef: g,
+                          "aria-labelledby": f ?? (D ? C : void 0),
                           "aria-describedby": D && b ? O : void 0,
                           isSelected: t,
                           onChange: function (e) {

@@ -56,8 +56,8 @@ t.d(
             if (null == t || null == N) return null;
             let w = (0, g.hp)(N).find((e) => e.value === r),
                 T = null != w ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
-                P = null != b && null != w && b.variantId === w.value,
-                O = (0, l.jsx)(E, { url: n }),
+                O = null != b && null != w && b.variantId === w.value,
+                P = (0, l.jsx)(E, { url: n }),
                 R = null;
             return (T === k.Ps.EXPERIMENT_TREATMENT && null != w
                 ? (R = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: w.label }))
@@ -82,7 +82,7 @@ t.d(
                                               direction: "horizontal",
                                               gap: 8,
                                               children: [
-                                                  (0, l.jsx)(d.g, { size: "lg" }),
+                                                  (0, l.jsx)(d.ScienceIcon, { size: "lg" }),
                                                   (0, l.jsxs)(u.B, {
                                                       direction: "vertical",
                                                       gap: 0,
@@ -96,7 +96,7 @@ t.d(
                                                   }),
                                               ],
                                           }),
-                                          O,
+                                          P,
                                       ],
                                   }),
                               }),
@@ -104,13 +104,13 @@ t.d(
                           null != w
                               ? (0, l.jsx)(m.$, {
                                     fullWidth: !0,
-                                    variant: P ? "critical-primary" : "primary",
-                                    text: P ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
+                                    variant: O ? "critical-primary" : "primary",
+                                    text: O ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
                                     onClick: function () {
                                         null == t ||
                                             null == N ||
                                             (null != w &&
-                                                (P ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
+                                                (O ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
                                     },
                                 })
                               : (0, l.jsx)("div", {

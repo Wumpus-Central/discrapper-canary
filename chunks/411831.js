@@ -1522,7 +1522,7 @@ function tH(e) {
                     (0, a.jsxs)("div", {
                         className: tY.ik,
                         children: [
-                            (0, a.jsx)(tG.n, { size: "xs", color: "currentColor" }),
+                            (0, a.jsx)(tG.GroupIcon, { size: "xs", color: "currentColor" }),
                             (0, a.jsx)(tM.E, {
                                 variant: "body-xs/normal",
                                 color: "text-muted",
@@ -2424,7 +2424,7 @@ let ns = (0, g.A)(function (e) {
                                   "aria-label": A,
                               }),
                               children: [
-                                  (0, a.jsx)(f.A.Icon, { icon: m.g, "aria-hidden": !0 }),
+                                  (0, a.jsx)(f.A.Icon, { icon: m.FlashIcon, "aria-hidden": !0 }),
                                   (0, a.jsx)(f.A.Title, { children: eg.intl.string(eg.t["jnXV/V"]) }),
                                   (0, a.jsx)(f.A.Title, {
                                       children: (0, a.jsx)("p", {

@@ -5,8 +5,8 @@ var i = t(503698),
     a = t(983851),
     r = t(194261),
     o = t(512474),
-    d = t(445567),
-    c = t(451394),
+    c = t(445567),
+    d = t(451394),
     u = t(163328),
     m = t(276293),
     h = t(11779),
@@ -16,14 +16,14 @@ var i = t(503698),
     p = t(986226),
     b = t(56059),
     N = t(781481),
-    f = t(760911),
-    I = t(534890),
+    I = t(760911),
+    f = t(534890),
     v = t(855473),
     C = t(740426),
     A = t(191023),
     E = t(87221),
-    y = t(173936),
-    S = t(323384),
+    S = t(173936),
+    y = t(323384),
     O = t(367332),
     T = t(91166),
     k = t(936755),
@@ -38,7 +38,7 @@ t.d(
                 i = null;
             switch (n) {
                 case "voice":
-                    i = (0, s.jsx)(a.H, {
+                    i = (0, s.jsx)(a.VoiceNormalIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -54,7 +54,7 @@ t.d(
                     });
                     break;
                 case "voice-nsfw":
-                    i = (0, s.jsx)(o.O, {
+                    i = (0, s.jsx)(o.VoiceWarningIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -62,7 +62,7 @@ t.d(
                     });
                     break;
                 case "voice-spoiler":
-                    i = (0, s.jsx)(d.P, {
+                    i = (0, s.jsx)(c.VoiceNormalSpoilerIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -70,7 +70,7 @@ t.d(
                     });
                     break;
                 case "stage":
-                    i = (0, s.jsx)(c.q, {
+                    i = (0, s.jsx)(d.StageIcon, {
                         size: "lg",
                         color: "currentColor",
                         className: R.Kk,
@@ -86,7 +86,7 @@ t.d(
                     });
                     break;
                 case "thread":
-                    i = (0, s.jsx)(u.y, {
+                    i = (0, s.jsx)(u.ThreadIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -94,7 +94,7 @@ t.d(
                     });
                     break;
                 case "text":
-                    i = (0, s.jsx)(m.N, {
+                    i = (0, s.jsx)(m.TextIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -102,7 +102,7 @@ t.d(
                     });
                     break;
                 case "text-nsfw":
-                    i = (0, s.jsx)(h.r, {
+                    i = (0, s.jsx)(h.TextWarningIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -110,7 +110,7 @@ t.d(
                     });
                     break;
                 case "text-spoiler":
-                    i = (0, s.jsx)(x.n, {
+                    i = (0, s.jsx)(x.TextSpoilerIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -118,7 +118,7 @@ t.d(
                     });
                     break;
                 case "announcement":
-                    i = (0, s.jsx)(j.k, {
+                    i = (0, s.jsx)(j.AnnouncementsIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -126,7 +126,7 @@ t.d(
                     });
                     break;
                 case "announcement-nsfw":
-                    i = (0, s.jsx)(g.M, {
+                    i = (0, s.jsx)(g.AnnouncementsWarningIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -134,7 +134,7 @@ t.d(
                     });
                     break;
                 case "announcement-spoiler":
-                    i = (0, s.jsx)(p.u, {
+                    i = (0, s.jsx)(p.AnnouncementsSpoilerIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -142,7 +142,7 @@ t.d(
                     });
                     break;
                 case "forum":
-                    i = (0, s.jsx)(b.b, {
+                    i = (0, s.jsx)(b.ForumIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -150,7 +150,7 @@ t.d(
                     });
                     break;
                 case "forum-nsfw":
-                    i = (0, s.jsx)(N.f, {
+                    i = (0, s.jsx)(N.ForumWarningIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -158,7 +158,7 @@ t.d(
                     });
                     break;
                 case "forum-spoiler":
-                    i = (0, s.jsx)(f.H, {
+                    i = (0, s.jsx)(I.ForumSpoilerIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -166,7 +166,7 @@ t.d(
                     });
                     break;
                 case "post":
-                    i = (0, s.jsx)(I.ChatIcon, {
+                    i = (0, s.jsx)(f.ChatIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -175,7 +175,7 @@ t.d(
                     break;
                 case "home":
                 case "guide":
-                    i = (0, s.jsx)(v.Z, {
+                    i = (0, s.jsx)(v.SignPostIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -184,7 +184,7 @@ t.d(
                     break;
                 case "browse":
                 case "customize":
-                    i = (0, s.jsx)(C.k, {
+                    i = (0, s.jsx)(C.ChannelListMagnifyingGlassIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -192,7 +192,7 @@ t.d(
                     });
                     break;
                 case "message":
-                    i = (0, s.jsx)(I.ChatIcon, {
+                    i = (0, s.jsx)(f.ChatIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -216,7 +216,7 @@ t.d(
                     });
                     break;
                 case "media-nsfw":
-                    i = (0, s.jsx)(E.D, {
+                    i = (0, s.jsx)(E.ImageWarningIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -224,7 +224,7 @@ t.d(
                     });
                     break;
                 case "linked-roles":
-                    i = (0, s.jsx)(y.LinkIcon, {
+                    i = (0, s.jsx)(S.LinkIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -232,7 +232,7 @@ t.d(
                     });
                     break;
                 case "app":
-                    i = (0, s.jsx)(S.k, {
+                    i = (0, s.jsx)(y.AppsIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -240,7 +240,7 @@ t.d(
                     });
                     break;
                 case "app-nsfw":
-                    i = (0, s.jsx)(O.c, {
+                    i = (0, s.jsx)(O.AppsWarningIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,
@@ -248,7 +248,7 @@ t.d(
                     });
                     break;
                 case "app-spoiler":
-                    i = (0, s.jsx)(T.W, {
+                    i = (0, s.jsx)(T.AppsSpoilerIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Kk,

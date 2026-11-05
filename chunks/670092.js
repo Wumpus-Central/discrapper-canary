@@ -22,16 +22,16 @@ var s = i(477900),
     A = i(743368),
     E = i(736653),
     k = i(760914),
-    _ = i(590202),
-    L = i(971649),
+    L = i(590202),
+    _ = i(971649),
     T = i(651892),
     b = i(574112),
     I = i(814793),
     M = i(557637),
     w = i(918338),
-    W = i(201805),
-    D = i(491145),
-    P = i(221596),
+    D = i(201805),
+    P = i(491145),
+    W = i(221596),
     R = i(818348),
     O = i(792996),
     S = i(446498);
@@ -39,27 +39,27 @@ function q(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: r } = t,
         l = (0, E.Ay)(),
         o = (0, h.M)(l) ? R.NJ.DARK : R.NJ.LIGHT,
-        d = (0, L.wW)(),
-        u = (0, L.go)(),
+        d = (0, _.wW)(),
+        u = (0, _.go)(),
         x = (0, I.E0)(e.config),
         f = n.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
                 : (0, I.pv)(e.config) !== g.Z.GAMEPLAY ||
-                    e.config.features.includes(P.Li.NON_GAMING_PLAY_QUEST) ||
+                    e.config.features.includes(W.Li.NON_GAMING_PLAY_QUEST) ||
                     (0, I.ui)(e)
                   ? O.intl.string(O.t.y8Xf3k)
                   : O.intl.string(O.t["wirwN+"]);
         }, [e]),
-        q = (0, D.A)(e, { impressionId: u, sourceQuestContent: i }, r) ?? {
+        q = (0, P.A)(e, { impressionId: u, sourceQuestContent: i }, r) ?? {
             ctaText: (0, T.wr)(e),
             ctaVariant: "primary",
             onClickCta: async function () {
                 (await r?.(),
                     (0, b.pu)(e, {
                         content: m.uF.REWARD_MODAL,
-                        ctaContent: _.Cy.OPEN_GAME_LINK,
+                        ctaContent: L.Cy.OPEN_GAME_LINK,
                         impressionId: d(),
                         sourceQuestContent: i,
                     }));
@@ -72,11 +72,11 @@ function q(t) {
     n.useEffect(() => {
         z || a();
     }, [z, a]);
-    let G = (0, W.Lk)({
+    let G = (0, D.Lk)({
         isShareable: x,
         questId: e.id,
         trackingCtx: n.useMemo(
-            () => ({ content: m.uF.REWARD_MODAL, ctaContent: _.Cy.REWARD_MODAL_COPY_LINK, sourceQuestContent: i }),
+            () => ({ content: m.uF.REWARD_MODAL, ctaContent: L.Cy.REWARD_MODAL_COPY_LINK, sourceQuestContent: i }),
             [i],
         ),
     });
@@ -157,7 +157,7 @@ function q(t) {
                             text: q.ctaText,
                             onClick: q.onClickCta,
                             fullWidth: !0,
-                            icon: A.W,
+                            icon: A.LinkExternalMediumIcon,
                             iconPosition: q.ctaIconPosition,
                         }),
                     ],
@@ -205,7 +205,7 @@ function Z(t) {
         } = t,
         v = m.uF.REWARD_MODAL,
         [N, C] = n.useState(!0),
-        y = e.config.features.some((t) => P.Tz.has(t)),
+        y = e.config.features.some((t) => W.Tz.has(t)),
         p = n.useCallback(async () => {
             if (y) {
                 (c(), (0, o.s7)());

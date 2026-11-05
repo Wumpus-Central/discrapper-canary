@@ -1,35 +1,35 @@
-var n = i(477900);
-i(582128);
-var l = i(477782),
-    a = i(500060),
-    r = i(729829),
-    s = i(756977),
-    u = i(861089),
-    o = i(792996);
-i.d(
+var i = n(477900);
+n(582128);
+var a = n(477782),
+    l = n(500060),
+    r = n(729829),
+    s = n(756977),
+    u = n(861089),
+    c = n(792996);
+n.d(
     e,
     {},
     {
         A: function (t, e) {
-            let i = (0, r.u)(t, e),
-                [c, d] = (0, s.A)(t, e.id);
-            return null == i
+            let n = (0, r.u)(t, e),
+                [o, d] = (0, s.A)(t, e.id);
+            return null == n
                 ? null
-                : (0, n.jsx)(
-                      l.Dr,
+                : (0, i.jsx)(
+                      a.Dr,
                       {
                           id: "request-to-stream",
                           label:
-                              null == i.playingApplication
-                                  ? o.intl.string(u.default.DKHhec)
-                                  : o.intl.format(u.default["8qq+H7"], {
-                                        applicationName: i.playingApplication?.name ?? "",
+                              null == n.playingApplication
+                                  ? c.intl.string(u.default.DKHhec)
+                                  : c.intl.format(u.default["8qq+H7"], {
+                                        applicationName: n.playingApplication?.name ?? "",
                                     }),
-                          action: () => i.handleRequestToStream({ analyticsLocation: "request to stream item" }),
-                          icon: a.o,
-                          leadingAccessory: { type: "icon", icon: a.o },
-                          disabled: c,
-                          subtext: c ? d : void 0,
+                          action: () => n.handleRequestToStream({ analyticsLocation: "request to stream item" }),
+                          icon: l.ScreenStreamIcon,
+                          leadingAccessory: { type: "icon", icon: l.ScreenStreamIcon },
+                          disabled: o,
+                          subtext: o ? d : void 0,
                       },
                       "request-to-stream",
                   );

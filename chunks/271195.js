@@ -11,8 +11,8 @@ var r = n(503698),
     _ = n(282413),
     E = n(495867),
     A = n(6155),
-    h = n(919706),
-    f = n(792996),
+    f = n(919706),
+    h = n(792996),
     I = n(967481);
 function p(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: a } = e,
@@ -25,10 +25,10 @@ function p(e) {
                 className: I.qd,
                 onClick: n,
                 children: [
-                    (0, i.jsx)(d.r, {
+                    (0, i.jsx)(d.ArrowSmallLeftIcon, {
                         size: "custom",
                         color: "currentColor",
-                        "aria-label": f.intl.string(f.t.mSfLs0),
+                        "aria-label": h.intl.string(h.t.mSfLs0),
                         className: I.Gv,
                         width: 20,
                         height: 20,
@@ -60,10 +60,10 @@ n.d(
                 renderBottomLeftControls: c,
                 renderBottomRightControls: E,
                 screenMessage: A,
-                hideControls: f = !1,
+                hideControls: h = !1,
                 className: m,
-                innerClassName: g,
-                videoControlsClassName: T,
+                innerClassName: T,
+                videoControlsClassName: g,
                 ...S
             } = e;
             return (0, i.jsxs)("div", {
@@ -73,11 +73,11 @@ n.d(
                 className: a()(I.Hu, { [I.N7]: n }, m),
                 onDoubleClick: r,
                 children: [
-                    (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: g, children: t }, s) }),
-                    null != A ? (0, i.jsx)(h.A, { size: "small", ...A }) : null,
-                    !f &&
+                    (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: T, children: t }, s) }),
+                    null != A ? (0, i.jsx)(f.A, { size: "small", ...A }) : null,
+                    !h &&
                         (0, i.jsxs)("div", {
-                            className: a()(I._v, T, "theme-dark"),
+                            className: a()(I._v, g, "theme-dark"),
                             children: [
                                 (0, i.jsx)("div", {
                                     className: I.K1,

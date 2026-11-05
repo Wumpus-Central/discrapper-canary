@@ -11,13 +11,13 @@ var i = n(477900),
     _ = n(52133),
     E = n(499373),
     A = n(312138),
-    h = n(475825),
-    f = n(38021),
+    f = n(475825),
+    h = n(38021),
     I = n(951001),
     p = n(775602),
     m = n(793574),
-    g = n(149468),
-    T = n(688810),
+    T = n(149468),
+    g = n(688810),
     S = n(660387),
     N = n(343328),
     C = n(485947),
@@ -55,6 +55,7 @@ function H(e) {
                             n.e(866475),
                             n.e(367675),
                             n.e(844780),
+                            n.e(583518),
                             n.e(766031),
                             n.e(510630),
                             n.e(175449),
@@ -103,7 +104,7 @@ var W = n(97469),
     X = n(181254),
     z = n(652215),
     q = n(307636);
-let Z = r.memo(function () {
+let Q = r.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
         height: "428",
@@ -133,7 +134,7 @@ let Z = r.memo(function () {
         ],
     });
 });
-class Q extends r.Component {
+class Z extends r.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -188,7 +189,7 @@ class Q extends r.Component {
                 num_users_visible_with_mobile_indicator: l.filter((e) => null != e && K.A.isMobileOnline(e)).length,
             };
         ((this.hasReportedAnalytics = !0),
-            g.Ay.trackWithMetadata(z.HAw.DM_LIST_VIEWED, {
+            T.Ay.trackWithMetadata(z.HAw.DM_LIST_VIEWED, {
                 ...d,
                 ...(0, S.F)(),
                 visible_user_ids: l.filter((e) => null != e),
@@ -226,7 +227,7 @@ class Q extends r.Component {
         return 0 === t
             ? this.renderChild(n)
             : 0 === n && 0 === r.length
-              ? (0, i.jsx)(Z, {}, "no-private-channels")
+              ? (0, i.jsx)(Q, {}, "no-private-channels")
               : this.renderDM(t, n);
     };
     renderSection = (e) => {
@@ -248,7 +249,7 @@ class Q extends r.Component {
                                       tooltipPosition: "top",
                                       className: q.U2,
                                       iconClassName: q.Br,
-                                      icon: E.T,
+                                      icon: E.PlusMediumIcon,
                                       subscribeToGlobalHotkey: !0,
                                   }),
                               ],
@@ -277,7 +278,7 @@ class Q extends r.Component {
                 let { ref: a, role: s, ...l } = r;
                 return (0, i.jsx)(A.sk, {
                     children: (r) =>
-                        (0, i.jsx)(h.OZ, {
+                        (0, i.jsx)(f.OZ, {
                             fade: !0,
                             innerRole: s,
                             innerAriaLabel: V.intl.string(V.t.YUU0RF),
@@ -305,7 +306,7 @@ class Q extends r.Component {
     }
 }
 let J = function (e) {
-    let { density: t } = (0, f.wR)(),
+    let { density: t } = (0, h.wR)(),
         { version: n, theme: a, children: s, listScrollerRef: l } = e,
         o = r.Children.count(s),
         _ = Y.A.getMutablePrivateChannels(),
@@ -315,9 +316,9 @@ let J = function (e) {
             return (0, P.eh)(e, [v.A, M.A]);
         });
     (0, D.P)(y);
-    let { analyticsLocations: h } = (0, T.Ay)(m.A.CONTACTS_LIST),
+    let { analyticsLocations: f } = (0, g.Ay)(m.A.CONTACTS_LIST),
         I = (0, W.NC)(),
-        { keyboardModeEnabled: g, version: S } = (0, u.cf)([p.Ay, Y.A], () => ({
+        { keyboardModeEnabled: T, version: S } = (0, u.cf)([p.Ay, Y.A], () => ({
             keyboardModeEnabled: p.Ay.keyboardModeEnabled,
             version: null != n ? `${n}:${Y.A.getPrivateChannelsVersion()}` : Y.A.getPrivateChannelsVersion(),
         })),
@@ -363,17 +364,17 @@ let J = function (e) {
         U = (0, O.GV)(),
         w = (0, c.Ay)({
             id: `private-channels-${U}`,
-            isEnabled: g,
+            isEnabled: T,
             scrollToStart: L,
             scrollToEnd: b,
             defaultFocused: (o + 1).toString(),
             setFocus: R,
         });
-    return (0, i.jsx)(T.f5, {
-        value: h,
+    return (0, i.jsx)(g.f5, {
+        value: f,
         children: (0, i.jsx)(d.hD, {
             navigator: w,
-            children: (0, i.jsx)(Q, {
+            children: (0, i.jsx)(Z, {
                 ...e,
                 density: t,
                 channels: E,

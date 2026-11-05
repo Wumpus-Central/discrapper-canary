@@ -1,3 +1,4 @@
+e.r(n);
 var l = e(477900);
 e(582128);
 var i = e(646514),
@@ -7,7 +8,7 @@ e.d(
     n,
     {},
     {
-        I: function (t) {
+        DoorEnterIcon: function (t) {
             let {
                     size: n = "md",
                     width: e,

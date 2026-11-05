@@ -9,30 +9,30 @@ var r = e(772707),
     h = e(418208),
     d = e(792996),
     u = e(998012),
-    p = e(973324);
+    g = e(973324);
 e.d(
     i,
     {},
     {
         default: function (t) {
-            let { transitionState: i, onClose: e, channel: g } = t,
-                C = (0, c.Ay)(g);
+            let { transitionState: i, onClose: e, channel: p } = t,
+                C = (0, c.Ay)(p);
             function k(t) {
-                if (!t && (0, h.Cf)(g.id)) {
+                if (!t && (0, h.Cf)(p.id)) {
                     (a.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND }), e());
                     return;
                 }
-                ((0, l.e7)(g, t), e());
+                ((0, l.e7)(p, t), e());
             }
             return (0, n.jsx)(r.k, {
                 transitionState: i,
-                graphic: { type: "image", src: p.A },
+                graphic: { type: "image", src: g.A },
                 title: d.intl.string(d.t.Ul1RJQ),
                 subtitle: d.intl.format(d.t["Z+3bWy"], {
                     stageChannelHook: () =>
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(s.q, {
+                                (0, n.jsx)(s.StageIcon, {
                                     size: "custom",
                                     color: "currentColor",
                                     height: 14,

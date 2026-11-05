@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(120692),
     o = n(855986),
-    d = n(866323),
-    c = n(97808),
+    c = n(866323),
+    d = n(97808),
     u = n(778712),
     h = n(939249),
     p = n(821609),
@@ -16,19 +16,19 @@ var i = n(477900),
     x = n(616356),
     C = n(287809),
     y = n(927813),
-    j = n(562153),
-    I = n(218394),
+    I = n(562153),
+    j = n(218394),
     N = n(920639),
     v = n(393371),
     E = n(360627),
     b = n(809369),
     S = n(652215),
-    _ = n(687782),
-    T = n(792996),
+    T = n(687782),
+    _ = n(792996),
     R = n(814402);
 let O = 10 * y.A.Millis.SECOND,
-    P = { tension: 220, friction: 30, clamp: !0 },
-    L = { x: "100%" },
+    L = { tension: 220, friction: 30, clamp: !0 },
+    P = { x: "100%" },
     M = { x: "0%" },
     w = { x: "-100%" };
 n.d(
@@ -61,11 +61,11 @@ n.d(
                 Y = U.includes((0, g._z)(H)),
                 K = B ? W : H,
                 X = (0, o.bG)([C.default], () => C.default.getUser(K.ownerId), [K]),
-                q = j.Ay.useName(K.guildId, K.channelId, X),
-                Z = (0, I.j)(),
+                q = I.Ay.useName(K.guildId, K.channelId, X),
+                Z = (0, j.j)(),
                 Q = y / 225,
-                J = Y ? T.intl.string(_.default.zW6Hyu) : T.intl.string(T.t["7Xq/nV"]),
-                ee = T.intl.string(_.default["t+GPi4"]),
+                J = Y ? _.intl.string(T.default.zW6Hyu) : _.intl.string(_.t["7Xq/nV"]),
+                ee = _.intl.string(T.default["t+GPi4"]),
                 et = l.useCallback(() => {
                     let e = (0, g._z)(W);
                     V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
@@ -79,13 +79,13 @@ n.d(
                     ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
                 }, [H]),
                 ei = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
-                el = (0, d.p)(H, {
+                el = (0, c.p)(H, {
                     keys: () => `${D.sequence}:${(0, g._z)(H)}`,
                     initial: M,
-                    from: L,
+                    from: P,
                     enter: M,
                     leave: w,
-                    config: P,
+                    config: L,
                 });
             function ea() {
                 k(!0);
@@ -103,7 +103,7 @@ n.d(
                 children: [
                     (0, i.jsx)(E.A, {
                         title: q,
-                        image: (0, i.jsx)(c.eu, {
+                        image: (0, i.jsx)(d.eu, {
                             src: X?.getAvatarURL(K.guildId, 96),
                             size: u._3.SIZE_48,
                             "aria-hidden": !0,
@@ -161,7 +161,7 @@ n.d(
                                               onFocus: () => F(!0),
                                               onBlur: () => F(!1),
                                               children: (0, i.jsx)(m.K, {
-                                                  icon: A.u,
+                                                  icon: A.ChevronLargeRightIcon,
                                                   variant: "overlay-secondary",
                                                   size: "sm",
                                                   "aria-label": ee,

@@ -1,4 +1,4 @@
-n.d(t, { o: () => h, A: () => p });
+n.d(t, { o: () => g, A: () => p });
 var i,
     s = n(477900),
     l = n(646514),
@@ -28,8 +28,8 @@ function E(e) {
     });
 }
 var I = n(792996),
-    g = n(21693),
-    h =
+    h = n(21693),
+    g =
         (((i = {})[(i.TOO_BIG = 0)] = "TOO_BIG"),
         (i[(i.RATE_LIMIT = 1)] = "RATE_LIMIT"),
         (i[(i.TOO_MANY_EMOJI = 2)] = "TOO_MANY_EMOJI"),
@@ -42,18 +42,18 @@ let p = function (e) {
         { type: n, filename: i } = t,
         {
             icon: f,
-            description: h,
+            description: g,
             color: p,
             tooltip: A,
         } = {
             0: {
-                icon: r.m,
+                icon: r.FileWarningIcon,
                 description: I.intl.string(I.t.YbdEFK),
                 color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
             },
             4: {
-                icon: a.u,
+                icon: a.FileDenyIcon,
                 description: I.intl.string(I.t["01Papm"]),
                 color: l.A.unsafe_rawColors.RED_400.css,
                 tooltip: I.intl.string(I.t.PanA4J),
@@ -65,7 +65,7 @@ let p = function (e) {
                 tooltip: I.intl.string(I.t.PanA4J),
             },
             1: {
-                icon: o.$,
+                icon: o.SpeedometerIcon,
                 description: I.intl.string(I.t["4rjikl"]),
                 color: l.A.unsafe_rawColors.ORANGE_345.css,
                 tooltip: I.intl.string(I.t.dq9aTi),
@@ -84,21 +84,21 @@ let p = function (e) {
             },
         }[n];
     return (0, s.jsxs)("div", {
-        className: g._Z,
+        className: h._Z,
         children: [
-            (0, s.jsx)(f, { className: g.Yg, color: l.A.unsafe_rawColors.PRIMARY_300.css }),
+            (0, s.jsx)(f, { className: h.Yg, color: l.A.unsafe_rawColors.PRIMARY_300.css }),
             (0, s.jsxs)("div", {
-                className: g.XE,
+                className: h.XE,
                 children: [
-                    (0, s.jsx)(u.E, { variant: "body-md/normal", className: g.Md, children: i }),
-                    (0, s.jsx)(u.E, { variant: "body-sm/normal", color: "text-subtle", children: h }),
+                    (0, s.jsx)(u.E, { variant: "body-md/normal", className: h.Md, children: i }),
+                    (0, s.jsx)(u.E, { variant: "body-sm/normal", color: "text-subtle", children: g }),
                 ],
             }),
             (0, s.jsx)(d.m, {
                 asContainer: !0,
                 position: "right",
                 text: A,
-                children: (0, s.jsx)(m.E, { size: "custom", width: 20, height: 20, color: p }),
+                children: (0, s.jsx)(m.CircleErrorIcon, { size: "custom", width: 20, height: 20, color: p }),
             }),
         ],
     });

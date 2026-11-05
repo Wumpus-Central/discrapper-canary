@@ -1,3 +1,4 @@
+s.r(t);
 var r = s(477900);
 s(582128);
 var n = s(646514),
@@ -7,7 +8,7 @@ s.d(
     t,
     {},
     {
-        U: function (e) {
+        AnalyticsIcon: function (e) {
             let {
                     size: t = "md",
                     width: s,

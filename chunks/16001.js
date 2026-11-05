@@ -10,8 +10,8 @@ var i = t(855986),
     o = t(442433),
     u = t(597798),
     h = t(401843),
-    g = t(820284),
-    I = t(793574),
+    I = t(820284),
+    g = t(793574),
     A = t(688810),
     f = t(810845),
     x = t(854182),
@@ -24,9 +24,9 @@ var i = t(855986),
     w = t(304006),
     v = t(479335),
     y = t(600125),
-    G = t(643501),
+    X = t(643501),
     E = t(972432),
-    X = t(471993),
+    G = t(471993),
     _ = t(616356),
     M = t(46653),
     U = t(734057),
@@ -67,7 +67,7 @@ function O(e) {
         et = L(H),
         el = ((n = L(H)), (t = (0, E.A)(H.ownerId, N.x.STREAM)), n ? t : null),
         ei =
-            ((O = (0, i.bG)([G.default], () => null != G.default.getRemoteSessionId())),
+            ((O = (0, i.bG)([X.default], () => null != X.default.getRemoteSessionId())),
             (V = (0, i.bG)([U.A], () => U.A.getChannel(H.channelId), [H.channelId])),
             (W = L(H)),
             ((_ = (P = null != (F = R.default.getCurrentUser()) && H.ownerId === F.id)
@@ -87,8 +87,8 @@ function O(e) {
                           : function () {
                                 (u.default.selectVoiceChannel(H.channelId), (0, h.A9)(H));
                             },
-                      icon: ee && W && a.G,
-                      leadingAccessory: ee && W ? { type: "icon", icon: a.G } : void 0,
+                      icon: ee && W && a.ScreenXIcon,
+                      leadingAccessory: ee && W ? { type: "icon", icon: a.ScreenXIcon } : void 0,
                   })),
         er =
             ((D = L(H)),
@@ -157,12 +157,12 @@ function O(e) {
         eo = (0, x.A)(H.channelId),
         eu = (0, f.A)(H.channelId, (0, T._z)(H)),
         eh = (0, i.bG)([U.A], () => U.A.getChannel(H.channelId), [H.channelId]),
-        eg = (0, w.h)({ stream: H, channelId: H.channelId }),
-        eI = (0, v.u)({ userId: H.ownerId, channelId: H.channelId, guildId: H.guildId, minimal: ee }),
-        { analyticsLocations: eA } = (0, A.Ay)(I.A.STREAM_CONTEXT_MENU),
+        eI = (0, w.h)({ stream: H, channelId: H.channelId }),
+        eg = (0, v.u)({ userId: H.ownerId, channelId: H.channelId, guildId: H.guildId, minimal: ee }),
+        { analyticsLocations: eA } = (0, A.Ay)(g.A.STREAM_CONTEXT_MENU),
         ef = (0, y.E)({
             stream: H,
-            handleGoLive: () => (0, X.A)(H.guildId, H.channelId, eA),
+            handleGoLive: () => (0, G.A)(H.guildId, H.channelId, eA),
             minimal: ee,
             appContext: K,
         });
@@ -189,7 +189,7 @@ function O(e) {
                                     (0, l.jsxs)(r.Dr, {
                                         id: "more-options",
                                         label: b.intl.string(b.t.PdRCRg),
-                                        children: [es, ec, eg, eI, ed],
+                                        children: [es, ec, eI, eg, ed],
                                     }),
                                 ],
                             })
@@ -197,7 +197,7 @@ function O(e) {
                   ],
               }),
           })
-        : (0, l.jsx)(g.A, {
+        : (0, l.jsx)(I.A, {
               context: J,
               object: k.ZSU.CONTEXT_MENU,
               children: (0, l.jsxs)(s.W, {
@@ -209,7 +209,7 @@ function O(e) {
                   onSelect: Y,
                   onInteraction: $,
                   children: [
-                      (0, l.jsx)(r.rX, { children: (0, l.jsxs)(l.Fragment, { children: [ei, er, eg, eI] }) }),
+                      (0, l.jsx)(r.rX, { children: (0, l.jsxs)(l.Fragment, { children: [ei, er, eI, eg] }) }),
                       (0, l.jsx)(r.rX, { children: el }),
                       (0, l.jsx)(r.rX, { children: eu }),
                       ea,

@@ -2,8 +2,8 @@ var n,
     a = i(477900),
     s = i(582128),
     t = i(503698),
-    r = i.n(t),
-    o = i(837381),
+    o = i.n(t),
+    r = i(837381),
     d = i(855986),
     m = i(789645),
     c = i(834730),
@@ -41,14 +41,14 @@ function E(e) {
 function I(e) {
     return (0, d.bG)([], () => e.map(E));
 }
-function k(e) {
+function S(e) {
     let { tag: l, size: n = 1, disabled: t, className: j, onClick: b, onRemove: A, selected: C, ariaLabel: L } = e,
         { name: v, emojiId: E, emojiName: I } = l,
-        k = null != A,
-        [S, z] = s.useState(!1),
+        S = null != A,
+        [k, z] = s.useState(!1),
         P = (0, d.bG)([x.Ay], () => (null != E ? x.Ay.getUsableCustomEmojiById(E) : null)),
-        R = k || null != b,
-        U = (!k || !S) && (null != E || null != I),
+        R = S || null != b,
+        U = (!S || !k) && (null != E || null != I),
         T = 0 === n,
         _ = s.useRef(null),
         w = (0, d.bG)([p.Ay], () => p.Ay.keyboardModeEnabled),
@@ -56,18 +56,18 @@ function k(e) {
             children: [
                 U
                     ? (0, a.jsx)(g.A, {
-                          className: r()(N.emoji, { [N.small]: T }),
+                          className: o()(N.emoji, { [N.small]: T }),
                           emojiId: E,
                           emojiName: I,
                           animated: !!P?.animated,
                           size: "reaction",
                       })
                     : null,
-                S &&
-                    k &&
+                k &&
+                    S &&
                     (0, a.jsx)("div", {
                         className: N.closeCircle,
-                        children: (0, a.jsx)(m.P, { size: "md", color: "currentColor", className: N.close }),
+                        children: (0, a.jsx)(m.XSmallIcon, { size: "md", color: "currentColor", className: N.close }),
                     }),
                 (0, a.jsx)(c.E, {
                     variant: T ? "body-xs/semibold" : "body-sm/semibold",
@@ -79,7 +79,7 @@ function k(e) {
         }),
         F = {
             key: l.id,
-            className: r()(
+            className: o()(
                 N.pill,
                 {
                     [N.disabled]: t,
@@ -107,10 +107,10 @@ function k(e) {
                     )
                 );
             },
-            onMouseEnter: () => k && z(!0),
-            onMouseLeave: () => k && z(!1),
+            onMouseEnter: () => S && z(!0),
+            onMouseLeave: () => S && z(!1),
         },
-        G = (0, o.rm)(`forum-tag-${l.id}`);
+        G = (0, r.rm)(`forum-tag-${l.id}`);
     return R
         ? (0, a.jsx)(u.D, {
               ...G,
@@ -124,17 +124,17 @@ function k(e) {
           })
         : (0, a.jsx)("div", { ...F, children: D });
 }
-((k.Sizes = v),
+((S.Sizes = v),
     i.d(
         l,
         {},
         {
-            Ay: k,
+            Ay: S,
             cq: I,
             q6: function (e) {
                 let { tags: l, count: i, size: n = 1, useManaTagGroup: s = !1 } = e,
                     t = 0 === n,
-                    o = I(l);
+                    r = I(l);
                 return (0, a.jsx)(j.m, {
                     "aria-label": M.intl.string(M.t["P/y+sj"]),
                     __unsupportedReactNodeAsText: s
@@ -142,15 +142,15 @@ function k(e) {
                               variant: "filter",
                               size: "xs",
                               label: M.intl.string(M.t["P/y+sj"]),
-                              items: o,
+                              items: r,
                           })
                         : (0, a.jsx)(a.Fragment, {
                               children: l.map((e) =>
-                                  (0, a.jsx)(k, { tag: e, className: N.tooltipPill, size: k.Sizes.SMALL }, e.id),
+                                  (0, a.jsx)(S, { tag: e, className: N.tooltipPill, size: S.Sizes.SMALL }, e.id),
                               ),
                           }),
                     children: (0, a.jsx)("div", {
-                        className: r()(N.pill, { [N.small]: t, [N.manaFilterTag]: s }),
+                        className: o()(N.pill, { [N.small]: t, [N.manaFilterTag]: s }),
                         children: (0, a.jsxs)(c.E, {
                             variant: s ? "body-xs/normal" : t ? "body-xs/semibold" : "body-sm/semibold",
                             children: ["+", i],

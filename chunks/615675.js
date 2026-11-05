@@ -1,24 +1,25 @@
+n.r(t);
 var i = n(477900);
 n(582128);
 var s = n(646514),
     a = n(996682),
-    l = n(27989);
+    r = n(27989);
 n.d(
     t,
     {},
     {
-        T: function (e) {
+        HeadphonesDenyIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,
-                    height: r,
+                    height: l,
                     color: o = s.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: u = "",
                     ...c
                 } = e,
-                d = (0, l.J)(t),
+                d = (0, r.J)(t),
                 E = d?.width ?? n,
-                _ = d?.height ?? r;
+                _ = d?.height ?? l;
             return (0, i.jsxs)("svg", {
                 ...(0, a.A)(c),
                 xmlns: "http://www.w3.org/2000/svg",

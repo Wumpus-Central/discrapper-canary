@@ -1,7 +1,7 @@
 var t = i(477900),
-    s = i(582128),
-    l = i(503698),
-    a = i.n(l),
+    l = i(582128),
+    s = i(503698),
+    a = i.n(s),
     r = i(390544),
     d = i(554146),
     c = i(821609);
@@ -13,9 +13,9 @@ if (221552 == i.j) var f = i(933832);
 if (221552 == i.j) var j = i(624479);
 if (221552 == i.j) var g = i(289873);
 if (221552 == i.j) var v = i(866665);
-if (221552 == i.j) var I = i(290136);
-var h = i(793574),
-    E = i(263775),
+if (221552 == i.j) var E = i(290136);
+var I = i(793574),
+    h = i(263775),
     C = i(454908),
     N = i(363487),
     M = i(403362),
@@ -25,8 +25,8 @@ var h = i(793574),
     p = i(614393),
     R = i(770681),
     y = i(590388),
-    b = i(685743),
-    k = i(349085),
+    k = i(685743),
+    b = i(349085),
     _ = i(968459),
     O = i(981381),
     P = i(581453),
@@ -37,8 +37,8 @@ var h = i(793574),
     F = i(377325);
 function V(e) {
     let { guildId: n, instance: i } = e,
-        [l, a] = s.useState(!1),
-        r = s.useCallback(() => {
+        [s, a] = l.useState(!1),
+        r = l.useCallback(() => {
             (a(!0),
                 (0, T.as)(n, i.id).finally(() => {
                     a(!1);
@@ -48,7 +48,7 @@ function V(e) {
         fullWidth: !0,
         text: U.intl.string(L.default.TMzy7d),
         variant: "secondary",
-        loading: l,
+        loading: s,
         onClick: r,
     });
 }
@@ -57,7 +57,7 @@ function w(e) {
         fullWidth: !0,
         text: U.intl.string(L.default.tkbVdf),
         variant: "secondary",
-        icon: u.I,
+        icon: u.LinkExternalSmallIcon,
         iconPosition: "end",
         ...e,
     });
@@ -70,18 +70,18 @@ function Z(e) {
         fullWidth: !0,
         text: U.intl.string(L.default.gWMqnI),
         variant: "primary",
-        icon: u.I,
+        icon: u.LinkExternalSmallIcon,
         iconPosition: "end",
         ...e,
     });
 }
 function $(e) {
     let { guildId: n } = e,
-        [i, l] = s.useState(!1),
-        a = s.useCallback(() => {
-            (l(!0),
+        [i, s] = l.useState(!1),
+        a = l.useCallback(() => {
+            (s(!0),
                 (0, T.cq)(n).finally(() => {
-                    l(!1);
+                    s(!1);
                 }));
         }, [n]);
     return (0, t.jsx)(c.$, {
@@ -110,12 +110,12 @@ i.d(
     {
         Ay: function (e) {
             let { guildId: n, instance: i } = e,
-                l = (0, _.A)(i),
-                [c, u] = (0, E.kn)([d.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+                s = (0, _.A)(i),
+                [c, u] = (0, h.kn)([d.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
                 T = c !== d.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
                 { data: W } = (0, C.I)(i.gameId),
                 B = (0, O.A)(i.providerType, i.gameServerPanelUrl),
-                Y = s.useCallback(() => {
+                Y = l.useCallback(() => {
                     ((0, A.Ai)(n, i.gameId, W?.name ?? "", i.id),
                         T || null == i.providerType
                             ? (0, P.A)(n, i)
@@ -126,13 +126,13 @@ i.d(
                                   },
                               }));
                 }, [i, T, u, n, W?.name]),
-                { handleCopyServerIp: q, animateCopyIcon: H } = (0, b.A)(n, i.id, h.A.GAME_SERVER_GAME, l ?? ""),
-                X = (0, k.A)(i.gameId, "cover"),
+                { handleCopyServerIp: q, animateCopyIcon: H } = (0, k.A)(n, i.id, I.A.GAME_SERVER_GAME, s ?? ""),
+                X = (0, b.A)(i.gameId, "cover"),
                 Q = (0, N.A)(n),
-                J = s.useCallback(() => {
+                J = l.useCallback(() => {
                     ((0, A.f7)(n, i.id), (0, S.h)({ href: i.gameServerPanelUrl ?? "" }));
                 }, [i.gameServerPanelUrl, n, i.id]),
-                ee = s.useMemo(() => {
+                ee = l.useMemo(() => {
                     switch (i.status) {
                         case r.M.SLEEPING:
                             return (0, t.jsxs)(t.Fragment, {
@@ -170,12 +170,12 @@ i.d(
                             return null;
                     }
                 }, [i, Y, Q, J, n, B]),
-                en = s.useMemo(() => {
+                en = l.useMemo(() => {
                     if (null == i.gameConfig) return null;
                     let e = [i.gameConfig.type, i.gameConfig.version].filter(M.Vq).join(" ");
                     return "" === e ? null : e;
                 }, [i.gameConfig]),
-                ei = s.useMemo(() => {
+                ei = l.useMemo(() => {
                     switch (i.status) {
                         case r.M.STARTING:
                             if (null == i.gameServerPanelUrl) return U.intl.string(L.default["1A3US2"]);
@@ -242,7 +242,7 @@ i.d(
                                                 (0, t.jsx)("div", {
                                                     className: F.serverIpContainer,
                                                     children:
-                                                        null == l
+                                                        null == s
                                                             ? (0, t.jsx)(m.E, {
                                                                   variant: "body-sm/medium",
                                                                   children: "\u2014",
@@ -252,7 +252,7 @@ i.d(
                                                                     children: [
                                                                         (0, t.jsx)(m.E, {
                                                                             variant: "body-sm/medium",
-                                                                            children: l,
+                                                                            children: s,
                                                                         }),
                                                                         (0, t.jsx)(x.D, {
                                                                             className: F.copyButton,
@@ -335,7 +335,7 @@ i.d(
                                                             (0, t.jsx)(v.m, {
                                                                 position: "top",
                                                                 text: ei,
-                                                                children: (0, t.jsx)(I.CircleQuestionIcon, {
+                                                                children: (0, t.jsx)(E.CircleQuestionIcon, {
                                                                     className: F.statusTooltipIcon,
                                                                     size: "xs",
                                                                 }),

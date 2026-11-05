@@ -1,4 +1,4 @@
-i.d(e, { default: () => T });
+i.d(e, { default: () => I });
 var l = i(477900);
 i(582128);
 var t = i(165862),
@@ -26,8 +26,8 @@ var t = i(165862),
     k = i(288104),
     y = i(969128),
     E = i(192308),
-    N = i(146092);
-function D(n) {
+    M = i(146092);
+function N(n) {
     let e,
         { channel: s, onSelect: d } = n,
         o = (0, f.A)(s),
@@ -38,7 +38,7 @@ function D(n) {
                 ? null
                 : (0, l.jsx)(r.Dr, {
                       id: "add-channel-to-category",
-                      trailingIndicator: { type: "icon", icon: h.T },
+                      trailingIndicator: { type: "icon", icon: h.PlusMediumIcon },
                       label: e.label,
                       action: e.perform,
                   }),
@@ -54,7 +54,7 @@ function D(n) {
                         (0, l.jsx)(n, {
                             ...e,
                             onConfirm: () => {
-                                (e.onClose(), (0, N.fv)(s.id));
+                                (e.onClose(), (0, M.fv)(s.id));
                             },
                             channel: s,
                         });
@@ -76,7 +76,7 @@ function D(n) {
         ],
     });
 }
-function M(n) {
+function D(n) {
     let e,
         { channel: i, guild: s, onSelect: d } = n,
         o = (0, f.A)(i),
@@ -101,13 +101,13 @@ function M(n) {
                   label: C.intl.string(C.t["9dqzUr"]),
                   action: () => (0, j.rZ)(i.guild_id),
               }),
-        N = (0, v.A)(i),
-        D = (0, A.A)(i),
-        M = (0, X.A)(i, s),
-        T = (0, m.A)(i),
-        I = (0, c.A)({ id: i.id, label: C.intl.string(C.t["2visC6"]) }),
-        O = (0, y.A)(i),
-        R = (0, k.A)(i),
+        M = (0, v.A)(i),
+        N = (0, A.A)(i),
+        D = (0, X.A)(i, s),
+        I = (0, m.A)(i),
+        O = (0, c.A)({ id: i.id, label: C.intl.string(C.t["2visC6"]) }),
+        R = (0, y.A)(i),
+        T = (0, k.A)(i),
         U = (0, _.A)(i);
     return (0, l.jsxs)(t.W, {
         "data-menu-migrated-auto": !0,
@@ -117,17 +117,17 @@ function M(n) {
         onSelect: d,
         children: [
             (0, l.jsx)(r.rX, { children: o }, "mark-as-read"),
-            (0, l.jsxs)(r.rX, { children: [O, u, E] }, "channel-actions"),
-            (0, l.jsxs)(r.rX, { children: [h, R] }, "notifications"),
+            (0, l.jsxs)(r.rX, { children: [R, u, E] }, "channel-actions"),
+            (0, l.jsxs)(r.rX, { children: [h, T] }, "notifications"),
             (0, l.jsx)(r.rX, { children: U }),
-            (0, l.jsxs)(r.rX, { children: [N, D, M, T] }, "admin-actions"),
-            (0, l.jsx)(r.rX, { children: I }, "developer-actions"),
+            (0, l.jsxs)(r.rX, { children: [M, N, D, I] }, "admin-actions"),
+            (0, l.jsx)(r.rX, { children: O }, "developer-actions"),
         ],
     });
 }
-let T = (0, s.A)(
+let I = (0, s.A)(
     function (n) {
-        return (0, o.DZ)() ? (0, l.jsx)(D, { ...n }) : (0, l.jsx)(M, { ...n });
+        return (0, o.DZ)() ? (0, l.jsx)(N, { ...n }) : (0, l.jsx)(D, { ...n });
     },
     [d.A.CONTEXT_MENU, d.A.CHANNEL_CATEGORY_MENU],
 );

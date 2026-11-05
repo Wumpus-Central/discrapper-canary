@@ -240,13 +240,19 @@ function q() {
                               (0, i.jsx)(g.m, {
                                   asContainer: !0,
                                   text: M.intl.string(M.t.mW4DUE),
-                                  children: (0, i.jsx)(h.E, { size: "xs", color: u.A.unsafe_rawColors.YELLOW_300.css }),
+                                  children: (0, i.jsx)(h.CircleErrorIcon, {
+                                      size: "xs",
+                                      color: u.A.unsafe_rawColors.YELLOW_300.css,
+                                  }),
                               }),
                           E &&
                               (0, i.jsx)(g.m, {
                                   asContainer: !0,
                                   text: M.intl.formatToPlainString(M.t.eummvd, { maxTiers: 3, maxProducts: 50 }),
-                                  children: (0, i.jsx)(h.E, { size: "xs", color: u.A.unsafe_rawColors.YELLOW_300.css }),
+                                  children: (0, i.jsx)(h.CircleErrorIcon, {
+                                      size: "xs",
+                                      color: u.A.unsafe_rawColors.YELLOW_300.css,
+                                  }),
                               }),
                       ],
                   }),

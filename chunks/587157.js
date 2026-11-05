@@ -44,13 +44,13 @@ function C(e) {
 }
 function N(e) {
     let { settings: t, tiers: n, choices: a, disabled: c, onChange: u, placement: d, open: f, entered: g } = e,
-        [N, R] = l.useState(!1),
-        A = C(N),
+        [N, A] = l.useState(!1),
+        R = C(N),
         S = h.P.indexOf(t.tier),
-        k = (0, p.hl)(a),
-        E = h.P.map(p.pL),
-        U = (0, p.Tc)(t.tier),
-        { text: T, phase: O } = (0, m.Q)(U);
+        U = (0, p.hl)(a),
+        k = h.P.map(p.pL),
+        E = (0, p.Tc)(t.tier),
+        { text: I, phase: T } = (0, m.Q)(E);
     return (0, r.jsx)("div", {
         className: w.qd,
         "data-placement": d ?? void 0,
@@ -59,9 +59,9 @@ function N(e) {
             role: "dialog",
             "aria-label": y.intl.string(b.default["3E7Yc0"]),
             children: [
-                k && A.mounted
+                U && R.mounted
                     ? (0, r.jsx)("div", {
-                          className: i()(w.Nr, w.uO, { [w.Zr]: N && A.entered, [w.GF]: !N }),
+                          className: i()(w.Nr, w.uO, { [w.Zr]: N && R.entered, [w.GF]: !N }),
                           children: (0, r.jsx)(v.b, { settings: t, tiers: n, choices: a, disabled: c, onChange: u }),
                       })
                     : null,
@@ -81,8 +81,8 @@ function N(e) {
                                     tag: "span",
                                     variant: "body-sm/normal",
                                     color: "text-muted",
-                                    className: i()(w.Z, { [w.xQ]: "exit" === O, [w.lm]: "enter" === O }),
-                                    children: T,
+                                    className: i()(w.Z, { [w.xQ]: "exit" === T, [w.lm]: "enter" === T }),
+                                    children: I,
                                 }),
                             ],
                         }),
@@ -92,7 +92,7 @@ function N(e) {
                                 (0, r.jsx)(x.A, {}),
                                 (0, r.jsx)(j.A, {
                                     activeIndex: S,
-                                    stops: E,
+                                    stops: k,
                                     lockedStops: p.bt,
                                     ariaLabel: y.intl.string(b.default.aBPQxX),
                                     disabled: c,
@@ -103,7 +103,7 @@ function N(e) {
                                 }),
                             ],
                         }),
-                        k
+                        U
                             ? (0, r.jsx)("div", {
                                   className: w.XF,
                                   children: (0, r.jsx)(o.Q, {
@@ -111,7 +111,7 @@ function N(e) {
                                       variant: "secondary",
                                       textVariant: "body-sm/medium",
                                       "aria-expanded": N,
-                                      onClick: () => R((e) => !e),
+                                      onClick: () => A((e) => !e),
                                   }),
                               })
                             : null,
@@ -130,12 +130,12 @@ n.d(
                 p = l.useRef(null),
                 [h, x] = (0, g.A)(t, s),
                 [j, v] = l.useState(!1),
-                { mounted: R, entered: A } = C(j);
+                { mounted: A, entered: R } = C(j);
             return (0, r.jsx)(c.Y, {
                 targetElementRef: p,
                 position: "top",
                 align: "right",
-                shouldShow: R,
+                shouldShow: A,
                 onRequestClose: () => v(!1),
                 animation: c.Y.Animation.NONE,
                 renderPopout: (e) => {
@@ -148,7 +148,7 @@ n.d(
                         onChange: x,
                         placement: t,
                         open: j,
-                        entered: A,
+                        entered: R,
                     });
                 },
                 children: (e, t) => {
@@ -164,7 +164,13 @@ n.d(
                             ...e,
                             onClick: () => v((e) => !e),
                             "aria-expanded": j,
-                            children: m ?? (0, r.jsx)(f.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                            children:
+                                m ??
+                                (0, r.jsx)(f.FiltersHorizontalIcon, {
+                                    size: "xxs",
+                                    color: "currentColor",
+                                    "aria-hidden": !0,
+                                }),
                         }),
                     });
                 },

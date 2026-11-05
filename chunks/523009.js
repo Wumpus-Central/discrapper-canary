@@ -6,19 +6,19 @@ var l = n(477900),
     a = n(866665),
     d = n(191023),
     c = n(428678),
-    u = n(39623),
-    o = n(873298),
+    o = n(39623),
+    u = n(873298),
     m = n(184287);
 function x(e) {
     let { redactionType: t, label: n } = e,
         r = i.useMemo(() => {
             switch (t) {
-                case o.TO.BLUR:
+                case u.TO.BLUR:
                     return d.ImageIcon;
-                case o.TO.BLOCK:
-                    return c.K;
-                case o.TO.SHOW:
-                    return u.EyeIcon;
+                case u.TO.BLOCK:
+                    return c.DenyIcon;
+                case u.TO.SHOW:
+                    return o.EyeIcon;
                 default:
                     return null;
             }

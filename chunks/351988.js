@@ -1,55 +1,55 @@
-l.d(i, { default: () => m });
-var r = l(477900),
-    n = l(582128),
-    t = l(165862),
-    d = l(477782),
-    c = l(358367),
-    o = l(793574),
-    a = l(122088),
-    s = l(766075),
-    u = l(158935),
-    v = l(855986),
-    b = l(406810),
-    h = l(848847),
-    p = l(148810),
-    y = l(521502),
-    k = l(380610),
-    g = l(390486),
-    A = l(540999),
-    x = l(792996),
-    j = l(650956),
-    f = l(949091);
-let m = (0, c.A)(
+n.d(i, { default: () => S });
+var l = n(477900),
+    r = n(582128),
+    t = n(165862),
+    d = n(477782),
+    c = n(358367),
+    o = n(793574),
+    s = n(122088),
+    a = n(766075),
+    u = n(158935),
+    v = n(855986),
+    b = n(406810),
+    h = n(848847),
+    p = n(148810),
+    y = n(521502),
+    g = n(380610),
+    k = n(390486),
+    A = n(540999),
+    f = n(792996),
+    x = n(650956),
+    j = n(949091);
+let S = (0, c.A)(
     function (e) {
         let i = (function () {
                 let e = (0, v.bG)([y.A], () =>
-                        (0, k.kK)() ? y.A.getCurrentBuildOverride().overrides?.discord_web : null,
+                        (0, g.kK)() ? y.A.getCurrentBuildOverride().overrides?.discord_web : null,
                     ),
                     i = (0, v.bG)([A.A], () => A.A.isDeveloper),
-                    l = n.useMemo(() => (i ? (0, g.HP)() : []), [i]),
-                    [t, c] = n.useState(!1);
+                    n = r.useMemo(() => (i ? (0, k.HP)() : []), [i]),
+                    [t, c] = r.useState(!1);
                 async function o(i) {
                     if (null == i || i.id !== e?.id)
                         try {
                             (c(!0),
-                                (null != i ? await (0, g.mk)(i) : (await (0, p.iD)()).ok) &&
+                                (null != i ? await (0, k.mk)(i) : (await (0, p.iD)()).ok) &&
                                     window.location.reload(!0));
                         } finally {
                             c(!1);
                         }
                 }
-                return (0, r.jsxs)(d.rX, {
+                return (0, l.jsxs)(d.rX, {
                     children: [
                         i &&
-                            l.length > 0 &&
-                            (0, r.jsx)(
+                            n.length > 0 &&
+                            (0, l.jsx)(
                                 d.Dr,
                                 {
                                     label: "Recent Build Overrides",
                                     id: "recent-build-overrides",
                                     leadingAccessory: { type: "icon", icon: b.ClockIcon },
-                                    children: l.map((i) =>
-                                        (0, r.jsx)(
+                                    children: n.map((i) =>
+                                        (0, l.jsx)(
                                             d.iD,
                                             {
                                                 id: i.id,
@@ -65,17 +65,17 @@ let m = (0, c.A)(
                                 "recent-build-overrides",
                             ),
                         null != e &&
-                            (0, r.jsx)(
+                            (0, l.jsx)(
                                 d.Dr,
                                 {
                                     id: "clear-build-override",
                                     disabled: t,
-                                    leadingAccessory: { type: "icon", icon: h.H },
-                                    iconLeft: h.H,
-                                    label: x.intl.string(x.t["/Nz9rY"]),
-                                    subtext: (0, r.jsx)("div", {
-                                        className: j.Z,
-                                        children: (0, r.jsx)("div", { className: j.i, children: e.id }),
+                                    leadingAccessory: { type: "icon", icon: h.SettingsInfoIcon },
+                                    iconLeft: h.SettingsInfoIcon,
+                                    label: f.intl.string(f.t["/Nz9rY"]),
+                                    subtext: (0, l.jsx)("div", {
+                                        className: x.Z,
+                                        children: (0, l.jsx)("div", { className: x.i, children: e.id }),
                                     }),
                                     action: () => o(null),
                                     color: "danger",
@@ -85,33 +85,33 @@ let m = (0, c.A)(
                     ],
                 });
             })(),
-            l = (0, f.A)(!0),
+            n = (0, j.A)(!0),
             c = (function (e, i) {
-                let { node: l } = (0, a.Ay)(e, ""),
-                    [t, c] = n.useState(l);
+                let { node: n } = (0, s.Ay)(e, ""),
+                    [t, c] = r.useState(n);
                 return t.layout.map((e) => {
-                    var l, n;
+                    var n, r;
                     let t;
                     return (
-                        (l = e),
-                        (n = i),
-                        (t = l.useTitle?.()),
-                        (0, r.jsx)(
+                        (n = e),
+                        (r = i),
+                        (t = n.useTitle?.()),
+                        (0, l.jsx)(
                             d.rX,
                             {
-                                label: l.hideTitle ? void 0 : t,
-                                "aria-label": l.hideTitle ? t : void 0,
-                                children: l.layout.map((e) => {
-                                    var i, l;
-                                    let t, c, o, a;
+                                label: n.hideTitle ? void 0 : t,
+                                "aria-label": n.hideTitle ? t : void 0,
+                                children: n.layout.map((e) => {
+                                    var i, n;
+                                    let t, c, o, s;
                                     return (
                                         (i = e),
-                                        (l = n),
+                                        (n = r),
                                         (t = i.useTitle?.()),
                                         (c = i.useMenu?.()),
                                         (o = "destructive" === i.variant ? "danger" : void 0),
-                                        (a = i.onClick ?? (() => l(i.key))),
-                                        (0, r.jsx)(
+                                        (s = i.onClick ?? (() => n(i.key))),
+                                        (0, l.jsx)(
                                             d.Dr,
                                             {
                                                 label: t,
@@ -119,7 +119,7 @@ let m = (0, c.A)(
                                                 leadingAccessory: { type: "icon", icon: i.icon },
                                                 iconLeft: i.icon,
                                                 color: o,
-                                                action: a,
+                                                action: s,
                                                 children: c,
                                             },
                                             i.key,
@@ -127,17 +127,17 @@ let m = (0, c.A)(
                                     );
                                 }),
                             },
-                            l.key,
+                            n.key,
                         )
                     );
                 });
-            })(u.D, (e) => (0, s.openUserSettings)(e));
-        return (0, r.jsxs)(t.W, {
+            })(u.D, (e) => (0, a.openUserSettings)(e));
+        return (0, l.jsxs)(t.W, {
             navId: "settings-menu",
-            "aria-label": x.intl.string(x.t.opYYHn),
+            "aria-label": f.intl.string(f.t.opYYHn),
             onSelect: void 0,
             ...e,
-            children: [c, null != l && (0, r.jsx)(d.rX, { children: l }), i],
+            children: [c, null != n && (0, l.jsx)(d.rX, { children: n }), i],
         });
     },
     [o.A.CONTEXT_MENU, o.A.USER_SETTINGS_MENU],

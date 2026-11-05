@@ -13,8 +13,8 @@ t.d(
                 t,
                 {
                     hasPermission: c,
-                    streamActive: d,
-                    isSelfStream: u,
+                    streamActive: u,
+                    isSelfStream: d,
                     videoBlocked: A = !1,
                     centerButton: h,
                     onMouseEnter: m,
@@ -26,30 +26,30 @@ t.d(
                 p = h ? r.l : r.A;
             t = A
                 ? o.intl.string(o.t.GFr0GR)
-                : d
-                  ? u
+                : u
+                  ? d
                       ? o.intl.string(o.t.S5anIc)
                       : o.intl.string(o.t.q3O3J8)
                   : c
                     ? o.intl.string(o.t.fjBNo1)
                     : o.intl.string(o.t.uQn9B8);
-            let { Component: E, events: j, play: I } = (0, s.c)(d ? "disable" : "enable"),
-                v = A ? a.i : E;
+            let { Component: E, events: I, play: j } = (0, s.c)(u ? "disable" : "enable"),
+                v = A ? a.ScreenDenyIcon : E;
             return (
-                l.useEffect(() => () => I(), [d, I]),
+                l.useEffect(() => () => j(), [u, j]),
                 (0, i.jsx)(p, {
                     buttonRef: C,
                     isTrayButton: !0,
                     label: t,
                     disabled: !c,
                     iconComponent: v,
-                    isActive: d,
-                    color: (x ? (n = "premiumGradient") : d && (n = "green"), n),
+                    isActive: u,
+                    color: (x ? (n = "premiumGradient") : u && (n = "green"), n),
                     onMouseEnter: (e) => {
-                        (m?.(e), j.onMouseEnter());
+                        (m?.(e), I.onMouseEnter());
                     },
                     onMouseLeave: (e) => {
-                        (g?.(e), j.onMouseLeave());
+                        (g?.(e), I.onMouseLeave());
                     },
                     ...f,
                 })

@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(462887),
     E = n(862482),
     A = n(403581),
-    h = n(834730),
-    f = n(534514),
+    f = n(834730),
+    h = n(534514),
     I = n(939249),
     p = n(789645),
     m = n(736653),
-    g = n(775602),
-    T = n(11029),
+    T = n(775602),
+    g = n(11029),
     S = n(976860),
     N = n(224016),
     C = n(217392),
@@ -54,12 +54,12 @@ function x(e) {
             (0, i.jsxs)("div", {
                 className: U.wm,
                 children: [
-                    (0, i.jsx)(A.t, { size: "md", color: "currentColor", className: U.Xo }),
+                    (0, i.jsx)(A.NitroWheelIcon, { size: "md", color: "currentColor", className: U.Xo }),
                     c === v.pe.TIER_0 && (0, i.jsx)(C.A, { className: U.Vn }),
                     c === v.pe.TIER_2 && (0, i.jsx)(N.A, { className: U.Vn }),
                 ],
             }),
-            (0, i.jsx)(h.E, { variant: "body-md/medium", className: U.C, color: "none", children: n }),
+            (0, i.jsx)(f.E, { variant: "body-md/medium", className: U.C, color: "none", children: n }),
             (0, i.jsx)(b.HU, {
                 text:
                     null != a
@@ -67,7 +67,7 @@ function x(e) {
                         : M.intl.string(M.t.IBYG5U),
                 colorOptions: c === v.pe.TIER_0 ? b.at.PREMIUM_TIER_0_WHITE_FILL : b.at.PREMIUM_TIER_2_WHITE_FILL,
             }),
-            (0, i.jsx)(h.E, { variant: "body-sm/medium", className: U.dt, children: G(o) }),
+            (0, i.jsx)(f.E, { variant: "body-sm/medium", className: U.dt, children: G(o) }),
         ],
     });
 }
@@ -139,7 +139,7 @@ function B(e) {
                 text: M.intl.string(M.t["8CVUrV"]),
                 colorOptions: b.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
             }),
-            (0, i.jsx)(f.D, {
+            (0, i.jsx)(h.D, {
                 variant: "heading-sm/semibold",
                 color: "text-default",
                 children: M.intl.format(M.t["fF+cgd"], { onClick: () => (0, L.e)() }),
@@ -151,7 +151,7 @@ function B(e) {
                 analyticsLocationObject: n,
                 onClose: t,
             }),
-            (0, i.jsx)(h.E, { variant: "body-sm/medium", className: U.eg, children: G(r?.expiresAt?.toISOString()) }),
+            (0, i.jsx)(f.E, { variant: "body-sm/medium", className: U.eg, children: G(r?.expiresAt?.toISOString()) }),
         ],
     });
 }
@@ -160,8 +160,8 @@ function V(e) {
     return (0, i.jsxs)("div", {
         className: U.hQ,
         children: [
-            (0, i.jsx)(f.D, { variant: "heading-xl/semibold", children: t }),
-            null != n && (0, i.jsx)(h.E, { className: U._O, variant: "body-md/normal", children: n }),
+            (0, i.jsx)(h.D, { variant: "heading-xl/semibold", children: t }),
+            null != n && (0, i.jsx)(f.E, { className: U._O, variant: "body-md/normal", children: n }),
             (0, i.jsx)(x, { trialOffer: a, discountOffer: s, children: r }),
         ],
     });
@@ -182,7 +182,7 @@ n.d(
                     trialOffer: A,
                     discountOffer: N,
                 } = e,
-                C = (0, u.bG)([g.Ay], () => g.Ay.useReducedMotion),
+                C = (0, u.bG)([T.Ay], () => T.Ay.useReducedMotion),
                 L = (0, m.Ay)(),
                 y = (0, O.EJ)(v.PremiumTypes.TIER_2, { useSpace: !1 });
             switch (d) {
@@ -192,13 +192,13 @@ n.d(
                             (0, i.jsx)(I.D, {
                                 className: U.kz,
                                 onClick: l,
-                                children: (0, i.jsx)(p.P, { size: "md", color: "currentColor" }),
+                                children: (0, i.jsx)(p.XSmallIcon, { size: "md", color: "currentColor" }),
                             }),
                             (0, i.jsxs)("div", {
                                 className: U.hQ,
                                 children: [
                                     (0, i.jsx)("img", { className: U.Tn, src: w, alt: M.intl.string(M.t.do7AoM) }),
-                                    (0, i.jsx)(f.D, {
+                                    (0, i.jsx)(h.D, {
                                         variant: "heading-xl/semibold",
                                         color: "text-strong",
                                         children: M.intl.string(M.t.HEm04J),
@@ -231,7 +231,7 @@ n.d(
                                     className: U.hQ,
                                     children: [
                                         (0, i.jsx)("img", { className: U.Tn, src: w, alt: M.intl.string(M.t.do7AoM) }),
-                                        (0, i.jsx)(f.D, {
+                                        (0, i.jsx)(h.D, {
                                             variant: "heading-xl/semibold",
                                             color: "text-strong",
                                             children: M.intl.string(M.t.jJG1pl),
@@ -268,7 +268,7 @@ n.d(
                                 className: U.hQ,
                                 children: [
                                     (0, i.jsx)("img", { alt: "", className: U.Tn, src: D }),
-                                    (0, i.jsx)(f.D, {
+                                    (0, i.jsx)(h.D, {
                                         variant: "heading-xl/semibold",
                                         color: "text-strong",
                                         children: M.intl.string(M.t["1SsvhY"]),
@@ -330,8 +330,8 @@ n.d(
                         (0, i.jsxs)("div", {
                             className: U.hQ,
                             children: [
-                                (0, i.jsx)(f.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
-                                (0, i.jsx)(h.E, { variant: "body-md/normal", children: r }),
+                                (0, i.jsx)(h.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
+                                (0, i.jsx)(f.E, { variant: "body-md/normal", children: r }),
                                 (0, i.jsx)(x, { trialOffer: A, discountOffer: N, children: b }),
                             ],
                         })
@@ -340,8 +340,8 @@ n.d(
                     return (0, i.jsxs)("div", {
                         className: U.hQ,
                         children: [
-                            (0, i.jsx)(f.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
-                            null != r && (0, i.jsx)(h.E, { variant: "body-md/normal", children: r }),
+                            (0, i.jsx)(h.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
+                            null != r && (0, i.jsx)(f.E, { variant: "body-md/normal", children: r }),
                             (0, i.jsx)(x, {
                                 trialOffer: A,
                                 discountOffer: N,
@@ -368,7 +368,7 @@ n.d(
                             discountOffer: N,
                             children: M.intl.format(M.t["5KMAnK"], {
                                 onClick: () => {
-                                    ((0, S.pX)(P.BVt.APPLICATION_STORE), (0, T.DS)());
+                                    ((0, S.pX)(P.BVt.APPLICATION_STORE), (0, g.DS)());
                                 },
                             }),
                         })
@@ -377,12 +377,12 @@ n.d(
                     return (0, i.jsxs)("div", {
                         className: s()(U.iW, { [U.WP]: !C }),
                         children: [
-                            (0, i.jsx)(h.E, {
+                            (0, i.jsx)(f.E, {
                                 variant: "body-lg/semibold",
                                 color: "text-feedback-critical",
                                 children: r,
                             }),
-                            (0, i.jsx)(f.D, {
+                            (0, i.jsx)(h.D, {
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
                                 className: U.Ed,
@@ -435,7 +435,7 @@ n.d(
         Vq: function (e) {
             let t = (0, y.V)()?.subscriptionTrial,
                 n = t?.skuId ?? v.pe.TIER_2;
-            return (0, i.jsx)(h.E, {
+            return (0, i.jsx)(f.E, {
                 variant: "body-xs/semibold",
                 className: s()(U.A6, e.className, { [U.kU]: n === v.pe.TIER_0, [U.y_]: n === v.pe.TIER_2 }),
                 color: "none",

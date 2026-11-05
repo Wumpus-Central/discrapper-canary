@@ -1,43 +1,44 @@
-var i = n(477900);
-n(582128);
-var r = n(646514),
-    a = n(996682),
-    s = n(27989);
-n.d(
-    t,
+l.r(s);
+var e = l(477900);
+l(582128);
+var h = l(646514),
+    i = l(996682),
+    t = l(27989);
+l.d(
+    s,
     {},
     {
-        T: function (e) {
+        ClipsGalleryIcon: function (a) {
             let {
-                    size: t = "md",
-                    width: n,
-                    height: l,
-                    color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: d = "",
-                    ...c
-                } = e,
-                u = (0, s.J)(t),
-                _ = u?.width ?? n,
-                E = u?.height ?? l;
-            return (0, i.jsxs)("svg", {
-                ...(0, a.A)(c),
+                    size: s = "md",
+                    width: l,
+                    height: c,
+                    color: d = h.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
+                    ...p
+                } = a,
+                r = (0, t.J)(s),
+                o = r?.width ?? l,
+                v = r?.height ?? c;
+            return (0, e.jsxs)("svg", {
+                ...(0, i.A)(p),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: _,
-                height: E,
+                width: o,
+                height: v,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, i.jsx)("path", {
-                        fill: "string" == typeof o ? o : o.css,
+                    (0, e.jsx)("path", {
+                        fill: "string" == typeof d ? d : d.css,
                         d: "M7.55 2H5a3 3 0 0 0-3 3v.5c0 .28.22.5.5.5h2.8a.5.5 0 0 0 .4-.2l2.25-3a.5.5 0 0 0-.4-.8ZM15.95 2.8a.5.5 0 0 0-.4-.8h-4.29a.5.5 0 0 0-.4.2l-2.26 3A.5.5 0 0 0 9 6h4.3a.5.5 0 0 0 .4-.2l2.25-3ZM16.6 5.2a.5.5 0 0 0 .4.8h4.5a.5.5 0 0 0 .5-.5V5a3 3 0 0 0-2.73-2.99.46.46 0 0 0-.4.19l-2.27 3Z",
-                        className: d,
+                        className: n,
                     }),
-                    (0, i.jsx)("path", {
-                        fill: "string" == typeof o ? o : o.css,
+                    (0, e.jsx)("path", {
+                        fill: "string" == typeof d ? d : d.css,
                         fillRule: "evenodd",
                         d: "M2.5 8a.5.5 0 0 0-.5.5v10C2 20.43 3.34 22 5 22h14c1.66 0 3-1.57 3-3.5v-10a.5.5 0 0 0-.5-.5h-19Zm12.01 6.61-3.7-2.96a.5.5 0 0 0-.81.39v5.92c0 .42.48.65.81.39l3.7-2.96a.5.5 0 0 0 0-.78Z",
                         clipRule: "evenodd",
-                        className: d,
+                        className: n,
                     }),
                 ],
             });

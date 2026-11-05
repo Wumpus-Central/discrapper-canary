@@ -6,8 +6,8 @@ var t = n(477900),
     r = n(435558),
     u = n(350835),
     o = n(855986),
-    d = n(834730),
-    c = n(866665),
+    c = n(834730),
+    d = n(866665),
     m = n(672979),
     x = n(87664),
     h = n(834757),
@@ -47,7 +47,7 @@ function N(e) {
     let y = T ? (null != b ? ` ${S}` : S) : null;
     return null == n
         ? null
-        : (0, t.jsx)(d.E, {
+        : (0, t.jsx)(c.E, {
               variant: `body-${m}/medium`,
               color: "none",
               className: i()(g.ps, r),
@@ -56,7 +56,7 @@ function N(e) {
                   N || l
                       ? (0, t.jsxs)(t.Fragment, { children: [b, y] })
                       : null != I.presence
-                        ? (0, t.jsx)(c.m, { delay: 150, children: (0, t.jsxs)("span", { children: [b, y] }) })
+                        ? (0, t.jsx)(d.m, { delay: 150, children: (0, t.jsxs)("span", { children: [b, y] }) })
                         : (0, t.jsxs)("span", { children: [b, y] })),
           });
 }
@@ -65,7 +65,7 @@ var v = n(994500),
     S = n(646514);
 function T(e) {
     let { className: l } = e;
-    return (0, t.jsx)(I.r, {
+    return (0, t.jsx)(I.QuestsIcon, {
         className: i()(g.tt, l),
         size: "custom",
         height: 14,
@@ -88,8 +88,8 @@ function R(e) {
             iconClassName: i,
             hideIcon: r = !1,
             hideText: u = !1,
-            hideTooltip: d = !1,
-            canTruncate: c = !0,
+            hideTooltip: c = !1,
+            canTruncate: d = !0,
             showChannelName: m = !1,
         } = e,
         x = (0, o.bG)([C.A], () => C.A.getChannel(l.channelId)),
@@ -99,13 +99,13 @@ function R(e) {
         j = null != h ? `${p} (${h})` : p,
         A = m ? j : p;
     return (0, t.jsx)(G.A, {
-        icon: r ? void 0 : (0, t.jsx)(E.A, { icon: b.U, className: i }),
+        icon: r ? void 0 : (0, t.jsx)(E.A, { icon: b.TvIcon, className: i }),
         text: A,
-        tooltipText: d ? void 0 : u ? j : m ? void 0 : (h ?? void 0),
+        tooltipText: c ? void 0 : u ? j : m ? void 0 : (h ?? void 0),
         textVariant: s,
         className: a,
-        canTruncate: c,
-        hideTooltip: d,
+        canTruncate: d,
+        hideTooltip: c,
         "aria-label": j,
         hideText: u,
     });
@@ -121,25 +121,25 @@ function U(e) {
             textSize: r = "xs",
             animateEmoji: u = !0,
             hideEmoji: o = !1,
-            hideTooltip: c = !1,
+            hideTooltip: d = !1,
         } = e,
         m = (0, w.G)(l?.state);
     if (null == l) return null;
     let x = l?.emoji,
         h = null != m && "" !== m,
         f = null;
-    null == x || o || (f = (0, t.jsx)(p.A, { emoji: x, animate: u, className: s, hideTooltip: c || h }));
+    null == x || o || (f = (0, t.jsx)(p.A, { emoji: x, animate: u, className: s, hideTooltip: d || h }));
     let j = h && (null != f ? ` ${m}` : m);
-    return (0, t.jsx)(d.E, {
+    return (0, t.jsx)(c.E, {
         variant: `body-${r}/medium`,
         color: "none",
-        className: i()(g.ps, c && g.$9, n),
+        className: i()(g.ps, d && g.$9, n),
         children: (function () {
-            if (null != x && !o && !h && !c) return f;
+            if (null != x && !o && !h && !d) return f;
             let e = (0, t.jsxs)(t.Fragment, {
                 children: [f, !1 !== j && (0, t.jsx)("span", { className: g.ps, children: j })],
             });
-            return c
+            return d
                 ? (0, t.jsx)("span", { className: g.Nu, children: e })
                 : (0, t.jsx)(k.A, { delay: 150, tooltipClassName: a, className: g.Nu, children: e });
         })(),
@@ -158,9 +158,9 @@ function F(e) {
             hideText: r = !1,
             hideTooltip: u = !1,
             canTruncate: o = !0,
-            showChannelName: d = !1,
+            showChannelName: c = !1,
         } = e,
-        c = (0, D.S3)(P.clD.ONLINE),
+        d = (0, D.S3)(P.clD.ONLINE),
         m = (0, y.Ay)(l),
         x = l.isDM() || l.isGroupDM(),
         h = x
@@ -169,11 +169,11 @@ function F(e) {
               ? M.intl.string(M.t.QygGCN)
               : M.intl.string(M.t.msxteM),
         f = null != m ? `${h} (${m})` : h,
-        p = d ? f : h;
+        p = c ? f : h;
     return (0, t.jsx)(G.A, {
-        icon: (0, t.jsx)(O.A, { size: "custom", color: c, channel: l, className: i()(g.Kk, a) }),
+        icon: (0, t.jsx)(O.A, { size: "custom", color: d, channel: l, className: i()(g.Kk, a) }),
         text: p,
-        tooltipText: u ? void 0 : r ? f : x || d ? void 0 : (m ?? void 0),
+        tooltipText: u ? void 0 : r ? f : x || c ? void 0 : (m ?? void 0),
         textVariant: n,
         textClassName: s,
         hideTooltip: u,
@@ -184,7 +184,7 @@ function F(e) {
 }
 function $(e) {
     let { textVariant: l, className: n, hasCustomStatusText: s, totalActivityCount: a } = e;
-    return (0, t.jsxs)(d.E, {
+    return (0, t.jsxs)(c.E, {
         variant: l,
         className: i()(n, g.qi),
         color: s ? "status-positive" : "none",
@@ -193,14 +193,14 @@ function $(e) {
 }
 function V(e) {
     let { textVariant: l, className: n } = e;
-    return (0, t.jsx)(d.E, { variant: l, className: i()(g.Om, n), "aria-hidden": !0, children: "\u2022" });
+    return (0, t.jsx)(c.E, { variant: l, className: i()(g.Om, n), "aria-hidden": !0, children: "\u2022" });
 }
 function L(e) {
     let {
         user: l,
         activities: n,
         applicationStream: a,
-        voiceChannel: d,
+        voiceChannel: c,
         textClassName: p,
         iconClassName: j,
         textSize: A = "xs",
@@ -243,7 +243,7 @@ function L(e) {
         O = (0, o.bG)([v.A], () => v.A.isBlockedOrIgnored(l?.id)),
         L = G?.state != null,
         z = null != C,
-        B = !z && null != d,
+        B = !z && null != c,
         Y = w.length + (z || B ? 1 : 0),
         H = Y > 1,
         Z = G?.state != null && "xs" === A;
@@ -273,9 +273,9 @@ function L(e) {
                   hideIcon: P,
                   hideTooltip: l,
               })
-            : null != d
+            : null != c
               ? (0, t.jsx)(F, {
-                    channel: d,
+                    channel: c,
                     textVariant: `body-${A}/medium`,
                     textClassName: p,
                     iconClassName: j,
@@ -298,7 +298,7 @@ function L(e) {
             let e, l;
             return y
                 ? (0, t.jsxs)("div", { className: i()(g.ht, Z && g.e7), children: [q(), W()] })
-                : (0, t.jsx)(c.m, {
+                : (0, t.jsx)(d.m, {
                       delay: 150,
                       __unsupportedReactNodeAsText:
                           ((e = []),
@@ -316,7 +316,7 @@ function L(e) {
                           w.forEach((n, s) => {
                               e.push((0, t.jsx)(_.A, { activity: n, ...l }, `activity-${s}`));
                           }),
-                          B && e.push((0, t.jsx)(F, { channel: d, ...l, showChannelName: !0 }, "voice")),
+                          B && e.push((0, t.jsx)(F, { channel: c, ...l, showChannelName: !0 }, "voice")),
                           e),
                       children: (0, t.jsxs)("div", { className: i()(g.ht, Z && g.e7), children: [q(!0), W()] }),
                   });

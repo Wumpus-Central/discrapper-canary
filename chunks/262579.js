@@ -18,7 +18,7 @@ n.d(
                 ...d,
                 isTrayButton: !1,
                 onClick: c,
-                iconComponent: a.P,
+                iconComponent: a.XSmallIcon,
                 label: o.intl.string(o.t.cpT0Cq),
             });
         },

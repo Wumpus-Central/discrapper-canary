@@ -11,29 +11,29 @@ var i,
     m = n(803842),
     p = n(652215);
 let h = { [p.IWg.MODAL_CAROUSEL_NEXT]: m.$0, [p.IWg.MODAL_CAROUSEL_PREV]: m.$4, [p.IWg.CLOSE_MODAL]: m.cu },
-    f = { [p.IWg.CLOSE_MODAL]: m.cu };
-var E = n(775121),
-    g = n(775602),
+    g = { [p.IWg.CLOSE_MODAL]: m.cu };
+var f = n(775121),
+    E = n(775602),
     x = n(188567),
     y = n(700331),
     A = n(454290),
     j = n(548411),
-    C = n(554830),
-    I = n(930125),
+    I = n(554830),
+    C = n(930125),
     N = n(338717),
     b = n(282108),
     v = n(302031),
     O = n(267102),
     T = n(452282),
-    S = n(967758),
-    _ = n(415097),
-    M = n(855986),
+    M = n(967758),
+    S = n(415097),
+    _ = n(855986),
     D = n(676737),
-    P = (((i = {}).DEFAULT = "DEFAULT"), (i.FOCUS_SENSITIVE = "FOCUS_SENSITIVE"), (i.PINNED = "PINNED"), i);
-let L = l.memo(function (e) {
+    L = (((i = {}).DEFAULT = "DEFAULT"), (i.FOCUS_SENSITIVE = "FOCUS_SENSITIVE"), (i.PINNED = "PINNED"), i);
+let P = l.memo(function (e) {
     let { children: t, mode: n = "DEFAULT" } = e,
         { zoomed: i } = (0, A.Q)(),
-        r = (0, M.bG)([g.Ay], () => g.Ay.keyboardModeEnabled);
+        r = (0, _.bG)([E.Ay], () => E.Ay.keyboardModeEnabled);
     return t(s()(D.E3, { [D.R]: i && !r && "PINNED" !== n, [D.rB]: "FOCUS_SENSITIVE" === n }));
 });
 var k = n(827045);
@@ -42,7 +42,7 @@ let R = l.memo(function (e) {
         a = t[n],
         o = t.length > 1,
         c = (0, O._o)(),
-        u = (0, S.A)(o, { width: a.width, height: a.height }, c),
+        u = (0, M.A)(o, { width: a.width, height: a.height }, c),
         [d, m] = l.useState(0);
     return (
         l.useEffect(() => {
@@ -55,11 +55,11 @@ let R = l.memo(function (e) {
             if (t.length > 1) {
                 let e = t[(0, T.U3)(n - 1, t.length)],
                     i = t[(0, T.U3)(n + 1, t.length)];
-                ((0, _.Z)(e, !0), t.length > 2 && (0, _.Z)(i, !0));
+                ((0, S.Z)(e, !0), t.length > 2 && (0, S.Z)(i, !0));
             }
         }, [n, t]),
-        (0, r.jsx)(L, {
-            mode: P.PINNED,
+        (0, r.jsx)(P, {
+            mode: L.PINNED,
             children: (e) =>
                 (0, r.jsx)("div", {
                     className: s()(k.k4, e),
@@ -75,10 +75,10 @@ let R = l.memo(function (e) {
 var w = n(331322),
     V = n(87221),
     U = n(516521),
-    F = n(939249),
-    G = n(607470),
+    G = n(939249),
+    W = n(607470),
     X = n(619517),
-    W = n(644447),
+    F = n(644447),
     z = n(541041),
     q = n(838541),
     H = n(792996),
@@ -89,7 +89,7 @@ function Z(e) {
 let K = l.memo(function (e) {
     let { item: t, enabledContentHarmTypeFlags: n = 0 } = e,
         i = (function (e) {
-            if ("IMAGE" === e.type) return (0, W.E)({ proxyURL: e.proxyUrl, url: e.url });
+            if ("IMAGE" === e.type) return (0, F.E)({ proxyURL: e.proxyUrl, url: e.url });
             if ("VIDEO" === e.type) {
                 if (null != e.poster) return e.poster;
                 if (null != e.proxyUrl) return (0, z.VZ)(e.proxyUrl);
@@ -97,7 +97,7 @@ let K = l.memo(function (e) {
             return null;
         })(t);
     return null == i && "VIDEO" === t.type
-        ? (0, r.jsx)(G.A, {
+        ? (0, r.jsx)(W.A, {
               src: `${t.url}#t=1`,
               preload: "metadata",
               muted: !0,
@@ -105,13 +105,13 @@ let K = l.memo(function (e) {
           })
         : null == i
           ? null
-          : (0, b.qo)({ type: I.D.GenericMedia, media: t }, n)
+          : (0, b.qo)({ type: C.D.GenericMedia, media: t }, n)
             ? (0, r.jsx)(w.B, {
                   align: "center",
                   justify: "center",
                   className: B.cd,
                   style: { width: 40, height: 40 },
-                  children: (0, r.jsx)(V.D, { size: "sm", color: "white" }),
+                  children: (0, r.jsx)(V.ImageWarningIcon, { size: "sm", color: "white" }),
               })
             : (0, r.jsx)(X.Ay, {
                   width: t.width ?? 40,
@@ -135,7 +135,7 @@ function Q(e) {
             let e = document.getElementById(Z(n));
             null != c.current &&
                 null != e &&
-                c.current.scrollIntoViewNode({ node: e, animate: !g.Ay.useReducedMotion, padding: 20 });
+                c.current.scrollIntoViewNode({ node: e, animate: !E.Ay.useReducedMotion, padding: 20 });
         }, [n]),
         (0, r.jsx)("div", {
             className: s()(B.IL, a),
@@ -148,7 +148,7 @@ function Q(e) {
                     let a = l === n,
                         c = a ? H.t["qv/U5V"] : H.t.zviMAG;
                     return (0, r.jsx)(
-                        F.D,
+                        G.D,
                         {
                             id: Z(l),
                             className: s()(B.Qq, { [B.AD]: !a, [B.$1]: 0 === l, [B.HV]: l === t.length - 1 }),
@@ -171,7 +171,7 @@ function $(e) {
     return (0, r.jsx)(J.m, {
         text: i,
         position: "bottom",
-        children: (0, r.jsx)(F.D, {
+        children: (0, r.jsx)(G.D, {
             onClick: (e) => {
                 t(e);
             },
@@ -217,7 +217,7 @@ function en(e) {
         [c, u] = l.useState(i),
         d = l.useRef(i),
         { zoomed: m, setZoomed: h } = (0, A.Q)(),
-        f = l.useCallback(
+        g = l.useCallback(
             (e) => {
                 var i;
                 (u((e = ((e % (i = t.length)) + i) % i)), (d.current = e), n?.(e), h(!1));
@@ -226,10 +226,10 @@ function en(e) {
         );
     l.useEffect(() => {
         function e() {
-            return f(d.current + 1);
+            return g(d.current + 1);
         }
         function t() {
-            return f(d.current - 1);
+            return g(d.current - 1);
         }
         return (
             x._.subscribe(p.jej.MODAL_CAROUSEL_NEXT, e),
@@ -238,9 +238,9 @@ function en(e) {
                 (x._.unsubscribe(p.jej.MODAL_CAROUSEL_NEXT, e), x._.unsubscribe(p.jej.MODAL_CAROUSEL_PREV, t));
             }
         );
-    }, [f, h]);
-    let E = t[c],
-        g = (0, b.qo)({ type: I.D.GenericMedia, media: E }, a),
+    }, [g, h]);
+    let f = t[c],
+        E = (0, b.qo)({ type: C.D.GenericMedia, media: f }, a),
         N = o
             ? (e) => {
                   (e.stopPropagation(), e.preventDefault());
@@ -249,7 +249,7 @@ function en(e) {
         v = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(L, {
+            (0, r.jsx)(P, {
                 children: (e) =>
                     v
                         ? (0, r.jsxs)(r.Fragment, {
@@ -258,7 +258,7 @@ function en(e) {
                                       onClick: (e) => {
                                           (e.stopPropagation(), x._.dispatch(p.jej.MODAL_CAROUSEL_PREV));
                                       },
-                                      icon: j.Z,
+                                      icon: j.ArrowLargeLeftIcon,
                                       tooltip: H.intl.string(H.t.vgfxaA),
                                       className: s()(ee.vi, e),
                                   }),
@@ -266,7 +266,7 @@ function en(e) {
                                       onClick: (e) => {
                                           (e.stopPropagation(), x._.dispatch(p.jej.MODAL_CAROUSEL_NEXT));
                                       },
-                                      icon: C.K,
+                                      icon: I.ArrowLargeRightIcon,
                                       tooltip: H.intl.string(H.t.XiOHRX),
                                       className: s()(ee.f8, e),
                                   }),
@@ -279,19 +279,19 @@ function en(e) {
                 currentIndex: c,
                 children: (e, t) =>
                     (0, r.jsx)(et, {
-                        isObscured: !m && g,
-                        src: E.url,
+                        isObscured: !m && E,
+                        src: f.url,
                         children: (n) =>
-                            (0, r.jsx)(z.Ay, { media: E, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: N }),
+                            (0, r.jsx)(z.Ay, { media: f, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: N }),
                     }),
             }),
             v &&
-                (0, r.jsx)(L, {
+                (0, r.jsx)(P, {
                     children: (e) =>
                         (0, r.jsx)(Q, {
                             items: t,
                             currentIndex: c,
-                            onGalleryItemClick: f,
+                            onGalleryItemClick: g,
                             className: e,
                             enabledContentHarmTypeFlags: a,
                         }),
@@ -311,35 +311,35 @@ var ei = n(778712),
     em = n(811091),
     ep = n(192308),
     eh = n(408278),
-    ef = n(92259),
-    eE = n(218429),
-    eg = n(292801),
+    eg = n(92259),
+    ef = n(218429),
+    eE = n(292801),
     ex = n(858899),
     ey = n(32880),
     eA = n(811893),
     ej = n(165862),
-    eC = n(477782),
-    eI = n(624479),
+    eI = n(477782),
+    eC = n(624479),
     eN = n(173936),
     eb = n(265872),
     ev = n(365199),
     eO = n(50268),
     eT = n(843626),
-    eS = n(294454),
-    e_ = n(803316),
-    eM = n(465856),
+    eM = n(294454),
+    eS = n(803316),
+    e_ = n(465856),
     eD = n(253932),
-    eP = n(957565),
-    eL = n(255438),
+    eL = n(957565),
+    eP = n(255438),
     ek = n(889558),
     eR = n(723702),
     ew = n(253400),
     eV = n(256905),
     eU = n(610365);
-function eF() {
+function eG() {
     (0, ep.Oo)(eV.K);
 }
-function eG(e) {
+function eW(e) {
     let { tooltipText: t, ...n } = e;
     return (0, r.jsx)(J.m, {
         text: t,
@@ -350,50 +350,50 @@ function eG(e) {
 }
 function eX() {
     let { zoomed: e, setZoomed: t } = (0, A.Q)();
-    return (0, r.jsx)(eG, {
+    return (0, r.jsx)(eW, {
         onClick: () => {
             (y.l.markActionPerformed(e ? y.N.ZOOM_OUT_BUTTON_PRESSED : y.N.ZOOM_IN_BUTTON_PRESSED), t(!e));
         },
         tooltipText: e ? H.intl.string(H.t.vOFof8) : H.intl.string(H.t.Kt4gZ6),
-        icon: e ? ef.V : eE.r,
+        icon: e ? eg.MagnifyingGlassMinusIcon : ef.MagnifyingGlassPlusIcon,
     });
 }
-function eW(e) {
+function eF(e) {
     let { item: t } = e,
         n = t.sourceMetadata?.message,
         i = t.sourceMetadata?.identifier,
         a = l.useCallback(() => {
             if (null != n && null != i) {
                 if ((y.l.markActionPerformed(y.N.FORWARD_PRESSED), "embed" === i.type))
-                    return void (0, eS.fO)({
+                    return void (0, eM.fO)({
                         message: n,
                         source: "media-viewer",
                         forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
-                        onRequestSent: eF,
+                        onRequestSent: eG,
                     });
-                (0, eS.fO)({
+                (0, eM.fO)({
                     message: n,
                     source: "media-viewer",
                     forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
-                    onRequestSent: eF,
+                    onRequestSent: eG,
                 });
             }
         }, [n, i]);
     return null != n && null != i && (0, eT.p)(n)
-        ? (0, r.jsx)(eG, { onClick: a, tooltipText: H.intl.string(H.t.I3ltXO), icon: eg.t })
+        ? (0, r.jsx)(eW, { onClick: a, tooltipText: H.intl.string(H.t.I3ltXO), icon: eE.ArrowAngleRightUpIcon })
         : null;
 }
 function ez(e) {
     let { item: t } = e,
         [n, i] = l.useState(!1),
-        a = (0, e_.bc)(t.original, t.url),
+        a = (0, eS.bc)(t.original, t.url),
         s = "VIDEO" === t.type,
         o = "IMAGE" === t.type,
         c = null != t.children,
-        u = (0, e_.e7)(a, t.contentType, t.originalContentType);
+        u = (0, eS.e7)(a, t.contentType, t.originalContentType);
     if (!(s || (eR.isPlatformEmbedded && !c && o && u))) return null;
-    let d = (0, e_.XW)(a, t.contentType, t.originalContentType, "png");
-    return (0, r.jsx)(eG, {
+    let d = (0, eS.XW)(a, t.contentType, t.originalContentType, "png");
+    return (0, r.jsx)(eW, {
         onClick: async function () {
             if (
                 (y.l.markActionPerformed(y.N.SAVE_MEDIA_PRESSED),
@@ -422,17 +422,17 @@ function ez(e) {
 }
 function eq(e) {
     let { item: t } = e,
-        n = (0, e_.bc)(t.original, t.url);
-    if (!(0, e_.fW)(n)) return null;
-    let i = (0, e_.XW)(n, t.contentType, t.originalContentType);
-    return (0, r.jsx)(eG, {
+        n = (0, eS.bc)(t.original, t.url);
+    if (!(0, eS.fW)(n)) return null;
+    let i = (0, eS.XW)(n, t.contentType, t.originalContentType);
+    return (0, r.jsx)(eW, {
         onClick: () => {
             (y.l.markActionPerformed(y.N.OPEN_LINK_PRESSED),
                 y.l.trackMediaViewerLinkOpened({ href: i }),
                 (0, ek.h)({ href: i }));
         },
         tooltipText: H.intl.string(H.t.q5jLJB),
-        icon: eA.t,
+        icon: eA.WindowLaunchIcon,
     });
 }
 function eH(e) {
@@ -445,10 +445,10 @@ function eH(e) {
                 s = eB(H.intl.string(H.t["3Nf9u2"]), "size"),
                 o = eB(H.intl.string(H.t.eOB2eR), "alt", { subtextLineClamp: 2 });
             if (n?.identifier?.type !== "attachment") return null;
-            let c = (0, eM.A)(n.identifier),
-                u = (0, eL.Xq)(n.identifier.size / 1e3);
+            let c = (0, e_.A)(n.identifier),
+                u = (0, eP.Xq)(n.identifier.size / 1e3);
             return (0, r.jsxs)(
-                eC.Dr,
+                eI.Dr,
                 {
                     id: "media-viewer-details",
                     label: H.intl.string(H.t.sqBLa9),
@@ -463,19 +463,19 @@ function eH(e) {
         })(t),
         d = (function (e) {
             let { item: t, canCopyImage: n, canCopyLink: i, src: l } = e;
-            return (0, r.jsxs)(eC.rX, {
+            return (0, r.jsxs)(eI.rX, {
                 children: [
                     n &&
                         (0, r.jsx)(
-                            eC.Dr,
+                            eI.Dr,
                             {
                                 label: H.intl.string(H.t.tvUqWn),
                                 id: "media-viewer-copy-image",
-                                icon: eI.CopyIcon,
-                                leadingAccessory: { type: "icon", icon: eI.CopyIcon },
+                                icon: eC.CopyIcon,
+                                leadingAccessory: { type: "icon", icon: eC.CopyIcon },
                                 action: async function () {
                                     y.l.markActionPerformed(y.N.COPY_IMAGE_PRESSED);
-                                    let e = (0, e_.XW)(l, t.contentType, t.originalContentType, "png");
+                                    let e = (0, eS.XW)(l, t.contentType, t.originalContentType, "png");
                                     try {
                                         (await ew.Ay.copyImage(e, t.originalContentType ?? t.contentType),
                                             y.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
@@ -490,7 +490,7 @@ function eH(e) {
                         ),
                     i &&
                         (0, r.jsx)(
-                            eC.Dr,
+                            eI.Dr,
                             {
                                 id: "media-viewer-copy-link",
                                 label: H.intl.string(H.t["92CPQ+"]),
@@ -498,8 +498,8 @@ function eH(e) {
                                 leadingAccessory: { type: "icon", icon: eN.LinkIcon },
                                 action: function () {
                                     y.l.markActionPerformed(y.N.COPY_LINK_PRESSED);
-                                    let e = (0, e_.XW)(l, t.contentType, t.originalContentType);
-                                    (0, eP.C)(
+                                    let e = (0, eS.XW)(l, t.contentType, t.originalContentType);
+                                    (0, eL.C)(
                                         e,
                                         () => {
                                             (y.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
@@ -528,9 +528,9 @@ function eH(e) {
 }
 function eB(e, t, n) {
     let i = l.useCallback((e) => {
-        (0, eP.C)(e, () => (0, ex.P0)({ text: H.intl.string(H.t.mGZ66D), variant: "success" }));
+        (0, eL.C)(e, () => (0, ex.P0)({ text: H.intl.string(H.t.mGZ66D), variant: "success" }));
     }, []);
-    return (l) => (null != l ? (0, r.jsx)(eC.Dr, { action: () => i(l), label: e, subtext: l, id: t, ...n }, t) : null);
+    return (l) => (null != l ? (0, r.jsx)(eI.Dr, { action: () => i(l), label: e, subtext: l, id: t, ...n }, t) : null);
 }
 function eZ(e) {
     let { item: t } = e,
@@ -540,10 +540,10 @@ function eZ(e) {
         o = "IMAGE" === t.type,
         c = null == t.children,
         u = !t.animated,
-        d = (0, e_.bc)(t.original, t.url),
-        m = (0, e_.PK)(d, t.contentType, t.originalContentType),
+        d = (0, eS.bc)(t.original, t.url),
+        m = (0, eS.PK)(d, t.contentType, t.originalContentType),
         p = o && c && u && m,
-        h = (0, e_.fW)(d);
+        h = (0, eS.fW)(d);
     return s || p || h || t.sourceMetadata?.identifier?.type === "attachment"
         ? (0, r.jsx)(eb.Y, {
               targetElementRef: n,
@@ -557,7 +557,7 @@ function eZ(e) {
                   (0, r.jsx)(eH, { item: t, canCopyImage: p, canCopyLink: h, onClose: () => a(!1), src: d }),
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(eG, {
+                  return (0, r.jsx)(eW, {
                       buttonRef: n,
                       tooltipText: H.intl.string(H.t["UKOtz+"]),
                       onClick: () => {
@@ -571,15 +571,15 @@ function eZ(e) {
 }
 let eK = l.memo(function (e) {
     let { item: t, hideMediaOptions: n } = e,
-        i = (0, M.bG)([g.Ay], () => g.Ay.keyboardModeEnabled),
+        i = (0, _.bG)([E.Ay], () => E.Ay.keyboardModeEnabled),
         a = l.useRef(null),
         o = l.useCallback(() => {
             !i && a.current?.contains(document.activeElement) && document.activeElement.blur();
         }, [i]);
     return (
         ("IMAGE" === t.type || !n) &&
-        (0, r.jsx)(L, {
-            mode: P.FOCUS_SENSITIVE,
+        (0, r.jsx)(P, {
+            mode: L.FOCUS_SENSITIVE,
             children: (e) =>
                 (0, r.jsxs)("div", {
                     ref: a,
@@ -591,7 +591,7 @@ let eK = l.memo(function (e) {
                         !n &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)(eW, { item: t }),
+                                    (0, r.jsx)(eF, { item: t }),
                                     (0, r.jsx)(ez, { item: t }),
                                     (0, r.jsx)(eq, { item: t }),
                                     (0, r.jsx)(eZ, { item: t }),
@@ -605,10 +605,10 @@ let eK = l.memo(function (e) {
 var eQ = n(125256);
 let eJ = l.memo(function (e) {
     let { message: t } = e,
-        n = (0, M.bG)([ed.A], () => ed.A.getChannel(t.channel_id));
+        n = (0, _.bG)([ed.A], () => ed.A.getChannel(t.channel_id));
     if (null == n) return null;
     let i = (0, es.A)(t) ? new Date(em.default.extractTimestamp(t.id)) : t.timestamp;
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(P, {
         children: (e) =>
             (0, r.jsxs)(eo.A.Provider, {
                 value: n.guild_id,
@@ -638,12 +638,12 @@ function eY(e) {
         children: [
             null != l && (0, r.jsx)(eJ, { message: l }),
             (0, r.jsx)(eK, { item: t, hideMediaOptions: n }),
-            (0, r.jsx)(L, {
-                mode: P.PINNED,
+            (0, r.jsx)(P, {
+                mode: L.PINNED,
                 children: (e) =>
                     (0, r.jsx)($, {
                         onClick: i,
-                        icon: el.P,
+                        icon: el.XSmallIcon,
                         tooltip: H.intl.string(H.t.cpT0Cq),
                         className: s()(eQ.b, e),
                     }),
@@ -654,7 +654,7 @@ function eY(e) {
 var e$ = n(700535);
 function e0(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    !0 === n || g.Ay.useReducedMotion ? e.set(t) : e.start(t);
+    !0 === n || E.Ay.useReducedMotion ? e.set(t) : e.start(t);
 }
 function e1(e) {
     let {
@@ -664,18 +664,18 @@ function e1(e) {
             startingIndex: a,
             enabledContentHarmTypeFlags: m,
             shouldHideMediaOptions: j = !1,
-            transitionState: C,
-            ...I
+            transitionState: I,
+            ...C
         } = e,
         [N, b] = l.useState(a ?? 0),
         [v, O] = l.useState(!1),
-        [T, S] = (0, c.z)(() => ({
-            scale: g.Ay.useReducedMotion ? 1 : 0.9,
+        [T, M] = (0, c.z)(() => ({
+            scale: E.Ay.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
             config: { friction: 30, tension: 300 },
         })),
-        _ = l.useRef(null);
+        S = l.useRef(null);
     l.useEffect(() => {
         if (null != t)
             return (
@@ -685,43 +685,43 @@ function e1(e) {
                 }
             );
     }, [t]);
-    let M = l.useRef(null);
+    let _ = l.useRef(null);
     (l.useEffect(() => {
-        if (C !== M.current)
-            switch (((M.current = C), C)) {
+        if (I !== _.current)
+            switch (((_.current = I), I)) {
                 case u.ip.ENTERING:
                     e0(T.scale, 1);
                     break;
                 case u.ip.EXITING:
-                    g.Ay.useReducedMotion || (e0(T.x, 0), e0(T.y, 0), e0(T.scale, 0.9));
+                    E.Ay.useReducedMotion || (e0(T.x, 0), e0(T.y, 0), e0(T.scale, 0.9));
             }
-    }, [C, T]),
-        C === u.ip.HIDDEN && v && (O(!1), T.x.set(0), T.y.set(0), T.scale.set(1)),
+    }, [I, T]),
+        I === u.ip.HIDDEN && v && (O(!1), T.x.set(0), T.y.set(0), T.scale.set(1)),
         l.useEffect(() => {
             function e() {
-                (E.A.disable(), C === u.ip.ENTERED ? E.A.enableTemp(h) : E.A.enableTemp(f));
+                (f.A.disable(), I === u.ip.ENTERED ? f.A.enableTemp(h) : f.A.enableTemp(g));
             }
             function t() {
-                E.A.disableTemp();
+                f.A.disableTemp();
             }
-            (C === u.ip.ENTERED && (E.A.disable(), E.A.enableTemp(h)),
-                C === u.ip.HIDDEN && (E.A.disable(), E.A.enableTemp(f)));
-            let n = _.current?.ownerDocument?.defaultView;
+            (I === u.ip.ENTERED && (f.A.disable(), f.A.enableTemp(h)),
+                I === u.ip.HIDDEN && (f.A.disable(), f.A.enableTemp(g)));
+            let n = S.current?.ownerDocument?.defaultView;
             return (
                 n?.addEventListener("focus", e),
                 n?.addEventListener("blur", t),
                 () => {
-                    (n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), E.A.disableTemp());
+                    (n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), f.A.disableTemp());
                 }
             );
-        }, [C]));
+        }, [I]));
     let D = l.useCallback(
             (e) => {
                 (b(e), n?.(e), y.l.markActionPerformed(y.N.SELECTED_ITEM_CHANGE));
             },
             [n],
         ),
-        P = l.useMemo(
+        L = l.useMemo(
             () => ({
                 scale: T.scale,
                 x: T.x,
@@ -746,8 +746,8 @@ function e1(e) {
                 "data-migration-pending": !0,
                 hideShadow: !0,
                 className: s()(e$.O, e),
-                transitionState: C,
-                ...I,
+                transitionState: I,
+                ...C,
                 size: o.rI.DYNAMIC,
                 animation: o.WM.SUBTLE,
                 fullscreenOnMobile: !1,
@@ -755,10 +755,10 @@ function e1(e) {
                 "aria-label": H.intl.string(H.t.AMTX3j),
                 parentComponent: "MediaViewerModal",
                 children: (0, r.jsxs)(A.f.Provider, {
-                    value: P,
+                    value: L,
                     children: [
                         (0, r.jsx)(eY, { item: i[N], hideMediaOptions: j, onClose: t }),
-                        (0, r.jsx)("div", { style: { display: "none" }, ref: _ }),
+                        (0, r.jsx)("div", { style: { display: "none" }, ref: S }),
                         (0, r.jsx)(en, {
                             items: i,
                             startIndex: N,

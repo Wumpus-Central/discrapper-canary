@@ -1,34 +1,34 @@
-var n,
-    a = l(477900);
-l(582128);
-var i = l(503698),
-    r = l.n(i),
-    s = l(607399),
-    o = l(939249),
-    c = l(285796),
-    d = l(789645),
-    h = l(834730),
-    u = l(792996),
-    T = l(563744),
-    E = (((n = E || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
+var t,
+    r = n(477900);
+n(582128);
+var i = n(503698),
+    o = n.n(i),
+    a = n(607399),
+    s = n(939249),
+    u = n(285796),
+    d = n(789645),
+    c = n(834730),
+    T = n(792996),
+    E = n(563744),
+    I = (((t = I || {}).DEFAULT = ""), (t.BOLD = "Bold"), (t.SOLID = "Solid"), t);
 function N(e) {
-    let { closeAction: t, variant: l = "", keybind: n, className: i } = e;
-    return (0, a.jsxs)("div", {
-        className: r()(T.kL, i),
+    let { closeAction: l, variant: n = "", keybind: t, className: i } = e;
+    return (0, r.jsxs)("div", {
+        className: o()(E.kL, i),
         children: [
-            (0, a.jsx)(o.D, {
-                className: r()(T.b, { [T.EH]: "Bold" === l, [T.O3]: "Solid" === l }),
-                onClick: t,
-                "aria-label": u.intl.string(u.t.cpT0Cq),
+            (0, r.jsx)(s.D, {
+                className: o()(E.b, { [E.EH]: "Bold" === n, [E.O3]: "Solid" === n }),
+                onClick: l,
+                "aria-label": T.intl.string(T.t.cpT0Cq),
                 children:
-                    "Solid" === l
-                        ? (0, a.jsx)(c.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, a.jsx)(d.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === n
+                        ? (0, r.jsx)(u.CircleXIcon, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, r.jsx)(d.XSmallIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
-            s.Fr
+            a.Fr
                 ? null
-                : (0, a.jsx)(h.E, { variant: "body-xs/semibold", className: T.P, "aria-hidden": !0, children: n }),
+                : (0, r.jsx)(c.E, { variant: "body-xs/semibold", className: E.P, "aria-hidden": !0, children: t }),
         ],
     });
 }
-((N.Variants = E), l.d(t, {}, { A: N }));
+((N.Variants = I), n.d(l, {}, { A: N }));

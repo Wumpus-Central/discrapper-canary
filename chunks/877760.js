@@ -1,4 +1,4 @@
-n.d(t, { default: () => I });
+n.d(t, { default: () => G });
 var l,
     i = n(477900),
     a = n(582128),
@@ -25,12 +25,12 @@ var l,
 var C = n(309199),
     E = n(734057),
     P = n(218461),
-    O = n(811091),
-    w = (((l = {}).NEWEST = "newest"), (l.OLDEST = "oldest"), l);
-function A(e, t) {
+    w = n(811091),
+    A = (((l = {}).NEWEST = "newest"), (l.OLDEST = "oldest"), l);
+function D(e, t) {
     return e.toSorted((e, n) => ("newest" === t ? n.lastActivity - e.lastActivity : e.lastActivity - n.lastActivity));
 }
-var D = n(987899),
+var O = n(987899),
     M = n(792996),
     z = n(443648);
 function N(e) {
@@ -39,7 +39,7 @@ function N(e) {
         className: z.k,
         children: (0, i.jsx)(T.W, {
             navId: "clean-up-gdms-sort",
-            "aria-label": M.intl.string(D.default.yySzqH),
+            "aria-label": M.intl.string(O.default.yySzqH),
             hideScroller: !0,
             onClose: l,
             onSelect: l,
@@ -48,19 +48,19 @@ function N(e) {
                     (0, i.jsx)(k.iD, {
                         id: "clean-up-gdms-sort-newest",
                         group: "clean-up-gdms-sort",
-                        label: M.intl.string(D.default.VHmOpK),
-                        checked: t === w.NEWEST,
+                        label: M.intl.string(O.default.VHmOpK),
+                        checked: t === A.NEWEST,
                         action: () => {
-                            (n(w.NEWEST), l());
+                            (n(A.NEWEST), l());
                         },
                     }),
                     (0, i.jsx)(k.iD, {
                         id: "clean-up-gdms-sort-oldest",
                         group: "clean-up-gdms-sort",
-                        label: M.intl.string(D.default.NLTGck),
-                        checked: t === w.OLDEST,
+                        label: M.intl.string(O.default.NLTGck),
+                        checked: t === A.OLDEST,
                         action: () => {
-                            (n(w.OLDEST), l());
+                            (n(A.OLDEST), l());
                         },
                     }),
                 ],
@@ -69,8 +69,8 @@ function N(e) {
     });
 }
 var H = n(373207);
-let G = { height: 480 };
-function I(e) {
+let I = { height: 480 };
+function G(e) {
     let { transitionState: t, onClose: n } = e,
         [l] = a.useState(() =>
             (function () {
@@ -89,32 +89,32 @@ function I(e) {
                             let n = P.Ay.lastMessageTimestamp(e);
                             if (n > 0) return n;
                             let l = P.Ay.lastMessageId(e) ?? t ?? e;
-                            return O.default.extractTimestamp(l);
+                            return w.default.extractTimestamp(l);
                         })(e.id, e.lastMessageId);
                         return n < t ? n : null;
                     })(e, n);
                     null != t && l.push({ channel: e, lastActivity: t });
                 }
-                return A(l, "oldest").slice(0, e);
+                return D(l, "oldest").slice(0, e);
             })(),
         ),
-        [g, h] = a.useState(w.OLDEST),
+        [g, h] = a.useState(A.OLDEST),
         [f, m] = a.useState(() => new Set(l.slice(0, 1e3).map((e) => e.channel.id))),
         [p, x] = a.useState(!1),
-        v = a.useMemo(() => A(l, g), [l, g]),
+        v = a.useMemo(() => D(l, g), [l, g]),
         j = 0 === l.length,
         y = f.size,
         T = Math.min(l.length, 1e3),
         k = l.length <= 1e3,
         z = T > 0 && y >= T,
         N = y >= 1e3,
-        I = a.useCallback(
+        G = a.useCallback(
             (e, t) => {
                 let n = !f.has(e);
                 (n && f.size >= 1e3) ||
                     (null != t &&
                         o.O.announce(
-                            M.intl.formatToPlainString(n ? D.default["SsUZo/"] : D.default.x03WqE, {
+                            M.intl.formatToPlainString(n ? O.default["SsUZo/"] : O.default.x03WqE, {
                                 name: t,
                                 count: n ? y + 1 : y - 1,
                             }),
@@ -131,7 +131,7 @@ function I(e) {
             let e = y >= T,
                 t = e ? 0 : T;
             (o.O.announce(
-                e ? M.intl.string(D.default.hhQnsH) : M.intl.formatToPlainString(D.default.GpUOWb, { count: t }),
+                e ? M.intl.string(O.default.hhQnsH) : M.intl.formatToPlainString(O.default.GpUOWb, { count: t }),
                 "polite",
             ),
                 m((e) => (e.size >= T ? new Set() : new Set(v.slice(0, 1e3).map((e) => e.channel.id)))));
@@ -142,19 +142,19 @@ function I(e) {
                     await S.A.bulkLeaveGroupDMs(e);
                 } catch (t) {
                     let e;
-                    if ((x(!1), t?.status === 409)) e = M.intl.string(D.default.ojlzko);
+                    if ((x(!1), t?.status === 409)) e = M.intl.string(O.default.ojlzko);
                     else if (t?.status === 429) {
                         let n = t.body?.retry_after;
                         e =
                             "number" == typeof n && Number.isFinite(n) && n > 0
-                                ? M.intl.formatToPlainString(D.default.SHTZTm, { seconds: Math.ceil(n) })
-                                : M.intl.string(D.default.f5Xg0V);
-                    } else e = M.intl.string(D.default["+HM0x2"]);
+                                ? M.intl.formatToPlainString(O.default.SHTZTm, { seconds: Math.ceil(n) })
+                                : M.intl.string(O.default.f5Xg0V);
+                    } else e = M.intl.string(O.default["+HM0x2"]);
                     (0, d.P0)({ text: e, variant: "critical" });
                     return;
                 }
                 ((0, d.P0)({
-                    text: M.intl.formatToPlainString(D.default.b2r81u, { count: e.length }),
+                    text: M.intl.formatToPlainString(O.default.b2r81u, { count: e.length }),
                     variant: "success",
                 }),
                     n().catch(() => {}));
@@ -165,17 +165,17 @@ function I(e) {
             let e = Array.from(f);
             0 !== e.length && (x(!0), B(e));
         }, [f, B]),
-        K = 0 === y ? M.intl.string(D.default.YBjUwi) : M.intl.formatToPlainString(D.default.SakG2D, { count: y }),
-        q = (0, u.W)(16),
-        U = a.useRef(null),
-        V = (0, b.A)("clean-up-inactive-gdms-modal", U),
+        K = 0 === y ? M.intl.string(O.default.YBjUwi) : M.intl.formatToPlainString(O.default.SakG2D, { count: y }),
+        U = (0, u.W)(16),
+        q = a.useRef(null),
+        V = (0, b.A)("clean-up-inactive-gdms-modal", q),
         Y = a.useMemo(
             () => ({
                 sections: [v.length],
                 sectionHeight: 0,
                 rowHeight: 48,
-                paddingBottom: q,
-                style: G,
+                paddingBottom: U,
+                style: I,
                 renderRow: (e) => {
                     let { row: t } = e,
                         n = v[t];
@@ -187,7 +187,7 @@ function I(e) {
                             gdm: n,
                             selected: l,
                             disabled: N && !l,
-                            onToggle: I,
+                            onToggle: G,
                             ariaSetSize: v.length,
                             ariaPosInSet: t + 1,
                         },
@@ -195,7 +195,7 @@ function I(e) {
                     );
                 },
             }),
-            [v, f, N, I, q],
+            [v, f, N, G, U],
         );
     return (0, i.jsx)(r.hD, {
         navigator: V,
@@ -205,8 +205,8 @@ function I(e) {
                 return (0, i.jsx)(s.a, {
                     transitionState: t,
                     onClose: n,
-                    title: M.intl.string(D.default.FrCK4r),
-                    subtitle: M.intl.string(D.default["2Cgdhl"]),
+                    title: M.intl.string(O.default.FrCK4r),
+                    subtitle: M.intl.string(O.default["2Cgdhl"]),
                     input: j
                         ? void 0
                         : (0, i.jsxs)("div", {
@@ -218,10 +218,10 @@ function I(e) {
                                       textVariant: "body-sm/medium",
                                       onClick: _,
                                       text: z
-                                          ? M.intl.string(D.default.jxi9GF)
+                                          ? M.intl.string(O.default.jxi9GF)
                                           : k
-                                            ? M.intl.string(D.default.mKxGpP)
-                                            : M.intl.formatToPlainString(D.default["9oRyjg"], { count: 1e3 }),
+                                            ? M.intl.string(O.default.mKxGpP)
+                                            : M.intl.formatToPlainString(O.default["9oRyjg"], { count: 1e3 }),
                                   }),
                               ],
                           }),
@@ -232,7 +232,7 @@ function I(e) {
                               ...a,
                               innerRole: void 0,
                               ref: (e) => {
-                                  ((U.current = e), (l.current = e?.getScrollerNode() ?? null));
+                                  ((q.current = e), (l.current = e?.getScrollerNode() ?? null));
                               },
                           },
                     actions: j
@@ -255,13 +255,13 @@ function I(e) {
 function L() {
     return (0, i.jsxs)("div", {
         className: H.p$,
-        style: G,
+        style: I,
         children: [
-            (0, i.jsx)(g.E, { variant: "body-md/medium", children: M.intl.string(D.default.s8TEkh) }),
+            (0, i.jsx)(g.E, { variant: "body-md/medium", children: M.intl.string(O.default.s8TEkh) }),
             (0, i.jsx)(g.E, {
                 variant: "body-sm/medium",
                 color: "text-muted",
-                children: M.intl.string(D.default["Y//IPC"]),
+                children: M.intl.string(O.default["Y//IPC"]),
             }),
         ],
     });
@@ -284,15 +284,15 @@ function R(e) {
                 innerRef: l,
                 className: H.$O,
                 onClick: n,
-                "aria-label": M.intl.string(D.default.yySzqH),
+                "aria-label": M.intl.string(O.default.yySzqH),
                 "aria-expanded": a,
                 children: [
                     (0, i.jsx)(g.E, {
                         variant: "body-sm/medium",
                         color: "currentColor",
-                        children: M.intl.string(D.default["FLgBG/"]),
+                        children: M.intl.string(O.default["FLgBG/"]),
                     }),
-                    (0, i.jsx)(m.J, { size: "xxs", color: "currentColor" }),
+                    (0, i.jsx)(m.ArrowsUpDownIcon, { size: "xxs", color: "currentColor" }),
                 ],
             });
         },

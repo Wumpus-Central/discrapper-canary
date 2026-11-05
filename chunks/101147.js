@@ -1,12 +1,12 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => I });
 var l = n(477900),
     a = n(582128),
-    s = n(503698),
-    r = n.n(s),
+    r = n(503698),
+    s = n.n(r),
     i = n(834730),
     u = n(847374),
-    d = n(320448),
-    o = n(939249),
+    o = n(320448),
+    d = n(939249),
     c = n(866665),
     m = n(738188),
     f = n(256905),
@@ -21,64 +21,64 @@ var l = n(477900),
     v = n(427262),
     y = n(191850),
     w = n(792996),
-    N = n(59678);
-function S(e) {
+    S = n(59678);
+function N(e) {
     let { userId: t } = e,
         n = (0, g.bG)([b.default], () => b.default.getUser(t), [t]),
         a = (0, v.tx)(n);
     if (null == n || null == a) return null;
-    let s = w.intl.formatToPlainString(y.default["664n2O"], { name: a });
+    let r = w.intl.formatToPlainString(y.default["664n2O"], { name: a });
     return (0, l.jsx)(c.m, {
-        text: s,
+        text: r,
         ariaHidden: !0,
         children: (0, l.jsx)("span", {
-            className: N.jz,
+            className: S.jz,
             role: "img",
-            "aria-label": s,
+            "aria-label": r,
             children: (0, l.jsx)(j.A, { user: n, size: _._3.SIZE_16, "aria-hidden": !0 }),
         }),
     });
 }
-var A = n(60160),
-    C = n(162052);
-function E(e) {
-    let { projectId: t, node: n, presentation: s = "row", active: f = !1 } = e,
+var C = n(60160),
+    A = n(162052);
+function I(e) {
+    let { projectId: t, node: n, presentation: r = "row", active: f = !1 } = e,
         [h, k] = a.useState(!1),
         g = a.useId(),
         _ = a.useCallback(() => k((e) => !e), []),
         j = (0, x.WQ)(n),
         b = n.detail,
-        v = "failed" === n.status ? "text-feedback-critical" : "detail" === s ? "text-muted" : "text-default",
-        E = "text-muted" === v,
-        I = f && E ? "none" : h && E ? "currentColor" : v,
-        $ = r()(N.iq, { [C.Hz]: f && E }),
-        M = "detail" === s ? "body-md/normal" : "body-sm/normal",
-        K = "detail" === s ? "body-sm/normal" : "body-xs/normal",
+        v = "failed" === n.status ? "text-feedback-critical" : "detail" === r ? "text-muted" : "text-default",
+        I = "text-muted" === v,
+        E = f && I ? "none" : h && I ? "currentColor" : v,
+        $ = s()(S.iq, { [A.Hz]: f && I }),
+        M = "detail" === r ? "body-md/normal" : "body-sm/normal",
+        K = "detail" === r ? "body-sm/normal" : "body-xs/normal",
         B = null != t ? n.screenshots : [],
-        W = null != t ? n.attachments : [];
-    if (0 === b.length && 0 === B.length && 0 === W.length)
+        D = null != t ? n.attachments : [];
+    if (0 === b.length && 0 === B.length && 0 === D.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
             "data-conjure-entrance": !0,
-            className: N.Dx,
+            className: S.Dx,
             children: (0, l.jsx)(i.E, {
                 tag: "div",
                 variant: M,
-                color: I,
+                color: E,
                 selectable: !0,
                 className: $,
-                children: (0, l.jsx)(A.A, { text: j, variant: M, prose: !0 }),
+                children: (0, l.jsx)(C.A, { text: j, variant: M, prose: !0 }),
             }),
         });
-    let z = h ? u.a : d._;
+    let W = h ? u.ChevronSmallDownIcon : o.ChevronSmallRightIcon;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
         "data-conjure-entrance": !0,
-        className: N.Dx,
+        className: S.Dx,
         children: [
-            (0, l.jsxs)(o.D, {
+            (0, l.jsxs)(d.D, {
                 tag: "div",
-                className: N.kG,
+                className: S.kG,
                 "aria-expanded": h,
                 "aria-controls": g,
                 "aria-label": w.intl.formatToPlainString(y.default["KE1KI+"], { step: j }),
@@ -87,44 +87,44 @@ function E(e) {
                     (0, l.jsx)(i.E, {
                         tag: "span",
                         variant: M,
-                        color: I,
+                        color: E,
                         className: $,
-                        children: (0, l.jsx)(A.A, { text: j, variant: M, prose: !0 }),
+                        children: (0, l.jsx)(C.A, { text: j, variant: M, prose: !0 }),
                     }),
-                    (0, l.jsx)(z, { size: "xs", color: "currentColor", className: N.Ue }),
+                    (0, l.jsx)(W, { size: "xs", color: "currentColor", className: S.Ue }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 id: g,
                 hidden: !h,
                 "data-conjure-entrance": !0,
-                className: N.yJ,
+                className: S.yJ,
                 children: [
                     b.map((e, t) => {
                         let a = n.detailDrivenBy[t],
-                            s = n.detailError[t] ?? null;
+                            r = n.detailError[t] ?? null;
                         return (0, l.jsxs)(
                             "div",
                             {
-                                className: N.l6,
+                                className: S.l6,
                                 children: [
                                     (0, l.jsx)(i.E, {
                                         tag: "div",
                                         variant: K,
-                                        color: f && E ? "none" : "text-muted",
+                                        color: f && I ? "none" : "text-muted",
                                         selectable: !0,
-                                        className: r()({ [C.Hz]: f && E }),
-                                        children: (0, l.jsx)(A.A, { text: e, variant: K }),
+                                        className: s()({ [A.Hz]: f && I }),
+                                        children: (0, l.jsx)(C.A, { text: e, variant: K }),
                                     }),
-                                    null != a ? (0, l.jsx)(S, { userId: a }) : null,
-                                    null != s
+                                    null != a ? (0, l.jsx)(N, { userId: a }) : null,
+                                    null != r
                                         ? (0, l.jsx)(c.m, {
-                                              text: s,
+                                              text: r,
                                               ariaHidden: !0,
                                               children: (0, l.jsx)("span", {
-                                                  className: N.n9,
+                                                  className: S.n9,
                                                   role: "img",
-                                                  "aria-label": s,
+                                                  "aria-label": r,
                                                   children: (0, l.jsx)(m.WarningIcon, {
                                                       size: "xs",
                                                       color: "currentColor",
@@ -139,27 +139,27 @@ function E(e) {
                     }),
                     null != t && B.length > 0
                         ? (0, l.jsx)("div", {
-                              className: N.y8,
+                              className: S.y8,
                               children: B.map((e) => (0, l.jsx)(T, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
-                    null != t && W.length > 0 ? (0, l.jsx)(p.A, { projectId: t, attachments: W }) : null,
+                    null != t && D.length > 0 ? (0, l.jsx)(p.A, { projectId: t, attachments: D }) : null,
                 ],
             }),
         ],
     });
 }
-function I() {}
+function E() {}
 function T(e) {
     let { projectId: t, screenshotId: n } = e,
-        [s, r] = a.useState(null),
+        [r, s] = a.useState(null),
         [i, u] = a.useState(!1);
     a.useEffect(() => {
         let e = !1;
         return (
             (0, k.aF)(t, n).then(
                 (t) => {
-                    e || r(t);
+                    e || s(t);
                 },
                 () => {
                     e || u(!0);
@@ -170,16 +170,16 @@ function T(e) {
             }
         );
     }, [t, n]);
-    let d = w.intl.string(y.default["5kjnI/"]),
-        o = a.useCallback(() => {
+    let o = w.intl.string(y.default["5kjnI/"]),
+        d = a.useCallback(() => {
             (0, k.aF)(t, n).then((e) => {
                 (0, f.R)({
-                    items: [{ type: "IMAGE", url: e, alt: d }],
+                    items: [{ type: "IMAGE", url: e, alt: o }],
                     startingIndex: 0,
                     shouldHideMediaOptions: !0,
                     location: "ConjureChat",
                 });
-            }, I);
-        }, [t, n, d]);
-    return i ? null : (0, l.jsx)(h.n, { name: d, thumbSrc: s, ariaLabel: d, onClick: o, onThumbError: () => u(!0) });
+            }, E);
+        }, [t, n, o]);
+    return i ? null : (0, l.jsx)(h.n, { name: o, thumbSrc: r, ariaLabel: o, onClick: d, onThumbError: () => u(!0) });
 }

@@ -21,13 +21,13 @@ var n = t(477900),
     y = t(713517),
     E = t(71393),
     N = t(576705),
-    b = t(129230),
-    C = t(778768),
+    C = t(129230),
+    b = t(778768),
     j = t(652215);
 t(281405);
 var T = t(792996),
-    O = t(811041),
-    G = t(254849);
+    G = t(811041),
+    O = t(254849);
 function V(e) {
     return 1 - Math.pow(1 - e, 4);
 }
@@ -39,8 +39,8 @@ t.d(
             let { channel: i, onClose: s } = e,
                 P = l.useRef(null),
                 w = l.useRef(null),
-                [k, R] = l.useState(!1),
-                [U, M] = l.useState(0),
+                [k, U] = l.useState(!1),
+                [R, M] = l.useState(0),
                 { analyticsLocations: D } = (0, _.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
             (0, x.A)({
                 name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
@@ -53,20 +53,20 @@ t.d(
                 [B, K] = l.useState(!1),
                 Y = l.useRef(null),
                 q = (0, y.M)(L ? P : Y),
-                [$, H] = l.useState(!1),
+                [H, $] = l.useState(!1),
                 { isFocusing: W } = (0, y.A)(w),
                 [Z, J] = l.useState(!1),
-                X = q || $ || Z,
+                X = q || H || Z,
                 Q = l.useCallback(
                     function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                        (b.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                        (C.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                             reason: e,
                             channel_id: i.id,
                             guild_id: i.guild_id,
                             location_stack: D,
                         }),
-                            R(!1),
+                            U(!1),
                             s?.());
                     },
                     [i.id, i.guild_id, s, D],
@@ -99,9 +99,9 @@ t.d(
                     [et, Q],
                 );
             l.useEffect(() => {
-                if (X) return void R(!0);
+                if (X) return void U(!0);
                 let e = setTimeout(() => {
-                    R(!1);
+                    U(!1);
                 }, 150);
                 return () => {
                     clearTimeout(e);
@@ -125,10 +125,10 @@ t.d(
                 );
             }, [X, z, en]);
             let es = l.useCallback(() => {
-                    R(!0);
+                    U(!0);
                 }, []),
                 ea = l.useCallback(() => {
-                    (R(!1), H(!1), Z && (J(!1), P.current?.focus()));
+                    (U(!1), $(!1), Z && (J(!1), P.current?.focus()));
                 }, [Z]);
             return L
                 ? (0, n.jsx)(A.Y, {
@@ -138,17 +138,17 @@ t.d(
                       align: "top",
                       spacing: 17,
                       popoutKey: "voice-invite-suggestions-button",
-                      renderPopout: (e) => (0, n.jsx)(C.w, { channel: i, onHover: H, forceOpen: Z, ...e }),
+                      renderPopout: (e) => (0, n.jsx)(b.w, { channel: i, onHover: $, forceOpen: Z, ...e }),
                       onRequestOpen: es,
                       onRequestClose: ea,
                       children: (e) => {
                           let { onClick: i, ...t } = e;
                           return (0, n.jsx)(r.animated.div, {
-                              className: O.lY,
+                              className: G.lY,
                               style: ei,
                               children: (0, n.jsx)(m.D, {
                                   innerRef: P,
-                                  className: a()({ [O.vk]: !B }, G.q7, G.L9, G.vk),
+                                  className: a()({ [G.vk]: !B }, O.q7, O.L9, O.vk),
                                   focusProps: { offset: { right: 4 } },
                                   "aria-disabled": B,
                                   "aria-label": T.intl.string(T.t.F3qiJr),
@@ -156,10 +156,10 @@ t.d(
                                   ignoreKeyPress: W,
                                   ...t,
                                   children: (0, n.jsxs)("div", {
-                                      className: a()(O.Qs, G.Qs),
+                                      className: a()(G.Qs, O.Qs),
                                       children: [
                                           (0, n.jsxs)("div", {
-                                              className: O.R4,
+                                              className: G.R4,
                                               style: { "--custom-voice-invite-suggestions-timer-size": 24 },
                                               children: [
                                                   z
@@ -167,24 +167,24 @@ t.d(
                                                       : (0, n.jsxs)(
                                                             "svg",
                                                             {
-                                                                className: a()(O.O1, { [O.Ft]: X }),
+                                                                className: a()(G.O1, { [G.Ft]: X }),
                                                                 viewBox: "0 0 24 24",
                                                                 style: {
                                                                     "--custom-voice-invite-suggestions-timer-duration": 1e4,
                                                                 },
                                                                 children: [
-                                                                    (0, n.jsx)("circle", { className: O.qB }),
-                                                                    (0, n.jsx)("circle", { className: O.hN }),
+                                                                    (0, n.jsx)("circle", { className: G.qB }),
+                                                                    (0, n.jsx)("circle", { className: G.hN }),
                                                                 ],
                                                             },
-                                                            `voice-invite-suggestions-timer-${U}`,
+                                                            `voice-invite-suggestions-timer-${R}`,
                                                         ),
-                                                  (0, n.jsx)(g.R, {
+                                                  (0, n.jsx)(g.UserPlusIcon, {
                                                       size: "custom",
                                                       width: 14,
                                                       height: 14,
                                                       color: "currentColor",
-                                                      className: a()(O.Hk, O.Kk),
+                                                      className: a()(G.Hk, G.Kk),
                                                   }),
                                               ],
                                           }),
@@ -193,7 +193,7 @@ t.d(
                                               overflowOnly: !0,
                                               children: (0, n.jsx)(f.E, {
                                                   variant: "body-sm/medium",
-                                                  className: O.Pf,
+                                                  className: G.Pf,
                                                   lineClamp: 1,
                                                   children: T.intl.string(T.t["EE+P0H"]),
                                               }),
@@ -202,25 +202,25 @@ t.d(
                                               ref: w,
                                               children: q
                                                   ? (0, n.jsx)(m.D, {
-                                                        className: O.VN,
+                                                        className: G.VN,
                                                         onClick: (e) => {
                                                             (e.stopPropagation(), en("user_explicit"));
                                                         },
                                                         "aria-label": T.intl.string(T.t.cpT0Cq),
-                                                        children: (0, n.jsx)(p.P, {
+                                                        children: (0, n.jsx)(p.XSmallIcon, {
                                                             size: "xs",
                                                             color: "currentColor",
-                                                            className: O.Kk,
+                                                            className: G.Kk,
                                                         }),
                                                     })
                                                   : (0, n.jsx)(m.D, {
                                                         onClick: (e) => {
                                                             (e.stopPropagation(), J(!0));
                                                         },
-                                                        children: (0, n.jsx)(I._, {
+                                                        children: (0, n.jsx)(I.ChevronSmallRightIcon, {
                                                             size: "xs",
                                                             color: "currentColor",
-                                                            className: O.Kk,
+                                                            className: G.Kk,
                                                         }),
                                                     }),
                                           }),

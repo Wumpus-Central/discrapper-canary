@@ -350,7 +350,7 @@ function ig(i) {
                     className: ij.EP,
                     onClick: o,
                     "aria-label": k.intl.string(k.t.WAI6xu),
-                    children: (0, t.jsx)(ie.a, { size: "xs", color: "currentColor" }),
+                    children: (0, t.jsx)(ie.CircleXIcon, { size: "xs", color: "currentColor" }),
                 }),
         ],
     });

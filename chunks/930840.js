@@ -1,38 +1,38 @@
-var e = c(477900),
-    i = c(582128),
-    n = c(503698),
-    o = c.n(n),
-    l = c(628284),
-    r = c(624479),
-    a = c(939249),
-    u = c(866665),
-    p = c(646514),
-    C = c(957565),
-    E = c(792996),
-    T = c(596872);
-c.d(
-    t,
+var e = t(477900),
+    i = t(582128),
+    n = t(503698),
+    o = t.n(n),
+    l = t(628284),
+    r = t(624479),
+    a = t(939249),
+    u = t(866665),
+    C = t(646514),
+    p = t(957565),
+    h = t(792996),
+    k = t(596872);
+t.d(
+    c,
     {},
     {
         c: function (s) {
-            let { chunks: t, className: c, onCopy: n, ...d } = s,
-                h = i.useMemo(() => t?.join(" "), [t]),
-                [k, x] = i.useState(!1),
+            let { chunks: c, className: t, onCopy: n, ...E } = s,
+                T = i.useMemo(() => c?.join(" "), [c]),
+                [d, x] = i.useState(!1),
                 A = i.useCallback(() => {
-                    (0, C.C)(h, () => {
+                    (0, p.C)(T, () => {
                         (x(!0), n?.());
                     });
-                }, [n, h]),
-                _ = k ? l.y : r.CopyIcon;
+                }, [n, T]),
+                I = d ? l.CircleCheckIcon : r.CopyIcon;
             return (0, e.jsx)(a.D, {
-                className: o()(T.k, c),
+                className: o()(k.k, t),
                 onClick: A,
                 children: (0, e.jsx)(u.m, {
-                    text: k ? E.intl.string(E.t.t5VZ88) : E.intl.string(E.t.OpuAlK),
-                    children: (0, e.jsx)(_, {
-                        ...d,
+                    text: d ? h.intl.string(h.t.t5VZ88) : h.intl.string(h.t.OpuAlK),
+                    children: (0, e.jsx)(I, {
+                        ...E,
                         size: "xxs",
-                        color: k ? p.A.colors.TEXT_FEEDBACK_POSITIVE : p.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                        color: d ? C.A.colors.TEXT_FEEDBACK_POSITIVE : C.A.colors.INTERACTIVE_TEXT_DEFAULT,
                     }),
                 }),
             });

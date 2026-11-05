@@ -1,13 +1,15 @@
-var i = e(403581),
-    r = e(572079);
-e.d(
-    s,
+var i = s(403581),
+    r = s(572079);
+s.d(
+    e,
     {},
     {
         B: function (t) {
-            let { iconOverride: s, variantOverride: e, ...p } = t,
-                { buttonText: c, disabled: n } = (0, r.A)(p);
-            return { subscribeButtonProps: { text: c, disabled: n, icon: s ?? i.t, variant: e ?? "expressive" } };
+            let { iconOverride: e, variantOverride: s, ...c } = t,
+                { buttonText: n, disabled: p } = (0, r.A)(c);
+            return {
+                subscribeButtonProps: { text: n, disabled: p, icon: e ?? i.NitroWheelIcon, variant: s ?? "expressive" },
+            };
         },
     },
 );

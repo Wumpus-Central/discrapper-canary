@@ -21,18 +21,18 @@ var n = t(477900),
     y = t(574332),
     E = t(774300),
     N = t(566903),
-    b = t(714114),
-    C = t(864436),
+    C = t(714114),
+    b = t(864436),
     j = t(835072),
     T = t(793574),
-    O = t(688810),
-    G = t(139286),
+    G = t(688810),
+    O = t(139286),
     V = t(47167),
     P = t(713517),
     w = t(854627),
     k = t(10862),
-    R = t(696451),
-    U = t(71393),
+    U = t(696451),
+    R = t(71393),
     M = t(958590),
     D = t(576705),
     L = t(290863),
@@ -45,13 +45,13 @@ function q(e) {
     let { channel: i, user: t } = e,
         s = i.guild_id,
         r = l.useRef(null),
-        d = (0, c.bG)([R.Ay], () => R.Ay.getMember(s, t.id), [s, t.id]),
+        d = (0, c.bG)([U.Ay], () => U.Ay.getMember(s, t.id), [s, t.id]),
         { isHoveringOrFocusing: o } = (0, P.A)(r),
         [A, m] = l.useState(null),
         {
             status: h,
             isMobileOnline: T,
-            activities: O,
+            activities: G,
         } = (0, c.cf)(
             [L.A],
             () => ({
@@ -61,16 +61,16 @@ function q(e) {
             }),
             [t.id, s],
         ),
-        { activityStatusText: G, activityStatusIcon: U } = l.useMemo(() => {
-            let e = O.find((e) => e.type !== u.$.CUSTOM_STATUS && e.type !== u.$.HANG_STATUS);
+        { activityStatusText: O, activityStatusIcon: R } = l.useMemo(() => {
+            let e = G.find((e) => e.type !== u.$.CUSTOM_STATUS && e.type !== u.$.HANG_STATUS);
             return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
-        }, [O]),
-        { voiceChannel: z } = (0, b.Ay)({ userId: t.id }),
+        }, [G]),
+        { voiceChannel: z } = (0, C.Ay)({ userId: t.id }),
         q = (0, V.Ay)(z),
-        $ = (0, p.S3)(I.clD.ONLINE),
-        H = "success" === A || "sending" === A,
+        H = (0, p.S3)(I.clD.ONLINE),
+        $ = "success" === A || "sending" === A,
         W = l.useCallback(async () => {
-            if (H) return;
+            if ($) return;
             m("sending");
             let e = await (async function () {
                 let e = M.A.getInvite(i.id, {}) ?? null;
@@ -99,7 +99,7 @@ function q(e) {
                           m(e ? "success" : null);
                       },
                   );
-        }, [H, t, i]),
+        }, [$, t, i]),
         {
             avatarDecorationSrc: Z,
             avatarSrc: J,
@@ -109,13 +109,13 @@ function q(e) {
     let Q = F.Ay.getName(t),
         ee = B.intl.string(B.t.jYnGPG),
         ei = h !== I.clD.OFFLINE ? h : void 0,
-        et = null != G.text,
+        et = null != O.text,
         en = null != z && null != q;
     return (0, n.jsxs)(g.D, {
         innerRef: r,
         tag: "li",
-        className: a()(K.nM, { [K.vk]: !H }),
-        "aria-disabled": H,
+        className: a()(K.nM, { [K.vk]: !$ }),
+        "aria-disabled": $,
         onClick: W,
         "aria-label": ee,
         children: [
@@ -138,15 +138,15 @@ function q(e) {
                             className: K.J2,
                             children: [
                                 en
-                                    ? (0, n.jsx)(k.A, { size: "custom", color: $, channel: z, className: K.RI })
-                                    : null != U
-                                      ? (0, n.jsx)(C.A, { icon: U, className: K.RI })
+                                    ? (0, n.jsx)(k.A, { size: "custom", color: H, channel: z, className: K.RI })
+                                    : null != R
+                                      ? (0, n.jsx)(b.A, { icon: R, className: K.RI })
                                       : null,
                                 (0, n.jsx)(f.E, {
                                     variant: "body-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
-                                    children: en ? q : G.text,
+                                    children: en ? q : O.text,
                                 }),
                             ],
                         }),
@@ -165,7 +165,7 @@ function q(e) {
             null == A &&
                 (0, n.jsx)("div", {
                     className: K.SB,
-                    children: (0, n.jsx)(x.R, { color: "currentColor", size: "sm", className: K.Kk }),
+                    children: (0, n.jsx)(x.UserPlusIcon, { color: "currentColor", size: "sm", className: K.Kk }),
                 }),
         ],
     });
@@ -179,11 +179,11 @@ t.d(
                 p = l.useRef(null),
                 v = (0, P.M)(p),
                 S = (0, z.kt)({ channel: i }),
-                { analyticsLocations: _ } = (0, O.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+                { analyticsLocations: _ } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
             (l.useEffect(() => {
                 s && p.current?.focus();
             }, [s]),
-                (0, G.A)({
+                (0, O.A)({
                     name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
                     type: o.ImpressionTypes.POPOUT,
                     properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
@@ -195,7 +195,7 @@ t.d(
                     r?.(v);
                 }, [r, v]));
             let x = l.useCallback(() => {
-                let e = U.A.getGuild(i.guild_id);
+                let e = R.A.getGuild(i.guild_id);
                 (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
                     (0, A.mM)(async () => {
                         let { default: l } = await Promise.all([
@@ -233,7 +233,7 @@ t.d(
                                     children: [
                                         (0, n.jsx)("div", {
                                             className: K.R4,
-                                            children: (0, n.jsx)(h.n, { size: "custom", className: K.Kk }),
+                                            children: (0, n.jsx)(h.GroupIcon, { size: "custom", className: K.Kk }),
                                         }),
                                         (0, n.jsx)(f.E, {
                                             variant: "body-sm/medium",

@@ -34,7 +34,7 @@ i.d(
                                   (0, a.jsx)(t.m, {
                                       text: A.intl.string(A.t.uvGmCx),
                                       delay: x,
-                                      children: (0, a.jsx)(r.p, {
+                                      children: (0, a.jsx)(r.ClydeIcon, {
                                           size: "custom",
                                           width: 28,
                                           height: 28,

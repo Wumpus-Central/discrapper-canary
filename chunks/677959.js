@@ -1,23 +1,23 @@
 l.d(t, {
     s7: () => H,
     ch: () => $.c,
-    ec: () => y,
+    ec: () => N,
     Z4: () => F,
-    jw: () => C.jw,
-    a6: () => C.a6,
+    jw: () => I.jw,
+    a6: () => I.a6,
     y: () => M,
-    _P: () => _._,
-    I0: () => _.I,
-    DH: () => C.DH,
-    oo: () => C.oo,
-    JW: () => C.JW,
+    _P: () => A._,
+    I0: () => A.I,
+    DH: () => I.DH,
+    oo: () => I.oo,
+    JW: () => I.JW,
     Vm: () => n.Vm,
-    v7: () => I.v,
+    v7: () => C.v,
     vW: () => U.v,
     me: () => g,
     q7: () => f,
     Lo: () => p,
-    f7: () => C.f7,
+    f7: () => I.f7,
     _D: () => T._,
 });
 var n = l(744615),
@@ -40,7 +40,11 @@ function h(e) {
         children: [
             (0, r.jsx)(c.i, {
                 className: x.G3,
-                children: (0, r.jsx)(u.U, { size: "md", color: "var(--icon-strong)", className: x.Om }),
+                children: (0, r.jsx)(u.CheckmarkSmallIcon, {
+                    size: "md",
+                    color: "var(--icon-strong)",
+                    className: x.Om,
+                }),
             }),
             (0, r.jsxs)("div", {
                 className: x.DD,
@@ -87,15 +91,15 @@ function f(e) {
         ],
     });
 }
-var j = l(785007),
-    v = l(517837);
+var v = l(785007),
+    j = l(517837);
 function b(e) {
     let { text: t } = e;
     return (0, r.jsx)(m.E, {
         tag: "span",
         variant: "body-xs/semibold",
         color: "text-overlay-light",
-        className: v.Fi,
+        className: j.Fi,
         children: t,
     });
 }
@@ -110,10 +114,10 @@ function g(e) {
                               l = t ? "text-strong" : "text-subtle";
                           return {
                               name: (0, r.jsxs)("div", {
-                                  className: v.VH,
+                                  className: j.VH,
                                   children: [
                                       (0, r.jsxs)("div", {
-                                          className: v.C2,
+                                          className: j.C2,
                                           children: [
                                               (0, r.jsx)(m.E, {
                                                   variant: "body-md/medium",
@@ -124,17 +128,17 @@ function g(e) {
                                           ],
                                       }),
                                       (0, r.jsxs)("div", {
-                                          className: v.Cq,
+                                          className: j.Cq,
                                           children: [
                                               (0, r.jsxs)("div", {
-                                                  className: v.SS,
+                                                  className: j.SS,
                                                   children: [
                                                       null != e.subTextStrikethrough &&
                                                           (0, r.jsx)(m.E, {
                                                               tag: "span",
                                                               variant: "body-md/medium",
                                                               color: "text-subtle",
-                                                              className: v.fF,
+                                                              className: j.fF,
                                                               children: e.subTextStrikethrough,
                                                           }),
                                                       (0, r.jsx)(m.E, {
@@ -157,7 +161,7 @@ function g(e) {
                               }),
                               value: e.value,
                               disabled: e.isDisabled,
-                              radioBarClassName: i()(v.tG, { [v.uA]: t }),
+                              radioBarClassName: i()(j.tG, { [j.uA]: t }),
                           };
                       }),
             [s, n],
@@ -166,37 +170,37 @@ function g(e) {
         children: [
             t,
             null != l &&
-                (0, r.jsx)(m.E, { variant: "body-sm/medium", color: "text-muted", className: v.cm, children: l }),
-            (0, r.jsx)(j.$d, { ...o, options: c, value: n, className: v.ul }),
+                (0, r.jsx)(m.E, { variant: "body-sm/medium", color: "text-muted", className: j.cm, children: l }),
+            (0, r.jsx)(v.$d, { ...o, options: c, value: n, className: j.ul }),
         ],
     });
 }
 var E = l(682901),
-    N = l(792996);
-function y(e) {
+    y = l(792996);
+function N(e) {
     let t,
         { premiumType: l, size: n, className: a, tag: s = "span", ...i } = e;
     switch (l) {
         case E.PremiumTypes.TIER_0:
-            t = N.intl.string(N.t["t9uG/o"]);
+            t = y.intl.string(y.t["t9uG/o"]);
             break;
         case E.PremiumTypes.TIER_1:
-            t = N.intl.string(N.t.FSOz78);
+            t = y.intl.string(y.t.FSOz78);
             break;
         case E.PremiumTypes.TIER_2:
-            t = N.intl.string(N.t.lG6a5x);
+            t = y.intl.string(y.t.lG6a5x);
     }
     return (0, r.jsx)(m.E, { tag: s, variant: `nitro-${n}`, className: a, ...i, children: t });
 }
 var T = l(669510),
-    C = l(241989),
-    I = l(6151);
+    I = l(241989),
+    C = l(6151);
 l(165272);
-var _ = l(596034),
-    A = l(939249),
+var A = l(596034),
+    _ = l(939249),
     D = l(307301),
-    S = l(646514),
-    P = l(858899),
+    P = l(646514),
+    S = l(858899),
     k = l(459357),
     R = l(99696),
     G = l(580630),
@@ -204,14 +208,14 @@ var _ = l(596034),
     w = l(140624),
     O = l(685254);
 function M(e) {
-    let { text: t = N.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: a } = e;
-    return (0, r.jsxs)(A.D, {
+    let { text: t = y.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: a } = e;
+    return (0, r.jsxs)(_.D, {
         className: i()(O.U, n),
         onClick: function () {
             (null != a && (0, R.P6)(a), l());
         },
         children: [
-            (0, r.jsx)(D.j, { color: S.A.colors.TEXT_BRAND }),
+            (0, r.jsx)(D.PlusSmallIcon, { color: P.A.colors.TEXT_BRAND }),
             (0, r.jsx)(m.E, { variant: "body-sm/medium", color: "text-brand", children: t }),
         ],
     });
@@ -229,8 +233,8 @@ function F(e) {
                       initialCode: i ?? "",
                       onComplete: (e) => {
                           let l = (0, G.$g)(e.amount, e.currency);
-                          ((0, P.P0)({
-                              text: N.intl.formatToPlainString(w.default["66Wi6B"], { price: l }),
+                          ((0, S.P0)({
+                              text: y.intl.formatToPlainString(w.default["66Wi6B"], { price: l }),
                               variant: "success",
                               position: "top",
                           }),

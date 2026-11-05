@@ -1,4 +1,4 @@
-n.d(t, { default: () => eC });
+n.d(t, { default: () => ex });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -14,8 +14,8 @@ var a = n(477900),
     f = n(638495),
     E = n(192308),
     g = n(793574),
-    x = n(688810),
-    C = n(753838),
+    C = n(688810),
+    x = n(753838),
     p = n(946274),
     R = n(739053),
     T = n(82498),
@@ -81,7 +81,7 @@ let z = new B(k.h, {
 });
 var q = n(652215),
     J = n(792996);
-async function K(e) {
+async function W(e) {
     try {
         (await U.Bo.del({ url: q.Rsh.RECENT_AVATARS_DELETE(e), rejectWithError: !0 }),
             await k.h.dispatch({ type: "RECENT_AVATAR_DELETE", avatarId: e }),
@@ -90,17 +90,17 @@ async function K(e) {
         D.A.show({ title: J.intl.string(J.t.iufib1), body: J.intl.string(J.t["/ZNT+0"]) });
     }
 }
-var W = n(778712),
-    X = n(595535),
-    Z = n(486863);
+var K = n(778712),
+    Z = n(595535),
+    X = n(486863);
 function $(e) {
-    let { className: t, size: n = X.q } = e,
-        l = (0, W.FT)(n);
+    let { className: t, size: n = Z.q } = e,
+        l = (0, K.FT)(n);
     return (0, a.jsx)("svg", {
         width: l,
         height: l,
         viewBox: `0 0 ${l} ${l}`,
-        className: s()(Z.R, t),
+        className: s()(X.R, t),
         "aria-hidden": !0,
         children: (0, a.jsx)("path", {
             fillRule: "evenodd",
@@ -119,8 +119,8 @@ function et(e) {
         { onMouseEnter: m, onMouseLeave: f } = A,
         E = l.useRef(null),
         g = d ?? u.substring(0, 6).toUpperCase(),
-        x = J.intl.formatToPlainString(J.t.tmJ75y, { orderNumber: n + 1, description: g }),
-        C = J.intl.formatToPlainString(J.t.pBzwhc, { orderNumber: n + 1, description: g });
+        C = J.intl.formatToPlainString(J.t.tmJ75y, { orderNumber: n + 1, description: g }),
+        x = J.intl.formatToPlainString(J.t.pBzwhc, { orderNumber: n + 1, description: g });
     return (0, a.jsxs)("div", {
         className: ee.ge,
         children: [
@@ -129,7 +129,7 @@ function et(e) {
                 onMouseEnter: m,
                 onMouseLeave: f,
                 className: ee.Hk,
-                "aria-label": x,
+                "aria-label": C,
                 innerRef: i,
                 children: (0, a.jsx)("img", { src: h, alt: d, className: ee.Hc }),
             }),
@@ -142,8 +142,8 @@ function et(e) {
                     children: (0, a.jsx)("button", {
                         type: "button",
                         ref: E,
-                        "aria-label": C,
-                        onClick: (e) => s(e, n, c, u, C),
+                        "aria-label": x,
+                        onClick: (e) => s(e, n, c, u, x),
                         className: ee.G5,
                         children: (0, a.jsx)(F.TrashIcon, { size: "xs", color: "currentColor", className: ee.fy }),
                     }),
@@ -158,15 +158,15 @@ function en(e) {
         A = l.useRef([]),
         m = l.useRef(null),
         g = l.useRef(t.length),
-        x = l.useRef(null),
-        [C, p] = l.useState(!1),
+        C = l.useRef(null),
+        [x, p] = l.useState(!1),
         [R, T] = l.useState(!1),
         j = t.length,
         N = Math.max(6 - j, 0),
         _ = (0, f.k)(),
         y = l.useCallback(
             async (e) => {
-                if (null == d || C) return;
+                if (null == d || x) return;
                 (p(!0), c(null));
                 let { id: t, storageHash: l, description: s } = e,
                     i = (0, H.Xp)({ userId: d.id, avatarId: t, storageHash: l, size: 1024, canAnimate: !0 });
@@ -207,8 +207,10 @@ function en(e) {
                                 n.e(232551),
                                 n.e(561216),
                                 n.e(692835),
+                                n.e(161275),
                                 n.e(588940),
                                 n.e(21219),
+                                n.e(761253),
                                 n.e(829177),
                                 n.e(106943),
                                 n.e(348674),
@@ -220,9 +222,8 @@ function en(e) {
                                 n.e(894747),
                                 n.e(444376),
                                 n.e(924862),
-                                n.e(571470),
-                                n.e(50342),
                                 n.e(507406),
+                                n.e(50342),
                                 n.e(836681),
                                 n.e(455524),
                                 n.e(324633),
@@ -249,14 +250,14 @@ function en(e) {
                     p(!1);
                 }
             },
-            [_, C, r, u, c, d],
+            [_, x, r, u, c, d],
         ),
         v = l.useCallback(
             (e, l, r, s, i) => {
                 let c = l + 1 < t.length ? l + 1 : l - 1;
-                ((x.current = c >= 0 ? A.current[c] : m.current),
+                ((C.current = c >= 0 ? A.current[c] : m.current),
                     e.shiftKey
-                        ? K(r)
+                        ? W(r)
                         : (T(!0),
                           (0, E.mM)(async () => {
                               let { default: e } = await Promise.all([n.e(206130), n.e(48944)]).then(n.bind(n, 555251));
@@ -266,7 +267,7 @@ function en(e) {
                                       avatarId: r,
                                       storageHash: s,
                                       avatarDescription: i,
-                                      onConfirmDelete: () => K(r),
+                                      onConfirmDelete: () => W(r),
                                       onClose: async () => {
                                           (await n(),
                                               requestAnimationFrame(() => {
@@ -284,9 +285,9 @@ function en(e) {
         l.useEffect(() => {
             R ||
                 (t.length < g.current &&
-                    null != x.current &&
+                    null != C.current &&
                     requestAnimationFrame(() => {
-                        x.current?.focus();
+                        C.current?.focus();
                     }),
                 (g.current = t.length));
         }, [t.length, R]),
@@ -389,7 +390,7 @@ function ea(e) {
                         className: ee.gJ,
                         role: "alert",
                         children: [
-                            (0, a.jsx)(L.E, { size: "xs", color: I.A.colors.TEXT_FEEDBACK_CRITICAL }),
+                            (0, a.jsx)(L.CircleErrorIcon, { size: "xs", color: I.A.colors.TEXT_FEEDBACK_CRITICAL }),
                             (0, a.jsx)(u.E, {
                                 variant: "body-xs/normal",
                                 color: "text-feedback-critical",
@@ -442,7 +443,7 @@ function eE(e) {
             shouldShowPremiumIcon: E,
             children: g,
         } = e,
-        x = l.useId(),
+        C = l.useId(),
         p = (function (e) {
             let { guildFeature: t, guild: n } = e;
             if (null == t || null == n) return;
@@ -462,7 +463,7 @@ function eE(e) {
                 onClick: n,
                 onMouseEnter: r,
                 onMouseLeave: i,
-                "aria-describedby": null != p ? x : void 0,
+                "aria-describedby": null != p ? C : void 0,
                 children: [
                     g,
                     (0, a.jsxs)("div", {
@@ -478,7 +479,7 @@ function eE(e) {
                                         className: s()(eA.xo, { [eA.Fy]: E }),
                                         children: [
                                             E &&
-                                                (0, a.jsx)(d.t, {
+                                                (0, a.jsx)(d.NitroWheelIcon, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                     className: eA.T$,
@@ -493,13 +494,13 @@ function eE(e) {
                                 (0, a.jsx)("div", {
                                     className: eA.x9,
                                     "aria-hidden": !0,
-                                    children: (0, a.jsx)(C.A, { guildFeature: c, guild: A, hideTooltip: !0 }),
+                                    children: (0, a.jsx)(x.A, { guildFeature: c, guild: A, hideTooltip: !0 }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            null != p && (0, a.jsx)(h.A, { id: x, children: p }),
+            null != p && (0, a.jsx)(h.A, { id: C, children: p }),
         ],
     });
 }
@@ -538,14 +539,14 @@ function eg(e) {
                 },
                 guildFeature: h,
                 guild: r,
-                icon: (0, a.jsx)(A.X, { size: "md", color: "currentColor" }),
+                icon: (0, a.jsx)(A.ImagePlusIcon, { size: "md", color: "currentColor" }),
                 label: t,
                 shouldShowPremiumIcon: d,
             }),
         ],
     });
 }
-function ex(e) {
+function eC(e) {
     let { uploadType: t, guild: n, handleOpenGIFPickerModal: l } = e,
         { shouldAnimate: r, onMouseEnter: s, onMouseLeave: i } = (0, el.A)(),
         c = t === Q.HL.AVATAR || t === Q.HL.BANNER,
@@ -557,13 +558,13 @@ function ex(e) {
         onMouseLeave: i,
         guildFeature: o,
         guild: n,
-        icon: (0, a.jsx)(m.O, { size: "md", color: "currentColor" }),
+        icon: (0, a.jsx)(m.GifIcon, { size: "md", color: "currentColor" }),
         label: J.intl.string(J.t["xsC+/y"]),
         shouldShowPremiumIcon: c,
         children: (0, a.jsx)(ef, { shouldAnimate: r }),
     });
 }
-function eC(e) {
+function ex(e) {
     let {
             transitionState: t,
             onClose: r,
@@ -573,7 +574,7 @@ function eC(e) {
             maxFileSizeBytes: h,
             showUpsellHeader: A,
             filters: m,
-            analyticsLocation: C,
+            analyticsLocation: x,
             analyticsLocations: p = [],
             imageSpecifications: y,
             modalTitle: v = J.intl.string(J.t.DToW4e),
@@ -588,7 +589,7 @@ function eC(e) {
         w = d === Q.HL.AVATAR || d === Q.HL.BANNER,
         k = !eo.Ay.canUseAnimatedAvatar(L) && d === Q.HL.AVATAR,
         D = (0, j.b)(!w),
-        { analyticsLocations: P } = (0, x.Ay)(p, g.A.SELECT_IMAGE_MODAL),
+        { analyticsLocations: P } = (0, C.Ay)(p, g.A.SELECT_IMAGE_MODAL),
         O = l.useCallback(
             (e) => {
                 let {
@@ -639,8 +640,10 @@ function eC(e) {
                             n.e(232551),
                             n.e(561216),
                             n.e(692835),
+                            n.e(161275),
                             n.e(588940),
                             n.e(21219),
+                            n.e(761253),
                             n.e(829177),
                             n.e(106943),
                             n.e(348674),
@@ -652,9 +655,8 @@ function eC(e) {
                             n.e(894747),
                             n.e(444376),
                             n.e(924862),
-                            n.e(571470),
-                            n.e(50342),
                             n.e(507406),
+                            n.e(50342),
                             n.e(836681),
                             n.e(455524),
                             n.e(324633),
@@ -668,7 +670,7 @@ function eC(e) {
                                 onCrop: O,
                                 uploadType: d,
                                 showUpsellHeader: A,
-                                analyticsPage: C?.page,
+                                analyticsPage: x?.page,
                                 returnRef: S,
                                 ...n,
                             });
@@ -676,7 +678,7 @@ function eC(e) {
                     { contextKey: U },
                 );
             },
-            [C?.page, U, O, o, S, A, d],
+            [x?.page, U, O, o, S, A, d],
         ),
         V = l.useCallback(() => {
             (0, ed.A)(h);
@@ -719,8 +721,10 @@ function eC(e) {
                         n.e(232551),
                         n.e(561216),
                         n.e(692835),
+                        n.e(161275),
                         n.e(588940),
                         n.e(21219),
+                        n.e(761253),
                         n.e(829177),
                         n.e(106943),
                         n.e(348674),
@@ -741,7 +745,6 @@ function eC(e) {
                         n.e(88160),
                         n.e(368111),
                         n.e(751202),
-                        n.e(571470),
                         n.e(836681),
                         n.e(777124),
                         n.e(844094),
@@ -754,14 +757,14 @@ function eC(e) {
                                 return O({ imageUri: t, staticImageUri: n, file: a, isFromTenor: !0 });
                             },
                             showUpsellHeader: A,
-                            analyticsPage: C?.page,
+                            analyticsPage: x?.page,
                             returnRef: S,
                             ...t,
                         });
                 },
                 { contextKey: U },
             );
-        }, [C?.page, U, O, S, A, d]);
+        }, [x?.page, U, O, S, A, d]);
     l.useEffect(() => {
         (k &&
             (ei.default.track(q.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -771,13 +774,13 @@ function eC(e) {
             (0, R.sq)(q.U7l.PREMIUM_UPSELL_VIEWED, P, () => (0, T.uq)(q.JJy.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL))),
             ei.default.track(q.HAw.OPEN_MODAL, {
                 type: q.JJy.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                location: C,
+                location: x,
                 location_stack: P,
                 upload_type: d,
             }));
-    }, [k, C, P, d]);
+    }, [k, x, P, d]);
     let z = A && D,
-        K = b && d === Q.HL.AVATAR;
+        W = b && d === Q.HL.AVATAR;
     return (0, a.jsx)(c.a, {
         transitionState: t,
         onClose: r,
@@ -807,7 +810,7 @@ function eC(e) {
                                     }),
                                 }),
                                 (0, a.jsx)("li", {
-                                    children: (0, a.jsx)(ex, { uploadType: d, guild: H, handleOpenGIFPickerModal: B }),
+                                    children: (0, a.jsx)(eC, { uploadType: d, guild: H, handleOpenGIFPickerModal: B }),
                                 }),
                             ],
                         }),
@@ -821,7 +824,7 @@ function eC(e) {
                             : null,
                     ],
                 }),
-                K && (0, a.jsx)(ea, { onComplete: O, returnRef: S }),
+                W && (0, a.jsx)(ea, { onComplete: O, returnRef: S }),
                 z && (0, a.jsx)(N.A, { uploadType: d, showUpsell: !0, position: "inline", className: eA.Lu }),
             ],
         }),

@@ -1,53 +1,57 @@
-var n = t(477900);
-t(582128);
-var r = t(935462),
-    s = t(534514),
-    i = t(834730),
-    l = t(821609),
-    c = t(811893),
-    o = t(235986),
-    d = t(936525),
-    m = t(792996),
-    u = t(844768),
-    x = t(332633);
-t.d(
+var t = n(477900);
+n(582128);
+var r = n(935462),
+    s = n(534514),
+    i = n(834730),
+    l = n(821609),
+    c = n(811893),
+    o = n(235986),
+    d = n(936525),
+    m = n(792996),
+    u = n(844768),
+    x = n(332633);
+n.d(
     e,
     {},
     {
         s: function (a) {
-            let { onContinue: e, onClose: t, title: N, body: h } = a;
-            return (0, n.jsxs)(d.A, {
+            let { onContinue: e, onClose: n, title: N, body: h } = a;
+            return (0, t.jsxs)(d.A, {
                 children: [
-                    (0, n.jsxs)(r.rQ, {
+                    (0, t.jsxs)(r.rQ, {
                         "data-migration-pending": !0,
                         direction: o.A.Direction.VERTICAL,
                         className: u.wx,
                         separator: !1,
                         children: [
-                            (0, n.jsx)("img", { src: x, className: u.bm, width: "254", height: "127", alt: "" }),
-                            (0, n.jsx)(s.D, { className: u.DD, variant: "heading-xl/semibold", children: N }),
-                            null != t && (0, n.jsx)(r.s_, { "data-migration-pending": !0, className: u.b, onClick: t }),
+                            (0, t.jsx)("img", { src: x, className: u.bm, width: "254", height: "127", alt: "" }),
+                            (0, t.jsx)(s.D, { className: u.DD, variant: "heading-xl/semibold", children: N }),
+                            null != n && (0, t.jsx)(r.s_, { "data-migration-pending": !0, className: u.b, onClick: n }),
                         ],
                     }),
-                    (0, n.jsx)(r.$m, {
+                    (0, t.jsx)(r.$m, {
                         "data-migration-pending": !0,
                         className: u.rf,
                         scrollbarGutter: !1,
-                        children: (0, n.jsx)(i.E, {
+                        children: (0, t.jsx)(i.E, {
                             tag: "p",
                             variant: "body-md/normal",
                             color: "text-default",
                             children: h,
                         }),
                     }),
-                    (0, n.jsx)(r.jl, {
+                    (0, t.jsx)(r.jl, {
                         "data-migration-pending": !0,
                         className: u.qr,
-                        children: (0, n.jsx)(l.$, {
+                        children: (0, t.jsx)(l.$, {
                             text: m.intl.format(m.t["4X7vPo"], {
                                 popoutWindowIcon: {},
                                 popoutWindowIconHook: () =>
-                                    (0, n.jsx)(c.t, { color: "currentColor", className: u.LE, size: "xs" }),
+                                    (0, t.jsx)(c.WindowLaunchIcon, {
+                                        color: "currentColor",
+                                        className: u.LE,
+                                        size: "xs",
+                                    }),
                             }),
                             onClick: e,
                             fullWidth: !0,

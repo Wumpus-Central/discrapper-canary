@@ -20,21 +20,21 @@ e.d(
             let {
                     appId: t,
                     subscriptionType: e,
-                    onClose: f,
-                    skuId: I,
+                    onClose: I,
+                    skuId: f,
                     guildId: v,
                     transitionState: C,
                     onHeaderTitleClick: j,
                 } = i,
-                { data: x } = (0, c.A)(I),
+                { data: x } = (0, c.A)(f),
                 S = x?.[0],
-                { data: M } = (0, l.d)(I),
-                g = s.useMemo(
-                    () => (M?.thumbnail != null ? (b.A.toURLSafe((0, u.YE)(t, M.thumbnail, 256)) ?? void 0) : void 0),
-                    [t, M?.thumbnail],
+                { data: g } = (0, l.d)(f),
+                M = s.useMemo(
+                    () => (g?.thumbnail != null ? (b.A.toURLSafe((0, u.YE)(t, g.thumbnail, 256)) ?? void 0) : void 0),
+                    [t, g?.thumbnail],
                 ),
                 y = s.useMemo(() => {
-                    let i = M?.benefits;
+                    let i = g?.benefits;
                     if (null != i && 0 !== i.length)
                         return i.map((i) => ({
                             id: i.id,
@@ -42,30 +42,30 @@ e.d(
                             description: i.description,
                             icon: (0, r.N)(t, i.icon),
                         }));
-                }, [t, M?.benefits]),
+                }, [t, g?.benefits]),
                 { openModal: A, subscriptionPurchaseButtonState: F } = (0, p.A)({
-                    skuId: I,
+                    skuId: f,
                     initialSubscribeForGuild: v ?? void 0,
                 });
-            return null == M
+            return null == g
                 ? null
                 : (0, n.jsx)(m.C, {
                       appId: t,
-                      skuId: I,
+                      skuId: f,
                       transitionState: C,
-                      onHeaderTitleClick: j ?? f,
-                      onClose: f,
+                      onHeaderTitleClick: j ?? I,
+                      onClose: I,
                       footer: (0, n.jsx)(h.rc, {
                           onClick: A,
                           appId: t,
                           subscriptionType: e,
-                          skuId: I,
+                          skuId: f,
                           subscriptionPlan: S,
                           state: F,
                       }),
                       children: (0, n.jsx)(k.D, {
                           appId: t,
-                          skuId: I,
+                          skuId: f,
                           benefits:
                               null != y
                                   ? y.map((i) =>
@@ -76,11 +76,11 @@ e.d(
                                         ),
                                     )
                                   : void 0,
-                          description: M.description ?? void 0,
-                          imgSrc: g,
-                          title: S?.name ?? M.summary,
+                          description: g.description ?? void 0,
+                          imgSrc: M,
+                          title: S?.name ?? g.summary,
                           tag: (0, n.jsx)(a.M, { type: e }),
-                          FallbackIcon: d.b,
+                          FallbackIcon: d.BadgeIcon,
                       }),
                   });
         },

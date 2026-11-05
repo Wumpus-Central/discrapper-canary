@@ -1,7 +1,7 @@
 var a = l(477900),
     s = l(582128),
-    i = l(224640),
-    n = l(683071),
+    n = l(224640),
+    i = l(683071),
     r = l(430993),
     d = l(789645),
     c = l(534514),
@@ -30,24 +30,24 @@ l.d(
                 A = x.Ay.useName(l),
                 B = (0, j.Ld)(l.id),
                 [E, N] = s.useState(!1),
-                [P, D] = s.useState(!1),
-                [F, H] = s.useState(!1),
-                L = s.useCallback(() => {
-                    (H(!0), N(!1), D(!1));
+                [D, F] = s.useState(!1),
+                [H, L] = s.useState(!1),
+                P = s.useCallback(() => {
+                    (L(!0), N(!1), F(!1));
                 }, []),
-                { disconnectLinkRequest: W, isDisconnectLoading: _ } = (0, g.A)({ onSuccess: S, onError: L }),
-                z = w ? p.intl.string(k.default["WH+Gba"]) : p.intl.format(k.default.F2lccv, { username: A }),
-                G = w ? p.intl.format(k.default.Or6hgl, { username: A }) : p.intl.string(k.default.hOEHFn),
-                K = w
+                { disconnectLinkRequest: W, isDisconnectLoading: X } = (0, g.A)({ onSuccess: S, onError: P }),
+                _ = w ? p.intl.string(k.default["WH+Gba"]) : p.intl.format(k.default.F2lccv, { username: A }),
+                z = w ? p.intl.format(k.default.Or6hgl, { username: A }) : p.intl.string(k.default.hOEHFn),
+                G = w
                     ? p.intl.format(k.default.PlrZal, { username: A })
                     : p.intl.format(k.default.XyRW4c, { username: A }),
-                O = w ? p.intl.string(k.default.PGQBnk) : p.intl.string(k.default.eiABQz),
-                Q = w ? p.intl.string(k.default["0ki7+P"]) : p.intl.string(k.default.sCbKs4);
-            return (0, a.jsxs)(i.d, {
+                I = w ? p.intl.string(k.default.PGQBnk) : p.intl.string(k.default.eiABQz),
+                K = w ? p.intl.string(k.default["0ki7+P"]) : p.intl.string(k.default.sCbKs4);
+            return (0, a.jsxs)(n.d, {
                 transitionState: v,
                 onClose: y,
                 children: [
-                    F && (0, a.jsx)(n.w, { type: "critical", message: p.intl.string(k.default.krIDdy), role: "alert" }),
+                    H && (0, a.jsx)(i.w, { type: "critical", message: p.intl.string(k.default.krIDdy), role: "alert" }),
                     (0, a.jsxs)(r.c, {
                         children: [
                             (0, a.jsxs)("div", {
@@ -56,7 +56,7 @@ l.d(
                                     (0, a.jsx)(b.A, {
                                         currentUser: e,
                                         otherUser: l,
-                                        children: (0, a.jsx)(d.P, {
+                                        children: (0, a.jsx)(d.XSmallIcon, {
                                             size: "md",
                                             color: "currentColor",
                                             className: C.ut,
@@ -72,7 +72,7 @@ l.d(
                                             (0, a.jsx)(o.E, {
                                                 variant: "body-sm/normal",
                                                 color: "text-muted",
-                                                children: z,
+                                                children: _,
                                             }),
                                         ],
                                     }),
@@ -84,11 +84,11 @@ l.d(
                                     (0, a.jsxs)(u.B, {
                                         gap: 16,
                                         children: [
-                                            B && (0, a.jsx)(n.w, { type: "warning", message: G, role: "none" }),
+                                            B && (0, a.jsx)(i.w, { type: "warning", message: z, role: "none" }),
                                             (0, a.jsx)(o.E, {
                                                 variant: "body-sm/normal",
                                                 color: "text-default",
-                                                children: K,
+                                                children: G,
                                             }),
                                         ],
                                     }),
@@ -98,16 +98,16 @@ l.d(
                                             (0, a.jsx)(h.S, {
                                                 checked: E,
                                                 onChange: (t) => {
-                                                    (N(t), H(!1));
+                                                    (N(t), L(!1));
                                                 },
-                                                label: O,
+                                                label: I,
                                             }),
                                             (0, a.jsx)(h.S, {
-                                                checked: P,
+                                                checked: D,
                                                 onChange: (t) => {
-                                                    (D(t), H(!1));
+                                                    (F(t), L(!1));
                                                 },
-                                                label: Q,
+                                                label: K,
                                             }),
                                         ],
                                     }),
@@ -118,15 +118,15 @@ l.d(
                     (0, a.jsx)(f.H, {
                         actionsFullWidth: !0,
                         actions: [
-                            { variant: "secondary", text: p.intl.string(p.t["3ilveh"]), onClick: y, disabled: _ },
+                            { variant: "secondary", text: p.intl.string(p.t["3ilveh"]), onClick: y, disabled: X },
                             {
                                 variant: "critical-primary",
                                 text: p.intl.string(k.default["c5L+sl"]),
                                 onClick: function () {
-                                    (H(!1), W(l.id));
+                                    (L(!1), W(l.id));
                                 },
-                                disabled: !E || !P || _,
-                                loading: _,
+                                disabled: !E || !D || X,
+                                loading: X,
                             },
                         ],
                     }),

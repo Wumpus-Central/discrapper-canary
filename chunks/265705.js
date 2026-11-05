@@ -1068,7 +1068,7 @@ class em extends i.PureComponent {
             className: w.PP,
             onClick: e,
             "aria-label": P.intl.string(P.t.GT3fNz),
-            children: (0, r.jsx)(d.P, { size: "xs", color: "currentColor" }),
+            children: (0, r.jsx)(d.XSmallIcon, { size: "xs", color: "currentColor" }),
         });
     }
     renderInlineMediaEmbed = (() => {

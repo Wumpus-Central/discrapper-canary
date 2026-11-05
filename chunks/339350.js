@@ -1,3 +1,4 @@
+s.r(l);
 var e = s(477900);
 s(582128);
 var h = s(646514),
@@ -7,23 +8,23 @@ s.d(
     l,
     {},
     {
-        Q: function (a) {
+        HourglassIcon: function (a) {
             let {
                     size: l = "md",
                     width: s,
                     height: c,
                     color: d = h.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: n = "",
-                    ...p
+                    ...o
                 } = a,
-                v = (0, t.J)(l),
-                o = v?.width ?? s,
-                r = v?.height ?? c;
+                r = (0, t.J)(l),
+                p = r?.width ?? s,
+                v = r?.height ?? c;
             return (0, e.jsxs)("svg", {
-                ...(0, i.A)(p),
+                ...(0, i.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
-                height: r,
+                width: p,
+                height: v,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

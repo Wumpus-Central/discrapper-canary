@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => I });
 var l = n(477900),
     i = n(582128),
     s = n(855986),
@@ -17,29 +17,29 @@ var l = n(477900),
     C = n(786051),
     E = n(559868),
     x = n(792996);
-function S(e) {
-    var t, S;
-    let I,
+function I(e) {
+    var t, I;
+    let S,
         y,
         b,
         _,
         j,
         v,
-        N,
         T,
+        N,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
-    ((S = t = M.id),
-        (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
-        (y = I?.changelogId),
+    ((I = t = M.id),
+        (S = (0, s.bG)([m.A], () => m.A.getLastMessage(I))),
+        (y = S?.changelogId),
         (b = (0, s.bG)([c.default], () => c.default.locale)),
         (_ = (0, s.bG)([h.A], () => h.A.getChangelog(y ?? "", b), [y, b])),
         (j = (0, g.A)(t)),
         (v = i.useRef(j ? Date.now() : null)),
-        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (T = i.useRef(N)),
+        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (N = i.useRef(T)),
         i.useEffect(() => {
-            T.current = N;
+            N.current = T;
         }),
         i.useEffect(() => {
             v.current = Date.now();
@@ -52,7 +52,7 @@ function S(e) {
                 null != _ &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${_.date}:${_.revision}`,
-                    unread_count: T.current,
+                    unread_count: N.current,
                 });
         }, [j, _]),
         i.useEffect(() => {
@@ -64,7 +64,7 @@ function S(e) {
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${_.date}:${_.revision}`,
-                        unread_count: T.current,
+                        unread_count: N.current,
                     }),
                     (v.current = 0));
             };
@@ -78,7 +78,7 @@ function S(e) {
         ((O.message = x.intl.string(x.t.Bt2N7D)),
             (O.subtitle = x.intl.string(x.t["n/Vzkw"])),
             (O.buttonText = e),
-            (O.buttonIcon = k ? a.t : void 0),
+            (O.buttonIcon = k ? a.WindowLaunchIcon : void 0),
             (O.onButtonClick = function () {
                 if (k) {
                     (open(E.Do),

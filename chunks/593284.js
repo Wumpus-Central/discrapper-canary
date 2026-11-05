@@ -5,8 +5,8 @@ var t = n(477900),
     r = n(317097),
     u = n(855986),
     o = n(473193),
-    d = n(95362),
-    c = n(545442),
+    c = n(95362),
+    d = n(545442),
     m = n(265872),
     x = n(442433),
     h = n(110574),
@@ -35,10 +35,10 @@ var t = n(477900),
 function P(e) {
     let { member: l, guildId: a, channelId: i, role: r } = e,
         o = s.useRef(null),
-        d = (0, u.bG)([R.A], () => R.A.getGuild(a)?.ownerId, [a]),
-        c = (0, u.bG)([k.default], () => k.default.getUser(l.userId), [l.userId]),
+        c = (0, u.bG)([R.A], () => R.A.getGuild(a)?.ownerId, [a]),
+        d = (0, u.bG)([k.default], () => k.default.getUser(l.userId), [l.userId]),
         m = (0, u.bG)([E.A], () => E.A.getChannel(i), [i]);
-    return null == c || null == m
+    return null == d || null == m
         ? null
         : (0, t.jsx)(
               y.A,
@@ -59,8 +59,8 @@ function P(e) {
                               colorString: l.colorString,
                               colorStrings: l.colorStrings,
                               colorRoleName: r.name,
-                              user: c,
-                              isOwner: l.userId === d,
+                              user: d,
+                              isOwner: l.userId === c,
                               nick: l.nick,
                               premiumSince: null == l.premiumSince ? null : new Date(l.premiumSince),
                               channel: m,
@@ -96,6 +96,7 @@ function P(e) {
                                           n.e(893190),
                                           n.e(489218),
                                           n.e(912875),
+                                          n.e(713708),
                                           n.e(862782),
                                           n.e(55348),
                                           n.e(879315),
@@ -120,6 +121,7 @@ function P(e) {
                                           n.e(182408),
                                           n.e(936320),
                                           n.e(482861),
+                                          n.e(830221),
                                           n.e(576665),
                                           n.e(311802),
                                           n.e(698965),
@@ -164,13 +166,12 @@ function P(e) {
                                           n.e(557830),
                                           n.e(470314),
                                           n.e(70515),
-                                          n.e(287988),
                                           n.e(404524),
+                                          n.e(736674),
                                           n.e(654148),
                                           n.e(774021),
                                           n.e(666939),
                                           n.e(108634),
-                                          n.e(830221),
                                           n.e(324240),
                                           n.e(281165),
                                           n.e(304866),
@@ -178,7 +179,7 @@ function P(e) {
                                           n.e(105539),
                                       ]).then(n.bind(n, 107632));
                                       return (l) =>
-                                          (0, t.jsx)(e, { ...l, user: c, guildId: a, channel: m, showMediaItems: !0 });
+                                          (0, t.jsx)(e, { ...l, user: d, guildId: a, channel: m, showMediaItems: !0 });
                                   });
                               },
                               ...e,
@@ -192,9 +193,9 @@ function P(e) {
 }
 function O(e) {
     let { popoutProps: l, roleId: n, guildId: a, channelId: r } = e,
-        c = s.useRef(null);
+        d = s.useRef(null);
     ((0, f.Ay)(() => {
-        l.setPopoutRef?.(c.current);
+        l.setPopoutRef?.(d.current);
     }),
         (0, f.l0)(() => {
             l.setPopoutRef?.(null);
@@ -242,9 +243,9 @@ function O(e) {
               value: void 0,
               children: (0, t.jsx)("div", {
                   className: _.qm,
-                  ref: c,
+                  ref: d,
                   ...l,
-                  children: (0, t.jsxs)(d.Ip, {
+                  children: (0, t.jsxs)(c.Ip, {
                       className: _.bY,
                       children: [
                           (0, t.jsx)(g.Y, { id: n, guildId: a, title: p.name, count: j, className: _.sd }),
@@ -265,12 +266,12 @@ n.d(
     {},
     {
         A: function (e) {
-            let { roleId: l, channelId: n, roleName: a, guildId: i, children: o, inlinePreview: d = !1 } = e,
+            let { roleId: l, channelId: n, roleName: a, guildId: i, children: o, inlinePreview: c = !1 } = e,
                 { analyticsLocations: x } = (0, A.Ay)(j.A.ROLE_MENTION),
                 h = (0, u.bG)([p.Ay], () => p.Ay.roleStyle),
                 f = (0, u.bG)([M.A], () => (null == i || null == l ? null : M.A.getRole(i, l))),
                 g = (0, b.jV)(i, f),
-                N = !d && null != f && !(0, T.Qv)(f),
+                N = !c && null != f && !(0, T.Qv)(f),
                 v = N && "dot" === h,
                 y = N && "username" === h,
                 C = g && null != f ? f.colorStrings : null,
@@ -285,7 +286,7 @@ n.d(
                     children: [
                         v &&
                             null != f.color &&
-                            (0, t.jsx)(c.W, {
+                            (0, t.jsx)(d.W, {
                                 color: (0, r.Hl)(f.color),
                                 colors: C,
                                 className: D.m,
@@ -296,7 +297,7 @@ n.d(
                     ],
                 });
             }
-            return d || null == n || null == i || (null == l && "@everyone" !== a)
+            return c || null == n || null == i || (null == l && "@everyone" !== a)
                 ? (0, t.jsx)(A.f5, { value: x, children: G() })
                 : (0, t.jsx)(A.f5, {
                       value: x,

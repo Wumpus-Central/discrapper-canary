@@ -2,8 +2,8 @@ n(321073);
 var i = n(477900),
     l = n(582128),
     r = n(613412),
-    s = n(855986),
-    a = n(933681),
+    a = n(855986),
+    s = n(933681),
     o = n(189213),
     c = n(785007),
     d = n(276293),
@@ -13,53 +13,53 @@ var i = n(477900),
     b = n(191023),
     h = n(834730),
     x = n(123292),
-    v = n(331322),
-    m = n(691885),
-    A = n(95477),
-    E = n(155718),
-    _ = n(47167),
-    f = n(410380),
-    C = n(568185),
-    I = n(219444),
+    m = n(331322),
+    v = n(691885),
+    I = n(95477),
+    A = n(155718),
+    E = n(47167),
+    _ = n(410380),
+    f = n(568185),
+    C = n(219444),
     j = n(284738),
     y = n(95701),
     k = n(769765),
     D = n(71393),
     G = n(994500),
     L = n(287809),
-    N = n(147036),
-    S = n(488926),
+    S = n(147036),
+    N = n(488926),
     U = n(499785),
     w = n(652215),
-    H = n(818348),
+    V = n(818348),
     R = n(792996),
-    V = n(438271);
+    T = n(438271);
 n.d(
     e,
     {},
     {
         default: function (t) {
-            let { guildId: e, transitionState: n, onSubmit: T, onClose: B } = t,
-                [O, X] = l.useState("null"),
-                [F, M] = l.useState(w.rbe.GUILD_TEXT),
+            let { guildId: e, transitionState: n, onSubmit: H, onClose: B } = t,
+                [F, O] = l.useState("null"),
+                [X, M] = l.useState(w.rbe.GUILD_TEXT),
                 [W, P] = l.useState(""),
                 [Z, q] = l.useState(!1),
-                J = (0, s.bG)([D.A], () => D.A.getGuild(e), [e]),
+                J = (0, a.bG)([D.A], () => D.A.getGuild(e), [e]),
                 K = (0, j.R)(e),
-                Q = (0, I.V)(J),
+                Q = (0, C.V)(J),
                 Y = l.useMemo(
                     () =>
                         (function (t) {
                             let { canCreateStageChannel: e, canCreateMediaChannel: n } = t,
                                 l = [
                                     {
-                                        icon: d.N,
+                                        icon: d.TextIcon,
                                         label: R.intl.string(R.t.pnuRXC),
                                         value: w.rbe.GUILD_TEXT,
                                         description: R.intl.string(R.t["Hf5Lb+"]),
                                     },
                                     {
-                                        icon: u.H,
+                                        icon: u.VoiceNormalIcon,
                                         label: R.intl.string(R.t.Sx55Oh),
                                         value: w.rbe.GUILD_VOICE,
                                         description: R.intl.string(R.t.pqfkoF),
@@ -68,13 +68,13 @@ n.d(
                             return (
                                 e &&
                                     l.push({
-                                        icon: p.q,
+                                        icon: p.StageIcon,
                                         label: R.intl.string(R.t.pNWst0),
                                         value: w.rbe.GUILD_STAGE_VOICE,
                                         description: R.intl.string(R.t.VPAwgo),
                                     }),
                                 l.push({
-                                    icon: g.b,
+                                    icon: g.ForumIcon,
                                     label: R.intl.string(R.t.eAVID5),
                                     value: w.rbe.GUILD_FORUM,
                                     description: R.intl.string(R.t.iZ5pgg),
@@ -88,18 +88,18 @@ n.d(
                                         isBeta: !0,
                                     }),
                                 l.map((t) => {
-                                    let { icon: e, label: n, value: l, description: r, isBeta: s } = t;
+                                    let { icon: e, label: n, value: l, description: r, isBeta: a } = t;
                                     return {
                                         name: (0, i.jsxs)("div", {
-                                            className: V.OA,
+                                            className: T.OA,
                                             children: [
-                                                (0, i.jsx)(e, { className: V.Kk }),
+                                                (0, i.jsx)(e, { className: T.Kk }),
                                                 (0, i.jsxs)("div", {
                                                     children: [
                                                         (0, i.jsxs)(h.E, {
                                                             variant: "body-md/normal",
                                                             color: "text-strong",
-                                                            children: [n, (0, i.jsx)(f.p, { isBeta: s })],
+                                                            children: [n, (0, i.jsx)(_.p, { isBeta: a })],
                                                         }),
                                                         (0, i.jsx)(h.E, {
                                                             variant: "body-xs/normal",
@@ -118,26 +118,26 @@ n.d(
                         })({ canCreateStageChannel: K, canCreateMediaChannel: Q }),
                     [K, Q],
                 ),
-                $ = (0, s.bG)([k.A], () => k.A.getCategories(e)._categories, [e]),
+                $ = (0, a.bG)([k.A], () => k.A.getCategories(e)._categories, [e]),
                 z = l.useMemo(
                     () =>
                         $.map((t) => {
                             let { channel: e } = t;
-                            return { id: e.id, value: e.id, label: (0, _.m1)(e, L.default, G.A) };
+                            return { id: e.id, value: e.id, label: (0, E.m1)(e, L.default, G.A) };
                         }),
                     [$],
                 ),
-                tt = Y.find((t) => t.value === F)?.channelIcon ?? H.FX,
+                tt = Y.find((t) => t.value === X)?.channelIcon ?? V.FX,
                 te = "" !== W;
             return (0, i.jsx)("form", {
                 onSubmit: function (t) {
                     if ((t.preventDefault(), !te)) return;
                     q(!0);
                     let n = {
-                        type: F,
+                        type: X,
                         name: W,
-                        parent_id: "null" !== O ? O : void 0,
-                        permission_overwrites: [{ id: e, type: E.r2.ROLE, allow: S.x3, deny: w.xBc.VIEW_CHANNEL }],
+                        parent_id: "null" !== F ? F : void 0,
+                        permission_overwrites: [{ id: e, type: A.r2.ROLE, allow: N.x3, deny: w.xBc.VIEW_CHANNEL }],
                     };
                     U.A.post({
                         url: w.Rsh.GUILD_CHANNELS(e),
@@ -146,13 +146,13 @@ n.d(
                         trackedActionData: {
                             event: r.NetworkActionNames.CHANNEL_CREATE,
                             properties: (t) =>
-                                (0, a.e0)({ is_private: !0, channel_id: t?.body?.id, channel_type: t?.body?.type }),
+                                (0, s.e0)({ is_private: !0, channel_id: t?.body?.id, channel_type: t?.body?.type }),
                         },
                         rejectWithError: !0,
                     })
                         .then(
                             (t) => {
-                                (C.A.checkGuildTemplateDirty(e), T(t.body.id), B());
+                                (f.A.checkGuildTemplateDirty(e), H(t.body.id), B());
                             },
                             (t) => {},
                         )
@@ -174,32 +174,32 @@ n.d(
                             type: "submit",
                         },
                     ],
-                    children: (0, i.jsxs)(v.B, {
+                    children: (0, i.jsxs)(m.B, {
                         gap: 16,
                         children: [
-                            (0, i.jsx)(m.l, {
+                            (0, i.jsx)(v.l, {
                                 label: R.intl.string(R.t.vHCZwr),
                                 placeholder: R.intl.string(R.t["g/Rr2S"]),
-                                value: O,
+                                value: F,
                                 options: z,
-                                onSelectionChange: X,
+                                onSelectionChange: O,
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
                             (0, i.jsx)(c.$d, {
                                 label: R.intl.string(R.t["7ZcXG2"]),
                                 options: Y,
-                                value: F,
+                                value: X,
                                 onChange: (t) => {
                                     let { value: e } = t;
                                     return M(e);
                                 },
                             }),
-                            (0, i.jsx)(A.k, {
+                            (0, i.jsx)(I.k, {
                                 label: R.intl.string(R.t.PVbHDl),
                                 value: W,
                                 onChange: function (t) {
-                                    ((0, y.ke)(F) && (t = (0, N.an)(t)), P(t));
+                                    ((0, y.ke)(X) && (t = (0, S.an)(t)), P(t));
                                 },
                                 maxLength: 100,
                                 placeholder: R.intl.string(R.t["bw/b8E"]),

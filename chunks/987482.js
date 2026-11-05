@@ -1,4 +1,4 @@
-n.r(e);
+n.r(t);
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -13,30 +13,30 @@ var l = n(477900),
     f = n(715482),
     x = n(224640),
     g = n(20742),
-    j = n(430993),
-    h = n(364840),
-    y = n(165862),
-    v = n(477782),
+    h = n(430993),
+    j = n(364840),
+    v = n(165862),
+    y = n(477782),
     b = n(265872),
     K = n(534514),
     A = n(834730),
     N = n(315982),
-    k = n(46653),
-    O = n(287809),
+    C = n(46653),
+    k = n(287809),
     w = n(129230),
-    C = n(53505),
+    O = n(53505),
     S = n(652215),
     D = n(792996),
     E = n(799622);
 let W = [
-        { getOs: () => D.intl.string(D.t.NK5ySJ), icon: E.Bt, url: () => (0, C.oW)("osx", !1), platformKey: 0 },
-        { getOs: () => D.intl.string(D.t.OvKGE6), icon: E.KF, url: () => (0, C.oW)("win", !1), platformKey: 1 },
+        { getOs: () => D.intl.string(D.t.NK5ySJ), icon: E.Bt, url: () => (0, O.oW)("osx", !1), platformKey: 0 },
+        { getOs: () => D.intl.string(D.t.OvKGE6), icon: E.KF, url: () => (0, O.oW)("win", !1), platformKey: 1 },
         {
             getOs: () => D.intl.string(D.t.dJB4PN),
             icon: E.pS,
             url: [
-                { url: () => (0, C.oW)("linux", !1, "deb"), getText: () => D.intl.string(D.t.Sodsus) },
-                { url: () => (0, C.oW)("linux", !1, "tar.gz"), getText: () => D.intl.string(D.t.G3U6IV) },
+                { url: () => (0, O.oW)("linux", !1, "deb"), getText: () => D.intl.string(D.t.Sodsus) },
+                { url: () => (0, O.oW)("linux", !1, "tar.gz"), getText: () => D.intl.string(D.t.G3U6IV) },
             ],
             platformKey: 2,
         },
@@ -46,31 +46,31 @@ let W = [
         { getOs: () => D.intl.string(D.t.wuQpJD), icon: E.yA, url: () => S.AMi.ANDROID, platformKey: 4 },
     ],
     F = { getOs: () => D.intl.string(D.t.OPUqI3), icon: E.yX, url: () => S.AMi.META_QUEST, platformKey: 5 };
-function R(t) {
-    let { os: e, url: n, onClick: s } = t,
+function R(e) {
+    let { os: t, url: n, onClick: s } = e,
         r = i.useRef(null),
         [a, o] = i.useState(!1),
         c = i.useCallback(
-            (t) => {
-                let { closePopout: i } = t;
+            (e) => {
+                let { closePopout: i } = e;
                 return Array.isArray(n)
-                    ? (0, l.jsx)(y.W, {
+                    ? (0, l.jsx)(v.W, {
                           "data-menu-migrated": !0,
                           navId: "download-app-menu",
                           "aria-label": D.intl.string(D.t["+1H47t"]),
                           onClose: i,
                           onSelect: void 0,
-                          children: n.map((t) =>
+                          children: n.map((e) =>
                               (0, l.jsx)(
-                                  v.Dr,
-                                  { id: t.url(), label: t.getText(), action: () => s(e, t.url()) },
-                                  t.url(),
+                                  y.Dr,
+                                  { id: e.url(), label: e.getText(), action: () => s(t, e.url()) },
+                                  e.url(),
                               ),
                           ),
                       })
                     : null;
             },
-            [e, n, s],
+            [t, n, s],
         );
     return Array.isArray(n)
         ? (0, l.jsx)(b.Y, {
@@ -80,30 +80,30 @@ function R(t) {
               position: "bottom",
               onRequestOpen: () => o(!0),
               onRequestClose: () => o(!1),
-              children: (t) =>
+              children: (e) =>
                   (0, l.jsx)(m.$, {
-                      ...t,
+                      ...e,
                       buttonRef: r,
                       text: D.intl.string(D.t["1WjMbC"]),
                       variant: "primary",
                       size: "sm",
                       fullWidth: !0,
-                      icon: a ? p.j : f.g,
+                      icon: a ? p.ChevronLargeUpIcon : f.ChevronLargeDownIcon,
                       iconPosition: "end",
                   }),
           })
         : (0, l.jsx)(m.$, {
               text: D.intl.string(D.t["1WjMbC"]),
-              onClick: () => s(e, n()),
+              onClick: () => s(t, n()),
               variant: "primary",
               size: "sm",
               fullWidth: !0,
               role: "link",
           });
 }
-function _(t) {
-    let { platform: e, onClick: n, onMouseEnter: i, isActive: s } = t,
-        { getOs: a, icon: o, url: c, platformKey: u } = e,
+function _(e) {
+    let { platform: t, onClick: n, onMouseEnter: i, isActive: s } = e,
+        { getOs: a, icon: o, url: c, platformKey: u } = t,
         d = a(),
         m = r()(E.Kk, o);
     return (0, l.jsx)("li", {
@@ -127,15 +127,15 @@ function _(t) {
     });
 }
 n.d(
-    e,
+    t,
     {},
     {
-        default: function (t) {
-            let { source: e, onClose: n, transitionState: s } = t,
-                a = (0, d.bG)([O.default], () => O.default.getCurrentUser()),
-                m = (0, d.bG)([k.default], () => k.default.getFingerprint()),
+        default: function (e) {
+            let { source: t, onClose: n, transitionState: s } = e,
+                a = (0, d.bG)([k.default], () => k.default.getCurrentUser()),
+                m = (0, d.bG)([C.default], () => C.default.getFingerprint()),
                 p = null == a || a.isClaimed(),
-                [f, y] = i.useState(
+                [f, v] = i.useState(
                     (function () {
                         switch (o().os?.family) {
                             case "OS X":
@@ -158,25 +158,25 @@ n.d(
                         }
                     })(),
                 );
-            function v(t, l) {
+            function y(e, l) {
                 ((null != u.getToken() || null != m) &&
                     w.default.track(S.HAw.DOWNLOAD_APP, {
-                        platform: t,
+                        platform: e,
                         ptb: !1,
                         released: !0,
                         has_e_mail: p,
-                        referring_location: e,
+                        referring_location: t,
                         qr_code: !1,
                     }),
                     p ? window.open(l, "_blank") : (n(), N.R()));
             }
-            function b(t) {
-                y(t);
+            function b(e) {
+                v(e);
             }
             return (
                 i.useEffect(() => {
-                    w.default.track(S.HAw.OPEN_MODAL, { type: "Download App", source: { location: e } });
-                }, [e]),
+                    w.default.track(S.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
+                }, [t]),
                 (0, l.jsxs)(x.d, {
                     size: c.Fr ? "md" : "lg",
                     onClose: n,
@@ -184,7 +184,7 @@ n.d(
                     "aria-label": D.intl.string(D.t["BK8LK+"]),
                     children: [
                         (0, l.jsx)(g.rQ, { title: D.intl.string(D.t["BK8LK+"]) }),
-                        (0, l.jsx)(j.c, {
+                        (0, l.jsx)(h.c, {
                             children: (0, l.jsxs)("div", {
                                 className: E.kL,
                                 children: [
@@ -201,16 +201,16 @@ n.d(
                                                 (0, l.jsxs)("ul", {
                                                     className: r()(E.Bn, E.Fw),
                                                     children: [
-                                                        W.map((t) =>
+                                                        W.map((e) =>
                                                             (0, l.jsx)(
                                                                 _,
                                                                 {
-                                                                    isActive: f === t.platformKey,
-                                                                    platform: t,
-                                                                    onClick: v,
+                                                                    isActive: f === e.platformKey,
+                                                                    platform: e,
+                                                                    onClick: y,
                                                                     onMouseEnter: b,
                                                                 },
-                                                                t.platformKey,
+                                                                e.platformKey,
                                                             ),
                                                         ),
                                                         (0, l.jsx)(
@@ -218,7 +218,7 @@ n.d(
                                                             {
                                                                 isActive: f === F.platformKey,
                                                                 platform: F,
-                                                                onClick: v,
+                                                                onClick: y,
                                                                 onMouseEnter: b,
                                                             },
                                                             F.platformKey,
@@ -239,16 +239,16 @@ n.d(
                                                 }),
                                             (0, l.jsx)("ul", {
                                                 className: r()(E.Bn, E.f$),
-                                                children: M.map((t) =>
+                                                children: M.map((e) =>
                                                     (0, l.jsx)(
                                                         _,
                                                         {
-                                                            isActive: f === t.platformKey,
-                                                            platform: t,
-                                                            onClick: v,
+                                                            isActive: f === e.platformKey,
+                                                            platform: e,
+                                                            onClick: y,
                                                             onMouseEnter: b,
                                                         },
-                                                        t.platformKey,
+                                                        e.platformKey,
                                                     ),
                                                 ),
                                             }),
@@ -257,7 +257,7 @@ n.d(
                                 ],
                             }),
                         }),
-                        (0, l.jsx)(h.j, {
+                        (0, l.jsx)(j.j, {
                             children: (0, l.jsx)(A.E, {
                                 variant: "body-sm/normal",
                                 children: D.intl.format(D.t["RJS+1P"], {}),

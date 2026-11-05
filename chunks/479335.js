@@ -1,39 +1,39 @@
-var s = r(477900),
-    a = r(582128),
-    c = r(855986),
-    n = r(477782),
-    t = r(497767),
-    u = r(267102),
-    l = r(144485),
-    o = r(814278),
-    d = r(259374),
-    p = r(46653),
-    f = r(792996);
-r.d(
-    i,
+var r = i(477900),
+    s = i(582128),
+    n = i(855986),
+    a = i(477782),
+    t = i(497767),
+    o = i(267102),
+    u = i(144485),
+    l = i(814278),
+    d = i(259374),
+    p = i(46653),
+    k = i(792996);
+i.d(
+    c,
     {},
     {
         u: function (e) {
-            let { userId: i, channelId: r, guildId: k, minimal: b = !1 } = e,
-                h = (0, d.k)({ channelId: r }),
-                v = (0, c.bG)([p.default], () => p.default.getId() === i),
-                g = (0, u.Us)(),
-                C = a.useCallback(() => {
-                    l.A.openSecureFramesUserVerificationModal(
+            let { userId: c, channelId: i, guildId: h, minimal: f = !1 } = e,
+                b = (0, d.k)({ channelId: i }),
+                C = (0, n.bG)([p.default], () => p.default.getId() === c),
+                v = (0, o.Us)(),
+                U = s.useCallback(() => {
+                    u.A.openSecureFramesUserVerificationModal(
+                        c,
                         i,
-                        r,
-                        () => (0, o.z4)({ userId: i, channelId: r, guildId: k }),
-                        g,
+                        () => (0, l.z4)({ userId: c, channelId: i, guildId: h }),
+                        v,
                     );
-                }, [g, r, k, i]);
-            return !h || v
+                }, [v, i, h, c]);
+            return !b || C
                 ? null
-                : (0, s.jsx)(n.Dr, {
+                : (0, r.jsx)(a.Dr, {
                       id: "secure-frames-user-verification",
-                      label: f.intl.string(f.t["8ErYvY"]),
-                      action: C,
-                      icon: b ? t.V : null,
-                      leadingAccessory: b ? { type: "icon", icon: t.V } : void 0,
+                      label: k.intl.string(k.t["8ErYvY"]),
+                      action: U,
+                      icon: f ? t.UserCheckIcon : null,
+                      leadingAccessory: f ? { type: "icon", icon: t.UserCheckIcon } : void 0,
                   });
         },
     },

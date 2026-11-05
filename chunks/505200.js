@@ -1,35 +1,36 @@
-var s = e(477900);
-e(582128);
-var a = e(646514),
-    i = e(996682),
-    c = e(27989);
-e.d(
-    t,
+t.r(h);
+var i = t(477900);
+t(582128);
+var e = t(646514),
+    l = t(996682),
+    r = t(27989);
+t.d(
+    h,
     {},
     {
-        A: function (l) {
+        RiotGamesNeutralIcon: function (s) {
             let {
-                    size: t = "md",
-                    width: e,
-                    height: h,
-                    color: n = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: r = "",
+                    size: h = "md",
+                    width: t,
+                    height: a,
+                    color: c = e.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
                     ...o
-                } = l,
-                v = (0, c.J)(t),
-                d = v?.width ?? e,
-                A = v?.height ?? h;
-            return (0, s.jsx)("svg", {
-                ...(0, i.A)(o),
+                } = s,
+                d = (0, r.J)(h),
+                p = d?.width ?? t,
+                w = d?.height ?? a;
+            return (0, i.jsx)("svg", {
+                ...(0, l.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: d,
-                height: A,
+                width: p,
+                height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, s.jsx)("path", {
-                    fill: "string" == typeof n ? n : n.css,
+                children: (0, i.jsx)("path", {
+                    fill: "string" == typeof c ? c : c.css,
                     d: "m12.5 20.96-1.02-2.58 9.92.5-.45 4.12-8.45-2.04ZM14.88 1 1 7.39 3.15 17h2.83l-.5-6.88.44-.13L7.62 17h2.95l-.11-8.38.43-.13 1.49 8.52h3.11l.74-10.14.43-.13.77 10.27h4.12L23 2.92 14.88 1Z",
-                    className: r,
+                    className: n,
                 }),
             });
         },

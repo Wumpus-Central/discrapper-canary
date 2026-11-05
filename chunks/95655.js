@@ -17,12 +17,12 @@ var t = l(477900),
     p = l(652215),
     E = l(792996),
     f = l(77709);
-function N(e) {
+function I(e) {
     let { channel: n } = e;
     return (0, g.bG)({ channelId: n.id })
         ? (0, t.jsx)(s.m, {
               text: E.intl.string(E.t.QyZ4Td),
-              children: (0, t.jsx)(r.m, {
+              children: (0, t.jsx)(r.ShieldLockIcon, {
                   size: "xs",
                   "aria-label": E.intl.string(E.t.VHXh8a),
                   color: a.A.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -30,7 +30,7 @@ function N(e) {
           })
         : null;
 }
-let I = i.memo(function (e) {
+let N = i.memo(function (e) {
     let { channel: n } = e,
         i = n.id,
         r = (0, m.Ay)(n);
@@ -96,8 +96,8 @@ let I = i.memo(function (e) {
                     ],
                 }),
             }),
-            (0, t.jsx)(N, { channel: n }),
+            (0, t.jsx)(I, { channel: n }),
         ],
     });
 });
-l.d(n, {}, { n: I });
+l.d(n, {}, { n: N });

@@ -9,8 +9,8 @@ var t = n(477900),
     u = n(933832),
     h = n(559106),
     g = n(22231),
-    m = n(95477),
-    p = n(714385),
+    p = n(95477),
+    m = n(714385),
     x = n(939249),
     b = n(646514),
     f = n(305866),
@@ -29,8 +29,8 @@ function $(e) {
             isCustom: r = !1,
             isSelected: o = !1,
             disabled: c = !1,
-            style: m = {},
-            onClick: p,
+            style: p = {},
+            onClick: m,
             isGradient: x = !1,
             "aria-label": f,
             gradientColors: j,
@@ -41,7 +41,7 @@ function $(e) {
     $ =
         x && null != j && j.length > 0
             ? { background: (0, k.r)(j, N) }
-            : { backgroundColor: null != l ? (0, d.Hl)(l) : m.backgroundColor };
+            : { backgroundColor: null != l ? (0, d.Hl)(l) : p.backgroundColor };
     let A = x ? j?.[0] : l,
         L = !1;
     return (
@@ -58,8 +58,8 @@ function $(e) {
                     [I.hb]: x,
                 }),
                 disabled: c,
-                onClick: () => p?.(x ? j : l),
-                style: { ...m, ...$ },
+                onClick: () => m?.(x ? j : l),
+                style: { ...p, ...$ },
                 "aria-label": f ?? (x ? v.intl.string(v.t.XpWmJz) : $.backgroundColor),
                 ...y,
                 role: null != e["aria-selected"] ? "option" : y.role,
@@ -156,7 +156,7 @@ let T = i.memo(function (e) {
             },
             [r, a],
         ),
-        P = (0, t.jsxs)(t.Fragment, {
+        D = (0, t.jsxs)(t.Fragment, {
             children: [
                 (0, t.jsx)(i.Suspense, {
                     fallback: null,
@@ -170,7 +170,7 @@ let T = i.memo(function (e) {
                     }),
                 }),
                 u,
-                (0, t.jsx)(m.k, {
+                (0, t.jsx)(p.k, {
                     value: T.input.slice(1),
                     onChange: z,
                     maxLength: 6,
@@ -178,7 +178,7 @@ let T = i.memo(function (e) {
                     trailing:
                         g && null != C
                             ? {
-                                  icon: p.d,
+                                  icon: m.EyeDropperIcon,
                                   onClick: async function () {
                                       if (null != C)
                                           try {
@@ -210,8 +210,8 @@ let T = i.memo(function (e) {
                 h,
             ],
         }),
-        w = b ?? f.l;
-    return (0, t.jsx)(w, { "aria-label": v.intl.string(v.t.WTqQ5e), className: s()(I.zi, k), children: P });
+        E = b ?? f.l;
+    return (0, t.jsx)(E, { "aria-label": v.intl.string(v.t.WTqQ5e), className: s()(I.zi, k), children: D });
 });
 n.d(
     l,
@@ -230,8 +230,8 @@ n.d(
                     gradientColors: u,
                     disabled: h,
                     onChange: g,
-                    renderDefaultButton: m,
-                    renderCustomButton: p,
+                    renderDefaultButton: p,
+                    renderCustomButton: m,
                     colorContainerClassName: x,
                     isGradient: b,
                     renderGradientCustomButton: f,
@@ -314,7 +314,7 @@ n.d(
                                         children: [
                                             (0, t.jsx)("div", {
                                                 className: s()(I.$R, x),
-                                                children: m({
+                                                children: p({
                                                     value: d,
                                                     color: n,
                                                     onChange: g,
@@ -324,7 +324,7 @@ n.d(
                                             }),
                                             (0, t.jsx)("div", {
                                                 className: s()(I.BQ, x),
-                                                children: p({ value: d, customColor: i, disabled: h, presets: r }),
+                                                children: m({ value: d, customColor: i, disabled: h, presets: r }),
                                             }),
                                         ],
                                     }),

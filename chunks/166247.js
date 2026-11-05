@@ -1,33 +1,33 @@
-var i = e(477900),
-    a = e(582128),
-    n = e(935399),
-    d = e(664499),
-    c = e(22856),
-    r = e(224640),
-    l = e(315629),
-    o = e(20742),
-    x = e(534514),
-    h = e(834730),
-    m = e(821609),
-    p = e(403581),
-    b = e(543862),
-    g = e(975571),
-    u = e(87719),
-    j = e(652215),
-    v = e(49999),
-    f = e(792996),
-    k = e(431901);
-e.d(
-    t,
+var i = t(477900),
+    a = t(582128),
+    n = t(935399),
+    c = t(664499),
+    d = t(22856),
+    r = t(224640),
+    l = t(315629),
+    o = t(20742),
+    h = t(534514),
+    x = t(834730),
+    m = t(821609),
+    p = t(403581),
+    b = t(543862),
+    g = t(975571),
+    u = t(87719),
+    j = t(652215),
+    v = t(49999),
+    f = t(792996),
+    k = t(431901);
+t.d(
+    e,
     {},
     {
         default: function (s) {
-            let { renderModalProps: t, dismissibleContent: e, markAsDismissed: N } = s,
-                { onClose: S, transitionState: w } = t,
-                { headingId: y } = (0, c.k)();
+            let { renderModalProps: e, dismissibleContent: t, markAsDismissed: N } = s,
+                { onClose: S, transitionState: w } = e,
+                { headingId: y } = (0, d.k)();
             return (
                 (0, n.Ay)(() => {
-                    (0, b.Wx)(e);
+                    (0, b.Wx)(t);
                 }),
                 a.useEffect(
                     () => () => {
@@ -47,19 +47,19 @@ e.d(
                             (0, i.jsx)("div", { className: k.cG, children: (0, i.jsx)(o.s_, { shouldColorMix: !0 }) }),
                             (0, i.jsx)("div", {
                                 className: k.JS,
-                                children: (0, i.jsx)(d.D, { alt: "", width: 360, height: "auto" }),
+                                children: (0, i.jsx)(c.D, { alt: "", width: 360, height: "auto" }),
                             }),
                             (0, i.jsxs)("div", {
                                 className: k.Qs,
                                 children: [
-                                    (0, i.jsx)(x.D, {
+                                    (0, i.jsx)(h.D, {
                                         id: y,
                                         variant: "nitro-md",
                                         color: "text-strong",
                                         className: k.wx,
                                         children: f.intl.string(f.t.Xm5q5l),
                                     }),
-                                    (0, i.jsx)(h.E, {
+                                    (0, i.jsx)(x.E, {
                                         variant: "body-md/normal",
                                         color: "text-subtle",
                                         className: k.rf,
@@ -78,7 +78,7 @@ e.d(
                                             (0, i.jsx)(m.$, {
                                                 variant: "primary",
                                                 size: "md",
-                                                icon: p.t,
+                                                icon: p.NitroWheelIcon,
                                                 text: f.intl.string(f.t["mHF+AF"]),
                                                 onClick: () => (0, u.x)(S),
                                             }),

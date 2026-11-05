@@ -2,8 +2,8 @@
 var a = t(477900),
     l = t(582128),
     r = t(855986),
-    u = t(214947),
-    i = t(73153),
+    i = t(214947),
+    u = t(73153),
     s = t(189252),
     c = t(994500),
     d = t(265872),
@@ -23,7 +23,7 @@ var a = t(477900),
     g = t(792996),
     b = t(636437);
 function O(e) {
-    let { onOpen: n, onClose: r, children: u, popoutPosition: i, popoutAlign: s } = e,
+    let { onOpen: n, onClose: r, children: i, popoutPosition: u, popoutAlign: s } = e,
         [c, O] = l.useState(!1),
         k = l.useRef(null),
         P = l.useCallback(() => {
@@ -207,6 +207,7 @@ function O(e) {
                                 t.e(893190),
                                 t.e(393336),
                                 t.e(146652),
+                                t.e(713708),
                                 t.e(776273),
                                 t.e(391763),
                                 t.e(885533),
@@ -314,6 +315,7 @@ function O(e) {
                                 t.e(29542),
                                 t.e(363430),
                                 t.e(588251),
+                                t.e(350695),
                                 t.e(248804),
                                 t.e(638114),
                                 t.e(122574),
@@ -357,6 +359,7 @@ function O(e) {
                                 t.e(256372),
                                 t.e(29542),
                                 t.e(419690),
+                                t.e(300619),
                                 t.e(465694),
                                 t.e(13107),
                                 t.e(248804),
@@ -421,7 +424,7 @@ function O(e) {
     return (0, a.jsx)(d.Y, {
         targetElementRef: k,
         animation: d.Y.Animation.NONE,
-        position: i,
+        position: u,
         align: s,
         autoInvert: !1,
         shouldShow: c,
@@ -431,7 +434,7 @@ function O(e) {
         clickTrap: !0,
         children: (e, n) => {
             let { isShown: t } = n;
-            return u(m, t, e, k);
+            return i(m, t, e, k);
         },
     });
 }
@@ -439,7 +442,7 @@ function k() {
     let e = (0, r.bG)([c.A], () => c.A.getPendingCount() > 0);
     return (
         l.useEffect(() => {
-            i.h.dispatch({ type: "FRIENDS_LIST_POPOUT_MOUNTED" });
+            u.h.dispatch({ type: "FRIENDS_LIST_POPOUT_MOUNTED" });
         }, []),
         (0, a.jsx)(O, {
             popoutPosition: "bottom",
@@ -449,7 +452,7 @@ function k() {
                     ...l,
                     ref: r,
                     onClick: n,
-                    icon: u.$,
+                    icon: i.FriendsIcon,
                     tooltip: g.intl.string(g.t.TdEu5X),
                     showBadge: e,
                     selected: t,

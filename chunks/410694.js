@@ -114,7 +114,7 @@ o.d(
                                             onClick: I,
                                             "aria-label": m,
                                             focusProps: { offset: 2 },
-                                            children: (0, c.jsx)(l.P, { size: "md", color: "currentColor" }),
+                                            children: (0, c.jsx)(l.XSmallIcon, { size: "md", color: "currentColor" }),
                                         }),
                                     }),
                                 ],

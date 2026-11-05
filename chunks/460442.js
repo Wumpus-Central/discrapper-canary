@@ -3,8 +3,8 @@ n(582128);
 var i = n(503698),
     s = n.n(i),
     c = n(646514),
-    l = n(947641),
-    o = n(834730),
+    o = n(947641),
+    l = n(834730),
     u = n(559758),
     a = n(492518),
     d = n(792996),
@@ -21,7 +21,7 @@ n.d(
             let { count: t } = e;
             return (0, r.jsx)(x, {
                 style: h.RF,
-                icon: (0, r.jsx)(o.E, {
+                icon: (0, r.jsx)(l.E, {
                     variant: "body-sm/medium",
                     color: "text-overlay-light",
                     children: d.intl.format(d.t.F6iMs4, { count: t }),
@@ -32,7 +32,7 @@ n.d(
             let { isHoveringOrFocusing: t } = e;
             return (0, r.jsx)(x, {
                 style: s()(h.AI, t && h.mW),
-                icon: (0, r.jsx)(l.r, {
+                icon: (0, r.jsx)(o.CheckmarkLargeBoldIcon, {
                     size: "custom",
                     color: c.A.colors.WHITE,
                     width: 38,
@@ -46,7 +46,9 @@ n.d(
             let { isHoveringOrFocusing: t, loading: n } = e;
             return (0, r.jsx)(x, {
                 style: s()(h.U4, { [h.HI]: t || n }),
-                icon: n ? (0, r.jsx)(a.k, {}) : (0, r.jsx)(u.y, { size: "lg", color: c.A.unsafe_rawColors.WHITE_500 }),
+                icon: n
+                    ? (0, r.jsx)(a.k, {})
+                    : (0, r.jsx)(u.HeartOutlineIcon, { size: "lg", color: c.A.unsafe_rawColors.WHITE_500 }),
             });
         },
     },

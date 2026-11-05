@@ -1,3 +1,4 @@
+a.r(t);
 var i = a(477900);
 a(582128);
 var r = a(646514),
@@ -7,7 +8,7 @@ a.d(
     t,
     {},
     {
-        o: function (e) {
+        EmojiSlightlySmilingFaceIcon: function (e) {
             let {
                     size: t = "md",
                     width: a,

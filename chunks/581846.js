@@ -352,8 +352,8 @@ var T = i(462887),
     J = i(789645),
     V = i(308528),
     $ = i(398590),
-    Y = i(736653),
-    X = i(186111),
+    X = i(736653),
+    Y = i(186111),
     ee = i(975571);
 let es = (e) => {
         let { className: s, width: i = 214, height: l = 165 } = e;
@@ -892,7 +892,7 @@ function ea(e) {
                                       var e;
                                       return (
                                           (e = s.id),
-                                          void (X.A.hasLayers() && (0, $.jH)(),
+                                          void (Y.A.hasLayers() && (0, $.jH)(),
                                           V.A.openPrivateChannel({ recipientIds: e }),
                                           l())
                                       );
@@ -916,7 +916,7 @@ let er = function (e) {
             a = [...s].map((e) => (0, t.jsx)(ea, { user: e, trialCreationResult: i.get(e.id), onClose: l }, e.id)),
             r = (0, f.bG)([N.A], () => N.A.getReferralsRemaining());
         h()(null !== r, "Referrals remaining should not be null");
-        let n = (0, Y.DP)(),
+        let n = (0, X.DP)(),
             C = (0, T.q)(n),
             o = M.intl.string(M.t.Pcb7KF),
             c = [...i.values()].filter((e) => e === d.o.SUCCESS).length;
@@ -929,7 +929,7 @@ let er = function (e) {
                     (0, t.jsx)(q.D, {
                         onClick: l,
                         className: el.cG,
-                        children: (0, t.jsx)(J.P, { size: "custom", width: 20, height: 20 }),
+                        children: (0, t.jsx)(J.XSmallIcon, { size: "custom", width: 20, height: 20 }),
                     }),
                     (0, t.jsx)(C ? ei : es, { className: el.nr }),
                     (0, t.jsx)(L.D, { variant: "heading-lg/semibold", className: el.R_, children: o }),

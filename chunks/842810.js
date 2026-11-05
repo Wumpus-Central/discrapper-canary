@@ -1,74 +1,74 @@
 var t = n(477900),
     o = n(582128),
     a = n(165862),
-    d = n(477782),
-    c = n(885574),
-    s = n(548411),
-    l = n(554830),
-    r = n(39623),
+    c = n(477782),
+    d = n(885574),
+    r = n(548411),
+    s = n(554830),
+    l = n(39623),
     g = n(952270),
     b = n(442433),
     u = n(643056),
     h = n(988341),
     f = n(234e3),
     p = n(327791),
-    y = n(470739),
-    x = n(577931),
-    I = n(792996);
+    I = n(470739),
+    y = n(577931),
+    x = n(792996);
 n.d(
     i,
     {},
     {
         default: function (e) {
-            let { badge: i, onClosePopout: n, onAction: m, onSelect: _ } = e,
-                { reorderableBadges: C, hiddenBadges: j } = (0, x.A)(),
-                { tenureBadgeHideable: A } = u.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
-                B = o.useMemo(() => (0, h.jg)({ tenureBadgeHideable: A }), [A]),
-                v = (0, p.A)(),
-                D = B.has(i.badge_id),
-                k = i.hidden ?? !1,
-                L = o.useMemo(
+            let { badge: i, onClosePopout: n, onAction: A, onSelect: m } = e,
+                { reorderableBadges: L, hiddenBadges: _ } = (0, y.A)(),
+                { tenureBadgeHideable: C } = u.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
+                j = o.useMemo(() => (0, h.jg)({ tenureBadgeHideable: C }), [C]),
+                w = (0, p.A)(),
+                B = j.has(i.badge_id),
+                v = i.hidden ?? !1,
+                D = o.useMemo(
                     () =>
-                        C.map((e) => {
+                        L.map((e) => {
                             let { badge_id: i } = e;
                             return i;
                         }),
-                    [C],
+                    [L],
                 ),
-                w = L.indexOf(i.badge_id),
-                E = v && -1 !== w,
-                M = 0 === w,
-                S = w === L.length - 1;
-            function K(e) {
-                (m(i.badge_id),
+                k = D.indexOf(i.badge_id),
+                E = w && -1 !== k,
+                M = 0 === k,
+                R = k === D.length - 1;
+            function S(e) {
+                (A(i.badge_id),
                     (0, f.RC)({
                         badgeId: i.badge_id,
                         hidden: e,
-                        reorderableBadgeIds: L,
-                        hiddenBadgeIds: j.map((e) => {
+                        reorderableBadgeIds: D,
+                        hiddenBadgeIds: _.map((e) => {
                             let { badge_id: i } = e;
                             return i;
                         }),
-                        canReorder: v,
+                        canReorder: w,
                     }));
             }
             return (0, t.jsx)(a.W, {
                 navId: "badge-customization-context",
                 onClose: b.Z_,
-                "aria-label": I.intl.string(I.t["2ia+9V"]),
-                onSelect: _,
-                children: (0, t.jsxs)(d.rX, {
+                "aria-label": x.intl.string(x.t["2ia+9V"]),
+                onSelect: m,
+                children: (0, t.jsxs)(c.rX, {
                     label: i.name,
                     children: [
-                        (0, t.jsx)(d.Dr, {
+                        (0, t.jsx)(c.Dr, {
                             id: "view-badge-details",
-                            iconLeft: c.CircleInformationIcon,
-                            leadingAccessory: { type: "icon", icon: c.CircleInformationIcon },
-                            label: I.intl.string(I.t["2ia+9V"]),
-                            subtext: D ? I.intl.string((0, h.hK)(i.badge_id)) : void 0,
+                            iconLeft: d.CircleInformationIcon,
+                            leadingAccessory: { type: "icon", icon: d.CircleInformationIcon },
+                            label: x.intl.string(x.t["2ia+9V"]),
+                            subtext: B ? x.intl.string((0, h.hK)(i.badge_id)) : void 0,
                             action: function () {
                                 (n(),
-                                    (0, y.openBadgeDirectoryModal)({
+                                    (0, I.openBadgeDirectoryModal)({
                                         initialBadgeId: i.badge_id,
                                         viewingCurrentUserBadges: !0,
                                     }));
@@ -76,41 +76,41 @@ n.d(
                         }),
                         E &&
                             !M &&
-                            (0, t.jsx)(d.Dr, {
+                            (0, t.jsx)(c.Dr, {
                                 id: "move-badge-to-front",
-                                iconLeft: s.Z,
-                                leadingAccessory: { type: "icon", icon: s.Z },
-                                label: I.intl.string(I.t.BpXa17),
+                                iconLeft: r.ArrowLargeLeftIcon,
+                                leadingAccessory: { type: "icon", icon: r.ArrowLargeLeftIcon },
+                                label: x.intl.string(x.t.BpXa17),
                                 action: function () {
-                                    (0, f.hB)((0, f.i1)(L, w, 0));
+                                    (0, f.hB)((0, f.i1)(D, k, 0));
                                 },
                             }),
                         E &&
-                            !S &&
-                            (0, t.jsx)(d.Dr, {
+                            !R &&
+                            (0, t.jsx)(c.Dr, {
                                 id: "move-badge-to-back",
-                                iconLeft: l.K,
-                                leadingAccessory: { type: "icon", icon: l.K },
-                                label: I.intl.string(I.t["4/7x+3"]),
+                                iconLeft: s.ArrowLargeRightIcon,
+                                leadingAccessory: { type: "icon", icon: s.ArrowLargeRightIcon },
+                                label: x.intl.string(x.t["4/7x+3"]),
                                 action: function () {
-                                    (0, f.hB)((0, f.i1)(L, w, L.length - 1));
+                                    (0, f.hB)((0, f.i1)(D, k, D.length - 1));
                                 },
                             }),
-                        k
-                            ? (0, t.jsx)(d.Dr, {
+                        v
+                            ? (0, t.jsx)(c.Dr, {
                                   id: "unhide-badge",
-                                  iconLeft: r.EyeIcon,
-                                  leadingAccessory: { type: "icon", icon: r.EyeIcon },
-                                  label: I.intl.string(I.t.RXOPc3),
-                                  action: () => K(!1),
+                                  iconLeft: l.EyeIcon,
+                                  leadingAccessory: { type: "icon", icon: l.EyeIcon },
+                                  label: x.intl.string(x.t.RXOPc3),
+                                  action: () => S(!1),
                               })
-                            : !D &&
-                              (0, t.jsx)(d.Dr, {
+                            : !B &&
+                              (0, t.jsx)(c.Dr, {
                                   id: "hide-badge",
                                   iconLeft: g.EyeSlashIcon,
                                   leadingAccessory: { type: "icon", icon: g.EyeSlashIcon },
-                                  label: I.intl.string(I.t.xSWJPo),
-                                  action: () => K(!0),
+                                  label: x.intl.string(x.t.xSWJPo),
+                                  action: () => S(!0),
                               }),
                     ],
                 }),

@@ -22,42 +22,42 @@ var i = n(477900),
     _ = n(565645),
     y = n(444927),
     E = n(47167),
-    S = n(713654),
-    A = n(915089),
-    I = n(121681),
+    I = n(713654),
+    S = n(915089),
+    A = n(121681),
     k = n(69282),
-    M = n(657048),
-    T = n(95701),
-    w = n(34457),
-    B = n(769765),
-    L = n(317525),
+    T = n(657048),
+    L = n(95701),
+    M = n(34457),
+    w = n(769765),
+    B = n(317525),
     z = n(71393),
     D = n(994500),
     O = n(287809),
     G = n(147925),
     R = n(240248),
-    F = n(500345),
-    J = n(136722),
-    K = n(488926),
-    P = n(652215);
+    P = n(500345),
+    F = n(136722),
+    J = n(488926),
+    K = n(652215);
 function Q(e, t) {
     let n = { [t.id]: t };
     return e.filter((e) => {
-        let t = K.aH({ forceRoles: n, context: e }),
-            i = P.xBc.VIEW_CHANNEL;
-        return (e.isGuildVocal() && (i = J.WQ(i, P.xBc.CONNECT)), J.zy(t, i) && !K.MJ(i, e));
+        let t = J.aH({ forceRoles: n, context: e }),
+            i = K.xBc.VIEW_CHANNEL;
+        return (e.isGuildVocal() && (i = F.WQ(i, K.xBc.CONNECT)), F.zy(t, i) && !J.MJ(i, e));
     });
 }
 var q = n(417360),
     H = n(898612),
     $ = n(792996),
     V = n(397515);
-let W = (0, A.Ld)(),
-    Z = (0, A.Ld)(),
-    U = (0, R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+let W = (0, S.Ld)(),
+    U = (0, S.Ld)(),
+    Z = (0, R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function X(e) {
     let { emojiId: t, emojiName: n, className: l } = e,
-        s = (0, a.bG)([I.Ay], () => (null != t ? I.Ay.getCustomEmojiById(t) : void 0));
+        s = (0, a.bG)([A.Ay], () => (null != t ? A.Ay.getCustomEmojiById(t) : void 0));
     return (0, i.jsx)(_.A, { emojiId: t, emojiName: n, animated: s?.animated ?? !1, className: l });
 }
 function Y(e) {
@@ -108,7 +108,11 @@ function ee(e) {
                       (0, i.jsx)("div", {
                           className: V.p_,
                           children: (0, i.jsx)(Y, {
-                              icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor", className: V.aL }),
+                              icon: (0, i.jsx)(g.ChannelListPlusIcon, {
+                                  size: "md",
+                                  color: "currentColor",
+                                  className: V.aL,
+                              }),
                               checked: o,
                               onChange: function (e) {
                                   for (let t of l) s.has(t) || a(t, e);
@@ -147,7 +151,7 @@ function ee(e) {
                                       }),
                                   ],
                               },
-                              (0, F.nh)(e),
+                              (0, P.nh)(e),
                           ),
                       ),
                   }),
@@ -166,9 +170,9 @@ function et(e) {
         } = e,
         m = n.role_benefits.benefits,
         [h, u] = l.useState(() => new Set(m)),
-        x = l.useMemo(() => m.filter(F.B1), [m]),
+        x = l.useMemo(() => m.filter(P.B1), [m]),
         g = (0, q.A)(x),
-        f = l.useMemo(() => m.filter(F.b1), [m]),
+        f = l.useMemo(() => m.filter(P.b1), [m]),
         p = l.useMemo(() => new Set(g.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [g, s]),
         v = l.useMemo(() => new Set(f.filter((e) => r.some((t) => (0, o.A)(e, t)))), [r, f]);
     function N(e, t) {
@@ -181,8 +185,8 @@ function et(e) {
         e.preventDefault();
         let t = m.filter((e) => h.has(e));
         (a(
-            t.filter(F.B1).filter((e) => !p.has(e)),
-            t.filter(F.b1).filter((e) => !v.has(e)),
+            t.filter(P.B1).filter((e) => !p.has(e)),
+            t.filter(P.b1).filter((e) => !v.has(e)),
         ),
             c());
     }
@@ -222,7 +226,7 @@ function et(e) {
 }
 function en(e) {
     let { guildId: t, role: n, channelCount: l, onSelect: s } = e,
-        r = (0, k.Xx)({ guildId: t, roleId: n.id, size: U });
+        r = (0, k.Xx)({ guildId: t, roleId: n.id, size: Z });
     return (0, i.jsxs)(f.D, {
         className: V.xf,
         onClick: s,
@@ -231,12 +235,12 @@ function en(e) {
                 className: V.N,
                 children:
                     null != r
-                        ? (0, i.jsx)(M.A, { ...r })
-                        : (0, i.jsx)(p.i, {
+                        ? (0, i.jsx)(T.A, { ...r })
+                        : (0, i.jsx)(p.ShieldUserIcon, {
                               size: "custom",
                               width: 23,
                               height: 23,
-                              color: n.colorString ?? P.TpD,
+                              color: n.colorString ?? K.TpD,
                               className: V.bO,
                           }),
             }),
@@ -262,15 +266,15 @@ function en(e) {
 }
 function ei(e) {
     let { guild: t, onSelect: n } = e,
-        s = (0, a.bG)([L.A], () => L.A.getSortedRoles(t.id)),
-        r = (0, a.bG)([B.A], () => B.A.getCategories(t.id)),
+        s = (0, a.bG)([B.A], () => B.A.getSortedRoles(t.id)),
+        r = (0, a.bG)([w.A], () => w.A.getCategories(t.id)),
         o = l.useMemo(
             () =>
                 r._categories.flatMap((e) =>
                     r[e.channel.id]
                         .filter((e) => {
                             let { channel: t } = e;
-                            return T.JT.has(t.type);
+                            return L.JT.has(t.type);
                         })
                         .map((e) => {
                             let { channel: t } = e;
@@ -282,7 +286,7 @@ function ei(e) {
         d = l.useMemo(
             () =>
                 s.flatMap((e) => {
-                    if ((0, w.Oy)(e) || e.tags?.subscription_listing_id != null || (0, w.sx)(e, P.Lti)) return [];
+                    if ((0, M.Oy)(e) || e.tags?.subscription_listing_id != null || (0, M.sx)(e, K.Lti)) return [];
                     let t = Q(o, e).length;
                     return t > 0 ? { role: e, channelCount: t } : [];
                 }),
@@ -333,12 +337,12 @@ function es(e) {
     null != s && (o.current = s);
     let d = s ?? o.current,
         c = (0, y.A)(() => {
-            let e = B.A.getCategories(n);
+            let e = w.A.getCategories(n);
             return e._categories.flatMap((t) =>
                 e[t.channel.id]
                     .filter((e) => {
                         let { channel: t } = e;
-                        return T.JT.has(t.type);
+                        return L.JT.has(t.type);
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -364,7 +368,7 @@ function es(e) {
                 "data-migration-pending": !0,
                 children: [
                     (0, i.jsx)(x.D, {
-                        id: Z,
+                        id: U,
                         variant: "heading-sm/semibold",
                         children: $.intl.format($.t.iuPodG, { roleName: d.name }),
                     }),
@@ -379,7 +383,7 @@ function es(e) {
                         (0, i.jsx)("div", {
                             className: V.p_,
                             children: (0, i.jsx)(Y, {
-                                icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor" }),
+                                icon: (0, i.jsx)(g.ChannelListPlusIcon, { size: "md", color: "currentColor" }),
                                 checked: u.size === h.length,
                                 onChange: function (e) {
                                     for (let t of h) p(t.id, e);
@@ -394,7 +398,7 @@ function es(e) {
                     (0, i.jsx)("div", {
                         className: V.p_,
                         children: h.map((e) => {
-                            let t = (0, S._U)(e.type) ?? v.N;
+                            let t = (0, I._U)(e.type) ?? v.TextIcon;
                             return (0, i.jsx)(
                                 Y,
                                 {
@@ -441,7 +445,7 @@ function er(e) {
     return (0, i.jsx)(m.EO, {
         "data-migration-pending": !0,
         transitionState: t,
-        "aria-labelledby": null == a ? W : Z,
+        "aria-labelledby": null == a ? W : U,
         parentComponent: "ImportBenefitsModal",
         children: (0, i.jsxs)(C.t, {
             contentDisplay: "flex",

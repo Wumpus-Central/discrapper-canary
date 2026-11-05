@@ -13,7 +13,7 @@ l.d(
             return (0, s.jsxs)("div", {
                 className: d.p,
                 children: [
-                    (0, s.jsx)(i.D, { size: "md", color: "var(--icon-muted)", "aria-hidden": !0 }),
+                    (0, s.jsx)(i.MagicWandIcon, { size: "md", color: "var(--icon-muted)", "aria-hidden": !0 }),
                     (0, s.jsx)(a.E, {
                         variant: "body-sm/normal",
                         color: "text-muted",

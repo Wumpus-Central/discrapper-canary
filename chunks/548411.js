@@ -1,35 +1,36 @@
-var h = i(477900);
+i.r(t);
+var r = i(477900);
 i(582128);
 var a = i(646514),
     e = i(996682),
-    l = i(27989);
+    h = i(27989);
 i.d(
     t,
     {},
     {
-        Z: function (s) {
+        ArrowLargeLeftIcon: function (s) {
             let {
                     size: t = "md",
                     width: i,
-                    height: r,
+                    height: l,
                     color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: d = "",
-                    ...n
+                    colorClass: n = "",
+                    ...o
                 } = s,
-                p = (0, l.J)(t),
-                o = p?.width ?? i,
-                w = p?.height ?? r;
-            return (0, h.jsx)("svg", {
-                ...(0, e.A)(n),
+                d = (0, h.J)(t),
+                p = d?.width ?? i,
+                w = d?.height ?? l;
+            return (0, r.jsx)("svg", {
+                ...(0, e.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, h.jsx)("path", {
+                children: (0, r.jsx)("path", {
                     fill: "string" == typeof c ? c : c.css,
                     d: "M3.3 11.3a1 1 0 0 0 0 1.4l8 8a1 1 0 1 0 1.4-1.4L6.42 13H20a1 1 0 1 0 0-2H6.41l6.3-6.3a1 1 0 0 0-1.42-1.4l-8 8Z",
-                    className: d,
+                    className: n,
                 }),
             });
         },

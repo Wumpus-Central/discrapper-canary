@@ -1,6 +1,6 @@
 n.d(t, { default: () => O });
-var i = n(477900),
-    a = n(582128),
+var a = n(477900),
+    i = n(582128),
     l = n(435558),
     r = n.n(l),
     s = n(855986),
@@ -26,70 +26,70 @@ var N = n(811091),
     G = n(508654),
     D = n(327241),
     y = n(834730),
-    _ = n(727419),
-    I = n(576705),
+    I = n(727419),
+    _ = n(576705),
     M = n(652215),
-    P = n(792996),
+    S = n(792996),
     w = n(426781);
 function L(e) {
     let { guildId: t, onClose: n } = e,
-        a = (0, s.bG)(
-            [p.A, I.A],
+        i = (0, s.bG)(
+            [p.A, _.A],
             () => {
                 let e = p.A.getGuild(t);
-                return I.A.can(M.xBc.MANAGE_ROLES, e);
+                return _.A.can(M.xBc.MANAGE_ROLES, e);
             },
             [t],
         );
-    return (0, i.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: w.kL,
         children: [
-            (0, i.jsx)(u.D, {
+            (0, a.jsx)(u.D, {
                 color: "text-strong",
                 variant: "heading-xl/semibold",
                 className: w.DD,
-                children: P.intl.string(P.t["WgZ+3D"]),
+                children: S.intl.string(S.t["WgZ+3D"]),
             }),
-            (0, i.jsx)(y.E, {
+            (0, a.jsx)(y.E, {
                 color: "text-default",
                 variant: "body-sm/normal",
                 className: w.VA,
-                children: P.intl.string(P.t["v/S/PG"]),
+                children: S.intl.string(S.t["v/S/PG"]),
             }),
-            a &&
-                (0, i.jsx)(y.E, {
+            i &&
+                (0, a.jsx)(y.E, {
                     color: "text-default",
                     variant: "body-sm/normal",
                     className: w.Ec,
-                    children: P.intl.format(P.t["K+DH2o"], {
+                    children: S.intl.format(S.t["K+DH2o"], {
                         onClick: () => {
-                            (_.A.open(t, M.BEX.ROLES), n());
+                            (I.A.open(t, M.BEX.ROLES), n());
                         },
                     }),
                 }),
         ],
     });
 }
-var S = n(823508),
+var P = n(823508),
     T = n(988794),
     V = n(790782),
     q = n(968588);
 function O(e) {
     let { transitionState: t, onClose: l, guildId: y } = e,
-        _ = (0, A.GV)(),
-        I = (0, s.bG)([p.A], () => p.A.getGuild(y)),
-        w = (0, k.A)(I?.id),
+        I = (0, A.GV)(),
+        _ = (0, s.bG)([p.A], () => p.A.getGuild(y)),
+        w = (0, k.A)(_?.id),
         O = (0, G.Ay)(y),
-        U = a.useRef(j.Ay.ackMessageId(y, V.P.GUILD_EVENT)),
-        z = (0, S.A)();
+        U = i.useRef(j.Ay.ackMessageId(y, V.P.GUILD_EVENT)),
+        z = (0, P.A)();
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             (O.forEach((e) => C.A.getGuildEventUserCounts(y, e.id, [])), C.A.getGuildEventsForCurrentUser(y));
         }, [O, y]),
         (0, E.Ay)(() => {
             v.default.track(M.HAw.OPEN_MODAL, { type: T.BV, guild_id: y, guild_events_count: O.length });
         }),
-        a.useEffect(() => {
+        i.useEffect(() => {
             r()(O)
                 .map((e) => e.creator_id)
                 .filter(b.Vq)
@@ -98,34 +98,34 @@ function O(e) {
                     f.A.requestMember(y, e);
                 });
         }, [y, O]),
-        a.useEffect(() => {
+        i.useEffect(() => {
             null != y && (0, x.hK)(y, V.P.GUILD_EVENT);
         }, [y]),
-        (0, i.jsxs)(d.EO, {
+        (0, a.jsxs)(d.EO, {
             size: d.rI.MEDIUM,
             transitionState: t,
-            "aria-labelledby": _,
+            "aria-labelledby": I,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
-                (0, i.jsxs)(d.rQ, {
+                (0, a.jsxs)(d.rQ, {
                     className: q.wx,
                     "data-migration-pending": !0,
                     children: [
-                        (0, i.jsx)(o.CalendarIcon, { size: "md", color: "currentColor", className: q.Kk }),
-                        (0, i.jsx)(u.D, {
-                            id: _,
+                        (0, a.jsx)(o.CalendarIcon, { size: "md", color: "currentColor", className: q.Kk }),
+                        (0, a.jsx)(u.D, {
+                            id: I,
                             variant: "heading-sm/semibold",
                             children:
                                 O.length > 0
-                                    ? P.intl.formatToPlainString(P.t.IBdqSu, { number: O.length })
-                                    : P.intl.string(P.t.tlopTM),
+                                    ? S.intl.formatToPlainString(S.t.IBdqSu, { number: O.length })
+                                    : S.intl.string(S.t.tlopTM),
                         }),
                         w &&
-                            (0, i.jsxs)(i.Fragment, {
+                            (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", { className: q.yF, children: "|" }),
-                                    (0, i.jsx)(m.$, {
+                                    (0, a.jsx)("div", { className: q.yF, children: "|" }),
+                                    (0, a.jsx)(m.$, {
                                         variant: "primary",
                                         size: "sm",
                                         onClick: function () {
@@ -150,6 +150,7 @@ function O(e) {
                                                     n.e(489218),
                                                     n.e(268582),
                                                     n.e(161379),
+                                                    n.e(258398),
                                                     n.e(50015),
                                                     n.e(232551),
                                                     n.e(70833),
@@ -162,8 +163,8 @@ function O(e) {
                                                     n.e(159957),
                                                     n.e(728136),
                                                     n.e(643104),
-                                                    n.e(368426),
                                                     n.e(680029),
+                                                    n.e(847158),
                                                     n.e(480436),
                                                     n.e(409391),
                                                     n.e(810262),
@@ -175,28 +176,28 @@ function O(e) {
                                                     n.e(664743),
                                                     n.e(426226),
                                                 ]).then(n.bind(n, 688218));
-                                                return (t) => (0, i.jsx)(e, { ...t, guildId: y });
+                                                return (t) => (0, a.jsx)(e, { ...t, guildId: y });
                                             }, z);
                                         },
-                                        text: P.intl.string(P.t["60lJ0C"]),
+                                        text: S.intl.string(S.t["60lJ0C"]),
                                     }),
                                 ],
                             }),
-                        (0, i.jsx)(g.D, {
+                        (0, a.jsx)(g.D, {
                             onClick: l,
                             className: q.gb,
-                            "aria-label": P.intl.string(P.t.cpT0Cq),
-                            children: (0, i.jsx)(h.P, { size: "md", color: "currentColor", className: q.Kk }),
+                            "aria-label": S.intl.string(S.t.cpT0Cq),
+                            children: (0, a.jsx)(h.XSmallIcon, { size: "md", color: "currentColor", className: q.Kk }),
                         }),
                     ],
                 }),
-                (0, i.jsx)(d.$m, {
+                (0, a.jsx)(d.$m, {
                     className: q.Qs,
                     "data-migration-pending": !0,
                     children:
                         O.length > 0
                             ? O.map((e) =>
-                                  (0, i.jsx)(
+                                  (0, a.jsx)(
                                       D.A,
                                       {
                                           guildEvent: e,
@@ -206,7 +207,7 @@ function O(e) {
                                       e.id,
                                   ),
                               )
-                            : (0, i.jsx)(L, { guildId: y, onClose: l }),
+                            : (0, a.jsx)(L, { guildId: y, onClose: l }),
                 }),
             ],
         })

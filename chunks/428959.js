@@ -210,7 +210,7 @@ function y(t) {
                         }
                     },
                     variant: "expressive",
-                    icon: S.t,
+                    icon: S.NitroWheelIcon,
                     loading: I,
                 },
             ],

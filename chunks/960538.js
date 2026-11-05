@@ -81,7 +81,7 @@ class j extends l.Component {
                         onMouseEnter: () => (0, p.K)(E.Vl.AddReactionPopoutMouseEntered),
                         onFocus: () => (0, p.K)(E.Vl.AddReactionPopoutFocused),
                         className: r()(o.reactionBtn, { [o.active]: a }, t),
-                        children: [(0, i.jsx)(g.n, { ...c }), n],
+                        children: [(0, i.jsx)(g.ReactionIcon, { ...c }), n],
                     }),
                 });
             },

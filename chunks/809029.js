@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(722178),
     m = n(615396),
     p = n(660505),
-    C = n(463376),
-    h = n(558620),
+    h = n(463376),
+    C = n(558620),
     f = n(516106),
     E = n(379912),
     S = n(792996);
@@ -19,10 +19,10 @@ n.d(
     {},
     {
         E: function (e) {
-            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, C.i)(),
+            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, h.i)(),
                 {
-                    activeSubscription: y,
-                    isPremium: I,
+                    activeSubscription: I,
+                    isPremium: y,
                     isGift: A,
                     checkoutPriceOptions: P,
                     isInOneStepSubscriptionCheckout: v,
@@ -41,15 +41,15 @@ n.d(
                     effectivePlanGroup: n.getEffectivePlanGroup({ planGroup: e.planGroup }),
                     isRecurringGiftCheckout: n.getIsRecurringGiftCheckout(),
                 })),
-                N = (0, h.A)(),
+                N = (0, C.A)(),
                 j = e.handlePaymentSourceAdd,
                 R = null != e.openInvoiceId,
                 O = null == e.initialPlanId && null == e.subscriptionTier,
-                M = i.useMemo(() => !x && (v ? O && I : I), [v, O, I, x]),
+                M = i.useMemo(() => !x && (v ? O && y : y), [v, O, y, x]),
                 L = e.handleStepChange,
                 k = (0, d.J$)(P.paymentSourceId),
-                w = (0, C.R)({ hasOpenInvoice: R ?? !1 }),
-                D = null != y && !A,
+                w = (0, h.R)({ hasOpenInvoice: R ?? !1 }),
+                D = null != I && !A,
                 U = i.useCallback(
                     () =>
                         D
@@ -101,12 +101,12 @@ n.d(
                             isGift: A,
                             isRecurringGiftCheckout: b,
                             selectedPlan: N,
-                            premiumSubscription: y,
+                            premiumSubscription: I,
                             planGroup: T,
                             isPrepaidPaymentSource: k,
                             isInPastDueCheckout: w,
                         }),
-                    [A, b, N, y, k, w, T],
+                    [A, b, N, I, k, w, T],
                 ),
                 H = i.useMemo(
                     () =>
@@ -117,7 +117,7 @@ n.d(
                                       variant: "expressive",
                                       text: n,
                                       iconPosition: "start",
-                                      icon: () => (0, l.jsx)(r.t, { color: "currentColor" }),
+                                      icon: () => (0, l.jsx)(r.NitroWheelIcon, { color: "currentColor" }),
                                   }
                                 : { variant: "active", text: n, dataTestId: "purchase" };
                         })({ isTrial: t, buttonLabel: B }),

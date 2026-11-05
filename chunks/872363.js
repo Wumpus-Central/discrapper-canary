@@ -19,12 +19,12 @@ var s = a(477900),
     T = a(402216),
     L = a(739053),
     S = a(82498),
-    O = a(287809),
-    h = a(129230),
+    h = a(287809),
+    O = a(129230),
     U = a(722178),
-    f = a(650338),
-    D = a(821715),
-    N = a(286134),
+    N = a(650338),
+    f = a(821715),
+    D = a(286134),
     C = a(652215),
     M = a(682901),
     P = a(792996),
@@ -36,8 +36,8 @@ let j = (0, c.xI)(d.A.LIVE_INDICATOR_BORDER_RADIUS),
     g = { opacity: 1 },
     w = { borderRadius: `${j}px ${j}px ${j}px ${j}px` },
     H = { borderRadius: `0px ${j}px ${j}px 0px` },
-    Y = { mass: 1, tension: 500, friction: 18, clamp: !0 };
-function Q(e) {
+    W = { mass: 1, tension: 500, friction: 18, clamp: !0 };
+function Y(e) {
     let t,
         i,
         {
@@ -52,34 +52,34 @@ function Q(e) {
             quality: k,
         } = e,
         { analyticsLocations: v } = (0, x.Ay)(),
-        V = null != (0, D.A)(n);
+        V = null != (0, f.A)(n);
     try {
-        t = (0, f.HB)(k);
+        t = (0, N.HB)(k);
     } catch (e) {
         t = !1;
     }
     try {
-        i = (0, f.OI)(k);
+        i = (0, N.OI)(k);
     } catch (e) {
         i = !1;
     }
     let g = t || i,
         { location: w } = (0, R.p)(),
-        H = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
-        Y = c && !U.Ay.isPremium(H, M.PremiumTypes.TIER_1) && !U.Ay.canStreamQuality(U.Ay.StreamQuality.MID, H),
-        Q = l.useCallback(() => {
-            Y &&
+        H = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
+        W = c && !U.Ay.isPremium(H, M.PremiumTypes.TIER_1) && !U.Ay.canStreamQuality(U.Ay.StreamQuality.MID, H),
+        Y = l.useCallback(() => {
+            W &&
                 g &&
                 (0, u.mM)(async () => {
                     let { default: e } = await Promise.all([a.e(668867), a.e(18630)]).then(a.bind(a, 826789));
                     return (t) => (0, s.jsx)(e, { ...t, analyticsSource: w });
                 });
-        }, [Y, g, w]);
+        }, [W, g, w]);
     if (
         (l.useEffect(() => {
             !y &&
                 g &&
-                (h.default.track(C.HAw.PREMIUM_UPSELL_VIEWED, {
+                (O.default.track(C.HAw.PREMIUM_UPSELL_VIEWED, {
                     type: M.e.STREAM_QUALITY_INDICATOR,
                     has_premium_stream_fps: t,
                     has_premium_stream_resolution: i,
@@ -91,23 +91,23 @@ function Q(e) {
         null == k)
     )
         return null;
-    let W = Y && g,
-        F = r()(b.t5, d, V ? b.Y5 : b.Lc, { [b.vk]: W, [b.CF]: E === N.oY.SMALL }),
+    let Q = W && g,
+        F = r()(b.t5, d, V ? b.Y5 : b.Lc, { [b.vk]: Q, [b.CF]: E === D.oY.SMALL }),
         $ = (0, s.jsxs)(s.Fragment, {
             children: [
-                g ? (0, s.jsx)(p.t, { size: "md", color: "currentColor", className: b.fY }) : null,
-                (0, s.jsx)("span", { className: b.UD, children: (0, f.ME)(k.maxResolution) }),
-                (0, s.jsx)("span", { children: (0, f.Bs)(k.maxFrameRate) }),
+                g ? (0, s.jsx)(p.NitroWheelIcon, { size: "md", color: "currentColor", className: b.fY }) : null,
+                (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(k.maxResolution) }),
+                (0, s.jsx)("span", { children: (0, N.Bs)(k.maxFrameRate) }),
             ],
         }),
         z = (0, s.jsx)(m.m, {
             text: V ? P.intl.string(P.t.q8TiVt) : g ? P.intl.string(P.t.IHgpEn) : P.intl.string(P.t.vLb0VW),
             position: "bottom",
-            children: W
-                ? (0, s.jsx)(A.D, { onClick: Q, className: F, children: $ })
+            children: Q
+                ? (0, s.jsx)(A.D, { onClick: Y, className: F, children: $ })
                 : (0, s.jsx)("span", { className: F, children: $ }),
         });
-    return (0, s.jsx)(N.Ay, {
+    return (0, s.jsx)(D.Ay, {
         text: z,
         className: r()(T, { [b.Dc]: g && j }),
         color: _.A.unsafe_rawColors.PRIMARY_500.css,
@@ -129,15 +129,15 @@ a.d(
                     premiumIndicator: _,
                 } = e,
                 [d, u] = l.useState(!1),
-                p = (0, f.N5)(t),
+                p = (0, N.N5)(t),
                 { reducedMotion: m } = l.useContext(E.C),
                 A = a && null != p,
                 R = (0, y.p)(
                     A,
-                    { enter: { from: m.enabled ? V : k, to: m.enabled ? g : v }, leave: m.enabled ? V : k, config: Y },
+                    { enter: { from: m.enabled ? V : k, to: m.enabled ? g : v }, leave: m.enabled ? V : k, config: W },
                     "animate-always",
                 ),
-                x = (0, I.z)({ to: A ? H : w, config: Y }, "animate-always");
+                x = (0, I.z)({ to: A ? H : w, config: W }, "animate-always");
             return ((e) => {
                 let { className: a, popoutProps: l } = e;
                 return (0, s.jsxs)("div", {
@@ -148,10 +148,10 @@ a.d(
                             a
                                 ? (0, s.jsx)(n.animated.div, {
                                       style: e,
-                                      children: (0, s.jsx)(Q, {
+                                      children: (0, s.jsx)(Y, {
                                           participant: t,
                                           size: c,
-                                          shape: N.Qo.ROUND_LEFT,
+                                          shape: D.Qo.ROUND_LEFT,
                                           isUpsellEnabled: i,
                                           didTrackUpsellViewed: d,
                                           setDidTrackUpsellViewed: u,
@@ -167,7 +167,7 @@ a.d(
                             children: (0, s.jsx)(T.Ay, {
                                 look: T.gv.RED,
                                 size: c,
-                                shape: A ? N.Qo.ROUND_RIGHT : void 0,
+                                shape: A ? D.Qo.ROUND_RIGHT : void 0,
                             }),
                         }),
                     ],

@@ -10,13 +10,13 @@ var i,
     _ = n(789645),
     E = n(844222),
     A = n(717421),
-    h = n(559106),
-    f = n(516521),
+    f = n(559106),
+    h = n(516521),
     I = n(707554),
     p = n(475825),
     m = n(862482),
-    g = n(305866),
-    T = n(989395),
+    T = n(305866),
+    g = n(989395),
     S = n(235986),
     N = n(231723),
     C = n(818348),
@@ -34,11 +34,11 @@ n.d(
                 d = (function (e) {
                     switch (e ?? "thin") {
                         case "auto":
-                            return f.Gt;
+                            return h.Gt;
                         case "none":
-                            return f.zC;
+                            return h.zC;
                         default:
-                            return f.Ch;
+                            return h.Ch;
                     }
                 })(r),
                 c = r ?? "thin",
@@ -64,7 +64,7 @@ n.d(
                     role: r = "dialog",
                     className: l,
                     fullscreenOnMobile: _ = !0,
-                    hideShadow: f = !1,
+                    hideShadow: h = !1,
                     onAnimationEnd: I = C.tE,
                     returnRef: p,
                     animation: m = "default",
@@ -72,7 +72,7 @@ n.d(
                     ...O
                 } = e,
                 L = t === N.ip.ENTERING || t === N.ip.ENTERED;
-            s.useContext(T.A)({
+            s.useContext(g.A)({
                 type: c.ImpressionTypes.PAGE,
                 name: c.ImpressionNames.MODAL_ROOT_LEGACY,
                 properties: { variant: S },
@@ -95,7 +95,7 @@ n.d(
                 G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: M, transitionState: t }), [w, M, t]);
             return (0, a.jsx)(N.CP.Provider, {
                 value: G,
-                children: (0, a.jsx)(g.l, {
+                children: (0, a.jsx)(T.l, {
                     className: R.Gg,
                     role: r,
                     returnRef: p,
@@ -103,10 +103,10 @@ n.d(
                     "aria-labelledby": P ? void 0 : G.headerId,
                     ...O,
                     children: (0, a.jsx)(d.animated.div, {
-                        className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !f }),
+                        className: o()(l, R.zr, y[i], { [R.z]: _, [R.vl]: !h }),
                         ref: v,
                         style: b,
-                        children: (0, a.jsx)(h.xp, { containerRef: v, children: n }),
+                        children: (0, a.jsx)(f.xp, { containerRef: v, children: n }),
                     }),
                 }),
             });
@@ -149,7 +149,7 @@ n.d(
                 onClick: e.onClick,
                 innerClassName: o()(e.innerClassName, { [R.Xk]: e.withCircleBackground }),
                 className: o()(e.className, { [R.zB]: e.hideOnFullscreen, [R.VN]: !e.withCircleBackground }),
-                children: (0, a.jsx)(_.P, {
+                children: (0, a.jsx)(_.XSmallIcon, {
                     size: "md",
                     color: "currentColor",
                     className: o()(e.innerClassName, R.ut),

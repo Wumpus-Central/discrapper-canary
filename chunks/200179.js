@@ -1,4 +1,4 @@
-l.d(t, { h: () => j, i: () => v });
+l.d(t, { h: () => v, i: () => j });
 var n = l(477900),
     r = l(582128),
     a = l(834730),
@@ -24,13 +24,16 @@ function p(e) {
             children: (0, n.jsxs)(a.E, {
                 ...l,
                 className: x.aQ,
-                children: [t, !r && (0, n.jsx)(m.a, { size: "xs", color: "currentColor", className: x.ai })],
+                children: [
+                    t,
+                    !r && (0, n.jsx)(m.ChevronSmallDownIcon, { size: "xs", color: "currentColor", className: x.ai }),
+                ],
             }),
         }),
     });
 }
 var f = l(423389);
-function j(e) {
+function v(e) {
     let {
             label: t,
             defaultExpanded: l = !1,
@@ -62,7 +65,7 @@ function j(e) {
         ],
     });
 }
-function v(e) {
+function j(e) {
     let {
             label: t,
             labelSubText: l,
@@ -74,8 +77,8 @@ function v(e) {
             tooltip: x,
             tooltipAriaLabel: h,
             subText: p,
-            subTextColor: j = "text-muted",
-            subTextHasStrikethrough: v,
+            subTextColor: v = "text-muted",
+            subTextHasStrikethrough: j,
         } = e,
         b = r.useMemo(() => {
             let e = (0, n.jsxs)(a.E, {
@@ -92,13 +95,13 @@ function v(e) {
                           e,
                           (0, n.jsx)(a.E, {
                               variant: "body-xs/medium",
-                              color: j,
-                              className: v ? f.tP : void 0,
+                              color: v,
+                              className: j ? f.tP : void 0,
                               children: p,
                           }),
                       ],
                   });
-        }, [o, u, p, v, d, j]),
+        }, [o, u, p, j, d, v]),
         g = r.useId(),
         E = r.useMemo(() => {
             let e = (0, n.jsx)("span", { id: g, children: t });

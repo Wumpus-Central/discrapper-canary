@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => I });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -24,15 +24,15 @@ var A = n(232198),
     v = n(652215),
     E = n(792996),
     C = n(890054);
-function j(e) {
+function I(e) {
     let { streamerId: t, idle: n } = e,
         l = (0, r.bG)([m.default], () => m.default.getUser(t) ?? null, [t]),
         s = g.Ay.canStreamQuality(g.Ay.StreamQuality.HIGH, l),
         a = (0, f.d)(l),
         o = x.useConfig({ location: "HD_STREAMING_CONTEXTUAL_UPSELL" }).enabled;
-    return null != l && a && !s && o ? (0, i.jsx)(I, { streamer: l, idle: n }) : null;
+    return null != l && a && !s && o ? (0, i.jsx)(j, { streamer: l, idle: n }) : null;
 }
-function I(e) {
+function j(e) {
     let { streamer: t, idle: n } = e;
     return (0, h.p)(t.id) ? (0, i.jsx)(S, { recipient: t, idle: n }) : null;
 }
@@ -45,7 +45,7 @@ function S(e) {
             variant: "overlay-primary",
             size: "sm",
             text: E.intl.string(E.t["n/a182"]),
-            icon: u.t,
+            icon: u.NitroWheelIcon,
             onClick: function (e) {
                 (e.stopPropagation(),
                     p.default.track(v.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: r }),

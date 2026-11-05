@@ -3,7 +3,12 @@ var i = n(877784),
     a = n(148795),
     s = n(214947),
     r = n(126601);
-let o = (0, r.E)({ [r.K_.RIBBON]: i.q, [r.K_.THUMBS_UP]: l.G, [r.K_.THUMBS_DOWN]: a.d, [r.K_.FRIENDS]: s.$ });
+let o = (0, r.E)({
+    [r.K_.RIBBON]: i.RibbonIcon,
+    [r.K_.THUMBS_UP]: l.ThumbsUpIcon,
+    [r.K_.THUMBS_DOWN]: a.ThumbsDownIcon,
+    [r.K_.FRIENDS]: s.FriendsIcon,
+});
 n.d(
     t,
     {},

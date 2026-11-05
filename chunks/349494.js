@@ -1,22 +1,22 @@
-var a = n(477900);
+var r = n(477900);
 n(582128);
-var r = n(520923),
+var a = n(520923),
     i = n(403581),
     t = n(792996),
     c = n(217838);
 function o() {
-    return (0, a.jsx)("img", { src: c.A, alt: "" });
+    return (0, r.jsx)("img", { src: c.A, alt: "" });
 }
 function l() {
-    return (0, a.jsxs)("svg", {
+    return (0, r.jsxs)("svg", {
         width: "200",
         height: "20",
         viewBox: "0 0 200 20",
         fill: "currentColor",
         children: [
-            (0, a.jsx)("rect", { x: "0", y: "2", width: "56", height: "16", rx: "8" }),
-            (0, a.jsx)("rect", { x: "64", y: "4", width: "64", height: "12", rx: "6" }),
-            (0, a.jsx)("rect", { x: "136", y: "4", width: "64", height: "12", rx: "6" }),
+            (0, r.jsx)("rect", { x: "0", y: "2", width: "56", height: "16", rx: "8" }),
+            (0, r.jsx)("rect", { x: "64", y: "4", width: "64", height: "12", rx: "6" }),
+            (0, r.jsx)("rect", { x: "136", y: "4", width: "64", height: "12", rx: "6" }),
         ],
     });
 }
@@ -38,7 +38,7 @@ n.d(
                         : {
                               primaryAction: {
                                   text: s.primaryAction,
-                                  icon: s.primaryActionIcon ? i.t : void 0,
+                                  icon: s.primaryActionIcon ? i.NitroWheelIcon : void 0,
                                   onClick: () => {},
                                   loading: c,
                               },
@@ -53,15 +53,15 @@ n.d(
                         case "stage":
                             return;
                         case "icon":
-                            return (0, a.jsx)(i.t, { size: "md", color: "currentColor" });
+                            return (0, r.jsx)(i.NitroWheelIcon, { size: "md", color: "currentColor" });
                         case "image":
-                            return (0, a.jsx)(o, {});
+                            return (0, r.jsx)(o, {});
                         case "wide-image":
-                            return (0, a.jsx)(l, {});
+                            return (0, r.jsx)(l, {});
                     }
                 })(s.leadingAccessory);
             if ("promotion" === s.variant)
-                return (0, a.jsx)(r.q, {
+                return (0, r.jsx)(a.q, {
                     variant: "promotion",
                     type: "nitro" === s.type || "brand" === s.type ? s.type : "expressive",
                     ...d,
@@ -71,7 +71,7 @@ n.d(
                 });
             switch (s.type) {
                 case "critical":
-                    return (0, a.jsx)(r.q, {
+                    return (0, r.jsx)(a.q, {
                         variant: "status",
                         type: "critical",
                         role: s.role,
@@ -80,7 +80,7 @@ n.d(
                         onDismiss: s.dismissible ? n : void 0,
                     });
                 case "connected":
-                    return (0, a.jsx)(r.q, {
+                    return (0, r.jsx)(a.q, {
                         variant: "status",
                         type: "connected",
                         leadingAccessory:
@@ -93,7 +93,7 @@ n.d(
                         onDismiss: n,
                     });
                 case "warning":
-                    return (0, a.jsx)(r.q, {
+                    return (0, r.jsx)(a.q, {
                         variant: "status",
                         type: "warning",
                         role: s.role,
@@ -105,7 +105,7 @@ n.d(
                 case "nitro":
                 case "brand":
                 case "info":
-                    return (0, a.jsx)(r.q, {
+                    return (0, r.jsx)(a.q, {
                         variant: "status",
                         type: "info" === s.type ? "info" : "brand",
                         role: s.role,

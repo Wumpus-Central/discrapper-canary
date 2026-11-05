@@ -15,8 +15,8 @@ var i = s(477900),
     I = s(413599),
     g = s(106799),
     N = s(287809),
-    h = s(7891),
-    x = s(859703),
+    x = s(7891),
+    h = s(859703),
     E = s(506988),
     P = s(870273),
     f = s(61387),
@@ -24,10 +24,10 @@ var i = s(477900),
     p = s(590202),
     _ = s(651892),
     v = s(417404),
-    y = s(792620),
-    F = s(814793),
-    L = s(321538),
-    k = s(630037),
+    L = s(792620),
+    k = s(814793),
+    y = s(321538),
+    F = s(630037),
     S = s(221596),
     b = s(652215),
     Y = s(792996),
@@ -38,29 +38,29 @@ s.d(
     {
         default: function (t) {
             let { quest: e, onQuestDismiss: s, isStaffPreview: V = !1 } = t,
-                w = (0, n.bG)([x.A], () => x.A.isEnrolling(e.id), [e]),
+                w = (0, n.bG)([h.A], () => h.A.isEnrolling(e.id), [e]),
                 Q = a.useCallback((t) => {
                     t.stopPropagation();
                 }, []),
-                R = (0, k.D)({ quest: e, questContent: E.uF.ACTIVITY_PANEL, sourceQuestContent: E.uF.ACTIVITY_PANEL }),
+                R = (0, F.D)({ quest: e, questContent: E.uF.ACTIVITY_PANEL, sourceQuestContent: E.uF.ACTIVITY_PANEL }),
                 W = e.userStatus?.enrolledAt != null,
                 G = e.userStatus?.completedAt != null,
                 z = (0, f.fc)(e),
                 K = a.useCallback(async () => {
-                    let { type: t } = await (0, h.Oy)(e.id, {
+                    let { type: t } = await (0, x.Oy)(e.id, {
                         questContent: E.uF.ACTIVITY_PANEL,
                         questContentCTA: p.Cy.ACCEPT_QUEST,
                         sourceQuestContent: E.uF.ACTIVITY_PANEL,
                     });
                     switch (t) {
-                        case h.WM.SUCCESS:
-                            ((0, h.g5)(e.id, E.uF.ACTIVITY_PANEL),
-                                V ? (0, h.L4)(E.uF.ACTIVITY_PANEL, e.id) : s?.(),
-                                (0, L.mA)({ fromContent: E.uF.ACTIVITY_PANEL, questId: e.id }));
+                        case x.WM.SUCCESS:
+                            ((0, x.g5)(e.id, E.uF.ACTIVITY_PANEL),
+                                V ? (0, x.L4)(E.uF.ACTIVITY_PANEL, e.id) : s?.(),
+                                (0, y.mA)({ fromContent: E.uF.ACTIVITY_PANEL, questId: e.id }));
                             break;
-                        case h.WM.UNKNOWN_ERROR:
+                        case x.WM.UNKNOWN_ERROR:
                             A.A.show({ title: Y.intl.string(Y.t.R0RpRX), body: Y.intl.string(Y.t.OXD41D) });
-                        case h.WM.PREVIOUS_IN_FLIGHT_REQUEST:
+                        case x.WM.PREVIOUS_IN_FLIGHT_REQUEST:
                     }
                 }, [e, V, s]),
                 O = (0, n.bG)([I.A], () => I.A.getState().theme),
@@ -77,7 +77,7 @@ s.d(
                     gameProfileSource: C.GameProfileSources.QuestActivityPanel,
                 }),
                 $ = (0, j.tW)(e, j.fY.GAME_TILE, D).url,
-                B = (0, y.I6)(e) ? (0, y.xc)(e) : (0, y._3)(e)?.[0],
+                B = (0, L.I6)(e) ? (0, L.xc)(e) : (0, L._3)(e)?.[0],
                 Z = (0, T.A)({
                     applicationId: B,
                     location: S.rE.QUEST_INSTRUCTIONS,
@@ -90,7 +90,7 @@ s.d(
                     ctaContent: p.Cy.OPEN_GAME_LINK,
                     sourceQuestContent: E.uF.ACTIVITY_PANEL,
                 }),
-                ts = (0, F.vA)(e),
+                ts = (0, k.vA)(e),
                 ti = (0, P.NA)({ quest: e }),
                 ta = ts ? ti : Y.intl.string(Y.t.l7E81v),
                 tn =
@@ -98,7 +98,7 @@ s.d(
                         ? (0, i.jsx)(r.K, {
                               variant: "secondary",
                               size: "sm",
-                              icon: o.I,
+                              icon: o.LinkExternalSmallIcon,
                               "aria-label": (0, _.wr)(e),
                               onClick: (t) => {
                                   (t.stopPropagation(), te());
@@ -126,7 +126,7 @@ s.d(
                     onClick: tl,
                     onKeyPress: Q,
                     loading: w,
-                    icon: (0, L.Oz)(e),
+                    icon: (0, y.Oz)(e),
                 });
             return (0, i.jsx)("div", {
                 className: U.iE,

@@ -13,8 +13,12 @@ function E(e) {
     return (0, i.jsxs)("div", {
         className: _.zc,
         children: [
-            (0, i.jsx)(l.a, { size: "md", color: "currentColor", className: s()(n ? _.pL : _.RJ, t) }),
-            (0, i.jsx)(o.n, { size: "md", color: "currentColor", className: s()(_.ol, t) }),
+            (0, i.jsx)(l.ChevronSmallDownIcon, {
+                size: "md",
+                color: "currentColor",
+                className: s()(n ? _.pL : _.RJ, t),
+            }),
+            (0, i.jsx)(o.GroupIcon, { size: "md", color: "currentColor", className: s()(_.ol, t) }),
         ],
     });
 }
@@ -23,8 +27,12 @@ function A(e) {
     return (0, i.jsxs)("div", {
         className: _.zc,
         children: [
-            (0, i.jsx)(l.a, { size: "md", color: "currentColor", className: s()(n ? _.iy : _.Yr, t) }),
-            n && (0, i.jsx)(o.n, { size: "md", color: "currentColor", className: s()(_.ol, t) }),
+            (0, i.jsx)(l.ChevronSmallDownIcon, {
+                size: "md",
+                color: "currentColor",
+                className: s()(n ? _.iy : _.Yr, t),
+            }),
+            n && (0, i.jsx)(o.GroupIcon, { size: "md", color: "currentColor", className: s()(_.ol, t) }),
         ],
     });
 }
@@ -34,7 +42,7 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, className: n, isParticipantsOpen: a, isVertical: l = !1, hideTooltip: o = !1 } = e,
-                h = r.useCallback(
+                f = r.useCallback(
                     (e) => {
                         let { className: t } = e;
                         return a
@@ -49,7 +57,7 @@ n.d(
                 onClick: function (e) {
                     (e.stopPropagation(), d.A.toggleParticipants(t, !a));
                 },
-                iconComponent: h,
+                iconComponent: f,
                 shouldShowTooltip: !o,
             });
         },

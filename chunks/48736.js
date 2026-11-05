@@ -1,9 +1,9 @@
 s.r(l);
 var t,
     a = s(477900),
-    n = s(582128),
-    r = s(503698),
-    i = s.n(r),
+    r = s(582128),
+    n = s(503698),
+    i = s.n(n),
     o = s(317097),
     c = s(714385),
     u = s(559106),
@@ -14,21 +14,26 @@ var t,
     C = s(284059),
     b = s(652215),
     j = s(792996),
-    g = s(586428),
-    p = s(913248),
+    p = s(586428),
+    g = s(913248),
     v = (((t = {}).CIRCLE = "circle"), (t.SQUARE = "square"), t);
 let f = (e) => {
-        let { color: l, disabled: s, variant: t = "circle", ...n } = e,
-            r = (0, o.OK)(l ?? b.TGz) > 0.1;
+        let { color: l, disabled: s, variant: t = "circle", ...r } = e,
+            n = (0, o.OK)(l ?? b.TGz) > 0.1;
         return (0, a.jsx)("div", {
-            ...n,
-            className: i()(p.M2, r ? p.xA : p.fQ, { [p.r9]: s, [p.Py]: "circle" === t, [p.qy]: "square" === t }),
+            ...r,
+            className: i()(g.M2, n ? g.xA : g.fQ, { [g.r9]: s, [g.Py]: "circle" === t, [g.qy]: "square" === t }),
             children: (0, a.jsx)("div", {
-                className: p.Ol,
+                className: g.Ol,
                 style: { background: (0, o.Hl)(l) },
                 children:
                     "circle" === t &&
-                    (0, a.jsx)(c.d, { size: "custom", colorClass: r ? p.wW : p.yD, width: 14, height: 14 }),
+                    (0, a.jsx)(c.EyeDropperIcon, {
+                        size: "custom",
+                        colorClass: n ? g.wW : g.yD,
+                        width: 14,
+                        height: 14,
+                    }),
             }),
         });
     },
@@ -37,7 +42,7 @@ let f = (e) => {
                 index: l,
                 total: s,
                 color: t,
-                showPopout: r,
+                showPopout: n,
                 position: o,
                 onRequestClose: c,
                 onShowPopout: C,
@@ -46,29 +51,29 @@ let f = (e) => {
                 updateColorWhileDragging: k,
                 variant: N = "circle",
             } = e,
-            R = n.useRef(null),
-            E =
+            E = r.useRef(null),
+            R =
                 s <= 2
-                    ? j.intl.string(0 === l ? g.default.apbXbH : g.default.JaVq1b)
-                    : j.intl.formatToPlainString(g.default.XdByBm, { number: l + 1 });
+                    ? j.intl.string(0 === l ? p.default.apbXbH : p.default.JaVq1b)
+                    : j.intl.formatToPlainString(p.default.XdByBm, { number: l + 1 });
         return (0, a.jsx)(u.vN, {
             children: (0, a.jsx)(d.Y, {
-                targetElementRef: R,
+                targetElementRef: E,
                 renderPopout: () => (0, a.jsx)(h.VN, { onChange: b, value: t, eagerUpdate: k }),
                 position: o,
-                shouldShow: r,
+                shouldShow: n,
                 onRequestClose: c,
                 children: (e) =>
                     (0, a.jsx)("div", {
-                        ref: R,
-                        className: p.tj,
+                        ref: E,
+                        className: g.tj,
                         children: (0, a.jsx)(m.D, {
                             ...e,
-                            className: i()({ [p.ZT]: "circle" === N, [p.WI]: "square" === N }),
+                            className: i()({ [g.ZT]: "circle" === N, [g.WI]: "square" === N }),
                             onClick: C,
-                            "aria-label": E,
+                            "aria-label": R,
                             children: (0, a.jsx)(x.m, {
-                                text: E,
+                                text: R,
                                 position: "bottom",
                                 children: (0, a.jsx)(f, { color: t ?? 0, disabled: v, variant: N }),
                             }),
@@ -86,96 +91,96 @@ s.d(
             let { onCustomPalettePicked: l, ...s } = e,
                 {
                     defaultColor: t,
-                    colors: r,
+                    colors: n,
                     value: o,
                     onChange: c,
                     disabled: u = !1,
                     customPickerPosition: m = "bottom",
-                    gradientColors: g,
+                    gradientColors: p,
                     onChangeGradientColors: v,
                     isGradient: N = !1,
-                    gradientButtonClassName: R,
-                    gradientSwatchClassName: E,
+                    gradientButtonClassName: E,
+                    gradientSwatchClassName: R,
                     gradientPickerVariant: y = "circle",
                     gradientWidth: w,
                     allowBlackCustomColor: B = !1,
                 } = s,
-                G = n.useMemo(
+                G = r.useMemo(
                     () => (null != w ? { width: w, ...("100%" === w ? { marginInlineEnd: 0 } : null) } : void 0),
                     [w],
                 ),
-                q = n.useCallback(
-                    (e) => (0 !== e || B) && e !== t && !r.some((l) => l === e) && (B || 0 !== e),
-                    [r, t, B],
+                q = r.useCallback(
+                    (e) => (0 !== e || B) && e !== t && !n.some((l) => l === e) && (B || 0 !== e),
+                    [n, t, B],
                 ),
-                P = n.useRef(null),
-                [S, T] = n.useState(() => (q(o) ? o : null)),
-                [z, H] = n.useState(() => g ?? [o, b.TGz]),
-                [D, V] = n.useState(null);
-            n.useEffect(() => {
-                (T(q(o) ? o : null), H(g ?? [o, b.TGz]));
-            }, [o, q, g]);
-            let X = n.useCallback(
+                P = r.useRef(null),
+                [S, T] = r.useState(() => (q(o) ? o : null)),
+                [z, D] = r.useState(() => p ?? [o, b.TGz]),
+                [H, I] = r.useState(null);
+            r.useEffect(() => {
+                (T(q(o) ? o : null), D(p ?? [o, b.TGz]));
+            }, [o, q, p]);
+            let V = r.useCallback(
                     (e) => {
                         (c?.(e), T(null));
                     },
                     [c, T],
                 ),
-                A = n.useCallback(
+                X = r.useCallback(
                     (e) => {
                         (c?.(e), T(e));
                     },
                     [c, T],
                 ),
-                I = n.useCallback(
+                A = r.useCallback(
                     (e, l) => {
-                        (H(e), v?.(e, l));
+                        (D(e), v?.(e, l));
                     },
                     [v],
                 ),
-                W = n.useRef(null),
+                W = r.useRef(null),
                 F = null != l,
-                J = n.useCallback(() => {
+                J = r.useCallback(() => {
                     let e = W.current;
                     ((W.current = null), null != e && e.hasEdited && l?.(e.colors.slice()));
                 }, [l]),
-                M = n.useCallback(
+                M = r.useCallback(
                     (e) => {
                         (F &&
                             W.current?.index !== e &&
                             (J(), (W.current = { index: e, colors: z.slice(), hasEdited: !1 })),
-                            V(e));
+                            I(e));
                     },
                     [F, z, J],
                 ),
-                O = n.useCallback(() => {
-                    (J(), V(null));
+                O = r.useCallback(() => {
+                    (J(), I(null));
                 }, [J]),
-                Q = n.useCallback(
+                Q = r.useCallback(
                     (e, l) => {
                         let s = W.current;
                         if (F && s?.index !== e) return;
                         let t = z.map((s, t) => (t === e ? l : s));
-                        (null != s && ((s.colors = t), (s.hasEdited = !0)), I(t, !0));
+                        (null != s && ((s.colors = t), (s.hasEdited = !0)), A(t, !0));
                     },
-                    [F, z, I],
+                    [F, z, A],
                 ),
-                U = n.useCallback(() => {
+                U = r.useCallback(() => {
                     let e = { background: (0, C.r)(z, 90) },
                         l = z.length;
                     return u
                         ? (0, a.jsxs)("div", {
-                              className: p.em,
+                              className: g.em,
                               style: G,
                               children: [
-                                  (0, a.jsx)("div", { className: i()(p.Ri, E), style: e }),
+                                  (0, a.jsx)("div", { className: i()(g.Ri, R), style: e }),
                                   (0, a.jsx)("div", {
-                                      className: p.fX,
+                                      className: g.fX,
                                       children: z.map((e, l) =>
                                           (0, a.jsx)(
                                               "div",
                                               {
-                                                  className: p.tj,
+                                                  className: g.tj,
                                                   children: (0, a.jsx)(f, {
                                                       color: e ?? b.TGz,
                                                       disabled: u,
@@ -189,12 +194,12 @@ s.d(
                               ],
                           })
                         : (0, a.jsxs)("div", {
-                              className: i()(p.em, R),
+                              className: i()(g.em, E),
                               style: G,
                               children: [
-                                  (0, a.jsx)("div", { className: i()(p.Ri, E), style: e }),
+                                  (0, a.jsx)("div", { className: i()(g.Ri, R), style: e }),
                                   (0, a.jsx)("div", {
-                                      className: p.fX,
+                                      className: g.fX,
                                       children: z.map((e, s) =>
                                           (0, a.jsx)(
                                               k,
@@ -202,7 +207,7 @@ s.d(
                                                   index: s,
                                                   total: l,
                                                   color: e ?? b.TGz,
-                                                  showPopout: D === s,
+                                                  showPopout: H === s,
                                                   position: m,
                                                   onRequestClose: O,
                                                   onShowPopout: () => M(s),
@@ -217,9 +222,9 @@ s.d(
                                   }),
                               ],
                           });
-                }, [m, u, z, D, F, M, O, Q, R, E, y, G]),
-                Y = n.useCallback(() => (0, a.jsx)(h.VN, { onChange: A, value: o }), [A, o]),
-                _ = n.useCallback(
+                }, [m, u, z, H, F, M, O, Q, E, R, y, G]),
+                Y = r.useCallback(() => (0, a.jsx)(h.VN, { onChange: X, value: o }), [X, o]),
+                _ = r.useCallback(
                     (e) => {
                         let l = o !== t && (0 !== o || B),
                             s = (0, a.jsx)(h.nJ, {
@@ -244,7 +249,7 @@ s.d(
                     },
                     [m, u, Y, o, t, B],
                 ),
-                K = n.useCallback(
+                K = r.useCallback(
                     (e) => {
                         let l = (0, a.jsx)(h.fy, { ...e });
                         return u
@@ -266,7 +271,7 @@ s.d(
                 customColor: S,
                 value: N ? z[0] : o,
                 gradientColors: N ? z : void 0,
-                onChange: N ? I : X,
+                onChange: N ? A : V,
             });
         },
     },

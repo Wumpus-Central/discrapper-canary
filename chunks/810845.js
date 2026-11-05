@@ -1,45 +1,45 @@
-var a = l(477900),
-    e = l(582128),
-    n = l(855986),
-    p = l(477782),
-    s = l(811893),
-    c = l(367513),
-    r = l(401843),
-    u = l(574172),
-    o = l(129230),
-    A = l(628983),
-    d = l(806931),
-    y = l(652215),
-    P = l(792996);
-l.d(
+var a = n(477900),
+    l = n(582128),
+    e = n(855986),
+    c = n(477782),
+    p = n(811893),
+    s = n(367513),
+    r = n(401843),
+    u = n(574172),
+    o = n(129230),
+    d = n(628983),
+    A = n(806931),
+    h = n(652215),
+    y = n(792996);
+n.d(
     i,
     {},
     {
         A: function (t, i) {
-            let l = (0, n.bG)([A.A], () => A.A.getParticipant(t, i)),
-                _ = (0, n.bG)([A.A], () => A.A.isParticipantPoppedOut(t, i)),
-                b = e.useCallback(() => {
-                    null != l &&
-                        ((0, d.Ay)(l) && (0, r.A9)(l.stream, { forceMultiple: !0 }),
-                        c.A.popoutParticipant(t, l.id),
-                        u.eQ(t, l.id),
-                        o.default.track(y.HAw.CALL_TILE_POPPED_OUT, {
+            let n = (0, e.bG)([d.A], () => d.A.getParticipant(t, i)),
+                P = (0, e.bG)([d.A], () => d.A.isParticipantPoppedOut(t, i)),
+                _ = l.useCallback(() => {
+                    null != n &&
+                        ((0, A.Ay)(n) && (0, r.A9)(n.stream, { forceMultiple: !0 }),
+                        s.A.popoutParticipant(t, n.id),
+                        u.eQ(t, n.id),
+                        o.default.track(h.HAw.CALL_TILE_POPPED_OUT, {
                             channel_id: t,
-                            tile_type: (0, d.Ay)(l) ? "stream" : "user",
+                            tile_type: (0, A.Ay)(n) ? "stream" : "user",
                         }));
-                }, [l, t]);
-            return _ || null == l || l.type === d.lp.ACTIVITY
+                }, [n, t]);
+            return P || null == n || n.type === A.lp.ACTIVITY
                 ? null
-                : (0, a.jsx)(p.Dr, {
+                : (0, a.jsx)(c.Dr, {
                       id: "call-tile-popout",
-                      label: (0, d.Ay)(l)
-                          ? P.intl.string(P.t.Cm4aDQ)
-                          : null != l.streamId
-                            ? P.intl.string(P.t["8Xyas9"])
-                            : P.intl.string(P.t.ifpl2s),
-                      action: b,
-                      icon: s.t,
-                      leadingAccessory: { type: "icon", icon: s.t },
+                      label: (0, A.Ay)(n)
+                          ? y.intl.string(y.t.Cm4aDQ)
+                          : null != n.streamId
+                            ? y.intl.string(y.t["8Xyas9"])
+                            : y.intl.string(y.t.ifpl2s),
+                      action: _,
+                      icon: p.WindowLaunchIcon,
+                      leadingAccessory: { type: "icon", icon: p.WindowLaunchIcon },
                   });
         },
     },

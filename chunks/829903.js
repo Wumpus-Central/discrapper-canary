@@ -1,76 +1,76 @@
-(a.d(e, { K: () => v }), a(321073));
+(a.d(l, { K: () => C }), a(321073));
 var n = a(477900);
 a(582128);
 var t = a(192308),
     i = a(858899),
-    d = a(294454),
-    o = a(118517),
-    r = a(734057),
-    s = a(31717),
-    c = a(596344),
+    o = a(294454),
+    d = a(118517),
+    c = a(734057),
+    r = a(31717),
+    s = a(596344),
     u = a(518960),
     h = a(341923),
     m = a(489496),
-    g = a(132319),
-    f = a(589553),
-    C = a(696016),
-    p = a(792996);
-async function v(l, e) {
-    let { channelId: v, analyticsLocations: _, messageReference: I, povTargetInformation: w, onShared: A } = e,
-        K = r.A.getChannel(v);
-    if (null != K) {
-        if (null != I) {
-            let l = c.A.getMessage(I.channel_id, I.message_id);
-            null != l && (0, o.Yf)({ message: l, channel: K, shouldMention: !1, showMentionToggle: !1 });
+    I = a(132319),
+    g = a(589553),
+    f = a(696016),
+    v = a(792996);
+async function C(e, l) {
+    let { channelId: C, analyticsLocations: p, messageReference: _, povTargetInformation: A, onShared: M } = l,
+        w = c.A.getChannel(C);
+    if (null != w) {
+        if (null != _) {
+            let e = s.A.getMessage(_.channel_id, _.message_id);
+            null != e && (0, d.Yf)({ message: e, channel: w, shouldMention: !1, showMentionToggle: !1 });
         }
-        let e = (0, h.s)();
+        let l = (0, h.s)();
         try {
             let a = [],
                 n = [];
-            for (let t of l) {
-                let l = (function (l, e) {
-                        if (null == e || null == l.syncTimestamp) return l;
-                        let { duration: a, syncTimestamp: n } = e,
-                            t = l.syncTimestamp - l.length,
-                            i = l.syncTimestamp,
-                            d = Math.max(t, n - 1e3 * a),
-                            o = Math.min(i, n);
-                        return d < o
+            for (let t of e) {
+                let e = (function (e, l) {
+                        if (null == l || null == e.syncTimestamp) return e;
+                        let { duration: a, syncTimestamp: n } = l,
+                            t = e.syncTimestamp - e.length,
+                            i = e.syncTimestamp,
+                            o = Math.max(t, n - 1e3 * a),
+                            d = Math.min(i, n);
+                        return o < d
                             ? {
-                                  ...l,
+                                  ...e,
                                   editMetadata: {
                                       applicationAudio: !0,
                                       voiceAudio: !0,
                                       soundboardAudio: !0,
-                                      ...l.editMetadata,
-                                      start: (d - t) / 1e3,
-                                      end: (o - t) / 1e3,
+                                      ...e.editMetadata,
+                                      start: (o - t) / 1e3,
+                                      end: (d - t) / 1e3,
                                   },
                               }
-                            : l;
-                    })(t, w),
-                    i = await (0, m.VO)(l, { analyticsLocations: _, watermark: e, isTemporaryEdit: l !== t }),
-                    d = (0, f.A)(l, l.type === C.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                            : e;
+                    })(t, A),
+                    i = await (0, m.VO)(e, { analyticsLocations: p, watermark: l, isTemporaryEdit: e !== t }),
+                    o = (0, g.A)(e, e.type === f.nQ.SCREENSHOT ? "jpeg" : "mp4");
                 switch (t.type) {
-                    case C.nQ.CLIP:
-                    case C.nQ.VOICE_CLIP:
-                        (a.push(new File([i], d, { type: "video/mp4" })), n.push({ clip: (0, g.J)(l) }));
+                    case f.nQ.CLIP:
+                    case f.nQ.VOICE_CLIP:
+                        (a.push(new File([i], o, { type: "video/mp4" })), n.push({ clip: (0, I.J)(e) }));
                         break;
-                    case C.nQ.SCREENSHOT:
-                        (a.push(new File([i], d, { type: "image/jpeg" })), n.push({}));
+                    case f.nQ.SCREENSHOT:
+                        (a.push(new File([i], o, { type: "image/jpeg" })), n.push({}));
                         break;
                     default:
                         t.type;
                 }
             }
-            ((0, u.R)(a, K, s.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), A?.(), t.s7());
-        } catch (l) {
-            throw (C.GU.error(l), e && (0, i.P0)({ text: p.intl.string(p.t.iufib1), variant: "critical" }), l);
+            ((0, u.R)(a, w, r.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), M?.(), t.s7());
+        } catch (e) {
+            throw (f.GU.error(e), l && (0, i.P0)({ text: v.intl.string(v.t.iufib1), variant: "critical" }), e);
         }
     } else
         (0, t.mM)(
             async () => {
-                let { default: e } = await Promise.all([
+                let { default: l } = await Promise.all([
                     a.e(985768),
                     a.e(325522),
                     a.e(790340),
@@ -176,7 +176,7 @@ async function v(l, e) {
                     a.e(924862),
                     a.e(73500),
                     a.e(371482),
-                    a.e(68904),
+                    a.e(846523),
                     a.e(796867),
                     a.e(919307),
                     a.e(565617),
@@ -235,8 +235,8 @@ async function v(l, e) {
                     a.e(895008),
                     a.e(92871),
                 ]).then(a.bind(a, 243258));
-                return (a) => (0, n.jsx)(e, { ...a, clips: l, analyticsLocations: _, onShared: A });
+                return (a) => (0, n.jsx)(l, { ...a, clips: e, analyticsLocations: p, onShared: M });
             },
-            { stackingBehavior: "stack", modalKey: d.aU },
+            { stackingBehavior: "stack", modalKey: o.aU },
         );
 }

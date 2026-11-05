@@ -5,20 +5,20 @@ var i,
     r = e(935462),
     l = e(430690),
     c = e(123292),
-    d = e(544231),
-    o = e(665909),
+    o = e(544231),
+    d = e(665909),
     m = e(62617),
     u = e(117816);
 function A(t) {
-    let { alt: n, ariaLabel: e, ariaHidden: i, role: r, width: l, height: c, className: d, style: o } = t,
+    let { alt: n, ariaLabel: e, ariaHidden: i, role: r, width: l, height: c, className: o, style: d } = t,
         A = a.useMemo(
-            () => (0, m.H)({ width: l, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: o }),
-            [l, c, o],
+            () => (0, m.H)({ width: l, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: d }),
+            [l, c, d],
         );
     return (0, s.jsx)("img", {
         style: A,
         src: u.A,
-        className: (0, m.Z)(d),
+        className: (0, m.Z)(o),
         alt: n,
         "aria-label": e,
         "aria-hidden": i,
@@ -84,7 +84,7 @@ function v(t) {
                     variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        (i(j.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION));
+                        (i(j.TAKE_ACTION), e(d.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION));
                     },
                 }),
                 (0, s.jsx)(h.$, {
@@ -92,7 +92,7 @@ function v(t) {
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        (i(j.SAFETY_TIPS), e(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS));
+                        (i(j.SAFETY_TIPS), e(d.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS));
                     },
                 }),
             ],
@@ -101,15 +101,15 @@ function v(t) {
 }
 var I = e(546);
 function N(t) {
-    let { alt: n, ariaLabel: e, ariaHidden: i, role: r, width: l, height: c, className: d, style: o } = t,
+    let { alt: n, ariaLabel: e, ariaHidden: i, role: r, width: l, height: c, className: o, style: d } = t,
         u = a.useMemo(
-            () => (0, m.H)({ width: l, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: o }),
-            [l, c, o],
+            () => (0, m.H)({ width: l, height: c, intrinsicWidth: 288, intrinsicHeight: 162, style: d }),
+            [l, c, d],
         );
     return (0, s.jsx)("img", {
         style: u,
         src: I.A,
-        className: (0, m.Z)(d),
+        className: (0, m.Z)(o),
         alt: n,
         "aria-label": e,
         "aria-hidden": i,
@@ -117,10 +117,10 @@ function N(t) {
     });
 }
 var f = e(889229),
-    p = e(327337);
-function C(t) {
+    C = e(327337);
+function p(t) {
     let {} = t,
-        n = (0, p.RU)();
+        n = (0, C.RU)();
     return (0, s.jsx)(S, {
         heroImage: (0, s.jsx)(N, { alt: R.intl.string(R.t["2mJo21"]) }),
         header: R.intl.string(R.t.eAbVfS),
@@ -143,7 +143,7 @@ var y = e(285796),
 function F(t) {
     let { senderId: n, channelId: e, hasReported: i, onReport: r, trackAnalyticsEvent: l } = t,
         c = (0, x.bG)([w.A], () => w.A.isBlocked(n)),
-        [d, m] = a.useState(c),
+        [o, m] = a.useState(c),
         u = (0, U.N)(),
         A = (0, U.z)(),
         [E, T] = a.useState(!1),
@@ -166,19 +166,19 @@ function F(t) {
             className: O.UD,
             children: [
                 (0, s.jsx)(h.$, {
-                    text: d ? R.intl.string(R.t.XyHpKH) : R.intl.string(R.t.l4Emac),
+                    text: o ? R.intl.string(R.t.XyHpKH) : R.intl.string(R.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
-                    icon: y.a,
+                    icon: y.CircleXIcon,
                     onClick: () => {
-                        d
+                        o
                             ? (m(!1),
-                              L.A.unblockUser(n, { location: p.Ht }, e),
-                              l(o.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
+                              L.A.unblockUser(n, { location: C.Ht }, e),
+                              l(d.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
                               b.A.showUnblockSuccessToast(n, e))
                             : (m(!0),
-                              l(o.Wm.USER_TAKEOVER_MODAL_BLOCK),
-                              L.A.blockUser(n, { location: p.Ht }, e).then(() => {
+                              l(d.Wm.USER_TAKEOVER_MODAL_BLOCK),
+                              L.A.blockUser(n, { location: C.Ht }, e).then(() => {
                                   b.A.showBlockSuccessToast(n, e);
                               }));
                     },
@@ -201,7 +201,7 @@ function F(t) {
                                 },
                             ),
                             T(!1),
-                            l(o.Wm.USER_TAKEOVER_MODAL_REPORT));
+                            l(d.Wm.USER_TAKEOVER_MODAL_REPORT));
                     },
                     loading: E,
                     disabled: i,
@@ -213,10 +213,10 @@ function F(t) {
                     icon: K.ChatIcon,
                     onClick: () => {
                         0 === _
-                            ? ((0, W.A)(p.x7), l(o.Wm.USER_TAKEOVER_MODAL_CTL))
+                            ? ((0, W.A)(C.x7), l(d.Wm.USER_TAKEOVER_MODAL_CTL))
                             : 2 === _
-                              ? ((0, W.A)(p.CL), l(o.Wm.USER_TAKEOVER_MODAL_THROUGHLINE))
-                              : ((0, W.A)(p.jR), l(o.Wm.USER_TAKEOVER_MODAL_NO_FILTR));
+                              ? ((0, W.A)(C.CL), l(d.Wm.USER_TAKEOVER_MODAL_THROUGHLINE))
+                              : ((0, W.A)(C.jR), l(d.Wm.USER_TAKEOVER_MODAL_NO_FILTR));
                     },
                 }),
             ],
@@ -232,11 +232,11 @@ let H = (t) => {
             [u, i, n, e],
         );
     a.useEffect(() => {
-        (0, o.QF)({ ...x, viewName: o.gN.SAFETY_TAKEOVER_MODAL });
+        (0, d.QF)({ ...x, viewName: d.gN.SAFETY_TAKEOVER_MODAL });
     }, [x]);
     let E = a.useCallback(
             (t) => {
-                (0, o._$)({ ...x, cta: t });
+                (0, d._$)({ ...x, cta: t });
             },
             [x],
         ),
@@ -269,7 +269,7 @@ let H = (t) => {
                         }),
                         (0, s.jsx)(l.q, {
                             id: j.SAFETY_TIPS,
-                            children: (0, s.jsx)(C, { warningId: n, senderId: i, trackAnalyticsEvent: E }),
+                            children: (0, s.jsx)(p, { warningId: n, senderId: i, trackAnalyticsEvent: E }),
                         }),
                         (0, s.jsx)(l.q, {
                             id: j.TAKE_ACTION,
@@ -296,7 +296,7 @@ let H = (t) => {
                         size: "sm",
                         text: R.intl.string(R.t.cpT0Cq),
                         onClick: function () {
-                            (m.onClose(), (0, d.xi)(u, [n]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS));
+                            (m.onClose(), (0, o.xi)(u, [n]), E(d.Wm.USER_TAKEOVER_MODAL_DISMISS));
                         },
                         textVariant: "body-sm/normal",
                     }),

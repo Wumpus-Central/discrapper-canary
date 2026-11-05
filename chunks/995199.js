@@ -11,13 +11,13 @@ var i = n(477900),
     _ = n(265872),
     E = n(858899),
     A = n(862328),
-    h = n(866665),
-    f = n(67811),
+    f = n(866665),
+    h = n(67811),
     I = n(28863),
     p = n(417098),
     m = n(95362),
-    g = n(398590),
-    T = n(58736),
+    T = n(398590),
+    g = n(58736),
     S = n(471245),
     N = n(269880),
     C = n(25044),
@@ -386,7 +386,7 @@ function q() {
         ],
     });
 }
-function Z() {
+function Q() {
     let e = r.useRef(null);
     return (0, i.jsx)(_.Y, {
         targetElementRef: e,
@@ -406,7 +406,7 @@ function Z() {
             }),
     });
 }
-function Q(e, t, n, i, r) {
+function Z(e, t, n, i, r) {
     let a = null != t ? `dev://playground/${e.id}/${t.id}` : `dev://playground/${e.id}`;
     if (!n || null == t) return a;
     let s = K(t, i, r),
@@ -425,8 +425,8 @@ function ee(e) {
         o = R.x.useField("currentDefaults"),
         E = r.useRef(null),
         A = r.useMemo(() => null != n && Object.keys(K(n, a, o)).length > 0, [n, a, o]),
-        h = r.useCallback(() => J(Q(t, n, !0, a, o)), [t, n, a, o]),
-        f = r.useCallback(() => J(Q(t, n, !1, a, o)), [t, n, a, o]);
+        f = r.useCallback(() => J(Z(t, n, !0, a, o)), [t, n, a, o]),
+        h = r.useCallback(() => J(Z(t, n, !1, a, o)), [t, n, a, o]);
     return A
         ? (0, i.jsxs)("div", {
               role: "group",
@@ -438,7 +438,7 @@ function ee(e) {
                       "aria-label": "Copy link with configuration",
                       variant: "icon-only",
                       icon: s.CopyIcon,
-                      onClick: h,
+                      onClick: f,
                   }),
                   (0, i.jsx)(_.Y, {
                       targetElementRef: E,
@@ -455,14 +455,14 @@ function ee(e) {
                                       id: "copy-link-with-config",
                                       label: "Copy link with configuration",
                                       action: () => {
-                                          (t(), h());
+                                          (t(), f());
                                       },
                                   }),
                                   (0, i.jsx)(c.Dr, {
                                       id: "copy-link-clean",
                                       label: "Copy clean link",
                                       action: () => {
-                                          (t(), f());
+                                          (t(), h());
                                       },
                                   }),
                               ],
@@ -478,7 +478,7 @@ function ee(e) {
                               "aria-haspopup": "menu",
                               "aria-label": "More copy link options",
                               variant: "icon-only",
-                              icon: l.a,
+                              icon: l.ChevronSmallDownIcon,
                               ...e,
                               buttonRef: E,
                           }),
@@ -490,7 +490,7 @@ function ee(e) {
               "aria-label": "Copy Link",
               variant: "icon-only",
               icon: s.CopyIcon,
-              onClick: h,
+              onClick: f,
           });
 }
 function et(e) {
@@ -524,10 +524,10 @@ function et(e) {
                     (0, i.jsx)(
                         A.Q,
                         {
-                            children: (0, i.jsx)(h.m, {
+                            children: (0, i.jsx)(f.m, {
                                 position: "right",
                                 text: `${e.name} Design System`,
-                                children: (0, i.jsx)(f.j, {
+                                children: (0, i.jsx)(h.j, {
                                     name: e.name,
                                     selected: (n ?? l[0]?.id) === e.id,
                                     onClick: () => {
@@ -552,23 +552,23 @@ function et(e) {
             (0, i.jsxs)("div", {
                 className: B.Qs,
                 children: [
-                    (0, i.jsxs)(T.Ay, {
+                    (0, i.jsxs)(g.Ay, {
                         className: B.wx,
                         children: [
-                            null != E ? (0, i.jsx)(T.Ay.Title, { children: E }) : null,
+                            null != E ? (0, i.jsx)(g.Ay.Title, { children: E }) : null,
                             null != S
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          null != E ? (0, i.jsx)(T.Ay.Caret, { className: B.zN }) : null,
-                                          (0, i.jsx)(T.Ay.Title, { children: S }),
+                                          null != E ? (0, i.jsx)(g.Ay.Caret, { className: B.zN }) : null,
+                                          (0, i.jsx)(g.Ay.Title, { children: S }),
                                       ],
                                   })
                                 : null,
                             _?.docs != null
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T.Ay.Divider, { className: B.zN }),
-                                          (0, i.jsx)(T.Ay.Title, {
+                                          (0, i.jsx)(g.Ay.Divider, { className: B.zN }),
+                                          (0, i.jsx)(g.Ay.Title, {
                                               children: (0, i.jsx)(I.Anchor, { href: _.docs, children: "Docs" }),
                                           }),
                                       ],
@@ -579,13 +579,13 @@ function et(e) {
                                 className: B.IE,
                                 children: [
                                     c?.HeaderControl != null ? (0, i.jsx)(c.HeaderControl, {}) : null,
-                                    (0, i.jsx)(Z, {}),
+                                    (0, i.jsx)(Q, {}),
                                     (0, i.jsx)(d.K, {
                                         size: "sm",
-                                        icon: o.P,
+                                        icon: o.XSmallIcon,
                                         "aria-label": z.intl.string(z.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: g.jH,
+                                        onClick: T.jH,
                                     }),
                                 ],
                             }),

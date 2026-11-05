@@ -1,8 +1,8 @@
 var r = n(477900);
 n(582128);
 var i = n(503698),
-    s = n.n(i),
-    l = n(855986),
+    l = n.n(i),
+    s = n(855986),
     a = n(559106),
     u = n(866665),
     o = n(805251),
@@ -11,10 +11,10 @@ var i = n(503698),
     f = n(287809),
     I = n(722178),
     v = n(590180),
-    p = n(298072),
-    m = n(993408),
-    A = n(466459),
-    g = n(623373),
+    m = n(298072),
+    p = n(993408),
+    g = n(466459),
+    A = n(623373),
     E = n(561769),
     x = n(57020),
     h = n(792996),
@@ -29,7 +29,7 @@ let C = (e) => {
         return (0, r.jsx)(u.m, {
             text: h.intl.string(h.t.dCou7i),
             children: (0, r.jsx)(C, {
-                className: s()(t, _.$),
+                className: l()(t, _.$),
                 tabIndex: n,
                 role: "img",
                 "aria-label": i,
@@ -46,12 +46,12 @@ function R(e) {
             prioritizedCurrency: u,
             tabIndex: d,
         } = e,
-        { isPurchased: p, isPartiallyOwnedBundle: C } = (0, A.h)(t),
-        R = (0, m.G0)(t),
-        k = (0, l.bG)([v.A], () => v.A.getCategoryForProduct(t.skuId)),
+        { isPurchased: m, isPartiallyOwnedBundle: C } = (0, g.h)(t),
+        R = (0, p.G0)(t),
+        k = (0, s.bG)([v.A], () => v.A.getCategoryForProduct(t.skuId)),
         y = t.categoryWillUnpublishAt ?? k?.unpublishedAt,
-        S = null != y ? (0, m.WU)(y) : null,
-        T = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
+        S = null != y ? (0, p.WU)(y) : null,
+        T = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
         j = I.Ay.canUseShopDiscounts(T),
         { isOrbExclusive: O } = (0, x.F)({ product: t, hasShopDiscount: j, prioritizedCurrency: u }),
         P = n;
@@ -59,11 +59,11 @@ function R(e) {
         (null == P &&
             (null != i
                 ? (P = E.AW.BADGE_OVERRIDE)
-                : (0, g.JQ)(t)
+                : (0, A.JQ)(t)
                   ? (P = E.AW.DYNAMIC)
-                  : (0, m.HF)(y)
+                  : (0, p.HF)(y)
                     ? (P = E.AW.LIMITED_TIME)
-                    : !C && !p && (0, m.aT)(t.skuId)
+                    : !C && !m && (0, p.aT)(t.skuId)
                       ? (P = E.AW.NEW)
                       : O
                         ? (P = E.AW.ORBS_EXCLUSIVE)
@@ -74,8 +74,12 @@ function R(e) {
     if (P === E.AW.DYNAMIC) return (0, r.jsx)(b, { className: a, tabIndex: d });
     if (P === E.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)("div", {
-            className: s()(a, _.$),
-            children: (0, r.jsx)(o.E, { type: { text: h.intl.string(h.t["0TmQRG"]) }, variant: "inverted", icon: c.C }),
+            className: l()(a, _.$),
+            children: (0, r.jsx)(o.E, {
+                type: { text: h.intl.string(h.t["0TmQRG"]) },
+                variant: "inverted",
+                icon: c.OrbsIcon,
+            }),
         });
     let N = null;
     switch (P) {
@@ -94,25 +98,25 @@ function R(e) {
         case E.AW.BADGE_OVERRIDE:
             null != i && "" !== i && (N = (0, r.jsx)(o.E, { type: { text: i }, variant: "inverted" }));
     }
-    return null == N ? null : (0, r.jsx)("div", { className: s()(a, _.$), children: N });
+    return null == N ? null : (0, r.jsx)("div", { className: l()(a, _.$), children: N });
 }
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: s, tabIndex: l } = e,
+            let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l, tabIndex: s } = e,
                 a = (0, E.Vm)(t),
-                u = (0, p.Q)(a);
+                u = (0, m.Q)(a);
             if (null == a || a.hideBadge) return null;
-            let o = (0, g.rb)(a, u);
+            let o = (0, A.rb)(a, u);
             return (0, r.jsx)(R, {
                 product: o,
                 badgeOverride: n,
                 productBadgeOverride: a.badgeOverride,
                 className: i,
-                prioritizedCurrency: s,
-                tabIndex: l,
+                prioritizedCurrency: l,
+                tabIndex: s,
             });
         },
         s: b,

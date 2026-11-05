@@ -34,8 +34,8 @@ var i = n(477900),
     z = n(120692),
     k = n(778712),
     P = n(604121),
-    L = n(97808),
-    V = n(939249),
+    V = n(97808),
+    L = n(939249),
     G = n(265872),
     U = n(442433),
     F = n(391973),
@@ -233,7 +233,7 @@ let eI = r.memo(function (e) {
             }),
         });
     }),
-    ej = r.memo(L.eu),
+    ej = r.memo(V.eu),
     ey = r.memo(function (e) {
         let {
                 channel: t,
@@ -259,16 +259,16 @@ let eI = r.memo(function (e) {
             M = (0, a.bG)([S.default], () => S.default.getId() === d.id, [d.id]),
             { ref: D, width: z } = (0, H.Ay)(),
             { showConnectedAnimation: P } = eS(N, v),
-            L = y?.sessionId,
+            V = y?.sessionId,
             U = t.id,
             F = d.id,
             [Z] = (0, a.bG)(
                 [C.A],
                 () => [
-                    C.A.getVoiceStateForChannel(U, F) ?? C.A.getVoiceStateForSession(F, L),
+                    C.A.getVoiceStateForChannel(U, F) ?? C.A.getVoiceStateForSession(F, V),
                     C.A.getVoiceStateVersion(),
                 ],
-                [U, F, L],
+                [U, F, V],
                 w.D,
             ),
             W = (0, ea.oN)(),
@@ -334,7 +334,7 @@ let eI = r.memo(function (e) {
         return (m === et.f5z.ONLY_WHILE_SPEAKING && eA && !ee) || null == X
             ? null
             : n
-              ? (0, i.jsxs)(V.D, {
+              ? (0, i.jsxs)(L.D, {
                     innerRef: O,
                     className: s()(eg.q7, { [eg.zY]: ee, [eg.QF]: en, [eg.bG]: !l, [eg.zq]: n, [eg.cU]: P }),
                     onClick: l ? void 0 : (e) => f?.(e, d),
@@ -419,7 +419,7 @@ let eI = r.memo(function (e) {
                         (0, i.jsx)(ev, { avatarSize: ey, userId: d.id, channelId: t.id, guildId: t.getGuildId() }),
                     ],
                 })
-              : (0, i.jsxs)(V.D, {
+              : (0, i.jsxs)(L.D, {
                     innerRef: O,
                     className: s()(eg.q7, { [eg.zY]: ee, [eg.QF]: en, [eg.bG]: !l, [eg.zq]: n, [eg.cU]: P }),
                     onClick: l ? void 0 : (e) => f?.(e, d),
@@ -769,7 +769,7 @@ let ew = r.memo(function (e) {
           })
         : c || !g
           ? null
-          : (0, i.jsx)(O.g, { emptyText: em.intl.string(em.t.hEh0l1), icon: d.H });
+          : (0, i.jsx)(O.g, { emptyText: em.intl.string(em.t.hEh0l1), icon: d.VoiceNormalIcon });
 });
 function eN(e) {
     let { isSettingsPreview: t } = e,

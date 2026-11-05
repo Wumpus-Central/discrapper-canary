@@ -6,8 +6,8 @@ var l = t(789645),
     r = t(688810),
     o = t(129230),
     c = t(693409),
-    d = t(652215),
-    u = t(792996);
+    u = t(652215),
+    d = t(792996);
 t.d(
     n,
     {},
@@ -17,10 +17,10 @@ t.d(
                 { parentAnalyticsLocation: A } = (0, r.Ay)();
             return (0, i.jsx)(c.l, {
                 ...t,
-                iconComponent: l.P,
-                label: u.intl.string(u.t.WAI6xu),
+                iconComponent: l.XSmallIcon,
+                label: d.intl.string(d.t.WAI6xu),
                 onClick: function () {
-                    (o.default.track(d.HAw.RING_CALL_DECLINED, { location: A, guild_id: n.guild_id, ...(0, a.dI)(n) }),
+                    (o.default.track(u.HAw.RING_CALL_DECLINED, { location: A, guild_id: n.guild_id, ...(0, a.dI)(n) }),
                         s.A.stopRinging(n.id));
                 },
             });

@@ -1,35 +1,36 @@
-var h = i(477900);
-i(582128);
-var c = i(646514),
-    l = i(996682),
-    e = i(27989);
-i.d(
-    t,
+t.r(i);
+var c = t(477900);
+t(582128);
+var e = t(646514),
+    h = t(996682),
+    l = t(27989);
+t.d(
+    i,
     {},
     {
-        v: function (s) {
+        BoostTier2SimpleIcon: function (s) {
             let {
-                    size: t = "md",
-                    width: i,
+                    size: i = "md",
+                    width: t,
                     height: r,
-                    color: a = c.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: d = "",
-                    ...n
+                    color: o = e.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
+                    ...p
                 } = s,
-                p = (0, e.J)(t),
-                o = p?.width ?? i,
-                w = p?.height ?? r;
-            return (0, h.jsx)("svg", {
-                ...(0, l.A)(n),
+                a = (0, l.J)(i),
+                d = a?.width ?? t,
+                w = a?.height ?? r;
+            return (0, c.jsx)("svg", {
+                ...(0, h.A)(p),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
+                width: d,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, h.jsx)("path", {
-                    fill: "string" == typeof a ? a : a.css,
+                children: (0, c.jsx)("path", {
+                    fill: "string" == typeof o ? o : o.css,
                     d: "M10.95 1.4a1.59 1.59 0 0 1 2.1 0l4.9 4A3.37 3.37 0 0 1 19 8v8c0 1.07-.4 2.06-1.05 2.6l-4.9 4c-.65.53-1.45.53-2.1 0l-4.9-4A3.37 3.37 0 0 1 5 16V8c0-1.07.4-2.06 1.05-2.6l4.9-4Z",
-                    className: d,
+                    className: n,
                 }),
             });
         },

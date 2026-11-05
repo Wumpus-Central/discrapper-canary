@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(855986),
     o = n(866665),
-    d = n(650809),
-    c = n(192308),
+    c = n(650809),
+    d = n(192308),
     u = n(265872),
     h = n(481901),
     p = n(29540),
@@ -17,19 +17,19 @@ var i = n(477900),
     x = n(872363),
     C = n(303227),
     y = n(920639),
-    j = n(360729),
-    I = n(410828),
+    I = n(360729),
+    j = n(410828),
     N = n(51082),
     v = n(275731),
     E = n(289552),
     b = n(246356),
     S = n(977851),
-    _ = n(693409),
-    T = n(772475),
+    T = n(693409),
+    _ = n(772475),
     R = n(293277),
     O = n(708416),
-    P = n(488947),
-    L = n(170011),
+    L = n(488947),
+    P = n(170011),
     M = n(241606),
     w = n(309010),
     U = n(485296),
@@ -100,13 +100,13 @@ n.d(
                     }),
                     [X],
                 ),
-                { enabled: J, multipleRoomsEnabled: ee } = (0, j.mf)({
+                { enabled: J, multipleRoomsEnabled: ee } = (0, I.mf)({
                     guildId: t.guild_id,
                     location: "ChannelCallHeaderToolbar",
                 }),
                 et = J && !t.isGuildStageVoice(),
                 en = (0, r.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === X),
-                ei = (0, P.F)(a),
+                ei = (0, L.F)(a),
                 el = (0, O.kM)(t) && ei,
                 ea = (0, O.Fh)(t, s) && ei,
                 es = (0, O.EJ)(t, s) && ei,
@@ -118,12 +118,12 @@ n.d(
                     en &&
                     eo.push(
                         (0, i.jsx)(
-                            _.A,
+                            T.A,
                             {
-                                iconComponent: d.PaintPaletteIcon,
+                                iconComponent: c.PaintPaletteIcon,
                                 label: B.intl.string(B.t["ZrN+DT"]),
                                 onClick: () => {
-                                    (0, c.mM)(async () => {
+                                    (0, d.mM)(async () => {
                                         let { default: e } = await Promise.all([n.e(768581), n.e(244605)]).then(
                                             n.bind(n, 77580),
                                         );
@@ -169,7 +169,7 @@ n.d(
                                 renderPopout: () => (0, i.jsx)(b.A, { children: (0, i.jsx)(G.A, { channel: t }) }),
                                 children: (e, t) => {
                                     let { isShown: n } = t;
-                                    return (0, l.createElement)(T.A, {
+                                    return (0, l.createElement)(_.A, {
                                         ...e,
                                         buttonRef: Y,
                                         isActive: n,
@@ -187,9 +187,9 @@ n.d(
                 let e = W && !$ ? B.t["3jrUBj"] : F.default.f7g0DK;
                 eo.push(
                     (0, i.jsx)(
-                        _.A,
+                        T.A,
                         {
-                            iconComponent: W && !$ ? h.d : p.u,
+                            iconComponent: W && !$ ? h.GridSquareIcon : p.ExperimentalCouchIcon,
                             label: B.intl.string(e),
                             onClick: () => {
                                 if (!W) {
@@ -213,7 +213,7 @@ n.d(
             return (
                 t.isGuildStageVoice() &&
                     !N &&
-                    eo.push((0, i.jsx)(I.di, { channel: t, className: z.x6 }, "stage-audience")),
+                    eo.push((0, i.jsx)(j.di, { channel: t, className: z.x6 }, "stage-audience")),
                 ea &&
                     eo.push(
                         (0, i.jsx)(
@@ -222,7 +222,7 @@ n.d(
                             "voice-channel-app-toggle",
                         ),
                     ),
-                es && eo.push((0, i.jsx)(L.A, { channelId: t.id, className: z.x6 }, "voice-channel-app-close")),
+                es && eo.push((0, i.jsx)(P.A, { channelId: t.id, className: z.x6 }, "voice-channel-app-close")),
                 er && eo.push((0, i.jsx)(S.V, { channelId: t.id, className: z.x6, disabled: o }, "chat-spacer")),
                 (0, i.jsx)(A.f5, { value: K, children: eo })
             );

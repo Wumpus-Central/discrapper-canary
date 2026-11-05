@@ -1,99 +1,99 @@
 n(321073);
-var l = n(477900),
-    i = n(582128),
-    a = n(503698),
-    r = n.n(a),
+var i = n(477900),
+    l = n(582128),
+    r = n(503698),
+    a = n.n(r),
     s = n(120692),
     o = n(505124),
     u = n(646514),
-    d = n(43990),
-    c = n(683063),
+    c = n(43990),
+    d = n(683063),
     m = n(713608),
-    h = n(918715),
-    f = n(717421),
-    p = n(271520),
+    f = n(918715),
+    p = n(717421),
+    h = n(271520),
     g = n(762555),
     A = n(443184),
-    v = n(696016),
-    x = n(683825),
-    E = n(792996),
-    C = n(328115);
+    C = n(696016),
+    E = n(683825),
+    x = n(792996),
+    v = n(328115);
 function _(e) {
     let {
         leftPx: t,
         rightPx: n,
-        setHoveredIndex: i,
-        isAnimated: a,
+        setHoveredIndex: l,
+        isAnimated: r,
         index: m,
-        activated: h,
-        expansionSpring: f,
-        icon: p,
+        activated: f,
+        expansionSpring: p,
+        icon: h,
         title: g,
         body: A,
     } = e;
-    return (0, l.jsx)(d.N, {
+    return (0, i.jsx)(c.N, {
         theme: o.NJ.ONYX,
         children: (e) =>
-            (0, l.jsx)(c.u, {
+            (0, i.jsx)(d.u, {
                 title: g ?? void 0,
                 body: A,
                 position: "top",
-                children: (0, l.jsx)(s.animated.div, {
-                    className: r()(C.z, e),
-                    onMouseEnter: () => i(m),
-                    onMouseLeave: () => i(null),
+                children: (0, i.jsx)(s.animated.div, {
+                    className: a()(v.z, e),
+                    onMouseEnter: () => l(m),
+                    onMouseLeave: () => l(null),
                     style: {
-                        left: a ? f.to((e) => t - e) : t,
+                        left: r ? p.to((e) => t - e) : t,
                         right: n,
-                        width: a ? f.to((e) => `${y + 2 * e}px`) : y,
-                        height: a ? f.to((e) => `${y + 2 * e}px`) : y,
+                        width: r ? p.to((e) => `${y + 2 * e}px`) : y,
+                        height: r ? p.to((e) => `${y + 2 * e}px`) : y,
                     },
-                    children: (0, l.jsx)(p, {
+                    children: (0, i.jsx)(h, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
-                        color: h ? u.A.colors.INTERACTIVE_ICON_ACTIVE : u.A.colors.INTERACTIVE_ICON_DEFAULT,
+                        color: f ? u.A.colors.INTERACTIVE_ICON_ACTIVE : u.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
             }),
     });
 }
 let y = 12,
-    T = { tension: 500, friction: 30, clamp: !0 };
-function N(e) {
+    b = { tension: 500, friction: 30, clamp: !0 };
+function T(e) {
     switch (e) {
         case g.B.LAUGHTER:
-            return v.Gy.LAUGHTER;
+            return C.Gy.LAUGHTER;
         case g.B.SHOUTING:
-            return v.Gy.SHOUTING;
+            return C.Gy.SHOUTING;
         default:
             return null;
     }
 }
-function b(e, t) {
+function S(e, t) {
     if (null != t.emotion) {
-        let n = N(t.emotion.type);
+        let n = T(t.emotion.type);
         return null == n ? 0 : ((0, A.$b)(e, n) ?? 0);
     }
     return null != t.game
         ? null == t.game.event_name
             ? 0
-            : ((0, A.$b)(e, v.Gy.GAME_EVENT, t.game.event_name) ?? 0)
+            : ((0, A.$b)(e, C.Gy.GAME_EVENT, t.game.event_name) ?? 0)
         : 0;
 }
-function j(e, t) {
+function I(e, t) {
     if (null != t.emotion) {
-        let n = N(t.emotion.type);
+        let n = T(t.emotion.type);
         return null == n ? null : (0, A.u6)(e, n);
     }
     if (null != t.game) {
-        if (null != t.game.event_name) return (0, A.u6)(e, v.Gy.GAME_EVENT, t.game.event_name);
+        if (null != t.game.event_name) return (0, A.u6)(e, C.Gy.GAME_EVENT, t.game.event_name);
         switch (t.game.type) {
             case g.Q_.MULTIKILL:
             case g.Q_.KILL:
-                return m.q;
+                return m.ModerationIcon;
             case g.Q_.DEATH:
-                return h.V;
+                return f.SkullIcon;
         }
     }
     return null;
@@ -103,25 +103,25 @@ n.d(
     {},
     {
         T: function (e, t, n) {
-            let [a, r] = i.useState(null),
-                s = i.useRef(null),
-                [{ expansion: o }, u] = (0, f.z)(() => ({
+            let [r, a] = l.useState(null),
+                s = l.useRef(null),
+                [{ expansion: o }, u] = (0, p.z)(() => ({
                     expansion: 0,
-                    config: T,
+                    config: b,
                     onRest: () => {
-                        null == s.current && r(null);
+                        null == s.current && a(null);
                     },
                 })),
-                d = i.useCallback(
+                c = l.useCallback(
                     (e) => {
-                        ((s.current = e), null != e ? (r(e), u({ expansion: 4 })) : u({ expansion: 0 }));
+                        ((s.current = e), null != e ? (a(e), u({ expansion: 4 })) : u({ expansion: 0 }));
                     },
                     [u],
                 ),
-                c = p.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-                m = i.useMemo(() => {
-                    let l = e
-                        .filter((e) => ((c && null != e.game) || null != e.emotion) && null != j(t, e))
+                d = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+                m = l.useMemo(() => {
+                    let i = e
+                        .filter((e) => ((d && null != e.game) || null != e.emotion) && null != I(t, e))
                         .map((e) => {
                             var t;
                             return {
@@ -130,54 +130,54 @@ n.d(
                             };
                         })
                         .filter((e) => null != e.position);
-                    (l.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms),
-                        l.sort((e, n) => b(t, n.event) - b(t, e.event)));
-                    let i = [];
-                    for (let e of l) i.some((t) => 3 > Math.abs(t.position - e.position)) || i.push(e);
-                    return (i.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms), i.map((e) => e.event));
-                }, [e, c, t, n]),
-                h = i.useMemo(
+                    (i.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms),
+                        i.sort((e, n) => S(t, n.event) - S(t, e.event)));
+                    let l = [];
+                    for (let e of i) l.some((t) => 3 > Math.abs(t.position - e.position)) || l.push(e);
+                    return (l.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms), l.map((e) => e.event));
+                }, [e, d, t, n]),
+                f = l.useMemo(
                     () => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: y, gapPx: 4 })),
                     [m],
                 ),
-                g = i.useCallback(
+                g = l.useCallback(
                     (e, n) => {
-                        let i = a === e.index,
-                            r = m[e.index];
-                        if (null == r) return null;
+                        let l = r === e.index,
+                            a = m[e.index];
+                        if (null == a) return null;
                         let s = n > e.leftPx,
-                            u = j(t, r),
-                            c =
-                                null != r.emotion
-                                    ? E.intl.string(x.default["ry+jxm"])
-                                    : null != r.game
-                                      ? E.intl.string(x.default["347DBb"])
+                            u = I(t, a),
+                            d =
+                                null != a.emotion
+                                    ? x.intl.string(E.default["ry+jxm"])
+                                    : null != a.game
+                                      ? x.intl.string(E.default["347DBb"])
                                       : null;
-                        return null == u || null == c
+                        return null == u || null == d
                             ? null
-                            : (0, l.jsx)(_, {
+                            : (0, i.jsx)(_, {
                                   ...e,
                                   activated: s,
                                   gapPx: 4,
                                   title: (function (e, t) {
                                       if (null != t.emotion) {
-                                          let n = N(t.emotion.type);
+                                          let n = T(t.emotion.type);
                                           return null == n ? null : (0, A.PZ)(e, n);
                                       }
                                       return null != t.game && null != t.game.event_name
-                                          ? (0, A.PZ)(e, v.Gy.GAME_EVENT, t.game.event_name)
+                                          ? (0, A.PZ)(e, C.Gy.GAME_EVENT, t.game.event_name)
                                           : null;
-                                  })(t, r),
-                                  body: c,
+                                  })(t, a),
+                                  body: d,
                                   expansionSpring: o,
-                                  setHoveredIndex: d,
-                                  isAnimated: i,
+                                  setHoveredIndex: c,
+                                  isAnimated: l,
                                   icon: u,
                               });
                     },
-                    [a, m, d, o, t],
+                    [r, m, c, o, t],
                 );
-            return { indicators: h, animatingIndex: a, expansionSpring: o, hoverExpansionPx: 4, renderIndicator: g };
+            return { indicators: f, animatingIndex: r, expansionSpring: o, hoverExpansionPx: 4, renderIndicator: g };
         },
     },
 );

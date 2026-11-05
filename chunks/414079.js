@@ -1,22 +1,22 @@
-var i = s(477900);
+var c = s(477900);
 s(582128);
-var l = s(503698),
-    c = s.n(l),
+var i = s(503698),
+    l = s.n(i),
     e = s(939249),
     n = s(285796),
     t = s(792996),
-    u = s(519693);
+    o = s(519693);
 s.d(
-    r,
+    a,
     {},
     {
-        A: function (a) {
-            let { className: r, "aria-label": s, ...l } = a;
-            return (0, i.jsx)(e.D, {
-                ...l,
+        A: function (r) {
+            let { className: a, "aria-label": s, ...i } = r;
+            return (0, c.jsx)(e.D, {
+                ...i,
                 "aria-label": null != s ? s : t.intl.string(t.t.N86XcP),
-                className: c()(u.x, r),
-                children: (0, i.jsx)(n.a, { size: "xs", color: "currentColor" }),
+                className: l()(o.x, a),
+                children: (0, c.jsx)(n.CircleXIcon, { size: "xs", color: "currentColor" }),
             });
         },
     },

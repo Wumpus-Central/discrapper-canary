@@ -16,8 +16,8 @@ var r = i(477900),
     A = i(475358),
     p = i(191023),
     T = i(205513),
-    x = i(866665),
-    C = i(939249),
+    C = i(866665),
+    x = i(939249),
     D = i(831453),
     y = i(775602),
     w = i(793574),
@@ -200,8 +200,8 @@ i.d(
                 } = en,
                 [eE, eR] = a.useState(!1),
                 [eA, ep] = a.useState(!1),
-                [eT, ex] = a.useState(0),
-                [eC, eD] = a.useState(Y?.zoomRatio ?? 1),
+                [eT, eC] = a.useState(0),
+                [ex, eD] = a.useState(Y?.zoomRatio ?? 1),
                 [ey, ew] = a.useState(!1),
                 [eI, e_] = a.useState("x"),
                 eb = (0, u.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
@@ -366,7 +366,7 @@ i.d(
                             let e = (0, O.l$)(+eu.width, +eu.height, es);
                             (eo({ type: "RESET", dragBoundaries: e }), e$(0, 0, e, 0));
                         }
-                        (eD(1), ex((e) => e + 1));
+                        (eD(1), eC((e) => e + 1));
                     }
                 }, [es, eJ, eu, ed, e$]),
                 e0 = a.useCallback(() => {
@@ -613,7 +613,7 @@ i.d(
                                                         ? (0, r.jsxs)("div", {
                                                               className: k.Un,
                                                               children: [
-                                                                  (0, r.jsx)(f.E, {
+                                                                  (0, r.jsx)(f.CircleErrorIcon, {
                                                                       size: "sm",
                                                                       color: E.A.colors.TEXT_FEEDBACK_CRITICAL,
                                                                   }),
@@ -710,7 +710,7 @@ i.d(
                                                             T.G,
                                                             {
                                                                 className: k.aw,
-                                                                initialValue: eC,
+                                                                initialValue: ex,
                                                                 minValue: 1,
                                                                 maxValue: 2,
                                                                 keyboardStep: 0.025,
@@ -733,15 +733,15 @@ i.d(
                                                         }),
                                                     ],
                                                 }),
-                                                (0, r.jsx)(x.m, {
+                                                (0, r.jsx)(C.m, {
                                                     text: B.intl.string(B.t.E36Wd4),
                                                     ariaHidden: !0,
-                                                    children: (0, r.jsx)(C.D, {
+                                                    children: (0, r.jsx)(x.D, {
                                                         className: o()(k.On, { [k.r9]: eO }),
                                                         onClick: eO ? void 0 : eZ,
                                                         "aria-label": B.intl.string(B.t.LzFiKG),
                                                         "aria-disabled": eO,
-                                                        children: (0, r.jsx)(D.H, {
+                                                        children: (0, r.jsx)(D.RotateIcon, {
                                                             size: "md",
                                                             color: "currentColor",
                                                         }),

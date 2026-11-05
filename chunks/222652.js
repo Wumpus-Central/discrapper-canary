@@ -29,7 +29,11 @@ i.d(
                     case c.P.CLAIM_IN_PROGRESS:
                         return { text: x.intl.string(m.default.EL3rU4) };
                     case c.P.CLAIMED:
-                        return { text: x.intl.string(m.default["0mQ2U6"]), icon: n.W, iconPosition: "end" };
+                        return {
+                            text: x.intl.string(m.default["0mQ2U6"]),
+                            icon: n.LinkExternalMediumIcon,
+                            iconPosition: "end",
+                        };
                     case c.P.CANCELLATION_IN_PROGRESS:
                         return { text: x.intl.string(m.default.wBz9aO), disabled: !0 };
                 }

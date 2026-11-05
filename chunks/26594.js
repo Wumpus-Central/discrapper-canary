@@ -10,7 +10,7 @@ n.d(
                 n = e?.metadata?.orbs_reward;
             return null != n && n > 0
                 ? {
-                      Icon: l.C,
+                      Icon: l.OrbsIcon,
                       text: i.intl.format(t ? i.t["ZV+aS9"] : i.t["0StwHe"], { orbCount: n }),
                       graphic: { type: "video", url: r.A },
                   }

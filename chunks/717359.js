@@ -12,34 +12,34 @@ var s = n(477900),
     x = n(965162),
     A = n(854325),
     E = n(952572),
-    p = n(503698),
-    g = n.n(p),
-    _ = n(939249),
-    N = n(834730),
+    g = n(503698),
+    p = n.n(g),
+    N = n(939249),
+    _ = n(834730),
     j = n(782134),
-    f = n(805251),
-    h = n(403581),
-    I = n(866665),
+    I = n(805251),
+    f = n(403581),
+    h = n(866665),
     v = n(750943),
     O = n(638495),
-    S = n(428678),
-    b = n(635739),
-    y = n(442433),
+    y = n(428678),
+    S = n(635739),
+    b = n(442433),
     C = n(964486),
-    U = n(793574),
-    D = n(688810),
+    D = n(793574),
+    U = n(688810),
     T = n(607470),
     k = n(421838),
-    M = n(891540),
-    B = n(738011),
-    L = n(739053),
-    P = n(82498),
+    B = n(891540),
+    M = n(738011),
+    P = n(739053),
+    L = n(82498),
     R = n(129230),
     G = n(486020),
     w = n(811091),
     V = n(665096),
-    H = n(577718),
-    W = n(652215),
+    W = n(577718),
+    H = n(652215),
     F = n(897513),
     K = n(339984),
     z = n(682901),
@@ -57,8 +57,8 @@ function Q(e) {
         onMouseLeave: c,
         onBlur: d,
     } = e;
-    return (0, s.jsxs)(_.D, {
-        className: g()(a, q.gf, { [q.JI]: o, [q.A7]: r }),
+    return (0, s.jsxs)(N.D, {
+        className: p()(a, q.gf, { [q.JI]: o, [q.A7]: r }),
         onMouseLeave: c,
         onBlur: d,
         onClick: r ? void 0 : n,
@@ -78,7 +78,7 @@ function Q(e) {
                                 width: 18,
                                 height: 18,
                             }),
-                            (0, s.jsx)(N.E, { className: q.V7, color: "none", variant: "body-sm/normal", children: l }),
+                            (0, s.jsx)(_.E, { className: q.V7, color: "none", variant: "body-sm/normal", children: l }),
                         ],
                     }),
                 ],
@@ -117,45 +117,45 @@ function Z(e) {
             ariaLabel: A,
         } = e,
         E = (0, r.p)(),
-        { analyticsLocations: p } = (0, D.Ay)(U.A.VIDEO_BACKGROUND_IMAGE_OPTION),
-        N = (0, i.bG)([M.A], () => null != m && M.A.hasHotspot(m)),
-        h = l.useCallback((e) => {
-            if (!(0, B.u)(e)) throw e;
+        { analyticsLocations: g } = (0, U.Ay)(D.A.VIDEO_BACKGROUND_IMAGE_OPTION),
+        _ = (0, i.bG)([B.A], () => null != m && B.A.hasHotspot(m)),
+        f = l.useCallback((e) => {
+            if (!(0, M.u)(e)) throw e;
         }, []),
-        I = u
-            ? (0, s.jsx)(T.A, { className: q.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: h })
+        h = u
+            ? (0, s.jsx)(T.A, { className: q.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: f })
             : (0, s.jsx)(Y, { isAnimated: d, option: (0, x.d1)(t) ? t : void 0, source: a });
     function v() {
         null != m &&
-            N &&
+            _ &&
             (k.sF(m),
-            R.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
+            R.default.track(H.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: z.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: E.location,
-                location_stack: p,
+                location_stack: g,
             }),
-            (0, L.sq)(W.U7l.PREMIUM_UPSELL_VIEWED, p, () => (0, P.uq)(z.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET)));
+            (0, P.sq)(H.U7l.PREMIUM_UPSELL_VIEWED, g, () => (0, L.uq)(z.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET)));
     }
-    return (0, s.jsxs)(_.D, {
-        className: g()(q.gf, { [q.JI]: o }),
+    return (0, s.jsxs)(N.D, {
+        className: p()(q.gf, { [q.JI]: o }),
         "aria-label": A,
         onClick: () => c(t),
         onContextMenu: (e) =>
-            (0, y.L3)(e, async () => {
+            (0, b.L3)(e, async () => {
                 let { default: e } = await n.e(422305).then(n.bind(n, 5752));
                 return (n) => (0, s.jsx)(e, { ...n, backgroundOption: t, optionIsInUse: o });
             }),
         children: [
             o ? (0, s.jsx)("div", { className: q.SH }) : null,
-            (0, s.jsx)("div", { onFocus: v, onMouseEnter: v, className: q.kV, children: I }),
+            (0, s.jsx)("div", { onFocus: v, onMouseEnter: v, className: q.kV, children: h }),
             u || d
                 ? (0, s.jsx)("div", {
                       className: q.uZ,
                       children: (0, s.jsx)(j.PlayIcon, { size: "xxs", color: "currentColor" }),
                   })
                 : null,
-            N &&
-                (0, s.jsx)("div", { className: q.sL, children: (0, s.jsx)(f.E, { type: "new", variant: "inverted" }) }),
+            _ &&
+                (0, s.jsx)("div", { className: q.sL, children: (0, s.jsx)(I.E, { type: "new", variant: "inverted" }) }),
         ],
     });
 }
@@ -163,19 +163,19 @@ function $() {
     return (0, s.jsxs)("div", {
         className: q.j1,
         children: [
-            (0, s.jsx)(h.t, { size: "md", color: "currentColor", className: q.eo }),
-            (0, s.jsx)(N.E, { variant: "body-sm/normal", children: J.intl.string(J.t["T+yRY3"]) }),
+            (0, s.jsx)(f.NitroWheelIcon, { size: "md", color: "currentColor", className: q.eo }),
+            (0, s.jsx)(_.E, { variant: "body-sm/normal", children: J.intl.string(J.t["T+yRY3"]) }),
         ],
     });
 }
 function X(e) {
     let { onClick: t, tooltipText: n, disabled: l = !1 } = e,
-        a = (0, i.bG)([M.A], () => M.A.hasHotspot(F._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        a = (0, i.bG)([B.A], () => B.A.hasHotspot(F._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function o() {
         k.sF(F._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let r = a ? J.intl.string(J.t["5TUJOv"]) : n;
-    return (0, s.jsx)(I.m, {
+    return (0, s.jsx)(h.m, {
         text: r,
         children: (0, s.jsxs)("div", {
             className: q.$g,
@@ -183,14 +183,14 @@ function X(e) {
                 (0, s.jsxs)(Q, {
                     className: q.__invalid_backgroundOptionBlurred,
                     disabled: l,
-                    icon: v.X,
+                    icon: v.ImagePlusIcon,
                     onClick: t,
                     onMouseLeave: o,
                     onBlur: o,
                     text: (0, s.jsxs)("div", {
                         className: q.Us,
                         children: [
-                            (0, s.jsx)(h.t, { size: "md", color: "currentColor", className: q.PK }),
+                            (0, s.jsx)(f.NitroWheelIcon, { size: "md", color: "currentColor", className: q.PK }),
                             (0, s.jsx)("div", { className: q.kr, children: J.intl.string(J.t["1t7U8W"]) }),
                         ],
                     }),
@@ -199,7 +199,7 @@ function X(e) {
                 a &&
                     (0, s.jsx)("div", {
                         className: q.sL,
-                        children: (0, s.jsx)(f.E, { type: "new", variant: "inverted" }),
+                        children: (0, s.jsx)(I.E, { type: "new", variant: "inverted" }),
                     }),
             ],
         }),
@@ -208,15 +208,15 @@ function X(e) {
 function ee(e) {
     let { onClick: t } = e,
         n = (0, r.p)(),
-        { analyticsLocations: l } = (0, D.Ay)(U.A.VIDEO_BACKGROUND_CUSTOM_UPSELL);
+        { analyticsLocations: l } = (0, U.Ay)(D.A.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, C.Ay)(() => {
-            (R.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
+            (R.default.track(H.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: z.e.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: l,
             }),
-                (0, L.sq)(W.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, P.uq)(z.e.VIDEO_BACKGROUNDS_INLINE)));
+                (0, P.sq)(H.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, L.uq)(z.e.VIDEO_BACKGROUNDS_INLINE)));
         }),
         (0, s.jsx)(X, { onClick: t, tooltipText: J.intl.string(J.t["IqE0T/"]) })
     );
@@ -258,7 +258,7 @@ function et(e) {
                     ]).then(n.bind(n, 685663));
                     return (n) =>
                         (0, s.jsx)(e, {
-                            maxFileSizeBytes: H.G9,
+                            maxFileSizeBytes: W.G9,
                             onComplete: (e) => {
                                 let { imageUri: n, file: s, isFromTenor: l } = e;
                                 return t(n, s, l);
@@ -297,22 +297,22 @@ function en(e) {
             [n],
         ),
         d = c.length >= 25,
-        { analyticsLocations: u } = (0, D.Ay)(U.A.VIDEO_BACKGROUND_OPTIONS),
-        m = Object.values((0, V.A)()).sort((e, t) => H.sl[e.id] - H.sl[t.id]);
-    return (0, s.jsx)(D.f5, {
+        { analyticsLocations: u } = (0, U.Ay)(D.A.VIDEO_BACKGROUND_OPTIONS),
+        m = Object.values((0, V.A)()).sort((e, t) => W.sl[e.id] - W.sl[t.id]);
+    return (0, s.jsx)(U.f5, {
         value: u,
         children: (0, s.jsxs)("div", {
             className: q.to,
             children: [
                 (0, s.jsx)(Q, {
                     selected: null == i,
-                    icon: S.K,
+                    icon: y.DenyIcon,
                     onClick: () => a(null),
                     text: J.intl.string(J.t.fUdMeO),
                 }),
                 (0, s.jsx)(Q, {
                     selected: "blur" === i,
-                    icon: b.f,
+                    icon: S.BlurBackgroundIcon,
                     onClick: () => a("blur"),
                     text: J.intl.string(J.t.LhSyL8),
                     children: (0, s.jsx)("div", { className: q.LJ }),
@@ -323,7 +323,7 @@ function en(e) {
                     return null == t
                         ? null
                         : (0, s.jsx)(
-                              I.m,
+                              h.m,
                               {
                                   __unsupportedReactNodeAsText: (0, s.jsx)($, {}),
                                   "aria-label": J.intl.string(J.t["T+yRY3"]),
@@ -348,7 +348,7 @@ function en(e) {
                 m.map((e) => {
                     let t = !0 === e.isVideo;
                     return (0, s.jsx)(
-                        I.m,
+                        h.m,
                         {
                             text: e.name,
                             "aria-label": e.name,
@@ -379,50 +379,50 @@ var es = n(693591);
 function el(e) {
     let {
             onLearnMore: t,
-            selectedBackgroundOption: p,
-            onSelectBackgroundOption: g,
-            currentDeviceId: _,
-            className: N,
+            selectedBackgroundOption: g,
+            onSelectBackgroundOption: p,
+            currentDeviceId: N,
+            className: _,
         } = e,
         j = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
-        [f, h] = l.useState(null),
-        I = (0, E.A)(),
+        [I, f] = l.useState(null),
+        h = (0, E.A)(),
         v = d.Ay.canUseCustomBackgrounds(j);
     l.useEffect(() => {
         (0, u.HR)();
     }, []);
     let O = (0, i.cf)([m.A], () => (v ? m.A.videoFilterAssets : {})),
-        S = l.useMemo(() => Object.values(O).filter((e) => e.type === H.yZ.BACKGROUND || (e.type, !1)), [O]),
-        b = (0, r.p)(),
-        y = { isVideoBackgroundSupported: I, onSelectBackgroundOption: g, selectedBackgroundOption: p },
-        C = l.useRef(y);
-    function U(e) {
-        (g(e),
-            (0, A.S1)(e, _, { location: b.location })
-                .then(() => h(null))
+        y = l.useMemo(() => Object.values(O).filter((e) => e.type === W.yZ.BACKGROUND || (e.type, !1)), [O]),
+        S = (0, r.p)(),
+        b = { isVideoBackgroundSupported: h, onSelectBackgroundOption: p, selectedBackgroundOption: g },
+        C = l.useRef(b);
+    function D(e) {
+        (p(e),
+            (0, A.S1)(e, N, { location: S.location })
+                .then(() => f(null))
                 .catch(() => {
-                    (h(J.intl.string(J.t.ejrSLe)), (0, A.S1)(null, _, { location: b.location }));
+                    (f(J.intl.string(J.t.ejrSLe)), (0, A.S1)(null, N, { location: S.location }));
                 }));
     }
     return (
         l.useEffect(() => {
-            C.current = y;
+            C.current = b;
         }),
         l.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = C.current;
-            e ? (0, A.S1)(n, _, { track: !1 }).catch(() => t(null)) : null != n && t(null);
-        }, [_]),
-        I
+            e ? (0, A.S1)(n, N, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+        }, [N]),
+        h
             ? (0, s.jsx)("div", {
-                  className: N,
+                  className: _,
                   children: (0, s.jsx)(o.D, {
                       label: J.intl.string(J.t.lZTUPs),
-                      errorMessage: f,
+                      errorMessage: I,
                       children: (0, s.jsx)(en, {
                           canUseCustomBackgrounds: v,
-                          customBackgroundOptions: S,
-                          selectedOption: p,
-                          onSelectOption: U,
+                          customBackgroundOptions: y,
+                          selectedOption: g,
+                          onSelectOption: D,
                           onUpsellClick: function () {
                               (0, a.mM)(async () => {
                                   let { default: e } = await Promise.all([
@@ -452,17 +452,17 @@ function el(e) {
                                       (0, s.jsx)(e, {
                                           ...n,
                                           onLearnMore: t,
-                                          analyticsSource: { ...b.location, object: W.ZSU.BUTTON_CTA },
+                                          analyticsSource: { ...S.location, object: H.ZSU.BUTTON_CTA },
                                       });
                               });
                           },
                           onAddBackgroundImage: async function (e, t) {
                               let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                               try {
-                                  let s = await (0, u.F9)(e, H.yZ.BACKGROUND);
-                                  (U(s), (0, x.D1)(s, t.type === es.a.MP4, n), h(null));
+                                  let s = await (0, u.F9)(e, W.yZ.BACKGROUND);
+                                  (D(s), (0, x.D1)(s, t.type === es.a.MP4, n), f(null));
                               } catch (e) {
-                                  h(e.message);
+                                  f(e.message);
                               }
                           },
                       }),

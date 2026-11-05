@@ -1,150 +1,150 @@
-var a = t(477900),
-    n = t(582128),
-    s = t(503698),
-    i = t.n(s),
-    r = t(855986),
-    c = t(939249),
-    o = t(366010),
-    A = t(834730),
-    u = t(926268),
-    p = t(346411),
-    d = t(736653),
-    C = t(793574),
-    E = t(688810),
-    g = t(658997),
-    L = t(793943),
-    _ = t(742589),
-    m = t(702476),
-    N = t(71393),
-    T = t(576705),
-    I = t(287809),
-    S = t(129230),
-    h = t(975571),
-    x = t(371794),
-    O = t(871123),
-    b = t(439303),
-    j = t(353281),
-    f = t(225647),
-    k = t(676924),
-    M = t(995393),
-    R = t(652215),
-    v = t(518477),
-    y = t(792996),
-    w = t(859425);
-function D(e) {
-    let { content: l, onClick: t, ariaLabel: n, className: s } = e;
-    return (0, a.jsx)(c.D, { className: i()(w.gb, s), onClick: t, "aria-label": n, children: l });
+var l = a(477900),
+    s = a(582128),
+    n = a(503698),
+    i = a.n(n),
+    r = a(855986);
+if (221552 == a.j) var c = a(939249);
+if (221552 == a.j) var o = a(366010);
+if (221552 == a.j) var A = a(834730);
+if (221552 == a.j) var E = a(926268);
+if (221552 == a.j) var p = a(346411);
+var d = a(736653),
+    C = a(793574),
+    I = a(688810),
+    L = a(658997),
+    u = a(793943),
+    _ = a(742589),
+    T = a(702476),
+    O = a(71393),
+    S = a(576705),
+    N = a(287809),
+    h = a(129230),
+    m = a(975571),
+    g = a(371794),
+    R = a(871123),
+    P = a(439303),
+    D = a(353281),
+    j = a(225647),
+    x = a(676924),
+    f = a(995393),
+    v = a(652215),
+    y = a(518477),
+    b = a(792996),
+    k = a(859425);
+function w(e) {
+    let { content: t, onClick: a, ariaLabel: s, className: n } = e;
+    return (0, l.jsx)(c.D, { className: i()(k.gb, n), onClick: a, "aria-label": s, children: t });
 }
-t.d(
-    l,
+a.d(
+    t,
     {},
     {
         A: function (e) {
-            let { storefront: l, selectedPageIndex: t } = e,
-                s = (0, o.M)((0, d.Ay)()),
-                P = (0, r.bG)([I.default], () => I.default.getCurrentUser()),
-                U = (0, b.jM)(),
-                { analyticsLocations: G } = (0, E.Ay)(),
-                { navigateToStorefrontPage: B } = (0, j.H)(),
-                Y = l?.applicationId,
-                { guildId: H } = (0, O.nG)(Y),
-                V = (0, r.bG)([T.A, N.A], () => T.A.can(R.xBc.MANAGE_GUILD, N.A.getGuild(H))),
-                Z = (0, g.A)(Y, V) || V || (P?.isStaff() ?? !1),
-                F = (0, L.fy)(
-                    (e) => e.activePanel === L.HP.APPLICATION_TEST_MODE_DEBUG && e.metadata?.applicationId === Y,
+            let { storefront: t, selectedPageIndex: a } = e,
+                n = (0, o.M)((0, d.Ay)()),
+                M = (0, r.bG)([N.default], () => N.default.getCurrentUser()),
+                F = (0, P.jM)(),
+                { analyticsLocations: U } = (0, I.Ay)(),
+                { navigateToStorefrontPage: Z } = (0, D.H)(),
+                G = t?.applicationId,
+                { guildId: H } = (0, R.nG)(G),
+                V = (0, r.bG)([S.A, O.A], () => S.A.can(v.xBc.MANAGE_GUILD, O.A.getGuild(H))),
+                B = (0, L.A)(G, V) || V || (M?.isStaff() ?? !1),
+                Y = (0, u.fy)(
+                    (e) => e.activePanel === u.HP.APPLICATION_TEST_MODE_DEBUG && e.metadata?.applicationId === G,
                 ),
-                J = n.useCallback(() => {
-                    P?.id != null &&
-                        (0, m.openUserProfileModal)({
-                            userId: P.id,
-                            tabSection: v.RP.WISHLIST,
+                J = s.useCallback(() => {
+                    M?.id != null &&
+                        (0, T.openUserProfileModal)({
+                            userId: M.id,
+                            tabSection: y.RP.WISHLIST,
                             sourceAnalyticsLocations: [C.A.SOCIAL_LAYER_STOREFRONT],
                         });
-                }, [P]),
-                Q = n.useCallback(() => {
-                    (S.default.track(R.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
-                        slayer_storefront_session_id: U?.sessionId,
-                        cta_type: M.ST.LEARN_MORE,
-                        location_stack: G,
+                }, [M]),
+                z = s.useCallback(() => {
+                    (h.default.track(v.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+                        slayer_storefront_session_id: F?.sessionId,
+                        cta_type: f.ST.LEARN_MORE,
+                        location_stack: U,
                     }),
-                        window.open(h.A.getArticleURL(R.MVz.SOCIAL_LAYER_STOREFRONT)));
-                }, [U, G]),
-                z = n.useCallback(() => {
-                    null != Y && (F ? (0, L.Jp)() : (0, L.nf)(L.HP.APPLICATION_TEST_MODE_DEBUG, { applicationId: Y }));
-                }, [Y, F]),
-                W = n.useCallback(() => {
-                    B?.(0);
-                }, [B]);
-            if (null == l) return null;
-            let $ = null != l.logoAssetId ? (0, x.YE)(l.applicationId, l.logoAssetId, 128) : null,
-                q = null != l.lightThemeLogoAssetId ? (0, x.YE)(l.applicationId, l.lightThemeLogoAssetId, 128) : null,
+                        window.open(m.A.getArticleURL(v.MVz.SOCIAL_LAYER_STOREFRONT)));
+                }, [F, U]),
+                Q = s.useCallback(() => {
+                    null != G && (Y ? (0, u.Jp)() : (0, u.nf)(u.HP.APPLICATION_TEST_MODE_DEBUG, { applicationId: G }));
+                }, [G, Y]),
+                W = s.useCallback(() => {
+                    Z?.(0);
+                }, [Z]);
+            if (null == t) return null;
+            let q = null != t.logoAssetId ? (0, g.YE)(t.applicationId, t.logoAssetId, 128) : null,
+                $ = null != t.lightThemeLogoAssetId ? (0, g.YE)(t.applicationId, t.lightThemeLogoAssetId, 128) : null,
                 K = null;
             return (
-                (K = s ? ($ ?? q) : (q ?? $)),
-                (0, a.jsxs)(_.A, {
+                (K = n ? (q ?? $) : ($ ?? q)),
+                (0, l.jsxs)(_.A, {
                     disableDoubleClick: !0,
-                    className: w.N1,
+                    className: k.N1,
                     children: [
-                        (0, a.jsxs)(c.D, {
+                        (0, l.jsxs)(c.D, {
                             onClick: W,
-                            className: w.gn,
+                            className: k.gn,
                             children: [
-                                null != K && (0, a.jsx)("img", { className: w.wm, src: K, alt: l.title }),
-                                (0, a.jsx)(_.A.Title, { children: l.title }),
+                                null != K && (0, l.jsx)("img", { className: k.wm, src: K, alt: t.title }),
+                                (0, l.jsx)(_.A.Title, { children: t.title }),
                             ],
                         }),
-                        l.pages.length > 1 &&
-                            (0, a.jsx)("div", {
-                                className: w.YC,
-                                children: l.pages.map((e, l) =>
-                                    (0, a.jsx)(
+                        t.pages.length > 1 &&
+                            (0, l.jsx)("div", {
+                                className: k.YC,
+                                children: t.pages.map((e, t) =>
+                                    (0, l.jsx)(
                                         _.A.Title,
                                         {
-                                            onClick: () => B?.(l),
-                                            wrapperClassName: w.oB,
-                                            className: i()(w.xT, { [w.ys]: t === l }),
-                                            children: (0, a.jsx)(A.E, {
+                                            onClick: () => Z?.(t),
+                                            wrapperClassName: k.oB,
+                                            className: i()(k.xT, { [k.ys]: a === t }),
+                                            children: (0, l.jsx)(A.E, {
                                                 variant: "body-sm/medium",
-                                                children: (0, f.A)(e.title),
+                                                children: (0, j.A)(e.title),
                                             }),
                                         },
-                                        `${e.title}-${l}`,
+                                        `${e.title}-${t}`,
                                     ),
                                 ),
                             }),
-                        (0, a.jsxs)("div", {
-                            className: w.sZ,
+                        (0, l.jsxs)("div", {
+                            className: k.sZ,
                             children: [
-                                (0, a.jsx)(D, {
-                                    content: (0, a.jsx)(u.HeartIcon, { size: "xs", color: "currentColor" }),
+                                (0, l.jsx)(w, {
+                                    content: (0, l.jsx)(E.HeartIcon, { size: "xs", color: "currentColor" }),
                                     onClick: J,
-                                    ariaLabel: y.intl.string(y.t["7lZ31J"]),
-                                    className: w.ij,
+                                    ariaLabel: b.intl.string(b.t["7lZ31J"]),
+                                    className: k.ij,
                                 }),
-                                (0, a.jsx)(k.A, { location: C.A.SOCIAL_LAYER_STOREFRONT }),
-                                (0, a.jsx)(D, {
-                                    onClick: Q,
-                                    ariaLabel: y.intl.string(y.t.hvVgAZ),
-                                    content: (0, a.jsx)(A.E, {
+                                (0, l.jsx)(x.A, { location: C.A.SOCIAL_LAYER_STOREFRONT }),
+                                (0, l.jsx)(w, {
+                                    onClick: z,
+                                    ariaLabel: b.intl.string(b.t.hvVgAZ),
+                                    content: (0, l.jsx)(A.E, {
                                         variant: "body-sm/medium",
-                                        children: y.intl.string(y.t.hvVgAZ),
+                                        children: b.intl.string(b.t.hvVgAZ),
                                     }),
-                                    className: w.AJ,
+                                    className: k.AJ,
                                 }),
-                                Z &&
-                                    (0, a.jsx)(D, {
-                                        onClick: z,
-                                        ariaLabel: y.intl.string(y.t.QexSCe),
-                                        content: (0, a.jsxs)(a.Fragment, {
+                                B &&
+                                    (0, l.jsx)(w, {
+                                        onClick: Q,
+                                        ariaLabel: b.intl.string(b.t.QexSCe),
+                                        content: (0, l.jsxs)(l.Fragment, {
                                             children: [
-                                                (0, a.jsx)(p.WrenchIcon, { size: "xs", color: "currentColor" }),
-                                                (0, a.jsx)(A.E, {
+                                                (0, l.jsx)(p.WrenchIcon, { size: "xs", color: "currentColor" }),
+                                                (0, l.jsx)(A.E, {
                                                     variant: "body-sm/medium",
-                                                    children: y.intl.string(y.t.QexSCe),
+                                                    children: b.intl.string(b.t.QexSCe),
                                                 }),
                                             ],
                                         }),
-                                        className: w.pL,
+                                        className: k.pL,
                                     }),
                             ],
                         }),

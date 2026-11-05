@@ -18,7 +18,7 @@ function _(e) {
                   className: u.mt,
                   "aria-label": a.CLEAR_SELECTION,
                   onClick: r,
-                  children: (0, i.jsx)(l.a, { size: n, color: "currentColor" }),
+                  children: (0, i.jsx)(l.CircleXIcon, { size: n, color: "currentColor" }),
               }),
           })
         : (0, i.jsx)("span", { "aria-hidden": !0 });
@@ -35,7 +35,7 @@ function E(e) {
               onClick: r,
               children: (0, i.jsx)("span", {
                   className: a()(u.t4, { [u.nT]: n }),
-                  children: (0, i.jsx)(o.g, { size: "refresh_sm", color: "currentColor" }),
+                  children: (0, i.jsx)(o.ChevronLargeDownIcon, { size: "refresh_sm", color: "currentColor" }),
               }),
           })
         : null;
@@ -54,27 +54,27 @@ n.d(
                 fullWidth: o,
                 isOpen: c,
                 isInert: A,
-                hasValue: h,
-                hasError: f,
+                hasValue: f,
+                hasError: h,
                 showChevronButton: I = !0,
                 children: p,
                 handleToggle: m,
-                handleClear: g,
-                variant: T = "default",
+                handleClear: T,
+                variant: g = "default",
             } = e;
             return (0, i.jsxs)(d.F, {
                 ref: t,
                 containerClassName: a()(u.cQ, { [u.Ij]: o }),
-                className: a()(u.Bd, { [u.ar]: c, [u.ND]: A, [u.O_]: "unsupported_payment_modal_card" === T }),
+                className: a()(u.Bd, { [u.ar]: c, [u.ND]: A, [u.O_]: "unsupported_payment_modal_card" === g }),
                 "data-mana-component": "select-input-field",
                 disabled: n,
                 readOnly: r,
                 fullWidth: o,
-                validation: f ? { hasError: !0 } : void 0,
+                validation: h ? { hasError: !0 } : void 0,
                 "aria-busy": s,
                 children: [
                     (0, i.jsx)("div", { className: u.gt, children: p }),
-                    (0, i.jsx)(_, { show: !0 === l && !A && !0 === h, iconSize: I ? "xs" : "sm", onClick: g }),
+                    (0, i.jsx)(_, { show: !0 === l && !A && !0 === f, iconSize: I ? "xs" : "sm", onClick: T }),
                     (0, i.jsx)(E, { show: I, isOpen: c, onClick: m }),
                 ],
             });

@@ -1,3 +1,4 @@
+n.r(t);
 var l = n(477900);
 n(582128);
 var s = n(646514),
@@ -7,7 +8,7 @@ n.d(
     t,
     {},
     {
-        M: function (e) {
+        ChatCheckIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,

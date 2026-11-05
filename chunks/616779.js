@@ -1,187 +1,40 @@
-var i,
-    r,
-    n =
-        (this && this.__importDefault) ||
-        function (t) {
-            return t && t.__esModule ? t : { default: t };
-        };
-(Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalCalendarMethod = void 0));
-let s = a(896230),
-    o = n(a(51561)),
-    d = a(675833),
-    l = a(675833);
-(((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = "PUBLISH"),
-    (i.REQUEST = "REQUEST"),
-    (i.REPLY = "REPLY"),
-    (i.ADD = "ADD"),
-    (i.CANCEL = "CANCEL"),
-    (i.REFRESH = "REFRESH"),
-    (i.COUNTER = "COUNTER"),
-    (i.DECLINECOUNTER = "DECLINECOUNTER"),
-    (e.default = class {
-        constructor(t = {}) {
-            ((this.data = {
-                prodId: "//sebbo.net//ical-generator//EN",
-                method: null,
-                name: null,
-                description: null,
-                timezone: null,
-                source: null,
-                url: null,
-                scale: null,
-                ttl: null,
-                events: [],
-                x: [],
-            }),
-                void 0 !== t.prodId && this.prodId(t.prodId),
-                void 0 !== t.method && this.method(t.method),
-                void 0 !== t.name && this.name(t.name),
-                void 0 !== t.description && this.description(t.description),
-                void 0 !== t.timezone && this.timezone(t.timezone),
-                void 0 !== t.source && this.source(t.source),
-                void 0 !== t.url && this.url(t.url),
-                void 0 !== t.scale && this.scale(t.scale),
-                void 0 !== t.ttl && this.ttl(t.ttl),
-                void 0 !== t.events && this.events(t.events),
-                void 0 !== t.x && this.x(t.x));
-        }
-        prodId(t) {
-            if (!t) return this.data.prodId;
-            if ("string" == typeof t && /^\/\/(.+)\/\/(.+)\/\/([A-Z]{1,4})$/.test(t))
-                return ((this.data.prodId = t), this);
-            if ("string" == typeof t)
-                throw Error(
-                    "`prodId` isn't formated correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalcalendar.html#prodid",
-                );
-            if ("object" != typeof t) throw Error("`prodid` needs to be a valid formed string or an object!");
-            if (!t.company) throw Error("`prodid.company` is a mandatory item!");
-            if (!t.product) throw Error("`prodid.product` is a mandatory item!");
-            let e = (t.language || "EN").toUpperCase();
-            return ((this.data.prodId = "//" + t.company + "//" + t.product + "//" + e), this);
-        }
-        method(t) {
-            return void 0 === t
-                ? this.data.method
-                : (t ? (this.data.method = (0, s.checkEnum)(r, t)) : (this.data.method = null), this);
-        }
-        name(t) {
-            return void 0 === t ? this.data.name : ((this.data.name = t ? String(t) : null), this);
-        }
-        description(t) {
-            return void 0 === t ? this.data.description : ((this.data.description = t ? String(t) : null), this);
-        }
-        timezone(t) {
-            var e;
-            return void 0 === t
-                ? (null == (e = this.data.timezone) ? void 0 : e.name) || null
-                : ("string" == typeof t
-                      ? (this.data.timezone = { name: t })
-                      : null === t
-                        ? (this.data.timezone = null)
-                        : (this.data.timezone = t),
-                  this);
-        }
-        source(t) {
-            return void 0 === t ? this.data.source : ((this.data.source = t || null), this);
-        }
-        url(t) {
-            return void 0 === t ? this.data.url : ((this.data.url = t || null), this);
-        }
-        scale(t) {
-            return void 0 === t
-                ? this.data.scale
-                : (null === t ? (this.data.scale = null) : (this.data.scale = t.toUpperCase()), this);
-        }
-        ttl(t) {
-            return void 0 === t
-                ? this.data.ttl
-                : ((0, s.isMomentDuration)(t)
-                      ? (this.data.ttl = t.asSeconds())
-                      : t && t > 0
-                        ? (this.data.ttl = t)
-                        : (this.data.ttl = null),
-                  this);
-        }
-        createEvent(t) {
-            let e = t instanceof o.default ? t : new o.default(t, this);
-            return (this.data.events.push(e), e);
-        }
-        events(t) {
-            return t ? (t.forEach((t) => this.createEvent(t)), this) : this.data.events;
-        }
-        clear() {
-            return ((this.data.events = []), this);
-        }
-        save(t, e) {
-            return e ? ((0, d.writeFile)(t, this.toString(), e), this) : l.promises.writeFile(t, this.toString());
-        }
-        saveSync(t) {
-            return ((0, d.writeFileSync)(t, this.toString()), this);
-        }
-        serve(t, e = "calendar.ics") {
-            return (
-                t.writeHead(200, {
-                    "Content-Type": "text/calendar; charset=utf-8",
-                    "Content-Disposition": `attachment; filename="${e}"`,
+c.r(a);
+var e = c(477900);
+c(582128);
+var i = c(646514),
+    s = c(996682),
+    t = c(27989);
+c.d(
+    a,
+    {},
+    {
+        WateringCanIcon: function (l) {
+            let {
+                    size: a = "md",
+                    width: c,
+                    height: h,
+                    color: n = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: d = "",
+                    ...r
+                } = l,
+                o = (0, t.J)(a),
+                p = o?.width ?? c,
+                w = o?.height ?? h;
+            return (0, e.jsx)("svg", {
+                ...(0, s.A)(r),
+                xmlns: "http://www.w3.org/2000/svg",
+                width: p,
+                height: w,
+                fill: "none",
+                viewBox: "0 0 24 24",
+                children: (0, e.jsx)("path", {
+                    fill: "string" == typeof n ? n : n.css,
+                    fillRule: "evenodd",
+                    d: "M13.23 3.63a4.97 4.97 0 0 1 7.28-.09 5.4 5.4 0 0 1 0 7.46.06.06 0 0 0 0 .09l.72.58c.92.76 1 2.18.16 3.04l-6.46 6.7c-.88.9-2.34.75-3.03-.32l-.1-.17a1 1 0 0 0-.63-.44l-5.8-1.3a1 1 0 0 0-1.1.5l-.41.74c-.19.34-.53.54-.9.54h-.44a.53.53 0 0 1-.52-.54v-5.9c0-.3.23-.54.52-.54h.44c.37 0 .71.2.9.53l.61 1.11a1 1 0 0 0 .7.5l2.9.55a.5.5 0 0 0 .52-.76L4.17 9c-.55-.87-.4-2.02.37-2.69l3.7-3.24a1.91 1.91 0 0 1 2.49-.04l1.65 1.36c.05.04.1.03.14 0l.71-.77Zm5.92 1.33a3.09 3.09 0 0 0-4.53.05l-.29.31a.5.5 0 0 0 .05.73l4.34 3.56c.13.1.31.1.43-.02a3.36 3.36 0 0 0 0-4.63Z",
+                    clipRule: "evenodd",
+                    className: d,
                 }),
-                t.end(this.toString()),
-                this
-            );
-        }
-        toBlob() {
-            return new Blob([this.toString()], { type: "text/calendar" });
-        }
-        toURL() {
-            return URL.createObjectURL(this.toBlob());
-        }
-        x(t, e) {
-            if (void 0 === t) return (0, s.addOrGetCustomAttributes)(this.data);
-            if ("string" == typeof t && "string" == typeof e) (0, s.addOrGetCustomAttributes)(this.data, t, e);
-            else if ("object" == typeof t) (0, s.addOrGetCustomAttributes)(this.data, t);
-            else throw Error("Either key or value is not a string!");
-            return this;
-        }
-        toJSON() {
-            return Object.assign({}, this.data, {
-                timezone: this.timezone(),
-                events: this.data.events.map((t) => t.toJSON()),
-                x: this.x(),
             });
-        }
-        length() {
-            return this.data.events.length;
-        }
-        toString() {
-            var t, e;
-            let a = "";
-            return (
-                (a = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-" + this.data.prodId + "\r\n"),
-                this.data.url && (a += "URL:" + this.data.url + "\r\n"),
-                this.data.source && (a += "SOURCE;VALUE=URI:" + this.data.source + "\r\n"),
-                this.data.scale && (a += "CALSCALE:" + this.data.scale + "\r\n"),
-                this.data.method && (a += "METHOD:" + this.data.method + "\r\n"),
-                this.data.name &&
-                    ((a += "NAME:" + this.data.name + "\r\n"), (a += "X-WR-CALNAME:" + this.data.name + "\r\n")),
-                this.data.description && (a += "X-WR-CALDESC:" + this.data.description + "\r\n"),
-                (null == (t = this.data.timezone) ? void 0 : t.generator) &&
-                    [...new Set([this.timezone(), ...this.data.events.map((t) => t.timezone())])]
-                        .filter((t) => null !== t && !t.startsWith("/"))
-                        .forEach((t) => {
-                            var e;
-                            if (!(null == (e = this.data.timezone) ? void 0 : e.generator)) return;
-                            let i = this.data.timezone.generator(t);
-                            i && (a += i.replace(/\r\n/g, "\n").replace(/\n/g, "\r\n").trim() + "\r\n");
-                        }),
-                (null == (e = this.data.timezone) ? void 0 : e.name) &&
-                    ((a += "TIMEZONE-ID:" + this.data.timezone.name + "\r\n"),
-                    (a += "X-WR-TIMEZONE:" + this.data.timezone.name + "\r\n")),
-                this.data.ttl &&
-                    ((a += "REFRESH-INTERVAL;VALUE=DURATION:" + (0, s.toDurationString)(this.data.ttl) + "\r\n"),
-                    (a += "X-PUBLISHED-TTL:" + (0, s.toDurationString)(this.data.ttl) + "\r\n")),
-                this.data.events.forEach((t) => (a += t.toString())),
-                (a += (0, s.generateCustomAttributes)(this.data)),
-                (a += "END:VCALENDAR"),
-                (0, s.foldLines)(a)
-            );
-        }
-    }));
+        },
+    },
+);

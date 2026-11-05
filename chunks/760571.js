@@ -40,8 +40,8 @@ var x = n(597798),
     T = n(404355),
     M = n(496841),
     K = n(970636),
-    z = n(260509),
-    S = n(71393),
+    S = n(260509),
+    z = n(71393),
     U = n(754712),
     H = n(287809),
     $ = n(531685),
@@ -50,8 +50,8 @@ var x = n(597798),
     Y = n(628983),
     B = n(85448),
     J = n(28499),
-    Z = n(384059),
-    X = n(480890),
+    X = n(384059),
+    Z = n(480890),
     q = n(806931),
     Q = n(652215),
     ee = n(650583),
@@ -99,11 +99,11 @@ function ec(e) {
         className: s()(et.iE, et.o1),
         children: [
             (0, l.jsx)(T.A, {
-                iconComponent: r.P,
+                iconComponent: r.XSmallIcon,
                 label: en.intl.string(en.t.WAI6xu),
                 className: et.hP,
                 onClick: () => {
-                    ((0, Z.lO)(d, Z.OP.DISCONNECT, n.id),
+                    ((0, X.lO)(d, X.OP.DISCONNECT, n.id),
                         F.default.track(Q.HAw.RING_CALL_DECLINED, {
                             location: d,
                             guild_id: n.guild_id,
@@ -119,7 +119,7 @@ function ec(e) {
                         let { closePopout: i } = e;
                         return (0, l.jsx)(J.A, {
                             onClose: i,
-                            onInteraction: (0, X.s)("VideoDeviceMenu", d, { entrypoint: q.GK.CARET }),
+                            onInteraction: (0, Z.s)("VideoDeviceMenu", d, { entrypoint: q.GK.CARET }),
                         });
                     },
                     position: "top",
@@ -142,7 +142,7 @@ function ec(e) {
                             popoutOpen: a,
                             onCameraUnavailable: P.A,
                             onChange: () => {
-                                ((0, Z.lO)(d, Z.OP.JOIN_VIDEO_CALL, n.id),
+                                ((0, X.lO)(d, X.OP.JOIN_VIDEO_CALL, n.id),
                                     F.default.track(Q.HAw.RING_CALL_ACCEPTED, {
                                         location: d,
                                         guild_id: n.guild_id,
@@ -170,7 +170,7 @@ function er(e) {
     let { animatedStyle: i, y: n, x: a, channel: c } = e,
         { analyticsLocations: r } = (0, N.Ay)(E.A.INCOMING_CALL_MODAL),
         [u, p] = t.useState(!1),
-        x = (0, o.bG)([S.A], () => S.A.getGuild(c.guild_id)),
+        x = (0, o.bG)([z.A], () => z.A.getGuild(c.guild_id)),
         f = null != x ? W.Ay.getGuildIconURL({ id: x.id, icon: x.icon, size: 128 }) : null,
         w = (0, b.Y)(c, 128, !0) ?? f,
         D = (0, _.Ay)(c),
@@ -202,7 +202,7 @@ function er(e) {
                               height: u ? 40 : 80,
                               children: (0, l.jsx)("div", {
                                   className: s()(et.$f, et.Gc),
-                                  children: (0, l.jsx)("div", { className: et.Hj, children: (0, z.Rb)(x) }),
+                                  children: (0, l.jsx)("div", { className: et.Hj, children: (0, S.Rb)(x) }),
                               }),
                           }),
                       })

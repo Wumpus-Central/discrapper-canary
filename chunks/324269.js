@@ -1,7 +1,7 @@
 var r = n(477900),
     i = n(582128),
-    l = n(821609),
-    o = n(477782),
+    o = n(821609),
+    l = n(477782),
     s = n(165862),
     a = n(265872),
     c = n(112173),
@@ -10,17 +10,17 @@ var r = n(477900),
     p = n(792996);
 function h(t) {
     let { closePopout: e, sortOptionContext: n } = t,
-        { sortOption: l, setSortOption: a, onReset: c } = n,
+        { sortOption: o, setSortOption: a, onReset: c } = n,
         d = i.useMemo(
             () =>
                 u.aq.map((t) =>
                     (0, r.jsx)(
-                        o.iD,
-                        { id: `${t}`, group: "sort-by", label: (0, u.Ac)(t), action: () => a(t), checked: l === t },
+                        l.iD,
+                        { id: `${t}`, group: "sort-by", label: (0, u.Ac)(t), action: () => a(t), checked: o === t },
                         t,
                     ),
                 ),
-            [a, l],
+            [a, o],
         );
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)(s.W, {
@@ -31,9 +31,9 @@ function h(t) {
             onClose: e,
             onSelect: e,
             children: [
-                (0, r.jsx)(o.rX, { label: p.intl.string(p.t.mBvLev), children: d }),
-                (0, r.jsx)(o.rX, {
-                    children: (0, r.jsx)(o.Dr, { id: "reset-all", label: p.intl.string(p.t["3b//lO"]), action: c }),
+                (0, r.jsx)(l.rX, { label: p.intl.string(p.t.mBvLev), children: d }),
+                (0, r.jsx)(l.rX, {
+                    children: (0, r.jsx)(l.Dr, { id: "reset-all", label: p.intl.string(p.t["3b//lO"]), action: c }),
                 }),
             ],
         }),
@@ -55,7 +55,8 @@ n.d(
                 },
                 position: "bottom",
                 align: "left",
-                children: (t) => (0, r.jsx)(l.$, { ...t, text: e, icon: c.J, variant: "secondary", buttonRef: n }),
+                children: (t) =>
+                    (0, r.jsx)(o.$, { ...t, text: e, icon: c.ArrowsUpDownIcon, variant: "secondary", buttonRef: n }),
             });
         },
     },

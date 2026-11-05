@@ -3,8 +3,8 @@ n(582128);
 var l = n(503698),
     a = n.n(l),
     t = n(834730),
-    o = n(150934);
-if (221552 == n.j) var c = n(622629);
+    c = n(150934);
+if (221552 == n.j) var o = n(622629);
 var i = n(46054),
     d = n(31457),
     u = n(792996),
@@ -36,7 +36,7 @@ function x(e) {
     let { onChange: s, checked: n, disabled: l } = e;
     return (0, r.jsx)("div", {
         className: m.kv,
-        children: (0, r.jsx)(o.S, { checked: !!n, onChange: s, disabled: l, label: u.intl.string(u.t["2EXfGJ"]) }),
+        children: (0, r.jsx)(c.S, { checked: !!n, onChange: s, disabled: l, label: u.intl.string(u.t["2EXfGJ"]) }),
     });
 }
 n.d(
@@ -45,7 +45,11 @@ n.d(
     {
         LK: function (e) {
             let { formField: s } = e;
-            return (0, r.jsx)(d.fu, { icon: c.B, text: u.intl.string(u.t["2xbmoG"]), meetsRequirement: !!s.response });
+            return (0, r.jsx)(d.fu, {
+                icon: o.BookCheckIcon,
+                text: u.intl.string(u.t["2xbmoG"]),
+                meetsRequirement: !!s.response,
+            });
         },
         Ot: function (e) {
             let { channelId: s, formField: n, onChange: l } = e;

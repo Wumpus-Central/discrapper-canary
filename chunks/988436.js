@@ -1,46 +1,46 @@
 var s = n(477900),
     i = n(582128),
-    r = n(503698),
-    o = n.n(r),
+    o = n(503698),
+    r = n.n(o),
     a = n(323889),
     l = n(855986),
-    u = n(189213),
-    c = n(462887),
+    c = n(189213),
+    u = n(462887),
     C = n(866665),
     d = n(834730),
     E = n(939249),
     x = n(31300),
     A = n(687966),
-    f = n(653766),
-    I = n(200192),
+    I = n(653766),
+    f = n(200192),
     T = n(738188),
     O = n(192308),
-    y = n(775602),
-    L = n(438457),
+    L = n(775602),
+    y = n(438457),
     g = n(144779),
-    N = n(413599),
-    _ = n(178540),
-    m = n(506988),
-    S = n(61387),
+    m = n(413599),
+    N = n(178540),
+    S = n(506988),
+    _ = n(61387),
     Q = n(760914),
     R = n(590202),
-    v = n(971649),
-    P = n(574112),
-    h = n(792620),
+    h = n(971649),
+    v = n(574112),
+    P = n(792620),
     D = n(280905),
     p = n(201805),
-    j = n(818348),
-    U = n(792996),
+    U = n(818348),
+    j = n(792996),
     M = n(175276);
 function b(t) {
-    let { icon: e, text: n, errors: i = [], gameTile: r } = t,
+    let { icon: e, text: n, errors: i = [], gameTile: o } = t,
         a = i.length > 0,
-        l = a ? f.e : I.Q;
+        l = a ? I.ConnectionUnknownIcon : f.ConnectionFineIcon;
     return (0, s.jsxs)("div", {
         className: M.dJ,
         children: [
             (0, s.jsxs)("div", {
-                className: o()(M.w_, { [M.qu]: a }),
+                className: r()(M.w_, { [M.qu]: a }),
                 children: [
                     (0, s.jsxs)("div", {
                         className: M.d3,
@@ -52,11 +52,11 @@ function b(t) {
                     (0, s.jsxs)("div", {
                         className: M.d3,
                         children: [
-                            r,
+                            o,
                             (0, s.jsx)(l, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: o()({ [M.kX]: !a, [M.z3]: a }),
+                                className: r()({ [M.kX]: !a, [M.z3]: a }),
                             }),
                         ],
                     }),
@@ -86,61 +86,61 @@ n.d(
     {},
     {
         default: function (t) {
-            let { quest: e, transitionState: n, onClose: r, sourceQuestContent: f, refreshOnOpen: I = !1 } = t,
-                T = (0, _.O)((t) => t.getErrorHints(e.id)),
+            let { quest: e, transitionState: n, onClose: o, sourceQuestContent: I, refreshOnOpen: f = !1 } = t,
+                T = (0, N.O)((t) => t.getErrorHints(e.id)),
                 O = (0, i.useRef)(!1),
-                D = (0, S.UX)(),
-                q = (0, v.vU)()?.getId(),
-                w = (0, l.bG)([y.Ay], () => y.Ay.useReducedMotion),
-                W = (0, p.Xf)({ useReducedMotion: w, className: M.Zf }),
-                X = T.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
-                k = (0, h.YL)(e),
-                z = (0, l.bG)([N.A], () => N.A.getState().theme),
-                V = (0, c.M)(z) ? j.NJ.DARK : j.NJ.LIGHT,
-                { startConsoleQuest: F, startingConsoleQuest: K } = (0, S.Wj)({
+                D = (0, _.UX)(),
+                w = (0, h.vU)()?.getId(),
+                q = (0, l.bG)([L.Ay], () => L.Ay.useReducedMotion),
+                k = (0, p.Xf)({ useReducedMotion: q, className: M.Zf }),
+                W = T.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
+                X = (0, P.YL)(e),
+                z = (0, l.bG)([m.A], () => m.A.getState().theme),
+                V = (0, u.M)(z) ? U.NJ.DARK : U.NJ.LIGHT,
+                { startConsoleQuest: F, startingConsoleQuest: K } = (0, _.Wj)({
                     questId: e.id,
                     beforeRequest: () => {
-                        (W.startAnimation(),
-                            (0, L.r)({
+                        (k.startAnimation(),
+                            (0, y.r)({
                                 type: g.F.CLICK_INTERNAL,
                                 adCreativeType: a.p.QUEST,
                                 adCreativeId: e.id,
                                 questContentCTA: R.Cy.DEFIBRILLATOR,
-                                surfaceId: m.uF.CONNECTIONS_MODAL,
-                                sourceQuestContent: f,
-                                impressionId: q,
+                                surfaceId: S.uF.CONNECTIONS_MODAL,
+                                sourceQuestContent: I,
+                                impressionId: w,
                             }));
                     },
                     afterRequest: () => {
-                        W.stopAnimation();
+                        k.stopAnimation();
                     },
                 });
             return (
                 (0, i.useEffect)(() => {
-                    I && !O.current && (F(), (O.current = !0));
-                }, [I, F]),
-                (0, s.jsx)(u.a, {
+                    f && !O.current && (F(), (O.current = !0));
+                }, [f, F]),
+                (0, s.jsx)(c.a, {
                     transitionState: n,
-                    onClose: r,
-                    title: U.intl.string(U.t.W5lmKt),
+                    onClose: o,
+                    title: j.intl.string(j.t.W5lmKt),
                     subtitle: D.message,
                     actions: [
                         {
                             variant: "secondary",
                             onClick: () =>
-                                void (r(),
-                                (0, P.b6)(
+                                void (o(),
+                                (0, v.b6)(
                                     { quest: e },
                                     {
-                                        content: m.uF.CONNECTIONS_MODAL,
+                                        content: S.uF.CONNECTIONS_MODAL,
                                         ctaContent: R.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: q,
-                                        sourceQuestContent: f,
+                                        impressionId: w,
+                                        sourceQuestContent: I,
                                     },
                                 )),
-                            text: U.intl.string(U.t["qiS+xj"]),
+                            text: j.intl.string(j.t["qiS+xj"]),
                         },
-                        { variant: "primary", onClick: () => r(), text: U.intl.string(U.t.cpT0Cq) },
+                        { variant: "primary", onClick: () => o(), text: j.intl.string(j.t.cpT0Cq) },
                     ],
                     children: (0, s.jsxs)(s.Fragment, {
                         children: [
@@ -150,18 +150,18 @@ n.d(
                                     (0, s.jsx)(d.E, {
                                         variant: "body-sm/medium",
                                         color: "text-default",
-                                        children: U.intl.string(U.t["+/hZM/"]),
+                                        children: j.intl.string(j.t["+/hZM/"]),
                                     }),
                                     (0, s.jsxs)(E.D, {
-                                        className: o()(M.Tm, { [M.r9]: K }),
+                                        className: r()(M.Tm, { [M.r9]: K }),
                                         onClick: F,
                                         children: [
-                                            W.render(),
+                                            k.render(),
                                             (0, s.jsx)(d.E, {
                                                 variant: "body-sm/medium",
                                                 color: "currentColor",
                                                 className: M.Zf,
-                                                children: U.intl.string(U.t.wzzjk9),
+                                                children: j.intl.string(j.t.wzzjk9),
                                             }),
                                         ],
                                     }),
@@ -171,14 +171,14 @@ n.d(
                                 className: M.ei,
                                 children: [
                                     (0, s.jsx)(b, {
-                                        icon: (0, s.jsx)(x.k, { size: "sm" }),
-                                        text: U.intl.string(U.t.br3uIi),
+                                        icon: (0, s.jsx)(x.ScreenIcon, { size: "sm" }),
+                                        text: j.intl.string(j.t.br3uIi),
                                     }),
                                     (0, s.jsx)(b, {
                                         icon: (0, s.jsx)(A.GameControllerIcon, { size: "sm" }),
-                                        text: U.intl.string(U.t.XF4wuA),
-                                        errors: k ? void 0 : X.map((t) => t.message),
-                                        gameTile: k
+                                        text: j.intl.string(j.t.XF4wuA),
+                                        errors: X ? void 0 : W.map((t) => t.message),
+                                        gameTile: X
                                             ? (0, s.jsx)(C.m, {
                                                   "aria-label": e.config.messages.gameTitle,
                                                   __unsupportedReactNodeAsText: (0, s.jsxs)("div", {
@@ -191,7 +191,7 @@ n.d(
                                                           (0, s.jsx)(d.E, {
                                                               variant: "body-xs/normal",
                                                               color: "text-muted",
-                                                              children: U.intl.string(U.t.STpNEC),
+                                                              children: j.intl.string(j.t.STpNEC),
                                                           }),
                                                       ],
                                                   }),
@@ -217,7 +217,7 @@ n.d(
                     return (0, s.jsx)(D.R, {
                         overrideVisibility: !0,
                         questOrQuests: t.quest,
-                        questContent: m.uF.CONNECTIONS_MODAL,
+                        questContent: S.uF.CONNECTIONS_MODAL,
                         sourceQuestContent: t.sourceQuestContent,
                         children: () => (0, s.jsx)(e, { ...n, ...t }),
                     });

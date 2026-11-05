@@ -139,12 +139,12 @@ var D = l(503698),
     w = l(792996),
     G = l(492931),
     H = l(503928),
-    $ = l(268920),
-    W = l(633217);
+    W = l(268920),
+    $ = l(633217);
 function F() {
     return (0, s.jsx)("div", {
         className: G.s,
-        children: (0, s.jsx)(V.A, { src: W.A, fallbackImage: $.A, className: G.Cb }),
+        children: (0, s.jsx)(V.A, { src: $.A, fallbackImage: W.A, className: G.Cb }),
     });
 }
 function Y(e) {
@@ -415,8 +415,8 @@ function eH(e) {
           })
         : null;
 }
-let e$ = "checkout-error-boundary-test-modal";
-function eW() {
+let eW = "checkout-error-boundary-test-modal";
+function e$() {
     let { setStep: e } = (0, eC.Ay)();
     return (0, s.jsx)(eR.dZ, {
         children: (0, s.jsxs)(ec.B, {
@@ -883,7 +883,7 @@ let eY = {
                                                 n = [
                                                     {
                                                         key: m.pn.PLAN_SELECT,
-                                                        renderStep: () => (0, s.jsx)(eW, {}),
+                                                        renderStep: () => (0, s.jsx)(e$, {}),
                                                         renderHeader: () =>
                                                             (0, s.jsx)(ef.rQ, {
                                                                 title: "Checkout Error Boundary Test",
@@ -901,7 +901,7 @@ let eY = {
                                                     },
                                                 ];
                                             function i() {
-                                                return (0, ev.Oo)(e$);
+                                                return (0, ev.Oo)(eW);
                                             }
                                             return (0, ev.mM)(
                                                 async () => {
@@ -932,7 +932,7 @@ let eY = {
                                                         });
                                                     });
                                                 },
-                                                { onCloseRequest: i, onCloseCallback: i, modalKey: e$ },
+                                                { onCloseRequest: i, onCloseCallback: i, modalKey: eW },
                                             );
                                         })(a, { errorHandlingBehavior: t, errorType: l }),
                                 }),
@@ -1998,11 +1998,11 @@ let tB = { name: "Expressive Progress", component: tg.A, id: "expressive-progres
     };
 var tG = l(858899),
     tH = l(750338),
-    t$ = l(713271),
-    tW = l(221168),
+    tW = l(713271),
+    t$ = l(221168),
     tF = l(576765),
     tY = l(88433);
-let tz = { none: void 0, nitroWheel: r.t },
+let tz = { none: void 0, nitroWheel: r.NitroWheelIcon },
     tK = {
         name: "Bento Box",
         component: function (e) {
@@ -2046,7 +2046,7 @@ let tz = { none: void 0, nitroWheel: r.t },
                           : {};
             return (0, s.jsx)("div", {
                 children: (0, s.jsx)(tH.A, {
-                    name: t$.N.EMOJIS,
+                    name: tW.N.EMOJIS,
                     title: t,
                     description: l,
                     previewImage: tF.A,
@@ -2127,11 +2127,11 @@ let tz = { none: void 0, nitroWheel: r.t },
             size: {
                 label: "Size",
                 type: "select",
-                defaultValue: tW.A0.LARGE,
+                defaultValue: t$.A0.LARGE,
                 options: [
-                    { label: "Small", value: tW.A0.SMALL },
-                    { label: "Medium", value: tW.A0.MEDIUM },
-                    { label: "Large", value: tW.A0.LARGE },
+                    { label: "Small", value: t$.A0.SMALL },
+                    { label: "Medium", value: t$.A0.MEDIUM },
+                    { label: "Large", value: t$.A0.LARGE },
                 ],
             },
             badgeText: { label: "Badge Text", type: "text", defaultValue: "" },
@@ -2148,10 +2148,10 @@ let tz = { none: void 0, nitroWheel: r.t },
             previewImageStyle: {
                 label: "Preview Image Style",
                 type: "select",
-                defaultValue: tW.Tb.CONTAINED,
+                defaultValue: t$.Tb.CONTAINED,
                 options: [
-                    { label: "Contained", value: tW.Tb.CONTAINED },
-                    { label: "Overlay", value: tW.Tb.OVERLAY },
+                    { label: "Contained", value: t$.Tb.CONTAINED },
+                    { label: "Overlay", value: t$.Tb.OVERLAY },
                 ],
             },
         },
@@ -3044,7 +3044,7 @@ function lH(e) {
         ],
     });
 }
-function l$(e) {
+function lW(e) {
     let { children: t, stepConfigs: l, bodyClassName: a } = e;
     return (0, s.jsx)(S.M, {
         stepConfigs: l,
@@ -3053,7 +3053,7 @@ function l$(e) {
         children: (0, s.jsx)("div", { className: a, children: t }),
     });
 }
-var lW = l(887072);
+var l$ = l(887072);
 let lF = new lL.A("PaymentElement.web.stories"),
     lY = {
         key: m.pn.ADD_PAYMENT_STEPS,
@@ -3147,13 +3147,13 @@ function lq(e) {
                       }),
                   }),
                   (0, s.jsxs)("div", {
-                      className: lW.ny,
+                      className: l$.ny,
                       children: [
                           (0, s.jsx)(lz, {}),
-                          (0, s.jsx)(l$, {
+                          (0, s.jsx)(lW, {
                               stepConfigs: [lY],
                               children: (0, s.jsx)("div", {
-                                  className: O()(lW.o6, "joined-payment-address-elements" === d ? lW.fF : lW.u1),
+                                  className: O()(l$.o6, "joined-payment-address-elements" === d ? l$.fF : l$.u1),
                                   children: (0, s.jsxs)(lS.Elements, {
                                       stripe: p,
                                       options: f,
@@ -3408,7 +3408,7 @@ let l5 = {
                                         id: 2,
                                         label: v,
                                         amount: g,
-                                        icon: (0, s.jsx)(r.t, { size: "xs" }),
+                                        icon: (0, s.jsx)(r.NitroWheelIcon, { size: "xs" }),
                                         formatWithoutRate: E,
                                     },
                                 ]
@@ -3484,7 +3484,7 @@ let l5 = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     },
-    at = { "nitro-wheel": r.t, gift: l3.GiftIcon, orbs: i.C },
+    at = { "nitro-wheel": r.NitroWheelIcon, gift: l3.GiftIcon, orbs: i.OrbsIcon },
     al = l2.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     aa = {
         name: "Modal: Unified Checkout Stateless Modal",
@@ -3649,7 +3649,7 @@ let l5 = {
                             label: `${a} ${p}`,
                             description: n,
                             price: i,
-                            PriceIcon: o ? r.t : void 0,
+                            PriceIcon: o ? r.NitroWheelIcon : void 0,
                             priceSubText: u ? d : void 0,
                             priceSubTextHasStrikethrough: u,
                             graphic: (0, s.jsx)(e, {}),
@@ -4129,7 +4129,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
                 tags: af,
-                IconComponent: n.d,
+                IconComponent: n.BillIcon,
             },
             {
                 id: "virtual-currency",
@@ -4192,7 +4192,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
                 tags: af,
-                IconComponent: i.C,
+                IconComponent: i.OrbsIcon,
             },
             {
                 id: "nitro",
@@ -4562,7 +4562,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                     { title: "Clips", stories: [to] },
                 ],
                 tags: af,
-                IconComponent: r.t,
+                IconComponent: r.NitroWheelIcon,
             },
             {
                 id: "identity",

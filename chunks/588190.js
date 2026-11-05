@@ -1,29 +1,30 @@
+h.r(s);
 var c = h(477900);
 h(582128);
 var e = h(646514),
-    t = h(996682),
-    i = h(27989);
+    l = h(996682),
+    t = h(27989);
 h.d(
     s,
     {},
     {
-        U: function (a) {
+        CalendarPlusIcon: function (a) {
             let {
                     size: s = "md",
                     width: h,
-                    height: l,
+                    height: i,
                     color: v = e.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: d = "",
-                    ...p
+                    ...n
                 } = a,
-                n = (0, i.J)(s),
-                o = n?.width ?? h,
-                r = n?.height ?? l;
+                p = (0, t.J)(s),
+                r = p?.width ?? h,
+                o = p?.height ?? i;
             return (0, c.jsxs)("svg", {
-                ...(0, t.A)(p),
+                ...(0, l.A)(n),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
-                height: r,
+                width: r,
+                height: o,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

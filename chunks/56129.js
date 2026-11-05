@@ -11,13 +11,13 @@ var r = n(503698),
     _ = n(429913),
     E = n(525788),
     A = n(384059),
-    h = n(47167),
-    f = n(235986),
+    f = n(47167),
+    h = n(235986),
     I = n(267102),
     p = n(574172),
     m = n(704877),
-    g = n(222692),
-    T = n(447404),
+    T = n(222692),
+    g = n(447404),
     S = n(271195),
     N = n(693409),
     C = n(383831),
@@ -40,7 +40,7 @@ function F(e) {
     return (0, i.jsx)(N.A, {
         iconClassName: a()(x.D6, { [x.S7]: n }),
         onClick: t,
-        iconComponent: l.a,
+        iconComponent: l.ChevronSmallDownIcon,
         label: n ? G.intl.string(G.t["2TiKgS"]) : G.intl.string(G.t.oN8bqe),
     });
 }
@@ -61,7 +61,7 @@ n.d(
                     embeddedActivity: E,
                 } = e,
                 A = (0, _.A)([n])[0],
-                f = (0, h.Ay)(t);
+                h = (0, f.Ay)(t);
             return (0, i.jsxs)(o.D, {
                 className: a()(k._v, k.ob),
                 onMouseMove: s,
@@ -73,9 +73,9 @@ n.d(
                         className: k.K1,
                         children: (0, i.jsx)(S.X, {
                             idle: c,
-                            title: A?.name ?? f ?? "",
+                            title: A?.name ?? h ?? "",
                             onJumpToChannel: d,
-                            preventIdleComponent: T.A,
+                            preventIdleComponent: g.A,
                         }),
                     }),
                     (0, i.jsxs)("div", {
@@ -116,7 +116,7 @@ n.d(
                 F = (0, s.bG)([y.Ay], () => Object.values(y.Ay.getVideoDevices())[0]),
                 B = !1 === (F?.disabled ?? !0),
                 V = (0, _.A)([n])[0],
-                H = (0, h.Ay)(t),
+                H = (0, f.Ay)(t),
                 j = (0, m.A)(t),
                 { parentAnalyticsLocation: W } = (0, u.Ay)();
             function Y(e) {
@@ -134,17 +134,17 @@ n.d(
                             idle: d,
                             title: V?.name ?? H ?? "",
                             onJumpToChannel: o,
-                            preventIdleComponent: T.A,
+                            preventIdleComponent: g.A,
                         }),
                     }),
                     (0, i.jsxs)("div", {
                         className: k.q6,
                         children: [
-                            (0, i.jsxs)(f.A, {
+                            (0, i.jsxs)(h.A, {
                                 grow: 0,
                                 shrink: 1,
                                 basis: "50%",
-                                align: f.A.Align.CENTER,
+                                align: h.A.Align.CENTER,
                                 children: [
                                     (0, i.jsx)(L.A, {
                                         className: x.Oc,
@@ -153,11 +153,11 @@ n.d(
                                         hasPermission: j,
                                         onChange: Y,
                                         onCameraUnavailable: function () {
-                                            B ? Y(!0) : (0, g.A)();
+                                            B ? Y(!0) : (0, T.A)();
                                         },
                                     }),
                                     null != t &&
-                                        (0, i.jsx)(T.A, {
+                                        (0, i.jsx)(g.A, {
                                             children: (0, i.jsx)(E.A, {
                                                 channelId: t.id,
                                                 guildId: t.getGuildId(),
@@ -168,12 +168,12 @@ n.d(
                                         }),
                                 ],
                             }),
-                            (0, i.jsxs)(f.A, {
+                            (0, i.jsxs)(h.A, {
                                 grow: 0,
                                 shrink: 1,
-                                justify: f.A.Justify.END,
+                                justify: h.A.Justify.END,
                                 basis: "50%",
-                                align: f.A.Align.CENTER,
+                                align: h.A.Align.CENTER,
                                 children: [
                                     v || (0, D.f)()
                                         ? null
@@ -218,10 +218,10 @@ n.d(
                     onToggleHeight: u,
                     isExpanded: E,
                     hideExpandedButton: A,
-                    embeddedActivity: f,
+                    embeddedActivity: h,
                 } = e,
                 I = (0, _.A)([l])[0],
-                p = (0, h.Ay)(o);
+                p = (0, f.Ay)(o);
             return (0, i.jsx)("div", {
                 className: x.LO,
                 onMouseMove: n,
@@ -238,7 +238,7 @@ n.d(
                                         idle: !s,
                                         title: I?.name ?? p ?? "",
                                         onJumpToChannel: c,
-                                        preventIdleComponent: T.A,
+                                        preventIdleComponent: g.A,
                                     }),
                                     (0, i.jsxs)("div", {
                                         className: x.QS,
@@ -246,7 +246,7 @@ n.d(
                                             A ? null : (0, i.jsx)(F, { isExpanded: E, onClick: u }),
                                             (0, i.jsx)(C.A, {
                                                 applicationId: l,
-                                                location: f.location,
+                                                location: h.location,
                                                 iconClassName: x.Gu,
                                             }),
                                         ],

@@ -14,8 +14,8 @@ var l = e(477900),
     m = e(960076),
     p = e(793574),
     x = e(688810),
-    _ = e(47167),
-    I = e(325158),
+    I = e(47167),
+    _ = e(325158),
     N = e(662010),
     E = e(623671),
     T = e(365185),
@@ -32,8 +32,8 @@ var l = e(477900),
     b = e(964195),
     M = e(855986),
     U = e(55730),
-    G = e(682261),
-    D = e(874546),
+    D = e(682261),
+    G = e(874546),
     Y = e(141639),
     V = e(61330),
     w = e(73963),
@@ -154,19 +154,19 @@ var tu = e(323384),
     tm = e(429913),
     tp = e(860204),
     tx = e(25451),
-    t_ = e(928550),
-    tI = e(513772),
+    tI = e(928550),
+    t_ = e(513772),
     tN = e(695311);
 function tE(t) {
     let { user: n, activity: e, onAction: i, onClose: a } = t,
         { themeType: r } = (0, L.E)(),
         s = (0, tN.A)({ applicationId: e?.application_id, onClose: a }),
-        o = (0, tI.l)({ activity: e ?? void 0, embeddedActivity: void 0, user: n, onClose: a }),
-        c = (0, t_.dB)(e?.application_id),
+        o = (0, t_.l)({ activity: e ?? void 0, embeddedActivity: void 0, user: n, onClose: a }),
+        c = (0, tI.dB)(e?.application_id),
         u = (0, tm.h)(e?.application_id);
     if (null == o && null != e && (0, f.A)(e))
         return (0, l.jsx)($.FD, {
-            icon: tu.k,
+            icon: tu.AppsIcon,
             text: J.intl.string(J.t.RscU7I),
             fullWidth: r !== tr.d.MODAL_V2,
             onClick: (t) => {
@@ -182,18 +182,18 @@ function tE(t) {
         });
     if (null == o) return null;
     let { isJoining: d, handleJoinRequest: A, buttonCTA: g, tooltip: m, isEnabled: p, isEmbedded: x } = o,
-        _ = r !== tr.d.MODAL_V2;
+        I = r !== tr.d.MODAL_V2;
     return (0, l.jsx)("div", {
-        className: _ ? ts.Ij : void 0,
+        className: I ? ts.Ij : void 0,
         children: (0, l.jsx)(td.m, {
             text: m,
             asContainer: !p,
             children: (0, l.jsx)($.FD, {
-                icon: x ? tA.I : tf.GameControllerIcon,
+                icon: x ? tA.DoorEnterIcon : tf.GameControllerIcon,
                 text: g,
                 disabled: !p,
                 loading: d,
-                fullWidth: _,
+                fullWidth: I,
                 onClick: (t) => {
                     (t.stopPropagation(), i?.({ action: x ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }), A());
                 },
@@ -208,7 +208,7 @@ function th(t) {
         { themeType: a } = (0, L.E)(),
         r = a === tr.d.MODAL_V2;
     return (0, l.jsx)($.FD, {
-        icon: () => (0, l.jsx)(tT.A, {}),
+        icon: () => (0, l.jsx)(tT.ExperimentalGameControllerLinkIcon, {}),
         text: J.intl.string(J.t.sbdnpw),
         fullWidth: !r,
         onClick: (t) => {
@@ -261,13 +261,13 @@ var tR = e(890615),
     tb = e(129095),
     tM = e(734057),
     tU = e(576705),
-    tG = e(977997);
-function tD(t) {
+    tD = e(977997);
+function tG(t) {
     let { activity: n, onAction: e, onClose: i } = t,
         { themeType: a } = (0, L.E)(),
         r = a === tr.d.MODAL_V2,
         { channelId: s, guildId: o } = (0, y.UW)(n) ?? {},
-        c = (0, M.bG)([tG.A], () => null != s && tG.A.isInChannel(s), [s]),
+        c = (0, M.bG)([tD.A], () => null != s && tD.A.isInChannel(s), [s]),
         u = (0, M.bG)(
             [tM.A, tU.A],
             () => {
@@ -315,15 +315,15 @@ function tk(t) {
         d = (0, k.JC)(r),
         A = (0, tt.o)(e?.application_id ?? r?.id) || (0, U.A)(e, tS.jUm.SUPPORTS_JOIN_URL),
         { analyticsLocations: g } = (0, x.Ay)(p.A.USER_PROFILE_ACTIVITY_BUTTONS),
-        _ = (0, w.A)(e?.application_id),
-        { fetched: I, canStartAuthorization: N, hasAlreadyLinked: E, startAuthorization: T } = (0, K.RD)(r),
+        I = (0, w.A)(e?.application_id),
+        { fetched: _, canStartAuthorization: N, hasAlreadyLinked: E, startAuthorization: T } = (0, K.RD)(r),
         h = c === tr.d.MODAL || c === tr.d.MODAL_V2,
         C = c === tr.d.POPOUT,
         S = c === tr.d.MODAL_V2 ? ts.g6 : ts.Zu,
         v =
-            _.length > 0
+            I.length > 0
                 ? (0, l.jsx)(Z.A, {
-                      distributorCTAConfigs: _,
+                      distributorCTAConfigs: I,
                       applicationId: e?.application_id ?? "",
                       analyticsLocations: g,
                       buttonVariant: "secondary",
@@ -349,16 +349,16 @@ function tk(t) {
                 let t = (0, l.jsx)(tw.A, { application: r, onAction: i, onClose: a, analyticsLocations: g });
                 return null != v ? (0, l.jsxs)("div", { className: S, children: [t, v] }) : t;
             }
-            if ((0, f.A)(e) || ((0, D.Ay)(e) && A)) {
+            if ((0, f.A)(e) || ((0, G.Ay)(e) && A)) {
                 let t = (0, l.jsx)(tE, { user: n, activity: e, onAction: i, onClose: a });
                 return null != v ? (0, l.jsxs)("div", { className: S, children: [t, v] }) : t;
             }
-            if (I && N && !E) {
+            if (_ && N && !E) {
                 let t = (0, l.jsx)(th, { startAuthorization: T, onAction: i });
                 return null != v ? (0, l.jsxs)("div", { className: S, children: [t, v] }) : t;
             }
             if (null != v) return v;
-            if (!(0, G.A)(e)) {
+            if (!(0, D.A)(e)) {
                 if ((0, V.A)(e))
                     return (0, l.jsx)(tP, { platformType: tS.fg2.XBOX, icon: () => (0, l.jsx)(te.A, {}), onAction: i });
                 if ((0, Y.A)(e))
@@ -370,12 +370,12 @@ function tk(t) {
             }
             return (0, m.A)(e)
                 ? (0, l.jsx)(tV, { activity: e, onAction: i })
-                : (0, D.Ay)(e)
+                : (0, G.Ay)(e)
                   ? (0, l.jsx)(tE, { user: n, activity: e, onAction: i, onClose: a })
                   : (0, U.A)(e, tS.jUm.INSTANCE)
                     ? (0, l.jsx)(ty, { user: n, activity: e, onAction: i })
                     : (0, y.Cy)(e)
-                      ? (0, l.jsx)(tD, { activity: e, onAction: i, onClose: a })
+                      ? (0, l.jsx)(tG, { activity: e, onAction: i, onClose: a })
                       : null;
         })();
     return null == O ? null : (0, l.jsx)("div", { className: o, children: O });
@@ -400,8 +400,8 @@ function t0(t) {
             application: a,
             voiceGuild: M,
             voiceChannel: U,
-            className: G,
-            onClose: D,
+            className: D,
+            onClose: G,
             appContext: Y,
         } = t,
         V = (0, h.GV)(),
@@ -411,10 +411,10 @@ function t0(t) {
         B = (0, T.A)({ activity: i, user: n }),
         H = (0, v.A)({ display: "live", user: n, activity: i, entry: B, analyticsLocations: k }),
         z = (0, O.A)({ userId: n.id, onAction: H }),
-        X = (0, _.Ay)(U),
+        X = (0, I.Ay)(U),
         $ = (0, j.A)(i),
         F = null != $.text && "" !== $.text,
-        { largeImage: q, smallImage: Z } = (0, I.XN)(i, a, "user_profile_activity_card"),
+        { largeImage: q, smallImage: Z } = (0, _.XN)(i, a, "user_profile_activity_card"),
         K = (function (t) {
             let { location: n, user: e, currentUser: l, activity: i, application: a, entry: r, onClose: s } = t,
                 o = (0, tq.A)({
@@ -439,14 +439,14 @@ function t0(t) {
             activity: i,
             application: a,
             entry: B,
-            onClose: D,
+            onClose: G,
         });
     function tt() {
         return (0, m.A)(i) && null != U
             ? (0, l.jsxs)("div", {
                   className: ts.FH,
                   children: [
-                      (0, l.jsx)(c.H, { size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: ts.Ow }),
+                      (0, l.jsx)(c.VoiceNormalIcon, { size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: ts.Ow }),
                       (0, l.jsx)(tX.Q, { variant: "heading-xs/semibold", text: X, id: V }),
                   ],
               })
@@ -467,7 +467,7 @@ function t0(t) {
                     variant: "body-xs/normal",
                     text: J.intl.formatToPlainString(J.t["hq/Qze"], { guildName: M.name }),
                     onClick: () => {
-                        ((0, S.u)(M.id), H({ action: "OPEN_VOICE_GUILD" }), D?.());
+                        ((0, S.u)(M.id), H({ action: "OPEN_VOICE_GUILD" }), G?.());
                     },
                 })
               : (0, g.A)(i)
@@ -548,7 +548,7 @@ function t0(t) {
             activity: i,
             user: n,
             onAction: H,
-            onClose: D,
+            onClose: G,
             application: a,
         });
     }
@@ -556,9 +556,9 @@ function t0(t) {
         value: k,
         children: (0, l.jsxs)(tH.A, {
             ref: z,
-            className: r()(ts.Nr, G),
+            className: r()(ts.Nr, D),
             onAction: H,
-            onClose: D,
+            onClose: G,
             "aria-labelledby": F ? `${w} ${V}` : V,
             children: [
                 (0, l.jsx)(tz.A, {
@@ -569,7 +569,7 @@ function t0(t) {
                         user: n,
                         activity: i,
                         entry: B,
-                        onClose: D,
+                        onClose: G,
                         appContext: Y,
                     }),
                 }),
@@ -632,7 +632,7 @@ function t0(t) {
                                 }),
                                 null == M || null == U
                                     ? null
-                                    : (0, l.jsx)(t$.A, { user: n, guild: M, channel: U, onAction: H, onClose: D }),
+                                    : (0, l.jsx)(t$.A, { user: n, guild: M, channel: U, onAction: H, onClose: G }),
                             ],
                         });
                     },
@@ -649,13 +649,13 @@ function t0(t) {
                                 onClickViewMore: (t) => {
                                     (t.stopPropagation(),
                                         H({ action: "PRESS_APPLICATION_WIDGET_PREVIEW_VIEW_MORE" }),
-                                        D?.(),
+                                        G?.(),
                                         (0, R.openUserProfileModal)({ userId: n.id, tabSection: Q.RP.WIDGETS }));
                                 },
                             }),
                         ],
                     }),
-                (0, l.jsx)(tB.A, { applicationId: a?.id, onAction: H, onClose: D, activity: i }),
+                (0, l.jsx)(tB.A, { applicationId: a?.id, onAction: H, onClose: G, activity: i }),
             ],
         }),
     });

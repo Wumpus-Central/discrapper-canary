@@ -11,8 +11,8 @@ var i = n(477900),
     _ = n(820081),
     E = n(475825),
     A = n(289873),
-    h = n(834730),
-    f = n(992251);
+    f = n(834730),
+    h = n(992251);
 function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
         t = arguments.length > 1 ? arguments[1] : void 0;
@@ -21,8 +21,8 @@ function I() {
 n(321073);
 var p = n(869431),
     m = n(594615);
-let g = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    T = g + 4,
+let T = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    g = T + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -95,7 +95,7 @@ function C(e) {
             t?.focus();
         }
     }, [z, H, k, B, a]);
-    let Z = r.useCallback(
+    let Q = r.useCallback(
             (e, t) =>
                 N(
                     H[
@@ -106,11 +106,11 @@ function C(e) {
                         })(C, e, t)
                     ],
                 )
-                    ? T
-                    : g,
+                    ? g
+                    : T,
             [H, C],
         ),
-        Q = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 let t;
                 if (!0 === c && 1 === K.length && K.includes(e)) return;
@@ -133,9 +133,9 @@ function C(e) {
                 className: m.uN,
                 "data-has-description": a || void 0,
                 children: [
-                    (0, i.jsx)(h.E, { variant: "body-md/medium", color: "currentColor", className: m.vF, children: n }),
+                    (0, i.jsx)(f.E, { variant: "body-md/medium", color: "currentColor", className: m.vF, children: n }),
                     a &&
-                        (0, i.jsx)(h.E, {
+                        (0, i.jsx)(f.E, {
                             id: t,
                             variant: "body-sm/normal",
                             color: "text-subtle",
@@ -160,7 +160,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? T : g), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : T), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,
@@ -173,14 +173,14 @@ function C(e) {
             },
             role: void 0,
             tabIndex: a,
-            rowHeight: Z,
+            rowHeight: Q,
             sections: e ? C.map((e) => e.count) : [H.length],
             sectionHeight: 26 * !!e,
             renderSection: e
                 ? (e) => {
                       let { section: t } = e;
                       return (0, i.jsx)(
-                          h.E,
+                          f.E,
                           {
                               "aria-hidden": !0,
                               variant: "body-sm/semibold",
@@ -214,7 +214,7 @@ function C(e) {
                         disabled: u || n.disabled,
                         focused: t === b,
                         onClick: () => {
-                            u || n.disabled || Q(n);
+                            u || n.disabled || Z(n);
                         },
                         children: P?.(n, s) ?? J(n, s),
                     },
@@ -222,7 +222,7 @@ function C(e) {
                 );
             },
         });
-    } else t = M?.() ?? (0, i.jsx)(f.o, {});
+    } else t = M?.() ?? (0, i.jsx)(h.o, {});
     return (0, i.jsx)(d.hD, {
         navigator: $,
         children: (0, i.jsx)(d.PR, {
@@ -261,13 +261,13 @@ function O(e) {
             selectionMode: E,
             onClick: A,
         } = e,
-        h = (0, d.rm)(n);
+        f = (0, d.rm)(n);
     return (0, i.jsxs)("div", {
-        ...h,
+        ...f,
         id: n,
         className: s()(m.Vu, p.nM),
         role: "option",
-        tabIndex: -1 === a ? -1 : h.tabIndex,
+        tabIndex: -1 === a ? -1 : f.tabIndex,
         onClick: A,
         "aria-disabled": o,
         "aria-selected": l,
@@ -283,7 +283,7 @@ function O(e) {
                     "multiple" === E
                         ? (0, i.jsx)(u.P, { checked: l })
                         : l
-                          ? (0, i.jsx)(_.B, { color: "currentColor", size: "refresh_sm" })
+                          ? (0, i.jsx)(_.CheckmarkSmallBoldIcon, { color: "currentColor", size: "refresh_sm" })
                           : null,
             }),
         ],

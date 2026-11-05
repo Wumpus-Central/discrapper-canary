@@ -26,7 +26,16 @@ n.d(
                 { locked: n = !1, channelType: i } = e,
                 h = i === p.rbe.GUILD_VOICE || i === p.rbe.GUILD_STAGE_VOICE;
             return (
-                (t = i === p.rbe.GUILD_APP ? (n ? a.Z : r.k) : h ? o.ChatIcon : n ? c.I : d.N),
+                (t =
+                    i === p.rbe.GUILD_APP
+                        ? n
+                            ? a.AppsLockIcon
+                            : r.AppsIcon
+                        : h
+                          ? o.ChatIcon
+                          : n
+                            ? c.TextLockIcon
+                            : d.TextIcon),
                 (0, l.jsx)("div", {
                     className: s()(A.qk, A.tP),
                     children: (0, l.jsx)(t, { color: u.A.colors.ICON_STRONG, size: "custom", width: 42, height: 42 }),

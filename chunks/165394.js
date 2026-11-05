@@ -217,7 +217,7 @@ function z(e) {
               children: (0, l.jsxs)("div", {
                   className: L.Ux,
                   children: [
-                      (0, l.jsx)(g.E, {
+                      (0, l.jsx)(g.CircleErrorIcon, {
                           size: "custom",
                           width: 20,
                           height: 20,

@@ -19,7 +19,8 @@ function x(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: m.$P,
-                        children: s && (0, i.jsx)(a.r, { className: m.ap, color: o.A.colors.WHITE }),
+                        children:
+                            s && (0, i.jsx)(a.CheckmarkLargeBoldIcon, { className: m.ap, color: o.A.colors.WHITE }),
                     }),
                     c && (0, i.jsx)("div", { className: m.UK }),
                 ],

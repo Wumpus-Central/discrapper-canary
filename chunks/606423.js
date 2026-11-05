@@ -47,7 +47,7 @@ e.d(
                 (0, c.A)(j.id, j.getAvatarURL(null, 80));
             }, [j]);
             let b = (0, f.A)(),
-                S = "US" === b.ipCountryCode && "CA" === b.ipSubdivisionCode;
+                N = "US" === b.ipCountryCode && "CA" === b.ipSubdivisionCode;
             if (x)
                 return (0, i.jsx)(o.a, {
                     transitionState: t,
@@ -57,9 +57,9 @@ e.d(
                         n();
                     },
                 });
-            let T = (0, m.Zb)(E),
-                A = T ? P.intl.string(h.default.z2vO3h) : P.intl.string(P.t.PWq8TL),
-                N = T
+            let S = (0, m.Zb)(E),
+                T = S ? P.intl.string(h.default.z2vO3h) : P.intl.string(P.t.PWq8TL),
+                A = S
                     ? P.intl.formatToPlainString(h.default.stVlc6, { cooldownMonths: 12 })
                     : P.intl.string(P.t.SOC4ML),
                 M = [],
@@ -70,18 +70,18 @@ e.d(
                           text: P.intl.string(P.t.zrCzVB),
                           onClick: () => l(g.g.CONFIRM_DISCOUNT),
                           variant: "secondary",
-                          icon: u.t,
+                          icon: u.NitroWheelIcon,
                       })
                     : M.push({ text: P.intl.string(P.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
                 M.push({
-                    text: S ? P.intl.string(P.t.PfnxqD) : P.intl.string(P.t["3PatSz"]),
+                    text: N ? P.intl.string(P.t.PfnxqD) : P.intl.string(P.t["3PatSz"]),
                     onClick: () => l(g.g.CONFIRM),
                     variant: "primary",
                 }),
                 (0, i.jsx)(o.a, {
                     transitionState: t,
-                    title: A,
-                    subtitle: N,
+                    title: T,
+                    subtitle: A,
                     actions: M,
                     preview: I && (0, i.jsx)(v, { churnUserDiscountOffer: C }),
                     onClose: async () => n(),

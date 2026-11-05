@@ -1,3 +1,4 @@
+c.r(e);
 var s = c(477900);
 c(582128);
 var i = c(646514),
@@ -16,13 +17,13 @@ c.d(
                     colorClass: n = "",
                     ...o
                 } = a,
-                p = (0, t.J)(e),
-                r = p?.width ?? c,
-                w = p?.height ?? h;
+                r = (0, t.J)(e),
+                p = r?.width ?? c,
+                w = r?.height ?? h;
             return (0, s.jsx)("svg", {
                 ...(0, l.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",

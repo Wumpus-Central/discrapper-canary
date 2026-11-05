@@ -17,9 +17,9 @@ var i = n(477900),
     b = n(372795),
     v = n(191850),
     C = n(792996),
-    N = n(606128),
-    k = n(135422);
-function E(e) {
+    E = n(606128),
+    N = n(135422);
+function k(e) {
     let { projectId: s, sessionId: n, inControl: l, onTakeControl: a, onHandBack: t } = e,
         d = (0, h.HJ)(s, n),
         r = l && "granted" === d,
@@ -28,7 +28,7 @@ function E(e) {
     return (0, i.jsx)(f.m, {
         text: o ? C.intl.string(v.default.Wuww13) : c,
         children: (0, i.jsx)(u.K, {
-            icon: p.x,
+            icon: p.ExperimentalDirectSelectIcon,
             size: "sm",
             variant: r ? "primary" : "icon-only",
             "aria-label": c,
@@ -39,7 +39,7 @@ function E(e) {
         }),
     });
 }
-function w(e) {
+function S(e) {
     let { projectId: s, tab: n, inControl: a, onHandBack: d } = e,
         { session: r } = n,
         [o, u] = l.useState({ state: "connecting", hasFrame: !1 }),
@@ -52,9 +52,9 @@ function w(e) {
             a && (f || "denied" === p) && d();
         }, [a, f, p, d]),
         (0, i.jsx)("div", {
-            className: k.dZ,
+            className: N.dZ,
             children: (0, i.jsxs)("div", {
-                className: t()(k.dw, j && k._d),
+                className: t()(N.dw, j && N._d),
                 children: [
                     (0, i.jsx)(b.A, {
                         projectId: s,
@@ -62,14 +62,14 @@ function w(e) {
                         fps: 15,
                         interactive: j,
                         paused: f,
-                        className: t()(k.Ji, f && k.tl),
+                        className: t()(N.Ji, f && N.tl),
                         "aria-label": C.intl.formatToPlainString(v.default.rnwqXb, { name: (0, g.i)(r) }),
                         onStateChange: m,
                     }),
                     o.hasFrame || f
                         ? null
                         : (0, i.jsxs)("div", {
-                              className: k.Lw,
+                              className: N.Lw,
                               children: [
                                   (0, i.jsx)(x.y, {}),
                                   (0, i.jsx)(c.E, {
@@ -81,7 +81,7 @@ function w(e) {
                           }),
                     f
                         ? (0, i.jsx)("div", {
-                              className: t()(k.Lw, k.Hl),
+                              className: t()(N.Lw, N.Hl),
                               children: (0, i.jsx)(c.E, {
                                   variant: "body-md/medium",
                                   color: "text-strong",
@@ -112,14 +112,14 @@ n.d(
                     },
                     [a, p],
                 ),
-                [b, S] = l.useState(f),
-                [y, I] = l.useState(null),
+                [b, w] = l.useState(f),
+                [I, y] = l.useState(null),
                 T = x.find((e) => e.session.id === b) ?? x[0];
-            (null != T && T.session.id !== b && S(T.session.id),
-                null != y && y !== T?.session.id && I(null),
+            (null != T && T.session.id !== b && w(T.session.id),
+                null != I && I !== T?.session.id && y(null),
                 l.useEffect(() => {
-                    if (null != y) return ((0, h.EG)(a, y, !0), () => (0, h.EG)(a, y, !1));
-                }, [a, y]));
+                    if (null != I) return ((0, h.EG)(a, I, !0), () => (0, h.EG)(a, I, !1));
+                }, [a, I]));
             let H = l.useRef([]);
             return (
                 l.useEffect(() => {
@@ -136,17 +136,17 @@ n.d(
                     onClose: n,
                     "aria-label": C.intl.string(v.default.sGsShB),
                     children: (0, i.jsxs)("div", {
-                        className: t()(k.lJ, N.T),
+                        className: t()(N.lJ, E.T),
                         children: [
                             (0, i.jsxs)("header", {
-                                className: k.wx,
+                                className: N.wx,
                                 children: [
                                     (0, i.jsx)(o.V, {
                                         type: "top",
                                         selectedItem: T?.session.id,
-                                        onItemSelect: S,
+                                        onItemSelect: w,
                                         "aria-label": C.intl.string(v.default.UjUsph),
-                                        className: k.vR,
+                                        className: N.vR,
                                         children: x.map((e) => {
                                             var s;
                                             let n;
@@ -162,17 +162,17 @@ n.d(
                                                             { title: n },
                                                         )),
                                                     children: (0, i.jsxs)("span", {
-                                                        className: k.Gn,
+                                                        className: N.Gn,
                                                         children: [
                                                             (0, i.jsx)("span", {
-                                                                className: t()(k.W9, e.ended && k.oM),
+                                                                className: t()(N.W9, e.ended && N.oM),
                                                             }),
                                                             (0, i.jsx)(c.E, {
                                                                 tag: "span",
                                                                 variant: "body-sm/medium",
                                                                 color: "none",
                                                                 lineClamp: 1,
-                                                                className: k.WT,
+                                                                className: N.WT,
                                                                 children: (0, g.i)(e.session),
                                                             }),
                                                         ],
@@ -184,14 +184,14 @@ n.d(
                                     }),
                                     null == T || T.ended
                                         ? null
-                                        : (0, i.jsx)(E, {
+                                        : (0, i.jsx)(k, {
                                               projectId: a,
                                               sessionId: T.session.id,
-                                              inControl: y === T.session.id,
+                                              inControl: I === T.session.id,
                                               onTakeControl: () => {
-                                                  ((0, h.EG)(a, T.session.id, !0), I(T.session.id));
+                                                  ((0, h.EG)(a, T.session.id, !0), y(T.session.id));
                                               },
-                                              onHandBack: () => I(null),
+                                              onHandBack: () => y(null),
                                           }),
                                     (0, i.jsx)(u.K, {
                                         onClick: n,
@@ -205,12 +205,12 @@ n.d(
                             null == T
                                 ? null
                                 : (0, i.jsx)(
-                                      w,
+                                      S,
                                       {
                                           projectId: a,
                                           tab: T,
-                                          inControl: y === T.session.id,
-                                          onHandBack: () => I(null),
+                                          inControl: I === T.session.id,
+                                          onHandBack: () => y(null),
                                       },
                                       T.session.id,
                                   ),

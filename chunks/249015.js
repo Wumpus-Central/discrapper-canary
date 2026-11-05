@@ -1,11 +1,11 @@
-n.d(t, { j: () => p });
+n.d(t, { j: () => S });
 var l = n(477900),
     i = n(582128),
     r = n(855986),
     s = n(27232),
     a = n(505930),
-    u = n(602853),
-    o = n(646514),
+    o = n(602853),
+    u = n(646514),
     d = n(996439),
     c = n(914853),
     h = n(676923),
@@ -15,17 +15,17 @@ var l = n(477900),
     E = n(652215),
     A = n(361729),
     f = n(792996);
-function p(e) {
+function S(e) {
     let {
             tab: t,
             targetId: n,
-            widgetType: p = E.uss.FRIENDS,
-            showTooltip: S = !0,
+            widgetType: S = E.uss.FRIENDS,
+            showTooltip: p = !0,
             shouldStopPropagation: N = !0,
             className: T,
         } = e,
-        [y] = (0, r.bG)([g.A], () => g.A.isFavorite(t, n), [t, n], d.D),
-        x = (function (e) {
+        [x] = (0, r.bG)([g.A], () => g.A.isFavorite(t, n), [t, n], d.D),
+        y = (function (e) {
             let { tab: t, targetId: n, shouldStopPropagation: l, widgetType: r } = e;
             return i.useCallback(
                 (e) => {
@@ -41,23 +41,23 @@ function p(e) {
                 },
                 [l, t, n, r],
             );
-        })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: p }),
-        _ = y ? s.StarIcon : a.y,
-        C = (0, u.r)(o.A.colors.ICON_FEEDBACK_WARNING),
-        v = (0, u.r)(o.A.colors.ICON_DEFAULT),
+        })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: S }),
+        _ = x ? s.StarIcon : a.StarOutlineIcon,
+        C = (0, o.r)(u.A.colors.ICON_FEEDBACK_WARNING),
+        v = (0, o.r)(u.A.colors.ICON_DEFAULT),
         R =
             t === c.x.FRIENDS
-                ? y
+                ? x
                     ? f.intl.string(A.default.Xr8XHk)
                     : f.intl.string(A.default.w1MU8Y)
-                : y
+                : x
                   ? f.intl.string(A.default.dvUElD)
                   : f.intl.string(A.default.iK1QsY);
     return (0, l.jsx)(h.S, {
         tooltipText: R,
-        showTooltip: S,
+        showTooltip: p,
         className: T,
-        onClick: x,
-        children: (0, l.jsx)(_, { size: "sm", color: y ? C.hex() : v.hex() }),
+        onClick: y,
+        children: (0, l.jsx)(_, { size: "sm", color: x ? C.hex() : v.hex() }),
     });
 }

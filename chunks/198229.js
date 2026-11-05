@@ -3,8 +3,8 @@ i(582128);
 var s = i(855986),
     d = i(477782),
     o = i(695366),
-    a = i(157559),
-    n = i(827343),
+    n = i(157559),
+    a = i(827343),
     u = i(209932),
     c = i(754712),
     r = i(495867),
@@ -48,22 +48,22 @@ i.d(
                                   label: L.intl.string(L.t["4MMsWF"]),
                                   action: () => {
                                       if (E)
-                                          return void a.A.show({
+                                          return void n.A.show({
                                               title: L.intl.string(L.t.m2Hyj0),
                                               body: L.intl.string(L.t.EhaK6B),
                                               confirmText: L.intl.string(L.t.ND1my3),
                                               cancelText: L.intl.string(L.t.jEqEhy),
-                                              onConfirm: () => n.default.setDisableLocalVideo(e, f.bb8.MANUAL_ENABLED),
+                                              onConfirm: () => a.default.setDisableLocalVideo(e, f.bb8.MANUAL_ENABLED),
                                           });
                                       let i = x ? f.bb8.MANUAL_ENABLED : f.bb8.DISABLED;
-                                      n.default.setDisableLocalVideo(e, i, t);
+                                      a.default.setDisableLocalVideo(e, i, t);
                                   },
                                   checked: x,
                                   subtext: E
                                       ? (0, l.jsxs)("div", {
                                             className: m.Y,
                                             children: [
-                                                (0, l.jsx)(o.E, {
+                                                (0, l.jsx)(o.CircleErrorIcon, {
                                                     size: "custom",
                                                     color: "currentColor",
                                                     width: 12,
@@ -93,7 +93,7 @@ i.d(
                                       parent_media_session_id: i?.parentMediaSessionId,
                                       mute_soundboard: !D,
                                   }),
-                                      n.default.toggleLocalSoundboardMute(e, t));
+                                      a.default.toggleLocalSoundboardMute(e, t));
                               },
                               checked: D,
                           },
@@ -106,7 +106,7 @@ i.d(
                           {
                               id: "mute",
                               label: L.intl.string(L.t.sWmtI6),
-                              action: () => n.default.toggleSelfMute({ context: t, location: "User Context Menu" }),
+                              action: () => a.default.toggleSelfMute({ context: t, location: "User Context Menu" }),
                               checked: _,
                           },
                           "self-mute",
@@ -116,7 +116,7 @@ i.d(
                           {
                               id: "deafen",
                               label: L.intl.string(L.t.wjcRFX),
-                              action: () => n.default.toggleSelfDeaf({ context: t, location: "User Context Menu" }),
+                              action: () => a.default.toggleSelfDeaf({ context: t, location: "User Context Menu" }),
                               checked: h,
                           },
                           "self-deafen",
@@ -129,7 +129,7 @@ i.d(
                           {
                               id: "mute",
                               label: L.intl.string(L.t.sWmtI6),
-                              action: () => n.default.toggleLocalMute(e, t),
+                              action: () => a.default.toggleLocalMute(e, t),
                               checked: _,
                           },
                           "self-mute",

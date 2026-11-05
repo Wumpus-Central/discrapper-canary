@@ -27,7 +27,7 @@ n.d(
                     position: "top",
                     children: (0, l.jsx)(u.K, {
                         onClick: t,
-                        icon: e.isFavorite ? r.StarIcon : i.y,
+                        icon: e.isFavorite ? r.StarIcon : i.StarOutlineIcon,
                         "aria-label": f.intl.string(f.t.k8fFjp),
                         variant: "overlay-secondary",
                         size: "sm",

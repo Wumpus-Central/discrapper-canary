@@ -437,7 +437,7 @@ function eE(e) {
                                             color: en.A.unsafe_rawColors.GREEN_360.css,
                                             "aria-label": H.intl.string(H.t.OfMjx9),
                                             allowFullSizedIcon: !0,
-                                            children: (0, n.jsx)(eo.B, {
+                                            children: (0, n.jsx)(eo.CheckmarkSmallBoldIcon, {
                                                 color: en.A.unsafe_rawColors.WHITE.css,
                                                 size: "custom",
                                                 width: 13,

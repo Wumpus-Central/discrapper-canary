@@ -45,11 +45,11 @@ n(827669);
 var z = n(792996),
     Z = n(894625);
 let K = { tag: "span", variant: "body-md/normal", color: "text-default" },
-    X = { className: a()("mention", Z.lE) };
-function Y(e) {
+    W = { className: a()("mention", Z.lE) };
+function X(e) {
     return (0, i.jsx)(L.E, { ...K, color: "text-strong", children: e });
 }
-let W = s.memo(function (e) {
+let Y = s.memo(function (e) {
     var t;
     let n,
         l,
@@ -128,7 +128,7 @@ let W = s.memo(function (e) {
                                 if (null != t) {
                                     let e = (0, M.FT)(t, a);
                                     n = (0, i.jsxs)(H.A, {
-                                        ...X,
+                                        ...W,
                                         onClick: () =>
                                             (0, w.openUserProfileModal)({
                                                 userId: t.id,
@@ -146,13 +146,13 @@ let W = s.memo(function (e) {
                                 let e = l.value.toString(),
                                     t = F.A.getChannel(e);
                                 null != t &&
-                                    (n = (0, i.jsxs)(H.A, { ...X, children: ["#", (0, U.m1)(t, S.default, J.A)] }));
+                                    (n = (0, i.jsxs)(H.A, { ...W, children: ["#", (0, U.m1)(t, S.default, J.A)] }));
                                 break;
                             }
                             case D.n4.ROLE: {
                                 let e = l.value.toString(),
                                     t = null != r ? V.A.getRole(r.id, e) : void 0;
-                                null != t && (n = (0, i.jsxs)(H.A, { ...X, children: ["@", t.name] }));
+                                null != t && (n = (0, i.jsxs)(H.A, { ...W, children: ["@", t.name] }));
                                 break;
                             }
                             case D.n4.MENTIONABLE: {
@@ -164,7 +164,7 @@ let W = s.memo(function (e) {
                                     if (null != t) {
                                         let e = (0, M.FT)(t, a);
                                         n = (0, i.jsxs)(H.A, {
-                                            ...X,
+                                            ...W,
                                             onClick: () =>
                                                 (0, w.openUserProfileModal)({
                                                     userId: t.id,
@@ -178,7 +178,7 @@ let W = s.memo(function (e) {
                                 break;
                             }
                             case D.n4.ATTACHMENT:
-                                n = Y(z.intl.string(z.t.nONJVc));
+                                n = X(z.intl.string(z.t.nONJVc));
                                 break;
                             default: {
                                 let e = d?.choices?.find((e) => e.value === l.value);
@@ -186,7 +186,7 @@ let W = s.memo(function (e) {
                             }
                         }
                     return (
-                        null == n && (n = Y(x?.toString())),
+                        null == n && (n = X(x?.toString())),
                         [
                             (0, i.jsxs)(
                                 s.Fragment,
@@ -326,7 +326,7 @@ function en(e, t, n, s, l) {
     });
 }
 function ei() {
-    return (0, i.jsx)(f._, { size: "xxs", color: "currentColor", className: $.M5 });
+    return (0, i.jsx)(f.ChevronSmallRightIcon, { size: "xxs", color: "currentColor", className: $.M5 });
 }
 function es(e) {
     let t,
@@ -355,7 +355,7 @@ function es(e) {
         k = s.useMemo(
             () => (e) => (
                 o()(null != l, "ExecutedCommand: channel cannot be null"),
-                (0, i.jsx)(W, { ...e, channel: l, messageId: n.id, interactionData: n.interactionData })
+                (0, i.jsx)(Y, { ...e, channel: l, messageId: n.id, interactionData: n.interactionData })
             ),
             [l, n.id, n.interactionData],
         ),
@@ -401,7 +401,7 @@ function es(e) {
                                     children: (0, i.jsxs)("div", {
                                         className: a()($.lm, $.vk),
                                         children: [
-                                            (0, i.jsx)(g.k, {
+                                            (0, i.jsx)(g.AppsIcon, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 height: 10,
@@ -427,7 +427,7 @@ function es(e) {
                                     children: (0, i.jsxs)("div", {
                                         className: a()($.lm, $.vk),
                                         children: [
-                                            (0, i.jsx)(g.k, {
+                                            (0, i.jsx)(g.AppsIcon, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 height: 10,

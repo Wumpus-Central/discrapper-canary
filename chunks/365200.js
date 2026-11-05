@@ -22,8 +22,8 @@ var i,
     C = n(803378);
 (n(321073), n(667532));
 var v = n(47167),
-    T = n(808728),
-    I = n(994500),
+    I = n(808728),
+    T = n(994500),
     y = n(287809),
     S = n(633334),
     k = n(652215),
@@ -33,8 +33,8 @@ function w(e) {
 }
 var L = n(284009),
     R = n.n(L),
-    _ = n(34457),
-    M = n(488926);
+    M = n(34457),
+    _ = n(488926);
 function P(e) {
     let t = [e.username];
     return (e?.nick != null && t.push(e.nick), { id: e.id, names: t });
@@ -50,8 +50,8 @@ var D = n(43105),
     H = n(778858),
     V = n(149468),
     z = n(320426),
-    K = n(381616),
-    F = n(46653),
+    F = n(381616),
+    K = n(46653),
     Y = n(129230),
     q = n(562153),
     Q = n(811091),
@@ -86,7 +86,7 @@ function ea(e) {
 function er(e) {
     let { isSelected: t, itemValue: n, onClick: i } = e,
         s = n ? el.cw : el.Xg,
-        a = n ? en.CheckmarkLargeIcon : ei.P,
+        a = n ? en.CheckmarkLargeIcon : ei.XSmallIcon,
         r = n ? O.intl.string(O.t.RzDfSk) : O.intl.string(O.t["6639O5"]),
         o = (0, et.Gx)({ isSelected: t, label: r });
     return (0, l.jsx)(U.D, {
@@ -167,7 +167,7 @@ function ec(e) {
         E = (0, c.bG)([Z.default], () =>
             null == N ? void 0 : Z.default.integrations.find((e) => e.application?.id === N),
         ),
-        v = (0, c.bG)([K.A], () => void 0 !== E && K.A.canShowToggleTooltip(E.id));
+        v = (0, c.bG)([F.A], () => void 0 !== E && F.A.canShowToggleTooltip(E.id));
     return h.length > 0
         ? h.map((e) =>
               (0, l.jsx)(
@@ -205,7 +205,7 @@ function ed(e) {
         m = o.id === n.id || o.id === (0, A.Ap)(n.id),
         g = c?.application?.bot?.username,
         p = !o.canWrite || !u,
-        b = F.default.getId();
+        b = K.default.getId();
     u
         ? o.canWrite ||
           (o.type === x.RA.USER
@@ -302,8 +302,8 @@ function ep(e) {
             commandId: i,
             guildId: a,
             inModal: v,
-            editedTargetPermissions: T,
-            originalApplicationPermissions: I,
+            editedTargetPermissions: I,
+            originalApplicationPermissions: T,
             originalCommandPermissions: y,
             selectedPermissionCount: S,
         } = e,
@@ -321,21 +321,21 @@ function ep(e) {
                         PermissionStore: N.A,
                         guild: e,
                         selfMember: t,
-                        applicationLevelPermissions: I,
+                        applicationLevelPermissions: T,
                         commandLevelPermissions: y,
                         defaultMemberPermissions: w?.defaultMemberPermissions,
                     })
                 );
             },
-            [a, w, I, y],
+            [a, w, T, y],
         ),
-        _ = i ?? t,
-        [M, P] = s.useMemo(() => {
+        M = i ?? t,
+        [_, P] = s.useMemo(() => {
             let e = {},
                 t = {};
-            for (let [n, i] of Object.entries(T)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
+            for (let [n, i] of Object.entries(I)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
-        }, [T]),
+        }, [I]),
         W = s.useCallback(
             (e) => {
                 let t = j.A.getGuild(a),
@@ -348,14 +348,14 @@ function ep(e) {
                               PermissionStore: N.A,
                               guild: t,
                               selfMember: n,
-                              applicationLevelPermissions: I,
+                              applicationLevelPermissions: T,
                               commandLevelPermissions: e,
                               defaultMemberPermissions: w?.defaultMemberPermissions,
                           })
                         : (0, A.zl)({ PermissionStore: N.A, guild: t, selfMember: n, applicationLevelPermissions: e }))
                 );
             },
-            [a, w, i, I],
+            [a, w, i, T],
         ),
         D = s.useCallback(
             (e, t) => {
@@ -363,7 +363,7 @@ function ep(e) {
                     i,
                     l = null;
                 if (0 !== t.length) {
-                    let e = T[t[0]];
+                    let e = I[t[0]];
                     if (e.type === x.RA.USER) i = eh.REMOVE_SELF;
                     else {
                         let t = e.id;
@@ -401,18 +401,18 @@ function ep(e) {
                     },
                 });
             },
-            [a, T],
+            [a, I],
         ),
         G = s.useCallback(
             (e, n) => {
                 let i = {};
-                for (let [e, t] of Object.entries(T)) i[e] = { id: t.id, permission: t.permission, type: t.type };
-                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, _, i) : D(e, n);
+                for (let [e, t] of Object.entries(I)) i[e] = { id: t.id, permission: t.permission, type: t.type };
+                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : D(e, n);
             },
-            [t, T, _, W, D],
+            [t, I, M, W, D],
         ),
         U = s.useCallback(() => {
-            let e = Object.keys(M);
+            let e = Object.keys(_);
             return (0, d.mM)(async () => {
                 let { default: t } = await Promise.all([n.e(377476), n.e(393654), n.e(692513), n.e(52532)]).then(
                     n.bind(n, 192991),
@@ -430,7 +430,7 @@ function ep(e) {
                         ...n,
                     });
             });
-        }, [G, M, a, S]),
+        }, [G, _, a, S]),
         B = s.useCallback(() => {
             let e = Object.keys(P);
             return (0, d.mM)(async () => {
@@ -465,7 +465,7 @@ function ep(e) {
         ),
         V = S - 100,
         z = V >= 0,
-        K = [
+        F = [
             {
                 buttonClick: B,
                 buttonText: O.intl.string(O.t["56jRn8"]),
@@ -477,7 +477,7 @@ function ep(e) {
                 buttonClick: U,
                 buttonText: O.intl.string(O.t["i1c+kV"]),
                 noneSelectedText: O.intl.string(O.t["UBJhC/"]),
-                overwrites: M,
+                overwrites: _,
                 title: null == i ? O.intl.string(O.t.OGiMXJ) : O.intl.string(O.t.Ujbaqm),
             },
         ];
@@ -505,7 +505,7 @@ function ep(e) {
                       ],
                   })
                 : null,
-            K.map((e, t) => {
+            F.map((e, t) => {
                 let n = null;
                 return (
                     R
@@ -550,12 +550,12 @@ function ep(e) {
 function eb(e) {
     let t = (function (e) {
         let t = s.useMemo(() => {
-                let t = T.A.getChannels(e),
-                    n = [...t[T.I]];
+                let t = I.A.getChannels(e),
+                    n = [...t[I.I]];
                 n.push(...t.VOCAL.filter((e) => e.channel.isGuildVocal()));
                 let i = n.map((e) => ({
                     id: e.channel.id,
-                    name: (0, v.m1)(e.channel, y.default, I.A),
+                    name: (0, v.m1)(e.channel, y.default, T.A),
                     canManage: N.A.can(k.xBc.MANAGE_ROLES, e.channel),
                 }));
                 return (i.unshift({ id: (0, A.Ap)(e), name: O.intl.string(O.t["7YqSGx"]), canManage: !0 }), i);
@@ -585,7 +585,7 @@ function ef(e) {
                     if (null == i || i.bot) continue;
                     let s =
                         i.id !== t.ownerId &&
-                        !M.$3({ permission: k.xBc.ADMINISTRATOR, user: i, context: t }) &&
+                        !_.$3({ permission: k.xBc.ADMINISTRATOR, user: i, context: t }) &&
                         N.A.canManageUser(k.xBc.USE_APPLICATION_COMMANDS, i, t);
                     e.push({ id: i.id, canManage: s, nick: n.nick, username: i.username });
                 }
@@ -595,9 +595,9 @@ function ef(e) {
                 let e = [];
                 for (let i of a) {
                     if (i.managed && i.tags?.bot_id != null) continue;
-                    let l = !(0, _._m)(i, k.xBc.ADMINISTRATOR) && N.A.isRoleHigher(t, n, i),
+                    let l = !(0, M._m)(i, k.xBc.ADMINISTRATOR) && N.A.isRoleHigher(t, n, i),
                         s = { id: i.id, name: i.name, canManage: l };
-                    (0, _.Oy)(i) ? e.unshift(s) : e.push(s);
+                    (0, M.Oy)(i) ? e.unshift(s) : e.push(s);
                 }
                 return e;
             }, [a, t, n]),

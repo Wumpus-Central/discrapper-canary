@@ -1,4 +1,4 @@
-(i.d(l, { default: () => P }), i(321073));
+(i.d(l, { default: () => L }), i(321073));
 var s = i(477900),
     a = i(582128),
     n = i(855986),
@@ -29,8 +29,8 @@ var s = i(477900),
     G = i(652215),
     w = i(818348),
     R = i(792996),
-    D = i(138742);
-let L = (e) => {
+    T = i(138742);
+let D = (e) => {
         let { channelData: l, onClose: i, trackOptionClick: a } = e,
             t = (0, n.bG)([y.A], () => y.A.getChannel(l.channel_id)),
             d = (0, j.Ay)(t),
@@ -39,10 +39,10 @@ let L = (e) => {
                 l.emoji_id,
             ]),
             N = null != l.emoji_name ? p.Ay.getByName(p.Ay.convertSurrogateToName(l.emoji_name, !1)) : null,
-            _ = (0, x.gU)(t) ?? o.N;
+            _ = (0, x.gU)(t) ?? o.TextIcon;
         return null != t && m
             ? (0, s.jsxs)(r.D, {
-                  className: D.NV,
+                  className: T.NV,
                   onClick: () => {
                       (a(), i(), (0, C.uh)(t.guild_id, t.id));
                   },
@@ -53,29 +53,29 @@ let L = (e) => {
                                 animated: null != u && u.animated,
                                 emojiId: u?.id,
                                 autoplay: !0,
-                                className: D.oK,
+                                className: T.oK,
                             })
-                          : (0, s.jsx)(_, { className: D.p }),
+                          : (0, s.jsx)(_, { className: T.p }),
                       (0, s.jsxs)("div", {
-                          className: D.uP,
+                          className: T.uP,
                           children: [
-                              (0, s.jsx)(c.E, { variant: "body-md/normal", className: D.I0, children: l.description }),
+                              (0, s.jsx)(c.E, { variant: "body-md/normal", className: T.I0, children: l.description }),
                               (0, s.jsxs)(c.E, {
                                   variant: "body-xs/normal",
                                   color: "text-default",
                                   children: [
-                                      (0, s.jsx)(_, { className: D.nO, size: "xxs", color: "currentColor" }),
+                                      (0, s.jsx)(_, { className: T.nO, size: "xxs", color: "currentColor" }),
                                       (0, s.jsx)("span", { children: d }),
                                   ],
                               }),
                           ],
                       }),
-                      (0, s.jsx)(k.A, { direction: k.A.Directions.RIGHT, className: D.R_ }),
+                      (0, s.jsx)(k.A, { direction: k.A.Directions.RIGHT, className: T.R_ }),
                   ],
               })
             : null;
     },
-    P = function (e) {
+    L = function (e) {
         let { onClose: l, transitionState: i, guildId: o, isPreview: r } = e,
             h = (0, n.bG)([f.A], () => f.A.getGuild(o)),
             {
@@ -138,13 +138,13 @@ let L = (e) => {
                     title: R.intl.string(R.t["3iCBUn"]),
                     onClose: () => Promise.resolve(l()),
                     children: (0, s.jsxs)("div", {
-                        className: D.jE,
+                        className: T.jE,
                         children: [
                             (0, s.jsx)(N.Ay, {
                                 mask: N.Ay.Masks.SQUIRCLE,
                                 width: 64,
                                 height: 64,
-                                className: D.$f,
+                                className: T.$f,
                                 children: (0, s.jsx)(g.Ay, {
                                     size: g.Ay.Sizes.LARGER,
                                     guild: h,
@@ -155,7 +155,7 @@ let L = (e) => {
                             }),
                             (0, s.jsx)(m.D, {
                                 variant: "heading-xl/semibold",
-                                className: D.wx,
+                                className: T.wx,
                                 id: p,
                                 children: R.intl.format(R.t["0aydCN"], {
                                     guildName: h.name,
@@ -166,11 +166,11 @@ let L = (e) => {
                                                 children: [
                                                     (0, s.jsx)(E.A, {
                                                         guild: h,
-                                                        className: D.eZ,
-                                                        flowerStarClassName: D.mP,
+                                                        className: T.eZ,
+                                                        flowerStarClassName: T.mP,
                                                         tooltipColor: u.ST.Colors.PRIMARY,
                                                     }),
-                                                    (0, s.jsx)("strong", { className: D.aC, children: e }),
+                                                    (0, s.jsx)("strong", { className: T.aC, children: e }),
                                                 ],
                                             },
                                             l,
@@ -181,20 +181,20 @@ let L = (e) => {
                                 ? (0, s.jsx)(c.E, {
                                       variant: "body-sm/normal",
                                       color: "text-default",
-                                      className: D.eF,
+                                      className: T.eF,
                                       children: j.description,
                                   })
                                 : null,
                             (0, s.jsx)(m.D, {
                                 variant: "heading-xs/semibold",
-                                className: D.XU,
+                                className: T.XU,
                                 children: R.intl.string(R.t["haj5+i"]),
                             }),
                             (0, s.jsx)("div", {
-                                className: D.fF,
+                                className: T.fF,
                                 children: j.welcome_channels?.map((e, i) =>
                                     (0, s.jsx)(
-                                        L,
+                                        D,
                                         { channelData: e, trackOptionClick: () => C(i), onClose: l },
                                         `${e.channel_id}-${i}`,
                                     ),

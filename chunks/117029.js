@@ -17,10 +17,10 @@ var i = n(477900),
     v = n(792996),
     E = n(950183),
     C = n(507199);
-function j(e) {
+function I(e) {
     (e.preventDefault(), e.stopPropagation());
 }
-function I(e) {
+function j(e) {
     return (1 & e.buttons) == 1;
 }
 let S = l.memo(function (e) {
@@ -29,28 +29,28 @@ let S = l.memo(function (e) {
         {
             enabled: N,
             zoomLevel: y,
-            minZoom: T,
-            maxZoom: L,
+            minZoom: L,
+            maxZoom: T,
             isDragging: D,
             isWheeling: R,
             isSlidering: k,
-            setIsSlidering: w,
-            doZoom: M,
+            setIsSlidering: M,
+            doZoom: w,
             isZooming: O,
             videoAspectRatio: G,
-            wrapperRef: V,
-            panOffset: P,
+            wrapperRef: P,
+            panOffset: V,
             setPanOffset: H,
             clampPanOffset: F,
         } = l.useContext(A.e9),
-        [U, z] = l.useState(!1),
-        W = l.useRef(null),
-        $ = y > T,
+        [U, W] = l.useState(!1),
+        z = l.useRef(null),
+        $ = y > L,
         B = l.useCallback(() => {
             _("interact");
         }, [_]),
         Z = l.useCallback(() => {
-            (z(!1), b("interact"));
+            (W(!1), b("interact"));
         }, [b]),
         Y = l.useMemo(() => {
             let e = 120 * Math.min(G, 32 / 9);
@@ -58,19 +58,19 @@ let S = l.memo(function (e) {
         }, [G]),
         Q = l.useCallback(
             (e) => {
-                if (null == W.current || null == V.current) return;
-                let t = W.current.getBoundingClientRect(),
-                    n = V.current.clientWidth,
-                    i = V.current.clientHeight,
+                if (null == z.current || null == P.current) return;
+                let t = z.current.getBoundingClientRect(),
+                    n = P.current.clientWidth,
+                    i = P.current.clientHeight,
                     l = e.x - t.left,
                     s = e.y - t.top;
                 H(F({ x: (0.5 - l / t.width) * n * y, y: (0.5 - s / t.height) * i * y }));
             },
-            [F, y, V, H],
+            [F, y, P, H],
         ),
         K = l.useCallback(
             (e) => {
-                I(e) && (e.preventDefault(), e.stopPropagation(), z(!0), Q({ x: e.clientX, y: e.clientY }));
+                j(e) && (e.preventDefault(), e.stopPropagation(), W(!0), Q({ x: e.clientX, y: e.clientY }));
             },
             [Q],
         ),
@@ -82,18 +82,18 @@ let S = l.memo(function (e) {
         ),
         q = l.useCallback(
             (e) => {
-                !U || I(e) || (e.preventDefault(), e.stopPropagation(), z(!1));
+                !U || j(e) || (e.preventDefault(), e.stopPropagation(), W(!1));
             },
             [U],
         ),
         J = x.Ay.getVideoComponent(),
         ee = l.useMemo(() => {
-            let e = null != V.current ? V.current.clientWidth : 1,
-                t = null != V.current ? V.current.clientHeight : 1,
+            let e = null != P.current ? P.current.clientWidth : 1,
+                t = null != P.current ? P.current.clientHeight : 1,
                 n = 1 / y,
                 i = 1 / y,
-                l = 0.5 - P.x / (e * y),
-                s = 0.5 - P.y / (t * y);
+                l = 0.5 - V.x / (e * y),
+                s = 0.5 - V.y / (t * y);
             return {
                 "--custom-zoom-indicator-left": `${100 * (0, a.clamp)(l - n / 2, 0, 1 - n)}%`,
                 "--custom-zoom-indicator-top": `${100 * (0, a.clamp)(s - i / 2, 0, 1 - i)}%`,
@@ -104,31 +104,31 @@ let S = l.memo(function (e) {
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [D, U, R, k, P, y, V]),
+        }, [D, U, R, k, V, y, P]),
         et = l.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), M(y - 0.25, A.qd, "button"));
+                (e.preventDefault(), e.stopPropagation(), w(y - 0.25, A.qd, "button"));
             },
-            [M, y],
+            [w, y],
         ),
         en = l.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), M(y + 0.25, A.qd, "button"));
+                (e.preventDefault(), e.stopPropagation(), w(y + 0.25, A.qd, "button"));
             },
-            [M, y],
+            [w, y],
         ),
         ei = l.useRef(null),
         el = l.useCallback(
             (e) => {
-                (w(!0),
-                    M(e, A.qd, "slider"),
+                (M(!0),
+                    w(e, A.qd, "slider"),
                     S(),
                     null == ei.current && (ei.current = new o.Ep()),
                     ei.current.start(100, () => {
-                        w(!1);
+                        M(!1);
                     }));
             },
-            [M, S, w],
+            [w, S, M],
         );
     return ((0, f.l0)(() => {
         ei.current?.stop();
@@ -138,19 +138,19 @@ let S = l.memo(function (e) {
               className: r()(C.ne, { [C.Ge]: O || $ }),
               onMouseEnter: B,
               onMouseLeave: Z,
-              onClick: j,
+              onClick: I,
               children: [
                   (O || $) &&
                       (0, i.jsx)(u.D, {
-                          onClick: j,
+                          onClick: I,
                           onMouseEnter: B,
                           onMouseLeave: Z,
                           children: (0, i.jsxs)("div", {
-                              ref: W,
+                              ref: z,
                               className: C.Wc,
                               style: Y,
                               onPointerDown: function (e) {
-                                  I(e) && e.currentTarget.setPointerCapture(e.pointerId);
+                                  j(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
                               onMouseDown: K,
                               onMouseMove: X,
@@ -176,17 +176,17 @@ let S = l.memo(function (e) {
                                           text: v.intl.string(v.t.M6Cmwy),
                                           position: "top",
                                           children: (0, i.jsx)(d.K, {
-                                              icon: m.V,
+                                              icon: m.MagnifyingGlassMinusIcon,
                                               onClick: et,
-                                              disabled: y <= T,
+                                              disabled: y <= L,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, i.jsx)(p.A, {
-                                          minValue: T,
-                                          maxValue: L,
+                                          minValue: L,
+                                          maxValue: T,
                                           step: 0.01,
                                           value: y,
                                           onChange: el,
@@ -199,9 +199,9 @@ let S = l.memo(function (e) {
                               text: v.intl.string(v.t["9hMafy"]),
                               position: "top",
                               children: (0, i.jsx)(d.K, {
-                                  icon: g.r,
+                                  icon: g.MagnifyingGlassPlusIcon,
                                   onClick: en,
-                                  disabled: y >= L,
+                                  disabled: y >= T,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),

@@ -7,22 +7,22 @@ var n = t(477900),
     d = t(462887),
     c = t(192308),
     u = t(331322),
-    f = t(939249),
-    m = t(478016),
+    m = t(939249),
+    f = t(478016),
     p = t(834730),
     x = t(442433),
     g = t(778858),
-    A = t(736653),
-    h = t(573648),
+    h = t(736653),
+    A = t(573648),
     j = t(104171),
     b = t(149468),
     v = t(619019),
     N = t(46653),
-    _ = t(696451),
-    y = t(317525),
-    C = t(129230),
-    E = t(975571),
-    k = t(967740),
+    C = t(696451),
+    _ = t(317525),
+    y = t(129230),
+    k = t(975571),
+    E = t(967740),
     I = t(652215),
     S = t(792996),
     R = t(609548),
@@ -58,15 +58,15 @@ t.d(
         b: G,
         default: function (e) {
             let { guildId: l, transitionState: s, onClose: c } = e,
-                U = (0, a.bG)([y.A], () => y.A.getSortedRoles(l)),
-                L = (0, a.bG)([N.default], () => N.default.getId()),
-                T = (0, a.bG)([_.Ay], () => _.Ay.getMember(l, L)),
+                L = (0, a.bG)([_.A], () => _.A.getSortedRoles(l)),
+                U = (0, a.bG)([N.default], () => N.default.getId()),
+                T = (0, a.bG)([C.Ay], () => C.Ay.getMember(l, U)),
                 [V, z] = i.useState([]),
-                M = (0, A.Ay)();
+                M = (0, h.Ay)();
             if (
                 (i.useEffect(() => {
                     0 !== V.length &&
-                        C.default.track(I.HAw.PASSPORT_ENTRY_VIEWED, {
+                        y.default.track(I.HAw.PASSPORT_ENTRY_VIEWED, {
                             role_ids: V.map((e) => {
                                 let { role_id: l } = e;
                                 return l;
@@ -80,13 +80,13 @@ t.d(
                 null == T)
             )
                 return null;
-            let O = U.filter((e) => null === e.tags.guild_connections);
+            let O = L.filter((e) => null === e.tags.guild_connections);
             return (0, n.jsx)(o.a, {
                 transitionState: s,
                 title: S.intl.string(S.t.ghtnss),
                 onClose: c,
                 subtitle: S.intl.format(S.t["Y+TsEV"], {
-                    helpdeskArticleUrl: E.A.getArticleURL(I.MVz.CONNECTION_DETAILS),
+                    helpdeskArticleUrl: k.A.getArticleURL(I.MVz.CONNECTION_DETAILS),
                 }),
                 actions: [],
                 children: (0, n.jsx)(u.B, {
@@ -113,7 +113,7 @@ t.d(
                                                   })
                                                 : null;
                                     } else {
-                                        let l = h.A.get(e.connection_type);
+                                        let l = A.A.get(e.connection_type);
                                         if (null == l) continue;
                                         s = (0, n.jsx)("img", {
                                             src: (0, d.q)(M) ? l.icon.lightSVG : l.icon.darkSVG,
@@ -126,7 +126,7 @@ t.d(
                                 return Object.values(i);
                             })(e.id);
                         return (0, n.jsxs)(
-                            f.D,
+                            m.D,
                             {
                                 className: r()(R.L5, s ? R.xN : null),
                                 onClick: s ? void 0 : () => G(e, l),
@@ -151,10 +151,13 @@ t.d(
                                     s
                                         ? (0, n.jsx)("div", {
                                               className: R.UA,
-                                              children: (0, n.jsx)(m.U, { size: "xs", color: "currentColor" }),
+                                              children: (0, n.jsx)(f.CheckmarkSmallIcon, {
+                                                  size: "xs",
+                                                  color: "currentColor",
+                                              }),
                                           })
                                         : null,
-                                    (0, n.jsx)(k.A, { guildId: l, role: e, size: 24 }),
+                                    (0, n.jsx)(E.A, { guildId: l, role: e, size: 24 }),
                                     (0, n.jsxs)("div", {
                                         className: R.fk,
                                         children: [

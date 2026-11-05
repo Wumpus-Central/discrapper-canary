@@ -1,46 +1,47 @@
-var l = i(477900);
-i(582128);
-var n = i(996682),
-    a = i(27989);
-i.d(
-    t,
+d.r(e);
+var i = d(477900);
+d(582128);
+var l = d(996682),
+    s = d(27989);
+d.d(
+    e,
     {},
     {
-        _: function (e) {
-            let { size: t = "md", width: i, height: s, ...r } = e,
-                o = (0, a.J)(t),
-                c = o?.width ?? i,
-                d = o?.height ?? s;
-            return (0, l.jsxs)("svg", {
-                ...(0, n.A)(r),
+        PaymentTypeGiftCardIcon: function (c) {
+            let { size: e = "md", width: d, height: a, ...t } = c,
+                h = (0, s.J)(e),
+                n = h?.width ?? d,
+                p = h?.height ?? a;
+            return (0, i.jsxs)("svg", {
+                ...(0, l.A)(t),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: c,
-                height: d,
+                width: n,
+                height: p,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, l.jsx)("path", {
+                    (0, i.jsx)("path", {
                         fill: "#5865F2",
                         fillRule: "evenodd",
                         d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2",
                         clipRule: "evenodd",
                     }),
-                    (0, l.jsx)("mask", {
+                    (0, i.jsx)("mask", {
                         id: "a",
                         fill: "#fff",
-                        children: (0, l.jsx)("path", {
+                        children: (0, i.jsx)("path", {
                             fillRule: "evenodd",
                             d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2",
                             clipRule: "evenodd",
                         }),
                     }),
-                    (0, l.jsx)("path", {
+                    (0, i.jsx)("path", {
                         stroke: "#97979F",
                         strokeOpacity: ".3",
                         d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2",
                         mask: "url(#a)",
                     }),
-                    (0, l.jsx)("path", {
+                    (0, i.jsx)("path", {
                         fill: "#EFEFF1",
                         d: "M15.87 8.43a9.1 9.1 0 0 0-2.3-.72c-.11.2-.2.4-.3.61a8.54 8.54 0 0 0-2.54 0 7 7 0 0 0-.3-.6c-.8.13-1.57.37-2.3.72a9.52 9.52 0 0 0-1.65 6.41c.85.64 1.8 1.12 2.82 1.44.22-.32.43-.65.6-1a5.82 5.82 0 0 1-.95-.46c.08-.05.16-.11.23-.18 1.79.85 3.85.85 5.64 0l.23.18c-.3.19-.62.34-.95.47.17.34.37.67.6.98a9.21 9.21 0 0 0 2.82-1.43 9.52 9.52 0 0 0-1.65-6.42Zm-5.72 5.13c-.55 0-1-.51-1-1.13 0-.63.44-1.14 1-1.14s1.01.51 1 1.14c0 .62-.44 1.13-1 1.13Zm3.7 0c-.55 0-1-.51-1-1.13 0-.63.44-1.14 1-1.14s1.01.51 1 1.14c0 .62-.44 1.13-1 1.13Z",
                     }),

@@ -16,69 +16,69 @@ var l = e(858899),
     g = e(253400),
     v = e(179581),
     y = e(652215),
-    b = e(792996);
-let w = /^(tel|sms|mailto):([^?;]+)/,
-    _ = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
-    k = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
-    C = /^\/emojis\/\d+\./;
+    w = e(792996);
+let b = /^(tel|sms|mailto):([^?;]+)/,
+    k = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
+    _ = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
+    E = /^\/emojis\/\d+\./;
 e.d(
     n,
     {},
     {
-        A: function (t, n, e, E) {
-            let N = (0, u.A)(e?.getChannelId()),
-                j = d.Q_.useSetting();
+        A: function (t, n, e, C) {
+            let I = (0, u.A)(e?.getChannelId()),
+                N = d.Q_.useSetting();
             if (
                 !f.isPlatformEmbedded ||
                 null == t ||
                 "" === t ||
-                (!j &&
+                (!N &&
                     (function (t) {
                         try {
-                            return C.test(new URL(t).pathname);
+                            return E.test(new URL(t).pathname);
                         } catch {
                             return !1;
                         }
                     })(t)) ||
-                N ||
-                E?.shouldHideMediaOptions === !0 ||
+                I ||
+                C?.shouldHideMediaOptions === !0 ||
                 !(0, s.fW)(t)
             )
                 return null;
-            let I = (0, p.E)(t);
-            function A(t) {
-                (h.default.track(y.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: I, ...(0, v.N)() }),
+            let j = (0, p.E)(t);
+            function L(t) {
+                (h.default.track(y.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: j, ...(0, v.N)() }),
                     g.Ay.copy(t),
-                    (0, l.P0)({ text: b.intl.string(b.t["L/PwZf"]), variant: "success" }));
+                    (0, l.P0)({ text: w.intl.string(w.t["L/PwZf"]), variant: "success" }));
             }
-            function L(e, i) {
+            function x(e, i) {
                 if (null == t) return;
                 let l = !0 === i ? t.replace("tel:", "sms:") : t;
-                (h.default.track(y.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: I, ...(0, v.N)() }),
+                (h.default.track(y.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: j, ...(0, v.N)() }),
                     (0, m.h)({ href: l, trusted: (0, m.m)(t, n), shouldConfirm: !0 }, e));
             }
-            let x = [],
-                D = t.match(w);
+            let A = [],
+                D = t.match(b);
             if (null != D) {
-                let t = b.intl.string("mailto" === D[1] ? b.t.ZYLVKo : b.t["3zozoR"]);
-                (x.push(
+                let t = w.intl.string("mailto" === D[1] ? w.t.ZYLVKo : w.t["3zozoR"]);
+                (A.push(
                     (0, i.jsx)(
                         a.Dr,
                         {
                             id: "copy-native-contact",
                             label: t,
                             action: function () {
-                                null != D && A(D[2]);
+                                null != D && L(D[2]);
                             },
                         },
                         "copy-native-contact",
                     ),
                 ),
                     "tel" === D[1] &&
-                        x.push(
+                        A.push(
                             (0, i.jsx)(
                                 a.Dr,
-                                { id: "native-send-sms", label: b.intl.string(b.t["+wbjMW"]), action: (t) => L(t, !0) },
+                                { id: "native-send-sms", label: w.intl.string(w.t["+wbjMW"]), action: (t) => x(t, !0) },
                                 "native-send-sms",
                             ),
                         ));
@@ -86,7 +86,7 @@ e.d(
             let P = (function (t) {
                     try {
                         let n = new URL(t);
-                        return "cdn.discordapp.com" === n.hostname && _.test(n.pathname);
+                        return "cdn.discordapp.com" === n.hostname && k.test(n.pathname);
                     } catch {
                         return !1;
                     }
@@ -95,35 +95,35 @@ e.d(
                     !P &&
                     (function (t) {
                         try {
-                            return k.test(new URL(t).pathname);
+                            return _.test(new URL(t).pathname);
                         } catch {
                             return !1;
                         }
                     })(t),
-                O = P ? b.t["8xHmxo"] : M ? b.t["92CPQ+"] : b.t.WqhZss,
-                R = P ? b.t.w8ldGK : M ? b.t.q5FbIB : b.t.wuRE8M;
+                O = P ? w.t["8xHmxo"] : M ? w.t["92CPQ+"] : w.t.WqhZss,
+                R = P ? w.t.w8ldGK : M ? w.t.q5FbIB : w.t.wuRE8M;
             return [
                 (0, i.jsx)(
                     a.Dr,
                     {
                         id: "copy-native-link",
-                        label: b.intl.string(O),
+                        label: w.intl.string(O),
                         leadingAccessory: { type: "icon", icon: c.LinkIcon },
                         action: function () {
-                            null != t && A(t);
+                            null != t && L(t);
                         },
                     },
                     "copy-native-link",
                 ),
-                ...x,
+                ...A,
                 (0, i.jsx)(
                     a.Dr,
                     {
                         id: "open-native-link",
-                        label: b.intl.string(R),
-                        leadingAccessory: { type: "icon", icon: r.W },
-                        trailingIndicator: { type: "icon", icon: o.I },
-                        action: (t) => L(t),
+                        label: w.intl.string(R),
+                        leadingAccessory: { type: "icon", icon: r.BrowserIcon },
+                        trailingIndicator: { type: "icon", icon: o.LinkExternalSmallIcon },
+                        action: (t) => x(t),
                     },
                     "open-native-link",
                 ),

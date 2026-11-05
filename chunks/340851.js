@@ -21,26 +21,26 @@ var n = t(477900),
     y = t(346846),
     E = t(342296),
     N = t(293277),
-    b = t(46653),
-    C = t(71393),
+    C = t(46653),
+    b = t(71393),
     j = t(576705),
     T = t(287809),
-    O = t(977997),
-    G = t(772800);
+    G = t(977997),
+    O = t(772800);
 t(281405);
 var V = t(544105),
     P = t(55010),
     w = t(792996),
     k = t(321313);
-let R = (0, h.J)(function (e) {
+let U = (0, h.J)(function (e) {
     let {
             collapsed: i,
             user: s,
             channel: r,
             mute: d,
             localMute: h,
-            localVideoDisabled: R,
-            deaf: U,
+            localVideoDisabled: U,
+            deaf: R,
             video: M,
             embeddedApplication: D,
             serverMute: L,
@@ -50,8 +50,8 @@ let R = (0, h.J)(function (e) {
             speaking: K,
             playingSoundboard: Y,
             disconnected: q,
-            connecting: $,
-            connectUserDragSource: H,
+            connecting: H,
+            connectUserDragSource: $,
             canDrag: W,
             isStreaming: Z,
             isWatching: J,
@@ -91,9 +91,9 @@ let R = (0, h.J)(function (e) {
               },
           };
     function eS() {
-        if (!Z || !(0, x.eo)(r, O.A, C.A, j.A, v.default)[0]) return;
+        if (!Z || !(0, x.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
         let e = { streamType: P.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
-        (b.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
+        (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
             J ? ((0, y.A)(e), c.A.selectParticipant(e.channelId, (0, _._z)(e))) : (0, g.Nl)(e),
             ei?.(s.id));
     }
@@ -110,6 +110,7 @@ let R = (0, h.J)(function (e) {
                 t.e(708757),
                 t.e(585968),
                 t.e(893190),
+                t.e(713708),
                 t.e(885533),
                 t.e(21921),
                 t.e(189673),
@@ -121,6 +122,7 @@ let R = (0, h.J)(function (e) {
                 t.e(166495),
                 t.e(229787),
                 t.e(88342),
+                t.e(830221),
                 t.e(576665),
                 t.e(311802),
                 t.e(698965),
@@ -195,16 +197,16 @@ let R = (0, h.J)(function (e) {
                         speaking: K,
                         playingSoundboard: Y,
                         disconnected: q,
-                        connecting: $,
+                        connecting: H,
                         mute: d,
                         localMute: h,
-                        localVideoDisabled: R,
+                        localVideoDisabled: U,
                         isStreaming: Z,
                         isGuest: X,
                         video: M,
                         priority: Q,
                         ringing: B,
-                        deaf: U,
+                        deaf: R,
                         nick: z,
                         collapsed: i,
                         overlap: i,
@@ -237,7 +239,7 @@ let R = (0, h.J)(function (e) {
                               position: "right",
                               renderPopout: (e) => {
                                   let { setPopoutRef: i } = e;
-                                  return (0, n.jsx)(G.A, {
+                                  return (0, n.jsx)(O.A, {
                                       channel: r,
                                       user: s,
                                       onAction: eI,
@@ -260,13 +262,13 @@ let R = (0, h.J)(function (e) {
             },
         }),
     });
-    return W ? H(ex) : ex;
+    return W ? $(ex) : ex;
 });
 t.d(
     i,
     {},
     {
-        Ay: R,
+        Ay: U,
         LR: function (e) {
             let { numUsers: i } = e;
             return (0, n.jsx)("div", {
@@ -282,7 +284,7 @@ t.d(
                 children: [
                     (0, n.jsx)("div", {
                         className: k.$L,
-                        children: (0, n.jsx)(d.L, { size: "md", color: "currentColor", className: k.wG }),
+                        children: (0, n.jsx)(d.HeadphonesIcon, { size: "md", color: "currentColor", className: k.wG }),
                     }),
                     (0, n.jsx)(r.E, { color: "text-muted", variant: "body-sm/medium", children: l }),
                 ],

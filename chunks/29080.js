@@ -1,28 +1,29 @@
+i.r(s);
 var h = i(477900);
 i(582128);
 var e = i(646514),
     r = i(996682),
     c = i(27989);
 i.d(
-    t,
+    s,
     {},
     {
-        w: function (s) {
+        StopIcon: function (t) {
             let {
-                    size: t = "md",
+                    size: s = "md",
                     width: i,
-                    height: w,
-                    color: d = e.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: n = "",
-                    ...l
-                } = s,
-                o = (0, c.J)(t),
-                p = o?.width ?? i,
-                a = o?.height ?? w;
+                    height: n,
+                    color: o = e.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: d = "",
+                    ...p
+                } = t,
+                w = (0, c.J)(s),
+                l = w?.width ?? i,
+                a = w?.height ?? n;
             return (0, h.jsx)("svg", {
-                ...(0, r.A)(l),
+                ...(0, r.A)(p),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: p,
+                width: l,
                 height: a,
                 fill: "none",
                 viewBox: "0 0 24 24",
@@ -31,9 +32,9 @@ i.d(
                     height: "18",
                     x: "3",
                     y: "3",
-                    fill: "string" == typeof d ? d : d.css,
+                    fill: "string" == typeof o ? o : o.css,
                     rx: "3",
-                    className: n,
+                    className: d,
                 }),
             });
         },

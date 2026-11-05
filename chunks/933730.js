@@ -66,7 +66,7 @@ n.d(
                         : {
                               text: null != x ? x : O.intl.string(O.t.hIVbiP),
                               variant: "expressive",
-                              icon: f.t,
+                              icon: f.NitroWheelIcon,
                               iconPosition: "start",
                               onClick: U,
                           };

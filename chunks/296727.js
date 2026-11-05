@@ -1,4 +1,4 @@
-l.d(n, { default: () => k });
+l.d(n, { default: () => I });
 var a = l(477900),
     t = l(582128),
     i = l(503698),
@@ -45,7 +45,7 @@ function j(e) {
                                 ? (0, a.jsxs)("span", {
                                       className: b.JL,
                                       children: [
-                                          (0, a.jsx)(o.n, { size: "sm" }),
+                                          (0, a.jsx)(o.GroupIcon, { size: "sm" }),
                                           n.memberCount,
                                           null != n.maxMembers ? `/${n.maxMembers}` : "",
                                       ],
@@ -85,7 +85,7 @@ function N(e) {
         ),
     });
 }
-function k(e) {
+function I(e) {
     let { game: n, ...l } = e,
         i = n.getOfficialApplicationId(),
         s = (0, p.A)({ displayNoun: null, lowercase: !1 }),
@@ -116,8 +116,8 @@ function k(e) {
         })(i),
         { data: o, isLoading: x } = (0, m.YY)(i),
         [g, b] = (0, t.useState)(null),
-        [j, k] = (0, t.useState)("SELECT_ORGANIZATION"),
-        C = [
+        [j, I] = (0, t.useState)("SELECT_ORGANIZATION"),
+        k = [
             {
                 stepKey: "SELECT_ORGANIZATION",
                 modalProps: { title: h.intl.formatToPlainString(S.default.GdDUCS, { noun: s }) },
@@ -136,5 +136,5 @@ function k(e) {
                 nextEnabled: null != g,
             },
         ];
-    return (0, a.jsx)(c.t, { ...l, steps: C, currentStepKey: j, onStepChange: k });
+    return (0, a.jsx)(c.t, { ...l, steps: k, currentStepKey: j, onStepChange: I });
 }

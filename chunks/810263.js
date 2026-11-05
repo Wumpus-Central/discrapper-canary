@@ -1,19 +1,19 @@
 var l = i(477900),
-    t = i(582128),
-    o = i(284009),
-    c = i.n(o),
-    r = i(477782),
-    a = i(885574),
+    o = i(582128),
+    c = i(284009),
+    t = i.n(c),
+    a = i(477782),
+    r = i(885574),
     d = i(473935),
     s = i(173936),
     u = i(50268),
     v = i(207560),
     y = i(253932),
     g = i(260509),
-    p = i(486020),
-    b = i(957565);
+    k = i(486020),
+    p = i(957565);
 i(652215);
-var k = i(792996);
+var b = i(792996);
 i.d(
     n,
     {},
@@ -21,49 +21,49 @@ i.d(
         A: function (e) {
             let { showIcons: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 i = y.Q_.useSetting(),
-                o = (0, v.lF)(),
-                A = (0, u.A)({ id: e.id, label: k.intl.string(k.t["94lLD7"]) }),
-                C = t.useCallback(() => {
+                c = (0, v.lF)(),
+                I = (0, u.A)({ id: e.id, label: b.intl.string(b.t["94lLD7"]) }),
+                C = o.useCallback(() => {
                     let n = (0, g.Iv)(e, 1024, !0);
-                    (c()(null != n, "cannot copy null icon URL"), (0, b.C)(n));
+                    (t()(null != n, "cannot copy null icon URL"), (0, p.C)(n));
                 }, [e]),
-                h = t.useCallback(() => {
-                    let n = p.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
-                    (c()(null != n, "cannot copy null banner URL"), (0, b.C)(n));
+                A = o.useCallback(() => {
+                    let n = k.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
+                    (t()(null != n, "cannot copy null banner URL"), (0, p.C)(n));
                 }, [e]),
-                L = t.useCallback(() => {
-                    (0, b.C)(e.id);
+                L = o.useCallback(() => {
+                    (0, p.C)(e.id);
                 }, [e.id]);
-            return !__OVERLAY__ && i && b.p5 && null != e.id
-                ? o
-                    ? (0, l.jsxs)(r.Dr, {
+            return !__OVERLAY__ && i && p.p5 && null != e.id
+                ? c
+                    ? (0, l.jsxs)(a.Dr, {
                           id: "copy-server-info",
-                          label: k.intl.string(k.t["rka/KS"]),
-                          leadingAccessory: n ? { type: "icon", icon: a.CircleInformationIcon } : void 0,
+                          label: b.intl.string(b.t["rka/KS"]),
+                          leadingAccessory: n ? { type: "icon", icon: r.CircleInformationIcon } : void 0,
                           children: [
-                              (0, l.jsx)(r.Dr, {
+                              (0, l.jsx)(a.Dr, {
                                   id: "copy-server-id",
-                                  label: k.intl.string(k.t["94lLD7"]),
+                                  label: b.intl.string(b.t["94lLD7"]),
                                   action: L,
-                                  leadingAccessory: n ? { type: "icon", icon: d.L } : void 0,
+                                  leadingAccessory: n ? { type: "icon", icon: d.IdIcon } : void 0,
                               }),
                               null != e.icon &&
-                                  (0, l.jsx)(r.Dr, {
+                                  (0, l.jsx)(a.Dr, {
                                       id: "copy-server-icon-link",
-                                      label: k.intl.string(k.t["7H30wR"]),
+                                      label: b.intl.string(b.t["7H30wR"]),
                                       action: C,
                                       leadingAccessory: n ? { type: "icon", icon: s.LinkIcon } : void 0,
                                   }),
                               null != e.banner &&
-                                  (0, l.jsx)(r.Dr, {
+                                  (0, l.jsx)(a.Dr, {
                                       id: "copy-server-banner-link",
-                                      label: k.intl.string(k.t["2FoUnk"]),
-                                      action: h,
+                                      label: b.intl.string(b.t["2FoUnk"]),
+                                      action: A,
                                       leadingAccessory: n ? { type: "icon", icon: s.LinkIcon } : void 0,
                                   }),
                           ],
                       })
-                    : A
+                    : I
                 : null;
         },
     },

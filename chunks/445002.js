@@ -21,8 +21,8 @@ var l = i(477900),
     S = i(287809),
     k = i(129230),
     _ = i(255438),
-    w = i(975571),
-    I = i(515718),
+    I = i(975571),
+    w = i(515718),
     z = i(631576),
     R = i(832628),
     v = i(378058),
@@ -33,10 +33,10 @@ var l = i(477900),
     N = i(409262);
 let B = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
     F = [{ name: "Sticker file", extensions: ["json", "png", "apng", "gif", "jpeg", "jpg"] }];
-function U(e, t) {
+function P(e, t) {
     k.default.track(D.HAw.STICKER_UPLOAD_COMPLETED, { successful: e, error: t ?? "" });
 }
-function G(e) {
+function U(e) {
     let { stickerPreview: t } = e;
     return (0, l.jsxs)("div", {
         className: N.VH,
@@ -45,23 +45,31 @@ function G(e) {
                 className: N.rA,
                 children:
                     t ??
-                    (0, l.jsx)(g.X, { size: "lg", color: "currentColor", "aria-label": L.intl.string(L.t.qOsjZh) }),
+                    (0, l.jsx)(g.ImagePlusIcon, {
+                        size: "lg",
+                        color: "currentColor",
+                        "aria-label": L.intl.string(L.t.qOsjZh),
+                    }),
             }),
             (0, l.jsx)("div", {
                 className: N.F_,
                 children:
                     t ??
-                    (0, l.jsx)(g.X, { size: "lg", color: "currentColor", "aria-label": L.intl.string(L.t.YC5NAI) }),
+                    (0, l.jsx)(g.ImagePlusIcon, {
+                        size: "lg",
+                        color: "currentColor",
+                        "aria-label": L.intl.string(L.t.YC5NAI),
+                    }),
             }),
         ],
     });
 }
-async function K(e) {
-    let t = await (0, I.We)(e),
+async function G(e) {
+    let t = await (0, w.We)(e),
         i = new Image();
     ((i.src = t), await i.decode());
     let l = (0, s.h_)(i, 320, 320);
-    return (0, I.bX)(l, e.name, "image/png");
+    return (0, w.bX)(l, e.name, "image/png");
 }
 i.d(
     t,
@@ -69,15 +77,15 @@ i.d(
     {
         default: function (e) {
             let { transitionState: t, onClose: i, guildId: s, sticker: g } = e,
-                P = (0, r.bG)([b.Ay], () => (g?.tags != null ? b.Ay.getCustomEmojiById(g.tags) : null)),
+                K = (0, r.bG)([b.Ay], () => (g?.tags != null ? b.Ay.getCustomEmojiById(g.tags) : null)),
                 O = S.default.getCurrentUser()?.isStaff() ? T.Ny : 524288,
-                [M, X] = n.useState(null),
-                [H, V] = n.useState(g?.name ?? ""),
+                [M, H] = n.useState(null),
+                [V, X] = n.useState(g?.name ?? ""),
                 [Z, q] = n.useState({ file: null, filename: (0, v.sL)(g) ?? "" }),
                 Y = n.useRef(null),
-                [W, J] = n.useState(P?.id),
+                [W, J] = n.useState(K?.id),
                 [Q, $] = n.useState(
-                    P?.name ?? (g?.tags != null ? (E.Ay.getByName(g.tags)?.surrogates ?? g.tags) : void 0),
+                    K?.name ?? (g?.tags != null ? (E.Ay.getByName(g.tags)?.surrogates ?? g.tags) : void 0),
                 ),
                 [ee, et] = n.useState(g?.description ?? ""),
                 [ei, el] = n.useState(!1),
@@ -90,7 +98,7 @@ i.d(
                 ec =
                     !ei &&
                     en?.isBlocking !== !0 &&
-                    H.length >= 2 &&
+                    V.length >= 2 &&
                     (null != W || null != Q || (g?.tags != null && g?.tags !== "")) &&
                     eg &&
                     eo;
@@ -98,11 +106,11 @@ i.d(
                 e.preventDefault();
                 let t = W ?? Q ?? g?.tags ?? "";
                 try {
-                    if ((el(!0), eu)) await (0, z.MO)(s, g?.id ?? "", { name: H, tags: t, description: ee });
+                    if ((el(!0), eu)) await (0, z.MO)(s, g?.id ?? "", { name: V, tags: t, description: ee });
                     else {
                         var l;
                         let e = new FormData();
-                        (e.append("name", H),
+                        (e.append("name", V),
                             e.append("tags", t),
                             e.append("description", ee),
                             Z?.file != null && e.append("file", Z.file),
@@ -110,12 +118,12 @@ i.d(
                             k.default.track(D.HAw.STICKER_UPLOAD_STARTED, { filetype: l }));
                         let i = (await Y.current?.getOriginalMd5()) ?? null;
                         (await (0, z.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
-                            U(!0),
+                            P(!0),
                             (0, o.P0)({ text: L.intl.string(L.t.QR85gd), variant: "success" }));
                     }
                     i();
                 } catch (e) {
-                    (ea({ message: e.body.message, isBlocking: !1 }), U(!1, e.body.message));
+                    (ea({ message: e.body.message, isBlocking: !1 }), P(!1, e.body.message));
                 } finally {
                     el(!1);
                 }
@@ -166,7 +174,7 @@ i.d(
                         children: [
                             (0, l.jsx)(d.D, {
                                 label: L.intl.string(L.t.gjdiKE),
-                                children: (0, l.jsx)(G, { stickerPreview: ef }),
+                                children: (0, l.jsx)(U, { stickerPreview: ef }),
                             }),
                             eu
                                 ? (0, l.jsx)(f.k, {
@@ -192,9 +200,9 @@ i.d(
                                                       isBlocking: !0,
                                                   });
                                               let i = e;
-                                              if ("image/jpeg" === t || "image/jpg" === t) i = await K(e);
-                                              else if ("image/png" === t && e.size > O && !(await (0, I.LZ)(e))) {
-                                                  let t = (i = await K(e)).size > O;
+                                              if ("image/jpeg" === t || "image/jpg" === t) i = await G(e);
+                                              else if ("image/png" === t && e.size > O && !(await (0, w.LZ)(e))) {
+                                                  let t = (i = await G(e)).size > O;
                                                   k.default.track(D.HAw.STICKER_FILE_RESIZED, {
                                                       original_file_size_bytes: e.size,
                                                       resized_file_size_bytes: i.size,
@@ -219,19 +227,19 @@ i.d(
                                                   if (!er)
                                                       return void ea({
                                                           message: L.intl.format(L.t.RNNjy6, {
-                                                              articleURL: w.A.getArticleURL(D.MVz.STICKERS_UPLOAD),
+                                                              articleURL: I.A.getArticleURL(D.MVz.STICKERS_UPLOAD),
                                                           }),
                                                           isBlocking: !0,
                                                       });
                                                   let e = new FileReader();
                                                   (e.addEventListener("load", () => {
-                                                      (X({ id: (0, a.A)(), formatType: l, content: e.result }),
+                                                      (H({ id: (0, a.A)(), formatType: l, content: e.result }),
                                                           ea(null));
                                                   }),
                                                       e.readAsText(i));
                                               } else {
-                                                  let e = await (0, I.We)(i);
-                                                  (X({ id: (0, a.A)(), formatType: l, content: e }), ea(null));
+                                                  let e = await (0, w.We)(i);
+                                                  (H({ id: (0, a.A)(), formatType: l, content: e }), ea(null));
                                               }
                                               ((Y.current = j.A.fromBlob(h.f.STICKER, e)),
                                                   q({ file: i, filename: i.name }));
@@ -250,8 +258,8 @@ i.d(
                             (0, l.jsx)(f.k, {
                                 label: L.intl.string(L.t["0VRh6n"]),
                                 required: !0,
-                                value: H,
-                                onChange: V,
+                                value: V,
+                                onChange: X,
                                 placeholder: L.intl.string(L.t["3fGttT"]),
                                 maxLength: 30,
                             }),

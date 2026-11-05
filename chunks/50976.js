@@ -18,8 +18,8 @@ var s,
     x = i(722178),
     j = i(110676),
     S = i(993408),
-    k = i(821701),
-    y = i(841702),
+    y = i(821701),
+    k = i(841702),
     C = i(727170),
     f = i(907391),
     N = i(503698),
@@ -89,11 +89,11 @@ let O = [
 var H = i(939249),
     M = i(428678),
     z = i(834730),
-    U = i(34188),
-    G = i(297778),
+    G = i(34188),
+    U = i(297778),
     V = i(713517),
-    K = i(898461),
-    L = i(483968),
+    L = i(898461),
+    K = i(483968),
     $ = i(821956);
 i(321073);
 var J = i(164636),
@@ -179,7 +179,7 @@ function es(e) {
         ...o,
         children: [
             null != m && (0, n.jsx)("img", { className: ee.Pw, src: m, alt: i.label }),
-            (0, n.jsx)(L.A, {
+            (0, n.jsx)(K.A, {
                 skuId: i.skuId,
                 canUsePremiumCollectibles: l,
                 isPurchaseSection: a === F.PURCHASE,
@@ -199,7 +199,7 @@ let en = function (e) {
         } = e,
         u = Y(),
         c = x.Ay.canUseCollectibles(t);
-    return (0, n.jsx)(G.f, {
+    return (0, n.jsx)(U.f, {
         fade: !0,
         className: ee.p_,
         columns: 3,
@@ -223,7 +223,7 @@ let en = function (e) {
                         isSelected: null === s,
                         onSelect: () => a(null),
                         children: [
-                            (0, n.jsx)(M.K, { size: "md", color: "currentColor", className: ee.Kk }),
+                            (0, n.jsx)(M.DenyIcon, { size: "md", color: "currentColor", className: ee.Kk }),
                             (0, n.jsx)(z.E, {
                                 variant: "body-xs/normal",
                                 color: "text-strong",
@@ -240,7 +240,7 @@ let en = function (e) {
                         style: d,
                         onSelect: () => l(),
                         children: [
-                            (0, n.jsx)(U.U, {
+                            (0, n.jsx)(G.ShopIcon, {
                                 size: "custom",
                                 width: 23,
                                 height: 23,
@@ -256,7 +256,7 @@ let en = function (e) {
                     },
                     m,
                 );
-            if ((0, K.T)(p)) {
+            if ((0, L.T)(p)) {
                 let e = s?.skuId === p.skuId;
                 return (0, n.jsx)(
                     es,
@@ -299,13 +299,13 @@ function el(e) {
             modalHeadingId: m,
             onClose: v,
             initialSelectedDecoration: I,
-            guild: y,
+            guild: k,
         } = e,
-        N = (0, a.bG)([A.Ay], () => (null != y ? A.Ay.getMember(y.id, t.id) : null)),
+        N = (0, a.bG)([A.Ay], () => (null != k ? A.Ay.getMember(k.id, t.id) : null)),
         _ = null != N ? N.avatarDecoration : t.avatarDecoration,
         { pendingAvatarDecoration: E, setPendingAvatarDecoration: D } = (0, p.A)({
             analyticsLocations: c,
-            guildId: y?.id,
+            guildId: k?.id,
         }),
         [b, w] = r.useState(() =>
             null != I
@@ -323,15 +323,15 @@ function el(e) {
             pendingValue: b,
             userValue: t?.avatarDecoration,
             guildValue: N?.avatarDecoration,
-            guildId: y?.id,
+            guildId: k?.id,
         }),
-        { product: O, purchase: H } = (0, k.A)(b?.skuId),
+        { product: O, purchase: H } = (0, y.A)(b?.skuId),
         M = null != H ? (0, S.gA)(H) : (0, S.G0)(O),
         z = x.Ay.canUseCollectibles(t),
-        U = r.useRef(null),
-        G = (0, C.A)(c),
+        G = r.useRef(null),
+        U = (0, C.A)(c),
         V = void 0 === E ? b?.skuId === _?.skuId : b?.skuId === E?.skuId,
-        K = r.useCallback(
+        L = r.useCallback(
             (e) => {
                 (v(),
                     (0, j.Cz)({
@@ -360,18 +360,18 @@ function el(e) {
                 children: [
                     (0, n.jsx)(en, {
                         user: t,
-                        guild: y,
+                        guild: k,
                         pendingAvatarDecoration: b,
-                        selectedAvatarDecorationRef: U,
+                        selectedAvatarDecorationRef: G,
                         onSelect: function (e) {
-                            (w(e), null != e && G(e));
+                            (w(e), null != e && U(e));
                         },
-                        onOpenShop: K,
+                        onOpenShop: L,
                     }),
                     (0, n.jsx)(P, {
                         className: ea.kk,
                         user: t,
-                        guildId: y?.id,
+                        guildId: k?.id,
                         avatarDecoration: T,
                         decorationName: b?.label ?? null,
                     }),
@@ -393,7 +393,7 @@ function el(e) {
                         : null == H && (z || !M)
                           ? (0, n.jsx)(u.$, {
                                 variant: "primary",
-                                onClick: () => K(O?.skuId),
+                                onClick: () => L(O?.skuId),
                                 text: R.intl.string(R.t.fYfGgK),
                             })
                           : (0, n.jsx)(f.A, {
@@ -424,8 +424,8 @@ function eu(e) {
         } = e,
         p = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: A } = (0, m.Ay)(i, d.A.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: x, purchases: j, isFetchingCategories: S, isFetchingPurchases: k } = (0, y.Ay)(),
-        C = S || (k && 0 === j.size),
+        { categories: x, purchases: j, isFetchingCategories: S, isFetchingPurchases: y } = (0, k.Ay)(),
+        C = S || (y && 0 === j.size),
         f = r.useId();
     return (
         r.useEffect(() => {

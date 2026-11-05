@@ -21,8 +21,8 @@ var i = a(477900),
     I = a(498137),
     E = a(192339),
     j = a(574414),
-    N = a(834109),
-    S = a(486020),
+    S = a(834109),
+    N = a(486020),
     C = a(48763),
     T = a(792996),
     R = a(350363),
@@ -33,14 +33,14 @@ let M = {
     "--custom-checkpoint-card-footer-height": "28px",
     "--custom-checkpoint-card-wordmark-width": "44px",
 };
-function D(e) {
+function k(e) {
     let { src: t } = e;
     return (0, i.jsx)("img", { src: t, alt: "", className: y.Gl });
 }
-function L() {
-    return (0, i.jsx)(d._, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
+function D() {
+    return (0, i.jsx)(d.UnknownGameIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
 }
-function k(e) {
+function L(e) {
     let { character: t } = e;
     return (0, i.jsx)("div", {
         className: y.Ij,
@@ -68,17 +68,17 @@ function G(e) {
     let { stats: t } = e,
         { topGuild: a, topGuildAcronymCharacter: s, topEmoji: n, topGame: d } = t,
         l = r.useMemo(
-            () => (null != a ? S.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
+            () => (null != a ? N.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
             [a],
         ),
         o = r.useMemo(
             () =>
                 d?.applicationImageId != null
-                    ? S.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
+                    ? N.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
                     : void 0,
             [d],
         ),
-        p = r.useMemo(() => (null != l ? (0, i.jsx)(D, { src: l }) : (0, i.jsx)(k, { character: s })), [l, s]);
+        p = r.useMemo(() => (null != l ? (0, i.jsx)(k, { src: l }) : (0, i.jsx)(L, { character: s })), [l, s]);
     return (0, i.jsxs)("ul", {
         className: y.M1,
         children: [
@@ -92,11 +92,11 @@ function G(e) {
             }),
             null != t.topGuildName ? (0, i.jsx)(P, { icon: p, stat: t.topGuildName }) : null,
             (0, i.jsx)(P, {
-                icon: (0, i.jsx)(f.R, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+                icon: (0, i.jsx)(f.ServerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.topGuildDaysInteracted,
             }),
             (0, i.jsx)(P, {
-                icon: (0, i.jsx)(b.n, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+                icon: (0, i.jsx)(b.ReactionIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.reactions,
             }),
             null != t.topEmojiName && null != n
@@ -111,7 +111,7 @@ function G(e) {
             }),
             null != t.topGameName
                 ? (0, i.jsx)(P, {
-                      icon: null != o ? (0, i.jsx)(D, { src: o }) : (0, i.jsx)(L, {}),
+                      icon: null != o ? (0, i.jsx)(k, { src: o }) : (0, i.jsx)(D, {}),
                       stat: t.topGameName,
                   })
                 : null,
@@ -132,7 +132,7 @@ function U(e) {
                 ? (0, i.jsx)("div", {
                       className: y.wC,
                       "aria-hidden": !0,
-                      children: (0, i.jsx)(p.K, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
+                      children: (0, i.jsx)(p.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
                   })
                 : null,
         ],
@@ -176,7 +176,7 @@ a.d(
                 children: [
                     (0, i.jsx)(o.A, { children: T.intl.string(O.default.Og2R9d) }),
                     (0, i.jsx)(E.A, {}),
-                    (0, i.jsx)(N.A, { variant: null != s ? "full" : "short", className: y.Ss }),
+                    (0, i.jsx)(S.A, { variant: null != s ? "full" : "short", className: y.Ss }),
                     null != s && null != h
                         ? (0, i.jsx)(j.A, { powerLevel: h.powerLevel, powerLevelUnits: h.powerLevelUnits })
                         : null,

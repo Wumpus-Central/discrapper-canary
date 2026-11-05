@@ -1,29 +1,30 @@
+h.r(s);
 var e = h(477900);
 h(582128);
-var i = h(646514),
-    t = h(996682),
-    c = h(27989);
+var c = h(646514),
+    i = h(996682),
+    t = h(27989);
 h.d(
     s,
     {},
     {
-        i: function (a) {
+        PaperPlusIcon: function (a) {
             let {
                     size: s = "md",
                     width: h,
                     height: l,
-                    color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    color: d = c.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: n = "",
                     ...p
                 } = a,
-                v = (0, c.J)(s),
-                o = v?.width ?? h,
-                r = v?.height ?? l;
+                r = (0, t.J)(s),
+                o = r?.width ?? h,
+                v = r?.height ?? l;
             return (0, e.jsxs)("svg", {
-                ...(0, t.A)(p),
+                ...(0, i.A)(p),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: o,
-                height: r,
+                height: v,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

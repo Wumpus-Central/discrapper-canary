@@ -80,7 +80,7 @@ n.d(
                         className: p.o1,
                         onClick: () => n(t.localId),
                         "aria-label": m.intl.string(f.default.Slam9g),
-                        children: (0, r.jsx)(s.a, { size: "xs", color: "currentColor" }),
+                        children: (0, r.jsx)(s.CircleXIcon, { size: "xs", color: "currentColor" }),
                     }),
                 ],
             });

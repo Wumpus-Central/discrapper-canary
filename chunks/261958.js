@@ -1,3 +1,4 @@
+n.r(t);
 var r = n(477900);
 n(582128);
 var l = n(646514),
@@ -7,7 +8,7 @@ n.d(
     t,
     {},
     {
-        u: function (e) {
+        PaperIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,

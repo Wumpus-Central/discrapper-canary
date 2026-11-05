@@ -21,11 +21,11 @@ var l,
     w = n(139286),
     E = n(723702),
     x = n(551640),
-    k = n(970244),
-    I = n(969632);
+    I = n(970244),
+    k = n(969632);
 (n(323874), n(14289), n(35956));
-var v = n(744593),
-    P = n(608461),
+var P = n(744593),
+    v = n(608461),
     N = n(412136);
 function S(e, t) {
     let n = decodeURIComponent(t).split("/").pop() ?? "temp.gif";
@@ -160,7 +160,7 @@ function ec(e) {
         j = i.useMemo(
             () =>
                 C
-                    ? U.intl.formatToPlainString(U.t.vcC7Qn, { imageName: (0, I.Kj)(R), answerNumber: s + 1 })
+                    ? U.intl.formatToPlainString(U.t.vcC7Qn, { imageName: (0, k.Kj)(R), answerNumber: s + 1 })
                     : null != g
                       ? U.intl.formatToPlainString(U.t.ncOAha, { emojiName: g.name, answerNumber: s + 1 })
                       : U.intl.formatToPlainString(U.t.emdpNo, { answerNumber: s + 1 }),
@@ -201,9 +201,9 @@ function ec(e) {
                   imageClassName: z()(er.$_, er.qX),
                   emoji: g,
                   emojiClassName: z()(er.$_, er.qZ),
-                  fallback: (0, a.jsx)(F.n, { size: "sm", color: "currentColor", className: er.vr }),
+                  fallback: (0, a.jsx)(F.ReactionIcon, { size: "sm", color: "currentColor", className: er.vr }),
               }),
-        k = z()(ei.VQ, er.GB, { [er.ZV]: p });
+        I = z()(ei.VQ, er.GB, { [er.ZV]: p });
     return (0, a.jsx)(W.Y, {
         targetElementRef: m,
         renderPopout: w,
@@ -224,7 +224,7 @@ function ec(e) {
                     return (0, a.jsxs)($.D, {
                         innerRef: d,
                         ...o,
-                        className: k,
+                        className: I,
                         onClick: p && !c ? l : u,
                         "aria-label": j,
                         "aria-controls": t ?? i,
@@ -281,7 +281,7 @@ function eu(e) {
                     case "enter":
                         (r &&
                             (e.preventDefault(),
-                            ((0, I.ND)(n) || "macos" !== (0, E.R0)() ? t : a) ? (e.stopPropagation(), f()) : d()),
+                            ((0, k.ND)(n) || "macos" !== (0, E.R0)() ? t : a) ? (e.stopPropagation(), f()) : d()),
                             C.current[l + 1]?.focusInput());
                         break;
                     case "e":
@@ -290,7 +290,7 @@ function eu(e) {
             },
             [d, n, C, l, r, f, w],
         ),
-        k = (0, a.jsx)(ec, {
+        I = (0, a.jsx)(ec, {
             containerRef: b,
             channelId: t,
             buttonImage: n.image,
@@ -305,7 +305,7 @@ function eu(e) {
         ref: b,
         children: (0, a.jsx)(Z.k, {
             error: g,
-            leading: { type: "emoji", button: k },
+            leading: { type: "emoji", button: I },
             trailing: u
                 ? {
                       "aria-label": U.intl.formatToPlainString(U.t["22fjEc"], { answerNumber: l + 1 }),
@@ -404,7 +404,7 @@ function eh(e) {
         } = (function (e, t, n, l) {
             let a = e.id,
                 [r, o] = i.useState(
-                    () => l?.initialAnswers?.map((e) => ({ ...(0, I.YP)(), ...e })) ?? [(0, I.YP)(), (0, I.YP)()],
+                    () => l?.initialAnswers?.map((e) => ({ ...(0, k.YP)(), ...e })) ?? [(0, k.YP)(), (0, k.YP)()],
                 ),
                 [s, c] = i.useState(l?.initialQuestion ?? ""),
                 [u, m] = i.useState(!1),
@@ -412,10 +412,10 @@ function eh(e) {
                 [g, h] = i.useState(),
                 [C, b] = i.useState({}),
                 [R, p] = i.useState(!1),
-                A = r.filter((e) => (0, I.ND)(e)),
-                j = r.filter((e) => (0, I.VD)(e)),
+                A = r.filter((e) => (0, k.ND)(e)),
+                j = r.filter((e) => (0, k.VD)(e)),
                 w = s.length > 0 && A.length >= 1 && 0 === j.length,
-                [E, { error: x, loading: k }] = (0, P.A)(L.A.createPoll),
+                [E, { error: x, loading: I }] = (0, v.A)(L.A.createPoll),
                 O = r.length < 10,
                 Y = r.length > 1,
                 q = i.useCallback((e) => {
@@ -491,7 +491,7 @@ function eh(e) {
                     });
                 }, []),
                 W = i.useCallback(() => {
-                    O && o((e) => [...e, (0, I.YP)()]);
+                    O && o((e) => [...e, (0, k.YP)()]);
                 }, [O]),
                 $ = i.useCallback(
                     (e) => {
@@ -519,10 +519,10 @@ function eh(e) {
                         t = {};
                     return (
                         0 === s.trim().length && ((e = !1), (t.question = U.intl.string(U.t.gPX3oI))),
-                        r.filter((e) => (0, I.ND)(e)).length < 1 &&
+                        r.filter((e) => (0, k.ND)(e)).length < 1 &&
                             ((e = !1), (t[`answer-${r[0].localCreationAnswerId}`] = U.intl.string(U.t.fYvzEX))),
                         r.forEach((n) => {
-                            (0, I.VD)(n) &&
+                            (0, k.VD)(n) &&
                                 ((e = !1), (t[`answer-${n.localCreationAnswerId}`] = U.intl.string(U.t["8Qqkc+"])));
                         }),
                         b(t),
@@ -537,14 +537,14 @@ function eh(e) {
                         answers: A,
                         allowMultiSelect: u,
                         duration: d,
-                        layout: v.Z.DEFAULT,
+                        layout: P.Z.DEFAULT,
                         onClose: t,
                         scheduledTimestamp: g,
                     });
                 }, [s, A, u, d, g, E, e, t]),
                 Q = i.useCallback(() => {
-                    !k && X() && Z();
-                }, [Z, k, X]);
+                    !I && X() && Z();
+                }, [Z, I, X]);
             return {
                 answers: r,
                 question: s,
@@ -569,7 +569,7 @@ function eh(e) {
                 fieldErrors: C,
                 createPoll: Z,
                 handleSubmitPoll: Q,
-                submitting: k,
+                submitting: I,
                 createPollError: x,
                 shouldFocusOnInvalidField: R,
                 setShouldFocusOnInvalidField: p,
@@ -603,7 +603,7 @@ function eh(e) {
                         emojis_count: t,
                         stickers_count: n,
                         allow_multiselect: F,
-                        layout_type: v.Z.DEFAULT,
+                        layout_type: P.Z.DEFAULT,
                     }));
             }, [M, F]),
         },
@@ -612,7 +612,7 @@ function eh(e) {
             (ep(), u());
         }, [u, ep]),
         ew = i.useCallback(() => {
-            (0, I.Wn)(V, M)
+            (0, k.Wn)(V, M)
                 ? ej()
                 : j.A.show({
                       title: U.intl.string(U.t.HMrgcp),
@@ -646,7 +646,7 @@ function eh(e) {
         }, [es, r]),
         ex = i.useCallback(
             () =>
-                (0, k.e0)({
+                (0, I.e0)({
                     channel: l,
                     defaultValue: null != Z ? o()(Z) : void 0,
                     onSubmit: Q,
@@ -656,7 +656,7 @@ function eh(e) {
                 }),
             [l, Z, Q],
         ),
-        ek =
+        eI =
             ((t = { disabled: eC, onSubmit: eE }),
             (n = i.useRef(t)),
             i.useEffect(() => {
@@ -668,11 +668,11 @@ function eh(e) {
                     { disabled: a = !1, onSubmit: i } = n.current;
                 "enter" === e.key.toLowerCase() && ("macos" === (0, E.R0)() ? l : t) && !a && (e.preventDefault(), i());
             }, [])),
-        eI = i.useMemo(
+        ek = i.useMemo(
             () => [
                 {
                     variant: null != Z ? "active" : "secondary",
-                    icon: g.U,
+                    icon: g.CalendarPlusIcon,
                     text: void 0,
                     fullWidth: !1,
                     "aria-label":
@@ -690,11 +690,11 @@ function eh(e) {
         transitionState: r,
         onClose: u,
         title: U.intl.string(U.t["GD/8X8"]),
-        actions: eI,
+        actions: ek,
         actionBarInput: (0, a.jsx)(h.S, { checked: F, onChange: (e) => W(e), label: U.intl.string(U.t["Ux+iQU"]) }),
         children: (0, a.jsxs)("div", {
             className: ed.Qs,
-            onKeyDown: ek,
+            onKeyDown: eI,
             children: [
                 null != eo && (0, a.jsx)(C.w, { type: "critical", message: eo.getAnyErrorMessage(), role: "alert" }),
                 (0, a.jsx)(ef, { question: V, onChange: J, error: ec?.question, inputRef: z }),
@@ -731,7 +731,7 @@ function eh(e) {
                             (0, a.jsx)("div", {
                                 className: ed.Ox,
                                 children: (0, a.jsx)(p.$, {
-                                    icon: A.j,
+                                    icon: A.PlusSmallIcon,
                                     variant: "secondary",
                                     onClick: ei,
                                     "aria-label": U.intl.string(U.t.B2Uvme),

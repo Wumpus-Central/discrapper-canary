@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(939249),
     m = n(7807),
     p = n(807348),
-    C = n(327289),
-    h = n(792996),
+    h = n(327289),
+    C = n(792996),
     f = n(649028);
 let E = [54, 8, 8, 8];
 n.d(
@@ -21,8 +21,8 @@ n.d(
             let { onSelect: t, sound: n } = e,
                 [r, S] = i.useState(!1),
                 g = i.useRef(null),
-                y = a()(f.Qq, f.Ow);
-            function I(e) {
+                I = a()(f.Qq, f.Ow);
+            function y(e) {
                 (S(!1), t?.(e));
             }
             function A(e) {
@@ -32,8 +32,8 @@ n.d(
                         (0, l.jsxs)("div", {
                             className: f.__invalid_customGiftHeaderText,
                             children: [
-                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: h.intl.string(h.t.aThJz8) }),
-                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: h.intl.string(h.t.stGFA3) }),
+                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: C.intl.string(C.t.aThJz8) }),
+                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: C.intl.string(C.t.stGFA3) }),
                             ],
                         }),
                         (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -49,13 +49,13 @@ n.d(
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
-                        children: (0, l.jsx)(C.A, {
+                        children: (0, l.jsx)(h.A, {
                             suppressPlaySound: !0,
                             shouldShowLockedSounds: !1,
                             guildId: null,
                             channel: null,
                             onClose: t,
-                            onSelect: I,
+                            onSelect: y,
                             analyticsSource: "gift soundboard",
                             soundButtonOverlay: p.If.ADD,
                             listPadding: E,
@@ -74,7 +74,7 @@ n.d(
                                 ? (0, l.jsxs)("div", {
                                       className: f.hQ,
                                       children: [
-                                          (0, l.jsx)(m.J, {
+                                          (0, l.jsx)(m.SoundboardIcon, {
                                               size: "custom",
                                               color: s.A.colors.ICON_STRONG,
                                               className: f.tc,
@@ -82,10 +82,10 @@ n.d(
                                               height: 14,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: y,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
-                                              children: h.intl.string(h.t.aThJz8),
+                                              children: C.intl.string(C.t.aThJz8),
                                           }),
                                       ],
                                   })
@@ -93,13 +93,13 @@ n.d(
                                       className: f.hQ,
                                       children: [
                                           (0, l.jsx)(o.E, {
-                                              className: y,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.emojiName,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: y,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.name,

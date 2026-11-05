@@ -1,37 +1,38 @@
-var s = e(477900);
-e(582128);
-var a = e(646514),
-    i = e(996682),
-    c = e(27989);
-e.d(
-    t,
+i.r(e);
+var t = i(477900);
+i(582128);
+var h = i(646514),
+    l = i(996682),
+    a = i(27989);
+i.d(
+    e,
     {},
     {
-        _: function (l) {
+        JoystickIcon: function (s) {
             let {
-                    size: t = "md",
-                    width: e,
-                    height: h,
-                    color: n = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: r = "",
+                    size: e = "md",
+                    width: i,
+                    height: c,
+                    color: d = h.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
                     ...o
-                } = l,
-                v = (0, c.J)(t),
-                d = v?.width ?? e,
-                A = v?.height ?? h;
-            return (0, s.jsx)("svg", {
-                ...(0, i.A)(o),
+                } = s,
+                r = (0, a.J)(e),
+                p = r?.width ?? i,
+                v = r?.height ?? c;
+            return (0, t.jsx)("svg", {
+                ...(0, l.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: d,
-                height: A,
+                width: p,
+                height: v,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, s.jsx)("path", {
-                    fill: "string" == typeof n ? n : n.css,
+                children: (0, t.jsx)("path", {
+                    fill: "string" == typeof d ? d : d.css,
                     fillRule: "evenodd",
                     d: "M10.23 2a4.3 4.3 0 0 1 3.74 6.4 4.28 4.28 0 0 1-1.5 1.55l.9 4.72h3.34a2 2 0 0 1 2 2 .5.5 0 0 0 .5.5 1.96 1.96 0 0 1 1.95 1.96v.82A2.05 2.05 0 0 1 19.12 22H5.05A2.05 2.05 0 0 1 3 19.96v-.83a1.96 1.96 0 0 1 1.96-1.96.49.49 0 0 0 .5-.5 2 2 0 0 1 2-2h2.85l-.8-4.15A4.29 4.29 0 0 1 10.23 2Zm1.51 1.56a.97.97 0 0 0-.98.48 1.02 1.02 0 0 0 .13 1.21 1 1 0 0 0 .81.43 1 1 0 0 0 .71-1.7c-.08-.12-.19-.2-.3-.28a.97.97 0 0 0-.37-.14Z",
                     clipRule: "evenodd",
-                    className: r,
+                    className: n,
                 }),
             });
         },

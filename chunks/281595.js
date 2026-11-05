@@ -35,7 +35,10 @@ n.d(
                                       style: { transform: c },
                                       className: _.X,
                                       children: [
-                                          (0, i.jsx)(d.E, { size: "xs", color: l.A.colors.TEXT_FEEDBACK_CRITICAL.css }),
+                                          (0, i.jsx)(d.CircleErrorIcon, {
+                                              size: "xs",
+                                              color: l.A.colors.TEXT_FEEDBACK_CRITICAL.css,
+                                          }),
                                           (0, i.jsx)(u.E, {
                                               color: "text-feedback-critical",
                                               variant: "body-sm/medium",
@@ -70,8 +73,8 @@ n.d(
                         return null;
                     }
                 }, [t, n, _, a, i, s, l, o, u]),
-                h = (null != n && "" !== n) || null != A;
-            return { errorMessage: A, hasError: h, setShouldValidate: E };
+                f = (null != n && "" !== n) || null != A;
+            return { errorMessage: A, hasError: f, setShouldValidate: E };
         },
     },
 );

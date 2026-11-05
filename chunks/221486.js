@@ -2,8 +2,8 @@ var i = n(477900);
 n(582128);
 var s = n(855986),
     a = n(192308),
-    l = n(986322),
-    r = n(474834),
+    r = n(986322),
+    l = n(474834),
     o = n(760751),
     u = n(723702);
 n.d(
@@ -12,7 +12,7 @@ n.d(
     {
         X: function (e, t) {
             (0, u.uF)()
-                ? (0, r.A)(e.pid)
+                ? (0, l.A)(e.pid)
                 : (0, a.mM)(async () => {
                       let { default: e } = await Promise.all([
                           n.e(249169),
@@ -20,9 +20,9 @@ n.d(
                           n.e(553464),
                           n.e(130662),
                           n.e(498552),
+                          n.e(944801),
                           n.e(236946),
                           n.e(338601),
-                          n.e(944801),
                           n.e(944727),
                           n.e(943371),
                           n.e(725241),
@@ -39,9 +39,9 @@ n.d(
         i: function (e) {
             let t = (0, s.bG)([o.A], () => (null != e ? o.A.getGameByApplication(e)?.id : void 0), [e]);
             return (0, s.bG)(
-                [l.Ay, o.A],
+                [r.Ay, o.A],
                 () => {
-                    let n = l.Ay.getVisibleRunningGames();
+                    let n = r.Ay.getVisibleRunningGames();
                     function i(n) {
                         return null != e && null != n && (n === e.id || (null != t && n === t));
                     }

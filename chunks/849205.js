@@ -17,8 +17,8 @@ var t = l(477900),
     p = l(696451),
     E = l(290863),
     f = l(994500),
-    N = l(287809),
-    I = l(427262),
+    I = l(287809),
+    N = l(427262),
     C = l(742589),
     T = l(792996),
     _ = l(999900);
@@ -29,12 +29,12 @@ l.d(
         A: function (e) {
             let n = e.channel.getRecipientId(),
                 l = e.channel.isSystemDM(),
-                D = (0, s.bG)([N.default], () => N.default.getUser(n)),
+                D = (0, s.bG)([I.default], () => I.default.getUser(n)),
                 v = (0, s.bG)([E.A], () => E.A.getStatus(n)),
                 U = (0, s.bG)([E.A], () => E.A.isMobileOnline(n)),
                 M = (0, s.bG)([E.A], () => E.A.isVROnline(n)),
                 L = (0, s.bG)([f.A], () => f.A.getNickname(n)),
-                R = I.Ay.useUserTag(D),
+                R = N.Ay.useUserTag(D),
                 S = (0, g.a)({ displayNameStyles: D?.displayNameStyles }),
                 G = (0, b.bG)({ channelId: e.channel.id }),
                 y = i.useRef(null),
@@ -65,7 +65,7 @@ l.d(
                 ),
                 B = z.length > 0,
                 w = B && null != D && !l,
-                X = L ?? I.Ay.getName(D),
+                X = L ?? N.Ay.getName(D),
                 Y =
                     null != D &&
                     (0, t.jsx)(c.eu, {
@@ -73,7 +73,7 @@ l.d(
                         isMobile: U,
                         isVR: M,
                         size: o._3.SIZE_20,
-                        "aria-label": I.Ay.getName(D),
+                        "aria-label": N.Ay.getName(D),
                         src: D.getAvatarURL(void 0, 20),
                     });
             return (0, t.jsxs)(t.Fragment, {
@@ -184,7 +184,7 @@ l.d(
                                 G &&
                                     (0, t.jsx)(x.m, {
                                         text: T.intl.string(T.t.QyZ4Td),
-                                        children: (0, t.jsx)(m.m, {
+                                        children: (0, t.jsx)(m.ShieldLockIcon, {
                                             size: "xs",
                                             "aria-label": T.intl.string(T.t.VHXh8a),
                                             color: A.A.colors.INTERACTIVE_TEXT_DEFAULT,

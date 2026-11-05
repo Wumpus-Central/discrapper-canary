@@ -13,26 +13,26 @@ var t = n(477900),
     g = n(245604),
     x = n(834730),
     p = n(627784),
-    v = n(44234),
-    C = n(513461),
+    C = n(44234),
+    v = n(513461),
     j = n(242273);
 n(260197);
 var b = n(792996),
-    N = n(94499);
-let k = "MULTIPLE_CHOICE";
-function y(e) {
+    I = n(94499);
+let N = "MULTIPLE_CHOICE";
+function k(e) {
     let { choice: l, index: n, onChange: s, onClear: o, onReorder: m, isDropHovered: g } = e,
         x = i.useRef(null),
         p = i.useRef(null),
-        [, C, j] = (0, c.i)({
-            type: k,
+        [, v, j] = (0, c.i)({
+            type: N,
             item: { choice: l, index: n },
             end: (e, l) => {
                 null == e || l.didDrop() || m(e.choice, null, !0);
             },
         }),
-        [, y] = (0, a.H)({
-            accept: k,
+        [, k] = (0, a.H)({
+            accept: N,
             hover: (e, l) => {
                 let { index: t } = e,
                     i = x.current?.getBoundingClientRect(),
@@ -49,25 +49,25 @@ function y(e) {
     return (
         i.useLayoutEffect(
             () => (
-                C(p),
-                j(y(x)),
+                v(p),
+                j(k(x)),
                 () => {
-                    (C(null), y(null));
+                    (v(null), k(null));
                 }
             ),
-            [C, y, j],
+            [v, k, j],
         ),
         (0, t.jsxs)("div", {
             ref: x,
-            className: r()(N.XQ, { [N.cB]: g }),
+            className: r()(I.XQ, { [I.cB]: g }),
             "data-dnd-name": l,
             children: [
                 (0, t.jsx)("div", {
-                    className: N.R6,
-                    children: (0, t.jsx)(v.A, { height: 20, width: 20, className: N.IC }),
+                    className: I.R6,
+                    children: (0, t.jsx)(C.A, { height: 20, width: 20, className: I.IC }),
                 }),
                 (0, t.jsxs)("div", {
-                    className: N.I6,
+                    className: I.I6,
                     children: [
                         (0, t.jsx)(u.k, {
                             autoFocus: !0,
@@ -76,9 +76,9 @@ function y(e) {
                             value: l,
                         }),
                         (0, t.jsx)("div", {
-                            className: N.mt,
+                            className: I.mt,
                             children: (0, t.jsx)(d.K, {
-                                icon: h.a,
+                                icon: h.CircleXIcon,
                                 size: "sm",
                                 "aria-label": b.intl.string(b.t.VkKicb),
                                 variant: "icon-only",
@@ -89,9 +89,9 @@ function y(e) {
                 }),
                 (0, t.jsx)("div", {
                     ref: p,
-                    className: N.cK,
+                    className: I.cK,
                     "data-dnd-name": l,
-                    children: (0, t.jsx)(f.W, { size: "xs", color: "currentColor", className: N.co }),
+                    children: (0, t.jsx)(f.DragIcon, { size: "xs", color: "currentColor", className: I.co }),
                 }),
             ],
         })
@@ -106,14 +106,14 @@ n.d(
                 [r, c] = i.useState(l?.label ?? ""),
                 [a, d] = i.useState(l?.choices ?? [""]),
                 [h, f] = i.useState(null),
-                [v, k] = i.useState(null);
-            function E(e, l, n) {
+                [C, N] = i.useState(null);
+            function y(e, l, n) {
                 if (null == a) return;
                 null != h && f(null);
                 let t = a.indexOf(e),
                     i = [...a];
                 (null != l && l !== t && (i.splice(t, 1), i.splice(l, 0, e), d(i)),
-                    n ? null !== l && k(null) : l !== v && k(l));
+                    n ? null !== l && N(null) : l !== C && N(l));
             }
             return (0, t.jsxs)(j.A, {
                 ...e,
@@ -125,7 +125,7 @@ n.d(
                     if ("" === e) return void f(b.intl.string(b.t["G+TI44"]));
                     if (0 === a.map((e) => e.trim()).filter((e) => "" !== e).length)
                         return void f(b.intl.string(b.t.jZoHgI));
-                    let l = { field_type: C.rX.MULTIPLE_CHOICE, label: e, choices: a, required: !0 };
+                    let l = { field_type: v.rX.MULTIPLE_CHOICE, label: e, choices: a, required: !0 };
                     try {
                         (await n(l), s());
                     } catch (e) {
@@ -135,7 +135,7 @@ n.d(
                 onCancel: s,
                 children: [
                     (0, t.jsx)("div", {
-                        className: N.Ef,
+                        className: I.Ef,
                         children: (0, t.jsx)(u.k, {
                             autoFocus: !0,
                             onChange: function (e) {
@@ -147,10 +147,10 @@ n.d(
                             value: r,
                         }),
                     }),
-                    (0, t.jsx)("div", { className: N.yF }),
+                    (0, t.jsx)("div", { className: I.yF }),
                     a.map((e, l) =>
                         (0, t.jsx)(
-                            y,
+                            k,
                             {
                                 choice: e,
                                 index: l,
@@ -169,22 +169,22 @@ n.d(
                                         void d(0 === (e = [...a.slice(0, l), ...a.slice(l + 1)]).length ? [""] : e)
                                     );
                                 },
-                                onReorder: E,
-                                isDropHovered: l === v,
+                                onReorder: y,
+                                isDropHovered: l === C,
                             },
                             `choice-${l}`,
                         ),
                     ),
                     8 !== a.length &&
                         (0, t.jsx)("div", {
-                            className: N.C5,
+                            className: I.C5,
                             children: (0, t.jsxs)(m.D, {
-                                className: N.bK,
+                                className: I.bK,
                                 onClick: function () {
                                     (null != h && f(null), 8 !== a.length && d([...a, ""]));
                                 },
                                 children: [
-                                    (0, t.jsx)(g.U, {
+                                    (0, t.jsx)(g.CirclePlusIcon, {
                                         size: "custom",
                                         height: 17,
                                         width: 17,

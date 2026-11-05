@@ -1,35 +1,36 @@
-var i = h(477900);
-h(582128);
-var a = h(646514),
-    e = h(996682),
-    r = h(27989);
-h.d(
-    t,
+t.r(i);
+var h = t(477900);
+t(582128);
+var a = t(646514),
+    e = t(996682),
+    n = t(27989);
+t.d(
+    i,
     {},
     {
-        W: function (s) {
+        LinkExternalMediumIcon: function (s) {
             let {
-                    size: t = "md",
-                    width: h,
-                    height: c,
-                    color: d = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: n = "",
-                    ...p
+                    size: i = "md",
+                    width: t,
+                    height: r,
+                    color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: d = "",
+                    ...l
                 } = s,
-                l = (0, r.J)(t),
-                o = l?.width ?? h,
-                w = l?.height ?? c;
-            return (0, i.jsx)("svg", {
-                ...(0, e.A)(p),
+                o = (0, n.J)(i),
+                p = o?.width ?? t,
+                w = o?.height ?? r;
+            return (0, h.jsx)("svg", {
+                ...(0, e.A)(l),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, i.jsx)("path", {
-                    fill: "string" == typeof d ? d : d.css,
+                children: (0, h.jsx)("path", {
+                    fill: "string" == typeof c ? c : c.css,
                     d: "M7 4a1 1 0 0 0 0 2h9.59L4.29 18.3a1 1 0 1 0 1.42 1.4L18 7.42V17a1 1 0 1 0 2 0V5a1 1 0 0 0-1-1H7Z",
-                    className: n,
+                    className: d,
                 }),
             });
         },

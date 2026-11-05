@@ -40,11 +40,11 @@ var i = t(477900),
     V = t(964404),
     W = t(617617),
     z = t(652215),
-    Y = t(682901),
-    X = t(185928);
+    X = t(682901),
+    Y = t(185928);
 function $() {
     let { previewPaneVariant: e } = (0, c.cf)([O.A], () => ({
-            previewPaneVariant: O.A.isPreview ? Y.tz.FREE : Y.tz.PREMIUM_STANDARD,
+            previewPaneVariant: O.A.isPreview ? X.tz.FREE : X.tz.PREMIUM_STANDARD,
         })),
         s = (0, c.bG)([W.A], () => {
             let e = W.A.settings.appearance?.theme;
@@ -142,7 +142,7 @@ function el(e) {
                 onClick: function () {
                     (null != s && s(en.i.DISMISS), t(z.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, U.DS)());
                 },
-                children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: er.P0 }),
+                children: (0, i.jsx)(T.CircleXIcon, { size: "md", color: "currentColor", className: er.P0 }),
             }),
             (0, i.jsx)(u.D, { variant: "heading-lg/semibold", children: Q.intl.string(Q.t["xSR+a/"]) }),
         ],
@@ -158,15 +158,15 @@ function ec(e) {
             intervalType: o?.subscriptionTrial?.interval,
             intervalCount: o?.subscriptionTrial?.intervalCount,
         }),
-        m = a ? Q.intl.string(Q.t.IJI7yk) : o?.subscriptionTrial?.skuId === Y.pe.TIER_2 ? u : Q.intl.string(Q.t.mr4K7D);
+        m = a ? Q.intl.string(Q.t.IJI7yk) : o?.subscriptionTrial?.skuId === X.pe.TIER_2 ? u : Q.intl.string(Q.t.mr4K7D);
     return (0, i.jsx)(j.A, {
-        subscriptionTier: Y.pe.TIER_2,
+        subscriptionTier: X.pe.TIER_2,
         defaultTextOverride: m,
         premiumModalAnalyticsLocation: { object: z.ZSU.BUTTON_CTA, objectType: z.btD.BUY },
         onSubscribeModalClose: function (e) {
             if (e && (s?.(), null != t && t(en.i.PRIMARY), null != r)) {
                 if (l) {
-                    let e = (0, E.M)(r.theme) ? X.Fc.DARK : X.Fc.LIGHT;
+                    let e = (0, E.M)(r.theme) ? Y.Fc.DARK : Y.Fc.LIGHT;
                     ((0, et.X8)({ isPersisted: !0, themeName: `${e}-mode-${d.ju[r.id]}`, analyticsLocations: n }),
                         (0, R.NA)({ [e]: r.theme }),
                         (0, R.qX)(e, { backgroundGradientPresetId: r.id }),
@@ -244,21 +244,21 @@ function eo(e) {
         n.useEffect(() => {
             o &&
                 (L.default.track(z.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: Y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    type: X.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: l,
                 }),
-                (0, P.sq)(z.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, p.uq)(Y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
+                (0, P.sq)(z.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, p.uq)(X.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
         }, [o, l]));
     let T = (() => {
             let e = (0, c.bG)([O.A], () => O.A.gradientPreset),
-                s = (0, c.bG)([V.Ay], () => V.Ay.useSystemTheme === X.Q_.ON),
+                s = (0, c.bG)([V.Ay], () => V.Ay.useSystemTheme === Y.Q_.ON),
                 [t, i] = (0, n.useState)(s);
             return (
                 (0, n.useEffect)(() => {
                     null == e && i(s);
                 }, [e, s]),
                 (0, n.useCallback)(() => {
-                    null == e || ((0, G.S8)(), (0, R.XG)(), t && (0, R.k7)(X.Q_.ON));
+                    null == e || ((0, G.S8)(), (0, R.XG)(), t && (0, R.k7)(Y.Q_.ON));
                 }, [e, t])
             );
         })(),

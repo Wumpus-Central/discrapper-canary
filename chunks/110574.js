@@ -5,8 +5,8 @@ var t = n(477900),
     r = n(350835),
     u = n(855986),
     o = n(319060),
-    d = n(866665),
-    c = n(329177),
+    c = n(866665),
+    d = n(329177),
     m = n(939249),
     x = n(104510),
     h = n(646514),
@@ -92,9 +92,9 @@ let Z = (0, y.Fe)({
 let q = s.memo(function (e) {
         let { isOwner: l, lostPermissionTooltipText: n, ownerTooltipText: s } = e;
         return null != l && l && null == n
-            ? (0, t.jsx)(d.m, {
+            ? (0, t.jsx)(c.m, {
                   __unsupportedReactNodeAsText: s ?? Y.intl.string(Y.t.pclUFJ),
-                  children: (0, t.jsx)(c.CrownIcon, {
+                  children: (0, t.jsx)(d.CrownIcon, {
                       size: "md",
                       color: "currentColor",
                       className: H.Dd,
@@ -107,13 +107,16 @@ let q = s.memo(function (e) {
         let { premiumSince: l, onClickPremiumGuildIcon: n } = e;
         return null == l
             ? null
-            : (0, t.jsx)(d.m, {
+            : (0, t.jsx)(c.m, {
                   text: Y.intl.formatToPlainString(Y.t.IWkAq7, { date: l }),
                   asContainer: !0,
                   children: (0, t.jsx)(m.D, {
                       onClick: n,
                       tabIndex: -1,
-                      children: (0, t.jsx)(x._, { color: h.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: H.PC }),
+                      children: (0, t.jsx)(x.BoostGemIcon, {
+                          color: h.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                          className: H.PC,
+                      }),
                   }),
               });
     }),
@@ -140,7 +143,7 @@ let q = s.memo(function (e) {
             ],
         });
     }),
-    J = s.memo(function (e) {
+    Q = s.memo(function (e) {
         let {
                 colorRoleName: l,
                 colorString: n,
@@ -151,15 +154,15 @@ let q = s.memo(function (e) {
                 guildId: u,
                 isHovering: o,
             } = e,
-            d = (0, G.A)({ userId: r?.id, guildId: u }),
-            c = (0, k.a)({ displayNameStyles: d }),
-            m = null == u && null != d;
+            c = (0, G.A)({ userId: r?.id, guildId: u }),
+            d = (0, k.a)({ displayNameStyles: c }),
+            m = null == u && null != c;
         return (0, t.jsxs)(t.Fragment, {
             children: [
                 m
                     ? (0, t.jsx)(R.A, {
                           userName: a ?? "",
-                          displayNameStyles: d,
+                          displayNameStyles: c,
                           effectDisplayType: o ? M.G.ANIMATED : M.G.STATIC,
                           loop: !0,
                       })
@@ -169,7 +172,7 @@ let q = s.memo(function (e) {
                           colorStrings: s,
                           name: a,
                           className: H.UU,
-                          displayNameStylesFont: c,
+                          displayNameStylesFont: d,
                           animateRoleGradient: o,
                       }),
                 !i &&
@@ -184,7 +187,7 @@ let q = s.memo(function (e) {
             ],
         });
     }),
-    Q = s.memo(function (e) {
+    J = s.memo(function (e) {
         let {
                 user: l,
                 shouldAnimateStatus: n,
@@ -194,8 +197,8 @@ let q = s.memo(function (e) {
                 avatarSrc: r,
                 isMobile: u,
                 isVR: o,
-                isTyping: d,
-                avatarDecorationSrc: c,
+                isTyping: c,
+                avatarDecorationSrc: d,
                 handleSetTypingRef: m,
                 typingRef: x,
                 currentUser: h,
@@ -213,16 +216,16 @@ let q = s.memo(function (e) {
                         src: r,
                         isMobile: u,
                         isVR: o,
-                        isTyping: d,
+                        isTyping: c,
                         status: N,
                         "aria-label": l.username,
                         statusTooltip: !0,
-                        avatarDecoration: c,
+                        avatarDecoration: d,
                         typingIndicatorRef: m,
                     }),
                     (0, t.jsx)(_.A, {
                         confettiSpawnRef: x,
-                        shouldFire: d && null != h && l.id !== h.id,
+                        shouldFire: c && null != h && l.id !== h.id,
                         confettiLocation: B.k.MEMBER_USER,
                     }),
                 ],
@@ -237,8 +240,8 @@ let q = s.memo(function (e) {
                 status: i,
                 applicationStream: u,
                 voiceStatusChannel: o,
-                user: d,
-                channel: c,
+                user: c,
+                channel: d,
                 isHoveringOrFocusing: m,
                 quest: x,
             } = e,
@@ -253,15 +256,15 @@ let q = s.memo(function (e) {
                             let { type: l } = e;
                             return l === r.$.CUSTOM_STATUS;
                         }),
-                        user: d,
-                        channel: c,
+                        user: c,
+                        channel: d,
                     }),
-                [a, d, c],
+                [a, c, d],
             );
         return l || !h
             ? null
             : (0, t.jsx)(I.A, {
-                  user: d,
+                  user: c,
                   activities: a,
                   applicationStream: u,
                   voiceChannel: o,
@@ -278,7 +281,7 @@ let q = s.memo(function (e) {
                 colorStrings: a,
                 colorRoleName: r,
                 isOwner: o,
-                ownerTooltipText: c,
+                ownerTooltipText: d,
                 lostPermissionTooltipText: m,
                 isTyping: x = !1,
                 nick: h,
@@ -314,8 +317,8 @@ let q = s.memo(function (e) {
             } = e,
             eu = f?.id,
             eo = L.Ay.useName(f),
-            ed = s.useRef(null),
-            ec = er ?? ed,
+            ec = s.useRef(null),
+            ed = er ?? ec,
             [em, ex] = s.useState(!1),
             [eh, ef] = s.useState(!1),
             [ep, ej] = s.useState(null),
@@ -359,17 +362,17 @@ let q = s.memo(function (e) {
                         : (0, t.jsx)(Z, {
                               name: h ?? eo,
                               quest: eM,
-                              memberListItemRef: ec,
+                              memberListItemRef: ed,
                               applicationStream: N,
                               ...e,
                               closePopout: () => ey(!0),
                           }),
-                [eM, ec, N, h, eo],
+                [eM, ed, N, h, eo],
             );
         return null == f
             ? (0, t.jsx)(b.A, { avatarSize: j._3.SIZE_32, className: H.qf })
             : (0, t.jsx)(A.Y, {
-                  targetElementRef: ec,
+                  targetElementRef: ed,
                   renderPopout: eO,
                   position: "bottom",
                   shouldShow: ek,
@@ -379,7 +382,7 @@ let q = s.memo(function (e) {
                   spacing: -3,
                   children: () =>
                       (0, t.jsx)(C.A, {
-                          ref: ec,
+                          ref: ed,
                           selected: l,
                           className: i()(H.Dc, R, { [H.WK]: I === z.clD.OFFLINE && !l, [H.PJ]: ek }),
                           innerClassName: H.Hz,
@@ -395,7 +398,7 @@ let q = s.memo(function (e) {
                               null == m
                                   ? (0, t.jsx)("span", {
                                         className: H.Xh,
-                                        children: (0, t.jsx)(J, {
+                                        children: (0, t.jsx)(Q, {
                                             colorRoleName: r,
                                             colorString: n ?? null,
                                             name: h ?? eo,
@@ -406,11 +409,11 @@ let q = s.memo(function (e) {
                                             isHovering: em,
                                         }),
                                     })
-                                  : (0, t.jsx)(d.m, {
+                                  : (0, t.jsx)(c.m, {
                                         text: m,
                                         children: (0, t.jsx)("span", {
                                             className: i()(H.Xh, H.oj),
-                                            children: (0, t.jsx)(J, {
+                                            children: (0, t.jsx)(Q, {
                                                 colorRoleName: r,
                                                 colorString: n ?? null,
                                                 name: h ?? eo,
@@ -422,7 +425,7 @@ let q = s.memo(function (e) {
                                             }),
                                         }),
                                     }),
-                          avatar: (0, t.jsx)(Q, {
+                          avatar: (0, t.jsx)(J, {
                               user: f,
                               shouldAnimateStatus: S,
                               activities: g,
@@ -454,7 +457,7 @@ let q = s.memo(function (e) {
                               user: f,
                               isOwner: o,
                               lostPermissionTooltipText: m,
-                              ownerTooltipText: c,
+                              ownerTooltipText: d,
                               premiumSince: E,
                               onClickPremiumGuildIcon: W,
                           }),

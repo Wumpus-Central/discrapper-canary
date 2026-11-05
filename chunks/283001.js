@@ -11,13 +11,13 @@ var i = n(477900),
     _ = n(646514),
     E = n(331322),
     A = n(866323),
-    h = n(817281),
-    f = n(717117),
+    f = n(817281),
+    h = n(717117),
     I = n(534409),
     p = n(711014),
     m = n(240248),
-    g = n(263715),
-    T = n(941971),
+    T = n(263715),
+    g = n(941971),
     S = n(855986),
     N = n(695366),
     C = n(678708),
@@ -37,7 +37,10 @@ function G(e) {
         r = (0, S.bG)([P.A], () => P.A.getGuild(t), [t]),
         a = (0, u.r)(_.A.modules.guildbar.AVATAR_SIZE);
     return null == r
-        ? (0, i.jsx)("div", { className: s()(w.VL, w.zU), children: (0, i.jsx)(N.E, { color: "currentColor" }) })
+        ? (0, i.jsx)("div", {
+              className: s()(w.VL, w.zU),
+              children: (0, i.jsx)(N.CircleErrorIcon, { color: "currentColor" }),
+          })
         : (0, i.jsx)(v.Ay, {
               guild: r,
               animate: n,
@@ -81,20 +84,20 @@ function k(e) {
             folderGroupId: u,
             folderButtonContent: E,
             onClick: A,
-            onContextMenu: h,
-            onHoverChange: f,
+            onContextMenu: f,
+            onHoverChange: h,
             onKeyDown: I,
             treeItemProps: { onFocus: p, ...m },
-            "aria-setsize": g,
-            "aria-posinset": T,
+            "aria-setsize": T,
+            "aria-posinset": g,
         } = e,
         [S, N] = r.useState(!1),
         C = r.useCallback(() => {
-            (a || N(!0), f?.(!0));
-        }, [a, f]),
+            (a || N(!0), h?.(!0));
+        }, [a, h]),
         v = r.useCallback(() => {
-            (a || N(!1), f?.(!1));
-        }, [a, f]),
+            (a || N(!1), h?.(!1));
+        }, [a, h]),
         P = n || null == s ? null : (0, M.oi)(s),
         G = null;
     return (
@@ -110,7 +113,7 @@ function k(e) {
             children: (0, i.jsxs)(R.D, {
                 className: w.H3,
                 onClick: A,
-                onContextMenu: h,
+                onContextMenu: f,
                 onMouseEnter: C,
                 onMouseLeave: v,
                 onKeyDown: I,
@@ -118,8 +121,8 @@ function k(e) {
                 focusProps: { enabled: !1 },
                 ...m,
                 role: "treeitem",
-                "aria-setsize": g,
-                "aria-posinset": T,
+                "aria-setsize": T,
+                "aria-posinset": g,
                 "aria-expanded": n,
                 "aria-owns": u,
                 children: [
@@ -152,7 +155,7 @@ var F = n(531053),
     j = n(114329),
     W = n(937067);
 let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
-    K = (0, f.P)(E.B),
+    K = (0, h.P)(E.B),
     $ = r.memo(function (e) {
         var t;
         let n,
@@ -160,7 +163,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             c,
             {
                 folderNode: E,
-                setNodeRef: f,
+                setNodeRef: h,
                 selected: m,
                 expanded: S,
                 mediaState: N,
@@ -180,9 +183,9 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                 folderButtonSize: X,
                 folderButtonContent: z,
                 "aria-setsize": q,
-                "aria-posinset": Z,
+                "aria-posinset": Q,
             } = e,
-            { id: Q, name: J, children: ee } = E,
+            { id: Z, name: J, children: ee } = E,
             [et, en] = r.useState(!1),
             [ei, er] = r.useState(!1),
             ea = et || ei,
@@ -191,10 +194,10 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             b && en(!1);
         }, [b]);
         let [{ dragging: el }, eo] = (0, l.i)({
-                type: g.PJ.FOLDER,
-                item: () => (v?.(), { type: g.PJ.FOLDER, nodeId: E.id }),
+                type: T.PJ.FOLDER,
+                item: () => (v?.(), { type: T.PJ.FOLDER, nodeId: E.id }),
                 end() {
-                    (P?.(), (0, h.um)(p.Ay.getCompatibleGuildFolders()));
+                    (P?.(), (0, f.um)(p.Ay.getCompatibleGuildFolders()));
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -208,23 +211,23 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                 [M, S],
             ),
             eu = null != J && "" !== J ? J : null != y && "" !== y ? y : U.intl.string(U.t.xV9hVh),
-            e_ = (0, o.Vd)(`${Q}`),
-            eE = `folder-items-${Q}`,
+            e_ = (0, o.Vd)(`${Z}`),
+            eE = `folder-items-${Z}`,
             eA =
                 ((t = ee.length),
                 (n = (0, u.r)(_.A.modules.guildbar.FOLDER_SIZE)),
                 (a = (0, u.r)(_.A.modules.guildbar.AVATAR_SIZE)),
                 t * (a + (c = (0, u.r)(_.A.space.SPACE_XS))) - c + (c - (n - a) / 2) + (0, u.r)(_.A.space.SPACE_4)),
-            eh = (0, A.p)(!el && S, {
+            ef = (0, A.p)(!el && S, {
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
                 config: { duration: Y },
             }),
-            ef = r.useCallback((e) => f?.(Q, e), [f, Q]),
+            eh = r.useCallback((e) => h?.(Z, e), [h, Z]),
             eI = (0, i.jsxs)(V.c, {
                 children: [
-                    (0, i.jsx)(T.A, {
+                    (0, i.jsx)(g.A, {
                         overlay: !0,
                         disabled: el || (S && null == G),
                         hovered: et,
@@ -263,7 +266,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
                                       treeItemProps: e_,
                                       folderButtonContent: z,
                                       "aria-setsize": q,
-                                      "aria-posinset": Z,
+                                      "aria-posinset": Q,
                                   }),
                         }),
                     }),
@@ -273,14 +276,14 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             ep = (0, j.rk)(E.color),
             em = null != ep ? (0, d.Hl)(ep) : void 0;
         return (0, i.jsxs)("div", {
-            ref: ef,
+            ref: eh,
             className: s()(w.qc, { [w.Av]: S, [w.Lg]: ea }),
             style: { "--custom-folder-color": em ?? "" },
             "data-drop-hovering": ei,
             children: [
                 !el && S && (0, i.jsx)("span", { className: w.GO }),
                 eI,
-                eh((e, t, n) => {
+                ef((e, t, n) => {
                     let { key: r } = n;
                     return (
                         t &&

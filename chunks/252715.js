@@ -25,10 +25,10 @@ var C = s(697530),
     R = s(457699),
     b = s(146849),
     L = s(354777),
-    F = s(383233),
-    y = s(994500),
-    v = s(65600);
-let I = [];
+    I = s(383233),
+    F = s(994500),
+    y = s(65600);
+let v = [];
 var N = s(477654),
     _ = s(145331),
     T = s(43105),
@@ -36,14 +36,14 @@ var N = s(477654),
     H = s(783977),
     W = s(289873),
     D = s(866665),
-    O = s(834730),
-    w = s(28863),
+    w = s(834730),
+    O = s(28863),
     P = s(265872),
     B = s(165862),
     q = s(477782),
-    Q = s(408278),
-    V = s(625903),
-    U = s(112173),
+    U = s(408278),
+    Q = s(625903),
+    V = s(112173),
     G = s(93055),
     Y = s(975571),
     Z = s(121806),
@@ -64,9 +64,9 @@ function ee(e) {
             selectedChannelId: k,
         } = e,
         g =
-            ((t = (0, i.bG)([v.A], () => {
+            ((t = (0, i.bG)([y.A], () => {
                 let e = (0, j.bS)(s);
-                return v.A.getSearchResultsQueryString(e);
+                return y.A.getSearchResultsQueryString(e);
             })),
             r.useMemo(() => (0, j._o)(t ?? ""), [t])),
         { totalFilters: m } = (0, Z.vj)(g, s),
@@ -88,16 +88,16 @@ function ee(e) {
             },
             [b, R, S],
         ),
-        F = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 R("user:explicit" === e ? X.i.USER_DISMISS : X.i.AUTO_DISMISS);
             },
             [R],
         ),
-        y = r.useCallback(() => {
+        F = r.useCallback(() => {
             (L(null), A.A.openSearchFiltersModal(s));
         }, [L, s]),
-        I = r.useMemo(() => (m > 0 ? J.intl.format(J.t.uaR4sI, { filterCount: m }) : J.intl.string(J.t.UdhTtk)), [m]),
+        v = r.useMemo(() => (m > 0 ? J.intl.format(J.t.uaR4sI, { filterCount: m }) : J.intl.string(J.t.UdhTtk)), [m]),
         N = !(0, G.DZ)() && (s.type === $.I4_.DMS || s.type === $.I4_.CHANNEL);
     return (0, n.jsxs)("header", {
         className: o()(K.wL, { [K.g$]: null != f }),
@@ -116,7 +116,13 @@ function ee(e) {
             (0, n.jsxs)("div", {
                 className: K.vd,
                 children: [
-                    (0, n.jsx)(z.$, { variant: "secondary", onClick: y, text: I, icon: H.R, size: "sm" }),
+                    (0, n.jsx)(z.$, {
+                        variant: "secondary",
+                        onClick: F,
+                        text: v,
+                        icon: H.FiltersHorizontalIcon,
+                        size: "sm",
+                    }),
                     (0, n.jsx)(ei, {
                         searchMode: l,
                         onSearchModeChange: c,
@@ -130,7 +136,7 @@ function ee(e) {
                             isPopoutOpen: "settings" === M,
                             setOpenPopout: L,
                             isPopoverVisible: b,
-                            onPopoverRequestClose: F,
+                            onPopoverRequestClose: I,
                         }),
                 ],
             }),
@@ -159,10 +165,10 @@ function en(e) {
         children: (0, n.jsxs)("div", {
             className: K.q_,
             children: [
-                (0, n.jsx)(O.E, {
+                (0, n.jsx)(w.E, {
                     variant: "body-md/medium",
                     color: "text-muted",
-                    children: (0, n.jsx)(w.Anchor, {
+                    children: (0, n.jsx)(O.Anchor, {
                         className: K.Zd,
                         href: Y.A.getArticleURL($.MVz.SEARCH_INDEXING),
                         children: J.intl.string(J.t["G3EA+4"]),
@@ -176,14 +182,14 @@ function en(e) {
 function er() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(O.E, { variant: "body-md/medium", color: "text-default", children: J.intl.string(J.t.uixzLf) }),
+            (0, n.jsx)(w.E, { variant: "body-md/medium", color: "text-default", children: J.intl.string(J.t.uixzLf) }),
             (0, n.jsx)(es, {}),
         ],
     });
 }
 function el(e) {
     let { totalResults: t, subtitle: s } = e,
-        r = (0, n.jsx)(O.E, {
+        r = (0, n.jsx)(w.E, {
             variant: "body-md/medium",
             color: "text-strong",
             children: J.intl.format(J.t.ZGVL3g, { count: t }),
@@ -191,7 +197,7 @@ function el(e) {
     return null != s
         ? (0, n.jsxs)("div", {
               className: K.hy,
-              children: [r, (0, n.jsx)(O.E, { variant: "body-xs/medium", color: "text-subtle", children: s })],
+              children: [r, (0, n.jsx)(w.E, { variant: "body-xs/medium", color: "text-subtle", children: s })],
           })
         : r;
 }
@@ -280,11 +286,11 @@ function eo(e) {
                     });
                 },
                 children: (e) =>
-                    (0, n.jsx)(Q.K, {
+                    (0, n.jsx)(U.K, {
                         ...e,
                         buttonRef: c,
                         variant: "secondary",
-                        icon: V.SettingsIcon,
+                        icon: Q.SettingsIcon,
                         onClick: () => {
                             o(l ? null : "settings");
                         },
@@ -363,7 +369,7 @@ function ei(e) {
                 ...e,
                 buttonRef: i,
                 variant: "secondary",
-                icon: U.J,
+                icon: V.ArrowsUpDownIcon,
                 onClick: () => {
                     o(l ? null : "sort");
                 },
@@ -843,7 +849,7 @@ var eg = s(876689),
     eE = s(596500);
 function eC(e) {
     let { rating: t, onClick: s } = e,
-        l = t === eA.P0.BAD ? ej.d : ef.G,
+        l = t === eA.P0.BAD ? ej.ThumbsDownIcon : ef.ThumbsUpIcon,
         o = r.useCallback(() => {
             s(t);
         }, [s, t]);
@@ -873,7 +879,7 @@ let eR = function (e) {
     return (0, n.jsxs)("div", {
         className: eE.kL,
         children: [
-            (0, n.jsx)(O.E, {
+            (0, n.jsx)(w.E, {
                 variant: "body-sm/medium",
                 color: "text-strong",
                 children: J.intl.string(J.t["I+4OJC"]),
@@ -918,7 +924,7 @@ class eL extends r.Component {
                       searchContext: e.props.searchContext,
                       searchRequestAnalyticsId: e.props.searchRequestAnalyticsId,
                       searchQueryString: A.A.getSearchInputText(e.props.searchContext),
-                      searchQuery: v.A.getSearchResultsQuery(o),
+                      searchQuery: y.A.getSearchResultsQuery(o),
                   })
                 : (0, _.H9)({
                       searchContext: e.props.searchContext,
@@ -936,7 +942,7 @@ class eL extends r.Component {
                       pageNumEmbeds: r,
                       pageNumAttachments: n,
                       searchQueryString: A.A.getSearchInputText(e.props.searchContext),
-                      searchQuery: v.A.getSearchResultsQuery(o),
+                      searchQuery: y.A.getSearchResultsQuery(o),
                   });
         };
     })();
@@ -944,15 +950,15 @@ class eL extends r.Component {
         return null;
     }
 }
-function eF(e) {
+function eI(e) {
     let { children: t } = e;
     return (0, n.jsx)("div", { className: eb.Oq, children: (0, n.jsx)("div", { className: eb.de, children: t }) });
 }
-function ey(e) {
+function eF(e) {
     let { searchContext: t, isFeedbackVisible: s, dismissFeedbackEntrypoint: r } = e;
     return s ? (0, n.jsx)(eR, { searchContext: t, dismissFeedbackEntrypoint: r }) : null;
 }
-function ev(e) {
+function ey(e) {
     let {
             messages: t,
             blockCount: s,
@@ -968,7 +974,7 @@ function ev(e) {
         } = e,
         { totalResults: x, isSearching: k, isIndexing: g, hasError: m } = l;
     if (m)
-        return (0, n.jsxs)(eF, {
+        return (0, n.jsxs)(eI, {
             children: [
                 (0, n.jsx)("div", { className: eb.M6 }),
                 (0, n.jsx)("div", { className: o()(eb.pZ, eb.gJ), children: J.intl.string(J.t.uvDZBZ) }),
@@ -976,7 +982,7 @@ function ev(e) {
         });
     if (g) {
         let e = (0, j.Y7)(i);
-        return (0, n.jsxs)(eF, {
+        return (0, n.jsxs)(eI, {
             children: [(0, n.jsx)(ek, {}), (0, n.jsx)("div", { className: (eb.pZ, eb.Jy), children: e })],
         });
     }
@@ -996,14 +1002,14 @@ function ev(e) {
         });
     let { showNoResultsAlt: f } = l,
         M = f ? J.intl.string(J.t["VrK/2R"]) : J.intl.string(J.t.V6nAfF);
-    return (0, n.jsxs)(eF, {
+    return (0, n.jsxs)(eI, {
         children: [
             (0, n.jsx)("div", { className: o()(eb.$l, { [eb.CC]: f }) }),
             (0, n.jsx)("div", { className: o()(eb.pZ, eb.wV, { [eb.CC]: f }), children: M }),
         ],
     });
 }
-let eI = [],
+let ev = [],
     eN = r.memo(function (e) {
         let {
                 searchContext: t,
@@ -1021,31 +1027,31 @@ let eI = [],
                 onBlockedResultsClick: R,
                 searchResultsQuery: b,
                 searchResultsQueryString: L,
-                selectedChannelId: F,
+                selectedChannelId: I,
             } = e,
-            y = r.useRef(null),
-            I = r.useCallback(() => {
+            F = r.useRef(null),
+            v = r.useCallback(() => {
                 A.A.cleanUpSearchState(t);
             }, [t]);
         r.useEffect(
             () => (
-                g._.subscribe($.jej.SEARCH_RESULTS_CLOSE, I),
+                g._.subscribe($.jej.SEARCH_RESULTS_CLOSE, v),
                 () => {
-                    g._.unsubscribe($.jej.SEARCH_RESULTS_CLOSE, I);
+                    g._.unsubscribe($.jej.SEARCH_RESULTS_CLOSE, v);
                 }
             ),
-            [I],
+            [v],
         );
         let T = r.useRef(s.showBlockedResults);
         r.useEffect(() => {
             if (T.current !== s.showBlockedResults) {
                 T.current = s.showBlockedResults;
-                let e = y.current;
+                let e = F.current;
                 null != e && e.scrollToBottom();
             }
         }, [s.showBlockedResults]);
         let z = r.useCallback((e, t, s) => {
-                let n = y.current;
+                let n = F.current;
                 if (null == n) return;
                 let r = n.getScrollerState().scrollTop - e;
                 n.scrollTo({ to: r, animate: t, callback: s });
@@ -1054,8 +1060,8 @@ let eI = [],
             {
                 paginationTotalCount: W,
                 paginationMaxVisiblePage: D,
-                isMaxVisiblePageWarningVisible: O,
-                renderPageWrapper: w,
+                isMaxVisiblePageWarningVisible: w,
+                renderPageWrapper: O,
             } = (0, N.o)({
                 totalResults: s.totalResults,
                 isSearching: s.isSearching,
@@ -1089,7 +1095,7 @@ let eI = [],
                         offset: a,
                         index: n,
                         searchQueryString: A.A.getSearchInputText(t),
-                        searchQuery: v.A.getSearchResultsQuery(i),
+                        searchQuery: y.A.getSearchResultsQuery(i),
                     });
                 },
                 [s, t, o, u],
@@ -1100,10 +1106,10 @@ let eI = [],
                 },
                 [E, t, o],
             ),
-            Q = (0, i.yK)([v.A], () => {
-                if (0 !== s.offset) return eI;
+            U = (0, i.yK)([y.A], () => {
+                if (0 !== s.offset) return ev;
                 let e = u.length;
-                if (e < 10) return eI;
+                if (e < 10) return ev;
                 let n = 0;
                 if (
                     (u.forEach((e) => {
@@ -1111,15 +1117,15 @@ let eI = [],
                     }),
                     n / e < 0.75)
                 )
-                    return eI;
+                    return ev;
                 let r = (0, j.bS)(t),
-                    l = v.A.getSearchResultsQueryString(r);
+                    l = y.A.getSearchResultsQueryString(r);
                 return (0, j._o)(l ?? "").some((e) => e.type === $.LWr.FILTER_AUTHOR_TYPE)
-                    ? eI
+                    ? ev
                     : [a.M.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT];
             }),
-            [V, U] = (0, h.kn)(Q),
-            G = V === a.M.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
+            [Q, V] = (0, h.kn)(U),
+            G = Q === a.M.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             Y = r.useCallback(() => {
                 if (s.isSearching) return;
                 let e = `${M.Ay[$.LWr.FILTER_AUTHOR_TYPE].key} ${J.intl.string(J.t.tPZo4p)} `;
@@ -1137,13 +1143,13 @@ let eI = [],
                     isSearching: s.isSearching,
                     isIndexing: s.isHistoricalIndexing,
                     documentsIndexed: s.documentsIndexed,
-                    selectedChannelId: F,
+                    selectedChannelId: I,
                 }),
                 (0, n.jsxs)(c.Ch, {
-                    ref: y,
+                    ref: F,
                     className: eb.XG,
                     children: [
-                        O &&
+                        w &&
                             !s.isSearching &&
                             (0, n.jsx)("div", {
                                 className: eb.VC,
@@ -1162,7 +1168,7 @@ let eI = [],
                                     role: "none",
                                 }),
                             }),
-                        (0, n.jsx)(ev, {
+                        (0, n.jsx)(ey, {
                             messages: u,
                             blockCount: p,
                             ignoreCount: x,
@@ -1177,7 +1183,7 @@ let eI = [],
                         }),
                     ],
                 }),
-                (0, n.jsx)(ey, { searchContext: t, isFeedbackVisible: m, dismissFeedbackEntrypoint: f }),
+                (0, n.jsx)(eF, { searchContext: t, isFeedbackVisible: m, dismissFeedbackEntrypoint: f }),
                 W > 25 &&
                     (0, n.jsx)(eg.A, {
                         className: eb.cu,
@@ -1185,7 +1191,7 @@ let eI = [],
                         offset: s.offset,
                         totalCount: W,
                         pageSize: 25,
-                        renderPageWrapper: w,
+                        renderPageWrapper: O,
                     }),
             ],
         });
@@ -1213,16 +1219,16 @@ function e_(e) {
             );
         })(),
         a = (0, j.bS)(t),
-        c = (0, i.cf)([m.A, v.A], () => ({
+        c = (0, i.cf)([m.A, y.A], () => ({
             isSearching: m.A.getIsFetching(a) ?? !1,
             isIndexing: m.A.getIsIndexing(a) ?? !1,
             isHistoricalIndexing: m.A.getIsHistoricalIndexing(a) ?? !1,
             documentsIndexed: m.A.getDocumentsIndexed(a),
-            offset: v.A.getSearchResultsOffset(a) ?? 0,
+            offset: y.A.getSearchResultsOffset(a) ?? 0,
             totalResults: m.A.getTotalCount(a) ?? 0,
             hasError: null != m.A.getError(a),
-            showBlockedResults: v.A.shouldShowBlockedResults(a),
-            showNoResultsAlt: v.A.shouldShowNoResultsAlt(a),
+            showBlockedResults: y.A.shouldShowBlockedResults(a),
+            showNoResultsAlt: y.A.shouldShowNoResultsAlt(a),
         })),
         d = (0, i.bG)([m.A], () => m.A.getAnalyticsId(a)),
         {
@@ -1233,17 +1239,17 @@ function e_(e) {
             let { searchContext: t } = e,
                 s = (0, b.I2)({ location: "useRenderedSearchResults" }).enabled,
                 n = (0, i.bG)(
-                    [v.A, m.A, R.A],
+                    [y.A, m.A, R.A],
                     () => {
                         let e = (0, j.bS)(t),
-                            n = v.A.getSearchResultsQuery(e),
+                            n = y.A.getSearchResultsQuery(e),
                             r = m.A.getMessages(e);
-                        if (null == n || null == r || 0 === r.length) return I;
+                        if (null == n || null == r || 0 === r.length) return v;
                         let l = (0, C.wG)((0, j.dX)(n) ?? ""),
                             o = [];
                         return (
                             r.forEach((e) => {
-                                let t = new F.Ay(e);
+                                let t = new I.Ay(e);
                                 ((t = (function (e, t) {
                                     let [s] = t,
                                         n = s.getMessage(e.id, e.channel_id);
@@ -1269,13 +1275,13 @@ function e_(e) {
                     [t, s],
                     i.My,
                 ),
-                { blockCount: r, ignoreCount: l } = (0, i.cf)([y.A], () => {
+                { blockCount: r, ignoreCount: l } = (0, i.cf)([F.A], () => {
                     let e = 0,
                         t = 0;
                     return (
                         n.forEach((s) => {
-                            let n = y.A.isBlockedForMessage(s),
-                                r = y.A.isIgnoredForMessage(s);
+                            let n = F.A.isBlockedForMessage(s),
+                                r = F.A.isIgnoredForMessage(s);
                             n ? e++ : r && t++;
                         }),
                         { blockCount: e, ignoreCount: t }
@@ -1283,7 +1289,7 @@ function e_(e) {
                 });
             return { renderedMessages: n, blockCount: r, ignoreCount: l };
         })({ searchContext: t }),
-        M = (0, i.bG)([v.A], () => v.A.getSearchMode(a) ?? $.BBH.NEWEST),
+        M = (0, i.bG)([y.A], () => y.A.getSearchMode(a) ?? $.BBH.NEWEST),
         E = r.useCallback(
             (e) => {
                 if (c.isSearching) return;
@@ -1300,13 +1306,13 @@ function e_(e) {
             },
             [t],
         ),
-        _ = (0, i.bG)([v.A], () => {
+        _ = (0, i.bG)([y.A], () => {
             let e = (0, j.bS)(t);
-            return v.A.getSearchResultsQuery(e);
+            return y.A.getSearchResultsQuery(e);
         }),
-        T = (0, i.bG)([v.A], () => {
+        T = (0, i.bG)([y.A], () => {
             let e = (0, j.bS)(t);
-            return v.A.getSearchResultsQueryString(e);
+            return y.A.getSearchResultsQueryString(e);
         }),
         z = r.useCallback((e) => S.A.setShowBlockedResults(t, e), [t]),
         H = r.useDeferredValue(h),

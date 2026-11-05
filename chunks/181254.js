@@ -1,4 +1,4 @@
-n.d(t, { z9: () => eW, ls: () => eV, th: () => eY, w_: () => eU, Ay: () => eJ });
+n.d(t, { z9: () => eW, ls: () => eV, th: () => eY, w_: () => eU, Ay: () => eX });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -18,16 +18,16 @@ if (588245 != n.j) var p = n(866665);
 if (588245 != n.j) var h = n(821609);
 if (588245 != n.j) var j = n(366605);
 if (588245 != n.j) var x = n(952270);
-if (588245 != n.j) var y = n(428678);
-var C = n(646514),
-    _ = n(704007);
-if (588245 != n.j) var I = n(445529);
-if (588245 != n.j) var T = n(778712);
-if (588245 != n.j) var S = n(192308);
+if (588245 != n.j) var I = n(428678);
+var y = n(646514),
+    C = n(704007);
+if (588245 != n.j) var _ = n(445529);
+if (588245 != n.j) var S = n(778712);
+if (588245 != n.j) var T = n(192308);
 if (588245 != n.j) var E = n(834730);
 if (588245 != n.j) var R = n(789645);
-var M = n(308528),
-    D = n(442433),
+var D = n(308528),
+    M = n(442433),
     b = n(765671),
     G = n(736653),
     P = n(657043),
@@ -43,11 +43,11 @@ var M = n(308528),
     V = n(571694),
     W = n(47167);
 if (588245 != n.j) var Y = n(858899);
-var J = n(138399),
-    K = n(976860),
+var X = n(138399),
+    J = n(976860),
     Q = n(330001),
-    X = n(536637),
-    Z = n.n(X),
+    K = n(536637),
+    Z = n.n(K),
     $ = n(74114),
     q = n(596344),
     ee = n(994500),
@@ -83,7 +83,7 @@ let ex = (0, n(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-function ey(e) {
+function eI(e) {
     let { callMessageId: t, className: n } = e,
         s = ex.useConfig({ location: "PrivateChannelCallDuration" }).enabled,
         a = l.useMemo(() => ({ start: en.default.extractTimestamp(t) }), [t]);
@@ -94,15 +94,15 @@ function ey(e) {
           })
         : null;
 }
-var eC = n(114129),
-    e_ = n(442325),
-    eI = n(897898),
-    eT = n(854627),
-    eS = n(616356),
+var ey = n(114129),
+    eC = n(442325),
+    e_ = n(897898),
+    eS = n(854627),
+    eT = n(616356),
     eE = n(470710),
     eR = n(290863),
-    eM = n(218461),
-    eD = n(309010),
+    eD = n(218461),
+    eM = n(309010),
     eb = n(741961),
     eG = n(543465),
     eP = n(287809),
@@ -146,13 +146,13 @@ function eL(e) {
     });
 }
 function ez() {
-    return (0, i.jsx)(j.t, { size: "xs", color: "currentColor", className: ew.wB });
+    return (0, i.jsx)(j.PinIcon, { size: "xs", color: "currentColor", className: ew.wB });
 }
 function eF() {
     return (0, i.jsx)(x.EyeSlashIcon, { size: "xs", color: "currentColor", className: ew.wB });
 }
 function eH() {
-    return (0, i.jsx)(y.K, { size: "xs", color: "currentColor", className: ew.wB });
+    return (0, i.jsx)(I.DenyIcon, { size: "xs", color: "currentColor", className: ew.wB });
 }
 function eV(e) {
     let {
@@ -168,26 +168,26 @@ function eV(e) {
                 null != a && null != r && null != o
                     ? {
                           Color_GradientCenter: a,
-                          Color_InnerRing: r ?? C.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? r,
+                          Color_InnerRing: r ?? y.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? r,
                           Color_OuterRing: o,
                           NitroVFX: !1,
                       }
                     : n
                       ? {
-                            Color_GradientCenter: C.A.colors.NITRO_TAB_GRADIENT_CENTER,
-                            Color_InnerRing: C.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
-                            Color_OuterRing: C.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
+                            Color_GradientCenter: y.A.colors.NITRO_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: y.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: y.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
                             NitroVFX: !0,
                         }
                       : {
-                            Color_GradientCenter: C.A.colors.STANDARD_TAB_GRADIENT_CENTER,
-                            Color_InnerRing: C.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
-                            Color_OuterRing: C.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
+                            Color_GradientCenter: y.A.colors.STANDARD_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: y.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: y.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
                             NitroVFX: !1,
                         },
             [n, a, r, o],
         );
-    return (0, i.jsx)(_.U, { eventTargetRef: t, className: ew.a1, dataBinding: { ...u, DimmerWidth: (s ?? 0) + 32 } });
+    return (0, i.jsx)(C.U, { eventTargetRef: t, className: ew.a1, dataBinding: { ...u, DimmerWidth: (s ?? 0) + 32 } });
 }
 function eW(e) {
     let {
@@ -206,43 +206,43 @@ function eW(e) {
             "aria-setsize": h,
             listItemRef: j,
             showHoverGradient: x = !1,
-            nitroHoverGradient: y = !1,
-            hoverGradientStart: C,
-            hoverGradientMiddle: _,
-            hoverGradientEnd: T,
-            ...S
+            nitroHoverGradient: I = !1,
+            hoverGradientStart: y,
+            hoverGradientMiddle: C,
+            hoverGradientEnd: S,
+            ...T
         } = e,
         { width: E, ref: R } = (0, b.Ay)(),
-        M = l.useRef(null),
         D = l.useRef(null),
-        G = (0, A.A)(j, M);
+        M = l.useRef(null),
+        G = (0, A.A)(j, D);
     return (0, i.jsx)(em, {
         className: a()(ew.Ix, { [ew.Ij]: f.Fr }, v),
         onClick: N,
         role: g,
-        focusProps: { ...eB, focusTarget: D, ringTarget: M },
+        focusProps: { ...eB, focusTarget: M, ringTarget: D },
         "aria-posinset": p,
         "aria-setsize": h,
         ref: G,
-        children: (0, i.jsxs)(I.H, {
+        children: (0, i.jsxs)(_.H, {
             as: "div",
             selected: n,
             className: a()(o, ew.bG, ew.$J, { [ew.Q2]: n }),
             children: [
                 x &&
                     (0, i.jsx)(eV, {
-                        eventTargetRef: M,
-                        isNitro: y,
+                        eventTargetRef: D,
+                        isNitro: I,
                         contentWidth: E,
-                        hoverGradientStart: C,
-                        hoverGradientMiddle: _,
-                        hoverGradientEnd: T,
+                        hoverGradientStart: y,
+                        hoverGradientMiddle: C,
+                        hoverGradientEnd: S,
                     }),
                 (0, i.jsxs)(u.N_, {
                     to: { pathname: t, state: m },
                     className: ew.nf,
-                    innerRef: D,
-                    ...S,
+                    innerRef: M,
+                    ...T,
                     children: [
                         (0, i.jsx)(L.A, {
                             ref: x ? R : void 0,
@@ -275,44 +275,44 @@ function eY(e) {
             isMobile: h,
             isVR: j,
             nameplate: x,
-            ref: y,
-            "aria-posinset": C,
-            "aria-setsize": _,
+            ref: I,
+            "aria-posinset": y,
+            "aria-setsize": C,
         } = e,
         [b, P] = l.useState(!1),
-        [O, X] = l.useState(!1),
+        [O, K] = l.useState(!1),
         [eo, eu] = l.useState(!1),
         eA = l.useRef(null),
         ef = l.useRef(null),
-        ej = y ?? ef,
+        ej = I ?? ef,
         {
             avatarSrc: ex,
-            avatarDecorationSrc: eS,
+            avatarDecorationSrc: eT,
             eventHandlers: eR,
-        } = (0, eT.A)({ userId: r?.id, size: T._3.SIZE_32, animateOnHover: !(s || b || O || eo) }),
+        } = (0, eS.A)({ userId: r?.id, size: S._3.SIZE_32, animateOnHover: !(s || b || O || eo) }),
         eb = t.isMultiUserDM(),
         eP = t.isSystemDM(),
         ek = !eb && !eP && t.type === el.rbe.DM,
         eV = ek && r?.primaryGuild != null,
         eW = (0, m.bG)([eG.Ay], () => eG.Ay.isChannelMuted(t.getGuildId(), t.id)),
         eY = (0, m.bG)([eG.Ay], () => eG.Ay.isMessagesFavorite(t.id)),
-        { ignored: eJ, blocked: eK } = (0, m.cf)([ee.A], () => ({
+        { ignored: eX, blocked: eJ } = (0, m.cf)([ee.A], () => ({
             ignored: ee.A.isIgnored(t.getRecipientId()),
             blocked: ee.A.isBlocked(t.getRecipientId()),
         })),
-        eQ = ek && eJ,
-        eX = ek && eK,
-        eZ = (eW || eQ || eX) && !(s || b),
-        e$ = (0, m.bG)([eM.Ay], () => eM.Ay.getMentionCount(t.id) > 0),
+        eQ = ek && eX,
+        eK = ek && eJ,
+        eZ = (eW || eQ || eK) && !(s || b),
+        e$ = (0, m.bG)([eD.Ay], () => eD.Ay.getMentionCount(t.id) > 0),
         eq = (0, W.Ay)(t),
         e0 = (0, m.bG)(
-            [eE.A, eD.Ay],
-            () => (eD.Ay.getVoiceChannelId() === t.id && eE.A.isCallActive(t.id) ? eE.A.getMessageId(t.id) : null),
+            [eE.A, eM.Ay],
+            () => (eM.Ay.getVoiceChannelId() === t.id && eE.A.isCallActive(t.id) ? eE.A.getMessageId(t.id) : null),
             [t.id],
         ),
         e2 = l.useRef(null),
-        e8 = null != x && (s || b || eo),
-        e1 = (0, G.Ay)();
+        e1 = null != x && (s || b || eo),
+        e8 = (0, G.Ay)();
     function e5() {
         P(!0);
     }
@@ -320,17 +320,17 @@ function eY(e) {
         P(!1);
     }
     function e4() {
-        X(!0);
+        K(!0);
     }
     function e9() {
-        X(!1);
+        K(!1);
     }
     function e6(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, s, n));
+        (null != e && (e.preventDefault(), e.stopPropagation()), D.A.closePrivateChannel(t.id, s, n));
     }
     function e7() {
-        M.A.preload(el.ME, t.id);
+        D.A.preload(el.ME, t.id);
     }
     function te(e) {
         e.stopPropagation();
@@ -339,9 +339,9 @@ function eY(e) {
         e.target === e.currentTarget && eA.current?.click();
     }
     function tn(e) {
-        if (!e_.A.isEnabled()) return;
-        let n = e_.A.getTabForChannel(t.id);
-        null != n && (e.preventDefault(), (0, eC.ZD)(n.id));
+        if (!eC.A.isEnabled()) return;
+        let n = eC.A.getTabForChannel(t.id);
+        null != n && (e.preventDefault(), (0, ey.ZD)(n.id));
     }
     function ti(e) {
         let l =
@@ -350,7 +350,7 @@ function eY(e) {
                 : c.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
         (eu(!0),
             t.isMultiUserDM()
-                ? (0, D.L3)(
+                ? (0, M.L3)(
                       e,
                       async () => {
                           let { default: e } = await Promise.all([
@@ -398,7 +398,7 @@ function eY(e) {
                       },
                       { impressionName: l, noBlurEvent: !0, onClose: () => eu(!1) },
                   )
-                : (0, D.L3)(
+                : (0, M.L3)(
                       e,
                       async () => {
                           let { default: e } = await Promise.all([
@@ -427,6 +427,7 @@ function eY(e) {
                               n.e(489218),
                               n.e(146652),
                               n.e(912875),
+                              n.e(713708),
                               n.e(862782),
                               n.e(55348),
                               n.e(776273),
@@ -491,7 +492,7 @@ function eY(e) {
                               n.e(522261),
                               n.e(873786),
                               n.e(678195),
-                              n.e(287988),
+                              n.e(736674),
                               n.e(275289),
                               n.e(774021),
                               n.e(836150),
@@ -517,7 +518,7 @@ function eY(e) {
         (t.isManaged() &&
             ((l = er.intl.formatToPlainString(er.t.hVGjEW, { name: eq })),
             (s = er.intl.format(er.t.IK1Qvs, { name: eq }))),
-            (0, S.mM)(async () => {
+            (0, T.mM)(async () => {
                 let { default: e } = await Promise.all([n.e(446215), n.e(137803)]).then(n.bind(n, 925785));
                 return (t) => (0, i.jsx)(e, { title: l, body: s, onSubmit: e6, ...t });
             }));
@@ -547,12 +548,12 @@ function eY(e) {
         to = (0, eN.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
         { isIncomingCall: tu, isOngoingCall: tc } = (0, z.A)(t.id),
         td = [
-            (0, H.Ay)({ channel: t, unread: e$, isIncomingCall: tu, isOngoingCall: tc, ignored: eQ, blocked: eX }),
+            (0, H.Ay)({ channel: t, unread: e$, isIncomingCall: tu, isOngoingCall: tc, ignored: eQ, blocked: eK }),
             (0, H.r2)({ channel: t, muted: eW, userStatus: p, isFavorite: eY }),
         ]
             .filter(Boolean)
             .join(", "),
-        tA = (0, m.bG)([eM.Ay], () => eM.Ay.lastMessageId(t.id)),
+        tA = (0, m.bG)([eD.Ay], () => eD.Ay.lastMessageId(t.id)),
         { waveShouldShow: tf, wavePressed: tm } = (function (e, t) {
             let n,
                 i,
@@ -569,9 +570,9 @@ function eY(e) {
                     if (!f) {
                         (N(!0),
                             (0, Q.W)({ channelId: e.id, source: "DM Channel" }),
-                            (0, K.pX)(el.BVt.CHANNEL(el.ME, e.id)));
+                            (0, J.pX)(el.BVt.CHANNEL(el.ME, e.id)));
                         try {
-                            await J.A.sendStickers(e.id, ["749054660769218631"], "", { location: ea.Hx.SEND_WAVE });
+                            await X.A.sendStickers(e.id, ["749054660769218631"], "", { location: ea.Hx.SEND_WAVE });
                         } catch (e) {
                             e.ok ||
                                 429 !== e.status ||
@@ -615,11 +616,11 @@ function eY(e) {
                 onFocus: e4,
                 onBlur: e9,
                 onContextMenu: ti,
-                "aria-setsize": _,
-                "aria-posinset": C,
+                "aria-setsize": C,
+                "aria-posinset": y,
                 children: [
                     e$ ? (0, i.jsx)("div", { className: a()(ew.dM, { [ew.SU]: eZ }) }) : null,
-                    (0, i.jsxs)(I.H, {
+                    (0, i.jsxs)(_.H, {
                         className: a()(ew.bG, { [ew.Q2]: s || eo }),
                         as: "div",
                         onClick: tt,
@@ -627,7 +628,7 @@ function eY(e) {
                         selected: s,
                         children: [
                             (0, i.jsx)(ed.A, {
-                                nameplate: e8 ? x : void 0,
+                                nameplate: e1 ? x : void 0,
                                 selected: s,
                                 hovered: b,
                                 content: tr,
@@ -639,12 +640,12 @@ function eY(e) {
                                 className: a()(ew.nf, ew.Zi),
                                 "aria-label": td,
                                 onClick: tn,
-                                onAuxClick: (e) => (0, eI.A)(e, t),
+                                onAuxClick: (e) => (0, e_.A)(e, t),
                                 ...l,
                                 children: (0, i.jsx)(L.A, {
                                     ref: tr,
                                     avatar: (function () {
-                                        let e = T._3.SIZE_32;
+                                        let e = S._3.SIZE_32;
                                         if (t.isMultiUserDM())
                                             if (t.recipients.length >= 2 && null == t.icon)
                                                 return (0, i.jsx)(ep.A, {
@@ -672,9 +673,9 @@ function eY(e) {
                                             r.isSystemUser() || (n = (0, k.A)(A) ? el.clD.STREAMING : p),
                                             (0, i.jsx)(eO, {
                                                 ...eR,
-                                                size: T._3.SIZE_32,
+                                                size: S._3.SIZE_32,
                                                 src: ex,
-                                                avatarDecoration: eS,
+                                                avatarDecoration: eT,
                                                 status: n,
                                                 isMobile: h,
                                                 isVR: j,
@@ -728,21 +729,21 @@ function eY(e) {
                                 }),
                             }),
                             (0, i.jsxs)("div", {
-                                className: a()(ew._q, { [ew.EY]: e8 }),
+                                className: a()(ew._q, { [ew.EY]: e1 }),
                                 children: [
                                     null != e0 &&
-                                        (0, i.jsx)(ey, {
+                                        (0, i.jsx)(eI, {
                                             callMessageId: e0,
-                                            className: a()(ew.R4, { [ew.jd]: e8, [ew.ht]: e8 && e1 === el.NJ8.LIGHT }),
+                                            className: a()(ew.R4, { [ew.jd]: e1, [ew.ht]: e1 && e8 === el.NJ8.LIGHT }),
                                         }),
-                                    eX ? (0, i.jsx)(eH, {}) : eQ ? (0, i.jsx)(eF, {}) : eY ? (0, i.jsx)(ez, {}) : null,
+                                    eK ? (0, i.jsx)(eH, {}) : eQ ? (0, i.jsx)(eF, {}) : eY ? (0, i.jsx)(ez, {}) : null,
                                     tf && null != eq
-                                        ? (0, i.jsx)(eL, { channelName: eq, onClick: tm, showNameplate: e8 })
+                                        ? (0, i.jsx)(eL, { channelName: eq, onClick: tm, showNameplate: e1 })
                                         : null,
                                     tf
                                         ? null
                                         : (0, i.jsx)(eU, {
-                                              icon: R.P,
+                                              icon: R.XSmallIcon,
                                               "aria-label": eb
                                                   ? er.intl.string(er.t["26C4oi"])
                                                   : er.intl.string(er.t.jsvgc3),
@@ -760,14 +761,14 @@ function eY(e) {
         },
     });
 }
-let eJ =
+let eX =
     221552 == n.j
         ? function (e) {
               let { channel: t, selected: n, ...l } = e,
                   s = (0, m.bG)([eP.default], () => eP.default.getUser(t.getRecipientId())),
                   a = s?.id,
                   r = (0, m.cf)(
-                      [eR.A, eS.A],
+                      [eR.A, eT.A],
                       () => {
                           let e;
                           if (t.isMultiUserDM()) {
@@ -777,7 +778,7 @@ let eJ =
                           return {
                               status: e,
                               activities: null != a ? eR.A.getActivities(a) : null,
-                              applicationStream: null != a ? eS.A.getAnyStreamForUser(a) : null,
+                              applicationStream: null != a ? eT.A.getAnyStreamForUser(a) : null,
                               isMobile: null != a && eR.A.isMobileOnline(a),
                               isVR: null != a && eR.A.isVROnline(a),
                           };

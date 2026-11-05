@@ -230,22 +230,22 @@ let K = [$.yt.MINUTES_30, $.yt.HOURS_1, $.yt.HOURS_4];
 var q = n(5377),
     G = n(927813),
     J = n(403362);
-function V(t) {
+function X(t) {
     let e = Date.now() + t;
     return (0, q.ro)(new Date(), new Date(e))
         ? x.intl.formatToPlainString(x.t["+3jw2j"], { time: x.intl.data.formatTime(e, { format: "short" }) })
         : x.intl.formatToPlainString(x.t["/Avy4C"], { time: x.intl.data.formatTime(e, { format: "short" }) });
 }
-function X(t) {
+function V(t) {
     switch (t) {
         case $.yt.TODAY:
-            return V(z($.yt.TODAY));
+            return X(z($.yt.TODAY));
         case $.yt.HOURS_4:
-            return V(4 * G.A.Millis.HOUR);
+            return X(4 * G.A.Millis.HOUR);
         case $.yt.HOURS_1:
-            return V(+G.A.Millis.HOUR);
+            return X(+G.A.Millis.HOUR);
         case $.yt.MINUTES_30:
-            return V(30 * G.A.Millis.MINUTE);
+            return X(30 * G.A.Millis.MINUTE);
         case $.yt.DONT_CLEAR:
             return x.intl.string(x.t.bRn8cq);
         default:
@@ -358,7 +358,7 @@ function tx(t) {
         F = r.useRef(null),
         Y = r.useRef(null),
         q = null != c ? c.label() : x.intl.string(x.t.xod367),
-        [V, W] = r.useState(q),
+        [X, W] = r.useState(q),
         { ref: tt, width: te } = (0, b.Ay)(q);
     function tn() {
         v !== tf &&
@@ -422,13 +422,13 @@ function tx(t) {
             className: tp.l3,
             children: (0, l.jsx)(u.Te, {
                 "aria-label": x.intl.formatToPlainString(x.t.NFJUPa, {
-                    value: v === tf ? x.intl.string(x.t.E45wvP) : X(v),
+                    value: v === tf ? x.intl.string(x.t.E45wvP) : V(v),
                 }),
                 maxVisibleItems: $.SX.length + 1,
                 value: v,
                 options: [
                     { value: tf, key: tf, label: x.intl.string(x.t.E45wvP), disabled: !0 },
-                    ...$.SX.map((t) => ({ value: t, key: t, label: X(t) })),
+                    ...$.SX.map((t) => ({ value: t, key: t, label: V(t) })),
                 ],
                 onChange: (t) => j(t),
                 optionClassName: tp.Pl,
@@ -559,7 +559,7 @@ function tx(t) {
                                 maxLength: 128,
                                 rows: 1,
                                 showRemainingCharacterCount: !1,
-                                placeholder: V,
+                                placeholder: X,
                                 onChange: function (t) {
                                     y(t);
                                 },
@@ -577,7 +577,11 @@ function tx(t) {
                                     onClick: function () {
                                         (y(""), S(null));
                                     },
-                                    children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tp.hj }),
+                                    children: (0, l.jsx)(O.CircleXIcon, {
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: tp.hj,
+                                    }),
                                 }),
                         ],
                     }),

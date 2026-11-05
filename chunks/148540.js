@@ -9,8 +9,8 @@ var l = s(477900),
     o = s(591179),
     u = s(215530),
     A = s(935462),
-    x = s(707554),
-    h = s(140735),
+    h = s(707554),
+    x = s(140735),
     j = s(231723),
     I = s(136969),
     m = s(793574),
@@ -21,9 +21,9 @@ var l = s(477900),
     v = s(183555),
     E = s(527212),
     y = s(722868),
-    O = s(716804),
-    S = s(718019),
-    C = s(567556),
+    C = s(716804),
+    O = s(718019),
+    S = s(567556),
     T = s(915614),
     P = s(559506),
     L = s(946356),
@@ -87,7 +87,12 @@ function $(e) {
                     title: Q.intl.string(Q.t.awYSsM),
                     description: Q.intl.string(Q.t.TpsXoC),
                 }),
-            d && (0, l.jsx)(q, { icon: J.n, title: Q.intl.string(Q.t.WuKeSJ), description: Q.intl.string(Q.t.wOBmtV) }),
+            d &&
+                (0, l.jsx)(q, {
+                    icon: J.GroupIcon,
+                    title: Q.intl.string(Q.t.WuKeSJ),
+                    description: Q.intl.string(Q.t.wOBmtV),
+                }),
             (0, l.jsx)(V.E, {
                 variant: "body-xs/normal",
                 children: Q.intl.format(Q.t.b6nqk0, {
@@ -136,20 +141,20 @@ function ec(e) {
 var eo = s(501925),
     eu = s(743987),
     eA = s(503026),
-    ex = s(347805),
-    eh = s(518477),
+    eh = s(347805),
+    ex = s(518477),
     ej = s(422317);
 function eI(e) {
     let { userId: i } = e,
-        s = (0, O.g)(),
+        s = (0, C.g)(),
         { trackUserProfileAction: n } = (0, v.NJ)();
     return (0, l.jsx)(ed.A, {
         heading: Q.intl.string(Q.t["mQKv+v"]),
-        scrollTargetId: eh.bk.NOTE,
-        children: (0, l.jsx)(ex.A, {
+        scrollTargetId: ex.bk.NOTE,
+        children: (0, l.jsx)(eh.A, {
             userId: i,
             className: ej.N,
-            autoFocus: s === eh.bk.NOTE,
+            autoFocus: s === ex.bk.NOTE,
             onUpdate: () => n({ action: "SET_NOTE" }),
         }),
     });
@@ -189,9 +194,9 @@ var eg = s(652215),
     ev = s(517164),
     eE = s(290863),
     ey = s(894768),
-    eO = s(975571),
-    eS = s(146655),
-    eC = s(489379),
+    eC = s(975571),
+    eO = s(146655),
+    eS = s(489379),
     eT = s(960549),
     eP = s(637865),
     eL = s(842241),
@@ -200,18 +205,18 @@ var eg = s(652215),
     eD = s(813195);
 function eU(e) {
     let { user: i, currentUser: s, guildId: n, onClose: t } = e,
-        { live: d, recent: r, stream: a } = (0, eS.A)(i.id),
-        { voiceChannel: c, voiceActivity: o } = (0, eC.A)({ userId: i.id, guildId: n }),
+        { live: d, recent: r, stream: a } = (0, eO.A)(i.id),
+        { voiceChannel: c, voiceActivity: o } = (0, eS.A)({ userId: i.id, guildId: n }),
         u = (0, G.bG)([ev.A], () => ev.A.isFetchingUserOutbox(i.id)),
         A = i.id === s.id,
-        x = (0, G.bG)([ey.A, eE.A], () => {
+        h = (0, G.bG)([ey.A, eE.A], () => {
             let e = A ? ey.A.getStatus() : eE.A.getStatus(i.id);
             return e === eg.clD.OFFLINE || e === eg.clD.INVISIBLE;
         }),
-        h = (0, G.bG)([X.A], () => X.A.getUserProfile(i.id)?.private === !0),
+        x = (0, G.bG)([X.A], () => X.A.getUserProfile(i.id)?.private === !0),
         j = d.length > 0 || null != a,
-        I = !h && null == a && null == o && null != c,
-        m = !x && (j || I),
+        I = !x && null == a && null == o && null != c,
+        m = !h && (j || I),
         p = r.length > 0;
     return m || p || !u
         ? (0, l.jsxs)(H.Ip, {
@@ -270,14 +275,14 @@ function eU(e) {
                                           (0, l.jsx)(
                                               eN.Anchor,
                                               {
-                                                  href: eO.A.getArticleURL(eg.MVz.ACTIVITY_STATUS_SETTINGS),
+                                                  href: eC.A.getArticleURL(eg.MVz.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               i,
                                           ),
                                   })
                                 : void 0,
-                            scrollTargetId: eh.bk.RECENT_ACTIVITY,
+                            scrollTargetId: ex.bk.RECENT_ACTIVITY,
                             children: (0, l.jsx)("ul", {
                                 className: eR.Ci,
                                 children: r.map((e) =>
@@ -321,7 +326,7 @@ function eH(e) {
             i.isProvisional &&
                 (0, l.jsx)(ed.A, {
                     heading: Q.intl.string(Q.t.Iyka0U),
-                    headingIcon: e_.E,
+                    headingIcon: e_.CircleErrorIcon,
                     children: (0, l.jsx)(ek.T, { userId: i.id }),
                 }),
             r.length > 0 &&
@@ -336,7 +341,7 @@ function eH(e) {
             o.length > 0 &&
                 (0, l.jsx)(ed.A, {
                     heading: Q.intl.string(Q.t["3fe7U5"]),
-                    scrollTargetId: eh.bk.CONNECTIONS,
+                    scrollTargetId: ex.bk.CONNECTIONS,
                     children: (0, l.jsx)(ez.Ay, { connectedAccounts: o, className: em.oQ, userId: i.id, locale: c }),
                 }),
             u.length > 0 &&
@@ -460,15 +465,15 @@ function e0(e) {
 var e5 = s(717877);
 function e7(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
-    return i === eh.RP.ACTIVITY
+    return i === ex.RP.ACTIVITY
         ? (0, l.jsx)(eU, { user: s, currentUser: n, guildId: d, onClose: a })
-        : i === eh.RP.MUTUAL_FRIENDS
+        : i === ex.RP.MUTUAL_FRIENDS
           ? (0, l.jsx)(eQ, { user: s, guildId: d, channelId: r, onClose: a })
-          : i === eh.RP.MUTUAL_GUILDS
+          : i === ex.RP.MUTUAL_GUILDS
             ? (0, l.jsx)(e0, { user: s, onClose: a })
-            : i === eh.RP.BOT_DATA_ACCESS
+            : i === ex.RP.BOT_DATA_ACCESS
               ? (0, l.jsx)($, { user: s })
-              : i === eh.RP.BOT_INFO
+              : i === ex.RP.BOT_INFO
                 ? (0, l.jsx)(ep, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(eH, { user: s, displayProfile: t, onClose: a });
 }
@@ -479,12 +484,12 @@ function e1(e) {
             displayProfile: t,
             guildId: d,
             items: r,
-            initialSection: a = eh.RP.USER_INFO,
+            initialSection: a = ex.RP.USER_INFO,
             onClose: c,
         } = e,
         { trackUserProfileAction: o } = (0, v.NJ)(),
         u = (0, G.bG)([z.A], () => z.A.hidePersonalInformation),
-        [A, x] = n.useState(
+        [A, h] = n.useState(
             () =>
                 r.find((e) => {
                     let { section: i } = e;
@@ -492,11 +497,11 @@ function e1(e) {
                 })?.section ?? r[0]?.section,
         );
     n.useEffect(() => {
-        null == r.find((e) => e.section === A) && x(r[0].section);
+        null == r.find((e) => e.section === A) && h(r[0].section);
     }, [r, A]);
-    let h = n.useCallback(
+    let x = n.useCallback(
         (e) => {
-            (o({ action: "PRESS_SECTION", section: e }), x(e));
+            (o({ action: "PRESS_SECTION", section: e }), h(e));
         },
         [o],
     );
@@ -518,7 +523,7 @@ function e1(e) {
                       className: e5.$H,
                       type: "top",
                       selectedItem: A,
-                      onItemSelect: h,
+                      onItemSelect: x,
                       children: r.map((e) => {
                           let { section: i, text: s } = e;
                           return (0, l.jsx)(
@@ -584,14 +589,14 @@ function e8(e) {
             messageId: a,
             roleId: c,
         });
-    (0, f.A)(Z, Y, eh.R7.MODAL);
+    (0, f.A)(Z, Y, ex.R7.MODAL);
     let $ = (function (e) {
             let { mutualGuilds: i } = (0, eW.A)(e),
                 s = i?.length;
             return [
-                { section: eh.RP.BOT_INFO, text: Q.intl.string(Q.t.ZzAR2Y) },
-                { section: eh.RP.MUTUAL_GUILDS, text: (0, e3.A)(s) },
-                { section: eh.RP.BOT_DATA_ACCESS, text: Q.intl.string(Q.t.WstFb0) },
+                { section: ex.RP.BOT_INFO, text: Q.intl.string(Q.t.ZzAR2Y) },
+                { section: ex.RP.MUTUAL_GUILDS, text: (0, e3.A)(s) },
+                { section: ex.RP.BOT_DATA_ACCESS, text: Q.intl.string(Q.t.WstFb0) },
             ];
         })(i),
         ee = (0, y.A)({ user: i, guildId: d, channelId: r, displayProfile: Y, onClose: z });
@@ -603,7 +608,7 @@ function e8(e) {
             fetchStartedAt: Y?.fetchStartedAt,
             fetchEndedAt: Y?.fetchEndedAt,
             isLoaded: Y?.isLoaded,
-            children: (0, l.jsx)(O.N, {
+            children: (0, l.jsx)(C.N, {
                 value: G,
                 children: (0, l.jsx)(A.EO, {
                     "data-migration-pending": !0,
@@ -612,9 +617,9 @@ function e8(e) {
                     hideShadow: !0,
                     "aria-labelledby": X,
                     parentComponent: "BotUserProfileModal",
-                    children: (0, l.jsx)(x.F, {
-                        component: (0, l.jsx)(h.A, {
-                            children: (0, l.jsx)(x.H, { id: X, children: Q.intl.format(Q.t.KRe1Fk, { name: W }) }),
+                    children: (0, l.jsx)(h.F, {
+                        component: (0, l.jsx)(x.A, {
+                            children: (0, l.jsx)(h.H, { id: X, children: Q.intl.format(Q.t.KRe1Fk, { name: W }) }),
                         }),
                         children: (0, l.jsxs)(L.A, {
                             user: i,
@@ -630,7 +635,7 @@ function e8(e) {
                                         (0, l.jsxs)("div", {
                                             className: e9.El,
                                             children: [
-                                                (0, l.jsx)(S.A, {
+                                                (0, l.jsx)(O.A, {
                                                     user: i,
                                                     displayProfile: Y,
                                                     guildId: H,
@@ -685,7 +690,7 @@ function e8(e) {
                                             displayName: W,
                                             displayNameSize: "lg",
                                             pronouns: Y?.pronouns,
-                                            trailing: (0, l.jsx)(C.A, {
+                                            trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: Y,
                                                 themeType: e6.d.MODAL,
                                                 onClose: z,
@@ -697,7 +702,7 @@ function e8(e) {
                                             displayProfile: Y,
                                             guildId: H,
                                             items: $,
-                                            initialSection: u ?? eh.RP.BOT_INFO,
+                                            initialSection: u ?? ex.RP.BOT_INFO,
                                             onClose: z,
                                         }),
                                     ],
@@ -728,11 +733,11 @@ function is(e) {
         } = e,
         I = s === eg.ME ? void 0 : s,
         y = (0, E.Ay)(i.id, I),
-        O = N.Ay.getName(I, t, i),
+        C = N.Ay.getName(I, t, i),
         P = y?.guildId ?? I,
         R = n.useCallback(() => {
-            (0, F.A)({ user: i, guildId: P, alt: O });
-        }, [O, P, i]),
+            (0, F.A)({ user: i, guildId: P, alt: C });
+        }, [C, P, i]),
         D = (0, g.GV)(),
         { analyticsLocations: U } = (0, p.Ay)([...j, m.A.USER_PROFILE_MODAL]),
         M = (0, v.pb)({
@@ -744,7 +749,7 @@ function is(e) {
             messageId: d,
             roleId: r,
         });
-    (0, f.A)(U, y, eh.R7.MODAL);
+    (0, f.A)(U, y, ex.R7.MODAL);
     let k = n.useRef(null),
         G = (0, ie.M)(k);
     return (0, l.jsx)(p.f5, {
@@ -763,9 +768,9 @@ function is(e) {
                 "aria-labelledby": D,
                 parentComponent: "NonUserBotProfileModal",
                 children: [
-                    (0, l.jsx)(x.F, {
-                        component: (0, l.jsx)(h.A, {
-                            children: (0, l.jsx)(x.H, { id: D, children: Q.intl.format(Q.t.KRe1Fk, { name: O }) }),
+                    (0, l.jsx)(h.F, {
+                        component: (0, l.jsx)(x.A, {
+                            children: (0, l.jsx)(h.H, { id: D, children: Q.intl.format(Q.t.KRe1Fk, { name: C }) }),
                         }),
                         children: (0, l.jsxs)(L.A, {
                             user: i,
@@ -779,7 +784,7 @@ function is(e) {
                                         (0, l.jsx)(T.A, { user: i, displayProfile: y, themeType: e6.d.MODAL }),
                                         (0, l.jsx)("div", {
                                             className: e9.El,
-                                            children: (0, l.jsx)(S.A, {
+                                            children: (0, l.jsx)(O.A, {
                                                 user: i,
                                                 displayProfile: y,
                                                 guildId: I,
@@ -797,10 +802,10 @@ function is(e) {
                                             className: e9.eF,
                                             user: i,
                                             guildId: I,
-                                            displayName: O,
+                                            displayName: C,
                                             displayNameSize: "lg",
                                             pronouns: y?.pronouns,
-                                            trailing: (0, l.jsx)(C.A, {
+                                            trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: y,
                                                 themeType: e6.d.MODAL,
                                                 onClose: u,
@@ -812,20 +817,20 @@ function is(e) {
                                                 (0, l.jsx)(B.V, {
                                                     className: e5.$H,
                                                     type: "top",
-                                                    selectedItem: eh.RP.BOT_INFO,
+                                                    selectedItem: ex.RP.BOT_INFO,
                                                     onItemSelect: eg.tEg,
                                                     children: (0, l.jsx)(
                                                         B.V.Item,
                                                         {
                                                             className: e5.YU,
-                                                            id: eh.RP.BOT_INFO,
+                                                            id: ex.RP.BOT_INFO,
                                                             "aria-label": Q.intl.string(Q.t.ZzAR2Y),
                                                             children: (0, l.jsx)(V.E, {
                                                                 variant: "body-sm/normal",
                                                                 children: Q.intl.string(Q.t.ZzAR2Y),
                                                             }),
                                                         },
-                                                        eh.RP.BOT_INFO,
+                                                        ex.RP.BOT_INFO,
                                                     ),
                                                 }),
                                                 (0, l.jsxs)(H.Ip, {
@@ -869,8 +874,8 @@ var il = s(503698),
     io = s(994500),
     iu = s(741534),
     iA = s(249790),
-    ix = s(254828),
-    ih = s(783123),
+    ih = s(254828),
+    ix = s(783123),
     ij = s(463156),
     iI = s(446039),
     im = s(968475);
@@ -887,18 +892,18 @@ function ip(e) {
             onHide: o,
             sourceAnalyticsLocations: u = [],
         } = e,
-        x = s === eg.ME ? void 0 : s,
-        h = (0, G.bG)([io.A], () => io.A.isBlocked(i.id)),
-        { analyticsLocations: j } = (0, p.Ay)([...u, h ? m.A.BLOCKED_PROFILE_MODAL : m.A.IGNORED_PROFILE_MODAL]),
-        I = (0, v.pb)({ layout: "MODAL_V2", userId: i.id, guildId: x, channelId: n, messageId: t, roleId: d }),
+        h = s === eg.ME ? void 0 : s,
+        x = (0, G.bG)([io.A], () => io.A.isBlocked(i.id)),
+        { analyticsLocations: j } = (0, p.Ay)([...u, x ? m.A.BLOCKED_PROFILE_MODAL : m.A.IGNORED_PROFILE_MODAL]),
+        I = (0, v.pb)({ layout: "MODAL_V2", userId: i.id, guildId: h, channelId: n, messageId: t, roleId: d }),
         g = [
-            { icon: id.y, description: Q.intl.string(Q.t.kcuWva) },
-            { icon: id.y, description: Q.intl.string(h ? Q.t.QxrDY1 : Q.t.W6fjkS) },
+            { icon: id.CircleCheckIcon, description: Q.intl.string(Q.t.kcuWva) },
+            { icon: id.CircleCheckIcon, description: Q.intl.string(x ? Q.t.QxrDY1 : Q.t.W6fjkS) },
         ],
-        y = (0, E.Ay)(i.id, x);
-    (0, f.A)(j, y, eh.R7.MODAL_V2);
-    let O = N.Ay.getName(y?.guildId, n, i),
-        S = Q.intl.formatToPlainString(Q.t.KRe1Fk, { name: O });
+        y = (0, E.Ay)(i.id, h);
+    (0, f.A)(j, y, ex.R7.MODAL_V2);
+    let C = N.Ay.getName(y?.guildId, n, i),
+        O = Q.intl.formatToPlainString(Q.t.KRe1Fk, { name: C });
     return (0, l.jsx)(p.f5, {
         value: j,
         children: (0, l.jsx)(v.of, {
@@ -911,7 +916,7 @@ function ip(e) {
                 "data-migration-pending": !0,
                 transitionState: r,
                 className: im.zr,
-                "aria-label": S,
+                "aria-label": O,
                 parentComponent: "RestrictedUserProfileModalV2",
                 hideShadow: !0,
                 children: (0, l.jsxs)(L.A, {
@@ -925,7 +930,7 @@ function ip(e) {
                         (0, l.jsxs)("div", {
                             className: iI.Qs,
                             children: [
-                                (0, l.jsx)(iA.A, { user: i, guildId: x }),
+                                (0, l.jsx)(iA.A, { user: i, guildId: h }),
                                 (0, l.jsxs)("div", {
                                     className: iI.FS,
                                     children: [
@@ -937,7 +942,7 @@ function ip(e) {
                                         (0, l.jsx)(V.E, {
                                             variant: "body-md/medium",
                                             color: "text-default",
-                                            children: Q.intl.format(h ? Q.t.T7QiLn : Q.t.MnEowy, { username: O }),
+                                            children: Q.intl.format(x ? Q.t.T7QiLn : Q.t.MnEowy, { username: C }),
                                         }),
                                     ],
                                 }),
@@ -960,19 +965,19 @@ function ip(e) {
                                 (0, l.jsxs)(ia.B, {
                                     align: "center",
                                     children: [
-                                        (0, l.jsx)(ih.A, {
+                                        (0, l.jsx)(ix.A, {
                                             size: "md",
-                                            isBlocked: h,
+                                            isBlocked: x,
                                             onClick: () => {
                                                 (o(),
                                                     (0, iu.Wn)({
-                                                        action: h ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+                                                        action: x ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                         analyticsLocations: j,
                                                         ...I,
                                                     }));
                                             },
                                         }),
-                                        (0, l.jsx)(ix.A, {
+                                        (0, l.jsx)(ih.A, {
                                             userId: i.id,
                                             onClick: () => {
                                                 (o(),
@@ -997,7 +1002,7 @@ var ig = s(362781);
 function iN(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: A } = s,
-        [x, h] = (0, u.A)(A.id);
+        [h, x] = (0, u.A)(A.id);
     return (n.useEffect(
         () => () => {
             A.id === r.default.getCurrentUser()?.id &&
@@ -1007,8 +1012,8 @@ function iN(e) {
         },
         [A.id],
     ),
-    x && !i)
-        ? (0, l.jsx)(ip, { onHide: h, ...s })
+    h && !i)
+        ? (0, l.jsx)(ip, { onHide: x, ...s })
         : A.isNonUserBot()
           ? (0, l.jsx)(is, { ...s })
           : A.bot

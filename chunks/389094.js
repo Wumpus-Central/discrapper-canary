@@ -1,11 +1,11 @@
 var i = n(477900),
     s = n(582128),
-    r = n(284009),
-    l = n.n(r),
+    l = n(284009),
+    r = n.n(l),
     a = n(224640),
     c = n(683071),
-    d = n(430993),
-    o = n(789645),
+    o = n(430993),
+    d = n(789645),
     u = n(696208),
     h = n(10005),
     C = n(534654),
@@ -18,20 +18,20 @@ n.d(
     {},
     {
         default: function (e) {
-            let { currentUser: t, otherUser: n, transitionState: r, onClose: g } = e,
+            let { currentUser: t, otherUser: n, transitionState: l, onClose: g } = e,
                 [j, b] = s.useState(!1),
-                y = s.useCallback(() => {
+                m = s.useCallback(() => {
                     b(!0);
                 }, []),
-                A = s.useCallback(() => {
+                y = s.useCallback(() => {
                     g();
                 }, [g]),
-                m = (0, C.A)(),
-                { declineLinkRequest: L, isDeclineLoading: S } = (0, h.A)({ onError: y, onSuccess: A });
+                A = (0, C.A)(),
+                { declineLinkRequest: S, isDeclineLoading: L } = (0, h.A)({ onError: m, onSuccess: y });
             return (
-                l()(m, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+                r()(A, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
                 (0, i.jsxs)(a.d, {
-                    transitionState: r,
+                    transitionState: l,
                     onClose: g,
                     children: [
                         j &&
@@ -40,13 +40,17 @@ n.d(
                                 message: p.intl.string(k.default.tJAUyn),
                                 role: "alert",
                             }),
-                        (0, i.jsxs)(d.c, {
+                        (0, i.jsxs)(o.c, {
                             children: [
                                 (0, i.jsx)(x.A.Header, {
                                     currentUser: t,
                                     otherUser: n,
                                     header: p.intl.string(k.default.teIRCR),
-                                    icon: (0, i.jsx)(o.P, { size: "md", color: "currentColor", className: f.u }),
+                                    icon: (0, i.jsx)(d.XSmallIcon, {
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: f.u,
+                                    }),
                                 }),
                                 (0, i.jsx)(x.A.Content, {
                                     children: (0, i.jsx)(x.A.Notice, { notice: p.intl.string(k.default.LcM8BS) }),
@@ -56,15 +60,15 @@ n.d(
                         (0, i.jsx)(u.H, {
                             actionsFullWidth: !0,
                             actions: [
-                                { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: g, disabled: S },
+                                { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: g, disabled: L },
                                 {
                                     variant: "critical-primary",
                                     text: p.intl.string(k.default.dKxFcn),
                                     onClick: function () {
-                                        (b(!1), L(n.id));
+                                        (b(!1), S(n.id));
                                     },
-                                    disabled: S,
-                                    loading: S,
+                                    disabled: L,
+                                    loading: L,
                                 },
                             ],
                         }),

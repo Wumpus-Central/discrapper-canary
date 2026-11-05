@@ -1,11 +1,11 @@
-var c = t(477900),
-    i = t(292801);
-t.d(
-    p,
+var c = s(477900),
+    i = s(292801);
+s.d(
+    r,
     {},
     {
-        A: function (s) {
-            return (0, c.jsx)(i.t, { ...s });
+        A: function (p) {
+            return (0, c.jsx)(i.ArrowAngleRightUpIcon, { ...p });
         },
     },
 );

@@ -1,8 +1,8 @@
 var a = i(477900);
 i(582128);
 var l = i(192308),
-    s = i(401843),
-    n = i(676030),
+    n = i(401843),
+    s = i(676030),
     r = i(734057),
     d = i(71393),
     h = i(754712),
@@ -40,11 +40,11 @@ i.d(
                         i.e(499941),
                         i.e(464242),
                         i.e(858337),
+                        i.e(944801),
                         i.e(236946),
                         i.e(757598),
                         i.e(338601),
                         i.e(482511),
-                        i.e(944801),
                         i.e(944727),
                         i.e(943371),
                         i.e(725241),
@@ -59,7 +59,7 @@ i.d(
                 });
             else {
                 let i = r.A.getChannel(t),
-                    a = (0, n.A)(
+                    a = (0, s.A)(
                         u.jQ.PRESET_CUSTOM,
                         u.on.RESOLUTION_1080,
                         u.kn.FPS_30,
@@ -69,7 +69,7 @@ i.d(
                     )
                         ? { width: 1920, height: 1080 }
                         : { width: 1280, height: 720 };
-                ((0, s.Xd)({
+                ((0, n.Xd)({
                     preset: u.jQ.PRESET_CUSTOM,
                     resolution: a.height,
                     frameRate: u.kn.FPS_30,
@@ -78,7 +78,7 @@ i.d(
                     h.Ay.getMediaEngine()
                         .getDesktopSource(a, !0)
                         .then((i) => {
-                            (0, s.XI)(e, t, { pid: null, sourceId: i, sourceName: null, analyticsLocations: g });
+                            (0, n.XI)(e, t, { pid: null, sourceId: i, sourceName: null, analyticsLocations: g });
                         }));
             }
         },

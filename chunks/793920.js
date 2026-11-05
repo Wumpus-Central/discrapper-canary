@@ -1,3 +1,4 @@
+s.r(t);
 var a = s(477900);
 s(582128);
 var i = s(646514),
@@ -7,7 +8,7 @@ s.d(
     t,
     {},
     {
-        S: function (e) {
+        VoiceLowIcon: function (e) {
             let {
                     size: t = "md",
                     width: s,
@@ -18,12 +19,12 @@ s.d(
                 } = e,
                 d = (0, l.J)(t),
                 c = d?.width ?? s,
-                p = d?.height ?? r;
+                m = d?.height ?? r;
             return (0, a.jsx)("svg", {
                 ...(0, n.A)(u),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: c,
-                height: p,
+                height: m,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: (0, a.jsx)("path", {

@@ -5,8 +5,8 @@ var l = n(503698),
     s = n(29540),
     r = n(481901),
     o = n(323384),
-    d = n(693409),
-    c = n(418241),
+    c = n(693409),
+    d = n(418241),
     u = n(708416),
     h = n(786739),
     p = n(792996),
@@ -24,9 +24,9 @@ n.d(
                 C = p.intl.string(g ? x : h.default.ZtYyOx);
             return (0, i.jsx)("div", {
                 className: a()(l, A.A),
-                children: (0, i.jsx)(d.A, {
-                    iconComponent: g ? (n ? s.u : r.d) : o.k,
-                    onClick: () => (0, c.s)(f),
+                children: (0, i.jsx)(c.A, {
+                    iconComponent: g ? (n ? s.ExperimentalCouchIcon : r.GridSquareIcon) : o.AppsIcon,
+                    onClick: () => (0, d.s)(f),
                     className: A.u,
                     label: C,
                 }),

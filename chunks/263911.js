@@ -7,7 +7,11 @@ n.d(
     {},
     {
         I: function () {
-            return (0, i.jsx)(r.E, { type: { text: _.intl.string(_.t.RiDMFz) }, variant: "primary", icon: o.p });
+            return (0, i.jsx)(r.E, {
+                type: { text: _.intl.string(_.t.RiDMFz) },
+                variant: "primary",
+                icon: o.ClydeIcon,
+            });
         },
     },
 );

@@ -14,20 +14,20 @@ var n = r(477900),
     h = r(650583),
     S = r(792996),
     m = r(47299);
-let g = i.memo(function (e) {
-    let { width: t, height: r, src: l, gifSrc: g, url: p, format: R, className: y } = e,
-        [F, G] = i.useState(!1),
+let g = i.memo(function (t) {
+    let { width: e, height: r, src: l, gifSrc: g, url: p, format: R, className: F } = t,
+        [G, y] = i.useState(!1),
         [C, A] = i.useState(!1),
         T = (0, _.km)((0, d.xo)(p), C),
         w = T ? S.intl.string(S.t["5/NS74"]) : S.intl.string(S.t.nIH0v8),
-        D = T ? a.StarIcon : s.y;
-    function N(e) {
-        (e.preventDefault(),
-            e.stopPropagation(),
-            G(!0),
+        D = T ? a.StarIcon : s.StarOutlineIcon;
+    function N(t) {
+        (t.preventDefault(),
+            t.stopPropagation(),
+            y(!0),
             T
                 ? (0, d.Tr)(p)
-                : ((0, d.wg)({ url: p, src: l, gifSrc: g, width: t, height: r, format: R }),
+                : ((0, d.wg)({ url: p, src: l, gifSrc: g, width: e, height: r, format: R }),
                   E._.dispatch(I.jej.FAVORITE_GIF)));
     }
     function U() {
@@ -35,26 +35,26 @@ let g = i.memo(function (e) {
     }
     return (
         i.useEffect(() => {
-            if (!F) return;
-            let e = setTimeout(() => {
-                G(!1);
+            if (!G) return;
+            let t = setTimeout(() => {
+                y(!1);
             }, 500);
-            return () => clearTimeout(e);
-        }, [F]),
+            return () => clearTimeout(t);
+        }, [G]),
         (0, n.jsx)(u.m, {
             text: w,
             children: (0, n.jsx)(c.D, {
                 "aria-label": w,
                 ignoreKeyPress: !0,
-                className: o()(y, m.jj, { [m.wH]: T, [m.TV]: F }),
-                onMouseDown: (e) => e.preventDefault(),
+                className: o()(F, m.jj, { [m.wH]: T, [m.TV]: G }),
+                onMouseDown: (t) => t.preventDefault(),
                 onMouseEnter: U,
                 onFocus: U,
                 onClick: N,
-                onKeyDown: function (e) {
-                    (e.key === h.dh.ENTER || e.key === h.dh.SPACE) && N(e);
+                onKeyDown: function (t) {
+                    (t.key === h.dh.ENTER || t.key === h.dh.SPACE) && N(t);
                 },
-                onDoubleClick: (e) => e.preventDefault(),
+                onDoubleClick: (t) => t.preventDefault(),
                 children: (0, n.jsx)(D, {
                     color: "currentColor",
                     className: m.Kk,
@@ -66,4 +66,4 @@ let g = i.memo(function (e) {
         })
     );
 });
-r.d(t, {}, { A: g });
+r.d(e, {}, { A: g });

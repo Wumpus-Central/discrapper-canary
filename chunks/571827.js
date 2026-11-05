@@ -27,13 +27,13 @@ n.d(
                           : t === r.R.NAMEPLATE
                             ? u.e.NAMEPLATE_MODAL_UPSELL
                             : null,
-                E = t === r.R.AVATAR_DECORATION || t === r.R.PROFILE_EFFECT;
+                h = t === r.R.AVATAR_DECORATION || t === r.R.PROFILE_EFFECT;
             if (null == f) return null;
-            function h(e) {
+            function E(e) {
                 return (0, l.jsxs)("div", {
                     className: m.hc,
                     children: [
-                        !e && (0, l.jsx)(o.t, { className: m.ax, size: "md", color: c.k0.PREMIUM_TIER_2 }),
+                        !e && (0, l.jsx)(o.NitroWheelIcon, { className: m.ax, size: "md", color: c.k0.PREMIUM_TIER_2 }),
                         (0, l.jsx)(s.E, {
                             className: m.cf,
                             variant: "body-md/medium",
@@ -105,7 +105,7 @@ n.d(
                     ],
                 });
             }
-            return E ? (0, l.jsx)(A, { render: h }) : h(!1);
+            return h ? (0, l.jsx)(A, { render: E }) : E(!1);
         },
     },
 );

@@ -10,8 +10,8 @@ var l = t(477900),
     d = t(889812),
     h = t(973854),
     g = t(265872),
-    A = t(165862),
-    m = t(477782),
+    m = t(165862),
+    A = t(477782),
     p = t(365199),
     j = t(58736),
     f = t(287074),
@@ -19,7 +19,7 @@ var l = t(477900),
     N = t(494208),
     b = t(964167),
     C = t(792996);
-function E() {
+function I() {
     let [e, n] = i.useState(!1),
         t = i.useRef(null),
         a = C.intl.string(C.t["UKOtz+"]);
@@ -33,14 +33,14 @@ function E() {
         onRequestClose: () => n(!1),
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, l.jsx)(A.W, {
+            return (0, l.jsx)(m.W, {
                 "data-menu-migrated": !0,
                 navId: "app-channel-chat-panel-overflow",
                 onClose: n,
                 onSelect: n,
                 "aria-label": C.intl.string(C.t.Xm41aV),
-                children: (0, l.jsx)(m.rX, {
-                    children: (0, l.jsx)(m.Dr, {
+                children: (0, l.jsx)(A.rX, {
+                    children: (0, l.jsx)(A.Dr, {
                         id: "app-channel-open-in-full-view",
                         label: C.intl.string(C.t.IxVmZi),
                         action: () => (0, x.pX)((0, b.gu)((0, x.JK)().location.pathname)),
@@ -62,10 +62,10 @@ function E() {
         },
     });
 }
-function I(e) {
+function E(e) {
     let { channel: n } = e;
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(N.A, { channel: n }), (0, l.jsx)(f.A, { channel: n }), (0, l.jsx)(E, {})],
+        children: [(0, l.jsx)(N.A, { channel: n }), (0, l.jsx)(f.A, { channel: n }), (0, l.jsx)(I, {})],
     });
 }
 var _ = t(355622),
@@ -89,24 +89,24 @@ var _ = t(355622),
     Y = t(652215),
     M = t(172039);
 function q(e) {
-    let { channelId: n, baseChannelId: g, channelViewSource: A = "Split View", isResourceChannelView: m } = e,
+    let { channelId: n, baseChannelId: g, channelViewSource: m = "Split View", isResourceChannelView: A } = e,
         p = (0, a.bG)([w.A], () => w.A.getChannel(n)),
         f = (0, a.bG)([B.A], () => B.A.getGuild(p?.getGuildId())),
         N = (0, U.Ay)(p),
         b = (0, a.bG)([R.A], () => f?.id != null && R.A.isLurking(f.id), [f]),
-        E = (0, S.A)(n),
+        I = (0, S.A)(n),
         q = (0, a.bG)([T.h], () => T.h.getResourceForChannel(f?.id, n)?.title),
-        z = (0, c.vL)(p),
-        X = (0, L.Uf)(p),
+        X = (0, c.vL)(p),
+        z = (0, L.Uf)(p),
         K = i.useRef(!1);
     if (
         (i.useEffect(() => {
             null == p ||
                 K.current ||
                 ((K.current = !0),
-                (0, u.zV)(Y.HAw.CHANNEL_OPENED, { ...(0, d.q)(p.id), channel_view: A }),
+                (0, u.zV)(Y.HAw.CHANNEL_OPENED, { ...(0, d.q)(p.id), channel_view: m }),
                 (0, h.A)({ channelId: p.id }));
-        }, [p, A]),
+        }, [p, m]),
         null == p || (null == f && !p.isPrivate()))
     )
         return null;
@@ -114,12 +114,12 @@ function q(e) {
         $ = [];
     b || W || $.push((0, l.jsx)(v.A, { channel: p }, "notifications"));
     let J = W && p.type === Y.rbe.GUILD_APP;
-    return (J && $.push((0, l.jsx)(I, { channel: p }, "app-channel")),
+    return (J && $.push((0, l.jsx)(E, { channel: p }, "app-channel")),
     $.push(
         (0, l.jsx)(
             j.Ay.Icon,
             {
-                icon: s.P,
+                icon: s.XSmallIcon,
                 tooltip: C.intl.string(C.t.cpT0Cq),
                 onClick: () => {
                     (G.A.closeChannelSidebar(g), J && F._.dispatch(Y.jej.FOCUS_CHAT_BUTTON));
@@ -128,10 +128,10 @@ function q(e) {
             "close",
         ),
     ),
-    z)
+    X)
         ? (0, l.jsx)(O.A, { guild: f, channelId: p.id })
-        : null != X
-          ? (0, l.jsx)(P.A, { guild: f, channelId: X })
+        : null != z
+          ? (0, l.jsx)(P.A, { guild: f, channelId: z })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(o.A, { channel: p, draftType: D.C.ChannelMessage }),
@@ -140,7 +140,7 @@ function q(e) {
                         "aria-label": C.intl.string(C.t.BIYAqa),
                         children: (0, k.zF)({
                             channel: p,
-                            channelName: E ? q : N,
+                            channelName: I ? q : N,
                             guild: f,
                             inSidebar: !0,
                             handleContextMenu: function (e) {
@@ -172,7 +172,7 @@ function q(e) {
                                 : function () {
                                       if (null == p) return;
                                       let e = H.A.getMessages(p.id);
-                                      if (m) {
+                                      if (A) {
                                           ((0, x.pX)(Y.BVt.CHANNEL(p.guild_id, p.id)), (0, y.bN)(p.guild_id, null));
                                           return;
                                       }

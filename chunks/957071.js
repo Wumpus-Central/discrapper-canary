@@ -15,16 +15,16 @@ let g = [
     {
         id: "add-images-videos",
         label: p.default["51+9lc"],
-        icon: a.s,
+        icon: a.ImagesIcon,
         accept: "image/*,video/*,.png,.jpg,.jpeg,.gif,.webp,.avif,.heic,.heif,.svg,.bmp,.mp4,.m4v,.mov,.webm,.mkv,.avi",
     },
     {
         id: "add-sounds",
         label: p.default["10ljr2"],
-        icon: i.T,
+        icon: i.MusicIcon,
         accept: "audio/*,.mp3,.wav,.ogg,.oga,.opus,.m4a,.aac,.flac,.weba,.webm,.aif,.aiff,.mid,.midi",
     },
-    { id: "add-other-files", label: p.default.aotDee, icon: s.H, accept: "" },
+    { id: "add-other-files", label: p.default.aotDee, icon: s.FileUpIcon, accept: "" },
 ];
 n.d(
     t,
@@ -96,8 +96,8 @@ n.d(
                                             ? (0, r.jsx)(u.Dr, {
                                                   id: "import-project",
                                                   label: h.intl.string(p.default["p/k5i7"]),
-                                                  iconLeft: d.q,
-                                                  leadingAccessory: { type: "icon", icon: d.q },
+                                                  iconLeft: d.BrowserPlusIcon,
+                                                  leadingAccessory: { type: "icon", icon: d.BrowserPlusIcon },
                                                   action: x,
                                               })
                                             : null,
@@ -105,8 +105,8 @@ n.d(
                                             ? (0, r.jsx)(u.Dr, {
                                                   id: "send-to-other-projects",
                                                   label: h.intl.string(p.default["5HmLrK"]),
-                                                  iconLeft: f.t,
-                                                  leadingAccessory: { type: "icon", icon: f.t },
+                                                  iconLeft: f.ChatArrowRightIcon,
+                                                  leadingAccessory: { type: "icon", icon: f.ChatArrowRightIcon },
                                                   action: j,
                                               })
                                             : null,

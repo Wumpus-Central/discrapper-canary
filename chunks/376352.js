@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(855986),
     o = n(554146),
-    d = n(939249),
-    c = n(834730),
+    c = n(939249),
+    d = n(834730),
     u = n(805251),
     h = n(687966),
     p = n(34188),
@@ -16,23 +16,23 @@ var i = n(477900),
     x = n(294323),
     C = n(429913),
     y = n(643421),
-    j = n(263775),
-    I = n(409626),
+    I = n(263775),
+    j = n(409626),
     N = n(613902),
     v = n(692969),
     E = n(980822),
     b = n(834757),
     S = n(682163),
-    _ = n(832163),
-    T = n(909004),
+    T = n(832163),
+    _ = n(909004),
     R = n(46653),
     O = n(240248),
-    P = n(49999),
-    L = n(818348),
+    L = n(49999),
+    P = n(818348),
     M = n(792996),
     w = n(472344);
 function U(e) {
-    let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
+    let [t, n] = (0, I.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
 function D(e) {
@@ -51,14 +51,14 @@ function D(e) {
         className: s()(t, w.kL),
         ref: n,
         children: [
-            (0, i.jsxs)(d.D, {
+            (0, i.jsxs)(c.D, {
                 className: w.BQ,
                 onClick: h,
                 "aria-expanded": p,
                 "aria-haspopup": m,
                 children: [
                     null != l && (0, i.jsx)("div", { className: s()(w.zc, { [w.RT]: a }), children: l }),
-                    (0, i.jsx)(c.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
+                    (0, i.jsx)(d.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
             o && (0, i.jsx)(u.E, { type: "new", variant: "primary" }),
@@ -68,15 +68,15 @@ function D(e) {
 function V(e) {
     let { className: t, applicationId: n } = e,
         { gameId: l, gameRecord: a } = (0, E.A)({ applicationId: n }),
-        r = (0, v.A)({ gameId: l ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
+        r = (0, v.A)({ gameId: l ?? void 0, source: j.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
     let o = a?.getIconURL(S.iu.MEDIUM),
-        d = (0, O.uJ)(o)
+        c = (0, O.uJ)(o)
             ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
             : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
     return (0, i.jsx)(D, {
         className: s()(t, w.LM),
-        icon: d,
+        icon: c,
         isAppIcon: !(0, O.uJ)(o),
         text: M.intl.string(M.t.f7aVGn),
         onClick: r,
@@ -89,14 +89,14 @@ n.d(
         F: function (e) {
             let t,
                 { user: n, stream: a, channel: s } = e,
-                [d, c] = l.useState(!1),
+                [c, d] = l.useState(!1),
                 u = (0, b.AO)(a),
                 y = u?.id,
-                j = (0, r.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
-                I = null != y ? j[y] : null,
-                v = (0, C.h)(I),
+                I = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
+                j = null != y ? I[y] : null,
+                v = (0, C.h)(j),
                 E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
-                O = E ? (I ?? y ?? null) : I,
+                O = E ? (j ?? y ?? null) : j,
                 G = (0, C.h)(O),
                 {
                     isLoading: k,
@@ -111,10 +111,10 @@ n.d(
                 { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, g.RD)(H === n.id ? G : null),
                 J = H === n.id && Z && !Q,
                 ee = l.useCallback(() => {
-                    c(!1);
+                    d(!1);
                 }, []),
                 et = l.useCallback(() => {
-                    X(P.i.USER_DISMISS);
+                    X(L.i.USER_DISMISS);
                 }, [X]),
                 en = K && null != B && (q || Z),
                 ei = null != F || en,
@@ -129,10 +129,10 @@ n.d(
                     isAppIcon: es,
                     icon: er,
                     text: eo,
-                    renderPopout: ed,
-                    positionKey: ec,
+                    renderPopout: ec,
+                    positionKey: ed,
                 } = l.useMemo(() => {
-                    if (!E && (null == v || null == I)) return { isAppIcon: !1 };
+                    if (!E && (null == v || null == j)) return { isAppIcon: !1 };
                     if (ei && null != O) {
                         let e = el ?? G?.getIconURL(S.iu.SMALL),
                             t = null != e && null == el,
@@ -147,7 +147,7 @@ n.d(
                             renderPopout: function (e) {
                                 return null == O
                                     ? null
-                                    : (0, i.jsx)(T.V, {
+                                    : (0, i.jsx)(_.V, {
                                           className: e,
                                           userId: n.id,
                                           channel: s,
@@ -160,46 +160,46 @@ n.d(
                             positionKey: "widget-version",
                         };
                     }
-                    if (null == v || null == I) return { isAppIcon: !1 };
+                    if (null == v || null == j) return { isAppIcon: !1 };
                     let { icon: e, text: t } =
                         H === n.id
-                            ? { icon: (0, i.jsx)(p.U, { className: w.Kk }), text: M.intl.string(M.t.e6S76Q) }
+                            ? { icon: (0, i.jsx)(p.ShopIcon, { className: w.Kk }), text: M.intl.string(M.t.e6S76Q) }
                             : { icon: (0, i.jsx)(m.GiftIcon, { className: w.Kk }), text: M.intl.string(M.t["8ZzYIv"]) };
                     return {
                         isAppIcon: !1,
                         icon: e,
                         text: t,
                         renderPopout: function (e) {
-                            return null == I
+                            return null == j
                                 ? null
-                                : (0, i.jsx)(T.Z, {
+                                : (0, i.jsx)(_.Z, {
                                       className: e,
                                       userId: n.id,
                                       channel: s,
-                                      applicationId: I,
+                                      applicationId: j,
                                       onClose: ee,
                                   });
                         },
                         positionKey: "feature-card-version",
                     };
-                }, [E, ei, O, G, v, I, H, n.id, s, ee, K, et, el, ea]);
-            return k || J || (null == ed && !E)
+                }, [E, ei, O, G, v, j, H, n.id, s, ee, K, et, el, ea]);
+            return k || J || (null == ec && !E)
                 ? null
                 : (0, i.jsx)(A.N, {
-                      theme: L.NJ.DARK,
+                      theme: P.NJ.DARK,
                       children: (e) =>
-                          null == ed
+                          null == ec
                               ? (0, i.jsx)(V, { className: e, applicationId: y })
                               : (0, i.jsx)(f.Y, {
                                     targetElementRef: W,
-                                    shouldShow: d,
+                                    shouldShow: c,
                                     animation: f.Y.Animation.FADE,
                                     position: "bottom",
-                                    positionKey: ec,
+                                    positionKey: ed,
                                     align: "center",
                                     spacing: 8,
                                     onRequestClose: ee,
-                                    renderPopout: () => ed(e),
+                                    renderPopout: () => ec(e),
                                     children: () =>
                                         (0, i.jsx)(D, {
                                             className: e,
@@ -209,9 +209,9 @@ n.d(
                                             text: eo,
                                             showBadge: $,
                                             onClick: () => {
-                                                (Y(P.i.TAKE_ACTION), c((e) => !e));
+                                                (Y(L.i.TAKE_ACTION), d((e) => !e));
                                             },
-                                            "aria-expanded": d,
+                                            "aria-expanded": c,
                                             "aria-haspopup": "dialog",
                                         }),
                                 }),

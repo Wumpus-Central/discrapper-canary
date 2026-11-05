@@ -1,3 +1,4 @@
+s.r(a);
 var e = s(477900);
 s(582128);
 var i = s(646514),
@@ -7,23 +8,23 @@ s.d(
     a,
     {},
     {
-        e: function (l) {
+        ClipsAutoIcon: function (l) {
             let {
                     size: a = "md",
                     width: s,
                     height: h,
                     color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: n = "",
-                    ...p
+                    ...o
                 } = l,
-                o = (0, c.J)(a),
-                r = o?.width ?? s,
-                w = o?.height ?? h;
+                p = (0, c.J)(a),
+                r = p?.width ?? s,
+                u = p?.height ?? h;
             return (0, e.jsxs)("svg", {
-                ...(0, t.A)(p),
+                ...(0, t.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: r,
-                height: w,
+                height: u,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

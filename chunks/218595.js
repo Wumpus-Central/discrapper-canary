@@ -6,19 +6,19 @@ var i = n(477900),
     a = n(646514),
     o = n(331322),
     d = n(890497),
-    u = n(628284),
-    c = n(834730),
+    c = n(628284),
+    u = n(834730),
     p = n(452027),
     g = n(150934),
     f = n(347704),
     x = n(47167),
     S = n(727419),
     m = n(555337),
-    E = n(636042),
-    h = n(376092),
+    h = n(636042),
+    E = n(376092),
     j = n(808728),
-    b = n(317525),
-    C = n(994500),
+    C = n(317525),
+    b = n(994500),
     I = n(287809),
     N = n(129230),
     v = n(975571),
@@ -49,18 +49,18 @@ function T(t) {
         rulesChannelId: n,
         publicUpdatesChannelId: s,
         onRulesChannelChange: a,
-        onPublicUpdatesChannelChange: u,
+        onPublicUpdatesChannelChange: c,
     } = t;
     l.useEffect(() => {
         (0, y.sx)({ fromStep: M.pj.SAFETY_CHECK, toStep: M.pj.BASICS, guildId: e.id });
     }, [e.id]);
-    let c = (0, r.bG)([j.A], () => j.A.getChannels(e.id)),
+    let u = (0, r.bG)([j.A], () => j.A.getChannels(e.id)),
         p = l.useCallback((t) => ({ id: t.value, value: t.value, label: t.label }), []),
         g = [{ value: "1", label: L.intl.string(L.t.Cla0re) }];
     return (
-        c[j.I].forEach((t) => {
+        u[j.I].forEach((t) => {
             let { channel: e } = t;
-            e.type === P.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, x.m1)(e, I.default, C.A, !0) });
+            e.type === P.rbe.GUILD_TEXT && g.push({ value: e.id, label: (0, x.m1)(e, I.default, b.A, !0) });
         }),
         (0, i.jsxs)(o.B, {
             gap: 16,
@@ -83,7 +83,7 @@ function T(t) {
                             : L.intl.string(L.t.zdWNET),
                     options: [{ value: "null", label: L.intl.string(L.t.PoWNfe) }, ...g],
                     formatOption: p,
-                    onSelectionChange: (t) => u("null" === t ? null : t),
+                    onSelectionChange: (t) => c("null" === t ? null : t),
                     selectionMode: "single",
                     value: s ?? "null",
                 }),
@@ -98,12 +98,12 @@ function B(t) {
         gap: 8,
         align: "start",
         children: [
-            (0, i.jsx)(u.y, { size: "sm", className: O.aV, color: a.A.colors.ICON_FEEDBACK_POSITIVE }),
+            (0, i.jsx)(c.CircleCheckIcon, { size: "sm", className: O.aV, color: a.A.colors.ICON_FEEDBACK_POSITIVE }),
             (0, i.jsxs)(o.B, {
                 gap: 4,
                 children: [
-                    (0, i.jsx)(c.E, { variant: "body-md/normal", children: e }),
-                    (0, i.jsx)(c.E, { variant: "body-xs/normal", color: "text-subtle", children: n }),
+                    (0, i.jsx)(u.E, { variant: "body-md/normal", children: e }),
+                    (0, i.jsx)(u.E, { variant: "body-xs/normal", color: "text-subtle", children: n }),
                 ],
             }),
         ],
@@ -114,7 +114,7 @@ function G(t) {
     return (0, i.jsxs)("div", {
         className: O.CZ,
         children: [
-            (0, i.jsx)(c.E, {
+            (0, i.jsx)(u.E, {
                 className: O.qd,
                 variant: "body-xs/semibold",
                 color: "text-muted",
@@ -129,7 +129,7 @@ function G(t) {
                             className: O.ce,
                             children: [
                                 (0, i.jsx)("div", { className: O.dT }),
-                                (0, i.jsx)(c.E, { variant: "body-sm/normal", color: "text-default", children: n(t) }),
+                                (0, i.jsx)(u.E, { variant: "body-sm/normal", color: "text-default", children: n(t) }),
                             ],
                         },
                         e,
@@ -147,7 +147,7 @@ function R(t) {
         (0, i.jsxs)("div", {
             className: O.CZ,
             children: [
-                (0, i.jsx)(c.E, { className: O.qd, variant: "body-xs/semibold", color: "text-muted", children: l }),
+                (0, i.jsx)(u.E, { className: O.qd, variant: "body-xs/semibold", color: "text-muted", children: l }),
                 (0, i.jsx)("div", {
                     className: O.lM,
                     children: e.map((t, e) =>
@@ -157,7 +157,7 @@ function R(t) {
                                 className: O.ce,
                                 children: [
                                     (0, i.jsx)("div", { className: O.xE }),
-                                    (0, i.jsx)(c.E, { variant: "body-sm/normal", color: "text-muted", children: n(t) }),
+                                    (0, i.jsx)(u.E, { variant: "body-sm/normal", color: "text-muted", children: n(t) }),
                                 ],
                             },
                             e,
@@ -179,7 +179,7 @@ function Y(t) {
             case P.xBc.MANAGE_GUILD_EXPRESSIONS.toString():
                 return L.intl.string(L.t.cmp2W6);
             default:
-                return (0, h.hx)(t);
+                return (0, E.hx)(t);
         }
     }
     let { enabledPermissions: l, disabledPermissions: s } = e;
@@ -247,17 +247,17 @@ function w(t) {
     let { guild: n } = (0, r.cf)([m.A], () => m.A.getProps()),
         [a, o] = l.useState("intro"),
         [d] = l.useState(() => n?.verificationLevel),
-        [u] = l.useState(() => n?.explicitContentFilter),
-        c = null != d && d > P.PvD.NONE,
-        p = u === P.gh6.ALL_MEMBERS,
-        g = !(c && p),
-        [x, h] = l.useState("1"),
-        [j, C] = l.useState(n?.publicUpdatesChannelId ?? null),
+        [c] = l.useState(() => n?.explicitContentFilter),
+        u = null != d && d > P.PvD.NONE,
+        p = c === P.gh6.ALL_MEMBERS,
+        g = !(u && p),
+        [x, E] = l.useState("1"),
+        [j, b] = l.useState(n?.publicUpdatesChannelId ?? null),
         [I] = l.useState(() => !M.dR.some((t) => A.Ib(t, n))),
         [v] = l.useState(() => n?.defaultMessageNotifications),
         O = v === P.orn.ONLY_MENTIONS,
         B = !O || !I,
-        G = (0, r.bG)([b.A], () => (null != n ? b.A.getEveryoneRole(n) : void 0)),
+        G = (0, r.bG)([C.A], () => (null != n ? C.A.getEveryoneRole(n) : void 0)),
         [R, Y] = l.useState(!1);
     if (null == n) return null;
     let w = [
@@ -277,7 +277,7 @@ function w(t) {
             {
                 stepKey: M.pj.SAFETY_CHECK,
                 modalProps: { title: L.intl.string(L.t.QrjLYl), subtitle: L.intl.string(L.t.i1STwu) },
-                body: (0, i.jsx)(_, { guild: n, verificationLevelMet: c, contentFilterMet: p }),
+                body: (0, i.jsx)(_, { guild: n, verificationLevelMet: u, contentFilterMet: p }),
                 nextButtonProps: { text: L.intl.string(L.t.JFfins) },
             },
             {
@@ -287,8 +287,8 @@ function w(t) {
                     guild: n,
                     rulesChannelId: x,
                     publicUpdatesChannelId: j,
-                    onRulesChannelChange: h,
-                    onPublicUpdatesChannelChange: C,
+                    onRulesChannelChange: E,
+                    onPublicUpdatesChannelChange: b,
                 }),
             },
             {
@@ -322,13 +322,13 @@ function w(t) {
             let t = I ? null : s.TF(G.permissions, M.e$);
             if (null != t && t !== G.permissions) {
                 let e = { ...G, permissions: t };
-                await (0, E.JY)(n.id, [e], void 0, void 0, void 0, { throwErr: !0 });
+                await (0, h.JY)(n.id, [e], void 0, void 0, void 0, { throwErr: !0 });
             }
             let e = {
                 features: new Set([...n.features, P.GuildFeatures.COMMUNITY]),
                 rulesChannelId: x,
                 publicUpdatesChannelId: j,
-                ...(!c && { verificationLevel: P.PvD.LOW }),
+                ...(!u && { verificationLevel: P.PvD.LOW }),
                 ...(!p && { explicitContentFilter: P.gh6.ALL_MEMBERS }),
                 ...(!O && { defaultMessageNotifications: P.orn.ONLY_MENTIONS }),
             };

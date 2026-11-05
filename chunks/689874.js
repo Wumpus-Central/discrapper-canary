@@ -10,7 +10,7 @@ var r = n(477900),
     o = n(572164),
     A = n(806931),
     h = n(792996),
-    x = n(874566);
+    y = n(874566);
 n.d(
     e,
     {},
@@ -29,11 +29,11 @@ n.d(
                 ? (0, r.jsx)(s.m, {
                       text: h.intl.string(h.t.DJXW3G),
                       children: (0, r.jsx)("div", {
-                          className: x.g,
+                          className: y.g,
                           children: (0, r.jsx)(l.E, {
                               type: { text: h.intl.string(h.t.pCMkDb) },
                               variant: "secondary",
-                              icon: a.x,
+                              icon: a.ClipsIcon,
                           }),
                       }),
                   })

@@ -12,7 +12,7 @@ n.d(
             return (0, r.jsx)(l.$, {
                 variant: "expressive",
                 onClick: e,
-                icon: s.d,
+                icon: s.BoostTier2Icon,
                 iconPosition: "start",
                 size: n,
                 text: i.intl.string(i.t["+7XY31"]),

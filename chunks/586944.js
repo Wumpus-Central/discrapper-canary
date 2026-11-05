@@ -22,8 +22,8 @@ var r,
     I = l(775427),
     R = l(145331);
 l(321073);
-var C = l(503698),
-    T = l.n(C),
+var T = l(503698),
+    C = l.n(T),
     j = l(719442),
     L = l(235599),
     v = l(765178),
@@ -208,7 +208,7 @@ function eR(e) {
         s = en.Ay.useName(l, r, t);
     return (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-default", children: s });
 }
-function eC(e) {
+function eT(e) {
     let { value: t, avatarSize: l, iconSize: r } = e,
         s = "",
         a = (0, S._o)(t)
@@ -228,13 +228,13 @@ function eC(e) {
                         case ei.LWr.ANSWER_IN:
                             return (0, n.jsx)(eL, { token: e, avatarSize: l, iconSize: r }, c);
                         default:
-                            return (0, n.jsx)(eT, { text: a, className: em.Mj }, c);
+                            return (0, n.jsx)(eC, { text: a, className: em.Mj }, c);
                     }
-                return (0, n.jsx)(eT, { text: a, className: o ? em._y : em.Lc }, c);
+                return (0, n.jsx)(eC, { text: a, className: o ? em._y : em.Lc }, c);
             });
     return { label: (0, n.jsx)("div", { className: em.fH, children: a }), ariaLabel: s };
 }
-function eT(e) {
+function eC(e) {
     let { text: t, className: l } = e;
     return (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-strong", className: l, children: t });
 }
@@ -244,7 +244,7 @@ function ej(e) {
         s = t.getData("userId"),
         a = (0, i.bG)([er.default], () => er.default.getUser(s));
     return null == a
-        ? (0, n.jsx)(eT, { text: r, className: em.Mj })
+        ? (0, n.jsx)(eC, { text: r, className: em.Mj })
         : (0, n.jsxs)("div", {
               className: em.Mj,
               children: [
@@ -258,10 +258,10 @@ function eL(e) {
         s = t.getFullMatch(),
         a = t.getData("channelIds") ?? [],
         o = (0, i.bG)([f.A], () => f.A.getChannel(a[0]));
-    if (null == o) return (0, n.jsx)(eT, { text: s, className: em.Mj });
+    if (null == o) return (0, n.jsx)(eC, { text: s, className: em.Mj });
     let c = (0, S.E3)(o);
     return (0, n.jsxs)("div", {
-        className: T()(em.Mj, em.JG),
+        className: C()(em.Mj, em.JG),
         children: [
             (0, n.jsx)(es.A, { channel: o, avatarSize: l, iconClassName: em.Wh, iconSize: r }),
             (0, n.jsx)(G.E, { variant: "body-sm/semibold", color: "text-strong", children: c }),
@@ -438,19 +438,19 @@ function eq(e) {
                             {
                                 type: ei.LWr.FILTER_IN,
                                 isEligible: a.has(ei.LWr.FILTER_IN),
-                                icon: J.N,
+                                icon: J.TextIcon,
                                 label: ec.intl.string(ec.t.VMjDvS),
                             },
                             {
                                 type: ei.LWr.FILTER_HAS,
                                 isEligible: a.has(ei.LWr.FILTER_HAS),
-                                icon: eH.P,
+                                icon: eH.AttachmentIcon,
                                 label: ec.intl.string(ec.t.IhIpc7),
                             },
                             {
                                 type: ei.LWr.FILTER_MENTIONS,
                                 isEligible: a.has(ei.LWr.FILTER_MENTIONS),
-                                icon: et.X,
+                                icon: et.AtIcon,
                                 label: ec.intl.string(ec.t.fpKv9Y),
                             },
                         ];
@@ -540,7 +540,7 @@ function eq(e) {
                         let { hasOtherSearchFiltersVisible: t } = e,
                             r = t ? ec.intl.string(ec.t.diOL4i) : ec.intl.string(ec.t["M1tf+7"]);
                         return eu(eN.ROW, {
-                            icon: (0, n.jsx)($.R, {
+                            icon: (0, n.jsx)($.FiltersHorizontalIcon, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 20,
@@ -598,7 +598,7 @@ function eq(e) {
                             s = [...d, t];
                         if ((e.push(eu(eN.GROUP, { rows: s, title: ec.intl.string(ec.t.UdhTtk) })), h.length > 0)) {
                             let t = h.map((e, t) => {
-                                    let { label: r, ariaLabel: s } = eC({
+                                    let { label: r, ariaLabel: s } = eT({
                                         value: e,
                                         avatarSize: U._3.SIZE_16,
                                         iconSize: "xs",
@@ -634,7 +634,7 @@ function eq(e) {
                     [ei.o$q.FILTER_ALL]: () => {
                         let e = [];
                         if ("" !== t.query.trim()) {
-                            let { label: l } = eC({ value: t.query, avatarSize: U._3.SIZE_16, iconSize: "xs" }),
+                            let { label: l } = eT({ value: t.query, avatarSize: U._3.SIZE_16, iconSize: "xs" }),
                                 r = eu(eN.ROW, {
                                     icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
                                         size: "sm",
@@ -671,7 +671,7 @@ function eq(e) {
                                                     className: em.Fx,
                                                 });
                                             case ei.LWr.FILTER_IN:
-                                                return (0, n.jsx)(J.N, {
+                                                return (0, n.jsx)(J.TextIcon, {
                                                     size: "sm",
                                                     color: "currentColor",
                                                     className: em.Fx,
@@ -683,7 +683,7 @@ function eq(e) {
                                                     className: em.Fx,
                                                 });
                                             case ei.LWr.FILTER_MENTIONS:
-                                                return (0, n.jsx)(et.X, {
+                                                return (0, n.jsx)(et.AtIcon, {
                                                     size: "sm",
                                                     color: "currentColor",
                                                     className: em.Fx,
@@ -944,7 +944,7 @@ function eU(e) {
             id: t,
             tabIndex: -1,
             "aria-activedescendant": `${t}--1`,
-            className: T()(ez.kL, ez.Wl),
+            className: C()(ez.kL, ez.Wl),
             children: (0, n.jsx)(Q.CalendarPicker, {
                 onSelect: function (e) {
                     let t = (0, S.bS)(r);
@@ -1125,7 +1125,7 @@ function e8(e) {
         }),
         [p] = s.useState(() => [...m.children]),
         [y, I] = s.useState(!1),
-        [C, k] = s.useState(() => h.length > 0),
+        [T, k] = s.useState(() => h.length > 0),
         w = s.useRef(null),
         H = s.useRef(null),
         D = s.useRef(null),
@@ -1402,13 +1402,13 @@ function e8(e) {
                 className: t,
                 ref: w,
                 children: (0, n.jsx)("div", {
-                    className: T()(eV.$P, { [eV.ho]: C || y, [eV.in]: y }),
+                    className: C()(eV.$P, { [eV.ho]: T || y, [eV.in]: y }),
                     children: (0, n.jsx)(N.vN, {
                         ringTarget: H,
                         children: (0, n.jsxs)(
                             "div",
                             {
-                                className: T()(eV.ON, eX.O),
+                                className: C()(eV.ON, eX.O),
                                 ref: H,
                                 children: [
                                     (0, n.jsx)(e3, {
@@ -1424,7 +1424,7 @@ function e8(e) {
                                     }),
                                     (0, n.jsx)(F.B, {
                                         onClear: er,
-                                        hasContent: C || a,
+                                        hasContent: T || a,
                                         className: eV.Kk,
                                         isLoading: !1,
                                     }),
@@ -1468,11 +1468,11 @@ function tt(e) {
     s.useEffect(() => {
         A.A.setSidebarOpen(t, I);
     }, [t, I]);
-    let C = (0, c.Ry)(e4.b);
+    let T = (0, c.Ry)(e4.b);
     s.useEffect(() => {
-        A.A.setFiltersModalOpen(t, C);
-    }, [t, C]);
-    let T = s.useCallback(
+        A.A.setFiltersModalOpen(t, T);
+    }, [t, T]);
+    let C = s.useCallback(
             (e) => {
                 let { queryString: l, query: r, searchEverywhere: n, searchQuerySource: s } = e;
                 (A.A.refreshQueryId(t),
@@ -1510,7 +1510,7 @@ function tt(e) {
         isSearching: o,
         hasResults: b,
         keyboardModeEnabled: a,
-        onSearch: T,
+        onSearch: C,
         placeholder: L,
     });
 }

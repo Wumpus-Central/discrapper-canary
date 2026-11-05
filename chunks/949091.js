@@ -1,19 +1,19 @@
 var t = n(477900),
     i = n(477782),
-    d = n(783977),
+    o = n(783977),
     s = n(398590),
-    o = n(790271),
-    a = n(944771),
-    c = n(101715),
-    r = n(652215);
+    d = n(790271),
+    r = n(944771),
+    a = n(101715),
+    c = n(652215);
 n.d(
     l,
     {},
     {
         A: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                l = (0, o.ni)("playground_menu"),
-                n = (0, a.useComponentPlaygroundConfigs)(l);
+                l = (0, d.ni)("playground_menu"),
+                n = (0, r.useComponentPlaygroundConfigs)(l);
             if (!l) return null;
             let u = n.flatMap((e) => e.collections);
             return (0, t.jsx)(
@@ -21,10 +21,10 @@ n.d(
                 {
                     id: "playgrounds",
                     label: "Playgrounds",
-                    leadingAccessory: e ? { type: "icon", icon: d.R } : void 0,
+                    leadingAccessory: e ? { type: "icon", icon: o.FiltersHorizontalIcon } : void 0,
                     action: () => {
-                        (c.x.setState({ selectedCollection: null, selectedStory: null }),
-                            (0, s.id)(r.zgK.COMPONENT_PLAYGROUND));
+                        (a.x.setState({ selectedCollection: null, selectedStory: null }),
+                            (0, s.id)(c.zgK.COMPONENT_PLAYGROUND));
                     },
                     children: (0, t.jsx)(
                         i.rX,
@@ -36,8 +36,8 @@ n.d(
                                         id: `${e.id}-playground`,
                                         label: e.name,
                                         action: () => {
-                                            (c.x.setState({ selectedCollection: e.id, selectedStory: null }),
-                                                (0, s.id)(r.zgK.COMPONENT_PLAYGROUND));
+                                            (a.x.setState({ selectedCollection: e.id, selectedStory: null }),
+                                                (0, s.id)(c.zgK.COMPONENT_PLAYGROUND));
                                         },
                                     },
                                     e.id,

@@ -20,8 +20,8 @@ var i = n(477900),
     E = n(69282),
     C = n(657048),
     v = n(734057),
-    T = n(696451),
-    I = n(317525),
+    I = n(696451),
+    T = n(317525),
     y = n(994500),
     S = n(351906),
     k = n(287809),
@@ -29,7 +29,7 @@ var i = n(477900),
     w = n(652215),
     L = n(792996),
     R = n(924466);
-function _(e) {
+function M(e) {
     let { guild: t, id: n, isLocked: s, lockTooltipText: r, openEntryContextMenu: o } = e,
         m = (0, f.Ap)(t.id),
         {
@@ -39,7 +39,7 @@ function _(e) {
         } = (0, c.cf)(
             [v.A, k.default, y.A],
             () => {
-                if (m === n) return { name: L.intl.string(L.t["7YqSGx"]), icon: d.N };
+                if (m === n) return { name: L.intl.string(L.t["7YqSGx"]), icon: d.TextIcon };
                 let e = v.A.getChannel(n),
                     i = e?.parent_id != null ? v.A.getChannel(e.parent_id) : null;
                 return {
@@ -77,9 +77,9 @@ function _(e) {
               ],
           });
 }
-function M(e) {
+function _(e) {
     let { guild: t, id: s, isLocked: r, lockTooltipText: o } = e,
-        d = (0, c.bG)([I.A], () => I.A.getRole(t.id, s)),
+        d = (0, c.bG)([T.A], () => T.A.getRole(t.id, s)),
         g = (0, E.Xx)({ guildId: t.id, roleId: s, size: 24 }),
         h = l.useCallback(
             (e) => {
@@ -100,7 +100,7 @@ function M(e) {
               children: [
                   null != g
                       ? (0, i.jsx)(C.A, { className: a()(R.__invalid_icon, R.Sl), ...g })
-                      : (0, i.jsx)(m.i, {
+                      : (0, i.jsx)(m.ShieldUserIcon, {
                             size: "custom",
                             width: 23,
                             height: 23,
@@ -120,7 +120,7 @@ function M(e) {
 function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: s, openEntryContextMenu: a } = e,
         r = (0, c.bG)([k.default], () => k.default.getUser(n)),
-        o = (0, c.bG)([T.Ay], () => T.Ay.getMember(t.id, n)?.nick, [t.id, n]),
+        o = (0, c.bG)([I.Ay], () => I.Ay.getMember(t.id, n)?.nick, [t.id, n]),
         d = (0, c.bG)([S.A], () => S.A.hidePersonalInformation);
     return null == r
         ? null
@@ -176,9 +176,9 @@ n.d(
             );
             switch (a) {
                 case b.RA.CHANNEL:
-                    return (0, i.jsx)(_, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
-                case b.RA.ROLE:
                     return (0, i.jsx)(M, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
+                case b.RA.ROLE:
+                    return (0, i.jsx)(_, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
                 case b.RA.USER:
                     return (0, i.jsx)(P, { guild: t, id: s, isLocked: r, lockTooltipText: c, openEntryContextMenu: u });
             }

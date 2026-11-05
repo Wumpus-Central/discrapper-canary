@@ -1,8 +1,8 @@
-n.d(t, { Y: () => x, A: () => w });
+n.d(t, { Y: () => x, A: () => P });
 var i = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     a = n(284009),
     o = n.n(a),
     u = n(621466),
@@ -18,15 +18,15 @@ function I(e) {
     let {
             tutorialId: t,
             targetElementRef: n,
-            position: r,
+            position: l,
             graphicSrc: s,
             title: a,
             body: o,
             onClose: u,
             onComplete: d,
         } = e,
-        c = l.useRef(!1);
-    l.useEffect(
+        c = r.useRef(!1);
+    r.useEffect(
         () => (
             A.default.track(p.HAw.SHOW_TUTORIAL, { tutorial: t }),
             () => {
@@ -35,13 +35,13 @@ function I(e) {
         ),
         [t],
     );
-    let h = l.useCallback(() => {
+    let h = r.useCallback(() => {
         ((c.current = !0), u(), d());
     }, [u, d]);
     return (0, i.jsx)(g.A, {
         targetElementRef: n,
         shouldShow: !0,
-        position: r,
+        position: l,
         graphic: { type: "image", src: s },
         title: a,
         body: o,
@@ -51,11 +51,11 @@ function I(e) {
 }
 function E(e) {
     let { children: t, ...n } = e,
-        [r, s] = l.useState(!1),
-        a = l.useCallback(() => s((e) => !e), []),
-        o = l.useCallback(() => s(!1), []);
+        [l, s] = r.useState(!1),
+        a = r.useCallback(() => s((e) => !e), []),
+        o = r.useCallback(() => s(!1), []);
     return (0, i.jsxs)(i.Fragment, {
-        children: [t({ onClick: a, "aria-expanded": r }, r), r && (0, i.jsx)(I, { ...n, onClose: o })],
+        children: [t({ onClick: a, "aria-expanded": l }, l), l && (0, i.jsx)(I, { ...n, onClose: o })],
     });
 }
 var S = n(787541),
@@ -74,15 +74,15 @@ let _ = Object.freeze({
 });
 var N = n(241541),
     T = n(851230);
-function v() {
+function y() {
     return (0, i.jsx)(i.Fragment, {
         children: m.intl.format(m.t.ymkBti, {
             shareIcon: m.intl.string(m.t.VINpSK),
-            shareIconHook: () => (0, i.jsx)(N.D, { className: T.Kk }, "icon"),
+            shareIconHook: () => (0, i.jsx)(N.GroupPlusIcon, { className: T.Kk }, "icon"),
         }),
     });
 }
-var y = n(179913),
+var v = n(179913),
     M = n(71393),
     D = n(967198),
     R = n(303634);
@@ -116,9 +116,9 @@ let O = {
         });
     },
 };
-class x extends l.PureComponent {
+class x extends r.PureComponent {
     state = { offsetX: null, offsetY: null };
-    contentRef = l.createRef();
+    contentRef = r.createRef();
     componentDidMount() {
         this.updateCache();
     }
@@ -126,16 +126,16 @@ class x extends l.PureComponent {
         let {
             tutorialId: t,
             origin: { x: n, y: i },
-            targetWidth: l,
-            targetHeight: r,
+            targetWidth: r,
+            targetHeight: l,
             position: s,
             offset: a,
         } = e;
         (this.props.tutorialId !== t ||
             this.props.origin.x !== n ||
             this.props.origin.y !== i ||
-            this.props.targetWidth !== l ||
-            this.props.targetHeight !== r ||
+            this.props.targetWidth !== r ||
+            this.props.targetHeight !== l ||
             this.props.position !== s ||
             this.props.offset.x !== a.x ||
             this.props.offset.y !== a.y) &&
@@ -174,7 +174,7 @@ class x extends l.PureComponent {
             title: (e =
                 {
                     WHOS_ONLINE: { title: m.intl.string(m.t.l2nSoI), body: m.intl.format(m.t.y6tbBB, {}) },
-                    INSTANT_INVITE: { title: m.intl.string(m.t.XcehY3), body: (0, i.jsx)(v, {}) },
+                    INSTANT_INVITE: { title: m.intl.string(m.t.XcehY3), body: (0, i.jsx)(y, {}) },
                     SERVER_SETTINGS: { title: m.intl.string(m.t.wc8wi5), body: m.intl.format(m.t.mIfDhc, {}) },
                     DIRECT_MESSAGES: { title: m.intl.string(m.t.V07x5y), body: m.intl.format(m.t.GEBBey, {}) },
                     CREATE_MORE_SERVERS: { title: m.intl.string(m.t["50FORo"]), body: m.intl.format(m.t.zVL4qa, {}) },
@@ -186,9 +186,9 @@ class x extends l.PureComponent {
         };
     }
     render() {
-        let { tutorialId: e, autoInvert: t, focused: n, origin: l } = this.props,
-            r = e in _ ? _[e] : null;
-        if (null == r) return null;
+        let { tutorialId: e, autoInvert: t, focused: n, origin: r } = this.props,
+            l = e in _ ? _[e] : null;
+        if (null == l) return null;
         let {
                 media: a,
                 textAlign: o,
@@ -197,15 +197,15 @@ class x extends l.PureComponent {
                 spacing: h,
                 arrowAlignment: f = C.oN.TOP,
                 popoutPosition: g,
-            } = r,
+            } = l,
             { offsetX: A, offsetY: p } = this.state,
-            I = { left: null != A ? l.x + A : void 0, top: null != p ? l.y + p : void 0 };
+            I = { left: null != A ? r.x + A : void 0, top: null != p ? r.y + p : void 0 };
         function E(e) {
             let t = n && !e;
             return { [R.bW]: t, [R.EO]: !t, [R.TX]: d };
         }
         let S = (e, t) => {
-                let l;
+                let r;
                 return (0, i.jsx)(c.D, {
                     ...e,
                     "aria-label": m.intl.string(m.t.IyCzIF),
@@ -215,13 +215,13 @@ class x extends l.PureComponent {
                     children: (0, i.jsxs)("div", {
                         className: s()(R.Mp, E(t)),
                         children: [
-                            ((l = n && !t),
+                            ((r = n && !t),
                             !0 !== d
                                 ? null
                                 : (0, i.jsxs)("div", {
                                       children: [
-                                          (0, i.jsx)("div", { className: s()(R.Mn, { [R.bW]: l, [R.EO]: !l }) }),
-                                          (0, i.jsx)("div", { className: s()(R.sQ, { [R.bW]: l, [R.EO]: !l }) }),
+                                          (0, i.jsx)("div", { className: s()(R.Mn, { [R.bW]: r, [R.EO]: !r }) }),
+                                          (0, i.jsx)("div", { className: s()(R.sQ, { [R.bW]: r, [R.EO]: !r }) }),
                                       ],
                                   })),
                             (0, i.jsx)("div", { className: s()(R.r6, E(t)) }),
@@ -260,28 +260,28 @@ class x extends l.PureComponent {
         });
     }
 }
-let w =
+let P =
     221552 == n.j
         ? function () {
               let {
                   indicators: e,
                   tutorialData: t,
                   windowFocused: n,
-                  shouldShowAny: l,
-              } = (0, d.cf)([y.A, f.A, h.A], () => ({
-                  indicators: y.A.getIndicators(),
-                  tutorialData: y.A.getData(),
-                  shouldShowAny: y.A.shouldShowAnyIndicators() && !h.A.hasLayers(),
+                  shouldShowAny: r,
+              } = (0, d.cf)([v.A, f.A, h.A], () => ({
+                  indicators: v.A.getIndicators(),
+                  tutorialData: v.A.getData(),
+                  shouldShowAny: v.A.shouldShowAnyIndicators() && !h.A.hasLayers(),
                   windowFocused: f.A.isFocused(),
               }));
-              return l
+              return r
                   ? (0, i.jsx)(i.Fragment, {
                         children: Object.entries(e).map((e) => {
-                            let [l, r] = e,
-                                s = t[l];
+                            let [r, l] = e,
+                                s = t[r];
                             return (
-                                o()(null != s, `Missing tutorial definition for ${l}`),
-                                (0, i.jsx)(x, { tutorialId: l, tutorialDefinition: s, focused: n, ...r }, l)
+                                o()(null != s, `Missing tutorial definition for ${r}`),
+                                (0, i.jsx)(x, { tutorialId: r, tutorialDefinition: s, focused: n, ...l }, r)
                             );
                         }),
                     })

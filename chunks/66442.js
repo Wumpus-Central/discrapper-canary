@@ -11,17 +11,17 @@ var a = n(477900),
     m = n(95477),
     _ = n(308528),
     A = n(964486),
-    v = n(793574),
-    y = n(688810),
-    p = n(571694),
+    p = n(793574),
+    v = n(688810),
+    y = n(571694),
     x = n(47167),
     f = n(734057),
     D = n(129230),
     g = n(396787),
     C = n(652215),
     j = n(792996),
-    E = n(689094);
-function I(e) {
+    I = n(689094);
+function E(e) {
     let {
             channel: t,
             previewIcon: n,
@@ -32,25 +32,30 @@ function I(e) {
             className: m,
             allowRemovingIcon: _ = !0,
         } = e,
-        A = void 0 !== n ? n : t?.icon != null ? (0, p.Y)(t, 120) : null,
-        { analyticsLocations: x } = (0, y.Ay)(o, v.A.GROUP_DM_ICON_EDITOR),
+        A = void 0 !== n ? n : t?.icon != null ? (0, y.Y)(t, 120) : null,
+        { analyticsLocations: x } = (0, v.Ay)(o, p.A.GROUP_DM_ICON_EDITOR),
         f = c ? 32 : 64;
     return (0, a.jsxs)("div", {
-        className: s()(E.r2, m),
+        className: s()(I.r2, m),
         children: [
             (0, a.jsxs)(r.D, {
-                className: s()(E.zc, { [E.ud]: c }),
+                className: s()(I.zc, { [I.ud]: c }),
                 "aria-label": j.intl.string(j.t["0qPSMV"]),
                 onClick: () => (0, g.F5)(i, x),
                 children: [
                     null != A
-                        ? (0, a.jsx)("img", { src: A, alt: "", className: E.Dp })
+                        ? (0, a.jsx)("img", { src: A, alt: "", className: I.Dp })
                         : (0, a.jsx)("div", {
-                              className: E.Pz,
-                              children: (0, a.jsx)(d.n, { size: "custom", width: f, height: f, color: "currentColor" }),
+                              className: I.Pz,
+                              children: (0, a.jsx)(d.GroupIcon, {
+                                  size: "custom",
+                                  width: f,
+                                  height: f,
+                                  color: "currentColor",
+                              }),
                           }),
                     (0, a.jsx)("div", {
-                        className: E.qc,
+                        className: I.qc,
                         children: (0, a.jsx)(u.PencilIcon, { color: "currentColor", size: c ? "xs" : "refresh_sm" }),
                     }),
                 ],
@@ -74,7 +79,7 @@ n.d(
     t,
     {},
     {
-        X: I,
+        X: E,
         default: function (e) {
             let {
                     channelId: t,
@@ -86,12 +91,12 @@ n.d(
                 } = e,
                 u = (0, o.bG)([f.A], () => f.A.getChannel(t)),
                 h = u?.name,
-                p = (0, x.e5)(u),
+                y = (0, x.e5)(u),
                 [b, w] = i.useState(h ?? ""),
                 [T, k] = i.useState(void 0),
                 N = void 0 !== T,
-                { analyticsLocations: R } = (0, y.Ay)(d, v.A.GROUP_DM_EDIT_MODAL),
-                P = {
+                { analyticsLocations: R } = (0, v.Ay)(d, p.A.GROUP_DM_EDIT_MODAL),
+                G = {
                     channel_id: t,
                     channel_type: u?.type,
                     location: d,
@@ -104,15 +109,15 @@ n.d(
             }, [b, h, N, s]),
             (0, A.Ay)(
                 () => (
-                    D.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...P, action: "opened" }),
+                    D.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...G, action: "opened" }),
                     () => {
-                        D.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...P, action: "dismissed" });
+                        D.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...G, action: "dismissed" });
                     }
                 ),
             ),
             null == u)
                 ? null
-                : (0, a.jsx)(y.f5, {
+                : (0, a.jsx)(v.f5, {
                       value: R,
                       children: (0, a.jsx)("form", {
                           onSubmit: function (e) {
@@ -121,7 +126,7 @@ n.d(
                                   i = void 0 !== T;
                               if (
                                   (D.default.track(C.HAw.GDM_EDIT_INTERACTED, {
-                                      ...P,
+                                      ...G,
                                       action: "saved",
                                       new_name_set: "" !== b,
                                       new_icon_set: (i ? T : u?.icon) != null,
@@ -149,9 +154,9 @@ n.d(
                               onClose: () => Promise.resolve(r()),
                               transitionState: l,
                               children: (0, a.jsxs)("div", {
-                                  className: E.jE,
+                                  className: I.jE,
                                   children: [
-                                      (0, a.jsx)(I, {
+                                      (0, a.jsx)(E, {
                                           channel: u,
                                           previewIcon: T,
                                           onIconChange: (e) => k(e.imageUri),
@@ -160,7 +165,7 @@ n.d(
                                       }),
                                       (0, a.jsx)(m.k, {
                                           "aria-label": j.intl.string(j.t.GEGW3P),
-                                          placeholder: p ?? "",
+                                          placeholder: y ?? "",
                                           maxLength: 100,
                                           value: b,
                                           onChange: w,

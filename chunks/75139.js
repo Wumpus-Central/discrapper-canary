@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(91871),
     o = n.n(r),
-    d = n(613412),
-    c = n(855986),
+    c = n(613412),
+    d = n(855986),
     u = n(646514),
     h = n(939249),
     p = n(97808),
@@ -16,19 +16,19 @@ var i = n(477900),
     x = n(104510),
     C = n(789645),
     y = n(177953),
-    j = n(683438),
-    I = n(475825),
+    I = n(683438),
+    j = n(475825),
     N = n(367513),
     v = n(442433),
     E = n(59520),
     b = n(793574),
     S = n(688810),
-    _ = n(139286),
-    T = n(43189),
+    T = n(139286),
+    _ = n(43189),
     R = n(480890),
     O = n(812771),
-    P = n(58736),
-    L = n(267102),
+    L = n(58736),
+    P = n(267102),
     M = n(342296),
     w = n(46653),
     U = n(696451),
@@ -49,16 +49,16 @@ var $ = n(806931),
     q = n(645265);
 let Z = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
-        { user: C, userNick: y, blocked: j, ignored: I, rtsState: N } = t,
+        { user: C, userNick: y, blocked: I, ignored: j, rtsState: N } = t,
         E = l.useRef(null),
-        T = (0, L.Us)(),
+        _ = (0, P.Us)(),
         { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
-        P = (0, c.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
+        L = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
         D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
     function V(e) {
-        ((0, _.x)({
-            type: d.ImpressionTypes.MENU,
-            name: d.ImpressionNames.CALL_TILE_CONTEXT_MENU,
+        ((0, T.x)({
+            type: c.ImpressionTypes.MENU,
+            name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
                 location: "StageAudienceSidebar",
                 is_tile_owner: C.id === w.default.getId(),
@@ -109,7 +109,7 @@ let Z = l.memo(function (e) {
                             }),
                         });
                 },
-                { context: T },
+                { context: _ },
             ));
     }
     return (0, i.jsx)(M.A, {
@@ -133,7 +133,7 @@ let Z = l.memo(function (e) {
                             (0, i.jsx)(p.eu, {
                                 src: C.getAvatarURL(r, 32, !1),
                                 size: m._3.SIZE_32,
-                                className: s()(q.e$, { [q.zj]: j || I }),
+                                className: s()(q.e$, { [q.zj]: I || j }),
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsx)(A.E, {
@@ -142,9 +142,14 @@ let Z = l.memo(function (e) {
                                 color: "text-strong",
                                 children: y,
                             }),
-                            j ? (0, i.jsx)(f.K, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
-                            I ? (0, i.jsx)(g.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
-                            P ? (0, i.jsx)(x._, { size: "xs", color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK }) : null,
+                            I ? (0, i.jsx)(f.DenyIcon, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
+                            j ? (0, i.jsx)(g.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
+                            L
+                                ? (0, i.jsx)(x.BoostGemIcon, {
+                                      size: "xs",
+                                      color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                  })
+                                : null,
                         ],
                     }),
                     o ? (0, i.jsx)(W.s6, { channel: a, userId: C.id, awaitingUserAck: D }) : null,
@@ -160,13 +165,13 @@ n.d(
             var t;
             let n,
                 a,
-                { channel: s, guildId: r, maxWidth: d } = e,
+                { channel: s, guildId: r, maxWidth: c } = e,
                 u = (0, F.Ni)(s.id),
-                h = (0, c.bG)([D.A], () => D.A.can(Y.xB.MANAGE_CHANNELS, s) || D.A.can(Y.xB.MANAGE_ROLES, s)),
+                h = (0, d.bG)([D.A], () => D.A.can(Y.xB.MANAGE_CHANNELS, s) || D.A.can(Y.xB.MANAGE_ROLES, s)),
                 p = (0, k.J2)(s.id),
                 m =
                     ((t = s.id),
-                    (n = (0, c.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
+                    (n = (0, d.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
                     (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
                     (0, E.J)(a, (0, H.Uo)(t))),
                 [f, g] = l.useState(""),
@@ -183,26 +188,29 @@ n.d(
                             o()(e, t.userNick.toLowerCase()),
                     );
                 }, [m, v]),
-                _ = [p.length, Math.max(1, S.length)],
-                R = (0, i.jsx)(P.Ay.Icon, {
-                    icon: C.P,
+                T = [p.length, Math.max(1, S.length)],
+                R = (0, i.jsx)(L.Ay.Icon, {
+                    icon: C.XSmallIcon,
                     tooltip: X.intl.string(X.t.cpT0Cq),
                     onClick: () => N.A.updateStageAudienceSidebarOpen(s.id, !1),
                 });
             return (0, i.jsx)(O.A, {
                 sidebarType: O.X.StageAudienceSidebar,
-                maxWidth: d,
+                maxWidth: c,
                 minWidth: 240,
-                floatingLayer: T.Ay,
+                floatingLayer: _.Ay,
                 children: (0, i.jsxs)("div", {
                     className: q.kL,
                     children: [
-                        (0, i.jsxs)(P.Ay, {
+                        (0, i.jsxs)(L.Ay, {
                             toolbar: R,
                             "aria-label": X.intl.string(X.t.suRApw),
                             children: [
-                                (0, i.jsx)(P.Ay.ChannelIcon, { icon: y.n, "aria-label": X.intl.string(X.t.suRApw) }),
-                                (0, i.jsx)(P.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
+                                (0, i.jsx)(L.Ay.ChannelIcon, {
+                                    icon: y.GroupIcon,
+                                    "aria-label": X.intl.string(X.t.suRApw),
+                                }),
+                                (0, i.jsx)(L.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
                             ],
                         }),
                         h || u
@@ -211,7 +219,7 @@ n.d(
                                   children: [
                                       h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
                                       u
-                                          ? (0, i.jsx)(j.I, {
+                                          ? (0, i.jsx)(I.I, {
                                                 query: f,
                                                 onChange: g,
                                                 onClear: () => g(""),
@@ -222,9 +230,9 @@ n.d(
                                   ],
                               })
                             : null,
-                        (0, i.jsx)(I.OZ, {
+                        (0, i.jsx)(j.OZ, {
                             className: q.p_,
-                            sections: _,
+                            sections: T,
                             sectionHeight: function (e) {
                                 switch (e) {
                                     case 0:

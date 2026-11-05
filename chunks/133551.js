@@ -21,8 +21,8 @@ var i,
     E = n(792996),
     C = n(622061),
     v = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
-let T = Object.keys(v);
-function I(e) {
+let I = Object.keys(v);
+function T(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a, permissionName: r } = e,
         { ref: o, ...c } = (0, p._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
     return (0, l.jsx)("div", {
@@ -30,7 +30,7 @@ function I(e) {
         ref: o,
         id: a,
         ...c,
-        children: T.map((e) =>
+        children: I.map((e) =>
             (0, l.jsx)(
                 y,
                 {
@@ -53,13 +53,13 @@ function y(e) {
         { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            ((i = E.intl.string(E.t["6639O5"])), (t = b.P), (n = C.Xg));
+            ((i = E.intl.string(E.t["6639O5"])), (t = b.XSmallIcon), (n = C.Xg));
             break;
         case "ALLOW":
             ((i = E.intl.string(E.t.RzDfSk)), (t = f.CheckmarkLargeIcon), (n = C.cw));
             break;
         default:
-            ((i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le));
+            ((i = E.intl.string(E.t.ujC3ZS)), (t = j.SlashIcon), (n = C.le));
     }
     let c = null != o ? E.intl.formatToPlainString(E.t.KgPfJx, { permissionName: o, action: i }) : i,
         d = (0, p.Gx)({ isSelected: r, label: c });
@@ -70,7 +70,7 @@ function y(e) {
         children: (0, l.jsx)(t, { color: "currentColor", size: "xs" }),
     });
 }
-I.Types = v;
+T.Types = v;
 var S = n(452027);
 function k(e) {
     let { value: t, onChange: n, disabled: i, permissionName: s, ...a } = e;
@@ -79,7 +79,7 @@ function k(e) {
         disabled: i,
         layout: "horizontal",
         children: (e) =>
-            (0, l.jsx)(I, {
+            (0, l.jsx)(T, {
                 value: t,
                 onChange: n,
                 disabled: i,
@@ -89,7 +89,7 @@ function k(e) {
             }),
     });
 }
-(I.Types, (k.Types = I.Types));
+(T.Types, (k.Types = T.Types));
 var O = n(659262);
 class w extends s.PureComponent {
     getOverwriteValue(e) {
@@ -109,7 +109,7 @@ class w extends s.PureComponent {
             text: e,
             position: "top",
             children: (0, l.jsx)("span", {
-                children: (0, l.jsx)(o.K, { size: "sm", color: "currentColor", className: O.Kk }),
+                children: (0, l.jsx)(o.DenyIcon, { size: "sm", color: "currentColor", className: O.Kk }),
             }),
         });
     }
@@ -118,7 +118,7 @@ class w extends s.PureComponent {
             { permissions: a, locked: r, permissionRender: g } = this.props,
             x = g?.(s),
             A = !!(r || x),
-            p = "string" == typeof x && "" !== x ? o.K : void 0,
+            p = "string" == typeof x && "" !== x ? o.DenyIcon : void 0,
             b =
                 null == a
                     ? (0, l.jsx)(

@@ -23,34 +23,34 @@ n.d(
         default: function (t) {
             let { onClose: i, multiplier: n, orbMultiplierEligibility: g, customSubtitle: E, ...T } = t,
                 { analyticsLocations: f } = (0, c.Ay)(u.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
-                L = (0, l.bG)([p.Ay], () => p.Ay.useReducedMotion),
-                U = (0, b.B9)(g),
-                v = g === b.MA.XBOX_GAME_PASS,
-                I = g === b.MA.NITRO || g === b.MA.UPSELL,
-                y = v ? C.intl.string(O.default.c5usUr) : C.intl.string(C.t.Csf5Ol),
-                B = e.useMemo(
+                I = (0, l.bG)([p.Ay], () => p.Ay.useReducedMotion),
+                L = (0, b.B9)(g),
+                U = g === b.MA.XBOX_GAME_PASS,
+                v = g === b.MA.NITRO || g === b.MA.UPSELL,
+                h = U ? C.intl.string(O.default.c5usUr) : C.intl.string(C.t.Csf5Ol),
+                y = e.useMemo(
                     () =>
                         null != E
                             ? E
-                            : v
+                            : U
                               ? C.intl.format(O.default.UkrcSH, { bonusOrbMultiplier: n })
-                              : U
+                              : L
                                 ? C.intl.format(C.t.NpUfej, { bonusOrbMultiplier: n })
                                 : C.intl.format(C.t["G5k+lZ"], { bonusOrbMultiplier: n }),
-                    [v, U, n, E],
+                    [U, L, n, E],
                 );
             return (0, r.jsx)(o.k, {
                 ...T,
                 onClose: i,
-                gradientColor: I ? "nitro-pink" : "blue",
-                title: y,
-                subtitle: B,
+                gradientColor: v ? "nitro-pink" : "blue",
+                title: h,
+                subtitle: y,
                 graphic: {
                     type: "rive",
                     rive: s.E,
-                    props: { artboard: "Torbs_Multiply", dataBinding: { reducedMotion: L } },
+                    props: { artboard: "Torbs_Multiply", dataBinding: { reducedMotion: I } },
                 },
-                actions: U
+                actions: L
                     ? [
                           { text: C.intl.string(C.t.cpT0Cq), variant: "secondary", onClick: i },
                           {
@@ -58,7 +58,7 @@ n.d(
                               variant: "primary",
                               onClick: function () {
                                   (i(),
-                                      v
+                                      U
                                           ? (0, d.n)()
                                           : window.open(
                                                 M.A.getArticleURL(R.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
@@ -78,7 +78,7 @@ n.d(
                           {
                               text: C.intl.string(C.t.pj0XBN),
                               variant: "expressive",
-                              icon: a.t,
+                              icon: a.NitroWheelIcon,
                               onClick: () => {
                                   (i(), (0, _.A)({ subscriptionTier: k.pe.TIER_2, analyticsLocations: f }));
                               },

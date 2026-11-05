@@ -29,7 +29,7 @@ function E(n) {
         ? (0, t.jsxs)("div", {
               className: y.jC,
               children: [
-                  (0, t.jsx)(i.K, { size: "lg", color: e.A.unsafe_rawColors.RED_400.css }),
+                  (0, t.jsx)(i.DenyIcon, { size: "lg", color: e.A.unsafe_rawColors.RED_400.css }),
                   (0, t.jsx)(a.E, {
                       variant: "body-xs/normal",
                       color: "text-default",
@@ -54,7 +54,7 @@ function E(n) {
           : (0, t.jsxs)("div", {
                 className: y.jC,
                 children: [
-                    (0, t.jsx)(i.K, { size: "lg", color: e.A.unsafe_rawColors.RED_400.css }),
+                    (0, t.jsx)(i.DenyIcon, { size: "lg", color: e.A.unsafe_rawColors.RED_400.css }),
                     (0, t.jsx)(a.E, {
                         variant: "body-xs/normal",
                         color: "text-default",

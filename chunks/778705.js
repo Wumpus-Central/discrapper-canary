@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(277057),
     r = n.n(i),
     a = n(192308),
@@ -11,18 +11,18 @@ var i = n(277057),
     _ = n(61750),
     E = n(573359),
     A = n(412260),
-    h = n(188567),
-    f = n(722178);
+    f = n(188567),
+    h = n(722178);
 n(327113);
 var I = n(652215),
     p = n(758836),
     m = n(682901);
-function g(e) {
+function T(e) {
     let {
             initialPlanId: t,
             followupSKUInfo: i,
-            onClose: g,
-            onComplete: T,
+            onClose: T,
+            onComplete: g,
             onSubscriptionConfirmation: S,
             analyticsLocations: N,
             analyticsObject: C,
@@ -48,24 +48,24 @@ function g(e) {
             startingStepOverride: W,
         } = e,
         Y = r()("payment-modal"),
-        K = (0, f.mH)(P),
-        $ = y || K !== (0, f.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
+        K = (0, h.mH)(P),
+        $ = y || K !== (0, h.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
         X = $?.rewardSkuIds[0] ?? null,
         z = !1;
     function q() {
         z ||
             ((z = !0),
-            h._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+            f._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                 ? setTimeout(() => {
                       (0, a.Oo)(Y);
                   }, 1e3)
                 : (0, a.Oo)(Y));
     }
-    function Z(e) {
+    function Q(e) {
         ((0, o.ET)(), (0, l.ET)(), e && null != S && S());
     }
-    function Q() {
+    function Z() {
         return (0, a.Oo)(Y);
     }
     return Promise.all([
@@ -325,6 +325,10 @@ function g(e) {
         n.e(508702),
         n.e(257980),
         n.e(960235),
+        n.e(486137),
+        n.e(80421),
+        n.e(206027),
+        n.e(393471),
         n.e(177641),
         n.e(198329),
         n.e(678157),
@@ -337,6 +341,7 @@ function g(e) {
         n.e(733115),
         n.e(397270),
         n.e(406222),
+        n.e(761597),
         n.e(373122),
         n.e(649408),
         n.e(221856),
@@ -543,7 +548,7 @@ function g(e) {
         n.e(912773),
         n.e(180657),
         n.e(35403),
-        n.e(68904),
+        n.e(846523),
         n.e(796867),
         n.e(919307),
         n.e(565617),
@@ -643,7 +648,7 @@ function g(e) {
         n.e(209729),
         n.e(800311),
         n.e(22330),
-        n.e(317315),
+        n.e(197238),
         n.e(474907),
         n.e(791824),
     ])
@@ -673,7 +678,7 @@ function g(e) {
                         (function (e, t) {
                             z ||
                                 ((z = !0),
-                                h._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                                f._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                                     ? setTimeout(() => {
                                           n();
@@ -696,10 +701,10 @@ function g(e) {
                                         });
                                 }
                             }
-                        })(e, Q),
+                        })(e, Z),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: R, analyticsLocations: N },
-                checkoutHandlers: { onClose: g, onComplete: T },
+                checkoutHandlers: { onClose: T, onComplete: g },
                 giftContextProps: { isGift: y, giftMessage: D, giftStyle: b, giftingOrigin: v, giftRecipient: k },
                 tenantParams: {
                     confirmationFooter: L,
@@ -715,7 +720,7 @@ function g(e) {
                     modalKey: Y,
                     skipCloseModalOnCloseRequest: !0,
                     onCloseRequest: q,
-                    onCloseCallback: Z,
+                    onCloseCallback: Q,
                 },
             }),
         );

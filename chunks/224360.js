@@ -32,7 +32,7 @@ n.d(
                                 className: u.r,
                                 "aria-label": c.intl.string(c.t["pUR+3g"]),
                                 onClick: t,
-                                children: (0, i.jsx)(r.P, { size: "sm", color: "currentColor" }),
+                                children: (0, i.jsx)(r.XSmallIcon, { size: "sm", color: "currentColor" }),
                             }),
                             (0, i.jsx)(o.D, {
                                 id: x,

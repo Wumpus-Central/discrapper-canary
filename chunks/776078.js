@@ -1,3 +1,4 @@
+t.r(n);
 var l = t(477900);
 t(582128);
 var a = t(646514),
@@ -7,7 +8,7 @@ t.d(
     n,
     {},
     {
-        g: function (e) {
+        ScienceIcon: function (e) {
             let {
                     size: n = "md",
                     width: t,

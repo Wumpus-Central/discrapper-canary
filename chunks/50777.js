@@ -61,7 +61,7 @@ function W(l) {
                               children: K.intl.format(K.t.GiVd2Q, {
                                   orbCount: u.amount,
                                   orbIconHook: () =>
-                                      (0, e.jsx)(c.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                      (0, e.jsx)(c.OrbsIcon, { size: "xs", color: "currentColor" }, "orbs-icon"),
                               }),
                           }),
                       }),
@@ -185,7 +185,11 @@ function Y(l) {
                           text: K.intl.format(K.t.JC15qj, {
                               orbPrice: lu,
                               orbIconHook: () =>
-                                  (0, e.jsx)(c.C, { className: H.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
+                                  (0, e.jsx)(
+                                      c.OrbsIcon,
+                                      { className: H.fN, size: "sm", color: "currentColor" },
+                                      "orbs-icon",
+                                  ),
                           }),
                       }
                     : {

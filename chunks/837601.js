@@ -48,16 +48,16 @@ var m = l(536637),
     x = l(488225),
     _ = l(834730),
     L = l(693942),
-    E = l(265705),
-    b = l(607470),
+    b = l(265705),
+    E = l(607470),
     S = l(472501),
-    O = l(46054),
-    w = l(383055),
-    D = l(550997),
-    j = l(652215),
-    N = l(792996),
-    v = l(910379);
-let I = O.A.reactParserFor(D.A.getDefaultRules(v)),
+    N = l(46054),
+    O = l(383055),
+    w = l(550997),
+    D = l(652215),
+    j = l(792996),
+    I = l(910379);
+let v = N.A.reactParserFor(w.A.getDefaultRules(I)),
     P = {};
 class R extends r.PureComponent {
     scrollerRef = r.createRef();
@@ -69,34 +69,34 @@ class R extends r.PureComponent {
         this.props.track(e, t, l);
     }
     trackLinkClick = (e) => {
-        this.props.track(j.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: e }, !1);
+        this.props.track(D.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: e }, !1);
     };
     renderFooter() {
         return (0, n.jsxs)("div", {
-            className: v.footer,
+            className: I.footer,
             children: [
                 (0, n.jsx)(f.Anchor, {
-                    "aria-label": N.intl.string(N.t["/84uiD"]),
-                    className: v.socialLink,
-                    href: (0, S.A)(j.Pq7.TWITTER),
+                    "aria-label": j.intl.string(j.t["/84uiD"]),
+                    className: I.socialLink,
+                    href: (0, S.A)(D.Pq7.TWITTER),
                     target: "blank",
-                    children: (0, n.jsx)(C.p, { size: "xs", color: "currentColor" }),
+                    children: (0, n.jsx)(C.XNeutralIcon, { size: "xs", color: "currentColor" }),
                 }),
                 (0, n.jsx)(f.Anchor, {
-                    "aria-label": N.intl.string(N.t["h0or/l"]),
-                    className: v.socialLink,
-                    href: j.w7I.FACEBOOK_URL,
+                    "aria-label": j.intl.string(j.t["h0or/l"]),
+                    className: I.socialLink,
+                    href: D.w7I.FACEBOOK_URL,
                     target: "blank",
-                    children: (0, n.jsx)(k.Z, { size: "xs", color: "currentColor" }),
+                    children: (0, n.jsx)(k.FacebookNeutralIcon, { size: "xs", color: "currentColor" }),
                 }),
                 (0, n.jsx)(f.Anchor, {
-                    "aria-label": N.intl.string(N.t["5uVPyf"]),
-                    className: v.socialLink,
-                    href: j.w7I.INSTAGRAM_URL,
+                    "aria-label": j.intl.string(j.t["5uVPyf"]),
+                    className: I.socialLink,
+                    href: D.w7I.INSTAGRAM_URL,
                     target: "blank",
-                    children: (0, n.jsx)(x.L, { size: "xs", color: "currentColor" }),
+                    children: (0, n.jsx)(x.InstagramNeutralIcon, { size: "xs", color: "currentColor" }),
                 }),
-                (0, n.jsx)(_.E, { variant: "body-xs/normal", children: N.intl.string(N.t.EjVVI7) }),
+                (0, n.jsx)(_.E, { variant: "body-xs/normal", children: j.intl.string(j.t.EjVVI7) }),
             ],
         });
     }
@@ -106,8 +106,8 @@ class R extends r.PureComponent {
             r = e.video,
             o = e.image;
         if (null != t && "" !== t)
-            return (0, n.jsx)(E.rr, {
-                className: v.video,
+            return (0, n.jsx)(b.rr, {
+                className: I.video,
                 allowFullScreen: !1,
                 href: `https://youtu.be/${t}`,
                 thumbnail: { url: `https://i.ytimg.com/vi/${t}/hqdefault.jpg`, width: 432, height: 240 },
@@ -119,16 +119,16 @@ class R extends r.PureComponent {
                 provider: L.mt.YOUTUBE,
                 maxWidth: 432,
                 maxHeight: 240,
-                renderVideoComponent: w.$o,
-                renderImageComponent: w.LL,
-                renderLinkComponent: w.bU,
+                renderVideoComponent: O.$o,
+                renderImageComponent: O.LL,
+                renderLinkComponent: O.bU,
                 onPlay: () => {
-                    this.track(j.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(D.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
             });
         if (null != r && "" !== r) {
             let e = r.startsWith("https://") ? r : l(274516)(`./${r}`);
-            return (0, n.jsx)(b.A, {
+            return (0, n.jsx)(E.A, {
                 src: e,
                 poster: o,
                 width: 432,
@@ -136,24 +136,24 @@ class R extends r.PureComponent {
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
-                className: v.video,
+                className: I.video,
                 onPlay: () => {
-                    this.track(j.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(D.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
             });
         }
         if (null == o || "" === o) return null;
         {
             let e = o.startsWith("https://") ? o : l(274516)(`./${o}`);
-            return (0, n.jsx)("img", { className: v.image, alt: "", src: e, width: 432, height: 240 });
+            return (0, n.jsx)("img", { className: I.image, alt: "", src: e, width: 432, height: 240 });
         }
     }
     render() {
         let { changeLog: e, onScroll: t, track: l, ...r } = this.props;
         return (0, n.jsx)(a.a, {
             ...r,
-            title: N.intl.string(N.t.LRmNAl),
-            subtitle: N.intl.format(N.t.Fb8xx2, {
+            title: j.intl.string(j.t.LRmNAl),
+            subtitle: j.intl.format(j.t.Fb8xx2, {
                 date: null != e.date && "" !== e.date ? A()(e.date).toDate() : new Date(),
             }),
             actions: [],
@@ -164,11 +164,11 @@ class R extends r.PureComponent {
             children: (0, n.jsxs)("div", {
                 tabIndex: 0,
                 role: "region",
-                "aria-label": N.intl.string(N.t.HzBchE),
-                className: v.container,
+                "aria-label": j.intl.string(j.t.HzBchE),
+                className: I.container,
                 children: [
                     this.renderVideo(),
-                    I(e.body, !1, {
+                    v(e.body, !1, {
                         changeLog: this,
                         interpolations: P,
                         onLinkClick: this.trackLinkClick,
@@ -184,7 +184,7 @@ class G extends r.PureComponent {
     maxScrolledPercentage = 0;
     mountedAt = 0;
     componentDidMount() {
-        ((this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(j.HAw.CHANGE_LOG_OPENED, {}, !0));
+        ((this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(D.HAw.CHANGE_LOG_OPENED, {}, !0));
     }
     close = () => ((0, i.Oo)(g.lb), Promise.resolve());
     handleScroll = (e) => {
@@ -209,7 +209,7 @@ class G extends r.PureComponent {
         };
     })();
     componentWillUnmount() {
-        this.track(j.HAw.CHANGE_LOG_CLOSED);
+        this.track(D.HAw.CHANGE_LOG_CLOSED);
     }
     render() {
         return (0, n.jsx)(R, {
@@ -246,15 +246,15 @@ function T(e) {
         i)
     )
         return (0, n.jsx)(a.a, {
-            title: N.intl.string(N.t.V9ospk),
-            actions: [{ text: N.intl.string(N.t.BddRzS), onClick: e.onClose }],
+            title: j.intl.string(j.t.V9ospk),
+            actions: [{ text: j.intl.string(j.t.BddRzS), onClick: e.onClose }],
             ...e,
         });
     if (null == t)
         if (l)
             return (0, n.jsx)(a.a, {
-                title: N.intl.string(N.t.O1iRT8),
-                actions: [{ text: N.intl.string(N.t.BddRzS), onClick: e.onClose }],
+                title: j.intl.string(j.t.O1iRT8),
+                actions: [{ text: j.intl.string(j.t.BddRzS), onClick: e.onClose }],
                 ...e,
             });
         else return (0, o.A)(e);

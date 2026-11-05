@@ -9,10 +9,10 @@ var n = l(477900),
     c = l(602853),
     u = l(834730),
     m = l(123292),
-    H = l(215026),
-    h = l(871682),
-    x = l(778858),
-    g = l(149468),
+    h = l(215026),
+    H = l(871682),
+    g = l(778858),
+    x = l(149468),
     f = l(46653),
     j = l(129230),
     p = l(504049),
@@ -29,14 +29,14 @@ l.d(
             let { guildId: t } = e,
                 L = (0, V.vA)(t),
                 { selectedUserIds: D, clearSelection: R } = (0, v.A)(t),
-                E = D.size > 0;
-            function S(e, t, l, n) {
-                x.A.startBulkBan(e, t, l, n);
+                S = D.size > 0;
+            function E(e, t, l, n) {
+                g.A.startBulkBan(e, t, l, n);
             }
             let N = i.useCallback(() => {
                     R();
                 }, [R]),
-                y = (0, n.jsxs)("span", {
+                I = (0, n.jsxs)("span", {
                     className: M.zC,
                     children: [
                         (0, n.jsx)(o.UserIcon, {
@@ -53,10 +53,10 @@ l.d(
                         (0, n.jsx)(m.Q, { text: A.intl.string(A.t.yW6ZdE), onClick: N }),
                     ],
                 }),
-                Z = (0, n.jsxs)("span", {
+                y = (0, n.jsxs)("span", {
                     className: M.UD,
                     children: [
-                        (0, n.jsx)(H.w, { size: "custom", color: "currentColor", width: 20, height: 20 }),
+                        (0, n.jsx)(h.HammerIcon, { size: "custom", color: "currentColor", width: 20, height: 20 }),
                         (0, n.jsx)(u.E, {
                             variant: "body-sm/semibold",
                             color: "currentColor",
@@ -69,12 +69,12 @@ l.d(
                       component: "div",
                       className: M.n2,
                       children:
-                          E &&
-                          (0, n.jsx)(h.F, {
+                          S &&
+                          (0, n.jsx)(H.F, {
                               children: (0, n.jsx)(a.A, {
                                   onSave: function () {
                                       (j.default.track(b.HAw.BULK_MODERATION_ACTION_STARTED, {
-                                          ...(0, g.H$)(t),
+                                          ...(0, x.H$)(t),
                                           action_type: p.Nj.BAN,
                                           target_user_ids: [...D],
                                           mod_user_id: f.default.getId(),
@@ -92,13 +92,13 @@ l.d(
                                                       guildId: t,
                                                       canBulkBan: L,
                                                       userIds: D,
-                                                      onBanMultiple: S,
+                                                      onBanMultiple: E,
                                                   });
                                           }));
                                   },
-                                  onSaveText: Z,
+                                  onSaveText: y,
                                   onSaveButtonColor: r.XD.RED,
-                                  message: y,
+                                  message: I,
                               }),
                           }),
                   })

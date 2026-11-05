@@ -14,8 +14,8 @@ var i = e(350835),
     m = e(471107),
     p = e(506326),
     x = e(693879),
-    _ = e(583846),
-    I = e(53257);
+    I = e(583846),
+    _ = e(53257);
 e.d(
     n,
     {},
@@ -24,29 +24,29 @@ e.d(
             let { activity: n } = t,
                 e = n.timestamps?.start ?? n.created_at,
                 { now: d } = (0, m.G)();
-            if (null == e || (0, I.A)(n)) return null;
+            if (null == e || (0, _.A)(n)) return null;
             let A = n.timestamps?.end,
-                _ = n.timestamps?.isCountDown ?? !1,
+                I = n.timestamps?.isCountDown ?? !1,
                 N = (function (t) {
                     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     return n
-                        ? a.Q
+                        ? a.HourglassIcon
                         : (0, f.A)(t) || (0, g.$_)(t)
                           ? e
                               ? r.GameControllerIcon
-                              : s.k
+                              : s.AppsIcon
                           : t.type === i.$.LISTENING
-                            ? o.T
+                            ? o.MusicIcon
                             : t.type === i.$.WATCHING
-                              ? c.U
+                              ? c.TvIcon
                               : r.GameControllerIcon;
-                })(n, _ && null != A && A > d);
+                })(n, I && null != A && A > d);
             return (0, l.jsxs)(p.er, {
                 children: [
                     (0, l.jsx)(N, { size: "xxs", color: u.A.colors.TEXT_FEEDBACK_POSITIVE }),
                     (0, l.jsx)(x.z, {
-                        entry: { start: e, end: A, isCountDown: _ },
+                        entry: { start: e, end: A, isCountDown: I },
                         textColor: "text-feedback-positive",
                     }),
                 ],
@@ -54,14 +54,14 @@ e.d(
         },
         Rq: function (t) {
             let { activity: n } = t,
-                e = (0, _.kR)(n.assets?.large_text);
-            return null == e ? null : (0, l.jsx)(p.fM, { Icon: A.K, text: e });
+                e = (0, I.kR)(n.assets?.large_text);
+            return null == e ? null : (0, l.jsx)(p.fM, { Icon: A.TopicsIcon, text: e });
         },
         cy: function (t) {
             let { activity: n } = t;
             if ((0, f.A)(n) || null == n.party) return null;
-            let e = (0, _.gF)(n.state, n.party);
-            return null == e ? null : (0, l.jsx)(p.fM, { Icon: d.n, text: e });
+            let e = (0, I.gF)(n.state, n.party);
+            return null == e ? null : (0, l.jsx)(p.fM, { Icon: d.GroupIcon, text: e });
         },
     },
 );

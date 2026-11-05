@@ -83,19 +83,19 @@ let T = t.createContext({
     onQueryClick: () => {},
     onRemovePendingAddition: () => {},
 });
-function M() {
+function I() {
     return t.useContext(T);
 }
-let I = [];
+let M = [];
 function L(e) {
-    let { roles: n = I, members: r = I, users: l = I, guilds: s = I } = e;
+    let { roles: n = M, members: r = M, users: l = M, guilds: s = M } = e;
     return t.useMemo(() => [n.length, r.length, l.length, s.length], [n.length, r.length, l.length, s.length]);
 }
 let A = (e) => {
     let { title: n } = e;
     return (0, l.jsx)(d.D, { variant: "heading-xs/semibold", className: o()(O.Gf, O.iw), children: n }, n);
 };
-function N(e) {
+function U(e) {
     let { id: n, sectionIndex: r, rowIndex: s, rows: a, children: d, showCheckbox: x, showRowLabel: w } = e,
         m = (0, i.rm)(n),
         {
@@ -105,7 +105,7 @@ function N(e) {
             pendingAdditions: E,
             onRowClick: j,
             isAtMaxPendingRows: v,
-        } = M(),
+        } = I(),
         f = a[s],
         p = k(f),
         C = f.disabled || p in E,
@@ -140,13 +140,13 @@ function N(e) {
         ],
     });
 }
-let U = (e) => {
+let N = (e) => {
         let { index: n, disabledText: r } = e,
-            { roles: t } = M(),
+            { roles: t } = I(),
             s = t[n];
         return null == s
             ? null
-            : (0, l.jsxs)(N, {
+            : (0, l.jsxs)(U, {
                   id: `roles-row-${n}`,
                   sectionIndex: y.oO.ROLES,
                   rowIndex: n,
@@ -156,7 +156,7 @@ let U = (e) => {
                   children: [
                       (0, l.jsx)("div", {
                           className: o()(O.iw, O.Hu),
-                          children: (0, l.jsx)(x.i, { size: "custom", color: s.colorString, height: 20 }),
+                          children: (0, l.jsx)(x.ShieldUserIcon, { size: "custom", color: s.colorString, height: 20 }),
                       }),
                       (0, l.jsxs)("div", {
                           className: O.xZ,
@@ -176,11 +176,11 @@ let U = (e) => {
     },
     D = (e) => {
         let { index: n } = e,
-            { members: r } = M(),
+            { members: r } = I(),
             t = r[n];
         return null == t
             ? null
-            : (0, l.jsxs)(N, {
+            : (0, l.jsxs)(U, {
                   id: `members-row-${n}`,
                   sectionIndex: y.oO.MEMBERS,
                   rowIndex: n,
@@ -203,11 +203,11 @@ let U = (e) => {
     },
     P = (e) => {
         let { index: n, disabledText: r } = e,
-            { users: t } = M(),
+            { users: t } = I(),
             s = t[n];
         return null == s
             ? null
-            : (0, l.jsxs)(N, {
+            : (0, l.jsxs)(U, {
                   id: `users-row-${n}`,
                   sectionIndex: y.oO.USERS,
                   rowIndex: n,
@@ -230,11 +230,11 @@ let U = (e) => {
     },
     $ = (e) => {
         let { index: n } = e,
-            { guilds: r } = M(),
+            { guilds: r } = I(),
             t = r[n];
         return null == t
             ? null
-            : (0, l.jsxs)(N, {
+            : (0, l.jsxs)(U, {
                   id: `guilds-row-${n}`,
                   sectionIndex: y.oO.GUILDS,
                   rowIndex: n,
@@ -265,10 +265,10 @@ let U = (e) => {
                     setQuery: o,
                     pendingAdditions: a,
                     setPendingAdditions: c,
-                    roles: d = I,
-                    members: u = I,
-                    users: h = I,
-                    guilds: x = I,
+                    roles: d = M,
+                    members: u = M,
+                    users: h = M,
+                    guilds: x = M,
                     getRichTag: w,
                     maxPendingRows: m,
                 } = e,
@@ -366,7 +366,7 @@ let U = (e) => {
         },
         Modal: function (e) {
             let { listProps: n, ...r } = e,
-                { listRef: t } = M(),
+                { listRef: t } = I(),
                 { ref: s, role: o, ...c } = (0, i.$y)();
             return (0, l.jsx)(a.a, {
                 ...r,
@@ -397,7 +397,7 @@ let U = (e) => {
                     members: S,
                     users: b,
                     guilds: g,
-                } = M(),
+                } = I(),
                 { keys: E, tags: R } = t.useMemo(() => {
                     let e = Object.keys(c),
                         n = e.map((e) => c[e].display);
@@ -456,7 +456,7 @@ let U = (e) => {
             let { section: n, row: r } = e;
             switch (n) {
                 case y.oO.ROLES:
-                    return (0, l.jsx)(U, { index: r });
+                    return (0, l.jsx)(N, { index: r });
                 case y.oO.MEMBERS:
                     return (0, l.jsx)(D, { index: r });
                 case y.oO.USERS:

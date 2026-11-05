@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(559106),
     E = n(452027),
     A = n(15626),
-    h = n(668639),
-    f = n(285796),
+    f = n(668639),
+    h = n(285796),
     I = n(952270),
     p = n(39623),
     m = n(862301),
-    g = n(116711),
-    T = n(431527),
+    T = n(116711),
+    g = n(431527),
     S = n(834730),
     N = n(866665),
     C = n(710778),
@@ -24,7 +24,7 @@ var i = n(477900),
     R = n(281595),
     L = n(358983);
 function y(e, t) {
-    let n = r.useContext(h.cK);
+    let n = r.useContext(f.cK);
     return (
         r.useEffect(() => {
             (n.setHasValue?.((null != t && "" !== t) || (null != e && "" !== e)), n.setIsFocused?.(!1));
@@ -54,7 +54,7 @@ function D(e) {
         switch (t.type) {
             case "tags": {
                 let { type: e, ...n } = t;
-                return (0, i.jsx)(T.C, { ...n, layout: "inline" });
+                return (0, i.jsx)(g.C, { ...n, layout: "inline" });
             }
             case "image":
                 return (0, i.jsx)("img", { "aria-hidden": !0, alt: "", src: t.src, className: L.image });
@@ -68,19 +68,23 @@ function D(e) {
 }
 function b(e) {
     let { inputSize: t, onClick: n, disabled: r } = e,
-        { i18n: a } = (0, g.G9)();
+        { i18n: a } = (0, T.G9)();
     return (0, i.jsx)(u.D, {
         className: L.clearButton,
         onClick: r ? void 0 : n,
         "aria-label": a.TEXT_INPUT_CLEAR,
         "aria-disabled": r,
         tabIndex: r ? -1 : 0,
-        children: (0, i.jsx)(f.a, { size: "md" === t ? "xs" : "xxs", color: "currentColor", "aria-hidden": !0 }),
+        children: (0, i.jsx)(h.CircleXIcon, {
+            size: "md" === t ? "xs" : "xxs",
+            color: "currentColor",
+            "aria-hidden": !0,
+        }),
     });
 }
 function v(e) {
     let { inputSize: t, isRevealed: n, disabled: r, onClick: a } = e,
-        { i18n: s } = (0, g.G9)();
+        { i18n: s } = (0, T.G9)();
     return (0, i.jsx)(D, {
         accessory: {
             icon: n ? I.EyeSlashIcon : p.EyeIcon,
@@ -133,12 +137,12 @@ n.d(
                     type: c = "text",
                     placeholder: u = "",
                     maxLength: A,
-                    value: h,
-                    defaultValue: f,
+                    value: f,
+                    defaultValue: h,
                     minLength: I,
                     error: p,
-                    defaultDirty: g = !1,
-                    leading: T,
+                    defaultDirty: T = !1,
+                    leading: g,
                     trailing: S,
                     validateOn: N = "change",
                     size: C = "md",
@@ -152,16 +156,16 @@ n.d(
                 B = (0, R.Y)({
                     validateOn: N,
                     error: p,
-                    value: h,
+                    value: f,
                     minLength: I,
                     maxLength: A,
                     min: null != x.min ? Number(x.min) : void 0,
                     max: null != x.max ? Number(x.max) : void 0,
-                    defaultDirty: g,
+                    defaultDirty: T,
                 }),
                 { setShouldValidate: V } = B,
-                H = y(h, f),
-                j = "object" == typeof T && "type" in T && "tags" === T.type,
+                H = y(f, h),
+                j = "object" == typeof g && "type" in g && "tags" === g.type,
                 W = r.useRef(null),
                 Y = (0, l.A)(W, a),
                 K = r.useRef(null),
@@ -170,11 +174,11 @@ n.d(
             let [X, z] = r.useState(!1),
                 q = "password" === c;
             X && (t || !w || !q) && z(!1);
-            let Z = w && q,
-                Q = Z && X ? "text" : c,
+            let Q = w && q,
+                Z = Q && X ? "text" : c,
                 J = null,
-                ee = !$ && ("boolean" == typeof U ? U && null != h && "" !== h : U.show);
-            Z
+                ee = !$ && ("boolean" == typeof U ? U && null != f && "" !== f : U.show);
+            Q
                 ? (J = (0, i.jsx)(v, { inputSize: C, isRevealed: X, disabled: t, onClick: () => z((e) => !e) }))
                 : ee
                   ? (J = (0, i.jsx)(b, {
@@ -189,8 +193,8 @@ n.d(
                     }))
                   : null != S && (J = (0, i.jsx)(D, { accessory: S, inputSize: C }));
             let et = null;
-            null != T && (et = (0, i.jsx)(D, { accessory: T, inputSize: C }));
-            let en = G ? (0, i.jsx)(O.n, { value: h, maxLength: A }) : null;
+            null != g && (et = (0, i.jsx)(D, { accessory: g, inputSize: C }));
+            let en = G ? (0, i.jsx)(O.n, { value: f, maxLength: A }) : null;
             return (0, i.jsx)(E.D, {
                 ...k,
                 errorMessage: B.hasError ? (B.errorMessage ?? void 0) : void 0,
@@ -218,12 +222,12 @@ n.d(
                                 readOnly: $,
                                 required: k.required,
                                 "aria-required": k.required,
-                                type: Q,
+                                type: Z,
                                 placeholder: u,
                                 maxLength: A,
                                 minLength: I,
-                                value: h,
-                                defaultValue: f,
+                                value: f,
+                                defaultValue: h,
                                 "data-mana-component": "text-input",
                                 ...F,
                                 spellCheck: !q && F.spellCheck,

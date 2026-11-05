@@ -53,7 +53,7 @@ function v(e) {
                     color: null != t ? "text-link" : "interactive-text-hover",
                     children: f.intl.string(f.t["5fmYjW"]),
                 }),
-                (0, i.jsx)(o.E, { size: "xs", color: "currentColor", className: I.D6 }),
+                (0, i.jsx)(o.ArrowSmallRightIcon, { size: "xs", color: "currentColor", className: I.D6 }),
             ],
         });
     return null == t

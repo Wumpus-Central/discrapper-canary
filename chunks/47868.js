@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(815021),
     o = t(939249),
     c = t(534514),
-    d = t(834730),
-    u = t(320448),
+    u = t(834730),
+    d = t(320448),
     A = t(792996),
     h = t(906212);
 t.d(
@@ -40,7 +40,7 @@ t.d(
                         className: h.FS,
                         children: [
                             (0, i.jsx)(c.D, { variant: "heading-sm/semibold", color: "text-strong", children: m }),
-                            (0, i.jsx)(d.E, {
+                            (0, i.jsx)(u.E, {
                                 variant: "body-xs/normal",
                                 color: "text-strong",
                                 className: h.mG,
@@ -49,13 +49,13 @@ t.d(
                             null != x && x > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(d.E, {
+                                          (0, i.jsx)(u.E, {
                                               variant: "body-xs/normal",
                                               color: "text-strong",
                                               className: h.Om,
                                               children: "\u2022",
                                           }),
-                                          (0, i.jsx)(d.E, {
+                                          (0, i.jsx)(u.E, {
                                               variant: "body-xs/normal",
                                               color: "text-strong",
                                               className: h.mG,
@@ -68,7 +68,7 @@ t.d(
                     }),
                     null != p
                         ? (0, i.jsx)("div", { className: h.r, children: (0, i.jsx)(r.J, { size: "xs", onClick: E }) })
-                        : (0, i.jsx)(u._, { size: "xs", color: "currentColor", className: h.OW }),
+                        : (0, i.jsx)(d.ChevronSmallRightIcon, { size: "xs", color: "currentColor", className: h.OW }),
                 ],
             });
         },

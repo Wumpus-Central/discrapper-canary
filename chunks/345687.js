@@ -13,7 +13,7 @@ t.d(
                 className: n,
                 children: (0, i.jsx)("div", {
                     className: a.T,
-                    children: (0, i.jsx)(l.q, {
+                    children: (0, i.jsx)(l.StageIcon, {
                         size: "custom",
                         color: "currentColor",
                         className: a.C,

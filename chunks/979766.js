@@ -1,8 +1,8 @@
 var t = e(477900);
 e(582128);
 var c = e(477782),
-    r = e(366605),
-    o = e(687709),
+    o = e(366605),
+    r = e(687709),
     a = e(492841),
     s = e(145530),
     l = e(652215),
@@ -17,20 +17,20 @@ e.d(
                     ? (0, t.jsx)(c.Dr, {
                           id: "pin",
                           action: function (e) {
-                              e.shiftKey ? o.A.pinMessage(i, n.id) : s.A.confirmPin(i, n);
+                              e.shiftKey ? r.A.pinMessage(i, n.id) : s.A.confirmPin(i, n);
                           },
                           label: d.intl.string(d.t.CvQ18w),
-                          leadingAccessory: { type: "icon", icon: r.t },
-                          icon: r.t,
+                          leadingAccessory: { type: "icon", icon: o.PinIcon },
+                          icon: o.PinIcon,
                       })
                     : (0, t.jsx)(c.Dr, {
                           id: "unpin",
                           action: function (e) {
-                              e.shiftKey ? o.A.unpinMessage(i, n.id) : s.A.confirmUnpin(i, n);
+                              e.shiftKey ? r.A.unpinMessage(i, n.id) : s.A.confirmUnpin(i, n);
                           },
                           label: d.intl.string(d.t["Bse+F/"]),
-                          leadingAccessory: { type: "icon", icon: r.t },
-                          icon: r.t,
+                          leadingAccessory: { type: "icon", icon: o.PinIcon },
+                          icon: o.PinIcon,
                       })
                 : null;
         },

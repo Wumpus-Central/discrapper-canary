@@ -15,14 +15,14 @@ n.d(
     {},
     {
         A: function (e) {
-            let { skuId: t, canUsePremiumCollectibles: n, isPurchaseSection: E, isPremiumSection: h } = e,
+            let { skuId: t, canUsePremiumCollectibles: n, isPurchaseSection: h, isPremiumSection: E } = e,
                 x = (0, m.aT)(t),
                 p = (0, r.bG)([u.A, d.A], () => {
                     let e = u.A.getProduct(t),
                         n = d.A.getPurchase(t);
                     return null != n ? (0, m.gA)(n) : (0, m.G0)(e);
                 });
-            return E || (h && n)
+            return h || (E && n)
                 ? null
                 : x
                   ? (0, l.jsx)("div", {
@@ -31,7 +31,13 @@ n.d(
                     })
                   : (0, l.jsx)(a.fk, {
                         icon: p
-                            ? () => (0, l.jsx)(c.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
+                            ? () =>
+                                  (0, l.jsx)(c.NitroWheelIcon, {
+                                      size: "custom",
+                                      color: "currentColor",
+                                      width: 14,
+                                      height: 14,
+                                  })
                             : () => (0, l.jsx)(s.LockIcon, { size: "xxs", color: "currentColor" }),
                         color: i.A.colors.ICON_OVERLAY_DARK.css,
                         className: f.b,

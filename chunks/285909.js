@@ -14,8 +14,8 @@ var l = e(477900),
     m = e(92240),
     p = e(679492),
     x = e(243949),
-    _ = e(939496),
-    I = e(855986),
+    I = e(939496),
+    _ = e(855986),
     N = e(573648),
     E = e(541806),
     T = e(261020),
@@ -32,8 +32,8 @@ var l = e(477900),
     b = e(540999),
     M = e(939075),
     U = e(20805),
-    G = e(655116),
-    D = e(287809),
+    D = e(655116),
+    G = e(287809),
     Y = e(272984),
     V = e(695311),
     w = e(518477),
@@ -58,7 +58,7 @@ function W(t) {
         q = Q?.interactionPopoutTargetRef ?? J,
         Z = (function (t) {
             let { onAction: n } = t,
-                { themeType: e } = (0, _.E)(),
+                { themeType: e } = (0, I.E)(),
                 i = (0, x.A)({
                     userId: t.user.id,
                     tabSection: w.RP.ACTIVITY,
@@ -69,8 +69,8 @@ function W(t) {
                 e === k.d.POPOUT ? i : null,
                 (function (t) {
                     let { user: n, entry: e, display: i, onAction: a, onClose: r } = t,
-                        s = (0, I.bG)([D.default], () => D.default.getCurrentUser()?.id === n.id),
-                        o = (0, I.bG)([G.A], () => G.A.hasConnectedAccount());
+                        s = (0, _.bG)([G.default], () => G.default.getCurrentUser()?.id === n.id),
+                        o = (0, _.bG)([D.A], () => D.A.hasConnectedAccount());
                     if ("recent" !== i || !(0, h.F3)(e)) return null;
                     if (!o)
                         return (0, l.jsx)(d.Dr, {
@@ -114,7 +114,7 @@ function W(t) {
                 (0, M.A)(t),
                 (function (t) {
                     let { activity: n, entry: e, display: i, onAction: a, onClose: r } = t,
-                        s = (0, I.bG)([y.A], () => null != y.A.getAccount(null, v.fg2.CRUNCHYROLL));
+                        s = (0, _.bG)([y.A], () => null != y.A.getAccount(null, v.fg2.CRUNCHYROLL));
                     if (!(0, E.A)(n) && !(0, h.CU)(e)) return null;
                     if (!s)
                         return (0, l.jsx)(d.Dr, {
@@ -143,13 +143,13 @@ function W(t) {
                 (0, j.s)(t),
                 (function (t) {
                     let { user: n, activity: e } = t,
-                        i = (0, I.bG)([b.A], () => b.A.isDeveloper);
+                        i = (0, _.bG)([b.A], () => b.A.isDeveloper);
                     return __OVERLAY__ || !i || null == e
                         ? null
                         : (0, l.jsx)(d.Dr, {
                               id: "inspect-presence",
                               label: "Inspect Presence",
-                              leadingAccessory: { type: "icon", icon: R.V },
+                              leadingAccessory: { type: "icon", icon: R.StaffBadgeIcon },
                               action: () => (0, L.cN)(n.id),
                           });
                 })(t),

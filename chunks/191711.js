@@ -1,6 +1,6 @@
-var s,
-    i = l(477900),
-    n = l(582128),
+var n,
+    s = l(477900),
+    i = l(582128),
     a = l(503698),
     r = l.n(a),
     o = l(165862),
@@ -12,31 +12,31 @@ var s,
     p = l(646514),
     g = l(847374),
     x = l(773669),
-    j = l(619189);
-function v(e) {
-    let { items: t, onClose: l, onSelect: s, selected: n, ...a } = e;
-    return (0, i.jsx)(o.W, {
+    v = l(619189);
+function j(e) {
+    let { items: t, onClose: l, onSelect: n, selected: i, ...a } = e;
+    return (0, s.jsx)(o.W, {
         "data-menu-migrated-auto": !0,
-        className: j.MK,
+        className: v.MK,
         navId: "global-discovery-search-filter-options",
         "aria-label": a["aria-label"],
         hideScroller: !0,
         onClose: l,
         onSelect: l,
-        children: (0, i.jsx)(
+        children: (0, s.jsx)(
             c.rX,
             {
                 children: t.map((e) => {
                     let { id: t, name: l, count: a } = e;
-                    return (0, i.jsx)(
+                    return (0, s.jsx)(
                         c.Dr,
                         {
                             id: t,
                             label: l,
                             subtext: a.toLocaleString(x.default.locale),
-                            icon: t === n ? d.y : void 0,
-                            leadingAccessory: t === n ? { type: "icon", icon: d.y } : void 0,
-                            action: () => s(t),
+                            icon: t === i ? d.CircleCheckIcon : void 0,
+                            leadingAccessory: t === i ? { type: "icon", icon: d.CircleCheckIcon } : void 0,
+                            action: () => n(t),
                         },
                         t,
                     );
@@ -46,60 +46,66 @@ function v(e) {
         ),
     });
 }
-var A = (((s = {}).FILLED = "FILLED"), (s.TRANSPARENT = "TRANSPARENT"), s);
+var C = (((n = {}).FILLED = "FILLED"), (n.TRANSPARENT = "TRANSPARENT"), n);
 l.d(
     t,
     {},
     {
         A: function (e) {
-            let { items: t, title: l, onSelect: s, selected: a, variant: o = "TRANSPARENT", ...c } = e,
-                d = n.useRef(null),
-                x = n.useMemo(
+            let { items: t, title: l, onSelect: n, selected: a, variant: o = "TRANSPARENT", ...c } = e,
+                d = i.useRef(null),
+                x = i.useMemo(
                     () =>
                         (function (e) {
                             switch (e) {
                                 case "FILLED":
-                                    return j.PC;
+                                    return v.PC;
                                 case "TRANSPARENT":
                                     return;
                             }
                         })(o),
                     [o],
                 );
-            return (0, i.jsx)(u.Y, {
+            return (0, s.jsx)(u.Y, {
                 targetElementRef: d,
                 renderPopout: (e) => {
                     let { closePopout: l } = e;
-                    return (0, i.jsx)(v, {
+                    return (0, s.jsx)(j, {
                         selected: a,
                         onClose: l,
                         items: t,
-                        onSelect: s,
+                        onSelect: n,
                         "aria-label": c["aria-label"],
                     });
                 },
                 position: "bottom",
                 align: "left",
                 children: (e, t) => {
-                    let { isShown: s } = t;
-                    return (0, i.jsxs)("div", {
+                    let { isShown: n } = t;
+                    return (0, s.jsxs)("div", {
                         ...e,
                         ref: d,
-                        className: r()(j.pb, x),
+                        className: r()(v.pb, x),
                         children: [
-                            (0, i.jsx)(m.E, {
+                            (0, s.jsx)(m.E, {
                                 variant: "body-sm/medium",
                                 color: "interactive-text-default",
                                 children: l,
                             }),
-                            s
-                                ? (0, i.jsx)(h.t, { size: "xs", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT })
-                                : (0, i.jsx)(g.a, { size: "xs", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                            n
+                                ? (0, s.jsx)(h.ChevronSmallUpIcon, {
+                                      size: "xs",
+                                      color: p.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                  })
+                                : (0, s.jsx)(g.ChevronSmallDownIcon, {
+                                      size: "xs",
+                                      color: p.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                  }),
                         ],
                     });
                 },
             });
         },
-        H: A,
+        H: C,
     },
 );

@@ -16,8 +16,8 @@ var s = i(477900),
     j = i(338717),
     C = i(33358),
     f = i(643612),
-    y = i(207133),
-    I = i(302031),
+    I = i(207133),
+    y = i(302031),
     N = i(734057),
     A = i(129230),
     v = i(515718),
@@ -26,8 +26,8 @@ var s = i(477900),
     w = i(652215),
     W = i(792996),
     L = i(645970),
-    P = i(562146);
-function E(e) {
+    E = i(562146);
+function P(e) {
     let {
             mimeType: t,
             downloadURL: i,
@@ -39,22 +39,22 @@ function E(e) {
             isSingleMosaicItem: j,
         } = e,
         C = n.useRef(null),
-        [f, y] = n.useState(0);
+        [f, I] = n.useState(0);
     (0, x.i4)(C, (e) => {
         let { width: t } = e;
-        null != t && y(Math.floor((t - 8) / 32));
+        null != t && I(Math.floor((t - 8) / 32));
     });
-    let I = "CLIP" === p && j,
+    let y = "CLIP" === p && j,
         N = [];
     (null == r ||
-        I ||
+        y ||
         N.push(
             (0, s.jsx)(
                 o.m,
                 {
                     text: W.intl.string(W.t.Y8ujqr),
                     children: (0, s.jsx)(d.D, {
-                        className: P.HF,
+                        className: E.HF,
                         focusProps: { offset: 2 },
                         onClick: r,
                         "aria-label": W.intl.string(W.t.Y8ujqr),
@@ -76,7 +76,7 @@ function E(e) {
                     {
                         text: W.intl.string(W.t["/XT3ij"]),
                         children: (0, s.jsx)(d.D, {
-                            className: a()(P.HF, L.GC),
+                            className: a()(E.HF, L.GC),
                             focusProps: { offset: 2 },
                             onClick: l,
                             "aria-label": W.intl.string(W.t["0+xZH0"]),
@@ -92,7 +92,7 @@ function E(e) {
                 ),
             ),
         c &&
-            !I &&
+            !y &&
             N.push(
                 (0, s.jsx)(
                     o.m,
@@ -101,7 +101,7 @@ function E(e) {
                         children: (0, s.jsx)(g.A, {
                             target: "_blank",
                             rel: "noreferrer noopener",
-                            className: P.HF,
+                            className: E.HF,
                             iconClassName: L.qG,
                             focusProps: { offset: 2 },
                             href: i,
@@ -114,8 +114,8 @@ function E(e) {
     let A = Math.max(0, N.length - f);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            f > 0 && N.length > 0 && (0, s.jsx)("div", { className: a()(P.aq, { [P.XE]: !h }), children: N.slice(A) }),
-            (0, s.jsx)("div", { ref: C, className: P.St }),
+            f > 0 && N.length > 0 && (0, s.jsx)("div", { className: a()(E.aq, { [E.XE]: !h }), children: N.slice(A) }),
+            (0, s.jsx)("div", { ref: C, className: E.St }),
         ],
     });
 }
@@ -134,9 +134,9 @@ function O(e) {
             onContextMenu: p,
             onPlay: j,
             renderImageComponent: C,
-            renderVideoComponent: I,
+            renderVideoComponent: y,
             renderAudioComponent: S,
-            renderPlaintextFilePreview: P,
+            renderPlaintextFilePreview: E,
             renderGenericFileComponent: O,
             renderVisualPlaceholderComponent: T,
             className: b,
@@ -159,7 +159,7 @@ function O(e) {
         [ee, et] = n.useState(!1),
         ei = t.getChannelId(),
         es = N.A.getChannel(ei),
-        en = (0, y.A)(ei),
+        en = (0, I.A)(ei),
         el = n.useMemo(() => (null != J && -1 !== J.indexOf("/") ? J.split("/") : ["unknown", "unknown"]), [J]),
         ea = !1;
     if (q) {
@@ -186,7 +186,7 @@ function O(e) {
                 return ea
                     ? null
                     : !ee &&
-                          (0, s.jsx)(E, {
+                          (0, s.jsx)(P, {
                               mimeType: el,
                               downloadURL: i.downloadUrl,
                               showDownload: e,
@@ -204,7 +204,7 @@ function O(e) {
                     focusProps: { offset: { bottom: 4 } },
                     onClick: () => r(i),
                     "aria-label": W.intl.string(W.t["0+xZH0"]),
-                    children: (0, s.jsx)(c.P, { size: "xs", color: "currentColor" }),
+                    children: (0, s.jsx)(c.XSmallIcon, { size: "xs", color: "currentColor" }),
                 })
             );
         }, [D, a, K, en, Q, ea, ee, el, i, er, eo, o, q, r, Y]);
@@ -252,7 +252,7 @@ function O(e) {
             });
         case "VIDEO":
         case "CLIP":
-            return (0, s.jsx)(I, {
+            return (0, s.jsx)(y, {
                 item: i,
                 message: t,
                 width: B,
@@ -304,7 +304,7 @@ function O(e) {
                 onPlay: j,
             });
         case "PLAINTEXT_PREVIEW":
-            return (0, s.jsx)(P, {
+            return (0, s.jsx)(E, {
                 item: i,
                 message: t,
                 className: b,
@@ -343,12 +343,12 @@ i.d(
                 } = e,
                 { width: h, height: x, type: g } = i,
                 f = r(i, (0, C.P)(l)),
-                [y, N] = n.useState(f),
+                [I, N] = n.useState(f),
                 [A, w] = n.useState(null != f);
-            f !== y && (N(f), w(null != f));
+            f !== I && (N(f), w(null != f));
             let W = (0, p.qZ)(f),
-                P = d === M.d.MOSAIC,
-                E = !P && ((null != h && h < 200) || (null != x && x < 50)),
+                E = d === M.d.MOSAIC,
+                P = !E && ((null != h && h < 200) || (null != x && x < 50)),
                 T = "IMAGE" === g || "VIDEO" === g || "CLIP" === g,
                 b = (0, S.Xg)(g),
                 H = u && null != f && (0, p.j8)(h, x),
@@ -369,11 +369,11 @@ i.d(
                     isSingleMosaicItem: u,
                     hiddenSpoilers: e,
                     className: a()(t, L.bq, {
-                        [L.cd]: A && !E,
+                        [L.cd]: A && !P,
                         [L.rP]: A && f === j.Oc.SPOILER,
                         [L.xu]: A && null != f && j._K.has(f),
                         [L.sC]: A && e,
-                        [L.mG]: A && E,
+                        [L.mG]: A && P,
                     }),
                     focusable: !e,
                     mediaLayoutType: d,
@@ -386,12 +386,12 @@ i.d(
             }
             return (0, s.jsx)("div", {
                 style: m ? { minWidth: 0, width: `${c.maxWidth}px` } : void 0,
-                className: a()(L.wO, { [L.xV]: T, [L.D$]: o, [L.UI]: P, [L.JP]: P && b }),
+                className: a()(L.wO, { [L.xV]: T, [L.D$]: o, [L.UI]: E, [L.JP]: E && b }),
                 children:
                     null != f
-                        ? (0, s.jsx)(I.Ay, {
-                              type: I.Ay.Types.ATTACHMENT,
-                              inline: E,
+                        ? (0, s.jsx)(y.Ay, {
+                              type: y.Ay.Types.ATTACHMENT,
+                              inline: P,
                               reason: f,
                               isSingleMosaicItem: u,
                               obscured: A,
@@ -434,6 +434,6 @@ i.d(
                 srcIsAnimated: (0, r.Lt)(e.flags ?? 0, w.sbO.IS_ANIMATED),
             };
         },
-        zB: E,
+        zB: P,
     },
 );

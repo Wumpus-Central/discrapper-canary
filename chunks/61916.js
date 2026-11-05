@@ -7,8 +7,8 @@ var n = s(477900),
     o = s(56059),
     d = s(276293),
     c = s(646514),
-    b = s(834730),
-    m = s(658675),
+    m = s(834730),
+    b = s(658675),
     g = s(966327),
     A = s(662090),
     f = s(47167),
@@ -21,8 +21,8 @@ var n = s(477900),
     x = s(290863),
     _ = s(218461),
     D = s(994500),
-    N = s(287809),
-    I = s(5377),
+    I = s(287809),
+    N = s(5377),
     y = s(403362),
     P = s(427262),
     j = s(969223),
@@ -39,7 +39,7 @@ function z(e) {
         o = (0, r.bG)([D.A], () => D.A.getNickname(t.id)),
         d = (0, r.bG)([x.A], () => x.A.getStatus(t.id)),
         c = o ?? i,
-        b = a["aria-label"] ?? R(c, s ?? l);
+        m = a["aria-label"] ?? R(c, s ?? l);
     return (0, n.jsx)(v.A, {
         listItemId: a.destination.id,
         icon: (0, n.jsx)(g.A, { "aria-hidden": !0, size: u._3.SIZE_32, user: t, status: d }),
@@ -50,7 +50,7 @@ function z(e) {
         disabled: a.disabled,
         trailing: a.trailing,
         onPress: null != a.onPressDestination ? () => a.onPressDestination?.(a.destination, c) : void 0,
-        "aria-label": b,
+        "aria-label": m,
         "aria-setsize": a["aria-setsize"],
         "aria-posinset": a["aria-posinset"],
         className: a.className,
@@ -82,40 +82,40 @@ function k(e) {
     let { channel: t, subLabel: s, ...a } = e,
         i = (0, r.bG)([S.A], () => S.A.getGuild(t?.guild_id)),
         u = (0, f.Ay)(t),
-        m = (0, r.bG)([L.A, N.default, D.A], () => {
+        b = (0, r.bG)([L.A, I.default, D.A], () => {
             let e = L.A.getChannel(t.parent_id);
-            return null == e ? null : (0, f.m1)(e, N.default, D.A, !1);
+            return null == e ? null : (0, f.m1)(e, I.default, D.A, !1);
         }),
         g = (0, r.bG)([_.Ay], () => _.Ay.lastMessageTimestamp(t.id, G.P.CHANNEL)),
         A = i?.name,
         p = i?.name;
     if (t.isThread() || t.isForumPost()) {
-        let e = t.isForumPost() ? o.b : d.N;
+        let e = t.isForumPost() ? o.ForumIcon : d.TextIcon;
         ((A = (0, n.jsxs)("div", {
             className: T.vr,
             children: [
                 (0, n.jsx)(e, { color: c.A.colors.TEXT_SUBTLE, className: T.Q9 }),
-                (0, n.jsx)(b.E, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: m }),
+                (0, n.jsx)(m.E, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: b }),
                 null != g
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(b.E, {
+                              (0, n.jsx)(m.E, {
                                   className: T.Ql,
                                   variant: "body-xs/medium",
                                   color: "text-subtle",
                                   children: "\u2022",
                               }),
-                              (0, n.jsx)(b.E, {
+                              (0, n.jsx)(m.E, {
                                   variant: "body-xs/medium",
                                   color: "text-subtle",
-                                  children: (0, I.Fe)(l()(g)),
+                                  children: (0, N.Fe)(l()(g)),
                               }),
                           ],
                       })
                     : null,
             ],
         })),
-            (p = m));
+            (p = b));
     }
     let E = u ?? void 0,
         C = a["aria-label"] ?? R(E, s ?? p);
@@ -169,26 +169,26 @@ s.d(
                     validateDestination: d,
                 } = e,
                 c = a.useMemo(() => l?.map(C.I) ?? [], [l]),
-                b = a.useCallback(
+                m = a.useCallback(
                     (e) => {
                         let { section: a, row: l } = e;
                         if (a > 0) return;
-                        let b = t[l],
-                            { type: g, record: f } = b;
+                        let m = t[l],
+                            { type: g, record: f } = m;
                         if (g === A.rD.HEADER) return;
-                        let p = (0, C.I)((0, C.hY)(b)),
+                        let p = (0, C.I)((0, C.hY)(m)),
                             h = (0, j.pE)(s, i, f, d),
                             E = c.includes(p),
                             L = (u && !E) || null != h;
                         return (0, n.jsx)(
                             H,
                             {
-                                result: b,
+                                result: m,
                                 subLabel: null != h ? h.label : void 0,
                                 subLabelLineClamp: h?.lineClamp,
                                 disabled: L,
                                 selected: E,
-                                trailing: (0, n.jsx)(m.P, { checked: E, disabled: L }),
+                                trailing: (0, n.jsx)(b.P, { checked: E, disabled: L }),
                                 onPressDestination: r,
                                 "aria-posinset": l + 1,
                                 "aria-setsize": t.length,
@@ -199,7 +199,7 @@ s.d(
                     },
                     [u, r, s, i, t, c, o, d],
                 );
-            return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: b };
+            return { sections: [t.length], sectionHeight: 0, rowHeight: 48, renderRow: m };
         },
     },
 );

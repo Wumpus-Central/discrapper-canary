@@ -16,7 +16,7 @@ n.d(
                 m = (0, c.VI)(t, !0),
                 h = (0, c.pS)(n, i),
                 g = (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-muted", children: h }),
-                x = (0, l.jsx)(r.x, { size: "xs", color: "currentColor", className: s()(d.Eq, { [d.iE]: u }) });
+                x = (0, l.jsx)(r.TimerIcon, { size: "xs", color: "currentColor", className: s()(d.Eq, { [d.iE]: u }) });
             return (0, l.jsx)(o.m, {
                 text: m,
                 children: (0, l.jsx)("div", {

@@ -68,8 +68,8 @@ l.d(
                     disabled: A = !1,
                     buttonRef: I,
                     affordance: y,
-                    errorMessageId: k,
-                    ...C
+                    errorMessageId: C,
+                    ...k
                 } = e,
                 x = "add" === y,
                 N = a.useRef(null),
@@ -78,7 +78,7 @@ l.d(
                 E = a.useRef(null),
                 w = I ?? E,
                 R = a.useId(),
-                S = null != k ? `${R} ${k}` : R,
+                S = null != C ? `${R} ${C}` : R,
                 D =
                     null != y && "add" !== y
                         ? {
@@ -95,7 +95,7 @@ l.d(
                 disabled: A,
                 isInteracting: P,
                 deleteButton: D,
-                hasError: null != k,
+                hasError: null != C,
                 children: (0, t.jsxs)("div", {
                     className: p.tileInner,
                     children: [
@@ -107,11 +107,11 @@ l.d(
                             "aria-label": u,
                             onClick: A ? void 0 : l,
                             "aria-disabled": A,
-                            "aria-invalid": null != k || void 0,
+                            "aria-invalid": null != C || void 0,
                             "aria-describedby": S,
-                            "aria-errormessage": k,
+                            "aria-errormessage": C,
                             tabIndex: A ? -1 : 0,
-                            ...C,
+                            ...k,
                         }),
                         c && !A && (0, t.jsx)(b, {}),
                         x &&
@@ -120,7 +120,7 @@ l.d(
                                     [p.iconAlignCenter]: "square" === n || "full-height-bar" === n,
                                     [p.iconAlignRight]: "bar" === n,
                                 }),
-                                children: (0, t.jsx)(v.U, {
+                                children: (0, t.jsx)(v.CirclePlusIcon, {
                                     size: "md",
                                     className: p.overlayIcon,
                                     colorClass: p.overlayIconPrimaryColor,

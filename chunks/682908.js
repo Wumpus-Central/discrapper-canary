@@ -27,9 +27,9 @@ var l = n(477900),
     Q = n(265872),
     B = n(442433),
     b = n(438457),
-    S = n(144779),
-    M = n(494280),
-    I = n(845890),
+    M = n(144779),
+    I = n(494280),
+    S = n(845890),
     U = n(963713),
     P = n(818348),
     w = n(792996);
@@ -38,7 +38,7 @@ function F(e) {
         s = (0, U.o5)(),
         a = (0, U.Q8)(s),
         r = (0, v.wW)(),
-        i = (0, M.Yh)(a);
+        i = (0, I.Yh)(a);
     return (0, l.jsxs)(_.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
@@ -66,8 +66,8 @@ function F(e) {
                                 },
                             );
                         },
-                        icon: R.W,
-                        leadingAccessory: { type: "icon", icon: R.W },
+                        icon: R.LinkExternalMediumIcon,
+                        leadingAccessory: { type: "icon", icon: R.LinkExternalMediumIcon },
                     }),
                 },
                 "major-actions",
@@ -93,14 +93,14 @@ function F(e) {
                             label: w.intl.string(w.t.NN79E9),
                             action: function () {
                                 ((0, b.r)({
-                                    type: S.F.CLICK_INTERNAL,
+                                    type: M.F.CLICK_INTERNAL,
                                     ...i,
                                     questContentCTA: C.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                     surfaceId: h.uF.QUEST_BAR_V2,
                                     sourceQuestContent: h.uF.QUEST_BAR_V2,
                                     impressionId: r(),
                                 }),
-                                    (0, I.Xo)(i, h.uF.QUEST_BAR_V2));
+                                    (0, S.Xo)(i, h.uF.QUEST_BAR_V2));
                             },
                         }),
                     ],
@@ -118,8 +118,8 @@ function O(e) {
         c = s.useRef(null),
         d = s.useCallback(() => {
             ((0, b.r)({
-                type: S.F.CLICK_INTERNAL,
-                ...(0, M.Yh)(o),
+                type: M.F.CLICK_INTERNAL,
+                ...(0, I.Yh)(o),
                 questContentCTA: C.Cy.OPEN_CONTEXT_MENU,
                 surfaceId: h.uF.QUEST_BAR_V2,
                 sourceQuestContent: h.uF.QUEST_BAR_V2,
@@ -139,11 +139,11 @@ function O(e) {
         children: (e) => (0, l.jsx)("div", { ref: c, children: t(e) }),
     });
 }
-var V = n(241762);
+var k = n(241762);
 n(272111);
-var k = n(652215),
-    D = n(886030);
-function L() {
+var V = n(652215),
+    L = n(886030);
+function D() {
     let e = (0, U.o5)(),
         t = (0, U.Q8)(e),
         n = (0, v.wW)(),
@@ -155,16 +155,16 @@ function L() {
             isExpanded: Q,
             isExpansionAnimationComplete: B,
             collapsedHeight: b,
-        } = (0, V.H)(),
-        { productIcon: S } = e,
-        M = s.useCallback(() => {
+        } = (0, k.H)(),
+        { productIcon: M } = e,
+        I = s.useCallback(() => {
             (0, g.Zc)(t, {
                 content: h.uF.QUEST_BAR_V2,
                 ctaContent: C.Cy.OPEN_DISCLOSURE,
                 sourceQuestContent: h.uF.QUEST_BAR_V2,
             });
         }, [t]),
-        I = s.useCallback(() => {
+        S = s.useCallback(() => {
             (0, N._Q)(
                 { adContentId: e.id, adCreativeType: o.p.BOUNTY, cta: e.cta },
                 {
@@ -176,21 +176,21 @@ function L() {
             );
         }, [e.cta, e.id, n]);
     return (0, l.jsxs)(A.A, {
-        className: D.bU,
+        className: L.bU,
         children: [
-            (0, l.jsx)(A.h, { className: D.Tu }),
+            (0, l.jsx)(A.h, { className: L.Tu }),
             (0, l.jsxs)(i.animated.div, {
-                className: D.W2,
+                className: L.W2,
                 style: {
                     transform: a.to({ range: [0, 1], output: [b / 2 - 24 - 6, 0] }).to((e) => `translateY(${e}px)`),
                 },
                 children: [
-                    null != S &&
+                    null != M &&
                         (0, l.jsx)(u.D, {
-                            onClick: I,
-                            className: r()(D.iY, D.vk, { [D.wm]: Q && B }),
+                            onClick: S,
+                            className: r()(L.iY, L.vk, { [L.wm]: Q && B }),
                             children: (0, l.jsx)(i.animated.div, {
-                                className: D.U$,
+                                className: L.U$,
                                 style: {
                                     transform: a.to({ range: [0, 1], output: [1, 0.75] }).to((e) => `scale(${e})`),
                                 },
@@ -199,25 +199,25 @@ function L() {
                                     children: (t) =>
                                         (0, l.jsx)("img", {
                                             ref: t,
-                                            src: (0, f.lR)({ assetUrl: S, width: 32, height: 32 }),
+                                            src: (0, f.lR)({ assetUrl: M, width: 32, height: 32 }),
                                             alt: e.advertiserName,
                                             width: 32,
                                             height: 32,
-                                            className: D.Q1,
+                                            className: L.Q1,
                                         }),
                                 }),
                             }),
                         }),
                     (0, l.jsxs)("div", {
-                        className: D.cA,
+                        className: L.cA,
                         children: [
                             (0, l.jsx)(c.N, {
-                                theme: k.NJ8.DARK,
+                                theme: V.NJ8.DARK,
                                 disableAdaptiveTheme: !0,
                                 children: (t) =>
                                     (0, l.jsx)(i.animated.div, {
                                         "aria-hidden": !0,
-                                        className: r()(t, D.it),
+                                        className: r()(t, L.it),
                                         style: { opacity: (0, j.a)(a.to({ range: [0, 1], output: [1, 0] })) },
                                         children: (0, l.jsx)(d.E, {
                                             variant: "body-sm/medium",
@@ -228,17 +228,17 @@ function L() {
                                     }),
                             }),
                             (0, l.jsx)(A.h, {
-                                className: D.OO,
+                                className: L.OO,
                                 children: (0, l.jsxs)(u.D, {
-                                    className: r()(D.y8, D.RK),
-                                    onClick: M,
+                                    className: r()(L.y8, L.RK),
+                                    onClick: I,
                                     children: [
                                         (0, l.jsx)(d.E, {
                                             color: "text-overlay-light",
                                             variant: "body-xs/normal",
                                             children: w.intl.string(w.t.o6FLcF),
                                         }),
-                                        (0, l.jsx)(m.CircleQuestionIcon, { color: p.A.colors.WHITE, className: D.P$ }),
+                                        (0, l.jsx)(m.CircleQuestionIcon, { color: p.A.colors.WHITE, className: L.P$ }),
                                     ],
                                 }),
                             }),
@@ -247,7 +247,7 @@ function L() {
                 ],
             }),
             (0, l.jsx)(A.h, {
-                className: D.jd,
+                className: L.jd,
                 children: (0, l.jsx)(O, {
                     onOpen: _,
                     onClose: T,
@@ -255,12 +255,12 @@ function L() {
                     children: (e) =>
                         (0, l.jsx)(u.D, {
                             ...e,
-                            className: r()(D.oz, D.rb),
+                            className: r()(L.oz, L.rb),
                             "aria-label": w.intl.string(w.t.DEoVWZ),
                             children: (0, l.jsx)(x.MoreHorizontalIcon, {
                                 size: "md",
                                 color: "currentColor",
-                                className: r()(D.Bx, D.ON),
+                                className: r()(L.Bx, L.ON),
                             }),
                         }),
                 }),
@@ -268,8 +268,8 @@ function L() {
         ],
     });
 }
-var W = n(855986),
-    Y = n(190485),
+var Y = n(855986),
+    W = n(190485),
     q = n(534514),
     H = n(821609),
     X = n(775602),
@@ -280,7 +280,7 @@ var W = n(855986),
     Z = n(419403);
 function J(e) {
     let { isAnimated: t, className: n } = e,
-        s = (0, W.bG)([X.Ay], () => X.Ay.useReducedMotion);
+        s = (0, Y.bG)([X.Ay], () => X.Ay.useReducedMotion);
     return (0, l.jsx)("img", {
         className: r()(Z.Q, n),
         src:
@@ -299,24 +299,24 @@ let es = { url: n(970908).A, mimetype: "video/webm", isAnimated: !0 };
 function ea() {
     let e = (0, U.o5)(),
         { imagePreview: t, videoPreview: a, productName: u, videoDurationSeconds: m } = e,
-        { isExpanded: p, isExpansionAnimationComplete: x, collapsedHeight: N } = (0, V.H)(),
+        { isExpanded: p, isExpansionAnimationComplete: x, collapsedHeight: N } = (0, k.H)(),
         { expansionSpring: g } = s.useContext(E.PW),
         A = (0, v.wW)(),
-        _ = (0, W.bG)([X.Ay], () => X.Ay.useReducedMotion),
+        _ = (0, Y.bG)([X.Ay], () => X.Ay.useReducedMotion),
         [T, R] = s.useState(!1),
         Q = s.useRef(null);
     s.useEffect(() => {
         p && Q.current?.pause();
     }, [p]);
     let B = s.useMemo(() => (null == a ? null : { url: a, mimetype: (0, f.vm)(a), isAnimated: !0 }), [a]),
-        M = !_ || T,
-        I = s.useMemo(() => {
+        I = !_ || T,
+        S = s.useMemo(() => {
             let e = m ?? 0;
             return e <= 0 ? w.intl.string(w.t.kfks9Y) : (0, G.AF)((0, K.X3)({ progressSeconds: 0, targetSeconds: e }));
         }, [m]),
         P = s.useCallback(() => {
             ((0, b.r)({
-                type: S.F.CLICK_INTERNAL,
+                type: M.F.CLICK_INTERNAL,
                 adCreativeType: o.p.BOUNTY,
                 adCreativeId: e.id,
                 questContentCTA: C.Cy.START_BOUNTY,
@@ -378,7 +378,7 @@ function ea() {
                                             isHovered: T,
                                             asset: B,
                                             poster: t,
-                                            className: r()(el.$_, null != t && el.Ki, { [el.mv]: M || null == t }),
+                                            className: r()(el.$_, null != t && el.Ki, { [el.mv]: I || null == t }),
                                         }),
                                 }),
                         ],
@@ -391,7 +391,7 @@ function ea() {
                     (0, l.jsx)(i.animated.div, {
                         className: el.ch,
                         style: { opacity: (0, j.a)(g.to({ range: [0, 1], output: [1, 0] })) },
-                        children: (0, l.jsx)(Y.a, {
+                        children: (0, l.jsx)(W.a, {
                             ref: Q,
                             autoplay: !p,
                             stateMachine: "State Machine 1",
@@ -405,7 +405,7 @@ function ea() {
             (p || !x) && (0, l.jsx)(J, { className: el.dq, isAnimated: !0 }),
             (0, l.jsx)(ee.T, {
                 children: (0, l.jsx)(c.N, {
-                    theme: k.NJ8.DARK,
+                    theme: V.NJ8.DARK,
                     disableAdaptiveTheme: !0,
                     children: (e) =>
                         (0, l.jsxs)("div", {
@@ -450,7 +450,7 @@ function ea() {
                                         variant: "primary",
                                         size: "md",
                                         fullWidth: !0,
-                                        text: I,
+                                        text: S,
                                         onClick: P,
                                     }),
                                 }),
@@ -463,5 +463,5 @@ function ea() {
 }
 var er = n(742860);
 function ei() {
-    return (0, l.jsx)(er.A, { layoutVariant: "inset", header: (0, l.jsx)(L, {}), children: (0, l.jsx)(ea, {}) });
+    return (0, l.jsx)(er.A, { layoutVariant: "inset", header: (0, l.jsx)(D, {}), children: (0, l.jsx)(ea, {}) });
 }

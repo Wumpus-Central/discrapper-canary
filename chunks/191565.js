@@ -90,7 +90,7 @@ function R(e) {
                         className: w.z3,
                         onClick: l,
                         children: [
-                            (0, i.jsx)(A.E, { size: "sm", color: "currentColor" }),
+                            (0, i.jsx)(A.CircleErrorIcon, { size: "sm", color: "currentColor" }),
                             (0, i.jsx)(j.E, {
                                 variant: "body-sm/normal",
                                 color: "text-feedback-warning",

@@ -1,8 +1,8 @@
 l(321073);
 var i = l(477900),
-    s = l(582128),
-    a = l(503698),
-    t = l.n(a),
+    a = l(582128),
+    s = l(503698),
+    t = l.n(s),
     r = l(534514),
     c = l(778712),
     u = l(849516),
@@ -50,31 +50,31 @@ function _(e) {
     let {
             application: n,
             guild: l,
-            channel: s,
-            onClick: a,
+            channel: a,
+            onClick: s,
             expired: r = !1,
             user: o,
             className: m,
             channelIconSize: v = c._3.SIZE_56,
         } = e,
-        N = (0, p.Ay)(s) ?? "",
+        N = (0, p.Ay)(a) ?? "",
         g = I.kt.useSetting();
     if (r)
         return (0, i.jsx)("div", {
             className: A.guildIconExpired,
-            children: (0, i.jsx)(u.u, { size: "custom", width: 26, height: 26, color: "currentColor" }),
+            children: (0, i.jsx)(u.EnvelopeIcon, { size: "custom", width: 26, height: 26, color: "currentColor" }),
         });
     let C = null == l || null != l.icon,
-        y = t()((0, f.t)(A, "guildIcon", C ? "Image" : "", null != a ? "Joined" : ""), m);
+        y = t()((0, f.t)(A, "guildIcon", C ? "Image" : "", null != s ? "Joined" : ""), m);
     return null != n
-        ? (0, i.jsx)(x.A, { game: n, onClick: a, size: A.applicationIcon, className: y })
+        ? (0, i.jsx)(x.A, { game: n, onClick: s, size: A.applicationIcon, className: y })
         : null != l
-          ? (0, i.jsx)(j.Ay, { onClick: a, active: !0, guild: l, className: y, animate: g })
-          : null != s
-            ? (0, i.jsx)(d.eu, { onClick: a, src: (0, h.Y)(s, (0, c.FT)(v)), size: v, className: y, "aria-label": N })
+          ? (0, i.jsx)(j.Ay, { onClick: s, active: !0, guild: l, className: y, animate: g })
+          : null != a
+            ? (0, i.jsx)(d.eu, { onClick: s, src: (0, h.Y)(a, (0, c.FT)(v)), size: v, className: y, "aria-label": N })
             : null != o
               ? (0, i.jsx)(d.eu, {
-                    onClick: a,
+                    onClick: s,
                     src: o.getAvatarURL(null, (0, c.FT)(c._3.SIZE_56)),
                     size: c._3.SIZE_56,
                     className: y,
@@ -86,8 +86,8 @@ function b(e) {
     let {
             title: n,
             titleId: l,
-            onClick: s,
-            expired: a,
+            onClick: a,
+            expired: s,
             children: c,
             titleVariant: u = "heading-sm/semibold",
             detailVariant: d = "body-sm/normal",
@@ -95,7 +95,7 @@ function b(e) {
         h = (0, i.jsx)(r.D, {
             id: l,
             variant: u,
-            className: t()((0, f.t)(A, "inviteDestination", a ? "Expired" : null != s ? "Joined" : ""), {
+            className: t()((0, f.t)(A, "inviteDestination", s ? "Expired" : null != a ? "Joined" : ""), {
                 [A.inviteDestinationMedium]: "heading-sm/medium" === u,
             }),
             children: n,
@@ -105,18 +105,18 @@ function b(e) {
         direction: N.A.Direction.VERTICAL,
         justify: N.A.Justify.CENTER,
         children: [
-            null == s ? h : (0, i.jsx)(o.D, { onClick: s, children: h }),
+            null == a ? h : (0, i.jsx)(o.D, { onClick: a, children: h }),
             (0, i.jsx)(m.E, { tag: "strong", className: A.guildDetail, variant: d, children: c }),
         ],
     });
 }
 function S(e) {
     let { membersOnline: n, members: l } = e,
-        s = [];
+        a = [];
     return (
         null != n &&
             n > 0 &&
-            s.push(
+            a.push(
                 (0, i.jsxs)(
                     "div",
                     {
@@ -133,7 +133,7 @@ function S(e) {
                 ),
             ),
         null != l &&
-            s.push(
+            a.push(
                 (0, i.jsxs)(
                     "div",
                     {
@@ -149,36 +149,36 @@ function S(e) {
                     "memberCount",
                 ),
             ),
-        (0, i.jsx)("div", { className: A.statusCounts, children: s })
+        (0, i.jsx)("div", { className: A.statusCounts, children: a })
     );
 }
 let G = (e) => {
     let { channel: n, guild: l } = e,
-        s = (0, p.Ay)(n),
-        a = (0, v.gU)(n, l);
-    return null == n || null == a
+        a = (0, p.Ay)(n),
+        s = (0, v.gU)(n, l);
+    return null == n || null == s
         ? null
         : (0, i.jsxs)("div", {
               className: A.channel,
               children: [
-                  (0, i.jsx)(a, {
+                  (0, i.jsx)(s, {
                       className: A.channelIcon,
                       color: "currentColor",
                       size: "custom",
                       width: 20,
                       height: 20,
                   }),
-                  (0, i.jsx)("span", { className: A.channelName, children: s }),
+                  (0, i.jsx)("span", { className: A.channelName, children: a }),
               ],
           });
 };
 function B(e) {
-    let { children: n, className: l, containerRef: s, role: a, "aria-labelledby": r } = e;
-    return (0, i.jsx)("div", { ref: s, className: t()(A.wrapper, l), role: a, "aria-labelledby": r, children: n });
+    let { children: n, className: l, containerRef: a, role: s, "aria-labelledby": r } = e;
+    return (0, i.jsx)("div", { ref: a, className: t()(A.wrapper, l), role: s, "aria-labelledby": r, children: n });
 }
 function D(e) {
     let { guild: n } = e,
-        [l, a] = s.useState(!1),
+        [l, s] = a.useState(!1),
         r = C.Ay.getGuildSplashURL({ id: n.id, splash: n.splash, size: 400 * (0, g.mZ)() });
     return null == r
         ? null
@@ -188,7 +188,7 @@ function D(e) {
                   src: r,
                   alt: "",
                   className: t()(A.inviteSplashImage, { [A.inviteSplashImageLoaded]: l }),
-                  onLoad: () => a(!0),
+                  onLoad: () => s(!0),
               }),
           });
 }

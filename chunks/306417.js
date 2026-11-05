@@ -15,8 +15,8 @@ var s = n(477900),
     p = n(44234),
     g = n(282054),
     A = n(218394),
-    y = n(180662),
-    f = n(969632),
+    f = n(180662),
+    y = n(969632),
     j = n(438437),
     b = n(290794),
     S = n(789646),
@@ -66,7 +66,7 @@ function V(e) {
         h = (0, b.hd)(n.style),
         m = !0 === n.isSelected,
         x = i.useCallback(() => {
-            y.A.handlePollAnswerTapped({ channelId: d, messageId: u, answerId: n.answerId });
+            f.A.handlePollAnswerTapped({ channelId: d, messageId: u, answerId: n.answerId });
         }, [d, u, n.answerId]);
     switch (c) {
         case 0:
@@ -93,7 +93,7 @@ function k(e) {
         className: n,
         imageClassName: C.Bw,
         src: null != t.proxy_url && "" !== t.proxy_url ? t.proxy_url : t.url,
-        alt: t.description ?? (0, f.Kj)(t.filename),
+        alt: t.description ?? (0, y.Kj)(t.filename),
         responsive: !0,
         width: 212,
         height: 212,
@@ -182,7 +182,7 @@ n.d(
                         color: o.A.unsafe_rawColors.BRAND_500.css,
                         backgroundColor: o.A.unsafe_rawColors.WHITE.css,
                     }));
-            return (0, s.jsx)(u.y, {
+            return (0, s.jsx)(u.CircleCheckIcon, {
                 size: "custom",
                 width: i,
                 height: i,

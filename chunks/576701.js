@@ -1,67 +1,67 @@
-var i = t(477900);
-t(582128);
-var e = t(855986),
-    a = t(477782),
-    s = t(811893),
-    c = t(165862),
-    d = t(442433),
-    o = t(886393),
-    r = t(475777),
-    u = t(293432),
-    g = t(574172),
-    h = t(253932),
-    p = t(922795),
-    v = t(71393),
-    A = t(652215),
-    b = t(792996);
-t.d(
-    n,
+var t = i(477900);
+i(582128);
+var e = i(855986),
+    a = i(477782),
+    c = i(811893),
+    o = i(165862),
+    d = i(442433),
+    s = i(886393),
+    u = i(475777),
+    r = i(293432),
+    h = i(574172),
+    g = i(253932),
+    p = i(922795),
+    v = i(71393),
+    A = i(652215),
+    L = i(792996);
+i.d(
+    l,
     {},
     {
-        default: function (l) {
-            var n;
-            let t,
-                L,
+        default: function (n) {
+            var l;
+            let i,
+                b,
                 k,
-                x,
-                { channel: _, onSelect: j, onInteraction: C } = l,
-                G = (0, p.A)(),
-                w = h.vL.useSetting(),
-                S =
-                    ((n = _ ?? void 0),
-                    (t = (0, e.bG)([u.A], () => u.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT))),
-                    null == n || null != t
+                w,
+                { channel: x, onSelect: _, onInteraction: j } = n,
+                C = (0, p.A)(),
+                G = g.vL.useSetting(),
+                I =
+                    ((l = x ?? void 0),
+                    (i = (0, e.bG)([r.A], () => r.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT))),
+                    null == l || null != i
                         ? null
-                        : (0, i.jsx)(a.Dr, {
+                        : (0, t.jsx)(a.Dr, {
                               id: "popout-call",
-                              label: b.intl.string(b.t.JzWezz),
-                              icon: s.t,
-                              trailingIndicator: { type: "icon", icon: s.t },
-                              action: () => g.d8(n),
+                              label: L.intl.string(L.t.JzWezz),
+                              icon: c.WindowLaunchIcon,
+                              trailingIndicator: { type: "icon", icon: c.WindowLaunchIcon },
+                              action: () => h.d8(l),
                           })),
-                z =
-                    ((L = (0, e.bG)([v.A], () => v.A.getGuild(_?.guild_id))),
-                    (k = (0, r.A)(_ ?? null, L ?? null)),
-                    (x = (0, o.A)(_ ?? null)),
-                    null != _ && _.isGuildVocal() ? (0, i.jsxs)(a.rX, { children: [k, x] }) : null);
-            return (0, i.jsxs)(c.W, {
+                W =
+                    ((b = (0, e.bG)([v.A], () => v.A.getGuild(x?.guild_id))),
+                    (k = (0, u.A)(x ?? null, b ?? null)),
+                    (w = (0, s.A)(x ?? null)),
+                    null != x && x.isGuildVocal() ? (0, t.jsxs)(a.rX, { children: [k, w] }) : null);
+            return (0, t.jsxs)(o.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "rtc-channel",
-                "aria-label": b.intl.string(b.t.ogxXGq),
+                "aria-label": L.intl.string(L.t.ogxXGq),
                 onClose: d.Z_,
-                onSelect: j,
-                onInteraction: C,
+                onSelect: _,
+                onInteraction: j,
                 children: [
-                    G,
-                    z,
-                    (0, i.jsxs)(a.rX, {
+                    C,
+                    W,
+                    (0, t.jsxs)(a.rX, {
                         children: [
-                            S,
-                            (0, i.jsx)(a.sL, {
+                            I,
+                            (0, t.jsx)(a.sL, {
                                 id: "show-voice-states",
-                                checked: w,
-                                action: () => h.vL.updateSetting(!w),
-                                label: b.intl.string(b.t.vkbSB0),
+                                checked: G,
+                                action: () => g.vL.updateSetting(!G),
+                                label: L.intl.string(L.t.vkbSB0),
                             }),
                         ],
                     }),

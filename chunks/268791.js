@@ -1,28 +1,29 @@
+s.r(a);
 var i = s(477900);
 s(582128);
-var l = s(646514),
-    t = s(996682),
-    h = s(27989);
+var t = s(646514),
+    l = s(996682),
+    d = s(27989);
 s.d(
-    e,
+    a,
     {},
     {
-        $: function (a) {
+        SpeedometerIcon: function (e) {
             let {
-                    size: e = "md",
+                    size: a = "md",
                     width: s,
-                    height: d,
-                    color: c = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    height: h,
+                    color: c = t.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: n = "",
                     ...o
-                } = a,
-                p = (0, h.J)(e),
-                r = p?.width ?? s,
-                w = p?.height ?? d;
+                } = e,
+                r = (0, d.J)(a),
+                p = r?.width ?? s,
+                w = r?.height ?? h;
             return (0, i.jsx)("svg", {
-                ...(0, t.A)(o),
+                ...(0, l.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",

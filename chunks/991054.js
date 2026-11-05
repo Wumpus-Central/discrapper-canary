@@ -14,10 +14,10 @@ var i = l(477900),
     j = l(735991),
     p = l(717048),
     g = l(396533),
-    N = l(611371),
-    f = l(566615),
-    b = l(792996),
-    v = l(898514),
+    v = l(611371),
+    N = l(566615),
+    f = l(792996),
+    b = l(898514),
     y = l(165648),
     C = l(291071);
 function E(e) {
@@ -26,35 +26,35 @@ function E(e) {
     return null == l || 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: v.wt,
+              className: b.wt,
               children: (0, i.jsx)("div", {
-                  className: v.bH,
-                  children: null != l && l.length > 0 ? (0, i.jsx)(T, { description: l }) : null,
+                  className: b.bH,
+                  children: null != l && l.length > 0 ? (0, i.jsx)(L, { description: l }) : null,
               }),
           });
 }
-function L(e) {
+function I(e) {
     let { application: t } = e,
         l = t.name,
         s = (0, j.b7)(t);
     return (0, i.jsxs)("div", {
-        className: v.gn,
+        className: b.gn,
         children: [
             (0, i.jsx)(u.D, { variant: "heading-xl/semibold", lineClamp: 1, children: l }),
             s
                 ? (0, i.jsx)("div", {
-                      className: v.s3,
+                      className: b.s3,
                       children: (0, i.jsx)(o.E, {
                           variant: "body-xs/medium",
                           color: "text-default",
-                          children: b.intl.string(b.t.LO4f0P),
+                          children: f.intl.string(f.t.LO4f0P),
                       }),
                   })
                 : null,
         ],
     });
 }
-function T(e) {
+function L(e) {
     let { description: t } = e,
         [n, r] = s.useState(!0);
     s.useLayoutEffect(() => r(!1), []);
@@ -85,14 +85,14 @@ function T(e) {
             let e = u * j;
             return { key: 1, minHeightOverride: Math.min(e, 3 * u), maxHeightOverride: e };
         }, [j, u]),
-        { ref: N, isTransitioning: f, onTransitionEnd: C } = (0, g.A)({ isExpanded: n, ...p }),
-        E = n || f;
+        { ref: v, isTransitioning: N, onTransitionEnd: C } = (0, g.A)({ isExpanded: n, ...p }),
+        E = n || N;
     return (0, i.jsxs)("div", {
-        className: v.iQ,
+        className: b.iQ,
         children: [
             (0, i.jsx)("div", {
-                ref: N,
-                className: v.ZT,
+                ref: v,
+                className: b.ZT,
                 onTransitionEnd: C,
                 children: (0, i.jsx)(o.E, {
                     ref: d,
@@ -105,17 +105,17 @@ function T(e) {
             }),
             null != j && j > 3
                 ? (0, i.jsxs)(c.D, {
-                      className: v.lP,
+                      className: b.lP,
                       onClick: () => r((e) => !e),
                       children: [
                           (0, i.jsx)(o.E, {
                               variant: "body-sm/semibold",
                               color: "text-brand",
-                              children: E ? b.intl.string(b.t.u4YJ8g) : b.intl.string(b.t["N/tajD"]),
+                              children: E ? f.intl.string(f.t.u4YJ8g) : f.intl.string(f.t["N/tajD"]),
                           }),
                           E
-                              ? (0, i.jsx)(m.t, { size: "sm", color: h.A.colors.TEXT_BRAND })
-                              : (0, i.jsx)(x.a, { size: "sm", color: h.A.colors.TEXT_BRAND }),
+                              ? (0, i.jsx)(m.ChevronSmallUpIcon, { size: "sm", color: h.A.colors.TEXT_BRAND })
+                              : (0, i.jsx)(x.ChevronSmallDownIcon, { size: "sm", color: h.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -128,56 +128,56 @@ l.d(
     {
         default: function (e) {
             let { application: t, onSelect: l } = e,
-                u = (0, f.i)(),
+                u = (0, N.i)(),
                 { iconURL: m } = s.useMemo(() => (0, j.X2)(t, { fakeAppIconURL: C, size: 84 }), [t]),
                 h = s.useMemo(
                     () =>
                         [
                             {
                                 type: n.b.USER_INSTALL,
-                                icon: r.R,
-                                title: b.intl.string(b.t.aCg60P),
-                                subtitle: b.intl.string(b.t.YeiIUZ),
+                                icon: r.UserPlusIcon,
+                                title: f.intl.string(f.t.aCg60P),
+                                subtitle: f.intl.string(f.t.YeiIUZ),
                                 beta: !1,
                             },
                             {
                                 type: n.b.GUILD_INSTALL,
-                                icon: a.R,
-                                title: b.intl.string(b.t.E64YCz),
-                                subtitle: b.intl.string(b.t.bbtoKm),
+                                icon: a.ServerIcon,
+                                title: f.intl.string(f.t.E64YCz),
+                                subtitle: f.intl.string(f.t.bbtoKm),
                                 beta: !1,
                             },
                         ].filter((e) => t.integrationTypesConfig?.[e.type]?.oauth2InstallParams != null),
                     [t.integrationTypesConfig],
                 );
             return (0, i.jsxs)("div", {
-                className: v.kL,
+                className: b.kL,
                 children: [
                     (0, i.jsxs)("header", {
                         id: u,
-                        className: v.wx,
+                        className: b.wx,
                         children: [
-                            (0, i.jsx)(p.A, { src: m, className: v.Z2, rendersPlaceholder: !0 }),
-                            (0, i.jsx)(L, { application: t }),
+                            (0, i.jsx)(p.A, { src: m, className: b.Z2, rendersPlaceholder: !0 }),
+                            (0, i.jsx)(I, { application: t }),
                             (0, i.jsx)(E, { application: t }),
                         ],
                     }),
                     (0, i.jsx)("ul", {
-                        className: v.Ge,
+                        className: b.Ge,
                         children: h.map((e) =>
                             (0, i.jsxs)(
                                 c.D,
                                 {
                                     tag: "li",
-                                    className: v.nM,
+                                    className: b.nM,
                                     onClick: () => l(e.type),
                                     children: [
-                                        (0, i.jsx)(e.icon, { size: "md", color: "currentColor", className: v.hc }),
+                                        (0, i.jsx)(e.icon, { size: "md", color: "currentColor", className: b.hc }),
                                         (0, i.jsxs)("div", {
-                                            className: v.bL,
+                                            className: b.bL,
                                             children: [
                                                 (0, i.jsxs)("div", {
-                                                    className: v.pt,
+                                                    className: b.pt,
                                                     children: [
                                                         (0, i.jsx)(o.E, {
                                                             variant: "body-md/medium",
@@ -191,8 +191,12 @@ l.d(
                                                         }),
                                                     ],
                                                 }),
-                                                e.beta && (0, i.jsx)(N.A, {}),
-                                                (0, i.jsx)(d._, { size: "md", color: "currentColor", className: v.gN }),
+                                                e.beta && (0, i.jsx)(v.A, {}),
+                                                (0, i.jsx)(d.ChevronSmallRightIcon, {
+                                                    size: "md",
+                                                    color: "currentColor",
+                                                    className: b.gN,
+                                                }),
                                             ],
                                         }),
                                     ],

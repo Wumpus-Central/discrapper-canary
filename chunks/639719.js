@@ -6,9 +6,9 @@ var n = i(477900),
     c = i(772707),
     o = i(331322),
     u = i(834730),
-    d = i(404778),
-    m = i(803306),
-    x = i(139286),
+    m = i(404778),
+    x = i(803306),
+    d = i(139286),
     E = i(870570),
     p = i(652215),
     j = i(792996),
@@ -18,7 +18,7 @@ function A(t) {
     let { text: s } = t;
     return (0, n.jsxs)("li", {
         className: h.nf,
-        children: [s, " ", (0, n.jsx)(a.I, { size: "sm", color: "currentColor" })],
+        children: [s, " ", (0, n.jsx)(a.LinkExternalSmallIcon, { size: "sm", color: "currentColor" })],
     });
 }
 i.d(
@@ -30,7 +30,7 @@ i.d(
                 i = (0, l.bG)([E.A], () => E.A.getAction()),
                 [a, f] = r.useState(!1);
             return (
-                (0, x.A)(
+                (0, d.A)(
                     {
                         type: e.ImpressionTypes.VIEW,
                         name: e.ImpressionNames.USER_AGREEMENTS,
@@ -50,7 +50,7 @@ i.d(
                             variant: "primary",
                             text: j.intl.string(j.t["+TBKL1"]),
                             onClick: async function () {
-                                return (f(!0), i === p.a3B.AGREEMENTS && f(await (0, m.Q9)()), null);
+                                return (f(!0), i === p.a3B.AGREEMENTS && f(await (0, x.Q9)()), null);
                             },
                             loading: a,
                         },
@@ -73,13 +73,13 @@ i.d(
                                     className: h.yJ,
                                     children: [
                                         (0, n.jsx)(A, { text: j.intl.format(j.t.iw0hFi, { url: p.X7G.TERMS }) }),
-                                        (0, n.jsx)(d.c, {}),
+                                        (0, n.jsx)(m.c, {}),
                                         (0, n.jsx)(A, {
                                             text: j.intl.format(j.t["36klnD"], { url: p.X7G.PAID_TERMS }),
                                         }),
-                                        (0, n.jsx)(d.c, {}),
+                                        (0, n.jsx)(m.c, {}),
                                         (0, n.jsx)(A, { text: j.intl.format(j.t.TquFBF, { url: p.X7G.PRIVACY }) }),
-                                        (0, n.jsx)(d.c, {}),
+                                        (0, n.jsx)(m.c, {}),
                                         (0, n.jsx)(A, { text: j.intl.format(j.t.ia96Tb, { url: p.X7G.GUIDELINES }) }),
                                     ],
                                 }),

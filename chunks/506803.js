@@ -1,41 +1,42 @@
-var a = t(477900);
-t(582128);
-var n = t(646514),
-    i = t(996682),
-    s = t(27989);
-t.d(
-    e,
+s.r(l);
+var t = s(477900);
+s(582128);
+var c = s(646514),
+    h = s(996682),
+    i = s(27989);
+s.d(
+    l,
     {},
     {
-        N: function (l) {
+        NewUserIcon: function (a) {
             let {
-                    size: e = "md",
-                    width: t,
-                    height: c,
-                    color: r = n.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: d = "",
-                    ...o
-                } = l,
-                u = (0, s.J)(e),
-                h = u?.width ?? t,
-                g = u?.height ?? c;
-            return (0, a.jsxs)("svg", {
-                ...(0, i.A)(o),
+                    size: l = "md",
+                    width: s,
+                    height: e,
+                    color: r = c.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
+                    ...p
+                } = a,
+                d = (0, i.J)(l),
+                o = d?.width ?? s,
+                w = d?.height ?? e;
+            return (0, t.jsxs)("svg", {
+                ...(0, h.A)(p),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: h,
-                height: g,
+                width: o,
+                height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, a.jsx)("path", {
+                    (0, t.jsx)("path", {
                         fill: "string" == typeof r ? r : r.css,
                         d: "M11.55 14.4c.28.17.62.17.9 0 1.6-.96 6.88-4.46 6.88-8.57A3.83 3.83 0 0 0 15.5 2c-1.56 0-2.58.6-3.5 1.5A4.66 4.66 0 0 0 8.5 2a3.83 3.83 0 0 0-3.83 3.83c0 4.1 5.29 7.61 6.88 8.57Z",
-                        className: d,
+                        className: n,
                     }),
-                    (0, a.jsx)("path", {
+                    (0, t.jsx)("path", {
                         fill: "string" == typeof r ? r : r.css,
                         d: "M3.11 14.86a1 1 0 0 0-.83 1.24l.23.89a6 6 0 0 0 6.46 4.45l2.03-.22V22a1 1 0 1 0 2 0v-.78l2.03.22A6 6 0 0 0 21.5 17l.23-.89a1 1 0 0 0-.83-1.24l-2.05-.29a6 6 0 0 0-6.1 3.07L12 19l-.74-1.36a6 6 0 0 0-6.1-3.07l-2.05.29ZM2.93 9.4a.6.6 0 0 1 1.14 0l.1.25a2 2 0 0 0 1.18 1.19l.25.1a.6.6 0 0 1 0 1.13l-.25.1a2 2 0 0 0-1.19 1.18l-.1.25a.6.6 0 0 1-1.13 0l-.1-.25a2 2 0 0 0-1.18-1.19l-.25-.1a.6.6 0 0 1 0-1.13l.25-.1a2 2 0 0 0 1.19-1.18l.1-.25ZM21.46 9.82a.49.49 0 0 0-.92 0v.03a2 2 0 0 1-1.19 1.18l-.03.01a.49.49 0 0 0 0 .92h.03a2 2 0 0 1 1.18 1.19l.01.03c.16.43.76.43.92 0v-.03a2 2 0 0 1 1.19-1.18l.03-.01a.49.49 0 0 0 0-.92h-.03a2 2 0 0 1-1.18-1.19l-.01-.03Z",
-                        className: d,
+                        className: n,
                     }),
                 ],
             });

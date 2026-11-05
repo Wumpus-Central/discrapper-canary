@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(7807),
     o = t(263775),
     c = t(246356),
-    d = t(49999),
-    u = t(792996),
+    u = t(49999),
+    d = t(792996),
     A = t(401191);
 t.d(
     n,
@@ -18,17 +18,17 @@ t.d(
                 x = l.useMemo(
                     () => [
                         {
-                            icon: r.J,
-                            text: u.intl.string(u.t["6EJvHt"]),
+                            icon: r.SoundboardIcon,
+                            text: d.intl.string(d.t["6EJvHt"]),
                             onClick: () => {
-                                (t(), g(d.i.TAKE_ACTION));
+                                (t(), g(u.i.TAKE_ACTION));
                             },
                         },
                     ],
                     [g, t],
                 );
             return (l.useEffect(() => {
-                h && m === s.M.SOUNDBOARD_DESKTOP_NUX && g(d.i.INDIRECT_ACTION);
+                h && m === s.M.SOUNDBOARD_DESKTOP_NUX && g(u.i.INDIRECT_ACTION);
             }, [g, h, m]),
             m !== s.M.SOUNDBOARD_DESKTOP_NUX)
                 ? null
@@ -36,12 +36,12 @@ t.d(
                       children: (0, i.jsx)(a.A, {
                           targetElementRef: n,
                           graphic: { type: "image", src: A.A },
-                          title: u.intl.string(u.t.UaGc2V),
-                          body: u.intl.string(u.t.lyhz2x),
+                          title: d.intl.string(d.t.UaGc2V),
+                          body: d.intl.string(d.t.lyhz2x),
                           position: "top",
                           gradientColor: "pink",
                           actions: x,
-                          onRequestClose: () => g(d.i.DISMISS),
+                          onRequestClose: () => g(u.i.DISMISS),
                       }),
                   });
         },

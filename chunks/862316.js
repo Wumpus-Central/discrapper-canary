@@ -37,8 +37,8 @@ var k = t(632760),
     L = t(192308),
     w = t(588975),
     T = t(442433),
-    P = t(975807),
-    O = t(235393),
+    O = t(975807),
+    P = t(235393),
     R = t(679164),
     U = t(652215),
     D = t(24686),
@@ -358,9 +358,9 @@ function ed(e) {
                         : async (t) => {
                               let l = await R.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
-                                  O.A.trackLinkClicked(l),
+                                  P.A.trackLinkClicked(l),
                                   e.shouldCloseDefaultModals && (0, L.s7)(),
-                                  (0, P.A)(l));
+                                  (0, O.A)(l));
                           },
                     o = i.noStyleAndInteraction
                         ? U.tEg
@@ -396,7 +396,11 @@ function ed(e) {
                         onContextMenu: o,
                         className: "attachmentLink",
                         children: [
-                            (0, l.jsx)(w.P, { size: "xs", className: r()(G.Kk, D.K), color: "currentColor" }),
+                            (0, l.jsx)(w.AttachmentIcon, {
+                                size: "xs",
+                                className: r()(G.Kk, D.K),
+                                color: "currentColor",
+                            }),
                             (0, S.tj)(n, a, i),
                         ],
                     },

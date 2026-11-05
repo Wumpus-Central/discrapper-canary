@@ -16,8 +16,8 @@ var m = n(178653),
     f = n(465794),
     A = n(186280),
     E = n(682901),
-    g = n(236432),
-    I = n(792996),
+    I = n(236432),
+    g = n(792996),
     j = n(23236);
 function v(t) {
     let { pack: e, isNitroTier2: n, surface: c, onClose: v } = t,
@@ -33,10 +33,10 @@ function v(t) {
                         (0, i.jsxs)("div", {
                             className: j.DD,
                             children: [
-                                (0, i.jsx)(l.t, { size: "sm", color: s.A.colors.TEXT_DEFAULT }),
+                                (0, i.jsx)(l.NitroWheelIcon, { size: "sm", color: s.A.colors.TEXT_DEFAULT }),
                                 (0, i.jsx)(o.E, {
                                     variant: "body-sm/medium",
-                                    children: I.intl.string(g.default.leUgZw),
+                                    children: g.intl.string(I.default.leUgZw),
                                 }),
                             ],
                         }),
@@ -60,7 +60,7 @@ function v(t) {
                         className: j.XI,
                         children: n
                             ? (0, i.jsx)(u.$, {
-                                  text: I.intl.string(g.default.DtK5IG),
+                                  text: g.intl.string(I.default.DtK5IG),
                                   variant: "primary",
                                   fullWidth: !0,
                                   onClick: function () {
@@ -71,7 +71,7 @@ function v(t) {
                                   newLocations: [A.Vg[c].location],
                                   children: (0, i.jsx)(f.A, {
                                       subscriptionTier: E.pe.TIER_2,
-                                      defaultTextOverride: I.intl.string(I.t["gl/XHJ"]),
+                                      defaultTextOverride: g.intl.string(g.t["gl/XHJ"]),
                                       fullWidth: !0,
                                       onClick: v,
                                   }),

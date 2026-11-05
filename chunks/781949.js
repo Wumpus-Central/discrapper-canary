@@ -1,4 +1,4 @@
-n.d(t, { vi: () => C, uA: () => m, NQ: () => p });
+n.d(t, { vi: () => h, uA: () => m, NQ: () => p });
 var l,
     i = n(477900);
 n(582128);
@@ -55,7 +55,7 @@ function p(e) {
         s
     );
 }
-function C(e) {
+function h(e) {
     let {
             fractionalPremiumInfo: t,
             variant: n = "default",
@@ -99,8 +99,8 @@ function C(e) {
                         (0, i.jsxs)("div", {
                             className: d.Dl,
                             children: [
-                                (0, i.jsx)(s.t, { size: "md", color: "white", className: d.T8 }),
-                                (0, i.jsx)(s.t, { size: "md", color: "currentColor", className: d.XI }),
+                                (0, i.jsx)(s.NitroWheelIcon, { size: "md", color: "white", className: d.T8 }),
+                                (0, i.jsx)(s.NitroWheelIcon, { size: "md", color: "currentColor", className: d.XI }),
                             ],
                         }),
                         (0, i.jsx)(a.E, { variant: "body-sm/normal", children: m }),

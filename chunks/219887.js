@@ -119,7 +119,9 @@ class T extends l.PureComponent {
     }
     renderIcon() {
         let { paymentSource: e } = this.props;
-        return e instanceof d.LQ ? (0, i.jsx)(r._, { size: "lg" }) : (0, i.jsx)(u.Ay, { type: this.typeString });
+        return e instanceof d.LQ
+            ? (0, i.jsx)(r.PaymentTypeGiftCardIcon, { size: "lg" })
+            : (0, i.jsx)(u.Ay, { type: this.typeString });
     }
     render() {
         let {

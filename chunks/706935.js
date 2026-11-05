@@ -18,7 +18,7 @@ function g(e) {
     let { kind: n } = e;
     switch (n) {
         case "channel":
-            return (0, t.jsx)(a.k, { size: "sm", color: "currentColor", "aria-hidden": !0 });
+            return (0, t.jsx)(a.AppsIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
         case "app":
             return (0, t.jsx)(u.RobotIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
         case "project":

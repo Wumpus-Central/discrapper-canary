@@ -8,10 +8,10 @@ let i, r, a, s, l, o, d, c, u;
         NetworkActionNames: () => ee.D3,
         SpanComponentNames: () => ee.yk,
         SpanTtiNames: () => ee.wJ,
-        analyticsTrackingStoreMaker: () => Q,
+        analyticsTrackingStoreMaker: () => Z,
         encodeProperties: () => p,
-        extendSuperProperties: () => eT,
-        getBrowser: () => ef,
+        extendSuperProperties: () => eg,
+        getBrowser: () => eh,
         getCampaignParams: () => em,
         getDevice: () => eI,
         getOS: () => eA,
@@ -23,8 +23,8 @@ let i, r, a, s, l, o, d, c, u;
 var _,
     E = n(812729),
     A = n.n(E),
-    h = n(284009),
-    f = n.n(h),
+    f = n(284009),
+    h = n.n(f),
     I = n(264572).hp;
 function p(e) {
     try {
@@ -36,8 +36,8 @@ function p(e) {
 (n(142703), n(667532), n(321073));
 var m = n(115560);
 n(423034);
-var g = n(80703),
-    T = n(855986),
+var T = n(80703),
+    g = n(855986),
     S = n(620632),
     N = n(187207),
     C = n(611599),
@@ -76,13 +76,13 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
     X = [],
     z = null,
     q = !1,
-    Z = () => Promise.resolve({ sessionId: void 0 }),
-    Q = (e) => {
+    Q = () => Promise.resolve({ sessionId: void 0 }),
+    Z = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: a,
-            getSessionId: s = Z,
+            getSessionId: s = Q,
             TRACKING_URL: l,
             drainTimeoutOverride: o,
             waitFor: d,
@@ -94,11 +94,11 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         function A() {
             return 0 !== X.length && (null != r ? null != i : null != a());
         }
-        function h(e) {
+        function f(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == z && A() && (z = t ? setTimeout(f, 0) : c(f, { timeout: D }));
+            null == z && A() && (z = t ? setTimeout(h, 0) : c(h, { timeout: D }));
         }
-        function f() {
+        function h() {
             if (((z = null), !A())) return Promise.resolve();
             let e = X.slice();
             ((X = []), (G = W(G)));
@@ -220,13 +220,13 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             ),
                         };
                     })(),
-                    h({ shouldFlushOnNextTick: !1 }),
+                    f({ shouldFlushOnNextTick: !1 }),
                     !1
                 );
             }),
             ($.handleConnectionClosed = function () {
                 return (
-                    f(),
+                    h(),
                     (function () {
                         if (null == B) return;
                         switch (B.type) {
@@ -247,7 +247,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 );
             }),
             ($.handleFingerprint = function () {
-                return (f(), !1);
+                return (h(), !1);
             }),
             ($.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: l, resolve: o } = e;
@@ -268,31 +268,31 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             c = (function (e) {
                                 if (null != r) return r;
                                 let t = e.fingerprint ?? a();
-                                return null != t ? (0, g.d)(t) : null;
+                                return null != t ? (0, T.d)(t) : null;
                             })(d);
                         if ((null != c && (d.properties.client_uuid = K.generate(c)), X.push(d), X.length > 1e4)) {
                             let e = X.length - 1e4;
                             ((v = W(v, e)), (X = X.slice(-1e4)));
                         }
-                        i ? h({ shouldFlushOnNextTick: !0 }) : h({ shouldFlushOnNextTick: !1 });
+                        i ? f({ shouldFlushOnNextTick: !0 }) : f({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
             }),
             ($.handleSetAnalyticsToken = function (e) {
                 let { analyticsToken: t, userId: n } = e;
-                return (null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1);
+                return (null == i && null != t && ((i = t), (r = n), f({ shouldFlushOnNextTick: !1 })), !1);
             }));
-        class C extends T.Ay.Store {
+        class C extends g.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
             }
             submitEventsImmediately = I;
             requestDrain = () => {
-                for (let e of (f(), y))
+                for (let e of (h(), y))
                     setTimeout(() => {
-                        f();
+                        h();
                     }, e);
             };
         }
@@ -379,13 +379,13 @@ function eA() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
-function eh(e, t) {
+function ef(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function ef() {
+function eh() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window,
         i = (function (e) {
@@ -434,13 +434,13 @@ function em(e) {
     let t = {};
     return (
         ep.forEach((n) => {
-            let i = eh(e, n);
+            let i = ef(e, n);
             i.length > 0 && (t[n] = i);
         }),
         t
     );
 }
-function eg() {
+function eT() {
     let e,
         t = {};
     return (
@@ -465,7 +465,7 @@ function eg() {
                                   : null;
                 if (null != i) {
                     t.search_engine = i;
-                    let e = eh(n, "yahoo" !== i ? "q" : "p");
+                    let e = ef(n, "yahoo" !== i ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -480,7 +480,7 @@ if (null == a)
             if (null == e || 1 !== es.w.get(ec)) {
                 let t;
                 (((t = {}).os = eA()),
-                    (t.browser = ef()),
+                    (t.browser = eh()),
                     (t.device = eI()),
                     (t.device_model_name = ""),
                     (t.system_locale = (0, ea.c)()),
@@ -490,12 +490,12 @@ if (null == a)
                     es.w.set(ec, 1));
             }
             let t = es.w.get(eu);
-            null == t && ((t = eg()), es.w.set(eu, t));
+            null == t && ((t = eT()), es.w.set(eu, t));
             let n = el.u.get(eu);
             if (null == n) {
                 var i;
                 let e;
-                ((i = eg()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), el.u.set(eu, n));
+                ((i = eT()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), el.u.set(eu, n));
             }
             return {
                 ...e,
@@ -525,7 +525,7 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function eT(e) {
+function eg(e) {
     s = p((a = { ...a, ...e }));
 }
 function eS() {
@@ -534,12 +534,12 @@ function eS() {
 function eN() {
     return s;
 }
-eT(
+eg(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("666486", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("666501", 10))) || (l.client_build_number = d),
     null == (c = eE?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
@@ -589,7 +589,7 @@ let eL = (e) => {
                 eC[t] = Date.now() + o.throttlePeriod;
             } else if ("throttlePercent" in o) {
                 if (Math.random() > o.throttlePercent) return Promise.resolve();
-            } else f()(!1, `Unsupported analytics event config: ${o}`);
+            } else h()(!1, `Unsupported analytics event config: ${o}`);
         return (t?.(e), s(e, r, a));
     };
 };

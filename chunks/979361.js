@@ -24,7 +24,7 @@ var i =
         e.ICalAlarmType =
         e.ICalAlarm =
             void 0));
-let r = i(a(616779));
+let r = i(a(839160));
 function n(t) {
     return new r.default(t);
 }
@@ -67,7 +67,7 @@ var o = a(751403);
             return o.ICalAttendeeStatus;
         },
     }));
-var d = a(616779);
+var d = a(839160);
 (Object.defineProperty(e, "ICalCalendar", {
     enumerable: !0,
     get: function () {

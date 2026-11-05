@@ -24,7 +24,7 @@ i.d(
                 b = (function (e) {
                     switch (e.id) {
                         case o.Ik.BUILT_IN:
-                            return n.k;
+                            return n.SlashBoxIcon;
                         case o.Ik.FRECENCY:
                             return c.ClockIcon;
                         default:

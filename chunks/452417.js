@@ -344,7 +344,7 @@ function ei(e) {
 function ea(e) {
     let { modalTeaser: t } = e;
     if (null == t) return null;
-    let n = t.icon ?? f.t;
+    let n = t.icon ?? f.NitroWheelIcon;
     return (0, i.jsxs)("div", {
         className: N.ar,
         children: [

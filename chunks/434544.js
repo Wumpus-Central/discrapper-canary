@@ -1,37 +1,38 @@
-var n = l(477900);
-l(582128);
-var a = l(646514);
-if (221552 == l.j) var i = l(996682);
-if (221552 == l.j) var r = l(27989);
-l.d(
-    t,
+e.r(h);
+var i = e(477900);
+e(582128);
+var s = e(646514);
+if (221552 == e.j) var t = e(996682);
+if (221552 == e.j) var c = e(27989);
+e.d(
+    h,
     {},
     {
-        s: function (e) {
+        ExperimentalWebIcon: function (a) {
             let {
-                    size: t = "md",
-                    width: l,
-                    height: s,
-                    color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: c = "",
-                    ...d
-                } = e,
-                h = (0, r.J)(t),
-                u = h?.width ?? l,
-                T = h?.height ?? s;
-            return (0, n.jsx)("svg", {
-                ...(0, i.A)(d),
+                    size: h = "md",
+                    width: e,
+                    height: l,
+                    color: r = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: d = "",
+                    ...n
+                } = a,
+                Z = (0, c.J)(h),
+                o = Z?.width ?? e,
+                p = Z?.height ?? l;
+            return (0, i.jsx)("svg", {
+                ...(0, t.A)(n),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: u,
-                height: T,
+                width: o,
+                height: p,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, n.jsx)("path", {
-                    fill: "string" == typeof o ? o : o.css,
+                children: (0, i.jsx)("path", {
+                    fill: "string" == typeof r ? r : r.css,
                     fillRule: "evenodd",
                     d: "M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22ZM8.23 16c.28 1.07.65 2.02 1.09 2.79.56 1 1.15 1.58 1.68 1.9V16H8.23ZM13 16v4.69c.53-.32 1.12-.9 1.68-1.9.44-.77.81-1.72 1.09-2.79H13Zm-9.06 0a9.04 9.04 0 0 0 3.7 3.87A13.59 13.59 0 0 1 6.18 16H3.94Zm13.88 0a13.58 13.58 0 0 1-1.46 3.87 9.04 9.04 0 0 0 3.7-3.87h-2.24Zm-14.6-6a9.02 9.02 0 0 0 0 4h2.64a19.27 19.27 0 0 1 0-4H3.23Zm4.65 0a17.21 17.21 0 0 0 0 4H11v-4H7.87ZM13 14h3.13a17.22 17.22 0 0 0 0-4H13v4Zm5.14-4a19.27 19.27 0 0 1 0 4h2.63a9.02 9.02 0 0 0 0-4h-2.63ZM7.64 4.13A9.04 9.04 0 0 0 3.94 8h2.24C6.5 6.53 7 5.21 7.64 4.13ZM11 3.3c-.53.32-1.12.9-1.68 1.9-.44.77-.81 1.72-1.09 2.79H11V3.31ZM13 8h2.77a11.36 11.36 0 0 0-1.09-2.79A5.03 5.03 0 0 0 13 3.31V8Zm3.36-3.87C17 5.2 17.5 6.53 17.82 8h2.24a9.04 9.04 0 0 0-3.7-3.87Z",
                     clipRule: "evenodd",
-                    className: c,
+                    className: d,
                 }),
             });
         },

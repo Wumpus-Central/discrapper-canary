@@ -17,11 +17,11 @@ var s = n(477900),
     p = n(409626),
     _ = n(611656),
     x = n(459746),
-    N = n(311043),
-    R = n(454908),
-    S = n(413599),
-    T = n(129230),
-    I = n(506988),
+    S = n(311043),
+    N = n(454908),
+    R = n(413599),
+    I = n(129230),
+    T = n(506988),
     j = n(760914),
     v = n(590202),
     L = n(971649),
@@ -36,7 +36,7 @@ function b(e) {
         n,
         r,
         { quest: i, onClose: a } = e,
-        m = (0, l.bG)([S.A], () => S.A.getState().theme),
+        m = (0, l.bG)([R.A], () => R.A.getState().theme),
         E = (0, o.M)(m) ? y.NJ8.DARK : y.NJ8.LIGHT;
     return (0, s.jsxs)("div", {
         className: k.N1,
@@ -83,7 +83,7 @@ function b(e) {
                 className: k.b,
                 "aria-label": P.intl.string(P.t.cpT0Cq),
                 onClick: a,
-                children: (0, s.jsx)(d.P, { size: "md", color: "currentColor" }),
+                children: (0, s.jsx)(d.XSmallIcon, { size: "md", color: "currentColor" }),
             }),
         ],
     });
@@ -93,19 +93,19 @@ function w(e) {
         A = (0, L.wW)(),
         g = (0, l.bG)([C.Ay], () => C.Ay.useReducedMotion),
         _ = r.useRef(null),
-        N = null != a.gameRecord;
-    function R() {
+        S = null != a.gameRecord;
+    function N() {
         (0, h.r)({
             type: f.F.CLICK_EXTERNAL_ADVERTISER_CTA,
             adCreativeType: i.p.QUEST,
             adCreativeId: t.id,
             questContentCTA: v.Cy.GAME_STORE_OPEN_GAME_LINK,
-            surfaceId: I.uF.SPONSORED_QUEST_SHEET,
+            surfaceId: T.uF.SPONSORED_QUEST_SHEET,
             sourceQuestContent: o,
             impressionId: A(),
         });
     }
-    let S = r.useCallback(
+    let R = r.useCallback(
             (e) => {
                 if (null == _.current || g) return;
                 let t = _.current.getBoundingClientRect(),
@@ -117,7 +117,7 @@ function w(e) {
             },
             [g],
         ),
-        T = r.useCallback(() => {
+        I = r.useCallback(() => {
             null == _.current || g || (_.current.style.transform = "rotateX(0deg) rotateY(0deg)");
         }, [g]);
     return (0, s.jsx)(E.m, {
@@ -125,13 +125,13 @@ function w(e) {
         children: (0, s.jsx)(u.D, {
             className: k.zR,
             onClick: async function () {
-                N &&
+                S &&
                     ((0, h.r)({
                         type: f.F.CLICK_INTERNAL,
                         adCreativeType: i.p.QUEST,
                         adCreativeId: t.id,
                         questContentCTA: v.Cy.GAME_PROFILE_OPEN,
-                        surfaceId: I.uF.SPONSORED_QUEST_SHEET,
+                        surfaceId: T.uF.SPONSORED_QUEST_SHEET,
                         sourceQuestContent: o,
                         impressionId: A(),
                     }),
@@ -442,6 +442,10 @@ function w(e) {
                                 n.e(508702),
                                 n.e(257980),
                                 n.e(960235),
+                                n.e(486137),
+                                n.e(80421),
+                                n.e(206027),
+                                n.e(393471),
                                 n.e(177641),
                                 n.e(198329),
                                 n.e(678157),
@@ -454,6 +458,7 @@ function w(e) {
                                 n.e(733115),
                                 n.e(397270),
                                 n.e(406222),
+                                n.e(761597),
                                 n.e(373122),
                                 n.e(649408),
                                 n.e(221856),
@@ -486,6 +491,7 @@ function w(e) {
                                 n.e(489218),
                                 n.e(922716),
                                 n.e(543039),
+                                n.e(126437),
                                 n.e(912875),
                                 n.e(398125),
                                 n.e(990189),
@@ -619,6 +625,7 @@ function w(e) {
                                 n.e(958428),
                                 n.e(317225),
                                 n.e(179049),
+                                n.e(918024),
                                 n.e(132737),
                                 n.e(53374),
                                 n.e(482815),
@@ -628,6 +635,7 @@ function w(e) {
                                 n.e(288004),
                                 n.e(124060),
                                 n.e(240511),
+                                n.e(68904),
                                 n.e(718573),
                                 n.e(146566),
                                 n.e(693832),
@@ -677,7 +685,8 @@ function w(e) {
                                 n.e(371482),
                                 n.e(912773),
                                 n.e(35403),
-                                n.e(68904),
+                                n.e(631358),
+                                n.e(846523),
                                 n.e(796867),
                                 n.e(919307),
                                 n.e(565617),
@@ -711,6 +720,7 @@ function w(e) {
                                 n.e(496715),
                                 n.e(115754),
                                 n.e(474055),
+                                n.e(736926),
                                 n.e(744385),
                                 n.e(59413),
                                 n.e(29664),
@@ -784,16 +794,17 @@ function w(e) {
                                 n.e(603808),
                                 n.e(800311),
                                 n.e(22330),
-                                n.e(317315),
+                                n.e(197238),
                                 n.e(144179),
                                 n.e(474907),
                                 n.e(649520),
                                 n.e(118917),
+                                n.e(536973),
                                 n.e(562168),
                                 n.e(791824),
                                 n.e(698547),
                                 n.e(355949),
-                                n.e(126437),
+                                n.e(780611),
                                 n.e(24889),
                                 n.e(213924),
                                 n.e(472289),
@@ -802,11 +813,11 @@ function w(e) {
                                 n.e(646284),
                                 n.e(726294),
                                 n.e(43358),
-                                n.e(918024),
                                 n.e(80077),
                                 n.e(702813),
                                 n.e(627323),
                                 n.e(672877),
+                                n.e(507406),
                                 n.e(520491),
                                 n.e(9205),
                                 n.e(344969),
@@ -816,57 +827,68 @@ function w(e) {
                                 n.e(137937),
                                 n.e(7914),
                                 n.e(294653),
-                                n.e(507406),
                                 n.e(396325),
                                 n.e(664430),
                                 n.e(375234),
                                 n.e(473474),
-                                n.e(313937),
                                 n.e(841157),
+                                n.e(775627),
                                 n.e(724637),
                                 n.e(472627),
+                                n.e(838336),
                                 n.e(484394),
                                 n.e(501962),
                                 n.e(583827),
                                 n.e(171342),
                                 n.e(560075),
                                 n.e(283799),
-                                n.e(736926),
                                 n.e(893767),
                                 n.e(547298),
                                 n.e(690901),
-                                n.e(536973),
                                 n.e(254103),
                                 n.e(874653),
                                 n.e(707319),
                                 n.e(961096),
                                 n.e(954180),
                                 n.e(828971),
-                                n.e(780611),
+                                n.e(613079),
                                 n.e(619777),
                                 n.e(378294),
                                 n.e(886456),
-                                n.e(838336),
                                 n.e(884912),
                                 n.e(298479),
+                                n.e(579354),
+                                n.e(22906),
                                 n.e(888126),
                                 n.e(921041),
                                 n.e(630960),
                                 n.e(612598),
                                 n.e(564526),
                                 n.e(238672),
+                                n.e(64042),
+                                n.e(812768),
+                                n.e(704818),
+                                n.e(340729),
+                                n.e(287567),
+                                n.e(957289),
+                                n.e(515213),
+                                n.e(814211),
+                                n.e(368585),
+                                n.e(611685),
+                                n.e(769237),
+                                n.e(144791),
                                 n.e(631951),
                                 n.e(571180),
                                 n.e(483521),
-                                n.e(86454),
+                                n.e(858838),
                                 n.e(134358),
-                                n.e(234264),
+                                n.e(921566),
                             ]).then(n.bind(n, 130968));
                             return (t) =>
                                 (0, s.jsx)(e, {
                                     gameId: a.gameId,
                                     source: p.GameProfileSources.GameSheet,
-                                    trackExternalAction: R,
+                                    trackExternalAction: N,
                                     ...t,
                                 });
                         },
@@ -874,8 +896,8 @@ function w(e) {
                     ),
                     c());
             },
-            onMouseMove: S,
-            onMouseLeave: T,
+            onMouseMove: R,
+            onMouseLeave: I,
             children: (0, s.jsx)("div", {
                 ref: _,
                 className: k._M,
@@ -928,11 +950,11 @@ function F(e) {
     } = e;
     (0, g.A)(i);
     let E = r.useMemo(() => i, [i]);
-    (0, R.x)(E);
-    let A = (0, l.bG)([N.A], () => E.some((e) => N.A.isFetching(e))),
-        C = (0, l.bG)([N.A], () => E.some((e) => N.A.didFetchingFail(e))),
-        h = (0, l.yK)([N.A], () =>
-            E.map((e) => N.A.getGame(e))
+    (0, N.x)(E);
+    let A = (0, l.bG)([S.A], () => E.some((e) => S.A.isFetching(e))),
+        C = (0, l.bG)([S.A], () => E.some((e) => S.A.didFetchingFail(e))),
+        h = (0, l.yK)([S.A], () =>
+            E.map((e) => S.A.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, _.oS)(e.id))
                 .slice(0, 10),
@@ -943,20 +965,20 @@ function F(e) {
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [f.length]),
         x = !A && 0 === f.length,
-        S = C || x;
+        R = C || x;
     if (
         (r.useEffect(() => {
-            if (S) {
+            if (R) {
                 let e = C ? G.W.FETCH_FAILED : G.W.NO_GAMES_AVAILABLE;
-                (T.default.track(y.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+                (I.default.track(y.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     a(),
                     (0, m.mM)(async () => {
                         let { default: e } = await n.e(791646).then(n.bind(n, 659309));
                         return (t) => (0, s.jsx)(e, { ...t });
                     }));
             }
-        }, [S, C, t.id, a]),
-        A && !S)
+        }, [R, C, t.id, a]),
+        A && !R)
     ) {
         let e = Math.min(i.length, 10);
         return (0, s.jsxs)("div", {
@@ -970,7 +992,7 @@ function F(e) {
             ],
         });
     }
-    return S
+    return R
         ? null
         : (0, s.jsxs)("div", {
               ref: (e) => {
@@ -1017,10 +1039,10 @@ function q(e) {
         p = r.useRef(null),
         _ = t?.current != null,
         x = _ ? t : p;
-    function N() {
+    function S() {
         g(!0);
     }
-    function R() {
+    function N() {
         g(!1);
     }
     return (0, s.jsx)(A.Y, {
@@ -1034,8 +1056,8 @@ function q(e) {
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: m,
-                onGameProfileModalOpen: N,
-                onGameProfileModalClose: R,
+                onGameProfileModalOpen: S,
+                onGameProfileModalClose: N,
             });
         },
         onRequestOpen: function () {
@@ -1072,7 +1094,7 @@ n.d(
                 ? null
                 : (0, s.jsx)(M.R, {
                       questOrQuests: e.quest,
-                      questContent: I.uF.SPONSORED_QUEST_SHEET,
+                      questContent: T.uF.SPONSORED_QUEST_SHEET,
                       sourceQuestContent: e.sourceQuestContent,
                       children: (n) => (0, s.jsx)(q, { ...e, impressionRef: n, getSourceImpressionId: t }),
                   });

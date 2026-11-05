@@ -1,11 +1,11 @@
-var a = i(477900),
-    l = i(582128),
-    s = i(834730),
+var s = i(477900),
+    a = i(582128),
+    l = i(834730),
     r = i(991308),
     n = i(450078),
     c = i(858899),
-    d = i(173936),
-    o = i(138399),
+    o = i(173936),
+    d = i(138399),
     u = i(92961),
     m = i(451909),
     h = i(223863),
@@ -19,20 +19,20 @@ var a = i(477900),
 function g(t) {
     let { target: e } = t,
         i = "artist" === e.kind;
-    return (0, a.jsxs)("div", {
+    return (0, s.jsxs)("div", {
         className: b.sq,
         children: [
-            (0, a.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: b.kx,
                 children: [
-                    (0, a.jsx)(s.E, {
+                    (0, s.jsx)(l.E, {
                         variant: "body-md/medium",
                         color: "text-default",
                         lineClamp: 1,
                         children: e.title,
                     }),
                     null != e.subtitle &&
-                        (0, a.jsx)(s.E, {
+                        (0, s.jsx)(l.E, {
                             variant: "body-sm/medium",
                             color: "text-muted",
                             lineClamp: 1,
@@ -40,9 +40,13 @@ function g(t) {
                         }),
                 ],
             }),
-            (0, a.jsx)("div", {
+            (0, s.jsx)("div", {
                 className: b.SZ,
-                children: (0, a.jsx)(v.R, { src: e.imageUrl, isCircular: i, FallbackIcon: i ? r.I : n.u }),
+                children: (0, s.jsx)(v.R, {
+                    src: e.imageUrl,
+                    isCircular: i,
+                    FallbackIcon: i ? r.MusicArtistIcon : n.MusicAlbumIcon,
+                }),
             }),
         ],
     });
@@ -52,22 +56,22 @@ i.d(
     {},
     {
         default: function (t) {
-            let { target: e, onClose: i, ...s } = t,
-                r = l.useCallback(
-                    async (t, a, l) => {
-                        let { withMessage: s, closeAfterSend: r } = a;
-                        l(!0);
+            let { target: e, onClose: i, ...l } = t,
+                r = a.useCallback(
+                    async (t, s, a) => {
+                        let { withMessage: l, closeAfterSend: r } = s;
+                        a(!0);
                         try {
-                            let a = (await Promise.all(t.map(h.pk))).filter(k.Vq);
-                            if (0 === a.length) return void l(!1);
+                            let s = (await Promise.all(t.map(h.pk))).filter(k.Vq);
+                            if (0 === s.length) return void a(!1);
                             r && i();
                             let n = `${e.shareUrl}
 
 `;
-                            for (let t of a) {
+                            for (let t of s) {
                                 let e = x.A.getChannel(t);
                                 null != e &&
-                                    (await o.A.sendMessage(e.id, m.Ay.parse(e, n + (s ?? "")), !1, {
+                                    (await d.A.sendMessage(e.id, m.Ay.parse(e, n + (l ?? "")), !1, {
                                         location: f.Hx.GUILD_SPACE,
                                     }));
                             }
@@ -75,12 +79,12 @@ i.d(
                         } catch (t) {
                             (0, c.P0)({ text: C.intl.string(C.t.iufib1), variant: "critical" });
                         } finally {
-                            l(!1);
+                            a(!1);
                         }
                     },
                     [i, e.shareUrl],
                 ),
-                n = l.useMemo(
+                n = a.useMemo(
                     () => [
                         {
                             variant: "secondary",
@@ -89,16 +93,16 @@ i.d(
                                 (0, p.C)(e.shareUrl, () =>
                                     (0, c.P0)({ text: C.intl.string(C.t["L/PwZf"]), variant: "success" }),
                                 ),
-                            icon: d.LinkIcon,
+                            icon: o.LinkIcon,
                         },
                     ],
                     [e.shareUrl],
                 );
-            return (0, a.jsx)(u.ForwardModal, {
-                ...s,
+            return (0, s.jsx)(u.ForwardModal, {
+                ...l,
                 onClose: i,
                 source: "guild-space-popular-music",
-                customPreview: (0, a.jsx)(g, { target: e }),
+                customPreview: (0, s.jsx)(g, { target: e }),
                 customSendHandler: r,
                 additionalActions: n,
             });

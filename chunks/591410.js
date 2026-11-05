@@ -30,8 +30,8 @@ var i = t(477900),
     k = t(692969),
     _ = t(454908),
     w = t(46653),
-    W = t(183555),
-    S = t(40989),
+    S = t(183555),
+    W = t(40989),
     M = t(58266);
 function O(e) {
     let {
@@ -56,7 +56,7 @@ function O(e) {
                       : (0, i.jsxs)("div", {
                             className: M.o8,
                             children: [
-                                (0, i.jsx)(m.Q, { size: "xxs" }),
+                                (0, i.jsx)(m.HourglassIcon, { size: "xxs" }),
                                 (0, i.jsx)(u.E, {
                                     variant: "body-sm/medium",
                                     color: "text-subtle",
@@ -126,10 +126,10 @@ let L = Object.assign(
                 disableInteraction: L,
                 index: F,
                 trailingContent: U,
-                interactiveLinks: z = !1,
+                interactiveLinks: H = !1,
             } = e,
-            H = (function (e) {
-                let { trackUserProfileAction: n } = (0, W.NJ)(),
+            z = (function (e) {
+                let { trackUserProfileAction: n } = (0, S.NJ)(),
                     { user: t, widget: r, cta: s } = e,
                     o = (0, c.bG)([w.default], () => w.default.getId()) === t.id,
                     m = (0, T.h)(r.applicationId),
@@ -174,7 +174,7 @@ let L = Object.assign(
                         !Array.from(d._.APPLICATION_IDENTITIES_SCOPES).some((e) => v.scopes.includes(e)) &&
                         !v.scopes.includes(d.F.SDK_SOCIAL_LAYER) &&
                         !v.scopes.includes(d.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    S = (0, i.jsxs)(i.Fragment, {
+                    W = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
                                 ? (0, i.jsx)("img", { className: M.Z2, src: h, width: 16, height: 16, alt: "" })
@@ -187,8 +187,8 @@ let L = Object.assign(
                     }),
                     O =
                         null == f
-                            ? (0, i.jsx)("div", { className: M.qd, children: S })
-                            : (0, i.jsx)(g.D, { className: a()(M.qd, M.vk), onClick: x, children: S });
+                            ? (0, i.jsx)("div", { className: M.qd, children: W })
+                            : (0, i.jsx)(g.D, { className: a()(M.qd, M.vk), onClick: x, children: W });
                 return {
                     isCurrentUser: o,
                     game: f,
@@ -201,7 +201,7 @@ let L = Object.assign(
             })(e),
             q = (0, v.A)(n.id, t.applicationId),
             B = e.rendererProps ?? q,
-            K = (0, P.A)(t.applicationId, H.isCurrentUser),
+            K = (0, P.A)(t.applicationId, z.isCurrentUser),
             Y = (function (e, n) {
                 let { pending: t, refresh: l } = (0, N.A)(e);
                 return n
@@ -215,7 +215,7 @@ let L = Object.assign(
                     : null;
             })(t.applicationId, !0 === K && !0 !== L),
             J =
-                z ||
+                H ||
                 (function (e) {
                     let { disableInteraction: n } = e;
                     return !0 !== n;
@@ -226,7 +226,7 @@ let L = Object.assign(
             X = B.surfaceConfigs[o.m.WIDGET_BOTTOM];
         return null == V || null == X
             ? null
-            : (0, i.jsxs)(S.A, {
+            : (0, i.jsxs)(W.A, {
                   userId: n.id,
                   widget: t,
                   allowEditing: G,
@@ -237,12 +237,12 @@ let L = Object.assign(
                   headerClassName: M.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != H.game
+                          null != z.game
                               ? (0, i.jsx)(p.Dr, {
                                     id: "view-game-profile",
                                     label: D.intl.string(D.t.ajHoOr),
                                     leadingAccessory: { type: "icon", icon: j.GameControllerIcon },
-                                    action: H.openGameProfileModal,
+                                    action: z.openGameProfileModal,
                                 })
                               : null,
                           Y,
@@ -253,18 +253,18 @@ let L = Object.assign(
                           ...B,
                           surface: o.m.WIDGET_TOP,
                           surfaceConfig: V,
-                          header: H.headerTitle,
+                          header: z.headerTitle,
                           renderText: J,
                       }),
                       (0, i.jsx)(I.c, {}),
                       (0, i.jsx)(s.kH, { ...B, surface: o.m.WIDGET_BOTTOM, surfaceConfig: X, renderText: J }),
                       (0, i.jsx)(O, {
-                          isCurrentUser: H.isCurrentUser,
+                          isCurrentUser: z.isCurrentUser,
                           isLoading: B.isLoading,
                           hasData: B.hasIdentity,
-                          showConnectCta: H.showConnectCta,
-                          showReconnectCta: H.showReconnectCta,
-                          handleConnect: H.handleConnect,
+                          showConnectCta: z.showConnectCta,
+                          showReconnectCta: z.showReconnectCta,
+                          handleConnect: z.handleConnect,
                           disableCTA: r,
                           disableCTAActions: !0 === m || !1 !== K,
                           cta: h,

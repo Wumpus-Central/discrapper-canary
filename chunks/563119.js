@@ -1,35 +1,36 @@
-var s = e(477900);
-e(582128);
-var l = e(646514),
-    i = e(996682),
-    n = e(27989);
-e.d(
-    t,
+s.r(c);
+var h = s(477900);
+s(582128);
+var t = s(646514),
+    l = s(996682),
+    i = s(27989);
+s.d(
+    c,
     {},
     {
-        $: function (a) {
+        StampXIcon: function (a) {
             let {
-                    size: t = "md",
-                    width: e,
-                    height: c,
-                    color: h = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: r = "",
-                    ...o
+                    size: c = "md",
+                    width: s,
+                    height: e,
+                    color: r = t.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
+                    ...p
                 } = a,
-                d = (0, n.J)(t),
-                v = d?.width ?? e,
-                g = d?.height ?? c;
-            return (0, s.jsx)("svg", {
-                ...(0, i.A)(o),
+                d = (0, i.J)(c),
+                o = d?.width ?? s,
+                w = d?.height ?? e;
+            return (0, h.jsx)("svg", {
+                ...(0, l.A)(p),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: v,
-                height: g,
+                width: o,
+                height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, s.jsx)("path", {
-                    fill: "string" == typeof h ? h : h.css,
+                children: (0, h.jsx)("path", {
+                    fill: "string" == typeof r ? r : r.css,
                     d: "M21.3 15.3a1 1 0 1 1 1.4 1.4L20.42 19l2.3 2.3a1 1 0 1 1-1.42 1.4L19 20.42l-2.3 2.3a1 1 0 1 1-1.4-1.42L17.58 19l-2.3-2.3a1 1 0 1 1 1.42-1.4L19 17.58l2.3-2.3ZM13.86 19.86a3.01 3.01 0 0 0-.84 1.64c-.05.27-.27.5-.54.5H5a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h9.12c.22 0 .33.27.18.43l-.44.43ZM12 2a4 4 0 0 1 3.1 6.52c-.76.95-1.6 1.99-1.6 3.21V13h.87c.11 0 .2.09.2.2.01.08-.03.15-.1.2a3 3 0 0 0-1.07 4.15c.12.19 0 .45-.22.45H3a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h5.5v-1.27c0-1.22-.84-2.26-1.6-3.21A4 4 0 0 1 12 2ZM19 13c.32 0 .62.05.9.14.27.08.28.43.07.61l-.1.11-.52.5a.5.5 0 0 1-.7 0l-.51-.5a3 3 0 0 0-.85-.6.14.14 0 0 1-.09-.12c0-.08.07-.14.14-.14H19Z",
-                    className: r,
+                    className: n,
                 }),
             });
         },

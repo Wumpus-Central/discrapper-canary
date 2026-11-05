@@ -23,7 +23,7 @@ t.d(
                 case c.Xi.BETA:
                     return (0, r.jsx)(s.E, { type: "beta", variant: "primary" });
                 case c.Xi.EARLY_ACCESS:
-                    return (0, r.jsx)(s.E, { type: "early_access", variant: "expressive", icon: a.t });
+                    return (0, r.jsx)(s.E, { type: "early_access", variant: "expressive", icon: a.NitroWheelIcon });
                 case c.Xi.COUNT:
                     return (0, r.jsx)(d, { badge: n });
                 case c.Xi.WARNING:

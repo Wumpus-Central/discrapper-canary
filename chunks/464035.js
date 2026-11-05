@@ -24,8 +24,8 @@ var n = l(477900),
     S = l(71393),
     w = l(576705),
     F = l(994500),
-    k = l(309010),
-    I = l(287809),
+    I = l(309010),
+    k = l(287809),
     O = l(129230),
     M = l(811091),
     _ = l(652215),
@@ -55,7 +55,7 @@ class B extends s.PureComponent {
     getDefaultChannelId(e) {
         let t = e.find((e) => {
                 let { channel: t } = e;
-                return "general" === (0, C.m1)(t, I.default, F.A);
+                return "general" === (0, C.m1)(t, k.default, F.A);
             }),
             l = null != t ? t : e[0];
         return null != l ? l.channel.id : null;
@@ -124,7 +124,7 @@ class B extends s.PureComponent {
                 return {
                     id: t.id,
                     value: t.id,
-                    label: (0, C.m1)(t, I.default, F.A),
+                    label: (0, C.m1)(t, k.default, F.A),
                     leading: (function (e) {
                         if (null == e) return null;
                         let t = (0, y.gU)(e);
@@ -193,7 +193,7 @@ class B extends s.PureComponent {
     }
     renderHeader() {
         let { guildToFollow: e, channelNameToFollow: t, channel: l } = this.props,
-            s = (0, y.gU)(l) ?? x.k;
+            s = (0, y.gU)(l) ?? x.AnnouncementsIcon;
         return (0, n.jsxs)(d.rQ, {
             className: L.wx,
             children: [
@@ -232,7 +232,7 @@ class B extends s.PureComponent {
     }
 }
 let G = r.Ay.connectStores(
-    [S.A, k.Ay, I.default, F.A, v.A, w.A, E.A],
+    [S.A, I.Ay, k.default, F.A, v.A, w.A, E.A],
     (e) => {
         let { channel: t } = e,
             l = S.A.getGuild(t.guild_id),
@@ -242,14 +242,14 @@ let G = r.Ay.connectStores(
                     .filter((e) => N.XD.has(e.type) && w.A.can(_.xBc.MANAGE_WEBHOOKS, e))
                     .map((e) => {
                         let t = E.A.getChannel(e.parent_id);
-                        return { channel: e, category: null != t ? (0, C.m1)(t, I.default, F.A) : null };
+                        return { channel: e, category: null != t ? (0, C.m1)(t, k.default, F.A) : null };
                     });
                 return (l.length > 0 && (e[t.id] = { guild: t, channels: l }), e);
             }, {}),
-            s = k.Ay.getLastChannelFollowingDestination();
+            s = I.Ay.getLastChannelFollowingDestination();
         return {
             guildToFollow: l,
-            channelNameToFollow: (0, C.m1)(t, I.default, F.A),
+            channelNameToFollow: (0, C.m1)(t, k.default, F.A),
             guilds: n,
             lastChannelFollowingDestination: s ?? {},
         };

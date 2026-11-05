@@ -1,28 +1,29 @@
-var t = i(477900);
-i(582128);
-var d = i(646514),
-    h = i(996682),
-    l = i(27989);
-i.d(
-    s,
+s.r(i);
+var t = s(477900);
+s(582128);
+var c = s(646514),
+    d = s(996682),
+    h = s(27989);
+s.d(
+    i,
     {},
     {
-        B: function (e) {
+        LocationIcon: function (e) {
             let {
-                    size: s = "md",
-                    width: i,
-                    height: c,
-                    color: n = d.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: a = "",
-                    ...o
+                    size: i = "md",
+                    width: s,
+                    height: l,
+                    color: n = c.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: o = "",
+                    ...a
                 } = e,
-                p = (0, l.J)(s),
-                r = p?.width ?? i,
-                w = p?.height ?? c;
+                r = (0, h.J)(i),
+                p = r?.width ?? s,
+                w = r?.height ?? l;
             return (0, t.jsx)("svg", {
-                ...(0, h.A)(o),
+                ...(0, d.A)(a),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
@@ -31,7 +32,7 @@ i.d(
                     fillRule: "evenodd",
                     d: "M12 23c3 0 9-8.03 9-13a9 9 0 1 0-18 0c0 4.97 6 13 9 13Zm0-10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z",
                     clipRule: "evenodd",
-                    className: a,
+                    className: o,
                 }),
             });
         },

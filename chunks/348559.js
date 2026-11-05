@@ -1,8 +1,8 @@
 var n = i(477900),
     s = i(582128),
     r = i(189213),
-    l = i(834730),
-    c = i(664121),
+    c = i(834730),
+    l = i(664121),
     a = i(998445),
     o = i(950305),
     u = i(687966),
@@ -19,21 +19,21 @@ function T(t) {
     if (i)
         return (0, n.jsx)("ul", {
             className: S.OK,
-            children: (0, n.jsx)(j, { icon: c.R, children: E.intl.string(E.t["2bL0wT"]) }),
+            children: (0, n.jsx)(j, { icon: l.ServerIcon, children: E.intl.string(E.t["2bL0wT"]) }),
         });
-    let { location: s, age: r, activity: l } = e;
+    let { location: s, age: r, activity: c } = e;
     return (0, n.jsxs)("ul", {
         className: S.OK,
         children: [
             s && (0, n.jsx)(j, { icon: a.GlobeEarthIcon, children: E.intl.string(E.t.xQSdPv) }),
             r && (0, n.jsx)(j, { icon: o.UserIcon, children: E.intl.string(E.t.mYt7hQ) }),
-            l && (0, n.jsx)(j, { icon: u.GameControllerIcon, children: E.intl.string(E.t.XAsWxQ) }),
+            c && (0, n.jsx)(j, { icon: u.GameControllerIcon, children: E.intl.string(E.t.XAsWxQ) }),
         ],
     });
 }
 function j(t) {
     let { icon: e, children: i } = t;
-    return (0, n.jsxs)(l.E, {
+    return (0, n.jsxs)(c.E, {
         variant: "body-sm/medium",
         tag: "li",
         className: S.hD,
@@ -48,7 +48,7 @@ i.d(
             let {
                     transitionState: e,
                     onClose: i,
-                    questContent: c,
+                    questContent: l,
                     adCreativeType: a,
                     gamePublisher: o,
                     gameTitle: u,
@@ -69,8 +69,8 @@ i.d(
                         default:
                             return;
                     }
-                })(c),
-                A = s.useMemo(
+                })(l),
+                v = s.useMemo(
                     () =>
                         (0, m.JM)({
                             adCreativeType: a,
@@ -91,9 +91,9 @@ i.d(
                 title: E.intl.string(E.t.GcsZKJ),
                 actions: [{ onClick: () => i(), text: E.intl.string(E.t.cpT0Cq) }],
                 children: [
-                    (0, n.jsx)(l.E, { variant: "body-sm/medium", color: "text-default", className: S.gt, children: A }),
+                    (0, n.jsx)(c.E, { variant: "body-sm/medium", color: "text-default", className: S.gt, children: v }),
                     (0, n.jsx)(T, { targetedTraits: p, isContextualDisclosure: _ }),
-                    (0, n.jsx)(l.E, {
+                    (0, n.jsx)(c.E, {
                         variant: "body-xs/medium",
                         color: "text-muted",
                         children: E.intl.format(E.t.tzq9Wa, {

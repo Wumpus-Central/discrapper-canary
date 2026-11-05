@@ -36,8 +36,8 @@ l.d(
                         override: { default: { gradientStart: g, gradientEnd: A } },
                     }),
                     _
-                        ? (0, n.jsx)(c.t, { size: "sm", color: "currentColor", className: m.K })
-                        : (0, n.jsx)(o.C, { size: "sm", color: "currentColor", className: m.K }),
+                        ? (0, n.jsx)(c.NitroWheelIcon, { size: "sm", color: "currentColor", className: m.K })
+                        : (0, n.jsx)(o.OrbsIcon, { size: "sm", color: "currentColor", className: m.K }),
                 ],
             });
         },

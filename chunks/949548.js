@@ -84,7 +84,7 @@ function L(e) {
                             size: l.$n.Sizes.NONE,
                             "aria-label": T.intl.string(T.t.WAI6xu),
                             "data-migration-pending": !0,
-                            children: (0, i.jsx)(A.P, { size: "md", color: "currentColor", className: v.ut }),
+                            children: (0, i.jsx)(A.XSmallIcon, { size: "md", color: "currentColor", className: v.ut }),
                         }),
                     ],
                 }),

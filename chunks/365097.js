@@ -2,8 +2,8 @@
 var i,
     l = n(477900),
     s = n(582128),
-    a = n(32880),
-    r = n(347704),
+    r = n(32880),
+    a = n(347704),
     o = n(157559),
     c = n(574332),
     d = n(49229),
@@ -15,8 +15,8 @@ var i,
     E = n(894778),
     h = n(207803),
     x = n(287809),
-    j = n(53505),
-    C = n(4274),
+    C = n(53505),
+    j = n(4274),
     N = n(723702),
     v = n(834730),
     S = n(975571),
@@ -38,8 +38,8 @@ function A() {
 }
 var D = n(873298),
     O = n(331322),
-    R = n(534514),
-    P = n(270746),
+    P = n(534514),
+    R = n(270746),
     T = n(253932),
     w = n(188514);
 function k() {
@@ -73,27 +73,27 @@ function k() {
         children: [
             (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(R.D, { variant: "heading-sm/semibold", children: y.intl.string(y.t.Ksh3ik) }),
+                    (0, l.jsx)(P.D, { variant: "heading-sm/semibold", children: y.intl.string(y.t.Ksh3ik) }),
                     (0, l.jsx)(v.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
                         children: y.intl.string(y.t["mz+/o+"]),
                     }),
-                    (0, l.jsx)(P.Ay, {
-                        type: P.v0.SETTINGS,
+                    (0, l.jsx)(R.Ay, {
+                        type: R.v0.SETTINGS,
                         children: (0, l.jsx)(O.B, {
                             direction: "horizontal",
                             wrap: !0,
                             gap: 8,
                             style: { marginTop: 12 },
-                            children: (0, l.jsx)(P.t6, { systemSelectorFirst: !1 }),
+                            children: (0, l.jsx)(R.t6, { systemSelectorFirst: !1 }),
                         }),
                     }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(R.D, { variant: "heading-sm/semibold", children: y.intl.string(y.t["C/5V0A"]) }),
+                    (0, l.jsx)(P.D, { variant: "heading-sm/semibold", children: y.intl.string(y.t["C/5V0A"]) }),
                     (0, l.jsx)(v.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
@@ -135,9 +135,9 @@ var I = n(855986),
     W = n(486020),
     X = n(339984);
 function V(t) {
-    let { pendingGlobalName: e, onGlobalNameChange: n, pendingBio: i, onBioChange: a } = t,
-        r = (0, I.bG)([x.default], () => x.default.getCurrentUser()),
-        o = null != r ? W.Ay.getUserAvatarURL(r, !0, 80) : void 0,
+    let { pendingGlobalName: e, onGlobalNameChange: n, pendingBio: i, onBioChange: r } = t,
+        a = (0, I.bG)([x.default], () => x.default.getCurrentUser()),
+        o = null != a ? W.Ay.getUserAvatarURL(a, !0, 80) : void 0,
         c = (0, G.U)({ location: "onboarding_profile_slide" }),
         d = s.useCallback(() => {
             (0, B.XD)({ uploadType: X.HL.AVATAR });
@@ -158,11 +158,11 @@ function V(t) {
                                 ? (0, l.jsx)("img", { src: o, alt: "", className: w.uV })
                                 : (0, l.jsx)("div", {
                                       className: w.GT,
-                                      children: (0, l.jsx)(L.x, { size: "md", color: "currentColor" }),
+                                      children: (0, l.jsx)(L.CameraIcon, { size: "md", color: "currentColor" }),
                                   }),
                             (0, l.jsx)("div", {
                                 className: w.Nd,
-                                children: (0, l.jsx)(L.x, { size: "sm", color: "currentColor" }),
+                                children: (0, l.jsx)(L.CameraIcon, { size: "sm", color: "currentColor" }),
                             }),
                         ],
                     }),
@@ -170,12 +170,12 @@ function V(t) {
             }),
             (0, l.jsx)(U.D, {
                 label: y.intl.string(y.t["9AjdkD"]),
-                children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: r?.username, maxLength: 32 }),
+                children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: a?.username, maxLength: 32 }),
             }),
             (0, l.jsx)(M.f, {
                 label: y.intl.string(y.t["61W33d"]),
                 value: i,
-                onChange: a,
+                onChange: r,
                 maxLength: c,
                 showCharacterCount: !0,
                 rows: 3,
@@ -234,13 +234,13 @@ function $(t) {
                 onClick: n,
             }),
             (0, l.jsx)(H, {
-                icon: q.R,
+                icon: q.UserPlusIcon,
                 title: y.intl.string(y.t.w5uwoI),
                 description: y.intl.string(y.t.bgoxKS),
                 onClick: () => e(Y.ADD_FRIEND),
             }),
             (0, l.jsx)(H, {
-                icon: Z.R,
+                icon: Z.ServerIcon,
                 title: y.intl.string(y.t.ZLfEo8),
                 description: y.intl.string(y.t.z7OAvN),
                 onClick: i,
@@ -266,7 +266,7 @@ var tn = n(488995),
     ti = n(324580),
     tl = n(315290);
 let ts = new b.A("NewUserOnboarding"),
-    ta = {
+    tr = {
         [Y.WELCOME]: tl.jK.WELCOME,
         [Y.APPEARANCE]: tl.jK.APPEARANCE,
         [Y.DOWNLOAD_DESKTOP]: tl.jK.DOWNLOAD_DESKTOP,
@@ -275,7 +275,7 @@ let ts = new b.A("NewUserOnboarding"),
         [Y.JOIN_SERVER]: tl.jK.JOIN_SERVER,
         [Y.ADD_FRIEND]: tl.jK.ADD_FRIEND,
     };
-function tr(t) {
+function ta(t) {
     E.A.flowStep(tl.do.ANY, t);
 }
 function to(t) {
@@ -284,20 +284,20 @@ function to(t) {
         [E, v] = s.useState(null),
         S = x.default.getCurrentUser()?.isClaimed() === !0,
         [f, D] = s.useState(() => x.default.getCurrentUser()?.globalName ?? ""),
-        [O, R] = s.useState(""),
-        [P, T] = s.useState(""),
+        [O, P] = s.useState(""),
+        [R, T] = s.useState(""),
         [w, I] = s.useState("");
     s.useEffect(() => {
-        tr(tl.jK.WELCOME);
+        ta(tl.jK.WELCOME);
     }, []);
     let K = s.useCallback((t) => {
-            (tr(ta[t]), v(t), b(t));
+            (ta(tr[t]), v(t), b(t));
         }, []),
         _ = s.useCallback(
             (t, e) => {
                 t === Y.NEXT_STEPS && null != E && v(null);
-                let n = ta[t];
-                (null != n && tr(n), b(t));
+                let n = tr[t];
+                (null != n && ta(n), b(t));
             },
             [E],
         ),
@@ -319,10 +319,10 @@ function to(t) {
                 }
         }, [f, O]),
         U = s.useCallback(async () => {
-            (i === Y.NEXT_STEPS && tr(tl.jK.DISMISSED), await L());
+            (i === Y.NEXT_STEPS && ta(tl.jK.DISMISSED), await L());
         }, [i, L]),
         F = s.useCallback(async () => {
-            let t = P.replace(/^\s*(https?:\/\/)?([\w-]+\.)?(discord\.gg|discord(?:app)?\.com\/invite)\//i, "").trim();
+            let t = R.replace(/^\s*(https?:\/\/)?([\w-]+\.)?(discord\.gg|discord(?:app)?\.com\/invite)\//i, "").trim();
             if (0 === t.length) return !1;
             try {
                 return (
@@ -334,11 +334,11 @@ function to(t) {
                 );
             } catch (e) {
                 let t = e instanceof g.Wl || e instanceof g.LG ? e.code : void 0;
-                return (o.A.show({ title: y.intl.string(y.t.R0RpRX), body: (0, C.s)(t) }), !1);
+                return (o.A.show({ title: y.intl.string(y.t.R0RpRX), body: (0, j.s)(t) }), !1);
             }
-        }, [P]),
+        }, [R]),
         M = s.useCallback(async () => {
-            (tr(tl.jK.EXPLORE),
+            (ta(tl.jK.EXPLORE),
                 await L(),
                 await e(),
                 (0, m.transitionToGlobalDiscovery)({ tab: tn.GlobalDiscoveryTab.SERVERS, entrypoint: ti.J8.UNKNOWN }));
@@ -353,13 +353,13 @@ function to(t) {
             }
         }, [w]),
         G = s.useCallback(async () => {
-            (tr(tl.jK.CREATE_SERVER),
+            (ta(tl.jK.CREATE_SERVER),
                 await L(),
                 await e(),
                 (0, p.openCreateGuildModal)({ location: "New User Onboarding" }));
         }, [L, e]),
         W = s.useCallback(() => {
-            window.open((0, j.SU)());
+            window.open((0, C.SU)());
         }, []),
         X = s.useMemo(() => {
             let t = [
@@ -398,8 +398,8 @@ function to(t) {
                             subtitle: y.intl.string(y.t["5Di7f2"]),
                         },
                         secondaryActionButtonProps: {
-                            text: y.intl.format(y.t.JoS1i3, { platform: (0, j.Vf)() }),
-                            icon: a.DownloadIcon,
+                            text: y.intl.format(y.t.JoS1i3, { platform: (0, C.Vf)() }),
+                            icon: r.DownloadIcon,
                             onClick: W,
                         },
                         nextButtonProps: { text: y.intl.string(y.t.L5eIZ2) },
@@ -412,7 +412,7 @@ function to(t) {
                             pendingGlobalName: f,
                             onGlobalNameChange: D,
                             pendingBio: O,
-                            onBioChange: R,
+                            onBioChange: P,
                         }),
                     }),
                 t.push({
@@ -438,9 +438,9 @@ function to(t) {
                 [Y.JOIN_SERVER]: {
                     stepKey: Y.JOIN_SERVER,
                     modalProps: { title: y.intl.string(y.t.riOUtB), subtitle: y.intl.string(y.t.cs48bs) },
-                    body: (0, l.jsx)(tt, { inviteLink: P, onInviteLinkChange: T }),
+                    body: (0, l.jsx)(tt, { inviteLink: R, onInviteLinkChange: T }),
                     nextButtonProps: { text: y.intl.string(y.t["Ts/9Ac"]) },
-                    nextEnabled: P.trim().length > 0,
+                    nextEnabled: R.trim().length > 0,
                     onNext: F,
                 },
                 [Y.ADD_FRIEND]: {
@@ -452,10 +452,10 @@ function to(t) {
                     onNext: B,
                 },
             }),
-            [P, w, F, B],
+            [R, w, F, B],
         ),
         q = s.useMemo(() => (null != E && null != J[E] ? [...X, J[E]] : X), [X, E, J]);
-    return (0, l.jsx)(r.t, {
+    return (0, l.jsx)(a.t, {
         ...n,
         onClose: e,
         steps: q,

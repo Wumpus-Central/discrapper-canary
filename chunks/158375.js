@@ -1,8 +1,8 @@
 e.d(n, { default: () => k });
 var o,
     i = e(477900),
-    s = e(582128),
-    r = e(935462),
+    r = e(582128),
+    s = e(935462),
     c = e(430690),
     l = e(670404),
     a =
@@ -14,7 +14,7 @@ var o,
     T = e(652215),
     C = e(544105);
 function g(t) {
-    let { platformType: n, authToken: e, onContinue: o, onError: s, onClose: r } = t,
+    let { platformType: n, authToken: e, onContinue: o, onError: r, onClose: s } = t,
         c = n === T.fg2.PLAYSTATION_STAGING ? d.i.PLAYSTATION_STAGING_APPLICATION_ID : d.i.PLAYSTATION_APPLICATION_ID,
         l = n === T.fg2.PLAYSTATION_STAGING ? a.PLAYSTATION_STAGING : a.PLAYSTATION;
     return (0, i.jsx)(p.W, {
@@ -23,8 +23,8 @@ function g(t) {
         scopes: C.NL,
         authToken: e,
         onContinue: o,
-        onError: s,
-        onClose: r,
+        onError: r,
+        onClose: s,
         redirectUri: l,
     });
 }
@@ -32,8 +32,8 @@ var h = e(478474),
     N = e(792996);
 function A(t) {
     let { onContinue: n, onClose: e, errorCode: o } = t,
-        s = o === T.t02.UNDER_MINIMUM_AGE ? N.intl.string(N.t["3dIn2A"]) : N.intl.string(N.t.qE9nqE);
-    return (0, i.jsx)(h.s, { title: N.intl.string(N.t.eY3qHd), body: s, onClose: e, onContinue: n });
+        r = o === T.t02.UNDER_MINIMUM_AGE ? N.intl.string(N.t["3dIn2A"]) : N.intl.string(N.t.qE9nqE);
+    return (0, i.jsx)(h.s, { title: N.intl.string(N.t.eY3qHd), body: r, onClose: e, onContinue: n });
 }
 var I = e(983851),
     u = e(687966),
@@ -41,9 +41,13 @@ var I = e(983851),
     f = e(458172);
 function m(t) {
     let { platformType: n, onContinue: e, onClose: o } = t,
-        r = s.useMemo(
+        s = r.useMemo(
             () => [
-                { label: N.intl.string(N.t["+eJP7o"]), subLabel: N.intl.string(N.t["+0VIUh"]), icon: I.H },
+                {
+                    label: N.intl.string(N.t["+eJP7o"]),
+                    subLabel: N.intl.string(N.t["+0VIUh"]),
+                    icon: I.VoiceNormalIcon,
+                },
                 { label: N.intl.string(N.t.ZH4QFa), icon: u.GameControllerIcon },
             ],
             [],
@@ -63,7 +67,7 @@ function m(t) {
             height: 160,
             alt: "",
         }),
-        valueProps: r,
+        valueProps: s,
     });
 }
 var x = e(873885);
@@ -72,8 +76,8 @@ function S(t) {
             platformType: n,
             isWaitingForConnection: e,
             onWaitingForConnection: o,
-            expectedCallbackState: s,
-            onAuthToken: r,
+            expectedCallbackState: r,
+            onAuthToken: s,
             onError: c,
             onClose: l,
         } = t,
@@ -96,8 +100,8 @@ function S(t) {
         platformType: n,
         isWaitingForConnection: e,
         onWaitingForConnection: o,
-        expectedCallbackState: s,
-        onAuthToken: r,
+        expectedCallbackState: r,
+        onAuthToken: s,
         onError: c,
         onClose: l,
         img: a,
@@ -119,7 +123,7 @@ function P(t) {
 var E = e(52643),
     _ = e(844768);
 function k(t) {
-    let { transitionState: n, onClose: e, analyticsLocation: o, platformType: s } = t,
+    let { transitionState: n, onClose: e, analyticsLocation: o, platformType: r } = t,
         {
             slide: a,
             gotoNext: d,
@@ -129,8 +133,8 @@ function k(t) {
             expectedCallbackState: h,
             callbackData: N,
             errorCode: I,
-        } = (0, l.m)(o, s);
-    return (0, i.jsx)(r.EO, {
+        } = (0, l.m)(o, r);
+    return (0, i.jsx)(s.EO, {
         "data-migration-pending": !0,
         className: _.yl,
         transitionState: n,
@@ -142,12 +146,12 @@ function k(t) {
             children: [
                 (0, i.jsx)(c.q, {
                     id: E.N.LANDING,
-                    children: (0, i.jsx)(m, { platformType: s, onContinue: d, onClose: e }),
+                    children: (0, i.jsx)(m, { platformType: r, onContinue: d, onClose: e }),
                 }),
                 (0, i.jsx)(c.q, {
                     id: E.N.PRE_CONNECT,
                     children: (0, i.jsx)(S, {
-                        platformType: s,
+                        platformType: r,
                         isWaitingForConnection: !1,
                         onWaitingForConnection: T,
                         onAuthToken: C,
@@ -158,7 +162,7 @@ function k(t) {
                 (0, i.jsx)(c.q, {
                     id: E.N.PRE_CONNECT_WAITING,
                     children: (0, i.jsx)(S, {
-                        platformType: s,
+                        platformType: r,
                         isWaitingForConnection: !0,
                         expectedCallbackState: h,
                         onAuthToken: C,
@@ -168,7 +172,7 @@ function k(t) {
                 }),
                 (0, i.jsx)(c.q, {
                     id: E.N.DISCORD_CONSENT,
-                    children: (0, i.jsx)(g, { platformType: s, authToken: N, onContinue: d, onError: p, onClose: e }),
+                    children: (0, i.jsx)(g, { platformType: r, authToken: N, onContinue: d, onError: p, onClose: e }),
                 }),
                 (0, i.jsx)(c.q, {
                     id: E.N.ERROR,

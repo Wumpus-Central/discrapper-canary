@@ -1,29 +1,30 @@
+n.r(i);
 var s = n(477900);
 n(582128);
 var t = n(646514),
     a = n(996682),
     c = n(27989);
 n.d(
-    e,
+    i,
     {},
     {
-        c: function (i) {
+        QuoteIcon: function (e) {
             let {
-                    size: e = "md",
+                    size: i = "md",
                     width: n,
                     height: r,
                     color: l = t.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: d = "",
                     ...o
-                } = i,
-                h = (0, c.J)(e),
-                v = h?.width ?? n,
-                u = h?.height ?? r;
+                } = e,
+                h = (0, c.J)(i),
+                u = h?.width ?? n,
+                v = h?.height ?? r;
             return (0, s.jsx)("svg", {
                 ...(0, a.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: v,
-                height: u,
+                width: u,
+                height: v,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: (0, s.jsx)("path", {

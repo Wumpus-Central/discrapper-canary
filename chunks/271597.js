@@ -1,7 +1,7 @@
 var i = n(477900);
 n(582128);
-var s = n(192308),
-    r = n(792852),
+var r = n(192308),
+    s = n(792852),
     l = n(696016);
 n.d(
     t,
@@ -10,10 +10,10 @@ n.d(
         p: function () {
             let { initialEditingClipId: e, selectedGameId: t } =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                { resetAll: a, setGameFacet: o } = r.P.getState();
+                { resetAll: a, setGameFacet: o } = s.P.getState();
             (a(),
                 null != t && o(t),
-                (0, s.mM)(
+                (0, r.mM)(
                     async () => {
                         let { default: t } = await Promise.all([
                             n.e(459368),
@@ -32,17 +32,24 @@ n.d(
                             n.e(616045),
                             n.e(970846),
                             n.e(795807),
+                            n.e(918024),
+                            n.e(736926),
+                            n.e(838090),
                             n.e(203930),
                             n.e(903663),
-                            n.e(466147),
-                            n.e(507406),
-                            n.e(501962),
                             n.e(583518),
+                            n.e(507406),
+                            n.e(466147),
+                            n.e(501962),
+                            n.e(538733),
                             n.e(746623),
                             n.e(280559),
+                            n.e(17736),
                             n.e(974049),
                             n.e(895008),
                             n.e(231782),
+                            n.e(377683),
+                            n.e(698101),
                             n.e(306270),
                             n.e(823077),
                             n.e(626750),

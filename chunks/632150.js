@@ -43,7 +43,7 @@ n.d(
                                 ),
                         }),
                     (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", className: c.VA, children: e }),
-                    (0, l.jsx)(r._, { size: "sm", color: a.A.colors.INTERACTIVE_ICON_DEFAULT }),
+                    (0, l.jsx)(r.ChevronSmallRightIcon, { size: "sm", color: a.A.colors.INTERACTIVE_ICON_DEFAULT }),
                 ],
             });
         },

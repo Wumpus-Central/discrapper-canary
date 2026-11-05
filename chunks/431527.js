@@ -1,4 +1,4 @@
-n.d(t, { C: () => T });
+n.d(t, { C: () => g });
 var i = n(477900);
 let r = { xs: "body-xs/normal", sm: "body-sm/normal", md: "body-md/normal" },
     a = { xs: "xxs", sm: "xs", md: "sm" };
@@ -11,20 +11,20 @@ var s = n(582128),
     _ = n(646514),
     E = n(789645),
     A = n(834730),
-    h = n(478576);
-function f(e) {
+    f = n(478576);
+function h(e) {
     let { graphic: t, size: n } = e;
     if ("type" in t)
         switch (t.type) {
             case "role":
                 let { color: r } = t;
-                return (0, i.jsx)("div", { className: h.m4, "data-size": n, style: { backgroundColor: r } });
+                return (0, i.jsx)("div", { className: f.m4, "data-size": n, style: { backgroundColor: r } });
             case "avatar":
                 let { src: s } = t;
-                return (0, i.jsx)("img", { className: h.my, "data-size": n, src: s, alt: "" });
+                return (0, i.jsx)("img", { className: f.my, "data-size": n, src: s, alt: "" });
             case "image":
                 let { src: l } = t;
-                return (0, i.jsx)("img", { className: h.Sl, "data-size": n, src: l, alt: "" });
+                return (0, i.jsx)("img", { className: f.Sl, "data-size": n, src: l, alt: "" });
             default:
                 return null;
         }
@@ -33,32 +33,32 @@ function f(e) {
 var I = n(70074),
     p = n(132473);
 function m(e) {
-    let { label: t, size: n, variant: s = "default", isDisabled: o, icon: d, accessibilityHint: h, ...m } = e,
-        g = [t, h].filter(Boolean).join(", ");
+    let { label: t, size: n, variant: s = "default", isDisabled: o, icon: d, accessibilityHint: f, ...m } = e,
+        T = [t, f].filter(Boolean).join(", ");
     return (0, i.jsx)(l.vw, {
         ...m,
         "data-mana-component": "tag",
         className: c()(p.Tc, I.GA),
         "data-variant": s,
-        textValue: g,
+        textValue: T,
         isDisabled: o,
         children: (e) => {
             let { allowsRemoving: s } = e;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != d && (0, i.jsx)(f, { graphic: d, size: n }),
+                    null != d && (0, i.jsx)(h, { graphic: d, size: n }),
                     (0, i.jsx)(A.E, { color: "none", variant: r[n], className: p.v6, children: t }),
                     s &&
                         (0, i.jsx)(u.$, {
                             slot: "remove",
-                            children: (0, i.jsx)(E.P, { size: a[n], color: _.A.colors.ICON_DEFAULT }),
+                            children: (0, i.jsx)(E.XSmallIcon, { size: a[n], color: _.A.colors.ICON_DEFAULT }),
                         }),
                 ],
             });
         },
     });
 }
-function g(e) {
+function T(e) {
     let {
             listRef: t,
             label: n,
@@ -70,11 +70,11 @@ function g(e) {
             size: _ = "md",
             variant: E,
             items: A,
-            onRemove: h,
-            children: f,
+            onRemove: f,
+            children: h,
             selectedKeys: I,
-            onSelectionChange: g,
-            disallowEmptySelection: T,
+            onSelectionChange: T,
+            disallowEmptySelection: g,
         } = e,
         S = s.useContext(o._),
         N = s.useMemo(() => (r && "all" !== a ? new Set([...(a ?? []), ...A.map((e) => e.id)]) : a), [r, a, A]);
@@ -90,21 +90,21 @@ function g(e) {
         selectionMode: d,
         selectionBehavior: c,
         selectedKeys: I,
-        onSelectionChange: g,
+        onSelectionChange: T,
         disabledKeys: N,
-        disallowEmptySelection: T,
-        onRemove: h,
+        disallowEmptySelection: g,
+        onRemove: f,
         children: [
             (0, i.jsx)(l.LY, {
                 ref: t,
                 className: p.Tw,
                 children: A.map((e) => (0, s.createElement)(m, { ...e, key: e.id, size: _, variant: E })),
             }),
-            f,
+            h,
         ],
     });
 }
-function T(e) {
+function g(e) {
     let { mode: t, variant: n = "default", layout: r = "default", size: a = "inline" === r ? "sm" : "md", ...s } = e;
-    return (0, i.jsx)(g, { ...s, layout: r, size: a, variant: n });
+    return (0, i.jsx)(T, { ...s, layout: r, size: a, variant: n });
 }

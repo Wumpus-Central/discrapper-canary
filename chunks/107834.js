@@ -41,7 +41,7 @@ i.d(
                             }),
                             role: "navigation",
                             children: [
-                                (0, s.jsx)(d.A.Icon, { icon: l.t, "aria-hidden": !0 }),
+                                (0, s.jsx)(d.A.Icon, { icon: l.NitroWheelIcon, "aria-hidden": !0 }),
                                 (0, s.jsx)(d.A.Title, { children: p.intl.string(p.t.Ipxkog) }),
                             ],
                         }),

@@ -1,11 +1,11 @@
 var l = n(477900),
     a = n(582128),
-    s = n(503698),
-    r = n.n(s),
+    r = n(503698),
+    s = n.n(r),
     i = n(847374),
     u = n(320448),
-    d = n(834730),
-    o = n(939249),
+    o = n(834730),
+    d = n(939249),
     c = n(344587),
     m = n(191850),
     f = n(792996),
@@ -18,7 +18,7 @@ n.d(
             let {
                     glyph: t,
                     line: n,
-                    live: s,
+                    live: r,
                     settled: p,
                     tint: k,
                     detail: x,
@@ -29,34 +29,34 @@ n.d(
                 [b, v] = a.useState(!1),
                 y = a.useRef(null);
             a.useLayoutEffect(() => {
-                s && y.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
-            }, [s]);
+                r && y.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
+            }, [r]);
             let w = a.useId(),
-                N = a.useCallback(() => v((e) => !e), []),
-                { text: S, phase: A } = (0, c.Q)(n),
-                C = b ? i.a : u._,
-                E = null != x,
-                I = (0, l.jsxs)(l.Fragment, {
+                S = a.useCallback(() => v((e) => !e), []),
+                { text: N, phase: C } = (0, c.Q)(n),
+                A = b ? i.ChevronSmallDownIcon : u.ChevronSmallRightIcon,
+                I = null != x,
+                E = (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)("span", { className: h.hd, children: t }),
-                        (0, l.jsx)(d.E, {
+                        (0, l.jsx)(o.E, {
                             tag: "span",
                             variant: "body-md/normal",
                             color: "currentColor",
-                            className: r()(h.qo, { [h._q]: "exit" === A, [h.GD]: "enter" === A }),
-                            children: S,
+                            className: s()(h.qo, { [h._q]: "exit" === C, [h.GD]: "enter" === C }),
+                            children: N,
                         }),
-                        E ? (0, l.jsx)(C, { size: "xs", color: "currentColor", className: h.nD }) : null,
+                        I ? (0, l.jsx)(A, { size: "xs", color: "currentColor", className: h.nD }) : null,
                     ],
                 }),
                 T = (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)("span", { className: h.$m, children: I }),
-                        s
+                        (0, l.jsx)("span", { className: h.$m, children: E }),
+                        r
                             ? (0, l.jsx)("span", {
                                   className: h.pw,
                                   "aria-hidden": !0,
-                                  children: (0, l.jsx)("span", { className: r()(h.$m, h.Yj), children: I }),
+                                  children: (0, l.jsx)("span", { className: s()(h.$m, h.Yj), children: E }),
                               })
                             : null,
                     ],
@@ -64,21 +64,21 @@ n.d(
             return (0, l.jsxs)("li", {
                 ref: y,
                 className: h.K1,
-                "data-live": s,
+                "data-live": r,
                 "data-settled": p,
                 "data-connected": g,
                 "data-connects-down": _,
                 "data-conjure-turn-status": j ? "true" : void 0,
                 style: null != k ? { "--custom-conjure-shimmer-tint": k } : void 0,
                 children: [
-                    E
-                        ? (0, l.jsx)(o.D, {
+                    I
+                        ? (0, l.jsx)(d.D, {
                               tag: "div",
-                              className: r()(h.ep, h.EK),
+                              className: s()(h.ep, h.EK),
                               "aria-expanded": b,
                               "aria-controls": w,
-                              "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: S }),
-                              onClick: N,
+                              "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: N }),
+                              onClick: S,
                               children: T,
                           })
                         : (0, l.jsx)("div", { className: h.ep, children: T }),

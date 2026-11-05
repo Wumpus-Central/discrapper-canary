@@ -1,7 +1,7 @@
 var i = n(477900),
-    s = n(582128),
-    r = n(503698),
-    l = n.n(r);
+    r = n(582128),
+    s = n(503698),
+    l = n.n(s);
 if (221552 == n.j) var a = n(885574);
 if (221552 == n.j) var o = n(834730);
 if (221552 == n.j) var c = n(28863);
@@ -9,42 +9,42 @@ if (221552 == n.j) var d = n(939249);
 if (221552 == n.j) var u = n(789645);
 var h = n(558001),
     C = n(835002),
-    A = n(792996),
-    g = n(323747);
+    E = n(792996),
+    A = n(323747);
 n.d(
     t,
     {},
     {
         e: function (e) {
-            let { label: t, labelHook: n, count: r, dismissNotice: E, className: p, noticeType: m } = e,
-                _ = null != E;
-            s.useEffect(() => {
-                (0, h.N)(m, C.YX.VIEWED);
-            }, [m]);
-            let f = s.useCallback(() => {
-                    null != E && (E(), (0, h.N)(m, C.YX.DISMISS));
-                }, [m, E]),
-                T = s.useCallback(() => {
-                    (n(), (0, h.N)(m, C.YX.LEARN_MORE));
-                }, [m, n]);
+            let { label: t, labelHook: n, count: s, dismissNotice: _, className: p, noticeType: g } = e,
+                m = null != _;
+            r.useEffect(() => {
+                (0, h.N)(g, C.YX.VIEWED);
+            }, [g]);
+            let T = r.useCallback(() => {
+                    null != _ && (_(), (0, h.N)(g, C.YX.DISMISS));
+                }, [g, _]),
+                N = r.useCallback(() => {
+                    (n(), (0, h.N)(g, C.YX.LEARN_MORE));
+                }, [g, n]);
             return (0, i.jsxs)("div", {
-                className: l()(g.I, p),
+                className: l()(A.I, p),
                 children: [
                     (0, i.jsx)(a.CircleInformationIcon, { size: "md" }),
                     (0, i.jsx)(o.E, {
                         variant: "body-sm/medium",
                         color: "interactive-text-active",
                         children:
-                            null != r
-                                ? A.intl.format(t, {
-                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: T, children: e }, t),
-                                      count: r,
+                            null != s
+                                ? E.intl.format(t, {
+                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
+                                      count: s,
                                   })
-                                : A.intl.format(t, {
-                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: T, children: e }, t),
+                                : E.intl.format(t, {
+                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
                                   }),
                     }),
-                    _ && (0, i.jsx)(d.D, { className: g.b, onClick: f, children: (0, i.jsx)(u.P, {}) }),
+                    m && (0, i.jsx)(d.D, { className: A.b, onClick: T, children: (0, i.jsx)(u.XSmallIcon, {}) }),
                 ],
             });
         },

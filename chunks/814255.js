@@ -25,7 +25,7 @@ let C = [
         },
         {
             key: "ADD_SERVERS",
-            renderIcon: (e) => (0, l.jsx)(r.j, { size: "md", color: "currentColor", className: e }),
+            renderIcon: (e) => (0, l.jsx)(r.PlusSmallIcon, { size: "md", color: "currentColor", className: e }),
             getName: () => p.intl.string(p.t.emRpdS),
             handler: (e, t) =>
                 (0, a.mM)(async () => {
@@ -52,7 +52,7 @@ let C = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, l.jsx)(o.D, { className: e }),
+            renderIcon: (e) => (0, l.jsx)(o.GroupPlusIcon, { className: e }),
             getName: () => p.intl.string(p.t.MJQOuJ),
             handler: (e, t) =>
                 (0, a.mM)(async () => {

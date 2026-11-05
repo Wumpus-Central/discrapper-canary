@@ -11,13 +11,13 @@ var r = n(503698),
     _ = n(565787),
     E = n(81466),
     A = n(451394),
-    h = n(31300),
-    f = n(428689),
+    f = n(31300),
+    h = n(428689),
     I = n(983851),
     p = n(323384),
     m = n(152367),
-    g = n(513461),
-    T = n(791606),
+    T = n(513461),
+    g = n(791606),
     S = n(260727);
 function N(e) {
     let t,
@@ -31,13 +31,13 @@ function N(e) {
             activity: o,
         } = e;
     if (l) t = E.CalendarIcon;
-    else if (s) t = A.q;
-    else if (r) t = h.k;
-    else if (i) t = f.VideoIcon;
-    else if (n) t = I.H;
+    else if (s) t = A.StageIcon;
+    else if (r) t = f.ScreenIcon;
+    else if (i) t = h.VideoIcon;
+    else if (n) t = I.VoiceNormalIcon;
     else {
         if (!o) return null;
-        t = p.k;
+        t = p.AppsIcon;
     }
     return C({ icon: t, isCurrentUserConnected: a });
 }
@@ -57,11 +57,11 @@ n.d(
             let { guildJoinRequestStatus: t } = e,
                 [n, i] = (function (e) {
                     switch (e) {
-                        case g.B5.SUBMITTED:
+                        case T.B5.SUBMITTED:
                             return [void 0, l.ClockIcon];
-                        case g.B5.REJECTED:
-                            return [s.A.unsafe_rawColors.RED_400.css, o.P];
-                        case g.B5.APPROVED:
+                        case T.B5.REJECTED:
+                            return [s.A.unsafe_rawColors.RED_400.css, o.XSmallIcon];
+                        case T.B5.APPROVED:
                             return [s.A.unsafe_rawColors.GREEN_360.css, d.CheckmarkLargeIcon];
                         default:
                             return [void 0, c.PencilIcon];
@@ -72,9 +72,9 @@ n.d(
         hP: function (e) {
             let { unavailable: t, conjureWorking: n, mediaState: r } = e;
             return t
-                ? (0, i.jsx)(u.fk, { icon: (0, _.k)(T.A), disableColor: !0, className: S.yk })
+                ? (0, i.jsx)(u.fk, { icon: (0, _.k)(g.A), disableColor: !0, className: S.yk })
                 : n
-                  ? C({ icon: m.D, className: S.lE })
+                  ? C({ icon: m.MagicWandIcon, className: S.lE })
                   : null != r
                     ? N(r)
                     : void 0;

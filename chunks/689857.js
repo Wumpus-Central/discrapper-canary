@@ -1,0 +1,45 @@
+h.r(s);
+var i = h(477900);
+h(582128);
+var t = h(646514),
+    l = h(996682),
+    c = h(27989);
+h.d(
+    s,
+    {},
+    {
+        PaintbrushThickMinusIcon: function (a) {
+            let {
+                    size: s = "md",
+                    width: h,
+                    height: e,
+                    color: n = t.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: r = "",
+                    ...p
+                } = a,
+                d = (0, c.J)(s),
+                o = d?.width ?? h,
+                w = d?.height ?? e;
+            return (0, i.jsxs)("svg", {
+                ...(0, l.A)(p),
+                xmlns: "http://www.w3.org/2000/svg",
+                width: o,
+                height: w,
+                fill: "none",
+                viewBox: "0 0 24 24",
+                children: [
+                    (0, i.jsx)("path", {
+                        fill: "string" == typeof n ? n : n.css,
+                        d: "M15.35 7.24C15.9 6.67 16 5.8 16 5a3 3 0 1 1 3 3c-.8 0-1.67.09-2.24.65a1.5 1.5 0 0 0 0 2.11l1.12 1.12a3 3 0 0 1 .26 3.95.46.46 0 0 1-.37.17H15a3 3 0 0 0-1.21.26.56.56 0 0 1-.63-.1L6.91 9.91 4.3 12.54a1 1 0 0 0 0 1.42l2.17 2.17.83-.84a1 1 0 0 1 1.42 1.42l-.84.83.59.59 1.83-1.84a1 1 0 0 1 1.42 1.42l-1.84 1.83.17.17a1 1 0 0 0 1.42 0c.2-.2.6-.07.69.22a3 3 0 0 0 .56 1c.09.11.09.27-.02.36a3 3 0 0 1-4.06-.16l-5.76-5.76a3 3 0 0 1 0-4.24L6.9 7.09h.01l.97-.97a3 3 0 0 1 4.24 0l1.12 1.12a1.5 1.5 0 0 0 2.1 0Z",
+                        className: r,
+                    }),
+                    (0, i.jsx)("path", {
+                        fill: "string" == typeof n ? n : n.css,
+                        d: "M15 18a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8Z",
+                        className: r,
+                    }),
+                ],
+            });
+        },
+    },
+);

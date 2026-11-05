@@ -22,7 +22,7 @@ n.d(
             let { errorMessage: t, className: n, avError: s } = e,
                 v = l.useRef(null),
                 E = "",
-                { text: C, node: j } = (function (e) {
+                { text: C, node: I } = (function (e) {
                     if (null == e) return { text: null, node: null };
                     let t = (0, m.B1)(e)?.errorCode,
                         n = x.intl.formatToPlainString(x.t.ejOT95, { errorCode: t }),
@@ -37,22 +37,22 @@ n.d(
                     };
                 })(s);
             E = null != C ? `${t} ${C}` : t;
-            let [I] = l.useState(new a.Ep()),
+            let [j] = l.useState(new a.Ep()),
                 [S, _] = l.useState(!1),
                 [b, N] = l.useState(!1),
                 y = l.useCallback(() => {
-                    I.start(
+                    j.start(
                         250,
                         () => {
                             _(!1);
                         },
                         !1,
                     );
-                }, [I, _]),
-                T = l.useCallback(() => {
-                    (I.stop(), _(!0));
-                }, [I, _]),
+                }, [j, _]),
                 L = l.useCallback(() => {
+                    (j.stop(), _(!0));
+                }, [j, _]),
+                T = l.useCallback(() => {
                     N(!0);
                 }, []),
                 D = l.useCallback(() => {
@@ -63,16 +63,16 @@ n.d(
                     (0, i.jsx)(f.A, {
                         children: (0, i.jsxs)("div", {
                             className: A.SW,
-                            onMouseEnter: T,
+                            onMouseEnter: L,
                             onMouseLeave: y,
                             children: [
                                 t,
-                                null != j &&
+                                null != I &&
                                     (0, i.jsx)(u.E, {
                                         variant: "body-sm/semibold",
                                         color: "text-muted",
                                         className: A.F1,
-                                        children: j,
+                                        children: I,
                                     }),
                             ],
                         }),
@@ -86,14 +86,14 @@ n.d(
                             children: (0, i.jsx)("div", {
                                 ref: v,
                                 tabIndex: 0,
-                                onMouseEnter: T,
+                                onMouseEnter: L,
                                 onMouseLeave: y,
-                                onFocus: L,
+                                onFocus: T,
                                 onBlur: D,
                                 className: r()(n, A.zr),
                                 "aria-label": E,
                                 ...e,
-                                children: (0, i.jsx)(d.E, {
+                                children: (0, i.jsx)(d.CircleErrorIcon, {
                                     size: "custom",
                                     width: 20,
                                     height: 20,

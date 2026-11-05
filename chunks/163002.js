@@ -21,25 +21,25 @@ var t = e(477900),
     N = e(171576),
     v = e(462924),
     L = e(913379),
-    k = e(773669),
-    y = e(129230),
-    I = e(67521),
+    I = e(773669),
+    k = e(129230),
+    y = e(67521),
     T = e(739010),
     C = e(207913),
     U = e(335891),
     b = e(985481),
     D = e(259960),
     G = e(239093),
-    O = e(792996),
-    S = e(52111);
+    S = e(792996),
+    O = e(52111);
 function w() {
-    return (0, t.jsx)(j.E, { variant: "body-md/normal", color: "text-muted", children: O.intl.string(O.t["I2H0/E"]) });
+    return (0, t.jsx)(j.E, { variant: "body-md/normal", color: "text-muted", children: S.intl.string(S.t["I2H0/E"]) });
 }
 function R(i) {
     return (0, t.jsx)(j.E, {
         variant: "body-md/normal",
         color: "text-muted",
-        children: O.intl.format(O.t.IFxUaT, {
+        children: S.intl.format(S.t.IFxUaT, {
             letUsKnowHook: (n, e) =>
                 (0, t.jsx)(
                     E.Anchor,
@@ -51,16 +51,16 @@ function R(i) {
 }
 function F() {
     return (0, t.jsxs)("div", {
-        className: S.Jx,
+        className: O.Jx,
         children: [
-            (0, t.jsx)(j.E, { variant: "body-md/medium", color: "text-default", children: O.intl.string(O.t.PHriyz) }),
-            (0, t.jsx)(j.E, { variant: "body-sm/normal", color: "text-muted", children: O.intl.string(O.t.YsxY1D) }),
+            (0, t.jsx)(j.E, { variant: "body-md/medium", color: "text-default", children: S.intl.string(S.t.PHriyz) }),
+            (0, t.jsx)(j.E, { variant: "body-sm/normal", color: "text-muted", children: S.intl.string(S.t.YsxY1D) }),
         ],
     });
 }
 function H(i) {
     return (0, t.jsx)("div", {
-        className: S.OW,
+        className: O.OW,
         children: i.hasBeenAppealed
             ? (0, t.jsx)(w, {})
             : i.isAppealWindowExpired
@@ -81,10 +81,10 @@ function $(i) {
         s = l.useMemo(() => {
             let i = { classification_type: n, classificationHook: (i, n) => (0, t.jsx)("strong", { children: i }, n) };
             return null == e
-                ? O.intl.format(O.t.HpvELh, i)
+                ? S.intl.format(S.t.HpvELh, i)
                 : e?.member_type === T.Z9.OWNER
-                  ? O.intl.format(O.t.X1ngSd, { ...i, guildName: e?.name })
-                  : O.intl.format(O.t.rmpEPD, { ...i, guildName: e?.name });
+                  ? S.intl.format(S.t.X1ngSd, { ...i, guildName: e?.name })
+                  : S.intl.format(S.t.rmpEPD, { ...i, guildName: e?.name });
         }, [n, e]);
     return (0, t.jsx)(h.D, { variant: "heading-xl/medium", children: s });
 }
@@ -96,26 +96,26 @@ function P(i) {
 }
 function B(i) {
     let { actions: n, classificationExpiration: e, plainHeader: l } = i,
-        s = (0, A.bG)([k.default], () => k.default.locale);
+        s = (0, A.bG)([I.default], () => I.default.locale);
     return 0 === n.filter((i) => i.descriptions.length > 0).length && null == e
         ? null
         : (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)(P, { plain: l, children: O.intl.string(O.t["O2nYk+"]) }),
+                  (0, t.jsx)(P, { plain: l, children: S.intl.string(S.t["O2nYk+"]) }),
                   (0, t.jsxs)("ul", {
-                      className: S.nq,
+                      className: O.nq,
                       children: [
                           n.map((i) => (0, t.jsx)(J, { action: i }, i.id)),
                           null != e
                               ? (0, t.jsx)(
                                     "li",
                                     {
-                                        className: S.DJ,
+                                        className: O.DJ,
                                         children: (0, t.jsx)(j.E, {
                                             tag: "span",
                                             variant: "heading-sm/medium",
                                             color: "text-default",
-                                            children: O.intl.format(O.t.TByIjT, {
+                                            children: S.intl.format(S.t.TByIjT, {
                                                 expirationDate: e.toLocaleDateString(s, { dateStyle: "medium" }),
                                             }),
                                         }),
@@ -131,16 +131,16 @@ function B(i) {
 function W() {
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(P, { plain: !0, children: O.intl.string(O.t["O2nYk+"]) }),
+            (0, t.jsx)(P, { plain: !0, children: S.intl.string(S.t["O2nYk+"]) }),
             (0, t.jsx)("ul", {
-                className: S.nq,
+                className: O.nq,
                 children: (0, t.jsx)("li", {
-                    className: S.DJ,
+                    className: O.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        children: O.intl.string(V.default.rn3Gto),
+                        children: S.intl.string(V.default.rn3Gto),
                     }),
                 }),
             }),
@@ -154,7 +154,7 @@ function J(i) {
             (0, t.jsx)(
                 "li",
                 {
-                    className: S.DJ,
+                    className: O.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-sm/medium",
@@ -171,23 +171,26 @@ function q(i) {
     let { classificationTypeText: n, policyExplainerLink: e } = i;
     return (0, t.jsxs)(E.Anchor, {
         href: e,
-        className: S.F8,
+        className: O.F8,
         useDefaultUnderlineStyles: !1,
         children: [
             (0, t.jsx)("div", {
-                className: S.yi,
+                className: O.yi,
                 children: (0, t.jsx)(f.ShieldIcon, { size: "md", color: p.A.colors.BORDER_FOCUS }),
             }),
             (0, t.jsx)("div", {
-                className: S.wC,
+                className: O.wC,
                 children: (0, t.jsx)(j.E, {
                     variant: "body-md/normal",
-                    children: O.intl.format(O.t.zxUdpj, { classificationDescription: n }),
+                    children: S.intl.format(S.t.zxUdpj, { classificationDescription: n }),
                 }),
             }),
             (0, t.jsx)("div", {
-                className: S.g_,
-                children: (0, t.jsx)(g._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                className: O.g_,
+                children: (0, t.jsx)(g.ChevronSmallRightIcon, {
+                    size: "md",
+                    color: p.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                }),
             }),
         ],
     });
@@ -195,26 +198,26 @@ function q(i) {
 function z(i) {
     let { tosLink: n, communityGuidelinesLink: e, onLetUsKnowClick: l } = i;
     return (0, t.jsxs)("div", {
-        className: S.vq,
+        className: O.vq,
         children: [
-            (0, t.jsx)(P, { plain: !0, children: O.intl.string(O.t.RVEiD0) }),
+            (0, t.jsx)(P, { plain: !0, children: S.intl.string(S.t.RVEiD0) }),
             (0, t.jsxs)(_.D, {
-                className: S._m,
+                className: O._m,
                 onClick: l,
                 children: [
                     (0, t.jsx)(j.E, {
                         variant: "body-md/normal",
                         color: "text-default",
-                        children: O.intl.string(O.t.YQPbuc),
+                        children: S.intl.string(S.t.YQPbuc),
                     }),
-                    (0, t.jsx)(g._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                    (0, t.jsx)(g.ChevronSmallRightIcon, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
                 ],
             }),
             (0, t.jsx)(j.E, {
                 variant: "body-sm/normal",
                 color: "text-muted",
-                className: S.$L,
-                children: O.intl.format(O.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
+                className: O.$L,
+                children: S.intl.format(S.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
             }),
         ],
     });
@@ -224,23 +227,23 @@ function Z(i) {
     return (0, t.jsx)(j.E, {
         variant: "body-sm/normal",
         color: "text-muted",
-        className: S.yC,
-        children: O.intl.format(V.default.vPOpia, { tosLink: n, communityGuidelinesLink: e }),
+        className: O.yC,
+        children: S.intl.format(V.default.vPOpia, { tosLink: n, communityGuidelinesLink: e }),
     });
 }
 function X() {
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(P, { plain: !0, children: O.intl.string(O.t["977iei"]) }),
+            (0, t.jsx)(P, { plain: !0, children: S.intl.string(S.t["977iei"]) }),
             (0, t.jsx)("ul", {
-                className: S.nq,
+                className: O.nq,
                 children: (0, t.jsx)("li", {
-                    className: S.DJ,
+                    className: O.DJ,
                     children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        children: O.intl.string(V.default["yV/t/V"]),
+                        children: S.intl.string(V.default["yV/t/V"]),
                     }),
                 }),
             }),
@@ -257,11 +260,11 @@ function Q(i) {
     } = i;
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(j.E, { variant: "body-sm/medium", color: "text-muted", children: O.intl.string(O.t["977iei"]) }),
+            (0, t.jsx)(j.E, { variant: "body-sm/medium", color: "text-muted", children: S.intl.string(S.t["977iei"]) }),
             (0, t.jsx)(j.E, {
-                className: S.t8,
+                className: O.t8,
                 variant: "body-sm/normal",
-                children: O.intl.format(O.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
+                children: S.intl.format(S.t["1Z/+aA"], { tosLink: n, communityGuidelinesLink: e }),
             }),
             (0, t.jsx)(q, { classificationTypeText: l, policyExplainerLink: s }),
             a,
@@ -292,8 +295,8 @@ let ie = (i) => {
         f = (0, D.v)(),
         g = !!r?.is_coppa && h.includes(T.RH.AGE_VERIFY_ELIGIBLE),
         _ = !!r?.is_coppa && h.includes(T.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
-        k = (0, v.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
-        O = _ && k,
+        I = (0, v.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
+        S = _ && I,
         w = (0, A.bG)([C.A], () => C.A.getIsManualReviewDecidedUnderage()),
         R = !!r?.is_coppa && w,
         F = {
@@ -306,7 +309,7 @@ let ie = (i) => {
         },
         V = l.useRef(F);
     function P() {
-        (y.default.track(M.HAw.SAFETY_HUB_ACTION, {
+        (k.default.track(M.HAw.SAFETY_HUB_ACTION, {
             action: G.ZU.ClickLetUsKnow,
             account_standing: j.state,
             classification_ids: [Number(n)],
@@ -316,9 +319,9 @@ let ie = (i) => {
             violation_type: p,
         }),
             _
-                ? I.A.openV2(n, a)
+                ? y.A.openV2(n, a)
                 : g
-                  ? I.A.open(n, a)
+                  ? y.A.open(n, a)
                   : d && (L.A.increment({ name: x.K.APPEAL_INGESTION_VIEW }), K.A.open(n)));
     }
     return (l.useEffect(() => {
@@ -334,7 +337,7 @@ let ie = (i) => {
             violationType: s,
         } = V.current;
         f &&
-            y.default.track(M.HAw.SAFETY_HUB_ACTION, {
+            k.default.track(M.HAw.SAFETY_HUB_ACTION, {
                 action: G.ZU.ViewViolationDetail,
                 account_standing: i.state,
                 classification_ids: [Number(n)],
@@ -349,17 +352,17 @@ let ie = (i) => {
         : null == r
           ? null
           : (0, t.jsxs)("div", {
-                className: S.ch,
+                className: O.ch,
                 children: [
                     (0, t.jsx)("div", {
-                        className: S.uW,
+                        className: O.uW,
                         children: (0, t.jsx)($, {
                             classificationTypeText: r.description,
                             guildMetadata: r?.guild_metadata,
                         }),
                     }),
                     (0, t.jsxs)("div", {
-                        className: u()(S.rf, S.uW),
+                        className: u()(O.rf, O.uW),
                         children: [
                             (0, t.jsx)(Y.U, { flaggedContent: r.flagged_content ?? [] }),
                             R
@@ -369,9 +372,9 @@ let ie = (i) => {
                                           (0, t.jsx)(B, {
                                               actions: r.actions,
                                               classificationExpiration: (0, o.$r)(r),
-                                              plainHeader: O,
+                                              plainHeader: S,
                                           }),
-                                          O
+                                          S
                                               ? (0, t.jsx)(z, {
                                                     tosLink: G.d$.TOS_LINK,
                                                     communityGuidelinesLink: G.d$.COMMUNITY_GUIDELINES,

@@ -99,7 +99,11 @@ function y(e) {
             [S, N, O],
         ),
         D = (0, l.jsx)(u.E, { variant: "body-md/medium", color: "none", children: n.text }),
-        B = (0, l.jsx)(m.a, { size: "sm", color: "currentColor", className: a()(E.OW, { [E.g3]: S }) });
+        B = (0, l.jsx)(m.ChevronSmallDownIcon, {
+            size: "sm",
+            color: "currentColor",
+            className: a()(E.OW, { [E.g3]: S }),
+        });
     return (0, l.jsx)("li", {
         className: E.I,
         children: (0, l.jsx)(g.Y, {

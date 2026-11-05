@@ -93,7 +93,7 @@ function N(e) {
                 : (0, n.jsx)("div", {
                       className: T.Pz,
                       "aria-hidden": !0,
-                      children: (0, n.jsx)(y.k, { size: "md", color: C.A.colors.INTERACTIVE_ICON_DEFAULT }),
+                      children: (0, n.jsx)(y.AppsIcon, { size: "md", color: C.A.colors.INTERACTIVE_ICON_DEFAULT }),
                   }),
             (0, n.jsxs)("div", {
                 className: T.rf,
@@ -313,8 +313,8 @@ function H(e) {
               ],
           });
 }
-var X = t(290713),
-    J = t(143129),
+var J = t(290713),
+    X = t(143129),
     q = t(890497),
     Q = t(904363),
     K = t(540338),
@@ -342,7 +342,7 @@ function es(e) {
                 disabled: t,
                 onClick: () => s.current?.activateUploadDialogue(),
                 children: u
-                    ? (0, n.jsx)(Y.X, { size: "md", color: "currentColor" })
+                    ? (0, n.jsx)(Y.ImagePlusIcon, { size: "md", color: "currentColor" })
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)("img", { className: er.uP, src: l, alt: "" }),
@@ -583,8 +583,8 @@ function eS(e) {
                         [M, V] = a.useState(null),
                         [O, Z] = a.useState(null),
                         [G, H] = a.useState(!1),
-                        X = a.useRef(null),
-                        J = a.useRef(!1),
+                        J = a.useRef(null),
+                        X = a.useRef(!1),
                         q = k.trim(),
                         Q = null != r && (0, ea.IU)(r),
                         K = null != r && "guild" === r.install_scope,
@@ -637,19 +637,19 @@ function eS(e) {
                                 null == l ||
                                 null == r.preview_application_id ||
                                 null != r.install_scope_setup ||
-                                X.current === l
+                                J.current === l
                             )
                                 return !0;
-                            if (J.current) return !1;
-                            ((J.current = !0), H(!0));
+                            if (X.current) return !1;
+                            ((X.current = !0), H(!0));
                             try {
                                 let e = await (0, ex.cC)(r, l);
-                                if (!1 !== e) return (!0 === e && (X.current = l), !0);
+                                if (!1 !== e) return (!0 === e && (J.current = l), !0);
                                 await (0, D.vL)(r.id, l);
                                 let t = (await (0, ex.cC)(r, l)) === !0;
-                                return (t && (X.current = l), t);
+                                return (t && (J.current = l), t);
                             } finally {
-                                ((J.current = !1), H(!1));
+                                ((X.current = !1), H(!1));
                             }
                         }, [l, r]),
                         eN = a.useCallback(
@@ -738,7 +738,7 @@ function eS(e) {
                         submit: eF,
                     };
                 })(e, l),
-                X = T || t;
+                J = T || t;
             return {
                 fields: (0, n.jsxs)(o.B, {
                     gap: 20,
@@ -758,41 +758,41 @@ function eS(e) {
                             onNameChange: B,
                             description: c,
                             onDescriptionChange: L,
-                            disabled: X,
+                            disabled: J,
                         }),
                         E
-                            ? (0, n.jsx)(J.d, {
+                            ? (0, n.jsx)(X.d, {
                                   label: j.intl.string(x.default.ujIxRm),
                                   description: j.intl.string(x.default.gT8zk1),
                                   checked: y,
-                                  disabled: X,
+                                  disabled: J,
                                   onChange: (e) => U(ea.Zh.PUBLIC, e),
                               })
                             : null,
                         E && I
-                            ? (0, n.jsx)(J.d, {
+                            ? (0, n.jsx)(X.d, {
                                   label: j.intl.string(x.default.lVvR4E),
                                   description: j.intl.string(x.default.SQZGoV),
                                   checked: C,
-                                  disabled: X,
+                                  disabled: J,
                                   onChange: (e) => U(ea.Zh.GUILD_COLLABORATION, e),
                               })
                             : null,
                         k
-                            ? (0, n.jsx)(J.d, {
+                            ? (0, n.jsx)(X.d, {
                                   label: j.intl.string(x.default.DV2hcV),
                                   description: j.intl.string(x.default.yjWIzb),
                                   checked: S,
-                                  disabled: X,
+                                  disabled: J,
                                   onChange: M,
                               })
                             : null,
                         d.available
-                            ? (0, n.jsx)(J.d, {
+                            ? (0, n.jsx)(X.d, {
                                   label: j.intl.string(x.default.eEo0ye),
                                   description: d.description,
                                   checked: d.checked,
-                                  disabled: X,
+                                  disabled: J,
                                   onChange: V,
                               })
                             : null,
@@ -813,7 +813,7 @@ function eS(e) {
                                           options: r,
                                           maxOptionsVisible: 6,
                                           wrapTags: !0,
-                                          disabled: X || !C || P,
+                                          disabled: J || !C || P,
                                           "aria-invalid": null != w,
                                           "aria-errormessage": null != w ? s : void 0,
                                           onSelectionChange: O,
@@ -858,14 +858,14 @@ function eS(e) {
                 experimentalFields: (0, n.jsxs)(o.B, {
                     gap: 20,
                     children: [
-                        (0, n.jsx)(J.d, {
+                        (0, n.jsx)(X.d, {
                             label: j.intl.string(x.default["4liZ45"]),
                             description: j.intl.string(x.default.I5cl7p),
                             checked: p.checked,
                             disabled: T,
                             onChange: Z,
                         }),
-                        (0, n.jsx)(J.d, {
+                        (0, n.jsx)(X.d, {
                             label: j.intl.string(x.default.mpjaVm),
                             description: j.intl.string(x.default["2PxChh"]),
                             checked: m.checked,
@@ -965,7 +965,7 @@ function eS(e) {
             };
         })(l, F),
         [V, O] = a.useState(null);
-    return (0, n.jsx)(X.A, {
+    return (0, n.jsx)(J.A, {
         projectId: l,
         scopeKeys: C,
         note: S,

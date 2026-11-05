@@ -1,33 +1,34 @@
-var i = n(477900);
-n(582128);
-var l = n(646514),
-    a = n(996682),
-    r = n(27989);
-n.d(
-    t,
+h.r(a);
+var t = h(477900);
+h(582128);
+var i = h(646514),
+    e = h(996682),
+    n = h(27989);
+h.d(
+    a,
     {},
     {
-        Z: function (e) {
+        MenuIcon: function (s) {
             let {
-                    size: t = "md",
-                    width: n,
-                    height: E,
-                    color: s = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    size: a = "md",
+                    width: h,
+                    height: r,
+                    color: c = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: d = "",
-                    ...h
-                } = e,
-                o = (0, r.J)(t),
-                c = o?.width ?? n,
-                u = o?.height ?? E;
-            return (0, i.jsx)("svg", {
-                ...(0, a.A)(h),
+                    ...o
+                } = s,
+                p = (0, n.J)(a),
+                l = p?.width ?? h,
+                w = p?.height ?? r;
+            return (0, t.jsx)("svg", {
+                ...(0, e.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: c,
-                height: u,
+                width: l,
+                height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, i.jsx)("path", {
-                    fill: "string" == typeof s ? s : s.css,
+                children: (0, t.jsx)("path", {
+                    fill: "string" == typeof c ? c : c.css,
                     d: "M1 5a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 12a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM2 18a1 1 0 1 0 0 2h20a1 1 0 1 0 0-2H2Z",
                     className: d,
                 }),

@@ -31,7 +31,7 @@ e.d(
                       text: A.intl.string(A.t.JVwWva),
                       position: "top",
                       children: (0, l.jsx)(u.FD, {
-                          icon: r.h,
+                          icon: r.CloudIcon,
                           text: A.intl.string(A.t["jaYS/h"]),
                           size: "sm",
                           onClick: (t) => {

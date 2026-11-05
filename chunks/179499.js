@@ -22,7 +22,13 @@ r.d(
                 }, [_, a?.attachments]),
                 p = e.useCallback(() => u.A.open({ guildId: n, productId: r }), [n, r]);
             return (a?.attachments?.length ?? 0) > 1
-                ? { variant: "primary", text: d.intl.string(d.t.UyuiUE), icon: o.K, iconPosition: "end", onClick: p }
+                ? {
+                      variant: "primary",
+                      text: d.intl.string(d.t.UyuiUE),
+                      icon: o.ArrowLargeRightIcon,
+                      iconPosition: "end",
+                      onClick: p,
+                  }
                 : {
                       variant: "primary",
                       text: d.intl.string(d.t.t9bE9b),

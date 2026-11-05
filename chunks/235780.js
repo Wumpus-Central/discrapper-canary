@@ -1,4 +1,4 @@
-(n.d(e, { default: () => I }), n(323874), n(14289), n(35956));
+(n.d(e, { default: () => D }), n(323874), n(14289), n(35956));
 var i = n(477900),
     a = n(582128),
     c = n(855986),
@@ -7,8 +7,8 @@ var i = n(477900),
     o = n(224640),
     r = n(20742),
     u = n(430993),
-    _ = n(696208),
-    d = n(104510),
+    d = n(696208),
+    _ = n(104510),
     p = n(793574),
     b = n(688810),
     U = n(987144),
@@ -18,19 +18,19 @@ var i = n(477900),
     E = n(129230),
     L = n(652215),
     M = n(792996),
-    O = n(401146),
-    D = n(519636);
-function I(t) {
+    I = n(401146),
+    O = n(519636);
+function D(t) {
     let {
             guildId: e,
-            transitionState: I,
+            transitionState: D,
             onClose: T,
             analyticsLocation: y,
-            sourceAnalyticsLocations: h,
-            videoPlacement: G,
+            sourceAnalyticsLocations: G,
+            videoPlacement: h,
         } = t,
-        S = (0, c.bG)([R.A], () => (null != e ? R.A.getGuild(e) : null)),
-        g = (function (t) {
+        m = (0, c.bG)([R.A], () => (null != e ? R.A.getGuild(e) : null)),
+        S = (function (t) {
             let [e, n] = a.useState(void 0);
             return (
                 a.useEffect(() => {
@@ -55,8 +55,8 @@ function I(t) {
                 e
             );
         })((0, c.bG)([f.default], () => f.default.locale)),
-        { analyticsLocations: k } = (0, b.Ay)(h, p.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [m, j] = a.useState(!1),
+        { analyticsLocations: g } = (0, b.Ay)(G, p.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [k, j] = a.useState(!1),
         C = a.useRef(!1),
         x = a.useRef(null),
         v = a.useRef(null),
@@ -64,14 +64,14 @@ function I(t) {
             () => ({
                 ...(null != e ? { guild_id: e } : {}),
                 type: L.liQ.PREMIUM_GUILD_USER_MODAL,
-                location_stack: k,
+                location_stack: g,
                 location_section: y.section,
                 location_object: y.object,
-                video_placement: G,
+                video_placement: h,
             }),
-            [y.object, y.section, k, e, G],
+            [y.object, y.section, g, e, h],
         ),
-        P = a.useCallback(
+        B = a.useCallback(
             (t) => {
                 if (t !== l.Q6.PLAYING || C.current) return;
                 C.current = !0;
@@ -83,7 +83,7 @@ function I(t) {
             },
             [N],
         ),
-        B = a.useCallback(() => {
+        P = a.useCallback(() => {
             let t = x.current?.currentTime,
                 e = x.current?.duration;
             E.default.track(L.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
@@ -95,56 +95,56 @@ function I(t) {
         w = M.intl.string(M.t["0f1VCH"]);
     return (0, i.jsxs)(o.d, {
         size: "xxl",
-        transitionState: I,
+        transitionState: D,
         onClose: T,
         "aria-label": w,
         children: [
             (0, i.jsx)(r.rQ, { title: w }),
             (0, i.jsx)(u.c, {
                 children: (0, i.jsx)("div", {
-                    className: O.K,
+                    className: I.K,
                     children: (0, i.jsx)(A.Ft, {
                         ref: x,
                         playerRef: v,
-                        parentTransitionState: I,
+                        parentTransitionState: D,
                         orientation: "landscape",
                         src: "https://cdn.discordapp.com/assets/content/f0b9a61f96ee69dc341c22c04fe6458660d9317caae3d381c05cf8348fca5b95.mp4",
-                        poster: D.A,
-                        captionTrackUrl: g,
+                        poster: O.A,
+                        captionTrackUrl: S,
                         autoplay: !0,
                         autoFocus: !0,
                         hidePlaybackSpeedBtn: !0,
-                        onPlayerStateChange: P,
-                        onEnded: B,
+                        onPlayerStateChange: B,
+                        onEnded: P,
                     }),
                 }),
             }),
-            (0, i.jsx)(_.H, {
+            (0, i.jsx)(d.H, {
                 actions: [
-                    null != S
+                    null != m
                         ? {
                               variant: "expressive",
                               size: "md",
-                              icon: d._,
+                              icon: _.BoostGemIcon,
                               text: M.intl.string(M.t.gKmQ1G),
                               onClick: async function () {
-                                  null != S &&
+                                  null != m &&
                                       (v.current?.pause(),
                                       j(!0),
                                       await (0, U.g)({
-                                          analyticsLocations: k,
+                                          analyticsLocations: g,
                                           analyticsLocation: {
                                               page: L.liQ.PREMIUM_GUILD_USER_MODAL,
                                               section: L.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
                                               object: L.ZSU.BUTTON_CTA,
                                               objectType: L.btD.BUY,
                                           },
-                                          guild: S,
+                                          guild: m,
                                           onClose: T,
                                       }),
                                       j(!1));
                               },
-                              loading: m,
+                              loading: k,
                           }
                         : {
                               variant: "primary",
@@ -163,7 +163,7 @@ function I(t) {
                                                       (e.onClose(),
                                                           T(),
                                                           (0, U.g)({
-                                                              analyticsLocations: k,
+                                                              analyticsLocations: g,
                                                               analyticsLocation: {
                                                                   page: L.liQ.PREMIUM_GUILD_USER_MODAL,
                                                                   section: L.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,

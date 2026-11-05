@@ -3,11 +3,11 @@ var i = t(477900),
     a = t(855986),
     o = t(189213),
     u = t(821609),
-    d = t(95477),
-    r = t(265872),
+    r = t(95477),
+    d = t(265872),
     s = t(285796),
-    m = t(696986),
-    c = t(150934),
+    c = t(696986),
+    m = t(150934),
     g = t(565645),
     j = t(964486),
     h = t(375499),
@@ -24,18 +24,18 @@ t.d(
     {},
     {
         default: function (e) {
-            let { transitionState: n, onClose: t, channelId: y, guildId: A, tag: I } = e,
+            let { transitionState: n, onClose: t, channelId: y, guildId: I, tag: A } = e,
                 E = l.useRef(null),
-                S = null != I,
-                [T, R] = l.useState(I?.name ?? ""),
-                [D, F] = l.useState(null != I ? { id: I.emojiId, name: I.emojiName } : null),
-                [w, B] = l.useState(I?.moderated),
+                S = null != A,
+                [T, R] = l.useState(A?.name ?? ""),
+                [D, F] = l.useState(null != A ? { id: A.emojiId, name: A.emojiName } : null),
+                [w, B] = l.useState(A?.moderated),
                 H = (0, a.bG)([f.Ay], () => (D?.id != null ? f.Ay.getUsableCustomEmojiById(D.id) : null)),
-                M = I?.name !== T || I?.emojiId !== D?.id || I?.emojiName !== D?.name || w !== I?.moderated;
+                M = A?.name !== T || A?.emojiId !== D?.id || A?.emojiName !== D?.name || w !== A?.moderated;
             function Y() {
                 if (null != T && M) {
                     if (S) {
-                        (v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: w }, y),
+                        (v.A.updateForumTag({ id: A.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: w }, y),
                             t());
                         return;
                     }
@@ -74,14 +74,14 @@ t.d(
                               variant: "critical-secondary",
                               text: N.intl.string(N.t.huYSMr),
                               onClick: function () {
-                                  S && (v.A.deleteForumTag(y, I.id), t());
+                                  S && (v.A.deleteForumTag(y, A.id), t());
                               },
                           })
                         : void 0,
                     children: [
                         (0, i.jsx)("div", {
                             className: b.Kf,
-                            children: (0, i.jsx)(d.k, {
+                            children: (0, i.jsx)(r.k, {
                                 inputRef: P,
                                 maxLength: 20,
                                 value: T,
@@ -92,13 +92,13 @@ t.d(
                                     type: "emoji",
                                     button: (0, i.jsx)("div", {
                                         className: b.S0,
-                                        children: (0, i.jsx)(r.Y, {
+                                        children: (0, i.jsx)(d.Y, {
                                             targetElementRef: E,
                                             renderPopout: function (e) {
                                                 let { closePopout: n } = e,
-                                                    l = C.A.getDefaultChannel(A);
+                                                    l = C.A.getDefaultChannel(I);
                                                 return (0, i.jsx)(p.A, {
-                                                    guildId: A,
+                                                    guildId: I,
                                                     closePopout: n,
                                                     onSelectEmoji: (e) => {
                                                         let { emoji: t, willClose: i } = e;
@@ -116,7 +116,7 @@ t.d(
                                                 });
                                             },
                                             position: "left",
-                                            animation: r.Y.Animation.NONE,
+                                            animation: d.Y.Animation.NONE,
                                             align: "bottom",
                                             children: (e, n) => {
                                                 let { isShown: t } = n;
@@ -150,7 +150,7 @@ t.d(
                                 trailing:
                                     T.length > 0 || null != D
                                         ? {
-                                              icon: s.a,
+                                              icon: s.CircleXIcon,
                                               onClick: function () {
                                                   (R(""), F(null));
                                               },
@@ -159,10 +159,10 @@ t.d(
                                         : void 0,
                             }),
                         }),
-                        (0, i.jsx)(m.h, { size: 16 }),
-                        (0, i.jsx)(c.S, {
+                        (0, i.jsx)(c.h, { size: 16 }),
+                        (0, i.jsx)(m.S, {
                             checked: w ?? !1,
-                            onChange: (e) => B(e || (I?.moderated == null && void 0)),
+                            onChange: (e) => B(e || (A?.moderated == null && void 0)),
                             label: N.intl.string(N.t["rMH+rt"]),
                             labelType: "secondary",
                         }),

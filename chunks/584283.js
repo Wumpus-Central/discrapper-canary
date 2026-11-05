@@ -70,9 +70,9 @@ function y(e) {
                                                     n.e(553464),
                                                     n.e(130662),
                                                     n.e(498552),
+                                                    n.e(944801),
                                                     n.e(236946),
                                                     n.e(338601),
-                                                    n.e(944801),
                                                     n.e(944727),
                                                     n.e(943371),
                                                     n.e(725241),
@@ -359,7 +359,12 @@ function ec(e) {
         T = (0, W.Ay)({ application: o, analyticsLocations: a }),
         S = l.useMemo(() => {
             if (null != T)
-                return { label: N.intl.string(N.t["jaYS/h"]), icon: G.h, trackingArea: g.kY.CLOUD_PLAY, onClick: T };
+                return {
+                    label: N.intl.string(N.t["jaYS/h"]),
+                    icon: G.CloudIcon,
+                    trackingArea: g.kY.CLOUD_PLAY,
+                    onClick: T,
+                };
         }, [T]),
         k = (0, H.F)(o),
         R = l.useMemo(() => (null != y ? y : null != k && v ? k : void 0), [v, y, k]),
@@ -488,7 +493,7 @@ function ex(e) {
                     ? (0, i.jsxs)("div", {
                           className: er.Ym,
                           children: [
-                              (0, i.jsx)(eh.T, { size: "xxs", color: "currentColor" }),
+                              (0, i.jsx)(eh.MusicIcon, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(eg.z, {
                                   entry: { start: v, end: o?.timestamps?.end },
                                   textColor: "currentColor",

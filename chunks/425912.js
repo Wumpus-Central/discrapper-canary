@@ -1,26 +1,26 @@
-n.d(t, { A: () => k });
-var i = n(477900),
-    l = n(477782),
-    a = n(163328),
-    s = n(192308),
-    r = n(952270),
-    c = n(72152),
-    o = n(582128),
-    u = n(976860),
-    d = n(967198),
-    f = n(146092),
-    h = n(5180),
-    b = n(652215),
-    g = n(708526),
-    p = n(792996),
-    y = n(241326),
-    v = n(253932);
+t.d(n, { A: () => k });
+var i = t(477900),
+    l = t(477782),
+    a = t(163328),
+    s = t(192308),
+    r = t(952270),
+    c = t(72152),
+    o = t(582128),
+    d = t(976860),
+    u = t(967198),
+    f = t(146092),
+    h = t(5180),
+    b = t(652215),
+    g = t(708526),
+    p = t(792996),
+    v = t(241326),
+    y = t(253932);
 function k() {
     let e = (function () {
             let e,
-                { label: t, perform: n } =
+                { label: n, perform: t } =
                     ((e = o.useCallback(() => {
-                        ((0, f.tV)(!1, "server_context_menu"), (0, h.ai)(d.A.getGuildId()) && (0, u.pX)(b.BVt.ME));
+                        ((0, f.tV)(!1, "server_context_menu"), (0, h.ai)(u.A.getGuildId()) && (0, d.pX)(b.BVt.ME));
                     }, [])),
                     {
                         label: p.intl.string(g.default["8FO0y9"]),
@@ -29,39 +29,39 @@ function k() {
                     });
             return (0, i.jsx)(l.Dr, {
                 id: "hide-favorites",
-                label: t,
+                label: n,
                 color: "danger",
                 icon: r.EyeSlashIcon,
                 leadingAccessory: { type: "icon", icon: r.EyeSlashIcon },
                 action: function () {
-                    ((0, c.Z)(!1), n());
+                    ((0, c.Z)(!1), t());
                 },
             });
         })(),
-        t = (function () {
+        n = (function () {
             let e,
-                t,
+                n,
                 {
-                    isAvailable: n,
+                    isAvailable: t,
                     label: a,
                     perform: s,
-                } = ((e = v.Q_.useSetting()),
-                (t = o.useCallback(() => {
-                    ((0, h.ai)(d.A.getGuildId()) && (0, u.pX)(b.BVt.ME), (0, f.uM)());
+                } = ((e = y.Q_.useSetting()),
+                (n = o.useCallback(() => {
+                    ((0, h.ai)(u.A.getGuildId()) && (0, d.pX)(b.BVt.ME), (0, f.uM)());
                 }, [])),
                 {
                     isAvailable: e,
                     label: p.intl.string(g.default.YkET6R),
                     subLabel: p.intl.string(g.default.ZzcwNk),
-                    perform: t,
+                    perform: n,
                 });
-            return n
+            return t
                 ? (0, i.jsx)(l.Dr, {
                       id: "reset-favorites",
                       label: a,
                       color: "danger",
-                      icon: y.TrashIcon,
-                      leadingAccessory: { type: "icon", icon: y.TrashIcon },
+                      icon: v.TrashIcon,
+                      leadingAccessory: { type: "icon", icon: v.TrashIcon },
                       action: function () {
                           ((0, c.Z)(!1), s());
                       },
@@ -75,11 +75,11 @@ function k() {
                 children: (0, i.jsx)(l.Dr, {
                     id: "favorites-thread-settings",
                     label: p.intl.string(g.default.hklnjs),
-                    leadingAccessory: { type: "icon", icon: a.y },
+                    leadingAccessory: { type: "icon", icon: a.ThreadIcon },
                     action: () => {
                         (0, s.mM)(async () => {
-                            let { default: e } = await n.e(20587).then(n.bind(n, 167846));
-                            return (t) => (0, i.jsx)(e, { ...t });
+                            let { default: e } = await t.e(20587).then(t.bind(t, 167846));
+                            return (n) => (0, i.jsx)(e, { ...n });
                         });
                     },
                 }),
@@ -87,6 +87,6 @@ function k() {
             "favorites-settings",
         ),
         (0, i.jsx)(l.rX, { children: e }, "favorites-actions"),
-        null != t ? (0, i.jsx)(l.rX, { children: t }, "favorites-developer") : null,
+        null != n ? (0, i.jsx)(l.rX, { children: n }, "favorites-developer") : null,
     ];
 }

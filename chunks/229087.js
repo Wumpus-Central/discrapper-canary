@@ -34,7 +34,7 @@ n.d(
                                 onClick: u,
                                 className: p ? c.to : c.DT,
                                 "aria-label": d.intl.formatToPlainString(d.t.GCn1ne, { tag: f() }),
-                                children: (0, i.jsx)(r.P, { size: "xxs", color: "currentColor" }),
+                                children: (0, i.jsx)(r.XSmallIcon, { size: "xxs", color: "currentColor" }),
                             }),
                         }),
                 ],

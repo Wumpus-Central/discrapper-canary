@@ -15,7 +15,8 @@ function d(e) {
         lineClamp: 1,
         children: c.intl.format(s.default["0oZGvW"], {
             orbPrice: a,
-            orbIconHook: () => (0, n.jsx)(o.C, { className: u.f, size: "xs", color: "currentColor" }, "orbs-icon"),
+            orbIconHook: () =>
+                (0, n.jsx)(o.OrbsIcon, { className: u.f, size: "xs", color: "currentColor" }, "orbs-icon"),
         }),
     });
 }

@@ -1,13 +1,14 @@
+i.r(t);
 var a = i(477900);
 i(582128);
 var l = i(646514),
-    s = i(996682),
-    n = i(27989);
+    n = i(996682),
+    s = i(27989);
 i.d(
     t,
     {},
     {
-        O: function (e) {
+        VideoSlashIcon: function (e) {
             let {
                     size: t = "md",
                     width: i,
@@ -16,11 +17,11 @@ i.d(
                     colorClass: h = "",
                     ...o
                 } = e,
-                c = (0, n.J)(t),
+                c = (0, s.J)(t),
                 u = c?.width ?? i,
                 g = c?.height ?? r;
             return (0, a.jsx)("svg", {
-                ...(0, s.A)(o),
+                ...(0, n.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: u,
                 height: g,

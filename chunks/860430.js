@@ -1,3 +1,4 @@
+n.r(t);
 var i = n(477900);
 n(582128);
 var s = n(646514),
@@ -7,7 +8,7 @@ n.d(
     t,
     {},
     {
-        m: function (e) {
+        FileWarningIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,

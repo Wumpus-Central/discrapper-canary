@@ -3,8 +3,8 @@ e(582128);
 var s = e(189213),
     n = e(214947),
     o = e(534890),
-    l = e(26137),
-    c = e(625903),
+    c = e(26137),
+    l = e(625903),
     a = e(834730),
     d = e(230837),
     m = e(975571),
@@ -15,14 +15,20 @@ var s = e(189213),
 function j(t) {
     let { onClose: r } = t,
         e = [
-            { icon: (0, i.jsx)(n.$, { size: "refresh_sm", color: "currentColor" }), text: x.intl.string(x.t.vXBrdg) },
+            {
+                icon: (0, i.jsx)(n.FriendsIcon, { size: "refresh_sm", color: "currentColor" }),
+                text: x.intl.string(x.t.vXBrdg),
+            },
             {
                 icon: (0, i.jsx)(o.ChatIcon, { size: "refresh_sm", color: "currentColor" }),
                 text: x.intl.string(x.t["i7/QHN"]),
             },
-            { icon: (0, i.jsx)(l.r, { size: "refresh_sm", color: "currentColor" }), text: x.intl.string(x.t.ZmBfKJ) },
             {
-                icon: (0, i.jsx)(c.SettingsIcon, { size: "refresh_sm", color: "currentColor" }),
+                icon: (0, i.jsx)(c.UserCircleIcon, { size: "refresh_sm", color: "currentColor" }),
+                text: x.intl.string(x.t.ZmBfKJ),
+            },
+            {
+                icon: (0, i.jsx)(l.SettingsIcon, { size: "refresh_sm", color: "currentColor" }),
                 text: x.intl.format(x.t.wBlJCr, {
                     recentActivityURL: m.A.getArticleURL(h.MVz.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {

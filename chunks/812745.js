@@ -9,7 +9,7 @@ var r,
     c = n(637956),
     d = n(352224),
     m = n(509115),
-    f =
+    p =
         (((r = {}).UNKNOWN = "unknown"),
         (r.VISA = "visa"),
         (r.DISCOVER = "discover"),
@@ -41,26 +41,26 @@ var r,
         (r.GIFT_CARD = "gift_card"),
         (r.PIX = "pix"),
         r);
-let p = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
+let f = { SMALL: m.cardIconSmall, MEDIUM: m.cardIconMedium, LARGE: m.cardIconLarge, XLARGE: m.cardIconXLarge };
 class v extends a.PureComponent {
-    static Types = f;
-    static Sizes = p;
+    static Types = p;
+    static Sizes = f;
     static getType(e) {
         if (null == e) return "unknown";
         let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
-        return Object.hasOwn(f, t) ? f[t] : "unknown";
+        return Object.hasOwn(p, t) ? p[t] : "unknown";
     }
-    static defaultProps = { size: p.SMALL, flipped: !1 };
+    static defaultProps = { size: f.SMALL, flipped: !1 };
     render() {
         let { flipped: e, type: t, className: n, size: r } = this.props;
         return "bank" === t
-            ? (0, i.jsx)(u.M, { className: n })
+            ? (0, i.jsx)(u.BankIcon, { className: n })
             : "gift_card" === t
-              ? (0, i.jsx)(o._, { className: n, size: "lg" })
+              ? (0, i.jsx)(o.PaymentTypeGiftCardIcon, { className: n, size: "lg" })
               : "pix" === t
-                ? (0, i.jsx)(c.W, { className: n, size: "lg" })
+                ? (0, i.jsx)(c.PaymentTypePixLogoIcon, { className: n, size: "lg" })
                 : "ideal" === t
-                  ? (0, i.jsx)(d.E, { className: n, size: "lg" })
+                  ? (0, i.jsx)(d.PaymentTypeIDealWeroIcon, { className: n, size: "lg" })
                   : (0, i.jsx)("div", {
                         "aria-hidden": !0,
                         className: s()(r, m[t], n, { [m.flipped]: e }),
@@ -73,7 +73,7 @@ n.d(
     {},
     {
         Ay: v,
-        Be: f,
+        Be: p,
         Nj: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
             if ("light" === t) {
@@ -131,6 +131,6 @@ n.d(
                     return n(511403);
             }
         },
-        y3: p,
+        y3: f,
     },
 );

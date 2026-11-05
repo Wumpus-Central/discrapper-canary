@@ -1,45 +1,45 @@
 var n = l(477900),
     i = l(582128),
-    d = l(503698),
-    o = l.n(d),
+    o = l(503698),
+    d = l.n(o),
     t = l(877624),
     u = l(855986),
     c = l(554146),
-    a = l(646514),
-    r = l(403581),
+    r = l(646514),
+    a = l(403581),
     _ = l(404374),
-    M = l(826673),
-    p = l(543862),
-    I = l(423814),
+    I = l(826673),
+    M = l(543862),
+    p = l(423814),
     A = l(77528),
     E = l(549996),
     T = l(614791),
     m = l(964661),
     f = l(374403),
     g = l(105390),
-    R = l(617617),
-    h = l(49999),
+    h = l(617617),
+    R = l(49999),
     j = l(682901),
     C = l(134986);
 function O() {
     let s,
         e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         l = (0, A.V)(),
-        d = (0, I.O)(),
-        o = l?.trialId === j.Dw,
-        a = (0, E.c)(t.C.PREMIUM_TAB),
-        r = null != a ? (0, T.z)(a) : null,
+        o = (0, p.O)(),
+        d = l?.trialId === j.Dw,
+        r = (0, E.c)(t.C.PREMIUM_TAB),
+        a = null != r ? (0, T.z)(r) : null,
         _ = (0, f.Q)(),
-        C = a?.promotionId ?? "",
-        O = null != r && null != _,
-        b = (0, u.bG)([R.A], () => (0, M.u$)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, C).isDismissed),
+        C = r?.promotionId ?? "",
+        O = null != a && null != _,
+        b = (0, u.bG)([h.A], () => (0, I.u$)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, C).isDismissed),
         k =
-            O && null != a && null != r
+            O && null != r && null != a
                 ? (0, n.jsx)(m.A, {
-                      componentId: a.id,
-                      promotionId: a.promotionId,
-                      badgeCopy: r.badgeCopy,
-                      acknowledgedBadgeCopy: r.acknowledgedBadgeCopy,
+                      componentId: r.id,
+                      promotionId: r.promotionId,
+                      badgeCopy: a.badgeCopy,
+                      acknowledgedBadgeCopy: a.acknowledgedBadgeCopy,
                       isDismissed: b,
                   })
                 : null;
@@ -48,13 +48,13 @@ function O() {
             e &&
                 O &&
                 !b &&
-                (0, p.qr)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, C, { dismissAction: h.i.AUTO_DISMISS });
+                (0, M.qr)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, C, { dismissAction: R.i.AUTO_DISMISS });
         }, [e, O, b, C]),
         null != k
             ? (s = k)
-            : null != d
-              ? (s = (0, n.jsx)(g.fY, { isTabSelected: e, userDiscount: d, includesAmountOff: !1 }))
-              : null == l || o || (s = (0, n.jsx)(g.Ag, { isTabSelected: e, trialOffer: l })),
+            : null != o
+              ? (s = (0, n.jsx)(g.fY, { isTabSelected: e, userDiscount: o, includesAmountOff: !1 }))
+              : null == l || d || (s = (0, n.jsx)(g.Ag, { isTabSelected: e, trialOffer: l })),
         s
     );
 }
@@ -64,14 +64,17 @@ l.d(
     {
         A: function (s) {
             let { decoration: e, label: l, isSelected: i } = s,
-                d =
+                o =
                     O(i) ??
                     e ??
-                    (0, n.jsx)(r.t, { size: "sm", color: i ? a.A.unsafe_rawColors.WHITE.css : _.k0.PREMIUM_TIER_2 });
+                    (0, n.jsx)(a.NitroWheelIcon, {
+                        size: "sm",
+                        color: i ? r.A.unsafe_rawColors.WHITE.css : _.k0.PREMIUM_TIER_2,
+                    });
             return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsxs)("div", { className: o()(C.gj, { [C.wH]: i }), children: [l, d] }),
-                    (0, n.jsx)("div", { className: o()(C.Tp, { [C._I]: i }) }),
+                    (0, n.jsxs)("div", { className: d()(C.gj, { [C.wH]: i }), children: [l, o] }),
+                    (0, n.jsx)("div", { className: d()(C.Tp, { [C._I]: i }) }),
                 ],
             });
         },

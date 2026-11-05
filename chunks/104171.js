@@ -7,8 +7,8 @@ var t = s(477900),
     a = s(939249),
     c = s(983851),
     d = s(573435),
-    h = s(342296),
-    o = s(619019),
+    o = s(342296),
+    h = s(619019),
     f = s(287809),
     m = s(9320),
     p = s(76145);
@@ -16,7 +16,7 @@ let I = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
     _ = "user-icon";
 function g(e, r) {
     if (e === _) return `user-icon-${r}`;
-    let s = e instanceof o.A ? e : null != e ? e.user : null;
+    let s = e instanceof h.A ? e : null != e ? e.user : null;
     return null != s ? s.id : `user-${r}`;
 }
 function x(e) {
@@ -52,10 +52,10 @@ class U extends n.PureComponent {
     _ref = n.createRef();
     defaultRenderUser = (e, r, s) => {
         let l,
-            { showUserPopout: c, guildId: d, size: h, dimEmptyUsers: o, avatarBackground: f } = this.props;
+            { showUserPopout: c, guildId: d, size: o, dimEmptyUsers: h, avatarBackground: f } = this.props;
         if (null == e)
             if (!this.props.showDefaultAvatarsForNullUsers)
-                return (0, t.jsx)("div", { className: i()(p.F2, { [p.F_]: o }) });
+                return (0, t.jsx)("div", { className: i()(p.F2, { [p.F_]: h }) });
             else {
                 let e = (s ?? 0) % m.A.DEFAULT_AVATARS.length,
                     r = m.A.DEFAULT_AVATARS[e];
@@ -77,9 +77,9 @@ class U extends n.PureComponent {
                     default:
                         return 10;
                 }
-            })(h);
+            })(o);
             l = (0, t.jsx)(u.UserIcon, { size: "custom", color: "currentColor", width: e, height: e });
-        } else l = (0, t.jsx)("img", { src: e.getAvatarURL(d, h), alt: e.username, className: p.my });
+        } else l = (0, t.jsx)("img", { src: e.getAvatarURL(d, o), alt: e.username, className: p.my });
         let S =
             !0 === f || e === _
                 ? (0, t.jsx)("div", { className: p.WK, children: l }, x)
@@ -149,7 +149,7 @@ class U extends n.PureComponent {
         return r
             ? null != e
                 ? e(p.Kk)
-                : (0, t.jsx)(c.H, {
+                : (0, t.jsx)(c.VoiceNormalIcon, {
                       size: "md",
                       color: "currentColor",
                       colorClass: p.__invalid_foreground,
@@ -173,9 +173,9 @@ class U extends n.PureComponent {
                 className: i()(e, p.kL, E(r)),
                 children: [this.renderIcon(), this.renderUsers()],
             });
-        let c = s.find((e) => e instanceof o.A && e.id === a),
+        let c = s.find((e) => e instanceof h.A && e.id === a),
             d = u && null == f.default.getUser(a);
-        return (0, t.jsx)(h.A, {
+        return (0, t.jsx)(o.A, {
             targetElementRef: this._ref,
             userId: a,
             user: d && null != c ? c : void 0,

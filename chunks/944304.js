@@ -4,8 +4,8 @@ var n = t(477900),
     l = t.n(a),
     c = t(855986),
     r = t(862482),
-    d = t(194261),
-    o = t(866665),
+    o = t(194261),
+    d = t(866665),
     u = t(821609),
     m = t(502572),
     x = t(930861),
@@ -36,61 +36,61 @@ t.d(
                     onClose: w = () => {},
                     closeLayer: z = () => {},
                     pauseAnimation: C = !1,
-                    applicationId: M,
-                    handleSubscribeModalClose: $,
-                    withHighlight: y = !1,
-                    icon: E,
-                    intent: G,
+                    applicationId: G,
+                    handleSubscribeModalClose: M,
+                    withHighlight: $ = !1,
+                    icon: y,
+                    intent: E,
                     useExpressiveButton: W = !1,
-                    ...K
+                    ...I
                 } = e,
-                { analyticsLocations: Q } = (0, p.Ay)(),
-                _ = (0, f.Us)() === N.BRT.POPOUT,
-                [D, I] = s.useState(!1),
+                { analyticsLocations: K } = (0, p.Ay)(),
+                Q = (0, f.Us)() === N.BRT.POPOUT,
+                [B, D] = s.useState(!1),
                 { fractionalState: R } = (0, A.A)(),
                 U = (0, c.bG)([b.A], () => b.A.hasFetched);
             s.useEffect(() => {
                 U || (0, g.CD)();
             }, [U]);
-            let B = (0, v.D$)(b.A.boostSlots),
+            let _ = (0, v.D$)(b.A.boostSlots),
                 F = null != O ? Math.max((0, v.Os)(a, O), 1) : 1,
                 q = (0, v.Nc)({ fractionalState: R });
             async function H() {
-                (I(!0),
+                (D(!0),
                     await (0, L.g)({
-                        analyticsLocations: Q,
+                        analyticsLocations: K,
                         analyticsLocation: i,
                         analyticsSourceLocation: t,
                         guild: a,
                         numberOfBoostsToAdd: F,
                         onClose: w,
                         closeLayer: z,
-                        inPopout: _,
-                        applicationId: M,
-                        handleSubscribeModalClose: $,
-                        intent: G,
+                        inPopout: Q,
+                        applicationId: G,
+                        handleSubscribeModalClose: M,
+                        intent: E,
                     }),
-                    I(!1));
+                    D(!1));
             }
             let J = j.A.getPremiumTypeSubscription(),
-                V = (0, n.jsxs)("div", { className: P.x6, children: [E, T ?? k.intl.string(k.t.gKmQ1G)] }),
+                V = (0, n.jsxs)("div", { className: P.x6, children: [y, T ?? k.intl.string(k.t.gKmQ1G)] }),
                 X = !1;
-            return ((X = null !== J && !(B.length > 0) && J?.isPausedOrPausePending && R === S.xc.NONE) &&
+            return ((X = null !== J && !(_.length > 0) && J?.isPausedOrPausePending && R === S.xc.NONE) &&
                 ((V = (0, n.jsxs)("div", {
                     className: P.x6,
-                    children: [(0, n.jsx)(d.LockIcon, { size: "xs", className: P.iA }), " ", V],
+                    children: [(0, n.jsx)(o.LockIcon, { size: "xs", className: P.iA }), " ", V],
                 })),
-                (K.disabled = !0)),
+                (I.disabled = !0)),
             null != q)
                 ? W
-                    ? (0, n.jsx)(o.m, {
+                    ? (0, n.jsx)(d.m, {
                           text: q,
                           children: (0, n.jsx)(u.$, {
                               variant: "expressive",
-                              icon: d.LockIcon,
+                              icon: o.LockIcon,
                               iconPosition: "start",
                               disabled: !0,
-                              fullWidth: K.fullWidth,
+                              fullWidth: I.fullWidth,
                               text: T ?? k.intl.string(k.t.gKmQ1G),
                           }),
                       })
@@ -104,26 +104,26 @@ t.d(
                                   disabled: !0,
                                   size: r.$n.Sizes.SMALL,
                                   pauseAnimation: C,
-                                  ...K,
+                                  ...I,
                                   children: V,
                               }),
                       })
                 : W
                   ? (0, n.jsx)(u.$, {
                         variant: "expressive",
-                        icon: h._,
+                        icon: h.BoostGemIcon,
                         disabled: X,
-                        loading: D,
-                        fullWidth: K.fullWidth,
+                        loading: B,
+                        fullWidth: I.fullWidth,
                         text: T ?? k.intl.string(k.t.gKmQ1G),
                         onClick: H,
                     })
                   : (0, n.jsx)(x.wL, {
                         "data-migration-pending": !0,
                         size: r.$n.Sizes.SMALL,
-                        ...K,
-                        className: l()(K.className, { [P.yj]: y }),
-                        submitting: D,
+                        ...I,
+                        className: l()(I.className, { [P.yj]: $ }),
+                        submitting: B,
                         onClick: H,
                         pauseAnimation: C,
                         children: V,

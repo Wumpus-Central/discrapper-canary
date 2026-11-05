@@ -11,8 +11,8 @@ var i = n(477900),
     _ = n(308050),
     E = n(998304),
     A = n(282435);
-let h = 31 / 255;
-function f(e, t) {
+let f = 31 / 255;
+function h(e, t) {
     return (0, E.lZ)({ foreground: e, background: t, ratio: 3, saturationFactor: 1 });
 }
 var I = n(59123);
@@ -21,8 +21,8 @@ function p(e) {
         { applicationId: n, name: a, glyphSize: c, className: E, "aria-label": p } = e,
         {
             character: m,
-            backgroundColor: g,
-            foregroundColor: T,
+            backgroundColor: T,
+            foregroundColor: g,
         } = ((t = (0, o.r)(d.A.colors.BACKGROUND_BASE_LOWER).hex()),
         r.useMemo(() => {
             let { color: e, character: i } = (function (e, t) {
@@ -51,19 +51,19 @@ function p(e) {
                     function i(e, t) {
                         return u().mix(n, e, t, "rgb");
                     }
-                    let r = f(u()(e), i(u()(e), h)),
-                        a = h;
+                    let r = h(u()(e), i(u()(e), f)),
+                        a = f;
                     for (; a < 0.4 && 7 > u().deltaE(i(r, a), n);) a += 0.04;
-                    return { backgroundColor: r.alpha(a).css(), foregroundColor: f(r, i(r, a)).hex() };
+                    return { backgroundColor: r.alpha(a).css(), foregroundColor: h(r, i(r, a)).hex() };
                 })(e, t),
             };
         }, [n, a, t]));
     return (0, i.jsx)("div", {
         className: s()(I.V, E),
-        style: { backgroundColor: g, color: T },
+        style: { backgroundColor: T, color: g },
         role: null != p ? "img" : void 0,
         "aria-label": p,
         "aria-hidden": null == p || void 0,
-        children: m ?? (0, i.jsx)(l.k, { size: "custom", width: c, height: c, color: "currentColor" }),
+        children: m ?? (0, i.jsx)(l.AppsIcon, { size: "custom", width: c, height: c, color: "currentColor" }),
     });
 }

@@ -1,4 +1,4 @@
-n.d(e, { default: () => k });
+n.d(e, { default: () => N });
 var a = n(477900),
     r = n(582128),
     l = n(719442),
@@ -9,8 +9,8 @@ var a = n(477900),
     u = n(442433),
     d = n(955572),
     m = n(775602),
-    f = n(413756),
-    g = n(253932),
+    g = n(413756),
+    f = n(253932),
     b = n(129230),
     p = n(723702),
     T = n(253400),
@@ -20,47 +20,47 @@ var a = n(477900),
     S = n(152367),
     A = n(192308),
     j = n(869388),
-    D = n(147087),
-    C = n(773669),
-    _ = n(186306),
-    E = n(323350),
-    X = n(652215),
-    N = n(792996),
-    P = n(946190);
-function k(t) {
-    let { text: e, editor: k, target: M, onHeightUpdate: O, onSelect: R, clipboardHasMixedContent: v } = t,
-        I = r.useCallback(
+    C = n(147087),
+    _ = n(773669),
+    D = n(186306),
+    M = n(323350),
+    E = n(652215),
+    I = n(792996),
+    X = n(946190);
+function N(t) {
+    let { text: e, editor: N, target: P, onHeightUpdate: k, onSelect: O, clipboardHasMixedContent: R } = t,
+        v = r.useCallback(
             (t) => {
-                (i.rL.focus(k),
+                (i.rL.focus(N),
                     setTimeout(() => {
-                        (t?.(), x.VW.focus(k));
+                        (t?.(), x.VW.focus(N));
                     }, 0));
             },
-            [k],
+            [N],
         ),
+        W = r.useCallback(() => {
+            (0, u.Z_)(v);
+        }, [v]),
         L = r.useCallback(() => {
-            (0, u.Z_)(I);
-        }, [I]),
-        U = r.useCallback(() => {
             let t = T.Ay.readClipboard();
             0 !== t.length &&
-                I(() => {
-                    l.gB.insertText(k, t);
+                v(() => {
+                    l.gB.insertText(N, t);
                 });
-        }, [I, k]),
-        [w, F] = (0, f.A)({ text: e, target: M, onHeightUpdate: O }),
-        G = (function (t) {
-            let e = (0, D.b)(),
+        }, [v, N]),
+        [U, w] = (0, g.A)({ text: e, target: P, onHeightUpdate: k }),
+        F = (function (t) {
+            let e = (0, C.b)(),
                 l = (0, s.bG)([j.A], () => j.A.getTransforms()),
                 { selection: c } = t,
                 u =
                     null != c
-                        ? (0, E.WO)(x.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
+                        ? (0, M.WO)(x.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
                         : "",
                 d = r.useCallback(
                     (e) => {
                         (i.rL.focus(t),
-                            _.o.withSingleEntry(t, () => {
+                            D.o.withSingleEntry(t, () => {
                                 (t.deleteFragment(), t.insertText(e));
                             }));
                     },
@@ -70,16 +70,16 @@ function k(t) {
                     let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
                             if (!n) {
-                                (l(!0), (0, h.P0)({ text: N.intl.string(N.t.p54KYY), icon: S.D }));
+                                (l(!0), (0, h.P0)({ text: I.intl.string(I.t.p54KYY), icon: S.MagicWandIcon }));
                                 try {
                                     let n = await y.Bo.post({
-                                        url: X.Rsh.AI_FIX_GRAMMAR,
+                                        url: E.Rsh.AI_FIX_GRAMMAR,
                                         body: { content: t },
                                         rejectWithError: (0, y.fT)(),
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, h.P0)({ text: N.intl.string(N.t.mxQpUY), variant: "success" }));
+                                        (0, h.P0)({ text: I.intl.string(I.t.mxQpUY), variant: "success" }));
                                 } finally {
                                     l(!1);
                                 }
@@ -87,15 +87,15 @@ function k(t) {
                         }, [n, t, e]);
                     return (0, a.jsx)(o.Dr, {
                         id: "fix-grammar",
-                        label: n ? N.intl.string(N.t.p54KYY) : N.intl.string(N.t.fCpOHj),
-                        icon: S.D,
+                        label: n ? I.intl.string(I.t.p54KYY) : I.intl.string(I.t.fCpOHj),
+                        icon: S.MagicWandIcon,
                         action: i,
                         disabled: n,
                     });
                 })(u, d),
-                f = (function (t, e) {
+                g = (function (t, e) {
                     let [l, i] = r.useState(!1),
-                        c = (0, s.bG)([C.default], () => C.default.locale),
+                        c = (0, s.bG)([_.default], () => _.default.locale),
                         u = r.useCallback(
                             async (n, a) => {
                                 if (l) return;
@@ -103,19 +103,19 @@ function k(t) {
                                 i(!0);
                                 let s = a ?? r;
                                 (0, h.P0)({
-                                    text: N.intl.formatToPlainString(N.t.Znl8Z8, { targetLanguage: s }),
-                                    icon: S.D,
+                                    text: I.intl.formatToPlainString(I.t.Znl8Z8, { targetLanguage: s }),
+                                    icon: S.MagicWandIcon,
                                 });
                                 try {
                                     let n = await y.Bo.post({
-                                        url: X.Rsh.AI_TRANSLATE,
+                                        url: E.Rsh.AI_TRANSLATE,
                                         body: { content: t, locale: r },
                                         rejectWithError: (0, y.fT)(),
                                     });
                                     n.body &&
                                         (e(n.body.content),
                                         (0, h.P0)({
-                                            text: N.intl.formatToPlainString(N.t.FtVUqm, { targetLanguage: s }),
+                                            text: I.intl.formatToPlainString(I.t.FtVUqm, { targetLanguage: s }),
                                             variant: "success",
                                         }));
                                 } finally {
@@ -124,7 +124,7 @@ function k(t) {
                             },
                             [l, c, t, e],
                         ),
-                        d = (0, N.getAvailableLocales)().map((t) => {
+                        d = (0, I.getAvailableLocales)().map((t) => {
                             let e;
                             try {
                                 e = n(579832)(`./${t.value}.png`);
@@ -136,7 +136,7 @@ function k(t) {
                                 {
                                     id: `translate-${t.value}`,
                                     label: t.name,
-                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: P.M }),
+                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: X.M }),
                                     leadingAccessory: { type: "image", src: e },
                                     action: () => u(t.value, t.name),
                                     disabled: l,
@@ -146,32 +146,32 @@ function k(t) {
                         });
                     return (0, a.jsx)(o.Dr, {
                         id: "translate",
-                        label: l ? N.intl.string(N.t.SVKIdU) : N.intl.string(N.t["6epDlR"]),
+                        label: l ? I.intl.string(I.t.SVKIdU) : I.intl.string(I.t["6epDlR"]),
                         action: () => u(),
                         disabled: l,
                         children: d,
                     });
                 })(u, d),
-                g = (function (t, e, n) {
+                f = (function (t, e, n) {
                     let [l, i] = r.useState(null),
                         s = r.useCallback(
                             async (t) => {
                                 if (null == l) {
                                     (i(t.id),
                                         (0, h.P0)({
-                                            text: N.intl.formatToPlainString(N.t.rrf7Kf, { transformName: t.name }),
-                                            icon: S.D,
+                                            text: I.intl.formatToPlainString(I.t.rrf7Kf, { transformName: t.name }),
+                                            icon: S.MagicWandIcon,
                                         }));
                                     try {
                                         let a = await y.Bo.post({
-                                            url: X.Rsh.AI_TEXT_TRANSFORM,
+                                            url: E.Rsh.AI_TEXT_TRANSFORM,
                                             body: { content: e, prompt: t.prompt },
                                             rejectWithError: (0, y.fT)(),
                                         });
                                         a.body &&
                                             (n(a.body.content),
                                             (0, h.P0)({
-                                                text: N.intl.formatToPlainString(N.t.qe4KvQ, { transformName: t.name }),
+                                                text: I.intl.formatToPlainString(I.t.qe4KvQ, { transformName: t.name }),
                                                 variant: "success",
                                             }));
                                     } finally {
@@ -187,8 +187,8 @@ function k(t) {
                             o.Dr,
                             {
                                 id: `text-transform-${t.id}`,
-                                label: e ? N.intl.formatToPlainString(N.t.rrf7Kf, { transformName: t.name }) : t.name,
-                                icon: S.D,
+                                label: e ? I.intl.formatToPlainString(I.t.rrf7Kf, { transformName: t.name }) : t.name,
+                                icon: S.MagicWandIcon,
                                 action: () => s(t),
                                 disabled: null != l,
                             },
@@ -200,17 +200,17 @@ function k(t) {
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
                           m,
-                          f,
+                          g,
                           (0, a.jsxs)(o.Dr, {
                               id: "text-transforms",
-                              label: N.intl.string(N.t["6YZezO"]),
-                              icon: S.D,
+                              label: I.intl.string(I.t["6YZezO"]),
+                              icon: S.MagicWandIcon,
                               children: [
-                                  g,
-                                  g.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
+                                  f,
+                                  f.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
                                   (0, a.jsx)(o.Dr, {
                                       id: "manage-text-transforms",
-                                      label: N.intl.string(N.t.IcDoaD),
+                                      label: I.intl.string(I.t.IcDoaD),
                                       action: () => {
                                           (0, A.mM)(async () => {
                                               let { default: t } = await Promise.all([n.e(378267), n.e(54191)]).then(
@@ -225,14 +225,14 @@ function k(t) {
                       ],
                   })
                 : null;
-        })(k),
-        K = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
-        V = g._3.useSetting();
+        })(N),
+        G = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
+        K = f._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
-    let W = k.chatInputType?.commands?.enabled ?? !1,
-        Y = k.chatInputType?.stickers?.autoSuggest ?? !1,
-        B = k.chatInputType?.submit?.button ?? !1,
-        Z = W || Y,
+    let V = N.chatInputType?.commands?.enabled ?? !1,
+        Y = N.chatInputType?.stickers?.autoSuggest ?? !1,
+        B = N.chatInputType?.submit?.button ?? !1,
+        Z = V || Y,
         z =
             "" !== e
                 ? [
@@ -240,7 +240,7 @@ function k(t) {
                           o.Dr,
                           {
                               id: "cut",
-                              label: N.intl.string(N.t.pNPVhe),
+                              label: I.intl.string(I.t.pNPVhe),
                               shortcut: (0, p.cX)() ? "\u2318X" : "Ctrl+X",
                               action: () => T.Ay.cut(),
                           },
@@ -250,7 +250,7 @@ function k(t) {
                           o.Dr,
                           {
                               id: "copy",
-                              label: N.intl.string(N.t.OpuAlK),
+                              label: I.intl.string(I.t.OpuAlK),
                               shortcut: (0, p.cX)() ? "\u2318C" : "Ctrl+C",
                               action: () => T.Ay.copy(),
                           },
@@ -260,46 +260,46 @@ function k(t) {
                 : null,
         H = (0, a.jsx)(o.sL, {
             id: "command-suggestions",
-            label: N.intl.string(N.t["9rJKF7"]),
-            checked: V,
+            label: I.intl.string(I.t["9rJKF7"]),
+            checked: K,
             action: () => {
-                let t = !V;
-                (g._3.updateSetting(t),
-                    b.default.track(X.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                let t = !K;
+                (f._3.updateSetting(t),
+                    b.default.track(E.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: X.ZSU.CONTEXT_MENU },
+                        location: { object: E.ZSU.CONTEXT_MENU },
                     }));
             },
         });
     return (0, a.jsxs)(c.W, {
         "data-menu-migrated": !0,
         navId: "textarea-context",
-        onClose: L,
-        "aria-label": N.intl.string(N.t.NWlDSI),
-        onSelect: R,
+        onClose: W,
+        "aria-label": I.intl.string(I.t.NWlDSI),
+        onSelect: O,
         children: [
-            Z && (0, a.jsx)(o.Dr, { id: "suggestions", label: N.intl.string(N.t.zgxg7v), children: W && H }),
+            Z && (0, a.jsx)(o.Dr, { id: "suggestions", label: I.intl.string(I.t.zgxg7v), children: V && H }),
             B &&
                 (0, a.jsx)(o.sL, {
                     id: "submit-button",
-                    label: N.intl.string(N.t.G8XDyj),
-                    checked: K,
+                    label: I.intl.string(I.t.G8XDyj),
+                    checked: G,
                     action: () => {
                         (0, d.Xt)();
                     },
                 }),
-            (0, a.jsx)(o.rX, { children: w }),
-            (0, a.jsxs)(o.rX, { children: [F, G] }),
+            (0, a.jsx)(o.rX, { children: U }),
+            (0, a.jsxs)(o.rX, { children: [w, F] }),
             (0, a.jsxs)(o.rX, {
                 children: [
                     z,
                     (0, a.jsx)(o.Dr, {
                         id: "paste",
-                        label: N.intl.string(N.t.lMUxVi),
+                        label: I.intl.string(I.t.lMUxVi),
                         shortcut: (0, p.cX)() ? "\u2318V" : "Ctrl+V",
                         action: () => T.Ay.paste(),
                     }),
-                    v && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: N.intl.string(N.t.X92Qnr), action: U }),
+                    R && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: I.intl.string(I.t.X92Qnr), action: L }),
                 ],
             }),
         ],

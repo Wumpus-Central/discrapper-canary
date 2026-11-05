@@ -31,8 +31,8 @@ var h = t(633075),
     k = t(46653),
     _ = t(384377),
     w = t(518477),
-    W = t(792996),
-    S = t(347727);
+    S = t(792996),
+    W = t(347727);
 function M(e) {
     let { widget: n, className: t, buttonRef: l, additionalMenuItems: r } = e,
         s = (0, c.L)(n),
@@ -45,15 +45,15 @@ function M(e) {
             (0, i.jsx)(O, {
                 children: (0, i.jsxs)(I.D, {
                     innerRef: l,
-                    className: a()(S.x6, t),
+                    className: a()(W.x6, t),
                     "data-dnd-name": s,
-                    "aria-label": W.intl.formatToPlainString(W.t.HWNJJN, { widgetTitle: s }),
+                    "aria-label": S.intl.formatToPlainString(S.t.HWNJJN, { widgetTitle: s }),
                     "aria-describedby": d,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
-                        (0, i.jsx)(E.W, { size: "sm" }),
-                        (0, i.jsx)(b.A, { id: d, children: W.intl.string(W.t.bsuqFn) }),
+                        (0, i.jsx)(E.DragIcon, { size: "sm" }),
+                        (0, i.jsx)(b.A, { id: d, children: S.intl.string(S.t.bsuqFn) }),
                     ],
                 }),
             }),
@@ -65,19 +65,19 @@ function O(e) {
         { isDragging: l } = (0, p.V)((e) => ({ isDragging: e.isDragging() }));
     return (0, i.jsx)(C.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-            className: S.HE,
+            className: W.HE,
             children: [
                 (0, i.jsx)(A.E, {
                     variant: "body-sm/normal",
                     color: "none",
-                    children: W.intl.format(t ? W.t["zvln/l"] : W.t["7cdwhg"], {
+                    children: S.intl.format(t ? S.t["zvln/l"] : S.t["7cdwhg"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
                 (0, i.jsx)(A.E, {
                     variant: "body-sm/normal",
                     color: "none",
-                    children: W.intl.format(W.t["4e0rM4"], {
+                    children: S.intl.format(S.t["4e0rM4"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
@@ -293,6 +293,7 @@ function G(e) {
                     t.e(209518),
                     t.e(748015),
                     t.e(338516),
+                    t.e(736926),
                     t.e(450048),
                     t.e(587244),
                     t.e(896137),
@@ -303,6 +304,8 @@ function G(e) {
                     t.e(789573),
                     t.e(732272),
                     t.e(220287),
+                    t.e(536973),
+                    t.e(914248),
                     t.e(647177),
                     t.e(43358),
                     t.e(817551),
@@ -316,13 +319,10 @@ function G(e) {
                     t.e(248985),
                     t.e(553683),
                     t.e(181162),
-                    t.e(736926),
-                    t.e(536973),
                     t.e(746623),
                     t.e(720161),
                     t.e(540077),
                     t.e(787320),
-                    t.e(914248),
                     t.e(124981),
                     t.e(80477),
                     t.e(353600),
@@ -347,14 +347,14 @@ function G(e) {
                     ((0, P.Z_)(), n());
                 },
                 onSelect: () => {},
-                "aria-label": W.intl.string(W.t.xpSHSk),
-                className: S.MK,
+                "aria-label": S.intl.string(S.t.xpSHSk),
+                className: W.MK,
                 children: (0, i.jsxs)(D.rX, {
                     children: [
                         a,
                         (0, i.jsx)(D.Dr, {
                             id: "remove-widget",
-                            label: W.intl.string(W.t.Mm07Yc),
+                            label: S.intl.string(S.t.Mm07Yc),
                             action: o,
                             color: "danger",
                             icon: T.TrashIcon,
@@ -370,8 +370,8 @@ function G(e) {
 var L = t(534514),
     F = t(138134),
     U = t(365199),
-    z = t(627363),
-    H = t(587895),
+    H = t(627363),
+    z = t(587895),
     q = t(928658);
 function B(e, n, t) {
     t?.conjureProjectId != null ? (0, q.r3)({ application: t, entrypoint: "user_profile_widget" }) : (0, q.GJ)(e, n);
@@ -384,10 +384,10 @@ function Y(e) {
         !(function (e, n) {
             if (!(n instanceof h.R)) return (0, q.GJ)(e, n);
             let { applicationId: t } = n;
-            H.A.isHydrated(t)
-                ? B(e, n, H.A.getApplication(t))
-                : z.Ay.fetchApplication(t)
-                      .then(() => B(e, n, H.A.getApplication(t)))
+            z.A.isHydrated(t)
+                ? B(e, n, z.A.getApplication(t))
+                : H.Ay.fetchApplication(t)
+                      .then(() => B(e, n, z.A.getApplication(t)))
                       .catch(() => (0, q.GJ)(e, n));
         })(t, n);
     }
@@ -405,7 +405,7 @@ function Y(e) {
                     ((0, P.Z_)(), n());
                 },
                 onSelect: () => {},
-                "aria-label": W.intl.string(W.t.xpSHSk),
+                "aria-label": S.intl.string(S.t.xpSHSk),
                 children: (0, i.jsxs)(D.rX, {
                     children: [
                         s,
@@ -413,7 +413,7 @@ function Y(e) {
                             D.Dr,
                             {
                                 id: "flag-widget",
-                                label: W.intl.string(W.t.D4GvHE),
+                                label: S.intl.string(S.t.D4GvHE),
                                 action: d,
                                 color: "danger",
                                 icon: F.FlagIcon,
@@ -429,7 +429,7 @@ function Y(e) {
             (0, i.jsx)(I.D, {
                 ...e,
                 innerRef: o,
-                "aria-label": W.intl.string(W.t.xpSHSk),
+                "aria-label": S.intl.string(S.t.xpSHSk),
                 className: a()(K.x, r),
                 children: (0, i.jsx)(U.MoreHorizontalIcon, { size: "sm", color: "currentColor" }),
             }),
@@ -482,8 +482,8 @@ function X(e) {
             : null;
 }
 var Z = t(192),
-    Q = t(223503);
-function $(e) {
+    $ = t(223503);
+function Q(e) {
     let { index: n, widget: t, additionalManageWidgetMenuItems: r, children: s, getWidth: d } = e,
         u = l.useRef(null),
         g = l.useRef(null),
@@ -510,9 +510,9 @@ function $(e) {
         A = E && n > I;
     return (0, i.jsxs)("div", {
         ref: g,
-        className: a()(Q.wX, { [Q.A]: b, [Q.Ze]: A, [Q.Id]: j }),
-        "aria-label": W.intl.formatToPlainString(W.t.YLczh4, { positionNumber: n + 1 }),
-        children: [(0, i.jsx)(M, { buttonRef: u, widget: t, className: Q.vn, additionalMenuItems: r }), s],
+        className: a()($.wX, { [$.A]: b, [$.Ze]: A, [$.Id]: j }),
+        "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: n + 1 }),
+        children: [(0, i.jsx)(M, { buttonRef: u, widget: t, className: $.vn, additionalMenuItems: r }), s],
     });
 }
 function ee(e) {
@@ -554,7 +554,7 @@ function ee(e) {
     function _() {
         return (0, i.jsxs)("div", {
             ref: N,
-            className: a()(Q.kL, p),
+            className: a()($.kL, p),
             children: [
                 (0, i.jsx)(V, {
                     userId: n,
@@ -575,7 +575,7 @@ function ee(e) {
         ref: P,
         "aria-labelledby": y,
         children: k
-            ? (0, i.jsx)($, {
+            ? (0, i.jsx)(Q, {
                   index: j ?? 0,
                   widget: t,
                   getWidth: () => N.current?.offsetWidth,

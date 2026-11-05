@@ -37,10 +37,13 @@ let o = {
                     }
                     let { default: e } = await Promise.all([
                         t.e(32039),
-                        t.e(87109),
                         t.e(637038),
-                        t.e(281610),
                         t.e(774542),
+                        t.e(87109),
+                        t.e(281610),
+                        t.e(748582),
+                        t.e(107186),
+                        t.e(252175),
                         t.e(65436),
                     ]).then(t.bind(t, 12247));
                     return (A) =>

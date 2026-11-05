@@ -17,7 +17,7 @@ function x() {
         className: h.w$,
         children: (0, r.jsx)("div", {
             className: h.SN,
-            children: (0, r.jsx)(a.U, { size: "xs", color: "currentColor", className: h.HE }),
+            children: (0, r.jsx)(a.CheckmarkSmallIcon, { size: "xs", color: "currentColor", className: h.HE }),
         }),
     });
 }

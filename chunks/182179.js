@@ -1,41 +1,41 @@
-n.d(t, { Ay: () => ea });
-var s = n(477900),
-    i = n(582128),
-    a = n(503698),
-    l = n.n(a),
-    r = n(120692),
-    o = n(607399),
-    c = n(855986),
-    d = n(646514),
-    u = n(866665),
-    m = n(682697),
-    x = n(834730),
-    h = n(27232),
-    j = n(534514),
-    f = n(192308),
-    g = n(939249),
-    N = n(241541),
-    p = n(43990),
-    b = n(38021),
-    v = n(366010),
-    A = n(5180),
-    C = n(265872),
-    I = n(499373),
-    E = n(708526),
-    k = n(792996);
-let y = i.lazy(() => Promise.all([n.e(732100), n.e(879948)]).then(n.bind(n, 329671)));
-function D(e) {
-    let { className: t } = e,
-        n = k.intl.string(E.default.G9fGlP),
+t.d(n, { Ay: () => ea });
+var s = t(477900),
+    i = t(582128),
+    a = t(503698),
+    l = t.n(a),
+    r = t(120692),
+    o = t(607399),
+    c = t(855986),
+    d = t(646514),
+    u = t(866665),
+    m = t(682697),
+    x = t(834730),
+    h = t(27232),
+    j = t(534514),
+    g = t(192308),
+    f = t(939249),
+    p = t(241541),
+    N = t(43990),
+    b = t(38021),
+    I = t(366010),
+    v = t(5180),
+    A = t(265872),
+    C = t(499373),
+    k = t(708526),
+    E = t(792996);
+let y = i.lazy(() => Promise.all([t.e(732100), t.e(387141), t.e(879948)]).then(t.bind(t, 329671)));
+function M(e) {
+    let { className: n } = e,
+        t = E.intl.string(k.default.G9fGlP),
         a = i.useRef(null),
         l = i.useCallback((e) => {
-            let { closePopout: t } = e;
+            let { closePopout: n } = e;
             return (0, s.jsx)(i.Suspense, {
                 fallback: null,
-                children: (0, s.jsx)(y, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
+                children: (0, s.jsx)(y, { navId: "favorite-guild-header-add-context", onClose: n, onSelect: n }),
             });
         }, []);
-    return (0, s.jsx)(C.Y, {
+    return (0, s.jsx)(A.Y, {
         targetElementRef: a,
         position: "bottom",
         align: "left",
@@ -44,76 +44,76 @@ function D(e) {
         children: (e, i) => {
             let { isShown: l } = i;
             return (0, s.jsx)(u.m, {
-                text: n,
+                text: t,
                 position: "bottom",
                 asContainer: !0,
                 shouldShow: !l,
-                children: (0, s.jsx)(g.D, {
+                children: (0, s.jsx)(f.D, {
                     innerRef: a,
-                    className: t,
-                    "aria-label": n,
+                    className: n,
+                    "aria-label": t,
                     ...e,
-                    children: (0, s.jsx)(I.T, { color: "currentColor", size: "refresh_sm" }),
+                    children: (0, s.jsx)(C.PlusMediumIcon, { color: "currentColor", size: "refresh_sm" }),
                 }),
             });
         },
     });
 }
-var M = n(454938),
-    R = n(855687),
-    S = n(876798),
-    B = n(997146),
-    T = n(606096),
-    L = n(935063),
-    F = n(408278),
-    G = n(143838),
-    O = n(334738),
-    _ = n(218461),
-    w = n(932883),
-    P = n(599486),
-    U = n(394953),
-    V = n(849077);
+var D = t(454938),
+    R = t(855687),
+    S = t(876798),
+    B = t(997146),
+    T = t(606096),
+    G = t(935063),
+    L = t(408278),
+    O = t(143838),
+    P = t(334738),
+    F = t(218461),
+    _ = t(932883),
+    w = t(599486),
+    U = t(394953),
+    V = t(849077);
 function z() {
-    let e = (0, w.op)(),
-        { selectedFilter: t, setSelectedFilter: n } = (0, P.A)(),
-        i = t === V.Io.BOOKMARKS,
-        a = i ? k.intl.string(k.t.HcoRu0) : k.intl.string(k.t["2pAkDA"]);
+    let e = (0, _.op)(),
+        { selectedFilter: n, setSelectedFilter: t } = (0, w.A)(),
+        i = n === V.Io.BOOKMARKS,
+        a = i ? E.intl.string(E.t.HcoRu0) : E.intl.string(E.t["2pAkDA"]);
     return (0, s.jsx)(u.m, {
         position: "bottom",
         text: a,
         asContainer: !0,
         children: (0, s.jsx)(S.k, {
-            icon: B.c,
+            icon: B.BookmarkOutlineIcon,
             selectedIcon: T.BookmarkIcon,
             pressed: i,
             variant: "icon-only",
             size: "sm",
             "aria-label": a,
             onClick: function () {
-                let t = i ? V.Io.ALL : V.Io.BOOKMARKS;
-                (n(t), (0, w.Ut)({ section: t, enabled: !0, viewId: e }));
+                let n = i ? V.Io.ALL : V.Io.BOOKMARKS;
+                (t(n), (0, _.Ut)({ section: n, enabled: !0, viewId: e }));
             },
         }),
     });
 }
 function Y() {
-    let e = (0, w.op)(),
-        { selectedFilter: t, setSelectedFilter: n } = (0, P.A)(),
-        i = t === V.Io.MENTIONS,
-        a = i ? k.intl.string(k.t.HcoRu0) : k.intl.string(k.t.jbV6MM);
+    let e = (0, _.op)(),
+        { selectedFilter: n, setSelectedFilter: t } = (0, w.A)(),
+        i = n === V.Io.MENTIONS,
+        a = i ? E.intl.string(E.t.HcoRu0) : E.intl.string(E.t.jbV6MM);
     return (0, s.jsx)(u.m, {
         position: "bottom",
         text: a,
         asContainer: !0,
         children: (0, s.jsx)(S.k, {
-            icon: L.X,
+            icon: G.AtIcon,
             pressed: i,
             variant: "icon-only",
             size: "sm",
             "aria-label": a,
             onClick: function () {
-                let t = i ? V.Io.ALL : V.Io.MENTIONS;
-                (n(t), (0, w.Ut)({ section: t, enabled: !0, viewId: e }));
+                let n = i ? V.Io.ALL : V.Io.MENTIONS;
+                (t(n), (0, _.Ut)({ section: n, enabled: !0, viewId: e }));
             },
         }),
     });
@@ -122,34 +122,34 @@ function K() {
     let { unreadChannelIds: e } = (0, U.U4)();
     return (0, s.jsx)(u.m, {
         position: "bottom",
-        text: k.intl.string(k.t["8k+6QY"]),
+        text: E.intl.string(E.t["8k+6QY"]),
         asContainer: !0,
-        children: (0, s.jsx)(F.K, {
-            icon: G.i,
+        children: (0, s.jsx)(L.K, {
+            icon: O.DoubleCheckmarkIcon,
             variant: "icon-only",
             size: "sm",
-            "aria-label": k.intl.string(k.t["8k+6QY"]),
+            "aria-label": E.intl.string(E.t["8k+6QY"]),
             onClick: function () {
-                let t = e
-                    .map((e) => ({ channelId: e, messageId: _.Ay.lastMessageId(e) }))
+                let n = e
+                    .map((e) => ({ channelId: e, messageId: F.Ay.lastMessageId(e) }))
                     .filter((e) => null != e.messageId);
-                0 !== t.length && O.Uq(t);
+                0 !== n.length && P.Uq(n);
             },
             disabled: 0 === e.length,
         }),
     });
 }
-var $ = n(413599),
-    H = n(253932),
-    q = n(576705),
-    Q = n(486020),
-    W = n(885631),
-    X = n(877126),
-    Z = n(652215),
-    J = n(486506);
+var $ = t(413599),
+    H = t(253932),
+    W = t(576705),
+    q = t(486020),
+    Q = t(885631),
+    X = t(877126),
+    Z = t(652215),
+    J = t(486506);
 function ee(e) {
-    let { guild: t, controller: n, guildBanner: i, animate: a } = e,
-        { value: c } = n.springs;
+    let { guild: n, controller: t, guildBanner: i, animate: a } = e,
+        { value: c } = t.springs;
     return (0, s.jsx)(r.animated.div, {
         className: J.nI,
         style: { opacity: c, transform: c.to((e) => `translateY(-${(1 - e) * 90}px)`) },
@@ -158,28 +158,28 @@ function ee(e) {
             style: { transform: c.to((e) => `translateY(${(1 - e) * 90}px)`) },
             children: (0, s.jsx)("img", {
                 className: l()(J.Q, { [J.fr]: o.Fr }),
-                src: Q.Ay.getGuildBannerURL({ id: t.id, banner: i }, a) ?? "",
+                src: q.Ay.getGuildBannerURL({ id: n.id, banner: i }, a) ?? "",
                 alt: "",
                 "aria-hidden": !0,
             }),
         }),
     });
 }
-function et(e) {
-    let { guild: t, controller: n, hasBanner: i, hasSubheader: a } = e,
-        { value: o } = n.springs,
-        c = t.features.has(Z.GuildFeatures.DISCOVERABLE),
+function en(e) {
+    let { guild: n, controller: t, hasBanner: i, hasSubheader: a } = e,
+        { value: o } = t.springs,
+        c = n.features.has(Z.GuildFeatures.DISCOVERABLE),
         h = (0, s.jsx)("div", {
             className: J.WV,
             children:
                 c &&
                 (0, s.jsx)(u.m, {
-                    text: k.intl.string(k.t.O8lDI2),
+                    text: E.intl.string(E.t.O8lDI2),
                     position: "right",
                     children: (0, s.jsxs)("div", {
                         className: J.Pl,
                         children: [
-                            (0, s.jsx)(m.f, {
+                            (0, s.jsx)(m.ExperimentalWebBadgeIcon, {
                                 size: "custom",
                                 color: d.A.colors.BADGE_INVERTED_BACKGROUND,
                                 secondaryColor: d.A.colors.BADGE_INVERTED_TEXT,
@@ -190,7 +190,7 @@ function et(e) {
                             (0, s.jsx)(x.E, {
                                 variant: "body-xs/normal",
                                 color: "none",
-                                children: k.intl.string(k.t["B/vjCu"]),
+                                children: E.intl.string(E.t["B/vjCu"]),
                             }),
                         ],
                     }),
@@ -204,45 +204,47 @@ function et(e) {
               children: h,
           });
 }
-function en() {
+function et() {
     return (0, s.jsx)(h.StarIcon, { size: "custom", color: "currentColor", className: J.PA, height: 20, width: 20 });
 }
 function es(e) {
-    let { guild: t } = e;
-    return (0, s.jsx)(j.D, { variant: "body-md/semibold", lineClamp: 1, className: J.UU, children: (0, A.YC)(t) });
+    let { guild: n } = e;
+    return (0, s.jsx)(j.D, { variant: "body-md/semibold", lineClamp: 1, className: J.UU, children: (0, v.YC)(n) });
 }
 function ei(e) {
-    let { bannerVisible: t, guild: a, onClick: l, onContextMenu: r, ariaControls: o, ariaExpanded: d, children: m } = e,
-        x = (0, A.YC)(a),
-        h = (0, c.bG)([q.A], () => (0, R.K)(q.A, a)),
+    let { bannerVisible: n, guild: a, onClick: l, onContextMenu: r, ariaControls: o, ariaExpanded: d, children: m } = e,
+        x = (0, v.YC)(a),
+        h = (0, c.bG)([W.A], () => (0, R.K)(W.A, a)),
         j = i.useCallback(() => {
             h
-                ? (0, f.mM)(async () => {
+                ? (0, g.mM)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e(683621),
-                          n.e(711162),
-                          n.e(401425),
-                          n.e(70833),
-                          n.e(897073),
-                          n.e(159957),
-                          n.e(728136),
-                          n.e(680029),
-                          n.e(966623),
-                      ]).then(n.bind(n, 660194));
-                      return (t) => (0, s.jsx)(e, { ...t, guild: a, source: Z.PE1.GUILD_HEADER_INVITE_BUTTON });
+                          t.e(683621),
+                          t.e(711162),
+                          t.e(401425),
+                          t.e(258398),
+                          t.e(70833),
+                          t.e(897073),
+                          t.e(658216),
+                          t.e(159957),
+                          t.e(728136),
+                          t.e(680029),
+                          t.e(966623),
+                      ]).then(t.bind(t, 660194));
+                      return (n) => (0, s.jsx)(e, { ...n, guild: a, source: Z.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
-                : (0, f.mM)(async () => {
-                      let { default: e } = await n.e(962751).then(n.bind(n, 132610));
-                      return (t) => (0, s.jsx)(e, { ...t });
+                : (0, g.mM)(async () => {
+                      let { default: e } = await t.e(962751).then(t.bind(t, 132610));
+                      return (n) => (0, s.jsx)(e, { ...n });
                   });
         }, [h, a]),
-        p = (0, s.jsxs)(s.Fragment, {
+        N = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)("div", {
                     className: J.LO,
                     children: [
-                        (0, s.jsx)(X.A, { guild: a, isBannerVisible: t }),
-                        (0, A.ai)(a.id) && (0, s.jsx)(en, {}),
+                        (0, s.jsx)(X.A, { guild: a, isBannerVisible: n }),
+                        (0, v.ai)(a.id) && (0, s.jsx)(et, {}),
                         (0, s.jsx)(es, { guild: a }),
                     ],
                 }),
@@ -252,31 +254,31 @@ function ei(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             a.id === Z.gNP
-                ? (0, s.jsx)("div", { className: J.Bd, children: p })
-                : (0, s.jsx)(g.D, {
+                ? (0, s.jsx)("div", { className: J.Bd, children: N })
+                : (0, s.jsx)(f.D, {
                       className: J.Vm,
-                      "aria-label": k.intl.formatToPlainString(k.t.xMXpl3, { guildName: x }),
+                      "aria-label": E.intl.formatToPlainString(E.t.xMXpl3, { guildName: x }),
                       "aria-controls": o,
                       "aria-expanded": d,
                       onContextMenu: r,
                       onClick: l,
-                      children: p,
+                      children: N,
                   }),
-            (0, A.ai)(a.id) && (0, s.jsx)(D, { className: J.sq }),
-            !(0, A.ai)(a.id) &&
+            (0, v.ai)(a.id) && (0, s.jsx)(M, { className: J.sq }),
+            !(0, v.ai)(a.id) &&
                 a.id !== Z.gNP &&
                 (0, s.jsx)(u.m, {
-                    text: k.intl.string(k.t.Sd8Ixw),
+                    text: E.intl.string(E.t.Sd8Ixw),
                     position: "bottom",
                     asContainer: !0,
                     ariaHidden: !0,
-                    children: (0, s.jsx)(g.D, {
-                        "aria-label": k.intl.string(k.t.Sd8Ixw),
+                    children: (0, s.jsx)(f.D, {
+                        "aria-label": E.intl.string(E.t.Sd8Ixw),
                         className: J.ak,
                         onClick: () => {
                             j();
                         },
-                        children: (0, s.jsx)(N.D, { size: "refresh_sm", color: "currentColor" }),
+                        children: (0, s.jsx)(p.GroupPlusIcon, { size: "refresh_sm", color: "currentColor" }),
                     }),
                 }),
             a.id === Z.gNP &&
@@ -289,8 +291,8 @@ function ei(e) {
 }
 let ea = i.memo(function (e) {
     let {
-            ref: t,
-            bannerVisible: n,
+            ref: n,
+            bannerVisible: t,
             controller: a,
             className: r,
             onClick: d,
@@ -299,67 +301,67 @@ let ea = i.memo(function (e) {
             disableBannerAnimation: x,
             "aria-expanded": h,
             "aria-controls": j,
-            guild: f,
-            guildBanner: g,
-            animationOverlayHeight: N,
+            guild: g,
+            guildBanner: f,
+            animationOverlayHeight: p,
             children: b,
-            headerClassName: v,
-            communityInfoVisible: A,
-            hasSubheader: C,
+            headerClassName: I,
+            communityInfoVisible: v,
+            hasSubheader: A,
         } = e,
-        I = f.features.has(Z.GuildFeatures.ANIMATED_BANNER),
-        E = (0, M.A)(f),
-        k = !E && (0, W.A)(f),
-        y = !E && A,
-        D = (0, Q.VI)(g) && I && !x,
+        C = g.features.has(Z.GuildFeatures.ANIMATED_BANNER),
+        k = (0, D.A)(g),
+        E = !k && (0, Q.A)(g),
+        y = !k && v,
+        M = (0, q.VI)(f) && C && !x,
         [R, S] = i.useState(!1),
         B = i.useRef(!1),
         T = i.useRef(null),
-        L = t ?? T,
-        F = i.useRef(void 0),
-        G = H.kt.getSetting(),
-        O = (0, c.bG)([$.A], () => $.A.theme);
-    function _() {
-        let { renderBanner: t, guildBanner: n } = e;
-        return null != n && !t;
+        G = n ?? T,
+        L = i.useRef(void 0),
+        O = H.kt.getSetting(),
+        P = (0, c.bG)([$.A], () => $.A.theme);
+    function F() {
+        let { renderBanner: n, guildBanner: t } = e;
+        return null != t && !n;
     }
     return (
         i.useEffect(() => {
-            if (D && n && !B.current && G)
+            if (M && t && !B.current && O)
                 return (
                     S(!0),
-                    (F.current = setTimeout(() => {
+                    (L.current = setTimeout(() => {
                         S(!1);
                     }, 5e3)),
                     () => {
-                        clearTimeout(F.current);
+                        clearTimeout(L.current);
                     }
                 );
-        }, [D, n, G]),
+        }, [M, t, O]),
         i.useEffect(() => {
-            B.current = n;
-        }, [n]),
-        (0, s.jsx)(p.N, {
-            theme: O,
+            B.current = t;
+        }, [t]),
+        (0, s.jsx)(N.N, {
+            theme: P,
             children: (e) =>
                 (0, s.jsxs)(s.Fragment, {
                     children: [
                         (0, s.jsxs)("div", {
-                            "data-has-banner": _(),
-                            "data-banner-visible": n,
-                            ref: L,
-                            className: l()(r, { [J.kL]: !0, [J.r9]: _(), [J.Pi]: n, [e]: !1, [J.Iv]: y || (C && k) }),
+                            "data-has-banner": F(),
+                            "data-banner-visible": t,
+                            ref: G,
+                            className: l()(r, { [J.kL]: !0, [J.r9]: F(), [J.Pi]: t, [e]: !1, [J.Iv]: y || (A && E) }),
                             onMouseDown: m,
                             onContextMenu: u,
                             children: [
                                 (0, s.jsxs)("header", {
-                                    className: l()(J.wx, v, { [J.jD]: o.Fr }),
+                                    className: l()(J.wx, I, { [J.jD]: o.Fr }),
                                     children: [
                                         (0, s.jsx)("div", {
                                             className: l()(J.VW, J.Nk),
                                             children: (0, s.jsx)(ei, {
-                                                bannerVisible: n,
-                                                guild: f,
+                                                bannerVisible: t,
+                                                guild: g,
                                                 onClick: d,
                                                 onContextMenu: u,
                                                 ariaControls: j,
@@ -367,29 +369,29 @@ let ea = i.memo(function (e) {
                                                 children: b,
                                             }),
                                         }),
-                                        k &&
-                                            (0, s.jsx)(et, {
-                                                guild: f,
+                                        E &&
+                                            (0, s.jsx)(en, {
+                                                guild: g,
                                                 controller: a,
-                                                hasBanner: null != g,
-                                                hasSubheader: C ?? !1,
+                                                hasBanner: null != f,
+                                                hasSubheader: A ?? !1,
                                             }),
                                     ],
                                 }),
-                                null != g
-                                    ? (0, s.jsx)(ee, { guild: f, controller: a, guildBanner: g, animate: R })
+                                null != f
+                                    ? (0, s.jsx)(ee, { guild: g, controller: a, guildBanner: f, animate: R })
                                     : null,
                                 (0, s.jsx)(el, { controller: a }),
                             ],
                         }),
-                        D && _()
+                        M && F()
                             ? (0, s.jsx)("div", {
                                   className: J.rt,
                                   onMouseEnter: () => {
-                                      (S(!0), clearTimeout(F.current));
+                                      (S(!0), clearTimeout(L.current));
                                   },
                                   onMouseLeave: () => S(!1),
-                                  style: { height: N },
+                                  style: { height: p },
                               })
                             : null,
                     ],
@@ -398,9 +400,9 @@ let ea = i.memo(function (e) {
     );
 });
 function el(e) {
-    let { controller: t } = e,
-        { theme: n } = (0, b.wR)(),
-        i = t.springs.value;
+    let { controller: n } = e,
+        { theme: t } = (0, b.wR)(),
+        i = n.springs.value;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(r.animated.div, { className: J.UL, style: { opacity: i.to((e) => 0.5 * e) } }),
@@ -409,7 +411,7 @@ function el(e) {
                 className: J.iI,
                 style: {
                     opacity: i.to((e) => (1 - e) * 6),
-                    filter: (0, v.q)(n) ? i.to((e) => `brightness(${0.75 + 0.25 * e})`) : void 0,
+                    filter: (0, I.q)(t) ? i.to((e) => `brightness(${0.75 + 0.25 * e})`) : void 0,
                 },
             }),
         ],

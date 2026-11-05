@@ -26,7 +26,7 @@ function f(t) {
                       variant: "body-md/medium",
                       color: "text-default",
                       children: [
-                          (0, r.jsx)(d.E, { size: "sm", color: "currentColor" }),
+                          (0, r.jsx)(d.CircleErrorIcon, { size: "sm", color: "currentColor" }),
                           (0, r.jsx)(c.h, { horizontal: !0, size: 8 }),
                           j.intl.string(j.t.bi7buI),
                       ],

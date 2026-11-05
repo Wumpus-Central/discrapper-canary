@@ -14,10 +14,10 @@ s.d(
     {
         A: function (e) {
             let { node: t, guestWindow: s, ...c } = e,
-                p = (0, i.bG)([o.A, r.A], () => (0, h._U)(t, s?.document), [t, s]),
-                m = p ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
-                g = p ? n.z : l.T;
-            return (0, a.jsx)(u.A, { label: m, iconComponent: g, ...c });
+                m = (0, i.bG)([o.A, r.A], () => (0, h._U)(t, s?.document), [t, s]),
+                p = m ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
+                g = m ? n.FullscreenExitIcon : l.FullscreenEnterIcon;
+            return (0, a.jsx)(u.A, { label: p, iconComponent: g, ...c });
         },
     },
 );

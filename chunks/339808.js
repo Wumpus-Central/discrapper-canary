@@ -196,7 +196,7 @@ function M(e) {
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
                     className: R.hC,
-                    children: (0, i.jsx)(g.F, {
+                    children: (0, i.jsx)(g.MoreVerticalIcon, {
                         size: "md",
                         color: "currentColor",
                         className: R.Su,

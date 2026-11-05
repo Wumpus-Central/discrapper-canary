@@ -10,7 +10,7 @@ r.d(
                 case i.cR.TAG:
                     return e.TagIcon;
                 case i.cR.NITRO:
-                    return u.t;
+                    return u.NitroWheelIcon;
                 default:
                     return null;
             }

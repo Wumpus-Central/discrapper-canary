@@ -711,7 +711,7 @@ function eZ(e) {
             (0, c.jsx)("div", {
                 className: eQ()(eF.k9, eF.QZ, { [eF.sB]: !r }),
                 children: (0, c.jsx)(eP.K, {
-                    icon: eV.n,
+                    icon: eV.ChevronSmallLeftIcon,
                     size: "sm",
                     variant: "overlay-secondary",
                     "aria-label": O.intl.string(O.t.FQx1Ru),
@@ -726,7 +726,7 @@ function eZ(e) {
             (0, c.jsx)("div", {
                 className: eQ()(eF.k9, eF.fd, { [eF.sB]: !u }),
                 children: (0, c.jsx)(eP.K, {
-                    icon: ew._,
+                    icon: ew.ChevronSmallRightIcon,
                     size: "sm",
                     variant: "overlay-secondary",
                     "aria-label": O.intl.string(O.t.H4hwjn),

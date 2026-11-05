@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(855986),
     o = n(778712),
-    d = n(834730),
-    c = n(548411),
+    c = n(834730),
+    d = n(548411),
     u = n(866665),
     h = n(939249),
     p = n(192308),
@@ -16,19 +16,19 @@ var i = n(477900),
     x = n(793574),
     C = n(429913),
     y = n(47167),
-    j = n(882840),
-    I = n(713654),
+    I = n(882840),
+    j = n(713654),
     N = n(522265),
     v = n(104299),
     E = n(611371),
     b = n(769015),
     S = n(208971),
-    _ = n(303227),
-    T = n(920639),
+    T = n(303227),
+    _ = n(920639),
     R = n(558076),
     O = n(360729),
-    P = n(508654),
-    L = n(974930),
+    L = n(508654),
+    P = n(974930),
     M = n(961314),
     w = n(58736),
     U = n(742589),
@@ -59,15 +59,15 @@ function en(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(f.A, { className: ee.my, size: o._3.SIZE_24, user: t, animate: !1 }),
-                  (0, i.jsx)(d.E, { variant: "body-md/medium", color: a, lineClamp: 1, children: s }),
+                  (0, i.jsx)(c.E, { variant: "body-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
 }
 function ei(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
-        s = (0, P.Qs)(a.id),
-        r = null != s ? (0, L.G3)(s) : null,
+        s = (0, L.Qs)(a.id),
+        r = null != s ? (0, P.G3)(s) : null,
         o = null != s;
     if (l?.type === Z.lp.ACTIVITY)
         null != n &&
@@ -87,7 +87,7 @@ function ei(e) {
                                   })
                                 : void 0,
                     }),
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(c.E, {
                         className: ee.W$,
                         variant: "body-md/normal",
                         color: "none",
@@ -123,9 +123,9 @@ n.d(
                     exitFullScreen: v,
                     guildRoomVisible: b,
                 } = e,
-                P = (0, r.bG)([Y.A], () => Y.A.getSelectedParticipant(t.id), [t.id]),
-                { enabled: L } = (0, O.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
-                M = L && !t.isGuildStageVoice(),
+                L = (0, r.bG)([Y.A], () => Y.A.getSelectedParticipant(t.id), [t.id]),
+                { enabled: P } = (0, O.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
+                M = P && !t.isGuildStageVoice(),
                 D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
                 H = (0, W.kM)(t) && (0, $.F)(o),
                 en = M && !b && !H,
@@ -137,15 +137,15 @@ n.d(
                     : b
                       ? `${el} \xb7 ${Q.intl.string(J.default.wRLmM0)}`
                       : (es ?? el),
-                eo = en ? c.Z : (0, I.gU)(t),
-                [ed] = (0, C.A)(P?.type === Z.lp.ACTIVITY ? [P.applicationId] : []),
-                ec = Q.intl.string(Q.t.BVZqJl);
+                eo = en ? d.ArrowLargeLeftIcon : (0, j.gU)(t),
+                [ec] = (0, C.A)(L?.type === Z.lp.ACTIVITY ? [L.applicationId] : []),
+                ed = Q.intl.string(Q.t.BVZqJl);
             ea
-                ? (ec = Q.intl.string(Q.t.EErMzA))
+                ? (ed = Q.intl.string(Q.t.EErMzA))
                 : t.isDM()
-                  ? (ec = Q.intl.string(Q.t.jN2DfZ))
-                  : t.isGroupDM() && (ec = Q.intl.string(Q.t["e5y+gm"]));
-            let eu = (0, S.G)((0, j.l)(t)),
+                  ? (ed = Q.intl.string(Q.t.jN2DfZ))
+                  : t.isGroupDM() && (ed = Q.intl.string(Q.t["e5y+gm"]));
+            let eu = (0, S.G)((0, I.l)(t)),
                 eh = t.isGuildVoice() && f && null != eu && eu.length > 0,
                 ep = (0, K.Ay)(t),
                 em = eh
@@ -171,7 +171,7 @@ n.d(
                                             );
                                         }
                                       : void 0,
-                                  children: (0, i.jsx)(d.E, {
+                                  children: (0, i.jsx)(c.E, {
                                       variant: "body-xs/normal",
                                       className: s()(ee.Gh, et.PT),
                                       children: G.A.parseVoiceChannelStatus(eu, !0, { channelId: t.id }),
@@ -184,9 +184,9 @@ n.d(
                 ef = l.useCallback(() => {
                     en &&
                         (D
-                            ? (0, _.UV)(!1, t.id)
-                            : ((0, _.zD)(t.id),
-                              (0, T.yt)({
+                            ? (0, T.UV)(!1, t.id)
+                            : ((0, T.zD)(t.id),
+                              (0, _.yt)({
                                   channelId: t.id,
                                   guildId: t.guild_id,
                                   location: x.A.CHANNEL_CALL,
@@ -210,7 +210,7 @@ n.d(
                             isChatOpen: g,
                             isStageAudienceSidebarOpen: N,
                             exitFullScreen: v,
-                            focusedApplication: ed,
+                            focusedApplication: ec,
                             shouldShowHeaderParticipants: !0,
                             guildRoomVisible: b,
                             guildRoomVideoOverlayVisible: D,
@@ -224,7 +224,7 @@ n.d(
                                         null != eo
                                             ? (0, i.jsx)(w.Ay.ChannelIcon, {
                                                   icon: eo,
-                                                  "aria-label": ec,
+                                                  "aria-label": ed,
                                                   color: en ? "white" : void 0,
                                               })
                                             : null,
@@ -233,7 +233,7 @@ n.d(
                                         eA &&
                                             (0, i.jsx)(u.m, {
                                                 text: Q.intl.string(Q.t.QyZ4Td),
-                                                children: (0, i.jsx)(m.m, {
+                                                children: (0, i.jsx)(m.ShieldLockIcon, {
                                                     size: "xs",
                                                     "aria-label": Q.intl.string(Q.t.VHXh8a),
                                                     color: A.A.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -252,7 +252,7 @@ n.d(
                                   })
                                 : null,
                             (0, i.jsx)(V.i$, { channel: t, guild: a }),
-                            (0, i.jsx)(ei, { focusedApplication: ed, focusedParticipant: P, channel: t }),
+                            (0, i.jsx)(ei, { focusedApplication: ec, focusedParticipant: L, channel: t }),
                         ],
                     }),
                     ea && (0, i.jsx)(z.A, { channel: t }),

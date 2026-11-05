@@ -11,8 +11,8 @@ var e = t(477900),
     h = t(778712),
     x = t(140735),
     g = t(707554),
-    m = t(597798),
-    C = t(401843),
+    C = t(597798),
+    m = t(401843),
     j = t(475743),
     p = t(672979),
     v = t(717306),
@@ -21,8 +21,8 @@ var e = t(477900),
     f = t(793574),
     O = t(688810),
     y = t(47167),
-    E = t(402216),
-    I = t(450149),
+    I = t(402216),
+    E = t(450149),
     b = t(711589),
     L = t(71393),
     S = t(576705),
@@ -67,11 +67,11 @@ t.d(
                 { analyticsLocations: ir } = (0, O.Ay)(f.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
                 ic = (0, V.A)({ display: "live", voiceChannelId: is?.id, user: t, stream: q, analyticsLocations: ir }),
                 iu = (0, T.A)({ userId: t.id, onAction: ic }),
-                { previewUrl: iA, isLoading: ih } = (0, I.A)(q?.guildId, q?.channelId, q?.ownerId),
+                { previewUrl: iA, isLoading: ih } = (0, E.A)(q?.guildId, q?.channelId, q?.ownerId),
                 ix = (0, _.a)() && (0, N.UK)(is?.id),
                 ig = (0, d.bG)([S.A], () => null != is && !ix && S.A.canBasicChannel(B.hVb.CONNECT, is)),
-                im = (0, j.Ay)(ih ? null : iA),
-                iC = ih || null == iA ? im : iA,
+                iC = (0, j.Ay)(ih ? null : iA),
+                im = ih || null == iA ? iC : iA,
                 ij = n.useId();
             if (null == ii || null == is || !1 === q.discoverable) return null;
             function ip() {
@@ -97,7 +97,7 @@ t.d(
                     children: [
                         (0, e.jsx)(G.A, {
                             text: iv,
-                            tags: (0, e.jsx)(E.Ay, { size: E.ed.SMALL }),
+                            tags: (0, e.jsx)(I.Ay, { size: I.ed.SMALL }),
                             contextMenu: (0, e.jsx)(R.A, { display: "live", user: t, onClose: K }),
                         }),
                         (0, e.jsx)(x.A, { children: (0, e.jsx)(g.H, { id: ij, children: `${iv}, ${ia}` }) }),
@@ -111,13 +111,13 @@ t.d(
                                             (i.stopPropagation(),
                                                 ie &&
                                                     (ic({ action: "PRESS_IMAGE" }),
-                                                    m.default.selectVoiceChannel(q.channelId),
-                                                    (0, C.Nl)(q),
+                                                    C.default.selectVoiceChannel(q.channelId),
+                                                    (0, m.Nl)(q),
                                                     K?.()));
                                         }),
-                                        null == iC && ih
+                                        null == im && ih
                                             ? (0, e.jsx)("div", { className: Y.VH, children: (0, e.jsx)(r.y, {}) })
-                                            : null == iC || ix
+                                            : null == im || ix
                                               ? (0, e.jsxs)(c.D, {
                                                     className: a()(Y.VH, Y.Lw, ie ? Y.vk : Y.r9),
                                                     onClick: l,
@@ -151,7 +151,7 @@ t.d(
                                                     "aria-label": it,
                                                     "aria-disabled": !ie,
                                                     children: [
-                                                        (0, e.jsx)("img", { alt: "", src: iC, className: Y.Sl }),
+                                                        (0, e.jsx)("img", { alt: "", src: im, className: Y.Sl }),
                                                         X !== H.d.MODAL &&
                                                             X !== H.d.MODAL_V2 &&
                                                             (0, e.jsxs)(e.Fragment, {
@@ -162,7 +162,7 @@ t.d(
                                                                         color: "text-overlay-light",
                                                                         children: il,
                                                                     }),
-                                                                    (0, e.jsx)(A.p, {
+                                                                    (0, e.jsx)(A.ClydeIcon, {
                                                                         size: "xs",
                                                                         color: "currentColor",
                                                                         className: Y.wI,

@@ -230,7 +230,7 @@ function w(e) {
 var E = s(939249),
     R = s(320448),
     N = s(611248);
-function _(e) {
+function A(e) {
     let { mfaChallenge: t, setSlide: s, onClose: l } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -250,7 +250,7 @@ function _(e) {
                                     variant: "body-md/semibold",
                                     children: N.e[e.type],
                                 }),
-                                (0, n.jsx)(R._, {
+                                (0, n.jsx)(R.ChevronSmallRightIcon, {
                                     size: "custom",
                                     color: "currentColor",
                                     width: 20,
@@ -266,7 +266,7 @@ function _(e) {
         ],
     });
 }
-var A = s(620632),
+var _ = s(620632),
     B = s(532446),
     D = s(652215);
 function T(e) {
@@ -279,7 +279,7 @@ function T(e) {
         w = l.useRef(null);
     (l.useEffect(() => {
         (d(!0),
-            A.Bo.post({ url: D.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
+            _.Bo.post({ url: D.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
                 .then((e) => {
                     u(e.body.phone);
                 })
@@ -328,7 +328,7 @@ function T(e) {
                                 text: x.intl.string(x.t.ZF29L6),
                                 loading: o,
                                 onClick: () => {
-                                    A.Bo.post({
+                                    _.Bo.post({
                                         url: D.Rsh.LOGIN_SMS_SEND,
                                         body: { ticket: t.ticket },
                                         oldFormErrors: !0,
@@ -422,7 +422,7 @@ function Z(e) {
                 try {
                     await s({ mfaType: "webauthn", data: t });
                 } catch (e) {
-                    e instanceof A.oh
+                    e instanceof _.oh
                         ? (e.status >= 400 && e.status < 500 && (await W.A.signalUnknownCredential(t)),
                           c(x.intl.string(x.t.xSCvBf)))
                         : ((0, O.Os)(e, {}), c(e.message));
@@ -472,7 +472,7 @@ function z(e) {
                 width: "100%",
                 onSlideReady: m,
                 children: [
-                    (0, n.jsx)(a.q, { id: "select", children: (0, n.jsx)(_, { ...f }) }),
+                    (0, n.jsx)(a.q, { id: "select", children: (0, n.jsx)(A, { ...f }) }),
                     (0, n.jsx)(a.q, { id: "webauthn", children: (0, n.jsx)(Z, { ...f }) }),
                     (0, n.jsx)(a.q, { id: "totp", children: (0, n.jsx)(F, { ...f, isSlideReady: "totp" === h }) }),
                     (0, n.jsx)(a.q, { id: "sms", children: (0, n.jsx)(T, { ...f, isSlideReady: "sms" === h }) }),

@@ -60,7 +60,7 @@ t.d(
                                   className: f.Ne,
                                   children: (0, s.jsx)(r.m, {
                                       text: x.intl.string(x.t["1QLRYb"]),
-                                      children: (0, s.jsx)(c.t, {
+                                      children: (0, s.jsx)(c.PinIcon, {
                                           size: "custom",
                                           width: 16,
                                           height: 16,

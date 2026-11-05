@@ -598,7 +598,7 @@ function eQ(e) {
                   })
                 : (0, s.jsxs)(s.Fragment, {
                       children: [
-                          (0, s.jsx)(eT.R, { size: "custom", width: 12, height: 12 }),
+                          (0, s.jsx)(eT.ServerIcon, { size: "custom", width: 12, height: 12 }),
                           " ",
                           K.intl.string(K.t.NRC3ar),
                       ],
@@ -655,13 +655,13 @@ function eQ(e) {
                                   appId: t.id,
                                   subscriptionType: I ? "user" : "guild",
                                   skuId: o.id,
-                                  icon: eS.U,
+                                  icon: eS.ShopIcon,
                                   onHasClicked: _,
                                   subscriptionPlan: d,
                                   state: x,
                               })
                             : (0, s.jsx)(eg.$, { variant: "primary", text: K.intl.string(K.t.uuzaAK), onClick: v })
-                        : (0, s.jsx)(eW.$P, { appId: t.id, sku: o, icon: eS.U, onHasClicked: _ }),
+                        : (0, s.jsx)(eW.$P, { appId: t.id, sku: o, icon: eS.ShopIcon, onHasClicked: _ }),
                 ],
             }),
         })
@@ -678,7 +678,7 @@ function e0(e) {
                     (0, s.jsxs)("div", {
                         className: eX.qd,
                         children: [
-                            (0, s.jsx)(eS.U, { size: "xxs" }),
+                            (0, s.jsx)(eS.ShopIcon, { size: "xxs" }),
                             (0, s.jsx)(A.E, { variant: "body-sm/medium", color: "text-muted", children: t }),
                         ],
                     }),
@@ -831,7 +831,7 @@ let tc = function (e) {
                   (0, s.jsxs)("div", {
                       className: td.mp,
                       children: [
-                          (0, s.jsx)(e6.k, { size: "xs", color: "currentColor", className: td.Kk }),
+                          (0, s.jsx)(e6.AnnouncementsIcon, { size: "xs", color: "currentColor", className: td.Kk }),
                           (0, s.jsx)(e9.D, {
                               variant: "heading-xs/medium",
                               className: td.dS,
@@ -845,7 +845,11 @@ let tc = function (e) {
                           }),
                           (0, s.jsx)(eM.D, {
                               onClick: a,
-                              children: (0, s.jsx)(e4.a, { size: "xs", color: "currentColor", className: td.ut }),
+                              children: (0, s.jsx)(e4.CircleXIcon, {
+                                  size: "xs",
+                                  color: "currentColor",
+                                  className: td.ut,
+                              }),
                           }),
                       ],
                   }),
@@ -939,7 +943,7 @@ function tS(e) {
                           (0, s.jsxs)(e9.D, {
                               variant: "heading-sm/semibold",
                               className: ty.qP,
-                              children: [K.intl.string(tN.default.KSBBpC), " ", (0, s.jsx)(tp.t, {})],
+                              children: [K.intl.string(tN.default.KSBBpC), " ", (0, s.jsx)(tp.NitroWheelIcon, {})],
                           }),
                           (0, s.jsx)(A.E, {
                               variant: "body-sm/medium",
@@ -1124,7 +1128,7 @@ function nL(e) {
     let u = l
         ? K.intl.format(K.t.JC15qj, {
               orbPrice: o.amount,
-              orbIconHook: () => (0, s.jsx)(tG.C, { className: nS.fN, size: "sm", color: "currentColor" }),
+              orbIconHook: () => (0, s.jsx)(tG.OrbsIcon, { className: nS.fN, size: "sm", color: "currentColor" }),
           })
         : K.intl.formatToPlainString(K.t["cNSL/j"], { price: (0, t$.$g)(o.amount, o.currency) });
     return (0, s.jsx)(eg.$, { variant: "primary", onClick: c, text: u, fullWidth: !0 });
@@ -1627,7 +1631,7 @@ function iA(e) {
                       color: "none",
                       children: `${a.originLabel}  \u{2022}  ${a.timestampLabel}`,
                   }),
-                  (0, s.jsx)(n6._, { size: "xxs", color: nU.A.colors.TEXT_MUTED }),
+                  (0, s.jsx)(n6.ChevronSmallRightIcon, { size: "xxs", color: nU.A.colors.TEXT_MUTED }),
               ],
           });
 }
@@ -1857,7 +1861,10 @@ function iP(e) {
                                                   fullWidth: !1,
                                                   className: iR.Nz,
                                                   children: [
-                                                      (0, s.jsx)(iC.n, { size: "xs", color: nU.A.colors.ICON_MUTED }),
+                                                      (0, s.jsx)(iC.GroupIcon, {
+                                                          size: "xs",
+                                                          color: nU.A.colors.ICON_MUTED,
+                                                      }),
                                                       (0, s.jsx)(A.E, {
                                                           variant: "body-xs/normal",
                                                           color: "text-strong",
@@ -1970,7 +1977,7 @@ function iY(e) {
                               : (0, s.jsx)("div", {
                                     "aria-hidden": !0,
                                     className: iF.EU,
-                                    children: (0, s.jsx)(iO._, { size: "lg", color: "currentColor" }),
+                                    children: (0, s.jsx)(iO.UnknownGameIcon, { size: "lg", color: "currentColor" }),
                                 }),
                           (0, s.jsxs)("div", {
                               className: iF.Qs,
@@ -1995,7 +2002,7 @@ function iY(e) {
                               ],
                           }),
                           (0, s.jsx)(ek.K, {
-                              icon: n6._,
+                              icon: n6.ChevronSmallRightIcon,
                               variant: "overlay-secondary",
                               size: "sm",
                               "aria-label": K.intl.formatToPlainString(K.t["8QLQB+"], { gameName: i.name }),
@@ -2142,7 +2149,7 @@ function le(e) {
                                     className: i7.xG,
                                     children: (0, s.jsx)(ek.K, {
                                         variant: "secondary",
-                                        icon: eS.U,
+                                        icon: eS.ShopIcon,
                                         "aria-label": K.intl.string(i8.default.F5W36W),
                                         onClick: I,
                                     }),
@@ -2701,7 +2708,7 @@ function l1(e) {
                                         className: l0.O9,
                                         children: [
                                             null != d.channelName &&
-                                                (0, s.jsx)(lO.d, {
+                                                (0, s.jsx)(lO.ImageSparkleIcon, {
                                                     size: "md",
                                                     color: "currentColor",
                                                     className: l0.Xg,
@@ -2865,7 +2872,7 @@ function sA(e) {
                       color: "none",
                       children: `${a.originLabel}  \u{2022}  ${a.timestampLabel}`,
                   }),
-                  (0, s.jsx)(n6._, { size: "xxs", color: nU.A.colors.TEXT_MUTED }),
+                  (0, s.jsx)(n6.ChevronSmallRightIcon, { size: "xxs", color: nU.A.colors.TEXT_MUTED }),
               ],
           });
 }
@@ -3136,7 +3143,7 @@ function sD(e) {
 function sO(e) {
     let { iconType: t } = e,
         n = {
-            default: (0, s.jsx)(e6.k, { size: "xs", color: nU.A.colors.TEXT_LINK.css }),
+            default: (0, s.jsx)(e6.AnnouncementsIcon, { size: "xs", color: nU.A.colors.TEXT_LINK.css }),
             danger: (0, s.jsx)(sv.WarningIcon, { color: nU.A.colors.ICON_FEEDBACK_CRITICAL }),
         };
     return null != t && t in n ? (0, s.jsx)("div", { className: sL.Kk, children: n[t] }) : null;
@@ -3291,7 +3298,7 @@ function s1(e) {
                                 (0, s.jsx)(eg.$, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    icon: eS.U,
+                                    icon: eS.ShopIcon,
                                     text: K.intl.string(K.t.RSyoZu),
                                     onClick: N,
                                 }),
@@ -3625,7 +3632,7 @@ function r_(e) {
                                                                   color: "none",
                                                                   children: K.intl.string(K.t.vtH5hn),
                                                               }),
-                                                              (0, s.jsx)(rr.a, {
+                                                              (0, s.jsx)(rr.ChevronSmallDownIcon, {
                                                                   size: "md",
                                                                   color: "currentColor",
                                                                   className: o()(rI.ZB, { [rI.cP]: !I }),
@@ -3722,7 +3729,10 @@ let rb = (0, s7.xI)(s5.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
             { analyticsLocations: m } = (0, I.Ay)(f.A.STICKER_MESSAGE),
             h = (0, s.jsxs)("span", {
                 className: ry.Zl,
-                children: [(0, s.jsx)(s6.s, { size: "xs", color: "currentColor", className: ry.lA }), (u ?? t).name],
+                children: [
+                    (0, s.jsx)(s6.StickerSmallIcon, { size: "xs", color: "currentColor", className: ry.lA }),
+                    (u ?? t).name,
+                ],
             });
         return (0, s.jsx)(I.f5, {
             value: m,
@@ -4219,7 +4229,10 @@ function aj(e) {
                                                   className: aC.PP,
                                                   onClick: c,
                                                   "aria-label": K.intl.string(K.t.GT3fNz),
-                                                  children: (0, s.jsx)(af.P, { size: "xs", color: "currentColor" }),
+                                                  children: (0, s.jsx)(af.XSmallIcon, {
+                                                      size: "xs",
+                                                      color: "currentColor",
+                                                  }),
                                               }),
                                           (0, lT.fD)(t),
                                       ],
@@ -4386,9 +4399,9 @@ let aG = r.memo(function (e) {
             let { activity: t, activityUsersCount: n } = e;
             switch (t?.type) {
                 case H.$.STREAMING:
-                    return { text: K.intl.formatToPlainString(K.t.tyCw2q, { count: n }), Icon: V.o };
+                    return { text: K.intl.formatToPlainString(K.t.tyCw2q, { count: n }), Icon: V.ScreenStreamIcon };
                 case H.$.LISTENING:
-                    return { text: K.intl.formatToPlainString(K.t["2l8yka"], { count: n }), Icon: F.T };
+                    return { text: K.intl.formatToPlainString(K.t["2l8yka"], { count: n }), Icon: F.MusicIcon };
                 default:
                     return { text: K.intl.formatToPlainString(K.t.yJj035, { count: n }), Icon: Y.GameControllerIcon };
             }
@@ -4463,7 +4476,10 @@ let aG = r.memo(function (e) {
                                           className: o()(aO.DT, aO.PK),
                                           children: [
                                               (0, s.jsx)("div", {
-                                                  children: (0, s.jsx)(ay.u, { size: "xxs", color: "currentColor" }),
+                                                  children: (0, s.jsx)(ay.PaperIcon, {
+                                                      size: "xxs",
+                                                      color: "currentColor",
+                                                  }),
                                               }),
                                               (0, s.jsx)(A.E, {
                                                   variant: "body-xs/medium",
@@ -4642,7 +4658,7 @@ function ot(e) {
     return (0, s.jsxs)("div", {
         className: o()(a7.nM, t),
         children: [
-            (0, s.jsx)(aH._, { size: "md", color: "currentColor", className: a7.Kk }),
+            (0, s.jsx)(aH.InventoryIcon, { size: "md", color: "currentColor", className: a7.Kk }),
             K.intl.string(K.t["7eicAO"]),
         ],
     });
@@ -4651,7 +4667,7 @@ function on(e) {
     let { sku: t, className: n } = e;
     return (0, s.jsxs)("div", {
         className: o()(a7.nM, n),
-        children: [(0, s.jsx)(tp.t, { size: "md", color: "currentColor", className: a7.Kk }), a8(t)],
+        children: [(0, s.jsx)(tp.NitroWheelIcon, { size: "md", color: "currentColor", className: a7.Kk }), a8(t)],
     });
 }
 function oi(e) {
@@ -4972,7 +4988,7 @@ class oN extends r.Component {
                 splashPlaceholderClassName: c,
                 renderMediaOverlay: u,
             } = this.props,
-            m = a ? oI._ : oE.H;
+            m = a ? oI.VoiceXIcon : oE.VoiceNormalIcon;
         return (0, s.jsxs)(r.Fragment, {
             children: [
                 ll.Fr
@@ -5254,7 +5270,7 @@ function ow(e) {
         className: oG.kP,
         onClick: t,
         children: [
-            (0, s.jsx)(aH._, { size: "md", color: "currentColor", className: oG.dy }),
+            (0, s.jsx)(aH.InventoryIcon, { size: "md", color: "currentColor", className: oG.dy }),
             (0, s.jsx)("div", { children: n.isHidden() ? K.intl.string(K.t.Wi99Ro) : K.intl.string(K.t["+tXad7"]) }),
         ],
     });
@@ -6687,7 +6703,7 @@ function dO(e) {
                             (0, s.jsxs)("div", {
                                 className: dD.yW,
                                 children: [
-                                    (0, s.jsx)(oE.H, {
+                                    (0, s.jsx)(oE.VoiceNormalIcon, {
                                         className: dD.p,
                                         color:
                                             c.length > 0 ? nU.A.colors.TEXT_FEEDBACK_POSITIVE : nU.A.colors.ICON_SUBTLE,
@@ -6756,7 +6772,7 @@ function dO(e) {
                         className: dD.TB,
                         children: (0, s.jsx)(eg.$, {
                             onClick: N,
-                            icon: oE.H,
+                            icon: oE.VoiceNormalIcon,
                             variant: "active",
                             fullWidth: !0,
                             text: K.intl.string(K.t.gpqgah),
@@ -6821,7 +6837,13 @@ function dV(e) {
                 color: "currentColor",
                 children: (0, s.jsxs)(ri.A, { children: [i.name, " / ", a] }),
             }),
-            (0, s.jsx)(n6._, { className: dH.t4, color: "currentColor", size: "custom", width: 12, height: 12 }),
+            (0, s.jsx)(n6.ChevronSmallRightIcon, {
+                className: dH.t4,
+                color: "currentColor",
+                size: "custom",
+                width: 12,
+                height: 12,
+            }),
         ],
     });
 }
@@ -7433,7 +7455,7 @@ function ct(e) {
     return (0, s.jsx)(eg.$, {
         size: "sm",
         onClick: l,
-        icon: d4.U,
+        icon: d4.ShopSparkleIcon,
         text: K.intl.format(K.t.XDRjs5, { appName: t.name }),
     });
 }
@@ -7454,7 +7476,7 @@ function co(e) {
                     {
                         className: ca.Yf,
                         children: [
-                            (0, s.jsx)(cr.D, { size: "lg", color: nU.A.colors.TEXT_MUTED }),
+                            (0, s.jsx)(cr.ImageWarningIcon, { size: "lg", color: nU.A.colors.TEXT_MUTED }),
                             (0, s.jsx)(A.E, {
                                 variant: "body-sm/medium",
                                 color: "text-muted",

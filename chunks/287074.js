@@ -9,8 +9,8 @@ var l = t(477900),
     d = t(218461),
     h = t(188567),
     g = t(58736),
-    A = t(652215),
-    m = t(792996);
+    m = t(652215),
+    A = t(792996);
 t.d(
     n,
     {},
@@ -26,15 +26,15 @@ t.d(
                 }, [t]),
                 b = (0, a.bG)([d.Ay], () => d.Ay.hasUnreadPins(n.id), [n]),
                 C = i.useMemo(() => (b ? { type: "unread", position: "bottom" } : void 0), [b]);
-            function E(e) {
-                e?.shiftKey || f.dispatch(A.jej.POPOUT_CLOSE);
+            function I(e) {
+                e?.shiftKey || f.dispatch(m.jej.POPOUT_CLOSE);
             }
             return (
                 i.useEffect(
                     () => (
-                        h._.subscribe(A.jej.TOGGLE_CHANNEL_PINS, N),
+                        h._.subscribe(m.jej.TOGGLE_CHANNEL_PINS, N),
                         () => {
-                            h._.unsubscribe(A.jej.TOGGLE_CHANNEL_PINS, N);
+                            h._.unsubscribe(m.jej.TOGGLE_CHANNEL_PINS, N);
                         }
                     ),
                     [N],
@@ -49,7 +49,7 @@ t.d(
                     ignoreModalClicks: !0,
                     onRequestClose: () => j(!1),
                     renderPopout: function (e) {
-                        return (0, l.jsx)(o.A, { ...e, onJump: E, channel: n });
+                        return (0, l.jsx)(o.A, { ...e, onJump: I, channel: n });
                     },
                     clickTrap: !0,
                     children: (e, n) => {
@@ -58,10 +58,10 @@ t.d(
                             ...e,
                             ref: x,
                             onClick: N,
-                            tooltip: i ? null : m.intl.string(m.t["mp1N/2"]),
-                            icon: r.t,
+                            tooltip: i ? null : A.intl.string(A.t["mp1N/2"]),
+                            icon: r.PinIcon,
                             iconSize: 20,
-                            "aria-label": m.intl.string(m.t["mp1N/2"]),
+                            "aria-label": A.intl.string(A.t["mp1N/2"]),
                             disabled: t,
                             badge: C,
                             selected: i,

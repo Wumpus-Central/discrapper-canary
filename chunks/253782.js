@@ -744,7 +744,7 @@ function eD(e) {
                                           children: (0, s.jsx)(eA.K, {
                                               size: "sm",
                                               variant: "overlay-secondary",
-                                              icon: ej.P,
+                                              icon: ej.XSmallIcon,
                                               onClick: _,
                                               "aria-label": R.intl.string(R.t.WAI6xu),
                                           }),

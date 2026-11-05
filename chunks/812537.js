@@ -32,21 +32,25 @@ var E = i(325499),
     D = i(17268),
     M = i(792996),
     O = i(842671),
-    U = i(831768),
-    L = i(55647),
+    L = i(831768),
+    U = i(55647),
     k = i(202600);
 function G(e) {
     let { includes: t } = e;
     return t
         ? (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, s.jsx)(c.B, { size: "sm", color: r.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, s.jsx)(c.CheckmarkSmallBoldIcon, {
+                      size: "sm",
+                      color: r.A.colors.TEXT_STRONG,
+                      "aria-hidden": !0,
+                  }),
                   (0, s.jsx)(o.A, { children: M.intl.string(M.t["tq+6t/"]) }),
               ],
           })
         : (0, s.jsxs)(s.Fragment, {
               children: [
-                  (0, s.jsx)(d.a, { size: "xs", color: r.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
+                  (0, s.jsx)(d.XSmallBoldIcon, { size: "xs", color: r.A.colors.TEXT_STRONG, "aria-hidden": !0 }),
                   (0, s.jsx)(o.A, { children: M.intl.string(M.t.l4qZrp) }),
               ],
           });
@@ -54,22 +58,22 @@ function G(e) {
 function w(e) {
     let { label: t, tier0ColumnData: i, tier2ColumnData: n } = e;
     return (0, s.jsxs)("tr", {
-        className: l()(L.nM, L.WQ),
+        className: l()(U.nM, U.WQ),
         children: [
             (0, s.jsx)("th", {
                 scope: "row",
-                className: L.nx,
+                className: U.nx,
                 children: (0, s.jsx)(u.E, { variant: "body-md/medium", children: t }),
             }),
             (0, s.jsx)("td", {
-                className: L.Hn,
+                className: U.Hn,
                 children:
                     null != i.text
                         ? (0, s.jsx)(u.E, { variant: "body-md/medium", children: i.text })
                         : (0, s.jsx)(G, { includes: !!i.includes }),
             }),
             (0, s.jsx)("td", {
-                className: L.Hn,
+                className: U.Hn,
                 children:
                     null != n.text
                         ? (0, s.jsx)(u.E, { variant: "body-md/medium", children: n.text })
@@ -83,9 +87,9 @@ function B(e) {
     return (0, s.jsxs)("tbody", {
         children: [
             (0, s.jsx)("tr", {
-                className: l()(L.nM, L.Gf),
+                className: l()(U.nM, U.Gf),
                 children: (0, s.jsxs)("td", {
-                    className: L.nx,
+                    className: U.nx,
                     colSpan: 3,
                     children: [
                         (0, s.jsx)(m.D, { variant: "heading-lg/semibold", children: t }),
@@ -101,12 +105,12 @@ function H(e) {
     let { premiumType: t, priceString: i } = e,
         n = t === v.PremiumTypes.TIER_0 ? M.intl.string(M.t.tUbSDK) : M.intl.string(M.t.Ipxkog);
     return (0, s.jsxs)("div", {
-        className: L.nn,
+        className: U.nn,
         children: [
             (0, s.jsxs)("div", {
-                className: L.KS,
+                className: U.KS,
                 children: [
-                    (0, s.jsx)(x.t, { colorClass: L.oG }),
+                    (0, s.jsx)(x.NitroWheelIcon, { colorClass: U.oG }),
                     (0, s.jsx)(m.D, { variant: "heading-xs/semibold", children: n }),
                 ],
             }),
@@ -128,16 +132,16 @@ function F(e) {
     }
     return (0, s.jsx)("thead", {
         children: (0, s.jsxs)("tr", {
-            className: L.U1,
+            className: U.U1,
             children: [
                 (0, s.jsx)("th", {
                     scope: "col",
-                    className: L.Cr,
+                    className: U.Cr,
                     children: (0, s.jsx)(m.D, { variant: "heading-xl/semibold", children: M.intl.string(M.t.ED4UVD) }),
                 }),
                 (0, s.jsx)("th", {
                     scope: "col",
-                    className: L.Hn,
+                    className: U.Hn,
                     children: (0, s.jsx)(H, {
                         premiumType: v.PremiumTypes.TIER_0,
                         priceString: c((0, h.$g)(t.amount, t.currency)),
@@ -145,7 +149,7 @@ function F(e) {
                 }),
                 (0, s.jsx)("th", {
                     scope: "col",
-                    className: L.Hn,
+                    className: U.Hn,
                     children: (0, s.jsx)(H, { premiumType: v.PremiumTypes.TIER_2, priceString: n ? r : c(r) }),
                 }),
             ],
@@ -171,8 +175,8 @@ let V = function (e) {
         W = (0, b.N1)(H),
         z = null != W ? `${W}/${(0, f.FJ)(v.WT.MONTH)}` : "",
         Y = (0, f.JM)(v.gD.PREMIUM_MONTH_TIER_0),
-        K = (0, f.JM)(v.gD.PREMIUM_MONTH_TIER_2),
-        X = (function () {
+        X = (0, f.JM)(v.gD.PREMIUM_MONTH_TIER_2),
+        K = (function () {
             let e = (0, E.b)("premium_marketing_comparison"),
                 t = [
                     {
@@ -210,13 +214,13 @@ let V = function (e) {
                     ((i = {
                         id: 23,
                         title: M.intl.string(M.t.NG1e6l),
-                        subtitle: M.intl.format(U.default.uJcbMv, {
+                        subtitle: M.intl.format(L.default.uJcbMv, {
                             termsLink: I.A.getArticleURL(y.MVz.NITRO_2_POINT_0),
                         }),
                         rows: [
                             {
                                 id: 24,
-                                label: M.intl.string(U.default.OpOEmk),
+                                label: M.intl.string(L.default.OpOEmk),
                                 tier0ColumnData: { includes: !1 },
                                 tier2ColumnData: { includes: !0 },
                             },
@@ -225,7 +229,7 @@ let V = function (e) {
                     l &&
                         i.rows.push({
                             id: 25,
-                            label: M.intl.string(U.default.Q0A42h),
+                            label: M.intl.string(L.default.Q0A42h),
                             tier0ColumnData: { includes: !1 },
                             tier2ColumnData: { includes: !0 },
                         }),
@@ -370,52 +374,52 @@ let V = function (e) {
     if (r) t = null;
     else {
         let e = null != x ? M.intl.string(M.t.IBYG5U) : M.intl.string(M.t.TR2B4T);
-        t = (0, s.jsx)(j.R, { className: l()(L.Io, L.SP), text: e });
+        t = (0, s.jsx)(j.R, { className: l()(U.Io, U.SP), text: e });
     }
     let Z = G === v.pe.TIER_0 || c === v.PremiumTypes.TIER_0;
     return (0, s.jsx)(p.f5, {
         value: u,
         children: (0, s.jsxs)("div", {
-            className: l()(L.zr, i, { [L.W0]: d }),
+            className: l()(U.zr, i, { [U.W0]: d }),
             children: [
                 (0, s.jsx)(m.D, {
-                    className: L.Qw,
+                    className: U.Qw,
                     variant: d ? "heading-lg/semibold" : "nitro-md",
                     color: "text-strong",
                     children: a ?? M.intl.string(M.t.DbPgAd),
                 }),
                 (0, s.jsxs)("div", {
-                    className: L.wY,
+                    className: U.wY,
                     children: [
                         (0, s.jsxs)("div", {
-                            className: l()(L.fO, { [L.Vd]: Z, [L.hA]: !Z }),
+                            className: l()(U.fO, { [U.Vd]: Z, [U.hA]: !Z }),
                             children: [
                                 !Z && t,
-                                (0, s.jsx)("div", { className: L.xQ }),
+                                (0, s.jsx)("div", { className: U.xQ }),
                                 (0, s.jsxs)("div", {
-                                    className: L.wN,
+                                    className: U.wN,
                                     children: [
-                                        (0, s.jsx)("img", { src: k, alt: "", className: L.kQ }),
+                                        (0, s.jsx)("img", { src: k, alt: "", className: U.kQ }),
                                         (0, s.jsx)("img", {
                                             src: "/assets/6162a665edda48d4.svg",
                                             alt: "",
-                                            className: L.kQ,
+                                            className: U.kQ,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, s.jsxs)("table", {
-                            className: L.tp,
+                            className: U.tp,
                             children: [
                                 (0, s.jsx)(F, {
                                     tier0Price: Y,
-                                    tier2Price: K,
+                                    tier2Price: X,
                                     shouldUseDiscountPrice: V,
                                     tier2DiscountedPriceString: z,
                                     showMonthlyInterval: d,
                                 }),
-                                X.map((e) => (0, n.createElement)(B, { ...e, key: e.id })),
+                                K.map((e) => (0, n.createElement)(B, { ...e, key: e.id })),
                             ],
                         }),
                     ],

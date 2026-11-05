@@ -1,25 +1,25 @@
-var i = e(477900);
-e(582128);
-var s = e(503698),
-    a = e.n(s),
-    r = e(695366),
-    l = e(696986),
-    c = e(834730),
-    u = e(821609),
-    o = e(556452);
-e.d(
-    t,
+var i = t(477900);
+t(582128);
+var s = t(503698),
+    r = t.n(s),
+    a = t(695366),
+    l = t(696986),
+    c = t(834730),
+    u = t(821609),
+    o = t(556452);
+t.d(
+    e,
     {},
     {
         A: function (n) {
-            let { message: t, error: e, onClick: s, submitting: d, className: m, ctaMessage: h } = n;
+            let { message: e, error: t, onClick: s, submitting: d, className: m, ctaMessage: h } = n;
             return (0, i.jsxs)("div", {
-                className: a()(o.kL, m),
+                className: r()(o.kL, m),
                 children: [
                     (0, i.jsxs)("div", {
                         className: o.FS,
                         children: [
-                            (0, i.jsx)(r.E, {
+                            (0, i.jsx)(a.CircleErrorIcon, {
                                 size: "custom",
                                 width: 20,
                                 height: 20,
@@ -30,12 +30,12 @@ e.d(
                             (0, i.jsxs)("div", {
                                 children: [
                                     (0, i.jsx)(l.h, { size: 1 }),
-                                    (0, i.jsx)(c.E, { className: o.pq, variant: "body-sm/normal", children: t }),
-                                    null != e &&
+                                    (0, i.jsx)(c.E, { className: o.pq, variant: "body-sm/normal", children: e }),
+                                    null != t &&
                                         (0, i.jsx)(c.E, {
-                                            className: a()(o.pq, o.z3),
+                                            className: r()(o.pq, o.z3),
                                             variant: "body-sm/normal",
-                                            children: e,
+                                            children: t,
                                         }),
                                 ],
                             }),

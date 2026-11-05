@@ -1,3 +1,4 @@
+i.r(t);
 var n = i(477900);
 i(582128);
 var l = i(646514),
@@ -7,7 +8,7 @@ i.d(
     t,
     {},
     {
-        r: function (e) {
+        UserCircleIcon: function (e) {
             let {
                     size: t = "md",
                     width: i,

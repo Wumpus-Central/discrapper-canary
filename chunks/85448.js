@@ -1,121 +1,127 @@
-var e,
-    A = l(477900);
-l(582128);
-var a = l(503698),
-    n = l.n(a),
-    i = l(855986),
-    h = l(778712),
-    u = l(666654),
-    c = l(990836),
-    r = l(83107),
-    _ = l(546861),
-    d = l(646514),
-    T = l(562819),
-    o = l(573435),
-    N = l(421768),
-    C = l(209932),
-    O = l(754712),
-    I = l(863089),
-    L = l(556525),
-    g = l(479464),
-    m = (((e = m || {})[(e.OUTGOING = 0)] = "OUTGOING"), (e[(e.INCOMING = 1)] = "INCOMING"), e);
-function R(t) {
+var l,
+    n = e(477900);
+e(582128);
+var a = e(503698),
+    A = e.n(a),
+    i = e(855986),
+    h = e(778712),
+    c = e(666654),
+    u = e(990836),
+    r = e(83107),
+    o = e(546861),
+    _ = e(646514),
+    d = e(562819),
+    T = e(573435),
+    I = e(421768),
+    C = e(209932),
+    N = e(754712),
+    O = e(863089),
+    L = e(556525),
+    S = e(479464),
+    g = (((l = g || {})[(l.OUTGOING = 0)] = "OUTGOING"), (l[(l.INCOMING = 1)] = "INCOMING"), l);
+function m(s) {
     let {
-            userId: s,
-            size: l,
-            voiceStatus: e,
+            userId: t,
+            size: e,
+            voiceStatus: l,
             muted: a = !1,
-            deafen: m = !1,
-            avatarDecoration: R = null,
-            disabled: S = !1,
-            ringing: b,
-            ringingType: f = 0,
-            renderIcon: v,
-            style: j,
-            onClick: x,
-            onContextMenu: y,
-            className: V,
-            children: E,
-        } = t,
-        G = (0, i.bG)([O.Ay], () => null != s && O.Ay.isLocalMute(s)),
-        W = (0, N.g)(null != s ? "CallAvatar" : "Invalid Location"),
-        p = (0, i.bG)([C.A], () => null != s && C.A.isLocalSoundboardMuted(s)),
-        k = W && p,
-        w = (0, I.A)(s),
-        U = (0, L.v)({ voiceStatus: e, voiceDb: w }),
-        M = (0, h.Kj)(l),
-        D = !a && !m && !G,
-        K = n()(
-            g.iE,
+            deafen: g = !1,
+            avatarDecoration: m = null,
+            disabled: b = !1,
+            ringing: y,
+            ringingType: R = 0,
+            renderIcon: f,
+            style: v,
+            onClick: j,
+            onContextMenu: p,
+            className: x,
+            children: V,
+        } = s,
+        E = (0, i.bG)([N.Ay], () => null != t && N.Ay.isLocalMute(t)),
+        G = (0, I.g)(null != t ? "CallAvatar" : "Invalid Location"),
+        W = (0, i.bG)([C.A], () => null != t && C.A.isLocalSoundboardMuted(t)),
+        M = G && W,
+        k = (0, O.A)(t),
+        w = (0, L.v)({ voiceStatus: l, voiceDb: k }),
+        D = (0, h.Kj)(e),
+        U = !a && !g && !E,
+        K = A()(
+            S.iE,
             {
-                [g.vk]: null != x,
-                [g.tb]: b && 0 === f,
-                [g.hs]: b && 1 === f,
-                [g.EX]: l === h._3.SIZE_32 || l === h._3.SIZE_24,
+                [S.vk]: null != j,
+                [S.tb]: y && 0 === R,
+                [S.hs]: y && 1 === R,
+                [S.EX]: e === h._3.SIZE_32 || e === h._3.SIZE_24,
             },
-            V,
+            x,
         ),
-        X = (0, h.FT)(l),
-        z = { height: X, width: X, ...j };
-    return (0, A.jsx)("div", {
-        style: z,
-        onContextMenu: y,
+        X = (0, h.FT)(e),
+        F = { height: X, width: X, ...v };
+    return (0, n.jsx)("div", {
+        style: F,
+        onContextMenu: p,
         className: K,
         children: (function () {
-            let t,
-                s = (0, h.FT)(l);
-            if (S) return E;
-            let e = null != v,
-                i = a || m || G || k,
-                N = (function (t, s) {
-                    let { hasIcon: l = !1, hasStatus: e = !1 } = s;
-                    return l && e
-                        ? (o.Kh[t] ?? o.hW.AVATAR_CALL_ICON_STATUS_80)
-                        : l
-                          ? (o.zf[t] ?? o.hW.AVATAR_CALL_ICON_80)
-                          : e
-                            ? (o.mC[t] ?? o.hW.AVATAR_CALL_STATUS_80)
-                            : (o.$O[t] ?? o.hW.AVATAR_CALL_80);
-                })(l, { hasIcon: e, hasStatus: i }),
-                C = (function (t, s) {
-                    let { hasIcon: l = !1, hasStatus: e = !1 } = s;
-                    return l && e
-                        ? (o.nv[t] ?? o.hW.AVATAR_DECORATION_CALL_ICON_STATUS_80)
-                        : l
-                          ? (o.OU[t] ?? o.hW.AVATAR_DECORATION_CALL_ICON_80)
-                          : e
-                            ? (o.X7[t] ?? o.hW.AVATAR_DECORATION_CALL_STATUS_80)
-                            : (o.aM[t] ?? o.hW.AVATAR_DECORATION_CALL_80);
-                })(l, { hasIcon: e, hasStatus: i }),
-                O = (0, T.Te)(s);
-            return (0, A.jsxs)("div", {
-                className: g.lN,
+            let s,
+                t = (0, h.FT)(e);
+            if (b) return V;
+            let l = null != f,
+                i = a || g || E || M,
+                I = (function (s, t) {
+                    let { hasIcon: e = !1, hasStatus: l = !1 } = t;
+                    return e && l
+                        ? (T.Kh[s] ?? T.hW.AVATAR_CALL_ICON_STATUS_80)
+                        : e
+                          ? (T.zf[s] ?? T.hW.AVATAR_CALL_ICON_80)
+                          : l
+                            ? (T.mC[s] ?? T.hW.AVATAR_CALL_STATUS_80)
+                            : (T.$O[s] ?? T.hW.AVATAR_CALL_80);
+                })(e, { hasIcon: l, hasStatus: i }),
+                C = (function (s, t) {
+                    let { hasIcon: e = !1, hasStatus: l = !1 } = t;
+                    return e && l
+                        ? (T.nv[s] ?? T.hW.AVATAR_DECORATION_CALL_ICON_STATUS_80)
+                        : e
+                          ? (T.OU[s] ?? T.hW.AVATAR_DECORATION_CALL_ICON_80)
+                          : l
+                            ? (T.X7[s] ?? T.hW.AVATAR_DECORATION_CALL_STATUS_80)
+                            : (T.aM[s] ?? T.hW.AVATAR_DECORATION_CALL_80);
+                })(e, { hasIcon: l, hasStatus: i }),
+                N = (0, d.Te)(t);
+            return (0, n.jsxs)("div", {
+                className: S.lN,
                 children: [
-                    (0, A.jsx)(o.Ay, { className: g.KQ, width: s, height: s, mask: N, children: E }),
-                    D && (0, A.jsx)("div", { className: g.PQ, style: U }),
-                    null != R &&
-                        (0, A.jsx)(o.Ay, {
-                            className: g.DX,
-                            width: O,
-                            height: O,
+                    (0, n.jsx)(T.Ay, { className: S.KQ, width: t, height: t, mask: I, children: V }),
+                    U && (0, n.jsx)("div", { className: S.PQ, style: w }),
+                    null != m &&
+                        (0, n.jsx)(T.Ay, {
+                            className: S.DX,
+                            width: N,
+                            height: N,
                             mask: C,
-                            children: (0, A.jsx)("img", {
-                                className: n()(g.tB, { [g.tb]: b && 0 === f }),
-                                src: R,
+                            children: (0, n.jsx)("img", {
+                                className: A()(S.tB, { [S.tb]: y && 0 === R }),
+                                src: m,
                                 alt: "",
                                 "aria-hidden": !0,
                                 draggable: !1,
                             }),
                         }),
-                    v?.(),
-                    ((t = G ? u.O : m ? c.c : a ? r.z : _.N),
-                    a || m || G || k
-                        ? (0, A.jsx)("div", {
-                              className: g.II,
-                              style: { width: M.status + 2 * M.offset, height: M.status + 2 * M.offset },
-                              children: (0, A.jsx)(
-                                  t,
-                                  { color: d.A.colors.WHITE.css, style: { width: M.status, height: M.status } },
+                    f?.(),
+                    ((s = E
+                        ? c.MicrophoneDenyIcon
+                        : g
+                          ? u.HeadphonesSlashIcon
+                          : a
+                            ? r.MicrophoneSlashIcon
+                            : o.SoundboardDenyIcon),
+                    a || g || E || M
+                        ? (0, n.jsx)("div", {
+                              className: S.II,
+                              style: { width: D.status + 2 * D.offset, height: D.status + 2 * D.offset },
+                              children: (0, n.jsx)(
+                                  s,
+                                  { color: _.A.colors.WHITE.css, style: { width: D.status, height: D.status } },
                                   "status",
                               ),
                           })
@@ -125,17 +131,17 @@ function R(t) {
         })(),
     });
 }
-function S(t) {
-    let { src: s, avatarClassName: l, ...e } = t,
-        { ringing: a, ringingType: i } = e;
-    return (0, A.jsx)(R, {
-        ...e,
-        children: (0, A.jsx)("img", {
-            src: s,
+function b(s) {
+    let { src: t, avatarClassName: e, ...l } = s,
+        { ringing: a, ringingType: i } = l;
+    return (0, n.jsx)(m, {
+        ...l,
+        children: (0, n.jsx)("img", {
+            src: t,
             alt: " ",
-            className: n()(g.sb, l, { [g.tb]: a && 0 === i }),
+            className: A()(S.sb, e, { [S.tb]: a && 0 === i }),
             draggable: !1,
         }),
     });
 }
-((S.RingingType = m), l.d(s, {}, { Ay: S, n6: R }));
+((b.RingingType = g), e.d(t, {}, { Ay: b, n6: m }));

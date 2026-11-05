@@ -19,19 +19,19 @@ var l = s(477900),
     j = s(486889),
     C = s(998218),
     E = s(792996);
-let N = [j.ts];
-var v = s(503698),
-    y = s.n(v),
+let v = [j.ts];
+var y = s(503698),
+    N = s.n(y),
     k = s(536637),
     S = s.n(k),
     L = s(837381),
     P = s(939249),
     D = s(658675),
-    _ = s(778712),
-    T = s(56059),
-    R = s(276293),
-    w = s(646514),
-    I = s(475825),
+    T = s(778712),
+    _ = s(56059),
+    I = s(276293),
+    R = s(646514),
+    w = s(475825),
     G = s(966327),
     U = s(928039),
     H = s(662090),
@@ -66,7 +66,7 @@ function K(e) {
             c || d?.(t);
         }, [d, c, t]);
     return (0, l.jsxs)(P.D, {
-        className: y()(Y.HP, { [Y.r9]: c }),
+        className: N()(Y.HP, { [Y.r9]: c }),
         onClick: h,
         "aria-selected": i,
         "aria-setsize": o,
@@ -109,7 +109,7 @@ function ee(e) {
         c = (0, n.bG)([Q.A], () => Q.A.getStatus(t.id));
     return (0, l.jsx)(K, {
         ...a,
-        icon: (0, l.jsx)(G.A, { "aria-hidden": !0, size: _._3.SIZE_32, user: t, status: c }),
+        icon: (0, l.jsx)(G.A, { "aria-hidden": !0, size: T._3.SIZE_32, user: t, status: c }),
         label: u ?? r,
         subLabel: s ?? i,
     });
@@ -120,7 +120,7 @@ function et(e) {
         r = (0, V.i)(t);
     return (0, l.jsx)(K, {
         ...a,
-        icon: (0, l.jsx)(F.A, { "aria-hidden": !0, size: _._3.SIZE_32, channel: t }),
+        icon: (0, l.jsx)(F.A, { "aria-hidden": !0, size: T._3.SIZE_32, channel: t }),
         label: n,
         subLabel: s ?? r,
     });
@@ -136,11 +136,11 @@ function es(e) {
         d = (0, n.bG)([B.Ay], () => B.Ay.lastMessageTimestamp(t.id, $.P.CHANNEL)),
         o = r?.name;
     if (t.isThread() || t.isForumPost()) {
-        let e = t.isForumPost() ? T.b : R.N;
+        let e = t.isForumPost() ? _.ForumIcon : I.TextIcon;
         o = (0, l.jsxs)("div", {
             className: Y.vr,
             children: [
-                (0, l.jsx)(e, { color: w.A.colors.TEXT_SUBTLE, className: Y.Q9 }),
+                (0, l.jsx)(e, { color: R.A.colors.TEXT_SUBTLE, className: Y.Q9 }),
                 (0, l.jsx)(u.E, { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: c }),
                 null != d
                     ? (0, l.jsxs)(l.Fragment, {
@@ -224,7 +224,7 @@ function el(e) {
         children: (0, l.jsx)(L.PR, {
             children: (e) => {
                 let { ref: t, ...s } = e;
-                return (0, l.jsx)(I.OZ, {
+                return (0, l.jsx)(w.OZ, {
                     ref: (e) => {
                         ((m.current = e), (t.current = e?.getScrollerNode() ?? null));
                     },
@@ -246,35 +246,35 @@ function er(e) {
             applicationId: t,
             customId: s,
             linkId: j,
-            channelId: v,
-            message: y,
+            channelId: y,
+            message: N,
             onClose: k,
             onCopyLink: S,
             onShare: L,
             transitionState: P,
         } = e,
         [D] = (0, m.A)([t]),
-        _ = (0, n.bG)([g.default], () => g.default.getCurrentUser()),
-        [T, R] = a.useState(!1),
-        [w, I] = a.useState(""),
+        T = (0, n.bG)([g.default], () => g.default.getCurrentUser()),
+        [_, I] = a.useState(!1),
+        [R, w] = a.useState(""),
         [G, U] = a.useState("");
     a.useEffect(() => {
-        U((0, o.W)({ applicationId: t, referrerId: _?.id, customId: s, linkId: j, channelId: v }));
-    }, [t, _, s, j, v, U]);
+        U((0, o.W)({ applicationId: t, referrerId: T?.id, customId: s, linkId: j, channelId: y }));
+    }, [t, T, s, j, y, U]);
     let H = a.useRef(0),
         [M, z] = a.useState([]),
         F = M.length,
         q = F >= 5;
     a.useEffect(() => {
-        "" === w && V.current?.focus();
-    }, [w]);
+        "" === R && V.current?.focus();
+    }, [R]);
     let V = a.useRef(null),
         { results: Z, updateSearchText: O } = (0, x.R)({ selectedDestinations: M, includeMissingDMs: !0 }),
         Q = a.useCallback(
             (e) => {
-                (I(e), O(e));
+                (w(e), O(e));
             },
-            [I, O],
+            [w, O],
         ),
         B = a.useCallback(() => {
             Q("");
@@ -286,7 +286,7 @@ function er(e) {
                         let { type: s, id: l } = t;
                         return s === e.type && l === e.id;
                     });
-                    if (-1 === s) return q ? t : (I(""), (H.current += 1), [e, ...t]);
+                    if (-1 === s) return q ? t : (w(""), (H.current += 1), [e, ...t]);
                     let l = [...t];
                     return (l.splice(s, 1), (H.current += 1), l);
                 });
@@ -299,7 +299,7 @@ function er(e) {
                 let t = (function (e, t, s) {
                     let l = !1,
                         a = e.replaceAll(C.A.URL_REGEX, (e) => {
-                            let t = N.some((t) => null != t(e));
+                            let t = v.some((t) => null != t(e));
                             return (t && (l = !0), t ? e : `\`${e}\``);
                         });
                     if (l) return a;
@@ -307,8 +307,8 @@ function er(e) {
                     return `${a}
 
 ${n}`;
-                })(y, D, G);
-                (R(!0),
+                })(N, D, G);
+                (I(!0),
                     (await Promise.all(e.map(h.pk))).filter(A.Vq).forEach(async (e) => {
                         let s = f.A.getChannel(e);
                         null != s &&
@@ -321,7 +321,7 @@ ${n}`;
                     L(!0),
                     k());
             },
-            [y, G, k, L, D],
+            [N, G, k, L, D],
         ),
         W = a.useCallback(() => {
             (0, p.C)(G, () => {
@@ -353,11 +353,11 @@ ${n}`;
         transitionState: P,
         onClose: k,
         title: E.intl.string(E.t.r9qKow),
-        subtitle: y,
+        subtitle: N,
         size: "md",
         input: (0, l.jsx)(c.I, {
             ref: V,
-            query: w,
+            query: R,
             onChange: Q,
             onClear: B,
             placeholder: E.intl.string(E.t["5h0QOP"]),
@@ -370,7 +370,7 @@ ${n}`;
                 text: E.intl.string(E.t.TXNS7S),
                 variant: "primary",
                 onClick: () => J(M),
-                loading: T,
+                loading: _,
                 disabled: !(F > 0),
             },
         ],

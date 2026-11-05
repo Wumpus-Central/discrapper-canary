@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(309796),
     o = t(297152),
     c = t(666654),
-    d = t(117723),
-    u = t(265872),
+    u = t(117723),
+    d = t(265872),
     A = t(165862),
     h = t(477782),
     m = t(285796),
@@ -16,8 +16,8 @@ var i = t(477900),
     f = t(597798),
     p = t(517461),
     E = t(871309),
-    j = t(171576),
-    I = t(793574),
+    I = t(171576),
+    j = t(793574),
     v = t(688810),
     N = t(628983),
     _ = t(385318),
@@ -26,11 +26,11 @@ var i = t(477900),
     S = t(384059),
     y = t(480890),
     O = t(643501),
-    P = t(880144),
-    R = t(698441),
-    L = t(394412),
+    R = t(880144),
+    P = t(698441),
+    M = t(394412),
     D = t(859894),
-    M = t(267102),
+    L = t(267102),
     G = t(931991),
     k = t(151476),
     U = t(182637),
@@ -45,8 +45,8 @@ var i = t(477900),
     X = t(404355),
     q = t(577062),
     J = t(970636),
-    Q = t(46653),
-    W = t(754712),
+    W = t(46653),
+    Q = t(754712),
     $ = t(576705),
     Z = t(309010),
     ee = t(287809),
@@ -59,8 +59,8 @@ var i = t(477900),
     er = t(96566),
     eo = t(302884),
     ec = t(30108),
-    ed = t(39938),
-    eu = t(106044),
+    eu = t(39938),
+    ed = t(106044),
     eA = t(370228),
     eh = t(982279),
     em = t(418208),
@@ -70,12 +70,12 @@ var i = t(477900),
     ef = t(792996),
     ep = t(328375),
     eE = t(117816);
-function ej(e) {
+function eI(e) {
     let { channel: n } = e,
         { parentAnalyticsLocation: t } = (0, v.Ay)(),
         s = (0, eh.A)(n.id),
-        [c, d] = (0, ex.A)(n),
-        u = (0, eA.L)(n),
+        [c, u] = (0, ex.A)(n),
+        d = (0, eA.L)(n),
         A = (0, em.Vv)(),
         h = (0, em.tp)(),
         m = l.useRef(null),
@@ -100,17 +100,17 @@ function ej(e) {
                             : n
                               ? ef.intl.string(ef.t.hLbG5N)
                               : ef.intl.string(ef.t.e4WMvx);
-                })(c, u, A, h, g),
-                iconComponent: A ? r._ : o.E,
+                })(c, d, A, h, g),
+                iconComponent: A ? r.HandRequestDenyIcon : o.HandRequestSpeakIcon,
                 onClick: () => {
                     ((0, S.XJ)(t, S.OP.REQUEST_TO_SPEAK, !c),
                         x(!0),
                         A
-                            ? E.A.showAgeVerificationGetStartedModal({ entryPoint: j.q1.STAGE_CHANNEL_RAISE_HAND })
-                            : d());
+                            ? E.A.showAgeVerificationGetStartedModal({ entryPoint: I.q1.STAGE_CHANNEL_RAISE_HAND })
+                            : u());
                 },
                 color: c ? "green" : void 0,
-                disabled: !u && !c,
+                disabled: !d && !c,
             }),
             f &&
                 (0, i.jsx)(a.A, {
@@ -125,7 +125,7 @@ function ej(e) {
                             text: ef.intl.string(ef.t.KXVgjt),
                             onClick: () => {
                                 (E.A.showAgeVerificationGetStartedModal({
-                                    entryPoint: j.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+                                    entryPoint: I.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
                                 }),
                                     x(!0));
                             },
@@ -136,7 +136,7 @@ function ej(e) {
         ],
     });
 }
-let eI = l.memo(function (e) {
+let ej = l.memo(function (e) {
     let { channel: n } = e,
         t = (0, s.bG)([Z.Ay], () => Z.Ay.getVoiceChannelId() === n.id, [n.id]);
     return (0, i.jsxs)("div", {
@@ -146,7 +146,7 @@ let eI = l.memo(function (e) {
                 className: ep.qi,
                 children: [
                     (0, i.jsx)(eT, { channelId: n.id }),
-                    t ? (0, i.jsx)(ej, { channel: n }) : null,
+                    t ? (0, i.jsx)(eI, { channel: n }) : null,
                     (0, i.jsx)(H.A, { channel: n }),
                 ],
             }),
@@ -162,37 +162,37 @@ function ev(e) {
         isTrayButton: !0,
         onClick: function () {
             ((0, S.XJ)(t, S.OP.SPEAK_ON_STAGE), l)
-                ? E.A.showAgeVerificationGetStartedModal({ entryPoint: j.q1.STAGE_CHANNEL_RAISE_HAND })
+                ? E.A.showAgeVerificationGetStartedModal({ entryPoint: I.q1.STAGE_CHANNEL_RAISE_HAND })
                 : (0, et.e7)(n, !1);
         },
-        iconComponent: l ? c.O : d.L,
+        iconComponent: l ? c.MicrophoneDenyIcon : u.MicrophoneArrowRightIcon,
         label: ef.intl.string(l ? ef.t.NzITVo : ef.t["8Joh+p"]),
     });
 }
 function eN(e) {
     let { channel: n, onSelect: t } = e,
-        a = (0, M.Us)(),
+        a = (0, L.Us)(),
         { canManageGuildEvent: r } = (0, G.nr)(n),
         o = (0, s.bG)([ea.A], () => ea.A.getStageInstanceByChannel(n.id), [n.id]),
-        c = (0, s.bG)([R.Ay], () => R.Ay.getGuildScheduledEvent(o?.guild_scheduled_event_id)),
-        { suppress: d } = (0, B.A)(n),
-        g = Q.default.getId(),
+        c = (0, s.bG)([P.Ay], () => P.Ay.getGuildScheduledEvent(o?.guild_scheduled_event_id)),
+        { suppress: u } = (0, B.A)(n),
+        g = W.default.getId(),
         [x] = (0, ex.A)(n),
         C = es.Ay.isModerator(g, n.id),
         p = (0, ei.Ni)(n.id),
         E = r(c),
-        { parentAnalyticsLocation: j } = (0, v.Ay)(),
+        { parentAnalyticsLocation: I } = (0, v.Ay)(),
         N = l.useRef(null);
     function _() {
         return (function (e) {
             let { channel: n, appContext: t } = e;
-            ((0, S.XJ)(I.A.VOICE_CONTROL_TRAY, S.OP.DISCONNECT), (0, eu.A)(n))
+            ((0, S.XJ)(j.A.VOICE_CONTROL_TRAY, S.OP.DISCONNECT), (0, ed.A)(n))
                 ? (0, en.j3)(n, t)
                 : f.default.disconnect();
         })({ channel: n, appContext: a });
     }
     return (C || E) && null != o
-        ? (0, i.jsx)(u.Y, {
+        ? (0, i.jsx)(d.Y, {
               targetElementRef: N,
               renderPopout: (e) => {
                   let { closePopout: l } = e;
@@ -203,14 +203,14 @@ function eN(e) {
                           "aria-label": ef.intl.string(ef.t["3Uj+2p"]),
                           onClose: l,
                           onSelect: t,
-                          onInteraction: (0, y.s)("End Stage", j, { entrypoint: eC.GK.CARET }),
+                          onInteraction: (0, y.s)("End Stage", I, { entrypoint: eC.GK.CARET }),
                           children: (0, i.jsx)(h.Dr, {
                               id: "end-stage",
                               color: "danger",
                               action: () => (0, en.$q)(n, a),
                               label: ef.intl.string(ef.t["Fmx5y/"]),
-                              icon: m.a,
-                              leadingAccessory: { type: "icon", icon: m.a },
+                              icon: m.CircleXIcon,
+                              leadingAccessory: { type: "icon", icon: m.CircleXIcon },
                           }),
                       }),
                   });
@@ -218,7 +218,7 @@ function eN(e) {
               align: "center",
               position: "top",
               spacing: 16,
-              animation: u.Y.Animation.FADE,
+              animation: d.Y.Animation.FADE,
               children: (e, n) => {
                   let { onClick: t } = e,
                       { isShown: l } = n;
@@ -231,7 +231,7 @@ function eN(e) {
                   });
               },
           })
-        : (d && !p) || x
+        : (u && !p) || x
           ? (0, i.jsx)(X.A, { label: ef.intl.string(ef.t.SMKyih), onClick: _ })
           : (0, i.jsx)(X.A, { label: ef.intl.string(ef.t.c6qKwr), onClick: _ });
 }
@@ -240,7 +240,7 @@ function e_(e) {
         { parentAnalyticsLocation: t } = (0, v.Ay)();
     return (0, i.jsx)(F.l, {
         isTrayButton: !0,
-        iconComponent: g.U,
+        iconComponent: g.GroupArrowDownIcon,
         label: ef.intl.string(ef.t.ezLpY6),
         onClick: function () {
             ((0, S.XJ)(t, S.OP.MOVE_TO_AUDIENCE), (0, et.Tf)(n));
@@ -250,15 +250,15 @@ function e_(e) {
 function eT(e) {
     let { channelId: n } = e,
         { parentAnalyticsLocation: t } = (0, v.Ay)(),
-        l = (0, s.bG)([ed.A], () => ed.A.isMuted()),
+        l = (0, s.bG)([eu.A], () => eu.A.isMuted()),
         a = (0, ec.bF)(n),
-        r = (0, s.bG)([ed.A], () => ed.A.shouldPlay());
+        r = (0, s.bG)([eu.A], () => eu.A.shouldPlay());
     return a
         ? (0, i.jsx)(F.l, {
               isTrayButton: !0,
               isActive: !l,
               label: l ? ef.intl.string(ef.t.ScHlfl) : ef.intl.string(ef.t.zqxfrf),
-              iconComponent: l ? x.C : C.T,
+              iconComponent: l ? x.MusicSlashIcon : C.MusicIcon,
               color: l ? void 0 : "green",
               onClick: () => {
                   ((0, S.XJ)(t, S.OP.STAGE_MUSIC, l), (0, eo.k)(!l));
@@ -268,7 +268,7 @@ function eT(e) {
               isTrayButton: !0,
               isActive: r,
               label: r ? ef.intl.string(ef.t.zqxfrf) : ef.intl.string(ef.t.ScHlfl),
-              iconComponent: r ? C.T : x.C,
+              iconComponent: r ? C.MusicIcon : x.MusicSlashIcon,
               color: r ? "green" : void 0,
               onClick: () => {
                   ((0, S.XJ)(t, S.OP.STAGE_MUSIC, !r), (0, eo.C)(!r));
@@ -280,23 +280,23 @@ let eb = l.memo(function (e) {
         { parentAnalyticsLocation: t } = (0, v.Ay)(),
         { suppress: a, selfMute: r, mute: o } = (0, B.A)(n),
         c = (0, ei.Ni)(n.id),
-        d = (0, s.bG)([O.default], () => null != O.default.getAwaitingRemoteSessionInfo()),
+        u = (0, s.bG)([O.default], () => null != O.default.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: A, enabled: h } = (0, k.A)(),
         m = (0, V.A)(n),
         { limit: g, reachedLimit: x } = (0, U.A)(n),
         C = (0, s.bG)([ee.default], () => ee.default.getCurrentUser()),
-        f = (0, s.bG)([W.Ay], () => (0, P.A)(W.Ay)),
+        f = (0, s.bG)([Q.Ay], () => (0, R.A)(Q.Ay)),
         p = (0, s.bG)([Z.Ay], () => Z.Ay.getVoiceChannelId() === n.id, [n.id]),
         E = (0, s.bG)([N.A], () => N.A.getStreamParticipants(n.id)[0], [n.id]),
-        j = (0, er.qT)(n.id),
-        I = g > 0,
-        S = (x && !j) || (null != E && E.user.id !== C?.id),
-        R = (0, y.s)("AudioDeviceMenu", t, { entrypoint: eC.GK.CARET }),
-        L = l.useRef(null),
+        I = (0, er.qT)(n.id),
+        j = g > 0,
+        S = (x && !I) || (null != E && E.user.id !== C?.id),
+        P = (0, y.s)("AudioDeviceMenu", t, { entrypoint: eC.GK.CARET }),
+        M = l.useRef(null),
         D = l.useRef(null);
     if (null == C) return null;
-    let M = (0, i.jsx)(u.Y, {
-        targetElementRef: L,
+    let L = (0, i.jsx)(d.Y, {
+        targetElementRef: M,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(z.A, {
@@ -310,12 +310,12 @@ let eb = l.memo(function (e) {
         position: "top",
         align: "right",
         spacing: 16,
-        animation: u.Y.Animation.FADE,
+        animation: d.Y.Animation.FADE,
         children: (e, n) => {
             let { onClick: t } = e,
                 { isShown: l } = n;
             return (0, i.jsx)(J.A, {
-                ref: L,
+                ref: M,
                 centerButton: !0,
                 hasPermission: m,
                 enabled: h,
@@ -336,7 +336,7 @@ let eb = l.memo(function (e) {
                 ? (0, i.jsxs)("div", {
                       className: ep.qi,
                       children: [
-                          (0, i.jsx)(u.Y, {
+                          (0, i.jsx)(d.Y, {
                               targetElementRef: D,
                               renderPopout: (e) => {
                                   let { closePopout: n } = e;
@@ -350,14 +350,14 @@ let eb = l.memo(function (e) {
                                           renderOutputVolume: !0,
                                           renderDeafen: !0,
                                           minimal: !0,
-                                          onInteraction: R,
+                                          onInteraction: P,
                                       }),
                                   });
                               },
                               align: "right",
                               position: "top",
                               spacing: 16,
-                              animation: u.Y.Animation.FADE,
+                              animation: d.Y.Animation.FADE,
                               children: (e, n) => {
                                   let { onClick: t } = e,
                                       { isShown: l } = n;
@@ -370,18 +370,18 @@ let eb = l.memo(function (e) {
                                       suppress: a,
                                       popoutOpen: l,
                                       onClick: () => (0, b.A)(o, a, "Stage Channel Controls"),
-                                      awaitingRemote: d,
+                                      awaitingRemote: u,
                                   });
                               },
                           }),
-                          I && M,
+                          j && L,
                       ],
                   })
                 : null,
             (0, i.jsxs)("div", {
                 className: ep.qi,
                 children: [
-                    p && !a && I
+                    p && !a && j
                         ? (0, i.jsx)(w.rP, {
                               channel: n,
                               currentUser: C,
@@ -392,7 +392,7 @@ let eb = l.memo(function (e) {
                           })
                         : null,
                     (0, i.jsx)(eT, { channelId: n.id }),
-                    p && (0, i.jsx)(ej, { channel: n }),
+                    p && (0, i.jsx)(eI, { channel: n }),
                     p && c && a && (0, i.jsx)(ev, { channel: n }),
                     p && !a && (0, i.jsx)(e_, { channel: n }),
                     (0, i.jsx)(H.A, { channel: n }),
@@ -419,8 +419,8 @@ let ey = l.memo(function (e) {
         r = (0, s.bG)([$.A], () => $.A.can(el.QY, n), [n]),
         o = (0, em.zU)(),
         c = (0, eg.A)(n.id),
-        d = (0, s.bG)([N.A], () => (null != n ? N.A.getSelectedParticipant(n.id) : null)),
-        u = !c && null == d;
+        u = (0, s.bG)([N.A], () => (null != n ? N.A.getSelectedParticipant(n.id) : null)),
+        d = !c && null == u;
     return t
         ? (0, i.jsx)(eS, { channel: n })
         : l || a
@@ -430,15 +430,15 @@ let ey = l.memo(function (e) {
                     (0, i.jsxs)("div", {
                         className: ep.Ac,
                         children: [
-                            u ? (0, i.jsx)(L.A, { channelId: n?.id }) : null,
+                            d ? (0, i.jsx)(M.A, { channelId: n?.id }) : null,
                             (0, i.jsx)("div", { className: ep.me }),
-                            u && r && !o ? (0, i.jsx)(D.A, { highlight: !0, channel: n }) : null,
+                            d && r && !o ? (0, i.jsx)(D.A, { highlight: !0, channel: n }) : null,
                             (0, i.jsx)("div", { className: ep.me }),
                         ],
                     }),
                     (0, i.jsx)(eb, { channel: n }),
                 ],
             })
-          : (0, i.jsx)(eI, { channel: n });
+          : (0, i.jsx)(ej, { channel: n });
 });
 t.d(n, {}, { A: ey });

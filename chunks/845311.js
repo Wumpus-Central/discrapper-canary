@@ -14,7 +14,7 @@ n.d(
                 className: l.Kk,
                 "aria-hidden": !0,
                 children: [
-                    (0, i.jsx)(s.$, { className: a()({ [l.dK]: t }), size: "xs", color: n }),
+                    (0, i.jsx)(s.FriendsIcon, { className: a()({ [l.dK]: t }), size: "xs", color: n }),
                     t && (0, i.jsx)("span", { className: l.RS }),
                 ],
             });

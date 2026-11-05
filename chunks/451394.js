@@ -1,3 +1,4 @@
+t.r(c);
 var a = t(477900);
 t(582128);
 var i = t(646514),
@@ -7,23 +8,23 @@ t.d(
     c,
     {},
     {
-        q: function (s) {
+        StageIcon: function (s) {
             let {
                     size: c = "md",
                     width: t,
                     height: h,
                     color: p = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: r = "",
-                    ...d
+                    ...n
                 } = s,
-                n = (0, e.J)(c),
-                o = n?.width ?? t,
-                w = n?.height ?? h;
+                d = (0, e.J)(c),
+                o = d?.width ?? t,
+                g = d?.height ?? h;
             return (0, a.jsxs)("svg", {
-                ...(0, l.A)(d),
+                ...(0, l.A)(n),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: o,
-                height: w,
+                height: g,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

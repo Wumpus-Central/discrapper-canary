@@ -11,8 +11,8 @@ var i = n(477900),
     f = n(834730),
     E = n(736653),
     I = n(775602),
-    g = n(263775),
-    h = n(49999),
+    h = n(263775),
+    g = n(49999),
     p = n(792996),
     A = n(988864);
 n.d(
@@ -45,12 +45,12 @@ n.d(
         },
         a: function () {
             let e = (0, a.bG)([I.Ay], () => I.Ay.useReducedMotion),
-                [t, l] = (0, g.kn)([o.M.TRIAL_NUX_EMOJI_PICKER]),
+                [t, l] = (0, h.kn)([o.M.TRIAL_NUX_EMOJI_PICKER]),
                 c = t === o.M.TRIAL_NUX_EMOJI_PICKER;
             return (
                 s.useEffect(
                     () => () => {
-                        c && l(h.i.TAKE_ACTION);
+                        c && l(g.i.TAKE_ACTION);
                     },
                     [c, l],
                 ),
@@ -73,7 +73,7 @@ n.d(
                                 (0, i.jsxs)("div", {
                                     className: r()(A.bl, { [A.VN]: e || !c }),
                                     children: [
-                                        (0, i.jsx)(m.t, { size: "xs", color: "white" }),
+                                        (0, i.jsx)(m.NitroWheelIcon, { size: "xs", color: "white" }),
                                         (0, i.jsx)(f.E, {
                                             variant: "body-xs/medium",
                                             color: "text-overlay-light",

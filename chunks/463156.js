@@ -11,7 +11,7 @@ n.d(
             let { onClose: t } = e;
             return (0, i.jsx)(l.K, {
                 "aria-label": s.intl.string(s.t.cpT0Cq),
-                icon: r.P,
+                icon: r.XSmallIcon,
                 onClick: t,
                 variant: "secondary",
                 size: "sm",

@@ -4,8 +4,8 @@ var l = i(503698),
     r = i.n(l),
     s = i(559106),
     a = i(855522),
-    u = i(834730),
-    o = i(715641),
+    o = i(834730),
+    u = i(715641),
     d = i(646514),
     c = i(942436),
     A = i(840362);
@@ -22,8 +22,8 @@ i.d(
                     (0, e.jsxs)("div", {
                         children: [
                             null != i &&
-                                (0, e.jsx)(u.E, { variant: "body-md/semibold", color: "text-strong", children: i }),
-                            (0, e.jsx)(u.E, { variant: "body-sm/normal", children: l }),
+                                (0, e.jsx)(o.E, { variant: "body-md/semibold", color: "text-strong", children: i }),
+                            (0, e.jsx)(o.E, { variant: "body-sm/normal", children: l }),
                         ],
                     }),
                 ],
@@ -39,8 +39,8 @@ i.d(
                 onDetails: m,
                 benefitItems: S,
                 benefitsSummary: f,
-                subtitle: h,
-                maxBenefits: g = 5,
+                subtitle: g,
+                maxBenefits: h = 5,
             } = t;
             return (0, e.jsx)(s.vN, {
                 children: (0, e.jsxs)("div", {
@@ -59,13 +59,13 @@ i.d(
                             children: (0, e.jsxs)("div", {
                                 className: c.rf,
                                 children: [
-                                    (0, e.jsx)(u.E, { tag: "div", variant: "heading-lg/semibold", children: I }),
+                                    (0, e.jsx)(o.E, { tag: "div", variant: "heading-lg/semibold", children: I }),
                                     (0, e.jsx)("div", {
                                         className: c.Sl,
                                         children:
                                             null != i
                                                 ? (0, e.jsx)("img", { src: i.toString(), alt: "" })
-                                                : (0, e.jsx)(o.b, {
+                                                : (0, e.jsx)(u.BadgeIcon, {
                                                       color: d.A.colors.ICON_STRONG,
                                                       size: "custom",
                                                       height: 48,
@@ -79,10 +79,10 @@ i.d(
                                               },
                                           })
                                         : null,
-                                    h,
+                                    g,
                                     null != n &&
                                         "" !== n &&
-                                        (0, e.jsx)(u.E, {
+                                        (0, e.jsx)(o.E, {
                                             className: c.h_,
                                             color: "text-default",
                                             variant: "body-sm/medium",
@@ -94,7 +94,7 @@ i.d(
                         null != f &&
                             (0, e.jsx)("div", {
                                 className: c.xl,
-                                children: (0, e.jsx)(u.E, {
+                                children: (0, e.jsx)(o.E, {
                                     color: "interactive-text-default",
                                     variant: "body-sm/medium",
                                     children: a.A.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: f }),
@@ -109,20 +109,20 @@ i.d(
                                     children: (0, e.jsxs)("div", {
                                         className: c.Pp,
                                         children: [
-                                            (0, e.jsx)(u.E, {
+                                            (0, e.jsx)(o.E, {
                                                 color: "text-default",
                                                 variant: "body-sm/medium",
                                                 children: a.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                             }),
-                                            S.length > g
+                                            S.length > h
                                                 ? (0, e.jsxs)(e.Fragment, {
                                                       children: [
-                                                          S.slice(0, g),
-                                                          (0, e.jsx)(u.E, {
+                                                          S.slice(0, h),
+                                                          (0, e.jsx)(o.E, {
                                                               variant: "body-md/semibold",
                                                               color: "text-subtle",
                                                               children: a.A.Messages.STOREFRONT_MORE_BENEFITS.format({
-                                                                  count: S.length - g,
+                                                                  count: S.length - h,
                                                               }),
                                                           }),
                                                       ],

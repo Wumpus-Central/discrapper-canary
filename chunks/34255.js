@@ -3,8 +3,8 @@ var e = s(477900),
     n = s(935399),
     c = s(386286),
     r = s(22856),
-    d = s(224640),
-    l = s(315629),
+    l = s(224640),
+    d = s(315629),
     o = s(20742),
     x = s(534514),
     m = s(834730),
@@ -17,14 +17,14 @@ var e = s(477900),
     v = s(783420),
     b = s(682901),
     k = s(49999),
-    S = s(792996),
-    y = s(431901);
+    N = s(792996),
+    S = s(431901);
 s.d(
     t,
     {},
     {
         default: function (i) {
-            let { renderModalProps: t, dismissibleContent: s, markAsDismissed: N } = i,
+            let { renderModalProps: t, dismissibleContent: s, markAsDismissed: y } = i,
                 { onClose: C, transitionState: w } = t,
                 { headingId: D } = (0, r.k)(),
                 M = (0, f.$g)(0, (0, g.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -34,61 +34,61 @@ s.d(
                 }),
                 a.useEffect(
                     () => () => {
-                        N(k.i.AUTO_DISMISS);
+                        y(k.i.AUTO_DISMISS);
                     },
-                    [N],
+                    [y],
                 ),
                 (0, e.jsx)(v.A, {
                     subscriptionTier: b.pe.TIER_2,
                     children: (i) => {
                         let { onClick: t } = i;
-                        return (0, e.jsx)(d.d, {
+                        return (0, e.jsx)(l.d, {
                             transitionState: w,
                             onClose: C,
                             size: "md",
                             paddingSize: "lg",
-                            children: (0, e.jsxs)(l.h, {
+                            children: (0, e.jsxs)(d.h, {
                                 color: "nitro-pink",
-                                className: y.D7,
+                                className: S.D7,
                                 children: [
                                     (0, e.jsx)("div", {
-                                        className: y.cG,
+                                        className: S.cG,
                                         children: (0, e.jsx)(o.s_, { shouldColorMix: !0 }),
                                     }),
                                     (0, e.jsx)("div", {
-                                        className: y.tW,
+                                        className: S.tW,
                                         children: (0, e.jsx)(c.x, { alt: "", width: 400, height: "auto" }),
                                     }),
                                     (0, e.jsxs)("div", {
-                                        className: y.Qs,
+                                        className: S.Qs,
                                         children: [
                                             (0, e.jsx)(x.D, {
                                                 id: D,
                                                 variant: "nitro-md",
                                                 color: "text-strong",
-                                                className: y.wx,
-                                                children: S.intl.string(S.t["M/ytwa"]),
+                                                className: S.wx,
+                                                children: N.intl.string(N.t["M/ytwa"]),
                                             }),
                                             (0, e.jsx)(m.E, {
                                                 variant: "body-md/normal",
                                                 color: "text-subtle",
-                                                className: y.rf,
-                                                children: S.intl.formatToPlainString(S.t.xMkRkc, { price: M }),
+                                                className: S.rf,
+                                                children: N.intl.formatToPlainString(N.t.xMkRkc, { price: M }),
                                             }),
                                             (0, e.jsxs)("div", {
-                                                className: y.v0,
+                                                className: S.v0,
                                                 children: [
                                                     (0, e.jsx)(h.$, {
                                                         variant: "secondary",
                                                         size: "md",
                                                         onClick: () => (0, j.x)(C),
-                                                        text: S.intl.string(S.t.j7LkaR),
+                                                        text: N.intl.string(N.t.j7LkaR),
                                                     }),
                                                     (0, e.jsx)(h.$, {
                                                         variant: "expressive",
                                                         size: "md",
-                                                        icon: p.t,
-                                                        text: S.intl.formatToPlainString(S.t.mPWeSh, { price: M }),
+                                                        icon: p.NitroWheelIcon,
+                                                        text: N.intl.formatToPlainString(N.t.mPWeSh, { price: M }),
                                                         onClick: async (i) => {
                                                             (await C(), t(i));
                                                         },

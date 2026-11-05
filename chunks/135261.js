@@ -14,8 +14,8 @@ var l = n(477900),
     g = n(559106),
     x = n(750506),
     E = n(267102),
-    y = n(186306),
-    S = n(339871),
+    S = n(186306),
+    y = n(339871),
     C = n(339200),
     A = n(792996),
     b = n(9287);
@@ -29,35 +29,51 @@ function I(e) {
                   (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "bold",
-                      children: (0, l.jsx)(u.$, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
+                      children: (0, l.jsx)(u.BoldIcon, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
                   (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "italics",
-                      children: (0, l.jsx)(c.y, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
+                      children: (0, l.jsx)(c.ItalicIcon, {
+                          size: "md",
+                          color: "currentColor",
+                          className: s()(b.Kk, i),
+                      }),
                   }),
                   (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "underline",
-                      children: (0, l.jsx)(d.q, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
+                      children: (0, l.jsx)(d.UnderlineIcon, {
+                          size: "md",
+                          color: "currentColor",
+                          className: s()(b.Kk, i),
+                      }),
                   }),
                   (0, l.jsx)(v, {
                       slateEditor: t,
                       markdownSyntax: "strikethrough",
-                      children: (0, l.jsx)(h.t, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
+                      children: (0, l.jsx)(h.StrikethroughIcon, {
+                          size: "md",
+                          color: "currentColor",
+                          className: s()(b.Kk, i),
+                      }),
                   }),
                   (0, l.jsx)("div", { className: s()(b.yF, r) }),
                   !n?.disableBlockQuotes &&
                       (0, l.jsx)(N, {
                           slateEditor: t,
                           blockType: "blockQuote",
-                          children: (0, l.jsx)(m.c, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
+                          children: (0, l.jsx)(m.QuoteIcon, {
+                              size: "md",
+                              color: "currentColor",
+                              className: s()(b.Kk, i),
+                          }),
                       }),
                   !n?.disableInlineCode &&
                       (0, l.jsx)(v, {
                           slateEditor: t,
                           markdownSyntax: "inlineCode",
-                          children: (0, l.jsx)(f.G, {
+                          children: (0, l.jsx)(f.AngleBracketsIcon, {
                               size: "custom",
                               width: 20,
                               height: 20,
@@ -78,7 +94,7 @@ function v(e) {
         r = !1;
     if (t?.selection != null) {
         let [e, l] = C.ZF.edges(t.selection);
-        r = null != (0, S.Sx)(t, e, l).before[n];
+        r = null != (0, y.Sx)(t, e, l).before[n];
     }
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
@@ -101,7 +117,7 @@ function v(e) {
             "aria-pressed": r,
             className: b.x6,
             onClick: function () {
-                null != t && y.o.withSingleEntry(t, () => (0, S.Px)(t, n));
+                null != t && S.o.withSingleEntry(t, () => (0, y.Px)(t, n));
             },
             children: i,
         }),
@@ -119,7 +135,7 @@ function N(e) {
             "aria-pressed": s,
             className: b.x6,
             onClick: function () {
-                null != n && y.o.withSingleEntry(n, () => (0, S.fO)(n, t));
+                null != n && S.o.withSingleEntry(n, () => (0, y.fO)(n, t));
             },
             children: i,
         }),
@@ -182,7 +198,7 @@ n.d(
                         }
                     );
                 }, [m, f, p, g]));
-            let { x: y, y: S } = i.useMemo(() => {
+            let { x: S, y } = i.useMemo(() => {
                     let e = t();
                     if (e?.selection == null || C.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
                     let l = a.rL.findDocumentOrShadowRoot(e),
@@ -209,11 +225,11 @@ n.d(
                 [N, T] = i.useState(0);
             if (
                 (i.useLayoutEffect(() => {
-                    if (null == y || null == S || null == u.current) return;
+                    if (null == S || null == y || null == u.current) return;
                     let e = u.current.getBoundingClientRect();
                     (T(e.width / 2), v(e.height + 12));
-                }, [y, S]),
-                null == y || null == S)
+                }, [S, y]),
+                null == S || null == y)
             )
                 return null;
             let k = t();
@@ -224,7 +240,7 @@ n.d(
                           id: "slate-toolbar",
                           ref: u,
                           className: b.KE,
-                          style: { top: S - A, left: y - N },
+                          style: { top: y - A, left: S - N },
                           onMouseDown: (e) => {
                               (e.preventDefault(), e.stopPropagation());
                           },

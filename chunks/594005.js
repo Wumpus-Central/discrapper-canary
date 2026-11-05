@@ -1,44 +1,44 @@
 var a = n(477900),
-    t = n(477782),
-    d = n(165862),
-    r = n(933832),
-    s = n(666492),
-    c = n(73153),
+    r = n(477782),
+    t = n(165862),
+    d = n(933832),
+    c = n(666492),
+    s = n(73153),
     l = n(442433),
     h = n(334738),
     o = n(995102),
     _ = n(288104),
     A = n(57907),
     p = n(375500),
-    b = n(439147),
-    I = n(652215),
-    j = n(792996);
+    I = n(439147),
+    b = n(652215),
+    k = n(792996);
 n.d(
-    e,
+    i,
     {},
     {
-        default: function (i) {
-            let { channel: e, message: n, isUnread: k, onSelect: u } = i,
-                x = (0, _.b)(e),
-                m = (0, p.A)(e),
-                T = (0, o.A)(e),
-                g = (0, A.A)(e),
-                C = e.isThread() ? (0, a.jsx)(t.rX, { children: m }) : (0, a.jsx)(t.rX, { children: x });
-            return (0, a.jsxs)(d.W, {
+        default: function (e) {
+            let { channel: i, message: n, isUnread: j, onSelect: u } = e,
+                x = (0, _.b)(i),
+                m = (0, p.A)(i),
+                C = (0, o.A)(i),
+                T = (0, A.A)(i),
+                g = i.isThread() ? (0, a.jsx)(r.rX, { children: m }) : (0, a.jsx)(r.rX, { children: x });
+            return (0, a.jsxs)(t.W, {
                 "data-menu-migrated": !0,
                 navId: "notifications-inbox-message-context",
                 onClose: l.Z_,
-                "aria-label": j.intl.string(j.t.Xm41aV),
+                "aria-label": k.intl.string(k.t.Xm41aV),
                 onSelect: u,
                 children: [
-                    (0, a.jsx)(t.rX, {
-                        children: k
-                            ? (0, a.jsx)(t.Dr, {
+                    (0, a.jsx)(r.rX, {
+                        children: j
+                            ? (0, a.jsx)(r.Dr, {
                                   id: "mark-read",
-                                  label: j.intl.string(j.t.e6RscS),
-                                  icon: r.CheckmarkLargeIcon,
+                                  label: k.intl.string(k.t.e6RscS),
+                                  icon: d.CheckmarkLargeIcon,
                                   action: () => {
-                                      (c.h.dispatch({
+                                      (s.h.dispatch({
                                           type: "NOTIFICATIONS_INBOX_ITEM_ACK",
                                           messageId: n.id,
                                           channelId: n.channel_id,
@@ -46,8 +46,8 @@ n.d(
                                           h.I_(
                                               n.channel_id,
                                               {
-                                                  object: I.ZSU.MARK_MESSAGE_AS_READ_BUTTON,
-                                                  objectType: I.btD.ACK_MANUAL,
+                                                  object: b.ZSU.MARK_MESSAGE_AS_READ_BUTTON,
+                                                  objectType: b.btD.ACK_MANUAL,
                                               },
                                               !0,
                                               void 0,
@@ -55,15 +55,15 @@ n.d(
                                           ));
                                   },
                               })
-                            : (0, a.jsx)(t.Dr, {
+                            : (0, a.jsx)(r.Dr, {
                                   id: "mark-unread",
-                                  label: j.intl.string(j.t.RpE9k7),
-                                  icon: s.Q,
-                                  action: () => (0, b.A)(e.id, n.id),
+                                  label: k.intl.string(k.t.RpE9k7),
+                                  icon: c.ChatMarkUnreadIcon,
+                                  action: () => (0, I.A)(i.id, n.id),
                               }),
                     }),
-                    (0, a.jsx)(t.rX, { children: e.isThread() ? g : T }),
-                    C,
+                    (0, a.jsx)(r.rX, { children: i.isThread() ? T : C }),
+                    g,
                 ],
             });
         },

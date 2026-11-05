@@ -57,7 +57,7 @@ function j(e) {
               className: i()(E.ek, r),
               type: m.Z.Types.CUSTOM,
               children: [
-                  (0, n.jsx)(p.E, {
+                  (0, n.jsx)(p.CircleErrorIcon, {
                       size: "custom",
                       width: 20,
                       height: 20,

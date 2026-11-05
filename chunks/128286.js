@@ -16,7 +16,7 @@ n.d(
             return (0, i.jsx)(l.A, {
                 label: u,
                 onClick: t ? n : r,
-                iconComponent: s.t,
+                iconComponent: s.WindowLaunchIcon,
                 iconClassName: a()({ [d.r]: t }),
                 ...c,
             });

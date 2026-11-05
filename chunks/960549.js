@@ -12,8 +12,8 @@ var e = t(477900),
     h = t(977997),
     x = t(802880),
     g = t(503698),
-    m = t.n(g),
-    C = t(939249),
+    C = t.n(g),
+    m = t(939249),
     j = t(793574),
     p = t(688810),
     v = t(325158),
@@ -22,8 +22,8 @@ var e = t(477900),
     f = t(915089),
     O = t(172710),
     y = t(92240),
-    E = t(257367),
-    I = t(770689),
+    I = t(257367),
+    E = t(770689),
     b = t(939496),
     L = t(282197),
     S = t(584904),
@@ -92,7 +92,7 @@ function z(i) {
                       }),
                   }),
                   (0, e.jsx)(k.q3, {
-                      icon: P.J,
+                      icon: P.UserPlayIcon,
                       tooltipText: d.tooltip ?? B.intl.string(B.t.eU3inB),
                       "aria-label": d.label ?? B.intl.string(B.t.eU3inB),
                       disabled: d.disabled,
@@ -110,12 +110,12 @@ function Y(i) {
         u = (0, f.GV)(),
         { themeType: A } = (0, b.E)(),
         h = (0, _.A)({ activity: a, user: t }),
-        x = (0, I.A)(a),
+        x = (0, E.A)(a),
         g = null != x.text && "" !== x.text,
         { largeImage: T } = (0, v.XN)(a, void 0, "user_profile_spotify"),
         { analyticsLocations: P } = (0, p.Ay)(j.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         w = (0, y.A)({ display: "live", user: t, activity: a, entry: h, analyticsLocations: P }),
-        G = (0, E.A)({ userId: t.id, onAction: w });
+        G = (0, I.A)({ userId: t.id, onAction: w });
     if (!(0, o.A)(a)) return null;
     function U() {
         return t.id === s.id
@@ -126,7 +126,7 @@ function Y(i) {
         value: P,
         children: (0, e.jsxs)(S.A, {
             ref: G,
-            className: m()(H.Nr, d),
+            className: C()(H.Nr, d),
             onAction: w,
             onClose: r,
             "aria-labelledby": g ? `${u} ${c}` : c,
@@ -173,8 +173,8 @@ function Y(i) {
                                                                 n.Fragment,
                                                                 {
                                                                     children: [
-                                                                        (0, e.jsx)(C.D, {
-                                                                            className: m()(H.sd, H.mG),
+                                                                        (0, e.jsx)(m.D, {
+                                                                            className: C()(H.sd, H.mG),
                                                                             onClick: (i) => {
                                                                                 (i.stopPropagation(),
                                                                                     w({
@@ -213,8 +213,8 @@ function Y(i) {
     });
 }
 function $(i) {
-    let { user: l, currentUser: t, activity: n, className: g, onClose: m } = i,
-        { voiceGuild: C, voiceChannel: j } = (0, a.cf)([A.A, h.A, u.A], () => {
+    let { user: l, currentUser: t, activity: n, className: g, onClose: C } = i,
+        { voiceGuild: m, voiceChannel: j } = (0, a.cf)([A.A, h.A, u.A], () => {
             let i = (0, d.A)(n);
             if (!i && n.type !== s.$.HANG_STATUS) return {};
             let t = i
@@ -234,15 +234,15 @@ function $(i) {
     return n?.type === s.$.CUSTOM_STATUS || n?.type === s.$.HANG_STATUS
         ? null
         : (0, o.A)(n)
-          ? (0, e.jsx)(Y, { user: l, currentUser: t, activity: n, className: g, onClose: m })
+          ? (0, e.jsx)(Y, { user: l, currentUser: t, activity: n, className: g, onClose: C })
           : (0, e.jsx)(x.A, {
                 user: l,
                 currentUser: t,
                 activity: n,
                 application: p,
-                voiceGuild: C,
+                voiceGuild: m,
                 voiceChannel: j,
                 className: g,
-                onClose: m,
+                onClose: C,
             });
 }

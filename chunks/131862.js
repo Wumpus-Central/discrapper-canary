@@ -9,8 +9,8 @@ var n = s(477900),
     c = s(834730),
     d = s(192308),
     m = s(43990),
-    C = s(263775),
-    I = s(625180),
+    I = s(263775),
+    C = s(625180),
     T = s(413599),
     N = s(7891),
     A = s(859703),
@@ -87,7 +87,7 @@ function z(e) {
                         className: D.b,
                         "aria-label": R.intl.string(R.t.cpT0Cq),
                         onClick: r,
-                        children: (0, n.jsx)(q.P, { size: "sm", color: "currentColor" }),
+                        children: (0, n.jsx)(q.XSmallIcon, { size: "sm", color: "currentColor" }),
                     }),
                 ],
             }),
@@ -124,8 +124,8 @@ function z(e) {
 }
 var M = s(612378),
     w = s(280905),
-    P = s(49999),
-    H = s(165610),
+    H = s(49999),
+    P = s(165610),
     L = s(391803);
 function O(e) {
     let { quest: t, ...s } = e,
@@ -139,10 +139,10 @@ function O(e) {
         [m, T] = i.useState(!1),
         A = i.useRef(null),
         x = i.useRef(null),
-        [f, _] = (0, C.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], { bypassAutoDismiss: !0 }),
+        [f, _] = (0, I.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], { bypassAutoDismiss: !0 }),
         { completedRatio: y, completedRatioDisplay: g, percentComplete: b } = (0, h.O9)(t, !0),
         q = i.useCallback(() => {
-            "frame" === s.type && I.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: H.y0.PIP });
+            "frame" === s.type && C.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: P.y0.PIP });
         }, [s]),
         S = t.userStatus?.enrolledAt != null,
         U = i.useCallback(() => {
@@ -253,10 +253,10 @@ function O(e) {
                 S &&
                 (0, n.jsx)(v, {
                     onDismiss: function () {
-                        return _(P.i.USER_DISMISS);
+                        return _(H.i.USER_DISMISS);
                     },
                     onCTAClick: function () {
-                        return _(P.i.TAKE_ACTION);
+                        return _(H.i.TAKE_ACTION);
                     },
                     targetElementRef: A,
                 }),

@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(165862),
     o = t(477782),
     c = t(285796),
-    d = t(267102),
-    u = t(931991),
+    u = t(267102),
+    d = t(931991),
     A = t(246356),
     h = t(404355),
     m = t(734057),
@@ -21,18 +21,18 @@ t.d(
     {
         A: function (e) {
             let { channelId: n, onClick: t } = e,
-                E = (0, d.Us)(),
-                j = (0, f.Qs)(n),
-                I = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
-                { canManageGuildEvent: v } = (0, u.nr)(I),
-                N = v(j),
+                E = (0, u.Us)(),
+                I = (0, f.Qs)(n),
+                j = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
+                { canManageGuildEvent: v } = (0, d.nr)(j),
+                N = v(I),
                 _ = l.useRef(null);
-            if (null == j) return null;
+            if (null == I) return null;
             function T() {
-                null != I && (0, C.A)(I) ? (0, g.Py)(I, E) : t();
+                null != j && (0, C.A)(j) ? (0, g.Py)(j, E) : t();
             }
             function b() {
-                null != j && x.default.endEvent(j.id, j.guild_id);
+                null != I && x.default.endEvent(I.id, I.guild_id);
             }
             return N
                 ? (0, i.jsx)(a.Y, {
@@ -51,8 +51,8 @@ t.d(
                                       color: "danger",
                                       action: b,
                                       label: p.intl.string(p.t.qaYzPA),
-                                      leadingAccessory: { type: "icon", icon: c.a },
-                                      icon: c.a,
+                                      leadingAccessory: { type: "icon", icon: c.CircleXIcon },
+                                      icon: c.CircleXIcon,
                                   }),
                               }),
                           });

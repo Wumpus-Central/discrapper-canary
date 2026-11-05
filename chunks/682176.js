@@ -12,15 +12,15 @@ var n = i(477900),
     h = i(614269),
     m = i(829097),
     g = i(734057),
-    v = i(501687),
-    C = i(54563),
+    C = i(501687),
+    v = i(54563),
     w = i(349897),
     S = i(394039),
     _ = i(215655),
     b = i(802976),
-    k = i(696016),
-    A = i(652215),
-    I = i(683825),
+    I = i(696016),
+    k = i(652215),
+    A = i(683825),
     M = i(792996),
     y = i(324973);
 let f = (0, p.qT)({
@@ -56,9 +56,9 @@ i.d(
                     maxHeight: P = 1 / 0,
                     channelId: B,
                     messageId: R,
-                    showTextContent: N = E >= 250,
-                    showParticipants: F = !0,
-                    volume: U,
+                    showTextContent: U = E >= 250,
+                    showParticipants: N = !0,
+                    volume: F,
                     autoMute: j,
                     onVolumeChange: G,
                     onMutedChange: L,
@@ -103,32 +103,32 @@ i.d(
                     () => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1,
                     [t.clip_events_timeline],
                 ),
-                ev = (0, o.Lt)(t.flags ?? 0, A.sbO.HAS_TIMELINE_COMMENTS),
-                eC = l.useMemo(() => {
+                eC = (0, o.Lt)(t.flags ?? 0, k.sbO.HAS_TIMELINE_COMMENTS),
+                ev = l.useMemo(() => {
                     let e = [];
                     return (
                         eg &&
                             e.push({
                                 id: "speaking-indicators",
-                                iconComponent: c.r,
-                                label: M.intl.string(I.default.hFWVZQ),
+                                iconComponent: c.UserCircleIcon,
+                                label: M.intl.string(A.default.hFWVZQ),
                                 active: es,
                                 onClick: () => eo((e) => !e),
                                 "data-testid": "clips-player-speaking-indicators-toggle",
                             }),
-                        ev &&
+                        eC &&
                             e.push({
                                 id: "timeline-comments",
                                 iconComponent: u.ChatIcon,
-                                label: M.intl.string(I.default.XfP4bO),
+                                label: M.intl.string(A.default.XfP4bO),
                                 active: er,
                                 onClick: () => ed((e) => !e),
                                 "data-testid": "clips-player-timeline-comments-toggle",
                             }),
                         e
                     );
-                }, [eg, es, ev, er]),
-                ew = (0, m._)({ location: k.Mu }).externalAnalyticsEnabled,
+                }, [eg, es, eC, er]),
+                ew = (0, m._)({ location: I.Mu }).externalAnalyticsEnabled,
                 eS = l.useMemo(
                     () =>
                         ew
@@ -149,8 +149,8 @@ i.d(
                         }) ?? [],
                     [t.clip_participants],
                 ),
-                [eb, ek] = l.useState(!1),
-                eA = l.useCallback(
+                [eb, eI] = l.useState(!1),
+                ek = l.useCallback(
                     (e) => {
                         let {
                             playerState: i,
@@ -160,13 +160,13 @@ i.d(
                             isVolumeExpanded: o,
                             controlBarAnimationSpring: r,
                         } = e;
-                        return (0, n.jsx)(C.A, {
+                        return (0, n.jsx)(v.A, {
                             attachment: t,
                             controlBarAnimationSpring: r,
                             guildId: J,
                             isFullScreen: el,
-                            showParticipants: F,
-                            showTextContent: N,
+                            showParticipants: N,
+                            showTextContent: U,
                             channelId: B,
                             messageId: R,
                             showSpeakingIndicators: es,
@@ -179,23 +179,23 @@ i.d(
                             isVolumeExpanded: o,
                             showTimelineComments: er,
                             isGridView: eb,
-                            setIsGridView: ek,
+                            setIsGridView: eI,
                         });
                     },
-                    [t, J, el, F, N, B, R, es, e_, ec, er, eb],
+                    [t, J, el, N, U, B, R, es, e_, ec, er, eb],
                 ),
-                eI = (0, w.T)(t.clip_events_timeline ?? [], t.application?.id, t.duration_secs ?? ec),
+                eA = (0, w.T)(t.clip_events_timeline ?? [], t.application?.id, t.duration_secs ?? ec),
                 eM = (0, b.A)({ attachment: t, channelId: B, guildId: J, messageId: R, width: et, height: ei }),
                 ey = l.useCallback(
                     (e) =>
                         null == eM
                             ? null
-                            : (0, n.jsx)(v.A, {
+                            : (0, n.jsx)(C.A, {
                                   ...e,
                                   original: eM.original,
                                   subSources: eM.subSources,
                                   isGridView: eb,
-                                  setIsGridView: ek,
+                                  setIsGridView: eI,
                                   suppressSourceSelection: eb,
                               }),
                     [eM, eb],
@@ -210,22 +210,22 @@ i.d(
                     downloadUrl: t.url,
                     renderVideo: null != eM ? ey : void 0,
                     downloadContentType: t.content_type,
-                    extraButtons: eC,
+                    extraButtons: ev,
                     poster: en,
                     autoplay: p,
                     initialActive: !1,
                     initialTimeSec: q,
-                    initialVolume: U,
+                    initialVolume: F,
                     initialMuted: j,
                     onVolumeChange: G,
                     onMutedChange: L,
                     onProgressUpdate: em,
                     orientation: "landscape",
-                    timelineIndicatorConfig: eI,
+                    timelineIndicatorConfig: eA,
                     minWidth: 0,
                     minHeight: 0,
                     loadingSpinnerPosition: "center",
-                    renderPersistentOverlay: eA,
+                    renderPersistentOverlay: ek,
                     parentTransitionState: null,
                     onFullscreenChange: ea,
                     onClick: H,

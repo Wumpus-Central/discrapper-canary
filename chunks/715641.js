@@ -1,28 +1,29 @@
+e.r(l);
 var s = e(477900);
 e(582128);
 var i = e(646514),
     h = e(996682),
     t = e(27989);
 e.d(
-    a,
+    l,
     {},
     {
-        b: function (l) {
+        BadgeIcon: function (a) {
             let {
-                    size: a = "md",
+                    size: l = "md",
                     width: e,
                     height: d,
                     color: n = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: c = "",
                     ...o
-                } = l,
-                p = (0, t.J)(a),
-                r = p?.width ?? e,
-                w = p?.height ?? d;
+                } = a,
+                r = (0, t.J)(l),
+                p = r?.width ?? e,
+                w = r?.height ?? d;
             return (0, s.jsx)("svg", {
                 ...(0, h.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",

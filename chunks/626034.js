@@ -1,3 +1,4 @@
+s.r(l);
 var c = s(477900);
 s(582128);
 var e = s(646514),
@@ -7,7 +8,7 @@ s.d(
     l,
     {},
     {
-        k: function (a) {
+        ImageFileUpIcon: function (a) {
             let {
                     size: l = "md",
                     width: s,

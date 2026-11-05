@@ -112,7 +112,7 @@ function h(e) {
                     className: p ? x._m : x.c9,
                     "aria-label": g.intl.string(g.t.r6EJOu),
                     children: [
-                        p && (0, i.jsx)(r.j, { size: "xxs", color: "currentColor" }),
+                        p && (0, i.jsx)(r.PlusSmallIcon, { size: "xxs", color: "currentColor" }),
                         (0, i.jsx)(o.E, {
                             variant: "footnote/medium",
                             color: "none",

@@ -1,30 +1,30 @@
-e.d(i, { default: () => _ });
+e.d(i, { default: () => v });
 var o = e(477900);
 e(582128);
 var r = e(189213),
     s = e(978940),
     l = e(214947),
-    c = e(704333),
-    n = e(276293),
+    n = e(704333),
+    c = e(276293),
     h = e(406810),
     d = e(360669),
-    a = e(597770),
-    C = e(331322),
+    C = e(597770),
+    a = e(331322),
     u = e(834730),
     x = e(923531),
     j = e(294433),
     p = e(438732),
-    N = e(953727),
-    g = e(191627),
-    m = e(665956),
-    f = e(792996),
-    w = e(147837);
-let I = {
-    [g.NV.USER_INTERACTION]: (0, o.jsx)(
+    I = e(953727),
+    N = e(191627),
+    g = e(665956),
+    m = e(792996),
+    f = e(147837);
+let w = {
+    [N.NV.USER_INTERACTION]: (0, o.jsx)(
         function (t) {
             let { width: i = 24, height: e = 24, color: r = "currentColor", ...s } = t;
             return (0, o.jsxs)("svg", {
-                ...(0, N.A)(s),
+                ...(0, I.A)(s),
                 width: i,
                 height: e,
                 viewBox: "0 0 20 20",
@@ -43,32 +43,32 @@ let I = {
         },
         { width: 18, height: 18 },
     ),
-    [g.NV.USER_CALLED]: (0, o.jsx)(s._, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-    [g.NV.USER_ADD]: (0, o.jsx)(l.$, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-    [g.NV.GUILD_ADD]: (0, o.jsx)(c.B, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-    [g.NV.GUILD_INTERACTION]: (0, o.jsx)(n.N, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-    [g.NV.TOTAL_VOICE_MINUTES]: (0, o.jsx)(h.ClockIcon, {
+    [N.NV.USER_CALLED]: (0, o.jsx)(s.PhoneCallIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+    [N.NV.USER_ADD]: (0, o.jsx)(l.FriendsIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+    [N.NV.GUILD_ADD]: (0, o.jsx)(n.ServerGridIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+    [N.NV.GUILD_INTERACTION]: (0, o.jsx)(c.TextIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+    [N.NV.TOTAL_VOICE_MINUTES]: (0, o.jsx)(h.ClockIcon, {
         size: "custom",
         color: "currentColor",
         width: 22,
         height: 22,
     }),
-    [g.NV.PURCHASES]: (0, o.jsx)(d.B, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-    [g.NV.GIFTS]: (0, o.jsx)(a.GiftIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+    [N.NV.PURCHASES]: (0, o.jsx)(d.CreditCardIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+    [N.NV.GIFTS]: (0, o.jsx)(C.GiftIcon, { size: "custom", color: "currentColor", width: 22, height: 22 }),
 };
 function E(t) {
     let { header: i, description: e, icon: r } = t;
-    return (0, o.jsxs)(C.B, {
+    return (0, o.jsxs)(a.B, {
         direction: "horizontal",
-        className: w.nM,
+        className: f.nM,
         padding: 16,
         align: "center",
         gap: 16,
         fullWidth: !1,
         children: [
-            (0, o.jsx)("div", { className: w.zc, children: r }),
+            (0, o.jsx)("div", { className: f.zc, children: r }),
             (0, o.jsxs)("div", {
-                className: w.u4,
+                className: f.u4,
                 children: [
                     (0, o.jsx)(u.E, { variant: "body-sm/semibold", children: i }),
                     (0, o.jsx)(u.E, { variant: "body-xs/medium", children: e }),
@@ -77,24 +77,24 @@ function E(t) {
         ],
     });
 }
-let _ = function (t) {
+let v = function (t) {
     let { transitionState: i, onClose: e } = t,
-        s = (0, j.y)(f.intl.string(m.default.q3IRal), f.intl.string(m.default.JNLpDZ)),
+        s = (0, j.y)(m.intl.string(g.default.q3IRal), m.intl.string(g.default.JNLpDZ)),
         l = (0, p.A)(),
-        c = (0, x.Mo)();
+        n = (0, x.Mo)();
     return (0, o.jsx)(r.a, {
         transitionState: i,
         onClose: e,
         actions: [],
         title: s,
-        children: (0, o.jsx)(C.B, {
+        children: (0, o.jsx)(a.B, {
             gap: 8,
             fullWidth: !1,
-            children: c.map((t) => {
+            children: n.map((t) => {
                 let [i, e] = t;
                 return (0, o.jsx)(
                     E,
-                    { icon: I[i], header: e.tooltipHeader(), description: e.tooltipDescription(l ?? void 0) },
+                    { icon: w[i], header: e.tooltipHeader(), description: e.tooltipDescription(l ?? void 0) },
                     i,
                 );
             }),

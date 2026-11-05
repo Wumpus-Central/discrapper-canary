@@ -1,15 +1,15 @@
-var a = n(477900);
+var e = n(477900);
 n(582128);
-var e = n(503698),
-    i = n.n(e),
+var a = n(503698),
+    i = n.n(a),
     r = n(104510),
     t = n(646514),
     c = n(534514),
-    d = n(866665),
-    h = n(939249),
-    u = n(473145),
-    m = n(792996),
-    o = n(795874);
+    o = n(866665),
+    d = n(939249),
+    m = n(473145),
+    h = n(792996),
+    u = n(795874);
 n.d(
     l,
     {},
@@ -17,51 +17,54 @@ n.d(
         A: function (s) {
             let l,
                 n,
-                e,
+                a,
                 {
                     guildFeature: j,
                     guild: x,
                     className: N,
-                    hideTooltip: _ = !1,
-                    tooltipPosition: p = "left",
-                    onClick: k,
+                    hideTooltip: p = !1,
+                    tooltipPosition: k = "left",
+                    onClick: v,
                 } = s,
-                v = x.features.has(j),
-                g = (0, u.Ys)(j);
-            return (v
-                ? (null != g && (e = m.intl.string(m.t.hUgjyP)),
-                  (l = (0, a.jsxs)(a.Fragment, {
+                _ = x.features.has(j),
+                g = (0, m.Ys)(j);
+            return (_
+                ? (null != g && (a = h.intl.string(h.t.hUgjyP)),
+                  (l = (0, e.jsxs)(e.Fragment, {
                       children: [
-                          (0, a.jsx)(r._, { color: t.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: o.RQ }),
-                          (0, a.jsx)(c.D, {
+                          (0, e.jsx)(r.BoostGemIcon, {
+                              color: t.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                              className: u.RQ,
+                          }),
+                          (0, e.jsx)(c.D, {
                               variant: "body-sm/medium",
-                              className: o.h_,
-                              children: m.intl.string(m.t["0O+87i"]),
+                              className: u.h_,
+                              children: h.intl.string(h.t["0O+87i"]),
                           }),
                       ],
                   })))
-                : (null != g && (e = m.intl.string(m.t.L2wYYj)),
-                  (l = (0, a.jsxs)(a.Fragment, {
+                : (null != g && (a = h.intl.string(h.t.L2wYYj)),
+                  (l = (0, e.jsxs)(e.Fragment, {
                       children: [
-                          (0, a.jsx)(r._, { color: "currentColor", className: o.Kk }),
-                          (0, a.jsx)(c.D, {
+                          (0, e.jsx)(r.BoostGemIcon, { color: "currentColor", className: u.Kk }),
+                          (0, e.jsx)(c.D, {
                               variant: "body-sm/medium",
-                              className: o.h_,
-                              children: null != g && (0, u.Qu)(g),
+                              className: u.h_,
+                              children: null != g && (0, m.Qu)(g),
                           }),
                       ],
                   }))),
             (n =
-                _ || null == e
-                    ? (0, a.jsx)("div", { className: i()(o.Jz, N), children: l })
-                    : (0, a.jsx)(d.m, {
-                          position: p,
-                          text: e,
-                          children: (0, a.jsx)("div", { className: i()(o.Jz, N), children: l }),
+                p || null == a
+                    ? (0, e.jsx)("div", { className: i()(u.Jz, N), children: l })
+                    : (0, e.jsx)(o.m, {
+                          position: k,
+                          text: a,
+                          children: (0, e.jsx)("div", { className: i()(u.Jz, N), children: l }),
                       })),
-            null == k || v)
+            null == v || _)
                 ? n
-                : (0, a.jsx)(h.D, { onClick: k, className: o.vk, children: n });
+                : (0, e.jsx)(d.D, { onClick: v, className: u.vk, children: n });
         },
     },
 );

@@ -1,6 +1,6 @@
 var s = i(460905),
-    r = i(7807),
-    n = i(391242),
+    n = i(7807),
+    r = i(391242),
     a = i(597601),
     l = i(183623),
     o = i(95635),
@@ -17,29 +17,29 @@ i.d(
         X: function (e) {
             switch (e) {
                 case T.TP.EMOJI:
-                    return s.n;
+                    return s.ReactionIcon;
                 case T.TP.SOUNDBOARD:
-                    return r.J;
+                    return n.SoundboardIcon;
                 case T.TP.ANIMATED:
-                    return n.O;
+                    return r.GifIcon;
                 case T.TP.AUDIO:
-                    return a.L;
+                    return a.HeadphonesIcon;
                 case T.TP.STREAM:
-                    return l.F;
+                    return l.ScreenArrowIcon;
                 case T.TP.UPLOAD:
                     return o.UploadIcon;
                 case T.TP.CUSTOM_ROLE_ICON:
-                    return c.i;
+                    return c.ShieldUserIcon;
                 case T.TP.CUSTOMIZATION:
-                    return d.s;
+                    return d.ImagesIcon;
                 case T.TP.VANITY:
                     return u.StarIcon;
                 case T.TP.STAGE_VIDEO:
-                    return m.q;
+                    return m.StageIcon;
                 case T.TP.STICKER:
-                    return g.t;
+                    return g.StickerIcon;
                 default:
-                    return s.n;
+                    return s.ReactionIcon;
             }
         },
     },

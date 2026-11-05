@@ -39,14 +39,14 @@ n.d(
                                 className: m.b,
                                 onClick: r,
                                 "aria-label": b.intl.string(b.t.WAI6xu),
-                                children: (0, o.jsx)(p.P, { size: "sm" }),
+                                children: (0, o.jsx)(p.XSmallIcon, { size: "sm" }),
                             }),
                         ],
                     }),
             });
         },
         fY: function (e) {
-            let { text: t, onClick: n, icon: l = d.t, iconPosition: a } = e;
+            let { text: t, onClick: n, icon: l = d.NitroWheelIcon, iconPosition: a } = e;
             return (0, o.jsx)(r.$, {
                 onClick: n,
                 text: t,

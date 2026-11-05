@@ -6,23 +6,23 @@ var l = t(646514),
     r = t(993838),
     o = t(418208),
     c = t(47868),
-    d = t(792996);
+    u = t(792996);
 t.d(
     n,
     {},
     {
         A: function (e) {
-            let { className: n, channel: t, highlight: u } = e,
+            let { className: n, channel: t, highlight: d } = e,
                 A = (0, a.Us)();
             return (0, o.zU)()
                 ? null
                 : (0, i.jsx)(c.A, {
-                      highlight: u ?? !1,
+                      highlight: d ?? !1,
                       className: n,
-                      icon: (0, i.jsx)(s.q, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+                      icon: (0, i.jsx)(s.StageIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
                       color: l.A.unsafe_rawColors.GREEN_360.css,
-                      title: d.intl.string(d.t.OYbHfv),
-                      description: d.intl.string(d.t.yXwLMQ),
+                      title: u.intl.string(u.t.OYbHfv),
+                      description: u.intl.string(u.t.yXwLMQ),
                       onClick: function () {
                           (0, r.tQ)(t, A);
                       },

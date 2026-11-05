@@ -122,8 +122,8 @@ function y(e) {
 }
 var L = i(815021),
     S = i(408278),
-    b = i(173936),
-    k = i(590202),
+    k = i(173936),
+    b = i(590202),
     q = i(814793),
     G = i(201805),
     O = i(88561);
@@ -134,7 +134,7 @@ function Q(e) {
             isShareable: r,
             questId: t.id,
             trackingCtx: s.useMemo(
-                () => ({ content: i, ctaContent: k.Cy.COPY_QUEST_URL, sourceQuestContent: l }),
+                () => ({ content: i, ctaContent: b.Cy.COPY_QUEST_URL, sourceQuestContent: l }),
                 [i, l],
             ),
         });
@@ -145,7 +145,7 @@ function Q(e) {
                 (0, n.jsx)(S.K, {
                     size: "sm",
                     variant: "overlay-secondary",
-                    icon: b.LinkIcon,
+                    icon: k.LinkIcon,
                     "aria-label": p.intl.string(p.t.WqhZss),
                     onClick: o,
                 }),
@@ -236,9 +236,9 @@ var H = i(412703),
     J = i(144779),
     K = i(793574),
     Y = i(409626),
-    F = i(692969),
-    V = i(889558),
-    w = i(792620),
+    w = i(692969),
+    F = i(889558),
+    V = i(792620),
     Z = i(691885),
     X = i(506425);
 function $(e) {
@@ -301,8 +301,8 @@ function es(e) {
     let { quest: t, sourceQuestContent: i } = e,
         { hasAlreadyLinked: a, canStartAuthorization: r, startAuthorization: o, fetched: c } = (0, ee.U)(t),
         d = (0, T.wW)(),
-        u = (0, w.xc)(t),
-        m = (0, F.A)({
+        u = (0, V.xc)(t),
+        m = (0, w.A)({
             applicationId: u,
             location: ei.rE.QUEST_INSTRUCTIONS,
             source: Y.GameProfileSources.QuestInGameModal,
@@ -323,14 +323,19 @@ function es(e) {
             label: p.intl.string(p.t.okJIPY),
             placeholder: p.intl.string(p.t.okJIPY),
             options: [
-                { id: ei.qh.IN_GAME, value: ei.qh.IN_GAME, label: p.intl.string(p.t["4PWzD7"]), leading: R.A },
-                { id: ei.qh.WEB, value: ei.qh.WEB, label: p.intl.string(p.t.CM8LUl), leading: P.I },
+                {
+                    id: ei.qh.IN_GAME,
+                    value: ei.qh.IN_GAME,
+                    label: p.intl.string(p.t["4PWzD7"]),
+                    leading: R.ExperimentalGameControllerLinkIcon,
+                },
+                { id: ei.qh.WEB, value: ei.qh.WEB, label: p.intl.string(p.t.CM8LUl), leading: P.BrowserLinkIcon },
             ],
             value: E,
             onSelectionChange: (e) => {
                 if (e !== ei.qh.IN_GAME && e !== ei.qh.WEB) return void h(null);
                 h(e);
-                let n = e === ei.qh.IN_GAME ? k.Cy.SELECT_IN_GAME_AUTH_METHOD : k.Cy.SELECT_WEB_AUTH_METHOD;
+                let n = e === ei.qh.IN_GAME ? b.Cy.SELECT_IN_GAME_AUTH_METHOD : b.Cy.SELECT_WEB_AUTH_METHOD;
                 (0, B.r)({
                     type: J.F.CLICK_INTERNAL,
                     adCreativeType: C.p.QUEST,
@@ -356,7 +361,7 @@ function es(e) {
                             type: J.F.CLICK_INTERNAL,
                             adCreativeType: C.p.QUEST,
                             adCreativeId: t.id,
-                            questContentCTA: k.Cy.START_WEB_AUTHORIZATION,
+                            questContentCTA: b.Cy.START_WEB_AUTHORIZATION,
                             surfaceId: l.uF.ACHIEVEMENT_IN_GAME_MODAL,
                             sourceQuestContent: i,
                             impressionId: d(),
@@ -370,14 +375,14 @@ function es(e) {
             return {
                 text: p.intl.string(p.t.KgYvrZ),
                 onClick: () =>
-                    (0, V.h)({
+                    (0, F.h)({
                         href: n,
                         onConfirm: () => {
                             ((0, B.r)({
                                 type: J.F.CLICK_INTERNAL,
                                 adCreativeType: C.p.QUEST,
                                 adCreativeId: t.id,
-                                questContentCTA: k.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
+                                questContentCTA: b.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
                                 surfaceId: l.uF.ACHIEVEMENT_IN_GAME_MODAL,
                                 sourceQuestContent: i,
                                 impressionId: d(),

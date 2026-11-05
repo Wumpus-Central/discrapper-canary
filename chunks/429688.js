@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(429913),
     h = n(223863),
     x = n(151054),
-    b = n(734057),
-    g = n(71393),
+    g = n(734057),
+    b = n(71393),
     p = n(403362),
     f = n(264322),
     A = n(545152),
@@ -65,8 +65,8 @@ var E = n(503698),
     _ = n(939249),
     F = n(658675),
     M = n(778712),
-    z = n(56059),
-    I = n(276293),
+    I = n(56059),
+    z = n(276293),
     H = n(646514),
     q = n(966327),
     G = n(964486),
@@ -170,16 +170,16 @@ function er(e) {
 }
 function eo(e) {
     let { channel: t, subLabel: n, ...l } = e,
-        a = (0, T.bG)([g.A], () => g.A.getGuild(t?.guild_id)),
+        a = (0, T.bG)([b.A], () => b.A.getGuild(t?.guild_id)),
         s = (0, U.Ay)(t),
-        r = (0, T.bG)([b.A, Y.default, K.A], () => {
-            let e = b.A.getChannel(t.parent_id);
+        r = (0, T.bG)([g.A, Y.default, K.A], () => {
+            let e = g.A.getChannel(t.parent_id);
             return null == e ? null : (0, U.m1)(e, Y.default, K.A, !1);
         }),
         o = (0, T.bG)([X.Ay], () => X.Ay.lastMessageTimestamp(t.id, en.P.CHANNEL)),
         u = a?.name;
     if (t.isThread() || t.isForumPost()) {
-        let e = t.isForumPost() ? z.b : I.N;
+        let e = t.isForumPost() ? I.ForumIcon : z.TextIcon;
         u = (0, i.jsxs)("div", {
             className: el.vr,
             children: [
@@ -241,7 +241,7 @@ function ec(e) {
                           })(r, c)
                         : null,
                 x = o.includes(d),
-                b = {
+                g = {
                     destination: u,
                     subLabel: null != m ? m.label : void 0,
                     disabled: (s && !x) || null != m,
@@ -252,12 +252,12 @@ function ec(e) {
                 };
             switch (l) {
                 case R.rD.USER:
-                    return (0, i.jsx)(es, { user: c, ...b }, d);
+                    return (0, i.jsx)(es, { user: c, ...g }, d);
                 case R.rD.GROUP_DM:
-                    return (0, i.jsx)(er, { channel: c, ...b }, d);
+                    return (0, i.jsx)(er, { channel: c, ...g }, d);
                 case R.rD.TEXT_CHANNEL:
                 case R.rD.VOICE_CHANNEL:
-                    return (0, i.jsx)(eo, { channel: c, ...b }, d);
+                    return (0, i.jsx)(eo, { channel: c, ...g }, d);
                 default:
                     return (0, p.xb)(l);
             }
@@ -291,7 +291,7 @@ function ex(e) {
         [T, _] = l.useState(j && null != S ? [S] : []),
         F = T.length,
         M = F >= 5,
-        [z, I] = l.useState(""),
+        [I, z] = l.useState(""),
         { results: H, updateSearchText: q } = (0, x.R)({
             selectedDestinations: T,
             originDestination: S ?? void 0,
@@ -299,19 +299,19 @@ function ex(e) {
         }),
         G = l.useCallback(
             (e) => {
-                (I(e), q(e));
+                (z(e), q(e));
             },
             [q],
         ),
         R = l.useCallback(() => (C(!1), v()), [C, v]),
         [U] = (0, m.A)([n]),
         O = l.useCallback(() => {
-            I("");
-        }, [I]),
+            z("");
+        }, [z]),
         Q = l.useRef(null);
     l.useEffect(() => {
-        "" === z && Q.current?.focus();
-    }, [z]);
+        "" === I && Q.current?.focus();
+    }, [I]);
     let B = l.useCallback(
             (e) => {
                 _((t) => {
@@ -319,7 +319,7 @@ function ex(e) {
                         let { type: n, id: i } = t;
                         return n === e.type && i === e.id;
                     });
-                    if (-1 === n) return M ? t : (I(""), q(""), (P.current += 1), [e, ...t]);
+                    if (-1 === n) return M ? t : (z(""), q(""), (P.current += 1), [e, ...t]);
                     let i = [...t];
                     return (i.splice(n, 1), (P.current += 1), i);
                 });
@@ -339,12 +339,12 @@ function ex(e) {
                 let n = (await Promise.all(e.map(h.pk))).filter(p.Vq);
                 (t && (C(!0), eh()),
                     n.forEach(async (e) => {
-                        let t = b.A.getChannel(e);
+                        let t = g.A.getChannel(e);
                         if (null == t) return;
                         let n =
                                 d.options?.reduce((e, t) => ((e[t.name] = [{ type: "text", text: t.value }]), e), {}) ??
                                 {},
-                            i = g.A.getGuild(t?.guild_id);
+                            i = b.A.getGuild(t?.guild_id);
                         null != (await (0, A.A)({ command: Z, optionValues: n, context: { channel: t, guild: i } })) &&
                             (0, r.P0)({ text: ei.intl.string(ei.t["5WjJcl"]) });
                     }),
@@ -412,7 +412,7 @@ function ex(e) {
             preview: void 0 !== y ? (0, i.jsx)(k, { previewMessage: y }) : null,
             input: (0, i.jsx)(u.I, {
                 ref: Q,
-                query: z,
+                query: I,
                 onChange: G,
                 onClear: O,
                 placeholder: ei.intl.string(ei.t["5h0QOP"]),

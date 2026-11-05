@@ -24,14 +24,14 @@ var r = n(503698),
 function L(t) {
     let { className: e, creator: n, guildId: r, isNew: m, guildEvent: A, eventPreview: j, recurrenceId: L } = t,
         D = (0, E.A)(r, A.id, L),
-        _ = A ?? j,
-        p = (0, a.bG)([x.Ay], () => x.Ay.getNick(r, n?.id), [r, n]);
-    L = null == _ || null != L ? L : (0, v.G3)(_);
+        p = A ?? j,
+        _ = (0, a.bG)([x.Ay], () => x.Ay.getNick(r, n?.id), [r, n]);
+    L = null == p || null != L ? L : (0, v.G3)(p);
     let { startTime: y } = (0, f.Ay)(A ?? j, L),
         b = (0, h.A)(L, A.id),
-        w = _?.scheduled_start_time != null ? (0, v.j)(b, y, new Date(_.scheduled_start_time)) : null;
-    if (null == _) return null;
-    let { entity_type: S, status: P, recurrence_rule: k } = _;
+        w = p?.scheduled_start_time != null ? (0, v.j)(b, y, new Date(p.scheduled_start_time)) : null;
+    if (null == p) return null;
+    let { entity_type: S, status: P, recurrence_rule: k } = p;
     return (0, l.jsxs)("div", {
         className: i()(C.II, e),
         children: [
@@ -47,11 +47,11 @@ function L(t) {
             (0, l.jsx)("div", { className: C.jH }),
             null != n &&
                 (0, l.jsx)(s.m, {
-                    text: I.intl.formatToPlainString(I.t["+3iypQ"], { username: p ?? g.Ay.getName(n) }),
+                    text: I.intl.formatToPlainString(I.t["+3iypQ"], { username: _ ?? g.Ay.getName(n) }),
                     children: (0, l.jsx)(c.eu, {
                         src: n.getAvatarURL(r, 20),
                         size: u._3.SIZE_20,
-                        "aria-label": p ?? n.username,
+                        "aria-label": _ ?? n.username,
                         className: C.xL,
                     }),
                 }),
@@ -63,7 +63,7 @@ function L(t) {
                     "aria-label": I.intl.formatToPlainString(I.t["+DLsD8"], { count: D }),
                     className: C.T_,
                     children: [
-                        (0, l.jsx)(o.n, { size: "xxs", color: "currentColor", className: C.pO }),
+                        (0, l.jsx)(o.GroupIcon, { size: "xxs", color: "currentColor", className: C.pO }),
                         (0, l.jsx)(d.E, { color: "text-default", variant: "body-sm/normal", children: D }),
                     ],
                 }),

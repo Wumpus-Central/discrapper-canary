@@ -15,17 +15,17 @@ t.d(
     {
         A: function (e) {
             let { channel: n } = e,
-                [t, A] = i.useState(!1),
-                m = i.useRef(null),
+                [t, m] = i.useState(!1),
+                A = i.useRef(null),
                 p = (0, o.ni)(n),
                 j = i.useCallback(() => {
-                    A(!1);
+                    m(!1);
                 }, []),
                 f = i.useCallback(() => {
-                    (t || (0, u.D3)("Popout"), A(!t));
+                    (t || (0, u.D3)("Popout"), m(!t));
                 }, [t]);
             return (0, l.jsx)(s.Y, {
-                targetElementRef: m,
+                targetElementRef: A,
                 animation: s.Y.Animation.NONE,
                 position: "bottom",
                 align: "right",
@@ -42,10 +42,10 @@ t.d(
                     let { isShown: t } = n;
                     return (0, l.jsx)(c.In, {
                         ...e,
-                        ref: m,
+                        ref: A,
                         className: g.Kk,
                         onClick: f,
-                        icon: r.y,
+                        icon: r.ThreadIcon,
                         "aria-label": h.intl.string(h.t.B2panI),
                         tooltip: t ? null : h.intl.string(h.t.B2panI),
                         disabled: p,

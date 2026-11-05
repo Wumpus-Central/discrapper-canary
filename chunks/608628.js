@@ -34,9 +34,9 @@ function S(e) {
         _ = y.intl.string(x.default.BokMhV),
         k = y.intl.string(x.default.lCx19K),
         j = i()(v.qS, { [v.EX]: a === s.oA.SM, [v.bG]: !S }),
-        P = (0, n.jsxs)(n.Fragment, {
+        I = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(d.t, { size: "xs", color: "currentColor" }),
+                (0, n.jsx)(d.NitroWheelIcon, { size: "xs", color: "currentColor" }),
                 (0, n.jsx)(c.E, {
                     variant: a === s.oA.SM ? "footnote/semibold" : "body-xs/semibold",
                     color: "none",
@@ -55,7 +55,7 @@ function S(e) {
             shouldShow: t,
             position: "bottom",
             children: S
-                ? (0, n.jsx)("div", { className: j, "data-testid": E, children: P })
+                ? (0, n.jsx)("div", { className: j, "data-testid": E, children: I })
                 : (0, n.jsx)(m.D, {
                       className: j,
                       "aria-label": k,
@@ -70,7 +70,7 @@ function S(e) {
                                   });
                               })({ viewerPremiumType: b }));
                       },
-                      children: P,
+                      children: I,
                   }),
         }),
     });

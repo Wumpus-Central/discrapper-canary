@@ -30,7 +30,7 @@ function I(e) {
 }
 let y = (e) => {
     let { recurrence: t, analyticsLocations: n = [] } = e,
-        i = (0, a.jsx)(o.r, { color: s.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+        i = (0, a.jsx)(o.CheckmarkLargeBoldIcon, { color: s.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
         m = (0, a.jsx)("span", {
             className: x.nP,
             children: (0, a.jsx)(d.K, {
@@ -108,7 +108,7 @@ function L(e) {
             ? (0, a.jsx)("div", {
                   className: o,
                   children: (0, a.jsx)(u.$, {
-                      icon: m.E,
+                      icon: m.CircleErrorIcon,
                       variant: "critical-secondary",
                       size: "sm",
                       disabled: !0,

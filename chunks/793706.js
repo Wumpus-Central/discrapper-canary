@@ -68,7 +68,7 @@ function B(e) {
     let S = [
         (0, l.jsx)(
             R.Ay.Icon,
-            { icon: _.P, tooltip: F.intl.string(F.t.cpT0Cq), onClick: () => O.A.closeChannelSidebar(n) },
+            { icon: _.XSmallIcon, tooltip: F.intl.string(F.t.cpT0Cq), onClick: () => O.A.closeChannelSidebar(n) },
             "close",
         ),
     ];
@@ -1013,7 +1013,7 @@ let tb = (0, p.A)(function (e) {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, l.jsx)($.A.Icon, { icon: S.u, "aria-hidden": !0 }),
+                                        (0, l.jsx)($.A.Icon, { icon: S.EnvelopeIcon, "aria-hidden": !0 }),
                                         (0, l.jsx)(tj, {
                                             targetElementRef: v,
                                             children: (0, l.jsx)($.A.Title, {

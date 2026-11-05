@@ -17,15 +17,15 @@ var l,
     C = n(111994),
     E = n(352527),
     x = n(267102),
-    S = n(969632),
-    I = n(554146),
+    I = n(969632),
+    S = n(554146),
     y = n(263775);
-let b = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+let b = S.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 var _ = n(566908),
     j = n(43105),
     v = n(49999),
-    N = n(792996),
-    T = n(474218);
+    T = n(792996),
+    N = n(474218);
 function M(e) {
     let { targetElementRef: t, onDismiss: n } = e;
     return (0, i.jsx)(j.A, {
@@ -37,10 +37,10 @@ function M(e) {
         scrollBehavior: "close",
         caretConfig: { align: "start" },
         onRequestClose: () => n(v.i.USER_DISMISS),
-        title: N.intl.string(N.t.ZT58S4),
-        body: [N.intl.format(N.t.A2yQnt, {})],
-        actions: [{ text: N.intl.string(N.t["NX+WJN"]), onClick: () => n(v.i.USER_DISMISS) }],
-        graphic: { type: "image", src: T.A },
+        title: T.intl.string(T.t.ZT58S4),
+        body: [T.intl.format(T.t.A2yQnt, {})],
+        actions: [{ text: T.intl.string(T.t["NX+WJN"]), onClick: () => n(v.i.USER_DISMISS) }],
+        graphic: { type: "image", src: N.A },
     });
 }
 var R = n(406704),
@@ -88,8 +88,8 @@ var er = n(350835),
     eC = n(831544),
     eE = n(152367),
     ex = n(55730),
-    eS = n(47167),
-    eI = n(994500),
+    eI = n(47167),
+    eS = n(994500),
     ey = n(287809),
     eb = n(652215),
     e_ =
@@ -110,7 +110,7 @@ var er = n(350835),
         l),
     ej = n(412136);
 let ev = /(.*)```(\w+)\n(.*)```(.*)/s;
-function eN(e) {
+function eT(e) {
     let {
             channel: t,
             options: l,
@@ -130,10 +130,10 @@ function eN(e) {
     function x() {
         (0, et.Tv)(t, void 0, "Plus Button");
     }
-    function S() {
+    function I() {
         (ei.default.track(eb.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, ea.x7)("/")));
     }
-    function I() {
+    function S() {
         (ei.default.track(eb.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), Z.R(J.s4.TEXT, p, void 0, t.id));
     }
     function y() {
@@ -167,7 +167,7 @@ function eN(e) {
             onSelect: d,
             navId: "channel-attach",
             onClose: r,
-            "aria-label": N.intl.string(N.t.Xm41aV),
+            "aria-label": T.intl.string(T.t.Xm41aV),
             children: l.map(function (e) {
                 switch (e.type) {
                     case e_.UPLOAD_A_FILE:
@@ -309,7 +309,7 @@ function eN(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: S,
+                                action: I,
                             },
                             "SLASH_COMMAND",
                         );
@@ -321,7 +321,7 @@ function eN(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: I,
+                                action: S,
                             },
                             "APP_LAUNCHER",
                         );
@@ -357,9 +357,9 @@ function eN(e) {
                                                   K.Dr,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: N.intl.string(N.t.eCzSdd),
-                                                      iconLeft: V.n,
-                                                      leadingAccessory: { type: "icon", icon: V.n },
+                                                      label: T.intl.string(T.t.eCzSdd),
+                                                      iconLeft: V.GroupIcon,
+                                                      leadingAccessory: { type: "icon", icon: V.GroupIcon },
                                                       action: () => Q.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
@@ -368,7 +368,7 @@ function eN(e) {
                                                   K.Dr,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: N.intl.string(N.t["HOe+Hq"]),
+                                                      label: T.intl.string(T.t["HOe+Hq"]),
                                                       iconLeft: z.UserIcon,
                                                       leadingAccessory: { type: "icon", icon: z.UserIcon },
                                                       action: () => Q.A.summarizeThread(t),
@@ -402,16 +402,16 @@ function eN(e) {
         })
     );
 }
-var eT = n(696016),
+var eN = n(696016),
     eM = n(657851);
 let eR = s.memo(function (e) {
     let {
             className: t,
             channel: l,
             draftType: a,
-            editorTextContent: I,
+            editorTextContent: S,
             setValue: j,
-            canOnlyUseTextCommands: T,
+            canOnlyUseTextCommands: N,
             chatInputType: K,
         } = e,
         V = (0, k.n)("ChannelAttachButton"),
@@ -454,26 +454,29 @@ let eR = s.memo(function (e) {
                     n.e(5257),
                     n.e(970846),
                     n.e(795807),
+                    n.e(918024),
+                    n.e(838090),
                     n.e(203930),
                     n.e(903663),
-                    n.e(918024),
+                    n.e(583518),
+                    n.e(507406),
                     n.e(466147),
                     n.e(16954),
-                    n.e(507406),
-                    n.e(838090),
                     n.e(501962),
-                    n.e(583518),
+                    n.e(538733),
                     n.e(746623),
                     n.e(280559),
+                    n.e(17736),
                     n.e(974049),
                     n.e(237715),
                     n.e(895008),
                     n.e(231782),
+                    n.e(377683),
+                    n.e(698101),
                     n.e(306270),
                     n.e(823077),
                     n.e(626750),
                     n.e(689160),
-                    n.e(538733),
                     n.e(520342),
                     n.e(127851),
                 ]).then(n.bind(n, 657766));
@@ -485,7 +488,7 @@ let eR = s.memo(function (e) {
                         picker: { onPick: (e) => Q({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
-            { modalKey: eT.nm },
+            { modalKey: eN.nm },
         ),
             en(null));
     }
@@ -504,7 +507,7 @@ let eR = s.memo(function (e) {
     let e_ = (0, R.n)(l),
         ej = (0, R.Tb)(l),
         ev = !D.D_.useSetting() && !(0, F.Ct)() && null != window.ResizeObserver,
-        eR = (0, S.I7)(l ?? void 0),
+        eR = (0, I.I7)(l ?? void 0),
         eD = (0, _.vK)(l),
         ek = (0, g.b)(),
         eL = (0, P.A)(l, K),
@@ -529,35 +532,39 @@ let eR = s.memo(function (e) {
                 p = [];
             return (
                 t &&
-                    (p.push({ type: "UPLOAD_A_FILE", icon: ec.H, display: N.intl.string(N.t["d3+iYs"]) }),
-                    p.push({ type: "UPLOAD_TEXT_AS_FILE", icon: ec.H, display: N.intl.string(N.t["G9s+EM"]) })),
+                    (p.push({ type: "UPLOAD_A_FILE", icon: ec.FileUpIcon, display: T.intl.string(T.t["d3+iYs"]) }),
+                    p.push({
+                        type: "UPLOAD_TEXT_AS_FILE",
+                        icon: ec.FileUpIcon,
+                        display: T.intl.string(T.t["G9s+EM"]),
+                    })),
                 s &&
                     t &&
                     d !== eb.BRT.POPOUT &&
                     d !== eb.BRT.OVERLAY &&
                     p.push({
                         type: "CLIPS",
-                        icon: ed.x,
-                        display: N.intl.string(N.t.o034cv),
+                        icon: ed.ClipsIcon,
+                        display: T.intl.string(T.t.o034cv),
                         badgeVal: o,
                         badgeColor: eo.A.colors.BACKGROUND_BRAND.css,
                     }),
-                n && p.push({ type: "CREATE_THREAD", icon: eu.G, display: N.intl.string(N.t.rBIGBL) }),
-                c && p.push({ type: "POLL", icon: eh.Y, display: N.intl.string(N.t.Flr51u) }),
+                n && p.push({ type: "CREATE_THREAD", icon: eu.ThreadPlusIcon, display: T.intl.string(T.t.rBIGBL) }),
+                c && p.push({ type: "POLL", icon: eh.PollsIcon, display: T.intl.string(T.t.Flr51u) }),
                 l &&
                     i &&
                     (m
-                        ? p.push({ type: "SLASH_COMMAND", icon: em.k, display: N.intl.string(N.t.Bbvp6G) })
-                        : p.push({ type: "APP_LAUNCHER", icon: em.k, display: N.intl.string(N.t.hSQgW9) })),
+                        ? p.push({ type: "SLASH_COMMAND", icon: em.AppsIcon, display: T.intl.string(T.t.Bbvp6G) })
+                        : p.push({ type: "APP_LAUNCHER", icon: em.AppsIcon, display: T.intl.string(T.t.hSQgW9) })),
                 r.forEach((e) => {
                     !(0, ex.A)(e, eb.jUm.EMBEDDED) &&
                         (e.type === er.$.PLAYING &&
                             (0, ex.A)(e, eb.jUm.JOIN) &&
                             p.push({
                                 type: "INVITE_TO_GAME",
-                                icon: eg.L,
-                                display: N.intl.formatToPlainString(N.t["KHLo+F"], {
-                                    channel: (0, eS.m1)(a, ey.default, eI.A, !0),
+                                icon: eg.DpadIcon,
+                                display: T.intl.formatToPlainString(T.t["KHLo+F"], {
+                                    channel: (0, eI.m1)(a, ey.default, eS.A, !0),
                                     game: null != e ? e.name : "",
                                 }),
                                 activity: e,
@@ -566,9 +573,9 @@ let eR = s.memo(function (e) {
                             (0, ex.A)(e, eb.jUm.SYNC) &&
                             p.push({
                                 type: "INVITE_TO_LISTEN",
-                                icon: ep.J,
-                                display: N.intl.formatToPlainString(N.t.I479px, {
-                                    channel: (0, eS.m1)(a, ey.default, eI.A, !0),
+                                icon: ep.UserPlayIcon,
+                                display: T.intl.formatToPlainString(T.t.I479px, {
+                                    channel: (0, eI.m1)(a, ey.default, eS.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
@@ -578,23 +585,28 @@ let eR = s.memo(function (e) {
                             p.push({
                                 type: "INVITE_TO_WATCH",
                                 icon: eA.EyeIcon,
-                                display: N.intl.formatToPlainString(N.t["EvCP/g"], {
-                                    channel: (0, eS.m1)(a, ey.default, eI.A, !0),
+                                display: T.intl.formatToPlainString(T.t["EvCP/g"], {
+                                    channel: (0, eI.m1)(a, ey.default, eS.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }));
                 }),
-                u && p.push({ type: "SCHEDULED_MESSAGE", icon: ef.U, display: N.intl.string(N.t["3+ii4F"]) }),
+                u &&
+                    p.push({
+                        type: "SCHEDULED_MESSAGE",
+                        icon: ef.CalendarPlusIcon,
+                        display: T.intl.string(T.t["3+ii4F"]),
+                    }),
                 g &&
                     p.push({
                         type: "RECORD_VOICE_MESSAGE",
                         icon: eC.MicrophoneIcon,
-                        display: N.intl.string(N.t.lwy6aX),
+                        display: T.intl.string(T.t.lwy6aX),
                     }),
                 a.isThread() &&
                     h &&
-                    p.push({ type: "SUMMARIZE_THREAD", icon: eE.D, display: N.intl.string(N.t.EXfguE) }),
+                    p.push({ type: "SUMMARIZE_THREAD", icon: eE.MagicWandIcon, display: T.intl.string(T.t.EXfguE) }),
                 p
             );
         })({
@@ -602,7 +614,7 @@ let eR = s.memo(function (e) {
             canStartThreads: e_ || ej,
             useSlate: ev,
             hasClips: el,
-            canUseApplicationCommands: !T,
+            canUseApplicationCommands: !N,
             channel: l,
             activities: Y,
             newClipsCount: X?.length ?? 0,
@@ -635,14 +647,14 @@ let eR = s.memo(function (e) {
             },
             renderPopout: (e) => {
                 if ("attachMenu" === et)
-                    return (0, i.jsx)(eN, {
+                    return (0, i.jsx)(eT, {
                         ...e,
                         onClose: () => en(null),
                         options: eO,
                         channel: l,
                         onFileUpload: () => $.current?.activateUploadDialogue(),
                         draftType: a,
-                        editorTextContent: I,
+                        editorTextContent: S,
                         setValue: j,
                         openClips: ea,
                         chatInputType: K,
@@ -655,7 +667,7 @@ let eR = s.memo(function (e) {
                     className: r()(eM.g$, t),
                     childClassName: eM.wh,
                     isActive: !1,
-                    "aria-label": N.intl.string(N.t.d56gCa),
+                    "aria-label": T.intl.string(T.t.d56gCa),
                     onDoubleClick: es ? () => $.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,

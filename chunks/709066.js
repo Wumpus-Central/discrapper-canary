@@ -16,60 +16,60 @@ function _(e) {
             verified: _,
             hideIcon: E = !1,
             useRemSizes: A = !1,
-            children: h = [],
+            children: f = [],
         } = e,
-        f = null,
+        h = null,
         I = c.intl.string(c.t.g76OcH),
         p = t ? u.i$ : u.GD;
     switch (n) {
         case d.nu.SYSTEM_DM:
         case d.nu.OFFICIAL:
-            ((_ = !0), (I = c.intl.string(c.t["7s687k"])), (f = c.intl.string(c.t.lKQ7Wt)));
+            ((_ = !0), (I = c.intl.string(c.t["7s687k"])), (h = c.intl.string(c.t.lKQ7Wt)));
             break;
         case d.nu.SERVER:
-            f = c.intl.string(c.t.PuJGuM);
+            h = c.intl.string(c.t.PuJGuM);
             break;
         case d.nu.ORIGINAL_POSTER:
-            f = c.intl.string(c.t.fyE8sH);
+            h = c.intl.string(c.t.fyE8sH);
             break;
         case d.nu.STAFF_ONLY_DM:
-            f = c.intl.string(c.t.oMx98L);
+            h = c.intl.string(c.t.oMx98L);
             break;
         case d.nu.NOT_STAFF_WARNING:
-            ((f = c.intl.string(c.t.UWhXbK)), (p = u.Zi));
+            ((h = c.intl.string(c.t.UWhXbK)), (p = u.Zi));
             break;
         case d.nu.BOT:
         default:
-            f = c.intl.string(c.t["9RNkeF"]);
+            h = c.intl.string(c.t["9RNkeF"]);
     }
     let m = n === d.nu.ORIGINAL_POSTER,
-        g = null;
+        T = null;
     _ &&
-        (g = (0, i.jsx)(s.m, {
+        (T = (0, i.jsx)(s.m, {
             text: I,
             align: "center",
             position: "top",
-            children: (0, i.jsx)(l.B, { className: u.go, color: o.A.colors.WHITE }),
+            children: (0, i.jsx)(l.CheckmarkSmallBoldIcon, { className: u.go, color: o.A.colors.WHITE }),
         }));
-    let T = null;
-    if (_) T = I;
-    else if ("string" == typeof f)
+    let g = null;
+    if (_) g = I;
+    else if ("string" == typeof h)
         switch (n) {
             case d.nu.BOT:
-                T = c.intl.string(c.t.qwJHjo);
+                g = c.intl.string(c.t.qwJHjo);
                 break;
             case d.nu.SERVER:
-                T = c.intl.string(c.t["39trQT"]);
+                g = c.intl.string(c.t["39trQT"]);
                 break;
             default:
-                T = f;
+                g = h;
         }
     function S() {
         return (0, i.jsxs)("span", {
             role: "img",
-            "aria-label": T ?? void 0,
+            "aria-label": g ?? void 0,
             className: a()(r, p, A ? u.D0 : u.px, { [u.rV]: m }),
-            children: [E ? null : g, h, (0, i.jsx)("span", { className: u.lc, children: f })],
+            children: [E ? null : T, f, (0, i.jsx)("span", { className: u.lc, children: h })],
         });
     }
     return n === d.nu.ORIGINAL_POSTER

@@ -30,30 +30,30 @@ e.d(
                     applyOffer: D,
                     churnUserDiscountOffer: j,
                     discountedPrice: b,
-                    fullPrice: S,
+                    fullPrice: N,
                 } = (0, p.X)(),
-                [T, A] = (0, r.useState)(!1),
-                [N, M] = (0, r.useState)(!1);
+                [S, T] = (0, r.useState)(!1),
+                [A, M] = (0, r.useState)(!1);
             if (null === j || null === b) return (0, i.jsx)("div", { className: h.dc, children: (0, i.jsx)(l.y, {}) });
             let I = e === C.PremiumTypes.TIER_2,
                 R = [
-                    { text: y.intl.string(y.t.zl7LZp), onClick: () => n(), variant: "secondary", disabled: T },
+                    { text: y.intl.string(y.t.zl7LZp), onClick: () => n(), variant: "secondary", disabled: S },
                     {
                         text: y.intl.string(y.t.CKSuZJ),
                         onClick: () =>
                             (async function () {
                                 if (null === j) return void M(!0);
-                                (A(!0), M(!1));
+                                (T(!0), M(!1));
                                 try {
                                     (await D(), E(f.g.DISCOUNT_APPLIED));
                                 } catch (t) {
-                                    (M(!0), A(!1));
+                                    (M(!0), T(!1));
                                 }
                             })(),
                         variant: "primary",
-                        icon: a.t,
-                        loading: T,
-                        disabled: T,
+                        icon: a.NitroWheelIcon,
+                        loading: S,
+                        disabled: S,
                     },
                 ];
             return (0, i.jsxs)(s.k, {
@@ -82,19 +82,19 @@ e.d(
                                           discountedPrice: b,
                                           billingPeriod: (0, d.Ke)(j.discount.intervalType),
                                           numMonths: j.discount.intervalCount,
-                                          fullPrice: S,
+                                          fullPrice: N,
                                           paidURL: c.A.getArticleURL(g.MVz.PAID_TERMS),
                                       })
                                     : y.intl.format(y.t.hrGTjG, {
                                           discountedPrice: b,
                                           billingPeriod: (0, d.Ke)(j.discount.intervalType),
                                           numMonths: j.discount.intervalCount,
-                                          fullPrice: S,
+                                          fullPrice: N,
                                           helpdeskArticle: c.A.getArticleURL(g.MVz.PAID_TERMS),
                                       }),
                         }),
                     }),
-                    N
+                    A
                         ? (0, i.jsx)(u.w, { type: "critical", message: y.intl.string(y.t["5mlOCW"]), role: "alert" })
                         : null,
                 ],

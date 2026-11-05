@@ -69,7 +69,7 @@ i.d(
                                   size: "md",
                                   "aria-label": j.intl.string(j.t.WAI6xu),
                                   onClick: p,
-                                  icon: m.P,
+                                  icon: m.XSmallIcon,
                               }),
                           }),
                           (0, l.jsxs)(d.D, {

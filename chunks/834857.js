@@ -6,8 +6,8 @@ var l = t(477782),
     r = t(267102),
     o = t(520006),
     c = t(576705),
-    d = t(652215),
-    u = t(792996);
+    u = t(652215),
+    d = t(792996);
 t.d(
     n,
     {},
@@ -16,24 +16,24 @@ t.d(
             let h = { streamUserId: t, channel: e, applicationId: A, appContext: (0, r.Us)() };
             function m() {
                 null != n &&
-                    e.type === d.rbe.GUILD_VOICE &&
-                    (0, o.X)({ guild: n, source: d.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...h });
+                    e.type === u.rbe.GUILD_VOICE &&
+                    (0, o.X)({ guild: n, source: u.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...h });
             }
             return null != A
                 ? (0, i.jsx)(l.Dr, {
                       id: "invite-to-stream",
-                      label: u.intl.string(u.t["OzOM/q"]),
+                      label: d.intl.string(d.t["OzOM/q"]),
                       action: m,
-                      icon: s.D,
-                      leadingAccessory: { type: "icon", icon: s.D },
+                      icon: s.GroupPlusIcon,
+                      leadingAccessory: { type: "icon", icon: s.GroupPlusIcon },
                   })
-                : null != n && null != e && c.A.can(d.xBc.CREATE_INSTANT_INVITE, e)
+                : null != n && null != e && c.A.can(u.xBc.CREATE_INSTANT_INVITE, e)
                   ? (0, i.jsx)(l.Dr, {
                         id: "invite-friends",
-                        label: u.intl.string(u.t["EE+P0H"]),
+                        label: d.intl.string(d.t["EE+P0H"]),
                         action: m,
-                        icon: a.R,
-                        leadingAccessory: { type: "icon", icon: a.R },
+                        icon: a.UserPlusIcon,
+                        leadingAccessory: { type: "icon", icon: a.UserPlusIcon },
                     })
                   : null;
         },

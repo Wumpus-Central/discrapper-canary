@@ -1,24 +1,24 @@
-var r = e(477900);
-e(582128);
-var a = e(503698),
-    t = e.n(a),
-    n = e(87221),
-    u = e(39623),
-    o = e(338717),
-    i = e(497780);
-e.d(
-    s,
+var a = s(477900);
+s(582128);
+var r = s(503698),
+    n = s.n(r),
+    t = s(87221),
+    o = s(39623),
+    u = s(338717),
+    i = s(497780);
+s.d(
+    e,
     {},
     {
         A: function (c) {
-            let { obscureReason: s, iconClassname: e } = c;
-            switch (s) {
-                case o.Oc.EXPLICIT_CONTENT:
-                case o.Oc.GORE_CONTENT:
-                case o.Oc.SELF_HARM_CONTENT:
-                    return (0, r.jsx)(n.D, { className: t()(e, i.x), color: "white" });
-                case o.Oc.SPOILER:
-                    return (0, r.jsx)(u.EyeIcon, { size: "md", color: "currentColor", className: e });
+            let { obscureReason: e, iconClassname: s } = c;
+            switch (e) {
+                case u.Oc.EXPLICIT_CONTENT:
+                case u.Oc.GORE_CONTENT:
+                case u.Oc.SELF_HARM_CONTENT:
+                    return (0, a.jsx)(t.ImageWarningIcon, { className: n()(s, i.x), color: "white" });
+                case u.Oc.SPOILER:
+                    return (0, a.jsx)(o.EyeIcon, { size: "md", color: "currentColor", className: s });
                 default:
                     return null;
             }

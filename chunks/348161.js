@@ -43,8 +43,8 @@ function x(e) {
 }
 var y = a(278416),
     f = a(534514),
-    C = a(971458),
-    S = a(703086);
+    S = a(971458),
+    C = a(703086);
 let k = {
     home: "Home",
     catalog: "Catalog",
@@ -319,13 +319,13 @@ let j = {
                                         [a],
                                     );
                                 return (0, s.jsxs)("div", {
-                                    className: S.MY,
+                                    className: C.MY,
                                     children: [
                                         (0, s.jsx)("div", {
-                                            className: S.jr,
-                                            children: (0, s.jsx)(C.A, {
+                                            className: C.jr,
+                                            children: (0, s.jsx)(S.A, {
                                                 "aria-label": "Playground Navigation",
-                                                className: S.C$,
+                                                className: C.C$,
                                                 options: o,
                                                 selectedKey: e,
                                                 overflowLabel: "More",
@@ -333,7 +333,7 @@ let j = {
                                             }),
                                         }),
                                         (0, s.jsx)("div", {
-                                            className: S.Qs,
+                                            className: C.Qs,
                                             children: (0, s.jsx)(f.D, {
                                                 variant: "heading-lg/semibold",
                                                 children: k[e] ?? e,
@@ -348,7 +348,7 @@ let j = {
                 i,
             ],
             tags: ["Collectibles", "Shop", "Storefront"],
-            IconComponent: o.U,
+            IconComponent: o.ShopIcon,
         },
     ],
 };

@@ -1,3 +1,4 @@
+n.r(t);
 var l = n(477900);
 n(582128);
 var i = n(646514),
@@ -7,7 +8,7 @@ n.d(
     t,
     {},
     {
-        F: function (e) {
+        SlashIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,

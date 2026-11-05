@@ -1,4 +1,4 @@
-(e.d(n, { A: () => I }), e(321073));
+(e.d(n, { A: () => _ }), e(321073));
 var l,
     i = e(477900),
     a = e(582128),
@@ -17,13 +17,13 @@ function x(t) {
     let { analyticsLocations: n, distributor: e, gameId: l, level: i } = t;
     g.default.track(m.HAw.PLAY_CTA_IMPRESSION, { location_stack: n, distributor: e, game_id: l, level: i });
 }
-var _ = e(792996);
-function I(t) {
+var I = e(792996);
+function _(t) {
     let {
             distributorCTAConfigs: n,
             applicationId: e,
             analyticsLocations: l,
-            buttonVariant: I = "secondary",
+            buttonVariant: _ = "secondary",
             fullWidth: N = !0,
             stopPropagation: E = !1,
             onAction: T,
@@ -64,7 +64,7 @@ function I(t) {
     if (1 === n.length) {
         let { ctaConfig: t, skuId: e } = n[0];
         return (0, i.jsx)(r.$, {
-            variant: I,
+            variant: _,
             size: "sm",
             icon: t.icon,
             text: t.getLabel(),
@@ -113,7 +113,7 @@ function I(t) {
                     navId: "play-on-distributor-menu",
                     onClose: n,
                     onSelect: void 0,
-                    "aria-label": _.intl.string(_.t["3XhYOS"]),
+                    "aria-label": I.intl.string(I.t["3XhYOS"]),
                     children: (0, i.jsx)(s.rX, { children: j }),
                 }),
             });
@@ -121,11 +121,11 @@ function I(t) {
         children: (t) =>
             (0, i.jsx)(r.$, {
                 buttonRef: S,
-                variant: I,
+                variant: _,
                 size: "sm",
-                icon: y ? u.t : d.a,
+                icon: y ? u.ChevronSmallUpIcon : d.ChevronSmallDownIcon,
                 iconPosition: "end",
-                text: _.intl.string(_.t.nSHoxC),
+                text: I.intl.string(I.t.nSHoxC),
                 fullWidth: N,
                 ...t,
                 onClick: (n) => {

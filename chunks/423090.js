@@ -23,7 +23,7 @@ t.d(
                 icon:
                     "user" === l
                         ? (0, e.jsx)(n.UserIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT })
-                        : (0, e.jsx)(r.R, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                        : (0, e.jsx)(r.ServerIcon, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT }),
                 text:
                     "user" === l
                         ? i.A.Messages.STOREFRONT_USER_SUBSCRIPTION

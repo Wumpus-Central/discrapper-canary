@@ -1,41 +1,42 @@
-var l = r(477900);
+r.r(n);
+var t = r(477900);
 r(582128);
-var n = r(646514),
+var l = r(646514),
     i = r(996682),
-    s = r(27989);
+    a = r(27989);
 r.d(
-    t,
+    n,
     {},
     {
-        t: function (e) {
+        ExperimentalLfgIcon: function (e) {
             let {
-                    size: t = "md",
+                    size: n = "md",
                     width: r,
-                    height: a,
-                    color: c = n.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: h = "",
-                    ...u
+                    height: s,
+                    color: c = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: o = "",
+                    ...h
                 } = e,
-                f = (0, s.J)(t),
-                o = f?.width ?? r,
-                d = f?.height ?? a;
-            return (0, l.jsxs)("svg", {
-                ...(0, i.A)(u),
+                u = (0, a.J)(n),
+                I = u?.width ?? r,
+                f = u?.height ?? s;
+            return (0, t.jsxs)("svg", {
+                ...(0, i.A)(h),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
-                height: d,
+                width: I,
+                height: f,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, l.jsx)("path", {
+                    (0, t.jsx)("path", {
                         fill: "string" == typeof c ? c : c.css,
                         d: "M3.18 3.12c.49.24.73.79.66 1.32-.27 2 .1 4.32.88 6.18.66 1.56 2.34 2.25 4.03 2.25h.5a6.5 6.5 0 0 1 6.5 6.5c0 .9-.72 1.63-1.62 1.63a.11.11 0 0 1-.1-.09 5.61 5.61 0 0 0-1.05-2.03c-.15-.18-.42-.06-.39.18l.21 1.66c.02.15-.1.28-.25.28h-6.8a2 2 0 0 1-2-2v-.46c0-1.56-.68-3.02-1.4-4.4C1.07 11.7.64 8.34 1.33 4.57c.01-.08.03-.16.06-.23l.2-.56c.22-.66.97-.97 1.6-.66ZM17.76 10.97c1.82.13 3.88 1.75 4.73 3.9.34.89.47 1.71.5 2.38.06.93-.76 1.58-1.69 1.57l-2.62-.03a1.1 1.1 0 0 1-1.04-.94 8.39 8.39 0 0 0-2.98-5.09c-.42-.34-.47-1 .02-1.26a5.6 5.6 0 0 1 3.08-.53Z",
-                        className: h,
+                        className: o,
                     }),
-                    (0, l.jsx)("path", {
+                    (0, t.jsx)("path", {
                         fill: "string" == typeof c ? c : c.css,
                         d: "M8.7 4.87a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4ZM17.7 3.66a2.93 2.93 0 1 1 0 5.85 2.93 2.93 0 0 1 0-5.85Z",
-                        className: h,
+                        className: o,
                     }),
                 ],
             });

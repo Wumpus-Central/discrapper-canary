@@ -15,9 +15,9 @@ n.d(
                 d =
                     null != n
                         ? n === u.Be.BANK
-                            ? (0, r.jsx)(i.M, { className: o.s7 })
+                            ? (0, r.jsx)(i.BankIcon, { className: o.s7 })
                             : n === u.Be.IDEAL
-                              ? (0, r.jsx)(a.E, { className: o.s7 })
+                              ? (0, r.jsx)(a.PaymentTypeIDealWeroIcon, { className: o.s7 })
                               : (0, r.jsx)("img", { src: (0, u.Nj)(n), alt: "", className: o.s7 })
                         : void 0,
                 m = (0, r.jsxs)("div", {

@@ -34,8 +34,8 @@ var O = i(646514),
     G = i(602853),
     M = i(866665),
     T = i(939249),
-    k = i(658675),
-    P = i(475825),
+    P = i(658675),
+    k = i(475825),
     H = i(442433),
     U = i(47167),
     V = i(499211),
@@ -155,7 +155,7 @@ function eg(e) {
                 onClick: function () {
                     (0, C.Dr)(s, { dismissAction: ex.i.DISMISS });
                 },
-                children: (0, l.jsx)(eo.P, { size: "md", color: "currentColor" }),
+                children: (0, l.jsx)(eo.XSmallIcon, { size: "md", color: "currentColor" }),
             }),
             r,
         ],
@@ -345,6 +345,7 @@ let eb = t.memo(function () {
                                           i.e(256372),
                                           i.e(29542),
                                           i.e(419690),
+                                          i.e(300619),
                                           i.e(465694),
                                           i.e(13107),
                                           i.e(248804),
@@ -385,6 +386,7 @@ let eb = t.memo(function () {
                                           i.e(536478),
                                           i.e(29542),
                                           i.e(588251),
+                                          i.e(350695),
                                           i.e(248804),
                                           i.e(638114),
                                           i.e(122574),
@@ -441,7 +443,7 @@ let eb = t.memo(function () {
                                             },
                                         }),
                                     }),
-                                    (0, l.jsx)(k.P, { checked: p, disabled: N }),
+                                    (0, l.jsx)(P.P, { checked: p, disabled: N }),
                                 ],
                             }),
                         ],
@@ -511,7 +513,7 @@ function eS(e) {
         f = ((i = c.id), (0, em.Xn)(i) ? 250 : 152),
         j = (0, A.zH)(c.id, o, 64, f);
     return (0, l.jsx)(
-        P.Ei,
+        k.Ei,
         {
             className: u,
             innerClassName: a()(h, eN.bv),
@@ -548,6 +550,7 @@ function eO(e) {
             (0, p.mM)(async () => {
                 let { default: e } = await Promise.all([
                     i.e(778799),
+                    i.e(637038),
                     i.e(507775),
                     i.e(524521),
                     i.e(358608),
@@ -583,7 +586,13 @@ function eO(e) {
                               onKeyDown: E,
                               placeholder: es.intl.string(es.t.s5MnmC),
                           }),
-                          m ? (0, l.jsx)(f.$, { icon: j.j, onClick: g, text: es.intl.string(es.t.CumH4u) }) : null,
+                          m
+                              ? (0, l.jsx)(f.$, {
+                                    icon: j.PlusSmallIcon,
+                                    onClick: g,
+                                    text: es.intl.string(es.t.CumH4u),
+                                })
+                              : null,
                       ],
                   }),
                   (0, l.jsx)(eS, { className: e_.T, channels: c, categories: h, guild: o, hasSidebar: x }),
@@ -596,8 +605,8 @@ var eR = i(202776),
     eG = i(97808),
     eM = i(545442),
     eT = i(516521),
-    ek = i(334738),
-    eP = i(241524),
+    eP = i(334738),
+    ek = i(241524),
     eH = i(964486),
     eU = i(736653),
     eV = i(793574),
@@ -619,9 +628,9 @@ var eR = i(202776),
     e5 = i(669953),
     e6 = i(817818),
     e9 = i(591552),
-    e2 = i(961973),
-    e3 = i(435558),
-    e8 = i.n(e3),
+    e3 = i(961973),
+    e2 = i(435558),
+    e8 = i.n(e2),
     e7 = i(665260),
     ne = i(355097);
 function nn(e) {
@@ -853,8 +862,8 @@ function np(e) {
         [s, d] = t.useState(null),
         [o, c] = t.useState(new Set()),
         h = n?.options?.filter((e) => o.has(e.id)),
-        m = (0, e2.a)(h),
-        x = (0, e2.vV)(h),
+        m = (0, e3.a)(h),
+        x = (0, e3.vV)(h),
         C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(i.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nt.W)({
             guild: i,
@@ -944,8 +953,8 @@ function nf(e) {
         [s, d] = t.useState(null),
         [o, c] = t.useState(new Set()),
         h = n?.options?.filter((e) => o.has(e.id)),
-        m = (0, e2.a)(h),
-        x = (0, e2.vV)(h),
+        m = (0, e3.a)(h),
+        x = (0, e3.vV)(h),
         C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(i.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, nt.W)({
             guild: i,
@@ -1012,7 +1021,7 @@ function nj(e) {
         d = (0, eD.M)((0, eU.Ay)()),
         o = (0, r.bG)([S.A], () => S.A.getGuild(i)),
         c = (0, r.bG)([e$.default], () => e$.default.getCurrentUser()),
-        u = (0, eP.A)("(min-width: 1344px)") && null != c,
+        u = (0, ek.A)("(min-width: 1344px)") && null != c,
         h = t.useCallback(() => {
             ((0, Z.pX)(el.BVt.CHANNEL(i, eA.VV.CHANNEL_BROWSER)), s?.());
         }, [i, s]),
@@ -1055,7 +1064,7 @@ function nj(e) {
         t.useEffect(() => {
             if (o?.id != null && !eq.A.isFullServerPreview(o.id))
                 return () => {
-                    ((0, ek.hK)(o.id, nh.P.GUILD_ONBOARDING_QUESTION, e9.A.ackIdForGuild(o.id)),
+                    ((0, eP.hK)(o.id, nh.P.GUILD_ONBOARDING_QUESTION, e9.A.ackIdForGuild(o.id)),
                         e5.A.updateOnboardingResponses(o.id));
                 };
         }, [o?.id]));
@@ -1164,7 +1173,10 @@ function nv(e) {
             hideSearch: !0,
             channelId: eA.VV.CUSTOMIZE_COMMUNITY,
             guildId: n.id,
-            children: [(0, l.jsx)(g.A.Icon, { icon: o.k, "aria-hidden": !0 }), (0, l.jsx)(g.A.Title, { children: a })],
+            children: [
+                (0, l.jsx)(g.A.Icon, { icon: o.ChannelListMagnifyingGlassIcon, "aria-hidden": !0 }),
+                (0, l.jsx)(g.A.Title, { children: a }),
+            ],
         })
     );
 }

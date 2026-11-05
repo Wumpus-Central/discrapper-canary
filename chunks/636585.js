@@ -7,8 +7,8 @@ var n = r(477900),
     h = r(97808),
     u = r(983851),
     c = r(619019),
-    d = r(621531),
-    o = r(440155);
+    o = r(621531),
+    d = r(440155);
 function p(e, s, r) {
     return (0, n.jsx)("div", { className: s, children: e }, r);
 }
@@ -19,7 +19,7 @@ class m extends l.PureComponent {
         let { onClick: t, size: u, guildId: p } = this.props,
             m = e instanceof c.A ? e : null != e ? e.user : null;
         return null == m
-            ? (0, n.jsx)("div", { className: i()(d.F2, s), style: { width: (0, a.FT)(u), height: (0, a.FT)(u) } }, r)
+            ? (0, n.jsx)("div", { className: i()(o.F2, s), style: { width: (0, a.FT)(u), height: (0, a.FT)(u) } }, r)
             : (0, n.jsx)(
                   h.eu,
                   {
@@ -27,7 +27,7 @@ class m extends l.PureComponent {
                       src: m.getAvatarURL(p, (0, a.FT)(u)),
                       size: u,
                       "aria-label": m.username,
-                      className: i()(s, o.or),
+                      className: i()(s, d.or),
                       onClick: (e) => (null != t ? t(e, m, this._ref) : null),
                   },
                   m.id,
@@ -40,26 +40,31 @@ class m extends l.PureComponent {
             i = 0;
         for (; i < t && i < e.length;) {
             let s = i === e.length - 1;
-            (l.push(r(e[i] || null, s ? null : d.hC, `user-${i}`, s)), i++);
+            (l.push(r(e[i] || null, s ? null : o.hC, `user-${i}`, s)), i++);
         }
         if (i < e.length) {
             let s = Math.min(e.length - i, 99);
-            l.push(n(`+${s}`, d.In, "more-users", s));
+            l.push(n(`+${s}`, o.In, "more-users", s));
         }
         return l;
     }
     renderIcon() {
         return this.props.icon
             ? (0, n.jsx)("div", {
-                  className: d.zc,
-                  children: (0, n.jsx)(u.H, { size: "xs", color: "currentColor", colorClass: d.CU, className: d.Kk }),
+                  className: o.zc,
+                  children: (0, n.jsx)(u.VoiceNormalIcon, {
+                      size: "xs",
+                      color: "currentColor",
+                      colorClass: o.CU,
+                      className: o.Kk,
+                  }),
               })
             : null;
     }
     render() {
         let { className: e } = this.props;
         return (0, n.jsxs)("div", {
-            className: i()(e, d.kL),
+            className: i()(e, o.kL),
             ref: (e) => {
                 this._ref = e;
             },

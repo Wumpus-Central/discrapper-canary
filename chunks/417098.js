@@ -1,16 +1,16 @@
-var l = t(477900);
-t(582128);
-var r = t(503698),
-    c = t.n(r),
-    i = t(607399),
-    s = t(559106),
-    o = t(28863),
-    u = t(939249),
-    a = t(789645),
-    _ = t(129230),
-    E = t(652215),
-    A = t(792996),
-    C = t(934966);
+var t = n(477900);
+n(582128);
+var c = n(503698),
+    r = n.n(c),
+    i = n(607399),
+    s = n(559106),
+    o = n(28863),
+    a = n(939249),
+    u = n(789645),
+    _ = n(129230),
+    E = n(652215),
+    A = n(792996),
+    C = n(934966);
 let N = Object.freeze({
     DEFAULT: C.Lx,
     NEUTRAL: C.NT,
@@ -26,58 +26,58 @@ let N = Object.freeze({
     PREMIUM_TIER_2: C.NS,
 });
 function d(e) {
-    let { children: n, className: t, minor: r = !1, ...i } = e;
-    return (0, l.jsx)(s.vN, {
-        children: (0, l.jsx)("button", { className: c()(C.x6, t, { [C.oy]: r }), ...i, children: n }),
+    let { children: l, className: n, minor: c = !1, ...i } = e;
+    return (0, t.jsx)(s.vN, {
+        children: (0, t.jsx)("button", { className: r()(C.x6, n, { [C.oy]: c }), ...i, children: l }),
     });
 }
-t.d(
-    n,
+n.d(
+    l,
     {},
     {
         $T: function (e) {
-            let { color: n = N.DEFAULT, className: t, style: r, ref: s, children: o } = e;
-            return (0, l.jsx)("div", {
+            let { color: l = N.DEFAULT, className: n, style: c, ref: s, children: o } = e;
+            return (0, t.jsx)("div", {
                 ref: s,
-                className: c()(C.lm, { [C.Fr]: i.Fr }, t, n),
-                style: null != r ? r : void 0,
+                className: r()(C.lm, { [C.Fr]: i.Fr }, n, l),
+                style: null != c ? c : void 0,
                 children: o,
             });
         },
         Hv: N,
         PM: function (e) {
-            let { onClick: n, noticeType: t, className: r } = e;
-            return (0, l.jsx)(u.D, {
+            let { onClick: l, noticeType: n, className: c } = e;
+            return (0, t.jsx)(a.D, {
                 focusProps: { offset: 6 },
-                className: c()(C.b, r),
+                className: r()(C.b, c),
                 onClick: () => {
-                    (n(), null != t && _.default.track(E.HAw.APP_NOTICE_CLOSED, { notice_type: t }));
+                    (l(), null != n && _.default.track(E.HAw.APP_NOTICE_CLOSED, { notice_type: n }));
                 },
                 "aria-label": A.intl.string(A.t.WAI6xu),
-                children: (0, l.jsx)(a.P, { size: "sm", color: "currentColor", className: C.ut }),
+                children: (0, t.jsx)(u.XSmallIcon, { size: "sm", color: "currentColor", className: C.ut }),
             });
         },
         Z_: function (e) {
-            let { children: n, noticeType: t, ...r } = e;
-            return (0, l.jsx)(d, {
-                ...r,
+            let { children: l, noticeType: n, ...c } = e;
+            return (0, t.jsx)(d, {
+                ...c,
                 onClick: (e) => {
-                    (null != r.onClick && r.onClick(e),
-                        null != t && _.default.track(E.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: t }));
+                    (null != c.onClick && c.onClick(e),
+                        null != n && _.default.track(E.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: n }));
                 },
-                children: n,
+                children: l,
             });
         },
         eC: function (e) {
-            let { children: n, href: t, noticeType: r, ...c } = e;
-            return (0, l.jsx)(o.Anchor, {
-                ...c,
+            let { children: l, href: n, noticeType: c, ...r } = e;
+            return (0, t.jsx)(o.Anchor, {
+                ...r,
                 className: C.x6,
-                href: t,
+                href: n,
                 onClick: (e) => {
-                    (c.onClick?.(e), _.default.track(E.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: r, href: t }));
+                    (r.onClick?.(e), _.default.track(E.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: c, href: n }));
                 },
-                children: n,
+                children: l,
             });
         },
         zr: d,

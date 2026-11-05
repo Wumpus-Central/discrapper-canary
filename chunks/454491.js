@@ -15,18 +15,18 @@ t.d(
     {},
     {
         e: function (e) {
-            let { promotion: l, reward: t, applicationId: p, analyticsLocations: b, onUpsellClick: j } = e,
-                _ = (0, u.Pc)(l),
-                f = null != t ? null : r.t,
+            let { promotion: l, reward: t, applicationId: b, analyticsLocations: p, onUpsellClick: j } = e,
+                f = (0, u.Pc)(l),
+                _ = null != t ? null : r.NitroWheelIcon,
                 N = s.useCallback(() => {
                     (j(),
                         (0, o.A)({
                             subscriptionTier: x.pe.TIER_2,
-                            applicationId: p,
-                            analyticsLocations: b,
+                            applicationId: b,
+                            analyticsLocations: p,
                             ...(0, c.zl)(l.rewardRequirements),
                         }));
-                }, [j, p, b, l.rewardRequirements]);
+                }, [j, b, p, l.rewardRequirements]);
             return null != l.endsAt && null == (0, d.ZH)(l.endsAt)
                 ? null
                 : "nitro" !== l.flavor
@@ -37,23 +37,23 @@ t.d(
                         endDatetime: l.endsAt,
                         tooltip: l.tooltip,
                     })
-                  : (0, u.ad)(_)
+                  : (0, u.ad)(f)
                     ? (0, n.jsx)(a.D, {
                           className: h.U,
                           onClick: N,
                           children: (0, n.jsx)(m.Ay, {
                               className: h.l,
                               gradientColor: "nitro-pink",
-                              Icon: f,
+                              Icon: _,
                               text: l.text,
                               tooltip: l.tooltip,
-                              trailing: (0, n.jsx)(i._, { size: "xs", color: "currentColor" }),
+                              trailing: (0, n.jsx)(i.ChevronSmallRightIcon, { size: "xs", color: "currentColor" }),
                           }),
                       })
                     : (0, n.jsx)(m.O0, {
                           className: h.l,
                           gradientColor: "nitro-pink",
-                          Icon: f,
+                          Icon: _,
                           text: l.text,
                           endDatetime: l.endsAt,
                           tooltip: l.tooltip,

@@ -1,3 +1,4 @@
+c.r(s);
 var e = c(477900);
 c(582128);
 var i = c(646514),
@@ -7,22 +8,22 @@ c.d(
     s,
     {},
     {
-        C: function (l) {
+        OrbsIcon: function (l) {
             let {
                     size: s = "md",
                     width: c,
                     height: d,
                     color: h = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: n = "",
-                    ...p
+                    ...r
                 } = l,
                 o = (0, a.J)(s),
-                r = o?.width ?? c,
+                p = o?.width ?? c,
                 w = o?.height ?? d;
             return (0, e.jsxs)("svg", {
-                ...(0, t.A)(p),
+                ...(0, t.A)(r),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",

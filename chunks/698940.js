@@ -50,7 +50,11 @@ function E(e) {
                         (0, i.jsx)(d.q, { onClick: () => x("user:explicit") }),
                         (0, i.jsx)("div", {
                             className: y.Kk,
-                            children: (0, i.jsx)(p.s, { size: "lg", color: m.A.colors.ICON_STRONG, "aria-hidden": !0 }),
+                            children: (0, i.jsx)(p.ExperimentalWebIcon, {
+                                size: "lg",
+                                color: m.A.colors.ICON_STRONG,
+                                "aria-hidden": !0,
+                            }),
                         }),
                         (0, i.jsx)(u.D, {
                             className: y.wx,

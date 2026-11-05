@@ -17,11 +17,11 @@ var n = l(477900),
     E = l(915089),
     f = l(734057),
     y = l(309010),
-    S = l(287809),
-    I = l(188567),
+    I = l(287809),
+    S = l(188567),
     R = l(822382),
-    _ = l(753806),
-    m = l(121806),
+    m = l(753806),
+    _ = l(121806),
     b = l(768570),
     x = l(652215),
     C = l(792996),
@@ -120,7 +120,7 @@ function N(e) {
                     variant: "secondary",
                     fullWidth: !0,
                     text: C.intl.string(C.t.iP9YpB),
-                    icon: p.T,
+                    icon: p.PlusMediumIcon,
                     onClick: function () {
                         o() && a();
                     },
@@ -213,13 +213,13 @@ l.d(
                     let e = f.A.getChannel(y.Ay.getChannelId());
                     return null != e ? (0, R.E3)(e) : "general";
                 }),
-                c = (0, s.bG)([S.default], () => {
-                    let e = S.default.getCurrentUser();
+                c = (0, s.bG)([I.default], () => {
+                    let e = I.default.getCurrentUser();
                     return null != e ? e.username : C.intl.string(C.t.cqpybK);
                 }),
-                [h, d] = r.useState(_.A.getSearchInputText(i)),
+                [h, d] = r.useState(m.A.getSearchInputText(i)),
                 g = r.useMemo(() => (0, R._o)(h ?? ""), [h]),
-                { prefilledSearchFilters: F, eligibleFilterTokens: p } = (0, m.vj)(g, i),
+                { prefilledSearchFilters: F, eligibleFilterTokens: p } = (0, _.vj)(g, i),
                 L = p.has(x.LWr.FILTER_FROM),
                 W = p.has(x.LWr.FILTER_MENTIONS),
                 A = p.has(x.LWr.FILTER_IN),
@@ -234,7 +234,7 @@ l.d(
                     getApplyQueryString: w,
                     handleFocusFilter: Y,
                     handleBlurFilter: B,
-                } = (0, m.ps)(i, x.LWr.FILTER_FROM, F[x.LWr.FILTER_FROM]),
+                } = (0, _.ps)(i, x.LWr.FILTER_FROM, F[x.LWr.FILTER_FROM]),
                 {
                     options: U,
                     query: K,
@@ -244,7 +244,7 @@ l.d(
                     getApplyQueryString: X,
                     handleFocusFilter: Z,
                     handleBlurFilter: G,
-                } = (0, m.ps)(i, x.LWr.FILTER_MENTIONS, F[x.LWr.FILTER_MENTIONS]),
+                } = (0, _.ps)(i, x.LWr.FILTER_MENTIONS, F[x.LWr.FILTER_MENTIONS]),
                 {
                     options: V,
                     query: ee,
@@ -252,7 +252,7 @@ l.d(
                     handleClearFilter: el,
                     getApplyQueryString: en,
                     handleFocusFilter: er,
-                } = (0, m.u2)(i, F[x.LWr.FILTER_HAS]),
+                } = (0, _.u2)(i, F[x.LWr.FILTER_HAS]),
                 {
                     options: ei,
                     query: ea,
@@ -262,7 +262,7 @@ l.d(
                     getApplyQueryString: ec,
                     handleFocusFilter: eh,
                     handleBlurFilter: ed,
-                } = (0, m.TT)(i, F[x.LWr.FILTER_IN]),
+                } = (0, _.TT)(i, F[x.LWr.FILTER_IN]),
                 {
                     options: eg,
                     dates: eF,
@@ -272,23 +272,23 @@ l.d(
                     handleAddDateFilter: eE,
                     handleRemoveDateFilter: ef,
                     handleClearDateFilter: ey,
-                    getDateQueryString: eS,
-                } = (0, m.Ky)(F.dateFilters),
+                    getDateQueryString: eI,
+                } = (0, _.Ky)(F.dateFilters),
                 {
-                    options: eI,
+                    options: eS,
                     query: eR,
-                    setQuery: e_,
-                    handleClearFilter: em,
+                    setQuery: em,
+                    handleClearFilter: e_,
                     getApplyQueryString: eb,
                     handleFocusFilter: ex,
-                } = (0, m.H3)(i, F[x.LWr.FILTER_AUTHOR_TYPE]),
+                } = (0, _.H3)(i, F[x.LWr.FILTER_AUTHOR_TYPE]),
                 {
                     options: eC,
                     query: ev,
                     setQuery: eW,
                     handleClearFilter: eN,
                     getApplyQueryString: eO,
-                } = (0, m.CT)(i, F[x.LWr.FILTER_PINNED]),
+                } = (0, _.CT)(i, F[x.LWr.FILTER_PINNED]),
                 ej = r.useMemo(() => {
                     let e = 0;
                     return (
@@ -304,7 +304,7 @@ l.d(
                 }, [L, D, W, K, A, ea, ee, ep, M, eR, ev]),
                 eA = r.useMemo(() => {
                     let e = en(x.LWr.FILTER_HAS),
-                        t = eS(),
+                        t = eI(),
                         l = eO(x.LWr.FILTER_PINNED),
                         n = [];
                     if (L) {
@@ -324,31 +324,31 @@ l.d(
                         null != e && n.push(e);
                     }
                     return (null != l && n.push(l), [...n].join(" "));
-                }, [L, w, W, X, A, ec, en, eS, M, eb, eO]),
-                { validateFilter: eM, validateDateFilter: eQ } = (0, m.dY)({
+                }, [L, w, W, X, A, ec, en, eI, M, eb, eO]),
+                { validateFilter: eM, validateDateFilter: eQ } = (0, _.dY)({
                     nonFilterQueryString: Q,
                     filterQueryString: eA,
                 }),
                 eP = r.useMemo(
                     () =>
                         !(
-                            (!L || (0, m.wf)(D, F[x.LWr.FILTER_FROM])) &&
-                            (!W || (0, m.wf)(K, F[x.LWr.FILTER_MENTIONS])) &&
-                            (!A || (0, m.wf)(ea, F[x.LWr.FILTER_IN])) &&
-                            (0, m.wf)(ee, F[x.LWr.FILTER_HAS]) &&
-                            (0, m._2)(ep, F.dateFilters) &&
-                            (!M || (0, m.wf)(eR, F[x.LWr.FILTER_AUTHOR_TYPE])) &&
-                            (0, m.wf)(ev, F[x.LWr.FILTER_PINNED])
+                            (!L || (0, _.wf)(D, F[x.LWr.FILTER_FROM])) &&
+                            (!W || (0, _.wf)(K, F[x.LWr.FILTER_MENTIONS])) &&
+                            (!A || (0, _.wf)(ea, F[x.LWr.FILTER_IN])) &&
+                            (0, _.wf)(ee, F[x.LWr.FILTER_HAS]) &&
+                            (0, _._2)(ep, F.dateFilters) &&
+                            (!M || (0, _.wf)(eR, F[x.LWr.FILTER_AUTHOR_TYPE])) &&
+                            (0, _.wf)(ev, F[x.LWr.FILTER_PINNED])
                         ),
                     [L, D, F, W, K, A, ea, ee, ep, M, eR, ev],
                 ),
                 eD = r.useCallback(() => {
                     if (0 === eA.length && 0 === Q.trim().length) {
-                        (I._.dispatch(x.jej.SEARCH_RESULTS_CLOSE), l());
+                        (S._.dispatch(x.jej.SEARCH_RESULTS_CLOSE), l());
                         return;
                     }
                     let e = `${eA} ${Q}`.trim();
-                    (_.A.dispatchSetSearchQuery({
+                    (m.A.dispatchSetSearchQuery({
                         query: e,
                         anchor: 0,
                         focus: 0,
@@ -364,8 +364,8 @@ l.d(
                     return `${C.intl.string(C.t.YfwFu1)} ${e}`;
                 }, [ej]),
                 ek = r.useCallback(() => {
-                    (L && q(), W && J(), A && eu(), M && em(), el(), ey(), eN());
-                }, [L, W, el, A, ey, q, J, eu, M, em, eN]);
+                    (L && q(), W && J(), A && eu(), M && e_(), el(), ey(), eN());
+                }, [L, W, el, A, ey, q, J, eu, M, e_, eN]);
             return (0, n.jsx)(o.a, {
                 transitionState: t,
                 onClose: l,
@@ -456,9 +456,9 @@ l.d(
                                 sublabel: C.intl.string(C.t.XaOAdt),
                                 textPlaceholder: C.intl.string(C.t.CAdOdf),
                                 value: eR,
-                                onChange: e_,
+                                onChange: em,
                                 onFocus: ex,
-                                options: eI,
+                                options: eS,
                                 filter: !1,
                                 closeOnSelect: !1,
                                 filterType: x.LWr.FILTER_AUTHOR_TYPE,

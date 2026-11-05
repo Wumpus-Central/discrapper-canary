@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(675991),
     E = n(693409),
     A = n(652215),
-    h = n(792996),
-    f = n(748292);
+    f = n(792996),
+    h = n(748292);
 function I(e) {
     let t,
         n = (0, _.Q)(e),
@@ -19,19 +19,19 @@ function I(e) {
             enabled: a,
             cameraUnavailable: s,
             videoBlocked: E = !1,
-            onChange: h,
-            onCameraUnavailable: f,
+            onChange: f,
+            onCameraUnavailable: h,
             hasPermission: I,
             children: p,
             channelLimitReached: m = !1,
-            join: g,
+            join: T,
         } = e,
-        T = (0, u.Us)(),
-        S = s || E ? () => f() : () => h(!e.enabled, T),
-        { Component: N, play: C, events: O } = (0, l.K)(g || a ? "disable" : "enable");
+        g = (0, u.Us)(),
+        S = s || E ? () => h() : () => f(!e.enabled, g),
+        { Component: N, play: C, events: O } = (0, l.K)(T || a ? "disable" : "enable");
     return (
         r.useEffect(() => () => C(), [a, C]),
-        (t = E ? o.b : g ? d.VideoIcon : T === A.BRT.POPOUT ? (a ? d.VideoIcon : c.O) : N),
+        (t = E ? o.VideoDenyIcon : T ? d.VideoIcon : g === A.BRT.POPOUT ? (a ? d.VideoIcon : c.VideoSlashIcon) : N),
         (0, i.jsx)(i.Fragment, {
             children: p({
                 onClick: S,
@@ -41,8 +41,8 @@ function I(e) {
                 iconColor: "currentColor",
                 label: n,
                 unavailable: s,
-                onMouseEnter: g ? void 0 : O.onMouseEnter,
-                onMouseLeave: g ? void 0 : O.onMouseLeave,
+                onMouseEnter: T ? void 0 : O.onMouseEnter,
+                onMouseLeave: T ? void 0 : O.onMouseLeave,
             }),
         })
     );
@@ -66,9 +66,9 @@ n.d(
                     channelLimit: A,
                     centerButton: p = !1,
                     onPopoutClick: m,
-                    ...g
+                    ...T
                 } = e,
-                T = p ? E.l : E.A;
+                g = p ? E.l : E.A;
             return (0, i.jsx)(I, {
                 enabled: t,
                 join: n,
@@ -82,20 +82,20 @@ n.d(
                 channelLimit: A,
                 children: (e) => {
                     let { unavailable: r, onMouseEnter: a, onMouseLeave: l, isActive: o, ...c } = e;
-                    return (0, i.jsx)(T, {
+                    return (0, i.jsx)(g, {
                         ...c,
-                        ...g,
-                        color: n ? "join" : o ? "green" : g.color,
+                        ...T,
+                        color: n ? "join" : o ? "green" : T.color,
                         caretColor: n ? "join" : t ? "green" : "primaryDark",
-                        caretAriaLabel: h.intl.string(h.t.jO7lgy),
+                        caretAriaLabel: f.intl.string(f.t.jO7lgy),
                         isActive: o,
                         onMouseEnter: (e) => {
-                            (g.onMouseEnter?.(e), a?.());
+                            (T.onMouseEnter?.(e), a?.());
                         },
                         onMouseLeave: (e) => {
-                            (g.onMouseLeave?.(e), l?.());
+                            (T.onMouseLeave?.(e), l?.());
                         },
-                        className: s()(u, { [f.t]: r && !d }),
+                        className: s()(u, { [h.t]: r && !d }),
                         onPopoutClick: m,
                         isTrayButton: !n,
                     });

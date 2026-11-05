@@ -16,18 +16,18 @@ var n,
     x = l(707554),
     g = l(834730),
     f = l(866665),
-    j = l(939249),
-    v = l(320448),
-    N = l(983851),
-    T = l(492684),
-    I = l(736653),
+    N = l(939249),
+    j = l(320448),
+    v = l(983851),
+    I = l(492684),
+    T = l(736653),
     S = l(573648),
     C = l(47167),
-    b = l(235986),
-    P = l(573435),
-    L = l(769015),
-    _ = l(409626),
-    E = l(692969),
+    P = l(235986),
+    b = l(573435),
+    E = l(769015),
+    L = l(409626),
+    _ = l(692969),
     O = l(682163),
     G = l(804630),
     k = l(764359),
@@ -35,9 +35,9 @@ var n,
     M = l(82149),
     W = l(190915),
     U = l(287743),
-    D = l(994500),
-    R = l(287809),
-    w = l(913659),
+    R = l(994500),
+    w = l(287809),
+    D = l(913659),
     $ = l(486020),
     V = l(821589),
     Y = l(682261),
@@ -47,8 +47,8 @@ var n,
     K = l(960076),
     X = l(855511),
     Q = l(792996),
-    J = l(432166),
-    q = l(487887),
+    q = l(432166),
+    J = l(487887),
     Z = l(652215),
     ee = l(408313),
     et =
@@ -57,7 +57,7 @@ var n,
         (n.VOICE_CHANNEL = "VoiceChannel"),
         n);
 let el = { StreamPreview: [108, 60], VoiceChannel: [108, 60], ActivityFeed: [900, 500] },
-    en = (0, T.A)(
+    en = (0, I.A)(
         class extends a.PureComponent {
             render() {
                 return (0, i.jsx)("div", { className: ee.timestamp, children: this.props.message });
@@ -66,7 +66,7 @@ let el = { StreamPreview: [108, 60], VoiceChannel: [108, 60], ActivityFeed: [900
     );
 function ei(e) {
     let { activity: t } = e,
-        l = (0, I.Ay)(),
+        l = (0, T.Ay)(),
         n = (function (e) {
             let { activity: t } = e,
                 l = null;
@@ -88,7 +88,7 @@ function ei(e) {
 }
 function ea(e) {
     let { provider: t } = e,
-        l = (0, I.Ay)();
+        l = (0, T.Ay)();
     return (0, i.jsx)("img", {
         alt: "",
         src: (0, h.q)(l) ? t.icon.lightSVG : t.icon.darkSVG,
@@ -214,7 +214,7 @@ class es extends a.PureComponent {
                 null != a.large_image
                     ? (0, i.jsx)("img", {
                           alt: a.large_text ?? "",
-                          src: (0, w.uD)(s, a.large_image, t ?? [q.iu.LARGE, q.iu.LARGE]),
+                          src: (0, D.uD)(s, a.large_image, t ?? [J.iu.LARGE, J.iu.LARGE]),
                           className: r()(
                               this.getTypeClass(
                                   "assetsLargeImage",
@@ -231,12 +231,12 @@ class es extends a.PureComponent {
         else if ((0, M.Cy)(e)) {
             let t = (0, M.UW)(e);
             if (null == t) return null;
-            c = (0, i.jsx)(P.Ay, {
-                mask: P.Ay.Masks.SQUIRCLE,
-                width: q.iu.SMALL,
-                height: q.iu.SMALL,
+            c = (0, i.jsx)(b.Ay, {
+                mask: b.Ay.Masks.SQUIRCLE,
+                width: J.iu.SMALL,
+                height: J.iu.SMALL,
                 children: (0, i.jsx)("img", {
-                    src: $.Ay.getGuildIconURL({ id: t.guildId, icon: a.small_image, size: q.iu.SMALL }) ?? void 0,
+                    src: $.Ay.getGuildIconURL({ id: t.guildId, icon: a.small_image, size: J.iu.SMALL }) ?? void 0,
                     className: ee.assetsLargeImageVoiceChannel,
                     alt: "",
                 }),
@@ -270,7 +270,7 @@ class es extends a.PureComponent {
                 position: "top",
                 children: (0, i.jsx)("img", {
                     alt: a.small_text ?? "",
-                    src: (0, w.uD)(s, a.small_image, [q.iu.SMALL, q.iu.SMALL]),
+                    src: (0, D.uD)(s, a.small_image, [J.iu.SMALL, J.iu.SMALL]),
                     className: this.getTypeClass("assetsSmallImage", null == c ? "WithoutLargeImage" : void 0),
                 }),
             })),
@@ -294,7 +294,7 @@ class es extends a.PureComponent {
             ? null
             : null == n && null != a
               ? (0, i.jsx)("div", { className: r()(ee.gameIcon, ee.screenshareIcon) })
-              : (0, i.jsx)(L.A, { className: ee.gameIcon, game: n });
+              : (0, i.jsx)(E.A, { className: ee.gameIcon, game: n });
     }
     renderName(e) {
         let { user: t, application: l, hideName: n } = this.props;
@@ -349,7 +349,7 @@ class es extends a.PureComponent {
         return null == a || "" === a
             ? null
             : ((0, K.A)(e) && (a = Q.intl.formatToPlainString(Q.t.gmCZRY, { game: a })), null != t)
-              ? (0, i.jsx)(j.D, { onClick: t, title: s ?? void 0, className: ee.clickableDetails, children: a })
+              ? (0, i.jsx)(N.D, { onClick: t, title: s ?? void 0, className: ee.clickableDetails, children: a })
               : (0, i.jsx)("div", {
                     title: s ?? void 0,
                     className: (0, K.A)(e) || (0, B.A)(e) ? ee.detailsWrap : ee.details,
@@ -368,14 +368,14 @@ class es extends a.PureComponent {
                       className: r()((0, K.A)(e) || (0, B.A)(e) ? ee.detailsWrap : ee.details, ee.guildDetails),
                       children: [
                           (0, i.jsx)(O.Ay, { guild: t, size: O.Ay.Sizes.SMOL, className: ee.guildIcon }),
-                          (0, i.jsx)(v._, { size: "xxs", color: "currentColor" }),
+                          (0, i.jsx)(j.ChevronSmallRightIcon, { size: "xxs", color: "currentColor" }),
                           (0, i.jsxs)("div", {
                               className: ee.voiceChannelInfo,
                               children: [
-                                  (0, i.jsx)(N.H, { size: "xxs", color: "currentColor" }),
+                                  (0, i.jsx)(v.VoiceNormalIcon, { size: "xxs", color: "currentColor" }),
                                   (0, i.jsx)(g.E, {
                                       variant: "body-xs/normal",
-                                      children: (0, C.m1)(n, R.default, D.A),
+                                      children: (0, C.m1)(n, w.default, R.A),
                                   }),
                               ],
                           }),
@@ -405,7 +405,7 @@ class es extends a.PureComponent {
         let { start: l, end: n } = t;
         return null == l || null == n
             ? null
-            : (0, i.jsx)(J.A, {
+            : (0, i.jsx)(q.A, {
                   start: l,
                   end: n,
                   className: this.getTypeClass("timeBar"),
@@ -429,7 +429,7 @@ class es extends a.PureComponent {
             r = Q.intl.format(Q.t.vOLBEy, { album: o, albumHook: t });
         }
         return (null != r && "" !== r && e.type !== d.$.CUSTOM_STATUS) || (0, M.Cy)(e)
-            ? (a?.size == null && [q.I4].includes(e.application_id ?? "")
+            ? (a?.size == null && [J.I4].includes(e.application_id ?? "")
                   ? (l = Q.intl.formatToPlainString(Q.t["u//9By"], { count: "0", max: t?.getMaxParticipants() ?? 0 }))
                   : (0, M.Cy)(e) && a?.size != null
                     ? (l = Q.intl.formatToPlainString(Q.t["JC/3xw"], {
@@ -478,12 +478,12 @@ class es extends a.PureComponent {
             x = this.renderTimePlayed(c),
             g = this.renderChannelDetails(c),
             f = null != l ? l() : null,
-            v = this.renderTimeBar(c),
-            N = ![e, h, p, y, x, v, f].some((e) => null != e);
+            j = this.renderTimeBar(c),
+            v = ![e, h, p, y, x, j, f].some((e) => null != e);
         return (0, i.jsxs)("div", {
             className: r()(this.getTypeClass("activity"), n),
             children: [
-                this.renderHeader(N),
+                this.renderHeader(v),
                 (0, i.jsx)("div", {
                     className: A ? ee.bodyAlignCenter : ee.bodyNormal,
                     children: (0, i.jsxs)("div", {
@@ -492,7 +492,7 @@ class es extends a.PureComponent {
                             e,
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
-                                : (0, i.jsxs)(b.A.Child, {
+                                : (0, i.jsxs)(P.A.Child, {
                                       className: r()(
                                           (0, V.t)(
                                               ee,
@@ -502,7 +502,7 @@ class es extends a.PureComponent {
                                           ),
                                       ),
                                       children: [
-                                          (0, i.jsxs)(j.D, {
+                                          (0, i.jsxs)(N.D, {
                                               className: r()(null != o && ee.openGameProfile),
                                               onClick:
                                                   null != o
@@ -513,7 +513,7 @@ class es extends a.PureComponent {
                                               children: [h, p, y, x],
                                           }),
                                           g,
-                                          m ? null : v,
+                                          m ? null : j,
                                           u ? f : null,
                                       ],
                                   }),
@@ -539,10 +539,10 @@ class es extends a.PureComponent {
     };
 }
 function er(e) {
-    let t = (0, E.A)({
+    let t = (0, _.A)({
         location: "UserActivity",
         applicationId: e.application?.id ?? e.activity?.application_id,
-        source: _.GameProfileSources.UserProfile,
+        source: L.GameProfileSources.UserProfile,
         sourceUserId: e.user.id,
         trackEntryPointImpression: !0,
     });

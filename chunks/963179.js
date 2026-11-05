@@ -18,16 +18,16 @@ e.d(
     {},
     {
         ItemDetailsModal: function (t) {
-            let { onClose: i, transitionState: e, skuId: m, appId: A, onHeaderTitleClick: I } = t,
-                b = (0, l.bG)([o.A], () => o.A.getForSKU(m), [m]),
-                f = (0, l.bG)([a.A], () => a.A.get(m), [m]),
-                x = (0, p.L)(m);
+            let { onClose: i, transitionState: e, skuId: I, appId: m, onHeaderTitleClick: A } = t,
+                b = (0, l.bG)([o.A], () => o.A.getForSKU(I), [I]),
+                f = (0, l.bG)([a.A], () => a.A.get(I), [I]),
+                x = (0, p.L)(I);
             if (null == f) return null;
             let C = f.name ?? "",
                 j = b?.description?.trim() ?? void 0,
                 B =
                     b?.headerBackground != null
-                        ? (u.A.toURLSafe((0, s.YE)(A, b.headerBackground, 256)) ?? void 0)
+                        ? (u.A.toURLSafe((0, s.YE)(m, b.headerBackground, 256)) ?? void 0)
                         : void 0,
                 D = f.type === g.Puh.DURABLE && x,
                 L = f.type === g.Puh.DURABLE ? (D ? v.intl.string(v.t.bm82mm) : v.intl.string(v.t["6gprwf"])) : void 0,
@@ -35,20 +35,20 @@ e.d(
             return null == S
                 ? null
                 : (0, n.jsx)(c.C, {
-                      appId: A,
+                      appId: m,
                       skuId: f.id,
                       transitionState: e,
-                      onHeaderTitleClick: I ?? i,
+                      onHeaderTitleClick: A ?? i,
                       onClose: i,
-                      footer: (0, n.jsx)(k.$P, { appId: A, sku: f }),
+                      footer: (0, n.jsx)(k.$P, { appId: m, sku: f }),
                       children: (0, n.jsx)(h.D, {
-                          appId: A,
+                          appId: m,
                           skuId: f.id,
                           title: C,
                           description: j,
                           imgSrc: B,
                           tag: null != L ? (0, n.jsx)(d.v, { text: L }) : void 0,
-                          FallbackIcon: r.q,
+                          FallbackIcon: r.TicketIcon,
                       }),
                   });
         },

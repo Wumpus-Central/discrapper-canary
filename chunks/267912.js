@@ -14,9 +14,9 @@ var s = l(477900),
     m = l(646514),
     g = l(285796),
     v = l(534514),
-    b = l(834730),
-    A = l(821609),
-    C = l(953727);
+    C = l(834730),
+    b = l(821609),
+    A = l(953727);
 function p(e) {
     let {
         width: i = 24,
@@ -26,7 +26,7 @@ function p(e) {
         ...t
     } = e;
     return (0, s.jsxs)("svg", {
-        ...(0, C.A)(t),
+        ...(0, A.A)(t),
         width: i,
         height: l,
         viewBox: "0 0 14 14",
@@ -47,7 +47,12 @@ function E(e) {
     return (
         (c = n
             ? (0, s.jsx)(p, { width: 20, height: 20 })
-            : (0, s.jsx)(g.a, { size: "custom", color: m.A.colors.ICON_FEEDBACK_CRITICAL, width: 20, height: 20 })),
+            : (0, s.jsx)(g.CircleXIcon, {
+                  size: "custom",
+                  color: m.A.colors.ICON_FEEDBACK_CRITICAL,
+                  width: 20,
+                  height: 20,
+              })),
         (0, s.jsxs)("div", {
             className: y.gd,
             children: [
@@ -56,13 +61,13 @@ function E(e) {
                     className: j()(y.__invalid_checklistText, n && y.lu),
                     children: [
                         (0, s.jsx)(v.D, { variant: "heading-sm/semibold", className: y.LA, children: i }),
-                        (0, s.jsx)(b.E, { color: "interactive-text-default", variant: "body-sm/normal", children: l }),
+                        (0, s.jsx)(C.E, { color: "interactive-text-default", variant: "body-sm/normal", children: l }),
                     ],
                 }),
                 null != a &&
                     (0, s.jsx)("div", {
                         className: y.dT,
-                        children: (0, s.jsx)(A.$, { variant: "primary", onClick: t, text: a, size: "sm" }),
+                        children: (0, s.jsx)(b.$, { variant: "primary", onClick: t, text: a, size: "sm" }),
                     }),
             ],
         })

@@ -1,18 +1,19 @@
+n.r(t);
 var i = n(477900);
 n(582128);
-var s = n(646514),
-    r = n(996682),
+var r = n(646514),
+    s = n(996682),
     l = n(27989);
 n.d(
     t,
     {},
     {
-        f: function (e) {
+        MagicDoorIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,
                     height: a,
-                    color: o = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: c = "",
                     ...d
                 } = e,
@@ -20,7 +21,7 @@ n.d(
                 h = u?.width ?? n,
                 C = u?.height ?? a;
             return (0, i.jsxs)("svg", {
-                ...(0, r.A)(d),
+                ...(0, s.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: h,
                 height: C,

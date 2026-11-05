@@ -86,7 +86,7 @@ n.d(
                           onClick: function () {
                               (0, f.cC)(t, { showAllStreams: !n });
                           },
-                          children: (0, i.jsx)(g.k, {
+                          children: (0, i.jsx)(g.ScreenIcon, {
                               size: "xxs",
                               color: n ? o.A.colors.BACKGROUND_BRAND : o.A.colors.INTERACTIVE_TEXT_ACTIVE,
                           }),
@@ -106,7 +106,7 @@ n.d(
                     onClick: () => {
                         l || (0, f.v0)(t);
                     },
-                    children: (0, i.jsx)(p.q, {
+                    children: (0, i.jsx)(p.PinUprightIcon, {
                         size: "xxs",
                         color: n ? o.A.colors.BACKGROUND_BRAND : o.A.colors.INTERACTIVE_TEXT_ACTIVE,
                     }),

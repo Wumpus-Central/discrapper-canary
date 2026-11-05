@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(678708),
     x = n(88187),
     E = n(775602),
-    y = n(392054),
-    S = n(855986),
+    S = n(392054),
+    y = n(855986),
     C = n(834730),
     A = n(866665),
     b = n(364360);
@@ -155,7 +155,7 @@ function U(e) {
         p = null != r ? c?.[r] : null;
     t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
     let g = u && null != h ? (0, O.Rg)(h) : null,
-        x = (0, S.bG)([_.Ay], () => {
+        x = (0, y.bG)([_.Ay], () => {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
@@ -184,8 +184,8 @@ function U(e) {
 }
 var V = n(524007),
     W = n(47167),
-    F = n(713654),
-    B = n(688810),
+    B = n(713654),
+    F = n(688810),
     G = n(573435),
     K = n(739053),
     H = n(82498),
@@ -197,7 +197,7 @@ var Q = n(682901),
     Z = n(211319);
 let X = function (e) {
     let { emojis: t } = e,
-        { analyticsLocations: n } = (0, B.Ay)();
+        { analyticsLocations: n } = (0, F.Ay)();
     i.useEffect(() => {
         (z.default.track($.HAw.PREMIUM_UPSELL_VIEWED, { type: Q.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
             (0, K.sq)($.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, H.uq)(Q.e.EMOJI_AUTOCOMPLETE_INLINE)));
@@ -244,7 +244,7 @@ var Y = n(168017),
     ei = n(71393);
 function er(e) {
     let { sound: t } = e,
-        n = (0, S.bG)([ei.A], () => ("0" === t.guildId ? L.intl.string(L.t.Rtvk9X) : ei.A.getGuild(t.guildId)?.name));
+        n = (0, y.bG)([ei.A], () => ("0" === t.guildId ? L.intl.string(L.t.Rtvk9X) : ei.A.getGuild(t.guildId)?.name));
     return (0, l.jsxs)(I, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
@@ -359,7 +359,7 @@ function eE(e) {
         }),
     });
 }
-class ey extends ep {
+class eS extends ep {
     layoutClass = b.fF;
     selectable = !1;
     renderContent() {
@@ -367,7 +367,7 @@ class ey extends ep {
         return (0, l.jsx)("div", { className: s()(e, b.yF) });
     }
 }
-class eS extends ep {
+class ey extends ep {
     renderContent() {
         let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: r } = this.props,
             s = null == r ? eu.A.getNickname(e.id) : null;
@@ -445,7 +445,7 @@ class eA extends ep {
 class eb extends ep {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === $.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, F.gU)(e);
+            n = e.type === $.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, B.gU)(e);
         return (0, l.jsxs)(I, {
             children: [
                 null != n && (0, l.jsx)(N, { children: (0, l.jsx)(n, { className: b.Kk }) }),
@@ -461,7 +461,12 @@ class eI extends ep {
         return (0, l.jsxs)(I, {
             children: [
                 (0, l.jsx)(N, {
-                    children: (0, l.jsx)(x.F, { size: "xs", color: "currentColor", className: b.Kk, colorClass: b.t4 }),
+                    children: (0, l.jsx)(x.SlashIcon, {
+                        size: "xs",
+                        color: "currentColor",
+                        className: b.Kk,
+                        colorClass: b.t4,
+                    }),
                 }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: e.displayName }) }),
                 (0, l.jsx)(j, { children: e.displayDescription }),
@@ -471,13 +476,13 @@ class eI extends ep {
 }
 class ev extends ep {
     isSelectable() {
-        return this.props.command.inputType !== y.y$.PLACEHOLDER;
+        return this.props.command.inputType !== S.y$.PLACEHOLDER;
     }
     renderContent() {
         let { command: e, channel: t, showImage: n, section: i, selected: r } = this.props,
             { hovered: s } = this.state,
             a = this.isSelectable();
-        return e.inputType === y.y$.PLACEHOLDER
+        return e.inputType === S.y$.PLACEHOLDER
             ? (0, l.jsx)(V.A, {})
             : (0, l.jsx)(U, {
                   command: e,
@@ -585,8 +590,8 @@ class eL extends i.PureComponent {
     static Generic = eg;
     static Loading = ex;
     static Title = eE;
-    static Divider = ey;
-    static User = eS;
+    static Divider = eS;
+    static User = ey;
     static Role = eC;
     static Channel = eb;
     static Command = eI;

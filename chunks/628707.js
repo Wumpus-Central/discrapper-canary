@@ -60,7 +60,7 @@ function S(e) {
 }
 var k = n(28579),
     C = n(798393);
-function y(e) {
+function H(e) {
     let { channel: t, threadIds: n, startThread: a, goToThread: i } = e,
         c = l.useCallback(
             (e) => (0, s.jsx)(k.A, { threadId: n[e.row], goToThread: i }, `${e.section}-${e.row}`),
@@ -79,22 +79,22 @@ function y(e) {
               chunkSize: 20,
           });
 }
-var H = n(392421),
+var y = n(392421),
     E = n(602137),
     A = n(289873),
-    _ = n(424798);
-let I = new Set();
+    I = n(424798);
+let _ = new Set();
 function R(e) {
     let { channel: t, startThread: n, goToThread: a } = e,
-        { joinedThreadIds: r, unjoinedThreadIds: i } = (0, _.jO)(t),
+        { joinedThreadIds: r, unjoinedThreadIds: i } = (0, I.jO)(t),
         {
             threadIds: c,
             canLoadMore: o,
             loading: d,
             loadMore: h,
-        } = (0, _.Fr)(t, E.T.LATEST_ACTIVITY, I, H.n.MATCH_SOME),
+        } = (0, I.Fr)(t, E.T.LATEST_ACTIVITY, _, y.n.MATCH_SOME),
         u = l.useRef(null);
-    (0, _.Kk)();
+    (0, I.Kk)();
     let g = l.useCallback(
             (e) => {
                 let t = 0 === e.section ? r : 1 === e.section ? i : c;
@@ -198,7 +198,7 @@ function $(e) {
                 component: (0, s.jsxs)("div", {
                     className: Q.wx,
                     children: [
-                        (0, s.jsx)(h.y, { size: "md", color: "currentColor", className: Q.aM }),
+                        (0, s.jsx)(h.ThreadIcon, { size: "md", color: "currentColor", className: Q.aM }),
                         (0, s.jsx)(u.D, {
                             variant: "heading-sm/semibold",
                             className: Q.DD,
@@ -231,7 +231,7 @@ function $(e) {
                     ],
                 }),
                 children: w.hasResults
-                    ? (0, s.jsx)(y, { channel: t, startThread: b, goToThread: p, threadIds: w.results })
+                    ? (0, s.jsx)(H, { channel: t, startThread: b, goToThread: p, threadIds: w.results })
                     : (0, s.jsx)(R, { channel: t, startThread: b, goToThread: p }),
             }),
         })

@@ -126,7 +126,7 @@ function T(t) {
                     className: v.b,
                     children: (0, n.jsx)(o.K, {
                         "aria-label": j.intl.string(j.t.cpT0Cq),
-                        icon: c.P,
+                        icon: c.XSmallIcon,
                         onClick: p,
                         variant: "secondary",
                         size: "sm",

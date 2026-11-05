@@ -1,3 +1,4 @@
+n.r(t);
 var i = n(477900);
 n(582128);
 var r = n(646514),
@@ -20,12 +21,12 @@ n.d(
                 } = e,
                 E = (0, s.J)(t),
                 A = E?.width ?? n,
-                h = E?.height ?? l;
+                f = E?.height ?? l;
             return (0, i.jsxs)("svg", {
                 ...(0, a.A)(_),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: A,
-                height: h,
+                height: f,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

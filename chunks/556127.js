@@ -7,15 +7,15 @@ var i,
     o = n(534514),
     T = n(95362),
     c = n(430690),
-    d = n(235986),
-    S = n(278941),
+    S = n(235986),
+    d = n(278941),
     u = n(665909),
     _ = n(858899),
     E = n(834730),
     A = n(821609),
     x = n(939249),
-    O = n(780964),
-    m = n(766075),
+    m = n(780964),
+    O = n(766075),
     g = n(975571),
     b = n(544231),
     h = n(110168),
@@ -33,7 +33,7 @@ let F = function (t) {
     let { onClose: e, channelId: n } = t,
         [i, r] = l.useState(!1),
         a = l.useCallback(() => {
-            ((0, m.openUserSettings)(O.X.DM_SAFETY_ALERTS_SETTING), e());
+            ((0, O.openUserSettings)(m.X.DM_SAFETY_ALERTS_SETTING), e());
         }, [e]),
         o = l.useCallback(() => {
             i ||
@@ -126,7 +126,7 @@ function Z(t) {
                         : null,
                 ],
             }),
-            (0, s.jsx)(Y._, { size: "md", color: N.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, s.jsx)(Y.ChevronSmallRightIcon, { size: "md", color: N.A.colors.INTERACTIVE_TEXT_DEFAULT }),
         ],
     });
 }
@@ -134,8 +134,8 @@ let H = function (t) {
     let { otherUserId: e, channelId: i, warningId: r, warningType: a, transitionToSlide: o } = t,
         T = (0, B.N)(),
         c = (0, B.z)(),
-        d = (0, D.W)(i),
-        _ = null != (0, S.e)(i),
+        S = (0, D.W)(i),
+        _ = null != (0, d.e)(i),
         E = (0, U.bG)([M.A], () => M.A.isIgnored(e), [e]),
         A = (0, U.bG)([M.A], () => M.A.isBlocked(e), [e]),
         x = l.useCallback(
@@ -144,10 +144,10 @@ let H = function (t) {
             },
             [i, r, e, a, _],
         ),
-        O = l.useCallback(() => {
+        m = l.useCallback(() => {
             ((0, k.Oo)(K.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM));
         }, [x]),
-        m = l.useCallback(() => {
+        O = l.useCallback(() => {
             (v.A.unblockUser(e, { location: K.Ht }, i), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK));
         }, [e, i, x]),
         g = l.useCallback(() => {
@@ -175,14 +175,14 @@ let H = function (t) {
                     variant: "primary",
                     onPress: () => {
                         A
-                            ? (m(), W.A.showUnblockSuccessToast(e, i))
+                            ? (O(), W.A.showUnblockSuccessToast(e, i))
                             : (0, k.mM)(async () => {
                                   let { default: t } = await n.e(784938).then(n.bind(n, 371185));
                                   return (n) => {
                                       let { transitionState: l, onClose: r } = n;
                                       return (0, s.jsx)(t, {
                                           transitionState: l,
-                                          onBlock: O,
+                                          onBlock: m,
                                           onBlockAndReport: g,
                                           onCancel: () => {
                                               (r?.(), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CANCEL));
@@ -201,11 +201,11 @@ let H = function (t) {
                     subTitle: I.intl.string(I.t["0tydOa"]),
                     buttonText: I.intl.string(I.t.X27yhD),
                     onPress: () => {
-                        ((0, k.Oo)(K.V), (0, P.jJ)(d), x(u.Wm.USER_SAFETY_TOOLS_REPORT));
+                        ((0, k.Oo)(K.V), (0, P.jJ)(S), x(u.Wm.USER_SAFETY_TOOLS_REPORT));
                     },
                 },
             ],
-            [E, A, x, m, O, g, e, i, d],
+            [E, A, x, O, m, g, e, i, S],
         ),
         h = l.useMemo(() => {
             let t = {
@@ -299,8 +299,8 @@ let $ = function () {
 var Q = n(102097);
 let tt = (t) => {
     let { onClose: e, channelId: n, warningId: i, warningType: _, otherUserId: E, transitionState: A } = t,
-        x = null != (0, S.e)(n),
-        [O, m] = l.useState(G.ACTIONS),
+        x = null != (0, d.e)(n),
+        [m, O] = l.useState(G.ACTIONS),
         g = l.useCallback(
             (t) => {
                 (0, u._$)({ channelId: n, warningId: i, warningType: _, senderId: E, cta: t, isNudgeWarning: x });
@@ -312,16 +312,16 @@ let tt = (t) => {
             return (0, s.jsx)(a.Q, { onClick: n, text: e, variant: "secondary", textVariant: "body-sm/normal" });
         }, []),
         h = l.useCallback(() => {
-            switch (O) {
+            switch (m) {
                 case G.SAFETY_TIPS:
                 case G.ABOUT_SAFETY_ALERTS:
-                    return (0, s.jsx)(b, { text: I.intl.string(I.t["13/7kX"]), onClick: () => m(G.ACTIONS) });
+                    return (0, s.jsx)(b, { text: I.intl.string(I.t["13/7kX"]), onClick: () => O(G.ACTIONS) });
                 default:
                     return null;
             }
-        }, [O, b]),
+        }, [m, b]),
         j = l.useCallback(() => {
-            switch (O) {
+            switch (m) {
                 case G.SAFETY_TIPS:
                     return I.intl.string(I.t.EtNxi6);
                 case G.ABOUT_SAFETY_ALERTS:
@@ -329,12 +329,12 @@ let tt = (t) => {
                 default:
                     return I.intl.string(I.t.MAhAp6);
             }
-        }, [O]),
+        }, [m]),
         C = l.useCallback(
             (t) => {
-                m(t);
+                O(t);
             },
-            [m],
+            [O],
         );
     return (0, s.jsxs)(r.EO, {
         "data-migration-pending": !0,
@@ -347,12 +347,12 @@ let tt = (t) => {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: Q.H,
-                justify: d.A.Justify.CENTER,
+                justify: S.A.Justify.CENTER,
                 children: (0, s.jsx)(o.D, { variant: "heading-xl/semibold", children: j() }),
             }),
             (0, s.jsx)(T.Ip, {
                 children: (0, s.jsxs)(c.t, {
-                    activeSlide: O,
+                    activeSlide: m,
                     width: 440,
                     children: [
                         (0, s.jsx)(c.q, {
@@ -380,7 +380,7 @@ let tt = (t) => {
             }),
             (0, s.jsxs)(r.jl, {
                 "data-migration-pending": !0,
-                justify: d.A.Justify.BETWEEN,
+                justify: S.A.Justify.BETWEEN,
                 children: [
                     (0, s.jsx)(b, {
                         text: I.intl.string(I.t.cpT0Cq),

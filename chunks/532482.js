@@ -18,31 +18,31 @@ var r = n(477900),
     C = n(812993),
     y = n(939249),
     k = n(834730),
-    w = n(366605),
-    A = n(329921),
-    R = n(789645),
-    v = n(442433),
-    I = n(571694),
+    I = n(366605),
+    w = n(329921),
+    A = n(789645),
+    R = n(442433),
+    v = n(571694),
     M = n(47167),
     E = n(713654),
     N = n(5180),
     j = n(682163),
-    P = n(734057),
-    D = n(71393),
-    S = n(218461),
+    S = n(734057),
+    P = n(71393),
+    D = n(218461),
     z = n(543465),
     B = n(287809);
 n(712960);
 var T = n(652215),
     L = n(792996),
     U = n(133281);
-function G() {
+function F() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
-let $ = new Map(),
-    F = new Set(),
-    O = !1;
-function Y(e) {
+let G = new Map(),
+    O = new Set(),
+    $ = !1;
+function X(e) {
     let {
             tab: t,
             isActive: i,
@@ -50,13 +50,13 @@ function Y(e) {
             registerTabNode: u,
             onDragStart: c,
             onDragMove: f,
-            onDragEnd: Y,
-            onCloseStart: X,
+            onDragEnd: X,
+            onCloseStart: Y,
             onRequestClose: _,
         } = e,
-        [V, H] = l.useState(() => (O || ((O = !0), d.A.getTabs().forEach((e) => F.add(e.id))), !F.has(t.id) && !G()));
+        [V, H] = l.useState(() => ($ || (($ = !0), d.A.getTabs().forEach((e) => O.add(e.id))), !O.has(t.id) && !F()));
     (l.useEffect(() => {
-        F.add(t.id);
+        O.add(t.id);
     }, [t.id]),
         l.useEffect(() => {
             if (!V) return;
@@ -64,24 +64,24 @@ function Y(e) {
             return () => clearTimeout(e);
         }, [V]));
     let [K, q] = l.useState(!1),
-        W = (0, s.bG)([P.A], () => ("channel" === t.kind ? P.A.getChannel(t.channelId) : null), [t]),
-        Z = (0, s.bG)([D.A], () => ("channel" === t.kind ? D.A.getGuild(t.guildId) : null), [t]),
-        J = (0, s.bG)([B.default], () => (null != W && W.isDM() ? B.default.getUser(W.getRecipientId()) : null), [W]),
-        Q = (0, M.Ay)(W);
-    "channel" === t.kind && null != Q && $.set(t.channelId, Q);
-    let ee = "route" === t.kind ? t.routeLabel : (Q ?? $.get(t.channelId) ?? L.intl.string(L.t.zLZPmk)),
+        W = (0, s.bG)([S.A], () => ("channel" === t.kind ? S.A.getChannel(t.channelId) : null), [t]),
+        Z = (0, s.bG)([P.A], () => ("channel" === t.kind ? P.A.getGuild(t.guildId) : null), [t]),
+        Q = (0, s.bG)([B.default], () => (null != W && W.isDM() ? B.default.getUser(W.getRecipientId()) : null), [W]),
+        J = (0, M.Ay)(W);
+    "channel" === t.kind && null != J && G.set(t.channelId, J);
+    let ee = "route" === t.kind ? t.routeLabel : (J ?? G.get(t.channelId) ?? L.intl.string(L.t.zLZPmk)),
         et = l.useCallback(() => {
             (0, o.ZD)(t.id);
         }, [t.id]),
         en = l.useCallback(() => {
             if (!K && a) {
-                if ((X(t.id), G())) return void _(t.id);
+                if ((Y(t.id), F())) return void _(t.id);
                 (q(!0),
                     setTimeout(() => {
                         (_(t.id), d.A.getTabs().some((e) => e.id === t.id) && q(!1));
                     }, 150));
             }
-        }, [K, a, X, _, t.id]),
+        }, [K, a, Y, _, t.id]),
         er = l.useCallback(
             (e) => {
                 1 === e.button && (e.preventDefault(), en());
@@ -90,7 +90,7 @@ function Y(e) {
         ),
         el = l.useCallback(
             (e) => {
-                (0, v.L3)(e, async () => {
+                (0, R.L3)(e, async () => {
                     let { default: e } = await n.e(99401).then(n.bind(n, 774448));
                     return (n) => (0, r.jsx)(e, { ...n, tab: t, onRequestClose: en });
                 });
@@ -145,7 +145,7 @@ function Y(e) {
                     u.current && ((u.current = !1), e.preventDefault(), e.stopPropagation());
                 }, []),
             };
-        })({ itemId: t.id, onDragStart: c, onDragMove: f, onDragEnd: Y }),
+        })({ itemId: t.id, onDragStart: c, onDragMove: f, onDragEnd: X }),
         eo = l.useCallback(
             (e) => {
                 ((es.current = e), u(t.id, e));
@@ -157,15 +157,15 @@ function Y(e) {
             isLowImportanceMention: ef,
             showUnreadDot: eh,
         } = (0, s.cf)(
-            [S.Ay, z.Ay],
+            [D.Ay, z.Ay],
             () => {
                 if ("channel" !== t.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
-                let e = S.Ay.getMentionCount(t.channelId),
+                let e = D.Ay.getMentionCount(t.channelId),
                     n = z.Ay.isGuildOrCategoryOrChannelMuted(t.guildId, t.channelId);
                 return {
                     mentionCount: e,
-                    isLowImportanceMention: S.Ay.getIsMentionLowImportance(t.channelId),
-                    showUnreadDot: 0 === e && !n && S.Ay.hasUnread(t.channelId),
+                    isLowImportanceMention: D.Ay.getIsMentionLowImportance(t.channelId),
+                    showUnreadDot: 0 === e && !n && D.Ay.hasUnread(t.channelId),
                 };
             },
             [t],
@@ -173,18 +173,18 @@ function Y(e) {
         eg = null;
     if ("route" === t.kind)
         t.routePath === T.BVt.FRIENDS
-            ? (eg = (0, r.jsx)(p.$, { size: "xs", color: "currentColor", className: U.PA }))
+            ? (eg = (0, r.jsx)(p.FriendsIcon, { size: "xs", color: "currentColor", className: U.PA }))
             : t.routePath === T.BVt.COLLECTIBLES_SHOP
-              ? (eg = (0, r.jsx)(m.U, { size: "xs", color: "currentColor", className: U.PA }))
+              ? (eg = (0, r.jsx)(m.ShopIcon, { size: "xs", color: "currentColor", className: U.PA }))
               : t.routePath === T.BVt.QUEST_HOME &&
-                (eg = (0, r.jsx)(x.r, { size: "xs", color: "currentColor", className: U.PA }));
+                (eg = (0, r.jsx)(x.QuestsIcon, { size: "xs", color: "currentColor", className: U.PA }));
     else if ((0, N.ai)(t.guildId)) eg = (0, r.jsx)(b.StarIcon, { size: "xs", color: "currentColor", className: U.PA });
     else if (null != W && W.isThread()) {
         let e = (0, E.gU)(W);
         null != e && (eg = (0, r.jsx)(e, { size: "xs", color: "currentColor", className: U.PA }));
     } else if (null != Z) eg = (0, r.jsx)(j.Ay, { guild: Z, size: j.Ay.Sizes.SMOL, active: !0, className: U.$f });
     else if (null != W && (W.isDM() || W.isGroupDM())) {
-        let e = null != J ? J.getAvatarURL(void 0, 16) : (0, I.Y)(W, 16);
+        let e = null != Q ? Q.getAvatarURL(void 0, 16) : (0, v.Y)(W, 16);
         null != e && (eg = (0, r.jsx)("img", { className: U.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
     }
     let ep = null;
@@ -228,8 +228,8 @@ function Y(e) {
                           className: U.n3,
                           "aria-hidden": !0,
                           children: [
-                              (0, r.jsx)(w.t, { size: "xs", color: "currentColor" }),
-                              !i && eh && (0, r.jsx)(A.N, { className: U.UU, variant: "neutral" }),
+                              (0, r.jsx)(I.PinIcon, { size: "xs", color: "currentColor" }),
+                              !i && eh && (0, r.jsx)(w.N, { className: U.UU, variant: "neutral" }),
                           ],
                       })
                     : a
@@ -240,14 +240,14 @@ function Y(e) {
                                     (0, r.jsx)("div", {
                                         className: U.XE,
                                         "aria-hidden": !0,
-                                        children: (0, r.jsx)(A.N, { variant: "neutral" }),
+                                        children: (0, r.jsx)(w.N, { variant: "neutral" }),
                                     }),
                                 (0, r.jsx)(y.D, {
                                     className: U.b,
                                     onClick: en,
                                     onPointerDown: (e) => e.stopPropagation(),
                                     "aria-label": L.intl.formatToPlainString(L.t["A/PzIa"], { channelName: ee }),
-                                    children: (0, r.jsx)(R.P, { size: "xs" }),
+                                    children: (0, r.jsx)(A.XSmallIcon, { size: "xs" }),
                                 }),
                             ],
                         })
@@ -257,7 +257,7 @@ function Y(e) {
     );
 }
 n(321073);
-let X = "left 150ms ease-out";
+let Y = "left 150ms ease-out";
 function _() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
@@ -288,18 +288,18 @@ function K() {
         C,
         y,
         k,
+        I,
         w,
         A,
         R,
         v,
-        I,
         M,
         E,
         N,
         j,
+        S,
         P,
         D,
-        S,
         {
             tabs: z,
             activeTabId: B,
@@ -311,10 +311,10 @@ function K() {
         })),
         {
             setStripRef: U,
-            registerTabNode: G,
-            setNewTabButtonRef: $,
-            handleDragStart: F,
-            handleDragMove: O,
+            registerTabNode: F,
+            setNewTabButtonRef: G,
+            handleDragStart: O,
+            handleDragMove: $,
             handleDragEnd: K,
             handleCloseStart: q,
         } = ((e = l.useRef(null)),
@@ -330,22 +330,22 @@ function K() {
         (C = l.useRef(0)),
         (y = l.useRef(0)),
         (k = l.useRef(0)),
-        (w = l.useRef(0)),
-        (A = l.useCallback((e, n) => {
+        (I = l.useRef(0)),
+        (w = l.useCallback((e, n) => {
             null != n ? t.current.set(e, n) : t.current.delete(e);
         }, [])),
-        (R = l.useCallback((e) => {
+        (A = l.useCallback((e) => {
             n.current = e;
         }, [])),
-        (v = l.useCallback((t) => {
+        (R = l.useCallback((t) => {
             e.current = t;
         }, [])),
-        (I = l.useRef(new Map())),
+        (v = l.useRef(new Map())),
         (M = z.map((e) => e.id).join(",")),
         l.useLayoutEffect(() => {
             if (null != f.current) return;
             let e = t.current,
-                n = I.current;
+                n = v.current;
             e.forEach((e) => {
                 ((e.style.transition = ""), (e.style.transform = ""));
             });
@@ -380,7 +380,7 @@ function K() {
                             ));
                 }
             }
-            I.current = r;
+            v.current = r;
         }, [M]),
         (E = l.useRef(!1)),
         (N = l.useRef(!1)),
@@ -397,7 +397,7 @@ function K() {
                         (t.style.maxWidth = `${e}px`));
                 }));
         }, [])),
-        (P = l.useCallback(() => {
+        (S = l.useCallback(() => {
             ((N.current = !1),
                 t.current.forEach((e) => {
                     ((e.style.flexGrow = ""),
@@ -417,16 +417,16 @@ function K() {
                         t.clientX <= r.right + 32 &&
                         t.clientY >= r.top - 32 &&
                         t.clientY <= r.bottom + 32;
-                l !== E.current && ((E.current = l), l || P());
+                l !== E.current && ((E.current = l), l || S());
             }
             return (window.addEventListener("mousemove", t), () => window.removeEventListener("mousemove", t));
-        }, [P]),
-        (D = l.useCallback(() => {
+        }, [S]),
+        (P = l.useCallback(() => {
             let t = e.current,
                 n = null != t && t.matches(":hover");
             ((E.current = n), n && j());
         }, [j])),
-        (S = l.useCallback(
+        (D = l.useCallback(
             (r, l) => {
                 let s = e.current,
                     i = t.current.get(r);
@@ -455,31 +455,31 @@ function K() {
                             (t.style.height = `${e.height}px`),
                             (t.style.margin = "0"));
                     }));
-                let A = _(),
-                    R = [],
-                    v = 1 / 0,
-                    I = -1 / 0;
+                let w = _(),
+                    A = [],
+                    R = 1 / 0,
+                    v = -1 / 0;
                 (c.forEach((e) => {
                     let { id: t, node: n } = e,
                         l = o.get(n);
                     if (null == l) return;
                     let s = l.left - a.left;
-                    if (((v = Math.min(v, s)), (I = Math.max(I, s + l.width)), t === r)) {
+                    if (((R = Math.min(R, s)), (v = Math.max(v, s + l.width)), t === r)) {
                         x.current = l.width;
                         return;
                     }
-                    (A || (n.style.transition = X), R.push({ node: n, size: l.width, center: s + l.width / 2 }));
+                    (w || (n.style.transition = Y), A.push({ node: n, size: l.width, center: s + l.width / 2 }));
                 }),
-                    (p.current = R),
-                    (m.current = Number.isFinite(v) ? v : 0),
+                    (p.current = A),
+                    (m.current = Number.isFinite(R) ? R : 0),
                     (h.current = l));
                 let M = parseFloat(i.style.left);
                 g.current = M;
-                let E = Number.isFinite(I) ? I : 0;
+                let E = Number.isFinite(v) ? v : 0;
                 ((C.current = Math.min(m.current, M)),
                     (y.current = Math.max(E - x.current, M)),
                     (k.current = z.findIndex((e) => e.id === r)),
-                    (w.current = M),
+                    (I.current = M),
                     (f.current = r),
                     (i.style.zIndex = "1"),
                     (i.style.boxShadow = "0 4px 12px var(--elevation-high)"));
@@ -487,10 +487,10 @@ function K() {
             [z],
         )),
         {
-            setStripRef: v,
-            registerTabNode: A,
-            setNewTabButtonRef: R,
-            handleDragStart: S,
+            setStripRef: R,
+            registerTabNode: w,
+            setNewTabButtonRef: A,
+            handleDragStart: D,
             handleDragMove: l.useCallback((e, n) => {
                 if (f.current !== e) return;
                 let r = t.current.get(e);
@@ -508,19 +508,19 @@ function K() {
                 }
                 let o = b.current,
                     d = m.current,
-                    A = d;
+                    w = d;
                 (s.forEach((e, t) => {
-                    (t === c && ((A = d), (d += i + o)), (e.node.style.left = `${d}px`), (d += e.size + o));
+                    (t === c && ((w = d), (d += i + o)), (e.node.style.left = `${d}px`), (d += e.size + o));
                 }),
-                    c >= s.length && (A = d),
+                    c >= s.length && (w = d),
                     (k.current = c),
-                    (w.current = A));
+                    (I.current = w));
             }, []),
             handleDragEnd: l.useCallback(() => {
                 let e = f.current;
                 if (null == e) return;
                 let r = t.current.get(e),
-                    l = w.current;
+                    l = I.current;
                 (0, o.Aq)(e, k.current);
                 let s = !1;
                 function i() {
@@ -534,26 +534,26 @@ function K() {
                     (t.current.forEach((t, n) => {
                         e.set(n, t.getBoundingClientRect().left);
                     }),
-                        (I.current = e));
+                        (v.current = e));
                 }
                 let a = null != r ? parseFloat(r.style.left) : 0 / 0;
                 null == r || _() || !Number.isFinite(a) || 0.5 > Math.abs(a - l)
                     ? i()
-                    : ((r.style.transition = X),
+                    : ((r.style.transition = Y),
                       (r.style.left = `${l}px`),
                       r.addEventListener("transitionend", i, { once: !0 }),
                       setTimeout(i, 200));
             }, []),
-            handleCloseStart: D,
+            handleCloseStart: P,
         }),
         [W, Z] = l.useState(() => new Set()),
-        J = l.useCallback(
+        Q = l.useCallback(
             (e) => {
                 (q(), Z((t) => new Set(t).add(e)));
             },
             [q],
         ),
-        Q = l.useCallback((e) => {
+        J = l.useCallback((e) => {
             ((0, o.f5)(e),
                 Z((t) => {
                     let n = new Set(t);
@@ -571,23 +571,23 @@ function K() {
         children: [
             z.map((e) =>
                 (0, r.jsx)(
-                    Y,
+                    X,
                     {
                         tab: e,
                         isActive: e.id === B,
                         closable: ee,
-                        registerTabNode: G,
-                        onDragStart: F,
-                        onDragMove: O,
+                        registerTabNode: F,
+                        onDragStart: O,
+                        onDragMove: $,
                         onDragEnd: K,
-                        onCloseStart: J,
-                        onRequestClose: Q,
+                        onCloseStart: Q,
+                        onRequestClose: J,
                     },
                     e.id,
                 ),
             ),
             (0, r.jsx)("div", {
-                ref: $,
+                ref: G,
                 className: H.Y,
                 children: (0, r.jsx)(a.A, {
                     icon: i.PlusLargeIcon,

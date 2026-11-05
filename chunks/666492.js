@@ -1,41 +1,42 @@
-var i = s(477900);
-s(582128);
-var n = s(646514),
-    l = s(996682),
-    r = s(27989);
-s.d(
-    t,
+t.r(a);
+var c = t(477900);
+t(582128);
+var h = t(646514),
+    i = t(996682),
+    e = t(27989);
+t.d(
+    a,
     {},
     {
-        Q: function (e) {
+        ChatMarkUnreadIcon: function (s) {
             let {
-                    size: t = "md",
-                    width: s,
-                    height: a,
-                    color: E = n.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: d = "",
-                    ...m
-                } = e,
-                u = (0, r.J)(t),
-                A = u?.width ?? s,
-                c = u?.height ?? a;
-            return (0, i.jsxs)("svg", {
-                ...(0, l.A)(m),
+                    size: a = "md",
+                    width: t,
+                    height: r,
+                    color: l = h.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: n = "",
+                    ...d
+                } = s,
+                p = (0, e.J)(a),
+                o = p?.width ?? t,
+                w = p?.height ?? r;
+            return (0, c.jsxs)("svg", {
+                ...(0, i.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: A,
-                height: c,
+                width: o,
+                height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [
-                    (0, i.jsx)("path", {
-                        fill: "string" == typeof E ? E : E.css,
+                    (0, c.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
                         d: "M12.93 21.96c.25-.03.43-.23.47-.47a3 3 0 0 1 .08-.35.66.66 0 0 0-.24-.71A3 3 0 0 1 12 18v-3a3 3 0 0 1 4.35-2.68c.14.07.3.09.44.04a7 7 0 0 1 4.58.05c.3.1.63-.1.63-.41a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12c.32 0 .63-.01.93-.04Z",
-                        className: d,
+                        className: n,
                     }),
-                    (0, i.jsx)("path", {
-                        fill: "string" == typeof E ? E : E.css,
+                    (0, c.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
                         d: "M18 17h-1.24a3 3 0 1 1 .26 4.25 1 1 0 1 0-1.33 1.5A4.98 4.98 0 0 0 24 19a5 5 0 0 0-8-4 1 1 0 0 0-2 0v3a1 1 0 0 0 1 1h3a1 1 0 1 0 0-2Z",
-                        className: d,
+                        className: n,
                     }),
                 ],
             });

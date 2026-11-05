@@ -22,8 +22,8 @@ var n = l(477900),
     b = l(362862),
     v = l(672619),
     O = l(923138),
-    T = l(12510),
-    R = l(673125),
+    R = l(12510),
+    T = l(673125),
     y = l(821609),
     N = l(646514),
     S = l(403581),
@@ -96,7 +96,7 @@ function $(e) {
                                     children: X.intl.format(r === L.x.COMPLETED ? K.default.h2qWpS : K.default.B8Fxns, {
                                         orbAmount: s,
                                         orbIconHook: () =>
-                                            (0, n.jsx)(V.C, {
+                                            (0, n.jsx)(V.OrbsIcon, {
                                                 className: q.fN,
                                                 size: "xxs",
                                                 color: N.A.colors.ICON_SUBTLE,
@@ -116,7 +116,11 @@ function $(e) {
                             loading: l,
                             onClick: a,
                         });
-                    return e === L.x.COMPLETED || l ? i : s ? (0, n.jsx)(w._, { size: "sm", "aria-hidden": !0 }) : null;
+                    return e === L.x.COMPLETED || l
+                        ? i
+                        : s
+                          ? (0, n.jsx)(w.ChevronSmallRightIcon, { size: "sm", "aria-hidden": !0 })
+                          : null;
                 })(r, {
                     isHovered: m,
                     isClaiming: E,
@@ -151,7 +155,7 @@ function es(e) {
     return (0, n.jsxs)("div", {
         className: et.SY,
         children: [
-            (0, n.jsx)(S.t, { size: "xs", color: t }),
+            (0, n.jsx)(S.NitroWheelIcon, { size: "xs", color: t }),
             (0, n.jsx)(j.E, { variant: "body-xs/medium", color: "text-subtle", children: l }),
         ],
     });
@@ -200,7 +204,7 @@ function er(e) {
         r = (0, n.jsxs)(n.Fragment, {
             children: [
                 s && (0, n.jsx)(I.A, { children: l }),
-                (0, n.jsx)(S.t, { size: "xxs", color: "white", "aria-hidden": !0 }),
+                (0, n.jsx)(S.NitroWheelIcon, { size: "xxs", color: "white", "aria-hidden": !0 }),
                 (0, n.jsx)(j.E, {
                     variant: "body-xs/semibold",
                     color: "text-overlay-light",
@@ -327,7 +331,7 @@ function eh(e) {
                             text: X.intl.string(X.t.JALI2K),
                             variant: "secondary",
                             size: "md",
-                            icon: { asset: M.r, type: "icon" },
+                            icon: { asset: M.QuestsIcon, type: "icon" },
                             fullWidth: !0,
                             onClick: t,
                         }),
@@ -336,7 +340,7 @@ function eh(e) {
                             text: X.intl.string(X.t.pWG4ze),
                             variant: "secondary",
                             size: "md",
-                            icon: { asset: F.U, type: "icon" },
+                            icon: { asset: F.ShopIcon, type: "icon" },
                             fullWidth: !0,
                             onClick: l,
                         }),
@@ -428,11 +432,11 @@ function ev(e) {
 function eO() {
     (0, eL.mA)({ fromContent: e_.u.ORBS_BALANCE_MENU });
 }
-function eT(e) {
+function eR(e) {
     let { analyticsLocations: t = [] } = e;
     (0, eA.A)({ subscriptionTier: eb.pe.TIER_2, analyticsLocations: t });
 }
-let eR = {
+let eT = {
     "1531422538125676707": (e) => {
         let { analyticsLocations: t } = e;
         ev({ analyticsLocations: t, shopTab: ex.G2.HOME });
@@ -443,7 +447,7 @@ let eR = {
     },
     "1531422538125676709": (e) => {
         let { analyticsLocations: t } = e;
-        eT({ analyticsLocations: t });
+        eR({ analyticsLocations: t });
     },
 };
 var ey = l(49999),
@@ -468,7 +472,7 @@ function eS(e) {
                 ? (0, n.jsx)("div", {
                       className: eN.Fx,
                       children: (0, n.jsx)(em.K, {
-                          icon: eC.P,
+                          icon: eC.XSmallIcon,
                           "aria-label": X.intl.string(X.t.cpT0Cq),
                           variant: "icon-only",
                           size: "sm",
@@ -538,12 +542,12 @@ function eI(e) {
               imageAlt: X.intl.string(K.default.qa1xyr),
               subTextDescription: X.intl.string(K.default.HACucK),
               buttonText: X.intl.string(K.default["7raRgL"]),
-              buttonIcon: { asset: F.U, type: "icon" },
+              buttonIcon: { asset: F.ShopIcon, type: "icon" },
               onCtaClick: h,
               onClose: u,
           });
 }
-let eU = { asset: S.t, type: "icon" };
+let eU = { asset: S.NitroWheelIcon, type: "icon" };
 function eM(e) {
     let { onClose: t, onCloseWallet: s, analyticsPage: i = m.A.ORB_WALLET, forceVisible: r = !1 } = e,
         { analyticsLocations: c } = (0, C.Ay)(m.A.ORB_WALLET_PRIMARY_CARD),
@@ -555,14 +559,14 @@ function eM(e) {
             { analyticsPage: i, forceVisible: r, onClose: t, onCloseWallet: s },
             {
                 ctaClickHandler: a.useCallback(() => {
-                    eT({ analyticsLocations: c });
+                    eR({ analyticsLocations: c });
                 }, [c]),
                 dismissibleContent: ed.M.ORB_WALLET_NITRO_UPSELL_CTA_CARD,
                 ctaObject: m.A.ORB_WALLET_PRIMARY_CARD_NITRO_UPSELL_CTA,
             },
         ),
-        { nitroGatedOrbMultiplier: E } = (0, o.cf)([R.Ay], () => ({
-            nitroGatedOrbMultiplier: R.Ay.nitroGatedOrbMultiplier,
+        { nitroGatedOrbMultiplier: E } = (0, o.cf)([T.Ay], () => ({
+            nitroGatedOrbMultiplier: T.Ay.nitroGatedOrbMultiplier,
         })),
         _ = a.useMemo(() => X.intl.format(K.default["Ba/7wO"], { multiplier: E }), [E]);
     return null == E || h
@@ -698,9 +702,9 @@ function eY(e) {
         { challengesForOrbWallet: r, hasFetchedChallenges: c, refetch: h } = (0, O.z)({ shouldFetch: !0 }),
         d = (0, E.L)(eb.PremiumTypes.TIER_2),
         C = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
-        { nitroGatedOrbMultiplier: _, orbChallengesDisplayError: g } = (0, o.cf)([R.Ay], () => ({
-            nitroGatedOrbMultiplier: R.Ay.nitroGatedOrbMultiplier,
-            orbChallengesDisplayError: R.Ay.orbChallengesDisplayError,
+        { nitroGatedOrbMultiplier: _, orbChallengesDisplayError: g } = (0, o.cf)([T.Ay], () => ({
+            nitroGatedOrbMultiplier: T.Ay.nitroGatedOrbMultiplier,
+            orbChallengesDisplayError: T.Ay.orbChallengesDisplayError,
         })),
         f = null != C && !C.isClaimed(),
         p = a.useMemo(
@@ -709,7 +713,7 @@ function eY(e) {
                     ? {
                           type: "warning",
                           message:
-                              g.errorType === R.EB.CLAIM_CHALLENGE
+                              g.errorType === T.EB.CLAIM_CHALLENGE
                                   ? X.intl.string(K.default.FYb5rH)
                                   : X.intl.format(K.default.ggLzeg, {
                                         underlineHook: (e) => (0, n.jsx)(ek, { text: e, onClick: h }),
@@ -740,7 +744,7 @@ function eY(e) {
         b = a.useMemo(
             () =>
                 r.map((e) => {
-                    let l = null != e.achievementDefinitionId ? eR[e.achievementDefinitionId] : null,
+                    let l = null != e.achievementDefinitionId ? eT[e.achievementDefinitionId] : null,
                         n = { analyticsLocations: s },
                         a =
                             null != l
@@ -769,7 +773,7 @@ function eY(e) {
                 };
             });
         }, []),
-        y = a.useCallback((e) => (f ? (v(), Promise.resolve()) : (0, T.Xz)(e)), [f, v]);
+        y = a.useCallback((e) => (f ? (v(), Promise.resolve()) : (0, R.Xz)(e)), [f, v]);
     return (0, n.jsx)(eo, {
         title: X.intl.string(K.default.H6Ny8N),
         isLoading: !c,
@@ -795,7 +799,7 @@ function eK(e) {
         g = (0, E.L)(eb.PremiumTypes.TIER_2),
         { analyticsLocations: A } = (0, C.Ay)(m.A.ORB_WALLET);
     a.useEffect(() => {
-        u && (0, T.eX)();
+        u && (0, R.eX)();
     }, [u]);
     let f = a.useCallback(() => {
             ((0, x.Y)({ pageType: s, sectionType: m.A.ORB_WALLET_FOOTER, ctaObject: m.A.ORB_WALLET_SHOP_CTA }),
@@ -808,9 +812,9 @@ function eK(e) {
                 i("navigation"));
         }, [s, i]),
         y = a.useMemo(() => eD(g, h), [g, h]),
-        { challengesForOrbWallet: N, hasFetchedChallenges: S } = (0, o.cf)([R.Ay], () => ({
-            challengesForOrbWallet: R.Ay.challengesForOrbWallet,
-            hasFetchedChallenges: R.Ay.hasFetchedChallenges,
+        { challengesForOrbWallet: N, hasFetchedChallenges: S } = (0, o.cf)([T.Ay], () => ({
+            challengesForOrbWallet: T.Ay.challengesForOrbWallet,
+            hasFetchedChallenges: T.Ay.hasFetchedChallenges,
         })),
         j = a.useRef(!1);
     a.useEffect(() => {

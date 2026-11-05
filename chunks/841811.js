@@ -27,25 +27,25 @@ n.d(
             let { channelId: t, onClose: n, ...m } = e,
                 v = (0, l.bG)([x.A], () => x.A.getChannel(t)),
                 b = (0, l.bG)([A.A], () => A.A.getGuild(v?.getGuildId())),
-                w = (0, u.Ay)(v),
-                [R, S] = i.useState(""),
+                S = (0, u.Ay)(v),
+                [w, R] = i.useState(""),
                 [k, C] = i.useState({}),
                 [G, T] = i.useState(!1),
                 [H, N] = i.useState(null),
                 O = i.useRef(null),
-                { roles: L, members: M, getRichTag: _ } = (0, h.K)(b, v, p.QY, R),
-                I = g.A.useSections({ roles: L, members: M });
+                { roles: I, members: L, getRichTag: M } = (0, h.K)(b, v, p.QY, w),
+                _ = g.A.useSections({ roles: I, members: L });
             return null == v || null == b
                 ? null
                 : (0, r.jsx)(g.A.Provider, {
                       listRef: O,
-                      query: R,
-                      setQuery: S,
+                      query: w,
+                      setQuery: R,
                       pendingAdditions: k,
                       setPendingAdditions: C,
-                      roles: L,
-                      members: M,
-                      getRichTag: _,
+                      roles: I,
+                      members: L,
+                      getRichTag: M,
                       children: (0, r.jsx)(g.A.Modal, {
                           ...m,
                           title: y.intl.string(y.t.dMJ3Y6),
@@ -57,8 +57,12 @@ n.d(
                                       variant: "body-lg/normal",
                                       color: "text-default",
                                       children: [
-                                          (0, r.jsx)(a.q, { className: E.p, size: "sm", color: "currentColor" }),
-                                          w,
+                                          (0, r.jsx)(a.StageIcon, {
+                                              className: E.p,
+                                              size: "sm",
+                                              color: "currentColor",
+                                          }),
+                                          S,
                                       ],
                                   }),
                                   v.isGuildStageVoice() &&
@@ -89,7 +93,7 @@ n.d(
                               renderSection: g.A.renderSection,
                               rowHeight: g.A.ROW_HEIGHT,
                               renderRow: g.A.renderRow,
-                              sections: I,
+                              sections: _,
                           },
                           actions: [
                               { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: n },

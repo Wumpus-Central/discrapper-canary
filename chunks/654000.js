@@ -5,21 +5,21 @@ var t = l(477900),
     a = l(164636),
     r = l(189213),
     d = l(224640),
-    c = l(289873),
-    o = l(331322),
+    o = l(289873),
+    c = l(331322),
     u = l(821609),
     m = l(778712),
     _ = l(825484),
-    A = l(123292),
-    I = l(700156),
+    I = l(123292),
+    A = l(700156),
     E = l(966327),
     g = l(964486),
     x = l(793574),
     p = l(688810),
     N = l(915089),
     f = l(960736),
-    v = l(999527),
-    h = l(963055),
+    h = l(999527),
+    v = l(963055),
     j = l(398884),
     L = l(327891),
     P = l(71393),
@@ -38,8 +38,8 @@ var t = l(477900),
     q = l(739053),
     z = l(82498),
     G = l(772366),
-    w = l(652215),
-    W = l(682901),
+    W = l(652215),
+    w = l(682901),
     F = l(792996),
     X = l(396554);
 function Z(e) {
@@ -47,26 +47,26 @@ function Z(e) {
         { analyticsLocations: l, sourceAnalyticsLocations: s } = (0, p.Ay)(x.A.PREMIUM_UPSELL_TOOLTIP);
     return (
         n.useEffect(() => {
-            (C.default.track(w.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: W.e.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: w.liQ.NATIVE_INVITE_MODAL },
+            (C.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: w.e.GUILD_CAP_INLINE_INVITE_MODAL,
+                location: { page: W.liQ.NATIVE_INVITE_MODAL },
                 location_stack: s,
             }),
-                (0, q.sq)(w.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, z.uq)(W.e.GUILD_CAP_INLINE_INVITE_MODAL)));
+                (0, q.sq)(W.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, z.uq)(w.e.GUILD_CAP_INLINE_INVITE_MODAL)));
         }, [s]),
         (0, t.jsxs)(O.D, {
             onClick: () =>
                 (0, G.A)({
-                    analyticsSource: { page: w.ThZ.EXTERNAL_INVITE_LINK_MODAL },
+                    analyticsSource: { page: W.ThZ.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
-                        page: w.ThZ.EXTERNAL_INVITE_LINK_MODAL,
-                        section: w.JJy.GUILD_CAP_UPSELL_MODAL,
+                        page: W.ThZ.EXTERNAL_INVITE_LINK_MODAL,
+                        section: W.JJy.GUILD_CAP_UPSELL_MODAL,
                     },
                     analyticsLocations: l,
                 }),
             className: U()(X.fA, i),
             children: [
-                (0, t.jsx)(S.t, { size: "md", className: X.Y2, color: V.k0.PREMIUM_TIER_2 }),
+                (0, t.jsx)(S.NitroWheelIcon, { size: "md", className: X.Y2, color: V.k0.PREMIUM_TIER_2 }),
                 (0, t.jsx)("span", { className: X.Cq, children: F.intl.string(F.t["4/W4Pz"]) }),
                 (0, t.jsx)("span", { className: X.MY, children: F.intl.string(F.t.b6KOkI) }),
             ],
@@ -107,24 +107,24 @@ function K(e) {
             (document.hasFocus() || ((0, M.uF)() ? D.Ay.minimize() : D.Ay.restore(), D.Ay.focus()));
     }, []),
         (0, g.Ay)(() => {
-            let e = O?.state === w.elq.EXPIRED || O?.state === w.elq.BANNED || O?.state === w.elq.ERROR;
-            C.default.track(w.HAw.OPEN_MODAL, {
+            let e = O?.state === W.elq.EXPIRED || O?.state === W.elq.BANNED || O?.state === W.elq.ERROR;
+            C.default.track(W.HAw.OPEN_MODAL, {
                 type: e ? "Invalid Invite" : "Accept Invite",
                 invite_code: O?.code,
                 guild_id: O?.guild?.id,
             });
         }));
     let G = (0, N.GV)(),
-        { analyticsLocations: W } = (0, p.Ay)(x.A.INVITE_MODAL);
+        { analyticsLocations: w } = (0, p.Ay)(x.A.INVITE_MODAL);
     if (null == O || null == U)
         return (0, t.jsx)(d.d, {
             size: "md",
             "aria-labelledby": G,
             transitionState: k,
             onClose: () => (R.A.close(O?.code), Promise.resolve()),
-            children: (0, t.jsx)("div", { className: X.g4, children: (0, t.jsx)(c.y, {}) }),
+            children: (0, t.jsx)("div", { className: X.g4, children: (0, t.jsx)(o.y, {}) }),
         });
-    if (O.state === w.elq.EXPIRED || O.state === w.elq.BANNED || O.state === w.elq.ERROR)
+    if (O.state === W.elq.EXPIRED || O.state === W.elq.BANNED || O.state === W.elq.ERROR)
         return (0, t.jsx)(H, { transitionState: k, inviteCode: O.code });
     if (null == O.channel)
         return (0, t.jsx)(d.d, {
@@ -132,19 +132,19 @@ function K(e) {
             "aria-labelledby": G,
             transitionState: k,
             onClose: () => (R.A.close(O.code), Promise.resolve()),
-            children: (0, t.jsx)("div", { className: X.g4, children: (0, t.jsx)(c.y, {}) }),
+            children: (0, t.jsx)("div", { className: X.g4, children: (0, t.jsx)(o.y, {}) }),
         });
     function K() {
         if (null == O) return;
         let { guild: e } = O;
-        (0, h.qC)({
+        (0, v.qC)({
             guild: e,
             isMember: null != e && null != P.A.getGuild(e.id),
             onConfirm: () => R.A.acceptInvite(O, q),
         }) || R.A.acceptInvite(O, q);
     }
     function Y() {
-        (C.default.track(w.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: O?.code, guild_id: O?.guild?.id }),
+        (C.default.track(W.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: O?.code, guild_id: O?.guild?.id }),
             R.A.close(O?.code));
     }
     let { guild: $, channel: B, inviter: Q, target_application: J } = O,
@@ -162,7 +162,7 @@ function K(e) {
                   usernameHook: () => (0, t.jsx)("span", { className: X.Pb, children: z }),
               })),
         (0, t.jsx)(p.f5, {
-            value: W,
+            value: w,
             children: (0, t.jsx)(d.d, {
                 size: null != l ? "xl" : "sm",
                 "aria-labelledby": G,
@@ -185,16 +185,16 @@ function K(e) {
                                 children: [
                                     (0, t.jsx)("div", {
                                         id: G,
-                                        children: (0, t.jsx)(I.A, { invite: O, disableUser: ei, error: S }),
+                                        children: (0, t.jsx)(A.A, { invite: O, disableUser: ei, error: S }),
                                     }),
                                     (0, t.jsxs)("div", {
                                         children: [
                                             el ? (0, t.jsx)(Z, {}) : null,
-                                            (0, t.jsxs)(o.B, {
+                                            (0, t.jsxs)(c.B, {
                                                 gap: 8,
                                                 align: "center",
                                                 children: [
-                                                    (0, t.jsx)(v.A, { invite: O, location: "AcceptInviteModal" }),
+                                                    (0, t.jsx)(h.A, { invite: O, location: "AcceptInviteModal" }),
                                                     null == J
                                                         ? (0, t.jsx)(u.$, {
                                                               onClick: K,
@@ -231,7 +231,7 @@ function K(e) {
                                                                   }),
                                                               ],
                                                           }),
-                                                    (0, t.jsx)(A.Q, {
+                                                    (0, t.jsx)(I.Q, {
                                                         onClick: Y,
                                                         variant: "secondary",
                                                         text: F.intl.string(F.t.ndsK4Z),

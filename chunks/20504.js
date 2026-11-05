@@ -8,8 +8,8 @@ var a = s(477900),
     u = s(939249),
     d = s(122641),
     c = s(792996),
-    p = s(28680);
-class m extends i.PureComponent {
+    m = s(28680);
+class p extends i.PureComponent {
     _mediaBar = i.createRef();
     _hoverTimeout;
     state = { hovered: !1, focused: !1, dragging: !1 };
@@ -71,34 +71,34 @@ class m extends i.PureComponent {
                 className: s,
                 sliderWrapperClassName: i,
                 sliderClassName: n,
-                currentWindow: m,
+                currentWindow: p,
                 muted: g,
                 minValue: f,
                 maxValue: v,
                 value: y,
                 onVolumeShow: S,
-                onVolumeHide: T,
+                onVolumeHide: C,
             } = this.props,
-            { hovered: C, focused: b, dragging: x } = this.state,
-            M = r.H;
+            { hovered: T, focused: b, dragging: x } = this.state,
+            w = r.VoiceNormalIcon;
         return (
-            g || y === f ? (M = o._) : y < v / 2 && (M = h.S),
+            g || y === f ? (w = o.VoiceXIcon) : y < v / 2 && (w = h.VoiceLowIcon),
             (0, a.jsxs)("div", {
-                className: l()(s, p.kL),
+                className: l()(s, m.kL),
                 onMouseEnter: () => {
                     (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), S?.());
                 },
                 onMouseLeave: () => {
                     (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), T?.());
+                            (this.setState({ hovered: !1 }), C?.());
                         }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, a.jsx)("div", {
-                        className: l()(p.QS, i, { [p.OZ]: C || b || x }),
+                        className: l()(m.QS, i, { [m.OZ]: T || b || x }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -107,26 +107,26 @@ class m extends i.PureComponent {
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150)));
                         },
                         children: (0, a.jsx)(d.A, {
-                            className: p.YZ,
+                            className: m.YZ,
                             sliderClassName: n,
                             type: d.A.Types.VOLUME,
                             value: y / v,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: m,
+                            currentWindow: p,
                             ref: this._mediaBar,
                         }),
                     }),
                     (0, a.jsx)(u.D, {
-                        className: p.bk,
+                        className: m.bk,
                         "aria-label": c.intl.string(c.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, a.jsx)(M, { color: t, className: e }),
+                        children: (0, a.jsx)(w, { color: t, className: e }),
                     }),
                 ],
             })
         );
     }
 }
-s.d(t, {}, { A: m });
+s.d(t, {}, { A: p });

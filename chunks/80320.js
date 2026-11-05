@@ -8,7 +8,7 @@ var r = n(192308),
     o = n(652215);
 function d(e) {
     var t, d, c, u;
-    let { platformType: _, location: E, overrideUrl: A, successRedirect: h } = e;
+    let { platformType: _, location: E, overrideUrl: A, successRedirect: f } = e;
     (_ === o.fg2.LEAGUE_OF_LEGENDS && (_ = o.fg2.RIOT_GAMES), _ === o.fg2.CRUNCHYROLL)
         ? ((t = [E ?? "unknown"]),
           (0, r.mM)(async () => {
@@ -40,12 +40,12 @@ function d(e) {
                     n.e(264236),
                     n.e(990189),
                     n.e(490028),
+                    n.e(830221),
                     n.e(132191),
                     n.e(698965),
                     n.e(621624),
                     n.e(231578),
                     n.e(493014),
-                    n.e(830221),
                     n.e(525989),
                     n.e(336335),
                     n.e(964610),
@@ -92,15 +92,15 @@ function d(e) {
               : a.A.get(_)?.isFederated === !0
                 ? (0, r.mM)(async () => {
                       let { default: e } = await n.e(954839).then(n.bind(n, 343946));
-                      return (t) => (0, i.jsx)(e, { platformType: _, location: E, successRedirect: h, ...t });
+                      return (t) => (0, i.jsx)(e, { platformType: _, location: E, successRedirect: f, ...t });
                   })
                 : null != A
                   ? (0, s.h)({
                         shouldConfirm: !0,
                         href: A,
                         onConfirm: () => {
-                            (0, l.d)(_, { location: E, successRedirect: h }, A);
+                            (0, l.d)(_, { location: E, successRedirect: f }, A);
                         },
                     })
-                  : (0, l.d)(_, { location: E, successRedirect: h });
+                  : (0, l.d)(_, { location: E, successRedirect: f });
 }

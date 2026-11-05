@@ -1,4 +1,4 @@
-(i.d(e, { ru: () => tf, Ay: () => tp }), i(321073));
+(i.d(e, { ru: () => tf, Ay: () => ty }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(284009),
@@ -10,8 +10,8 @@ var n = i(477900),
     d = i(534890),
     A = i(820081),
     f = i(241541),
-    y = i(559647),
-    p = i(866665),
+    p = i(559647),
+    y = i(866665),
     m = i(408278),
     g = i(297152),
     I = i(834730),
@@ -34,7 +34,7 @@ var n = i(477900),
     M = i(20805),
     V = i(583846);
 let j = k.A.Millis.WEEK;
-function w(t) {
+function P(t) {
     let e = (0, D.s)(t),
         i = (0, c.cf)([R.A], () => R.A.getUserAffinitiesMap());
     return l.useMemo(
@@ -49,7 +49,7 @@ function w(t) {
         [e, t, i],
     );
 }
-let P = 30 * k.A.Seconds.MINUTE;
+let w = 30 * k.A.Seconds.MINUTE;
 function K(t, e) {
     let i = e.participants;
     if (0 === i.length) return 0;
@@ -59,7 +59,7 @@ function K(t, e) {
                 return (i?.communicationProbability ?? 0) + 1e-4;
             }),
         ),
-        l = Math.exp(-((U.default.age(e.id) / 1e3 / P) * 0.01)),
+        l = Math.exp(-((U.default.age(e.id) / 1e3 / w) * 0.01)),
         a = e.traits.some((t) => t.type !== u.K.DURATION_SECONDS),
         r = (0, V.I5)(e);
     return n * l * (1 + 0.6 * (a && !r ? 1 : 0));
@@ -100,8 +100,8 @@ function ts(t) {
         h = null != C,
         T = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === g ? (E ? d.ChatIcon : A.B) : h ? f.D : y.SendMessageIcon),
-        (0, n.jsx)(p.m, {
+        (e = "sent" === g ? (E ? d.ChatIcon : A.CheckmarkSmallBoldIcon) : h ? f.GroupPlusIcon : p.SendMessageIcon),
+        (0, n.jsx)(y.m, {
             text: T,
             "aria-label": T,
             children: (0, n.jsx)(m.K, {
@@ -184,11 +184,11 @@ function to(t) {
         [u, d] = l.useState("unsent");
     if (!(null != o && (0, T.A)(o, tn.jUm.JOIN))) return null;
     let f = ta.intl.string(ta.t.OKsSCR);
-    return (0, n.jsx)(p.m, {
+    return (0, n.jsx)(y.m, {
         text: f,
         "aria-label": f,
         children: (0, n.jsx)(m.K, {
-            icon: "sent" === u ? A.B : g.E,
+            icon: "sent" === u ? A.CheckmarkSmallBoldIcon : g.HandRequestSpeakIcon,
             "aria-label": f,
             loading: "sending" === u,
             onClick: async function (t) {
@@ -334,7 +334,7 @@ function td(t) {
 }
 function tA(t) {
     let { gamingId: e, maxUserShowCount: i, userAffinityThresholdV2: n = 0.0029 } = t,
-        a = w(e);
+        a = P(e);
     (0, h.Ay)(() => {
         (0, H.u)();
     });
@@ -419,7 +419,7 @@ function tf(t) {
     let e = tA(t);
     return (0, n.jsx)(td, { ...e, className: t.className, variant: t.variant });
 }
-function ty(t) {
+function tp(t) {
     let { activity: e, currentUser: i, showInviteButton: l = !0 } = t,
         a = (0, ti.JH)(e?.application_id),
         r = (0, v.h)(e?.application_id),
@@ -452,12 +452,12 @@ function ty(t) {
               ],
           });
 }
-function tp(t) {
+function ty(t) {
     let { locked: e } = t,
         i = (0, ti.b4)(),
         l = i?.id,
         a = i?.altId,
-        r = w(l),
+        r = P(l),
         s = (0, c.bG)([W.default], () => W.default.getCurrentUser()),
         o = null != a ? a : l,
         u = (0, ti.xl)(o);
@@ -468,7 +468,7 @@ function tp(t) {
         : (0, n.jsxs)("div", {
               className: tr.kL,
               children: [
-                  (0, n.jsx)(ty, { activity: u, currentUser: s }),
+                  (0, n.jsx)(tp, { activity: u, currentUser: s }),
                   (0, n.jsx)(td, { ...d, className: tr.l_, hideHeader: !0 }),
               ],
           });

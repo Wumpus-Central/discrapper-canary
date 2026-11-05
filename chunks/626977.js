@@ -24,8 +24,8 @@ var A = n(832712),
     C = n(477427),
     E = n(393432),
     x = n(652215),
-    S = n(790782),
-    I = n(355097),
+    I = n(790782),
+    S = n(355097),
     y = n(792996),
     b = n(113528);
 function _(e) {
@@ -41,18 +41,18 @@ function _(e) {
             (0, l.jsx)(u.$, {
                 variant: "secondary",
                 text: y.intl.string(y.t.KyUKhT),
-                icon: h.e,
+                icon: h.UndoIcon,
                 size: "sm",
                 onClick: () => {
                     var e, l, i;
                     ((e = t.guild_id),
                         (l = t.id),
-                        (i = I.vv.UNREADS_ONLY_MENTIONS),
+                        (i = S.vv.UNREADS_ONLY_MENTIONS),
                         A.A.updateChannelOverrideSettings({
                             guildId: e,
                             channelId: l,
                             settings: { flags: (0, E.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            label: C.G_.unreads(i === S.vv.UNREADS_ALL_MESSAGES ? I.e.ALL_MESSAGES : I.e.ONLY_MENTIONS),
                             location: { object: x.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         }),
                         n());
@@ -63,9 +63,9 @@ function _(e) {
 }
 var j = n(228098),
     v = n(157259),
-    N = n(696357),
-    T = n(503698),
-    M = n.n(T),
+    T = n(696357),
+    N = n(503698),
+    M = n.n(N),
     R = n(149468),
     D = n(129230),
     k = n(7909),
@@ -169,7 +169,7 @@ let w = i.memo(function (e) {
             let d = i.useCallback(() => l(""), []);
             return { showUnreadsNotice: n === e.id, clearUnreadsNotice: d };
         })(t),
-        g = (0, N.GH)(t, "channel_chat_notice");
+        g = (0, T.GH)(t, "channel_chat_notice");
     return t.isMediaThread()
         ? null
         : t.isArchivedLockedThread()
@@ -179,7 +179,7 @@ let w = i.memo(function (e) {
             : h
               ? (0, l.jsx)(_, { channel: t, clearUnreadsNotice: m })
               : g.visible
-                ? (0, l.jsx)(N.KT, { channel: t, onDismiss: g.dismiss })
+                ? (0, l.jsx)(T.KT, { channel: t, onDismiss: g.dismiss })
                 : d && u.includes(U.i.OPT_IN_CHANNEL)
                   ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                   : null;

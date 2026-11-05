@@ -13,7 +13,7 @@ r.d(
             return (0, s.jsx)("div", {
                 ref: t,
                 className: i()(a.R, r.className),
-                children: (0, s.jsx)(l.t, { size: "lg", className: a.Q, color: "white" }),
+                children: (0, s.jsx)(l.NitroWheelIcon, { size: "lg", className: a.Q, color: "white" }),
             });
         },
     },

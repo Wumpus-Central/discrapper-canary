@@ -3,21 +3,21 @@ var n = i(477900),
     e = i(582128),
     s = i(192308),
     c = i(772707),
-    r = i(34188),
-    o = i(793574),
+    o = i(34188),
+    r = i(793574),
     l = i(110676),
-    d = i(149256),
-    p = i(758836),
+    p = i(149256),
+    d = i(758836),
     u = i(792996);
 let b = new Date(2026, 8, 11);
 function k(t) {
     let { transitionState: a, onClose: i } = t,
         k = e.useCallback(() => {
-            ((0, s.s7)(), (0, d.I)());
+            ((0, s.s7)(), (0, p.I)());
         }, []),
-        C = e.useCallback(() => {
+        h = e.useCallback(() => {
             ((0, s.s7)(),
-                (0, l.Cz)({ tab: p.G2.HOME, analyticsLocations: [], analyticsSource: o.A.PREMIUM_MARKETING }));
+                (0, l.Cz)({ tab: d.G2.HOME, analyticsLocations: [], analyticsSource: r.A.PREMIUM_MARKETING }));
         }, []);
     return (0, n.jsx)(c.k, {
         graphic: {
@@ -32,7 +32,7 @@ function k(t) {
         transitionState: a,
         actions: [
             { text: u.intl.string(u.t.UvLTEv), variant: "secondary", onClick: k },
-            { text: u.intl.string(u.t.F7Swt9), variant: "primary", icon: r.U, onClick: C },
+            { text: u.intl.string(u.t.F7Swt9), variant: "primary", icon: o.ShopIcon, onClick: h },
         ],
     });
 }

@@ -91,7 +91,7 @@ function _(e) {
         },
         size: "md",
         text: I.intl.string(I.t.NL5ZNS),
-        icon: d.E,
+        icon: d.CircleErrorIcon,
     });
 }
 function v(e) {

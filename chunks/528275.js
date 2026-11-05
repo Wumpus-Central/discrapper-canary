@@ -15,7 +15,7 @@ var l = t(477900),
     x = t(821609),
     f = t(792996),
     A = t(469792);
-function j(e) {
+function C(e) {
     let { displayName: n, description: t, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
     return (0, l.jsxs)("div", {
         className: A.Nr,
@@ -46,7 +46,12 @@ function j(e) {
                                 color: "text-feedback-positive",
                                 children: f.intl.string(f.t["LV+CXH"]),
                             }),
-                            (0, l.jsx)(g.y, { size: "custom", width: 20, height: 20, color: "var(--status-positive)" }),
+                            (0, l.jsx)(g.CircleCheckIcon, {
+                                size: "custom",
+                                width: 20,
+                                height: 20,
+                                color: "var(--status-positive)",
+                            }),
                         ],
                     })
                   : (0, l.jsx)(x.$, {
@@ -59,7 +64,7 @@ function j(e) {
         ],
     });
 }
-var C = t(652215);
+var j = t(652215);
 function v(e) {
     let { connection: n, guildId: t, location: h } = e,
         p = (0, a.bG)([d.A], () => (null != n.application_id ? d.A.getApplication(n.application_id) : null), [
@@ -77,7 +82,7 @@ function v(e) {
         { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: y, fetched: _ } = (0, s.RD)(p),
         N = (0, l.jsx)(u.A, { game: p, size: u.M.MEDIUM }),
         E = i.useCallback(() => {
-            (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
+            (m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(t),
                 connection_type: "application",
                 application_id: n.application_id ?? void 0,
@@ -85,7 +90,7 @@ function v(e) {
             }),
                 y({ analyticsLocations: g }));
         }, [y, t, n.application_id, h, g]);
-    return (0, l.jsx)(j, {
+    return (0, l.jsx)(C, {
         displayName: x,
         description: n.description,
         icon: N,
@@ -109,9 +114,9 @@ function I(e) {
                 ? n.description
                 : (function (e) {
                       switch (e) {
-                          case C.fg2.TWITCH:
+                          case j.fg2.TWITCH:
                               return f.intl.string(f.t["D/wRWb"]);
-                          case C.fg2.YOUTUBE:
+                          case j.fg2.YOUTUBE:
                               return f.intl.string(f.t.TC0upt);
                           default:
                               return;
@@ -143,7 +148,7 @@ function I(e) {
             };
         })(n.provider_id),
         g = i.useCallback(async () => {
-            (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
+            (m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(t),
                 connection_type: "provider",
                 provider_id: n.provider_id ?? void 0,
@@ -159,7 +164,7 @@ function I(e) {
             }
             return (0, l.jsx)(_.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
         }, [n.provider_id, o, s]);
-    return (0, l.jsx)(j, {
+    return (0, l.jsx)(C, {
         displayName: s,
         description: c,
         icon: x,

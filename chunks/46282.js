@@ -9,8 +9,8 @@ var n = i(477900),
     d = i(474834),
     A = i(929921),
     f = i(734057),
-    y = i(71393),
-    p = i(754712),
+    p = i(71393),
+    y = i(754712),
     m = i(576705),
     g = i(309010),
     I = i(287809),
@@ -24,15 +24,15 @@ async function S(t) {
         canGoLive: u,
         canStream: c,
         analyticsLocations: f,
-        allowOneClickGoLive: y,
-        onBeforeShowModal: p,
+        allowOneClickGoLive: p,
+        onBeforeShowModal: y,
         onModalStreamStart: m,
         onOneClickGoLive: g,
         appContext: I,
         selectSource: S = !1,
     } = t;
     if (u && c) {
-        if (y && null !== l) {
+        if (p && null !== l) {
             let t = A.A.getState().preset;
             if (t === E.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, o.eO)({ location: "overlay _goLive" });
@@ -43,7 +43,7 @@ async function S(t) {
         }
         if (null == a)
             return void (0, r.P0)({ text: _.intl.string(_.t.OKnWyb), variant: "critical", surface: "overlay" });
-        (p?.(),
+        (y?.(),
             (0, s.mM)(
                 async () => {
                     let { default: t } = await Promise.all([
@@ -53,9 +53,9 @@ async function S(t) {
                         i.e(130662),
                         i.e(498552),
                         i.e(858337),
+                        i.e(944801),
                         i.e(236946),
                         i.e(338601),
-                        i.e(944801),
                         i.e(944727),
                         i.e(943371),
                         i.e(725241),
@@ -91,8 +91,8 @@ i.d(
                 d = g.Ay.getVoiceChannelId(),
                 A = f.A.getChannel(d),
                 E = I.default.getCurrentUser(),
-                _ = null != A && (0, u.vz)(A, y.A, m.A),
-                N = (0, c.A)(p.Ay);
+                _ = null != A && (0, u.vz)(A, p.A, m.A),
+                N = (0, c.A)(y.Ay);
             await S({
                 pid: e,
                 voiceChannelId: d,
@@ -113,8 +113,8 @@ i.d(
                 o = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
                 d = (0, a.bG)([f.A], () => f.A.getChannel(o), [o]),
                 A = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
-                E = (0, a.bG)([p.Ay], () => (0, c.A)(p.Ay)),
-                _ = (0, a.bG)([y.A, m.A], () => null != d && (0, u.vz)(d, y.A, m.A));
+                E = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
+                _ = (0, a.bG)([p.A, m.A], () => null != d && (0, u.vz)(d, p.A, m.A));
             return l.useCallback(async () => {
                 await S({
                     pid: e,

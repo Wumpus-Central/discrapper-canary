@@ -23,7 +23,7 @@ function x(e) {
 function N(e) {
     return p.A.getDMFromUserId(e.otherUserId);
 }
-function _() {
+function I() {
     let e = (function () {
         let e,
             t,
@@ -106,10 +106,10 @@ let S = i.memo(function () {
         (n.current || !e) && ((n.current = !1), (0, o.CU)(o.E9));
     }, [e, t]),
     t)
-        ? (0, l.jsx)(_, {})
+        ? (0, l.jsx)(I, {})
         : null;
 });
-var I = n(225123),
+var _ = n(225123),
     b = n(181079),
     j = n(146092),
     v = n(834730),
@@ -141,14 +141,14 @@ function V() {
             (0, l.jsxs)("div", {
                 className: P._f,
                 children: [
-                    (0, l.jsx)(G.N, { size: "xs", color: y.A.colors.ICON_MUTED }),
+                    (0, l.jsx)(G.TextIcon, { size: "xs", color: y.A.colors.ICON_MUTED }),
                     (0, l.jsx)("div", { className: P.D_ }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 className: P._f,
                 children: [
-                    (0, l.jsx)(R.H, { size: "xs", color: y.A.colors.ICON_MUTED }),
+                    (0, l.jsx)(R.VoiceNormalIcon, { size: "xs", color: y.A.colors.ICON_MUTED }),
                     (0, l.jsx)("div", { className: P.VG }),
                 ],
             }),
@@ -217,7 +217,7 @@ function Q(e) {
                                           onClick: i,
                                           role: "button",
                                           "aria-label": O.intl.string(D.default.F3dWTe),
-                                          children: (0, l.jsx)(F.P, {
+                                          children: (0, l.jsx)(F.XSmallIcon, {
                                               size: "xs",
                                               color: "currentColor",
                                               className: Z.CB,
@@ -275,7 +275,7 @@ function et(e) {
         { guildChannels: o, shouldShowEmptyState: c, hasNoChannels: u } = (0, a.D)(),
         { density: h } = (0, s.wR)();
     return (
-        (t = (0, d.bG)([I.A], () => I.A.isConnected())),
+        (t = (0, d.bG)([_.A], () => _.A.isConnected())),
         (n = (0, d.bG)([b.A], () => b.A.pruneInactiveThreads)),
         i.useEffect(() => {
             t &&

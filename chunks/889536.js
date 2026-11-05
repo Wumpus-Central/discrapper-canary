@@ -187,7 +187,7 @@ let ta = a.memo(function (t) {
                               gap: 4,
                               align: "center",
                               children: [
-                                  (0, i.jsx)(Q.n, { size: "xs", color: K.A.colors.ICON_SUBTLE }),
+                                  (0, i.jsx)(Q.GroupIcon, { size: "xs", color: K.A.colors.ICON_SUBTLE }),
                                   (0, i.jsx)(o.E, {
                                       variant: "body-xs/normal",
                                       color: "text-subtle",

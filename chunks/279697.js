@@ -13,8 +13,8 @@ var n = i(772707),
     _ = i(652215);
 i(349828);
 var f = i(682901),
-    v = i(708526),
-    h = i(792996),
+    h = i(708526),
+    v = i(792996),
     k = i(988572);
 function A(t) {
     let { onClose: e, limit: i = 3, ...A } = t,
@@ -32,21 +32,21 @@ function A(t) {
         onClose: e,
         gradientColor: "nitro-pink",
         badge: { type: "beta", variant: "expressive" },
-        title: h.intl.string(v.default.hINqUs),
-        subtitle: h.intl.format(v.default.D7S0Zo, { count: i, maxCount: 200 }),
+        title: v.intl.string(h.default.hINqUs),
+        subtitle: v.intl.format(h.default.D7S0Zo, { count: i, maxCount: 200 }),
         graphic: { src: k.A, type: "image", aspectRatio: "16/9" },
         actions: [
             {
-                text: h.intl.string(v.default.PprSsy),
+                text: v.intl.string(h.default.PprSsy),
                 variant: "secondary",
                 onClick: () => {
                     (e(), (0, l.mv)("upsell_modal"), (0, c.uh)(_.YYv));
                 },
             },
             {
-                text: h.intl.string(h.t.pj0XBN),
+                text: v.intl.string(v.t.pj0XBN),
                 variant: "expressive",
-                icon: s.t,
+                icon: s.NitroWheelIcon,
                 onClick: () => {
                     (e(), (0, o.A)({ subscriptionTier: f.pe.TIER_2, analyticsLocations: E }));
                 },

@@ -1,48 +1,48 @@
-n.d(t, { A: () => ej });
-var l = n(477900),
-    i = n(582128),
-    r = n(503698),
-    a = n.n(r),
-    s = n(120692),
-    o = n(855986),
-    u = n(451988),
-    c = n(192308),
-    d = n(245604),
-    f = n(834730),
-    A = n(939249),
-    S = n(140735),
-    h = n(717421),
-    T = n(847374),
-    m = n(775602),
-    g = n(51183),
-    x = n(793574),
-    E = n(688810),
-    R = n(915089),
-    p = n(410540),
-    y = n(7584),
-    C = n(208971),
-    j = n(46653),
-    v = n(562153),
-    P = n(183555),
-    N = n(679492),
-    b = n(453903),
-    I = n(265872),
-    L = n(403777),
-    _ = n(462887),
-    U = n(920134),
-    M = n(413599),
-    O = n(403362),
-    V = n(427262),
-    k = n(448613),
-    w = n(866665),
-    $ = n(460905),
-    F = n(110384),
-    Y = n(365199),
-    D = n(101555),
-    G = n(570287),
-    H = n(518477),
-    B = n(792996),
-    Q = n(47119);
+t.d(n, { A: () => ej });
+var l = t(477900),
+    i = t(582128),
+    r = t(503698),
+    a = t.n(r),
+    s = t(120692),
+    o = t(855986),
+    u = t(451988),
+    c = t(192308),
+    d = t(245604),
+    f = t(834730),
+    A = t(939249),
+    S = t(140735),
+    h = t(717421),
+    T = t(847374),
+    m = t(775602),
+    g = t(51183),
+    x = t(793574),
+    E = t(688810),
+    R = t(915089),
+    p = t(410540),
+    C = t(7584),
+    y = t(208971),
+    j = t(46653),
+    v = t(562153),
+    P = t(183555),
+    N = t(679492),
+    I = t(453903),
+    b = t(265872),
+    L = t(403777),
+    _ = t(462887),
+    U = t(920134),
+    M = t(413599),
+    O = t(403362),
+    V = t(427262),
+    k = t(448613),
+    w = t(866665),
+    $ = t(460905),
+    D = t(110384),
+    F = t(365199),
+    Y = t(101555),
+    G = t(570287),
+    H = t(518477),
+    B = t(792996),
+    Q = t(47119);
 let z = {
         [H.dS.AVATAR]: () => B.intl.string(B.t["fEUP/i"]),
         [H.dS.STATUS]: () => B.intl.string(B.t.TKdBC8),
@@ -55,8 +55,8 @@ let z = {
     };
 function q(e) {
     let {
-            user: t,
-            sourceType: n,
+            user: n,
+            sourceType: t,
             isVisible: r,
             isExpandable: s,
             interactionSourceId: u,
@@ -65,18 +65,18 @@ function q(e) {
             renderMoreButtonPopout: f,
         } = e,
         A = i.useRef(null),
-        S = (0, o.bG)([j.default], () => j.default.getId() === t.id),
-        h = (0, G.A)(t.id),
+        S = (0, o.bG)([j.default], () => j.default.getId() === n.id),
+        h = (0, G.A)(n.id),
         { onInteraction: T, onInteractionPopoutTargetRefChange: m } = (0, N.Pq)();
-    return t.bot || S || !h
+    return n.bot || S || !h
         ? null
-        : (0, l.jsxs)(D.Ay, {
+        : (0, l.jsxs)(Y.Ay, {
               className: a()(Q.oO, {
                   [Q.RK]: r,
                   [Q.lu]: s,
-                  [Q.U7]: n === H.dS.STATUS,
-                  [Q.nL]: n === H.dS.AVATAR,
-                  [Q.bt]: n === H.dS.ACTIVITY,
+                  [Q.U7]: t === H.dS.STATUS,
+                  [Q.nL]: t === H.dS.AVATAR,
+                  [Q.bt]: t === H.dS.ACTIVITY,
               }),
               children: [
                   (0, l.jsx)(w.m, {
@@ -85,20 +85,20 @@ function q(e) {
                       shouldShow: r,
                       delay: 0,
                       ariaHidden: !0,
-                      children: (0, l.jsx)(D.$n, {
+                      children: (0, l.jsx)(Y.$n, {
                           onClick: function () {
                               (m(c),
-                                  n === H.dS.AVATAR
+                                  t === H.dS.AVATAR
                                       ? d({ action: "PRESS_REACT_AVATAR" })
-                                      : n === H.dS.STATUS
+                                      : t === H.dS.STATUS
                                         ? d({ action: "PRESS_REACT_CUSTOM_STATUS" })
                                         : d({ action: "PRESS_REACT_ACTIVITY" }),
-                                  T?.({ interactionType: H.AQ.REACT, interactionSource: n, interactionSourceId: u }));
+                                  T?.({ interactionType: H.AQ.REACT, interactionSource: t, interactionSourceId: u }));
                           },
                           className: Q.x6,
-                          "aria-label": z[n](),
+                          "aria-label": z[t](),
                           "aria-haspopup": "dialog",
-                          children: (0, l.jsx)($.n, { size: "xs", className: Q.Kk }),
+                          children: (0, l.jsx)($.ReactionIcon, { size: "xs", className: Q.Kk }),
                       }),
                   }),
                   (0, l.jsx)(w.m, {
@@ -107,20 +107,20 @@ function q(e) {
                       shouldShow: r,
                       delay: 0,
                       ariaHidden: !0,
-                      children: (0, l.jsx)(D.$n, {
+                      children: (0, l.jsx)(Y.$n, {
                           onClick: function () {
                               (m(c),
-                                  n === H.dS.AVATAR
+                                  t === H.dS.AVATAR
                                       ? d({ action: "PRESS_REPLY_AVATAR" })
-                                      : n === H.dS.STATUS
+                                      : t === H.dS.STATUS
                                         ? d({ action: "PRESS_REPLY_CUSTOM_STATUS" })
                                         : d({ action: "PRESS_REPLY_ACTIVITY" }),
-                                  T?.({ interactionType: H.AQ.REPLY, interactionSource: n, interactionSourceId: u }));
+                                  T?.({ interactionType: H.AQ.REPLY, interactionSource: t, interactionSourceId: u }));
                           },
                           className: Q.x6,
-                          "aria-label": K[n](),
+                          "aria-label": K[t](),
                           "aria-haspopup": "dialog",
-                          children: (0, l.jsx)(F.W, { size: "xs", className: Q.Kk }),
+                          children: (0, l.jsx)(D.ArrowAngleLeftUpIcon, { size: "xs", className: Q.Kk }),
                       }),
                   }),
                   f?.((e) =>
@@ -130,7 +130,7 @@ function q(e) {
                           shouldShow: r,
                           delay: 0,
                           ariaHidden: !0,
-                          children: (0, l.jsx)(D.$n, {
+                          children: (0, l.jsx)(Y.$n, {
                               ref: A,
                               ...e,
                               onClick: function () {
@@ -138,22 +138,22 @@ function q(e) {
                               },
                               className: Q.x6,
                               "aria-label": B.intl.string(B.t["UKOtz+"]),
-                              children: (0, l.jsx)(Y.MoreHorizontalIcon, { size: "xs", className: Q.Kk }),
+                              children: (0, l.jsx)(F.MoreHorizontalIcon, { size: "xs", className: Q.Kk }),
                           }),
                       }),
                   ),
               ],
           });
 }
-var W = n(939496),
-    X = n(307731),
-    J = n(818348),
-    Z = n(650583),
-    ee = n(954024);
-function et(e) {
+var W = t(939496),
+    X = t(307731),
+    J = t(818348),
+    Z = t(650583),
+    ee = t(954024);
+function en(e) {
     let {
-            user: t,
-            guildId: n,
+            user: n,
+            guildId: t,
             entry: r,
             sourceType: a,
             sourceDetails: s,
@@ -183,10 +183,10 @@ function et(e) {
         }, [d, f]),
         (0, l.jsx)(U.A, {
             headerClassName: T ? ee.X : void 0,
-            guildId: n ?? void 0,
+            guildId: t ?? void 0,
             closePopout: J.tE,
             onSelectEmoji: async (e) => {
-                let { emoji: n, willClose: l } = e;
+                let { emoji: t, willClose: l } = e;
                 (await (async function (e) {
                     if (null == e) return;
                     a === H.dS.AVATAR
@@ -194,12 +194,12 @@ function et(e) {
                         : a === H.dS.STATUS
                           ? c({ action: "SEND_REACT_CUSTOM_STATUS" })
                           : c({ action: "SEND_REACT_ACTIVITY" });
-                    let n = (function (e) {
-                        let { emoji: t, username: n, sourceType: l, sourceDetails: i } = e,
-                            r = `:${t.name}:`;
+                    let t = (function (e) {
+                        let { emoji: n, username: t, sourceType: l, sourceDetails: i } = e,
+                            r = `:${n.name}:`;
                         switch (l) {
                             case H.dS.ACTIVITY:
-                                let a = B.intl.formatToPlainString(B.t.EUFEJt, { username: n }),
+                                let a = B.intl.formatToPlainString(B.t.EUFEJt, { username: t }),
                                     s = `
 > ${i}`;
                                 return null != i
@@ -208,11 +208,11 @@ ${r}`
                                     : `> -# *${a}*
 ${r}`;
                             case H.dS.AVATAR:
-                                let o = B.intl.formatToPlainString(B.t.E6H15q, { username: n });
+                                let o = B.intl.formatToPlainString(B.t.E6H15q, { username: t });
                                 return `> -# *${o}*
 ${r}`;
                             case H.dS.STATUS:
-                                let u = B.intl.formatToPlainString(B.t.XPQgL2, { username: n }),
+                                let u = B.intl.formatToPlainString(B.t.XPQgL2, { username: t }),
                                     c = `
 > ${i}`;
                                 return null != i
@@ -223,12 +223,12 @@ ${r}`;
                             default:
                                 (0, O.xb)(l);
                         }
-                    })({ emoji: e, username: V.Ay.getName(t), sourceType: a, sourceDetails: s });
+                    })({ emoji: e, username: V.Ay.getName(n), sourceType: a, sourceDetails: s });
                     A(null);
                     try {
                         await (0, k.p)({
-                            userId: t.id,
-                            content: n,
+                            userId: n.id,
+                            content: t,
                             location: "UserProfileReactPopout",
                             openChannel: !1,
                             whenReady: !1,
@@ -236,25 +236,25 @@ ${r}`;
                         });
                     } catch (e) {}
                     A(H.AQ.REACT);
-                })(n),
+                })(t),
                     l && (f(), d?.()));
             },
             pickerIntention: X.EmojiIntention.PROFILE,
         })
     );
 }
-var en = n(478437),
-    el = n(305866),
-    ei = n(355622),
-    er = n(408018),
-    ea = n(989161),
-    es = n(95701),
-    eo = n(767523);
-let eu = (0, es.createChannelRecord)({ id: "1", type: en.r.DM });
+var et = t(478437),
+    el = t(305866),
+    ei = t(355622),
+    er = t(408018),
+    ea = t(989161),
+    es = t(95701),
+    eo = t(767523);
+let eu = (0, es.createChannelRecord)({ id: "1", type: et.r.DM });
 function ec(e) {
     let {
-            user: t,
-            guildId: n,
+            user: n,
+            guildId: t,
             channelId: r,
             sourceType: s,
             sourceDetails: o,
@@ -270,7 +270,7 @@ function ec(e) {
         [x, E] = i.useState((0, er.x7)(m)),
         R = i.useRef(!1),
         p = i.useRef(null),
-        y = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 e.key === Z.dh.ESCAPE && (e.stopPropagation(), S());
             },
@@ -279,12 +279,12 @@ function ec(e) {
     i.useEffect(() => {
         u?.(p?.current);
     }, [p, u]);
-    let C = { [eo.h5]: s === H.dS.STATUS, [eo.my]: s === H.dS.AVATAR, [eo.Eb]: s === H.dS.ACTIVITY };
+    let y = { [eo.h5]: s === H.dS.STATUS, [eo.my]: s === H.dS.AVATAR, [eo.Eb]: s === H.dS.ACTIVITY };
     return (0, l.jsx)(el.l, {
         ref: p,
-        onKeyDown: y,
+        onKeyDown: C,
         children: (0, l.jsx)("div", {
-            className: a()(eo.kL, C, { [eo.GE]: null != T }),
+            className: a()(eo.kL, y, { [eo.GE]: null != T }),
             children: (0, l.jsx)(ea.Ay, {
                 parentModalKey: c,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -305,21 +305,21 @@ function ec(e) {
                                 (0, O.xb)(e);
                         }
                     })(s),
-                    { username: v.Ay.getName(n, r, t) },
+                    { username: v.Ay.getName(t, r, n) },
                 ),
                 channel: eu,
                 textValue: m,
                 richValue: x,
-                onChange: (e, t, n) => {
-                    t !== m && (g(t), E(n));
+                onChange: (e, n, t) => {
+                    n !== m && (g(n), E(t));
                 },
                 focused: R.current,
                 onFocus: () => {
                     R.current = !0;
                 },
                 onSubmit: async (e) => {
-                    let { value: n } = e,
-                        l = n.trim();
+                    let { value: t } = e,
+                        l = t.trim();
                     if (0 === l.length) return { shouldClear: !1, shouldRefocus: !1 };
                     try {
                         return (
@@ -330,40 +330,40 @@ function ec(e) {
                                     : s === H.dS.STATUS
                                       ? d({ action: "SEND_REPLY_CUSTOM_STATUS" })
                                       : d({ action: "SEND_REPLY_ACTIVITY" });
-                                let n = (function (e) {
-                                    let { input: t, username: n, sourceType: l, sourceDetails: i } = e;
+                                let t = (function (e) {
+                                    let { input: n, username: t, sourceType: l, sourceDetails: i } = e;
                                     switch (l) {
                                         case H.dS.ACTIVITY:
-                                            let r = B.intl.formatToPlainString(B.t.WmvMCo, { username: n }),
+                                            let r = B.intl.formatToPlainString(B.t.WmvMCo, { username: t }),
                                                 a = `
 > ${i}`;
                                             return null != i
                                                 ? `> -# *${r}*${a}
-${t}`
+${n}`
                                                 : `> -# *${r}*
-${t}`;
+${n}`;
                                         case H.dS.AVATAR:
-                                            let s = B.intl.formatToPlainString(B.t.lpaBsB, { username: n });
+                                            let s = B.intl.formatToPlainString(B.t.lpaBsB, { username: t });
                                             return `> -# *${s}*
-${t}`;
+${n}`;
                                         case H.dS.STATUS:
-                                            let o = B.intl.formatToPlainString(B.t.lFXgFV, { username: n }),
+                                            let o = B.intl.formatToPlainString(B.t.lFXgFV, { username: t }),
                                                 u = `
 > ${i}`;
                                             return null != i
                                                 ? `> -# *${o}*${u}
-${t}`
+${n}`
                                                 : `> -# *${o}*
-${t}`;
+${n}`;
                                         default:
                                             (0, O.xb)(l);
                                     }
-                                })({ input: e, username: V.Ay.getName(t), sourceType: s, sourceDetails: o });
+                                })({ input: e, username: V.Ay.getName(n), sourceType: s, sourceDetails: o });
                                 h(null);
                                 try {
                                     await (0, k.p)({
-                                        userId: t.id,
-                                        content: n,
+                                        userId: n.id,
+                                        content: t,
                                         location: "UserProfileReplyPopout",
                                         openChannel: !1,
                                         whenReady: !1,
@@ -384,9 +384,9 @@ ${t}`;
         }),
     });
 }
-var ed = n(996988);
+var ed = t(996988);
 function ef(e) {
-    let { user: t, guildId: n, channelId: i, themeType: r, onClose: a, children: s, ...o } = e,
+    let { user: n, guildId: t, channelId: i, themeType: r, onClose: a, children: s, ...o } = e,
         {
             interactionType: u,
             interactionSource: c,
@@ -394,19 +394,19 @@ function ef(e) {
             interactionSourceId: f,
             interactionPopoutTargetRef: A,
         } = (0, N.Pq)(),
-        S = [ed.d.MODAL, ed.d.MODAL_V2].includes(r) ? (0, L.n1)(t.id, n) : void 0,
+        S = [ed.d.MODAL, ed.d.MODAL_V2].includes(r) ? (0, L.n1)(n.id, t) : void 0,
         h = c === o.sourceType && u === H.AQ.REACT,
         T = c === o.sourceType && u === H.AQ.REPLY,
         m = (h || T) && f === o.sourceId;
-    return (0, l.jsx)(b.NA.Provider, {
+    return (0, l.jsx)(I.NA.Provider, {
         value: null,
-        children: (0, l.jsx)(I.Y, {
+        children: (0, l.jsx)(b.Y, {
             targetElementRef: A ?? void 0,
             renderPopout: (e) => {
                 let { setPopoutRef: s } = e;
-                return (0, l.jsx)(h ? et : ec, {
-                    user: t,
-                    guildId: n,
+                return (0, l.jsx)(h ? en : ec, {
+                    user: n,
+                    guildId: t,
                     channelId: i,
                     themeType: r,
                     onClose: a,
@@ -420,10 +420,10 @@ function ef(e) {
             },
             shouldShow: m,
             ...(function (e) {
-                let { interactionType: t, interactionSource: n, themeType: l } = e;
-                return t === H.AQ.REACT
+                let { interactionType: n, interactionSource: t, themeType: l } = e;
+                return n === H.AQ.REACT
                     ? { position: "left", align: "top", animationPosition: "right", spacing: 8 }
-                    : l === ed.d.MODAL || l === ed.d.MODAL_V2 || n === H.dS.ACTIVITY
+                    : l === ed.d.MODAL || l === ed.d.MODAL_V2 || t === H.dS.ACTIVITY
                       ? { position: "bottom", align: "center", animationPosition: "top", spacing: 6 }
                       : { position: "bottom", align: "left", animationPosition: "top", spacing: 6 };
             })({ interactionType: u, interactionSource: c, themeType: r }),
@@ -431,19 +431,19 @@ function ef(e) {
         }),
     });
 }
-var eA = n(22231),
-    eS = n(241326),
-    eh = n(253932),
-    eT = n(33969),
-    em = n(777357);
+var eA = t(22231),
+    eS = t(241326),
+    eh = t(253932),
+    eT = t(33969),
+    em = t(777357);
 function eg(e) {
-    let { isVisible: t, isExpandable: r, onCloseProfile: s, editButtonRef: o } = e,
+    let { isVisible: n, isExpandable: r, onCloseProfile: s, editButtonRef: o } = e,
         { analyticsLocations: u } = (0, E.Ay)(),
         { trackUserProfileAction: d } = (0, P.NJ)(),
         f = i.useRef(null),
         { themeType: A } = (0, W.E)();
     return (0, l.jsxs)(eT.A, {
-        className: a()(em.oO, { [em.RK]: t, [em.lu]: r }),
+        className: a()(em.oO, { [em.RK]: n, [em.lu]: r }),
         children: [
             (0, l.jsx)(eT.Y, {
                 variant: "custom-status",
@@ -453,29 +453,29 @@ function eg(e) {
                 onClick: function () {
                     (d({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
                         (function (e) {
-                            let { analyticsLocations: t, stackingBehavior: i, returnRef: r } = e;
+                            let { analyticsLocations: n, stackingBehavior: i, returnRef: r } = e;
                             (0, c.mM)(
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e(775417),
-                                        n.e(865429),
-                                        n.e(25300),
-                                        n.e(291103),
-                                        n.e(686889),
-                                        n.e(875762),
-                                        n.e(526807),
-                                        n.e(826240),
-                                        n.e(455924),
-                                        n.e(250478),
-                                        n.e(993610),
-                                        n.e(356296),
-                                        n.e(220287),
-                                        n.e(428367),
-                                        n.e(655552),
-                                        n.e(772163),
-                                        n.e(748370),
-                                    ]).then(n.bind(n, 431273));
-                                    return (n) => (0, l.jsx)(e, { ...n, sourceAnalyticsLocations: t, returnRef: r });
+                                        t.e(775417),
+                                        t.e(865429),
+                                        t.e(25300),
+                                        t.e(291103),
+                                        t.e(686889),
+                                        t.e(875762),
+                                        t.e(526807),
+                                        t.e(826240),
+                                        t.e(455924),
+                                        t.e(250478),
+                                        t.e(993610),
+                                        t.e(356296),
+                                        t.e(220287),
+                                        t.e(428367),
+                                        t.e(655552),
+                                        t.e(772163),
+                                        t.e(748370),
+                                    ]).then(t.bind(t, 431273));
+                                    return (t) => (0, l.jsx)(e, { ...t, sourceAnalyticsLocations: n, returnRef: r });
                                 },
                                 null != i ? { stackingBehavior: i } : void 0,
                             );
@@ -506,19 +506,19 @@ function eg(e) {
         ],
     });
 }
-var ex = n(502622);
+var ex = t(502622);
 function eE(e) {
-    let { children: t, className: n } = e;
+    let { children: n, className: t } = e;
     return (0, l.jsx)("div", {
-        className: a()(ex.nL, n),
+        className: a()(ex.nL, t),
         children: (0, l.jsx)("div", {
             className: ex.A7,
-            children: (0, l.jsx)("span", { className: ex.vW, children: t }),
+            children: (0, l.jsx)("span", { className: ex.vW, children: n }),
         }),
     });
 }
 function eR(e) {
-    let { onCloseProfile: t, prompt: i, addButtonRef: r, ref: s } = e,
+    let { onCloseProfile: n, prompt: i, addButtonRef: r, ref: s } = e,
         o = (0, R.GV)(),
         { analyticsLocations: u } = (0, E.Ay)(),
         { trackUserProfileAction: h } = (0, P.NJ)(),
@@ -527,7 +527,7 @@ function eR(e) {
         g = (0, l.jsxs)("div", {
             className: ex.Qs,
             children: [
-                (0, l.jsx)(d.U, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
+                (0, l.jsx)(d.CirclePlusIcon, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
                 (0, l.jsx)(f.E, { variant: "body-sm/normal", className: a()(ex.ch, null != i && ex.R9), children: m }),
             ],
         });
@@ -544,30 +544,30 @@ function eR(e) {
                     "aria-describedby": o,
                     onClick: function () {
                         (h({ action: "PRESS_ADD_CUSTOM_STATUS" }),
-                            t?.(),
+                            n?.(),
                             (0, c.mM)(
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e(775417),
-                                        n.e(865429),
-                                        n.e(25300),
-                                        n.e(291103),
-                                        n.e(686889),
-                                        n.e(875762),
-                                        n.e(526807),
-                                        n.e(826240),
-                                        n.e(455924),
-                                        n.e(250478),
-                                        n.e(993610),
-                                        n.e(356296),
-                                        n.e(220287),
-                                        n.e(428367),
-                                        n.e(655552),
-                                        n.e(772163),
-                                        n.e(748370),
-                                    ]).then(n.bind(n, 431273));
-                                    return (t) =>
-                                        (0, l.jsx)(e, { ...t, sourceAnalyticsLocations: u, prompt: i, returnRef: r });
+                                        t.e(775417),
+                                        t.e(865429),
+                                        t.e(25300),
+                                        t.e(291103),
+                                        t.e(686889),
+                                        t.e(875762),
+                                        t.e(526807),
+                                        t.e(826240),
+                                        t.e(455924),
+                                        t.e(250478),
+                                        t.e(993610),
+                                        t.e(356296),
+                                        t.e(220287),
+                                        t.e(428367),
+                                        t.e(655552),
+                                        t.e(772163),
+                                        t.e(748370),
+                                    ]).then(t.bind(t, 431273));
+                                    return (n) =>
+                                        (0, l.jsx)(e, { ...n, sourceAnalyticsLocations: u, prompt: i, returnRef: r });
                                 },
                                 T === ed.d.MODAL_V2 ? { stackingBehavior: "stack" } : void 0,
                             ));
@@ -576,7 +576,7 @@ function eR(e) {
                     children: (0, l.jsxs)("span", {
                         className: a()(ex.vW, ex.vk),
                         children: [
-                            (0, l.jsx)(d.U, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
+                            (0, l.jsx)(d.CirclePlusIcon, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
                             (0, l.jsxs)(S.A, { id: o, children: [B.intl.string(B.t.EVV6uZ), ": ", m] }),
                             (0, l.jsx)(f.E, {
                                 variant: "body-sm/normal",
@@ -593,22 +593,22 @@ function eR(e) {
 }
 function ep(e) {
     let {
-            emoji: t,
-            text: n,
+            emoji: n,
+            text: t,
             statusLabel: r,
             themeType: c,
             animate: d,
             className: x,
             referenceClassName: E,
             renderToolbar: p,
-            onShowToolbar: y,
-            placeholderText: C,
+            onShowToolbar: C,
+            placeholderText: y,
             hasEntered: j = !0,
             ref: v,
         } = e,
-        b = (0, N.NR)(),
-        { trackUserProfileAction: I } = (0, P.NJ)(),
-        L = 1.25 * (null != t),
+        I = (0, N.NR)(),
+        { trackUserProfileAction: b } = (0, P.NJ)(),
+        L = 1.25 * (null != n),
         _ = 36 + L,
         U = 144 + L,
         M = i.useRef(null),
@@ -617,52 +617,52 @@ function ep(e) {
         k = (0, R.GV)(),
         w = i.useRef(_),
         $ = i.useRef(_),
-        F = null != t && null == n,
-        [Y, D] = i.useState(!1),
+        D = null != n && null == t,
+        [F, Y] = i.useState(!1),
         [G, H] = i.useState(!0),
-        [Q, z] = i.useState(!F && j),
+        [Q, z] = i.useState(!D && j),
         [K, q] = i.useState(!1),
-        W = j && Y,
+        W = j && F,
         X = c === ed.d.MODAL || c === ed.d.MODAL_V2,
         J = i.useCallback((e) => (X ? e : Math.min(e, U)), [U, X]),
         Z = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
         [ee] = i.useState(() => new u.Ep());
     (i.useEffect(() => () => ee.stop(), [ee]),
         i.useEffect(() => {
-            b?.onInteractionPopoutTargetRefChange(M);
-        }, [b]));
-    let [et, en] = (0, h.z)(() => ({ maxHeight: `${w.current}px`, config: { clamp: !0, duration: 150 } }));
+            I?.onInteractionPopoutTargetRefChange(M);
+        }, [I]));
+    let [en, et] = (0, h.z)(() => ({ maxHeight: `${w.current}px`, config: { clamp: !0, duration: 150 } }));
     function el(e) {
         Q &&
             (q(e),
             e
-                ? en({ maxHeight: `${J($.current)}px`, delay: 300 * !Z, config: { clamp: !0, duration: 150 * !Z } })
-                : en({ maxHeight: `${Math.min(w.current, _)}px`, delay: 0 }),
+                ? et({ maxHeight: `${J($.current)}px`, delay: 300 * !Z, config: { clamp: !0, duration: 150 * !Z } })
+                : et({ maxHeight: `${Math.min(w.current, _)}px`, delay: 0 }),
             Z ? H(!e) : ee.start(e ? 300 : 150, () => H(!e)));
     }
     i.useLayoutEffect(() => {
-        if ((D(!0), null == O.current || null == V.current || !W)) return;
+        if ((Y(!0), null == O.current || null == V.current || !W)) return;
         let e = O.current.getBoundingClientRect().height,
-            t = V.current.getBoundingClientRect().height,
-            n = J(t);
-        (z(n > e), (w.current = e), ($.current = t), en({ maxHeight: `${G ? Math.min(w.current, _) : n}px` }));
-    }, [W, n, t, en, G, _, J]);
+            n = V.current.getBoundingClientRect().height,
+            t = J(n);
+        (z(t > e), (w.current = e), ($.current = n), et({ maxHeight: `${G ? Math.min(w.current, _) : t}px` }));
+    }, [W, t, n, et, G, _, J]);
     let ei =
-            null != t
-                ? (0, l.jsx)(g.A, { emoji: t, animate: d, hideTooltip: !1, tooltipDelay: 300, className: ex.H0 })
+            null != n
+                ? (0, l.jsx)(g.A, { emoji: n, animate: d, hideTooltip: !1, tooltipDelay: 300, className: ex.H0 })
                 : null,
-        er = null != n ? (0, l.jsx)(f.E, { variant: "body-sm/normal", className: ex.qS, children: n }) : null,
+        er = null != t ? (0, l.jsx)(f.E, { variant: "body-sm/normal", className: ex.qS, children: t }) : null,
         ea =
-            void 0 !== C && null == t
+            void 0 !== y && null == n
                 ? (0, l.jsx)(f.E, {
                       variant: "body-sm/normal",
                       color: "text-muted",
-                      "aria-label": `${B.intl.string(B.t.EVV6uZ)}: ${C}`,
+                      "aria-label": `${B.intl.string(B.t.EVV6uZ)}: ${y}`,
                       className: a()(ex.qS, ex.R9),
-                      children: C ?? "",
+                      children: y ?? "",
                   })
                 : null,
-        es = null == er || "" === n ? ea : er,
+        es = null == er || "" === t ? ea : er,
         eo = (0, l.jsxs)("div", { className: ex.Qs, children: [ei, es] }),
         eu = (0, l.jsxs)("div", { ref: O, className: a()(ex.Qs, ex.mj), children: [ei, es] }),
         ec = (0, l.jsxs)("div", { ref: V, className: a()(ex.Qs, ex.m2, ex.mj), children: [ei, es] }),
@@ -677,7 +677,11 @@ function ep(e) {
                       "aria-expanded": K,
                       onClick: () => el(!K),
                       focusProps: { ringClassName: ex.o5 },
-                      children: (0, l.jsx)(T.a, { size: "xs", color: "currentColor", className: K ? ex.DE : void 0 }),
+                      children: (0, l.jsx)(T.ChevronSmallDownIcon, {
+                          size: "xs",
+                          color: "currentColor",
+                          className: K ? ex.DE : void 0,
+                      }),
                   }),
               })
             : null,
@@ -690,14 +694,14 @@ function ep(e) {
                 className: ex.vW,
                 children: (0, l.jsxs)(s.animated.div, {
                     id: k,
-                    style: et,
+                    style: en,
                     className: a()(ex.Qs, { [ex.m2]: !G && X, [ex.p$]: !G && !X }),
                     children: [ei, es],
                 }),
             }),
         }),
         eh = (0, l.jsxs)(eE, { className: E, children: [eo, eu, ec] });
-    return null == y
+    return null == C
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   eh,
@@ -705,7 +709,7 @@ function ep(e) {
                       ref: M,
                       className: a()(ex.kL, x),
                       onMouseEnter: () => {
-                          (I({ action: "HOVER_CUSTOM_STATUS" }), el(!0));
+                          (b({ action: "HOVER_CUSTOM_STATUS" }), el(!0));
                       },
                       onMouseLeave: () => {
                           el(!1);
@@ -721,50 +725,50 @@ function ep(e) {
                       ref: M,
                       className: a()(ex.kL, x),
                       onFocus: () => {
-                          y(!0);
+                          C(!0);
                       },
                       onBlur: (e) => {
-                          M.current?.contains(e.relatedTarget) || y(!1);
+                          M.current?.contains(e.relatedTarget) || C(!1);
                       },
                       onMouseEnter: () => {
-                          (I({ action: "HOVER_CUSTOM_STATUS" }), y(!0), el(!0));
+                          (b({ action: "HOVER_CUSTOM_STATUS" }), C(!0), el(!0));
                       },
                       onMouseLeave: () => {
-                          (y(!1), el(!1));
+                          (C(!1), el(!1));
                       },
                       children: [eS, p?.(Q), eA],
                   }),
               ],
           });
 }
-function ey(e) {
-    let { emoji: t, text: n, onCloseProfile: r, editButtonRef: s, className: o, ref: u, ...c } = e,
+function eC(e) {
+    let { emoji: n, text: t, onCloseProfile: r, editButtonRef: s, className: o, ref: u, ...c } = e,
         [d, f] = i.useState(!1);
     return (0, l.jsx)(ep, {
         ...c,
         ref: u,
-        emoji: t,
-        text: n,
+        emoji: n,
+        text: t,
         className: a()(ex.LL, o),
         onShowToolbar: f,
         renderToolbar: (e) => (0, l.jsx)(eg, { isVisible: d, isExpandable: e, onCloseProfile: r, editButtonRef: s }),
     });
 }
-function eC(e) {
-    let t,
-        { emoji: n, text: r, user: s, guildId: o, channelId: u, themeType: c, className: d, ...f } = e,
+function ey(e) {
+    let n,
+        { emoji: t, text: r, user: s, guildId: o, channelId: u, themeType: c, className: d, ...f } = e,
         { trackUserProfileAction: A } = (0, P.NJ)(),
         { interactionType: S, interactionSource: h, resetInteraction: T } = (0, N.Pq)(),
         m = h === H.dS.STATUS && S === H.AQ.REACT,
         g = h === H.dS.STATUS && S === H.AQ.REPLY,
         x = m || g,
         E = i.useRef(null),
-        R = i.useRef(n),
+        R = i.useRef(t),
         p = i.useRef(r);
     i.useEffect(() => {
-        h === H.dS.STATUS && ((R.current !== n || p.current !== r) && T(), (R.current = n), (p.current = r));
-    }, [h, T, n, r]);
-    let [C, j] = i.useState(!1),
+        h === H.dS.STATUS && ((R.current !== t || p.current !== r) && T(), (R.current = t), (p.current = r));
+    }, [h, T, t, r]);
+    let [y, j] = i.useState(!1),
         v = i.useCallback(
             (e) => {
                 (e || !x) && j(e);
@@ -777,8 +781,8 @@ function eC(e) {
         channelId: u,
         themeType: c,
         sourceDetails:
-            ((t = null == n ? null : null != n.id ? `\`:${n.name}:\`` : y.Ay.translateSurrogatesToInlineEmoji(n.name)),
-            null == r ? t : null == t ? r : `${t} ${r}`),
+            ((n = null == t ? null : null != t.id ? `\`:${t.name}:\`` : C.Ay.translateSurrogatesToInlineEmoji(t.name)),
+            null == r ? n : null == n ? r : `${n} ${r}`),
         sourceType: H.dS.STATUS,
         onAction: A,
         onClose: () => j(!1),
@@ -786,7 +790,7 @@ function eC(e) {
             (0, l.jsx)(ep, {
                 ...f,
                 ref: E,
-                emoji: n,
+                emoji: t,
                 text: r,
                 themeType: c,
                 className: a()(d, { [ex.zf]: x }),
@@ -796,7 +800,7 @@ function eC(e) {
                         targetRef: E,
                         user: s,
                         sourceType: H.dS.STATUS,
-                        isVisible: C && !x,
+                        isVisible: y && !x,
                         isExpandable: e,
                         onAction: A,
                     }),
@@ -804,7 +808,7 @@ function eC(e) {
     });
 }
 let ej = function (e) {
-    let { ref: t, ...n } = e,
+    let { ref: n, ...t } = e,
         {
             user: r,
             guildId: a,
@@ -816,61 +820,61 @@ let ej = function (e) {
             prompt: A,
             disableToolbar: S = !1,
             ...h
-        } = n,
+        } = t,
         T = (0, p.A)(r.id),
         { analyticsLocations: m } = (0, E.Ay)(x.A.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
         g = i.useRef(null),
         R = null != c || null != d,
-        y = (0, C.G)(R ? c : T?.state),
+        C = (0, y.G)(R ? c : T?.state),
         P = (0, o.bG)([j.default], () => j.default.getId() === r.id),
         N = P && !S,
-        b = v.Ay.useName(a, s, r),
-        I = P ? B.intl.string(B.t.SlKMnR) : B.intl.formatToPlainString(B.t["91lTRe"], { name: b }),
+        I = v.Ay.useName(a, s, r),
+        b = P ? B.intl.string(B.t.SlKMnR) : B.intl.formatToPlainString(B.t["91lTRe"], { name: I }),
         L = !P && !r.bot && !S;
     if (R) {
-        let e = null != y && "" !== y ? y : null;
+        let e = null != C && "" !== C ? C : null;
         return (0, l.jsx)(E.f5, {
             value: m,
-            children: (0, l.jsx)(ep, { emoji: d ?? null, text: e, statusLabel: I, placeholderText: f, ref: t, ...h }),
+            children: (0, l.jsx)(ep, { emoji: d ?? null, text: e, statusLabel: b, placeholderText: f, ref: n, ...h }),
         });
     }
     let _ = T?.emoji ?? null,
-        U = null != y && "" !== y ? y : null;
+        U = null != C && "" !== C ? C : null;
     return null != _ || null != U || N
         ? null == _ && null == U
             ? (0, l.jsx)(E.f5, {
                   value: m,
-                  children: (0, l.jsx)(eR, { onCloseProfile: u, prompt: A, ref: t, addButtonRef: g }),
+                  children: (0, l.jsx)(eR, { onCloseProfile: u, prompt: A, ref: n, addButtonRef: g }),
               })
             : L
               ? (0, l.jsx)(E.f5, {
                     value: m,
-                    children: (0, l.jsx)(eC, {
+                    children: (0, l.jsx)(ey, {
                         user: r,
                         guildId: a,
                         channelId: s,
                         emoji: _,
                         text: U,
-                        statusLabel: I,
+                        statusLabel: b,
                         ...h,
                     }),
                 })
               : N
                 ? (0, l.jsx)(E.f5, {
                       value: m,
-                      children: (0, l.jsx)(ey, {
+                      children: (0, l.jsx)(eC, {
                           emoji: _,
                           text: U,
-                          statusLabel: I,
+                          statusLabel: b,
                           onCloseProfile: u,
                           editButtonRef: g,
-                          ref: t,
+                          ref: n,
                           ...h,
                       }),
                   })
                 : (0, l.jsx)(E.f5, {
                       value: m,
-                      children: (0, l.jsx)(ep, { emoji: _, text: U, statusLabel: I, ref: t, ...h }),
+                      children: (0, l.jsx)(ep, { emoji: _, text: U, statusLabel: b, ref: n, ...h }),
                   })
         : null;
 };

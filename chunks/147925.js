@@ -1,33 +1,38 @@
-var c = s(477900);
-s(582128);
-var e = s(900797),
-    o = s(847374),
-    i = s(921853),
-    a = s(320448),
-    h = s(103335);
-let l = { UP: h.hv, RIGHT: h.kL, DOWN: h.Gb, LEFT: h.PI };
-function n(r) {
+var c = e(477900);
+e(582128);
+var l = e(900797),
+    n = e(847374),
+    t = e(921853),
+    s = e(320448),
+    h = e(103335);
+let a = { UP: h.hv, RIGHT: h.kL, DOWN: h.Gb, LEFT: h.PI };
+function i(o) {
     let {
-            direction: t = l.DOWN,
-            width: s = 24,
+            direction: r = a.DOWN,
+            width: e = 24,
             height: h = 24,
-            color: n = "currentColor",
+            color: i = "currentColor",
             className: u,
-            foreground: p,
-            expanded: d,
-            ...k
-        } = r,
-        C = t;
-    !0 === d ? (C = l.DOWN) : !1 === d && (C = l.RIGHT);
-    let D = { [l.UP]: e.t, [l.DOWN]: o.a, [l.LEFT]: i.n, [l.RIGHT]: a._ }[C];
-    return (0, c.jsx)(D, {
-        ...k,
+            foreground: C,
+            expanded: p,
+            ...I
+        } = o,
+        v = r;
+    !0 === p ? (v = a.DOWN) : !1 === p && (v = a.RIGHT);
+    let d = {
+        [a.UP]: l.ChevronSmallUpIcon,
+        [a.DOWN]: n.ChevronSmallDownIcon,
+        [a.LEFT]: t.ChevronSmallLeftIcon,
+        [a.RIGHT]: s.ChevronSmallRightIcon,
+    }[v];
+    return (0, c.jsx)(d, {
+        ...I,
         className: u,
         size: "custom",
-        width: s,
+        width: e,
         height: h,
-        color: n ?? "currentColor",
-        colorClass: p,
+        color: i ?? "currentColor",
+        colorClass: C,
     });
 }
-((n.Directions = l), s.d(t, {}, { A: n }));
+((i.Directions = a), e.d(r, {}, { A: i }));

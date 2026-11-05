@@ -6,8 +6,8 @@ var r = n(477900),
     a = n(194261),
     c = n(847374),
     d = n(900797),
-    u = n(785007),
-    o = n(866665),
+    o = n(785007),
+    u = n(866665),
     b = n(939249),
     g = n(140735),
     f = n(834730),
@@ -15,13 +15,13 @@ var r = n(477900),
     x = n(743981),
     h = n(792996),
     E = n(803484),
-    A = n(342490),
-    S = n(242868),
+    S = n(342490),
+    A = n(242868),
     p = n(572430),
     O = n(383702);
 function j(t) {
     let { badge: e, isSelected: n, onClick: l } = t,
-        s = (0, u.Gx)({
+        s = (0, o.Gx)({
             isSelected: n,
             label: (function (t) {
                 switch (t) {
@@ -116,22 +116,22 @@ function j(t) {
 }
 function k(t) {
     let { badge: e, locked: n = !1, preview: l = !1, selected: s = !1, onClick: c, radioProps: d } = t,
-        u = i()(O.Uh, { [O.fT]: s, [p.av]: n, [p.WZ]: l }),
+        o = i()(O.Uh, { [O.fT]: s, [p.av]: n, [p.WZ]: l }),
         g = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(E.J, { badge: e.kind, width: x.Sl.SIZE_32, height: x.Sl.SIZE_32, className: p.n2 }),
                 n && !l && (0, r.jsx)("div", { className: p.py, children: (0, r.jsx)(a.LockIcon, { size: "md" }) }),
             ],
         });
-    if (l) return (0, r.jsx)("div", { className: u, children: g });
+    if (l) return (0, r.jsx)("div", { className: o, children: g });
     if (n && null != e.packName && "" !== e.packName) {
-        let t = h.intl.formatToPlainString(S.default.ECl8SQ, { packName: e.packName });
-        return (0, r.jsx)(o.m, {
+        let t = h.intl.formatToPlainString(A.default.ECl8SQ, { packName: e.packName });
+        return (0, r.jsx)(u.m, {
             delay: 100,
             text: t,
             "aria-label": t,
             children: (0, r.jsx)(b.D, {
-                className: u,
+                className: o,
                 onClick: () => {
                     c?.();
                 },
@@ -139,13 +139,13 @@ function k(t) {
             }),
         });
     }
-    return (0, r.jsx)(b.D, { ...d, className: u, onClick: c, children: g });
+    return (0, r.jsx)(b.D, { ...d, className: o, onClick: c, children: g });
 }
 function N(t) {
-    let { badgeCollection: e, handleBoostUpsellClick: n, selectedBadge: s, onBadgeClicked: a, headingId: o } = t,
+    let { badgeCollection: e, handleBoostUpsellClick: n, selectedBadge: s, onBadgeClicked: a, headingId: u } = t,
         [m, x] = l.useState(!1),
         E = l.useId(),
-        N = (0, u._u)({ orientation: "horizontal", isDisabled: !1, labelledBy: o }),
+        N = (0, o._u)({ orientation: "horizontal", isDisabled: !1, labelledBy: u }),
         I = !m && e.lockedBadges.length > 0;
     return (0, r.jsxs)("div", {
         className: p.zr,
@@ -187,9 +187,9 @@ function N(t) {
                                 (0, r.jsx)(f.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-subtle",
-                                    children: h.intl.string(S.default["2tkPDy"]),
+                                    children: h.intl.string(A.default["2tkPDy"]),
                                 }),
-                                (0, r.jsx)(c.a, { size: "sm" }),
+                                (0, r.jsx)(c.ChevronSmallDownIcon, { size: "sm" }),
                             ],
                         }),
                     ],
@@ -205,11 +205,11 @@ function N(t) {
                                         variant: "body-sm/normal",
                                         color: "text-default",
                                         className: p.XY,
-                                        children: h.intl.string(S.default.G3qiHu),
+                                        children: h.intl.string(A.default.G3qiHu),
                                     }),
                                     (0, r.jsx)("div", {
                                         className: p.WM,
-                                        children: (0, r.jsx)(A.u, { onClick: n, size: "sm" }),
+                                        children: (0, r.jsx)(S.u, { onClick: n, size: "sm" }),
                                     }),
                                 ],
                             }),
@@ -220,9 +220,9 @@ function N(t) {
                                 (0, r.jsx)(f.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-subtle",
-                                    children: h.intl.string(S.default.idxnf7),
+                                    children: h.intl.string(A.default.idxnf7),
                                 }),
-                                (0, r.jsx)(d.t, { size: "sm" }),
+                                (0, r.jsx)(d.ChevronSmallUpIcon, { size: "sm" }),
                             ],
                         }),
                     ],

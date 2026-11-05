@@ -11,13 +11,13 @@ var r = n(284009),
     _ = n(688810),
     E = n(384059),
     A = n(267102),
-    h = n(71393),
-    f = n(491009),
+    f = n(71393),
+    h = n(491009),
     I = n(576705),
     p = n(693409),
     m = n(652215),
-    g = n(792996);
-function T(e) {
+    T = n(792996);
+function g(e) {
     let {
         guild: t,
         channel: r,
@@ -37,8 +37,10 @@ function T(e) {
                     n.e(711162),
                     n.e(401425),
                     n.e(919170),
+                    n.e(258398),
                     n.e(70833),
                     n.e(897073),
+                    n.e(658216),
                     n.e(159957),
                     n.e(728136),
                     n.e(680029),
@@ -84,12 +86,12 @@ n.d(
                 P = (0, A.Us)(),
                 { parentAnalyticsLocation: M } = (0, _.Ay)(),
                 U = r?.getGuildId(),
-                w = (0, s.bG)([h.A], () => (null != U ? h.A.getGuild(U) : null), [U]),
-                G = (0, s.bG)([f.A], () => (null != t ? f.A.getApplicationActivity(t) : void 0)),
-                x = null == t || C ? c.D : d.d,
-                k = g.intl.string(g.t["6F9ivu"]);
-            return (null != t && (k = g.intl.string(g.t["OzOM/q"])),
-            null != n && (k = g.intl.string(g.t["6VQaqd"])),
+                w = (0, s.bG)([f.A], () => (null != U ? f.A.getGuild(U) : null), [U]),
+                G = (0, s.bG)([h.A], () => (null != t ? h.A.getApplicationActivity(t) : void 0)),
+                x = null == t || C ? c.GroupPlusIcon : d.ActivitiesPlusIcon,
+                k = T.intl.string(T.t["6F9ivu"]);
+            return (null != t && (k = T.intl.string(T.t["OzOM/q"])),
+            null != n && (k = T.intl.string(T.t["6VQaqd"])),
             null != G && O)
                 ? (0, i.jsx)(p.A, {
                       onClick: function () {
@@ -109,7 +111,7 @@ n.d(
                             (a()(null != w, "guild cannot be null"),
                                 a()(null != r, "channel cannot be null"),
                                 null != M && (0, E.XJ)(M, E.OP.INVITE),
-                                T({
+                                g({
                                     guild: w,
                                     channel: r,
                                     streamUserId: n?.ownerId,
@@ -132,6 +134,6 @@ n.d(
                     })
                   : null;
         },
-        X: T,
+        X: g,
     },
 );

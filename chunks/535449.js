@@ -299,9 +299,9 @@ function w() {
             }));
     }, []);
 }
-let U = "/assets/863cb535889630a2.svg";
+let N = "/assets/863cb535889630a2.svg";
 var L = l(50777),
-    N = l(869099);
+    U = l(869099);
 let D = {
     name: "Shop Card",
     id: "storefront-card",
@@ -336,25 +336,25 @@ let D = {
         let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
-        return t === N.s6.EMBEDDED
+        return t === U.s6.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
                   children: (0, o.jsx)(L.A, { applicationId: x, guildId: R, skuId: v, channel: O }),
               })
             : (0, o.jsx)("div", {
-                  style: { maxWidth: t === N.s6.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(N.Ay, { skuId: v, variant: t, onClick: f }),
+                  style: { maxWidth: t === U.s6.SMALL ? 220 : 300, padding: 16 },
+                  children: (0, o.jsx)(U.Ay, { skuId: v, variant: t, onClick: f }),
               });
     },
     controls: {
         variant: {
             label: "Card Variant",
             type: "select",
-            defaultValue: N.s6.SMALL,
+            defaultValue: U.s6.SMALL,
             options: [
-                { label: "Small", value: N.s6.SMALL },
-                { label: "Medium", value: N.s6.MEDIUM },
-                { label: "Embedded", value: N.s6.EMBEDDED },
+                { label: "Small", value: U.s6.SMALL },
+                { label: "Medium", value: U.s6.MEDIUM },
+                { label: "Embedded", value: U.s6.EMBEDDED },
             ],
         },
         name: { label: "Product Name", type: "text", defaultValue: "Legendary Dragon Armor" },
@@ -385,9 +385,9 @@ let Q = {
     nitro: "linear-gradient(90deg, rgba(179, 38, 156, 0.4) 0%, rgba(20, 20, 203, 0.4) 100%)",
     none: void 0,
 };
-var X = l(971146),
-    z = l(849134);
-function W() {}
+var W = l(971146),
+    X = l(849134);
+function z() {}
 let $ = {
     name: "Storefront Promo Popover",
     id: "social-layer-storefront-popover",
@@ -398,10 +398,10 @@ let $ = {
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)("div", { ref: d }),
-                (0, o.jsx)(z.A, {
+                (0, o.jsx)(X.A, {
                     targetElementRef: d,
-                    onRequestClose: W,
-                    onActionClick: W,
+                    onRequestClose: z,
+                    onActionClick: z,
                     position: "bottom",
                     align: "center",
                     graphicSource: "video" === t ? { type: "video", src: l } : { type: "asset", src: a },
@@ -578,8 +578,8 @@ let en = {
                                           titles: S,
                                           subtitle: a,
                                           features: [
-                                              { assetUrl: U, title: c, subtitle: p },
-                                              { assetUrl: U, title: m, subtitle: b },
+                                              { assetUrl: N, title: c, subtitle: p },
+                                              { assetUrl: N, title: m, subtitle: b },
                                           ],
                                           buttonText: g,
                                           onClose: () => Promise.resolve(y(!1)),
@@ -668,7 +668,7 @@ let en = {
                                             children:
                                                 "The in-game item indicator tag shown on storefront cards and the PDP modal.",
                                         }),
-                                        (0, o.jsx)(X.V, { textColor: t }),
+                                        (0, o.jsx)(W.V, { textColor: t }),
                                     ],
                                 });
                             },
@@ -801,7 +801,7 @@ let en = {
                                                         node: (0, o.jsx)(s.$, {
                                                             variant: "expressive",
                                                             size: "sm",
-                                                            icon: Y.t,
+                                                            icon: Y.NitroWheelIcon,
                                                             text: q.intl.string(q.t.pj0XBN),
                                                             onClick: K,
                                                         }),
@@ -1150,7 +1150,7 @@ let en = {
                                 }, []);
                                 return (0, o.jsx)("div", {
                                     style: { maxWidth: 300, padding: 16 },
-                                    children: (0, o.jsx)(N.Ay, { skuId: v, variant: N.s6.MEDIUM, onClick: r }),
+                                    children: (0, o.jsx)(U.Ay, { skuId: v, variant: U.s6.MEDIUM, onClick: r }),
                                 });
                             },
                             controls: {
@@ -1170,7 +1170,7 @@ let en = {
                 },
             ],
             tags: ["Slayer Storefront", "Social Layer", "Shop", "Storefront Playground"],
-            IconComponent: a.U,
+            IconComponent: a.ShopIcon,
         },
     ],
 };

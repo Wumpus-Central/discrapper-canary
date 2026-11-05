@@ -1,65 +1,65 @@
 var a = i(477900);
 i(582128);
-var l = i(855986),
+var c = i(855986),
     r = i(165862),
-    t = i(477782),
-    c = i(215026),
-    d = i(192308),
+    l = i(477782),
+    d = i(215026),
+    t = i(192308),
     s = i(473935),
     o = i(442433),
     u = i(121127),
     p = i(576705),
-    b = i(957565),
-    g = i(652215),
-    h = i(792996);
+    I = i(957565),
+    m = i(652215),
+    b = i(792996);
 i.d(
     e,
     {},
     {
         default: function (n) {
-            let { guild: e, user: m, onSelect: x } = n,
-                y = e?.id ?? "",
-                A = (0, u.A)({ userId: m.id, guildId: e?.id ?? null }),
-                I = (0, l.bG)([p.A], () => null != e && p.A.canManageUser(g.xBc.BAN_MEMBERS, m, e), [e, m]);
+            let { guild: e, user: g, onSelect: h } = n,
+                x = e?.id ?? "",
+                y = (0, u.A)({ userId: g.id, guildId: e?.id ?? null }),
+                A = (0, c.bG)([p.A], () => null != e && p.A.canManageUser(m.xBc.BAN_MEMBERS, g, e), [e, g]);
             return (0, a.jsxs)(r.W, {
                 "data-menu-migrated": !0,
                 navId: "member-application-context-menu",
                 onClose: o.Z_,
-                "aria-label": h.intl.string(h.t.liqwPJ),
-                onSelect: x,
+                "aria-label": b.intl.string(b.t.liqwPJ),
+                onSelect: h,
                 children: [
-                    null != A && (0, a.jsx)(t.rX, { children: A }),
-                    (0, a.jsxs)(t.rX, {
+                    null != y && (0, a.jsx)(l.rX, { children: y }),
+                    (0, a.jsxs)(l.rX, {
                         children: [
-                            I &&
+                            A &&
                                 (0, a.jsx)(
-                                    t.Dr,
+                                    l.Dr,
                                     {
                                         id: "ban",
-                                        label: h.intl.string(h.t["I+Cbum"]),
-                                        icon: c.w,
-                                        leadingAccessory: { type: "icon", icon: c.w },
+                                        label: b.intl.string(b.t["I+Cbum"]),
+                                        icon: d.HammerIcon,
+                                        leadingAccessory: { type: "icon", icon: d.HammerIcon },
                                         color: "danger",
                                         action: () =>
-                                            (0, d.mM)(async () => {
+                                            (0, t.mM)(async () => {
                                                 let { default: n } = await Promise.all([
                                                     i.e(420282),
                                                     i.e(691671),
                                                     i.e(802504),
                                                 ]).then(i.bind(i, 333179));
-                                                return (e) => (0, a.jsx)(n, { ...e, guildId: y, user: m });
+                                                return (e) => (0, a.jsx)(n, { ...e, guildId: x, user: g });
                                             }),
                                     },
                                     "ban",
                                 ),
                             (0, a.jsx)(
-                                t.Dr,
+                                l.Dr,
                                 {
                                     id: "copyUserId",
-                                    label: h.intl.string(h.t["/AXYnE"]),
-                                    icon: s.L,
-                                    leadingAccessory: { type: "icon", icon: s.L },
-                                    action: () => (0, b.C)(m.id),
+                                    label: b.intl.string(b.t["/AXYnE"]),
+                                    icon: s.IdIcon,
+                                    leadingAccessory: { type: "icon", icon: s.IdIcon },
+                                    action: () => (0, I.C)(g.id),
                                 },
                                 "copyUserId",
                             ),

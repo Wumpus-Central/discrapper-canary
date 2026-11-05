@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(284009),
     o = t.n(r),
     c = t(855986),
-    d = t(789645),
-    u = t(297152),
+    u = t(789645),
+    d = t(297152),
     A = t(866665),
     h = t(408278),
     m = t(117723),
@@ -16,8 +16,8 @@ var i = t(477900),
     f = t(834730),
     p = t(143129),
     E = t(475825),
-    j = t(442433),
-    I = t(730134),
+    I = t(442433),
+    j = t(730134),
     v = t(964486),
     N = t(80682),
     _ = t(58736),
@@ -26,11 +26,11 @@ var i = t(477900),
     S = t(696451),
     y = t(576705),
     O = t(290863),
-    P = t(849736),
-    R = t(113783),
-    L = t(925931),
+    R = t(849736),
+    P = t(113783),
+    M = t(925931),
     D = t(105530),
-    M = t(699970),
+    L = t(699970),
     G = t(345687),
     k = t(818348),
     U = t(383899),
@@ -38,12 +38,16 @@ var i = t(477900),
     B = t(888299);
 let w = l.memo(function (e) {
     let { toggleRequestToSpeakSidebar: n, chatOpen: t } = e,
-        l = (0, i.jsx)(_.Ay.Icon, { icon: d.P, tooltip: V.intl.string(V.t.cpT0Cq), onClick: n });
+        l = (0, i.jsx)(_.Ay.Icon, { icon: u.XSmallIcon, tooltip: V.intl.string(V.t.cpT0Cq), onClick: n });
     return (0, i.jsxs)(_.Ay, {
         toolbar: l,
         className: a()(B.N1, { [B.X_]: t }),
         children: [
-            (0, i.jsx)(_.Ay.Icon, { icon: u.E, disabled: !0, "aria-label": V.intl.string(V.t.TYZgzW) }),
+            (0, i.jsx)(_.Ay.Icon, {
+                icon: d.HandRequestSpeakIcon,
+                disabled: !0,
+                "aria-label": V.intl.string(V.t.TYZgzW),
+            }),
             (0, i.jsx)(_.Ay.Title, { children: V.intl.string(V.t.TYZgzW) }),
         ],
     });
@@ -63,9 +67,9 @@ function H(e) {
                 text: o,
                 asContainer: !0,
                 children: (0, i.jsx)(h.K, {
-                    onClick: () => (0, P.lL)(n, t, !1),
+                    onClick: () => (0, R.lL)(n, t, !1),
                     disabled: s || a,
-                    icon: m.L,
+                    icon: m.MicrophoneArrowRightIcon,
                     variant: "secondary",
                     "aria-label": o,
                 }),
@@ -75,8 +79,8 @@ function H(e) {
                 asContainer: !0,
                 children: (0, i.jsx)(h.K, {
                     "aria-label": V.intl.string(V.t.moABMy),
-                    onClick: () => (0, P.lL)(n, t, !0),
-                    icon: d.P,
+                    onClick: () => (0, R.lL)(n, t, !0),
+                    icon: u.XSmallIcon,
                     variant: "secondary",
                 }),
             }),
@@ -88,7 +92,7 @@ let Y = l.memo(function (e) {
             a = l.useRef(null),
             r = n.getGuildId();
         o()(null != r, "Channel cannot be guildless");
-        let { isMobile: d, status: u } = (0, c.cf)([O.A], () => ({
+        let { isMobile: u, status: d } = (0, c.cf)([O.A], () => ({
                 isMobile: O.A.isMobileOnline(s.user.id),
                 status: O.A.getStatus(s.user.id, r),
             })),
@@ -99,7 +103,7 @@ let Y = l.memo(function (e) {
         let p = s.rtsState === D.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function E(e) {
             null != r &&
-                (0, j.L3)(e, async () => {
+                (0, I.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         t.e(463317),
                         t.e(893190),
@@ -148,12 +152,12 @@ let Y = l.memo(function (e) {
                             onContextMenu: E,
                             ...e,
                             children: [
-                                (0, i.jsx)(I.A, {
+                                (0, i.jsx)(j.A, {
                                     size: x._3.SIZE_40,
                                     className: B.RB,
                                     user: s.user,
-                                    isMobile: d,
-                                    status: u,
+                                    isMobile: u,
+                                    status: d,
                                 }),
                                 (0, i.jsxs)("div", {
                                     className: B.kH,
@@ -167,7 +171,7 @@ let Y = l.memo(function (e) {
                                         (0, i.jsx)(f.E, {
                                             variant: "body-xs/normal",
                                             color: "text-default",
-                                            children: (0, L.g)(s),
+                                            children: (0, M.g)(s),
                                         }),
                                     ],
                                 }),
@@ -180,7 +184,7 @@ let Y = l.memo(function (e) {
     }),
     K = l.memo(function (e) {
         let { channel: n, useVerboseLabel: t = !1 } = e,
-            [l, s] = (0, M.X)(n.id);
+            [l, s] = (0, L.X)(n.id);
         return (0, i.jsx)(p.d, { label: V.intl.string(t ? U.default.HUcd3y : V.t.GYCh0W), checked: l, onChange: s });
     }),
     z = l.memo(function () {
@@ -209,7 +213,7 @@ t.d(
     {
         Ay: function (e) {
             let { channel: n, toggleRequestToSpeakSidebar: t, chatOpen: l } = e,
-                s = (0, R.J2)(n.id),
+                s = (0, P.J2)(n.id),
                 r = [
                     +!!(0, c.bG)([y.A], () => y.A.can(k.xB.MANAGE_CHANNELS, n) || y.A.can(k.xB.MANAGE_ROLES, n)),
                     Math.max(1, s.length),

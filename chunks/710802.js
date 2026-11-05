@@ -63,7 +63,13 @@ function D(t) {
         : (0, n.jsxs)("div", {
               className: _.v,
               children: [
-                  (0, n.jsx)(v.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: _.kK }),
+                  (0, n.jsx)(v.CircleErrorIcon, {
+                      size: "custom",
+                      width: 20,
+                      height: 20,
+                      color: "currentColor",
+                      className: _.kK,
+                  }),
                   (0, n.jsx)(d.E, {
                       variant: "body-md/normal",
                       className: _.at,

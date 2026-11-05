@@ -18,7 +18,7 @@ t.d(
             let { userMuted: t } = n.data,
                 s = f.intl.string(t ? d.default.bd0Ufh : d.default.dxBzpe);
             return (0, l.jsx)(a.Ay.Icon, {
-                icon: t ? u._ : r.H,
+                icon: t ? u.VoiceXIcon : r.VoiceNormalIcon,
                 tooltip: s,
                 "aria-label": s,
                 onClick: () => i.A.setFrameUserMuted(n.id, !t),

@@ -385,7 +385,7 @@ let w = "playground-announcement-modal",
                                     n.e(614784),
                                     n.e(187856),
                                     n.e(826240),
-                                    n.e(68904),
+                                    n.e(846523),
                                     n.e(919307),
                                     n.e(455924),
                                     n.e(409843),
@@ -486,7 +486,7 @@ var Y = n(520361),
     z = n(822571),
     $ = n(662367);
 let q = "playground-billing-settings-banner",
-    Z = {
+    X = {
         name: "Nitro Settings Banner",
         id: "billing-settings-banner",
         component: function (e) {
@@ -594,7 +594,7 @@ let q = "playground-billing-settings-banner",
             helpArticleLinkText: { label: "Help Article Link Text", type: "text", defaultValue: "Terms apply." },
         },
     };
-var X = n(959129),
+var Z = n(959129),
     J = n(106512),
     Q =
         (((r = {}).SEASONAL_GIFTING_2024_BALLOONS_REWARD_SKU_ID = "1301993378484850769"),
@@ -783,7 +783,7 @@ var ek = n(964661),
     ez = n(765671),
     e$ = n(573999);
 function eq() {}
-function eZ(e) {
+function eX(e) {
     let { icon: t, label: n, selected: o = !1, decoration: l, showHoverGradient: a = !1, ref: r } = e,
         { width: i, ref: d } = (0, ez.Ay)(),
         s = (0, eV.A)(r, d);
@@ -810,7 +810,7 @@ function eZ(e) {
         ],
     });
 }
-function eX(e) {
+function eZ(e) {
     let {
             tabLabel: t = "Nitro",
             selected: n = !1,
@@ -819,14 +819,21 @@ function eX(e) {
             nitroRowRef: a,
             wrapNitroRow: r,
         } = e,
-        i = (0, u.jsx)(eZ, { ref: a, icon: eK.t, label: t, selected: n, decoration: o, showHoverGradient: l });
+        i = (0, u.jsx)(eX, {
+            ref: a,
+            icon: eK.NitroWheelIcon,
+            label: t,
+            selected: n,
+            decoration: o,
+            showHoverGradient: l,
+        });
     return (0, u.jsxs)("nav", {
         className: e$.C$,
         children: [
-            (0, u.jsx)(eZ, { icon: ew.$, label: "Friends" }),
+            (0, u.jsx)(eX, { icon: ew.FriendsIcon, label: "Friends" }),
             null != r ? r(i) : i,
-            (0, u.jsx)(eZ, { icon: eH.U, label: "Shop" }),
-            (0, u.jsx)(eZ, { icon: eW.r, label: "Quests" }),
+            (0, u.jsx)(eX, { icon: eH.ShopIcon, label: "Shop" }),
+            (0, u.jsx)(eX, { icon: eW.QuestsIcon, label: "Quests" }),
         ],
     });
 }
@@ -884,7 +891,7 @@ let e0 = "playground-premium-tab-popover",
                 j(e0, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
             );
             let A = i.useRef(null);
-            return (0, u.jsx)(eX, {
+            return (0, u.jsx)(eZ, {
                 selected: !0,
                 nitroRowRef: A,
                 wrapNitroRow: (e) => (0, u.jsx)(eJ.A, { targetElementRef: A, dismissPopover: eQ, children: e }),
@@ -977,7 +984,7 @@ let tl = {
             groups: [
                 to("Premium Surfaces", [
                     W,
-                    Z,
+                    X,
                     ev,
                     {
                         name: "Nagbar",
@@ -1206,7 +1213,7 @@ let tl = {
                                 acknowledgedBadgeCopy: e.acknowledgedBadgeCopy,
                                 isDismissed: e.isDismissed,
                             });
-                            return (0, u.jsx)(eX, {
+                            return (0, u.jsx)(eZ, {
                                 tabLabel: e.tabLabel,
                                 selected: e.selected,
                                 decoration: t,
@@ -1261,7 +1268,7 @@ let tl = {
                                     })),
                                     j(e6, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
                                 ),
-                                (0, u.jsx)(eX, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(e1.A, { children: e }) })
+                                (0, u.jsx)(eZ, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(e1.A, { children: e }) })
                             );
                         },
                         ControlsExtension: () => (0, u.jsx)(B, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
@@ -1388,7 +1395,7 @@ let tl = {
                                                 angle: e.gradientAngle,
                                             },
                                         }),
-                                        null != o ? { ...o, ...t } : X.v.create(t)),
+                                        null != o ? { ...o, ...t } : Z.v.create(t)),
                                 }),
                             });
                         },

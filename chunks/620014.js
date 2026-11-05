@@ -12,7 +12,7 @@ var n = i(477900),
     h = i(73153),
     p = i(129230),
     A = i(652215);
-let g = {
+let I = {
     dismissForApplicationId(e) {
         (h.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
             p.default.track(A.HAw.CLOSE_TUTORIAL, {
@@ -22,10 +22,10 @@ let g = {
             }));
     },
 };
-var I = i(770178),
-    v = i(55730),
-    x = i(587895),
-    f = i(834730),
+var g = i(770178),
+    f = i(55730),
+    v = i(587895),
+    x = i(834730),
     C = i(291747),
     E = i(866665),
     S = i(101392),
@@ -55,23 +55,23 @@ function N(e) {
         return null;
     let o = (0, y.VI)(i),
         u = (0, y.pS)(a, l),
-        c = (0, n.jsxs)(f.E, {
+        c = (0, n.jsxs)(x.E, {
             className: j.rk,
             variant: "body-xs/medium",
             color: r ? "text-feedback-critical" : "text-muted",
             tabularNumbers: !0,
-            children: [(0, n.jsx)(C.x, { size: "xxs", color: "currentColor", className: j.Eq }), u],
+            children: [(0, n.jsx)(C.TimerIcon, { size: "xxs", color: "currentColor", className: j.Eq }), u],
         });
     return (0, n.jsx)(E.m, { text: o, children: (0, n.jsx)("div", { className: j.ns, children: c }) });
 }
-function _(e) {
+function T(e) {
     let { channel: t, isThreadCreation: i = !1 } = e,
         s = (0, o.bG)([S.A], () => S.A.getSlowmodeCooldownGuess(t.id, i ? S.R.CreateThread : S.R.SendMessage)),
         l = (0, y._i)(t),
         { rateLimitPerUser: a } = t;
     return (0, n.jsx)(N, { isEnabled: a > 0, rateLimitPerUser: a, isBypassSlowmode: l, slowmodeCooldownGuess: s });
 }
-var T = i(407278);
+var _ = i(407278);
 let O = {};
 class G extends o.Ay.PersistedStore {
     static displayName = "ActivityInviteEducationStore";
@@ -127,7 +127,7 @@ class Z extends s.PureComponent {
     }
     handleDismissInviteEducation = () => {
         let { activity: e } = this.props;
-        null != e && null != e.application_id && g.dismissForApplicationId(e.application_id);
+        null != e && null != e.application_id && I.dismissForApplicationId(e.application_id);
     };
     render() {
         let { activity: e } = this.props;
@@ -170,16 +170,16 @@ function X(e) {
             shouldShowLegacyGameInviteCreationBanner: p = !1,
         } = e,
         A = (0, F.v)("TypingUsers"),
-        { rateLimitPerUser: g } = d,
+        { rateLimitPerUser: I } = d,
+        f = s.useRef(null),
         v = s.useRef(null),
-        x = s.useRef(null),
-        [f, C] = s.useState(!1),
+        [x, C] = s.useState(!1),
         E = s.useCallback(() => {
-            if (null == v.current || null == x.current) return;
-            let e = v.current.getBoundingClientRect();
-            x.current.scrollWidth + 56 > e.width ? C(!0) : C(!1);
+            if (null == f.current || null == v.current) return;
+            let e = f.current.getBoundingClientRect();
+            v.current.scrollWidth + 56 > e.width ? C(!0) : C(!1);
         }, []);
-    ((0, I.g)(v, E, [], { enabled: h }), (0, I.g)(x, E, [], { enabled: h }));
+    ((0, g.g)(f, E, [], { enabled: h }), (0, g.g)(v, E, [], { enabled: h }));
     let [S, b, y] = l,
         j = "";
     1 === l.length
@@ -189,8 +189,8 @@ function X(e) {
           : 3 === l.length
             ? (j = W.intl.format(W.t.StKThj, { a: S, b, c: y }))
             : l.length > 3 && (j = W.intl.format(W.t.Q8lUnE, {}));
-    let N = f && l.length > 0 && l.length <= 3 ? W.intl.format(W.t["qD/0qZ"], {}) : j,
-        O = l.length > 0 || g > 0 || p,
+    let N = x && l.length > 0 && l.length <= 3 ? W.intl.format(W.t["qD/0qZ"], {}) : j,
+        O = l.length > 0 || I > 0 || p,
         G = !O && null != t,
         k = null;
     return (
@@ -200,10 +200,10 @@ function X(e) {
                   "data-mtctest-ignore": "true",
                   children: [
                       0 === l.length && p
-                          ? (0, n.jsx)(T.A, {})
+                          ? (0, n.jsx)(_.A, {})
                           : (0, n.jsxs)("div", {
                                 className: H.y5,
-                                ref: v,
+                                ref: f,
                                 children: [
                                     l.length > 0 &&
                                         !1 !== u &&
@@ -215,12 +215,12 @@ function X(e) {
                                         className: H.Qq,
                                         style: { position: "absolute", visibility: "hidden" },
                                         "aria-hidden": !0,
-                                        ref: x,
+                                        ref: v,
                                         children: j,
                                     }),
                                 ],
                             }),
-                      !1 !== m && (0, n.jsx)(_, { channel: d, isThreadCreation: o }),
+                      !1 !== m && (0, n.jsx)(T, { channel: d, isThreadCreation: o }),
                   ],
               }))
             : G && null != t && (k = (0, n.jsx)(Z, { activity: t, isFocused: i })),
@@ -246,7 +246,7 @@ function Q(e) {
 }
 function J(e) {
     let t = (0, o.bG)([U.A], () => U.A.findActivity((e) => null != e.application_id));
-    return (0, o.bG)([k, x.A, R.A, w.A, D.A], () =>
+    return (0, o.bG)([k, v.A, R.A, w.A, D.A], () =>
         (function (e) {
             let {
                     channel: t,
@@ -261,7 +261,7 @@ function J(e) {
             if (
                 null == t ||
                 null == i ||
-                !(0, v.A)(i, A.jUm.JOIN) ||
+                !(0, f.A)(i, A.jUm.JOIN) ||
                 null == d ||
                 (!t.isPrivate() && !r.can(A.xBc.SEND_MESSAGES, t))
             )
@@ -279,7 +279,7 @@ function J(e) {
             channel: e,
             activity: t,
             ActivityInviteEducationStore: k,
-            ApplicationStore: x.A,
+            ApplicationStore: v.A,
             RelationshipStore: R.A,
             GamePartyStore: w.A,
             PermissionStore: D.A,
@@ -291,7 +291,7 @@ function J(e) {
 function K(e) {
     let { channel: t, isThreadCreation: i = !1, ...s } = e,
         l = Q(t),
-        a = (0, T.L)(t.id),
+        a = (0, _.L)(t.id),
         r = {
             ...s,
             baseTextColor: (0, m.r)(u.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),

@@ -25,10 +25,10 @@ var l = n(477900),
     N = n(498642),
     D = n(576705),
     k = n(818348);
-function y(e) {
+function I(e) {
     return (0, r.bG)([D.A], () => null != e && D.A.can(k.xB.MENTION_EVERYONE, e), [e]);
 }
-var I = n(446600),
+var y = n(446600),
     G = n(366098),
     w = n(918192),
     T = n(660110),
@@ -40,8 +40,8 @@ var I = n(446600),
     P = n(897513);
 n(516607);
 var F = n(652215),
-    q = n(988794),
-    Q = n(792996),
+    Q = n(988794),
+    q = n(792996),
     z = n(320372),
     H = n(973324);
 function Y(e) {
@@ -63,13 +63,13 @@ function U(e) {
               children: (0, l.jsx)(c.Z, {
                   selectionMode: "single",
                   required: !0,
-                  label: Q.intl.string(Q.t.S7GjDz),
+                  label: q.intl.string(q.t.S7GjDz),
                   value: n.id,
                   options: t.map((e) => ({
                       id: e.id,
                       value: e.id,
                       label: (0, A.m1)(e, E.default, b.A, !0),
-                      leading: (0, l.jsx)(d.q, { size: "custom", color: "currentColor", height: 24 }),
+                      leading: (0, l.jsx)(d.StageIcon, { size: "custom", color: "currentColor", height: 24 }),
                   })),
                   onSelectionChange: function (e) {
                       if (null == a) return;
@@ -91,8 +91,8 @@ function V(e) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
                 [l, i] = a.useState(!1),
                 [s, r] = a.useState(null),
-                u = a.useMemo(() => I.A.getStageInstanceByChannel(e?.id), [e?.id]),
-                c = y(e);
+                u = a.useMemo(() => y.A.getStageInstanceByChannel(e?.id), [e?.id]),
+                c = I(e);
             return {
                 loading: l,
                 error: s,
@@ -113,20 +113,20 @@ function V(e) {
                 },
             };
         })(i, d),
-        V = a.useMemo(() => I.A.getStageInstanceByChannel(i.id), [i.id]),
+        V = a.useMemo(() => y.A.getStageInstanceByChannel(i.id), [i.id]),
         [X, Z] = a.useState(V?.topic ?? ""),
         [J, W] = a.useState(""),
         [K] = a.useState(E),
         [$, ee] = a.useState({ startDate: (0, j.jd)() }),
         [et, en] = a.useState(!1),
-        el = y(i),
+        el = I(i),
         ea =
             ((t = i?.guild_id),
             (n = (0, r.bG)([N.A], () => N.A.getMemberCount(t), [t])),
             null == i || (null != n && !(n > 5e4))),
         ei = null == V && el && !K,
         [es, er] = a.useState(ei && ea),
-        eu = q.dD.GUILD_ONLY,
+        eu = Q.dD.GUILD_ONLY,
         [ec] = a.useState(V?.privacy_level ?? eu),
         [ed, eo] = a.useState(null),
         eg = (0, G.D3)(i.id),
@@ -137,7 +137,7 @@ function V(e) {
         eA = null != v,
         eC = eS.length > 1;
     function ej(e) {
-        (e.preventDefault(), ec === q.dD.PUBLIC && X.length < 20 && !ex)
+        (e.preventDefault(), ec === Q.dD.PUBLIC && X.length < 20 && !ex)
             ? em(!0)
             : K || Y?.({ topic: X, privacyLevel: ec, sendStartNotification: es });
     }
@@ -166,10 +166,10 @@ function V(e) {
                         (0, l.jsx)(o.k, {
                             required: !0,
                             error: null != k ? k.getAnyErrorMessage() : void 0,
-                            label: E ? Q.intl.string(Q.t["0HbEQ6"]) : Q.intl.string(Q.t["5FPBOB"]),
+                            label: E ? q.intl.string(q.t["0HbEQ6"]) : q.intl.string(q.t["5FPBOB"]),
                             onChange: (e) => Z(e),
-                            helperText: ex ? Q.intl.string(Q.t.AqTyaR) : void 0,
-                            placeholder: Q.intl.string(Q.t.ZwWruY),
+                            helperText: ex ? q.intl.string(q.t.AqTyaR) : void 0,
+                            placeholder: q.intl.string(q.t.ZwWruY),
                             maxLength: 120,
                             value: X,
                             autoComplete: "off",
@@ -196,7 +196,7 @@ function V(e) {
                                               color: "text-feedback-critical",
                                               variant: "body-xs/normal",
                                               className: z.$e,
-                                              children: Q.intl.string(Q.t.AXR5Ss),
+                                              children: q.intl.string(q.t.AXR5Ss),
                                           })
                                         : null,
                                 ],
@@ -205,8 +205,8 @@ function V(e) {
                             (0, l.jsx)("div", {
                                 className: z.kz,
                                 children: (0, l.jsx)(h.f, {
-                                    label: Q.intl.string(Q.t["+gRCC7"]),
-                                    placeholder: Q.intl.string(Q.t["kWO/E8"]),
+                                    label: q.intl.string(q.t["+gRCC7"]),
+                                    placeholder: q.intl.string(q.t["kWO/E8"]),
                                     value: J,
                                     onChange: (e) => W(e),
                                     maxLength: 1e3,
@@ -217,7 +217,7 @@ function V(e) {
                                   color: "text-default",
                                   variant: "body-xs/normal",
                                   className: z.Qw,
-                                  children: Q.intl.format(Q.t["S+9O7g"], {
+                                  children: q.intl.format(q.t["S+9O7g"], {
                                       stageName: ef,
                                       stageHook: function (e, t) {
                                           return (0, l.jsx)("span", { className: z.HA, children: ef }, t);
@@ -232,18 +232,18 @@ function V(e) {
         }),
         eE = {
             onClose: d,
-            title: null == V ? Q.intl.string(Q.t.DDF0cJ) : Q.intl.string(Q.t.YPdQOp),
-            subtitle: null == V ? Q.intl.string(Q.t.bqQIwa) : Q.intl.string(Q.t["I+9bLx"]),
+            title: null == V ? q.intl.string(q.t.DDF0cJ) : q.intl.string(q.t.YPdQOp),
+            subtitle: null == V ? q.intl.string(q.t.bqQIwa) : q.intl.string(q.t["I+9bLx"]),
             transitionState: b,
             actions: [
-                { variant: "secondary", text: Q.intl.string(Q.t["ETE/oC"]), onClick: () => d() },
+                { variant: "secondary", text: q.intl.string(q.t["ETE/oC"]), onClick: () => d() },
                 {
                     variant: "primary",
                     text: K
-                        ? Q.intl.string(Q.t["60lJ0C"])
+                        ? q.intl.string(q.t["60lJ0C"])
                         : null == V
-                          ? Q.intl.string(Q.t.s8mM8A)
-                          : Q.intl.string(Q.t.K344S7),
+                          ? q.intl.string(q.t.s8mM8A)
+                          : q.intl.string(q.t.K344S7),
                     onClick: ej,
                     disabled: "" === X || null == ec || (E && !ev),
                     loading: D,
@@ -258,7 +258,7 @@ function V(e) {
                           (0, l.jsx)(g.E, {
                               color: "text-default",
                               variant: "body-sm/normal",
-                              children: Q.intl.string(Q.t["Pe+Pwp"]),
+                              children: q.intl.string(q.t["Pe+Pwp"]),
                           }),
                       ],
                   })

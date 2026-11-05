@@ -13,10 +13,10 @@ var s = a(477900),
     j = a(565645),
     g = a(148719),
     v = a(47167),
-    N = a(713654),
-    b = a(495273),
-    y = a(7584),
-    C = a(808728),
+    b = a(713654),
+    y = a(495273),
+    C = a(7584),
+    N = a(808728),
     k = a(792996),
     p = a(499542);
 function f(e) {
@@ -44,7 +44,7 @@ function f(e) {
                     children: [
                         (0, s.jsx)("div", {
                             className: p.P0,
-                            children: (0, s.jsx)(j.A, { emojiName: y.Ay.getByName("eyes")?.surrogates, alt: "" }),
+                            children: (0, s.jsx)(j.A, { emojiName: C.Ay.getByName("eyes")?.surrogates, alt: "" }),
                         }),
                         (0, s.jsx)(o.E, {
                             variant: "body-md/normal",
@@ -59,7 +59,7 @@ function f(e) {
                         (0, s.jsx)("div", {
                             className: p.P0,
                             children: (0, s.jsx)(j.A, {
-                                emojiName: y.Ay.getByName("star_struck")?.surrogates,
+                                emojiName: C.Ay.getByName("star_struck")?.surrogates,
                                 alt: "",
                             }),
                         }),
@@ -75,7 +75,7 @@ function f(e) {
                     children: [
                         (0, s.jsx)("div", {
                             className: p.P0,
-                            children: (0, s.jsx)(j.A, { emojiName: y.Ay.getByName("books")?.surrogates, alt: "" }),
+                            children: (0, s.jsx)(j.A, { emojiName: C.Ay.getByName("books")?.surrogates, alt: "" }),
                         }),
                         (0, s.jsx)(o.E, {
                             variant: "body-md/normal",
@@ -91,7 +91,7 @@ function f(e) {
 function E(e) {
     let { channel: t, selected: a, onChange: l } = e,
         i = (0, v.Ay)(t),
-        r = (0, N.gU)(t) ?? d.N,
+        r = (0, b.gU)(t) ?? d.TextIcon,
         c = n.useCallback(() => {
             l(t);
         }, [t, l]);
@@ -124,48 +124,48 @@ a.d(
     {
         default: function (e) {
             let { transitionState: t, onClose: a, guildId: l, startingChannelId: d } = e,
-                m = (0, r.yK)([C.A], () => {
-                    let e = C.A.getChannels(l);
-                    return (e[C.I] ?? [])
+                m = (0, r.yK)([N.A], () => {
+                    let e = N.A.getChannels(l);
+                    return (e[N.I] ?? [])
                         .concat(e.VOCAL ?? [])
                         .filter((e) => (0, g.A)(e.channel))
                         .map((e) => e.channel);
                 }),
                 [x, j] = n.useState(0),
                 v = m.find((e) => e.id === d),
-                [N, y] = n.useState(null != v ? [v] : []),
-                A = N.length === m.length,
+                [b, C] = n.useState(null != v ? [v] : []),
+                A = b.length === m.length,
                 P = n.useCallback(() => {
                     j(1);
                 }, [j]),
                 S = n.useCallback(
                     (e) => {
-                        y((t) => (t.includes(e) ? [...i().pull(t, e)] : [...t, e]));
+                        C((t) => (t.includes(e) ? [...i().pull(t, e)] : [...t, e]));
                     },
-                    [y],
+                    [C],
                 ),
                 B = n.useCallback(() => {
-                    A ? y([]) : y(m);
-                }, [A, m, y]),
+                    A ? C([]) : C(m);
+                }, [A, m, C]),
                 K = n.useCallback(() => {
-                    N.forEach((e) => {
-                        let t = (0, b.es)(e, e.accessPermissions, !0);
+                    b.forEach((e) => {
+                        let t = (0, y.es)(e, e.accessPermissions, !0);
                         ((0, h.R$)(e.id, [t]), a());
                     });
-                }, [N, a]),
-                q = n.useMemo(
+                }, [b, a]),
+                T = n.useMemo(
                     () => [
                         { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: a },
-                        { variant: "primary", text: k.intl.string(k.t.PggHmu), onClick: K, disabled: 0 === N.length },
+                        { variant: "primary", text: k.intl.string(k.t.PggHmu), onClick: K, disabled: 0 === b.length },
                     ],
-                    [K, a, N.length],
+                    [K, a, b.length],
                 );
             return 0 === x
                 ? (0, s.jsx)(f, { handleReviewPermissions: P, onClose: a, transitionState: t })
                 : (0, s.jsxs)(c.a, {
                       title: k.intl.string(k.t.y77PiT),
                       subtitle: k.intl.string(k.t.ZSzBe5),
-                      actions: q,
+                      actions: T,
                       onClose: a,
                       transitionState: t,
                       input: (0, s.jsxs)("div", {
@@ -192,7 +192,7 @@ a.d(
                           (0, s.jsx)("div", {
                               className: p.XK,
                               children: m.map((e) =>
-                                  (0, s.jsx)(E, { channel: e, selected: N.includes(e), onChange: S }, e.id),
+                                  (0, s.jsx)(E, { channel: e, selected: b.includes(e), onChange: S }, e.id),
                               ),
                           }),
                           (0, s.jsx)("div", {

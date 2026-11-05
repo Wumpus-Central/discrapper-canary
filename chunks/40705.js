@@ -15,8 +15,8 @@ var r = n(477900),
     x = n(261958),
     v = n(32880),
     g = n(165862),
-    b = n(477782),
-    E = n(365199),
+    E = n(477782),
+    b = n(365199),
     P = n(268791),
     y = n(834730),
     S = n(315710),
@@ -26,12 +26,12 @@ var r = n(477900),
     A = n(775602),
     R = n(129230),
     L = n(683574),
-    T = n(530567),
-    M = n(646514),
+    M = n(530567),
+    T = n(646514),
     k = n(61491),
     j = n(113494),
-    D = n(782134),
-    I = n(417270),
+    I = n(782134),
+    D = n(417270),
     B = n(939249),
     F = n(866665),
     G = n(792996),
@@ -39,8 +39,8 @@ var r = n(477900),
 let H = "-:--",
     U = {
         [c.Q6.PLAYING]: { icon: j.PauseIcon, label: G.intl.string(G.t.ZcgDJX) },
-        [c.Q6.PAUSED]: { icon: D.PlayIcon, label: G.intl.string(G.t.RscU7I) },
-        [c.Q6.ENDED]: { icon: I.RetryIcon, label: G.intl.string(G.t.hsvh0i) },
+        [c.Q6.PAUSED]: { icon: I.PlayIcon, label: G.intl.string(G.t.RscU7I) },
+        [c.Q6.ENDED]: { icon: D.RetryIcon, label: G.intl.string(G.t.hsvh0i) },
     },
     _ = { [c.oA.SM]: c.n4.SM, [c.oA.MD]: c.n4.MD, [c.oA.LG]: c.n4.LG };
 function O(e) {
@@ -49,7 +49,7 @@ function O(e) {
         [o, u] = l.useState(null),
         [s, d] = l.useState(!1),
         { videoRef: m, controlBarConfig: f, isControlBarExpanded: p } = (0, L.X$)(),
-        h = (f ?? T.X4[c.oA.MD]).timeTextVariant;
+        h = (f ?? M.X4[c.oA.MD]).timeTextVariant;
     l.useEffect(() => {
         let e = m.current;
         function t() {
@@ -104,10 +104,10 @@ function K(e) {
             className: x,
             "data-testid": v,
             clickableProps: g,
-            ref: b,
+            ref: E,
         } = e,
-        { controlBarConfig: E } = (0, L.X$)(),
-        P = E ?? T.X4[h],
+        { controlBarConfig: b } = (0, L.X$)(),
+        P = b ?? M.X4[h],
         y = P.iconSize,
         S = "" !== (f ?? "").trim();
     return (0, r.jsx)(F.m, {
@@ -125,7 +125,7 @@ function K(e) {
             focusProps: { enabled: n, ringClassName: $.KE },
             "data-testid": v,
             "data-active": !0 === a,
-            innerRef: b,
+            innerRef: E,
             ...g,
             children: (0, r.jsx)("div", {
                 className: $.K5,
@@ -137,7 +137,7 @@ function K(e) {
                               children: [
                                   (0, r.jsx)(t, {
                                       size: y,
-                                      color: !0 !== o ? M.A.colors.WHITE : M.A.colors.TEXT_MUTED,
+                                      color: !0 !== o ? T.A.colors.WHITE : T.A.colors.TEXT_MUTED,
                                       className: i()($.jk, { [$.x2]: a, [$.Wr]: !o }),
                                   }),
                                   u,
@@ -145,7 +145,7 @@ function K(e) {
                           })
                         : (0, r.jsx)(t, {
                               size: y,
-                              color: !0 !== o ? M.A.colors.WHITE : M.A.colors.TEXT_MUTED,
+                              color: !0 !== o ? T.A.colors.WHITE : T.A.colors.TEXT_MUTED,
                               className: i()($.jk, { [$.x2]: a, [$.Wr]: !o }),
                           }),
             }),
@@ -156,7 +156,7 @@ var Q = n(636537),
     z = n(260612),
     V = n(953727);
 function X(e) {
-    let { size: t = "md", width: n, height: l, color: a = M.A.colors.WHITE, ...i } = e,
+    let { size: t = "md", width: n, height: l, color: a = T.A.colors.WHITE, ...i } = e,
         o = (0, z.J)(t);
     return (0, r.jsxs)("svg", {
         ...(0, V.A)(i),
@@ -217,18 +217,18 @@ function er(e) {
             animSpring: n,
             visible: a,
             seekForwardEnabled: g,
-            hideCaptionBtn: b = !1,
-            hideTranscriptBtn: E = !1,
+            hideCaptionBtn: E = !1,
+            hideTranscriptBtn: b = !1,
             hideSkipButtons: P = !1,
             hideFullScreenBtn: y = !1,
             hidePlaybackSpeedBtn: S = !1,
             size: C,
             downloadUrl: w,
-            downloadContentType: M,
+            downloadContentType: T,
             extraButtons: k,
             autoFocus: j = !1,
-            keyDownHandlerRef: D,
-            volume: I,
+            keyDownHandlerRef: I,
+            volume: D,
             muted: B,
             transcriptEnabled: F,
             captionEnabled: H,
@@ -249,27 +249,27 @@ function er(e) {
         ef = (0, s.bG)([A.Ay], () => A.Ay.useReducedMotion),
         ep = (0, s.bG)([A.Ay], () => A.Ay.keyboardModeEnabled),
         { isFullscreen: eh, videoRef: ex, activeLayer: ev, controlBarConfig: eg } = (0, L.X$)(),
-        eb = eg ?? T.X4[C],
-        eE = eo && !eh,
-        [eP, ey] = l.useState(B ? 0 : I),
+        eE = eg ?? M.X4[C],
+        eb = eo && !eh,
+        [eP, ey] = l.useState(B ? 0 : D),
         [eS, eC] = l.useState(!1),
         [ew, eN] = l.useState(!1),
         [eA, eR] = l.useState(!1),
         eL = l.useRef(null),
-        eT = l.useId(),
-        eM = l.useRef(void 0),
-        [ek, ej] = l.useState(eE);
-    eE !== ek && (ej(eE), eC(!1), eR(!1), eN(!1));
-    let eD = eE && (eS || eA || ew),
-        [{ volumeAnimSpring: eI }, eB] = (0, d.z)(() => ({
+        eM = l.useId(),
+        eT = l.useRef(void 0),
+        [ek, ej] = l.useState(eb);
+    eb !== ek && (ej(eb), eC(!1), eR(!1), eN(!1));
+    let eI = eb && (eS || eA || ew),
+        [{ volumeAnimSpring: eD }, eB] = (0, d.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
         eF = l.useRef(null),
         [eG, e$] = l.useState(1),
-        [eH, eU] = l.useState(I),
+        [eH, eU] = l.useState(D),
         [e_, eO] = l.useState(B);
-    (I !== eH || B !== e_) && (eU(I), eO(B), ey(B ? 0 : I));
+    (D !== eH || B !== e_) && (eU(D), eO(B), ey(B ? 0 : D));
     let eK = l.useCallback(
             (e) => {
                 (e$(e), null != ex.current && (ex.current.playbackRate = e));
@@ -278,13 +278,13 @@ function er(e) {
         ),
         eQ = l.useCallback(() => {
             if (null == w) return;
-            let e = M?.split("/");
+            let e = T?.split("/");
             (R.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
                 window.open(w, "_blank"));
-        }, [w, M]),
+        }, [w, T]),
         ez = l.useCallback(
             (e) => {
                 null != ex.current && (e !== ex.current.volume && (ex.current.volume = e), e !== eP && ey(e));
@@ -292,15 +292,15 @@ function er(e) {
             [ex, eP],
         );
     function eV(e) {
-        (ez(e), ec(e), ew && (eN(!1), eE || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
+        (ez(e), ec(e), ew && (eN(!1), eb || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
     }
     let eX = l.useCallback(() => {
         if (null != ex.current)
             if (0 === eP) {
-                let e = 0 === I ? 0.3 : I;
+                let e = 0 === D ? 0.3 : D;
                 (ez(e), ed(!1), ec(e));
             } else (ec(eP), ez(0), ed(!0));
-    }, [ex, eP, ez, I, ed, ec]);
+    }, [ex, eP, ez, D, ed, ec]);
     function eY() {
         (eC(!0), em(!0));
     }
@@ -308,10 +308,10 @@ function er(e) {
         (eC(!1), em(!1));
     }
     function eZ() {
-        (window.clearTimeout(eM.current), eC(!0));
+        (window.clearTimeout(eT.current), eC(!0));
     }
     function eq() {
-        (window.clearTimeout(eM.current), (eM.current = window.setTimeout(() => eC(!1), 150)));
+        (window.clearTimeout(eT.current), (eT.current = window.setTimeout(() => eC(!1), 150)));
     }
     function eJ(e) {
         if ("ArrowUp" !== e.key && "ArrowDown" !== e.key) return;
@@ -320,10 +320,10 @@ function er(e) {
             n = Math.min(1, Math.max(0, ("ArrowUp" === e.key ? Math.floor(t / 10) + 1 : Math.ceil(t / 10) - 1) / 10));
         n !== eP && eV(n);
     }
-    l.useEffect(() => () => window.clearTimeout(eM.current), []);
+    l.useEffect(() => () => window.clearTimeout(eT.current), []);
     let e0 = (0, N.A)(em);
     l.useEffect(() => {
-        if (eD)
+        if (eI)
             return (
                 es(!0),
                 e0(!0),
@@ -331,7 +331,7 @@ function er(e) {
                     (es(!1), e0(!1));
                 }
             );
-    }, [eD, es, e0]);
+    }, [eI, es, e0]);
     let e1 = l.useCallback(
         (e) => {
             if (!(e.metaKey || ((0, u.vq)(e.target) && (0, u.Cw)(e.target))))
@@ -351,7 +351,7 @@ function er(e) {
                         (e.stopPropagation(), er());
                         break;
                     case c.TJ.CAPTION:
-                        (e.stopPropagation(), b || ee());
+                        (e.stopPropagation(), E || ee());
                         break;
                     case c.TJ.FULLSCREEN:
                         (e.stopPropagation(), y || et());
@@ -360,28 +360,28 @@ function er(e) {
                         (e.stopPropagation(), eX());
                 }
         },
-        [ee, et, z, en, er, eX, b, y, ep],
+        [ee, et, z, en, er, eX, E, y, ep],
     );
     (l.useEffect(() => {
         j && null != eF.current && eF.current.focus();
     }, [j]),
         l.useEffect(
             () => (
-                null != D && (D.current = e1),
+                null != I && (I.current = e1),
                 () => {
-                    null != D && (D.current = null);
+                    null != I && (I.current = null);
                 }
             ),
-            [e1, D],
+            [e1, I],
         ),
         l.useEffect(
             () => (
                 eB({ volumeAnimSpring: !ea || ew || eS ? 1 : 0, immediate: ef }),
                 () => {
-                    eI.stop();
+                    eD.stop();
                 }
             ),
-            [ea, ew, eS, eB, ef, eI],
+            [ea, ew, eS, eB, ef, eD],
         ));
     let e2 = G.intl.string(0 === eP ? G.t.YqAjXy : G.t.w4m945),
         { icon: e6, label: e4 } = U[t],
@@ -391,7 +391,7 @@ function er(e) {
             onClick: eX,
             ariaLabel: e2,
             tooltipLabel: e2,
-            hideTooltip: eD,
+            hideTooltip: eI,
             shortcut: c.TJ.MUTE,
             buttonSize: _[C],
             clickableProps: {
@@ -401,10 +401,10 @@ function er(e) {
                     "--custom-volume-wave-3": Math.min(1, Math.max(0, 3 * eP - 2)),
                     "--custom-volume-muted": +(0 === eP),
                 },
-                ...(eE
+                ...(eb
                     ? {
-                          "aria-expanded": eD,
-                          "aria-controls": eD ? eT : void 0,
+                          "aria-expanded": eI,
+                          "aria-controls": eI ? eM : void 0,
                           "aria-keyshortcuts": `${c.TJ.MUTE} ArrowUp ArrowDown`,
                       }
                     : void 0),
@@ -422,7 +422,7 @@ function er(e) {
             maxValue: 1,
             onValueChange: eV,
             asValueChanges: function (e) {
-                (ez(e), !ew && (eN(!0), eE || es(!0)));
+                (ez(e), !ew && (eN(!0), eb || es(!0)));
             },
             fillStyles: { background: "var(--custom-dvp-slider-fill)" },
             orientation: "horizontal",
@@ -479,20 +479,20 @@ function er(e) {
             (0, r.jsxs)("div", {
                 className: i()($.X3, $.L1),
                 children: [
-                    eE
+                    eb
                         ? (0, r.jsx)(f.Y, {
                               targetElementRef: eL,
-                              shouldShow: eD,
+                              shouldShow: eI,
                               scrollBehavior: "close",
                               onRequestClose: () => {
-                                  (window.clearTimeout(eM.current), eC(!1), eR(!1), eN(!1));
+                                  (window.clearTimeout(eT.current), eC(!1), eR(!1), eN(!1));
                               },
                               layerContext: ev,
                               position: "top",
                               align: "center",
                               renderPopout: () =>
                                   (0, r.jsx)("div", {
-                                      id: eT,
+                                      id: eM,
                                       className: i()(Q.i.blurple, $.p8, $.Gl),
                                       onMouseEnter: eZ,
                                       onMouseLeave: eq,
@@ -528,9 +528,9 @@ function er(e) {
                                       className: $.MQ,
                                       "data-testid": "discord-web-video-player-volume-slider",
                                       style: {
-                                          opacity: (0, o.to)([eI], (e) => `${e}`),
+                                          opacity: (0, o.to)([eD], (e) => `${e}`),
                                           width: (0, o.to)(
-                                              [eI.to({ range: [0, 1], output: [0, eb.volumeSliderWidthPx] })],
+                                              [eD.to({ range: [0, 1], output: [0, eE.volumeSliderWidthPx] })],
                                               (e) => `${e}px`,
                                           ),
                                       },
@@ -564,7 +564,7 @@ function er(e) {
                                 t ||
                                     m.push({
                                         id: "transcript",
-                                        iconComponent: x.u,
+                                        iconComponent: x.PaperIcon,
                                         label: G.intl.string(J.default["6EjGUv"]),
                                         onClick: i,
                                         active: r && a !== c.Q6.ENDED,
@@ -593,8 +593,8 @@ function er(e) {
                                 m
                             );
                         })({
-                            hideTranscriptBtn: E,
-                            hideCaptionBtn: b,
+                            hideTranscriptBtn: b,
+                            hideCaptionBtn: E,
                             transcriptEnabled: F,
                             captionEnabled: H,
                             playerState: t,
@@ -617,7 +617,7 @@ function er(e) {
                         }),
                     !y &&
                         (0, r.jsx)(K, {
-                            iconComponent: eh ? p.z : h.T,
+                            iconComponent: eh ? p.FullscreenExitIcon : h.FullscreenEnterIcon,
                             visible: a,
                             onClick: et,
                             ariaLabel: G.intl.string(J.default.z9Cnzv),
@@ -681,7 +681,7 @@ function ea(e) {
                     let t = { type: "icon", icon: e.iconComponent };
                     return null != e.active
                         ? (0, r.jsx)(
-                              b.sL,
+                              E.sL,
                               {
                                   id: e.id,
                                   label: e.label,
@@ -693,7 +693,7 @@ function ea(e) {
                               e.id,
                           )
                         : (0, r.jsx)(
-                              b.Dr,
+                              E.Dr,
                               {
                                   id: e.id,
                                   label: e.label,
@@ -710,7 +710,7 @@ function ea(e) {
         children: (e) =>
             (0, r.jsx)(K, {
                 ref: i,
-                iconComponent: E.MoreHorizontalIcon,
+                iconComponent: b.MoreHorizontalIcon,
                 visible: n,
                 ariaLabel: o,
                 tooltipLabel: o,
@@ -740,7 +740,7 @@ function ei(e) {
             let n = 1 !== t;
             return (0, r.jsx)(K, {
                 ref: u,
-                iconComponent: P.$,
+                iconComponent: P.SpeedometerIcon,
                 visible: a,
                 active: n,
                 overlay: n

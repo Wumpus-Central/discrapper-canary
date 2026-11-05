@@ -212,10 +212,10 @@ function _(e) {
                         })(_),
                         1,
                     ),
-                    R = c.current;
-                ((R = R <= 0 ? D : R + (D - R) * 0.2) < Math.max(p, 1) && (R = Math.max(p, 1)), (c.current = R));
-                let C = Math.ceil(11 * g) + Math.round(4 * g),
-                    P = Math.max(1, v - C),
+                    C = c.current;
+                ((C = C <= 0 ? D : C + (D - C) * 0.2) < Math.max(p, 1) && (C = Math.max(p, 1)), (c.current = C));
+                let R = Math.ceil(11 * g) + Math.round(4 * g),
+                    P = Math.max(1, v - R),
                     E = Math.max(1, Math.ceil(w / b));
                 for (let e = 0; e < b; e++) {
                     let t = Math.floor((e / b) * w),
@@ -223,21 +223,21 @@ function _(e) {
                     for (let r = 0; r < j; r++) {
                         let n = A[r * b + e];
                         if (n <= 0) continue;
-                        let s = (n / R) * P;
+                        let s = (n / C) * P;
                         ((m.fillStyle = M[r].color), m.fillRect(t, l - s, E, s), (l -= s));
                     }
                 }
                 ((m.strokeStyle = s),
                     (m.lineWidth = g),
                     m.beginPath(),
-                    m.moveTo(0, C),
-                    m.lineTo(w, C),
+                    m.moveTo(0, R),
+                    m.lineTo(w, R),
                     m.stroke(),
                     (m.fillStyle = a),
                     (m.font = `${11 * g}px gg sans`),
                     (m.textAlign = "right"),
                     (m.textBaseline = "top"),
-                    m.fillText(x(R), w - Math.round(4 * g), Math.round(2 * g)),
+                    m.fillText(x(C), w - Math.round(4 * g), Math.round(2 * g)),
                     (function (e, t, l) {
                         let { time: r, now: n, windowMs: s, color: a, bottomReserve: i } = l;
                         if (null == r) return;
@@ -348,10 +348,10 @@ function D(e) {
         })
     );
 }
-function R(e) {
+function C(e) {
     return `${e.toFixed(1)}%`;
 }
-var C = l(986322),
+var R = l(986322),
     P = l(760751),
     E = l(290805),
     F = l(253400);
@@ -495,11 +495,11 @@ function $(e) {
                 children: [
                     (0, r.jsx)(G, {
                         title: "Utilization",
-                        value: R(c),
+                        value: C(c),
                         series: a,
                         yFloor: 100,
                         formatMax: (e) => `${Math.round(e)}%`,
-                        formatValue: R,
+                        formatValue: C,
                         labelByKey: d,
                     }),
                     (0, r.jsx)(G, {
@@ -529,10 +529,10 @@ function z(e) {
         children: [
             (0, r.jsx)("div", { className: v.A9, style: { background: l } }),
             n.isDiscord
-                ? (0, r.jsx)(h.p, { size: "sm", className: v.Gt })
+                ? (0, r.jsx)(h.ClydeIcon, { size: "sm", className: v.Gt })
                 : (0, r.jsx)(x.A, { game: s, size: x.M.SMALL, allowUnknownGameIcon: !0, className: v.Gt }),
             (0, r.jsx)("span", { className: v.V1, children: n.name }),
-            (0, r.jsxs)("span", { className: v.rz, children: [R(O(t.gpu)), " \xb7 ", B(O(t.vram))] }),
+            (0, r.jsxs)("span", { className: v.rz, children: [C(O(t.gpu)), " \xb7 ", B(O(t.vram))] }),
         ],
     });
 }
@@ -555,7 +555,7 @@ function I(e) {
                             let o = null == (i = window.DiscordNative?.process?.pid) || isNaN(i) ? null : i,
                                 c = [];
                             for (let e of (null != o && c.push({ pid: o, isDiscord: !0 }),
-                            C.Ay.getVisibleRunningGames()))
+                            R.Ay.getVisibleRunningGames()))
                                 c.push({ pid: e.pid, isDiscord: !1, game: e });
                             (Promise.all(
                                 c.map((e) =>
@@ -701,7 +701,7 @@ function V() {
         [N] = n.useState(() => new Map()),
         [k] = n.useState(() => new Map()),
         [S] = n.useState(() => new U(120)),
-        [_, C] = n.useState(null),
+        [_, R] = n.useState(null),
         P = n.useRef(0),
         [E] = n.useState(() => new M());
     if (
@@ -769,7 +769,7 @@ function V() {
                         f = (h - t) / 1e3;
                     if (r && f > 0) {
                         let e = P.current / f;
-                        (C(e), S.push(e, s));
+                        (R(e), S.push(e, s));
                     }
                     ((P.current = 0), (t = h), (r = !0), setTimeout(n, 1e3));
                 })(),
@@ -832,7 +832,7 @@ function V() {
                                             color: "text-strong",
                                             tag: "span",
                                             className: v.Uq,
-                                            children: R(F),
+                                            children: C(F),
                                         }),
                                     ],
                                 }),
@@ -843,7 +843,7 @@ function V() {
                                     windowMs: 12e4,
                                     markers: z,
                                     label: "Utilization",
-                                    format: R,
+                                    format: C,
                                 }),
                                 (0, r.jsx)("div", {
                                     className: v.KP,
@@ -886,7 +886,7 @@ function V() {
                                 if (null == t || 0 === t.length) return null;
                                 let l = T[e],
                                     n = null != l ? K(l) : 0;
-                                return (0, r.jsx)(D, { title: e, value: R(n), points: t, format: R }, e);
+                                return (0, r.jsx)(D, { title: e, value: C(n), points: t, format: C }, e);
                             }),
                         }),
                     ],

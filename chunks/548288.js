@@ -23,11 +23,11 @@ var a = l(477900),
     y = l(42957),
     A = l(814201),
     S = l(73825),
-    P = l(793574),
-    k = l(589078),
-    U = l(97352),
-    w = l(192308);
-async function I(e) {
+    k = l(793574),
+    P = l(589078),
+    I = l(97352),
+    U = l(192308);
+async function w(e) {
     let {
             skuId: i,
             gameName: s,
@@ -41,17 +41,17 @@ async function I(e) {
             onBack: m,
         } = e,
         x = null != d,
-        h = U.A.getForSKU(i)[0]?.id;
+        h = I.A.getForSKU(i)[0]?.id;
     if (null == h) {
         let e = await (0, S.ur)(i);
         h = e[0]?.id;
     }
     x && (await Promise.all(o.filter((e) => e !== i).map((e) => (0, S.ur)(e))));
-    let v = o.flatMap((e) => U.A.getForSKU(e).map((e) => e.id));
-    return k.UnifiedCheckoutFlowManagerSingletons[k.CL.GAME_SERVER_SUBSCRIPTION_CHECKOUT].get().openCheckoutModal({
+    let v = o.flatMap((e) => I.A.getForSKU(e).map((e) => e.id));
+    return P.UnifiedCheckoutFlowManagerSingletons[P.CL.GAME_SERVER_SUBSCRIPTION_CHECKOUT].get().openCheckoutModal({
         checkoutConfiguration: { skuId: i, activeSubscription: d ?? null },
         forwardedPaymentModalProps: { initialPlanId: h, planGroup: v, skipConfirm: !0 },
-        unifiedCheckoutProviderProps: { analyticsLocations: [P.A.GAME_SERVER_SETUP_MODAL] },
+        unifiedCheckoutProviderProps: { analyticsLocations: [k.A.GAME_SERVER_SETUP_MODAL] },
         tenantParams: {
             serverName: n,
             regionId: r,
@@ -79,7 +79,7 @@ async function I(e) {
                         isDowngrade: x && !c,
                         renewalDate: d?.currentPeriodEnd,
                     }),
-                    (0, w.mM)(async () => {
+                    (0, U.mM)(async () => {
                         let { default: i } = await Promise.all([l.e(909189), l.e(489541)]).then(l.bind(l, 978084));
                         return (l) => (0, a.jsx)(i, { ...l, ...e });
                     }));
@@ -119,27 +119,33 @@ function T(e) {
     });
 }
 var _ = l(403581),
-    K = l(939249),
-    W = l(778705),
+    W = l(939249),
+    K = l(778705),
     H = l(580630),
     Z = l(682901),
     F = l(77271);
 function B(e) {
     let { nitroPriceAmount: i, priceCurrency: l } = e,
         t = s.useCallback(() => {
-            (0, W.A)({ subscriptionTier: Z.pe.TIER_2, analyticsLocations: [P.A.GAME_SERVER_PAGE] });
+            (0, K.A)({ subscriptionTier: Z.pe.TIER_2, analyticsLocations: [k.A.GAME_SERVER_PAGE] });
         }, []),
         n = (0, H.RS)(i, l);
     return (0, a.jsxs)("div", {
         className: F.kL,
         children: [
-            (0, a.jsx)(_.t, { className: F.Kk, size: "custom", width: 16, height: 16, color: "currentColor" }),
+            (0, a.jsx)(_.NitroWheelIcon, {
+                className: F.Kk,
+                size: "custom",
+                width: 16,
+                height: 16,
+                color: "currentColor",
+            }),
             (0, a.jsx)(u.E, {
                 variant: "body-xs/medium",
                 tag: "span",
                 children: D.intl.format(D.t.Sv8iic, {
                     price: n,
-                    subscribeNowHook: (e) => (0, a.jsx)(K.D, { className: F.FS, onClick: t, children: e }),
+                    subscribeNowHook: (e) => (0, a.jsx)(W.D, { className: F.FS, onClick: t, children: e }),
                 }),
             }),
         ],
@@ -329,26 +335,26 @@ function es(e) {
             coverUrl: t,
             plans: n = ei,
             initialPlanId: S,
-            initialRegionId: P,
-            initialRegionName: k,
-            initialServerName: U,
-            activeSubscription: w,
+            initialRegionId: k,
+            initialRegionName: P,
+            initialServerName: I,
+            activeSubscription: U,
             onViewServer: M,
             ...R
         } = e,
-        O = null != w,
+        O = null != U,
         _ = (0, z.A)(l, "cover") ?? t;
     s.useEffect(() => {
         (0, C.dk)();
     }, []);
-    let K = (0, d.bG)([y.A], () => y.A.getRegions()),
-        W = (0, d.bG)([y.A], () => y.A.getRegionState()),
+    let W = (0, d.bG)([y.A], () => y.A.getRegions()),
+        K = (0, d.bG)([y.A], () => y.A.getRegionState()),
         H = (0, d.bG)([y.A], () => y.A.isCreationDisabled()),
         Z = (0, d.bG)([A.A], () => A.A.getGameServers().length),
         F = (0, d.bG)([A.A], () => A.A.getMaxServers()),
         Q = !O && Z >= F,
-        [Y, es] = s.useState(U ?? ""),
-        [et, en] = s.useState(P),
+        [Y, es] = s.useState(I ?? ""),
+        [et, en] = s.useState(k),
         [er, ed] = s.useState(S ?? n[0]?.id),
         ec = (0, d.bG)([p.default], () => E.Ay.canUseShopDiscounts(p.default.getCurrentUser())),
         { isValid: eo, errors: eu } = (0, V.u)(Y),
@@ -363,7 +369,7 @@ function es(e) {
         ev = null != em ? n.findIndex((e) => e.id === em.id) : -1,
         eg = eh >= 0 && ev > eh,
         ej = O && null != em && em.id !== S,
-        eb = O && Y.trim().length > 0 && eo && Y.trim() !== (U ?? "").trim(),
+        eb = O && Y.trim().length > 0 && eo && Y.trim() !== (I ?? "").trim(),
         ep = O
             ? ej
                 ? eh >= 0 && ev >= 0 && ev < eh
@@ -373,10 +379,10 @@ function es(e) {
             : D.intl.string(D.t["3PatSz"]),
         ef = s.useMemo(
             () =>
-                [...K]
-                    .sort((e, i) => (0, L.A)(e, i, W))
+                [...W]
+                    .sort((e, i) => (0, L.A)(e, i, K))
                     .map((e) => ({ value: e, label: e.name, disabled: !0 !== e.enabled })),
-            [K, W],
+            [W, K],
         ),
         eN = s.useMemo(() => n.map((e) => ({ value: e, label: e.name })), [n]),
         eE = O ? (ej && !H) || eb : !H && !Q && Y.trim().length > 0 && eo && null != et,
@@ -386,25 +392,25 @@ function es(e) {
                 gameId: l,
                 coverUrl: t,
                 plans: n,
-                activeSubscription: w,
+                activeSubscription: U,
                 initialPlanId: er,
                 initialRegionId: et,
-                initialRegionName: k,
+                initialRegionName: P,
                 initialServerName: Y,
                 onViewServer: M,
             });
-        }, [i, l, t, n, w, er, et, k, Y, M]),
+        }, [i, l, t, n, U, er, et, P, Y, M]),
         ey = s.useCallback(() => {
             if (null != em) {
                 if (O) {
-                    if (!eE || null == w) return;
-                    (eb && (0, C.Ce)(w.id, Y.trim()),
+                    if (!eE || null == U) return;
+                    (eb && (0, C.Ce)(U.id, Y.trim()),
                         ej &&
-                            I({
+                            w({
                                 skuId: em.id,
                                 gameName: i,
                                 gameId: l,
-                                activeSubscription: w,
+                                activeSubscription: U,
                                 isPlanUpgrade: eg,
                                 planGroup: n.map((e) => e.id),
                                 onViewServer: M,
@@ -415,7 +421,7 @@ function es(e) {
                 }
                 eE &&
                     null != et &&
-                    (I({
+                    (w({
                         skuId: em.id,
                         gameName: i,
                         gameId: l,
@@ -426,7 +432,7 @@ function es(e) {
                     }),
                     R.onClose());
             }
-        }, [O, eg, ej, eb, w, eE, em, n, et, i, l, Y, R, eC, M]),
+        }, [O, eg, ej, eb, U, eE, em, n, et, i, l, Y, R, eC, M]),
         eA = X.eh[r.X.SHOCKBYTE] ?? "";
     return (0, a.jsxs)(m.d, {
         ...R,
@@ -438,7 +444,7 @@ function es(e) {
                 children: (0, a.jsx)(x.K, {
                     size: "sm",
                     variant: "icon-only",
-                    icon: h.P,
+                    icon: h.XSmallIcon,
                     onClick: R.onClose,
                     "aria-label": D.intl.string(D.t.cpT0Cq),
                 }),
@@ -525,7 +531,7 @@ function es(e) {
                                                 ],
                                             }),
                                             O
-                                                ? (0, a.jsx)(j.k, { value: k ?? "", onChange: $.tEg, disabled: !0 })
+                                                ? (0, a.jsx)(j.k, { value: P ?? "", onChange: $.tEg, disabled: !0 })
                                                 : (0, a.jsx)(c.Pw, {
                                                       serialize: (e) => e.id,
                                                       isSelected: (e) => e.id === et,

@@ -37,7 +37,7 @@ n.d(
                                 onClick: p,
                                 className: f.GI,
                                 "aria-label": m.intl.string(d.default["6/dkHh"]),
-                                children: (0, r.jsx)(o.P, { color: "currentColor" }),
+                                children: (0, r.jsx)(o.XSmallIcon, { color: "currentColor" }),
                             }),
                         ],
                     }),

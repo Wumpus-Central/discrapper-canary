@@ -11,8 +11,8 @@ var i = n(620632),
 let _ = +d.A.Millis.HOUR,
     E = 7 * d.A.Millis.DAY,
     A = +d.A.Millis.DAY,
-    h = r.w.get("lastNonRequiredUpdateShown", Date.now()),
-    f = ["win", "osx"],
+    f = r.w.get("lastNonRequiredUpdateShown", Date.now()),
+    h = ["win", "osx"],
     I = new o.A("AutoUpdateManager");
 class p extends s.A {
     _checkInterval = null;
@@ -49,7 +49,7 @@ class p extends s.A {
                 : location.reload(!0));
     }
     isNewUpdater() {
-        return f.includes((0, c.cZ)() ?? "");
+        return h.includes((0, c.cZ)() ?? "");
     }
     handlePostConnectionOpen() {
         (this.checkForUpdates(),
@@ -88,11 +88,11 @@ class p extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "218d236ab7aa21dd57b463500667e2e9456e0e7d" === e.body.hash)
+                    if (null == e.body || "a4ad4c316881b4ec17a440c54f4b0cc344eb9a4a" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : A;
-                    if (Date.now() - h > t)
+                    if (Date.now() - f > t)
                         return (r.w.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1));
                 },
                 () => this._handleUpdateError(),

@@ -122,19 +122,19 @@ function en(e) {
                     .map((e) => {
                         switch (e) {
                             case Z.MOBILE:
-                                return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(m.MobilePhoneIcon, { size: "xxs", color: "currentColor" }, e);
                             case Z.ANDROID:
                                 return (0, l.jsx)($, { width: h.E.xxs, height: h.E.xxs, color: "currentColor" }, e);
                             case Z.IOS:
-                                return (0, l.jsx)(g.z, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(g.AppleNeutralIcon, { size: "xxs", color: "currentColor" }, e);
                             case Z.PLAYSTATION:
-                                return (0, l.jsx)(p.X, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(p.PlaystationNeutralIcon, { size: "xxs", color: "currentColor" }, e);
                             case Z.XBOX:
-                                return (0, l.jsx)(A.Y, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(A.XboxNeutralIcon, { size: "xxs", color: "currentColor" }, e);
                             case Z.VR:
-                                return (0, l.jsx)(c.G, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(c.VrHeadsetIcon, { size: "xxs", color: "currentColor" }, e);
                             case Z.DESKTOP:
-                                return (0, l.jsx)(x.k, { size: "xxs", color: "currentColor" }, e);
+                                return (0, l.jsx)(x.ScreenIcon, { size: "xxs", color: "currentColor" }, e);
                             default:
                                 return null;
                         }

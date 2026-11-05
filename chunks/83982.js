@@ -17,24 +17,24 @@ var i = n(477900),
     v = n(525505),
     E = n(550946),
     C = n(697682),
-    j = n(259264),
-    I = n(869146),
+    I = n(259264),
+    j = n(869146),
     S = n(718734),
     _ = n(854627),
     b = n(912630),
     N = n(530804),
     y = n(46653),
-    T = n(754712),
-    L = n(531685),
+    L = n(754712),
+    T = n(531685),
     D = n(562153),
     R = n(51082),
     k = n(566566),
-    w = n(289552),
-    M = n(652215),
+    M = n(289552),
+    w = n(652215),
     O = n(731854),
     G = n(792996),
-    V = n(584841);
-let P = o._3.SIZE_80,
+    P = n(584841);
+let V = o._3.SIZE_80,
     H = o._3.SIZE_40;
 n.d(
     t,
@@ -52,25 +52,25 @@ n.d(
                     onVideoResize: m,
                     blocked: b,
                     ignored: N,
-                    noVideoRender: w = !1,
+                    noVideoRender: M = !1,
                     pulseSpeakingIndicator: F = !1,
                     paused: U = !1,
                 } = e,
-                z = T.Ay.getVideoComponent(),
-                W = (0, a.bG)([y.default], () => y.default.getId()),
+                W = L.Ay.getVideoComponent(),
+                z = (0, a.bG)([y.default], () => y.default.getId()),
                 { user: $, streamId: B, speaking: Z } = t,
-                Y = $.id === W,
+                Y = $.id === z,
                 Q = (0, R.Ay)(t),
-                K = (0, a.bG)([L.A], () => L.A.isFocused()),
-                X = (0, a.bG)([I.A], () => I.A.getWindowFocused(M.MLl.CHANNEL_CALL_POPOUT)),
-                q = (0, a.bG)([T.Ay], () => null != $.id && T.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
+                K = (0, a.bG)([T.A], () => T.A.isFocused()),
+                X = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
+                q = (0, a.bG)([L.Ay], () => null != $.id && L.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
                     $.id,
                     t.type,
                 ]),
                 J = (0, E.A)(n.guild_id, $.id),
                 ee = D.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${G.intl.string(G.t["pFO/Ph"])}` : ""),
                 et = Z && (X || K),
-                en = o < 124 ? H : P,
+                en = o < 124 ? H : V,
                 { avatarSrc: ei, avatarDecorationSrc: el } = (0, _.A)({
                     userId: $.id,
                     guildId: n.guild_id,
@@ -90,27 +90,27 @@ n.d(
                 let { channel: e, selectedParticipant: t, user: n, isStageUnifiedCall: i } = ec.current;
                 !i && e.isGuildStageVoice() && !Q && t?.id === n.id && p.A.selectParticipant(e.id, null);
             }, [Q]),
-            s && !q && !w && Q && !u && null != z && T.Ay.supports(O.O5.VIDEO))
+            s && !q && !M && Q && !u && null != W && L.Ay.supports(O.O5.VIDEO))
                 ? null != er && null == ea
                     ? (0, i.jsx)(k.A, { avError: er, userId: t.id, width: o, selected: u })
                     : (0, i.jsx)(
-                          j.A,
+                          I.A,
                           {
                               onResize: m,
-                              wrapperClassName: c !== x.N.CALL_TILE ? V.tN : void 0,
-                              className: V.Qs,
+                              wrapperClassName: c !== x.N.CALL_TILE ? P.tN : void 0,
+                              className: P.Qs,
                               mirror: Y,
                               streamId: B,
-                              videoComponent: z,
+                              videoComponent: W,
                               fit: d,
-                              videoSpinnerContext: $.id === W ? g.u.SELF_VIDEO : g.u.REMOTE_VIDEO,
+                              videoSpinnerContext: $.id === z ? g.u.SELF_VIDEO : g.u.REMOTE_VIDEO,
                               paused: U,
                               userId: $.id,
                           },
                           B,
                       )
                 : (0, i.jsx)("div", {
-                      className: r()(V.Qs, { [V.Kx]: b || N }),
+                      className: r()(P.Qs, { [P.Kx]: b || N }),
                       children: (0, i.jsx)(C.A, {
                           "aria-label": ee,
                           avatarDecoration: el,
@@ -135,8 +135,8 @@ n.d(
                       text: G.intl.string(G.t["6mh541"]),
                       position: "bottom",
                       children: (0, i.jsx)("div", {
-                          className: r()(V.h5, V.bG),
-                          children: (0, i.jsx)(c.e, { color: d.A.colors.ICON_FEEDBACK_WARNING }),
+                          className: r()(P.h5, P.bG),
+                          children: (0, i.jsx)(c.ConnectionUnknownIcon, { color: d.A.colors.ICON_FEEDBACK_WARNING }),
                       }),
                   })
                 : l
@@ -144,8 +144,8 @@ n.d(
                         text: G.intl.string(G.t.HFwRpk),
                         position: "bottom",
                         children: (0, i.jsx)("div", {
-                            className: V.bG,
-                            children: (0, i.jsx)(m.E, { color: d.A.colors.STATUS_WARNING_BACKGROUND }),
+                            className: P.bG,
+                            children: (0, i.jsx)(m.CircleErrorIcon, { color: d.A.colors.STATUS_WARNING_BACKGROUND }),
                         }),
                     })
                   : n.user.id === o && p
@@ -153,11 +153,11 @@ n.d(
                           text: G.intl.string(G.t["8n9gj5"]),
                           position: "bottom",
                           children: (0, i.jsx)("div", {
-                              className: V.bG,
-                              children: (0, i.jsx)(m.E, { color: d.A.colors.STATUS_WARNING_BACKGROUND }),
+                              className: P.bG,
+                              children: (0, i.jsx)(m.CircleErrorIcon, { color: d.A.colors.STATUS_WARNING_BACKGROUND }),
                           }),
                       })
-                    : (0, i.jsx)(w.A, { userId: n.user.id });
+                    : (0, i.jsx)(M.A, { userId: n.user.id });
         },
     },
 );

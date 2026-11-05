@@ -67,11 +67,11 @@ var v = l(503698),
     C = (((n = {}).PAGE = "page"), (n.ITEM = "item"), n),
     T = (((r = {}).PAGINATE = "paginate"), (r.TRUNCATE = "truncate"), r);
 let I = new Set(["SkuList", "SubLayout", "SubTemplate"]);
-var w = l(15447);
-function L(e) {
+var L = l(15447);
+function w(e) {
     let { index: t, active: l, setPage: n } = e;
     return (0, a.jsx)("div", {
-        className: k()(w.page, { [w.active]: l }),
+        className: k()(L.page, { [L.active]: l }),
         children: (0, a.jsx)(S.Q, {
             role: "button",
             variant: l ? "always-white" : "secondary",
@@ -103,11 +103,11 @@ function A(e) {
             }
             return e.map((e, l) =>
                 "number" == typeof e
-                    ? (0, a.jsx)(L, { index: e, active: t === e, setPage: n }, e)
+                    ? (0, a.jsx)(w, { index: e, active: t === e, setPage: n }, e)
                     : (0, a.jsx)(
                           "div",
                           {
-                              className: w.page,
+                              className: L.page,
                               children: (0, a.jsx)(g, { variant: "body-md/semibold", content: "..." }),
                           },
                           `ellipsis-${l}`,
@@ -116,7 +116,7 @@ function A(e) {
         }, [t, l, n, r]);
     return (0, a.jsx)("div", {
         ref: o,
-        className: w.pagination,
+        className: L.pagination,
         children: (0, a.jsxs)(f, {
             direction: "horizontal",
             justify: "center",
@@ -131,7 +131,7 @@ function A(e) {
                     },
                 }),
                 (0, a.jsx)("div", {
-                    className: w.pageNumbers,
+                    className: L.pageNumbers,
                     children: (0, a.jsx)(f, {
                         direction: "horizontal",
                         justify: "center",
@@ -211,8 +211,8 @@ let P = function (e) {
                     value: l,
                     children: (0, a.jsx)("div", {
                         ref: o,
-                        className: w.gridContainer,
-                        children: (0, a.jsx)("div", { className: k()(w.grid, w[`columns${r}`]), children: f }),
+                        className: L.gridContainer,
+                        children: (0, a.jsx)("div", { className: k()(L.grid, L[`columns${r}`]), children: f }),
                     }),
                 }),
                 h && "bottom" === m && (0, a.jsx)(A, { page: c, pages: d, setPage: p }),
@@ -525,9 +525,9 @@ let eu = function (e) {
         let { children: t, columns: l = 1, rows: n = 1 } = e,
             r = Math.max(1, Math.min(6, Math.floor(l))),
             s = Math.max(1, Math.min(6, Math.floor(n))),
-            i = w[`gridItemColumns${r}`],
-            o = w[`gridItemRows${s}`];
-        return (0, a.jsx)("div", { className: `${w.gridItem} ${i} ${o}`, children: t });
+            i = L[`gridItemColumns${r}`],
+            o = L[`gridItemRows${s}`];
+        return (0, a.jsx)("div", { className: `${L.gridItem} ${i} ${o}`, children: t });
     };
 function em(e) {
     let { color: t, children: l } = e;
@@ -678,8 +678,8 @@ let eI = function (e) {
         S = s.useRef(null),
         T = s.useRef(null),
         I = (0, ej.bG)([eE.Ay], () => eE.Ay.keyboardModeEnabled),
-        w = (0, ej.bG)([eE.Ay], () => eE.Ay.useReducedMotion),
-        L = s.useMemo(
+        L = (0, ej.bG)([eE.Ay], () => eE.Ay.useReducedMotion),
+        w = s.useMemo(
             () =>
                 s.Children.map(t, (e) =>
                     s.isValidElement(e)
@@ -770,7 +770,7 @@ let eI = function (e) {
             (e) => {
                 let t = D.current;
                 if (null == t) return;
-                let l = w ? "auto" : "smooth",
+                let l = L ? "auto" : "smooth",
                     n = Math.max(0, t.scrollWidth - t.clientWidth);
                 if (x) {
                     let r = "right" === e ? t.clientWidth : -t.clientWidth,
@@ -814,7 +814,7 @@ let eI = function (e) {
                 let s = B();
                 null != s && (T.current = s);
             },
-            [x, c, w, F, B],
+            [x, c, L, F, B],
         ),
         U = s.useCallback(() => G("left"), [G]),
         Y = s.useCallback(() => G("right"), [G]),
@@ -840,7 +840,7 @@ let eI = function (e) {
         }, [z, K]);
     (s.useLayoutEffect(() => {
         x || z() || K();
-    }, [L, x, z, K]),
+    }, [w, x, z, K]),
         s.useEffect(() => {
             R();
         }, [I, R]));
@@ -860,7 +860,7 @@ let eI = function (e) {
                         (0, a.jsx)("div", {
                             className: k()(eC.x6, { [eC.r9]: !M && r }),
                             children: (0, a.jsx)(ey.K, {
-                                icon: ev.Z,
+                                icon: ev.ArrowLargeLeftIcon,
                                 size: o,
                                 variant: "overlay-secondary",
                                 onClick: $,
@@ -873,7 +873,7 @@ let eI = function (e) {
                         (0, a.jsx)("div", {
                             className: k()(eC.x6, { [eC.r9]: !P && r }),
                             children: (0, a.jsx)(ey.K, {
-                                icon: ek.K,
+                                icon: ek.ArrowLargeRightIcon,
                                 size: o,
                                 variant: "overlay-secondary",
                                 onClick: W,
@@ -959,7 +959,7 @@ let eI = function (e) {
                                               },
                                               { once: !0 },
                                           ),
-                                          t.scrollTo({ left: l, behavior: w ? "auto" : "smooth" })),
+                                          t.scrollTo({ left: l, behavior: L ? "auto" : "smooth" })),
                                       (S.current = n),
                                       (T.current = n),
                                       R());
@@ -968,13 +968,13 @@ let eI = function (e) {
                       onScroll: (e) => {
                           y.current || ((j.current = e.target.scrollLeft), F());
                       },
-                      children: L,
+                      children: w,
                   }),
         ],
     });
 };
-var ew = l(196637);
-let eL = [
+var eL = l(196637);
+let ew = [
     { id: "xxs", label: "xxs", value: "xxs" },
     { id: "xs", label: "xs", value: "xs" },
     { id: "sm", label: "sm", value: "sm" },
@@ -1364,7 +1364,7 @@ let eB = function (e) {
                                     (0, a.jsx)(
                                         Z.D,
                                         {
-                                            className: ew.j,
+                                            className: eL.j,
                                             onClick: () => console.log(t),
                                             children: (0, a.jsxs)(p.B, {
                                                 direction: "vertical",
@@ -1410,7 +1410,7 @@ let eB = function (e) {
                             (0, a.jsx)(eg.MG, {
                                 children: (0, a.jsx)(ef.l, {
                                     value: l,
-                                    options: eL,
+                                    options: ew,
                                     onSelectionChange: n,
                                     label: "Children Gap",
                                     selectionMode: "single",
@@ -1420,7 +1420,7 @@ let eB = function (e) {
                             (0, a.jsx)(eg.MG, {
                                 children: (0, a.jsx)(ef.l, {
                                     value: r,
-                                    options: eL,
+                                    options: ew,
                                     onSelectionChange: i,
                                     label: "Edge Fade Space",
                                     selectionMode: "single",
@@ -2511,7 +2511,7 @@ l(673033);
 let tI = function () {
         return null;
     },
-    tw = {
+    tL = {
         ContainedHero: eK,
         FullHero: eJ,
         NarrowContent: eG,
@@ -2612,10 +2612,10 @@ let tI = function () {
         Image: et,
         Any: tI,
     };
-function tL() {
+function tw() {
     let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return s.useMemo(() => {
-        let t = (0, B.cloneDeep)(tw);
+        let t = (0, B.cloneDeep)(tL);
         if (null != e) for (let [l, n] of Object.entries(e)) null != n && (t[l] = n);
         return t;
     }, [e]);
@@ -2658,7 +2658,7 @@ function tM(e) {
 }
 function t_(e) {
     let { layout: t, overrides: l, onError: n, onEmptyLayout: r } = e,
-        i = tL({ overrides: l });
+        i = tw({ overrides: l });
     return (
         s.useEffect(() => {
             0 === t.children.length && r?.();
@@ -3016,7 +3016,7 @@ let tG = {
                 id: "skulist",
                 component: function (e) {
                     let { skuIds: t, sortPurchased: l, eagerLoad: n, showSkeleton: r } = e,
-                        s = tL();
+                        s = tw();
                     return (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(o.D, {
@@ -3225,7 +3225,7 @@ let tK = function (e) {
                                                     let t =
                                                         arguments.length > 1 && void 0 !== arguments[1]
                                                             ? arguments[1]
-                                                            : tw;
+                                                            : tL;
                                                     try {
                                                         return (tA(e, t), !0);
                                                     } catch (e) {

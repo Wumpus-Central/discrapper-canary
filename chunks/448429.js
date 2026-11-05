@@ -11,8 +11,8 @@ var r = n(503698),
     m = n(834730),
     A = n(773669),
     f = n(5377),
-    E = n(722178),
-    h = n(993408),
+    h = n(722178),
+    E = n(993408),
     x = n(519707),
     p = n(821701),
     _ = n(536572),
@@ -85,32 +85,32 @@ n.d(
             let { user: t, previewSkuId: n, nitroChurnCTA: r, nitroJoinCTA: m } = e,
                 f = (0, a.bG)([A.default], () => A.default.locale),
                 { product: x, purchase: g } = (0, p.A)(n),
-                R = E.Ay.canUseCollectibles(t),
-                T = (0, h.G0)(x),
-                v = (0, h.gA)(g),
+                R = h.Ay.canUseCollectibles(t),
+                T = (0, E.G0)(x),
+                v = (0, E.gA)(g),
                 O = !R && v,
                 k = null != g && !O,
-                P = (0, _.Sw)(g),
-                N = (0, _.VG)(x),
-                D = T || v,
-                I = x?.type ?? g?.type,
-                F = !k && (!D || I === s.R.AVATAR_DECORATION || I === s.R.PROFILE_EFFECT);
+                N = (0, _.Sw)(g),
+                P = (0, _.VG)(x),
+                I = T || v,
+                D = x?.type ?? g?.type,
+                F = !k && (!I || D === s.R.AVATAR_DECORATION || D === s.R.PROFILE_EFFECT);
             if (null == x && null == g) return null;
             function M(e) {
-                let t = e && D ? c.h : "div";
+                let t = e && I ? c.h : "div";
                 return (0, l.jsx)("div", {
-                    className: i()(j.kL, { [j.D7]: !k && !e, [j.$N]: e, [j.d7]: e && D }),
+                    className: i()(j.kL, { [j.D7]: !k && !e, [j.$N]: e, [j.d7]: e && I }),
                     children: (0, l.jsxs)(t, {
                         className: j.WH,
-                        color: e && D ? "nitro-pink" : void 0,
+                        color: e && I ? "nitro-pink" : void 0,
                         children: [
                             (0, l.jsxs)(u.D, {
                                 color: "text-strong",
                                 variant: e ? "body-md/semibold" : "body-sm/semibold",
                                 className: e ? j.DD : void 0,
                                 children: [
-                                    e && D && (0, l.jsx)(d.t, { size: "xs", color: "currentColor" }),
-                                    (0, o.isEmpty)(P) ? N : P,
+                                    e && I && (0, l.jsx)(d.NitroWheelIcon, { size: "xs", color: "currentColor" }),
+                                    (0, o.isEmpty)(N) ? P : N,
                                 ],
                             }),
                             k

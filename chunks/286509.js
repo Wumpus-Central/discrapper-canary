@@ -31,7 +31,7 @@ let m = s.memo(function (e) {
                         children: t,
                     }),
                     null != m
-                        ? (0, i.jsx)(c.a, {
+                        ? (0, i.jsx)(c.ChevronSmallDownIcon, {
                               size: "custom",
                               color: "currentColor",
                               className: r()(d.Cj, { [d.Tu]: m }),

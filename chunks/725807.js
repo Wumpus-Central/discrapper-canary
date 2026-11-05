@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(531685),
     E = n(783420),
     A = n(572079),
-    h = n(682901),
-    f = n(347789);
+    f = n(682901),
+    h = n(347789);
 n.d(
     t,
     {},
@@ -24,8 +24,8 @@ n.d(
                     className: I,
                     textOptions: p,
                     iconClassName: m,
-                    postSuccessGuild: g,
-                    onSubscribeModalClose: T,
+                    postSuccessGuild: T,
+                    onSubscribeModalClose: g,
                     premiumModalAnalyticsLocation: S,
                     showIcon: N = !0,
                     disableShine: C,
@@ -43,33 +43,33 @@ n.d(
                     buttonTextOverride: p?.textOverride,
                     defaultTextOverride: p?.subscribeText,
                 }),
-                U = D ?? (t === h.pe.TIER_1 ? o.$n.Colors.PRIMARY : o.$n.Colors.GREEN),
+                U = D ?? (t === f.pe.TIER_1 ? o.$n.Colors.PRIMARY : o.$n.Colors.GREEN),
                 w = (0, i.jsxs)(d.wL, {
                     "data-migration-pending": !0,
                     disabled: M.disabled,
-                    innerClassName: f.UO,
+                    innerClassName: h.UO,
                     color: U,
                     size: a,
                     className: R,
-                    wrapperClassName: s()({ [f.PJ]: L && t === h.pe.TIER_2, [f.Up]: L && t === h.pe.TIER_1 }, I),
+                    wrapperClassName: s()({ [h.PJ]: L && t === f.pe.TIER_2, [h.Up]: L && t === f.pe.TIER_1 }, I),
                     buttonShineClassName:
                         "buttonShineClassName" in v
                             ? v.buttonShineClassName
                             : U === o.XD.BRAND_INVERTED
-                              ? f.nz
+                              ? h.nz
                               : void 0,
                     pauseAnimation: !P || C,
                     ...v,
                     children: [
-                        N && (0, i.jsx)(c.t, { size: "md", color: b, className: s()(f.PC, m) }),
-                        (0, i.jsx)("span", { className: s()(f._d, p?.textClassName), children: M.buttonText }),
+                        N && (0, i.jsx)(c.NitroWheelIcon, { size: "md", color: b, className: s()(h.PC, m) }),
+                        (0, i.jsx)("span", { className: s()(h._d, p?.textClassName), children: M.buttonText }),
                     ],
                 });
             return (0, i.jsx)(E.A, {
                 onClick: n,
                 subscriptionTier: t,
-                postSuccessGuild: g,
-                onSubscribeModalClose: T,
+                postSuccessGuild: T,
+                onSubscribeModalClose: g,
                 premiumModalAnalyticsLocation: S,
                 applicationId: O,
                 confirmationFooter: y,

@@ -1,18 +1,19 @@
+n.r(t);
 var i = n(477900);
 n(582128);
-var l = n(646514),
-    r = n(996682),
+var r = n(646514),
+    l = n(996682),
     s = n(27989);
 n.d(
     t,
     {},
     {
-        j: function (e) {
+        ConnectionAverageIcon: function (e) {
             let {
                     size: t = "md",
                     width: n,
                     height: a,
-                    color: o = l.A.colors.ICON_FEEDBACK_WARNING,
+                    color: o = r.A.colors.ICON_FEEDBACK_WARNING,
                     colorClass: u = "",
                     ...d
                 } = e,
@@ -20,7 +21,7 @@ n.d(
                 h = c?.width ?? n,
                 f = c?.height ?? a;
             return (0, i.jsxs)("svg", {
-                ...(0, r.A)(d),
+                ...(0, l.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: h,
                 height: f,

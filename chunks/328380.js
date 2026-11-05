@@ -1,11 +1,11 @@
-var i,
-    s = t(477900);
+var s,
+    i = t(477900);
 t(582128);
 var a = t(503698),
     l = t.n(a),
     r = t(646514),
-    d = t(939249),
-    o = t(534514),
+    o = t(939249),
+    d = t(534514),
     c = t(104510),
     m = t(834730),
     u = t(907878),
@@ -13,7 +13,7 @@ var a = t(503698),
     v = t(105518),
     g = t(792996),
     j = t(141380),
-    b = (((i = {}).CLICKABLE = "clickable"), (i.VIEWABLE = "viewable"), (i.DISABLED = "disabled"), i);
+    b = (((s = {}).CLICKABLE = "clickable"), (s.VIEWABLE = "viewable"), (s.DISABLED = "disabled"), s);
 t.d(
     n,
     {},
@@ -22,16 +22,16 @@ t.d(
             let {
                     className: n,
                     guildId: t,
-                    game: i,
+                    game: s,
                     onClick: a,
                     imageClassName: b,
                     titleClassName: h,
-                    variant: C = "clickable",
-                    location: f,
+                    variant: f = "clickable",
+                    location: C,
                 } = e,
-                p = (0, x.A)(i.gameId, "cover"),
+                I = (0, x.A)(s.gameId, "cover"),
                 {
-                    containerClass: I,
+                    containerClass: p,
                     boostGemColor: N,
                     boostPriceTextColor: k,
                     handleClick: A,
@@ -41,7 +41,7 @@ t.d(
                         boostGemColor: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         boostPriceTextColor: void 0,
                         handleClick: () => {
-                            ((0, u.oT)(t, i.id, i.name, f), a?.(i));
+                            ((0, u.oT)(t, s.id, s.name, C), a?.(s));
                         },
                     },
                     viewable: {
@@ -56,39 +56,39 @@ t.d(
                         boostPriceTextColor: void 0,
                         handleClick: void 0,
                     },
-                }[C];
-            return (0, s.jsxs)(d.D, {
-                "aria-disabled": "disabled" === C,
-                className: l()(j.LO, I, n),
+                }[f];
+            return (0, i.jsxs)(o.D, {
+                "aria-disabled": "disabled" === f,
+                className: l()(j.LO, p, n),
                 onClick: A,
                 children: [
-                    (0, s.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: l()(j.Rf, b),
                         children: [
-                            (0, s.jsx)("img", { className: j.Sl, alt: "", src: p ?? "" }),
-                            (0, s.jsx)("div", { className: j.Gj }),
-                            (0, s.jsx)("div", { className: j.Uf }),
+                            (0, i.jsx)("img", { className: j.Sl, alt: "", src: I ?? "" }),
+                            (0, i.jsx)("div", { className: j.Gj }),
+                            (0, i.jsx)("div", { className: j.Uf }),
                         ],
                     }),
-                    (0, s.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: l()(j.FS, h),
                         children: [
-                            (0, s.jsx)(o.D, {
+                            (0, i.jsx)(d.D, {
                                 variant: "heading-xs/semibold",
                                 lineClamp: 2,
-                                title: i.name,
-                                children: i.name,
+                                title: s.name,
+                                children: s.name,
                             }),
-                            (0, s.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 className: j.PW,
                                 children: [
-                                    (0, s.jsx)(c._, { size: "sm", color: N }),
-                                    (0, s.jsx)(m.E, {
+                                    (0, i.jsx)(c.BoostGemIcon, { size: "sm", color: N }),
+                                    (0, i.jsx)(m.E, {
                                         variant: "body-sm/medium",
                                         color: k,
                                         children: g.intl.formatToPlainString(
-                                            i.plans.length > 1 ? v.default["G/aTXi"] : v.default.r9pa9K,
-                                            { boostCount: i.baseCost },
+                                            s.plans.length > 1 ? v.default["G/aTXi"] : v.default.r9pa9K,
+                                            { boostCount: s.baseCost },
                                         ),
                                     }),
                                 ],

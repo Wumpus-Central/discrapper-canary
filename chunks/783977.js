@@ -1,35 +1,36 @@
+s.r(h);
 var t = s(477900);
 s(582128);
 var i = s(646514),
-    c = s(996682),
-    e = s(27989);
+    r = s(996682),
+    c = s(27989);
 s.d(
     h,
     {},
     {
-        R: function (a) {
+        FiltersHorizontalIcon: function (a) {
             let {
                     size: h = "md",
                     width: s,
-                    height: r,
-                    color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: n = "",
-                    ...p
+                    height: e,
+                    color: n = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: o = "",
+                    ...l
                 } = a,
-                l = (0, e.J)(h),
-                o = l?.width ?? s,
-                w = l?.height ?? r;
+                d = (0, c.J)(h),
+                p = d?.width ?? s,
+                w = d?.height ?? e;
             return (0, t.jsx)("svg", {
-                ...(0, c.A)(p),
+                ...(0, r.A)(l),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: o,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: (0, t.jsx)("path", {
-                    fill: "string" == typeof d ? d : d.css,
+                    fill: "string" == typeof n ? n : n.css,
                     d: "M22 5a1 1 0 0 1-1 1h-8.2a2.5 2.5 0 1 1 0-2H21a1 1 0 0 1 1 1ZM6 5c0 .34.04.67.11 1H3a1 1 0 0 1 0-2h3.11A4.5 4.5 0 0 0 6 5ZM22 19a1 1 0 0 1-1 1h-8.2a2.5 2.5 0 1 1 0-2H21a1 1 0 0 1 1 1ZM6 19c0 .34.04.67.11 1H3a1 1 0 1 1 0-2h3.11A4.5 4.5 0 0 0 6 19ZM21 13a1 1 0 1 0 0-2h-3.2a2.5 2.5 0 1 0 0 2H21ZM11.11 13a4.5 4.5 0 0 1 0-2H3a1 1 0 1 0 0 2h8.11Z",
-                    className: n,
+                    className: o,
                 }),
             });
         },

@@ -1,25 +1,25 @@
-var s = n(477900);
-n(582128);
-var e = n(855986),
-    r = n(477782),
-    a = n(366605),
-    c = n(816662),
-    d = n(543465),
-    l = n(792996);
-n.d(
-    t,
+var s = t(477900);
+t(582128);
+var e = t(855986),
+    r = t(477782),
+    c = t(366605),
+    a = t(816662),
+    d = t(543465),
+    o = t(792996);
+t.d(
+    n,
     {},
     {
         A: function (i) {
-            let t = (0, e.bG)([d.Ay], () => d.Ay.isMessagesFavorite(i.id));
+            let n = (0, e.bG)([d.Ay], () => d.Ay.isMessagesFavorite(i.id));
             if (!i.isPrivate()) return null;
-            let n = t ? l.intl.string(l.t.vDYmad) : l.intl.string(l.t["uKw3A+"]);
+            let t = n ? o.intl.string(o.t.vDYmad) : o.intl.string(o.t["uKw3A+"]);
             return (0, s.jsx)(r.Dr, {
                 id: "pin-dm",
-                label: n,
-                iconLeft: a.t,
-                leadingAccessory: { type: "icon", icon: a.t },
-                action: () => (0, c.xl)(i.id, !t),
+                label: t,
+                iconLeft: c.PinIcon,
+                leadingAccessory: { type: "icon", icon: c.PinIcon },
+                action: () => (0, a.xl)(i.id, !n),
             });
         },
     },

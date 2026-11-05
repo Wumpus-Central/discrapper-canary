@@ -21,8 +21,8 @@ var r = s(477900),
     E = s(27232),
     _ = s(555704),
     v = s(297778),
-    S = s(25277),
-    A = s(583613),
+    A = s(25277),
+    S = s(583613),
     w = s(327143),
     N = (s(615300), s(664668));
 (x.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, x.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css);
@@ -89,7 +89,7 @@ class k extends n.PureComponent {
         let s = this.getData()[t];
         return null != s ? s.name : null;
     };
-    memoizedData = (0, A.L_)(function (e, t) {
+    memoizedData = (0, S.L_)(function (e, t) {
         let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return s ? [...t] : [e, ...t];
     });
@@ -104,7 +104,9 @@ class k extends n.PureComponent {
                 (0, r.jsxs)("div", {
                     className: P.O1,
                     children: [
-                        s === j.dD.TRENDING_GIFS ? (0, r.jsx)(_.U, { className: P.Yl, color: "currentColor" }) : null,
+                        s === j.dD.TRENDING_GIFS
+                            ? (0, r.jsx)(_.AnalyticsIcon, { className: P.Yl, color: "currentColor" })
+                            : null,
                         (0, r.jsx)("span", { className: P.yb, children: t }),
                     ],
                 }),
@@ -162,7 +164,7 @@ class k extends n.PureComponent {
         return null != e ? e.getCoordsMap() : {};
     };
     render() {
-        return (0, r.jsx)(S.A, {
+        return (0, r.jsx)(A.A, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
@@ -171,13 +173,13 @@ class k extends n.PureComponent {
         });
     }
 }
-function O(e) {
+function L(e) {
     let t = (0, a.bG)([g.A], () => g.A.getTrendingCategories()),
         s = (0, f.rM)(),
         n = (0, T.d5)();
     return (0, r.jsx)(k, { ...e, ...n, trendingCategories: t, favorites: s });
 }
-var L = s(732139),
+var O = s(732139),
     b = s(650583),
     H = s(986531);
 function W(e) {
@@ -298,7 +300,7 @@ class U extends n.PureComponent {
                     onClick: this.handleClearQuery,
                     className: H.Gv,
                     "aria-label": G.intl.string(G.t["13/7kX"]),
-                    children: (0, r.jsx)(d.r, { size: "md", color: "currentColor" }),
+                    children: (0, r.jsx)(d.ArrowSmallLeftIcon, { size: "md", color: "currentColor" }),
                 })),
             (0, r.jsxs)(m.A, { align: m.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
         );
@@ -318,7 +320,7 @@ class U extends n.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, r.jsx)(O, { className: e, hideFavoritesTile: u, onSelectItem: this.handleSelectItem })
+            ? (0, r.jsx)(L, { className: e, hideFavoritesTile: u, onSelectItem: this.handleSelectItem })
             : (0, r.jsx)(T.Ay, {
                   className: e,
                   data:
@@ -347,9 +349,9 @@ class U extends n.PureComponent {
     render() {
         let { className: e, forwardedRef: t } = this.props;
         return (0, r.jsxs)("div", {
-            id: L.ni,
+            id: O.ni,
             role: "tabpanel",
-            "aria-labelledby": L.g9,
+            "aria-labelledby": O.g9,
             className: i()(H.kL, e),
             onClick: W,
             ref: t,

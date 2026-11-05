@@ -19,27 +19,27 @@ var i = n(477900),
     m = n(652215),
     b = n(792996),
     j = n(496434);
-function v(e) {
+function k(e) {
     let { guild: t, channel: n, onClose: l, newChannel: g, inSettings: x, ...p } = e,
-        [m, v] = s.useState(""),
-        [k, w] = s.useState({}),
-        [C, R] = s.useState(!1),
-        [S, T] = s.useState(null),
+        [m, k] = s.useState(""),
+        [v, w] = s.useState({}),
+        [C, T] = s.useState(!1),
+        [R, S] = s.useState(null),
         G = s.useRef(null),
         H = (0, u.Ay)(n),
-        { roles: O, members: N, getRichTag: M } = (0, E.K)(t, n, n.accessPermissions, m),
-        _ = A.A.useSections({ roles: O, members: N }),
-        I = g && 0 === Object.keys(k).length,
-        L = (0, h.ke)(n.type) ? r.I : a.t;
+        { roles: O, members: L, getRichTag: N } = (0, E.K)(t, n, n.accessPermissions, m),
+        I = A.A.useSections({ roles: O, members: L }),
+        M = g && 0 === Object.keys(v).length,
+        _ = (0, h.ke)(n.type) ? r.TextLockIcon : a.VoiceLockIcon;
     return (0, i.jsx)(A.A.Provider, {
         listRef: G,
         query: m,
-        setQuery: v,
-        pendingAdditions: k,
+        setQuery: k,
+        pendingAdditions: v,
         setPendingAdditions: w,
         roles: O,
-        members: N,
-        getRichTag: M,
+        members: L,
+        getRichTag: N,
         children: (0, i.jsx)(A.A.Modal, {
             ...p,
             title: b.intl.string(b.t.dMJ3Y6),
@@ -50,7 +50,7 @@ function v(e) {
                         className: j.HA,
                         variant: "body-lg/normal",
                         color: "text-default",
-                        children: [(0, i.jsx)(L, { className: j.p, size: "sm", color: "currentColor" }), H],
+                        children: [(0, i.jsx)(_, { className: j.p, size: "sm", color: "currentColor" }), H],
                     }),
                     n.isGuildStageVoice() &&
                         (0, i.jsx)(c.E, {
@@ -65,12 +65,12 @@ function v(e) {
                         variant: "body-xs/normal",
                         children: b.intl.string(b.t.rwFx85),
                     }),
-                    null != S
+                    null != R
                         ? (0, i.jsx)(c.E, {
                               className: j.W$,
                               variant: "body-xs/normal",
                               color: "text-feedback-critical",
-                              children: S.getAnyErrorMessage(),
+                              children: R.getAnyErrorMessage(),
                           })
                         : null,
                 ],
@@ -80,9 +80,9 @@ function v(e) {
                 renderSection: A.A.renderSection,
                 rowHeight: A.A.ROW_HEIGHT,
                 renderRow: A.A.renderRow,
-                sections: _,
+                sections: I,
             },
-            actions: I
+            actions: M
                 ? [{ variant: "secondary", text: b.intl.string(b.t.u46sxe), onClick: l }]
                 : [
                       { variant: "secondary", text: b.intl.string(b.t["ETE/oC"]), onClick: l },
@@ -90,13 +90,13 @@ function v(e) {
                           variant: "primary",
                           text: b.intl.string(b.t.i4jeWR),
                           onClick: async function () {
-                              if (null == n || 0 === Object.keys(k).length) return void l();
-                              R(!0);
+                              if (null == n || 0 === Object.keys(v).length) return void l();
+                              T(!0);
                               try {
                                   var e, t, i;
                                   let s;
                                   (await ((e = n),
-                                  (t = k),
+                                  (t = v),
                                   (i = x),
                                   (s = []),
                                   Object.values(t).forEach((t) => {
@@ -109,10 +109,10 @@ function v(e) {
                                   }),
                                   (0, o.R$)(e.id, s, i)),
                                       l(),
-                                      R(!1));
+                                      T(!1));
                               } catch (t) {
                                   let e = new d.LG(t);
-                                  (R(!1), T(e));
+                                  (T(!1), S(e));
                               }
                           },
                           loading: C,
@@ -134,7 +134,7 @@ n.d(
             }, []),
             null == r || null == a)
                 ? null
-                : (0, i.jsx)(v, { guild: a, channel: r, ...n });
+                : (0, i.jsx)(k, { guild: a, channel: r, ...n });
         },
     },
 );

@@ -1,8 +1,8 @@
 var i = t(477900),
-    s = t(582128),
-    l = t(978940),
-    a = t(597798),
-    o = t(688810),
+    l = t(582128),
+    s = t(978940),
+    o = t(597798),
+    a = t(688810),
     c = t(384059),
     r = t(114129),
     u = t(442325),
@@ -15,17 +15,17 @@ t.d(
     {},
     {
         A: function (n) {
-            let { channel: e, centerButton: t = !1, onCallJoined: p, ..._ } = n,
-                { parentAnalyticsLocation: h } = (0, o.Ay)(),
+            let { channel: e, centerButton: t = !1, onCallJoined: p, ...h } = n,
+                { parentAnalyticsLocation: _ } = (0, a.Ay)(),
                 j = t ? d.l : d.A,
                 k = e.isManaged() || !e.isPrivate() ? b.intl.string(b.t.S0W8Z5) : b.intl.string(b.t["0D/6Rz"]),
-                L = s.useCallback(() => {
-                    (p?.(), (0, c.lO)(h, c.OP.JOIN_CALL, e.id));
+                L = l.useCallback(() => {
+                    (p?.(), (0, c.lO)(_, c.OP.JOIN_CALL, e.id));
                     let n = u.A.isEnabled() ? u.A.getTabForChannel(e.id) : null;
-                    (null != n && (0, r.ZD)(n.id, !0), a.default.selectVoiceChannel(e.id));
-                }, [e.id, p, h]);
+                    (null != n && (0, r.ZD)(n.id, !0), o.default.selectVoiceChannel(e.id));
+                }, [e.id, p, _]);
             return (
-                s.useEffect(
+                l.useEffect(
                     () => (
                         C._.subscribe(A.jej.CALL_ACCEPT, L),
                         () => {
@@ -34,7 +34,7 @@ t.d(
                     ),
                     [L],
                 ),
-                (0, i.jsx)(j, { ..._, iconComponent: l._, label: k, onClick: L, isTrayButton: !1 })
+                (0, i.jsx)(j, { ...h, iconComponent: s.PhoneCallIcon, label: k, onClick: L, isTrayButton: !1 })
             );
         },
     },

@@ -13,46 +13,46 @@ var l = i(477900),
     f = i(138399),
     g = i(48325),
     x = i(342384),
-    v = i(429913),
-    p = i(573435),
+    p = i(429913),
+    v = i(573435),
     y = i(92961),
-    j = i(619517),
-    w = i(274652),
-    b = i(458914),
-    A = i(451909),
-    C = i(135621),
-    P = i(223863),
+    w = i(619517),
+    A = i(274652),
+    j = i(458914),
+    C = i(451909),
+    P = i(135621),
+    b = i(223863),
     k = i(734057),
     E = i(287809),
-    T = i(957565),
-    _ = i(403362),
-    I = i(381941),
-    L = i(792996),
-    N = i(476765),
-    R = i(739126);
-function S(t) {
+    I = i(957565),
+    T = i(403362),
+    R = i(381941),
+    U = i(792996),
+    _ = i(476765),
+    L = i(739126);
+function N(t) {
     let { title: e, subtitle: i, imageUrl: n, fileUrl: a, isVideo: s, overflowCount: d } = t,
         u = null;
     return (
         null != a &&
             ((u = (0, l.jsx)("div", {
-                className: r()(R.cR, { [R.JZ]: s }),
+                className: r()(L.cR, { [L.JZ]: s }),
                 children: s
-                    ? (0, l.jsx)(o.S, { className: R.uZ, size: "md", color: "white" })
-                    : (0, l.jsx)("img", { className: N.$, src: a, alt: "", width: 56, height: 56 }),
+                    ? (0, l.jsx)(o.CirclePlayIcon, { className: L.uZ, size: "md", color: "white" })
+                    : (0, l.jsx)("img", { className: _.$, src: a, alt: "", width: 56, height: 56 }),
             })),
             d > 0 &&
                 (u = (0, l.jsxs)("div", {
-                    className: R.EW,
+                    className: L.EW,
                     children: [
-                        (0, l.jsx)(p.Ay, {
-                            mask: p.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                        (0, l.jsx)(v.Ay, {
+                            mask: v.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
                             children: u,
                         }),
                         (0, l.jsxs)(c.E, {
-                            className: R.mB,
+                            className: L.mB,
                             variant: "body-xs/semibold",
                             color: "text-default",
                             children: ["+", d],
@@ -60,10 +60,10 @@ function S(t) {
                     ],
                 }))),
         (0, l.jsxs)("div", {
-            className: R.sq,
+            className: L.sq,
             children: [
                 (0, l.jsxs)("div", {
-                    className: R.FG,
+                    className: L.FG,
                     children: [
                         (0, l.jsx)(c.E, {
                             variant: "body-md/normal",
@@ -82,8 +82,8 @@ function S(t) {
                 }),
                 null != n &&
                     (0, l.jsx)("div", {
-                        className: R.cR,
-                        children: (0, l.jsx)(j.Ay, { src: n, alt: "", width: 56, height: 56 }),
+                        className: L.cR,
+                        children: (0, l.jsx)(w.Ay, { src: n, alt: "", width: 56, height: 56 }),
                     }),
                 u,
             ],
@@ -102,27 +102,27 @@ i.d(
                     content: r,
                     link: o,
                     customId: c,
-                    linkId: p,
-                    channelId: j,
-                    imageUrl: N,
-                    files: R,
-                    previewTitle: U,
+                    linkId: v,
+                    channelId: w,
+                    imageUrl: _,
+                    files: L,
+                    previewTitle: S,
                     previewSubtitle: W,
                     onClose: M,
                     onCopyLink: F,
                     onShare: O,
                     ...V
                 } = t,
-                [q] = (0, v.A)([a]),
+                [q] = (0, p.A)([a]),
                 H = (0, s.bG)([E.default], () => E.default.getCurrentUser()),
-                Z = R?.[0],
+                Z = L?.[0],
                 B = n.useMemo(() => (null != Z ? URL.createObjectURL(Z) : void 0), [Z]);
             n.useEffect(() => {
                 if (null != B) return () => URL.revokeObjectURL(B);
             }, [B]);
             let G = n.useMemo(
-                    () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: p, channelId: j }),
-                    [o, a, H?.id, c, p, j],
+                    () => o ?? (0, x.W)({ applicationId: a, referrerId: H?.id, customId: c, linkId: v, channelId: w }),
+                    [o, a, H?.id, c, v, w],
                 ),
                 D = n.useCallback(
                     async (t, e, i) => {
@@ -137,29 +137,29 @@ i.d(
                         let s = 0,
                             o = 0;
                         try {
-                            let e = (await Promise.all(t.map(P.pk)))
-                                .filter(_.Vq)
+                            let e = (await Promise.all(t.map(b.pk)))
+                                .filter(T.Vq)
                                 .map((t) => k.A.getChannel(t))
-                                .filter(_.Vq);
+                                .filter(T.Vq);
                             if (((o = t.length - e.length), 0 === e.length))
-                                return void (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
-                            let i = [N, r, n]
-                                .filter(_.Vq)
+                                return void (0, d.P0)({ text: U.intl.string(U.t.iufib1), variant: "critical" });
+                            let i = [_, r, n]
+                                .filter(T.Vq)
                                 .join("\n")
-                                .slice(0, (0, C.a)());
+                                .slice(0, (0, P.a)());
                             for (let t of e) {
                                 let e;
                                 try {
-                                    e = await f.A.sendMessage(t.id, A.Ay.parse(t, i), !1, {
-                                        location: I.Hx.ACTIVITY_SHARE,
+                                    e = await f.A.sendMessage(t.id, C.Ay.parse(t, i), !1, {
+                                        location: R.Hx.ACTIVITY_SHARE,
                                         attachmentsToUpload:
-                                            null != R && R.length > 0
-                                                ? R.map(
+                                            null != L && L.length > 0
+                                                ? L.map(
                                                       (e) =>
                                                           new g.bK(
                                                               {
                                                                   file: new File([e], e.name, { type: e.type }),
-                                                                  platform: w.x.WEB,
+                                                                  platform: A.x.WEB,
                                                                   origin: "unknown:activity_share",
                                                               },
                                                               t.id,
@@ -167,7 +167,7 @@ i.d(
                                                   )
                                                 : void 0,
                                         onAttachmentUploadError: (e, i, l) => {
-                                            (0, b.k)({
+                                            (0, j.k)({
                                                 file: e,
                                                 guildId: t.getGuildId(),
                                                 analyticsLocations: [],
@@ -182,30 +182,30 @@ i.d(
                                 null == e ? (o += 1) : (s += 1);
                             }
                             (o > 0
-                                ? (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" })
+                                ? (0, d.P0)({ text: U.intl.string(U.t.iufib1), variant: "critical" })
                                 : (0, d.P0)({
-                                      text: L.intl.string(L.t.kwmYkt),
-                                      icon: u.t,
+                                      text: U.intl.string(U.t.kwmYkt),
+                                      icon: u.ArrowAngleRightUpIcon,
                                       iconColor: h.A.colors.ICON_FEEDBACK_POSITIVE,
                                   }),
                                 a && s > 0 && M());
                         } catch {
-                            (0, d.P0)({ text: L.intl.string(L.t.iufib1), variant: "critical" });
+                            (0, d.P0)({ text: U.intl.string(U.t.iufib1), variant: "critical" });
                         } finally {
                             (l(s > 0), i(!1));
                         }
                     },
-                    [r, R, N, M, O],
+                    [r, L, _, M, O],
                 ),
                 J = n.useMemo(
                     () => [
                         {
                             variant: "secondary",
                             text: void 0,
-                            "aria-label": L.intl.string(L.t.WqhZss),
+                            "aria-label": U.intl.string(U.t.WqhZss),
                             onClick: () => {
-                                (0, T.C)(G, () => {
-                                    (F(), (0, d.P0)({ text: L.intl.string(L.t["L/PwZf"]), variant: "success" }));
+                                (0, I.C)(G, () => {
+                                    (F(), (0, d.P0)({ text: U.intl.string(U.t["L/PwZf"]), variant: "success" }));
                                 });
                             },
                             icon: m.LinkIcon,
@@ -218,25 +218,25 @@ i.d(
                 ...V,
                 onClose: M,
                 source: "frame",
-                customPreview: (0, l.jsx)(S, {
-                    title: U ?? K,
+                customPreview: (0, l.jsx)(N, {
+                    title: S ?? K,
                     subtitle:
                         W ??
-                        (null != R && R.length > 0
-                            ? ((e = R.filter((t) => t.type.startsWith("image/")).length),
-                              (i = R.filter((t) => t.type.startsWith("video/")).length),
+                        (null != L && L.length > 0
+                            ? ((e = L.filter((t) => t.type.startsWith("image/")).length),
+                              (i = L.filter((t) => t.type.startsWith("video/")).length),
                               e > 0 && i > 0
-                                  ? L.intl.formatToPlainString(L.t.Lr0Top, { image_count: e, video_count: i })
+                                  ? U.intl.formatToPlainString(U.t.Lr0Top, { image_count: e, video_count: i })
                                   : i > 0
-                                    ? L.intl.formatToPlainString(L.t.SJ6pPX, { count: i })
+                                    ? U.intl.formatToPlainString(U.t.SJ6pPX, { count: i })
                                     : e > 0
-                                      ? L.intl.formatToPlainString(L.t.h4pFfU, { count: e })
-                                      : L.intl.formatToPlainString(L.t["89ihS8"], { count: R.length }))
+                                      ? U.intl.formatToPlainString(U.t.h4pFfU, { count: e })
+                                      : U.intl.formatToPlainString(U.t["89ihS8"], { count: L.length }))
                             : void 0),
-                    imageUrl: N,
+                    imageUrl: _,
                     fileUrl: B,
                     isVideo: Z?.type.startsWith("video/") ?? !1,
-                    overflowCount: Math.max((R?.length ?? 1) - 1, 0),
+                    overflowCount: Math.max((L?.length ?? 1) - 1, 0),
                 }),
                 customSendHandler: D,
                 additionalActions: J,

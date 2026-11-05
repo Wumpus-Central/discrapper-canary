@@ -1,4 +1,4 @@
-s.d(e, { default: () => w });
+s.d(e, { default: () => X });
 var i = s(477900),
     a = s(582128),
     n = s(314116),
@@ -16,15 +16,15 @@ var i = s(477900),
     h = s(793574),
     j = s(688810),
     p = s(51965),
-    N = s(792656),
-    C = s(129230),
+    C = s(792656),
+    N = s(129230),
     v = s(183972),
     A = s(196099),
     E = s(297966),
-    k = s(375776),
-    I = s(727811),
-    O = s(870975),
-    S = s(263910),
+    I = s(375776),
+    k = s(727811),
+    S = s(870975),
+    O = s(263910),
     L = s(102488),
     R = s(631368),
     _ = s(222652),
@@ -33,17 +33,17 @@ var i = s(477900),
     P = s(831768),
     y = s(792996),
     z = s(367863);
-let M = [
-    { icon: l.B, message: P.default.bpksos },
-    { icon: c.h, message: P.default["5rbQbD"] },
+let G = [
+    { icon: l.ServerGridIcon, message: P.default.bpksos },
+    { icon: c.CloudIcon, message: P.default["5rbQbD"] },
     { icon: r.GiftIcon, message: P.default.b1X5Jf, tooltip: P.default.AyECej },
-    { icon: d.o, message: P.default.xZiyZj },
+    { icon: d.ScreenStreamIcon, message: P.default.xZiyZj },
 ];
-function X(t) {
+function M(t) {
     let { transitionState: e, onClose: s, variant: l, claimStatus: c, redirect: r, requestInProgress: d } = t,
-        h = (0, S.A)(r),
+        h = (0, O.A)(r),
         j = (0, A.M)("xbox"),
-        C = (function (t) {
+        N = (function (t) {
             let {
                 variant: e,
                 claimStatus: s,
@@ -53,17 +53,17 @@ function X(t) {
             } = t;
             if (e === R.C.NO_ACCESS) return { kind: _.N.SUBSCRIBE, text: y.intl.string(y.t.sEAnVH) };
             switch (s) {
-                case I.P.NOT_CLAIMED:
-                case I.P.CLAIM_IN_PROGRESS:
+                case k.P.NOT_CLAIMED:
+                case k.P.CLAIM_IN_PROGRESS:
                     return {
                         kind: _.N.DEFAULT,
                         ctaText: y.intl.string(P.default.EL3rU4),
                         ctaVariant: "primary",
                         ctaOnClick: i,
                         processing: n,
-                        disclaimer: s === I.P.CLAIM_IN_PROGRESS ? y.intl.string(P.default.Fs74z9) : void 0,
+                        disclaimer: s === k.P.CLAIM_IN_PROGRESS ? y.intl.string(P.default.Fs74z9) : void 0,
                     };
-                case I.P.CLAIMED:
+                case k.P.CLAIMED:
                     return {
                         kind: _.N.DEFAULT,
                         ctaText: y.intl.string(P.default["Z2Ipu/"]),
@@ -72,7 +72,7 @@ function X(t) {
                         processing: n,
                         disclaimer: y.intl.string(P.default.hjlZZf),
                     };
-                case I.P.CANCELLATION_IN_PROGRESS:
+                case k.P.CANCELLATION_IN_PROGRESS:
                     return {
                         kind: _.N.DEFAULT,
                         ctaText: y.intl.string(P.default.wBz9aO),
@@ -127,28 +127,28 @@ function X(t) {
                                         (0, i.jsx)(x.E, {
                                             variant: "body-sm/medium",
                                             color: "text-subtle",
-                                            children: y.intl.format(P.default.FO4faL, { termsLink: (0, O.xA)() }),
+                                            children: y.intl.format(P.default.FO4faL, { termsLink: (0, S.xA)() }),
                                         }),
                                     ],
                                 }),
-                                C.kind === _.N.SUBSCRIBE
-                                    ? (0, i.jsx)(N.A, {
+                                N.kind === _.N.SUBSCRIBE
+                                    ? (0, i.jsx)(C.A, {
                                           fullWidth: !0,
-                                          defaultTextOverride: C.text,
+                                          defaultTextOverride: N.text,
                                           subscriptionTier: T.pe.TIER_2,
                                       })
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(p.A, {
                                                   fullWidth: !0,
-                                                  variant: C.ctaVariant,
+                                                  variant: N.ctaVariant,
                                                   size: "md",
-                                                  text: C.ctaText,
-                                                  onClick: C.ctaOnClick,
-                                                  disabled: C.ctaDisabled,
-                                                  loading: C.processing,
+                                                  text: N.ctaText,
+                                                  onClick: N.ctaOnClick,
+                                                  disabled: N.ctaDisabled,
+                                                  loading: N.processing,
                                               }),
-                                              null != C.disclaimer &&
+                                              null != N.disclaimer &&
                                                   (0, i.jsxs)("div", {
                                                       className: z.ed,
                                                       children: [
@@ -159,7 +159,7 @@ function X(t) {
                                                           (0, i.jsx)(x.E, {
                                                               variant: "body-xs/medium",
                                                               color: "text-subtle",
-                                                              children: C.disclaimer,
+                                                              children: N.disclaimer,
                                                           }),
                                                       ],
                                                   }),
@@ -190,7 +190,7 @@ function X(t) {
                         }),
                         (0, i.jsx)("div", {
                             className: z.Jo,
-                            children: M.map((t, e) => {
+                            children: G.map((t, e) => {
                                 let { icon: s, message: a, tooltip: n } = t;
                                 return (0, i.jsxs)(
                                     "div",
@@ -227,7 +227,7 @@ function X(t) {
         }),
     });
 }
-function w(t) {
+function X(t) {
     let { transitionState: e, onClose: s, sourceAnalyticsLocations: n } = t,
         l = (0, R.$)(),
         { status: c, redirect: r, requestInProgress: d } = (0, L.L)(),
@@ -240,13 +240,13 @@ function w(t) {
     }, [u, s]);
     let x = a.useRef(!1);
     return (a.useEffect(() => {
-        u || x.current || ((x.current = !0), C.default.track(D.HAw.OPEN_MODAL, { type: k.x, location_stack: o }));
+        u || x.current || ((x.current = !0), N.default.track(D.HAw.OPEN_MODAL, { type: I.x, location_stack: o }));
     }, [u, o]),
     u)
         ? null
         : (0, i.jsx)(j.f5, {
               value: o,
-              children: (0, i.jsx)(X, {
+              children: (0, i.jsx)(M, {
                   transitionState: e,
                   onClose: s,
                   variant: l,

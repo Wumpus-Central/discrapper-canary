@@ -13,8 +13,8 @@ var l = e(477900),
     m = e(851767),
     p = e(917445),
     x = e(792996),
-    _ = e(374129);
-function I(t) {
+    I = e(374129);
+function _(t) {
     var n, e;
     let a,
         { hasWidget: r, isLoadingProfile: s } =
@@ -55,18 +55,18 @@ function N(t) {
         m = g.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
     return null != m && g.hasIdentity
         ? (0, l.jsxs)("div", {
-              className: r()(_.kL, n),
+              className: r()(I.kL, n),
               children: [
                   (0, l.jsx)("div", {
-                      className: _.Qs,
+                      className: I.Qs,
                       children: (0, l.jsx)(s.kH, { ...g, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: m }),
                   }),
                   a &&
                       (0, l.jsx)(u.D, {
                           "aria-label": x.intl.string(x.t["OBCR+p"]),
-                          className: r()(_.NO, { [_.O7]: c }),
+                          className: r()(I.NO, { [I.O7]: c }),
                           onClick: A,
-                          children: (0, l.jsx)(d.K, { size: "xxs" }),
+                          children: (0, l.jsx)(d.ArrowLargeRightIcon, { size: "xxs" }),
                       }),
               ],
           })
@@ -78,7 +78,7 @@ e.d(
     {
         A: function (t) {
             let n = (0, A.g)(t.activityApplication);
-            return null == n ? null : (0, l.jsx)(I, { ...t, widgetApplication: n });
+            return null == n ? null : (0, l.jsx)(_, { ...t, widgetApplication: n });
         },
         F: N,
     },

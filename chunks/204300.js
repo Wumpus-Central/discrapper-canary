@@ -2,20 +2,20 @@ e.d(n, { x: () => S });
 var r = e(285796),
     A = e(276293),
     i = e(60270),
-    u = e(353182),
-    a = e(47167),
-    l = e(734057),
-    s = e(994500),
-    c = e(287809),
+    c = e(353182),
+    l = e(47167),
+    u = e(734057),
+    a = e(994500),
+    s = e(287809),
     E = e(890634),
     N = e(200700),
     _ = e(792996);
 function S(t, n, e) {
-    var S, H, I;
-    let C =
+    var S, I, C;
+    let H =
         ((S = t),
-        (H = n),
-        (I = e),
+        (I = n),
+        (C = e),
         !(function (t) {
             switch (t) {
                 case E.AH.BLOCK_MESSAGE:
@@ -62,7 +62,7 @@ function S(t, n, e) {
                               case E.AH.QUARANTINE_USER:
                                   return _.intl.string(_.t["/7nL5R"]);
                           }
-                      })(S, I) ?? "",
+                      })(S, C) ?? "",
                   helperText:
                       (function (t, n) {
                           switch (t) {
@@ -72,9 +72,9 @@ function S(t, n, e) {
                               case E.AH.FLAG_TO_CHANNEL: {
                                   let t = n?.metadata?.channelId;
                                   if (null == t) return null;
-                                  let e = l.A.getChannel(t);
+                                  let e = u.A.getChannel(t);
                                   if (null == e) return null;
-                                  let r = (0, a.m1)(e, c.default, s.A);
+                                  let r = (0, l.m1)(e, s.default, a.A);
                                   return _.intl.format(_.t.xQXnkK, { channelName: r });
                               }
                               case E.AH.USER_COMMUNICATION_DISABLED: {
@@ -84,25 +84,25 @@ function S(t, n, e) {
                                   return _.intl.format(_.t.AFmbfS, { duration: e });
                               }
                           }
-                      })(S, H) ?? null,
+                      })(S, I) ?? null,
                   isEditable: S !== E.AH.QUARANTINE_USER,
               });
-    return null == C
+    return null == H
         ? null
         : {
-              ...C,
+              ...H,
               icon:
                   (function (t) {
                       switch (t) {
                           case E.AH.BLOCK_MESSAGE:
-                              return r.a;
+                              return r.CircleXIcon;
                           case E.AH.FLAG_TO_CHANNEL:
-                              return A.N;
+                              return A.TextIcon;
                           case E.AH.USER_COMMUNICATION_DISABLED:
-                              return i.g;
+                              return i.ClockWarningIcon;
                           case E.AH.QUARANTINE_USER:
-                              return u._;
+                              return c.ChatXIcon;
                       }
-                  })(t) ?? r.a,
+                  })(t) ?? r.CircleXIcon,
           };
 }

@@ -20,8 +20,8 @@ n.d(
                 children: n,
                 className: r,
                 contentClassName: A,
-                heading: h,
-                description: f,
+                heading: f,
+                description: h,
                 onClose: I,
             } = e;
             return t
@@ -40,7 +40,7 @@ n.d(
                                   (0, i.jsx)("div", {
                                       className: E.b,
                                       children: (0, i.jsx)(l.K, {
-                                          icon: o.P,
+                                          icon: o.XSmallIcon,
                                           variant: "overlay-secondary",
                                           size: "sm",
                                           onClick: () => I(),
@@ -51,17 +51,17 @@ n.d(
                                   className: E.$e,
                                   role: "status",
                                   children: [
-                                      (0, i.jsx)(d.D, { size: "lg", color: s.A.colors.TEXT_DEFAULT }),
+                                      (0, i.jsx)(d.ImageWarningIcon, { size: "lg", color: s.A.colors.TEXT_DEFAULT }),
                                       (0, i.jsx)(c.E, {
                                           tag: "div",
                                           variant: "heading-sm/semibold",
                                           color: "text-strong",
-                                          children: h ?? _.intl.string(_.t.xC8Saf),
+                                          children: f ?? _.intl.string(_.t.xC8Saf),
                                       }),
                                       (0, i.jsx)(c.E, {
                                           variant: "body-sm/normal",
                                           color: "text-muted",
-                                          children: f ?? _.intl.string(_.t["0fc/DG"]),
+                                          children: h ?? _.intl.string(_.t["0fc/DG"]),
                                       }),
                                   ],
                               }),

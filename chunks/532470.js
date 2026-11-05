@@ -1,57 +1,57 @@
 var n = a(713608),
     t = a(918715),
     i = a(877784),
-    d = a(144705),
-    o = a(826685),
-    r = a(683825);
-let s = {
-        [d.I.Kill]: n.q,
-        [d.I.MultiKill]: n.q,
-        [d.I.Assist]: n.q,
-        [d.I.Death]: t.V,
-        [d.I.RoshanKill]: i.q,
-        [d.I.TeamFightWin]: n.q,
-        [d.I.TeamFight]: null,
-        [d.I.GameEnd]: null,
-        [d.I.InMatchChange]: null,
-        [d.I.PlayStateChange]: null,
+    o = a(144705),
+    d = a(826685),
+    c = a(683825);
+let r = {
+        [o.I.Kill]: n.ModerationIcon,
+        [o.I.MultiKill]: n.ModerationIcon,
+        [o.I.Assist]: n.ModerationIcon,
+        [o.I.Death]: t.SkullIcon,
+        [o.I.RoshanKill]: i.RibbonIcon,
+        [o.I.TeamFightWin]: n.ModerationIcon,
+        [o.I.TeamFight]: null,
+        [o.I.GameEnd]: null,
+        [o.I.InMatchChange]: null,
+        [o.I.PlayStateChange]: null,
     },
-    c = {
-        [d.I.Kill]: 10,
-        [d.I.MultiKill]: 11,
-        [d.I.Assist]: 9,
-        [d.I.Death]: 1,
-        [d.I.RoshanKill]: 9,
-        [d.I.TeamFightWin]: 8,
-        [d.I.TeamFight]: 0,
-        [d.I.GameEnd]: 0,
-        [d.I.InMatchChange]: 0,
-        [d.I.PlayStateChange]: 0,
+    s = {
+        [o.I.Kill]: 10,
+        [o.I.MultiKill]: 11,
+        [o.I.Assist]: 9,
+        [o.I.Death]: 1,
+        [o.I.RoshanKill]: 9,
+        [o.I.TeamFightWin]: 8,
+        [o.I.TeamFight]: 0,
+        [o.I.GameEnd]: 0,
+        [o.I.InMatchChange]: 0,
+        [o.I.PlayStateChange]: 0,
     },
     u = {
-        [d.I.Kill]: r.default.gQErX1,
-        [d.I.MultiKill]: r.default.Y7CAoY,
-        [d.I.Assist]: r.default.CuzcRY,
-        [d.I.Death]: r.default.NEFeB0,
-        [d.I.RoshanKill]: r.default.bzNi8X,
-        [d.I.TeamFightWin]: r.default["3RgAlG"],
-        [d.I.TeamFight]: null,
-        [d.I.GameEnd]: null,
-        [d.I.InMatchChange]: null,
-        [d.I.PlayStateChange]: null,
+        [o.I.Kill]: c.default.gQErX1,
+        [o.I.MultiKill]: c.default.Y7CAoY,
+        [o.I.Assist]: c.default.CuzcRY,
+        [o.I.Death]: c.default.NEFeB0,
+        [o.I.RoshanKill]: c.default.bzNi8X,
+        [o.I.TeamFightWin]: c.default["3RgAlG"],
+        [o.I.TeamFight]: null,
+        [o.I.GameEnd]: null,
+        [o.I.InMatchChange]: null,
+        [o.I.PlayStateChange]: null,
     };
 a.d(
-    e,
+    l,
     {},
     {
         PC: function () {
-            return { [o.b]: s };
+            return { [d.b]: r };
         },
         dP: function () {
-            return { [o.b]: c };
+            return { [d.b]: s };
         },
         kv: function () {
-            return { [o.b]: u };
+            return { [d.b]: u };
         },
     },
 );

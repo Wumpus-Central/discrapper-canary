@@ -1,12 +1,12 @@
-var i = l(477900);
+var c = l(477900);
 l(582128);
-var c = l(855986),
-    t = l(638495),
-    n = l(192308),
-    d = l(477782),
-    o = l(635739),
-    s = l(39623),
-    r = l(952572),
+var n = l(855986),
+    i = l(638495),
+    t = l(192308),
+    o = l(477782),
+    r = l(635739),
+    d = l(39623),
+    s = l(952572),
     u = l(46653),
     A = l(754712),
     h = l(731854),
@@ -16,24 +16,24 @@ l.d(
     {},
     {
         A: function (e, a) {
-            let v = (0, t.k)(),
+            let v = (0, i.k)(),
                 {
-                    videoEnabled: f,
+                    videoEnabled: g,
                     hasVideoDevice: y,
                     videoSupported: b,
-                } = (0, c.cf)([A.Ay], () => ({
+                } = (0, n.cf)([A.Ay], () => ({
                     videoEnabled: A.Ay.isVideoEnabled(),
                     hasVideoDevice: A.Ay.isVideoAvailable(),
                     videoSupported: A.Ay.supports(h.O5.VIDEO),
                 })),
-                g = (0, c.bG)([u.default], () => u.default.getId() === e),
-                M = (0, r.A)();
-            return b && (!f || M) && g && y
-                ? (0, i.jsx)(d.Dr, {
+                M = (0, n.bG)([u.default], () => u.default.getId() === e),
+                Z = (0, s.A)();
+            return b && (!g || Z) && M && y
+                ? (0, c.jsx)(o.Dr, {
                       id: "change-video-background",
-                      label: f ? p.intl.string(p.t.mZKxHb) : p.intl.string(p.t["vkV93/"]),
+                      label: g ? p.intl.string(p.t.mZKxHb) : p.intl.string(p.t["vkV93/"]),
                       action: function () {
-                          (0, n.mM)(
+                          (0, t.mM)(
                               async () => {
                                   let { default: e } = await Promise.all([
                                       l.e(505866),
@@ -61,13 +61,13 @@ l.d(
                                       l.e(655212),
                                       l.e(410534),
                                   ]).then(l.bind(l, 308229));
-                                  return (a) => (0, i.jsx)(e, { ...a, videoEnabled: f });
+                                  return (a) => (0, c.jsx)(e, { ...a, videoEnabled: g });
                               },
-                              { modalKey: "camera-preview", contextKey: null != a ? (0, n.TI)(a) : v },
+                              { modalKey: "camera-preview", contextKey: null != a ? (0, t.TI)(a) : v },
                           );
                       },
-                      icon: f ? o.f : s.EyeIcon,
-                      leadingAccessory: { type: "icon", icon: f ? o.f : s.EyeIcon },
+                      icon: g ? r.BlurBackgroundIcon : d.EyeIcon,
+                      leadingAccessory: { type: "icon", icon: g ? r.BlurBackgroundIcon : d.EyeIcon },
                   })
                 : null;
         },

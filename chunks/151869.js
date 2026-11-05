@@ -17,9 +17,9 @@ var v = r(770178),
     b = r(116903),
     x = r(741918),
     L = r(855986),
-    k = r(59520),
-    y = r(775602);
-function C(e, t, r) {
+    g = r(59520),
+    k = r(775602);
+function y(e, t, r) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     return "left" === e
         ? (function (e, t, r) {
@@ -44,9 +44,9 @@ function C(e, t, r) {
               return { index: Math.max(0, e.children.length - 1), isPartiallyHidden: !1 };
           })(t, r, l);
 }
-var M = r(602034),
-    W = r(66455),
-    g = r(792996),
+var C = r(602034),
+    M = r(66455),
+    W = r(792996),
     p = r(513226);
 let R = function (e) {
     let t,
@@ -54,30 +54,30 @@ let R = function (e) {
         i,
         R,
         E,
+        A,
         S,
         j,
-        A,
         w,
         N,
+        I,
         F,
         H,
-        I,
         P,
         z,
         {
             items: G,
             getItemKey: T,
             renderItem: O,
-            gap: K = 24,
-            edgeFade: $ = "xl",
-            scrollStep: _ = "page",
-            className: q,
-            scrollerClassName: Z,
-            itemClassName: B,
-            actionsClassName: D,
-            iconButtonSize: Q,
-            "aria-label": X,
-            maintainFocusOnReorder: Y = !1,
+            gap: $ = 24,
+            edgeFade: _ = "xl",
+            scrollStep: q = "page",
+            className: K,
+            scrollerClassName: B,
+            itemClassName: D,
+            actionsClassName: Q,
+            iconButtonSize: X,
+            "aria-label": Y,
+            maintainFocusOnReorder: Z = !1,
             disableFocusRingScope: J = !1,
         } = e,
         U = `${n.useId()}hscroll`,
@@ -158,8 +158,8 @@ let R = function (e) {
             onClickScrollRight: ed,
             onScroll: ef,
             listNavigator: eh,
-        } = ((t = (0, L.bG)([y.Ay], () => y.Ay.useReducedMotion) ? "auto" : "smooth"),
-        (r = (0, L.bG)([y.Ay], () => y.Ay.keyboardModeEnabled)),
+        } = ((t = (0, L.bG)([k.Ay], () => k.Ay.useReducedMotion) ? "auto" : "smooth"),
+        (r = (0, L.bG)([k.Ay], () => k.Ay.keyboardModeEnabled)),
         (i = n.useRef(!1)),
         (R = n.useRef(0)),
         (E = n.useCallback(
@@ -187,12 +187,12 @@ let R = function (e) {
             },
             [t, ea, ee, V],
         )),
-        (S = n.useCallback(() => E(0), [E])),
-        (j = n.useCallback(() => {
+        (A = n.useCallback(() => E(0), [E])),
+        (S = n.useCallback(() => {
             let e = ee.current;
             return E(null == e ? 0 : Math.max(0, e.scrollWidth - e.clientWidth));
         }, [E, ee])),
-        (A = n.useCallback(
+        (j = n.useCallback(
             (e) => {
                 i.current || ((V.current = e.target.scrollLeft), ea());
             },
@@ -219,7 +219,7 @@ let R = function (e) {
                               0,
                               Math.min(
                                   u,
-                                  "item" === _
+                                  "item" === q
                                       ? f
                                           ? o - 16
                                           : d - r.clientWidth + 16
@@ -233,18 +233,18 @@ let R = function (e) {
                       })
                     : l.focus({ preventScroll: !0 });
             },
-            [E, _, ee, V],
+            [E, q, ee, V],
         )),
         (N = (0, b.Ay)({
             id: U,
             isEnabled: r,
             orientation: x.Gl.HORIZONTAL,
             defaultFocused: "0",
-            scrollToStart: S,
-            scrollToEnd: j,
+            scrollToStart: A,
+            scrollToEnd: S,
             setFocus: w,
         })),
-        (F = n.useCallback(
+        (I = n.useCallback(
             (e, t, r, l) => {
                 let n = e.children[t];
                 if (null == n) return;
@@ -263,29 +263,29 @@ let R = function (e) {
             },
             [E, N],
         )),
-        (H = n.useCallback(
+        (F = n.useCallback(
             (e) => {
                 let t = ee.current;
                 if (null == t) return;
                 let r = "left" === e ? -1 : 1;
-                if ("item" === _) {
-                    let { index: l, isPartiallyHidden: n } = C("left", t, V.current, 16),
+                if ("item" === q) {
+                    let { index: l, isPartiallyHidden: n } = y("left", t, V.current, 16),
                         i = "left" === e && n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
-                    F(t, i, "start", r);
+                    I(t, i, "start", r);
                 } else {
-                    let { index: l, isPartiallyHidden: n } = C(e, t, V.current, 16),
+                    let { index: l, isPartiallyHidden: n } = y(e, t, V.current, 16),
                         i = n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
-                    F(t, i, "left" === e ? "end" : "start", r);
+                    I(t, i, "left" === e ? "end" : "start", r);
                 }
             },
-            [_, F, ee, V],
+            [q, I, ee, V],
         )),
-        (I = n.useCallback(() => H("left"), [H])),
-        (P = n.useCallback(() => H("right"), [H])),
+        (H = n.useCallback(() => F("left"), [F])),
+        (P = n.useCallback(() => F("right"), [F])),
         {
-            onClickScrollLeft: (0, k.I)(I, 200, [I]),
-            onClickScrollRight: (0, k.I)(P, 200, [P]),
-            onScroll: A,
+            onClickScrollLeft: (0, g.I)(H, 200, [H]),
+            onClickScrollRight: (0, g.I)(P, 200, [P]),
+            onScroll: j,
             listNavigator: N,
         }),
         { ref: em, ...ev } = (0, u.LT)(eh),
@@ -300,7 +300,7 @@ let R = function (e) {
                 containerRef: u,
                 enabled: s,
             } = e,
-            a = (0, W.A)(i);
+            a = (0, M.A)(i);
         n.useLayoutEffect(() => {
             if (!s) return;
             let e = r.current,
@@ -310,7 +310,7 @@ let R = function (e) {
             e.scrollLeft = l.current;
             let o = m(Math.min(Number(i), t.length - 1));
             if ((n.setFocus(o), !e.contains(document.activeElement))) return;
-            let d = u.current?.querySelector((0, M.Mz)((0, M.t$)(c, o)));
+            let d = u.current?.querySelector((0, C.Mz)((0, C.t$)(c, o)));
             d?.focus({ preventScroll: !0 });
         }, [t, c, u, r, l, a, s]);
     })({
@@ -320,7 +320,7 @@ let R = function (e) {
         listNavigator: eh,
         listId: U,
         containerRef: ei,
-        enabled: Y,
+        enabled: Z,
     });
     let ex = n.useMemo(
             () =>
@@ -333,7 +333,7 @@ let R = function (e) {
                                 let { role: n, ...i } = r;
                                 return (0, l.jsx)("div", {
                                     role: "listitem",
-                                    className: c()(p.Aw, B),
+                                    className: c()(p.Aw, D),
                                     children: O(e, i, t),
                                 });
                             },
@@ -341,31 +341,31 @@ let R = function (e) {
                         T(e),
                     ),
                 ),
-            [G, T, O, B],
+            [G, T, O, D],
         ),
-        eL = { "--custom-edge-fade-width": `var(--space-${$})` };
+        eL = { "--custom-edge-fade-width": `var(--space-${_})` };
     return (0, l.jsxs)("div", {
         ref: ei,
-        role: null != X ? "region" : void 0,
-        "aria-label": X,
+        role: null != Y ? "region" : void 0,
+        "aria-label": Y,
         style: eL,
-        className: c()(p.kL, q),
+        className: c()(p.kL, K),
         children: [
             ec &&
                 (0, l.jsxs)("div", {
-                    className: c()(p.o1, D),
+                    className: c()(p.o1, Q),
                     role: "group",
                     children: [
                         (0, l.jsx)("div", {
                             className: c()(p.x6, { [p.r9]: !eu }),
                             children: (0, l.jsx)(a.K, {
-                                icon: o.Z,
+                                icon: o.ArrowLargeLeftIcon,
                                 buttonRef: et,
-                                size: Q,
+                                size: X,
                                 variant: "overlay-secondary",
                                 onClick: eo,
                                 disabled: !eu,
-                                "aria-label": g.intl.string(g.t.FQx1Ru),
+                                "aria-label": W.intl.string(W.t.FQx1Ru),
                                 "aria-hidden": !eu,
                                 "aria-controls": U,
                             }),
@@ -373,13 +373,13 @@ let R = function (e) {
                         (0, l.jsx)("div", {
                             className: c()(p.x6, { [p.r9]: !es }),
                             children: (0, l.jsx)(a.K, {
-                                icon: d.K,
+                                icon: d.ArrowLargeRightIcon,
                                 buttonRef: er,
-                                size: Q,
+                                size: X,
                                 variant: "overlay-secondary",
                                 onClick: ed,
                                 disabled: !es,
-                                "aria-label": g.intl.string(g.t.H4hwjn),
+                                "aria-label": W.intl.string(W.t.H4hwjn),
                                 "aria-hidden": !es,
                                 "aria-controls": U,
                             }),
@@ -391,11 +391,11 @@ let R = function (e) {
                 children:
                     ((z = (0, l.jsx)(f.B, {
                         direction: "horizontal",
-                        gap: K,
+                        gap: $,
                         id: U,
-                        "aria-label": X,
+                        "aria-label": Y,
                         ref: eb,
-                        className: c()(p.Y_, Z, { [p.jL]: eu, [p.w6]: es, [p.XG]: eu && es }),
+                        className: c()(p.Y_, B, { [p.jL]: eu, [p.w6]: es, [p.XG]: eu && es }),
                         ...ev,
                         onScroll: ef,
                         children: ex,

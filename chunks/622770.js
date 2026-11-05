@@ -5,10 +5,15 @@ var a = n(503698),
     s = n.n(a),
     r = n(847374),
     o = n(693409),
-    d = n(935686),
-    c = (((i = c || {})[(i.UP = 0)] = "UP"), (i[(i.DOWN = 1)] = "DOWN"), i);
+    c = n(935686),
+    d = (((i = d || {})[(i.UP = 0)] = "UP"), (i[(i.DOWN = 1)] = "DOWN"), i);
 function u(e) {
     let { direction: t, className: n, themeable: i, ...a } = e;
-    return (0, l.jsx)(o.A, { className: s()(n, d.U, { [d.up]: 0 === t }), iconComponent: r.a, themeable: i, ...a });
+    return (0, l.jsx)(o.A, {
+        className: s()(n, c.U, { [c.up]: 0 === t }),
+        iconComponent: r.ChevronSmallDownIcon,
+        themeable: i,
+        ...a,
+    });
 }
-((u.Directions = c), n.d(t, {}, { A: u }));
+((u.Directions = d), n.d(t, {}, { A: u }));

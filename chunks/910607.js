@@ -14,8 +14,8 @@ var i = e(855986),
     m = e(47167),
     p = e(682163),
     x = e(378570),
-    _ = e(345942),
-    I = e(576705),
+    I = e(345942),
+    _ = e(576705),
     N = e(575731),
     E = e(21241),
     T = e(939496),
@@ -33,12 +33,12 @@ e.d(
                 { themeType: R } = (0, T.E)(),
                 L = (0, N.A)(O),
                 b = (0, m.Ay)(O),
-                { canViewChannel: M, canConnect: U } = (0, i.cf)([I.A], () => ({
-                    canViewChannel: I.A.can(C.xBc.VIEW_CHANNEL, O),
-                    canConnect: O.isPrivate() || I.A.can(C.xBc.CONNECT, O),
+                { canViewChannel: M, canConnect: U } = (0, i.cf)([_.A], () => ({
+                    canViewChannel: _.A.can(C.xBc.VIEW_CHANNEL, O),
+                    canConnect: O.isPrivate() || _.A.can(C.xBc.CONNECT, O),
                 }));
             if (!M) return null;
-            let G = R !== S.d.MODAL && R !== S.d.MODAL_V2 && R !== S.d.SIDEBAR;
+            let D = R !== S.d.MODAL && R !== S.d.MODAL_V2 && R !== S.d.SIDEBAR;
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(E.A, { className: v.Ph }),
@@ -55,13 +55,13 @@ e.d(
                                     className: v.$f,
                                     onClick: (t) => {
                                         (t.stopPropagation(),
-                                            (0, _.u)(e.id),
+                                            (0, I.u)(e.id),
                                             j?.({ action: "OPEN_VOICE_GUILD" }),
                                             P?.());
                                     },
                                 }),
                             }),
-                            (0, l.jsx)(u._, { size: "xxs", color: d.A.colors.TEXT_SUBTLE }),
+                            (0, l.jsx)(u.ChevronSmallRightIcon, { size: "xxs", color: d.A.colors.TEXT_SUBTLE }),
                             (0, l.jsxs)("div", {
                                 className: v.FH,
                                 children: [
@@ -109,7 +109,7 @@ e.d(
                                     (t.stopPropagation(), j?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" }));
                                 },
                                 onUserClick: (t) => t.stopPropagation(),
-                                disableUserPopout: !!G || ((t) => t === n.id),
+                                disableUserPopout: !!D || ((t) => t === n.id),
                                 "aria-label": y.intl.string(y.t["jNqDh/"]),
                             }),
                         ],

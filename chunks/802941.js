@@ -1,9 +1,9 @@
 (l.d(e, { default: () => D }), l(321073));
 var i = l(477900),
     n = l(582128),
-    a = l(855986),
+    r = l(855986),
     o = l(189213),
-    r = l(687966),
+    a = l(687966),
     s = l(834730),
     c = l(321471),
     d = l(691885),
@@ -18,35 +18,35 @@ var i = l(477900),
     L = l(620632),
     N = l(73153);
 let f = null,
-    E = null,
-    C = !1;
-class T extends a.Ay.Store {
+    C = null,
+    E = !1;
+class T extends r.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
-        return f === t ? E : null;
+        return f === t ? C : null;
     }
     isFetching(t) {
-        return f === t && C;
+        return f === t && E;
     }
     hasCachedData(t) {
-        return f === t && null !== E;
+        return f === t && null !== C;
     }
 }
 let O = new T(N.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        ((f = e), (C = !0), (E = []));
+        ((f = e), (E = !0), (C = []));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
-        f === e && ((E = l), (C = !1));
+        f === e && ((C = l), (E = !1));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
-        f === e && ((E = []), (C = !1));
+        f === e && ((C = []), (E = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        ((f = null), (E = null), (C = !1));
+        ((f = null), (C = null), (E = !1));
     },
 });
 var m = l(652215),
@@ -55,11 +55,11 @@ var m = l(652215),
     y = l(792996),
     x = l(925891);
 function D(t) {
-    let { transitionState: e, onClose: l, connection: f, index: E } = t,
-        C = (0, A.Ay)(),
-        T = null != f && null != E,
+    let { transitionState: e, onClose: l, connection: f, index: C } = t,
+        E = (0, A.Ay)(),
+        T = null != f && null != C,
         D = S.A.getGuildId(),
-        b = (0, a.bG)([O], () => O.getAllowedApplicationIds(D) ?? [], [D]);
+        b = (0, r.bG)([O], () => O.getAllowedApplicationIds(D) ?? [], [D]);
     (n.useEffect(() => {
         null != D &&
             (async function (t) {
@@ -112,7 +112,7 @@ function D(t) {
             for (let t of b)
                 null != _.A.getApplication(t) || _.A.isFetchingApplication(t) || (0, h.TA)(t).catch(() => {});
         }, [b]));
-    let P = (0, a.yK)(
+    let P = (0, r.yK)(
             [_.A],
             () => {
                 let t = [];
@@ -130,7 +130,7 @@ function D(t) {
         k = n.useMemo(() => {
             let t = [];
             for (let e of I.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
-                let l = "light" === C ? e.icon?.lightPNG : e.icon?.darkPNG;
+                let l = "light" === E ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
             for (let e of P) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
@@ -139,7 +139,7 @@ function D(t) {
                     _.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
             return (t.sort((t, e) => t.label.localeCompare(e.label)), t);
-        }, [P, b, C]),
+        }, [P, b, E]),
         w = n.useCallback(() => {
             if (null == j || "" === j) return void B(["Please select a connection"]);
             let t = (0, G.vK)(j);
@@ -152,14 +152,14 @@ function D(t) {
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
                 n = (0, G.Ii)(i);
-            n.length > 0 ? B(n) : (T ? (0, v.yM)(E, i) : (0, v.sF)(i), l());
-        }, [j, U, T, E, l]),
+            n.length > 0 ? B(n) : (T ? (0, v.yM)(C, i) : (0, v.sF)(i), l());
+        }, [j, U, T, C, l]),
         H = n.useCallback(
             (t) => ({
                 id: t.value,
                 value: t.value,
                 label: t.label,
-                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : r.GameControllerIcon,
+                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : a.GameControllerIcon,
             }),
             [],
         );
@@ -208,7 +208,10 @@ function D(t) {
                                             {
                                                 className: x.Ff,
                                                 children: [
-                                                    (0, i.jsx)(p.E, { size: "sm", color: "currentColor" }),
+                                                    (0, i.jsx)(p.CircleErrorIcon, {
+                                                        size: "sm",
+                                                        color: "currentColor",
+                                                    }),
                                                     (0, i.jsx)(s.E, {
                                                         variant: "body-sm/normal",
                                                         color: "text-feedback-critical",

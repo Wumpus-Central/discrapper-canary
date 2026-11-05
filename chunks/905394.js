@@ -1,4 +1,4 @@
-n.d(t, { e: () => v, A: () => S });
+n.d(t, { e: () => I, A: () => S });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -11,20 +11,20 @@ var l = n(477900),
     m = n(789645),
     h = n(28863),
     f = n(834730),
-    g = n(73153),
-    p = n(31717),
+    p = n(73153),
+    g = n(31717),
     A = n(399263);
 let C = {
     cancel(e, t) {
-        g.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
+        p.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
         let n = A.A.getMessageForFile(t.id);
         null == n ||
-            ("" === p.A.getDraft(n.channel_id, p.C.ChannelMessage) &&
-                g.h.dispatch({
+            ("" === g.A.getDraft(n.channel_id, g.C.ChannelMessage) &&
+                p.h.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: n.channel_id,
                     draft: n.content,
-                    draftType: p.C.ChannelMessage,
+                    draftType: g.C.ChannelMessage,
                 }));
     },
 };
@@ -43,7 +43,7 @@ function j(e) {
         title: s,
     });
 }
-function v(e) {
+function I(e) {
     let { channelId: t, file: n } = e,
         a = (0, c.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
         i = s.useMemo(() => {
@@ -59,10 +59,10 @@ function v(e) {
         }, [t, n]),
         h = 100 === n.progress,
         f = !h && n.currentSize > 0,
-        g = s.useMemo(() => (null == a || "" === a.trim() ? null : x.A.parse(a)), [a]);
+        p = s.useMemo(() => (null == a || "" === a.trim() ? null : x.A.parse(a)), [a]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != g && (0, l.jsx)("div", { className: N.Qs, children: g }),
+            null != p && (0, l.jsx)("div", { className: N.Qs, children: p }),
             (0, l.jsx)("div", {
                 className: N.Ig,
                 children: (0, l.jsxs)("div", {
@@ -96,7 +96,11 @@ function v(e) {
                             ? null
                             : (0, l.jsx)(d.D, {
                                   onClick: r,
-                                  children: (0, l.jsx)(m.P, { size: "md", color: "currentColor", className: N.x7 }),
+                                  children: (0, l.jsx)(m.XSmallIcon, {
+                                      size: "md",
+                                      color: "currentColor",
+                                      className: N.x7,
+                                  }),
                               }),
                     ],
                 }),

@@ -47,7 +47,7 @@ n.d(
                                     (0, h.AC)(t.guild_id, t.id, !0, { section: m.JJy.CHANNEL }));
                             },
                             text: g.intl.string(g.t.ZtIlQo),
-                            icon: c.j,
+                            icon: c.PlusSmallIcon,
                         }),
                     ],
                 })

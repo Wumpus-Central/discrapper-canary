@@ -27,16 +27,16 @@ s.d(
                     className: f,
                     "aria-label": y,
                 } = e,
-                { i18n: p } = (0, u.G9)(),
-                [_, g] = n.useState(a);
+                { i18n: C } = (0, u.G9)(),
+                [g, p] = n.useState(a);
             return (
                 n.useEffect(() => {
-                    g(a);
+                    p(a);
                 }, [a]),
                 (0, l.jsx)(c.Vv, {
                     value: a,
-                    focusedValue: _,
-                    onFocusChange: g,
+                    focusedValue: g,
+                    onFocusChange: p,
                     onChange: s,
                     minValue: r,
                     maxValue: N,
@@ -55,8 +55,8 @@ s.d(
                                         (0, l.jsx)(o.K, {
                                             variant: "icon-only",
                                             size: "sm",
-                                            icon: d.n,
-                                            "aria-label": p.CALENDAR_PREVIOUS_MONTH_LABEL,
+                                            icon: d.ChevronSmallLeftIcon,
+                                            "aria-label": C.CALENDAR_PREVIOUS_MONTH_LABEL,
                                             onClick: () => e.state.focusPreviousPage(),
                                             slot: "previous",
                                         }),
@@ -71,9 +71,9 @@ s.d(
                                         (0, l.jsx)(o.K, {
                                             variant: "icon-only",
                                             size: "sm",
-                                            icon: m._,
+                                            icon: m.ChevronSmallRightIcon,
                                             onClick: () => e.state.focusNextPage(),
-                                            "aria-label": p.CALENDAR_NEXT_MONTH_LABEL,
+                                            "aria-label": C.CALENDAR_NEXT_MONTH_LABEL,
                                             slot: "next",
                                         }),
                                     ],

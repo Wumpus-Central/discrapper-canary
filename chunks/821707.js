@@ -14,7 +14,7 @@ n.d(
             return (0, l.jsxs)("div", {
                 className: r()(o.kL, { [o.LV]: i }),
                 children: [
-                    (0, l.jsx)(a.t, { size: "xs", color: "currentColor" }),
+                    (0, l.jsx)(a.NitroWheelIcon, { size: "xs", color: "currentColor" }),
                     (0, l.jsx)(s.E, {
                         variant: "body-md/semibold",
                         color: "currentColor",

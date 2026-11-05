@@ -21,8 +21,8 @@ n.d(
                       {
                           id: "view-as-role",
                           label: m.intl.string(m.t.arFPfJ),
-                          icon: a.E,
-                          leadingAccessory: { type: "icon", icon: a.E },
+                          icon: a.ArrowSmallRightIcon,
+                          leadingAccessory: { type: "icon", icon: a.ArrowSmallRightIcon },
                           action: () => {
                               (r.A.close(),
                                   (0, o.Tk)(e.id, { type: c._.ROLES, roles: { [t.id]: t }, returnToSection: n }));

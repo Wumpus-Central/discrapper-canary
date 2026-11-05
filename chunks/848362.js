@@ -4,18 +4,18 @@ var i = n(477900),
     s = n(165862),
     a = n(477782),
     o = n(959988),
-    u = n(820284),
-    c = n(628983),
+    c = n(820284),
+    u = n(628983),
     d = n(74329),
     m = n(600125),
     h = n(338771),
     g = n(616356),
     f = n(287809),
-    p = n(562153),
-    A = n(652215),
+    A = n(562153),
+    p = n(652215),
     E = n(792996);
 function b(e, t, n) {
-    let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
+    let i = (0, l.bG)([u.A], () => (null != e ? u.A.getSelectedParticipantId(e.id) : null)),
         s = (0, l.bG)([g.A], () => (null != i ? g.A.getActiveStreamForStreamKey(i) : null), [i]),
         a = (0, l.cf)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [
             n,
@@ -25,7 +25,7 @@ function b(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: p.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: A.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
 n.d(
@@ -38,45 +38,45 @@ n.d(
                     currentUser: n,
                     activeStreams: r,
                     hideSelfOptions: l = !1,
-                    showReportOption: c = !1,
+                    showReportOption: u = !1,
                     handleGoLive: g,
                     onClose: f,
-                    onSelect: p,
-                    appContext: C = A.BRT.APP,
+                    onSelect: A,
+                    appContext: C = p.BRT.APP,
                     disableChangeWindows: v = !1,
-                    onInteraction: T,
+                    onInteraction: y,
                 } = e,
-                y = r.find((e) => e.ownerId === n?.id) ?? null,
-                _ = b(t, n, r),
-                I = (0, d.A)(y, C),
+                I = r.find((e) => e.ownerId === n?.id) ?? null,
+                T = b(t, n, r),
+                _ = (0, d.A)(I, C),
                 R = (0, m.E)({
                     disableChangeWindows: v,
-                    stream: y,
-                    showReportOption: c,
+                    stream: I,
+                    showReportOption: u,
                     handleGoLive: g,
                     minimal: !0,
                     appContext: C,
                 });
-            return (0, i.jsx)(u.A, {
-                section: A.JJy.CONTEXT_MENU,
+            return (0, i.jsx)(c.A, {
+                section: p.JJy.CONTEXT_MENU,
                 children: (0, i.jsxs)(s.W, {
                     "data-menu-migrated": !0,
-                    onSelect: p,
+                    onSelect: A,
                     navId: "manage-streams",
                     onClose: f,
-                    onInteraction: T,
-                    "aria-label": null != y ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
+                    onInteraction: y,
+                    "aria-label": null != I ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
                     children: [
                         (0, i.jsx)(a.rX, {
-                            children: _.map((e) => {
+                            children: T.map((e) => {
                                 let { stream: t, username: n } = e;
                                 return (0, i.jsx)(
                                     a.Dr,
                                     {
                                         id: t.ownerId,
                                         label: E.intl.formatToPlainString(E.t["7rkg+/"], { username: n }),
-                                        icon: o.G,
-                                        leadingAccessory: { type: "icon", icon: o.G },
+                                        icon: o.ScreenXIcon,
+                                        leadingAccessory: { type: "icon", icon: o.ScreenXIcon },
                                         action: () => (0, h.A)(t),
                                     },
                                     `manage-stream-menu${t.ownerId}`,
@@ -84,7 +84,7 @@ n.d(
                             }),
                         }),
                         l ? null : R,
-                        l ? null : (0, i.jsx)(a.rX, { children: I }),
+                        l ? null : (0, i.jsx)(a.rX, { children: _ }),
                     ],
                 }),
             });

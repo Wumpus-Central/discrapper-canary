@@ -1,3 +1,4 @@
+i.r(s);
 var t = i(477900);
 i(582128);
 var d = i(646514),
@@ -7,31 +8,31 @@ i.d(
     s,
     {},
     {
-        K: function (e) {
+        DenyIcon: function (e) {
             let {
                     size: s = "md",
                     width: i,
                     height: n,
-                    color: a = d.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: c = "",
-                    ...o
+                    color: c = d.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: o = "",
+                    ...r
                 } = e,
-                p = (0, l.J)(s),
-                r = p?.width ?? i,
-                w = p?.height ?? n;
+                a = (0, l.J)(s),
+                p = a?.width ?? i,
+                w = a?.height ?? n;
             return (0, t.jsx)("svg", {
-                ...(0, h.A)(o),
+                ...(0, h.A)(r),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: r,
+                width: p,
                 height: w,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: (0, t.jsx)("path", {
-                    fill: "string" == typeof a ? a : a.css,
+                    fill: "string" == typeof c ? c : c.css,
                     fillRule: "evenodd",
                     d: "M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-2 0a9 9 0 0 1-14.62 7.03L19.03 6.38A8.96 8.96 0 0 1 21 12ZM4.97 17.62 17.62 4.97A9 9 0 0 0 4.97 17.62Z",
                     clipRule: "evenodd",
-                    className: c,
+                    className: o,
                 }),
             });
         },
