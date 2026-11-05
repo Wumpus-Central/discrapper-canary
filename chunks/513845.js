@@ -20,7 +20,7 @@ e.d(
     {
         BD: function (t) {
             let E = c.Ay.getProject(t);
-            null != E && (o(E.application_id), (0, u.Fl)(E) || o(E.preview_application_id ?? null));
+            null != E && (o(E.application_id), (0, u._7)(E) && o(E.preview_application_id ?? null));
         },
         CN: async function (t) {
             let { body: E } = await i.Bo.post({ url: r.Rsh.CONJURE_PROJECT_PREVIEW_DM(t), rejectWithError: !0 }),

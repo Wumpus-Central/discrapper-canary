@@ -1,4 +1,4 @@
-n.d(l, { bI: () => j, Ay: () => J, qF: () => k, KL: () => R, vL: () => F, FZ: () => B });
+n.d(l, { bI: () => j, Ay: () => J, qF: () => k, KL: () => R, vL: () => H, FZ: () => B });
 var e = n(582128),
     i = n(855986),
     a = n(73153),
@@ -14,8 +14,8 @@ var e = n(582128),
     h = n(371169),
     A = n(260498),
     b = n(951178),
-    P = n(426035),
-    _ = n(385081),
+    _ = n(426035),
+    P = n(385081),
     m = n(519325),
     S = n(246338),
     v = n(664619),
@@ -92,7 +92,7 @@ function R(t, l) {
     return "guild" === t.install_scope ? (t.guild_id ?? l) : null;
 }
 function k(t) {
-    if ((0, b.Fl)(t)) return !1;
+    if (!(0, b._7)(t)) return !1;
     let l = s.A.getApplication(t.application_id)?.name;
     return null != l && l !== t.name;
 }
@@ -121,12 +121,12 @@ function x(t, l) {
             canManageGuild: null == a ? null : f.A.can(U.xBc.MANAGE_GUILD, a),
             canManageChannels: null == a ? null : f.A.can(U.xBc.MANAGE_CHANNELS, a),
             usesAppChannels: (0, b.Hv)(n),
-            botInGuild: (0, P.AS)(n, e),
+            botInGuild: (0, _.AS)(n, e),
             liveNameOutdated: k(n),
         },
     };
 }
-async function F(t, l) {
+async function H(t, l) {
     var n;
     let e = A.Ay.getProject(t),
         i = e?.preview_application_id;
@@ -148,7 +148,7 @@ async function F(t, l) {
         })(e, a).catch(() => {}),
         await (0, h.U1)(t).catch(() => {}));
 }
-async function H(t, l, n, e) {
+async function O(t, l, n, e) {
     let i,
         { project: u } = t,
         { platform: r, guildId: s } = n,
@@ -167,7 +167,7 @@ async function H(t, l, n, e) {
     if (w.A.isProjectPublishing(o) || w.A.getPublishStatus(o)?.publishing === !0)
         return void r.showError(M.intl.string(y.default["TD/ze/"]));
     let d = null != t.guildId && t.input.status?.surface === "activity" && null == t.appChannelId && !l.isUpdate;
-    (d && O(o, !0),
+    (d && F(o, !0),
         (0, E.TV)(o, i, e)
             .then((t) => {
                 let l;
@@ -200,22 +200,22 @@ async function H(t, l, n, e) {
                                       })(o, s)
                                     : void 0,
                             )
-                            .finally(() => O(o, !1))
+                            .finally(() => F(o, !1))
                             .catch(() => {}));
                 },
                 (t) => {
-                    O(o, !1);
+                    F(o, !1);
                     let l = t instanceof Error ? t.message : M.intl.string(y.default.gMWZeG);
                     (a.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_FAILED", projectId: o, message: l }),
                         r.showError(l));
                 },
             ));
 }
-function O(t, l) {
+function F(t, l) {
     a.h.dispatch({ type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: t, pending: l });
 }
 function L(t) {
-    (0, u.eO)((0, P.Du)(t), { withMutualGuilds: !0 }).catch(() => {});
+    (0, u.eO)((0, _.Du)(t), { withMutualGuilds: !0 }).catch(() => {});
 }
 let q = new Set();
 async function B(t, l, e) {
@@ -234,7 +234,7 @@ async function B(t, l, e) {
     }
     if (w.A.isProjectPublishing(t) || r.input.status?.publishing === !0) return;
     let d = I(r.input);
-    ((0, _.yJ)(t, {
+    ((0, P.yJ)(t, {
         entryPoint: l,
         publishState: s,
         surface: r.input.status?.surface ?? null,
@@ -256,7 +256,7 @@ async function Z(t, l, n, e) {
         if ("consent_then_publish" === l.intent) {
             q.add(t);
             try {
-                await (a.requestConsent ?? ((t) => F(t, i)))(t);
+                await (a.requestConsent ?? ((t) => H(t, i)))(t);
             } finally {
                 q.delete(t);
             }
@@ -273,10 +273,10 @@ async function Z(t, l, n, e) {
                 })
             )
                 return;
-            await H(u, l, n, e);
+            await O(u, l, n, e);
             return;
         }
-        await H(u, l, n, e);
+        await O(u, l, n, e);
     }
 }
 function J(t, l) {
@@ -287,8 +287,8 @@ function J(t, l) {
             viewerCanPublish: g,
             publishOffered: h,
             publishing: b,
-            failure: P,
-            approvalUrl: _,
+            failure: _,
+            approvalUrl: P,
             project: m,
             guildId: S,
             appChannelId: v,
@@ -297,9 +297,9 @@ function J(t, l) {
             integrationStatus: U,
             guildName: R,
             appChannelName: k,
-            appChannelPending: F,
-            canManageGuild: H,
-            canManageChannels: O,
+            appChannelPending: H,
+            canManageGuild: O,
+            canManageChannels: F,
             usesAppChannels: q,
             botInGuild: Z,
             liveNameOutdated: J,
@@ -344,14 +344,14 @@ function J(t, l) {
                           integrationStatus: U,
                           guildName: R,
                           appChannelName: k,
-                          appChannelPending: F,
-                          canManageGuild: H,
-                          canManageChannels: O,
+                          appChannelPending: H,
+                          canManageGuild: O,
+                          canManageChannels: F,
                           usesAppChannels: q,
                           botInGuild: Z,
                           liveNameOutdated: J,
                       },
-            [m, N, E, U, R, k, F, H, O, q, Z, J],
+            [m, N, E, U, R, k, H, O, F, q, Z, J],
         ),
         W = Q?.status?.publishState ?? null,
         X = Q?.installScope === "guild" && Q.status?.surface === "bot";
@@ -395,16 +395,16 @@ function J(t, l) {
             [t, a],
         );
     if (null == a || !g || null == K || null == N || (!h && !b)) return null;
-    let tt = null == _ ? K.label : M.intl.string(y.default.qru9M5);
+    let tt = null == P ? K.label : M.intl.string(y.default.qru9M5);
     return {
         ...K,
         status: Q?.status ?? null,
         guildId: S,
         appChannelId: v,
         publishing: b,
-        failure: b ? null : P,
+        failure: b ? null : _,
         showsProgress: null != z,
-        awaitingApproval: null != _,
+        awaitingApproval: null != P,
         label: b ? (z ?? M.intl.string(y.default.Rhx0rn)) : tt,
         disabled: b || !0 === a.busy,
         run: $,

@@ -17,8 +17,8 @@ n(754027);
 var I = n(869018),
     p = n(153207),
     m = n(260498),
-    T = n(951178),
-    g = n(426035),
+    g = n(951178),
+    T = n(426035),
     S = n(652215),
     N = n(790782);
 function C(e, t) {
@@ -119,7 +119,7 @@ async function j(e) {
     try {
         let { body: t } = await a.Bo.post({
             url: S.Rsh.CONJURE_PROJECTS,
-            body: { ...e, flags: e.flags ?? T.Zh.GUILD_COLLABORATION | T.Zh.PUBLIC },
+            body: { ...e, flags: e.flags ?? g.Zh.GUILD_COLLABORATION | g.Zh.PUBLIC },
             rejectWithError: !1,
         });
         return (null != t.ws_ticket && (0, A.vG)(t.id, t.ws_ticket), t);
@@ -178,14 +178,18 @@ n.d(
                 i = n.body.preview_application_id;
             return (
                 null != i &&
-                    (null != t.name || null != t.icon || null != t.description || "cover_image" in t) &&
+                    (null != t.name ||
+                        null != t.icon ||
+                        null != t.description ||
+                        "cover_image" in t ||
+                        null != t.uses_preview_app) &&
                     Y(i).catch(() => {}),
                 n
             );
         },
         GO: function (e) {
             let t = m.Ay.getProject(e);
-            null != t && (H(e).catch(() => {}), (0, o.eO)((0, g.Du)(t), { withMutualGuilds: !0 }).catch(() => {}));
+            null != t && (H(e).catch(() => {}), (0, o.eO)((0, T.Du)(t), { withMutualGuilds: !0 }).catch(() => {}));
         },
         K: function (e, t) {
             K(e).then(() => void 0, t);

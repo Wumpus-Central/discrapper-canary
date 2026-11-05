@@ -14,9 +14,6 @@ n.d(
     t,
     {},
     {
-        Fl: function (e) {
-            return null != e.preview_application_id && e.preview_application_id === e.application_id;
-        },
         Hv: function (e) {
             let t = e.supported_surfaces ?? [];
             return t.includes(i.APP_CHANNEL) || ("guild" === e.install_scope && 0 === t.length);
@@ -31,6 +28,9 @@ n.d(
             return ((e.flags ?? 0) & r.PUBLIC) != 0;
         },
         Zh: r,
+        _7: function (e) {
+            return null == e.preview_application_id || e.preview_application_id !== e.application_id;
+        },
         pL: function (e) {
             return ((e.flags ?? 0) & r.GUILD_COLLABORATION) != 0;
         },
