@@ -83,15 +83,16 @@ function T() {
         { search: n } = (0, r.zy)(),
         l = i.useMemo(() => new URLSearchParams(n).get(I.L1.AD_CREATIVE_IDS), [n]),
         o = i.useMemo(() => null != l && null != t && l.includes(t), [l, t]),
-        d = (0, s.bG)([h], () => null != t && h.hasSeen(a.p.QUEST_HOME_HERO, t), [t]);
+        d = (0, s.bG)([h], () => null != t && h.hasSeen(a.p.QUEST_HOME_HERO, t), [t]),
+        c = (function (e) {
+            if (null == e) return !1;
+            let t = m(e.tooltipTitle) && m(e.tooltipSubtitle);
+            return m(e.image) || g(e.linearGradient) || g(e.radialGradient) || t;
+        })(e?.questHomeEntrypoint),
+        u = c && (o || !d);
     return {
-        shouldShowQuestHomeHeroContent:
-            (function (e) {
-                if (null == e) return !1;
-                let t = m(e.tooltipTitle) && m(e.tooltipSubtitle);
-                return m(e.image) || g(e.linearGradient) || g(e.radialGradient) || t;
-            })(e?.questHomeEntrypoint) &&
-            (o || !d),
+        shouldShowQuestHomeHeroContent: c,
+        shouldShowQuestHomeHeroBadge: u,
         dismissQuestHomeHeroContent: i.useCallback(() => {
             o || (null != t && (0, f.zh)(a.p.QUEST_HOME_HERO, [t]));
         }, [t, o]),

@@ -1415,7 +1415,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 666297, Version Hash: 6338c4723e84daf6a2a9d44b85e6c23a2f073c15`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 666307, Version Hash: 823bff717b1d0ce586e0d6d613299fa3130ab0d8`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -1487,7 +1487,7 @@ let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "666297";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "666307";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -25373,66 +25373,71 @@ let LV = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensi
                     l = (0, oC.HX)(rk.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
                 return { shouldShowPopover: s, shouldShowGradientAndBadge: t && !l, dismissOnboardingContent: a };
             })(),
-            { shouldShowQuestHomeHeroContent: l, dismissQuestHomeHeroContent: o, questHomeHero: d } = (0, LU.I)(),
-            c = (0, LM.cR)({ questHomeHero: d, shouldShowQuestHomeHeroContent: l }),
-            u = ef.useCallback(() => {
+            {
+                shouldShowQuestHomeHeroContent: l,
+                shouldShowQuestHomeHeroBadge: o,
+                dismissQuestHomeHeroContent: d,
+                questHomeHero: c,
+            } = (0, LU.I)(),
+            u = (0, LM.cR)({ questHomeHero: c, shouldShowQuestHomeHeroContent: l }),
+            _ = ef.useCallback(() => {
                 (LP.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }),
-                    l && o(),
-                    c.handleEntrypointClick());
-            }, [l, o, c]),
-            [{ glowSpring: _ }, E] = (0, Lb.z)(() => ({
+                    o && d(),
+                    u.handleEntrypointClick());
+            }, [o, d, u]),
+            [{ glowSpring: E }, A] = (0, Lb.z)(() => ({
                 from: { glowSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 240, friction: 12 },
             })),
-            [{ shineSpring: A }, h] = (0, Lb.z)(() => ({
+            [{ shineSpring: h }, f] = (0, Lb.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            f = ef.useCallback(() => {
-                (h({ shineSpring: 1 }), E({ glowSpring: 1, delay: 200 }), c.handleMouseEnter());
-            }, [h, E, c]),
             I = ef.useCallback(() => {
-                (h({ shineSpring: 0, immediate: !0 }), E({ glowSpring: 0, delay: 0 }), c.handleMouseLeave());
-            }, [h, E, c]),
+                (f({ shineSpring: 1 }), A({ glowSpring: 1, delay: 200 }), u.handleMouseEnter());
+            }, [f, A, u]),
             p = ef.useCallback(() => {
-                (h({ shineSpring: 1, delay: 500 }), E({ glowSpring: 1, delay: 700 }), c.handleOnboardingPopoutRender());
-            }, [h, E, c]),
-            [m, g] = ef.useState(-1),
-            T = ef.useCallback((e) => {
-                g(e.contentRect.width);
+                (f({ shineSpring: 0, immediate: !0 }), A({ glowSpring: 0, delay: 0 }), u.handleMouseLeave());
+            }, [f, A, u]),
+            m = ef.useCallback(() => {
+                (f({ shineSpring: 1, delay: 500 }), A({ glowSpring: 1, delay: 700 }), u.handleOnboardingPopoutRender());
+            }, [f, A, u]),
+            [g, T] = ef.useState(-1),
+            S = ef.useCallback((e) => {
+                T(e.contentRect.width);
             }, []),
-            S = (0, Lv.w)(T, [], { fireOnMount: !0 }),
-            N = !l && a,
-            C = !l && r,
-            O = l && d?.questHomeEntrypoint?.tooltipTitle != null,
-            R = ef.useMemo(
+            N = (0, Lv.w)(S, [], { fireOnMount: !0 }),
+            C = !l && a,
+            O = !l && r,
+            R = l && c?.questHomeEntrypoint?.tooltipTitle != null,
+            L = ef.useMemo(
                 () =>
                     l
                         ? (function () {
                               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Lw.NONE;
                               return LG[e];
-                          })(d?.questHomeEntrypoint?.gradientPreset)
+                          })(c?.questHomeEntrypoint?.gradientPreset)
                         : null,
-                [l, d?.questHomeEntrypoint?.gradientPreset],
+                [l, c?.questHomeEntrypoint?.gradientPreset],
             ),
-            L = ef.useMemo(() => l && null != R, [l, R]),
-            y = (0, v.jsx)("div", {
+            y = ef.useMemo(() => l && null != L, [l, L]),
+            D = (0, v.jsx)("div", {
                 className: LB.iE,
-                onMouseEnter: f,
-                onMouseLeave: I,
-                onFocus: f,
-                onBlur: I,
-                ref: S,
+                onMouseEnter: I,
+                onMouseLeave: p,
+                onFocus: I,
+                onBlur: p,
+                ref: N,
                 style: LV,
                 children: (0, v.jsxs)(A4.z9, {
-                    showHoverGradient: L,
-                    hoverGradientStart: R?.start,
-                    hoverGradientMiddle: R?.middle,
-                    hoverGradientEnd: R?.end,
-                    className: td()({ [LB.VU]: N || L, [LB.jR]: N, [LB.XO]: l }),
+                    showHoverGradient: y,
+                    hoverGradientStart: L?.start,
+                    hoverGradientMiddle: L?.middle,
+                    hoverGradientEnd: L?.end,
+                    className: td()({ [LB.VU]: C || y, [LB.jR]: C, [LB.XO]: l }),
                     icon: aB.r,
                     listItemRef: i,
-                    onClick: u,
+                    onClick: _,
                     route: H.BVt.QUEST_HOME,
                     selected: t,
                     text: tN.intl.string(tN.t.JALI2K),
@@ -25441,36 +25446,37 @@ let LV = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensi
                         l &&
                             (0, v.jsxs)(v.Fragment, {
                                 children: [
-                                    (0, v.jsx)("div", {
-                                        className: LB.qS,
-                                        children: (0, v.jsx)(uX.E, {
-                                            type: { text: tN.intl.string(tN.t.y2b7CA) },
-                                            variant: "expressive",
+                                    o &&
+                                        (0, v.jsx)("div", {
+                                            className: LB.qS,
+                                            children: (0, v.jsx)(uX.E, {
+                                                type: { text: tN.intl.string(tN.t.y2b7CA) },
+                                                variant: "expressive",
+                                            }),
                                         }),
-                                    }),
-                                    d?.questHomeEntrypoint?.image != null &&
+                                    c?.questHomeEntrypoint?.image != null &&
                                         (0, v.jsx)("img", {
-                                            src: d?.questHomeEntrypoint?.image,
+                                            src: c?.questHomeEntrypoint?.image,
                                             className: LB.Nd,
                                             alt: "",
                                         }),
                                 ],
                             }),
-                        N &&
+                        C &&
                             (0, v.jsxs)(v.Fragment, {
                                 children: [
                                     (0, v.jsx)(LD.animated.div, {
                                         className: LB.q2,
                                         style: {
-                                            transform: A.to(
+                                            transform: h.to(
                                                 (e) =>
-                                                    `translateX(calc(${e * m}px + ${340 * e}px)) translateY(-50%) rotate(45deg)`,
+                                                    `translateX(calc(${e * g}px + ${340 * e}px)) translateY(-50%) rotate(45deg)`,
                                             ),
                                         },
                                     }),
                                     (0, v.jsx)(LD.animated.div, {
                                         className: LB.ys,
-                                        style: { opacity: (0, LF.a)(_.to({ range: [0, 1], output: [0, 0.5] })) },
+                                        style: { opacity: (0, LF.a)(E.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, v.jsx)("div", {
                                         className: LB.qS,
@@ -25483,18 +25489,18 @@ let LV = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensi
             });
         return (0, v.jsxs)(v.Fragment, {
             children: [
-                O
+                R
                     ? (0, v.jsx)(Ov.A, {
-                          title: d?.questHomeEntrypoint?.tooltipTitle,
-                          body: d?.questHomeEntrypoint?.tooltipSubtitle ?? "",
+                          title: c?.questHomeEntrypoint?.tooltipTitle,
+                          body: c?.questHomeEntrypoint?.tooltipSubtitle ?? "",
                           asset:
-                              d?.questHomeEntrypoint?.tooltipImage != null
-                                  ? (0, v.jsx)("img", { src: d.questHomeEntrypoint.tooltipImage, alt: "" })
+                              c?.questHomeEntrypoint?.tooltipImage != null
+                                  ? (0, v.jsx)("img", { src: c.questHomeEntrypoint.tooltipImage, alt: "" })
                                   : void 0,
-                          children: y,
+                          children: D,
                       })
-                    : y,
-                C && (0, v.jsx)(Lk, { targetElementRef: i, onNavigateToQuestHome: u, onRender: p, onRequestClose: s }),
+                    : D,
+                O && (0, v.jsx)(Lk, { targetElementRef: i, onNavigateToQuestHome: _, onRender: m, onRequestClose: s }),
             ],
         });
     };
@@ -25904,7 +25910,7 @@ let yl = "isHideDevBanner",
                     className: td()(ys.Wz, ys.mr),
                     children: [
                         (0, v.jsx)(ya, { className: ys.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "666297" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "666307" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
