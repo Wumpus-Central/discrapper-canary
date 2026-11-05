@@ -10,19 +10,19 @@ var i = n(611599),
     _ = n(753181),
     E = n(287809),
     A = n(927813),
-    h = n(258585),
-    f = n(652896),
+    f = n(258585),
+    h = n(652896),
     I = n(476697),
     p = n(753070);
 let m = new i.Vy("AutoQualityStreamingManager"),
-    g = 0;
-class T extends s.A {
+    T = 0;
+class g extends s.A {
     actions = { MEDIA_ENGINE_CONNECTION_STATS: this.handleStats, POST_CONNECTION_OPEN: this.handlePostConnectionOpen };
     handleStats() {
-        if ((g += 1) % 10 != 0) return;
+        if ((T += 1) % 10 != 0) return;
         let e = d.A.getCurrentUserActiveStream();
         if (null == e) return;
-        let t = _.A.getRTCConnection((0, f._z)(e)),
+        let t = _.A.getRTCConnection((0, h._z)(e)),
             n = u.Ay.getGoLiveSource();
         if (null == t || null == n || !t.hasActiveRemoteWants()) return;
         let i = o.A.getState();
@@ -30,12 +30,12 @@ class T extends s.A {
         if (d.A.getStreamerActiveStreamMetadata()?.id != null)
             return void m.info("Skipping auto quality checker for game stream.");
         let s = l.A.getAccumulatedPerformanceStats(t.getMediaEngineConnectionId(), e.ownerId, "long"),
-            h = (t.analyticsContext.getDuration() ?? 30) >= 30 * A.A.Millis.SECOND ? 30 : 15;
-        if (null == s || s.numDatapoints < h) return;
-        let T = E.default.getCurrentUser(),
+            f = (t.analyticsContext.getDuration() ?? 30) >= 30 * A.A.Millis.SECOND ? 30 : 15;
+        if (null == s || s.numDatapoints < f) return;
+        let g = E.default.getCurrentUser(),
             S = c.A.getGuild(e.guildId),
-            [N, C] = (0, I.Ay)(p.jQ.PRESET_DOCUMENTS, T, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
-            [O, R] = (0, I.Ay)(p.jQ.PRESET_VIDEO, T, S?.premiumTier, e.guildId) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
+            [N, C] = (0, I.Ay)(p.jQ.PRESET_DOCUMENTS, g, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
+            [O, R] = (0, I.Ay)(p.jQ.PRESET_VIDEO, g, S?.premiumTier, e.guildId) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
             L = null;
         if (
             (s.entropy < 10 && (i.resolution !== N || i.fps !== C)
@@ -67,8 +67,8 @@ class T extends s.A {
         }
     }
     handlePostConnectionOpen() {
-        (0, h.pn)();
+        (0, f.pn)();
     }
 }
-let S = new T();
+let S = new g();
 n.d(t, {}, { A: S });

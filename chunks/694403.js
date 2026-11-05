@@ -12,7 +12,7 @@ var l = n(478676),
     _ = n(182490),
     E = n(417964);
 let A = new (s())({ max: 50 });
-function h(e) {
+function f(e) {
     let t = A.get(e);
     if (null != t) return t;
     let n = (0, E.Fd)(e),
@@ -20,7 +20,7 @@ function h(e) {
         r = { whitespaceSanitized: n, fullySanitized: i };
     return (A.set(e, r), r);
 }
-let f = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
+let h = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
     I = [
         _.D.TEXT,
         _.D.UNDERLINE,
@@ -34,8 +34,8 @@ let f = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
     ],
     p = [...I, _.D.EMOJI, _.D.CUSTOM_EMOJI],
     m = [_.D.LIST, _.D.HEADING, _.D.BLOCK_QUOTE, _.D.SUBTEXT],
-    g = [_.D.TEXT],
-    T = [
+    T = [_.D.TEXT],
+    g = [
         _.D.UNDERLINE,
         _.D.STRONG,
         _.D.ITALICS,
@@ -68,7 +68,7 @@ function N(e, t) {
     return i;
 }
 function C(e) {
-    if ((0, d.rL)(e) || h(e).whitespaceSanitized !== e) return !0;
+    if ((0, d.rL)(e) || f(e).whitespaceSanitized !== e) return !0;
     let t = u.A.toURLSafe(e);
     if (null == t) return !0;
     if ("http:" !== t.protocol && "https:" !== t.protocol) return !1;
@@ -80,7 +80,7 @@ function O(e) {
         if (C(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
         let t = new URL(e),
             n = t.protocol ?? "";
-        if (!f.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
+        if (!h.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
         if (("http:" === n || "https:" === n) && (null == t.hostname || 0 === t.hostname.length))
             throw Error("no hostname");
         let i = (0, E.nK)(t);
@@ -122,12 +122,12 @@ let R = {
         }
         if (null != n.maskedLinkValidation) return ((n.maskedLinkValidation.foundNestedMaskedLink = !0), u());
         if (C(s)) return u();
-        let E = h(s),
-            A = h(a),
-            f = h(null != l ? l : ""),
+        let E = f(s),
+            A = f(a),
+            h = f(null != l ? l : ""),
             R = E.whitespaceSanitized,
             L = A.fullySanitized,
-            y = f.fullySanitized,
+            y = h.fullySanitized,
             D = L.trim();
         if (0 === R.trim().length || 0 === D.length) return u();
         let b = O(o().unescapeUrl(s));
@@ -137,7 +137,7 @@ let R = {
             M = { ...v, maskedLinkValidation: P },
             U = n.allowEmojiLinks ? p : I,
             w = [...U, ...m],
-            G = [...g, ...T],
+            G = [...T, ...g],
             x = t(L, M);
         if (S(P)) return u();
         let k = N(x, w, [_.D.EMOJI]),
@@ -191,7 +191,7 @@ let R = {
         }
         let H = r().pick(t.rules, U),
             j = o().parserFor(H)(A.whitespaceSanitized, v),
-            W = f.whitespaceSanitized,
+            W = h.whitespaceSanitized,
             { target: Y } = b;
         return { content: j, target: Y, title: W };
     },

@@ -24,7 +24,7 @@ function A(e, t) {
               return n.id === t;
           });
 }
-function h(e, t) {
+function f(e, t) {
     return s.A.getChannels(e)
         [s.I].map((e) => {
             let { channel: t } = e;
@@ -62,7 +62,7 @@ n.d(
         kF: function (e) {
             if ("guild" !== e.install_scope || null == e.guild_id || null == l.A.getGuild(e.guild_id)) return null;
             let t = A(e, e.guild_id);
-            return !0 === t || h(e.guild_id, e.application_id).length > 0
+            return !0 === t || f(e.guild_id, e.application_id).length > 0
                 ? "in_server"
                 : (e.supported_surfaces?.length ?? 0) > 0 && ((0, c.Hv)(e) || !1 === t)
                   ? "not_in_server"
@@ -72,6 +72,6 @@ n.d(
         wv: function (e, t) {
             return (null != t && o.A.canManageUser(u.xBc.KICK_MEMBERS, t, e)) || o.A.can(u.xBc.MANAGE_GUILD, e);
         },
-        xI: h,
+        xI: f,
     },
 );

@@ -5,8 +5,8 @@ n.d(t, {
     qC: () => O,
     Rl: () => N,
     oq: () => C,
-    xI: () => T,
-    Eg: () => g,
+    xI: () => g,
+    Eg: () => T,
     p7: () => R,
 });
 var i = n(517846),
@@ -21,7 +21,7 @@ var i = n(517846),
     _ = n(120570),
     E = n(855986);
 let A = 0;
-class h extends E.Ay.DeviceSettingsStore {
+class f extends E.Ay.DeviceSettingsStore {
     static displayName = "TopicalNavigationSurveyStore";
     static persistKey = "TopicalNavigationSurveyStore";
     initialize(e) {
@@ -37,7 +37,7 @@ class h extends E.Ay.DeviceSettingsStore {
         return { channelsExposedCount: A };
     }
 }
-let f = new h(a.h, {
+let h = new f(a.h, {
     TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function () {
         A++;
     },
@@ -65,12 +65,12 @@ async function p(e) {
         requestKey: A,
         isJump: c ?? !1,
     });
-    let h = { limit: l };
-    (null != s && ("before" === i ? (h.before = s) : "after" === i ? (h.after = s) : (h.around = s)),
-        null != E && ((h.include_messages = !0), (h.message_limit = E.limit ?? void 0)));
+    let f = { limit: l };
+    (null != s && ("before" === i ? (f.before = s) : "after" === i ? (f.after = s) : (f.around = s)),
+        null != E && ((f.include_messages = !0), (f.message_limit = E.limit ?? void 0)));
     try {
         let e = (
-            await r.Bo.get({ url: I.Rsh.CHANNEL_CONVERSATIONS(t), query: h, oldFormErrors: !0, rejectWithError: !0 })
+            await r.Bo.get({ url: I.Rsh.CHANNEL_CONVERSATIONS(t), query: f, oldFormErrors: !0, rejectWithError: !0 })
         ).body.conversations;
         return (
             a.h.dispatch({
@@ -98,10 +98,10 @@ async function m(e, t) {
             a.h.dispatch({ type: "CONVERSATION_FETCH_SUCCESS", channelId: e, rawConversation: n.body });
         } catch {}
 }
-function g() {
+function T() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function T(e, t, n) {
+function g(e, t, n) {
     let { cacheType: i, shouldJump: r = !0 } = n;
     if (
         null == t ||
@@ -168,6 +168,6 @@ async function O(e, t, n) {
 }
 function R(e, t) {
     (u.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
-        f.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
+        h.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
         a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" }));
 }

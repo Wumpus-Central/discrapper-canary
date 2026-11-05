@@ -10,7 +10,7 @@ var i,
     _ = n(170148),
     E = n(166352),
     A = n(652215),
-    h =
+    f =
         (((i = {})[(i.CAN_JOIN = 0)] = "CAN_JOIN"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),
         (i[(i.NO_CHANNEL_CONNECT_PERMISSION = 2)] = "NO_CHANNEL_CONNECT_PERMISSION"),
@@ -24,7 +24,7 @@ var i,
         (i[(i.NO_GUILD = 10)] = "NO_GUILD"),
         (i[(i.CHANNEL_CONTENT_GATED = 11)] = "CHANNEL_CONTENT_GATED"),
         i);
-function f(e) {
+function h(e) {
     let {
         userId: t,
         activity: n,
@@ -42,21 +42,21 @@ function f(e) {
     if (a?.nsfwAllowed === !1 && i?.embeddedActivityConfig?.requires_age_gate === !0) return 7;
     if (!l) return 5;
     if (!(0, E.A)(i?.embeddedActivityConfig?.supported_platforms)) return 6;
-    let h = null != r ? r : d.getVoiceStateForSession(t, n?.session_id)?.channelId;
-    if (null == h) return 4;
-    let f = o.getChannel(r);
+    let f = null != r ? r : d.getVoiceStateForSession(t, n?.session_id)?.channelId;
     if (null == f) return 4;
-    if (!f.isPrivate()) {
-        let e = f.getGuildId();
+    let h = o.getChannel(r);
+    if (null == h) return 4;
+    if (!h.isPrivate()) {
+        let e = h.getGuildId();
         if (null == e) return 10;
         let t = _.getGuild(e);
-        if (t?.afkChannelId === f.id) return 9;
-        let n = d.getCurrentClientVoiceChannelId(f.getGuildId()) === h,
-            i = (0, u.Pd)(f, d, _),
-            r = c.can(A.xBc.CONNECT, f);
-        if (!c.can(A.xBc.USE_EMBEDDED_ACTIVITIES, f)) return 1;
+        if (t?.afkChannelId === h.id) return 9;
+        let n = d.getCurrentClientVoiceChannelId(h.getGuildId()) === f,
+            i = (0, u.Pd)(h, d, _),
+            r = c.can(A.xBc.CONNECT, h);
+        if (!c.can(A.xBc.USE_EMBEDDED_ACTIVITIES, h)) return 1;
         if (s) return 11;
-        if (f.isVocal() && !n) {
+        if (h.isVocal() && !n) {
             if (i) return 3;
             if (!r) return 2;
         }
@@ -67,18 +67,18 @@ n.d(
     t,
     {},
     {
-        Ay: f,
-        Gy: h,
+        Ay: h,
+        Gy: f,
         vG: function (e) {
             let { userId: t, activity: n, channelId: i, application: u } = e,
                 E = (0, _.z)(),
                 A = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-                h = (0, r.bG)([s.A], () => s.A.getChannel(i), [i]),
-                I = (0, a.vL)(h);
+                f = (0, r.bG)([s.A], () => s.A.getChannel(i), [i]),
+                I = (0, a.vL)(f);
             return (0, r.bG)(
                 [s.A, c.A, o.A, l.A],
                 () =>
-                    f({
+                    h({
                         userId: t,
                         activity: n,
                         application: u,

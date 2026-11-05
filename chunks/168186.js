@@ -12,8 +12,8 @@ var i = n(824120),
 n(95701);
 var E = n(31717),
     A = n(392054),
-    h = n(73510),
-    f = n(652215),
+    f = n(73510),
+    h = n(652215),
     I = n(818348);
 function p(e) {
     let t,
@@ -75,7 +75,7 @@ function p(e) {
     };
 }
 let m = d.iu(0);
-function g(e, t, n) {
+function T(e, t, n) {
     let i = n[(0, _.Eu)(e.userId, A.RA.USER)];
     if (null != i) return i.permission;
     let r = !1;
@@ -93,8 +93,8 @@ n.d(
     {
         $S: function (e) {
             if (null != e)
-                if (e.id === h.Ik.BUILT_IN) return A.gK.BUILT_IN;
-                else if (e.id === h.Ik.FRECENCY) return A.gK.FRECENCY;
+                if (e.id === f.Ik.BUILT_IN) return A.gK.BUILT_IN;
+                else if (e.id === f.Ik.FRECENCY) return A.gK.FRECENCY;
                 else return A.gK.APP;
         },
         Am: function (e) {
@@ -274,7 +274,7 @@ n.d(
             return null != n && e in n;
         },
         hT: function (e) {
-            return f.Ut1.test(e.trim());
+            return h.Ut1.test(e.trim());
         },
         my: function (e) {
             let {
@@ -287,7 +287,7 @@ n.d(
                 searchResultsPosition: l,
                 source: o,
             } = e;
-            (0, u.zV)(f.HAw.APPLICATION_COMMAND_SELECTED, {
+            (0, u.zV)(h.HAw.APPLICATION_COMMAND_SELECTED, {
                 command_id: t.rootCommand?.id ?? t.id,
                 application_id: t.applicationId,
                 location: n,
@@ -312,10 +312,10 @@ n.d(
             if (n.ownerId === i.userId || t.can(I.xB.ADMINISTRATOR, n)) return !0;
             let l = n.id;
             if (null != a) {
-                let e = g(i, l, a);
+                let e = T(i, l, a);
                 if ("boolean" == typeof e) return e;
             }
-            let o = g(i, l, r);
+            let o = T(i, l, r);
             return ("boolean" != typeof o || !!o) && (null == s || (!d.aI(s, m) && t.can(s, n)));
         },
     },

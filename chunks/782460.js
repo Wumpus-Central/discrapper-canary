@@ -34,7 +34,7 @@ function u(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 ? arguments[2] : void 0,
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        ((t.exposureType = n ? o.vf.AUTO_FALLBACK : o.vf.AUTO), (t.excluded = !1), null == i) ? A(e, t) : h(e, t, i);
+        ((t.exposureType = n ? o.vf.AUTO_FALLBACK : o.vf.AUTO), (t.excluded = !1), null == i) ? A(e, t) : f(e, t, i);
     }
     function A(t) {
         let n =
@@ -42,9 +42,9 @@ function u(e) {
                     ? arguments[1]
                     : { excluded: !1, exposureType: o.vf.MANUAL },
             i = d(e.kind, _.id, t);
-        null != i && h(t, n, i);
+        null != i && f(t, n, i);
     }
-    function h(e, t, n) {
+    function f(e, t, n) {
         if (null != n) {
             let i = o.vf.MANUAL;
             (0, s.LQ)(_.id, n, {
@@ -56,7 +56,7 @@ function u(e) {
             });
         }
     }
-    function f(t, n) {
+    function h(t, n) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             r = null != i.disable && i.disable,
             a = d(e.kind, e.id, t),
@@ -84,30 +84,30 @@ function u(e) {
                 l = d(e.kind, e.id, t),
                 _ = null == n.trackExposureOptions ? void 0 : (0, r.A)(n.trackExposureOptions ?? {}),
                 A = l?.triggerDebuggingEnabled ?? !1,
-                [[h, I, p], m] = (0, i.useState)(() => {
+                [[f, I, p], m] = (0, i.useState)(() => {
                     let t = null == l || a ? o.RE.NOT_ELIGIBLE : l.bucket;
                     return [c(e, t, u, l), t, null == l ? -1 : l.revision];
                 }),
-                g = (0, r.A)(t);
+                T = (0, r.A)(t);
             return (
                 (0, i.useEffect)(() => {
-                    !a && (s || A) && null == e.commonTriggerPoint && E(g, _, !1 === s);
-                }, [a, s, g, _, I, p, A]),
+                    !a && (s || A) && null == e.commonTriggerPoint && E(T, _, !1 === s);
+                }, [a, s, T, _, I, p, A]),
                 (0, i.useEffect)(
                     () =>
-                        f(
-                            g,
+                        h(
+                            T,
                             (e, t, n) => {
                                 m((i) => (i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n]));
                             },
                             { disable: a },
                         ),
-                    [a, g],
+                    [a, T],
                 ),
-                h
+                f
             );
         },
-        subscribe: f,
+        subscribe: h,
         trackExposure: A,
         getCurrentConfig: function (t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },

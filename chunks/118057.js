@@ -23,21 +23,21 @@ n.d(
                     prepareFocus: f,
                     getNewFocusPosition: E,
                     maintainFocusPosition: I = !0,
-                    enabled: g = !0,
-                    onDispatch: h,
+                    enabled: h = !0,
+                    onDispatch: g,
                     autoFocusElement: p = !0,
                     useVirtualFocus: A = !1,
                 } = e,
                 _ = i.useCallback(
                     (e, t) => {
                         let n = (0, s.A)(e, t);
-                        return (null != h && h(e, n, t), n);
+                        return (null != g && g(e, n, t), n);
                     },
-                    [h],
+                    [g],
                 ),
                 [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
-                { columnCounts: y, focusedX: x, focusedY: T } = N,
-                [O] = i.useState(() => (0, r.nF)(C, 16));
+                { columnCounts: y, focusedX: x, focusedY: O } = N,
+                [T] = i.useState(() => (0, r.nF)(C, 16));
             return (
                 i.useEffect(() => {
                     C({ type: s.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
@@ -52,16 +52,16 @@ n.d(
                             prepareFocus: f,
                             getNewFocusPosition: E,
                             dispatch: I,
-                            maintainFocusPosition: g,
-                            enabled: h,
+                            maintainFocusPosition: h,
+                            enabled: g,
                             autoFocusElement: p,
                             useVirtualFocus: A,
                         } = e,
-                        _ = i.useRef(h),
+                        _ = i.useRef(g),
                         N = c(o(t, u, d)),
                         [C, y] = i.useState(!1),
-                        [x, T] = i.useState(!1),
-                        [O, j] = i.useState(!1),
+                        [x, O] = i.useState(!1),
+                        [T, j] = i.useState(!1),
                         [S] = i.useState(
                             () =>
                                 new r.Lp((e) => {
@@ -84,7 +84,7 @@ n.d(
                                 let i = o(t, e, n);
                                 (null != f ? f(e, n, i) : Promise.resolve()).then(() => {
                                     let e = c(i);
-                                    null != e ? (b(e), T(!1)) : requestAnimationFrame(() => T(!0));
+                                    null != e ? (b(e), O(!1)) : requestAnimationFrame(() => O(!0));
                                 });
                             },
                             [t, f, b],
@@ -114,10 +114,10 @@ n.d(
                         _.current && null == e && P(!0);
                     }, []);
                     (i.useEffect(() => {
-                        C && x && null != N && (b(N), T(!1));
+                        C && x && null != N && (b(N), O(!1));
                     }, [x, N]),
                         i.useEffect(() => {
-                            C && (O || R(u, d), j(!1));
+                            C && (T || R(u, d), j(!1));
                         }, [u, d]));
                     let D = i.useCallback(
                             (e) => {
@@ -181,8 +181,8 @@ n.d(
                                     ? (C || (y(!0), j(!0)), !1)
                                     : C
                                       ? (v(!1), !1)
-                                      : void (g && null != N ? R(u, d) : v(!0)),
-                            [C, g, N, v, R, u, d],
+                                      : void (h && null != N ? R(u, d) : v(!0)),
+                            [C, h, N, v, R, u, d],
                         ),
                         k = i.useCallback((e) => {
                             if (e.target !== e.currentTarget) {
@@ -196,13 +196,13 @@ n.d(
                                 role: "grid",
                                 "aria-rowcount": n.length,
                                 "aria-colcount": U,
-                                tabIndex: C && g ? -1 : 0,
+                                tabIndex: C && h ? -1 : 0,
                                 "data-ref-id": t,
                                 onKeyDown: D,
                                 onFocus: w,
                                 onBlur: k,
                             }),
-                            [n.length, U, C, g, t, D, w, k],
+                            [n.length, U, C, h, t, D, w, k],
                         ),
                         F = i.useCallback(
                             (e, n) => {
@@ -211,12 +211,12 @@ n.d(
                                     "aria-rowindex": n + 1,
                                     "aria-colindex": e + 1,
                                     id: (0, r.Aq)(t, e, n),
-                                    tabIndex: g && e === u && n === d ? 0 : -1,
+                                    tabIndex: h && e === u && n === d ? 0 : -1,
                                     onFocus: S.get(`${e},${n}`),
                                 };
                                 return (e === u && n === d && (i.ref = M), i);
                             },
-                            [t, g, u, d, S, M],
+                            [t, h, u, d, S, M],
                         ),
                         J = i.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
                     return i.useMemo(
@@ -227,13 +227,13 @@ n.d(
                     navId: t,
                     columnCounts: y,
                     focusedX: x,
-                    focusedY: T,
-                    dispatch: O,
+                    focusedY: O,
+                    dispatch: T,
                     onSelect: m,
                     prepareFocus: f,
                     getNewFocusPosition: E,
                     maintainFocusPosition: I,
-                    enabled: g,
+                    enabled: h,
                     autoFocusElement: p,
                     useVirtualFocus: A,
                 })

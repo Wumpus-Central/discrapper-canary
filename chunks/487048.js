@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(494012),
     o = n(855986),
-    d = n(323073),
-    c = n(616356),
+    c = n(323073),
+    d = n(616356),
     u = n(46653),
     h = n(544299),
     p = n(861094),
@@ -23,8 +23,8 @@ n.d(
                 {
                     screenBounds: C,
                     screenClipPath: y,
-                    center: j,
-                    boundingBoxCorners: I,
+                    center: I,
+                    boundingBoxCorners: j,
                 } = l.useMemo(() => {
                     let e = (function (e) {
                             let { topLeft: t, topRight: n, bottomRight: i, bottomLeft: l } = e,
@@ -65,21 +65,21 @@ n.d(
                     };
                 }, [n]),
                 { ref: N, width: v, height: E } = (0, r.Ay)(),
-                b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, x)), [I, v, E]),
+                b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(j, v, E, x)), [j, v, E]),
                 S = Math.min(48, Math.max(20, 0.025 * a)),
-                _ = (0, o.yK)([c.A, u.default], () => {
-                    if ((0, d.F2)(t)) return [];
+                T = (0, o.yK)([d.A, u.default], () => {
+                    if ((0, c.F2)(t)) return [];
                     let e = u.default.getId();
-                    return c.A.getAllApplicationStreamsForChannel(t).sort(
+                    return d.A.getAllApplicationStreamsForChannel(t).sort(
                         (t, n) => Number(t.ownerId === e) - Number(n.ownerId === e),
                     );
                 }),
-                T = (0, h.Y1)(t),
-                R = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
+                _ = (0, h.Y1)(t),
+                R = l.useMemo(() => (null == E ? 0 : -(((j.topLeft.y + j.topRight.y) / 2 / 100) * E)), [j, E]);
             return (0, i.jsxs)("div", {
                 ref: N,
                 className: g.nj,
-                inert: T,
+                inert: _,
                 style: {
                     left: `${C.left}%`,
                     top: `${C.top}%`,
@@ -88,9 +88,9 @@ n.d(
                     clipPath: y,
                 },
                 children: [
-                    _.length > 0 && null != b && null != v
-                        ? (0, i.jsx)(f.A, { streams: _, fit: b, tooltipSpacing: R, containerWidthPx: v })
-                        : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: S }),
+                    T.length > 0 && null != b && null != v
+                        ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: v })
+                        : (0, i.jsx)(A.A, { channelId: t, center: I, iconSize: S }),
                     (0, i.jsx)(m.A, { className: s()(g.MQ, g.zq) }),
                 ],
             });

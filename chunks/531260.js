@@ -10,13 +10,13 @@ var i = n(582128),
     _ = n(339048),
     E = n(964486),
     A = n(287809),
-    h = n(166403),
-    f = n(469778),
+    f = n(166403),
+    h = n(469778),
     I = n(739508),
     p = n(722178),
     m = n(652215),
-    g = n(682901);
-function T(e) {
+    T = n(682901);
+function g(e) {
     let {
             isFetching: t = !1,
             entitlements: n,
@@ -28,7 +28,7 @@ function T(e) {
         } = e,
         u = {
             isFractionalPremiumActive: !1,
-            fractionalState: g.xc.NONE,
+            fractionalState: T.xc.NONE,
             startsAt: o()(0),
             endsAt: o()(0),
             currentEntitlementId: "",
@@ -51,14 +51,14 @@ function T(e) {
         throw ((0, I.hD)(t, { extra: { entitlementIds: e } }), Error(t));
     }
     let E = _[0] ?? null,
-        A = g.xc.NONE;
-    null != E && (A = null != s && s.status === m.Dmq.PAUSED ? g.xc.FP_SUB_PAUSED : g.xc.FP_ONLY);
-    let h = c && E?.sourceType === d.G.REVERSE_TRIAL;
+        A = T.xc.NONE;
+    null != E && (A = null != s && s.status === m.Dmq.PAUSED ? T.xc.FP_SUB_PAUSED : T.xc.FP_ONLY);
+    let f = c && E?.sourceType === d.G.REVERSE_TRIAL;
     return {
         isFractionalPremiumActive: null != E,
         fractionalState: A,
         startsAt: null != E ? o()(E.startsAt) : o()(0),
-        endsAt: null != E ? o()((0, p._e)(E.endsAt, i, void 0, h)) : o()(0),
+        endsAt: null != E ? o()((0, p._e)(E.endsAt, i, void 0, f)) : o()(0),
         currentEntitlementId: null != E ? E.id : "",
         currentEntitlementEndsAt: null != E ? o()(E.endsAt) : o()(0),
         unactivatedUnits: i,
@@ -66,10 +66,10 @@ function T(e) {
     };
 }
 function S(e, t) {
-    return null != t && !f.A.fetchingAllEntitlements && (!f.A.fetchedAllEntitlements || e);
+    return null != t && !h.A.fetchingAllEntitlements && (!h.A.fetchedAllEntitlements || e);
 }
 function N(e) {
-    return null != e && !f.A.applicationIdsFetching.has(g.tv) && !f.A.applicationIdsFetched.has(g.tv);
+    return null != e && !h.A.applicationIdsFetching.has(T.tv) && !h.A.applicationIdsFetched.has(T.tv);
 }
 n.d(
     t,
@@ -84,14 +84,14 @@ n.d(
                     ? arguments[0]
                     : { forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !1 },
                 r = (0, u.bG)([A.default], () => A.default.getCurrentUser()),
-                a = (0, u.yK)([f.A], () => f.A.getFractionalPremium({ excludeReverseTrial: t })),
-                l = (0, u.bG)([f.A], () => f.A.fetchedAllEntitlements),
-                o = (0, u.yK)([f.A], () => f.A.getUnactivatedFractionalPremiumUnits()),
-                d = (0, u.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
+                a = (0, u.yK)([h.A], () => h.A.getFractionalPremium({ excludeReverseTrial: t })),
+                l = (0, u.bG)([h.A], () => h.A.fetchedAllEntitlements),
+                o = (0, u.yK)([h.A], () => h.A.getUnactivatedFractionalPremiumUnits()),
+                d = (0, u.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
                 [I, p] = i.useState(
-                    T({
+                    g({
                         isFetching:
-                            S(e, r) || f.A.fetchingAllEntitlements || N(r) || f.A.applicationIdsFetching.has(g.tv),
+                            S(e, r) || h.A.fetchingAllEntitlements || N(r) || h.A.applicationIdsFetching.has(T.tv),
                         entitlements: a,
                         unactivatedFractionalPremiumUnits: o,
                         currentUser: r,
@@ -102,10 +102,10 @@ n.d(
                 );
             return (
                 (0, E.Ay)(() => {
-                    (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(g.tv));
+                    (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(T.tv));
                 }),
                 i.useEffect(() => {
-                    let e = T({
+                    let e = g({
                         entitlements: a,
                         unactivatedFractionalPremiumUnits: o,
                         currentUser: r,

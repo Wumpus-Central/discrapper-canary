@@ -20,7 +20,7 @@ var a = n(503698),
         (i[(i.PREMIUM_TIER_2_GREY_FILL = 6)] = "PREMIUM_TIER_2_GREY_FILL"),
         (i[(i.PREMIUM_TIER_2_MOD_BACKGROUND_FILL = 7)] = "PREMIUM_TIER_2_MOD_BACKGROUND_FILL"),
         i);
-function h(e) {
+function f(e) {
     let { text: t, className: n, colorOptions: i = 2, icon: a, gap: l = !0 } = e;
     return (0, r.jsxs)("div", {
         className: s()(n, E.hg, {
@@ -75,7 +75,7 @@ n.d(
                           (0, r.jsx)(c.zF, { foreground: E.QX, color: t }),
                           (0, r.jsx)(c.zF, { foreground: E.J0, color: t }),
                           (0, r.jsx)(c.zF, { foreground: E.QC, color: t }),
-                          (0, r.jsx)(h, { text: n, colorOptions: a }),
+                          (0, r.jsx)(f, { text: n, colorOptions: a }),
                           (0, r.jsx)(c.zF, { foreground: E.JF, color: t }),
                           (0, r.jsx)(c.zF, { foreground: E.Cm, color: t }),
                       ],
@@ -83,7 +83,7 @@ n.d(
                 : (0, r.jsxs)("div", {
                       className: s()(i, E.up),
                       children: [
-                          (0, r.jsx)(h, { text: n, colorOptions: a }),
+                          (0, r.jsx)(f, { text: n, colorOptions: a }),
                           (0, r.jsx)(c.zF, { foreground: E.QX, style: { marginLeft: 4, marginBottom: -6 }, color: t }),
                           (0, r.jsx)(c.zF, { foreground: E.J0, color: t }),
                       ],
@@ -97,7 +97,7 @@ n.d(
                   : null;
         },
         at: A,
-        e4: h,
+        e4: f,
         rm: function (e, t, n, i, r) {
             if (null != n && (0, d.U9)(n, u.pe.TIER_2) && void 0 !== n.discount.amount)
                 return e

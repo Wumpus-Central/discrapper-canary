@@ -45,17 +45,17 @@ let c = {
     };
 function A(e) {
     let { artboard: t = "HoverDarkmode", stateMachine: n, dataBinding: l, onDataBindingChange: d, ...A } = e,
-        { status: h, buffer: f } = (0, o.CE)(a),
+        { status: f, buffer: h } = (0, o.CE)(a),
         I = (0, o.m2)(a),
         p = r.useCallback(() => {
             let e = E[t];
             return null == e ? null : (0, i.jsx)(e, { dataBinding: l, onDataBindingChange: d });
         }, [t, l, d]);
-    return h === o.BW.Loading
+    return f === o.BW.Loading
         ? null
         : (0, i.jsx)(s.w, {
               ...(I ? { key: "override" } : {}),
-              buffer: f,
+              buffer: h,
               artboard: t,
               stateMachine: n,
               artboardProperties: c,

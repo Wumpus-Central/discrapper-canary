@@ -9,7 +9,7 @@ t.d(
     {},
     {
         A: function (e) {
-            let { containerDimensions: n, effect: d, onComplete: c } = e,
+            let { containerDimensions: n, effect: c, onComplete: d } = e,
                 u = i.useRef(null);
             return (
                 i.useEffect(() => {
@@ -20,11 +20,11 @@ t.d(
                                 let n = await (async function (e) {
                                         let { animationType: n, animationId: t, url: s, shouldResize: i } = e,
                                             o = a.Bf[n] ?? a.Bf[r.B.BASIC],
-                                            d = JSON.parse(
+                                            c = JSON.parse(
                                                 JSON.stringify(null != t && t < o.length ? o[t] : (0, l.sample)(o)),
                                             );
-                                        return ((d.assets[0].p = i ? await (0, a.tm)(s) : s), d);
-                                    })(d),
+                                        return ((c.assets[0].p = i ? await (0, a.tm)(s) : s), c);
+                                    })(c),
                                     { default: s } = await t.e(996382).then(t.t.bind(t, 883885, 23));
                                 null != u.current &&
                                     ((e = s.loadAnimation({
@@ -35,15 +35,15 @@ t.d(
                                         animationData: n,
                                         rendererSettings: { preserveAspectRatio: "xMidYMax slice" },
                                     })),
-                                    d.animationType === r.B.PREMIUM && e.setSpeed(0.8),
-                                    e.addEventListener("complete", () => c?.(d.id)));
+                                    c.animationType === r.B.PREMIUM && e.setSpeed(0.8),
+                                    e.addEventListener("complete", () => d?.(c.id)));
                             }
                         })(),
                         () => {
                             e?.destroy();
                         }
                     );
-                }, [c, d]),
+                }, [d, c]),
                 (0, s.jsx)("div", { className: o.Q, style: { height: n.height, width: n.width }, ref: u })
             );
         },

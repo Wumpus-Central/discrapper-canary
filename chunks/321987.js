@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(364840),
     E = n(696208),
     A = n(726249),
-    h = n(540999),
-    f = n(652215),
+    f = n(540999),
+    h = n(652215),
     I = n(792996),
     p = n(467793);
 n.d(
@@ -21,9 +21,9 @@ n.d(
         $: function (e) {
             let { children: t, removeChildWrapper: n, wrapperClassName: r } = e;
             (0, A.HU)({ location: I.intl.string(I.t["3S2494"]) });
-            let a = (0, l.bG)([h.A], () => h.A.isDeveloper) ? "92px" : void 0;
+            let a = (0, l.bG)([f.A], () => f.A.isDeveloper) ? "92px" : void 0;
             return (0, i.jsx)(o.N, {
-                theme: f.NJ8.DARK,
+                theme: h.NJ8.DARK,
                 children: (e) =>
                     (0, i.jsx)("div", {
                         className: s()(e, p.Y, r),

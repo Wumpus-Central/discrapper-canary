@@ -1,4 +1,4 @@
-n.d(t, { wq: () => I, pW: () => h, Mj: () => m, HR: () => E, _C: () => f, Oo: () => p, F9: () => A });
+n.d(t, { wq: () => I, pW: () => f, Mj: () => m, HR: () => E, _C: () => h, Oo: () => p, F9: () => A });
 var i = n(620632),
     r = n(73153);
 n(817281);
@@ -36,13 +36,13 @@ async function A(e, t, n) {
         throw new u(e);
     }
 }
-async function h(e) {
+async function f(e) {
     await i.Bo.del({ url: _.Rsh.VIDEO_FILTER_ASSET(e.id), rejectWithError: !1 });
     let t = (0, o.i)(l.default.getCurrentUser());
-    ((0, d.d1)(t) && t.id === e.id && f(null),
+    ((0, d.d1)(t) && t.id === e.id && h(null),
         r.h.dispatch({ type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: e }));
 }
-async function f(e) {
+async function h(e) {
     if (
         (await a.wc.updateAsync(
             "voiceAndVideo",

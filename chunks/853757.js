@@ -13,11 +13,11 @@ var r = n(477900),
     g = n(38021),
     p = n(192308),
     m = n(559106),
-    A = n(43990),
-    y = n(638495),
+    y = n(43990),
+    A = n(638495),
     v = n(557361),
-    w = n(353680),
-    x = n(318009),
+    x = n(353680),
+    w = n(318009),
     E = n(92960),
     b = n(14214),
     C = n(775602),
@@ -38,8 +38,8 @@ var r = n(477900),
     U = n(435558),
     K = n.n(U),
     B = n(120692),
-    F = n(258873),
-    W = n(622242),
+    W = n(258873),
+    F = n(622242),
     H = n(731738),
     V = n(834730),
     Y = n(273626),
@@ -47,9 +47,9 @@ var r = n(477900),
     J = n(964486),
     $ = n(913379),
     X = n(976860),
-    Z = n(287809),
-    Q = n(144400),
-    q = n(927813),
+    Q = n(287809),
+    q = n(144400),
+    Z = n(927813),
     ee = n(777334),
     et = n(41984),
     en = n(870373),
@@ -63,24 +63,24 @@ var r = n(477900),
 let ed = K().throttle(
         () => {
             $.A.increment(
-                { name: H.K.APP_CRASHED, tags: [`reason:${F.J.UNHANDLED_JS_ERROR}`, `level:${W.k.FATAL}`] },
+                { name: H.K.APP_CRASHED, tags: [`reason:${W.J.UNHANDLED_JS_ERROR}`, `level:${F.k.FATAL}`] },
                 !0,
             );
         },
         100,
         { trailing: !1 },
     ),
-    ec = 10 * q.A.Millis.SECOND;
+    ec = 10 * Z.A.Millis.SECOND;
 function eh(e) {
     let { error: t, onLock: n, onReload: l, onDisable: s, onCrashDisabled: o } = e,
         a = i.useMemo(() => new B.SpringValue(1), []),
         u = i.useRef(null),
         [d, c] = i.useState(!1),
         [f, g] = i.useState(!1),
-        p = (0, h.bG)([Z.default], () => Z.default.getCurrentUser());
+        p = (0, h.bG)([Q.default], () => Q.default.getCurrentUser());
     (0, J.Ay)(
         () => (
-            (u.current = setTimeout(A, ec)),
+            (u.current = setTimeout(y, ec)),
             (0, en.g)(eo.HAw.NOTIFICATION_VIEWED, { notif_type: es.KS.OverlayCrashed }),
             () => {
                 null != u.current && clearTimeout(u.current);
@@ -88,10 +88,10 @@ function eh(e) {
         ),
     );
     let m = (p?.isStaff() ?? !1) || (p?.isStaffPersonal() ?? !1),
-        A = i.useCallback(() => {
+        y = i.useCallback(() => {
             (a.set(0), null != u.current && clearTimeout(u.current), (u.current = null), n?.(), o?.());
         }, [a, n, o]),
-        y = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 f ||
                     (g(!0),
@@ -112,13 +112,13 @@ function eh(e) {
             },
             [c],
         ),
-        w = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 (e.stopPropagation(), n?.(), s?.());
             },
             [s, n],
         ),
-        x = (0, h.bG)([ei.A], () => ei.A.getFocusedRunningGame()),
+        w = (0, h.bG)([ei.A], () => ei.A.getFocusedRunningGame()),
         E = d
             ? (0, r.jsxs)("div", {
                   children: [
@@ -150,11 +150,11 @@ function eh(e) {
         body: E,
         hint: m ? b : void 0,
         confirmText: ea.intl.string(ea.t.a3HlgJ),
-        cancelText: null != x ? ea.intl.string(ea.t.qIYnPo) : void 0,
-        icon: (0, r.jsx)(Q.A, { width: 40, height: 40, className: eu.Lo }),
+        cancelText: null != w ? ea.intl.string(ea.t.qIYnPo) : void 0,
+        icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: eu.Lo }),
         onNotificationClick: v,
-        onConfirmClick: y,
-        onCancelClick: null != x ? w : void 0,
+        onConfirmClick: A,
+        onCancelClick: null != w ? x : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
@@ -221,17 +221,17 @@ class ef extends i.PureComponent {
 var eg = n(97469),
     ep = n(446269),
     em = n(611635),
-    eA = n(892019),
-    ey = n(723702),
+    ey = n(892019),
+    eA = n(723702),
     ev = n(677134),
-    ew = n(253400),
-    ex = n(80833),
+    ex = n(253400),
+    ew = n(80833),
     eE = n(869146),
     eb = n(392164),
     eC = n(577063);
 function eN(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && ey.isPlatformEmbedded && !n;
+    return t && eA.isPlatformEmbedded && !n;
 }
 function eO(e) {
     let { windowKey: t, themeOverride: n } = e,
@@ -239,7 +239,7 @@ function eO(e) {
         l = n ?? r;
     return (
         i.useLayoutEffect(() => {
-            ew.Ay.setTrafficLightAppearance((0, f.M)(l) ? "dark" : "light", t);
+            ex.Ay.setTrafficLightAppearance((0, f.M)(l) ? "dark" : "light", t);
         }, [l, t]),
         null
     );
@@ -255,9 +255,9 @@ class e_ extends i.Component {
         (null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
-            (0, ex.M)(e),
+            (0, ew.M)(e),
             e.addEventListener("blur", this.handleBlur),
-            ey.isPlatformEmbedded
+            eA.isPlatformEmbedded
                 ? t.addEventListener("contextmenu", ev.contextMenuCallbackNative, !1)
                 : t.addEventListener("contextmenu", ev.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
@@ -266,7 +266,7 @@ class e_ extends i.Component {
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                (eE.A.unmountWindow(this.props.windowKey), ey.isPlatformEmbedded && ew.Ay.close(this.props.windowKey));
+                (eE.A.unmountWindow(this.props.windowKey), eA.isPlatformEmbedded && ex.Ay.close(this.props.windowKey));
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -279,7 +279,7 @@ class e_ extends i.Component {
             t = e.document;
         (this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            ey.isPlatformEmbedded
+            eA.isPlatformEmbedded
                 ? t.removeEventListener("contextmenu", ev.contextMenuCallbackNative)
                 : t.removeEventListener("contextmenu", ev.contextMenuCallbackWeb),
             (0, d.r)(() => p.re.setState((e) => ({ ...e, popout: [] }))),
@@ -333,7 +333,7 @@ class e_ extends i.Component {
                 hideModals: g = !1,
                 appContext: p,
             } = this.props,
-            w = eN({ withTitleBar: l, isFullScreen: i }),
+            x = eN({ withTitleBar: l, isFullScreen: i }),
             E = n === eb.f,
             b = E ? ef : P.A;
         return (0, r.jsx)(u.Kd, {
@@ -343,7 +343,7 @@ class e_ extends i.Component {
                     windowKey: n,
                     themeOverride: h,
                     children: [
-                        w && (0, r.jsx)(eO, { windowKey: n, themeOverride: f }),
+                        x && (0, r.jsx)(eO, { windowKey: n, themeOverride: f }),
                         (0, r.jsx)(N.A, {
                             children: (0, r.jsxs)(m.xp, {
                                 containerRef: this.rootRef,
@@ -364,8 +364,8 @@ class e_ extends i.Component {
                                                                     (0, r.jsxs)("div", {
                                                                         className: eC.SW,
                                                                         children: [
-                                                                            w &&
-                                                                                (0, r.jsx)(A.N, {
+                                                                            x &&
+                                                                                (0, r.jsx)(y.N, {
                                                                                     theme: f,
                                                                                     children: (e) =>
                                                                                         (0, r.jsx)(T.cq, {
@@ -379,8 +379,8 @@ class e_ extends i.Component {
                                                                             }),
                                                                         ],
                                                                     }),
-                                                                    !g && (0, r.jsx)(y.b, {}),
-                                                                    (0, r.jsx)(x.A, {}),
+                                                                    !g && (0, r.jsx)(A.b, {}),
+                                                                    (0, r.jsx)(w.A, {}),
                                                                     (0, r.jsx)(c.P, {}),
                                                                     (0, r.jsx)(R.C8, {}),
                                                                     (0, r.jsx)(M.ok, {}),
@@ -414,7 +414,7 @@ function eD(e) {
             let e = t.document.documentElement;
             (a()(null != e, "Window document element was null"), e.setAttribute("lang", u));
         }, [t, u]),
-        (0, eA.A)(t.document.documentElement));
+        (0, ey.A)(t.document.documentElement));
     let h = s()(c, n, "in-popout");
     return (
         i.useLayoutEffect(() => {
@@ -442,7 +442,7 @@ let eI = function (e) {
         g = n.themeOverride ?? f;
     return null == i
         ? null
-        : (0, r.jsx)(w.W, {
+        : (0, r.jsx)(x.W, {
               children: (0, r.jsx)(D.f5, {
                   value: u,
                   children: (0, r.jsx)(e_, {

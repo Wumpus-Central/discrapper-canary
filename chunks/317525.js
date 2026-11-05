@@ -50,7 +50,7 @@ function A(e, t, n) {
     if (0 === n.partitionLength(t))
         throw Error(`Guild data was missing from store for guild ${t}: missing roles. (phase: ${e})`);
 }
-let h = new _(
+let f = new _(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
@@ -123,4 +123,4 @@ let h = new _(
     },
     a.P4.getCachedBridgedStoreMode(),
 );
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

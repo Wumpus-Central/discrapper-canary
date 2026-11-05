@@ -107,7 +107,7 @@ function E(e) {
     );
 }
 let A = 0;
-function h() {
+function f() {
     (0, r.C)(_.length > 0 || A > 0 ? E : null);
 }
 n.d(
@@ -115,10 +115,10 @@ n.d(
     {},
     {
         L0: function () {
-            (A++, h());
+            (A++, f());
             let e = !1;
             return () => {
-                e || ((e = !0), A--, h());
+                e || ((e = !0), A--, f());
             };
         },
         uE: function (e, t) {
@@ -126,13 +126,13 @@ n.d(
             let n = { iframeId: e, recorded: [] };
             return (
                 t?.beneathBatches === !0 ? _.push(n) : _.unshift(n),
-                h(),
+                f(),
                 {
                     iframeId: e,
                     drain: () => n.recorded.splice(0, n.recorded.length),
                     end: () => {
                         let e = _.indexOf(n);
-                        -1 !== e && (_.splice(e, 1), h());
+                        -1 !== e && (_.splice(e, 1), f());
                     },
                 }
             );

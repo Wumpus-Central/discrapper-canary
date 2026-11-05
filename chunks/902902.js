@@ -11,8 +11,8 @@ let c = [d.eA$.PENDING_INCOMING, d.eA$.PENDING_OUTGOING],
     _ = new Map(),
     E = [],
     A = [],
-    h = !1;
-function f(e, t) {
+    f = !1;
+function h(e, t) {
     return (t.since ?? "").localeCompare(e.since ?? "");
 }
 function I(e, t) {
@@ -24,8 +24,8 @@ function p(e, t) {
 function m() {
     return o.A.getConfig({ location: "FriendRequestsStore" }).sidebarEnabled;
 }
-function g(e) {
-    if (!h) return !1;
+function T(e) {
+    if (!f) return !1;
     let t = { incoming: !1, outgoing: !1 };
     for (let n of e)
         !(function (e, t) {
@@ -72,30 +72,30 @@ function g(e) {
         let i = [],
             r = [];
         for (let e of u.values()) e.type === d.eA$.PENDING_INCOMING ? t && i.push(e) : n && r.push(e);
-        return (t && (E = i.sort(f)), n && (A = r.sort(f)), !0);
+        return (t && (E = i.sort(h)), n && (A = r.sort(h)), !0);
     })(t);
 }
-function T() {
+function g() {
     let e = u.size > 0;
     return (u.clear(), _.clear(), (E = []), (A = []), e);
 }
 function S() {
-    let e = T();
-    if (!(h = m())) return e;
+    let e = g();
+    if (!(f = m())) return e;
     let t = new Set();
     for (let e of (l.A.getMutableRelationships().forEach((e, n) => {
         (e === d.eA$.PENDING_INCOMING || e === d.eA$.PENDING_OUTGOING) && t.add(n);
     }),
     c))
         for (let { id: n } of s.A.getGameRelationshipsByType(e)) t.add(n);
-    return g(t) || e;
+    return T(t) || e;
 }
 function N() {
-    return m() !== h && S();
+    return m() !== f && S();
 }
 function C(e) {
     let { relationship: t } = e;
-    return g([t.id]);
+    return T([t.id]);
 }
 class O extends i.Ay.Store {
     static displayName = "FriendRequestsStore";
@@ -117,11 +117,11 @@ let R = new O(r.h, {
     RELATIONSHIP_PENDING_INCOMING_REMOVED: S,
     GAME_RELATIONSHIP_ADD: function (e) {
         let { gameRelationship: t } = e;
-        return g([t.id]);
+        return T([t.id]);
     },
     GAME_RELATIONSHIP_REMOVE: function (e) {
         let { userId: t } = e;
-        return g([t]);
+        return T([t]);
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { unknownApplicationIds: t } = e;
@@ -133,9 +133,9 @@ let R = new O(r.h, {
                 let { userId: t, applicationId: r, isGameRelationship: a } = e;
                 !a || (null != r && n.has(r) && i.add(t));
             }),
-            g(i)
+            T(i)
         );
     },
-    LOGOUT: T,
+    LOGOUT: g,
 });
 n.d(t, {}, { A: R });

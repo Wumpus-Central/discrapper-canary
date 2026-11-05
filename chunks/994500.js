@@ -10,13 +10,13 @@ let d = new Map(),
     _ = {},
     E = new Set(),
     A = new Set(),
-    h = new Set(),
-    f = {},
+    f = new Set(),
+    h = {},
     I = 0,
     p = {},
     m = 0,
-    g = 0,
     T = 0,
+    g = 0,
     S = { friends: void 0, blocked: void 0, ignored: void 0, blockedOrIgnored: void 0 },
     N = new Set();
 function C(e) {
@@ -53,7 +53,7 @@ function P(e) {
     null != t && (d.delete(e), b.get(t)?.delete(e), C(t));
 }
 function M() {
-    ((g = E.size), (T = h.size), (m = Math.max((b.get(o.eA$.PENDING_INCOMING)?.size ?? 0) - g - T, 0)), I++);
+    ((T = E.size), (g = f.size), (m = Math.max((b.get(o.eA$.PENDING_INCOMING)?.size ?? 0) - T - g, 0)), I++);
 }
 class U extends i.Ay.Store {
     static displayName = "RelationshipStore";
@@ -98,10 +98,10 @@ class U extends i.Ay.Store {
         return m;
     }
     getSpamCount() {
-        return g;
+        return T;
     }
     getPendingIgnoredCount() {
-        return T;
+        return g;
     }
     getOutgoingCount() {
         return b.get(o.eA$.PENDING_OUTGOING)?.size ?? 0;
@@ -156,7 +156,7 @@ class U extends i.Ay.Store {
         return S.blockedOrIgnored;
     }
     getOriginApplicationId(e) {
-        return f[e];
+        return h[e];
     }
     isStranger(e) {
         if (null != p[e]) return p[e].expiry < Date.now() ? void delete p[e] : p[e].isStranger;
@@ -171,9 +171,9 @@ let w = new U(r.h, {
             (_ = {}),
             A.clear(),
             E.clear(),
-            h.clear(),
+            f.clear(),
             R(),
-            (f = {}),
+            (h = {}),
             (p = {}),
             e.relationships.forEach((e) => {
                 (v(e.id, e.type),
@@ -181,8 +181,8 @@ let w = new U(r.h, {
                     null != e.since && (u[e.id] = e.since),
                     null != e.note && (_[e.id] = e.note),
                     e.is_spam_request && E.add(e.id),
-                    null != e.origin_application_id && (f[e.id] = e.origin_application_id),
-                    e.user_ignored && (y(e.id), e.type === o.eA$.PENDING_INCOMING && h.add(e.id)));
+                    null != e.origin_application_id && (h[e.id] = e.origin_application_id),
+                    e.user_ignored && (y(e.id), e.type === o.eA$.PENDING_INCOMING && f.add(e.id)));
             }),
             L(),
             M());
@@ -198,14 +198,14 @@ let w = new U(r.h, {
             null != e.relationship.since && (u = { ...u, [e.relationship.id]: e.relationship.since }),
             null != e.relationship.note && (_ = { ..._, [e.relationship.id]: e.relationship.note }),
             null != e.relationship.originApplicationId &&
-                (f = { ...f, [e.relationship.id]: e.relationship.originApplicationId }),
+                (h = { ...h, [e.relationship.id]: e.relationship.originApplicationId }),
             e.relationship.isSpamRequest ? E.add(e.relationship.id) : E.delete(e.relationship.id),
             e.relationship.userIgnored
                 ? (y(e.relationship.id),
                   e.relationship.type === o.eA$.PENDING_INCOMING
-                      ? h.add(e.relationship.id)
-                      : e.relationship.type === o.eA$.FRIEND && h.delete(e.relationship.id))
-                : (D(e.relationship.id), h.delete(e.relationship.id)),
+                      ? f.add(e.relationship.id)
+                      : e.relationship.type === o.eA$.FRIEND && f.delete(e.relationship.id))
+                : (D(e.relationship.id), f.delete(e.relationship.id)),
             L(),
             M(),
             e.relationship.type === o.eA$.FRIEND &&
@@ -217,9 +217,9 @@ let w = new U(r.h, {
             null != c[e.relationship.id] && ((c = { ...c }), delete c[e.relationship.id]),
             null != u[e.relationship.id] && ((u = { ...u }), delete u[e.relationship.id]),
             null != _[e.relationship.id] && ((_ = { ..._ }), delete _[e.relationship.id]),
-            null != f[e.relationship.id] && ((f = { ...f }), delete f[e.relationship.id]),
+            null != h[e.relationship.id] && ((h = { ...h }), delete h[e.relationship.id]),
             e.relationship.userIgnored || D(e.relationship.id),
-            h.delete(e.relationship.id),
+            f.delete(e.relationship.id),
             E.delete(e.relationship.id),
             L(),
             M());
@@ -232,22 +232,22 @@ let w = new U(r.h, {
             null == t.note ? delete _[t.id] : (_[t.id] = t.note),
             t.isSpamRequest ? E.add(t.id) : E.delete(t.id),
             null != p[t.id] && delete p[t.id],
-            null == t.originApplicationId ? delete f[t.id] : (f[t.id] = t.originApplicationId),
-            t.userIgnored ? (y(t.id), t.type === o.eA$.PENDING_INCOMING && h.add(t.id)) : (D(t.id), h.delete(t.id)),
+            null == t.originApplicationId ? delete h[t.id] : (h[t.id] = t.originApplicationId),
+            t.userIgnored ? (y(t.id), t.type === o.eA$.PENDING_INCOMING && f.add(t.id)) : (D(t.id), f.delete(t.id)),
             L(),
             M());
     },
     RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
-        for (let e of d.keys()) d.get(e) === o.eA$.PENDING_INCOMING && (P(e), E.delete(e), h.delete(e), delete p[e]);
+        for (let e of d.keys()) d.get(e) === o.eA$.PENDING_INCOMING && (P(e), E.delete(e), f.delete(e), delete p[e]);
         (L(), M());
     },
     RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
         let { userId: t } = e;
-        (y(t), d.get(t) === o.eA$.PENDING_INCOMING && h.add(t), L(), M());
+        (y(t), d.get(t) === o.eA$.PENDING_INCOMING && f.add(t), L(), M());
     },
     RELATIONSHIP_UNIGNORE_USER_SUCCESS: function (e) {
         let { userId: t } = e;
-        (D(t), h.delete(t), L(), M());
+        (D(t), f.delete(t), L(), M());
     },
     UPDATE_STRANGER_STATUS: function (e) {
         p[e.userId] = { expiry: Date.now() + 3e5, isStranger: e.isStranger };

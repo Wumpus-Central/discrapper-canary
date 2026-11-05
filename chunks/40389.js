@@ -2,8 +2,8 @@ var i = t(477900),
     r = t(582128),
     l = t(435558),
     a = t.n(l),
-    d = t(855986),
-    o = t(477782),
+    o = t(855986),
+    d = t(477782),
     s = t(367513),
     u = t(628983),
     c = t(499211),
@@ -17,10 +17,10 @@ t.d(
     {
         A: function (n) {
             let e = (0, h._M)(n),
-                t = (0, d.bG)([m.A], () => m.A.isInChannel(n.id)),
-                l = (0, d.bG)([m.A], () => !a().isEmpty(m.A.getVoiceStatesForChannel(n.id))),
+                t = (0, o.bG)([m.A], () => m.A.isInChannel(n.id)),
+                l = (0, o.bG)([m.A], () => !a().isEmpty(m.A.getVoiceStatesForChannel(n.id))),
                 { needSubscriptionToAccess: b } = (0, c.A)(n.id),
-                p = (0, d.bG)([u.A], () => u.A.getChatOpen(n.id)),
+                p = (0, o.bG)([u.A], () => u.A.getChatOpen(n.id)),
                 j = r.useCallback(() => {
                     A.A.handleVoiceConnect({ channel: n, connected: t, needSubscriptionToAccess: b, locked: !1 });
                 }, [n, t, b]);
@@ -28,14 +28,14 @@ t.d(
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(o.Dr, {
+                          (0, i.jsx)(d.Dr, {
                               id: "join-thread-voice",
                               label: l ? g.intl.string(g.t["0D/6Rz"]) : g.intl.string(g.t.My50nf),
                               action: j,
                           }),
                           l &&
                               !p &&
-                              (0, i.jsx)(o.Dr, {
+                              (0, i.jsx)(d.Dr, {
                                   id: "open-chat",
                                   label: g.intl.string(g.t.ZXxLQg),
                                   action: () => {

@@ -17,18 +17,18 @@ var l = n(477900),
     v = n(807632),
     p = n(855986),
     b = n(454292),
-    A = n(960850),
-    C = n(985253),
+    C = n(960850),
+    A = n(985253),
     N = n(971389),
     y = n(491009),
     E = n(894768),
     S = n(101392),
-    T = n(652215),
-    I = n(746080),
+    I = n(652215),
+    T = n(746080),
     M = n(834730),
-    _ = n(123292),
-    k = n(688810),
-    R = n(359800),
+    k = n(123292),
+    R = n(688810),
+    _ = n(359800),
     w = n(724302),
     P = n(769015),
     D = n(354817),
@@ -37,9 +37,9 @@ var l = n(477900),
 function G(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = d.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
-        { analyticsLocations: a } = (0, k.Ay)(s),
+        { analyticsLocations: a } = (0, R.Ay)(s),
         { canStartAuthorization: r, hasAlreadyLinked: o, startAuthorization: c, fetched: u } = (0, w.RD)(n),
-        m = (0, R.z)(c, o);
+        m = (0, _.z)(c, o);
     if (!u || !r || o) return null;
     let h = !1;
     return (
@@ -52,7 +52,7 @@ function G(e) {
                 (0, l.jsx)(P.A, { game: n, size: P.M.MEDIUM }),
                 (0, l.jsx)(M.E, { variant: "body-sm/medium", color: "text-default", className: O.d, children: t }),
                 h
-                    ? (0, l.jsx)(_.Q, {
+                    ? (0, l.jsx)(k.Q, {
                           variant: "primary",
                           size: "sm",
                           text: L.intl.string(D.default.EBSaL4),
@@ -80,8 +80,8 @@ let B = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function V(e) {
     let { parentChannel: t, transitionState: n, onClose: a } = e,
         u = i.useMemo(() => t.availableTags ?? [], [t.availableTags]),
-        [{ textValue: M, richValue: _ }, k] = i.useState(() => (0, m.N3)()),
-        [R, w] = i.useState(!1),
+        [{ textValue: M, richValue: k }, R] = i.useState(() => (0, m.N3)()),
+        [_, w] = i.useState(!1),
         [P, O] = i.useState(() => new Set()),
         H = (0, v.t4)(P),
         {
@@ -101,7 +101,7 @@ function V(e) {
         } = (function (e) {
             let { parentChannel: t, description: n, appliedTagIds: l, upload: s, onThreadCreated: a } = e,
                 { application: r } = (0, v._k)(t.id),
-                o = (0, C.T)(t.gameId),
+                o = (0, A.T)(t.gameId),
                 c = (0, p.bG)(
                     [y.A, E.A],
                     () => {
@@ -115,7 +115,7 @@ function V(e) {
                 ),
                 { noMicTag: d, voiceChatEnabled: u, voiceToggleDisabled: m } = (0, v.Qq)(t.availableTags ?? [], l),
                 h = i.useMemo(() => {
-                    if (null != c && (0, v.Ij)(c)) return { type: T.xL.JOIN, activity: c };
+                    if (null != c && (0, v.Ij)(c)) return { type: I.xL.JOIN, activity: c };
                 }, [c]),
                 g = (0, N.w0)({
                     parentChannel: t,
@@ -127,15 +127,15 @@ function V(e) {
                     upload: s,
                     onThreadCreated: a,
                 }),
-                x = t.hasFlag(I.lx.REQUIRE_TAG),
+                x = t.hasFlag(T.lx.REQUIRE_TAG),
                 f = x && 0 === l.size,
                 { rateLimitPerUser: j } = t,
                 M = j > 0,
-                _ = (0, p.bG)([S.A], () => S.A.getSlowmodeCooldownGuess(t.id, S.R.CreateThread)),
-                k = (0, A._i)(t),
-                [R, w] = i.useState(!1),
+                k = (0, p.bG)([S.A], () => S.A.getSlowmodeCooldownGuess(t.id, S.R.CreateThread)),
+                R = (0, C._i)(t),
+                [_, w] = i.useState(!1),
                 [P, D] = i.useState(!1),
-                L = !R && n.trim().length > 0 && n.length <= 120 && !(M && !k && _ > 0),
+                L = !_ && n.trim().length > 0 && n.length <= 120 && !(M && !R && k > 0),
                 O = i.useCallback(async () => {
                     if (L) {
                         if (f) return void D(!0);
@@ -156,9 +156,9 @@ function V(e) {
                 hasTagRequiredError: P && f,
                 isSlowmodeEnabled: M,
                 rateLimitPerUser: j,
-                slowmodeCooldownGuess: _,
-                isBypassSlowmode: k,
-                submitting: R,
+                slowmodeCooldownGuess: k,
+                isBypassSlowmode: R,
+                submitting: _,
                 canSubmit: L,
                 submit: O,
             };
@@ -172,7 +172,7 @@ function V(e) {
             },
         }),
         el = i.useCallback((e, t, n) => {
-            k({ textValue: t, richValue: n });
+            R({ textValue: t, richValue: n });
         }, []),
         ei = i.useCallback((e) => {
             O((t) => {
@@ -209,8 +209,8 @@ function V(e) {
                         channel: t,
                         placeholder: L.intl.string(D.default["SU/IAE"]),
                         textValue: M,
-                        richValue: _,
-                        focused: R,
+                        richValue: k,
+                        focused: _,
                         onChange: el,
                         onFocus: () => w(!0),
                         onBlur: () => w(!1),

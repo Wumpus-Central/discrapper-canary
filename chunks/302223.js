@@ -1,7 +1,7 @@
 var i = n(477900);
 n(582128);
-var l = n(503698),
-    r = n.n(l),
+var r = n(503698),
+    l = n.n(r),
     s = n(51183),
     a = n(208971),
     o = n(224437);
@@ -13,7 +13,7 @@ n.d(
             let {
                     activity: t,
                     className: n,
-                    emojiClassName: l,
+                    emojiClassName: r,
                     textClassName: u,
                     placeholderText: d,
                     soloEmojiClassName: c,
@@ -27,13 +27,13 @@ n.d(
             let { emoji: m } = t,
                 I = null != p && "" !== p ? p : d;
             return (0, i.jsxs)("div", {
-                className: r()(o.__invalid_container, n),
+                className: l()(o.__invalid_container, n),
                 children: [
                     g || null == m
                         ? null
                         : (0, i.jsx)(s.A, {
                               emoji: m,
-                              className: r()(o.Z, l, null != c ? { [c]: null == I || "" === I } : null),
+                              className: l()(o.Z, r, null != c ? { [c]: null == I || "" === I } : null),
                               animate: h,
                               hideTooltip: f,
                           }),

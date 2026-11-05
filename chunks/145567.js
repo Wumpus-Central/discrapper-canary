@@ -38,8 +38,8 @@ n.d(
                               return null;
                           })(t);
             if (null == A) return null;
-            let h = "CHANNEL" === t.kind ? t.guildId : null,
-                f = t.messageId ?? null,
+            let f = "CHANNEL" === t.kind ? t.guildId : null,
+                h = t.messageId ?? null,
                 I = c.A.getSelectedChannelId();
             return (
                 null != i &&
@@ -54,8 +54,8 @@ n.d(
                     type: "OVERLAY_TEXT_CHAT_SELECT_CHANNEL",
                     channelId: A,
                     source: n,
-                    guildId: h,
-                    messageId: f,
+                    guildId: f,
+                    messageId: h,
                 }),
                 A
             );

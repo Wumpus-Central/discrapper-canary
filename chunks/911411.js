@@ -1,13 +1,13 @@
 n(321073);
 var i = n(855986),
-    l = n(451988),
-    r = n(73153),
+    r = n(451988),
+    l = n(73153),
     s = n(308368),
     a = n(290863),
     o = n(487887);
 let u = {},
     d = {},
-    c = new l.J_(3e3, function () {
+    c = new r.J_(3e3, function () {
         let e = [];
         for (let [t, n] of Object.entries(d)) (e.push(n), (u[t] = n), delete d[t]);
         0 !== e.length && s.A.subscribeActivities(e);
@@ -29,7 +29,7 @@ class g extends i.Ay.Store {
         return h(e);
     }
 }
-let A = new g(r.h, {
+let A = new g(l.h, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
@@ -39,12 +39,12 @@ let A = new g(r.h, {
                 for (let [n, i] of Object.entries(d)) i.expiresAt < t && (delete d[n], (e = !0));
                 return e;
             })(),
-            { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, inviteTime: f } = t;
+            { userId: i, applicationId: r, partyId: l, messageId: s, channelId: a, inviteTime: f } = t;
         if (h(t) || f + o.dm < Date.now()) return n;
-        let g = `${l}:${r}`,
+        let g = `${r}:${l}`,
             A = o.dm + Date.now();
         return (
-            (d[g] = { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, expiresAt: A }),
+            (d[g] = { userId: i, applicationId: r, partyId: l, messageId: s, channelId: a, expiresAt: A }),
             c.delay(),
             !0
         );

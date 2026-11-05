@@ -18,13 +18,13 @@ n.d(
                     text: n,
                     keyboardShortcut: E,
                     __unsupportedReactNodeAsText: A,
-                    asContainer: h = !1,
-                    tag: f = "span",
+                    asContainer: f = !1,
+                    tag: h = "span",
                     position: I = "top",
                     align: p = "center",
                     spacing: m,
-                    targetElementRef: g,
-                    anchorRef: T,
+                    targetElementRef: T,
+                    anchorRef: g,
                     caretConfig: S,
                     positionKey: N,
                     ariaHidden: C = !1,
@@ -32,13 +32,13 @@ n.d(
                 } = e,
                 [R, L] = r.useState(null);
             r.useLayoutEffect(() => {
-                null != T && L(T.current);
-            }, [T]);
+                null != g && L(g.current);
+            }, [g]);
             let y = r.useCallback(
                     (e) => {
-                        (null == T && L(e), (0, d.cZ)(g, e));
+                        (null == g && L(e), (0, d.cZ)(T, e));
                     },
-                    [g, T],
+                    [T, g],
                 ),
                 {
                     tooltipId: D,
@@ -48,8 +48,8 @@ n.d(
                 } = (0, u.D)({
                     children: t,
                     targetElementRef: y,
-                    asContainer: h,
-                    containerTag: f,
+                    asContainer: f,
+                    containerTag: h,
                     ariaHidden: C,
                     ...O,
                 }),
@@ -81,7 +81,7 @@ n.d(
                 }, []),
                 F = (0, c.j)({ shouldShow: b, onExitComplete: k });
             if (!G && (b || !M)) return t;
-            if (null == t || (!h && !r.isValidElement(t))) return null;
+            if (null == t || (!f && !r.isValidElement(t))) return null;
             let B = N ?? (0, d.Xj)(n),
                 V = F((e, t) =>
                     t
@@ -90,7 +90,7 @@ n.d(
                               isRendered: x,
                               targetElementRef: v,
                               targetElement: R,
-                              anchorRef: T,
+                              anchorRef: g,
                               id: D,
                               content: w,
                               position: I,

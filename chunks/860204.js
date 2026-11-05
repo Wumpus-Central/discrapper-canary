@@ -11,13 +11,13 @@ var i = n(991690),
     _ = n(587895),
     E = n(378570),
     A = n(843002),
-    h = n(734057),
-    f = n(977997),
+    f = n(734057),
+    h = n(977997),
     I = n(292702),
     p = n(173912),
     m = n(617297),
-    g = n(366430),
-    T = n(165610),
+    T = n(366430),
+    g = n(165610),
     S = n(652215),
     N = n(917550),
     C = n(792996);
@@ -37,16 +37,16 @@ async function O(e) {
                       }
                   })(v, n)
                 : void 0,
-        M = (0, g.It)(_.A.getApplication(b)),
+        M = (0, T.It)(_.A.getApplication(b)),
         U = !M.has(i.U.MAIN) && M.has(i.U.APP_CHANNEL),
         w = null != P ? await (0, m.A)(b, { preferredChannelId: P, fallback: U }) : null,
         G =
             null == w
                 ? await (async function (e, t, n) {
-                      let i = f.A.getVoiceStateForSession(t, n) ?? f.A.getVoiceStateForUser(t),
+                      let i = h.A.getVoiceStateForSession(t, n) ?? h.A.getVoiceStateForUser(t),
                           r = i?.channelId;
                       if (null == r) return null;
-                      let a = h.A.getChannel(r) ?? (await s.A.openChannel(r));
+                      let a = f.A.getChannel(r) ?? (await s.A.openChannel(r));
                       return a?.type === S.rbe.GUILD_VOICE && a.application_id === e ? a.id : null;
                   })(b, n, v?.session_id ?? R)
                 : null;
@@ -71,7 +71,7 @@ async function O(e) {
         }
     let { frameId: F, launched: B } =
         null != G
-            ? { frameId: (0, T.VA)(b, (0, A.e)(G)), launched: Promise.resolve() }
+            ? { frameId: (0, g.VA)(b, (0, A.e)(G)), launched: Promise.resolve() }
             : (0, p.A)({
                   applicationId: b,
                   channel: w,

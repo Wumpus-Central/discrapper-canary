@@ -6,8 +6,8 @@ var l = t(855986),
     r = t(81466),
     o = t(931991),
     c = t(734057),
-    d = t(87401),
-    u = t(707592),
+    u = t(87401),
+    d = t(707592),
     A = t(698441),
     h = t(935159),
     m = t(508654),
@@ -22,16 +22,16 @@ t.d(
         A: function (e) {
             let { channelId: n, showDismiss: p = !0 } = e,
                 E = (0, l.bG)([c.A], () => c.A.getChannel(n), [n]),
-                j = (0, m.RO)(n),
-                I = null != (0, m.Qs)(n),
+                I = (0, m.RO)(n),
+                j = null != (0, m.Qs)(n),
                 { canManageGuildEvent: v } = (0, o.nr)(E),
-                N = (0, l.bG)([d.A], () => j.filter((e) => !d.A.isEventDismissed(e.id)), [j]),
+                N = (0, l.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
                 _ = (0, l.cf)(
                     [A.Ay],
                     () => N.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, g.G3)(n))), e), {}),
                     [N],
                 );
-            return N.length < 1 || I
+            return N.length < 1 || j
                 ? null
                 : (0, i.jsx)(i.Fragment, {
                       children: N.map((e) =>
@@ -65,7 +65,7 @@ t.d(
                                                 ]).then(t.bind(t, 163765));
                                                 return (t) => (0, i.jsx)(n, { ...t, event: e });
                                             })
-                                          : (0, u.uR)({ eventId: e.id });
+                                          : (0, d.uR)({ eventId: e.id });
                                   },
                                   onDismiss: p
                                       ? () => {

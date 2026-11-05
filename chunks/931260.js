@@ -11,14 +11,14 @@ function _() {
     d = { ...a.A.getCollapsedCategories() };
 }
 function E() {
-    __OVERLAY__ || (clearTimeout(c), (c = setTimeout(() => h({}), u)));
+    __OVERLAY__ || (clearTimeout(c), (c = setTimeout(() => f({}), u)));
 }
 async function A(e, t) {
     null == e || e === o.ME
         ? await i.Bo.patch({ url: o.Rsh.USER_GUILD_SETTINGS(o.ME), body: t, rejectWithError: !1 })
-        : await h(null != t ? { [e ?? o.ME]: t } : {});
+        : await f(null != t ? { [e ?? o.ME]: t } : {});
 }
-async function h(e) {
+async function f(e) {
     clearTimeout(c);
     let t = 0 !== Object.keys(e).length,
         n = a.A.getCollapsedCategories(),
@@ -47,7 +47,7 @@ async function h(e) {
           (await i.Bo.patch({ url: o.Rsh.USER_GUILD_SETTINGS_BULK, body: { guilds: e }, rejectWithError: !1 })).body)
         : [];
 }
-function f() {
+function h() {
     d = { ...a.A.getCollapsedCategories() };
 }
 class I extends r.A {
@@ -57,10 +57,10 @@ class I extends r.A {
         CATEGORY_COLLAPSE_ALL: E,
         CATEGORY_EXPAND_ALL: E,
         POST_CONNECTION_OPEN: _,
-        USER_GUILD_SETTINGS_FULL_UPDATE: f,
+        USER_GUILD_SETTINGS_FULL_UPDATE: h,
     };
     saveUserGuildSettings = A;
-    saveUserGuildSettingsBulk = h;
+    saveUserGuildSettingsBulk = f;
 }
 let p = new I();
 n.d(t, {}, { A: p });

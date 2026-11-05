@@ -9,8 +9,8 @@ var i,
     d = n(821609),
     m = n(778858),
     f = n(915089),
-    g = n(403362),
-    h = n(857071),
+    h = n(403362),
+    g = n(857071),
     p = n(652215),
     A = n(792996),
     N = n(521790),
@@ -23,7 +23,7 @@ n.d(
             let { type: t, guild: i, closePopout: E, ctaRef: j } = e,
                 I = (0, f.GV)(),
                 [T, R] = o.useState(!1),
-                b = (0, a.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
+                b = (0, a.bG)([g.A], () => g.A.isLurking(i.id), [i.id]);
             o.useEffect(() => {
                 T && !b && E();
             }, [T, b, E]);
@@ -37,7 +37,7 @@ n.d(
                     x = A.intl.string(A.t.GXvlU9);
                     break;
                 default:
-                    return (0, g.xb)(t);
+                    return (0, h.xb)(t);
             }
             return null == x
                 ? null

@@ -1,7 +1,7 @@
 n.d(t, { A: () => p });
 var i = n(855986),
-    l = n(73153),
-    r = n(640631),
+    r = n(73153),
+    l = n(640631),
     s = n(626584),
     a = n(734057),
     o = n(596344),
@@ -41,9 +41,9 @@ class f {
         this.messages.set(e, { message: t, generation: n });
     }
     putNew(e, t, n) {
-        var i, l;
-        let r = this.messages.get(e);
-        null != t && ((i = t.id), null == (l = r?.message?.id) || h.default.compare(i, l) > 0) && this.put(e, t, n);
+        var i, r;
+        let l = this.messages.get(e);
+        null != t && ((i = t.id), null == (r = l?.message?.id) || h.default.compare(i, r) > 0) && this.put(e, t, n);
     }
     putMany(e, t) {
         for (let n of e) this.put(n.channel_id, n, t);
@@ -68,7 +68,7 @@ class A extends i.Ay.Store {
     guilds = new Map();
     generation = 0;
     constructor() {
-        super(l.h, {
+        super(r.h, {
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
             GUILD_CREATE: (e) => this.handleGuildCreate(e),
             GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -128,9 +128,9 @@ class A extends i.Ay.Store {
             n = e.message.channel_id,
             i = e.message.id;
         if (null == n || null == i) return !1;
-        let l = this.data(t);
-        if (l?.messageId(n) !== i) return !1;
-        l?.update(e.message);
+        let r = this.data(t);
+        if (r?.messageId(n) !== i) return !1;
+        r?.update(e.message);
     }
     handleThreadListSync(e) {
         this.data(e.guildId).putMany(e.mostRecentMessages ?? [], this.generation);
@@ -138,14 +138,14 @@ class A extends i.Ay.Store {
     handleLoadMessagesSuccess(e) {
         let t = a.A.getBasicChannel(e.channelId);
         if (null == t) return !1;
-        ((0, r.D)(e.messages),
+        ((0, l.D)(e.messages),
             e.isAfter || e.isBefore || e.hasMoreAfter
                 ? this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, this.generation)
                 : this.data(t.guild_id).put(e.channelId, e.messages[0] ?? null, this.generation));
     }
     handleLocalMessagesLoaded(e) {
         let t = a.A.getBasicChannel(e.channelId);
-        null != t && ((0, r.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, -1 / 0));
+        null != t && ((0, l.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, -1 / 0));
     }
     handleMessagePreviewsLoaded(e) {
         g.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);

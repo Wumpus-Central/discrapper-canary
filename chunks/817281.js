@@ -10,7 +10,7 @@ var i = n(873298),
     _ = n(594061),
     E = n(652215),
     A = n(185928);
-function h(e) {
+function f(e) {
     switch (e) {
         case E.NJ8.ASH:
             return i.Sx.DARK;
@@ -24,7 +24,7 @@ function h(e) {
             return i.Sx.DARK;
     }
 }
-function f(e) {
+function h(e) {
     return {
         backgroundGradientPresetId:
             null != e.backgroundGradientPresetId ? r.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
@@ -77,8 +77,8 @@ n.d(
                         await _.wc.updateAsync(
                             "appearance",
                             (e) => {
-                                ((e.theme = h(c.A.theme)),
-                                    (e.clientThemeSettings = f({
+                                ((e.theme = f(c.A.theme)),
+                                    (e.clientThemeSettings = h({
                                         backgroundGradientPresetId: l.A.gradientPreset?.id,
                                         customUserThemeSettings: u.eh.getSetting()?.customUserThemeSettings,
                                     })));
@@ -131,7 +131,7 @@ n.d(
                         _.wc.updateAsync(
                             "appearance",
                             (t) => {
-                                t.theme = h(e);
+                                t.theme = f(e);
                             },
                             _.Sb.INFREQUENT_USER_ACTION,
                         ));
@@ -164,8 +164,8 @@ n.d(
                 return _.wc.updateAsync(
                     "appearance",
                     (e) => {
-                        ((e.theme = h(i)),
-                            (e.clientThemeSettings = f({ backgroundGradientPresetId: t, customUserThemeSettings: n })));
+                        ((e.theme = f(i)),
+                            (e.clientThemeSettings = h({ backgroundGradientPresetId: t, customUserThemeSettings: n })));
                     },
                     l,
                 );

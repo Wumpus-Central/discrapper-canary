@@ -15,11 +15,11 @@ var s = n(477900),
     p = n(438437),
     g = n(306417),
     A = n(792996),
-    y = n(588466);
-function f(e) {
+    f = n(588466);
+function y(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;
     return (0, s.jsxs)("div", {
-        className: y.AA,
+        className: f.AA,
         children: [
             t && (0, s.jsx)(w.s, { children: A.intl.string(A.t["8DAM+5"]) }),
             (0, s.jsxs)(u.E, { variant: "body-md/semibold", color: "none", children: [i, "%"] }),
@@ -35,22 +35,22 @@ function j(e) {
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(g.Dt, {
-                attachmentClassName: r()(y.oh, { [y.Wx]: a }),
-                emojiClassName: y.Zg,
+                attachmentClassName: r()(f.oh, { [f.Wx]: a }),
+                emojiClassName: f.Zg,
                 media: t.pollMedia,
-                fallback: (0, s.jsx)("div", { className: r()(y.oh, y.nb) }),
+                fallback: (0, s.jsx)("div", { className: r()(f.oh, f.nb) }),
             }),
-            l && (0, s.jsx)(g.Vx, { size: 40, isVictor: c, isExpired: n, className: y.Dt }),
+            l && (0, s.jsx)(g.Vx, { size: 40, isVictor: c, isExpired: n, className: f.Dt }),
             a &&
                 (0, s.jsxs)(s.Fragment, {
                     children: [
-                        (0, s.jsx)(f, {
+                        (0, s.jsx)(y, {
                             didSelfVote: o,
                             percentage: t.votesPercentage,
                             label: t.votes,
                             myAvatarUrl: o ? i : void 0,
                         }),
-                        ((!n && o) || c) && (0, s.jsx)(g.Vx, { size: 18, isVictor: c, isExpired: n, className: y.Po }),
+                        ((!n && o) || c) && (0, s.jsx)(g.Vx, { size: 18, isVictor: c, isExpired: n, className: f.Po }),
                     ],
                 }),
         ],
@@ -59,8 +59,8 @@ function j(e) {
 function b(e) {
     let { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a, ...l } = e;
     return (0, s.jsx)(g.Fh, {
-        className: y.ry,
-        answerClassName: r()(y.ZF, { [y.EK]: i !== p.CQ.LIST }),
+        className: f.ry,
+        answerClassName: r()(f.ZF, { [f.EK]: i !== p.CQ.LIST }),
         myAvatarUrl: n,
         answersInteraction: i,
         renderAnswerContent: (e) =>
@@ -85,12 +85,12 @@ function L(e) {
         [h, m] = i.useState(""),
         [p, g] = i.useState(!1),
         A = "" !== h && p,
-        y = i.useCallback(() => {
+        f = i.useCallback(() => {
             m((0, V.$m)(c, o, r));
         }, [c, o, r]),
-        f = i.useCallback(() => {
-            (y(), g(!0));
-        }, [y]),
+        y = i.useCallback(() => {
+            (f(), g(!0));
+        }, [f]),
         j = i.useCallback(() => {
             g(!1);
         }, []),
@@ -101,12 +101,12 @@ function L(e) {
         i.useEffect(() => {
             if (p)
                 return (
-                    _.A.addReactChangeListener(y),
+                    _.A.addReactChangeListener(f),
                     () => {
-                        _.A.removeReactChangeListener(y);
+                        _.A.removeReactChangeListener(f);
                     }
                 );
-        }, [p, y]),
+        }, [p, f]),
         (0, s.jsxs)("div", {
             className: k.AA,
             children: [
@@ -124,9 +124,9 @@ function L(e) {
                                         forceOpen: A,
                                         "aria-label": !1,
                                         children: (0, s.jsx)(d.Q, {
-                                            onMouseEnter: f,
+                                            onMouseEnter: y,
                                             onMouseLeave: j,
-                                            onFocus: f,
+                                            onFocus: y,
                                             onBlur: j,
                                             onClick: b,
                                             "aria-describedby": A ? l : void 0,
@@ -136,9 +136,9 @@ function L(e) {
                                         }),
                                     })
                                   : (0, s.jsx)(d.Q, {
-                                        onMouseEnter: f,
+                                        onMouseEnter: y,
                                         onMouseLeave: j,
-                                        onFocus: f,
+                                        onFocus: y,
                                         onBlur: j,
                                         onClick: b,
                                         text: n,

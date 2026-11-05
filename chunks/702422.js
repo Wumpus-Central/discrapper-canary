@@ -64,8 +64,8 @@ function F(e) {
         onInteractionEnd: () => m(!1),
     });
 }
-var Y = n(46653),
-    z = n(630891),
+var z = n(46653),
+    Y = n(630891),
     K = n(35241),
     W = n(587168),
     J = n(193738),
@@ -76,12 +76,12 @@ function q(e) {
     return t.isNonUserBot()
         ? (0, i.jsx)(K.A, { user: t })
         : t.bot
-          ? (0, i.jsx)(z.A, { user: t, guildId: n })
+          ? (0, i.jsx)(Y.A, { user: t, guildId: n })
           : (0, i.jsx)(X.yo, { user: t, guildId: n });
 }
 function $(e) {
     let { user: t, guildId: n } = e;
-    return (0, r.bG)([Y.default], () => Y.default.getId() === t.id)
+    return (0, r.bG)([z.default], () => z.default.getId() === t.id)
         ? null
         : (0, i.jsxs)(W.A, {
               children: [
@@ -147,10 +147,10 @@ function ed(e) {
         [w, B] = (0, v.A)(),
         H = (0, s.A)(G, B),
         { isHovering: V } = (0, g.A)(G),
-        Y = p.kt.useSetting(),
-        z = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        z = p.kt.useSetting(),
+        Y = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
         K = y?.profileEffect?.skuId,
-        W = !Y && !z;
+        W = !z && !Y;
     function J() {
         (0, C.openUserProfileModal)({
             userId: t.id,
@@ -176,7 +176,7 @@ function ed(e) {
                 headingRef: E,
                 headingText: et.intl.formatToPlainString(et.t["8yRya1"], { name: M }),
                 profileEffect:
-                    null != K ? (0, i.jsx)(u.A, { skuId: K, autoPlay: Y, isHovering: V, useOpacityOnHover: !W }) : null,
+                    null != K ? (0, i.jsx)(u.A, { skuId: K, autoPlay: z, isHovering: V, useOpacityOnHover: !W }) : null,
                 profileFrame: null != O ? (0, i.jsx)(h.A, { frame: O, fadeIn: !1 }) : null,
                 children: [
                     U && (0, i.jsx)(b.A, { className: el.i9 }),

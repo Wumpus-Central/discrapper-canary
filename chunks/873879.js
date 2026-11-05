@@ -10,23 +10,23 @@ let l = /\n{2,}$/,
     _ = c + "[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%" + d + " )[^\\n]*)*(\n|$)",
     E = / *\n$/,
     A = "^( *)(" + d + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + d + " )|$)",
-    h = new RegExp(A),
-    f = RegExp("^\\n" + A.slice(1)),
+    f = new RegExp(A),
+    h = RegExp("^\\n" + A.slice(1)),
     I = /^\n/,
     p = /\n *$/,
     m = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    g = {
+    T = {
         ...s().defaultRules.list,
         requiredFirstCharacters: "\n *-0123456789".split(""),
         match: (e, t) => {
             if (!t.allowList || t._listLevel >= 11) return null;
             if (10 === e.charCodeAt(0)) {
                 let n = null == t.prevCapture ? "" : t.prevCapture[0];
-                return "" === n || p.test(n) ? null : f.exec(e);
+                return "" === n || p.test(n) ? null : h.exec(e);
             }
             let n = null == t.prevCapture ? "" : t.prevCapture[0],
                 i = o.exec(n);
-            return null == i || m.test(i[0]) ? null : h.exec(e);
+            return null == i || m.test(i[0]) ? null : f.exec(e);
         },
         parse: (e, t, n) => {
             let i = e[2],
@@ -36,22 +36,22 @@ let l = /\n{2,}$/,
                 d = e[0].replace(I, "").replace(l, "\n"),
                 c = u.exec(d),
                 A = null != c ? c[0].length : 0,
-                h = null != c ? c[1].length : 0,
-                f = ` {${h},${h + 1}}`,
-                p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", f), "gm"),
+                f = null != c ? c[1].length : 0,
+                h = ` {${f},${f + 1}}`,
+                p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", h), "gm"),
                 m = RegExp("^ {1," + A + "}", "gm"),
-                g = d.match(p);
-            r()(null != g, "markup list items can not be parsed.");
-            let T = !1;
+                T = d.match(p);
+            r()(null != T, "markup list items can not be parsed.");
+            let g = !1;
             return {
                 ordered: a,
                 start: s,
-                items: g.map((e, i) => {
+                items: T.map((e, i) => {
                     let r,
                         a = e.replace(u, "").replace(m, ""),
-                        s = i === g.length - 1,
-                        l = -1 !== a.indexOf("\n\n") || (s && T);
-                    T = l;
+                        s = i === T.length - 1,
+                        l = -1 !== a.indexOf("\n\n") || (s && g);
+                    g = l;
                     let o = n.inline,
                         d = n._list,
                         c = n._listLevel;
@@ -70,4 +70,4 @@ let l = /\n{2,}$/,
             };
         },
     };
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

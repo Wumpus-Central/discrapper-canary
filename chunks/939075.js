@@ -14,12 +14,12 @@ var i = e(855986),
     m = e(287809),
     p = e(301736),
     x = e(792996);
-function _() {
+function I() {
     return (0, g.openUserSettings)(f.X.CONNECTIONS_CATEGORY);
 }
-function I(t) {
+function _(t) {
     let { entry: n, onOpenGameSettings: e } = t;
-    return (0, d.aj)(n) || (0, d.Lf)(n) || (0, d.Tq)(n) ? _ : (0, d.zD)(n) ? e : null;
+    return (0, d.aj)(n) || (0, d.Lf)(n) || (0, d.Tq)(n) ? I : (0, d.zD)(n) ? e : null;
 }
 e.d(
     n,
@@ -32,12 +32,12 @@ e.d(
             let T = (function (t) {
                 let { activity: n, entry: e, onOpenGameSettings: l } = t;
                 return null != e
-                    ? I({ entry: e, onOpenGameSettings: l })
+                    ? _({ entry: e, onOpenGameSettings: l })
                     : null != n
                       ? (function (t) {
                             let { activity: n, onOpenGameSettings: e } = t;
                             return (0, u.A)(n) || (0, c.A)(n) || (0, r.A)(n)
-                                ? _
+                                ? I
                                 : (0, o.A)(n) && !(0, s.A)(n)
                                   ? e
                                   : null;
@@ -54,6 +54,6 @@ e.d(
                       },
                   });
         },
-        y: I,
+        y: _,
     },
 );

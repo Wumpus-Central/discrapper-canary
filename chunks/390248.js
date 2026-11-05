@@ -14,9 +14,9 @@ var d = n(913379),
 n(705833);
 var A = n(338717);
 n(961440);
-var h = n(652215);
+var f = n(652215);
 n(792996);
-var f =
+var h =
         (((i = {}).EXPLICIT_MEDIA_LEARN_MORE_VIEWED = "explicit_media_learn_more_viewed"),
         (i.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS = "explicit_media_learn_more_click_settings"),
         (i.EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE = "explicit_media_learn_more_click_learn_more"),
@@ -58,7 +58,7 @@ n.d(
             } = e;
             if (null == n) return;
             let l = _.A.getChannel(n);
-            E.default.track(h.HAw.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
+            E.default.track(f.HAw.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
                 message_id: t,
                 channel_id: n,
                 channel_type: l?.type,
@@ -74,7 +74,7 @@ n.d(
         Wi: function (e) {
             let { obscure: t } = e;
             (0, o.$8)() &&
-                E.default.track(h.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
+                E.default.track(f.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
         },
         _R: m,
         aY: function (e) {
@@ -99,10 +99,10 @@ n.d(
                 } = e,
                 u = l > 0 || c > 0,
                 A = s > 0 || d > 0,
-                f = r > 0 || o > 0;
-            if (null == n || null == t || (!u && !A && !f)) return;
+                h = r > 0 || o > 0;
+            if (null == n || null == t || (!u && !A && !h)) return;
             let I = _.A.getChannel(n);
-            E.default.track(h.HAw.REDACTABLE_MESSAGE_LOADED, {
+            E.default.track(f.HAw.REDACTABLE_MESSAGE_LOADED, {
                 message_id: t,
                 channel_id: n,
                 channel_type: I?.type,
@@ -117,14 +117,14 @@ n.d(
                 num_of_self_harm_embeds: o,
                 has_redactable_explicit: u,
                 has_redactable_gore: A,
-                has_redactable_self_harm: f,
+                has_redactable_self_harm: h,
             });
         },
         gm: function (e) {
             let { channelId: t, messageId: n, attachmentIds: i, embedIds: r } = e;
             if (null == t || null == n || ((i?.length ?? 0) === 0 && (r?.length ?? 0) === 0)) return;
             let a = _.A.getChannel(t);
-            (E.default.track(h.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+            (E.default.track(f.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
                 channel_id: t,
                 guild_id: a?.guild_id,
                 message_id: n,
@@ -148,7 +148,7 @@ n.d(
             let { action: t, channelId: n, messageId: i, context: r } = e;
             if (null == n || null == i) return;
             let a = _.A.getChannel(n);
-            E.default.track(h.HAw.EXPLICIT_MEDIA_ACTION, {
+            E.default.track(f.HAw.EXPLICIT_MEDIA_ACTION, {
                 action: t,
                 guild_id: a?.guild_id,
                 channel_id: n,
@@ -170,7 +170,7 @@ n.d(
                 tags: [`timingBucket:${n}`, `source:${t}`, "metricVersion:1"],
             });
         },
-        rY: f,
+        rY: h,
         zt: function (e) {
             let {
                 channelId: t,
@@ -181,7 +181,7 @@ n.d(
             } = e;
             if (null == t) return;
             let s = _.A.getChannel(t);
-            E.default.track(h.HAw.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
+            E.default.track(f.HAw.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
                 channel_id: t,
                 guild_id: s?.guild_id,
                 num_of_attachments: n,

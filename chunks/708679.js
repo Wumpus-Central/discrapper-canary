@@ -49,7 +49,7 @@ function N(e, t, n) {
             ),
         n());
 }
-async function R(e, t, n) {
+async function A(e, t, n) {
     let l = await r.Bo.put({
         url: `${h.Rsh.CONJURE_PROJECT(e)}/install-scope`,
         body: { install_scope: t, ...(null != n ? { guild_id: n } : {}) },
@@ -94,7 +94,7 @@ n.d(
         JN: function (e, t, n) {
             return y(`settle:${e}`, async () => {
                 try {
-                    await R(e, t, n);
+                    await A(e, t, n);
                 } catch (t) {
                     if (409 !== t.status) throw t;
                     await (0, m.U1)(e);
@@ -135,7 +135,7 @@ n.d(
         },
         yN: function (e, t, n, r) {
             return y(`switch:${e}:${t}`, async () => {
-                await R(e, n, r);
+                await A(e, n, r);
                 let t = "guild" === n ? g.default["8+EcCu"] : g.default["U7+Yeh"];
                 if (!(0, d.dv)(e, x.intl.string(t))) throw Error("Not connected");
             });

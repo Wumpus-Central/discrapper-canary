@@ -1,6 +1,6 @@
 var n,
-    a = s(582128),
-    r = s(627784),
+    r = s(582128),
+    a = s(627784),
     i = s(71804),
     l = s(626584),
     o = s(739508),
@@ -45,7 +45,7 @@ let E = new Set([
 ]);
 function p(e) {
     if (null != e) {
-        if (!(e instanceof r.Ey)) throw (d.error(e), (0, o.pM)(e), Error("Unexpected error type"));
+        if (!(e instanceof a.Ey)) throw (d.error(e), (0, o.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
         if (e.hasAddressError()) return "address";
     }
@@ -91,7 +91,7 @@ s.d(
         ou: p,
         pn: m,
         zT: function (e, t, s) {
-            a.useEffect(() => {
+            r.useEffect(() => {
                 null != e && "review" !== e && t !== c.h.WAITING && t !== c.h.COMPLETED && s(c.h.WAITING);
             }, [e, t, s]);
         },

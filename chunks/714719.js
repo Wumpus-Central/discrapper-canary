@@ -17,8 +17,8 @@ n.d(
                     width: d,
                     cutout: c,
                     onInteractionStart: u,
-                    onInteractionEnd: f,
-                    className: m,
+                    onInteractionEnd: m,
+                    className: f,
                     fillClassName: g,
                     overlay: p,
                 } = e,
@@ -28,13 +28,13 @@ n.d(
                     "--custom-cutout-y": `calc(100% - ${c.insetBottom}px)`,
                 };
             return (0, a.jsx)("div", {
-                className: l()(i.vK, m),
+                className: l()(i.vK, f),
                 style: { height: o, width: d ?? "100%" },
                 children: (0, a.jsxs)("div", {
                     className: l()(i.GS, g),
                     style: { ...E, backgroundImage: null != t && "" !== t ? `url(${t})` : void 0, backgroundColor: n },
                     onMouseMove: u,
-                    onMouseLeave: f,
+                    onMouseLeave: m,
                     children: [r && (0, a.jsx)(s.A, { className: i.pH }), p],
                 }),
             });

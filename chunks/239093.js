@@ -20,7 +20,7 @@ var i,
         (r[(r.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
         (r[(r.ClickAppAppealLink = 8)] = "ClickAppAppealLink"),
         r),
-    h =
+    f =
         (((a = {})[(a.SystemDM = 0)] = "SystemDM"),
         (a[(a.StandingTab = 1)] = "StandingTab"),
         (a[(a.AppealIngestion = 2)] = "AppealIngestion"),
@@ -33,7 +33,7 @@ Object.freeze({
     THANKS: _.JJy.APPEAL_INGESTION_THANKS,
     SPAM: _.JJy.APPEAL_INGESTION_SPAM,
 });
-var f =
+var h =
     (((s = {})[(s.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
     (s[(s.TOO_STRICT_UNFAIR = 1)] = "TOO_STRICT_UNFAIR"),
     (s[(s.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
@@ -52,14 +52,14 @@ var p =
         (o[(o.GUILD_OWNER = 2)] = "GUILD_OWNER"),
         (o[(o.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
         o),
-    g =
+    T =
         (((d = {})[(d.PENDING = 1)] = "PENDING"),
         (d[(d.UNBANNED = 2)] = "UNBANNED"),
         (d[(d.VERIFIED_OTHER_VIOLATIONS_REMAIN = 3)] = "VERIFIED_OTHER_VIOLATIONS_REMAIN"),
         (d[(d.UNDERAGE = 4)] = "UNDERAGE"),
         (d[(d.UNDERAGE_MANUAL_REVIEW = 5)] = "UNDERAGE_MANUAL_REVIEW"),
         d),
-    T =
+    g =
         (((c = {}).LOADING = "loading"),
         (c.ERROR = "error"),
         (c.SUCCESS = "success"),
@@ -84,11 +84,11 @@ n.d(
             static CLASSIFICATION_ID = "classification_id";
             static INCIDENT_TIMESTAMP = "incident_time";
         },
-        Iv: f,
+        Iv: h,
         Qv: [0, 1, 2, 3],
-        XN: h,
+        XN: f,
         ZU: A,
-        aC: g,
+        aC: T,
         d$: class {
             static TOS_LINK = "https://discord.com/terms";
             static COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
@@ -112,7 +112,7 @@ n.d(
             static CLASSIFICATION_ID = "classification_id";
         },
         nY: I,
-        qN: T,
+        qN: g,
         w$: m,
         xw: E,
         yN: p,

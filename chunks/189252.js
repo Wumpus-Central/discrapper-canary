@@ -20,29 +20,29 @@ n.d(
                     disabled: _ = !1,
                     color: E,
                     colorClass: A,
-                    tooltip: h,
-                    overlay: f,
+                    tooltip: f,
+                    overlay: h,
                     "aria-label": I,
                     "aria-expanded": p,
                     "aria-haspopup": m,
-                    "data-jump-section": g,
-                    ref: T,
+                    "data-jump-section": T,
+                    ref: g,
                 } = e,
                 S = (0, i.jsx)(t, { size: "sm", color: E ?? "currentColor", colorClass: A });
             return (0, i.jsx)(l.m, {
                 position: "bottom",
-                text: h,
+                text: f,
                 ariaHidden: !0,
                 children: (0, i.jsxs)(o.D, {
-                    innerRef: T,
+                    innerRef: g,
                     tag: "div",
                     onClick: _ ? void 0 : n,
                     className: a()(c.vk, { [c.wH]: r, [c.r9]: _ }),
                     role: "button",
-                    "aria-label": null != I ? I : h,
+                    "aria-label": null != I ? I : f,
                     "aria-haspopup": m,
                     "aria-expanded": p,
-                    "data-jump-section": g,
+                    "data-jump-section": T,
                     "aria-disabled": _,
                     children: [
                         u
@@ -59,7 +59,7 @@ n.d(
                                   ],
                               })
                             : S,
-                        f,
+                        h,
                     ],
                 }),
             });

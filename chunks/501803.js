@@ -6,12 +6,12 @@ n.d(t, {
     gN: () => S,
     as: () => E,
     Xr: () => C,
-    UZ: () => g,
+    UZ: () => T,
     eT: () => N,
-    mT: () => T,
+    mT: () => g,
     nO: () => m,
     A5: () => c,
-    xo: () => h,
+    xo: () => f,
 });
 var i = n(310784),
     r = n.n(i),
@@ -68,11 +68,11 @@ function A(e) {
         neonStroke: t.set("hsl.s", i).set("hsl.l", a).hex(),
     };
 }
-function h(e) {
+function f(e) {
     return ((e % 360) + 360) % 360;
 }
 (a.z.NEON, a.z.TOON, a.z.POP, a.z.GUMMY);
-let f = [
+let h = [
     { hueShift: -18, saturation: 0.54, lightness: 0.72 },
     { hueShift: -5, saturation: 0.66, lightness: 0.6 },
     { hueShift: 9, saturation: 0.56, lightness: 0.68 },
@@ -84,23 +84,23 @@ function I(e) {
 }
 function p(e) {
     let [t] = I(e);
-    return f.map((e) => {
+    return h.map((e) => {
         let { hueShift: n, saturation: i, lightness: a } = e;
         return r()
-            .hsl(h(t + n), i, a)
+            .hsl(f(t + n), i, a)
             .num();
     });
 }
 function m(e) {
     let t = e[0];
-    if (null == t) return g(0);
+    if (null == t) return T(0);
     let [n] = I(t);
-    return g(h(n - f[0].hueShift));
-}
-function g(e) {
-    return r().hsl(e, 0.78, 0.72).num();
+    return T(f(n - h[0].hueShift));
 }
 function T(e) {
+    return r().hsl(e, 0.78, 0.72).num();
+}
+function g(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
 function S(e, t) {

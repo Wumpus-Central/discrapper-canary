@@ -17,8 +17,8 @@ t.d(
                 description: d,
                 agreement: h,
                 agreementButtonVariant: g = "primary",
-                disagreement: A,
-                disagreementButtonVariant: m = "secondary",
+                disagreement: m,
+                disagreementButtonVariant: A = "secondary",
                 onAgree: p,
                 onDisagree: j,
                 modalType: f,
@@ -32,11 +32,11 @@ t.d(
             let C = i.useCallback(() => {
                     ((0, c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA, f, x, N), j?.());
                 }, [j, f, x, N]),
-                E = i.useCallback(() => {
+                I = i.useCallback(() => {
                     ((0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, f, x, N), p?.());
                 }, [p, f, x, N]),
-                I = null != h && null != p ? (0, l.jsx)(a.$, { variant: g, text: h, onClick: E }, "agree") : null,
-                _ = null != A && null != j ? (0, l.jsx)(a.$, { variant: m, text: A, onClick: C }, "disagree") : null;
+                E = null != h && null != p ? (0, l.jsx)(a.$, { variant: g, text: h, onClick: I }, "agree") : null,
+                _ = null != m && null != j ? (0, l.jsx)(a.$, { variant: A, text: m, onClick: C }, "disagree") : null;
             return (0, l.jsxs)(s.B, {
                 justify: "center",
                 align: "center",
@@ -73,7 +73,7 @@ t.d(
                         justify: "center",
                         align: "center",
                         gap: 16,
-                        children: "primary" === m ? [I, _] : [_, I],
+                        children: "primary" === A ? [E, _] : [_, E],
                     }),
                 ],
             });

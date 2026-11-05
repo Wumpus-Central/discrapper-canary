@@ -30,8 +30,8 @@ class u {
 var _ = n(597620),
     E = n(552618),
     A = n(640631);
-let h = new r.A("Messages");
-class f {
+let f = new r.A("Messages");
+class h {
     connectionId = null;
     users = [];
     members = [];
@@ -39,7 +39,7 @@ class f {
     constructor(e) {
         if (e.length > 0) {
             let t = e[0]?.connectionId,
-                [n, i] = f.computeUsersAndMembers(e);
+                [n, i] = h.computeUsersAndMembers(e);
             (e.length > 0 && e.every((e) => e.connectionId === t) && (this.connectionId = t),
                 (this.users = n),
                 (this.members = i),
@@ -64,14 +64,14 @@ class f {
 let I = new (class {
     async startupLoad(e, t, n, i) {
         let r = o.A.messages(e);
-        return new f(await r.getLatest(t, n, i));
+        return new h(await r.getLatest(t, n, i));
     }
     async load(e, t, n) {
         let i = s.A.getBasicChannel(t);
-        if (null == t || null == i || !(0, E.c)(i)) return new f([]);
+        if (null == t || null == i || !(0, E.c)(i)) return new h([]);
         {
             let r = o.A.messages(e);
-            return new f(await r.getLatest(i.guild_id, t, n));
+            return new h(await r.getLatest(i.guild_id, t, n));
         }
     }
     actions = {
@@ -151,7 +151,7 @@ let I = new (class {
     }
     async updateOne(e, t, n, i) {
         if (null == n.id)
-            return void h.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
+            return void f.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
         let r = o.A.messages(i.database),
             s = await r.get(e, t, n.id),
             l = a.A.lastTimeConnectedChanged();

@@ -18,8 +18,8 @@ n.d(
                 locationObject: _,
                 analyticsLocations: E,
                 referrerId: A,
-                inviterUserId: h,
-                remoteJoinPlatform: f,
+                inviterUserId: f,
+                remoteJoinPlatform: h,
             } = e;
             i.default.track(r.HAw.APPLICATION_OPENED, {
                 type: t,
@@ -34,8 +34,8 @@ n.d(
                 location: _,
                 location_stack: E,
                 referrer_id: A,
-                invite_inviter_id: h,
-                remote_join_platform: f,
+                invite_inviter_id: f,
+                remote_join_platform: h,
             });
         },
     },

@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(439372),
     r = n(734057);
 n(495867);
@@ -73,7 +73,7 @@ function A(e) {
     let { state: t } = e;
 }
 (n(227724), n(100544));
-class h extends i.A {
+class f extends i.A {
     actions = { CHANNEL_SELECT: E, APP_STATE_UPDATE: A };
 }
-let f = new h();
+let h = new f();

@@ -11,7 +11,7 @@ var i = n(613412),
     _ = n(499785),
     E = n(652215);
 let A = new d.A("ConnectedAccounts"),
-    h = {
+    f = {
         fetch: l.q,
         async authorize(e) {
             let {
@@ -33,8 +33,8 @@ let A = new d.A("ConnectedAccounts"),
                 null != o && _.append("handle", o),
                 (d = d + "?" + _.toString()));
             let A = await r.Bo.get({ url: d, oldFormErrors: !0, rejectWithError: (0, r.fT)() }),
-                { state: h } = (0, s.vA)(A.body.url ?? "");
-            return (null != h && c.A.addPendingAuthorizedState(h), A);
+                { state: f } = (0, s.vA)(A.body.url ?? "");
+            return (null != f && c.A.addPendingAuthorizedState(f), A);
         },
         callback: o.Q,
         connect: (e, t, n, a, s) =>
@@ -135,4 +135,4 @@ let A = new d.A("ConnectedAccounts"),
             return r.Bo.get({ url: i, body: { state: t }, rejectWithError: !0 });
         },
     };
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

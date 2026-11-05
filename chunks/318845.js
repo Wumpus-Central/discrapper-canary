@@ -1,4 +1,4 @@
-n.d(t, { J: () => g, A: () => p });
+n.d(t, { J: () => h, A: () => p });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -22,7 +22,7 @@ function I(e, t, n) {
     let r = document.querySelector((0, d.Mz)((0, d.t$)(e, t)));
     null != r ? r.focus() : i > 0 && requestAnimationFrame(() => I(e, t, n, i - 1, l));
 }
-function g(e) {
+function h(e) {
     return {
         itemIdForIndex: (t) => `${e}${t}`,
         parseIndex: (t) => {
@@ -35,7 +35,7 @@ function g(e) {
     };
 }
 n(652215);
-var h = n(14753);
+var g = n(14753);
 let p = function (e) {
     let {
             categoryListRef: t,
@@ -49,8 +49,8 @@ let p = function (e) {
             listPadding: C,
             rowCount: y,
             getScrollOffsetForIndex: x,
-            getScrollOffsetForCategory: T,
-            categoryHeight: O,
+            getScrollOffsetForCategory: O,
+            categoryHeight: T,
             onScroll: j,
             renderCategoryListItem: S,
             rowCountBySection: b,
@@ -60,7 +60,7 @@ let p = function (e) {
         } = e,
         P = d.useStore((e) => e.activeCategoryIndex),
         M = null != v && null != L,
-        { itemIdForIndex: D, parseIndex: w } = s.useMemo(() => g(L ?? "expression-category-"), [L]),
+        { itemIdForIndex: D, parseIndex: w } = s.useMemo(() => h(L ?? "expression-category-"), [L]),
         k = (function (e) {
             let {
                     navId: t,
@@ -73,12 +73,12 @@ let p = function (e) {
                     enabled: c = !0,
                 } = e,
                 d = (0, m.bG)([f.Ay], () => f.Ay.keyboardModeEnabled),
-                g = s.useRef(null),
-                h = s.useRef(0),
+                h = s.useRef(null),
+                g = s.useRef(0),
                 p = c && d;
             s.useEffect(
                 () => () => {
-                    h.current += 1;
+                    g.current += 1;
                 },
                 [],
             );
@@ -93,21 +93,21 @@ let p = function (e) {
                     (e, n) => {
                         let s = l(n);
                         if (null != s) {
-                            let e = E(l) ?? g.current;
-                            (A(s, null == e || s >= e), (g.current = s));
-                        } else g.current = null;
+                            let e = E(l) ?? h.current;
+                            (A(s, null == e || s >= e), (h.current = s));
+                        } else h.current = null;
                         let r = document.querySelector(e);
                         if (null != r) {
-                            ((h.current += 1), r.focus());
+                            ((g.current += 1), r.focus());
                             return;
                         }
-                        null != s && I(t, i(s), h);
+                        null != s && I(t, i(s), g);
                     },
                     [i, t, l, A],
                 ),
                 N = s.useCallback(
                     (e, n) => {
-                        (A(e, n), (g.current = e), I(t, i(e), h));
+                        (A(e, n), (h.current = e), I(t, i(e), g));
                     },
                     [i, t, A],
                 ),
@@ -133,23 +133,23 @@ let p = function (e) {
                     [n],
                 ),
                 x = s.useCallback(() => {
-                    let e = E(l) ?? g.current;
+                    let e = E(l) ?? h.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
-                T = s.useCallback(() => {
-                    let e = E(l) ?? g.current;
+                O = s.useCallback(() => {
+                    let e = E(l) ?? h.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
-                O = (0, u.Ay)({
+                T = (0, u.Ay)({
                     id: t,
                     isEnabled: p,
                     setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: y,
                     onNavigateNextAtEnd: x,
-                    onNavigatePreviousAtStart: T,
+                    onNavigatePreviousAtStart: O,
                 }),
-                j = O.setFocus;
+                j = T.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= r) return;
@@ -158,14 +158,14 @@ let p = function (e) {
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), j(i(a)));
+                                ((h.current = a), j(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
                 }, [a, n, c, i, j, r]),
-                O
+                T
             );
         })({
             navId: v ?? "expression-picker-categories-disabled",
@@ -197,12 +197,12 @@ let p = function (e) {
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
                 (d.setActiveCategoryIndex(e),
-                    "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e, { offset: T?.(e) }));
+                    "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e, { offset: O?.(e) }));
             },
-            [n, d, T],
+            [n, d, O],
         ),
         G = s.useCallback((e) => S(l[e], e, () => U(e), P === e), [P, l, U, S]),
-        F = s.useMemo(() => ("function" == typeof O ? (e) => O(l[e], e) : O), [l, O]),
+        F = s.useMemo(() => ("function" == typeof T ? (e) => T(l[e], e) : T), [l, T]),
         J = (0, i.jsx)(o.A, {
             listPadding: C,
             onScroll: j,
@@ -218,13 +218,13 @@ let p = function (e) {
             role: M ? "none presentation" : void 0,
         }),
         K = (0, i.jsxs)("div", {
-            className: r()(h.i, N),
+            className: r()(g.i, N),
             children: [
                 M
                     ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
-                              return (0, i.jsx)("div", { className: h.e, ...n, ref: t, children: J });
+                              return (0, i.jsx)("div", { className: g.e, ...n, ref: t, children: J });
                           },
                       })
                     : J,

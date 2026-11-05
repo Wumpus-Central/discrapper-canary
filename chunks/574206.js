@@ -10,8 +10,8 @@ var i = n(77729),
     _ = n(598213),
     E = n(799),
     A = n(160330),
-    h = n(696016),
-    f = n(792996);
+    f = n(696016),
+    h = n(792996);
 n.d(
     t,
     {},
@@ -88,7 +88,7 @@ n.d(
             async runFinalization(e) {
                 let t = this.candidates;
                 if (
-                    (h.GU.info(
+                    (f.GU.info(
                         `decider: finalizing session \u{2014} sessionId=${this.id} candidates=${t.length} autoStashEnabled=${l.Ay.isAutoStashEnabled()}`,
                     ),
                     l.Ay.isAutoStashEnabled())
@@ -96,15 +96,15 @@ n.d(
                     try {
                         await this.stashDeciderData(t, e);
                     } catch (e) {
-                        h.GU.error("decider: auto-stash failed", e);
+                        f.GU.error("decider: auto-stash failed", e);
                     }
                 let n = (0, d.Ly)(t, e, a.default.getId(), this.gameId ?? void 0);
-                h.GU.info("ranked clips:", n);
+                f.GU.info("ranked clips:", n);
                 let i = null;
                 try {
                     i = this.createAutoMontage(t, e);
                 } catch (e) {
-                    h.GU.error("decider: auto-montage creation failed", e);
+                    f.GU.error("decider: auto-montage creation failed", e);
                 }
                 let r = n.selected;
                 if (null != i && r.length > 2) {
@@ -129,7 +129,7 @@ n.d(
                         a = t.get(n) ?? 0,
                         s = a > 0 ? n : r.reduce((e, t) => (t.score < e.score ? t : e));
                     ((r = r.filter((e) => e !== s)),
-                        h.GU.info(
+                        f.GU.info(
                             a > 0
                                 ? `decider: auto-montage replaces the selected clip it already covers most (id=${s.clip.id}, score=${s.score}, overlapMs=${a})`
                                 : `decider: auto-montage replaces worst selected clip (id=${s.clip.id}, score=${s.score})`,
@@ -147,7 +147,7 @@ n.d(
                         try {
                             await (0, c.K7)(t, n, this, i);
                         } catch (e) {
-                            h.GU.error("decider: failed to promote clip candidate", e);
+                            f.GU.error("decider: failed to promote clip candidate", e);
                         }
                     }),
                 );
@@ -157,7 +157,7 @@ n.d(
                         let e = this.buildMontagePlaceholderClip(i, t);
                         o = this.startAutoMontageRender(i, e);
                     } catch (e) {
-                        h.GU.error("decider: failed to start the auto-montage render", e);
+                        f.GU.error("decider: failed to start the auto-montage render", e);
                     }
                 let u = t.filter((e) => !s.has(e.id));
                 o.finally(async function () {
@@ -166,7 +166,7 @@ n.d(
                             try {
                                 await (0, c.oH)(e, !1);
                             } catch (e) {
-                                h.GU.error("decider: failed to delete unpromoted clip candidate", e);
+                                f.GU.error("decider: failed to delete unpromoted clip candidate", e);
                             }
                         }),
                     );
@@ -183,7 +183,7 @@ n.d(
                     r = i.A.clips.debugStashClipDeciderData;
                 if (null == r) return;
                 let s = this.buildStashName();
-                (await r(n, s), h.GU.info(`stashDeciderData: stashed ${e.length} candidates to ${s}`));
+                (await r(n, s), f.GU.info(`stashDeciderData: stashed ${e.length} candidates to ${s}`));
             }
             buildStashName() {
                 let e = r.A.getGame(this.gameId)?.name,
@@ -194,7 +194,7 @@ n.d(
                 if (!s.A.getConfig({ location: "ClipsSession#createAutoMontage" }).enableAutomontage) return null;
                 if (null == i.A.clips.renderMontageRecipe)
                     return (
-                        h.GU.warn(
+                        f.GU.warn(
                             "decider: auto-montage unavailable (host is missing renderMontageRecipe) \u2014 skipping",
                         ),
                         null
@@ -208,14 +208,14 @@ n.d(
                     },
                     r = (0, u.$Q)(n);
                 return null == r
-                    ? (h.GU.info("decider: no auto-montage could be built for this session"), null)
-                    : (h.GU.info(
+                    ? (f.GU.info("decider: no auto-montage could be built for this session"), null)
+                    : (f.GU.info(
                           `decider: auto-montage built \u{2014} type=${r.type} sections=${r.resolved.length} skipped=${r.skipped.length} durationMs=${r.durationMs}`,
                       ),
                       r);
             }
             buildMontagePlaceholderClip(e, t) {
-                let n = (0, A.A)("auto", h.nQ.CLIP, [], void 0, this.id),
+                let n = (0, A.A)("auto", f.nQ.CLIP, [], void 0, this.id),
                     a = new Set(e.resolved.map((e) => e.clip.id)),
                     s = new Set(n.users);
                 for (let e of t) if (a.has(e.id)) for (let t of e.users) s.add(t);
@@ -223,9 +223,9 @@ n.d(
                     d = i.A.fileManager.join(l.Ay.getSettings().storageLocation, `${e.type}_${n.id}.mp4`);
                 return {
                     ...n,
-                    name: f.intl.string(u.qn[e.type]),
+                    name: h.intl.string(u.qn[e.type]),
                     filepath: d,
-                    type: h.nQ.CLIP,
+                    type: f.nQ.CLIP,
                     applicationName: o ?? n.applicationName,
                     applicationId: this.gameId ?? n.applicationId,
                     users: Array.from(s),
@@ -242,22 +242,22 @@ n.d(
             startAutoMontageRender(e, t) {
                 let n = i.A.clips.renderMontageRecipe;
                 return null == n
-                    ? (h.GU.warn(
+                    ? (f.GU.warn(
                           "decider: auto-montage render unavailable (host is missing renderMontageRecipe) \u2014 skipping",
                       ),
                       Promise.resolve())
                     : ((0, c.ef)(t),
-                      h.GU.info(
+                      f.GU.info(
                           `decider: auto-montage render started - type=${e.type} output=${t.filepath} durationMs=${e.durationMs} sections=${e.resolved.length}`,
                       ),
                       (async () => {
                           try {
                               let i = await (0, E.y)(e, this.resolveClipPath);
                               (await n(JSON.stringify(i), t.filepath, (0, c.h5)(t)),
-                                  h.GU.info(`decider: auto-montage render succeeded \u{2014} ${t.filepath}`),
+                                  f.GU.info(`decider: auto-montage render succeeded \u{2014} ${t.filepath}`),
                                   await (0, c.EM)(t, this));
                           } catch (e) {
-                              (h.GU.error("decider: auto-montage failed", e), await (0, c.t9)(t));
+                              (f.GU.error("decider: auto-montage failed", e), await (0, c.t9)(t));
                           }
                       })());
             }

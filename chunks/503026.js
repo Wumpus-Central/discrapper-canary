@@ -22,11 +22,11 @@ n.d(
                 A = (0, l.bG)([a.A], () => a.A.getGuild(n)),
                 I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
                 v = I?.roles,
-                j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
-                [b] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
+                b = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
+                [j] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
             if (null == A) return null;
-            let y = b && null != I;
-            return 0 !== j.length || y
+            let y = j && null != I;
+            return 0 !== b.length || y
                 ? (0, i.jsx)(g.A, {
                       heading: p.intl.string(p.t["LPJmL/"]),
                       scrollTargetId: f.bk.ROLES,
@@ -34,7 +34,7 @@ n.d(
                       children: (0, i.jsx)(c.YR, {
                           userId: t,
                           guild: A,
-                          roles: j,
+                          roles: b,
                           onAddRole: () => {
                               x({ action: "ADD_ROLE" });
                           },

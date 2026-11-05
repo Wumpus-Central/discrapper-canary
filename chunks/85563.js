@@ -1,19 +1,19 @@
 var i = n(477900);
 n(582128);
-var s = n(953727);
+var r = n(953727);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { width: t = 55, height: n = 16, color: r = "currentColor", foreground: l, ...a } = e;
+            let { width: t = 55, height: n = 16, color: s = "currentColor", foreground: l, ...a } = e;
             return (0, i.jsx)("svg", {
-                ...(0, s.A)(a),
+                ...(0, r.A)(a),
                 width: t,
                 height: n,
                 viewBox: "0 0 55 16",
                 children: (0, i.jsxs)("g", {
-                    fill: r,
+                    fill: s,
                     className: l,
                     children: [
                         (0, i.jsx)("path", {

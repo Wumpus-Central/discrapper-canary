@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, Cp: () => f });
+n.d(t, { Ay: () => I, Cp: () => h });
 var i = n(499979),
     r = n(73153),
     a = n(587895),
@@ -12,8 +12,8 @@ var u = n(192308),
     _ = n(673953),
     E = n(165610);
 let A = new Set(),
-    h = l.A.Millis.SECOND;
-function f(e, t) {
+    f = l.A.Millis.SECOND;
+function h(e, t) {
     return (0, d.yG)(t)
         ? { permission: t, state: o.A.getDecision(e, t) ?? "prompt" }
         : { permission: t, state: "unsupported" };
@@ -27,9 +27,9 @@ async function I(e) {
         permissions: I,
     } = e;
     function p() {
-        return I.map((e) => f(t, e));
+        return I.map((e) => h(t, e));
     }
-    let m = I.filter((e) => "prompt" === f(t, e).state);
+    let m = I.filter((e) => "prompt" === h(t, e).state);
     if (
         0 === m.length ||
         null == l ||
@@ -45,7 +45,7 @@ async function I(e) {
                 p().some((e) => {
                     let { state: t } = e;
                     return "granted" !== t;
-                }) && (await (0, i.yy)(h)),
+                }) && (await (0, i.yy)(f)),
                 p()
             );
         })();

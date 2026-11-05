@@ -12,23 +12,23 @@ var r = n(192308),
     _ = n(734057),
     E = n(290863),
     A = n(495867),
-    h = n(753181),
-    f = n(435558),
+    f = n(753181),
+    h = n(435558),
     I = n(506774),
     p = n(439372),
     m = n(891540),
-    g = n(253932),
-    T = n(409181),
+    T = n(253932),
+    g = n(409181),
     S = n(881520),
     N = n(670455);
 function C(e) {
-    let t = g.Yt.getSetting()[e.feedbackType]?.optOutExpiryTime,
+    let t = T.Yt.getSetting()[e.feedbackType]?.optOutExpiryTime,
         n = null != t && !Number.isNaN(t) && Date.now() < t,
         i = !m.A.hasHotspot(e.hotspot);
     return (
         i &&
             !n &&
-            g.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: N.fs } })),
+            T.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: N.fs } })),
         !n && !i
     );
 }
@@ -36,24 +36,24 @@ function O(e) {
     return Math.random() < e.chance;
 }
 function R(e) {
-    for (let t of Object.values(T.u).filter((t) => {
+    for (let t of Object.values(g.u).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
         if (
             !(function (e, t) {
                 let n,
-                    i = g.Yt.getSetting()[t.feedbackType]?.lastImpressionTime;
+                    i = T.Yt.getSetting()[t.feedbackType]?.lastImpressionTime;
                 return (
                     (null == i || Number.isNaN(i)) &&
                         null != t.storageKey &&
                         (null == (n = I.w.get(t.storageKey) ?? void 0) ||
                             Number.isNaN(n) ||
-                            g.Yt.updateSetting((e) => ({
+                            T.Yt.updateSetting((e) => ({
                                 ...e,
                                 [t.feedbackType]: { ...e[t.feedbackType], lastImpressionTime: n },
                             }))),
-                    ((0, f.max)([i, n]) ?? 0) + e.cooldown < Date.now()
+                    ((0, h.max)([i, n]) ?? 0) + e.cooldown < Date.now()
                 );
             })(e, t)
         )
@@ -65,7 +65,7 @@ class L extends p.A {
     possiblyShowFeedbackModal(e, t, n) {
         !(function (e) {
             if (__OVERLAY__) return !1;
-            let t = S.A.getFeedbackConfig(e) ?? T.u[e],
+            let t = S.A.getFeedbackConfig(e) ?? g.u[e],
                 n = t.eligibilityChecks ?? [];
             return [O, C, R].every((e) => e(t)) && n.every((e) => e(t));
         })(e) ||
@@ -73,11 +73,11 @@ class L extends p.A {
             ? n?.()
             : ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t, n));
     }
-    showFeedbackModalDebounced = (0, f.debounce)((e, t) => {
+    showFeedbackModalDebounced = (0, h.debounce)((e, t) => {
         if (null != this.feedbackTypeToShow) {
             var n;
             ((n = this.feedbackTypeToShow),
-                g.Yt.updateSetting((e) => ({ ...e, [n]: { ...e[n], lastImpressionTime: Date.now() } })),
+                T.Yt.updateSetting((e) => ({ ...e, [n]: { ...e[n], lastImpressionTime: Date.now() } })),
                 (this.feedbackTypeToShow = null),
                 e());
         } else t?.();
@@ -122,13 +122,13 @@ let D = new (class extends L {
         let { streamKey: t, canShowFeedback: a } = e,
             s = (0, o.Iy)(t),
             l = (0, d.Ee)(s, E.A),
-            c = h.A.getVideoStats(t) ?? {},
+            c = f.A.getVideoStats(t) ?? {},
             _ = {
-                media_session_id: h.A.getMediaSessionId(t),
-                rtc_connection_id: h.A.getRtcConnectionId(t),
-                stream_region: h.A.getRegion(t),
-                max_viewers: h.A.getMaxViewers(t),
-                parent_media_session_id: h.A.getRTCConnection(t)?.parentMediaSessionId,
+                media_session_id: f.A.getMediaSessionId(t),
+                rtc_connection_id: f.A.getRtcConnectionId(t),
+                stream_region: f.A.getRegion(t),
+                max_viewers: f.A.getMaxViewers(t),
+                parent_media_session_id: f.A.getRTCConnection(t)?.parentMediaSessionId,
                 ...c,
             };
         a &&
@@ -193,8 +193,8 @@ let D = new (class extends L {
         let { applicationId: t, location: o, showFeedback: d } = e,
             u = l.A.getApplication(t),
             E = (0, s.H)(o),
-            h = _.A.getChannel(E),
-            f = { rtc_connection_id: A.A.getRTCConnectionId(), media_session_id: A.A.getMediaSessionId() },
+            f = _.A.getChannel(E),
+            h = { rtc_connection_id: A.A.getRTCConnectionId(), media_session_id: A.A.getMediaSessionId() },
             I = c.A.getWindowOpen(y.MLl.CHANNEL_CALL_POPOUT) ? "popout" : a.SY;
         null != u &&
             d &&
@@ -222,9 +222,9 @@ let D = new (class extends L {
                             (0, i.jsx)(e, {
                                 ...t,
                                 activityApplication: u,
-                                channel: h,
+                                channel: f,
                                 embeddedActivityLocation: o,
-                                analyticsData: f,
+                                analyticsData: h,
                             });
                     },
                     { contextKey: I },

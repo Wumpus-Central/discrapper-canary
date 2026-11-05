@@ -1,7 +1,7 @@
 n(321073);
 var i = n(73153),
-    s = n(272355),
-    r = n(400492),
+    r = n(272355),
+    s = n(400492),
     l = n(312671),
     a = n(46653),
     o = n(495867),
@@ -10,29 +10,29 @@ var i = n(73153),
     u = n(3137),
     h = n(559908),
     C = n(652215);
-let A = (0, r.aN)("poggermode_applause", l.A.getSoundpack()),
-    g = !1,
-    E = !1,
+let E = (0, s.aN)("poggermode_applause", l.A.getSoundpack()),
+    A = !1,
+    _ = !1,
     p = [],
-    m = null;
-function _() {
-    (A.stop(), (g = !1));
+    g = null;
+function m() {
+    (E.stop(), (A = !1));
 }
-function f() {
+function T() {
     let e = u.A.isEnabled(),
         t = u.A.comboSoundsEnabled;
     return !!e && !!t && null != c.Ay.getChannelId();
 }
-function T() {
-    if (0 === p.length || !f() || E) return;
-    E = !0;
+function N() {
+    if (0 === p.length || !T() || _) return;
+    _ = !0;
     let [e, t] = p[p.length - 1];
-    ((0, r.Ak)(e, t), (m = setTimeout(v, 1e3)));
+    ((0, s.Ak)(e, t), (g = setTimeout(f, 1e3)));
 }
-function v() {
-    (p.pop(), (E = !1), T());
+function f() {
+    (p.pop(), (_ = !1), N());
 }
-class N extends s.A {
+class I extends r.A {
     _initialize() {
         (h.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
@@ -48,37 +48,37 @@ class N extends s.A {
             i.h.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio),
             i.h.unsubscribe("CHANNEL_SELECT", this.stopAudio),
             i.h.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio),
-            clearTimeout(m));
+            clearTimeout(g));
     }
     setVolume(e) {
         let { state: t } = e;
-        t === C.S7L.RTC_CONNECTED ? (A.volume = 0.1) : (A.volume = 1);
+        t === C.S7L.RTC_CONNECTED ? (E.volume = 0.1) : (E.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        a.default.getId() === t && _();
+        a.default.getId() === t && m();
     }
     stopAudio() {
-        _();
+        m();
     }
     startAudio() {
-        if (!f()) return;
+        if (!T()) return;
         let e = c.Ay.getChannelId();
         if (null == e) return;
         let t = a.default.getId(),
             n = d.A.isTyping(e, t),
             i = h.Ay.getUserCombo(t, e),
-            s = i?.multiplier ?? 1;
-        n && s >= 7 ? g || (A.loop(), (g = !0)) : _();
+            r = i?.multiplier ?? 1;
+        n && r >= 7 ? A || (E.loop(), (A = !0)) : m();
     }
     playAchievementUnlockSound() {
-        f() &&
+        T() &&
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     n = o.A.isConnected();
-                (p.push([e, t * (n ? 0.1 : 1)]), T());
+                (p.push([e, t * (n ? 0.1 : 1)]), N());
             })("poggermode_achievement_unlock");
     }
 }
-let x = new N();
-n.d(t, {}, { A: x });
+let S = new I();
+n.d(t, {}, { A: S });

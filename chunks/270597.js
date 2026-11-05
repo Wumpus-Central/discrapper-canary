@@ -11,7 +11,7 @@ let d = (e, t) => e.number(t),
     _ = (e, t) => e.color(t),
     E = (e, t) => e.enum(t),
     A = (e, t) => e.trigger(t);
-function h(e, t, n, i, a) {
+function f(e, t, n, i, a) {
     let s = r.useRef(a);
     r.useEffect(() => {
         s.current = a;
@@ -28,7 +28,7 @@ function h(e, t, n, i, a) {
         return (r(), i.on(r), () => i.off(r));
     }, [e, t, n, o]);
 }
-function f(e) {
+function h(e) {
     return e.value;
 }
 function I(e, t, n, i, a) {
@@ -36,23 +36,23 @@ function I(e, t, n, i, a) {
         let i = null == t || null == n ? null : d(t, e);
         null != i && null != n && ((i.value = n), a?.());
     }, [n, a, e, t]),
-        h(t, e, d, f, i));
+        f(t, e, d, h, i));
 }
 function p(e, t, n, i, a) {
     (r.useEffect(() => {
         let i = null == t || null == n ? null : c(t, e);
         null != i && null != n && ((i.value = n), a?.());
     }, [n, a, e, t]),
-        h(t, e, c, f, i));
+        f(t, e, c, h, i));
 }
 function m(e, t, n, i, a) {
     (r.useEffect(() => {
         let i = null == t || null == n ? null : u(t, e);
         null != i && null != n && ((i.value = n), a?.());
     }, [n, a, e, t]),
-        h(t, e, u, f, i));
+        f(t, e, u, h, i));
 }
-function g(e, t, n, i, a) {
+function T(e, t, n, i, a) {
     let { theme: o, saturation: d } = (0, l.G9)(),
         { highContrastModeEnabled: c } = r.useContext(s.C);
     (r.useEffect(() => {
@@ -66,14 +66,14 @@ function g(e, t, n, i, a) {
             a?.();
         }
     }, [n, o, d, c, a, e, t]),
-        h(t, e, _, f, i));
+        f(t, e, _, h, i));
 }
-function T(e, t, n, i, a) {
+function g(e, t, n, i, a) {
     (r.useEffect(() => {
         let i = null == t || null == n ? null : E(t, e);
         null != i && null != n && ((i.value = n), a?.());
     }, [n, a, e, t]),
-        h(t, e, E, f, i));
+        f(t, e, E, h, i));
 }
 function S(e, t, n, i, a) {
     var s, l, o, d;
@@ -167,12 +167,12 @@ function L(e) {
 function y(e) {
     let { path: t, value: n } = e,
         { instance: i, playIfNeeded: r } = (0, o.o)();
-    return (g(t, i, n, void 0, r), null);
+    return (T(t, i, n, void 0, r), null);
 }
 function D(e) {
     let { path: t, value: n } = e,
         { instance: i, playIfNeeded: r } = (0, o.o)();
-    return (T(t, i, n, void 0, r), null);
+    return (g(t, i, n, void 0, r), null);
 }
 function b(e) {
     let { path: t, value: n } = e,
@@ -222,7 +222,7 @@ n.d(
     {
         Dr: m,
         Of: I,
-        QJ: g,
+        QJ: T,
         SX: N,
         Yn: function (e) {
             let { dynamicDataBinding: t } = e,
@@ -239,7 +239,7 @@ n.d(
         },
         gl: C,
         k6: p,
-        u9: T,
+        u9: g,
         zJ: S,
     },
 );

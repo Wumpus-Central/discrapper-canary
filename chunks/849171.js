@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(143413),
     E = n(652215),
     A = n(383233),
-    h = n(46653),
-    f = n(734057),
+    f = n(46653),
+    h = n(734057),
     I = n(596344),
     p = n(218461),
     m = n(994500),
-    g = n(967198),
-    T = n(543465),
+    T = n(967198),
+    g = n(543465),
     S = n(287809);
 let N = "recentMentionFilterSettings",
     C = [],
@@ -46,20 +46,20 @@ function U(e) {
     return null != t ? t : (0, c.rh)(e);
 }
 function w(e) {
-    let t = f.A.getBasicChannel(e.channel_id);
+    let t = h.A.getBasicChannel(e.channel_id);
     if (
         null == t ||
         !E.kvI.GUILD_TEXTUAL.has(t.type) ||
-        T.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
+        g.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
         (0, d.UK)(t.id)
     )
         return !1;
-    switch (T.Ay.resolvedMessageNotifications(t)) {
+    switch (g.Ay.resolvedMessageNotifications(t)) {
         case E.orn.ALL_MESSAGES:
             return !0;
         case E.orn.ONLY_MENTIONS:
-            let n = T.Ay.isSuppressEveryoneEnabled(t.guild_id),
-                i = T.Ay.isSuppressRolesEnabled(t.guild_id),
+            let n = g.Ay.isSuppressEveryoneEnabled(t.guild_id),
+                i = g.Ay.isSuppressRolesEnabled(t.guild_id),
                 r = S.default.getCurrentUser();
             if (null == r) return !1;
             return (0, u.Ay)({ message: e, userId: r.id, suppressEveryone: n, suppressRoles: i });
@@ -73,14 +73,14 @@ function G(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if ((0, _.A)(e) && !E.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == n && (n = e.channel_id);
-    let i = f.A.getChannel(n);
+    let i = h.A.getChannel(n);
     if (
         null == i ||
         i.type === E.rbe.DM ||
-        (D.guildFilter === E.KE7.THIS_SERVER && i.getGuildId() !== g.A.getGuildId())
+        (D.guildFilter === E.KE7.THIS_SERVER && i.getGuildId() !== T.A.getGuildId())
     )
         return null;
-    let r = h.default.getId();
+    let r = f.default.getId();
     if (
         m.A.isBlockedOrIgnoredForMessage(e) ||
         ((t = e), !E.MRS.SELF_MENTIONABLE_SYSTEM.has(t.type) && t.author?.id === r)
@@ -95,8 +95,8 @@ function G(e) {
               (0, u.Ay)({
                   message: e,
                   userId: r,
-                  suppressEveryone: T.Ay.isSuppressEveryoneEnabled(i.getGuildId()),
-                  suppressRoles: T.Ay.isSuppressRolesEnabled(i.getGuildId()),
+                  suppressEveryone: g.Ay.isSuppressEveryoneEnabled(i.getGuildId()),
+                  suppressRoles: g.Ay.isSuppressRolesEnabled(i.getGuildId()),
               }) &&
               (P = !1),
           e)
@@ -155,7 +155,7 @@ function H(e) {
 class j extends a.Ay.Store {
     static displayName = "RecentMentionsStore";
     initialize() {
-        this.waitFor(h.default, f.A, I.A, p.Ay, m.A, g.A, T.Ay, S.default);
+        this.waitFor(f.default, h.A, I.A, p.Ay, m.A, T.A, g.Ay, S.default);
     }
     get hasLoadedEver() {
         return b;
@@ -237,7 +237,7 @@ let W = new j(o.h, {
         let { guild: t } = e,
             n = [];
         ((C = r().filter(C, (e) => {
-            let i = f.A.getChannel(e.channel_id);
+            let i = h.A.getChannel(e.channel_id);
             return (null != i && i.getGuildId() !== t.id) || (delete R[e.id], n.push(e), !1);
         })),
             M({ deletedMessages: n }));

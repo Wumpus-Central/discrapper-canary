@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(855986),
     o = n(506774),
-    d = n(31728),
-    c = n(164617),
+    c = n(31728),
+    d = n(164617),
     u = n(457864),
     h = n(334463),
     p = n(175203),
@@ -25,9 +25,9 @@ n.d(
                     height: a,
                     channel: C,
                     participants: y,
-                    onSelectParticipant: j,
+                    onSelectParticipant: I,
                 } = e,
-                [I, N] = (function () {
+                [j, N] = (function () {
                     let [e, t] = l.useState(() => o.w.get(x, m.CUs.BOTTOM_RIGHT));
                     return [
                         e,
@@ -40,8 +40,8 @@ n.d(
                 E = null == C.getGuildId() ? 70 : 50,
                 b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
                 S = y.length,
-                _ = b * S + 8 * (S - 1),
-                T = l.useMemo(
+                T = b * S + 8 * (S - 1),
+                _ = l.useMemo(
                     () => ({
                         minWidth: A.mn[A.R8.CAMERA_PREVIEW] * S + 8 * (S - 1),
                         maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * S + 8 * (S - 1),
@@ -54,7 +54,7 @@ n.d(
             let R = l.useCallback(
                     (e) => {
                         let t = 0 === S ? e : (e - 8 * (S - 1)) / S;
-                        d.EB(t, A.R8.CAMERA_PREVIEW);
+                        c.EB(t, A.R8.CAMERA_PREVIEW);
                     },
                     [S],
                 ),
@@ -67,9 +67,9 @@ n.d(
             return (0, i.jsx)("div", {
                 className: f.kL,
                 children: (0, i.jsx)(u.S8, {
-                    position: I,
+                    position: j,
                     id: 0,
-                    width: _,
+                    width: T,
                     ref: v,
                     onMove: O,
                     onResize: R,
@@ -79,7 +79,7 @@ n.d(
                     edgeOffsetBottom: 70,
                     edgeOffsetLeft: 16,
                     edgeOffsetRight: 16,
-                    resizeConfig: T,
+                    resizeConfig: _,
                     children: (0, i.jsx)("div", {
                         className: f.iA,
                         children: y.map((e) =>
@@ -92,9 +92,9 @@ n.d(
                                     className: s()(f.Vs, g.a8),
                                     fit: p.Yl.COVER,
                                     inCall: !0,
-                                    popoutType: c.N.NO_POPOUT,
+                                    popoutType: d.N.NO_POPOUT,
                                     width: 160,
-                                    onClick: j,
+                                    onClick: I,
                                 },
                                 e.id,
                             ),

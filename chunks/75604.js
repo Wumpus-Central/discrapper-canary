@@ -17,31 +17,31 @@ var i = n(477900),
     p = n(693879),
     v = n(607407),
     N = n(188645),
-    f = n(129095),
-    I = n(575731),
+    I = n(129095),
+    f = n(575731),
     b = n(616356),
     C = n(977997),
     y = n(47167),
     E = n(475889),
     _ = n(262763),
     M = n(402216),
-    R = n(792996),
-    S = n(971718);
-let T = function (e) {
+    S = n(792996),
+    R = n(971718);
+let w = function (e) {
     let { channel: l } = e,
         n = (0, s.bG)([C.A], () => C.A.isInChannel(l.id)),
-        t = (0, I.A)(l),
+        t = (0, f.A)(l),
         a = (0, y.Ay)(l),
         r = (0, E.H)(l),
         o = (0, s.bG)([b.A], () => b.A.getAllApplicationStreamsForChannel(l.id)[0]);
     return (0, i.jsxs)(N.Uq, {
-        className: S.jC,
+        className: R.jC,
         children: [
             (0, i.jsxs)("div", {
-                className: S.hY,
+                className: R.hY,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: S.HA,
+                        className: R.HA,
                         children: [
                             (0, i.jsx)(u.A, {
                                 size: "custom",
@@ -52,11 +52,11 @@ let T = function (e) {
                                 style: { flexShrink: 0 },
                             }),
                             (0, i.jsx)("div", {
-                                className: S.Mw,
+                                className: R.Mw,
                                 children: (0, i.jsx)(x.E, {
                                     variant: "body-sm/medium",
                                     color: "text-default",
-                                    className: S.Kw,
+                                    className: R.Kw,
                                     children: a,
                                 }),
                             }),
@@ -64,20 +64,20 @@ let T = function (e) {
                     }),
                     null != r &&
                         (0, i.jsx)("span", {
-                            className: S.j2,
+                            className: R.j2,
                             children: (0, i.jsx)(p.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
                         }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: S.Bm,
+                className: R.Bm,
                 children: [
                     null != o &&
                         (0, i.jsxs)("div", {
-                            className: S.yt,
+                            className: R.yt,
                             children: [
-                                (0, i.jsx)(v.A, { stream: o, className: S.Rh, noText: !0 }),
-                                (0, i.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: S.wI }),
+                                (0, i.jsx)(v.A, { stream: o, className: R.Rh, noText: !0 }),
+                                (0, i.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: R.wI }),
                             ],
                         }),
                     (0, i.jsx)(g.A, {
@@ -86,16 +86,16 @@ let T = function (e) {
                         channelId: l.id,
                         size: A._3.SIZE_24,
                         maxUsers: 8,
-                        "aria-label": R.intl.string(R.t["jNqDh/"]),
+                        "aria-label": S.intl.string(S.t["jNqDh/"]),
                     }),
                     (0, i.jsx)(j.$, {
                         variant: n ? "secondary" : "active",
                         size: "sm",
-                        text: n ? R.intl.string(R.t["3xjX0U"]) : R.intl.string(R.t.VJlc0S),
+                        text: n ? S.intl.string(S.t["3xjX0U"]) : S.intl.string(S.t.VJlc0S),
                         fullWidth: !0,
                         onClick: function () {
                             l.isGuildStageVoice()
-                                ? (0, f.av)(l)
+                                ? (0, I.av)(l)
                                 : _.A.handleVoiceConnect({
                                       channel: l,
                                       connected: n,
@@ -110,7 +110,7 @@ let T = function (e) {
         ],
     });
 };
-var w = n(652215),
+var T = n(652215),
     O = n(396975);
 function k(e) {
     let { channel: l, children: n, childWrapperClassName: s } = e,
@@ -148,7 +148,7 @@ function k(e) {
         position: "right",
         shouldShow: c,
         renderPopout: () =>
-            (0, i.jsx)("div", { onMouseEnter: m, onMouseLeave: g, children: (0, i.jsx)(T, { channel: l }) }),
+            (0, i.jsx)("div", { onMouseEnter: m, onMouseLeave: g, children: (0, i.jsx)(w, { channel: l }) }),
         children: () => (0, i.jsx)("div", { className: s, ref: o, onMouseEnter: m, onMouseLeave: g, children: n }),
     });
 }
@@ -159,7 +159,7 @@ function G(e) {
         g = (0, s.bG)([m.A], () => {
             if (null == a) return !1;
             let e = (0, d.r)() && (0, c.UK)(a.id);
-            return (a.isPrivate() || (m.A.can(w.xBc.VIEW_CHANNEL, a) && m.A.can(w.xBc.CONNECT, a))) && !e;
+            return (a.isPrivate() || (m.A.can(T.xBc.VIEW_CHANNEL, a) && m.A.can(T.xBc.CONNECT, a))) && !e;
         });
     return null != t && null != a && a.isGuildVocal() && g && !r
         ? (0, i.jsx)(k, {

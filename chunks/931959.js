@@ -19,10 +19,10 @@ let E = new l.A({
 function A() {
     c.A.isLoaded && E.compute();
 }
-function h() {
+function f() {
     A();
 }
-function f() {
+function h() {
     let e = o.A.frecencyWithoutFetchingLatest.stickerFrecency?.stickers;
     if (null == e) return !1;
     E.overwriteHistory(
@@ -34,7 +34,7 @@ class I extends a.Ay.PersistedStore {
     static displayName = "StickersPersistedStore";
     static persistKey = "StickersPersistedStoreV2";
     initialize(e) {
-        (this.waitFor(c.A, o.A), null != e && (_ = e), this.syncWith([c.A], h), this.syncWith([o.A], f));
+        (this.waitFor(c.A, o.A), null != e && (_ = e), this.syncWith([c.A], f), this.syncWith([o.A], h));
     }
     getState() {
         return _;

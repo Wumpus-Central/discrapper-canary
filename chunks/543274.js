@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(265872),
     o = t(866665),
     c = t(155718),
-    d = t(933958),
-    u = t(404522),
+    u = t(933958),
+    d = t(404522),
     A = t(782091),
     h = t(807067),
     m = t(521588),
@@ -16,8 +16,8 @@ var i = t(477900),
     f = t(379848),
     p = t(267102),
     E = t(421773),
-    j = t(168754),
-    I = t(376086),
+    I = t(168754),
+    j = t(376086),
     v = t(652215),
     N = t(49999),
     _ = t(792996);
@@ -27,17 +27,17 @@ t.d(
     {
         K: function (e) {
             let { channel: n, idle: t, whichPopoutIsOpen: T, setWhichPopoutIsOpen: b } = e,
-                S = (0, s.bG)([d.Ay], () => d.Ay.isLaunchingActivity()),
+                S = (0, s.bG)([u.Ay], () => u.Ay.isLaunchingActivity()),
                 y = (0, A.et)(n.id),
                 O = (0, A.dL)(y),
-                P = y !== A.xy.CAN_LAUNCH || S,
-                { isHovered: R, setIsHovered: L, onMouseEnter: D, onMouseLeave: M } = (0, E.A)(200, 300),
-                G = (0, u.b)({ surface: c.YI.VOICE_LAUNCHER }),
+                R = y !== A.xy.CAN_LAUNCH || S,
+                { isHovered: P, setIsHovered: M, onMouseEnter: D, onMouseLeave: L } = (0, E.A)(200, 300),
+                G = (0, d.b)({ surface: c.YI.VOICE_LAUNCHER }),
                 k = (0, s.bG)(
-                    [d.Ay],
-                    () => null != d.Ay.getSelfEmbeddedActivityForLocation(d.Ay.getConnectedActivityLocation()),
+                    [u.Ay],
+                    () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
                 ),
-                U = !P,
+                U = !R,
                 V = l.useCallback(
                     (e) => {
                         "focus" !== e.type && D();
@@ -54,28 +54,28 @@ t.d(
                             analyticsLocation: H,
                         }));
                 }, [n, B, H, w]),
-                K = P ? [] : [a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
+                K = R ? [] : [a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
                 z = l.useRef(!1),
                 F = l.useRef(null);
             return (0, i.jsx)(f.Ay, {
                 contentTypes: K,
                 children: (e) => {
                     let { visibleContent: l, markAsDismissed: s } = e,
-                        c = l === a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !R;
+                        c = l === a.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !P;
                     return (
                         z.current && !c && s(N.i.AUTO_DISMISS),
                         z.current !== c && (z.current = c),
                         (0, i.jsx)(r.Y, {
                             targetElementRef: F,
                             fixed: !0,
-                            shouldShow: R && (T === I.P.ACTIVITY || null == T),
+                            shouldShow: P && (T === j.P.ACTIVITY || null == T),
                             animation: r.Y.Animation.FADE,
                             animationPosition: "top",
                             position: "top",
                             align: "center",
                             spacing: 16,
                             onRequestClose: () => {
-                                (L(!1), b?.(void 0));
+                                (M(!1), b?.(void 0));
                             },
                             renderPopout: (e) => {
                                 let { closePopout: t, setPopoutRef: l } = e;
@@ -87,8 +87,8 @@ t.d(
                                           channel: n,
                                           closePopout: t,
                                           onMouseEnter: D,
-                                          onMouseLeave: M,
-                                          isHovered: R,
+                                          onMouseLeave: L,
+                                          isHovered: P,
                                           onClick: () => s(N.i.UNKNOWN),
                                       })
                                     : (0, i.jsx)(i.Fragment, {});
@@ -107,8 +107,8 @@ t.d(
                                                     shouldShow: c,
                                                     children: (0, i.jsx)("div", {
                                                         ref: F,
-                                                        children: (0, i.jsx)(j.A, {
-                                                            disabled: P,
+                                                        children: (0, i.jsx)(I.A, {
+                                                            disabled: R,
                                                             "aria-label": O,
                                                             label: U ? void 0 : O,
                                                             isActivityActive: k,
@@ -122,7 +122,7 @@ t.d(
                                                                         t(N.i.TAKE_ACTION));
                                                             },
                                                             onMouseEnter: V,
-                                                            onMouseLeave: M,
+                                                            onMouseLeave: L,
                                                         }),
                                                     }),
                                                 }),

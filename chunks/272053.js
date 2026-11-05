@@ -92,8 +92,8 @@ let o = new (class {
             _ = u?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
             E = null != d ? this.accessibleDirectory.entry(d) : void 0,
             A = E?.parentSidebarItemKey === n.parentSidebarItemKey,
-            h = n.parentPanelKey === d,
-            f = async () => {
+            f = n.parentPanelKey === d,
+            h = async () => {
                 (t.onTransitionStart?.(),
                     A
                         ? this.maybeCreatePanelSnapshot({ currentPanelKey: d, nextPanelKey: o })
@@ -109,7 +109,7 @@ let o = new (class {
                                 : a.A.getField("showNavigationMobile"),
                     }),
                     null != n.parentSidebarItemKey && s.A.notifyNavigated(n.parentSidebarItemKey));
-                let c = null != t.animatePanelScroll ? t.animatePanelScroll : h,
+                let c = null != t.animatePanelScroll ? t.animatePanelScroll : f,
                     E = null != t.animateSidebarScroll && t.animateSidebarScroll;
                 null != u
                     ? (await this.scrollToOffset({ scrollOffset: u.scrollOffset }), this.deletePanelSnapshot(o))
@@ -121,16 +121,16 @@ let o = new (class {
                           animatePanelScroll: c,
                           animateSidebarScroll: E,
                       });
-                let f = document.querySelector(`[data-nav-anchor-key="${e}"]`);
-                (null != f
-                    ? f.focus({ preventScroll: !0 })
+                let h = document.querySelector(`[data-nav-anchor-key="${e}"]`);
+                (null != h
+                    ? h.focus({ preventScroll: !0 })
                     : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
-                    h || this.onViewChange?.(o),
+                    f || this.onViewChange?.(o),
                     (!c || i.Ay.useReducedMotion) &&
                         n.node.type !== r.Z6.CATEGORY &&
                         a.A.setState({ requestFlashKey: e }));
             };
-        h ? f() : this.navigateWithValidation?.(e, f);
+        f ? h() : this.navigateWithValidation?.(e, h);
     }
     async scrollToOffset(e) {
         let { scrollOffset: t } = e;

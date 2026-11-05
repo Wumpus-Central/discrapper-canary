@@ -11,7 +11,7 @@ var r = n(855986),
     _ = n(964404),
     E = n(185928),
     A = n(652215),
-    h = n(792996);
+    f = n(792996);
 n.d(
     t,
     {},
@@ -21,7 +21,7 @@ n.d(
                 {
                     theme: t,
                     useSystemTheme: n,
-                    useForcedColors: f,
+                    useForcedColors: h,
                 } = (0, r.cf)([u.A, _.Ay, l.Ay], () => ({
                     theme: u.A.theme,
                     useSystemTheme: _.Ay.useSystemTheme,
@@ -32,7 +32,7 @@ n.d(
                     id: r,
                     group: "input-modes",
                     label: l,
-                    disabled: f,
+                    disabled: h,
                     checked: n === E.Q_.ON ? "system" === r : r === t,
                     action: () => {
                         ((0, d.Py)(),
@@ -46,11 +46,11 @@ n.d(
                     a.rX,
                     {
                         children: [
-                            I(A.NJ8.LIGHT, h.intl.string(h.t.K2sFfo)),
-                            I(A.NJ8.ASH, h.intl.string(h.t.SMPT1k)),
-                            I(A.NJ8.DARK, h.intl.string(h.t.b8Cei3)),
-                            I(A.NJ8.ONYX, h.intl.string(h.t.Do4ZJx)),
-                            I("system", h.intl.string(h.t["7rOU6j"])),
+                            I(A.NJ8.LIGHT, f.intl.string(f.t.K2sFfo)),
+                            I(A.NJ8.ASH, f.intl.string(f.t.SMPT1k)),
+                            I(A.NJ8.DARK, f.intl.string(f.t.b8Cei3)),
+                            I(A.NJ8.ONYX, f.intl.string(f.t.Do4ZJx)),
+                            I("system", f.intl.string(f.t["7rOU6j"])),
                         ],
                     },
                     "theme-items",

@@ -52,15 +52,15 @@ let p = { x: 0, y: 0 },
             [m, h] = l.useState(!1),
             [x, A] = l.useState(!1),
             [v, E] = l.useState(!1),
-            [C, j] = l.useState(!1),
-            [I, S] = l.useState(16 / 9),
+            [C, I] = l.useState(!1),
+            [j, S] = l.useState(16 / 9),
             [_, b] = l.useState({ x: 0, y: 0 }),
             N = l.useRef(null),
             y = l.useRef(null);
         (0, a.l0)(() => {
             y.current?.stop();
         });
-        let T = l.useCallback(
+        let L = l.useCallback(
                 (e, t) => {
                     if (null == N.current) return p;
                     let n = t ?? c,
@@ -72,13 +72,13 @@ let p = { x: 0, y: 0 },
                 },
                 [c],
             ),
-            L = l.useCallback(
+            T = l.useCallback(
                 (e, i, l) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == i || a === c) return;
                     h(!0);
                     let u = a / c;
-                    (b((e) => T({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
+                    (b((e) => L({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
                         d(a),
                         f(a, l, t),
                         null == y.current && (y.current = new r.Ep()),
@@ -86,7 +86,7 @@ let p = { x: 0, y: 0 },
                             h(!1);
                         }));
                 },
-                [T, o, n, t, c],
+                [L, o, n, t, c],
             ),
             D = l.useMemo(
                 () => ({
@@ -102,16 +102,16 @@ let p = { x: 0, y: 0 },
                     isWheeling: v,
                     setIsWheeling: E,
                     isSlidering: C,
-                    setIsSlidering: j,
-                    videoAspectRatio: I,
+                    setIsSlidering: I,
+                    videoAspectRatio: j,
                     setVideoAspectRatio: S,
-                    doZoom: L,
+                    doZoom: T,
                     panOffset: _,
                     setPanOffset: b,
                     wrapperRef: N,
-                    clampPanOffset: T,
+                    clampPanOffset: L,
                 }),
-                [T, L, x, C, v, m, o, n, _, I, c],
+                [L, T, x, C, v, m, o, n, _, j, c],
             );
         return (0, i.jsx)(g.Provider, { value: D, children: u });
     });

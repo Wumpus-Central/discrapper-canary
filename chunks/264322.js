@@ -11,13 +11,13 @@ var i = n(582128),
     _ = n(155718),
     E = n(630248),
     A = n(626584),
-    h = n(200662),
-    f = n(773669),
+    f = n(200662),
+    h = n(773669),
     I = n(594061),
     p = n(46653),
     m = n(734057),
-    g = n(696451),
-    T = n(71393),
+    T = n(696451),
+    g = n(71393),
     S = n(287809),
     N = n(129230),
     C = n(12115),
@@ -121,7 +121,7 @@ function q(e) {
                     },
                     !1,
                 ),
-                permissions: null != e.permissions ? (0, h.UZ)(ec(e.permissions, r)) : void 0,
+                permissions: null != e.permissions ? (0, f.UZ)(ec(e.permissions, r)) : void 0,
                 botId: e.bot_id,
             },
             commands: {},
@@ -165,22 +165,22 @@ function q(e) {
         t,
     );
 }
-function Z() {
+function Q() {
     K({ type: "user" }, { serverVersion: x });
 }
-class Q extends d.Ay.Store {
+class Z extends d.Ay.Store {
     static displayName = "ApplicationCommandIndexStore";
     indices = {};
     applicationIndices = new Map();
     applicationIndicesVersion = 0;
-    oldLocale = f.default.locale;
-    collator = new Intl.Collator(f.default.locale, H);
+    oldLocale = h.default.locale;
+    collator = new Intl.Collator(h.default.locale, H);
     initialize() {
-        (this.waitFor(f.default),
-            this.waitFor(R.Ay, E.A, p.default, m.A, g.Ay, T.A, S.default),
-            this.syncWith([f.default], () => {
+        (this.waitFor(h.default),
+            this.waitFor(R.Ay, E.A, p.default, m.A, T.Ay, g.A, S.default),
+            this.syncWith([h.default], () => {
                 let e;
-                (e = f.default.locale) !== J.oldLocale &&
+                (e = h.default.locale) !== J.oldLocale &&
                     (X(),
                     (J.collator = new Intl.Collator(e, { sensitivity: "accent", numeric: !0 })),
                     (J.oldLocale = e));
@@ -269,7 +269,7 @@ class Q extends d.Ay.Store {
             );
     }
 }
-let J = new Q(c.h, {
+let J = new Z(c.h, {
     LOGOUT: X,
     CONNECTION_OPEN: function () {
         for (let e of Object.values(J.indices)) e.serverVersion = x;
@@ -308,8 +308,8 @@ let J = new Q(c.h, {
         let { guild: t } = e;
         $({ type: "guild", guildId: t.id });
     },
-    USER_APPLICATION_UPDATE: Z,
-    USER_APPLICATION_REMOVE: Z,
+    USER_APPLICATION_UPDATE: Q,
+    USER_APPLICATION_REMOVE: Q,
     GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function (e) {
         let { guildId: t, version: n } = e,
             i = K({ type: "guild", guildId: t }, { serverVersion: n ?? x }),
@@ -457,15 +457,15 @@ function er(e) {
             sortOptions: _ = en,
             installOnDemand: A = !1,
         } = e,
-        { commandTypes: h } = t,
-        f = a?.toLowerCase(),
-        p = f?.split(" "),
+        { commandTypes: f } = t,
+        h = a?.toLowerCase(),
+        p = h?.split(" "),
         m = s === y.n.ONLY_TEXT,
-        g = s !== y.n.DENY ? (0, C.Ez)(h, !0, m) : [],
+        T = s !== y.n.DENY ? (0, C.Ez)(f, !0, m) : [],
         S = [],
         N = {
             permissionContext: t,
-            query: f,
+            query: h,
             splitQuery: p,
             allowEmptySections: c,
             scoreMethod: u,
@@ -535,15 +535,15 @@ function er(e) {
             }
             return eu(e.section.name, t.section.name);
         }),
-        g.length > 0 || !0 === c)
+        T.length > 0 || !0 === c)
     ) {
-        let e = ea(C.gZ[M.Ik.BUILT_IN], g, !0, !0, N);
+        let e = ea(C.gZ[M.Ik.BUILT_IN], T, !0, !0, N);
         null != e && S.push(e);
     }
     let v = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = T.A.getGuild(t?.context?.guild_id),
+            n = g.A.getGuild(t?.context?.guild_id),
             i = S.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
         _.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;
@@ -581,8 +581,8 @@ function ea(e, t, n, i, r) {
             permissionContext: u,
             installOnDemand: _,
         } = r,
-        { context: E, userId: A, roleIds: h, isImpersonating: f } = u,
-        I = E?.guild_id != null ? P.we(e.permissions, E.guild_id, A, h, f) : null,
+        { context: E, userId: A, roleIds: f, isImpersonating: h } = u,
+        I = E?.guild_id != null ? P.we(e.permissions, E.guild_id, A, f, h) : null,
         p = E?.guild_id != null ? P._W(e.permissions, E, E.guild_id) : null,
         m = [];
     for (let r of t)

@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(978495),
     E = n(534514),
     A = n(911608),
-    h = n(331322),
-    f = n(834730),
+    f = n(331322),
+    h = n(834730),
     I = n(22856),
     p = n(592551);
 function m(e) {
@@ -19,7 +19,7 @@ function m(e) {
         { dismissable: n, onClose: r } = (0, I.k)();
     return !1 === n ? null : (0, i.jsx)(d.J, { onClick: r, variant: t ? "color-mix" : void 0 });
 }
-function g(e) {
+function T(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -32,7 +32,7 @@ function g(e) {
         ],
     });
 }
-function T(e) {
+function g(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -96,7 +96,7 @@ function N(e) {
             title: l,
             titleTextVariant: o,
             subtitle: d,
-            alignCenter: f = !1,
+            alignCenter: h = !1,
             leading: m,
             trailing: N,
             progressBarProps: R,
@@ -121,7 +121,7 @@ function N(e) {
             children: l,
         });
     "end" === a &&
-        (v = (0, i.jsxs)(h.B, {
+        (v = (0, i.jsxs)(f.B, {
             direction: "horizontal",
             gap: 8,
             align: "center",
@@ -129,13 +129,13 @@ function N(e) {
         }));
     let P = null != n ? b : v,
         M = (0, i.jsx)("header", {
-            className: s()(p.section, p.header, { [p.headerCentered]: f }),
-            children: (0, i.jsxs)(h.B, {
+            className: s()(p.section, p.header, { [p.headerCentered]: h }),
+            children: (0, i.jsxs)(f.B, {
                 gap: 8,
                 children: [
                     (0, i.jsx)("div", {
                         className: p.headerLayout,
-                        children: (0, i.jsx)(f ? (D ? T : S) : g, {
+                        children: (0, i.jsx)(h ? (D ? g : S) : T, {
                             leading: m,
                             trailing: N,
                             hasGradient: y,
@@ -173,7 +173,7 @@ function C(e) {
 function O(e) {
     let { subtitle: t } = e;
     if (null == t) return null;
-    let n = (0, i.jsx)(f.E, {
+    let n = (0, i.jsx)(h.E, {
             className: p.headerSubtitle,
             variant: "body-md/normal",
             color: "text-subtle",

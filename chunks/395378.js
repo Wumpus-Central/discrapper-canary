@@ -1,4 +1,4 @@
-(n.d(t, { Q4: () => h, tA: () => I, Tv: () => m, GC: () => f, lq: () => g, Ly: () => p }), n(321073));
+(n.d(t, { Q4: () => f, tA: () => I, Tv: () => m, GC: () => h, lq: () => T, Ly: () => p }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(997649),
@@ -11,12 +11,12 @@ var i = n(284009),
     _ = n(781183),
     E = n(696016);
 let A = [s.E, l.e, o.S, d.P];
-function h(e, t) {
+function f(e, t) {
     if (null == e) return;
     let n = A.find((t) => t.applicationIds.includes(e));
     return n?.create(t);
 }
-function f(e) {
+function h(e) {
     return null != e && A.some((t) => t.applicationIds.includes(e));
 }
 function I(e) {
@@ -30,11 +30,11 @@ function p(e, t, n, i) {
     let s,
         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         { requestedCount: o = 3, preTrimmedSignalsByFilepath: d, debug: A = !1 } = l,
-        f = { ...(0, c.A)(), ...l.config },
+        h = { ...(0, c.A)(), ...l.config },
         p = [],
-        T = Object.keys(t.audioModelDataPerUser).length,
+        g = Object.keys(t.audioModelDataPerUser).length,
         S = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
-        N = h(i, S),
+        N = f(i, S),
         C = null != N ? S : [],
         O = Number.MAX_VALUE,
         R = -Number.MAX_VALUE;
@@ -101,9 +101,9 @@ function p(e, t, n, i) {
                     for (let n in e) {
                         let r = e[n];
                         a[n] = {
-                            laughterData: g(r.laughterData, t, i),
-                            shoutingData: g(r.shoutingData, t, i),
-                            rmsData: g(r.rmsData, t, i),
+                            laughterData: T(r.laughterData, t, i),
+                            shoutingData: T(r.shoutingData, t, i),
+                            rmsData: T(r.rmsData, t, i),
                         };
                     }
                     return a;
@@ -118,18 +118,18 @@ function p(e, t, n, i) {
                     E.push(t.shoutingData.map((e) => e.value)),
                     A.push(t.rmsData.map((e) => e.value)));
             }
-            let h = u.length > 0 ? c[u[0]] : void 0;
+            let f = u.length > 0 ? c[u[0]] : void 0;
             return {
                 userIds: u,
                 pLaughter: _,
                 pShouting: E,
                 rms: A,
-                gridStartMs: h?.laughterData[0]?.timestamp_ms,
-                chunkCount: h?.laughterData.length ?? 0,
+                gridStartMs: f?.laughterData[0]?.timestamp_ms,
+                chunkCount: f?.laughterData.length ?? 0,
             };
         }
         let { startMs: l, endMs: o } = I(i),
-            { userIds: c, pLaughter: h, pShouting: S, rms: N, gridStartMs: O, chunkCount: R } = b(l, o),
+            { userIds: c, pLaughter: f, pShouting: S, rms: N, gridStartMs: O, chunkCount: R } = b(l, o),
             v = c.indexOf(n),
             P = (0, a.p)(C, l, o),
             M = P.filter(D);
@@ -161,17 +161,17 @@ function p(e, t, n, i) {
                     _ = t.requireAttribution ? (0, u.bU)(a, t) : void 0,
                     E = null != _ ? (0, u.ei)(d, _) : d,
                     A = null != _ ? (0, u.ei)(c, _) : c,
-                    h = (0, u.v$)(a, t),
-                    f = (0, u.Dk)(E, h),
-                    I = (0, u.Dk)(A, h),
+                    f = (0, u.v$)(a, t),
+                    h = (0, u.Dk)(E, f),
+                    I = (0, u.Dk)(A, f),
                     {
                         mainEventScore: p,
                         anchors: m,
-                        events: g,
-                    } = (0, u.aT)({ laughter: E, shouting: A }, { laughter: f, shouting: I }, s, t),
-                    T = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
-                    S = (0, u.Mf)([...m, ...T], t.eventChainGapChunks),
-                    N = (0, u.tf)(S, f, I, s, t),
+                        events: T,
+                    } = (0, u.aT)({ laughter: E, shouting: A }, { laughter: h, shouting: I }, s, t),
+                    g = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
+                    S = (0, u.Mf)([...m, ...g], t.eventChainGapChunks),
+                    N = (0, u.tf)(S, h, I, s, t),
                     { laughter: C, shouting: O } = (0, u.Lj)(d, c, a, t),
                     { coOccurrenceScore: R, coContribPerChunk: L } = (0, u.k0)(C, O, t),
                     y = p,
@@ -192,15 +192,15 @@ function p(e, t, n, i) {
                     debug: {
                         pGatedLaughter: E,
                         pGatedShouting: A,
-                        intensityLaughter: f,
+                        intensityLaughter: h,
                         intensityShouting: I,
-                        rmsWeighted: h,
-                        mainEvents: g,
+                        rmsWeighted: f,
+                        mainEvents: T,
                         reactionAnchors: S,
                         coContribPerChunk: L,
                     },
                 };
-            })({ pLaughter: h, pShouting: S, rms: N, main: v, gameEventChunks: e, participantCount: T }, f),
+            })({ pLaughter: f, pShouting: S, rms: N, main: v, gameEventChunks: e, participantCount: g }, h),
             w = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
@@ -210,7 +210,7 @@ function p(e, t, n, i) {
                 }
                 return i;
             })(P, L, y),
-            G = (0.5 + (0, _.ry)(U.audioScore)) * (1 + Math.tanh(w / f.gameSquashScale)) - 0.5,
+            G = (0.5 + (0, _.ry)(U.audioScore)) * (1 + Math.tanh(w / h.gameSquashScale)) - 0.5,
             x = b(s, i.decision.timestamp),
             k = x.gridStartMs,
             F =
@@ -221,7 +221,7 @@ function p(e, t, n, i) {
                           let a = (0, u.br)(n, t, t.laughterEventThreshold),
                               s = (0, u.br)(i, t, t.shoutingEventThreshold);
                           return (0, u.e3)((0, u.Lj)(a, s, r, t), t);
-                      })({ pLaughter: x.pLaughter, pShouting: x.pShouting, rms: x.rms }, f).map((e) => ({
+                      })({ pLaughter: x.pLaughter, pShouting: x.pShouting, rms: x.rms }, h).map((e) => ({
                           type: "laughter" === e.emotion ? E.Gy.LAUGHTER : E.Gy.SHOUTING,
                           userId: x.userIds[e.channel],
                           startMs: k + 1e3 * e.tStart,
@@ -235,7 +235,7 @@ function p(e, t, n, i) {
                 score: G,
                 audioScore: U.audioScore,
                 gameEventsScore: w,
-                hasAudio: h.length > 0,
+                hasAudio: f.length > 0,
                 hasGameEvents: P.length > 0,
                 audioEvents: F,
             };
@@ -246,7 +246,7 @@ function p(e, t, n, i) {
                 ...U.debug,
                 userIds: c,
                 tsSec: Array.from({ length: R }, (t, n) => e + n),
-                pLaughter: h,
+                pLaughter: f,
                 pShouting: S,
                 rms: N,
             };
@@ -312,13 +312,13 @@ function p(e, t, n, i) {
                 c(e) && (_ = !0);
             }
         return o;
-    })(p, f, o, N?.gameAxisScoreThreshold);
+    })(p, h, o, N?.gameAxisScoreThreshold);
     return { allClipsRanked: p, selected: v };
 }
 function m(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-function g(e, t, n) {
+function T(e, t, n) {
     let i = [],
         a = 0;
     for (let s = 0; s < n; s++) {

@@ -1,21 +1,21 @@
 var i = t(477900);
 t(582128);
-var r = t(953727);
+var l = t(953727);
 t.d(
     n,
     {},
     {
         A: function (e) {
-            let { width: n = 17, height: t = 16, color: s = "currentColor", foreground: l, ...o } = e;
+            let { width: n = 17, height: t = 16, color: s = "currentColor", foreground: r, ...o } = e;
             return (0, i.jsxs)("svg", {
-                ...(0, r.A)(o),
+                ...(0, l.A)(o),
                 width: n,
                 height: t,
                 viewBox: "0 0 17 16",
                 xmlns: "http://www.w3.org/2000/svg",
                 children: [
-                    (0, i.jsx)("rect", { className: l, y: "5", width: "16", height: "2", rx: "1", fill: s }),
-                    (0, i.jsx)("rect", { className: l, y: "9", width: "8", height: "2", rx: "1", fill: s }),
+                    (0, i.jsx)("rect", { className: r, y: "5", width: "16", height: "2", rx: "1", fill: s }),
+                    (0, i.jsx)("rect", { className: r, y: "9", width: "8", height: "2", rx: "1", fill: s }),
                 ],
             });
         },

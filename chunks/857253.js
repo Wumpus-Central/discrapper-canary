@@ -1,18 +1,18 @@
-var s = a(855986),
-    i = a(46653),
-    l = a(977997),
-    h = a(643501);
-a.d(
-    e,
+var s = d(855986),
+    u = d(46653),
+    a = d(977997),
+    i = d(643501);
+d.d(
+    t,
     {},
     {
         A: function () {
             return (0, s.bG)(
-                [i.default, l.A, h.default],
+                [u.default, a.A, i.default],
                 () => {
-                    let t = i.default.getId(),
-                        e = h.default.getRemoteSessionId();
-                    return l.A.getVoiceStateForSession(t, e) ?? void 0;
+                    let e = u.default.getId(),
+                        t = i.default.getRemoteSessionId();
+                    return a.A.getVoiceStateForSession(e, t) ?? void 0;
                 },
                 [],
             );

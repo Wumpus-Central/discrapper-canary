@@ -9,8 +9,8 @@ var l = t(477900),
     d = t(188567),
     h = t(477427),
     g = t(58736),
-    A = t(461678),
-    m = t(652215),
+    m = t(461678),
+    A = t(652215),
     p = t(792996);
 t.d(
     n,
@@ -40,9 +40,9 @@ t.d(
                     return N(!0);
                 }
                 return (
-                    d._.subscribe(m.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+                    d._.subscribe(A.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
                     () => {
-                        d._.unsubscribe(m.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                        d._.unsubscribe(A.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
                     }
                 );
             }, []);
@@ -56,7 +56,7 @@ t.d(
                 autoInvert: !1,
                 onRequestClose: () => N(!1),
                 renderPopout: (e) =>
-                    (0, l.jsx)(A.A, { ...e, channel: n, navId: "channel-context", label: p.intl.string(p.t.Xm41aV) }),
+                    (0, l.jsx)(m.A, { ...e, channel: n, navId: "channel-context", label: p.intl.string(p.t.Xm41aV) }),
                 clickTrap: !0,
                 children: (e, n) => {
                     let { isShown: i } = n;
@@ -65,7 +65,7 @@ t.d(
                         ref: t,
                         onClick: b,
                         tooltip: i ? null : C,
-                        icon: j || f !== m.orn.ALL_MESSAGES ? r.BellSlashIcon : o.BellIcon,
+                        icon: j || f !== A.orn.ALL_MESSAGES ? r.BellSlashIcon : o.BellIcon,
                         "aria-label": C,
                         selected: i,
                     });

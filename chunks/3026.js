@@ -9,7 +9,7 @@ t.d(
     {},
     {
         A: function (e) {
-            let { children: n, "aria-label": t, className: l, position: d, delay: c, lineClamp: u = 1, ...m } = e,
+            let { children: n, "aria-label": t, className: l, position: c, delay: d, lineClamp: u = 1, ...m } = e,
                 h = i.useRef(null),
                 x = t ?? ("string" == typeof n && n),
                 j = {};
@@ -17,8 +17,8 @@ t.d(
                 null != u && u > 1 && (j = { lineClamp: u, WebkitLineClamp: u }),
                 (0, s.jsx)(r.ST, {
                     ...m,
-                    position: d ?? "top",
-                    delay: c ?? 500,
+                    position: c ?? "top",
+                    delay: d ?? 500,
                     text: n,
                     "aria-label": x,
                     children: (t) => {

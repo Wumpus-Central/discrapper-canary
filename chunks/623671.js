@@ -27,19 +27,19 @@ e.d(
     {
         d: function (t) {
             let { image: n, smallImage: e, aspectRatio: l, onClick: a, size: s, className: m } = t,
-                { imageSize: _, smallImageSize: I, mask: N } = p[s];
+                { imageSize: I, smallImageSize: _, mask: N } = p[s];
             if (null == n)
                 return (0, i.jsx)(u.V, {
                     src: void 0,
                     alt: A.intl.string(A.t["2B/phM"]),
-                    size: _,
+                    size: I,
                     className: r()(f.fO, g[l ?? "default"], m),
                     constrain: "width",
                 });
             let E = (0, i.jsx)(u.V, {
                 src: n.src,
                 alt: n.alt ?? n.text ?? A.intl.string(A.t["2B/phM"]),
-                size: _,
+                size: I,
                 className: r()(f.fO, g[l ?? "default"]),
                 constrain: "width",
             });
@@ -57,8 +57,8 @@ e.d(
                                           children: (0, i.jsx)(c.Ay, {
                                               className: f.ZS,
                                               mask: N,
-                                              width: _,
-                                              height: _,
+                                              width: I,
+                                              height: I,
                                               children: E,
                                           }),
                                       })
@@ -80,7 +80,7 @@ e.d(
                                         children: (0, i.jsx)(u.V, {
                                             src: e.src,
                                             alt: e.alt ?? e.text,
-                                            size: I,
+                                            size: _,
                                             className: f.fO,
                                             constrain: "width",
                                         }),

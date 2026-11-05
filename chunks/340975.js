@@ -13,8 +13,8 @@ class r extends o.Ay.Store {
         ((this.config = e), null == e ? n.w.remove(s) : n.w.set(s, e), this.emitChange());
     }
 }
-let u = new r(i.h),
-    d = 221552 == a.j ? u : null,
+let d = new r(i.h),
+    u = 221552 == a.j ? d : null,
     c = new Set(),
     b = !1;
 function p(e) {
@@ -32,18 +32,18 @@ a.d(
     l,
     {},
     {
-        Ay: d,
+        Ay: u,
         XP: function () {
-            return (0, o.bG)([u], () => u.getConfig());
+            return (0, o.bG)([d], () => d.getConfig());
         },
         aL: function () {
-            (u.setConfig(null), m(!1));
+            (d.setConfig(null), m(!1));
         },
         dR: function () {
             return t.useSyncExternalStore(p, () => b);
         },
         nh: function (e) {
-            u.setConfig(e);
+            d.setConfig(e);
         },
         s2: m,
     },

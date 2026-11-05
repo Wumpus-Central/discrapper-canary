@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => y, Bz: () => N, EM: () => u, Xi: () => S, iA: () => h }), n(134528), n(947204), n(321073));
+(n.d(t, { Ay: () => y, Bz: () => N, EM: () => u, Xi: () => S, iA: () => f }), n(134528), n(947204), n(321073));
 var i = n(855986),
     r = n(205693),
     a = n(73153),
@@ -11,7 +11,7 @@ let u = S(c.x.DEFAULT, d.zWA.TRANSPORT, 0),
     _ = u,
     E = {},
     A = new Map(),
-    h = {
+    f = {
         availableOutgoingBitrate: !0,
         bitrate: !0,
         bitrateTarget: !0,
@@ -38,7 +38,7 @@ let u = S(c.x.DEFAULT, d.zWA.TRANSPORT, 0),
         screenshareCapturedFps: !0,
         screenshareCapturedFpsUnique: !0,
     };
-function f(e, t, n) {
+function h(e, t, n) {
     return `${e}:${t}:${n}`;
 }
 function I(e, t) {
@@ -55,18 +55,18 @@ let p = class e {
         put(t, n, i, r) {
             if ("" === r) {
                 let r = { ...this.state };
-                return (delete r[f(t, n, i)], new e(r));
+                return (delete r[h(t, n, i)], new e(r));
             }
-            return new e({ [f(t, n, i)]: r, ...this.state });
+            return new e({ [h(t, n, i)]: r, ...this.state });
         }
         get(e, t, n) {
-            let i = this.state[f(e, t, n)];
+            let i = this.state[h(e, t, n)];
             return null != i ? i : null;
         }
     }.empty(),
     m = !1,
-    g = null,
-    T = new Map();
+    T = null,
+    g = new Map();
 function S(e, t, n) {
     return `${e}:${t}:${n}`;
 }
@@ -83,7 +83,7 @@ function O() {
     });
 }
 function R() {
-    null != g && (g.destroy(), (g = null));
+    null != T && (T.destroy(), (T = null));
 }
 O();
 class L extends i.Ay.Store {
@@ -146,7 +146,7 @@ let y = new L(a.h, {
         if ((R(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
         let i = n.createReplayConnection(c.x.DEFAULT, t);
         null != i &&
-            ((g = i),
+            ((T = i),
             i.on(r.yq.Video, (e, t, n, r, s) => {
                 a.h.dispatch({
                     type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -170,7 +170,7 @@ let y = new L(a.h, {
         A.set(I(t, n), i);
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        null != e.channelId && (O(), A.clear(), T.clear());
+        null != e.channelId && (O(), A.clear(), g.clear());
     },
     RTC_CONNECTION_VIDEO: function (e) {
         if (null === e.streamId) {
@@ -201,9 +201,9 @@ let y = new L(a.h, {
                             c = n;
                         if (null != n.screenshare) {
                             let e = `${t}:${i}`,
-                                s = T.get(e),
+                                s = g.get(e),
                                 l = r[i]?.screenshare;
-                            if ((T.set(e, d), null != s && null != l)) {
+                            if ((g.set(e, d), null != s && null != l)) {
                                 var a;
                                 let e,
                                     t,
@@ -274,7 +274,7 @@ let y = new L(a.h, {
                                 else if ("object" == typeof s && null !== s) {
                                     let n = "object" == typeof t && null !== t ? t : {};
                                     r[a] = e(s, n, i);
-                                } else if (a in h && "number" == typeof s) {
+                                } else if (a in f && "number" == typeof s) {
                                     let e = (r[a] = Array.isArray(t) ? t : []);
                                     (e.push({ value: s, time: i }), e.length > 600 && e.shift());
                                 } else r[a] = s;

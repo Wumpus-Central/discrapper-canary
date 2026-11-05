@@ -35,8 +35,8 @@ function R(e) {
             isClaimed: D,
             isClaimedCodesLoaded: M,
             isClaiming: O,
-            isOutOfCodes: U,
-            handleClaim: L,
+            isOutOfCodes: L,
+            handleClaim: U,
             handleClaimError: k,
         } = (function (e) {
             let t = null != e && e.rewardStatus === x.GM.CONSUMED,
@@ -102,7 +102,7 @@ function R(e) {
         })(y);
     if (null == y) return null;
     let G =
-        ((l = U ? 3 : null != P ? 2 : D && !M ? 0 : 1),
+        ((l = L ? 3 : null != P ? 2 : D && !M ? 0 : 1),
         null == y.startsAt || null == y.endsAt
             ? null
             : (3 === l
@@ -142,7 +142,7 @@ function R(e) {
                                 recurrence: G,
                                 showPartnerImage: !0,
                                 claimButtonPlacement: o.u5.FOOTER,
-                                onClaim: L,
+                                onClaim: U,
                                 onClaimError: k,
                                 isClaiming: O,
                                 hideClaimButton: 3 === l,

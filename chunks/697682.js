@@ -5,25 +5,25 @@ var i = n(477900),
     s = n.n(l),
     a = n(646514),
     o = n(97808),
-    u = n(654107),
-    c = n(707683);
+    c = n(654107),
+    u = n(707683);
 let d = function (e) {
     let { children: t, shouldAnimate: n } = e;
     return n
-        ? (0, i.jsx)("div", { className: c.nw, children: (0, i.jsx)("div", { className: c.WH, children: t }) })
+        ? (0, i.jsx)("div", { className: u.nw, children: (0, i.jsx)("div", { className: u.WH, children: t }) })
         : t;
 };
 var m = n(543699),
     h = n(527212),
     g = n(991988),
     f = n(917445);
-let p = (0, n(945810).mj)({
+let A = (0, n(945810).mj)({
     name: "2026-09-video-background-profile-fetch",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var A = n(652215),
+var p = n(652215),
     E = n(996988),
     b = n(621647);
 let C = function (e) {
@@ -31,17 +31,17 @@ let C = function (e) {
             style: t,
             src: n,
             backgroundSrc: l,
-            userId: c,
+            userId: u,
             guildId: C,
             pulseSpeakingIndicator: v = !1,
-            speaking: T = !1,
-            ...y
+            speaking: y = !1,
+            ...I
         } = e,
-        _ = l ?? n,
-        I = (0, u.Ay)(_, a.A.unsafe_rawColors.PRIMARY_800.css),
-        R = p.useConfig({ location: "VideoBackground" }).enabled,
-        x = (0, h.Ay)(c ?? "", C),
-        S = (0, m.tM)(x?.themeColors?.[0]) ?? A.NJ8.DARK,
+        T = l ?? n,
+        _ = (0, c.Ay)(T, a.A.unsafe_rawColors.PRIMARY_800.css),
+        R = A.useConfig({ location: "VideoBackground" }).enabled,
+        x = (0, h.Ay)(u ?? "", C),
+        S = (0, m.tM)(x?.themeColors?.[0]) ?? p.NJ8.DARK,
         { profileThemeStyle: O, profileThemeClassName: k } = (0, g.A)({
             theme: S,
             themeType: E.d.VIDEO_TILE_BACKGROUND,
@@ -51,16 +51,16 @@ let C = function (e) {
         N = x?.themeColors?.[0] != null && x?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && R && (0, f.A)(c, void 0, { guildId: C });
-        }, [R, c, C]),
+            null != u && R && (0, f.A)(u, void 0, { guildId: C });
+        }, [R, u, C]),
         null == n)
     )
         return null;
-    let M = (0, i.jsx)(o.eu, { className: b.R, src: n, ...y }),
-        P = { ...t, backgroundColor: I };
+    let M = (0, i.jsx)(o.eu, { className: b.R, src: n, ...I }),
+        P = { ...t, backgroundColor: _ };
     return (0, i.jsx)("div", {
         style: N ? { ...t, ...O } : { ...P },
         className: s()(b.T, { [k]: N }),
-        children: v ? (0, i.jsx)(d, { shouldAnimate: T, children: M }) : M,
+        children: v ? (0, i.jsx)(d, { shouldAnimate: y, children: M }) : M,
     });
 };

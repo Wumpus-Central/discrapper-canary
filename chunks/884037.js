@@ -38,8 +38,8 @@ var u = s(803805),
     E = s(537652),
     _ = s(267102),
     v = s(679164),
-    S = s(439401),
-    A = s(957565),
+    A = s(439401),
+    S = s(957565),
     w = s(998218),
     N = s(327143),
     F = s(652215),
@@ -60,10 +60,10 @@ function k(e, t, s, n) {
             ? null
             : (0, r.jsx)("div", { className: T.qf, style: { animationDelay: `${75 * t}ms`, ...s } }, n);
 }
-function O(e, t) {
+function L(e, t) {
     return e > 0 ? "" : (G[t]?.id ?? "");
 }
-function L(e) {
+function O(e) {
     return e === u.TL.VIDEO;
 }
 function b(e) {
@@ -85,7 +85,7 @@ class H extends n.PureComponent {
         super(e);
         let { format: t, color: s, imagePool: r } = this.props;
         ((this.state = { color: null == s ? o().sample(j) : s, loaded: !1 }),
-            L(t) ||
+            O(t) ||
                 ((this._image = r.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
                 (this._image.src = b(e.src))));
@@ -155,7 +155,7 @@ class H extends n.PureComponent {
             onClick: this.handleClick,
             onContextMenu: this.handleContextMenu,
             style: { backgroundColor: h ? void 0 : o, ...n },
-            children: [L(s) ? null : this.renderGIF(), null != t ? t(e) : null],
+            children: [O(s) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
 }
@@ -212,7 +212,7 @@ class W extends n.PureComponent {
         this.selectItem(e, t, s);
     };
     handleContextMenu = (e, t) => {
-        A.p5 &&
+        S.p5 &&
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     s.e(476662),
@@ -260,7 +260,7 @@ class W extends n.PureComponent {
                 coords: s,
                 onClick: this.handleClickItem,
                 onContextMenu: this.handleContextMenu,
-                renderExtras: () => (0, r.jsx)(S.A, { className: T.uJ, ...u }),
+                renderExtras: () => (0, r.jsx)(A.A, { className: T.uJ, ...u }),
                 focused: P(u) === o,
                 imagePool: this.props.imagePool,
                 videoPool: this.props.videoPool,
@@ -382,7 +382,7 @@ class W extends n.PureComponent {
                       sections: [G.length],
                       columns: e,
                       itemGutter: 12,
-                      getItemKey: O,
+                      getItemKey: L,
                       getItemHeight: M,
                       renderItem: k,
                       chunkSize: 128,

@@ -5,8 +5,8 @@ var l = n(503698),
     s = n(70688),
     r = n(693409),
     o = n(418241),
-    d = n(786739),
-    c = n(792996),
+    c = n(786739),
+    d = n(792996),
     u = n(878772);
 n.d(
     t,
@@ -20,7 +20,7 @@ n.d(
                     iconComponent: s.DoorExitIcon,
                     onClick: () => (0, o.N)(t),
                     className: u.u,
-                    label: c.intl.string(d.default["D+wwh8"]),
+                    label: d.intl.string(c.default["D+wwh8"]),
                 }),
             });
         },

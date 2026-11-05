@@ -1,5 +1,5 @@
-var l = i(164636),
-    n = i(71393),
+var n = i(164636),
+    r = i(71393),
     a = i(652215);
 let s = [
     a.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
@@ -11,12 +11,12 @@ i.d(
     {},
     {
         TG: function (e) {
-            let t = n.A.getGuild(e);
+            let t = r.A.getGuild(e);
             return t?.features.has(a.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) ?? !1;
         },
         _Y: function (e) {
-            return (0, l.bG)([n.A], () => {
-                let t = n.A.getGuild(e);
+            return (0, n.bG)([r.A], () => {
+                let t = r.A.getGuild(e);
                 return t?.features.has(a.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) ?? !1;
             });
         },

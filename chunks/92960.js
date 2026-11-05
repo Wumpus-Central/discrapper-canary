@@ -10,13 +10,13 @@ var i = n(367513),
     _ = n(940382),
     E = n(931664),
     A = n(631576),
-    h = n(799704),
-    f = n(734057),
+    f = n(799704),
+    h = n(734057),
     I = n(72314),
     p = n(31717),
     m = n(580745),
-    g = n(596344),
-    T = n(218461),
+    T = n(596344),
+    g = n(218461),
     S = n(309010),
     N = n(967198),
     C = n(712687),
@@ -43,8 +43,8 @@ function y(e) {
                 return (n.dispatch(L.jej.POPOUT_CLOSE_AFTER_MODALS), !1);
             let r = N.A.getGuildId(),
                 a = e ?? S.Ay.getChannelId(r),
-                s = f.A.getChannel(a),
-                d = h.Ay.getSection(a, s?.isDM()) === L.YvQ.SIDEBAR_CHAT ? h.Ay.getSidebarState(a) : null,
+                s = h.A.getChannel(a),
+                d = f.Ay.getSection(a, s?.isDM()) === L.YvQ.SIDEBAR_CHAT ? f.Ay.getSidebarState(a) : null,
                 c = d?.type === _.PE.VIEW_CHANNEL ? d.channelId : null;
             if (!1 === D(a) || !1 === D(c)) return !1;
             if (R._.hasSubscribers(L.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL))
@@ -77,8 +77,8 @@ function b(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        g.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, 30), (t = !0)),
-        T.Ay.hasUnread(e) &&
+        T.A.getMessages(e).hasMoreAfter && (a.A.jumpToPresent(e, 30), (t = !0)),
+        g.Ay.hasUnread(e) &&
             ((0, s.I_)(e, { object: L.ZSU.MARK_CHANNEL_AS_READ_KEYBIND, objectType: L.btD.ACK_MANUAL }), (t = !0)),
         (0, s.fb)(e),
         t

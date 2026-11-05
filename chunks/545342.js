@@ -11,15 +11,15 @@ var i = n(477900),
 let _ = n.p + "c65e4b474b02f994.mov",
     E = n.p + "7c5b005481eed9fc.mp4",
     A = n.p + "7ba7fcf2c4710bb7.webm",
-    h = n.p + "835e7a49b01c6d4c.mov",
-    f = n.p + "c52c1a4c0861d954.mp4",
+    f = n.p + "835e7a49b01c6d4c.mov",
+    h = n.p + "c52c1a4c0861d954.mp4",
     I = n.p + "46b40a1f870acc70.webm";
 function p(e) {
     let {
             movDark: t = _,
-            movLight: n = h,
+            movLight: n = f,
             mp4Dark: r = E,
-            mp4Light: a = f,
+            mp4Light: a = h,
             pngDark: s = "/assets/209a4acf5023c4c3.png",
             pngLight: l = "/assets/6f7ec9558f0b4ff5.png",
             webmDark: o = A,
@@ -27,27 +27,27 @@ function p(e) {
         } = e,
         p = (0, d.Z5)(),
         m = [(0, i.jsx)("source", { src: r, type: "video/mp4" }, "mp4"), (0, i.jsx)("img", { alt: "", src: s }, "png")],
-        g = [(0, i.jsx)("source", { src: a, type: "video/mp4" }, "mp4"), (0, i.jsx)("img", { alt: "", src: l }, "png")];
+        T = [(0, i.jsx)("source", { src: a, type: "video/mp4" }, "mp4"), (0, i.jsx)("img", { alt: "", src: l }, "png")];
     return (
         (p > 52 || -1 === p) &&
             (m.unshift((0, i.jsx)("source", { src: o, type: "video/webm" }, "webm")),
-            g.unshift((0, i.jsx)("source", { src: c, type: "video/webm" }, "webm"))),
+            T.unshift((0, i.jsx)("source", { src: c, type: "video/webm" }, "webm"))),
         (0, d.TM)() &&
             (m.unshift((0, i.jsx)("source", { src: t, type: "video/mp4" }, "hevc")),
-            g.unshift((0, i.jsx)("source", { src: n, type: "video/mp4" }, "hevc"))),
-        { [u.NJ8.DARK]: m, [u.NJ8.LIGHT]: g }
+            T.unshift((0, i.jsx)("source", { src: n, type: "video/mp4" }, "hevc"))),
+        { [u.NJ8.DARK]: m, [u.NJ8.LIGHT]: T }
     );
 }
 let m = o.A.getAppSpinnerSources(),
-    g = null != m ? p(m) : null,
-    T = p({}),
+    T = null != m ? p(m) : null,
+    g = p({}),
     S = function (e) {
         let { loop: t = !0, autoPlay: n = !0, setRef: o, className: d, onReady: _ } = e,
             { theme: E } = (0, s.wR)(),
             { reducedMotion: A } = r.useContext(l.C),
-            h = T;
-        null != g && (h = g);
-        let f = h[(0, a.M)(E) ? u.NJ8.DARK : u.NJ8.LIGHT] ?? h[u.NJ8.DARK];
+            f = g;
+        null != T && (f = T);
+        let h = f[(0, a.M)(E) ? u.NJ8.DARK : u.NJ8.LIGHT] ?? f[u.NJ8.DARK];
         return (0, i.jsx)(
             c.A,
             {
@@ -58,7 +58,7 @@ let m = o.A.getAppSpinnerSources(),
                 autoPlay: !A.enabled && n,
                 playsInline: !0,
                 "data-testid": "app-spinner",
-                children: f,
+                children: h,
             },
             E,
         );

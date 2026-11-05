@@ -11,13 +11,13 @@ var i = n(812729),
     _ = n(478437),
     E = n(734057),
     A = n(969151),
-    h = n(90644),
-    f = n(655116),
+    f = n(90644),
+    h = n(655116),
     I = n(253932),
     p = n(617617),
     m = n(674378),
-    g = n(760751),
-    T = n(885576),
+    T = n(760751),
+    g = n(885576),
     S = n(189081),
     N = n(491009),
     C = n(290863),
@@ -59,7 +59,7 @@ function V(e) {
         return !1;
     switch (e.type) {
         case l.$.LISTENING:
-            if ((0, h.A)(e)) return f.A.shouldShowActivity();
+            if ((0, f.A)(e)) return h.A.shouldShowActivity();
             if (null != e.application_id) return B(e.application_id);
             return !1;
         case l.$.PLAYING:
@@ -67,7 +67,7 @@ function V(e) {
             let n;
             return null != e.application_id
                 ? B(e.application_id)
-                : ((t = e.name), 1 === (n = g.A.searchGamesByName(t)).length ? B(n[0]) : I.tz.getSetting());
+                : ((t = e.name), 1 === (n = T.A.searchGamesByName(t)).length ? B(n[0]) : I.tz.getSetting());
         case l.$.STREAMING:
         case l.$.WATCHING:
         default:
@@ -75,7 +75,7 @@ function V(e) {
     }
 }
 function H() {
-    if (((b = T.A.getIdleSince() ?? 0), (M = T.A.isAFK()), U)) y = D;
+    if (((b = g.A.getIdleSince() ?? 0), (M = g.A.isAFK()), U)) y = D;
     else if (L) y = R.clD.INVISIBLE;
     else {
         let e = I.jP.getSetting();
@@ -102,7 +102,7 @@ function j() {
 class W extends o.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
-        (this.waitFor(E.A, g.A, c.Ay, T.A, S.A, N.A, C.A, O.A, f.A, p.A), this.syncWith([N.A], H));
+        (this.waitFor(E.A, T.A, c.Ay, g.A, S.A, N.A, C.A, O.A, h.A, p.A), this.syncWith([N.A], H));
     }
     getLocalPresence() {
         return { status: y, since: b, activities: P, afk: M };

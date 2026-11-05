@@ -1,4 +1,4 @@
-(n.d(t, { A: () => Z }), n(321073));
+(n.d(t, { A: () => Q }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(855986),
@@ -11,19 +11,19 @@ var i = n(435558),
     _ = n(309010),
     E = n(811091),
     A = n(970278),
-    h = n(152007),
-    f = n(826767),
+    f = n(152007),
+    h = n(826767),
     I = n(746080);
 let p = {},
     m = {},
-    g = {},
     T = {},
+    g = {},
     S = {},
     N = {},
     C = null,
     O = {};
 function R() {
-    for (let e in ((p = {}), (S = {}), (m = {}), (g = {}), (T = {}), (C = _.Ay.getChannelId()), O)) clearTimeout(O[e]);
+    for (let e in ((p = {}), (S = {}), (m = {}), (T = {}), (g = {}), (C = _.Ay.getChannelId()), O)) clearTimeout(O[e]);
     ((O = {}),
         A.A.forEachGuild((e) => {
             y(e);
@@ -31,7 +31,7 @@ function R() {
         D());
 }
 function L(e) {
-    for (let t in (delete p[e], delete S[e], delete m[e], delete g[e], delete T[e], y(e), g[e])) v(e, t);
+    for (let t in (delete p[e], delete S[e], delete m[e], delete T[e], delete g[e], y(e), T[e])) v(e, t);
 }
 function y(e) {
     let t = A.A.getThreadsForGuild(e);
@@ -40,20 +40,20 @@ function y(e) {
             B(n);
             let e = d.A.getChannel(n);
             if (null == e) continue;
-            let t = h.A.joinTimestamp(n);
+            let t = f.A.joinTimestamp(n);
             if (null != t) {
                 let n = { channel: e, joinTimestamp: t.getTime() },
                     { isUnread: i, isRelevant: r, isTimedRelevant: a } = k(e);
                 (V(p, e, n, !1), V(S, e, r ? n : null, !1), V(m, e, i ? n : null, !1), a && F(e, !0));
             } else {
-                V(g, e, e, !1);
+                V(T, e, e, !1);
                 let t = u.Ay.isForumPostUnread(e.id);
-                V(T, e, t ? e : null, !1);
+                V(g, e, t ? e : null, !1);
             }
         }
 }
 function D() {
-    for (let e in ((N = {}), g)) for (let t in g[e]) v(e, t);
+    for (let e in ((N = {}), T)) for (let t in T[e]) v(e, t);
 }
 function b(e) {
     let t = d.A.getBasicChannel(e);
@@ -64,7 +64,7 @@ function v(e, t) {
     if (
         null == n ||
         !n.isForumLikeChannel() ||
-        (null == N[e] && (N[e] = {}), (N[e][t] = 0), null == g[e] || null == g[e][t])
+        (null == N[e] && (N[e] = {}), (N[e][t] = 0), null == T[e] || null == T[e][t])
     )
         return;
     let i = c.A.getGuild(e);
@@ -78,7 +78,7 @@ function v(e, t) {
                 : "string" == typeof i.joinedAt && (e = new Date(i.joinedAt).getTime())),
             (r = E.default.fromTimestamp(e)));
     }
-    for (let n in g[e][t])
+    for (let n in T[e][t])
         t === C
             ? u.Ay.isNewForumThread(n, t, i) && N[e][t]++
             : E.default.compare(n, r) > 0 && !u.Ay.hasOpenedThread(n) && N[e][t]++;
@@ -86,7 +86,7 @@ function v(e, t) {
 function P(e, t, n) {
     if (null == t) return !1;
     let i = d.A.getChannel(n),
-        r = h.A.joinTimestamp(n);
+        r = f.A.joinTimestamp(n);
     if (null != i && A.A.isActive(e, t, n)) {
         if (null != r) {
             let e = { channel: i, joinTimestamp: r.getTime() },
@@ -94,20 +94,20 @@ function P(e, t, n) {
             (V(p, i, e, !0),
                 V(S, i, n ? e : null, !0),
                 V(m, i, t ? e : null, !0),
-                V(g, i, null, !0),
                 V(T, i, null, !0),
+                V(g, i, null, !0),
                 F(i, a));
         } else {
             let e = u.Ay.isForumPostUnread(i.id);
             (V(p, i, null, !0),
                 V(m, i, null, !0),
                 V(S, i, null, !0),
-                V(g, i, i, !0),
-                V(T, i, e ? i : null, !0),
+                V(T, i, i, !0),
+                V(g, i, e ? i : null, !0),
                 B(i.id));
         }
         v(e, t);
-    } else (H(p, e, t, n), H(S, e, t, n), H(m, e, t, n), H(g, e, t, n), H(T, e, t, n), B(n), v(e, t));
+    } else (H(p, e, t, n), H(S, e, t, n), H(m, e, t, n), H(T, e, t, n), H(g, e, t, n), B(n), v(e, t));
 }
 function M(e) {
     return P(e.channel.guild_id, e.channel.parent_id, e.channel.id);
@@ -136,10 +136,10 @@ function w(e) {
                 c = r ? o : null;
             (V(m, t, d, !0), V(S, t, c, !0), v(e, n));
         } else {
-            let e = j(T, t),
+            let e = j(g, t),
                 n = u.Ay.isForumPostUnread(t.id);
             if (n === e) return !1;
-            V(T, t, n ? t : null, !0);
+            V(g, t, n ? t : null, !0);
         }
     }
 }
@@ -151,11 +151,11 @@ function G() {
                     { isUnread: r, isRelevant: a, isTimedRelevant: s } = k(i.channel);
                 (r && V(m, i.channel, i, !1), a && V(S, i.channel, i, !1), F(i.channel, s));
             }
-    for (let e in ((T = {}), g))
-        for (let t in g[e])
-            for (let n in g[e][t]) {
-                let i = g[e][t][n];
-                u.Ay.isForumPostUnread(n) && V(T, i, i, !1);
+    for (let e in ((g = {}), T))
+        for (let t in T[e])
+            for (let n in T[e][t]) {
+                let i = T[e][t][n];
+                u.Ay.isForumPostUnread(n) && V(g, i, i, !1);
             }
     D();
 }
@@ -166,10 +166,10 @@ function x() {
 }
 function k(e) {
     let t = u.Ay.getMentionCount(e.id) > 0,
-        n = u.Ay.hasUnread(e.id) && !h.A.isMuted(e.id),
+        n = u.Ay.hasUnread(e.id) && !f.A.isMuted(e.id),
         i = e.hasFlag(I.lx.PINNED),
         r = e.isActiveThread(),
-        a = r && (0, f.A)(e) > Date.now(),
+        a = r && (0, h.A)(e) > Date.now(),
         s = _.Ay.getVoiceChannelId() === e.id;
     return { isUnread: ((r || i) && n) || t, isRelevant: a || i || n || t || s, isTimedRelevant: a };
 }
@@ -182,7 +182,7 @@ function F(e, t) {
                     let e = d.A.getChannel(n.id);
                     null != e && s.h.dispatch({ type: "THREAD_UPDATE", channel: e });
                 },
-                (0, f.A)(n) - Date.now() + 1,
+                (0, h.A)(n) - Date.now() + 1,
             )));
 }
 function B(e) {
@@ -219,13 +219,13 @@ let Y = {},
 class q extends a.Ay.Store {
     static displayName = "ActiveJoinedThreadsStore";
     initialize() {
-        (this.waitFor(A.A, d.A, c.A, h.A, u.Ay, _.Ay), this.syncWith([_.Ay], x));
+        (this.waitFor(A.A, d.A, c.A, f.A, u.Ay, _.Ay), this.syncWith([_.Ay], x));
     }
     hasActiveJoinedUnreadThreads(e, t) {
         return e in m && t in m[e];
     }
     getActiveUnjoinedThreadsForParent(e, t) {
-        return e in g ? (g[e][t] ?? X) : X;
+        return e in T ? (T[e][t] ?? X) : X;
     }
     getActiveJoinedThreadsForParent(e, t) {
         return e in p ? (p[e][t] ?? $) : $;
@@ -249,10 +249,10 @@ class q extends a.Ay.Store {
         return this.getActiveJoinedRelevantThreadsForGuild(e)[t] ?? $;
     }
     getActiveUnjoinedThreadsForGuild(e) {
-        return g[e] ?? K;
+        return T[e] ?? K;
     }
     getActiveUnjoinedUnreadThreadsForGuild(e) {
-        return T[e] ?? Y;
+        return g[e] ?? Y;
     }
     getActiveUnjoinedUnreadThreadsForParent(e, t) {
         return this.getActiveUnjoinedUnreadThreadsForGuild(e)[t] ?? $;
@@ -270,10 +270,10 @@ class q extends a.Ay.Store {
         return N[e]?.[t] ?? 0;
     }
     getActiveThreadCount(e, t) {
-        return r().size(p[e]?.[t] ?? {}) + r().size(g[e]?.[t] ?? {});
+        return r().size(p[e]?.[t] ?? {}) + r().size(T[e]?.[t] ?? {});
     }
 }
-let Z = new q(s.h, {
+let Q = new q(s.h, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     THREAD_LIST_SYNC: function (e) {
@@ -311,7 +311,7 @@ let Z = new q(s.h, {
                     if (null != i) {
                         for (let e in i) if ((0, l.qR)(i[e].channel)) return !0;
                     }
-                    let r = g[e],
+                    let r = T[e],
                         a = null == r ? null : r[t];
                     if (null != a) {
                         for (let e in a) if ((0, l.qR)(a[e])) return !0;
@@ -335,8 +335,8 @@ let Z = new q(s.h, {
                     (E.default.keys(S[t.guild_id][t.parent_id]).forEach(B),
                     delete S[t.guild_id][t.parent_id],
                     (n = !0)),
-                t.guild_id in g && t.parent_id in g[t.guild_id] && (delete g[t.guild_id][t.parent_id], (n = !0)),
                 t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)),
+                t.guild_id in g && t.parent_id in g[t.guild_id] && (delete g[t.guild_id][t.parent_id], (n = !0)),
                 n && v(t.guild_id, t.parent_id)),
             n
         );

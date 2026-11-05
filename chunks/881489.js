@@ -12,7 +12,7 @@ var o = n(496431),
     f = n(19191),
     E = n(469778),
     I = n(682901);
-function g(e, t, s) {
+function h(e, t, s) {
     if ((0, a.ue)()) return;
     let { isDismissed: l } = (0, u.u$)(t, s);
     function r(e) {
@@ -40,7 +40,7 @@ n.d(
         QM: function () {
             if (null == m.default.getCurrentUser()) return;
             let e = f.A.getUserTrialOffer(I.Tt);
-            null != e && g("followup", r.M.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL, e.id);
+            null != e && h("followup", r.M.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL, e.id);
         },
         Zb: function (e) {
             let t = (0, o.A)(e.toDate(), 36e5);
@@ -52,7 +52,7 @@ n.d(
             let t = E.A.getFractionalPremium({ excludeReverseTrial: !1 }).find(
                 (e) => e.sourceType === s.G.REVERSE_TRIAL,
             );
-            null != t && g("initial", r.M.ML_REVERSE_TRIAL_UPSELL_MODAL, t.id);
+            null != t && h("initial", r.M.ML_REVERSE_TRIAL_UPSELL_MODAL, t.id);
         },
         ds: function () {
             return (0, l.bG)([m.default], () => {

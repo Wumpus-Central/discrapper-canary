@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(778712),
     E = n(827343),
     A = n(367513),
-    h = n(951001),
-    f = n(398590),
+    f = n(951001),
+    h = n(398590),
     I = n(793574),
     p = n(149468),
     m = n(628983),
-    g = n(94247),
-    T = n(520698),
+    T = n(94247),
+    g = n(520698),
     S = n(525788),
     N = n(384059),
     C = n(47167),
@@ -46,8 +46,8 @@ var i = n(477900),
     X = n(803301),
     z = n(531685),
     q = n(129230),
-    Z = n(562153),
-    Q = n(427262),
+    Q = n(562153),
+    Z = n(427262),
     J = n(712577),
     ee = n(566331),
     et = n(768088),
@@ -107,10 +107,10 @@ class ec extends r.PureComponent {
     };
     handleJumpToChannel = () => {
         let { channel: e } = this.props;
-        (0, f.bz)();
+        (0, h.bz)();
         let t = e.getGuildId() ?? es.ME,
             n = w.A.isEnabled() ? w.A.getTabForChannel(e.id) : null;
-        (null != n ? (0, U.ZD)(n.id, !0) : (0, M.uh)(t, e.id), h.A.channelListScrollTo(t, e.id));
+        (null != n ? (0, U.ZD)(n.id, !0) : (0, M.uh)(t, e.id), f.A.channelListScrollTo(t, e.id));
         let i = this.activeStreamForSelectedParticipant;
         null != i && A.A.selectParticipant(i.channelId, (0, L._z)(i));
     };
@@ -213,7 +213,7 @@ class ec extends r.PureComponent {
     renderParticipantName() {
         let { channel: e, participantOnScreen: t } = this.props;
         if (t?.type === el.lp.STREAM || t?.type === el.lp.USER) {
-            let n = Z.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? Q.Ay.getName(t.user);
+            let n = Q.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? Z.Ay.getName(t.user);
             return (0, i.jsx)(u.E, {
                 variant: "body-md/normal",
                 color: "text-overlay-light",
@@ -276,14 +276,14 @@ n.d(
     {
         A: function (e) {
             let { channel: t, width: n } = e,
-                r = (0, d.bG)([g.A], () => g.A.getSpeaker(t.id)),
+                r = (0, d.bG)([T.A], () => T.A.getSpeaker(t.id)),
                 a = (0, d.bG)([m.A], () => m.A.getParticipant(t.id, r), [t.id, r]),
                 s = (0, d.bG)([Y.Ay], () => o()(Y.Ay.getVideoDevices()).values().first()),
                 l = (0, d.bG)(
                     [X.A],
                     () =>
                         null != a && a.type !== el.lp.ACTIVITY && a.type !== el.lp.HIDDEN_STREAM
-                            ? X.A.getStreamId(a.user.id, t.getGuildId(), (0, T.A)(a.type))
+                            ? X.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
                             : null,
                     [a, t],
                 ),
@@ -291,8 +291,8 @@ n.d(
                 _ = !u,
                 E = (0, d.bG)([Y.Ay], () => !u && Y.Ay.isVideoEnabled(), [u]),
                 A = (0, d.bG)([Y.Ay], () => (0, y.A)(Y.Ay)),
-                h = (0, d.bG)([W.default], () => W.default.getId()),
-                f = (0, d.bG)([j.A], () => j.A.getCurrentUserActiveStream()),
+                f = (0, d.bG)([W.default], () => W.default.getId()),
+                h = (0, d.bG)([j.A], () => j.A.getCurrentUserActiveStream()),
                 I = null != a && "user" in a ? a.user.id : "",
                 p = (0, R.A)(a?.type === el.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, I),
                 S = (0, O.A)(I),
@@ -305,9 +305,9 @@ n.d(
                 isVideoAvailable: _,
                 isVideoEnabled: E,
                 canGoLive: A,
-                currentUserId: h,
+                currentUserId: f,
                 activeStreams: N,
-                activeSelfStream: f,
+                activeSelfStream: h,
                 isMainWindowFocused: C,
                 width: n,
                 isOverlayRenderingVideo: !1,

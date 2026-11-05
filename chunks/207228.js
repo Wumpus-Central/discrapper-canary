@@ -1,6 +1,6 @@
 var i = n(73153),
-    l = n(754712),
-    r = n(37595),
+    r = n(754712),
+    l = n(37595),
     s = n(731854);
 let a = !1,
     o = 0,
@@ -10,10 +10,10 @@ function c(e) {
     return null == e ? void 0 : Math.min(Math.max(Math.floor(e), 0), 7680);
 }
 function h() {
-    let e = (0, r.V)();
+    let e = (0, l.V)();
     return e?.windowHandle == null
         ? null
-        : { id: `window:${e.windowHandle}`, processId: e.pid, useVideoHook: !1, useGraphicsCapture: (0, l.hp)() };
+        : { id: `window:${e.windowHandle}`, processId: e.pid, useVideoHook: !1, useGraphicsCapture: (0, r.hp)() };
 }
 function f(e) {
     i.h.dispatch({ type: "CONJURE_SNAPSHOT_CAPTURE_SET", app: e });
@@ -30,20 +30,20 @@ async function A() {
     }
 }
 function p() {
-    l.Ay.getMediaEngine().setSnapshotSource(h());
+    r.Ay.getMediaEngine().setSnapshotSource(h());
 }
 function m() {
-    return l.Ay.getMediaEngine().supports(s.O5.CONJURE_SNAPSHOT);
+    return r.Ay.getMediaEngine().supports(s.O5.CONJURE_SNAPSHOT);
 }
 function I() {
-    return l.Ay.getMediaEngine()
+    return r.Ay.getMediaEngine()
         .getSnapshotStats()
         .catch(() => null);
 }
 function E() {
     if (!a) return;
-    for (let e of ((a = !1), null != u && clearInterval(u), (u = null), r.g)) e.removeChangeListener(p);
-    let e = l.Ay.getMediaEngine();
+    for (let e of ((a = !1), null != u && clearInterval(u), (u = null), l.g)) e.removeChangeListener(p);
+    let e = r.Ay.getMediaEngine();
     (e.setSnapshotSource(null), e.stopSnapshotCapture(), (d = null), f(null));
 }
 n.d(
@@ -64,7 +64,7 @@ n.d(
             }
             if (!m()) return !1;
             if (
-                (l.Ay.getMediaEngine().startSnapshotCapture(
+                (r.Ay.getMediaEngine().startSnapshotCapture(
                     (function (e) {
                         let { width: t, height: n, intervalMs: i } = e;
                         return { width: c(t), height: c(n), intervalMs: Math.max(Math.floor(i), 250) };
@@ -73,7 +73,7 @@ n.d(
                 ),
                 !a)
             ) {
-                for (let e of ((a = !0), (o = performance.now()), r.g)) e.addChangeListener(p);
+                for (let e of ((a = !0), (o = performance.now()), l.g)) e.addChangeListener(p);
                 (p(), (u = setInterval(A, 2e3)));
             }
             return ((d = e), f(e), !0);

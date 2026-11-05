@@ -1,7 +1,7 @@
 var i,
-    s = n(945810),
-    r = (((i = {}).ORBS = "orbs"), (i.DISCOUNT = "discount"), i);
-let l = (0, s.mj)({
+    r = n(945810),
+    s = (((i = {}).ORBS = "orbs"), (i.DISCOUNT = "discount"), i);
+let l = (0, r.mj)({
     name: "2026-07-premium-referral-incentives",
     kind: "user",
     defaultConfig: { referralRewardType: null, useAltReferralCardArt: !1 },
@@ -25,6 +25,6 @@ n.d(
                 isInReferralIncentivesTreatment: null != t.referralRewardType,
             };
         },
-        xb: r,
+        xb: s,
     },
 );

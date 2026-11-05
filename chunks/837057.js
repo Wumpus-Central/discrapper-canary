@@ -19,10 +19,10 @@ n.d(
             let n = t.tab;
             switch ((n !== u.GlobalDiscoveryTab.QUESTS && c.A.setState({ selectedTab: n }), n)) {
                 case u.GlobalDiscoveryTab.SERVERS:
-                    let h = t.selectedServersTab;
+                    let f = t.selectedServersTab;
                     return (
-                        null != h
-                            ? a.A.setState({ selectedTab: h, entrypoint: t.entrypoint ?? A.J8.UNKNOWN })
+                        null != f
+                            ? a.A.setState({ selectedTab: f, entrypoint: t.entrypoint ?? A.J8.UNKNOWN })
                             : a.A.setState({ entrypoint: t.entrypoint ?? A.J8.UNKNOWN }),
                         (0, l.pX)(_.BVt.GLOBAL_DISCOVERY_SERVERS, t.extra)
                     );

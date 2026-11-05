@@ -10,10 +10,10 @@ var i = n(620632),
     _ = n(188567),
     E = n(814390),
     A = n(652215),
-    h = n(682901),
-    f = n(792996);
+    f = n(682901),
+    h = n(792996);
 function I(e) {
-    u.default.track(A.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: h.tz.PREMIUM_STANDARD });
+    u.default.track(A.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: f.tz.PREMIUM_STANDARD });
 }
 n.d(
     t,
@@ -21,11 +21,11 @@ n.d(
     {
         EW: function (e) {
             (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: e }),
-                I(h.Ae.DISPLAY_NAME_STYLES));
+                I(f.Ae.DISPLAY_NAME_STYLES));
         },
         Go: function (e) {
             (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: e }),
-                I(h.Ae.AVATAR_DECORATION));
+                I(f.Ae.AVATAR_DECORATION));
         },
         Gr: function (e, t) {
             let n = c.default.getCurrentUser()?.id;
@@ -38,17 +38,17 @@ n.d(
         VQ: function () {
             (_._.dispatch(A.jej.SHAKE_PROFILE_MODAL),
                 _._.dispatch(A.jej.EMPHASIZE_NOTICE),
-                r.O.announce(`${f.intl.string(f.t.GP7JLE)} ${f.intl.string(f.t.gKoO1D)}`));
+                r.O.announce(`${h.intl.string(h.t.GP7JLE)} ${h.intl.string(h.t.gKoO1D)}`));
         },
         XQ: function () {
             a.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
         },
         a: function (e) {
             (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: e }),
-                I(h.Ae.PROFILE_THEME_COLOR));
+                I(f.Ae.PROFILE_THEME_COLOR));
         },
         e$: function (e) {
-            (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), I(h.Ae.ANIMATED_AVATAR));
+            (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), I(f.Ae.ANIMATED_AVATAR));
         },
         gi: async function (e, t, n) {
             let r = c.default.getCurrentUser()?.id;
@@ -79,10 +79,10 @@ n.d(
             a.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
         },
         w5: function (e) {
-            (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...e }), I(h.Ae.PRESET));
+            (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...e }), I(f.Ae.PRESET));
         },
         xe: function (e) {
-            (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), I(h.Ae.PROFILE_BANNER));
+            (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), I(f.Ae.PROFILE_BANNER));
         },
     },
 );

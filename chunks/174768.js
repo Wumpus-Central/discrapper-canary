@@ -11,13 +11,13 @@ var r = n(435558),
     _ = n(455234),
     E = n(940382),
     A = n(863005),
-    h = n(413599),
-    f = n(46653),
+    f = n(413599),
+    h = n(46653),
     I = n(799704),
     p = n(734057),
     m = n(31717),
-    g = n(808728),
-    T = n(696451),
+    T = n(808728),
+    g = n(696451),
     S = n(71393),
     N = n(576705),
     C = n(218461),
@@ -70,7 +70,7 @@ function X(e) {
     let { query: t, queryMode: n } = e,
         r = t.trim(),
         a = R.A.getGuildId() ?? void 0,
-        s = new Set([`user:${f.default.getId()}`]);
+        s = new Set([`user:${h.default.getId()}`]);
     (null != a && s.add(`guild:${a}`),
         (Y = Date.now()),
         (i =
@@ -105,7 +105,7 @@ function q(e, t) {
                           switch (k) {
                               case d.rD.USER_GLOBAL:
                               case d.rD.USER: {
-                                  let e = f.default.getId();
+                                  let e = h.default.getId();
                                   return y.Ay.getRecentlyTalked(i, 100).filter((t) => {
                                       let { record: n } = t;
                                       return n.id !== e;
@@ -182,7 +182,7 @@ function q(e, t) {
                               E))
                                   (a.add(t.record.id), a.add(e), r.push(t));
                           if (null != n) {
-                              let e = g.A.getSelectableChannelIds(n)
+                              let e = T.A.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.A.getChannel(e);
                                       return (
@@ -205,9 +205,9 @@ function q(e, t) {
                               }),
                                   e.length > 0 && (r.push((0, d.jF)(v.intl.string(v.t.ieCAhD))), (r = r.concat(e))));
                           }
-                          let h = r.length > 0 ? 3 : 7;
+                          let f = r.length > 0 ? 3 : 7;
                           return (
-                              s.length > h && s.splice(h),
+                              s.length > f && s.splice(f),
                               s.length > 0 && (r = [(0, d.jF)(v.intl.string(v.t["80lOZ1"])), ...s, ...r]),
                               r
                           );
@@ -261,10 +261,10 @@ function q(e, t) {
         ee.emitChange();
     }
 }
-function Z() {
+function Q() {
     ((B = null), (V = 0), (H = []), null != i && (i.destroy(), (i = null)));
 }
-function Q() {
+function Z() {
     if (null == i) return !1;
     i.refreshGameProfiles();
 }
@@ -272,8 +272,8 @@ class J extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        (this.waitFor(A.A, f.default, I.Ay, p.A, m.A, u.A, g.A, T.Ay, S.A, N.A, C.Ay, O.Ay, R.A, h.A, L.Ay),
-            this.syncWith([h.A], () => !0),
+        (this.waitFor(A.A, h.default, I.Ay, p.A, m.A, u.A, T.A, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, f.A, L.Ay),
+            this.syncWith([f.A], () => !0),
             (G = l.w.get(P) || !1),
             (j = e?.channelHistory ?? []));
     }
@@ -308,7 +308,7 @@ class J extends s.Ay.PersistedStore {
     }
     getProps() {
         return {
-            theme: h.A.theme,
+            theme: f.A.theme,
             query: null != i ? i.query : "",
             queryMode: k,
             results: F,
@@ -323,9 +323,9 @@ let ee = new J(o.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: K,
     QUICKSWITCHER_SHOW: X,
     SHOW_ACTION_SHEET_QUICK_SWITCHER: X,
-    QUICKSWITCHER_HIDE: Z,
-    OVERLAY_SET_INPUT_LOCKED: Z,
-    HIDE_ACTION_SHEET_QUICK_SWITCHER: Z,
+    QUICKSWITCHER_HIDE: Q,
+    OVERLAY_SET_INPUT_LOCKED: Q,
+    HIDE_ACTION_SHEET_QUICK_SWITCHER: Q,
     QUICKSWITCHER_SEARCH: function (e) {
         let { query: t, queryMode: n } = e,
             r = t.trim();
@@ -378,7 +378,7 @@ let ee = new J(o.h, {
         (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
             z(e.channelId));
     },
-    GAME_AUTOCOMPLETE_FETCH_SUCCESS: Q,
-    GAME_AUTOCOMPLETE_FETCH_FAILURE: Q,
+    GAME_AUTOCOMPLETE_FETCH_SUCCESS: Z,
+    GAME_AUTOCOMPLETE_FETCH_FAILURE: Z,
 });
 n.d(t, {}, { A: ee });

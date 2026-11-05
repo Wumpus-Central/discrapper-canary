@@ -12,14 +12,14 @@ var r = n(824120),
 n(190460);
 var E = n(532406);
 let A = /^data:/,
-    h = (i = n(9320).A).DEFAULT_AVATARS,
-    f = i.DEFAULT_AVATARS_SMALL ?? h,
+    f = (i = n(9320).A).DEFAULT_AVATARS,
+    h = i.DEFAULT_AVATARS_SMALL ?? f,
     I = i.DEFAULT_AVATARS_SMALL_MAX_SIZE ?? 0,
     p = i.DEFAULT_PROVISIONAL_AVATARS;
 i.DEFAULT_GROUP_DM_AVATARS;
 let m = i.canUseWebp(),
-    g = (0, c.m0)();
-function T(e) {
+    T = (0, c.m0)();
+function g(e) {
     let t,
         {
             endpoint: n,
@@ -36,21 +36,21 @@ function T(e) {
     if (null == r || null == a) return;
     let A = _ ?? (c && V(a) ? Y(E) : "jpg");
     c && H(a) && (A = "mp4");
-    let h = window.GLOBAL_ENV.CDN_HOST;
+    let f = window.GLOBAL_ENV.CDN_HOST;
     if (
-        (null != h
-            ? ("jpg" === A && (A = E ? "webp" : "png"), (t = `https://${h}/${i}/${r}/${a}.${A}`))
+        (null != f
+            ? ("jpg" === A && (A = E ? "webp" : "png"), (t = `https://${f}/${i}/${r}/${a}.${A}`))
             : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, a, A)),
         "mp4" === A)
     )
         return t;
-    let f = {};
+    let h = {};
     return (
-        null != l && (f.size = (0, d.kr)(l * (0, d.mZ)())),
-        null != u && (f.keep_aspect_ratio = u),
-        o && (f.quality = "lossless"),
-        "webp" === A && c && V(a) && (f.animated = !0),
-        t + `?${s.As(f)}`
+        null != l && (h.size = (0, d.kr)(l * (0, d.mZ)())),
+        null != u && (h.keep_aspect_ratio = u),
+        o && (h.quality = "lossless"),
+        "webp" === A && c && V(a) && (h.animated = !0),
+        t + `?${s.As(h)}`
     );
 }
 function S(e) {
@@ -59,7 +59,7 @@ function S(e) {
         l = m ? "webp" : "gif",
         o = a ? "png" : i ? l : s,
         c = m && i ? "&animated=true" : "",
-        u = `size=${(0, d.kr)(r * (0, d.mZ)(), g)}`,
+        u = `size=${(0, d.kr)(r * (0, d.mZ)(), T)}`,
         E = !1;
     try {
         let { getForceSdrEmojisStickersConfig: e } = n(796272);
@@ -76,7 +76,7 @@ function S(e) {
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
-        r = n ? p : !n && null != i && i <= I ? f : h;
+        r = n ? p : !n && null != i && i <= I ? h : f;
     if (null == e && null == t) return r[0];
     let s = (0, l.cG)(t, 0);
     return s > 0 ? r[s % 5] : null != e ? r[a()(e).shiftRight(22).mod(r.length).toJSNumber()] : r[0];
@@ -90,9 +90,9 @@ function C(e) {
     if (a) {
         let e = null != n ? i.BOT_AVATARS[n] : void 0;
         if (e) return e;
-        if (null == n && "0000" === r) return h[0];
+        if (null == n && "0000" === r) return f[0];
     }
-    return T({
+    return g({
         endpoint: _.Rsh.AVATAR,
         path: "avatars",
         id: t,
@@ -156,7 +156,7 @@ function D(e) {
         c = _.Rsh.AVATAR_DECORATION_PRESETS(a),
         u = new URL(null != s ? `https://${s}${c}` : `${location.protocol}${l}${c}`);
     return (
-        u.searchParams.set("size", `${(0, d.kr)(i * (0, d.mZ)(), g)}`),
+        u.searchParams.set("size", `${(0, d.kr)(i * (0, d.mZ)(), T)}`),
         u.searchParams.set("passthrough", `${r}`),
         u.toString()
     );
@@ -225,7 +225,7 @@ function U(e) {
 }
 function w(e) {
     let { id: t, icon: n, size: i, canAnimate: r = !1, lossless: a = !1 } = e;
-    return T({
+    return g({
         endpoint: _.Rsh.GUILD_ICON,
         path: "icons",
         id: t,
@@ -238,7 +238,7 @@ function w(e) {
 }
 function G(e) {
     let { id: t, icon: n, size: i = 128, canAnimate: r = !1 } = e;
-    return T({
+    return g({
         endpoint: _.Rsh.GUILD_TEMPLATE_ICON,
         path: "guild-templates",
         id: t,
@@ -270,7 +270,7 @@ function x(e) {
     if (null != n)
         return W(n)
             ? n
-            : T({
+            : g({
                   endpoint: _.Rsh.APPLICATION_ICON,
                   path: "app-icons",
                   id: t,
@@ -288,7 +288,7 @@ function x(e) {
 }
 function k(e) {
     let { id: t, hash: n, size: i = 128, keepAspectRatio: r = !1, format: a } = e;
-    return T({
+    return g({
         endpoint: _.Rsh.APPLICATION_ICON,
         path: "app-icons",
         id: t,
@@ -302,7 +302,7 @@ function k(e) {
 }
 function F(e) {
     let { userId: t, assetId: n, assetHash: i, size: r, canAnimate: a = !0 } = e;
-    return T({
+    return g({
         endpoint: (e, r, a) => _.Rsh.VIDEO_FILTER_ASSET_STORAGE(t, n, i, a),
         path: `video-filter-assets/${t}`,
         id: n,
@@ -316,7 +316,7 @@ function B(e) {
     let { id: t, icon: n, applicationId: r, size: a } = e;
     return null != r
         ? (x({ id: r, icon: n, size: a }) ?? i.DEFAULT_CHANNEL_ICON)
-        : (T({
+        : (g({
               endpoint: _.Rsh.CHANNEL_ICON,
               path: "channel-icons",
               id: t,
@@ -379,7 +379,7 @@ n.d(
                 let { channelId: t, icon: n } = e;
                 return null == n
                     ? null
-                    : T({
+                    : g({
                           endpoint: _.Rsh.GUILD_RESOURCE_CHANNELS_ICON,
                           path: "resource-channels",
                           id: t,
@@ -393,7 +393,7 @@ n.d(
                 let { channelId: t, icon: n } = e;
                 return null == n
                     ? null
-                    : T({
+                    : g({
                           endpoint: _.Rsh.GUILD_NEW_MEMBER_ACTIONS_ICON,
                           path: "new-member-actions",
                           id: t,
@@ -454,7 +454,7 @@ n.d(
         },
         q6: H,
         s7: R,
-        vI: h,
+        vI: f,
         xT: L,
         z: y,
     },

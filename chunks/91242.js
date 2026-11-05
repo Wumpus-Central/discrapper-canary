@@ -10,9 +10,9 @@ var i = n(855986),
 let _ = new Map(),
     E = { audible: !1 },
     A = null,
-    h = !1;
-function f(e, t) {
-    return "hidden" === e || t || h;
+    f = !1;
+function h(e, t) {
+    return "hidden" === e || t || f;
 }
 function I(e, t) {
     return p(e, u.YQ, t);
@@ -25,11 +25,11 @@ function p(e, t, n) {
 function m(e, t) {
     return null != t && e.launchRequestId !== t;
 }
-function g(e) {
+function T(e) {
     for (let t of _.values()) if ((0, d.x1)(t) && t.data.iframeId === e) return t;
 }
-function T(e, t) {
-    let n = g(e);
+function g(e, t) {
+    let n = T(e);
     return null != n && I(n.id, t);
 }
 class S extends i.Ay.Store {
@@ -46,10 +46,10 @@ class S extends i.Ay.Store {
         return !(0, d.x1)(t) || "hidden" !== t.data.poolVisibility;
     }
     getFrameByIframeId(e) {
-        return g(e);
+        return T(e);
     }
     isDeviceMuted() {
-        return h;
+        return f;
     }
     getMainFrame() {
         return null != A ? (_.get(A) ?? null) : null;
@@ -102,17 +102,17 @@ let N = new S(r.h, {
         let { frameId: t, proxyTicket: n, launch: i, invite: r, hostWindowKey: s, launchRequestId: l } = e,
             u = _.get(t);
         if (null == u || m(u, l)) return !1;
-        let f = (0, a.Ay)(u.applicationId),
-            I = null != f && null != i.path ? o.A.toURLSafe(i.path, f)?.toString() : f;
+        let h = (0, a.Ay)(u.applicationId),
+            I = null != h && null != i.path ? o.A.toURLSafe(i.path, h)?.toString() : h;
         if (null == I) {
             (_.delete(t), A === t && (A = null));
             return;
         }
-        let { id: p, applicationId: g, intent: T, surface: S } = u;
+        let { id: p, applicationId: T, intent: g, surface: S } = u;
         _.set(t, {
             id: p,
-            applicationId: g,
-            intent: T,
+            applicationId: T,
+            intent: g,
             surface: S,
             launchRequestId: u.launchRequestId,
             state: "launched",
@@ -128,7 +128,7 @@ let N = new S(r.h, {
                 runsInBackground: !1,
                 pictureInPictureInteractive: !1,
                 poolVisibility: "unpooled",
-                muted: h,
+                muted: f,
                 userMuted: !1,
                 ...E,
                 iframeId: null,
@@ -146,7 +146,7 @@ let N = new S(r.h, {
     },
     FRAME_STOP: function (e) {
         let { frameId: t } = e;
-        (_.delete(t), A === t && (A = null), Array.from(_.values()).some(d.x1) || (h = !1));
+        (_.delete(t), A === t && (A = null), Array.from(_.values()).some(d.x1) || (f = !1));
     },
     FRAME_CLEAR_MAIN_SLOT: function (e) {
         let { frameId: t } = e;
@@ -192,30 +192,30 @@ let N = new S(r.h, {
     },
     FRAME_POOL_VISIBILITY_UPDATE: function (e) {
         let { frameId: t, poolVisibility: n } = e;
-        return I(t, (e) => ({ ...e, poolVisibility: n, muted: f(n, e.userMuted) }));
+        return I(t, (e) => ({ ...e, poolVisibility: n, muted: h(n, e.userMuted) }));
     },
     FRAME_SET_USER_MUTED: function (e) {
         let { frameId: t, muted: n } = e;
         return p(
             t,
             (e) => e.userMuted !== n,
-            (e) => ({ ...e, userMuted: n, muted: f(e.poolVisibility, n) }),
+            (e) => ({ ...e, userMuted: n, muted: h(e.poolVisibility, n) }),
         );
     },
     FRAME_SET_DEVICE_MUTED: function (e) {
         let { muted: t } = e;
-        if (h === t) return !1;
-        for (let e of ((h = t), _.values()))
+        if (f === t) return !1;
+        for (let e of ((f = t), _.values()))
             (0, d.x1)(e) &&
-                _.set(e.id, { ...e, data: { ...e.data, muted: f(e.data.poolVisibility, e.data.userMuted) } });
+                _.set(e.id, { ...e, data: { ...e.data, muted: h(e.data.poolVisibility, e.data.userMuted) } });
     },
     EMBEDDED_APP_SHIM_STATE_UPDATE: function (e) {
         let { iframeId: t, state: n } = e;
-        return T(t, (e) => ({ ...e, audible: n.audible }));
+        return g(t, (e) => ({ ...e, audible: n.audible }));
     },
     EMBEDDED_APP_SHIM_DISCONNECT: function (e) {
         let { iframeId: t } = e;
-        return T(t, (e) => ({ ...e, ...E }));
+        return g(t, (e) => ({ ...e, ...E }));
     },
     FRAME_IFRAME_MOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;

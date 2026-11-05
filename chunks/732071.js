@@ -119,5 +119,5 @@ class A extends l.A {
             null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3)));
     }
 }
-let h = new A();
-n.d(t, {}, { A: h, K: _ });
+let f = new A();
+n.d(t, {}, { A: f, K: _ });

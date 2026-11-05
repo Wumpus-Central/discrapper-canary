@@ -33,8 +33,8 @@ function s(e) {
                     _ = a(e, d),
                     E = [],
                     A = new Map(),
-                    h = [],
-                    f = [];
+                    f = [],
+                    h = [];
                 return (
                     _.forEach((e, n) => {
                         let i = t(e.section.clip),
@@ -49,7 +49,7 @@ function s(e) {
                                 dst_end_ms: e.dstEnd,
                                 transform: u,
                             };
-                        (e.blendIn > 0 && (s.transition_in = { kind: "blend", duration_ms: e.blendIn }), h.push(s));
+                        (e.blendIn > 0 && (s.transition_in = { kind: "blend", duration_ms: e.blendIn }), f.push(s));
                         let l = {
                             input: r,
                             src_start_ms: e.srcStart,
@@ -58,14 +58,14 @@ function s(e) {
                             dst_end_ms: e.dstEnd,
                             volume: 1,
                         };
-                        (e.blendIn > 0 && (l.fade_in_ms = e.blendIn), a > 0 && (l.fade_out_ms = a), f.push(l));
+                        (e.blendIn > 0 && (l.fade_in_ms = e.blendIn), a > 0 && (l.fade_out_ms = a), h.push(l));
                     }),
                     {
                         version: 1,
                         output: { width: r, height: l, fps: o, duration_ms: s(_) },
                         inputs: E,
-                        video_tracks: [{ clips: h }],
-                        audio_tracks: [{ label: c, clips: f }],
+                        video_tracks: [{ clips: f }],
+                        audio_tracks: [{ label: c, clips: h }],
                     }
                 );
             },

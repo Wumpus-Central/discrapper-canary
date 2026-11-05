@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -12,8 +12,8 @@ var r = n(192308),
     _ = n(722178),
     E = n(620632),
     A = n(781300),
-    h = n(295405),
-    f = n(652215),
+    f = n(295405),
+    h = n(652215),
     I = n(869968),
     p = n(739053);
 class m extends s.A {
@@ -72,9 +72,9 @@ class m extends s.A {
             (await (async function () {
                 try {
                     a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH" });
-                    let { body: e } = await E.Bo.get({ url: f.Rsh.CHECKOUT_RECOVERY, rejectWithError: !0 }),
+                    let { body: e } = await E.Bo.get({ url: h.Rsh.CHECKOUT_RECOVERY, rejectWithError: !0 }),
                         t = e?.is_eligible === !0;
-                    (t && !h.A.hasFetchedPaymentSources && (await (0, A.$o)()),
+                    (t && !f.A.hasFetchedPaymentSources && (await (0, A.$o)()),
                         a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS", isTargeted: t }));
                 } catch (e) {
                     a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE" });
@@ -128,4 +128,4 @@ class m extends s.A {
         });
     }
 }
-let g = new m();
+let T = new m();

@@ -67,16 +67,16 @@ n.d(
                     };
                 })(),
                 _ = i.useMemo(() => (u.length > 0 ? u : l), [u, l]),
-                h = i.useMemo(() => a.paymentSourceId !== n || !a.loaded || null == d || !c, [a, n, d, c]),
-                f = a.currency,
-                I = i.useMemo(() => (null != f ? f : null != s ? s : _.length > 0 ? _[0] : void 0), [f, s, _]);
+                f = i.useMemo(() => a.paymentSourceId !== n || !a.loaded || null == d || !c, [a, n, d, c]),
+                h = a.currency,
+                I = i.useMemo(() => (null != h ? h : null != s ? s : _.length > 0 ? _[0] : void 0), [h, s, _]);
             return {
                 checkoutPriceOptions: a,
                 dropdownCurrencies: _,
                 displayCurrency: I,
                 setCheckoutCurrency: r,
                 subscriptionPlanIdForCurrency: d,
-                subscriptionPriceOptionsLoading: h,
+                subscriptionPriceOptionsLoading: f,
                 hasFetchedRelatedSubscriptionPlans: c,
             };
         },

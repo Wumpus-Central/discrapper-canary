@@ -10,8 +10,8 @@ var i,
     _ = n(71393),
     E = n(392054),
     A = n(168186),
-    h = n(240591),
-    f = n(73510),
+    f = n(240591),
+    h = n(73510),
     I = n(652215),
     p =
         (((i = {})[(i.ALLOWED = 0)] = "ALLOWED"),
@@ -32,7 +32,7 @@ function m(e, t, n) {
     let a = e[(0, c.Eu)((0, A.Ap)(n), E.RA.CHANNEL)];
     return null != a ? a.permission : null;
 }
-function g(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     if (null == e) return null;
     if (!r) {
         let t = e[(0, c.Eu)(n, E.RA.USER)];
@@ -56,14 +56,14 @@ n.d(
     {
         CA: p,
         _W: m,
-        we: g,
+        we: T,
         zl: function (e, t, n) {
             let {
                     context: i,
                     commandTypes: r,
                     allowNsfw: c,
                     computedPermissions: p,
-                    userId: T,
+                    userId: g,
                     roleIds: S,
                     isImpersonating: N,
                     hasBaseAccessPermissions: C,
@@ -78,7 +78,7 @@ n.d(
                 } = n;
             if (!r.includes(e.type)) return 2;
             if ((e.nsfw || (0, d.A)(e.applicationId)) && !c) return 1;
-            let v = null != i ? (0, h.ud)(i, b) : void 0;
+            let v = null != i ? (0, f.ud)(i, b) : void 0;
             if (null != e.contexts) {
                 if (null != v && !e.contexts.includes(v)) return 4;
             } else if (
@@ -90,8 +90,8 @@ n.d(
                 let t = _.A.getGuild(i.guild_id);
                 if (!e.predicate({ channel: i, guild: t })) return 3;
             }
-            if (e.applicationId === f.Ik.BUILT_IN) return 0;
-            let P = null != i ? (0, h.wz)(i) : void 0;
+            if (e.applicationId === h.Ik.BUILT_IN) return 0;
+            let P = null != i ? (0, f.wz)(i) : void 0;
             if (null == P || l.zy(p, I.xBc.ADMINISTRATOR) || (D && e.integration_types?.includes(s.b.USER_INSTALL)))
                 return 0;
             if ((!C || !O) && y && (null == e.integration_types || e.integration_types.includes(s.b.GUILD_INSTALL)))
@@ -101,7 +101,7 @@ n.d(
                 let t = m(e.permissions, i, P);
                 if (!1 === t || (!0 !== t && !1 === L)) return 6;
             }
-            let M = g(e.permissions, P, T, S, N);
+            let M = T(e.permissions, P, g, S, N);
             if (!0 === M) return 0;
             if (!1 === M) return 7;
             if (!1 === R) return 7;

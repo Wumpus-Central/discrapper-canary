@@ -1,7 +1,7 @@
 t.d(e, { A: () => m });
-var o = t(477900),
-    i = t(582128),
-    l = t(717421),
+var l = t(477900),
+    o = t(582128),
+    i = t(717421),
     r = t(503698),
     a = t.n(r),
     s = t(120692),
@@ -24,19 +24,19 @@ let h = { duration: 250 },
                 onMouseEnter: P,
                 onMouseLeave: C,
             } = n,
-            { label: k, targetSec: b, leftPx: E, rightPx: M, index: _ } = r,
-            [j, w] = i.useState(!1),
-            S = E - 4,
-            y = e >= S ? Math.min(1, (e - S) / (M - S)) : 0,
-            B = 0 === _ && !v,
-            { fill: K } = (0, l.z)({
+            { label: k, targetSec: b, leftPx: E, rightPx: M, index: S } = r,
+            [_, j] = o.useState(!1),
+            w = E - 4,
+            y = e >= w ? Math.min(1, (e - w) / (M - w)) : 0,
+            B = 0 === S && !v,
+            { fill: K } = (0, i.z)({
                 fill: 100 * y,
                 config: h,
                 onRest: () => {
-                    y <= 0 && w(!1);
+                    y <= 0 && j(!1);
                 },
                 onStart: () => {
-                    w(!0);
+                    j(!0);
                 },
             });
         function A(n) {
@@ -48,8 +48,8 @@ let h = { duration: 250 },
                       (n.stopPropagation(), g());
                   }
                 : void 0;
-        return (0, o.jsxs)(s.animated.div, {
-            className: a()(x.ck, { [x.a]: B && j, [x.C9]: !B && j }),
+        return (0, l.jsxs)(s.animated.div, {
+            className: a()(x.ck, { [x.a]: B && _, [x.C9]: !B && _ }),
             style: {
                 left: p ? f.to((n) => E - n) : E,
                 "--custom-indicator-size": p ? f.to((n) => `${26 + 2 * n}px`) : "26px",
@@ -58,7 +58,7 @@ let h = { duration: 250 },
             },
             onMouseDown: A,
             children: [
-                (0, o.jsx)(u.D, {
+                (0, l.jsx)(u.D, {
                     className: x.E6,
                     "data-testid": "ad-video-reward-indicator",
                     onClick: R,
@@ -67,21 +67,21 @@ let h = { duration: 250 },
                     onMouseLeave: C,
                     children: m,
                 }),
-                (0, o.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: x.Ru,
                     role: "tooltip",
                     "aria-label": null != k ? `${(0, c.rB)(b)} - ${k}` : (0, c.rB)(b),
                     children: [
-                        (0, o.jsx)(d.E, {
+                        (0, l.jsx)(d.E, {
                             variant: "body-xs/normal",
                             color: "text-overlay-light",
                             children: (0, c.rB)(b),
                         }),
                         null != k &&
-                            (0, o.jsxs)(o.Fragment, {
+                            (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, o.jsx)("span", { className: x.AE, "aria-hidden": "true" }),
-                                    (0, o.jsx)(d.E, {
+                                    (0, l.jsx)("span", { className: x.AE, "aria-hidden": "true" }),
+                                    (0, l.jsx)(d.E, {
                                         variant: "body-xs/normal",
                                         color: "text-overlay-light",
                                         children: k,
@@ -96,29 +96,29 @@ let h = { duration: 250 },
     v = { tension: 500, friction: 30, clamp: !0 };
 function m(n) {
     let { targetSec: e, label: t, isCompleted: r, icon: a, clickable: s = !1 } = n,
-        [u, d] = i.useState(null),
-        c = i.useRef(null),
-        [{ expansion: x }, h] = (0, l.z)(() => ({
+        [u, d] = o.useState(null),
+        c = o.useRef(null),
+        [{ expansion: x }, h] = (0, i.z)(() => ({
             expansion: 0,
             config: v,
             onRest: () => {
                 null == c.current && d(null);
             },
         })),
-        m = i.useCallback(
+        m = o.useCallback(
             (n) => {
                 ((c.current = n), null != n ? (d(n), h({ expansion: 4 })) : h({ expansion: 0 }));
             },
             [h],
         ),
-        f = i.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4, align: "end", clickable: s }], [e, s]),
-        g = i.useCallback(
-            (n, i, l, s) => {
+        f = o.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4, align: "end", clickable: s }], [e, s]),
+        g = o.useCallback(
+            (n, o, i, s) => {
                 let d = { leftPx: n.leftPx, rightPx: n.rightPx, targetSec: e, index: n.index, label: t };
-                return (0, o.jsx)(
+                return (0, l.jsx)(
                     p,
                     {
-                        currentPx: i,
+                        currentPx: o,
                         trackBackground: s,
                         indicator: d,
                         isAnimated: u === n.index,
@@ -127,7 +127,7 @@ function m(n) {
                         expansionSpring: x,
                         onMouseEnter: () => m(n.index),
                         onMouseLeave: () => m(null),
-                        onClick: l,
+                        onClick: i,
                     },
                     `indicator-${n.index}`,
                 );

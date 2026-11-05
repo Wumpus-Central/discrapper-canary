@@ -15,8 +15,8 @@ var l = n(582128),
     g = n(186306),
     x = n(35277),
     E = n(339200),
-    y = n(407315);
-let S = new Set(["line", "blockQuote"]);
+    S = n(407315);
+let y = new Set(["line", "blockQuote"]);
 var C = n(155718);
 let A = ["applicationCommand"],
     b = ["gameMentionInput", "timestampMentionInput"];
@@ -397,9 +397,9 @@ function D(e) {
                                         let t = !1;
                                         for (let n of E.VW.blocks(e)) {
                                             let [l, i] = n;
-                                            if (!S.has(l.type)) continue;
+                                            if (!y.has(l.type)) continue;
                                             let r = { path: E.PW.child(i, 0), offset: 0 };
-                                            if ((0, y.W)(e, r)) {
+                                            if ((0, S.W)(e, r)) {
                                                 "blockQuote" === l.type &&
                                                     (x.b.setNodes(e, { type: "line" }, { at: i }),
                                                     x.b.insertText(e, "> ", { at: r }));
@@ -435,7 +435,7 @@ function D(e) {
                     e
                 );
             })(m)),
-        l.markdown?.disableCodeBlocks || (m = (0, y.Ay)(m)),
+        l.markdown?.disableCodeBlocks || (m = (0, S.Ay)(m)),
         u &&
             (m = (function (e) {
                 let { isInline: t, isVoid: n } = e;

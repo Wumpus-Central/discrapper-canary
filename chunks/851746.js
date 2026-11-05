@@ -11,13 +11,13 @@ let d = null,
     _ = !1,
     E = new Set(),
     A = new Set(),
-    h = new Map(),
-    f = 0,
+    f = new Map(),
+    h = 0,
     I = null,
     p = new Set(),
     m = [],
-    g = [],
-    T = !1,
+    T = [],
+    g = !1,
     S = !1,
     N = null,
     C = null,
@@ -26,10 +26,10 @@ function R() {
     return !0;
 }
 function L() {
-    ((p = new Set()), (m = []), (g = []));
+    ((p = new Set()), (m = []), (T = []));
 }
 function y(e) {
-    (p.delete(e), (m = m.filter((t) => t !== e)), (g = g.filter((t) => t !== e)));
+    (p.delete(e), (m = m.filter((t) => t !== e)), (T = T.filter((t) => t !== e)));
 }
 function D(e) {
     let { messages: t } = e;
@@ -46,7 +46,7 @@ class v extends r.Ay.Store {
         (this.waitFor(s.default), this.syncWith([s.default], R));
     }
     checkAndFetchReferralsRemaining() {
-        null == d && !_ && f < 6 && (null == I || I < Date.now()) && (0, l.xM)();
+        null == d && !_ && h < 6 && (null == I || I < Date.now()) && (0, l.xM)();
     }
     getReferralsRemaining() {
         let { bypassFetch: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -59,7 +59,7 @@ class v extends r.Ay.Store {
         return _;
     }
     getRelevantUserTrialOffer(e) {
-        return h.get(e);
+        return f.get(e);
     }
     isResolving(e) {
         return E.has(e);
@@ -71,10 +71,10 @@ class v extends r.Ay.Store {
         return m.includes(e);
     }
     hasFetchedUserEligibility(e) {
-        return g.includes(e);
+        return T.includes(e);
     }
     getIsEligibleToSendReferrals() {
-        return T;
+        return g;
     }
     getHasEligibleFriends() {
         return S;
@@ -83,7 +83,7 @@ class v extends r.Ay.Store {
         return N;
     }
     getAllRelevantReferralTrialOffers() {
-        return Array.from(h.values());
+        return Array.from(f.values());
     }
     getRecipientStatus() {
         return u;
@@ -114,7 +114,7 @@ let P = new v(a.h, {
             reminder_state_id: s,
             recurring_reminder_state_id: l,
         } = e;
-        ((T = !0),
+        ((g = !0),
             (S = a),
             (_ = !1),
             (d = t),
@@ -124,20 +124,20 @@ let P = new v(a.h, {
             (C = s),
             (O = l),
             0 === d && L(),
-            (f = 0),
+            (h = 0),
             (I = null));
     },
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
         let {} = e;
-        ((T = !1), (S = !1), (N = null), (_ = !1));
-        let t = (f += 1) <= 3 ? 1e3 * Math.pow(2, f) : 8e3 * Math.pow(4, f - 3);
+        ((g = !1), (S = !1), (N = null), (_ = !1));
+        let t = (h += 1) <= 3 ? 1e3 * Math.pow(2, h) : 8e3 * Math.pow(4, h - 3);
         I = Date.now() + Math.min(3e5, t);
     },
     BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
         let { userTrialOffer: t } = e,
             n = c.has(t.userId);
         ((0, l.xM)(),
-            h.set(t.id, t),
+            f.set(t.id, t),
             c.add(t.userId),
             y(t.userId),
             n || null == d || (0 === (d = Math.max(0, d - 1)) && L()));
@@ -145,12 +145,12 @@ let P = new v(a.h, {
     CREATE_REFERRALS_SUCCESS: function (e) {
         let { userTrialOffers: t } = e,
             n = new Set(t.filter((e) => !c.has(e.userId)).map((e) => e.userId));
-        for (let e of ((0, l.xM)(), t)) (h.set(e.id, e), c.add(e.userId), y(e.userId));
+        for (let e of ((0, l.xM)(), t)) (f.set(e.id, e), c.add(e.userId), y(e.userId));
         null != d && 0 === (d = Math.max(0, d - n.size)) && L();
     },
     BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        null != t && (E.delete(t.id), A.add(t.id), h.set(t.id, t));
+        null != t && (E.delete(t.id), A.add(t.id), f.set(t.id, t));
     },
     BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
         let { userTrialOfferId: t } = e;
@@ -163,7 +163,7 @@ let P = new v(a.h, {
     REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_SUCCESS: function (e) {
         let { recipientIds: t, eligibleRecipientIds: n } = e,
             i = new Set(n);
-        for (let e of t) (g.includes(e) || g.push(e), i.has(e) && !c.has(e) && 0 !== d && p.add(e));
+        for (let e of t) (T.includes(e) || T.push(e), i.has(e) && !c.has(e) && 0 !== d && p.add(e));
         m = m.filter((e) => !t.includes(e));
     },
     REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_FAILURE: function (e) {
@@ -173,7 +173,7 @@ let P = new v(a.h, {
     RELATIONSHIP_REMOVE: function (e) {
         let { relationship: t } = e,
             n = t.id;
-        return (!!p.has(n) || !!m.includes(n) || !!g.includes(n)) && (y(n), !0);
+        return (!!p.has(n) || !!m.includes(n) || !!T.includes(n)) && (y(n), !0);
     },
     LOAD_MESSAGES_SUCCESS: D,
     MESSAGE_CREATE: function (e) {
@@ -187,11 +187,11 @@ let P = new v(a.h, {
             (_ = !1),
             (E = new Set()),
             (A = new Set()),
-            (h = new Map()),
-            (f = 0),
+            (f = new Map()),
+            (h = 0),
             (I = null),
             L(),
-            (T = !1),
+            (g = !1),
             (S = !1),
             (N = null),
             (u = new Map()),

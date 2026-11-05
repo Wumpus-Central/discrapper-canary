@@ -17,7 +17,7 @@ var s = i(582128),
     N = i(818348),
     A = i(731854);
 let p = Object.freeze([]),
-    w = {
+    S = {
         ApplicationStreamingStore: a.A,
         MediaEngineStore: o.Ay,
         PresenceStore: u.A,
@@ -25,16 +25,16 @@ let p = Object.freeze([]),
         SelfPresenceStore: x.A,
         UserProfileStore: m.A,
     },
-    S = { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
-    b = { ...w, ...S },
-    y = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
-function C(e) {
+    w = { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
+    y = { ...S, ...w },
+    b = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
+function I(e) {
     let { userId: t, currentUserId: i, guildId: s } = e,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w,
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S,
         r = null != t ? n.PresenceStore.getActivities(t) : p,
         a = (function (e) {
             let { userId: t, currentUserId: i, guildId: s } = e,
-                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w;
+                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
             return null == t
                 ? N.cl.OFFLINE
                 : t === i
@@ -50,16 +50,16 @@ function C(e) {
             : null,
     };
 }
-function P(e) {
+function C(e) {
     let { userId: t, guildId: i } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S,
+        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w,
         n = (0, r.t$)({ userId: t, guildId: i }, s);
     return null == n.voiceChannel
-        ? y
+        ? b
         : {
               ...n,
               voiceActivity: (function (e, t) {
-                  let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S;
+                  let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w;
                   if (null != e && null != t)
                       return (
                           i.PresenceStore.findActivity(e, (s) =>
@@ -73,7 +73,7 @@ function P(e) {
               })(t, n.voiceChannel.id, s),
           };
 }
-function I(e, t) {
+function P(e, t) {
     let { activities: i, isOffline: s, isPrivate: n, stream: r } = e,
         { voiceActivity: l, voiceChannel: a, voiceState: c } = t,
         d = (0, f.U)(i);
@@ -98,7 +98,7 @@ i.d(
                 f = (0, n.cf)(
                     [a.A, o.Ay, u.A, j.A, x.A, m.A],
                     () =>
-                        C(
+                        I(
                             { userId: t, currentUserId: l, guildId: r },
                             {
                                 ApplicationStreamingStore: a.A,
@@ -114,20 +114,20 @@ i.d(
                 g = (0, n.cf)(
                     [d.A, h.A, u.A, v.A],
                     () =>
-                        P(
+                        C(
                             { userId: t, guildId: r },
                             { ChannelStore: d.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
                         ),
                     [r, t],
                 );
-            return s.useMemo(() => I(f, g), [f, g]);
+            return s.useMemo(() => P(f, g), [f, g]);
         },
         G: function (e) {
             let { userId: t, currentUserId: i, guildId: s } = e,
-                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
-            return I(
-                C({ userId: t, currentUserId: i ?? c.default.getId(), guildId: s }, n),
-                P({ userId: t, guildId: s }, n),
+                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
+            return P(
+                I({ userId: t, currentUserId: i ?? c.default.getId(), guildId: s }, n),
+                C({ userId: t, guildId: s }, n),
             );
         },
     },

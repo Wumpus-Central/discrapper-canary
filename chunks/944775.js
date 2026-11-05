@@ -26,10 +26,10 @@ let m = {
         backgroundColor: "#00000000",
         titleBarStyle: null,
     },
-    A = f.ed.padding,
-    y = m.width - A,
-    v = m.height - A;
-function w() {
+    y = f.ed.padding,
+    A = m.width - y,
+    v = m.height - y;
+function x() {
     (0, o.close)(g.MLl.SOUNDBOARD);
 }
 n.d(
@@ -49,14 +49,14 @@ n.d(
                         windowKey: n,
                         withTitleBar: !1,
                         title: p.intl.string(p.t["IiA///"]),
-                        onBlur: w,
+                        onBlur: x,
                         children: (0, r.jsx)(h.A, {
                             guildId: t,
                             channel: i,
-                            width: y,
+                            width: A,
                             height: v,
                             keepOpen: e,
-                            onClose: w,
+                            onClose: x,
                             analyticsSource: "global",
                         }),
                     }),
@@ -69,7 +69,7 @@ n.d(
                 n = d.default.disableClickableRegions;
             d.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
         },
-        cu: w,
+        cu: x,
         hK: function (e, t) {
             let n = l.A.isOverlayV3EnabledForPID(t),
                 r = d.default.disableClickableRegions;

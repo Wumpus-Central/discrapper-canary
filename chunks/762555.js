@@ -102,15 +102,15 @@ n.d(
                         emotion: { type: e.type === l.Gy.LAUGHTER ? 1 : 2 },
                     });
             A.sort((e, t) => e.timestamp_ms - t.timestamp_ms);
-            let h = A.slice(0, 1e3);
+            let f = A.slice(0, 1e3);
             return (
-                h.length !== A.length &&
+                f.length !== A.length &&
                     a.default.track(o.HAw.CLIP_TIMELINE_TRIMMED, {
                         clip_uuid: e.id,
                         clip_event_timeline_size: A.length,
                         clip_runtime: "v3",
                     }),
-                h.length > 0 ? h : void 0
+                f.length > 0 ? f : void 0
             );
         },
     },

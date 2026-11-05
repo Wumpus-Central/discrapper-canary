@@ -1,21 +1,21 @@
-var r = n(582128),
-    l = n(935399),
-    a = n(942370);
-n.d(
+var n = l(582128),
+    r = l(935399),
+    a = l(942370);
+l.d(
     t,
     {},
     {
         W: function (e) {
             let { onSetIgnoreCloseRequest: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                [n, s] = r.useState(!1),
-                i = r.useRef(new Set()),
-                o = r.useCallback(() => {
+                [l, s] = n.useState(!1),
+                i = n.useRef(new Set()),
+                o = n.useCallback(() => {
                     (i.current.forEach(clearTimeout), i.current.clear());
                 }, []),
-                c = r.useCallback(
+                c = n.useCallback(
                     function () {
-                        for (var n = arguments.length, r = Array(n), l = 0; l < n; l++) r[l] = arguments[l];
-                        let c = e(...r),
+                        for (var l = arguments.length, n = Array(l), r = 0; r < l; r++) n[r] = arguments[r];
+                        let c = e(...n),
                             d = c === a._.RPC;
                         return (
                             o(),
@@ -30,10 +30,10 @@ n.d(
                     [o, t, e],
                 );
             return (
-                (0, l.l0)(() => {
+                (0, r.l0)(() => {
                     (t?.({ shouldIgnoreCloseRequest: !1 }), o());
                 }),
-                { startAuthorization: c, shouldShowGoToGameHint: n }
+                { startAuthorization: c, shouldShowGoToGameHint: l }
             );
         },
     },

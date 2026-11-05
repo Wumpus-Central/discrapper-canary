@@ -4,13 +4,13 @@ var i = n(477900),
     s = n(793574),
     r = n(139286),
     o = n(480890),
-    d = n(326567),
-    c = n(46653),
+    c = n(326567),
+    d = n(46653),
     u = n(734057),
     h = n(287809),
     p = n(806931);
 function m(e, t, n) {
-    let i = c.default.getId();
+    let i = d.default.getId();
     (0, r.x)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.CALL_TILE_CONTEXT_MENU,
@@ -26,7 +26,7 @@ n.d(
                     participant: t,
                     event: l,
                     minimalContextMenu: r,
-                    entrypoint: c,
+                    entrypoint: d,
                     channelId: A,
                     appContext: f,
                     location: g,
@@ -55,7 +55,7 @@ n.d(
                                             minimal: r,
                                             onInteraction: () =>
                                                 (0, o.s)("StreamContextMenu", s.A.GUILD_ROOM, {
-                                                    entrypoint: c,
+                                                    entrypoint: d,
                                                     tileType: p.qs.STREAM,
                                                     targetUserId: t.user.id,
                                                 }),
@@ -68,11 +68,11 @@ n.d(
                         let C = h.default.getUser(t.id);
                         if (null == C) return;
                         if ((m(t, p.qs.USER, g), r))
-                            return (0, d.r)(l, t.user, x, { context: f }, (e, n) =>
+                            return (0, c.r)(l, t.user, x, { context: f }, (e, n) =>
                                 (0, o.Y)({
                                     menuItemProps: n,
                                     menuName: e,
-                                    entrypoint: c ?? p.GK.THREE_DOT,
+                                    entrypoint: d ?? p.GK.THREE_DOT,
                                     tileType: p.qs.USER,
                                     targetUserId: t.user.id,
                                     location: s.A.GUILD_ROOM,
@@ -119,7 +119,7 @@ n.d(
                                         showModalItems: !0,
                                         onInteraction: () =>
                                             (0, o.s)("GuildChannelUserContextMenu", s.A.GUILD_ROOM, {
-                                                entrypoint: c,
+                                                entrypoint: d,
                                                 tileType: p.qs.USER,
                                                 targetUserId: t.user.id,
                                             }),

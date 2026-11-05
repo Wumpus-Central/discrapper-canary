@@ -11,13 +11,13 @@ var i = n(448761),
     _ = n(233993),
     E = n(73153),
     A = n(811091),
-    h = n(652215);
-class f extends a.A {
+    f = n(652215);
+class h extends a.A {
     actions = { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates };
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
-            let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: f } = e;
+            let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: h } = e;
             if (
                 c.Ay.getVoiceChannelId() === t &&
                 a &&
@@ -25,7 +25,7 @@ class f extends a.A {
                 n !== s.default.getId() &&
                 d.A.can(_.QY, l.A.getChannel(t))
             )
-                if (null != f) {
+                if (null != h) {
                     let e = u.default.getUser(n);
                     null != e &&
                         E.h.dispatch({
@@ -35,8 +35,8 @@ class f extends a.A {
                                 let { channelId: t, requesterUser: n, requestToSpeakTimestamp: i } = e;
                                 return {
                                     id: A.default.fromTimestamp(Date.parse(i)),
-                                    type: h.lAJ.STAGE_RAISE_HAND,
-                                    flags: h.pr7.EPHEMERAL,
+                                    type: f.lAJ.STAGE_RAISE_HAND,
+                                    flags: f.pr7.EPHEMERAL,
                                     content: "",
                                     channel_id: t,
                                     author: n,
@@ -48,21 +48,21 @@ class f extends a.A {
                                     mention_roles: [],
                                     mention_everyone: !1,
                                     timestamp: i,
-                                    state: h.cmJ.SENT,
+                                    state: f.cmJ.SENT,
                                     tts: !1,
                                 };
-                            })({ channelId: t, requesterUser: e, requestToSpeakTimestamp: f }),
+                            })({ channelId: t, requesterUser: e, requestToSpeakTimestamp: h }),
                             optimistic: !1,
                             sendMessageOptions: {},
                             isPushNotification: !1,
                         });
                 } else {
                     let e = o.A.getMessages(t).findNewest(
-                        (e) => e.type === i.l.STAGE_RAISE_HAND && e.hasFlag(h.pr7.EPHEMERAL) && e.author.id === n,
+                        (e) => e.type === i.l.STAGE_RAISE_HAND && e.hasFlag(f.pr7.EPHEMERAL) && e.author.id === n,
                     );
                     null != e && r.A.deleteMessage(t, e.id, !0);
                 }
         });
     }
 }
-let I = new f();
+let I = new h();

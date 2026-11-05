@@ -4,8 +4,8 @@ var i = n(73153),
     s = n(262763),
     r = n(652896),
     o = n(499211),
-    d = n(616356),
-    c = n(734057),
+    c = n(616356),
+    d = n(734057),
     u = n(977997),
     h = n(303227),
     p = n(652215);
@@ -15,7 +15,7 @@ n.d(
     {
         k: async function (e) {
             let { channelId: t } = e,
-                n = c.A.getChannel(t);
+                n = d.A.getChannel(t);
             if (null == n) return;
             if (!u.A.isInChannel(t)) {
                 if (
@@ -32,7 +32,7 @@ n.d(
                     });
                 });
             }
-            let m = d.A.getActiveStreamForApplicationStream(e);
+            let m = c.A.getActiveStreamForApplicationStream(e);
             if (null != m && m.state !== p.XYD.ENDED && m.ownerId === e.ownerId) {
                 (l.A.selectParticipant(e.channelId, (0, r._z)(e)), (0, h.UV)(!0, e.channelId));
                 return;

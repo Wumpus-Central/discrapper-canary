@@ -10,18 +10,18 @@ var i = n(855986),
     _ = n(652215);
 let E = null,
     A = null,
-    h = {};
-function f() {
+    f = {};
+function h() {
     (null != E && E !== _.qxG && null == u.A.getGuild(E) && null == a.A.getRequest(E) && (E = null),
         null != A && A !== _.qxG && null == u.A.getGuild(A) && null == a.A.getRequest(A) && (A = null),
         I(E));
 }
 function I(e) {
-    null != e && (h[e] = Date.now());
+    null != e && (f[e] = Date.now());
 }
 function p(e) {
     let t = !1;
-    return (delete h[e], A === e && ((A = null), (t = !0)), E === e && ((E = null), (0, o.bG)(_.BVt.ME), (t = !0)), t);
+    return (delete f[e], A === e && ((A = null), (t = !0)), E === e && ((E = null), (0, o.bG)(_.BVt.ME), (t = !0)), t);
 }
 class m extends i.Ay.PersistedStore {
     static displayName = "SelectedGuildStore";
@@ -29,7 +29,7 @@ class m extends i.Ay.PersistedStore {
     initialize(e) {
         (this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
             this.waitFor(d.default, c.A, u.A, a.A),
-            (h = e?.selectedGuildTimestampMillis ?? {}),
+            (f = e?.selectedGuildTimestampMillis ?? {}),
             (E = e?.selectedGuildId ?? null),
             (A = e?.lastSelectedGuildId ?? null));
         let t = c.A.lastNonVoiceRoute,
@@ -37,7 +37,7 @@ class m extends i.Ay.PersistedStore {
         (n?.params?.guildId, _.ME);
     }
     getState() {
-        return { selectedGuildTimestampMillis: h, selectedGuildId: E, lastSelectedGuildId: A };
+        return { selectedGuildTimestampMillis: f, selectedGuildId: E, lastSelectedGuildId: A };
     }
     getGuildId() {
         return E;
@@ -46,13 +46,13 @@ class m extends i.Ay.PersistedStore {
         return A;
     }
     getLastSelectedTimestamp(e) {
-        return E === e ? -1 : h[e];
+        return E === e ? -1 : f[e];
     }
 }
-let g = new m(r.h, {
-    CONNECTION_OPEN: f,
+let T = new m(r.h, {
+    CONNECTION_OPEN: h,
     OVERLAY_INITIALIZE: function (e) {
-        ((E = e.selectedGuildId), (A = void 0), f());
+        ((E = e.selectedGuildId), (A = void 0), h());
     },
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
@@ -73,4 +73,4 @@ let g = new m(r.h, {
         ((E = null), (A = null));
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

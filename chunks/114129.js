@@ -15,11 +15,11 @@ function A(e, t) {
     (null != i && i.isGuildVocal() && a.A.updateChatOpen(e, !n),
         null != t ? (0, s.pX)(_.BVt.CHANNEL(t, e), { openChannel: !0 }) : (0, l.iN)(e));
 }
-function h(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     "route" === e.kind ? (0, s.pX)(e.routePath) : A(e.channelId, e.guildId, t);
 }
-function f(e, t) {
+function h(e, t) {
     let n = d.Ay.getCurrentlySelectedChannelId();
     0 === u.A.getTabs().length && (null == n || (0, E.jq)(n))
         ? A(e, t)
@@ -61,7 +61,7 @@ function m(e) {
                 : t && o.A.getChannel(n.channelId)?.isGuildVocal() === !0 && a.A.updateChatOpen(n.channelId, !1);
             return;
         }
-        (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: e }), h(n, t));
+        (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: e }), f(n, t));
     }
 }
 n.d(
@@ -77,7 +77,7 @@ n.d(
                 ? A(e, t)
                 : r.h.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: e, guildId: t });
         },
-        D5: f,
+        D5: h,
         JC: function () {
             let e = u.A.getActiveTab();
             if (null != e && "route" === e.kind) {
@@ -92,7 +92,7 @@ n.d(
                 return;
             }
             let t = e?.channelId ?? d.Ay.getCurrentlySelectedChannelId();
-            null == t || f(t, e?.guildId ?? c.A.getGuildId() ?? null);
+            null == t || h(t, e?.guildId ?? c.A.getGuildId() ?? null);
         },
         RL: function (e, t) {
             r.h.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId: e, pinned: t });
@@ -117,7 +117,7 @@ n.d(
             let t = u.A.getActiveTabId() === e;
             if ((r.h.dispatch({ type: "CHANNEL_TABS_CLOSE", tabId: e }), !t)) return;
             let n = u.A.getActiveTab();
-            null != n && h(n);
+            null != n && f(n);
         },
         lj: function (e) {
             r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });

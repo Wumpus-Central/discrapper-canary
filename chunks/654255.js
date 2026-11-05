@@ -5,8 +5,8 @@ var s = t(477900),
     a = t(866665),
     r = t(442433),
     o = t(442247),
-    d = t(60465),
-    c = t(409626),
+    c = t(60465),
+    d = t(409626),
     u = t(106191),
     m = t(332173),
     h = t(936755),
@@ -40,7 +40,7 @@ function N(e) {
     let n = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
     return n?.closest(`[${g}]`) ?? null;
 }
-function f(e) {
+function I(e) {
     let n;
     if (null == e.clipboardData) return;
     let t = window.getSelection();
@@ -105,19 +105,19 @@ function f(e) {
             ));
     }
 }
-var I = t(792996),
+var f = t(792996),
     v = t(379961);
 let C = function (e) {
     let { gameId: n, authorId: x, onKeyDown: g } = e,
         p = (0, o.K)(n),
         b = null != p,
-        N = p?.gameName ?? I.intl.string(I.t["11pdXZ"]),
+        N = p?.gameName ?? f.intl.string(f.t["11pdXZ"]),
         C = p?.gameIcon;
     i.useEffect(
         () => (
-            1 === (j += 1) && document.addEventListener("copy", f),
+            1 === (j += 1) && document.addEventListener("copy", I),
             () => {
-                0 == (j -= 1) && document.removeEventListener("copy", f);
+                0 == (j -= 1) && document.removeEventListener("copy", I);
             }
         ),
         [],
@@ -158,30 +158,30 @@ let C = function (e) {
                 return (n) => (0, s.jsx)(e, { ...n });
             });
         }, []),
-        y = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), b)
-                    ? d.default.openGameProfileModal({
+                    ? c.default.openGameProfileModal({
                           gameId: n,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: n },
-                          source: c.GameProfileSources.GameMention,
+                          source: d.GameProfileSources.GameMention,
                           sourceUserId: x,
                       })
                     : E();
             },
             [n, b, E, x],
         ),
-        S = b ? `@game ${N}` : void 0;
+        y = b ? `@game ${N}` : void 0;
     return (0, s.jsx)(a.m, {
         asContainer: !0,
         tag: "span",
-        text: S,
-        "aria-label": S,
+        text: y,
+        "aria-label": y,
         delay: 750,
         children: (0, s.jsxs)(m.A, {
             "data-mention-game-id": n,
             onContextMenu: A,
-            onClick: y,
+            onClick: S,
             onKeyDown: g,
             children: [
                 (0, s.jsx)(h.A, {

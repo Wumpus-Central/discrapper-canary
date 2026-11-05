@@ -26,7 +26,7 @@ n.d(
         lG: function (e, t, n, i, a) {
             let s = t.reduce((t, s) => {
                     var d;
-                    let u, E, A, h, f, I;
+                    let u, E, A, f, h, I;
                     return (
                         _(a, i?.id),
                         (t[s.soundId] =
@@ -34,11 +34,11 @@ n.d(
                             (u = 0),
                             (E = s.name.toLocaleLowerCase()),
                             (A = null != s.emojiId ? l.Ay.getCustomEmojiById(s.emojiId) : null),
-                            (f =
-                                null != (h = null != s.emojiName ? o.Ay.convertSurrogateToName(s.emojiName, !1) : null)
-                                    ? o.Ay.getByName(h)
+                            (h =
+                                null != (f = null != s.emojiName ? o.Ay.convertSurrogateToName(s.emojiName, !1) : null)
+                                    ? o.Ay.getByName(f)
                                     : null),
-                            (I = null != A ? [A.name] : (f?.names ?? [])),
+                            (I = null != A ? [A.name] : (h?.names ?? [])),
                             d === E && (u += 8),
                             I.includes(d) && (u += 7),
                             E.startsWith(d) && (u += 6),

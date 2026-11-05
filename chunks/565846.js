@@ -3,8 +3,8 @@ t(582128);
 var r = t(855986),
     l = t(477782),
     a = t(442433),
-    d = t(565645),
-    o = t(121681),
+    o = t(565645),
+    d = t(121681),
     s = t(919577),
     u = t(691060),
     c = t(406704),
@@ -24,13 +24,13 @@ t.d(
                 p = (0, u.kt)(e),
                 j = p.length >= 5,
                 f = (0, c.Id)(e),
-                _ = (0, r.bG)(
-                    [o.Ay],
+                I = (0, r.bG)(
+                    [d.Ay],
                     () => {
                         let n = new Set();
                         for (let e of b ?? [])
                             if (null != e.emojiId) {
-                                let t = o.Ay.getUsableCustomEmojiById(e.emojiId);
+                                let t = d.Ay.getUsableCustomEmojiById(e.emojiId);
                                 t?.animated && n.add(e.emojiId);
                             }
                         return n;
@@ -40,7 +40,7 @@ t.d(
             if (null == e) return ((0, a.Z_)(), null);
             if (!t || __OVERLAY__ || !e.isForumPost() || b?.length === 0 || !f || e.isModeratorReportChannel())
                 return null;
-            let I = b?.map((n) => {
+            let _ = b?.map((n) => {
                 let t = p.includes(n),
                     r = null != n.emojiId || null != n.emojiName;
                 return (0, i.jsx)(
@@ -49,10 +49,10 @@ t.d(
                         id: n.id,
                         label: n.name,
                         leftIcon: r
-                            ? (0, i.jsx)(d.A, {
+                            ? (0, i.jsx)(o.A, {
                                   emojiId: n.emojiId,
                                   emojiName: n.emojiName,
-                                  animated: null != n.emojiId && _.has(n.emojiId),
+                                  animated: null != n.emojiId && I.has(n.emojiId),
                               })
                             : void 0,
                         leadingAccessory: (function (n, e) {
@@ -64,7 +64,7 @@ t.d(
                                     src: null == t && null != i ? m.Ay.getURL(i) : void 0,
                                     animated: null != t && e.has(t),
                                 };
-                        })(n, _),
+                        })(n, I),
                         disabled: j && !t,
                         action: () =>
                             (function (n) {
@@ -83,7 +83,7 @@ t.d(
                     n.id,
                 );
             });
-            return (0, i.jsx)(l.Dr, { id: "edit-tags", label: A.intl.string(A.t["436ZFw"]), children: I });
+            return (0, i.jsx)(l.Dr, { id: "edit-tags", label: A.intl.string(A.t["436ZFw"]), children: _ });
         },
     },
 );

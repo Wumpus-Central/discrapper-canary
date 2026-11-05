@@ -1,4 +1,4 @@
-(n.d(t, { A: () => tf, m: () => td }), n(323874), n(14289), n(35956), n(321073), n(142703));
+(n.d(t, { A: () => th, m: () => td }), n(323874), n(14289), n(35956), n(321073), n(142703));
 var i,
     r,
     a,
@@ -11,13 +11,13 @@ var i,
     _ = n(731738),
     E = n(70298),
     A = n(855986),
-    h = n(620632),
-    f = n(73153),
+    f = n(620632),
+    h = n(73153),
     I = n(766034),
     p = n(958824),
     m = n(214771),
-    g = n(937724),
-    T = n(626584),
+    T = n(937724),
+    g = n(626584),
     S = n(913379),
     N = n(935564),
     C = n(111162),
@@ -143,7 +143,7 @@ class x {
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new T.A("GatewayCompressionHandler").error(
+                    return void new g.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -254,8 +254,8 @@ let B = BigInt(0),
     X = BigInt(0x1000000),
     z = BigInt(0x80000000),
     q = BigInt(0x100000000),
-    Z = BigInt(0x10000000000),
-    Q = BigInt(0x1000000000000),
+    Q = BigInt(0x10000000000),
+    Z = BigInt(0x1000000000000),
     J = BigInt("72057594037927936"),
     ee = BigInt("18446744073709551615"),
     et = BigInt("18446744073709551616"),
@@ -514,8 +514,8 @@ let el = new (class {
                                         : r < X
                                           ? 5
                                           : 4
-                                    : r < Q
-                                      ? r < Z
+                                    : r < Z
+                                      ? r < Q
                                           ? 3
                                           : 2
                                       : +(r < J));
@@ -1023,7 +1023,7 @@ let el = new (class {
                         } catch (n) {
                             throw (
                                 D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                new T.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                     erlpackUnpackError: n,
                                     erlpackDataPreview: null != e ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: t.length,
@@ -1063,7 +1063,7 @@ let e_ = eu;
 n(423034);
 var eE = n(287809),
     eA = n(652215);
-function eh(e) {
+function ef(e) {
     try {
         var t;
         let n =
@@ -1083,7 +1083,7 @@ ${n}${t[r]}: ${t[r + 1].micros / 1e3}`),
     } catch (e) {}
     return null != e._trace ? e._trace.join(" -> ") : "???";
 }
-function ef(e) {
+function eh(e) {
     return {
         connectTime: e ?? 0,
         numEvents: 0,
@@ -1099,8 +1099,8 @@ n(667532);
 var eI = n(499979),
     ep = n(877166),
     em = n(365971),
-    eg = n(435558),
-    eT =
+    eT = n(435558),
+    eg =
         (((i = {}).LONGER_DISPATCH = "longer_dispatch"),
         (i.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
         (i.FIRED_DUE_TO_MAX_TIMEOUT = "fired_due_to_max_timeout"),
@@ -1141,16 +1141,16 @@ let eC = Object.freeze({
         skip_idle_callback_due_to_backgrounded: 0,
     });
 class ey {
-    _timeTracking = (0, eg.cloneDeep)(eC);
-    _timingStats = (0, eg.cloneDeep)(eO);
-    _measurements = (0, eg.cloneDeep)(eR);
-    _eventCounts = (0, eg.cloneDeep)(eL);
+    _timeTracking = (0, eT.cloneDeep)(eC);
+    _timingStats = (0, eT.cloneDeep)(eO);
+    _measurements = (0, eT.cloneDeep)(eR);
+    _eventCounts = (0, eT.cloneDeep)(eL);
     _enabled = !1;
     reset() {
-        ((this._timeTracking = (0, eg.cloneDeep)(eC)),
-            (this._timingStats = (0, eg.cloneDeep)(eO)),
-            (this._measurements = (0, eg.cloneDeep)(eR)),
-            (this._eventCounts = (0, eg.cloneDeep)(eL)));
+        ((this._timeTracking = (0, eT.cloneDeep)(eC)),
+            (this._timingStats = (0, eT.cloneDeep)(eO)),
+            (this._measurements = (0, eT.cloneDeep)(eR)),
+            (this._eventCounts = (0, eT.cloneDeep)(eL)));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -1238,7 +1238,7 @@ class eM {
         };
     }
 }
-let eU = new T.A("DispatcherWorkScheduler");
+let eU = new g.A("DispatcherWorkScheduler");
 class ew {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1255,7 +1255,7 @@ class ew {
             ((this._isBackgrounded = e),
             this._isBackgrounded &&
                 this.hasWorkScheduled &&
-                (this.telemetry.track(eT.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
+                (this.telemetry.track(eg.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
     }
     _queueIdleCallback() {
         throw Error("Not implemented");
@@ -1273,7 +1273,7 @@ class ew {
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
                 this.telemetry.measure(eN.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
-                this.telemetry.track(eT.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
+                this.telemetry.track(eg.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
                 (this._nextDispatchTimeout = eP));
             return;
@@ -1322,14 +1322,14 @@ class ew {
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eS.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eP && this.telemetry.track(eT.LONGER_DISPATCH),
+                this._nextDispatchTimeout === eP && this.telemetry.track(eg.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
                 if ((o()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
                     return (
-                        this.telemetry.track(eT.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()
+                        this.telemetry.track(eg.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()
                     );
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
@@ -1352,7 +1352,7 @@ class eF extends ew {
     _flushIdleMaxTimeoutHandler = null;
     constructor() {
         (super(),
-            f.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
+            h.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
                 n === (0, em.Xg)() && this._trackAppBackgrounded(!t);
             }));
@@ -1363,7 +1363,7 @@ class eF extends ew {
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        (this.telemetry.track(eT.FIRED_DUE_TO_MAX_TIMEOUT),
+                        (this.telemetry.track(eg.FIRED_DUE_TO_MAX_TIMEOUT),
                             this.telemetry.clearTime(eS.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._processWorkCallback());
                         return;
@@ -1410,7 +1410,7 @@ class eF extends ew {
     }
 }
 n(945810);
-let eB = new T.A("GatewaySocket"),
+let eB = new g.A("GatewaySocket"),
     eV = new Set(["INITIAL_GUILD", "READY"]),
     eH = new Set(["READY", "INITIAL_GUILD"]),
     ej = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
@@ -1441,7 +1441,7 @@ class e$ {
     scheduler = new eF();
     queue = [];
     paused = !0;
-    resumeAnalytics = ef();
+    resumeAnalytics = eh();
     getDispatchHandler = null;
     constructor(e) {
         this.socket = e;
@@ -1614,26 +1614,26 @@ class e$ {
                             users: E,
                             ...A
                         } = e,
-                        h = [],
                         f = [],
+                        h = [],
                         I = [],
                         p = [],
                         m = [],
-                        g = [],
                         T = [],
+                        g = [],
                         S = [];
                     return (
                         n.forEach((e) => {
                             if (e.unavailable) return;
                             let { features: t, ...n } = e.properties ?? {},
                                 { threads: i, guild_scheduled_events: r, ...a } = e;
-                            (h.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
-                                f.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
+                            (f.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
+                                h.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
                                 I.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 m.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                g.push(t),
-                                T.push(r),
+                                T.push(t),
+                                g.push(r),
                                 S.push(a, n));
                         }),
                         {
@@ -1646,15 +1646,15 @@ class e$ {
                             user_guild_settings_size: JSON.stringify(l).length,
                             relationships_size: JSON.stringify(_).length,
                             remaining_data_size: JSON.stringify(A ?? {}).length,
-                            guild_channels_size: JSON.stringify(h).length,
+                            guild_channels_size: JSON.stringify(f).length,
                             guild_members_size: JSON.stringify(r ?? []).length,
                             guild_presences_size: JSON.stringify(i?.guilds ?? []).length,
-                            guild_roles_size: JSON.stringify(f).length,
+                            guild_roles_size: JSON.stringify(h).length,
                             guild_emojis_size: JSON.stringify(I).length,
                             guild_threads_size: JSON.stringify(p).length,
                             guild_stickers_size: JSON.stringify(m).length,
-                            guild_events_size: JSON.stringify(T).length,
-                            guild_features_size: JSON.stringify(g).length,
+                            guild_events_size: JSON.stringify(g).length,
+                            guild_features_size: JSON.stringify(T).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -1743,7 +1743,7 @@ class e$ {
                           { logEventProperties: !0 },
                       ),
                   this.socket.handleResumeDispatched(),
-                  (this.resumeAnalytics = ef()))
+                  (this.resumeAnalytics = eh()))
                 : this.getDispatchHandler(r)?.dispatch(i, r, s, l);
         this.socket.connectionState === b.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
@@ -1755,7 +1755,7 @@ n(938796);
 var eX = n(143236),
     ez = n(873985),
     eq = n(811091),
-    eZ =
+    eQ =
         (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
         (s[(s.HEARTBEAT = 1)] = "HEARTBEAT"),
         (s[(s.IDENTIFY = 2)] = "IDENTIFY"),
@@ -1789,9 +1789,9 @@ var eX = n(143236),
         (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         s);
-class eQ extends eX.EventEmitter {
+class eZ extends eX.EventEmitter {
     presenceUpdate(e, t, n, i) {
-        this.send(eZ.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
+        this.send(eQ.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
     voiceStateUpdate(e) {
         let {
@@ -1808,18 +1808,18 @@ class eQ extends eX.EventEmitter {
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
         (null != n && ez.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
-            this.send(eZ.VOICE_STATE_UPDATE, c));
+            this.send(eQ.VOICE_STATE_UPDATE, c));
     }
     voiceServerPing() {
-        this.send(eZ.VOICE_SERVER_PING, null);
+        this.send(eQ.VOICE_SERVER_PING, null);
     }
     requestGuildMembers(e, t) {
         let { query: n, limit: i, userIds: r, presences: a } = t;
-        this.send(eZ.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: a });
+        this.send(eQ.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: a });
     }
     searchRecentMembers(e, t) {
         let { query: n, continuationToken: i } = t;
-        this.send(eZ.SEARCH_RECENT_MEMBERS, { guild_id: e, query: n ?? "", continuation_token: i ?? null });
+        this.send(eQ.SEARCH_RECENT_MEMBERS, { guild_id: e, query: n ?? "", continuation_token: i ?? null });
     }
     updateGuildSubscriptions(e) {
         let t = {},
@@ -1827,46 +1827,46 @@ class eQ extends eX.EventEmitter {
         (eq.default.keys(e).forEach((i) => {
             let r = e[i],
                 a = JSON.stringify([i, r]).length;
-            (n + a > 15360 && (this.send(eZ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
+            (n + a > 15360 && (this.send(eQ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
                 (t[i] = r),
                 (n += a));
         }),
-            n > 0 && this.send(eZ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }));
+            n > 0 && this.send(eQ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }));
     }
     callConnect(e) {
-        this.send(eZ.CALL_CONNECT, { channel_id: e });
+        this.send(eQ.CALL_CONNECT, { channel_id: e });
     }
     streamCreate(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.send(eZ.STREAM_CREATE, { type: e, guild_id: t, channel_id: n, preferred_region: i });
+        this.send(eQ.STREAM_CREATE, { type: e, guild_id: t, channel_id: n, preferred_region: i });
     }
     streamWatch(e) {
-        this.send(eZ.STREAM_WATCH, { stream_key: e });
+        this.send(eQ.STREAM_WATCH, { stream_key: e });
     }
     streamPing(e) {
-        this.send(eZ.STREAM_PING, { stream_key: e });
+        this.send(eQ.STREAM_PING, { stream_key: e });
     }
     streamDelete(e) {
-        this.send(eZ.STREAM_DELETE, { stream_key: e });
+        this.send(eQ.STREAM_DELETE, { stream_key: e });
     }
     streamSetPaused(e, t) {
-        this.send(eZ.STREAM_SET_PAUSED, { stream_key: e, paused: t });
+        this.send(eQ.STREAM_SET_PAUSED, { stream_key: e, paused: t });
     }
     requestForumUnreads(e, t, n) {
-        this.send(eZ.REQUEST_FORUM_UNREADS, {
+        this.send(eQ.REQUEST_FORUM_UNREADS, {
             guild_id: e,
             channel_id: t,
             threads: n.map((e) => ({ thread_id: e.threadId, ack_message_id: e.ackMessageId })),
         });
     }
     requestSoundboardSounds(e) {
-        this.send(eZ.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: e });
+        this.send(eQ.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: e });
     }
     requestLastMessages(e, t) {
-        this.send(eZ.REQUEST_LAST_MESSAGES, { guild_id: e, channel_ids: t });
+        this.send(eQ.REQUEST_LAST_MESSAGES, { guild_id: e, channel_ids: t });
     }
     getDeletedEntityIdsNotMatchingHash(e, t, n, i, r) {
-        this.send(eZ.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
+        this.send(eQ.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
             guild_id: e,
             channel_ids_hash: t,
             role_ids_hash: n,
@@ -1875,16 +1875,16 @@ class eQ extends eX.EventEmitter {
         });
     }
     triggerGuildChannelResync(e, t) {
-        this.send(eZ.GUILD_CHANNELS_RESYNC, { guild_id: e, obfuscated_channel_ids: t });
+        this.send(eQ.GUILD_CHANNELS_RESYNC, { guild_id: e, obfuscated_channel_ids: t });
     }
     requestChannelInfo(e, t) {
-        this.send(eZ.REQUEST_CHANNEL_INFO, { guild_id: e, fields: t });
+        this.send(eQ.REQUEST_CHANNEL_INFO, { guild_id: e, fields: t });
     }
     requestChannelMemberCount(e, t) {
-        this.send(eZ.REQUEST_CHANNEL_MEMBER_COUNT, { guild_id: e, channel_id: t });
+        this.send(eQ.REQUEST_CHANNEL_MEMBER_COUNT, { guild_id: e, channel_id: t });
     }
     remoteCommand(e, t) {
-        this.send(eZ.REMOTE_COMMAND, { target_session_id: e, payload: t });
+        this.send(eQ.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
 var eJ = n(33282),
@@ -1894,7 +1894,7 @@ var eJ = n(33282),
     e3 = n(144367),
     e6 = n(428420),
     e5 = n(505816);
-class e4 extends e5.G {
+class e7 extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.QosToken", [
             { no: 1, name: "client_provided", kind: "message", T: () => e9 },
@@ -1938,8 +1938,8 @@ class e4 extends e5.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e8 = new e4();
-class e7 extends e5.G {
+let e8 = new e7();
+class e4 extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.ClientProvidedQosData", [
             { no: 1, name: "is_active", kind: "scalar", T: 8 },
@@ -1975,7 +1975,7 @@ class e7 extends e5.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e9 = new e7();
+let e9 = new e4();
 class te extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.DerivedQosData", [
@@ -2088,8 +2088,8 @@ class tn extends e5.G {
 new tn();
 var ti = n(767589),
     tr = n(193799);
-let ta = new T.A("QOS"),
-    ts = new T.A("GatewaySocket"),
+let ta = new g.A("QOS"),
+    ts = new g.A("GatewaySocket"),
     tl = new e_(),
     to = null;
 function td(e) {
@@ -2102,8 +2102,8 @@ let tu = 30 * L.A.Millis.SECOND,
 function tA(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
-let th = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class tf extends eQ {
+let tf = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+class th extends eZ {
     gatewayBackoff;
     handleIdentify;
     dispatchExceptionBackoff = new u.A(1e3, tE);
@@ -2194,7 +2194,7 @@ class tf extends eQ {
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
         this.connectionState_ === b.A.SESSION_ESTABLISHED &&
-            (this.send(eZ.UPDATE_TIME_SPENT_SESSION_ID, {
+            (this.send(eQ.UPDATE_TIME_SPENT_SESSION_ID, {
                 initialization_timestamp: e,
                 session_id: t,
                 client_launch_id: n,
@@ -2295,11 +2295,11 @@ class tf extends eQ {
                         let n = Date.now(),
                             { op: i, s: r, t: a, d: s } = tl.unpack(e);
                         if (
-                            (i !== eZ.DISPATCH && c.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${eZ[i]}`),
+                            (i !== eQ.DISPATCH && c.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${eQ[i]}`),
                             C.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
-                            (i === eZ.DISPATCH && e.push(a), e.push(s), ts.verboseDangerously("<~", ...e));
+                            (i === eQ.DISPATCH && e.push(a), e.push(s), ts.verboseDangerously("<~", ...e));
                         }
                         let l = Date.now() - n;
                         switch (
@@ -2311,22 +2311,22 @@ class tf extends eQ {
                             null != r && (this.seq = r),
                             i)
                         ) {
-                            case eZ.HELLO:
+                            case eQ.HELLO:
                                 (this._clearHelloTimeout(), this._handleHello(s));
                                 break;
-                            case eZ.RECONNECT:
+                            case eQ.RECONNECT:
                                 this._handleReconnect();
                                 break;
-                            case eZ.INVALID_SESSION:
+                            case eQ.INVALID_SESSION:
                                 this._handleInvalidSession(s);
                                 break;
-                            case eZ.HEARTBEAT:
+                            case eQ.HEARTBEAT:
                                 this._handleHeartbeatReceive();
                                 break;
-                            case eZ.HEARTBEAT_ACK:
+                            case eQ.HEARTBEAT_ACK:
                                 this._handleHeartbeatAck(s);
                                 break;
-                            case eZ.DISPATCH:
+                            case eQ.DISPATCH:
                                 this._handleDispatch(
                                     s,
                                     a,
@@ -2379,7 +2379,7 @@ class tf extends eQ {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now(),
             i = n - this.connectionStartTime;
-        (ts.verbose(`[HELLO] via ${eh(e)}, heartbeat interval: ${t}, took ${i} ms`),
+        (ts.verbose(`[HELLO] via ${ef(e)}, heartbeat interval: ${t}, took ${i} ms`),
             (function (e) {
                 let { socket: t, gatewayUrl: n, now: i } = e;
                 O.default.track(
@@ -2414,7 +2414,7 @@ class tf extends eQ {
         if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = eh(e);
+            let n = ef(e);
             (c.A.setServerTrace(n),
                 ts.info(`[READY] took ${i}ms, as ${t}`),
                 ts.verbose(`${n}`),
@@ -2429,7 +2429,7 @@ class tf extends eQ {
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
-                  (ts.verbose(eh(e)),
+                  (ts.verbose(ef(e)),
                   (this.connectionState = b.A.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
@@ -2445,7 +2445,7 @@ class tf extends eQ {
         ((this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0));
     }
     _getGatewayUrl() {
-        return null != this.resumeUrl ? this.resumeUrl : th;
+        return null != this.resumeUrl ? this.resumeUrl : tf;
     }
     _handleHeartbeatReceive() {
         (this._sendHeartbeat(),
@@ -2494,7 +2494,7 @@ class tf extends eQ {
             "Stream end encountered" === t &&
             ((this.iosGoingAwayEventCount += 1),
             3 === this.iosGoingAwayEventCount &&
-                h.Bo.get({ url: eA.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
+                f.Bo.get({ url: eA.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
                         O.default.track(eA.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
@@ -2561,9 +2561,9 @@ class tf extends eQ {
     }
     _doResume() {
         ((this.connectionState = b.A.RESUMING),
-            (this.dispatcher.resumeAnalytics = ef(Date.now() - this.connectionStartTime)),
+            (this.dispatcher.resumeAnalytics = eh(Date.now() - this.connectionStartTime)),
             ts.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
-            this.send(eZ.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1));
+            this.send(eQ.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1));
     }
     async _doIdentify() {
         ((this.seq = 0), (this.sessionId = null));
@@ -2573,9 +2573,9 @@ class tf extends eQ {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, g.O)() ? I.A.getCommittedVersions() : {},
-                (0, g.O)() ? m.A.getCommittedVersions() : {},
-                !!(0, g.O)() && p.A.canUseGuildVersions(),
+                (0, T.O)() ? I.A.getCommittedVersions() : {},
+                (0, T.O)() ? m.A.getCommittedVersions() : {},
+                !!(0, T.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;
@@ -2621,7 +2621,7 @@ class tf extends eQ {
         ((this.identifyUncompressedByteSize = _.length),
             (this.identifyCompressedByteSize = d.deflate(_).length),
             (this.identifyCount += 1),
-            this.send(eZ.IDENTIFY, u, !1),
+            this.send(eQ.IDENTIFY, u, !1),
             O.default.track(eA.HAw.SESSION_START_CLIENT, {}));
     }
     _doFastConnectIdentify() {
@@ -2661,7 +2661,7 @@ class tf extends eQ {
     }
     _sendHeartbeat() {
         let e = this._consumeQOSPayload();
-        (this.send(eZ.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now()));
+        (this.send(eQ.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now()));
     }
     getLogger() {
         return ts;
@@ -2714,8 +2714,8 @@ class tf extends eQ {
                   setTimeout(() => this._connect(), 0))
                 : this.dispatchExceptionBackoff.fail(() => this._connect()),
             (this.didForceClearGuildHashes = !0),
-            f.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
-            f.h.dispatch({ type: "LIBDISCORE_RESET" }),
+            h.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
+            h.h.dispatch({ type: "LIBDISCORE_RESET" }),
             clearTimeout(this.dispatchSuccessTimer),
             (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * tE)));
     }
@@ -2780,7 +2780,7 @@ class tf extends eQ {
                 : t && this.connectionState !== b.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e));
     }
     send = (e, t, n) => {
-        C.default.isLoggingGatewayEvents && ts.verboseDangerously("~>", e, eZ[e], t);
+        C.default.isLoggingGatewayEvents && ts.verboseDangerously("~>", e, eQ[e], t);
         let i = tl.pack({ op: e, d: t });
         if (!n || this.isSessionEstablished())
             try {

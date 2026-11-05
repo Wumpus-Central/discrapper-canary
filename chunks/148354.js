@@ -13,12 +13,12 @@ let u = {},
 function A() {
     ((u = {}), (_ = {}));
 }
-function h(e) {
+function f(e) {
     let { relationship: t } = e,
         n = s.A.getVoiceStateForUser(t.id);
-    return null != n && null != n.channelId && f(n.channelId, t.id);
+    return null != n && null != n.channelId && h(n.channelId, t.id);
 }
-function f(e, t) {
+function h(e, t) {
     let n,
         i = !1,
         r = !1,
@@ -27,9 +27,9 @@ function f(e, t) {
     (E && !s.has(t) ? (s.add(t), (r = !0), (i = !0)) : E || (i = s.delete(t)),
         0 === s.size && i ? delete u[e] : i && (u[e] = s));
     let A = new Set(_[e]),
-        h = a.A.isIgnored(t);
+        f = a.A.isIgnored(t);
     return (
-        h && !A.has(t) ? (A.add(t), (r = !0), (i = !0)) : h || (i = A.delete(t)),
+        f && !A.has(t) ? (A.add(t), (r = !0), (i = !0)) : f || (i = A.delete(t)),
         0 === A.size && i ? delete _[e] : i && (_[e] = A),
         r && (e !== (n = o.A.getChannelId()) || (null != l.A.getChannel(e) && ((0, d.a0)(t) || (0, c.k)(n, t)))),
         i
@@ -54,7 +54,7 @@ let p = new I(r.h, {
         let e = s.A.getAllVoiceStates(),
             t = !1;
         for (let n of Object.values(e))
-            for (let e of Object.values(n)) null != e.channelId && (t = f(e.channelId, e.userId) || t);
+            for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
         return t;
     },
     VOICE_STATE_UPDATES: function (e) {
@@ -65,12 +65,12 @@ let p = new I(r.h, {
                 (null != e.oldChannelId &&
                     (null != u[e.oldChannelId] && (u[e.oldChannelId]?.delete(e.userId), (n = !0)),
                     null != _[e.oldChannelId] && (_[e.oldChannelId]?.delete(e.userId), (n = !0))),
-                    null != e.channelId && (n = f(e.channelId, e.userId) || n));
+                    null != e.channelId && (n = h(e.channelId, e.userId) || n));
             }),
             n
         );
     },
-    RELATIONSHIP_ADD: h,
-    RELATIONSHIP_REMOVE: h,
-    RELATIONSHIP_UPDATE: h,
+    RELATIONSHIP_ADD: f,
+    RELATIONSHIP_REMOVE: f,
+    RELATIONSHIP_UPDATE: f,
 });

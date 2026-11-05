@@ -13,7 +13,7 @@ function u(e, t, a) {
         g = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         h = (0, r.bG)([l.A], () => l.A.hasLoadedExperiments),
         p = (0, r.bG)([i.A], () => i.A.skipNumCategories),
-        [b, v, x, y, f, C, S, k] = (0, r.yK)([d.A], () => [
+        [b, v, x, y, f, S, C, k] = (0, r.yK)([d.A], () => [
             d.A.getShopBlocks(e),
             d.A.getLastSuccessfulFetch(e) ?? 0,
             d.A.getLastErrorTimestamp(e) ?? 0,
@@ -64,16 +64,16 @@ function u(e, t, a) {
                 }, [t, a, e]),
                 s
             );
-        })(b, C ?? !1, u),
+        })(b, S ?? !1, u),
         j = (0, o.useMemo)(() => !A && Date.now() - v < 6e5, [v, A]);
     return (
         (0, o.useEffect)(() => {
-            if (g || !h || C) return;
+            if (g || !h || S) return;
             let t = Date.now() - x < 6e5;
-            (null != f && t) || ((w || !j || S) && (0, n.h$)(e, E, a));
-        }, [g, h, C, f, x, j, S, w, E, e, a]),
+            (null != f && t) || ((w || !j || C) && (0, n.h$)(e, E, a));
+        }, [g, h, S, f, x, j, C, w, E, e, a]),
         {
-            isFetchingShopHome: C,
+            isFetchingShopHome: S,
             fetchShopHomeError: f,
             shopBlocks: b,
             refreshShopHome: (0, o.useCallback)(() => {

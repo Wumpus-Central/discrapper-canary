@@ -1,4 +1,4 @@
-n.d(t, { A: () => Q });
+n.d(t, { A: () => Z });
 var i = n(515029),
     r = n.n(i),
     a = n(226782),
@@ -11,22 +11,22 @@ var i = n(515029),
     _ = n(9842),
     E = n(46653),
     A = n(799704),
-    h = n(734057),
-    f = n(596344),
+    f = n(734057),
+    h = n(596344),
     I = n(309010),
     p = n(967198),
     m = n(811091);
-function g(e) {
+function T(e) {
     return (
         (null != e.attachments && e.attachments.length > 0) ||
         (null != e.embeds && e.embeds.length > 0) ||
         (null != e.components && e.components.length > 0)
     );
 }
-function T(e) {
+function g(e) {
     if (null == e) return !1;
     let t = "messageSnapshots" in e ? e.messageSnapshots : e.message_snapshots;
-    return g(e) || (null != t && t?.some((e) => g(e.message)));
+    return T(e) || (null != t && t?.some((e) => T(e.message)));
 }
 var S = n(135598),
     N = n(930125),
@@ -104,7 +104,7 @@ function G(e, t) {
                 timeout: setTimeout(() => {
                     !(function (e) {
                         if (M(e, C.VL.TIMEOUT)) {
-                            let t = f.A.getMessage(e.channel_id, e.id);
+                            let t = h.A.getMessage(e.channel_id, e.id);
                             if (null != t) {
                                 let { attachmentIds: n, embedIds: i } = (0, L.M)(t);
                                 (0, C.gm)({ channelId: e.channel_id, messageId: e.id, attachmentIds: n, embedIds: i });
@@ -193,7 +193,7 @@ function k(e, t) {
             attributesByChannelId: d,
             attributesByMessageId: c,
         } = ((n = e.filter((e) => {
-            let t = T(e),
+            let t = g(e),
                 n = 0 !== (0, L.Fg)(e);
             return t && n;
         })),
@@ -203,7 +203,7 @@ function k(e, t) {
                     null != e &&
                     "referenced_message" in e &&
                     null != e.referenced_message &&
-                    T(e.referenced_message) &&
+                    g(e.referenced_message) &&
                     0 !== (0, L.Fg)(e.referenced_message)
                 )
                     return e.referenced_message;
@@ -258,7 +258,7 @@ function F(e) {
         return !1;
     if (!(0, L.mS)(t)) {
         let e =
-            f.A.getMessage(t.channel_id, t.id) ??
+            h.A.getMessage(t.channel_id, t.id) ??
             O.A.getMessage(t.id, t.channel_id) ??
             _.A.getMessage(t.channel_id, t.id)?.message;
         null == e || (0, L.mS)((0, c.IU)(e, t)) || M(e, C.VL.UPDATE);
@@ -266,7 +266,7 @@ function F(e) {
     let n = I.Ay.getChannelId(),
         i = A.Ay.getCurrentSidebarChannelId(n);
     if (t.channel_id !== n && t.channel_id !== i) return !1;
-    let r = f.A.getMessage(t.channel_id, t.id);
+    let r = h.A.getMessage(t.channel_id, t.id);
     return null != r && k([r], { isMessageUpdate: !0 });
 }
 function B(e) {
@@ -275,7 +275,7 @@ function B(e) {
     let a = I.Ay.getChannelId(),
         s = A.Ay.getCurrentSidebarChannelId(a),
         l = t === a || t === s,
-        o = h.A.getChannel(t);
+        o = f.A.getChannel(t);
     if (!l) return !1;
     let d = o?.isPrivate() ?? !0,
         c = o?.memberCount == null || o?.memberCount > 100;
@@ -336,7 +336,7 @@ function z(e) {
     return !!n && q(t);
 }
 function q(e) {
-    let t = f.A.getMessages(e);
+    let t = h.A.getMessages(e);
     return (
         0 !== t.length &&
         (function (e) {
@@ -349,7 +349,7 @@ function q(e) {
                     messagesPendingScan: l,
                     attributesByChannelId: o,
                     attributesByMessageId: d,
-                } = ((t = e.filter((e) => T(e) && 0 !== (0, L.Fg)(e))),
+                } = ((t = e.filter((e) => g(e) && 0 !== (0, L.Fg)(e))),
                 (n = e
                     .map((e) => {
                         if (y.sl8.has(e.type) && null != e.messageReference) {
@@ -357,7 +357,7 @@ function q(e) {
                             if (
                                 t.state === _.a.LOADED &&
                                 null != t.message &&
-                                T(t.message) &&
+                                g(t.message) &&
                                 0 !== (0, L.Fg)(t.message)
                             )
                                 return t.message;
@@ -405,7 +405,7 @@ function q(e) {
         })(t)
     );
 }
-class Z extends d.A {
+class Q extends d.A {
     actions = {
         LOAD_MESSAGES_SUCCESS: V,
         LOAD_FORUM_POSTS: W,
@@ -423,4 +423,4 @@ class Z extends d.A {
         CHANNEL_RTC_UPDATE_CHAT_OPEN: z,
     };
 }
-let Q = new Z();
+let Z = new Q();

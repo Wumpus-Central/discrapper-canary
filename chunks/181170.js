@@ -1,7 +1,7 @@
 var r = n(582128),
     i = n(855986),
-    s = n(561573),
-    l = n(918467),
+    l = n(561573),
+    s = n(918467),
     a = n(288106),
     u = n(313217),
     o = n(652215);
@@ -27,12 +27,12 @@ n.d(
         },
         vF: function (e, t) {
             let n = (0, u.s)(t),
-                a = (0, i.bG)([s.A], () => (n ? s.A.getPricesForSkuId(e) : void 0)),
-                d = (0, i.bG)([s.A], () => (n ? s.A.getPromotionIdsForSkuId(e) : void 0)),
-                f = (0, i.bG)([l.A], () => (n ? l.A.getPromotionsForApplication(o.FYj) : null)),
+                a = (0, i.bG)([l.A], () => (n ? l.A.getPricesForSkuId(e) : void 0)),
+                d = (0, i.bG)([l.A], () => (n ? l.A.getPromotionIdsForSkuId(e) : void 0)),
+                f = (0, i.bG)([s.A], () => (n ? s.A.getPromotionsForApplication(o.FYj) : null)),
                 I = (function (e, t) {
                     let [n, i] = r.useState(Date.now),
-                        s = (function (e) {
+                        l = (function (e) {
                             let { pricingPromotionIds: t, promotions: n, now: r } = e,
                                 i = null;
                             for (let e of c(t, n))
@@ -42,10 +42,10 @@ n.d(
                         })({ pricingPromotionIds: e, promotions: t, now: n });
                     return (
                         r.useEffect(() => {
-                            if (null == s) return;
-                            let e = setTimeout(() => i(Date.now()), Math.min(Math.max(s - Date.now(), 0), 0x7fffffff));
+                            if (null == l) return;
+                            let e = setTimeout(() => i(Date.now()), Math.min(Math.max(l - Date.now(), 0), 0x7fffffff));
                             return () => clearTimeout(e);
-                        }, [s, n]),
+                        }, [l, n]),
                         n
                     );
                 })(d, f);

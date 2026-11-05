@@ -1,10 +1,10 @@
 n.d(t, {
     CS: () => eu,
-    Ir: () => eh,
+    Ir: () => ef,
     LK: () => eA,
     Ue: () => eE,
     _H: () => ec,
-    gk: () => ef,
+    gk: () => eh,
     i5: () => eI,
     od: () => ep,
     rW: () => eo,
@@ -23,13 +23,13 @@ var i = n(613412),
     _ = n(367513),
     E = n(574332),
     A = n(138399),
-    h = n(181658),
-    f = n(155718),
+    f = n(181658),
+    h = n(155718),
     I = n(323073),
     p = n(264322),
     m = n(545152),
-    g = n(361926),
-    T = n(587895),
+    T = n(361926),
+    g = n(587895),
     S = n(972995),
     N = n(878014),
     C = n(568598),
@@ -59,8 +59,8 @@ var i = n(613412),
     X = n(181855),
     z = n(969151),
     q = n(817636),
-    Z = n(782091),
-    Q = n(108959),
+    Q = n(782091),
+    Z = n(108959),
     J = n(400115),
     ee = n(90804),
     et = n(946255),
@@ -95,7 +95,7 @@ async function ed(e) {
         ed = k.A.getChannel(t),
         ec = ed?.getGuildId() ?? void 0;
     if (null == ec && !ed?.isPrivate()) return !1;
-    let eu = T.A.getApplication(s),
+    let eu = g.A.getApplication(s),
         e_ = null != eu && (0, P.X)(eu),
         eE = (0, U.m)();
     try {
@@ -157,16 +157,16 @@ async function ed(e) {
                 }),
             l)
         ) {
-            var eA, eh;
+            var eA, ef;
             let e, n, i, r;
             if (
                 null == t ||
                 ((eA = s),
-                (eh = ed),
-                (e = eh?.type === er.rbe.GUILD_VOICE),
-                (n = T.A.getApplication(eA)),
+                (ef = ed),
+                (e = ef?.type === er.rbe.GUILD_VOICE),
+                (n = g.A.getApplication(eA)),
                 (i = (0, N.W)(n, a.U.MAIN)),
-                (r = (0, Y.AX)(eh)),
+                (r = (0, Y.AX)(ef)),
                 (!e || !i) && !r)
             )
                 throw new D.A(D.A.Reasons.INVALID_CHANNEL);
@@ -184,12 +184,12 @@ async function ed(e) {
                     } = e,
                     c = null;
                 try {
-                    c = await (0, g.Ay)(i, t);
+                    c = await (0, T.Ay)(i, t);
                 } catch (e) {
-                    if (e.message === g.c5) return { result: "failure", reason: 1 };
+                    if (e.message === T.c5) return { result: "failure", reason: 1 };
                     throw e;
                 }
-                let u = c.handler !== f.Ys.APP_HANDLER;
+                let u = c.handler !== h.Ys.APP_HANDLER;
                 if (!(u || ea.TR.includes(t))) {
                     (null != i && (await (0, p.Zn)({ type: "channel", channelId: i })),
                         await (0, p.Zn)({ type: "user" }));
@@ -206,9 +206,9 @@ async function ed(e) {
                 if (null == _) return { result: "failure", reason: 3 };
                 if (u) {
                     let e,
-                        n = T.A.getApplication(t),
+                        n = g.A.getApplication(t),
                         i = K.Ay.getCurrentEmbeddedActivity();
-                    i?.applicationId != null && (e = T.A.getApplication(i?.applicationId));
+                    i?.applicationId != null && (e = g.A.getApplication(i?.applicationId));
                     let r = V.default.getCurrentUser();
                     if (
                         null != r &&
@@ -252,7 +252,7 @@ async function ed(e) {
                                             source: l,
                                         }),
                                         null != e && null != n && null != a
-                                            ? d(new h.A({ status: a, body: { message: n, code: e } }))
+                                            ? d(new f.A({ status: a, body: { message: n, code: e } }))
                                             : null != s && s in b.A.ReasonCodes
                                               ? d(new b.A(s))
                                               : d(new b.A(b.A.ReasonCodes.UNKNOWN)));
@@ -297,7 +297,7 @@ async function ed(e) {
                 if (null == r) return { result: "failure", reason: 3 };
                 let u = k.A.getChannel(r);
                 if (null == u) return { result: "failure", reason: 3 };
-                let _ = (0, Z.JH)({
+                let _ = (0, Q.JH)({
                     channelId: r,
                     isContentGated: (0, I.qR)(u),
                     ChannelStore: k.A,
@@ -305,19 +305,19 @@ async function ed(e) {
                     PermissionStore: B.A,
                     VoiceStateStore: H.A,
                 });
-                if (_ !== Z.xy.CAN_LAUNCH) {
+                if (_ !== Q.xy.CAN_LAUNCH) {
                     let e = 4;
                     return (
-                        _ === Z.xy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+                        _ === Q.xy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                             ? ((e = 5), (0, G.i)())
-                            : _ === Z.xy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS
+                            : _ === Q.xy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS
                               ? ((e = 6),
                                 c.A.show({
                                     title: el.intl.string(el.t["IOy+I5"]),
                                     body: el.intl.string(el.t.UXoQTp),
                                     hideActionSheet: !1,
                                 }))
-                              : _ === Z.xy.CHANNEL_CONTENT_GATED &&
+                              : _ === Q.xy.CHANNEL_CONTENT_GATED &&
                                 ((e = 10),
                                 c.A.show({
                                     title: el.intl.string(el.t["IOy+I5"]),
@@ -329,7 +329,7 @@ async function ed(e) {
                 }
                 let E = K.Ay.getCurrentEmbeddedActivity();
                 if (
-                    (E?.applicationId != null && (t = T.A.getApplication(E?.applicationId)),
+                    (E?.applicationId != null && (t = g.A.getApplication(E?.applicationId)),
                     !(
                         !a ||
                         (await (0, X.O)({
@@ -343,7 +343,7 @@ async function ed(e) {
                 )
                     return { result: "failure", reason: 7 };
                 if (null != u) {
-                    let e = (0, Q.A)(u.id),
+                    let e = (0, Z.A)(u.id),
                         n = ei.lk.includes(u.type);
                     if (e) {
                         if (!(await (0, ee.A)({ channelId: u.id, bypassChangeModal: null != t })))
@@ -383,7 +383,7 @@ async function ed(e) {
                 channelId: t ?? null,
                 guildId: ec ?? null,
                 isStart: l,
-                error: n instanceof D.A || n instanceof h.A || n instanceof b.A ? n : new h.A(n),
+                error: n instanceof D.A || n instanceof f.A || n instanceof b.A ? n : new f.A(n),
                 locationKind: e,
             }),
             !1
@@ -424,7 +424,7 @@ async function eu(e, t, n) {
             i.body.attachment
         );
     } catch (e) {
-        return (d.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new h.A(e));
+        return (d.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new f.A(e));
     }
 }
 async function e_(e) {
@@ -445,7 +445,7 @@ function eA() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : es.i.INDIRECT_ACTION;
     (0, L.$l)(o.M.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1e3), { dismissAction: e });
 }
-async function eh(e) {
+async function ef(e) {
     let t = er.Rsh.ACTIVITY_TEST_MODE(e);
     try {
         return (await l.Bo.get({ url: t, oldFormErrors: !0, rejectWithError: !0 }), !0);
@@ -453,7 +453,7 @@ async function eh(e) {
         return !1;
     }
 }
-function ef(e) {
+function eh(e) {
     d.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: e });
 }
 function eI(e) {
@@ -486,7 +486,7 @@ async function ep(e, t) {
                 channelId: t,
                 guildId: i,
                 locationKind: a,
-                error: s instanceof D.A || s instanceof h.A || s instanceof b.A ? s : new h.A(s),
+                error: s instanceof D.A || s instanceof f.A || s instanceof b.A ? s : new f.A(s),
             }),
             !1
         );

@@ -17,9 +17,9 @@ function E(e) {
             onSelect: l,
             calendarClassName: E,
             autoFocus: A,
-            onClickOutside: h,
+            onClickOutside: f,
         } = e,
-        f = r.useCallback(
+        h = r.useCallback(
             (e, t) => {
                 l?.(s()(e), t);
             },
@@ -28,8 +28,8 @@ function E(e) {
         I = r.useMemo(() => t.toDate(), [t]),
         p = r.useMemo(() => a?.toDate(), [a]),
         m = r.useMemo(() => n?.toDate(), [n]),
-        g = (0, d.bG)([u.default], () => u.default.locale),
-        T = (0, c.QO)(),
+        T = (0, d.bG)([u.default], () => u.default.locale),
+        g = (0, c.QO)(),
         S = r.useRef(null),
         N = r.useCallback((e) => {
             let t = e.currentTarget;
@@ -46,16 +46,16 @@ function E(e) {
         children: (0, i.jsx)(o(), {
             calendarClassName: E,
             selected: I,
-            onChange: f,
+            onChange: h,
             autoFocus: A,
             fixedHeight: !0,
             inline: !0,
-            locale: g,
-            calendarStartDay: T.options?.weekStartsOn ?? 0,
+            locale: T,
+            calendarStartDay: g.options?.weekStartsOn ?? 0,
             maxDate: p,
             minDate: m,
             onKeyDown: N,
-            onClickOutside: h,
+            onClickOutside: f,
         }),
     });
 }

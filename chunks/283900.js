@@ -6,14 +6,14 @@ var i = n(97808),
     a = n(253400),
     d = n(665956),
     c = n(792996),
-    u = n(756308);
-let o = a.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu;
+    o = n(756308);
+let u = a.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu;
 function m(e) {
     let { user: t, avatarSize: n = r._3.SIZE_48 } = e,
-        { avatarSrc: i, avatarDecorationSrc: a, eventHandlers: u } = (0, s.A)({ userId: t?.id, size: n });
+        { avatarSrc: i, avatarDecorationSrc: a, eventHandlers: o } = (0, s.A)({ userId: t?.id, size: n });
     return (0, l.jsx)("div", {
-        ...u,
-        children: (0, l.jsx)(o, {
+        ...o,
+        children: (0, l.jsx)(u, {
             src: i,
             avatarDecoration: a,
             size: n,
@@ -28,9 +28,9 @@ n.d(
         A: function (e) {
             let { currentUser: t, otherUser: n, children: i } = e;
             return (0, l.jsx)("div", {
-                className: u.b,
+                className: o.b,
                 children: (0, l.jsxs)("div", {
-                    className: u.M,
+                    className: o.M,
                     children: [(0, l.jsx)(m, { user: t }), i, (0, l.jsx)(m, { user: n })],
                 }),
             });

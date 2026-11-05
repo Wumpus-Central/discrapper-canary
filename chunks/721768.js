@@ -29,7 +29,7 @@ n.d(
                 query: _,
                 searchResultsPosition: E,
                 source: A,
-                commandOrigin: h,
+                commandOrigin: f,
             } = e;
             (null != n && r()(n.inputType !== u.y$.PLACEHOLDER, "command should not be placeholder"),
                 l.h.dispatch({
@@ -45,7 +45,7 @@ n.d(
                     query: _,
                     searchResultsPosition: E,
                     source: A,
-                    commandOrigin: h,
+                    commandOrigin: f,
                 }));
         },
         H2: A,
@@ -55,11 +55,11 @@ n.d(
                 A = "";
             for (let e of (0, _.Ez)(n).interactionOptions ?? [])
                 ("focused" in e && e.focused) || (A += `${e.name}=${String(e.value)}\0`);
-            let h = d.default.fromTimestamp(Date.now());
+            let f = d.default.fromTimestamp(Date.now());
             null == t.channel ||
                 (l.h.dispatch({
                     type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
-                    nonce: h,
+                    nonce: f,
                     channelId: t.channel.id,
                     query: i,
                     name: u,
@@ -75,12 +75,12 @@ n.d(
                             channel_id: t.channel.id,
                             session_id: o.default.getSessionId(),
                             data: n,
-                            nonce: h,
+                            nonce: f,
                         },
                         timeout: 3e3,
                         rejectWithError: !0,
                     }).catch(() => {
-                        l.h.dispatch({ type: "INTERACTION_FAILURE", nonce: h });
+                        l.h.dispatch({ type: "INTERACTION_FAILURE", nonce: f });
                     }));
         },
         _y: function (e, t) {

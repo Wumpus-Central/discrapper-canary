@@ -1,6 +1,6 @@
 var e,
-    s = i(477900),
-    r = i(582128),
+    r = i(477900),
+    s = i(582128),
     l = i(855986),
     a = i(646514),
     o = i(821609),
@@ -16,11 +16,11 @@ var e,
     x = i(659096),
     L = i(966846),
     f = i(674378),
-    N = i(723702),
-    _ = i(541830),
-    I = i(35083),
-    P = i(598429),
-    S = i(652215),
+    I = i(723702),
+    N = i(541830),
+    S = i(35083),
+    _ = i(598429),
+    P = i(652215),
     C = i(792996),
     T = i(796084),
     w =
@@ -38,18 +38,18 @@ var e,
         (e.PREORDER_WAIT = "preorder_wait"),
         e);
 let m = Object.freeze({
-    [S.Hf6.PLAY]: "play",
-    [S.Hf6.INSTALL]: "install",
-    [S.Hf6.UPDATE]: "update",
-    [S.Hf6.PAUSE]: "downloading",
-    [S.Hf6.MOVE_UP]: "queued",
-    [S.Hf6.RESUME]: "paused",
+    [P.Hf6.PLAY]: "play",
+    [P.Hf6.INSTALL]: "install",
+    [P.Hf6.UPDATE]: "update",
+    [P.Hf6.PAUSE]: "downloading",
+    [P.Hf6.MOVE_UP]: "queued",
+    [P.Hf6.RESUME]: "paused",
 });
-class B extends r.Component {
+class B extends s.Component {
     static defaultProps = { fullWidth: !1, size: "md", hideProgress: !1, tooltipPosition: "top" };
     static ButtonStates = w;
     get analyticsLocation() {
-        return { ...this.props.analyticsContext.location, object: S.ZSU.BUTTON_CTA };
+        return { ...this.props.analyticsContext.location, object: P.ZSU.BUTTON_CTA };
     }
     _uninstallStringIndex = null;
     getText(t) {
@@ -96,18 +96,18 @@ class B extends r.Component {
     handleAddToLibrary = async () => {
         try {
             let { libraryApplication: t } = this.props;
-            (await c.V(t.id, t.branchId, t.getFlags() & ~S.hM6.HIDDEN), (0, g.pX)(S.BVt.APPLICATION_LIBRARY));
+            (await c.V(t.id, t.branchId, t.getFlags() & ~P.hM6.HIDDEN), (0, g.pX)(P.BVt.APPLICATION_LIBRARY));
         } catch (t) {
             new h.A("LibraryApplicationButton").error(t);
         }
     };
     handleInstall = () => {
         let { libraryApplication: t, source: n } = this.props;
-        I.oc(t.id, t.branchId, n);
+        S.oc(t.id, t.branchId, n);
     };
     handleUpdate = () => {
         let { libraryApplication: t } = this.props;
-        I.K3(t.id, t.branchId);
+        S.K3(t.id, t.branchId);
     };
     onClickHandlers = {
         add_to_library: this.handleAddToLibrary,
@@ -125,9 +125,9 @@ class B extends r.Component {
         let e = null != i ? m[i] : null;
         return null != e
             ? e
-            : null != n && n.type === S.WTw.UNINSTALLING
+            : null != n && n.type === P.WTw.UNINSTALLING
               ? "uninstalling"
-              : (0, N.HZ)()
+              : (0, I.HZ)()
                 ? "play"
                 : "unsupported_os";
     }
@@ -137,19 +137,19 @@ class B extends r.Component {
             fullWidth: n,
             size: i,
             playButtonVariant: e = "secondary",
-            disabledVariant: r,
+            disabledVariant: s,
             onDropdownOpen: l,
             onDropdownClose: a,
             analyticsListSort: o,
             analyticsListIndex: d,
         } = this.props;
-        return (0, s.jsx)(P.A, {
+        return (0, r.jsx)(_.A, {
             applicationId: t.id,
             libraryApplication: t,
             fullWidth: n,
             size: i,
             variant: e,
-            disabledVariant: r,
+            disabledVariant: s,
             onDropdownOpen: l,
             onDropdownClose: a,
             analyticsListSort: o,
@@ -157,16 +157,16 @@ class B extends r.Component {
         });
     }
     renderDisabledButton(t, n) {
-        let { fullWidth: i, size: e, disabledVariant: r = "secondary", tooltipPosition: l } = this.props,
+        let { fullWidth: i, size: e, disabledVariant: s = "secondary", tooltipPosition: l } = this.props,
             a = this.renderProgressBar();
-        return (0, s.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             className: null != a ? T.c : void 0,
             children: [
-                (0, s.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     className: T.Yr,
                     children: [
-                        (0, s.jsx)(o.$, { text: this.getText(t), fullWidth: i, size: e, variant: r, disabled: !0 }),
-                        (0, s.jsx)(d.m, { text: n, position: l, children: (0, s.jsx)("div", { className: T.p5 }) }),
+                        (0, r.jsx)(o.$, { text: this.getText(t), fullWidth: i, size: e, variant: s, disabled: !0 }),
+                        (0, r.jsx)(d.m, { text: n, position: l, children: (0, r.jsx)("div", { className: T.p5 }) }),
                     ],
                 }),
                 a,
@@ -178,8 +178,8 @@ class B extends r.Component {
         if (t) return null;
         let i = f.z0(n);
         if (null == i) return null;
-        let e = i.type === S.WTw.UNINSTALLING ? u.i.INDETERMINATE : f.uA(Number(i.progress), Number(i.total));
-        return (0, s.jsx)(u.i, {
+        let e = i.type === P.WTw.UNINSTALLING ? u.i.INDETERMINATE : f.uA(Number(i.progress), Number(i.total));
+        return (0, r.jsx)(u.i, {
             percent: e,
             size: u.i.Sizes.XSMALL,
             foregroundColor: i.paused ? a.A.unsafe_rawColors.PRIMARY_500.css : a.A.unsafe_rawColors.GREEN_360.css,
@@ -188,16 +188,16 @@ class B extends r.Component {
         });
     }
     renderActionButton(t, n) {
-        let { fullWidth: i, size: e, actionButtonVariant: r = "primary", isCloudSyncing: l } = this.props,
+        let { fullWidth: i, size: e, actionButtonVariant: s = "primary", isCloudSyncing: l } = this.props,
             a = this.renderProgressBar();
-        return (0, s.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             className: null != a ? T.c : void 0,
             children: [
-                (0, s.jsx)(o.$, {
+                (0, r.jsx)(o.$, {
                     text: this.getText(t),
                     fullWidth: i,
                     size: e,
-                    variant: r,
+                    variant: s,
                     loading: "uninstalling" === t || l,
                     onClick: (t) => this.handleClick(t, n),
                 }),
@@ -213,7 +213,7 @@ class B extends r.Component {
             let t;
             return this.renderDisabledButton(
                 i,
-                null != (t = _.zJ(n.sku)) ? C.intl.formatToPlainString(C.t.Aqe2ZC, { date: t }) : null,
+                null != (t = N.zJ(n.sku)) ? C.intl.formatToPlainString(C.t.Aqe2ZC, { date: t }) : null,
             );
         }
         if ("unsupported_os" === i)
@@ -233,14 +233,14 @@ i.d(
         A: function (t) {
             let { libraryApplication: n } = t,
                 i = (0, p.p)(),
-                [e, r] = (0, l.yK)([x.A, L.A], () => [(0, b.F)(n, x.A, L.A), x.A.getState(n.id, n.branchId)], [n]),
+                [e, s] = (0, l.yK)([x.A, L.A], () => [(0, b.F)(n, x.A, L.A), x.A.getState(n.id, n.branchId)], [n]),
                 a = (0, l.bG)([y.A], () => y.A.isSyncing(n.id, n.branchId), [n]),
                 o = (0, l.bG)([A.A], () => A.A.hasNoBuild(n.id, n.branchId), [n]);
-            return (0, s.jsx)(B, {
+            return (0, r.jsx)(B, {
                 ...t,
                 analyticsContext: i,
                 actionState: e,
-                dispatchState: r,
+                dispatchState: s,
                 isCloudSyncing: a,
                 hasNoBuild: o,
             });

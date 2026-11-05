@@ -11,16 +11,16 @@ var i = n(855986),
 let _ = null,
     E = {},
     A = null;
-function h() {
+function f() {
     return { _categories: [], null: [] };
 }
-let f = h();
+let h = f();
 function I(e, t) {
     e.index = t;
 }
 function p(e) {
     let t = d.A.getChannels(e),
-        n = h();
+        n = f();
     function i(e) {
         let { channel: t } = e;
         (n[null != t.parent_id ? t.parent_id : "null"] ?? n.null).push({ channel: t, index: -1 });
@@ -40,13 +40,13 @@ function p(e) {
 function m() {
     ((E = {}), null != _ && p(_));
 }
-function g(e) {
+function T(e) {
     let {
         guild: { id: t },
     } = e;
     ((E[t] = void 0), _ === t && p(t));
 }
-function T(e) {
+function g(e) {
     let {
         channel: { guild_id: t },
     } = e;
@@ -71,7 +71,7 @@ class O extends i.Ay.Store {
         (this.waitFor(d.A, c.A, l.default, o.A, s.A), this.syncWith([s.A], C));
     }
     getCategories(e) {
-        return null != e ? (E[e] ?? p(e)) : f;
+        return null != e ? (E[e] ?? p(e)) : h;
     }
 }
 let R = new O(r.h, {
@@ -83,16 +83,16 @@ let R = new O(r.h, {
     CONNECTION_OPEN: m,
     OVERLAY_INITIALIZE: m,
     CACHE_LOADED_LAZY: m,
-    GUILD_CREATE: g,
-    GUILD_UPDATE: g,
+    GUILD_CREATE: T,
+    GUILD_UPDATE: T,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
         } = e;
         delete E[t];
     },
-    CHANNEL_CREATE: T,
-    CHANNEL_DELETE: T,
+    CHANNEL_CREATE: g,
+    CHANNEL_DELETE: g,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;

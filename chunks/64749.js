@@ -36,11 +36,11 @@ function M(e) {
 function k(e) {
     return 0 === e.type;
 }
-function U(e) {
+function P(e) {
     let t = `${!e.name.includes(_.QP) ? "@" : ""}${e.name}`;
     return { tag: { type: N._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
-function P(e) {
+function U(e) {
     let t = (0, p.m1)(e, R.default, y.A);
     return { tag: { type: N._.CHANNEL, label: t }, row: { id: e.id, display: t, type: 0, record: e } };
 }
@@ -107,10 +107,10 @@ n.d(
                             return (
                                 e.forEach((e) => {
                                     let t = v.A.getChannel(e);
-                                    null != t && (i[e] = P(t));
+                                    null != t && (i[e] = U(t));
                                 }),
                                 t.forEach((e) => {
-                                    e in n && (i[e] = U(n[e]));
+                                    e in n && (i[e] = P(n[e]));
                                 }),
                                 i
                             );
@@ -173,7 +173,7 @@ n.d(
             let $ = l.useCallback(
                     (e) => {
                         let t = { ...C };
-                        (k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
+                        (k(e) ? (t[e.id] = U(e.record)) : M(e) && (t[e.id] = P(e.record)),
                             J(t),
                             R(""),
                             Z(),
@@ -312,7 +312,7 @@ n.d(
                 ],
             });
         },
-        eW: P,
-        th: U,
+        eW: U,
+        th: P,
     },
 );

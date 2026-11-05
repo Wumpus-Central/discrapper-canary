@@ -9,8 +9,8 @@ var l = t(477900),
     d = t(834730),
     h = t(939249),
     g = t(516521),
-    A = t(778858),
-    m = t(171576),
+    m = t(778858),
+    A = t(171576),
     p = t(47167),
     j = t(713654),
     f = t(46054),
@@ -18,16 +18,16 @@ var l = t(477900),
     N = t(734057),
     b = t(792996),
     C = t(596490),
-    E = t(814316);
-function I(e) {
+    I = t(814316);
+function E(e) {
     let { guild: n, channelId: a } = e,
         s = (0, r.bG)([N.A], () => N.A.getChannel(a)),
-        [g, E] = i.useState(!1),
-        I = i.useCallback(() => {
-            A.A.nsfwReturnToSafety(n?.id);
+        [g, I] = i.useState(!1),
+        E = i.useCallback(() => {
+            m.A.nsfwReturnToSafety(n?.id);
         }, [n]),
         _ = i.useCallback(() => {
-            A.A.spoilerAgree(a);
+            m.A.spoilerAgree(a);
         }, [a]),
         y = (0, p.Ay)(s),
         T = null != s ? (0, j.gU)(s) : null,
@@ -49,7 +49,7 @@ function I(e) {
                   })
                 : b.intl.string(b.t["q38/ae"]),
         v = i.useCallback((e) => {
-            null != e && E(e.scrollHeight - e.clientHeight > 1);
+            null != e && I(e.scrollHeight - e.clientHeight > 1);
         }, []),
         k = i.useCallback(() => {
             null != s &&
@@ -88,8 +88,8 @@ function I(e) {
                 : null;
     return (0, l.jsx)(x.A, {
         onAgree: _,
-        onDisagree: I,
-        modalType: m.A5.SPOILER_CHANNEL,
+        onDisagree: E,
+        modalType: A.A5.SPOILER_CHANNEL,
         title: S,
         subtitle: R,
         description: b.intl.string(b.t["08bm2Z"]),
@@ -113,10 +113,10 @@ t.d(
                 }, []),
                 (0, l.jsx)(g.Ch, {
                     ref: r,
-                    className: E.X,
+                    className: I.X,
                     children: (0, l.jsx)("div", {
-                        className: s()(a, E.i),
-                        children: (0, l.jsx)(I, { guild: n, channelId: t }, t),
+                        className: s()(a, I.i),
+                        children: (0, l.jsx)(E, { guild: n, channelId: t }, t),
                     }),
                 })
             );

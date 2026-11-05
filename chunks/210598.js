@@ -13,11 +13,11 @@ function E() {
     return { type: a.K.COVER, title: "", subtitle: "" };
 }
 let A = 0;
-function h() {
+function f() {
     return `field-${A++}`;
 }
-function f() {
-    return { key: h(), title: "", description: "" };
+function h() {
+    return { key: f(), title: "", description: "" };
 }
 function I(e) {
     return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
@@ -34,17 +34,17 @@ function m(e) {
     if (null != e && "file_id" in e)
         return { fileId: e.file_id, width: e.width, height: e.height, isAnimated: e.is_animated ?? !1 };
 }
-function g(e) {
+function T(e) {
     let t = m(e.image);
     return {
-        key: h(),
+        key: f(),
         title: e.title ?? "",
         description: e.description ?? "",
         image: t,
         hideImage: null == t || void 0,
     };
 }
-function T(e) {
+function g(e) {
     if (null != e)
         return "localDataUri" in e
             ? { filename: e.filename, original_hash: e.originalHash }
@@ -53,11 +53,11 @@ function T(e) {
 function S(e) {
     switch (e.type) {
         case a.K.COVER:
-            return { type: e.type, title: e.title, subtitle: e.subtitle, image: T(e.image) };
+            return { type: e.type, title: e.title, subtitle: e.subtitle, image: g(e.image) };
         case a.K.FIELDS: {
             let t = e.fields
                 .filter((e) => !I(e))
-                .map((e) => ({ title: e.title, description: e.description, image: T(e.image) }));
+                .map((e) => ({ title: e.title, description: e.description, image: g(e.image) }));
             return { type: e.type, fields: t };
         }
         default:
@@ -155,7 +155,7 @@ n.d(
         K: E,
         Tu: N,
         g0: function () {
-            return new N({ header: "", sections: [E(), { type: a.K.FIELDS, fields: [f(), f(), f(), f()] }] });
+            return new N({ header: "", sections: [E(), { type: a.K.FIELDS, fields: [h(), h(), h(), h()] }] });
         },
         t0: function () {
             return !(0, o.k8)(l.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE);
@@ -176,7 +176,7 @@ n.d(
                                           image: m(e.image),
                                       };
                                   case a.K.FIELDS:
-                                      return { type: e.type, fields: e.fields.map(g) };
+                                      return { type: e.type, fields: e.fields.map(T) };
                                   default:
                                       return;
                               }
@@ -184,6 +184,6 @@ n.d(
                           .filter(c.Vq);
             return (n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n);
         },
-        yL: f,
+        yL: h,
     },
 );

@@ -1,22 +1,22 @@
-var i = s(582128),
-    c = s(855986),
-    a = s(287809),
-    d = s(526292),
-    l = s(89366),
-    n = s(851746);
-s.d(
+var c = i(582128),
+    d = i(855986),
+    s = i(287809),
+    n = i(526292),
+    r = i(89366),
+    a = i(851746);
+i.d(
     t,
     {},
     {
         i: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = (0, c.bG)([a.default], () => a.default.getCurrentUser()),
-                s = (0, d.k5)(),
-                r = (0, l.QQ)(),
-                f = t?.verified === !0 && t.hasPaidTier2Subscription() && !s && !r;
-            i.useEffect(() => {
-                f && !e && n.A.checkAndFetchReferralsRemaining();
-            }, [f, e]);
+                t = (0, d.bG)([s.default], () => s.default.getCurrentUser()),
+                i = (0, n.k5)(),
+                f = (0, r.QQ)(),
+                b = t?.verified === !0 && t.hasPaidTier2Subscription() && !i && !f;
+            c.useEffect(() => {
+                b && !e && a.A.checkAndFetchReferralsRemaining();
+            }, [b, e]);
         },
     },
 );

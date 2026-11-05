@@ -42,7 +42,7 @@ class A extends a.Ay.PersistedStore {
         return u.frequently;
     }
 }
-let h = new A(s.h, {
+let f = new A(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t, context: n } = e,
             i = _(n, t);
@@ -61,7 +61,7 @@ n.d(
     t,
     {},
     {
-        Ay: h,
+        Ay: f,
         RG: function (e, t) {
             return e
                 .filter((e) => {

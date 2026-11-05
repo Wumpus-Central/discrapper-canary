@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(439372),
     r = n(945810);
 let a = (0, r.mj)({
@@ -89,8 +89,8 @@ let E = [
     },
 ];
 var A = n(50258);
-let h = !1,
-    f = new Map();
+let f = !1,
+    h = new Map();
 async function I(e) {
     let t = window.DiscordNative?.settings;
     t?.set == null || (null != (await t.get(e.settingKey, null)) && (await t.set(e.settingKey, null)));
@@ -98,30 +98,30 @@ async function I(e) {
 async function p(e, t) {
     if (!(0, c.xl)() || window.DiscordNative?.settings?.set == null) return;
     let n = e.readValue(t);
-    (f.set(e.settingKey, n), !0 === e.removeWhenDefault && n === e.defaultValue)
+    (h.set(e.settingKey, n), !0 === e.removeWhenDefault && n === e.defaultValue)
         ? await I(e)
         : n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
           (await window.DiscordNative.settings.set(e.settingKey, n));
 }
 class m extends i.A {
     stores = new Map().set(A.A, () => {
-        if (h)
+        if (f)
             for (let e of E) {
                 let t = e.readValue("experimentStoreUpdate");
-                f.get(e.settingKey) !== t && p(e, "experimentStoreUpdate");
+                h.get(e.settingKey) !== t && p(e, "experimentStoreUpdate");
             }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            h ||
+            f ||
                 window.DiscordNative?.settings?.set == null ||
-                ((0, c.xl)() && ((h = !0), await Promise.all(E.map((e) => p(e, "postConnectionOpen")))));
+                ((0, c.xl)() && ((f = !0), await Promise.all(E.map((e) => p(e, "postConnectionOpen")))));
         },
         LOGOUT: async () => {
-            ((h = !1),
-                f.clear(),
+            ((f = !1),
+                h.clear(),
                 (0, c.xl)() && (await Promise.all(E.filter((e) => !0 === e.removeWhenDefault).map((e) => I(e)))));
         },
     };
 }
-let g = new m();
+let T = new m();

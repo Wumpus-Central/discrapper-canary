@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(855986),
     o = n(195118),
-    d = n(31188),
-    c = n(939249),
+    c = n(31188),
+    d = n(939249),
     u = n(97808),
     h = n(778712),
     p = n(834730),
@@ -16,15 +16,15 @@ var i = n(477900),
     x = n(309010),
     C = n(287809),
     y = n(562153),
-    j = n(303227),
-    I = n(920639),
+    I = n(303227),
+    j = n(920639),
     N = n(538638),
     v = n(781137),
     E = n(544299),
     b = n(687782),
     S = n(792996),
-    _ = n(861089),
-    T = n(505252);
+    T = n(861089),
+    _ = n(505252);
 n.d(
     t,
     {},
@@ -32,26 +32,26 @@ n.d(
         A: function (e) {
             let { channelId: t, note: n, roomWidth: a } = e,
                 [R, O] = (0, l.useState)(!1),
-                P = (0, l.useRef)(null),
-                L = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
+                L = (0, l.useRef)(null),
+                P = (0, r.bG)([C.default], () => C.default.getUser(n.createdBy)),
                 M = (0, r.bG)([g.A], () => g.A.getChannel(t)?.guild_id),
                 w = (0, r.bG)([x.Ay], () => x.Ay.getVoiceChannelId() === t, [t]),
-                U = (0, y.tx)(M, t, L),
+                U = (0, y.tx)(M, t, P),
                 D = (0, E.Sb)({
                     position: n.position,
                     targetLabel: S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
                 });
-            return null == L || null == M
+            return null == P || null == M
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(c.D, {
-                              innerRef: P,
+                          (0, i.jsx)(d.D, {
+                              innerRef: L,
                               role: "listitem",
                               "aria-label": S.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
-                              className: T.kL,
+                              className: _.kL,
                               onClick: () => {
-                                  (R || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), O(!R));
+                                  (R || (0, j.Ql)({ channelId: t, interactionType: "note_opened" }), O(!R));
                               },
                               style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
                               ...D,
@@ -63,22 +63,22 @@ n.d(
                                   O(!1);
                               },
                               closeOnClickOutside: !0,
-                              targetElementRef: P,
+                              targetElementRef: L,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: T.oO,
+                                      className: _.oO,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: T.wx,
+                                              className: _.wx,
                                               children: [
                                                   (0, i.jsxs)("div", {
-                                                      className: T.kQ,
+                                                      className: _.kQ,
                                                       children: [
                                                           (0, i.jsx)(u.eu, {
                                                               "aria-label": U,
-                                                              src: L.getAvatarURL(M, 24),
+                                                              src: P.getAvatarURL(M, 24),
                                                               size: h._3.SIZE_24,
-                                                              className: T.my,
+                                                              className: _.my,
                                                           }),
                                                           (0, i.jsx)(p.E, {
                                                               variant: "body-md/normal",
@@ -88,18 +88,18 @@ n.d(
                                                       ],
                                                   }),
                                                   (0, i.jsx)(m.m, {
-                                                      text: w ? null : S.intl.string(_.default.qRXats),
-                                                      children: (0, i.jsx)(c.D, {
+                                                      text: w ? null : S.intl.string(T.default.qRXats),
+                                                      children: (0, i.jsx)(d.D, {
                                                           onClick: w
                                                               ? function () {
                                                                     null != M &&
-                                                                        (0, j.yF)(M, t, n.objectId).catch((e) =>
+                                                                        (0, I.yF)(M, t, n.objectId).catch((e) =>
                                                                             (0, N.b)(),
                                                                         );
                                                                 }
                                                               : void 0,
                                                           "aria-disabled": !w,
-                                                          className: s()(T.Kk, { [T.Ir]: !w }),
+                                                          className: s()(_.Kk, { [_.Ir]: !w }),
                                                           children: (0, i.jsx)(A.TrashIcon, {
                                                               size: "sm",
                                                               color: "currentColor",
@@ -111,12 +111,12 @@ n.d(
                                           (0, i.jsx)(p.E, {
                                               variant: "body-sm/normal",
                                               color: "text-muted",
-                                              className: T.Qs,
+                                              className: _.Qs,
                                               children: f.A.parseTopic(n.content, !0, { channelId: t }),
                                           }),
                                       ],
                                   }),
-                                  (0, i.jsx)(d.F, {}),
+                                  (0, i.jsx)(c.F, {}),
                               ],
                           }),
                       ],

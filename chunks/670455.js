@@ -16,7 +16,7 @@ var i,
         (r.SAFETY = "SAFETY"),
         (r.BUILDER = "BUILDER"),
         r);
-let h = [
+let f = [
     _.iL.VIDEO_BACKGROUND,
     _.iL.STREAM,
     _.iL.ACTIVITY,
@@ -25,7 +25,7 @@ let h = [
     _.iL.SEARCH_RESULTS,
     _.iL.CONJURE,
 ].reduce((e, t, n) => ({ ...e, [t]: n }), {});
-var f =
+var h =
         (((a = {}).CONNECTION = "CONNECTION"),
         (a.AUDIO = "AUDIO"),
         (a.VIDEO = "VIDEO"),
@@ -69,7 +69,7 @@ var f =
         (o.UNABLE_TO_ENABLE_DEVICE = "UNABLE_TO_ENABLE_DEVICE"),
         (o.DESYNC = "DESYNC"),
         o),
-    g =
+    T =
         (((d = {}).FREEFORM = "FREEFORM"),
         (d.COULD_NOT_LOAD = "COULD_NOT_LOAD"),
         (d.BLACK_SCREEN = "BLACK_SCREEN"),
@@ -82,10 +82,10 @@ var f =
         (d.DESYNC = "DESYNC"),
         (d.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
         d),
-    T = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
+    g = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
     S = (((u = {}).UNSPECIFIED = "UNSPECIFIED"), (u.SELF = "SELF"), (u.SOMEONE = "SOMEONE"), (u.OTHERS = "OTHERS"), u);
 n.d(
     t,
     { MW: () => _.iL },
-    { AO: m, CW: T, Eq: f, P0: E, Rj: ["bad", "neutral", "good"], UV: S, X: p, bO: I, fs: 864e13, h0: A, j6: g, uf: h },
+    { AO: m, CW: g, Eq: h, P0: E, Rj: ["bad", "neutral", "good"], UV: S, X: p, bO: I, fs: 864e13, h0: A, j6: T, uf: f },
 );

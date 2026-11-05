@@ -11,19 +11,19 @@ var i = n(310953),
     _ = n(645959),
     E = n(403362),
     A = n(265422),
-    h = n(652215),
-    f = n(746080);
+    f = n(652215),
+    h = n(746080);
 let I = () => {
     let e = s.A.getMessageRequestsCount() > 0 || l.A.getSpamChannelsCount() > 0;
     return [
-        h.BVt.FRIENDS,
-        (0, a.HF)("navigateToChannel") ? h.BVt.ICYMI : null,
-        c.A.hasLibraryApplication() && !d.l_.getSetting() ? h.BVt.APPLICATION_LIBRARY : null,
-        e ? h.BVt.MESSAGE_REQUESTS : null,
-        h.BVt.APPLICATION_STORE,
-        h.BVt.COLLECTIBLES_SHOP,
-        d.dm.getSetting() ? h.BVt.FAMILY_CENTER : null,
-        h.BVt.QUEST_HOME,
+        f.BVt.FRIENDS,
+        (0, a.HF)("navigateToChannel") ? f.BVt.ICYMI : null,
+        c.A.hasLibraryApplication() && !d.l_.getSetting() ? f.BVt.APPLICATION_LIBRARY : null,
+        e ? f.BVt.MESSAGE_REQUESTS : null,
+        f.BVt.APPLICATION_STORE,
+        f.BVt.COLLECTIBLES_SHOP,
+        d.dm.getSetting() ? f.BVt.FAMILY_CENTER : null,
+        f.BVt.QUEST_HOME,
     ].filter(E.Vq);
 };
 function p() {
@@ -42,15 +42,15 @@ function p() {
             let c = l[d];
             if (I().includes(c)) {
                 let e;
-                ((e = u.A.getCurrentRoute()), c === h.BVt.APPLICATION_STORE && null != e ? (0, A.a)(e) : (0, A.a)(c));
-            } else ((n = h.ME), (0, A.i)(n, c));
+                ((e = u.A.getCurrentRoute()), c === f.BVt.APPLICATION_STORE && null != e ? (0, A.a)(e) : (0, A.a)(c));
+            } else ((n = f.ME), (0, A.i)(n, c));
         })(e);
     else {
         var n, a, s;
         let l, d;
         ((l = o.A.getState().channelId),
             (d = (0, i.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id)),
-            (0, r.K)(t) && d.unshift(f.VV.GUILD_HOME),
+            (0, r.K)(t) && d.unshift(h.VV.GUILD_HOME),
             (n = (null != l ? d.indexOf(l) : -1) + e),
             (a = d.length),
             (s = d[n < 0 ? a - 1 : n >= a ? 0 : n]),
@@ -58,8 +58,8 @@ function p() {
     }
 }
 var m = n(963169),
-    g = n(345942),
-    T = n(309010),
+    T = n(345942),
+    g = n(309010),
     S = n(967198),
     N = n(723702);
 let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) },
@@ -69,12 +69,12 @@ let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) 
         comboKeysBindGlobal: !0,
         action() {
             let e;
-            if (null != S.A.getGuildId()) e = h.ME;
+            if (null != S.A.getGuildId()) e = f.ME;
             else {
                 let t = S.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, A.i)(t, T.Ay.getChannelId(t)));
+                null != t && ((e = t), (0, A.i)(t, g.Ay.getChannelId(t)));
             }
-            return (null != e && (0, g.u)(e), !1);
+            return (null != e && (0, T.u)(e), !1);
         },
     },
     L = {

@@ -12,10 +12,10 @@ let c = [],
 function A() {
     return E && o.A.getConfig({ location: "ChannelTabsStore" }).enabled && (0, i.xl)();
 }
-function h(e) {
+function f(e) {
     return { id: String(_++), ...e, pinned: !1, entries: [e], index: 0 };
 }
-function f(e, t, n, i) {
+function h(e, t, n, i) {
     return { id: e.id, pinned: e.pinned, ...t, entries: n, index: i };
 }
 function I(e) {
@@ -29,7 +29,7 @@ function I(e) {
         return;
     }
     if (c.length >= 25) return !1;
-    let n = h(e);
+    let n = f(e);
     ((c = [...c, n]), (u = n.id));
 }
 function p(e) {
@@ -41,9 +41,9 @@ function m(e) {
     let n = t.index + e,
         i = t.entries[n];
     if (null == i) return !1;
-    c = c.map((e) => (e.id === u ? f(e, i, e.entries, n) : e));
+    c = c.map((e) => (e.id === u ? h(e, i, e.entries, n) : e));
 }
-function g(e) {
+function T(e) {
     let { channel: t } = e;
     if (!A()) return !1;
     function n(e) {
@@ -57,7 +57,7 @@ function g(e) {
     }
     c = i;
 }
-class T extends r.Ay.PersistedStore {
+class g extends r.Ay.PersistedStore {
     static displayName = "ChannelTabsStore";
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
@@ -112,17 +112,17 @@ class T extends r.Ay.PersistedStore {
         return null != e && e.index < e.entries.length - 1;
     }
 }
-let S = new T(a.h, {
+let S = new g(a.h, {
     CHANNEL_TABS_OPEN: function (e) {
         if (c.length >= 25) return !1;
         if (0 === c.length) {
             let e = s.Ay.getCurrentlySelectedChannelId();
             if (null != e && !(0, d.jq)(e)) {
-                let t = h({ kind: "channel", channelId: e, guildId: l.A.getGuildId() ?? null });
+                let t = f({ kind: "channel", channelId: e, guildId: l.A.getGuildId() ?? null });
                 ((c = [t]), (u = t.id));
             }
         }
-        let t = h(
+        let t = f(
             "route" === e.kind
                 ? { kind: "route", routePath: e.routePath, routeLabel: e.routeLabel }
                 : { kind: "channel", channelId: e.channelId, guildId: e.guildId },
@@ -177,7 +177,7 @@ let S = new T(a.h, {
             if (!A() || c.length > 0) return;
             let e = s.Ay.getCurrentlySelectedChannelId();
             if (null != e && !(0, d.jq)(e)) {
-                let t = h({ kind: "channel", channelId: e, guildId: l.A.getGuildId() ?? null });
+                let t = f({ kind: "channel", channelId: e, guildId: l.A.getGuildId() ?? null });
                 ((c = [t]), (u = t.id));
             }
         })();
@@ -187,7 +187,7 @@ let S = new T(a.h, {
         if (!A()) return !1;
         let i = { kind: "route", routePath: t, routeLabel: n };
         if (0 === c.length) {
-            let e = h(i);
+            let e = f(i);
             ((c = [e]), (u = e.id));
             return;
         }
@@ -201,7 +201,7 @@ let S = new T(a.h, {
                 : void (c = c.map((e) => {
                       if (e.id !== u) return e;
                       let t = [...e.entries.slice(0, e.index + 1), i];
-                      return f(e, i, t, t.length - 1);
+                      return h(e, i, t, t.length - 1);
                   })))
         );
     },
@@ -210,7 +210,7 @@ let S = new T(a.h, {
         if (!A() || null == t || (0, d.jq)(t)) return !1;
         let i = { kind: "channel", channelId: t, guildId: n ?? null };
         if (0 === c.length) {
-            let e = h(i);
+            let e = f(i);
             ((c = [e]), (u = e.id));
             return;
         }
@@ -224,12 +224,12 @@ let S = new T(a.h, {
                 : void (c = c.map((e) => {
                       if (e.id !== u) return e;
                       let t = [...e.entries.slice(0, e.index + 1), i];
-                      return f(e, i, t, t.length - 1);
+                      return h(e, i, t, t.length - 1);
                   })))
         );
     },
-    CHANNEL_DELETE: g,
-    THREAD_DELETE: g,
+    CHANNEL_DELETE: T,
+    THREAD_DELETE: T,
     LOGOUT: function () {
         if (0 === c.length) return !1;
         ((c = []), (u = null));

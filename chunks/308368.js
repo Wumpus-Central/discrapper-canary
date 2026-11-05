@@ -65,8 +65,8 @@ n.d(
                 let { channelId: t, type: n, activity: r, content: a, targetUserId: d, location: E } = e,
                     A = o.A.getChannel(t);
                 if (null == A) return Promise.resolve(null);
-                let h = l.Ay.parse(A, a ?? "");
-                return c.A.sendMessage(A.id, h, !1, {
+                let f = l.Ay.parse(A, a ?? "");
+                return c.A.sendMessage(A.id, f, !1, {
                     activityAction: { type: n, activity: r, targetUserId: d },
                     location: _.Hx.ACTIVITY_SHARE,
                 }).then(

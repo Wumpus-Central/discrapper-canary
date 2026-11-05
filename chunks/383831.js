@@ -14,8 +14,8 @@ n.d(
         A: function (e) {
             let { location: t, applicationId: n, frameId: u, centerButton: _ = !1, ...E } = e,
                 { parentAnalyticsLocation: A } = (0, s.Ay)(),
-                h = _ ? d.l : d.A;
-            return (0, i.jsx)(h, {
+                f = _ ? d.l : d.A;
+            return (0, i.jsx)(f, {
                 ...E,
                 isTrayButton: !1,
                 onClick: function () {

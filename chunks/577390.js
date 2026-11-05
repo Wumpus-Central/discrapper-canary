@@ -1,14 +1,14 @@
 var i = n(582128),
-    s = n(77157);
+    l = n(77157);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let t = (0, s.A)(e),
-                [n, r] = i.useState(e),
-                [l, c] = i.useState(null != e && null == t);
-            return (n !== e && (r(e), c(null != e && null == t)), l);
+            let t = (0, l.A)(e),
+                [n, s] = i.useState(e),
+                [r, c] = i.useState(null != e && null == t);
+            return (n !== e && (s(e), c(null != e && null == t)), r);
         },
     },
 );

@@ -1,4 +1,4 @@
-(n.d(t, { _g: () => f, S: () => p, s2: () => _, Yn: () => E, tp: () => A, rO: () => h, Dv: () => T, Rd: () => m }),
+(n.d(t, { _g: () => h, S: () => p, s2: () => _, Yn: () => E, tp: () => A, rO: () => f, Dv: () => g, Rd: () => m }),
     n(801541));
 var i = n(889137),
     r = n(440703),
@@ -293,7 +293,7 @@ function A(e) {
         })(e.progress),
     };
 }
-function h(e) {
+function f(e) {
     return {
         id: e.id,
         preview: e.preview,
@@ -303,7 +303,7 @@ function h(e) {
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }
-function f(e) {
+function h(e) {
     return { id: e.id, replacementId: e.replacement_id };
 }
 function I(e) {
@@ -369,7 +369,7 @@ function m(e) {
         tier: e.tier ?? null,
     };
 }
-function g(e) {
+function T(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: (function (e) {
@@ -385,6 +385,6 @@ function g(e) {
         consumed: e.consumed,
     };
 }
-function T(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(g), errors: e.errors };
+function g(e) {
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(T), errors: e.errors };
 }

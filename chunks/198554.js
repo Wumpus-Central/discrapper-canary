@@ -29,8 +29,8 @@ let E = function (e) {
             children: s,
             actions: g,
             handleEditModal: E,
-            keyboardModeEnabled: y,
-            onKeyDown: S,
+            keyboardModeEnabled: S,
+            onKeyDown: y,
             draftType: C,
             size: A = 1,
             ref: b,
@@ -70,7 +70,7 @@ let E = function (e) {
                 }
             },
             onKeyDown: function (e) {
-                if (y) {
+                if (S) {
                     switch (e.which) {
                         case m.Ks6.D:
                             (e.preventDefault(), c.A.remove(n, t, C));
@@ -87,7 +87,7 @@ let E = function (e) {
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
-                    S?.(e);
+                    y?.(e);
                 }
             },
             className: a()(p.Se, l),

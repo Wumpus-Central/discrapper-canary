@@ -1,7 +1,7 @@
-var s = l(477900),
-    i = l(582128),
-    n = l(503698),
-    a = l.n(n),
+var n = l(477900),
+    s = l(582128),
+    i = l(503698),
+    a = l.n(i),
     r = l(939249),
     o = l(7689),
     c = l(646514),
@@ -16,39 +16,39 @@ l.d(
             let {
                     state: t,
                     query: l,
-                    placeholder: n,
+                    placeholder: i,
                     onTextChange: h,
                     onCollapsedClick: p,
                     onClear: g,
                     onBlur: x,
-                    onSubmit: j,
+                    onSubmit: v,
                 } = e,
-                v = i.useRef(null),
-                A = i.useCallback(
+                j = s.useRef(null),
+                C = s.useCallback(
                     (e) => {
-                        "Enter" === e.key && j();
+                        "Enter" === e.key && v();
                     },
-                    [j],
+                    [v],
                 ),
-                C = i.useCallback(() => {
-                    (p(), setTimeout(() => v.current?.focus()));
+                A = s.useCallback(() => {
+                    (p(), setTimeout(() => j.current?.focus()));
                 }, [p]);
             return t === u.Um.COLLAPSED
-                ? (0, s.jsx)(r.D, {
+                ? (0, n.jsx)(r.D, {
                       className: m.qc,
-                      onClick: C,
-                      children: (0, s.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
+                      onClick: A,
+                      children: (0, n.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
                   })
-                : (0, s.jsx)("div", {
+                : (0, n.jsx)("div", {
                       className: a()(m.ON, { [m.Nz]: t === u.Um.FLOATING }),
-                      children: (0, s.jsx)(d.I, {
+                      children: (0, n.jsx)(d.I, {
                           size: "sm",
-                          ref: v,
+                          ref: j,
                           query: l,
-                          placeholder: n,
+                          placeholder: i,
                           onChange: h,
                           onClear: g,
-                          onKeyDown: A,
+                          onKeyDown: C,
                           onBlur: x,
                       }),
                   });

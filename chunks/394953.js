@@ -12,7 +12,7 @@ var u = n(811091),
     _ = n(398269),
     E = n(849077),
     A = n(652215);
-function h(e) {
+function f(e) {
     let { messageId: t, channelId: n, guildId: i, ReadStateStore_: r = c.Ay, GuildStore_: a = d.A } = e;
     if (!r.hasUnread(n)) return !1;
     let s = r.ackMessageId(n);
@@ -28,7 +28,7 @@ n.d(
     t,
     {},
     {
-        EJ: h,
+        EJ: f,
         U4: function () {
             let e = (0, a.yK)([_.A], () => _.A.getNotifyingChannelIds() ?? []),
                 t = (0, a.yK)([c.Ay], () => e.filter((e) => c.Ay.hasUnread(e)), [e]),
@@ -42,7 +42,7 @@ n.d(
                                     let t = o.A.getBasicChannel(e.channel_id);
                                     return (
                                         null != t &&
-                                        h({
+                                        f({
                                             messageId: e.id,
                                             channelId: e.channel_id,
                                             guildId: t.guild_id,

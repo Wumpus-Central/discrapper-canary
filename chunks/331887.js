@@ -1,8 +1,8 @@
 let i;
-var s = n(855986),
-    r = n(73153);
+var r = n(855986),
+    s = n(73153);
 let l = !1;
-class a extends s.Ay.Store {
+class a extends r.Ay.Store {
     static displayName = "DataHarvestStore";
     get harvestType() {
         return i;
@@ -11,7 +11,7 @@ class a extends s.Ay.Store {
         return l;
     }
 }
-let o = new a(r.h, {
+let o = new a(s.h, {
     CONNECTION_OPEN: function () {
         i = void 0;
     },

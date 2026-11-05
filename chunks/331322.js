@@ -23,8 +23,8 @@ n.d(
                 wrap: _ = !1,
                 padding: E = 0,
                 fullWidth: A = !0,
-                style: h,
-                className: f,
+                style: f,
+                className: h,
                 children: I,
                 ref: p,
                 ...m
@@ -36,9 +36,9 @@ n.d(
                 "data-direction": s,
                 "data-wrap": _,
                 "data-full-width": A,
-                className: a()(o.t, f),
+                className: a()(o.t, h),
                 style: {
-                    ...h,
+                    ...f,
                     gap: d(r),
                     ...("number" == typeof (t = E) || "string" == typeof t
                         ? { padding: d(t) }

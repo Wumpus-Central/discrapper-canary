@@ -12,17 +12,17 @@ var i = n(451988),
     E = n(188321),
     A = n(25202);
 n(974477);
-var h = n(392164),
-    f = n(823894),
+var f = n(392164),
+    h = n(823894),
     I = n(355097);
 let p = {
         gifAutoPlay: { value: !1, reasonKey: I._A.GAME_MODE },
         animateEmoji: { value: !1, reasonKey: I._A.GAME_MODE },
-        animateStickers: { value: f.BJ.ANIMATE_ON_INTERACTION, reasonKey: I._A.GAME_MODE },
+        animateStickers: { value: h.BJ.ANIMATE_ON_INTERACTION, reasonKey: I._A.GAME_MODE },
     },
     m = Object.keys(p),
-    g = new i.Ep(),
     T = new i.Ep(),
+    g = new i.Ep(),
     S = new i.Ep(),
     N = 0,
     C = 0,
@@ -35,14 +35,14 @@ function y(e) {
     r.h.dispatch({ type: "GAME_MODE_DISCORD_HOVER_CHANGE", hovered: e });
 }
 function D() {
-    (T.stop(), y(!0));
+    (g.stop(), y(!0));
 }
 function b() {
-    T.start(2e3, () => y(!1));
+    g.start(2e3, () => y(!1));
 }
 function v() {
     ((R = !1),
-        T.stop(),
+        g.stop(),
         document.documentElement.removeEventListener("mouseenter", D),
         document.documentElement.removeEventListener("mouseleave", b));
 }
@@ -50,8 +50,8 @@ function P(e) {
     N !== e && ((N = e), l.A?.window?.setFrameRate?.(null, e));
 }
 function M(e) {
-    let t = c.A.isWindowFullyInitialized(h.f) ? (c.A.getWindow(h.f) ?? null) : null;
-    (t !== O && ((O = t), (C = 0)), null != t && C !== e && ((C = e), l.A?.window?.setFrameRate?.(h.f, e)));
+    let t = c.A.isWindowFullyInitialized(f.f) ? (c.A.getWindow(f.f) ?? null) : null;
+    (t !== O && ((O = t), (C = 0)), null != t && C !== e && ((C = e), l.A?.window?.setFrameRate?.(f.f, e)));
 }
 function U() {
     let e;
@@ -77,7 +77,7 @@ function w() {
     r.h.isDispatching() ? S.start(0, U, !1) : U();
 }
 function G() {
-    (v(), g.stop(), S.stop(), P(0), M(0));
+    (v(), T.stop(), S.stop(), P(0), M(0));
 }
 class x extends s.A {
     actions = {
@@ -87,7 +87,7 @@ class x extends s.A {
             });
         },
         WINDOW_FOCUS: () => {
-            g.start(2e3, L);
+            T.start(2e3, L);
         },
         LOGOUT: () => G(),
     };

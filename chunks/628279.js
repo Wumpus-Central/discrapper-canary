@@ -16,9 +16,9 @@ let u = {},
     _ = {},
     E = null,
     A = new Set(),
-    h = null;
-function f() {
-    ((_ = {}), (u = {}), (h = null));
+    f = null;
+function h() {
+    ((_ = {}), (u = {}), (f = null));
 }
 class I extends i.Ay.Store {
     initialize() {
@@ -31,7 +31,7 @@ class I extends i.Ay.Store {
         return A.has(e);
     }
     getMostRecentInboundRequest() {
-        return h;
+        return f;
     }
 }
 let p = new I(r.h, {
@@ -53,12 +53,12 @@ let p = new I(r.h, {
     },
     STREAM_REQUEST_REMINDER_DISMISS: function (e) {
         let { messageId: t } = e;
-        if (h?.id !== t) return !1;
-        h = null;
+        if (f?.id !== t) return !1;
+        f = null;
     },
     STREAM_START: function () {
-        if (null == h) return !1;
-        h = null;
+        if (null == f) return !1;
+        f = null;
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, sendMessageOptions: n, message: i, optimistic: r } = e;
@@ -76,7 +76,7 @@ let p = new I(r.h, {
                     return t === a;
                 }) &&
                 !!d.getConfig({ location: "RequestToStreamStore" }).showReminderPanel &&
-                void (h = (0, s.rh)(i))
+                void (f = (0, s.rh)(i))
             );
         if (null == i.nonce) return !1;
         let E = u[i.nonce];
@@ -85,23 +85,23 @@ let p = new I(r.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { id: t } = e;
-        for (let [e, n] of (delete u[t], h?.id === t && (h = null), Object.entries(_))) t === n && delete _[e];
+        for (let [e, n] of (delete u[t], f?.id === t && (f = null), Object.entries(_))) t === n && delete _[e];
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t, currentVoiceChannelId: n } = e;
         if (t === n) return !1;
-        f();
+        h();
     },
     VOICE_STATE_UPDATES: function () {
         if (o.A.getWasMoved()) {
             if (o.A.getChannelId() === E) return !1;
-            ((E = o.A.getChannelId()), f());
+            ((E = o.A.getChannelId()), h());
         } else {
             if (null == E) return !1;
             E = null;
         }
     },
     LOGOUT: function () {
-        (f(), A.clear());
+        (h(), A.clear());
     },
 });

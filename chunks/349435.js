@@ -28,13 +28,13 @@ function A(e) {
             : E.delete(e.id)),
         null == t && (null != _[e.id] && delete _[e.id], E.delete(e.id)));
 }
-function h() {
+function f() {
     ((_ = {}),
         Object.values(l.A.getMutablePrivateChannels()).forEach((e) => {
             A(e);
         }));
 }
-class f extends a.Ay.Store {
+class h extends a.Ay.Store {
     initialize() {
         this.waitFor(l.A);
     }
@@ -48,7 +48,7 @@ class f extends a.Ay.Store {
         return E.has(e);
     }
 }
-let I = new f(s.h, {
+let I = new h(s.h, {
     CHANNEL_CREATE: function (e) {
         A(e.channel);
     },
@@ -61,8 +61,8 @@ let I = new f(s.h, {
             A(e);
         });
     },
-    CONNECTION_OPEN: h,
-    CONNECTION_OPEN_SUPPLEMENTAL: h,
+    CONNECTION_OPEN: f,
+    CONNECTION_OPEN_SUPPLEMENTAL: f,
     CHANNEL_SAFETY_WARNING_FEEDBACK: function (e) {
         let { channelId: t, warningId: n, feedbackType: i } = e,
             r = _[t];

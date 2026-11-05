@@ -79,21 +79,21 @@ n.d(
                         : o.A.fetchMessages({ guildId: t, channelId: s }));
             },
             openThreadAsSidebar(e) {
-                let { guildId: t, baseChannelId: n, channelId: l, flash: A = !0, details: h } = e,
-                    f = u.A.getChannel(n);
-                null != f && (0, c.oI)(f.type) && !(0, s.rm)()
-                    ? (0, d.bG)(E.BVt.CHANNEL(t, l, h.initialMessageId ?? void 0))
+                let { guildId: t, baseChannelId: n, channelId: l, flash: A = !0, details: f } = e,
+                    h = u.A.getChannel(n);
+                null != h && (0, c.oI)(h.type) && !(0, s.rm)()
+                    ? (0, d.bG)(E.BVt.CHANNEL(t, l, f.initialMessageId ?? void 0))
                     : (i.h.dispatch({
                           type: "SIDEBAR_VIEW_CHANNEL",
                           sidebarType: _.PE.VIEW_CHANNEL,
                           baseChannelId: n,
                           channelId: l,
-                          details: h,
+                          details: f,
                       }),
-                      null != h.initialMessageId
+                      null != f.initialMessageId
                           ? r.A.jumpToMessage({
                                 channelId: l,
-                                messageId: h.initialMessageId,
+                                messageId: f.initialMessageId,
                                 flash: A,
                                 jumpType: a.vx.INSTANT,
                             })

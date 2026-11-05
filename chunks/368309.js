@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(831318),
     E = n(976860),
     A = n(495867),
-    h = n(129230),
-    f = n(676279),
+    f = n(129230),
+    h = n(676279),
     I = n(722178),
     p = n(652215),
     m = n(682901),
-    g = n(792996),
-    T = n(644242),
+    T = n(792996),
+    g = n(644242),
     S = n(309427);
 n.d(
     t,
@@ -24,10 +24,10 @@ n.d(
     {
         default: function (e) {
             let { onClose: t, analyticsLocations: n, ...a } = e,
-                N = (0, f.TM)() ? T.A : S.A,
+                N = (0, h.TM)() ? g.A : S.A,
                 { analyticsLocations: C } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
             (0, s.Ay)(() => {
-                (h.default.track(p.HAw.PREMIUM_UPSELL_VIEWED, {
+                (f.default.track(p.HAw.PREMIUM_UPSELL_VIEWED, {
                     type: m.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED,
                     is_external: !0,
                     location_section: p.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
@@ -40,7 +40,7 @@ n.d(
                     ));
             });
             let O = (0, r.useCallback)(() => {
-                (h.default.track(p.HAw.PREMIUM_PROMOTION_OPENED, {
+                (f.default.track(p.HAw.PREMIUM_PROMOTION_OPENED, {
                     location_section: p.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
                     location_object: p.ZSU.NAVIGATION_LINK,
                 }),
@@ -51,11 +51,11 @@ n.d(
             return (0, i.jsx)(o.f5, {
                 value: C,
                 children: (0, i.jsx)(_.A, {
-                    title: g.intl.string(g.t.jGDYF0),
-                    subtitle: g.intl.string(g.t["grL/hg"]),
+                    title: T.intl.string(T.t.jGDYF0),
+                    subtitle: T.intl.string(T.t["grL/hg"]),
                     graphic: { type: "video", src: N, loop: !0, loopAt: 5 },
                     gradientColor: "nitro-green",
-                    secondaryCTA: g.intl.string(g.t.ZnqyZ2),
+                    secondaryCTA: T.intl.string(T.t.ZnqyZ2),
                     onSecondaryClick: O,
                     onClose: t,
                     ...a,

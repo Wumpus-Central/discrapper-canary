@@ -37,22 +37,22 @@ function c(e) {
                     [l, c] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(d, n, o, a), [n, a]),
                     _ = c?.variantId,
                     A = c?.trackedVariantId ?? _,
-                    h = c?.revision,
-                    f = c?.isOverride,
+                    f = c?.revision,
+                    h = c?.isOverride,
                     I = c?.exposureTrackingEnabled,
                     p = c?.useAsEligibility,
                     m = E(c),
-                    g = null == m;
+                    T = null == m;
                 return ((0, i.useEffect)(() => {
                     null == l ||
                         null == A ||
-                        null == h ||
-                        !1 !== f ||
+                        null == f ||
+                        !1 !== h ||
                         !0 !== I ||
                         !0 === p ||
-                        g ||
-                        t.trackExperimentExposure(l, o, e.location, d, h, A, n);
-                }, [n, l, A, h, e.location, f, I, p, g]),
+                        T ||
+                        t.trackExperimentExposure(l, o, e.location, d, f, A, n);
+                }, [n, l, A, f, e.location, h, I, p, T]),
                 null == _ || !0 === p || null == m)
                     ? u
                     : m;
@@ -64,16 +64,16 @@ function c(e) {
                     c = l?.variantId,
                     _ = l?.trackedVariantId ?? c,
                     A = l?.revision,
-                    h = l?.isOverride,
-                    f = l?.exposureTrackingEnabled,
+                    f = l?.isOverride,
+                    h = l?.exposureTrackingEnabled,
                     I = l?.useAsEligibility,
                     p = E(l);
                 return (i?.autoTrackExposure !== !1 &&
                     null != s &&
                     null != _ &&
                     null != A &&
-                    !1 === h &&
-                    !0 === f &&
+                    !1 === f &&
+                    !0 === h &&
                     !0 !== I &&
                     null != p &&
                     t.trackExperimentExposure(s, o, e.location, d, A, _, r),

@@ -124,8 +124,8 @@ t.d(
                     messageId: E,
                 });
             }
-            let P = (0, s.A)();
-            function O(e) {
+            let O = (0, s.A)();
+            function P(e) {
                 return (0, l.jsx)(o.u, {
                     asset: T("jumbo"),
                     title: n.name,
@@ -138,7 +138,7 @@ t.d(
                     onTooltipShow: () => {
                         (_(!0),
                             i &&
-                                (C({ emojiNode: n, isCustomEmoji: !0, nonce: P }),
+                                (C({ emojiNode: n, isCustomEmoji: !0, nonce: O }),
                                 (0, h.K)(A.Vl.CustomEmojiTooltipShown)));
                     },
                     children: (0, l.jsx)(c.D, {
@@ -153,7 +153,7 @@ t.d(
                               }
                             : void 0,
                         onMouseLeave: () => {
-                            S && (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: P }), _(!1));
+                            S && (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: O }), _(!1));
                         },
                         tag: "span",
                         tabIndex: m ? 0 : -1,
@@ -168,7 +168,7 @@ t.d(
                       scrollBehavior: "close",
                       align: "center",
                       onRequestClose: () => {
-                          (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: P }), _(!1), L(!1));
+                          (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: O }), _(!1), L(!1));
                       },
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
@@ -178,14 +178,14 @@ t.d(
                               ...e,
                               node: n,
                               refreshPositionKey: () => b(String(Date.now())),
-                              nonce: P,
+                              nonce: O,
                           });
                       },
                       positionKey: N,
                       targetElementRef: w,
-                      children: O,
+                      children: P,
                   })
-                : O();
+                : P();
         },
     },
 );

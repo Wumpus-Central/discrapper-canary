@@ -10,8 +10,8 @@ let s = [],
     _ = new Map(),
     E = new Map(),
     A = new Map(),
-    h = new Map();
-class f extends r.Ay.Store {
+    f = new Map();
+class h extends r.Ay.Store {
     static displayName = "CollectiblesShopHomesStore";
     getLastSuccessfulFetch(e) {
         return o.get(e);
@@ -32,7 +32,7 @@ class f extends r.Ay.Store {
         return A.get(e) ?? s;
     }
     getCategories(e) {
-        return h.get(e) ?? l;
+        return f.get(e) ?? l;
     }
     getHasKnownStaleData(e) {
         return E.get(e);
@@ -41,7 +41,7 @@ class f extends r.Ay.Store {
         return i;
     }
 }
-let I = new f(a.h, {
+let I = new h(a.h, {
     COLLECTIBLES_SHOP_HOME_FETCH: function (e) {
         (_.set(e.tab, !0),
             u.set(e.tab, void 0),
@@ -52,7 +52,7 @@ let I = new f(a.h, {
     },
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: function (e) {
         (A.set(e.tab, e.shopHome.shopBlocks),
-            h.set(e.tab, e.shopHome.categories),
+            f.set(e.tab, e.shopHome.categories),
             o.set(e.tab, Date.now()),
             _.set(e.tab, !1),
             u.set(e.tab, void 0),
@@ -61,7 +61,7 @@ let I = new f(a.h, {
     },
     COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: function (e) {
         (A.set(e.tab, s),
-            h.set(e.tab, l),
+            f.set(e.tab, l),
             _.set(e.tab, !1),
             u.set(e.tab, e.error),
             d.set(e.tab, Date.now()),
@@ -71,7 +71,7 @@ let I = new f(a.h, {
         i = e.shopHomeConfigOverride;
     },
     LOGOUT: function () {
-        (A.clear(), h.clear(), c.clear(), u.clear(), _.clear(), o.clear(), d.clear(), E.clear(), (i = void 0));
+        (A.clear(), f.clear(), c.clear(), u.clear(), _.clear(), o.clear(), d.clear(), E.clear(), (i = void 0));
     },
 });
 n.d(t, {}, { A: I });

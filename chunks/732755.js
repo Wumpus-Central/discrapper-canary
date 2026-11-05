@@ -10,13 +10,13 @@ var i = n(812729),
     _ = n(994500),
     E = n(309010),
     A = n(287809),
-    h = n(488926),
-    f = n(63995),
+    f = n(488926),
+    h = n(63995),
     I = n(597886),
     p = n(82149),
     m = n(446600),
-    g = n(96566),
-    T = n(516607),
+    T = n(96566),
+    g = n(516607),
     S = n(652215);
 let N = null;
 function C() {
@@ -26,20 +26,20 @@ function C() {
         let t = m.A.getStageInstanceByChannel(e);
         if (null == t) return null;
         let n = d.A.getChannel(e);
-        if (null == n || !h.Ib(S.xBc.VIEW_CHANNEL, n)) return null;
+        if (null == n || !f.Ib(S.xBc.VIEW_CHANNEL, n)) return null;
         let i = c.A.getGuild(n.getGuildId());
         if (null == i || !i.features.has(S.GuildFeatures.DISCOVERABLE)) return null;
         let r = (0, p.eL)(n, t),
             s = N?.party?.id === r ? N : null,
-            l = f.A.getMutableParticipants(n.id, I.ip.SPEAKER),
+            l = h.A.getMutableParticipants(n.id, I.ip.SPEAKER),
             u = l.filter((e) => e.type === I.wY.STREAM).length,
             C = l.length - u,
-            O = f.A.getParticipantCount(e) - u,
+            O = h.A.getParticipantCount(e) - u,
             R = s?.party?.size != null ? s.party.size[1] : 0;
         return {
-            application_id: T.SS,
+            application_id: g.SS,
             name: t.topic ?? n.topic ?? (0, o.m1)(n, A.default, _.A),
-            type: (0, g.xn)(n.id) ? a.$.WATCHING : a.$.LISTENING,
+            type: (0, T.xn)(n.id) ? a.$.WATCHING : a.$.LISTENING,
             timestamps: { start: s?.timestamps?.start ?? new Date().getTime() },
             assets: { small_image: i.icon ?? void 0, small_text: i.name },
             party: { id: r, size: [C, Math.max(O, R)] },
@@ -50,7 +50,7 @@ function C() {
 class O extends s.Ay.Store {
     static displayName = "StageChannelSelfRichPresenceStore";
     initialize() {
-        this.waitFor(d.A, c.A, u.A, E.Ay, f.A, m.A);
+        this.waitFor(d.A, c.A, u.A, E.Ay, h.A, m.A);
     }
     getActivity() {
         return N;

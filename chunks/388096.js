@@ -14,8 +14,8 @@ n.d(
             let { defaultValue: t, onChange: n, scheduledMessageId: u } = e,
                 [_, E] = r.useState(t),
                 A = (0, o._O)(),
-                h = (0, o.yp)(u);
-            function f(e) {
+                f = (0, o.yp)(u);
+            function h(e) {
                 e.isValid() && E(e);
             }
             return (
@@ -33,9 +33,9 @@ n.d(
                                 required: !0,
                                 label: d.intl.string(d.t.pSZKvM),
                                 value: _,
-                                onSelect: f,
+                                onSelect: h,
                                 minDate: A,
-                                maxDate: h,
+                                maxDate: f,
                                 disabled: !1,
                             }),
                         }),
@@ -45,7 +45,7 @@ n.d(
                                 label: d.intl.string(d.t.GOmEb8),
                                 required: !0,
                                 value: _,
-                                onChange: f,
+                                onChange: h,
                                 hideValue: !1,
                                 disabled: !1,
                                 errorMessage: (0, o.Vf)(_, u),

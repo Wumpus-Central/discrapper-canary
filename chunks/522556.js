@@ -9,14 +9,14 @@ var l = t(477900),
     d = t(323073),
     h = t(506164),
     g = t(792996),
-    A = t(814316);
-function m(e) {
+    m = t(814316);
+function A(e) {
     let { guild: n, channelId: t } = e,
         { modalType: a, emphasiseDisagree: s, ...r } = (0, d.k$)(n),
-        A = i.useCallback(() => {
+        m = i.useCallback(() => {
             null != n && o.A.nsfwReturnToSafety(n.id);
         }, [n]),
-        m = i.useCallback(() => {
+        A = i.useCallback(() => {
             null != n && o.A.nsfwAgree(n.id);
         }, [n]),
         p = i.useCallback(() => {
@@ -34,14 +34,14 @@ function m(e) {
         case u.A5.GUILD_LARGE_SERVER:
             return (0, l.jsx)(h.A, {
                 onAgree: p,
-                onDisagree: A,
+                onDisagree: m,
                 modalType: a,
                 agreementButtonVariant: !0 === s ? "secondary" : "primary",
                 disagreementButtonVariant: !0 === s ? "primary" : "secondary",
                 ...j,
             });
         default:
-            return (0, l.jsx)(h.A, { onAgree: m, onDisagree: A, modalType: a, ...j });
+            return (0, l.jsx)(h.A, { onAgree: A, onDisagree: m, modalType: a, ...j });
     }
 }
 t.d(
@@ -58,10 +58,10 @@ t.d(
                 }, []),
                 (0, l.jsx)(r.Ch, {
                     ref: o,
-                    className: A.X,
+                    className: m.X,
                     children: (0, l.jsx)("div", {
-                        className: s()(a, A.i),
-                        children: (0, l.jsx)(m, { guild: n, channelId: t }),
+                        className: s()(a, m.i),
+                        children: (0, l.jsx)(A, { guild: n, channelId: t }),
                     }),
                 })
             );

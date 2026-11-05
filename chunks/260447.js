@@ -1,9 +1,9 @@
 var r = n(582128),
-    i = n(139033),
-    s = n(192308),
+    o = n(139033),
+    i = n(192308),
     a = n(626584),
-    l = n(856383),
-    o = n(794400),
+    s = n(856383),
+    l = n(794400),
     c = n(792996);
 let g = new a.A("RevenueErrorBoundary.tsx");
 class u extends r.PureComponent {
@@ -12,19 +12,19 @@ class u extends r.PureComponent {
         return { app_context: this.getSentryAppContext(), ...(e ? { crashed: "true" } : {}) };
     }
     getSentryExtras(t) {
-        return t instanceof o.v && null != t.extraSentryInformation ? { ...t.extraSentryInformation } : {};
+        return t instanceof l.v && null != t.extraSentryInformation ? { ...t.extraSentryInformation } : {};
     }
     onErrorCaught(t, e, n) {}
     closeAndShowAlert() {
-        ((0, s.s7)(),
-            (0, i.A)({
+        ((0, i.s7)(),
+            (0, o.A)({
                 title: c.intl.string(c.t.iufib1),
                 subtitle: c.intl.string(c.t.ZUEGFn),
                 confirmText: c.intl.string(c.t.TyCVIq),
             }));
     }
     getErrorHandlingBehavior(t) {
-        return t instanceof o.v ? t.errorHandlingBehavior : this.props.errorHandlingBehavior;
+        return t instanceof l.v ? t.errorHandlingBehavior : this.props.errorHandlingBehavior;
     }
     getCrashedFlag(t) {
         return "rethrow" === this.getErrorHandlingBehavior(t);
@@ -32,15 +32,15 @@ class u extends r.PureComponent {
     emitSentryException(t, e) {
         let n,
             { additionalAnalyticsData: r } = this.props,
-            i = this.getCrashedFlag(t),
-            s = this.getSentryExtras(t),
+            o = this.getCrashedFlag(t),
+            i = this.getSentryExtras(t),
             a = {
-                tags: this.getSentryTags(t, i),
-                extra: { ...s, ...(r ?? {}), ...(null != e ? { reactErrorInfo: e } : {}) },
+                tags: this.getSentryTags(t, o),
+                extra: { ...i, ...(r ?? {}), ...(null != e ? { reactErrorInfo: e } : {}) },
             };
         return (
-            (t instanceof o.v && t.skipReportingToSentry) || (n = l.A.captureException(t, a)),
-            g.error("Revenue error occurred:", { error: t, additionalErrorContext: s }),
+            (t instanceof l.v && t.skipReportingToSentry) || (n = s.A.captureException(t, a)),
+            g.error("Revenue error occurred:", { error: t, additionalErrorContext: i }),
             { sentryErrorOptions: a, sentryEventId: n }
         );
     }

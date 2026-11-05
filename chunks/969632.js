@@ -11,8 +11,8 @@ var o = n(505527),
     _ = n(596344),
     E = n(576705),
     A = n(994500),
-    h = n(927813),
-    f = n(562153);
+    f = n(927813),
+    h = n(562153);
 n(412136);
 var I = n(652215),
     p = n(792996);
@@ -32,7 +32,7 @@ n.d(
                 d = _.A.getMessage(t, e);
             if (null == d) return "";
             let E = d.getReaction({ id: n, name: "", animated: !1 }),
-                h = E?.count_details?.vote ?? 0,
+                f = E?.count_details?.vote ?? 0,
                 I =
                     ((i = d.getChannelId()),
                     (a = u.A.getReactions(i, d.id, { id: n, name: "", animated: !1 }, 3, o.v.VOTE)),
@@ -40,10 +40,10 @@ n.d(
                     r()(Array.from(a?.values() ?? []))
                         .reject((e) => A.A.isBlockedOrIgnored(e.id))
                         .take(3)
-                        .map((e) => f.Ay.getName(l, s?.id, e))
+                        .map((e) => h.Ay.getName(l, s?.id, e))
                         .value());
             if (0 === I.length) return "";
-            let m = Math.max(0, h - I.length);
+            let m = Math.max(0, f - I.length);
             if (1 === I.length)
                 if (m > 0) return p.intl.formatToPlainString(p.t["SV/iZn"], { a: I[0], n: m });
                 else return I[0];
@@ -66,7 +66,7 @@ n.d(
                 }),
                 i =
                     e?.duration != null
-                        ? ((t = e.duration), new Date(Date.now() + t * h.A.Millis.HOUR).toISOString())
+                        ? ((t = e.duration), new Date(Date.now() + t * f.A.Millis.HOUR).toISOString())
                         : "0";
             return { ...e, expiry: i, answers: n };
         },

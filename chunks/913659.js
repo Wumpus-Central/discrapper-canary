@@ -116,13 +116,13 @@ let A = new E(s.h, {
     EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: _,
     DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: _,
 });
-var h = n(626584),
-    f = n(776231),
+var f = n(626584),
+    h = n(776231),
     I = n(652215);
 let p = "https://i.scdn.co/image/",
     m = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-    g = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
-    T = {
+    T = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+    g = {
         [I.fg2.SPOTIFY]: { deserialize: (e) => `${p}${encodeURIComponent(e)}`, serialize: (e) => e.split(p)[1] },
         [I.fg2.TWITCH]: {
             deserialize: (e, t) => {
@@ -145,7 +145,7 @@ let p = "https://i.scdn.co/image/",
                 return ((t = encodeURIComponent(e)), `https://i.ytimg.com/vi/${t}/hqdefault_live.jpg`);
             },
             serialize: (e) => {
-                let t = e.match(g);
+                let t = e.match(T);
                 return null != t ? t[1] : null;
             },
         },
@@ -156,7 +156,7 @@ let p = "https://i.scdn.co/image/",
                 try {
                     t = new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT);
                 } catch {
-                    new h.A("ApplicationAssetUtils").warn(`getAssetImage: invalid media proxy asset path: ${e}`);
+                    new f.A("ApplicationAssetUtils").warn(`getAssetImage: invalid media proxy asset path: ${e}`);
                     return;
                 }
                 let n = e.toLowerCase().endsWith(".gif"),
@@ -179,26 +179,26 @@ async function N(e) {
     );
 }
 function C(e, t) {
-    let n = T[e].serialize(t);
+    let n = g[e].serialize(t);
     return null != n && "" !== n ? `${e}:${n.toString()}` : null;
 }
 function O(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, i] = t.split(":");
-        return Object.prototype.hasOwnProperty.call(T, e)
+        return Object.prototype.hasOwnProperty.call(g, e)
             ? e === I.fg2.TWITCH
                 ? null == n || "number" == typeof n
-                    ? void new h.A("ApplicationAssetUtils").warn(
+                    ? void new f.A("ApplicationAssetUtils").warn(
                           "getAssetImage: size must === [number, number] for Twitch",
                       )
-                    : T[I.fg2.TWITCH].deserialize(i, n)
-                : T[e].deserialize(i)
+                    : g[I.fg2.TWITCH].deserialize(i, n)
+                : g[e].deserialize(i)
             : void 0;
     }
     if (null == e || null == t) return;
     let r = Array.isArray(n) ? Math.max(...n) : n,
-        s = "number" == typeof r ? `?size=${(0, f.kr)(r)}` : "";
+        s = "number" == typeof r ? `?size=${(0, h.kr)(r)}` : "";
     return null != window.GLOBAL_ENV.CDN_HOST
         ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t}.${i}${s}`
         : `${(0, a.TP)()}/applications/${e}/app-assets/${t}.${i}${s}`;

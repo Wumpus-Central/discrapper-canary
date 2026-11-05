@@ -10,13 +10,13 @@ n.d(
     {},
     {
         A: function (e) {
-            let { name: t, shouldShow: n = !0, delay: d, children: c } = e,
+            let { name: t, shouldShow: n = !0, delay: c, children: d } = e,
                 {
                     tooltipId: u,
                     isVisible: h,
                     targetElementRef: p,
                     trigger: m,
-                } = (0, l.D)({ children: c, shouldShow: n, asContainer: !0, containerTag: "div", delay: d }),
+                } = (0, l.D)({ children: d, shouldShow: n, asContainer: !0, containerTag: "div", delay: c }),
                 A = (0, a.j)({ shouldShow: h }),
                 f = (0, i.jsx)("div", {
                     className: o.Qs,

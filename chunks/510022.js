@@ -11,9 +11,9 @@ n.d(
         n: (e) => {
             let { sku: t, application: u, analyticsLocations: c, entitlement: d, contextKey: m } = e,
                 p = m ?? (0, i.lx)(),
-                C = !1;
-            function h(e) {
-                C = e.shouldIgnoreCloseRequest;
+                h = !1;
+            function C(e) {
+                h = e.shouldIgnoreCloseRequest;
             }
             (0, i.mM)(
                 async () => {
@@ -33,14 +33,14 @@ n.d(
                             application: u,
                             analyticsLocations: c,
                             entitlement: d,
-                            onSetIgnoreCloseRequest: h,
+                            onSetIgnoreCloseRequest: C,
                         });
                 },
                 {
                     modalKey: o,
                     contextKey: p,
                     onCloseRequest: () => {
-                        C || (0, i.Oo)(o, p);
+                        h || (0, i.Oo)(o, p);
                     },
                     onCloseCallback: () => {
                         r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {

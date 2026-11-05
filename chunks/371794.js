@@ -13,7 +13,7 @@ n(723702);
 var E = n(652215);
 n(792996);
 let A = !i.Fr && !i.v1 && -1 !== (0, _.Z5)();
-function h() {
+function f() {
     let e = [];
     return (
         c.A.hasFetchedPaymentSources || e.push(d.A.paymentSourcesFetchRequest ?? (0, s.$o)()),
@@ -67,7 +67,7 @@ n.d(
         },
         aP: async function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            t && o.default.isAuthenticated() && (await Promise.race([h(), new Promise((e) => setTimeout(e, 1e4))]));
+            t && o.default.isAuthenticated() && (await Promise.race([f(), new Promise((e) => setTimeout(e, 1e4))]));
             let n = c.A.getDefaultBillingCountryCode(),
                 i = c.A.defaultPaymentSource?.id ?? null,
                 a = u.A.getPremiumTypeSubscription();
@@ -84,6 +84,6 @@ n.d(
             }
             return r.Bo.get(e);
         },
-        rW: h,
+        rW: f,
     },
 );

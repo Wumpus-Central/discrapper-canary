@@ -12,8 +12,8 @@ e.d(
         K: function (t) {
             let n = t?.channelId,
                 e = (0, i.bG)([a.A], () => a.A.getChannel(n), [n]),
-                [d, h] = (0, s.zP)(e),
-                { activeStream: o, isOwnStream: g } = (0, i.cf)(
+                [o, d] = (0, s.zP)(e),
+                { activeStream: h, isOwnStream: g } = (0, i.cf)(
                     [l.A, r.default],
                     () => ({
                         activeStream: l.A.getActiveStreamForApplicationStream(t),
@@ -21,7 +21,7 @@ e.d(
                     }),
                     [t],
                 ),
-                p = null != o && o.state !== c.XYD.ENDED;
+                p = null != h && h.state !== c.XYD.ENDED;
             return {
                 ...(function (t, n, e) {
                     let i =
@@ -45,8 +45,8 @@ e.d(
                     }
                     let l = u.intl.string(u.t["7Xq/nV"]);
                     return { actionString: i ?? l, actionAriaLabel: `${l}: ${i ?? u.intl.string(u.t["9C444m"])}` };
-                })(g, p, h),
-                canWatch: d,
+                })(g, p, d),
+                canWatch: o,
                 isWatching: p,
                 channel: e,
             };

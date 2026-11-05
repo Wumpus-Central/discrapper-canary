@@ -12,10 +12,10 @@ let _ = null,
 function A(e) {
     return o.A.getGuild(e)?.features.has(u.GuildFeatures.GUILD_THEME) === !0;
 }
-function h(e) {
+function f(e) {
     return (0, c.yX)(o.A.getGuild(e)?.guildTheme);
 }
-function f() {
+function h() {
     return null != _ && ((_ = null), !0);
 }
 function I(e, t, n) {
@@ -25,17 +25,17 @@ function I(e, t, n) {
     );
 }
 function p(e) {
-    return null == e ? f() : I(e, h(e), A(e));
+    return null == e ? h() : I(e, f(e), A(e));
 }
 function m() {
     return p(d.A.getGuildId());
 }
-function g(e) {
+function T(e) {
     if (_?.guildId !== e) return !1;
     let t = d.A.getGuildId();
     return t !== e && p(t);
 }
-function T(e) {
+function g(e) {
     let { guildId: t, guildTheme: n } = e;
     return t === d.A.getGuildId() && I(t, (0, c.yX)(n), A(t));
 }
@@ -53,16 +53,16 @@ let N = new S(s.h, {
     CACHE_LOADED_LAZY: m,
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
-        return null == t ? f() : t !== _?.guildId && p(t);
+        return null == t ? h() : t !== _?.guildId && p(t);
     },
     CONNECTION_OPEN: m,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return g(t.id);
+        return T(t.id);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t } = e;
-        return g(t);
+        return T(t);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
@@ -80,7 +80,7 @@ let N = new S(s.h, {
                     (l.A.getStateForGuild(e)?.unlockedPowerups?.[r.d0] == null ||
                         ((t = n.guildTheme), t?.enabled === !0))
                         ? n.guildTheme
-                        : h(e);
+                        : f(e);
                 return I(e, a, i);
             })(t.id) && (n = !0),
             n
@@ -94,12 +94,12 @@ let N = new S(s.h, {
         let { guildId: t, entitlements: n } = e;
         return !!n.some((e) => e.sku_id === r.d0) && t === _?.guildId && E !== t && ((E = t), !0);
     },
-    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: T,
-    GUILD_THEME_PREVIEW_SAVE_SUCCESS: T,
+    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: g,
+    GUILD_THEME_PREVIEW_SAVE_SUCCESS: g,
     OVERLAY_INITIALIZE: m,
     LOGOUT: function () {
         let e = null != E;
-        return ((E = null), f() || e);
+        return ((E = null), h() || e);
     },
 });
 n.d(t, {}, { A: N });

@@ -179,8 +179,8 @@ class A extends r.EventEmitter {
             }));
     }
 }
-var h = n(358579),
-    f = n(820465);
+var f = n(358579),
+    h = n(820465);
 class I extends A {
     async uploadFiles(e) {
         super.upload(e);
@@ -196,11 +196,11 @@ class I extends A {
         try {
             if (((this.files = e), this._aborted)) return t;
             this._handleStart(() => n.abort());
-            let i = (0, f.M)();
+            let i = (0, h.M)();
             if (!(await this.compressAndCheckFileSize({ deferTotalSizeCheckUntilAfterCompression: i }))) return t;
             this.setUploadingTextForUI();
             try {
-                await (0, h.A)(this.files, !0, this._recomputeProgress.bind(this));
+                await (0, f.A)(this.files, !0, this._recomputeProgress.bind(this));
             } finally {
                 this.setUploadingTextForUI();
             }

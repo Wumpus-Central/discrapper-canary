@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(367513),
     o = t(303227),
     c = t(558076),
-    d = t(360729),
-    u = t(628983),
+    u = t(360729),
+    d = t(628983),
     A = t(806931),
     h = t(792996);
 t.d(
@@ -14,8 +14,8 @@ t.d(
     {},
     {
         A: function (e, n) {
-            let t = (0, s.bG)([u.A], () => u.A.getSelectedParticipant(e), [e]),
-                { enabled: m } = (0, d.mf)({ guildId: n, location: "useGridViewItem" }),
+            let t = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(e), [e]),
+                { enabled: m } = (0, u.mf)({ guildId: n, location: "useGridViewItem" }),
                 { isGuildRoomVisible: g, isVideoOverlayVisible: x } = (0, s.cf)(
                     [c.A],
                     () => ({

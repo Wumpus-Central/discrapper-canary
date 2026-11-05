@@ -1,4 +1,4 @@
-let l = (0, n(945810).mj)({
+let i = (0, n(945810).mj)({
     name: "2025-09-video-qoe-metrics-tracking",
     kind: "user",
     defaultConfig: { externalAnalyticsEnabled: !1 },
@@ -10,7 +10,7 @@ n.d(
     {
         _: function (e) {
             let { location: t } = e;
-            return l.getConfig({ location: t });
+            return i.getConfig({ location: t });
         },
     },
 );

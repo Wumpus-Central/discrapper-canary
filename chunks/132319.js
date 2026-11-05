@@ -1,27 +1,27 @@
 var n = a(443184),
     t = a(696016),
     i = a(683825),
-    d = a(792996);
-let o = new Intl.DateTimeFormat(void 0, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
-function r(l) {
-    if (null != l.name && "" !== l.name) return l.name;
-    let e = l.decision?.signal;
-    if (e?.type === t.Gy.GAME_EVENT) {
-        let a = e.description ?? (0, n.PZ)(l.applicationId, t.Gy.GAME_EVENT, e.eventName);
+    o = a(792996);
+let d = new Intl.DateTimeFormat(void 0, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+function c(e) {
+    if (null != e.name && "" !== e.name) return e.name;
+    let l = e.decision?.signal;
+    if (l?.type === t.Gy.GAME_EVENT) {
+        let a = l.description ?? (0, n.PZ)(e.applicationId, t.Gy.GAME_EVENT, l.eventName);
         if (null != a) return a;
     }
-    let a = l.activity?.details;
+    let a = e.activity?.details;
     return null != a && "" !== a
         ? a
-        : d.intl.formatToPlainString(i.default.YMk5qU, { time: o.format(new Date(l.createdAt)) });
+        : o.intl.formatToPlainString(i.default.YMk5qU, { time: d.format(new Date(e.createdAt)) });
 }
 a.d(
-    e,
+    l,
     {},
     {
-        J: function (l) {
-            return null != l.name && "" !== l.name ? l : { ...l, name: r(l) };
+        J: function (e) {
+            return null != e.name && "" !== e.name ? e : { ...e, name: c(e) };
         },
-        l: r,
+        l: c,
     },
 );

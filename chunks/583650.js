@@ -18,11 +18,11 @@ n.d(
                     onInteraction: E,
                     onKeyDown: A,
                 } = n,
-                h = r.useRef(null);
+                f = r.useRef(null);
             return (
                 r.useImperativeHandle(
                     t,
-                    () => ({ focus: () => h.current?.focus(), blur: () => h.current?.blur(), activate: () => !1 }),
+                    () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
                     [],
                 ),
                 (0, i.jsx)(a.I, {
@@ -39,7 +39,7 @@ n.d(
                     placeholder: u,
                     autoFocus: !1,
                     "aria-label": _,
-                    ref: h,
+                    ref: f,
                     focusProps: { offset: { top: 2, bottom: 2, left: 4, right: 4 } },
                 })
             );

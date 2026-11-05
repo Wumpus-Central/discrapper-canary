@@ -10,8 +10,8 @@ var i,
     _ = n(652215),
     E = n(792996);
 let A = c.A.Millis.WEEK;
-var h = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
-    f = (((r = {}).ALL = "all"), (r.MENTIONS = "mentions"), (r.BOOKMARKS = "bookmarks"), r),
+var f = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
+    h = (((r = {}).ALL = "all"), (r.MENTIONS = "mentions"), (r.BOOKMARKS = "bookmarks"), r),
     I =
         (((a = {}).ALL_MESSAGES_CHANNEL = "ALL_MESSAGES_CHANNEL"),
         (a.MENTION = "MENTION"),
@@ -19,14 +19,14 @@ var h = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YEST
         a);
 let p = { UNREAD: E.t.sRUdB8, TODAY: E.t.F4jZQs, YESTERDAY: E.t.gnv4pE, OLDER: E.t.exrPZv };
 var m = (((s = {}).UNLOADED = "unloaded"), (s.LOADED = "loaded"), (s.LOADED_UNREAD = "loadedUnread"), s),
-    g =
+    T =
         (((l = {}).AUTO_LOAD = "auto_load"),
         (l.ON_OPEN = "on_open"),
         (l.FILL_SCROLLER = "fill_scroller"),
         (l.USER_SCROLL = "user_scroll"),
         (l.UNKNOWN = "unknown"),
         l),
-    T =
+    g =
         (((o = {}).MENTION = "MENTION"),
         (o.REPLY = "REPLY"),
         (o.REACTION = "REACTION"),
@@ -39,11 +39,11 @@ n.d(
     {},
     {
         Hy: "notifications_inbox_guild_id",
-        Io: f,
-        Th: T,
-        Ur: h,
+        Io: h,
+        Th: g,
+        Ur: f,
         V$: A,
-        VA: g,
+        VA: T,
         Ve: m,
         XU: "Notifications Inbox",
         Yw: function (e) {

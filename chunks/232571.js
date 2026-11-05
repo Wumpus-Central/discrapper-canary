@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(866665),
     r = n(939249),
     o = n(90804),
-    d = n(734057),
-    c = n(309010),
+    c = n(734057),
+    d = n(309010),
     u = n(303227),
     h = n(538638),
     p = n(558076),
@@ -57,14 +57,14 @@ n.d(
     {},
     {
         A: function (e) {
-            let { channelId: t, x: n, y, label: j, roomWidth: I, seat: N } = e,
-                v = (0, a.bG)([c.Ay], () => c.Ay.getVoiceChannelId() === t),
+            let { channelId: t, x: n, y, label: I, roomWidth: j, seat: N } = e,
+                v = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
                 E = (0, a.bG)([p.A], () =>
                     p.A.getRoomUsers(t)
                         .values()
                         .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
                 ),
-                b = (0, a.bG)([d.A], () => d.A.getChannel(t)?.guild_id),
+                b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
                 S = l.useCallback(async () => {
                     null != b &&
                         (v
@@ -73,22 +73,22 @@ n.d(
                               )
                             : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
                 }, [v, b, t, n, y, N]),
-                _ = (0, m.Sb)({
+                T = (0, m.Sb)({
                     position: { x: n, y },
-                    targetLabel: g.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: j }),
+                    targetLabel: g.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: I }),
                 });
             if (E || null == b) return null;
-            let { numericAvatarSize: T } = (0, A.F)(I),
-                R = 1.2 * Math.max(T, 24);
+            let { numericAvatarSize: _ } = (0, A.F)(j),
+                R = 1.2 * Math.max(_, 24);
             return (0, i.jsx)(s.m, {
-                text: v || null != _ ? null : g.intl.string(g.t["96ANUN"]),
+                text: v || null != T ? null : g.intl.string(g.t["96ANUN"]),
                 children: (0, i.jsx)(r.D, {
                     role: "listitem",
-                    "aria-label": j,
+                    "aria-label": I,
                     className: x.am,
                     style: { width: R, height: R, left: `calc(${n}% - ${R / 2}px)`, top: `calc(${y}% - ${R / 2}px)` },
                     onClick: S,
-                    ..._,
+                    ...T,
                     children: (0, i.jsx)(C, {}),
                 }),
             });

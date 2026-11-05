@@ -11,13 +11,13 @@ var i = n(487899),
     _ = n(545152),
     E = n(20015),
     A = n(204776),
-    h = n(878014),
-    f = n(451909),
+    f = n(878014),
+    h = n(451909),
     I = n(327891),
     p = n(486020),
     m = n(723702),
-    g = n(989837),
-    T = n(500049),
+    T = n(989837),
+    g = n(500049),
     S = n(652215),
     N = n(73510),
     C = n(381941),
@@ -27,7 +27,7 @@ function L(e) {
     return e.id !== N.Ik.BUILT_IN;
 }
 function y(e) {
-    return L(e) && (0, h.W)(e, r.U.MAIN);
+    return L(e) && (0, f.W)(e, r.U.MAIN);
 }
 function D(e) {
     let t = b(e),
@@ -95,10 +95,10 @@ n.d(
                             maxSizeCallback: l,
                             commandOrigin: d,
                             sectionName: o,
-                            source: g.A.entrypoint(),
+                            source: T.A.entrypoint(),
                         });
                         if (t.inputType === c.y$.BUILT_IN_TEXT && null != e && null != i.channel) {
-                            let t = f.Ay.parse(u, e.content);
+                            let t = h.Ay.parse(u, e.content);
                             ((t.tts = e.tts ?? !1),
                                 s.A.sendMessage(i.channel.id, t, !0, { location: C.Hx.APP_COMMAND }));
                         }
@@ -174,7 +174,7 @@ n.d(
             return L(e) ? e.name : O.intl.string(O.t.UB2gG2);
         },
         sw: function (e) {
-            return e === T.s4.TEXT;
+            return e === g.s4.TEXT;
         },
         u8: function (e) {
             return L(e) ? e.description : O.intl.string(O.t.X9fusn);

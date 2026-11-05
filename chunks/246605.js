@@ -1,6 +1,6 @@
 var i = n(613412),
-    s = n(620632),
-    r = n(933681),
+    r = n(620632),
+    s = n(933681),
     l = n(73153),
     a = n(274184),
     o = n(129230),
@@ -19,9 +19,9 @@ n.d(
                         url: d.Rsh.USER_SURVEY_SEEN(e),
                         trackedActionData: {
                             event: i.NetworkActionNames.USER_SURVEY_SEEN,
-                            properties: (t) => (0, r.e0)({ key: e }),
+                            properties: (t) => (0, s.e0)({ key: e }),
                         },
-                        rejectWithError: (0, s.fT)(),
+                        rejectWithError: (0, r.fT)(),
                     })
                 );
         },

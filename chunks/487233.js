@@ -40,7 +40,7 @@ l.d(
                         hasMainProfileFallback: a && i,
                     };
                 })(n, l),
-                k = (0, i.z5)(m, I)
+                C = (0, i.z5)(m, I)
                     ? {
                           onClick: () => {
                               ((0, s.rM)(null, I, (e) => (0, d.p)({ guildId: l ?? void 0, avatar: e })),
@@ -50,7 +50,7 @@ l.d(
                           accessibleLabel: f.intl.string(y ? f.t.Y0mxy1 : f.t.twB3fz),
                       }
                     : void 0,
-                C = (0, v._)({ guildId: l, returnRef: b });
+                k = (0, v._)({ guildId: l, returnRef: b });
             return (0, t.jsx)(g.A, {
                 buttonRef: b,
                 userId: n.id,
@@ -58,8 +58,8 @@ l.d(
                 avatarChange: m,
                 currentValueA11yLabel: A,
                 variant: "square",
-                affordance: k,
-                onClick: C,
+                affordance: C,
+                onClick: k,
                 "aria-haspopup": "dialog",
                 disabled: h,
                 errorMessageId: p,

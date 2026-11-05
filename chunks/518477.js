@@ -10,7 +10,7 @@ var i,
     _,
     E = n(70283),
     A = n(652215),
-    h =
+    f =
         (((i = {}).FEATURED = "FEATURED"),
         (i.USER_INFO = "USER_INFO"),
         (i.BOT_INFO = "BOT_INFO"),
@@ -23,7 +23,7 @@ var i,
         (i.WISHLIST = "WISHLIST"),
         (i.MAIN = "MAIN"),
         i),
-    f =
+    h =
         (((r = {}).ROLES = "ROLES"),
         (r.CONNECTIONS = "CONNECTIONS"),
         (r.APPS = "APPS"),
@@ -193,8 +193,8 @@ var i,
         (l.VIEW_NEW_CONTENT_TAB_BADGE = "VIEW_NEW_CONTENT_TAB_BADGE"),
         (l.VIEW_NEW_CONTENT_SIDEBAR = "VIEW_NEW_CONTENT_SIDEBAR"),
         l),
-    g = (((o = {}).PICKER = "PICKER"), (o.SUGGESTED = "SUGGESTED"), o),
-    T =
+    T = (((o = {}).PICKER = "PICKER"), (o.SUGGESTED = "SUGGESTED"), o),
+    g =
         (((d = {}).WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
         (d.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
         (d.WISHLIST_TOGGLE_PUBLIC = "WISHLIST_TOGGLE_PUBLIC"),
@@ -221,16 +221,16 @@ n.d(
             let t = E.$[e];
             return null != t ? t.toLowerCase() : String(e);
         },
-        IE: g,
+        IE: T,
         KM: "user-profile-popout",
         L7: function (e) {
             let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
             return null != n ? `https://${n}/badge-icons/${e}.png` : `${location.protocol}${t}${A.Rsh.BADGE_ICON(e)}`;
         },
-        Mq: T,
+        Mq: g,
         R7: I,
-        RP: h,
-        bk: f,
+        RP: f,
+        bk: h,
         d6: p,
         dS: S,
         jM: C,

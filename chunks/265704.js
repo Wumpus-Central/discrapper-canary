@@ -41,7 +41,7 @@ class A extends c.Ay.Store {
         return o.get(e) ?? null;
     }
 }
-let h = new A(u.h, {
+let f = new A(u.h, {
     LOGOUT: function () {
         _();
     },
@@ -105,4 +105,4 @@ let h = new A(u.h, {
         ((a = new Set()), (o = new Map()));
     },
 });
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

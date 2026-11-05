@@ -7,8 +7,8 @@ var a = n(477900),
     d = n(646514),
     c = n(866665),
     u = n(140735),
-    f = n(707554),
-    m = n(534514),
+    m = n(707554),
+    f = n(534514),
     g = n(834730),
     p = n(915089),
     E = n(94343),
@@ -49,7 +49,7 @@ n.d(
                 "aria-labelledby": j,
                 children: [
                     _
-                        ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: j, children: n }) })
+                        ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: j, children: n }) })
                         : (0, a.jsxs)("div", {
                               className: b.so,
                               children: [
@@ -57,7 +57,7 @@ n.d(
                                       className: b.wx,
                                       style: { color: d.A.colors[x[o]]?.css },
                                       children: [
-                                          (0, a.jsx)(m.D, {
+                                          (0, a.jsx)(f.D, {
                                               variant: i,
                                               color: "currentColor",
                                               className: l,
@@ -70,7 +70,7 @@ n.d(
                                   null != N && (0, a.jsx)(g.E, { variant: "body-xs/normal", children: N }),
                               ],
                           }),
-                    (0, a.jsx)(f.F, { children: t }),
+                    (0, a.jsx)(m.F, { children: t }),
                 ],
             });
         },

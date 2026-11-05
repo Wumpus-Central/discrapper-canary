@@ -9,7 +9,7 @@ var t = l(477900),
     p = l(855986),
     c = l(775602),
     u = l(425763),
-    h = l(792996),
+    S = l(792996),
     f = l(707615);
 l.d(
     s,
@@ -18,14 +18,14 @@ l.d(
         S: function (e) {
             let { className: s } = e,
                 l = [
-                    { keybinds: ["Spacebar", "Enter"], name: h.intl.string(h.t["cs/HVH"]) },
-                    { keybinds: ["up", "down"], name: h.intl.string(h.t.dmMqay) },
-                    { keybinds: ["ESC"], name: h.intl.string(h.t["1ioMJQ"]) },
+                    { keybinds: ["Spacebar", "Enter"], name: S.intl.string(S.t["cs/HVH"]) },
+                    { keybinds: ["up", "down"], name: S.intl.string(S.t.dmMqay) },
+                    { keybinds: ["ESC"], name: S.intl.string(S.t["1ioMJQ"]) },
                 ],
                 a = (0, p.bG)([c.Ay], () => c.Ay.useReducedMotion),
-                S = (0, u.VU)();
+                h = (0, u.VU)();
             return (0, r.p)(
-                S,
+                h,
                 {
                     enter: { from: { opacity: 0, y: 80 * !a }, to: { opacity: 1, y: 0 } },
                     leave: { opacity: 0, y: 80 * !a },

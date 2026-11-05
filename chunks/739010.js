@@ -33,14 +33,14 @@ var i,
         (s[(s.USER_MESSAGE_REMOVAL = 16)] = "USER_MESSAGE_REMOVAL"),
         (s[(s.GUILD_DELETE = 20)] = "GUILD_DELETE"),
         s),
-    h =
+    f =
         (((l = {})[(l.ALL_GOOD = 100)] = "ALL_GOOD"),
         (l[(l.LIMITED = 200)] = "LIMITED"),
         (l[(l.VERY_LIMITED = 300)] = "VERY_LIMITED"),
         (l[(l.AT_RISK = 400)] = "AT_RISK"),
         (l[(l.SUSPENDED = 500)] = "SUSPENDED"),
         l),
-    f =
+    h =
         (((o = {})[(o.DSA_ELIGIBLE = 1)] = "DSA_ELIGIBLE"),
         (o[(o.IN_APP_ELIGIBLE = 2)] = "IN_APP_ELIGIBLE"),
         (o[(o.AGE_VERIFY_ELIGIBLE = 3)] = "AGE_VERIFY_ELIGIBLE"),
@@ -52,4 +52,4 @@ var i,
         (d[(d.IN_APP = 2)] = "IN_APP"),
         d),
     p = (((c = {})[(c.PENDING = 0)] = "PENDING"), (c[(c.SUCCESS = 1)] = "SUCCESS"), (c[(c.FAILED = 2)] = "FAILED"), c);
-n.d(t, {}, { Il: I, PN: h, RH: f, Wi: E, X2: A, Xo: u, Z9: _, nU: p });
+n.d(t, {}, { Il: I, PN: f, RH: h, Wi: E, X2: A, Xo: u, Z9: _, nU: p });

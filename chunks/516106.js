@@ -104,7 +104,7 @@ class A extends s.A {
         return this.availablePlans.find((t) => t.matchesItems(e)) ?? null;
     }
 }
-class h extends s.A {
+class f extends s.A {
     subscriptionId;
     subscriptionPreview;
     updateType;
@@ -113,7 +113,7 @@ class h extends s.A {
         var t, n;
         return null == e
             ? null
-            : new h({
+            : new f({
                   subscriptionId: e.subscription_id ?? null,
                   subscriptionPreview:
                       null == (t = e.subscription_preview)
@@ -147,7 +147,7 @@ class h extends s.A {
             (this.resetBillingCycle = e.resetBillingCycle ?? !1));
     }
 }
-var f = n(818348);
+var h = n(818348);
 class I extends s.A {
     paymentGateway;
     paymentSourceId;
@@ -172,7 +172,7 @@ class I extends s.A {
             (this.invoicePreview = e.invoicePreview ?? null));
     }
     get fiatCurrency() {
-        return this.paymentGateway === f.kM.VIRTUAL_CURRENCY ? null : this.currency;
+        return this.paymentGateway === h.kM.VIRTUAL_CURRENCY ? null : this.currency;
     }
 }
 class p extends s.A {
@@ -200,7 +200,7 @@ class p extends s.A {
             checkoutContextRecord: A.createFromOrder(e),
             createdAt: e.created_at,
             unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
-            subscriptionFacet: h.createFromServer(e.subscription_facet),
+            subscriptionFacet: f.createFromServer(e.subscription_facet),
             promotionsFacet: e.promotions_facet ?? null,
         });
     }
@@ -231,8 +231,8 @@ class p extends s.A {
     }
 }
 var m = n(566980),
-    g = n(424776),
-    T = n(786300);
+    T = n(424776),
+    g = n(786300);
 n(205816);
 var S = n(462180);
 function N(e, t) {
@@ -305,15 +305,15 @@ function X(e) {
 }
 var z = n(811315),
     q = n.n(z),
-    Z = n(529412),
-    Q = n(998312),
+    Q = n(529412),
+    Z = n(998312),
     J = n(860841),
     ee = n(442467),
     et = n(371710),
     en = n(120700),
     ei = n(379912),
     er = n(705822);
-let [ea, es] = (0, T.A)();
+let [ea, es] = (0, g.A)();
 function el(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return es()(e, t);
@@ -602,7 +602,7 @@ function eo(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, Z.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled: i && (0, Q.dW)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;
@@ -619,7 +619,7 @@ function eo(e) {
                         return null != t && null != i && null == t.findInvoiceItemByPlanId(i);
                     },
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(Q.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {
@@ -830,13 +830,13 @@ function eo(e) {
                         } = e,
                         { getCheckoutReviewButtonText: c, purchaseType: u, hasAcceptedTerms: _, get: E } = i(),
                         A = !_ && !E("isCheckoutDataLoading"),
-                        h = l?.text;
-                    null == h &&
-                        (h = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(ei.default.BPzQj4));
-                    let f = l?.variant,
-                        I = c({ hasPaymentSources: a, tenantProvidedButtonText: h }),
+                        f = l?.text;
+                    null == f &&
+                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(ei.default.BPzQj4));
+                    let h = l?.variant,
+                        I = c({ hasPaymentSources: a, tenantProvidedButtonText: f }),
                         p = {
-                            variant: f ?? "active",
+                            variant: h ?? "active",
                             dataTestId: "purchase",
                             onClick: o,
                             disabled: t,
@@ -851,7 +851,7 @@ function eo(e) {
                               type: "submit",
                               dataTestId: "submitButton",
                               loading: n,
-                              ...(null != f ? { variant: f } : { variant: a ? "primary" : "active" }),
+                              ...(null != h ? { variant: h } : { variant: a ? "primary" : "active" }),
                               ...(a ? { onClick: s } : { disabled: !0 }),
                           }
                         : d
@@ -955,7 +955,7 @@ function eo(e) {
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
-            premiumDiscountInfo: g.T,
+            premiumDiscountInfo: T.T,
             setPremiumDiscountInfo: (t) => e({ premiumDiscountInfo: t }),
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),

@@ -4,8 +4,8 @@ var s = t(477900),
     a = t.n(l),
     r = t(317097),
     o = t(36075),
-    d = t(939249),
-    c = t(232042),
+    c = t(939249),
+    d = t(232042),
     u = t(209599);
 t.d(
     n,
@@ -24,7 +24,7 @@ t.d(
                     ...p
                 } = e,
                 [b, N] = i.useState(!1),
-                { gradientStyle: f, gradientClassname: I } = (0, o.v5)({
+                { gradientStyle: I, gradientClassname: f } = (0, o.v5)({
                     colorStrings: h ?? null,
                     roleStyle: "username",
                     animateGradient: b,
@@ -44,7 +44,7 @@ t.d(
                 A = {};
             return (
                 null != m && (A = { color: (0, r.Hl)(m), backgroundColor: b ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
-                (0, s.jsx)(d.D, {
+                (0, s.jsx)(c.D, {
                     ...p,
                     innerRef: n,
                     tag: "span",
@@ -55,9 +55,9 @@ t.d(
                     tabIndex: null != p.onClick ? 0 : -1,
                     children:
                         null != x
-                            ? (0, s.jsx)(c.A, { iconType: x, children: t })
+                            ? (0, s.jsx)(d.A, { iconType: x, children: t })
                             : null != h
-                              ? (0, s.jsx)("span", { style: { ...f }, className: I, children: t })
+                              ? (0, s.jsx)("span", { style: { ...I }, className: f, children: t })
                               : t,
                 })
             );

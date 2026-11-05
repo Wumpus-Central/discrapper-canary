@@ -1,5 +1,5 @@
 var i = n(582128),
-    l = n(120692);
+    r = n(120692);
 n.d(
     t,
     {},
@@ -10,7 +10,7 @@ n.d(
             });
             return (
                 (t.displayName = `AnimatedWithRef(${("displayName" in e ? e.displayName : void 0) ?? e.name})`),
-                (0, l.animated)(t)
+                (0, r.animated)(t)
             );
         },
     },

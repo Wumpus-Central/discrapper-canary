@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(855986),
     r = n(73153),
     a = n(573648),
@@ -44,17 +44,17 @@ let u = new Set([n(652215).fg2.CONTACTS]),
     _ = !0,
     E = [],
     A = [],
-    h = {},
-    f = new Set(),
+    f = {},
+    h = new Set(),
     I = {},
     p = {};
 function m(e) {
     ((E = e.filter((e) => !u.has(e.type) && a.A.isSupported(e.type))), (A = e.filter((e) => u.has(e.type))), (_ = !1));
 }
-class g extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ConnectedAccountsStore";
     isJoining(e) {
-        return h[e] || !1;
+        return f[e] || !1;
     }
     joinErrorMessage(e) {
         return p[e];
@@ -78,16 +78,16 @@ class g extends i.Ay.Store {
         return I[e] || !1;
     }
     addPendingAuthorizedState(e) {
-        f.add(e);
+        h.add(e);
     }
     deletePendingAuthorizedState(e) {
-        f.delete(e);
+        h.delete(e);
     }
     hasPendingAuthorizedState(e) {
-        return f.has(e);
+        return h.has(e);
     }
 }
-let T = new g(r.h, {
+let g = new T(r.h, {
     CONNECTION_OPEN: function (e) {
         m(e.connectedAccounts.map((e) => new d(e)));
     },
@@ -108,7 +108,7 @@ let T = new g(r.h, {
             : (0, s.q)();
     },
     USER_CONNECTIONS_INTEGRATION_JOINING: function (e) {
-        h[e.integrationId] = e.joining;
+        f[e.integrationId] = e.joining;
     },
     USER_CONNECTION_UPDATE: function (e) {
         let { platformType: t, id: n, revoked: i, accessToken: r, showActivity: a } = e,

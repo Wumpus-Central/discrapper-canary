@@ -24,7 +24,7 @@ function E(e) {
     }
 }
 let A = (0, a.v)((e) => ({ [o.SY]: [], popout: [] }));
-function h(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _(),
         {
@@ -36,7 +36,7 @@ function h(e) {
             onCloseCallback: c,
             backdropStyle: u,
             stackingBehavior: E,
-            stackNextByDefault: h,
+            stackNextByDefault: f,
             allowsNavigation: I,
         } = t,
         p = null != i ? i : r()();
@@ -64,12 +64,12 @@ function h(e) {
                                 dismissable: a,
                                 Layer: o,
                                 render: e,
-                                onCloseRequest: d ?? (() => f(p, n)),
+                                onCloseRequest: d ?? (() => h(p, n)),
                                 onCloseCallback: c,
                                 instant: l,
                                 backdropStyle: u,
                                 stackingBehavior: r,
-                                stackNextByDefault: h,
+                                stackNextByDefault: f,
                                 allowsNavigation: I,
                             },
                         ],
@@ -80,7 +80,7 @@ function h(e) {
         p
     );
 }
-function f(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
         n = A.getState()[t],
         i =
@@ -118,7 +118,7 @@ function I(e, t, n, i) {
                       ...a,
                       [r]: a[r].map((a) =>
                           a.key === e
-                              ? { ...a, render: t, onCloseRequest: null == n ? () => f(e, r) : n, onCloseCallback: i }
+                              ? { ...a, render: t, onCloseRequest: null == n ? () => h(e, r) : n, onCloseCallback: i }
                               : a,
                       ),
                   },
@@ -137,7 +137,7 @@ function m(e, t) {
         i = e[n];
     return null != i && i.some((e) => e.key === t);
 }
-function g(e, t) {
+function T(e, t) {
     return m(A.getState(), e, t);
 }
 n.d(
@@ -178,7 +178,7 @@ n.d(
         K3: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _(),
                 t = A.getState()[e];
-            if (null != t) for (let n of t) f(n.key, e);
+            if (null != t) for (let n of t) h(n.key, e);
         },
         Kg: function () {
             let e = A.getState(),
@@ -190,7 +190,7 @@ n.d(
             let { default: t, popout: n } = A();
             return n.length > 0 ? n.at(-1)?.key === e : t.at(-1)?.key === e;
         },
-        Oo: f,
+        Oo: h,
         PD: function (e) {
             let t = A.getState();
             for (let n of u) for (let i of t[n] ?? []) if (!e.has(i.key)) return !0;
@@ -211,7 +211,7 @@ n.d(
             return null == n || !(n.length > 0) || (n.at(-1)?.allowsNavigation ?? !1);
         },
         fD: m,
-        kB: g,
+        kB: T,
         lx: _,
         mM: async function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -219,23 +219,23 @@ n.d(
                 a = null != t.modalKey ? t.modalKey : r()(),
                 s = !1,
                 l = setTimeout(() => {
-                    ((s = !0), h(c, { ...i, modalKey: a }, n));
+                    ((s = !0), f(c, { ...i, modalKey: a }, n));
                 }, 300),
                 o = await e();
             return (
                 clearTimeout(l),
-                s ? g(a, n) && I(a, o, i.onCloseRequest, i.onCloseCallback, n) : h(o, { ...i, modalKey: a }, n),
+                s ? T(a, n) && I(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
                 a
             );
         },
         mc: function (e) {
             return A.subscribe(e);
         },
-        qf: h,
+        qf: f,
         re: A,
         s7: function () {
             let e = A.getState();
-            for (let t in e) for (let n of e[t]) f(n.key, t);
+            for (let t in e) for (let n of e[t]) h(n.key, t);
         },
         ue: function () {
             return p(A.getState());

@@ -48,15 +48,15 @@ function D(t) {
             isNew: E,
             recurrenceRule: L,
             guildEventId: D,
-            recurrenceId: _,
-            timeData: p,
+            recurrenceId: p,
+            timeData: _,
         } = t,
         y = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
         b = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
         w = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
     null == x && (x = i === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
-    let S = (0, f.A)(_, D),
-        { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
+    let S = (0, f.A)(p, D),
+        { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = _,
         K = P;
     null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: P, end: k }));
     let z = r.useMemo(

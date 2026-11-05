@@ -11,27 +11,27 @@ var i = n(435558),
     _ = n(594061),
     E = n(315069),
     A = n(652215);
-class h extends E.A {
+class f extends E.A {
     id;
     path;
     inviteCode;
     static fromPath(e) {
-        return new h({ id: e, path: e });
+        return new f({ id: e, path: e });
     }
     static fromInviteCode(e) {
-        return new h({ id: `invite:${e}`, path: A.BVt.INVITE(e), inviteCode: e });
+        return new f({ id: `invite:${e}`, path: A.BVt.INVITE(e), inviteCode: e });
     }
     constructor(e) {
         (super(), (this.id = e.id), (this.path = e.path), (this.inviteCode = e.inviteCode));
     }
 }
 n(808728);
-var f = n(994500),
+var h = n(994500),
     I = n(287809),
     p = n(997625),
     m = n(695184),
-    g = n(240248),
-    T = n(998218),
+    T = n(240248),
+    g = n(998218),
     S = n(450827),
     N = n(989133),
     C = n(926140);
@@ -256,7 +256,7 @@ class L {
             for (let e in t) {
                 let n = t[e];
                 for (let e of n.userIds)
-                    (!a?.friends || f.A.isFriend(e)) &&
+                    (!a?.friends || h.A.isFriend(e)) &&
                         (this._userBlacklist?.includes(e) || i.push({ userId: e, nick: n.usersById[e]?.displayName }));
             }
             this._userResults = p.Ay.queryUsers({ query: e, users: i, limit: n, boosters: s, allowSnowflake: r });
@@ -291,7 +291,7 @@ class L {
             }));
     }
     refreshGameProfiles() {
-        !(0, g.uJ)(this.query.trim()) &&
+        !(0, T.uJ)(this.query.trim()) &&
             this._include(C.rD.GAME_PROFILE) &&
             ((this._gameProfileResults = this.queryGameProfiles(this.query, this._limit)), this.updateAllResults());
     }
@@ -300,7 +300,7 @@ class L {
         if (!this._include(C.rD.LINK)) return [];
         let i = (0, d.br)(e);
         if (i?.type === o.I.INVITE)
-            return [{ type: C.rD.LINK, record: h.fromInviteCode(i.code), score: (0, p.zy)(11) }];
+            return [{ type: C.rD.LINK, record: f.fromInviteCode(i.code), score: (0, p.zy)(11) }];
         let r = s().sanitizeUrl(e);
         try {
             n = new URL(r);
@@ -308,9 +308,9 @@ class L {
             return [];
         }
         let { pathname: a, hostname: l = "", host: c } = n,
-            u = T.A.isDiscordHostname(l) || window.location.host === c;
-        return null !== a && u && T.A.isAppRoute(a)
-            ? [{ type: C.rD.LINK, record: h.fromPath(a), score: (0, p.zy)(11) }]
+            u = g.A.isDiscordHostname(l) || window.location.host === c;
+        return null !== a && u && g.A.isAppRoute(a)
+            ? [{ type: C.rD.LINK, record: f.fromPath(a), score: (0, p.zy)(11) }]
             : [];
     }
     queryInAppNavigations(e, t) {

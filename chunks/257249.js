@@ -1,5 +1,5 @@
 n.d(t, {
-    Lr: () => T,
+    Lr: () => g,
     j2: () => L,
     p4: () => S,
     kC: () => N,
@@ -7,7 +7,7 @@ n.d(t, {
     We: () => C,
     zv: () => m,
     wT: () => O,
-    c7: () => g,
+    c7: () => T,
     so: () => R,
     ZV: () => D,
 });
@@ -25,8 +25,8 @@ var l = n(792996),
     _ = n(731068),
     E = n(486020),
     A = n(403362),
-    h = n(489414),
-    f = n(532294);
+    f = n(489414),
+    h = n(532294);
 let I = new d.A("InteractionComponentUtils"),
     p = (e, t) => ({
         id: e.id,
@@ -64,10 +64,10 @@ function m(e, t, n) {
             })(e)
         );
 }
-function g(e) {
+function T(e) {
     return e.placeholder ?? l.intl.string(l.t.Otr6W2);
 }
-function T(e, t) {
+function g(e, t) {
     let { minValues: n, required: i } = e;
     return "modal" === t ? !i : 0 === n;
 }
@@ -244,7 +244,7 @@ function D(e) {
                             disabled: t.disabled,
                             required: t.required ?? !1,
                             options: t.options.map((e) => ({
-                                type: h.iw.STRING,
+                                type: f.iw.STRING,
                                 label: e.label,
                                 value: e.value,
                                 default: e.default,
@@ -397,7 +397,7 @@ function D(e) {
                         return (function (e, t) {
                             let n = e.checkpoint_data;
                             switch (n.version) {
-                                case f.wk.V2025:
+                                case h.wk.V2025:
                                     return {
                                         type: e.type,
                                         id: b(t),
@@ -438,7 +438,7 @@ function D(e) {
                                                     : void 0,
                                         },
                                     };
-                                case f.wk.V2026:
+                                case h.wk.V2026:
                                     let i = (0, o.q6)(n);
                                     if (null == i) break;
                                     return { type: e.type, id: b(t), checkpointData: i };
@@ -473,5 +473,5 @@ function D(e) {
         .filter((e) => null != e);
 }
 function b(e) {
-    return (0, h.X1)(e.join(","));
+    return (0, f.X1)(e.join(","));
 }

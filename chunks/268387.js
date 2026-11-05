@@ -10,9 +10,9 @@ let c = "GameLibraryViewStore",
     _ = d.DpB.LAST_PLAYED,
     E = !1,
     A = a().debounce(() => {
-        ((E = !1), f.emitChange());
+        ((E = !1), h.emitChange());
     }, 200);
-class h extends s.Ay.Store {
+class f extends s.Ay.Store {
     static displayName = "GameLibraryViewStore";
     initialize() {
         let e = l.w.get(c) ?? {};
@@ -31,7 +31,7 @@ class h extends s.Ay.Store {
         return E;
     }
 }
-let f = new h(o.h, {
+let h = new f(o.h, {
     LIBRARY_TABLE_SORT_UPDATE: function (e) {
         let { direction: t, key: n } = e;
         ((u = t), (_ = n), l.w.set(c, { sortDirection: u, sortKey: _ }));
@@ -41,4 +41,4 @@ let f = new h(o.h, {
         (n && ((E = !0), A()), (i = t));
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

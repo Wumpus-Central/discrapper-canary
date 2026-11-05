@@ -37,5 +37,5 @@ function E(e) {
 class A extends r.A {
     actions = { CHANNEL_UPDATES: _, VOICE_STATE_UPDATES: E };
 }
-let h = new A();
-n.d(t, {}, { A: h });
+let f = new A();
+n.d(t, {}, { A: f });

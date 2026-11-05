@@ -390,13 +390,13 @@ let _ = Object.freeze({
             "'": 222,
         }),
     });
-var h =
+var f =
         (((r = {})[(r.WINDOWS = 1)] = "WINDOWS"),
         (r[(r.MACOS = 2)] = "MACOS"),
         (r[(r.LINUX = 3)] = "LINUX"),
         (r[(r.BROWSER = 4)] = "BROWSER"),
         r),
-    f =
+    h =
         (((a = {}).ENTER = "Enter"),
         (a.TAB = "Tab"),
         (a.SPACE = " "),
@@ -419,4 +419,4 @@ var h =
         (s[(s.Back = 3)] = "Back"),
         (s[(s.Forward = 4)] = "Forward"),
         s);
-n.d(t, { N$: () => l.U }, { C8: _, G1: d, Nu: A, RX: I, V8: E, Yy: c, dh: f, g$: h, mi: o, zY: u });
+n.d(t, { N$: () => l.U }, { C8: _, G1: d, Nu: A, RX: I, V8: E, Yy: c, dh: h, g$: f, mi: o, zY: u });

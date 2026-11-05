@@ -8,7 +8,7 @@ n.d(t, {
     gB: () => ei,
     h$: () => eu,
     RE: () => ea,
-    Cz: () => Q,
+    Cz: () => Z,
     RD: () => ee,
     FH: () => ec,
     rh: () => es,
@@ -30,8 +30,8 @@ n(250953);
 var _ = n(976860),
     E = n(38145),
     A = n(773669),
-    h = n(590180);
-let f = (0, n(196765).v)((e) => ({
+    f = n(590180);
+let h = (0, n(196765).v)((e) => ({
     logs: [],
     addLog: (t) => e((e) => ({ logs: [...e.logs, `[${new Date().toISOString().split("T")[0]}] ${t}`] })),
     clearLogs: () => e({ logs: [] }),
@@ -39,19 +39,19 @@ let f = (0, n(196765).v)((e) => ({
 function I(e) {
     let t = new Date().toLocaleTimeString("en-US", { hour12: !1 }),
         n = `[${t}] ${e}`;
-    f.getState().addLog(n);
+    h.getState().addLog(n);
 }
 var p = n(457421),
     m = n(4227),
-    g = n(993408),
-    T = n(442007),
+    T = n(993408),
+    g = n(442007),
     S = n(510801);
 class N {
     categories;
     collections;
     constructor(e) {
         ((this.categories = e.categories.map((e) => S.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => T.A.fromServer(e))));
+            (this.collections = e.collections.map((e) => g.A.fromServer(e))));
     }
     static fromServer(e) {
         return new N(e);
@@ -299,8 +299,8 @@ class G {
             variant_value: _,
             purchased_at: E,
             purchase_type: A,
-            expires_at: h,
-            ...f
+            expires_at: f,
+            ...h
         } = e;
         return new G({
             type: t,
@@ -313,18 +313,18 @@ class G {
                 return t === n;
             }),
             prices: (0, v.A)(s),
-            items: (0, M.Kh)(f.items),
+            items: (0, M.Kh)(h.items),
             bundledProducts: l?.map(P.A.fromServer),
             variants: o?.map(b.x.fromServer),
-            googleSkuIds: f.google_sku_ids,
-            eligibleOffers: f.eligible_offers,
+            googleSkuIds: h.google_sku_ids,
+            eligibleOffers: h.eligible_offers,
             baseVariantName: d,
             baseVariantSkuId: c,
             variantLabel: u,
             variantValue: _,
             purchaseType: A,
             purchasedAt: null != E ? new Date(E) : E,
-            expiresAt: null != h ? new Date(h) : null,
+            expiresAt: null != f ? new Date(f) : null,
         });
     }
 }
@@ -440,8 +440,8 @@ class W {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, g.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, g.f6)(e.logo_display_config)));
+            (this.bannerDisplayConfig = (0, T.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, T.f6)(e.logo_display_config)));
     }
     static fromServer(e) {
         return new W(e);
@@ -594,8 +594,8 @@ class z {
     }
 }
 var q = n(100057),
-    Z = n(181774);
-function Q(e) {
+    Q = n(181774);
+function Z(e) {
     let { tab: t, initialCollectionId: i, ...r } = e;
     {
         let { default: e } = n(830543),
@@ -634,7 +634,7 @@ function et(e, t) {
 }
 async function en(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
-    let i = (0, Z.ao)(e),
+    let i = (0, Q.ao)(e),
         r = c.Ay.get("shop_show_debug_overlay");
     (e?.logPerf &&
         (0, q.z)({
@@ -709,12 +709,12 @@ async function er(e, t) {
     }
 }
 async function ea(e, t) {
-    h.A.isFetchingProduct(e) || h.A.isProductFetchBackedOff(e) || (await er(e, t));
+    f.A.isFetchingProduct(e) || f.A.isProductFetchBackedOff(e) || (await er(e, t));
 }
 function es(e) {
     let t = Date.now();
-    for (let n of (0, g.XS)([e]))
-        null == h.A.getProduct(n.skuId) &&
+    for (let n of (0, T.XS)([e]))
+        null == f.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }
 async function el(e) {
@@ -784,7 +784,7 @@ function ec(e) {
 }
 async function eu(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
-    let i = (0, Z.ao)(t, e);
+    let i = (0, Q.ao)(t, e);
     t?.logPerf &&
         (0, q.z)({
             sessionId: n?.sessionId,

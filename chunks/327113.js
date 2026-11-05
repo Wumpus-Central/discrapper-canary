@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -12,8 +12,8 @@ var i = n(477900),
     E = n(188567);
 (n(323874), n(14289), n(35956));
 var A = n(671325),
-    h = n(620632),
-    f = n(799226),
+    f = n(620632),
+    h = n(799226),
     I = n(676279),
     p = n(652215);
 let m = function (e) {
@@ -50,21 +50,21 @@ let m = function (e) {
                         try {
                             let e = Date.now(),
                                 [n, r, a] = await Promise.all([
-                                    h.Bo.get({
+                                    f.Bo.get({
                                         url: t
                                             ? "https://cdn.discordapp.com/assets/content/26968a6375b676097d7234b043b61312b8037f45d077c91b621ead07c6b0544b.mov"
                                             : "https://cdn.discordapp.com/assets/content/49d12c146442880c181fcc5502a49bd31d7537c2d6d5255aa2ad6b3d668553e7.webm",
                                         binary: !0,
                                         rejectWithError: !0,
                                     }),
-                                    h.Bo.get({
+                                    f.Bo.get({
                                         url: t
                                             ? "https://cdn.discordapp.com/assets/content/e1b69b796171027073273beebfee03fdf466010bf89a2ff116deccaec44d7c6f.mov"
                                             : "https://cdn.discordapp.com/assets/content/ad6e3d6f3a4bb6a1debd45bc21e47b7f522685c3facc578bd2129aa4cd795f40.webm",
                                         binary: !0,
                                         rejectWithError: !0,
                                     }),
-                                    h.Bo.get({
+                                    f.Bo.get({
                                         url: t
                                             ? "https://cdn.discordapp.com/assets/content/7c384bc29166872d908b60c5faec0d00d9bd960267a8943331c456018ede5e7d.mov"
                                             : "https://cdn.discordapp.com/assets/content/54bef6c79e1a3e1c2ec8f0d4a208643a7e203dc4c94e3463e6c6b38f6f4bdb23.webm",
@@ -104,27 +104,27 @@ let m = function (e) {
                 { mediaUrls: n, isSuccess: a, isFailure: l, isLoading: d }
             );
         })(e),
-        { status: a } = (0, f.CE)(e ? A.A : null);
-    return { mediaUrls: t, isSuccess: n && a === f.BW.Loaded, isLoading: i || a === f.BW.Loading };
+        { status: a } = (0, h.CE)(e ? A.A : null);
+    return { mediaUrls: t, isSuccess: n && a === h.BW.Loaded, isLoading: i || a === h.BW.Loading };
 };
-var g = n(794899);
-let T = (e) => {
+var T = n(794899);
+let g = (e) => {
     let { children: t, isConfirmationStep: n, isEligibleForWowMoment: a, shouldPrefetchWowMoment: A } = e,
-        h = (0, l.bG)([c.Ay], () => c.Ay.useReducedMotion),
-        [f, I] = (0, r.useState)("entry"),
-        T = (0, r.useRef)(null),
+        f = (0, l.bG)([c.Ay], () => c.Ay.useReducedMotion),
+        [h, I] = (0, r.useState)("entry"),
+        g = (0, r.useRef)(null),
         S = (0, r.useRef)(null),
         N = (0, r.useCallback)(() => {
-            "entry" === f && (I("idle"), null != T.current && T.current?.play());
-        }, [f]),
+            "entry" === h && (I("idle"), null != g.current && g.current?.play());
+        }, [h]),
         C = (0, r.useCallback)(() => {
-            "exit" !== f && (I("exit"), null != S.current && S.current?.play());
-        }, [f]),
+            "exit" !== h && (I("exit"), null != S.current && S.current?.play());
+        }, [h]),
         [O, R] = (0, r.useState)(!1);
     (0, r.useEffect)(() => {
         A && R(!0);
     }, [A]);
-    let { mediaUrls: L, isSuccess: y } = m(!h && a && O),
+    let { mediaUrls: L, isSuccess: y } = m(!f && a && O),
         D = (0, r.useRef)(null),
         [b, v] = (0, r.useState)(!1),
         [P, M] = (0, r.useState)(!1),
@@ -136,9 +136,9 @@ let T = (e) => {
             n &&
             !G &&
             "none" === U &&
-            (h || !y
+            (f || !y
                 ? (w("static"),
-                  h ||
+                  f ||
                       (x(!0),
                       _.default.track(p.HAw.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION)),
                   (e = !1))
@@ -151,7 +151,7 @@ let T = (e) => {
             _.default.track(p.HAw.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                 wow_moment_type: e ? "animated" : "static",
             }));
-    }, [h, a, n, y, G, U]),
+    }, [f, a, n, y, G, U]),
     (0, r.useEffect)(() => {
         function e() {
             (v(!0), C());
@@ -177,38 +177,38 @@ let T = (e) => {
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsxs)("div", {
-                      className: g.j,
+                      className: T.j,
                       children: [
                           (0, i.jsx)("div", {
-                              className: g.ws,
+                              className: T.ws,
                               children: (0, i.jsx)(u.A, {
                                   playsInline: !0,
                                   muted: !0,
                                   autoPlay: !0,
                                   onEnded: N,
-                                  className: s()(g.Ki, "entry" === f ? g.RK : g.R),
+                                  className: s()(T.Ki, "entry" === h ? T.RK : T.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowEntry }),
                               }),
                           }),
                           (0, i.jsx)(u.A, {
-                              ref: T,
+                              ref: g,
                               playsInline: !0,
                               muted: !0,
                               loop: !0,
-                              className: s()(g.Ki, "idle" === f ? g.RK : g.R),
+                              className: s()(T.Ki, "idle" === h ? T.RK : T.R),
                               children: (0, i.jsx)("source", { src: L.modalGlowIdle }),
                           }),
                           (0, i.jsx)(u.A, {
                               ref: S,
                               playsInline: !0,
                               muted: !0,
-                              className: s()(g.Ki, "exit" === f ? g.RK : g.R),
+                              className: s()(T.Ki, "exit" === h ? T.RK : T.R),
                               children: (0, i.jsx)("source", { src: L.modalGlowExit }),
                           }),
                       ],
                   }),
                   (0, i.jsx)("div", {
-                      className: g.Sh,
+                      className: T.Sh,
                       children: (0, i.jsx)(o.e, {
                           fit: "layout",
                           ref: D,
@@ -216,7 +216,7 @@ let T = (e) => {
                           listenOnDocumentBody: !0,
                       }),
                   }),
-                  (0, i.jsx)("div", { className: "exit" === f ? g.aO : g.ws, children: t }),
+                  (0, i.jsx)("div", { className: "exit" === h ? T.aO : T.ws, children: t }),
               ],
           })
         : "static" === U
@@ -228,12 +228,12 @@ let T = (e) => {
                                 (0, i.jsx)("img", {
                                     src: "https://cdn.discordapp.com/assets/content/ada94a00ba3648b0d01f5bbf870b152b02ac6eb1bd1d245d8b46a54527416853.png",
                                     alt: "",
-                                    className: g.Uw,
+                                    className: T.Uw,
                                 }),
                                 (0, i.jsx)("img", {
                                     src: "https://cdn.discordapp.com/assets/content/096964379958760a2615df5128a9022ac6de873c8f7a6af0beadb1c958ce55ea.png",
                                     alt: "",
-                                    className: g.Gv,
+                                    className: T.Gv,
                                 }),
                             ],
                         }),

@@ -13,7 +13,7 @@ e.d(
                 { context: g, trackUserProfileAction: m } = (0, s.NJ)(),
                 { analyticsLocations: p } = (0, a.Ay)(),
                 x = f ?? p,
-                _ = (0, i.bG)([r.A], () => r.A.getUserOutbox(n.id));
+                I = (0, i.bG)([r.A], () => r.A.getUserOutbox(n.id));
             return (0, l.useCallback)(
                 (t) => {
                     let { action: n } = t;
@@ -24,13 +24,13 @@ e.d(
                             activity: c,
                             entry: u,
                             stream: d,
-                            outbox: _,
+                            outbox: I,
                             voiceChannelId: A,
                             analyticsLocations: x,
                             ...g,
                         }));
                 },
-                [m, g, e, c, d, u, _, A, x],
+                [m, g, e, c, d, u, I, A, x],
             );
         },
     },

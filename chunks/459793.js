@@ -1,17 +1,17 @@
 var i = n(477900);
 n(582128);
-var l = n(953727);
+var r = n(953727);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { width: t = 20, height: n = 20, className: r, ...s } = e;
+            let { width: t = 20, height: n = 20, className: l, ...s } = e;
             return (0, i.jsx)("svg", {
                 width: t,
                 height: n,
-                className: r,
-                ...(0, l.A)(s),
+                className: l,
+                ...(0, r.A)(s),
                 viewBox: "0 0 20 20",
                 children: (0, i.jsxs)("g", {
                     clipPath: "url(#clip0_198_5469)",

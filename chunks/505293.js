@@ -12,13 +12,13 @@ var r = n(192308),
     _ = n(439372),
     E = n(487329),
     A = n(601900),
-    h = n(253932),
-    f = n(734057),
+    f = n(253932),
+    h = n(734057),
     I = n(498642),
     p = n(873985),
     m = n(309010),
-    g = n(753181),
-    T = n(287809),
+    T = n(753181),
+    g = n(287809),
     S = n(927813),
     N = n(652896),
     C = n(55010),
@@ -44,7 +44,7 @@ function G(e) {
 }
 function x(e, t) {
     if (m.Ay.getVoiceChannelId() !== e) return !1;
-    let n = f.A.getChannel(e);
+    let n = h.A.getChannel(e);
     if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != a.A.getActiveStreamForUser(t, n.getGuildId()))
         return !1;
     let i = a.A.getStreamForUser(t, n.getGuildId());
@@ -54,10 +54,10 @@ function x(e, t) {
 }
 function k(e, t) {
     let n = t ?? p.A.getPreferredRegion();
-    null != n && n !== p.A.getRegion(g.A.getHostname(e)) && (0, u.dA)(e, n);
+    null != n && n !== p.A.getRegion(T.A.getHostname(e)) && (0, u.dA)(e, n);
 }
 function F(e, t) {
-    if (g.A.getAllActiveStreamKeys().includes(e)) return;
+    if (T.A.getAllActiveStreamKeys().includes(e)) return;
     let n = y[e] ?? new d.Ep();
     ((y[e] = n),
         n.start(t ? v : b, () => {
@@ -68,7 +68,7 @@ class B extends _.A {
     handleStreamWatch = (e) => {
         let { streamKey: t, allowMultiple: n } = e,
             { channelId: i } = (0, N.Iy)(t),
-            r = f.A.getChannel(i);
+            r = h.A.getChannel(i);
         (F(t, r?.isGuildStageVoice()),
             w(t),
             n ||
@@ -79,7 +79,7 @@ class B extends _.A {
     };
     handleStreamStart = (e) => {
         let { channelId: t, streamType: n, guildId: i } = e,
-            r = f.A.getChannel(t);
+            r = h.A.getChannel(t);
         (F((0, N._z)({ streamType: n, guildId: i, channelId: t, ownerId: s.default.getId() }), r?.isGuildStageVoice()),
             this.platformHandleStreamStart(e));
     };
@@ -87,9 +87,9 @@ class B extends _.A {
         let { streamKey: t } = e;
         (G(t), U());
         let { ownerId: n, guildId: i } = (0, N.Iy)(t);
-        if (null == i || null == n || n !== T.default.getCurrentUser()?.id) return;
+        if (null == i || null == n || n !== g.default.getCurrentUser()?.id) return;
         let r = I.A.getMemberCount(i);
-        null == r || r <= 30 || r > C.G1 || (h.wv.getSetting() && R(t));
+        null == r || r <= 30 || r > C.G1 || (f.wv.getSetting() && R(t));
     };
     handleStreamUpdate = (e) => {
         let t,
@@ -97,7 +97,7 @@ class B extends _.A {
         (G(n),
             U(),
             i ||
-                (null != (t = g.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
+                (null != (t = T.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
                     c.h.dispatch({
                         type: "MEDIA_ENGINE_CONNECTION_USER_STATS_RESET",
                         mediaEngineConnectionId: t,

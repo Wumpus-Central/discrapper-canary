@@ -115,8 +115,8 @@ n.d(
                                   return n;
                               })(e[s].steps, E);
                 if (null == A || A.slice(0, -1).every((e) => 0 === e.length)) continue;
-                let h = o.id.slice(l.length),
-                    f = o.created_at;
+                let f = o.id.slice(l.length),
+                    h = o.created_at;
                 for (let [e, i] of _.entries()) {
                     let a = `${o.id}:${e}`,
                         s = {
@@ -124,15 +124,15 @@ n.d(
                             render_id: a,
                             role: "assistant",
                             content: "",
-                            turn_id: h,
+                            turn_id: f,
                             steps: (0, r.Zu)(A[e]),
-                            created_at: f,
+                            created_at: h,
                             continued: !0,
                             finished_at: i.at,
                         };
-                    (n.set(u[e].index, A[e].length > 0 ? [s, t[i.index]] : [t[i.index]]), (f = i.at));
+                    (n.set(u[e].index, A[e].length > 0 ? [s, t[i.index]] : [t[i.index]]), (h = i.at));
                 }
-                t[s] = { ...o, turn_id: h, steps: (0, r.Zu)(A[_.length]), created_at: f };
+                t[s] = { ...o, turn_id: f, steps: (0, r.Zu)(A[_.length]), created_at: h };
             }
             return 0 === n.size ? t : t.flatMap((e, t) => n.get(t) ?? [e]);
         },

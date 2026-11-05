@@ -17,12 +17,12 @@ var i,
         (i[(i.HOURS_24 = 86400)] = "HOURS_24"),
         (i[(i.ALWAYS = -1)] = "ALWAYS"),
         i),
-    h =
+    f =
         (((r = {}).REDUCED_MOTION = "REDUCED_MOTION"),
         (r.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"),
         (r.GAME_MODE = "GAME_MODE"),
         r),
-    f = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a),
+    h = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a),
     I = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
     p = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
     m =
@@ -30,12 +30,12 @@ var i,
         (o[(o.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
         (o[(o.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),
         o),
-    g =
+    T =
         (((d = {}).USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
         (d.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
         (d.SERVER_PRIVACY_MODAL = "server_privacy_modal"),
         d),
-    T =
+    g =
         (((c = {})[(c.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
         (c[(c.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
         (c[(c.SLOW_USER_ACTION = 20)] = "SLOW_USER_ACTION"),
@@ -113,13 +113,13 @@ n.d(
             };
         },
         PZ: "APPLICATION_SUBSCRIPTION_SUBSECTION",
-        Sb: T,
+        Sb: g,
         W: C,
         Xx: A,
-        YP: f,
-        _A: h,
+        YP: h,
+        _A: f,
         _F: p,
-        bf: g,
+        bf: T,
         ko: N,
         n3: {
             OPT_IN_CHANNELS_ON: 16384,

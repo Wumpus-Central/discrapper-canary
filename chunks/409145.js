@@ -21,10 +21,10 @@ var i = n(582128),
     _ = n(825272),
     E = n(543862),
     A = n(68656);
-function h(e, t, n) {
+function f(e, t, n) {
     return null == e ? n : 1 === u.default.compare(t, e);
 }
-function f(e, t, n, i) {
+function h(e, t, n, i) {
     let r = null != e ? (Number.isNaN(Number(e)) ? void 0 : Number(e)) : void 0,
         a = void 0 === r ? 0 : r + n.cooldownDurationMs,
         s = Date.now(),
@@ -35,8 +35,8 @@ function f(e, t, n, i) {
 var I = n(199773),
     p = n(517057),
     m = n(826673),
-    g = n(652215),
-    T = n(355097);
+    T = n(652215),
+    g = n(355097);
 let S = {};
 function N(e) {
     return "single_use" === e.kind || "single_use_guild" === e.kind;
@@ -66,7 +66,7 @@ function C(e, t) {
                 return t;
             }),
         ),
-        O = (0, r.bG)([l.A], () => l.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS)),
+        O = (0, r.bG)([l.A], () => l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)),
         R =
             n.find(
                 (e) =>
@@ -89,21 +89,21 @@ function C(e, t) {
                             case "time_recurring":
                                 return (
                                     !(0, A.P3)(e.content) &&
-                                    f(u?.lastDismissedAtMs, u?.numTimesDismissed, e.scope.timeRecurringConfig, n)
+                                    h(u?.lastDismissedAtMs, u?.numTimesDismissed, e.scope.timeRecurringConfig, n)
                                 );
                             case "time_recurring_guild": {
                                 let t = I?.[e.content];
                                 return (
                                     !(0, A.P3)(e.content) &&
-                                    f(t?.lastDismissedAtMs, t?.numTimesDismissed, e.scope.timeRecurringConfig, n)
+                                    h(t?.lastDismissedAtMs, t?.numTimesDismissed, e.scope.timeRecurringConfig, n)
                                 );
                             }
                             case "snowflake_bound":
-                                return !(0, A.P3)(e.content) && h(u?.lastDismissedObjectId, e.scope.snowflakeId, n);
+                                return !(0, A.P3)(e.content) && f(u?.lastDismissedObjectId, e.scope.snowflakeId, n);
                             case "snowflake_bound_guild":
                                 return (
                                     !(0, A.P3)(e.content) &&
-                                    h(I?.[e.content]?.lastDismissedObjectId, e.scope.snowflakeId, n)
+                                    f(I?.[e.content]?.lastDismissedObjectId, e.scope.snowflakeId, n)
                                 );
                             case "time_recurring_snowflake_bound":
                                 return !(0, E.j6)(e.content, e.scope.snowflakeId, e.scope.timeRecurringConfig);
@@ -118,8 +118,8 @@ function C(e, t) {
         M = (function (e, t, n, o, c) {
             let u = (0, p.Ay)((t) => null != e && t.currentlyShown.has(e)),
                 [_, A] = (0, s.eK)(),
-                h = null != e && (0, E.NZ)(e, _, A),
-                f = (0, r.bG)([I.A], () => null != e && I.A.hasUserHitDCCap(e, t)),
+                f = null != e && (0, E.NZ)(e, _, A),
+                h = (0, r.bG)([I.A], () => null != e && I.A.hasUserHitDCCap(e, t)),
                 m = i.useRef(t);
             return (
                 (m.current = t),
@@ -127,9 +127,9 @@ function C(e, t) {
                     if (null != e) {
                         var t;
                         return (
-                            l.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
+                            l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS) ||
                                 ((t = m.current),
-                                d.default.track(g.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
+                                d.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
                                     content_type: a.M[e],
                                     group_name: n ?? null,
                                     latest_version: o ?? null,
@@ -144,7 +144,7 @@ function C(e, t) {
                             }
                         );
                     }
-                }, [e, n, f, h, o, c]),
+                }, [e, n, h, f, o, c]),
                 u && null != e ? e : null
             );
         })(P, v, t, L, y),

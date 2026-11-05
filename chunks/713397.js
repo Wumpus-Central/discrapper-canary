@@ -4,7 +4,7 @@ var i = n(477900),
     s = n(367513),
     r = n(715989),
     o = n(792996),
-    d = n(853325);
+    c = n(853325);
 n.d(
     t,
     {},
@@ -12,11 +12,11 @@ n.d(
         A: function (e) {
             let { channelId: t, allPoppedOut: n = !1 } = e;
             return (0, i.jsxs)("div", {
-                className: d.kL,
+                className: c.kL,
                 children: [
                     (0, i.jsx)(r.A, {}),
                     (0, i.jsxs)("div", {
-                        className: d.Qs,
+                        className: c.Qs,
                         children: [
                             (0, i.jsx)(l.D, {
                                 variant: "heading-lg/medium",

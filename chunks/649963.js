@@ -10,13 +10,13 @@ var i,
     _ = n(734057),
     E = n(596344),
     A = n(129230),
-    h = n(188567),
-    f = n(927813),
+    f = n(188567),
+    h = n(927813),
     I = n(690521),
     p = n(673375),
     m = n(652215),
-    g = n(792996),
-    T =
+    T = n(792996),
+    g =
         (((i = {}).MESSAGE = "Message"),
         (i.FORUM_TOOLBAR = "Forum Toolbar"),
         (i.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer"),
@@ -33,19 +33,19 @@ function S(e, t, n) {
     if (429 === r) {
         if (n.isRetry) return !0;
         let e = parseInt(i["retry-after"]);
-        return (isNaN(e) || setTimeout(t, e * f.A.Millis.SECOND), !1);
+        return (isNaN(e) || setTimeout(t, e * h.A.Millis.SECOND), !1);
     }
     if (403 === r)
         switch (a && a.code) {
             case m.t02.TOO_MANY_REACTIONS:
                 l.A.show({
-                    title: g.intl.string(g.t.lFddsR),
-                    body: g.intl.string(g.t.h27eIm),
-                    confirmText: g.intl.string(g.t.BddRzS),
+                    title: T.intl.string(T.t.lFddsR),
+                    body: T.intl.string(T.t.h27eIm),
+                    confirmText: T.intl.string(T.t.BddRzS),
                 });
                 break;
             case m.t02.REACTION_BLOCKED:
-                h._.dispatch(m.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+                f._.dispatch(m.jej.SHAKE_APP, { duration: 200, intensity: 2 });
         }
     else if (!n.isRetry) return (t(), !1);
     return !0;
@@ -84,9 +84,9 @@ n.d(
     {},
     {
         BB: async function e(t, n, i) {
-            var s, u, h, f;
+            var s, u, f, h;
             let I,
-                T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
+                g = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
                 R = arguments.length > 4 ? arguments[4] : void 0,
                 L = null != R && !!R.burst,
                 y = null != R && !!R.isRetry;
@@ -94,14 +94,14 @@ n.d(
                 !y &&
                 ((s = t),
                 (u = n),
-                (h = i),
-                (f = L),
-                null != (I = E.A.getMessage(s, u)) && I.userHasReactedWithEmoji(h, f))
+                (f = i),
+                (h = L),
+                null != (I = E.A.getMessage(s, u)) && I.userHasReactedWithEmoji(f, h))
             )
                 return void l.A.show({
-                    title: g.intl.string(g.t["uaUU/g"]),
-                    body: g.intl.string(g.t.psMorl),
-                    confirmText: g.intl.string(g.t["NX+WJN"]),
+                    title: T.intl.string(T.t["uaUU/g"]),
+                    body: T.intl.string(T.t.psMorl),
+                    confirmText: T.intl.string(T.t["NX+WJN"]),
                 });
             let D = await O(i, L);
             return (
@@ -109,12 +109,12 @@ n.d(
                 await c.A.unarchiveThreadIfNecessary(t),
                 r.Bo.put({
                     url: C({ channelId: t, messageId: n, emoji: i, userId: "@me" }),
-                    query: { location: T, type: L ? d.v.BURST : d.v.NORMAL },
+                    query: { location: g, type: L ? d.v.BURST : d.v.NORMAL },
                     oldFormErrors: !0,
                     rejectWithError: (0, r.fT)(),
                 })
                     .then(() => {
-                        if ("Message Shortcut" === T) {
+                        if ("Message Shortcut" === g) {
                             let e = _.A.getChannel(t);
                             A.default.track(m.HAw.MESSAGE_SHORTCUT_ACTION_SENT, {
                                 channel_id: t,
@@ -127,20 +127,20 @@ n.d(
                             });
                         }
                         L
-                            ? (a.O.announce(g.intl.formatToPlainString(g.t["RJlG+R"], { name: i.name })),
+                            ? (a.O.announce(T.intl.formatToPlainString(T.t["RJlG+R"], { name: i.name })),
                               p.A.triggerFullscreenAnimation({
                                   channelId: t,
                                   messageId: n,
                                   emoji: { ...i, animated: !1 },
                               }))
-                            : a.O.announce(g.intl.formatToPlainString(g.t.ol4acF, { name: i.name }));
+                            : a.O.announce(T.intl.formatToPlainString(T.t.ol4acF, { name: i.name }));
                     })
                     .catch((r) => {
-                        S(r, () => e(t, n, i, T, { burst: L, isRetry: !0 }), { isRetry: y }) &&
+                        S(r, () => e(t, n, i, g, { burst: L, isRetry: !0 }), { isRetry: y }) &&
                             (N("MESSAGE_REACTION_REMOVE", t, n, i, { burst: L }),
                             L
-                                ? a.O.announce(g.intl.formatToPlainString(g.t.fJeu87, { name: i.name }))
-                                : a.O.announce(g.intl.formatToPlainString(g.t["UUn5V+"], { name: i.name })));
+                                ? a.O.announce(T.intl.formatToPlainString(T.t.fJeu87, { name: i.name }))
+                                : a.O.announce(T.intl.formatToPlainString(T.t["UUn5V+"], { name: i.name })));
                     })
             );
         },
@@ -212,8 +212,8 @@ n.d(
                 })
                     .then(() => {
                         u?.burst
-                            ? a.O.announce(g.intl.formatToPlainString(g.t["3l9f6u"], { name: s.name }))
-                            : a.O.announce(g.intl.formatToPlainString(g.t["DQxi+7"], { name: s.name }));
+                            ? a.O.announce(T.intl.formatToPlainString(T.t["3l9f6u"], { name: s.name }))
+                            : a.O.announce(T.intl.formatToPlainString(T.t["DQxi+7"], { name: s.name }));
                     })
                     .catch(async (t) => {
                         if (
@@ -234,8 +234,8 @@ n.d(
                             let e = await O(s, _);
                             (N("MESSAGE_REACTION_ADD", n, i, s, { userId: o, burst: _, colors: e }),
                                 u?.burst
-                                    ? a.O.announce(g.intl.formatToPlainString(g.t.OamVbV, { name: s.name }))
-                                    : a.O.announce(g.intl.formatToPlainString(g.t["tD9+b+"], { name: s.name })));
+                                    ? a.O.announce(T.intl.formatToPlainString(T.t.OamVbV, { name: s.name }))
+                                    : a.O.announce(T.intl.formatToPlainString(T.t["tD9+b+"], { name: s.name })));
                         }
                     }));
         },
@@ -243,6 +243,6 @@ n.d(
             let { channelId: t, messageId: n, emoji: i, key: r } = e;
             s.h.dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId: t, messageId: n, emoji: i, key: r });
         },
-        qN: T,
+        qN: g,
     },
 );

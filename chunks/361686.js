@@ -14,24 +14,24 @@ function E(e) {
         { channelId: n } = (0, c.UW)(t) ?? {},
         E = (0, a.bG)([u.A], () => u.A.getStageInstanceByChannel(n), [n]),
         A = r.useRef(null),
-        h = r.useCallback(() => {
+        f = r.useCallback(() => {
             let e = o.A.getChannel(n);
             null != e && d.av(e);
         }, [n]),
-        f = E?.topic ?? t.name,
-        I = _.intl.formatToPlainString(_.t["T+DNAA"], { channel: f });
+        h = E?.topic ?? t.name,
+        I = _.intl.formatToPlainString(_.t["T+DNAA"], { channel: h });
     return (0, i.jsx)("div", {
         ref: A,
         children: (0, i.jsx)(s.D, {
-            onClick: h,
+            onClick: f,
             focusProps: { ringTarget: A },
             children: (0, i.jsx)(l.D, { variant: "heading-xs/semibold", children: I }),
         }),
     });
 }
 var A = n(516607),
-    h = n(356772);
-let f = {
+    f = n(356772);
+let h = {
     [A.SS]: new (class {
         shouldShow(e) {
             return (0, c.IS)(e);
@@ -45,21 +45,21 @@ let f = {
 function I(e) {
     let t = e.application_id;
     if (null == t) return;
-    let n = f[t];
+    let n = h[t];
     if (null != n && n.shouldShow?.(e) !== !1) return n.createHeader(e);
 }
 function p(e) {
     let t = e.application_id;
     if (null == t) return;
-    let n = f[t];
+    let n = h[t];
     if (n?.body != null && n.shouldShow?.(e) !== !1) {
         let r = n.body;
-        return (0, i.jsx)("section", { className: h.uW, children: (0, i.jsx)(r, { activity: e }) }, `delegate-${t}`);
+        return (0, i.jsx)("section", { className: f.uW, children: (0, i.jsx)(r, { activity: e }) }, `delegate-${t}`);
     }
 }
 function m(e) {
     let t = e.application_id;
     if (null == t) return !0;
-    let n = f[t];
+    let n = h[t];
     return null == n || n.shouldShow?.(e) !== !1;
 }

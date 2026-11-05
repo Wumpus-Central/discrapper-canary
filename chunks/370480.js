@@ -11,7 +11,7 @@ var i,
     _ = n(783419),
     E = n(652215),
     A = n(792996),
-    h = (((i = {})[(i.AND = 0)] = "AND"), (i[(i.OR = 1)] = "OR"), i);
+    f = (((i = {})[(i.AND = 0)] = "AND"), (i[(i.OR = 1)] = "OR"), i);
 n.d(
     t,
     {},
@@ -247,7 +247,7 @@ n.d(
             "1031611223235637258",
             "512333785338216465",
         ],
-        jO: h,
+        jO: f,
         vA: function (e) {
             let { searchParams: t } = u.A.toURLSafe(e) ?? { searchParams: new URLSearchParams() },
                 { code: n, state: i, error: r, error_description: s } = Object.fromEntries(t);

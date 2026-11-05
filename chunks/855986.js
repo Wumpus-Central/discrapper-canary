@@ -1,7 +1,7 @@
 let i;
 n.d(t, {
     ru: () => a.r,
-    AF: () => h,
+    AF: () => f,
     mk: () => I,
     V5: () => B,
     il: () => L,
@@ -40,8 +40,8 @@ let E = new Set([
         "WRITE_CACHES",
     ]),
     A = new d.Vy("Flux");
-var h = (((r = {})[(r.Early = 0)] = "Early"), (r[(r.Database = 1)] = "Database"), (r[(r.Default = 2)] = "Default"), r);
-let f = [0, 1, 2];
+var f = (((r = {})[(r.Early = 0)] = "Early"), (r[(r.Database = 1)] = "Database"), (r[(r.Default = 2)] = "Default"), r);
+let h = [0, 1, 2];
 class I {
     _interceptors = [];
     _subscriptions = {};
@@ -171,7 +171,7 @@ class I {
 class p {
     _nodes = new Map();
     _orderedActionHandlers = {};
-    _tokensByBand = new Map(f.map((e) => [e, []]));
+    _tokensByBand = new Map(h.map((e) => [e, []]));
     _tokensByActionType = {};
     _callbackTokenPositions = null;
     _lastID = 1;
@@ -179,7 +179,7 @@ class p {
         return this._orderedActionHandlers[e.type] ?? this._computeOrderedActionHandlers(e.type);
     }
     register(e, t, n, i) {
-        l()(f.includes(i), "band must be a DispatchBand, got %s.", i);
+        l()(h.includes(i), "band must be a DispatchBand, got %s.", i);
         let r = `ID_${this._lastID++}`,
             a = {};
         for (let n in t) {
@@ -241,14 +241,14 @@ class p {
                     (t.add(i), this._nodes.get(i).dependencies.forEach(n), t.delete(i), e.set(i, e.size));
                 }
             };
-        return (f.forEach((e) => this._tokensByBand.get(e).forEach(n)), (this._callbackTokenPositions = e), e);
+        return (h.forEach((e) => this._tokensByBand.get(e).forEach(n)), (this._callbackTokenPositions = e), e);
     }
 }
 function m(e, t) {
     Object.defineProperty(e, "name", { value: t });
 }
-var g = n(64015),
-    T = n.n(g),
+var T = n(64015),
+    g = n.n(T),
     S = n(506774);
 n(142703);
 class N {
@@ -539,7 +539,7 @@ class b extends L {
         let { persistKey: t } = this.getClass();
         (this.persist(), b._writePromises.delete(t), b._writeResolvers.delete(t), e());
     };
-    throttledCallback = T()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
+    throttledCallback = g()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
     asyncPersist() {
         let { persistKey: e, disableWrite: t, throttleDelay: n } = this.getClass();
         if (b.disableWrites || t) return Promise.resolve(!1);
@@ -669,8 +669,8 @@ function $(e, t) {
     async function A(e) {
         let { queryId: t, args: n, refetch: s = !1, useStoreState: o = E(t) } = e,
             _ = o.getState().backoff,
-            h = a?.(...n) ?? o.getState().isLoading;
-        if (null != t && !h) {
+            f = a?.(...n) ?? o.getState().isLoading;
+        if (null != t && !f) {
             if (!s) {
                 let e = i(...n);
                 if (
@@ -720,7 +720,7 @@ function $(e, t) {
             }
         }
     }
-    function h() {
+    function f() {
         for (var t = arguments.length, r = Array(t), l = 0; l < t; l++) r[l] = arguments[l];
         let o = (function (e) {
                 let [t, n] = (0, M.useState)(e);
@@ -730,8 +730,8 @@ function $(e, t) {
             c = n(...o),
             u = E(c),
             _ = (0, F.bG)(d, () => a?.(...o), [o]),
-            h = u((e) => null == a && e.isLoading),
-            f = (0, F.bG)(d, () => s?.(...o), [o]),
+            f = u((e) => null == a && e.isLoading),
+            h = (0, F.bG)(d, () => s?.(...o), [o]),
             I = u((e) => (null == s ? e.error : null)),
             p = (0, F.bG)(d, () => i(...o), [o], j);
         return (
@@ -740,8 +740,8 @@ function $(e, t) {
             }, [c, o, u]),
             {
                 data: p === B ? null : p,
-                error: f ?? I,
-                isLoading: _ ?? h,
+                error: h ?? I,
+                isLoading: _ ?? f,
                 refetch: (0, M.useCallback)(() => {
                     A({ queryId: c, args: o, useStoreState: u, refetch: !0 });
                 }, [c, o, u]),
@@ -749,7 +749,7 @@ function $(e, t) {
         );
     }
     return (
-        (h.refetch = async function () {
+        (f.refetch = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             let r = n(...t),
                 a = E(r);
@@ -757,7 +757,7 @@ function $(e, t) {
                 a.setState({ failureLockedUntil: null }),
                 await A({ queryId: r, args: t, useStoreState: a, refetch: !0 }));
         }),
-        (h.fetchMany = async function () {
+        (f.fetchMany = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             await Promise.all(
                 t.map((e) => {
@@ -766,7 +766,7 @@ function $(e, t) {
                 }),
             );
         }),
-        (h.refetchMany = async function () {
+        (f.refetchMany = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             await Promise.all(
                 t.map((e) => {
@@ -780,7 +780,7 @@ function $(e, t) {
                 }),
             );
         }),
-        h
+        f
     );
 }
 let X = {

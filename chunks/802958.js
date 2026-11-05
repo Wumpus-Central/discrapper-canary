@@ -28,7 +28,7 @@ function _(e) {
 }
 function E(e) {
     let { threads: t } = e;
-    t.forEach(h);
+    t.forEach(f);
 }
 function A(e) {
     let { data: t } = e,
@@ -38,24 +38,24 @@ function A(e) {
             let { threads: t, messages: i } = e;
             (i.forEach((e) => {
                 e.forEach((e) => {
-                    n = h(e.thread) || n;
+                    n = f(e.thread) || n;
                 });
             }),
                 t.forEach((e) => {
-                    n = h(e) || n;
+                    n = f(e) || n;
                 }));
         }),
         n
     );
 }
-function h(e) {
+function f(e) {
     if (null != e && !(e.id in d)) {
         let t = o.A.getChannel(e.id);
         if (null != t) return (u(t), !0);
     }
     return !1;
 }
-class f extends a.Ay.Store {
+class h extends a.Ay.Store {
     static displayName = "ThreadMembersStore";
     initialize() {
         this.waitFor(o.A);
@@ -70,7 +70,7 @@ class f extends a.Ay.Store {
         return d;
     }
 }
-let I = new f(s.h, {
+let I = new h(s.h, {
     CONNECTION_OPEN: function (e) {
         ((d = {}), e.guilds.forEach(c));
     },
@@ -113,7 +113,7 @@ let I = new f(s.h, {
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let t = !1;
-        for (let n of e.messages) t = h(n.thread) || t;
+        for (let n of e.messages) t = f(n.thread) || t;
         return t;
     },
 });

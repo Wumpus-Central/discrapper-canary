@@ -11,13 +11,13 @@ var i = n(582128),
     _ = n(152007),
     E = n(353202),
     A = n(95701),
-    h = n(924985),
-    f = n(734057),
+    f = n(924985),
+    h = n(734057),
     I = n(945886),
     p = n(576705),
     m = n(218461),
-    g = n(309010),
-    T = n(543465),
+    T = n(309010),
+    g = n(543465),
     S = n(403362),
     N = n(181079),
     C = n(93055),
@@ -25,7 +25,7 @@ var i = n(582128),
     R = n(349828),
     L = n(281405),
     y = n(818348);
-let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, f.A, p.A, m.Ay, g.Ay, T.Ay];
+let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, f.A, h.A, p.A, m.Ay, T.Ay, g.Ay];
 function b(e) {
     let { limit: t, includeLoading: n } = e,
         i = N.A.getFavoriteChannels(),
@@ -37,7 +37,7 @@ function b(e) {
             a.type !== s.Ip.REFERENCE_ORIGINAL ||
             null == a.channelType ||
             !A.Le.has(a.channelType) ||
-            null != f.A.getChannel(e)
+            null != h.A.getChannel(e)
         )
             continue;
         let l = E.A.getLoadState(e);
@@ -48,15 +48,15 @@ function b(e) {
 function v(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
-        i = T.Ay.isGuildCollapsed("373"),
-        r = g.Ay.getChannelId(),
-        l = f.A.getChannel(r),
-        o = g.Ay.getVoiceChannelId(),
+        i = g.Ay.isGuildCollapsed("373"),
+        r = T.Ay.getChannelId(),
+        l = h.A.getChannel(r),
+        o = T.Ay.getVoiceChannelId(),
         d = [],
         E = {};
     for (let e in n) {
         let t = n[e],
-            i = f.A.getChannel(t.id);
+            i = h.A.getChannel(t.id);
         if (null == i || t.type === s.Ip.CATEGORY) continue;
         let r = (0, O.R)(n, t, i);
         if (null == t.parentId || null == n[t.parentId] || n[t.parentId].type !== s.Ip.CATEGORY) {
@@ -73,26 +73,26 @@ function v(e) {
                 if (!e.isPrivate() && !p.A.can(y.xB.VIEW_CHANNEL, e)) return null;
                 let d = null != l && (l.id === e.id || o === e.id),
                     E = null != l && l.isThread() && l.parent_id === e.id,
-                    h =
+                    f =
                         (d || E || !r
                             ? u.A.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id)
                             : u.A.getActiveJoinedUnreadThreadsForParent(e.guild_id, e.id)) ?? {},
-                    f = (0, c.wF)(e, h, l, o, i),
-                    g = I.A.isCollapsed(e.id),
-                    S = e.isThread() ? _.A.isMuted(e.id) : T.Ay.isChannelMuted(e.guild_id, e.id),
+                    h = (0, c.wF)(e, f, l, o, i),
+                    T = I.A.isCollapsed(e.id),
+                    S = e.isThread() ? _.A.isMuted(e.id) : g.Ay.isChannelMuted(e.guild_id, e.id),
                     N = {
                         id: e.id,
                         record: e,
                         category: t,
                         position: n[e.id].order,
-                        threadIds: f,
-                        threadCount: a().size(f),
-                        isCollapsed: g,
+                        threadIds: h,
+                        threadCount: a().size(h),
+                        isCollapsed: T,
                         isMuted: S,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, c.go)(e, g, !1),
+                        subtitle: (0, c.go)(e, T, !1),
                     };
-                return d || E || !a().isEmpty(h) || m.Ay.getMentionCount(e.id) > 0
+                return d || E || !a().isEmpty(f) || m.Ay.getMentionCount(e.id) > 0
                     ? N
                     : (i && S) ||
                         (r && (S || s || (0, A.gV)(e.type) || ((0, A.ig)(e.type) && !1 === m.Ay.hasUnread(e.id))))
@@ -123,8 +123,8 @@ function v(e) {
                     i = N.A.getCategoryRecord(t);
                 if (null == i) return null;
                 let r = E[t] ?? [],
-                    a = T.Ay.isChannelMuted("373", t),
-                    s = h.A.isCollapsed(t),
+                    a = g.Ay.isChannelMuted("373", t),
+                    s = f.A.isCollapsed(t),
                     l = null;
                 return {
                     isMuted: a,
@@ -197,7 +197,7 @@ function v(e) {
             for (let t of [v, ...P])
                 for (let n of t.channelList)
                     for (let t of (e(n.record), n.threadIds)) {
-                        let n = f.A.getChannel(t);
+                        let n = h.A.getChannel(t);
                         null != n && e(n);
                     }
         },

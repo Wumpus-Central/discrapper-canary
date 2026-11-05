@@ -16,18 +16,18 @@ let E = (0, n(400845).Ay)({
     variations: { 1: { enabled: !0 } },
 });
 var A = n(384077);
-function h(e) {
+function f(e) {
     let { embeddedMac: t, constructed: n, nativeFailureReason: i } = e;
     return t || !n
         ? { result: "failed", reason: i ?? "html5_constructor_error" }
         : { result: "shown", reason: i ?? "none" };
 }
-var f = n(400492),
+var h = n(400492),
     I = n(312671),
     p = n(458640),
     m = n(734057),
-    g = n(803224),
-    T = n(994500),
+    T = n(803224),
+    g = n(994500),
     S = n(351906),
     N = n(287809),
     C = n(129230),
@@ -83,7 +83,7 @@ async function B(e) {
         } catch (e) {
             M.warn("Native notification sound failed with error: ", e);
         }
-    (0, f.Ak)(e, t, void 0, n, { trackNotificationFailure: !0 });
+    (0, h.Ak)(e, t, void 0, n, { trackNotificationFailure: !0 });
 }
 let V = r().throttle(B, 1e3, { leading: !0 });
 function H() {
@@ -222,11 +222,11 @@ let X = {
             c = await x(),
             u = c?.authorizationStatus === "authorized" || c?.authorizationStatus === "provisional",
             _ = null != c ? u : await K(),
-            f = S.A.disableNotifications && null == r.overrideStreamerMode,
+            h = S.A.disableNotifications && null == r.overrideStreamerMode,
             I = !L.isPlatformEmbedded || ((0, L.cX)() && u) || y.Ay.shouldDisplayNotifications(),
             p = { ...i, action: void 0, ping: void 0, banner: void 0, badge: void 0 };
-        if (((i.banner = await Y()), !(!f && _ && I))) {
-            (w("suppressed", f ? "streamer_mode" : _ ? "os_disabled" : "permission_denied"),
+        if (((i.banner = await Y()), !(!h && _ && I))) {
+            (w("suppressed", h ? "streamer_mode" : _ ? "os_disabled" : "permission_denied"),
                 null != r.sound &&
                     !1 !== r.playSoundIfDisabled &&
                     ($(r.sound, r.volume ?? 1, r.soundpack),
@@ -278,7 +278,7 @@ let X = {
                             e(o.src);
                         }));
                 }))),
-            b && g.A.taskbarFlash && y.Ay.flashFrame(!0));
+            b && T.A.taskbarFlash && y.Ay.flashFrame(!0));
         let V = null;
         if (u) {
             let a = { title: t, body: n };
@@ -294,7 +294,7 @@ let X = {
                     t = r.messageRecord.author;
                 a.threadIdentifier = e;
                 let n = m.A.getChannel(e);
-                null != n && (a.groupName = (0, d.m1)(n, N.default, T.A));
+                null != n && (a.groupName = (0, d.m1)(n, N.default, g.A));
                 let i = n?.getGuildId();
                 ((a.senderIdentifier = t.id),
                     (a.senderDisplayName = R.Ay.getName(i, e, t)),
@@ -341,18 +341,18 @@ let X = {
         let H = { icon: e, body: n, tag: v, silent: !0 },
             X = L.isPlatformEmbedded && (0, L.cX)();
         if (X) {
-            let { result: e, reason: t } = h({ embeddedMac: X, constructed: !1, nativeFailureReason: V });
+            let { result: e, reason: t } = f({ embeddedMac: X, constructed: !1, nativeFailureReason: V });
             w(e, t, "html5");
             return;
         }
         try {
             l = new j(t, H);
         } catch (n) {
-            let { result: e, reason: t } = h({ embeddedMac: X, constructed: !1, nativeFailureReason: V });
+            let { result: e, reason: t } = f({ embeddedMac: X, constructed: !1, nativeFailureReason: V });
             w(e, t, "html5");
             return;
         }
-        let { result: z, reason: q } = h({ embeddedMac: X, constructed: !0, nativeFailureReason: V });
+        let { result: z, reason: q } = f({ embeddedMac: X, constructed: !0, nativeFailureReason: V });
         return (w(z, q, "html5"),
         B(l, i),
         (l.onclick = (e) => {

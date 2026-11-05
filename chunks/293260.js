@@ -1,51 +1,51 @@
-var a = t(477900);
+var l = t(477900);
 t(582128);
-var n = t(855986),
-    i = t(231723),
+var i = t(855986),
+    a = t(231723),
     s = t(192308);
-if (221552 == t.j) var c = t(477782);
-if (221552 == t.j) var r = t(173936);
+if (221552 == t.j) var r = t(477782);
+if (221552 == t.j) var c = t(173936);
 var d = t(317525),
     o = t(370480),
     u = t(792996);
-let h = "guild-connection-roles";
-function g(l) {
+let N = "guild-connection-roles";
+function g(e) {
     (0, s.mM)(
         async () => {
-            let { default: e } = await Promise.all([
+            let { default: n } = await Promise.all([
                 t.e(587882),
                 t.e(727797),
                 t.e(24922),
                 t.e(150200),
                 t.e(292837),
             ]).then(t.bind(t, 480900));
-            return (t) => (0, a.jsx)(e, { ...t, guildId: l });
+            return (t) => (0, l.jsx)(n, { ...t, guildId: e });
         },
         {
-            modalKey: h,
-            contextKey: i.SY,
+            modalKey: N,
+            contextKey: a.SY,
             onCloseRequest: () => {
-                (0, s.Oo)(h, i.SY);
+                (0, s.Oo)(N, a.SY);
             },
         },
     );
 }
 t.d(
-    e,
+    n,
     {},
     {
-        Ay: function (l) {
-            return (0, n.bG)([d.A], () => (0, o.N8)(d.A.getSortedRoles(l.id)), [l])
-                ? (0, a.jsx)(c.Dr, {
+        Ay: function (e) {
+            return (0, i.bG)([d.A], () => (0, o.N8)(d.A.getSortedRoles(e.id)), [e])
+                ? (0, l.jsx)(r.Dr, {
                       id: "guild-connection-roles",
                       label: u.intl.string(u.t.ghtnss),
-                      icon: r.LinkIcon,
-                      leadingAccessory: { type: "icon", icon: r.LinkIcon },
-                      action: () => g(l.id),
+                      icon: c.LinkIcon,
+                      leadingAccessory: { type: "icon", icon: c.LinkIcon },
+                      action: () => g(e.id),
                   })
                 : null;
         },
-        CB: h,
+        CB: N,
         c0: g,
     },
 );

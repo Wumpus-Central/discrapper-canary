@@ -11,8 +11,8 @@ var i = t(991660),
     u = t(173936),
     m = t(858899),
     h = t(587895),
-    j = t(212534),
-    v = t(272859),
+    v = t(212534),
+    j = t(272859),
     E = t(957565),
     g = t(943775),
     A = t(997997),
@@ -27,8 +27,8 @@ t.d(
     {
         C: function (s) {
             let { appId: l, skuId: t, transitionState: R, onClose: p, children: f, footer: C } = s,
-                O = (0, n.bG)([h.A, j.A], () => h.A.getApplication(l) ?? j.A.getApplicationRecord(l), [l]),
-                { data: b } = (0, v.d)(t);
+                O = (0, n.bG)([h.A, v.A], () => h.A.getApplication(l) ?? v.A.getApplicationRecord(l), [l]),
+                { data: b } = (0, j.d)(t);
             if (null == O) return null;
             let y = (0, g.A)(O, 25),
                 { termsOfServiceUrl: P, privacyPolicyUrl: U } = O;

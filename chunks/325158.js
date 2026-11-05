@@ -20,8 +20,8 @@ let x = {
     light: p(g.A.unsafe_rawColors.BLACK.resolve({ saturation: 1 }).hex()),
     dark: p(g.A.unsafe_rawColors.WHITE.resolve({ saturation: 1 }).hex()),
 };
-var _ = e(454908),
-    I = e(82149),
+var I = e(454908),
+    _ = e(82149),
     N = e(129230),
     E = e(913659),
     T = e(486020),
@@ -50,7 +50,7 @@ function j(t) {
         { largeImage: c, smallImage: u } = b(a, r),
         { largeImage: d } = P(a, o),
         A = o?.getCanonicalGameId(),
-        { data: f } = (0, _.I)(A),
+        { data: f } = (0, I.I)(A),
         g = f?.getCoverURL(),
         m =
             (0, h.Tq)(e) && e.extra.entries.length > 0
@@ -81,8 +81,8 @@ function P(t, n) {
     return (function (t) {
         let { activity: n, application: e, largeImage: l, smallImage: i, conjureImage: r } = t;
         if (null != l) return { largeImage: l, smallImage: i };
-        if ((0, I.Cy)(n)) {
-            let t = (0, I.UW)(n),
+        if ((0, _.Cy)(n)) {
+            let t = (0, _.UW)(n),
                 e =
                     null != t
                         ? T.Ay.getGuildIconURL({ id: t.guildId, icon: n?.assets?.small_image, size: y.iu.SMALL })
@@ -125,10 +125,10 @@ function L(t) {
         m = n?.name,
         p = n?.type,
         x = n?.session_id,
-        _ = n?.assets?.large_image != null || n?.assets?.small_image != null,
-        I = null != n;
+        I = n?.assets?.large_image != null || n?.assets?.small_image != null,
+        _ = null != n;
     (0, l.useEffect)(() => {
-        I &&
+        _ &&
             A &&
             g &&
             N.default.track(S.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
@@ -138,14 +138,14 @@ function L(t) {
                 activity_type: p,
                 activity_session_id: x,
                 application_found: f,
-                has_rich_assets: _,
+                has_rich_assets: I,
             });
-    }, [r, I, A, g, s, m, p, x, f, _]);
+    }, [r, _, A, g, s, m, p, x, f, I]);
 }
 function b(t, n) {
     let e = (0, u.h)(t?.application_id),
         l = n ?? e,
-        { data: i } = (0, _.I)(l?.getCanonicalGameId());
+        { data: i } = (0, I.I)(l?.getCanonicalGameId());
     if (null == t) return { largeImage: void 0, smallImage: void 0 };
     let a = t?.assets?.large_image,
         s =

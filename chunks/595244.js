@@ -11,13 +11,13 @@ var i = n(477900),
     _ = n(289873),
     E = n(534514),
     A = n(834730),
-    h = n(573435),
-    f = n(726249),
+    f = n(573435),
+    h = n(726249),
     I = n(310419),
     p = n(976860),
     m = n(345942),
-    g = n(734057),
-    T = n(576705),
+    T = n(734057),
+    g = n(576705),
     S = n(309010),
     N = n(129230),
     C = n(486020),
@@ -30,7 +30,7 @@ var i = n(477900),
 function v(e) {
     let { message: t, footer: n, headerClassName: r, illustration: a, showsCloseWindowText: l, spinner: o } = e;
     return (
-        (0, f.HU)({ location: D.intl.string(D.t["3S2494"]) }),
+        (0, h.HU)({ location: D.intl.string(D.t["3S2494"]) }),
         (0, i.jsxs)("div", {
             className: b.iE,
             children: [
@@ -91,8 +91,8 @@ n.d(
                 children: (0, i.jsxs)("div", {
                     className: b.kV,
                     children: [
-                        (0, i.jsx)(h.Ay, {
-                            mask: h.hW.SQUIRCLE,
+                        (0, i.jsx)(f.Ay, {
+                            mask: f.hW.SQUIRCLE,
                             className: b.LR,
                             children: (0, i.jsx)("img", {
                                 alt: t.name,
@@ -165,15 +165,15 @@ n.d(
                                 }));
                         }));
                 }, [n?.id, s, o]),
-                E = (0, d.bG)([S.Ay, g.A], () => g.A.getChannel(S.Ay.getChannelId())),
-                A = (0, d.bG)([T.A], () => T.A.can(y.xBc.SEND_MESSAGES, E)),
-                h = null != t,
-                f = null == t && A && (!u || null != o),
+                E = (0, d.bG)([S.Ay, T.A], () => T.A.getChannel(S.Ay.getChannelId())),
+                A = (0, d.bG)([g.A], () => g.A.can(y.xBc.SEND_MESSAGES, E)),
+                f = null != t,
+                h = null == t && A && (!u || null != o),
                 C = [];
             return (
                 (null != t || null != s) &&
                     (null != s && C.push({ variant: "secondary", text: D.intl.string(D.t.cpT0Cq), onClick: c }),
-                    h &&
+                    f &&
                         C.push({
                             variant: "primary",
                             text:
@@ -182,7 +182,7 @@ n.d(
                                     : D.intl.format(D.t.UdYYP3, { guildName: t?.name }),
                             onClick: l,
                         }),
-                    f && C.push({ variant: "primary", text: D.intl.string(D.t["0cCDKP"]), onClick: _ })),
+                    h && C.push({ variant: "primary", text: D.intl.string(D.t["0cCDKP"]), onClick: _ })),
                 (0, i.jsx)(L.f, { ...a, actions: C, children: (0, i.jsx)(P, { guild: t, application: n, ...a }) })
             );
         },

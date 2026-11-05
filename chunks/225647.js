@@ -1,26 +1,26 @@
-let a = new Map(
+let l = new Map(
     ["DLC", "XP", "VIP", "V-Bucks"].flatMap((e) => [
         [e.toLowerCase(), e],
         [e.replaceAll("-", "").toLowerCase(), e],
     ]),
 );
-t.d(
-    l,
+a.d(
+    t,
     {},
     {
         A: function (e) {
             if (null == e) return e;
-            let l = e === e.toUpperCase();
+            let t = e === e.toUpperCase();
             return e.replace(/[\p{L}\p{M}\p{N}_]+(?:['\u2019-][\p{L}\p{M}\p{N}_]+)*/gu, (e) => {
-                let t = a.get(e.toLowerCase());
-                return null != t
-                    ? t
+                let a = l.get(e.toLowerCase());
+                return null != a
+                    ? a
                     : e
                           .split("-")
                           .map(
                               (e) =>
-                                  a.get(e.toLowerCase()) ??
-                                  (l
+                                  l.get(e.toLowerCase()) ??
+                                  (t
                                       ? e
                                             .toLowerCase()
                                             .replace(/(?:^|[^\p{L}\p{M}'\u2019])\p{L}/gu, (e) => e.toUpperCase())

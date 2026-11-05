@@ -25,23 +25,23 @@ function A(e) {
             return String(t);
     }
 }
-let h = new Map();
+let f = new Map();
 n.d(
     t,
     {},
     {
         A: function (e, t, n) {
-            let { baseCode: r, targetChannelId: u, targetMessageId: _, guildScheduledEventId: f } = (0, c.y$)(e);
+            let { baseCode: r, targetChannelId: u, targetMessageId: _, guildScheduledEventId: h } = (0, c.y$)(e);
             if (
                 (o.default.track(E.HAw.INVITE_OPENED, { invite_code: r, invite_instance_id: n?.inviteInstanceId }),
-                h.has(e))
+                f.has(e))
             )
-                return h.get(e);
+                return f.get(e);
             let I = {
                     inputValue: n?.inputValue,
                     with_counts: !0,
                     with_expiration: !0,
-                    guild_scheduled_event_id: f,
+                    guild_scheduled_event_id: h,
                     target_channel_id: u,
                     target_message_id: _,
                     with_permissions: !0,
@@ -130,9 +130,9 @@ n.d(
                         },
                     )
                     .finally(() => {
-                        h.delete(e);
+                        f.delete(e);
                     });
-            return (h.set(e, p), p);
+            return (f.set(e, p), p);
         },
     },
 );

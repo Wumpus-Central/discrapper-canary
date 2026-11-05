@@ -54,8 +54,8 @@ function d(e) {
             "aria-label": f,
             filters: E,
             setLoading: I,
-            title: g,
-            ref: h,
+            title: h,
+            ref: g,
         } = e,
         p = s.useRef(null),
         [A, _] = s.useState(!1);
@@ -64,7 +64,7 @@ function d(e) {
             A && null !== p.current && ((0, l.Oo)(p.current), (p.current = null));
         }, [A]),
         (0, i.jsx)(r.A, {
-            ref: h,
+            ref: g,
             onChange: async function (e) {
                 if (
                     (e.stopPropagation(),
@@ -91,7 +91,7 @@ function d(e) {
             className: d,
             tabIndex: m,
             "aria-label": f,
-            title: g,
+            title: h,
         })
     );
 }

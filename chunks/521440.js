@@ -15,29 +15,29 @@ let h = {
 };
 function p(t) {
     let { className: e, disabled: n, size: p, variant: f, location: A, forceDarkTheme: g, ref: m } = t,
-        R = d.pe.TIER_2,
-        y = o.intl.string(o.t.lG6a5x),
-        I = (0, i.bG)([u.default], () => u.default.getId());
+        I = d.pe.TIER_2,
+        R = o.intl.string(o.t.lG6a5x),
+        P = (0, i.bG)([u.default], () => u.default.getId());
     (0, c.pE)();
     let {
-        isWishlisted: P,
-        isBusy: T,
-        isFirstTimeWishlister: v,
+        isWishlisted: T,
+        isBusy: v,
+        isFirstTimeWishlister: y,
         handleToggle: E,
-    } = (0, s.c)({ userId: I, location: A, skuId: R, nuxGraphic: h, onNuxShow: l.D });
+    } = (0, s.c)({ userId: P, location: A, skuId: I, nuxGraphic: h, onNuxShow: l.D });
     return (0, a.jsx)("div", {
         ref: m,
         className: g ? "theme-dark" : void 0,
         children: (0, a.jsx)(r._, {
-            skuId: R,
-            productName: y,
+            skuId: I,
+            productName: R,
             className: e,
             disabled: n,
             size: p,
             variant: f,
-            isWishlisted: P,
-            isBusy: T,
-            isFirstTimeWishlister: v,
+            isWishlisted: T,
+            isBusy: v,
+            isFirstTimeWishlister: y,
             onClick: E,
             tooltipConfig: { add: o.intl.string(o.t.cjmnm6) },
         }),

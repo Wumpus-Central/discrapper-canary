@@ -74,11 +74,11 @@ function _(e, t) {
         })(a),
         { data: l, error: d, isLoading: _ } = u(s, r),
         [E, A] = i.useState(null),
-        h = null != l && null != s ? { query: s, results: l } : null;
-    null == a ? null != E && A(null) : null != h && h.results !== E?.results && A(h);
-    let f = null != a ? (h ?? E) : null,
-        I = f?.query ?? null,
-        p = f?.results ?? null,
+        f = null != l && null != s ? { query: s, results: l } : null;
+    null == a ? null != E && A(null) : null != f && f.results !== E?.results && A(f);
+    let h = null != a ? (f ?? E) : null,
+        I = h?.query ?? null,
+        p = h?.results ?? null,
         [m] = i.useState(() => new c.vn(n, r));
     return (
         i.useEffect(() => {

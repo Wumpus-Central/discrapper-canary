@@ -80,14 +80,14 @@ let u = Object.freeze({
     _ = Object.freeze({ line_1: "line1", line_2: "line2", postal_code: "postalCode" });
 var E = (((a = E || {}).CARD = "card"), (a.ADDRESS = "address"), a);
 let A = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
-    h = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
-class f extends l.A {
+    f = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
+class h extends l.A {
     paymentId = null;
     static ErrorCodes = d;
     static Fields = c;
     static Sections = E;
     static CARD_ERRORS = A;
-    static ADDRESS_ERRORS = h;
+    static ADDRESS_ERRORS = f;
     constructor(e, t) {
         for (let n in (super(e, t),
         100027 === this.code
@@ -140,14 +140,14 @@ class f extends l.A {
         return this._isInFieldSet(A);
     }
     hasAddressError() {
-        return this._isInFieldSet(h);
+        return this._isInFieldSet(f);
     }
 }
 n.d(
     t,
     {},
     {
-        Ay: f,
+        Ay: h,
         Wd: function (e) {
             if ("string" != typeof e && e?.body?.code === s.bG) {
                 if (!Array.isArray(e?.body?.errors) && e?.body?.errors?.billing_address != null) {
@@ -159,7 +159,7 @@ n.d(
                 }
                 e.body?.errors != null && (e.body = (0, s.ni)(e.body.errors));
             }
-            return new f(e);
+            return new h(e);
         },
         tG: d,
     },

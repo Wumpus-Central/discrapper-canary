@@ -12,13 +12,13 @@ var r = n(862482),
     _ = n(309010),
     E = n(532624),
     A = n(531685),
-    h = n(129230),
-    f = n(350535),
+    f = n(129230),
+    h = n(350535),
     I = n(427603),
     p = n(652215),
     m = n(765682),
-    g = n(792996);
-let T = new d.A("AudioActionCreators");
+    T = n(792996);
+let g = new d.A("AudioActionCreators");
 function S() {
     (0, a.mM)(async () => {
         let { default: e } = await Promise.all([
@@ -49,20 +49,20 @@ function N() {
         !u.Ay.isSupported() &&
         ((0, a.qf)((e) =>
             (0, i.jsx)(s.a, {
-                header: g.intl.string(g.t.ilMTy0),
-                confirmText: g.intl.string(g.t["BK8LK+"]),
-                cancelText: g.intl.string(g.t["ETE/oC"]),
+                header: T.intl.string(T.t.ilMTy0),
+                confirmText: T.intl.string(T.t["BK8LK+"]),
+                cancelText: T.intl.string(T.t["ETE/oC"]),
                 onConfirm: S,
                 confirmButtonColor: r.$n.Colors.BRAND,
                 ...e,
-                children: (0, i.jsx)(l.E, { variant: "body-md/normal", children: g.intl.string(g.t.h66vlB) }),
+                children: (0, i.jsx)(l.E, { variant: "body-md/normal", children: T.intl.string(T.t.h66vlB) }),
             }),
         ),
         !0)
     );
 }
 function C(e) {
-    h.default.track(p.HAw.PERMISSIONS_ACKED, { type: "audio", action: e });
+    f.default.track(p.HAw.PERMISSIONS_ACKED, { type: "audio", action: e });
 }
 n.d(
     t,
@@ -72,7 +72,7 @@ n.d(
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
             return N()
                 ? Promise.resolve(!1)
-                : (h.default.track(p.HAw.PERMISSIONS_REQUESTED, { type: "audio" }),
+                : (f.default.track(p.HAw.PERMISSIONS_REQUESTED, { type: "audio" }),
                   u.Ay.getMediaEngine()
                       .enable()
                       .then(
@@ -92,7 +92,7 @@ n.d(
                                       C(m.hL.DISMISSED);
                                       break;
                                   default:
-                                      (C(m.hL.ERROR), T.warn(`unknown getUserMedia error: ${e}`));
+                                      (C(m.hL.ERROR), g.warn(`unknown getUserMedia error: ${e}`));
                               }
                           },
                       )
@@ -104,9 +104,9 @@ n.d(
                 i = E.Ay.getKeybindForAction(p.hCu.TOGGLE_DEAFEN, !1, !0),
                 r = _.Ay.getVoiceChannelId(),
                 a = null != r ? c.A.getChannel(r) : null;
-            h.default.track(p.HAw.SELF_DEAFEN_TOGGLED, {
+            f.default.track(p.HAw.SELF_DEAFEN_TOGGLED, {
                 enabled: !u.Ay.isSelfDeaf(),
-                keybind_assigned: null != i ? (0, f.dI)(i.shortcut) : void 0,
+                keybind_assigned: null != i ? (0, h.dI)(i.shortcut) : void 0,
                 used_keybind: t,
                 app_in_focus: A.A.isAppFocused(),
                 overlay_activated: null != (0, I.A)(),
@@ -119,7 +119,7 @@ n.d(
                 i = E.Ay.getKeybindForAction(p.hCu.TOGGLE_MUTE, !1, !0),
                 r = _.Ay.getVoiceChannelId(),
                 a = null != r ? c.A.getChannel(r) : null;
-            h.default.track(p.HAw.INPUT_MUTE_TOGGLED, {
+            f.default.track(p.HAw.INPUT_MUTE_TOGGLED, {
                 enabled: !u.Ay.isSelfMute(),
                 custom_keybind_assigned: null != i,
                 used_keybind: t,

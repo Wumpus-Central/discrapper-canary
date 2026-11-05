@@ -23,13 +23,13 @@ n.d(
                 onConfirm: C,
                 onCancel: E,
                 channel: x,
-                analyticsType: S,
-                popoutText: I,
+                analyticsType: I,
+                popoutText: S,
                 animation: y,
             } = e;
             i.useEffect(() => {
-                m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(x) });
-            }, [S, x]);
+                m.default.track(g.HAw.OPEN_POPOUT, { type: I, ...(0, u.dI)(x) });
+            }, [I, x]);
             let b = i.useCallback(() => {
                     (C?.(), t());
                 }, [C, t]),
@@ -82,7 +82,7 @@ n.d(
                                                 id: "content-warning-popout-label",
                                                 className: f.PT,
                                                 variant: "body-sm/normal",
-                                                children: I.body,
+                                                children: S.body,
                                             }),
                                             (0, l.jsxs)("div", {
                                                 className: A._o,
@@ -130,7 +130,7 @@ n.d(
                                     }),
                                 ],
                             }),
-                            null != I.footer && "" !== I.footer
+                            null != S.footer && "" !== S.footer
                                 ? (0, l.jsxs)("div", {
                                       className: A.qr,
                                       children: [
@@ -139,7 +139,7 @@ n.d(
                                               color: s.A.unsafe_rawColors.PRIMARY_400.css,
                                               className: A.Kk,
                                           }),
-                                          (0, l.jsx)(o.E, { variant: "body-sm/normal", children: I.footer }),
+                                          (0, l.jsx)(o.E, { variant: "body-sm/normal", children: S.footer }),
                                       ],
                                   })
                                 : null,

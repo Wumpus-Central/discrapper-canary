@@ -11,14 +11,14 @@ var i = n(138399),
     _ = n(458294),
     E = n(596344),
     A = n(309010),
-    h = n(967198),
-    f = n(188567),
+    f = n(967198),
+    h = n(188567),
     I = n(652215);
 let p = {
     binds: ["shift+esc"],
     comboKeysBindGlobal: !0,
     action() {
-        let e = h.A.getGuildId();
+        let e = f.A.getGuildId();
         if (null == e) return;
         if ((0, r.ai)(e)) {
             if (
@@ -45,6 +45,6 @@ let p = {
         }
         let t = A.Ay.getChannelId(e);
         null == t ||
-            (E.A.getMessages(t).hasMoreAfter ? i.A.jumpToPresent(t, 30) : f._.dispatch(I.jej.SCROLLTO_PRESENT));
+            (E.A.getMessages(t).hasMoreAfter ? i.A.jumpToPresent(t, 30) : h._.dispatch(I.jej.SCROLLTO_PRESENT));
     },
 };

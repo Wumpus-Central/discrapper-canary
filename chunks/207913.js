@@ -10,13 +10,13 @@ let d = {},
     _ = !1,
     E = !1,
     A = null,
-    h = null,
-    f = !1,
+    f = null,
+    h = !1,
     I = !1,
     p = [],
     m = !1,
-    g = !1,
     T = !1,
+    g = !1,
     S = !1,
     N = !1,
     C = null,
@@ -44,12 +44,12 @@ function G() {
     ((_ = !1),
         (d = {}),
         (u = { state: l.PN.ALL_GOOD }),
-        (h = null),
+        (f = null),
         (O = o.Iv.DIDNT_VIOLATE_POLICY),
         (R = ""),
         (p = []),
-        (g = !1),
         (T = !1),
+        (g = !1),
         (P = o.qN.NONE),
         (D = 0),
         (M = null));
@@ -78,10 +78,10 @@ class x extends a.Ay.Store {
         return c[e];
     }
     getAppealClassificationId() {
-        return h;
+        return f;
     }
     getIsDsaEligible() {
-        return f;
+        return h;
     }
     getIsAppealEligible() {
         return I;
@@ -93,10 +93,10 @@ class x extends a.Ay.Store {
         return m;
     }
     getShowExpressiveModalSubtitleAlt() {
-        return g;
+        return T;
     }
     getIsManualReviewFallbackEnabled() {
-        return T;
+        return g;
     }
     getIsManualReviewDecidedUnderage() {
         return S;
@@ -149,12 +149,12 @@ let k = new x(s.h, {
             appealEligibility: l,
             expressiveModalV2Enabled: o,
             showExpressiveModalSubtitleAlt: c,
-            manualReviewFallbackEnabled: h,
+            manualReviewFallbackEnabled: f,
             manualReviewDecidedUnderage: N,
         } = e;
         ((d = r()(t, "id")),
             (u = n),
-            (f = i),
+            (h = i),
             (I = a),
             (_ = !1),
             (E = !0),
@@ -162,8 +162,8 @@ let k = new x(s.h, {
             (L = s),
             (p = l),
             (m = o),
-            (g = c),
-            (T = h),
+            (T = c),
+            (g = f),
             (S = N));
     },
     SAFETY_HUB_FETCH_FAILURE: function (e) {
@@ -175,7 +175,7 @@ let k = new x(s.h, {
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function (e) {
         let { classification: t, accountStanding: n, isDsaEligible: i, username: r, isAppealEligible: a } = e;
-        ((d[t.id] = t), (c[t.id] = l.nU.SUCCESS), (u = n), (_ = !1), (A = null), (f = i), (I = a), (E = !0), (L = r));
+        ((d[t.id] = t), (c[t.id] = l.nU.SUCCESS), (u = n), (_ = !1), (A = null), (h = i), (I = a), (E = !0), (L = r));
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (e) {
         let { error: t, classificationId: n } = e;
@@ -183,10 +183,10 @@ let k = new x(s.h, {
     },
     SAFETY_HUB_APPEAL_OPEN: function (e) {
         let { classificationId: t } = e;
-        h = t;
+        f = t;
     },
     SAFETY_HUB_APPEAL_CLOSE: function () {
-        ((h = null), (O = o.Iv.DIDNT_VIOLATE_POLICY), (R = ""));
+        ((f = null), (O = o.Iv.DIDNT_VIOLATE_POLICY), (R = ""));
     },
     SAFETY_HUB_APPEAL_SIGNAL_SELECT: function (e) {
         let { signal: t } = e;

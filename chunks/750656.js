@@ -38,7 +38,7 @@ let s = [a.x.PLAYPEN_SANS, a.x.ORBITRON, a.x.NEW_ROCKER, a.x.KALAM],
         [8316888, 8178687, 8359167, 0xb56dff, 0xf38ad8],
         [7997702, 0xc81e12, 0xf45a18, 0xff9500, 0xffd447],
     ];
-var h = (((i = {}).BUTTON = "button"), (i.LINK = "link"), i);
+var f = (((i = {}).BUTTON = "button"), (i.LINK = "link"), i);
 n.d(
     t,
     {},
@@ -64,6 +64,6 @@ n.d(
         lU: E,
         rA: o,
         re: d,
-        vY: h,
+        vY: f,
     },
 );

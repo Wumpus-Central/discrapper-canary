@@ -32,7 +32,7 @@ function E(e) {
 function A() {
     d.A.shouldFetchToday() || E(d.A.getWarning());
 }
-class h extends s.A {
+class f extends s.A {
     actions = {
         PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: (e) => {
             let { warning: t } = e;
@@ -64,5 +64,5 @@ class h extends s.A {
         },
     };
 }
-let f = new h();
-n.d(t, {}, { A: f });
+let h = new f();
+n.d(t, {}, { A: h });

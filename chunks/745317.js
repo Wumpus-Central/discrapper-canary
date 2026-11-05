@@ -11,17 +11,17 @@ var s = n(477900),
     x = n(827343),
     A = n(688810),
     E = n(625841),
-    p = n(74848),
-    g = n(253932),
-    _ = n(912630),
-    N = n(717359),
+    g = n(74848),
+    p = n(253932),
+    N = n(912630),
+    _ = n(717359),
     j = n(754712),
-    f = n(129230),
-    h = n(204050),
-    I = n(652215),
+    I = n(129230),
+    f = n(204050),
+    h = n(652215),
     v = n(731854),
     O = n(792996),
-    S = n(357063);
+    y = n(357063);
 n.d(
     t,
     {},
@@ -35,13 +35,13 @@ n.d(
                     selectedBackgroundOption: o,
                     onSelectBackgroundOption: r,
                     renderCamera: c,
-                    hidePreviewToggle: _ = !1,
-                    onCancelPreview: b,
+                    hidePreviewToggle: N = !1,
+                    onCancelPreview: S,
                 } = e,
-                { analyticsLocations: y } = (0, A.Ay)(),
-                { id: C } = (0, p.x5)(v.oh.VIDEO_INPUT),
-                U = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
-                D = g.bm.useSetting();
+                { analyticsLocations: b } = (0, A.Ay)(),
+                { id: C } = (0, g.x5)(v.oh.VIDEO_INPUT),
+                D = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
+                U = p.bm.useSetting();
             return (0, s.jsxs)(u.B, {
                 gap: 20,
                 children: [
@@ -49,43 +49,43 @@ n.d(
                     j.Ay.isEnabled()
                         ? null
                         : (0, s.jsx)(d.E, {
-                              className: S.u5,
+                              className: y.u5,
                               color: "interactive-text-default",
                               variant: "body-sm/normal",
                               children: O.intl.format(O.t.stagfJ, { onEnableClick: () => x.default.enable(!0) }),
                           }),
-                    _
+                    N
                         ? null
                         : (0, s.jsx)(m.d, {
                               label: O.intl.string(O.t["3Ppr1h"]),
                               description: O.intl.string(O.t.WNbX4O),
-                              checked: D,
+                              checked: U,
                               onChange: (e) => {
-                                  (g.bm.updateSetting(e),
-                                      f.default.track(I.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
+                                  (p.bm.updateSetting(e),
+                                      I.default.track(h.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
                               },
                           }),
                     !t &&
                         (0, s.jsx)(E.U, {
                             label: n ? void 0 : O.intl.string(O.t.FsQ3OR),
                             helperText:
-                                !l && (0, h.p)()
+                                !l && (0, f.p)()
                                     ? O.intl.format(O.t.aJYgRt, {
                                           onCameraSettingsClick: () => {
-                                              (b?.(),
-                                                  window.open((0, h.i)(C)),
-                                                  f.default.track(I.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, {
-                                                      location_stack: y,
+                                              (S?.(),
+                                                  window.open((0, f.i)(C)),
+                                                  I.default.track(h.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, {
+                                                      location_stack: b,
                                                   }));
                                           },
                                       })
                                     : void 0,
                             deviceType: v.oh.VIDEO_INPUT,
                             location: "CameraSettings",
-                            isDisabled: !U,
+                            isDisabled: !D,
                         }),
-                    (0, s.jsx)(N.A, {
-                        className: S.Jp,
+                    (0, s.jsx)(_.A, {
+                        className: y.Jp,
                         onLearnMore: a,
                         selectedBackgroundOption: o,
                         onSelectBackgroundOption: r,
@@ -95,9 +95,9 @@ n.d(
             });
         },
         eK: function () {
-            return (0, i.bG)([_.A], () => _.A.videoBackgroundPreviewUnavailable)
+            return (0, i.bG)([N.A], () => N.A.videoBackgroundPreviewUnavailable)
                 ? (0, s.jsxs)("div", {
-                      className: S.AJ,
+                      className: y.AJ,
                       children: [
                           (0, s.jsx)(r.WarningIcon, { color: c.A.colors.STATUS_WARNING_BACKGROUND, size: "lg" }),
                           (0, s.jsx)(d.E, {
@@ -124,7 +124,7 @@ n.d(
                 );
             }, [n]),
             e)
-                ? (0, s.jsx)("div", { className: S.mB, children: (0, s.jsx)(o.y, {}) })
+                ? (0, s.jsx)("div", { className: y.mB, children: (0, s.jsx)(o.y, {}) })
                 : null;
         },
     },

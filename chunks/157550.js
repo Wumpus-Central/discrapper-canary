@@ -77,5 +77,5 @@ class A extends r.A {
         return l;
     }
 }
-let h = new A();
-n.d(t, {}, { A: h });
+let f = new A();
+n.d(t, {}, { A: f });

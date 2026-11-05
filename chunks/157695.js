@@ -5,12 +5,12 @@ var d = n(158390),
     _ = n(855986),
     E = n(73153),
     A = n(927813),
-    h = n(107195);
-let f = 30 * A.A.Millis.SECOND,
+    f = n(107195);
+let h = 30 * A.A.Millis.SECOND,
     I = 10 * A.A.Millis.MINUTE,
     p = null,
     m = !1;
-function g() {
+function T() {
     ((i = new Map()),
         (r = 0),
         (a = new Map()),
@@ -20,10 +20,10 @@ function g() {
         (p = null),
         (m = !1));
 }
-function T(e, t) {
+function g(e, t) {
     (i = new Map(i)).set(e, t);
 }
-g();
+T();
 class S extends _.Ay.Store {
     static displayName = "AdDeliveryStore";
     get lastFetchedQuestToDeliver() {
@@ -56,11 +56,11 @@ class S extends _.Ay.Store {
 }
 let N = new S(E.h, {
     LOGOUT: function () {
-        g();
+        T();
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function (e) {
         let { placement: t } = e;
-        T(t, !0);
+        g(t, !0);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function (e) {
         let {
@@ -73,21 +73,21 @@ let N = new S(E.h, {
             adContext: _,
             responseTtlSeconds: E,
             metadataSealed: A,
-            trafficMetadataSealed: f,
+            trafficMetadataSealed: h,
             provenanceMetadataSealed: I,
             fetchedAt: p,
         } = e;
         ((r = Date.now()),
-            T(c, !1),
+            g(c, !1),
             (s = new Map(s)),
             !0 === i && null == t && u?.decision_id != null
                 ? s.set(c, {
                       decisionId: u.decision_id,
                       adContentId: d ?? void 0,
                       metadataSealed: A,
-                      trafficMetadataSealed: f,
+                      trafficMetadataSealed: h,
                       fetchedAt: p,
-                      ttlMillis: (0, h.Ce)(E),
+                      ttlMillis: (0, f.Ce)(E),
                   })
                 : s.delete(c),
             l.get(c)?.succeed(),
@@ -95,37 +95,37 @@ let N = new S(E.h, {
         let m = {
             creative: n ?? null,
             fetchedAt: p,
-            ttlMillis: (0, h.Ce)(E),
+            ttlMillis: (0, f.Ce)(E),
             adDecisionData: u,
             adContext: _,
             metadataSealed: A,
-            trafficMetadataSealed: f,
+            trafficMetadataSealed: h,
             provenanceMetadataSealed: I,
         };
         (a = new Map(a)).set(c, m);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
-        ((s = new Map(s)).delete(t), (r = Date.now()), T(t, !1));
+        ((s = new Map(s)).delete(t), (r = Date.now()), g(t, !1));
         let n = l.get(t);
-        (null == n && ((n = new d.A(f, I)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
+        (null == n && ((n = new d.A(h, I)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },
     QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function (e) {
         let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e;
-        T(t, !1);
-        let r = { creative: null, fetchedAt: i, ttlMillis: (0, h.Ce)(n) };
+        g(t, !1);
+        let r = { creative: null, fetchedAt: i, ttlMillis: (0, f.Ce)(n) };
         (a = new Map(a)).set(t, r);
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;
-        ((m = !0), T(t, !0));
+        ((m = !0), g(t, !0));
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        ((m = !1), (p = Date.now()), T(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
+        ((m = !1), (p = Date.now()), g(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
         let t = {
             creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
-            ttlMillis: (0, h.Ce)(e.responseTtlSeconds),
+            ttlMillis: (0, f.Ce)(e.responseTtlSeconds),
             adDecisionData: e.adDecisionData,
             adContext: e.adContext,
             metadataSealed: e.metadataSealed,
@@ -136,9 +136,9 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
-        ((m = !1), T(t, !1));
+        ((m = !1), g(t, !1));
         let n = l.get(t);
-        (null == n && ((n = new d.A(f, I)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
+        (null == n && ((n = new d.A(h, I)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },
 });
 n.d(t, {}, { A: N });

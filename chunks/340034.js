@@ -25,12 +25,12 @@ n.d(
                             ? o.I0.SubscriptionTrial
                             : o.I0.Subscription;
                 })({ isGift: t, isTrial: n, unifiedCheckoutFlow: m }),
-                { discountOffer: C } = (0, s.i)();
+                { discountOffer: h } = (0, s.i)();
             return (0, l.jsx)(a.$, {
                 ...d,
                 isInvoiceBilledImmediately: i,
                 subscriptionTrial: c,
-                discountOffer: C,
+                discountOffer: h,
                 unifiedLegalType: p,
             });
         },

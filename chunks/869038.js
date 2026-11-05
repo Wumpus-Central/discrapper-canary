@@ -10,22 +10,22 @@ var i = n(620632),
     _ = n(166590),
     E = n(45938),
     A = n(856383),
-    h = n(652215),
-    f = n(682901);
+    f = n(652215),
+    h = n(682901);
 async function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     r.h.dispatch({ type: "GIFT_CODE_RESOLVE", code: e });
     try {
         let i = await (0, E.GM)(e, t, n);
-        if (null != i.application_id && i.application_id !== f.tv) {
+        if (null != i.application_id && i.application_id !== h.tv) {
             let e = o.A.getApplication(i.application_id);
             if (null == e)
                 try {
                     await l.Ay.fetchApplication(i.application_id);
                 } catch (e) {}
         }
-        if (i.application_id === h.FYj) {
+        if (i.application_id === f.FYj) {
             await (0, c.Jp)(i.sku_id);
             let e = u.A.getProduct(i.sku_id);
             if (e?.items.some(_.g) === !0) throw new a.eR("Client update required to redeem this gift");
@@ -52,7 +52,7 @@ let m = {
         r.h.dispatch({ type: "GIFT_CODES_FETCH", skuId: e, subscriptionPlanId: t });
         try {
             let n = await i.Bo.get({
-                url: h.Rsh.USER_GIFT_CODES,
+                url: f.Rsh.USER_GIFT_CODES,
                 query: { sku_id: e, subscription_plan_id: t },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -68,7 +68,7 @@ let m = {
         r.h.dispatch({ type: "GIFT_CODE_CREATE_START", skuId: e, subscriptionPlanId: t });
         try {
             let a = await i.Bo.post({
-                url: h.Rsh.USER_GIFT_CODE_CREATE,
+                url: f.Rsh.USER_GIFT_CODE_CREATE,
                 body: { sku_id: e, subscription_plan_id: t, gift_style: n },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -81,14 +81,14 @@ let m = {
     async revokeGiftCode(e) {
         r.h.dispatch({ type: "GIFT_CODE_REVOKE", code: e });
         try {
-            (await i.Bo.del({ url: h.Rsh.USER_GIFT_CODE_REVOKE(e), oldFormErrors: !0, rejectWithError: !0 }),
+            (await i.Bo.del({ url: f.Rsh.USER_GIFT_CODE_REVOKE(e), oldFormErrors: !0, rejectWithError: !0 }),
                 r.h.dispatch({ type: "GIFT_CODE_REVOKE_SUCCESS", code: e }));
         } catch (t) {
             r.h.dispatch({ type: "GIFT_CODE_REVOKE_FAILURE", code: e });
         }
     },
     openNativeGiftCodeModal(e) {
-        d.A.openNativeAppModal(e, h.e$_.GIFT_CODE_BROWSER);
+        d.A.openNativeAppModal(e, f.e$_.GIFT_CODE_BROWSER);
     },
     ...n(75255).A,
 };
@@ -102,7 +102,7 @@ n.d(
         kW: async function (e, t) {
             return (
                 await i.Bo.post({
-                    url: h.Rsh.USER_GIFT_CODE_DELIVERIES,
+                    url: f.Rsh.USER_GIFT_CODE_DELIVERIES,
                     body: { checkout_session_id: t, recipient_ids: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,

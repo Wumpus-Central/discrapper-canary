@@ -1,34 +1,34 @@
-n.d(e, { p: () => d, A: () => m });
+n.d(e, { p: () => m, A: () => d });
 var r = n(477900);
 n(582128);
-var i = n(805251),
-    s = n(953727),
+var o = n(805251),
+    i = n(953727),
     a = n(503698),
-    l = n.n(a),
-    o = n(771104),
+    s = n.n(a),
+    l = n(771104),
     c = n(63517);
 function g(t) {
-    let { className: e, children: n, forceUseColor: i = !1, hideStars: s } = t;
+    let { className: e, children: n, forceUseColor: o = !1, hideStars: i } = t;
     return (0, r.jsxs)("span", {
-        className: l()(c.kL, e, { [c.cu]: i }),
+        className: s()(c.kL, e, { [c.cu]: o }),
         children: [
             n,
-            s
+            i
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(o.A, { foreground: c.yv }),
-                          (0, r.jsx)(o.A, { foreground: c.Rq }),
-                          (0, r.jsx)(o.A, { foreground: c.xh }),
+                          (0, r.jsx)(l.A, { foreground: c.yv }),
+                          (0, r.jsx)(l.A, { foreground: c.Rq }),
+                          (0, r.jsx)(l.A, { foreground: c.xh }),
                       ],
                   }),
         ],
     });
 }
 var u = n(975117);
-function d(t) {
+function m(t) {
     return (0, r.jsx)("svg", {
-        ...(0, s.A)({ ...t }),
+        ...(0, i.A)({ ...t }),
         width: "25",
         height: "48",
         viewBox: "0 0 25 48",
@@ -40,11 +40,11 @@ function d(t) {
         }),
     });
 }
-function m(t) {
-    let { className: e, forceUseColorForSparkles: n = !1, variant: s = "premium" } = t;
+function d(t) {
+    let { className: e, forceUseColorForSparkles: n = !1, variant: i = "premium" } = t;
     return (0, r.jsx)(g, {
         className: e,
         forceUseColor: n,
-        children: (0, r.jsx)("span", { className: u.Z, children: (0, r.jsx)(i.E, { type: "new", variant: s }) }),
+        children: (0, r.jsx)("span", { className: u.Z, children: (0, r.jsx)(o.E, { type: "new", variant: i }) }),
     });
 }

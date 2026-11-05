@@ -30,18 +30,18 @@ function x(t) {
             return null != e && g.has(e.type) ? e : null;
         })(t),
         x = e?.icon,
-        _ = e?.name ?? "";
+        I = e?.name ?? "";
     if (t.type === l.$.PLAYING && e?.type === f.fg2.XBOX)
         return {
             text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.Nfvo72) }),
             platformIcon: x,
-            platformLabel: _,
+            platformLabel: I,
         };
     if (t.type === l.$.PLAYING && e?.type === f.fg2.PLAYSTATION)
         return {
             text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.fFl4jo) }),
             platformIcon: x,
-            platformLabel: _,
+            platformLabel: I,
         };
     if (t.type === l.$.PLAYING && e?.type === f.fg2.META_QUEST_OR_HORIZON)
         return {
@@ -49,7 +49,7 @@ function x(t) {
                 platform: (0, i.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
             platformIcon: x,
-            platformLabel: _,
+            platformLabel: I,
         };
     if (t.type === l.$.WATCHING && e?.type === f.fg2.META_QUEST_OR_HORIZON)
         return {
@@ -57,19 +57,19 @@ function x(t) {
                 platform: (0, i.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
             platformIcon: x,
-            platformLabel: _,
+            platformLabel: I,
         };
     if (t.type === l.$.STREAMING && e?.type === f.fg2.TWITCH)
         return {
             text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.q4pBG3) }),
             platformIcon: x,
-            platformLabel: _,
+            platformLabel: I,
         };
     if (t.type === l.$.STREAMING && e?.type === f.fg2.YOUTUBE)
         return {
             text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.aS6cK4) }),
             platformIcon: x,
-            platformLabel: _,
+            platformLabel: I,
         };
     if (null != n) {
         let e,
@@ -91,33 +91,33 @@ function x(t) {
                 e = p.t.Dzgz4u;
         }
         if (void 0 !== e)
-            return { text: p.intl.formatToPlainString(e, { platform: i }), platformIcon: x, platformLabel: _ };
+            return { text: p.intl.formatToPlainString(e, { platform: i }), platformIcon: x, platformLabel: I };
     }
     return t.type === l.$.PLAYING
-        ? { text: p.intl.string(p.t.BMTj28), platformIcon: x, platformLabel: _ }
+        ? { text: p.intl.string(p.t.BMTj28), platformIcon: x, platformLabel: I }
         : t.type === l.$.STREAMING
-          ? { text: p.intl.string(p.t["Jpkr/q"]), platformIcon: x, platformLabel: _ }
+          ? { text: p.intl.string(p.t["Jpkr/q"]), platformIcon: x, platformLabel: I }
           : (0, a.Cy)(t)
             ? { text: p.intl.formatToPlainString(p.t.pW3Ip3, { name: t.name }) }
             : t.type === l.$.LISTENING && null != t.details
-              ? { text: p.intl.formatToPlainString(p.t["b+lA5+"], { name: t.name }), platformIcon: x, platformLabel: _ }
+              ? { text: p.intl.formatToPlainString(p.t["b+lA5+"], { name: t.name }), platformIcon: x, platformLabel: I }
               : t.type === l.$.LISTENING
-                ? { text: p.intl.string(p.t.dBISa6), platformIcon: x, platformLabel: _ }
+                ? { text: p.intl.string(p.t.dBISa6), platformIcon: x, platformLabel: I }
                 : t.type === l.$.WATCHING && null != t.details
                   ? {
                         text: p.intl.formatToPlainString(p.t.mqdfDc, { name: t.name }),
                         platformIcon: x,
-                        platformLabel: _,
+                        platformLabel: I,
                     }
                   : t.type === l.$.WATCHING
-                    ? { text: p.intl.string(p.t.GpNXjC), platformIcon: x, platformLabel: _ }
+                    ? { text: p.intl.string(p.t.GpNXjC), platformIcon: x, platformLabel: I }
                     : t.type === l.$.COMPETING && null != t.details
                       ? {
                             text: p.intl.formatToPlainString(p.t.oHF7Ch, { name: t.name }),
                             platformIcon: x,
-                            platformLabel: _,
+                            platformLabel: I,
                         }
                       : t.type === l.$.COMPETING
-                        ? { text: p.intl.string(p.t.OzCsIA), platformIcon: x, platformLabel: _ }
-                        : { text: void 0, platformIcon: x, platformLabel: _ };
+                        ? { text: p.intl.string(p.t.OzCsIA), platformIcon: x, platformLabel: I }
+                        : { text: void 0, platformIcon: x, platformLabel: I };
 }

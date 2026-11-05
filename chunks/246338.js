@@ -14,7 +14,7 @@ function E(e) {
 function A(e, t) {
     return (0, d.L0)({ guildId: e.id, location: t });
 }
-function h(e, t) {
+function f(e, t) {
     return e?.type === u.rbe.GUILD_APP && t?.conjureProjectId != null;
 }
 n.d(
@@ -54,7 +54,7 @@ n.d(
         Xs: function (e, t) {
             let n = E(e);
             return (
-                h(e, null != n && r.A.isHydrated(n) ? r.A.getApplication(n) : null) &&
+                f(e, null != n && r.A.isHydrated(n) ? r.A.getApplication(n) : null) &&
                 (0, d.L0)({ guildId: e?.guild_id, location: t })
             );
         },
@@ -86,7 +86,7 @@ n.d(
         w$: function (e, t) {
             let n = (0, i.q)(e),
                 r = (0, d.m0)({ guildId: e?.guild_id, location: t });
-            return h(e, n) && r;
+            return f(e, n) && r;
         },
     },
 );

@@ -7,17 +7,17 @@ t.d(
     {},
     {
         A: function (e, n, t) {
-            let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+            let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if ((i.A.deleteMessage(e.id, n.id, !0), n.isCommandType())) {
-                null != n.interactionData && null != r.applicationId && (0, l.x)(n, e, r);
+                null != n.interactionData && null != o.applicationId && (0, l.x)(n, e, o);
                 return;
             }
-            let { content: s, tts: o, messageReference: c, flags: d, nonce: u } = n;
-            i.A.sendMessage(e.id, { content: s, tts: o, invalidEmojis: [], validNonShortcutEmojis: [] }, void 0, {
+            let { content: r, tts: s, messageReference: c, flags: d, nonce: u } = n;
+            i.A.sendMessage(e.id, { content: r, tts: s, invalidEmojis: [], validNonShortcutEmojis: [] }, void 0, {
                 nonce: u,
                 flags: d,
                 messageReference: c ?? void 0,
-                ...r,
+                ...o,
                 location: a.Hx.RETRY,
             });
         },

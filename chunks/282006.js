@@ -5,15 +5,15 @@ var t = n(477900),
     r = n(442433),
     u = n(485947),
     o = n(69282),
-    d = n(657048),
-    c = n(773669),
+    c = n(657048),
+    d = n(773669),
     m = n(652215),
     x = n(792996),
     h = n(4577);
 let f = s.memo(function (e) {
     let { id: l, title: f, count: p, guildId: j, className: A } = e,
         g = (0, o.Xx)({ roleId: l, guildId: j, size: 16 }),
-        N = (0, a.bG)([c.default], () => (null == p ? null : new Intl.NumberFormat(c.default.locale).format(p)), [p]),
+        N = (0, a.bG)([d.default], () => (null == p ? null : new Intl.NumberFormat(d.default.locale).format(p)), [p]),
         v = s.useCallback(
             (e) => {
                 g?.src != null &&
@@ -49,7 +49,7 @@ let f = s.memo(function (e) {
                           null != g
                               ? (0, t.jsx)("span", {
                                     onContextMenu: v,
-                                    children: (0, t.jsx)(d.A, { className: h.UT, ...g }),
+                                    children: (0, t.jsx)(c.A, { className: h.UT, ...g }),
                                 })
                               : null,
                           (0, t.jsx)("span", { className: h.iy, children: f }),

@@ -38,15 +38,15 @@ function A(e, t) {
         }),
     );
 }
-function h(e) {
+function f(e) {
     return Object.values(e).filter((e) => "number" == typeof e);
 }
-function f(e) {
+function h(e) {
     let t = new Set(Object.values(e));
     return (e) => t.has(e);
 }
-let I = f(_.K),
-    p = f(c.V),
+let I = h(_.K),
+    p = h(c.V),
     m = {
         [c.V.FACE]: u.fx,
         [c.V.OUTFIT]: u.Vb,
@@ -56,7 +56,7 @@ let I = f(_.K),
         [c.V.AURA]: u.r6,
         [c.V.BASE]: u.dW,
     },
-    g = {
+    T = {
         [c.V.FACE]: E.CC,
         [c.V.OUTFIT]: E.M,
         [c.V.HAT]: E.c0,
@@ -65,14 +65,14 @@ let I = f(_.K),
         [c.V.AURA]: E.kU,
         [c.V.BASE]: E.EN,
     },
-    T = {
-        [c.V.FACE]: h(a.D),
-        [c.V.OUTFIT]: h(l.r),
-        [c.V.HAT]: h(s.N),
-        [c.V.SHOES]: h(o._),
-        [c.V.WEARABLE]: h(d.Z),
-        [c.V.AURA]: h(i.X),
-        [c.V.BASE]: h(r.R),
+    g = {
+        [c.V.FACE]: f(a.D),
+        [c.V.OUTFIT]: f(l.r),
+        [c.V.HAT]: f(s.N),
+        [c.V.SHOES]: f(o._),
+        [c.V.WEARABLE]: f(d.Z),
+        [c.V.AURA]: f(i.X),
+        [c.V.BASE]: f(r.R),
     },
     S = {
         [c.V.OUTFIT]: l.r.NONE,
@@ -182,7 +182,7 @@ function y(e, t) {
     let n = m[e][t];
     return null != n && I(n) ? n : void 0;
 }
-(h(l.r).forEach((e) => {
+(f(l.r).forEach((e) => {
     let t = O[e];
     if (null == t) return;
     let n = R[t] ?? [];
@@ -194,7 +194,7 @@ function y(e, t) {
         {
             $C: y,
             FA: L,
-            Rk: T,
+            Rk: g,
             XI: function (e) {
                 return {
                     base: e[c.V.BASE] ?? r.R.ICY,
@@ -212,7 +212,7 @@ function y(e, t) {
             mf: A,
             nb: N,
             ps: C,
-            qM: g,
+            qM: T,
             tS: function (e, t, n) {
                 let { stats: i, hasNitro: r, savedCharacter: a } = n;
                 if (a?.[e] === t) return !1;

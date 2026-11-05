@@ -9,8 +9,8 @@ var r = n(477900),
     c = n(580630),
     d = n(725836),
     m = n(200179),
-    f = n(379912),
-    p = n(792996),
+    p = n(379912),
+    f = n(792996),
     v = n(801067);
 function g(e) {
     let t = (0, d.I6)(),
@@ -53,7 +53,7 @@ function b(e) {
             defaultExpanded: u = !1,
         } = e,
         d = n.length > 0,
-        { hasAdjustments: f, totalAdjustmentsOrSavings: p } = i.useMemo(
+        { hasAdjustments: p, totalAdjustmentsOrSavings: f } = i.useMemo(
             () => ({
                 hasAdjustments: n.some(
                     (e) => "adjustment" === e.lineItemType || ("string" == typeof e.id && e.id.includes("adjustment")),
@@ -84,9 +84,9 @@ function b(e) {
             null != s
                 ? (0, r.jsx)(o.E, { variant: "body-md/medium", color: "text-feedback-positive", children: s })
                 : (0, r.jsx)(h, {
-                      amount: p < 0 ? Math.abs(p) : null,
+                      amount: f < 0 ? Math.abs(f) : null,
                       currency: l,
-                      labelType: f ? "adjustments" : "savings",
+                      labelType: p ? "adjustments" : "savings",
                   }),
         children: a.map((e) => {
             let { id: t, label: n, amount: i, ...a } = e,
@@ -106,7 +106,7 @@ function h(e) {
     return (0, r.jsx)(o.E, {
         variant: "body-md/medium",
         color: "text-feedback-positive",
-        children: p.intl.format("adjustments" === i ? f.default["i3Q/6S"] : f.default.pDVleg, { amount: a }),
+        children: f.intl.format("adjustments" === i ? p.default["i3Q/6S"] : p.default.pDVleg, { amount: a }),
     });
 }
 function y(e) {
@@ -119,7 +119,7 @@ function y(e) {
         role: "group",
         "aria-labelledby": s,
         children: [
-            (0, r.jsx)("span", { id: s, children: t ?? p.intl.string(f.default.Zxav97) }),
+            (0, r.jsx)("span", { id: s, children: t ?? f.intl.string(p.default.Zxav97) }),
             (0, r.jsx)("span", { children: n }),
         ],
     });

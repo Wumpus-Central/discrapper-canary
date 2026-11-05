@@ -11,14 +11,14 @@ var i,
     _ = n(994500),
     E = n(287809),
     A = n(977997),
-    h = n(607567),
-    f = n(562153),
+    f = n(607567),
+    h = n(562153),
     I = n(312006),
     p = n(446600),
     m = n(105530);
 n(855986);
-var g = n(71393),
-    T = n(488926),
+var T = n(71393),
+    g = n(488926),
     S =
         (((i = {}).SPEAKER = "SPEAKER"),
         (i.AUDIENCE = "AUDIENCE"),
@@ -78,20 +78,20 @@ class y {
             return (null != this.guildId && p.A.isPublic(this.channelId) && c.A.requestMember(this.guildId, e), i);
         let s = null != t ? t[0] : null,
             d = null != this.guildId ? u.Ay.getMember(this.guildId, e) : null,
-            S = d?.nick ?? f.Ay.getName(this.guildId, this.channelId, a),
+            S = d?.nick ?? h.Ay.getName(this.guildId, this.channelId, a),
             N = {
                 user: a,
-                userNick: f.Ay.getName(this.guildId, this.channelId, a),
+                userNick: h.Ay.getName(this.guildId, this.channelId, a),
                 nick: S,
-                comparator: (0, h.hz)(r, S),
+                comparator: (0, f.hz)(r, S),
                 voiceState: r,
                 role: (function (e, t) {
-                    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [g.A, u.Ay];
+                    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [T.A, u.Ay];
                     if (null == e || null == t) return null;
                     let r = n.getGuild(e);
                     if (null == r) return null;
                     let a = i.getMember(r.id, t);
-                    return null == a ? null : T.li(r, a);
+                    return null == a ? null : g.li(r, a);
                 })(this.guildId, e),
                 speaker: I.Ay.isSpeaker(e, this.channelId),
                 member: d,

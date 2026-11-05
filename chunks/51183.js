@@ -5,8 +5,8 @@ var t = n(477900),
     r = n(866665),
     u = n(565645),
     o = n(7584),
-    d = n(253932),
-    c = n(673375);
+    c = n(253932),
+    d = n(673375);
 n(851883);
 var m = n(607013);
 n.d(
@@ -15,10 +15,10 @@ n.d(
     {
         A: function (e) {
             let { emoji: l, className: n, animate: a = !0, hideTooltip: x = !1, tooltipDelay: h = 150 } = e,
-                f = d.Sf.useSetting(),
+                f = c.Sf.useSetting(),
                 p = s.useRef(null),
                 j = null != l.id ? `:${l.name}:` : o.Ay.translateSurrogatesToInlineEmoji(l.name);
-            if (null == l.id && c.V.has(l.name))
+            if (null == l.id && d.V.has(l.name))
                 return (0, t.jsx)("span", { className: i()(m.Zg, n), children: l.name });
             let A = {
                 className: i()(m.Zg, n),

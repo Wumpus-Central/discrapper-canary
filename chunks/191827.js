@@ -1,7 +1,7 @@
 n.d(t, { A: () => h });
 var i = n(855986),
-    l = n(73153),
-    r = n(260498),
+    r = n(73153),
+    l = n(260498),
     s = n(951178);
 function a(e) {
     return (
@@ -11,13 +11,13 @@ function a(e) {
 let o = [],
     u = o;
 function d() {
-    let e = r.Ay.getOwnedProjects().filter(a);
+    let e = l.Ay.getOwnedProjects().filter(a);
     (e.length === u.length && e.every((e, t) => e === u[t])) || (u = 0 === e.length ? o : e);
 }
 class c extends i.Ay.Store {
     static displayName = "ConjureOverlayWidgetsStore";
     initialize() {
-        (d(), this.syncWith([r.Ay], () => (d(), !0)));
+        (d(), this.syncWith([l.Ay], () => (d(), !0)));
     }
     getProjects() {
         return u;
@@ -26,10 +26,10 @@ class c extends i.Ay.Store {
         if (null != e) return u.find((t) => t.application_id === e);
     }
     hasFetchSucceeded() {
-        return r.Ay.hasFetchedOwnedProjects();
+        return l.Ay.hasFetchedOwnedProjects();
     }
 }
-let h = new c(l.h, {
+let h = new c(r.h, {
     LOGOUT: function () {
         u = o;
     },

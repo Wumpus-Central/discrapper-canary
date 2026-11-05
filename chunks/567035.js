@@ -11,7 +11,7 @@ var i = n(435558),
     _ = n(811091),
     E = n(652215),
     A = n(790782);
-function h(e) {
+function f(e) {
     return e.map((e) => ({
         channelId: e,
         readStateType: A.P.CHANNEL,
@@ -20,7 +20,7 @@ function h(e) {
             : c.Ay.lastMessageId(e),
     }));
 }
-function f(e, t, n) {
+function h(e, t, n) {
     return (u.default.track(E.HAw.MARK_AS_READ, { source: t, type: "guild" }), (0, a.Uq)(e, n));
 }
 n.d(
@@ -28,7 +28,7 @@ n.d(
     {},
     {
         A: function (e, t, n) {
-            let i = h(
+            let i = f(
                 r().flatMap(e, (e) => {
                     let t = d.A.getSelectableChannelIds(e),
                         n = d.A.getVocalChannelIds(e),
@@ -54,11 +54,11 @@ n.d(
                             messageId: s.A.ackIdForGuild(e),
                         }));
                 }),
-                f(i, t, n)
+                h(i, t, n)
             );
         },
         q: function (e, t, n) {
-            return f(h(e), t, n);
+            return h(f(e), t, n);
         },
     },
 );

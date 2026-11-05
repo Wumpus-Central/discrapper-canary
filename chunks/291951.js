@@ -31,7 +31,7 @@ function E(e) {
 function A(e) {
     ((o[e] = new Set()), (d[e] = null));
 }
-class h extends r.A {
+class f extends r.A {
     actions = {
         INITIALIZE_MEMBER_SAFETY_STORE: () => this.handleInitialize(),
         GUILD_MEMBER_ADD: (e) => this.handleGuildMemberUpdate(e.guildId, e.user.id),
@@ -63,5 +63,5 @@ class h extends r.A {
         l.A.isInitialized(t) && A(t);
     }
 }
-let f = new h();
-n.d(t, {}, { A: f });
+let h = new f();
+n.d(t, {}, { A: h });

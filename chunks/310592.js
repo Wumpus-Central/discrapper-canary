@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(677654),
     E = n(120692),
     A = n(399522),
-    h = n(717421),
-    f = n(844222),
+    f = n(717421),
+    h = n(844222),
     I = n(559106),
     p = n(452027),
     m = n(866665),
-    g = n(77232);
-let T = new Set(["ArrowUp", "ArrowDown"]);
+    T = n(77232);
+let g = new Set(["ArrowUp", "ArrowDown"]);
 function S(e, t) {
     let n = 0;
     for (let i = 1; i < e.length; i++) Math.abs(e[i] - t) < Math.abs(e[n] - t) && (n = i);
@@ -52,7 +52,7 @@ function N(e) {
         j = r.useRef(null),
         W = k ?? j,
         [Y, K] = r.useState(!1),
-        { keyboardModeEnabled: $ } = r.useContext(f.C),
+        { keyboardModeEnabled: $ } = r.useContext(h.C),
         X = r.useMemo(
             () =>
                 (M ?? [])
@@ -66,10 +66,10 @@ function N(e) {
         ),
         z = r.useMemo(() => X.map((e) => e.value), [X]),
         q = U && z.length > 1;
-    function Z(e) {
+    function Q(e) {
         return null != e && q ? S(z, e) : e;
     }
-    function Q(e) {
+    function Z(e) {
         return Math.min(Math.max(((e - L) / (y - L)) * 100, 0), 100);
     }
     let J = (0, l.J)();
@@ -77,8 +77,8 @@ function N(e) {
         return null != P ? P(e) : J.format(e);
     }
     let et = (0, A.S)({
-            value: Z(O),
-            defaultValue: Z(R),
+            value: Q(O),
+            defaultValue: Q(R),
             minValue: q ? 0 : L,
             maxValue: q ? z.length - 1 : y,
             step: q ? 1 : D,
@@ -129,16 +129,16 @@ function N(e) {
         })({ state: et, trackRef: V, inputRef: W, sortedMarks: z, minValue: L, maxValue: y, disabled: a }),
         ed = ((t = et.getThumbValue(0)), q ? z[t] : t),
         ec = ee(ed),
-        eu = `${Q(ed)}%`,
+        eu = `${Z(ed)}%`,
         e_ = el && $,
         eE = !a && (e_ || es || Y);
     function eA(e) {
         return (t) => {
-            x && T.has(t.key) ? t.preventDefault() : e?.(t);
+            x && g.has(t.key) ? t.preventDefault() : e?.(t);
         };
     }
-    let eh = (0, c.v)(en, q ? eo : ei),
-        ef = (0, h.z)({
+    let ef = (0, c.v)(en, q ? eo : ei),
+        eh = (0, f.z)({
             "--grabber-size": eE ? "20px" : "16px",
             "--bar-size": eE ? "6px" : "4px",
             config: { ...E.config.stiff, duration: 100 },
@@ -147,27 +147,27 @@ function N(e) {
         focusTarget: W,
         ringTarget: H,
         children: (0, i.jsxs)(E.animated.div, {
-            ...eh,
-            onKeyDown: eA(eh.onKeyDown),
+            ...ef,
+            onKeyDown: eA(ef.onKeyDown),
             ref: B,
-            className: s()(g.aw, { [g.ZF]: z.length > 0, [g.r9]: a }),
-            style: { ...ef, touchAction: "none" },
+            className: s()(T.aw, { [T.ZF]: z.length > 0, [T.r9]: a }),
+            style: { ...eh, touchAction: "none" },
             onMouseEnter: () => K(!0),
             onMouseLeave: () => K(!1),
             children: [
                 (0, i.jsx)("div", {
-                    className: g.u4,
+                    className: T.u4,
                     children: X.map((e) => {
                         let t = e.usesFormatValue ? ee(e.value) : e.label;
                         return (0, i.jsxs)(
                             "div",
                             {
                                 "aria-hidden": !0,
-                                className: s()(g.Gy, g.zt, { [g.Jh]: e.value === w }),
-                                style: { insetInlineStart: `${Q(e.value)}%` },
+                                className: s()(T.Gy, T.zt, { [T.Jh]: e.value === w }),
+                                style: { insetInlineStart: `${Z(e.value)}%` },
                                 children: [
-                                    (0, i.jsx)("div", { className: g.nj, children: t }),
-                                    null != t ? (0, i.jsx)("div", { className: g.gf }) : null,
+                                    (0, i.jsx)("div", { className: T.nj, children: t }),
+                                    null != t ? (0, i.jsx)("div", { className: T.gf }) : null,
                                 ],
                             },
                             e.value,
@@ -175,11 +175,11 @@ function N(e) {
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: g.M0,
-                    children: (0, i.jsx)("div", { className: g.pP, style: { width: eu } }),
+                    className: T.M0,
+                    children: (0, i.jsx)("div", { className: T.pP, style: { width: eu } }),
                 }),
                 (0, i.jsx)("div", {
-                    className: g.u4,
+                    className: T.u4,
                     ref: V,
                     children: (0, i.jsx)(m.m, {
                         text: q ? null : ec,
@@ -191,7 +191,7 @@ function N(e) {
                             ...(q ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
                             onKeyDown: eA(er.onKeyDown),
                             ref: H,
-                            className: g.Ub,
+                            className: T.Ub,
                             style: { insetInlineStart: eu, touchAction: "none" },
                             children: (0, i.jsx)(u.s, {
                                 children: (0, i.jsx)("input", {

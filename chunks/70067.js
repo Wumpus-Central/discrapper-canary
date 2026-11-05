@@ -5,8 +5,8 @@ var a = n(855986),
     s = n(734057),
     r = n(309010),
     o = n(188567),
-    d = n(303227),
-    c = n(558076),
+    c = n(303227),
+    d = n(558076),
     u = n(360729),
     h = n(544299),
     p = n(932453),
@@ -24,8 +24,8 @@ n.d(
                     { guildId: C, location: "GuildRoom" },
                     { autoTrackExposure: !1 },
                 ),
-                j = (0, a.bG)([c.A], () => null != c.A.getPendingNote(t)),
-                I = (0, a.bG)([c.A], () => c.A.getNotes(t).length >= 20),
+                I = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
+                j = (0, a.bG)([d.A], () => d.A.getNotes(t).length >= 20),
                 N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
                 v = l.useRef(null),
                 E = l.useCallback(() => {
@@ -42,15 +42,15 @@ n.d(
                     );
             }, [b, E]);
             let S = l.useCallback(() => {
-                (0, d.WT)(t);
+                (0, c.WT)(t);
             }, [t]);
             return y
                 ? (0, i.jsx)(p.A, {
                       asset: n,
-                      label: f.intl.string(I ? A.default.k4cbsb : A.default["lL1Y+d"]),
+                      label: f.intl.string(j ? A.default.k4cbsb : A.default["lL1Y+d"]),
                       position: g,
                       width: x,
-                      disabled: !N || j || I,
+                      disabled: !N || I || j,
                       onClick: S,
                       innerRef: v,
                   })

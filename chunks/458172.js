@@ -1,36 +1,36 @@
-t.d(e, { B: () => p });
-var n = t(477900),
-    r = t(582128),
-    s = t(855986),
-    i = t(935462),
-    l = t(534514),
-    c = t(834730),
-    o = t(821609),
-    d = t(235986),
-    m = t(417869),
-    u = t(936525),
-    x = t(844768);
+n.d(e, { B: () => p });
+var t = n(477900),
+    r = n(582128),
+    s = n(855986),
+    i = n(935462),
+    l = n(534514),
+    c = n(834730),
+    o = n(821609),
+    d = n(235986),
+    m = n(417869),
+    u = n(936525),
+    x = n(844768);
 let N = function (a) {
-    let { label: e, subLabel: t, icon: r } = a;
-    return (0, n.jsxs)("div", {
+    let { label: e, subLabel: n, icon: r } = a;
+    return (0, t.jsxs)("div", {
         className: x.Lw,
         children: [
-            (0, n.jsx)("div", { className: x.j3, children: (0, n.jsx)(r, { size: "md", color: "currentColor" }) }),
-            (0, n.jsxs)("div", {
+            (0, t.jsx)("div", { className: x.j3, children: (0, t.jsx)(r, { size: "md", color: "currentColor" }) }),
+            (0, t.jsxs)("div", {
                 className: x.ET,
                 children: [
-                    (0, n.jsx)(c.E, { variant: "body-sm/medium", color: "text-default", children: e }),
-                    null != t && (0, n.jsx)(c.E, { variant: "body-xs/normal", color: "text-subtle", children: t }),
+                    (0, t.jsx)(c.E, { variant: "body-sm/medium", color: "text-default", children: e }),
+                    null != n && (0, t.jsx)(c.E, { variant: "body-xs/normal", color: "text-subtle", children: n }),
                 ],
             }),
         ],
     });
 };
-var h = t(792996);
+var h = n(792996);
 function p(a) {
     let {
             platformType: e,
-            onContinue: t,
+            onContinue: n,
             onClose: p,
             img: j,
             headerConnect: b,
@@ -43,46 +43,46 @@ function p(a) {
             let a = m.A.getAccount(null, e);
             return a?.twoWayLink === !1;
         });
-    return (0, n.jsxs)(u.A, {
+    return (0, t.jsxs)(u.A, {
         children: [
-            (0, n.jsxs)(i.rQ, {
+            (0, t.jsxs)(i.rQ, {
                 "data-migration-pending": !0,
                 direction: d.A.Direction.VERTICAL,
                 className: x.wx,
                 separator: !1,
                 children: [
-                    (0, n.jsxs)("div", { className: x.bm, children: [j, " "] }),
-                    (0, n.jsx)(l.D, {
+                    (0, t.jsxs)("div", { className: x.bm, children: [j, " "] }),
+                    (0, t.jsx)(l.D, {
                         className: x.DD,
                         variant: "heading-xl/semibold",
                         children: k && null != g ? g : b,
                     }),
-                    (0, n.jsx)(i.s_, { "data-migration-pending": !0, className: x.b, onClick: p }),
+                    (0, t.jsx)(i.s_, { "data-migration-pending": !0, className: x.b, onClick: p }),
                 ],
             }),
-            (0, n.jsxs)(i.$m, {
+            (0, t.jsxs)(i.$m, {
                 "data-migration-pending": !0,
                 className: x.rf,
                 children: [
-                    (0, n.jsx)(c.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: C }),
-                    (0, n.jsx)("div", {
+                    (0, t.jsx)(c.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: C }),
+                    (0, t.jsx)("div", {
                         className: x.Mh,
                         children: E.map((a, e) => {
-                            let { label: t, subLabel: s, icon: i } = a;
-                            return (0, n.jsxs)(
+                            let { label: n, subLabel: s, icon: i } = a;
+                            return (0, t.jsxs)(
                                 r.Fragment,
                                 {
                                     children: [
-                                        (0, n.jsx)(N, { label: t, subLabel: s, icon: i }, t),
-                                        e !== E.length - 1 && (0, n.jsx)("div", { className: x.Cs }),
+                                        (0, t.jsx)(N, { label: n, subLabel: s, icon: i }, n),
+                                        e !== E.length - 1 && (0, t.jsx)("div", { className: x.Cs }),
                                     ],
                                 },
-                                t,
+                                n,
                             );
                         }),
                     }),
                     null != v
-                        ? (0, n.jsx)(c.E, {
+                        ? (0, t.jsx)(c.E, {
                               tag: "p",
                               variant: "body-sm/normal",
                               color: "text-default",
@@ -91,13 +91,13 @@ function p(a) {
                         : null,
                 ],
             }),
-            (0, n.jsx)(i.jl, {
+            (0, t.jsx)(i.jl, {
                 "data-migration-pending": !0,
                 className: x.qr,
-                children: (0, n.jsx)("div", {
+                children: (0, t.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: x.wC,
-                    children: (0, n.jsx)(o.$, { variant: "primary", text: h.intl.string(h.t["3PatSz"]), onClick: t }),
+                    children: (0, t.jsx)(o.$, { variant: "primary", text: h.intl.string(h.t["3PatSz"]), onClick: n }),
                 }),
             }),
         ],

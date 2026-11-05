@@ -11,13 +11,13 @@ var i = n(350835),
     _ = n(994500),
     E = n(287809),
     A = n(977997),
-    h = n(913659),
-    f = n(811091),
+    f = n(913659),
+    h = n(811091),
     I = n(636889),
     p = n(427262),
     m = n(736347),
-    g = n(303911);
-let T = { key: "active_now", type: m.ik.ACTIVE_NOW },
+    T = n(303911);
+let g = { key: "active_now", type: m.ik.ACTIVE_NOW },
     S = { key: "online", type: m.ik.ONLINE },
     N = { key: "offline", type: m.ik.OFFLINE },
     C = Object.freeze([]),
@@ -48,7 +48,7 @@ function P(e) {
         status: n,
         gameAppId: s?.application_id ?? null,
         gameName: s?.name ?? null,
-        gameAssetUrl: (0, h.uD)(s?.application_id, o, 64) ?? null,
+        gameAssetUrl: (0, f.uD)(s?.application_id, o, 64) ?? null,
         gameActivityIndex: null != s ? a : null,
         isListening: r.some((e) => {
             let { type: t } = e;
@@ -60,8 +60,8 @@ function P(e) {
 function M(e, t) {
     switch (t) {
         case m.Vj.ACTIVE_NOW:
-            if ((0, g.iX)(e.status)) return N;
-            if (null != e.gameName || null != e.voiceChannelId) return T;
+            if ((0, T.iX)(e.status)) return N;
+            if (null != e.gameName || null != e.voiceChannelId) return g;
             return S;
         case m.Vj.GAME:
             if (null != e.gameName)
@@ -72,7 +72,7 @@ function M(e, t) {
                     gameAssetUrl: e.gameAssetUrl,
                     label: e.gameName ?? void 0,
                 };
-            return (0, g.iX)(e.status) ? N : S;
+            return (0, T.iX)(e.status) ? N : S;
         case m.Vj.ALPHABETICAL: {
             let t = e.name.normalize("NFD").match(/^\s*(\p{L})/u),
                 n = t?.[1].toLocaleUpperCase(o.default.locale) ?? "#";
@@ -81,10 +81,10 @@ function M(e, t) {
     }
 }
 function U(e) {
-    return R && (0, g.kR)(O) ? e.voiceChannelId : null;
+    return R && (0, T.kR)(O) ? e.voiceChannelId : null;
 }
 function w(e, t) {
-    return (0, g.fz)(e, t, !(0, g.kR)(O));
+    return (0, T.fz)(e, t, !(0, T.kR)(O));
 }
 function G(e, t) {
     return e.isListening !== t.isListening ? (e.isListening ? -1 : 1) : w(e, t);
@@ -107,7 +107,7 @@ function F(e) {
         rows: [],
         snapshot: null,
     };
-    return (D.set(t.key, t), I.Yr(b, t, g.Ut), (v = null), t);
+    return (D.set(t.key, t), I.Yr(b, t, T.Ut), (v = null), t);
 }
 function B(e, t) {
     let n = e.groupsByChannelId.get(t);
@@ -115,7 +115,7 @@ function B(e, t) {
         null == n &&
             ((n = { channelId: t, rows: [], snapshot: null }),
             e.groupsByChannelId.set(t, n),
-            I.Yr(e.groups, n, (e, t) => f.default.compare(e.channelId, t.channelId))),
+            I.Yr(e.groups, n, (e, t) => h.default.compare(e.channelId, t.channelId))),
         n
     );
 }
@@ -209,7 +209,7 @@ function $(e) {
                     ((t.snapshot = null),
                         0 === t.rows.length &&
                             (i.groupsByChannelId.delete(t.channelId),
-                            I.TF(i.groups, t, (e, t) => f.default.compare(e.channelId, t.channelId))));
+                            I.TF(i.groups, t, (e, t) => h.default.compare(e.channelId, t.channelId))));
                 } else if (!I.TF(i.rows, e, r)) return;
                 (k(i),
                     0 === i.rows.length &&
@@ -251,14 +251,14 @@ function q(e) {
     let { relationship: t } = e;
     return W(() => $(t.id));
 }
-function Z(e) {
+function Q(e) {
     return W(() => {
         let t = !1;
         for (let n of y.values()) n.voiceChannelId === e && (t = $(n.userId) || t);
         return t;
     });
 }
-function Q() {
+function Z() {
     return W(() => {
         let e = !1;
         for (let t of Array.from(y.values()))
@@ -280,7 +280,7 @@ class ee extends r.Ay.PersistedStore {
             K(),
             this.waitFor(d.A, o.default, c.A, u.A, _.A, E.default, A.A),
             this.syncWith([o.default], J),
-            this.syncWith([c.A], Q));
+            this.syncWith([c.A], Z));
     }
     getState() {
         return { groupingMode: O, voiceGroupingEnabled: R };
@@ -365,11 +365,11 @@ let et = new ee(s.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return Z(t.id);
+        return Q(t.id);
     },
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        return Z(t);
+        return Q(t);
     },
     FRIENDS_LIST_SET_GROUPING_MODE: function (e) {
         let { mode: t } = e;

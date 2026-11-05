@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(855986),
     r = n(73153),
     a = n(994500);
@@ -54,7 +54,7 @@ class A extends i.Ay.PersistedStore {
         return (l.get(e)?.vcProbability ?? 0) > 0.5;
     }
 }
-let h = new A(r.h, {
+let f = new A(r.h, {
     LOAD_USER_AFFINITIES_V2: function () {
         o = !0;
     },

@@ -117,13 +117,13 @@ function d(e, t) {
                         s: +(100 * (0 === l ? 0 : l / (1 - Math.abs(2 * d - 1)))).toFixed(1),
                         l: (d = +(100 * d).toFixed(1)),
                     }),
-                    h = _,
-                    f = E,
+                    f = _,
+                    h = E,
                     I = A;
-                (f < 30 && (f += 30), I > 80 && (I -= 40), I < 20 && (I += 15));
+                (h < 30 && (h += 30), I > 80 && (I -= 40), I < 20 && (I += 15));
                 let p = 360 / (c + 1);
                 for (; u.length < c;) {
-                    (h -= p) < 0 && (h += 360);
+                    (f -= p) < 0 && (f += 360);
                     let {
                         r: e,
                         g: t,
@@ -138,7 +138,7 @@ function d(e, t) {
                                     .padStart(2, "0");
                             }
                             return `#${r(0)}${r(8)}${r(4)}`;
-                        })(h, f, I),
+                        })(f, h, I),
                     );
                     u.push([e, t, n]);
                 }
@@ -181,23 +181,23 @@ function d(e, t) {
                                 _ = d / 255,
                                 E = Math.max(c, u, _),
                                 A = E - Math.min(c, u, _);
-                            function h(e) {
+                            function f(e) {
                                 return (E - e) / 6 / A + 0.5;
                             }
-                            function f(e) {
+                            function h(e) {
                                 return Math.round(100 * e) / 100;
                             }
                             return (
                                 0 === A
                                     ? (r = a = 0)
                                     : ((a = A / E),
-                                      (t = h(c)),
-                                      (n = h(u)),
-                                      (i = h(_)),
+                                      (t = f(c)),
+                                      (n = f(u)),
+                                      (i = f(_)),
                                       (r = c === E ? i - n : u === E ? 1 / 3 + t - i : _ === E ? 2 / 3 + n - t : 0) < 0
                                           ? (r += 1)
                                           : r > 1 && (r -= 1)),
-                                { h: Math.round(360 * r), s: f(100 * a), v: f(100 * E) }
+                                { h: Math.round(360 * r), s: h(100 * a), v: h(100 * E) }
                             );
                         })(e) ?? { h: 0, s: 0, v: 0 },
                     }))

@@ -1,7 +1,7 @@
 var i = l(477900),
-    s = l(582128),
-    a = l(503698),
-    t = l.n(a),
+    a = l(582128),
+    s = l(503698),
+    t = l.n(s),
     r = l(855986),
     c = l(834730),
     u = l(664343),
@@ -47,8 +47,8 @@ function F(e, n) {
     }
     return () => {};
 }
-let U = s.memo(function (e) {
-        let { guild: n, guildScheduledEvent: l, channel: a, isMember: t } = e,
+let U = a.memo(function (e) {
+        let { guild: n, guildScheduledEvent: l, channel: s, isMember: t } = e,
             m = (0, r.bG)(
                 [C.A],
                 () => {
@@ -58,14 +58,14 @@ let U = s.memo(function (e) {
                 },
                 [n],
             ),
-            h = (0, P.L)(l, a),
-            p = s.useCallback(
+            h = (0, P.L)(l, s),
+            p = a.useCallback(
                 (e) => {
                     t && null != l && (e.stopPropagation(), (0, v.rq)(l));
                 },
                 [t, l],
             ),
-            N = s.useCallback(
+            N = a.useCallback(
                 (e) => {
                     F(l)(e);
                 },
@@ -128,12 +128,12 @@ let U = s.memo(function (e) {
             ],
         });
     }),
-    $ = s.memo(function (e) {
+    $ = a.memo(function (e) {
         let {
                 guildId: n,
                 guildScheduledEventId: l,
-                channelId: s,
-                recurrenceId: a,
+                channelId: a,
+                recurrenceId: s,
                 isActive: t,
                 isEnded: c,
                 isMember: u,
@@ -141,10 +141,10 @@ let U = s.memo(function (e) {
                 onAcceptInstantInvite: o,
                 onTransitionToInviteChannel: v,
             } = e,
-            N = (0, r.bG)([k.Ay], () => k.Ay.isInterestedInEventRecurrence(l, a), [l, a]),
-            x = (0, r.bG)([f.A], () => null != s && f.A.getChannelId() === s, [s]);
+            N = (0, r.bG)([k.Ay], () => k.Ay.isInterestedInEventRecurrence(l, s), [l, s]),
+            x = (0, r.bG)([f.A], () => null != a && f.A.getChannelId() === a, [a]);
         function j(e) {
-            (e.stopPropagation(), (0, T.A)(l, a, n));
+            (e.stopPropagation(), (0, T.A)(l, s, n));
         }
         function g(e) {
             (e.stopPropagation(), u ? t && v() : o());
@@ -173,11 +173,11 @@ let U = s.memo(function (e) {
                       })
             : (0, i.jsx)(m.$, { text: L.intl.string(L.t.XpeFYr), onClick: g, variant: "active" });
     }),
-    w = s.memo(function (e) {
+    w = a.memo(function (e) {
         let {
                 guildScheduledEvent: n,
                 guild: l,
-                channel: a,
+                channel: s,
                 isMember: r,
                 recurrenceId: c,
                 onAcceptInstantInvite: u,
@@ -186,7 +186,7 @@ let U = s.memo(function (e) {
             m = c ?? (null != n ? (0, S.G3)(n) : null),
             h = n?.recurrence_rule == null || null == m || (0, S.p$)((0, b.Sn)(n?.recurrence_rule), m),
             p = (0, _.A)(n),
-            v = s.useCallback(() => {
+            v = a.useCallback(() => {
                 r && null != n && (0, A.uR)({ eventId: n.id, recurrenceId: m });
             }, [r, n, m]);
         if (null == n || !h) return null;
@@ -212,7 +212,7 @@ let U = s.memo(function (e) {
                     (0, i.jsxs)("div", {
                         className: z.xQ,
                         children: [
-                            (0, i.jsx)(U, { guild: l, channel: a, guildScheduledEvent: n, isMember: r }),
+                            (0, i.jsx)(U, { guild: l, channel: s, guildScheduledEvent: n, isMember: r }),
                             (0, i.jsx)($, {
                                 isActive: N,
                                 isEnded: x,

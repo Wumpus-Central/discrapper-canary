@@ -4,15 +4,15 @@ var e = n(536637),
 (n(723702), n(371794));
 var A = n(652215),
     l = n(792996);
-let c = Object.freeze({ ALL: -1, ...A.dHA }),
-    a = {},
-    d = {};
-Object.entries(c).forEach((t) => {
+let a = Object.freeze({ ALL: -1, ...A.dHA }),
+    u = {},
+    H = {};
+Object.entries(a).forEach((t) => {
     let [r, n] = t,
         e = r.toLowerCase().replace(/_/g, "-");
-    ((a[e] = n), (d[n] = e));
+    ((u[e] = n), (H[n] = e));
 });
-let u = [
+let c = [
     ["YYYY-MM-DD", "MMMM DD, Y"],
     ["YYYY-MM", "MMMM Y"],
     ["MM-DD", "MMMM DD"],
@@ -175,8 +175,8 @@ n.d(
             let { preorderReleaseAt: r, preorderApproximateReleaseDate: n } = t;
             if (null != r) return r.format("MMMM DD");
             if (null == n) return null;
-            for (let t = 0; t < u.length; t++) {
-                let [r, e] = u[t],
+            for (let t = 0; t < c.length; t++) {
+                let [r, e] = c[t],
                     i = s()(n, r, !0);
                 if (i.isValid()) return i.format(e);
             }

@@ -11,33 +11,33 @@ var i = n(477900),
     _ = n(866665),
     E = n(32880),
     A = n(587895),
-    h = n(764359),
-    f = n(976860),
+    f = n(764359),
+    h = n(976860),
     I = n(659096),
     p = n(966846),
     m = n(674378),
-    g = n(505806),
-    T = n(652215),
+    T = n(505806),
+    g = n(652215),
     S = n(792996),
     N = n(627745);
 let C = {
-    [T.WTw.INSTALLING]: {
-        [h.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["p+2sE+"], { name: e }),
-        [h.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["/0NgPI"], { name: e, timeRemaining: t }),
-        [h.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.ZIwMzr, { name: e, timeRemaining: t }),
-        [h.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t["3IQDUi"], { name: e, timeRemaining: t }),
+    [g.WTw.INSTALLING]: {
+        [f.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["p+2sE+"], { name: e }),
+        [f.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["/0NgPI"], { name: e, timeRemaining: t }),
+        [f.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.ZIwMzr, { name: e, timeRemaining: t }),
+        [f.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t["3IQDUi"], { name: e, timeRemaining: t }),
     },
-    [T.WTw.UPDATING]: {
-        [h.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["6F9QzC"], { name: e }),
-        [h.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["2OVgVq"], { name: e, timeRemaining: t }),
-        [h.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.mgQg1L, { name: e, timeRemaining: t }),
-        [h.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t.aTdq44, { name: e, timeRemaining: t }),
+    [g.WTw.UPDATING]: {
+        [f.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["6F9QzC"], { name: e }),
+        [f.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["2OVgVq"], { name: e, timeRemaining: t }),
+        [f.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.mgQg1L, { name: e, timeRemaining: t }),
+        [f.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t.aTdq44, { name: e, timeRemaining: t }),
     },
-    [T.WTw.REPAIRING]: {
-        [h.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["p+2sE+"], { name: e }),
-        [h.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["/0NgPI"], { name: e, timeRemaining: t }),
-        [h.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.ZIwMzr, { name: e, timeRemaining: t }),
-        [h.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t["3IQDUi"], { name: e, timeRemaining: t }),
+    [g.WTw.REPAIRING]: {
+        [f.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["p+2sE+"], { name: e }),
+        [f.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["/0NgPI"], { name: e, timeRemaining: t }),
+        [f.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.ZIwMzr, { name: e, timeRemaining: t }),
+        [f.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t["3IQDUi"], { name: e, timeRemaining: t }),
     },
 };
 class O extends r.PureComponent {
@@ -49,7 +49,7 @@ class O extends r.PureComponent {
             d = 0 !== o ? Math.max(1, (s - a) / o) : null,
             c = C[l],
             u = null != c ? Object.keys(c) : [],
-            { unit: _, time: E } = (0, h.$l)(null != d ? d / 60 : null, u);
+            { unit: _, time: E } = (0, f.$l)(null != d ? d / 60 : null, u);
         if (null != c && null != _) {
             let e = c[_];
             return null != e ? e(i.name, E) : null;
@@ -58,10 +58,10 @@ class O extends r.PureComponent {
     };
     renderText() {
         let { state: e, isPaused: t } = this.props;
-        if (e.type === T.WTw.UPDATING || e.type === T.WTw.REPAIRING || e.type === T.WTw.INSTALLING) {
+        if (e.type === g.WTw.UPDATING || e.type === g.WTw.REPAIRING || e.type === g.WTw.INSTALLING) {
             if (t) return S.intl.string(S.t["5oxtFS"]);
-            else if (e.stage === T.OQC.PATCHING || e.stage === T.OQC.REPAIRING)
-                return (0, i.jsx)(g.A, {
+            else if (e.stage === g.OQC.PATCHING || e.stage === g.OQC.REPAIRING)
+                return (0, i.jsx)(T.A, {
                     getHistoricalTotalBytes: I.A.getHistoricalTotalBytesWritten,
                     updateInterval: 5e3,
                     children: this.renderProgressBody,
@@ -88,7 +88,7 @@ class R extends r.PureComponent {
     }
     handleOnClick = (e) => {
         let { onClick: t } = this.props;
-        (e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.pX)(T.BVt.APPLICATION_LIBRARY));
+        (e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, h.pX)(g.BVt.APPLICATION_LIBRARY));
     };
     getTooltipText() {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;

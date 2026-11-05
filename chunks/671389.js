@@ -11,23 +11,23 @@ var i = n(350835),
     _ = n(499466),
     E = n(735769),
     A = n(260498),
-    h = n(313537),
-    f = n(189117),
+    f = n(313537),
+    h = n(189117),
     I = n(746080);
 let p = null,
     m = null,
-    g = null,
     T = null,
+    g = null,
     S = !1;
 function N() {
-    null != g && (clearTimeout(g), (g = null));
+    null != T && (clearTimeout(T), (T = null));
 }
 function C(e) {
-    let t = f.ZR.filter((t) => t !== e);
+    let t = h.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
 function O() {
-    null != T && (clearTimeout(T), (T = null));
+    null != g && (clearTimeout(g), (g = null));
 }
 function R() {
     return (N(), O(), (p = null), null != m && ((m = null), !0));
@@ -51,16 +51,16 @@ function y(e) {
     })();
     if (null == n)
         return null != m && t
-            ? (null == g &&
-                  (g = setTimeout(() => {
-                      ((g = null), R() && b.emitChange());
+            ? (null == T &&
+                  (T = setTimeout(() => {
+                      ((T = null), R() && b.emitChange());
                   }, 3e4)),
               !1)
             : R();
     N();
     let r = (function (e) {
         let t = A.Ay.getProject(e);
-        if (null == t || null == (0, h.fL)(t)) return null;
+        if (null == t || null == (0, f.fL)(t)) return null;
         let n = c.A.getMessages(e),
             i = (0, u.Ji)(n);
         if (null == i) return null;
@@ -70,12 +70,12 @@ function y(e) {
     return n === p && null != m
         ? L(r)
         : ((p = n),
-          (m = { type: i.$.PLAYING, name: f.Vb, details: C(), timestamps: { start: Date.now() } }),
+          (m = { type: i.$.PLAYING, name: h.Vb, details: C(), timestamps: { start: Date.now() } }),
           L(r),
           !(function e() {
               (O(),
-                  (T = setTimeout(() => {
-                      ((T = null), null != m && ((m = { ...m, details: C(m.details) }), e(), b.emitChange()));
+                  (g = setTimeout(() => {
+                      ((g = null), null != m && ((m = { ...m, details: C(m.details) }), e(), b.emitChange()));
                   }, 3e5)));
           })(),
           !0);

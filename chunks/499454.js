@@ -2,8 +2,8 @@ var i = n(477900);
 n(582128);
 var s = n(192308),
     a = n(287809),
-    l = n(166403),
-    r = n(188567),
+    r = n(166403),
+    l = n(188567),
     o = n(722178),
     u = n(598653),
     c = n(682901),
@@ -15,9 +15,9 @@ n.d(
         h: function (e) {
             let { processedCode: t, channelContext: E, customGiftMessage: _, giftInfo: C } = e,
                 f = !1,
-                g = null,
-                T = a.default.getCurrentUser(),
-                h = (0, o.CC)(T?.premiumType, c.PremiumTypes.TIER_0);
+                T = null,
+                g = a.default.getCurrentUser(),
+                m = (0, o.CC)(g?.premiumType, c.PremiumTypes.TIER_0);
             (0, s.mM)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -47,10 +47,10 @@ n.d(
                             emojiName: C?.emoji?.name,
                             soundId: C?.sound?.id,
                             onComplete: (e, t) => {
-                                ((g = e),
+                                ((T = e),
                                     t &&
                                         ((f = t),
-                                        e.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
+                                        e.isSubscription && null == r.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
                             },
                             ...n,
                         });
@@ -58,11 +58,11 @@ n.d(
                 {
                     onCloseCallback: () => {
                         f &&
-                            null != g &&
-                            !h &&
-                            g.isSubscription &&
-                            g?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
-                            r._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                            null != T &&
+                            !m &&
+                            T.isSubscription &&
+                            T?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
+                            l._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
                     },
                 },
             );

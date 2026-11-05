@@ -8,8 +8,8 @@ var r = n(477900),
     c = n(885574),
     d = n(939249),
     m = n(866665),
-    f = n(781300),
-    p = n(176095),
+    p = n(781300),
+    f = n(176095),
     v = n(580630),
     g = n(516106),
     x = n(140624),
@@ -27,19 +27,19 @@ n.d(
                     giftCardWallet: t,
                     checked: n,
                     onChange: T,
-                    disabled: j = !1,
-                    loading: E = !1,
-                    disabledTooltip: A,
-                    locked: I = !1,
+                    disabled: I = !1,
+                    loading: j = !1,
+                    disabledTooltip: E,
+                    locked: A = !1,
                     showDisabledInfoIcon: P = !0,
                 } = e,
-                L = (0, a.bG)([p.A], () => p.A.getBalance(t.id), [t.id]),
-                C = (0, a.bG)([p.A], () => p.A.getIsFetching(t.id), [t.id]),
-                N = (0, a.bG)([p.A], () => p.A.hasSettled(t.id), [t.id]),
+                L = (0, a.bG)([f.A], () => f.A.getBalance(t.id), [t.id]),
+                C = (0, a.bG)([f.A], () => f.A.getIsFetching(t.id), [t.id]),
+                N = (0, a.bG)([f.A], () => f.A.hasSettled(t.id), [t.id]),
                 S = (0, g.t4)((e) => e.getWalletLegBalance()),
                 D = (0, g.t4)((e) => e.invoicePreviewRefetchKey);
             i.useEffect(() => {
-                (0, f.YP)(t.id);
+                (0, p.YP)(t.id);
             }, [t.id, D]);
             let k = N && null == L && !C,
                 w = i.useMemo(() => {
@@ -48,22 +48,22 @@ n.d(
                     return b.intl.format(x.default["9Nb9Bz"], { amount: e });
                 }, [L, S]);
             i.useEffect(() => {
-                !I && k && n && T(!1);
-            }, [I, k, n, T]);
-            let R = j || E || C || (!I && k),
-                M = R || I,
+                !A && k && n && T(!1);
+            }, [A, k, n, T]);
+            let R = I || j || C || (!A && k),
+                M = R || A,
                 _ = i.useCallback(() => {
                     M || T(!n);
                 }, [T, n, M]);
-            if (k && !I) return null;
-            let O = R && null != A && P,
-                G = M && null != A,
-                W = E
+            if (k && !A) return null;
+            let O = R && null != E && P,
+                G = M && null != E,
+                W = j
                     ? (0, r.jsx)("div", {
                           className: h.tv,
                           children: (0, r.jsx)(s.y, { type: s.y.Type.SPINNING_CIRCLE_SIMPLE, className: h.u1 }),
                       })
-                    : (0, r.jsx)(u.S, { checked: n && (I || !k), onChange: _, disabled: M, label: "" }),
+                    : (0, r.jsx)(u.S, { checked: n && (A || !k), onChange: _, disabled: M, label: "" }),
                 U = (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(o.E, {
@@ -85,8 +85,8 @@ n.d(
                     ? (0, r.jsxs)("div", {
                           className: h.kL,
                           role: "checkbox",
-                          "aria-checked": !E && n,
-                          "aria-busy": E || void 0,
+                          "aria-checked": !j && n,
+                          "aria-busy": j || void 0,
                           "aria-disabled": R || void 0,
                           children: [
                               (0, r.jsx)("div", { children: W }),
@@ -110,7 +110,7 @@ n.d(
                       });
             return G
                 ? (0, r.jsx)(m.m, {
-                      text: A,
+                      text: E,
                       asContainer: !0,
                       tag: "div",
                       position: "top",

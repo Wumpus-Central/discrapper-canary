@@ -1,7 +1,7 @@
 n.d(t, { pJ: () => a.pJ, Ay: () => g, $l: () => a.$l });
 var i,
-    l,
-    r = n(477900),
+    r,
+    l = n(477900),
     s = n(582128),
     a = n(499979),
     o = n(451988),
@@ -14,7 +14,7 @@ var i,
         (i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
         (i.VOICE_CHANNEL_HISTORY = "VOICE_CHANNEL_HISTORY"),
         i),
-    c = (((l = c || {}).START = "START"), (l.END = "END"), (l.TIME = "TIME"), l);
+    c = (((r = c || {}).START = "START"), (r.END = "END"), (r.TIME = "TIME"), r);
 function h(e) {
     return (t, n) => (null == n ? "" : u.intl.format(e(), { time: t, ...n }));
 }
@@ -126,8 +126,8 @@ let f = {
                 let { start: e, end: t, time: n } = this.props;
                 if (null != n) return n / 1e3 / 60;
                 let i = Date.now(),
-                    l = 0;
-                return (null != e ? (l = i - e) : null != t && (l = i - t), Math.abs(l) / 1e3 / 60);
+                    r = 0;
+                return (null != e ? (r = i - e) : null != t && (r = i - t), Math.abs(r) / 1e3 / 60);
             }
             update = () => {
                 this.setState({ time: this.getDiff() });
@@ -154,7 +154,7 @@ let f = {
                 return null != e ? "START" : null != t ? "END" : null != n ? "TIME" : null;
             }
             render() {
-                let { location: t, messageProps: n, isApplicationStreaming: i, ...l } = this.props,
+                let { location: t, messageProps: n, isApplicationStreaming: i, ...r } = this.props,
                     { time: s } = this.state,
                     o = this.getType();
                 if (null == o) return null;
@@ -163,10 +163,10 @@ let f = {
                 if (null == d) return null;
                 let c = d[u],
                     h = Math.floor((0, a.eZ)(s, u));
-                return (0, r.jsx)(e, { ...l, children: c?.(h, n, i) });
+                return (0, l.jsx)(e, { ...r, children: c?.(h, n, i) });
             }
         };
     })(function (e) {
         let { children: t, className: n } = e;
-        return (0, r.jsx)("span", { className: n, children: t });
+        return (0, l.jsx)("span", { className: n, children: t });
     });

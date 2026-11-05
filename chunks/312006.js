@@ -10,8 +10,8 @@ var i = n(435558),
     _ = n(977997),
     E = n(488926),
     A = n(233993),
-    h = n(105530),
-    f = n(418208);
+    f = n(105530),
+    h = n(418208);
 let I = {},
     p = { speaker: !1, moderator: !1 };
 function m(e, t) {
@@ -25,7 +25,7 @@ function m(e, t) {
             s = c.A.getGuild(a);
         return null != s && null != r && r.isGuildStageVoice()
             ? {
-                  speaker: ((n = _.A.getVoiceStateForChannel(t, e)), (0, h.eY)(n) === h.zF.ON_STAGE),
+                  speaker: ((n = _.A.getVoiceStateForChannel(t, e)), (0, f.eY)(n) === f.zF.ON_STAGE),
                   moderator: i
                       ? E.$3({
                             permission: A.QY,
@@ -40,12 +40,12 @@ function m(e, t) {
     })(e, t, n);
     return ((I[t][e] = i), i);
 }
-function g(e) {
+function T(e) {
     let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete I[e.id];
     return t.length > 0;
 }
-function T(e) {
+function g(e) {
     let { guildId: t, user: n } = e;
     if (null == n || null == t) return !1;
     var i = n.id;
@@ -79,7 +79,7 @@ class N extends a.Ay.Store {
     }
     getPermissionsForUser(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (null == e || null == t || (e === u.default.getCurrentUser()?.id && (0, f.o$)())) return p;
+        if (null == e || null == t || (e === u.default.getCurrentUser()?.id && (0, h.o$)())) return p;
         let i = I[t]?.[e];
         if (null != i)
             if (n && null == i.moderator) return m(e, t, !0);
@@ -95,14 +95,14 @@ let C = new N(s.h, {
     CONNECTION_OPEN: function () {
         I = {};
     },
-    GUILD_MEMBER_REMOVE: T,
-    GUILD_MEMBER_UPDATE: T,
+    GUILD_MEMBER_REMOVE: g,
+    GUILD_MEMBER_UPDATE: g,
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
-        g(t);
+        T(t);
     },
     PASSIVE_UPDATE_V2: function (e) {
-        return g(e.guildId);
+        return T(e.guildId);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;

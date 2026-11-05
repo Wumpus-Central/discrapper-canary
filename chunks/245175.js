@@ -1,6 +1,6 @@
 var l = n(945810);
 let r = { OFF: "off", TOP_LEVEL_MENU_ITEM: "top_level_menu_item", SUBMENU: "submenu" },
-    a = (0, l.mj)({
+    i = (0, l.mj)({
         name: "2026-09-try-display-name-style",
         kind: "user",
         defaultConfig: { placement: r.OFF },
@@ -10,7 +10,7 @@ n.d(
     t,
     {},
     {
-        fM: a,
+        fM: i,
         rA: function (e, t) {
             return Array.isArray(t) ? t.includes(e) : e === t;
         },

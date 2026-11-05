@@ -1,4 +1,4 @@
-n.d(t, { E: () => S, A: () => ee });
+n.d(t, { E: () => I, A: () => ee });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -17,7 +17,7 @@ var l = n(477900),
     C = n(933832),
     E = n(147925),
     x = n(936820);
-function S(e) {
+function I(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: o, onClick: c } = e,
         [u, h] = i.useState(!1),
         m = (0, A.A)(o);
@@ -48,14 +48,14 @@ function S(e) {
     );
 }
 n(321073);
-var I = n(51906),
+var S = n(51906),
     y = n(554146),
     b = n(192308),
     _ = n(383669),
     j = n(793574),
     v = n(149468),
-    N = n(435558),
-    T = n.n(N),
+    T = n(435558),
+    N = n.n(T),
     M = n(855687),
     R = n(143413),
     D = n(734057),
@@ -79,7 +79,7 @@ var I = n(51906),
     J = n(723702),
     X = n(936649),
     Y = n(792996);
-let Q = new I.Zy();
+let Q = new S.Zy();
 function ee(e) {
     let t,
         s,
@@ -88,8 +88,8 @@ function ee(e) {
         C = (0, o.bG)([m.A], () => (null != f ? m.A.getGuild(f.getGuildId()) : null), [f]),
         E = (0, o.bG)([h.default], () => C?.ownerId === h.default.getId(), [C]),
         {
-            steps: I,
-            shouldAnimate: N,
+            steps: S,
+            shouldAnimate: T,
             isOldGuild: ee,
         } = (function (e, t) {
             var s;
@@ -109,8 +109,8 @@ function ee(e) {
                 })(t?.id),
                 {
                     canInvite: x,
-                    canManageGuild: S,
-                    canMessage: I,
+                    canManageGuild: I,
+                    canMessage: S,
                 } = (0, o.cf)(
                     [G.A],
                     () => ({
@@ -121,7 +121,7 @@ function ee(e) {
                     }),
                     [t, e],
                 ),
-                N = (0, o.bG)(
+                T = (0, o.bG)(
                     [$.default],
                     () => $.default.getCurrentUser()?.desktop === !0 || $.default.getCurrentUser()?.mobile === !0,
                 ),
@@ -146,12 +146,12 @@ function ee(e) {
                         ((c = (0, o.bG)([D.A], () =>
                             null != t ? D.A.getMutableBasicGuildChannelsForGuild(t.id) : null,
                         )),
-                        (s = i.useMemo(() => (null == c ? [] : T().values(c)), [c])),
+                        (s = i.useMemo(() => (null == c ? [] : N().values(c)), [c])),
                         (d = (0, o.bG)([h.default], () => h.default.getId())),
                         (0, o.bG)([O.A], () =>
-                            T().some(s, (e) => {
+                            N().some(s, (e) => {
                                 let t = O.A.getMessages(e.id).toArray();
-                                return T().some(t, (e) => e.author.id === d && !(0, R.A)(e));
+                                return N().some(t, (e) => e.author.id === d && !(0, R.A)(e));
                             }),
                         )),
                     guildPersonalized:
@@ -272,7 +272,7 @@ function ee(e) {
                 em = t?.id ?? "",
                 eg = eu.guildId === em && eu.applicationIds.length > 0;
             i.useEffect(() => {
-                if (!S) return;
+                if (!I) return;
                 let e = !0;
                 return (
                     Q.one(em, () => (0, H.c)(em))
@@ -284,8 +284,8 @@ function ee(e) {
                         e = !1;
                     }
                 );
-            }, [em, S]);
-            let ep = !(N || ee || et || en || el),
+            }, [em, I]);
+            let ep = !(T || ee || et || en || el),
                 eA = [];
             if (!E) {
                 (x &&
@@ -296,7 +296,7 @@ function ee(e) {
                         completed: ee,
                         onClick: es,
                     }),
-                    S &&
+                    I &&
                         eA.push({
                             key: "customize",
                             iconUrl: "/assets/428a003b3c729aa6.svg",
@@ -304,7 +304,7 @@ function ee(e) {
                             completed: en,
                             onClick: er,
                         }),
-                    I &&
+                    S &&
                         eA.push({
                             key: "message",
                             iconUrl: "/assets/2ed198e767bd5423.svg",
@@ -317,10 +317,10 @@ function ee(e) {
                             key: "download",
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             title: Y.intl.string(Y.t.pGVNI9),
-                            completed: N,
+                            completed: T,
                             onClick: eo,
                         }));
-                let e = S
+                let e = I
                         ? { key: "addapp", iconUrl: _, title: Y.intl.string(Y.t.IhHDEO), completed: eg, onClick: ec }
                         : null,
                     t = ei
@@ -361,7 +361,7 @@ function ee(e) {
                 ]).start();
             }, [s, t, A]),
             {
-                titleAnimatedStyle: N
+                titleAnimatedStyle: T
                     ? {
                           transform: [
                               { translateY: t.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
@@ -372,13 +372,13 @@ function ee(e) {
                 opacities: A,
             });
     if (null == C) return null;
-    let el = I.map((e, t) =>
+    let el = S.map((e, t) =>
             (0, l.jsx)(
                 r.A.div,
                 {
                     className: x.cW,
-                    style: N ? { opacity: en[t] } : {},
-                    children: (0, l.jsx)(S, {
+                    style: T ? { opacity: en[t] } : {},
+                    children: (0, l.jsx)(I, {
                         iconUrl: e.iconUrl,
                         header: e.title,
                         completed: e.completed,

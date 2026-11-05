@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(765178),
     r = n(439372),
     a = n(308528),
@@ -39,7 +39,7 @@ function A(e) {
             a.A.openPrivateChannel({ recipientIds: t.id });
         }));
 }
-class h extends r.A {
+class f extends r.A {
     actions = { RELATIONSHIP_ADD: E, FRIEND_REQUEST_ACCEPTED: A };
 }
-let f = new h();
+let h = new f();

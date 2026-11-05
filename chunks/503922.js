@@ -1,4 +1,4 @@
-n.d(t, { _m: () => c, DM: () => u, ms: () => o, Du: () => a, $D: () => f, dz: () => m, oB: () => s });
+n.d(t, { _m: () => c, DM: () => u, ms: () => o, Du: () => a, $D: () => m, dz: () => f, oB: () => s });
 var l = n(688954),
     r = n(513845),
     i = n(664619);
@@ -67,11 +67,11 @@ async function d(e, t) {
         }
     return i;
 }
-async function f(e, t) {
+async function m(e, t) {
     let n = await (0, l.h)(e, `/agent/database/restore-points/${encodeURIComponent(t)}/restore`, { method: "POST" });
     return d(e, n);
 }
-async function m(e, t, n) {
+async function f(e, t, n) {
     let r = await (0, l.h)(e, "/agent/database/restore", { method: "POST", json: { environment: t, timestampMs: n } });
     return d(e, r);
 }

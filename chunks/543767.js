@@ -18,8 +18,8 @@ async function E(e) {
         applyEntitlements: u = !1,
         analyticsLocations: E,
         analyticsLocation: A,
-        userDiscountOfferId: h,
-        loadId: f,
+        userDiscountOfferId: f,
+        loadId: h,
     } = e;
     null != n && (n = (0, c.qn)(n));
     let I = {
@@ -31,8 +31,8 @@ async function E(e) {
         renewal: r,
         apply_entitlements: u,
         currency: a,
-        user_discount_offer_id: h,
-        load_id: f,
+        user_discount_offer_id: f,
+        load_id: h,
     };
     try {
         let e = await s.Bo.patch({
@@ -172,9 +172,9 @@ n.d(
                 e = n;
             }
             let u = (0, i.useRef)(e),
-                h = (0, i.useRef)(!1),
+                f = (0, i.useRef)(!1),
                 {
-                    serverPricedPreviewRef: f,
+                    serverPricedPreviewRef: h,
                     shouldReturnInvoiceCache: I,
                     updateServerPricedPreviewRef: p,
                 } = ((n = (0, i.useRef)(null)),
@@ -210,15 +210,15 @@ n.d(
                 u.current = e;
             });
             let m = JSON.stringify(e),
-                g = (0, i.useCallback)(() => {
+                T = (0, i.useCallback)(() => {
                     let e = u.current,
-                        t = h.current ? e : { ...e, paymentSourceId: null };
-                    if ("subscriptionId" in t) return ((h.current = !0), E(t));
+                        t = f.current ? e : { ...e, paymentSourceId: null };
+                    if ("subscriptionId" in t) return ((f.current = !0), E(t));
                     if (!("items" in t)) return null;
                     {
-                        h.current = !0;
+                        f.current = !0;
                         let e = JSON.stringify({ ...t, paymentSourceId: "exclude_from_dedupe" }),
-                            n = f.current;
+                            n = h.current;
                         return null != n && I(t, e)
                             ? Promise.resolve(n.record)
                             : (async function (e) {
@@ -231,9 +231,9 @@ n.d(
                                           currency: u,
                                           renewal: E,
                                           metadata: A,
-                                          loadId: h,
+                                          loadId: f,
                                       } = e,
-                                      f = {
+                                      h = {
                                           items: (t = (0, c.qn)(t)).map((e) => {
                                               let { planId: t, ...n } = e;
                                               return { ...n, plan_id: t };
@@ -245,12 +245,12 @@ n.d(
                                           currency: u,
                                           renewal: E,
                                           metadata: A,
-                                          load_id: h,
+                                          load_id: f,
                                       };
                                   try {
                                       let e = await s.Bo.post({
                                               url: _.Rsh.BILLING_SUBSCRIPTIONS_PREVIEW,
-                                              body: f,
+                                              body: h,
                                               oldFormErrors: !0,
                                               rejectWithError: !1,
                                           }),
@@ -269,8 +269,8 @@ n.d(
                                   }
                               })(t).then((n) => (p(n, e, t.paymentSourceId), n));
                     }
-                }, [m, f, I, p]);
-            return A(e, g, t);
+                }, [m, h, I, p]);
+            return A(e, T, t);
         },
         sL: function (e) {
             let t = e.subscriptionPlanPrice;

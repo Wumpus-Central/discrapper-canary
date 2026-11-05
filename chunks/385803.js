@@ -297,7 +297,7 @@ let c = [l.NJ.ASH, l.NJ.DARK, l.NJ.ONYX],
         getName: () => o.intl.string(o.t.Mfoe3p),
         midpointPercentage: 50,
     },
-    h = {
+    f = {
         type: s.F.BACKGROUND_GRADIENT_PRESET,
         id: a.ju.EASTER_EGG,
         theme: l.NJ.LIGHT,
@@ -309,7 +309,7 @@ let c = [l.NJ.ASH, l.NJ.DARK, l.NJ.ONYX],
         getName: () => o.intl.string(o.t.mFinbb),
         midpointPercentage: 50,
     },
-    f = {
+    h = {
         type: s.F.BACKGROUND_GRADIENT_PRESET,
         id: a.ju.HEXAGON,
         theme: _,
@@ -324,7 +324,7 @@ let c = [l.NJ.ASH, l.NJ.DARK, l.NJ.ONYX],
         midpointPercentage: 35,
         unsupported_overlayOpacityMultiplier: 0.8,
     },
-    I = [...u, ...E, A, h];
+    I = [...u, ...E, A, f];
 ([...E, ...u],
     s.F.STANDARD_BACKGROUND_THEME,
     s.F.STANDARD_BACKGROUND_THEME,
@@ -341,7 +341,7 @@ let c = [l.NJ.ASH, l.NJ.DARK, l.NJ.ONYX],
     s.F.STANDARD_BACKGROUND_THEME,
     l.NJ.ONYX,
     s.F.STANDARD_BACKGROUND_THEME);
-let p = (0, r.keyBy)([...I, f], "id");
+let p = (0, r.keyBy)([...I, h], "id");
 var m = (((i = {})[(i.SIZE_48 = 48)] = "SIZE_48"), (i[(i.SIZE_60 = 60)] = "SIZE_60"), i);
 n.d(
     t,

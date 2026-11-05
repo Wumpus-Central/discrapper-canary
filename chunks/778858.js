@@ -11,13 +11,13 @@ var i = n(613412),
     _ = n(357566),
     E = n(879408),
     A = n(568185),
-    h = n(362280),
-    f = n(854492),
+    f = n(362280),
+    h = n(854492),
     I = n(398884),
     p = n(700241),
     m = n(879982),
-    g = n(976860),
-    T = n(288254),
+    T = n(976860),
+    g = n(288254),
     S = n(46653),
     N = n(383394),
     C = n(808728),
@@ -122,12 +122,12 @@ let F = {
         (t?.hasOwnProperty("welcomeModalChannelId") &&
             null == t.welcomeModalChannelId &&
             (s = { ...t, welcomeModalChannelId: a ?? void 0 }),
-            (0, h.A)(M.BVt.CHANNEL(e, a, i), s),
+            (0, f.A)(M.BVt.CHANNEL(e, a, i), s),
             await new Promise(setImmediate));
     },
     deleteGuild: x,
     selectGuild(e) {
-        (0, f.j)(e);
+        (0, h.j)(e);
     },
     createGuild(e) {
         s.h.dispatch({ type: "GUILD_CREATE", guild: e });
@@ -343,11 +343,11 @@ let F = {
         s.h.dispatch({ type: "GUILD_NSFW_AGREE", guildId: e });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) return void (0, g.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
+        if (null == e) return void (0, T.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
         let t = C.A.getDefaultChannel(e);
-        null == t || (0, d.qR)(t) || (0, T.BV)(t)
-            ? (0, g.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
-            : (0, g.pX)(M.BVt.CHANNEL(e, t.id));
+        null == t || (0, d.qR)(t) || (0, g.BV)(t)
+            ? (0, T.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
+            : (0, T.pX)(M.BVt.CHANNEL(e, t.id));
     },
     spoilerAgree(e) {
         s.h.dispatch({ type: "CHANNEL_SPOILER_AGREE", channelId: e });
@@ -357,7 +357,7 @@ let F = {
     },
     escapeToDefaultChannel(e) {
         let t = C.A.getDefaultChannel(e);
-        null != t ? (0, g.pX)(M.BVt.CHANNEL(e, t.id)) : (0, g.pX)(M.BVt.FRIENDS);
+        null != t ? (0, T.pX)(M.BVt.CHANNEL(e, t.id)) : (0, T.pX)(M.BVt.FRIENDS);
     },
     async fetchApplications(e, t) {
         let n = { url: M.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() };

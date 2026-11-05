@@ -1,4 +1,4 @@
-let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, m, g, T, S, N, C, O, R, L;
+let i, r, a, s, l, o, d, c, u, _, E, A, f, h, I, p, m, T, g, S, N, C, O, R, L;
 var y = n(435558),
     D = n(412703),
     b = n(440703),
@@ -30,13 +30,13 @@ function K() {
         (_ = new Set()),
         (E = new Set()),
         (A = new Set()),
-        (h = new Set()),
         (f = new Set()),
+        (h = new Set()),
         (H = new Map()),
         (p = new Map()),
         (m = new Map()),
-        (g = new Map()),
         (T = new Map()),
+        (g = new Map()),
         (S = new Map()),
         (I = new Set()),
         (N = new Map()),
@@ -75,19 +75,19 @@ function X(e, t) {
     (n.set(e, t), (p = n));
 }
 function z(e) {
-    null != g.get(e) && (g = new Map(g)).delete(e);
+    null != T.get(e) && (T = new Map(T)).delete(e);
 }
 function q(e) {
     let t = new Set(u);
     (t.delete(e), (u = t));
 }
-function Z(e) {
+function Q(e) {
     let t = new Set(A);
     (t.delete(e), (A = t));
 }
-function Q(e) {
+function Z(e) {
     let { adCreativeId: t } = e;
-    Z(t);
+    Q(t);
 }
 function J() {
     null != j && (clearTimeout(j), (j = null));
@@ -114,13 +114,13 @@ class et extends v.Ay.Store {
         return r;
     }
     isFetchingQuestPreview(e) {
-        return f.has(e);
+        return h.has(e);
     }
     get lastFetchedCurrentQuests() {
         return c;
     }
     getQuestPreviewOverride(e) {
-        let t = T.get(e);
+        let t = g.get(e);
         return null == t ? void 0 : l.get(t);
     }
     get questEnrollmentBlockedUntil() {
@@ -148,7 +148,7 @@ class et extends v.Ay.Store {
         return A.has(e);
     }
     isAdContentDismissed(e) {
-        return h.has(e);
+        return f.has(e);
     }
     getRewardCode(e) {
         return p.get(e);
@@ -157,7 +157,7 @@ class et extends v.Ay.Store {
         return m.get(e);
     }
     getStreamHeartbeatFailure(e) {
-        return g.get(e);
+        return T.get(e);
     }
     getQuest(e) {
         return l.get(e);
@@ -293,18 +293,18 @@ let en = new et(P.h, {
     },
     QUESTS_FETCH_PREVIEW_BEGIN: function (e) {
         let { questId: t } = e;
-        ((f = new Set(f)).add(t), (Y = new Map(Y)).delete(t));
+        ((h = new Set(h)).add(t), (Y = new Map(Y)).delete(t));
     },
     QUESTS_FETCH_PREVIEW_SUCCESS: function (e) {
         let { questId: t, quest: n } = e;
-        ((f = new Set(f)).delete(t),
+        ((h = new Set(h)).delete(t),
             (L = new Map(L)).set(t, n),
             (l = new Map(l)).set(t, n),
             (Y = new Map(Y)).delete(t));
     },
     QUESTS_FETCH_PREVIEW_FAILURE: function (e) {
         let { questId: t, error: n } = e;
-        ((f = new Set(f)).delete(t), (Y = new Map(Y)).set(t, n));
+        ((h = new Set(h)).delete(t), (Y = new Map(Y)).set(t, n));
     },
     QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
         let { questId: t, streamKey: n, userStatus: i } = e;
@@ -313,8 +313,8 @@ let en = new et(P.h, {
     QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
         let { questId: t, streamKey: n } = e;
         null != n &&
-            null == g.get(n) &&
-            (g = new Map(g)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
+            null == T.get(n) &&
+            (T = new Map(T)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
     },
     QUESTS_ENROLL_BEGIN: function (e) {
         let { questId: t } = e,
@@ -384,37 +384,37 @@ let en = new et(P.h, {
         let { questId: t } = e,
             n = new Set(A);
         (n.add(t), (A = n));
-        let i = new Map(T),
+        let i = new Map(g),
             r = !1;
         for (let [e, n] of i) n === t && (i.delete(e), (r = !0));
-        r && (T = i);
+        r && (g = i);
     },
     QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
         let { dismissedQuestUserStatus: t } = e;
-        ($(t.questId, { userStatus: t }), Z(t.questId));
+        ($(t.questId, { userStatus: t }), Q(t.questId));
     },
     QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
         let { questId: t } = e;
-        Z(t);
+        Q(t);
     },
     AD_CONTENT_DISMISS_BEGIN: function (e) {
         let { adCreativeId: t } = e,
             n = new Set(A);
         (n.add(t), (A = n));
-        let i = new Set(h);
-        (i.add(t), (h = i));
+        let i = new Set(f);
+        (i.add(t), (f = i));
     },
-    AD_CONTENT_DISMISS_SUCCESS: Q,
-    AD_CONTENT_DISMISS_FAILURE: Q,
+    AD_CONTENT_DISMISS_SUCCESS: Z,
+    AD_CONTENT_DISMISS_FAILURE: Z,
     ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET: function (e) {
         let { adCreativeId: t } = e;
-        if (!h.has(t)) return !1;
-        let n = new Set(h);
-        (n.delete(t), (h = n));
+        if (!f.has(t)) return !1;
+        let n = new Set(f);
+        (n.delete(t), (f = n));
     },
     ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET: function (e) {
-        if (0 === h.size) return !1;
-        h = new Set();
+        if (0 === f.size) return !1;
+        f = new Set();
     },
     QUESTS_USER_STATUS_UPDATE: function (e) {
         let { user_status: t } = e,
@@ -452,8 +452,8 @@ let en = new et(P.h, {
     },
     QUESTS_PREVIEW_OVERRIDE: function (e) {
         let { placement: t, questId: n } = e,
-            i = new Map(T);
-        (i.get(t) === n ? i.delete(t) : i.set(t, n), (T = i));
+            i = new Map(g);
+        (i.get(t) === n ? i.delete(t) : i.set(t, n), (g = i));
     },
     QUESTS_SELECT_TASK_PLATFORM: function (e) {
         let { questId: t, platform: n } = e;

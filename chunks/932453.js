@@ -5,7 +5,7 @@ var l = n(503698),
     s = n(939249),
     r = n(544299),
     o = n(269967);
-function d(e, t) {
+function c(e, t) {
     return { insetInlineStart: `${e.x}%`, insetBlockStart: `${e.y}%`, width: `${t}%` };
 }
 n.d(
@@ -13,13 +13,13 @@ n.d(
     {},
     {
         A: function (e) {
-            let { asset: t, label: n, position: l, width: c, className: u, disabled: h, onClick: p, innerRef: m } = e,
+            let { asset: t, label: n, position: l, width: d, className: u, disabled: h, onClick: p, innerRef: m } = e,
                 A = (0, r.Sb)({ position: l, targetLabel: n });
             return (0, i.jsx)(s.D, {
                 role: "listitem",
                 innerRef: m,
                 className: a()(o.x6, u, h ? o.r9 : void 0),
-                style: d(l, c),
+                style: c(l, d),
                 "aria-disabled": h && null == A,
                 onClick: h ? void 0 : p,
                 ...A,
@@ -31,7 +31,7 @@ n.d(
             return (0, i.jsx)("div", {
                 role: "listitem",
                 className: a()(o.kL, r),
-                style: d(l, s),
+                style: c(l, s),
                 children: (0, i.jsx)("img", { className: o.Sl, src: t, alt: n }),
             });
         },

@@ -10,13 +10,13 @@ var i = n(196765),
     _ = n(589051),
     E = n(652215);
 let A = "overlayKeybindExperimentPreviousKeybindSettings",
-    h = new r.Vy("OverlayKeybindExperimentManager"),
-    f = (0, i.v)(() => s.w.get(A, {}));
+    f = new r.Vy("OverlayKeybindExperimentManager"),
+    h = (0, i.v)(() => s.w.get(A, {}));
 function I() {
-    return f.getState();
+    return h.getState();
 }
 function p(e) {
-    (f.setState((t) => ({ ...t, ...e }), !0), s.w.set(A, f.getState()));
+    (h.setState((t) => ({ ...t, ...e }), !0), s.w.set(A, h.getState()));
 }
 class m extends o.A {
     _hasInitialized = !1;
@@ -50,7 +50,7 @@ class m extends o.A {
             try {
                 await this.processKeybindExperiment();
             } catch (e) {
-                h.error("Experiments processing failed", { error: e });
+                f.error("Experiments processing failed", { error: e });
             } finally {
                 this._isProcessing = !1;
             }
@@ -59,9 +59,9 @@ class m extends o.A {
     maybeInitExperiment = async () => {
         this._hasInitialized ||
             ((this._hasInitialized = !0),
-            h.info("Experiments initializing..."),
+            f.info("Experiments initializing..."),
             await this.processExperiment(),
-            h.info("Experiments initialized"));
+            f.info("Experiments initialized"));
     };
     isNewOverlayUser = () =>
         (null == I().isNewOverlayUser &&
@@ -99,7 +99,7 @@ class m extends o.A {
     handleExperimentOverrideBucket = async (e) => {
         __OVERLAY__ ||
             this._isProcessing ||
-            (h.info("Experiments processing...", { action: e }), await this.processExperiment());
+            (f.info("Experiments processing...", { action: e }), await this.processExperiment());
     };
     handleKeybindSet = (e) => {
         __OVERLAY__ ||
@@ -118,12 +118,12 @@ class m extends o.A {
         OVERLAY_READY: this.handleOverlayReady,
     };
 }
-let g = new m();
+let T = new m();
 n.d(
     t,
     {},
     {
-        Ay: g,
+        Ay: T,
         C3: function (e) {
             p({ overrideIsUsingDefaultOverlayKeybind: e });
         },
@@ -133,7 +133,7 @@ n.d(
         tM: function () {
             p({ isUsingDefaultOverlayKeybind: void 0 });
         },
-        wW: f,
+        wW: h,
         xc: function () {
             p({ isNewOverlayUser: void 0 });
         },

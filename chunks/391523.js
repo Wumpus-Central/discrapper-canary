@@ -13,18 +13,18 @@ t.d(
     {},
     {
         Dv: function (e, n, t, r, s) {
-            let d = (0, i.Dq)(r),
-                u =
+            let u = (0, i.Dq)(r),
+                d =
                     null != s
-                        ? d.filter((e) => s.includedChannelIds.has(e))
+                        ? u.filter((e) => s.includedChannelIds.has(e))
                         : r.channels.filter((e) => e.eligible && e.included);
             l.default.track(a.HAw.SWP_SETTINGS_VIEWED, {
                 guild_id: e,
                 view: n,
                 feature_key: t,
                 feature_enabled: r.enabled,
-                eligible_channel_count: d.length,
-                included_channel_count: u.length,
+                eligible_channel_count: u.length,
+                included_channel_count: d.length,
             });
         },
         Ws: function (e) {

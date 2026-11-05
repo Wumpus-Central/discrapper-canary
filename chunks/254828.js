@@ -1,7 +1,7 @@
-var a = s(477900),
-    e = s(855986),
-    r = s(123292),
-    n = s(253932),
+var e = s(477900),
+    n = s(855986),
+    a = s(123292),
+    r = s(253932),
     c = s(994500),
     l = s(792996);
 s.d(
@@ -10,10 +10,10 @@ s.d(
     {
         A: function (t) {
             let { userId: i, onClick: s } = t;
-            return (0, e.bG)([c.A], () => c.A.isIgnored(i))
-                ? (0, a.jsx)(r.Q, {
+            return (0, n.bG)([c.A], () => c.A.isIgnored(i))
+                ? (0, e.jsx)(a.Q, {
                       onClick: function () {
-                          (n.j0.updateSetting(!0), s());
+                          (r.j0.updateSetting(!0), s());
                       },
                       variant: "primary",
                       size: "sm",

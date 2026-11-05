@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(268218);
 (n(667532), n(321073));
 var r = n(284009),
@@ -12,12 +12,12 @@ var r = n(284009),
     _ = n(112420),
     E = n(144189),
     A = n(639621),
-    h = n(722306),
-    f = n(613057),
+    f = n(722306),
+    h = n(613057),
     I = n(652215);
 let p = "RPC_STORE_WAIT",
     m = [],
-    g = new (class {
+    T = new (class {
         getCurrentUser = () => null;
         onConnect = () => {};
         onDisconnect = () => {};
@@ -44,11 +44,11 @@ let p = "RPC_STORE_WAIT",
                     environment: "production",
                 },
             };
-            if (e.transport === f.z4.IPC || e.transport === f.z4.POST_MESSAGE) {
+            if (e.transport === h.z4.IPC || e.transport === h.z4.POST_MESSAGE) {
                 let n = this.getCurrentUser();
                 if (null == n) return void e.close(I.YI$.CLOSE_NORMAL, "User logged out");
                 let i = (0, A.A)(n);
-                (e.transport === f.z4.POST_MESSAGE && null == i.avatar && delete i.avatar, (t.user = i));
+                (e.transport === h.z4.POST_MESSAGE && null == i.avatar && delete i.avatar, (t.user = i));
             }
             this.dispatch(e, null, I.e$_.DISPATCH, I.ZE4.READY, t);
         }
@@ -65,7 +65,7 @@ let p = "RPC_STORE_WAIT",
                 let i = t.cmd,
                     r = this.commands[i];
                 if (null == r) throw new u.A({ errorCode: I.Lw6.INVALID_COMMAND }, `Invalid command: ${t.cmd}`);
-                if (!(0, h.A)(e.authorization.scopes, r.scope))
+                if (!(0, f.A)(e.authorization.scopes, r.scope))
                     throw new u.A({ errorCode: I.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
                 (d.default.track(I.HAw.RPC_COMMAND_SENT, {
                     command: i,
@@ -97,7 +97,7 @@ let p = "RPC_STORE_WAIT",
                 })
                 .then((n) => {
                     let { command: i, botScopeOnly: r } = n;
-                    if (e.source.type === f.z4.POST_MESSAGE) {
+                    if (e.source.type === h.z4.POST_MESSAGE) {
                         let n = (0, _.v)({ cmd: t.cmd, iframeId: e.source.iframeId, args: t.args ?? {} });
                         if (null != n) return n.result;
                     }

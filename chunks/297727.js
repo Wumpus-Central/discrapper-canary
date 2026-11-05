@@ -1,11 +1,11 @@
-let o = new Set();
+let l = new Set();
 t.d(
     e,
     {},
     {
         n0: function (n) {
-            let { getImpressionId: e, onEmit: t, initialWatchedSeconds: i = 0, thresholdSeconds: l = 5 } = n,
-                r = Math.max(0, i),
+            let { getImpressionId: e, onEmit: t, initialWatchedSeconds: o = 0, thresholdSeconds: i = 5 } = n,
+                r = Math.max(0, o),
                 a = null,
                 s = null,
                 u = !1;
@@ -18,25 +18,25 @@ t.d(
             }
             return {
                 onProgress(n) {
-                    let { positionSeconds: e, durationSeconds: i, isPlaying: x } = n,
+                    let { positionSeconds: e, durationSeconds: o, isPlaying: x } = n,
                         h = d();
                     if (null == h) return void c();
-                    if ((null != s && s !== h && ((r = 0), c()), (s = h), !o.has(h) && !u)) {
+                    if ((null != s && s !== h && ((r = 0), c()), (s = h), !l.has(h) && !u)) {
                         if (!x) return void c();
                         if (null != a) {
                             let n = e - a;
                             n > 0 && n <= 1.5 && (r += n);
                         }
                         ((a = e),
-                            r < l ||
-                                o.has(h) ||
+                            r < i ||
+                                l.has(h) ||
                                 u ||
                                 ((u = !0),
                                 Promise.resolve(
-                                    t({ video_watch_seconds: r, video_position_seconds: e, video_duration_seconds: i }),
+                                    t({ video_watch_seconds: r, video_position_seconds: e, video_duration_seconds: o }),
                                 )
                                     .then(() => {
-                                        o.add(h);
+                                        l.add(h);
                                     })
                                     .catch(() => {})
                                     .finally(() => {
@@ -48,7 +48,7 @@ t.d(
                 getWatchedSeconds: () => r,
                 hasEmitted: () => {
                     let n = d();
-                    return u || (null != n && o.has(n));
+                    return u || (null != n && l.has(n));
                 },
             };
         },

@@ -1,7 +1,7 @@
 n(321073);
 var i = n(855986),
-    l = n(73153),
-    r = n(812020),
+    r = n(73153),
+    l = n(812020),
     s = n(153488),
     a = n(994500),
     o = n(287809);
@@ -11,7 +11,7 @@ class c extends i.Ay.PersistedStore {
     static displayName = "FriendGroupsStore";
     static persistKey = "FriendGroupsStoreV2";
     initialize(e) {
-        (this.waitFor(s.A, a.A, r.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1)));
+        (this.waitFor(s.A, a.A, l.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1)));
     }
     getGroups() {
         return u;
@@ -36,7 +36,7 @@ class c extends i.Ay.PersistedStore {
         return { groups: u, isInitialized: d };
     }
 }
-let h = new c(l.h, {
+let h = new c(r.h, {
     POST_CONNECTION_OPEN: function () {
         if (d || u.length > 0) return !1;
         ((u = []), (d = !0));
@@ -69,19 +69,19 @@ let h = new c(l.h, {
         let { groupId: t, userIds: n } = e,
             i = u.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
-        let l = u[i],
-            r = new Set(l.userIds),
-            s = n.filter((e) => !r.has(e));
-        return 0 !== s.length && ((u[i] = { ...l, userIds: [...l.userIds, ...s] }), !0);
+        let r = u[i],
+            l = new Set(r.userIds),
+            s = n.filter((e) => !l.has(e));
+        return 0 !== s.length && ((u[i] = { ...r, userIds: [...r.userIds, ...s] }), !0);
     },
     REMOVE_USERS_FROM_GROUP: function (e) {
         let { groupId: t, userIds: n } = e,
             i = u.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
-        let l = u[i],
-            r = new Set(n),
-            s = l.userIds.filter((e) => !r.has(e));
-        return s.length !== l.userIds.length && ((u[i] = { ...l, userIds: s }), !0);
+        let r = u[i],
+            l = new Set(n),
+            s = r.userIds.filter((e) => !l.has(e));
+        return s.length !== r.userIds.length && ((u[i] = { ...r, userIds: s }), !0);
     },
 });
 n.d(t, {}, { A: h });

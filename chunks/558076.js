@@ -10,13 +10,13 @@ let d = new Map(),
     _ = new Map(),
     E = {},
     A = {},
-    h = {},
-    f = null,
+    f = {},
+    h = null,
     I = null,
     p = {},
     m = new Map(),
-    g = !1,
     T = !1,
+    g = !1,
     S = !1,
     N = {},
     C = {},
@@ -45,10 +45,10 @@ class D extends i.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(a.default, s.A, l.Ay),
             this.syncWith([l.Ay], y),
-            (g = (T = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
+            (T = (g = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
     }
     getState() {
-        return { videoOverlayVisibility: g, rememberVideoOverlayVisibility: T };
+        return { videoOverlayVisibility: T, rememberVideoOverlayVisibility: g };
     }
     getRoom(e) {
         return E[e] ?? c;
@@ -57,10 +57,10 @@ class D extends i.Ay.PersistedStore {
         return A[e] ?? d;
     }
     getRoomObjects(e) {
-        return h[e] ?? _;
+        return f[e] ?? _;
     }
     getPendingPosition() {
-        return f;
+        return h;
     }
     getPendingSeat() {
         return I;
@@ -81,10 +81,10 @@ class D extends i.Ay.PersistedStore {
         return this.getRoomObjects(e).get(o.N.NOTE) ?? u;
     }
     getVideoOverlayVisibility() {
-        return g;
+        return T;
     }
     getRememberVideoOverlayVisibility() {
-        return T;
+        return g;
     }
 }
 let b = new D(r.h, {
@@ -93,9 +93,9 @@ let b = new D(r.h, {
             { users: i, objects: r, ...a } = t;
         ((E[t.roomId] = a),
             (A[t.roomId] = i),
-            (h[t.roomId] = r),
+            (f[t.roomId] = r),
             L(t.roomId, r),
-            null != n && (null != f && (f = null), null != I && (I = null)));
+            null != n && (null != h && (h = null), null != I && (I = null)));
     },
     GUILD_ROOM_CONNECT_FAILURE: function (e) {
         let { roomId: t } = e;
@@ -111,12 +111,12 @@ let b = new D(r.h, {
         (i.delete(t),
             (A[n] = i),
             S && t === a.default.getId() && ((p[n] = !0), (S = !1)),
-            t === a.default.getId() && (delete N[n], delete C[n], T || (g = !1)));
+            t === a.default.getId() && (delete N[n], delete C[n], g || (T = !1)));
     },
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
             { users: n, objects: i, ...r } = t;
-        ((E[t.roomId] = r), (h[t.roomId] = i), L(t.roomId, i));
+        ((E[t.roomId] = r), (f[t.roomId] = i), L(t.roomId, i));
         let s = a.default.getId(),
             l = A[t.roomId]?.get(s);
         ((A[t.roomId] = n), null != l && A[t.roomId]?.set(s, l));
@@ -140,10 +140,10 @@ let b = new D(r.h, {
     },
     GUILD_ROOM_LOCAL_POSITION_REQUESTED: function (e) {
         let { position: t, seat: n } = e;
-        ((f = t), (I = n));
+        ((h = t), (I = n));
     },
     GUILD_ROOM_LOCAL_POSITION_CLEARED: function () {
-        ((f = null), (I = null));
+        ((h = null), (I = null));
     },
     GUILD_ROOM_TOGGLE_LAYOUT: function (e) {
         let { roomId: t, clearLayout: n } = e;
@@ -201,11 +201,11 @@ let b = new D(r.h, {
     },
     GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY: function (e) {
         let { value: t } = e;
-        g = t;
+        T = t;
     },
     GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function (e) {
         let { rememberVideoOverlayVisibility: t } = e;
-        T = t;
+        g = t;
     },
 });
 n.d(t, {}, { A: b, i: c });

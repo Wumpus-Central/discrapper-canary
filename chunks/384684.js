@@ -10,8 +10,8 @@ var i = n(855986),
     _ = n(652215);
 let E = new Set(),
     A = new Map(),
-    h = new Map(),
     f = new Map(),
+    h = new Map(),
     I = new Map(),
     p = null;
 function m(e) {
@@ -28,12 +28,12 @@ function m(e) {
             ((0, u.U)(t) && (i.add(t.id), (0, u.X)(t) && (r.add(t.id), d.has(t.id) && E.add(t.id))),
                 d.has(t.id) && (0, s._m)(t, _.xBc.ADMINISTRATOR) && I.set(e, !0));
     }
-    return (A.set(e, i), f.set(e, E), h.set(e, r), !0);
+    return (A.set(e, i), h.set(e, E), f.set(e, r), !0);
 }
-function g() {
-    (A.clear(), f.clear(), h.clear(), I.clear(), (p = null));
+function T() {
+    (A.clear(), h.clear(), f.clear(), I.clear(), (p = null));
 }
-function T(e) {
+function g(e) {
     let {
         guild: { id: t },
     } = e;
@@ -74,19 +74,19 @@ class N extends i.Ay.Store {
         return (this.buildRoles(e), A.get(e) ?? E);
     }
     getPurchasableSubscriptionRoles(e) {
-        return (this.buildRoles(e), h.get(e) ?? E);
+        return (this.buildRoles(e), f.get(e) ?? E);
     }
     getUserSubscriptionRoles(e) {
-        return (this.buildRoles(e), f.get(e) ?? E);
+        return (this.buildRoles(e), h.get(e) ?? E);
     }
     getUserIsAdmin(e) {
         return (this.buildRoles(e), I.get(e) ?? !1);
     }
 }
 let C = new N(r.h, {
-    CONNECTION_OPEN: g,
-    LOGOUT: g,
-    GUILD_CREATE: T,
+    CONNECTION_OPEN: T,
+    LOGOUT: T,
+    GUILD_CREATE: g,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
@@ -95,7 +95,7 @@ let C = new N(r.h, {
         let n = new Set(p);
         (n.delete(t), (p = n));
     },
-    GUILD_UPDATE: T,
+    GUILD_UPDATE: g,
     GUILD_ROLE_CREATE: S,
     GUILD_ROLE_UPDATE: S,
     GUILD_ROLE_DELETE: S,

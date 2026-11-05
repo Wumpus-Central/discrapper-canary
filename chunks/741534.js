@@ -1,5 +1,5 @@
 (n.d(t, {
-    XH: () => T,
+    XH: () => g,
     UI: () => C,
     CD: () => S,
     wd: () => L,
@@ -24,8 +24,8 @@ var i = n(350835),
     _ = n(287809),
     E = n(129230),
     A = n(486020),
-    h = n(851767);
-let f = (0, n(945810).mj)({
+    f = n(851767);
+let h = (0, n(945810).mj)({
     kind: "user",
     name: "2026-04-user-profile-performance-analytics",
     defaultConfig: { performanceAnalyticsEnabled: !1 },
@@ -34,8 +34,8 @@ let f = (0, n(945810).mj)({
 var I = n(527212),
     p = n(518477),
     m = n(652215),
-    g = n(818348);
-function T(e) {
+    T = n(818348);
+function g(e) {
     let { user: t, userProfile: n, guildMember: i, guildMemberProfile: r } = e,
         a = n ?? r,
         s = [];
@@ -58,7 +58,7 @@ function T(e) {
 function S(e) {
     let t = c.A.getStatus(e),
         n = c.A.isMobileOnline(e);
-    return t === g.cl.ONLINE && n ? `${t}-mobile` : t === g.cl.ONLINE ? `${t}-desktop` : t;
+    return t === T.cl.ONLINE && n ? `${t}-mobile` : t === T.cl.ONLINE ? `${t}-desktop` : t;
 }
 function N(e) {
     let { layout: t, userId: n, guildId: i, sessionId: r, sourceSessionId: a, showGuildProfile: s = !0 } = e,
@@ -70,8 +70,8 @@ function N(e) {
         profile_layout: t,
         profile_session_id: r,
         source_profile_session_id: a,
-        profile_properties: T({ user: l, userProfile: o?._userProfile }),
-        guild_profile_properties: T({ guildMember: u, guildMemberProfile: o?._guildMemberProfile }),
+        profile_properties: g({ user: l, userProfile: o?._userProfile }),
+        guild_profile_properties: g({ guildMember: u, guildMemberProfile: o?._guildMemberProfile }),
         profile_activity_types: c.A.getActivities(l.id)
             .map((e) => {
                 let { type: t } = e;
@@ -103,8 +103,8 @@ function C(e) {
         related_user_id: t,
         relationship_type: u.A.getRelationshipType(t),
         related_since: u.A.getSince(t),
-        num_mutual_friends: h.A.getMutualFriendsCount(t),
-        num_mutual_guilds: h.A.getMutualGuilds(t)?.length,
+        num_mutual_friends: f.A.getMutualFriendsCount(t),
+        num_mutual_guilds: f.A.getMutualGuilds(t)?.length,
         communication_probability: n?.communicationProbability,
         communication_rank: n?.communicationRank,
     };
@@ -147,7 +147,7 @@ function R(e) {
 function L(e) {
     if (
         !(function (e) {
-            let { performanceAnalyticsEnabled: t } = f.getConfig({ location: e });
+            let { performanceAnalyticsEnabled: t } = h.getConfig({ location: e });
             return t;
         })("UserProfileAnalyticsUtils")
     )

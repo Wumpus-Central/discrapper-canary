@@ -35,8 +35,8 @@ function E() {
 function A() {
     u(s.stop.bind(s));
 }
-class h extends a.A {
+class f extends a.A {
     actions = { VIBING_WUMPUS_PLAY_MUSIC: _, VIBING_WUMPUS_STOP_MUSIC: A, VIBING_WUMPUS_PAUSE_MUSIC: E };
 }
-let f = new h();
-n.d(t, {}, { A: f });
+let h = new f();
+n.d(t, {}, { A: h });

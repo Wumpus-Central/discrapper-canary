@@ -1,6 +1,6 @@
 var i,
-    s,
-    r = n(103640),
+    r,
+    s = n(103640),
     l = n(792996),
     a =
         (((i = {})[(i.ENABLE_POGGERMODE = 0)] = "ENABLE_POGGERMODE"),
@@ -25,12 +25,12 @@ var i,
         (i[(i.COMBO_VALUE_LEVEL_4 = 19)] = "COMBO_VALUE_LEVEL_4"),
         i),
     o =
-        (((s = {})[(s.COMMON = 0)] = "COMMON"),
-        (s[(s.UNCOMMON = 1)] = "UNCOMMON"),
-        (s[(s.RARE = 2)] = "RARE"),
-        (s[(s.EPIC = 3)] = "EPIC"),
-        (s[(s.LEGENDARY = 4)] = "LEGENDARY"),
-        s);
+        (((r = {})[(r.COMMON = 0)] = "COMMON"),
+        (r[(r.UNCOMMON = 1)] = "UNCOMMON"),
+        (r[(r.RARE = 2)] = "RARE"),
+        (r[(r.EPIC = 3)] = "EPIC"),
+        (r[(r.LEGENDARY = 4)] = "LEGENDARY"),
+        r);
 let c = {
     0: {
         id: 0,
@@ -122,7 +122,7 @@ let c = {
         description: () => l.intl.string(l.t.YtKoSd),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
-        checkUnlock: (e) => 430 === (0, r.RL)(e),
+        checkUnlock: (e) => 430 === (0, s.RL)(e),
     },
     9: {
         id: 9,
@@ -130,7 +130,7 @@ let c = {
         description: () => l.intl.string(l.t.QKxjeQ),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
-        checkUnlock: (e) => 555 === (0, r.RL)(e),
+        checkUnlock: (e) => 555 === (0, s.RL)(e),
     },
     10: {
         id: 10,
@@ -138,7 +138,7 @@ let c = {
         description: () => l.intl.string(l.t["7tuql7"]),
         rarity: 3,
         hideDescriptionUntilUnlock: !0,
-        checkUnlock: (e) => 898 === (0, r.RL)(e),
+        checkUnlock: (e) => 898 === (0, s.RL)(e),
     },
     11: {
         id: 11,
@@ -146,7 +146,7 @@ let c = {
         description: () => l.intl.string(l.t.okzLOT),
         rarity: 4,
         hideDescriptionUntilUnlock: !0,
-        checkUnlock: (e) => 1337 === (0, r.RL)(e),
+        checkUnlock: (e) => 1337 === (0, s.RL)(e),
     },
     12: {
         id: 12,
@@ -154,7 +154,7 @@ let c = {
         description: () => l.intl.string(l.t.KSzHjj),
         rarity: 4,
         hideDescriptionUntilUnlock: !0,
-        checkUnlock: (e) => 2048 === (0, r.RL)(e),
+        checkUnlock: (e) => 2048 === (0, s.RL)(e),
     },
     16: {
         id: 16,

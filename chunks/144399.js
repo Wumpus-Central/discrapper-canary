@@ -10,7 +10,7 @@ var i = n(477900),
     _ = n(792996),
     E = n(762653),
     A = n(959760);
-function h(e) {
+function f(e) {
     let { onReload: t } = e;
     return (0, i.jsxs)("div", {
         role: "status",
@@ -56,8 +56,8 @@ n.d(
                     },
                     [t],
                 );
-            return n ? (0, i.jsx)("div", { className: E.m, children: (0, i.jsx)(h, { onReload: a }) }) : null;
+            return n ? (0, i.jsx)("div", { className: E.m, children: (0, i.jsx)(f, { onReload: a }) }) : null;
         },
-        x: h,
+        x: f,
     },
 );

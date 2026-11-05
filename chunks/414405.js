@@ -1,6 +1,6 @@
 var i = n(855986),
-    l = n(616356),
-    r = n(754712),
+    r = n(616356),
+    l = n(754712),
     s = n(532624),
     a = n(350535),
     o = n(419490),
@@ -17,8 +17,8 @@ n.d(
                 t = (0, u.E)(),
                 n = (0, i.bG)([o.Ay], () => o.Ay.getLastClipsError()),
                 f = (0, i.bG)(
-                    [r.Ay, l.A],
-                    () => r.Ay.hasClipsSource() || l.A.getCurrentUserActiveStream()?.state === d.XYD.ACTIVE,
+                    [l.Ay, r.A],
+                    () => l.Ay.hasClipsSource() || r.A.getCurrentUserActiveStream()?.state === d.XYD.ACTIVE,
                 ),
                 g = (0, i.bG)([s.Ay], () => s.Ay.getKeybindForAction(d.hCu.SAVE_CLIP));
             return {

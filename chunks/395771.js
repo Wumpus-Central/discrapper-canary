@@ -1,14 +1,14 @@
 var i = n(855986),
-    l = n(73153);
-let r = null,
+    r = n(73153);
+let l = null,
     s = {},
     a = new Set();
 class o extends i.Ay.Store {
     isCapturing() {
-        return null != r;
+        return null != l;
     }
     getCapturingApp() {
-        return r;
+        return l;
     }
     getFailure(e) {
         return s[e] ?? null;
@@ -17,11 +17,11 @@ class o extends i.Ay.Store {
         return a.has(e);
     }
 }
-let u = new o(l.h, {
+let u = new o(r.h, {
     CONJURE_SNAPSHOT_CAPTURE_SET: function (e) {
         let { app: t } = e;
-        if (r?.appId === t?.appId && r?.appName === t?.appName) return !1;
-        r = t;
+        if (l?.appId === t?.appId && l?.appName === t?.appName) return !1;
+        l = t;
     },
     CONJURE_SNAPSHOT_FAILURE_SET: function (e) {
         let { applicationId: t, reason: n } = e;
@@ -39,7 +39,7 @@ let u = new o(l.h, {
         a = new Set([...a, t]);
     },
     LOGOUT: function () {
-        ((r = null), (s = {}), (a = new Set()));
+        ((l = null), (s = {}), (a = new Set()));
     },
 });
 n.d(t, {}, { A: u });

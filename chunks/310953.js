@@ -42,7 +42,7 @@ n.d(
                 l = arguments.length > 4 ? arguments[4] : void 0,
                 o = (0, r.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
                 E = (0, r.bG)([d.A], () => d.A.version),
-                { currentVoiceChannelId: A, selectedChannelId: h } = (0, r.cf)([u.Ay], () => ({
+                { currentVoiceChannelId: A, selectedChannelId: f } = (0, r.cf)([u.Ay], () => ({
                     currentVoiceChannelId: u.Ay.getVoiceChannelId(),
                     selectedChannelId: u.Ay.getChannelId(),
                 }));
@@ -50,7 +50,7 @@ n.d(
                 () =>
                     _(
                         t,
-                        { currentVoiceChannelId: A, selectedChannelId: h },
+                        { currentVoiceChannelId: A, selectedChannelId: f },
                         { withVoiceChannels: a, withCurrentVoiceChannel: s },
                         l,
                     ).map((e) => e.id),

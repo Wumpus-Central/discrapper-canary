@@ -11,8 +11,8 @@ var i,
     _ = n(844222),
     E = n(866323),
     A = n(451988);
-let h = { tension: 2400, friction: 52 };
-var f = n(775602),
+let f = { tension: 2400, friction: 52 };
+var h = n(775602),
     I = n(750506),
     p = n(233680),
     m =
@@ -22,8 +22,8 @@ var f = n(775602),
         (i.GREEN = "green"),
         (i.RED = "red"),
         i);
-let g = Object.freeze({}),
-    T = Object.freeze({
+let T = Object.freeze({}),
+    g = Object.freeze({
         top: p.dn,
         bottom: p.L_,
         left: p.Lf,
@@ -60,15 +60,15 @@ let N = (e) => {
                 tooltipContentClassName: _,
                 spacing: E = 8,
                 animationStyle: A,
-                disableTooltipPointerEvents: h = !1,
-                allowOverflow: f = !1,
+                disableTooltipPointerEvents: f = !1,
+                allowOverflow: h = !1,
                 tooltipPointerClassName: m,
-                positionKeyStemOverride: g,
+                positionKeyStemOverride: T,
                 dataMeticulousIgnore: N,
             } = e,
-            C = `${g ?? ("string" == typeof s ? s : "")}:${i}`;
+            C = `${T ?? ("string" == typeof s ? s : "")}:${i}`;
         return (0, r.jsx)(I.nE, {
-            disablePointerEvents: h,
+            disablePointerEvents: f,
             targetRef: t,
             position: i,
             autoInvert: !0,
@@ -80,13 +80,13 @@ let N = (e) => {
                 let { position: t, nudge: E } = e;
                 return (0, r.jsxs)(d.animated.div, {
                     onClick: o,
-                    className: l()(p.YL, T[null != t ? t : i], T[a], { [p.Cy]: h }, c),
+                    className: l()(p.YL, g[null != t ? t : i], g[a], { [p.Cy]: f }, c),
                     style: { ...A, ...u },
                     "data-mtctest-ignore": N,
                     children: [
                         (0, r.jsx)("div", { className: l()(p.xQ, p.yH, m), style: S(t ?? i, n, E) }),
                         (0, r.jsx)("div", { className: l()(p.xQ, m), style: S(t ?? i, n, E) }),
-                        (0, r.jsx)("div", { className: l()(p.rv, { [p.u2]: f }, _), children: s }),
+                        (0, r.jsx)("div", { className: l()(p.rv, { [p.u2]: h }, _), children: s }),
                     ],
                 });
             },
@@ -102,7 +102,7 @@ function L(e) {
         t,
         {
             keys: (e) => (e ? "tooltip" : "empty"),
-            config: h,
+            config: f,
             from: l.enabled ? O : C,
             enter: R,
             leave: l.enabled ? O : C,
@@ -156,7 +156,7 @@ class y extends a.Component {
     render() {
         let e,
             { children: t, text: n, "aria-label": i } = this.props;
-        if (null == n) return t(g);
+        if (null == n) return t(T);
         "string" == typeof i ? (e = i) : "string" == typeof n && !1 !== i && (e = n);
         let s = {
             onClick: this.handleClick,
@@ -197,8 +197,8 @@ class y extends a.Component {
                 allowOverflow: _,
                 clickableOnMobile: E,
                 hideOnClick: A,
-                tooltipPointerClassName: h,
-                dataMeticulousIgnore: f,
+                tooltipPointerClassName: f,
+                dataMeticulousIgnore: h,
             } = this.props,
             I = (c.Fr || c.v1) && !0 === E && A,
             p = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
@@ -211,7 +211,7 @@ class y extends a.Component {
                 tooltipStyle: l,
                 tooltipClassName: s,
                 tooltipContentClassName: o,
-                tooltipPointerClassName: h,
+                tooltipPointerClassName: f,
                 align: t,
                 position: n,
                 color: i,
@@ -221,7 +221,7 @@ class y extends a.Component {
                 onNonAccessibleClick: I ? this.handleClick : void 0,
                 allowOverflow: _,
                 positionKeyStemOverride: this.props.positionKeyStemOverride,
-                dataMeticulousIgnore: f,
+                dataMeticulousIgnore: h,
                 children: m,
             })
         );
@@ -251,7 +251,7 @@ class y extends a.Component {
         ((c.Fr || c.v1) && !0 === this.props.clickableOnMobile) || this.hide();
     };
     handleFocus = () => {
-        f.Ay.keyboardModeEnabled && this.show();
+        h.Ay.keyboardModeEnabled && this.show();
     };
     handleBlur = () => {
         this.hide();

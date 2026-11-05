@@ -10,15 +10,15 @@ var a = n(855986),
     _ = n(973654),
     E = n(413599),
     A = n(964404),
-    h = n(253932),
-    f = n(617617),
+    f = n(253932),
+    h = n(617617),
     I = n(185928);
 function p() {
     return A.Ay.useSystemTheme === I.Q_.ON && E.A.isSameAsDeviceThemeEnabled();
 }
 var m = n(95701),
-    g = n(734057),
-    T = n(287809),
+    T = n(734057),
+    g = n(287809),
     S = n(722178),
     N = n(427262),
     C = n(644235),
@@ -28,7 +28,7 @@ let L = !0,
     y = !1,
     D = !1;
 function b(e) {
-    return !(0, c.oB)(e.id) || null == T.default.getCurrentUser() || !(0, d.$X)(R.vB.CLIENT_THEME);
+    return !(0, c.oB)(e.id) || null == g.default.getCurrentUser() || !(0, d.$X)(R.vB.CLIENT_THEME);
 }
 function v(e) {
     if (null == e) return;
@@ -36,7 +36,7 @@ function v(e) {
     return null != t && b(t) ? t : void 0;
 }
 function P() {
-    let e = h.eh.getSetting().backgroundGradientPresetId;
+    let e = f.eh.getSetting().backgroundGradientPresetId;
     return (0, c.oB)(e) ? v(e) : void 0;
 }
 function M() {
@@ -50,12 +50,12 @@ function U() {
             null != t && ((i = t), (e = !0));
         }
     } else ((i = void 0), (e = !0));
-    let t = !S.Ay.canUseClientThemes(T.default.getCurrentUser());
+    let t = !S.Ay.canUseClientThemes(g.default.getCurrentUser());
     if (t === L) return e;
     ((L = t), (D = !1));
 }
 function w() {
-    let e = h.eh.getSetting().backgroundGradientPresetId;
+    let e = f.eh.getSetting().backgroundGradientPresetId;
     if (null == e) {
         if (null == i) return !1;
         i = void 0;
@@ -72,7 +72,7 @@ function x() {
     return !0;
 }
 function k() {
-    let e = h.eh.getSetting().backgroundGradientPresetId;
+    let e = f.eh.getSetting().backgroundGradientPresetId;
     if ((A.Ay.useSystemTheme !== I.Q_.ON || null == e || p() || (0, _.k7)(I.Q_.OFF), null == e)) {
         null != i && (i = void 0);
         return;
@@ -93,8 +93,8 @@ class F extends a.Ay.PersistedStore {
     initialize(e) {
         ((D = !1),
             null != e && ((i = v(e.gradientPresetId)), (L = !0 !== e.canUseClientThemes)),
-            this.waitFor(g.A, u.A, E.A, A.Ay, f.A, T.default),
-            this.syncWith([T.default], U),
+            this.waitFor(T.A, u.A, E.A, A.Ay, h.A, g.default),
+            this.syncWith([g.default], U),
             this.syncWith([u.A], w));
     }
     getState() {
@@ -115,7 +115,7 @@ class F extends a.Ay.PersistedStore {
         return null == this.gradientPreset ? null : (0, C.FK)(this.gradientPreset);
     }
     get hasHiddenHexagonCampaignPreset() {
-        let e = h.eh.getSetting().backgroundGradientPresetId;
+        let e = f.eh.getSetting().backgroundGradientPresetId;
         return (0, c.oB)(e) && null == this.gradientPreset;
     }
     get isPreview() {
@@ -151,9 +151,9 @@ let B = new F(l.h, {
     CLIENT_THEMES_EDITOR_CLOSE: M,
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
-            i = T.default.getCurrentUser();
+            i = g.default.getCurrentUser();
         if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, N.G2)(i)) return;
-        let r = g.A.getChannel(t);
+        let r = T.A.getChannel(t);
         null != r && (0, m.ke)(r.type) && (y = !0);
     },
     LOGOUT: M,

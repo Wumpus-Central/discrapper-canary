@@ -13,15 +13,15 @@ let u = Array.from(d.qW)
     _ = RegExp(`^/channels/(\\d+|${o.ME})(?:/)?(\\d+|${u})?`),
     E = RegExp(`^/channels/(\\d+|${o.ME})(?:/)(\\d+|${u})(?:/)(\\d+)`),
     A = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
-    h = RegExp(`^/channels/(\\d+|${o.ME})(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$`),
-    f = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
+    f = RegExp(`^/channels/(\\d+|${o.ME})(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$`),
+    h = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
     I = /^\/users\/(\d+)\/?$/,
     p = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
     m = RegExp(
         `^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|${o.ME})(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?`,
     ),
-    g = RegExp("[\\w%=&+-]+"),
-    T = RegExp(`${m.source}(?:\\?(${g.source}))?`),
+    T = RegExp("[\\w%=&+-]+"),
+    g = RegExp(`${m.source}(?:\\?(${T.source}))?`),
     S = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );
@@ -32,11 +32,11 @@ n.d(
     t,
     {},
     {
-        BM: T,
+        BM: g,
         En: S,
         FM: function (e) {
             if (null == e) return null;
-            let t = e.match(h);
+            let t = e.match(f);
             return null != t && t.length > 2
                 ? {
                       guildId: t[1],
@@ -75,7 +75,7 @@ n.d(
             if (null != n && n.length > 4) return { guildId: n[1], channelId: n[2], threadId: n[3], messageId: n[4] };
             let i = e.match(_);
             if (null != i && i.length > 1) return { guildId: i[1], channelId: i[2] ?? void 0 };
-            let r = e.match(f);
+            let r = e.match(h);
             return null != r && r.length > 1 ? { guildId: r[1] } : null;
         },
     },

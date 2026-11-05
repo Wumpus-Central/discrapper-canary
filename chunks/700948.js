@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(435558),
     o = n(77692),
-    d = n(494012),
-    c = n(821578),
+    c = n(494012),
+    d = n(821578),
     u = n(855986),
     h = n(559106),
     p = n(734057),
@@ -16,15 +16,15 @@ var i = n(477900),
     x = n(544299),
     C = n(913481),
     y = n(711478),
-    j = n(487048),
-    I = n(232571),
+    I = n(487048),
+    j = n(232571),
     N = n(519342),
     v = n(241215),
     E = n(207274),
     b = n(70067),
     S = n(956480),
-    _ = n(538517),
-    T = n(687782),
+    T = n(538517),
+    _ = n(687782),
     R = n(792996),
     O = n(923932);
 n.d(
@@ -33,9 +33,9 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, popoutType: n, idle: a } = e,
-                P = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? c.I.DEFAULT),
+                L = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
                 {
-                    background: L,
+                    background: P,
                     backgroundBlurred: M,
                     seats: w,
                     aspectRatio: U,
@@ -44,12 +44,12 @@ n.d(
                     notePad: G,
                     screen: k,
                     getName: B,
-                } = _.iX[P],
-                { width: F = 0, height: z = 0, ref: H } = (0, d.Ay)(),
+                } = T.iX[L],
+                { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
                 W = F / z > U,
                 $ = W ? z * U : F,
                 Y = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
-                K = Y ? (0, _.bf)(U, W) : 1,
+                K = Y ? (0, T.bf)(U, W) : 1,
                 X = l.useRef(null),
                 q = l.useRef(null),
                 Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
@@ -61,7 +61,7 @@ n.d(
                 el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
             (0, S.A)(t, Z, Q);
             let ea = (0, x.Y1)(t),
-                es = R.intl.string(ea ? T.default.F9DcvR : T.default["sV/+Cu"]);
+                es = R.intl.string(ea ? _.default.F9DcvR : _.default["sV/+Cu"]);
             return (
                 l.useEffect(() => {
                     (0, A.zR)({ channelId: t });
@@ -74,7 +74,7 @@ n.d(
                 (0, i.jsxs)("div", {
                     className: O.kL,
                     style: {
-                        backgroundImage: `url(${Y ? M : L})`,
+                        backgroundImage: `url(${Y ? M : P})`,
                         backgroundSize: W ? `auto ${100 * K}%` : `${100 * K}% auto`,
                     },
                     ref: H,
@@ -93,7 +93,7 @@ n.d(
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(o.s, {
-                                          children: R.intl.formatToPlainString(T.default["/l5Wn+"], {
+                                          children: R.intl.formatToPlainString(_.default["/l5Wn+"], {
                                               seatedCount: J,
                                               openSeatCount: ee,
                                               objectCount: et,
@@ -112,7 +112,7 @@ n.d(
                                                   children: (0, i.jsxs)(h.xp, {
                                                       containerRef: X,
                                                       children: [
-                                                          (0, i.jsx)(j.A, { channelId: t, corners: k, roomWidth: $ }),
+                                                          (0, i.jsx)(I.A, { channelId: t, corners: k, roomWidth: $ }),
                                                           (0, i.jsxs)("div", {
                                                               ref: q,
                                                               children: [
@@ -123,7 +123,7 @@ n.d(
                                                                       children: Object.entries(w).map((e) => {
                                                                           let [n, l] = e;
                                                                           return (0, i.jsx)(
-                                                                              I.A,
+                                                                              j.A,
                                                                               {
                                                                                   channelId: t,
                                                                                   x: l.position.x,
@@ -138,7 +138,7 @@ n.d(
                                                                   }),
                                                                   (0, i.jsxs)("div", {
                                                                       role: "list",
-                                                                      "aria-label": R.intl.string(T.default.JYlbK5),
+                                                                      "aria-label": R.intl.string(_.default.JYlbK5),
                                                                       children: [
                                                                           (0, i.jsx)(y.A, {
                                                                               channelId: t,

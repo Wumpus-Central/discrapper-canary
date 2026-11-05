@@ -1,31 +1,31 @@
-var s = a(196765),
-    l = a(537812),
-    n = a(121894),
-    r = a(932607);
+var s = t(196765),
+    l = t(537812),
+    n = t(121894),
+    r = t(932607);
 let i = (0, s.v)(
     (0, l.Zr)(
-        (e, t) => ({
+        (e, a) => ({
             channelShowResolvedFlags: {},
-            setShowResolvedFlags: (t, a) =>
+            setShowResolvedFlags: (a, t) =>
                 (0, n.r)(() => {
-                    e((e) => ({ channelShowResolvedFlags: { ...e.channelShowResolvedFlags, [t]: a } }));
+                    e((e) => ({ channelShowResolvedFlags: { ...e.channelShowResolvedFlags, [a]: t } }));
                 }),
-            getShowResolvedFlags: (e) => t().channelShowResolvedFlags[e] ?? !0,
+            getShowResolvedFlags: (e) => a().channelShowResolvedFlags[e] ?? !0,
         }),
         { name: "report-to-mod-channel-storage", storage: (0, l.KU)(() => r.A) },
     ),
 );
-a.d(
-    t,
+t.d(
+    a,
     {},
     {
         T: function (e) {
-            let t = i();
+            let a = i();
             return null == e
                 ? { showResolvedFlags: !0, setShowResolvedFlags: () => {} }
                 : {
-                      showResolvedFlags: t.getShowResolvedFlags(e) ?? !0,
-                      setShowResolvedFlags: (a) => t.setShowResolvedFlags(e, a),
+                      showResolvedFlags: a.getShowResolvedFlags(e) ?? !0,
+                      setShowResolvedFlags: (t) => a.setShowResolvedFlags(e, t),
                   };
         },
     },

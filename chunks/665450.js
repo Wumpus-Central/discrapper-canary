@@ -5,8 +5,8 @@ var l = n(503698),
     s = n(855986),
     r = n(604121),
     o = n(534514),
-    d = n(834730),
-    c = n(775602),
+    c = n(834730),
+    d = n(775602),
     u = n(433061),
     h = n(792996),
     p = n(336494);
@@ -16,7 +16,7 @@ n.d(
     {
         A: function (e) {
             let { height: t } = e,
-                l = (0, s.bG)([c.Ay], () => c.Ay.useReducedMotion);
+                l = (0, s.bG)([d.Ay], () => d.Ay.useReducedMotion);
             return (0, i.jsxs)("div", {
                 className: p.zr,
                 children: [
@@ -38,7 +38,7 @@ n.d(
                         variant: "heading-sm/semibold",
                         children: h.intl.string(h.t["C+tj1c"]),
                     }),
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(c.E, {
                         variant: "body-md/normal",
                         color: "text-default",
                         children: h.intl.format(h.t["nNHd/y"], { onCancel: u.ZG }),

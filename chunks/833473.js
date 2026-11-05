@@ -10,28 +10,28 @@ var i = n(435558),
     _ = n(495867),
     E = n(829997),
     A = n(731854);
-let h = {},
-    f = {},
+let f = {},
+    h = {},
     I = r().cloneDeep(E.X),
     p = A.D1.UNKNOWN,
     m = !1;
-function g() {
+function T() {
     let e = l.w.get("MediaEngineStore"),
         t = e?.[A.x.DEFAULT];
     return (t?.audioMixerSettingsVersion ?? 0) < 3 ? {} : t?.audioMixerSettings?.enabled === !1 ? { enabled: !1 } : {};
 }
-function T() {
+function g() {
     return c.A.getConfig({ location: "SpatialAudioStore" });
 }
 function S() {
-    return h.enabled ?? m;
+    return f.enabled ?? m;
 }
 function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (function () {
-            let e = r().merge(r().cloneDeep(E.X), r().cloneDeep(f)),
-                { enabled: t } = T();
-            return ((e.isSpatial = (f.isSpatial ?? (t && S())) && u.Ay.supports(A.O5.SPATIAL_AUDIO)), e);
+            let e = r().merge(r().cloneDeep(E.X), r().cloneDeep(h)),
+                { enabled: t } = g();
+            return ((e.isSpatial = (h.isSpatial ?? (t && S())) && u.Ay.supports(A.O5.SPATIAL_AUDIO)), e);
         })();
     if (!e && r().isEqual(t, I)) return !1;
     let { isSpatial: n } = (I = t),
@@ -46,24 +46,24 @@ function N() {
 }
 function C() {
     let e = S();
-    return ((m = T().defaultOn), N() || S() !== e);
+    return ((m = g().defaultOn), N() || S() !== e);
 }
 class O extends a.Ay.DeviceSettingsStore {
     static displayName = "SpatialAudioStore";
     static persistKey = "SpatialAudioStore";
-    static migrations = [g];
+    static migrations = [T];
     initialize(e) {
-        ((h = { enabled: e?.enabled }), this.waitFor(d.A, u.Ay, _.A), this.syncWith([d.A], C));
+        ((f = { enabled: e?.enabled }), this.waitFor(d.A, u.Ay, _.A), this.syncWith([d.A], C));
         let t = u.Ay.getMediaEngine();
         (t.on(s.bg.Connection, (e) => e.setSpatialAudioEnabled(I.isSpatial)),
             t.on(s.bg.SpatialAudioStatus, (e) => {
                 e !== p && ((p = e), 1) && this.emitChange();
             }),
-            (m = T().defaultOn),
+            (m = g().defaultOn),
             N(!0));
     }
     getUserAgnosticState() {
-        return h;
+        return f;
     }
     isSpatialAudioEnabled() {
         return S();
@@ -75,7 +75,7 @@ class O extends a.Ay.DeviceSettingsStore {
         return I;
     }
     getSpatialAudioOverrides() {
-        return f;
+        return h;
     }
     getSpatialAudioStatus() {
         return p;
@@ -87,10 +87,10 @@ let R = new O(o.h, {
     },
     AUDIO_SET_SPATIAL_AUDIO_ENABLED: function (e) {
         let { enabled: t } = e;
-        ((h = { ...h, enabled: t }), N());
+        ((f = { ...f, enabled: t }), N());
     },
     AUDIO_SET_SPATIAL_AUDIO_OVERRIDES: function (e) {
-        ((f = e.overrides), N());
+        ((h = e.overrides), N());
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -98,7 +98,7 @@ let R = new O(o.h, {
         p = A.D1.UNKNOWN;
     },
     LOGOUT: function () {
-        ((f = {}), N());
+        ((h = {}), N());
     },
 });
 n.d(t, {}, { A: R });

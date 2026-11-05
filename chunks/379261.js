@@ -14,7 +14,7 @@ n.d(
                 u = r.useRef(null),
                 _ = r.useRef(null),
                 [E, A] = r.useState(null),
-                h = r.useCallback(() => {
+                f = r.useCallback(() => {
                     let e = u.current,
                         t = _.current;
                     if (null == e || null == t) return;
@@ -22,7 +22,7 @@ n.d(
                     A(n > 0 ? n : null);
                 }, []);
             return (
-                (0, l.g)(u, h, [t]),
+                (0, l.g)(u, f, [t]),
                 (0, i.jsx)("div", {
                     ref: u,
                     className: s()(d.kL, n),

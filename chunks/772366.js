@@ -7,7 +7,7 @@ n.d(
     {},
     {
         A: function (e) {
-            let { onCloseCallback: t, analyticsLocations: l, ...r } = e;
+            let { onCloseCallback: t, analyticsLocations: r, ...l } = e;
             (0, s.mM)(
                 async () => {
                     let { default: e } = await Promise.all([n.e(935205), n.e(677668), n.e(843117), n.e(122969)]).then(
@@ -16,8 +16,8 @@ n.d(
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
-                            ...r,
-                            analyticsLocations: l,
+                            ...l,
+                            analyticsLocations: r,
                             guildCount: a.A.getGuildCount(),
                             "aria-labelledby": "nitro-guild-cap-upsell",
                         });

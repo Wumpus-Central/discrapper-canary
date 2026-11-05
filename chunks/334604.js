@@ -209,13 +209,13 @@ let E = (0, n(945810).mj)({
         zh: "zh-CN",
         zu: "zu-ZA",
     },
-    h = new o.A("Spellchecker"),
-    f = i.A?.spellCheck;
+    f = new o.A("Spellchecker"),
+    h = i.A?.spellCheck;
 function I(e) {
     e = A[(e = "no" === e ? "nb" : e)] ?? e;
     let t = (0, r.q)(e.replace(/[_-]/g, "-"));
     if (null == t || null == t.langtag.language || null == t.langtag.region)
-        return void h.error(`${e} is not a valid locale.`);
+        return void f.error(`${e} is not a valid locale.`);
     let { language: n, region: i } = t.langtag;
     return `${n.language.toLowerCase()}-${i.toUpperCase()}`;
 }
@@ -256,7 +256,7 @@ class p {
                     }
                 })));
         }
-        f.on("spellcheck-result", (e, t) => {
+        h.on("spellcheck-result", (e, t) => {
             ((this.misspelledWord = e ?? ""), (this.corrections = t ?? []));
         });
     }
@@ -270,7 +270,7 @@ class p {
         return this.useMultilang;
     }
     setLearnedWords(e) {
-        f.setLearnedWords(e);
+        h.setLearnedWords(e);
     }
     setAppLocale(e) {
         this.useMultilang ? this.applyLanguages(e) : (this.regionPreference = e.split("-")[1]);
@@ -288,11 +288,11 @@ class p {
         return { misspelledWord: this.misspelledWord, corrections: this.corrections };
     }
     replaceMisspelling(e) {
-        f.replaceMisspelling(e);
+        h.replaceMisspelling(e);
     }
     applyLocale(e) {
-        f.setLocale(e)?.then((t) => {
-            h.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
+        h.setLocale(e)?.then((t) => {
+            f.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
         });
     }
     applyLanguages(e) {
@@ -309,20 +309,20 @@ class p {
                         .filter(c.Vq),
                 ),
             );
-        if (0 === n.length) return void h.info(`No spellcheck languages resolved from candidates: ${t.join(", ")}`);
+        if (0 === n.length) return void f.info(`No spellcheck languages resolved from candidates: ${t.join(", ")}`);
         let i = n.map((e) => this.rawLocaleByNormalized[e] ?? e);
-        if (null == f.setSpellCheckerLanguages) {
-            (h.info(`setSpellCheckerLanguages unavailable, falling back to single-locale: ${i[0]}`),
+        if (null == h.setSpellCheckerLanguages) {
+            (f.info(`setSpellCheckerLanguages unavailable, falling back to single-locale: ${i[0]}`),
                 this.applyLocale(i[0]));
             return;
         }
-        f.setSpellCheckerLanguages(i)?.then((e) => {
+        h.setSpellCheckerLanguages(i)?.then((e) => {
             if (!e) {
-                (h.info(`Failed to set spellcheck languages, falling back to single-locale: ${i[0]}`),
+                (f.info(`Failed to set spellcheck languages, falling back to single-locale: ${i[0]}`),
                     this.applyLocale(i[0]));
                 return;
             }
-            h.info(`Spellcheck languages: ${i.join(", ")}`, "(applied)");
+            f.info(`Spellcheck languages: ${i.join(", ")}`, "(applied)");
         });
     }
     buildLanguageIndex(e) {
@@ -348,21 +348,21 @@ let m = s().debounce((e, t) => {
                 : void 0;
     null != i && e.detectLanguage(i);
 }, 250);
-var g = n(507263),
-    T = n(723702);
+var T = n(507263),
+    g = n(723702);
 function S() {
     return i.A?.spellCheck != null;
 }
 function N() {
-    return (0, T.xl)() && S();
+    return (0, g.xl)() && S();
 }
 let C = N()
         ? new Promise((e) => {
               Promise.resolve().then(() =>
-                  (0, g.B)(() =>
+                  (0, T.B)(() =>
                       e(
                           (async function () {
-                              let e = new p((await f.getAvailableDictionaries()) ?? []);
+                              let e = new p((await h.getAvailableDictionaries()) ?? []);
                               return (
                                   e.usesMultilang ||
                                       (null != document.body &&

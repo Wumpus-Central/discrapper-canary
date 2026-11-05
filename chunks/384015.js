@@ -16,30 +16,30 @@ s.d(
                     className: s,
                     iconClassName: d,
                     rel: c,
-                    target: p,
-                    mimeType: m,
+                    target: m,
+                    mimeType: p,
                     fileName: g,
                     focusProps: f,
                     onClick: v,
                     ...y
                 } = e,
                 S = i.useMemo(() => n.V.getDefaultLinkInterceptor(t), [t]),
-                T = i.useCallback(
+                C = i.useCallback(
                     (e) => {
                         (o.default.track(h.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                            attachment_type: m?.[0],
-                            attachment_subtype: m?.[1],
+                            attachment_type: p?.[0],
+                            attachment_subtype: p?.[1],
                         }),
                             v?.(),
                             S?.(e));
                     },
-                    [S, m, v],
+                    [S, p, v],
                 );
             return null != g
                 ? (0, a.jsx)(l.Anchor, {
                       href: t,
-                      onClick: T,
-                      target: p,
+                      onClick: C,
+                      target: m,
                       rel: c,
                       className: s,
                       focusProps: f,
@@ -48,8 +48,8 @@ s.d(
                   })
                 : (0, a.jsx)(l.Anchor, {
                       href: t,
-                      onClick: T,
-                      target: p,
+                      onClick: C,
+                      target: m,
                       rel: c,
                       className: s,
                       "aria-label": u.intl.string(u.t["1WjMbC"]),

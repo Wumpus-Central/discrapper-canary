@@ -13,14 +13,14 @@ n.d(
     {},
     {
         A: async function (e) {
-            let { nextStatus: t, prevStatus: n, analyticsContext: E, durationMillis: A, disableTracking: h = !1 } = e;
+            let { nextStatus: t, prevStatus: n, analyticsContext: E, durationMillis: A, disableTracking: f = !1 } = e;
             null == n && (n = l.A.getStatus());
-            let f = null != A ? `${Date.now() + A}` : "0";
+            let h = null != A ? `${Date.now() + A}` : "0";
             await s.wc.updateAsync(
                 "status",
                 (e) => {
                     ((e.status = r.hU.create({ value: t })),
-                        (e.statusExpiresAtMs = f),
+                        (e.statusExpiresAtMs = h),
                         (e.statusCreatedAtMs =
                             n === t && null != e.statusCreatedAtMs
                                 ? e.statusCreatedAtMs
@@ -35,8 +35,8 @@ n.d(
                 return "today" === i
                     ? _.intl.formatToPlainString(_.t["r50t/S"], { statusLabel: n, timeString: a })
                     : _.intl.formatToPlainString(_.t["J+GJHv"], { statusLabel: n, dateString: r, timeString: a });
-            })(t, f);
-            if ((i.O.announce(I), h)) return;
+            })(t, h);
+            if ((i.O.announce(I), f)) return;
             let p = { next_status: t, prev_status: n, ...a.A.getGlobalStats() };
             (null != A && (p = { ...p, expire_duration_minutes: null != A ? A / 6e4 : null }),
                 null != E && (p = { ...p, ...E }),

@@ -10,8 +10,8 @@ let u = new Map(),
     _ = [],
     E = [],
     A = "NOT_FETCHED",
-    h = new Map(),
-    f = 0;
+    f = new Map(),
+    h = 0;
 function I() {
     E = (_ = [...u.values()]).filter((e) => {
         let { application: t } = e;
@@ -19,10 +19,10 @@ function I() {
     });
 }
 function p(e, t) {
-    if (null == t) ((A = e), h.clear(), (f += 1));
+    if (null == t) ((A = e), f.clear(), (h += 1));
     else {
-        for (let n of t) h.set(n, e);
-        f += 1;
+        for (let n of t) f.set(n, e);
+        h += 1;
     }
 }
 class m extends r.Ay.Store {
@@ -43,20 +43,20 @@ class m extends r.Ay.Store {
         return A;
     }
     getFetchStateForApplication(e) {
-        return "FETCHING" === A || "FETCHED" === A ? A : (h.get(e) ?? A);
+        return "FETCHING" === A || "FETCHED" === A ? A : (f.get(e) ?? A);
     }
     getApplicationFetchStateVersion() {
-        return f;
+        return h;
     }
 }
-let g = new m(a.h, {
+let T = new m(a.h, {
     USER_AUTHORIZED_APPS_REQUEST: function (e) {
         "full" === e.request.type ? p("FETCHING") : p("FETCHING", e.request.applicationIds);
     },
     USER_AUTHORIZED_APPS_REQUEST_CANCELLED: function (e) {
         let t = !1;
-        for (let n of e.applicationIds) "FETCHING" === h.get(n) && (h.delete(n), (t = !0));
-        t && (f += 1);
+        for (let n of e.applicationIds) "FETCHING" === f.get(n) && (f.delete(n), (t = !0));
+        t && (h += 1);
     },
     USER_AUTHORIZED_APPS_REQUEST_FAILED: function (e) {
         "full" === e.request.type ? p("FETCHED") : p("FETCHED", e.request.applicationIds);
@@ -80,7 +80,7 @@ let g = new m(a.h, {
         (u.delete(i.application.id), I());
     },
     LOGOUT: function () {
-        ((u = new Map()), (_ = []), (E = []), (A = "NOT_FETCHED"), h.clear(), (f += 1));
+        ((u = new Map()), (_ = []), (E = []), (A = "NOT_FETCHED"), f.clear(), (h += 1));
     },
 });
-n.d(t, {}, { A: g, FetchState: c });
+n.d(t, {}, { A: T, FetchState: c });

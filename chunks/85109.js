@@ -26,14 +26,14 @@ let c = new r.J(
     _ = 0,
     E = new Set(),
     A = new Set(),
-    h = null,
-    f = o.Z7.LOADED_FINISHED,
+    f = null,
+    h = o.Z7.LOADED_FINISHED,
     I = !1,
     p = null,
     m = new Set(),
-    g = new Map();
-function T(e) {
-    let t = g.get(e);
+    T = new Map();
+function g(e) {
+    let t = T.get(e);
     return null != t && t.size > 0;
 }
 function S(e) {
@@ -46,15 +46,15 @@ function N(e) {
     let n = e.saveData.messageId;
     null == e.saveData.dueAt ? A.add(n) : A.delete(n);
     let i = e.saveData.channelId,
-        r = g.get(i) ?? new Set();
+        r = T.get(i) ?? new Set();
     (r.add(n),
-        g.set(i, r),
+        T.set(i, r),
         null == e.message && m.add(n),
         null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(n) : E.delete(n));
 }
 function C(e) {
-    for (let t of (c.clear(), g.clear(), m.clear(), A.clear(), e)) A.add(t);
-    ((h = null), (p = null), (I = !1), (f = A.size > 0 ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED));
+    for (let t of (c.clear(), T.clear(), m.clear(), A.clear(), e)) A.add(t);
+    ((f = null), (p = null), (I = !1), (h = A.size > 0 ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED));
 }
 function O(e) {
     let { messageId: t, channelId: n } = e,
@@ -108,10 +108,10 @@ class L extends i.Ay.Store {
         return A.size;
     }
     getBookmarksCursor() {
-        return h;
+        return f;
     }
     getBookmarksFetchState() {
-        return f;
+        return h;
     }
     hasFetchedBookmarks() {
         return I;
@@ -157,7 +157,7 @@ let y = new L(a.h, {
                 ? A.delete(n)
                 : (c.delete(t),
                   A.delete(n),
-                  g.get(i.saveData.channelId)?.delete(n),
+                  T.get(i.saveData.channelId)?.delete(n),
                   m.delete(n),
                   E.delete(n),
                   (_ = Date.now()),
@@ -166,18 +166,18 @@ let y = new L(a.h, {
     },
     BOOKMARKS_FETCH: function (e) {
         let { requestId: t } = e;
-        ((f = o.Z7.LOADING), (p = t));
+        ((h = o.Z7.LOADING), (p = t));
     },
     BOOKMARKS_FETCH_SUCCESS: function (e) {
         let { requestId: t, nextBefore: n, bookmarks: i, hasMore: r } = e;
         if (t !== p) return !1;
-        for (let e of ((p = null), (f = r ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED), (I = !0), (h = n), i))
+        for (let e of ((p = null), (h = r ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED), (I = !0), (f = n), i))
             A.has(e.saveData.messageId) && N(e);
     },
     BOOKMARKS_FETCH_FAILURE: function (e) {
         let { requestId: t } = e;
         if (t !== p) return !1;
-        ((p = null), (f = o.Z7.FAILED));
+        ((p = null), (h = o.Z7.FAILED));
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
@@ -201,19 +201,19 @@ let y = new L(a.h, {
     GUILD_DELETE: R,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (0 === m.size || u || !T(t.id)) return !1;
+        if (0 === m.size || u || !g(t.id)) return !1;
         u = !0;
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         if (0 === m.size || u) return !1;
         let n = !1;
-        for (let e of t) T(e.id) && ((u = !0), (n = !0));
+        for (let e of t) g(e.id) && ((u = !0), (n = !0));
         return n;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        if (0 === m.size || u || !T(t.id)) return !1;
+        if (0 === m.size || u || !g(t.id)) return !1;
         u = !0;
     },
     GUILD_MEMBER_UPDATE: function (e) {

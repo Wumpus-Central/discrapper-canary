@@ -10,8 +10,8 @@ var i = n(582128),
     _ = n(179172),
     E = n(868162),
     A = n(731854);
-let h = new Set(["DisplayPort"]);
-function f(e) {
+let f = new Set(["DisplayPort"]);
+function h(e) {
     var t;
     let n,
         i,
@@ -43,7 +43,7 @@ function I() {
     if (!0 === E.A.getState().neverShowModal || a().isEmpty(E.A.lastDeviceConnected)) return !1;
     let n = (0, E.x)(c.Ay.getInputDevices()[e]),
         i = (0, E.x)(c.Ay.getOutputDevices()[t]);
-    if (a().some(E.A.lastDeviceConnected, (e) => h.has(e.displayName) || e.displayName === n || e.displayName === i))
+    if (a().some(E.A.lastDeviceConnected, (e) => f.has(e.displayName) || e.displayName === n || e.displayName === i))
         return !1;
     let r = a().some(E.A.lastDeviceConnected, (e) => {
         let t = E.A.inputDevices[e.displayName],
@@ -64,7 +64,7 @@ function m() {
     let { ignoredDevices: e } = E.A.getState();
     return Object.values(E.A.lastDeviceConnected)
         .filter((t) => !0 !== e[t.displayName])
-        .map(f)
+        .map(h)
         .filter((e) => null != e);
 }
 n.d(
@@ -78,7 +78,7 @@ n.d(
             if (!I()) return null;
             let e = a().first(Object.keys(E.A.lastDeviceConnected)),
                 t = null != e && "" !== e ? E.A.lastDeviceConnected[e] : null;
-            return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : f(t);
+            return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : h(t);
         },
         eq: function (e, t) {
             return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;

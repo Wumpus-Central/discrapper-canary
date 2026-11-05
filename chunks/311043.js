@@ -43,7 +43,7 @@ function A(e) {
     let { message: t } = e;
     return u(t);
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "NewGameStore";
     isFetching(e) {
         return null != e && o.has(e);
@@ -65,7 +65,7 @@ class h extends i.Ay.Store {
         return null == i ? n : (i.searchParams.set("size", t.size.toString()), i.toString());
     }
 }
-let f = new h(r.h, {
+let h = new f(r.h, {
     LOGOUT: function () {
         ((l = new Map()), (o = new Set()), (d = new Set()), (c = new Set()));
     },
@@ -178,4 +178,4 @@ let f = new h(r.h, {
         );
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

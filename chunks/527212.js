@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => f, AP: () => m, _c: () => I });
+n.d(t, { Ay: () => h, AP: () => m, _c: () => I });
 var i = n(582128),
     r = n(855986),
     a = n(287809),
@@ -141,16 +141,16 @@ class E {
     }
 }
 var A = n(851767),
-    h = n(917445);
-function f(e, t) {
+    f = n(917445);
+function h(e, t) {
     return (0, r.bG)([a.default, A.A], () => (null == e ? null : m(e, t, [a.default, A.A])));
 }
 function I(e, t) {
     return (
         i.useEffect(() => {
-            (0, h.A)(e, void 0, { guildId: t ?? void 0 });
+            (0, f.A)(e, void 0, { guildId: t ?? void 0 });
         }, [t, e]),
-        f(e, t)
+        h(e, t)
     );
 }
 let p = (0, s.L_)((e, t) => new E(e, t));

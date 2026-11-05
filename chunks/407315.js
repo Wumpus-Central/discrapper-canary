@@ -15,8 +15,8 @@ var l = n(626551),
     g = n(35277),
     x = n(339200),
     E = n(551483),
-    y = n(891031),
-    S = n(389437);
+    S = n(891031),
+    y = n(389437);
 let C = new o.Vy("withCodeBlocks"),
     A = new Set(["line"]),
     b = /^[a-z0-9_+\-.#]+$/i;
@@ -129,7 +129,7 @@ function I(e, t) {
 }
 let v = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
     N = new Map();
-for (let [e, t] of Object.entries(S)) e.startsWith("a-") && null != t && N.set(e, t);
+for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && N.set(e, t);
 function T(e, t) {
     let n = [],
         i = !1;
@@ -159,11 +159,11 @@ function T(e, t) {
                     }
                     let u = 0;
                     for (let t of (0, l.$M)(e)) {
-                        o(e.substring(u, t.position), [y.ansiControlSequence]);
+                        o(e.substring(u, t.position), [S.ansiControlSequence]);
                         let n = (0, c.OT)(t);
-                        (o(t.value, null != n ? [S.ansi] : [], n), (u = t.position + t.value.length));
+                        (o(t.value, null != n ? [y.ansi] : [], n), (u = t.position + t.value.length));
                     }
-                    return (o(e.substring(u), [y.ansiControlSequence]), r.length !== t) ? null : (w.set(n, r), r);
+                    return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t) ? null : (w.set(n, r), r);
                 })(e, n.length);
                 for (let e = 0; e < n.length; e++) n[e].hljsTypes = t?.[e] ?? [];
             } else

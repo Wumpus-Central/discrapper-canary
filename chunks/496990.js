@@ -1,7 +1,7 @@
 (n.d(t, { A: () => U }), n(938796));
 var i = n(665260),
-    l = n(855986),
-    r = n(73153),
+    r = n(855986),
+    l = n(73153),
     s = n(46653),
     a = n(734057),
     o = n(71393),
@@ -26,20 +26,20 @@ let E = [
     _ = { channels: {} },
     N = new Set(),
     T = null,
-    v = 0,
-    y = 0;
+    y = 0,
+    v = 0;
 function M() {
     if (null == T || !O(T)) return !1;
     let e = R(T);
     if (e.lastActionTime > Date.now() - c.A.Millis.DAY && e.viewDuration > S) return !1;
     let t = Date.now();
-    return ((e.lastActionTime = t), (e.viewDuration += t - v), (v = t), !0);
+    return ((e.lastActionTime = t), (e.viewDuration += t - y), (y = t), !0);
 }
 function D() {
     return (
-        0 !== y && (clearInterval(y), (y = 0)),
+        0 !== v && (clearInterval(v), (v = 0)),
         d.Ay.useNewNotifications &&
-            (y = setInterval(() => {
+            (v = setInterval(() => {
                 M() && L.emitChange();
             }, 15 * c.A.Millis.SECOND)),
         !1
@@ -73,7 +73,7 @@ function x(e, t) {
         )
     );
 }
-class w extends l.Ay.PersistedStore {
+class P extends r.Ay.PersistedStore {
     static displayName = "UnreadSettingNoticeStore2";
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
@@ -89,34 +89,34 @@ class w extends l.Ay.PersistedStore {
     }
     maybeAutoUpgradeChannel(e) {
         var t, n, i;
-        let l;
+        let r;
         if (!O(e)) return !1;
-        let r = a.A.getBasicChannel(e);
+        let l = a.A.getBasicChannel(e);
         return (
-            null != r &&
-            null != r.guild_id &&
+            null != l &&
+            null != l.guild_id &&
             !!(function (e) {
                 let t = o.A.getGuild(e.guild_id),
                     n = t?.joinedAt ?? new Date(),
                     i = Math.min(h.default.age(e.id), Date.now() - n.getTime()),
-                    l = _.channels[e.id];
-                if (null == l || l.lastActionTime < Date.now() - C) return !1;
+                    r = _.channels[e.id];
+                if (null == r || r.lastActionTime < Date.now() - C) return !1;
                 for (let e of E)
-                    if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
+                    if (i < e.timeSinceJoin && (r.numSends >= e.sends || r.viewDuration >= e.viewTime)) return !0;
                 return !1;
-            })(r) &&
+            })(l) &&
             (delete _.channels[e],
             N.add(e),
-            (t = r.guild_id),
-            (n = r.id),
+            (t = l.guild_id),
+            (n = l.id),
             (i = p.e.ALL_MESSAGES),
-            (l = d.Ay.getChannelIdFlags(t, n)),
+            (r = d.Ay.getChannelIdFlags(t, n)),
             f.A.updateChannelOverrideSettings({
                 guildId: t,
                 channelId: n,
                 settings: {
                     flags: (0, A.mD)(
-                        l,
+                        r,
                         i === p.e.ALL_MESSAGES ? m.vv.UNREADS_ALL_MESSAGES : m.vv.UNREADS_ONLY_MENTIONS,
                     ),
                 },
@@ -126,13 +126,13 @@ class w extends l.Ay.PersistedStore {
         );
     }
 }
-let L = new w(r.h, {
+let L = new P(l.h, {
         CHANNEL_SELECT: function () {
             let e = M();
-            return ((T = u.Ay.getChannelId()), (v = Date.now()), e);
+            return ((T = u.Ay.getChannelId()), (y = Date.now()), e);
         },
         CONNECTION_OPEN: function () {
-            ((T = u.Ay.getChannelId()), (v = Date.now()), D());
+            ((T = u.Ay.getChannelId()), (y = Date.now()), D());
             let e = Date.now() - C;
             h.default.forEach(_.channels, (t, n) => {
                 let { lastActionTime: i } = t;

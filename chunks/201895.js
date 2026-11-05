@@ -14,10 +14,10 @@ let d = /^[0]+/,
 function A(e) {
     return e.replace(d, "").replace(c, "").replace(u, "").replace(E, "");
 }
-function h(e) {
+function f(e) {
     return e.replace(d, "").replace(_, "").replace(E, "");
 }
-function f(e, t) {
+function h(e, t) {
     let n = t.toUpperCase().trim();
     if (0 !== n.length)
         for (let t of [p, "H:mm", "H.mm"]) {
@@ -30,10 +30,10 @@ let I = l()("2021-04-12T00:00:00"),
 function m(e, t) {
     return e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0);
 }
-function g(e, t) {
+function T(e, t) {
     return e.value.unix() - t.value.unix();
 }
-class T {
+class g {
     intervalInMinutes;
     labelFormat;
     options = [];
@@ -71,18 +71,18 @@ class T {
         return (
             (this._index[t.unix()] = t),
             this.options.push({ id: t.toISOString(), label: n, value: t }),
-            this.options.sort(g),
+            this.options.sort(T),
             e
         );
     }
     _guessOptions(e) {
         let t = [];
         if (/[:\\.]/.test(e)) {
-            let n = f(I, e);
+            let n = h(I, e);
             if (null != n) {
                 t.push(n.clone());
                 let i = n.add({ hours: 12 });
-                i.isBefore(I.clone().add({ hours: 24 })) && h(i.format("LT")) === h(e) && t.push(i);
+                i.isBefore(I.clone().add({ hours: 24 })) && f(i.format("LT")) === f(e) && t.push(i);
             }
         }
         return t;
@@ -96,7 +96,7 @@ class T {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(g),
+                e.sort(T),
                 e
             );
         }
@@ -108,13 +108,13 @@ class T {
 }
 function S(e) {
     let { value: t, onChange: n, hideValue: s, disabled: l = !1, ...o } = e,
-        d = r.useMemo(() => new T(), []),
+        d = r.useMemo(() => new g(), []),
         [c, u] = r.useState("");
     function _(e) {
         null != t && n(m(t, d.selectValue(e)));
     }
     function E() {
-        let e = f(t, c);
+        let e = h(t, c);
         null != e && _(e);
     }
     return (0, i.jsx)(a.Z, {

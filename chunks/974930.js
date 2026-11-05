@@ -11,12 +11,12 @@ var i = n(435558),
     _ = n(988794),
     E = n(792996);
 let A = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday],
-    h = [s.p3.SU.weekday, s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday],
-    f = [s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday, s.p3.SA.weekday],
+    f = [s.p3.SU.weekday, s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday],
+    h = [s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday, s.p3.SA.weekday],
     I = [s.p3.SA.weekday, s.p3.SU.weekday],
     p = [s.p3.FR.weekday, s.p3.SA.weekday],
     m = [s.p3.SU.weekday, s.p3.MO.weekday],
-    g = [
+    T = [
         s.p3.SU.weekday,
         s.p3.MO.weekday,
         s.p3.TU.weekday,
@@ -25,12 +25,12 @@ let A = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p
         s.p3.FR.weekday,
         s.p3.SA.weekday,
     ],
-    T = new Set([0, 6]);
+    g = new Set([0, 6]);
 function S(e, t) {
     return (0, o.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
 }
 function N(e) {
-    return new s.Bw(g[e]);
+    return new s.Bw(T[e]);
 }
 function C(e, t) {
     let n;
@@ -61,7 +61,7 @@ function R(e) {
 function L(e) {
     let t = N(e.toDate().getDay()),
         n = N(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? f : n.weekday - t.weekday < 0 ? h : A;
+    return n.weekday - t.weekday > 0 ? h : n.weekday - t.weekday < 0 ? f : A;
 }
 function y(e) {
     let t = N(e.toDate().getDay()),
@@ -156,7 +156,7 @@ n.d(
                     { id: "daily", value: u.z.DAILY, label: E.intl.string(E.t.JX8E1E) },
                 ];
             return (
-                T.has(t.getDay())
+                g.has(t.getDay())
                     ? l.default.getCurrentUser()?.isStaff() &&
                       r.push({ id: "weekendOnly", value: u.z.WEEKEND_ONLY, label: E.intl.string(E.t.hRpynV) })
                     : r.push({ id: "weekdayOnly", value: u.z.WEEKDAY_ONLY, label: E.intl.string(E.t["jYR/MY"]) }),
@@ -218,14 +218,14 @@ n.d(
                     byyearday: E,
                     count: A,
                 } = n.options,
-                h = d?.map((e) => ({ n: e[1], day: e[0] }));
+                f = d?.map((e) => ({ n: e[1], day: e[0] }));
             return {
                 start: i.toISOString(),
                 end: r?.toISOString(),
                 frequency: a,
                 interval: l,
                 byWeekday: o,
-                byNWeekday: h,
+                byNWeekday: f,
                 byMonth: c,
                 byMonthDay: _,
                 byYearDay: E,

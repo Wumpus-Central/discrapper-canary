@@ -14,12 +14,12 @@ function A(e) {
     let { src: t } = e;
     return (0, i.jsx)("img", { className: E.image, src: t, alt: "", draggable: !1 });
 }
-function h(e) {
+function f(e) {
     let { lottie: t, props: n } = e,
         { reducedMotion: a } = r.useContext(d.C);
     return (0, i.jsx)(c.a, { className: E.lottie, importData: t, autoplay: !0, shouldAnimate: !a.enabled, ...n });
 }
-function f(e) {
+function h(e) {
     let { rive: t, props: n } = e;
     return (0, i.jsx)(t, {
         className: E.rive,
@@ -33,10 +33,10 @@ function f(e) {
 function I(e) {
     let { ref: t, src: n, fallbackImageSrc: a, loop: s, loopAt: o = 0, playbackRate: c, isWindowFocused: u } = e,
         { reducedMotion: _ } = r.useContext(d.C),
-        h = r.useRef(null);
-    return (r.useImperativeHandle(t, () => h.current),
+        f = r.useRef(null);
+    return (r.useImperativeHandle(t, () => f.current),
     r.useEffect(() => {
-        let e = h.current;
+        let e = f.current;
         if (null != e)
             return (
                 null != c && (e.playbackRate = c),
@@ -51,13 +51,13 @@ function I(e) {
         }
     }, [s, o, c]),
     r.useEffect(() => {
-        null != h.current && (!_.enabled && u ? (0, l.yO)(h.current?.play()) : h.current?.pause());
+        null != f.current && (!_.enabled && u ? (0, l.yO)(f.current?.play()) : f.current?.pause());
     }, [u, _.enabled]),
     _.enabled && null != a)
         ? (0, i.jsx)(A, { type: "image", src: a })
         : (0, i.jsx)("video", {
               className: E.video,
-              ref: h,
+              ref: f,
               src: n,
               autoPlay: !_.enabled && u,
               muted: !0,
@@ -77,8 +77,8 @@ function p(e) {
               className: s()(E.container, E[`aspect-ratio-${t}`]),
               children: (function () {
                   if ((0, _.wu)(n)) return (0, i.jsx)(A, { ...n });
-                  if ((0, _.al)(n)) return (0, i.jsx)(h, { ...n });
-                  if ((0, _.$P)(n)) return (0, i.jsx)(f, { ...n });
+                  if ((0, _.al)(n)) return (0, i.jsx)(f, { ...n });
+                  if ((0, _.$P)(n)) return (0, i.jsx)(h, { ...n });
                   if ((0, _.cZ)(n)) return (0, i.jsx)(I, { ...n, isWindowFocused: d });
                   if ((0, _.Kh)(n))
                       return null == a.dynamicGraphicComponents

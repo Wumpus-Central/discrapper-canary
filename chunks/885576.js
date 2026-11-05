@@ -10,22 +10,22 @@ var r = n(649852),
     _ = n(723702),
     E = n(46653),
     A = n(652215),
-    h = n(731854);
-let f = Date.now(),
+    f = n(731854);
+let h = Date.now(),
     I = !1,
     p = !1,
     m = !1,
-    g = !1,
-    T = !1;
+    T = !1,
+    g = !1;
 function S() {
-    return m || g || ((0, _.m0)() && T);
+    return m || T || ((0, _.m0)() && g);
 }
 function N() {
     let e;
-    (Date.now() - f > 6e5 || S()
-        ? I || l.h.dispatch({ type: "IDLE", idle: !0, idleSince: f })
+    (Date.now() - h > 6e5 || S()
+        ? I || l.h.dispatch({ type: "IDLE", idle: !0, idleSince: h })
         : I && l.h.dispatch({ type: "IDLE", idle: !1 }),
-        0 === (e = c.cU.getSetting()) || null != i || Date.now() - f > Math.min(e * u.A.Millis.SECOND, 6e5) || S()
+        0 === (e = c.cU.getSetting()) || null != i || Date.now() - h > Math.min(e * u.A.Millis.SECOND, 6e5) || S()
             ? p || l.h.dispatch({ type: "AFK", afk: !0 })
             : p && l.h.dispatch({ type: "AFK", afk: !1 }));
 }
@@ -37,7 +37,7 @@ if (!__OVERLAY__) {
         ? (!(function e() {
               function t(t) {
                   let n = Date.now() - t;
-                  ((null == i || n > i) && ((f = Math.max(n, f)), (i = null)),
+                  ((null == i || n > i) && ((h = Math.max(n, h)), (i = null)),
                       N(),
                       setTimeout(e, 10 * u.A.Millis.SECOND));
               }
@@ -53,10 +53,10 @@ if (!__OVERLAY__) {
               ((m = !0), C(!0), o.default.disconnect());
           }),
           d.A.powerMonitor.on("lock-screen", () => {
-              ((g = !0), C(!0));
+              ((T = !0), C(!0));
           }),
           d.A.powerMonitor.on("unlock-screen", () => {
-              ((g = !1), C(!1));
+              ((T = !1), C(!1));
           }))
         : setInterval(N, 30 * u.A.Millis.SECOND);
     let e = a()(() => {
@@ -70,11 +70,11 @@ function O(e) {
     let { timestamp: t, type: n, bypassIdleUpdate: r } = e,
         a = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
-        (!a || !(t <= f)) &&
+        (!a || !(t <= h)) &&
         !r &&
         ((i = null),
-        (f = a ? t : Date.now()),
-        __OVERLAY__ ? l.h.dispatch({ type: "OVERLAY_SET_NOT_IDLE", timestamp: f }) : N(),
+        (h = a ? t : Date.now()),
+        __OVERLAY__ ? l.h.dispatch({ type: "OVERLAY_SET_NOT_IDLE", timestamp: h }) : N(),
         !1)
     );
 }
@@ -90,13 +90,13 @@ class R extends s.Ay.Store {
         return p;
     }
     getIdleSince() {
-        return I ? f : null;
+        return I ? h : null;
     }
     getSystemSuspended() {
         return m;
     }
     getSystemLocked() {
-        return g;
+        return T;
     }
 }
 let L = new R(l.h, {
@@ -108,11 +108,11 @@ let L = new R(l.h, {
     },
     SPEAKING: function (e) {
         let { userId: t, speakingFlags: n } = e;
-        return (n !== h.ME.NONE && t === E.default.getId() && O({}), !1);
+        return (n !== f.ME.NONE && t === E.default.getId() && O({}), !1);
     },
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        return ((T = t === A.g6G.BACKGROUND), (i = null), (f = Date.now()), N(), !1);
+        return ((g = t === A.g6G.BACKGROUND), (i = null), (h = Date.now()), N(), !1);
     },
     OVERLAY_SET_NOT_IDLE: O,
     CHANNEL_SELECT: O,

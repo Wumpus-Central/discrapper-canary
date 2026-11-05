@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(587895),
     r = n(568598),
     a = n(709055),
@@ -11,17 +11,17 @@ var i = n(587895),
     _ = n(108959),
     E = n(5867),
     A = n(652215);
-function h(e, t) {
+function f(e, t) {
     let n = o.Ay.getSelfEmbeddedActivityForLocation(t);
     if (null == n) return;
-    let h = i.A.getApplication(n.applicationId),
-        f = (0, c.H)(n.location),
-        I = (0, d.Ay)({ application: h, channelId: f });
+    let f = i.A.getApplication(n.applicationId),
+        h = (0, c.H)(n.location),
+        I = (0, d.Ay)({ application: f, channelId: h });
     null != I
         ? (0, a.A)(I)
-        : null != f &&
-          ((0, s.pX)(A.BVt.CHANNEL(e, f)),
-          (0, _.A)(f)
-              ? (0, u.A)(f, (0, r.Qt)({ applicationId: n.applicationId, instanceId: n?.compositeInstanceId }))
+        : null != h &&
+          ((0, s.pX)(A.BVt.CHANNEL(e, h)),
+          (0, _.A)(h)
+              ? (0, u.A)(h, (0, r.Qt)({ applicationId: n.applicationId, instanceId: n?.compositeInstanceId }))
               : (0, l.gk)(E.Gd.PANEL));
 }

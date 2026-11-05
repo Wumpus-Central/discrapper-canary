@@ -12,7 +12,7 @@ var o = n(620632),
     _ = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
     E = n(652215);
 let A = new d.A("ClipsAssetManager"),
-    h = new (class {
+    f = new (class {
         state = { assets: {}, assetState: {}, catalogLastFetchTime: void 0, catalogFetchFailed: !1 };
         activeDownloads = new Map();
         catalogRefreshing = !1;
@@ -124,24 +124,24 @@ let A = new d.A("ClipsAssetManager"),
             return (this.activeDownloads.set(n, l), l);
         }
     })();
-var f = n(341923),
+var h = n(341923),
     I = n(696016);
 let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     m = !1,
-    g = null,
     T = null,
+    g = null,
     S = null,
     N = null;
 function C() {
     if (!(0, s.ri)(r.Ay)) return;
     let e = (0, u.T)(),
         t = r.Ay.getMediaEngine(),
-        n = e && (0, f.s)(),
+        n = e && (0, h.s)(),
         i = l.Ay.getEnableAutoclipping(),
         a = S !== i;
-    (T !== n || a) &&
-        (I.GU.info(`clips ml flags pushed: ml=${n} (was ${T}), autoclipping=${i} (was ${S})`),
-        (T = n),
+    (g !== n || a) &&
+        (I.GU.info(`clips ml flags pushed: ml=${n} (was ${g}), autoclipping=${i} (was ${S})`),
+        (g = n),
         (S = i),
         n
             ? (null === N &&
@@ -149,8 +149,8 @@ function C() {
                   t.setClipsV3MLEnabled(!1),
                   (N = !1)),
               (async () => {
-                  let { allAssetsDownloaded: e } = await h.start(),
-                      n = e && !0 === T && !0 === S;
+                  let { allAssetsDownloaded: e } = await f.start(),
+                      n = e && !0 === g && !0 === S;
                   N !== n &&
                       (I.GU.info(
                           `clips v3 ml flag set ml=${n} (was ${N}). allAssetsDownloaded=${e}, autoclipping=${S}`,
@@ -162,10 +162,10 @@ function C() {
 }
 function O() {
     return (0, s.ri)(r.Ay)
-        ? null != g
-            ? g
+        ? null != T
+            ? T
             : (C(),
-              (g = (async () => {
+              (T = (async () => {
                   try {
                       await a.Ay.ensureModule("discord_clips");
                       let e = a.Ay.requireModule("discord_clips").getModulePath(),
@@ -181,7 +181,7 @@ function O() {
                           (m = !0),
                           I.GU.info("discord_clips module loaded, path: " + e));
                   } catch (e) {
-                      ((g = null), I.GU.error("Failed to load discord_clips module", e));
+                      ((T = null), I.GU.error("Failed to load discord_clips module", e));
                   }
               })()))
         : Promise.resolve();

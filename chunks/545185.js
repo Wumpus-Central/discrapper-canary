@@ -45,13 +45,13 @@ class _ extends r.A {
             _ = u.intl.formatToPlainString(u.t.uV5JaG, { count: t, sides: n }),
             E = `[\`${_}\`](${d})`,
             A = r.reduce((e, t) => e + t, 0),
-            h = u.intl.formatToMarkdownString(u.t.tmSbYW, { total: A, count: t, sides: n }),
-            f = `-# ${r.map((e) => `:game_die: ${e.toString()}`).join(" ")}`,
+            f = u.intl.formatToMarkdownString(u.t.tmSbYW, { total: A, count: t, sides: n }),
+            h = `-# ${r.map((e) => `:game_die: ${e.toString()}`).join(" ")}`,
             I =
                 1 === t
-                    ? `### ${h} ${E}`
-                    : `### ${h} ${E}
-${f}`;
+                    ? `### ${f} ${E}`
+                    : `### ${f} ${E}
+${h}`;
         i.A.sendMessage(e, a.Ay.parse(l, I), !0, { location: c.Hx.CHAT_INPUT });
     }
     dismiss() {

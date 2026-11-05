@@ -6,19 +6,19 @@ var i = n(435558),
     d = n(555337),
     o = n(652215),
     c = n(539916);
-let u = !1,
-    E = null,
-    I = [],
-    N = !1,
-    S = [];
+let I = !1,
+    u = null,
+    E = [],
+    S = !1,
+    N = [];
 function m() {
-    ((u = !1),
-        (E = null),
-        (S = []),
-        (N = !1),
-        null != (E = d.A.getGuildId()) &&
+    ((I = !1),
+        (u = null),
+        (N = []),
+        (S = !1),
+        null != (u = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            ((I = a.A.getOnboardingPrompts(E)), (N = a.A.isAdvancedMode(E))));
+            ((E = a.A.getOnboardingPrompts(u)), (S = a.A.isAdvancedMode(u))));
 }
 class g extends s.Ay.Store {
     static displayName = "GuildSettingsOnboardingPromptsStore";
@@ -26,30 +26,30 @@ class g extends s.Ay.Store {
         this.waitFor(d.A, a.A);
     }
     hasChanges() {
-        return null != E && !l().isEqual(a.A.getOnboardingPrompts(E), I);
+        return null != u && !l().isEqual(a.A.getOnboardingPrompts(u), E);
     }
     getChangedPrompts() {
-        if (null == E) return [];
-        let t = a.A.getOnboardingPrompts(E);
-        return I.filter((e) => {
+        if (null == u) return [];
+        let t = a.A.getOnboardingPrompts(u);
+        return E.filter((e) => {
             let n = t.find((t) => t.id === e.id);
             return null == n || !l().isEqual(e, n);
         });
     }
     get guildId() {
-        return E;
-    }
-    get submitting() {
         return u;
     }
-    get errors() {
-        return S;
-    }
-    get editedOnboardingPrompts() {
+    get submitting() {
         return I;
     }
-    get advancedMode() {
+    get errors() {
         return N;
+    }
+    get editedOnboardingPrompts() {
+        return E;
+    }
+    get advancedMode() {
+        return S;
     }
 }
 let h = new g(r.h, {
@@ -60,21 +60,21 @@ let h = new g(r.h, {
     GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (t) {
-        ((S = t.errors ?? []), (u = !1));
+        ((N = t.errors ?? []), (I = !1));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (t) {
         let { prompts: e } = t;
-        I = e;
+        E = e;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        ((u = !0), (S = []));
+        ((I = !0), (N = []));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (t) {
-        S = t.errors ?? [];
+        N = t.errors ?? [];
     },
     GUILD_SETTINGS_ONBOARDING_SET_MODE: function (t) {
         let { mode: e } = t;
-        N = e === c.SD.ONBOARDING_ADVANCED;
+        S = e === c.SD.ONBOARDING_ADVANCED;
     },
 });
 n.d(e, {}, { A: h });

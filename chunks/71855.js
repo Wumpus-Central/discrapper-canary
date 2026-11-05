@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(561155),
     E = n(723702),
     A = n(253400),
-    h = n(792996),
-    f = n(22405);
+    f = n(792996),
+    h = n(22405);
 function I(e) {
     return A.Ay.maximize(e);
 }
@@ -21,27 +21,27 @@ function p(e) {
 function m(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(l.D, {
-            className: s()(f.R6, f.d1),
+            className: s()(h.R6, h.d1),
             onClick: () => A.Ay.close(t),
-            "aria-label": h.intl.string(h.t.ZdNUj2),
+            "aria-label": f.intl.string(f.t.ZdNUj2),
             tabIndex: -1,
             children: (0, i.jsx)(c.A, {}),
         }),
         a = (0, i.jsx)(l.D, {
-            className: s()(f.R6, f.T0),
+            className: s()(h.R6, h.T0),
             onClick: () => I(t),
-            "aria-label": h.intl.string(h.t.G1u0hK),
+            "aria-label": f.intl.string(f.t.G1u0hK),
             tabIndex: -1,
             children: (0, i.jsx)(u.A, {}),
         }),
         o = (0, i.jsx)(l.D, {
-            className: s()(f.R6, f.T0),
+            className: s()(h.R6, h.T0),
             onClick: () => A.Ay.minimize(t),
-            "aria-label": h.intl.string(h.t.CxOC4U),
+            "aria-label": f.intl.string(f.t.CxOC4U),
             tabIndex: -1,
             children: (0, i.jsx)(_.A, {}),
         });
-    return (0, i.jsxs)("div", { className: s()(f.kU, { [f.Fx]: n }), children: [o, a, r] });
+    return (0, i.jsxs)("div", { className: s()(h.kU, { [h.Fx]: n }), children: [o, a, r] });
 }
 n.d(
     t,
@@ -56,16 +56,16 @@ n.d(
                 c = (0, E.uo)(),
                 u = r.useCallback(() => I(l), [l]),
                 _ = c === E.fg.WINDOWS || c === E.fg.LINUX,
-                h = r.useMemo(() => c === E.fg.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
+                f = r.useMemo(() => c === E.fg.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
             return (0, i.jsxs)("div", {
-                className: s()(f.M0, { [f.CP]: h }, o),
+                className: s()(h.M0, { [h.CP]: f }, o),
                 onDoubleClick: u,
                 "data-window-chrome": "true",
                 children: [
-                    (0, i.jsx)("div", { className: f.DD, children: n }),
-                    (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: p, children: t }),
+                    (0, i.jsx)("div", { className: h.DD, children: n }),
+                    (0, i.jsx)("div", { className: s()(h.R4, { [h.MY]: d }), onDoubleClick: p, children: t }),
                     (0, i.jsxs)("div", {
-                        className: f.ZY,
+                        className: h.ZY,
                         onDoubleClick: p,
                         children: [a, _ && (0, i.jsx)(m, { windowKey: l, showDivider: null != a })],
                     }),
@@ -88,14 +88,14 @@ n.d(
                 }, [a]),
                 A = c === E.fg.WINDOWS;
             if (c === E.fg.WEB) return null;
-            let h = A || c === E.fg.LINUX;
+            let f = A || c === E.fg.LINUX;
             return (0, i.jsx)("div", {
-                className: s()(f.M0, f.bN, { [f.Zu]: t, [f.WU]: n, [f.dS]: l }),
+                className: s()(h.M0, h.bN, { [h.Zu]: t, [h.WU]: n, [h.dS]: l }),
                 onClick: u,
                 onDoubleClick: _,
                 children:
-                    h &&
-                    (0, i.jsx)("div", { className: f.ZY, onDoubleClick: p, children: (0, i.jsx)(m, { windowKey: a }) }),
+                    f &&
+                    (0, i.jsx)("div", { className: h.ZY, onDoubleClick: p, children: (0, i.jsx)(m, { windowKey: a }) }),
             });
         },
     },

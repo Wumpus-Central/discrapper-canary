@@ -1,7 +1,7 @@
 (n.d(t, { A: () => c }), n(321073));
 var i = n(855986),
-    l = n(73153),
-    r = n(620632),
+    r = n(73153),
+    l = n(620632),
     s = n(652215),
     a = n(71393);
 let o = {};
@@ -28,19 +28,19 @@ class d extends i.Ay.PersistedStore {
         return 0 !== o.lastFetched;
     }
 }
-let c = new d(l.h, {
+let c = new d(r.h, {
     CONNECTION_OPEN: function () {
         return (
             Date.now() - o.lastFetched > 864e5 &&
-                r.Bo.get({ url: s.Rsh.GUILD_AFFINITIES, oldFormErrors: !0, rejectWithError: (0, r.fT)() }).then(
+                l.Bo.get({ url: s.Rsh.GUILD_AFFINITIES, oldFormErrors: !0, rejectWithError: (0, l.fT)() }).then(
                     (e) => {
                         let {
                             body: { guild_affinities: t },
                         } = e;
-                        l.h.dispatch({ type: "LOAD_GUILD_AFFINITIES_SUCCESS", guildAffinities: t });
+                        r.h.dispatch({ type: "LOAD_GUILD_AFFINITIES_SUCCESS", guildAffinities: t });
                     },
                     () => {
-                        l.h.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+                        r.h.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
                     },
                 ),
             !1
@@ -53,8 +53,8 @@ let c = new d(l.h, {
             (o.lastFetched = Date.now()),
             t.forEach((e, t) => {
                 let { affinity: n, guild_id: i } = e,
-                    l = { score: n, guildId: i, index: t };
-                ((o.guildAffinitiesByGuildId[i] = l), o.guildAffinities.push(l));
+                    r = { score: n, guildId: i, index: t };
+                ((o.guildAffinitiesByGuildId[i] = r), o.guildAffinities.push(r));
             }));
     },
     LOGOUT: function () {

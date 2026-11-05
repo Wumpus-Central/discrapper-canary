@@ -11,7 +11,7 @@ var i = n(284009),
     _ = n(499785),
     E = n(652215),
     A = n(901123);
-let h = new d.A("UserProfileModalActionCreators");
+let f = new d.A("UserProfileModalActionCreators");
 n.d(
     t,
     {},
@@ -42,11 +42,11 @@ n.d(
                     abortSignal: u,
                 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 _ = arguments.length > 2 ? arguments[2] : void 0,
-                f = Date.now();
+                h = Date.now();
             l.h.dispatch({ type: "USER_PROFILE_FETCH_START", userId: e, guildId: a, withMutualFriends: r });
             try {
                 let o = null == a || A.Cr.includes(a) ? void 0 : a,
-                    h = await s.Bo.get({
+                    f = await s.Bo.get({
                         url: E.Rsh.USER_PROFILE(e),
                         query: {
                             type: t,
@@ -60,28 +60,28 @@ n.d(
                         signal: u,
                         rejectWithError: !0,
                     });
-                (_?.(h.body, a),
-                    l.h.dispatch({ type: "USER_UPDATE", user: h.body.user }),
+                (_?.(f.body, a),
+                    l.h.dispatch({ type: "USER_UPDATE", user: f.body.user }),
                     l.h.dispatch({
                         type: "USER_PROFILE_FETCH_SUCCESS",
-                        userProfile: h.body,
-                        fetchStartedAt: f,
+                        userProfile: f.body,
+                        fetchStartedAt: h,
                         guildId: a,
                     }),
                     null != a &&
-                        null != h.body.guild_member &&
+                        null != f.body.guild_member &&
                         l.h.dispatch({
                             type: "GUILD_MEMBER_PROFILE_UPDATE",
                             guildId: a,
-                            guildMember: h.body.guild_member,
+                            guildMember: f.body.guild_member,
                         }));
             } catch (t) {
                 throw (
-                    null != t && t?.body != null && h.warn(`fetchProfile error: ${t.body.code} - ${t.body.message}`),
+                    null != t && t?.body != null && f.warn(`fetchProfile error: ${t.body.code} - ${t.body.message}`),
                     l.h.dispatch({
                         type: "USER_PROFILE_FETCH_FAILURE",
                         apiError: new o.LG(t),
-                        fetchStartedAt: f,
+                        fetchStartedAt: h,
                         userId: e,
                         guildId: a,
                     }),
@@ -110,7 +110,7 @@ n.d(
                 l.h.dispatch({ type: "MUTUAL_FRIENDS_FETCH_SUCCESS", userId: e, mutualFriends: n.body });
             } catch (t) {
                 throw (
-                    t?.body != null && h.warn(`fetchMutualFriends error: ${t.body.code} - ${t.body.message}`),
+                    t?.body != null && f.warn(`fetchMutualFriends error: ${t.body.code} - ${t.body.message}`),
                     l.h.dispatch({ type: "MUTUAL_FRIENDS_FETCH_FAILURE", userId: e }),
                     t
                 );

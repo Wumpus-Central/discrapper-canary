@@ -26,8 +26,8 @@ n.d(
                 m = null != c,
                 f = null != c && c.features.has(u.GuildFeatures.DISCOVERABLE),
                 A = null != e && !(d && null != p) && (!m || f),
-                [E, g] = i.useState(A),
-                [I, j] = i.useState(null),
+                [E, I] = i.useState(A),
+                [g, j] = i.useState(null),
                 v = null != c ? a.GO.createFromGuildRecord(c) : null,
                 [U, x] = i.useState(v),
                 [N, P] = i.useState(null),
@@ -52,7 +52,7 @@ n.d(
                                       case a.rV.PACK:
                                           y(t.pack);
                                   }
-                              (g(!1), C.current?.());
+                              (I(!1), C.current?.());
                           })()
                         : C.current?.();
                 }, [e, A]),
@@ -60,7 +60,7 @@ n.d(
                     expressionSourceGuild: U,
                     expressionSourceApplication: N,
                     expressionSourcePack: S,
-                    sourceType: I,
+                    sourceType: g,
                     joinedEmojiSourceGuildRecord: c,
                     hasJoinedEmojiSourceGuild: m,
                     emoji: p,

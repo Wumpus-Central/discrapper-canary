@@ -13,28 +13,28 @@ function _(e, t) {
 }
 let E = s.qg(location.search.slice(1)),
     A = null != E.rpc && "" !== E.rpc ? parseInt(String(E.rpc), 10) : c.xEi,
-    h = null;
-class f extends i.EventEmitter {
+    f = null;
+class h extends i.EventEmitter {
     get port() {
         return A;
     }
     get connected() {
-        return null != h && h.readyState === WebSocket.OPEN;
+        return null != f && f.readyState === WebSocket.OPEN;
     }
     connect() {
-        if (null == h) {
+        if (null == f) {
             if (A > u) {
                 ((A = c.xEi), this.emit("disconnected"));
                 return;
             }
             try {
-                h = new WebSocket(`ws://127.0.0.1:${this.port}/?v=${c.dL4}`);
+                f = new WebSocket(`ws://127.0.0.1:${this.port}/?v=${c.dL4}`);
             } catch (e) {
                 this.disconnect({ code: c.YI$.CLOSE_ABNORMAL });
                 return;
             }
-            null != h &&
-                ((h.onmessage = (e) => {
+            null != f &&
+                ((f.onmessage = (e) => {
                     let t;
                     try {
                         if ("string" == typeof e.data) t = JSON.parse(e.data);
@@ -56,15 +56,15 @@ class f extends i.EventEmitter {
                     (i === c.ZE4.ERROR && ((s = new d.A({ errorCode: a.code }, a.message)), (a = null)),
                         this.emit(_(n, r), s, a));
                 }),
-                (h.onclose = h.onerror = (e) => this.disconnect(e)));
+                (f.onclose = f.onerror = (e) => this.disconnect(e)));
         }
     }
     disconnect(e) {
         if (null != e && "code" in e && [c.YI$.CLOSE_ABNORMAL, c.YI$.INVALID_CLIENTID].includes(e.code)) {
-            (A++, (h = null), this.connect());
+            (A++, (f = null), this.connect());
             return;
         }
-        null != h && (this.emit("disconnected"), h.close(), (h = null));
+        null != f && (this.emit("disconnected"), f.close(), (f = null));
     }
     subscribe(e, t, n) {
         return (this.on(_(c.e$_.DISPATCH, e), n), this.request(c.e$_.SUBSCRIBE, t, e));
@@ -86,7 +86,7 @@ class f extends i.EventEmitter {
             }
             let a = (0, l.A)(),
                 s = JSON.stringify({ cmd: e, args: t, evt: n, nonce: a });
-            (this.once(_(e, a), (e, t) => (null != e ? r(e) : i(t))), h?.send(s));
+            (this.once(_(e, a), (e, t) => (null != e ? r(e) : i(t))), f?.send(s));
         });
     }
     requestOnce(e, t, n) {
@@ -112,5 +112,5 @@ class f extends i.EventEmitter {
         );
     }
 }
-let I = new f();
+let I = new h();
 n.d(t, {}, { default: I });

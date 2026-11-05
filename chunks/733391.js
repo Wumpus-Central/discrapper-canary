@@ -10,17 +10,17 @@ var i = n(158390),
     _ = n(652215);
 let E = 30 * o.A.Millis.SECOND,
     A = 30 * o.A.Millis.MINUTE,
-    h = 60 * o.A.Millis.MINUTE,
-    f = 30 * o.A.Millis.SECOND,
+    f = 60 * o.A.Millis.MINUTE,
+    h = 30 * o.A.Millis.SECOND,
     I = 5 * o.A.Millis.SECOND;
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { eager: i = !1, forceFetch: o = !1 } = n,
         d = u.A.getStorefrontFetchState(e),
         _ = d?.state === "loading",
-        h = d?.state === "error" && null != d.fetchedAt && Date.now() - d.fetchedAt < E,
-        f = d?.state === "fetched" && null != d.fetchedAt && Date.now() - d.fetchedAt < A;
-    if (!(_ || h || f) || o)
+        f = d?.state === "error" && null != d.fetchedAt && Date.now() - d.fetchedAt < E,
+        h = d?.state === "fetched" && null != d.fetchedAt && Date.now() - d.fetchedAt < A;
+    if (!(_ || f || h) || o)
         try {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD", guildOrApplicationId: e });
             let n = "application" === e.type ? e.applicationId : (0, c.mq)(e.guildId),
@@ -78,12 +78,12 @@ async function m(e, t) {
         a.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: e });
     }
 }
-let g = 5 * o.A.Millis.MINUTE,
-    T = 30 * o.A.Millis.SECOND,
+let T = 5 * o.A.Millis.MINUTE,
+    g = 30 * o.A.Millis.SECOND,
     S = 5 * o.A.Millis.MINUTE;
 function N(e, t) {
     let n = e.get(t);
-    return (null == n && ((n = new i.A(T, S)), e.set(t, n)), n);
+    return (null == n && ((n = new i.A(g, S)), e.set(t, n)), n);
 }
 let C = new Map(),
     O = new Map();
@@ -128,7 +128,7 @@ n.d(
             let n = N(C, e);
             if (
                 !(t?.state === "error" && Date.now() - t.fetchedAt < n.current) &&
-                !(t?.state === "fetched" && Date.now() - t.fetchedAt < g)
+                !(t?.state === "fetched" && Date.now() - t.fetchedAt < T)
             )
                 try {
                     a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD", applicationId: e });
@@ -195,8 +195,8 @@ n.d(
         Xw: async function () {
             let e = u.A.getConfigFetchState();
             if (
-                !("loading" === e.state || ("success" === e.state && Date.now() - e.fetchedAt < h)) &&
-                !("error" === e.state && Date.now() - e.fetchedAt < f)
+                !("loading" === e.state || ("success" === e.state && Date.now() - e.fetchedAt < f)) &&
+                !("error" === e.state && Date.now() - e.fetchedAt < h)
             )
                 try {
                     a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });

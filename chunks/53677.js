@@ -11,7 +11,7 @@ var i = n(811315),
     _ = n(419490),
     E = n(696016),
     A = n(652215);
-function h(e) {
+function f(e) {
     switch (e.decision?.signal?.type) {
         case E.Gy.MANUAL:
             return "manual";
@@ -25,9 +25,9 @@ function h(e) {
             return "unknown";
     }
 }
-function f(e) {
+function h(e) {
     return {
-        clip_type: h(e),
+        clip_type: f(e),
         num_clip_participants: e.users.length,
         clip_session_id: e.gameSessionId,
         is_candidate: e.isCandidate,
@@ -89,7 +89,7 @@ n.d(
     t,
     {},
     {
-        NM: h,
+        NM: f,
         PQ: function (e, t) {
             let n = {
                 is_favorite: m(e.isFavorite, t.isFavorite),
@@ -108,7 +108,7 @@ n.d(
             let t = o.A.getCurrentUserActiveStream(),
                 n = null != t ? c.A.getRTCConnection((0, s._z)(t)) : null;
             return {
-                ...f(e),
+                ...h(e),
                 ...I(),
                 rtc_connection_id: n?.getRTCConnectionId(),
                 media_session_id: n?.getMediaSessionId(),
@@ -125,7 +125,7 @@ n.d(
             let n = p(e, t);
             return ((n.error_at = t.errorAt), (n.error_message = t.errorMessage), n);
         },
-        Zy: f,
+        Zy: h,
         lc: I,
         u2: function (e, t, n, i) {
             let r = p(e, t);

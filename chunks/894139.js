@@ -60,7 +60,7 @@ class _ extends s.G {
             { no: 6, name: "flags", kind: "message", T: () => l.ol },
             { no: 4, name: "guilds", kind: "map", K: 6, V: { kind: "message", T: () => S } },
             { no: 5, name: "version", kind: "scalar", T: 13 },
-            { no: 7, name: "data", kind: "message", T: () => f },
+            { no: 7, name: "data", kind: "message", T: () => h },
         ]);
     }
     create(e) {
@@ -93,7 +93,7 @@ class _ extends s.G {
                     a.version = e.uint32();
                     break;
                 case 7:
-                    a.data = f.internalBinaryRead(e, e.uint32(), n, a.data);
+                    a.data = h.internalBinaryRead(e, e.uint32(), n, a.data);
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -137,7 +137,7 @@ class _ extends s.G {
                 S.internalBinaryWrite(e.guilds[r], t, n),
                 t.join().join());
         (0 !== e.version && t.tag(5, i.O0.Varint).uint32(e.version),
-            e.data && f.internalBinaryWrite(e.data, t.tag(7, i.O0.LengthDelimited).fork(), n).join());
+            e.data && h.internalBinaryWrite(e.data, t.tag(7, i.O0.LengthDelimited).fork(), n).join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
@@ -209,7 +209,7 @@ class E extends s.G {
     }
 }
 let A = new E();
-class h extends s.G {
+class f extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.UserNotificationSettingsData", [
             { no: 1, name: "muted_games", kind: "map", K: 6, V: { kind: "scalar", T: 8 } },
@@ -283,12 +283,12 @@ class h extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let f = new h();
+let h = new f();
 class I extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.DeclarativeSettings", [
             { no: 1, name: "versions", kind: "message", T: () => u.u },
-            { no: 2, name: "values", kind: "map", K: 13, V: { kind: "message", T: () => g } },
+            { no: 2, name: "values", kind: "map", K: 13, V: { kind: "message", T: () => T } },
         ]);
     }
     create(e) {
@@ -333,7 +333,7 @@ class I extends s.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = g.internalBinaryRead(t, t.uint32(), n);
+                    s = T.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -341,7 +341,7 @@ class I extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? g.create();
+        e[a ?? 0] = s ?? T.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let r of (e.versions &&
@@ -349,7 +349,7 @@ class I extends s.G {
         Object.keys(e.values)))
             (t.tag(2, i.O0.LengthDelimited).fork().tag(1, i.O0.Varint).uint32(parseInt(r)),
                 t.tag(2, i.O0.LengthDelimited).fork(),
-                g.internalBinaryWrite(e.values[r], t, n),
+                T.internalBinaryWrite(e.values[r], t, n),
                 t.join().join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
@@ -400,8 +400,8 @@ class m extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let g = new m();
-class T extends s.G {
+let T = new m();
+class g extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.GuildNotificationSettings", [
             { no: 1, name: "suppress_everyone", kind: "scalar", T: 8 },
@@ -496,7 +496,7 @@ class T extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let S = new T();
+let S = new g();
 class N extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.ChannelNotificationSettings", [

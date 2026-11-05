@@ -10,7 +10,7 @@ let u = new a.A("CallDisplaySleepManager"),
     _ = null,
     E = !1,
     A = Promise.resolve();
-function h() {
+function f() {
     A = A.then(async () => {
         if (E) null == _ && (_ = (await d.Ay.blockDisplaySleep()) ?? null);
         else {
@@ -22,23 +22,23 @@ function h() {
         u.error("Failed to update the display sleep blocker", e);
     });
 }
-function f() {
+function h() {
     let e,
         t =
             null != (e = l.A.getChannelId()) &&
             (c.A.getVideoParticipants(e).length > 0 ||
                 (c.A.getStreamParticipants(e).length > 0 && s.A.getAllActiveStreamsForChannel(e).length > 0) ||
                 (c.A.getActivityParticipants(e).length > 0 && null != r.Ay.getSelfEmbeddedActivityForChannel(e)));
-    t !== E && ((E = t), h());
+    t !== E && ((E = t), f());
 }
 class I extends i.A {
     _initialize() {
         !o.isPlatformEmbedded ||
             __OVERLAY__ ||
-            (this.stores = new Map().set(l.A, f).set(c.A, f).set(s.A, f).set(r.Ay, f));
+            (this.stores = new Map().set(l.A, h).set(c.A, h).set(s.A, h).set(r.Ay, h));
     }
     _terminate() {
-        ((E = !1), h());
+        ((E = !1), f());
     }
 }
 let p = new I();

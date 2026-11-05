@@ -10,13 +10,13 @@ var i = n(284009),
     _ = n(374710),
     E = n(976860),
     A = n(378570),
-    h = n(162199),
-    f = n(940382),
+    f = n(162199),
+    h = n(940382),
     I = n(253932),
     p = n(799704),
     m = n(31717),
-    g = n(309010),
-    T = n(188567),
+    T = n(309010),
+    g = n(188567),
     S = n(37411),
     N = n(652215),
     C = n(746080);
@@ -36,14 +36,14 @@ function O(e, t, n) {
             null != n ? (0, A.N9)(e, { ...i, source: n }) : (0, A.iN)(e.id, i));
         return;
     }
-    let l = g.Ay.getChannelId();
+    let l = T.Ay.getChannelId();
     (e.parent_id === l || (0, C.mP)(l) || (0, A.iN)(e.parent_id),
         (0, E.pX)(
-            (0, d.V1)(N.BVt.CHANNEL_THREAD_VIEW((0, h.j)(e), (0, C.mP)(l) ? C.VV.GUILD_HOME : e.parent_id, e.id)),
+            (0, d.V1)(N.BVt.CHANNEL_THREAD_VIEW((0, f.j)(e), (0, C.mP)(l) ? C.VV.GUILD_HOME : e.parent_id, e.id)),
             e.isForumPost() ? { source: S.H9.FORUM } : void 0,
         ),
         setTimeout(() => {
-            T._.dispatch(N.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+            g._.dispatch(N.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0));
 }
 n.d(
@@ -52,9 +52,9 @@ n.d(
     {
         GS: function (e) {
             let t = e.parent_id;
-            null == t || g.Ay.getCurrentlySelectedChannelId() === t
+            null == t || T.Ay.getCurrentlySelectedChannelId() === t
                 ? O(e)
-                : p.Ay.getSidebarState(t)?.type === f.PE.CREATE_THREAD &&
+                : p.Ay.getSidebarState(t)?.type === h.PE.CREATE_THREAD &&
                   a.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: t });
         },
         JA: O,
@@ -64,7 +64,7 @@ n.d(
                 r()(!__OVERLAY__, "Cannot create threads in the overlay."),
                 (0, o.zV)(N.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
                 u.Uw.dispatch(N.jej.POPOUT_CLOSE),
-                g.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
+                T.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
                 "" === m.A.getDraft(e.id, m.C.FirstThreadMessage))
             ) {
                 let t = m.A.getDraft(e.id, m.C.ChannelMessage);

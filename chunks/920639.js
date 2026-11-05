@@ -103,7 +103,7 @@ n.d(
             let { actualSeatPosition: t, targetSeatPosition: n, actualSeatId: i, targetSeatId: a, ...s } = e;
             A(s.channelId, (e) => {
                 var l;
-                let o, d, A, h;
+                let o, d, A, f;
                 r.Ay.trackWithMetadata(_.HAw.GUILD_ROOM_SEAT_SELECTED, {
                     ...E(s),
                     seat_name: (0, u.r)(i, t, s.channelId)?.name ?? "",
@@ -114,18 +114,18 @@ n.d(
                     (o = []),
                     (d = []),
                     (A = []),
-                    (h = []),
+                    (f = []),
                     c.A.getRoomUsers(l).forEach((e, t) => {
                         (o.push(t),
                             d.push((0, u.r)(e.seat, e.position, l)?.name ?? ""),
                             A.push(e.position.x),
-                            h.push(e.position.y));
+                            f.push(e.position.y));
                     }),
                     {
                         seated_user_ids: o,
                         seated_user_seat_names: d,
                         seated_user_x_positions: A,
-                        seated_user_y_positions: h,
+                        seated_user_y_positions: f,
                     }),
                     ...e,
                 });

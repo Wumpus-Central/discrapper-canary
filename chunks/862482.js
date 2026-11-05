@@ -20,12 +20,12 @@ let E = { FILLED: _.WL, OUTLINED: _.uu, LINK: _.M_, BLANK: _.Ev },
         TRANSPARENT: _.Ey,
         CUSTOM: "",
     },
-    h = { NONE: "", TINY: _.Ei, SMALL: _.g4, MEDIUM: _.$g, LARGE: _.Pu, MIN: _.CM, MAX: _.Gn, ICON: _.Rk };
-function f() {
+    f = { NONE: "", TINY: _.Ei, SMALL: _.g4, MEDIUM: _.$g, LARGE: _.Pu, MIN: _.CM, MAX: _.Gn, ICON: _.Rk };
+function h() {
     let {
         look: e = E.FILLED,
         color: t = A.BRAND,
-        size: n = h.MEDIUM,
+        size: n = f.MEDIUM,
         fullWidth: i = !1,
         grow: r = !0,
         submitting: a = !1,
@@ -38,12 +38,12 @@ function I(e) {
         {
             look: n = E.FILLED,
             color: a = A.BRAND,
-            size: l = h.MEDIUM,
+            size: l = f.MEDIUM,
             fullWidth: I = !1,
             grow: p = !0,
             disabled: m = !1,
-            submitting: g = !1,
-            type: T = "button",
+            submitting: T = !1,
+            type: g = "button",
             style: S,
             wrapperClassName: N,
             className: C,
@@ -64,7 +64,7 @@ function I(e) {
             submittingFinishedLabel: F,
             ...B
         } = e,
-        V = m || g,
+        V = m || T,
         H = V && (null != b || null != v),
         j =
             ((t = G?.offset),
@@ -82,16 +82,16 @@ function I(e) {
                       }),
         W = r.useRef(!1);
     r.useEffect(() => {
-        (!0 === g && ((W.current = !0), o.O.announce(k ?? u.intl.string(u.t.pfChQr))),
-            !1 === g && !0 === W.current && o.O.announce(F ?? u.intl.string(u.t.SVParY)));
-    }, [g, k, F]);
+        (!0 === T && ((W.current = !0), o.O.announce(k ?? u.intl.string(u.t.pfChQr))),
+            !1 === T && !0 === W.current && o.O.announce(F ?? u.intl.string(u.t.SVParY)));
+    }, [T, k, F]);
     let Y = (0, i.jsx)(d.vN, {
         ...G,
         offset: j,
         children: (0, i.jsxs)("button", {
             ...(V ? null : B),
             "aria-label": x,
-            "aria-busy": !!g || void 0,
+            "aria-busy": !!T || void 0,
             ref: w,
             onClick: V ? (e) => e.preventDefault() : R,
             onDoubleClick: V ? (e) => e.preventDefault() : L,
@@ -100,17 +100,17 @@ function I(e) {
             onMouseEnter: b,
             onMouseLeave: v,
             onKeyDown: m ? void 0 : P,
-            type: T,
+            type: g,
             disabled: m,
             style: S,
             rel: U,
             className: s()(
                 C,
-                f({ look: n, color: a, size: l, fullWidth: I, grow: p, submitting: g, disabled: m }),
+                h({ look: n, color: a, size: l, fullWidth: I, grow: p, submitting: T, disabled: m }),
                 H ? null : N,
             ),
             children: [
-                g && !m
+                T && !m
                     ? (0, i.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: _.u1, itemClassName: _.$N })
                     : null,
                 (0, i.jsx)("div", { className: s()(_.PG, O), children: M }),
@@ -126,35 +126,35 @@ function I(e) {
 }
 ((I.Looks = E),
     (I.Colors = A),
-    (I.Sizes = h),
+    (I.Sizes = f),
     (I.Link = function (e) {
         let {
             look: t = E.FILLED,
             color: n = A.BRAND,
-            size: r = h.MEDIUM,
+            size: r = f.MEDIUM,
             fullWidth: a = !1,
             grow: o = !0,
             style: d,
             className: c,
             innerClassName: u,
-            to: f,
+            to: h,
             onClick: I,
             onMouseDown: p,
             onMouseUp: m,
-            children: g,
-            rel: T,
+            children: T,
+            rel: g,
             ...S
         } = e;
         return (0, i.jsx)(l.N_, {
             ...S,
-            to: f,
+            to: h,
             onClick: I,
             onMouseUp: m,
             onMouseDown: p,
             style: d,
-            rel: T,
+            rel: g,
             className: s()(c, _.x6, t, n, r, { [_.Ij]: a, [_.wS]: o }),
-            children: (0, i.jsx)("span", { className: s()(_.PG, u), children: g }),
+            children: (0, i.jsx)("span", { className: s()(_.PG, u), children: T }),
         });
     }),
-    n.d(t, {}, { $n: I, WS: f, XD: A, lO: h, pR: E }));
+    n.d(t, {}, { $n: I, WS: h, XD: A, lO: f, pR: E }));

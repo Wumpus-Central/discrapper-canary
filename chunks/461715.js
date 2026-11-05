@@ -37,17 +37,17 @@ n.d(
                 parentChannel: a,
                 postThread: s,
                 user: l,
-                selectedGuildId: h,
-                canAccess: f = !1,
+                selectedGuildId: f,
+                canAccess: h = !1,
             } = e;
             if (null == t) return null;
             let I = (0, _.et)(t.thumbnail),
-                p = !f && t.has_media_attachment,
-                m = f ? A.intl.string(A.t.UsZEBI) : A.intl.string(A.t.ReFzYZ),
-                g = null != l ? u.Ay.getName(t.guild_id, t.channel_id, l) : void 0,
-                T = l?.getAvatarURL(n?.id, 40);
-            (null == T || h !== t.guild_id) &&
-                (T = c.Ay.getGuildIconURL({ id: t.guild_id, icon: t.guild_icon, size: 40, canAnimate: !1 }));
+                p = !h && t.has_media_attachment,
+                m = h ? A.intl.string(A.t.UsZEBI) : A.intl.string(A.t.ReFzYZ),
+                T = null != l ? u.Ay.getName(t.guild_id, t.channel_id, l) : void 0,
+                g = l?.getAvatarURL(n?.id, 40);
+            (null == g || f !== t.guild_id) &&
+                (g = c.Ay.getGuildIconURL({ id: t.guild_id, icon: t.guild_icon, size: 40, canAnimate: !1 }));
             let S =
                     (function (e) {
                         if (null == e) return !1;
@@ -65,13 +65,13 @@ n.d(
                 threadId: t.channel_id,
                 postThread: s,
                 messageId: t.message_id,
-                canAccess: f,
+                canAccess: h,
                 guildId: t.guild_id,
                 guildName: n?.name ?? t.guild_name,
                 authorId: t?.author_id,
-                authorName: g,
+                authorName: T,
                 channelName: null != a ? (0, r.m1)(a, d.default, o.A) : void 0,
-                avatarUrl: T,
+                avatarUrl: g,
                 shouldShowBlurredThumbnailImage: p,
                 shouldContainMediaWithBackground: S,
                 shouldSpoiler: N,

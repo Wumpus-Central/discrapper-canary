@@ -5,10 +5,10 @@ n.d(t, {
     Ye: () => es,
     Nz: () => en,
     fv: () => ea,
-    i_: () => Z,
+    i_: () => Q,
     uM: () => eu,
     _2: () => ed,
-    w6: () => Q,
+    w6: () => Z,
     Ub: () => el,
     tV: () => e_,
     kG: () => eE,
@@ -27,13 +27,13 @@ var i = n(435558),
     _ = n(594061),
     E = n(95701),
     A = n(46653),
-    h = n(734057),
-    f = n(576705),
+    f = n(734057),
+    h = n(576705),
     I = n(309010),
     p = n(967198),
     m = n(927813),
-    g = n(811091),
-    T = n(181079);
+    T = n(811091),
+    g = n(181079);
 n(321073);
 var S = n(353202),
     N = n(826767),
@@ -41,10 +41,10 @@ var S = n(353202),
     O = n(349828),
     R = n(818348);
 function L(e) {
-    return Object.values(T.A.getFavoriteChannels())
+    return Object.values(g.A.getFavoriteChannels())
         .filter((t) => {
             if (t.type !== s.Ip.REFERENCE_ORIGINAL || (null != e && t.parentId !== e)) return !1;
-            let n = h.A.getChannel(t.id);
+            let n = f.A.getChannel(t.id);
             return null != n ? n.isThread() : null != t.channelType && E.Le.has(t.channelType);
         })
         .map((e) => e.id);
@@ -55,8 +55,8 @@ function y(e) {
     let i = Date.now() - t * m.A.Millis.DAY,
         r = [];
     for (let e of L(n)) {
-        let n = h.A.getChannel(e);
-        if (null == n || null == n.threadMetadata || !f.A.can(R.xB.VIEW_CHANNEL, n) || C.Ay.hasUnreadOrMentions(e))
+        let n = f.A.getChannel(e);
+        if (null == n || null == n.threadMetadata || !h.A.can(R.xB.VIEW_CHANNEL, n) || C.Ay.hasUnreadOrMentions(e))
             continue;
         if (n.threadMetadata.archived) {
             r.push(n);
@@ -128,7 +128,7 @@ function B(e) {
             continue;
         }
         if (n.type === s.Ip.CATEGORY) continue;
-        let i = h.A.getChannel(t);
+        let i = f.A.getChannel(t);
         if (null == i) {
             let i = n.channelType?.value;
             if (null != i && E.Le.has(i)) continue;
@@ -137,7 +137,7 @@ function B(e) {
         }
         if (
             (null == n.channelType && (n.channelType = l.ZQ.create({ value: i.type })),
-            !i.isPrivate() && !f.A.can(R.xB.VIEW_CHANNEL, i))
+            !i.isPrivate() && !h.A.can(R.xB.VIEW_CHANNEL, i))
         ) {
             delete e[t];
             continue;
@@ -174,7 +174,7 @@ function K(e) {
     return _.wc.updateAsync("favorites", t, n ? _.Sb.FREQUENT_USER_ACTION : _.Sb.INFREQUENT_USER_ACTION, Y);
 }
 function $(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.default.fromTimestamp(Date.now());
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.default.fromTimestamp(Date.now());
     return ((e[n] = s.wL.create({ nickname: t, type: s.Ip.CATEGORY, position: k(e), parentId: "0" })), n);
 }
 function X(e, t) {
@@ -186,9 +186,9 @@ function X(e, t) {
 }
 async function z(e, t, n) {
     let { silent: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        r = e.filter((e) => !T.A.isFavorite(e));
+        r = e.filter((e) => !g.A.isFavorite(e));
     if (0 === r.length) return;
-    let a = !T.A.favoriteGuildEnabled;
+    let a = !g.A.favoriteGuildEnabled;
     (await K({
         update: (e) => {
             let o = !1,
@@ -204,7 +204,7 @@ async function z(e, t, n) {
                     let n = j(e.favoriteChannels, s.Ip.REFERENCE_ORIGINAL);
                     if (null != n) return (i || W(n), !1);
                 }
-                let c = h.A.getChannel(a);
+                let c = f.A.getChannel(a);
                 ((e.favoriteChannels[a] = s.wL.create({
                     nickname: "",
                     type: s.Ip.REFERENCE_ORIGINAL,
@@ -220,15 +220,15 @@ async function z(e, t, n) {
             o && a && !i && ((e.guildVisible = l._t.create({ value: !0 })), (0, P.uS)("auto", !0));
         },
     }),
-        !i && r.some((e) => T.A.isFavorite(e)) && (0, U.P0)({ text: G.intl.string(G.t["4tSWQg"]), icon: w.StarIcon }));
+        !i && r.some((e) => g.A.isFavorite(e)) && (0, U.P0)({ text: G.intl.string(G.t["4tSWQg"]), icon: w.StarIcon }));
 }
 async function q(e) {
     let { channelIds: t, parentId: n, source: i } = e;
     await z(t, { parentId: n ?? null }, i);
 }
-function Z(e) {
+function Q(e) {
     let { trackAnalytics: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = T.A.getFavorite(e);
+        n = g.A.getFavorite(e);
     null != n &&
         (F(new Set([e])),
         K({
@@ -239,14 +239,14 @@ function Z(e) {
                 (B(i.favoriteChannels),
                     t &&
                         (0, P.TX)(
-                            n.type === s.Ip.CATEGORY ? null : (h.A.getChannel(e)?.type ?? null),
+                            n.type === s.Ip.CATEGORY ? null : (f.A.getChannel(e)?.type ?? null),
                             H(i.favoriteChannels),
                         ));
             },
         }));
 }
-function Q(e, t) {
-    T.A.isFavorite(e) &&
+function Z(e, t) {
+    g.A.isFavorite(e) &&
         K({
             update: (n) => {
                 n.favoriteChannels[e].nickname = t ?? "";
@@ -254,7 +254,7 @@ function Q(e, t) {
         });
 }
 function J() {
-    return T.A.pruneInactiveThreads;
+    return g.A.pruneInactiveThreads;
 }
 let ee = 0,
     et = null;
@@ -263,23 +263,23 @@ async function en() {
         t,
         n = A.default.getId();
     if (!J() || (n === et && Date.now() - ee < m.A.Millis.DAY)) return;
-    let i = T.A.pruneInactiveThreadsScope,
+    let i = g.A.pruneInactiveThreadsScope,
         r =
             i === O.l0
                 ? ((e = O.A.toLowerCase()),
-                  (t = Object.values(T.A.getFavoriteChannels()).find(
+                  (t = Object.values(g.A.getFavoriteChannels()).find(
                       (t) => t.type === s.Ip.CATEGORY && t.nickname?.trim().toLowerCase() === e,
                   )),
                   t?.id ?? null)
                 : i;
     if (null == r) return;
     ((ee = Date.now()), (et = n));
-    let a = { days: T.A.pruneInactiveThreadsDays, categoryId: "all" === r ? null : r };
+    let a = { days: g.A.pruneInactiveThreadsDays, categoryId: "all" === r ? null : r };
     if (
         (await (async function (e) {
             await S.A.loadThreadsBulk(L(e));
         })(a.categoryId),
-        !J() || T.A.pruneInactiveThreadsScope !== i)
+        !J() || g.A.pruneInactiveThreadsScope !== i)
     )
         return;
     let l = I.Ay.getChannelId(),
@@ -302,7 +302,7 @@ async function en() {
 async function ei(e) {
     if (!(0, v.QN)(e)) return null;
     let t = e.trim(),
-        n = g.default.fromTimestamp(Date.now());
+        n = T.default.fromTimestamp(Date.now());
     return (
         await K({
             update: (e) => {
@@ -311,7 +311,7 @@ async function ei(e) {
                 $(e.favoriteChannels, t, n);
             },
         }),
-        null != T.A.getFavorite(n) ? n : null
+        null != g.A.getFavorite(n) ? n : null
     );
 }
 async function er(e) {
@@ -319,14 +319,14 @@ async function er(e) {
     await z(t, { categoryName: n }, i);
 }
 function ea(e) {
-    Z(e);
+    Q(e);
 }
 async function es(e) {
-    if (!T.A.autoAddJoinedThreads || T.A.isFavorite(e)) return;
-    let t = h.A.getChannel(e);
+    if (!g.A.autoAddJoinedThreads || g.A.isFavorite(e)) return;
+    let t = f.A.getChannel(e);
     null == t ||
         !t.isThread() ||
-        ((t.isPrivate() || f.A.can(R.xB.VIEW_CHANNEL, t)) &&
+        ((t.isPrivate() || h.A.can(R.xB.VIEW_CHANNEL, t)) &&
             (await z([e], { categoryName: O.A }, "auto_thread_join", { silent: !0 })));
 }
 function el(e) {

@@ -11,11 +11,11 @@ var i = n(439372),
     _ = n(652215),
     E = n(765682);
 let A = null;
-function h() {
+function f() {
     (r.A.requestPermission(E.iL.AUDIO).then((e) => {}),
         c.Ay.getMode() === _.TBI.PUSH_TO_TALK && r.A.requestPermission(E.iL.INPUT_MONITORING));
 }
-class f extends i.A {
+class h extends i.A {
     actions = {
         VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
@@ -31,12 +31,12 @@ class f extends i.A {
             let { userId: n, channelId: i } = e;
             if (null != i && o.default.getId() === n && null != u.A.getRTCConnectionId() && A !== i) {
                 if (!d.A.getChannel(i)?.isListenModeCapable() || a.Ay.isSpeaker(n, i)) {
-                    ((A = i), h());
+                    ((A = i), f());
                     return;
                 }
-                ((t = new l.A(e)), (0, s.eY)(t) === s.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((A = i), h()));
+                ((t = new l.A(e)), (0, s.eY)(t) === s.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((A = i), f()));
             }
         });
     }
 }
-let I = new f();
+let I = new h();

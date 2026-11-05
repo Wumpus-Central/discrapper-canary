@@ -21,8 +21,8 @@ var l = n(437614),
     _ = n(741899),
     E = n(188275),
     A = n(25082),
-    h = n(792996);
-let f = "GameExitPromoPanel",
+    f = n(792996);
+let h = "GameExitPromoPanel",
     I = {
         [l.Xb.RUST_2026_10]: {
             id: l.Xb.RUST_2026_10,
@@ -34,7 +34,7 @@ let f = "GameExitPromoPanel",
             imageUrl:
                 "https://cdn.discordapp.com/assets/content/b67b65e666d1350c52ff2abab5ac4eb205fa6545f63665aef16beeaa0efef060.webp",
             useContent: function () {
-                return { body: h.intl.string(A.default["93iWsv"]), decideVisibility: () => "show" };
+                return { body: f.intl.string(A.default["93iWsv"]), decideVisibility: () => "show" };
             },
         },
         [l.Xb.BLOONS_2026_11]: {
@@ -48,17 +48,17 @@ let f = "GameExitPromoPanel",
                 "https://cdn.discordapp.com/assets/content/0fc80968a5a6bcc494140841f89dfc51b53aa66639800fef2d52b135c3ac0895.png",
             useContent: function (e) {
                 let { isPanelAvailable: t, isDevPreview: n } = e,
-                    i = (0, _.N)(f, !1);
+                    i = (0, _.N)(h, !1);
                 (0, u.A)({ applicationId: t && !n && null != i ? E.S3 : null });
                 let r = i?.discountPercent ?? (n ? 10 : null);
                 return {
-                    body: null == r ? "" : h.intl.formatToPlainString(A.default.anpjzy, { discountPercent: r }),
+                    body: null == r ? "" : f.intl.formatToPlainString(A.default.anpjzy, { discountPercent: r }),
                     decideVisibility: () => {
-                        if (null == i) return ((0, _.s)(f), "hide");
+                        if (null == i) return ((0, _.s)(h), "hide");
                         let e = c.A.getStorefrontDataForApplicationId(E.S3);
                         if (null == e || "loading" === e.state) return "loading";
                         if ("error" === e.state) return "hide";
-                        (0, _.s)(f);
+                        (0, _.s)(h);
                         let t = Object.values(e.storefront?.promotions ?? {}).find((e) =>
                             e.rewardRequirements.some((e) => (0, d.Ww)(e) && e.skuIds.includes(i.offerSkuId)),
                         );
@@ -68,7 +68,7 @@ let f = "GameExitPromoPanel",
                     },
                 };
             },
-            getCtaText: (e) => h.intl.formatToPlainString(A.default["8OFeFD"], { applicationName: e }),
+            getCtaText: (e) => f.intl.formatToPlainString(A.default["8OFeFD"], { applicationName: e }),
         },
     };
 function p(e) {

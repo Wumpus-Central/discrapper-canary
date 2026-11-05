@@ -38,29 +38,29 @@ function _() {
     }
     return {
         guard: function (l, E, A) {
-            let { priority: h = "background" } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                f = `${l}/${E}`,
-                I = e.get(f);
-            if (null != I && ("background" === h || "foreground" === I.priority))
-                return ("foreground" === h && c(f, I.request), I.request);
-            let p = a.get(f);
-            if ("foreground" === h && null != p && Date.now() - p.startedAt < 2e3) return (c(f, p.request), p.request);
-            if ("background" === h && n.has(f)) return Promise.reject(new d("guild event is unavailable"));
-            let m = t.get(f);
-            if (null != m && (_(f, m), "background" === h && m.pending))
+            let { priority: f = "background" } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                h = `${l}/${E}`,
+                I = e.get(h);
+            if (null != I && ("background" === f || "foreground" === I.priority))
+                return ("foreground" === f && c(h, I.request), I.request);
+            let p = a.get(h);
+            if ("foreground" === f && null != p && Date.now() - p.startedAt < 2e3) return (c(h, p.request), p.request);
+            if ("background" === f && n.has(h)) return Promise.reject(new d("guild event is unavailable"));
+            let m = t.get(h);
+            if (null != m && (_(h, m), "background" === f && m.pending))
                 return Promise.reject(Error("guild event fetch is backing off"));
-            if ("background" === h && e.size >= 1024)
+            if ("background" === f && e.size >= 1024)
                 return Promise.reject(Error("too many pending guild event fetches"));
-            function g() {
-                return e.get(f)?.request === T;
+            function T() {
+                return e.get(h)?.request === g;
             }
-            let T = Promise.resolve()
+            let g = Promise.resolve()
                 .then(A)
-                .then((e) => (g() && (t.get(f)?.succeed(), t.delete(f), n.delete(f)), e))
+                .then((e) => (T() && (t.get(h)?.succeed(), t.delete(h), n.delete(h)), e))
                 .catch((e) => {
-                    if (e instanceof s.wH || !g()) throw e;
+                    if (e instanceof s.wH || !T()) throw e;
                     if (u(e)) {
-                        for (t.get(f)?.cancel(), t.delete(f), n.delete(f), n.add(f); n.size > 1024;) {
+                        for (t.get(h)?.cancel(), t.delete(h), n.delete(h), n.add(h); n.size > 1024;) {
                             let e = n.values().next().value;
                             if (null == e) break;
                             n.delete(e);
@@ -68,12 +68,12 @@ function _() {
                         throw e;
                     }
                     let a = m ?? new i.A(10 * r.A.Millis.SECOND, 10 * r.A.Millis.MINUTE, !0);
-                    throw (_(f, a), a.cancel(), a.fail(() => queueMicrotask(() => o(f))), e);
+                    throw (_(h, a), a.cancel(), a.fail(() => queueMicrotask(() => o(h))), e);
                 })
                 .finally(() => {
-                    g() && e.delete(f);
+                    T() && e.delete(h);
                 });
-            return (e.set(f, { request: T, priority: h }), "foreground" === h && c(f, T), T);
+            return (e.set(h, { request: g, priority: f }), "foreground" === f && c(h, g), g);
         },
         onRetryable: function (e, t) {
             let n = l.get(e);
@@ -98,12 +98,12 @@ function _() {
 }
 let E = _(),
     A = _(),
-    h = A.guard;
+    f = A.guard;
 n.d(
     t,
     {},
     {
-        FU: h,
+        FU: f,
         G9: function () {
             (E.forgetTransientFailures(), A.forgetTransientFailures());
         },

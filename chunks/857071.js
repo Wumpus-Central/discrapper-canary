@@ -19,10 +19,10 @@ function E(e) {
 function A(e) {
     return !(e === d.ME || c.includes(e)) && ((c = [...c, e]), !0);
 }
-function h(e, t) {
+function f(e, t) {
     null == t ? delete _[e] : (_[e] = t);
 }
-class f extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "LurkingStore";
     initialize() {
         this.waitFor(s.Ay, l.A, o.default);
@@ -47,7 +47,7 @@ class f extends i.Ay.Store {
         return null != e ? u[e] : null;
     }
 }
-let I = new f(r.h, {
+let I = new h(r.h, {
     CONNECTION_OPEN: function () {
         ((c = l.A.getGuildsArray()
             .filter((e) => (0, a.DG)(e))
@@ -59,16 +59,16 @@ let I = new f(r.h, {
         if (n) {
             switch ((A(t), null != a && (u[t] = a), i)) {
                 case d.Q4z.MOBILE_GUILD_DISCOVERY:
-                    h(t, { type: d.Q4z.MOBILE_GUILD_DISCOVERY });
+                    f(t, { type: d.Q4z.MOBILE_GUILD_DISCOVERY });
                     break;
                 case d.Q4z.DIRECTORY_ENTRY:
-                    h(t, { type: d.Q4z.DIRECTORY_ENTRY, directoryChannelId: r });
+                    f(t, { type: d.Q4z.DIRECTORY_ENTRY, directoryChannelId: r });
                     break;
                 case d.Q4z.GAME_COMMUNITY_UPSELL:
-                    h(t, { type: d.Q4z.GAME_COMMUNITY_UPSELL });
+                    f(t, { type: d.Q4z.GAME_COMMUNITY_UPSELL });
                     break;
                 default:
-                    h(t, null);
+                    f(t, null);
             }
             return !0;
         }
@@ -81,7 +81,7 @@ let I = new f(r.h, {
     },
     GUILD_STOP_LURKING_FAILURE: function (e) {
         let { lurkingGuildId: t, lurkingSource: n } = e;
-        return (A(t), h(t, n), !0);
+        return (A(t), f(t, n), !0);
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;

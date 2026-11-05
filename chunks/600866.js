@@ -34,8 +34,8 @@ let E = new Map();
 function A(e) {
     return null === e ? "null" : "object" != typeof e ? typeof e : Array.isArray(e) ? "array" : "object";
 }
-let h = Symbol("version"),
-    f = Object.freeze({}),
+let f = Symbol("version"),
+    h = Object.freeze({}),
     I = new a.A("LibdiscoreStore");
 function p(e) {
     return e;
@@ -57,7 +57,7 @@ class m {
         if ((null == this.shouldIndex || this.shouldIndex(e)) && null != t) return "string" == typeof t ? e[t] : t(e);
     }
 }
-class g {
+class T {
     kkvDatabase;
     partition;
     constructor(e, t) {
@@ -91,7 +91,7 @@ class g {
         return this.kkvDatabase.memoizedSinglePartition(this.partition, e, t);
     }
 }
-class T {
+class g {
     nextVersion;
     state;
     secondaryIndexes = [];
@@ -99,17 +99,17 @@ class T {
         ((this.nextVersion = e), (this.state = this.emptyState()));
     }
     addSecondaryKVIndex(e, t) {
-        let n = new T(this.nextVersion),
+        let n = new g(this.nextVersion),
             i = new m("kv", n, e, void 0, t);
         return (this.secondaryIndexes.push(i), n.intoKV());
     }
     addSecondaryKKVIndex(e, t, n) {
-        let i = new T(this.nextVersion),
+        let i = new g(this.nextVersion),
             r = new m("kkv", i, e, t, n);
         return (this.secondaryIndexes.push(r), i);
     }
     intoKV(e) {
-        return new g(this, e ?? "0");
+        return new T(this, e ?? "0");
     }
     version() {
         return this.state.version;
@@ -139,7 +139,7 @@ class T {
     }
     getPartition(e) {
         let t = this.state.root[e];
-        return null != t ? t.root : f;
+        return null != t ? t.root : h;
     }
     getAllPartitions() {
         return this.state.root;
@@ -162,8 +162,8 @@ class T {
         return null == t ? null : t.root;
     }
     _derivedVersion(e) {
-        let t = e[h];
-        return (null == t && (e[h] = t = this.nextVersion()), t);
+        let t = e[f];
+        return (null == t && (e[f] = t = this.nextVersion()), t);
     }
     mapPartitions(e) {
         let t = [],
@@ -187,7 +187,7 @@ class T {
     }
     memoizedSinglePartition(e, t, n) {
         let i = Symbol(),
-            r = void 0 !== n ? n : t(f);
+            r = void 0 !== n ? n : t(h);
         return () => {
             let n = this.state.root[e];
             if (null == n) return r;
@@ -359,7 +359,7 @@ class S extends i.il {
                         continue;
                     }
                     let s = r.getAllPartitions(),
-                        h = a.getAllPartitions();
+                        f = a.getAllPartitions();
                     !(function (e, t) {
                         let n = [];
                         (t((e, t) => {
@@ -676,14 +676,14 @@ class S extends i.il {
                             })(e, n));
                     })(`${this.getName()}:${i}`, (n) => {
                         let i = Object.keys(s),
-                            r = Object.keys(h);
+                            r = Object.keys(f);
                         for (let r of i) {
                             let i = s[r];
-                            if (!Object.prototype.hasOwnProperty.call(h, r)) {
+                            if (!Object.prototype.hasOwnProperty.call(f, r)) {
                                 n(i, t);
                                 continue;
                             }
-                            let a = h[r],
+                            let a = f[r],
                                 l = i.derived.memoized[e],
                                 o = a.derived.memoized[e];
                             if (null != l && l === o) continue;
@@ -691,24 +691,24 @@ class S extends i.il {
                             let d = {};
                             ((i.derived.memoized[e] = d), (a.derived.memoized[e] = d));
                         }
-                        for (let e of r) Object.prototype.hasOwnProperty.call(s, e) || n(t, h[e]);
+                        for (let e of r) Object.prototype.hasOwnProperty.call(s, e) || n(t, f[e]);
                     });
                 }
         });
     }
     addKKVDatabase(e, t) {
-        let n = new T(this.nextVersion.bind(this));
+        let n = new g(this.nextVersion.bind(this));
         if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? p), null != this.shadowDatabases)) {
-            let n = new T(this.nextVersion.bind(this));
+            let n = new g(this.nextVersion.bind(this));
             ((this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? p));
         }
         return n;
     }
     addKVDatabase(e, t) {
-        let n = new T(this.nextVersion.bind(this)),
+        let n = new g(this.nextVersion.bind(this)),
             i = n.intoKV();
         if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? p), null != this.shadowDatabases)) {
-            let n = new T(this.nextVersion.bind(this));
+            let n = new g(this.nextVersion.bind(this));
             ((this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? p));
         }
         return i;

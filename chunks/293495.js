@@ -1,6 +1,6 @@
 var i = n(31728),
-    l = n(272355),
-    r = n(227042),
+    r = n(272355),
+    l = n(227042),
     s = n(869146),
     a = n(186111),
     o = n(334463),
@@ -22,13 +22,13 @@ function g() {
 }
 function A() {
     let e;
-    if ((0, r.A)({ LayerStore: a.A, PopoutWindowStore: s.A })) {
+    if ((0, l.A)({ LayerStore: a.A, PopoutWindowStore: s.A })) {
         let e;
         return void (null != (e = void 0 ?? h) && o.A.isOpen(e) && i.jD(e));
     }
     null != (e = void 0 ?? h) && o.A.isOpen(e) && i.WU(e);
 }
-class p extends l.A {
+class p extends r.A {
     _initialize() {
         (u.A.addChangeListener(g), a.A.addChangeListener(A));
     }

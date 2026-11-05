@@ -12,9 +12,9 @@ n.d(
     {},
     {
         default: function (e) {
-            let { channel: t, transitionState: n, onClose: _, defaultValue: E, onSubmit: A, onClear: h } = e,
-                [f, I] = r.useState(E),
-                p = (0, o.Vf)(f);
+            let { channel: t, transitionState: n, onClose: _, defaultValue: E, onSubmit: A, onClear: f } = e,
+                [h, I] = r.useState(E),
+                p = (0, o.Vf)(h);
             return (0, i.jsx)(a.a, {
                 transitionState: n,
                 size: "md",
@@ -23,11 +23,11 @@ n.d(
                 actions: [
                     {
                         variant: "secondary",
-                        text: null != h ? c.intl.string(c.t.VkKicb) : c.intl.string(c.t["ETE/oC"]),
+                        text: null != f ? c.intl.string(c.t.VkKicb) : c.intl.string(c.t["ETE/oC"]),
                         onClick:
-                            null != h
+                            null != f
                                 ? function () {
-                                      (h?.(), (0, s.Oo)(u));
+                                      (f?.(), (0, s.Oo)(u));
                                   }
                                 : _,
                     },
@@ -35,7 +35,7 @@ n.d(
                         variant: "primary",
                         text: c.intl.string(c.t.iQ1SwX),
                         onClick: function () {
-                            let e = f.toISOString();
+                            let e = h.toISOString();
                             (null != A ? A(e) : l.A.changeScheduledMessage(t.id, { scheduledTimestamp: e }),
                                 (0, s.Oo)(u));
                         },

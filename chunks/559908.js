@@ -10,7 +10,7 @@ var i = n(855986),
     _ = n(31408),
     E = n(652215);
 let A = new Set(),
-    h = new r.J(
+    f = new r.J(
         function (e) {
             let { userId: t, channelId: n } = e;
             return [t, n];
@@ -20,7 +20,7 @@ let A = new Set(),
             return `${n}-${t}`;
         },
     ),
-    f = new r.J(
+    h = new r.J(
         function (e) {
             let {
                 messageId: t,
@@ -51,11 +51,11 @@ class m extends i.Ay.Store {
         this.waitFor(l.default, c.A, o.Ay);
     }
     getComboScore(e, t) {
-        let n = h.get(I({ userId: e, channelId: t }));
+        let n = f.get(I({ userId: e, channelId: t }));
         return null == n ? 0 : (0, u.RL)(n);
     }
     getUserCombo(e, t) {
-        return h.get(I({ userId: e, channelId: t }));
+        return f.get(I({ userId: e, channelId: t }));
     }
     isComboing(e, t) {
         var n;
@@ -63,11 +63,11 @@ class m extends i.Ay.Store {
         return null != i && i.value >= c.A.combosRequiredCount && null != (n = i) && (n.value > 0 || n?.multiplier > 1);
     }
     getMessageCombo(e) {
-        let t = f.get(e);
+        let t = h.get(e);
         return t?.combo ?? void 0;
     }
     getMostRecentMessageCombo(e) {
-        let t = f.values(e);
+        let t = h.values(e);
         return t[t.length - 1];
     }
     getUserComboShakeIntensity(e, t, n, i) {
@@ -75,13 +75,13 @@ class m extends i.Ay.Store {
         return null != r ? (0, u.U$)(r, i) * n : 0;
     }
 }
-let g = new m(s.h, {
+let T = new m(s.h, {
     POGGERMODE_UPDATE_COMBO: function (e) {
         let { type: t, ...n } = e;
         if (!c.A.isEnabled()) return !1;
         !(function e(t) {
             let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                i = h.get(I(t)),
+                i = f.get(I(t)),
                 r = {
                     ...i,
                     ...t,
@@ -89,16 +89,16 @@ let g = new m(s.h, {
                     multiplier: Math.min(t.multiplier ?? i?.multiplier ?? 1, 7),
                     decayInterval: i?.decayInterval ?? new a.IX(),
                 };
-            (h.set(I(t), r),
+            (f.set(I(t), r),
                 n &&
                     r.decayInterval?.start(1e3, () => {
-                        let t = h.get(I(r));
+                        let t = f.get(I(r));
                         if (null != t) {
                             let n = r.multiplier !== t.multiplier && r.value !== t.value;
                             t.value <= 0 || n
                                 ? (t.decayInterval?.stop(),
-                                  t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), g.emitChange()))
-                                : (e({ ...t, value: t.value - 1 }), g.emitChange());
+                                  t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), T.emitChange()))
+                                : (e({ ...t, value: t.value - 1 }), T.emitChange());
                         }
                     }));
         })(n);
@@ -106,7 +106,7 @@ let g = new m(s.h, {
     POGGERMODE_UPDATE_MESSAGE_COMBO: function (e) {
         let { comboMessage: t } = e;
         if (!c.A.isEnabled()) return !1;
-        f.set(t.messageId, t);
+        h.set(t.messageId, t);
     },
     MESSAGE_CREATE: function (e) {
         let {
@@ -116,7 +116,7 @@ let g = new m(s.h, {
         if (!c.A.isEnabled()) return !1;
         let a = l.default.getId();
         if (!p(i?.id, a, r, A)) return !1;
-        let s = h.get(I({ userId: i?.id ?? "???", channelId: t }));
+        let s = f.get(I({ userId: i?.id ?? "???", channelId: t }));
         if (
             c.A.screenshakeEnabled &&
             c.A.screenshakeEnabledLocations[_.uD.MENTION] &&
@@ -129,4 +129,4 @@ let g = new m(s.h, {
         return !1;
     },
 });
-n.d(t, {}, { Ay: g, gN: p });
+n.d(t, {}, { Ay: T, gN: p });

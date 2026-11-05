@@ -7,7 +7,7 @@ n.d(t, {
     XA: () => p,
     XB: () => m,
     AE: () => I,
-    r1: () => f,
+    r1: () => h,
 });
 var i = n(723702);
 function r(e, t) {
@@ -43,12 +43,12 @@ function E(e) {
     return null != e && _.test(e);
 }
 let A = /\.(riv)$/i,
-    h = (0, i.un)() ? /\.(mp4|mov|qt)$/i : ((0, i.m0)(), /\.(mp4|webm|mov|qt)$/i);
-function f(e) {
-    return r(e, h) || !1;
+    f = (0, i.un)() ? /\.(mp4|mov|qt)$/i : ((0, i.m0)(), /\.(mp4|webm|mov|qt)$/i);
+function h(e) {
+    return r(e, f) || !1;
 }
 function I(e) {
-    return null != e && (h.test(e) || (null != e && !1));
+    return null != e && (f.test(e) || (null != e && !1));
 }
 function p(e) {
     return null != e && A.test(e);

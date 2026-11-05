@@ -19,8 +19,8 @@ n.d(
                     fullWidth: E = !1,
                     fullWidthContainer: A = !1,
                 } = e,
-                h = r.useMemo(() => ({ size: t, fullWidth: E }), [t, E]),
-                f = r.useRef(null),
+                f = r.useMemo(() => ({ size: t, fullWidth: E }), [t, E]),
+                h = r.useRef(null),
                 I = (function (e, t, n) {
                     let [i, a] = r.useState(null);
                     return (
@@ -44,7 +44,7 @@ n.d(
                         }, [e, t, n]),
                         i
                     );
-                })(f, n, _),
+                })(h, n, _),
                 p = n;
             return (
                 I && (p = n.replace("horizontal", "vertical")),
@@ -57,8 +57,8 @@ n.d(
                     padding: d,
                     className: c,
                     fullWidth: !!A || E,
-                    ref: f,
-                    children: (0, i.jsx)(s.Z.Provider, { value: h, children: u }),
+                    ref: h,
+                    children: (0, i.jsx)(s.Z.Provider, { value: f, children: u }),
                 })
             );
         },

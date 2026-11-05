@@ -10,14 +10,14 @@ var i = n(620632),
     _ = n(65238),
     E = n(652215);
 let A = 10 * l.A.Millis.MINUTE,
-    h = l.A.Millis.MINUTE,
-    f = l.A.Millis.MINUTE;
+    f = l.A.Millis.MINUTE,
+    h = l.A.Millis.MINUTE;
 function I(e) {
     let t = c.A.getFetchState(e);
     if (void 0 === t) return !0;
     if ("loading" === t) return !1;
     let n = c.A.getFetchedAt(e);
-    return null == n || Date.now() - n > ("error" === t ? A : h);
+    return null == n || Date.now() - n > ("error" === t ? A : f);
 }
 async function p(e) {
     if (0 !== e.length)
@@ -37,9 +37,9 @@ async function p(e) {
         }
 }
 function m(e) {
-    return e?.type === "error" ? A : f;
+    return e?.type === "error" ? A : h;
 }
-async function g(e) {
+async function T(e) {
     let {
         shouldFetch: t,
         filteredSkuIds: n,
@@ -100,7 +100,7 @@ n.d(
         },
         N4: async function (e) {
             let { skuIds: t } = e;
-            await g({ type: "skus", skuIds: t });
+            await T({ type: "skus", skuIds: t });
         },
         cF: async function (e, t) {
             let n;
@@ -115,7 +115,7 @@ n.d(
         },
         l9: async function (e) {
             let { applicationId: t } = e;
-            await g({ type: "application", applicationId: t });
+            await T({ type: "application", applicationId: t });
         },
         rd: p,
         tx: async function (e) {

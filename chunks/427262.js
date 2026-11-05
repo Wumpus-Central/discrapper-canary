@@ -31,7 +31,7 @@ function A(e) {
         else if (c(e.global_name)) return e.global_name;
         else return;
 }
-function h(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { isMobile: n = !1, isVR: i = !1 } = t;
     switch (e) {
@@ -54,7 +54,7 @@ function h(e) {
             return null;
     }
 }
-function f(e, t) {
+function h(e, t) {
     let { maxDaysOld: n, minDaysOld: i = 0 } = t;
     if (null == e) return !1;
     let r = Date.now() - e.createdAt.getTime();
@@ -82,7 +82,7 @@ function m(e) {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-function g() {
+function T() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
@@ -105,7 +105,7 @@ n.d(
                     (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
                 );
             },
-            getUserIsStaff: g,
+            getUserIsStaff: T,
             getFormattedName: function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null == e) return "???";
@@ -114,19 +114,19 @@ n.d(
                 return n === i ? n : null != n ? `${n} (${i})` : i;
             },
             getGlobalName: A,
-            humanizeStatus: h,
+            humanizeStatus: f,
             useDirectMessageRecipient: m,
         },
         G2: function (e) {
-            return !f(e, { minDaysOld: 0, maxDaysOld: 30 });
+            return !h(e, { minDaysOld: 0, maxDaysOld: 30 });
         },
-        Gn: g,
-        MU: h,
+        Gn: T,
+        MU: f,
         QV: p,
         R1: m,
         mG: _,
         mv: function (e) {
-            return f(e, { minDaysOld: 0, maxDaysOld: 7 });
+            return h(e, { minDaysOld: 0, maxDaysOld: 7 });
         },
         tx: E,
     },

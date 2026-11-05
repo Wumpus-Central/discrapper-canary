@@ -11,23 +11,23 @@ var i = n(582128),
     _ = n(691060),
     E = n(454908),
     A = n(826767),
-    h = n(474078),
-    f = n(734057),
+    f = n(474078),
+    h = n(734057),
     I = n(652215),
     p = n(746080);
 n(253913);
 let m = "No Mic";
-function g(e) {
+function T(e) {
     return (0, l.bG)(
-        [f.A],
+        [h.A],
         () =>
             null != e &&
             !!e.isForumPost() &&
             null != e.parent_id &&
-            (f.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
+            (h.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
     );
 }
-function T(e) {
+function g(e) {
     return e.size >= 5;
 }
 n.d(
@@ -36,7 +36,7 @@ n.d(
     {
         IO: function (e) {
             let t = (0, _.kt)(e);
-            return !!g(e) && !t.some((e) => e.name === m);
+            return !!T(e) && !t.some((e) => e.name === m);
         },
         Ij: function (e) {
             return e.type === s.$.PLAYING && (0, d.A)(e, I.jUm.JOIN);
@@ -44,7 +44,7 @@ n.d(
         Qq: function (e, t) {
             let n = (0, i.useMemo)(() => e?.find((e) => e.name === m), [e]),
                 r = null == n || !t.has(n.id),
-                a = null == n || (T(t) && !t.has(n.id));
+                a = null == n || (g(t) && !t.has(n.id));
             return { noMicTag: n, voiceChatEnabled: r, voiceToggleDisabled: a };
         },
         WP: function (e, t, n) {
@@ -55,20 +55,20 @@ n.d(
                     i = [],
                     a = [];
                 for (let n of t) {
-                    let t = f.A.getChannel(n);
+                    let t = h.A.getChannel(n);
                     null != t && !t.hasFlag(p.lx.PINNED) && (0, A.A)(t) <= e ? a.push(n) : i.push(n);
                 }
                 return { activeThreadIds: i, archivedThreadIds: [...a, ...n] };
             }, [r, t, n]);
         },
-        YG: g,
+        YG: T,
         Zu: function (e) {
             let t = e.trim().split("\n")[0] ?? "";
-            return (0, h.A)(t.slice(0, 100), !0);
+            return (0, f.A)(t.slice(0, 100), !0);
         },
         _k: function (e) {
             let t = (function (e) {
-                    let t = (0, l.bG)([f.A], () => f.A.getChannel(e));
+                    let t = (0, l.bG)([h.A], () => h.A.getChannel(e));
                     a()(null == t || t.isGameInvitesChannel(), "requires a game invites channel");
                     let { data: n } = (0, E.I)(t?.gameId);
                     return n?.getOfficialApplicationId();
@@ -82,17 +82,17 @@ n.d(
         n5: function (e, t) {
             return (0, u.OA)(e, { enabled: t, allowArchived: !0 });
         },
-        t4: T,
+        t4: g,
         yk: function (e, t) {
             let n = e.isGameInvitesChannel(),
                 r = (0, l.yK)(
-                    [f.A],
+                    [h.A],
                     () => {
                         if (!n) return [];
                         let e = new Set(),
                             i = [];
                         for (let n of t) {
-                            let t = f.A.getChannel(n)?.ownerId;
+                            let t = h.A.getChannel(n)?.ownerId;
                             null == t || e.has(t) || (e.add(t), i.push(t));
                         }
                         return i;

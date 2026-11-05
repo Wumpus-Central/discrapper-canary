@@ -64,7 +64,7 @@ class A extends r.Component {
         };
     }
 }
-class h extends r.PureComponent {
+class f extends r.PureComponent {
     static contextType = u.C;
     static defaultProps = { className: _.kL, reverse: !1, hide: !1, animate: !0 };
     state = { unread: null, mention: null };
@@ -155,4 +155,4 @@ class h extends r.PureComponent {
         });
     }
 }
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

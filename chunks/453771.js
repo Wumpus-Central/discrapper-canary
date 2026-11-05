@@ -10,10 +10,10 @@ var i = n(796873),
     _ = n(652215),
     E = n(682901),
     A = n(792996);
-function h(e, t, n) {
+function f(e, t, n) {
     return new File([e], t, { type: n });
 }
-let f = [
+let h = [
     { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
     { reType: /^image\/svg\+xml/, klass: "webcode" },
     { reType: /^image\//, klass: "image" },
@@ -34,7 +34,7 @@ let f = [
 ];
 function I(e, t) {
     e = e?.toLowerCase() ?? "";
-    let n = s().find(f, (n) =>
+    let n = s().find(h, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
@@ -84,10 +84,10 @@ n.d(
         TX: function (e) {
             return I(e.name, e.type);
         },
-        VE: h,
+        VE: f,
         o2: m,
         ww: function (e, t) {
-            return e instanceof File ? e : h(e.data.buffer, e.filename, t ?? "text/plain");
+            return e instanceof File ? e : f(e.data.buffer, e.filename, t ?? "text/plain");
         },
     },
 );

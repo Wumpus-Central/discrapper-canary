@@ -11,8 +11,8 @@ t.d(
     {},
     {
         A: function (e) {
-            let { className: n, guildId: d } = e,
-                u = (0, r.A)();
+            let { className: n, guildId: u } = e,
+                d = (0, r.A)();
             return (0, i.jsx)(o.A, {
                 className: n,
                 icon: (0, i.jsx)(a.CalendarIcon, { size: "custom", color: "currentColor", height: 20, width: 20 }),
@@ -50,8 +50,8 @@ t.d(
                             t.e(454450),
                             t.e(664743),
                         ]).then(t.bind(t, 688218));
-                        return (n) => (0, i.jsx)(e, { ...n, guildId: d });
-                    }, u);
+                        return (n) => (0, i.jsx)(e, { ...n, guildId: u });
+                    }, d);
                 },
             });
         },

@@ -1,33 +1,33 @@
-var a = t(477900),
-    n = t(582128),
-    s = t(696292),
-    i = t(321538),
-    r = t(318346),
-    c = t(863705),
-    o = t(652215),
-    A = t(792996);
-t.d(
-    l,
+var l = a(477900),
+    s = a(582128),
+    n = a(696292),
+    i = a(321538),
+    r = a(318346),
+    c = a(863705),
+    o = a(652215),
+    A = a(792996);
+a.d(
+    t,
     {},
     {
         A: function (e) {
-            let { location: l, onNavigate: t, variant: u, themeOverride: p } = e,
-                d = n.useCallback(() => {
+            let { location: t, onNavigate: a, variant: E, themeOverride: p } = e,
+                d = s.useCallback(() => {
                     ((0, r.Y)({
-                        pageType: l,
+                        pageType: t,
                         sectionType: o.JJy.ORBS_BALANCE_MENU,
                         ctaObject: o.ZSU.CTA_TO_QUEST_HOME,
                     }),
-                        null != t && t(),
-                        (0, i.mA)({ fromContent: s.u.ORBS_BALANCE_MENU }));
-                }, [l, t]);
-            return (0, a.jsx)(c.SS, {
-                analyticsPage: l,
+                        null != a && a(),
+                        (0, i.mA)({ fromContent: n.u.ORBS_BALANCE_MENU }));
+                }, [t, a]);
+            return (0, l.jsx)(c.SS, {
+                analyticsPage: t,
                 cardAlignment: c.SS.CardAlignment.END,
                 ctaText: A.intl.string(A.t.VC4Mq0),
                 ctaOnClick: d,
-                onNavigate: t,
-                pillVariant: u,
+                onNavigate: a,
+                pillVariant: E,
                 themeOverride: p,
             });
         },

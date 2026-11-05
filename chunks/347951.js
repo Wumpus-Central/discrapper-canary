@@ -1,14 +1,14 @@
 var i = n(855986),
-    l = n(610136),
-    a = n(576705),
-    r = n(652215);
-function E(e) {
-    return (0, i.bG)([a.A], () => null != e && a.A.can(r.xBc.MANAGE_GUILD, e), [e]);
+    r = n(610136),
+    l = n(576705),
+    E = n(652215);
+function a(e) {
+    return (0, i.bG)([l.A], () => null != e && l.A.can(E.xBc.MANAGE_GUILD, e), [e]);
 }
-function s(e) {
-    let t = (0, i.bG)([l.A], () => (null != e ? l.A.getGuildIncident(e.id) : null));
+function d(e) {
+    let t = (0, i.bG)([r.A], () => (null != e ? r.A.getGuildIncident(e.id) : null));
     return (
-        e?.features.has(r.GuildFeatures.INVITES_DISABLED) ||
+        e?.features.has(E.GuildFeatures.INVITES_DISABLED) ||
         (t?.invitesDisabledUntil != null && new Date(t.invitesDisabledUntil) > new Date())
     );
 }
@@ -16,12 +16,12 @@ n.d(
     t,
     {},
     {
-        Fi: E,
+        Fi: a,
         Ig: function (e) {
-            let t = E(e),
-                n = s(e);
+            let t = a(e),
+                n = d(e);
             return t && n;
         },
-        Wr: s,
+        Wr: d,
     },
 );

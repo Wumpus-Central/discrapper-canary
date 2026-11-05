@@ -1,5 +1,5 @@
 let i;
-n.d(t, { JA: () => T, Ay: () => w, XA: () => b, jd: () => D });
+n.d(t, { JA: () => g, Ay: () => w, XA: () => b, jd: () => D });
 var r,
     a = n(582128),
     s = n(855986),
@@ -11,13 +11,13 @@ var r,
     _ = n(754712),
     E = n(576705),
     A = n(309010),
-    h = n(279250),
-    f = n(880144),
+    f = n(279250),
+    h = n(880144),
     I = n(613235),
     p = n(997630),
     m = n(731854),
-    g = n(792996),
-    T =
+    T = n(792996),
+    g =
         (((r = {})[(r.Present = 0)] = "Present"),
         (r[(r.Update = 1)] = "Update"),
         (r[(r.Cancel = 2)] = "Cancel"),
@@ -61,7 +61,7 @@ function b() {
 }
 function v() {
     let e = c.A.getChannel(A.Ay.getVoiceChannelId());
-    return ((S = null != e && (0, f.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1)), y(), !1);
+    return ((S = null != e && (0, h.A)(_.Ay) && (0, f.vz)(e, u.A, E.A, !1)), y(), !1);
 }
 function P() {
     return null != i ? (0, I.A)(i) : null;
@@ -71,7 +71,7 @@ function M() {
     return {
         sourceId: "prepicked:0",
         nativePickerStyleUsed: R.lastPresentedPickerStyle,
-        sourceName: P() ?? g.intl.string(g.t.KKcy95),
+        sourceName: P() ?? T.intl.string(T.t.KKcy95),
         sound: e,
     };
 }
@@ -118,7 +118,7 @@ let w = new U(l.h, {
         let { existing: t, content: n } = e;
         if (((R = { lastPickerAction: 1 }), (i = n), 0 === N && !t)) {
             let e = c.A.getChannel(A.Ay.getVoiceChannelId());
-            null != e && (0, f.A)(_.Ay) && (0, h.vz)(e, u.A, E.A, !1) && (0, o.XI)(e.getGuildId(), e.id, M());
+            null != e && (0, h.A)(_.Ay) && (0, f.vz)(e, u.A, E.A, !1) && (0, o.XI)(e.getGuildId(), e.id, M());
         }
     },
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: function () {

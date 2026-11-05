@@ -29,7 +29,7 @@ let A = {
         shoes: u.default["Yt3O/L"],
         base: u.default.bbQzr1,
     },
-    h = {
+    f = {
         face: r.V.FACE,
         outfit: r.V.OUTFIT,
         outfit_color: r.V.OUTFIT,
@@ -39,7 +39,7 @@ let A = {
         shoes: r.V.SHOES,
         base: r.V.BASE,
     },
-    f = {
+    h = {
         [d.s9.FACE]: "face",
         [d.s9.OUTFIT]: "outfit",
         [d.s9.HEADWEAR]: "hat",
@@ -65,7 +65,7 @@ let A = {
 function m(e) {
     return (0, o.nb)(e.trait, e.optionId);
 }
-function g(e) {
+function T(e) {
     let { trait: t, rarity: n } = e;
     if (null == n) {
         let n = I[t];
@@ -80,7 +80,7 @@ function g(e) {
     let { commonMessage: i, topMessage: o } = p[t];
     return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.ei[n] });
 }
-let T = {
+let g = {
     [r.V.FACE]: u.default["4IdR/H"],
     [r.V.OUTFIT]: u.default.NuujPd,
     [r.V.HAT]: u.default.o1Zign,
@@ -94,10 +94,10 @@ n.d(
     {
         C5: m,
         Cz: function (e) {
-            let t = T[e];
+            let t = g[e];
             return null != t ? _.intl.string(t) : void 0;
         },
-        Oq: g,
+        Oq: T,
         Ux: function (e) {
             switch (e) {
                 case "base":
@@ -110,13 +110,13 @@ n.d(
         cq: function (e) {
             return _.intl.string(A[e]);
         },
-        hw: h,
+        hw: f,
         k0: function (e, t) {
             if (e === d.gr.FINALIZE_CHARACTER) return t[0];
             if (!(0, d.Rq)(e)) return;
             let { characterStage: n } = (0, d.UG)(e),
-                i = f[n];
-            if (null != i) return t.find((e) => e === h[i]);
+                i = h[n];
+            if (null != i) return t.find((e) => e === f[i]);
         },
         p8: function (e) {
             let t = new Map(e.map((e, t) => [e, t]));
@@ -135,7 +135,7 @@ n.d(
                 !t)
             ) {
                 null != e.rarity && n.push(_.intl.string(c.iG[e.rarity]));
-                let t = g(e);
+                let t = T(e);
                 null != t && n.push(t);
             }
             return n.join(", ");

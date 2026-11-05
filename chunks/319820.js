@@ -12,9 +12,9 @@ var o = n(855986),
 (n(735164), n(980094));
 var m = n(366523);
 (n(773669), n(580630));
-var f = n(652215);
+var p = n(652215);
 n(792996);
-var p = n(799591);
+var f = n(799591);
 n.d(
     t,
     {},
@@ -26,20 +26,20 @@ n.d(
                 i = (0, o.bG)([c.A], () => c.A.getProduct(r.id));
             return {
                 tableLayout:
-                    ((t = null != i && r.productLine === f.EZt.COLLECTIBLES && i.type !== u.R.BUNDLE),
-                    (n = r.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM),
+                    ((t = null != i && r.productLine === p.EZt.COLLECTIBLES && i.type !== u.R.BUNDLE),
+                    (n = r.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM),
                     t || n ? "THREE_COLUMN" : "TWO_COLUMN"),
-                isSocialLayerGameItem: r.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM,
+                isSocialLayerGameItem: r.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM,
                 product: i,
             };
         },
         r$: function (e) {
             let { sku: t, slayerProductPreviewClassName: n } = e,
                 i = (0, o.bG)([c.A], () => c.A.getProduct(t.id));
-            return null != i && t.productLine === f.EZt.COLLECTIBLES && i.type !== u.R.BUNDLE
+            return null != i && t.productLine === p.EZt.COLLECTIBLES && i.type !== u.R.BUNDLE
                 ? (0, r.jsx)(d.O, { sku: t })
-                : t.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM
-                  ? (0, r.jsx)(m.e, { containerClassName: a()(p.oC, n), sku: t, shape: "square" })
+                : t.productLine === p.EZt.SOCIAL_LAYER_GAME_ITEM
+                  ? (0, r.jsx)(m.e, { containerClassName: a()(f.oC, n), sku: t, shape: "square" })
                   : null;
         },
         yh: function (e) {

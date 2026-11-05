@@ -18,10 +18,10 @@ n.d(
                     transform: _,
                 } = e,
                 [E, A] = i.useState(t ?? !1),
-                h = i.useContext(l.W),
-                f = i.useRef(c);
+                f = i.useContext(l.W),
+                h = i.useRef(c);
             i.useEffect(() => {
-                f.current = c;
+                h.current = c;
             }, [c]);
             let I = i.useRef(u);
             i.useEffect(() => {
@@ -29,14 +29,14 @@ n.d(
             }, [u]);
             let p = i.useRef(d);
             function m() {
-                return { boundary: h?.ref.current ?? "clippingAncestors", padding: h?.padding };
+                return { boundary: f?.ref.current ?? "clippingAncestors", padding: f?.padding };
             }
             i.useEffect(() => {
                 p.current = d;
             }, [d]);
             let {
-                    refs: g,
-                    floatingStyles: T,
+                    refs: T,
+                    floatingStyles: g,
                     context: S,
                 } = (0, r.we)({
                     open: E,
@@ -55,8 +55,8 @@ n.d(
                                     }),
                                     null != I.current &&
                                         Object.assign(n.floating.style, { width: `${I.current(t.reference)}px` }),
-                                    null != f.current &&
-                                        Object.assign(n.floating.style, { maxHeight: `${f.current(t.reference)}px` }));
+                                    null != h.current &&
+                                        Object.assign(n.floating.style, { maxHeight: `${h.current(t.reference)}px` }));
                             },
                         })),
                         (0, a.UU)(m),
@@ -72,8 +72,8 @@ n.d(
             return {
                 isOpen: E,
                 setIsOpen: A,
-                refs: g,
-                floatingStyles: T,
+                refs: T,
+                floatingStyles: g,
                 context: S,
                 getReferenceProps: C,
                 getFloatingProps: O,

@@ -23,8 +23,8 @@ var i = n(882035),
     _ = n(392121),
     E = n(199773),
     A = n(652215);
-let h = new r.A(1e3, 6e4),
-    f = {},
+let f = new r.A(1e3, 6e4),
+    h = {},
     I = null;
 function p() {
     return {
@@ -39,8 +39,8 @@ function p() {
     };
 }
 let m = (0, i.h)(p),
-    g = !1;
-function T(e) {
+    T = !1;
+function g(e) {
     return {
         ...e,
         candidates: new Map(e.candidates),
@@ -85,13 +85,13 @@ function O(e, t) {
 let R = new o.OC(
     async (e) => {
         let t = I;
-        if (((I = null), null == t || t.epoch !== f)) return;
-        if ("retry" === t.source && v()) return void h.succeed();
+        if (((I = null), null == t || t.epoch !== h)) return;
+        if ("retry" === t.source && v()) return void f.succeed();
         let n = await (async function (e, t) {
             let n = e.filter(_.K5),
                 i = e.filter((e) => !(0, _.K5)(e)).map((e) => ({ content: e, weight: 1 }));
             if (0 === n.length) return { context: t, candidates: i, outcome: "client-only" };
-            if (h.pending) return { context: t, candidates: i, outcome: "server-backoff" };
+            if (f.pending) return { context: t, candidates: i, outcome: "server-backoff" };
             try {
                 let e = await l.Bo.post({
                         url: A.Rsh.DISMISSIBLE_CONTENT_ARBITRATE,
@@ -118,17 +118,17 @@ let R = new o.OC(
                 return { context: t, candidates: i, outcome: "server-failure" };
             }
         })(e, t);
-        if (n.context.epoch !== f) return;
-        if ("retry" === n.context.source && v()) return void h.succeed();
+        if (n.context.epoch !== h) return;
+        if ("retry" === n.context.source && v()) return void f.succeed();
         !(function (e) {
             if (
-                (("client-only" === e.outcome || "server-success" === e.outcome) && h.succeed(),
+                (("client-only" === e.outcome || "server-success" === e.outcome) && f.succeed(),
                 "server-failure" === e.outcome)
             ) {
-                if (P(m.getState())) return h.succeed();
-                h.fails >= 3
-                    ? h.cancel()
-                    : h.fail(() => {
+                if (P(m.getState())) return f.succeed();
+                f.fails >= 3
+                    ? f.cancel()
+                    : f.fail(() => {
                           D([...m.getState().candidates.keys()], "retry", e.context.epoch);
                       });
             }
@@ -136,7 +136,7 @@ let R = new o.OC(
         let i = !1;
         ((0, a.r)(() => {
             m.setState((e) => {
-                let t = T(e),
+                let t = g(e),
                     r = (function (e, t) {
                         let n = t.filter((t) => {
                             let { content: n, weight: i } = t;
@@ -154,7 +154,7 @@ let R = new o.OC(
                         let r = Math.random() * i;
                         for (let t of n) if ((r -= t.weight) < 0) return e.candidates.get(t.content);
                     })(t, n.candidates);
-                return h.pending && null == r ? t : ((i = null != r), O(t, r));
+                return f.pending && null == r ? t : ((i = null != r), O(t, r));
             });
         }),
             i && b());
@@ -189,17 +189,17 @@ function L(e, t) {
 }
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    ("settled" === e.arbitration.type || ("request" === e.arbitration.type && t) ? b() : t && h.succeed(),
+    ("settled" === e.arbitration.type || ("request" === e.arbitration.type && t) ? b() : t && f.succeed(),
         "request" === e.arbitration.type &&
-            (R.isPending() || R.isInvoking() || !(h.fails >= 3) || h.succeed(),
+            (R.isPending() || R.isInvoking() || !(f.fails >= 3) || f.succeed(),
             D(e.arbitration.candidates, "candidate")));
 }
 function D(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f;
-    n === f && (R.isPending() || (I = { epoch: n, source: t }), R.queue(e).catch(A.tEg));
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h;
+    n === h && (R.isPending() || (I = { epoch: n, source: t }), R.queue(e).catch(A.tEg));
 }
 function b() {
-    ((f = {}), (I = null), h.succeed(), R.reset());
+    ((h = {}), (I = null), f.succeed(), R.reset());
 }
 function v() {
     return P(m.getState());
@@ -214,8 +214,8 @@ function M(e) {
         n = null;
     ((0, a.r)(() => {
         m.setState((i) => {
-            let r = T(i);
-            return g ? r : t ? N(r, e) : (n = L((r.candidates.set(e.content, e), r), e.content)).state;
+            let r = g(i);
+            return T ? r : t ? N(r, e) : (n = L((r.candidates.set(e.content, e), r), e.content)).state;
         });
     }),
         null != n && y(n));
@@ -226,7 +226,7 @@ function U(e, t) {
         r = !1;
     ((0, a.r)(() => {
         m.setState((a) => {
-            let s = T(a);
+            let s = g(a);
             if (((i = s.shownFatigableCandidate?.content === e.content), t)) return (n = L(S(C(s, e), e), null)).state;
             {
                 let t = S(C(s, e), e);
@@ -261,7 +261,7 @@ function F() {
 function B() {
     (0, a.r)(() => {
         m.setState((e) => {
-            let t = T(e);
+            let t = g(e);
             return ((t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t);
         });
     });
@@ -275,7 +275,7 @@ class H extends s.Ay.Store {
         (this.waitFor(E.A, c.A, u.A), this.syncWith([c.A, u.A], () => this.setHasRequiredAction()));
     }
     setHasRequiredAction() {
-        g = (function () {
+        T = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.A,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.A;
             return null != t.getAction() || Object.keys(e.getState()).length > 0;

@@ -12,8 +12,8 @@ var r = n(812729),
 n(672396);
 let E = null,
     A = new Set(),
-    h = null,
     f = null,
+    h = null,
     I = new d.g();
 function p(e) {
     return (0, u.Vx)(e) ? `native-${e.id}` : null != e.nativeId ? `native-${e.nativeId}` : null;
@@ -26,7 +26,7 @@ function m(e) {
         return (I.reset(), d.default.fromTimestampWithSequence(t, I));
     }
 }
-let g = new l.J(
+let T = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = p(e);
@@ -36,9 +36,9 @@ let g = new l.J(
             return -e.timestamp;
         },
     ),
-    T = 0;
+    g = 0;
 function S(e) {
-    return g.set(e.id, e);
+    return T.set(e.id, e);
 }
 class N extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
@@ -55,13 +55,13 @@ class N extends s.Ay.Store {
         return A;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [g.values(e, !0), g.version];
+        return [T.values(e, !0), T.version];
     }
     isModuleLoggingEnabled() {
-        return null != f;
+        return null != h;
     }
     isStateDebuggingEnabled() {
-        return null != h;
+        return null != f;
     }
 }
 let C = new N(
@@ -79,13 +79,13 @@ let C = new N(
                   let { enabled: t } = e;
                   return (
                       t
-                          ? null == h &&
-                            (h = setInterval(() => {
+                          ? null == f &&
+                            (f = setInterval(() => {
                                 E?.getDebuggingState?.((e) => {
                                     a()(i, e) || ((i = e), C.emitChange());
                                 });
                             }, 300))
-                          : null != h && (clearInterval(h), (h = null)),
+                          : null != f && (clearInterval(f), (f = null)),
                       !0
                   );
               },
@@ -126,18 +126,18 @@ let C = new N(
                   let { enabled: t } = e;
                   return (
                       t
-                          ? null == f &&
-                            (f = setInterval(() => {
+                          ? null == h &&
+                            (h = setInterval(() => {
                                 let e = E?.getLastAssociatedPID() ?? null;
-                                E?.getNativeBreadcrumbs({ minBreadcrumbId: T }, (t) => {
+                                E?.getNativeBreadcrumbs({ minBreadcrumbId: g }, (t) => {
                                     let { breadcrumbs: n } = t;
                                     for (let t of n)
                                         !(function (e, t, n) {
                                             let i,
                                                 r = p(e);
                                             if (null == r) throw Error("Native breadcrumb has no native id");
-                                            g.size(r) > 0 ||
-                                                ((T = Math.max(T, Number(e.id))),
+                                            T.size(r) > 0 ||
+                                                ((g = Math.max(g, Number(e.id))),
                                                 S({
                                                     id: (i = m(e.timestamp)),
                                                     key: i,
@@ -154,7 +154,7 @@ let C = new N(
                                     C.emitChange();
                                 });
                             }, 3e3))
-                          : null != f && (clearInterval(f), (f = null)),
+                          : null != h && (clearInterval(h), (h = null)),
                       !0
                   );
               },

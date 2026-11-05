@@ -1,7 +1,7 @@
 n.d(t, { A: () => A });
 var i = n(607399),
-    l = n(855986),
-    r = n(73153),
+    r = n(855986),
+    l = n(73153),
     s = n(225123);
 let a = Object.freeze({
     "voice-conversations": { popoutOffset: { x: 45, y: 0 } },
@@ -28,7 +28,7 @@ function f() {
             if (((c[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== o[n] && (c[e] = !1);
         }
 }
-class g extends l.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "TutorialIndicatorStore";
     initialize() {
         (f(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(s.A));
@@ -50,7 +50,7 @@ class g extends l.Ay.Store {
         return null != t ? t[e] : null;
     }
 }
-let A = new g(r.h, {
+let A = new g(l.h, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         ((h = !0),

@@ -85,8 +85,8 @@ n.d(
                 entityType: _,
                 entityMetadata: E,
                 image: A,
-                recurrenceRule: h,
-                eventExceptions: f,
+                recurrenceRule: f,
+                eventExceptions: h,
             } = e;
             return {
                 id: n ?? "-1",
@@ -102,8 +102,8 @@ n.d(
                 guild_id: t,
                 creator_id: i.default.getId(),
                 status: s.XG.SCHEDULED,
-                recurrence_rule: l(h),
-                guild_scheduled_event_exceptions: f.map((e) => ({
+                recurrence_rule: l(f),
+                guild_scheduled_event_exceptions: h.map((e) => ({
                     event_exception_id: e.eventExceptionId,
                     event_id: e.eventId,
                     guild_id: e.guildId,

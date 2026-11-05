@@ -1,7 +1,7 @@
 (n(134528), n(947204));
 var i = n(477900),
-    l = n(582128),
-    r = n(546738),
+    r = n(582128),
+    l = n(546738),
     s = n(646514),
     a = n(602853);
 let o = 1e3 / 30;
@@ -23,29 +23,29 @@ class u {
     }
     getValues(e, t, n) {
         let i = this.getSource(),
-            l = this.getConverter(),
-            r = i.length,
+            r = this.getConverter(),
+            l = i.length,
             s = Array(n),
             a = 0,
             o = 0;
-        if (r >= 2) {
+        if (l >= 2) {
             let t = i.at(0),
                 n = i.at(1);
             if (null != t && null != n) {
                 let i = n.time - t.time;
-                i > 0 && t.time - e < 1.5 * i && (o = null != l ? l(t.value) : t.value);
+                i > 0 && t.time - e < 1.5 * i && (o = null != r ? r(t.value) : t.value);
             }
         }
         let u = e;
         for (let e = 0; e < n; e++) {
-            for (; a < r;) {
+            for (; a < l;) {
                 let e = i.at(a);
                 if (null == e) {
                     a++;
                     continue;
                 }
                 if (e.time >= u) break;
-                ((o = null != l ? l(e.value) : e.value), a++);
+                ((o = null != r ? r(e.value) : e.value), a++);
             }
             ((s[e] = o), (u += t));
         }
@@ -57,22 +57,22 @@ n.d(
     {},
     {
         A: function (e) {
-            let t = (0, l.useRef)(null),
-                [n, d] = (0, l.useState)(null),
+            let t = (0, r.useRef)(null),
+                [n, d] = (0, r.useState)(null),
                 c = (0, a.r)(s.A.colors.BACKGROUND_BASE_LOW).hsl(),
                 h = (0, a.r)(s.A.colors.TEXT_DEFAULT).hsl(),
                 f = (0, a.r)(s.A.colors.BACKGROUND_MOD_MUTED).hsl(),
                 g = (0, a.r)(s.A.unsafe_rawColors.BRAND_500).hsl(),
                 A = e.windowMs,
-                p = (0, l.useRef)(e);
-            ((0, l.useEffect)(() => {
+                p = (0, r.useRef)(e);
+            ((0, r.useEffect)(() => {
                 p.current = e;
             }),
-                (0, l.useEffect)(() => {
+                (0, r.useEffect)(() => {
                     let n = t.current;
                     if (null == n) return;
                     ((n.width = e.width), (n.height = e.height));
-                    let i = new r.TimelineGraphView(n, window.devicePixelRatio ?? 1);
+                    let i = new l.TimelineGraphView(n, window.devicePixelRatio ?? 1);
                     ((i.backgroundColor = c),
                         (i.textColor = h),
                         (i.gridColor = f),
@@ -80,20 +80,20 @@ n.d(
                         (i.fontFamily = "gg sans"),
                         (i.fontSize = 11),
                         null != A && i.setScale(A / n.width));
-                    let l = new u(
+                    let r = new u(
                         () => p.current.dataPoints,
                         () => p.current.converter,
                     );
-                    (l.setColor(g), i.addDataSeries(l), i.updateEndDate(), d(i));
+                    (r.setColor(g), i.addDataSeries(r), i.updateEndDate(), d(i));
                 }, [t, c, g, f, h, A, e.width, e.height]),
-                (0, l.useEffect)(() => {
+                (0, r.useEffect)(() => {
                     if (null == n) return;
                     let e = 0,
                         i = 0;
                     return (
-                        (e = requestAnimationFrame(function l(r) {
-                            if (null == n || ((e = requestAnimationFrame(l)), r - i < o)) return;
-                            ((i = r), n.updateEndDate(), n.repaint());
+                        (e = requestAnimationFrame(function r(l) {
+                            if (null == n || ((e = requestAnimationFrame(r)), l - i < o)) return;
+                            ((i = l), n.updateEndDate(), n.repaint());
                             let s = p.current,
                                 a = s.markers,
                                 u = s.windowMs;
@@ -102,17 +102,17 @@ n.d(
                                     n = e.getContext("2d");
                                 if (null == n) return;
                                 let i = Date.now(),
-                                    l = window.devicePixelRatio ?? 1,
-                                    r = e.height - Math.ceil(11 * l) - 4;
-                                for (let t of ((n.lineWidth = l), a)) {
-                                    let l = i - t.time;
-                                    if (l < 0 || l > u) continue;
-                                    let s = e.width * (1 - l / u);
+                                    r = window.devicePixelRatio ?? 1,
+                                    l = e.height - Math.ceil(11 * r) - 4;
+                                for (let t of ((n.lineWidth = r), a)) {
+                                    let r = i - t.time;
+                                    if (r < 0 || r > u) continue;
+                                    let s = e.width * (1 - r / u);
                                     (n.save(),
                                         (n.strokeStyle = t.color),
                                         n.beginPath(),
                                         n.moveTo(s, 0),
-                                        n.lineTo(s, r),
+                                        n.lineTo(s, l),
                                         n.stroke(),
                                         n.restore());
                                 }
@@ -125,14 +125,14 @@ n.d(
                                 let i = Date.now() - d;
                                 if (i >= 0 && i <= u) {
                                     let t = window.devicePixelRatio ?? 1,
-                                        l = Math.round(e.width * (1 - i / u)),
-                                        r = e.height - Math.ceil(11 * t) - 4;
+                                        r = Math.round(e.width * (1 - i / u)),
+                                        l = e.height - Math.ceil(11 * t) - 4;
                                     (n.save(),
                                         (n.strokeStyle = s.crosshairColor ?? h),
                                         (n.lineWidth = t),
                                         n.beginPath(),
-                                        n.moveTo(l, 0),
-                                        n.lineTo(l, r),
+                                        n.moveTo(r, 0),
+                                        n.lineTo(r, l),
                                         n.stroke(),
                                         n.restore());
                                 }

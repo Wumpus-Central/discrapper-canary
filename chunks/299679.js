@@ -11,9 +11,9 @@ n.d(
         Ar: c,
         dB: function (e) {
             let { newValue: t, children: n } = e,
-                l = c(),
-                o = i.useMemo(() => ({ ...l, ...t }), [l, t]);
-            return (0, r.jsx)(s.Provider, { value: o, children: n });
+                o = c(),
+                l = i.useMemo(() => ({ ...o, ...t }), [o, t]);
+            return (0, r.jsx)(s.Provider, { value: l, children: n });
         },
     },
 );

@@ -46,8 +46,8 @@ let v = {
     O = !1,
     M = new Set(),
     k = new Map(),
-    U = new Map(),
-    P = new Map();
+    P = new Map(),
+    U = new Map();
 function w(e) {
     (T.delete(e), 0 === T.size && (R = !1));
 }
@@ -77,15 +77,15 @@ function V() {
         (G = !1),
         (s = void 0),
         T.clear(),
-        P.clear(),
+        U.clear(),
         (y = S.XlH.OPEN),
         (D = [...(L = null != i ? [...f.A.getSortedRoles(i.id)] : [])]),
         z(i?.id, D),
         (O = !1),
         e &&
-            (U.clear(),
+            (P.clear(),
             k.forEach((e, t) => {
-                U.set(t, [...e]);
+                P.set(t, [...e]);
             })));
 }
 function z(e, t) {
@@ -116,7 +116,7 @@ function z(e, t) {
                 secondary_color: t.colors.secondary_color ?? null,
                 tertiary_color: t.colors.tertiary_color ?? null,
             }),
-            P.set(t.id, { currentStyle: n, styleColors: l }));
+            U.set(t.id, { currentStyle: n, styleColors: l }));
     });
 }
 function Y(e, t) {
@@ -133,7 +133,7 @@ let W = o().debounce(() => {
             (0, j.nk)(q(t), J(t)) && (w(t), (e = !0));
         }),
         [...M].forEach((t) => {
-            o().isEqual(U.get(t), k.get(t)) && (F(t), (e = !0));
+            o().isEqual(P.get(t), k.get(t)) && (F(t), (e = !0));
         }),
         e && $.emitChange());
 }, 500);
@@ -182,13 +182,13 @@ function Z(e) {
     });
     let l = new Map();
     (T.forEach((e) => {
-        let t = P.get(e);
+        let t = U.get(e);
         null != t && l.set(e, t);
     }),
-        P.clear(),
+        U.clear(),
         z(t, n),
         l.forEach((e, t) => {
-            P.set(t, e);
+            U.set(t, e);
         }),
         (G = !1),
         (L = [...n]));
@@ -207,7 +207,7 @@ class Q extends u.Ay.Store {
         return null != n && !(0, j.nk)(o().pick(n.role, n.fields), o().pick(n.original, n.fields));
     }
     getRoleStyleData(e) {
-        return P.get(e);
+        return U.get(e);
     }
     get errorMessage() {
         return s;
@@ -246,7 +246,7 @@ class Q extends u.Ay.Store {
         return l;
     }
     getEditedRoleConnectionConfigurationsMap() {
-        return U;
+        return P;
     }
 }
 let $ = new Q(
@@ -294,12 +294,12 @@ let $ = new Q(
                       i = 0 === n ? null : (0, c.Hl)(n),
                       l = q(t);
                   if (null == l) return !1;
-                  let s = P.get(t);
+                  let s = U.get(t);
                   return (
                       null != s &&
                       ((s.currentStyle = "solid"),
                       (s.styleColors.solid = { primary_color: n, secondary_color: null, tertiary_color: null }),
-                      P.set(t, { ...s }),
+                      U.set(t, { ...s }),
                       X(l, {
                           color: n,
                           colorString: i,
@@ -314,12 +314,12 @@ let $ = new Q(
                       l = q(t);
                   if (null == l) return !1;
                   let s = (0, x.K3)(n),
-                      r = P.get(t);
+                      r = U.get(t);
                   return (
                       null != r &&
                       ((r.styleColors[i] = n),
                       (r.currentStyle = i),
-                      P.set(t, { ...r }),
+                      U.set(t, { ...r }),
                       X(l, { color: n.primary_color, colors: n, colorString: s.primaryColor, colorStrings: s }))
                   );
               },
@@ -343,7 +343,7 @@ let $ = new Q(
               GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES: function (e) {
                   let { id: t } = e,
                       n = k.get(t);
-                  (null == n ? U.delete(t) : U.set(t, [...n]), F(t));
+                  (null == n ? P.delete(t) : P.set(t, [...n]), F(t));
               },
               GUILD_SETTINGS_ROLES_COMMIT_SECTION_CHANGES: function (e) {
                   let { id: t, section: n } = e,
@@ -371,9 +371,9 @@ let $ = new Q(
                   let { id: t, currentStyle: n } = e,
                       i = q(t);
                   if (null == i) return !1;
-                  let l = P.get(t);
+                  let l = U.get(t);
                   if (null == l) return !1;
-                  P.set(t, { currentStyle: n, styleColors: l.styleColors });
+                  U.set(t, { currentStyle: n, styleColors: l.styleColors });
                   let s = l.styleColors[n],
                       r = (0, x.K3)(s);
                   return X(i, {
@@ -389,21 +389,21 @@ let $ = new Q(
                   if (null == i) return !1;
                   let l = k.get(i.id);
                   if (o().isEqual(l, n)) return !1;
-                  (U.set(i.id, n), k.set(i.id, n), F(i.id), W());
+                  (P.set(i.id, n), k.set(i.id, n), F(i.id), W());
               },
               GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function (e) {
                   let { roleId: t, roleConnectionConfigurations: n } = e,
                       i = q(t);
                   if (null == i) return !1;
-                  ((O = !0), M.add(i.id), U.set(i.id, n), W());
+                  ((O = !0), M.add(i.id), P.set(i.id, n), W());
               },
               GUILD_SETTINGS_CLOSE: function () {
                   ((i = null),
                       (D = L = []),
                       k.clear(),
                       T.clear(),
-                      P.clear(),
                       U.clear(),
+                      P.clear(),
                       (M = new Set()),
                       (R = !1),
                       (G = !1),
@@ -413,7 +413,7 @@ let $ = new Q(
               GUILD_ROLE_CREATE: Z,
               GUILD_ROLE_UPDATE: Z,
               GUILD_ROLE_DELETE: function (e) {
-                  return (M.has(e.roleId) && (k.delete(e.roleId), U.delete(e.roleId), F(e.roleId)), Z(e));
+                  return (M.has(e.roleId) && (k.delete(e.roleId), P.delete(e.roleId), F(e.roleId)), Z(e));
               },
               GUILD_SETTINGS_ROLES_SUBMITTING: function () {
                   y = S.XlH.SUBMITTING;

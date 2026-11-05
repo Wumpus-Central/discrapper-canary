@@ -1,4 +1,4 @@
-n.d(t, { N: () => x });
+n.d(t, { N: () => w });
 var r = n(477900),
     i = n(582128),
     l = n(503698),
@@ -15,7 +15,7 @@ var p = n(435871);
 function m(e) {
     return "number" == typeof e ? `${e}px` : e;
 }
-function A(e) {
+function y(e) {
     let { surface: t = "app", offset: n } = e,
         { entry: l, position: u } = (function (e) {
             let t = i.useId(),
@@ -64,9 +64,9 @@ function A(e) {
                 { entry: l, position: s }
             );
         })(t),
-        [A, y] = i.useState({ entry: l, leaving: null, isDelayed: !1 });
-    l !== A.entry && y({ entry: l, leaving: A.entry ?? A.leaving, isDelayed: null != A.entry });
-    let v = i.useCallback(() => y((e) => ({ ...e, leaving: null })), []);
+        [y, A] = i.useState({ entry: l, leaving: null, isDelayed: !1 });
+    l !== y.entry && A({ entry: l, leaving: y.entry ?? y.leaving, isDelayed: null != y.entry });
+    let v = i.useCallback(() => A((e) => ({ ...e, leaving: null })), []);
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
         className: s()(p.container, p[u]),
@@ -77,43 +77,43 @@ function A(e) {
             "--toast-container-offset-bottom": m(n?.bottom),
         },
         children: [
-            null != A.leaving &&
+            null != y.leaving &&
                 (0, r.jsx)(
                     "div",
                     {
                         className: s()(p.toast, p.leave),
                         onAnimationEnd: v,
-                        children: (0, r.jsx)(a.y, { ...A.leaving.toast }),
+                        children: (0, r.jsx)(a.y, { ...y.leaving.toast }),
                     },
-                    A.leaving.key,
+                    y.leaving.key,
                 ),
-            null != A.entry &&
+            null != y.entry &&
                 (0, r.jsx)(
                     "div",
                     {
-                        className: s()(p.toast, p.enter, { [p.delayed]: A.isDelayed }),
-                        children: (0, r.jsx)(a.y, { ...A.entry.toast }),
+                        className: s()(p.toast, p.enter, { [p.delayed]: y.isDelayed }),
+                        children: (0, r.jsx)(a.y, { ...y.entry.toast }),
                     },
-                    A.entry.key,
+                    y.entry.key,
                 ),
         ],
     });
 }
-var y = n(335144),
+var A = n(335144),
     v = n(8062),
-    w = n(652215);
-function x(e) {
+    x = n(652215);
+function w(e) {
     let { appContext: t } = e,
         n = v.a[t],
-        l = (0, y.A)(n),
+        l = (0, A.A)(n),
         s = i.useMemo(
             () =>
-                t === w.BRT.APP
+                t === x.BRT.APP
                     ? { top: l ?? "var(--custom-app-top-bar-height)", bottom: 132 }
                     : null != l
                       ? { top: l }
                       : void 0,
             [t, l],
         );
-    return (0, r.jsx)(A, { surface: n, offset: s });
+    return (0, r.jsx)(y, { surface: n, offset: s });
 }

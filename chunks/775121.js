@@ -11,8 +11,8 @@ var i = n(507392),
 let _ = {},
     E = [],
     A = !1,
-    h = (0, l.I)(window),
-    f = [
+    f = (0, l.I)(window),
+    h = [
         ...a.J.binds,
         "mod+shift+[",
         "mod+shift+]",
@@ -37,25 +37,25 @@ function m(e) {
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace("mod", c.Mu));
 }
-function g(e, t) {
+function T(e, t) {
     return (n, i) => (o.default.track(u.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: i }), t(n, i));
 }
-function T(e) {
+function g(e) {
     let t = I();
     return (
-        d.isPlatformEmbedded || (t = t.concat(f)),
+        d.isPlatformEmbedded || (t = t.concat(h)),
         e.binds.filter((e) => ((e = e.replace("mod", c.Mu)), 0 > t.indexOf(e)))
     );
 }
 function S(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
-        let e = T(n);
+        let e = g(n);
         if (0 === e.length) continue;
-        let i = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
+        let i = n.comboKeysBindGlobal ? f.bindGlobal : f.bind;
         if (
-            (null != n.action && i.call(h, e, g(t, n.action)),
-            null != n.keyup && i.call(h, e, g(t, n.keyup), "keyup"),
+            (null != n.action && i.call(f, e, T(t, n.action)),
+            null != n.keyup && i.call(f, e, T(t, n.keyup), "keyup"),
             null != n.keydown)
         ) {
             let r = e.indexOf("any-character");
@@ -67,18 +67,18 @@ function S(e) {
                     (document.addEventListener(e, n), p.push(() => document.removeEventListener(e, n)));
                 })("keydown", n.keydown),
                 e.splice(r, 1)),
-                e.length > 0 && i.call(h, e, g(t, n.keydown), "keydown"));
+                e.length > 0 && i.call(f, e, T(t, n.keydown), "keydown"));
         }
-        null != n.keypress && i.call(h, e, g(t, n.keypress), "keypress");
+        null != n.keypress && i.call(f, e, T(t, n.keypress), "keypress");
     }
 }
 (0, d.xl)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
 let N = {
-    combokeys: h,
+    combokeys: f,
     modKey: c.Mu,
     altKey: c.Pe,
     returnKey: c.wY,
-    getRegistrableBinds: T,
+    getRegistrableBinds: g,
     setGetKeybindList(e) {
         I = e;
     },
@@ -102,10 +102,10 @@ let N = {
         (null != e && (_ = e), this.disable(), this.enable());
     },
     disable() {
-        A && ((A = !1), p.forEach((e) => e()), (p = []), h.reset());
+        A && ((A = !1), p.forEach((e) => e()), (p = []), f.reset());
     },
     validateKeybind(e) {
-        A && this.hasBind(e) && h.unbind(e);
+        A && this.hasBind(e) && f.unbind(e);
     },
     hasBind(e) {
         let t = m(_);

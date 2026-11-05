@@ -25,33 +25,33 @@ n.d(
                     disableInteraction: p = !1,
                     childrenRepliedMessage: v,
                     childrenExecutedCommand: N,
-                    childrenHeader: f,
-                    childrenSystemMessage: I,
+                    childrenHeader: I,
+                    childrenSystemMessage: f,
                     childrenButtons: b,
                     childrenMessageContent: C,
                     childrenAccessories: y,
                     messageRef: E,
                     focusProps: _ = { offset: { left: 4, right: 4 } },
                     hasThread: M,
-                    isSystemMessage: R,
-                    hasReply: S,
-                    author: T,
-                    onMouseEnter: w,
+                    isSystemMessage: S,
+                    hasReply: R,
+                    author: w,
+                    onMouseEnter: T,
                     onMouseLeave: O,
                     ...k
                 } = e,
                 G = (0, r.bG)([g.A], () =>
-                    T?.guildId == null || T?.colorRoleId == null ? null : g.A.getRole(T.guildId, T.colorRoleId),
+                    w?.guildId == null || w?.colorRoleId == null ? null : g.A.getRole(w.guildId, w.colorRoleId),
                 ),
-                P = (0, m.jV)(T?.guildId, G) && (0, h.kz)(T),
+                P = (0, m.jV)(w?.guildId, G) && (0, h.kz)(w),
                 [D, L] = t.useState(!1),
-                V = t.useCallback(
-                    (e) => {
-                        (L(!0), w?.(e));
-                    },
-                    [w],
-                ),
                 U = t.useCallback(
+                    (e) => {
+                        (L(!0), T?.(e));
+                    },
+                    [T],
+                ),
+                V = t.useCallback(
                     (e) => {
                         (L(!1), O?.(e));
                     },
@@ -66,7 +66,7 @@ n.d(
                         children: (0, i.jsxs)("div", {
                             className: a()(l, {
                                 [x.D7]: P,
-                                [x.e8]: $ && T?.displayNameStyles != null && T?.guildId == null,
+                                [x.e8]: $ && w?.displayNameStyles != null && w?.guildId == null,
                                 [x.iE]: !0,
                                 [x.kl]: s,
                                 [x.oE]: n,
@@ -74,18 +74,18 @@ n.d(
                                 [x.E]: !n,
                                 [x.GZ]: A,
                                 [x.pR]: M,
-                                [x.X4]: R,
-                                [x.h8]: S,
+                                [x.X4]: S,
+                                [x.h8]: R,
                             }),
                             ref: E,
                             ...k,
                             role: "article",
-                            onMouseEnter: V,
-                            onMouseLeave: U,
+                            onMouseEnter: U,
+                            onMouseLeave: V,
                             children: [
                                 v,
                                 N,
-                                (0, i.jsxs)("div", { className: x.PG, children: [I, f, null == I && C] }),
+                                (0, i.jsxs)("div", { className: x.PG, children: [f, I, null == f && C] }),
                                 y,
                                 null != b ? (0, i.jsx)("div", { className: x.UD, children: b }) : null,
                             ],

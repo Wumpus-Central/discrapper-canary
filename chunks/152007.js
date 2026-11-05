@@ -16,9 +16,9 @@ function E(e) {
         .value();
 }
 function A(e) {
-    e.threads?.forEach(h);
+    e.threads?.forEach(f);
 }
-function h(e) {
+function f(e) {
     o.A_.has(e.type) &&
         null != e.member &&
         ((c[e.id] = {
@@ -29,15 +29,15 @@ function h(e) {
             muteConfig: e.member.muteConfig,
             joinTimestamp: new Date(e.member.joinTimestamp),
         }),
-        f(e.id));
+        h(e.id));
 }
-function f(e) {
+function h(e) {
     let t = c[e];
     (u.clearTimer(e),
         !0 === t.muted
             ? ((_ = new Set(_)).add(e),
               u.setTimer(e, t.muteConfig, () => {
-                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), g.emitChange());
+                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), T.emitChange());
               }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
             : (_ = new Set(_)).delete(e));
 }
@@ -54,7 +54,7 @@ function I(e) {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp),
             }),
-                f(e.id));
+                h(e.id));
         });
 }
 function p(e) {
@@ -71,7 +71,7 @@ function p(e) {
                     muteConfig: e.muteConfig,
                     joinTimestamp: new Date(e.joinTimestamp),
                 }),
-                    f(e.id));
+                    h(e.id));
             });
         });
 }
@@ -102,7 +102,7 @@ class m extends a.Ay.Store {
         return _.has(e);
     }
 }
-let g = new m(s.h, {
+let T = new m(s.h, {
     CONNECTION_OPEN: function (e) {
         (u.reset(),
             (_ = new Set()),
@@ -128,7 +128,7 @@ let g = new m(s.h, {
     },
     THREAD_CREATE: function (e) {
         let { channel: t } = e;
-        h(t);
+        f(t);
     },
     THREAD_LIST_SYNC: I,
     SEARCH_MESSAGES_SUCCESS: p,
@@ -150,7 +150,7 @@ let g = new m(s.h, {
             muteConfig: e.muteConfig,
             joinTimestamp: new Date(e.joinTimestamp),
         }),
-            f(e.id));
+            h(e.id));
     },
     THREAD_MEMBER_LOCAL_UPDATE: function (e) {
         let { id: t, userId: n, guildId: i, isJoining: r } = e;
@@ -180,11 +180,11 @@ let g = new m(s.h, {
                         muteConfig: n.muteConfig,
                         joinTimestamp: new Date(n.joinTimestamp),
                     }),
-                    f(e.id),
+                    h(e.id),
                     (t = !0));
             }),
             t
         );
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

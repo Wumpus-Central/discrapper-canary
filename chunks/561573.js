@@ -19,7 +19,7 @@ function E(e, t) {
 function A() {
     ((l = {}), (o = {}), (d = {}), (c = {}), (u = {}));
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "SKUPricesStore";
     initialize() {
         (this.waitFor(a.default), this.syncWith([a.default], A));
@@ -49,7 +49,7 @@ class h extends i.Ay.Store {
         if (null != t) return t.rewardResultIds.map((e) => d[e]).filter(s.Vq);
     }
 }
-let f = new h(r.h, {
+let h = new f(r.h, {
     LOGOUT: A,
     SKUS_PRICING_FETCH_START: function (e) {
         let { priceId: t } = e;
@@ -72,4 +72,4 @@ let f = new h(r.h, {
     },
     STOREFRONT_PROMOTION_ID_OVERRIDE_SET: A,
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

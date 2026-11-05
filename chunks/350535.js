@@ -12,9 +12,9 @@ let _ = __OVERLAY__ ? u.Nu : (0, d.j9)() ? u.C8 : (0, d.cX)() ? u.V8 : (0, d.uF)
     E = s().invert(u.C8);
 ((E["223"] = "`"), Object.freeze(E));
 let A = Object.freeze(s().invert(u.V8)),
-    h = s().invert(u.Nu);
-((h["223"] = "`"), Object.freeze(h));
-let f = s().invert(_ ?? {});
+    f = s().invert(u.Nu);
+((f["223"] = "`"), Object.freeze(f));
+let h = s().invert(_ ?? {});
 function I(e) {
     return "+" === e ? "plus" : e;
 }
@@ -36,7 +36,7 @@ function m() {
               ? u.g$.WINDOWS
               : u.g$.BROWSER;
 }
-function g(e) {
+function T(e) {
     let [, t, n] = e,
         i = (function (e) {
             let t,
@@ -49,7 +49,7 @@ function g(e) {
                     t = A["" + n];
                     break;
                 case u.g$.WINDOWS:
-                    t = h["" + n];
+                    t = f["" + n];
                     break;
                 case u.g$.BROWSER: {
                     let e = r()(n);
@@ -58,7 +58,7 @@ function g(e) {
                     break;
                 }
                 default:
-                    t = f["" + n];
+                    t = h["" + n];
             }
             return null != t ? t : null;
         })(e);
@@ -66,7 +66,7 @@ function g(e) {
     let a = (0, c.Pk)(t);
     return null != a ? p(a.keyCode, a.key, n) : null;
 }
-function T(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.zY.KEYBOARD_KEY,
         i = (function (e) {
@@ -110,7 +110,7 @@ function S(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
     return "pause" === t || "break" === t ? "pause/break" : t;
 }
-((0, d.cX)() || (f["223"] = "`"), Object.freeze(f));
+((0, d.cX)() || (h["223"] = "`"), Object.freeze(h));
 let N = [
     ["META", "\u2318"],
     ["CMD", "\u2318"],
@@ -150,7 +150,7 @@ function R(e) {
             switch (t) {
                 case u.zY.KEYBOARD_KEY:
                 case u.zY.KEYBOARD_MODIFIER_KEY:
-                    return g(null != r ? [t, n, r] : [t, n]) ?? `UNK${n}`;
+                    return T(null != r ? [t, n, r] : [t, n]) ?? `UNK${n}`;
                 case u.zY.MOUSE_BUTTON:
                     return `mouse${n}`;
                 case u.zY.GAMEPAD_BUTTON:
@@ -165,7 +165,7 @@ n.d(
     t,
     {},
     {
-        Cy: T,
+        Cy: g,
         OH: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m(),
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.zY.KEYBOARD_KEY;
@@ -176,7 +176,7 @@ n.d(
                 .split("+")
                 .map((e) => e.trim().replace("plus", "+"))
                 .reduce((e, i) => {
-                    let r = T(
+                    let r = g(
                         (function (e) {
                             for (let [t, n] of N) if (n === e.toUpperCase()) return t.toLowerCase();
                             return e;
@@ -187,7 +187,7 @@ n.d(
                     return (null != r && e.push([n, r, t]), e);
                 }, []);
         },
-        Qd: g,
+        Qd: T,
         Xt: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return (
@@ -216,13 +216,13 @@ n.d(
             return null == e
                 ? []
                 : e.reduce((e, n) => {
-                      let i = g(n),
+                      let i = T(n),
                           r = { ...t };
                       if (null == i) return (e.push({ ...r, combo: n }), e);
                       if (O.test(i) && ("meta" === i || "shift" === i || "alt" === i || "ctrl" === i))
                           return ((t[i + "Key"] = !0), e.map((e) => ((e[i + "Key"] = !0), e)));
                       {
-                          let t = T(i, u.g$.BROWSER);
+                          let t = g(i, u.g$.BROWSER);
                           return (null != t && (r.keyCode = t), e.push(r), e);
                       }
                   }, []);

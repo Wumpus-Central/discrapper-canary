@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(456412),
     r = n(878549),
     o = n(628983),
-    d = n(493387),
-    c = n(235986),
+    c = n(493387),
+    d = n(235986),
     u = n(188567),
     h = n(484191),
     p = n(665450),
@@ -21,19 +21,19 @@ let y = (0, s.A)((e) => {
         filteredParticipants: n,
         selectedParticipant: s,
         participantsVersion: y,
-        layout: j,
-        onSelectParticipant: I,
+        layout: I,
+        onSelectParticipant: j,
         onContextMenuParticipant: N,
         onFullscreenParticipant: v,
         channel: E,
         hasConnectPermission: b,
         className: S,
-        inCall: _,
-        showParticipants: T = !0,
+        inCall: T,
+        showParticipants: _ = !0,
         width: R,
         height: O,
-        idle: P,
-        mode: L,
+        idle: L,
+        mode: P,
         popoutType: M,
         awaitingRemoteSessionInfo: w,
         callContainerDimensions: U,
@@ -47,28 +47,28 @@ let y = (0, s.A)((e) => {
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
     if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
-    if (E?.isGuildVocalOrThread() && !_)
+    if (E?.isGuildVocalOrThread() && !T)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = _ ? n : t), L === g._Of.VOICE))
-        return (0, i.jsx)(d.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
+    if (((n = T ? n : t), P === g._Of.VOICE))
+        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
             return (0, i.jsx)(f.A, { channelId: E.id, allPoppedOut: e });
         }
-        return (0, i.jsx)(c.A, {
+        return (0, i.jsx)(d.A, {
             className: C.HA,
-            justify: c.A.Justify.CENTER,
-            align: c.A.Align.CENTER,
+            justify: d.A.Justify.CENTER,
+            align: d.A.Align.CENTER,
             children: (0, i.jsx)(m.A, {
                 channel: E,
                 className: C.g9,
                 participants: D,
                 totalNumberOfParticipants: t.length,
-                onClick: I,
+                onClick: j,
                 onDoubleClick: v,
                 onContextMenu: N,
-                inCall: _,
+                inCall: T,
                 popoutType: M,
             }),
         });
@@ -76,19 +76,19 @@ let y = (0, s.A)((e) => {
     return (0, i.jsx)(A.A, {
         onFullscreenParticipant: v,
         onContextMenuParticipant: N,
-        onSelectParticipant: I,
+        onSelectParticipant: j,
         selectedParticipant: s,
         filteredParticipants: D,
         participants: t,
         popoutType: M,
         className: S,
-        idle: P,
+        idle: L,
         height: O,
         width: R,
-        layout: j,
-        inCall: _,
+        layout: I,
+        inCall: T,
         channel: E,
-        showParticipants: T,
+        showParticipants: _,
     });
 });
 n.d(t, {}, { A: y });

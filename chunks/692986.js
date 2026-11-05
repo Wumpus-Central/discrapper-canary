@@ -16,8 +16,8 @@ var r = l(811315),
     R = l(822382),
     T = l(801146),
     I = l(902008),
-    _ = l(5990),
-    A = l(224467),
+    A = l(5990),
+    _ = l(224467),
     F = l(652215),
     p = l(926140);
 let N = null,
@@ -62,7 +62,7 @@ function O(e, t) {
     let { query: a, mode: s, tokens: i, cursorScope: o } = u,
         c = D(e, s, i),
         E = m({ searchContext: e, query: a, mode: s, tokens: i, cursorScope: o, autocompletes: c });
-    (W.set(r, E), H.emitChange());
+    (W.set(r, E), w.emitChange());
 }
 function v(e) {
     n()(N, e) || ((N = e), (0, R.Pe)());
@@ -75,10 +75,10 @@ function U(e) {
         i = 0 === s.length;
     if ((0, I._)(r) && M(t) && !i) a = b(r).results;
     else {
-        let e = A.Ay[t]?.getAutocompletions;
+        let e = _.Ay[t]?.getAutocompletions;
         a = null != e ? e({ query: s, searchContext: r, maxResults: n, tokens: u }) : [];
     }
-    if (null != a && M(t) && (0, A.WL)(s)) {
+    if (null != a && M(t) && (0, _.WL)(s)) {
         let e = f.default.getCurrentUser();
         null != e &&
             (a = a.filter((t) => {
@@ -99,7 +99,7 @@ function D(e, t, l) {
             if (null == u || "" === u) return [];
             let a = [];
             return (
-                (0, _.u_)(e, [L.A])
+                (0, A.u_)(e, [L.A])
                     .filter((e) => y.has(e))
                     .forEach((t) => {
                         if (null == t) return;
@@ -142,7 +142,7 @@ class P extends u.Ay.Store {
         );
     }
 }
-let H = new P(a.h, {
+let w = new P(a.h, {
     SEARCH_AUTOCOMPLETE_INITIALIZE: function (e) {
         let { searchContext: t } = e;
         (v(t), q(t));
@@ -190,4 +190,4 @@ let H = new P(a.h, {
         return null != N && q(N);
     },
 });
-l.d(t, {}, { A: H });
+l.d(t, {}, { A: w });

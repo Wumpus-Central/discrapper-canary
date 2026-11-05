@@ -11,13 +11,13 @@ var i = n(141931),
     _ = n(927813),
     E = n(723702),
     A = n(321034),
-    h = n(856383),
-    f = n(253400),
+    f = n(856383),
+    h = n(253400),
     I = n(652215);
 let p = 15 * _.A.Millis.MINUTE,
     m = 15 * _.A.Millis.MINUTE,
-    g = 15 * _.A.Millis.MINUTE,
-    T = 30 * _.A.Millis.MINUTE,
+    T = 15 * _.A.Millis.MINUTE,
+    g = 30 * _.A.Millis.MINUTE,
     S = 60 * _.A.Millis.MINUTE,
     N = "lastMemoryUsageRestart",
     C = +_.A.Millis.DAY,
@@ -70,7 +70,7 @@ class y extends a.A {
                 clearInterval(this._checkIntervalV8),
                 (this._checkIntervalV8 = setInterval(async () => {
                     await this.trackV8HeapAlloc();
-                }, g)),
+                }, T)),
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();
@@ -143,7 +143,7 @@ class y extends a.A {
                 n = t?.usedHeapSize ?? -1,
                 i = t?.totalAvailableSize ?? -1,
                 r = t?.peakMallocedMemory ?? -1;
-            (await f.Ay.submitLiveCrashReport({
+            (await h.Ay.submitLiveCrashReport({
                 message: "Desktop Memory Thread State",
                 extra: {
                     renderer_memory_kb: e,
@@ -164,16 +164,16 @@ class y extends a.A {
         if (null != n && n.timestamp >= Date.now() - C) return;
         let a = o.A.getIdleSince();
         null == a ||
-            a > Date.now() - T ||
+            a > Date.now() - g ||
             null != c.A.getRTCConnection() ||
             (l.A.persist(),
             r.w.set(N, { timeSinceStartup: t, timestamp: Date.now() }),
-            f.Ay.setCrashInformation(i.du.IntentionalCrashReason, "excessive-memory-usage"),
-            h.A.addBreadcrumb({
+            h.Ay.setCrashInformation(i.du.IntentionalCrashReason, "excessive-memory-usage"),
+            f.A.addBreadcrumb({
                 category: "excessive-memory-usage-restart",
                 message: `Restarting due to excessive renderer memory usage: ${e}kB`,
             }),
-            f.Ay.crash(3));
+            h.Ay.crash(3));
     }
     trackPartitionAllocPerformanceStats() {
         let e = A.A.getPartitionAllocatorStats();
@@ -321,7 +321,7 @@ class y extends a.A {
                     s.push(`${l.join(";")} ${a}`);
                 }
                 let l = s.join("\n"),
-                    o = await f.Ay.gzipAndBase64Encode(l),
+                    o = await h.Ay.gzipAndBase64Encode(l),
                     d = null != o && o.length > 0 ? o : l,
                     c = {
                         sample_period_ms: 1,

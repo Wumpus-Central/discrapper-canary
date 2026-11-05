@@ -13,13 +13,13 @@ function c(e) {
         _,
         E,
         A,
-        h,
         f,
+        h,
         I,
         p,
         m,
-        g,
         T,
+        g,
         {
             children: S,
             targetElementRef: N,
@@ -53,8 +53,8 @@ function c(e) {
                 } = e,
                 { keyboardModeEnabled: E } = i.useContext(o.C),
                 A = i.useRef(null),
-                h = t ?? A,
-                [f, I] = i.useState(!1),
+                f = t ?? A,
+                [h, I] = i.useState(!1),
                 p = i.useRef(null),
                 m = i.useRef(!1);
             i.useEffect(
@@ -67,12 +67,12 @@ function c(e) {
                 ),
                 [],
             );
-            let g = null != h.current,
-                T = !1 !== n && (f || c) && g && !m.current,
+            let T = null != f.current,
+                g = !1 !== n && (h || c) && T && !m.current,
                 S = i.useCallback(() => {
-                    if (m.current || (u && null == h.current)) return;
-                    if (u && null != h.current) {
-                        let e = h.current;
+                    if (m.current || (u && null == f.current)) return;
+                    if (u && null != f.current) {
+                        let e = f.current;
                         if ((0, s.vq)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return;
                     }
                     let e = r ?? 0,
@@ -85,7 +85,7 @@ function c(e) {
                             },
                             !1,
                         );
-                }, [r, a, u, h]),
+                }, [r, a, u, f]),
                 N = i.useCallback(() => {
                     (p.current?.stop(), I(!1), d?.());
                 }, [d]),
@@ -94,15 +94,15 @@ function c(e) {
                 }, [N, _]),
                 O = i.useCallback(
                     (e) => {
-                        (null == h.current && (h.current = e.currentTarget), (m.current = !1), S());
+                        (null == f.current && (f.current = e.currentTarget), (m.current = !1), S());
                     },
-                    [S, h],
+                    [S, f],
                 ),
                 R = i.useCallback(
                     (e) => {
-                        E && (null == h.current && (h.current = e.currentTarget), (m.current = !1), S());
+                        E && (null == f.current && (f.current = e.currentTarget), (m.current = !1), S());
                     },
-                    [E, S, h],
+                    [E, S, f],
                 ),
                 L = i.useCallback(() => {
                     (p.current?.stop(), N());
@@ -113,8 +113,8 @@ function c(e) {
                 );
             return (
                 i.useEffect(() => {
-                    if (!T) return;
-                    let e = h.current?.ownerDocument ?? document;
+                    if (!g) return;
+                    let e = f.current?.ownerDocument ?? document;
                     function t(e) {
                         ("Escape" === e.key || "Esc" === e.key) && ((m.current = !0), N());
                     }
@@ -124,10 +124,10 @@ function c(e) {
                             e.removeEventListener("keydown", t);
                         }
                     );
-                }, [T, N, h]),
+                }, [g, N, f]),
                 i.useEffect(() => {
-                    if (!T) return;
-                    let e = h.current?.ownerDocument ?? document;
+                    if (!g) return;
+                    let e = f.current?.ownerDocument ?? document;
                     function t() {
                         N();
                     }
@@ -137,8 +137,8 @@ function c(e) {
                             e.removeEventListener("click", t);
                         }
                     );
-                }, [T, N, h]),
-                { isVisible: T, triggerProps: y }
+                }, [g, N, f]),
+                { isVisible: g, triggerProps: y }
             );
         })({ targetElementRef: y.targetElementRef, ...L }),
         P = R ? void 0 : D,
@@ -159,42 +159,42 @@ function c(e) {
                 },
                 [E, u],
             )),
-            (h = i.useRef(_)),
+            (f = i.useRef(_)),
             i.useEffect(() => {
-                h.current = _;
+                f.current = _;
             }, [_]),
-            (I = (f = t.props).buttonRef),
+            (I = (h = t.props).buttonRef),
             (p = i.useCallback(
                 (e) => {
                     ((0, a.cZ)(I, e), A(e));
                 },
                 [I, A],
             )),
-            (m = f.innerRef),
-            (g = i.useCallback(
+            (m = h.innerRef),
+            (T = i.useCallback(
                 (e) => {
                     ((0, a.cZ)(m, e), A(e));
                 },
                 [m, A],
             )),
-            (T = {
-                onMouseEnter: (0, a.cy)(f.onMouseEnter, v.onMouseEnter),
-                onMouseLeave: (0, a.cy)(f.onMouseLeave, v.onMouseLeave),
-                onFocus: (0, a.cy)(f.onFocus, v.onFocus),
-                onBlur: (0, a.cy)(f.onBlur, v.onBlur),
-                onContextMenu: (0, a.cy)(f.onContextMenu, v.onContextMenu),
-                onClick: (0, a.cy)(f.onClick, v.onClick),
+            (g = {
+                onMouseEnter: (0, a.cy)(h.onMouseEnter, v.onMouseEnter),
+                onMouseLeave: (0, a.cy)(h.onMouseLeave, v.onMouseLeave),
+                onFocus: (0, a.cy)(h.onFocus, v.onFocus),
+                onBlur: (0, a.cy)(h.onBlur, v.onBlur),
+                onContextMenu: (0, a.cy)(h.onContextMenu, v.onContextMenu),
+                onClick: (0, a.cy)(h.onClick, v.onClick),
             }),
-            null != P && "" !== P && (T["aria-describedby"] = (0, a.iO)(f["aria-describedby"], P)),
+            null != P && "" !== P && (g["aria-describedby"] = (0, a.iO)(h["aria-describedby"], P)),
             "string" == typeof t.type
-                ? (T.ref = A)
+                ? (g.ref = A)
                 : "buttonRef" in t.props
-                  ? ((T.buttonRef = p), (T.ref = A))
+                  ? ((g.buttonRef = p), (g.ref = A))
                   : "innerRef" in t.props
-                    ? ((T.innerRef = g), (T.ref = A))
-                    : ((T.ref = A),
-                      "function" == typeof t.type && t.type.prototype?.isReactComponent != null && (T.innerRef = A)),
-            i.cloneElement(t, T)),
+                    ? ((g.innerRef = T), (g.ref = A))
+                    : ((g.ref = A),
+                      "function" == typeof t.type && t.type.prototype?.isReactComponent != null && (g.innerRef = A)),
+            i.cloneElement(t, g)),
         U = (function (e, t, n, i, r, s, l) {
             if (!e) return null;
             let o = s

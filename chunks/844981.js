@@ -1,6 +1,6 @@
 var i,
-    l = n(582128),
-    r = n(855986),
+    r = n(582128),
+    l = n(855986),
     s = n(738566),
     a = n(754712),
     o = n(833473),
@@ -18,11 +18,11 @@ n.d(
     {
         Ay: function (e) {
             let { enabled: t } = s.A.useConfig({ location: e }),
-                { supported: n, status: i } = (0, r.cf)([a.Ay, o.A], () => ({
+                { supported: n, status: i } = (0, l.cf)([a.Ay, o.A], () => ({
                     supported: a.Ay.supports(u.O5.SPATIAL_AUDIO),
                     status: o.A.getSpatialAudioStatus(),
                 }));
-            return l.useMemo(
+            return r.useMemo(
                 () =>
                     (function (e, t) {
                         if (!e) return "HIDDEN";

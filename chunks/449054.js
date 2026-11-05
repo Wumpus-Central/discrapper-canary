@@ -49,26 +49,26 @@ n.d(
                     onSuccess: _,
                     joinSource: E,
                     loadId: A,
-                    shouldNavigate: h = !0,
-                    openChannel: f = !1,
+                    shouldNavigate: f = !0,
+                    openChannel: h = !1,
                 } = n,
                 I = (0, s.JK)(),
                 p = d.A.getGuild(e),
                 m = { sourceLocationStack: o, state: { analyticsSource: t } };
             if (null != p && null != p.joinedAt)
-                h &&
+                f &&
                     (null == c
-                        ? (0, l.u)(e, { ...m, openChannel: f })
+                        ? (0, l.u)(e, { ...m, openChannel: h })
                         : (0, r.A)(u.BVt.CHANNEL(e, c, n.messageId), { ...m, navigationReplace: !0, openChannel: !0 }));
             else if (null != p && a.A.isLurking(e))
-                h &&
+                f &&
                     (await i.A.transitionToGuildSync(
                         e,
                         {
                             ...m,
                             welcomeModalChannelId: c,
                             navigationReplace: null != c,
-                            openChannel: f || null != c,
+                            openChannel: h || null != c,
                             search: I.location.search,
                         },
                         c,
@@ -77,14 +77,14 @@ n.d(
             else {
                 let r = o?.[o.length - 1] ?? t?.page;
                 (await i.A.joinGuild(e, { lurker: !0, source: E, loadId: A, lurkLocation: r }),
-                    h &&
+                    f &&
                         (await i.A.transitionToGuildSync(
                             e,
                             {
                                 ...m,
                                 welcomeModalChannelId: c,
                                 navigationReplace: null != c,
-                                openChannel: f || null != c,
+                                openChannel: h || null != c,
                                 search: I.location.search,
                             },
                             c,

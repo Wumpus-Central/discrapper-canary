@@ -15,8 +15,8 @@ var s = n(889137),
     p = n(723702),
     g = n(862780),
     A = n(969632),
-    y = n(438437),
-    f = n(842901),
+    f = n(438437),
+    y = n(842901),
     j = n(589590),
     b = n(708676),
     S = n(652215),
@@ -48,16 +48,16 @@ function T(e, t) {
         let t = h.A.getMessage(e.channel_id, e.id);
         ((A = !e.isSearchHit && null != t), (p = t?.reactions ?? p));
     }
-    let y = l.size > 0,
-        f = p.some((e) => !0 === e.me_vote),
-        j = !x && f,
+    let f = l.size > 0,
+        y = p.some((e) => !0 === e.me_vote),
+        j = !x && y,
         v = j || r || w,
-        C = i && A && (!f || x || v),
+        C = i && A && (!y || x || v),
         E = d.A.getChannel(e.getChannelId())?.getGuildId?.(),
         T = null != E ? u.Ay.getSelfMember(E) : null,
         _ = (0, o.TR)(T),
         V = (0, c.Z)(T),
-        k = !m && y && !j && i && !_ && !V;
+        k = !m && f && !j && i && !_ && !V;
     return {
         poll: s,
         canTapAnswers: C,
@@ -65,9 +65,9 @@ function T(e, t) {
         canShowVoteCounts: v,
         canSubmitVote: k,
         expirationLabel: a,
-        hasSelectedAnswer: y,
+        hasSelectedAnswer: f,
         hasVoted: j,
-        hasVoteRecorded: f,
+        hasVoteRecorded: y,
         isEditingVote: x,
         isExpired: r,
         isInteractive: A,
@@ -95,7 +95,7 @@ n.d(
             if (null == h) return;
             let g = a.Ay.useReducedMotion,
                 b = d.A.getChannel(e.getChannelId())?.getGuildId?.(),
-                S = (0, f.T)(h, b),
+                S = (0, y.T)(h, b),
                 N = u.answers,
                 I = u.layout_type,
                 _ = T(e, t, { formattedExpirationLabel: c });
@@ -269,10 +269,10 @@ n.d(
                     canTapAnswers: V,
                     canSelectMultipleAnswers: ee,
                 })
-                    .with({ tapShouldOpenVotersModal: !0 }, () => y.CQ.LIST)
-                    .with({ canTapAnswers: !1 }, () => y.CQ.LIST)
-                    .with({ canSelectMultipleAnswers: !1 }, () => y.CQ.RADIO_BUTTONS)
-                    .with({ canSelectMultipleAnswers: !0 }, () => y.CQ.CHECKBOXES)
+                    .with({ tapShouldOpenVotersModal: !0 }, () => f.CQ.LIST)
+                    .with({ canTapAnswers: !1 }, () => f.CQ.LIST)
+                    .with({ canSelectMultipleAnswers: !1 }, () => f.CQ.RADIO_BUTTONS)
+                    .with({ canSelectMultipleAnswers: !0 }, () => f.CQ.CHECKBOXES)
                     .exhaustive(),
                 answerTapAccessibilityLabel: K ? $ : void 0,
                 layoutType: I,

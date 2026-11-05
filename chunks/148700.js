@@ -30,9 +30,9 @@ var l = n(477900),
     E = n(987144),
     x = n(976860),
     N = n(71393),
-    _ = n(645619),
+    I = n(645619),
     S = n(379229),
-    I = n(990208),
+    _ = n(990208),
     b = n(864310),
     j = n(363487),
     v = n(828162),
@@ -112,7 +112,7 @@ function Y(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         a = (0, o.bG)([N.A], () => N.A.getGuild(t)?.name),
         { onActivate: d, isLoading: c, error: u } = (0, L.A)(t, n[0]),
-        h = (0, I.A)(n[0], !0);
+        h = (0, _.A)(n[0], !0);
     if (((0, U.A)(u), 0 === n.length)) return;
     let m =
             n.length >= 3
@@ -150,7 +150,7 @@ function Y(e) {
 function X(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         r = n.find((e) => e.skuId === a.d0),
-        o = (0, I.A)(r, !0) ?? K,
+        o = (0, _.A)(r, !0) ?? K,
         d = n.find((e) => e.skuId === a.FB);
     if (null != r)
         return (0, l.jsx)(en, {
@@ -350,8 +350,8 @@ function q(e) {
 }
 function Z(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
-        s = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)?.allPowerups[a.d0]),
-        r = (0, I.A)(s, !0) ?? K,
+        s = (0, o.bG)([I.A], () => I.A.getStateForGuild(t)?.allPowerups[a.d0]),
+        r = (0, _.A)(s, !0) ?? K,
         { available: d } = (0, b.A)(t),
         c = 3 - d,
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);
@@ -424,7 +424,7 @@ function ee(e) {
     let { guildId: t, powerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
         { available: o } = (0, b.A)(t),
         d = n.cost - o,
-        c = (0, I.A)(n, !0),
+        c = (0, _.A)(n, !0),
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
         h = (0, j.A)(t),
         m = i.useRef(null);
@@ -464,10 +464,10 @@ function ee(e) {
 }
 function et(e) {
     let { guildId: t, featuredExpiringPowerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
-        d = (0, o.bG)([_.A], () => _.A.getStateForGuild(t)),
+        d = (0, o.bG)([I.A], () => I.A.getStateForGuild(t)),
         { analyticsLocations: c } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
         u = d?.allPowerups[n.skuId],
-        f = (0, I.A)(u, !0),
+        f = (0, _.A)(u, !0),
         p = i.useRef(null),
         C = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
     if (null == u && !n.isGameServer) return null;

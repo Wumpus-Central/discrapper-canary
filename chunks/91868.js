@@ -1,7 +1,7 @@
 n(321073);
 var i,
-    l = n(855986),
-    r = n(713402),
+    r = n(855986),
+    l = n(713402),
     s = n(73153),
     a = n(174768),
     o = n(95701),
@@ -16,7 +16,7 @@ var i,
     m = n(502088),
     I = n(652215),
     E = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
-let S = new r.J(
+let S = new l.J(
         function (e) {
             let t = [];
             return (
@@ -51,14 +51,14 @@ function T(e) {
             )
                 return null;
         }
-        let l = m.A.hasActiveNowChannelId({ kind: m.u.Text, channelId: e }),
-            r = i && (a.A.getChannelHistory().includes(e) || p.A.getTextChannelHistory().includes(e)),
+        let r = m.A.hasActiveNowChannelId({ kind: m.u.Text, channelId: e }),
+            l = i && (a.A.getChannelHistory().includes(e) || p.A.getTextChannelHistory().includes(e)),
             s = d.Ay.hasUnread(e) || d.Ay.getMentionCount(e) > 0,
             h = null != t.lastMessageId ? f.default.extractTimestamp(t.lastMessageId) : 0,
             g = (() => {
                 var t;
                 if (n) return `DM\0${N(h)}\0${e}`;
-                if (l) {
+                if (r) {
                     let n;
                     return (
                         (t = m.A.getScoreForChannelId(e) ?? 0),
@@ -71,9 +71,9 @@ function T(e) {
         return {
             id: e,
             channelId: e,
-            isInActiveNow: l,
+            isInActiveNow: r,
             isInDmsList: n,
-            isInRecentTextList: r,
+            isInRecentTextList: l,
             hasUnread: s,
             lastActivityAtMs: h,
             sortKey: g,
@@ -81,7 +81,7 @@ function T(e) {
     })(e);
     return null == t ? S.delete(e) : S.set(e, t);
 }
-function v() {
+function y() {
     let e = m.A.getActiveNowChannelIds({ kind: m.u.Text }),
         t = new Set(e),
         n = !1;
@@ -89,7 +89,7 @@ function v() {
     for (let e of [...S.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
     return ((_ = t), n);
 }
-function y() {
+function v() {
     (S.clear(), (_ = new Set()));
     let e = !1;
     for (let t of h.A.getPrivateChannelIds()) e = T(t) || e;
@@ -103,10 +103,10 @@ function M(e) {
     let t = u.A.getDMFromUserId(e);
     return null != t && T(t);
 }
-class D extends l.Ay.Store {
+class D extends r.Ay.Store {
     static displayName = "FriendsWidgetMessagesStore";
     initialize() {
-        (this.waitFor(u.A, m.A, a.A, d.Ay, c.A, h.A, p.A), y());
+        (this.waitFor(u.A, m.A, a.A, d.Ay, c.A, h.A, p.A), v());
     }
     getRows(e) {
         return [S.values(e), S.version];
@@ -132,13 +132,13 @@ let O = new D(
                   C = t;
                   let i = !1;
                   (null != n && (i = T(n) || i), null != t && (i = T(t) || i));
-                  let l = v();
-                  return i || l;
+                  let r = y();
+                  return i || r;
               }),
               MESSAGE_CREATE: R(function (e) {
                   if (e.optimistic) return !1;
                   let t = T(e.channelId),
-                      n = v();
+                      n = y();
                   return t || n;
               }),
               MESSAGE_ACK: R(function (e) {
@@ -153,14 +153,14 @@ let O = new D(
                   return ((_ = n), i);
               }),
               RTC_CONNECTION_STATE: R(function () {
-                  return v();
+                  return y();
               }),
               VOICE_CHANNEL_SELECT: R(function () {
-                  return v();
+                  return y();
               }),
-              USER_GUILD_SETTINGS_CHANNEL_UPDATE: R(v),
-              USER_GUILD_SETTINGS_GUILD_UPDATE: R(v),
-              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: R(v),
+              USER_GUILD_SETTINGS_CHANNEL_UPDATE: R(y),
+              USER_GUILD_SETTINGS_GUILD_UPDATE: R(y),
+              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: R(y),
               RELATIONSHIP_ADD: R(function (e) {
                   return M(e.relationship.id);
               }),
@@ -178,11 +178,11 @@ let O = new D(
                   }
                   return t;
               }),
-              OVERLAY_INITIALIZE: R(y),
-              POST_CONNECTION_OPEN: R(y),
-              CACHE_LOADED: R(y),
-              CACHE_LOADED_LAZY: R(y),
-              FRIENDS_LIST_POPOUT_MOUNTED: R(y),
+              OVERLAY_INITIALIZE: R(v),
+              POST_CONNECTION_OPEN: R(v),
+              CACHE_LOADED: R(v),
+              CACHE_LOADED_LAZY: R(v),
+              FRIENDS_LIST_POPOUT_MOUNTED: R(v),
               LOGOUT: R(function () {
                   let e = S.size() > 0;
                   return (S.clear(), (C = null), (_ = new Set()), e);

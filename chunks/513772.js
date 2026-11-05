@@ -14,8 +14,8 @@ var l = e(582128),
     m = e(776677),
     p = e(550151),
     x = e(55730),
-    _ = e(765379),
-    I = e(946255),
+    I = e(765379),
+    _ = e(946255),
     N = e(323073),
     E = e(688810),
     T = e(429913),
@@ -32,8 +32,8 @@ var l = e(582128),
     b = e(689168),
     M = e(723702),
     U = e(928550),
-    G = e(652215),
-    D = e(917550),
+    D = e(652215),
+    G = e(917550),
     Y = e(792996);
 function V(t) {
     let n,
@@ -49,7 +49,7 @@ function V(t) {
         { analyticsLocations: z } = (0, E.Ay)(B ?? []),
         [X, $] = l.useState(!1),
         F = V?.applicationId ?? e?.application_id,
-        Q = null != V || (0, _.A)(e),
+        Q = null != V || (0, I.A)(e),
         J = (0, i.bG)([L.default], () => L.default.getCurrentUser()),
         q = w.id === J?.id,
         Z = (function (t) {
@@ -62,7 +62,7 @@ function V(t) {
             );
         })({ channelId: (0, d.H)(V?.location), userId: w.id, activity: e }),
         K = (0, U.au)(F),
-        tt = Q || (0, x.A)(e, G.jUm.SUPPORTS_JOIN_URL) || null != K,
+        tt = Q || (0, x.A)(e, D.jUm.SUPPORTS_JOIN_URL) || null != K,
         tn = (0, i.bG)([c.Ay], () =>
             Array.from(c.Ay.getSelfEmbeddedActivities().values()).some((t) => {
                 let { applicationId: n, location: l } = t;
@@ -71,7 +71,7 @@ function V(t) {
         ),
         te = (0, i.bG)(
             [b.A],
-            () => null != e && null != e.application_id && b.A.getState(e.application_id, G.xL.JOIN) === G.eAD.LOADING,
+            () => null != e && null != e.application_id && b.A.getState(e.application_id, D.xL.JOIN) === D.eAD.LOADING,
         ),
         tl = (0, T.h)(F),
         ti = (0, C.VS)(tl),
@@ -111,9 +111,9 @@ function V(t) {
                 ),
         ),
         tu = (0, o.p)();
-    if (Q && null == V && (null == e || !(0, x.A)(e, G.jUm.CONTEXTLESS))) return null;
+    if (Q && null == V && (null == e || !(0, x.A)(e, D.jUm.CONTEXTLESS))) return null;
     let td = !M.isPlatformEmbedded;
-    if (!((0, x.A)(e, G.jUm.JOIN) || Q) || null == F) return null;
+    if (!((0, x.A)(e, D.jUm.JOIN) || Q) || null == F) return null;
     let tA = (!Q && to === m.o.JOINED) || (Q && tc),
         tf = !q || Q,
         tg = tf && !tA && (td || tt) && !X && !tn;
@@ -138,10 +138,10 @@ function V(t) {
                     ($(!0),
                         null != e &&
                             (t = await a.A.sendActivityInviteUser({
-                                type: G.xL.JOIN_REQUEST,
+                                type: D.xL.JOIN_REQUEST,
                                 userId: w.id,
                                 activity: e,
-                                location: G.ThZ.USER_ACTIVITY_ACTIONS,
+                                location: D.ThZ.USER_ACTIVITY_ACTIONS,
                             })),
                         null != t && s.default.selectPrivateChannel(t.id));
                 }
@@ -163,7 +163,7 @@ function V(t) {
                         (k?.(),
                             (async function (t, n) {
                                 if (null == tm || null == F) return;
-                                let e = (0, x.A)(n, G.jUm.EMBEDDED),
+                                let e = (0, x.A)(n, D.jUm.EMBEDDED),
                                     l = P.Ay.getVoiceChannelId(),
                                     i = f.A.getChannel(l);
                                 (await r.A.join({
@@ -172,14 +172,14 @@ function V(t) {
                                     applicationId: F,
                                     channelId: l,
                                     messageId: null,
-                                    intent: D.W.PLAY,
+                                    intent: G.W.PLAY,
                                     embedded: e,
                                     locationObject: tu.location,
                                     analyticsLocations: z,
                                 }),
                                     e ||
-                                        (0, I.A)({
-                                            type: G.UqL.JOIN,
+                                        (0, _.A)({
+                                            type: D.UqL.JOIN,
                                             userId: t.id,
                                             guildId: i?.guild_id,
                                             channelId: l,

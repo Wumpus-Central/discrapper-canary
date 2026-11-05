@@ -59,14 +59,14 @@ let A = new (class {
             0 === this.requested.get(e).size && this.requested.delete(e);
         }
     })(),
-    h = null;
-function f(e, t) {
+    f = null;
+function h(e, t) {
     let n = !1;
     (t.forEach((t) => {
         let { loaded: i, firstMessage: r } = u.A.getMessage(t);
         i || null != r || (A.request(e.id, t), (n = !0));
     }),
-        n && null == h && (h = setTimeout(I, 0)));
+        n && null == f && (f = setTimeout(I, 0)));
 }
 async function I() {
     try {
@@ -87,7 +87,7 @@ async function I() {
                 }
             })(A.next());
     } finally {
-        h = null;
+        f = null;
     }
 }
 n.d(
@@ -105,19 +105,19 @@ n.d(
                     !i &&
                     null == r &&
                     (n
-                        ? f(s, [e.id])
+                        ? h(s, [e.id])
                         : (function (e, t) {
                               if (A.hasRequested(e.id, t)) return;
                               let n = (0, c.S)(e.id),
                                   i = n.findIndex((e) => e === t),
                                   r = n.slice(i, i + 5).filter((t) => !A.hasRequested(e.id, t));
-                              f(e, r);
+                              h(e, r);
                           })(s, e.id)),
                 { loaded: i, firstMessage: t ? r : null }
             );
         },
         kB: function (e) {
-            f(e, (0, c.S)(e.id).slice(0, 10));
+            h(e, (0, c.S)(e.id).slice(0, 10));
         },
     },
 );

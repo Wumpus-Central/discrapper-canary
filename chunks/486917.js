@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(620632),
     r = n(73153),
     a = n(439372),
@@ -24,19 +24,19 @@ class A extends c.Ay.PersistedStore {
         return E;
     }
 }
-let h = new A(r.h, {
+let f = new A(r.h, {
     FRIEND_ONLINE_TIMER_REPORTED: function (e) {
         let { timestampMs: t } = e;
         return ((E.lastReportedAtMs = t), !0);
     },
 });
-var f = n(652215),
+var h = n(652215),
     I = n(818348);
 let p = 5 * o.A.Millis.MINUTE;
 function m(e) {
     return [I.cl.ONLINE, I.cl.STREAMING].includes(e);
 }
-class g extends a.A {
+class T extends a.A {
     timerId = null;
     actions = {
         POST_CONNECTION_OPEN: () => this.start(),
@@ -51,16 +51,16 @@ class g extends a.A {
     }
     start = () => {
         s.hV.getSetting() &&
-            h.isCooldownElapsed() &&
+            f.isCooldownElapsed() &&
             null == this.timerId &&
             m(l.A.getStatus()) &&
             (this.timerId = setTimeout(() => {
                 ((this.timerId = null),
                     !m(l.A.getStatus()) ||
-                        (h.isCooldownElapsed() &&
+                        (f.isCooldownElapsed() &&
                             (async function () {
                                 try {
-                                    await i.Bo.post({ url: f.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
+                                    await i.Bo.post({ url: h.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
                                 } catch (e) {
                                     if (!(e instanceof i.oh) || 429 !== e.status)
                                         return void d.A.captureException(e, { tags: { app_context: "session_timer" } });
@@ -73,4 +73,4 @@ class g extends a.A {
         null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
     };
 }
-let T = new g();
+let g = new T();

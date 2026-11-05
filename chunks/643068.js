@@ -16,8 +16,8 @@ var d = n(417869),
     _ = n(652215),
     E = n(650583);
 let A = { [_.fg2.INSTAGRAM]: ["1036753656588017764"] },
-    h = new Map([[_.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-    f = 30 * u.A.Millis.DAY;
+    f = new Map([[_.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
+    h = 30 * u.A.Millis.DAY;
 function I(e) {
     let { forUserProfile: t } = e,
         n = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
@@ -37,7 +37,7 @@ function p() {
     return i.useMemo(
         () =>
             a().sortBy(l.A.filter(t), [
-                (e) => !(h.has(e.type) && Date.now() < (h.get(e.type) ?? 0) + f),
+                (e) => !(f.has(e.type) && Date.now() < (f.get(e.type) ?? 0) + h),
                 (e) => n.has(e.type),
                 (e) => e.hasMetadata,
                 (e) => !_.ewM.has(e.type),

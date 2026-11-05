@@ -23,7 +23,7 @@ function A(e, t, n) {
     let i = e.get(t);
     null != i && e.set(t, (0, r.hZ)(i, "guildTheme", n));
 }
-class h extends l.yW {
+class f extends l.yW {
     static displayName = "GuildStore";
     database = this.addKVDatabase("guilds", E);
     stateWrapper() {
@@ -39,7 +39,7 @@ class h extends l.yW {
         return this.database.length();
     }
 }
-let f = new h(
+let h = new f(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
@@ -126,4 +126,4 @@ let f = new h(
     },
     s.P4.getCachedBridgedStoreMode(),
 );
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

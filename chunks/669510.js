@@ -21,9 +21,9 @@ l.d(
                     intervalType: h,
                     intervalCount: p,
                     currency: f,
-                    defaultExpanded: j = !1,
+                    defaultExpanded: v = !1,
                 } = e,
-                [v, b] = r.useState(j),
+                [j, b] = r.useState(v),
                 g = r.useMemo(() => {
                     let e = x.reduce((e, t) => e + t.amount, 0),
                         t = (0, o.$g)(e, f);
@@ -31,7 +31,7 @@ l.d(
                 }, [x, f, h, p]),
                 E = (0, n.jsxs)(c.h, {
                     label: t,
-                    defaultExpanded: j,
+                    defaultExpanded: v,
                     isDisabled: x.length <= 0,
                     onExpandedChange: b,
                     collapsedContent: m
@@ -55,7 +55,7 @@ l.d(
                         }),
                     ],
                 });
-            return (0, n.jsx)("div", { className: s()({ [d.k]: v }), children: E });
+            return (0, n.jsx)("div", { className: s()({ [d.k]: j }), children: E });
         },
     },
 );

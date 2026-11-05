@@ -1,23 +1,23 @@
 var l = n(477900),
     a = n(582128),
-    s = n(256905),
-    r = n(666476),
+    r = n(256905),
+    s = n(666476),
     i = n(989145),
     u = n(922329),
-    d = n(191850),
-    o = n(792996),
+    o = n(191850),
+    d = n(792996),
     c = n(986109);
 function m(e) {
-    return null != e.id && r.XB.has(e.content_type);
+    return null != e.id && s.XB.has(e.content_type);
 }
 function f(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
+        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
 function h(e) {
-    let { projectId: t, id: n, name: s } = e,
-        [r, c] = a.useState(!1),
+    let { projectId: t, id: n, name: r } = e,
+        [s, c] = a.useState(!1),
         m = a.useCallback(() => {
             (0, i.n6)(t, n)
                 .then(async (e) => {
@@ -30,18 +30,18 @@ function h(e) {
                 })
                 .catch(() => {});
         }, [t, n]);
-    return r
-        ? (0, l.jsx)(f, { name: s, unavailable: !0 })
+    return s
+        ? (0, l.jsx)(f, { name: r, unavailable: !0 })
         : (0, l.jsx)(u.n, {
-              name: s,
+              name: r,
               thumbSrc: null,
-              ariaLabel: o.intl.formatToPlainString(d.default["g5+7Vs"], { name: s }),
+              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
               onClick: m,
           });
 }
 function p(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: m } = e,
-        { id: h, name: p } = n[r],
+    let { projectId: t, viewableImages: n, viewerIndex: s, unavailableIds: c, markUnavailable: m } = e,
+        { id: h, name: p } = n[s],
         [k, x] = a.useState(null),
         g = c.has(h),
         [_, j] = a.useState(0);
@@ -64,23 +64,23 @@ function p(e) {
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, i.PK)(t, e.id), alt: e.name })),
         ).then(
             (e) => {
-                null != e[r] &&
-                    (0, s.R)({
+                null != e[s] &&
+                    (0, r.R)({
                         items: e.filter((e) => null != e),
-                        startingIndex: e.slice(0, r).filter((e) => null != e).length,
+                        startingIndex: e.slice(0, s).filter((e) => null != e).length,
                         shouldHideMediaOptions: !0,
                         location: "ConjureChat",
                     });
             },
             () => {},
         );
-    }, [t, n, r, c]);
+    }, [t, n, s, c]);
     return g
         ? (0, l.jsx)(f, { name: p, unavailable: !0 })
         : (0, l.jsx)(u.n, {
               name: p,
               thumbSrc: k,
-              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: p }),
+              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: p }),
               onClick: b,
               onThumbError: () => {
                   (x(null),
@@ -99,8 +99,8 @@ n.d(
     {
         A: function (e) {
             let { projectId: t, attachments: n } = e,
-                s = n.filter(m),
-                [r, i] = a.useState(() => new Set()),
+                r = n.filter(m),
+                [s, i] = a.useState(() => new Set()),
                 u = a.useCallback((e) => {
                     i((t) => (t.has(e) ? t : new Set(t).add(e)));
                 }, []);
@@ -114,9 +114,9 @@ n.d(
                                 p,
                                 {
                                     projectId: t,
-                                    viewableImages: s,
-                                    viewerIndex: s.indexOf(e),
-                                    unavailableIds: r,
+                                    viewableImages: r,
+                                    viewerIndex: r.indexOf(e),
+                                    unavailableIds: s,
                                     markUnavailable: u,
                                 },
                                 n,

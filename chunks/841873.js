@@ -62,7 +62,7 @@ function A(e) {
     let t = i.__externref_table_alloc();
     return (i.__wbindgen_export_4.set(t, e), t);
 }
-function h(e, t) {
+function f(e, t) {
     try {
         return e.apply(this, t);
     } catch (t) {
@@ -70,7 +70,7 @@ function h(e, t) {
         i.__wbindgen_exn_store(e);
     }
 }
-function f(e) {
+function h(e) {
     return null == e;
 }
 _.decode();
@@ -99,13 +99,13 @@ function m(e) {
     let t = i.__wbindgen_export_4.get(e);
     return (i.__externref_table_dealloc(e), t);
 }
-function g(e, t) {
+function T(e, t) {
     i._dyn_core_f73ed7932dd6acc___ops__function__FnMut_____Output______as_wasm_bindgen_9353bb4e5bfa4c18___closure__WasmClosure___describe__invoke______(
         e,
         t,
     );
 }
-function T(e, t) {
+function g(e, t) {
     i._dyn_core_f73ed7932dd6acc___ops__function__FnMut_____Output______as_wasm_bindgen_9353bb4e5bfa4c18___closure__WasmClosure___describe__invoke______10(
         e,
         t,
@@ -183,7 +183,7 @@ n.d(
             return setTimeout(e, t);
         },
         Dn: function () {
-            return h(function (e) {
+            return f(function (e) {
                 return e.next();
             }, arguments);
         },
@@ -191,7 +191,7 @@ n.d(
             return e.put(t, n);
         },
         EH: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 return new Response(e, t);
             }, arguments);
         },
@@ -255,7 +255,7 @@ n.d(
             e.set(t, n >>> 0);
         },
         HS: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 return Reflect.has(e, t);
             }, arguments);
         },
@@ -270,7 +270,7 @@ n.d(
         },
         Jp: function (e) {
             let t = e.byobRequest;
-            return f(t) ? 0 : A(t);
+            return h(t) ? 0 : A(t);
         },
         LC: function (e) {
             let t = e.original;
@@ -295,7 +295,7 @@ n.d(
             return clearTimeout(e);
         },
         NG: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 return setTimeout(e, t);
             }, arguments);
         },
@@ -304,7 +304,7 @@ n.d(
         },
         Ng: function (e) {
             let t = e.view;
-            return f(t) ? 0 : A(t);
+            return h(t) ? 0 : A(t);
         },
         Nh: function (e, t) {
             e.body = t;
@@ -330,7 +330,7 @@ n.d(
             return i.memory;
         },
         QH: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 e.enqueue(t);
             }, arguments);
         },
@@ -344,7 +344,7 @@ n.d(
             throw Error(E(e, t));
         },
         RG: function () {
-            return h(function () {
+            return f(function () {
                 return new AbortController();
             }, arguments);
         },
@@ -352,7 +352,7 @@ n.d(
             return e[t >>> 0];
         },
         RR: function () {
-            return h(function () {
+            return f(function () {
                 return new Headers();
             }, arguments);
         },
@@ -375,7 +375,7 @@ n.d(
             return t;
         },
         Tb: function () {
-            return h(function (e, t, n, i, r) {
+            return f(function (e, t, n, i, r) {
                 e.append(E(t, n), E(i, r));
             }, arguments);
         },
@@ -397,12 +397,12 @@ n.d(
             return e.done;
         },
         Xc: function () {
-            return h(function (e) {
+            return f(function (e) {
                 return e.caches;
             }, arguments);
         },
         Y6: function () {
-            return h(function (e) {
+            return f(function (e) {
                 return JSON.stringify(e);
             }, arguments);
         },
@@ -453,7 +453,7 @@ n.d(
             }
         },
         Zb: function (e, t, n) {
-            return p(e, t, 532, g);
+            return p(e, t, 532, T);
         },
         _U: function (e) {
             return e.buffer;
@@ -462,7 +462,7 @@ n.d(
             e.method = E(t, n);
         },
         _i: function () {
-            return h(function (e) {
+            return f(function (e) {
                 return e.arrayBuffer();
             }, arguments);
         },
@@ -502,12 +502,12 @@ n.d(
             return e.byteOffset;
         },
         dS: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 e.respond(t >>> 0);
             }, arguments);
         },
         dz: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 return Reflect.get(e, t);
             }, arguments);
         },
@@ -549,7 +549,7 @@ n.d(
         },
         fb: function () {
             let e = "u" < typeof self ? null : self;
-            return f(e) ? 0 : A(e);
+            return h(e) ? 0 : A(e);
         },
         gG: function (e) {
             let t;
@@ -570,7 +570,7 @@ n.d(
             return new Uint8Array(e, t >>> 0, n >>> 0);
         },
         he: function () {
-            return h(function (e, t, n) {
+            return f(function (e, t, n) {
                 return new Request(E(e, t), n);
             }, arguments);
         },
@@ -579,17 +579,17 @@ n.d(
         },
         ii: function () {
             let e = void 0 === n.g ? null : n.g;
-            return f(e) ? 0 : A(e);
+            return h(e) ? 0 : A(e);
         },
         j1: function (e, t, n) {
             return e.open(E(t, n));
         },
         jn: function (e) {
             let t = e.performance;
-            return f(t) ? 0 : A(t);
+            return h(t) ? 0 : A(t);
         },
         ju: function () {
-            return h(function (e, t, n, i, r) {
+            return f(function (e, t, n, i, r) {
                 e.set(E(t, n), E(i, r));
             }, arguments);
         },
@@ -597,7 +597,7 @@ n.d(
             return e.queueMicrotask;
         },
         k4: function () {
-            return h(function (e) {
+            return f(function (e) {
                 return new Blob(e);
             }, arguments);
         },
@@ -611,7 +611,7 @@ n.d(
             i = e;
         },
         n7: function (e, t, n) {
-            return p(e, t, 553, T);
+            return p(e, t, 553, g);
         },
         n8: function (e, t) {
             e.abort(t);
@@ -641,7 +641,7 @@ n.d(
             }
         },
         o: function () {
-            return h(function (e) {
+            return f(function (e) {
                 e.close();
             }, arguments);
         },
@@ -653,7 +653,7 @@ n.d(
         },
         qN: function (e, t) {
             let n = "string" == typeof t ? t : void 0;
-            var a = f(n) ? 0 : d(n, i.__wbindgen_malloc, i.__wbindgen_realloc),
+            var a = h(n) ? 0 : d(n, i.__wbindgen_malloc, i.__wbindgen_realloc),
                 s = r;
             (u().setInt32(e + 4, s, !0), u().setInt32(e + 0, a, !0));
         },
@@ -708,19 +708,19 @@ ${t.stack}`
             (u().setInt32(e + 4, a, !0), u().setInt32(e + 0, n, !0));
         },
         s5: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 var n;
                 globalThis.crypto.getRandomValues(((n = e >>> 0), s().subarray(n / 1, n / 1 + t)));
             }, arguments);
         },
         sQ: function () {
-            return h(function (e) {
+            return f(function (e) {
                 e.close();
             }, arguments);
         },
         sW: function (e, t) {
             let n = "number" == typeof t ? t : void 0;
-            (u().setFloat64(e + 8, f(n) ? 0 : n, !0), u().setInt32(e + 0, !f(n), !0));
+            (u().setFloat64(e + 8, h(n) ? 0 : n, !0), u().setInt32(e + 0, !h(n), !0));
         },
         ss: function (e, t) {
             e.status = t;
@@ -780,21 +780,21 @@ ${t.stack}`
             i.crash();
         },
         w2: function () {
-            return h(function (e, t, n) {
+            return f(function (e, t, n) {
                 return Reflect.set(e, t, n);
             }, arguments);
         },
         w6: function () {
             let e = "u" < typeof globalThis ? null : globalThis;
-            return f(e) ? 0 : A(e);
+            return h(e) ? 0 : A(e);
         },
         w9: function () {
-            return h(function (e, t, n) {
+            return f(function (e, t, n) {
                 return e.call(t, n);
             }, arguments);
         },
         wH: function () {
-            return h(function (e, t) {
+            return f(function (e, t) {
                 return e.call(t);
             }, arguments);
         },
@@ -806,7 +806,7 @@ ${t.stack}`
         },
         x0: function () {
             let e = "u" < typeof window ? null : window;
-            return f(e) ? 0 : A(e);
+            return h(e) ? 0 : A(e);
         },
         x6: function (e) {
             return e.byteLength;

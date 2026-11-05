@@ -20,7 +20,7 @@ var i,
         (i[(i.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL = 7)] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL"),
         (i[(i.CHANNEL_CONTENT_GATED = 8)] = "CHANNEL_CONTENT_GATED"),
         i);
-function h(e) {
+function f(e) {
     let { channelId: t, isContentGated: n, ChannelStore: i, GuildStore: r, PermissionStore: a, VoiceStateStore: s } = e,
         l = i.getChannel(t);
     if (null == l) return 3;
@@ -45,7 +45,7 @@ n.d(
     {
         J4: function (e) {
             let t = s.A.getChannel(e);
-            return h({
+            return f({
                 channelId: e,
                 isContentGated: (0, a.qR)(t),
                 ChannelStore: s.A,
@@ -54,7 +54,7 @@ n.d(
                 VoiceStateStore: d.A,
             });
         },
-        JH: h,
+        JH: f,
         dL: function (e) {
             switch (e) {
                 case 0:
@@ -73,7 +73,7 @@ n.d(
             return (0, r.bG)(
                 [s.A, l.A, o.A, d.A],
                 () =>
-                    h({
+                    f({
                         channelId: e,
                         isContentGated: n,
                         ChannelStore: s.A,

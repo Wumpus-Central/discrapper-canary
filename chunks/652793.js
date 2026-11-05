@@ -28,7 +28,7 @@ n.d(
                     ...x
                 } = e,
                 N = (0, r.rm)(t),
-                _ = E ?? (0, a.O)(m) ?? "";
+                I = E ?? (0, a.O)(m) ?? "";
             return (0, l.jsx)("li", {
                 ref: C,
                 children: (0, l.jsxs)(o.s, {
@@ -37,7 +37,7 @@ n.d(
                     "data-list-item-id": N["data-list-item-id"],
                     onFocus: N.onFocus,
                     tag: "div",
-                    "aria-label": _,
+                    "aria-label": I,
                     focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
                     onContextMenu:
                         null != x.onContextMenu

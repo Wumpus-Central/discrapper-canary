@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(855986),
     o = n(416696),
-    d = n(939249),
-    c = n(793574),
+    c = n(939249),
+    d = n(793574),
     u = n(688810),
     h = n(279250),
     p = n(880144),
@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(754712),
     C = n(576705),
     y = n(309010),
-    j = n(920639),
-    I = n(82715),
+    I = n(920639),
+    j = n(82715),
     N = n(731854),
     v = n(792996),
     E = n(989952),
@@ -29,35 +29,35 @@ n.d(
         A: function (e) {
             let { channelId: t, center: n, iconSize: a } = e,
                 S = (0, r.bG)([f.A], () => f.A.getChannel(t)),
-                _ = S?.guild_id,
-                T = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
+                T = S?.guild_id,
+                _ = (0, r.bG)([y.Ay], () => y.Ay.getVoiceChannelId() === t),
                 R = (0, r.bG)([x.Ay], () => (0, p.A)(x.Ay)),
                 O = (0, r.bG)([g.A, C.A], () => null != S && (0, h.vz)(S, g.A, C.A, !0)),
-                { analyticsLocations: P } = (0, u.Ay)(c.A.GUILD_ROOM),
-                { Component: L } = (0, o.c)("enable"),
+                { analyticsLocations: L } = (0, u.Ay)(d.A.GUILD_ROOM),
+                { Component: P } = (0, o.c)("enable"),
                 M = (0, r.bG)([x.Ay], () => x.Ay.supports(N.O5.VIDEO)),
                 w = l.useRef(null),
                 U = l.useCallback(() => {
-                    if (null != _) {
+                    if (null != T) {
                         if (!R) return void (0, m.A)();
-                        ((0, A.A)(_, t, P), (0, j.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
+                        ((0, A.A)(T, t, L), (0, I.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
                     }
-                }, [_, R, t, P]);
-            return null != S && null != _ && O && T && M
-                ? (0, i.jsxs)(d.D, {
+                }, [T, R, t, L]);
+            return null != S && null != T && O && _ && M
+                ? (0, i.jsxs)(c.D, {
                       "aria-label": v.intl.string(v.t.fjBNo1),
                       className: b.XI,
                       onClick: U,
                       focusProps: { ringTarget: w },
                       children: [
-                          (0, i.jsx)(I.A, { className: s()(b.ys, E.zq) }),
+                          (0, i.jsx)(j.A, { className: s()(b.ys, E.zq) }),
                           (0, i.jsx)("div", {
                               className: b.F$,
                               style: { left: `${n.x}%`, top: `${n.y}%` },
                               children: (0, i.jsx)("div", {
                                   className: E.zq,
                                   ref: w,
-                                  children: (0, i.jsx)(L, {
+                                  children: (0, i.jsx)(P, {
                                       className: b.Kk,
                                       color: "currentColor",
                                       size: "custom",

@@ -1,11 +1,11 @@
 n.d(t, {
-    KB: () => f,
+    KB: () => h,
     Fo: () => p,
     iU: () => I,
-    uW: () => g,
+    uW: () => T,
     xJ: () => m,
     Mn: () => S,
-    C$: () => T,
+    C$: () => g,
     G9: () => C,
     Yj: () => N,
 });
@@ -23,8 +23,8 @@ var o = n(203389),
 var _ = n(628691),
     E = n(272720),
     A = n(56595),
-    h = n(652215);
-function f(e) {
+    f = n(652215);
+function h(e) {
     if (!(0, _.UN)(e.author)) return !1;
     let t = d.A.getChannel(e.channel_id);
     if (null == t) return !1;
@@ -43,11 +43,11 @@ function p(e) {
 function m(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumPost();
 }
-function g(e) {
+function T(e) {
     return null != e && (p(e) || m(e));
 }
-function T(e) {
-    if (null == e || !(0, o.L)() || !g(d.A.getChannel(e))) return !0;
+function g(e) {
+    if (null == e || !(0, o.L)() || !T(d.A.getChannel(e))) return !0;
     let { loaded: t, firstMessage: n } = l.A.getMessage(e);
     return !t || null == n || !(0, a.y5)(n, r.LO.EXPLICIT);
 }
@@ -63,4 +63,4 @@ function C(e, t) {
     let i = u.A.getMessages(e).first();
     return i?.messageSnapshots?.[0]?.moderatorReport?.reported_user_id === t;
 }
-i.kg(h.xBc.ADMINISTRATOR, h.xBc.BAN_MEMBERS, h.xBc.KICK_MEMBERS, h.xBc.MODERATE_MEMBERS);
+i.kg(f.xBc.ADMINISTRATOR, f.xBc.BAN_MEMBERS, f.xBc.KICK_MEMBERS, f.xBc.MODERATE_MEMBERS);

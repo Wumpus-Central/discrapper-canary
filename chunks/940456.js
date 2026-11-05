@@ -1,17 +1,17 @@
 i.d(t, {
     Wp: () => x,
     e_: () => j,
-    jL: () => R,
+    jL: () => N,
     z9: () => A,
-    cq: () => S,
-    tT: () => I,
+    cq: () => I,
+    tT: () => S,
     Jr: () => G,
     dk: () => C,
     hU: () => y,
     hE: () => M,
     KH: () => v,
     pj: () => b,
-    QK: () => N,
+    QK: () => R,
     Ce: () => P,
     as: () => U,
     Kz: () => V,
@@ -180,10 +180,10 @@ let T = [
         },
     ];
 var _ = i(24641);
-function p(e) {
+function h(e) {
     return { id: e.id, name: e.name, countryCode: e.country_code, pingUrl: e.ping_url, enabled: e.enabled };
 }
-var h = i(628049),
+var p = i(628049),
     f = i(652215);
 function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -197,7 +197,7 @@ function A(e) {
         }, 5e3);
     let i = l.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, c.aP)({
-        url: f.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(h.q4),
+        url: f.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(p.q4),
         query: {
             locale: a.default.locale,
             guild_id: e,
@@ -245,7 +245,7 @@ function A(e) {
         r.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: i });
     });
 }
-function S(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = arguments.length > 2 ? arguments[2] : void 0;
     return t
@@ -264,7 +264,7 @@ function S(e) {
               }
           });
 }
-function I(e, t) {
+function S(e, t) {
     return (0, c.aP)({
         url: f.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
         query: { locale: a.default.locale },
@@ -292,10 +292,10 @@ function x(e, t) {
 function v() {
     r.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
-function N(e, t) {
+function R(e, t) {
     r.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
 }
-function R(e, t, i, s) {
+function N(e, t, i, s) {
     return n.Bo.post({
         url: f.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         body: { game_server_name: i, game_server_region: s },
@@ -324,7 +324,7 @@ function G(e) {
         (e) => {
             r.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(p).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.map(h).sort((e, t) => e.name.localeCompare(t.name)),
             });
         },
     );
@@ -334,7 +334,7 @@ function C() {
         (e) => {
             r.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.regions.map(p).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.regions.map(h).sort((e, t) => e.name.localeCompare(t.name)),
                 creationDisabled: !0 === e.body.creation_disabled,
             });
         },

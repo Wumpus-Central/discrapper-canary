@@ -1,4 +1,4 @@
-s.d(t, { pE: () => P, lP: () => j, M6: () => G, QK: () => I, l2: () => v });
+s.d(t, { pE: () => P, lP: () => j, M6: () => G, QK: () => N, l2: () => v });
 var n = s(582128),
     a = s(687123),
     i = s(478437),
@@ -8,8 +8,8 @@ var n = s(582128),
     o = s(323073),
     d = s(47167),
     c = s(960850),
-    b = s(207560),
-    m = s(223863),
+    m = s(207560),
+    b = s(223863),
     g = s(898578),
     A = s(378058),
     f = s(95701),
@@ -27,9 +27,9 @@ let _ = (0, s(400845).Ay)({
     variations: { 1: { disableAgeRestrictedDestinations: !0 } },
 });
 var D = s(652215),
-    N = s(792996);
-function I(e) {
-    let t = e.map(m._g).find(S.Vq),
+    I = s(792996);
+function N(e) {
+    let t = e.map(b._g).find(S.Vq),
         s = (0, l.bG)([p.A], () => p.A.getChannel(t), [t]);
     return n.useMemo(() => s ?? (0, f.createChannelRecord)({ id: "1", type: i.r.DM }), [s]);
 }
@@ -46,32 +46,32 @@ function P(e, t, s, n) {
     let l = y(e),
         r = e.messageSnapshots.length > 0 && y(e.messageSnapshots[0].message);
     if (null != t || l) {
-        if ((0, o.Gc)(t) && !(i && (0, o.Gc)(s))) return { label: N.intl.string(N.t.KgPx1D), lineClamp: 2 };
+        if ((0, o.Gc)(t) && !(i && (0, o.Gc)(s))) return { label: I.intl.string(I.t.KgPx1D), lineClamp: 2 };
         if (
             (function (e) {
                 if (!(e instanceof f.YB) || !(0, o.Gc)(e)) return !1;
                 let t = C.default.getCurrentUser()?.nsfwAllowed === !1,
-                    s = (0, u.u5)() && (0, b.d6)(a.t.AGE_GATED_SPACES);
+                    s = (0, u.u5)() && (0, m.d6)(a.t.AGE_GATED_SPACES);
                 return (
                     (!!t || !!s) &&
                     _.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations
                 );
             })(s)
         )
-            return { label: N.intl.string(N.t.QHrFo6), lineClamp: 2 };
+            return { label: I.intl.string(I.t.QHrFo6), lineClamp: 2 };
         if (i && (0, f.zy)(s.type)) {
             if (
                 (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
                 !h.A.can(D.xBc.ATTACH_FILES, s)
             )
-                return { label: N.intl.string(N.t.P7yvbm) };
+                return { label: I.intl.string(I.t.P7yvbm) };
             if (
                 ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
                     !(0, L.fS)(s, h.A) &&
                     !(0, L.ax)(e)) ||
                 ((l || r) && !(0, L.fS)(s, h.A))
             )
-                return { label: N.intl.string(N.t.Wr4RIX) };
+                return { label: I.intl.string(I.t.Wr4RIX) };
             let t = [
                 ...(0, A.o6)(e),
                 ...e.messageSnapshots.flatMap((e) => {
@@ -91,13 +91,13 @@ function P(e, t, s, n) {
                     );
                 })
             )
-                return { label: N.intl.string(N.t["0Yyrua"]) };
+                return { label: I.intl.string(I.t["0Yyrua"]) };
             if (
                 (e.hasFlag(D.pr7.IS_VOICE_MESSAGE) ||
                     e.messageSnapshots.some((e) => e.message.hasFlag(D.pr7.IS_VOICE_MESSAGE))) &&
                 !h.A.can(D.xBc.SEND_VOICE_MESSAGES, s)
             )
-                return { label: N.intl.string(N.t.quj4DY) };
+                return { label: I.intl.string(I.t.quj4DY) };
         }
     }
 }

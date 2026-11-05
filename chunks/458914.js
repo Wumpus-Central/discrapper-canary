@@ -13,14 +13,14 @@ function _(e) {
 }
 var E = n(381941);
 function A(e) {
-    let { file: t, guildId: n, code: A, reason: h } = e;
+    let { file: t, guildId: n, code: A, reason: f } = e;
     if (void 0 === A) return !1;
     if (A === c.t02.ENTITY_TOO_LARGE) {
         let e,
             d,
             A,
-            f = (0, s.o2)(n),
-            I = (0, l.C)(f),
+            h = (0, s.o2)(n),
+            I = (0, l.C)(h),
             p =
                 ((d = (e = t.items ?? []).map((e) => e.preCompressionSize)),
                 {
@@ -39,14 +39,14 @@ function A(e) {
                 (0, o.s)({
                     guildId: n,
                     channelId: t.items?.[0]?.channelId ?? null,
-                    userIndividualFileSizeLimit: f,
+                    userIndividualFileSizeLimit: h,
                     numAttachments: p.numAttachments,
                     preCompressionFileSizes: p.preCompressionFileSizes,
                     preCompressionAggregateSize: p.preCompressionAggregateSize,
                     postCompressionFileSizes: p.postCompressionFileSizes,
                     postCompressionAggregateSize: p.postCompressionAggregateSize,
                     attachmentMimeTypes: null != t.items ? (0, a.p)(t.items) : [],
-                    errorType: h?.type ?? E.ty.ERROR_SOURCE_UNKNOWN,
+                    errorType: f?.type ?? E.ty.ERROR_SOURCE_UNKNOWN,
                 }),
             ),
             (0, i.A)({
@@ -68,7 +68,7 @@ function A(e) {
         return ((0, i.A)({ title: u.intl.string(u.t.B3vFdU), subtitle: u.intl.string(u.t["9ZpT2C"]) }), !0);
     if (A === c.t02.INVALID_FILE_ASSET)
         return ((0, i.A)({ title: u.intl.string(u.t.B3vFdU), subtitle: u.intl.string(u.t.zMEjJg) }), !0);
-    let f = (function (e) {
+    let h = (function (e) {
         let t = u.intl.string(u.t.B3vFdU);
         switch (e) {
             case c.t02.TOTAL_ATTACHMENT_SIZE_TOO_LARGE:
@@ -81,5 +81,5 @@ function A(e) {
                 return null;
         }
     })(A);
-    return null != f && ((0, i.A)({ title: f.title, subtitle: f.body }), !0);
+    return null != h && ((0, i.A)({ title: h.title, subtitle: h.body }), !0);
 }

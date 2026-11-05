@@ -1,4 +1,4 @@
-n.d(t, { LI: () => m, Ak: () => I, Ay: () => g, b8: () => p, BE: () => f });
+n.d(t, { LI: () => m, Ak: () => I, Ay: () => T, b8: () => p, BE: () => h });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
     a = n(620632),
@@ -11,8 +11,8 @@ var i,
     _ = n(264779),
     E = n(412260),
     A = n(682901),
-    h = n(652215);
-function f() {
+    f = n(652215);
+function h() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     null == u.default.getCurrentUser() ||
         E.A.isFetchingActivePromotions ||
@@ -28,7 +28,7 @@ async function p() {
         l.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH", locale: e });
         let t = r.DESKTOP,
             n = await a.Bo.get({
-                url: h.Rsh.PROMOTIONS,
+                url: f.Rsh.PROMOTIONS,
                 query: { locale: e, platform: t },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -46,13 +46,13 @@ async function p() {
 function m(e) {
     l.h.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode: e });
 }
-let g = {
+let T = {
     fetchActivePromotions: p,
     fetchClaimedOutboundPromotionCodes: async function () {
         try {
             let e = (
                 await a.Bo.get({
-                    url: h.Rsh.CLAIMED_OUTBOUND_PROMOTION_CODES,
+                    url: f.Rsh.CLAIMED_OUTBOUND_PROMOTION_CODES,
                     query: { locale: d.default.locale },
                     oldFormErrors: !0,
                     rejectWithError: (0, a.fT)(),

@@ -11,13 +11,13 @@ var i = n(284009),
     _ = n(333807),
     E = n(626584),
     A = n(91242),
-    h = n(643501),
-    f = n(652896),
+    f = n(643501),
+    h = n(652896),
     I = n(209932),
     p = n(312006),
     m = n(616356),
-    g = n(46653),
-    T = n(470710),
+    T = n(46653),
+    g = n(470710),
     S = n(734057),
     N = n(290863),
     C = n(309010),
@@ -66,7 +66,7 @@ function z(e) {
                       n === P._Of.VOICE ? (delete B[e], delete V[e]) : (B[e] = n);
                   })(n),
                   (function (e) {
-                      let t = g.default.getId(),
+                      let t = T.default.getId(),
                           n = X(e);
                       if (0 === n.size() || C.Ay.getVoiceChannelId() !== e) return ee(e, null);
                       let i = v.jd.NONE,
@@ -82,7 +82,7 @@ function z(e) {
                           let e = n.toArray().find((e) => e.type === v.lp.USER && e.id !== t && !e.ringing);
                           i = e?.id ?? t;
                       }
-                      let [s] = Z(e);
+                      let [s] = Q(e);
                       if (s !== v.jd.AUTO && s !== v.jd.NONE) {
                           let e = n.getParticipant(s);
                           (null == e || (e.type === v.lp.STREAM && null == m.A.getActiveStreamForStreamKey(e.id))) &&
@@ -99,12 +99,12 @@ function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w;
     return z((t) => t.updateParticipant(e), t);
 }
-function Z(e) {
+function Q(e) {
     let t = S.A.getChannel(e),
         n = t?.isDM() && 1 ? v.jd.AUTO : v.jd.NONE;
     return k[e] ?? [n, v.jd.NONE];
 }
-function Q(e) {
+function Z(e) {
     if (null == k[e]) return !1;
     let [t] = k[e];
     return t !== v.jd.NONE;
@@ -113,7 +113,7 @@ function J(e) {
     null == F[e] && (F[e] = { gridDurationMs: 0, focusDurationMs: 0, toggleCount: 0, lastUpdate: 0 });
     let t = F[e],
         n = performance.now(),
-        i = Q(e);
+        i = Z(e);
     if (t.lastUpdate > 0) {
         let e = n - t.lastUpdate;
         t[i ? "focusDurationMs" : "gridDurationMs"] += e;
@@ -122,8 +122,8 @@ function J(e) {
 }
 function ee(e, t) {
     J(e);
-    let n = Q(e);
-    (null == t ? delete k[e] : (k[e] = t), n !== Q(e) && F[e].toggleCount++);
+    let n = Z(e);
+    (null == t ? delete k[e] : (k[e] = t), n !== Z(e) && F[e].toggleCount++);
 }
 function et(e) {
     return e.size(D.r4.STREAM) > 0 || e.size(D.r4.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -138,8 +138,8 @@ function ei() {
         ((e = []),
         null != (t = C.Ay.getChannelId()) && e.push(t),
         null == (n = C.Ay.getVoiceChannelId()) || e.includes(n) || e.push(n),
-        (i = h.default.getRemoteSessionId()),
-        (r = y.A.getVoiceStateForSession(g.default.getId(), i)),
+        (i = f.default.getRemoteSessionId()),
+        (r = y.A.getVoiceStateForSession(T.default.getId(), i)),
         r?.channelId != null && e.push(r?.channelId),
         s().difference(w, e).forEach(en),
         (a = s().difference(e, w)),
@@ -185,7 +185,7 @@ function ec(e) {
 }
 function eu(e) {
     let { streamKey: t } = e,
-        { channelId: n, ownerId: i } = (0, f.Iy)(t);
+        { channelId: n, ownerId: i } = (0, h.Iy)(t);
     return q(i, [n]);
 }
 function e_(e) {
@@ -198,13 +198,13 @@ class eE extends l.Ay.PersistedStore {
         (this.waitFor(
             c.A,
             m.A,
-            g.default,
-            T.A,
+            T.default,
+            g.A,
             S.A,
             u.Ay,
             d.Ay,
             A.A,
-            h.default,
+            f.default,
             N.A,
             C.Ay,
             I.A,
@@ -215,7 +215,7 @@ class eE extends l.Ay.PersistedStore {
             y.A,
         ),
             this.syncWith([d.Ay], ea),
-            this.syncWith([h.default], ei),
+            this.syncWith([f.default], ei),
             e?.voiceParticipantsHidden !== void 0 && Object.assign(j, e?.voiceParticipantsHidden));
     }
     getState() {
@@ -260,7 +260,7 @@ class eE extends l.Ay.PersistedStore {
         return j[e] ?? !1;
     }
     getSelectedParticipantId(e) {
-        let [t, n] = Z(e);
+        let [t, n] = Q(e);
         return t === v.jd.NONE ? null : t !== v.jd.AUTO ? t : n === v.jd.NONE || n === v.jd.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
@@ -368,16 +368,16 @@ let eA = new eE(o.h, {
         let { channelId: n, id: i } = e,
             r = X(n);
         ((t = n),
-            S.A.getChannel(t)?.isGuildStageVoice() && (Y[n] = (0, f.wL)(i)),
+            S.A.getChannel(t)?.isGuildStageVoice() && (Y[n] = (0, h.wL)(i)),
             null == i &&
                 r.toArray(D.r4.STREAM).forEach((e) => {
                     (0, v.Ay)(e) && r.updateParticipant(e.user.id);
                 }));
-        let [, a] = Z(n);
-        if ((ee(n, [i ?? v.jd.NONE, a]), (0, f.wL)(i))) {
+        let [, a] = Q(n);
+        if ((ee(n, [i ?? v.jd.NONE, a]), (0, h.wL)(i))) {
             try {
-                let { ownerId: e } = (0, f.Iy)(i);
-                e === g.default.getId() && q(e, [n]);
+                let { ownerId: e } = (0, h.Iy)(i);
+                e === T.default.getId() && q(e, [n]);
             } catch (e) {
                 M.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
             }
@@ -393,7 +393,7 @@ let eA = new eE(o.h, {
     CONJURE_PROJECTS_FETCH_SUCCESS: es,
     CHANNEL_RTC_POPOUT_PARTICIPANT: function (e) {
         let { channelId: t, participantId: n } = e,
-            [i] = Z(t);
+            [i] = Q(t);
         i === n && ee(t, null);
         let r = X(t),
             a = r.getParticipant(n);
@@ -428,10 +428,10 @@ let eA = new eE(o.h, {
     },
     STREAM_UPDATE_SELF_HIDDEN: function (e) {
         let { channelId: t, selfStreamHidden: n } = e,
-            i = g.default.getId();
+            i = T.default.getId();
         if (n) {
-            let [e] = Z(t);
-            (0, f.wL)(e) && e.includes(i) && ee(t, null);
+            let [e] = Q(t);
+            (0, h.wL)(e) && e.includes(i) && ee(t, null);
         }
         q(i, [t]);
     },
@@ -463,14 +463,14 @@ let eA = new eE(o.h, {
     STREAM_DELETE: eu,
     STREAM_WATCH: function (e) {
         let { streamKey: t } = e,
-            { channelId: n, ownerId: i } = (0, f.Iy)(t);
+            { channelId: n, ownerId: i } = (0, h.Iy)(t);
         return q(i, [n]);
     },
     SPEAKING: el,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: el,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: el,
     PUSH_TO_TALK_STATE_CHANGE: function () {
-        return z((e) => e.updateParticipantSpeaking(g.default.getId()));
+        return z((e) => e.updateParticipantSpeaking(T.default.getId()));
     },
     USER_UPDATE: eo,
     GUILD_MEMBER_UPDATE: eo,

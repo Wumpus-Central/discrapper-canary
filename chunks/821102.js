@@ -7,8 +7,8 @@ var n = r(855986),
     s = r(792996);
 let u = "webm",
     c = (0, o.j9)() ? "tinywebp" : u,
-    d = !(function (e) {
-        switch (e) {
+    d = !(function (t) {
+        switch (t) {
             case "fixed_height.mp4":
             case "fixed_height_small.mp4":
             case "fixed_width.mp4":
@@ -35,13 +35,13 @@ let u = "webm",
     h = [],
     S = [],
     m = [];
-function g(e) {
-    return e.replace(/^https?:/, "");
+function g(t) {
+    return t.replace(/^https?:/, "");
 }
-function p(e) {
+function p(t) {
     try {
-        let t = new URL(e).pathname.toLowerCase();
-        if (t.endsWith(".mp4") || t.endsWith(".webm")) return i.TL.VIDEO;
+        let e = new URL(t).pathname.toLowerCase();
+        if (e.endsWith(".mp4") || e.endsWith(".webm")) return i.TL.VIDEO;
     } catch {}
     return i.TL.IMAGE;
 }
@@ -72,49 +72,49 @@ class R extends n.Ay.Store {
         return m;
     }
 }
-let y = new R(l.h, {
-    GIF_PICKER_INITIALIZE: function (e) {
-        _ = e.analyticsID;
+let F = new R(l.h, {
+    GIF_PICKER_INITIALIZE: function (t) {
+        _ = t.analyticsID;
     },
-    GIF_PICKER_QUERY: function (e) {
-        "" === (f = e.query) && ((E = ""), (I = []), (S = []));
+    GIF_PICKER_QUERY: function (t) {
+        "" === (f = t.query) && ((E = ""), (I = []), (S = []));
     },
-    GIF_PICKER_QUERY_SUCCESS: function (e) {
-        if (null != e.query && f === E) return !1;
-        (null != e.query && (E = e.query),
-            (I = e.items.map((e) => {
-                let { width: t, height: r, src: n, gif_src: i, url: l, id: o } = e;
-                return { width: t, height: r, src: g(n), gifSrc: g(i), url: l, id: o, format: d };
+    GIF_PICKER_QUERY_SUCCESS: function (t) {
+        if (null != t.query && f === E) return !1;
+        (null != t.query && (E = t.query),
+            (I = t.items.map((t) => {
+                let { width: e, height: r, src: n, gif_src: i, url: l, id: o } = t;
+                return { width: e, height: r, src: g(n), gifSrc: g(i), url: l, id: o, format: d };
             })));
     },
-    GIF_PICKER_QUERY_FAILURE: function (e) {
-        let { query: t } = e;
-        if (null == t) return !1;
-        ((E = t), (I = []));
+    GIF_PICKER_QUERY_FAILURE: function (t) {
+        let { query: e } = t;
+        if (null == e) return !1;
+        ((E = e), (I = []));
     },
-    GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
-        let t = e.trendingCategories;
+    GIF_PICKER_TRENDING_FETCH_SUCCESS: function (t) {
+        let e = t.trendingCategories;
         h = [
-            ...(null != e.trendingGIFPreview
+            ...(null != t.trendingGIFPreview
                 ? [
                       {
                           type: a.dD.TRENDING_GIFS,
                           name: s.intl.string(s.t.H6zNFz),
-                          src: g(e.trendingGIFPreview.src),
-                          format: p(e.trendingGIFPreview.src),
+                          src: g(t.trendingGIFPreview.src),
+                          format: p(t.trendingGIFPreview.src),
                       },
                   ]
                 : []),
-            ...t.map((e) => ({ ...e, src: g(e.src), type: a.dD.TRENDING_CATEGORY, format: p(e.src) })),
+            ...e.map((t) => ({ ...t, src: g(t.src), type: a.dD.TRENDING_CATEGORY, format: p(t.src) })),
         ];
     },
-    GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
-        let { items: t } = e;
-        S = t;
+    GIF_PICKER_SUGGESTIONS_SUCCESS: function (t) {
+        let { items: e } = t;
+        S = e;
     },
-    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
-        let { items: t } = e;
-        m = t;
+    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (t) {
+        let { items: e } = t;
+        m = e;
     },
 });
-r.d(t, {}, { A: y });
+r.d(e, {}, { A: F });

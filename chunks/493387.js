@@ -5,8 +5,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(615300),
     o = n(855986),
-    d = n(628274),
-    c = n(462887),
+    c = n(628274),
+    d = n(462887),
     u = n(778712),
     h = n(890856),
     p = n(736653),
@@ -17,8 +17,8 @@ var i = n(477900),
     x = n(531685),
     C = n(85448),
     y = n(806931),
-    j = n(792996),
-    I = n(836905),
+    I = n(792996),
+    j = n(836905),
     N = n(938442),
     v = n(138267);
 let E = {
@@ -82,15 +82,15 @@ class b extends l.PureComponent {
     }
     render() {
         let { theme: e, children: t, className: n } = this.props,
-            l = (0, c.M)(e),
-            a = s()(I._y, { [v.cp]: l, [v.QB]: !l });
+            l = (0, d.M)(e),
+            a = s()(j._y, { [v.cp]: l, [v.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
-            className: s()(I.kY, n),
+            className: s()(j.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: s()(I.XY, N.xM, N.wq, N.Hu),
+                    className: s()(j.XY, N.xM, N.wq, N.Hu),
                     children: (0, i.jsx)(r.A.div, { className: a, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -104,12 +104,12 @@ n.d(
     {
         A: function (e) {
             var t;
-            let { participants: n, onContextMenu: l, className: a, onClick: r, width: c, guildId: N } = e,
+            let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: N } = e,
                 v = (0, p.Ay)(),
-                E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > c ? u._3.SIZE_40 : u._3.SIZE_80),
+                E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
                 S = (0, o.bG)([x.A], () => x.A.isFocused()),
-                _ = (0, f.oN)(),
-                T = (0, o.bG)(
+                T = (0, f.oN)(),
+                _ = (0, o.bG)(
                     [g.Ay],
                     () => new Map(n.filter(y.Xw).map((e) => [e.user.id, g.Ay.isLocalMute(e.user.id)])),
                     [n],
@@ -120,30 +120,30 @@ n.d(
                     [n],
                 ),
                 O = (0, m.g)(R.size > 0 ? "VoiceCallParticipants" : "Invalid - VoiceCallParticipants"),
-                P = n.map((e) => {
+                L = n.map((e) => {
                     if (e.type !== y.lp.USER) return null;
                     let { user: t, speaking: n, ringing: a, playingSoundboard: s } = e,
-                        o = (0, f.Nd)(e.voiceState, _),
-                        d = null;
-                    !0 === T.get(t.id)
-                        ? (d = j.intl.string(j.t.Q8Uzof))
+                        o = (0, f.Nd)(e.voiceState, T),
+                        c = null;
+                    !0 === _.get(t.id)
+                        ? (c = I.intl.string(I.t.Q8Uzof))
                         : o?.isVoiceDeafened() === !0
-                          ? (d = j.intl.string(j.t.NjmiOL))
+                          ? (c = I.intl.string(I.t.NjmiOL))
                           : o?.isVoiceMuted() === !0
-                            ? (d = j.intl.string(j.t.tjtv3P))
-                            : O && !0 === R.get(t.id) && (d = j.intl.string(j.t["9bJYWN"]));
-                    let c =
-                        null != d
-                            ? j.intl.formatToPlainString(j.t["1+MVBP"], { userName: t.username, status: d })
+                            ? (c = I.intl.string(I.t.tjtv3P))
+                            : O && !0 === R.get(t.id) && (c = I.intl.string(I.t["9bJYWN"]));
+                    let d =
+                        null != c
+                            ? I.intl.formatToPlainString(I.t["1+MVBP"], { userName: t.username, status: c })
                             : t.username;
                     return (0, i.jsx)(
                         b,
                         {
-                            className: I.Wp,
+                            className: j.Wp,
                             width: (0, u.FT)(E),
                             theme: v,
                             children: (0, i.jsx)(h.s, {
-                                "aria-label": c,
+                                "aria-label": d,
                                 onClick: (t) => r?.(e, t),
                                 onContextMenu: (t) => l?.(e, t),
                                 children: (0, i.jsx)(
@@ -164,7 +164,7 @@ n.d(
                         t.id,
                     );
                 });
-            return (0, i.jsx)(d.F, { component: "div", role: "list", className: s()(I.zr, a), children: P });
+            return (0, i.jsx)(c.F, { component: "div", role: "list", className: s()(j.zr, a), children: L });
         },
     },
 );

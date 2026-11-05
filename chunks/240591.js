@@ -10,8 +10,8 @@ var i = n(582128),
     _ = n(734057),
     E = n(696451),
     A = n(71393),
-    h = n(576705),
-    f = n(287809),
+    f = n(576705),
+    h = n(287809),
     I = n(652215);
 function p(e, t, n, i) {
     return !!t && (!(e instanceof d.YB) || (null != e.guild_id ? e.isNSFW() || i : n));
@@ -20,7 +20,7 @@ function m(e, t) {
     let n, i;
     if ((e instanceof d.YB && e.isPrivate()) || null == e)
         return { computedPermissions: r.iu(0), hasBaseAccessPermissions: !0, hasSendMessagesPermission: !0 };
-    let a = h.A.computePermissions(e);
+    let a = f.A.computePermissions(e);
     return (
         r.zy(a, I.xBc.ADMINISTRATOR)
             ? ((n = !0), (i = !0))
@@ -31,7 +31,7 @@ function m(e, t) {
         { computedPermissions: a, hasBaseAccessPermissions: n, hasSendMessagesPermission: i }
     );
 }
-function g(e) {
+function T(e) {
     return e instanceof d.YB ? e.guild_id : e.id;
 }
 n.d(
@@ -42,25 +42,25 @@ n.d(
             let n,
                 i =
                     null != (n = e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e)
-                        ? g(n)
+                        ? T(n)
                         : void 0,
                 r = (0, o.S9)(),
                 a = u.default.getId(),
-                s = f.default.getCurrentUser()?.nsfwAllowed ?? !1,
-                h = null != i ? (E.Ay.getMember(i, a)?.roles ?? []) : [],
+                s = h.default.getCurrentUser()?.nsfwAllowed ?? !1,
+                f = null != i ? (E.Ay.getMember(i, a)?.roles ?? []) : [],
                 I = l.A.isViewingRoles(i),
                 {
-                    computedPermissions: T,
+                    computedPermissions: g,
                     hasBaseAccessPermissions: S,
                     hasSendMessagesPermission: N,
                 } = m(n, e instanceof d.YB && e.isThread());
             return {
                 context: n,
                 userId: a,
-                roleIds: h,
+                roleIds: f,
                 isImpersonating: I,
                 commandTypes: t,
-                computedPermissions: T,
+                computedPermissions: g,
                 hasBaseAccessPermissions: S,
                 hasSendMessagesPermission: N,
                 allowNsfw: p(n, s, r, (0, c.wh)(A.A.getGuild(i))),
@@ -68,11 +68,11 @@ n.d(
         },
         MW: function (e, t) {
             let n = i.useMemo(() => (e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e), [e]),
-                r = null != n ? g(n) : void 0,
+                r = null != n ? T(n) : void 0,
                 s = (0, o.hT)(),
-                h = (0, a.bG)([u.default], () => u.default.getId()),
-                I = (0, a.bG)([f.default], () => f.default.getCurrentUser()?.nsfwAllowed ?? !1),
-                T = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, h)?.roles ?? []) : [])),
+                f = (0, a.bG)([u.default], () => u.default.getId()),
+                I = (0, a.bG)([h.default], () => h.default.getCurrentUser()?.nsfwAllowed ?? !1),
+                g = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, f)?.roles ?? []) : [])),
                 S = (0, a.bG)([l.A], () => l.A.isViewingRoles(r)),
                 N = p(
                     n,
@@ -88,8 +88,8 @@ n.d(
                 } = m(n, e instanceof d.YB && e.isThread());
                 return {
                     context: n,
-                    userId: h,
-                    roleIds: T,
+                    userId: f,
+                    roleIds: g,
                     commandTypes: t,
                     isImpersonating: S,
                     computedPermissions: i,
@@ -97,7 +97,7 @@ n.d(
                     hasSendMessagesPermission: a,
                     allowNsfw: N,
                 };
-            }, [t, n, S, T, h, N, e]);
+            }, [t, n, S, g, f, N, e]);
         },
         ud: function (e, t) {
             return e instanceof d.YB && e?.guild_id == null
@@ -106,6 +106,6 @@ n.d(
                     : s.OL.PRIVATE_CHANNEL
                 : s.OL.GUILD;
         },
-        wz: g,
+        wz: T,
     },
 );

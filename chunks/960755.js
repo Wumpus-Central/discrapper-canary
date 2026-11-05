@@ -10,13 +10,13 @@ var i = n(435558),
     _ = n(152007),
     E = n(617617),
     A = n(46653),
-    h = n(924985),
-    f = n(734057),
+    f = n(924985),
+    h = n(734057),
     I = n(945886),
     p = n(576705),
     m = n(218461),
-    g = n(309010),
-    T = n(543465),
+    T = n(309010),
+    g = n(543465),
     S = n(403362),
     N = n(811091),
     C = n(791513),
@@ -25,8 +25,8 @@ let R = null,
     L = null,
     y = new C.Ay();
 function D() {
-    let e = g.Ay.getChannelId(),
-        t = g.Ay.getVoiceChannelId();
+    let e = T.Ay.getChannelId(),
+        t = T.Ay.getVoiceChannelId();
     return ((R = e), (L = t), y.clear());
 }
 function b(e) {
@@ -58,8 +58,8 @@ function w(e) {
     return y.nonPositionalChannelIdUpdate(t);
 }
 function G() {
-    let e = g.Ay.getChannelId(),
-        t = g.Ay.getVoiceChannelId(),
+    let e = T.Ay.getChannelId(),
+        t = T.Ay.getVoiceChannelId(),
         n = R !== e || L !== t;
     return (
         !!n &&
@@ -75,7 +75,7 @@ function G() {
 }
 function x(e) {
     let { id: t } = e,
-        n = f.A.getChannel(t);
+        n = h.A.getChannel(t);
     return null == n ? y.clearGuildId(t) : y.clearGuildId(n.guild_id);
 }
 function k(e) {
@@ -92,7 +92,7 @@ function B(e) {
 class V extends a.Ay.Store {
     static displayName = "ChannelListStore";
     initialize() {
-        this.waitFor(u.A, A.default, h.A, f.A, I.A, l.Ay, d.A, c.Ay, _.A, p.A, m.Ay, g.Ay, T.Ay, E.A);
+        this.waitFor(u.A, A.default, f.A, h.A, I.A, l.Ay, d.A, c.Ay, _.A, p.A, m.Ay, T.Ay, g.Ay, E.A);
     }
     getGuild(e, t) {
         let n = y.getGuild(e, t?.guildActionRows ?? [], t?.channelNoticeRows ?? []);
@@ -121,7 +121,7 @@ let H = new V(s.h, {
             n = !1;
         return (
             r()(t)
-                .map((e) => f.A.getChannel(e.channelId)?.guild_id)
+                .map((e) => h.A.getChannel(e.channelId)?.guild_id)
                 .filter(S.Vq)
                 .uniq()
                 .forEach((e) => {
@@ -139,7 +139,7 @@ let H = new V(s.h, {
     CHANNEL_ACK: M,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        return y.clearGuildId(f.A.getChannel(t)?.guild_id);
+        return y.clearGuildId(h.A.getChannel(t)?.guild_id);
     },
     CHANNEL_CREATE: v,
     CHANNEL_DELETE: v,

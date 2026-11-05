@@ -28,7 +28,7 @@ var a = n(635377),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     E = new d.A("MarkdownToSlate"),
-    y = {
+    S = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -72,23 +72,23 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    S = new Set(["start", "end"]),
+    y = new Set(["start", "end"]),
     C = new Map([
-        ["inlineCode", S],
-        ["spoiler", S],
-        ["s", S],
+        ["inlineCode", y],
+        ["spoiler", y],
+        ["s", y],
         ["subtext", new Set(["start"])],
-        ["u", S],
+        ["u", y],
     ]),
     A = new Set(["*", "_", "~", "|", "\\"]),
     b = {},
     I = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in y))
+    if (!(e in S))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = y[e];
+    let t = S[e];
     ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
@@ -153,10 +153,10 @@ function P(e, t, n, l, r) {
         case "emoji":
         case "customEmoji":
             if ((t.startsWith(u[0], l) || (l = H(e, t, l, t.length)), t.startsWith(u[0], l)))
-                return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+                return F({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
             throw Error(`Slate: Unable to find emoji: ${u[0]} in ${t} at ${l}`);
         case "soundboard":
-            return B({
+            return F({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -174,7 +174,7 @@ function P(e, t, n, l, r) {
             if (null != r)
                 return (
                     i()(r === u[0], "Slate: text mentions must exactly match the regex match"),
-                    B({
+                    F({
                         result: e,
                         sourceText: t,
                         text: r,
@@ -183,11 +183,11 @@ function P(e, t, n, l, r) {
                         data: { text: r },
                     })
                 );
-            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: s } });
+            return F({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: s } });
         }
         case "staticRouteLink":
             let { id: c, itemId: d } = n;
-            return B({
+            return F({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -196,7 +196,7 @@ function P(e, t, n, l, r) {
                 data: { id: c, itemId: d },
             });
         case "gameMention":
-            return B({
+            return F({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -206,7 +206,7 @@ function P(e, t, n, l, r) {
             });
         case "timestamp":
         case "timestampMentionInput":
-            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+            return F({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
         case "em":
         case "autolink":
         case "mailto":
@@ -227,7 +227,7 @@ function P(e, t, n, l, r) {
                     if ("inlineCode" === e) return { before: t[1], after: t[1] };
                     if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
                     if ("subtext" === e) return { before: k.exec(t.input)[1], after: "" };
-                    let n = y["link" === e ? "url" : e];
+                    let n = S["link" === e ? "url" : e];
                     if ("inlineStyle" === n.type) return n;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(a, u),
@@ -246,11 +246,11 @@ function P(e, t, n, l, r) {
                     type: a,
                 });
             return (
-                (l = F({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
+                (l = B({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
                 r.push(a),
                 (l = W(e, t, s ?? "", l, r)),
                 r.pop(),
-                (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
+                (l = B({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
                 G(t, l)
             );
         }
@@ -294,7 +294,7 @@ function V(e) {
 function W(e, t, n, l, i) {
     return (
         "string" == typeof n
-            ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
+            ? (l = F({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
                   l = P(e, t, n, l, i);
@@ -302,7 +302,7 @@ function W(e, t, n, l, i) {
         G(t, l)
     );
 }
-function F(e) {
+function B(e) {
     let { result: t, sourceText: n, syntaxCharacters: l, pos: i, attributes: r } = e;
     if (l.length > 0) {
         let e = n.indexOf(l, i);
@@ -312,7 +312,7 @@ function F(e) {
     }
     return i;
 }
-function B(e) {
+function F(e) {
     let { result: t, sourceText: n, text: l, originalStart: i, attributes: r, data: s } = e,
         a = G(n, i);
     for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
@@ -334,7 +334,7 @@ function K(e, t, n) {
 function H(e, t, n, l) {
     for (; n < l;)
         if (A.has(t[n]))
-            ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
+            ((n = B({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
                 (n = G(t, n)));
         else break;
     return n;
@@ -365,15 +365,15 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             g = o ? p : f,
             x = o ? f : p,
             E = !1;
-        function* y(n) {
+        function* S(n) {
             let [s, h] = n,
                 f = h.length,
                 p = X.isAncestor(h, c.path),
                 g = X.isAncestor(h, d.path),
                 x = p ? c.path[f] : 0,
-                S = g ? d.path[f] : s.children.length - 1,
-                C = o ? S : x,
-                A = o ? x : S;
+                y = g ? d.path[f] : s.children.length - 1,
+                C = o ? y : x,
+                A = o ? x : y;
             for (let n = C; !E && (!o ? n <= A : n >= A); n += m) {
                 let m = s.children[n],
                     f = X.child(h, n);
@@ -387,7 +387,7 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                         }
                         if (!u && e) continue;
                     }
-                    for (let e of y([m, f])) yield e;
+                    for (let e of S([m, f])) yield e;
                 } else if (Z.isText(m))
                     if ("line" === a) l = { path: f, offset: o ? 0 : m.text.length };
                     else if (0 === m.text.length) yield { path: f, offset: 0 };
@@ -402,7 +402,7 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             "line" === a && Q.isElement(s) && !t.isVoid(s) && (null != l && (yield l, (l = void 0)), (E = !0));
         }
         "line" === a && (yield o ? d : c);
-        for (let e = g; !E && (!o ? e <= x : e >= x); e += m) for (let t of y(h[e])) yield t;
+        for (let e = g; !E && (!o ? e <= x : e >= x); e += m) for (let t of S(h[e])) yield t;
     };
     let t = s.rL.findDocumentOrShadowRoot;
     ((s.rL.findDocumentOrShadowRoot = (e) => e.windowContext?.renderWindow.document ?? t(e)),

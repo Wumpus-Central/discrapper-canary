@@ -14,11 +14,11 @@ var i,
         (((a = {})[(a.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
         (a[(a.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
         a),
-    h =
+    f =
         (((s = {})[(s.APPLICATION = 0)] = "APPLICATION"),
         (s[(s.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
         s);
-function f() {
+function h() {
     return {
         id: String(Date.now()),
         title: u.intl.string(u.t.vY91C9),
@@ -59,10 +59,10 @@ let p = new Set([
         c.fg2.SKYPE,
     ]),
     m = Object.values(c.fg2).filter((e) => !p.has(e));
-function g(e) {
+function T(e) {
     return 0 === e.connection_type ? `app:${e.application_id}` : `provider:${e.provider_id}`;
 }
-function T(e) {
+function g(e) {
     let t = [];
     switch (e.connection_type) {
         case 0:
@@ -86,15 +86,15 @@ n.d(
     t,
     {},
     {
-        Ii: T,
+        Ii: g,
         Km: function (e) {
             if (e.options.length > 0) return !1;
-            let { id: t, ...n } = f(),
+            let { id: t, ...n } = h(),
                 { id: i, ...r } = e;
             return o()(n, r);
         },
         ME: E,
-        Mc: f,
+        Mc: h,
         SA: function (e) {
             return {
                 id: e.id,
@@ -118,7 +118,7 @@ n.d(
             };
         },
         SD: A,
-        Sq: g,
+        Sq: T,
         Uh: function (e) {
             return {
                 prompts: e.prompts.map(I),
@@ -151,9 +151,9 @@ n.d(
             let t = [],
                 n = new Set();
             for (let [i, r] of e.entries()) {
-                let e = T(r);
+                let e = g(r);
                 t.push(...e.map((e) => `Connection ${i + 1}: ${e}`));
-                let a = g(r);
+                let a = T(r);
                 (n.has(a) && t.push("Duplicate connection configuration"), n.add(a));
             }
             return t;
@@ -168,6 +168,6 @@ n.d(
                   ? { type: 1, providerId: n }
                   : null;
         },
-        wZ: h,
+        wZ: f,
     },
 );

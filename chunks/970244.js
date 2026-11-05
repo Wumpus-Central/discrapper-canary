@@ -11,8 +11,8 @@ var i = n(477900),
     _ = n(566908),
     E = n(896455),
     A = n(23395),
-    h = n(381941),
-    f = n(792996);
+    f = n(381941),
+    h = n(792996);
 function I(e) {
     let {
         channel: t,
@@ -28,7 +28,7 @@ function I(e) {
         o ??
         (null != s
             ? (e) => {
-                  l.A.sendMessage(t.id, s, void 0, { scheduledTimestamp: e, location: h.Hx.APP_COMMAND });
+                  l.A.sendMessage(t.id, s, void 0, { scheduledTimestamp: e, location: f.Hx.APP_COMMAND });
               }
             : void 0);
     (0, a.mM)(
@@ -94,7 +94,7 @@ function I(e) {
                                     r.Dr,
                                     {
                                         id: "custom-time",
-                                        label: f.intl.string(f.t.stHooC),
+                                        label: h.intl.string(h.t.stHooC),
                                         action: () => I({ channel: t, entryPoint: u.t.ATTACH_MENU }),
                                     },
                                     "custom-time",

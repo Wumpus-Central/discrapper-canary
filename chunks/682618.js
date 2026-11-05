@@ -25,9 +25,9 @@ function A(e) {
                 let r = `${n}#${e}`,
                     l = _.get(r);
                 if (null != l) return l;
-                let h = E.get(r)?.gateUntil ?? 0;
-                if (Date.now() < h) return Promise.resolve();
-                let f = (async function (e, t, n) {
+                let f = E.get(r)?.gateUntil ?? 0;
+                if (Date.now() < f) return Promise.resolve();
+                let h = (async function (e, t, n) {
                     let r = Date.now();
                     try {
                         let i = await a.Bo.get({
@@ -47,9 +47,9 @@ function A(e) {
                         (E.set(e, { backoff: t, gateUntil: Date.now() + t.fail() }), c.A.captureException(n));
                     }
                 })(r, e, n).finally(() => {
-                    _.get(r) === f && _.delete(r);
+                    _.get(r) === h && _.delete(r);
                 });
-                return (_.set(r, f), f);
+                return (_.set(r, h), h);
             },
             PV: function (e) {
                 s.h.dispatch({ type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId: e });
@@ -62,17 +62,17 @@ function A(e) {
                     d = null != i && n === i ? "self" : "other",
                     _ = `viewed_user:${d}`,
                     E = `attempt:${!0 === t.isRetry ? "retry" : "initial"}`,
-                    h = Date.now();
+                    f = Date.now();
                 s.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_START", userId: n });
                 try {
                     let e = (await a.Bo.get({ url: u.Rsh.USER_BADGES(A(n)), rejectWithError: !0 })).body,
                         t = [_, "result:success", `catalog_state:${0 === e.badges.length ? "empty" : "non_empty"}`, E];
-                    (l.A.distribution({ name: r.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: t }, Date.now() - h),
+                    (l.A.distribution({ name: r.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: t }, Date.now() - f),
                         s.h.dispatch({
                             type: "BADGE_DIRECTORY_FETCH_SUCCESS",
                             userId: n,
                             badges: e.badges,
-                            requestedAt: h,
+                            requestedAt: f,
                         }));
                 } catch (e) {
                     (l.A.distribution(
@@ -80,7 +80,7 @@ function A(e) {
                             name: r.K.BADGE_DIRECTORY_CATALOG_FETCH,
                             tags: [_, "result:failure", "catalog_state:unknown", E],
                         },
-                        Date.now() - h,
+                        Date.now() - f,
                     ),
                         s.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: n }),
                         c.A.captureException(e));

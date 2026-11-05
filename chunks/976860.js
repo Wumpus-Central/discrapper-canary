@@ -10,20 +10,20 @@ let u = new l.A("Routing/Utils"),
 __OVERLAY__
     ? (i = (0, s.sC)())
     : (i = (0, s.zR)()).block((e, t) => {
-          if ("POP" === t && !h()) return !1;
+          if ("POP" === t && !f()) return !1;
       });
 let E = !1,
     A = i.listen((e, t) => {
         "REPLACE" !== t && ((E = !0), A());
     });
-function h() {
+function f() {
     if (o._.hasSubscribers(c.jej.MODAL_CLOSE)) {
         let { doesTopModalAllowNavigation: e } = n(192308);
         if (!e()) return !1;
     }
     return (n(712687).A.close(), !0);
 }
-function f(e, t) {
+function h(e, t) {
     return (
         !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
         (u.log(`${t} - route to external path ${e}`),
@@ -37,7 +37,7 @@ function I(e, t) {
 }
 function p(e, t) {
     let n;
-    if (f(e, "assign")) return;
+    if (h(e, "assign")) return;
     let s = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`),
         l = { pathname: s.pathname, search: s.search, hash: s.hash, ...t };
     u.log(`transitionTo - Transitioning to ${e}`);
@@ -85,15 +85,15 @@ n.d(
             else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
             return e;
         },
-        TX: h,
+        TX: f,
         UC: function () {
             return a;
         },
         aX: function () {
-            h() && ((r = null), i.goBack());
+            f() && ((r = null), i.goBack());
         },
         bG: function (e, t, n) {
-            f(e, "replace") ||
+            h(e, "replace") ||
                 (u.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
         },
         m: function (e) {
@@ -101,7 +101,7 @@ n.d(
         },
         pX: p,
         sY: function () {
-            h() && ((r = null), i.goForward());
+            f() && ((r = null), i.goForward());
         },
         uh: function (e, t, n, i) {
             (u.log(

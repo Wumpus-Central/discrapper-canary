@@ -6,31 +6,31 @@ n.d(
     {
         Q: function (e) {
             let [t, n] = l.useState(e),
-                [s, r] = l.useState("idle"),
+                [r, s] = l.useState("idle"),
                 [i, u] = l.useState(e),
-                d = (0, a.j)();
+                o = (0, a.j)();
             return (
                 i !== e
-                    ? (u(e), r(d && e !== t ? "exit" : "idle"), d || n(e))
-                    : d || ("idle" === s && t === i) || (n(i), r("idle")),
+                    ? (u(e), s(o && e !== t ? "exit" : "idle"), o || n(e))
+                    : o || ("idle" === r && t === i) || (n(i), s("idle")),
                 l.useEffect(() => {
-                    if ("exit" !== s) return;
+                    if ("exit" !== r) return;
                     let e = setTimeout(() => {
-                        (n(i), r("enter"));
+                        (n(i), s("enter"));
                     }, 150);
                     return () => clearTimeout(e);
-                }, [s, i]),
+                }, [r, i]),
                 l.useEffect(() => {
-                    if ("enter" !== s) return;
+                    if ("enter" !== r) return;
                     let e = 0,
                         t = requestAnimationFrame(() => {
-                            e = requestAnimationFrame(() => r("idle"));
+                            e = requestAnimationFrame(() => s("idle"));
                         });
                     return () => {
                         (cancelAnimationFrame(t), cancelAnimationFrame(e));
                     };
-                }, [s]),
-                { text: t, phase: s }
+                }, [r]),
+                { text: t, phase: r }
             );
         },
     },

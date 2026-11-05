@@ -1,13 +1,13 @@
 n.d(t, {
     Im: () => I,
-    _7: () => f,
+    _7: () => h,
     q1: () => A,
-    WU: () => h,
+    WU: () => f,
     oQ: () => C,
     IY: () => p,
     A5: () => _,
-    UT: () => T,
-    St: () => g,
+    UT: () => g,
+    St: () => T,
     Bs: () => m,
     Vh: () => O,
     mU: () => N,
@@ -61,14 +61,14 @@ var i,
         (r.PARENTAL_CONSENT_LOCKOUT = "parental_consent_lockout"),
         (r.AGE_NOTICE_POPOVER = "tiny_bronco_popover"),
         r),
-    h =
+    f =
         (((a = {})[(a.PRIMARY = 1)] = "PRIMARY"),
         (a[(a.RETRY = 2)] = "RETRY"),
         (a[(a.EXPRESSIVE_PRIMARY = 3)] = "EXPRESSIVE_PRIMARY"),
         (a[(a.SAFETY_FLOWS = 4)] = "SAFETY_FLOWS"),
         (a[(a.EXPRESSIVE_V2 = 5)] = "EXPRESSIVE_V2"),
         a),
-    f =
+    h =
         (((s = {}).LEARN_MORE = "learn_more"),
         (s.GET_STARTED = "get_started"),
         (s.SYSTEM_DMS_LEARN_MORE = "system_dms_learn_more"),
@@ -84,10 +84,10 @@ var i,
 function m(e, t, n) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
 }
-function g(e, t, n, i) {
+function T(e, t, n, i) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
 }
-function T(e, t) {
+function g(e, t) {
     u.default.track(E.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
 }
 function S(e, t, n) {

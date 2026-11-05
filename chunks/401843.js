@@ -10,13 +10,13 @@ var i = n(284009),
     _ = n(293432),
     E = n(384200),
     A = n(616356),
-    h = n(46653),
-    f = n(734057),
+    f = n(46653),
+    h = n(734057),
     I = n(71393),
     p = n(309010),
     m = n(977997),
-    g = n(147036),
-    T = n(927813),
+    T = n(147036),
+    g = n(927813),
     S = n(650338),
     N = n(499785);
 (n(387755), n(308528));
@@ -25,8 +25,8 @@ n(597798);
 var O = n(652215),
     R = n(55010);
 function L(e, t) {
-    let n = f.A.getChannel(t);
-    return (r()(null != n, "Cannot join a null voice channel"), !m.A.isInChannel(t) && (0, g.Pd)(n, m.A, I.A));
+    let n = h.A.getChannel(t);
+    return (r()(null != n, "Cannot join a null voice channel"), !m.A.isInChannel(t) && (0, T.Pd)(n, m.A, I.A));
 }
 function y(e, t) {
     if (null != o.default.getRemoteSessionId()) return;
@@ -37,7 +37,7 @@ function y(e, t) {
             t?.forceMultiple ||
             A.A.getAllActiveStreamsForChannel(i).filter((e) => {
                 let { ownerId: t } = e;
-                return t !== h.default.getId();
+                return t !== f.default.getId();
             }).length >= 2;
     (l.h.dispatch({ type: "STREAM_WATCH", streamKey: r, allowMultiple: a }),
         null != n && (0, u.c6)(!0, n, i),
@@ -87,7 +87,7 @@ n.d(
                 l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: i, previewURL: e.body.url });
             } catch (t) {
                 let e;
-                (429 === t.status && (e = t.body.retry_after * T.A.Millis.SECOND),
+                (429 === t.status && (e = t.body.retry_after * g.A.Millis.SECOND),
                     l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: i, retryAfter: e }));
             }
         },

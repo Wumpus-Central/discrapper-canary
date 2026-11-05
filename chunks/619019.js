@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(938796));
+(n.d(t, { A: () => T }), n(938796));
 var i = n(136722),
     r = n(665260),
     a = n(76573),
@@ -11,12 +11,12 @@ var i = n(136722),
     _ = n(244284),
     E = n(948325),
     A = n(392737),
-    h = n(486020),
-    f = n(474090),
+    f = n(486020),
+    h = n(474090),
     I = n(811091),
     p = n(652215),
     m = n(682901);
-class g extends s.A {
+class T extends s.A {
     id;
     username;
     discriminator;
@@ -140,10 +140,10 @@ class g extends s.A {
     }
     getAvatarURL(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.QB,
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.QB,
             r = null != e ? this.guildMemberAvatars[e] : void 0;
         return null != r && null != e
-            ? h.Ay.getGuildMemberAvatarURLSimple({
+            ? f.Ay.getGuildMemberAvatarURLSimple({
                   guildId: e,
                   avatar: r,
                   userId: this.id,
@@ -151,7 +151,7 @@ class g extends s.A {
                   size: t,
                   canWebP: i,
               })
-            : h.Ay.getUserAvatarURL(this, n, t, null, i);
+            : f.Ay.getUserAvatarURL(this, n, t, null, i);
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
@@ -169,9 +169,9 @@ class g extends s.A {
         if (null != e) {
             let i = this.guildMemberAvatars[e];
             if (null != i)
-                return h.Ay.getAnimatableSourceWithFallback(t, (t) =>
-                    h.Ay.makeSource(
-                        h.Ay.getGuildMemberAvatarURLSimple({
+                return f.Ay.getAnimatableSourceWithFallback(t, (t) =>
+                    f.Ay.makeSource(
+                        f.Ay.getGuildMemberAvatarURLSimple({
                             guildId: e,
                             avatar: i,
                             userId: this.id,
@@ -181,7 +181,7 @@ class g extends s.A {
                     ),
                 );
         }
-        return h.Ay.getAnimatableSourceWithFallback(t, (e) => h.Ay.getUserAvatarSource(this, e, n));
+        return f.Ay.getAnimatableSourceWithFallback(t, (e) => f.Ay.getUserAvatarSource(this, e, n));
     }
     isClaimed() {
         return null != this.email || null != this.phone;
@@ -223,23 +223,23 @@ class g extends s.A {
     }
     hadPremiumSubscription() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        return !(0, f.ki)(this) && this.hasHadPremium(e);
+        return !(0, h.ki)(this) && this.hasHadPremium(e);
     }
     hasFreePremium() {
         return this.isStaff() || this.hasFlag(p.nhx.PARTNER) || this.isStaffPersonal();
     }
     isOnReverseTrial() {
-        return (0, f.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
+        return (0, h.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
     }
     isPremiumWithPremiumGroup() {
-        return (0, f.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
+        return (0, h.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
     }
     hasPaidTier2Subscription() {
-        return (0, f.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
+        return (0, h.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
     }
     isPremiumWithFractionalPremiumOnly() {
         return (
-            (0, f.ki)(this, m.PremiumTypes.TIER_2) &&
+            (0, h.ki)(this, m.PremiumTypes.TIER_2) &&
             (this.premiumState?.premiumSubscriptionType === a.jK.NONE_UNSPECIFIED ||
                 this.premiumState?.premiumSubscriptionType === a.jK.BOOST_ONLY) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO
@@ -247,13 +247,13 @@ class g extends s.A {
     }
     isFractionalPremiumWithNoStandardSub() {
         return (
-            (0, f.ki)(this, m.PremiumTypes.TIER_2) &&
+            (0, h.ki)(this, m.PremiumTypes.TIER_2) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO &&
             this.premiumState.premiumSubscriptionType !== a.jK.TIER_2
         );
     }
     isFractionalPremium() {
-        return (0, f.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
+        return (0, h.ki)(this, m.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
     }
     hasUrgentMessages() {
         return this.hasFlag(p.nhx.HAS_UNREAD_URGENT_MESSAGES);
@@ -298,4 +298,4 @@ class g extends s.A {
         return this.premiumState?.premiumSubscriptionGroupRole ?? a.qT.UNSPECIFIED;
     }
 }
-new g({ id: "0" });
+new T({ id: "0" });

@@ -1,6 +1,6 @@
 var i = n(582128),
-    l = n(855986),
-    r = n(429913),
+    r = n(855986),
+    l = n(429913),
     s = n(832163);
 n.d(
     t,
@@ -13,7 +13,7 @@ n.d(
                 o,
                 u =
                     ((t = i.useMemo(() => (null != e ? [e] : []), [e])),
-                    (n = (0, l.bG)([s.A], () => s.A.getConfig())),
+                    (n = (0, r.bG)([s.A], () => s.A.getConfig())),
                     (a = i.useMemo(() => {
                         if (null == n || 0 === t.length) return [];
                         let e = new Set(t);
@@ -25,7 +25,7 @@ n.d(
                             ),
                         );
                     }, [n, t])),
-                    (o = (0, r.A)(a)),
+                    (o = (0, l.A)(a)),
                     i.useMemo(() => o.reduce((e, t) => (null == t || (e[t.id] = t), e), {}), [o]));
             return i.useMemo(() => {
                 let e = Object.values(u);

@@ -16,9 +16,9 @@ function c(e) {
         } = e,
         E = null != t ? i.getVoiceState(t.getGuildId(), n.getId()) : null,
         A = c.isSelfMute() || c.isSelfMutedTemporarily(),
-        h = t?.getGuildId(),
-        f = _.isViewingRoles(h) && !u.can(d.xBc.SPEAK, t);
-    return { selfMute: A, suppress: E?.suppress || f, mute: E?.mute ?? !1 };
+        f = t?.getGuildId(),
+        h = _.isViewingRoles(f) && !u.can(d.xBc.SPEAK, t);
+    return { selfMute: A, suppress: E?.suppress || h, mute: E?.mute ?? !1 };
 }
 n.d(
     t,

@@ -81,7 +81,7 @@ var c = n(184989),
     _ = n(41237),
     E = n(514983);
 let A = 1;
-async function h() {
+async function f() {
     if (0 !== A) return;
     let e = s.A.database();
     if (null == e) return;
@@ -91,7 +91,7 @@ async function h() {
     );
     null != t && a.h.dispatch({ type: "CACHED_STICKERS_LOADED", stickers: t });
 }
-class f extends r.Ay.Store {
+class h extends r.Ay.Store {
     static displayName = "StickersStore";
     initialize() {
         (this.waitFor(c.A, _.A, u.A, E.A), this.syncWith([_.A, E.A], () => !0));
@@ -103,7 +103,7 @@ class f extends r.Ay.Store {
         return A;
     }
     getStickerMetadataArrays() {
-        return (h(), [_.A.getStickerMetadataMap(), E.A.getStickerMetadataMap()]);
+        return (f(), [_.A.getStickerMetadataMap(), E.A.getStickerMetadataMap()]);
     }
     get hasLoadedStickerPacks() {
         return E.A.hasLoadedStickerPacks;
@@ -112,7 +112,7 @@ class f extends r.Ay.Store {
         return E.A.isFetchingStickerPacks;
     }
     getStickerById(e) {
-        return (h(), _.A.getStickerById(e) ?? E.A.getStickerById(e));
+        return (f(), _.A.getStickerById(e) ?? E.A.getStickerById(e));
     }
     getStickerPack(e) {
         return E.A.getStickerPack(e);
@@ -127,16 +127,16 @@ class f extends r.Ay.Store {
         return _.A.getAllGuildStickers();
     }
     getAllGuildStickers() {
-        return (h(), _.A.getAllGuildStickers());
+        return (f(), _.A.getAllGuildStickers());
     }
     getAllPackStickers() {
         return E.A.getAllPackStickers();
     }
     getStickersByGuildId(e) {
-        return (h(), _.A.getStickersByGuildId(e));
+        return (f(), _.A.getStickersByGuildId(e));
     }
 }
-let I = new f(a.h, {
+let I = new h(a.h, {
     BACKGROUND_SYNC: function () {
         A = 0;
     },

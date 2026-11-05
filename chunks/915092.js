@@ -41,8 +41,8 @@ var G = n(665260),
     H = n(528767),
     V = n(182892),
     F = n(652215),
-    Y = n(55730),
-    z = n(287613),
+    z = n(55730),
+    Y = n(287613),
     K = n(659051),
     W = n(702631),
     J = n(792996),
@@ -264,7 +264,7 @@ function el(e) {
             } = e;
             if (l.author.id === i || !(0, K.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
             let c = (0, U._)(t);
-            if (!(0, z.A)(c) || (0, W.U)(c) || (0, O.w)(n, t) || (0, D.v)(l))
+            if (!(0, Y.A)(c) || (0, W.U)(c) || (0, O.w)(n, t) || (0, D.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === F.xL.JOIN && null != t) {
@@ -287,7 +287,7 @@ function el(e) {
                           : null;
                 })(t);
                 if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
-                if ((0, Y.A)(t, F.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
+                if ((0, z.A)(t, F.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
             }
             return (0, P.Ls)() && d
                 ? { canJoin: !0, remoteJoinPlatform: null }
@@ -305,7 +305,7 @@ function el(e) {
         eA = !(
             null == I ||
             !(0, K.A)(I, t, n.id) ||
-            !(0, Y.A)(I, F.jUm.SYNC) ||
+            !(0, z.A)(I, F.jUm.SYNC) ||
             !P.isPlatformEmbedded ||
             (0, O.w)(y, I)
         ),
@@ -314,14 +314,14 @@ function el(e) {
                 t.author.id === i ||
                 !(0, K.A)(e, t, n.id) ||
                 t.activity?.type !== F.xL.JOIN_REQUEST ||
-                !(0, Y.A)(e, F.jUm.JOIN)
+                !(0, z.A)(e, F.jUm.JOIN)
             )
                 return !1;
             let l = (0, U._)(e);
-            return !(!(0, z.A)(l) || (0, W.U)(l));
+            return !(!(0, Y.A)(l) || (0, W.U)(l));
         })(I, t, n, c),
         ef = (0, O.w)(y, I),
-        eI = null != I && (0, Y.A)(I, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
+        eI = null != I && (0, z.A)(I, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
         eE = (0, u.bG)(
             [R.A],
             () => null != I && null != I.application_id && R.A.getState(I.application_id, F.xL.JOIN) === F.eAD.LOADING,
@@ -343,7 +343,7 @@ function el(e) {
                                   messageId: t.id,
                                   source: F.ThZ.MESSAGE_EMBED,
                                   analyticsLocations: $,
-                                  embedded: (0, Y.A)(I, F.jUm.EMBEDDED),
+                                  embedded: (0, z.A)(I, F.jUm.EMBEDDED),
                                   remotePartyId: null != ep ? I.party?.id : void 0,
                               }),
                                   (0, X.A)({

@@ -41,10 +41,10 @@ let E = {
 function A(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function h(e) {
+function f(e) {
     return A(e, s.K.IS_LIVE)?.is_live ?? !1;
 }
-function f(e) {
+function h(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function I(e) {
@@ -67,10 +67,10 @@ n.d(
             return A(e, s.K.TRENDING_CONTENT)?.trending;
         },
         Hd: function (e) {
-            return h(e) && !f(e);
+            return f(e) && !h(e);
         },
-        I5: f,
-        JM: h,
+        I5: h,
+        JM: f,
         KH: function (e) {
             let t = A(e, s.K.RESURRECTED);
             return t?.resurrected_last_played != null ? new Date(t.resurrected_last_played) : void 0;

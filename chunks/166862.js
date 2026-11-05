@@ -28,8 +28,8 @@ function E(e) {
 function A() {
     return (c.clear(), u.clear(), !0);
 }
-let h = (0, l.xl)();
-function f(e) {
+let f = (0, l.xl)();
+function h(e) {
     let { channelId: t, command: n } = e;
     I(t, n?.id);
 }
@@ -108,17 +108,17 @@ let m = new p(r.h, {
         let r = E(i.channelId);
         null == r.optionNameToAutocompleteQueries.get(i.name) &&
             r.optionNameToAutocompleteQueries.set(i.name, new Map());
-        let l = h && o.A.getActiveOption(i.channelId)?.type === a.n4.INTEGER,
+        let l = f && o.A.getActiveOption(i.channelId)?.type === a.n4.INTEGER,
             u =
                 t?.map((e) => {
                     let { value: t, name_localized: n, name: i } = e;
                     return { displayName: n ?? i, name: i, value: (t = l ? Number(t) : t) };
                 }) ?? [],
             A = _.get(n),
-            f = null != A ? new Date().getTime() - A.getTime() : 0;
+            h = null != A ? new Date().getTime() - A.getTime() : 0;
         return (
             (0, s.zV)(d.HAw.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
-                duration_ms: f,
+                duration_ms: h,
                 error: !1,
                 num_options: u.length,
             }),
@@ -145,8 +145,8 @@ let m = new p(r.h, {
             !0
         );
     },
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: f,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: f,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: h,
     APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function (e) {
         let { channelId: t, command: n } = e;
         I(t, n?.id);

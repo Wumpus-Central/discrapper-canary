@@ -10,23 +10,23 @@ let c = {},
     _ = null,
     E = null,
     A = null,
-    h = "lastChangeLogDate",
-    f = null,
+    f = "lastChangeLogDate",
+    h = null,
     I = null,
     p = new Set();
 function m() {
-    f = l.pK.getSetting();
+    h = l.pK.getSetting();
 }
-class g extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
         (this.waitFor(s.default, o.A), this.syncWith([s.default], () => !0), this.syncWith([o.A], m));
-        let e = r.w.get(h);
+        let e = r.w.get(f);
         if (null != e)
             try {
                 I = new Date(e);
             } catch {
-                r.w.remove(h);
+                r.w.remove(f);
             }
     }
     getChangelog(e, t) {
@@ -48,19 +48,19 @@ class g extends i.Ay.Store {
         return E;
     }
     lastSeenChangelogId() {
-        return f;
+        return h;
     }
     lastSeenChangelogDate() {
         return I;
     }
     getStateForDebugging() {
-        return { changelogConfig: A, loadedChangelogs: u, lastSeenChangelogId: f, lastSeenChangelogDate: I };
+        return { changelogConfig: A, loadedChangelogs: u, lastSeenChangelogId: h, lastSeenChangelogDate: I };
     }
     isLocked() {
         return p.size > 0;
     }
 }
-let T = new g(a.h, {
+let g = new T(a.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
         if (p.has(t)) return !1;
@@ -100,7 +100,7 @@ let T = new g(a.h, {
     },
     CHANGE_LOG_MARK_SEEN: function (e) {
         let { changelogDate: t } = e;
-        ((I = new Date(t)), r.w.set(h, t));
+        ((I = new Date(t)), r.w.set(f, t));
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

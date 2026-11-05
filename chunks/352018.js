@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(848362),
     E = n(471993),
     A = n(734057),
-    h = n(287809),
-    f = n(964989),
+    f = n(287809),
+    h = n(964989),
     I = n(722178),
     p = n(447404),
     m = n(693409),
-    g = n(806931),
-    T = n(682901),
+    T = n(806931),
+    g = n(682901),
     S = n(792996),
     N = n(138302);
 function C(e) {
@@ -28,7 +28,7 @@ function O(e) {
     return (0, i.jsxs)(r.Fragment, {
         children: [
             (0, i.jsx)(u.Ay, { className: t, mask: u.Ay.Masks.HEADER_BAR_BADGE_BOTTOM, children: (0, i.jsx)(C, {}) }),
-            (0, i.jsx)(f.A, { className: N.s }),
+            (0, i.jsx)(h.A, { className: N.s }),
         ],
     });
 }
@@ -38,9 +38,9 @@ n.d(
     {
         A: function (e) {
             let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
-                f = r.useRef(null),
+                h = r.useRef(null),
                 { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
-                L = (0, a.bG)([h.default], () => I.Ay.isPremium(h.default.getCurrentUser(), T.PremiumTypes.TIER_1)),
+                L = (0, a.bG)([f.default], () => I.Ay.isPremium(f.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
                 y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
                 D = r.useMemo(() => (null != n ? [n] : []), [n]),
                 b = r.useCallback(() => {
@@ -51,20 +51,20 @@ n.d(
             return (
                 t || L || (v = O),
                 (0, i.jsx)(l.Y, {
-                    targetElementRef: f,
+                    targetElementRef: h,
                     position: "top",
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
                         return (0, i.jsx)(p.A, {
                             children: (0, i.jsx)(_.A, {
                                 channel: y,
-                                currentUser: h.default.getCurrentUser(),
+                                currentUser: f.default.getCurrentUser(),
                                 activeStreams: D,
                                 onClose: t,
                                 showReportOption: !0,
                                 handleGoLive: b,
                                 onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, {
-                                    entrypoint: g.GK.OTHER_BUTTON,
+                                    entrypoint: T.GK.OTHER_BUTTON,
                                 }),
                             }),
                         });
@@ -73,7 +73,7 @@ n.d(
                     children: (e) =>
                         (0, i.jsx)(m.A, {
                             ...e,
-                            buttonRef: f,
+                            buttonRef: h,
                             label: S.intl.string(S.t.tmiYpF),
                             iconComponent: v,
                             onClick: (t) => {

@@ -1,7 +1,7 @@
 var i = n(477900);
 n(582128);
-var l = n(855986),
-    r = n(477782),
+var r = n(855986),
+    l = n(477782),
     s = n(827343),
     a = n(754712),
     o = n(852712),
@@ -18,10 +18,10 @@ n.d(
                     [u.m.STUDIO]: d.intl.string(d.t.VZPR0R),
                     [u.m.CUSTOM]: d.intl.string(d.t["N/PQjv"]),
                 },
-                c = (0, l.bG)([a.Ay], () => a.Ay.getActiveInputProfile()),
+                c = (0, r.bG)([a.Ay], () => a.Ay.getActiveInputProfile()),
                 h = t.map((t) =>
                     (0, i.jsx)(
-                        r.iD,
+                        l.iD,
                         {
                             id: t,
                             group: "input-profiles",
@@ -32,7 +32,7 @@ n.d(
                         t,
                     ),
                 );
-            return (0, i.jsx)(r.Dr, {
+            return (0, i.jsx)(l.Dr, {
                 id: "input-profiles",
                 label: d.intl.string(d.t.LM3U3k),
                 subtext: n[c ?? u.m.CUSTOM],

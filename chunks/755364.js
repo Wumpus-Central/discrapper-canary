@@ -1,4 +1,4 @@
-(n.d(t, { A: () => T }), n(321073), n(775443), n(667532));
+(n.d(t, { A: () => g }), n(321073), n(775443), n(667532));
 var i = n(435558),
     r = n.n(i),
     a = n(56562),
@@ -16,14 +16,14 @@ let _ = (0, n(945810).mj)({
 });
 var E = n(652215);
 let A = new l.A("ChannelMessages");
-function h(e) {
+function f(e) {
     return e.state === E.cmJ.SENDING || e.state === E.cmJ.SEND_FAILED;
 }
-function f() {
+function h() {
     return _.getConfig({ location: "receiveMessage" }).enabled;
 }
 function I(e) {
-    return h(e) || e.author?.id === "1";
+    return f(e) || e.author?.id === "1";
 }
 function p(e, t) {
     let n,
@@ -128,7 +128,7 @@ class m {
         return (t.forEach((e) => delete this._map[e.id]), t);
     }
 }
-class g {
+class T {
     channelId;
     ready = !1;
     cached = !1;
@@ -157,35 +157,35 @@ class g {
     _after = new m(!1);
     _map = {};
     static forEach(e) {
-        r().forEach(g._channelMessages, e);
+        r().forEach(T._channelMessages, e);
     }
     static get(e) {
-        return g._channelMessages[e];
+        return T._channelMessages[e];
     }
     static hasPresent(e) {
-        let t = g.get(e);
+        let t = T.get(e);
         return null != t && t.hasPresent();
     }
     static getOrCreate(e) {
-        let t = g._channelMessages[e];
-        return (null == t && ((t = new g(e)), (g._channelMessages[e] = t)), t);
+        let t = T._channelMessages[e];
+        return (null == t && ((t = new T(e)), (T._channelMessages[e] = t)), t);
     }
     static clear(e) {
-        delete g._channelMessages[e];
+        delete T._channelMessages[e];
     }
     static clearCache(e) {
-        let t = g._channelMessages[e];
+        let t = T._channelMessages[e];
         null != t && (t._before.clear(), t._after.clear(), this.commit(t));
     }
     static commit(e) {
-        g._channelMessages[e.channelId] = e;
+        T._channelMessages[e.channelId] = e;
     }
     constructor(e) {
         this.channelId = e;
     }
     mutate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = new g(this.channelId);
+            n = new T(this.channelId);
         return (
             (n._array = t ? [...this._array] : this._array),
             (n._map = t ? { ...this._map } : this._map),
@@ -555,14 +555,14 @@ class g {
         ) {
             let t = (0, o.rh)(e);
             return (null != n.interactionData && (t.interactionData = n.interactionData),
-            f() && null != this._map[e.nonce])
+            h() && null != this._map[e.nonce])
                 ? this.remove(e.nonce)._insertInOrder(t)
                 : this.replace(e.nonce, t);
         }
         if (this.hasMoreAfter) this._after.wasAtEdge && (this._after.wasAtEdge = !1);
         else {
             let n = (0, o.rh)(e),
-                i = f() ? this.insertInOrder(n) : this.merge([n]);
+                i = h() ? this.insertInOrder(n) : this.merge([n]);
             return t ? i.truncateTop(60, !1) : this.length > 120 ? i.truncateBottom(60, !1) : i;
         }
         return this;
@@ -572,7 +572,7 @@ class g {
         let n = !(0, d.K)() || !t,
             i = this.mutate({ ready: !0, cached: n }),
             r = p(this, e);
-        return f() ? i.insertInOrder(r) : i.merge([r]);
+        return h() ? i.insertInOrder(r) : i.merge([r]);
     }
     loadStart(e) {
         return this.mutate({
@@ -595,17 +595,17 @@ class g {
             d = e.hasMoreAfter ?? !1,
             u = e.avoidInitialScroll ?? !1,
             _ = e.cached ?? !1,
-            h = r()(t)
+            f = r()(t)
                 .reverse()
                 .map((e) => (0, o.rh)(e))
                 .value(),
-            f = n ? e.before : e.after;
-        if (null == s && this.ready && n !== i && null != f) {
+            h = n ? e.before : e.after;
+        if (null == s && this.ready && n !== i && null != h) {
             let i = n ? this.first() : this.last();
-            if (null != i && i.id !== f)
+            if (null != i && i.id !== h)
                 return (
                     A.info(
-                        `loadComplete: dropping stale ${n ? "before" : "after"} page for channelId=${this.channelId}, anchor=${f}, edge=${i.id}`,
+                        `loadComplete: dropping stale ${n ? "before" : "after"} page for channelId=${this.channelId}, anchor=${h}, edge=${i.id}`,
                     ),
                     (n ? this._before : this._after).length > 0
                         ? this.loadFromCache(n, e.limit ?? t.length)
@@ -613,11 +613,11 @@ class g {
                 );
         }
         let I = null;
-        if ((n || i) && null == s && this.ready) I = this.merge(h, n, !0);
+        if ((n || i) && null == s && this.ready) I = this.merge(f, n, !0);
         else {
             let t = this._array.filter((e) => e.state === E.cmJ.SENDING),
                 r = this._array.filter((e) => e.state === E.cmJ.SEND_FAILED),
-                a = h[h.length - 1]?.id,
+                a = f[f.length - 1]?.id,
                 l = e.requestStartTime,
                 o =
                     null == a || null == l
@@ -629,7 +629,7 @@ class g {
                                   c.default.extractTimestamp(e.id) >= l,
                           ),
                 d = t.length > 0 || r.length > 0 || o.length > 0;
-            ((I = this.reset(h)),
+            ((I = this.reset(f)),
                 !d || n || i || s?.messageId != null || s?.offset != null
                     ? A.info(
                           `loadComplete: resetting state for channelId=${this.channelId}, sending.length=${t.length}`,
@@ -672,8 +672,8 @@ class g {
         (0, s.D)(e);
         let n = e.map((e) => p(this, e)).reverse(),
             i = this._array.filter((e) => !n.some((t) => t.id === e.id));
-        (i.filter((e) => !h(e)).forEach((e) => u.Yr(n, e, (e, t) => c.default.compare(e.id, t.id))),
-            n.push(...i.filter(h)));
+        (i.filter((e) => !f(e)).forEach((e) => u.Yr(n, e, (e, t) => c.default.compare(e.id, t.id))),
+            n.push(...i.filter(f)));
         let r = !t && this.cached;
         return this.reset(n).mutate({
             ready: !0,
@@ -683,4 +683,4 @@ class g {
         });
     }
 }
-let T = g;
+let g = T;

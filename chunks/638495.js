@@ -11,13 +11,13 @@ var i = n(477900),
     _ = n(750506),
     E = n(80556),
     A = n(267102),
-    h = n(188567),
-    f = n(192308),
+    f = n(188567),
+    h = n(192308),
     I = n(231723),
     p = n(652215),
     m = n(409325);
-let g = [_.Ay, E.Ay];
-class T extends r.PureComponent {
+let T = [_.Ay, E.Ay];
+class g extends r.PureComponent {
     state = { transitionState: null };
     componentWillAppear = (e) => {
         this.componentWillEnter(e);
@@ -60,7 +60,7 @@ class T extends r.PureComponent {
     }
 }
 function S() {
-    return (0, f.TI)((0, A.Us)());
+    return (0, h.TI)((0, A.Us)());
 }
 let N = [];
 n.d(
@@ -69,7 +69,7 @@ n.d(
     {
         b: function () {
             let e = S(),
-                t = (0, f.re)((t) => (void 0 !== t[e] ? t[e] : N)),
+                t = (0, h.re)((t) => (void 0 !== t[e] ? t[e] : N)),
                 n = r.useMemo(
                     () =>
                         (function (e) {
@@ -93,9 +93,9 @@ n.d(
             r.useLayoutEffect(() => {
                 if (s)
                     return (
-                        h._.subscribe(p.jej.MODAL_CLOSE, e),
+                        f._.subscribe(p.jej.MODAL_CLOSE, e),
                         () => {
-                            h._.unsubscribe(p.jej.MODAL_CLOSE, e);
+                            f._.unsubscribe(p.jej.MODAL_CLOSE, e);
                         }
                     );
                 function e() {
@@ -105,19 +105,19 @@ n.d(
             }, [s]);
             let l = r.useCallback(() => {
                     let e = a.current;
-                    e?.dismissable !== !1 && h._.dispatch(p.jej.MODAL_CLOSE);
+                    e?.dismissable !== !1 && f._.dispatch(p.jej.MODAL_CLOSE);
                 }, []),
                 E = r.useCallback(
                     (t) => {
-                        (0, f.Oo)(t, e);
+                        (0, h.Oo)(t, e);
                     },
                     [e],
                 ),
-                A = g.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
+                A = T.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
             return (0, i.jsxs)(u.F, {
                 component: r.Fragment,
                 children: [
-                    g.map((e, n) => {
+                    T.map((e, n) => {
                         let r = o().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === _.Ay)),
                             a = r?.backdropStyle ?? d.F.DARK;
                         return (0, i.jsx)(
@@ -141,7 +141,7 @@ n.d(
                     n.map((e, t) => {
                         let { key: r, Layer: a, render: s, instant: l, isVisible: o, dismissable: d } = e;
                         return (0, i.jsx)(
-                            T,
+                            g,
                             {
                                 modalKey: r,
                                 LayerComponent: a ?? _.Ay,

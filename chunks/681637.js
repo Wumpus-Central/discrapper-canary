@@ -10,8 +10,8 @@ var i = n(607399),
     _ = n(645619),
     E = n(772788),
     A = n(383272),
-    h = n(414133),
-    f = n(363487),
+    f = n(414133),
+    h = n(363487),
     I = n(342220);
 class p extends a.A {
     handleSelectedGuildChange() {
@@ -23,7 +23,7 @@ class p extends a.A {
                 (l.x1.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
                 A.g$.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
                 E.K.getConfig({ guildId: t.id, location: "GuildPowerupsManager" }),
-                !(0, f.G)(d.A, t))
+                !(0, h.G)(d.A, t))
             ) {
                 let t = (0, I.X)(),
                     n =
@@ -31,7 +31,7 @@ class p extends a.A {
                         (0, A.Qs)(e, "GuildPowerupsManager") &&
                         !(0, A.Ov)(e, "GuildPowerupsManager") &&
                         (0, I.X)() &&
-                        (0, h.ht)("GuildPowerupsManager"),
+                        (0, f.ht)("GuildPowerupsManager"),
                     r = i.Fr && (0, I.X)();
                 if (!(i.Fr ? n || r : t)) return;
             }
@@ -47,7 +47,7 @@ class p extends a.A {
         this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
-        !0 === (0, f.G)(d.A, o.A.getGuild(e)) && ((0, u.Xd)(e), (0, r.VU)(e, { includeEnded: !0 }));
+        !0 === (0, h.G)(d.A, o.A.getGuild(e)) && ((0, u.Xd)(e), (0, r.VU)(e, { includeEnded: !0 }));
     }
     stores = new Map().set(c.A, this.handleSelectedGuildChange);
     actions = {

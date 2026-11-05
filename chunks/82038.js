@@ -22,7 +22,7 @@ let _ = new Set(["Enter", " "]),
         "treeitem",
     ]),
     A = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
-    h = new Set([
+    f = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -39,7 +39,7 @@ let _ = new Set(["Enter", " "]),
         "Symbol",
         "SymbolLock",
     ]),
-    f = new Set([
+    h = new Set([
         "F1",
         "F2",
         "F3",
@@ -116,8 +116,8 @@ n.d(
                                 : "BUTTON" === e.tagName || ("A" === e.tagName && e.hasAttribute("href"));
                         })(n)) ||
                     r.rx.isActive() ||
-                    h.has(t) ||
                     f.has(t) ||
+                    h.has(t) ||
                     I.has(t)
                 )
                     return !1;

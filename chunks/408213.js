@@ -10,8 +10,8 @@ var i = n(620632),
     _ = n(696451),
     E = n(299091),
     A = n(287809),
-    h = n(129230),
-    f = n(513461),
+    f = n(129230),
+    h = n(513461),
     I = n(652215),
     p = n(792996);
 n.d(
@@ -111,7 +111,7 @@ n.d(
                     });
                     return (
                         r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: a }),
-                        (0, f.j5)(t.formFields) &&
+                        (0, h.j5)(t.formFields) &&
                             -1 !== n &&
                             setTimeout(() => {
                                 var t;
@@ -154,7 +154,7 @@ n.d(
                     reasonOther: a,
                     responses: s,
                 } = e;
-                h.default.track(I.HAw.GUILD_MEMBER_APPLICATION_REPORTED, {
+                f.default.track(I.HAw.GUILD_MEMBER_APPLICATION_REPORTED, {
                     application_id: n.joinRequestId,
                     applicant_id: i.id,
                     guild_id: t.id,

@@ -11,7 +11,7 @@ let s = [],
     _ = new Map(),
     E = new Set(),
     A = { botUserIdToAppUsage: {} };
-function h(e) {
+function f(e) {
     let t = l.get(e.id);
     u.set(e.id, Date.now());
     let n = e;
@@ -23,18 +23,18 @@ function h(e) {
     if (null != e.linkedGames)
         for (let t of e.linkedGames)
             null != t.application &&
-                h(t.application instanceof a.Ay ? t.application : a.Ay.createFromServer(t.application));
+                f(t.application instanceof a.Ay ? t.application : a.Ay.createFromServer(t.application));
     _.delete(e.id);
 }
-function f(e) {
+function h(e) {
     let {
         wishlistData: { applications: t },
     } = e;
     if (null == t || 0 === t.length) return !1;
-    for (let e of t) h(e);
+    for (let e of t) f(e);
 }
 function I(e) {
-    h(a.Ay.createFromServer(e));
+    f(a.Ay.createFromServer(e));
 }
 function p(e) {
     let { userId: t, applicationId: n } = e,
@@ -54,16 +54,16 @@ function p(e) {
 function m(e) {
     let { applications: t } = e;
     if (0 === t.length) return !1;
-    for (let e of t) h(a.Ay.createFromServer(e));
+    for (let e of t) f(a.Ay.createFromServer(e));
     return !0;
 }
-function g(e) {
+function T(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) e?.application != null && (h(a.Ay.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) e?.application != null && (f(a.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
-function T(e) {
+function g(e) {
     let { guildId: t } = e;
     if (!d.has(t)) return !1;
     d.delete(t);
@@ -134,7 +134,7 @@ let N = new S(r.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { applications: t } = e;
-        for (let e of t) h(new a.Ay(e));
+        for (let e of t) f(new a.Ay(e));
     },
     APPLICATION_FETCH: function (e) {
         let { applicationId: t } = e,
@@ -161,7 +161,7 @@ let N = new S(r.h, {
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { applications: t, isHydrated: n } = e;
-        for (let e of t) (!0 === n && E.add(e.id), h(a.Ay.createFromServer(e)));
+        for (let e of t) (!0 === n && E.add(e.id), f(a.Ay.createFromServer(e)));
     },
     APPLICATIONS_FETCH_FAIL: function (e) {
         let { applicationIds: t } = e,
@@ -176,50 +176,50 @@ let N = new S(r.h, {
         let { application: t } = e;
         I(t);
     },
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: g,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: g,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: g,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: T,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: T,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
-        for (let e of n) (i.push(e.id), h(a.Ay.createFromServer(e)));
+        for (let e of n) (i.push(e.id), f(a.Ay.createFromServer(e)));
         o.set(t, i);
     },
     GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, surface: n, items: i } = e,
             r = [];
         for (let { application: e, status: t } of i)
-            (r.push({ applicationId: e.id, status: t }), h(a.Ay.createFromServer(e)));
+            (r.push({ applicationId: e.id, status: t }), f(a.Ay.createFromServer(e)));
         let s = d.get(t);
         (null == s && ((s = new Map()), d.set(t, s)), s.set(n, r));
     },
-    GUILD_INTEGRATIONS_UPDATE: T,
-    INTEGRATION_CREATE: T,
-    INTEGRATION_UPDATE: T,
-    INTEGRATION_DELETE: T,
+    GUILD_INTEGRATIONS_UPDATE: g,
+    INTEGRATION_CREATE: g,
+    INTEGRATION_UPDATE: g,
+    INTEGRATION_DELETE: g,
     PAYMENT_UPDATE: function (e) {
         let { payment: t } = e;
         if (t.sku?.application == null) return !1;
-        h(a.Ay.createFromServer(t.sku.application));
+        f(a.Ay.createFromServer(t.sku.application));
     },
     INVITE_RESOLVE_SUCCESS: function (e) {
         let { invite: t } = e;
         if (null == t.target_application) return !1;
-        h(a.Ay.createFromServer(t.target_application));
+        f(a.Ay.createFromServer(t.target_application));
     },
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
         if (t.store_listing?.sku.application == null) return !1;
-        h(a.Ay.createFromServer(t.store_listing.sku.application));
+        f(a.Ay.createFromServer(t.store_listing.sku.application));
     },
     LIBRARY_FETCH_SUCCESS: function (e) {
         let { libraryApplications: t } = e;
-        for (let e of t) h(a.Ay.createFromServer(e.application));
+        for (let e of t) f(a.Ay.createFromServer(e.application));
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { storeListing: t } = e;
         if (null == t.sku.application) return !1;
-        h(a.Ay.createFromServer(t.sku.application));
+        f(a.Ay.createFromServer(t.sku.application));
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { messages: t } = e;
@@ -228,7 +228,7 @@ let N = new S(r.h, {
             return (
                 (t = e),
                 void t.attachments?.forEach((e) => {
-                    null != e.application && h(a.Ay.createFromServer(e.application));
+                    null != e.application && f(a.Ay.createFromServer(e.application));
                 })
             );
         });
@@ -246,43 +246,43 @@ let N = new S(r.h, {
     USER_AUTHORIZED_APPS_UPDATE: function (e) {
         for (let t of Object.values(e.tokens)) {
             if (null == t) continue;
-            h(a.Ay.createFromServer(t.application));
+            f(a.Ay.createFromServer(t.application));
             let e = t.application.bot;
             null != e && p({ userId: e.id, applicationId: t.application.id });
         }
     },
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function (e) {
         e.items.forEach((e) => {
-            null != e.application && h(a.Ay.createFromServer(e.application));
+            null != e.application && f(a.Ay.createFromServer(e.application));
         });
     },
     OAUTH2_TOKEN_CREATE: function (e) {
         let { application: t } = e;
-        h(a.Ay.createFromServer(t));
+        f(a.Ay.createFromServer(t));
     },
-    WISHLIST_FETCH_SUCCESS: f,
-    WISHLIST_ADD_SKU_SUCCESS: f,
-    WISHLIST_REMOVE_SKU_SUCCESS: f,
+    WISHLIST_FETCH_SUCCESS: h,
+    WISHLIST_ADD_SKU_SUCCESS: h,
+    WISHLIST_REMOVE_SKU_SUCCESS: h,
     SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function (e) {
         let {
             storefront: { application: t },
         } = e;
         if (null == t) return !1;
-        h(t);
+        f(t);
     },
     WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: function (e) {
         let {
             data: { applications: t },
         } = e;
         if (null == t || 0 === t.length) return !1;
-        for (let e of t) h(e);
+        for (let e of t) f(e);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: m,
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: m,
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: m,
     GAME_ORGANIZATION_FETCH_SUCCESS: function (e) {
         let { application: t } = e;
-        h(t);
+        f(t);
     },
 });
 n.d(t, {}, { A: N });

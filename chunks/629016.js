@@ -35,13 +35,13 @@ function A(e, t, n, i) {
         !0
     );
 }
-function h(e) {
+function f(e) {
     let { guild: t } = e,
         n = !1;
     for (let { user: e, status: i, activities: r } of t.presences) !1 !== A(t.id, e.id, r, i) && (n = !0);
     return n;
 }
-function f(e, t) {
+function h(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
@@ -80,19 +80,19 @@ class m extends a.Ay.Store {
         return _;
     }
 }
-let g = new m(s.h, {
+let T = new m(s.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;
         for (let { user: e, status: t, activities: r } of n) null != e && !1 !== A(c.ME, e.id, r, t) && (i = !0);
-        for (let e of t) !1 !== h({ guild: e }) && (i = !0);
+        for (let e of t) !1 !== f({ guild: e }) && (i = !0);
         return i;
     },
     OVERLAY_INITIALIZE: function (e) {
         let { parties: t, userParties: n } = e;
         ((_ = new Map()), (u = { ...n }), Object.keys(t).forEach((e) => _.set(e, new Set(t[e]))));
     },
-    GUILD_CREATE: h,
+    GUILD_CREATE: f,
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e,
             n = !1;
@@ -110,7 +110,7 @@ let g = new m(s.h, {
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
-        return f(
+        return h(
             t,
             n.map((e) => e.presence),
         );
@@ -119,7 +119,7 @@ let g = new m(s.h, {
         let { guildId: t, addedMembers: n } = e;
         return (
             null != n &&
-            f(
+            h(
                 t,
                 n.map((e) => e.presence),
             )
@@ -137,4 +137,4 @@ let g = new m(s.h, {
         }
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

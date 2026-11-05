@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(858899),
     r = n(192308),
     a = n(976860),
@@ -37,7 +37,7 @@ class u extends l.A {
 var _ = n(573879),
     E = n(652215),
     A = n(792996);
-let h = new (class extends u {
+let f = new (class extends u {
     onSwitchStart() {}
     onSwitchSuccess(e, t) {
         setTimeout(() => {

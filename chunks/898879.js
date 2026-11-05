@@ -1,6 +1,6 @@
 var i = n(477900),
-    l = n(582128),
-    r = n(855986),
+    r = n(582128),
+    l = n(855986),
     s = n(31728),
     a = n(188567),
     o = n(91242),
@@ -12,18 +12,18 @@ n.d(
     {
         A: function (e) {
             let { embedId: t, className: n, style: c, currentWindow: h } = e,
-                f = (0, r.bG)([o.A], () => (0, u.ny)(o.A.getMainFrame())),
+                f = (0, l.bG)([o.A], () => (0, u.ny)(o.A.getMainFrame())),
                 g = null != f && f.data.layoutMode === u.y0.FOCUSED ? window : (h ?? window),
-                A = l.useRef(null),
-                p = l.useCallback(() => {
+                A = r.useRef(null),
+                p = r.useCallback(() => {
                     if (null == A.current) return;
                     let e = A.current.getBoundingClientRect();
                     (0, s.I_)(t, e);
                 }, [t]);
-            l.useLayoutEffect(() => {
+            r.useLayoutEffect(() => {
                 p();
             });
-            let m = l.useMemo(
+            let m = r.useMemo(
                 () =>
                     new ResizeObserver(() => {
                         p();
@@ -31,11 +31,11 @@ n.d(
                 [p],
             );
             return (
-                l.useLayoutEffect(() => {
+                r.useLayoutEffect(() => {
                     let e = A.current;
                     if (null != e) return (m.observe(e), () => m.unobserve(e));
                 }, [m]),
-                l.useLayoutEffect(() => {
+                r.useLayoutEffect(() => {
                     function e() {
                         return p();
                     }
@@ -50,7 +50,7 @@ n.d(
                         }
                     );
                 }, [p, g]),
-                l.useLayoutEffect(
+                r.useLayoutEffect(
                     () => (
                         a._.subscribe(d.jej.MANUAL_IFRAME_RESIZING, p),
                         () => {
@@ -59,7 +59,7 @@ n.d(
                     ),
                     [p],
                 ),
-                l.useLayoutEffect(
+                r.useLayoutEffect(
                     () => () => {
                         (0, s.I_)(t, null);
                     },

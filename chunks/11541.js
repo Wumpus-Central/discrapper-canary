@@ -19,7 +19,7 @@ function A(e, t) {
         u[e] = t;
     });
 }
-var h =
+var f =
     (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
     (i[(i.BOT = 1)] = "BOT"),
     (i[(i.INTEGRATION = 2)] = "INTEGRATION"),
@@ -30,7 +30,7 @@ var h =
     (i[(i.MANUAL_MEMBER_VERIFICATION = 7)] = "MANUAL_MEMBER_VERIFICATION"),
     (i[(i.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL"),
     i);
-function f(e) {
+function h(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -68,7 +68,7 @@ n.d(
                     return c.intl.string(c.t.DvMBkS);
             }
         },
-        UP: h,
+        UP: f,
         eN: function (e) {
             let t = l.A.get((0, o.ML)(e)),
                 n = (0, s.Ay)();
@@ -103,7 +103,7 @@ n.d(
                     rejectWithError: !0,
                 });
                 if (!Array.isArray(t.body)) return (A(n, 0), []);
-                let a = t.body.map(f),
+                let a = t.body.map(h),
                     s = [];
                 a.forEach((e) => {
                     let { userId: t } = e;

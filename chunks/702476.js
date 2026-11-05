@@ -1,4 +1,4 @@
-n.d(t, { openUserProfileModal: () => f });
+n.d(t, { openUserProfileModal: () => h });
 var i = n(778712),
     r = n(73153),
     a = n(803306),
@@ -16,20 +16,20 @@ let _ = (0, n(945810).mj)({
 });
 var E = n(917445);
 let A = (0, i.FT)(i._3.SIZE_120),
-    h = new c.A("UserProfileModalActionCreators");
-async function f(e) {
+    f = new c.A("UserProfileModalActionCreators");
+async function h(e) {
     let {
             userId: t,
             guildId: n,
             originGuildId: i,
             channelId: s,
             messageId: c,
-            roleId: f,
+            roleId: h,
             sessionId: I,
             joinRequestId: p,
             tabSection: m,
-            scrollTarget: g,
-            hideRestrictedProfile: T,
+            scrollTarget: T,
+            hideRestrictedProfile: g,
             sourceAnalyticsLocations: S,
             appContext: N,
             customStatusPrompt: C = null,
@@ -47,7 +47,7 @@ async function f(e) {
                     if (!(Date.now() - t < d)) return (0, l.r7)(e, void 0);
                 })(e);
             } catch (t) {
-                h.log(`Failed to fetch content inventory outbox for ${e}:`, t);
+                f.log(`Failed to fetch content inventory outbox for ${e}:`, t);
             }
         })(t),
         null == y)
@@ -63,7 +63,7 @@ async function f(e) {
             });
         } catch (e) {
             if (
-                (h.log(`Failed to fetch profile for ${t}:`, e),
+                (f.log(`Failed to fetch profile for ${t}:`, e),
                 (function (e) {
                     let { enabled: t } = _.getConfig({ location: e });
                     return t;
@@ -72,7 +72,7 @@ async function f(e) {
                 try {
                     await (0, a.wz)(t);
                 } catch (e) {
-                    h.log(`Failed to fetch user ${t}:`, e);
+                    f.log(`Failed to fetch user ${t}:`, e);
                 }
         }
     else
@@ -84,7 +84,7 @@ async function f(e) {
             withMutualGuilds: !0,
             joinRequestId: p,
         }).catch((e) => {
-            h.log(`Failed to fetch profile for ${t}:`, e);
+            f.log(`Failed to fetch profile for ${t}:`, e);
         });
     r.h.dispatch({
         type: "USER_PROFILE_MODAL_OPEN",
@@ -93,13 +93,13 @@ async function f(e) {
         originGuildId: i ?? void 0,
         channelId: s ?? void 0,
         messageId: c ?? void 0,
-        roleId: f ?? void 0,
+        roleId: h ?? void 0,
         sessionId: I ?? void 0,
         openedAt: L,
         customStatusPrompt: C,
         tabSection: m,
-        scrollTarget: g,
-        hideRestrictedProfile: T,
+        scrollTarget: T,
+        hideRestrictedProfile: g,
         sourceAnalyticsLocations: S,
         appContext: N,
         onModalOpen: O,

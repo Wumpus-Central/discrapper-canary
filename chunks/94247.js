@@ -10,8 +10,8 @@ var a = n(435558),
     _ = n(754712),
     E = n(485296),
     A = n(628983),
-    h = n(806931);
-function f() {
+    f = n(806931);
+function h() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (null == i) e = null;
@@ -20,7 +20,7 @@ function f() {
         let t = c.A.getLastActiveStream(),
             n = null != e ? A.A.getParticipant(i, e) : null;
         if (
-            ((n?.type !== h.lp.ACTIVITY && (n?.type !== h.lp.USER || n.voiceState?.selfVideo)) || (e = null),
+            ((n?.type !== f.lp.ACTIVITY && (n?.type !== f.lp.USER || n.voiceState?.selfVideo)) || (e = null),
             null != t && null == e)
         ) {
             let n = A.A.getParticipant(i, (0, d._z)(t))?.id;
@@ -44,9 +44,9 @@ function f() {
             null == (e = t) && (e = null != r && l.includes(r) ? r : l[0]);
         }
     }
-    r !== e && ((r = e), t && g.emitChange());
+    r !== e && ((r = e), t && T.emitChange());
 }
-let I = s().throttle(f, 300, { trailing: !0 });
+let I = s().throttle(h, 300, { trailing: !0 });
 function p() {
     return (I(), !1);
 }
@@ -56,8 +56,8 @@ class m extends l.Ay.Store {
         (this.waitFor(A.A, u.default, E.A, c.A, _.Ay), this.syncWith([A.A, c.A], p));
     }
     getSpeaker(e) {
-        return (i !== e && ((i = e), (r = null), f(!1)), r ?? u.default.getId());
+        return (i !== e && ((i = e), (r = null), h(!1)), r ?? u.default.getId());
     }
 }
-let g = new m(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p });
-n.d(t, {}, { A: g });
+let T = new m(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p });
+n.d(t, {}, { A: T });

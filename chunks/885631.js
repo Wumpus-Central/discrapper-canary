@@ -1,6 +1,6 @@
-var s = n(652215);
-n.d(
-    t,
+var s = t(652215);
+t.d(
+    n,
     {},
     {
         A: function (e) {

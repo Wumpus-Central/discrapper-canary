@@ -12,11 +12,11 @@ function E() {
     return d.A.isCurrentUserInRestrictedHours();
 }
 let A = !1,
-    h = null,
     f = null,
+    h = null,
     I = null;
 function p() {
-    null != f && (clearTimeout(f), (f = null));
+    null != h && (clearTimeout(h), (h = null));
     let e = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
         if (!a.A.screenDowntimeReminder) return null;
@@ -47,12 +47,12 @@ function p() {
                           (I = t));
                   }
               })(e),
-              (f = setTimeout(() => {
-                  ((f = null), p());
+              (h = setTimeout(() => {
+                  ((h = null), p());
               }, 6e4)))
-            : (f = setTimeout(
+            : (h = setTimeout(
                   () => {
-                      ((f = null), p());
+                      ((h = null), p());
                   },
                   Math.max(0, (e.minutesUntil - 16) * 6e4),
               )));
@@ -65,37 +65,37 @@ function m() {
         A ? (0, c.openRestrictedHoursModal)() : (0, c.k)(),
         p());
 }
-function g() {
+function T() {
     ((A = !1),
         (I = null),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: !1 }),
         (0, c.k)(),
-        null != f && (clearTimeout(f), (f = null)));
+        null != h && (clearTimeout(h), (h = null)));
 }
-function T() {
+function g() {
     (m(), p());
 }
 function S() {
     p();
 }
 class N extends r.A {
-    stores = new Map().set(s.default, T).set(d.A, T);
+    stores = new Map().set(s.default, g).set(d.A, g);
     actions = {
-        POST_CONNECTION_OPEN: T,
-        CURRENT_USER_UPDATE: T,
+        POST_CONNECTION_OPEN: g,
+        CURRENT_USER_UPDATE: g,
         NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: S,
-        LOGOUT: g,
+        LOGOUT: T,
     };
     _initialize() {
         ((A = E()),
             i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: A }),
             A && (0, c.openRestrictedHoursModal)(),
-            (h = setInterval(m, 6e4)),
+            (f = setInterval(m, 6e4)),
             p());
     }
     _terminate() {
-        (null != h && (clearInterval(h), (h = null)),
-            null != f && (clearTimeout(f), (f = null)),
+        (null != f && (clearInterval(f), (f = null)),
+            null != h && (clearTimeout(h), (h = null)),
             (I = null),
             (0, c.k)(),
             (A = !1));

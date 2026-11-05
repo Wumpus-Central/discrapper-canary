@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(765178),
     r = n(315710),
     o = n(834730),
-    d = n(775602),
-    c = n(188567),
+    c = n(775602),
+    d = n(188567),
     u = n(303227),
     h = n(558076),
     p = n(743943),
@@ -23,16 +23,16 @@ function C() {
 function y(e, t) {
     return { x: x(e.x + t.x), y: x(e.y + t.y) };
 }
-let j = l.createContext(null);
-function I(e) {
+let I = l.createContext(null);
+function j(e) {
     return (0, a.bG)([h.A], () => {
         let t = h.A.getPendingNote(e);
         return null != t && null == t.position;
     });
 }
 function N(e) {
-    let t = I(e),
-        n = (0, a.bG)([d.Ay], () => d.Ay.keyboardModeEnabled);
+    let t = j(e),
+        n = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
     return t && n;
 }
 n.d(
@@ -41,7 +41,7 @@ n.d(
     {
         Sb: function (e) {
             let { position: t, targetLabel: n } = e,
-                i = l.useContext(j),
+                i = l.useContext(I),
                 { x: a, y: s } = t;
             return l.useMemo(
                 () =>
@@ -58,19 +58,19 @@ n.d(
         },
         Y1: N,
         bE: function (e) {
-            let { channelId: t, containerRef: n, roomWidth: a, children: d } = e,
-                x = I(t),
+            let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
+                x = j(t),
                 v = N(t),
                 E = l.useId(),
                 [b, S] = l.useState(null),
-                _ = l.useRef(null);
+                T = l.useRef(null);
             (v || null == b || S(null),
                 l.useEffect(() => {
                     if (x)
                         return (
-                            c._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
+                            d._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e),
                             () => {
-                                c._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e);
+                                d._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, e);
                             }
                         );
                     function e() {
@@ -80,33 +80,33 @@ n.d(
                 l.useEffect(() => {
                     if (v)
                         return () => {
-                            _.current = null;
+                            T.current = null;
                         };
                 }, [v]),
                 l.useEffect(() => {
                     v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
                 }, [v, n]));
-            let T = l.useMemo(
+            let _ = l.useMemo(
                 () =>
                     v
                         ? {
                               descriptionId: E,
                               setPreviewTarget: (e) => {
-                                  let t = _.current ?? C();
-                                  ((_.current = t), S(y(e, t)));
+                                  let t = T.current ?? C();
+                                  ((T.current = t), S(y(e, t)));
                               },
                               placeNextTo: (e) => {
                                   let n = h.A.getPendingNote(t);
                                   if (null == n || null != n.position) return;
-                                  let i = _.current ?? C();
-                                  ((_.current = i), (0, u.Dr)(t, y(e, i)));
+                                  let i = T.current ?? C();
+                                  ((T.current = i), (0, u.Dr)(t, y(e, i)));
                               },
                           }
                         : null,
                 [v, E, t],
             );
-            return (0, i.jsxs)(j.Provider, {
-                value: T,
+            return (0, i.jsxs)(I.Provider, {
+                value: _,
                 children: [
                     v &&
                         (0, i.jsx)(r.Ok, {
@@ -124,7 +124,7 @@ n.d(
                                 }),
                             }),
                         }),
-                    d,
+                    c,
                     null != b && (0, i.jsx)(p.A, { position: b, roomWidth: a }),
                 ],
             });

@@ -18,8 +18,8 @@ var _ =
         i),
     E = n(116711),
     A = n(812743),
-    h = n(38021);
-function f(e) {
+    f = n(38021);
+function h(e) {
     let {
             children: t,
             theme: n = A.NJ.DARK,
@@ -33,9 +33,9 @@ function f(e) {
             disableAdaptiveTheme: _ = !1,
             reduceAdaptiveTheme: E = !1,
         } = e,
-        f = a.useMemo(
+        h = a.useMemo(
             () =>
-                (0, h.dI)({
+                (0, f.dI)({
                     theme: n,
                     primaryColor: i,
                     secondaryColor: s,
@@ -49,13 +49,13 @@ function f(e) {
                 }),
             [n, i, s, l, o, d, c, u, _, E],
         );
-    return (0, r.jsx)(h.Dx.Provider, { value: f, children: t });
+    return (0, r.jsx)(f.Dx.Provider, { value: h, children: t });
 }
 var I = n(775602),
     p = n(989395),
     m = n(71855),
-    g = n(267102),
-    T = n(652215);
+    T = n(267102),
+    g = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
 var N = n(534409),
     C = n(945810);
@@ -97,12 +97,12 @@ function H(e) {
             fontScale: _,
             fontScaleClass: E,
             mouseMode: A,
-            keyboardModeEnabled: h,
-            saturation: f,
+            keyboardModeEnabled: f,
+            saturation: h,
             desaturateUserColors: p,
             useForcedColors: m,
-            systemForcedColors: g,
-            useReducedMotion: T,
+            systemForcedColors: T,
+            useReducedMotion: g,
             alwaysShowLinkDecorations: S,
             hardwareAccelerationEnabled: N,
             highContrastMode: C,
@@ -151,7 +151,7 @@ function H(e) {
     let K = (0, c.bG)([B.Ay], () => B.Ay.hdrDynamicRange),
         $ = (0, G.BX)("RootElementContextProvider"),
         X = k.useConfig({ location: "RootElementContextProvider" }).enabled,
-        z = `font-size: ${_}%; --saturation-factor: ${f}; dynamic-range-limit: ${K}; ${D}`,
+        z = `font-size: ${_}%; --saturation-factor: ${h}; dynamic-range-limit: ${K}; ${D}`,
         q = o()(
             ((t = ""),
             (0, x.uF)()
@@ -166,18 +166,18 @@ function H(e) {
             `density-${d}`,
             E,
             {
-                "low-saturation": f <= 0.4,
-                "keyboard-mode": h,
+                "low-saturation": h <= 0.4,
+                "keyboard-mode": f,
                 "decorate-links": S,
                 "no-webkit-scrollbar": !L,
                 "has-webkit-scrollbar": L,
                 "mouse-mode": A,
-                "reduce-motion": T,
-                "full-motion": !T,
+                "reduce-motion": g,
+                "full-motion": !g,
                 "is-mobile": M.Fr,
                 "app-focused": u,
                 "desaturate-user-colors": p,
-                "disable-forced-colors": !m && "active" === g,
+                "disable-forced-colors": !m && "active" === T,
                 "enable-forced-colors": m,
                 "visual-refresh": !0,
                 "hardware-acceleration-disabled": !N,
@@ -194,12 +194,12 @@ function H(e) {
             },
             i,
         ),
-        Z = a.useMemo(() => ({ lang: s, style: z, className: q, focused: u }), [s, z, q, u]);
+        Q = a.useMemo(() => ({ lang: s, style: z, className: q, focused: u }), [s, z, q, u]);
     return (
         (0, w.Ay)(() => {
             v.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
-        (0, r.jsx)(V.q.Provider, { value: Z, children: R })
+        (0, r.jsx)(V.q.Provider, { value: Q, children: R })
     );
 }
 var j = n(738098),
@@ -211,7 +211,7 @@ function K(e) {
         [d] = a.useState(() => v.Ay.getEnableHardwareAcceleration()),
         {
             locale: A,
-            theme: h,
+            theme: f,
             focused: C,
             mainWindowVisible: M,
             currentWindow: U,
@@ -244,7 +244,7 @@ function K(e) {
         })),
         z = (function (e, t) {
             let [n, i] = a.useState(0),
-                r = (0, g.aL)();
+                r = (0, T.aL)();
             a.useEffect(() => {
                 function e() {
                     return i((e) => e + 1);
@@ -253,10 +253,10 @@ function K(e) {
                     return i((e) => Math.max(0, e - 1));
                 }
                 return (
-                    r.subscribe(T.jej.POPOUT_SHOW, e),
-                    r.subscribe(T.jej.POPOUT_HIDE, t),
+                    r.subscribe(g.jej.POPOUT_SHOW, e),
+                    r.subscribe(g.jej.POPOUT_HIDE, t),
                     () => {
-                        (r.unsubscribe(T.jej.POPOUT_SHOW, e), r.unsubscribe(T.jej.POPOUT_HIDE, t));
+                        (r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t));
                     }
                 );
             }, [r]);
@@ -279,8 +279,8 @@ function K(e) {
         })(U, __OVERLAY__ || C),
         q = 0;
     1 !== k && (q |= _.REDUCE_SATURATION_ENABLED);
-    let Z = (0, P.C)(),
-        Q = (0, N.qK)("RootThemeContextProvider"),
+    let Q = (0, P.C)(),
+        Z = (0, N.qK)("RootThemeContextProvider"),
         J = (0, N.k5)("RootThemeContextProvider"),
         ee = (0, N.lV)("RootThemeContextProvider"),
         et = O.useConfig({ location: "RootThemeContextProvider" }).enabled,
@@ -399,33 +399,33 @@ function K(e) {
                 E
             );
         })({
-            theme: h,
+            theme: f,
             saturation: k,
             enabledExperiments: a.useMemo(() => {
                 let e = [];
                 return (
-                    Q && e.push("refresh-fast-follow-avatars"),
+                    Z && e.push("refresh-fast-follow-avatars"),
                     J && e.push("refresh-fast-follow-guild-bg"),
                     ee && e.push("refresh-fast-follow-distinct-borders"),
                     et && e.push("rive-web-perf"),
                     e
                 );
-            }, [Q, J, ee, et]),
+            }, [Z, J, ee, et]),
             focused: C,
             mainWindowVisible: M,
             locale: A,
         });
     return (0, r.jsx)(E.GE, {
         value: ei,
-        children: (0, r.jsx)(f, {
-            theme: h,
+        children: (0, r.jsx)(h, {
+            theme: f,
             flags: q,
             saturation: k,
-            density: Z,
+            density: Q,
             children: (0, r.jsx)(H, {
                 lang: A,
-                theme: h,
-                density: Z,
+                theme: f,
+                density: Q,
                 focused: C,
                 fontScale: w,
                 fontScaleClass: G,
@@ -441,7 +441,7 @@ function K(e) {
                 highContrastMode: X,
                 isPopoutWindow: l,
                 rootClassName: o()(en, {
-                    "refresh-fast-follow-avatars": Q,
+                    "refresh-fast-follow-avatars": Z,
                     "refresh-fast-follow-guild-bg": J,
                     "refresh-fast-follow-distinct-borders": ee,
                 }),

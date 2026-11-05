@@ -11,10 +11,10 @@ var i = n(602137),
     _ = n(811091),
     E = n(969043),
     A = n(679804),
-    h = n(878317),
-    f = n(115560);
+    f = n(878317),
+    h = n(115560);
 function I(e) {
-    return { channelId: e, sessionId: (0, f.A)() };
+    return { channelId: e, sessionId: (0, h.A)() };
 }
 let p = new (class {
     session;
@@ -27,17 +27,17 @@ let p = new (class {
     }
 })();
 var m = n(652215),
-    g = n(746080),
-    T = n(37411);
+    T = n(746080),
+    g = n(37411);
 function S(e) {
     return p.getForumChannelSessionId(e);
 }
 function N(e) {
     switch (e) {
         case i.T.CREATION_DATE:
-            return T.az.CREATION_DATE;
+            return g.az.CREATION_DATE;
         case i.T.LATEST_ACTIVITY:
-            return T.az.LATEST_ACTIVITY;
+            return g.az.LATEST_ACTIVITY;
         default:
             throw Error(`Unexpected sort order ${e}`);
     }
@@ -71,7 +71,7 @@ function y(e) {
               forum_channel_default_emoji_reaction_id: i.defaultReactionEmoji?.emojiId,
               forum_channel_default_emoji_reaction_name: i.defaultReactionEmoji?.emojiName,
               forum_channel_available_tag_ids: i.availableTags?.map((e) => e.id) ?? [],
-              forum_channel_tag_required: i.hasFlag(g.lx.REQUIRE_TAG),
+              forum_channel_tag_required: i.hasFlag(T.lx.REQUIRE_TAG),
               forum_channel_can_create_post: c.A.can(m.xBc.SEND_MESSAGES, i),
               forum_channel_filter_tag_ids: A.A.getFilterTagIdsAnalytics(),
               forum_channel_sort_order: A.A.getSortOrderAnalytics(i.id),
@@ -114,9 +114,9 @@ function D(e) {
                   let r = new Set(i.map((e) => e.id));
                   return t.appliedTags?.filter((e) => r.has(e)) ?? [];
               })(c.id),
-              forum_post_is_pinned: c.hasFlag(g.lx.PINNED),
-              forum_post_is_new: h.A.getReadStateSnapshotAnalytics(c.id)?.isNew,
-              forum_post_is_unread: h.A.getReadStateSnapshotAnalytics(c.id)?.hasUnreads,
+              forum_post_is_pinned: c.hasFlag(T.lx.PINNED),
+              forum_post_is_new: f.A.getReadStateSnapshotAnalytics(c.id)?.isNew,
+              forum_post_is_unread: f.A.getReadStateSnapshotAnalytics(c.id)?.hasUnreads,
               forum_post_is_following: a.A.hasJoined(c.id),
               forum_post_attachment_mimetypes:
                   null == (i = L(c.id)) ? [] : i.attachments.map((e) => e.content_type ?? "unknown"),

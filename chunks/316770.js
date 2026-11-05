@@ -11,8 +11,8 @@ var e = t(477900),
     h = t(378570),
     x = t(345942),
     g = t(129095),
-    m = t(576705),
-    C = t(531648),
+    C = t(576705),
+    m = t(531648),
     j = t(10862),
     p = t(818348),
     v = t(792996),
@@ -24,7 +24,7 @@ t.d(
         A: function (i) {
             let { channel: l, guild: t, onAction: n, onClose: _ } = i,
                 f = (0, A.Ay)(l),
-                O = (0, a.bG)([m.A], () => l.isPrivate() || m.A.can(p.xB.CONNECT, l));
+                O = (0, a.bG)([C.A], () => l.isPrivate() || C.A.can(p.xB.CONNECT, l));
             return (0, e.jsxs)("div", {
                 children: [
                     (0, e.jsxs)(o.E, {
@@ -58,7 +58,7 @@ t.d(
                     }),
                     null == t
                         ? null
-                        : (0, e.jsx)(C.A, {
+                        : (0, e.jsx)(m.A, {
                               variant: "body-xs/normal",
                               text: v.intl.formatToPlainString(v.t["hq/Qze"], { guildName: t.name }),
                               onClick: (i) => {

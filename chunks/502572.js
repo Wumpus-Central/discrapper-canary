@@ -8,25 +8,25 @@ t.d(
         A: function (e) {
             let { mouseLeaveDelay: i = 100, ...t } = e,
                 { children: l, className: c, ...r } = t,
-                d = s.useRef(0),
-                [o, u] = s.useState(!1);
+                o = s.useRef(0),
+                [d, u] = s.useState(!1);
             return (0, n.jsx)("div", {
                 className: c,
                 onMouseEnter:
                     0 !== i
                         ? function () {
-                              (clearTimeout(d.current), u(!0));
+                              (clearTimeout(o.current), u(!0));
                           }
                         : () => {},
                 onMouseLeave:
                     0 !== i
                         ? function () {
-                              (clearTimeout(d.current), (d.current = setTimeout(() => u(!1), i)));
+                              (clearTimeout(o.current), (o.current = setTimeout(() => u(!1), i)));
                           }
                         : () => {},
                 children: (0, n.jsx)(a.ST, {
                     "data-migration-pending": !0,
-                    forceOpen: o,
+                    forceOpen: d,
                     disableTooltipPointerEvents: !1,
                     ...r,
                     children: l,

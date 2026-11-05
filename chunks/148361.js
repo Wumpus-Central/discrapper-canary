@@ -20,8 +20,8 @@ n.d(
                 {
                     onClose: n,
                     onUpsellClicked: I,
-                    channel: g,
-                    emojiDescriptor: h,
+                    channel: h,
+                    emojiDescriptor: g,
                     pickerIntention: p,
                     analyticsLocation: A,
                 } = e,
@@ -30,17 +30,17 @@ n.d(
             t =
                 p === m.EmojiIntention.REACTION
                     ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
-                    : null == h
+                    : null == g
                       ? f.e.EMOJI_PICKER_FLOATING_UPSELL
-                      : h.subCategory === u.tm.TOP_GUILD_EMOJI
+                      : g.subCategory === u.tm.TOP_GUILD_EMOJI
                         ? f.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
-                        : h.subCategory === u.tm.NEWLY_ADDED_EMOJI
+                        : g.subCategory === u.tm.NEWLY_ADDED_EMOJI
                           ? f.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
                           : f.e.EMOJI_PICKER_EMOJI_CLICKED;
-            let C = null != h ? h.emoji : void 0,
+            let C = null != g ? g.emoji : void 0,
                 y = null != C && C.animated,
-                x = null != C && !o.Ay.isInternalEmojiForGuildId(C, g?.getGuildId()),
-                T = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+                x = null != C && !o.Ay.isInternalEmojiForGuildId(C, h?.getGuildId()),
+                O = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
             return (0, i.jsx)(a.A, {
                 title: E.intl.string(E.t["0+11FF"]),
                 description: E.intl.string(E.t.dURIzS),
@@ -50,7 +50,7 @@ n.d(
                 upsellViewedTrackingData: {
                     type: t,
                     is_external: x,
-                    location: { ...A, object: T },
+                    location: { ...A, object: O },
                     location_stack: N,
                     sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
                     has_search_query: null != _ && "" !== _,

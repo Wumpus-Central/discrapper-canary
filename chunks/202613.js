@@ -61,17 +61,17 @@ class l extends r.A {
             case s.hes.EPS:
                 return new E({ ...n, bank: e.bank });
             case s.hes.PAYSAFE_CARD:
-                return new h({ ...n });
-            case s.hes.GCASH:
                 return new f({ ...n });
+            case s.hes.GCASH:
+                return new h({ ...n });
             case s.hes.GRABPAY_MY:
                 return new I({ ...n });
             case s.hes.MOMO_WALLET:
                 return new p({ ...n });
             case s.hes.KAKAOPAY:
-                return new g({ ...n });
-            case s.hes.GOPAY_WALLET:
                 return new T({ ...n });
+            case s.hes.GOPAY_WALLET:
+                return new g({ ...n });
             case s.hes.BANCONTACT:
                 return new S({ ...n });
             case s.hes.IDEAL:
@@ -103,9 +103,9 @@ class l extends r.A {
             case s.hes.PRZELEWY24:
                 return new _(e);
             case s.hes.PAYSAFE_CARD:
-                return new h(e);
-            case s.hes.GCASH:
                 return new f(e);
+            case s.hes.GCASH:
+                return new h(e);
             case s.hes.GRABPAY_MY:
                 return new I(e);
             case s.hes.MOMO_WALLET:
@@ -113,9 +113,9 @@ class l extends r.A {
             case s.hes.VENMO:
                 return new m(e);
             case s.hes.KAKAOPAY:
-                return new g(e);
-            case s.hes.GOPAY_WALLET:
                 return new T(e);
+            case s.hes.GOPAY_WALLET:
+                return new g(e);
             case s.hes.BANCONTACT:
                 return new S(e);
             case s.hes.EPS:
@@ -220,13 +220,13 @@ class A extends l {
         this.bank = e.bank;
     }
 }
-class h extends l {
+class f extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.PAYSAFE_CARD))
             throw Error(`Cannot instantiate PaysafeSourceRecord with type: ${e.type}, must be ${s.hes.PAYSAFE_CARD}`);
     }
 }
-class f extends l {
+class h extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.GCASH))
             throw Error(`Cannot instantiate GcashSourceRecord with type: ${e.type}, must be ${s.hes.GCASH}`);
@@ -252,13 +252,13 @@ class m extends l {
         this.username = e.username || "";
     }
 }
-class g extends l {
+class T extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.KAKAOPAY))
             throw Error(`Cannot instantiate KaKaoPaySourceRecord with type: ${e.type}, must be ${s.hes.KAKAOPAY}`);
     }
 }
-class T extends l {
+class g extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.GOPAY_WALLET))
             throw Error(
@@ -310,7 +310,7 @@ n.d(
         Ay: l,
         EE: A,
         FQ: N,
-        F_: f,
+        F_: h,
         IE: O,
         LQ: C,
         Pw: class extends l {
@@ -334,14 +334,14 @@ n.d(
         SJ: d,
         Tu: _,
         UG: S,
-        Ux: h,
+        Ux: f,
         WV: R,
         Xj: I,
         YS: o,
         _1: m,
         am: p,
-        cg: T,
-        i6: g,
+        cg: g,
+        i6: T,
         rJ: E,
     },
 );

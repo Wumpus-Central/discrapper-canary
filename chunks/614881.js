@@ -4,17 +4,17 @@ var i = n(477900),
     s = n(259264),
     r = n(46653),
     o = n(754712),
-    d = n(85448);
+    c = n(85448);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { participant: t, avatarClassName: n, children: c, ...u } = e,
+            let { participant: t, avatarClassName: n, children: d, ...u } = e,
                 { userId: h } = u,
                 p = o.Ay.getVideoComponent(),
                 m = h === (0, l.bG)([r.default], () => r.default.getId());
-            return (0, i.jsxs)(d.n6, {
+            return (0, i.jsxs)(c.n6, {
                 ...u,
                 children: [
                     (0, i.jsx)(s.A, {
@@ -28,7 +28,7 @@ n.d(
                         mirror: m,
                         emptyPreviewAspectRatio: "1",
                     }),
-                    c,
+                    d,
                 ],
             });
         },

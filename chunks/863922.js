@@ -10,15 +10,15 @@ var l = n(582128),
     m = n(734057),
     h = n(927813),
     f = n(391820),
-    g = n(652215);
-let p = 30 * h.A.Millis.SECOND;
+    p = n(652215);
+let g = 30 * h.A.Millis.SECOND;
 async function A(e) {
     let t, n;
     if (!f.A.shouldFetch(e)) return;
     let l = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: l });
     try {
-        n = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
+        n = await r.Bo.get({ url: p.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
     } catch (e) {
         t = new c.LG(e);
     }
@@ -45,7 +45,7 @@ function x(e, t) {
             let s = Date.now();
             o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: s });
             try {
-                let n = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
+                let n = await r.Bo.get({ url: p.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
                 l = n?.body;
             } catch (e) {
                 n = new c.LG(e);
@@ -87,14 +87,14 @@ async function N(e) {
                     n = f.A.status(e);
                 if (n?.fetching) return !1;
                 let l = n?.lastReceivedAt;
-                return null == l || t - l > p;
+                return null == l || t - l > g;
             })
             .slice(0, 50)).length
     )
         return Promise.resolve(null);
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: a });
     try {
-        n = await r.Bo.post({ url: g.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
+        n = await r.Bo.post({ url: p.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
     } catch (e) {
         t = new c.LG(e);
     }
@@ -110,13 +110,13 @@ async function N(e) {
 }
 async function j(e) {
     try {
-        (await r.Bo.del({ url: g.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
+        (await r.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
         throw new c.LG(e);
     }
 }
-let v =
+let I =
         221552 == n.j
             ? {
                   setSummaryFeedback: _,
@@ -169,7 +169,7 @@ let v =
                   deleteSummary: j,
               }
             : null,
-    S = 221552 == n.j ? v : null;
+    S = 221552 == n.j ? I : null;
 n.d(
     t,
     {},

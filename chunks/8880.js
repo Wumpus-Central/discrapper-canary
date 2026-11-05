@@ -1,43 +1,43 @@
-var s = e(855986),
-    l = e(73153);
+var n = s(855986),
+    a = s(73153);
 let i = { speechRate: 1, currentMessage: null },
-    n = i;
-class c extends s.Ay.DeviceSettingsStore {
+    c = i;
+class r extends n.Ay.DeviceSettingsStore {
     static displayName = "TTSStore";
     static persistKey = "TTSStore";
     static migrations = [];
-    initialize(a) {
-        n = { ...i, ...(a ?? null) };
+    initialize(e) {
+        c = { ...i, ...(e ?? null) };
     }
-    isSpeakingMessage(a, t) {
-        let { currentMessage: e } = n;
-        return null !== e && e.channelId === a && e.messageId === t;
+    isSpeakingMessage(e, t) {
+        let { currentMessage: s } = c;
+        return null !== s && s.channelId === e && s.messageId === t;
     }
     get currentMessage() {
-        return n.currentMessage;
+        return c.currentMessage;
     }
     get speechRate() {
-        return n.speechRate;
+        return c.speechRate;
     }
     getUserAgnosticState() {
-        return n;
+        return c;
     }
 }
-let h = new c(
-    l.h,
+let h = new r(
+    a.h,
     __OVERLAY__
         ? {}
         : {
-              SPEAKING_MESSAGE: function (a) {
-                  let { messageId: t, channelId: e } = a;
-                  n = { ...n, currentMessage: { messageId: t, channelId: e } };
+              SPEAKING_MESSAGE: function (e) {
+                  let { messageId: t, channelId: s } = e;
+                  c = { ...c, currentMessage: { messageId: t, channelId: s } };
               },
               STOP_SPEAKING: function () {
-                  n = { ...n, currentMessage: null };
+                  c = { ...c, currentMessage: null };
               },
-              SET_TTS_SPEECH_RATE: function (a) {
-                  n = { ...n, speechRate: a.speechRate };
+              SET_TTS_SPEECH_RATE: function (e) {
+                  c = { ...c, speechRate: e.speechRate };
               },
           },
 );
-e.d(t, {}, { A: h });
+s.d(t, {}, { A: h });

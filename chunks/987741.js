@@ -11,17 +11,17 @@ var i = n(635377),
     E = n(161204);
 n(575279);
 let A = new (r())({ max: 10, dispose: I }),
-    h = new Map(),
-    f = new Map();
+    f = new Map(),
+    h = new Map();
 function I(e) {
-    for (let [t, n] of h) n === e && h.delete(t);
+    for (let [t, n] of f) n === e && f.delete(t);
 }
 function p(e, t) {
-    let n = f.get(e);
-    null != n && (n.delete(t), 0 === n.size && f.delete(e));
+    let n = h.get(e);
+    null != n && (n.delete(t), 0 === n.size && h.delete(e));
 }
 function m(e, t) {
-    let n = h.get(e);
+    let n = f.get(e);
     if (null == n) return !1;
     let i = A.peek(n);
     if (null == i) return !1;
@@ -30,10 +30,10 @@ function m(e, t) {
     let a = t(r);
     return null != a && (i.messageByMessageId.set(e, a), (0, _.V)(i, e, a), !0);
 }
-function g(e) {
+function T(e) {
     return m(e.messageId, (t) => (0, _.y4)(e, t));
 }
-function T() {
+function g() {
     let e = !1;
     return (
         A.forEach((t) => {
@@ -46,13 +46,13 @@ function T() {
     );
 }
 function S(e) {
-    let t = h.get(e);
+    let t = f.get(e);
     if (null == t) return !1;
     let n = A.peek(t);
     if (null == n) return !1;
     (0, _.rO)(n, e);
     let i = n.messageByMessageId.delete(e);
-    return (h.delete(e), i);
+    return (f.delete(e), i);
 }
 function N(e) {
     let t = !1;
@@ -80,11 +80,11 @@ class C extends a.Ay.Store {
         return A.peek(e)?.hydratedMessages ?? null;
     }
     getMessage(e) {
-        let t = h.get(e);
+        let t = f.get(e);
         return null == t ? null : (A.peek(t)?.messageByMessageId.get(e) ?? null);
     }
     isConversationFetchPending(e, t) {
-        let n = f.get(e);
+        let n = h.get(e);
         return null != n && 0 !== n.size && (!0 !== t || n.has("full"));
     }
 }
@@ -111,7 +111,7 @@ let O = new C(s.h, {
         let n,
             { conversationId: i, full: r, cacheType: a } = e;
         if ("preview" !== a) return !1;
-        ((t = r ? "full" : "preview"), null != (n = f.get(i)) ? n.add(t) : f.set(i, new Set([t])));
+        ((t = r ? "full" : "preview"), null != (n = h.get(i)) ? n.add(t) : h.set(i, new Set([t])));
     },
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { conversationId: t, messages: n, messageReferences: i, fullyHydrated: r, cacheType: a } = e;
@@ -131,7 +131,7 @@ let O = new C(s.h, {
                 },
             }) &&
                 (function (e, t) {
-                    for (let n of (I(e), t.messageByMessageId.keys())) h.set(n, e);
+                    for (let n of (I(e), t.messageByMessageId.keys())) f.set(n, e);
                 })(t, s),
             !0)
         );
@@ -154,8 +154,8 @@ let O = new C(s.h, {
             n = t.id;
         return null != n && m(n, (e) => (0, l.IU)(e, t));
     },
-    MESSAGE_REACTION_ADD: g,
-    MESSAGE_REACTION_REMOVE: g,
+    MESSAGE_REACTION_ADD: T,
+    MESSAGE_REACTION_REMOVE: T,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e;
         return m(t, (e) => e.addReactionBatch(n, o.default.getId()));
@@ -178,11 +178,11 @@ let O = new C(s.h, {
         for (let e of t) S(e) && (n = !0);
         return n;
     },
-    RELATIONSHIP_ADD: T,
-    RELATIONSHIP_UPDATE: T,
-    RELATIONSHIP_REMOVE: T,
+    RELATIONSHIP_ADD: g,
+    RELATIONSHIP_UPDATE: g,
+    RELATIONSHIP_REMOVE: g,
     LOGOUT: function () {
-        (A.reset(), h.clear(), f.clear());
+        (A.reset(), f.clear(), h.clear());
     },
 });
 n.d(t, {}, { A: O });

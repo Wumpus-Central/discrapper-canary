@@ -151,7 +151,7 @@ class A extends a.Ay.DeviceSettingsStore {
         return E.videoBackground ?? null;
     }
 }
-let h = new A(l.h, {
+let f = new A(l.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
         E = { ...E, ...e.settings };
     },
@@ -163,4 +163,4 @@ let h = new A(l.h, {
     },
     REGISTER_SUCCESS: function () {},
 });
-n.d(t, {}, { Ay: h });
+n.d(t, {}, { Ay: f });

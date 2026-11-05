@@ -22,8 +22,8 @@ n.d(
                     lineClamp: _,
                     color: E,
                     tabularNumbers: A = !1,
-                    scaleFontToUserSetting: h = !1,
-                    ref: f,
+                    scaleFontToUserSetting: f = !1,
+                    ref: h,
                     ...I
                 } = e,
                 p = "",
@@ -42,12 +42,12 @@ n.d(
                     default:
                         t = o.A.colors[u[E]]?.css;
                 }
-            let g = { color: t, ...m, ...I.style };
+            let T = { color: t, ...m, ...I.style };
             return (0, i.jsx)(r, {
-                ref: f,
-                className: a()({ [d.fT]: void 0 === E, [d.rb]: s, [d.w9]: A, [c.fontScaling]: h }, p, c[n], l),
+                ref: h,
+                className: a()({ [d.fT]: void 0 === E, [d.rb]: s, [d.w9]: A, [c.fontScaling]: f }, p, c[n], l),
                 ...I,
-                style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
+                style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
                 "data-text-variant": n,
             });
         },

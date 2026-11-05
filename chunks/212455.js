@@ -34,7 +34,7 @@ function A(e) {
     if (null != r && i.userId !== r.id) return !1;
     (0, l.NK)(i) ? E(t) : (d[t] = i);
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -57,7 +57,7 @@ class h extends i.Ay.Store {
         return null != o;
     }
 }
-let f = new h(r.h, {
+let h = new f(r.h, {
     CONNECTION_OPEN: function (e) {
         let { guildJoinRequests: t } = e;
         ((c = !1),
@@ -121,4 +121,4 @@ let f = new h(r.h, {
         o = null;
     },
 });
-n.d(t, {}, { A: f, j: _ });
+n.d(t, {}, { A: h, j: _ });

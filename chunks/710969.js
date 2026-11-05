@@ -20,10 +20,10 @@ let A = {
     [c.uF.QUEST_HOME_HERO_BANNER]: c.p9.QUEST_HOME_BANNER_DESKTOP,
     [c.uF.VIDEO_MODAL_MOBILE]: c.p9.VIDEO_MODAL_MOBILE,
 };
-function h(e) {
+function f(e) {
     return A[e];
 }
-function f(e) {
+function h(e) {
     return {
         questId: (0, a.Yz)(e.creative),
         adCreativeId: (0, a.K2)(e.creative),
@@ -39,11 +39,11 @@ function p(e, t) {
     let n = (function (e, t) {
         if (!I.has(e) || null == t) return null;
         let n = o.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
-        return null != n ? f(n) : null;
+        return null != n ? h(n) : null;
     })(e, t);
     if (null != n) return n;
     let i = r.A.deliveryAdDecisionByPlacement.get(e);
-    return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? f(i) : null == i ? null : f(i);
+    return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? h(i) : null == i ? null : h(i);
 }
 n.d(
     t,
@@ -53,7 +53,7 @@ n.d(
             return null != e && null != e.completedAt && null == e.claimedAt;
         },
         Gp: function (e, t, n) {
-            let i = h(e);
+            let i = f(e);
             if (null != i) {
                 let { trafficMetadataSealed: e, questId: r } = p(i, n) ?? {};
                 if (null != e && (null != n || r === t)) return e;
@@ -63,15 +63,15 @@ n.d(
                 return e?.trafficMetadataSealed;
             }
         },
-        HN: h,
+        HN: f,
         Kc: function (e, t) {
-            let n = h(t);
+            let n = f(t);
             if (null == n) return _.K3;
             let { adDecisionData: i, questId: r, adCreativeId: a } = p(n, e) ?? {};
             return null != i && (r === e || a === e || i.ad_id === e) ? i : _.K3;
         },
         L4: function (e, t) {
-            let n = h(e);
+            let n = f(e);
             if (null != n) return p(n, t)?.metadataSealed;
         },
         Oh: function (e) {
@@ -96,11 +96,11 @@ n.d(
             return null != e.config.expiresAt && !(n <= t);
         },
         s9: function (e, t) {
-            let n = h(e);
+            let n = f(e);
             if (null != n) return p(n, t)?.provenanceMetadataSealed;
         },
         vZ: function (e, t) {
-            let n = h(e);
+            let n = f(e);
             if (null != n) return p(n, t)?.adContext;
         },
         vc: function (e, t, n) {
@@ -114,7 +114,7 @@ n.d(
         vy: E,
         xn: function (e, t) {
             if (null != t && _.cY.has(t)) return !1;
-            let n = h(e);
+            let n = f(e);
             return null != n && _.J6.has(n);
         },
     },

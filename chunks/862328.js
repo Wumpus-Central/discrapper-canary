@@ -17,15 +17,15 @@ function u(e) {
             lowerBadgeSize: _,
             highlight: E,
             badgeMaskStroke: A,
-            badgeMaskSize: h,
-            upperBadge: f,
+            badgeMaskSize: f,
+            upperBadge: h,
             lowerBadge: I,
             rounded: p = !1,
             "aria-hidden": m,
-            maskShape: g = !0,
+            maskShape: T = !0,
         } = e,
-        [T, S] = r.useState(!1),
-        N = null != f,
+        [g, S] = r.useState(!1),
+        N = null != h,
         C = null != I,
         O = r.useId(),
         R = `${O}-upper_badge_masks`,
@@ -36,7 +36,7 @@ function u(e) {
         v = _?.width != null ? _.width : 16,
         P = _?.height != null ? _.height : 16,
         M = { width: u ? n : n + 8, height: u ? n : n + 8, x: u ? 0 : -4, y: u ? 0 : -4 },
-        U = u ? 20 : h,
+        U = u ? 20 : f,
         w = p
             ? (function (e) {
                   switch (e) {
@@ -91,7 +91,7 @@ function u(e) {
                                 children: [
                                     E && (0, i.jsx)("path", { d: w, id: b }),
                                     (0, i.jsx)("path", { d: w, id: y }),
-                                    null != f
+                                    null != h
                                         ? (0, i.jsx)("rect", {
                                               id: R,
                                               x: n - U + A,
@@ -109,8 +109,8 @@ function u(e) {
                                               y: n - (P + 2 * A) + A,
                                               width: v + 2 * A,
                                               height: P + 2 * A,
-                                              rx: h / 2,
-                                              ry: h / 2,
+                                              rx: f / 2,
+                                              ry: f / 2,
                                           })
                                         : null,
                                 ],
@@ -124,7 +124,7 @@ function u(e) {
                                 height: n,
                                 children: [
                                     E && (0, i.jsx)("use", { href: `#${b}`, fill: "black" }),
-                                    g
+                                    T
                                         ? (0, i.jsx)("use", {
                                               href: `#${y}`,
                                               fill: "white",
@@ -151,7 +151,7 @@ function u(e) {
                                       ],
                                   })
                                 : null,
-                            T
+                            g
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)("g", {
@@ -162,7 +162,7 @@ function u(e) {
                                           (0, i.jsxs)("g", {
                                               className: c.e7,
                                               children: [
-                                                  null != f ? (0, i.jsx)("use", { href: `#${R}` }) : null,
+                                                  null != h ? (0, i.jsx)("use", { href: `#${R}` }) : null,
                                                   null != I ? (0, i.jsx)("use", { href: `#${L}` }) : null,
                                               ],
                                           }),
@@ -187,7 +187,7 @@ function u(e) {
                     "svg",
                 ),
                 null != I ? (0, i.jsx)("div", { className: c.H7, children: I }) : null,
-                null != f ? (0, i.jsx)("div", { className: c.A8, children: f }) : null,
+                null != h ? (0, i.jsx)("div", { className: c.A8, children: h }) : null,
             ],
         },
         `${C}-${N}`,
@@ -209,16 +209,16 @@ n.d(
                 _ = (0, d.qK)("BlobMask"),
                 E = (0, o.r)(l.A.modules.guildbar.AVATAR_SIZE),
                 A = (0, o.r)(l.A.modules.guildbar.FOLDER_SIZE),
-                h = !_ && c ? A : E,
-                f = h / 2;
+                f = !_ && c ? A : E,
+                h = f / 2;
             return (0, i.jsx)(u, {
                 ...s,
                 selected: t,
                 rounded: a,
-                baseViewBoxSize: h,
-                viewBoxSize: h,
-                style: { width: h, height: h },
-                badgeMaskSize: f,
+                baseViewBoxSize: f,
+                viewBoxSize: f,
+                style: { width: f, height: f },
+                badgeMaskSize: h,
                 badgeMaskStroke: 2,
                 lowerBadgeSize: n,
                 highlight: r,

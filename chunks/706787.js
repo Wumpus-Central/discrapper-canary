@@ -23,8 +23,8 @@ n.d(
                 { emoji: x, sentAt: A } = n,
                 v = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
                 [E, C] = l.useState(!0),
-                j = !v,
-                I = (0, a.p)(E, {
+                I = !v,
+                j = (0, a.p)(E, {
                     from: { rotate: -120 },
                     enter: { rotate: 0 },
                     leave: { rotate: -120 },
@@ -41,18 +41,18 @@ n.d(
                         ? (0, d.a)(t)
                         : (e = setTimeout(
                               () => {
-                                  (C(!1), j && (0, d.a)(t));
+                                  (C(!1), I && (0, d.a)(t));
                               },
-                              j ? g : p,
+                              I ? g : p,
                           )),
                     () => {
                         null != e && clearTimeout(e);
                     }
                 );
-            }, [A, t, j]),
-            j)
+            }, [A, t, I]),
+            I)
                 ? null
-                : I((e, t) => {
+                : j((e, t) => {
                       let { rotate: n } = e;
                       return (
                           t &&

@@ -29,12 +29,12 @@ function A(e) {
         _.has(e.application_id) || _.set(e.application_id, new Set()),
         _.get(e.application_id).add(e.id));
 }
-function h(e) {
+function f(e) {
     (A(e.sku),
         null != e.child_skus && e.child_skus.forEach((e) => A(e)),
         null != e.alternative_skus && e.alternative_skus.forEach((e) => A(e)));
 }
-function f(e) {
+function h(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && A(e.sku);
 }
@@ -74,7 +74,7 @@ class m extends r.il {
         return c.has(e);
     }
 }
-let g = new m(a.h, {
+let T = new m(a.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
         let { skuId: t } = e;
         d.add(t);
@@ -85,11 +85,11 @@ let g = new m(a.h, {
     },
     STORE_LISTINGS_FETCH_SUCCESS: function (e) {
         let { storeListings: t } = e;
-        for (let e of t) h(e);
+        for (let e of t) f(e);
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { storeListing: t } = e;
-        h(t);
+        f(t);
     },
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
@@ -113,9 +113,9 @@ let g = new m(a.h, {
         for (let e of n) A(e);
         null != t && E.set(t, new Set(n.map((e) => e.id)));
     },
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: f,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: h,
     APPLICATION_STORE_CLEAR_DATA: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: f,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: f,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: h,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: h,
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

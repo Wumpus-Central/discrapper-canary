@@ -1,7 +1,7 @@
 t.d(l, { G: () => a });
-var s = t(582128),
+var n = t(582128),
     r = t(120692);
-class n {
+class s {
     top = new r.SpringValue(0);
     handleScroll(e) {
         this.top.set(e.currentTarget.scrollTop);
@@ -11,12 +11,12 @@ class n {
     }
 }
 function a() {
-    let e = s.useRef(new n()),
-        l = s.useCallback((l) => {
+    let e = n.useRef(new s()),
+        l = n.useCallback((l) => {
             e.current.handleScroll(l);
         }, []);
     return {
-        resetScrollPosition: s.useCallback(() => {
+        resetScrollPosition: n.useCallback(() => {
             e.current.scrollPosition.set(0);
         }, []),
         scrollPosition: e.current.scrollPosition,

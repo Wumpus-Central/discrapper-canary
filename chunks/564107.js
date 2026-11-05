@@ -1,13 +1,13 @@
-var l = n(477900),
-    r = n(582128);
+var l = t(477900),
+    r = t(582128);
 let a = r.createContext(null);
-n.d(
-    t,
+t.d(
+    n,
     {},
     {
         N: function (e) {
-            let { children: t, ...n } = e;
-            return (0, l.jsx)(a.Provider, { value: n, children: t });
+            let { children: n, ...t } = e;
+            return (0, l.jsx)(a.Provider, { value: t, children: n });
         },
         X: function () {
             let e = r.useContext(a);

@@ -11,13 +11,13 @@ var i = n(607399),
     _ = n(945810),
     E = n(925166),
     A = n(115504),
-    h = n(517381),
-    f = n(940382),
+    f = n(517381),
+    h = n(940382),
     I = n(188567),
     p = n(811091),
     m = n(71393),
-    g = n(576705),
-    T = n(309010),
+    T = n(576705),
+    g = n(309010),
     S = n(967198),
     N = n(287809),
     C = n(746080),
@@ -42,7 +42,7 @@ function x(e) {
     return e;
 }
 function k(e) {
-    return [f.PE.VIEW_CHANNEL, f.PE.VIEW_MESSAGE_REQUEST, f.PE.VIEW_MOD_REPORT].includes(e.type);
+    return [h.PE.VIEW_CHANNEL, h.PE.VIEW_MESSAGE_REQUEST, h.PE.VIEW_MOD_REPORT].includes(e.type);
 }
 function F() {
     return E.A.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled;
@@ -61,7 +61,7 @@ function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = !1;
     w && ((w = !1), (n = !0));
-    let i = x(T.Ay.getChannelId());
+    let i = x(g.Ay.getChannelId());
     (null != i && i in M && (delete M[i], (n = !0)), t && V() && F() && (n = !0));
     let r = n && e ? e : !e;
     return (r && t && H(!1, { trackClose: !0 }), r);
@@ -70,15 +70,15 @@ function W() {
     let e = !1;
     for (let t in M) {
         let n = M[t];
-        if (n.type === f.PE.VIEW_CHANNEL) {
+        if (n.type === h.PE.VIEW_CHANNEL) {
             let i = o.A.getChannel(n.channelId);
-            (null != i && g.A.can(O.xB.VIEW_CHANNEL, i)) || (delete M[t], (e = !0));
+            (null != i && T.A.can(O.xB.VIEW_CHANNEL, i)) || (delete M[t], (e = !0));
         }
     }
     return e;
 }
 function Y() {
-    let e = null != G && h.A.hasSearchState(G);
+    let e = null != G && f.A.hasSearchState(G);
     return e !== w && ((w = e), !0);
 }
 class K extends r.Ay.PersistedStore {
@@ -104,8 +104,8 @@ class K extends r.Ay.PersistedStore {
             (v = e.isAppBarToggleOpen ?? !1),
             (M = e.sidebars ?? {}),
             (U = e.guildSidebars ?? {})),
-            this.syncWith([g.A], W),
-            this.waitFor(c.A, o.A, u.A, _.Bt, m.A, g.A, h.A, T.Ay, S.A, N.default));
+            this.syncWith([T.A], W),
+            this.waitFor(c.A, o.A, u.A, _.Bt, m.A, T.A, f.A, g.Ay, S.A, N.default));
     }
     getState() {
         return {
@@ -147,7 +147,7 @@ class K extends r.Ay.PersistedStore {
         let t = x(e);
         if (null == t || w) return null;
         let n = M[t];
-        return null == n ? null : n.type === f.PE.VIEW_CHANNEL || n.type === f.PE.VIEW_MOD_REPORT ? n.channelId : null;
+        return null == n ? null : n.type === h.PE.VIEW_CHANNEL || n.type === h.PE.VIEW_MOD_REPORT ? n.channelId : null;
     }
     getCurrentSidebarMessageId(e) {
         let t = x(e);
@@ -155,7 +155,7 @@ class K extends r.Ay.PersistedStore {
         let n = M[t];
         return null == n
             ? null
-            : n.type === f.PE.VIEW_CHANNEL || n.type === f.PE.VIEW_MOD_REPORT
+            : n.type === h.PE.VIEW_CHANNEL || n.type === h.PE.VIEW_MOD_REPORT
               ? n.details?.initialMessageId
               : null;
     }
@@ -193,7 +193,7 @@ let $ = new K(a.h, {
         let a = x(n);
         if (null == a) return !1;
         let s = { type: t, channelId: i, details: r };
-        return (t === f.PE.VIEW_MOD_REPORT && (s = { ...s, baseChannelId: n }), (M[a] = s), !0);
+        return (t === h.PE.VIEW_MOD_REPORT && (s = { ...s, baseChannelId: n }), (M[a] = s), !0);
     },
     SIDEBAR_VIEW_GUILD: function (e) {
         let { sidebarType: t, guildId: n, baseChannelId: i, details: r } = e;
@@ -205,7 +205,7 @@ let $ = new K(a.h, {
         let { parentChannelId: t, parentMessageId: n, location: i } = e;
         w = !1;
         let r = x(t);
-        null != r && (M[r] = { type: f.PE.CREATE_THREAD, parentChannelId: t, parentMessageId: n, location: i });
+        null != r && (M[r] = { type: h.PE.CREATE_THREAD, parentChannelId: t, parentMessageId: n, location: i });
     },
     SIDEBAR_CLOSE: function (e) {
         let { baseChannelId: t } = e,
@@ -219,7 +219,7 @@ let $ = new K(a.h, {
     FRIENDS_SIDEBAR_SET_COLLAPSED: function (e) {
         let { collapsed: t } = e;
         if ((H(!t), !t)) {
-            let e = T.Ay.getChannelId();
+            let e = g.Ay.getChannelId();
             (null != e && delete M[e], w && (I._.dispatch(d.jej.SEARCH_RESULTS_CLOSE), (w = !1)));
         }
     },
@@ -241,7 +241,7 @@ let $ = new K(a.h, {
             r = !1;
         if ((i.Fr && L && ((L = !1), (y = !1), (r = !0)), null == t || null == n)) return r;
         let a = M[t];
-        return (a?.type === f.PE.VIEW_CHANNEL && a.channelId === t) ||
+        return (a?.type === h.PE.VIEW_CHANNEL && a.channelId === t) ||
             !(function (e) {
                 let t = o.A.getBasicChannel(e);
                 if (null != t) {
@@ -252,7 +252,7 @@ let $ = new K(a.h, {
                 return null != n && (0, s.M)(n);
             })(t)
             ? r
-            : ((M[t] = { type: f.PE.VIEW_CHANNEL, channelId: t, details: { type: f.kk.CHAT, initialMessageId: n } }),
+            : ((M[t] = { type: h.PE.VIEW_CHANNEL, channelId: t, details: { type: h.kk.CHAT, initialMessageId: n } }),
               !0);
     },
     THREAD_CREATE: function (e) {
@@ -260,9 +260,9 @@ let $ = new K(a.h, {
         if (t.ownerId === N.default.getCurrentUser()?.id) return !1;
         let n = M[t.parent_id];
         null != n &&
-            n.type === f.PE.CREATE_THREAD &&
+            n.type === h.PE.CREATE_THREAD &&
             n.parentMessageId === p.default.castChannelIdAsMessageId(t.id) &&
-            (M[t.parent_id] = { type: f.PE.VIEW_CHANNEL, channelId: t.id, details: { type: f.kk.CHAT } });
+            (M[t.parent_id] = { type: h.PE.VIEW_CHANNEL, channelId: t.id, details: { type: h.kk.CHAT } });
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e,

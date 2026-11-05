@@ -37,7 +37,7 @@ class f extends l.Ay.Store {
         if (null != e) return d[e];
     }
 }
-let g = new f(s.h, {
+let p = new f(s.h, {
     CONNECTION_OPEN: function () {
         d = {};
     },
@@ -91,4 +91,4 @@ let g = new f(s.h, {
         u[n] = t;
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: p });

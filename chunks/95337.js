@@ -39,17 +39,17 @@ e.d(
                         let { planId: n } = t;
                         return !d.JM.has(n);
                     }) != null,
-                S = [];
-            (S.push({ text: C.intl.string(C.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
+                N = [];
+            (N.push({ text: C.intl.string(C.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
                 b
-                    ? S.push({
+                    ? N.push({
                           text: C.intl.string(C.t.PDTjLN),
                           onClick: () => g(u.g.PREVIEW),
                           disabled: v,
                           variant: "critical-primary",
                           loading: v,
                       })
-                    : S.push({
+                    : N.push({
                           text: C.intl.string(C.t["cY+Oob"]),
                           onClick: () =>
                               (async function () {
@@ -64,12 +64,12 @@ e.d(
                           variant: "critical-primary",
                           loading: v,
                       }));
-            let T = (0, o.Zb)(P),
-                A = T ? C.intl.string(p.default.qbDPGM) : C.intl.string(C.t.LZunzZ);
+            let S = (0, o.Zb)(P),
+                T = S ? C.intl.string(p.default.qbDPGM) : C.intl.string(C.t.LZunzZ);
             return (0, i.jsx)(l.a, {
                 size: "md",
                 transitionState: t,
-                title: A,
+                title: T,
                 subtitle: (function (t, n, e, i) {
                     switch (e.status) {
                         case f.Dmq.PAST_DUE:
@@ -106,8 +106,8 @@ e.d(
                                         : C.intl.format(C.t.fCdmNs, { date: e.currentPeriodEnd });
                             }
                     }
-                })(h, e, y, T),
-                actions: S,
+                })(h, e, y, S),
+                actions: N,
                 onClose: async () => n(),
                 children: D
                     ? (0, i.jsx)(a.w, { type: "critical", message: C.intl.string(C.t["5mlOCW"]), role: "alert" })

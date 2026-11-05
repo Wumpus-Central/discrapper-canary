@@ -12,13 +12,13 @@ var o = n(503698),
     _ = n(435558),
     E = n.n(_),
     A = n(615300),
-    h = n(855986),
-    f = n(628274),
+    f = n(855986),
+    h = n(628274),
     I = n(935462),
     p = n(534514),
     m = n(834730),
-    g = n(475358),
-    T = n(707554),
+    T = n(475358),
+    g = n(707554),
     S = n(516521),
     N = n(939249),
     C = n(158781),
@@ -256,7 +256,7 @@ function H() {
                                                       (0, i.jsx)("div", {
                                                           className: "keybind-shortcuts",
                                                           children: e.binds.map((e) =>
-                                                              (0, i.jsx)(g.e, { className: x.Me, shortcut: e }, e),
+                                                              (0, i.jsx)(T.e, { className: x.Me, shortcut: e }, e),
                                                           ),
                                                       }),
                                                   ],
@@ -366,11 +366,11 @@ class j extends r.PureComponent {
             className: x.UV,
             style: this.getStyles(),
             children: [
-                (0, i.jsxs)(T.H, {
+                (0, i.jsxs)(g.H, {
                     className: x.GK,
                     children: [
                         (0, i.jsx)("div", { className: x.Qs, children: G.intl.string(G.t["1BdUtx"]) }),
-                        (0, i.jsx)(g.e, { shortcut: "mod+/" }),
+                        (0, i.jsx)(T.e, { shortcut: "mod+/" }),
                     ],
                 }),
                 (0, i.jsx)("div", { className: x.KV, children: G.intl.string(G.t["2t19lU"]) }),
@@ -386,7 +386,7 @@ class j extends r.PureComponent {
                 (0, i.jsx)(S.Gt, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, i.jsx)(T.F, { children: (0, i.jsx)(H, {}) }),
+                    children: (0, i.jsx)(g.F, { children: (0, i.jsx)(H, {}) }),
                 }),
             ],
         });
@@ -413,7 +413,7 @@ function Y(e) {
         [a, s] = r.useState(!1),
         [l, o] = r.useState(!1),
         c = r.useMemo(() => (__OVERLAY__ ? (0, O.y8)() : (0, C.Bx)()), []),
-        { keyboardModeEnabled: u, useReducedMotion: _ } = (0, h.cf)([L.Ay], () => ({
+        { keyboardModeEnabled: u, useReducedMotion: _ } = (0, f.cf)([L.Ay], () => ({
             keyboardModeEnabled: L.Ay.keyboardModeEnabled,
             useReducedMotion: L.Ay.useReducedMotion,
         }));
@@ -426,7 +426,7 @@ function Y(e) {
                 "aria-label": G.intl.string(G.t.T9DA2K),
                 transitionState: t,
                 parentComponent: "KeyboardShortcutsModal",
-                children: (0, i.jsx)(f.F, {
+                children: (0, i.jsx)(h.F, {
                     component: "div",
                     children: a
                         ? (0, i.jsx)(

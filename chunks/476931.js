@@ -75,10 +75,10 @@ function E(e, t) {
 function A(e, t) {
     return Math.floor(Math.random() * (t - e + 1)) + e;
 }
-function h(e) {
+function f(e) {
     return r()(e).set("hsl.s", 0.4).hex();
 }
-function f(e, t) {
+function h(e, t) {
     return r()(e)
         .set("hsl.l", Math.max(0.15, Math.min(0.75, t / 100)))
         .hex();
@@ -113,14 +113,14 @@ n.d(
         XY: function () {
             let e = a.yK[A(0, a.yK.length - 1)],
                 t = Math.min(45, Math.round(100 * r()(e).get("hsl.l")));
-            return { color: h(f(e, t)), baseMix: A(70, 80) };
+            return { color: f(h(e, t)), baseMix: A(70, 80) };
         },
         Yt: function (e) {
             return null != e && u.has(e) ? c[e] : null;
         },
         Z8: l,
         Zq: _,
-        _k: f,
+        _k: h,
         a0: "#5865F2",
         kI: function (e, t) {
             let n = p(e, t),
@@ -133,7 +133,7 @@ n.d(
         sR: function (e, t) {
             return r()(e).set("hsl.h", t).hex();
         },
-        w3: h,
+        w3: f,
         z3: p,
     },
 );

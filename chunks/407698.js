@@ -16,7 +16,7 @@ n.d(
             let t,
                 { guild: n, children: f, subtitle: E } = e,
                 I = (0, c.A)(n),
-                g = s.useMemo(() => {
+                h = s.useMemo(() => {
                     if (I) {
                         let e = (0, o.Jp)(n);
                         return (0, a.K)(e) !== a._.NONE;
@@ -28,10 +28,10 @@ n.d(
                         n.features.has(m.GuildFeatures.PARTNERED)
                     );
                 }, [n, I]);
-            return g || null != E
-                ? (g && I
+            return h || null != E
+                ? (h && I
                       ? (t = (0, i.jsx)(d.A, { disableBoostClick: !0, guild: n, size: 20 }))
-                      : g && (t = (0, i.jsx)(u.A, { guild: n, size: 20 })),
+                      : h && (t = (0, i.jsx)(u.A, { guild: n, size: 20 })),
                   (0, i.jsx)(r.u, {
                       asset: t,
                       assetSize: 20,

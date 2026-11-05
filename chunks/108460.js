@@ -5,11 +5,11 @@ var i = t(477900),
     r = t(115560),
     o = t(863610),
     c = t(534890),
-    d = t(315502),
-    u = t(344204);
+    u = t(315502),
+    d = t(344204);
 function A(e) {
     let { width: n = 24, height: t = 24, isBadged: s = !1, isTyping: a = !1 } = e,
-        [d] = l.useState(() => (0, r.A)());
+        [u] = l.useState(() => (0, r.A)());
     return (0, i.jsxs)("svg", {
         width: n,
         height: t,
@@ -17,7 +17,7 @@ function A(e) {
         children: [
             (0, i.jsx)("defs", {
                 children: (0, i.jsxs)("mask", {
-                    id: d,
+                    id: u,
                     children: [
                         (0, i.jsx)("rect", { fill: "white", width: "100%", height: "100%" }),
                         a &&
@@ -31,7 +31,7 @@ function A(e) {
                 }),
             }),
             (0, i.jsx)("g", {
-                mask: `url(#${d})`,
+                mask: `url(#${u})`,
                 children: (0, i.jsx)(c.ChatIcon, { size: "custom", width: n, height: t, color: "currentColor" }),
             }),
         ],
@@ -47,10 +47,10 @@ t.d(
                 c = (o ? l : t) ?? 0,
                 h = r && null != t && t > 0;
             return (0, i.jsxs)("div", {
-                className: a()(u.Or, n),
+                className: a()(d.Or, n),
                 children: [
                     (0, i.jsx)(A, { isBadged: h, isTyping: s }),
-                    h && (0, i.jsx)(d.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: u.qS }),
+                    h && (0, i.jsx)(u.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: d.qS }),
                 ],
             });
         },

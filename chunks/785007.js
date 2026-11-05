@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(818348),
     E = n(650583),
     A = n(704357);
-let h = { NOT_SET: "", NONE: "0", SMALL: "7px 10px", MEDIUM: "10px" };
-function f(e) {
+let f = { NOT_SET: "", NONE: "0", SMALL: "7px 10px", MEDIUM: "10px" };
+function h(e) {
     let { checked: t, radioItemIconClassName: n, icon: r, disabled: a } = e;
     return (0, i.jsxs)("div", {
         className: A.C4,
@@ -50,15 +50,15 @@ function I(e) {
             titleClassName: c,
             radioItemClassName: _,
             radioItemIconClassName: E,
-            radioBarClassName: h,
+            radioBarClassName: f,
             hasSelection: I,
             radioPosition: p = "left",
             icon: m,
-            withTransparentBackground: g,
+            withTransparentBackground: T,
         } = e,
-        T = r.color ?? "",
+        g = r.color ?? "",
         S = n || !I,
-        N = (0, i.jsx)(f, { checked: n, disabled: t, radioItemIconClassName: E, icon: m });
+        N = (0, i.jsx)(h, { checked: n, disabled: t, radioItemIconClassName: E, icon: m });
     return (0, i.jsx)(o.D, {
         "data-toggleable-component": "radiogroup",
         role: "radio",
@@ -66,10 +66,10 @@ function I(e) {
         "aria-label": "string" == typeof r.name ? r.name : void 0,
         onClick: t ? void 0 : l,
         tabIndex: !t && S ? 0 : -1,
-        className: s()(A.AS, { [A.r9]: t, [A.EO]: !g }, _),
+        className: s()(A.AS, { [A.r9]: t, [A.EO]: !T }, _),
         children: (0, i.jsxs)("div", {
-            style: { "--radio-bar-accent-color": T, padding: a },
-            className: s()(A.tG, { [A.go]: "left" === p, [A.Xe]: "right" === p }, h),
+            style: { "--radio-bar-accent-color": g, padding: a },
+            className: s()(A.tG, { [A.go]: "left" === p, [A.Xe]: "right" === p }, f),
             children: [
                 "left" === p ? N : null,
                 (0, i.jsxs)("div", {
@@ -100,9 +100,9 @@ function p(e) {
             radioBarClassName: _,
             withTransparentBackground: E = !1,
             radioPosition: A = "left",
-            onClick: h,
+            onClick: f,
         } = e,
-        f = r.useCallback((e) => (e.preventDefault(), h?.(a)), [h, a]),
+        h = r.useCallback((e) => (e.preventDefault(), f?.(a)), [f, a]),
         p = n || a.disabled,
         { icon: m } = a;
     return (0, i.jsx)(I, {
@@ -110,7 +110,7 @@ function p(e) {
         checked: t,
         hasSelection: o,
         option: a,
-        onClick: f,
+        onClick: h,
         size: s,
         infoClassName: l,
         titleClassName: d,
@@ -168,7 +168,7 @@ function m() {
         "aria-disabled": t,
     };
 }
-function g(e) {
+function T(e) {
     let {
             itemInfoClassName: t,
             itemTitleClassName: n,
@@ -176,18 +176,18 @@ function g(e) {
             collapsibleClassName: l,
             className: o,
             value: d = null,
-            size: u = h.MEDIUM,
+            size: u = f.MEDIUM,
             radioPosition: E = "left",
-            onChange: f = _.tE,
+            onChange: h = _.tE,
             disabled: I = !1,
-            options: g = [],
-            "aria-labelledby": T,
+            options: T = [],
+            "aria-labelledby": g,
             orientation: S,
             withTransparentBackground: N,
         } = e,
         C = r.useContext(c._),
-        { ref: O, ...R } = m({ labelledBy: T ?? C?.labelId, orientation: S, isDisabled: I }),
-        L = g.some((e) => e.value === d);
+        { ref: O, ...R } = m({ labelledBy: g ?? C?.labelId, orientation: S, isDisabled: I }),
+        L = T.some((e) => e.value === d);
     return (0, i.jsx)("div", {
         ...R,
         ref: O,
@@ -196,7 +196,7 @@ function g(e) {
         "aria-describedby": C?.describedById,
         "aria-errormessage": C?.errorMessageId,
         "aria-invalid": C?.errorMessageId != null,
-        children: g.map((e) =>
+        children: T.map((e) =>
             (0, i.jsx)(
                 p,
                 {
@@ -204,7 +204,7 @@ function g(e) {
                     disabled: I,
                     checked: d === e.value,
                     option: e,
-                    onClick: f,
+                    onClick: h,
                     radioPosition: E,
                     size: u,
                     infoClassName: t,
@@ -231,7 +231,7 @@ n.d(
                 description: n,
                 required: r,
                 errorMessage: a,
-                children: (0, i.jsx)(g, { ...s }),
+                children: (0, i.jsx)(T, { ...s }),
             });
         },
         Gx: function (e) {
@@ -239,6 +239,6 @@ n.d(
             return { role: "radio", tabIndex: t ? 0 : -1, "aria-label": n, "aria-checked": t };
         },
         _u: m,
-        r9: h,
+        r9: f,
     },
 );

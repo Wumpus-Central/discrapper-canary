@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(164956),
     E = n(816662),
     A = n(734057),
-    h = n(696451),
-    f = n(287809),
+    f = n(696451),
+    h = n(287809),
     I = n(129230),
     p = n(403362),
     m = n(856383),
-    g = n(811091),
-    T = n(591552),
+    T = n(811091),
+    g = n(591552),
     S = n(961973),
     N = n(487626),
     C = n(652215),
@@ -26,8 +26,8 @@ var i = n(435558),
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (_.A.isFullServerPreview(e)) return;
-    let n = t ? T.A.getOnboardingPromptsForOnboarding(e) : T.A.getOnboardingPrompts(e),
-        i = T.A.getOnboardingResponses(e),
+    let n = t ? g.A.getOnboardingPromptsForOnboarding(e) : g.A.getOnboardingPrompts(e),
+        i = g.A.getOnboardingResponses(e),
         r = n.map((e) => e.options.filter((e) => i.includes(e.id))).flat(),
         a = {},
         o = {};
@@ -82,7 +82,7 @@ function L(e) {
 }
 let y = {
     selectOption(e, t, n, i) {
-        let a = T.A.getOnboardingPrompt(t);
+        let a = g.A.getOnboardingPrompt(t);
         if (null == a) return;
         let s = a.singleSelect ? r().without(r().map(a.options, "id"), n) : [];
         l.h.dispatch({
@@ -96,7 +96,7 @@ let y = {
     },
     updateOnboardingResponses: r().debounce(L, 1e3),
     updateRolesLocal: function (e, t, n) {
-        let i = h.Ay.getSelfMember(e)?.roles ?? [];
+        let i = f.Ay.getSelfMember(e)?.roles ?? [];
         _.A.isViewingRoles(e)
             ? (0, u.ID)(e, r().difference(r().union(i, t), n))
             : (t.length > 0 || n.length > 0) &&
@@ -110,16 +110,16 @@ let y = {
     },
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
-            i = T.A.getSelectedOptions(e),
+            i = g.A.getSelectedOptions(e),
             r = (0, S.a)(i),
             s = (0, S.vV)(i),
-            l = T.A.getEnabled(e) ? T.A.getDefaultChannelIds(e) : [],
+            l = g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : [],
             [c, E] = (0, S._N)(e, t, l),
             m = [...s, ...l],
             y = m.map((e) => A.A.getChannel(e)).filter(p.Vq),
             D = (0, N.w)(e, new Set(m), y, !0).length,
             b = null == n ? [] : n.options.map((e) => e.id),
-            v = T.A.getConnections(e),
+            v = g.A.getConnections(e),
             P = (0, S.H_)(v),
             M = (0, S.OG)(v);
         if (
@@ -140,21 +140,21 @@ let y = {
                 application_connections_connected: M.connected,
                 application_connections_not_connected: M.notConnected,
             }),
-            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, g.default.fromTimestamp(Date.now())),
+            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, T.default.fromTimestamp(Date.now())),
             L(e, !0),
             _.A.isFullServerPreview(e))
         ) {
             ((0, u.$u)(e, m, []), (0, u.Z$)(e, { optInEnabled: l.length > 0 }), (0, u.ID)(e, Array.from(r)));
-            let t = f.default.getCurrentUser();
+            let t = h.default.getCurrentUser();
             if (null != t) {
-                let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
+                let n = f.Ay.getMember(e, t.id)?.flags ?? 0;
                 (0, u.Z$)(e, { memberOptions: { flags: (0, a.lA)(n, O.D.COMPLETED_ONBOARDING, !0) } });
             }
         }
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
-        ((T.A.getEnabled(e) ? T.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
+        ((g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
             n.size > 0 && (0, E.Hb)(e, Array.from(n), !0, { page: C.liQ.GUILD_ONBOARDING }));
     },
     finishOnboarding(e) {
@@ -164,9 +164,9 @@ let y = {
         l.h.dispatch({ type: "GUILD_ONBOARDING_SET_STEP", guildId: e, step: t });
     },
     async resetOnboarding(e) {
-        let t = f.default.getCurrentUser();
+        let t = h.default.getCurrentUser();
         if (null != t) {
-            let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
+            let n = f.Ay.getMember(e, t.id)?.flags ?? 0;
             await (0, c.T)(e, { flags: (0, a.lA)(n, O.D.COMPLETED_ONBOARDING, !1) });
         }
     },

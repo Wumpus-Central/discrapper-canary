@@ -11,8 +11,8 @@ var r = n(192308),
     _ = n(46653),
     E = n(309010),
     A = n(977997),
-    h = n(129230),
-    f = n(389234),
+    f = n(129230),
+    h = n(389234),
     I = n(652215),
     p = n(64175);
 n.d(
@@ -24,8 +24,8 @@ n.d(
                 let {
                     channel: t,
                     connected: m,
-                    needSubscriptionToAccess: g,
-                    locked: T = !1,
+                    needSubscriptionToAccess: T,
+                    locked: g = !1,
                     routeDirectlyToChannel: S = !1,
                     bypassChangeModal: N,
                     bypassBlockedWarningModal: C,
@@ -40,8 +40,8 @@ n.d(
                     D = y?.channelId === t.id || E.Ay.getChannelId() === A.A.getCurrentClientVoiceChannelId(t.guild_id),
                     b = d.A.getBlockedUsersForVoiceChannel(t.id),
                     v = d.A.getIgnoredUsersForVoiceChannel(t.id);
-                return ((0, o.oE)(new Set([...b, ...v])) && (C = !0), C || T || m || (!(b.size > 0) && !(v.size > 0)))
-                    ? !N && !T && (0, f.H)(t)
+                return ((0, o.oE)(new Set([...b, ...v])) && (C = !0), C || g || m || (!(b.size > 0) && !(v.size > 0)))
+                    ? !N && !g && (0, h.H)(t)
                         ? new Promise((e) => {
                               (0, r.mM)(async () => {
                                   let { default: r } = await n.e(412963).then(n.bind(n, 24814));
@@ -53,9 +53,9 @@ n.d(
                                                   this.handleVoiceConnect({
                                                       channel: t,
                                                       connected: m,
-                                                      needSubscriptionToAccess: g,
+                                                      needSubscriptionToAccess: T,
                                                       routeDirectlyToChannel: S,
-                                                      locked: T,
+                                                      locked: g,
                                                       bypassChangeModal: !0,
                                                   }),
                                               ),
@@ -63,9 +63,9 @@ n.d(
                                       });
                               });
                           })
-                        : (T || m || a.default.selectVoiceChannel(t.id),
+                        : (g || m || a.default.selectVoiceChannel(t.id),
                           !__OVERLAY__ &&
-                              (m || D || g || S) &&
+                              (m || D || T || S) &&
                               (function (e) {
                                   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                                       n = arguments.length > 2 ? arguments[2] : void 0,
@@ -107,9 +107,9 @@ n.d(
                                                   this.handleVoiceConnect({
                                                       channel: t,
                                                       connected: m,
-                                                      needSubscriptionToAccess: g,
+                                                      needSubscriptionToAccess: T,
                                                       routeDirectlyToChannel: S,
-                                                      locked: T,
+                                                      locked: g,
                                                       bypassChangeModal: !0,
                                                       bypassBlockedWarningModal: !0,
                                                   }),
@@ -119,7 +119,7 @@ n.d(
                               },
                               {
                                   onCloseCallback: () => {
-                                      h.default.track(I.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                                      f.default.track(I.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                                           action: p.Qi.DISMISS,
                                           channel_id: t.id,
                                           blocked_user_ids: Array.from(b),

@@ -1,4 +1,4 @@
-n.d(t, { Nu: () => p, oG: () => I, iq: () => m, O9: () => f });
+n.d(t, { Nu: () => p, oG: () => I, iq: () => m, O9: () => h });
 var i = n(73153),
     r = n(46653),
     a = n(3137),
@@ -41,7 +41,7 @@ function A(e, t) {
             return t(Number.parseInt(n));
         });
 }
-let h = o().throttle((e) => {
+let f = o().throttle((e) => {
     let {
         enabled: t,
         combosEnabled: n,
@@ -52,7 +52,7 @@ let h = o().throttle((e) => {
         confettiEnabled: l,
         confettiSize: o,
         confettiCount: c,
-        confettiEnabledLocations: h,
+        confettiEnabledLocations: f,
     } = e;
     d.default.track(u.HAw.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
@@ -64,11 +64,11 @@ let h = o().throttle((e) => {
         confetti_enabled: l,
         confetti_size: o,
         confetti_count: c,
-        confetti_enabled_locations: A(h, E),
+        confetti_enabled_locations: A(f, E),
     });
 }, 5e3);
-function f(e) {
-    (i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), h({ ...a.A.getState(), ...e }));
+function h(e) {
+    (i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), f({ ...a.A.getState(), ...e }));
 }
 function I(e) {
     i.h.dispatch({ type: "POGGERMODE_UPDATE_COMBO", ...e });

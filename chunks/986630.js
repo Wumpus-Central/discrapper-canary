@@ -55,8 +55,8 @@ class c extends l.A {
             preview_assets: _,
             variants: E,
             badge_override: A,
-            hide_badge: h,
-            is_first_party: f,
+            hide_badge: f,
+            is_first_party: h,
             ...I
         } = e;
         return new c({
@@ -85,8 +85,8 @@ class c extends l.A {
             googleSkuIds: I.google_sku_ids,
             eligibleOffers: I.eligible_offers,
             badgeOverride: A,
-            hideBadge: h,
-            isFirstParty: f,
+            hideBadge: f,
+            isFirstParty: h,
         });
     }
     static fromStorefrontProductRecord(e) {
@@ -98,8 +98,8 @@ class c extends l.A {
         if (null == l) return;
         let _ = null != n && e.skus.length > 1,
             E = e.skus.length > 1 && !_ ? i.R.VARIANTS_GROUP : l.type,
-            { items: A, item: h } = (0, s.T7)(r) ?? {},
-            [f] = r.selectedOptions;
+            { items: A, item: f } = (0, s.T7)(r) ?? {},
+            [h] = r.selectedOptions;
         return new c({
             storeListingId: r.id,
             skuId: r.id,
@@ -108,9 +108,9 @@ class c extends l.A {
             styles: e.primaryCollectionStyles,
             type: E,
             baseVariantName: _ ? e.name : void 0,
-            variantLabel: _ ? (f?.optionValue ?? "") : void 0,
+            variantLabel: _ ? (h?.optionValue ?? "") : void 0,
             premiumType: 0 === l.premiumType ? null : l.premiumType,
-            items: A ?? [h].filter((e) => null != e),
+            items: A ?? [f].filter((e) => null != e),
             categorySkuId: e.primaryCollectionId ?? l.categorySkuId ?? "",
             categoryWillUnpublishAt: e.primaryCollectionWillUnpublishAt,
             isCategoryReward: o.MS.some((e) => {

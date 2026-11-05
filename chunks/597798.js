@@ -11,13 +11,13 @@ var i = n(73153),
     _ = n(115560),
     E = n(192308),
     A = n(890615),
-    h = n(51758),
-    f = n(776781),
+    f = n(51758),
+    h = n(776781),
     I = n(96566),
     p = n(854325),
     m = n(149468),
-    g = n(329551),
-    T = n(912630),
+    T = n(329551),
+    g = n(912630),
     S = n(965162),
     N = n(495867),
     C = n(309010),
@@ -78,7 +78,7 @@ let U = {
                       o = c.A.getChannel(e),
                       d = b.A.getCurrentClientVoiceChannelId(t ?? null) === e,
                       P = null != o ? y.A.getCheck(o.guild_id) : null;
-                  if (!(null != t && (0, h.V)(t)) && (null == P || P.canChat || (0, f.pC)(o))) {
+                  if (!(null != t && (0, f.V)(t)) && (null == P || P.canChat || (0, h.pC)(o))) {
                       if (null != o && !d) {
                           let e = (0, v.Pd)(o, b.A, L.A);
                           if (e && o.isGuildStageVoice() && (0, I.xn)(o.id))
@@ -143,11 +143,11 @@ let U = {
                                               duration_muted_ms: r?.duration_muted_ms ?? null,
                                               output_audio_route_type: R.A.getCurrentRouteType(),
                                           });
-                                  if ((e(), T.A.hasUsedBackgroundInCall)) {
+                                  if ((e(), g.A.hasUsedBackgroundInCall)) {
                                       let e,
                                           t = {
                                               ...s,
-                                              ...((e = (0, g.i)(O.default.getCurrentUser())),
+                                              ...((e = (0, T.i)(O.default.getCurrentUser())),
                                               {
                                                   video_device_name:
                                                       u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,

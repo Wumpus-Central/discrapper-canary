@@ -1,38 +1,38 @@
-var s = l(582128),
-    i = l(488995),
-    n = l(381645);
+var n = l(582128),
+    s = l(488995),
+    i = l(381645);
 l.d(
     t,
     {},
     {
         p: function (e) {
             let { isSearchBarVisible: t, isSearchBarEmpty: l, searchBarState: a, setSearchBarState: r } = e,
-                o = s.useCallback(
+                o = n.useCallback(
                     (e) => {
                         if (!t) return;
-                        let s = Math.round(e);
+                        let n = Math.round(e);
                         switch (a) {
-                            case i.Um.DEFAULT:
-                                s < 20 && r(l ? i.Um.COLLAPSED : i.Um.FLOATING);
+                            case s.Um.DEFAULT:
+                                n < 20 && r(l ? s.Um.COLLAPSED : s.Um.FLOATING);
                                 break;
-                            case i.Um.COLLAPSED:
-                                s > 236 && r(i.Um.DEFAULT);
+                            case s.Um.COLLAPSED:
+                                n > 236 && r(s.Um.DEFAULT);
                                 break;
-                            case i.Um.FLOATING:
-                                s > 284 && r(i.Um.DEFAULT);
+                            case s.Um.FLOATING:
+                                n > 284 && r(s.Um.DEFAULT);
                         }
                     },
                     [l, t, a, r],
                 ),
-                c = s.useCallback(() => {
-                    r(i.Um.FLOATING);
+                c = n.useCallback(() => {
+                    r(s.Um.FLOATING);
                 }, [r]),
-                d = s.useCallback(() => {
-                    a === i.Um.FLOATING && l && r(i.Um.COLLAPSED);
+                d = n.useCallback(() => {
+                    a === s.Um.FLOATING && l && r(s.Um.COLLAPSED);
                 }, [l, a, r]);
             return {
                 onTabsAvailableWidthChange: o,
-                tabsClassName: a === i.Um.FLOATING ? n.b6 : void 0,
+                tabsClassName: a === s.Um.FLOATING ? i.b6 : void 0,
                 onCollapsedSearchBarClick: c,
                 onSearchBarBlur: d,
             };

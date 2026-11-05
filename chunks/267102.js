@@ -15,7 +15,7 @@ function A(e) {
     let n = (0, o.Q2)(t);
     return E.get(n)?.windowDispatch;
 }
-function h() {
+function f() {
     let e = (0, d.Sf)();
     return null == e ? null : (E.get(e) ?? null);
 }
@@ -73,12 +73,12 @@ n.d(
             return null == e ? null : (E.get(e) ?? null);
         },
         mU: A,
-        rH: h,
+        rH: f,
         wp: function (e) {
             return (0, a.vq)(e?.target) ? (A(e.target) ?? null) : null;
         },
         zd: function () {
-            let e = h();
+            let e = f();
             return null != e ? e.appContext : null;
         },
     },

@@ -10,8 +10,8 @@ var i = n(855986),
     _ = n(696451),
     E = n(317525),
     A = n(71393),
-    h = n(287809),
-    f = n(652215);
+    f = n(287809),
+    h = n(652215);
 let I = {},
     p = new Set();
 function m(e) {
@@ -23,7 +23,7 @@ function m(e) {
             (0, s.X)(n ?? void 0) ||
             (function (e, t) {
                 if (null == e) return !1;
-                let n = h.default.getCurrentUser();
+                let n = f.default.getCurrentUser();
                 if (null == n) return !1;
                 let i = _.Ay.getMember(t, n.id);
                 return null != i && i.roles.includes(e.id);
@@ -31,10 +31,10 @@ function m(e) {
         )
     );
 }
-function g(e, t) {
+function T(e, t) {
     if (
-        !t.features.has(f.GuildFeatures.CREATOR_MONETIZABLE) &&
-        !t.features.has(f.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
+        !t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE) &&
+        !t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
     )
         return !1;
     let n = o.A.isViewingServerShop(t.id);
@@ -45,7 +45,7 @@ function g(e, t) {
         if ((0, l.Uj)(e, a)) return !0;
     }
     let i = E.A.getEveryoneRole(t),
-        r = !(0, c._m)(i, f.xBc.VIEW_CHANNEL),
+        r = !(0, c._m)(i, h.xBc.VIEW_CHANNEL),
         a = (0, l.AN)(e, e.permissionOverwrites[t.id]);
     if (r && !a) {
         for (let e of E.A.getSortedRoles(t.id))
@@ -53,7 +53,7 @@ function g(e, t) {
     }
     return !1;
 }
-function T(e, t) {
+function g(e, t) {
     let n = I[e];
     if (null == n) return !1;
     let i = u.A.getChannel(t);
@@ -61,7 +61,7 @@ function T(e, t) {
     let r = A.A.getGuild(i.getGuildId());
     if (null == r) return !1;
     let a = n.has(t),
-        s = g(i, r);
+        s = T(i, r);
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function S() {
@@ -77,12 +77,12 @@ function C(e) {
 }
 function O(e) {
     let { channel: t } = e;
-    return null != t.guild_id && T(t.guild_id, t.id);
+    return null != t.guild_id && g(t.guild_id, t.id);
 }
 class R extends i.Ay.Store {
     static displayName = "GatedChannelStore";
     initialize() {
-        this.waitFor(u.A, _.Ay, E.A, A.A, o.A, h.default);
+        this.waitFor(u.A, _.Ay, E.A, A.A, o.A, f.default);
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
@@ -93,11 +93,11 @@ class R extends i.Ay.Store {
                     let t = A.A.getGuild(e);
                     if (null == t) return;
                     let n = (I[e] = new Set());
-                    if (!t.features.has(f.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return;
+                    if (!t.features.has(h.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return;
                     let i = u.A.getMutableGuildChannelsForGuild(e);
                     for (let e in i) {
                         let r = i[e];
-                        g(r, t) && n.add(r.id);
+                        T(r, t) && n.add(r.id);
                     }
                 })(e),
                 (n = I[e])),
@@ -134,7 +134,7 @@ let L = new R(r.h, {
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
-        for (let e of t) null != e.guild_id && T(e.guild_id, e.id) && (n = !0);
+        for (let e of t) null != e.guild_id && g(e.guild_id, e.id) && (n = !0);
         return n;
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {

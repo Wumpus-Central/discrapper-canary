@@ -10,8 +10,8 @@ var i,
     _ = n(8295),
     E = (((i = {}).DEFAULT = "default"), (i.SMALL = "small"), i);
 let A = { default: _.hk, small: _.p$ },
-    h = { default: _.VE, small: _.TY };
-class f extends a.PureComponent {
+    f = { default: _.VE, small: _.TY };
+class h extends a.PureComponent {
     static defaultProps = { shineSize: "default" };
     render() {
         let { className: e, shineSize: t, shinePaused: n, ...i } = this.props;
@@ -22,7 +22,7 @@ class f extends a.PureComponent {
                 align: c.A.Align.CENTER,
                 justify: c.A.Justify.CENTER,
                 className: A[t],
-                children: (0, r.jsx)("div", { className: h[t] }),
+                children: (0, r.jsx)("div", { className: f[t] }),
             }),
         });
     }
@@ -37,12 +37,12 @@ function I(e) {
             shineSize: c = "default",
             shinePaused: E,
             buttonShineClassName: A,
-            onlyShineOnHover: h,
+            onlyShineOnHover: f,
             ...I
         } = e,
         p = a.useRef(null),
         m = (0, u.M)(p),
-        g = !i && !s && !0 !== o && (!h || m);
+        T = !i && !s && !0 !== o && (!f || m);
     return (0, r.jsxs)(d.$n, {
         "data-migration-pending": !0,
         buttonRef: p,
@@ -52,15 +52,15 @@ function I(e) {
         submitting: s,
         children: [
             t,
-            g
-                ? (0, r.jsx)(f, {
+            T
+                ? (0, r.jsx)(h, {
                       "data-migration-pending": !0,
                       shinePaused: E,
-                      className: l()(_.Qr, h ? _.PK : void 0, A),
+                      className: l()(_.Qr, f ? _.PK : void 0, A),
                       shineSize: c,
                   })
                 : null,
         ],
     });
 }
-((I.ShineSizes = E), n.d(t, {}, { kF: f, wL: I }));
+((I.ShineSizes = E), n.d(t, {}, { kF: h, wL: I }));

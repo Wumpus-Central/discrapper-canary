@@ -44,7 +44,7 @@ let u = new d(r.h, {
 var _ = n(260498),
     E = n(313537);
 let A = new Map();
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "ConjureServerProjectRouteStore";
     initialize() {
         this.waitFor(_.Ay);
@@ -54,7 +54,7 @@ class h extends i.Ay.Store {
         return null == t ? null : (0, E.fL)(_.Ay.getProject(t)) === e ? t : null;
     }
 }
-let f = new h(r.h, {
+let h = new f(r.h, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n, messageId: i } = e;
         return (
@@ -68,8 +68,8 @@ let f = new h(r.h, {
 var I = n(246338),
     p = n(181079),
     m = n(5180),
-    g = n(713125),
-    T = n(473529),
+    T = n(713125),
+    g = n(473529),
     S = n(313627),
     N = n(871123),
     C = n(734057),
@@ -81,14 +81,14 @@ function y(e) {
     if (null != t && D(e)) return [a.VV.CONJURE, t];
     let n = L.Ay.getChannelId(e),
         i = O.A.getDefaultChannel(e)?.id ?? void 0;
-    if ((n === a.VV.GUILD_ONBOARDING && !g.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, T.K)(e)))
+    if ((n === a.VV.GUILD_ONBOARDING && !T.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, g.K)(e)))
         return [i, null];
     if (n === a.VV.GUILD_SPACE)
         return (0, S.tT)(R.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [i, null];
     if (n === a.VV.GAME_SHOP && (0, N.Ye)(e)) return [n, null];
     if (n === a.VV.CONJURE || n === a.VV.CONJURE_PROJECT) {
         if (!D(e)) return [i, null];
-        let t = n === a.VV.CONJURE_PROJECT ? f.getReturnProjectId(e) : null;
+        let t = n === a.VV.CONJURE_PROJECT ? h.getReturnProjectId(e) : null;
         return null != t ? [a.VV.CONJURE_PROJECT, t] : [a.VV.CONJURE, null];
     }
     let r = C.A.getChannel(n);

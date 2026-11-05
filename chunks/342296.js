@@ -27,13 +27,13 @@ function f(e) {
             avatarUrl: N,
             preload: A,
             renderPopout: p,
-            onRequestOpen: w,
-            onRequestClose: S,
-            onClosePopout: b,
-            shouldShow: y,
-            shouldPreload: C = !0,
-            ignoreModalClicks: P = !0,
-            ...I
+            onRequestOpen: S,
+            onRequestClose: w,
+            onClosePopout: y,
+            shouldShow: b,
+            shouldPreload: I = !0,
+            ignoreModalClicks: C = !0,
+            ...P
         } = e,
         M = n.useRef(void 0),
         U = n.useCallback(
@@ -49,7 +49,7 @@ function f(e) {
                       }),
             [A, r, i, N, l, d],
         ),
-        k = n.useCallback(
+        L = n.useCallback(
             (e) =>
                 ((M.current = Date.now()), null != p)
                     ? p(e, M.current)
@@ -66,21 +66,21 @@ function f(e) {
                           appContext: g,
                           openedAt: M.current,
                           closePopout: () => {
-                              (e.closePopout(), b?.());
+                              (e.closePopout(), y?.());
                           },
                       }),
-            [i, r, p, l, d, v, j, m, f, g, b],
+            [i, r, p, l, d, v, j, m, f, g, y],
         );
     return (0, s.jsx)(a.Y, {
         popoutKey: u.KM,
-        shouldShow: y,
-        preload: C ? U : void 0,
+        shouldShow: b,
+        preload: I ? U : void 0,
         loadingComponent: (0, c.Zm)(),
-        renderPopout: k,
-        onRequestOpen: w,
-        onRequestClose: S,
-        ignoreModalClicks: P,
-        ...I,
+        renderPopout: L,
+        onRequestOpen: S,
+        onRequestClose: w,
+        ignoreModalClicks: C,
+        ...P,
         children: t,
     });
 }

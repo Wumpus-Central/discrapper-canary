@@ -10,13 +10,13 @@ var i = n(855986),
     _ = n(696451),
     E = n(71393),
     A = n(218461),
-    h = n(543465),
-    f = n(927813),
+    f = n(543465),
+    h = n(927813),
     I = n(811091),
     p = n(652215);
 let m = new Set(),
-    g = {},
     T = {},
+    g = {},
     S = new Set();
 function N(e) {
     return E.A.getGuild(e)?.features.has(p.GuildFeatures.COMMUNITY) === !0;
@@ -26,7 +26,7 @@ function C() {
     return !1;
 }
 function O(e, t) {
-    let n = g[e];
+    let n = T[e];
     null != n &&
         null != t &&
         n.has(t) &&
@@ -43,41 +43,41 @@ function O(e, t) {
         );
 }
 function R(e) {
-    if (null != g[e]) return;
+    if (null != T[e]) return;
     let t = u.A.getChannels(e)[u.I].map((e) => e.channel.id),
         n = _.Ay.getMember(e, d.default.getId())?.joinedAt;
     if (null == n) return;
-    g[e] = new Set();
+    T[e] = new Set();
     let i = new Date(n).getTime();
     0 !== t.length &&
-        ((g[e] = new Set(
+        ((T[e] = new Set(
             t.filter((t) => {
                 let n = I.default.extractTimestamp(t);
                 return (
                     null == A.Ay.getTrackedAckMessageId(t) &&
-                    n > Date.now() - f.A.Millis.WEEK &&
+                    n > Date.now() - h.A.Millis.WEEK &&
                     n > o.A.getGuildRecentsDismissedAt(e) &&
                     n > i &&
-                    !h.Ay.isChannelOrParentOptedIn(e, t)
+                    !f.Ay.isChannelOrParentOptedIn(e, t)
                 );
             }),
         )),
-        (T[e] = Date.now()));
+        (g[e] = Date.now()));
 }
 function L() {
-    I.default.keys(g).forEach((e) => {
-        let t = g[e];
-        g[e] = new Set([...t].filter((t) => !h.Ay.isChannelOrParentOptedIn(e, t)));
+    I.default.keys(T).forEach((e) => {
+        let t = T[e];
+        T[e] = new Set([...t].filter((t) => !f.Ay.isChannelOrParentOptedIn(e, t)));
     });
 }
 class y extends i.Ay.Store {
     static displayName = "NewChannelsStore";
     initialize() {
-        (this.waitFor(d.default, c.A, u.A, _.Ay, E.A, A.Ay, h.Ay, o.A), this.syncWith([h.Ay], L));
+        (this.waitFor(d.default, c.A, u.A, _.Ay, E.A, A.Ay, f.Ay, o.A), this.syncWith([f.Ay], L));
     }
     getNewChannelIds(e) {
-        null != e && null == g[e] && R(e);
-        let t = null != e ? (g[e] ?? m) : m;
+        null != e && null == T[e] && R(e);
+        let t = null != e ? (T[e] ?? m) : m;
         return (0, s.EV)() ? t : new Set([...t].filter((e) => (0, s.G3)(c.A.getChannel(e))));
     }
     shouldIndicateNewChannel(e, t) {
@@ -86,25 +86,25 @@ class y extends i.Ay.Store {
         return (
             null != n &&
             !!n.features.has(p.GuildFeatures.COMMUNITY) &&
-            (null != e && null == g[e] && R(e),
-            !!g[e]?.has(t) && !!(0, s.G3)(c.A.getChannel(t)) && null == A.Ay.getTrackedAckMessageId(t))
+            (null != e && null == T[e] && R(e),
+            !!T[e]?.has(t) && !!(0, s.G3)(c.A.getChannel(t)) && null == A.Ay.getTrackedAckMessageId(t))
         );
     }
 }
 let D = new y(r.h, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
-        if (null == g[t]) return !1;
-        (n.forEach((e) => g[t].delete(e)), 0 === g[t].size && delete g[t]);
+        if (null == T[t]) return !1;
+        (n.forEach((e) => T[t].delete(e)), 0 === T[t].size && delete T[t]);
     },
     CHANNEL_ACK: () => !0,
     CURRENT_USER_UPDATE: () => !0,
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null == t) return !1;
-        let i = g[t],
+        let i = T[t],
             r = !1;
-        return ((null == i || T[t] < Date.now() - f.A.Millis.HOUR) && (R(t), (r = !0)), null != n && O(t, n), r);
+        return ((null == i || g[t] < Date.now() - h.A.Millis.HOUR) && (R(t), (r = !0)), null != n && O(t, n), r);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
@@ -125,7 +125,7 @@ let D = new y(r.h, {
             n = N(t.id);
         if (n && !S.has(t.id)) {
             S.add(t.id);
-            let e = g[t.id],
+            let e = T[t.id],
                 n = E.A.getGuild(t.id),
                 i = new Set();
             return (
@@ -134,8 +134,8 @@ let D = new y(r.h, {
                     [n.rulesChannelId, n.publicUpdatesChannelId].forEach((t) => {
                         null != t && e.has(t) && i.add(t);
                     }),
-                (g[t.id] = i),
-                (T[t.id] = Date.now()),
+                (T[t.id] = i),
+                (g[t.id] = Date.now()),
                 !0
             );
         }
@@ -143,11 +143,11 @@ let D = new y(r.h, {
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (delete g[t.id], S.delete(t.id));
+        (delete T[t.id], S.delete(t.id));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        t.isVocal() || ((g[t.guild_id] = g[t.guild_id] ?? new Set()), g[t.guild_id].add(t.id));
+        t.isVocal() || ((T[t.guild_id] = T[t.guild_id] ?? new Set()), T[t.guild_id].add(t.id));
     },
 });
 n.d(t, {}, { A: D });

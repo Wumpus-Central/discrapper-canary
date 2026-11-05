@@ -11,8 +11,8 @@ var i = n(392421),
     _ = n(734057),
     E = n(576705),
     A = n(403362),
-    h = n(45494),
-    f = n(152007),
+    f = n(45494),
+    h = n(152007),
     I = n(858899);
 let p = {
     showError(e) {
@@ -20,8 +20,8 @@ let p = {
     },
 };
 var m = n(780057),
-    g = n(707539),
-    T = n(736130),
+    T = n(707539),
+    g = n(736130),
     S = n(652215),
     N = n(746080),
     C = n(792996);
@@ -187,7 +187,7 @@ let L = {
             null == t && (0, d.Gf)({ channelId: e.id, command: null, section: null }));
     },
     async setNotificationSettings(e, t) {
-        ((0, g.hs)(e, t), f.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")));
+        ((0, T.hs)(e, t), h.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")));
         try {
             return await r.Bo.patch({
                 url: S.Rsh.THREAD_MEMBER_SETTINGS(e.id),
@@ -202,7 +202,7 @@ let L = {
     },
     loadArchivedThreads(e) {
         let { guildId: t, channelId: n, sortOrder: i, tagFilter: s, tagSetting: l, offset: o } = e;
-        h.A.isLoading(n, i, s, l) ||
+        f.A.isLoading(n, i, s, l) ||
             (a.h.dispatch({ type: "LOAD_ARCHIVED_THREADS", channelId: n, sortOrder: i, tagFilter: s, tagSetting: l }),
             r.Bo.get({
                 url: S.Rsh.THREAD_SEARCH(n),
@@ -241,7 +241,7 @@ let L = {
                               threads: r,
                               firstMessages: u,
                               mostRecentMessages: _,
-                              members: (d ?? []).map((e) => (0, T.A)(e)),
+                              members: (d ?? []).map((e) => (0, g.A)(e)),
                               owners: r.map((e) => e.owner).filter(A.Vq),
                               hasMore: c,
                           });

@@ -12,25 +12,25 @@ function u(e) {
         _,
         E,
         A,
-        h,
-        f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    ((t = f.returnRef),
-        (n = !0 === f.disable),
-        (r = !0 === f.disableReturn),
+        f,
+        h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    ((t = h.returnRef),
+        (n = !0 === h.disable),
+        (r = !0 === h.disableReturn),
         (u = i.useRef(a?.activeElement)),
         (_ = i.useRef(null)),
         (E = i.useRef(t)),
         (A = i.useRef(n)),
-        (h = i.useRef(r)),
+        (f = i.useRef(r)),
         l(() => {
-            (null != e.current && (_.current = e.current), (E.current = t), (A.current = n), (h.current = r));
+            (null != e.current && (_.current = e.current), (E.current = t), (A.current = n), (f.current = r));
         }),
         l(() => {
             let e = null == _.current ? null : { containerElementRef: _, disabledRef: A, sequence: o++ };
             return (
                 null != e && d.add(e),
                 () => {
-                    if (!A.current && !h.current) {
+                    if (!A.current && !f.current) {
                         let t = E.current?.current ?? null;
                         if (null != (t ?? u.current)) {
                             let n = !0,
@@ -79,9 +79,9 @@ function u(e) {
                 }
             );
         }, []));
-    let I = i.useMemo(() => f.attachTo ?? e.current?.ownerDocument ?? a, [f.attachTo, e]),
+    let I = i.useMemo(() => h.attachTo ?? e.current?.ownerDocument ?? a, [h.attachTo, e]),
         p = i.useRef(null);
-    return s(f.disable ? p : e, { disable: f.disable, disableReturnRef: c, attachTo: I });
+    return s(h.disable ? p : e, { disable: h.disable, disableReturnRef: c, attachTo: I });
 }
 n.d(
     t,

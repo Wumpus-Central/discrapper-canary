@@ -14,14 +14,14 @@ function _(e) {
 }
 var E = n(47167),
     A = n(626584),
-    h = n(427930),
-    f = n(857071);
+    f = n(427930),
+    h = n(857071);
 n(250953);
 var I = n(380335),
     p = n(451909),
     m = n(465856),
-    g = n(451919),
-    T = n(143413);
+    T = n(451919),
+    g = n(143413);
 n(622794);
 var S = n(152007),
     N = n(607508),
@@ -166,7 +166,7 @@ function K(e, t, n) {
     if (t.hasFlag(j.nhx.SPAMMER) || n.isManaged() || (0, l.qR)(n)) return !1;
     let r = n.getGuildId();
     return !(
-        (null != r && f.A.isLurking(r)) ||
+        (null != r && h.A.isLurking(r)) ||
         (!i.ignoreSameUser && t.id === e.id) ||
         v.A.isBlockedOrIgnored(t.id) ||
         (!i.ignoreStatus && P.A.getStatus() === j.clD.DND) ||
@@ -206,7 +206,7 @@ function $(e, t) {
         return (
             t !== W.CP.NO_MESSAGES &&
             (t === W.CP.ALL_MESSAGES ||
-                (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
+                (0, T.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
         );
     }
     {
@@ -214,7 +214,7 @@ function $(e, t) {
         if (M.Ay.allowAllMessages(l) && t) return !0;
         let n = M.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
             i = M.Ay.isSuppressRolesEnabled(l.getGuildId());
-        return (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
+        return (0, T.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
 function X(e, t) {
@@ -264,10 +264,10 @@ function q(e) {
         (!r && _(n.id))
     );
 }
-function Z(e, t, n) {
+function Q(e, t, n) {
     return `${(0, o.az)(e)} (${(0, o.az)((0, E.m1)(t, U.default, v.A, !0))}${null != n ? `, ${(0, o.az)((0, E.m1)(n, U.default, v.A))}` : ""})`;
 }
-function Q(e, t, n, i) {
+function Z(e, t, n, i) {
     switch (e.type) {
         case j.rbe.GROUP_DM:
             return n;
@@ -307,16 +307,16 @@ function J(e, t, n) {
         case j.rbe.PRIVATE_THREAD:
             let o = y.A.getChannel(e.parent_id);
             t.type === j.lAJ.THREAD_STARTER_MESSAGE && null != o
-                ? (l = Z(l, o, y.A.getChannel(o.parent_id)))
-                : (0, T.A)(t)
-                  ? null != D.A.getGuild(e.getGuildId()) && (l = Z(l, e, o))
-                  : (l = Z(l, e, o));
+                ? (l = Q(l, o, y.A.getChannel(o.parent_id)))
+                : (0, g.A)(t)
+                  ? null != D.A.getGuild(e.getGuildId()) && (l = Q(l, e, o))
+                  : (l = Q(l, e, o));
             break;
         case j.rbe.GROUP_DM:
-            (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, v.A)) || (l = Z(l, e));
+            (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, v.A)) || (l = Q(l, e));
     }
     let d = t.content;
-    if ((0, T.A)(t) && null == (d = G.A.stringify(t, e)))
+    if ((0, g.A)(t) && null == (d = G.A.stringify(t, e)))
         throw (
             new A.A("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,
@@ -325,22 +325,22 @@ function J(e, t, n) {
         );
     let c = "sticker_items" in t ? t.sticker_items : "stickerItems" in t ? t.stickerItems : t.stickers,
         u = [];
-    if ("message_reference" in t ? (0, h.m)(t) : (0, h.A)(t)) r = Y.intl.string(Y.t["9ddYKt"]);
+    if ("message_reference" in t ? (0, f.m)(t) : (0, f.A)(t)) r = Y.intl.string(Y.t["9ddYKt"]);
     else if (null != t.activity && null != t.application)
         r =
             t.activity.type === j.xL.JOIN
-                ? Y.intl.formatToPlainString(Q(e, Y.t.E8CgCh, Y.t.c6KHWJ, Y.t.Fy7rJN), {
+                ? Y.intl.formatToPlainString(Z(e, Y.t.E8CgCh, Y.t.c6KHWJ, Y.t.Fy7rJN), {
                       user: s,
                       game: t.application.name,
                   })
                 : t.activity.type === j.xL.JOIN_REQUEST
-                  ? Y.intl.formatToPlainString(Q(e, Y.t["/TD0la"], Y.t["/TD0la"], Y.t["/TD0la"]), {
+                  ? Y.intl.formatToPlainString(Z(e, Y.t["/TD0la"], Y.t["/TD0la"], Y.t["/TD0la"]), {
                         user: s,
                         game: t.application.name,
                     })
                   : "";
     else if (null != t.activity && t.activity.type === j.xL.LISTEN) {
-        let t = Q(e, Y.t.SaDdmN, Y.t.qsODhp, Y.t.WeiMTW);
+        let t = Z(e, Y.t.SaDdmN, Y.t.qsODhp, Y.t.WeiMTW);
         r = Y.intl.formatToPlainString(t, { user: s });
     } else if (null != c && c.length > 0) r = Y.intl.formatToPlainString(Y.t.zY4v1B, { stickerName: c[0].name });
     else if (t.type === j.lAJ.PREMIUM_REFERRAL)

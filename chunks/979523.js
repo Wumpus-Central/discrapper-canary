@@ -5,8 +5,8 @@ var r = n(793943),
     a = n(476931),
     c = n(673642),
     d = n(909289),
-    u = n(875317);
-function o(t) {
+    o = n(875317);
+function u(t) {
     return s.A.getDefaultChannel(t)?.id;
 }
 n.d(
@@ -14,10 +14,10 @@ n.d(
     {},
     {
         m: function (t, e) {
-            (0, l.uh)(t, o(t));
+            (0, l.uh)(t, u(t));
             let n = i.A.getGuild(t)?.guildTheme,
                 s = n?.themeSettings ?? null,
-                b = n?.enabled === !0 && (0, u.Om)(s);
+                b = n?.enabled === !0 && (0, o.Om)(s);
             ((0, c.tA)({
                 guildId: t,
                 draft: b ? s : (0, a.Qy)(),
@@ -30,6 +30,6 @@ n.d(
                 (0, r.nf)(r.HP.GUILD_THEME_PREVIEW, { guildId: t, from: r.dJ.PERK_MODAL }),
                 e?.());
         },
-        q: o,
+        q: u,
     },
 );

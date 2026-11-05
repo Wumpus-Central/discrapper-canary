@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => R, IG: () => I, _1: () => f });
+n.d(t, { Ay: () => R, IG: () => I, _1: () => h });
 var i,
     r,
     a = n(855986),
@@ -11,8 +11,8 @@ var i,
     _ = n(617617),
     E = n(353835),
     A = n(652215),
-    h = n(381941),
-    f = (((i = {}).DEFAULT = "default"), (i.HIGH = "high"), i),
+    f = n(381941),
+    h = (((i = {}).DEFAULT = "default"), (i.HIGH = "high"), i),
     I = (((r = {}).FLEXIBLE = "flexible"), (r.CONDENSED = "condensed"), (r.HIDDEN = "hidden"), r);
 let p = {
         fontSize: A.hH7.FONT_SIZE_DEFAULT,
@@ -53,12 +53,12 @@ let p = {
         youBarAvatarDecoAnimation: "animate-never",
     },
     m = p;
-function g(e) {
+function T(e) {
     return Number.isFinite(e)
         ? Math.min(Math.max(e, 1e3 * A.hH7.TOAST_DURATION_MIN_SECONDS), 1e3 * A.hH7.TOAST_DURATION_MAX_SECONDS)
         : A.hH7.TOAST_DURATION_DEFAULT_MS;
 }
-let T = {
+let g = {
     12: "font-size-12",
     14: "font-size-14",
     15: "font-size-15",
@@ -174,8 +174,8 @@ class O extends a.Ay.DeviceSettingsStore {
     initialize(e) {
         (this.waitFor(_.A),
             isNaN((m = { ...p, ...(e ?? null) }).fontSize) && (m.fontSize = A.hH7.FONT_SIZE_DEFAULT),
-            (m.minToastDurationMs = g(m.minToastDurationMs)),
-            0 > h.qh.indexOf(null != m.messageGroupSpacing ? m.messageGroupSpacing : -1) &&
+            (m.minToastDurationMs = T(m.minToastDurationMs)),
+            0 > f.qh.indexOf(null != m.messageGroupSpacing ? m.messageGroupSpacing : -1) &&
                 (m.messageGroupSpacing = null),
             this.syncWith([_.A, d.A], N));
         let t = !1;
@@ -197,7 +197,7 @@ class O extends a.Ay.DeviceSettingsStore {
         return m.fontSize < A.hH7.FONT_SIZE_DEFAULT;
     }
     get fontScaleClass() {
-        let e = T[this.fontSize] ?? "";
+        let e = g[this.fontSize] ?? "";
         return this.isFontScaledUp
             ? `a11y-font-scaled-up ${e}`
             : this.isFontScaledDown
@@ -449,7 +449,7 @@ let R = new O(l.h, {
         m = { ...m, contrast: t };
     },
     ACCESSIBILITY_SET_MIN_TOAST_DURATION: function (e) {
-        (m = { ...m }).minToastDurationMs = g(e.minToastDurationMs);
+        (m = { ...m }).minToastDurationMs = T(e.minToastDurationMs);
     },
     ACCESSIBILITY_SET_CONTRAST_MODE: function (e) {
         let { contrastMode: t } = e;

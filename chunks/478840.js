@@ -40,7 +40,7 @@ n.d(
                                     ratio: 7,
                                     saturationFactor: n,
                                 }),
-                                g = (0, a.lZ)({
+                                h = (0, a.lZ)({
                                     foreground: l()(i),
                                     background: l()(c),
                                     ratio: 7,
@@ -54,7 +54,7 @@ n.d(
                                     opacity: u?.saturation < 0.1 ? 0.35 : 0.1,
                                 },
                                 DARK: {
-                                    accentColor: g?.hex(),
+                                    accentColor: h?.hex(),
                                     backgroundColor: (0, a.WN)({ colorRGB: m, saturationFactor: n }),
                                     highlightColor: r?.toHexString(),
                                     opacity: u?.saturation < 0.1 ? 0.5 : 0.2,

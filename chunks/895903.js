@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(855986),
     o = t(646514),
     c = t(831544),
-    d = t(834730),
-    u = t(534514),
+    u = t(834730),
+    d = t(534514),
     A = t(104171),
     h = t(47868),
     m = t(986738),
@@ -16,8 +16,8 @@ var i = t(477900),
     f = t(426660),
     p = t(576705),
     E = t(233993),
-    j = t(19844),
-    I = t(505543),
+    I = t(19844),
+    j = t(505543),
     v = t(792996),
     N = t(269341);
 function _(e) {
@@ -35,12 +35,12 @@ function _(e) {
 }
 function T(e) {
     let { channel: n } = e,
-        { participants: t, usersInSummary: l } = (0, j.A)(n.id);
+        { participants: t, usersInSummary: l } = (0, I.A)(n.id);
     return (0, i.jsxs)("div", {
         className: N.P1,
         children: [
             (0, i.jsx)(A.Ay, { className: N.Ip, guildId: n.guild_id, users: l, size: A.DN.SIZE_16 }),
-            (0, i.jsx)(d.E, {
+            (0, i.jsx)(u.E, {
                 variant: "body-sm/normal",
                 color: "text-default",
                 children: (function (e) {
@@ -68,7 +68,7 @@ t.d(
                 s = (0, r.bG)([p.A], () => p.A.can(E.QY, n), [n]),
                 o = n.guild_id,
                 { canCreateGuildEvent: c } = (0, C.nr)(n),
-                A = (0, I.A)(n.id),
+                A = (0, j.A)(n.id),
                 h = l.useRef(null);
             return (0, i.jsxs)("div", {
                 className: N.kL,
@@ -81,12 +81,12 @@ t.d(
                             (0, i.jsxs)("div", {
                                 className: N.N1,
                                 children: [
-                                    (0, i.jsx)(u.D, {
+                                    (0, i.jsx)(d.D, {
                                         className: N.__invalid_title,
                                         variant: "heading-xxl/medium",
                                         children: v.intl.string(v.t.QGnDLs),
                                     }),
-                                    (0, i.jsx)(d.E, {
+                                    (0, i.jsx)(u.E, {
                                         tag: "div",
                                         className: N.VA,
                                         variant: "heading-lg/medium",

@@ -1,7 +1,7 @@
 n(667532);
 var i = n(855986),
-    l = n(73153),
-    r = n(95701),
+    r = n(73153),
+    l = n(95701),
     s = n(734057),
     a = n(696451),
     o = n(71393);
@@ -15,11 +15,11 @@ function f(e) {
         let e = n.filter((e) => e !== t);
         return (e.unshift(t), { didChange: !0, history: e, historySet: new Set([...e]) });
     }
-    let l = [t, ...n],
-        r = new Set(i);
-    return (r.add(t), l.length > 10)
-        ? ((l.length = 10), { didChange: !0, history: l, historySet: new Set([...l]) })
-        : { didChange: !0, history: l, historySet: r };
+    let r = [t, ...n],
+        l = new Set(i);
+    return (l.add(t), r.length > 10)
+        ? ((r.length = 10), { didChange: !0, history: r, historySet: new Set([...r]) })
+        : { didChange: !0, history: r, historySet: l };
 }
 class g extends i.Ay.PersistedStore {
     static displayName = "RecentVoiceChannelStore";
@@ -50,7 +50,7 @@ class g extends i.Ay.PersistedStore {
         return c;
     }
 }
-let A = new g(l.h, {
+let A = new g(r.h, {
     POST_CONNECTION_OPEN: function () {
         ((d = new Set([...u])), (h = new Set([...c])));
     },
@@ -64,7 +64,7 @@ let A = new g(l.h, {
         let { channelId: t } = e;
         if (null == t) return !1;
         let n = s.A.getChannel(t);
-        if (null == n || n.isVocal() || n.isPrivate() || !(0, r.ke)(n.type)) return !1;
+        if (null == n || n.isVocal() || n.isPrivate() || !(0, l.ke)(n.type)) return !1;
         let i = f({ channelId: t, history: c, historySet: h });
         return ((c = i.history), (h = i.historySet), i.didChange);
     },

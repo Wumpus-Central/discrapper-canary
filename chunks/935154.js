@@ -32,10 +32,10 @@ function A(e, t) {
         .hex();
     return (0, d.a)(t ?? n) ?? void 0;
 }
-function h(e, t, n, i) {
+function f(e, t, n, i) {
     return `scale(${t}) translate(${0.5625 * e + i} ${0.75 * e + n})`;
 }
-function f(e, t, n) {
+function h(e, t, n) {
     return `${0.5625 * e + n}px ${0.75 * e + t}px`;
 }
 function I(e, t) {
@@ -80,14 +80,14 @@ n.d(
         nW: function (e) {
             let { status: t, isMobile: n = !1, isVR: r = !1, size: s = 8, className: l, style: o, color: d } = e,
                 _ = t === u.clD.ONLINE && n,
-                h = t === u.clD.ONLINE && r,
-                f = A(t, d);
+                f = t === u.clD.ONLINE && r,
+                h = A(t, d);
             return (0, i.jsx)(c.Ay, {
-                mask: I(t, { isMobile: _, isTyping: !1, isVR: h }),
+                mask: I(t, { isMobile: _, isTyping: !1, isVR: f }),
                 className: a()(E.d, l),
                 style: o,
-                ...p(s, t, { isMobile: _, isTyping: !1, isVR: h }),
-                children: (0, i.jsx)("div", { style: { backgroundColor: f }, className: E.h }),
+                ...p(s, t, { isMobile: _, isTyping: !1, isVR: f }),
+                children: (0, i.jsx)("div", { style: { backgroundColor: h }, className: E.h }),
             });
         },
         p8: I,
@@ -103,8 +103,8 @@ n.d(
                 cutoutWidth: _,
                 cutoutHeight: E,
                 cutoutRadius: A,
-                polygonScale: h,
-                polygonOrigin: f,
+                polygonScale: f,
+                polygonOrigin: h,
                 dotY: I,
                 dotX: p,
                 dotRadius: m,
@@ -117,8 +117,8 @@ n.d(
                     (0, i.jsx)(s.animated.polygon, {
                         points: `-${0.216506 * t},-${0.25 * t} ${0.216506 * t},0 -${0.216506 * t},${0.25 * t}`,
                         fill: "black",
-                        transform: h,
-                        style: { transformOrigin: f },
+                        transform: f,
+                        style: { transformOrigin: h },
                     }),
                     (0, i.jsx)(s.animated.circle, { fill: "black", cx: p, cy: I, r: m }),
                 ],
@@ -140,8 +140,8 @@ n.d(
                     cutoutWidth: 0,
                     cutoutHeight: 0,
                     cutoutRadius: 0,
-                    polygonScale: h(t, 0, l, o),
-                    polygonOrigin: f(t, l, o),
+                    polygonScale: f(t, 0, l, o),
+                    polygonOrigin: h(t, l, o),
                     dotY: 0.75 * t + l,
                     dotX: 0.5 * t + o,
                     dotRadius: 0,
@@ -160,8 +160,8 @@ n.d(
                             cutoutWidth: 0.75 * t,
                             cutoutHeight: 0.75 * t,
                             cutoutRadius: 0,
-                            polygonScale: h(t, 0, l, o),
-                            polygonOrigin: f(t, l, o),
+                            polygonScale: f(t, 0, l, o),
+                            polygonOrigin: h(t, l, o),
                             dotY: 1.25 * t,
                             dotX: 0.5 * t + o,
                             dotRadius: 0.125 * t,
@@ -177,8 +177,8 @@ n.d(
                         cutoutWidth: 0,
                         cutoutHeight: 0,
                         cutoutRadius: 0,
-                        polygonScale: h(t, 0, l, o),
-                        polygonOrigin: f(t, l, o),
+                        polygonScale: f(t, 0, l, o),
+                        polygonOrigin: h(t, l, o),
                         dotY: 0.75 * t + l,
                         dotX: 0.5 * t + o,
                         dotRadius: 0,
@@ -195,8 +195,8 @@ n.d(
                         cutoutWidth: 0.75 * t,
                         cutoutHeight: 0.75 * t,
                         cutoutRadius: 0.375 * t,
-                        polygonScale: h(t, 0, l, o),
-                        polygonOrigin: f(t, l, o),
+                        polygonScale: f(t, 0, l, o),
+                        polygonOrigin: h(t, l, o),
                         dotY: 0.75 * t + l,
                         dotX: 0.5 * t + o,
                         dotRadius: 0,
@@ -213,8 +213,8 @@ n.d(
                         cutoutWidth: 0.75 * t,
                         cutoutHeight: 0.25 * t,
                         cutoutRadius: 0.125 * t,
-                        polygonScale: h(t, 0, l, o),
-                        polygonOrigin: f(t, l, o),
+                        polygonScale: f(t, 0, l, o),
+                        polygonOrigin: h(t, l, o),
                         dotY: 0.75 * t + l,
                         dotX: 0.5 * t + o,
                         dotRadius: 0,
@@ -231,8 +231,8 @@ n.d(
                         cutoutWidth: 0,
                         cutoutHeight: 0,
                         cutoutRadius: 0.25 * t,
-                        polygonScale: h(t, 1, l, o),
-                        polygonOrigin: f(t, l, o),
+                        polygonScale: f(t, 1, l, o),
+                        polygonOrigin: h(t, l, o),
                         dotY: 0.75 * t + l,
                         dotX: 0.5 * t + o,
                         dotRadius: 0,
@@ -252,8 +252,8 @@ n.d(
                         cutoutWidth: 0.5 * t,
                         cutoutHeight: 0.5 * t,
                         cutoutRadius: 0.25 * t,
-                        polygonScale: h(t, 0, l, o),
-                        polygonOrigin: f(t, l, o),
+                        polygonScale: f(t, 0, l, o),
+                        polygonOrigin: h(t, l, o),
                         dotY: 0.75 * t + l,
                         dotX: 0.5 * t + o,
                         dotRadius: 0,

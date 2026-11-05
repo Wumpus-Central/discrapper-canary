@@ -1,22 +1,22 @@
-var s = e(73153);
-e.d(
+var n = s(73153);
+s.d(
     t,
     {},
     {
-        AU: function (a, t, e, l, i) {
-            s.h.dispatch({ type: "SPEAK_TEXT", text: a, interrupt: t, maxLength: e, onStart: l, onEnd: i });
+        AU: function (e, t, s, a, i) {
+            n.h.dispatch({ type: "SPEAK_TEXT", text: e, interrupt: t, maxLength: s, onStart: a, onEnd: i });
         },
-        kC: function (a, t) {
-            s.h.dispatch({ type: "SPEAKING_MESSAGE", channelId: a, messageId: t });
+        kC: function (e, t) {
+            n.h.dispatch({ type: "SPEAKING_MESSAGE", channelId: e, messageId: t });
         },
-        kP: function (a, t) {
-            s.h.dispatch({ type: "SPEAK_MESSAGE", channel: a, message: t });
+        kP: function (e, t) {
+            n.h.dispatch({ type: "SPEAK_MESSAGE", channel: e, message: t });
         },
         pr: function () {
-            s.h.dispatch({ type: "STOP_SPEAKING" });
+            n.h.dispatch({ type: "STOP_SPEAKING" });
         },
-        zU: function (a) {
-            s.h.dispatch({ type: "SET_TTS_SPEECH_RATE", speechRate: a });
+        zU: function (e) {
+            n.h.dispatch({ type: "SET_TTS_SPEECH_RATE", speechRate: e });
         },
     },
 );

@@ -1,4 +1,4 @@
-(n.d(t, { t6: () => eE, Zg: () => e_, ew: () => eu, v0: () => ea, Ay: () => eh, X8: () => eo }), n(801541));
+(n.d(t, { t6: () => eE, Zg: () => e_, ew: () => eu, v0: () => ea, Ay: () => ef, X8: () => eo }), n(801541));
 var i,
     r = n(477900),
     a = n(582128),
@@ -11,13 +11,13 @@ var i,
     _ = n(534514),
     E = n(604121),
     A = n(140735),
-    h = n(331322),
-    f = n(817281),
+    f = n(331322),
+    h = n(817281),
     I = n(775602),
     p = n(793574),
     m = n(688810),
-    g = n(793943),
-    T = n(915089),
+    T = n(793943),
+    g = n(915089),
     S = n(87719),
     N = n(77528),
     C = n(811611),
@@ -81,7 +81,7 @@ function q() {
         ],
     });
 }
-function Z(e) {
+function Q(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = D.eh.useSetting().customUserThemeSettings,
@@ -104,13 +104,13 @@ function Z(e) {
             }),
         E = (0, V.HX)(G.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         A = (0, B.Ay)(),
-        h = (0, k.M)(A) ? z.Xu : z.VO,
-        f = null != c && null != c.colors && c.colors.length > 0,
+        f = (0, k.M)(A) ? z.Xu : z.VO,
+        h = null != c && null != c.colors && c.colors.length > 0,
         I = (0, d.bG)([H.A], () => H.A.getSavedCustomTheme()),
-        p = f || null != I,
+        p = h || null != I,
         m = a.useMemo(() => {
             let e, t;
-            if (f) ((e = c.colors), (t = c.gradientAngle));
+            if (h) ((e = c.colors), (t = c.gradientAngle));
             else {
                 if (null === I) return;
                 ((e = I.colors), (t = I.gradient_angle));
@@ -120,21 +120,21 @@ function Z(e) {
                 e.length > 1 && (n = `linear-gradient(${t}deg, ${e.join(", ")})`),
                 { background: `var(--background-gradient), ${n}` }
             );
-        }, [f, c, I]),
-        g = p ? x.A.unsafe_rawColors.WHITE.css : void 0,
-        T = a.useCallback(() => {
+        }, [h, c, I]),
+        T = p ? x.A.unsafe_rawColors.WHITE.css : void 0,
+        g = a.useCallback(() => {
             (u && _(), i?.());
         }, [u, _, i]);
     return (0, r.jsxs)("div", {
         className: z.fC,
         children: [
             (0, r.jsxs)(j.S4, {
-                onSelect: n ? void 0 : T,
+                onSelect: n ? void 0 : g,
                 isSelected: !1,
-                showSelectionCircle: f,
+                showSelectionCircle: h,
                 size: s,
                 name: X.intl.string($.default.KSBBpC),
-                className: l()(z.kL, p && h, n && z.r9),
+                className: l()(z.kL, p && f, n && z.r9),
                 tabIndex: 0,
                 showBadge: !1,
                 showLockedBadge: !1,
@@ -143,14 +143,14 @@ function Z(e) {
                 children: [
                     !E && !p && (0, r.jsx)(q, {}),
                     (0, r.jsx)("div", { className: z.JU }),
-                    (0, r.jsx)(w.PaintPaletteIcon, { color: g, className: z.vL }),
+                    (0, r.jsx)(w.PaintPaletteIcon, { color: T, className: z.vL }),
                 ],
             }),
             u && (0, r.jsx)("div", { className: z.Ad, children: (0, r.jsx)(F.E, { type: "new", variant: "primary" }) }),
         ],
     });
 }
-var Q = n(385803),
+var Z = n(385803),
     J = n(652215),
     ee = n(682901),
     et = n(185928),
@@ -245,11 +245,11 @@ function e_(e) {
         { type: s, delay: l } = a.useContext(el),
         { analyticsLocations: o } = (0, m.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
         [u, _] = (0, d.yK)([M.A], () => [M.A.isPreview, M.A.gradientPreset?.id]),
-        [h, S] = a.useState(!1),
+        [f, S] = a.useState(!1),
         [N, C] = a.useState(-1),
         O = (0, d.bG)([I.Ay], () => I.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        y = (0, T.GV)(),
+        y = (0, g.GV)(),
         D = L && u ? y : void 0,
         v = L ? y : void 0;
     function w(e, t) {
@@ -258,36 +258,36 @@ function e_(e) {
             ((0, P.bc)(e.id),
             eo({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, g.nf)(g.HP.CLIENT_THEMES), (0, b.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, T.nf)(T.HP.CLIENT_THEMES), (0, b.default)())
                 : u
                   ? (0, R.GQ)(e.theme)
-                  : (0, f.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
+                  : (0, h.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
             L && (0, U.cO)(),
             null != t)
         ) {
-            if ((h && S(!1), t <= N || 0 === t)) return void C(0);
+            if ((f && S(!1), t <= N || 0 === t)) return void C(0);
             C((e) => e + 1);
         }
     }
     return (
         a.useEffect(() => {
-            ((N === Q.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
+            ((N === Z.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 L && (0, r.jsx)(A.A, { id: y, children: X.intl.string(X.t.JIZSqz) }),
-                (0, r.jsx)(Z, {
+                (0, r.jsx)(Q, {
                     size: i,
                     isDisabled: t,
                     ariaDescribedBy: v,
                     onSelect: () => {
-                        ((0, g.nf)(g.HP.CUSTOM_THEME, {
-                            from: "SETTINGS" === s ? g.xv.SETTING : g.xv.CLIENT_THEMES_EDITOR,
+                        ((0, T.nf)(T.HP.CUSTOM_THEME, {
+                            from: "SETTINGS" === s ? T.xv.SETTING : T.xv.CLIENT_THEMES_EDITOR,
                         }),
                             "SETTINGS" === s && (0, b.default)());
                     },
                 }),
-                Q.Jm.filter(Q.Qm).map((e, n) =>
+                Z.Jm.filter(Z.Qm).map((e, n) =>
                     (0, r.jsx)(
                         j.MX,
                         {
@@ -305,8 +305,8 @@ function e_(e) {
                     ),
                 ),
                 (function () {
-                    if (!h) return null;
-                    let e = Q.ag[c.ju.EASTER_EGG];
+                    if (!f) return null;
+                    let e = Z.ag[c.ju.EASTER_EGG];
                     return null == e
                         ? null
                         : (0, r.jsxs)("div", {
@@ -346,7 +346,7 @@ function eE(e) {
     function E(e) {
         ((0, P.Py)(),
             eo({ isPersisted: !0, analyticsLocations: o, themeName: `default ${e}` }),
-            (0, f.u_)({ theme: e }, l),
+            (0, h.u_)({ theme: e }, l),
             "SETTINGS" === s && (0, U.cO)());
     }
     let A = !i && !0 === n;
@@ -367,7 +367,7 @@ function eE(e) {
                 onSelect: () => E(ei.NJ.LIGHT),
                 tabIndex: A ? void 0 : 0,
             }),
-            Q.f5.map((e) =>
+            Z.f5.map((e) =>
                 (0, r.jsx)(j.zy, { size: t, theme: e, isSelected: u && !_ && c === e, onSelect: () => E(e) }, e),
             ),
             !i && !n && (0, r.jsx)(j.zy, { size: t, theme: "system", isSelected: u && _, onSelect: () => E("system") }),
@@ -376,7 +376,7 @@ function eE(e) {
 }
 function eA(e) {
     let { type: t, children: n } = e,
-        i = (0, T.GV)(),
+        i = (0, g.GV)(),
         { ref: s, ...l } = (0, u._u)({ orientation: "horizontal", labelledBy: i }),
         o = a.useMemo(() => ({ type: t, delay: es[t] }), [t]);
     return (0, r.jsx)(el.Provider, {
@@ -388,7 +388,7 @@ function eA(e) {
     let { className: t, hideSystemSelector: n, iconSize: i } = e;
     return (0, r.jsx)("section", {
         className: t,
-        children: (0, r.jsx)(h.B, {
+        children: (0, r.jsx)(f.B, {
             direction: "horizontal",
             wrap: !0,
             gap: 8,
@@ -403,7 +403,7 @@ function eA(e) {
             className: t,
             children: [
                 (0, r.jsx)(eu, { renderCTAButtons: n, isCoachmark: a }),
-                (0, r.jsx)(h.B, {
+                (0, r.jsx)(f.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
@@ -426,7 +426,7 @@ function eA(e) {
                         variant: "heading-xs/semibold",
                         children: X.intl.string(X.t.POSLGY),
                     }),
-                (0, r.jsxs)(h.B, {
+                (0, r.jsxs)(f.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
@@ -440,4 +440,4 @@ function eA(e) {
             ],
         });
     }));
-let eh = eA;
+let ef = eA;

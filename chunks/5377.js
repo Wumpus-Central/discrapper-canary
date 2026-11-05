@@ -5,11 +5,11 @@ n.d(t, {
     i$: () => N,
     Tf: () => b,
     m_: () => m,
-    c_: () => g,
+    c_: () => T,
     Xm: () => w,
     P6: () => U,
     N5: () => M,
-    ro: () => T,
+    ro: () => g,
     v0: () => S,
     uN: () => v,
 });
@@ -46,8 +46,8 @@ function E(e, t) {
 function A(e, t, n) {
     return e < 12 ? (n ? "am" : "AM") : n ? "pm" : "PM";
 }
-let h = new (n(626584).A)("DateUtils"),
-    f = Object.create(null);
+let f = new (n(626584).A)("DateUtils"),
+    h = Object.create(null);
 function I() {
     let e = d.PZ.getSetting(),
         t = e !== a.PZ.AUTO;
@@ -66,7 +66,7 @@ function p(e) {
     "string" == typeof e ||
         "number" == typeof e ||
         e instanceof Date ||
-        (h.error("Invalid date given to startOfDay", { d: e }), (n = new Date()));
+        (f.error("Invalid date given to startOfDay", { d: e }), (n = new Date()));
     let i = new Date(n),
         r = i.getTime();
     return (t || (r -= 6e4 * i.getTimezoneOffset()), 864e5 * Math.floor(r / 864e5));
@@ -74,10 +74,10 @@ function p(e) {
 function m(e, t) {
     return Math.floor((p(e, !1) - p(t, !1)) / 864e5);
 }
-function g(e, t) {
+function T(e, t) {
     return (e.getTime() - t.getTime()) / 864e5;
 }
-function T(e, t) {
+function g(e, t) {
     return 864e5 >= Math.abs(e - t) && e.getDate() === t.getDate();
 }
 function S(e, t, n) {
@@ -86,10 +86,10 @@ function S(e, t, n) {
 function N(e, t, n) {
     let i = R(e).locale(),
         s = `${i}:${t}:${n ?? d.PZ.getSetting()}`,
-        l = f[s];
+        l = h[s];
     return (
         null == l &&
-            (l = f[s] =
+            (l = h[s] =
                 (function (e, t) {
                     var n;
                     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -131,7 +131,7 @@ function N(e, t, n) {
                             return e;
                         }));
                     let l = [],
-                        h = {
+                        f = {
                             month: !1,
                             dayOfYear: !1,
                             date: !1,
@@ -145,200 +145,200 @@ function N(e, t, n) {
                             millis: !1,
                             offset: !1,
                         },
-                        f = e;
+                        h = e;
                     function I(e) {
                         l.push("(" + e + ")");
                     }
                     function p(e) {
-                        f = f.slice(e);
+                        h = h.slice(e);
                     }
-                    for (; f.length > 0;) {
-                        switch (f.charAt(0)) {
+                    for (; h.length > 0;) {
+                        switch (h.charAt(0)) {
                             case "M":
-                                if (((h.month = !0), /^MMMM/.test(f))) {
+                                if (((f.month = !0), /^MMMM/.test(h))) {
                                     (I(`localeData.months(_month, "${e}")`), p(4));
                                     continue;
                                 }
-                                if (/^MMM/.test(f)) {
+                                if (/^MMM/.test(h)) {
                                     (I(`localeData.monthsShort(_month, "${e}")`), p(3));
                                     continue;
                                 }
-                                if (/^MM/.test(f)) {
+                                if (/^MM/.test(h)) {
                                     (I('_month+1 < 10 ? "0" : ""'), I("_month+1"), p(2));
                                     continue;
                                 }
-                                if (/^Mo/.test(f)) {
+                                if (/^Mo/.test(h)) {
                                     (I('localeData.ordinal(_month, "M")'), p(2));
                                     continue;
                                 }
                                 (I("_month + 1"), p(1));
                                 continue;
                             case "Q":
-                                if (((h.month = !0), /^Qo/.test(f))) {
+                                if (((f.month = !0), /^Qo/.test(h))) {
                                     (I('localeData.ordinal((_month + 1) / 3, "Q")'), p(2));
                                     continue;
                                 }
                                 (I("Math.ceil((_month + 1) / 3)"), p(1));
                                 continue;
                             case "D":
-                                if (/^DDD/.test(f)) {
-                                    if (((h.dayOfYear = !0), /^DDDD/.test(f))) {
+                                if (/^DDD/.test(h)) {
+                                    if (((f.dayOfYear = !0), /^DDDD/.test(h))) {
                                         (I('_doy < 100 ? "0" : ""'), I('_doy < 10 ? "0" : ""'), I("_doy"), p(4));
                                         continue;
                                     }
-                                    if (/^DDDo/.test(f)) {
+                                    if (/^DDDo/.test(h)) {
                                         (I('localeData.ordinal(_doy, "DDD")'), p(4));
                                         continue;
                                     }
                                     (I("_doy"), p(3));
                                     continue;
                                 }
-                                if (((h.date = !0), /^DD/.test(f))) {
+                                if (((f.date = !0), /^DD/.test(h))) {
                                     (I('_date < 10 ? "0" : ""'), I("_date"), p(2));
                                     continue;
                                 }
-                                if (/^Do/.test(f)) {
+                                if (/^Do/.test(h)) {
                                     (I('localeData.ordinal(_date, "D")'), p(2));
                                     continue;
                                 }
                                 (I("_date"), p(1));
                                 continue;
                             case "d":
-                                if (((h.day = !0), /^dddd/.test(f))) {
+                                if (((f.day = !0), /^dddd/.test(h))) {
                                     (I(`localeData.weekdays(_day, "${e}")`), p(4));
                                     continue;
                                 }
-                                if (/^ddd/.test(f)) {
+                                if (/^ddd/.test(h)) {
                                     (I(`localeData.weekdaysShort(_day, "${e}")`), p(3));
                                     continue;
                                 }
-                                if (/^dd/.test(f)) {
+                                if (/^dd/.test(h)) {
                                     (I(`localeData.weekdaysMin(_day, "${e}")`), p(2));
                                     continue;
                                 }
-                                if (/^do/.test(f)) {
+                                if (/^do/.test(h)) {
                                     (I('localeData.ordinal(_day, "d")'), p(2));
                                     continue;
                                 }
                                 (I("_day"), p(1));
                                 continue;
                             case "e":
-                                ((h.day = !0), I("(_day + 7 - " + +s.week.dow + ") % 7"), p(1));
+                                ((f.day = !0), I("(_day + 7 - " + +s.week.dow + ") % 7"), p(1));
                                 continue;
                             case "E":
-                                ((h.day = !0), I("_day === 0 ? 7 : _day"), p(1));
+                                ((f.day = !0), I("_day === 0 ? 7 : _day"), p(1));
                                 continue;
                             case "w":
-                                if (((h.week = !0), /^ww/.test(f))) {
+                                if (((f.week = !0), /^ww/.test(h))) {
                                     (I('_week < 10 ? "0" : ""'), I("_week"), p(2));
                                     continue;
                                 }
-                                if (/^wo/.test(f)) {
+                                if (/^wo/.test(h)) {
                                     (I('localeData.ordinal(_week, "w")'), p(2));
                                     continue;
                                 }
                                 (I("_week"), p(1));
                                 continue;
                             case "W":
-                                if (((h.isoweek = !0), /^WW/.test(f))) {
+                                if (((f.isoweek = !0), /^WW/.test(h))) {
                                     (I('_i_week < 10 ? "0" : ""'), I("_i_week"), p(2));
                                     continue;
                                 }
-                                if (/^Wo/.test(f)) {
+                                if (/^Wo/.test(h)) {
                                     (I('localeData.ordinal(_i_week, "W")'), p(2));
                                     continue;
                                 }
                                 (I("_i_week"), p(1));
                                 continue;
                             case "Y":
-                                if (((h.year = !0), /^YYYY/.test(f))) {
+                                if (((f.year = !0), /^YYYY/.test(h))) {
                                     (I("_year"), p(4));
                                     continue;
                                 }
-                                if (/^YY/.test(f)) {
+                                if (/^YY/.test(h)) {
                                     (I('(_year % 100) < 10 ? "0" : ""'), I("_year % 100"), p(2));
                                     continue;
                                 }
                                 (I('_year < 9999 ? _year : "+" + _year'), p(1));
                                 continue;
                             case "g":
-                                if (((h.week = !0), /^gggg/.test(f))) {
+                                if (((f.week = !0), /^gggg/.test(h))) {
                                     (I("_weekYear"), p(4));
                                     continue;
                                 }
-                                if (/^gg/.test(f)) {
+                                if (/^gg/.test(h)) {
                                     (I('(_weekYear % 100) < 10 ? "0" : ""'), I("_weekYear % 100"), p(2));
                                     continue;
                                 }
                                 break;
                             case "G":
-                                if (((h.isoweek = !0), /^GGGG/.test(f))) {
+                                if (((f.isoweek = !0), /^GGGG/.test(h))) {
                                     (I("_i_weekYear"), p(4));
                                     continue;
                                 }
-                                if (/^GG/.test(f)) {
+                                if (/^GG/.test(h)) {
                                     (I('(_i_weekYear % 100) < 10 ? "0" : ""'), I("_i_weekYear % 100"), p(2));
                                     continue;
                                 }
                                 break;
                             case "A":
-                                ((h.hour = !0), (h.minutes = !0), I("localeData.meridiem(_hour, _mins, false)"), p(1));
+                                ((f.hour = !0), (f.minutes = !0), I("localeData.meridiem(_hour, _mins, false)"), p(1));
                                 continue;
                             case "a":
-                                ((h.hour = !0), (h.minutes = !0), I("localeData.meridiem(_hour, _mins, true)"), p(1));
+                                ((f.hour = !0), (f.minutes = !0), I("localeData.meridiem(_hour, _mins, true)"), p(1));
                                 continue;
                             case "H":
-                                if (((h.hour = !0), /^HH/.test(f))) {
+                                if (((f.hour = !0), /^HH/.test(h))) {
                                     (I('_hour < 10 ? "0" : ""'), I("_hour"), p(2));
                                     continue;
                                 }
                                 (I("_hour"), p(1));
                                 continue;
                             case "h":
-                                if (((h.hour = !0), /^hh/.test(f))) {
+                                if (((f.hour = !0), /^hh/.test(h))) {
                                     (I('((_hour+11) % 12) < 9 ? "0" : ""'), I("((_hour+11) % 12) + 1"), p(2));
                                     continue;
                                 }
                                 (I("((_hour+11) % 12) + 1"), p(1));
                                 continue;
                             case "k":
-                                if (((h.hour = !0), /^kk/.test(f))) {
+                                if (((f.hour = !0), /^kk/.test(h))) {
                                     (I('_hour > 0 && _hour < 10 ? "0" : ""'), I('_hour === 0 ? "24" : _hour'), p(2));
                                     continue;
                                 }
                                 (I('_hour === 0 ? "24" : _hour'), p(1));
                                 continue;
                             case "m":
-                                if (((h.minutes = !0), /^mm/.test(f))) {
+                                if (((f.minutes = !0), /^mm/.test(h))) {
                                     (I('_mins < 10 ? "0" : ""'), I("_mins"), p(2));
                                     continue;
                                 }
                                 (I("_mins"), p(1));
                                 continue;
                             case "s":
-                                if (((h.seconds = !0), /^ss/.test(f))) {
+                                if (((f.seconds = !0), /^ss/.test(h))) {
                                     (I('_secs < 10 ? "0" : ""'), I("_secs"), p(2));
                                     continue;
                                 }
                                 (I("_secs"), p(1));
                                 continue;
                             case "S":
-                                if (((h.millis = !0), /^SSS/.test(f))) {
+                                if (((f.millis = !0), /^SSS/.test(h))) {
                                     (I('_ms < 100 ? "0" : ""'), I('_ms < 10 ? "0" : ""'), I("_ms"));
-                                    let e = /^S{3,9}/.exec(f);
+                                    let e = /^S{3,9}/.exec(h);
                                     if (null == e) throw Error("ms len regex failed");
                                     let t = e[0].length;
                                     (t > 3 && I(`"${Array(t - 2).join("0")}"`), p(t));
                                     continue;
                                 }
-                                if (/^SS/.test(f)) {
+                                if (/^SS/.test(h)) {
                                     (I('_ms < 100 ? "0" : ""'), I("Math.floor(_ms/10)"), p(2));
                                     continue;
                                 }
                                 (I("Math.floor(_ms / 100)"), p(1));
                                 continue;
                             case "Z":
-                                if (((h.offset = !0), /^ZZ/.test(f))) {
+                                if (((f.offset = !0), /^ZZ/.test(h))) {
                                     (I('_offs >= 0 ? "+" : "-"'),
                                         I('_offH < 10 ? "0" : ""'),
                                         I("_offH"),
@@ -362,7 +362,7 @@ function N(e, t, n) {
                                 (I("d.valueOf()"), p(1));
                                 continue;
                             case "L":
-                                let t = /^L(?:TS?|L*(?: LTS?)?)/.exec(f)?.[0] ?? "L";
+                                let t = /^L(?:TS?|L*(?: LTS?)?)/.exec(h)?.[0] ?? "L";
                                 (s.longFormatters.push(
                                     (function (e) {
                                         let t, n, i, r;
@@ -420,38 +420,38 @@ function N(e, t, n) {
                                     p(t.length));
                                 continue;
                             case "[":
-                                let n = f.indexOf("]");
+                                let n = h.indexOf("]");
                                 if (-1 === n) {
                                     (I('"["'), p(1));
                                     continue;
                                 }
-                                (I(JSON.stringify(f.slice(1, n))), p(n + 1));
+                                (I(JSON.stringify(h.slice(1, n))), p(n + 1));
                                 continue;
                         }
-                        (I(JSON.stringify(f.charAt(0))), p(1));
+                        (I(JSON.stringify(h.charAt(0))), p(1));
                     }
                     let m = "";
-                    (h.date && (m += "var _date = d.get" + (i ? "UTC" : "") + "Date();\n"),
-                        h.month && (m += "var _month = d.get" + (i ? "UTC" : "") + "Month();\n"),
-                        h.dayOfYear &&
+                    (f.date && (m += "var _date = d.get" + (i ? "UTC" : "") + "Date();\n"),
+                        f.month && (m += "var _month = d.get" + (i ? "UTC" : "") + "Month();\n"),
+                        f.dayOfYear &&
                             (m +=
                                 "var _startOfYear = new Date(d.valueOf());\n_startOfYear.set" +
                                 (i ? "UTC" : "") +
                                 "Month(0);\n_startOfYear.set" +
                                 (i ? "UTC" : "") +
                                 "Date(1);\nvar _doy = Math.round((d - _startOfYear) / 864e5) + 1;\n"),
-                        h.day && (m += "var _day = d.get" + (i ? "UTC" : "") + "Day();\n"),
-                        h.year && (m += "var _year = d.get" + (i ? "UTC" : "") + "FullYear();\n"),
-                        h.hour && (m += "var _hour = d.get" + (i ? "UTC" : "") + "Hours();\n"),
-                        h.minutes && (m += "var _mins = d.get" + (i ? "UTC" : "") + "Minutes();\n"),
-                        h.seconds && (m += "var _secs = d.get" + (i ? "UTC" : "") + "Seconds();\n"),
-                        h.millis && (m += "var _ms = d.get" + (i ? "UTC" : "") + "Milliseconds();\n"),
-                        h.offset &&
+                        f.day && (m += "var _day = d.get" + (i ? "UTC" : "") + "Day();\n"),
+                        f.year && (m += "var _year = d.get" + (i ? "UTC" : "") + "FullYear();\n"),
+                        f.hour && (m += "var _hour = d.get" + (i ? "UTC" : "") + "Hours();\n"),
+                        f.minutes && (m += "var _mins = d.get" + (i ? "UTC" : "") + "Minutes();\n"),
+                        f.seconds && (m += "var _secs = d.get" + (i ? "UTC" : "") + "Seconds();\n"),
+                        f.millis && (m += "var _ms = d.get" + (i ? "UTC" : "") + "Milliseconds();\n"),
+                        f.offset &&
                             (i
                                 ? (m += "var _offs = 0, _absOffs = 0, _offH = 0, _offM = 0;")
                                 : (m +=
                                       "var _offs = -d.getTimezoneOffset();\nvar _absOffs = _offs < 0 ? -_offs : _offs;\nvar _offH = Math.floor(_absOffs / 60);\nvar _offM = _absOffs % 60;\n")),
-                        h.week &&
+                        f.week &&
                             (m +=
                                 "var _wend = " +
                                 (s.week.doy - s.week.dow) +
@@ -470,7 +470,7 @@ function N(e, t, n) {
                                 "Date(1);\nvar _doy2 = Math.round((_d2 - _soy2) / 864e5) + 1;\nvar _week = Math.ceil(_doy2 / 7);\nvar _weekYear = _d2.get" +
                                 (i ? "UTC" : "") +
                                 "FullYear();\n"),
-                        h.isoweek &&
+                        f.isoweek &&
                             (m +=
                                 "var _i_wend = 3;\nvar _i_ddw = 4 - d.get" +
                                 (i ? "UTC" : "") +
@@ -485,7 +485,7 @@ function N(e, t, n) {
                                 "Date(1);\nvar _i_doy2 = Math.round((_i_d2 - _i_soy2) / 864e5) + 1;\nvar _i_week = Math.ceil(_i_doy2 / 7);\nvar _i_weekYear = _i_d2.get" +
                                 (i ? "UTC" : "") +
                                 "FullYear();\n"));
-                    let g = Function(
+                    let T = Function(
                         "d",
                         "localeData",
                         (m += `return (
@@ -493,7 +493,7 @@ function N(e, t, n) {
 ${l.join(" +\n")}
 );`),
                     );
-                    return (e) => g(e, s);
+                    return (e) => T(e, s);
                 })(t)),
         l(L(e))
     );
@@ -542,7 +542,7 @@ function y(e) {
         : N(e, n.calendar(t, r()(e), r()(i)));
 }
 (c.default.addChangeListener(function () {
-    f = Object.create(null);
+    h = Object.create(null);
 }),
     s.h.subscribe("USER_SETTINGS_PROTO_UPDATE", I),
     s.h.subscribe("CONNECTION_OPEN", I));

@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => Z });
+n.d(t, { A: () => Q });
 var r = n(506774),
     a = n(73153),
     s = n(157559),
@@ -12,13 +12,13 @@ var u = n(343328),
     _ = n(626584),
     E = n(225123),
     A = n(334465),
-    h = n(976860),
-    f = n(940382),
+    f = n(976860),
+    h = n(940382),
     I = n(95701),
     p = n(799704),
     m = n(734057),
-    g = n(71393),
-    T = n(218461),
+    T = n(71393),
+    g = n(218461),
     S = n(309010),
     N = n(967198),
     C = n(927813),
@@ -38,8 +38,8 @@ function P(e) {
         isPreload: d,
         jumpType: _,
         skipLocalFetch: A,
-        avoidInitialScroll: h,
-        fetchKey: f,
+        avoidInitialScroll: f,
+        fetchKey: h,
         useNativeMessagePrefetch: I,
     } = e;
     if (null == n || (0, y.jq)(n)) return;
@@ -58,9 +58,9 @@ function P(e) {
         (!d || E.A.isConnected() || N.loadingMore
             ? N.loadingMore || (N.ready && !N.cached)
                 ? null != a && (C = !0)
-                : (null == t || null != g.A.getGuild(t)) && (C = !0)
+                : (null == t || null != T.A.getGuild(t)) && (C = !0)
             : (C = !0),
-        (0, u.A)(n) && T.Ay.hasUnread(n) && (C = !0),
+        (0, u.A)(n) && g.Ay.hasUnread(n) && (C = !0),
         C)
     )
         if ((c.A.commit(N.mutate({ loadingMore: !0 })), null != a))
@@ -71,13 +71,13 @@ function P(e) {
                 isPreload: d,
                 skipLocalFetch: A,
                 jumpType: _,
-                avoidInitialScroll: h,
+                avoidInitialScroll: f,
                 nitroPrefetchKey: p,
             });
         else if (
             S?.isThread() &&
             (function (e) {
-                if (T.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
+                if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
                 i[e] = Date.now();
                 let t = Date.now() - M;
                 for (let e in i) i[e] < t && delete i[e];
@@ -92,12 +92,12 @@ function P(e) {
                     jump: { messageId: n, flash: !1 },
                     isPreload: d,
                     skipLocalFetch: A,
-                    avoidInitialScroll: h,
-                    fetchKey: f,
+                    avoidInitialScroll: f,
+                    fetchKey: h,
                 })
             );
-        else if (S?.isThread() && T.Ay.hasTrackedUnread(S.id) && !N.ready) {
-            let e = T.Ay.getTrackedAckMessageId(S.id);
+        else if (S?.isThread() && g.Ay.hasTrackedUnread(S.id) && !N.ready) {
+            let e = g.Ay.getTrackedAckMessageId(S.id);
             return (
                 v.log(`Jumping to most recent message in thread ${S.id} - ${e}`),
                 l.A.fetchMessages({
@@ -106,8 +106,8 @@ function P(e) {
                     jump: { messageId: e, flash: !1, offset: 1 },
                     isPreload: d,
                     skipLocalFetch: A,
-                    avoidInitialScroll: h,
-                    fetchKey: f,
+                    avoidInitialScroll: f,
+                    fetchKey: h,
                 })
             );
         } else {
@@ -118,8 +118,8 @@ function P(e) {
                 isPreload: d,
                 skipLocalFetch: A,
                 jump: { jumpType: o.vx.ANIMATED },
-                avoidInitialScroll: h,
-                fetchKey: f,
+                avoidInitialScroll: f,
+                fetchKey: h,
                 nitroPrefetchKey: p,
             });
         }
@@ -127,7 +127,7 @@ function P(e) {
 let M = 90 * C.A.Millis.DAY,
     U = "viewedThreadIds";
 function w(e) {
-    let t = (0, A.B)((0, h.JK)().location.pathname, {
+    let t = (0, A.B)((0, f.JK)().location.pathname, {
         path: L.BVt.CHANNEL(":guild", ":channel", ":message"),
         exact: !0,
     });
@@ -174,7 +174,7 @@ function H() {
         t = N.A.getGuildId();
     if (null == t || null == e) return;
     let n = p.Ay.getSidebarState(e);
-    (n?.type !== f.PE.VIEW_CHANNEL || n.channelId !== e) && V(t, e);
+    (n?.type !== h.PE.VIEW_CHANNEL || n.channelId !== e) && V(t, e);
 }
 function j(e) {
     let { guildId: t, channelId: n, context: i } = e;
@@ -257,4 +257,4 @@ class q extends d.A {
         a.h.unsubscribe("CONNECTION_OPEN", G);
     }
 }
-let Z = new q();
+let Q = new q();

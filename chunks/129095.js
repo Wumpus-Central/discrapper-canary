@@ -11,19 +11,19 @@ var i = n(778858),
     _ = n(576705),
     E = n(309010),
     A = n(993838),
-    h = n(233993),
-    f = n(73153),
+    f = n(233993),
+    h = n(73153),
     I = n(272355),
     p = n(967198),
     m = n(403362);
-class g extends I.A {
+class T extends I.A {
     _initialize() {
-        (f.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            f.h.subscribe("LOGOUT", this.handleLogout));
+        (h.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            h.h.subscribe("LOGOUT", this.handleLogout));
     }
     _terminate() {
-        (f.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            f.h.unsubscribe("LOGOUT", this.handleLogout));
+        (h.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            h.h.unsubscribe("LOGOUT", this.handleLogout));
     }
     handleVoiceChannelSelect = (e) => {
         let { channelId: t, guildId: n } = e;
@@ -41,7 +41,7 @@ class g extends I.A {
         (this.terminate(), this.handleDisconnectFromStageChannel(null));
     };
 }
-let T = new g();
+let g = new T();
 async function S(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -55,14 +55,14 @@ async function S(e, t) {
             return null == t || (e(t), !1);
         });
     }));
-    return (N(s), T.initialize(), s);
+    return (N(s), g.initialize(), s);
 }
 function N(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = E.Ay.getVoiceChannelId();
     if (
-        (!n && ((t = i), !_.A.can(h.Gk, e) || (A.j6(e.id) && t !== e.id && (A.W0(e, () => C(e, !0)), 1)))) ||
+        (!n && ((t = i), !_.A.can(f.Gk, e) || (A.j6(e.id) && t !== e.id && (A.W0(e, () => C(e, !0)), 1)))) ||
         (r.default.selectVoiceChannel(e.id), (i = E.Ay.getVoiceChannelId()) !== e.id)
     )
         return !1;

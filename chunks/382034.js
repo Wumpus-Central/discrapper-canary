@@ -11,8 +11,8 @@ var i = n(477900),
     _ = n(724302),
     E = n(942370),
     A = n(49999),
-    h = n(705799),
-    f = n(792996),
+    f = n(705799),
+    h = n(792996),
     I = n(971656);
 function p(e) {
     return null != e && !e.scopes.includes(l.F.SDK_SOCIAL_LAYER) && e.application.id === E.T.ACTIVISION_APPLICATION_ID;
@@ -21,8 +21,8 @@ let m = function (e) {
     let { markAsDismissed: t, recurringDismiss: n, noticeType: a } = e,
         l = E.T.CALL_OF_DUTY_APPLICATION_ID,
         m = (0, u.h)(l),
-        g = m?.name,
-        { startAuthorization: T, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),
+        T = m?.name,
+        { startAuthorization: g, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),
         { analyticsLocations: O } = (0, c.Ay)(d.A.NOTICE),
         R = p(C),
         [L, y] = r.useState(!1);
@@ -41,22 +41,22 @@ let m = function (e) {
                   }),
                   (0, i.jsx)("img", {
                       src: "https://cdn.discordapp.com/assets/content/37dd378cbc52678cf98cba1b9abef1a63da6d2bdbc6535c3982aff71e6d23783.png",
-                      alt: g,
+                      alt: T,
                       className: s()(I.tV, I.Y5),
                   }),
-                  f.intl.string(h.default.OleW32),
+                  h.intl.string(f.default.OleW32),
                   (0, i.jsx)(o.Z_, {
                       onClick: function () {
-                          (y(!0), T({ analyticsLocations: O }));
+                          (y(!0), g({ analyticsLocations: O }));
                       },
                       className: I.NS,
                       noticeType: a,
-                      children: f.intl.string(h.default.ZeOhh9),
+                      children: h.intl.string(f.default.ZeOhh9),
                   }),
                   (0, i.jsx)(o.zr, {
                       onClick: () => n(A.i.USER_DISMISS),
                       className: I.go,
-                      children: f.intl.string(h.default["8qJAeT"]),
+                      children: h.intl.string(f.default["8qJAeT"]),
                   }),
               ],
           })

@@ -13,8 +13,8 @@ var a = n(477900),
     f = n(315629),
     h = n(241524),
     g = n(303136),
-    R = n(607470),
-    N = n(129230),
+    N = n(607470),
+    R = n(129230),
     E = n(676279),
     x = n(406860),
     _ = n(221168),
@@ -30,8 +30,8 @@ n.d(
                     name: t,
                     title: n,
                     caption: i,
-                    description: P,
-                    descriptionCta: I,
+                    description: I,
+                    descriptionCta: P,
                     previewImage: C,
                     videoUrl: U,
                     shouldLoadVideo: T,
@@ -60,7 +60,7 @@ n.d(
                 Q = s.useMemo(
                     () =>
                         (0, l.debounce)(() => {
-                            N.default.track(A.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                            R.default.track(A.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                         }, 800),
                     [t],
                 ),
@@ -81,10 +81,10 @@ n.d(
             }
             let ea = w === _.A0.LARGE ? "heading-xxl/semibold" : "heading-xl/semibold";
             function es() {
-                let e = null != I && null != y,
+                let e = null != P && null != y,
                     t = null != D && D.length > 0;
                 if (!e && !t) return null;
-                let n = e ? [{ variant: "secondary", onClick: y, text: I }] : D;
+                let n = e ? [{ variant: "secondary", onClick: y, text: P }] : D;
                 return (0, a.jsx)("div", {
                     className: O.bentoBoxButton,
                     children: (0, a.jsx)(p.e, {
@@ -141,7 +141,7 @@ n.d(
                             variant: "body-md/medium",
                             color: "text-strong",
                             className: O.description,
-                            children: P,
+                            children: I,
                         }),
                         (0, a.jsx)(es, {}),
                     ],
@@ -154,7 +154,7 @@ n.d(
                         null == U && (0, u.O)(C) && "string" != typeof C
                             ? C
                             : (0, a.jsx)(
-                                  R.A,
+                                  N.A,
                                   {
                                       playsInline: !0,
                                       preload: T ? "auto" : "none",

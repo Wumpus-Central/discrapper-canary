@@ -1,4 +1,4 @@
-n.d(t, { x: () => h, A: () => p });
+n.d(t, { x: () => g, A: () => p });
 var i,
     l = n(477900),
     o = n(582128),
@@ -34,13 +34,13 @@ let d = [
     };
 var f = n(60317);
 n(652215);
-var g = n(631612),
-    h = (((i = {})[(i.NORMAL = 20)] = "NORMAL"), (i[(i.LARGE = 32)] = "LARGE"), i);
+var h = n(631612),
+    g = (((i = {})[(i.NORMAL = 20)] = "NORMAL"), (i[(i.LARGE = 32)] = "LARGE"), i);
 function p(e) {
     let { className: t, effect: i, onComplete: a, emojiSize: u = 20 } = e,
         d = o.useRef(null),
-        h = 7.5 * u,
-        p = (h + u) / 2,
+        g = 7.5 * u,
+        p = (g + u) / 2,
         A = `translateY(${p}px)`;
     return (
         o.useEffect(() => {
@@ -90,10 +90,10 @@ function p(e) {
                 );
         }, [a, i, u]),
         (0, l.jsx)("div", {
-            className: g.Y,
+            className: h.Y,
             children: (0, l.jsx)("div", {
-                className: r()(g.Q, t),
-                style: { transform: A, height: h, width: h },
+                className: r()(h.Q, t),
+                style: { transform: A, height: g, width: g },
                 ref: d,
             }),
         })

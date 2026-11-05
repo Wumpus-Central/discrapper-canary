@@ -1,4 +1,4 @@
-(n.d(t, { m9: () => p, ZG: () => I, Uc: () => N, uh: () => S, Jm: () => C, VR: () => T, Fc: () => g, JS: () => m }),
+(n.d(t, { m9: () => p, ZG: () => I, Uc: () => N, uh: () => S, Jm: () => C, VR: () => g, Fc: () => T, JS: () => m }),
     n(321073));
 var i,
     r = (((i = {}).TRANSFER_EXISTING_CALL = "TRANSFER_EXISTING_CALL"), (i.CREATE_NEW_CALL = "CREATE_NEW_CALL"), i),
@@ -12,8 +12,8 @@ var i,
     _ = n(856383),
     E = n(643501),
     A = n(652215),
-    h = n(792996);
-function f(e, t) {
+    f = n(792996);
+function h(e, t) {
     u.default.track(A.HAw.REMOTE_COMMAND_SENT, {
         command_type: e,
         remote_platform: c.A.getSessionById(t)?.clientInfo?.os,
@@ -62,7 +62,7 @@ async function I() {
     try {
         await Promise.all(i);
     } catch (e) {
-        l.A.show({ title: h.intl.string(h.t.LNhXcL), body: h.intl.string(h.t.QnKxtP) });
+        l.A.show({ title: f.intl.string(f.t.LNhXcL), body: f.intl.string(f.t.QnKxtP) });
     }
 }
 function p(e) {
@@ -75,12 +75,12 @@ function m(e, t) {
         sessionId: e,
         payload: { type: "VOICE_STATE_UPDATE", self_mute: n, self_deaf: i },
     }),
-        f("VOICE_STATE_UPDATE", e));
+        h("VOICE_STATE_UPDATE", e));
 }
-function g(e) {
-    (s.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), f("DISCONNECT", e), I());
+function T(e) {
+    (s.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), h("DISCONNECT", e), I());
 }
-function T(e, t, n, i) {
+function g(e, t, n, i) {
     let r = (0, o.o)(n);
     null != r &&
         (s.h.dispatch({
@@ -88,7 +88,7 @@ function T(e, t, n, i) {
             sessionId: e,
             payload: { type: "AUDIO_SETTINGS_UPDATE", context: r, id: t, ...i },
         }),
-        f("AUDIO_SETTINGS_UPDATE", e));
+        h("AUDIO_SETTINGS_UPDATE", e));
 }
 async function S() {
     let e;

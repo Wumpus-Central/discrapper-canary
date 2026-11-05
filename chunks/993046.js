@@ -12,8 +12,8 @@ var s = n(855986),
     _ = n(580630),
     E = n(561573),
     A = n(288106),
-    h = n(652215),
-    f = n(682901);
+    f = n(652215),
+    h = n(682901);
 function I(e) {
     return e.map((e) => ({ currency: e.currency, amount: e.amount }));
 }
@@ -24,9 +24,9 @@ function p(e) {
         let e = (function (e) {
             if (null == e) return A.QK.SELF_PURCHASE;
             switch (e) {
-                case h.lid.DEFAULT:
+                case f.lid.DEFAULT:
                     return A.QK.SELF_PURCHASE;
-                case h.lid.GIFT:
+                case f.lid.GIFT:
                     return A.QK.GIFT;
                 default:
                     return A.QK.SELF_PURCHASE;
@@ -37,7 +37,7 @@ function p(e) {
         let i = a[e] ?? a[A.QK.SELF_PURCHASE];
         return {
             userPrice: i?.userPrice?.find((e) =>
-                r ? e.currency === h.Yri.DISCORD_ORB : e.currency !== h.Yri.DISCORD_ORB,
+                r ? e.currency === f.Yri.DISCORD_ORB : e.currency !== f.Yri.DISCORD_ORB,
             ),
             pricesForPurchaseType: i,
             purchaseType: e,
@@ -46,7 +46,7 @@ function p(e) {
     }, [t, a, n, r]);
 }
 function m(e) {
-    let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e,
+    let { sku: t, priceSetAssignmentPurchaseType: n = f.lid.DEFAULT } = e,
         {
             userPrice: r,
             pricesForPurchaseType: a,
@@ -59,7 +59,7 @@ function m(e) {
         if (null == t) return { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
         if (!d) {
             let e =
-                (t.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, l.y8)(t, n) : t.getPrice(_?.premiumType)) ?? null;
+                (t.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, l.y8)(t, n) : t.getPrice(_?.premiumType)) ?? null;
             return { normalPrice: e, discountedPrice: null, discountPercent: null, userPrice: e };
         }
         let e = u.find((e) => {
@@ -79,17 +79,17 @@ function m(e) {
             i = null != e ? e[o] : null,
             s = null != i && null != r ? r : null,
             c = null != i && i.amount > 0 ? i.amount : null,
-            E = o === A.QK.GIFT ? h.FBC.GIFT : h.FBC.BASE,
-            f = a?.prices[E]?.[A.v8.NORMAL];
+            E = o === A.QK.GIFT ? f.FBC.GIFT : f.FBC.BASE,
+            h = a?.prices[E]?.[A.v8.NORMAL];
         return {
-            normalPrice: (null != i ? f?.find((e) => e.currency !== h.Yri.DISCORD_ORB) : r) ?? null,
+            normalPrice: (null != i ? h?.find((e) => e.currency !== f.Yri.DISCORD_ORB) : r) ?? null,
             discountedPrice: s,
             discountPercent: c,
             userPrice: r ?? null,
         };
     }, [t, n, _?.premiumType, d, r, a, o, u]);
 }
-function g(e) {
+function T(e) {
     let t = (0, s.bG)([o.default], () => o.default.locale);
     return i.useMemo(
         () =>
@@ -110,14 +110,14 @@ n.d(
     {},
     {
         CD: function (e) {
-            let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e;
-            return g(m({ sku: t, priceSetAssignmentPurchaseType: n }));
+            let { sku: t, priceSetAssignmentPurchaseType: n = f.lid.DEFAULT } = e;
+            return T(m({ sku: t, priceSetAssignmentPurchaseType: n }));
         },
         JL: function (e) {
-            let { sku: t, priceSetAssignmentPurchaseType: n = h.lid.DEFAULT } = e,
+            let { sku: t, priceSetAssignmentPurchaseType: n = f.lid.DEFAULT } = e,
                 { userPrice: r, storeHasPrice: a } = p({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !0 }),
                 l = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-                o = i.useMemo(() => u.Ay.isPremium(l, f.PremiumTypes.TIER_2), [l]);
+                o = i.useMemo(() => u.Ay.isPremium(l, h.PremiumTypes.TIER_2), [l]);
             return i.useMemo(() => {
                 if (null == t) return null;
                 if (!a) {
@@ -160,7 +160,7 @@ n.d(
                 })),
             };
         },
-        j9: g,
+        j9: T,
         ou: m,
     },
 );

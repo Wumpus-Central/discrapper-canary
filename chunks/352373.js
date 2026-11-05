@@ -11,8 +11,8 @@ var i = n(582128),
     _ = n(549996),
     E = n(412260),
     A = n(457421),
-    h = n(327019),
-    f = n(174929),
+    f = n(327019),
+    h = n(174929),
     I = n(807098),
     p = n(894585);
 function m(e) {
@@ -20,17 +20,17 @@ function m(e) {
     let t = new Date(e);
     return Number.isNaN(t.getTime()) ? void 0 : t;
 }
-function g(e) {
+function T(e) {
     let t = null != e && "" !== e.lightUrl ? e.lightUrl : void 0,
         n = null != e && "" !== e.darkUrl ? e.darkUrl : void 0;
     if (null != t || null != n) return { srcLightHovered: t, srcDarkHovered: n };
 }
-let T = {
-    [f.s.UNSPECIFIED]: void 0,
-    [f.s.SM_TILE]: h.l.SM_TILE,
-    [f.s.MD_TILE]: h.l.MD_TILE,
-    [f.s.LG_TILE]: h.l.LG_TILE,
-    [f.s.VIDEO_TILE]: h.l.VIDEO_TILE,
+let g = {
+    [h.s.UNSPECIFIED]: void 0,
+    [h.s.SM_TILE]: f.l.SM_TILE,
+    [h.s.MD_TILE]: f.l.MD_TILE,
+    [h.s.LG_TILE]: f.l.LG_TILE,
+    [h.s.VIDEO_TILE]: f.l.VIDEO_TILE,
 };
 var S = n(212407),
     N = n(49999);
@@ -61,8 +61,8 @@ let C = function () {
                                       badgeText: "" !== e.badgeText ? e.badgeText : void 0,
                                       badgeCountdownEndsAt: m(e.badgeCountdownEndsAt),
                                       showHoverGradient: e.showHoverGradient,
-                                      displayType: T[e.displayType],
-                                      entryPointBackgroundAssets: g(e.hoverBackground),
+                                      displayType: g[e.displayType],
+                                      entryPointBackgroundAssets: T(e.hoverBackground),
                                       version: e.version,
                                   },
                         [n, e],
@@ -87,27 +87,27 @@ let C = function () {
                                       badgeText: "" !== t.badgeText ? t.badgeText : void 0,
                                       badgeCountdownEndsAt: m(t.badgeCountdownEndsAt),
                                       showHoverGradient: t.showHoverGradient,
-                                      entryPointBackgroundAssets: g(t.hoverBackground),
+                                      entryPointBackgroundAssets: T(t.hoverBackground),
                                   },
                         [r, t],
                     )),
                 E = l ?? c,
                 A = (null != l ? a?.promotionId : d?.promotionId) ?? "",
-                h = null != E && "" !== A,
-                [f, S] = (0, u.Cc)(h ? o.M.SHOP_TAB_TOOLTIP : null, A, void 0, !0);
-            return { campaignOptions: h && null != f ? E : null, dismissCampaignMarketing: S };
+                f = null != E && "" !== A,
+                [h, S] = (0, u.Cc)(f ? o.M.SHOP_TAB_TOOLTIP : null, A, void 0, !0);
+            return { campaignOptions: f && null != h ? E : null, dismissCampaignMarketing: S };
         })(),
         n = null != e,
-        h = (0, l.bG)(
+        f = (0, l.bG)(
             [E.A],
             () =>
                 null != E.A.lastFetchedActivePromotions ||
                 (!E.A.isFetchingActivePromotions && null != E.A.lastFetchedActivePromotionsLocale),
         ),
-        f = (0, l.bG)([A.A], () => A.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        [C] = (0, u.RF)(!h || n ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, f?.version ?? 0, void 0, !0),
+        h = (0, l.bG)([A.A], () => A.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
+        [C] = (0, u.RF)(!f || n ? null : o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, h?.version ?? 0, void 0, !0),
         O = (0, d.Rv)(),
-        R = (0, S.bv)(f),
+        R = (0, S.bv)(h),
         L = i.useMemo(
             () =>
                 null == C || O
@@ -171,8 +171,8 @@ let C = function () {
                                     version: t.version,
                                 }
                               : null;
-                      })(R, f),
-            [C, O, R, f],
+                      })(R, h),
+            [C, O, R, h],
         ),
         y = O ? null : e;
     return {
@@ -181,20 +181,20 @@ let C = function () {
             (e) => {
                 if (null != y) {
                     (t(e),
-                        null != f &&
-                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, f.version, {
+                        null != h &&
+                            (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, h.version, {
                                 dismissAction: N.i.AUTO_DISMISS,
                             }));
                     return;
                 }
                 null != L &&
-                    null != f &&
-                    (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, f.version, {
+                    null != h &&
+                    (0, c.$l)(o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, h.version, {
                         dismissAction: e,
-                        version: f.version,
+                        version: h.version,
                     });
             },
-            [y, L, t, f],
+            [y, L, t, h],
         ),
     };
 };

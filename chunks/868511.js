@@ -28,15 +28,15 @@ n.d(
                     authorizationError: m.A.error,
                     authorizing: m.A.isFetchingAuthorization,
                 })),
-                [x, _] = l.useState(T ?? ""),
-                [I, b] = l.useState("8080"),
-                [N, C] = l.useState("localhost"),
+                [x, I] = l.useState(T ?? ""),
+                [_, N] = l.useState("8080"),
+                [b, C] = l.useState("localhost"),
                 y = S.test(x);
             l.useEffect(() => d.SH, []);
             let v = null != T && T === x,
                 j = v
                     ? function () {
-                          (d.cL(), _(""), C(null));
+                          (d.cL(), I(""), C(null));
                       }
                     : async function () {
                           d.SH();
@@ -48,20 +48,20 @@ n.d(
                                   case "proxy":
                                       return (0, c.Ay)(n);
                               }
-                          })(N, I, x);
+                          })(b, _, x);
                           null != (await d.q1(x, e)) && t();
                       },
                 O = l.useMemo(
                     () => [
                         {
                             loading: f,
-                            disabled: !y || 0 === x.length || ("localhost" === N && 0 === I.length),
+                            disabled: !y || 0 === x.length || ("localhost" === b && 0 === _.length),
                             variant: v ? "critical-primary" : "active",
                             text: v ? A.intl.string(A.t.d6TR3I) : A.intl.string(A.t.qwuK5I),
                             onClick: j,
                         },
                     ],
-                    [x.length, f, v, y, I.length, j, N],
+                    [x.length, f, v, y, _.length, j, b],
                 );
             return (0, i.jsxs)(r.a, {
                 title: A.intl.string(A.t.f8fzky),
@@ -89,7 +89,7 @@ n.d(
                                     maxLength: 19,
                                     error: y ? null : A.intl.string(A.t.gPNgKO),
                                     onChange: function (e) {
-                                        _(e);
+                                        I(e);
                                     },
                                     disabled: f,
                                 }),
@@ -100,7 +100,7 @@ n.d(
                                     selectionMode: "single",
                                     label: A.intl.string(A.t["/GTqXG"]),
                                     disabled: !y || "" === x,
-                                    value: N,
+                                    value: b,
                                     options: [
                                         { value: "localhost", label: A.intl.string(A.t["+Y9Y6r"]), id: "localhost" },
                                         { value: "proxy", label: A.intl.string(A.t.uaksyW), id: "proxy" },
@@ -111,16 +111,16 @@ n.d(
                                     placeholder: "URL Origin Type",
                                 }),
                             }),
-                            "localhost" !== N
+                            "localhost" !== b
                                 ? null
                                 : (0, i.jsx)("div", {
                                       className: E.I,
                                       children: (0, i.jsx)(o.k, {
                                           required: !0,
                                           label: A.intl.string(A.t.fF4zxq),
-                                          value: I,
+                                          value: _,
                                           maxLength: 5,
-                                          onChange: (e) => b(e),
+                                          onChange: (e) => N(e),
                                           disabled: f,
                                       }),
                                   }),

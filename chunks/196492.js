@@ -61,5 +61,5 @@ class A extends d.A {
         (0, s.Oo)(_);
     }
 }
-let h = new A();
-n.d(t, {}, { A: h });
+let f = new A();
+n.d(t, {}, { A: f });

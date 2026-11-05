@@ -10,20 +10,20 @@ var i = n(620632),
 let _ = 10 * c.A.Millis.MINUTE,
     E = 10 * c.A.Millis.MINUTE,
     A = +c.A.Millis.MINUTE,
-    h = {};
+    f = {};
 n.d(
     t,
     {},
     {
         n: async function e(t, n) {
             let c = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                f = l.default.locale;
+                h = l.default.locale;
             return (
-                s.h.dispatch({ type: "APPLICATION_BUILD_FETCH_START", applicationId: t, branchId: n, locale: f }),
+                s.h.dispatch({ type: "APPLICATION_BUILD_FETCH_START", applicationId: t, branchId: n, locale: h }),
                 c && (await (0, r.yy)(Math.random() * A)),
                 i.Bo.get({
                     url: u.Rsh.APPLICATION_LIVE_BUILD(t, n),
-                    query: { platform: (0, d.O)(), locale: f },
+                    query: { platform: (0, d.O)(), locale: h },
                     oldFormErrors: !0,
                     rejectWithError: (0, i.fT)(),
                 }).then(
@@ -35,7 +35,7 @@ n.d(
                                   type: "APPLICATION_BUILD_FETCH_SUCCESS",
                                   applicationId: t,
                                   branchId: n,
-                                  locale: f,
+                                  locale: h,
                                   build: i,
                               });
                     },
@@ -44,8 +44,8 @@ n.d(
                         if (404 === r)
                             s.h.dispatch({ type: "APPLICATION_BUILD_NOT_FOUND", applicationId: t, branchId: n });
                         else
-                            (null == h[n] && (h[n] = new a.Ep()),
-                                h[n].start(_ + Math.random() * E, () => {
+                            (null == f[n] && (f[n] = new a.Ep()),
+                                f[n].start(_ + Math.random() * E, () => {
                                     null != o.A.getLibraryApplication(t, n) && e(t, n);
                                 }));
                     },

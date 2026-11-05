@@ -14,7 +14,7 @@ n.d(
             let n = e[1],
                 u = e[2],
                 { guildId: _, channelId: E, messageId: A } = t,
-                h = (function (e, t, n, a, o) {
+                f = (function (e, t, n, a, o) {
                     if (!(0, s.K)({ location: "getSoundmojiASTFromString" })) return;
                     let u = i.A.getSoundById(a),
                         _ = (0, d.A)(u, e, t);
@@ -28,18 +28,18 @@ n.d(
                     }
                     if (_ && null != u) return u;
                 })(_, E, A, u, t.soundboardSounds);
-            if (null == h) return { type: "text", content: (0, o.A)(n, u) };
-            let f = h?.name ?? u;
+            if (null == f) return { type: "text", content: (0, o.A)(n, u) };
+            let h = f?.name ?? u;
             return {
                 type: "soundboard",
                 soundId: u,
                 guildId: n,
                 messageId: t.messageId,
                 channelId: t.channelId,
-                content: f,
-                emojiId: h?.emojiId,
-                emojiName: h?.emojiName,
-                emojiSrc: h?.emojiId != null ? (0, a._O)({ id: h?.emojiId, animated: !1, size: 16 }) : void 0,
+                content: h,
+                emojiId: f?.emojiId,
+                emojiName: f?.emojiName,
+                emojiSrc: f?.emojiId != null ? (0, a._O)({ id: f?.emojiId, animated: !1, size: 16 }) : void 0,
             };
         },
         ds: /^<sound:(\d+):(\d+)>/,

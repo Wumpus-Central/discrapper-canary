@@ -9,8 +9,8 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, plantConfig: n, roomWidth: o } = e,
-                d = (0, l.bG)([a.A], () => a.A.getRoomObjects(t));
-            return (0, i.jsx)(r.A, { channelId: t, plants: d.get(s.N.PLANT) ?? [], plantConfig: n, roomWidth: o });
+                c = (0, l.bG)([a.A], () => a.A.getRoomObjects(t));
+            return (0, i.jsx)(r.A, { channelId: t, plants: c.get(s.N.PLANT) ?? [], plantConfig: n, roomWidth: o });
         },
     },
 );

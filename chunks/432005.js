@@ -30,16 +30,16 @@ class u extends d.A {
 var _ = n(383233),
     E = n(46653),
     A = n(994500),
-    h = n(287809),
-    f = n(659674),
+    f = n(287809),
+    h = n(659674),
     I = n(45938),
     p = n(811091),
     m = n(451919);
 n(763754);
-var g = n(652215);
-let T = new c.A({ id: "???", username: "???" });
+var T = n(652215);
+let g = new c.A({ id: "???", username: "???" });
 function S(e) {
-    return h.default.getUser(e.id) ?? new c.A(e);
+    return f.default.getUser(e.id) ?? new c.A(e);
 }
 function N(e) {
     return new _.go({
@@ -49,7 +49,7 @@ function N(e) {
         attachments: e.attachments ?? [],
         embeds: y(e),
         components: (0, s.ZV)(e.components ?? []),
-        codedLinks: g.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
+        codedLinks: T.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
     });
 }
 function C(e) {
@@ -60,23 +60,23 @@ function C(e) {
         s = e.mentions?.map((e) => e.id) ?? [],
         o = e.mention_roles ?? [],
         d = e.mention_channels ?? [],
-        h = e.message_reference,
-        f = null == e.author ? T : null != e.webhook_id ? new c.A(e.author) : S(e.author),
+        f = e.message_reference,
+        h = null == e.author ? g : null != e.webhook_id ? new c.A(e.author) : S(e.author),
         C = e?.gift_info,
         O = e.gifting_prompt,
         R = null != e.interaction ? u.createFromServer(e.interaction) : null,
-        y = e.type === g.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
+        y = e.type === T.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         v = e.content;
     return (
-        e.type === g.lAJ.PREMIUM_REFERRAL &&
+        e.type === T.lAJ.PREMIUM_REFERRAL &&
             ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (v = "")),
-        e.type === g.lAJ.PREMIUM_GROUP_INVITE &&
+        e.type === T.lAJ.PREMIUM_GROUP_INVITE &&
             ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (v = "")),
         new _.Ay({
             ...e,
             ...null,
             ...a.toJS(),
-            author: f,
+            author: h,
             actor: null != e.actor ? S(e.actor) : null,
             webhookId: e.webhook_id,
             blocked: A.A.isBlockedForMessage(e) || (null != y && A.A.isBlocked(y)),
@@ -85,7 +85,7 @@ function C(e) {
             mentions: s,
             mentionRoles: o,
             mentionChannels: d,
-            messageReference: h,
+            messageReference: f,
             mentioned: (0, m.Uj)({
                 userId: E.default.getId(),
                 channelId: e.channel_id,
@@ -159,8 +159,8 @@ function L(e, t) {
 }
 function y(e) {
     if (null == e.embeds) return [];
-    let t = e.embeds.map((t) => (0, f.fK)(e.channel_id, e.id, t));
-    return (0, f.nh)(t);
+    let t = e.embeds.map((t) => (0, h.fK)(e.channel_id, e.id, t));
+    return (0, h.nh)(t);
 }
 function D(e, t) {
     if (null == e && t?.results == null) return [];
@@ -196,5 +196,5 @@ function v(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
 function P(e) {
-    return e.hasFlag(g.pr7.EPHEMERAL) && e.type !== g.lAJ.IN_GAME_MESSAGE_NUX;
+    return e.hasFlag(T.pr7.EPHEMERAL) && e.type !== T.lAJ.IN_GAME_MESSAGE_NUX;
 }

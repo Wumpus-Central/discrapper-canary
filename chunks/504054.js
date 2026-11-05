@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => w, ZL: () => y, EG: () => j, HJ: () => k, AV: () => A, KK: () => N });
+n.d(t, { gG: () => b, j_: () => w, ZL: () => y, EG: () => j, HJ: () => k, AV: () => S, KK: () => A });
 var l = n(582128),
     r = n(158390),
     i = n(73153),
@@ -79,7 +79,7 @@ class o {
 }
 let c = new Set(),
     d = new Map();
-function f(e, t) {
+function m(e, t) {
     let n = `${e}:${t}`,
         l = d.get(n);
     if (null == l) {
@@ -107,7 +107,7 @@ function f(e, t) {
     }
     return l;
 }
-function m(e, t) {
+function f(e, t) {
     if (e.state !== t) for (let n of ((e.state = t), e.stateListeners)) n();
 }
 function h(e, t) {
@@ -125,7 +125,7 @@ function p(e) {
 }
 function x(e) {
     if (0 === e.subscribers.size || null == e.startedAt || c.has(e.projectId)) {
-        (p(e), m(e, "connecting"));
+        (p(e), f(e, "connecting"));
         return;
     }
     let t = [...e.subscribers],
@@ -145,7 +145,7 @@ function x(e) {
             e.socket === a &&
                 ((e.lastFrame = t),
                 e.backoff.succeed(),
-                m(e, "live"),
+                f(e, "live"),
                 await Promise.allSettled([...e.subscribers].map((e) => e.onFrame(t))));
         },
         onMode: (t) => {
@@ -157,11 +157,11 @@ function x(e) {
             if (e.socket !== a) return;
             if ((p(e), 4403 === t))
                 return void (function (e) {
-                    for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), m(t, "connecting"));
+                    for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), f(t, "connecting"));
                 })(e.projectId);
             let n = 4409 === t && e.control;
             (n && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
-                m(e, "connecting"),
+                f(e, "connecting"),
                 0 !== e.subscribers.size && null != e.startedAt && (n || (e.socketKey = i), e.backoff.fail(e.retry)));
         },
     });
@@ -171,7 +171,7 @@ function v(e) {
     ((e.control = !1), h(e, "off"));
 }
 function j(e, t, n) {
-    let l = f(e, t),
+    let l = m(e, t),
         r = n && null != l.startedAt;
     l.control !== r && ((l.control = r), r ? h(l, "pending") : "denied" !== l.controlState && h(l, "off"), x(l));
 }
@@ -186,7 +186,7 @@ function y(e, t, n) {
 function k(e, t) {
     let n = l.useCallback(
         (n) => {
-            let l = f(e, t);
+            let l = m(e, t);
             return (
                 l.controlListeners.add(n),
                 () => {
@@ -201,11 +201,11 @@ function k(e, t) {
 function w(e, t, n) {
     return d.get(`${e}:${t}`)?.lastFrame === n;
 }
-function A(e, t) {
+function S(e, t) {
     let [n, r] = l.useState(() => d.get(`${e}:${t}`)?.restarts ?? 0);
     return (
         l.useEffect(() => {
-            let n = f(e, t);
+            let n = m(e, t);
             return (
                 n.restartListeners.add(r),
                 () => {
@@ -216,11 +216,11 @@ function A(e, t) {
         n
     );
 }
-function N(e, t, n) {
+function A(e, t, n) {
     let { fps: r, onFrame: i, enabled: a = !0, width: s = 0 } = n,
         u = l.useCallback(
             (n) => {
-                let l = f(e, t);
+                let l = m(e, t);
                 return (
                     l.stateListeners.add(n),
                     () => {
@@ -233,7 +233,7 @@ function N(e, t, n) {
         o = l.useSyncExternalStore(u, () => d.get(`${e}:${t}`)?.state ?? "connecting");
     return (
         l.useEffect(() => {
-            let n = f(e, t);
+            let n = m(e, t);
             if ((null != n.lastFrame && Promise.resolve(i(n.lastFrame)).catch(() => void 0), !a)) return;
             let l = { fps: r, width: s, onFrame: i };
             return (
@@ -256,7 +256,7 @@ function N(e, t, n) {
                 continue;
             }
             for (let t of ((e.lastFrame = null), (e.restarts += 1), e.restartListeners)) t(e.restarts);
-            (e.backoff.succeed(), h(e, e.control ? "pending" : "off"), m(e, "connecting"), x(e));
+            (e.backoff.succeed(), h(e, e.control ? "pending" : "off"), f(e, "connecting"), x(e));
         }
     }
 }),

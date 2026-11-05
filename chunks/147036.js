@@ -11,22 +11,22 @@ var i = n(136722),
     _ = n(576705),
     E = n(309010),
     A = n(607567),
-    h = n(488926),
-    f = n(811091);
+    f = n(488926),
+    h = n(811091);
 n(427262);
 var I = n(652215),
     p = n(682901),
     m = n(792996);
-let { GUILD_VOICE: g, GUILD_CATEGORY: T, GUILD_STAGE_VOICE: S } = I.rbe;
+let { GUILD_VOICE: T, GUILD_CATEGORY: g, GUILD_STAGE_VOICE: S } = I.rbe;
 function N(e, t) {
-    return e === t || e === T;
+    return e === t || e === g;
 }
 function C(e, t, n) {
-    let r = h.x3;
+    let r = f.x3;
     return (
-        ((0, d.tr)(t) || t === T) && (r = i.WQ(r, I.xBc.VIEW_CHANNEL)),
-        (N(t, g) || N(t, S)) && ((r = i.WQ(r, I.xBc.VIEW_CHANNEL)), (r = i.WQ(r, I.xBc.CONNECT))),
-        { id: e, type: n, deny: h.x3, allow: r }
+        ((0, d.tr)(t) || t === g) && (r = i.WQ(r, I.xBc.VIEW_CHANNEL)),
+        (N(t, T) || N(t, S)) && ((r = i.WQ(r, I.xBc.VIEW_CHANNEL)), (r = i.WQ(r, I.xBc.CONNECT))),
+        { id: e, type: n, deny: f.x3, allow: r }
     );
 }
 function O(e, t, n, i) {
@@ -46,10 +46,10 @@ n.d(
                 (n.length > 0 || l) &&
                     o.push(
                         ((a = r.r2.ROLE),
-                        (s = h.x3),
-                        ((0, d.tr)(t) || t === T) && (s = i.WQ(s, I.xBc.VIEW_CHANNEL)),
-                        N(t, g) && ((s = i.WQ(s, I.xBc.VIEW_CHANNEL)), (s = i.WQ(s, I.xBc.CONNECT))),
-                        { id: e, type: a, allow: h.x3, deny: s }),
+                        (s = f.x3),
+                        ((0, d.tr)(t) || t === g) && (s = i.WQ(s, I.xBc.VIEW_CHANNEL)),
+                        N(t, T) && ((s = i.WQ(s, I.xBc.VIEW_CHANNEL)), (s = i.WQ(s, I.xBc.CONNECT))),
+                        { id: e, type: a, allow: f.x3, deny: s }),
                     ),
                 n.forEach((e) => {
                     o.push(C(e, t, r.r2.ROLE));
@@ -74,7 +74,7 @@ n.d(
             }
         },
         IP: function (e) {
-            return [{ id: e, type: r.r2.ROLE, deny: I.xBc.SEND_MESSAGES, allow: h.x3 }];
+            return [{ id: e, type: r.r2.ROLE, deny: I.xBc.SEND_MESSAGES, allow: f.x3 }];
         },
         Jg: function (e) {
             let { type: t } = e;
@@ -167,7 +167,7 @@ n.d(
                 var o, d, c;
                 ((o = t.id),
                     (d = e.id),
-                    (c = f.default.castChannelIdAsMessageId(e.id)),
+                    (c = h.default.castChannelIdAsMessageId(e.id)),
                     (r =
                         null == a || null == o || null == d
                             ? O(a, o, c)

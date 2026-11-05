@@ -11,13 +11,13 @@ var i = n(284009),
     _ = n(495867),
     E = n(528767),
     A = n(977997),
-    h = n(403362),
-    f = n(433061),
+    f = n(403362),
+    h = n(433061),
     I = n(124697),
     p = n(643501),
     m = n(30529),
-    g = n(975571),
-    T = n(544105),
+    T = n(975571),
+    g = n(544105),
     S = n(792996),
     N = n(731854);
 let C = new d.A("GameConsoleManager");
@@ -46,13 +46,13 @@ class R extends o.A {
             n =
                 ((t = p.default.getAwaitingRemoteSessionInfo()),
                 e.find((e) => {
-                    let n = T.hv.has(e.clientInfo.os),
+                    let n = g.hv.has(e.clientInfo.os),
                         i = null != A.A.getVoiceStateForSession(c.default.getId(), e.sessionId),
                         r = null == t || (0, m.X)(t.type) === e.clientInfo.os;
                     return n && r && i;
                 }));
         if (null == n) return null;
-        (this.awaitRemoteTimeout.stop(), (0, f.m9)(n.sessionId));
+        (this.awaitRemoteTimeout.stop(), (0, h.m9)(n.sessionId));
         let i = A.A.getVoiceStateForSession(c.default.getId(), n.sessionId);
         null != i && O(i);
     };
@@ -67,7 +67,7 @@ class R extends o.A {
         let l = A.A.getVoiceStateForSession(a, s);
         null == l ||
             ((l.selfDeaf !== i || l.selfMute !== r) &&
-                ((0, f.JS)(s, { selfDeaf: i, selfMute: r }),
+                ((0, h.JS)(s, { selfDeaf: i, selfMute: r }),
                 this.rollbackCommandTimeout.start(3e3, () => {
                     O(l);
                 })));
@@ -81,7 +81,7 @@ class R extends o.A {
                     let { sessionId: t } = e;
                     return null != t ? E.A.getSessionById(t) : null;
                 })
-                .filter(h.Vq);
+                .filter(f.Vq);
             return this.maybeConnect(e);
         }
         let i = t.find((e) => {
@@ -92,12 +92,12 @@ class R extends o.A {
     };
     handleSessionsChanged = () => {
         let e = p.default.getRemoteSessionId();
-        (null != e && null == E.A.getSessionById(e) && (0, f.ZG)(),
+        (null != e && null == E.A.getSessionById(e) && (0, h.ZG)(),
             null == e && this.maybeConnect(Object.values(E.A.getSessions())));
     };
     handleWaitForRemoteSession = () => {
         this.awaitRemoteTimeout.start(6e4, () => {
-            ((0, f.ZG)(), s.A.show({ title: S.intl.string(S.t.wGMxr3), body: S.intl.string(S.t.i5k8b5) }));
+            ((0, h.ZG)(), s.A.show({ title: S.intl.string(S.t.wGMxr3), body: S.intl.string(S.t.i5k8b5) }));
         });
     };
     handleConsoleCommandUpdate = (e) => {
@@ -113,22 +113,22 @@ class R extends o.A {
                     i = (function (e, t) {
                         let { platform: n, name: i } = e;
                         switch (t) {
-                            case T.K8.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED:
+                            case g.K8.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED:
                                 return {
                                     title: S.intl.string(S.t["GSZ+HI"]),
                                     body: S.intl.formatToPlainString(S.t["cYX/3E"], { deviceType: n }),
                                 };
-                            case T.K8.CONSOLE_DEVICE_INVALID_POWER_MODE:
+                            case g.K8.CONSOLE_DEVICE_INVALID_POWER_MODE:
                                 return {
                                     title: S.intl.formatToPlainString(S.t.akd6Sx, { deviceType: n }),
                                     body: S.intl.formatToPlainString(S.t.RyOvpJ, { deviceName: i }),
                                 };
-                            case T.K8.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS:
+                            case g.K8.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS:
                                 return {
                                     title: S.intl.formatToPlainString(S.t.M6Vzat, { deviceType: n }),
                                     body: S.intl.formatToPlainString(S.t.InKtnC, { deviceName: i }),
                                 };
-                            case T.K8.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR:
+                            case g.K8.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR:
                                 return {
                                     title: S.intl.string(S.t.QL1y93),
                                     body: S.intl.formatToPlainString(S.t.D18eZu, { deviceType: n }),
@@ -145,7 +145,7 @@ class R extends o.A {
                 case "n/a":
                     i = (function (e, t) {
                         let { platform: n, name: i } = e;
-                        return t === T.K8.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED
+                        return t === g.K8.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED
                             ? {
                                   title: S.intl.formatToPlainString(S.t.KchfhO, { deviceType: n }),
                                   body: S.intl.formatToPlainString(S.t["21ndz7"], { deviceName: i }),
@@ -156,7 +156,7 @@ class R extends o.A {
             return (
                 null != i &&
                     (i.errorCodeMessage = S.intl.format(S.t["1Bi9Cf"], {
-                        supportURL: g.A.getSubmitRequestURL(),
+                        supportURL: T.A.getSubmitRequestURL(),
                         errorCode: n.code,
                     })),
                 i
@@ -177,9 +177,9 @@ class R extends o.A {
                 errorCodeMessage: a.errorCodeMessage,
                 reconnectPlatformType: a.isAccountLinkError ? r.type : void 0,
             }),
-            T.v_.has(i.code) && this.awaitRemoteTimeout.isStarted()
-                ? this.awaitRemoteTimeout.start(18e4, () => (0, f.ZG)(), !0)
-                : "failed" === n && (0, f.ZG)());
+            g.v_.has(i.code) && this.awaitRemoteTimeout.isStarted()
+                ? this.awaitRemoteTimeout.start(18e4, () => (0, h.ZG)(), !0)
+                : "failed" === n && (0, h.ZG)());
     };
     handleRemoteSessionDisconnect = () => {
         this.awaitRemoteTimeout.stop();

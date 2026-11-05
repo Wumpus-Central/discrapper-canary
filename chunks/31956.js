@@ -1,14 +1,14 @@
 var i = n(582128),
-    s = n(164636),
-    r = n(741534),
-    l = n(590180);
+    l = n(164636),
+    s = n(741534),
+    r = n(590180);
 n.d(
     t,
     {},
     {
         A: function (e) {
             let { skuId: t, openedAt: n, context: c, analyticsLocations: a } = e,
-                o = (0, s.bG)([l.A], () => l.A.getProductFetch(t)),
+                o = (0, l.bG)([r.A], () => r.A.getProductFetch(t)),
                 d = (0, i.useRef)(void 0),
                 u = (0, i.useRef)(void 0),
                 _ = (0, i.useRef)(void 0),
@@ -22,7 +22,7 @@ n.d(
                     o?.state !== "success" ||
                         I.current ||
                         ((I.current = !0),
-                        (0, r.wd)({
+                        (0, s.wd)({
                             profileUi: "PROFILE_FRAME",
                             timeToInteractiveMs: d.current,
                             timeToLoadMs: e - n,

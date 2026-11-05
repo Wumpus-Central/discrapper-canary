@@ -11,17 +11,17 @@ var i = n(435558),
     _ = n(536802),
     E = n(129230),
     A = n(824120),
-    h = n.n(A),
-    f = n(855986),
+    f = n.n(A),
+    h = n(855986),
     I = n(537975);
 let p = {};
-class m extends f.Ay.Store {
+class m extends h.Ay.Store {
     static displayName = "AuthInviteStore";
     getGuild(e) {
         return p[e];
     }
 }
-let g = new m(o.h, {
+let T = new m(o.h, {
     AUTH_INVITE_UPDATE: function (e) {
         let { invite: t } = e,
             n = t.guild;
@@ -29,14 +29,14 @@ let g = new m(o.h, {
         p[n.id] = (0, I.DY)(n);
     },
 });
-var T = n(498642),
+var g = n(498642),
     S = n(71393),
     N = n(927813),
     C = n(811091);
 function O(e, t, n) {
     let i, r, a;
     try {
-        ((i = h()(e)), (r = null != t ? h()(t) : null), (a = null != n ? h()(n) : null));
+        ((i = f()(e)), (r = null != t ? f()(t) : null), (a = null != n ? f()(n) : null));
     } catch {
         return !1;
     }
@@ -71,28 +71,28 @@ let L = {
     [s().v3("guild_member_count_range")]: (e) => {
         let { min: t, max: n } = R(e);
         return (e) => {
-            let i = T.A.getMemberCount(e);
+            let i = g.A.getMemberCount(e);
             return null != i && O(i, t, n);
         };
     },
     [s().v3("guild_has_feature")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? g.getGuild(e);
+            let n = S.A.getGuild(e) ?? T.getGuild(e);
             return null != n && t.some((e) => n.features.has(e));
         };
     },
     [s().v3("guild_hub_types")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? g.getGuild(e);
+            let n = S.A.getGuild(e) ?? T.getGuild(e);
             return null != n && "number" == typeof n.hubType && t.some((e) => n.hubType === e);
         };
     },
     [s().v3("guild_has_vanity_url")]: (e) => {
         let [[, t]] = e;
         return (e) => {
-            let n = S.A.getGuild(e) ?? g.getGuild(e);
+            let n = S.A.getGuild(e) ?? T.getGuild(e);
             return null != n && t === (null != n.vanityURLCode);
         };
     },
@@ -155,7 +155,7 @@ function q(e, t, n, i) {
             throw Error(`Unknown experiment type: ${t}`);
     }
 }
-function Z(e) {
+function Q(e) {
     switch (e.type) {
         case y.Vh.USER:
             return X(`${e.bucket}|${e.revision}`);
@@ -165,7 +165,7 @@ function Z(e) {
             throw Error(`Unknown experiment type: ${e}`);
     }
 }
-function Q(e, t) {
+function Z(e, t) {
     let n = G[e];
     return !(null == n || Date.now() - n.time > 6048e5) && n.hash === t;
 }
@@ -196,8 +196,8 @@ function J(e) {
     if (n.override) return !1;
     let c = o === y.vf.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
         _ = q(t, n, i, c),
-        A = Z(n);
-    if ((d && x.get(_) === A) || Q(_, A)) return !1;
+        A = Q(n);
+    if ((d && x.get(_) === A) || Z(_, A)) return !1;
     switch (n.type) {
         case y.Vh.USER: {
             let e = {
@@ -262,7 +262,7 @@ function J(e) {
             } else E.default.track(e, a, { flush: !0, fingerprint: s });
         }
     }
-    d ? x.set(_, A) : ((G[q(t, n, i, c)] = { time: Date.now(), hash: Z(n) }), e_(G));
+    d ? x.set(_, A) : ((G[q(t, n, i, c)] = { time: Date.now(), hash: Q(n) }), e_(G));
 }
 function ee(e) {
     let [t, n] = e;
@@ -312,7 +312,7 @@ function ei(e) {
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     ((F = { rawUserExperiments: t, rawGuildExperiments: n ?? [], source: i, sessionId: r, fingerprint: a }),
         t.forEach((e) => {
-            let [t, n, l, o, d, c, u, _, E, A, h] = e;
+            let [t, n, l, o, d, c, u, _, E, A, f] = e;
             B[t] = {
                 type: "user",
                 revision: n,
@@ -328,7 +328,7 @@ function ei(e) {
                 fingerprint: a,
                 holdoutName: E,
                 holdoutRevision: A,
-                holdoutBucket: h,
+                holdoutBucket: f,
             };
         }),
         null != n &&
@@ -496,7 +496,7 @@ function eA(e) {
         for (let e of [j, W]) for (let t in e) null == k[t] && delete j[t];
     eu();
 }
-function eh(e) {
+function ef(e) {
     let { guild: t } = e;
     for (let e in H) {
         let [n] = e.split(":");
@@ -504,7 +504,7 @@ function eh(e) {
     }
 }
 Date.now();
-class ef extends _.A {
+class eh extends _.A {
     static displayName = "ExperimentStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -517,8 +517,8 @@ class ef extends _.A {
                 OVERLAY_INITIALIZE: es,
                 EXPERIMENTS_FETCH_FAILURE: el,
                 EXPERIMENT_OVERRIDE_BUCKET: eA,
-                GUILD_CREATE: eh,
-                GUILD_UPDATE: eh,
+                GUILD_CREATE: ef,
+                GUILD_UPDATE: ef,
             },
             o.A.Early,
         );
@@ -558,7 +558,7 @@ class ef extends _.A {
         ((t = ec() || t) && eu(), this.waitFor(u.default), this.loadCache());
     }
     loadCache() {
-        let e = this.readSnapshot(ef.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(eh.LATEST_SNAPSHOT_VERSION);
         null != e &&
             ("loadedUserExperiments" in e
                 ? ((B = e.loadedUserExperiments),
@@ -568,7 +568,7 @@ class ef extends _.A {
                 : ei(e, !0));
     }
     takeSnapshot() {
-        return { version: ef.LATEST_SNAPSHOT_VERSION, data: { ...F } };
+        return { version: eh.LATEST_SNAPSHOT_VERSION, data: { ...F } };
     }
     get hasLoadedExperiments() {
         return w;
@@ -726,7 +726,7 @@ class ef extends _.A {
         };
     }
     hasExperimentTrackedExposure(e, t, n, i) {
-        return Q(q(e, t, n, i), Z(t));
+        return Z(q(e, t, n, i), Q(t));
     }
 }
-let eI = new ef();
+let eI = new eh();

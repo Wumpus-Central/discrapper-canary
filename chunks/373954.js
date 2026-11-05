@@ -12,8 +12,8 @@ var d = n(611599),
     _ = n(652215);
 let E = new d.Vy("LegacyOverlayLogger"),
     A = null,
-    h = !1,
-    f = null,
+    f = !1,
+    h = null,
     I = {
         log: console.log.bind(console),
         info: console.info.bind(console),
@@ -50,7 +50,7 @@ async function m(e, t) {
             3 === p && E.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function g(e) {
+function T(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -64,7 +64,7 @@ function g(e) {
     }
     return t;
 }
-function T(e) {
+function g(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
@@ -132,8 +132,8 @@ function V(e) {
 __OVERLAY__ &&
     (function (e) {
         if (__OVERLAY__) {
-            if (h) return I.warn("Overlay logger already set up, skipping duplicate setup");
-            ((h = !0),
+            if (f) return I.warn("Overlay logger already set up, skipping duplicate setup");
+            ((f = !0),
                 (A = {
                     log: (t, n) => m({ level: "log", message: t, context: n }, e),
                     info: (t, n) => m({ level: "info", message: t, context: n }, e),
@@ -145,8 +145,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.log(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => T(e))
+                            let e = T(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.log(e);
                         } catch (e) {
@@ -157,8 +157,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.info(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => T(e))
+                            let e = T(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.info(e);
                         } catch (e) {
@@ -169,8 +169,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.warn(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => T(e))
+                            let e = T(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.warn(e);
                         } catch (e) {
@@ -181,8 +181,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((I.error(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => T(e))
+                            let e = T(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.error(e);
                         } catch (e) {}
@@ -247,9 +247,9 @@ __OVERLAY__ &&
                         }
                 }),
                 window.addEventListener("beforeunload", () => {
-                    (null != A && A.info("Overlay unloading"), null != f && clearInterval(f));
+                    (null != A && A.info("Overlay unloading"), null != h && clearInterval(h));
                 }),
-                (f = window.setInterval(() => {
+                (h = window.setInterval(() => {
                     if (null != A)
                         try {
                             A.log("Heartbeat", {

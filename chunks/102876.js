@@ -1,17 +1,17 @@
-var r = i(477900),
-    s = i(769015),
-    n = i(227196);
-i.d(
+var i = r(477900),
+    n = r(769015),
+    s = r(227196);
+r.d(
     t,
     {},
     {
         A: function (e) {
-            let { application: t, useComma: i = !1 } = e;
-            return (0, r.jsxs)("div", {
-                className: n.z,
+            let { application: t, useComma: r = !1 } = e;
+            return (0, i.jsxs)("div", {
+                className: s.z,
                 children: [
-                    (0, r.jsx)(s.A, { className: n.I, game: t, size: s.M.XSMALL }),
-                    (0, r.jsx)("strong", { children: `${t.name}${i ? ", " : ""}` }),
+                    (0, i.jsx)(n.A, { className: s.I, game: t, size: n.M.XSMALL }),
+                    (0, i.jsx)("strong", { children: `${t.name}${r ? ", " : ""}` }),
                 ],
             });
         },

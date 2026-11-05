@@ -10,8 +10,8 @@ var i = n(477900),
     _ = n(263715),
     E = n(550591),
     A = n(652215),
-    h = n(792996),
-    f = n(759223);
+    f = n(792996),
+    h = n(759223);
 function I(e) {
     let t = r.useRef(null),
         n = e.map((e) => e[0]);
@@ -51,26 +51,26 @@ function m(e) {
         l = r.useMemo(() => p([_.PJ.GUILD, _.PJ.FOLDER], n, s, a), [n, s, a]),
         [{ canDrop: o, isOver: c }, u] = (0, d.H)(l),
         E = I([
-            [o, f.OP],
-            [c, f.NQ],
+            [o, h.OP],
+            [c, h.NQ],
         ]);
     return (0, i.jsx)("div", {
         ref: (e) => {
             ((E.current = e), u(e));
         },
-        "data-dnd-name": h.intl.formatToPlainString(h.t["A5aDw+"], { itemName: t }),
-        className: f.aC,
+        "data-dnd-name": f.intl.formatToPlainString(f.t["A5aDw+"], { itemName: t }),
+        className: h.aC,
     });
 }
-function g(e) {
+function T(e) {
     let { name: t, targetNode: n, onDragOverChanged: a } = e,
         [{ canDrop: l, isOver: o }, c] = (0, d.H)(() => p([_.PJ.GUILD], n, !0, !0));
     r.useEffect(() => {
         a?.(o);
     }, [a, o]);
     let u = I([
-        [l, f.OP],
-        [o, f.NQ],
+        [l, h.OP],
+        [o, h.NQ],
     ]);
     return (0, i.jsx)(E.A, {
         text: t,
@@ -81,20 +81,20 @@ function g(e) {
             ref: (e) => {
                 ((u.current = e), c(e));
             },
-            "data-dnd-name": h.intl.formatToPlainString(h.t.qiQ0QI, { itemName: t }),
-            className: s()(f.dw, {}),
+            "data-dnd-name": f.intl.formatToPlainString(f.t.qiQ0QI, { itemName: t }),
+            className: s()(h.dw, {}),
         }),
     });
 }
-let T = r.memo(function (e) {
+let g = r.memo(function (e) {
     let { name: t, targetNode: n, noCombine: r = !1, below: a = !1, onDragOverChanged: s } = e,
         l = !r && null == n.parentId;
     return (0, i.jsxs)("div", {
-        className: f.iE,
+        className: h.iE,
         "aria-hidden": !0,
         children: [
             (0, i.jsx)(m, { name: t, targetNode: n, below: a }),
-            l ? (0, i.jsx)(g, { name: t, targetNode: n, onDragOverChanged: s }) : null,
+            l ? (0, i.jsx)(T, { name: t, targetNode: n, onDragOverChanged: s }) : null,
         ],
     });
 });
@@ -102,7 +102,7 @@ n.d(
     t,
     {},
     {
-        Ay: T,
+        Ay: g,
         g4: function (e) {
             let { children: t } = e,
                 [, n] = (0, d.H)({ accept: [] });
@@ -116,23 +116,23 @@ n.d(
         qv: function (e) {
             let { name: t, targetNode: n } = e,
                 [{ canDrop: r, isOver: a }, s] = (0, d.H)(() => p([_.PJ.GUILD], n, !0, !0)),
-                l = I([[a, f.a7]]),
+                l = I([[a, h.a7]]),
                 o = I([
-                    [a, f.NQ],
-                    [r, f.OP],
+                    [a, h.NQ],
+                    [r, h.OP],
                 ]);
             return (0, i.jsx)("div", {
                 ref: l,
-                className: f.Ro,
+                className: h.Ro,
                 "aria-hidden": !0,
                 children: (0, i.jsx)("div", {
-                    className: f.aO,
+                    className: h.aO,
                     children: (0, i.jsx)("div", {
                         ref: (e) => {
                             ((o.current = e), s(e));
                         },
                         "aria-label": `At end of ${t}`,
-                        className: f.aC,
+                        className: h.aC,
                     }),
                 }),
             });

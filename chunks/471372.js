@@ -64,7 +64,7 @@ function A(e) {
     let i = (0, s.Di)(t);
     return null != i && (E({ warningId: i.id, warningType: i.type, senderId: n.getRecipientId(), channelId: t }), !0);
 }
-function h(e) {
+function f(e) {
     let { channels: t } = e;
     if (!(0, l.wv)({ location: "channel_updates" }) || !(0, s.gz)()) return !1;
     let n = a.Ay.getCurrentlySelectedChannelId();
@@ -77,7 +77,7 @@ function h(e) {
         (E({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
     );
 }
-class f extends i.A {
-    actions = { CHANNEL_SELECT: A, CHANNEL_UPDATES: h };
+class h extends i.A {
+    actions = { CHANNEL_SELECT: A, CHANNEL_UPDATES: f };
 }
-let I = new f();
+let I = new h();

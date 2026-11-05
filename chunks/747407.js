@@ -24,14 +24,14 @@ n.d(
                 E = (0, s.U_)(_, r.default.getUser(_?.userId), r.default.getUser(_?.secondaryUserId));
             if (null == E) return e.content;
             let A = t.getGuildId(),
-                h = (0, s.Sx)(E.data, {
+                f = (0, s.Sx)(E.data, {
                     username: a.Ay.getName(A, n, E.subject),
                     previousUsername: E.data.event === l.zu.LEADER_CHANGED ? a.Ay.getName(A, n, E.previousLeader) : "",
                 });
-            return null == h
+            return null == f
                 ? e.content
-                : c.intl.formatToPlainString(h.message, {
-                      ...h.values,
+                : c.intl.formatToPlainString(f.message, {
+                      ...f.values,
                       usernameHook: (e) => e,
                       previousUsernameHook: (e) => e,
                   });

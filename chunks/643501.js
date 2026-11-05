@@ -40,7 +40,7 @@ class A extends i.Ay.DeviceSettingsStore {
         return o;
     }
 }
-let h = new A(r.h, {
+let f = new A(r.h, {
     REMOTE_SESSION_CONNECT: function (e) {
         let { sessionId: t } = e;
         ((l = t), (o = null));
@@ -73,4 +73,4 @@ let h = new A(r.h, {
         u[t] = n;
     },
 });
-n.d(t, {}, { default: h });
+n.d(t, {}, { default: f });

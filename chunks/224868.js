@@ -10,13 +10,13 @@ var i = n(47167),
     _ = n(71393),
     E = n(576705),
     A = n(994500),
-    h = n(287809),
-    f = n(997625),
+    f = n(287809),
+    h = n(997625),
     I = n(690521),
     p = n(811091),
     m = n(408018),
-    g = n(652215),
-    T = n(307731);
+    T = n(652215),
+    g = n(307731);
 function S(e, t, n, m) {
     let { allowUsers: S = !0, allowRoles: C = !0 } = m ?? {};
     switch (e[0]) {
@@ -39,7 +39,7 @@ function S(e, t, n, m) {
                                   return t;
                               })
                     )
-                        .map((e) => h.default.getUser(e))
+                        .map((e) => f.default.getUser(e))
                         .filter((e) => void 0 !== e && N(a, s, e));
                     if (1 === i.length) {
                         let e = i[0];
@@ -57,7 +57,7 @@ function S(e, t, n, m) {
                     d = r.Ay.getDisambiguatedEmojiContext(t),
                     c = (0, s.A)(d, l),
                     u = null != n ? o.A.getChannel(n) : null;
-                return null == c || I.Ay.isEmojiFiltered({ emoji: c, channel: u, intention: T.EmojiIntention.CHAT })
+                return null == c || I.Ay.isEmojiFiltered({ emoji: c, channel: u, intention: g.EmojiIntention.CHAT })
                     ? null
                     : {
                           type: "customEmoji",
@@ -82,11 +82,11 @@ function S(e, t, n, m) {
             let y = d.A.getTextChannelNameDisambiguations(L);
             for (let e of p.default.keys(y))
                 if (y[e].name === O) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
-            for (let e of f.L3)
+            for (let e of h.L3)
                 if (e !== d.I) {
                     for (let { channel: t } of d.A.getChannels(L)[e])
-                        if ((0, i.m1)(t, h.default, A.A) === O) {
-                            if (t.isCategory() && !E.A.can(g.xBc.VIEW_CHANNEL, t)) continue;
+                        if ((0, i.m1)(t, f.default, A.A) === O) {
+                            if (t.isCategory() && !E.A.can(T.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
                         }
                 }
@@ -94,7 +94,7 @@ function S(e, t, n, m) {
             for (let e of p.default.keys(D))
                 for (let t of p.default.keys(D[e])) {
                     let { channel: n } = D[e][t];
-                    if ((0, i.m1)(n, h.default, A.A) === O)
+                    if ((0, i.m1)(n, f.default, A.A) === O)
                         return { type: "channelMention", channelId: n.id, children: [{ text: "" }] };
                 }
             break;

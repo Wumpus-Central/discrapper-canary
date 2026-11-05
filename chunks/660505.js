@@ -10,23 +10,23 @@ var l = n(477900),
     d = n(328056),
     m = n(834730),
     p = n(28863),
-    C = n(683071),
-    h = n(891197),
+    h = n(683071),
+    C = n(891197),
     f = n(695537),
     E = n(901930),
     S = n(725836),
     g = n(580133),
-    y = n(516106),
-    I = n(379912),
+    I = n(516106),
+    y = n(379912),
     A = n(792996),
     P = n(663466);
 function v() {
-    let e = (0, y.t4)((e) => (0, f.qn)(e.order));
+    let e = (0, I.t4)((e) => (0, f.qn)(e.order));
     return null == e || null == e.redirect_url
         ? null
         : (0, l.jsx)(m.E, {
               variant: "body-md/normal",
-              children: A.intl.format(I.default.fJnl1h, {
+              children: A.intl.format(y.default.fJnl1h, {
                   reopenHook: (t, n) => (0, l.jsx)(p.Anchor, { onClick: () => (0, f.DL)(e), children: t }, n),
               }),
           });
@@ -36,9 +36,9 @@ function x() {
     return null != e
         ? (0, l.jsx)("div", {
               className: P.l,
-              children: (0, l.jsx)(C.w, { type: "critical", message: t, role: "alert" }),
+              children: (0, l.jsx)(h.w, { type: "critical", message: t, role: "alert" }),
           })
-        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(h.N, {}), (0, l.jsx)(v, {})] });
+        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(v, {})] });
 }
 function _() {
     return (0, l.jsxs)(l.Fragment, {
@@ -57,16 +57,16 @@ function N(e) {
             isTrial: r,
             handleStepChange: m,
             openInvoiceId: p,
-            analyticsData: C,
-            analyticsLocation: h,
+            analyticsData: h,
+            analyticsLocation: C,
             handlePaymentSourceAdd: f,
         } = e,
         {
             paymentSourceId: E,
             purchaseError: S,
             setCheckoutCurrency: g,
-            isOrderSigningInProgress: I,
-        } = (0, y.t4)((e) => ({
+            isOrderSigningInProgress: y,
+        } = (0, I.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             purchaseError: e.purchaseError,
             setCheckoutCurrency: e.setCheckoutCurrency,
@@ -78,7 +78,7 @@ function N(e) {
         { paymentSources: v } = (0, T.j)(),
         x = (0, c.W)(v, E),
         N = (0, s.iB)({ paymentSourceId: E, location: "CheckoutBaseReviewStep" }),
-        j = (0, y.t4)((e) =>
+        j = (0, I.t4)((e) =>
             e.getIsReviewSubmitDisabled({ paymentSource: x, isWalletPurchaseDisabled: N, isTrial: r }),
         );
     i.useEffect(() => {
@@ -94,13 +94,13 @@ function N(e) {
             onBack: O,
             onPaymentSourceAdd: f,
             disableSubmit: j,
-            analyticsLocation: h,
-            baseAnalyticsData: C,
+            analyticsLocation: C,
+            baseAnalyticsData: h,
             openInvoiceId: p,
             handleStepChange: m,
             postPurchaseStep: o.pn.CONFIRM,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: I ? (0, l.jsx)(_, {}) : M }), (0, l.jsx)(u.UX, { children: L })],
+        children: [(0, l.jsx)(u.dZ, { children: y ? (0, l.jsx)(_, {}) : M }), (0, l.jsx)(u.UX, { children: L })],
     });
 }

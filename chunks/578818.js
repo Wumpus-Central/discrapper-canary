@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -25,7 +25,7 @@ function A(e) {
         i = t === l.A.getDMFromUserId(c.K);
     null != n && n.hasUrgentMessages() && i && ((_ = !1), a.lA(u.nhx.HAS_UNREAD_URGENT_MESSAGES, !1));
 }
-class h extends s.A {
+class f extends s.A {
     handleShowUrgentMessageAlert;
     actions = {
         POST_CONNECTION_OPEN: () => E(this.handleShowUrgentMessageAlert),
@@ -36,7 +36,7 @@ class h extends s.A {
         (super(), (this.handleShowUrgentMessageAlert = e));
     }
 }
-let f = new h(() =>
+let h = new f(() =>
     (0, r.mM)(
         async () => {
             let { default: e } = await Promise.all([n.e(454048), n.e(689913), n.e(758114)]).then(n.bind(n, 752313));

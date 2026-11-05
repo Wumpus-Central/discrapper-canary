@@ -13,7 +13,7 @@ var s = n(477900),
     j = n(818348),
     f = n(792996),
     v = n(395822);
-function k(t) {
+function N(t) {
     let { days: e } = t;
     return (0, s.jsxs)("div", {
         className: v.S5,
@@ -27,7 +27,7 @@ function k(t) {
         ],
     });
 }
-function p(t) {
+function k(t) {
     let {
         timeLeft: { days: e, hours: n, minutes: r, seconds: o },
     } = t;
@@ -111,8 +111,8 @@ n.d(
             null == n)
                 ? null
                 : n.days > 0
-                  ? (0, s.jsx)(k, { days: n.days })
-                  : (0, s.jsx)(p, { timeLeft: n });
+                  ? (0, s.jsx)(N, { days: n.days })
+                  : (0, s.jsx)(k, { timeLeft: n });
         },
     },
 );

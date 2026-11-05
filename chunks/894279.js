@@ -1,3 +1,3 @@
-var a,
-    n = (((a = {}).TEXT = "text"), (a.NUMBER = "number"), (a.IMAGE = "image"), (a.DURATION = "duration"), a);
-l.d(t, {}, { P: n });
+var n,
+    a = (((n = {}).TEXT = "text"), (n.NUMBER = "number"), (n.IMAGE = "image"), (n.DURATION = "duration"), n);
+l.d(t, {}, { P: a });

@@ -4,8 +4,8 @@ var s = n(477900),
     i = n.n(t),
     r = n(164636),
     c = n(993077),
-    d = n(97808),
-    o = n(778712),
+    o = n(97808),
+    d = n(778712),
     u = n(834730),
     m = n(329177),
     h = n(778858),
@@ -14,9 +14,9 @@ var s = n(477900),
     j = n(917445),
     A = n(71393),
     b = n(287809),
-    N = n(562153),
-    f = n(427262),
-    v = n(914589);
+    I = n(562153),
+    N = n(427262),
+    f = n(914589);
 n.d(
     l,
     {},
@@ -24,53 +24,53 @@ n.d(
         A: function (e) {
             var l, n;
             let t,
-                { guildId: I, welcomeMessage: C, className: p } = e,
-                E = (0, r.bG)([A.A], () => A.A.getGuild(I)),
+                { guildId: v, welcomeMessage: C, className: p } = e,
+                E = (0, r.bG)([A.A], () => A.A.getGuild(v)),
                 y = (0, r.bG)([x.Ay], () => x.Ay.useReducedMotion),
                 G = (0, r.bG)([b.default], () => b.default.getUser(C?.authorIds[0])),
-                M = a.useMemo(() => (null != E && null != G && (0, g.c)(E, G) ? G : null), [E, G]),
-                L = (0, r.bG)([b.default], () => b.default.getCurrentUser()),
-                _ = a.useMemo(() => C?.authorIds ?? [], [C]);
+                k = a.useMemo(() => (null != E && null != G && (0, g.c)(E, G) ? G : null), [E, G]),
+                M = (0, r.bG)([b.default], () => b.default.getCurrentUser()),
+                L = a.useMemo(() => C?.authorIds ?? [], [C]);
             (a.useEffect(() => {
-                h.A.requestMembersById(I, _);
-            }, [I, _]),
+                h.A.requestMembersById(v, L);
+            }, [v, L]),
                 a.useEffect(() => {
-                    null != M && (0, j.A)(M.id, M.getAvatarURL(I, 48), { guildId: I });
-                }, [M, I]));
-            let k = N.Ay.useName(I, null, M),
-                U = (0, f.tx)(L);
-            if (null == M || null == L || null == C) return null;
-            let R = null != E && E.ownerId === M.id;
+                    null != k && (0, j.A)(k.id, k.getAvatarURL(v, 48), { guildId: v });
+                }, [k, v]));
+            let _ = I.Ay.useName(v, null, k),
+                U = (0, N.tx)(M);
+            if (null == k || null == M || null == C) return null;
+            let R = null != E && E.ownerId === k.id;
             return (0, s.jsxs)(c.Z, {
-                className: i()(v.fr, p),
+                className: i()(f.fr, p),
                 children: [
-                    (0, s.jsx)("div", { className: v.oJ }),
+                    (0, s.jsx)("div", { className: f.oJ }),
                     y
-                        ? (0, s.jsx)(d.eu, {
-                              src: M.getAvatarURL(I, 48),
-                              size: o._3.SIZE_48,
-                              className: v.my,
-                              "aria-label": M.username,
+                        ? (0, s.jsx)(o.eu, {
+                              src: k.getAvatarURL(v, 48),
+                              size: d._3.SIZE_48,
+                              className: f.my,
+                              "aria-label": k.username,
                           })
-                        : (0, s.jsx)(d.Js, {
-                              src: M.getAvatarURL(I, 48),
-                              size: o._3.SIZE_48,
-                              className: v.my,
-                              "aria-label": M.username,
+                        : (0, s.jsx)(o.Js, {
+                              src: k.getAvatarURL(v, 48),
+                              size: d._3.SIZE_48,
+                              className: f.my,
+                              "aria-label": k.username,
                           }),
-                    (0, s.jsx)("div", { className: v.uh }),
+                    (0, s.jsx)("div", { className: f.uh }),
                     (0, s.jsxs)("div", {
-                        className: v.H0,
+                        className: f.H0,
                         children: [
                             (0, s.jsxs)("div", {
-                                className: v.HO,
+                                className: f.HO,
                                 children: [
-                                    (0, s.jsx)(u.E, { variant: "body-sm/semibold", color: "text-strong", children: k }),
+                                    (0, s.jsx)(u.E, { variant: "body-sm/semibold", color: "text-strong", children: _ }),
                                     R
                                         ? (0, s.jsx)(m.CrownIcon, {
                                               size: "xxs",
                                               color: "currentColor",
-                                              className: v.Dd,
+                                              className: f.Dd,
                                           })
                                         : null,
                                 ],
@@ -79,7 +79,7 @@ n.d(
                                 variant: "body-md/medium",
                                 children:
                                     ((l = C?.message),
-                                    (n = U ?? L.username),
+                                    (n = U ?? M.username),
                                     (t = l.split(/\[@username\]/g)),
                                     (0, s.jsx)("span", {
                                         children: t.map((e, l) =>

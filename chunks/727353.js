@@ -16,7 +16,7 @@ var i = l(503698),
     x = l(607407),
     g = l(652215),
     f = l(792996),
-    j = l(417979);
+    N = l(417979);
 l.d(
     t,
     {},
@@ -31,15 +31,15 @@ l.d(
                     showHeader: A = !1,
                     wrapperClassName: h,
                 } = e,
-                { actionString: g, canWatch: v, channel: N } = (0, y.K)(t);
-            return null == N
+                { actionString: g, canWatch: j, channel: v } = (0, y.K)(t);
+            return null == v
                 ? null
                 : (0, n.jsxs)("div", {
-                      className: a()(j.yt, h),
+                      className: a()(N.yt, h),
                       children: [
                           A &&
                               (0, n.jsxs)("div", {
-                                  className: j.mg,
+                                  className: N.mg,
                                   children: [
                                       (0, n.jsx)(r.E, {
                                           variant: "body-xs/medium",
@@ -52,16 +52,16 @@ l.d(
                           null != s
                               ? (0, n.jsxs)(o.D, {
                                     onClick: s,
-                                    className: j.GE,
+                                    className: N.GE,
                                     children: [
-                                        (0, n.jsx)(x.A, { className: j.oz, stream: t, noImage: !0 }),
-                                        v
+                                        (0, n.jsx)(x.A, { className: N.oz, stream: t, noImage: !0 }),
+                                        j
                                             ? (0, n.jsx)("div", {
-                                                  className: j.xD,
+                                                  className: N.xD,
                                                   children: (0, n.jsx)(r.E, {
                                                       variant: "body-sm/normal",
                                                       color: "none",
-                                                      className: j.ON,
+                                                      className: N.ON,
                                                       children: g,
                                                   }),
                                               })
@@ -69,16 +69,16 @@ l.d(
                                     ],
                                 })
                               : (0, n.jsxs)("div", {
-                                    className: j.GE,
+                                    className: N.GE,
                                     children: [
-                                        (0, n.jsx)(x.A, { className: j.oz, stream: t, noImage: !0 }),
-                                        v
+                                        (0, n.jsx)(x.A, { className: N.oz, stream: t, noImage: !0 }),
+                                        j
                                             ? (0, n.jsx)("div", {
-                                                  className: j.xD,
+                                                  className: N.xD,
                                                   children: (0, n.jsx)(r.E, {
                                                       variant: "body-sm/normal",
                                                       color: "none",
-                                                      className: j.ON,
+                                                      className: N.ON,
                                                       children: g,
                                                   }),
                                               })
@@ -86,14 +86,14 @@ l.d(
                                     ],
                                 }),
                           (0, n.jsx)("div", {
-                              className: j.JN,
+                              className: N.JN,
                               children:
                                   null != l
                                       ? (0, n.jsx)(p.A, {
                                             showHeader: !1,
                                             presenceActivity: l,
                                             userId: i.id,
-                                            channel: N,
+                                            channel: v,
                                             applicationStream: t,
                                             onAction: d,
                                         })
@@ -103,7 +103,7 @@ l.d(
                                             user: i,
                                             guildId: t.guildId,
                                             channelId: t.channelId,
-                                            className: j.lx,
+                                            className: N.lx,
                                             onAction: d,
                                         }),
                           }),
@@ -117,13 +117,13 @@ l.d(
                     streamApplication: i,
                     user: m,
                     onWatchStream: p,
-                    onAction: v,
-                    showHeader: N = !1,
-                    hideTip: T = !1,
-                    className: I,
+                    onAction: j,
+                    showHeader: v = !1,
+                    hideTip: I = !1,
+                    className: T,
                 } = e,
                 { actionString: S, canWatch: C } = (0, y.K)(t),
-                b = (0, s.bG)(
+                P = (0, s.bG)(
                     [d.A],
                     () => {
                         if (null != i) {
@@ -134,37 +134,37 @@ l.d(
                     },
                     [i],
                 ),
-                P =
+                b =
                     null != l && null != l.name
                         ? f.intl.formatToPlainString(f.t["4CQq9Q"], { name: l.name })
                         : f.intl.string(f.t["Jpkr/q"]),
-                L = (0, n.jsxs)(n.Fragment, {
+                E = (0, n.jsxs)(n.Fragment, {
                     children: [
-                        N &&
+                        v &&
                             (0, n.jsxs)("div", {
-                                className: j.WG,
+                                className: N.WG,
                                 children: [
-                                    null != b && (0, n.jsx)(h.A, { game: b, className: j.lK }),
+                                    null != P && (0, n.jsx)(h.A, { game: P, className: N.lK }),
                                     (0, n.jsx)(r.E, {
                                         variant: "body-xs/semibold",
                                         color: "currentColor",
-                                        children: P,
+                                        children: b,
                                     }),
                                 ],
                             }),
                         null != p
                             ? (0, n.jsxs)(o.D, {
                                   onClick: p,
-                                  className: j.i1,
+                                  className: N.i1,
                                   children: [
-                                      (0, n.jsx)(x.A, { className: j.oz, stream: t }),
+                                      (0, n.jsx)(x.A, { className: N.oz, stream: t }),
                                       C
                                           ? (0, n.jsx)("div", {
-                                                className: j.xD,
+                                                className: N.xD,
                                                 children: (0, n.jsx)(r.E, {
                                                     variant: "body-sm/normal",
                                                     color: "none",
-                                                    className: j.ON,
+                                                    className: N.ON,
                                                     children: S,
                                                 }),
                                             })
@@ -172,16 +172,16 @@ l.d(
                                   ],
                               })
                             : (0, n.jsxs)("div", {
-                                  className: j.i1,
+                                  className: N.i1,
                                   children: [
-                                      (0, n.jsx)(x.A, { className: j.oz, stream: t }),
+                                      (0, n.jsx)(x.A, { className: N.oz, stream: t }),
                                       C
                                           ? (0, n.jsx)("div", {
-                                                className: j.xD,
+                                                className: N.xD,
                                                 children: (0, n.jsx)(r.E, {
                                                     variant: "body-sm/normal",
                                                     color: "none",
-                                                    className: j.ON,
+                                                    className: N.ON,
                                                     children: S,
                                                 }),
                                             })
@@ -189,7 +189,7 @@ l.d(
                                   ],
                               }),
                         (0, n.jsxs)("div", {
-                            className: j.rf,
+                            className: N.rf,
                             children: [
                                 null != l
                                     ? (0, n.jsx)(c.A, {
@@ -205,7 +205,7 @@ l.d(
                                                   section: g.JJy.STREAM_VIEWER_POPOUT,
                                               },
                                           },
-                                          onAction: v,
+                                          onAction: j,
                                       })
                                     : (0, n.jsx)(u.A, {
                                           type: c.M.STREAM_PREVIEW,
@@ -213,13 +213,13 @@ l.d(
                                           user: m,
                                           guildId: t.guildId,
                                           channelId: t.channelId,
-                                          className: j.lx,
-                                          onAction: v,
+                                          className: N.lx,
+                                          onAction: j,
                                       }),
-                                !T &&
+                                !I &&
                                     (0, n.jsx)(A.A, {
                                         type: A.A.Types.INLINE,
-                                        className: j.PP,
+                                        className: N.PP,
                                         children: __OVERLAY__ ? f.intl.string(f.t.YRdw70) : f.intl.string(f.t.CCTgbF),
                                     }),
                             ],
@@ -227,8 +227,8 @@ l.d(
                     ],
                 });
             return (0, n.jsx)("div", {
-                className: j.yt,
-                children: (0, n.jsx)("div", { className: a()(j.Rh, I), children: L }),
+                className: N.yt,
+                children: (0, n.jsx)("div", { className: a()(N.Rh, T), children: E }),
             });
         },
     },

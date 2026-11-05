@@ -18,15 +18,15 @@ function A(e, t) {
     let r = i.messages[t];
     return null == r ? null : { guildId: n, message: r };
 }
-function h(e, t) {
+function f(e, t) {
     let n = E[e];
     null != n && (E = { ...E, [e]: { ...n, ...t(n) } });
 }
-function f(e, t) {
-    h(e, (e) => ({ ids: [t.id, ...e.ids], messages: { ...e.messages, [t.id]: t } }));
+function h(e, t) {
+    f(e, (e) => ({ ids: [t.id, ...e.ids], messages: { ...e.messages, [t.id]: t } }));
 }
 function I(e, t) {
-    h(e, (e) => ({ messages: { ...e.messages, [t.id]: t } }));
+    f(e, (e) => ({ messages: { ...e.messages, [t.id]: t } }));
 }
 function p(e) {
     let { channel: t } = e,
@@ -38,7 +38,7 @@ function p(e) {
         a = { ...i.messages };
     for (let e of i.ids) i.messages[e]?.channel_id === t.id ? delete a[e] : r.push(e);
     if (r.length === i.ids.length) return !1;
-    h(n, () => ({ ids: r, messages: a }));
+    f(n, () => ({ ids: r, messages: a }));
 }
 function m() {
     let e = {},
@@ -59,7 +59,7 @@ function m() {
     if (!t) return !1;
     E = e;
 }
-class g extends r.Ay.Store {
+class T extends r.Ay.Store {
     static displayName = "GuildOfficialMessagesStore";
     initialize() {
         this.waitFor(s.A, l.Ay, o.A, d.A, c.default);
@@ -84,7 +84,7 @@ class g extends r.Ay.Store {
         return E[e]?.hasMore ?? !1;
     }
 }
-let T = new g(a.h, {
+let g = new T(a.h, {
     CONNECTION_OPEN: function () {
         E = {};
     },
@@ -100,7 +100,7 @@ let T = new g(a.h, {
     LOAD_OFFICIAL_MESSAGES_SUCCESS: function (e) {
         let { guildId: t, messages: n, hasMore: i, before: r } = e;
         if (null == E[t]) return !1;
-        h(t, (e) => {
+        f(t, (e) => {
             let t = null != r ? [...e.ids] : [],
                 a = null != r ? { ...e.messages } : {};
             for (let e of n) {
@@ -113,7 +113,7 @@ let T = new g(a.h, {
     LOAD_OFFICIAL_MESSAGES_FAILURE: function (e) {
         let { guildId: t, before: n } = e;
         if (null == E[t]) return !1;
-        null != n ? h(t, () => ({ loading: !1 })) : h(t, () => ({ loading: !1, error: !0 }));
+        null != n ? f(t, () => ({ loading: !1 })) : f(t, () => ({ loading: !1, error: !0 }));
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
@@ -128,7 +128,7 @@ let T = new g(a.h, {
         if (r || a || null == n || !(0, i.Lt)(t.flags ?? 0, _.pr7.IS_GUILD_OFFICIAL)) return !1;
         let s = E[n];
         if (null == s || null != s.messages[t.id]) return !1;
-        f(n, (0, u.rh)(t));
+        h(n, (0, u.rh)(t));
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
@@ -141,10 +141,10 @@ let T = new g(a.h, {
         let l = a.messages[t.id];
         if (null == t.author) return null != l && void I(r, (0, u.IU)(l, t));
         let o = (0, i.Lt)(t.flags ?? 0, _.pr7.IS_GUILD_OFFICIAL);
-        if (o && null == l) return void f(r, (0, u.rh)(t));
+        if (o && null == l) return void h(r, (0, u.rh)(t));
         if (!o && null != l) {
             let e = t.id;
-            h(r, (t) => {
+            f(r, (t) => {
                 let n = { ...t.messages };
                 return (delete n[e], { ids: t.ids.filter((t) => t !== e), messages: n });
             });
@@ -187,7 +187,7 @@ let T = new g(a.h, {
     MESSAGE_DELETE: function (e) {
         let { id: t, guildId: n } = e;
         if (null == n || E[n]?.messages[t] == null) return !1;
-        h(n, (e) => {
+        f(n, (e) => {
             let n = { ...e.messages };
             return (delete n[t], { ids: e.ids.filter((e) => e !== t), messages: n });
         });
@@ -202,10 +202,10 @@ let T = new g(a.h, {
         if (a.length === i.ids.length) return !1;
         let s = { ...i.messages };
         for (let e of i.ids) r.has(e) && delete s[e];
-        h(n, () => ({ ids: a, messages: s }));
+        f(n, () => ({ ids: a, messages: s }));
     },
     RELATIONSHIP_ADD: m,
     RELATIONSHIP_REMOVE: m,
     RELATIONSHIP_UPDATE: m,
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

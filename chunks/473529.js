@@ -10,7 +10,7 @@ var i = n(164636),
     _ = n(978165),
     E = n(652215),
     A = n(746080);
-function h(e, t) {
+function f(e, t) {
     let n = e.id,
         i = !(0, c.jJ)(t.getSettings(n)),
         r = t.getEnabled(n);
@@ -24,7 +24,7 @@ n.d(
             let t = o.A.getGuild(e),
                 n = s.A.isFullServerPreview(e);
             if (null == t || __OVERLAY__ || e === E.ME || (0, r.ai)(e)) return !1;
-            if (n) return h(t, d.h);
+            if (n) return f(t, d.h);
             let i =
                 (0, a.rs)(e) &&
                 t.features.has(E.GuildFeatures.GUILD_ONBOARDING) &&
@@ -46,7 +46,7 @@ n.d(
                     return (
                         !!n?.features.has(E.GuildFeatures.COMMUNITY) &&
                         (s.A.isFullServerPreview(e)
-                            ? h(n, d.h)
+                            ? f(n, d.h)
                             : !!(0, u.A)(n) &&
                               (t ||
                                   (function (e, t) {

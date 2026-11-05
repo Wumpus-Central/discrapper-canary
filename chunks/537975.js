@@ -2,16 +2,16 @@ n.d(t, {
     Me: () => A,
     tJ: () => O,
     dangerouslyConstructGuildRecordFromUntypedObject: () => S,
-    kI: () => h,
-    Y1: () => f,
-    yF: () => T,
+    kI: () => f,
+    Y1: () => h,
+    yF: () => g,
     xi: () => m,
     b9: () => p,
     zT: () => _,
     DY: () => I,
     $O: () => C,
     Wj: () => E,
-    Yh: () => g,
+    Yh: () => T,
     fh: () => u,
     yN: () => N,
 });
@@ -146,12 +146,12 @@ function A(e, t, n) {
         member: null != n ? { userId: n.userId, roles: n.roles } : null,
     };
 }
-function h(e, t) {
+function f(e, t) {
     return null == e.properties
         ? t
         : _(e.properties, { joinedAt: t.joinedAt, premiumSubscriberCount: t.premiumSubscriberCount }, t);
 }
-function f(e, t) {
+function h(e, t) {
     return _(
         e,
         {
@@ -199,7 +199,7 @@ function m(e) {
         features: (0, a.y)(e.features),
     });
 }
-function g(e) {
+function T(e) {
     return O({
         id: e.id,
         name: e.name,
@@ -210,7 +210,7 @@ function g(e) {
         verificationLevel: e.verification_level ?? d.do.verificationLevel,
     });
 }
-function T(e) {
+function g(e) {
     return O({
         id: e.id,
         name: e.name,

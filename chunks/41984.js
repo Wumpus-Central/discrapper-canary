@@ -20,7 +20,7 @@ var i,
         (a[(a.OutOfProcess = 2)] = "OutOfProcess"),
         (a[(a.OutOfProcessLimitedInteraction = 3)] = "OutOfProcessLimitedInteraction"),
         a),
-    h =
+    f =
         (((s = {}).ClickZones = "click_zones"),
         (s.WidgetAreas = "widget_areas"),
         (s.WindowContainer = "window_container"),
@@ -30,7 +30,7 @@ var i,
         (s.OverlayRafManagerForceEnabled = "overlay_raf_manager_force_enabled"),
         (s.LegacyOverlayLogging = "legacy_overlay_logging"),
         s),
-    f =
+    h =
         (((l = {}).HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED = "HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED"),
         (l.OVERLAY_UNLOCKED = "OVERLAY_UNLOCKED"),
         (l.OVERLAY_VIDEO_STREAM_RENDERING = "OVERLAY_VIDEO_STREAM_RENDERING"),
@@ -66,7 +66,7 @@ var i,
         (c.MODULE_TRACKING = "module_tracking"),
         (c.OVERLAY_RENDERING = "overlay_rendering"),
         c),
-    g =
+    T =
         (((u = {}).INITIALIZING = "initializing"),
         (u.OVERLAY_DISABLED = "overlay_disabled"),
         (u.OVERLAY_TEARING_DOWN = "overlay_tearing_down"),
@@ -83,4 +83,4 @@ var i,
         (u.OVERLAY_CRASHED_DISABLED = "overlay_crashed_disabled"),
         (u.GAME_UNTRACKED = "game_untracked"),
         u);
-n.d(t, {}, { AR: g, B9: I, Ue: A, V6: E, sf: m, su: _, x7: h, y7: f, yp: p });
+n.d(t, {}, { AR: T, B9: I, Ue: A, V6: E, sf: m, su: _, x7: f, y7: h, yp: p });

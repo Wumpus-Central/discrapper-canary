@@ -9,26 +9,26 @@ var l = n(582128),
     d = n(459005),
     m = n(25082),
     p = n(792996);
-function C(e) {
-    let { surface: t, applicationId: n, skuId: C } = e,
-        h = (0, c.m)(n),
-        f = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(C), [C]),
-        E = (0, u.x)({ surface: t, skuId: C }),
+function h(e) {
+    let { surface: t, applicationId: n, skuId: h } = e,
+        C = (0, c.m)(n),
+        f = (0, i.bG)([r.A], () => r.A.getPromotionIdsForSkuId(h), [h]),
+        E = (0, u.x)({ surface: t, skuId: h }),
         S = l.useMemo(() => {
-            if (null == h) return null;
+            if (null == C) return null;
             for (let e of f ?? []) {
-                let t = h[e];
+                let t = C[e];
                 if (null != t) return t;
             }
             for (let e of E) {
-                let t = h[e.promotionId];
+                let t = C[e.promotionId];
                 if (null != t) return t;
             }
             return null;
-        }, [h, f, E]),
-        g = (0, d.n)({ surface: t, skuId: C }),
-        y = (0, o.j)(S, "pdp.label"),
-        I = (0, o.j)(S, "pdp.tooltip"),
+        }, [C, f, E]),
+        g = (0, d.n)({ surface: t, skuId: h }),
+        I = (0, o.j)(S, "pdp.label"),
+        y = (0, o.j)(S, "pdp.tooltip"),
         A = (0, o.j)(S, "checkout.label"),
         P = (0, o.j)(S, "checkout.tooltip");
     return (
@@ -53,12 +53,12 @@ function C(e) {
                 case "pdp":
                 case "card": {
                     let t = S.pdp,
-                        n = (0, s.Ew)(y, g?.amount ?? null);
+                        n = (0, s.Ew)(I, g?.amount ?? null);
                     if ((0, a.uJ)(n)) return null;
                     return {
                         Icon: (0, s.LZ)(t?.icon ?? null),
                         text: n,
-                        tooltip: (0, s.Ew)(I, g?.amount ?? null),
+                        tooltip: (0, s.Ew)(y, g?.amount ?? null),
                         endsAt: e,
                         flavor: S.flavor,
                         rewardRequirements: S.rewardRequirements,
@@ -68,8 +68,8 @@ function C(e) {
                 case "sku_purchase_badge":
                 case "sku_gift_badge": {
                     if (null == g) return null;
-                    let n = "sku_gift_badge" === t ? A : y,
-                        l = "sku_gift_badge" === t ? P : I,
+                    let n = "sku_gift_badge" === t ? A : I,
+                        l = "sku_gift_badge" === t ? P : y,
                         i = (0, s.Ew)(n, g.amount);
                     if ((0, a.uJ)(i)) return null;
                     return {
@@ -82,17 +82,17 @@ function C(e) {
                     };
                 }
             }
-        }, [t, S, g, y, I, A, P])
+        }, [t, S, g, I, y, A, P])
     );
 }
 n.d(
     t,
     {},
     {
-        D: C,
+        D: h,
         b: function (e) {
             let { surface: t, applicationId: n, skuId: i } = e,
-                r = C({ surface: t, applicationId: n, skuId: i }),
+                r = h({ surface: t, applicationId: n, skuId: i }),
                 a = (0, d.n)({ surface: t, skuId: i }),
                 s = (0, u.x)({ surface: t, skuId: i });
             return l.useMemo(() => ({ display: r, reward: a, offers: s }), [r, a, s]);

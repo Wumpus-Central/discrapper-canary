@@ -1,13 +1,13 @@
 var i = n(855986),
-    l = n(73153),
-    r = n(652215);
+    r = n(73153),
+    l = n(652215);
 let s = {};
 function a(e) {
     let t = s[(e = e ?? "null")];
     return (
         null == t &&
             (t = s[e] =
-                { state: r.S7L.DISCONNECTED, quality: r.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
+                { state: l.S7L.DISCONNECTED, quality: l.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
         t
     );
 }
@@ -24,7 +24,7 @@ class u extends i.Ay.Store {
                 let { state: t } = e;
                 return t;
             },
-            r.S7L.DISCONNECTED,
+            l.S7L.DISCONNECTED,
         );
     }
     getQuality(e) {
@@ -34,7 +34,7 @@ class u extends i.Ay.Store {
                 let { quality: t } = e;
                 return t;
             },
-            r.bFR.UNKNOWN,
+            l.bFR.UNKNOWN,
         );
     }
     getHostname(e) {
@@ -76,7 +76,7 @@ class u extends i.Ay.Store {
         );
     }
 }
-let d = new u(l.h, {
+let d = new u(r.h, {
     OVERLAY_INITIALIZE: function (e) {
         s = e.rtcConnectionStates;
     },

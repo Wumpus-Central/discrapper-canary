@@ -11,13 +11,13 @@ var i = n(582128),
     _ = n(97352),
     E = n(722178),
     A = n(652215),
-    h = n(682901);
-function f(e, t, n) {
+    f = n(682901);
+function h(e, t, n) {
     let i = e.getCurrentSubscriptionPlanIdForGroup(n);
     if (e.type === A.rzx.PREMIUM && null == i) return !0;
     let r = { oldPlanId: i, newPlanId: t };
     if (null == i) throw new u.v({ message: "Current subscription has no plan in group", extraSentryInformation: r });
-    if (i === h.gD.PREMIUM_YEAR_TIER_1 && t === h.gD.PREMIUM_MONTH_TIER_2)
+    if (i === f.gD.PREMIUM_YEAR_TIER_1 && t === f.gD.PREMIUM_MONTH_TIER_2)
         throw new u.v({ message: "Unexpected plan switch", extraSentryInformation: r });
     return n.indexOf(i) < n.indexOf(t);
 }
@@ -25,7 +25,7 @@ n.d(
     t,
     {},
     {
-        Ge: f,
+        Ge: h,
         MP: function (e) {
             return e.items
                 .map((e) => {
@@ -52,7 +52,7 @@ n.d(
         c9: function (e, t) {
             let n = _.A.get(e);
             if (null == n) {
-                let n = h.hd[e];
+                let n = f.hd[e];
                 a()(null != n, `Missing hardcoded subscriptionPlan: ${e}`);
                 let i = (0, E.mH)(n.skuId);
                 _.A.isFetchingForSKU(i) || (0, c.ur)(i, t);
@@ -60,7 +60,7 @@ n.d(
             return n;
         },
         vT: function (e, t, n) {
-            return !f(e, t, n);
+            return !h(e, t, n);
         },
         zz: function (e, t) {
             let [n, r] = (0, d.yK)([_.A], () => {
@@ -70,7 +70,7 @@ n.d(
             return (
                 i.useEffect(() => {
                     if (null != n || null == e || r) return;
-                    let i = h.hd[e];
+                    let i = f.hd[e];
                     (a()(null != i, `Missing hardcoded subscriptionPlan: ${e}`), (0, c.ur)((0, E.mH)(i.skuId), t));
                 }, [n, e, t, r]),
                 n

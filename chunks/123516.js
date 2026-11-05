@@ -1,6 +1,6 @@
 var i = n(778858),
-    l = n(463347),
-    r = n(46653),
+    r = n(463347),
+    l = n(46653),
     s = n(71393);
 let a = new Map();
 n.d(
@@ -9,8 +9,8 @@ n.d(
     {
         A: function (e) {
             if (null != s.A.getGuild(e)) return Promise.resolve(!0);
-            let t = r.default.getSessionId();
-            if (!(0, l.nn)(e) || null == t) return Promise.resolve(!1);
+            let t = l.default.getSessionId();
+            if (!(0, r.nn)(e) || null == t) return Promise.resolve(!1);
             let n = `${t}:${e}`,
                 o = a.get(n);
             return (

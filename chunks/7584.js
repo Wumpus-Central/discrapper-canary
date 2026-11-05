@@ -14,20 +14,20 @@ let o = null,
     A =
         /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g,
     {
-        emojis: h,
-        emojisByCategory: f,
+        emojis: f,
+        emojisByCategory: h,
         nameToEmoji: I,
         surrogateToEmoji: p,
         numDiversitySprites: m,
-        numNonDiversitySprites: g,
+        numNonDiversitySprites: T,
     } = n(13474);
-function T(e) {
+function g(e) {
     let t = I[e];
-    return null == t ? null : h[t];
+    return null == t ? null : f[t];
 }
 function S(e) {
     let t = p[e];
-    return null == t ? null : h[t];
+    return null == t ? null : f[t];
 }
 class N {
     emojiObject;
@@ -52,7 +52,7 @@ class N {
             null != e.diversityChildren)
         )
             for (let t of e.diversityChildren) {
-                let e = h[t];
+                let e = f[t];
                 if (null != e.diversity) {
                     let t = e.diversity.join("-");
                     this.diversityChildren[t] = new N(e);
@@ -119,7 +119,7 @@ function C(e) {
     return (d.set(e, n), n);
 }
 function O(e) {
-    let t = T(e);
+    let t = g(e);
     return null != t ? C(t) : null;
 }
 let R = new Map();
@@ -164,7 +164,7 @@ function P(e, t) {
 }
 function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    return T(e)?.surrogates ?? t;
+    return g(e)?.surrogates ?? t;
 }
 function U(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -184,14 +184,14 @@ n.d(
                 o = null != e && "" !== e ? e : null;
             },
             getCategories: function () {
-                return Object.keys(f);
+                return Object.keys(h);
             },
             getByName: O,
             getByCategory: function (e) {
                 let t = R.get(e);
                 if (null == t) {
-                    let n = f[e];
-                    ((t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), R.set(e, t));
+                    let n = h[e];
+                    ((t = s.Ay.filterUnsupportedEmojis(f.slice(n[0], n[1])).map(C)), R.set(e, t));
                 }
                 return t;
             },
@@ -229,10 +229,10 @@ n.d(
                 );
             },
             forEach: (e) => {
-                for (let t of h) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
+                for (let t of f) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
             },
             numDiversitySprites: m,
-            numNonDiversitySprites: g,
+            numNonDiversitySprites: T,
             EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
             EMOJI_NAME_AND_DIVERSITY_RE: u,
             EMOJI_SHORTCUT_RE:

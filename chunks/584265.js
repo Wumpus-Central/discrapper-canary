@@ -1,4 +1,4 @@
-s.d(t, { A: () => y });
+s.d(t, { A: () => k });
 var r = s(477900),
     n = s(582128),
     i = s(503698),
@@ -15,10 +15,10 @@ var r = s(477900),
     p = s(803306),
     f = s(356343),
     E = s(713654),
-    N = s(166005),
-    A = s(95701),
-    C = s(34457),
-    I = s(287809),
+    C = s(166005),
+    I = s(95701),
+    N = s(34457),
+    A = s(287809),
     L = s(147925),
     j = s(9865),
     v = s(620632),
@@ -58,25 +58,25 @@ var R = s(129230),
     Z = s(833397),
     B = s(792996),
     M = s(941094);
-function y(e) {
+function k(e) {
     let t,
         s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [i, a] = n.useState(""),
         [l, d] = n.useState(null),
         [h, E] = n.useState(null),
-        N = (0, O.A)(e.code);
+        C = (0, O.A)(e.code);
     (n.useEffect(() => {
         !(async function () {
-            let e = I.default.getCurrentUser();
+            let e = A.default.getCurrentUser();
             if (null == e)
                 try {
                     e = await (0, p.rQ)();
                 } catch (e) {
                     g.A.verifySSOToken("accept_guild_template", null).catch(() => {});
                 }
-            null != e && a(B.intl.formatToPlainString(N.defaultName, { username: e.username }));
+            null != e && a(B.intl.formatToPlainString(C.defaultName, { username: e.username }));
         })();
-    }, [N.defaultName]),
+    }, [C.defaultName]),
         (t = n.useRef([])),
         n.useEffect(() => {
             null == e ||
@@ -90,13 +90,13 @@ function y(e) {
                     guild_template_guild_id: e.sourceGuildId,
                 }));
         }));
-    let A = (0, r.jsxs)(r.Fragment, {
+    let I = (0, r.jsxs)(r.Fragment, {
             children: [
                 s ? (0, r.jsx)(Z.A, { guildTemplate: e }) : null,
                 (0, r.jsx)("div", { className: M.Kk, children: (0, r.jsx)(f.A, { icon: l, onChange: d }) }),
                 (0, r.jsx)(u.k, {
-                    label: N.nameLabel,
-                    helperText: B.intl.format(N.terms, { guidelinesURL: T.X7G.GUIDELINES }),
+                    label: C.nameLabel,
+                    helperText: B.intl.format(C.terms, { guidelinesURL: T.X7G.GUIDELINES }),
                     type: "text",
                     value: i,
                     maxLength: 100,
@@ -105,21 +105,21 @@ function y(e) {
                 }),
             ],
         }),
-        L = e.serializedSourceGuild.roles.map((t) => j.Wj(e.serializedSourceGuild.id, t)).filter((e) => !(0, C.Oy)(e));
+        L = e.serializedSourceGuild.roles.map((t) => j.Wj(e.serializedSourceGuild.id, t)).filter((e) => !(0, N.Oy)(e));
     return {
-        form: A,
+        form: I,
         preview: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.c, {}),
                 (0, r.jsx)(m.D, {
                     label: B.intl.string(B.t.Zxk1OF),
                     helperText: B.intl.string(B.t.de7DpI),
-                    children: (0, r.jsx)(F, { channels: e.serializedSourceGuild.channels }),
+                    children: (0, r.jsx)(y, { channels: e.serializedSourceGuild.channels }),
                 }),
                 L.length > 0
                     ? (0, r.jsx)(m.D, {
                           label: B.intl.string(B.t["RJ1e/r"]),
-                          children: (0, r.jsx)(H, { guildId: e.serializedSourceGuild.id, roles: L }),
+                          children: (0, r.jsx)(F, { guildId: e.serializedSourceGuild.id, roles: L }),
                       })
                     : null,
             ],
@@ -133,13 +133,13 @@ function y(e) {
         },
     };
 }
-function F(e) {
+function y(e) {
     let { channels: t } = e,
         s = d()(t)
             .sortBy((e) => (null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id))
             .map((e) => {
                 var t;
-                let s = (t = e).type === T.rbe.GUILD_CATEGORY ? L.A : (0, E.gU)((0, A.UE)(t));
+                let s = (t = e).type === T.rbe.GUILD_CATEGORY ? L.A : (0, E.gU)((0, I.UE)(t));
                 return (0, r.jsxs)(
                     "div",
                     {
@@ -155,11 +155,11 @@ function F(e) {
             .value();
     return (0, r.jsx)("div", { className: M.oD, children: s });
 }
-function H(e) {
+function F(e) {
     let { guildId: t, roles: s } = e,
         n = s
             .slice()
             .reverse()
-            .map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(N.g1, { role: e, guildId: t }) }, e.id));
+            .map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(C.g1, { role: e, guildId: t }) }, e.id));
     return (0, r.jsx)("ul", { className: M.F6, children: n });
 }

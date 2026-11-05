@@ -20,12 +20,12 @@ n.d(
                     maxValue: _ = 100,
                     tabIndex: E,
                     onChange: A,
-                    onInteraction: h,
-                    renderValue: f = c,
+                    onInteraction: f,
+                    renderValue: h = c,
                     "aria-label": I,
                 } = n,
                 p = r.useRef(null),
-                m = r.useMemo(() => s().debounce(() => h?.(o.Q.SLIDER), 100), [h]);
+                m = r.useMemo(() => s().debounce(() => f?.(o.Q.SLIDER), 100), [f]);
             return (
                 r.useImperativeHandle(
                     t,
@@ -44,7 +44,7 @@ n.d(
                         onChangeEnd: function (e) {
                             (A(e), m());
                         },
-                        formatValue: f,
+                        formatValue: h,
                         passThroughVerticalArrowKeys: !0,
                         "aria-label": I,
                     }),

@@ -10,17 +10,17 @@ var i,
     _,
     E,
     A,
-    h,
     f,
+    h,
     I,
     p = n(626584),
     m = n(927813),
-    g =
+    T =
         (((i = {})[(i.SECONDS_30 = 30 * m.A.Millis.SECOND)] = "SECONDS_30"),
         (i[(i.MINUTES_1 = m.A.Millis.MINUTE)] = "MINUTES_1"),
         (i[(i.MINUTES_2 = 2 * m.A.Millis.MINUTE)] = "MINUTES_2"),
         i),
-    T = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r),
+    g = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r),
     S = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
 let N = 6 * m.A.Millis.SECOND,
     C = new p.A("Clips"),
@@ -74,8 +74,8 @@ function M(e) {
 }
 var U = (((E = {}).TEXT = "text"), (E.IMAGE = "image"), E),
     w = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A),
-    G = (((h = {}).NONE = "none"), (h.SMALL = "small"), (h.MEDIUM = "medium"), (h.LARGE = "large"), h),
-    x = (((f = {}).CLIP = "clip"), (f.SCREENSHOT = "screenshot"), (f.VOICE_CLIP = "voice_clip"), f),
+    G = (((f = {}).NONE = "none"), (f.SMALL = "small"), (f.MEDIUM = "medium"), (f.LARGE = "large"), f),
+    x = (((h = {}).CLIP = "clip"), (h.SCREENSHOT = "screenshot"), (h.VOICE_CLIP = "voice_clip"), h),
     k =
         (((I = {}).UNCLASSIFIED = "unclassified"),
         (I.KILL = "kill"),
@@ -102,13 +102,13 @@ n.d(
             let t = (((15 * Math.round(e / 15)) % 360) + 360) % 360;
             return t > 180 ? t - 360 : t;
         },
-        Fv: T,
+        Fv: g,
         G$: ["png", "jpg", "jpeg", "webp"],
         GU: C,
         Gy: L,
         Hz: G,
         I4: "clip-share-watermark",
-        LX: g,
+        LX: T,
         Me: U,
         Mu: "clips_player",
         P4: S,

@@ -52,9 +52,9 @@ n.d(
                 ),
                 C = n ?? t,
                 v = null != n ? N : a,
-                T = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
-                I = i.useMemo(() => Object.keys(T).length, [T]),
-                y = i.useMemo(() => (null == v || null == T ? null : !r().isEqual(v, T)), [v, T]);
+                I = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
+                T = i.useMemo(() => Object.keys(I).length, [I]),
+                y = i.useMemo(() => (null == v || null == I ? null : !r().isEqual(v, I)), [v, I]);
             return (
                 i.useEffect(() => {
                     C === t && (y ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
@@ -161,9 +161,9 @@ n.d(
                             }
                             return s;
                         }, [N, n, l, r, t, E, C]);
-                    })(e, T),
+                    })(e, I),
                     hasChanges: y,
-                    selectedPermissionCount: I,
+                    selectedPermissionCount: T,
                 }
             );
         },

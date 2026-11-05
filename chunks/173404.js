@@ -29,8 +29,8 @@ var s = t(477900),
     E = t(114166),
     P = t(47167),
     w = t(810181),
-    T = t(607470),
-    I = t(390248),
+    I = t(607470),
+    T = t(390248),
     R = t(338717),
     z = t(954403),
     F = t(273185),
@@ -103,8 +103,8 @@ let ex = l.memo(function (e) {
         }, [C, i, n]));
     let L = l.useRef(null),
         { handleLeftClick: _, handleRightClick: E } = (0, eo.A)({ facepileRef: L, goToThread: t, channel: j }),
-        { role: w, onFocus: T, ...I } = (0, h.rm)(n),
-        { isFocused: R, handleFocus: z, handleBlur: F } = (0, ec.A)(T);
+        { role: w, onFocus: I, ...T } = (0, h.rm)(n),
+        { isFocused: R, handleFocus: z, handleBlur: F } = (0, ec.A)(I);
     return (0, s.jsxs)("div", {
         ref: C,
         "data-item-id": n,
@@ -120,7 +120,7 @@ let ex = l.memo(function (e) {
                 className: em.Kv,
                 onFocus: z,
                 onBlur: F,
-                ...I,
+                ...T,
             }),
             (0, s.jsxs)("div", {
                 className: em.kb,
@@ -409,7 +409,7 @@ function eS(e) {
 }
 function eM(e) {
     let { src: n, size: t, alt: l, className: i } = e;
-    return (0, s.jsx)(T.A, {
+    return (0, s.jsx)(I.A, {
         src: n,
         alt: l ?? eh.intl.string(eh.t.FlNoSV),
         width: t.width,
@@ -465,7 +465,7 @@ function eL(e) {
         [a, r] = (0, G.eJ)({ media: l ? null : t, channel: n }),
         c = l ? t.spoiler && i : a,
         d = l && t.spoiler ? R.Oc.SPOILER : r,
-        o = (0, I.qZ)(d);
+        o = (0, T.qZ)(d);
     return (0, s.jsx)(f.M, {
         enabled: !0,
         children: (0, s.jsxs)("div", {

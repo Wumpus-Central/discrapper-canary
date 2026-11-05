@@ -19,8 +19,8 @@ var s = r(477900),
     E = r(760914),
     p = r(426110),
     x = r(590202),
-    g = r(971649),
-    N = r(417404),
+    N = r(971649),
+    g = r(417404),
     h = r(557637),
     v = r(415441),
     y = r(734736),
@@ -37,12 +37,12 @@ let M = function (e) {
             learnMoreStyle: b = null,
             learnMoreFontSize: Q,
             sourceQuestContent: V,
-            lazyLoad: D = !1,
-            fullWidth: W = !1,
+            lazyLoad: W = !1,
+            fullWidth: D = !1,
             style: k,
             location: q,
         } = e,
-        U = (0, g.wW)(),
+        U = (0, N.wW)(),
         Y = (0, o.bG)([T.Ay], () => T.Ay.useReducedMotion),
         P = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
         z = (function (e, t) {
@@ -61,11 +61,11 @@ let M = function (e) {
         })(i.config, q),
         B = n.useMemo(
             () =>
-                (0, N.ks)(i.config) && i.userStatus?.claimedAt != null
+                (0, g.ks)(i.config) && i.userStatus?.claimedAt != null
                     ? S.intl.formatToPlainString(S.t["nLXlh+"], {
-                          orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, N._Z)(i.config) ?? 0,
+                          orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, g._Z)(i.config) ?? 0,
                       })
-                    : (0, N.mq)(i.config, P),
+                    : (0, g.mq)(i.config, P),
             [i.config, i.userStatus?.claimedAt, i.userStatus?.orbQuantityClaimed, P],
         ),
         G = n.useMemo(() => (0, E.tW)(i, E.fY.REWARD, void 0, void 0, z), [i, z]),
@@ -90,7 +90,7 @@ let M = function (e) {
         ),
         F = n.useRef(null),
         K = n.useRef(M),
-        Z = (0, N.K9)(i.config);
+        Z = (0, g.K9)(i.config);
     if (
         (n.useEffect(() => {
             if (null != F.current) {
@@ -111,7 +111,7 @@ let M = function (e) {
             id: "QuestRewardTile_rewardTileNitro",
             children: (e) => (0, s.jsx)(y.A, { ref: e, className: w.eB }),
         });
-    else if (D)
+    else if (W)
         t = (0, s.jsx)(v.N, {
             showVideo: M,
             imageAsset:
@@ -157,9 +157,9 @@ let M = function (e) {
                 (0, s.jsx)("img", { ref: t, alt: B, className: l()(w.eB, w.Qz), src: G.url, onLoad: e.onLoadComplete }),
         });
     return null == b
-        ? (0, s.jsx)("div", { className: l()(w.al, r, { [w.Ij]: W }), style: k, children: t })
+        ? (0, s.jsx)("div", { className: l()(w.al, r, { [w.Ij]: D }), style: k, children: t })
         : (0, s.jsxs)(c.D, {
-              className: l()(w.a$, w.al, w.Yi, r, { [w.Ij]: W }),
+              className: l()(w.a$, w.al, w.Yi, r, { [w.Ij]: D }),
               onClick: X,
               style: k,
               children: [

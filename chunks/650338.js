@@ -10,8 +10,8 @@ var i = n(582128),
     _ = n(652215),
     E = n(753070),
     A = n(682901),
-    h = n(731854),
-    f = n(792996);
+    f = n(731854),
+    h = n(792996);
 function I(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
@@ -25,7 +25,7 @@ n.d(
     {},
     {
         Bs: function (e) {
-            return f.intl.formatToPlainString(f.t.Qb44XH, { fps: e });
+            return h.intl.formatToPlainString(h.t.Qb44XH, { fps: e });
         },
         HB: function (e) {
             if (null == e) return;
@@ -49,9 +49,9 @@ n.d(
             });
         },
         ME: function (e) {
-            return e.type === h.ei.SOURCE
-                ? f.intl.string(f.t.XjXqzh)
-                : f.intl.formatToPlainString(f.t.TEOC0I, { resolution: e.height });
+            return e.type === f.ei.SOURCE
+                ? h.intl.string(h.t.XjXqzh)
+                : h.intl.formatToPlainString(h.t.TEOC0I, { resolution: e.height });
         },
         N5: function (e) {
             let t = (0, r.cf)([s.A], () => s.A.getState()),
@@ -68,7 +68,7 @@ n.d(
                                   {
                                       height: t.resolution,
                                       width: 0,
-                                      type: 0 === t.resolution ? h.ei.SOURCE : h.ei.FIXED,
+                                      type: 0 === t.resolution ? f.ei.SOURCE : f.ei.FIXED,
                                   },
                                   t.fps,
                               ),
@@ -79,7 +79,7 @@ n.d(
         },
         OI: function (e) {
             if (null == e) return;
-            let t = e.maxResolution.type === h.ei.SOURCE ? E.on.RESOLUTION_SOURCE : e.maxResolution.height,
+            let t = e.maxResolution.type === f.ei.SOURCE ? E.on.RESOLUTION_SOURCE : e.maxResolution.height,
                 n = (0, E.F0)(t);
             return (
                 (0, E.AC)(e.maxFrameRate) !== E.kn.FPS_5 &&

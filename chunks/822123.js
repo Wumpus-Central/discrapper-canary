@@ -11,13 +11,13 @@ var i = n(582128),
     _ = n(594061),
     E = n(71393),
     A = n(711014),
-    h = n(287809),
-    f = n(129230),
+    f = n(287809),
+    h = n(129230),
     I = n(927813),
     p = n(690521),
     m = n(474090),
-    g = n(818645),
-    T = n(316884),
+    T = n(818645),
+    g = n(316884),
     S = n(732139),
     N = n(652215),
     C = n(307731),
@@ -312,11 +312,11 @@ function M(e) {
                     d = v(n),
                     u = P(n),
                     _ = M(n),
-                    { topEmojis: f, newlyAddedEmojis: I } = (0, T.A)(n, e),
-                    { allEmojis: N } = (0, g.A)({ topEmojis: f, newlyAddedEmojis: I }),
+                    { topEmojis: h, newlyAddedEmojis: I } = (0, g.A)(n, e),
+                    { allEmojis: N } = (0, T.A)({ topEmojis: h, newlyAddedEmojis: I }),
                     O = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
                     R = (0, s.bG)([E.A], () => E.A.getGuild(n)?.name),
-                    y = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
+                    y = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
                     D = (0, m.ki)(y),
                     b = i.useMemo(() => {
                         let i = O.getGroupedCustomEmoji(),
@@ -346,9 +346,9 @@ function M(e) {
                                     } = c(a);
                                     if (0 === d.length) continue;
                                     let A = o.Ay.getHiddenEmojiIds(e.id),
-                                        h = null;
+                                        f = null;
                                     (t === S.s.GUILD &&
-                                        (h = {
+                                        (f = {
                                             type: S.s.GUILD,
                                             guild: e,
                                             isNitroLocked: !D && _ && u === a.length,
@@ -356,7 +356,7 @@ function M(e) {
                                             emojisDisabled: l,
                                             emojisHidden: A,
                                         }),
-                                        null != h && (e.id === n ? s.unshift(h) : s.push(h)));
+                                        null != f && (e.id === n ? s.unshift(f) : s.push(f)));
                                 }
                             })(a, S.s.GUILD),
                             o.Ay.categories.reduce((t, i) => {
@@ -436,7 +436,7 @@ function M(e) {
             },
             xf: function (e) {
                 let t = e?.getGuildId() != null;
-                f.default.track(N.HAw.PREMIUM_PROMOTION_OPENED, {
+                h.default.track(N.HAw.PREMIUM_PROMOTION_OPENED, {
                     location_page: t ? N.liQ.GUILD_CHANNEL : N.liQ.DM_CHANNEL,
                     location_section: null != e ? N.JJy.EMOJI_PICKER_POPOUT : N.JJy.CUSTOM_STATUS_MODAL,
                 });

@@ -10,7 +10,7 @@ let c = o.A.Millis.DAY,
     _ = "",
     E = null,
     A = !1;
-class h extends r.Ay.PersistedStore {
+class f extends r.Ay.PersistedStore {
     static displayName = "NonGameStore";
     static persistKey = "NonGameStore";
     initialize(e) {
@@ -44,7 +44,7 @@ class h extends r.Ay.PersistedStore {
         return !i && (null == E || Date.now() >= E + c);
     }
 }
-let f = new h(a.h, {
+let h = new f(a.h, {
     NON_GAMES_DATABASE_FETCH: function () {
         i = !0;
     },
@@ -64,4 +64,4 @@ let f = new h(a.h, {
         ((i = void 0), (E = Date.now()), (A = !0));
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

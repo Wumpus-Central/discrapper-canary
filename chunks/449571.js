@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(398590),
     E = n(793574),
     A = n(688810),
-    h = n(429913),
-    f = n(568598),
+    f = n(429913),
+    h = n(568598),
     I = n(628983),
     p = n(477754),
     m = n(303227),
-    g = n(558076),
-    T = n(360729),
+    T = n(558076),
+    g = n(360729),
     S = n(976860),
     N = n(272812),
     C = n(461782),
@@ -47,14 +47,14 @@ function Y(e) {
         v = A?.applicationId,
         Y = (0, l.bG)([D.Ay], () => null != v && D.Ay.isProxyTicketRefreshing(v), [v]),
         K = (0, l.bG)([D.Ay], () => D.Ay.getActivityPanelMode()),
-        $ = (0, h.h)(v),
+        $ = (0, f.h)(v),
         X = A?.launchId,
         z = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
-        { dockedRect: q, isHidden: Z } = (0, l.cf)([O.A], () => {
+        { dockedRect: q, isHidden: Q } = (0, l.cf)([O.A], () => {
             let e = O.A.pipWindow;
             return { dockedRect: null != e ? O.A.getDockedRect(e.id) : null, isHidden: O.A.isEmbeddedActivityHidden() };
         }),
-        Q = (0, b.xi)({ channelId: t?.id }),
+        Z = (0, b.xi)({ channelId: t?.id }),
         {
             activityParticipant: J,
             selectedParticipant: ee,
@@ -64,35 +64,35 @@ function Y(e) {
                 null != A && null != t
                     ? I.A.getParticipant(
                           t.id,
-                          (0, f.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
+                          (0, h.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                       )
                     : null,
             selectedParticipant: null != t ? I.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && I.A.getParticipantsOpen(t.id),
         })),
-        en = z || null != Q,
+        en = z || null != Z,
         ei = (0, M.A)(t?.id),
         er = t?.id,
         ea = t?.getGuildId(),
-        { enabled: es } = (0, T.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
-        el = (0, l.bG)([g.A], () => null != er && g.A.isVisible(er), [er]),
+        { enabled: es } = (0, g.mf)({ guildId: ea ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        el = (0, l.bG)([T.A], () => null != er && T.A.isVisible(er), [er]),
         eo = ei && es && el,
         ed = ei && ee?.type !== B.lp.ACTIVITY,
         ec = !ei && K === k.Gd.PIP,
-        eu = (!en || (en && (ed || ec || eo) && null == q)) && !Z,
+        eu = (!en || (en && (ed || ec || eo) && null == q)) && !Q,
         e_ = eu && null != O.A.pipVideoWindow && null != O.A.pipActivityWindow;
     function eE() {
         if (null != t) {
             (null != A &&
                 c.A.selectParticipant(
                     t.id,
-                    (0, f.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
+                    (0, h.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                 ),
                 eo && (0, m.UV)(!0, t.id));
             let e = t.getGuildId() ?? F.ME;
             (u.A.channelListScrollTo(e, t.id), (0, S.uh)(e, t.id));
         }
-        null == Q && (0, _.bz)();
+        null == Z && (0, _.bz)();
     }
     function eA() {
         E(!a);
@@ -107,10 +107,10 @@ function Y(e) {
         null == A || null == X || ((0, M.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
     )
         return null;
-    let eh = Array.from(A.userIds)
+    let ef = Array.from(A.userIds)
             .map((e) => L.default.getUser(e))
             .filter((e) => null != e),
-        ef = (0, x.A)(A, t);
+        eh = (0, x.A)(A, t);
     return (0, i.jsx)(C.Ay, {
         timeout: 2e3,
         children: (e) => {
@@ -122,7 +122,7 @@ function Y(e) {
                     [j.N7]: r && !A.config?.useInteractivePIP,
                     [H.p0]: eu && !a,
                     [H.ST]: eu && a,
-                    [H.R]: Z,
+                    [H.R]: Q,
                     [H.Gq]: e_,
                 }),
                 noBorder: !eu,
@@ -185,7 +185,7 @@ function Y(e) {
                                               ],
                                           })
                                 : null;
-                        })({ onActive: l, onForceIdle: d, idle: r, isActivityInTextChannel: ec, users: eh }),
+                        })({ onActive: l, onForceIdle: d, idle: r, isActivityInTextChannel: ec, users: ef }),
                     }),
                     n || Y
                         ? (0, i.jsx)(o.y, { className: s()(H.pU, { [H.p0]: eu && !a, [H.ST]: eu && a }) })
@@ -194,7 +194,7 @@ function Y(e) {
                               referrerPolicy: "origin",
                               url: A.url,
                               contextSource: { type: p.f.ACTIVITY, applicationId: A.applicationId },
-                              queryParams: ef,
+                              queryParams: eh,
                               className: s()(H.pU, {
                                   [H.p0]: eu && !a,
                                   [H.ST]: eu && a,

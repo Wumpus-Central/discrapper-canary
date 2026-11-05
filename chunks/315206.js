@@ -1,6 +1,6 @@
 let i;
-var l = n(31728),
-    r = n(272355),
+var r = n(31728),
+    l = n(272355),
     s = n(869146),
     a = n(734057),
     o = n(186111),
@@ -17,33 +17,33 @@ var l = n(31728),
     E = n(652215);
 function S(e) {
     let t = e ?? i;
-    null != t && u.A.isOpen(t) && l.jD(t);
+    null != t && u.A.isOpen(t) && r.jD(t);
 }
 function C(e) {
     let t = e ?? i;
-    null != t && u.A.isOpen(t) && l.WU(t);
+    null != t && u.A.isOpen(t) && r.WU(t);
 }
 function _() {
     let e = A.Ay.getConnectedActivityLocation(),
         t = null != e ? A.Ay.getSelfEmbeddedActivityForLocation(e) : null,
         n = (0, p.H)(e),
-        r = a.A.getChannel(n);
-    if (null == t || null == r || !0 === t.renderInFramePool) {
+        l = a.A.getChannel(n);
+    if (null == t || null == l || !0 === t.renderInFramePool) {
         let e;
-        return void (null != (e = i) && u.A.isOpen(e) && (l.VN(e), (i = null)));
+        return void (null != (e = i) && u.A.isOpen(e) && (r.VN(e), (i = null)));
     }
     {
         let e = (0, m.A)(t.location.id, t.applicationId);
         return (
             !((0, g.f)() || u.A.isOpen(e)) &&
-            (null != i && l.VN(i), l.ho(e, E.o1q.ACTIVITY, { channel: r }), void (i = e))
+            (null != i && r.VN(i), r.ho(e, E.o1q.ACTIVITY, { channel: l }), void (i = e))
         );
     }
 }
 function N() {
     return (0, I.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
 }
-class T extends r.A {
+class T extends l.A {
     _initialize() {
         (c.Ay.addChangeListener(_),
             h.A.addChangeListener(_),
@@ -63,5 +63,5 @@ class T extends r.A {
             o.A.removeChangeListener(N));
     }
 }
-let v = new T();
-n.d(t, {}, { Ay: v, bK: S, cK: C });
+let y = new T();
+n.d(t, {}, { Ay: y, bK: S, cK: C });

@@ -16,13 +16,13 @@ function d(e) {
         _ = a.A.getChannelId(),
         E = a.A.getGuildId(),
         A = r.A.getChannel(_)?.type,
-        h = i.default.getId();
+        f = i.default.getId();
     s.default.track(o.HAw.CALL_MENU_ITEM_INTERACTED, {
         location: l,
         menu_name: n,
         menu_item_type: t,
         entrypoint: d,
-        targets_self: null == c ? void 0 : c === h,
+        targets_self: null == c ? void 0 : c === f,
         guild_id: E,
         channel_id: _,
         channel_type: A,

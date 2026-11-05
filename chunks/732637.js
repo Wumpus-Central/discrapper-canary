@@ -1,6 +1,6 @@
 var i = n(477900),
-    l = n(582128),
-    r = n(855986),
+    r = n(582128),
+    l = n(855986),
     s = n(31728),
     a = n(869146),
     o = n(188567),
@@ -17,12 +17,12 @@ n.d(
         A: function (e) {
             let t,
                 { embedId: n, className: A, style: p } = e,
-                m = (0, r.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
+                m = (0, l.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
                 I = (0, h.A)(),
-                E = (0, r.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
+                E = (0, l.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
             t = null == I || (0, c.A)((0, d.H)(I.location)) || E !== f.Gd.PANEL ? (m?.window ?? window) : window;
-            let S = l.useRef(null),
-                C = l.useMemo(() => {
+            let S = r.useRef(null),
+                C = r.useMemo(() => {
                     let e = null;
                     return () => {
                         null == e &&
@@ -32,7 +32,7 @@ n.d(
                     };
                 }, [n, t]);
             return (
-                l.useEffect(
+                r.useEffect(
                     () => (
                         t.addEventListener("resize", C),
                         o._.subscribe(g.jej.REMEASURE_TARGET, C),
@@ -42,7 +42,7 @@ n.d(
                     ),
                     [C, t],
                 ),
-                l.useLayoutEffect(() => {
+                r.useLayoutEffect(() => {
                     let e = S.current;
                     if (null == e) return;
                     let t = e.ownerDocument.defaultView;

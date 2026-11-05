@@ -65,8 +65,8 @@ function f(e) {
         ),
         {
             dispatch: I,
-            getItemProps: g,
-            getRowProps: h,
+            getItemProps: h,
+            getRowProps: g,
             getContainerProps: p,
         } = (0, a.A)({
             navId: n,
@@ -89,8 +89,8 @@ function f(e) {
         }, []),
         {
             gridDispatch: I,
-            getItemProps: g,
-            getRowProps: h,
+            getItemProps: h,
+            getRowProps: g,
             gridContainerProps: A,
             handleGridContainerKeyDown: _,
             isUsingKeyboardNavigation: u,
@@ -178,7 +178,7 @@ n.d(
                     getRowProps: m,
                     gridContainerProps: E,
                     handleGridContainerKeyDown: I,
-                    isUsingKeyboardNavigation: g,
+                    isUsingKeyboardNavigation: h,
                 } = f({
                     columnCounts: t,
                     gridNavigatorId: r,
@@ -205,7 +205,7 @@ n.d(
                     getRowProps: m,
                     gridContainerProps: E,
                     handleGridContainerKeyDown: I,
-                    isUsingKeyboardNavigation: g,
+                    isUsingKeyboardNavigation: h,
                 }
             );
         },

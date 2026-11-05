@@ -6,7 +6,7 @@ var s = n(503698),
     r = n(939249),
     u = n(866665),
     o = n(792996),
-    d = n(408968);
+    c = n(408968);
 n.d(
     l,
     {},
@@ -16,7 +16,7 @@ n.d(
                 {
                     className: n,
                     src: s,
-                    unicodeEmoji: c,
+                    unicodeEmoji: d,
                     name: m,
                     size: x = 20,
                     enableTooltip: h = !0,
@@ -24,7 +24,7 @@ n.d(
                     onClick: p,
                     ref: j,
                 } = e;
-            return null == s && null == c
+            return null == s && null == d
                 ? null
                 : (0, t.jsx)(u.m, {
                       asContainer: !0,
@@ -36,18 +36,18 @@ n.d(
                           ((l = (0, t.jsx)("img", {
                               ref: j,
                               alt: o.intl.formatToPlainString(o.t["9+YWrE"], { name: m }),
-                              className: a()(d.U, n, { [d.v]: null != p }),
+                              className: a()(c.U, n, { [c.v]: null != p }),
                               height: f ? x : void 0,
                               src: s,
                               width: x,
                           })),
-                          (null != c &&
+                          (null != d &&
                               (l = (0, t.jsx)("img", {
                                   ref: j,
-                                  alt: c.allNamesString,
-                                  className: a()(d.U, n, { [d.v]: null != p }),
+                                  alt: d.allNamesString,
+                                  className: a()(c.U, n, { [c.v]: null != p }),
                                   height: f ? x : void 0,
-                                  src: c.url,
+                                  src: d.url,
                                   width: x,
                               })),
                           null == p)

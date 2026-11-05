@@ -11,22 +11,22 @@ var i = n(620632),
     _ = n(522606),
     E = n(652215);
 let A = Promise.resolve(),
-    h = {},
-    f = null,
+    f = {},
+    h = null,
     I = o.default.isAuthenticated() ? (o.default.getId() ?? null) : null,
     p = null != I ? (o.default.getAuthSessionIdHash() ?? null) : null,
     m = {};
-function g() {
-    ((f = null), (h = {}), (m = {}));
+function T() {
+    ((h = null), (f = {}), (m = {}));
 }
-function T(e) {
-    I !== e && (g(), (I = e), (p = null));
+function g(e) {
+    I !== e && (T(), (I = e), (p = null));
 }
 function S(e) {
-    null != e && (null != p && p !== e && g(), (p = e));
+    null != e && (null != p && p !== e && T(), (p = e));
 }
 function N() {
-    (g(), (I = null), (p = null));
+    (T(), (I = null), (p = null));
 }
 (r.h.subscribe("LOGOUT", N),
     r.h.subscribe("LOGIN_SUCCESS", N),
@@ -42,7 +42,7 @@ function N() {
     }),
     r.h.subscribe("CONNECTION_OPEN", (e) => {
         let { user: t, authSessionIdHash: n } = e;
-        (T(t.id), S(n));
+        (g(t.id), S(n));
     }),
     r.h.subscribe("AUTH_SESSION_CHANGE", (e) => {
         let { authSessionIdHash: t } = e;
@@ -75,29 +75,29 @@ function N() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { isInitialLoad: t, isReloading: n, forceRefresh: a } = e;
                     if (
-                        (T(d.default.getCurrentUser()?.id ?? null),
-                        e.isDiscoverPickerCommit && null != I && ((h = {}), (f = { picks: l.A.getPicks() })),
+                        (g(d.default.getCurrentUser()?.id ?? null),
+                        e.isDiscoverPickerCommit && null != I && ((f = {}), (h = { picks: l.A.getPicks() })),
                         (0, u.Lg)("fetchDehydrated"))
                     ) {
                         if ((0, s.SL)("fetchDehydrated"))
                             return (function (e) {
                                 let { isInitialLoad: t, isReloading: n, isDiscoverPickerCommit: a } = e,
                                     o = d.default.getCurrentUser()?.id,
-                                    u = a ? f : null,
-                                    _ = h,
+                                    u = a ? h : null,
+                                    _ = f,
                                     I = m;
                                 function p() {
                                     return I === m && null != o && d.default.getCurrentUser()?.id === o;
                                 }
-                                function g() {
+                                function T() {
                                     return p() && (0, s.SL)("fetchDehydrated");
                                 }
-                                let T = A,
+                                let g = A,
                                     S = (async function () {
                                         try {
                                             await (async function () {
-                                                if ((await T, !g() || (!a && _ !== h))) return;
-                                                let e = u ?? f;
+                                                if ((await g, !T() || (!a && _ !== f))) return;
+                                                let e = u ?? h;
                                                 n && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
                                                 try {
                                                     let a = new URLSearchParams();
@@ -109,7 +109,7 @@ function N() {
                                                             query: a.toString(),
                                                             rejectWithError: !1,
                                                         });
-                                                    if (!g() || _ !== h) return;
+                                                    if (!T() || _ !== f) return;
                                                     (await r.h.dispatch({
                                                         type: "LOAD_ICYMI_DEHYDRATED",
                                                         items: o.body.items,
@@ -118,7 +118,7 @@ function N() {
                                                         isReloading: n,
                                                         isInitialLoad: null != e || t,
                                                     }),
-                                                        g() && _ === h && f === e && (f = null));
+                                                        T() && _ === f && h === e && (h = null));
                                                 } finally {
                                                     n &&
                                                         p() &&

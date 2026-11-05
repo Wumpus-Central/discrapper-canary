@@ -6,19 +6,19 @@ var i = n(776231),
     o = n(832628),
     d = n(823894),
     c = n(652215);
-let { API_ENDPOINT: u, MEDIA_PROXY_ENDPOINT: _, PROJECT_ENV: E, ASSET_ENDPOINT: A, CDN_HOST: h } = window.GLOBAL_ENV,
-    f = Object.values(o.y3),
-    I = decodeURIComponent(c.Rsh.STICKER_ASSET("[\\d]+", `(${f.join("|")})`)),
+let { API_ENDPOINT: u, MEDIA_PROXY_ENDPOINT: _, PROJECT_ENV: E, ASSET_ENDPOINT: A, CDN_HOST: f } = window.GLOBAL_ENV,
+    h = Object.values(o.y3),
+    I = decodeURIComponent(c.Rsh.STICKER_ASSET("[\\d]+", `(${h.join("|")})`)),
     p = RegExp(`(${location.protocol}${A}|${location.protocol}${_})(${I})`, "ig"),
     m = RegExp(`${location.protocol}${u}(${I})`, "ig");
-function g(e) {
+function T(e) {
     if (null != e.cover_sticker_id) {
         let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
         if (null != t) return t;
     }
     return e.stickers[0];
 }
-function T(e) {
+function g(e) {
     switch (e) {
         case o.TG.PNG:
             return s.QB ? o.y3.WEBP : o.y3.PNG;
@@ -40,7 +40,7 @@ n.d(
         FD: function (e) {
             return e.type === o.NL.STANDARD;
         },
-        Id: g,
+        Id: T,
         NO: function (e) {
             return null != e.match("development" !== E ? p : m);
         },
@@ -48,7 +48,7 @@ n.d(
             return e === d.BJ.ANIMATE_ON_INTERACTION ? t : e !== d.BJ.NEVER_ANIMATE;
         },
         T5: function (e) {
-            return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: g(e) };
+            return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: T(e) };
         },
         Xw: function (e) {
             return e.type === o.NL.GUILD;
@@ -81,7 +81,7 @@ n.d(
             return e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [];
         },
         sL: function (e) {
-            return null == e ? null : `${e.name}.${T(e.format_type)}`;
+            return null == e ? null : `${e.name}.${g(e.format_type)}`;
         },
         zg: function (e) {
             let { isPreview: t = !1, size: r = 160 } =
@@ -89,20 +89,20 @@ n.d(
             if (null == e.format_type) return null;
             let a = e.format_type;
             e.format_type === o.TG.GIF && t && (a = o.TG.PNG);
-            let s = T(a),
+            let s = g(a),
                 d = c.Rsh.STICKER_ASSET(e.id, s),
                 u = !1;
             try {
                 let { getForceSdrEmojisStickersConfig: e } = n(796272);
                 u = e({ location: "sticker_url" }).enabled;
             } catch {}
-            let h = u ? "&force_sdr=true" : "",
-                f = s === o.y3.WEBP ? "&quality=lossless" : "";
+            let f = u ? "&force_sdr=true" : "",
+                h = s === o.y3.WEBP ? "&quality=lossless" : "";
             if ("development" !== E) {
                 if (e.format_type === o.TG.LOTTIE) return `${location.protocol}${A}${d}`;
                 let n = e.format_type === o.TG.APNG && t && !(0, l.m0)() ? "&passthrough=false" : "",
                     a = Math.min(2, (0, i.mZ)());
-                return `${location.protocol}${_}${d}?size=${(0, i.kr)(r * a)}${n}${f}${h}`;
+                return `${location.protocol}${_}${d}?size=${(0, i.kr)(r * a)}${n}${h}${f}`;
             }
             if (e.format_type === o.TG.LOTTIE && (0, l.HZ)()) return d;
             let I = `${location.protocol}${_}${d}`;

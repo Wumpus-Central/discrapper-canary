@@ -15,46 +15,46 @@ function A(e) {
         i = t?.guild_id,
         r = (0, a.bG)([o.Ay], () => (null == i || null == n ? null : o.Ay.getMember(i, n))),
         A = (0, a.bG)([_.default], () => _.default.getUser(n), [n]),
-        h = E.Ay.useName(e?.author.bot ? e?.author : A),
-        f = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
+        f = E.Ay.useName(e?.author.bot ? e?.author : A),
+        h = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
         p = r?.colorRoleId,
         m = (0, a.bG)([d.A], () => (null != i && null != p ? d.A.getRole(i, p) : void 0), [i, p]),
-        g = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
-        T = (0, s.A)({ userId: n, guildId: i });
+        T = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        g = (0, s.A)({ userId: n, guildId: i });
     return null == e
         ? null
         : I({
               user: e.author,
               channel: t,
-              guild: f,
+              guild: h,
               memberColorRole: m,
-              userName: h,
+              userName: f,
               member: r,
-              friendNickname: g,
-              displayNameStyles: T,
+              friendNickname: T,
+              displayNameStyles: g,
           });
 }
-function h(e, t) {
+function f(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = (0, a.bG)([o.Ay], () => (null == i || null == n ? null : o.Ay.getMember(i, n))),
         l = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
         _ = r?.colorRoleId,
         A = (0, a.bG)([d.A], () => (null != i && null != _ ? d.A.getRole(i, _) : void 0), [i, _]),
-        h = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
-        f = E.Ay.useName(e);
+        f = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        h = E.Ay.useName(e);
     return I({
         user: e,
         channel: t,
         guild: l,
         memberColorRole: A,
         member: r,
-        userName: f,
-        friendNickname: h,
+        userName: h,
+        friendNickname: f,
         displayNameStyles: (0, s.A)({ userId: n, guildId: i }),
     });
 }
-function f(e, t) {
+function h(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = c.A.getGuild(i),
@@ -112,16 +112,16 @@ n.d(
             let n = A(e);
             return (r()(null != n, "Result cannot be null because the message is not null"), t ?? n);
         },
-        FT: f,
+        FT: h,
         X4: A,
-        d8: h,
+        d8: f,
         m2: function (e, t) {
-            let n = h(e, t);
+            let n = f(e, t);
             return (r()(null != n, "Result cannot be null because user and channel are not null"), n);
         },
         p_: function (e) {
             let t = l.A.getChannel(e.channel_id);
-            return f(e.author, t);
+            return h(e.author, t);
         },
     },
 );

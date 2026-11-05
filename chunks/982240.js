@@ -12,7 +12,7 @@ function _(e) {
 }
 let E = d.A.Millis.HOUR,
     A = new (r())({ max: 50 });
-function h() {
+function f() {
     return {
         badges: new Map(),
         catalogFetched: !1,
@@ -23,7 +23,7 @@ function h() {
         acks: new Map(),
     };
 }
-function f(e, t, n) {
+function h(e, t, n) {
     let i = e.acks.get(t);
     return null != i && n < i;
 }
@@ -88,10 +88,10 @@ let p = new I(l.h, {
     },
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { userId: t, badges: n, requestedAt: i } = e,
-            r = A.peek(t) ?? h();
+            r = A.peek(t) ?? f();
         ((r.badges = new Map(
             n.map((e) => {
-                let t = f(r, e.badge_id, i) ? r.badges.get(e.badge_id) : null;
+                let t = h(r, e.badge_id, i) ? r.badges.get(e.badge_id) : null;
                 return [e.badge_id, t ?? e];
             }),
         )),
@@ -102,19 +102,19 @@ let p = new I(l.h, {
     },
     BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
         let { userId: t } = e,
-            n = A.peek(t) ?? h();
+            n = A.peek(t) ?? f();
         ((n.fetchError = !0), A.set(t, n));
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n, requestedAt: i } = e,
-            r = A.peek(t) ?? h();
-        if (f(r, n.badge_id, i)) return !1;
+            r = A.peek(t) ?? f();
+        if (h(r, n.badge_id, i)) return !1;
         (r.badges.set(n.badge_id, n), A.set(t, r));
     },
     BADGE_SUMMARY_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n, requestedAt: i } = e,
-            r = A.peek(t) ?? h();
-        if (f(r, n.badge_id, i)) return !1;
+            r = A.peek(t) ?? f();
+        if (h(r, n.badge_id, i)) return !1;
         let a = r.badges.get(n.badge_id);
         (r.badges.set(n.badge_id, {
             ...n,

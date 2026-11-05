@@ -1,4 +1,4 @@
-(n.d(t, { fS: () => f, U1: () => p }), n(321073));
+(n.d(t, { fS: () => h, U1: () => p }), n(321073));
 var i,
     r,
     a =
@@ -51,19 +51,19 @@ let A = Object.freeze({
         TRAGEDY_SIMULATED_NATURAL_DISASTER: E.vI(23),
         TRAGEDY_REAL_MILITARY_CONFLICT: E.vI(24),
     }),
-    h = Object.freeze({
+    f = Object.freeze({
         RESTRICTED_TO_ADULT: E.kg(
             A.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED,
             A.SEXUALLY_EXPLICIT_IMAGERY,
             A.SEXUALLY_EXPLICIT_TEXT,
         ),
     });
-var f = (((r = {}).FULL = "full"), (r.MINIMAL = "minimal"), r);
+var h = (((r = {}).FULL = "full"), (r.MINIMAL = "minimal"), r);
 let I = { source: a.NO_CLASSIFICATION, status: s.Y.EVERYONE };
 function p(e) {
     return (function (e) {
         var t, n, i, r, E;
-        let A, h, f, p, g, T;
+        let A, f, h, p, T, g;
         if (null == e) return I;
         let S = [],
             { type: N, data: C } = e;
@@ -84,14 +84,14 @@ function p(e) {
                 null != C.agency_ratings.pegi &&
                     S.push(
                         ((n = C.agency_ratings.pegi),
-                        (h = u.IS_ADULT_ONLY.has(n.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_PEGI, status: h }),
+                        (f = u.IS_ADULT_ONLY.has(n.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_PEGI, status: f }),
                     ),
                 null != C.agency_ratings.gop &&
                     S.push(
                         ((i = C.agency_ratings.gop),
-                        (f = d.IS_ADULT.has(i.classification) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_GOP, status: f }),
+                        (h = d.IS_ADULT.has(i.classification) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_GOP, status: h }),
                     ),
                 null != C.agency_ratings.igdb &&
                     S.push(
@@ -103,14 +103,14 @@ function p(e) {
                 null != C.agency_ratings.apple &&
                     S.push(
                         ((r = C.agency_ratings.apple),
-                        (g = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: g }),
+                        (T = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: T }),
                     ),
                 null != C.agency_ratings.roblox &&
                     S.push(
                         ((E = C.agency_ratings.roblox),
-                        (T = _.IS_ADULT_ONLY.has(E.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_ROBLOX, status: T }),
+                        (g = _.IS_ADULT_ONLY.has(E.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_ROBLOX, status: g }),
                     )),
             (function (e) {
                 let t = null;
@@ -131,5 +131,5 @@ function m(e, t) {
     let n = E.iu(t);
     return E.zy(n, A.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
         ? { source: e, status: s.Y.ADULT }
-        : { source: e, status: E.X8(n, h.RESTRICTED_TO_ADULT) ? s.Y.ADULT : s.Y.EVERYONE };
+        : { source: e, status: E.X8(n, f.RESTRICTED_TO_ADULT) ? s.Y.ADULT : s.Y.EVERYONE };
 }

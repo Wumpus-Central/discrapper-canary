@@ -11,13 +11,13 @@ t.d(
         v: function (e, n) {
             return i.useCallback(
                 (i) => {
-                    let d;
+                    let c;
                     i.stopPropagation();
-                    let c = a.A.getGuild(e.guildId),
+                    let d = a.A.getGuild(e.guildId),
                         u = r.default.getCurrentUser();
-                    (null != c || o.Ay.canUseCustomCallSounds(u)) &&
-                        ((d = r.default.getCurrentUser()),
-                        (null != c || o.Ay.canUseCustomCallSounds(d)) &&
+                    (null != d || o.Ay.canUseCustomCallSounds(u)) &&
+                        ((c = r.default.getCurrentUser()),
+                        (null != d || o.Ay.canUseCustomCallSounds(c)) &&
                             (0, l.L3)(i, async () => {
                                 let { default: i } = await Promise.all([
                                     t.e(476662),
@@ -37,7 +37,7 @@ t.d(
                                     t.e(482861),
                                     t.e(850424),
                                 ]).then(t.bind(t, 923819));
-                                return (t) => (0, s.jsx)(i, { ...t, soundGuild: c, activeCallGuildId: n, sound: e });
+                                return (t) => (0, s.jsx)(i, { ...t, soundGuild: d, activeCallGuildId: n, sound: e });
                             }));
                 },
                 [e, n],

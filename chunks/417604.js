@@ -118,8 +118,8 @@ class p {
             : { shouldSet: !1, correctedPaymentSourceId: null };
     }
 }
-var C = n(792996),
-    h = n(140624);
+var h = n(792996),
+    C = n(140624);
 function f(e) {
     let { giftCardsEnabled: t } = e,
         {
@@ -168,8 +168,8 @@ function S(e) {
         { enabled: S } = (0, s.c)({ location: u }),
         { enabled: g } = (0, o.U)({ location: u }),
         {
-            pendingPaymentSourceId: y,
-            hasInitialPaymentSourceSeed: I,
+            pendingPaymentSourceId: I,
+            hasInitialPaymentSourceSeed: y,
             hasAddedPaymentSourceThisSession: A,
             applyWalletBalance: P,
             previewApplyWalletBalance: v,
@@ -209,13 +209,13 @@ function S(e) {
                 subscriptionPaymentSourceId: E,
                 giftCardWallet: O,
                 isReady: d,
-                pendingPaymentSourceId: y,
+                pendingPaymentSourceId: I,
                 paymentSourceId: i,
                 giftCardsEnabled: S,
-                hasInitialPaymentSourceSeed: I,
+                hasInitialPaymentSourceSeed: y,
                 hasAddedPaymentSourceThisSession: A,
             }),
-            [T, b, E, O, d, y, i, S, I, A],
+            [T, b, E, O, d, I, i, S, y, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new p(U), [U])),
@@ -300,7 +300,7 @@ function S(e) {
                         onChange: H,
                         loading: Z,
                         disabled: !Z && !V,
-                        disabledTooltip: Z || V ? void 0 : C.intl.string(h.default.ccWIdu),
+                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
         [R, j, Q, W, k, H, V, Z, $, z],
     );

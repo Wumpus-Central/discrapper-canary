@@ -17,8 +17,8 @@ var t = l(477900),
     p = l(714114),
     E = l(342312),
     f = l(615606),
-    N = l(429913),
-    I = l(709066),
+    I = l(429913),
+    N = l(709066),
     C = l(47167),
     T = l(713654),
     _ = l(967165),
@@ -98,7 +98,7 @@ function ei(e) {
                 onClick: function () {
                     null != o && (0, H.openUserProfileModal)({ userId: o.id, guildId: n.guild_id, channelId: n.id });
                 },
-                children: (0, t.jsx)(et, { application: s, children: (0, t.jsx)(I.A, { verified: s.isVerified }) }),
+                children: (0, t.jsx)(et, { application: s, children: (0, t.jsx)(N.A, { verified: s.isVerified }) }),
             }),
             a
                 ? (0, t.jsx)(_.A, {
@@ -114,7 +114,7 @@ function ei(e) {
 }
 function es(e) {
     let { channel: n, children: l } = e,
-        s = (0, N.h)(n.linkedLobby?.application_id),
+        s = (0, I.h)(n.linkedLobby?.application_id),
         [r, a] = (0, M.kn)([o.M.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], { bypassAutoDismiss: !0 }),
         c = i.useRef(null);
     if (null == s) return null;
@@ -175,9 +175,9 @@ function er(e) {
     }, [l, s]),
     n.isDM() && l?.isStaff() && null != s)
         ? s.isStaff()
-            ? (0, t.jsx)(I.A, { type: I.A.Types.STAFF_ONLY_DM })
+            ? (0, t.jsx)(N.A, { type: N.A.Types.STAFF_ONLY_DM })
             : a && !r.badges?.some((e) => e.id.startsWith("staff"))
-              ? (0, t.jsx)(I.A, { type: I.A.Types.NOT_STAFF_WARNING })
+              ? (0, t.jsx)(N.A, { type: N.A.Types.NOT_STAFF_WARNING })
               : null
         : null;
 }
@@ -207,10 +207,10 @@ function ea(e) {
         ),
         j = h[0] ?? null,
         f = A.length > 0,
-        N = h.length > 0 || null != d,
-        I = null != j && (0, g.A)(j) ? j.application_id : void 0,
+        I = h.length > 0 || null != d,
+        N = null != j && (0, g.A)(j) ? j.application_id : void 0,
         C = (0, S.A)({
-            applicationId: I,
+            applicationId: N,
             source: R.GameProfileSources.DmHeaderActivity,
             trackEntryPointImpression: !1,
         }),
@@ -237,7 +237,7 @@ function ea(e) {
                         textSize: "sm",
                     }),
                 }),
-                N && (0, t.jsx)(x.E, { variant: "body-sm/normal", color: "text-muted", children: "\u2022" }),
+                I && (0, t.jsx)(x.E, { variant: "body-sm/normal", color: "text-muted", children: "\u2022" }),
                 (0, t.jsx)(E.A, {
                     user: s,
                     activities: A,
@@ -443,7 +443,7 @@ l.d(
                         ],
                     });
                 case $.rbe.GUILD_DIRECTORY:
-                    let N = a?.features.has($.GuildFeatures.HUB)
+                    let I = a?.features.has($.GuildFeatures.HUB)
                         ? ee.intl.formatToPlainString(ee.t.Dy2aht, { guildName: l })
                         : l;
                     return (0, t.jsxs)(i.Fragment, {
@@ -453,7 +453,7 @@ l.d(
                                 level: b,
                                 onContextMenu: u,
                                 onClick: d,
-                                children: [null != g ? (0, t.jsxs)(j.A, { children: [g, ":"] }) : null, " ", N],
+                                children: [null != g ? (0, t.jsxs)(j.A, { children: [g, ":"] }) : null, " ", I],
                             }),
                         ],
                     });

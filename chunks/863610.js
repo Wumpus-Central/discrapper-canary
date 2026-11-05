@@ -20,7 +20,7 @@ function A(e) {
     let t = e % 2;
     return t > 1 ? 1 - (t - 1) : t;
 }
-let h = r.memo(function (e) {
+let f = r.memo(function (e) {
         let { dotRadius: t, dotPosition: n, fill: a = "currentColor", spacing: s = 2.5 } = e,
             { focused: d } = (0, c.x)(),
             u = r.useRef(!0);
@@ -46,7 +46,7 @@ let h = r.memo(function (e) {
                 "animate-always",
                 [d],
             ),
-            h = (2 * t * 3 + (t / 4) * 2) / 2;
+            f = (2 * t * 3 + (t / 4) * 2) / 2;
         return (0, i.jsx)(i.Fragment, {
             children: [0, 1, 2].map((e) => {
                 let r = 0.25 * e,
@@ -54,7 +54,7 @@ let h = r.memo(function (e) {
                 return (0, i.jsx)(
                     l.animated.circle,
                     {
-                        cx: n ? n.to([0, 1], [h, o]) : o,
+                        cx: n ? n.to([0, 1], [f, o]) : o,
                         cy: t,
                         r: _.dotCycle
                             .to((e) => A(e - r))
@@ -73,13 +73,13 @@ let h = r.memo(function (e) {
             }),
         });
     }),
-    f = r.memo(function (e) {
+    h = r.memo(function (e) {
         let { dotRadius: t, x: n, y: r, hide: a = !1, themed: o = !1, className: E, ref: A } = e,
-            { focused: f } = (0, c.x)();
+            { focused: h } = (0, c.x)();
         return (0, d.p)(
             a,
             { ..._, key: (e) => (e ? "true" : "false") },
-            f ? "animate-always" : "animate-never",
+            h ? "animate-always" : "animate-never",
         )((e, a, d) => {
             let { dotPosition: c } = e,
                 { key: _ } = d;
@@ -96,11 +96,11 @@ let h = r.memo(function (e) {
                           className: s()(E, u.r, o ? u.S : null),
                           children: (0, i.jsx)(l.animated.g, {
                               style: { opacity: c.to((e) => Math.min(1, Math.max(e, 0))) },
-                              children: (0, i.jsx)(h, { dotRadius: t, dotPosition: c }),
+                              children: (0, i.jsx)(f, { dotRadius: t, dotPosition: c }),
                           }),
                       },
                       _,
                   );
         });
     });
-n.d(t, {}, { U: h, n: f });
+n.d(t, {}, { U: f, n: h });

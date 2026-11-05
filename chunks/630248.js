@@ -12,10 +12,10 @@ var u = n(355097);
 let _ = [l.kc.CHAT, l.kc.PRIMARY_ENTRY_POINT],
     E = { pendingUsages: [] },
     A = new o.A({ computeBonus: () => 100, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
-function h(e) {
+function f(e) {
     (E.pendingUsages.push({ key: e, timestamp: Date.now() }), A.track(e), A.compute());
 }
-function f() {
+function h() {
     let e = c.A.frecencyWithoutFetchingLatest,
         t = e.applicationFrecency?.applications ?? {};
     A.overwriteHistory(
@@ -27,7 +27,7 @@ class I extends a.Ay.PersistedStore {
     static displayName = "ApplicationFrecencyStore";
     static persistKey = "ApplicationFrecency";
     initialize(e) {
-        (null != e && (E = e), this.waitFor(d.Ay, c.A), this.syncWith([c.A], f));
+        (null != e && (E = e), this.waitFor(d.Ay, c.A), this.syncWith([c.A], h));
     }
     getState() {
         return E;
@@ -49,11 +49,11 @@ let p = new I(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
         if (!_.includes(t.type) || d.Ay.getLaunchState(t.applicationId)?.isLaunching) return !1;
-        h(t.applicationId);
+        f(t.applicationId);
     },
     EMBEDDED_ACTIVITY_OPEN: function (e) {
         let { applicationId: t } = e;
-        h(t);
+        f(t);
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {

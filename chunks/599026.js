@@ -1,3 +1,3 @@
-var n,
-    a = (((n = {})[(n.NAME = 0)] = "NAME"), (n[(n.STATE = 1)] = "STATE"), (n[(n.DETAILS = 2)] = "DETAILS"), n);
-e.d(l, {}, { A: a });
+var e,
+    a = (((e = {})[(e.NAME = 0)] = "NAME"), (e[(e.STATE = 1)] = "STATE"), (e[(e.DETAILS = 2)] = "DETAILS"), e);
+n.d(l, {}, { A: a });

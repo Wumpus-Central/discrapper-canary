@@ -7,7 +7,7 @@ n.d(t, {
     uz: () => B,
     yr: () => F,
     ej: () => P,
-    TY: () => g,
+    TY: () => T,
     K3: () => K,
     zO: () => Y,
     aJ: () => G,
@@ -25,11 +25,11 @@ n.d(t, {
     eA: () => U,
     kL: () => $,
     fO: () => R,
-    Li: () => h.L,
-    rE: () => T,
+    Li: () => f.L,
+    rE: () => g,
     mg: () => M,
     BQ: () => z,
-    pc: () => Q,
+    pc: () => Z,
     Pc: () => X,
     WQ: () => q,
 });
@@ -45,15 +45,15 @@ var i,
     _ = n(435558),
     E = n(323889),
     A = n(412703),
-    h = n(902173),
-    f =
+    f = n(902173),
+    h =
         (((i = {})[(i.ConsecutiveHeartbeatPeriodMinutes = 2)] = "ConsecutiveHeartbeatPeriodMinutes"),
         (i[(i.StatusLookbackPeriodDays = 30)] = "StatusLookbackPeriodDays"),
         i),
     I = n(620632),
     p = n(927813),
     m = n(506988);
-let g = {
+let T = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -61,7 +61,7 @@ let g = {
     ACTIVITY_PANEL: 4,
     QUEST_LIVE_STREAM: 8,
 };
-var T =
+var g =
     (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
     (r.QUESTS_MANAGER = "quests_manager"),
     (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
@@ -118,8 +118,8 @@ var T =
     (r.PLAY_QUEST_CONNECTION_MODAL = "play_quest_connection_modal"),
     (r.BOUNTY_PREVIEW_LINK = "bounty_preview_link"),
     r);
-let S = new Set([h.L.NITRO_2_POINT_0_CTA, h.L.ORBS_MULTIPLIER_QUEST, h.L.XBOX_GAME_PASS_QUEST]),
-    N = p.A.Millis.MINUTE * f.ConsecutiveHeartbeatPeriodMinutes,
+let S = new Set([f.L.NITRO_2_POINT_0_CTA, f.L.ORBS_MULTIPLIER_QUEST, f.L.XBOX_GAME_PASS_QUEST]),
+    N = p.A.Millis.MINUTE * h.ConsecutiveHeartbeatPeriodMinutes,
     C = { tension: 900, friction: 45, clamp: !0 },
     O = { tension: 360, friction: 30, clamp: !0 };
 var R = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
@@ -200,8 +200,8 @@ function q(e) {
           ? { group: "reward", filter: e }
           : null;
 }
-let Z = ["reward", "task"],
-    Q = Object.entries(
+let Q = ["reward", "task"],
+    Z = Object.entries(
         (0, _.groupBy)(
             [
                 { group: "task", filter: "task_play" },
@@ -213,7 +213,7 @@ let Z = ["reward", "task"],
             "group",
         ),
     ).sort((e, t) => {
-        let n = Z.indexOf(e[0]),
-            i = Z.indexOf(t[0]);
+        let n = Q.indexOf(e[0]),
+            i = Q.indexOf(t[0]);
         return n < i ? -1 : +(i < n);
     });

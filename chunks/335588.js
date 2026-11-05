@@ -12,8 +12,8 @@ var i = n(477900),
     f = n(534514),
     E = n(834730),
     I = n(821609),
-    g = n(398590),
-    h = n(523527),
+    h = n(398590),
+    g = n(523527),
     p = n(976860),
     A = n(129230),
     _ = n(676279),
@@ -21,8 +21,8 @@ var i = n(477900),
     C = n(739053),
     y = n(82498),
     x = n(77528),
-    T = n(369805),
-    O = n(728666),
+    O = n(369805),
+    T = n(728666),
     j = n(632150),
     S = n(792656),
     b = n(682901),
@@ -56,8 +56,8 @@ function k(e) {
     }, [F, U]);
     let H = (0, x.V)(),
         W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
-        X = (0, T.A)(b.pe.TIER_2),
-        z = (0, O.O9)();
+        X = (0, O.A)(b.pe.TIER_2),
+        z = (0, T.O9)();
     t = K
         ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
@@ -124,9 +124,9 @@ function k(e) {
                                                 location_object: R.ZSU.NAVIGATION_LINK,
                                             }),
                                                 J?.(),
-                                                (0, h.A)(),
+                                                (0, g.A)(),
                                                 G(),
-                                                (0, g.jH)(),
+                                                (0, h.jH)(),
                                                 (0, p.pX)(R.BVt.APPLICATION_STORE));
                                         },
                                         text: L.intl.string(L.t.ZnqyZ2),

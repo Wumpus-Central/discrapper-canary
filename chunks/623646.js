@@ -10,19 +10,19 @@ var i = n(477900),
     _ = n(559106),
     E = n(38021),
     A = n(43990),
-    h = n(508382),
-    f = n(365912),
+    f = n(508382),
+    h = n(365912),
     I = n(38112);
 let p = new WeakMap();
 function m(e) {
     let t = (0, u.p3)(e, I.qd);
-    return (null == t && (t = (0, u.wB)(e, h.IP)), t ?? null);
+    return (null == t && (t = (0, u.wB)(e, f.IP)), t ?? null);
 }
-function g(e) {
+function T(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
-function T(e, t, n, i, r) {
+function g(e, t, n, i, r) {
     switch (e) {
         case "top":
             return (
@@ -194,10 +194,10 @@ class C extends r.Component {
         let { position: e, autoInvert: t, avoidancePadding: n } = this.props,
             i = this.elementRef.current;
         d()(null != i, "Unexpected null element");
-        let r = (0, f.J$)(i),
+        let r = (0, h.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
-            o = T(e, a, i, r, n),
+            o = g(e, a, i, r, n),
             c = o,
             u = null,
             _ = 0;
@@ -205,7 +205,7 @@ class C extends r.Component {
             let t = S(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
-            let s = T(t, u, i, r, n);
+            let s = g(t, u, i, r, n);
             if ((s > o && ((l = { position: t, style: u, nudge: _ }), (c = s)), o < 0 && s < 0)) {
                 let a,
                     s = l.position;
@@ -219,7 +219,7 @@ class C extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = T(S(s), e.style, i, r, n);
+                        t = g(S(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }
@@ -270,7 +270,7 @@ class C extends r.Component {
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        ((g(e) !== g(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((T(e) !== T(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }
@@ -301,7 +301,7 @@ class C extends r.Component {
     calculateMaxHeight() {
         let e = this.elementRef.current;
         if (null == e) return;
-        let t = (0, f.J$)(e),
+        let t = (0, h.J$)(e),
             n = this.state.style;
         return null != n.top
             ? Math.max(0, t.offsetHeight - n.top - 12)

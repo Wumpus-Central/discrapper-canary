@@ -10,19 +10,19 @@ var i = n(635377),
     _ = n(287809),
     E = n(403362),
     A = n(811091),
-    h = n(624044),
-    f = n(161204),
+    f = n(624044),
+    h = n(161204),
     I = n(575279);
 let p = new (r())({ max: 10, dispose: D }),
     m = new Map();
-function g(e, t) {
+function T(e, t) {
     let n = m.get(e);
     return null != n && !!n.has(t) && (n.delete(t), 0 === n.size && m.delete(e), !0);
 }
-let T = new Map();
+let g = new Map();
 function S(e, t) {
-    let n = T.get(e);
-    null != n && (n.delete(t), 0 === n.size && T.delete(e));
+    let n = g.get(e);
+    null != n && (n.delete(t), 0 === n.size && g.delete(e));
 }
 function N(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
@@ -30,7 +30,7 @@ function N(e, t, n, i) {
     if (null == a) return;
     let s = a.conversationMetadataById.get(t);
     null != s &&
-        (0, h.ep)({
+        (0, f.ep)({
             meta: s,
             messages: n,
             fullyHydrated: i,
@@ -56,10 +56,10 @@ function O(e, t, n) {
     let r = i.messageMetadataByMessageId.get(t);
     if (r?.message == null) return !1;
     let a = n(r.message);
-    return null != a && ((r.message = a), (0, h.V)(C(i, r), t, a), !0);
+    return null != a && ((r.message = a), (0, f.V)(C(i, r), t, a), !0);
 }
 function R(e) {
-    return O(e.channelId, e.messageId, (t) => (0, h.y4)(e, t));
+    return O(e.channelId, e.messageId, (t) => (0, f.y4)(e, t));
 }
 function L() {
     let e = !1;
@@ -67,8 +67,8 @@ function L() {
         p.forEach((t) => {
             t.messageMetadataByMessageId.forEach((n, i) => {
                 if (null == n.message) return;
-                let r = (0, h.a)(n.message);
-                null != r && ((e = !0), (n.message = r), (0, h.V)(C(t, n), i, r));
+                let r = (0, f.a)(n.message);
+                null != r && ((e = !0), (n.message = r), (0, f.V)(C(t, n), i, r));
             });
         }),
         e
@@ -79,7 +79,7 @@ function y(e, t) {
     if (null == n) return !1;
     let i = n.messageMetadataByMessageId.get(t),
         r = null != i ? C(n, i) : null;
-    return ((0, h.rO)(r, t), n.messageMetadataByMessageId.delete(t));
+    return ((0, f.rO)(r, t), n.messageMetadataByMessageId.delete(t));
 }
 function D(e) {
     return m.delete(e);
@@ -140,7 +140,7 @@ class v extends a.Ay.Store {
         return p.peek(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
     }
     isConversationFetchPending(e, t) {
-        let n = T.get(e);
+        let n = g.get(e);
         return null != n && 0 !== n.size && (!0 !== t || n.has("full"));
     }
     getConversationFeedbackRating(e, t) {
@@ -153,7 +153,7 @@ let P = new v(s.h, {
         let n,
             { conversationId: i, full: r, cacheType: a } = e;
         if ("channel" !== a) return !1;
-        ((t = r ? "full" : "preview"), null != (n = T.get(i)) ? n.add(t) : T.set(i, new Set([t])));
+        ((t = r ? "full" : "preview"), null != (n = g.get(i)) ? n.add(t) : g.set(i, new Set([t])));
     },
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, messages: i, messageReferences: r, fullyHydrated: a, cacheType: s } = e;
@@ -182,18 +182,18 @@ let P = new v(s.h, {
                 fullyHydrated: c,
                 selectedConversationId: u,
             } = e;
-        if (!g(n, o)) return !1;
-        let _ = i.map(f.a).filter(E.Vq),
-            h = p.peek(n);
+        if (!T(n, o)) return !1;
+        let _ = i.map(h.a).filter(E.Vq),
+            f = p.peek(n);
         if (l) {
-            let e = null != u ? h?.conversationMetadataById.get(u)?.conversation : null;
+            let e = null != u ? f?.conversationMetadataById.get(u)?.conversation : null;
             t = null != e ? [e] : [];
-        } else t = h?.conversations ?? [];
-        let I = l ? null : (h?.reachedOldest ?? null),
-            m = l ? null : (h?.reachedNewest ?? null),
-            T = new Set(t.map((e) => e.id));
+        } else t = f?.conversations ?? [];
+        let I = l ? null : (f?.reachedOldest ?? null),
+            m = l ? null : (f?.reachedNewest ?? null),
+            g = new Set(t.map((e) => e.id));
         if (
-            (_.some((e) => !T.has(e.id)) ||
+            (_.some((e) => !g.has(e.id)) ||
                 null == s ||
                 ("before" === a ? (I = Date.now()) : "after" === a && (m = Date.now())),
             "before" === a && null == s && (m = Date.now()),
@@ -243,14 +243,14 @@ let P = new v(s.h, {
                 reachedOldest: n?.reachedOldest ?? null,
                 reachedNewest: n?.reachedNewest ?? null,
             };
-        })(n, _, h);
-        for (let e of ((S.reachedOldest = I), (S.reachedNewest = m), null != h ? Object.assign(h, S) : p.set(n, S), i))
+        })(n, _, f);
+        for (let e of ((S.reachedOldest = I), (S.reachedNewest = m), null != f ? Object.assign(f, S) : p.set(n, S), i))
             null != e.messages && N(n, e.id, e.messages, c);
         return !0;
     },
     CHANNEL_CONVERSATIONS_FETCH_FAILURE: function (e) {
         let { channelId: t, requestKey: n } = e;
-        return g(t, n);
+        return T(t, n);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -312,7 +312,7 @@ let P = new v(s.h, {
     RELATIONSHIP_UPDATE: L,
     RELATIONSHIP_REMOVE: L,
     LOGOUT: function () {
-        (p.reset(), m.clear(), T.clear());
+        (p.reset(), m.clear(), g.clear());
     },
 });
 n.d(t, {}, { A: P });

@@ -23,7 +23,7 @@ let E = "https://api.spotify.com/v1";
 function A(e) {
     return `?utm_source=discord&utm_medium=${e}`;
 }
-let h = Object.freeze({
+let f = Object.freeze({
     PROFILE: `${E}/me`,
     NOTIFICATIONS_PLAYER: `${E}/me/notifications/player`,
     PLAYER: `${E}/me/player`,
@@ -80,7 +80,7 @@ n.d(
             }
         },
         Qp: _,
-        RQ: h,
+        RQ: f,
         UN: ["open.spotify.com", "www.spotify.com"],
         gY: o,
         pH: function (e) {

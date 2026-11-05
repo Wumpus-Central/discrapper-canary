@@ -61,9 +61,9 @@ function A(e) {
     return 0 === e ? o.intl.string(o.t.XjXqzh) : o.intl.formatToPlainString(o.t.TEOC0I, { resolution: e });
 }
 (E(720), E(1080), E(1440), E(0, () => o.intl.string(o.t.XjXqzh)), E(720), E(1080), E(1440));
-let h = [E(480, () => A(480)), E(720, () => A(720)), E(1080, () => A(1080)), E(1440, () => A(1440)), E(0, () => A(0))];
+let f = [E(480, () => A(480)), E(720, () => A(720)), E(1080, () => A(1080)), E(1440, () => A(1440)), E(0, () => A(0))];
 (E(15), E(30), E(60));
-let f = [
+let h = [
     E(15, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 15 })),
     E(30, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 30 })),
     E(60, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 60 })),
@@ -102,9 +102,9 @@ n.d(
                     throw Error(`Unknown resolution: ${e}`);
             }
         },
-        Jk: h,
+        Jk: f,
         ZV: _,
-        ce: f,
+        ce: h,
         jQ: u,
         kn: c,
         on: d,

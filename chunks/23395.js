@@ -17,10 +17,10 @@ n.d(
         B: A,
         default: function (e) {
             let { scheduledMessage: t, transitionState: n, onClose: a } = e,
-                h = s()(t.sendAtTimestamp.substring(0, 200)),
-                [f, I] = r.useState(h),
+                f = s()(t.sendAtTimestamp.substring(0, 200)),
+                [h, I] = r.useState(f),
                 [p, m] = r.useState(!1),
-                g = (0, u.Vf)(f, t.scheduledMessageId);
+                T = (0, u.Vf)(h, t.scheduledMessageId);
             return (0, i.jsx)(l.a, {
                 transitionState: n,
                 size: "md",
@@ -36,7 +36,7 @@ n.d(
                             try {
                                 (await (0, d.Eg)({
                                     scheduledMessageId: t.scheduledMessageId,
-                                    scheduledTimestamp: f.toISOString(),
+                                    scheduledTimestamp: h.toISOString(),
                                 }),
                                     (0, c.kb)(),
                                     (0, o.Oo)(A));
@@ -47,10 +47,10 @@ n.d(
                             }
                         },
                         loading: p,
-                        disabled: null != g,
+                        disabled: null != T,
                     },
                 ],
-                children: (0, i.jsx)(_.A, { defaultValue: h, onChange: I, scheduledMessageId: t.scheduledMessageId }),
+                children: (0, i.jsx)(_.A, { defaultValue: f, onChange: I, scheduledMessageId: t.scheduledMessageId }),
             });
         },
     },

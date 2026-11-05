@@ -11,17 +11,17 @@ var i = n(435558),
     _ = n(723176),
     E = n(626584),
     A = n(519460),
-    h = n(508602);
-function f(e) {
+    f = n(508602);
+function h(e) {
     let { type: t } = e;
-    return t !== h.A.AUTO_MODERATION_MESSAGE && t !== h.A.AUTO_MODERATION_NOTIFICATION;
+    return t !== f.A.AUTO_MODERATION_MESSAGE && t !== f.A.AUTO_MODERATION_NOTIFICATION;
 }
 var I = n(164956),
     p = n(931480),
     m = n(432005),
-    g = n(697470);
+    T = n(697470);
 n(763754);
-var T = n(491001),
+var g = n(491001),
     S = n(815807),
     N = n(773669),
     C = n(811091),
@@ -152,14 +152,14 @@ function q(e) {
     ((l = l.update(
         r,
         (e) => (
-            e.embeds?.filter(f).length > 0 && (e = e.set("embeds", [])),
+            e.embeds?.filter(h).length > 0 && (e = e.set("embeds", [])),
             "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, s.UI)(e.flags, G.pr7.EPHEMERAL))),
             e
         ),
     )),
         c.A.commit(l));
 }
-class Z extends l.Ay.Store {
+class Q extends l.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
         (this.waitFor(O.default, R.A, L.A, p.A, y.A, D.Ay, b.A, I.A, N.default, v.A, P.A, M.Ay, U.A, w.default),
@@ -183,7 +183,7 @@ class Z extends l.Ay.Store {
         let t = w.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, g.A)(e, t?.id));
+            .find((e) => (0, T.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
         let t = w.default.getCurrentUser();
@@ -244,7 +244,7 @@ class Z extends l.Ay.Store {
         return B;
     }
 }
-let Q = new Z(o.h, {
+let Z = new Q(o.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -279,10 +279,10 @@ let Q = new Z(o.h, {
                     isStale: _,
                     truncate: E,
                     avoidInitialScroll: A,
-                    requestStartTime: h,
+                    requestStartTime: f,
                 } = e,
-                f = c.A.getOrCreate(t);
-            for (let e of ((f = f.loadComplete({
+                h = c.A.getOrCreate(t);
+            for (let e of ((h = h.loadComplete({
                 newMessages: u,
                 isBefore: n,
                 isAfter: i,
@@ -295,11 +295,11 @@ let Q = new Z(o.h, {
                 cached: _,
                 hasFetched: !0,
                 avoidInitialScroll: A,
-                requestStartTime: h,
+                requestStartTime: f,
             })),
-            null != E && (n || i) && (!n || !i) && (f = f.truncate(n, i)),
-            (f = V(t, f)),
-            c.A.commit(f),
+            null != E && (n || i) && (!n || !i) && (h = h.truncate(n, i)),
+            (h = V(t, h)),
+            c.A.commit(h),
             u))
                 j(e);
         },
@@ -368,7 +368,7 @@ let Q = new Z(o.h, {
                 s = c.A.getOrCreate(t),
                 l = n(225123).A.isConnected();
             return a
-                ? (0, T.K)()
+                ? (0, g.K)()
                     ? (!(async function (e, t, n) {
                           let i = _.A.database(),
                               r = R.A.getBasicChannel(e);
@@ -380,7 +380,7 @@ let Q = new Z(o.h, {
                               } catch {}
                           F.log("Push notification message not in cache, adding directly", t.id, t.channel_id);
                           let a = c.A.getOrCreate(e);
-                          (c.A.commit(a.receivePushNotification(t, n)), Q.emitChange());
+                          (c.A.commit(a.receivePushNotification(t, n)), Z.emitChange());
                       })(t, i, l),
                       !1)
                     : (F.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
@@ -560,4 +560,4 @@ let Q = new Z(o.h, {
             null != t && null != t.author && null != n && t.author.id === n.id && (B = !0);
         },
     }),
-    J = Q;
+    J = Z;

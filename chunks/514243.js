@@ -1,6 +1,6 @@
 var n = t(477900),
-    r = t(582128),
-    l = t(325158),
+    l = t(582128),
+    r = t(325158),
     s = t(263577),
     a = t(506326),
     c = t(868065),
@@ -8,11 +8,11 @@ var n = t(477900),
 let o = [a.zi, a.Rq],
     x =
         221552 == t.j
-            ? r.memo(function (e) {
-                  let { entry: i, channel: t, selected: r } = e,
-                      { largeImage: x } = (0, l.nO)({ entry: i, trackingSource: "memberlist_watch_content_row" });
+            ? l.memo(function (e) {
+                  let { entry: i, channel: t, selected: l } = e,
+                      { largeImage: x } = (0, r.nO)({ entry: i, trackingSource: "memberlist_watch_content_row" });
                   return (0, n.jsxs)(c.Zp, {
-                      selected: r,
+                      selected: l,
                       children: [
                           (0, n.jsxs)(c.UA, {
                               children: [

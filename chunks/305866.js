@@ -13,12 +13,12 @@ n.d(
         M: c,
         l: function (e) {
             let { ref: t, ...n } = e,
-                { children: u, impressionType: _, impression: E, disableTrack: A, returnRef: h, ...f } = n,
+                { children: u, impressionType: _, impression: E, disableTrack: A, returnRef: f, ...h } = n,
                 I = r.useRef(null),
                 p = r.useRef(null),
-                [m, g] = r.useState(!1),
-                T = m ? p : I;
-            ((0, s.tj)(T, { returnRef: h }),
+                [m, T] = r.useState(!1),
+                g = m ? p : I;
+            ((0, s.tj)(g, { returnRef: f }),
                 r.useContext(d.A)(
                     { type: _, name: E?.impressionName, properties: E?.impressionProperties },
                     { disableTrack: A },
@@ -31,7 +31,7 @@ n.d(
                 ),
                 N = r.useCallback(
                     (e) => {
-                        m !== e && g(e);
+                        m !== e && T(e);
                     },
                     [m],
                 ),
@@ -39,7 +39,7 @@ n.d(
             return (0, i.jsx)(c.Provider, {
                 value: C,
                 children: (0, i.jsxs)("div", {
-                    ...f,
+                    ...h,
                     ref: S,
                     role: "dialog",
                     tabIndex: -1,

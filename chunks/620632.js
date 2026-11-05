@@ -1,6 +1,6 @@
 (n.d(t, {
     Bo: () => L,
-    oh: () => h,
+    oh: () => f,
     bG: () => 50035,
     Wl: () => c,
     $F: () => l.LG,
@@ -79,7 +79,7 @@ var u = n(264572).hp;
 let _ = new s.Vy("HTTPUtils"),
     E = new Set([502, 504, 507, 598, 599, 522, 523, 524]),
     A = new Set([429, 503]);
-class h extends Error {
+class f extends Error {
     method;
     url;
     ok;
@@ -102,7 +102,7 @@ class h extends Error {
             (this.retryAfter = s));
     }
 }
-function f(e, t) {
+function h(e, t) {
     let n = e?.["retry-after"] ?? e?.["Retry-After"];
     if ("string" == typeof n) {
         let e = parseInt(n, 10);
@@ -116,7 +116,7 @@ function f(e, t) {
 function I(e, t, n, i, s, l) {
     if (t.signal?.aborted) {
         let e = Object.assign(Error("Request aborted", { cause: l }), { code: "ABORTED" });
-        (g(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
+        (T(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
         return;
     }
     let o = r()[e](t.url);
@@ -176,9 +176,9 @@ function I(e, t, n, i, s, l) {
                     body: r.body,
                     text: r.text,
                     status: r.status,
-                    retryAfter: f(r.headers, r.body),
+                    retryAfter: h(r.headers, r.body),
                 };
-                g(t, a);
+                T(t, a);
                 let o = !1,
                     u = (r, a) => {
                         let d = { ...t, headers: { ...t.headers, ...r }, interceptResponse: a };
@@ -195,7 +195,7 @@ function I(e, t, n, i, s, l) {
                             null != e && (a.body = d(e));
                         }
                         if (t.rejectWithError) {
-                            let n = new h({
+                            let n = new f({
                                 method: e,
                                 url: t.url,
                                 status: a.status,
@@ -213,7 +213,7 @@ function I(e, t, n, i, s, l) {
             (e) => {
                 null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code
                     ? c()
-                    : (g(t),
+                    : (T(t),
                       null != l && null == e.cause && (e.cause = l),
                       i(e),
                       null != s && s({ ok: !1, hasErr: !0, err: e }));
@@ -237,12 +237,12 @@ function m(e) {
     }
     (_.verbose("rateLimitExpirationHandler: moving to next record for ", e), n());
 }
-function g(e, t) {
+function T(e, t) {
     var n;
     let i = p.get(e.url);
     if (null != t && ((n = t.status), A.has(n))) {
         let n = i?.backoff ?? new a.A(1e3, 6e4),
-            r = 1e3 * (f(t.headers, t.body) ?? 5),
+            r = 1e3 * (h(t.headers, t.body) ?? 5),
             s = n.fail(void 0, r),
             l = Date.now() + s;
         if (null != i && i.retryAfterTimestamp >= l)
@@ -263,7 +263,7 @@ function g(e, t) {
             i.retryAfterTimestamp < Date.now() &&
             (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), m(e.url));
 }
-function T(e, t, n) {
+function g(e, t, n) {
     let i = Error(`HTTP ${e.toUpperCase()} initiated here`);
     return new Promise((r, a) => {
         "string" == typeof t && (t = { url: t, rejectWithError: !1 });
@@ -281,11 +281,11 @@ function T(e, t, n) {
             : I(e, t, r, a, n, i);
     });
 }
-let S = T.bind(null, "get"),
-    N = T.bind(null, "post"),
-    C = T.bind(null, "put"),
-    O = T.bind(null, "patch"),
-    R = T.bind(null, "del"),
+let S = g.bind(null, "get"),
+    N = g.bind(null, "post"),
+    C = g.bind(null, "put"),
+    O = g.bind(null, "patch"),
+    R = g.bind(null, "del"),
     L = { get: S, post: N, put: C, patch: O, del: R };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });

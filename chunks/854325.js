@@ -1,4 +1,4 @@
-(n.d(t, { gB: () => g, S1: () => T, PX: () => S }),
+(n.d(t, { gB: () => T, S1: () => g, PX: () => S }),
     n(393431),
     n(532706),
     n(42231),
@@ -18,13 +18,13 @@ var i = n(205693),
     _ = n.n(u),
     E = n(577718),
     A = n(723702);
-let h = (0, n(945810).mj)({
+let f = (0, n(945810).mj)({
     name: "2026-08-virtual-backgrounds-ios",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var f = n(463951),
+var h = n(463951),
     I = n(652215);
 function p(e, t, n, i, r) {
     (0, l.wq)({ [e]: { graph: n, target: t, image: i, blob: r } });
@@ -80,11 +80,11 @@ async function m(e, t, n) {
             (0, l.Mj)();
         }
 }
-async function g(e, t) {
+async function T(e, t) {
     let { track: n = !0, location: r } = t;
     (await m(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
 }
-async function T(e, t, n) {
+async function g(e, t, n) {
     let { track: r = !0, location: a } = n;
     ((0, l.Oo)(),
         await m(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
@@ -94,9 +94,9 @@ function S() {
     let e = r.default.getCurrentUser();
     if (null == e) return;
     let t = (0, s.i)(e);
-    (0, f.A)() &&
-        (!(0, A.un)() || h.getConfig({ location: "applyBackgroundOption" }).enabled) &&
+    (0, h.A)() &&
+        (!(0, A.un)() || f.getConfig({ location: "applyBackgroundOption" }).enabled) &&
         !o.A.hasBeenApplied &&
         null != t &&
-        g(t, { track: !1 }).catch(I.tEg);
+        T(t, { track: !1 }).catch(I.tEg);
 }

@@ -1,4 +1,4 @@
-(n.d(t, { h: () => T, A: () => k }), n(321073));
+(n.d(t, { h: () => g, A: () => k }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(855986),
@@ -13,8 +13,8 @@ var i = n(435558),
 function A(e) {
     return { enabled: !0 };
 }
-var h = n(689739),
-    f = n(620750),
+var f = n(689739),
+    h = n(620750),
     I = n(194537),
     p = n(529082);
 function m(e, t, n) {
@@ -25,8 +25,8 @@ function m(e, t, n) {
     }
     return i;
 }
-var g = n(652215);
-let T = 6048e5;
+var T = n(652215);
+let g = 6048e5;
 function S() {
     return {
         messageGiftIntentLastShownMap: {},
@@ -70,7 +70,7 @@ function P() {
 }
 function M() {
     if (null != y) return void G(y);
-    if ((U(), !_.A.hasConsented(g.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
+    if ((U(), !_.A.hasConsented(T.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
     for (let e of E.A.getFriendIDs()) {
         let t = E.A.getSince(e),
             n = d.A.getUserAffinity(e);
@@ -80,8 +80,8 @@ function M() {
                 let t = new Date(),
                     n = t.getFullYear();
                 for (let i of [-1, 0, 1]) {
-                    let r = (0, h.default)(e, n + i);
-                    if (!(0, f.default)(r, e) && 7 >= Math.abs((0, I.A)(t, r))) return !0;
+                    let r = (0, f.default)(e, n + i);
+                    if (!(0, h.default)(r, e) && 7 >= Math.abs((0, I.A)(t, r))) return !0;
                 }
                 return !1;
             })(n) && (C.push(e), (L[e] = { friendsSince: n }));

@@ -4,30 +4,30 @@ var c = n(855986),
     _ = n(73153),
     E = n(617617),
     A = n(761821),
-    h = n(46653),
-    f = n(62838);
-let I = f.z.object({
-        value: f.z.boolean(),
-        source: f.z.enum([
+    f = n(46653),
+    h = n(62838);
+let I = h.z.object({
+        value: h.z.boolean(),
+        source: h.z.enum([
             "legacy_proto",
             "legacy_default",
             "declarative",
             "declarative_sibling",
             "declarative_retired",
         ]),
-        explicit: f.z.boolean(),
-        inherited: f.z.boolean(),
-        setting_id: f.z.number().int().positive(),
-        source_setting_id: f.z.number().int().positive().nullable(),
-        legacy_path: f.z.string().regex(/^[a-z][a-z_]*\.[a-z][a-z_]*$/),
+        explicit: h.z.boolean(),
+        inherited: h.z.boolean(),
+        setting_id: h.z.number().int().positive(),
+        source_setting_id: h.z.number().int().positive().nullable(),
+        legacy_path: h.z.string().regex(/^[a-z][a-z_]*\.[a-z][a-z_]*$/),
     }),
-    p = f.z.object({
-        contract_version: f.z.literal(1),
-        account_id: f.z.string(),
-        arm: f.z.literal("treatment"),
-        legacy_data_version: f.z.number().int().nonnegative(),
-        declarative_data_version: f.z.number().int().nonnegative(),
-        preferences: f.z
+    p = h.z.object({
+        contract_version: h.z.literal(1),
+        account_id: h.z.string(),
+        arm: h.z.literal("treatment"),
+        legacy_data_version: h.z.number().int().nonnegative(),
+        declarative_data_version: h.z.number().int().nonnegative(),
+        preferences: h.z
             .object({
                 go_live: I,
                 voice_channel_activity: I,
@@ -49,8 +49,8 @@ function m(e, t) {
         }),
     );
 }
-let g = u.ej.create(),
-    T = !1,
+let T = u.ej.create(),
+    g = !1,
     S = 0,
     N = !1,
     C = !1,
@@ -66,15 +66,15 @@ function y() {
         null != l &&
         a === l &&
         i.arm === (R ? "treatment" : "control") &&
-        i.account_id === h.default.getId() &&
-        (null != o || i.declarative_data_version >= (g.versions?.dataVersion ?? 0)) &&
+        i.account_id === f.default.getId() &&
+        (null != o || i.declarative_data_version >= (T.versions?.dataVersion ?? 0)) &&
         r === m(i, E.A.settings)
     );
 }
 function D(e) {
     if (
-        e.account_id !== h.default.getId() ||
-        e.declarative_data_version < (g.versions?.dataVersion ?? 0) ||
+        e.account_id !== f.default.getId() ||
+        e.declarative_data_version < (T.versions?.dataVersion ?? 0) ||
         (i?.account_id === e.account_id && e.declarative_data_version < i.declarative_data_version) ||
         e.legacy_data_version < (E.A.settings.versions?.dataVersion ?? 0)
     )
@@ -88,10 +88,10 @@ function v() {
     (b(), (d = void 0));
 }
 function P(e) {
-    let t = g.versions?.dataVersion ?? 0;
+    let t = T.versions?.dataVersion ?? 0;
     return "proto" === e.versionSource
         ? t
-        : null != i && i.account_id === h.default.getId()
+        : null != i && i.account_id === f.default.getId()
           ? Math.max(t, i.declarative_data_version)
           : void 0;
 }
@@ -116,7 +116,7 @@ class U extends c.Ay.PersistedStore {
                   },
     ];
     initialize(e) {
-        (this.waitFor(h.default, E.A),
+        (this.waitFor(f.default, E.A),
             (function (e) {
                 var t;
                 let n;
@@ -132,7 +132,7 @@ class U extends c.Ay.PersistedStore {
                                 ? e.effectiveSettingsAssignment
                                 : void 0)));
                 let s = (0, A.ii)(u.ej, e.proto ?? null);
-                null != s && (g = s);
+                null != s && (T = s);
                 let l = (0, A.ii)(u.ej, e.protoToSave ?? null);
                 null != l &&
                     (d = {
@@ -144,7 +144,7 @@ class U extends c.Ay.PersistedStore {
     }
     getState() {
         let e = {
-                proto: (0, A.ob)(u.ej, g),
+                proto: (0, A.ob)(u.ej, T),
                 effectiveSettings: i,
                 effectiveFetchedAt: S,
                 effectiveSourceFingerprint: r,
@@ -160,7 +160,7 @@ class U extends c.Ay.PersistedStore {
         return e;
     }
     get hasLoaded() {
-        return T;
+        return g;
     }
     get pendingEdit() {
         return d;
@@ -205,7 +205,7 @@ class U extends c.Ay.PersistedStore {
         return (
             d ?? {
                 partialSettings: u.ej.create(),
-                offlineEditDataVersion: e ?? g.versions?.dataVersion ?? 0,
+                offlineEditDataVersion: e ?? T.versions?.dataVersion ?? 0,
                 versionSource: null != e ? "effective" : "proto",
             }
         );
@@ -214,10 +214,10 @@ class U extends c.Ay.PersistedStore {
         return y() ? i?.declarative_data_version : void 0;
     }
     get dataVersion() {
-        return g.versions?.dataVersion ?? 0;
+        return T.versions?.dataVersion ?? 0;
     }
     getSetting(e) {
-        return d?.partialSettings?.values[e] ?? o?.partialSettings?.values[e] ?? g.values[e];
+        return d?.partialSettings?.values[e] ?? o?.partialSettings?.values[e] ?? T.values[e];
     }
 }
 new U(_.h, {
@@ -225,10 +225,10 @@ new U(_.h, {
         let { notificationSettings: t } = e;
         ((s = void 0),
             (C = !1),
-            null != t.declarativeSettings && (g = t.declarativeSettings),
+            null != t.declarativeSettings && (T = t.declarativeSettings),
             null != d && d.offlineEditDataVersion !== P(d) && v(),
             null != o && o.offlineEditDataVersion !== P(o) && (o = void 0),
-            (T = !0));
+            (g = !0));
     },
     CONNECTION_CLOSED: function () {
         if (d?.timeout == null) return !1;
@@ -238,7 +238,7 @@ new U(_.h, {
         let { settings: t } = e,
             n = t.declarativeSettings;
         if (null == n) return !1;
-        g = n;
+        T = n;
     },
     DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE: function (e) {
         let {
@@ -249,11 +249,11 @@ new U(_.h, {
             effectiveSettingsAssignment: a,
         } = e;
         if ((null == t && null == n) || n !== o) return !1;
-        if (null != r && r.declarative_data_version < (g.versions?.dataVersion ?? 0)) {
+        if (null != r && r.declarative_data_version < (T.versions?.dataVersion ?? 0)) {
             o = void 0;
             return;
         }
-        (null != t && (g = t), (o = void 0), null != r && null != a && a === l && D(r), i && v());
+        (null != t && (T = t), (o = void 0), null != r && null != a && a === l && D(r), i && v());
     },
     DECLARATIVE_NOTIFICATION_SETTINGS_EDIT: function (e) {
         let { edit: t, isApplying: n } = e;
@@ -273,10 +273,10 @@ new U(_.h, {
         (n ? v() : (d = null == d ? t : { ...d, partialSettings: M(t, d) }), (o = void 0));
     },
     LOGOUT: function () {
-        ((g = u.ej.create()),
+        ((T = u.ej.create()),
             v(),
             (o = void 0),
-            (T = !1),
+            (g = !1),
             (i = void 0),
             (S = 0),
             (r = void 0),

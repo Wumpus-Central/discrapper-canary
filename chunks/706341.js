@@ -11,8 +11,8 @@ var i = n(435558),
     _ = n(932883),
     E = n(398269),
     A = n(849077),
-    h = n(652215);
-let f = (0, i.throttle)(async function (e) {
+    f = n(652215);
+let h = (0, i.throttle)(async function (e) {
     let { preload: t = !1, ...n } = e,
         i = Date.now(),
         l = E.A.getNotifyingChannelIds();
@@ -32,14 +32,14 @@ let f = (0, i.throttle)(async function (e) {
                   }
                   return n;
               })(l),
-        h = o.Ay.getMentions(),
-        f = null != h && h.length > 0 ? h[h.length - 1].id : null,
+        f = o.Ay.getMentions(),
+        h = null != f && f.length > 0 ? f[f.length - 1].id : null,
         I = !1;
     (o.Ay.hasMore || !o.Ay.hasLoadedEver) &&
         !o.Ay.loading &&
         (d.push(
             a.A.fetchRecentMentions({
-                before: f,
+                before: h,
                 limit: 25,
                 roles: o.Ay.roleFilter,
                 everyone: o.Ay.everyoneFilter,
@@ -82,7 +82,7 @@ n.d(
                 let { preload: e = !1, ...t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (!E.A.canLoadMore({ preload: e })) return !1;
                 (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START", preload: e }),
-                    f({ preload: e, ...t }));
+                    h({ preload: e, ...t }));
             },
             inboxItemClick: function (e) {
                 let {
@@ -105,18 +105,18 @@ n.d(
                         l.I_(
                             t.channel_id,
                             {
-                                section: h.JJy.INBOX,
-                                object: h.ZSU.ACK_MESSAGE_VIEWED,
-                                objectType: h.btD.ACK_SEMI_AUTOMATIC,
+                                section: f.JJy.INBOX,
+                                object: f.ZSU.ACK_MESSAGE_VIEWED,
+                                objectType: f.btD.ACK_SEMI_AUTOMATIC,
                             },
                             !0,
                             void 0,
                             t.id,
                         ),
                     s.A.trackJump(n.id, t.id, A.XU));
-                let E = a ? h.gNP : n.guild_id,
-                    f = h.BVt.CHANNEL(E, n.id, t.id);
-                u && a ? (0, d.bG)(f) : (0, d.pX)(f);
+                let E = a ? f.gNP : n.guild_id,
+                    h = f.BVt.CHANNEL(E, n.id, t.id);
+                u && a ? (0, d.bG)(h) : (0, d.pX)(h);
             },
         },
     },

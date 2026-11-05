@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(626584),
     E = n(501803),
     A = n(316031),
-    h = n(264388),
-    f = n(518782),
+    f = n(264388),
+    h = n(518782),
     I = n(164956),
     p = n(403362),
     m = n(7864),
-    g = n(811091),
-    T = n(46653),
+    T = n(811091),
+    g = n(46653),
     S = n(734057),
     N = n(317525),
     C = n(71393),
@@ -49,7 +49,7 @@ function B(e) {
     ((M += 1), (w[e] = M));
 }
 function V(e) {
-    (j(e) === T.default.getId() && (0, h.G)(W(e)), delete v[e]);
+    (j(e) === g.default.getId() && (0, f.G)(W(e)), delete v[e]);
 }
 function H(e, t) {
     let n = [];
@@ -104,8 +104,8 @@ function K(e) {
             communicationDisabledUntil: _,
             unusualDMActivityUntil: E,
             fullProfileLoadedTimestamp: A,
-            flags: h,
-            collectibles: f,
+            flags: f,
+            collectibles: h,
             displayNameStyles: p,
             gamingLeaderboardData: m,
         } = e,
@@ -129,8 +129,8 @@ function K(e) {
             communicationDisabledUntil: _,
             unusualDMActivityUntil: E,
             fullProfileLoadedTimestamp: A,
-            flags: h,
-            collectibles: f,
+            flags: f,
+            collectibles: h,
             displayNameStyles: p,
             gamingLeaderboardData: m,
         };
@@ -139,10 +139,10 @@ function K(e) {
         null == L[i])
     )
         return v;
-    if (t === T.default.getId())
+    if (t === g.default.getId())
         if (I.A.isViewingRoles(i) || I.A.isFullServerPreview(i)) {
             let e = I.A.getViewingRoles(i);
-            D[i] = { ...v, ...I.A.getMemberOptions(i), roles: null != e ? g.default.keys(e) : [] };
+            D[i] = { ...v, ...I.A.getMemberOptions(i), roles: null != e ? T.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
     return v;
 }
@@ -172,8 +172,8 @@ function X(e) {
             unusualDMActivityUntil: _,
             flags: E,
             collectibles: A,
-            displayNameStyles: h,
-            gamingLeaderboardData: f,
+            displayNameStyles: f,
+            gamingLeaderboardData: h,
         } = e,
         I = L[t];
     if (null == I) return !1;
@@ -195,8 +195,8 @@ function X(e) {
         fullProfileLoadedTimestamp: I[n.id]?.fullProfileLoadedTimestamp,
         flags: E,
         collectibles: A,
-        displayNameStyles: h,
-        gamingLeaderboardData: f,
+        displayNameStyles: f,
+        gamingLeaderboardData: h,
     })),
         k(t, I[n.id]));
 }
@@ -225,7 +225,7 @@ function z(e, t) {
                   unusualDMActivityUntil: t.unusual_dm_activity_until ?? r?.unusualDMActivityUntil,
                   collectibles: (0, u.t)(t.collectibles),
                   displayNameStyles: (0, E.mT)(t.display_name_styles),
-                  gamingLeaderboardData: (0, f.Rt)(t.member_gaming_leaderboard_data),
+                  gamingLeaderboardData: (0, h.Rt)(t.member_gaming_leaderboard_data),
               })),
                   k(e, n[t.user.id]));
           }),
@@ -235,12 +235,12 @@ function z(e, t) {
 function q(e) {
     return (0, c.Xq)(e.avatar_decoration_data);
 }
-function Z(e, t) {
+function Q(e, t) {
     let n = L[e];
     if (null == n || null == n[t]) return !1;
     (delete n[t], F(e, t), U++);
 }
-function Q(e, t) {
+function Z(e, t) {
     return J({ id: e, members: t.filter(o.A).map((e) => e.member) });
 }
 function J(e) {
@@ -269,7 +269,7 @@ function J(e) {
                 unusualDMActivityUntil: r.unusual_dm_activity_until ?? s?.unusualDMActivityUntil,
                 collectibles: (0, u.t)(r.collectibles),
                 displayNameStyles: (0, E.mT)(r.display_name_styles),
-                gamingLeaderboardData: (0, f.Rt)(r.member_gaming_leaderboard_data),
+                gamingLeaderboardData: (0, h.Rt)(r.member_gaming_leaderboard_data),
             });
         ((i[a] = l), k(t, l));
     }
@@ -280,8 +280,8 @@ function ee(e) {
     if (null == t) return !1;
     let n = C.A.getGuild(e.guildId);
     if (null == n) return (R.warn(`Guild ${e.guildId} not found during ${e.type}.`), !1);
-    let i = T.default.getId();
-    for (let r of g.default.keys(t)) {
+    let i = g.default.getId();
+    for (let r of T.default.keys(t)) {
         let a = t[r];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = r === i && "GUILD_ROLE_DELETE" === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
@@ -312,7 +312,7 @@ function et(e) {
     if (null == n) return !1;
     let i = C.A.getGuild(t);
     if (null == i) return (R.warn(`Guild ${t} not found during IMPERSONATE_UPDATE.`), !1);
-    let r = T.default.getId(),
+    let r = g.default.getId(),
         a = n[r];
     n[r] = K({
         userId: r,
@@ -386,7 +386,7 @@ function el(e) {
 class eo extends s.Ay.Store {
     static displayName = "GuildMemberStore";
     initialize() {
-        this.waitFor(T.default, S.A, N.A, C.A, I.A);
+        this.waitFor(g.default, S.A, N.A, C.A, I.A);
     }
     getMutableAllGuildsAndMembers() {
         return L;
@@ -428,7 +428,7 @@ class eo extends s.Ay.Store {
     }
     isCurrentUserGuest(e) {
         if (null == e) return !1;
-        let t = T.default.getId(),
+        let t = g.default.getId(),
             n = L[e];
         if (null == n || null == n[t]) return !1;
         let i = n[t].flags;
@@ -437,7 +437,7 @@ class eo extends s.Ay.Store {
     getMemberIds(e) {
         if (null == e) return [];
         let t = L[e];
-        return null == t ? [] : g.default.keys(t);
+        return null == t ? [] : T.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];
@@ -450,12 +450,12 @@ class eo extends s.Ay.Store {
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
-        return null != n && t === T.default.getId() && (I.A.isViewingRoles(e) || I.A.isFullServerPreview(e))
+        return null != n && t === g.default.getId() && (I.A.isViewingRoles(e) || I.A.isFullServerPreview(e))
             ? (D[e] ?? n)
             : n;
     }
     getSelfMember(e) {
-        return this.getMember(e, T.default.getId());
+        return this.getMember(e, g.default.getId());
     }
     getSelfMemberJoinedAt(e) {
         let t = y[e];
@@ -504,7 +504,7 @@ let ed = new eo(l.h, {
             let t = e.id;
             (J({ id: t, members: e.members }),
                 e.activity_instances?.forEach((e) => {
-                    Q(t, e.participants);
+                    Z(t, e.participants);
                 }));
         });
     },
@@ -532,7 +532,7 @@ let ed = new eo(l.h, {
     GUILD_MEMBER_UPDATE: X,
     GUILD_MEMBER_UPDATE_LOCAL: function (e) {
         let { guildId: t, roles: n, addedRoleIds: i, removedRoleIds: a, flags: s } = e,
-            l = T.default.getId(),
+            l = g.default.getId(),
             o = L[t],
             d = null != o ? o[l] : null;
         if (null == d) return !1;
@@ -568,11 +568,11 @@ let ed = new eo(l.h, {
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        Z(t, n.id);
+        Q(t, n.id);
     },
     GUILD_MEMBER_REMOVE_LOCAL: function (e) {
         let { guildId: t, userId: n } = e;
-        Z(t, n);
+        Q(t, n);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
@@ -649,7 +649,7 @@ let ed = new eo(l.h, {
             fullProfileLoadedTimestamp: Date.now(),
             collectibles: (0, u.t)(t.collectibles),
             displayNameStyles: (0, E.mT)(t.display_name_styles),
-            gamingLeaderboardData: (0, f.Rt)(t.member_gaming_leaderboard_data),
+            gamingLeaderboardData: (0, h.Rt)(t.member_gaming_leaderboard_data),
         })),
             k(n, i[t.user.id]));
     },
@@ -698,7 +698,7 @@ let ed = new eo(l.h, {
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { instance: t } = e,
             n = (0, d.D)(t.location);
-        return null != n && Q(n, t.participants);
+        return null != n && Z(n, t.participants);
     },
     INTERACTION_MODAL_CREATE: function (e) {
         let t = S.A.getChannel(e.channelId);

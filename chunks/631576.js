@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(919638),
     E = n(287809),
     A = n(371794),
-    h = n(898578),
-    f = n(378058),
+    f = n(898578),
+    h = n(378058),
     I = n(652215),
     p = n(355097),
     m = n(792996);
-function g(e) {
-    return _.A.totalUnavailableGuilds > 0 || !d.A.isConnected() ? e : e.filter((e) => null != h.A.getStickerById(e));
+function T(e) {
+    return _.A.totalUnavailableGuilds > 0 || !d.A.isConnected() ? e : e.filter((e) => null != f.A.getStickerById(e));
 }
 n.d(
     t,
@@ -28,8 +28,8 @@ n.d(
         },
         AO: async function (e) {
             let { body: t } = await a.Bo.get({ url: I.Rsh.STICKER(e), rejectWithError: (0, a.fT)() });
-            if ((0, f.Xw)(t)) s.h.dispatch({ type: "GUILD_STICKER_FETCH_SUCCESS", sticker: t });
-            else if ((0, f.FD)(t)) s.h.dispatch({ type: "PACK_STICKER_FETCH_SUCCESS", sticker: t });
+            if ((0, h.Xw)(t)) s.h.dispatch({ type: "GUILD_STICKER_FETCH_SUCCESS", sticker: t });
+            else if ((0, h.FD)(t)) s.h.dispatch({ type: "PACK_STICKER_FETCH_SUCCESS", sticker: t });
             else throw Error("Invalid sticker type");
         },
         MO: async function (e, t, n) {
@@ -37,7 +37,7 @@ n.d(
         },
         YB: async function () {
             let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            if (h.A.isFetchingStickerPacks || h.A.hasLoadedStickerPacks) return;
+            if (f.A.isFetchingStickerPacks || f.A.hasLoadedStickerPacks) return;
             s.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
             let {
                 body: { sticker_packs: t },
@@ -92,7 +92,7 @@ n.d(
             u.bW.updateAsync(
                 "favoriteStickers",
                 (t) =>
-                    ((t.stickerIds = g(t.stickerIds)), r().size(t.stickerIds) >= 250)
+                    ((t.stickerIds = T(t.stickerIds)), r().size(t.stickerIds) >= 250)
                         ? (l.A.show({
                               title: m.intl.string(m.t["+XYXtZ"]),
                               body: m.intl.formatToPlainString(m.t.JaIyFi, { count: 250 }),
@@ -106,7 +106,7 @@ n.d(
             u.bW.updateAsync(
                 "favoriteStickers",
                 (t) => {
-                    ((t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = g(t.stickerIds)));
+                    ((t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = T(t.stickerIds)));
                 },
                 p.Sb.INFREQUENT_USER_ACTION,
             );

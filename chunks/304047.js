@@ -17,7 +17,7 @@ var i = n(477900),
     v = n(487887),
     E = n(818348),
     C = n(792996),
-    j = n(584841);
+    I = n(584841);
 n.d(
     t,
     {},
@@ -28,7 +28,7 @@ n.d(
                 h = l.useRef(null),
                 A = l.useCallback(() => f(!0), []),
                 v = l.useCallback(() => f(!1), []),
-                I = C.intl.string(C.t["wg/30i"]);
+                j = C.intl.string(C.t["wg/30i"]);
             return (0, i.jsx)(c.Y, {
                 targetElementRef: h,
                 shouldShow: g,
@@ -47,17 +47,17 @@ n.d(
                     (0, i.jsx)("div", {
                         ref: h,
                         children: (0, i.jsx)(a.m, {
-                            text: I,
+                            text: j,
                             shouldShow: !g && void 0,
                             children: (0, i.jsx)("div", {
-                                className: r()(j.V7, { [j.kl]: o, [j.N7]: u }),
+                                className: r()(I.V7, { [I.kl]: o, [I.N7]: u }),
                                 children: (0, i.jsx)(m.K, {
                                     size: "sm",
                                     variant: "overlay-secondary",
                                     onClick: (e) => {
                                         (e.stopPropagation(), A());
                                     },
-                                    "aria-label": I,
+                                    "aria-label": j,
                                     icon: p.GiftIcon,
                                 }),
                             }),
@@ -80,15 +80,15 @@ n.d(
             return (0, i.jsx)(a.m, {
                 text: m,
                 children: (0, i.jsxs)(o.D, {
-                    className: r()(j.dY, j.ac, { [j.M7]: n }),
+                    className: r()(I.dY, I.ac, { [I.M7]: n }),
                     onClick: c,
                     "aria-label": m,
                     children: [
                         (0, i.jsx)("div", {
-                            className: j.jy,
-                            children: (0, i.jsx)("img", { className: j.Se, src: d, alt: "", "aria-hidden": !0 }),
+                            className: I.jy,
+                            children: (0, i.jsx)("img", { className: I.Se, src: d, alt: "", "aria-hidden": !0 }),
                         }),
-                        !n && (0, i.jsx)(u.E, { variant: "body-sm/normal", className: j.Wk, children: s.name }),
+                        !n && (0, i.jsx)(u.E, { variant: "body-sm/normal", className: I.Wk, children: s.name }),
                     ],
                 }),
             });

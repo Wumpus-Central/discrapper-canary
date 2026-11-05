@@ -30,23 +30,23 @@ function A(e, t) {
             invert: c,
             callback: u,
             type: _ = "spring",
-            shouldLoop: h,
-            durationMin: f,
+            shouldLoop: f,
+            durationMin: h,
             durationMax: I,
             ...p
         } = t,
         m = e._value,
-        g = E(t.duration, f, I),
-        T = E(t.toValue, r, a),
-        S = i[_](e, { ...p, toValue: T, tension: s, friction: l, duration: g }),
+        T = E(t.duration, h, I),
+        g = E(t.toValue, r, a),
+        S = i[_](e, { ...p, toValue: g, tension: s, friction: l, duration: T }),
         N = S;
     if (d || c) {
-        let r = E(t.duration, f, I);
-        ((n = i[_](e, { ...p, toValue: d ? m : -T, tension: s, friction: l, duration: r })), (N = i.sequence([S, n])));
+        let r = E(t.duration, h, I);
+        ((n = i[_](e, { ...p, toValue: d ? m : -g, tension: s, friction: l, duration: r })), (N = i.sequence([S, n])));
     }
     o
         ? N.start(() => {
-              (!h || (h && h())) && (u ? u(A.bind(null, e, t)) : A(e, t));
+              (!f || (f && f())) && (u ? u(A.bind(null, e, t)) : A(e, t));
           })
         : N.start(u);
 }
@@ -69,7 +69,7 @@ i.inject.ApplyAnimatedValues(
     },
     (e) => e,
 );
-let h = {
+let f = {
     ...i,
     Easing: a(),
     accelerate: function (e) {
@@ -94,4 +94,4 @@ let h = {
     section: i.createAnimatedComponent("section"),
     video: i.createAnimatedComponent("video"),
 };
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

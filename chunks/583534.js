@@ -54,5 +54,5 @@ function E(e) {
 class A extends a.A {
     actions = { RTC_CONNECTION_STATE: _, RTC_CONNECTION_VIDEO: E, MEDIA_SESSION_JOINED: u };
 }
-let h = new A();
-n.d(t, {}, { A: h });
+let f = new A();
+n.d(t, {}, { A: f });

@@ -163,7 +163,7 @@ let c = {
         showCharacterCount: !0,
         layout: 1,
     },
-    y = {
+    S = {
         analyticsName: "create_forum_post",
         attachments: !0,
         drafts: { type: s.C.FirstThreadMessage },
@@ -179,7 +179,7 @@ let c = {
         showSlowmodeIndicator: !0,
         layout: 2,
     },
-    S = {
+    y = {
         analyticsName: "create_poll",
         attachments: !0,
         drafts: { type: s.C.ChannelMessage },
@@ -356,10 +356,10 @@ n.d(
             GENERIC_RICH_TEXTAREA: v,
             CUSTOM_GIFT: N,
             RULES_INPUT: T,
-            CREATE_FORUM_POST: y,
+            CREATE_FORUM_POST: S,
             CREATE_GAME_INVITE_POST_DESCRIPTION: E,
             CREATE_ANNOUNCEMENT_POST: x,
-            CREATE_POLL: S,
+            CREATE_POLL: y,
             FORUM_CHANNEL_GUIDELINES: k,
             CHANNEL_TOPIC: j,
             ATOMIC_REACTOR_REPLY_INPUT: _,

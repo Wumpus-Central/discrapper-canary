@@ -30,8 +30,8 @@ function E(e) {
 function A(e) {
     return Array.from(r.o.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
-let h = E([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
-    f = E([r.n.WATCH_VIDEO]),
+let f = E([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
+    h = E([r.n.WATCH_VIDEO]),
     I = E([r.n.WATCH_VIDEO_ON_MOBILE]),
     p = E([r.n.WATCH_VIDEO, r.n.WATCH_VIDEO_ON_MOBILE]),
     m = E([
@@ -41,9 +41,9 @@ let h = E([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
         r.n.PLAY_ON_XBOX,
         r.n.ACHIEVEMENT_IN_GAME,
     ]),
-    g = E([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
-function T(e) {
-    return h(e);
+    T = E([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
+function g(e) {
+    return f(e);
 }
 function S(e, t) {
     let n = e?.progress[t]?.heartbeat?.expiresAt;
@@ -100,14 +100,14 @@ function R(e) {
             return Math.max((0, i.floor)(r, 2), 0);
         })(t, u),
         A = Object.values(d.tasks).find(C),
-        h = A?.applications?.map((e) => e.id);
+        f = A?.applications?.map((e) => e.id);
     return {
         progressSeconds: E,
         targetSeconds: _,
         targetMinutes: Math.ceil(_ / a.A.Seconds.MINUTE),
         percentComplete: O(_, E),
         taskType: c,
-        applications: h,
+        applications: f,
     };
 }
 function L(e) {
@@ -134,7 +134,7 @@ n.d(
         I6: function (e) {
             return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_GAME];
         },
-        IO: f,
+        IO: h,
         JC: function (e) {
             let t,
                 n,
@@ -155,9 +155,9 @@ n.d(
             };
         },
         K$: function (e) {
-            return I(e) && !f(e);
+            return I(e) && !h(e);
         },
-        Ki: g,
+        Ki: T,
         Ov: function (e) {
             return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_ACTIVITY];
         },
@@ -190,7 +190,7 @@ n.d(
                           percentComplete: 0,
                           taskType: r.n.STREAM_ON_DESKTOP,
                       }
-                    : h(n)
+                    : f(n)
                       ? (function (e) {
                             let { quest: t, includeTaskTypes: n = r.o.ALL } = e;
                             for (let e of Object.values(t.userStatus?.progress ?? {})
@@ -250,7 +250,7 @@ n.d(
             let { quest: t } = e;
             return null != t.config.taskConfigV2.tasks[r.n.STREAM_ON_DESKTOP];
         },
-        g5: T,
+        g5: g,
         hL: function (e) {
             return new Set(Object.keys(e.config.taskConfigV2.tasks));
         },
@@ -258,13 +258,13 @@ n.d(
             return y(e.targetSeconds - e.progressSeconds);
         },
         no: function (e) {
-            return !T(e) && c({ quest: e });
+            return !g(e) && c({ quest: e });
         },
         pU: function (e) {
             return d(e, [r.n.PLAY_ON_DESKTOP]);
         },
         t: c,
-        uD: h,
+        uD: f,
         vS: function (e) {
             let t = d(e, [r.n.PLAY_ACTIVITY]);
             return t?.[0];

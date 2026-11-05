@@ -15,15 +15,15 @@ var A =
     (i.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER"),
     (i.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS"),
     i);
-function h(e) {
+function f(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
     return (e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t);
 }
-function f(e) {
+function h(e) {
     return e.sort;
 }
 function I() {
-    return new s.J(h, f);
+    return new s.J(f, h);
 }
 n.d(
     t,
@@ -54,9 +54,9 @@ n.d(
                         inviterId: u,
                         integrationType: E,
                         joinSourceApplicationId: A,
-                        joinSourceChannelId: h,
+                        joinSourceChannelId: f,
                     } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
-                    f = o.default.getUser(e.userId);
+                    h = o.default.getUser(e.userId);
                 return {
                     hasUnusualDmActivity: r,
                     hasUnusualAccountActivity: a,
@@ -65,11 +65,11 @@ n.d(
                     inviterId: u,
                     integrationType: E,
                     joinSourceApplicationId: A,
-                    joinSourceChannelId: h,
+                    joinSourceChannelId: f,
                     ...e,
                     isCurrentGuildMemberByTimestamp: i <= this.newMemberTimestamp,
                     isIncludedInSearchResults: !1,
-                    user: f,
+                    user: h,
                     sort: (0, _.R)(e, t.selectedSort ?? c.mF.ORDER_BY_UNSPECIFIED),
                     joinedAtTimestamp: i,
                     ...n,

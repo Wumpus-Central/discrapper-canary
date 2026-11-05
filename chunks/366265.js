@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(821609),
     o = t(367513),
     c = t(233824),
-    d = t(71393),
-    u = t(576705),
+    u = t(71393),
+    d = t(576705),
     A = t(129230),
     h = t(113783),
     m = t(597886),
@@ -16,7 +16,7 @@ var i = t(477900),
     f = t(682901),
     p = t(792996),
     E = t(391203);
-function j() {
+function I() {
     return (0, i.jsxs)("svg", {
         width: "36",
         height: "36",
@@ -70,15 +70,15 @@ t.d(
         A: function (e) {
             let { channel: n } = e,
                 t = (0, h.uy)(n.id),
-                I = (0, h.zy)(n.id, m.ip.AUDIENCE),
-                v = (0, s.bG)([d.A], () => d.A.getGuild(n.guild_id), [n.guild_id]),
+                j = (0, h.zy)(n.id, m.ip.AUDIENCE),
+                v = (0, s.bG)([u.A], () => u.A.getGuild(n.guild_id), [n.guild_id]),
                 N = v?.maxStageVideoChannelUsers ?? 0,
                 _ =
                     null != v && v.features.has(C.GuildFeatures.COMMUNITY)
                         ? N < 1e4
                         : v?.premiumTier !== C.TVA.TIER_3 && N <= 150,
                 T = (0, x.A)(n),
-                b = (0, s.bG)([u.A], () => u.A.can(g.QY, n));
+                b = (0, s.bG)([d.A], () => d.A.can(g.QY, n));
             function S() {
                 (o.A.updateStageVideoLimitBoostUpsellDismissed(n.id, !0),
                     A.default.track(C.HAw.BOOSTING_UPSELL_CLICKED, {
@@ -88,7 +88,7 @@ t.d(
                         action: f.pd.DISMISS,
                     }));
             }
-            let y = { canModerate: b, audienceCount: I, channel: n, speakerCount: t },
+            let y = { canModerate: b, audienceCount: j, channel: n, speakerCount: t },
                 O = l.useRef(y);
             return (l.useEffect(() => {
                 O.current = y;
@@ -107,7 +107,7 @@ t.d(
                 ? (0, i.jsxs)("div", {
                       className: E.bp,
                       children: [
-                          (0, i.jsx)(j, {}),
+                          (0, i.jsx)(I, {}),
                           (0, i.jsxs)("div", {
                               className: E.Qq,
                               children: [

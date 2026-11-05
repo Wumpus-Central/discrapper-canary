@@ -11,13 +11,13 @@ var r = n(192308),
     _ = n(652215),
     E = n(185928);
 let A = window.matchMedia("(prefers-reduced-motion: reduce)"),
-    h = window.matchMedia("(prefers-contrast: more)"),
-    f = window.matchMedia("(prefers-contrast: less)"),
+    f = window.matchMedia("(prefers-contrast: more)"),
+    h = window.matchMedia("(prefers-contrast: less)"),
     I = window.matchMedia("(prefers-color-scheme: dark)"),
     p = window.matchMedia("(prefers-color-scheme: light)"),
     m = window.matchMedia("(forced-colors: active)"),
-    g = 5;
-function T() {
+    T = 5;
+function g() {
     return "windows" === (0, d.R0)();
 }
 n.d(
@@ -32,8 +32,8 @@ n.d(
                     p.addListener(this.handleSystemColorPreferencesChanged),
                     m.addListener(this.handleSystemColorPreferencesChanged),
                     this.handleSystemColorPreferencesChanged(),
-                    h.addListener(this.handleSystemPrefersContrastChanged),
                     f.addListener(this.handleSystemPrefersContrastChanged),
+                    h.addListener(this.handleSystemPrefersContrastChanged),
                     this.handleSystemPrefersContrastChanged());
             },
             init() {
@@ -47,11 +47,11 @@ n.d(
             },
             maybeShowKeyboardNavigationExplainerModal() {
                 let e;
-                ((g = Math.max(g - 1, 0)),
+                ((T = Math.max(T - 1, 0)),
                     null == (e = l.default.getCurrentUser()) ||
                         Date.now() - e.createdAt < 864e5 ||
                         u.Ay.keyboardNavigationExplainerModalSeen ||
-                        0 !== g ||
+                        0 !== T ||
                         (0, r.mM)(
                             async () => {
                                 let { default: e } = await Promise.all([n.e(65e3), n.e(898186)]).then(
@@ -68,14 +68,14 @@ n.d(
             handleSystemColorPreferencesChanged() {
                 let e = E.Fc.NO_PREFERENCE;
                 I.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
-                let t = (!d.isPlatformEmbedded || T()) && m.matches ? "active" : "none";
+                let t = (!d.isPlatformEmbedded || g()) && m.matches ? "active" : "none";
                 (s.LA(e), c.RI(t));
             },
             handleSystemPrefersContrastChanged() {
                 let e = "no-preference";
-                (h.matches ? (e = "more") : f.matches && (e = "less"), c.Jb(e));
+                (f.matches ? (e = "more") : h.matches && (e = "less"), c.Jb(e));
             },
         },
-        D: T,
+        D: g,
     },
 );

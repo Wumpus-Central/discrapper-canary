@@ -11,13 +11,13 @@ var i = n(115560),
     _ = n(859703),
     E = n(639214),
     A = n(734057),
-    h = n(495867),
-    f = n(287809),
+    f = n(495867),
+    h = n(287809),
     I = n(129230),
     p = n(723702),
     m = n(918052),
-    g = n(933958),
-    T = n(692957),
+    T = n(933958),
+    g = n(692957),
     S = n(872142),
     N = n(847381),
     C = n(400115),
@@ -71,12 +71,12 @@ n.d(
                     source: N,
                     interactionId: C,
                 } = n,
-                L = f.default.getCurrentUser();
+                L = h.default.getCurrentUser();
             if (null == L) return;
             let v = null != u ? A.A.getChannel(u) : null,
                 P = n.guildId ?? v?.getGuildId() ?? null,
                 M = n.locationKind ?? (null == v ? void 0 : null != P ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL),
-                U = h.A.getMediaSessionId(),
+                U = f.A.getMediaSessionId(),
                 w = null != U ? [U] : [],
                 G = (0, i.A)();
             R[e] = {
@@ -90,9 +90,9 @@ n.d(
                 frameGuildId: P,
                 frameLocationKind: M,
             };
-            let x = g.Ay.getShelfActivities(P),
+            let x = T.Ay.getShelfActivities(P),
                 k = m.A.getState().shelfOrder,
-                F = (0, T.A)({ applicationId: e, activityConfigs: x }),
+                F = (0, g.A)({ applicationId: e, activityConfigs: x }),
                 B = 1 + k.findIndex((t) => t === e),
                 { releasePhase: V } = y(F),
                 H = c.A.getRawThermalState();
@@ -139,13 +139,13 @@ n.d(
         al: y,
         iG: function (e) {
             let t = R[e],
-                n = f.default.getCurrentUser();
+                n = h.default.getCurrentUser();
             if (null == t || null == n) return;
             let i = t.frameChannelId ?? null,
                 r = t.frameGuildId ?? null,
                 a = null != i ? A.A.getChannel(i) : null,
-                s = g.Ay.getShelfActivities(r),
-                l = (0, T.A)({ applicationId: e, activityConfigs: s }),
+                s = T.Ay.getShelfActivities(r),
+                l = (0, g.A)({ applicationId: e, activityConfigs: s }),
                 { releasePhase: o } = y(l),
                 d = c.A.getRawThermalState(),
                 u = null != t.connectedSince ? Date.now() - t.connectedSince : null;

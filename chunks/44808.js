@@ -13,8 +13,8 @@ function A(e) {
     let { position: t, type: n, children: i } = e,
         { reducedMotion: s } = a.useContext(o.C),
         u = s.enabled ? 3 : n,
-        [A, h] = a.useState(null != t),
-        [f] = a.useState(() => new d.Ep()),
+        [A, f] = a.useState(null != t),
+        [h] = a.useState(() => new d.Ep()),
         [I, p] = a.useState(!0),
         m = a.useRef(null);
     return (
@@ -26,10 +26,10 @@ function A(e) {
                     p(!1);
                 }, 200));
         }, []),
-        a.useEffect(() => () => f.stop(), [f]),
+        a.useEffect(() => () => h.stop(), [h]),
         a.useEffect(() => {
-            null != t && f.start(10, () => h(!0));
-        }, [t, f]),
+            null != t && h.start(10, () => f(!0));
+        }, [t, h]),
         (0, r.jsx)("div", {
             "data-popout-animating": I,
             className: l()(null != t ? E[t] : null, { [_[u]]: null != t, [c.Wr]: A }),

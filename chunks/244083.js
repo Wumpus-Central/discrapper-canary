@@ -1,6 +1,6 @@
 var i,
-    l,
-    r = n(477900),
+    r,
+    l = n(477900),
     s = n(582128),
     a = n(503698),
     o = n.n(a),
@@ -16,7 +16,7 @@ var i,
     I = n(792996),
     E = n(51377),
     S = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
-    C = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
+    C = (((r = {}).TOP = "top"), (r.MIDDLE = "middle"), r);
 class _ extends s.PureComponent {
     state = { confirmed: !1 };
     componentDidMount() {
@@ -36,37 +36,37 @@ class _ extends s.PureComponent {
                 textAlign: t,
                 isLongText: n,
                 title: i,
-                body: l,
+                body: r,
                 className: s,
                 onClickSkipAll: a,
             } = this.props,
             f = "left" === t || n,
             g = "center" === t || !f;
-        return (0, r.jsxs)(u.l, {
+        return (0, l.jsxs)(u.l, {
             className: o()(E.Sy, s),
             children: [
                 null != e &&
-                    (0, r.jsx)(A.A, {
+                    (0, l.jsx)(A.A, {
                         className: E.il,
                         justify: f ? A.A.Justify.START : A.A.Justify.CENTER,
                         children: e(),
                     }),
-                (0, r.jsx)(d.H, { className: o()({ [E.Av]: g, [E.gH]: f }), children: i }),
-                (0, r.jsx)("string" == typeof l ? "p" : "div", {
+                (0, l.jsx)(d.H, { className: o()({ [E.Av]: g, [E.gH]: f }), children: i }),
+                (0, l.jsx)("string" == typeof r ? "p" : "div", {
                     className: o()({ [E.IF]: g, [E.If]: f }),
-                    children: l,
+                    children: r,
                 }),
-                (0, r.jsxs)(c.e, {
+                (0, l.jsxs)(c.e, {
                     fullWidth: !0,
                     direction: "vertical",
                     children: [
-                        (0, r.jsx)(h.$, {
+                        (0, l.jsx)(h.$, {
                             fullWidth: !0,
                             variant: "primary",
                             onClick: this.handleDismiss,
                             text: I.intl.string(I.t["+IrDzN"]),
                         }),
-                        (0, r.jsx)(h.$, {
+                        (0, l.jsx)(h.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             onClick: a,
@@ -90,20 +90,20 @@ class N extends s.PureComponent {
     };
     renderPopoutContent = (e) => {
         let { closePopout: t, position: n } = e,
-            { forceTheme: i, isLongText: l, arrowAlignment: s, renderMedia: a } = this.props,
+            { forceTheme: i, isLongText: r, arrowAlignment: s, renderMedia: a } = this.props,
             u = null != a;
-        return (0, r.jsx)(f.N, {
+        return (0, l.jsx)(f.N, {
             theme: i,
             children: (e) =>
-                (0, r.jsx)(_, {
+                (0, l.jsx)(_, {
                     ...this.props,
                     className: o()(
                         {
                             [E.sQ]: "bottom" === n,
-                            [E.eV]: !l && !u,
-                            [E.tJ]: !l && u,
-                            [E.II]: l && !u,
-                            [E.HU]: l && u,
+                            [E.eV]: !r && !u,
+                            [E.tJ]: !r && u,
+                            [E.II]: r && !u,
+                            [E.HU]: r && u,
                             [E.pG]: "right" === n,
                             [E.Mn]: "top" === n,
                             [E.kb]: "left" === n,
@@ -124,7 +124,7 @@ class N extends s.PureComponent {
                 textAlign: t,
                 onComplete: n,
                 onSkipAll: i,
-                isLongText: l,
+                isLongText: r,
                 title: s,
                 body: a,
                 children: o,
@@ -134,7 +134,7 @@ class N extends s.PureComponent {
                 ...h
             } = this.props,
             f = "top" === h.position || "bottom" === h.position ? "center" : "top";
-        return (0, r.jsx)(g.Y, {
+        return (0, l.jsx)(g.Y, {
             targetElementRef: c,
             ...h,
             align: f,

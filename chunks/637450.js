@@ -11,13 +11,13 @@ var i,
     _,
     E,
     A,
-    h,
     f,
+    h,
     I,
     p,
     m,
-    g,
     T,
+    g,
     S,
     N,
     C = n(852015),
@@ -224,7 +224,7 @@ class F extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Filter", [
             { no: 2, name: "client_version", kind: "message", oneof: "filter", T: () => eP },
-            { no: 3, name: "client_os", kind: "message", oneof: "filter", T: () => ef },
+            { no: 3, name: "client_os", kind: "message", oneof: "filter", T: () => eh },
             { no: 4, name: "staff", kind: "message", oneof: "filter", T: () => H },
             { no: 5, name: "user_in_guild", kind: "message", oneof: "filter", T: () => W },
             { no: 6, name: "user_ids", kind: "message", oneof: "filter", T: () => K },
@@ -235,12 +235,12 @@ class F extends L.G {
             { no: 11, name: "bot", kind: "message", oneof: "filter", T: () => eW },
             { no: 12, name: "user_age_range", kind: "message", oneof: "filter", T: () => eK },
             { no: 13, name: "user_id_range", kind: "message", oneof: "filter", T: () => eq },
-            { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => eQ },
+            { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => eZ },
             { no: 15, name: "unit_id_in_range_by_hash", kind: "message", oneof: "filter", T: () => e0 },
             { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e2 },
-            { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e4 },
-            { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => Q },
-            { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => e7 },
+            { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e7 },
+            { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => Z },
+            { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => e4 },
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => te },
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => tn },
             { no: 22, name: "guild_ids", kind: "message", oneof: "filter", T: () => tr },
@@ -278,7 +278,7 @@ class F extends L.G {
                 case 3:
                     r.filter = {
                         oneofKind: "clientOs",
-                        clientOs: ef.internalBinaryRead(e, e.uint32(), n, r.filter.clientOs),
+                        clientOs: eh.internalBinaryRead(e, e.uint32(), n, r.filter.clientOs),
                     };
                     break;
                 case 4:
@@ -338,7 +338,7 @@ class F extends L.G {
                 case 14:
                     r.filter = {
                         oneofKind: "userHasFlag",
-                        userHasFlag: eQ.internalBinaryRead(e, e.uint32(), n, r.filter.userHasFlag),
+                        userHasFlag: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.userHasFlag),
                     };
                     break;
                 case 15:
@@ -356,19 +356,19 @@ class F extends L.G {
                 case 17:
                     r.filter = {
                         oneofKind: "always",
-                        always: e4.internalBinaryRead(e, e.uint32(), n, r.filter.always),
+                        always: e7.internalBinaryRead(e, e.uint32(), n, r.filter.always),
                     };
                     break;
                 case 18:
                     r.filter = {
                         oneofKind: "clientSystemLocale",
-                        clientSystemLocale: Q.internalBinaryRead(e, e.uint32(), n, r.filter.clientSystemLocale),
+                        clientSystemLocale: Z.internalBinaryRead(e, e.uint32(), n, r.filter.clientSystemLocale),
                     };
                     break;
                 case 19:
                     r.filter = {
                         oneofKind: "unitIdInExperiment",
-                        unitIdInExperiment: e7.internalBinaryRead(e, e.uint32(), n, r.filter.unitIdInExperiment),
+                        unitIdInExperiment: e4.internalBinaryRead(e, e.uint32(), n, r.filter.unitIdInExperiment),
                     };
                     break;
                 case 20:
@@ -459,7 +459,7 @@ class F extends L.G {
         ("clientVersion" === e.filter.oneofKind &&
             eP.internalBinaryWrite(e.filter.clientVersion, t.tag(2, C.O0.LengthDelimited).fork(), n).join(),
             "clientOs" === e.filter.oneofKind &&
-                ef.internalBinaryWrite(e.filter.clientOs, t.tag(3, C.O0.LengthDelimited).fork(), n).join(),
+                eh.internalBinaryWrite(e.filter.clientOs, t.tag(3, C.O0.LengthDelimited).fork(), n).join(),
             "staff" === e.filter.oneofKind &&
                 H.internalBinaryWrite(e.filter.staff, t.tag(4, C.O0.LengthDelimited).fork(), n).join(),
             "userInGuild" === e.filter.oneofKind &&
@@ -481,17 +481,17 @@ class F extends L.G {
             "userIdRange" === e.filter.oneofKind &&
                 eq.internalBinaryWrite(e.filter.userIdRange, t.tag(13, C.O0.LengthDelimited).fork(), n).join(),
             "userHasFlag" === e.filter.oneofKind &&
-                eQ.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, C.O0.LengthDelimited).fork(), n).join(),
+                eZ.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, C.O0.LengthDelimited).fork(), n).join(),
             "unitIdInRangeByHash" === e.filter.oneofKind &&
                 e0.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, C.O0.LengthDelimited).fork(), n).join(),
             "clientReleaseChannel" === e.filter.oneofKind &&
                 e2.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, C.O0.LengthDelimited).fork(), n).join(),
             "always" === e.filter.oneofKind &&
-                e4.internalBinaryWrite(e.filter.always, t.tag(17, C.O0.LengthDelimited).fork(), n).join(),
+                e7.internalBinaryWrite(e.filter.always, t.tag(17, C.O0.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
-                Q.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, C.O0.LengthDelimited).fork(), n).join(),
+                Z.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, C.O0.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
-                e7.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, C.O0.LengthDelimited).fork(), n).join(),
+                e4.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, C.O0.LengthDelimited).fork(), n).join(),
             "userPremiumType" === e.filter.oneofKind &&
                 te.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, C.O0.LengthDelimited).fork(), n).join(),
             "unitIdMatchesFilterSnapshot" === e.filter.oneofKind &&
@@ -747,7 +747,7 @@ class z extends L.G {
     }
 }
 let q = new z();
-class Z extends L.G {
+class Q extends L.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.ClientSystemLocale",
@@ -785,7 +785,7 @@ class Z extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let Q = new Z();
+let Z = new Q();
 class J extends L.G {
     constructor() {
         super(
@@ -1156,7 +1156,7 @@ class eE extends L.G {
     }
 }
 let eA = new eE();
-class eh extends L.G {
+class ef extends L.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.ClientOperatingSystem",
@@ -1232,13 +1232,13 @@ class eh extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let ef = new eh();
+let eh = new ef();
 class eI extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.SDKVersion", [
             { no: 1, name: "ranges", kind: "message", repeat: 1, T: () => eR },
             { no: 2, name: "work_around_pyoto_bug", kind: "scalar", T: 8 },
-            { no: 3, name: "os_version", kind: "message", T: () => eg },
+            { no: 3, name: "os_version", kind: "message", T: () => eT },
             { no: 4, name: "allow_sdk_fallback", kind: "scalar", T: 8 },
         ]);
     }
@@ -1263,7 +1263,7 @@ class eI extends L.G {
                     r.workAroundPyotoBug = e.bool();
                     break;
                 case 3:
-                    r.osVersion = eg.internalBinaryRead(e, e.uint32(), n, r.osVersion);
+                    r.osVersion = eT.internalBinaryRead(e, e.uint32(), n, r.osVersion);
                     break;
                 case 4:
                     r.allowSdkFallback = e.bool();
@@ -1282,7 +1282,7 @@ class eI extends L.G {
         for (let i = 0; i < e.ranges.length; i++)
             eR.internalBinaryWrite(e.ranges[i], t.tag(1, C.O0.LengthDelimited).fork(), n).join();
         (!1 !== e.workAroundPyotoBug && t.tag(2, C.O0.Varint).bool(e.workAroundPyotoBug),
-            e.osVersion && eg.internalBinaryWrite(e.osVersion, t.tag(3, C.O0.LengthDelimited).fork(), n).join(),
+            e.osVersion && eT.internalBinaryWrite(e.osVersion, t.tag(3, C.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.allowSdkFallback && t.tag(4, C.O0.Varint).bool(e.allowSdkFallback));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
@@ -1326,8 +1326,8 @@ class em extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eg = new em();
-class eT extends L.G {
+let eT = new em();
+class eg extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.OSVersionRange", [
             { no: 1, name: "lower_bound", kind: "message", T: () => eC },
@@ -1371,7 +1371,7 @@ class eT extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eS = new eT();
+let eS = new eg();
 class eN extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.OSVersionRangeBound", [
@@ -2026,7 +2026,7 @@ class ez extends L.G {
     }
 }
 let eq = new ez();
-class eZ extends L.G {
+class eQ extends L.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UserHasFlag",
@@ -2064,7 +2064,7 @@ class eZ extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eQ = new eZ();
+let eZ = new eQ();
 class eJ extends L.G {
     constructor() {
         super(
@@ -2239,7 +2239,7 @@ class e5 extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e5();
+let e7 = new e5();
 class e8 extends L.G {
     constructor() {
         super(
@@ -2296,7 +2296,7 @@ class e8 extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e8();
+let e4 = new e8();
 class e9 extends L.G {
     constructor() {
         super(
@@ -2647,14 +2647,14 @@ var tE = n(335871),
         (a[(a.SYNCED = 1)] = "SYNCED"),
         (a[(a.PRE_ALLOCATED = 2)] = "PRE_ALLOCATED"),
         a),
-    th =
+    tf =
         (((s = {})[(s.CHANGE_SOURCE_UNSPECIFIED = 0)] = "CHANGE_SOURCE_UNSPECIFIED"),
         (s[(s.MANUAL = 1)] = "MANUAL"),
         (s[(s.CAP_PROPOSED = 2)] = "CAP_PROPOSED"),
         (s[(s.CAP_PROPOSED_WITH_MODIFICATIONS = 3)] = "CAP_PROPOSED_WITH_MODIFICATIONS"),
         (s[(s.CAP_AUTOMATED = 4)] = "CAP_AUTOMATED"),
         s),
-    tf =
+    th =
         (((l = {})[(l.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (l[(l.USER = 1)] = "USER"),
         (l[(l.INSTALLATION = 2)] = "INSTALLATION"),
@@ -2680,12 +2680,12 @@ var tE = n(335871),
         (c[(c.OVERRIDES_ONLY = 4)] = "OVERRIDES_ONLY"),
         (c[(c.OFF = 5)] = "OFF"),
         c),
-    tg =
+    tT =
         (((u = {})[(u.DEFAULT = 0)] = "DEFAULT"),
         (u[(u.HOLDOUT = 1)] = "HOLDOUT"),
         (u[(u.NUMBERLINE = 2)] = "NUMBERLINE"),
         u),
-    tT =
+    tg =
         (((_ = {})[(_.CUSTOM_UNIT_PREFIX_UNSPECIFIED = 0)] = "CUSTOM_UNIT_PREFIX_UNSPECIFIED"),
         (_[(_.SEO_URL_SLUG = 1)] = "SEO_URL_SLUG"),
         _),
@@ -2702,15 +2702,15 @@ var tE = n(335871),
         (A[(A.OVERRIDES_ONLY = 2)] = "OVERRIDES_ONLY"),
         A),
     tC =
-        (((h = {})[(h.LEVEL_UNSPECIFIED = 0)] = "LEVEL_UNSPECIFIED"),
-        (h[(h.ORGANIZATION = 1)] = "ORGANIZATION"),
-        (h[(h.SQUAD = 2)] = "SQUAD"),
-        h),
-    tO =
-        (((f = {})[(f.FISCAL_PERIOD_UNSPECIFIED = 0)] = "FISCAL_PERIOD_UNSPECIFIED"),
-        (f[(f.H1 = 1)] = "H1"),
-        (f[(f.H2 = 2)] = "H2"),
+        (((f = {})[(f.LEVEL_UNSPECIFIED = 0)] = "LEVEL_UNSPECIFIED"),
+        (f[(f.ORGANIZATION = 1)] = "ORGANIZATION"),
+        (f[(f.SQUAD = 2)] = "SQUAD"),
         f),
+    tO =
+        (((h = {})[(h.FISCAL_PERIOD_UNSPECIFIED = 0)] = "FISCAL_PERIOD_UNSPECIFIED"),
+        (h[(h.H1 = 1)] = "H1"),
+        (h[(h.H2 = 2)] = "H2"),
+        h),
     tR =
         (((I = {})[(I.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (I[(I.CONTROL = 1)] = "CONTROL"),
@@ -2729,21 +2729,21 @@ var tE = n(335871),
         (m[(m.DISABLED = 2)] = "DISABLED"),
         m),
     tD =
-        (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (g[(g.ACTIVE = 1)] = "ACTIVE"),
-        (g[(g.UNUSED = 2)] = "UNUSED"),
-        (g[(g.BURNED = 3)] = "BURNED"),
-        (g[(g.PRESERVED = 4)] = "PRESERVED"),
-        g),
-    tb =
         (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (T[(T.DRAFT = 1)] = "DRAFT"),
-        (T[(T.ACTIVE = 2)] = "ACTIVE"),
-        (T[(T.PAUSED_MANUAL = 3)] = "PAUSED_MANUAL"),
-        (T[(T.PAUSED_HEALTH_CHECK = 4)] = "PAUSED_HEALTH_CHECK"),
-        (T[(T.COMPLETED = 5)] = "COMPLETED"),
-        (T[(T.CANCELED = 6)] = "CANCELED"),
+        (T[(T.ACTIVE = 1)] = "ACTIVE"),
+        (T[(T.UNUSED = 2)] = "UNUSED"),
+        (T[(T.BURNED = 3)] = "BURNED"),
+        (T[(T.PRESERVED = 4)] = "PRESERVED"),
         T),
+    tb =
+        (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (g[(g.DRAFT = 1)] = "DRAFT"),
+        (g[(g.ACTIVE = 2)] = "ACTIVE"),
+        (g[(g.PAUSED_MANUAL = 3)] = "PAUSED_MANUAL"),
+        (g[(g.PAUSED_HEALTH_CHECK = 4)] = "PAUSED_HEALTH_CHECK"),
+        (g[(g.COMPLETED = 5)] = "COMPLETED"),
+        (g[(g.CANCELED = 6)] = "CANCELED"),
+        g),
     tv =
         (((S = {})[(S.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (S[(S.PENDING = 1)] = "PENDING"),
@@ -2780,7 +2780,7 @@ class tM extends L.G {
                 no: 14,
                 name: "unit_type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", tf],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", th],
             },
             { no: 15, name: "variations", kind: "message", repeat: 1, T: () => tV },
             { no: 16, name: "rules", kind: "message", repeat: 1, T: () => G },
@@ -2815,7 +2815,7 @@ class tM extends L.G {
                 no: 26,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", tg],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", tT],
             },
             { no: 27, name: "is_template", kind: "scalar", T: 8 },
             { no: 28, name: "field_numbers_to_copy", kind: "scalar", repeat: 1, T: 5 },
@@ -2830,7 +2830,7 @@ class tM extends L.G {
                 no: 36,
                 name: "custom_unit_prefix",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", tT],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", tg],
             },
             {
                 no: 45,
@@ -3235,7 +3235,7 @@ class tG extends L.G {
                 no: 1,
                 name: "kind",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ChangeSource.Kind", th],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ChangeSource.Kind", tf],
             },
             { no: 2, name: "proposal_id", kind: "scalar", T: 9 },
             { no: 3, name: "agent_product", kind: "scalar", T: 9 },
@@ -3653,7 +3653,7 @@ let t$ = new tK();
 class tX extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan", [
-            { no: 1, name: "measurement_plan", kind: "message", T: () => tZ },
+            { no: 1, name: "measurement_plan", kind: "message", T: () => tQ },
             { no: 2, name: "rollout_plan", kind: "message", T: () => tJ },
         ]);
     }
@@ -3672,7 +3672,7 @@ class tX extends L.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.measurementPlan = tZ.internalBinaryRead(e, e.uint32(), n, r.measurementPlan);
+                    r.measurementPlan = tQ.internalBinaryRead(e, e.uint32(), n, r.measurementPlan);
                     break;
                 case 2:
                     r.rolloutPlan = tJ.internalBinaryRead(e, e.uint32(), n, r.rolloutPlan);
@@ -3689,7 +3689,7 @@ class tX extends L.G {
     }
     internalBinaryWrite(e, t, n) {
         (e.measurementPlan &&
-            tZ.internalBinaryWrite(e.measurementPlan, t.tag(1, C.O0.LengthDelimited).fork(), n).join(),
+            tQ.internalBinaryWrite(e.measurementPlan, t.tag(1, C.O0.LengthDelimited).fork(), n).join(),
             e.rolloutPlan && tJ.internalBinaryWrite(e.rolloutPlan, t.tag(2, C.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
@@ -3746,8 +3746,8 @@ class tq extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tZ = new tq();
-class tQ extends L.G {
+let tQ = new tq();
+class tZ extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", [
             {
@@ -3797,7 +3797,7 @@ class tQ extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tJ = new tQ();
+let tJ = new tZ();
 class t0 extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep", [

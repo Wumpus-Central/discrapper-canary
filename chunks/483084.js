@@ -43,8 +43,8 @@ n.d(
             let A = i.useCallback((e) => {
                     o((t) => ({ ...t, query: e }));
                 }, []),
-                { flatOptions: h, groups: f } = i.useMemo(() => (0, r.yG)(d), [d]);
-            return { options: h, groups: f, loading: c, onQueryChange: A };
+                { flatOptions: f, groups: h } = i.useMemo(() => (0, r.yG)(d), [d]);
+            return { options: f, groups: h, loading: c, onQueryChange: A };
         },
     },
 );

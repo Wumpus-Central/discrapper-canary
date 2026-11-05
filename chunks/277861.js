@@ -10,12 +10,12 @@ var i = n(620632),
 let _ = o.A.Millis.MINUTE,
     E = !1,
     A = null,
-    h = 0;
-function f() {
+    f = 0;
+function h() {
     A = null;
 }
 function I() {
-    (f(), r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" }));
+    (h(), r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" }));
 }
 n.d(
     t,
@@ -27,7 +27,7 @@ n.d(
                 try {
                     let e = A;
                     if (
-                        ((null == e || Date.now() - h >= _) &&
+                        ((null == e || Date.now() - f >= _) &&
                             ((A = e =
                                 await ((0, s.qn)()
                                     ? (async function () {
@@ -48,7 +48,7 @@ n.d(
                                               })
                                           ).body;
                                       })())),
-                            (h = Date.now())),
+                            (f = Date.now())),
                         "submitted" === e.status)
                     )
                         return void d.A.showManualReviewPendingModal();
@@ -63,7 +63,7 @@ n.d(
                 }
             }
         },
-        a6: f,
+        a6: h,
         xf: I,
     },
 );

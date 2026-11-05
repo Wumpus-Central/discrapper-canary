@@ -12,14 +12,14 @@ var u = n(665260),
     _ = n(696451),
     E = n(340837),
     A = n(652215),
-    h = n(746080);
-let f = {};
+    f = n(746080);
+let h = {};
 function I(e) {
-    f[e] = null;
+    h[e] = null;
 }
 async function p(e) {
     let { guildId: t, returnChannelId: n, isPreview: i = !1 } = e;
-    ((0, a.s7)(), r()(null == f[t], "should not double-join guilds"));
+    ((0, a.s7)(), r()(null == h[t], "should not double-join guilds"));
     let I = await (0, s.k)(t);
     if (I.features.has(A.GuildFeatures.COMMUNITY)) {
         var p;
@@ -31,7 +31,7 @@ async function p(e) {
         c.Ay.shouldShowOnboarding(t) &&
             (await ((p = t),
             new Promise((e) => {
-                ((f[p] = e),
+                ((h[p] = e),
                     new Promise((e) => {
                         _.Ay.addConditionalChangeListener(() => {
                             let t = _.Ay.getSelfMember(p);
@@ -41,13 +41,13 @@ async function p(e) {
                             );
                         });
                     }).then(() => {
-                        (f[p]?.(), (f[p] = null), o.A.finishOnboarding(p));
+                        (h[p]?.(), (h[p] = null), o.A.finishOnboarding(p));
                     }),
-                    (0, l.pX)(A.BVt.CHANNEL(p, h.VV.GUILD_ONBOARDING)));
+                    (0, l.pX)(A.BVt.CHANNEL(p, f.VV.GUILD_ONBOARDING)));
             })),
             null != n && (0, l.pX)(A.BVt.CHANNEL(t, n)));
     }
 }
 function m(e) {
-    return null != f[e];
+    return null != h[e];
 }

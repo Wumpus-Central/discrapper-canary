@@ -80,7 +80,7 @@ class A extends r.Ay.Store {
         }
     }
 }
-let h = new A(a.h, {
+let f = new A(a.h, {
     IMPERSONATE_UPDATE: function (e) {
         let { guildId: t, data: n } = e;
         (delete n.roles[d.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = { ...n, timestamp: Date.now() }));
@@ -139,4 +139,4 @@ let h = new A(a.h, {
         );
     },
 });
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

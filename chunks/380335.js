@@ -39,11 +39,11 @@ function A(e) {
     let { channel: t } = e;
     return !!a.has(t.id) && (a.delete(t.id), !0);
 }
-function h(e) {
+function f(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => a.add(e));
 }
-class f extends r.A {
+class h extends r.A {
     static displayName = "MessageRequestStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -51,7 +51,7 @@ class f extends r.A {
             CONNECTION_OPEN: c,
             CONNECTION_OPEN_SUPPLEMENTAL: c,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: h,
+            OVERLAY_INITIALIZE: f,
             CHANNEL_CREATE: _,
             CHANNEL_UPDATES: E,
             CHANNEL_DELETE: A,
@@ -62,11 +62,11 @@ class f extends r.A {
         this.waitFor(i.A);
     }
     loadCache() {
-        let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
         null != e && (a = new Set(e));
     }
     takeSnapshot() {
-        return { version: f.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
+        return { version: h.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
     }
     getMessageRequestChannelIds() {
         return a;
@@ -84,5 +84,5 @@ class f extends r.A {
         return l;
     }
 }
-let I = new f();
+let I = new h();
 n.d(t, {}, { A: I });

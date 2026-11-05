@@ -1,4 +1,4 @@
-n.d(t, { h: () => f, A: () => I });
+n.d(t, { h: () => h, A: () => I });
 var i = n(284009),
     r = n.n(i),
     a = n(315069),
@@ -58,10 +58,10 @@ var d = n(723702),
     _ = n(652215),
     E = n(601107),
     A = n(682901);
-function h(e) {
+function f(e) {
     return { id: e.id, planId: e.plan_id, quantity: e.quantity };
 }
-class f extends a.A {
+class h extends a.A {
     id;
     type;
     items;
@@ -91,7 +91,7 @@ class f extends a.A {
     eligiblePaymentGateways;
     priceChange;
     static createFromServer(e) {
-        return new f({
+        return new h({
             id: e.id,
             type: e.type,
             createdAt: new Date(e.created_at),
@@ -105,11 +105,11 @@ class f extends a.A {
             paymentGatewaySubscriptionId: e.payment_gateway_subscription_id,
             trialId: e.trial_id,
             trialEndsAt: null != e.trial_ends_at ? new Date(e.trial_ends_at) : null,
-            items: e.items.map(h),
+            items: e.items.map(f),
             renewalMutations:
                 null != e.renewal_mutations
                     ? {
-                          items: e.renewal_mutations.items.map(h),
+                          items: e.renewal_mutations.items.map(f),
                           paymentGatewayPlanId: e.renewal_mutations.payment_gateway_plan_id,
                       }
                     : null,
@@ -288,4 +288,4 @@ class f extends a.A {
         );
     }
 }
-let I = f;
+let I = h;

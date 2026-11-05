@@ -23,19 +23,19 @@ let A = new l.J(
         (e) => [u(e.guild_id), ...e.subscription_listings_ids.map(_)],
         (e) => e.id,
     ),
-    h = new l.J(
+    f = new l.J(
         (e) => {
             var t;
             return [E(e.application_id), ((t = e.subscription_plans[0].id), `plan:${t}`)];
         },
         (e) => e.id,
     ),
-    f = {},
+    h = {},
     I = new Set(),
     p = {},
     m = {},
-    g = {},
     T = {},
+    g = {},
     S = new Map(),
     N = new Map();
 function C(e) {
@@ -45,7 +45,7 @@ function O(e) {
     for (let t of (A.set(e.id, e), S.set(e.guild_id, e.application_id), e.subscription_listings ?? [])) R(t);
 }
 function R(e) {
-    h.set(e.id, e);
+    f.set(e.id, e);
 }
 function L(e) {
     for (let t of e) N.set(t.id, t);
@@ -54,7 +54,7 @@ let y = [];
 class D extends s.Ay.Store {
     static displayName = "GuildRoleSubscriptionsStore";
     getSubscriptionGroupListingsForGuildFetchState(e) {
-        return f[e] ?? 0;
+        return h[e] ?? 0;
     }
     getDidFetchListingForSubscriptionPlanId(e) {
         return I.has(e);
@@ -70,14 +70,14 @@ class D extends s.Ay.Store {
         return (a()(t.length <= 1, "Found multiple group listings for listing"), t[0]);
     }
     getSubscriptionListing(e) {
-        return h.get(e);
+        return f.get(e);
     }
     getSubscriptionListingsForGuild(e) {
         let t = this.getSubscriptionGroupListingsForGuild(e)[0]?.application_id;
-        return null != t ? h.values(E(t)) : y;
+        return null != t ? f.values(E(t)) : y;
     }
     getSubscriptionListingForPlan(e) {
-        let t = h.values(`plan:${e}`);
+        let t = f.values(`plan:${e}`);
         return (a()(t.length <= 1, "Found multiple listings for plan"), t[0]);
     }
     getSubscriptionSettings(e) {
@@ -87,10 +87,10 @@ class D extends s.Ay.Store {
         return m[e];
     }
     getMonetizationRestrictions(e) {
-        return g[e];
+        return T[e];
     }
     getMonetizationRestrictionsFetchState(e) {
-        return T[e] ?? 0;
+        return g[e] ?? 0;
     }
     getApplicationIdForGuild(e) {
         return S.get(e);
@@ -101,7 +101,7 @@ class D extends s.Ay.Store {
 }
 let b = new D(o.h, {
     CONNECTION_OPEN: function () {
-        (A.clear(), h.clear(), (f = {}), I.clear(), (p = {}), (m = {}), (g = {}), (T = {}), S.clear(), N.clear());
+        (A.clear(), f.clear(), (h = {}), I.clear(), (p = {}), (m = {}), (T = {}), (g = {}), S.clear(), N.clear());
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
         let { settings: t } = e;
@@ -109,17 +109,17 @@ let b = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
         let { guildId: t } = e;
-        for (let e of ((f[t] = 1), C(t))) for (let t of (A.delete(e.id), e.subscription_listings_ids)) h.delete(t);
+        for (let e of ((h[t] = 1), C(t))) for (let t of (A.delete(e.id), e.subscription_listings_ids)) f.delete(t);
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
         let { guildId: t, groupListings: n, benefitChannels: i, settings: r, subscriptionTrials: a } = e;
-        for (let e of ((f[t] = 2), n)) O(e);
+        for (let e of ((h[t] = 2), n)) O(e);
         for (let e of ((p[t] = r), a)) m[e.id] = e;
         L(i);
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
         let { guildId: t } = e;
-        f[t] = 2;
+        h[t] = 2;
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: function (e) {
         let { listing: t } = e;
@@ -147,7 +147,7 @@ let b = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: function (e) {
         let { listingId: t } = e;
-        return h.delete(t);
+        return f.delete(t);
     },
     GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL: function (e) {
         let { subscriptionTrial: t } = e;
@@ -155,19 +155,19 @@ let b = new D(o.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function (e) {
         let { guildId: t } = e;
-        T[t] = 1;
+        g[t] = 1;
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {
         let { guildId: t, restrictions: n } = e;
-        ((g[t] = n), (T[t] = 2));
+        ((T[t] = n), (g[t] = 2));
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function (e) {
         let { guildId: t } = e;
-        ((T[t] = 2), (g[t] = d.o));
+        ((g[t] = 2), (T[t] = d.o));
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function (e) {
         let { guildId: t } = e;
-        T[t] = 0;
+        g[t] = 0;
     },
 });
 n.d(t, {}, { A: b, e: c });

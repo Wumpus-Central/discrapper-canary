@@ -8,19 +8,19 @@ var a = n(477900),
     d = n(28863),
     c = n(129230),
     u = n(559868),
-    f = n(652215),
-    m = n(792996);
+    m = n(652215),
+    f = n(792996);
 function g() {
-    c.default.track(f.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: u.Do });
+    c.default.track(m.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: u.Do });
 }
 function p() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)("span", { children: m.intl.string(m.t.OJmNR9) }),
+            (0, a.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("span", {
-                children: m.intl.format(m.t.RCYeBL, {
+                children: f.intl.format(f.t.RCYeBL, {
                     blogHook: (e, t) =>
                         (0, a.jsx)(
                             d.Anchor,
@@ -47,20 +47,20 @@ function R(e) {
             isHoveringOrFocusing: d = !1,
             lineClamp: c = 6,
             setLineClamp: u = !0,
-            textColor: f,
-            userId: m,
+            textColor: m,
+            userId: f,
             guildId: g,
         } = e,
         A = (0, i.bG)([x.A], () => x.A.getGuildId()),
         R = g ?? A,
         v = r.useMemo(
             () =>
-                (0, E.A)(m)
+                (0, E.A)(f)
                     ? (0, a.jsx)(p, {})
                     : null == t || "" === t
                       ? null
                       : (0, b.parseBioReact)(t, void 0, { guildId: R }),
-            [m, t, R],
+            [f, t, R],
         ),
         j = l && !d,
         I = r.useMemo(() => ({ disableAnimations: j, disableInteractions: !1 }), [j]);
@@ -71,7 +71,7 @@ function R(e) {
               children: (0, a.jsx)(o.E, {
                   variant: "body-sm/normal",
                   lineClamp: u ? c : void 0,
-                  color: void 0 !== f ? f : void 0,
+                  color: void 0 !== m ? m : void 0,
                   className: _.w,
                   children: (0, a.jsx)(h.Y.Provider, { value: I, children: v }),
               }),
@@ -80,6 +80,6 @@ function R(e) {
 function v(e) {
     let { userBio: t, userId: n } = e;
     return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(A.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(R, { ...e }) })
+        ? (0, a.jsx)(A.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(R, { ...e }) })
         : null;
 }

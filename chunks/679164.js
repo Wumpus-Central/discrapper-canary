@@ -33,11 +33,11 @@ function A(e) {
         n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * s.A.Millis.SECOND;
     return null == n || n <= Date.now() + c;
 }
-function h(e) {
+function f(e) {
     let t = l.A.toURLSafe(e.url);
     return null != t && A(t);
 }
-function f(e) {
+function h(e) {
     if (null == e) return !1;
     let t = l.A.toURLSafe(e.url);
     return (
@@ -45,14 +45,14 @@ function f(e) {
     );
 }
 function I(e) {
-    return f(e.image) || e.images?.some(f) || f(e.video);
+    return h(e.image) || e.images?.some(h) || h(e.video);
 }
 n.d(
     t,
     {},
     {
         $r: function (e) {
-            return e.attachments.some(h) || e.embeds.some(I);
+            return e.attachments.some(f) || e.embeds.some(I);
         },
         AN: async function (e) {
             let t = l.A.toURLSafe(e);

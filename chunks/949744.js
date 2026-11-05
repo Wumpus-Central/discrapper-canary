@@ -94,20 +94,20 @@ let A = new (class {
 })(_.Ay.isMember, (e, t) => {
     a.h.dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds: [e], userIds: t });
 });
-function h() {
+function f() {
     A.reset();
 }
-function f(e, t) {
+function h(e, t) {
     return (A.request(e, t), !1);
 }
 function I(e, t) {
-    for (let n of (0, c.e7)(t.guild_space_data?.leaderboard)) f(e, n);
+    for (let n of (0, c.e7)(t.guild_space_data?.leaderboard)) h(e, n);
 }
 function p(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: r } = t;
-            (null != n && f(e, n.id), r?.forEach((t) => f(e, t.id)), t.type === i.l.GUILD_SPACE_MESSAGE && I(e, t));
+            (null != n && h(e, n.id), r?.forEach((t) => h(e, t.id)), t.type === i.l.GUILD_SPACE_MESSAGE && I(e, t));
         }),
         !1
     );
@@ -117,7 +117,7 @@ function m(e) {
         i = u.A.getChannel(t);
     return null != i && null != i.guild_id && p(i.guild_id, n);
 }
-function g(e) {
+function T(e) {
     let { guildId: t, data: n } = e;
     if (null == t) return !1;
     let i = [];
@@ -133,13 +133,13 @@ function g(e) {
         p(t, i)
     );
 }
-class T extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "GuildMemberRequesterStore";
     initialize() {
         this.waitFor(u.A, _.Ay, E.Ay);
     }
     requestMember(e, t) {
-        f(e, t);
+        h(e, t);
     }
     isMemberRequestSettled(e, t) {
         return A.isSettled(e, t);
@@ -148,9 +148,9 @@ class T extends r.Ay.Store {
         return A.getDebugState(e);
     }
 }
-let S = new T(a.h, {
-    CONNECTION_CLOSED: h,
-    CONNECTION_OPEN: h,
+let S = new g(a.h, {
+    CONNECTION_CLOSED: f,
+    CONNECTION_OPEN: f,
     CONNECTION_RESUMED: function () {
         return (A.requestUnacknowledged(), !1);
     },
@@ -167,12 +167,12 @@ let S = new T(a.h, {
                     }));
         return n;
     },
-    SEARCH_MESSAGES_SUCCESS: g,
+    SEARCH_MESSAGES_SUCCESS: T,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, messages: n } = e;
         return p(t.guildId, n);
     },
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: g,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: T,
     LOCAL_MESSAGES_LOADED: m,
     LOAD_MESSAGES_SUCCESS: m,
     LOAD_MESSAGES_AROUND_SUCCESS: m,

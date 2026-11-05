@@ -12,8 +12,8 @@ var e = t(477900),
     h = t(688810),
     x = t(47167),
     g = t(71393),
-    m = t(575731),
-    C = t(92240),
+    C = t(575731),
+    m = t(92240),
     j = t(257367),
     p = t(939496),
     v = t(584904),
@@ -22,8 +22,8 @@ var e = t(477900),
     f = t(435558),
     O = t(3026),
     y = t(834730),
-    E = t(778712),
-    I = t(562153),
+    I = t(778712),
+    E = t(562153),
     b = t(996988),
     L = t(378502);
 let S = [
@@ -91,10 +91,10 @@ function M(i) {
                                         }),
                                     })
                                   : (0, e.jsx)(o.m, {
-                                        text: I.Ay.getName(t.guild_id, t.id, s),
+                                        text: E.Ay.getName(t.guild_id, t.id, s),
                                         children: (0, e.jsx)("img", {
                                             className: L.my,
-                                            src: s.getAvatarURL(t.guild_id, (0, E.FT)(E._3.SIZE_80)),
+                                            src: s.getAvatarURL(t.guild_id, (0, I.FT)(I._3.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),
@@ -170,23 +170,23 @@ var $ = t(70963),
 function J(i) {
     let { user: l, currentUser: t, voiceChannel: s, className: f, onClose: O } = i,
         { themeType: y } = (0, p.E)(),
-        { analyticsLocations: E } = (0, h.Ay)(A.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        I = (0, C.A)({
+        { analyticsLocations: I } = (0, h.Ay)(A.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        E = (0, m.A)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: s.id,
             user: l,
-            analyticsLocations: E,
+            analyticsLocations: I,
         }),
-        L = (0, j.A)({ userId: l.id, onAction: I }),
+        L = (0, j.A)({ userId: l.id, onAction: E }),
         S = (0, d.bG)([g.A], () => g.A.getGuild(s.guild_id)),
-        D = (0, m.A)(s),
+        D = (0, C.A)(s),
         V = (0, x.Ay)(s),
         T = n.useId();
     function P() {
         return (0, e.jsx)("div", {
             className: q.o1,
-            children: (0, e.jsx)($.Ay, { channel: s, onAction: I, onClose: O }),
+            children: (0, e.jsx)($.Ay, { channel: s, onAction: E, onClose: O }),
         });
     }
     let w =
@@ -196,11 +196,11 @@ function J(i) {
               ? z.intl.string(z.t.QygGCN)
               : z.intl.string(z.t.msxteM);
     return (0, e.jsx)(h.f5, {
-        value: E,
+        value: I,
         children: (0, e.jsxs)(v.A, {
             ref: L,
             className: a()(q.Nr, f),
-            onAction: I,
+            onAction: E,
             onClose: O,
             "aria-labelledby": T,
             children: [
@@ -226,8 +226,8 @@ function J(i) {
                             (0, e.jsxs)("div", {
                                 className: q.zH,
                                 children: [
-                                    (0, e.jsx)(_.A, { channel: s, guild: S, onAction: I, onClose: O }),
-                                    s.isGuildVoice() && (0, e.jsx)(Y, { voiceChannel: s, onAction: I, onClose: O }),
+                                    (0, e.jsx)(_.A, { channel: s, guild: S, onAction: E, onClose: O }),
+                                    s.isGuildVoice() && (0, e.jsx)(Y, { voiceChannel: s, onAction: E, onClose: O }),
                                     y === b.d.MODAL_V2 && P(),
                                 ],
                             }),

@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(253932),
     E = n(617617),
     A = n(189081),
-    h = n(659096),
-    f = n(775228),
+    f = n(659096),
+    h = n(775228),
     I = n(927813),
     p = n(674378),
     m = n(144914);
-let g = new Set(),
-    T = {},
+let T = new Set(),
+    g = {},
     S = new Set(),
     N = {},
     C = new Set(),
@@ -38,10 +38,10 @@ function v() {
     o.r(t);
 }
 function P(e, t) {
-    if (null != T[t] && f.A.shouldBeInstalled(e, t)) {
-        let n = T[t],
+    if (null != g[t] && h.A.shouldBeInstalled(e, t)) {
+        let n = g[t],
             i = n.manifestIds,
-            a = h.A.getState(e, t);
+            a = f.A.getState(e, t);
         null != a &&
             a.shouldPatch &&
             (a.buildId !== n.id || !r().isEqual(a.manifestIds, i)) &&
@@ -57,19 +57,19 @@ function M() {
 class U extends a.Ay.Store {
     static displayName = "ApplicationBuildStore";
     initialize() {
-        (this.syncWith([A.A], v), this.waitFor(u.A, h.A, f.A, A.A, E.A));
+        (this.syncWith([A.A], v), this.waitFor(u.A, f.A, h.A, A.A, E.A));
     }
     getTargetBuildId(e, t) {
-        return null == T[t] ? null : T[t].id;
+        return null == g[t] ? null : g[t].id;
     }
     getTargetManifests(e, t) {
-        return null == T[t] ? null : T[t].manifestIds;
+        return null == g[t] ? null : g[t].manifestIds;
     }
     hasNoBuild(e, t) {
         return S.has(t);
     }
     isFetching(e, t) {
-        return g.has(t);
+        return T.has(t);
     }
     needsToFetchBuildSize(e) {
         return !N.hasOwnProperty(e);
@@ -91,21 +91,21 @@ let w = new U(l.h, {
     },
     APPLICATION_BUILD_FETCH_START: function (e) {
         let { branchId: t } = e;
-        g.add(t);
+        T.add(t);
     },
     APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branchId: n, locale: i, build: r } = e;
-        g.delete(n);
+        T.delete(n);
         let a = r.manifests.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
             s = r.id;
-        (S.delete(n), (T[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), P(t, n));
+        (S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), P(t, n));
     },
     APPLICATION_BUILD_NOT_FOUND: function (e) {
         let { branchId: t } = e;
-        (g.delete(t), S.add(t));
+        (T.delete(t), S.add(t));
     },
     APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
         let { buildId: t } = e;

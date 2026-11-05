@@ -10,14 +10,14 @@ var l = n(477900),
     d = n(11939),
     m = n(158317),
     p = n(184684),
-    C = n(418200),
-    h = n(158032),
+    h = n(418200),
+    C = n(158032),
     f = n(830382),
     E = n(191115),
     S = n(722178),
     g = n(652215),
-    y = n(682901),
-    I = n(166532),
+    I = n(682901),
+    y = n(166532),
     A = n(566980),
     P = n(216641),
     v = n(810498),
@@ -89,11 +89,11 @@ function z(e) {
                 d = (0, M.bG)([L.A], () => L.A.getFetchState()),
                 m = (0, k.W)(c, O.U.MAIN) && d === L.$.LOADING,
                 p = l ?? !1,
-                C = r ?? !1,
-                h = (0, U.t4)((e) =>
+                h = r ?? !1,
+                C = (0, U.t4)((e) =>
                     e.getCheckoutReviewButtonProps({
                         tenantProvidedReviewButtonProps: s,
-                        isReviewButtonDisabled: C,
+                        isReviewButtonDisabled: h,
                         isReviewButtonLoading: p,
                         needsPaymentSource: n,
                         hasPaymentSources: o,
@@ -104,9 +104,9 @@ function z(e) {
                 );
             return (
                 i.useEffect(() => {
-                    u(h.text);
-                }, [h.text, u]),
-                h
+                    u(C.text);
+                }, [C.text, u]),
+                C
             );
         })({
             onReviewButtonClick: l,
@@ -131,7 +131,7 @@ function $(e) {
             disableSubmit: $,
             onPaymentSourceAdd: Q,
             handleStepChange: J,
-            postPurchaseStep: X = I.pn.CONFIRM,
+            postPurchaseStep: X = y.pn.CONFIRM,
             tenantProvidedReviewButtonProps: ee,
         } = e,
         {
@@ -148,14 +148,14 @@ function $(e) {
             setPurchaseError: ed,
             priceOptions: em,
             purchaseType: ep,
-            referralCode: eC,
-            quantity: eh,
+            referralCode: eh,
+            quantity: eC,
             setEntitlementsGranted: ef,
             setAppliedUserDiscounts: eE,
             setUpdatedSubscription: eS,
             isExpressCheckoutEnabledForFooter: eg,
-            setExpressCheckoutStatus: ey,
-            order: eI,
+            setExpressCheckoutStatus: eI,
+            order: ey,
             isOrderAwaitingSettlement: eA,
             setIsOrderSigning: eP,
             applyWalletBalance: ev,
@@ -200,7 +200,7 @@ function $(e) {
             soundEffect: ek,
             giftRecipient: ew,
             selectedGiftingPromotionRewards: eD,
-        } = (0, C.Pv)(),
+        } = (0, h.Pv)(),
         eU = (0, v.Mq)(eN),
         eG = (0, N.lo)(ew),
         eF = {};
@@ -272,7 +272,7 @@ function $(e) {
             [eo, ed, n, e_, eW, eV, eY, el, eK],
         ),
         { signOrder: e3, reportError: e4 } = (0, p.f)({
-            order: eI,
+            order: ey,
             errorSource: "checkout_sign_order",
             onError: (e) => {
                 (e1(e), ex(e));
@@ -301,7 +301,7 @@ function $(e) {
             [J, X, eS, ef, eE],
         );
     async function e8(e) {
-        if (null != eI) {
+        if (null != ey) {
             if (eJ.current) return;
             eJ.current = !0;
             try {
@@ -385,8 +385,8 @@ function $(e) {
                 subscriptionPlan: d,
                 planGroup: m,
                 trialId: p,
-                priceOptions: C,
-                paymentSource: I,
+                priceOptions: h,
+                paymentSource: y,
                 openInvoiceId: A,
                 premiumSubscription: P,
                 onNext: v,
@@ -413,7 +413,7 @@ function $(e) {
                             expectedAmount: R.total,
                             expectedCurrency: R.currency,
                             isGift: s,
-                            paymentSource: I,
+                            paymentSource: y,
                             loadId: N,
                             giftInfoOptions: j,
                             quantity: L,
@@ -428,18 +428,18 @@ function $(e) {
                         (a()(null != O, "Missing renewalInvoicePreview"),
                             (t = { amount: O.subtotal, currency: O.currency }));
                     else {
-                        let e = (0, S.l6)(C, R.checkoutContext?.available_plans);
+                        let e = (0, S.l6)(h, R.checkoutContext?.available_plans);
                         if (((t = (0, S.$Q)((0, S.y8)(d.id, !1, !1, e))), null != P)) {
-                            let e = C.currency ?? R.currency,
+                            let e = h.currency ?? R.currency,
                                 n = (0, S.Pg)(P, d.id, 1, new Set(m));
-                            ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), C.paymentSourceId)));
+                            ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), h.paymentSourceId)));
                         }
                     }
                     if (null != M)
-                        e = await (0, h.B1)({
+                        e = await (0, C.B1)({
                             planId: M,
-                            currency: C.currency ?? R.currency,
-                            paymentSource: I,
+                            currency: h.currency ?? R.currency,
+                            paymentSource: y,
                             loadId: N,
                             giftInfoOptions: j,
                             expectedInvoicePrice: n,
@@ -448,10 +448,10 @@ function $(e) {
                     else if (s) {
                         let t = R.total,
                             n = R.currency;
-                        e = await (0, f.XU)(y.tv, d.skuId, {
+                        e = await (0, f.XU)(I.tv, d.skuId, {
                             expectedAmount: t,
                             expectedCurrency: n,
-                            paymentSource: I,
+                            paymentSource: y,
                             subscriptionPlanId: d.id,
                             isGift: !0,
                             loadId: N,
@@ -460,22 +460,22 @@ function $(e) {
                             applyWalletBalance: k,
                             expectedPaymentLegs: D,
                         });
-                    } else if (null != I && null != P && P.status === g.Dmq.PAST_DUE && null != A) {
-                        let l = C.currency ?? R.currency;
-                        e = g.AD1.has(I.type)
-                            ? await (0, c.LD)(P, A, I, l, N)
-                            : await (0, c.nV)(P, { paymentSource: I, currency: l }, n, t, u, o, N);
+                    } else if (null != y && null != P && P.status === g.Dmq.PAST_DUE && null != A) {
+                        let l = h.currency ?? R.currency;
+                        e = g.AD1.has(y.type)
+                            ? await (0, c.LD)(P, A, y, l, N)
+                            : await (0, c.nV)(P, { paymentSource: y, currency: l }, n, t, u, o, N);
                     } else if (null != P) {
                         let l = (0, S.Pg)(P, d.id, 1, new Set(m)),
-                            i = { paymentSource: I, currency: C.currency ?? R.currency };
+                            i = { paymentSource: y, currency: h.currency ?? R.currency };
                         (P.status === g.Dmq.PAUSED && (i.status = g.Dmq.ACTIVE),
                             P.isPausedAllowsResumeButNotUpdates || (i.items = l),
                             (e = await (0, c.nV)(P, i, n, t, u, o, N)));
                     } else
-                        e = await (0, h.B1)({
+                        e = await (0, C.B1)({
                             planId: d.id,
-                            currency: C.currency ?? R.currency,
-                            paymentSource: I,
+                            currency: h.currency ?? R.currency,
+                            paymentSource: y,
                             trialId: p,
                             metadata: x,
                             referralCode: b,
@@ -520,21 +520,21 @@ function $(e) {
             metadata: k,
             sku: e0,
             purchaseType: ep,
-            referralCode: eC,
+            referralCode: eh,
             loadId: eu.loadId,
             giftInfoOptions: eF,
             invoicePreview: el,
             renewalInvoicePreview: ei,
             giftSubscriptionPlanId: ea,
-            quantity: eh,
+            quantity: eC,
             applyWalletBalance: ev ?? el?.applyWalletBalance,
         });
     }
     let e9 = null != L || (ep === g.VVm.ONE_TIME && !eR),
         te = D && !e9;
     i.useLayoutEffect(() => {
-        eg && null != r && ey(H.i.UNAVAILABLE);
-    }, [eg, r, ey]);
+        eg && null != r && eI(H.i.UNAVAILABLE);
+    }, [eg, r, eI]);
     let tt =
         eg && null == r
             ? (0, l.jsx)(R.E1, {

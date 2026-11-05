@@ -39,13 +39,13 @@ var c = n(652215),
         (i.UnmutedScheduledEvents = "unmuted scheduled events"),
         (i.OverrideDeleted = "channel override deleted"),
         i);
-let h = Object.freeze({
+let f = Object.freeze({
     [c.orn.ALL_MESSAGES]: "All",
     [c.orn.ONLY_MENTIONS]: "Mentions",
     [c.orn.NO_MESSAGES]: "Nothing",
     [c.orn.NULL]: null,
 });
-function f(e, t, n) {
+function h(e, t, n) {
     return (i) => {
         if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0;
     };
@@ -63,7 +63,7 @@ function p(e) {
         guild_is_muted: t,
         guild_muted_until: null != n && null != n.end_time ? new Date(n.end_time).getTime() : null,
         guild_receive_mobile_push: d.Ay.isMobilePushEnabled(e),
-        guild_message_notification_settings: h[d.Ay.getMessageNotifications(e)],
+        guild_message_notification_settings: f[d.Ay.getMessageNotifications(e)],
         guild_notify_highlights: d.Ay.getNotifyHighlights(e),
         guild_flags: d.Ay.getGuildFlags(e),
     };
@@ -74,7 +74,7 @@ function m(e, t) {
     return {
         channel_is_muted: n,
         channel_muted_until: null != i && null != i.end_time ? new Date(i.end_time).getTime() : null,
-        channel_message_notification_settings: h[d.Ay.getChannelMessageNotifications(e, t)],
+        channel_message_notification_settings: f[d.Ay.getChannelMessageNotifications(e, t)],
         channel_flags: d.Ay.getChannelIdFlags(e, t),
     };
 }
@@ -111,7 +111,7 @@ n.d(
                         : "notifications set to the default",
         },
         ME: m,
-        Qe: h,
+        Qe: f,
         Sq: function (e, t, n, i, l) {
             function o(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -121,7 +121,7 @@ n.d(
                             : e.guild_muted_until,
                     i =
                         null != t.message_notifications
-                            ? h[t.message_notifications]
+                            ? f[t.message_notifications]
                             : e.guild_message_notification_settings;
                 return {
                     guild_muted_until: n,
@@ -137,10 +137,10 @@ n.d(
             }
             let d = o(n),
                 _ = o(p(e), t),
-                A = f(d, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
+                A = h(d, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
                 I = A("guild_flags") ?? 0,
                 m = (_.guild_flags ?? 0) ^ I,
-                g = 0 === (0, r.iE)(m, E.n3.OPT_IN_CHANNELS_OFF, E.n3.OPT_IN_CHANNELS_ON);
+                T = 0 === (0, r.iE)(m, E.n3.OPT_IN_CHANNELS_OFF, E.n3.OPT_IN_CHANNELS_ON);
             a.Ay.trackWithMetadata(c.HAw.NOTIFICATION_SETTINGS_UPDATED, {
                 ..._,
                 ...s.A.getStats(e),
@@ -156,7 +156,7 @@ n.d(
                 guild_receive_mobile_push_old: A("guild_receive_mobile_push"),
                 guild_scheduled_events_muted_old: A("guild_scheduled_events_muted"),
                 guild_message_notification_settings_old: A("guild_message_notification_settings"),
-                is_opt_in_only_change: g,
+                is_opt_in_only_change: T,
             });
         },
         Xh: function (e, t) {
@@ -172,14 +172,14 @@ n.d(
                 change: _,
                 previous: A,
                 label: p,
-                location: g,
+                location: T,
             } = e;
-            function T(e) {
+            function g(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     i = t.muted ?? e?.channel_is_muted,
                     r =
                         null != t.message_notifications
-                            ? h[t.message_notifications]
+                            ? f[t.message_notifications]
                             : e?.channel_message_notification_settings,
                     a = null == n ? null : !0 === i || null != r;
                 return {
@@ -190,9 +190,9 @@ n.d(
                     channel_muted_until: I(t.mute_config),
                 };
             }
-            let S = T(A),
-                N = T(m(n, i), _),
-                C = f(S, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
+            let S = g(A),
+                N = g(m(n, i), _),
+                C = h(S, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
                 O = l.A.getChannel(i),
                 R = C("channel_flags") ?? 0,
                 L = (N.channel_flags ?? 0) ^ R,
@@ -201,7 +201,7 @@ n.d(
             a.Ay.trackWithMetadata(c.HAw.NOTIFICATION_SETTINGS_UPDATED, {
                 ...N,
                 ...s.A.getStats(n),
-                location: g,
+                location: T,
                 guild_id: n,
                 channel_id: i,
                 update_type: t,

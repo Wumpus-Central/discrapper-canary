@@ -1,7 +1,7 @@
 n.d(t, { A: () => c });
 var i = n(855986),
-    l = n(73153),
-    r = n(717125),
+    r = n(73153),
+    l = n(717125),
     s = n(46653),
     a = n(734057),
     o = n(811091);
@@ -9,14 +9,14 @@ n(164636);
 let u = new Set();
 class d extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.default, a.A, r.A);
+        this.waitFor(s.default, a.A, l.A);
     }
     static displayName = "MediaPostSharePromptStore";
     shouldDisplayPrompt(e) {
         return u.has(e);
     }
 }
-let c = new d(l.h, {
+let c = new d(r.h, {
     CONNECTION_OPEN: function () {
         u = new Set();
     },
@@ -37,7 +37,7 @@ let c = new d(l.h, {
         let n = a.A.getChannel(t.channel_id);
         null == n ||
             null == n.parent_id ||
-            (r.A.isChannelGated(n.guild_id, n.parent_id) && u.add(o.default.castMessageIdAsChannelId(e.message.id)));
+            (l.A.isChannelGated(n.guild_id, n.parent_id) && u.add(o.default.castMessageIdAsChannelId(e.message.id)));
     },
     DISMISS_MEDIA_POST_SHARE_PROMPT: function (e) {
         let { threadId: t } = e;

@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(516521),
     E = n(534514),
     A = n(866665),
-    h = n(39623),
-    f = n(97808),
+    f = n(39623),
+    h = n(97808),
     I = n(778712),
     p = n(265872),
     m = n(442433),
-    g = n(820284),
-    T = n(942857),
+    T = n(820284),
+    g = n(942857),
     S = n(538451),
     N = n(616356),
     C = n(287809),
@@ -90,7 +90,7 @@ function M(e) {
         children: (0, i.jsxs)("div", {
             className: s()(b.Mj, l),
             children: [
-                (0, i.jsx)(h.EyeIcon, { size: "xs", color: "currentColor", className: b.N0 }),
+                (0, i.jsx)(f.EyeIcon, { size: "xs", color: "currentColor", className: b.N0 }),
                 (0, i.jsx)("span", { "aria-hidden": "true", children: t.length }),
             ],
         }),
@@ -111,8 +111,8 @@ n.d(
                     disableInteraction: E = !1,
                     maxVisibleUsers: A = 3,
                 } = e,
-                h = r.useRef(null),
-                S = (0, T.A)(),
+                f = r.useRef(null),
+                S = (0, g.A)(),
                 [R, D] = r.useState(!1),
                 v = r.useRef(new c.J_(150, () => D(!1))),
                 w = (0, d.yK)(
@@ -203,7 +203,7 @@ n.d(
                 .take(A)
                 .map((e) =>
                     (0, i.jsx)(
-                        f.eu,
+                        h.eu,
                         { src: e.getAvatarURL(a, 24), "aria-label": e.username, size: I._3.SIZE_24, className: b.lJ },
                         e.id,
                     ),
@@ -216,13 +216,13 @@ n.d(
                         { className: b.ju, children: ["+", w.length - A + 1] },
                         "overflow",
                     )),
-                (0, i.jsx)(g.A, {
+                (0, i.jsx)(T.A, {
                     section: y.JJy.STREAM_VIEWER_POPOUT,
                     children: (0, i.jsx)("div", {
                         onMouseEnter: G,
                         onMouseLeave: x,
                         children: (0, i.jsx)(p.Y, {
-                            targetElementRef: h,
+                            targetElementRef: f,
                             renderPopout: () =>
                                 (0, i.jsx)(P, {
                                     participantType: l.type,
@@ -234,7 +234,7 @@ n.d(
                                 }),
                             shouldShow: R && !S,
                             position: "top",
-                            children: () => (0, i.jsx)("div", { ref: h, className: s()(b.Mj, u), children: F }),
+                            children: () => (0, i.jsx)("div", { ref: f, className: s()(b.Mj, u), children: F }),
                         }),
                     }),
                 })

@@ -39,12 +39,12 @@ t.d(
                     headingColor: b,
                 } = e,
                 O = (0, c.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
-                U = (0, c.bG)([d.default], () => d.default.getCurrentUser()),
-                C = (0, u.A)(),
+                C = (0, c.bG)([d.default], () => d.default.getCurrentUser()),
+                U = (0, u.A)(),
                 L = (0, x.k5)(),
                 D = (0, x.nf)(),
                 S = t === E.PremiumTypes.TIER_0 ? E.pe.TIER_0 : E.pe.TIER_2,
-                G = O?.hasActiveTrial ? U?.premiumType : L ? E.PremiumTypes.TIER_2 : null,
+                G = O?.hasActiveTrial ? C?.premiumType : L ? E.PremiumTypes.TIER_2 : null,
                 H = (0, A.V)(),
                 k = (0, h.O)(),
                 F = t === E.PremiumTypes.TIER_0 ? E.gD.PREMIUM_MONTH_TIER_0 : E.gD.PREMIUM_MONTH_TIER_2,
@@ -70,7 +70,7 @@ t.d(
                                 ? f.intl.format(f.t.z2oQtA, {
                                       percent: D?.percentage ?? 20,
                                       regularPrice: t,
-                                      renewalDate: p.Ay.getExpectedRenewalDate(O, C),
+                                      renewalDate: p.Ay.getExpectedRenewalDate(O, U),
                                   })
                                 : f.intl.formatToPlainString(f.t["3ZiutU"], {
                                       percent: D?.percentage ?? 30,

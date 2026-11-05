@@ -12,8 +12,8 @@ var r = n(855986),
     _ = n(873298),
     E = n(253932),
     A = n(792996),
-    h = n(652215),
-    f = n(842671);
+    f = n(652215),
+    h = n(842671);
 function I() {
     let e,
         t,
@@ -89,8 +89,8 @@ function I() {
             saturation: I,
             useReducedMotion: p,
             roleStyle: m,
-            highContrastMode: g,
-            switchIconsEnabled: T,
+            highContrastMode: T,
+            switchIconsEnabled: g,
         } = (0, r.cf)([o.Ay], () => ({
             saturation: o.Ay.saturation,
             useReducedMotion: o.Ay.prefersReducedMotion,
@@ -129,8 +129,8 @@ function I() {
                     children: (0, i.jsx)(a.sL, {
                         id: "high-contrast",
                         label: A.intl.string(A.t.aZlePv),
-                        checked: g,
-                        action: () => (0, l.uh)(g ? o._1.DEFAULT : o._1.HIGH),
+                        checked: T,
+                        action: () => (0, l.uh)(T ? o._1.DEFAULT : o._1.HIGH),
                     }),
                 },
                 "high-contrast",
@@ -207,10 +207,10 @@ function I() {
                 {
                     children: (0, i.jsx)(a.sL, {
                         id: "display-name-styles",
-                        label: A.intl.string(f.default["2gFUEw"]),
+                        label: A.intl.string(h.default["2gFUEw"]),
                         checked: S,
                         action: function () {
-                            (c.default.track(h.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
+                            (c.default.track(f.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
                                 (0, l.Dm)(!S));
                         },
                     }),
@@ -225,8 +225,8 @@ function I() {
                     children: (0, i.jsx)(a.sL, {
                         id: "switch-icons",
                         label: A.intl.string(A.t["S3z+pV"]),
-                        checked: T,
-                        action: () => (0, l.Gm)(!T),
+                        checked: g,
+                        action: () => (0, l.Gm)(!g),
                     }),
                 },
                 "switch-icons",

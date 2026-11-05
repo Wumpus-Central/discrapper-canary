@@ -26,7 +26,7 @@ function A(e) {
             _(e.channel_id, e);
         }));
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "ForumPostRecentMessageStore";
     initialize() {
         this.waitFor(s.A, l.default);
@@ -35,7 +35,7 @@ class h extends i.Ay.Store {
         return (e in c || (c[e] = { loaded: !1, message: null }), c[e]);
     }
 }
-new h(r.h, {
+new f(r.h, {
     CONNECTION_OPEN: function () {
         c = {};
     },

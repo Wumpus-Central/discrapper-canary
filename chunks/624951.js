@@ -13,13 +13,13 @@ var l = e(477900),
     m = e(985629),
     p = e(996988),
     x = e(792996),
-    _ = e(41821);
+    I = e(41821);
 e.d(
     n,
     {},
     {
         A: function (t) {
-            let { applicationId: n, onAction: e, onClose: I, activity: N } = t,
+            let { applicationId: n, onAction: e, onClose: _, activity: N } = t,
                 { analyticsLocations: E } = (0, c.Ay)(o.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
                 { data: T } = (0, u.YY)(n),
                 h = (0, s.JC)(T),
@@ -32,12 +32,12 @@ e.d(
             return v
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(f.A, { className: _.Xl }),
+                          (0, l.jsx)(f.A, { className: I.Xl }),
                           (0, l.jsxs)("div", {
-                              className: _.DK,
+                              className: I.DK,
                               children: [
                                   (0, l.jsxs)("div", {
-                                      className: _.tJ,
+                                      className: I.tJ,
                                       children: [
                                           j === i.M.CLOUD_PLAY_NEW_BADGE &&
                                               (0, l.jsx)(a.E, { type: "new", variant: "primary" }),
@@ -47,7 +47,7 @@ e.d(
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(m.A, { application: T, onAction: e, onClose: I, analyticsLocations: E }),
+                                  (0, l.jsx)(m.A, { application: T, onAction: e, onClose: _, analyticsLocations: E }),
                               ],
                           }),
                       ],

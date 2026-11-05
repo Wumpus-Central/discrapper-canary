@@ -7,8 +7,8 @@ var a = n(477900),
     d = n(866323),
     c = n(765178),
     u = n(834730),
-    f = n(821609),
-    m = n(775602),
+    m = n(821609),
+    f = n(775602),
     g = n(485038);
 let p = "data-prevents-popout-dismiss";
 n.d(
@@ -27,7 +27,7 @@ n.d(
                     a11yAnnounceOnShow: A,
                     a11yAnnounceOnHide: _,
                 } = e,
-                N = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
+                N = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
                 R = r.useRef(null);
             return (
                 r.useEffect(
@@ -69,8 +69,8 @@ n.d(
                                       (0, a.jsxs)("div", {
                                           className: g.o1,
                                           children: [
-                                              (0, a.jsx)(f.$, { variant: "secondary", size: "sm", ...b }),
-                                              (0, a.jsx)(f.$, { variant: "primary", size: "sm", ...h }),
+                                              (0, a.jsx)(m.$, { variant: "secondary", size: "sm", ...b }),
+                                              (0, a.jsx)(m.$, { variant: "primary", size: "sm", ...h }),
                                           ],
                                       }),
                                   ],

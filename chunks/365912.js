@@ -34,7 +34,7 @@ function A(e) {
         );
     return (0, i.jsx)("div", { className: s()(_, n), ref: l });
 }
-let h = (e) => {
+let f = (e) => {
     let { layerContext: t, children: n } = e;
     return (0, i.jsx)(t.Consumer, {
         children: (e) =>
@@ -53,7 +53,7 @@ n.d(
                 n = {
                     LayerProvider: (e) => (0, i.jsx)(E, { layerContext: t, ...e }),
                     LayerContainer: (e) => (0, i.jsx)(A, { layerContext: t, ...e }),
-                    Layer: (e) => (0, i.jsx)(h, { layerContext: t, ...e }),
+                    Layer: (e) => (0, i.jsx)(f, { layerContext: t, ...e }),
                     layerContext: t,
                 };
             return (
@@ -69,6 +69,6 @@ n.d(
             return t;
         },
         Pb: _,
-        Wd: h,
+        Wd: f,
     },
 );

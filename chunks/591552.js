@@ -11,8 +11,8 @@ var i = n(435558),
     _ = n(713125),
     E = n(539916);
 let A = {},
-    h = {},
     f = {},
+    h = {},
     I = !1;
 function p(e, t, n) {
     return e.map((e) =>
@@ -35,20 +35,20 @@ function m(e) {
         a = p(n.prompts ?? A[t]?.prompts ?? [], i, r);
     A[t] = { ...A[t], ...n, prompts: a };
 }
-function g(e, t) {
-    if (null == h[e]) return;
+function T(e, t) {
+    if (null == f[e]) return;
     let n = {};
-    (Object.keys(h[e]).forEach((i) => {
-        !t.includes(i) && h[e][i] ? (n[i] = !0) : t.includes(i) && !1 === h[e][i] && (n[i] = !1);
+    (Object.keys(f[e]).forEach((i) => {
+        !t.includes(i) && f[e][i] ? (n[i] = !0) : t.includes(i) && !1 === f[e][i] && (n[i] = !1);
     }),
-        (h[e] = n));
+        (f[e] = n));
     let i = t.filter((e) => null == n[e] || !0 === n[e]);
     (Object.keys(n).forEach((e) => {
         !0 !== n[e] || t.includes(e) || i.push(e);
     }),
         (A[e] = { ...A[e], responses: i }));
 }
-let T = [],
+let g = [],
     S = [],
     N = [],
     C = [];
@@ -58,10 +58,10 @@ class O extends a.Ay.Store {
         this.waitFor(o.A, _.Ay, l.A);
     }
     getOnboardingPromptsForOnboarding(e) {
-        return A[e]?.onboardingPrompts ?? T;
+        return A[e]?.onboardingPrompts ?? g;
     }
     getOnboardingPrompts(e) {
-        return A[e]?.prompts ?? T;
+        return A[e]?.prompts ?? g;
     }
     getOnboardingResponses(e) {
         return l.A.isFullServerPreview(e) ? Array.from(l.A.getOnboardingResponses(e) ?? S) : (A[e]?.responses ?? S);
@@ -86,7 +86,7 @@ class O extends a.Ay.Store {
     }
     getEnabledOnboardingPrompts(e) {
         let t = A[e];
-        return l.A.isFullServerPreview(e) ? (t?.prompts ?? T) : null != t && t.enabled ? (t.prompts ?? T) : T;
+        return l.A.isFullServerPreview(e) ? (t?.prompts ?? g) : null != t && t.enabled ? (t.prompts ?? g) : g;
     }
     getDefaultChannelIds(e) {
         return A[e]?.defaultChannelIds ?? N;
@@ -106,11 +106,11 @@ class O extends a.Ay.Store {
     shouldFetchPrompts(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.A.Millis.HOUR;
         if (I) return !1;
-        let n = f[e];
+        let n = h[e];
         return null == n || Date.now() - n > t;
     }
     getPendingResponseOptions(e) {
-        return h[e];
+        return f[e];
     }
     ackIdForGuild(e) {
         let t = this.getEnabledOnboardingPrompts(e),
@@ -126,7 +126,7 @@ class O extends a.Ay.Store {
         );
     }
     lastFetchedAt(e) {
-        return f[e];
+        return h[e];
     }
     isAdvancedMode(e) {
         return null != e && A[e]?.mode === E.SD.ONBOARDING_ADVANCED;
@@ -147,7 +147,7 @@ let R = new O(s.h, {
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (delete A[t.id], delete h[t.id], delete f[t.id]);
+        (delete A[t.id], delete f[t.id], delete h[t.id]);
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_START: function () {
         I = !0;
@@ -167,7 +167,7 @@ let R = new O(s.h, {
             additionalConnections: E,
         } = e;
         I = !1;
-        let h = _.Ay.getOnboardingStatus(t) === _.$o.READY,
+        let f = _.Ay.getOnboardingStatus(t) === _.$o.READY,
             m = p(n, s, l);
         ((A[t] = {
             enabled: r,
@@ -176,14 +176,14 @@ let R = new O(s.h, {
             prompts: m,
             onboardingPrompts: m.filter((e) => e.inOnboarding),
             defaultChannelIds: i.filter((e) => (0, u.S)(t, e)),
-            responses: h ? [] : a,
+            responses: f ? [] : a,
             onboardingPromptsSeen: s,
             onboardingResponsesSeen: l,
             connections: c ?? [],
             additionalConnections: E ?? [],
         }),
-            h || g(t, a),
-            (f[t] = Date.now()));
+            f || T(t, a),
+            (h[t] = Date.now()));
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
         I = !1;
@@ -195,16 +195,16 @@ let R = new O(s.h, {
             (null != A[t] &&
                 (null != a && a.length > 0 && r().pullAll(A[t].responses, a),
                 i ? A[t].responses.push(n) : r().pull(A[t].responses, n),
-                null == h[t] && (h[t] = {}),
-                (h[t][n] = i),
-                null != a && a.forEach((e) => (h[t][e] = !1)),
-                (h[t] = { ...h[t] }),
+                null == f[t] && (f[t] = {}),
+                (f[t][n] = i),
+                null != a && a.forEach((e) => (f[t][e] = !1)),
+                (f[t] = { ...f[t] }),
                 !0))
         );
     },
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function (e) {
         let { guildId: t, options: n, prompts_seen: i, options_seen: r } = e;
-        g(t, n);
+        T(t, n);
         let a = A[t];
         if (null == a) return !1;
         let s = p(a.prompts, i, r);

@@ -32,12 +32,12 @@ function A(e, t) {
     if (null == n) return !1;
     E(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * o.A.Millis.SECOND + 100);
 }
-function h(e) {
+function f(e) {
     let { channelId: t } = e,
         n = d.A.getChannel(t);
     return null != n && E(n, 0, 0);
 }
-class f extends r.Ay.Store {
+class h extends r.Ay.Store {
     static displayName = "SlowmodeStore";
     initialize() {
         this.waitFor(d.A, c.A);
@@ -50,7 +50,7 @@ class f extends r.Ay.Store {
         return this.getSlowmodeCooldownGuess(e.id, t) > 0 && e.rateLimitPerUser > 0;
     }
 }
-let I = new f(s.h, {
+let I = new h(s.h, {
     SLOWMODE_RESET_COOLDOWN: function (e) {
         let { channelId: t, slowmodeType: n } = e;
         return A(t, n);
@@ -65,8 +65,8 @@ let I = new f(s.h, {
         let { channelId: t } = e;
         return A(t, 0);
     },
-    UPLOAD_FAIL: h,
-    UPLOAD_CANCEL_REQUEST: h,
+    UPLOAD_FAIL: f,
+    UPLOAD_CANCEL_REQUEST: f,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         [0, 1].forEach((e) => {

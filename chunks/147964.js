@@ -9,12 +9,12 @@ var s = n(855986),
 let _ = { applicationId: null, originURL: null },
     E = _,
     A = new Set(),
-    h = !1;
-function f() {
+    f = !1;
+function h() {
     a = null;
 }
 function I() {
-    ((i = null), (r = null), (A = new Set()), (E.applicationId = null), (E.originURL = null), f());
+    ((i = null), (r = null), (A = new Set()), (E.applicationId = null), (E.originURL = null), h());
 }
 class p extends s.Ay.PersistedStore {
     static displayName = "TestModeStore";
@@ -25,7 +25,7 @@ class p extends s.Ay.PersistedStore {
             this.waitFor(u.A, o.A, c.A),
             this.syncWith([c.A, o.A], () => !0),
             u.A.whenInitialized(() => {
-                h = !0;
+                f = !0;
             }));
     }
     getTestModeApplicationId() {
@@ -63,7 +63,7 @@ class p extends s.Ay.PersistedStore {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (h) return (setImmediate(e), !1);
+            if (f) return (setImmediate(e), !1);
         });
     }
 }
@@ -84,7 +84,7 @@ let m = new p(l.h, {
         let { testModeApplicationId: t } = e;
         i = t;
     },
-    DEVELOPER_TEST_MODE_RESET_ERROR: f,
+    DEVELOPER_TEST_MODE_RESET_ERROR: h,
     LOGOUT: I,
     DEVELOPER_TEST_MODE_RESET: I,
 });

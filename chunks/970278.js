@@ -16,15 +16,15 @@ function E(e) {
 function A(e) {
     (null != e.threads &&
         e.threads.length > 0 &&
-        ((c[e.id] = {}), e.threads.filter((e) => l.A_.has(e.type)).forEach((t) => h(e.id, t))),
+        ((c[e.id] = {}), e.threads.filter((e) => l.A_.has(e.type)).forEach((t) => f(e.id, t))),
         e.hasThreadsSubscription && u.add(e.id));
 }
-function h(e, t) {
+function f(e, t) {
     let n = c[e],
         i = t.parent_id;
     (i in n || (n[i] = {}), (c[e][i][t.id] = _(t)));
 }
-function f(e) {
+function h(e) {
     let { channel: t } = e;
     if (!l.A_.has(t.type)) return !1;
     if (t.threadMetadata?.archived === !0) return I(t);
@@ -65,7 +65,7 @@ class m extends a.Ay.Store {
         return u.has(e);
     }
 }
-let g = new m(s.h, {
+let T = new m(s.h, {
     CONNECTION_OPEN: function (e) {
         ((c = {}),
             u.clear(),
@@ -80,7 +80,7 @@ let g = new m(s.h, {
                 .filter((e) => l.Le.has(e.type))
                 .groupBy("guild_id")
                 .forEach((e, t) => {
-                    ((c[t] = {}), e.forEach((e) => h(t, e)));
+                    ((c[t] = {}), e.forEach((e) => f(t, e)));
                 }));
     },
     GUILD_CREATE: function (e) {
@@ -91,12 +91,12 @@ let g = new m(s.h, {
         let { guild: t } = e;
         E(t.id);
     },
-    THREAD_CREATE: f,
-    THREAD_UPDATE: f,
+    THREAD_CREATE: h,
+    THREAD_UPDATE: h,
     THREAD_LIST_SYNC: function (e) {
         let { guildId: t, threads: n, channelIds: i } = e;
         for (let e in (null == i && u.add(t), (c[t] = { ...c[t] }), c[t])) c[t][e] = { ...c[t][e] };
-        n.forEach((e) => h(t, e));
+        n.forEach((e) => f(t, e));
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
@@ -108,4 +108,4 @@ let g = new m(s.h, {
         ((c[t.guild_id] = { ...c[t.guild_id] }), delete c[t.guild_id][t.id]);
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

@@ -26,13 +26,13 @@ class E extends a.Component {
             preload: _,
             loadingComponent: E,
             disablePointerEvents: A,
-            ignoreModalClicks: h,
-            scrollBehavior: f,
+            ignoreModalClicks: f,
+            scrollBehavior: h,
             useMouseEnter: I,
             renderPopout: p,
             layerContext: m,
-            position: g = "right",
-            autoInvert: T = !0,
+            position: T = "right",
+            autoInvert: g = !0,
             nudgeAlignIntoViewport: S = !0,
             avoidancePadding: N,
             spacing: C = 8,
@@ -43,7 +43,7 @@ class E extends a.Component {
             targetElementRef: this.props.targetElementRef,
             preload: _,
             loadingComponent: E,
-            position: g,
+            position: T,
             align:
                 null != a
                     ? a
@@ -60,8 +60,8 @@ class E extends a.Component {
                                   return "center";
                           }
                           throw Error(`Unexpected position: ${e}`);
-                      })(g),
-            autoInvert: T,
+                      })(T),
+            autoInvert: g,
             fixed: s,
             nudgeAlignIntoViewport: S,
             avoidancePadding: N,
@@ -75,8 +75,8 @@ class E extends a.Component {
             positionKey: c,
             popoutKey: u,
             disablePointerEvents: A,
-            ignoreModalClicks: h,
-            scrollBehavior: f,
+            ignoreModalClicks: f,
+            scrollBehavior: h,
             useMouseEnter: I,
             layerContext: m,
             clickTrap: O,
@@ -106,10 +106,10 @@ function A(e) {
                 if (!_.current) {
                     _.current = !0;
                     let e = setTimeout(() => {
-                            (f(() => A), d((e) => e + 1));
+                            (h(() => A), d((e) => e + 1));
                         }, 300),
                         n = await t();
-                    (f(() => n), d((e) => e + 1), clearTimeout(e));
+                    (h(() => n), d((e) => e + 1), clearTimeout(e));
                 }
             })(),
             (0, r.jsx)(r.Fragment, {})
@@ -128,7 +128,7 @@ function A(e) {
             t = Math.max(100, null == e ? 100 : e.offsetWidth - 20);
         return (0, r.jsx)("div", { className: c.w, style: { width: t }, children: (0, r.jsx)(s.y, {}) });
     }
-    let [h, f] = a.useState(() => u),
+    let [f, h] = a.useState(() => u),
         I = a.useRef(u);
     return (
         a.useEffect(() => {
@@ -137,11 +137,11 @@ function A(e) {
         a.useEffect(() => {
             _.current
                 ? t().then((e) => {
-                      (f(() => e), d((e) => e + 1));
+                      (h(() => e), d((e) => e + 1));
                   })
-                : f(() => I.current);
+                : h(() => I.current);
         }, [t]),
-        (0, r.jsx)(E, { ref: i, ...n, renderPopout: h })
+        (0, r.jsx)(E, { ref: i, ...n, renderPopout: f })
     );
 }
 ((A.Animation = u), n.d(t, {}, { Q: A, Y: E }));

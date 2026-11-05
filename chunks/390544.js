@@ -1,5 +1,5 @@
 var s,
-    r =
+    n =
         (((s = {}).STARTING = "starting"),
         (s.STARTUP_FAILED = "startup_failed"),
         (s.MISSING_STOCK = "missing_stock"),
@@ -9,4 +9,4 @@ var s,
         (s.DELETED = "deleted"),
         (s.PROVIDER_ERRORED = "provider_errored"),
         s);
-i.d(t, {}, { M: r });
+i.d(t, {}, { M: n });

@@ -78,7 +78,7 @@ t.d(
                     },
                     [h, p, g],
                 ),
-                j = i.useCallback(
+                C = i.useCallback(
                     (e) => {
                         let n = [];
                         (e.forEach((e) => {
@@ -92,7 +92,7 @@ t.d(
             return (0, l.jsx)(a.p, {
                 multi: !0,
                 options: x,
-                onChange: j,
+                onChange: C,
                 value: t,
                 closeOnSelect: !1,
                 renderOptionSuffix: A,

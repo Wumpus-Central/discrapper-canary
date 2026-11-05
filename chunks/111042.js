@@ -27,7 +27,7 @@ class A extends s.Ay.Store {
         return c[E({ surface: t, activeState: n })] ?? d;
     }
 }
-let h = new A(l.h, {
+let f = new A(l.h, {
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function (e) {
         let { surface: t, activeState: n } = e;
         u = { ...u, [E({ surface: t, activeState: n })]: 0 };
@@ -55,4 +55,4 @@ let h = new A(l.h, {
         u = { ...u, [E({ surface: t, activeState: n })]: 2 };
     },
 });
-n.d(t, {}, { A: h, e: o });
+n.d(t, {}, { A: f, e: o });

@@ -10,10 +10,10 @@ var n = l(477900),
     c = l(821609),
     u = l(192308),
     m = l(793574),
-    H = l(834409),
-    h = l(671576),
-    x = l(449585),
-    g = l(93474),
+    h = l(834409),
+    H = l(671576),
+    g = l(449585),
+    x = l(93474),
     f = l(792996),
     j = l(666097);
 function p(e) {
@@ -148,13 +148,13 @@ function A(e) {
     let { guild: t, incidentData: l, isUnderLockdown: C, isRaidDetected: a } = e,
         r = i.useCallback(() => {
             (0, u.mM)(async () => {
-                let e = { source: H.Eo.MEMBER_SAFETY_PAGE, location: m.A.MEMBER_SAFETY_PAGE, alertType: (0, s.$5)(l) };
-                return (l) => (0, n.jsx)(h.default, { ...l, guildId: t.id, analyticsData: e });
+                let e = { source: h.Eo.MEMBER_SAFETY_PAGE, location: m.A.MEMBER_SAFETY_PAGE, alertType: (0, s.$5)(l) };
+                return (l) => (0, n.jsx)(H.default, { ...l, guildId: t.id, analyticsData: e });
             });
         }, [t.id, l]),
         d = i.useCallback(() => {
-            let e = g.A.getLastIncidentAlertMessage(t.id);
-            (0, x.is)(e, t.id);
+            let e = x.A.getLastIncidentAlertMessage(t.id);
+            (0, g.is)(e, t.id);
         }, [t.id]),
         o = (function () {
             switch (!0) {

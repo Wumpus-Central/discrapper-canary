@@ -5,7 +5,7 @@ var i = t(477900),
     r = t(534963),
     o = t(470710),
     c = t(717518),
-    d = t(792996);
+    u = t(792996);
 t.d(
     n,
     {},
@@ -16,14 +16,14 @@ t.d(
             l.useEffect(() => {
                 null == t && r.A.fetchRegions(null);
             }, [t]);
-            let u = l.useMemo(
+            let d = l.useMemo(
                     () =>
                         null != n && n.regionUpdated && null != t && null != n.region
                             ? (t.find((e) => {
                                   let { id: t } = e;
                                   return t === n.region;
                               }) ?? { name: n.region, id: n.region })
-                            : { id: "automatic", name: d.intl.string(d.t.JEmsap) },
+                            : { id: "automatic", name: u.intl.string(u.t.JEmsap) },
                     [n, t],
                 ),
                 A = l.useCallback(
@@ -44,18 +44,18 @@ t.d(
                                           id: `region-${n}`,
                                           group: "region-select",
                                           label: t,
-                                          checked: n === u.id,
+                                          checked: n === d.id,
                                           action: () => A(e),
                                       },
                                       `region-${n}`,
                                   );
                               }),
-                    [t, u, A],
+                    [t, d, A],
                 );
             return (0, i.jsx)(a.Dr, {
                 id: "region-select",
-                label: d.intl.string(d.t.w8gMqh),
-                subtext: u.name,
+                label: u.intl.string(u.t.w8gMqh),
+                subtext: d.name,
                 children: h,
             });
         },

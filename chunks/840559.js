@@ -5,8 +5,8 @@ var l = n(613412),
     a = n(997187),
     d = n(161091),
     c = n(723923),
-    u = n(652215);
-function o(e) {
+    o = n(652215);
+function u(e) {
     let { categories: t } = a.A.getEmailSettings(),
         n = {};
     for (let l of Object.keys(e)) n[l] = t[l];
@@ -17,11 +17,11 @@ n.d(
     {},
     {
         CA: async function (e, t) {
-            let n = o({ [e]: t });
+            let n = u({ [e]: t });
             r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: { [e]: t } });
             try {
                 let n = await s.A.patch({
-                    url: u.Rsh.EMAIL_SETTINGS,
+                    url: o.Rsh.EMAIL_SETTINGS,
                     body: { settings: { categories: { [e]: t } } },
                     trackedActionData: {
                         event: l.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
@@ -36,11 +36,11 @@ n.d(
         },
         NI: async function () {
             let e = c.Zk.reduce((e, t) => ({ ...e, [t]: !1 }), {}),
-                t = o(e);
+                t = u(e);
             r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: e });
             try {
                 let t = await s.A.patch({
-                    url: u.Rsh.EMAIL_SETTINGS,
+                    url: o.Rsh.EMAIL_SETTINGS,
                     body: { settings: { categories: e } },
                     trackedActionData: {
                         event: l.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
@@ -56,7 +56,7 @@ n.d(
         cR: async function () {
             try {
                 let e = await s.A.get({
-                    url: u.Rsh.EMAIL_SETTINGS,
+                    url: o.Rsh.EMAIL_SETTINGS,
                     trackedActionData: {
                         event: l.NetworkActionNames.EMAIL_SETTINGS_FETCH,
                         properties: (e) => {

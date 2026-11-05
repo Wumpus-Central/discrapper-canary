@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(620632),
     r = n(73153),
     a = n(439372),
@@ -12,7 +12,7 @@ let _ = +d.A.Millis.SECOND,
     E = 30 * d.A.Millis.SECOND,
     A = new s.A("RTCLatencyTestManager");
 A.enableNativeLogger(!0);
-class h extends a.A {
+class f extends a.A {
     refetchTimeout;
     actions = { POST_CONNECTION_OPEN: () => this._handleConnectionOpen() };
     _terminate() {
@@ -50,4 +50,4 @@ class h extends a.A {
         }
     };
 }
-let f = new h();
+let h = new f();

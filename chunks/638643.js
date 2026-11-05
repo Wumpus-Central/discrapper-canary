@@ -4,8 +4,8 @@ var e = i(477900),
     r = i(342098),
     s = i(216678),
     a = i(97352),
-    u = i(166403),
-    o = i(67480),
+    o = i(166403),
+    u = i(67480),
     d = i(915043),
     c = i(163437),
     A = i(652215);
@@ -27,7 +27,7 @@ i.d(
                     analyticsLocation: S,
                     disableGuildSelector: f = !1,
                 } = t,
-                { promise: h, resolve: g } = Promise.withResolvers();
+                { promise: g, resolve: h } = Promise.withResolvers();
             if ((0, c.PJ)(s.flags) && !1 === f) {
                 let { promise: t, resolve: n } = Promise.withResolvers();
                 ((0, l.mM)(
@@ -52,13 +52,13 @@ i.d(
                 ),
                     (I = await t));
             }
-            let v = o.A.getParentSKU(s.id),
+            let v = u.A.getParentSKU(s.id),
                 b = null;
             return (
                 null != v &&
                     ([b] = (0, d.wm)({
                         groupSku: v,
-                        SubscriptionStore: u.A,
+                        SubscriptionStore: o.A,
                         SubscriptionPlanStore: a.A,
                         mapSubscriptionItems: d.W_,
                         guildId: I,
@@ -73,11 +73,11 @@ i.d(
                     analyticsSubscriptionType: A.rzx.APPLICATION,
                     analyticsLocations: m,
                     analyticsLocation: S,
-                    onComplete: g,
+                    onComplete: h,
                     showBenefitsFirst: !1,
                     forcesTransitionToGuild: !1,
                 }),
-                h
+                g
             );
         },
     },

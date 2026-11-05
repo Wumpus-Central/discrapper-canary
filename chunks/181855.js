@@ -12,18 +12,18 @@ var c = n(231723),
     _ = n(851907),
     E = n(157559),
     A = n(47167),
-    h = n(994500),
-    f = n(287809),
+    f = n(994500),
+    h = n(287809),
     I = n(240248),
     p = n(792996),
     m = n(988534),
-    g = n(969151),
-    T = n(817636),
+    T = n(969151),
+    g = n(817636),
     S = n(652215);
 async function N(e) {
     let { applicationId: t, channelId: n, guildId: s } = e;
     try {
-        return await (0, T.A)(t, n);
+        return await (0, g.A)(t, n);
     } catch (l) {
         let e = null != s ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         r.h.dispatch({
@@ -50,12 +50,12 @@ async function C(e) {
                     !!(await new Promise((e) => {
                         let r,
                             a = o.Ay.getSelfEmbeddedActivities().get(t.id),
-                            s = (0, g.H)(a?.location),
+                            s = (0, T.H)(a?.location),
                             d = l.A.getChannel(s);
                         null == a || null == d
                             ? e(!0)
                             : (i?.(),
-                              (r = null != d ? (0, A.m1)(d, f.default, h.A) : ""),
+                              (r = null != d ? (0, A.m1)(d, h.default, f.A) : ""),
                               E.A.show({
                                   title: p.intl.string(p.t.XkIWkk),
                                   cancelText: p.intl.string(p.t["ETE/oC"]),

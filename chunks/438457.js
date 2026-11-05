@@ -11,14 +11,14 @@ var i = n(115560),
     _ = n(71393),
     E = n(994500),
     A = n(967198),
-    h = n(287809),
-    f = n(486020),
+    f = n(287809),
+    h = n(486020),
     I = n(710969);
 n(23766);
 var p = n(823784),
     m = n(851936),
-    g = n(129230),
-    T = n(723702),
+    T = n(129230),
+    g = n(723702),
     S = n(345353),
     N = n(144779),
     C = n(652215);
@@ -77,7 +77,7 @@ function R(e) {
             impressionId: i,
             triggeredByStatusChange: s,
             minViewTimeSeconds: m,
-            minViewportPercentage: g,
+            minViewportPercentage: T,
             isQuestEnrollmentBlocked: S,
             shouldExtendSession: N,
             adUser: O,
@@ -87,10 +87,10 @@ function R(e) {
         } = e,
         D = {
             min_view_time_seconds: m,
-            min_viewport_percentage: g,
+            min_viewport_percentage: T,
             triggered_by_status_change: s,
-            apple_advertising_id: null != O && (0, T.un)() ? O.advertisingId : null,
-            android_advertising_id: null != O && (0, T.m0)() ? O.advertisingId : null,
+            apple_advertising_id: null != O && (0, g.un)() ? O.advertisingId : null,
+            android_advertising_id: null != O && (0, g.m0)() ? O.advertisingId : null,
             ...(0, a.A)(),
             ...(function (e) {
                 let t = (0, I.xn)(e),
@@ -113,7 +113,7 @@ function R(e) {
                                     null !== n.description && (i.description = n.description);
                                     let r =
                                         null !== n.icon
-                                            ? (f.Ay.getGuildIconURL({
+                                            ? (h.Ay.getGuildIconURL({
                                                   id: n.id,
                                                   icon: n.icon,
                                                   size: 44,
@@ -131,7 +131,7 @@ function R(e) {
                                       .map((e) => {
                                           let t = u.A.getChannel(e);
                                           if (void 0 === t) return null;
-                                          let n = { id: t.id, name: (0, d.m1)(t, h.default, E.A) };
+                                          let n = { id: t.id, name: (0, d.m1)(t, f.default, E.A) };
                                           return (t.topic.length > 0 && (n.channel_topic = t.topic), n);
                                       })
                                       .filter((e) => null !== e),
@@ -139,7 +139,7 @@ function R(e) {
                 null != a && (l.selected_guild_id = a);
                 let o =
                     s?.banner !== null && s?.banner !== void 0
-                        ? (f.Ay.getGuildBannerURL({ id: s.id, banner: s.banner }, !0) ?? null)
+                        ? (h.Ay.getGuildBannerURL({ id: s.id, banner: s.banner }, !0) ?? null)
                         : null;
                 return (
                     null !== o && (l.selected_guild_banner_url = o),
@@ -239,7 +239,7 @@ function y(e) {
                                 questContentRowIndex: s,
                             } = e,
                             l = (0, o.fF)(t, a, s);
-                        g.default.track(C.HAw.QUEST_CONTENT_CLICKED, {
+                        T.default.track(C.HAw.QUEST_CONTENT_CLICKED, {
                             cta_name: n,
                             click_id: r ?? (0, i.A)(),
                             is_targeted: e.isTargeted ?? !1,
@@ -264,10 +264,10 @@ function y(e) {
                 (async function (e) {
                     if (null == e.adCreativeType) {
                         let t = await (0, S.N)((0, o.jO)(e.surfaceId));
-                        g.default.track(C.HAw.QUEST_CONTENT_VIEWED, {
+                        T.default.track(C.HAw.QUEST_CONTENT_VIEWED, {
                             ...(0, o.fF)(e.surfaceId),
-                            apple_advertising_id: null != t && (0, T.un)() ? t.advertisingId : null,
-                            android_advertising_id: null != t && (0, T.m0)() ? t.advertisingId : null,
+                            apple_advertising_id: null != t && (0, g.un)() ? t.advertisingId : null,
+                            android_advertising_id: null != t && (0, g.m0)() ? t.advertisingId : null,
                             is_targeted: e.isTargeted ?? !1,
                         });
                         return;

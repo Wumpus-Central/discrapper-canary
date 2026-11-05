@@ -12,13 +12,13 @@ let u = [o.ni.User, o.ni.Installation],
     _ = { user: {}, guild: {}, installation: {} },
     E = {},
     A = {},
-    h = {},
     f = {},
+    h = {},
     I = {},
     p = new Set(),
     m = new Set(),
-    g = "apexTrackedExposures",
-    T = {},
+    T = "apexTrackedExposures",
+    g = {},
     S = {};
 function N(e) {
     let t = S[e];
@@ -35,13 +35,13 @@ class C extends a.Ay.PersistedStore {
             : null != e &&
               2 === e.version &&
               ((A = e.clientOverrides), (_ = { ...e.evaluatedExperiments, installation: {} })),
-        (f = {}),
+        (h = {}),
         t)) {
             let e = N(n),
                 i = t[n];
-            f[n] = { hashedName: e, variantId: i, isOverride: !0, exposureTrackingEnabled: !1, useAsEligibility: !1 };
+            h[n] = { hashedName: e, variantId: i, isOverride: !0, exposureTrackingEnabled: !1, useAsEligibility: !1 };
         }
-        T = this.loadTrackedExposures();
+        g = this.loadTrackedExposures();
     }
     getState() {
         return { version: 3, evaluatedExperiments: _, clientOverrides: A };
@@ -102,11 +102,11 @@ class C extends a.Ay.PersistedStore {
         A = n;
     }
     createSessionOverride(e, t) {
-        h = { ...h, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
+        f = { ...f, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
     }
     deleteSessionOverride(e) {
-        let { [e]: t, ...n } = h;
-        h = n;
+        let { [e]: t, ...n } = f;
+        f = n;
     }
     setExperimentsMetadata(e) {
         I = { ...I, ...Object.fromEntries(e.map((e) => [e.name, e])) };
@@ -118,21 +118,21 @@ class C extends a.Ay.PersistedStore {
         return A;
     }
     getSessionOverrides() {
-        return h;
+        return f;
     }
     getExperimentClientOverride(e) {
         return A[e];
     }
     getExperimentSessionOverride(e) {
-        return h[e];
+        return f[e];
     }
     handleLogout(e) {
         (e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
-            l.w.remove(g),
+            l.w.remove(T),
             this.clearAllTrackedExposures());
     }
     registerExperiment(e) {
-        ((E[e.name] = e), null != f[e.name] && this.trackExposureSuppression(e.name, "cookie_override"));
+        ((E[e.name] = e), null != h[e.name] && this.trackExposureSuppression(e.name, "cookie_override"));
     }
     getRegisteredExperiments() {
         return E;
@@ -234,7 +234,7 @@ class C extends a.Ay.PersistedStore {
         }
     }
     withExposureTracking(e, t) {
-        this.shouldTrackExposure(e) && (t(), (T[e] = Date.now()), this.saveTrackedExposures(T));
+        this.shouldTrackExposure(e) && (t(), (g[e] = Date.now()), this.saveTrackedExposures(g));
     }
     trackExposureSuppression(e, t) {
         let n = E[e];
@@ -281,11 +281,11 @@ class C extends a.Ay.PersistedStore {
             });
     }
     shouldTrackExposure(e) {
-        let t = T[e];
+        let t = g[e];
         return null == t || Date.now() - t > 6048e5;
     }
     loadTrackedExposures() {
-        let e = l.w.get(g);
+        let e = l.w.get(T);
         if (null == e || 2 !== e.version) return {};
         let t = e.exposures,
             n = Date.now(),
@@ -295,7 +295,7 @@ class C extends a.Ay.PersistedStore {
     }
     saveTrackedExposures(e) {
         try {
-            l.w.set(g, { version: 2, exposures: e });
+            l.w.set(T, { version: 2, exposures: e });
         } catch (e) {
             (c.error("Error saving tracked exposures", e),
                 this.track(
@@ -319,13 +319,13 @@ class C extends a.Ay.PersistedStore {
         _ = { user: {}, guild: {}, installation: _.installation };
     }
     clearAllOverrides() {
-        ((A = {}), (h = {}), (f = {}));
+        ((A = {}), (f = {}), (h = {}));
     }
     clearSessionOverrides() {
-        h = {};
+        f = {};
     }
     clearAllTrackedExposures() {
-        T = {};
+        g = {};
     }
     getHash(e) {
         return N(e);
@@ -346,7 +346,7 @@ class C extends a.Ay.PersistedStore {
         return m.has(e);
     }
     getOverride(e) {
-        return h[e] ?? A[e] ?? f[e];
+        return f[e] ?? A[e] ?? h[e];
     }
 }
 var O = n(73153),

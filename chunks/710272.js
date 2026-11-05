@@ -1,63 +1,63 @@
-(n.d(t, { i: () => p }), n(582128));
-var l = n(73153),
-    i = n(157559),
-    r = n(870801),
-    a = n(101392),
-    s = n(287809),
-    o = n(129230),
-    u = n(284009),
-    c = n.n(u),
-    d = n(451909),
-    f = n(963307),
-    A = n(576705),
-    S = n(652215);
+(t.d(n, { i: () => p }), t(582128));
+var l = t(73153),
+    i = t(157559),
+    r = t(870801),
+    a = t(101392),
+    s = t(287809),
+    o = t(129230),
+    u = t(284009),
+    c = t.n(u),
+    d = t(451909),
+    f = t(963307),
+    A = t(576705),
+    S = t(652215);
 let h = new RegExp(/@(:?everyone|here)/);
-function T(e, t) {
-    let n = 0;
-    return t.isThread()
-        ? (t.memberCount ?? 0)
-        : (f.Ay.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
-              ("@everyone" === e || t.id !== S.clD.OFFLINE) && (n += t.count);
+function T(e, n) {
+    let t = 0;
+    return n.isThread()
+        ? (n.memberCount ?? 0)
+        : (f.Ay.getProps(n.getGuildId(), n.id).groups.forEach((n) => {
+              ("@everyone" === e || n.id !== S.clD.OFFLINE) && (t += n.count);
           }),
-          n);
+          t);
 }
-let m = function (e, t) {
-        let n = t.getGuildId();
-        return (c()(null != n, "isGuildChannel with null guildId"), T(e, t) > 30 && A.A.can(S.xBc.MENTION_EVERYONE, t));
+let m = function (e, n) {
+        let t = n.getGuildId();
+        return (c()(null != t, "isGuildChannel with null guildId"), T(e, n) > 30 && A.A.can(S.xBc.MENTION_EVERYONE, n));
     },
-    g = function (e, t) {
-        for (let n of d.Ay.parsePreprocessor(t, e)) {
-            let e = (function e(t) {
-                if ("string" == typeof t.content) {
-                    if ("inlineCode" === t.type || "codeBlock" === t.type) return null;
-                    let e = t.content?.match(h);
+    g = function (e, n) {
+        for (let t of d.Ay.parsePreprocessor(n, e)) {
+            let e = (function e(n) {
+                if ("string" == typeof n.content) {
+                    if ("inlineCode" === n.type || "codeBlock" === n.type) return null;
+                    let e = n.content?.match(h);
                     if (null != e) {
-                        let [t] = e;
-                        return t;
+                        let [n] = e;
+                        return n;
                     }
-                } else if (Array.isArray(t.content))
-                    for (let n of t.content) {
-                        let t = e(n);
-                        if (null != t) return t;
+                } else if (Array.isArray(n.content))
+                    for (let t of n.content) {
+                        let n = e(t);
+                        if (null != n) return n;
                     }
                 return null;
-            })(n);
+            })(t);
             if (null != e) return e;
         }
         return null;
     };
-var x = n(792996);
+var x = t(792996);
 let E = [
     {
-        check(e, t, n) {
-            if (!n || null == t.getGuildId()) return !1;
-            let l = g(e, t);
-            if (null == l || !m(l, t)) return !1;
-            let i = T(l, t),
+        check(e, n, t) {
+            if (!t || null == n.getGuildId()) return !1;
+            let l = g(e, n);
+            if (null == l || !m(l, n)) return !1;
+            let i = T(l, n),
                 r = Math.pow(10, Math.floor(Math.log10(i))),
                 a = x.t["47E5Rz"];
             return (
-                t.isForumPost() ? (a = x.t.sYW2cy) : t.isThread() && (a = x.t["2YaiQ1"]),
+                n.isForumPost() ? (a = x.t.sYW2cy) : n.isThread() && (a = x.t["2YaiQ1"]),
                 {
                     body: x.intl.formatToPlainString(a, { role: l, count: (Math.trunc(i / r) * r).toLocaleString() }),
                     footer: x.intl.string(x.t.mVyrtu),
@@ -66,17 +66,17 @@ let E = [
         },
         analyticsType: "@Everyone Warning",
         animation: {
-            dark: () => n.e(480467).then(n.t.bind(n, 661022, 19)),
-            light: () => n.e(892705).then(n.t.bind(n, 111992, 19)),
+            dark: () => t.e(480467).then(t.t.bind(t, 661022, 19)),
+            light: () => t.e(892705).then(t.t.bind(t, 111992, 19)),
         },
     },
     { check: (e) => !!S.AKn.test(e) && { body: x.intl.string(x.t.sTwS1a) }, analyticsType: "API Token Warning" },
 ];
-var R = n(722178);
+var R = t(722178);
 function p(e) {
     let {
-            openWarningPopout: t,
-            type: n,
+            openWarningPopout: n,
+            type: t,
             content: u,
             channel: c,
             restrictMentions: d = !0,
@@ -89,8 +89,8 @@ function p(e) {
     return new Promise((e) =>
         (function (e) {
             let {
-                openWarningPopout: t,
-                type: n,
+                openWarningPopout: n,
+                type: t,
                 content: s,
                 channel: u,
                 restrictMentions: c,
@@ -101,7 +101,7 @@ function p(e) {
                 hasComponents: T,
                 resolve: m,
             } = e;
-            if (0 === s.length && !n.submit?.allowEmptyMessage && !A && !h && !T)
+            if (0 === s.length && !t.submit?.allowEmptyMessage && !A && !h && !T)
                 return void m({ valid: !1, failureReason: S.X8x.EMPTY_MESSAGE });
             let g = f ? 4e3 : 2e3;
             if (s.length > g) {
@@ -124,12 +124,12 @@ function p(e) {
             if (null != u) {
                 if (null != u.getGuildId() && d && a.A.getSlowmodeCooldownGuess(u.id) > 0)
                     return void m({ valid: !1, failureReason: S.X8x.SLOWMODE_COOLDOWN });
-                if (null != t)
-                    for (let { check: e, analyticsType: n, animation: l } of E) {
+                if (null != n)
+                    for (let { check: e, analyticsType: t, animation: l } of E) {
                         let i = e(s, u, c);
                         if (!1 !== i)
-                            return void t({
-                                analyticsType: n,
+                            return void n({
+                                analyticsType: t,
                                 channel: u,
                                 onCancel: () => m({ valid: !1, failureReason: S.X8x.SHOUTING_CANCELLED }),
                                 onConfirm: () => m({ valid: !0 }),
@@ -149,8 +149,8 @@ function p(e) {
             }
             m({ valid: !0 });
         })({
-            openWarningPopout: t,
-            type: n,
+            openWarningPopout: n,
+            type: t,
             content: u,
             channel: c,
             restrictMentions: d,

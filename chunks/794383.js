@@ -11,13 +11,13 @@ var i = n(812729),
     _ = n(417869),
     E = n(351906),
     A = n(652215);
-let h = +u.A.Millis.MINUTE,
-    f = 5 * u.A.Millis.MINUTE,
+let f = +u.A.Millis.MINUTE,
+    h = 5 * u.A.Millis.MINUTE,
     I = /live_user_(.*)-\{width\}/,
     p = null,
     m = 0,
-    g = null,
-    T = new Set(),
+    T = null,
+    g = new Set(),
     S = {};
 function N(e, t, n) {
     return s.Bo.get({
@@ -38,7 +38,7 @@ let C = new (class {
     }
     stop() {
         ((this._started = !1),
-            (g = null),
+            (T = null),
             (m = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             l.h.dispatch({ type: "STREAMING_UPDATE", stream: null }));
@@ -66,13 +66,13 @@ let C = new (class {
                 u = d.A.get(A.fg2.TWITCH),
                 _ = I.exec(r)?.[1] ?? e.name,
                 E = null != s && "" !== s ? s.slice(0, 128) : void 0,
-                h = null != o && "" !== o ? o.slice(0, 128) : void 0;
+                f = null != o && "" !== o ? o.slice(0, 128) : void 0;
             return {
                 url: u.getPlatformUserUrl?.({ id: e.id, name: _ }),
                 name: u.name,
                 assets: l,
                 details: E,
-                state: h,
+                state: f,
             };
         } catch (n) {
             if (401 === n.status && null == t)
@@ -84,7 +84,7 @@ let C = new (class {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((g = null), e.revoked || T.has(e.id))) return null;
+        if (((T = null), e.revoked || g.has(e.id))) return null;
         try {
             let {
                 body: { items: n },
@@ -102,7 +102,7 @@ let C = new (class {
                 } = n[0],
                 l = { large_image: (0, c.Di)(A.fg2.YOUTUBE, a.high.url) ?? void 0 },
                 o = null != r && "" !== r ? r.slice(0, 128) : void 0;
-            return (g = {
+            return (T = {
                 url: `https://youtube.com/watch?v=${i}`,
                 name: d.A.get(A.fg2.YOUTUBE).name,
                 details: o,
@@ -113,7 +113,7 @@ let C = new (class {
                 return o.A.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return (403 === n.status && T.add(e.id), null);
+            return (403 === n.status && g.add(e.id), null);
         }
     }
     _check() {
@@ -123,7 +123,7 @@ let C = new (class {
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [A.fg2.TWITCH],
             n = Date.now();
-        (m <= n && (t.push(A.fg2.YOUTUBE), (m = n + f)),
+        (m <= n && (t.push(A.fg2.YOUTUBE), (m = n + h)),
             Promise.allSettled(
                 e
                     .filter((e) => t.includes(e.type))
@@ -131,13 +131,13 @@ let C = new (class {
             ).then((e) => {
                 if (this._started) {
                     let t = e.find((e) => "fulfilled" === e.status && null != e.value)?.value;
-                    (null == t && null != g && (t = g), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
+                    (null == t && null != T && (t = T), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
                 }
                 this._scheduleCheck();
             }));
     }
     _scheduleCheck() {
-        this._started && (this._nextCheck = setTimeout(() => this._check(), h));
+        this._started && (this._nextCheck = setTimeout(() => this._check(), f));
     }
 })();
 function O() {

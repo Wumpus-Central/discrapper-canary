@@ -14,7 +14,7 @@ function A(e) {
     let t = (0, _.pU)(e);
     return null != t && t.length > 1;
 }
-function h(e, t) {
+function f(e, t) {
     return new Set(e.config.features).has(t);
 }
 n.d(
@@ -24,7 +24,7 @@ n.d(
         $e: function (e, t) {
             let n = new Map();
             for (let [i, r] of e)
-                if (!(A(r) || h(r, E.Li.NON_GAMING_PLAY_QUEST))) {
+                if (!(A(r) || f(r, E.Li.NON_GAMING_PLAY_QUEST))) {
                     for (let e of (0, _.hL)(r))
                         if (t.has(e)) {
                             n.set(i, r);
@@ -45,7 +45,7 @@ n.d(
         _e: function (e) {
             return (0, _.vS)(e) === E.ej;
         },
-        iM: h,
+        iM: f,
         jQ: function (e) {
             let { questId: t, fromContent: n, utmSource: i, utmMedium: r } = e;
             c.A.getState().setUtmCurrentContext({

@@ -25,12 +25,12 @@ n.d(
                     A = window.setTimeout(() => {
                         (I(), u(new i.fq(t, a.timeoutMs)));
                     }, a.timeoutMs),
-                    h = null != a.retryMs ? window.setInterval(p, a.retryMs) : null;
-                function f() {
-                    null != h && window.clearInterval(h);
+                    f = null != a.retryMs ? window.setInterval(p, a.retryMs) : null;
+                function h() {
+                    null != f && window.clearInterval(f);
                 }
                 function I() {
-                    (window.clearTimeout(A), f(), window.removeEventListener("message", m));
+                    (window.clearTimeout(A), h(), window.removeEventListener("message", m));
                 }
                 function p() {
                     for (let i of ((_ += 1) > 1 &&
@@ -47,7 +47,7 @@ n.d(
                 }
                 function m(e) {
                     ("window" === d ? e.source !== E : e.origin !== l) ||
-                        ((0, i.YX)(e.data, o.acks, c) ? f() : (0, i.YX)(e.data, o.results, c) && (I(), r(e.data)));
+                        ((0, i.YX)(e.data, o.acks, c) ? h() : (0, i.YX)(e.data, o.results, c) && (I(), r(e.data)));
                 }
                 (window.addEventListener("message", m), p());
             });

@@ -14,15 +14,15 @@ function d(e) {
             bypassAutoDismiss: c = !1,
             cooldownConfig: u,
         } = e,
-        h = (0, i.yK)([r.A], () => s.map((e) => r.A.getGameUpsellDismissal(e.id, d))),
-        [f, S] = (0, t.useState)(() => new Set());
+        S = (0, i.yK)([r.A], () => s.map((e) => r.A.getGameUpsellDismissal(e.id, d))),
+        [f, h] = (0, t.useState)(() => new Set());
     (0, t.useEffect)(() => {
         let e = s.map((e, s) => {
                 var l;
                 return {
                     id: e.id,
                     nextTime:
-                        ((l = h[s]),
+                        ((l = S[s]),
                         null == l
                             ? 0
                             : l.dismissedAt +
@@ -37,7 +37,7 @@ function d(e) {
         return (
             !(function s() {
                 let t = Date.now();
-                S(
+                h(
                     new Set(
                         e
                             .filter((e) => {
@@ -60,16 +60,16 @@ function d(e) {
             })(),
             () => clearTimeout(l)
         );
-    }, [s, h, u]);
+    }, [s, S, u]);
     let g = l ? [] : s.filter((e) => f.has(e.id)).map((e) => e.id),
         [w, M] = (0, a.Wl)(g.length > 0 ? d : null, { cooldownDurationMs: u.globalCooldownMs }, p, c),
         C = w === d ? g : [],
-        A = s.map((e) => e.id).join(","),
-        D = C.join(",");
+        D = s.map((e) => e.id).join(","),
+        U = C.join(",");
     return (
         (0, t.useEffect)(() => {
-            let e = A.length > 0 ? A.split(",") : [],
-                s = new Set(D.length > 0 ? D.split(",") : []),
+            let e = D.length > 0 ? D.split(",") : [],
+                s = new Set(U.length > 0 ? U.split(",") : []),
                 t = w !== d,
                 i = {};
             for (let a of e)
@@ -87,7 +87,7 @@ function d(e) {
                 disabled: l,
                 excludedReasons: i,
             });
-        }, [A, D, d, l, f, w]),
+        }, [D, U, d, l, f, w]),
         {
             eligibleToShow: C,
             markAsDismissed: function (e, s) {

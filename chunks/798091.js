@@ -1,7 +1,7 @@
-n.d(t, { y: () => g });
+n.d(t, { y: () => A });
 var i = n(582128),
-    s = n(855986),
-    r = n(781300),
+    r = n(855986),
+    s = n(781300),
     l = n(46653),
     a = n(615405),
     o = n(295405),
@@ -10,14 +10,14 @@ var i = n(582128),
     u = n(811091),
     h = n(425565);
 let C = null,
-    A = null;
-function g(e) {
+    E = null;
+function A(e) {
     var t;
-    let { location: n, countGiftCardWallet: g, canFetchPaymentSources: E = !0 } = e,
+    let { location: n, countGiftCardWallet: A, canFetchPaymentSources: _ = !0 } = e,
         { enabled: p } = (0, d.K)({ location: n }),
-        m = (0, s.bG)([l.default], () => l.default.getId()),
-        _ = null != (t = (0, s.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
-        { hasFetchedPaymentSources: f, hasValidPaymentMethod: T } = (0, s.cf)(
+        g = (0, r.bG)([l.default], () => l.default.getId()),
+        m = null != (t = (0, r.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
+        { hasFetchedPaymentSources: T, hasValidPaymentMethod: N } = (0, r.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
@@ -26,23 +26,23 @@ function g(e) {
                     return Object.values(e).some(
                         (e) => !e.invalid && e.type !== c.hes.UNKNOWN && (n || e.type !== c.hes.TDS_WALLET),
                     );
-                })(o.A.paymentSources, { countGiftCardWallet: g }),
+                })(o.A.paymentSources, { countGiftCardWallet: A }),
             }),
-            [g],
+            [A],
         ),
-        v = p && _,
-        N = v && E;
+        f = p && m,
+        I = f && _;
     return (
         i.useEffect(() => {
-            !N ||
-                C === m ||
+            !I ||
+                C === g ||
                 o.A.hasFetchedPaymentSources ||
                 a.A.isPaymentSourceFetching ||
-                ((C = m),
-                r.$o().then((e) => {
-                    null == e && (A = m);
+                ((C = g),
+                s.$o().then((e) => {
+                    null == e && (E = g);
                 }));
-        }, [N, m]),
-        v && A !== m && f && !T
+        }, [I, g]),
+        f && E !== g && T && !N
     );
 }

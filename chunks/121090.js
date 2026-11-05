@@ -1,16 +1,16 @@
-var l = n(477900);
-n(582128);
-var r = n(953727);
-n.d(
-    t,
+var l = t(477900);
+t(582128);
+var r = t(953727);
+t.d(
+    n,
     {},
     {
         A: function (e) {
-            let { width: t = 20, height: n = 20, color: a = "currentColor", ...i } = e;
+            let { width: n = 20, height: t = 20, color: a = "currentColor", ...i } = e;
             return (0, l.jsx)("svg", {
                 ...(0, r.A)(i),
-                width: t,
-                height: n,
+                width: n,
+                height: t,
                 viewBox: "0 0 20 20",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",

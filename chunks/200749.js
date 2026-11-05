@@ -5,7 +5,7 @@ var r = n(503698),
     s = n(834730),
     a = n(821609),
     o = n(235986),
-    u = n(946167);
+    c = n(946167);
 n.d(
     t,
     {},
@@ -15,13 +15,13 @@ n.d(
                 onCTAClick: t,
                 callToAction: n,
                 header: r,
-                description: c,
+                description: u,
                 errorCodeMessage: d,
                 size: m,
                 className: h,
                 artURL: g,
                 noArt: f = !1,
-                selected: p = !1,
+                selected: A = !1,
             } = e;
             return (0, i.jsxs)(o.A, {
                 className: h,
@@ -32,36 +32,36 @@ n.d(
                 children: [
                     !f &&
                         null != g &&
-                        (0, i.jsx)("div", { className: l()(u.art, u[m]), style: { backgroundImage: `url(${g})` } }),
+                        (0, i.jsx)("div", { className: l()(c.art, c[m]), style: { backgroundImage: `url(${g})` } }),
                     null != r
                         ? (0, i.jsx)(s.E, {
                               color: "none",
                               variant: "body-md/semibold",
-                              className: u.header,
+                              className: c.header,
                               children: r,
                           })
                         : null,
                     null != d
                         ? (0, i.jsx)(s.E, {
-                              className: u.errorCodeMessage,
+                              className: c.errorCodeMessage,
                               variant: "body-sm/semibold",
                               color: "text-muted",
                               selectable: !0,
                               children: d,
                           })
                         : null,
-                    null != c && (null == d || "small" !== m)
+                    null != u && (null == d || "small" !== m)
                         ? (0, i.jsx)(s.E, {
                               color: "none",
-                              className: u.description,
+                              className: c.description,
                               variant: "body-sm/medium",
-                              children: c,
+                              children: u,
                           })
                         : null,
-                    p || null == n
+                    A || null == n
                         ? null
                         : (0, i.jsx)("div", {
-                              className: u.outerButton,
+                              className: c.outerButton,
                               children: (0, i.jsx)(a.$, {
                                   size: "small" === m ? "sm" : "md",
                                   variant: "secondary",

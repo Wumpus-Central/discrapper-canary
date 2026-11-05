@@ -1,4 +1,5 @@
 !(function (t, e) {
+    "use strict";
     if (
         "IntersectionObserver" in t &&
         "IntersectionObserverEntry" in t &&

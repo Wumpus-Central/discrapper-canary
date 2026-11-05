@@ -4,8 +4,8 @@ var i = n(477900),
     s = n.n(a),
     r = n(435558),
     o = n(115560),
-    d = n(855986),
-    c = n(73153),
+    c = n(855986),
+    d = n(73153),
     u = n(565645),
     h = n(775602),
     p = n(213160);
@@ -28,7 +28,7 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, callHeight: n } = e,
-                a = (0, d.bG)([h.Ay], () => h.Ay.useReducedMotion),
+                a = (0, c.bG)([h.Ay], () => h.Ay.useReducedMotion),
                 [s, r] = l.useState([]);
             l.useEffect(() => {
                 function e(e) {
@@ -36,9 +36,9 @@ n.d(
                     n !== t || a || null == i || r((e) => [...e, { key: (0, o.A)(), ...i }]);
                 }
                 return (
-                    c.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
+                    d.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
                     () => {
-                        c.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
+                        d.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
                     }
                 );
             }, [t, a]);

@@ -1,6 +1,6 @@
 var s = n(945810),
     i = n(79545);
-let r = (0, s.mj)({
+let o = (0, s.mj)({
     name: "2025-12-quest-cta-refactor-rollout",
     kind: "user",
     defaultConfig: { enabled: !1, enabledQuestStates: new Set() },
@@ -49,4 +49,4 @@ let r = (0, s.mj)({
         },
     },
 });
-n.d(e, {}, { t: r });
+n.d(e, {}, { t: o });

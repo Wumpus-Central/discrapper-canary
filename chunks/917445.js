@@ -34,37 +34,37 @@ function E(e, t) {
         withMutualFriendsCount: u = !1,
         withMutualFriends: E = !1,
         waitForRefetch: A = !0,
-        guildId: h,
-        channelId: f,
+        guildId: f,
+        channelId: h,
         joinRequestId: I,
         abortSignal: p,
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if ("" === e || d.A.isFetchingProfile(e, h)) return Promise.resolve();
+    if ("" === e || d.A.isFetchingProfile(e, f)) return Promise.resolve();
     let m = d.A.getUserProfile(e),
-        g = d.A.getGuildMemberProfile(e, h),
-        T = null != h ? g : m,
-        S = Date.now() - (T?.fetchEndedAt ?? 0) >= 6e4;
-    if ((T?.fetchError?.status === 404 || T?.fetchError?.status === 429) && !S) return Promise.resolve();
+        T = d.A.getGuildMemberProfile(e, f),
+        g = null != f ? T : m,
+        S = Date.now() - (g?.fetchEndedAt ?? 0) >= 6e4;
+    if ((g?.fetchError?.status === 404 || g?.fetchError?.status === 429) && !S) return Promise.resolve();
     let N = d.A.getMutualGuilds(e),
         C = d.A.getMutualFriends(e),
         O = d.A.getMutualFriendsCount(e),
-        R = null == h ? null == m : null == g,
+        R = null == f ? null == m : null == T,
         L = !R && (S || (null == N && c) || (null == C && E) || (null == O && u));
     if (!R && !L) return Promise.resolve();
-    let y = null != h ? g?.profileEffect : m?.profileEffect;
+    let y = null != f ? T?.profileEffect : m?.profileEffect;
     null != y && (0, a.RE)(y.skuId);
-    let D = null != h ? g?.profileFrame : m?.profileFrame;
+    let D = null != f ? T?.profileFrame : m?.profileFrame;
     (null != D && (0, a.RE)(D.skuId), null != t && (0, r.l0)(t));
     let b = {
             type: n,
             withMutualGuilds: c,
             withMutualFriends: E,
             withMutualFriendsCount: u,
-            guildId: h,
+            guildId: f,
             joinRequestId: I,
             abortSignal: p,
             connectionsRoleId:
-                null == h ? void 0 : (0, s._g)({ guildMember: o.Ay.getMember(h, e), channel: l.A.getChannel(f) })?.id,
+                null == f ? void 0 : (0, s._g)({ guildMember: o.Ay.getMember(f, e), channel: l.A.getChannel(h) })?.id,
         },
         v = (0, i.eO)(e, b, _);
     return L && !A ? Promise.resolve() : v;

@@ -11,33 +11,33 @@ var i = n(477900),
     _ = n(830215),
     E = n(976860),
     A = n(287809),
-    h = n(792996),
-    f = n(695515),
+    f = n(792996),
+    h = n(695515),
     I = n(652215),
     p = n(665956),
     m = n(785613);
-function g(e) {
+function T(e) {
     let { onClose: t } = e,
-        n = (0, l.bG)([A.default, f.A], () => f.A.isCurrentUserInRestrictedHours()),
+        n = (0, l.bG)([A.default, h.A], () => h.A.isCurrentUserInRestrictedHours()),
         a = (0, l.bG)([A.default], () => {
             let e = A.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
             return null == e
                 ? null
-                : new Intl.DateTimeFormat(h.intl.currentLocale, {
+                : new Intl.DateTimeFormat(f.intl.currentLocale, {
                       hour: "numeric",
                       minute: "2-digit",
                       weekday: "long",
                   }).format(e);
         }),
         s = (0, l.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
-        g = r.useRef(!1),
-        T = r.useCallback(() => {
-            ((g.current = !0), (0, E.pX)(I.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
+        T = r.useRef(!1),
+        g = r.useCallback(() => {
+            ((T.current = !0), (0, E.pX)(I.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
         }, []);
     r.useEffect(() => {
-        n || g.current || t();
+        n || T.current || t();
     }, [n, t]);
-    let S = null != a ? h.intl.format(p.default.VfqJvY, { endTime: a }) : h.intl.string(p.default.abikhN);
+    let S = null != a ? f.intl.format(p.default.VfqJvY, { endTime: a }) : f.intl.string(p.default.abikhN);
     return (0, i.jsxs)("div", {
         className: m.Tp,
         children: [
@@ -67,20 +67,20 @@ function g(e) {
                 children: (0, i.jsx)(c.E, {
                     variant: "body-sm/medium",
                     color: "text-subtle",
-                    children: h.intl.format(p.default.iqeKDz, {
+                    children: f.intl.format(p.default.iqeKDz, {
                         username: s,
-                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: T, children: e }, t),
+                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: g, children: e }, t),
                     }),
                 }),
             }),
         ],
     });
 }
-var T = n(191627);
+var g = n(191627);
 let S = !1;
 function N() {
-    S || ((S = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => C() }), { layerKey: T.Uy, Layer: s.Ay }));
+    S || ((S = !0), (0, a.B8)(() => (0, i.jsx)(T, { onClose: () => C() }), { layerKey: g.Uy, Layer: s.Ay }));
 }
 function C() {
-    ((S = !1), (0, a.dF)(T.Uy));
+    ((S = !1), (0, a.dF)(g.Uy));
 }

@@ -13,7 +13,7 @@ var a = l(834730),
     h = l(379912),
     p = l(792996),
     f = l(484742);
-function j(e) {
+function v(e) {
     let { value: t, onChange: l, disabled: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -26,7 +26,7 @@ function j(e) {
         ],
     });
 }
-let v = { [x.WT.DAY]: h.default.iPorlt, [x.WT.MONTH]: h.default["8CYJ8Y"], [x.WT.YEAR]: h.default.gvaGGA };
+let j = { [x.WT.DAY]: h.default.iPorlt, [x.WT.MONTH]: h.default["8CYJ8Y"], [x.WT.YEAR]: h.default.gvaGGA };
 function b(e) {
     let {
             purchaseButtonText: t,
@@ -41,13 +41,13 @@ function b(e) {
         x = (0, u.$g)(l, r),
         h = (0, u.$g)(n, r),
         f = m.X7G.PAID_TERMS,
-        j = m.qF7.CONTACT_US,
+        v = m.qF7.CONTACT_US,
         b = c.A.getArticleURL(m.MVz.BILLING);
     return {
         purchaseButtonText: t,
         totalDue: x,
         renewalPrice: h,
-        interval: p.intl.formatToPlainString(v[a], { intervalCount: s }),
+        interval: p.intl.formatToPlainString(j[a], { intervalCount: s }),
         startDate: i,
         multiPeriodDiscountAttributes: (function (e) {
             let { currency: t, multiPeriodDiscountAttributes: l } = e;
@@ -60,7 +60,7 @@ function b(e) {
                 };
         })({ multiPeriodDiscountAttributes: o, currency: r }),
         paidServicesTermsUrl: f,
-        contactUsUrl: j,
+        contactUsUrl: v,
         subscriptionsFaqUrl: b,
     };
 }
@@ -86,7 +86,7 @@ l.d(
             return (0, r.jsxs)("div", {
                 className: f.k,
                 children: [
-                    null != e.immediateDelivery && (0, r.jsx)(j, { ...e.immediateDelivery }),
+                    null != e.immediateDelivery && (0, r.jsx)(v, { ...e.immediateDelivery }),
                     (0, r.jsx)(a.E, {
                         variant: "body-xs/normal",
                         color: "text-muted",

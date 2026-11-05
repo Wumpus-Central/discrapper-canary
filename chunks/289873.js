@@ -29,13 +29,13 @@ function _(e) {
                   }
               })(t)
             : t,
-        h = u["aria-label"] ?? _.SPINNER_LOADING_LABEL;
+        f = u["aria-label"] ?? _.SPINNER_LOADING_LABEL;
     if ("spinningCircle" === A || "spinningCircleSimple" === A)
         return (0, r.jsx)("div", {
             className: l()(c.spinner, c[A], i, { [c.stopAnimation]: !n }),
             role: "img",
             ...u,
-            "aria-label": h,
+            "aria-label": f,
             children: (0, r.jsx)("div", {
                 className: c.spinningCircleInner,
                 children: (0, r.jsxs)("svg", {
@@ -64,18 +64,18 @@ function _(e) {
                 }),
             }),
         });
-    let f = l()(c.item, s);
+    let h = l()(c.item, s);
     return (0, r.jsx)("span", {
         className: l()(c.spinner, i, { [c.stopAnimation]: !n }),
         role: "img",
-        "aria-label": h,
+        "aria-label": f,
         ...u,
         children: (0, r.jsxs)("span", {
             className: l()(c.inner, c[A]),
             children: [
-                (0, r.jsx)("span", { className: f }),
-                (0, r.jsx)("span", { className: f }),
-                "pulsingEllipsis" === A || "lowMotion" === A ? (0, r.jsx)("span", { className: f }) : null,
+                (0, r.jsx)("span", { className: h }),
+                (0, r.jsx)("span", { className: h }),
+                "pulsingEllipsis" === A || "lowMotion" === A ? (0, r.jsx)("span", { className: h }) : null,
             ],
         }),
     });

@@ -1,26 +1,26 @@
-var n = t(477900),
-    r = t(582128),
-    s = t(284009),
-    i = t.n(s),
-    l = t(935462),
-    c = t(834730),
-    o = t(821609),
-    d = t(77468),
-    m = t(235986),
-    u = t(626584),
-    x = t(610056),
-    N = t(936525),
-    h = t(792996),
-    p = t(844768);
+var t = n(477900),
+    r = n(582128),
+    s = n(284009),
+    i = n.n(s),
+    l = n(935462),
+    c = n(834730),
+    o = n(821609),
+    d = n(77468),
+    m = n(235986),
+    u = n(626584),
+    x = n(610056),
+    N = n(936525),
+    h = n(792996),
+    p = n(844768);
 let j = new u.A("TwoWayLinkDiscordConsentWeb");
-t.d(
+n.d(
     e,
     {},
     {
         W: function (a) {
             let {
                     platformType: e,
-                    clientId: t,
+                    clientId: n,
                     scopes: s,
                     authToken: u,
                     onContinue: b,
@@ -31,16 +31,16 @@ t.d(
                 [E, k] = r.useState(!1),
                 f = r.useCallback(
                     async (a) => {
-                        let t,
-                            n,
+                        let n,
+                            t,
                             { location: r } = a,
                             { callbackCode: s, callbackState: i } = u;
                         try {
-                            t = await d.A.completeTwoWayLink(e, r, s, i);
+                            n = await d.A.completeTwoWayLink(e, r, s, i);
                         } catch (a) {
-                            (j.error(`${e} link error:`, a), (n = a.body?.code));
+                            (j.error(`${e} link error:`, a), (t = a.body?.code));
                         }
-                        null != t ? b() : g(n);
+                        null != n ? b() : g(t);
                     },
                     [e, u, b, g],
                 ),
@@ -48,9 +48,9 @@ t.d(
                     header: A,
                     body: w,
                     appDetails: y,
-                    sendAuthorize: D,
+                    sendAuthorize: L,
                 } = (0, x.A)({
-                    clientId: t,
+                    clientId: n,
                     scopes: s,
                     responseType: "code",
                     callback: f,
@@ -59,43 +59,43 @@ t.d(
                     redirectUri: v,
                     isTwoWayLinkDiscordConsent: !0,
                 }),
-                L = r.useCallback(() => {
-                    (i()(null != D, "sendAuthorize not available"), k(!0), D(!0));
-                }, [D]);
-            return (0, n.jsxs)(N.A, {
+                D = r.useCallback(() => {
+                    (i()(null != L, "sendAuthorize not available"), k(!0), L(!0));
+                }, [L]);
+            return (0, t.jsxs)(N.A, {
                 children: [
-                    (0, n.jsxs)(l.rQ, {
+                    (0, t.jsxs)(l.rQ, {
                         "data-migration-pending": !0,
                         direction: m.A.Direction.VERTICAL,
                         className: p.wx,
                         separator: !1,
                         children: [
-                            (0, n.jsx)(c.E, {
+                            (0, t.jsx)(c.E, {
                                 className: p.u1,
                                 variant: "body-xs/semibold",
                                 color: "text-default",
                                 children: h.intl.format(h.t.fHz6eR, { number: 2, total: 2 }),
                             }),
-                            null != C && (0, n.jsx)(l.s_, { "data-migration-pending": !0, className: p.b, onClick: C }),
+                            null != C && (0, t.jsx)(l.s_, { "data-migration-pending": !0, className: p.b, onClick: C }),
                         ],
                     }),
-                    (0, n.jsxs)(l.$m, {
+                    (0, t.jsxs)(l.$m, {
                         "data-migration-pending": !0,
                         className: p.mB,
                         scrollbarGutter: !1,
-                        children: [(0, n.jsx)("div", { className: p.a8, children: A }), w, y],
+                        children: [(0, t.jsx)("div", { className: p.a8, children: A }), w, y],
                     }),
-                    (0, n.jsx)(l.jl, {
+                    (0, t.jsx)(l.jl, {
                         "data-migration-pending": !0,
                         className: p.qr,
-                        children: (0, n.jsx)("div", {
+                        children: (0, t.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.wC,
-                            children: (0, n.jsx)(o.$, {
+                            children: (0, t.jsx)(o.$, {
                                 variant: "primary",
                                 text: h.intl.string(h.t.ZN4hkc),
                                 loading: E,
-                                onClick: L,
+                                onClick: D,
                             }),
                         }),
                     }),

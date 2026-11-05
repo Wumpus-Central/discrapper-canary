@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(451988),
     r = n(138399),
     a = n(597798),
@@ -31,7 +31,7 @@ function A() {
         (r.A.sendBotMessage(e, _.intl.formatToPlainString(_.t.XYof5G, { number: 3 }), "call_idle_disconnect"),
         a.default.selectVoiceChannel(null));
 }
-class h extends s.A {
+class f extends s.A {
     idleTimeout = new i.Ep();
     handleConnectionClosed = () => {
         this.idleTimeout.stop();
@@ -48,4 +48,4 @@ class h extends s.A {
         EMBEDDED_ACTIVITY_CLOSE: this.handleEmbeddedActivityDisconnect,
     };
 }
-let f = new h();
+let h = new f();

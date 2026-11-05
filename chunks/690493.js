@@ -1,15 +1,15 @@
-var r = n(855986),
-    l = n(134861),
-    a = n(894768);
-n.d(
+var n = l(855986),
+    r = l(134861),
+    a = l(894768);
+l.d(
     t,
     {},
     {
         J: function (e) {
             let t = e?.id;
-            return (0, r.bG)(
-                [a.A, l.A],
-                () => null != t && (null != a.A.getApplicationActivity(t, !0) || null != l.A.getApplication(t)),
+            return (0, n.bG)(
+                [a.A, r.A],
+                () => null != t && (null != a.A.getApplicationActivity(t, !0) || null != r.A.getApplication(t)),
                 [t],
             );
         },

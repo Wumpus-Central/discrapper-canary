@@ -1,5 +1,5 @@
 (n.d(t, {
-    i2: () => g,
+    i2: () => T,
     fY: () => p,
     WV: () => P,
     UX: () => b,
@@ -24,10 +24,10 @@ var i,
     _ = n(427483),
     E = n(371822),
     A = n(970908);
-function h(e) {
+function f(e) {
     if (null != e) return e === u.NJ8.LIGHT || "light" === e ? "light" : "dark";
 }
-let f = /\.([a-zA-Z0-9]+)$/,
+let h = /\.([a-zA-Z0-9]+)$/,
     I = ["video/mp4", "video/webm"];
 var p =
     (((i = {}).HERO = "hero"),
@@ -51,13 +51,13 @@ var p =
 function m(e, t) {
     return null != e ? e : t;
 }
-var g =
+var T =
     (((r = {})[(r.TIER_1 = 1)] = "TIER_1"),
     (r[(r.TIER_2 = 2)] = "TIER_2"),
     (r[(r.TIER_3 = 3)] = "TIER_3"),
     (r[(r.TIER_4 = 4)] = "TIER_4"),
     r);
-let T = {
+let g = {
         video_player_video: { variant: "video", property: "url" },
         video_player_video_low_res: { variant: "videoLowRes", property: "url" },
         video_player_video_hls: { variant: "videoHls", property: "url" },
@@ -74,35 +74,35 @@ let T = {
 function N(e, t, n, i, r) {
     var l, o, u;
     let A,
-        f,
+        h,
         p,
-        g,
+        T,
         N = !1,
         C = !1;
     switch (t) {
         case "hero":
-            g = m(e.config.assets.heroVideo, e.config.assets.hero);
+            T = m(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case "hero_image":
-            g = e.config.assets.hero;
+            T = e.config.assets.hero;
             break;
         case "hero_video": {
             let t = e.config.assets.heroVideo;
             if (null == t) return null;
-            g = t;
+            T = t;
             break;
         }
         case "quest_bar_hero":
-            g = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            T = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case "quest_bar_hero_video": {
             let t = e.config.assets.questBarHeroVideo;
             if (null == t) return null;
-            g = t;
+            T = t;
             break;
         }
         case "quest_bar_hero_image":
-            g = e.config.assets.questBarHero;
+            T = e.config.assets.questBarHero;
             break;
         case "reward": {
             let t = (0, d.sn)(e);
@@ -113,41 +113,41 @@ function N(e, t, n, i, r) {
                     ? { url: E.A, mimetype: "video/mp4", isAnimated: !0 }
                     : { url: _.A, mimetype: "video/webm", isAnimated: !0 };
             }
-            g = m(t.assetVideo, t.asset);
+            T = m(t.assetVideo, t.asset);
             break;
         }
         case "reward_image": {
             let t = (0, d.sn)(e);
             if (t.type === s.l.VIRTUAL_CURRENCY) return null;
-            g = t.asset;
+            T = t.asset;
             break;
         }
         case "game_tile": {
-            let t = h(n);
+            let t = f(n);
             "dark" === t && null != e.config.assets.gameTileDark
-                ? (g = e.config.assets.gameTileDark)
+                ? (T = e.config.assets.gameTileDark)
                 : "light" === t && null != e.config.assets.gameTileLight
-                  ? (g = e.config.assets.gameTileLight)
-                  : ((g = e.config.assets.gameTile), (N = !0));
+                  ? (T = e.config.assets.gameTileLight)
+                  : ((T = e.config.assets.gameTile), (N = !0));
             break;
         }
         case "logo_type": {
-            let t = h(n);
+            let t = f(n);
             "dark" === t && null != e.config.assets.logotypeDark
-                ? (g = e.config.assets.logotypeDark)
+                ? (T = e.config.assets.logotypeDark)
                 : "light" === t && null != e.config.assets.logotypeLight
-                  ? (g = e.config.assets.logotypeLight)
-                  : ((g = e.config.assets.logotype), (N = !0));
+                  ? (T = e.config.assets.logotypeLight)
+                  : ((T = e.config.assets.logotype), (N = !0));
             break;
         }
         case "cosponsor_logo_type": {
             if (null == e.config.cosponsorMetadata) return null;
-            let t = h(n);
+            let t = f(n);
             "dark" === t && null != e.config.cosponsorMetadata.logotypeDark
-                ? (g = e.config.cosponsorMetadata.logotypeDark)
+                ? (T = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === t && null != e.config.cosponsorMetadata.logotypeLight
-                  ? (g = e.config.cosponsorMetadata.logotypeLight)
-                  : ((g = e.config.cosponsorMetadata.logotype), (N = !0));
+                  ? (T = e.config.cosponsorMetadata.logotypeLight)
+                  : ((T = e.config.cosponsorMetadata.logotype), (N = !0));
             break;
         }
         case "video_player_video":
@@ -158,23 +158,23 @@ function N(e, t, n, i, r) {
         case "video_player_transcript": {
             if (!("taskConfigV2" in e.config)) return null;
             let n = e.config.taskConfigV2.tasks[i ? a.n.WATCH_VIDEO_ON_MOBILE : a.n.WATCH_VIDEO],
-                r = T[t],
+                r = g[t],
                 s = n?.assets[r.variant]?.[r.property];
             if (null == s) return null;
-            ((g = s), (C = !0));
+            ((T = s), (C = !0));
         }
     }
     let O =
         ((l = e.id),
-        (o = g),
-        (u = { theme: N ? h(n) : void 0 }),
+        (o = T),
+        (u = { theme: N ? f(n) : void 0 }),
         (A = (function (e, t, n) {
             if (t.startsWith("blob:")) return t.split("?", 1).at(0) ?? t;
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
-        })(l, o, { theme: h(u?.theme) })),
-        (p = null != (f = L(o)) && I.includes(f)),
-        { url: A, mimetype: f, isAnimated: p });
+        })(l, o, { theme: f(u?.theme) })),
+        (p = null != (h = L(o)) && I.includes(h)),
+        { url: A, mimetype: h, isAnimated: p });
     return C && null == O.mimetype ? null : O;
 }
 function C(e) {
@@ -193,7 +193,7 @@ function L(e) {
         return null != t ? decodeURIComponent(t) : null;
     }
     let t = l.A.toURLSafe(e);
-    switch (t?.searchParams.get("format")?.toLowerCase() ?? f.exec(e)?.[1]?.toLowerCase()) {
+    switch (t?.searchParams.get("format")?.toLowerCase() ?? h.exec(e)?.[1]?.toLowerCase()) {
         case "webm":
             return "video/webm";
         case "mp4":

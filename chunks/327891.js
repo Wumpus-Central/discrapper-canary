@@ -1,4 +1,4 @@
-(n.d(t, { kJ: () => f, lg: () => h, Ay: () => I }), n(938796));
+(n.d(t, { kJ: () => h, lg: () => f, Ay: () => I }), n(938796));
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
     a = n(136722),
@@ -20,13 +20,13 @@ var u = n(619019),
     _ = n(487887),
     E = n(705751);
 let A = { [_.I4]: 7, [_.qA]: 12 };
-function h(e) {
+function f(e) {
     let t = { os: e.os, name: e.name };
     null != e.arguments && (t.arguments = e.arguments);
     let n = e.is_launcher ?? e.isLauncher;
     return (null != n && (t.isLauncher = n), t);
 }
-class f extends s.A {
+class h extends s.A {
     id;
     name;
     icon;
@@ -45,7 +45,7 @@ class f extends s.A {
     contentClassification;
     flags;
     static createFromServer(e) {
-        return new f({
+        return new h({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -103,7 +103,7 @@ class f extends s.A {
             : null;
     }
 }
-class I extends f {
+class I extends h {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -198,7 +198,7 @@ class I extends f {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(h)),
+            (this.executables = (e.executables ?? []).map(f)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),

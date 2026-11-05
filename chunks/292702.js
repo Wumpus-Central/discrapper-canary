@@ -11,13 +11,13 @@ var i = n(485967),
     _ = n(73153),
     E = n(652215);
 let A = 0;
-class h extends u.Ay.Store {
+class f extends u.Ay.Store {
     static displayName = "InstanceIdStore";
     getId() {
         return A;
     }
 }
-let f = new h(_.h, {
+let h = new f(_.h, {
     RPC_SERVER_READY: function (e) {
         let { port: t } = e;
         A = E.xEi - t;
@@ -26,15 +26,15 @@ let f = new h(_.h, {
 var I = n(962052),
     p = n(723702),
     m = n(998218),
-    g = n(253400);
-let T = new r.A("Games"),
+    T = n(253400);
+let g = new r.A("Games"),
     S = null;
 function N() {
     return null != S
         ? Promise.resolve(S)
         : (0, p.xl)()
-          ? g.Ay.ensureModule("discord_game_utils").then(() => {
-                let e = g.Ay.getGameUtils();
+          ? T.Ay.ensureModule("discord_game_utils").then(() => {
+                let e = T.Ay.getGameUtils();
                 return null != e && null != e.findLaunchable
                     ? ((S = e), e)
                     : Promise.reject(Error("game utils not found"));
@@ -84,7 +84,7 @@ function R(e, t, n) {
 }
 function L(e) {
     return (
-        T.info("launch", e),
+        g.info("launch", e),
         new Promise((t, n) => {
             null == m.A.safeParseWithQuery(e.launchTarget)
                 ? n(Error(`Failed to parse launch target. ${e.launchTarget}`))
@@ -120,7 +120,7 @@ let y = {
             applicationId: u,
             branchId: _,
             buildId: A,
-            shouldPatch: h,
+            shouldPatch: f,
         } = e;
         if (null == l || null == d || null == c) throw Error(`Couldn't construct launchable for ${e.applicationId}`);
         null == a && (a = d);
@@ -131,13 +131,13 @@ let y = {
                 let t = e[0];
                 if (null == t) return Promise.reject(Error("branch is null"));
                 let { liveBuildId: n } = t;
-                if (h && n !== A) return Promise.reject(Error("live build id changed"));
+                if (f && n !== A) return Promise.reject(Error("live build id changed"));
             })
             .then(() => I.A.runLaunchSetup(u, _))
             .then(() => {
                 let e = (0, s.A)(c),
                     i = {
-                        DISCORD_INSTANCE_ID: f.getId().toString(),
+                        DISCORD_INSTANCE_ID: h.getId().toString(),
                         DISCORD_ACCESS_TOKEN: t ?? "",
                         DISCORD_CURRENT_LOCALE: n,
                         DISCORD_CURRENT_BRANCH: r,

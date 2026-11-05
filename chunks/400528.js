@@ -1,12 +1,12 @@
 var i = t(855986),
     l = t(73153),
     a = t(967198);
-let r = null,
-    s = null,
-    o = { reportedMessages: {} };
+let o = null,
+    r = null,
+    s = { reportedMessages: {} };
 function c() {
     let e = a.A.getLastSelectedGuildId();
-    e !== r && ((s = null), (r = e ?? null));
+    e !== o && ((r = null), (o = e ?? null));
 }
 class d extends i.Ay.PersistedStore {
     static displayName = "ReportToModStore";
@@ -14,7 +14,7 @@ class d extends i.Ay.PersistedStore {
     static migrations = [(e) => ({ reportedMessages: e?.reportedMessages ?? {} })];
     initialize(e) {
         (null != e &&
-            (o.reportedMessages = Object.fromEntries(
+            (s.reportedMessages = Object.fromEntries(
                 Object.entries(e.reportedMessages).map((e) => {
                     let [n, t] = e;
                     return [n, new Set(t)];
@@ -23,46 +23,46 @@ class d extends i.Ay.PersistedStore {
             this.syncWith([a.A], c));
     }
     getState() {
-        return o;
+        return s;
     }
     isUserBanned(e) {
-        return s?.get(e) ?? null;
+        return r?.get(e) ?? null;
     }
     getReportedMessages() {
-        return o.reportedMessages;
+        return s.reportedMessages;
     }
     hasReportedMessage(e, n) {
-        return o.reportedMessages[e]?.has(n) ?? !1;
+        return s.reportedMessages[e]?.has(n) ?? !1;
     }
 }
 let u = new d(l.h, {
     REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: function (e) {
         let { channelId: n, messageId: t } = e;
-        (null == o.reportedMessages[n] && (o.reportedMessages[n] = new Set()), o.reportedMessages[n].add(t));
+        (null == s.reportedMessages[n] && (s.reportedMessages[n] = new Set()), s.reportedMessages[n].add(t));
     },
     GUILD_BAN_ADD: function (e) {
         let { user: n, guildId: t } = e;
-        t !== r || (null != s && s.set(n.id, !0));
+        t !== o || (null != r && r.set(n.id, !0));
     },
     GUILD_BAN_REMOVE: function (e) {
         let { user: n, guildId: t } = e;
-        t !== r || (null != s && s.set(n.id, !1));
+        t !== o || (null != r && r.set(n.id, !1));
     },
     GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
         let { bans: n, guildId: t, userIds: i } = e;
-        if (t !== r) return;
+        if (t !== o) return;
         let l = new Set(n.map((e) => e.user?.id)),
             a = Array.from(new Set(i ?? [])).filter((e) => !l.has(e));
-        (null == s && (s = new Map()),
+        (null == r && (r = new Map()),
             l.forEach((e) => {
-                s?.set(e, !0);
+                r?.set(e, !0);
             }),
             a.forEach((e) => {
-                s?.set(e, !1);
+                r?.set(e, !1);
             }));
     },
     LOGOUT: function () {
-        ((r = null), (s = null), (o.reportedMessages = {}));
+        ((o = null), (r = null), (s.reportedMessages = {}));
     },
 });
 t.d(n, {}, { A: u });

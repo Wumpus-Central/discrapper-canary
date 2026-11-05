@@ -4,8 +4,8 @@ var i = n(582128),
     s = n(626584),
     a = n(293432),
     o = n(287809),
-    u = n(531685),
-    c = n(365971),
+    c = n(531685),
+    u = n(365971),
     d = n(392164);
 let m = new s.A("NotificationLayoutManager");
 class h {
@@ -89,7 +89,7 @@ let g = i.createContext(new h(!0));
 function f(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let p = { mass: 0.8, friction: 25, tension: 320 };
+let A = { mass: 0.8, friction: 25, tension: 320 };
 n.d(
     t,
     {},
@@ -102,7 +102,7 @@ n.d(
                     void 0,
                     [],
                 ),
-                A = i.useRef(h),
+                p = i.useRef(h),
                 E = i.useContext(g),
                 b = i.useMemo(() => {
                     let t = !1;
@@ -113,14 +113,14 @@ n.d(
                                   let { locked: i, matchHeight: r, height: l, top: s, index: h } = n;
                                   if (o.default.getCurrentUser()?.isStaff()) {
                                       let t = a.A.getWindow(d.f),
-                                          n = null != t ? u.A.windowSize((0, c.Q2)(t)) : void 0;
+                                          n = null != t ? c.A.windowSize((0, u.Q2)(t)) : void 0;
                                       m.info(
                                           "Notification layout update",
                                           { id: e, locked: i, matchHeight: r, height: l, top: s, index: h },
                                           n,
                                       );
                                   }
-                                  let { current: g } = A,
+                                  let { current: g } = p,
                                       E = {
                                           opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
                                           scale: i ? Math.min(1 - h / 4, 1) : 1,
@@ -139,7 +139,7 @@ n.d(
                                                 height: i ? r : l,
                                             },
                                       to: E,
-                                      config: p,
+                                      config: A,
                                   }),
                                       (t = !0));
                               });
@@ -150,13 +150,13 @@ n.d(
                     if (t === l.wL.YEETED) {
                         let t = E.getLayoutSpecs(e);
                         if (null == t) return void n();
-                        (A.current({
+                        (p.current({
                             to: {
                                 scale: 0.8,
                                 opacity: 0,
                                 transform: f(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
                             },
-                            config: p,
+                            config: A,
                         }),
                             setTimeout(n, 300));
                     }

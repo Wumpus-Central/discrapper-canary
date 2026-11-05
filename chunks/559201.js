@@ -1,4 +1,4 @@
-n.d(t, { VA: () => A, HJ: () => f, VU: () => u, tO: () => _, CD: () => E, jZ: () => h, Ey: () => I });
+n.d(t, { VA: () => A, HJ: () => h, VU: () => u, tO: () => _, CD: () => E, jZ: () => f, Ey: () => I });
 var i = n(620632),
     r = n(73153),
     a = n(627784),
@@ -81,7 +81,7 @@ async function A(e, t) {
         throw (r.h.dispatch({ type: "GUILD_APPLY_BOOST_FAIL", error: e }), e);
     }
 }
-async function h(e, t) {
+async function f(e, t) {
     r.h.dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
     try {
         (await i.Bo.del({ url: c.Rsh.APPLIED_GUILD_BOOST(e, t), oldFormErrors: !0, rejectWithError: (0, i.fT)() }),
@@ -92,7 +92,7 @@ async function h(e, t) {
     }
     r.h.dispatch({ type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: t });
 }
-async function f(e) {
+async function h(e) {
     let t = await i.Bo.post({ url: c.Rsh.USER_GUILD_BOOST_SLOT_CANCEL(e), oldFormErrors: !0, rejectWithError: !0 }),
         n = o.A.createFromServer(t.body, d.A.getSubscriptionById(t.body.subscription_id));
     return (r.h.dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: n }), n);

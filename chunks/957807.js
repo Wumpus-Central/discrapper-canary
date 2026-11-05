@@ -25,7 +25,7 @@ function A(e) {
         (null != e.expires_at && new Date(e.expires_at).getTime() <= Date.now())
     );
 }
-let h = (0, a.UT)(c.A, {
+let f = (0, a.UT)(c.A, {
     getQueryId: _.fic.GAME_PROFILE_INVITE,
     staleAfter: 5 * u.A.Seconds.MINUTE,
     failureStaleAfter: 5 * u.A.Seconds.MINUTE,
@@ -49,7 +49,7 @@ n.d(
                 n.current = t;
             }, [t]);
             let r = E(e),
-                { data: s, error: l, isLoading: o } = h(r),
+                { data: s, error: l, isLoading: o } = f(r),
                 c = null != r && null == s && (o || null == l),
                 u = (0, a.bG)([d.A], () => s?.guild?.id != null && d.A.isMember(s?.guild?.id));
             return (
@@ -62,7 +62,7 @@ n.d(
         UT: function (e) {
             o.I.fetchMany([e]).then(() => {
                 let t = E(l.A.getGame(e));
-                null != t && h.fetchMany([t]);
+                null != t && f.fetchMany([t]);
             });
         },
         rG: function (e) {

@@ -5,8 +5,8 @@ var i = t(477900),
     r = t(688810),
     o = t(592982),
     c = t(384059),
-    d = t(480890),
-    u = t(246356),
+    u = t(480890),
+    d = t(246356),
     A = t(693409),
     h = t(806931),
     m = t(792996);
@@ -22,12 +22,12 @@ t.d(
                 targetElementRef: x,
                 renderPopout: (e) => {
                     let { closePopout: l } = e;
-                    return (0, i.jsx)(u.A, {
+                    return (0, i.jsx)(d.A, {
                         children: (0, i.jsx)(o.A, {
                             onClose: l,
                             channel: n,
                             remoteMode: t,
-                            onInteraction: (0, d.s)("MoreSettingsMenu", g, { entrypoint: h.GK.THREE_DOT }),
+                            onInteraction: (0, u.s)("MoreSettingsMenu", g, { entrypoint: h.GK.THREE_DOT }),
                         }),
                     });
                 },

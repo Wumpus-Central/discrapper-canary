@@ -11,7 +11,7 @@ var r,
     _ = n(860840),
     E = n(795129),
     A = n(274652);
-let h = (0, n(945810).mj)({
+let f = (0, n(945810).mj)({
     name: "2025-09-image-attachment-mezzanine-v2",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -21,12 +21,12 @@ let h = (0, n(945810).mj)({
         2: { enabled: !0, maxFileSizeBytes: 262144 },
     },
 });
-var f = n(964404),
+var h = n(964404),
     I = n(544180),
     p = n(129230),
     m = n(509929),
-    g = n(927813),
-    T = n(209489),
+    T = n(927813),
+    g = n(209489),
     S = n(856383),
     N = n(292348),
     C = n(565150),
@@ -184,17 +184,17 @@ class U extends C.Ay {
     retryOpts() {
         return this.item.platform === A.x.REACT_NATIVE
             ? {
-                  timeout: +g.A.Millis.HOUR,
-                  backoff: new l.A(0.5 * g.A.Millis.SECOND, 30 * g.A.Millis.MINUTE),
+                  timeout: +T.A.Millis.HOUR,
+                  backoff: new l.A(0.5 * T.A.Millis.SECOND, 30 * T.A.Millis.MINUTE),
                   retries: 12,
               }
-            : { timeout: +g.A.Millis.HOUR, retries: 12, backoff: new l.A() };
+            : { timeout: +T.A.Millis.HOUR, retries: 12, backoff: new l.A() };
     }
     createAttachmentUrlRetryOpts() {
         return this.item.platform === A.x.REACT_NATIVE
             ? {
-                  timeout: { response: 30 * g.A.Millis.SECOND, deadline: 30 * g.A.Millis.MINUTE },
-                  backoff: new l.A(0.5 * g.A.Millis.SECOND, 60 * g.A.Millis.SECOND),
+                  timeout: { response: 30 * T.A.Millis.SECOND, deadline: 30 * T.A.Millis.MINUTE },
+                  backoff: new l.A(0.5 * T.A.Millis.SECOND, 60 * T.A.Millis.SECOND),
                   retries: 8,
               }
             : this.retryOpts();
@@ -235,7 +235,7 @@ class U extends C.Ay {
             headers: { "Content-Range": "bytes */*" },
             rejectWithError: !0,
             retries: 0,
-            timeout: { deadline: 30 * g.A.Millis.SECOND },
+            timeout: { deadline: 30 * T.A.Millis.SECOND },
             signal: this._abortController.signal,
         };
         return await this._uploadHttpClient
@@ -305,7 +305,7 @@ class U extends C.Ay {
                 if (e instanceof v && e.canRetry()) {
                     (D.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
-                        await T.A.awaitOnline());
+                        await g.A.awaitOnline());
                     let t = r.fail();
                     (D.log(`Waiting ${t}ms before attachment upload attempt ${this.uploadAttempts + 1}`),
                         await new Promise((e) => setTimeout(e, t)));
@@ -523,7 +523,7 @@ class U extends C.Ay {
             a,
             s = (function (e) {
                 let { location: t } = e;
-                return h.getConfig({ location: t });
+                return f.getConfig({ location: t });
             })({ location: "CloudUpload.maybeConvertToWebP" });
         if (!s.enabled) return (D.warn(`webp conversion skipped for ${i}: not enabled`), null);
         if (null == e) return (D.warn(`webp conversion skipped for ${i}: no file`), null);
@@ -654,7 +654,7 @@ class U extends C.Ay {
     }
     static isResponseUrlStale(e) {
         if (null == e) return !0;
-        let t = 12 * g.A.Millis.HOUR;
+        let t = 12 * T.A.Millis.HOUR;
         return Date.now() - e > t;
     }
     async ensureFreshResponseUrl() {
@@ -691,9 +691,9 @@ class U extends C.Ay {
         p.default.track(y.HAw.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: this.mimeType ?? "unknown",
-            video_upload_quality: f.Ay.videoUploadQuality,
-            data_saving_mode: f.Ay.dataSavingMode,
-            low_quality_image_mode: f.Ay.dataSavingMode,
+            video_upload_quality: h.Ay.videoUploadQuality,
+            data_saving_mode: h.Ay.dataSavingMode,
+            low_quality_image_mode: h.Ay.dataSavingMode,
             channel_id: this.channelId,
             connection_type: I.A.getType(),
             effective_connection_speed: I.A.getEffectiveConnectionSpeed(),
@@ -710,9 +710,9 @@ class U extends C.Ay {
             mime_type: this.mimeType ?? "unknown",
             num_upload_attempts: this.uploadAnalytics.numUploadAttempts ?? 1,
             error_code: this.error,
-            video_upload_quality: f.Ay.videoUploadQuality,
-            data_saving_mode: f.Ay.dataSavingMode,
-            low_quality_image_mode: f.Ay.dataSavingMode,
+            video_upload_quality: h.Ay.videoUploadQuality,
+            data_saving_mode: h.Ay.dataSavingMode,
+            low_quality_image_mode: h.Ay.dataSavingMode,
             compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
             get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
             upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,

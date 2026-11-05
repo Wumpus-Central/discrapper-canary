@@ -1,15 +1,15 @@
 r(336807);
 var n = r(652215);
 r.d(
-    t,
+    e,
     {},
     {
-        QL: function (e, t, r) {
-            let i = null != t ? { [t]: 1 } : {},
+        QL: function (t, e, r) {
+            let i = null != e ? { [e]: 1 } : {},
                 { offset: l, limit: o, results: a, totalResults: s } = r ?? {};
             return {
                 search_type: n.I4_.GIF,
-                load_id: e,
+                load_id: t,
                 limit: o,
                 offset: l,
                 page: null != o && null != l ? Math.floor(l / o) + 1 : 1,
@@ -19,10 +19,10 @@ r.d(
                 modifiers: i,
             };
         },
-        mW: function (e) {
-            if ("Klipy" !== e.providerName) return;
-            let { thumbnail: t } = e;
-            if (null != t) return t.proxyURL ?? t.url ?? t.uri;
+        mW: function (t) {
+            if ("Klipy" !== t.providerName) return;
+            let { thumbnail: e } = t;
+            if (null != e) return e.proxyURL ?? e.url ?? e.uri;
         },
     },
 );

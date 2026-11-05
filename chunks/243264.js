@@ -40,7 +40,7 @@ class A extends a.Ay.Store {
         return E.peek(e);
     }
 }
-let h = new A(s.h, {
+let f = new A(s.h, {
     LOGOUT: function () {
         (u.reset(), (_ = new Set()), E.reset());
     },
@@ -58,4 +58,4 @@ let h = new A(s.h, {
         _.delete(c(n, t));
     },
 });
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

@@ -23,8 +23,8 @@ e.d(
                     profileModalScrollTarget: i,
                     onAction: p,
                     onClose: x,
-                    "aria-labelledby": _,
-                    ref: I,
+                    "aria-labelledby": I,
+                    ref: _,
                     ...N
                 } = t,
                 { themeType: E } = (0, d.E)(),
@@ -32,15 +32,15 @@ e.d(
                 { context: h } = (0, o.NJ)();
             return E === f.d.MODAL || E === f.d.MODAL_V2 || h?.userId == null
                 ? (0, l.jsx)("article", {
-                      "aria-labelledby": _,
-                      children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(m.Nr, e), ...N, children: n }),
+                      "aria-labelledby": I,
+                      children: (0, l.jsx)(u.A.Overlay, { ref: _, className: a()(m.Nr, e), ...N, children: n }),
                   })
                 : (0, l.jsx)("article", {
-                      "aria-labelledby": _,
+                      "aria-labelledby": I,
                       children: (0, l.jsx)(r.s, {
                           className: m.OV,
                           "aria-label": g.intl.string(g.t.pD1L1u),
-                          focusProps: { ringTarget: I },
+                          focusProps: { ringTarget: _ },
                           onClick: () => {
                               (p?.({ action: "PRESS_CARD" }),
                                   (0, c.openUserProfileModal)({
@@ -51,7 +51,7 @@ e.d(
                                   }),
                                   x?.());
                           },
-                          children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(m.Nr, e), ...N, children: n }),
+                          children: (0, l.jsx)(u.A.Overlay, { ref: _, className: a()(m.Nr, e), ...N, children: n }),
                       }),
                   });
         },

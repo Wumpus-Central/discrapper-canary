@@ -49,7 +49,7 @@ function A(e, t, n) {
     let i = (t ? (n ? 372 : 272) : 200) / 2 - 8;
     return Math.max(-i, Math.min(i, e));
 }
-function h(e) {
+function f(e) {
     let { caretConfig: t } = e,
         { position: n, align: r, customOffset: a } = t,
         { isRichTooltip: l, richTooltipPadding: o } = (0, _.w6)(),
@@ -62,10 +62,10 @@ function h(e) {
                       "--custom-caret-offset-y": ["left", "right"].includes(n) ? `${A(a, l, d)}px` : "0px",
                   }
                 : void 0,
-        h = s()(E.caret, E[`caret--${n}`], E[`caret--${r}`]);
-    return (0, i.jsx)("div", { className: h, style: c, children: (0, i.jsx)(u, {}) });
+        f = s()(E.caret, E[`caret--${n}`], E[`caret--${r}`]);
+    return (0, i.jsx)("div", { className: f, style: c, children: (0, i.jsx)(u, {}) });
 }
-var f = n(710778);
+var h = n(710778);
 function I(e) {
     let {
             isVisible: t,
@@ -77,8 +77,8 @@ function I(e) {
             content: I,
             position: p = "top",
             align: m = "center",
-            spacing: g = 11,
-            caretConfig: T,
+            spacing: T = 11,
+            caretConfig: g,
             animationStyle: S,
             positionKey: N,
         } = e,
@@ -98,7 +98,7 @@ function I(e) {
         className: c.BM,
         open: n,
         dismissOnEscapeKey: !1,
-        spacing: g,
+        spacing: T,
         placement: L,
         reference: y,
         ownerDocument: O,
@@ -109,9 +109,9 @@ function I(e) {
             return ((e) => {
                 let { position: t, nudge: n } = e,
                     r = t ?? p,
-                    a = T?.align ?? (null != n && 0 !== n ? "custom" : "center"),
-                    o = T?.customOffset ?? n ?? 0,
-                    u = { position: T?.position ?? (0, f.l8)(r), align: a, customOffset: "custom" === a ? o : void 0 },
+                    a = g?.align ?? (null != n && 0 !== n ? "custom" : "center"),
+                    o = g?.customOffset ?? n ?? 0,
+                    u = { position: g?.position ?? (0, h.l8)(r), align: a, customOffset: "custom" === a ? o : void 0 },
                     _ = (0, i.jsxs)("div", {
                         id: A,
                         className: s()(c.YL, { [c.mj]: C }),
@@ -119,7 +119,7 @@ function I(e) {
                         "data-position": r,
                         "data-mana-component": "tooltip",
                         children: [
-                            (0, i.jsx)(h, { caretConfig: u }),
+                            (0, i.jsx)(f, { caretConfig: u }),
                             (0, i.jsx)("div", {
                                 className: c.rv,
                                 children:

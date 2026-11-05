@@ -3,19 +3,19 @@ n(582128);
 var i = n(503698),
     s = n.n(i),
     c = n(866665),
-    l = n(278416),
-    o = n(240248);
+    o = n(278416),
+    l = n(240248);
 n(634110);
 var u = n(196085);
 function a(e) {
     let { spec: t, icon: n, tooltipText: i } = e,
-        l = !(0, o.uJ)(i),
+        o = !(0, l.uJ)(i),
         a = (0, r.jsx)("div", {
-            className: s()(u.Fx, { [u.Y_]: l }),
+            className: s()(u.Fx, { [u.Y_]: o }),
             style: { bottom: t.iconInset, insetInlineStart: t.iconInset },
             children: n,
         });
-    return l ? (0, r.jsx)(c.m, { text: i, position: "top", delay: 350, children: a }) : a;
+    return o ? (0, r.jsx)(c.m, { text: i, position: "top", delay: 350, children: a }) : a;
 }
 n.d(
     t,
@@ -23,7 +23,7 @@ n.d(
     {
         s: function (e) {
             let { spec: t, icon: n, tooltipText: i } = e,
-                s = n ?? l.TagIcon;
+                s = n ?? o.TagIcon;
             return (0, r.jsx)(a, {
                 spec: t,
                 icon: (0, r.jsx)("div", {

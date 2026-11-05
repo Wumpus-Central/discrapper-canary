@@ -33,14 +33,14 @@ n.d(
                 },
                 u = s.A.getEditSessionId(e),
                 f = s.A.getInitialDraft(e)?.widgets ?? [],
-                h = new Set(
+                m = new Set(
                     t.widgets.map((e) => {
                         let { id: t } = e;
                         return t;
                     }),
                 ),
-                m = g++;
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: m });
+                h = g++;
+            i.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: h });
             try {
                 let { body: n } = await r.Bo.put({ url: o.Rsh.GUILD_SPACE(e), body: l, rejectWithError: !0 });
                 return (
@@ -54,7 +54,7 @@ n.d(
                             }).length,
                             deletedWidgetCount: f.filter((e) => {
                                 let { id: t } = e;
-                                return !h.has(t);
+                                return !m.has(t);
                             }).length,
                             bannerChanged: void 0 !== t.header.custom_banner,
                         }),
@@ -68,7 +68,7 @@ n.d(
                     null != t && (l = `${t}: ${n.message}`);
                 }
                 return (
-                    i.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: m, errorMessage: l }),
+                    i.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: h, errorMessage: l }),
                     !1
                 );
             }

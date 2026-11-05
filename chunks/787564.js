@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(654821),
     x = n(35277),
     E = n(339200),
-    y = n(632760),
-    S = n(855986),
+    S = n(632760),
+    y = n(855986),
     C = n(866665),
     A = n(778712),
     b = n(545442),
@@ -38,8 +38,8 @@ var l = n(477900),
     V = n(593284),
     W = n(967144);
 n(209932);
-var F = n(342296),
-    B = n(734057),
+var B = n(342296),
+    F = n(734057),
     G = n(317525),
     K = n(994500),
     H = n(351906),
@@ -88,8 +88,8 @@ function el(e) {
 }
 function ei(e) {
     let { id: t, guildId: n, channelId: r } = e,
-        s = (0, S.bG)([z.default], () => z.default.getUser(t)),
-        a = (0, S.bG)([H.A], () => H.A.hidePersonalInformation),
+        s = (0, y.bG)([z.default], () => z.default.getUser(t)),
+        a = (0, y.bG)([H.A], () => H.A.hidePersonalInformation),
         o = i.useRef(null),
         u = $.Ay.useName(n, r, s),
         c = i.useCallback((e) => (0, l.jsx)(el, { id: t, name: u, targetRef: o, popoutProps: e }), [t, u]);
@@ -108,7 +108,7 @@ function ei(e) {
             position: "top",
             "aria-label": Q.Ay.getUserTag(s, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(F.A, {
+            children: (0, l.jsx)(B.A, {
                 targetElementRef: o,
                 user: s,
                 guildId: n,
@@ -123,8 +123,8 @@ function ei(e) {
 }
 function er(e) {
     let { id: t, guildId: n, channelId: r } = e,
-        s = (0, S.bG)([G.A], () => (null != n ? G.A.getRole(n, t) : void 0)),
-        a = (0, S.bG)([T.Ay], () => T.Ay.roleStyle),
+        s = (0, y.bG)([G.A], () => (null != n ? G.A.getRole(n, t) : void 0)),
+        a = (0, y.bG)([T.Ay], () => T.Ay.roleStyle),
         o = (0, W.X_)(n, s, s?.colorStrings),
         u = i.useRef(null);
     if (null == s) return (0, l.jsxs)("span", { children: ["@", X.intl.string(X.t["YV4F/n"])] });
@@ -160,7 +160,7 @@ function er(e) {
 }
 function es(e) {
     let { id: t } = e,
-        n = (0, S.bG)([B.A], () => B.A.getChannel(t)),
+        n = (0, y.bG)([F.A], () => F.A.getChannel(t)),
         i = X.intl.string(X.t.zLZPmk).toLowerCase(),
         r = "text",
         s = !0;
@@ -175,7 +175,7 @@ function es(e) {
 function ea(e) {
     let { id: t, itemId: n, guildId: i } = e,
         r = (0, L.Q)(t),
-        s = (0, S.bG)([G.A], () => (0, L.f)(G.A, t, n, i), [t, n, i]);
+        s = (0, y.bG)([G.A], () => (0, L.f)(G.A, t, n, i), [t, n, i]);
     return (0, l.jsxs)(D.A, { iconType: t, children: [r, null != s && (0, l.jsx)(U.A, {}), s] });
 }
 function eo(e) {
@@ -230,8 +230,8 @@ function eE(e) {
         children: i,
     });
 }
-var ey = n(652215),
-    eS = n(809067);
+var eS = n(652215),
+    ey = n(809067);
 class eC extends i.PureComponent {
     containerRef = i.createRef();
     state;
@@ -355,7 +355,7 @@ class eC extends i.PureComponent {
                         return (0, l.jsxs)(eE, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(y.LF, { soundId: o.soundId }), a],
+                            children: [(0, l.jsx)(S.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
                         return (0, l.jsxs)(eE, {
@@ -616,7 +616,7 @@ class eC extends i.PureComponent {
                 },
                 {
                     align: null != i && null != r && i < r / 2 ? "top" : "bottom",
-                    enableSpellCheck: s === ey.BRT.APP,
+                    enableSpellCheck: s === eS.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -648,8 +648,8 @@ class eC extends i.PureComponent {
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: E,
-            renderExtraLeaf: y,
-            ...S
+            renderExtraLeaf: S,
+            ...y
         } = this.props;
         return (0, l.jsxs)("div", {
             ref: this.containerRef,
@@ -657,7 +657,7 @@ class eC extends i.PureComponent {
             children: [
                 this.state.showPlaceholder
                     ? (0, l.jsx)("div", {
-                          className: s()(eS.q, t),
+                          className: s()(ey.q, t),
                           "aria-hidden": !0,
                           "data-slate-placeholder": "true",
                           children: o,
@@ -667,8 +667,8 @@ class eC extends i.PureComponent {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
-                        ...S,
-                        className: s()(eg.PT, eS.E, t),
+                        ...y,
+                        className: s()(eg.PT, ey.E, t),
                         decorate: u,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,

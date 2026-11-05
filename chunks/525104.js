@@ -21,8 +21,8 @@ n.d(
                                 i = a.kO[l],
                                 c = e?.[i],
                                 d = c?.title,
-                                u = s.map((t) => ({ kind: t, packName: d }));
-                            t.features.has(l) ? n.push(...u) : r.push(...u);
+                                o = s.map((t) => ({ kind: t, packName: d }));
+                            t.features.has(l) ? n.push(...o) : r.push(...o);
                         }),
                     { unlockedBadges: n, lockedBadges: r }
                 );

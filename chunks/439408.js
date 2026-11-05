@@ -37,7 +37,7 @@ n.d(
                                     p = s === n,
                                     f = `${A}-${l}-title`,
                                     x = `${A}-${l}-description`,
-                                    _ = null != m && "" !== m;
+                                    I = null != m && "" !== m;
                                 return (0, i.jsx)(
                                     r.vN,
                                     {
@@ -52,7 +52,7 @@ n.d(
                                             "aria-checked": p,
                                             "aria-disabled": c,
                                             "aria-labelledby": f,
-                                            "aria-describedby": _ ? x : void 0,
+                                            "aria-describedby": I ? x : void 0,
                                             disabled: c,
                                             tabIndex: c || l !== S ? -1 : 0,
                                             "data-nitro-gradient": (p && "nitro" === h) || void 0,
@@ -104,7 +104,7 @@ n.d(
                                                     variant: "body-md/normal",
                                                     children: g,
                                                 }),
-                                                _ &&
+                                                I &&
                                                     (0, i.jsx)(o.E, {
                                                         id: x,
                                                         tag: "span",

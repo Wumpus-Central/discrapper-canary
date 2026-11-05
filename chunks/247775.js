@@ -17,8 +17,8 @@ let u = !1,
     _ = {},
     E = {},
     A = !1,
-    h = !1;
-function f() {
+    f = !1;
+function h() {
     if (A) {
         (a.w.remove("token"), a.w.remove("tokens"));
         return;
@@ -36,7 +36,7 @@ function p(e) {
     return d?.isEncryptionAvailable() && !e.startsWith(s) ? `${s}${d.encryptString(e)}` : e;
 }
 function m() {
-    if (h) return;
+    if (f) return;
     ((r = a.w.get("token")), (E = a.w.get("tokens") || {}));
     let { decryptedToken: e, wasEncrypted: t } = I(r);
     ((u = t),
@@ -53,29 +53,29 @@ function m() {
                     return null != n;
                 }),
         )),
-        (h = !0));
+        (f = !0));
 }
-function g() {
-    h || m();
+function T() {
+    f || m();
 }
-function T(e) {
+function g(e) {
     return (m(), null != e) ? _[e] : i;
 }
 function S(e, t) {
-    (null != t && (_[t] = e), u ? C() : ((r = i), (E = _), f()));
+    (null != t && (_[t] = e), u ? C() : ((r = i), (E = _), h()));
 }
 function N(e) {
-    g();
+    T();
     let t = i;
     return (
         null != e && ((t = _[e]), delete _[e], delete E[e]),
         null != t && t === i && ((i = null), (r = null)),
-        f(),
+        h(),
         null != t
     );
 }
 function C() {
-    (g(),
+    (T(),
         d?.isEncryptionAvailable()
             ? (null != i && (r = p(i)),
               (E = o(
@@ -86,7 +86,7 @@ function C() {
               )),
               (u = !0))
             : ((r = i), (E = _)),
-        f());
+        h());
 }
 n.d(
     t,
@@ -94,11 +94,11 @@ n.d(
     {
         encryptAndStoreTokens: C,
         getAnalyticsToken: function () {
-            return T(l);
+            return g(l);
         },
-        getToken: T,
+        getToken: g,
         hideToken: function () {
-            A || (g(), (A = !0), f());
+            A || (T(), (A = !0), h());
         },
         init: m,
         removeAnalyticsToken: function () {
@@ -106,13 +106,13 @@ n.d(
         },
         removeToken: N,
         setAnalyticsToken: function (e) {
-            null == e ? N(l) : (g(), S(e, l));
+            null == e ? N(l) : (T(), S(e, l));
         },
         setToken: function (e, t) {
-            null == e ? N(t) : (g(), (i = e), S(e, t));
+            null == e ? N(t) : (T(), (i = e), S(e, t));
         },
         showToken: function () {
-            A && (g(), (A = !1), f());
+            A && (T(), (A = !1), h());
         },
     },
 );

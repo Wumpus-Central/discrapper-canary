@@ -12,9 +12,9 @@ function o(e) {
     let { guildId: l, roleId: n, role: t, guild: s } = e,
         u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
         o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.A,
-        d = s ?? u.getGuild(l),
-        c = t ?? (null != l && null != n ? o.getRole(l, n) : void 0);
-    if (null != d && null != c && (0, a.fm)(d, c)) return c;
+        c = s ?? u.getGuild(l),
+        d = t ?? (null != l && null != n ? o.getRole(l, n) : void 0);
+    if (null != c && null != d && (0, a.fm)(c, d)) return d;
 }
 n.d(
     l,
@@ -25,12 +25,12 @@ n.d(
             return t.useMemo(() => u(n), [n]);
         },
         Xx: function (e) {
-            let { guildId: l, roleId: n, size: a = 20, role: d, guild: c } = e,
-                m = (0, s.bG)([r.A, i.A], () => o({ guildId: l, roleId: n, role: d, guild: c }, r.A, i.A), [
+            let { guildId: l, roleId: n, size: a = 20, role: c, guild: d } = e,
+                m = (0, s.bG)([r.A, i.A], () => o({ guildId: l, roleId: n, role: c, guild: d }, r.A, i.A), [
                     l,
                     n,
-                    d,
                     c,
+                    d,
                 ]);
             return t.useMemo(() => u(m, a), [m, a]);
         },

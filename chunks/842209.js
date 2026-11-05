@@ -11,8 +11,8 @@ var i = n(582128),
     _ = n(168186),
     E = n(240591),
     A = n(46477),
-    h = n(73510),
-    f = n(652215);
+    f = n(73510),
+    h = n(652215);
 function I(e, t) {
     if (null == t) return;
     if (null != e.commands[t]) return e.commands[t];
@@ -23,7 +23,7 @@ function I(e, t) {
 }
 let p = [a.kc.CHAT],
     m = { id: "placeholder-section", type: u.Hf.APPLICATION, name: "" };
-function g(e, t) {
+function T(e, t) {
     let n = [];
     for (let r = 0; r < e; r++) {
         var i;
@@ -88,8 +88,8 @@ n.d(
                     commands: o,
                     application: c,
                     sectionDescriptor: u,
-                    isGuildInstalled: h,
-                    isUserInstalled: f,
+                    isGuildInstalled: f,
+                    isUserInstalled: h,
                 } = ((r = i.useMemo(() => ({ channel: e, type: "channel" }), [e])),
                 (a = (0, d.A4)(!0, !0)),
                 (s = (0, d.SD)(r, !0, !0)),
@@ -131,12 +131,12 @@ n.d(
                             A.zl(e, I, {
                                 applicationAllowedForUser: t,
                                 applicationAllowedForChannel: n,
-                                isGuildInstalled: h,
-                                isUserInstalled: f,
+                                isGuildInstalled: f,
+                                isUserInstalled: h,
                                 commandBotId: u?.botId,
                             }) === A.CA.ALLOWED,
                     );
-                }, [o, I, u, h, f, e]),
+                }, [o, I, u, f, h, e]),
             };
         },
         cu: function (e) {
@@ -150,8 +150,8 @@ n.d(
                     loading: I,
                 } = (0, d.XC)(t, u, n, { ...a, allowFetch: l }),
                 [p, m] = i.useState(null),
-                T = i.useMemo(
-                    () => g(a.placeholderCount ?? 0, n.commandTypes[0]),
+                g = i.useMemo(
+                    () => T(a.placeholderCount ?? 0, n.commandTypes[0]),
                     [n.commandTypes, a.placeholderCount],
                 );
             return i.useMemo(() => {
@@ -162,12 +162,12 @@ n.d(
                     commandsByActiveSection: A,
                     filteredSectionId: p,
                     hasMoreAfter: !1,
-                    placeholders: I ? T : [],
+                    placeholders: I ? g : [],
                     sectionDescriptors: _,
                     filterSection: (e) => {
                         m(e);
                     },
-                    scrollDown: f.tEg,
+                    scrollDown: h.tEg,
                 };
                 if (null != p) {
                     let t = A.find((e) => e.section.id === p);
@@ -177,20 +177,20 @@ n.d(
                 if (I) {
                     let t = A[0];
                     if (null != t)
-                        e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...T] }, ...A.slice(1)];
+                        e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...g] }, ...A.slice(1)];
                     else {
-                        let t = o.gZ[h.Ik.BUILT_IN];
-                        ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: T }]));
+                        let t = o.gZ[f.Ik.BUILT_IN];
+                        ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: g }]));
                     }
-                    e.commands = [...E, ...T];
+                    e.commands = [...E, ...g];
                 }
                 return e;
-            }, [I, E, _, A, p, T]);
+            }, [I, E, _, A, p, g]);
         },
         eW: function (e, t, n) {
             let { descriptors: i, commands: r, loading: a } = d.Ay.query(e, t, n),
-                s = g(a ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
-            return { commands: a ? [...r, ...s] : r, sections: a && 0 === i.length ? [o.gZ[h.Ik.BUILT_IN]] : i };
+                s = T(a ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
+            return { commands: a ? [...r, ...s] : r, sections: a && 0 === i.length ? [o.gZ[f.Ik.BUILT_IN]] : i };
         },
         j8: function (e) {
             let t = d.Ay.getUserState(),

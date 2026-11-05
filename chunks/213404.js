@@ -21,26 +21,26 @@ i.d(
                     width: A,
                     height: b,
                     className: g,
-                    selectable: k = !1,
-                    isSquircle: w,
-                    onFocus: C,
-                    onBlur: I,
+                    selectable: w = !1,
+                    isSquircle: I,
+                    onFocus: k,
+                    onBlur: C,
                     onMouseOver: m,
                     onMouseLeave: v,
                     ...N
                 } = e,
-                [f, x] = l.useState(!1),
+                [x, f] = l.useState(!1),
                 E = l.useCallback(() => {
-                    (x(!0), C?.());
-                }, [C]),
+                    (f(!0), k?.());
+                }, [k]),
                 L = l.useCallback(() => {
-                    (x(!1), I?.());
-                }, [I]),
+                    (f(!1), C?.());
+                }, [C]),
                 y = l.useCallback(() => {
-                    (x(!0), m?.());
+                    (f(!0), m?.());
                 }, [m]),
                 j = l.useCallback(() => {
-                    (x(!1), v?.());
+                    (f(!1), v?.());
                 }, [v]),
                 T = (0, c.bG)([r.Ay], () =>
                     s.application?.bot?.id != null ? r.Ay.getMember(i, s.application?.bot?.id) : null,
@@ -61,14 +61,14 @@ i.d(
                 );
             return (0, t.jsx)("div", {
                 ...N,
-                className: n()(h.iE, g, { [h.rb]: k, [h.wH]: k && a }),
+                className: n()(h.iE, g, { [h.rb]: w, [h.wH]: w && a }),
                 onFocus: E,
                 onBlur: L,
                 onMouseOver: y,
                 onMouseLeave: j,
                 children: (0, t.jsx)(o.Ay, {
                     className: h.dK,
-                    mask: w || (k && (a || f)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
+                    mask: I || (w && (a || x)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
                     width: A,
                     height: b,
                     children: (0, t.jsx)("img", { alt: "", className: h.Kk, style: { width: A, height: b }, src: _ }),

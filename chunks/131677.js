@@ -15,12 +15,12 @@ function E() {
 function A() {
     return E();
 }
-function h(e) {
+function f(e) {
     let { channelId: t } = e,
         n = l.A.getChannel(t);
     return null != n && !!(0, a.Gw)(n.type) && E();
 }
-class f extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "PrivateChannelReadStateStore";
     initialize() {
         this.waitFor(c.A, l.A, d.Ay, o.Ay);
@@ -29,11 +29,11 @@ class f extends i.Ay.Store {
         return u;
     }
 }
-let I = new f(r.h, {
+let I = new h(r.h, {
     CONNECTION_OPEN: A,
     OVERLAY_INITIALIZE: A,
-    MESSAGE_CREATE: h,
-    MESSAGE_ACK: h,
+    MESSAGE_CREATE: f,
+    MESSAGE_ACK: f,
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
             n = l.A.getChannel(t);

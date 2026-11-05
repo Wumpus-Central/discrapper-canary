@@ -11,17 +11,17 @@ var i,
     _ = n(403362),
     E = n(722178),
     A = n(257120),
-    h = n(371794),
-    f = n(652215),
+    f = n(371794),
+    h = n(652215),
     I = n(682901),
     p = n(792996);
 let m = [
         A.A.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
         ...["discordapp.com/gifts", "discord.com/gifts"].map((e) => A.A.escape(e)),
     ].join("|"),
-    g = RegExp(`(?: |^|https?://)(?:${m})/([a-z0-9-]+)`, "gi"),
-    T = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => A.A.escape(e))].join("|"),
-    S = RegExp(`(?: |^|https?://)(?:${T})(/|(/)?\\?code=)([a-z0-9-]+)`, "gi");
+    T = RegExp(`(?: |^|https?://)(?:${m})/([a-z0-9-]+)`, "gi"),
+    g = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => A.A.escape(e))].join("|"),
+    S = RegExp(`(?: |^|https?://)(?:${g})(/|(/)?\\?code=)([a-z0-9-]+)`, "gi");
 function N(e, t) {
     return Array(t)
         .fill(void 0)
@@ -47,25 +47,25 @@ function D(e, t, n, i, r) {
 }
 function b(e, t) {
     switch (e.code) {
-        case f.t02.INVALID_GIFT_SELF_REDEMPTION:
+        case h.t02.INVALID_GIFT_SELF_REDEMPTION:
             return p.intl.string(p.t.wa9h7F);
-        case f.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+        case h.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
             return p.intl.string(p.t.Iw2TUW);
-        case f.t02.INVALID_GIFT_REDEMPTION_OWNED:
+        case h.t02.INVALID_GIFT_REDEMPTION_OWNED:
             return p.intl.string(p.t.mdLtb5);
-        case f.t02.UNKNOWN_GIFT_CODE:
+        case h.t02.UNKNOWN_GIFT_CODE:
             return p.intl.string(p.t.roztIr);
-        case f.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
+        case h.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
             return p.intl.formatToPlainString(p.t["4YTHKw"], {
                 planName: (0, E.YE)(t, I.PremiumTypes.TIER_2) ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t.FSOz78),
             });
-        case f.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
+        case h.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return p.intl.string(p.t["9i1J30"]);
-        case f.t02.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
+        case h.t02.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
             return p.intl.string(p.t["U26WX+"]);
-        case f.t02.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
+        case h.t02.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
             return p.intl.string(p.t.ypuSd8);
-        case f.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
+        case h.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
             return p.intl.string(p.t.mXMmWE);
         default:
             return p.intl.string(p.t["s9+XlB"]);
@@ -76,15 +76,15 @@ n.d(
     {},
     {
         AK: function (e, t) {
-            u.default.track(f.HAw.GIFT_CODE_COPIED, { ...(0, o.A)(t, !1, !1), ...e.analyticsData });
+            u.default.track(h.HAw.GIFT_CODE_COPIED, { ...(0, o.A)(t, !1, !1), ...e.analyticsData });
         },
         GM: async function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             try {
                 let i = (
-                    await (0, h.aP)({
-                        url: f.Rsh.GIFT_CODE_RESOLVE(e),
+                    await (0, f.aP)({
+                        url: h.Rsh.GIFT_CODE_RESOLVE(e),
                         query: { with_application: t, with_subscription_plan: n },
                         oldFormErrors: !0,
                         rejectWithError: !1,
@@ -92,7 +92,7 @@ n.d(
                 ).body;
                 return (
                     u.default.track(
-                        f.HAw.GIFT_CODE_RESOLVED,
+                        h.HAw.GIFT_CODE_RESOLVED,
                         {
                             resolved: !0,
                             gift_code: i.code,
@@ -107,7 +107,7 @@ n.d(
                     i
                 );
             } catch (t) {
-                throw (u.default.track(f.HAw.GIFT_CODE_RESOLVED, { resolved: !1, gift_code: e }), new l.A(t));
+                throw (u.default.track(h.HAw.GIFT_CODE_RESOLVED, { resolved: !1, gift_code: e }), new l.A(t));
             }
         },
         Ik: function (e) {
@@ -121,15 +121,15 @@ n.d(
         UJ: function (e, t, n) {
             let { isCustomGift: i } = n;
             switch (e) {
-                case f.frR.ERROR:
+                case h.frR.ERROR:
                     return p.intl.string(p.t.w19zb6);
-                case f.frR.SUCCESS:
+                case h.frR.SUCCESS:
                     if (__OVERLAY__) return p.intl.string(p.t.zW87EM);
                     if (t.isSubscription) return p.intl.string(p.t.ex5TKr);
                     return p.intl.string(p.t.OOkjql);
-                case f.frR.OPEN:
+                case h.frR.OPEN:
                     return p.intl.string(p.t.F8ktci);
-                case f.frR.CONFIRM:
+                case h.frR.CONFIRM:
                 default:
                     if (null != i && i) return p.intl.string(p.t.n6I6k4);
                     if (null != t.giftStyle)
@@ -177,7 +177,7 @@ n.d(
             let t;
             if (null == e) return [];
             let n = new Set();
-            for (; null != (t = g.exec(e)) && n.size < 3;) n.add(y(t[1]));
+            for (; null != (t = T.exec(e)) && n.size < 3;) n.add(y(t[1]));
             for (; null != (t = S.exec(e)) && n.size < 3;) n.add(y(t[t.length - 1]));
             return Array.from(n);
         },
@@ -194,9 +194,9 @@ n.d(
                 subscriptionPlan: d = null,
             } = e;
             switch (t) {
-                case f.frR.ERROR:
+                case h.frR.ERROR:
                     return D(i, a, s, l, o);
-                case f.frR.SUCCESS:
+                case h.frR.SUCCESS:
                     if (null != d)
                         return (0, r.YW)(d)
                             .with({ interval: I.WT.MONTH, premiumSubscriptionType: I.PremiumTypes.TIER_2 }, () =>
@@ -213,7 +213,7 @@ n.d(
                             )
                             .otherwise(() => p.intl.string(p.t["5ayf7w"]));
                     return p.intl.formatToPlainString(p.t["3CPsbo"], { skuName: n.name });
-                case f.frR.CONFIRM:
+                case h.frR.CONFIRM:
                 default:
                     if (null != d) {
                         let e = d.interval === I.WT.MONTH ? p.t.P9eTKt : p.t.d8rUdy;
@@ -225,13 +225,13 @@ n.d(
         lo: L,
         n$: function (e, t, n) {
             switch (e) {
-                case f.frR.ERROR:
+                case h.frR.ERROR:
                     return p.intl.formatToMarkdownString(p.t.JUvC0s, {});
-                case f.frR.SUCCESS:
+                case h.frR.SUCCESS:
                     return t.isSubscription
                         ? p.intl.formatToPlainString(p.t["1C2BG/"], { skuName: n.name })
                         : p.intl.string(p.t["+BNMcF"]);
-                case f.frR.CONFIRM:
+                case h.frR.CONFIRM:
                 default:
                     return t.isSubscription
                         ? p.intl.formatToPlainString(p.t["2VN4N9"], { skuName: n.name })
@@ -239,7 +239,7 @@ n.d(
             }
         },
         pF: function (e) {
-            return e?.type === f.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === f.Auw.GIFT;
+            return e?.type === h.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === h.Auw.GIFT;
         },
         tB: R,
         u1: D,
@@ -248,10 +248,10 @@ n.d(
             return null == i && (r || a || null == e)
                 ? !l || s || r || a
                     ? r && (t.isSubscription || null != e)
-                        ? f.frR.SUCCESS
-                        : f.frR.CONFIRM
-                    : f.frR.OPEN
-                : f.frR.ERROR;
+                        ? h.frR.SUCCESS
+                        : h.frR.CONFIRM
+                    : h.frR.OPEN
+                : h.frR.ERROR;
         },
     },
 );

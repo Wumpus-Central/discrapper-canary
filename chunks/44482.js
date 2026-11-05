@@ -42,20 +42,20 @@ n.d(
                     trailing: E,
                     inInput: A = !1,
                 } = e,
-                h = null;
+                f = null;
             null != l &&
-                (h = (0, i.jsx)("div", { className: u.R4, children: (0, i.jsx)(_, { accessory: l, leading: !0 }) }));
-            let f = null;
-            null != E && (f = (0, i.jsx)("div", { className: u.ZY, children: (0, i.jsx)(_, { accessory: E }) }));
+                (f = (0, i.jsx)("div", { className: u.R4, children: (0, i.jsx)(_, { accessory: l, leading: !0 }) }));
+            let h = null;
+            null != E && (h = (0, i.jsx)("div", { className: u.ZY, children: (0, i.jsx)(_, { accessory: E }) }));
             let I = !A && null != n && "" !== n,
-                p = { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != f ? "2" : "3" };
+                p = { gridColumnStart: null != f ? "2" : "1", gridColumnEnd: null != h ? "2" : "3" };
             return (0, i.jsxs)("div", {
                 className: s()(c.uN, u.uK, { [c.MO]: A }),
                 onClick: r,
                 "aria-hidden": a,
                 "data-has-description": I || void 0,
                 children: [
-                    h,
+                    f,
                     A
                         ? (0, i.jsx)(d.E, {
                               variant: "body-md/normal",
@@ -70,10 +70,10 @@ n.d(
                             variant: "body-sm/normal",
                             color: "text-subtle",
                             lineClamp: 1,
-                            style: { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != f ? "2" : "3" },
+                            style: { gridColumnStart: null != f ? "2" : "1", gridColumnEnd: null != h ? "2" : "3" },
                             children: n,
                         }),
-                    f,
+                    h,
                 ],
             });
         },

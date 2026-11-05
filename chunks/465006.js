@@ -1,14 +1,14 @@
 var l = n(855986),
     a = n(71393),
-    s = n(191850),
-    r = n(792996);
+    r = n(191850),
+    s = n(792996);
 function i(e) {
     let t = e?.guild_id,
         n = (0, l.bG)([a.A], () => (null != t ? (a.A.getGuild(t) ?? null) : null), [t]);
     return null == e || null != e.install_scope_setup
         ? null
         : "user" === e.install_scope
-          ? { kind: "user", label: r.intl.string(s.default.KxFFKT) }
+          ? { kind: "user", label: s.intl.string(r.default.KxFFKT) }
           : "guild" === e.install_scope && null != n
             ? { kind: "guild", label: n.name, guild: n }
             : null;

@@ -16,18 +16,18 @@ n.d(
                 [h, f] = i.useState(null),
                 g = i.useRef(void 0),
                 p = i.useRef(new Set()),
-                [m, A] = i.useState(!1),
-                y = (0, s.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
+                [m, y] = i.useState(!1),
+                A = (0, s.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
                 v = i.useCallback((e) => {
-                    (p.current.delete(e), A(p.current.size > 0));
+                    (p.current.delete(e), y(p.current.size > 0));
                 }, []),
-                w = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
-                x = i.useCallback((e, t) => {
+                x = i.useCallback((e) => (p.current.add(e), y(!0), () => v(e)), [v]),
+                w = i.useCallback((e, t) => {
                     for (let n of p.current) n(e, t);
                 }, []);
             i.useEffect(() => {
                 h?.clearConfetti();
-            }, [h, y]);
+            }, [h, A]);
             let E = i.useCallback((e) => {
                     (window.clearTimeout(g.current),
                         (g.current = window.setTimeout(() => {
@@ -66,7 +66,7 @@ n.d(
                             confettiCanvas: h,
                             spriteCanvas: n,
                             baseConfig: u.Mw,
-                            addClickListener: w,
+                            addClickListener: x,
                             removeClickListener: v,
                             children: t,
                         }),
@@ -74,7 +74,7 @@ n.d(
                             ref: f,
                             className: d.J,
                             environment: u.XA,
-                            onClick: m ? x : void 0,
+                            onClick: m ? w : void 0,
                             onBeforeRender: b,
                             onAfterRender: C,
                         }),

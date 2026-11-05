@@ -16,13 +16,13 @@ function A(e) {
             focus: n = "none",
             returnFocusElement: o,
             dismissOnEscapeKey: A = !0,
-            ownerDocument: h = document,
-            open: f,
+            ownerDocument: f = document,
+            open: h,
             onOpenChange: I,
             id: p,
             className: m,
-            reference: g,
-            overrideTargetRect: T,
+            reference: T,
+            overrideTargetRect: g,
             placement: S = "bottom",
             spacing: N = 8,
             alignmentSpacing: C,
@@ -48,14 +48,14 @@ function A(e) {
     let B = r.useMemo(() => {
             let e = [(0, a.cY)({ mainAxis: N, alignmentAxis: C })];
             return (
-                O && e.push((0, a.UU)({ crossAxis: R, padding: M, boundary: h.body })),
-                L && e.push((0, a.BN)({ padding: U ?? M, limiter: (0, a.ER)(), boundary: h.body })),
+                O && e.push((0, a.UU)({ crossAxis: R, padding: M, boundary: f.body })),
+                L && e.push((0, a.BN)({ padding: U ?? M, limiter: (0, a.ER)(), boundary: f.body })),
                 e.push((0, a.jD)({ strategy: "referenceHidden" })),
                 null != w &&
                     e.push(
                         (0, a.Ej)({
                             padding: M,
-                            boundary: h.body,
+                            boundary: f.body,
                             apply(e) {
                                 let { availableHeight: t, elements: n } = e,
                                     i = Math.min(w, t);
@@ -65,7 +65,7 @@ function A(e) {
                     ),
                 e
             );
-        }, [N, C, O, L, M, U, R, h, w]),
+        }, [N, C, O, L, M, U, R, f, w]),
         V = (0, s.fI)(),
         {
             refs: H,
@@ -77,26 +77,26 @@ function A(e) {
         } = (0, s.we)({
             nodeId: V,
             placement: S,
-            open: f,
+            open: h,
             onOpenChange: I,
             strategy: y,
             middleware: B,
             whileElementsMounted: k
                 ? (e, t, n) =>
                       (0, l.ll)(e, t, n, {
-                          ancestorScroll: null == T,
-                          ancestorResize: null == T,
-                          layoutShift: null == T,
+                          ancestorScroll: null == g,
+                          ancestorResize: null == g,
+                          layoutShift: null == g,
                       })
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != T ? H.setPositionReference({ getBoundingClientRect: () => T }) : null != g && H.setReference(g);
-    }, [H, T, g]);
+        null != g ? H.setPositionReference({ getBoundingClientRect: () => g }) : null != T && H.setReference(T);
+    }, [H, g, T]);
     let X = (0, s.s9)($, { escapeKey: A }),
         z = (0, s.Mk)($, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === G, handleClose: (0, s.iB)() }),
-        { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([X, z]),
-        Q = Y.hide?.referenceHidden ? "hidden" : "visible",
+        { getReferenceProps: q, getFloatingProps: Q } = (0, s.bv)([X, z]),
+        Z = Y.hide?.referenceHidden ? "hidden" : "visible",
         J = D ? c.sM : r.Fragment,
         ee = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
@@ -105,21 +105,21 @@ function A(e) {
             (0, i.jsx)(s.$c, {
                 id: V,
                 children:
-                    f &&
+                    h &&
                     (0, i.jsxs)(J, {
-                        ownerDocument: h,
+                        ownerDocument: f,
                         children: [
                             b ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
                                 id: p,
                                 className: d()(m, u.q),
                                 [_]: !0,
-                                style: { ...j, visibility: Q },
+                                style: { ...j, visibility: Z },
                                 ref: H.setFloating,
-                                ...Z(),
+                                ...Q(),
                                 children: (0, i.jsx)(E.Provider, {
                                     value: ee,
-                                    children: P({ placement: W, update: K, hidden: "hidden" === Q, shift: Y.shift }),
+                                    children: P({ placement: W, update: K, hidden: "hidden" === Z, shift: Y.shift }),
                                 }),
                             })),
                             "none" === n

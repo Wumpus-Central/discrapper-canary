@@ -17,8 +17,8 @@ n.d(
                     fps: o,
                     interactive: c = !1,
                     paused: d = !1,
-                    drawWidth: f,
-                    className: m,
+                    drawWidth: m,
+                    className: f,
                     "aria-label": h,
                     onStateChange: g,
                 } = e,
@@ -46,19 +46,19 @@ n.d(
                     [t, n],
                 ),
                 w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-                A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
-                N = (0, a.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
-                S = (0, a.AV)(t, n),
-                C = r.useRef(S);
+                S = null == m ? 0 : Math.round(m * Math.min(w, 2)),
+                A = (0, a.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
+                C = (0, a.AV)(t, n),
+                N = r.useRef(C);
             (r.useEffect(() => {
-                if (C.current === S) return;
-                ((C.current = S), (x.current = null), b(!1));
+                if (N.current === C) return;
+                ((N.current = C), (x.current = null), b(!1));
                 let e = p.current;
                 e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-            }, [S]),
+            }, [C]),
                 r.useEffect(() => {
-                    g?.(N, j);
-                }, [N, j, g]),
+                    g?.(A, j);
+                }, [A, j, g]),
                 r.useEffect(() => {
                     c && p.current?.focus();
                 }, [c]));
@@ -122,7 +122,7 @@ n.d(
             }
             return (0, l.jsx)("canvas", {
                 ref: p,
-                className: m,
+                className: f,
                 role: c ? "application" : "img",
                 "aria-label": h,
                 tabIndex: c ? 0 : -1,

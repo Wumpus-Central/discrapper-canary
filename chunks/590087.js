@@ -1,4 +1,4 @@
-n.d(t, { N: () => f, X: () => p });
+n.d(t, { N: () => h, X: () => p });
 var i,
     r = n(972347),
     a = n(451988),
@@ -11,7 +11,7 @@ var i,
     _ = n(531685),
     E = n(652215),
     A = n(392164);
-function h() {
+function f() {
     return (
         _.A.isVisible() ||
         u.A.getWindowVisible(E.MLl.CHANNEL_CALL_POPOUT) ||
@@ -24,7 +24,7 @@ function h() {
         })()
     );
 }
-var f =
+var h =
     (((i = {}).WindowVisibilityChanged = "window-visibility-changed"),
     (i.IncomingVideoEnabledChanged = "incoming-video-enabled-changed"),
     i);
@@ -49,11 +49,11 @@ class I extends r.A {
         return this.lastEnabledChange;
     }
     handleWindowInit = () => {
-        this.discordVisible !== h() && (0, o.G$)("window_visibility_video_manager") && this.update();
+        this.discordVisible !== f() && (0, o.G$)("window_visibility_video_manager") && this.update();
     };
     update = () => {
-        this.discordVisible !== h() &&
-            ((this.discordVisible = h()),
+        this.discordVisible !== f() &&
+            ((this.discordVisible = f()),
             this.emit("window-visibility-changed", this.discordVisible),
             this.discordVisible
                 ? (this.disableVideoTimer.stop(), this.setIncomingVideoEnabled(!0))

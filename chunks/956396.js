@@ -18,24 +18,24 @@ let d = { packs: [], packsById: {}, packIdByEmojiId: {}, fetchState: "NOT_FETCHE
     _ = !1,
     E = u,
     A = new Set();
-function h() {
+function f() {
     return s.G.getConfig({ location: "emoji_pack_store" }, { autoTrackExposure: !1 }).enabled;
 }
-function f() {
+function h() {
     let e = _ ? c.packs.flatMap((e) => (e.available ? e.emojis.filter((e) => e.available) : [])) : u;
     A = new Set((E = e.length > 0 ? e : u).map((e) => e.id));
 }
 function I() {
-    let e = h();
-    return e !== _ && ((_ = e), f(), !0);
+    let e = f();
+    return e !== _ && ((_ = e), h(), !0);
 }
 class p extends i.Ay.PersistedStore {
     static displayName = "EmojiPackStore";
     static persistKey = "EmojiPackStore";
     initialize(e) {
         ((c = { ...o(Array.isArray(e?.packs) ? e.packs : []), fetchState: "NOT_FETCHED" }),
-            (_ = h()),
-            f(),
+            (_ = f()),
+            h(),
             this.syncWith([a.A], I));
     }
     getState() {
@@ -66,7 +66,7 @@ class p extends i.Ay.PersistedStore {
 }
 let m = new p(r.h, {
     LOGOUT: function () {
-        ((c = d), f());
+        ((c = d), h());
     },
     EMOJI_PACKS_FETCH_START: function () {
         if ("FETCHING" === c.fetchState) return !1;
@@ -103,7 +103,7 @@ let m = new p(r.h, {
             ),
             fetchState: "FETCHED",
         }),
-            f());
+            h());
     },
     EMOJI_PACKS_FETCH_FAIL: function () {
         c = { ...c, fetchState: "FAILED" };

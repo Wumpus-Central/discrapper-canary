@@ -17,7 +17,7 @@ async function u(e) {
         E = s.Ay.createFromServer(e);
     }
     let A = i.b.USER_INSTALL,
-        h = E?.integrationTypesConfig?.[A]?.oauth2InstallParams?.scopes;
+        f = E?.integrationTypesConfig?.[A]?.oauth2InstallParams?.scopes;
     return (
         null != _ &&
             (0, r.zV)(c.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
@@ -31,7 +31,7 @@ async function u(e) {
                 {
                     clientId: t,
                     integrationType: A,
-                    scopes: h,
+                    scopes: f,
                     callback: (n) => {
                         let { location: i } = n;
                         null != i

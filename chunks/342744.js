@@ -17,26 +17,26 @@ var i = n(477900),
     p = n(722178),
     f = n(682502),
     x = n(816571),
-    _ = n(792996),
-    I = n(17456);
-function b(e) {
+    I = n(792996),
+    _ = n(17456);
+function N(e) {
     let { errorMsg: t } = e;
     return (0, i.jsxs)("div", {
-        className: I.rf,
+        className: _.rf,
         children: [
             null !== t &&
                 (0, i.jsx)("div", {
-                    className: I.z3,
+                    className: _.z3,
                     children: (0, i.jsx)(u.w, { type: "critical", message: t, role: "alert" }),
                 }),
-            (0, i.jsx)("div", { children: _.intl.string(_.t.DY2CXs) }),
+            (0, i.jsx)("div", { children: I.intl.string(I.t.DY2CXs) }),
         ],
     });
 }
-function N() {
+function b() {
     return (0, i.jsxs)("div", {
-        className: I.rf,
-        children: [(0, i.jsx)("div", { className: I.dk }), (0, i.jsx)("div", { children: _.intl.string(_.t.G27uHe) })],
+        className: _.rf,
+        children: [(0, i.jsx)("div", { className: _.dk }), (0, i.jsx)("div", { children: I.intl.string(I.t.G27uHe) })],
     });
 }
 function C(e) {
@@ -44,9 +44,9 @@ function C(e) {
     if (null == l) return (0, i.jsx)(d.y, {});
     switch (t) {
         case 1:
-            return (0, i.jsx)(b, { errorMsg: n });
+            return (0, i.jsx)(N, { errorMsg: n });
         case 2:
-            return (0, i.jsx)(N, {});
+            return (0, i.jsx)(b, {});
         default:
             throw new f.f({ message: `Unexpected step: ${t}` });
     }
@@ -62,13 +62,13 @@ n.d(
                 T.A.hasFetchedSubscriptions() || (0, h.hP)();
             }, []);
             let d = (0, a.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
-                [f, I] = l.useState(1),
-                [b, N] = l.useState(!1),
+                [f, _] = l.useState(1),
+                [N, b] = l.useState(!1),
                 [y, v] = l.useState(null),
                 j = l.useCallback(async () => {
                     if (null != d)
                         try {
-                            (N(!0), v(null));
+                            (b(!0), v(null));
                             let e = (0, S.v)(d, 1);
                             (r()(
                                 (0, p.bx)(e) <= (0, p.bx)(d.additionalPlans),
@@ -85,15 +85,15 @@ n.d(
                                             i,
                                         ));
                                 })(d, e, t, u),
-                                I(2));
+                                _(2));
                         } catch (t) {
                             let e = t instanceof g.Ey ? t : new g.Ey(t, t.code);
                             (v(
-                                _.intl.string(
-                                    e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? _.t.dq4vq7 : _.t["5mlOCW"],
+                                I.intl.string(
+                                    e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? I.t.dq4vq7 : I.t["5mlOCW"],
                                 ),
                             ),
-                                N(!1));
+                                b(!1));
                         }
                 }, [d, t, u]);
             return (0, i.jsx)(E.f5, {
@@ -105,9 +105,9 @@ n.d(
                     title: (function () {
                         switch (f) {
                             case 1:
-                                return _.intl.string(_.t.l52ih2);
+                                return I.intl.string(I.t.l52ih2);
                             case 2:
-                                return _.intl.string(_.t.H9QUAB);
+                                return I.intl.string(I.t.H9QUAB);
                             default:
                                 return "";
                         }
@@ -116,11 +116,11 @@ n.d(
                         switch (f) {
                             case 1:
                                 return [
-                                    { variant: "secondary", text: _.intl.string(_.t.oEAioF), disabled: b, onClick: s },
-                                    { variant: "primary", text: _.intl.string(_.t.etZP4B), loading: b, onClick: j },
+                                    { variant: "secondary", text: I.intl.string(I.t.oEAioF), disabled: N, onClick: s },
+                                    { variant: "primary", text: I.intl.string(I.t.etZP4B), loading: N, onClick: j },
                                 ];
                             case 2:
-                                return [{ variant: "primary", text: _.intl.string(_.t.BddRzS), onClick: s }];
+                                return [{ variant: "primary", text: I.intl.string(I.t.BddRzS), onClick: s }];
                             default:
                                 return [];
                         }

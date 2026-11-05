@@ -14,8 +14,8 @@ var l = t(477900),
     x = t(834730),
     f = t(933832),
     A = t(805251),
-    j = t(565645),
-    C = t(736653),
+    C = t(565645),
+    j = t(736653),
     v = t(121681),
     y = t(386784),
     _ = t(792996),
@@ -26,7 +26,7 @@ t.d(
     {
         A: function (e) {
             let { guildId: n, option: t, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,
-                b = (0, d.M)((0, C.Ay)()),
+                b = (0, d.M)((0, j.Ay)()),
                 [k, M] = i.useState(!1),
                 R = k && !w,
                 O = i.useRef(null),
@@ -91,7 +91,7 @@ t.d(
                     "aria-pressed": a,
                     children: [
                         null != t.emoji && (null != t.emoji.id || null != t.emoji.name)
-                            ? (0, l.jsx)(j.A, {
+                            ? (0, l.jsx)(C.A, {
                                   animated: t.emoji.animated || D,
                                   className: N.t0,
                                   emojiId: t.emoji.id,

@@ -10,8 +10,8 @@ var i,
     _ = n(401864),
     E = n(124987),
     A = n(334279),
-    h = (((i = {}).FIAT = "fiat"), (i.ORBS = "orbs"), i),
-    f =
+    f = (((i = {}).FIAT = "fiat"), (i.ORBS = "orbs"), i),
+    h =
         (((r = {})[(r.VISIBLE = 0)] = "VISIBLE"),
         (r[(r.HIDDEN = 1)] = "HIDDEN"),
         (r[(r.IN = 2)] = "IN"),
@@ -24,7 +24,7 @@ var i,
         (s.SEARCH_BAR_CLEAR = "search bar clear"),
         s),
     m = (((l = {}).SEARCH = "SEARCH"), (l.SEARCH_SUGGESTION = "search suggestion"), l),
-    g =
+    T =
         (((o = {}).HOME = "home"),
         (o.CATALOG = "catalog"),
         (o.ORBS = "orbs"),
@@ -40,7 +40,7 @@ var i,
         (o.GAME_SHOPS = "game-shops"),
         (o.GAME_SERVERS = "game-servers"),
         o);
-let T = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
+let g = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
 var S =
     (((d = {})[(d.FIAT = 0)] = "FIAT"),
     (d[(d.ORB = 1)] = "ORB"),
@@ -98,11 +98,11 @@ n.d(
         EZ: function (e) {
             return A.I.ALL.has(e);
         },
-        G2: g,
-        Hi: h,
+        G2: T,
+        Hi: f,
         MS: [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }],
         P1: "category",
-        Pf: f,
+        Pf: h,
         QB: R,
         Tq: {},
         Xi: m,
@@ -447,7 +447,7 @@ n.d(
             return null != e && "home" !== e && "catalog" !== e && "game-shops" !== e;
         },
         dF: function (e) {
-            return T.includes(e);
+            return g.includes(e);
         },
         gs: S,
         hE: I,

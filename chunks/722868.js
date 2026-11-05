@@ -17,8 +17,8 @@ n.d(
                 { analyticsLocations: h, sourceAnalyticsLocations: x } = (0, r.Ay)(),
                 { context: A, trackUserProfileAction: I } = (0, a.NJ)(),
                 v = (0, d.Ay)(t.id, n),
-                j = (0, o.X)("useViewUserProfileModalItem");
-            return ((0, c.A)(t.id) && j) || v?.guildId == null
+                b = (0, o.X)("useViewUserProfileModalItem");
+            return ((0, c.A)(t.id) && b) || v?.guildId == null
                 ? null
                 : m?.guildId != null
                   ? (0, i.jsx)(l.Dr, {

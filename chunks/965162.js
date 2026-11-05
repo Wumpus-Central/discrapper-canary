@@ -1,9 +1,9 @@
 n.d(t, {
-    D1: () => f,
+    D1: () => h,
     Eo: () => I,
     Hk: () => m,
     R4: () => p,
-    Uz: () => h,
+    Uz: () => f,
     _V: () => A,
     d1: () => c,
     pR: () => u,
@@ -56,7 +56,7 @@ function A(e) {
                   }
               })(e)}`;
 }
-function h(e, t, n) {
+function f(e, t, n) {
     let l = a.A.getGuildId(),
         o = a.A.getChannelId(),
         c = r.A.getChannel(o),
@@ -76,7 +76,7 @@ function h(e, t, n) {
         is_animated: _(e),
     });
 }
-function f(e, t, n) {
+function h(e, t, n) {
     s.default.track(d.HAw.VIDEO_BACKGROUND_ADDED, { is_animated: _(e), is_video: t, is_from_tenor: n });
 }
 function I(e) {

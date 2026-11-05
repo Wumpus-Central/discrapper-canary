@@ -26,8 +26,8 @@ var l = n(477900),
     g = n(400492),
     x = n(734057),
     E = n(803224),
-    y = n(74477),
-    S = n(934581),
+    S = n(74477),
+    y = n(934581),
     C = n(582128),
     A = n(189213),
     b = n(778712),
@@ -48,10 +48,10 @@ var l = n(477900),
     U = n(652215),
     V = n(792996),
     W = n(510723);
-function F(e) {
+function B(e) {
     return e.isForumPost() ? (x.A.getChannel(e.parent_id) ?? e) : e;
 }
-function B(e, t) {
+function F(e, t) {
     let n = (0, R.gU)(e);
     return null == n
         ? null
@@ -61,12 +61,12 @@ function B(e, t) {
 }
 function G(e) {
     let { channel: t, targetChannel: n, transitionState: i, onClose: r, onReturn: s, onDiscard: a } = e,
-        o = F(t),
+        o = B(t),
         u = t.getGuildId(),
         c =
             null == u || u !== n.getGuildId()
                 ? (function (e) {
-                      let t = F(e),
+                      let t = B(e),
                           n = L.A.getGuild(e.getGuildId());
                       if (null != n)
                           return {
@@ -120,7 +120,7 @@ function G(e) {
                     recipientName: D.Ay.getName(n) ?? (0, _.m1)(e, P.default, M.A),
                     recipientHook: (e) => (0, l.jsx)("strong", { children: e }),
                 });
-            let i = F(e),
+            let i = B(e),
                 r = L.A.getGuild(e.getGuildId()),
                 s = (0, _.m1)(i, P.default, M.A),
                 a = null != r ? s : (D.Ay.getName(n) ?? s);
@@ -129,7 +129,7 @@ function G(e) {
                 destinationHook: (e) =>
                     (0, l.jsxs)("span", {
                         className: W.Fx,
-                        children: [null != r ? B(i, "xxs") : null, (0, l.jsx)("strong", { children: e })],
+                        children: [null != r ? F(i, "xxs") : null, (0, l.jsx)("strong", { children: e })],
                     }),
             });
         })(t),
@@ -170,7 +170,7 @@ function G(e) {
                                           ? (0, l.jsxs)("div", {
                                                 className: W.lj,
                                                 children: [
-                                                    null != t.getGuildId() ? B(o, 12) : null,
+                                                    null != t.getGuildId() ? F(o, 12) : null,
                                                     (0, l.jsx)(j.E, {
                                                         className: W.ed,
                                                         variant: "body-xs/medium",
@@ -212,7 +212,7 @@ function en(e) {
 }
 function el(e) {
     if (0 === e.length) return "";
-    let t = (e.length > 256 ? (0, S.A)(e, 256) : e).map((e) => Math.min(Math.round(e), 255));
+    let t = (e.length > 256 ? (0, y.A)(e, 256) : e).map((e) => Math.min(Math.round(e), 255));
     return i.fromByteArray(new Uint8Array(t));
 }
 function ei(e) {
@@ -224,7 +224,7 @@ function er(e) {
 }
 async function es(e) {
     if (!(0, H.t)()) return void Z.warn("Voice message recording is not supported on this client");
-    if (!y.A.getConfig({ location: y.R }).enabled || (0, K.tO)()) return;
+    if (!S.A.getConfig({ location: S.R }).enabled || (0, K.tO)()) return;
     let t = (0, K.yC)();
     if (null != t)
         if (null == x.A.getChannel(t)) er(t);

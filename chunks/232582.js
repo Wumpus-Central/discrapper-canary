@@ -291,8 +291,8 @@ class A extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let h = new A();
-class f extends s.G {
+let f = new A();
+class h extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Disclaimer", [
             { no: 1, name: "disclaimer_text", kind: "scalar", T: 9 },
@@ -343,7 +343,7 @@ class f extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let I = new f();
+let I = new h();
 class p extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties", [
@@ -357,7 +357,7 @@ class p extends s.G {
             { no: 9, name: "hero_art_image_link_dark_theme", kind: "scalar", T: 9 },
             { no: 10, name: "hero_art_image_link_light_theme", kind: "scalar", T: 9 },
             { no: 11, name: "modal_top_pill", kind: "scalar", T: 9 },
-            { no: 13, name: "hero_art_video_subtitles", kind: "message", repeat: 1, T: () => h },
+            { no: 13, name: "hero_art_video_subtitles", kind: "message", repeat: 1, T: () => f },
             { no: 14, name: "storage", kind: "message", T: () => E },
             { no: 15, name: "disclaimer", kind: "message", T: () => I },
             { no: 18, name: "help_article", kind: "message", T: () => o.O },
@@ -426,7 +426,7 @@ class p extends s.G {
                     a.modalTopPill = e.string();
                     break;
                 case 13:
-                    a.heroArtVideoSubtitles.push(h.internalBinaryRead(e, e.uint32(), n));
+                    a.heroArtVideoSubtitles.push(f.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
                     a.storage = E.internalBinaryRead(e, e.uint32(), n, a.storage);
@@ -475,7 +475,7 @@ class p extends s.G {
             "" !== e.heroArtImageLinkLightTheme && t.tag(10, i.O0.LengthDelimited).string(e.heroArtImageLinkLightTheme),
             "" !== e.modalTopPill && t.tag(11, i.O0.LengthDelimited).string(e.modalTopPill));
         for (let r = 0; r < e.heroArtVideoSubtitles.length; r++)
-            h.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.O0.LengthDelimited).fork(), n).join();
+            f.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.O0.LengthDelimited).fork(), n).join();
         (e.storage && E.internalBinaryWrite(e.storage, t.tag(14, i.O0.LengthDelimited).fork(), n).join(),
             e.disclaimer && I.internalBinaryWrite(e.disclaimer, t.tag(15, i.O0.LengthDelimited).fork(), n).join(),
             e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(18, i.O0.LengthDelimited).fork(), n).join(),

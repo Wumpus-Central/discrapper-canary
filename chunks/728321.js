@@ -1,12 +1,12 @@
 var i = n(477900),
-    l = n(582128),
-    r = n(621466),
+    r = n(582128),
+    l = n(621466),
     s = n(855986),
     a = n(531685),
     o = n(787541),
     u = n(600160),
     d = n(179913);
-class c extends l.Component {
+class c extends r.Component {
     static defaultProps = { position: "top", offsetX: 0, offsetY: 0, autoInvert: !0 };
     componentDidMount() {
         let { visible: e, inlineSpecs: t } = this.props;
@@ -17,10 +17,10 @@ class c extends l.Component {
         null == e && this.show(!1);
     }
     componentDidUpdate(e) {
-        let { position: t, offsetX: n, offsetY: i, tutorialId: l, visible: r, windowSize: s } = e;
-        l !== this.props.tutorialId
-            ? o.jD(l)
-            : (r !== this.props.visible ||
+        let { position: t, offsetX: n, offsetY: i, tutorialId: r, visible: l, windowSize: s } = e;
+        r !== this.props.tutorialId
+            ? o.jD(r)
+            : (l !== this.props.visible ||
                   t !== this.props.position ||
                   n !== this.props.offsetX ||
                   i !== this.props.offsetY ||
@@ -32,7 +32,7 @@ class c extends l.Component {
             childRef: t,
             tutorialId: n,
             position: i,
-            offsetX: l,
+            offsetX: r,
             offsetY: s,
             visible: a,
             inlineSpecs: u,
@@ -40,7 +40,7 @@ class c extends l.Component {
         } = this.props;
         if (e && null == u) {
             let e = t?.current;
-            if (!(0, r.vq)(e)) return;
+            if (!(0, l.vq)(e)) return;
             let { top: a, left: u, right: c, bottom: h } = e.getBoundingClientRect();
             o.WU(n, {
                 position: i,
@@ -48,7 +48,7 @@ class c extends l.Component {
                 targetHeight: h - a,
                 autoInvert: d,
                 origin: { x: u, y: a },
-                offset: { x: l, y: s },
+                offset: { x: r, y: s },
             });
         } else a && o.jD(n);
     }
@@ -57,7 +57,7 @@ class c extends l.Component {
                 inlineSpecs: e,
                 tutorialId: t,
                 children: n,
-                visible: r,
+                visible: l,
                 windowFocused: s,
                 position: a,
                 autoInvert: o,
@@ -67,7 +67,7 @@ class c extends l.Component {
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       n,
-                      r &&
+                      l &&
                           (0, i.jsx)(u.Y, {
                               autoInvert: o,
                               position: a,
@@ -78,7 +78,7 @@ class c extends l.Component {
                           }),
                   ],
               })
-            : l.Children.only(n);
+            : r.Children.only(n);
     }
 }
 n.d(
@@ -87,10 +87,10 @@ n.d(
     {
         A: function (e) {
             let { tutorialId: t, disabled: n } = e,
-                l = (0, s.bG)([d.A], () => !n && d.A.shouldShow(t), [n, t]),
-                r = (0, s.bG)([a.A], () => a.A.isFocused()),
+                r = (0, s.bG)([d.A], () => !n && d.A.shouldShow(t), [n, t]),
+                l = (0, s.bG)([a.A], () => a.A.isFocused()),
                 o = (0, s.bG)([a.A], () => a.A.windowSize(), []);
-            return (0, i.jsx)(c, { ...e, visible: l, windowFocused: r, windowSize: o });
+            return (0, i.jsx)(c, { ...e, visible: r, windowFocused: l, windowSize: o });
         },
     },
 );

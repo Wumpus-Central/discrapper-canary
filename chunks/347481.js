@@ -16,7 +16,7 @@ function A(e, t) {
     let n = c[e];
     (null != n && n.forEach((e) => delete u[e.id]), (c[e] = t), t.forEach((e) => (u[e.id] = e)));
 }
-class h extends a.Ay.Store {
+class f extends a.Ay.Store {
     static displayName = "CertifiedDeviceStore";
     initialize() {
         let e = s.w.get(d);
@@ -63,10 +63,10 @@ class h extends a.Ay.Store {
         return _;
     }
 }
-let f = new h(l.h, {
+let h = new f(l.h, {
     CERTIFIED_DEVICES_SET: function (e) {
         let { applicationId: t, devices: n } = e;
         (A(t, n), s.w.set(d, c), _++);
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

@@ -1,7 +1,7 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => P });
 var i = n(477900),
-    l = n(582128),
-    r = n(613412),
+    r = n(582128),
+    l = n(613412),
     s = n(855986),
     a = n(205693),
     o = n(165862),
@@ -22,10 +22,10 @@ var i = n(477900),
     N = n(782600);
 function T(e) {
     let { ref: t, ...n } = e,
-        { "aria-label": r, location: s, containerClassName: a, notchClassName: o } = n,
-        u = l.useRef(null);
+        { "aria-label": l, location: s, containerClassName: a, notchClassName: o } = n,
+        u = r.useRef(null);
     return (
-        l.useImperativeHandle(
+        r.useImperativeHandle(
             t,
             () => ({ focus: () => u.current?.focus(), blur: () => u.current?.blur(), activate: () => !1 }),
             [],
@@ -34,7 +34,7 @@ function T(e) {
             ref: u,
             tabIndex: -1,
             role: "img",
-            "aria-label": r,
+            "aria-label": l,
             children: (0, i.jsx)(N.A, {
                 notchBackground: N.V.BLACK,
                 location: s,
@@ -45,23 +45,23 @@ function T(e) {
         })
     );
 }
-var v = n(819027),
-    y = n(652215),
+var y = n(819027),
+    v = n(652215),
     M = n(621380),
     D = n(731854),
     R = n(792996),
     O = n(610234),
     x = n(788066);
-function w(e) {
+function P(e) {
     let {
             appContext: t,
             onInteraction: n,
-            onSelect: l,
+            onSelect: r,
             onClose: N,
-            maybeRenderPTTCheckbox: w = !1,
+            maybeRenderPTTCheckbox: P = !1,
             renderDeafenCheckbox: L = !1,
             renderInputProfiles: U = !1,
-            renderOutputDevices: P = !1,
+            renderOutputDevices: w = !1,
             renderOutputVolume: b = !1,
             renderInputDevices: G = !1,
             renderInputVolume: F = !1,
@@ -71,35 +71,35 @@ function w(e) {
         } = e,
         { analyticsLocations: H } = (0, h.Ay)();
     (0, f.A)({
-        type: r.ImpressionTypes.MENU,
-        name: r.ImpressionNames.AUDIO_DEVICE_MENU,
+        type: l.ImpressionTypes.MENU,
+        name: l.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: H },
     });
-    let B = (0, v.A)(t),
+    let B = (0, y.A)(t),
         W = (0, g.H)({ deviceType: D.oh.AUDIO_INPUT, analyticsLocations: H, asSubmenu: !0 }),
         Y = (0, g.H)({ deviceType: D.oh.AUDIO_OUTPUT, analyticsLocations: H, asSubmenu: !0 }),
         z = (0, s.bG)([S.Ay], () => S.Ay.getActiveInputProfile()),
         J = (0, I.A)(H),
         $ = (0, m.A)(H),
         K = (0, E.A)(H),
-        Z = a.x.DEFAULT,
-        q = S.Ay.isSelfDeaf(Z),
+        q = a.x.DEFAULT,
+        Z = S.Ay.isSelfDeaf(q),
         X = (0, p.Ay)("AudioDeviceMenu"),
         Q = (0, s.bG)([A.A], () => A.A.isSpatialAudioEnabled()),
         ee = (0, s.bG)([S.Ay], () => S.Ay.getMode()),
-        et = ee === y.TBI.VOICE_ACTIVITY ? y.TBI.PUSH_TO_TALK : y.TBI.VOICE_ACTIVITY,
+        et = ee === v.TBI.VOICE_ACTIVITY ? v.TBI.PUSH_TO_TALK : v.TBI.VOICE_ACTIVITY,
         en = (0, s.bG)([S.Ay, _.Ay], () => {
             let e = S.Ay.getModeOptions().shortcut?.length > 0,
-                t = null != _.Ay.getKeybindForAction(y.hCu.PUSH_TO_TALK, !1, !0),
-                n = null != _.Ay.getKeybindForAction(y.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
+                t = null != _.Ay.getKeybindForAction(v.hCu.PUSH_TO_TALK, !1, !0),
+                n = null != _.Ay.getKeybindForAction(v.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
             return e || t || n;
         }),
         ei = (0, s.bG)([C.A], () => null != C.A.getChannelId());
     return (0, i.jsx)(c.A, {
-        object: y.ZSU.CONTEXT_MENU,
+        object: v.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(o.W, {
             "data-menu-migrated": !0,
-            onSelect: l,
+            onSelect: r,
             onInteraction: n,
             onClose: N,
             navId: "audio-device-context",
@@ -107,7 +107,7 @@ function w(e) {
             "aria-label": R.intl.string(R.t.ZR1Ss6),
             className: x.MK,
             children: [
-                (0, i.jsxs)(u.rX, { children: [G && W, U && J, P && Y] }),
+                (0, i.jsxs)(u.rX, { children: [G && W, U && J, w && Y] }),
                 (0, i.jsxs)(u.rX, {
                     children: [
                         F && $,
@@ -122,7 +122,7 @@ function w(e) {
                                         ...e,
                                         ref: t,
                                         "aria-label": R.intl.string(R.t["ye+BAy"]),
-                                        location: { section: y.JJy.CONTEXT_MENU },
+                                        location: { section: v.JJy.CONTEXT_MENU },
                                         containerClassName: x.Eq,
                                         notchClassName: x.CO,
                                     }),
@@ -132,10 +132,10 @@ function w(e) {
                 }),
                 (0, i.jsxs)(u.rX, {
                     children: [
-                        w &&
+                        P &&
                             en &&
                             (0, i.jsx)(u.sL, {
-                                checked: ee === y.TBI.PUSH_TO_TALK,
+                                checked: ee === v.TBI.PUSH_TO_TALK,
                                 id: "input-mode",
                                 label: R.intl.string(R.t.Q8gkVL),
                                 action: () => d.default.setMode(et, void 0, void 0, { analyticsLocations: H }),
@@ -147,8 +147,8 @@ function w(e) {
                                 {
                                     id: "deafen",
                                     label: R.intl.string(R.t.wjcRFX),
-                                    action: () => d.default.toggleSelfDeaf({ context: Z, location: "AudioDeviceMenu" }),
-                                    checked: q,
+                                    action: () => d.default.toggleSelfDeaf({ context: q, location: "AudioDeviceMenu" }),
+                                    checked: Z,
                                 },
                                 "self-deafen",
                             ),

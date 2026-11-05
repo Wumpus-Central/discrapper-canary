@@ -1,6 +1,6 @@
 n.d(t, {
-    k5: () => T,
-    $5: () => g,
+    k5: () => g,
+    $5: () => T,
     nj: () => m,
     $s: () => B,
     mq: () => G,
@@ -37,19 +37,19 @@ var i,
     _ = n(927813),
     E = n(722178),
     A = n(792996),
-    h = n(651892),
-    f = n(710969),
+    f = n(651892),
+    h = n(710969),
     I = n(576761);
 let p = new Set([l.PREMIUM_EXTENSION, l.PREMIUM_PERMANENT]);
 function m(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === o.l.COLLECTIBLE);
     return t?.type === o.l.COLLECTIBLE ? t : null;
 }
-function g(e) {
-    let t = m(e);
-    return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, f.ZG)(t.expiresAtPremium) : null;
-}
 function T(e) {
+    let t = m(e);
+    return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, h.ZG)(t.expiresAtPremium) : null;
+}
+function g(e) {
     let t = m(e);
     if (null == t || !("expiresAt" in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),
@@ -135,7 +135,7 @@ function w(e, t, n) {
         let n;
         return ((n = U(e, t) ?? D(e) ?? 0), A.intl.formatToPlainString(A.t["nLXlh+"], { orbAmount: n }));
     }
-    let i = (0, h.xv)(e);
+    let i = (0, f.xv)(e);
     return n ? i.messages.nameWithArticle : i.messages.name;
 }
 function G(e, t) {

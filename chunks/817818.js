@@ -11,7 +11,7 @@ var i = n(665260),
     _ = n(539916),
     E = n(652215),
     A = n(340837);
-function h(e) {
+function f(e) {
     return (
         a.h.dispatch({ type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId: e }),
         r.Bo.get({ url: E.Rsh.GUILD_ONBOARDING(e), rejectWithError: !1 }).then(
@@ -26,7 +26,7 @@ function h(e) {
         )
     );
 }
-function f(e) {
+function h(e) {
     a.h.dispatch({ type: "GUILD_ONBOARDING_START", guildId: e });
 }
 function I(e) {
@@ -57,11 +57,11 @@ n.d(
             if (null == r || !r.features.has(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
             let a = u.A.shouldFetchPrompts(e),
                 s = u.A.getOnboardingPrompts(e);
-            if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? I(e) : n || f(e), Promise.resolve());
-            let c = await h(e);
-            return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (I(e), Promise.resolve()) : (n || f(e), c);
+            if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? I(e) : n || h(e), Promise.resolve());
+            let c = await f(e);
+            return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (I(e), Promise.resolve()) : (n || h(e), c);
         },
-        jx: h,
-        sy: f,
+        jx: f,
+        sy: h,
     },
 );

@@ -7,8 +7,8 @@ var a = n(477900),
     d = n(31188),
     c = n(916845),
     u = n(534514),
-    f = n(834730),
-    m = n(566345),
+    m = n(834730),
+    f = n(566345),
     g = n(239027);
 function p(e) {
     let { title: t, body: n } = e;
@@ -18,7 +18,7 @@ function p(e) {
             (0, a.jsx)(u.D, { variant: "nitro-sm", className: g.titleRefresh, children: t }),
             (0, a.jsx)("div", {
                 className: g.headerBody,
-                children: (0, a.jsx)(f.E, { variant: "body-sm/normal", color: "none", children: n }),
+                children: (0, a.jsx)(m.E, { variant: "body-sm/normal", color: "none", children: n }),
             }),
         ],
     });
@@ -29,7 +29,7 @@ function E(e) {
             body: n,
             graphic: l,
             size: u = "md",
-            actions: f,
+            actions: m,
             gradientColor: E,
             onRequestClose: h,
             position: b,
@@ -56,10 +56,10 @@ function E(e) {
             },
             [h],
         ),
-        O = r.useCallback((e) => {
+        M = r.useCallback((e) => {
             T(e);
         }, []),
-        M = N ? g.caretHoverable : void 0,
+        O = N ? g.caretHoverable : void 0,
         P = {
             targetElementRef: I.targetElementRef,
             shouldShow: I.shouldShow,
@@ -68,7 +68,7 @@ function E(e) {
             caretConfig: C,
             onRequestClose: S,
             gradientColor: E,
-            onPositionChange: O,
+            onPositionChange: M,
             onNudgeChange: j,
             scrollBehavior: A,
             modal: R,
@@ -88,14 +88,14 @@ function E(e) {
                 null != l &&
                     (0, a.jsx)("div", {
                         className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
-                        children: (0, a.jsx)(m.v, {
+                        children: (0, a.jsx)(f.v, {
                             ...l,
                             aspectRatio: l.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: g.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: M }),
+                null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
+                null != C && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });

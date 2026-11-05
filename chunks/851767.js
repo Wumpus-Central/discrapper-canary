@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(619019),
     E = n(46653),
     A = n(71393),
-    h = n(536802),
-    f = n(290863),
+    f = n(536802),
+    h = n(290863),
     I = n(711014),
     p = n(403362),
     m = n(419731),
-    g = n(439174),
-    T = n(633075),
+    T = n(439174),
+    g = n(633075),
     S = n(646976),
     N = n(289173),
     C = n(210598);
@@ -64,7 +64,7 @@ function F(e) {
                 i = r().uniqBy(n, "gameId");
             return new N.Yy({ id: e.id, type: t, games: i });
         case s.x.APPLICATION:
-            return new T.R({ id: e.id, applicationId: e.data.application_id });
+            return new g.R({ id: e.id, applicationId: e.data.application_id });
         case s.x.PERSONAL:
             return new C.Tu({ id: e.id, header: e.data.header ?? "", sections: (0, C.wv)(e.data.sections) });
         case s.x.CLIPS_GALLERY:
@@ -106,7 +106,7 @@ function B(e) {
         }
         case s.x.APPLICATION: {
             let { id: t, applicationId: n } = e;
-            return new T.R({ id: t, applicationId: n });
+            return new g.R({ id: t, applicationId: n });
         }
         case s.x.PERSONAL: {
             let { id: t, header: n, sections: i } = e;
@@ -166,7 +166,7 @@ function $(e) {
         .map((e) => ({
             key: e.id,
             user: new _.A({ ...e, collectibles: (0, c.t)(e.collectibles) }),
-            status: f.A.getStatus(e.id),
+            status: h.A.getStatus(e.id),
         }))
         .sortBy((e) => {
             let { user: t } = e;
@@ -205,7 +205,7 @@ function z(e) {
         o =
             null != t.badges
                 ? t.badges.map((e) => {
-                      let t = (0, g.e0)(e.id);
+                      let t = (0, T.e0)(e.id);
                       if (("premium" === e.id || null != t) && null != a) {
                           let n = L.intl.formatToPlainString(L.t["8zbGNR"], { date: a });
                           return (
@@ -293,7 +293,7 @@ function q(e, t) {
         i = t?.badges.filter((e) => !n.has(e.id));
     return (i.length > 0 && e.push(...i), e);
 }
-function Z(e) {
+function Q(e) {
     let { userId: t, guildId: n, withMutualFriends: i } = e,
         r = n ?? y,
         a = D.get(t);
@@ -304,7 +304,7 @@ function Z(e) {
     }
     i && b.add(t);
 }
-function Q(e) {
+function Z(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
     (D.get(t)?.delete(n ?? y), b.delete(t));
     let a = v.get(t) ?? {
@@ -439,14 +439,14 @@ function ec(e) {
     let n = P.get(e);
     if (null != n) for (let e of n.values()) ((e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0));
 }
-class eu extends h.A {
+class eu extends f.A {
     static displayName = "UserProfileStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            USER_PROFILE_FETCH_START: Z,
-            USER_PROFILE_FETCH_FAILURE: Q,
+            USER_PROFILE_FETCH_START: Q,
+            USER_PROFILE_FETCH_FAILURE: Z,
             USER_PROFILE_FETCH_SUCCESS: z,
             USER_PROFILE_UPDATE_START: J,
             USER_PROFILE_UPDATE_SUCCESS: ee,

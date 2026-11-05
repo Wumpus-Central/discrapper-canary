@@ -20,7 +20,7 @@ n.d(
                 animate: _ = !0,
                 className: E,
                 "aria-label": A,
-                "aria-labelledby": h,
+                "aria-labelledby": f,
             } = e;
             return (0, i.jsx)(s.z, {
                 value: t,
@@ -30,7 +30,7 @@ n.d(
                 valueLabel: d,
                 formatOptions: c,
                 "aria-label": A,
-                "aria-labelledby": h,
+                "aria-labelledby": f,
                 className: a()(l.track, l[u], E),
                 children: (e) => {
                     let { percentage: t } = e;

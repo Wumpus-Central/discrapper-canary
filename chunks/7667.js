@@ -1,7 +1,7 @@
 i(321073);
 var s = i(855986),
-    r = i(412260),
-    n = i(852218),
+    n = i(412260),
+    r = i(852218),
     a = i(421108),
     l = i(773669),
     o = i(792996);
@@ -10,7 +10,7 @@ i.d(
     {},
     {
         A: function (e) {
-            let t = (0, s.bG)([r.A], () => r.A.getPromotionByTypeAndId(n.pt.MARKETING_MOMENT, e) ?? null),
+            let t = (0, s.bG)([n.A], () => n.A.getPromotionByTypeAndId(r.pt.MARKETING_MOMENT, e) ?? null),
                 i = (0, s.bG)([l.default], () => l.default.locale),
                 c = t?.boostBogoMaxCredits ?? null,
                 d = t?.endDate ?? null,

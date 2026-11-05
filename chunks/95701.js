@@ -11,8 +11,8 @@ var i = n(435558),
     _ = n(933681),
     E = n(233993),
     A = n(446600),
-    h = n(403362),
-    f = n(811091),
+    f = n(403362),
+    h = n(811091),
     I = n(652215),
     p = n(746080);
 let m = new Set([
@@ -29,7 +29,7 @@ let m = new Set([
         I.rbe.DM,
         I.rbe.GROUP_DM,
     ]),
-    g = new Set([
+    T = new Set([
         I.rbe.DM,
         I.rbe.GROUP_DM,
         I.rbe.GUILD_TEXT,
@@ -48,7 +48,7 @@ let m = new Set([
         I.rbe.MEDIA_THREAD,
         I.rbe.GUILD_APP,
     ]),
-    T = new Set([
+    g = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_ANNOUNCEMENT,
         I.rbe.ANNOUNCEMENT_THREAD,
@@ -204,8 +204,8 @@ let B = new Set([
     z = new Set([I.rbe.GUILD_TEXT, I.rbe.GUILD_CATEGORY, I.rbe.GUILD_FORUM, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_APP]);
 (I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_VOICE, I.rbe.GUILD_APP);
 let q = new Set([I.rbe.GUILD_APP]),
-    Z = new Set([...q]),
-    Q = new Set([...q, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]);
+    Q = new Set([...q]),
+    Z = new Set([...q, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]);
 function J(e) {
     let t = {};
     return (
@@ -815,7 +815,7 @@ class eA extends ed {
         return (0, _.pp)(n, eA);
     }
 }
-class eh {
+class ef {
     cache;
     constructor(e = 100) {
         this.cache = new (s())(e);
@@ -829,11 +829,11 @@ class eh {
         }
     }
 }
-let ef = new eh(),
-    eI = new eh();
+let eh = new ef(),
+    eI = new ef();
 class ep extends ed {
     static sortRecipients(e, t) {
-        let n = ef.getOrCompute(t);
+        let n = eh.getOrCompute(t);
         return [...(e ?? [])].sort((e, t) => (eI.getOrCompute(e.id) ^ n) - (eI.getOrCompute(t.id) ^ n));
     }
     constructor(e) {
@@ -849,7 +849,7 @@ class ep extends ed {
             (this.nicks = e.nicks),
             (this.ownerId = e.ownerId),
             (this.rawRecipients = ep.sortRecipients(e.rawRecipients, this.id)),
-            (this.recipients = [...(e.recipients ?? [])].sort(f.default.compare)),
+            (this.recipients = [...(e.recipients ?? [])].sort(h.default.compare)),
             (this.recipientFlags = e.recipientFlags),
             (this.safetyWarnings = e.safetyWarnings ?? []),
             (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed));
@@ -893,7 +893,7 @@ class ep extends ed {
                 "recipients",
                 r()
                     .uniq([...(this.recipients ?? []), e])
-                    .sort(f.default.compare),
+                    .sort(h.default.compare),
             );
             return null == t ? n : n.set("nicks", { ...n.nicks, [e]: t });
         }
@@ -973,7 +973,7 @@ class em extends ed {
         return (0, _.pp)(n, em);
     }
 }
-let eg = {
+let eT = {
         [I.rbe.DM]: ep.fromServer,
         [I.rbe.GROUP_DM]: ep.fromServer,
         [I.rbe.GUILD_TEXT]: e_.fromServer,
@@ -992,7 +992,7 @@ let eg = {
         [I.rbe.GUILD_SPACE]: e_.fromServer,
         [I.rbe.GUILD_APP]: e_.fromServer,
     },
-    eT = {
+    eg = {
         [I.rbe.DM]: class extends ep {},
         [I.rbe.GROUP_DM]: class extends ep {},
         [I.rbe.GUILD_TEXT]: eE,
@@ -1012,17 +1012,17 @@ let eg = {
         [I.rbe.GUILD_APP]: class extends e_ {},
     };
 function eS(e) {
-    let t = eT[e.type ?? I.rbe.GUILD_TEXT] ?? ec;
+    let t = eg[e.type ?? I.rbe.GUILD_TEXT] ?? ec;
     return (0, _.pp)(e, t);
 }
 function eN(e) {
-    return new (eT[e.type ?? I.rbe.GUILD_TEXT] ?? ec)(el(e));
+    return new (eg[e.type ?? I.rbe.GUILD_TEXT] ?? ec)(el(e));
 }
 n.d(
     t,
     {},
     {
-        A_: g,
+        A_: T,
         B4: z,
         Do: L,
         Gw: D,
@@ -1042,12 +1042,12 @@ n.d(
         },
         TA: ea,
         UE: function (e, t) {
-            return (eg[e.type ?? I.rbe.GUILD_TEXT] ?? ec.fromServer)(e, t);
+            return (eT[e.type ?? I.rbe.GUILD_TEXT] ?? ec.fromServer)(e, t);
         },
         XD: N,
         YB: ed,
         ZV: function (e) {
-            return (0, h.Eo)(e, q);
+            return (0, f.Eo)(e, q);
         },
         Z_: function (e) {
             return B.has(e);
@@ -1065,16 +1065,16 @@ n.d(
         k: $,
         k3: P,
         ke: function (e) {
-            return T.has(e);
+            return g.has(e);
         },
         nA: eE,
         nO: function (e) {
-            return !Q.has(e);
+            return !Z.has(e);
         },
         nb: K,
         oH: S,
         oI: function (e) {
-            return (0, h.Eo)(e, Z);
+            return (0, f.Eo)(e, Q);
         },
         oh: eS,
         p6: X,

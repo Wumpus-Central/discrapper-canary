@@ -12,8 +12,8 @@ function c(e) {
             targetElementRef: n,
             estimatedTooltipHeight: c,
             delay: u = 300,
-            onShow: f,
-            title: m,
+            onShow: m,
+            title: f,
             body: g,
             graphic: p,
             size: E = "md",
@@ -50,19 +50,19 @@ function c(e) {
         D = r.useCallback(() => {
             null != N.current && (clearTimeout(N.current), (N.current = null));
         }, []),
-        O = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 (e && (R.current = !0), D(), _("closing"));
             },
             [D],
         );
     r.useEffect(() => D, [D]);
-    let M = r.useCallback(() => {
+    let O = r.useCallback(() => {
             ("closed" === A || "closing" === A) && (D(), _("opening-mouse"));
         }, [D, A]),
         P = r.useCallback(() => {
-            v && O(!1);
-        }, [O, v]),
+            v && M(!1);
+        }, [M, v]),
         U = r.useCallback(() => {
             if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
                 R.current = !1;
@@ -71,26 +71,26 @@ function c(e) {
             (D(), _("opening-keyboard"));
         }, [D, A]),
         B = r.useCallback(() => {
-            (y && "opening-keyboard" !== A) || O(!1);
-        }, [O, A, y]);
+            (y && "opening-keyboard" !== A) || M(!1);
+        }, [M, A, y]);
     (r.useEffect(() => {
         if ("opening-mouse" === A)
             return (
                 (N.current = window.setTimeout(() => {
-                    ((N.current = null), _("open-mouse"), f?.());
+                    ((N.current = null), _("open-mouse"), m?.());
                 }, u)),
                 D
             );
-    }, [A, u, f, D]),
+    }, [A, u, m, D]),
         r.useEffect(() => {
             if ("opening-keyboard" === A)
                 return (
                     (N.current = window.setTimeout(() => {
-                        ((N.current = null), _("open-keyboard"), f?.());
+                        ((N.current = null), _("open-keyboard"), m?.());
                     }, u)),
                     D
                 );
-        }, [A, u, f, D]),
+        }, [A, u, m, D]),
         r.useEffect(() => {
             if ("closing" === A)
                 return (
@@ -109,9 +109,9 @@ function c(e) {
                     }
                 );
             function e(e) {
-                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), O(!0));
+                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), M(!0));
             }
-        }, [I, O]));
+        }, [I, M]));
     let G = r.useMemo(
             () =>
                 null == h
@@ -119,16 +119,16 @@ function c(e) {
                     : h.map((e) => ({
                           ...e,
                           onClick: (t) => {
-                              (e.onClick?.(t), O(!1));
+                              (e.onClick?.(t), M(!1));
                           },
                       })),
-            [h, O],
+            [h, M],
         ),
         w = r.useCallback((e) => {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: M,
+        onMouseEnter: O,
         onMouseLeave: P,
         onFocus: U,
         onBlur: B,
@@ -139,7 +139,7 @@ function c(e) {
                 shouldShow: I,
                 position: S,
                 align: "center",
-                title: m,
+                title: f,
                 body: g,
                 graphic: p,
                 size: E,
@@ -152,7 +152,7 @@ function c(e) {
                 caretConfig: { align: "custom", customOffset: T },
                 onNudgeChange: w,
                 onRequestClose: (e) => {
-                    O(null != e && (0, i.sg)(e));
+                    M(null != e && (0, i.sg)(e));
                 },
             }),
         ],

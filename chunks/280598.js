@@ -11,8 +11,8 @@ var i = n(665260),
     _ = n(197463),
     E = n(652215),
     A = n(746080),
-    h = n(340837);
-let f = null,
+    f = n(340837);
+let h = null,
     I = null;
 class p extends r.A {
     actions = {
@@ -21,17 +21,17 @@ class p extends r.A {
         POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
     };
     handleConnectionOpen = (e) => {
-        null != (f = f ?? o.A.getGuildId() ?? null) && this._openOnboardingIfIncomplete(f);
+        null != (h = h ?? o.A.getGuildId() ?? null) && this._openOnboardingIfIncomplete(h);
     };
     handleChannelSelect = (e) => {
         let { guildId: t, channelId: n } = e;
-        if ((f === t && I === n) || ((f = t ?? null), (I = n ?? null), null == f || null == I)) return;
+        if ((h === t && I === n) || ((h = t ?? null), (I = n ?? null), null == h || null == I)) return;
         let i = l.A.getGuild(t);
         (null != i &&
             i.features.has(E.GuildFeatures.COMMUNITY) &&
-            u.A.shouldFetchPrompts(f, 8 * d.A.Millis.HOUR) &&
-            (0, c.Tg)(f),
-            this._openOnboardingIfIncomplete(f, n));
+            u.A.shouldFetchPrompts(h, 8 * d.A.Millis.HOUR) &&
+            (0, c.Tg)(h),
+            this._openOnboardingIfIncomplete(h, n));
     };
     handleGuildDelete = (e) => {
         let { guild: t } = e;
@@ -42,8 +42,8 @@ class p extends r.A {
         let n = l.A.getGuild(e);
         if (null == n || !n.features.has(E.GuildFeatures.GUILD_ONBOARDING)) return;
         let r = s.Ay.getSelfMember(e);
-        !(null == r || (0, i.Lt)(r.flags ?? 0, h.D.COMPLETED_ONBOARDING)) &&
-            (0, i.Lt)(r.flags ?? 0, h.D.STARTED_ONBOARDING) &&
+        !(null == r || (0, i.Lt)(r.flags ?? 0, f.D.COMPLETED_ONBOARDING)) &&
+            (0, i.Lt)(r.flags ?? 0, f.D.STARTED_ONBOARDING) &&
             (await (0, _.default)({ guildId: e }), (0, a.pX)(E.BVt.CHANNEL(e, t)));
     };
 }

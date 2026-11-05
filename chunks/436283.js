@@ -10,8 +10,8 @@ var r = n(127258),
 let _ = 5 * c.A.Millis.MINUTE,
     E = 10 * c.A.Millis.SECOND,
     A = {},
-    h = {},
     f = {},
+    h = {},
     I = {};
 function p(e) {
     if (null == e) return !1;
@@ -23,30 +23,30 @@ function m(e) {
     if (null != I[e]) return void delete I[e];
     let t = A[e];
     delete A[e];
-    let n = f[e];
-    (null != n && delete h[n],
-        delete f[e],
+    let n = h[e];
+    (null != n && delete f[n],
+        delete h[e],
         (I[e] = { insertedAt: Date.now(), nonce: e, messageId: n, interaction: t }));
 }
-class g extends a.Ay.Store {
+class T extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default, d.A);
     }
     static displayName = "InteractionStore";
     getInteraction(e) {
-        let t = h[e.id];
+        let t = f[e.id];
         return null != t ? A[t] : null;
     }
     getMessageInteractionStates() {
         let e = {};
         for (let [t, n] of Object.entries(A)) {
-            let i = f[t];
+            let i = h[t];
             null != i && (e[i] = n.state);
         }
         return e;
     }
     canQueueInteraction(e, t) {
-        let n = h[e];
+        let n = f[e];
         return (null == n || null == A[n] || A[n].state === u.m.FAILED) && (null == A[t] || A[t].state === u.m.FAILED);
     }
     getIFrameModal() {
@@ -55,16 +55,16 @@ class g extends a.Ay.Store {
     getInteractionDebugContext(e) {
         if (null == e) return;
         let t = A[e];
-        if (null != t) return { interaction: t, messageId: f[e] };
+        if (null != t) return { interaction: t, messageId: h[e] };
         let n = I[e];
         if (null != n) return { interaction: n.interaction, messageId: n.messageId };
     }
 }
-let T = new g(s.h, {
+let g = new T(s.h, {
     LOGOUT: function () {
         ((A = {}),
-            (h = {}),
             (f = {}),
+            (h = {}),
             (I = {}),
             setInterval(() => {
                 let e = Date.now();
@@ -73,7 +73,7 @@ let T = new g(s.h, {
     },
     INTERACTION_QUEUE: function (e) {
         let { nonce: t, messageId: n, data: i, onCreate: r, onCancel: a, onSuccess: s, onFailure: l } = e;
-        (null != n && ((h[n] = t), (f[t] = n)),
+        (null != n && ((f[n] = t), (h[t] = n)),
             (A[t] = { state: u.m.QUEUED, data: i, onCreate: r, onCancel: a, onSuccess: s, onFailure: l }));
     },
     INTERACTION_CREATE: function (e) {
@@ -137,10 +137,10 @@ let T = new g(s.h, {
             d = r.find((e) => e.user_id === s && e.session_id === a);
         if (null == d || null == d.nonce) return;
         let c = I[d.nonce];
-        (null == c ? ((t = f[d.nonce]), (n = A[d.nonce])) : ((t = c.messageId), (n = c.interaction)),
+        (null == c ? ((t = h[d.nonce]), (n = A[d.nonce])) : ((t = c.messageId), (n = c.interaction)),
             null != n &&
                 null != t &&
                 (m(d.nonce), null != t && "channelId" in n.data && l.A.deleteMessage(n.data.channelId, t, !0)));
     },
 });
-n.d(t, {}, { Ay: T });
+n.d(t, {}, { Ay: g });

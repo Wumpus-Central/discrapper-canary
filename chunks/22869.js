@@ -1,27 +1,27 @@
-var l = n(477900),
-    r = n(582128),
-    a = n(503698),
-    i = n.n(a),
-    s = n(834730),
-    o = n(73392),
-    u = n(291594),
-    c = n(959);
-n.d(
-    t,
+var l = t(477900),
+    r = t(582128),
+    a = t(503698),
+    i = t.n(a),
+    s = t(834730),
+    o = t(73392),
+    u = t(291594),
+    c = t(959);
+t.d(
+    n,
     {},
     {
         A: function (e) {
             let {
-                    user: t,
-                    text: n,
+                    user: n,
+                    text: t,
                     channel: a,
                     textClassName: d,
                     onPopoutClosed: m,
                     enableDisplayNameStyles: h = !1,
                 } = e,
-                p = r.useMemo(() => [t], [t]),
+                p = r.useMemo(() => [n], [n]),
                 x = r.useRef(null),
-                f = (0, o.a)({ displayNameStyles: t?.displayNameStyles });
+                f = (0, o.a)({ displayNameStyles: n?.displayNameStyles });
             return (0, l.jsx)(c.A, {
                 targetElementRef: x,
                 participants: p,
@@ -38,7 +38,7 @@ n.d(
                             color: "text-strong",
                             lineClamp: 1,
                             scaleFontToUserSetting: !0,
-                            children: n,
+                            children: t,
                         }),
                     }),
             });

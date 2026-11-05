@@ -10,13 +10,13 @@ var i = n(477900),
     _ = n(315710),
     E = n(844222),
     A = n(775121),
-    h = n(240248),
-    f = n(750506),
+    f = n(240248),
+    h = n(750506),
     I = n(191627),
     p = n(87404),
     m = n(535978);
-let g = new Set([p._s, I.Uy]),
-    T = (0, h.xI)(u.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
+let T = new Set([p._s, I.Uy]),
+    g = (0, f.xI)(u.A.FULL_SCREEN_LAYER_ANIMATION_DURATION),
     S = (0, d.v)((e) => ({
         fullScreenLayers: [],
         addLayer: (t) =>
@@ -35,7 +35,7 @@ function N(e) {
             var e, n;
             return (
                 A.A.disable(),
-                g.has(t.key) ||
+                T.has(t.key) ||
                     A.A.enableTemp(
                         ((e = t.key),
                         (n = t.options.onEscape),
@@ -89,7 +89,7 @@ n.d(
                             {
                                 key: o,
                                 transitionState: 1,
-                                LayerComponent: i ?? f.Ay,
+                                LayerComponent: i ?? h.Ay,
                                 render: e,
                                 options: { disableAnimation: r, onEscape: a, showAppUnderLayer: l },
                             },
@@ -113,7 +113,7 @@ n.d(
                         {
                             nodeRef: a,
                             classNames: r.options.disableAnimation ? void 0 : t,
-                            timeout: T,
+                            timeout: g,
                             onEntered: () => {
                                 (0, c.r)(() => {
                                     S.setState({

@@ -1,10 +1,10 @@
-var n = e(792996);
-e.d(
+var e = n(792996);
+n.d(
     l,
     {},
     {
         A: function (t) {
-            return null != t && "" !== t ? t : n.intl.string(n.t["2YCamo"]);
+            return null != t && "" !== t ? t : e.intl.string(e.t["2YCamo"]);
         },
     },
 );

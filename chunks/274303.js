@@ -25,7 +25,7 @@ function A(e, t) {
         });
     null != i && ((i.tokenStatus = t), (_ = n));
 }
-class h extends l.Ay.PersistedStore {
+class f extends l.Ay.PersistedStore {
     static displayName = "MultiAccountStore";
     static persistKey = "MultiAccountStore";
     static migrations = [
@@ -65,7 +65,7 @@ class h extends l.Ay.PersistedStore {
         return this.getCanUseMultiAccountMobile();
     }
 }
-let f = new h(o.h, {
+let h = new f(o.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t } = e;
         ((i = t.id), !r && (0, d.A)(t) && (r = !0));
@@ -127,4 +127,4 @@ let f = new h(o.h, {
         _ = _.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? { ...e, pushSyncToken: null } : e));
     },
 });
-n.d(t, {}, { A: f, U: u });
+n.d(t, {}, { A: h, U: u });

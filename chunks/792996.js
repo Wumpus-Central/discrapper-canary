@@ -58,14 +58,14 @@ let { createLoader: d } = n(95498),
     _ = u(c),
     { createLoader: E } = n(95498),
     A = E({ "en-US": () => n.e(548742).then(n.bind(n, 374309)) }, "en-US"),
-    { makeMessagesProxy: h } = n(95498),
-    f = h(A),
-    I = (0, a.chainMessagesObjects)(o.A, (0, a.chainMessagesObjects)(_, f));
+    { makeMessagesProxy: f } = n(95498),
+    h = f(A),
+    I = (0, a.chainMessagesObjects)(o.A, (0, a.chainMessagesObjects)(_, h));
 var p = n(226536);
 let { createLoader: m } = n(95498),
-    g = m({ "en-US": () => n.e(19777).then(n.bind(n, 731352)) }, "en-US"),
-    { makeMessagesProxy: T } = n(95498),
-    S = T(g);
+    T = m({ "en-US": () => n.e(19777).then(n.bind(n, 731352)) }, "en-US"),
+    { makeMessagesProxy: g } = n(95498),
+    S = g(T);
 function N(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,

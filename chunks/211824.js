@@ -1,8 +1,8 @@
 n.d(t, {
-    xG: () => h,
+    xG: () => f,
     vl: () => u,
     tK: () => c,
-    Fg: () => f,
+    Fg: () => h,
     PC: () => p,
     Sp: () => A,
     zv: () => I,
@@ -31,9 +31,9 @@ let A = Object.freeze({
         client_theme: o.bb.CLIENT_THEMES,
         app_icon: o.bb.APP_ICONS,
     }),
-    h = new Set([l.ju.HEXAGON]);
+    f = new Set([l.ju.HEXAGON]);
 (Date.parse("2026-11-16T18:00:00+00:00"), Date.parse("2026-11-22T18:00:00+00:00"));
-let f = Date.parse("2026-12-13T18:00:00+00:00"),
+let h = Date.parse("2026-12-13T18:00:00+00:00"),
     I = Date.parse("2027-02-20T18:00:00+00:00"),
     p = Object.freeze({
         display_name_style: d.PremiumTypes.TIER_2,

@@ -11,13 +11,13 @@ var i = n(855986),
     _ = n(626584),
     E = n(384077),
     A = n(869146),
-    h = n(253400),
-    f = n(181435),
+    f = n(253400),
+    h = n(181435),
     I = n(48345),
     p = n(661886),
     m = n(96175),
-    g = n(237984),
-    T = n(293432),
+    T = n(237984),
+    g = n(293432),
     S = n(392164);
 let N = new r.Vy("OverlayV3NativeModuleUtils"),
     C = new _.A("OverlayV3NativeModule");
@@ -80,8 +80,8 @@ class D {
         C.info("Loading Out of Process Overlay Module");
         try {
             var e;
-            await h.Ay.ensureModule("discord_desktop_overlay");
-            let t = h.Ay.requireModule("discord_desktop_overlay");
+            await f.Ay.ensureModule("discord_desktop_overlay");
+            let t = f.Ay.requireModule("discord_desktop_overlay");
             (t.init(),
                 t.setHostWindowCallbacks(
                     (e) => this.createOutOfProcessOverlayHostWindow(e),
@@ -120,7 +120,7 @@ class D {
             }),
                 await (async function () {
                     let e;
-                    if (null == T.A.getWindow(S.f)) return;
+                    if (null == g.A.getWindow(S.f)) return;
                     N.warn("Waiting for previous overlay popout to be destroyed.");
                     let t = new Promise((e) => {
                         setTimeout(() => {
@@ -128,17 +128,17 @@ class D {
                         }, 5e3);
                     });
                     function n() {
-                        null == T.A.getWindow(S.f) && e?.();
+                        null == g.A.getWindow(S.f) && e?.();
                     }
                     let i = new Promise((t) => {
-                        ((e = t), T.A.addChangeListener(n));
+                        ((e = t), g.A.addChangeListener(n));
                     });
                     try {
                         await Promise.race([t, i]);
                     } finally {
-                        T.A.removeChangeListener(n);
+                        g.A.removeChangeListener(n);
                     }
-                    null != T.A.getWindow(S.f) && N.error("Previous overlay popout was not destroyed after 5 seconds!");
+                    null != g.A.getWindow(S.f) && N.error("Previous overlay popout was not destroyed after 5 seconds!");
                 })(),
                 (t = await this.openOverlayPopout()),
                 await (0, c.hJ)(e),
@@ -148,14 +148,14 @@ class D {
                 }));
         } catch (t) {
             (C.error("Error creating OOP host window:", t),
-                (0, c._r)(e, "host_window_mounting_failed", { error: t }, f.QJ.Error));
+                (0, c._r)(e, "host_window_mounting_failed", { error: t }, h.QJ.Error));
         }
         if (!(0, E.ZT)("overlay_v3_native_module"))
             try {
                 u.A?.window?.setBackgroundThrottling(!1);
             } catch (t) {
                 (C.error("Error setting background throttling:", t),
-                    (0, c._r)(e, "background_throttling_setting_failed", { error: t }, f.QJ.Error));
+                    (0, c._r)(e, "background_throttling_setting_failed", { error: t }, h.QJ.Error));
             }
         let n = null;
         try {
@@ -180,7 +180,7 @@ class D {
                         hasWindow: null != n,
                         popoutInitializationStages: p.A.getPopoutInitializationStages(),
                     },
-                    f.QJ.Error,
+                    h.QJ.Error,
                 ));
         }
         return (
@@ -208,7 +208,7 @@ class D {
             (this.lastAssociatedPID = e));
     }
     async openOverlayPopout() {
-        return (await (0, g.o)(), await this.getWindowWithRetry());
+        return (await (0, T.o)(), await this.getWindowWithRetry());
     }
     async getWithRetry(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
@@ -273,7 +273,7 @@ class D {
         this.module?.setInteractionEnabled?.(e);
     }
     setLimitedInteraction(e) {
-        (this.module?.setLimitedInteraction?.(e), h.Ay.setFocusable(S.f, !e));
+        (this.module?.setLimitedInteraction?.(e), f.Ay.setFocusable(S.f, !e));
     }
     setCaptureZoneCallback(e) {
         this.module?.setCaptureZoneCallback?.(e);

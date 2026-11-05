@@ -128,9 +128,9 @@ let A = new E(o.h, {
                 excludeAppsWithCustomInstallUrl: d,
                 excludeNonEmbeddedApps: E,
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: A,
-                source: h,
+                source: f,
             } = e,
-            f = c({
+            h = c({
                 query: t,
                 guildId: n,
                 page: i,
@@ -141,9 +141,9 @@ let A = new E(o.h, {
                 excludeAppsWithCustomInstallUrl: d,
                 excludeNonEmbeddedApps: E,
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: A,
-                source: h,
+                source: f,
             });
-        (u.set(f, { lastFetchTimeMs: Date.now(), ...s }), (_ = { ..._, [f]: 1 }));
+        (u.set(h, { lastFetchTimeMs: Date.now(), ...s }), (_ = { ..._, [h]: 1 }));
     },
     APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function (e) {
         let {

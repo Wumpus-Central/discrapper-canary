@@ -11,7 +11,7 @@ var i = n(477900),
     _ = n(240248),
     E = n(570001);
 let A = [18, 18, 16, 16, 14, 12, 10];
-function h(e, t) {
+function f(e, t) {
     return s()({ [E.AN]: !0, [E.CW]: "always" === e, [E._W]: "on-hover" === e && t });
 }
 n.d(
@@ -23,12 +23,12 @@ n.d(
                 n,
                 {
                     backgroundStyle: a = "always",
-                    children: f,
+                    children: h,
                     icon: I,
                     name: p,
                     ariaLabel: m,
-                    className: g,
-                    style: T,
+                    className: T,
+                    style: g,
                     to: S,
                     onClick: N,
                     selected: C = !1,
@@ -52,13 +52,13 @@ n.d(
             return (0, i.jsxs)(o.D, {
                 ...O,
                 onClick: L,
-                className: s()(g, E.iE, { [E.wH]: C }),
-                style: { ...T, fontSize: n },
+                className: s()(T, E.iE, { [E.wH]: C }),
+                style: { ...g, fontSize: n },
                 focusProps: { enabled: !1 },
                 children: [
                     (0, i.jsx)(d.A, { children: null != m && "" !== m ? m : (p ?? "") }),
                     null != t
-                        ? (0, i.jsx)("div", { className: s()(h(a, !1), E.q9), "aria-hidden": !0, children: t })
+                        ? (0, i.jsx)("div", { className: s()(f(a, !1), E.q9), "aria-hidden": !0, children: t })
                         : null,
                     null != I
                         ? (0, i.jsx)("img", {
@@ -70,7 +70,7 @@ n.d(
                               "aria-hidden": !0,
                           })
                         : null,
-                    null != f ? (0, i.jsx)("div", { className: h(a, !0), children: f }) : null,
+                    null != h ? (0, i.jsx)("div", { className: f(a, !0), children: h }) : null,
                 ],
             });
         },

@@ -1,4 +1,4 @@
-n.d(e, { o1: () => h, bV: () => E, FY: () => x, O9: () => p, bf: () => A, PA: () => b });
+n.d(e, { o1: () => E, bV: () => h, FY: () => x, O9: () => p, bf: () => A, PA: () => b });
 var l = n(855986),
     r = n(780964),
     a = n(766075),
@@ -13,7 +13,7 @@ var l = n(855986),
     P = n(792996),
     g = n(97352),
     I = n(580630);
-function E(t, e) {
+function h(t, e) {
     let { withIntervals: n } = e ?? {};
     if (null == t || !t.hasAnyPremiumGroup) return null;
     let l = t.planIdFromItems;
@@ -28,7 +28,7 @@ function E(t, e) {
         return (0, I.CE)(i, t, e);
     }
 }
-function h(t) {
+function E(t) {
     let e,
         n,
         { sender: l, channel: u, isSender: s, inviteState: f } = t,

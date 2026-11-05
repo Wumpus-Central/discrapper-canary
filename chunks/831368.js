@@ -6,12 +6,12 @@ n.d(
     {
         I: function (e, t) {
             let [n, l] = s.useState(t),
-                a = s.useCallback((e) => {
+                r = s.useCallback((e) => {
                     e.isIntersecting && l(!0);
                 }, []),
-                r = s.useMemo(() => ({ root: e ?? null, threshold: 0, rootMargin: "900px 900px 900px 900px" }), [e]),
+                a = s.useMemo(() => ({ root: e ?? null, threshold: 0, rootMargin: "900px 900px 900px 900px" }), [e]),
                 o = s.useMemo(() => !n && null != e, [n, e]);
-            return { visibilityElementRef: (0, i.B)(a, r, o), almostVisibleInViewport: n };
+            return { visibilityElementRef: (0, i.B)(r, a, o), almostVisibleInViewport: n };
         },
     },
 );

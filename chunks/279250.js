@@ -12,31 +12,31 @@ var c = n(71393),
     _ = n(977997),
     E = n(147036),
     A = n(652215),
-    h =
+    f =
         (((i = {})[(i.REMOTE_MODE = 0)] = "REMOTE_MODE"),
         (i[(i.CHANNEL_FULL = 1)] = "CHANNEL_FULL"),
         (i[(i.NO_PERMISSION = 2)] = "NO_PERMISSION"),
         (i[(i.AGE_RESTRICTED = 3)] = "AGE_RESTRICTED"),
         i);
-function f(e, t, n, i, r) {
+function h(e, t, n, i, r) {
     let o;
     if (null == e) return [!1, 2];
     let c = t.isInChannel(e.id),
         u = e instanceof d.YB && (0, E.Pd)(e, t, n),
         _ = (0, l.A)(e, i),
         A = null != r.getAwaitingRemoteSessionInfo() || null != r.getRemoteSessionId(),
-        h = (0, s.r)() && (0, a.UK)(e.id);
+        f = (0, s.r)() && (0, a.UK)(e.id);
     return (
-        A ? (o = 0) : h ? (o = 3) : _ || c ? u && !c && (o = 1) : (o = 2),
-        [!__OVERLAY__ && !A && !h && (c || (_ && !u)), o]
+        A ? (o = 0) : f ? (o = 3) : _ || c ? u && !c && (o = 1) : (o = 2),
+        [!__OVERLAY__ && !A && !f && (c || (_ && !u)), o]
     );
 }
 n.d(
     t,
     {},
     {
-        OT: h,
-        eo: f,
+        OT: f,
+        eo: h,
         vz: function (e, t, n) {
             let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
             if (e.isPrivate()) return !0;
@@ -51,7 +51,7 @@ n.d(
             );
         },
         zP: function (e) {
-            return (0, r.yK)([_.A, c.A, u.A, o.default], () => f(e, _.A, c.A, u.A, o.default));
+            return (0, r.yK)([_.A, c.A, u.A, o.default], () => h(e, _.A, c.A, u.A, o.default));
         },
     },
 );

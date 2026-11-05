@@ -11,18 +11,18 @@ var i = n(435558),
     _ = n(71393),
     E = n(967198),
     A = n(371794),
-    h = n(998218),
-    f = n(832163),
+    f = n(998218),
+    h = n(832163),
     I = n(79871),
     p = n(188275),
     m = n(652215),
-    g = n(758836);
-let T = A.QB ? "webp" : "jpg";
+    T = n(758836);
+let g = A.QB ? "webp" : "jpg";
 function S(e) {
-    if (f.A.getStorefrontGuildIds().has(e.id)) return !0;
+    if (h.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
-    let t = P(e, f.A.getApplicationIdFromGuildId(e.id));
-    return !!f.A.hasStorefrontForApplicationId(t) || (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+    let t = P(e, h.A.getApplicationIdFromGuildId(e.id));
+    return !!h.A.hasStorefrontForApplicationId(t) || (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function N(e) {
     return null == e ? null : { label: e.label, tooltip: e.tooltip, icon: e.icon };
@@ -71,7 +71,7 @@ function y(e) {
 }
 function D(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.qg)(t);
-    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === g.G2.GAME_SHOPS && s === n && (null == i || l === i);
+    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === T.G2.GAME_SHOPS && s === n && (null == i || l === i);
 }
 function b(e, t) {
     return null == e || D(location.pathname, location.search, t.applicationId)
@@ -107,7 +107,7 @@ n.d(
             return null == r.labelIconAssetId
                 ? { primaryIconAsset: void 0, primaryIconLabel: void 0 }
                 : {
-                      primaryIconAsset: h.A.toURLSafe((0, A.YE)(t, r.labelIconAssetId, i, "webp")) ?? void 0,
+                      primaryIconAsset: f.A.toURLSafe((0, A.YE)(t, r.labelIconAssetId, i, "webp")) ?? void 0,
                       primaryIconLabel: r.label,
                   };
         },
@@ -117,7 +117,7 @@ n.d(
         NH: function (e) {
             let t = e.pages.find((e) => e.leaderboard?.backgroundImageAssetId != null)?.leaderboard
                 ?.backgroundImageAssetId;
-            return null != t ? (0, A.YE)(e.applicationId, t, 1024, T) : null;
+            return null != t ? (0, A.YE)(e.applicationId, t, 1024, g) : null;
         },
         OY: b,
         Q6: function (e, t) {
@@ -156,29 +156,29 @@ n.d(
                 { size: n = 512 } = t,
                 i = e?.applicationId,
                 r = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
-            if (null != r && null != i) return h.A.toURLSafe((0, A.YE)(i, r, n, "webp"));
+            if (null != r && null != i) return f.A.toURLSafe((0, A.YE)(i, r, n, "webp"));
         },
         jz: S,
         mq: function (e) {
-            let t = f.A.getApplicationIdFromGuildId(e);
+            let t = h.A.getApplicationIdFromGuildId(e);
             return P(_.A.getGuild(e), t);
         },
         n5: function (e) {
-            if (null != e) return f.A.getGuildIdFromApplicationId(e) ?? l.A.getApplication(e)?.guildId;
+            if (null != e) return h.A.getGuildIdFromApplicationId(e) ?? l.A.getApplication(e)?.guildId;
         },
         nG: function (e) {
-            let t = (0, s.bG)([f.A], () => f.A.getGuildIdFromApplicationId(e)),
+            let t = (0, s.bG)([h.A], () => h.A.getGuildIdFromApplicationId(e)),
                 n = (0, o.h)(e);
             return { guildId: t ?? n?.guildId, application: n };
         },
         nY: function (e) {
-            let t = (0, s.bG)([f.A], () => f.A.getApplicationIdFromGuildId(e));
+            let t = (0, s.bG)([h.A], () => h.A.getApplicationIdFromGuildId(e));
             return P(
                 (0, s.bG)([_.A], () => _.A.getGuild(e), [e]),
                 t,
             );
         },
-        pV: T,
+        pV: g,
         rG: function (e, t, n, i) {
             return D(e, t, n) || (null != i && e.indexOf((0, p.Ny)(i)) >= 0);
         },
@@ -240,8 +240,8 @@ n.d(
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 { size: n = 1024 } = t;
             if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
-                return h.A.toURLSafe(
-                    (0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, T),
+                return f.A.toURLSafe(
+                    (0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, g),
                 );
         },
         zl: function (e) {

@@ -10,13 +10,13 @@ var i = n(435558),
     _ = n(152007),
     E = n(95701),
     A = n(260509),
-    h = n(34457),
-    f = n(46653),
+    f = n(34457),
+    h = n(46653),
     I = n(734057),
     p = n(696451),
     m = n(317525),
-    g = n(71393),
-    T = n(287809),
+    T = n(71393),
+    g = n(287809),
     S = n(7864),
     N = n(811091),
     C = n(652215);
@@ -88,8 +88,8 @@ function M(e, t, n) {
     return (
         i &&
             t.mfaLevel === C.EkJ.ELEVATED &&
-            n === f.default.getId() &&
-            !T.default.getCurrentUser()?.mfaEnabled &&
+            n === h.default.getId() &&
+            !g.default.getCurrentUser()?.mfaEnabled &&
             (e = a.TF(e, C.Lti)),
         e
     );
@@ -150,7 +150,7 @@ function G(e) {
         if (E.Le.has(i.type)) {
             let e = I.A.getChannel(i.parent_id);
             if (null == e || e.isScheduledForDeletion()) return O;
-            let t = o === T.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
+            let t = o === g.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
             return x(
                 i,
                 G({ user: n, context: e, overwrites: r, roles: a, checkElevated: s, excludeGuildPermissions: l }),
@@ -161,10 +161,10 @@ function G(e) {
         ((d = i.computeLurkerPermissionsAllowList() ?? d),
             (r = null != r ? { ...i.permissionOverwrites, ...r } : i.permissionOverwrites));
         let e = i.getGuildId();
-        t = null != e ? g.A.getGuild(e) : null;
+        t = null != e ? T.A.getGuild(e) : null;
     } else ((r = r ?? {}), (t = i));
     if (null == t) return O;
-    if (!(o === T.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return M(R, t, o, s);
+    if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return M(R, t, o, s);
     let u = p.Ay.getMember(t.id, o);
     return w({
         userId: o,
@@ -223,11 +223,11 @@ n.d(
                     return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
-                n = null != e ? g.A.getGuild(e) : null;
+                n = null != e ? T.A.getGuild(e) : null;
             } else n = t;
             if (null == n) return !1;
             let s = m.A.getEveryoneRole(n);
-            return !(!(0, h._m)(s, e) || r().some(i, (t) => a.zy(t.deny, e)));
+            return !(!(0, f._m)(s, e) || r().some(i, (t) => a.zy(t.deny, e)));
         },
         MJ: function (e, t) {
             let n,
@@ -237,7 +237,7 @@ n.d(
                     return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
-                n = null != e ? g.A.getGuild(e) : null;
+                n = null != e ? T.A.getGuild(e) : null;
             } else n = t;
             if (null == n) return !1;
             let r = m.A.getEveryoneRole(n).permissions,
@@ -279,7 +279,7 @@ n.d(
                 ((d = r.computeLurkerPermissionsAllowList() ?? d),
                     (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
                 let t = r.getGuildId();
-                n = null != t ? g.A.getGuild(t) : null;
+                n = null != t ? T.A.getGuild(t) : null;
             } else ((a = a ?? {}), (n = r));
             return null == n
                 ? O
@@ -333,7 +333,7 @@ n.d(
             return !!(null != t && (0, A.bM)(e, t)) || (null != n && (null == i || (0, S.zA)(n, i)));
         },
         wT: function (e) {
-            return r().some(m.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, h._m)(e, C.xBc.ADMINISTRATOR))
+            return r().some(m.A.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, f._m)(e, C.xBc.ADMINISTRATOR))
                 ? void 0
                 : (e.ownerId ?? void 0);
         },

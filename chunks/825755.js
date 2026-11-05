@@ -9,14 +9,14 @@ let a = "",
     d = "",
     m = "",
     p = "",
-    C = "",
     h = "",
+    C = "",
     f = "",
     E = "",
     S = "",
     g = !1,
-    y = null,
     I = null,
+    y = null,
     A = null,
     P = null;
 function v() {
@@ -28,27 +28,27 @@ function v() {
         (d = "US"),
         (m = ""),
         (p = ""),
-        (C = ""),
         (h = ""),
+        (C = ""),
         (f = ""),
         (E = ""),
         (S = ""),
         (g = !1),
-        (y = null),
         (I = null),
+        (y = null),
         (A = null),
         (P = null));
 }
 function x() {
-    y = null;
+    I = null;
 }
 function _(e) {
     let { error: t } = e;
-    y = t;
+    I = t;
 }
 function T(e) {
     let { message: t } = e;
-    y = new r.Ey(t);
+    I = new r.Ey(t);
 }
 class b extends l.Ay.Store {
     static displayName = "NewPaymentSourceStore";
@@ -65,7 +65,7 @@ class b extends l.Ay.Store {
         return o;
     }
     get redirectedPaymentId() {
-        return I;
+        return y;
     }
     get adyenPaymentData() {
         return c;
@@ -83,13 +83,13 @@ class b extends l.Ay.Store {
         return u;
     }
     getBillingAddressInfo() {
-        return { name: m, email: p, country: d, line1: C, line2: h, city: f, postalCode: E, state: S };
+        return { name: m, email: p, country: d, line1: h, line2: C, city: f, postalCode: E, state: S };
     }
     get isBillingAddressInfoValid() {
         return g;
     }
     get error() {
-        return y;
+        return I;
     }
 }
 let N = new b(i.h, {
@@ -102,8 +102,8 @@ let N = new b(i.h, {
         (null != t.name && "" !== t.name && (m = t.name),
             (d = t.country),
             (m = t.name),
-            (C = t.line1),
-            (h = t.line2),
+            (h = t.line1),
+            (C = t.line2),
             (f = t.city),
             (E = t.postalCode),
             (S = t.state),
@@ -119,8 +119,8 @@ let N = new b(i.h, {
             (s = n),
             (m = l.name),
             (d = l.country),
-            (C = l.line1),
-            (h = l.line2),
+            (h = l.line1),
+            (C = l.line2),
             (f = l.city),
             (E = l.postalCode),
             (S = l.state),
@@ -150,11 +150,11 @@ let N = new b(i.h, {
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { query: t } = e;
         t?.payment_id != null
-            ? ((A = !0), (I = t.payment_id))
+            ? ((A = !0), (y = t.payment_id))
             : t?.payment_source_id != null && ((A = !0), (P = t.payment_source_id));
     },
     RESET_PAYMENT_ID: function () {
-        ((A = !1), (I = null));
+        ((A = !1), (y = null));
     },
 });
 n.d(t, {}, { A: N });

@@ -1,15 +1,15 @@
 var r = n(477900),
-    i = n(582128),
-    s = n(503698),
-    a = n.n(s),
-    l = n(289873),
-    o = n(922278);
+    o = n(582128),
+    i = n(503698),
+    a = n.n(i),
+    s = n(289873),
+    l = n(922278);
 function c(t) {
     let { alt: e, ...n } = t,
-        [s, a] = i.useState(!0);
+        [i, a] = o.useState(!0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            s && (0, r.jsx)(l.y, { type: l.y.Type.LOW_MOTION, className: o.wG }),
+            i && (0, r.jsx)(s.y, { type: s.y.Type.LOW_MOTION, className: l.wG }),
             (0, r.jsx)("img", { ...n, alt: e, onLoad: () => a(!1) }),
         ],
     });
@@ -19,16 +19,16 @@ n.d(
     {},
     {
         A: function (t) {
-            let { src: e, backgroundSrc: n, alt: i, aspectRatio: s, className: l, imageChildClassName: g, ...u } = t;
+            let { src: e, backgroundSrc: n, alt: o, aspectRatio: i, className: s, imageChildClassName: g, ...u } = t;
             return (0, r.jsxs)("div", {
-                className: a()(o.kL, l),
+                className: a()(l.kL, s),
                 children: [
-                    (0, r.jsx)("img", { src: n, alt: i, className: o.iL }),
-                    (0, r.jsx)("div", { className: o.CC }),
+                    (0, r.jsx)("img", { src: n, alt: o, className: l.iL }),
+                    (0, r.jsx)("div", { className: l.CC }),
                     (0, r.jsx)("div", {
-                        style: { aspectRatio: s },
-                        className: o.ZS,
-                        children: (0, r.jsx)(c, { src: e, alt: i, className: a()(o.Sl, g), ...u }),
+                        style: { aspectRatio: i },
+                        className: l.ZS,
+                        children: (0, r.jsx)(c, { src: e, alt: o, className: a()(l.Sl, g), ...u }),
                     }),
                 ],
             });

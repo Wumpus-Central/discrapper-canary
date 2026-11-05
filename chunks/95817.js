@@ -9,18 +9,18 @@ n.d(
         G: function (e) {
             let t = (0, s.Ar)(),
                 n = r.useRef(null),
-                l = r.useRef(!1),
-                o = r.useRef(t);
+                o = r.useRef(!1),
+                l = r.useRef(t);
             r.useEffect(() => {
-                o.current = t;
+                l.current = t;
             }, [t]);
             let u = r.useCallback(
                 (t) => {
                     t
-                        ? l.current ||
+                        ? o.current ||
                           (null === n.current &&
                               (n.current = setTimeout(() => {
-                                  let t = o.current;
+                                  let t = l.current;
                                   (i.default.track(c.HAw.IMPRESSION_WISHLIST_ITEM, {
                                       sku_id: t?.skuId,
                                       wishlist_id: t?.wishlistId,
@@ -33,7 +33,7 @@ n.d(
                                       impression_session_id: t?.impressionSessionId,
                                       location_stack: t?.analyticsLocations,
                                   }),
-                                      (l.current = !0),
+                                      (o.current = !0),
                                       (n.current = null));
                               }, 500)))
                         : null !== n.current && (clearTimeout(n.current), (n.current = null));

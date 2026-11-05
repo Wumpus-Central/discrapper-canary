@@ -1,29 +1,29 @@
-var i = s(477900),
-    n = s(582128),
-    l = s(503698),
-    r = s.n(l),
-    a = s(834730),
-    E = s(792996),
-    d = s(310421);
-let m = { BLOCK: d.om, INLINE: d.mG };
+var s = i(477900),
+    n = i(582128),
+    l = i(503698),
+    r = i.n(l),
+    E = i(834730),
+    a = i(792996),
+    m = i(310421);
+let d = { BLOCK: m.om, INLINE: m.mG };
 class u extends n.PureComponent {
-    static Types = m;
+    static Types = d;
     render() {
-        let { children: e, className: t, textClassName: s, type: n = m.BLOCK, style: l } = this.props;
-        return (0, i.jsxs)("div", {
+        let { children: e, className: t, textClassName: i, type: n = d.BLOCK, style: l } = this.props;
+        return (0, s.jsxs)("div", {
             className: r()(t, n),
             style: l,
             children: [
-                (0, i.jsxs)(a.E, {
+                (0, s.jsxs)(E.E, {
                     variant: "body-sm/semibold",
                     tag: "div",
                     color: "text-feedback-positive",
-                    className: d.AD,
-                    children: [E.intl.string(E.t["8tvIiN"]), ":"],
+                    className: m.AD,
+                    children: [a.intl.string(a.t["8tvIiN"]), ":"],
                 }),
-                (0, i.jsx)(a.E, { className: r()(d.uN, s), variant: "body-sm/normal", children: e }),
+                (0, s.jsx)(E.E, { className: r()(m.uN, i), variant: "body-sm/normal", children: e }),
             ],
         });
     }
 }
-s.d(t, {}, { A: u });
+i.d(t, {}, { A: u });

@@ -1,12 +1,12 @@
 var i = n(582128),
-    s = n(855986),
-    r = n(343446);
+    r = n(855986),
+    s = n(343446);
 n.d(
     t,
     {},
     {
         P: function (e) {
-            let [t, n] = (0, s.yK)([r.A], () => [r.A.getAllUserExperimentDescriptors(), r.A.getGuildExperiments()]);
+            let [t, n] = (0, r.yK)([s.A], () => [s.A.getAllUserExperimentDescriptors(), s.A.getGuildExperiments()]);
             i.useEffect(() => {
                 e.trigger();
             }, [e, t, n]);

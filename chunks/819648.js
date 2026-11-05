@@ -14,15 +14,15 @@ n(142617);
 var _ = n(407905),
     E = n(532294),
     A = n(350363),
-    h = n(852717),
-    f = n(792996);
+    f = n(852717),
+    h = n(792996);
 let I = [a.pJ.HOURS, a.pJ.MINUTES],
     p = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
     m = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
-function g(e) {
-    return new Intl.NumberFormat(f.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
-}
 function T(e) {
+    return new Intl.NumberFormat(h.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
+}
+function g(e) {
     return Math.min(Math.max(Math.round((e / 100) * 6), 1), 5);
 }
 n.d(
@@ -65,12 +65,12 @@ n.d(
                 cardColorPalette: (0, c.o)(t),
             };
         },
-        Le: g,
+        Le: T,
         R8: function (e) {
             let t;
             return {
-                powerLevel: g(e.powerLevel),
-                powerLevelUnits: T(e.powerLevelPercentile),
+                powerLevel: T(e.powerLevel),
+                powerLevelUnits: g(e.powerLevelPercentile),
                 voice: {
                     text:
                         (t = Math.round(e.totalVoiceMinutes)) > 0
@@ -78,27 +78,27 @@ n.d(
                                   let { unit: t, time: n } = (0, a.$l)(e, I),
                                       i = Math.round(n ?? 0);
                                   return t === a.pJ.HOURS
-                                      ? f.intl.formatToPlainString(h.default.CQfBsB, { hours: i })
-                                      : f.intl.formatToPlainString(h.default.yRfTht, { minutes: i });
+                                      ? h.intl.formatToPlainString(f.default.CQfBsB, { hours: i })
+                                      : h.intl.formatToPlainString(f.default.yRfTht, { minutes: i });
                               })(t)
-                            : f.intl.formatToPlainString(h.default.x7PkHm, { minutes: t }),
-                    accessibilityLabel: f.intl.formatToPlainString(h.default.lw35aH, { duration: (0, d.GM)(t) }),
+                            : h.intl.formatToPlainString(f.default.x7PkHm, { minutes: t }),
+                    accessibilityLabel: h.intl.formatToPlainString(f.default.lw35aH, { duration: (0, d.GM)(t) }),
                 },
                 messages: {
                     text:
                         e.numMessagesSent > 0
-                            ? e.numMessagesSent.toLocaleString(f.intl.currentLocale)
-                            : f.intl.formatToPlainString(h.default.foKBCN, { count: e.numMessagesSent }),
-                    accessibilityLabel: f.intl.formatToPlainString(h.default.IdRUAC, { count: e.numMessagesSent }),
+                            ? e.numMessagesSent.toLocaleString(h.intl.currentLocale)
+                            : h.intl.formatToPlainString(f.default.foKBCN, { count: e.numMessagesSent }),
+                    accessibilityLabel: h.intl.formatToPlainString(f.default.IdRUAC, { count: e.numMessagesSent }),
                 },
                 topGuildDaysInteracted: (function (e) {
                     if (null == e.topGuild) {
                         var t;
-                        return { text: (t = f.intl.string(h.default.GultYJ)), accessibilityLabel: t };
+                        return { text: (t = h.intl.string(f.default.GultYJ)), accessibilityLabel: t };
                     }
                     return {
-                        text: f.intl.formatToPlainString(h.default.cQXIkj, { days: e.topGuildNumDaysInteracted }),
-                        accessibilityLabel: f.intl.formatToPlainString(h.default.MpSH8v, {
+                        text: h.intl.formatToPlainString(f.default.cQXIkj, { days: e.topGuildNumDaysInteracted }),
+                        accessibilityLabel: h.intl.formatToPlainString(f.default.MpSH8v, {
                             days: e.topGuildNumDaysInteracted,
                         }),
                     };
@@ -107,7 +107,7 @@ n.d(
                     if (null != e.topGuild)
                         return {
                             text: e.topGuild.guildName,
-                            accessibilityLabel: f.intl.formatToPlainString(h.default["9UTJ+t"], {
+                            accessibilityLabel: h.intl.formatToPlainString(f.default["9UTJ+t"], {
                                 guildName: e.topGuild.guildName,
                             }),
                         };
@@ -115,9 +115,9 @@ n.d(
                 reactions: {
                     text:
                         e.numEmojisSent > 0
-                            ? e.numEmojisSent.toLocaleString(f.intl.currentLocale)
-                            : f.intl.formatToPlainString(h.default.RHYx1k, { count: e.numEmojisSent }),
-                    accessibilityLabel: f.intl.formatToPlainString(h.default["36qpUG"], { count: e.numEmojisSent }),
+                            ? e.numEmojisSent.toLocaleString(h.intl.currentLocale)
+                            : h.intl.formatToPlainString(f.default.RHYx1k, { count: e.numEmojisSent }),
+                    accessibilityLabel: h.intl.formatToPlainString(f.default["36qpUG"], { count: e.numEmojisSent }),
                 },
                 topEmojiName: (function (e) {
                     if (!(e.numEmojisSent <= 0) && null != e.topEmoji)
@@ -126,7 +126,7 @@ n.d(
                                 null == e.topEmoji.emojiId
                                     ? l.Ay.convertSurrogateToName(e.topEmoji.emojiName)
                                     : `:${e.topEmoji.emojiName}:`,
-                            accessibilityLabel: f.intl.formatToPlainString(h.default.CcBo8C, {
+                            accessibilityLabel: h.intl.formatToPlainString(f.default.CcBo8C, {
                                 emojiName: e.topEmoji.emojiName,
                             }),
                         };
@@ -134,15 +134,15 @@ n.d(
                 daysPlayed: {
                     text:
                         e.totalDaysPlayed > 0
-                            ? f.intl.formatToPlainString(h.default.cQXIkj, { days: e.totalDaysPlayed })
-                            : f.intl.string(h.default.mg1NPe),
-                    accessibilityLabel: f.intl.formatToPlainString(h.default.LYcKX7, { days: e.totalDaysPlayed }),
+                            ? h.intl.formatToPlainString(f.default.cQXIkj, { days: e.totalDaysPlayed })
+                            : h.intl.string(f.default.mg1NPe),
+                    accessibilityLabel: h.intl.formatToPlainString(f.default.LYcKX7, { days: e.totalDaysPlayed }),
                 },
                 topGameName: (function (e) {
                     if (!(e.totalDaysPlayed <= 0) && null != e.topGame)
                         return {
                             text: e.topGame.applicationName,
-                            accessibilityLabel: f.intl.formatToPlainString(h.default.kLqpNC, {
+                            accessibilityLabel: h.intl.formatToPlainString(f.default.kLqpNC, {
                                 gameName: e.topGame.applicationName,
                             }),
                         };
@@ -160,7 +160,7 @@ n.d(
         b5: function (e) {
             switch (e.version) {
                 case E.wk.V2025:
-                    return f.intl.string(A.default.goiR2u);
+                    return h.intl.string(A.default.goiR2u);
                 case E.wk.V2026:
                 default:
                     return null;
@@ -224,7 +224,7 @@ n.d(
                       cardColorPalette: e.card_color_palette ?? i.h.NONE,
                   };
         },
-        sX: T,
+        sX: g,
         vF: function (e, t) {
             let n = [];
             return (

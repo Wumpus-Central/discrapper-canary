@@ -122,8 +122,8 @@ n.d(
                 }
                 if (null == s) continue;
                 c += u * s.mag;
-                let { tStart: E, tEnd: A, peakT: h, peakV: f } = s.window;
-                r.push({ emotion: e, peakT: h, peakV: f, sustain: A - E + 1, tStart: E, tEnd: A });
+                let { tStart: E, tEnd: A, peakT: f, peakV: h } = s.window;
+                r.push({ emotion: e, peakT: f, peakV: h, sustain: A - E + 1, tStart: E, tEnd: A });
             }
             return { mainEventScore: c, anchors: l(a, i.eventChainGapChunks), events: r };
         },

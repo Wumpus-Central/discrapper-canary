@@ -62,7 +62,7 @@ let c = new s.A("KeyboardLayoutMapUtils"),
 function A(e) {
     return null == e ? e : e.toLocaleLowerCase();
 }
-class h {
+class f {
     map;
     constructor(e = E) {
         this.map = new Map(
@@ -97,15 +97,15 @@ class h {
         this.map.set(e, t);
     }
 }
-let f = new h();
+let h = new f();
 async function I() {
-    if (__OVERLAY__) return ((f = new h()), !1);
+    if (__OVERLAY__) return ((h = new f()), !1);
     if (navigator.keyboard?.getLayoutMap != null)
         try {
             let e = await navigator.keyboard.getLayoutMap();
-            return ((f = new h(Object.fromEntries(e.entries()))), !0);
+            return ((h = new f(Object.fromEntries(e.entries()))), !0);
         } catch (e) {
-            f = new h();
+            h = new f();
         }
     return !1;
 }
@@ -125,8 +125,8 @@ function p(e) {
 function m(e) {
     return { keyCode: e.keyCode, key: null != e.key ? A(e.key) : void 0, code: e.code };
 }
-let g = "keyboard-layout-map";
-class T {
+let T = "keyboard-layout-map";
+class g {
     keyCodeMap;
     keyMap;
     _internalKeyLayoutMap = null;
@@ -137,7 +137,7 @@ class T {
     _cachedAllEvents = [];
     constructor(e = {}) {
         this._defaultKeyMap = e;
-        let t = a.w.get(g) ?? null;
+        let t = a.w.get(T) ?? null;
         (null != t ? (this.keyMap = t) : (this.keyMap = p({ ...e })),
             this._initializeInternalLayoutMap(),
             (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()),
@@ -188,7 +188,7 @@ class T {
         return e;
     }
     _initializeInternalLayoutMap() {
-        let e = f;
+        let e = h;
         ((this._internalKeyLayoutMap = new Map(Array.from(e.entries()))), this._setCachedKeyLayoutMapEntries());
     }
     _hasExactMatch(e) {
@@ -227,10 +227,10 @@ class T {
     }
     save() {
         var e;
-        ((e = this.keyMap), a.w.set(g, e));
+        ((e = this.keyMap), a.w.set(T, e));
     }
     getLayoutMap() {
-        return null == this._internalKeyLayoutMap ? f : this._internalKeyLayoutMap;
+        return null == this._internalKeyLayoutMap ? h : this._internalKeyLayoutMap;
     }
     getKeyCode(e) {
         return this.keyMap[e];
@@ -238,7 +238,7 @@ class T {
     findCodeFromKeyboardLayoutMap(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.cachedKeyLayoutMapEntries;
-        t && (n = Array.from(f.entries()));
+        t && (n = Array.from(h.entries()));
         let i = A(e);
         return (
             n.find((e) => {
@@ -248,7 +248,7 @@ class T {
         );
     }
 }
-class S extends T {
+class S extends g {
     getKeyString(e, t) {
         let n = this.getKeyCodeMapItem(e);
         return (
@@ -407,7 +407,7 @@ n.d(
         },
         Ze: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            return e ? f : (R()?.getLayoutMap() ?? f);
+            return e ? h : (R()?.getLayoutMap() ?? h);
         },
         pF: O,
         sv: function (e) {

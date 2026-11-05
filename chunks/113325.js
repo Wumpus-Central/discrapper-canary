@@ -50,7 +50,7 @@ function A(e) {
         }),
     });
 }
-function h(e) {
+function f(e) {
     let { children: t, role: n = "dialog", ...r } = e;
     return (0, i.jsx)(s.sk, {
         children: (e) =>
@@ -97,7 +97,7 @@ n.d(
                     null != E && null != o && E({ componentName: d, payload: o });
                 }, [E, d, o]),
                 (0, l.tj)(_, { returnRef: n, disable: !a }),
-                (0, i.jsx)(a ? A : h, { ...c, ref: _ })
+                (0, i.jsx)(a ? A : f, { ...c, ref: _ })
             );
         },
         zR: _,

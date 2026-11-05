@@ -17,8 +17,8 @@ let o = (e, t) => `${t}-${e}`,
     ),
     E = 0,
     A = 0,
-    h = 0;
-function f() {
+    f = 0;
+function h() {
     let e = 0,
         t = 0,
         n = 0;
@@ -33,7 +33,7 @@ function f() {
     }),
         (E = e),
         (A = t),
-        (h = n));
+        (f = n));
 }
 function I(e) {
     _.set(o(e.id, e.applicationId), e);
@@ -53,7 +53,7 @@ class m extends i.Ay.Store {
         return A;
     }
     getGameFriendCount() {
-        return h;
+        return f;
     }
     getGameFriendsForApplication(e) {
         return _.values(d(e), !0).filter((e) => e.type === l.eA$.FRIEND);
@@ -80,7 +80,7 @@ class m extends i.Ay.Store {
         return _.version;
     }
 }
-let g = new m(a.h, {
+let T = new m(a.h, {
     CONNECTION_OPEN: function (e) {
         (_.clear(),
             e.gameRelationships.forEach((e) => {
@@ -92,13 +92,13 @@ let g = new m(a.h, {
                     dmAccessType: e.dm_access_type,
                 });
             }),
-            f());
+            h());
     },
     GAME_RELATIONSHIP_ADD: function (e) {
-        (I(e.gameRelationship), f());
+        (I(e.gameRelationship), h());
     },
     GAME_RELATIONSHIP_REMOVE: function (e) {
-        (p(e.userId, e.applicationId), f());
+        (p(e.userId, e.applicationId), h());
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { unknownApplicationIds: t } = e;
@@ -106,8 +106,8 @@ let g = new m(a.h, {
             for (let e of t)
                 for (let t of _.values(d(e)))
                     (t.type === l.eA$.PENDING_INCOMING || t.type === l.eA$.PENDING_OUTGOING) && p(t.id, e);
-            f();
+            h();
         }
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

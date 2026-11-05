@@ -1,6 +1,6 @@
 var i = n(855986),
-    l = n(73153),
-    r = n(432005),
+    r = n(73153),
+    l = n(432005),
     s = n(287809),
     a = n(380335),
     o = n(157550);
@@ -12,7 +12,7 @@ function c(e) {
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!c(e) || (null != t && e !== t?.channel_id)) return;
-    let i = null == t ? null : (0, r.rh)(t);
+    let i = null == t ? null : (0, l.rh)(t);
     u[e] = { loaded: !0, error: n, message: i };
 }
 class f extends i.Ay.Store {
@@ -27,7 +27,7 @@ class f extends i.Ay.Store {
         return (e in u || (u[e] = { loaded: !1, error: !1, message: null }), u[e]);
     }
 }
-let g = new f(l.h, {
+let g = new f(r.h, {
     CONNECTION_OPEN: function () {
         ((u = {}), d.clear());
     },
@@ -52,7 +52,7 @@ let g = new f(l.h, {
         if (null == t) return !1;
         let n = u[t];
         if (null == n || null == n.message) return !1;
-        u[t] = { ...n, message: (0, r.IU)(n.message, e.message) };
+        u[t] = { ...n, message: (0, l.IU)(n.message, e.message) };
     },
     MESSAGE_DELETE: function (e) {
         if (!c(e.channelId)) return !1;

@@ -18,7 +18,7 @@ var c = n(927813),
         (i[(i.REFERRER_REWARD_GRANTED = 4)] = "REFERRER_REWARD_GRANTED"),
         i),
     A = (((r = {})[(r.SUCCESS = 1)] = "SUCCESS"), (r[(r.FAIL = 2)] = "FAIL"), r);
-let h = new (class {
+let f = new (class {
         cache;
         expiration;
         constructor() {
@@ -37,7 +37,7 @@ let h = new (class {
             this.expiration < Date.now() && this.cache.clear();
         }
     })(),
-    f = new a.A(30 * c.A.Millis.SECOND, 5 * c.A.Millis.MINUTE, !0),
+    h = new a.A(30 * c.A.Millis.SECOND, 5 * c.A.Millis.MINUTE, !0),
     I = 0;
 n.d(
     t,
@@ -45,7 +45,7 @@ n.d(
     {
         P7: async function (e, t, n) {
             let i = JSON.stringify({ index: e, searchQuery: t });
-            if (h.has(i)) return h.get(i);
+            if (f.has(i)) return f.get(i);
             let { users: r, next_index: a } = (
                     await s.Bo.post({
                         url: _.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
@@ -55,7 +55,7 @@ n.d(
                     })
                 ).body,
                 l = { users: r.map((e) => new d.A(e)), nextIndex: a };
-            return (h.set(i, l), l);
+            return (f.set(i, l), l);
         },
         aK: E,
         dy: async function (e) {
@@ -68,7 +68,7 @@ n.d(
                         oldFormErrors: !0,
                         rejectWithError: !1,
                     });
-                    (f.succeed(),
+                    (h.succeed(),
                         (I = 0),
                         l.h.dispatch({
                             type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_SUCCESS",
@@ -76,7 +76,7 @@ n.d(
                             eligibleRecipientIds: t.body.users.map((e) => e.id),
                         }));
                 } catch {
-                    ((I = Date.now() + f.fail()),
+                    ((I = Date.now() + h.fail()),
                         l.h.dispatch({ type: "REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_FAILURE", recipientIds: e }));
                 }
             }

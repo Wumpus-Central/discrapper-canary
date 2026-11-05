@@ -24,9 +24,9 @@ n.d(
                 _ = c.getVoiceChannelId(),
                 E = null != _ ? d.getVoiceStateForChannel(_, t) : null,
                 A = i && (E?.mute || E?.selfMute),
-                h = u.isSpeaking(t, o) && !A,
-                f = u.isSoundSharing(t) && n;
-            return h || f;
+                f = u.isSpeaking(t, o) && !A,
+                h = u.isSoundSharing(t) && n;
+            return f || h;
         },
     },
 );

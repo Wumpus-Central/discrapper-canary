@@ -11,13 +11,13 @@ var i = n(435558),
     _ = n(90644),
     E = n(61330),
     A = n(960076),
-    h = n(323073),
-    f = n(627363),
+    f = n(323073),
+    h = n(627363),
     I = n(587895),
     p = n(626584),
     m = n(225123),
-    g = n(294857),
-    T = n(361686),
+    T = n(294857),
+    g = n(361686),
     S = n(812020),
     N = n(57985),
     C = n(907459),
@@ -61,11 +61,11 @@ function z() {
 function q(e) {
     return U.A.findActivity(e, (e) => e.type !== a.$.CUSTOM_STATUS);
 }
-function Z(e) {
+function Q(e) {
     let t = Y.get(e);
     return (null == t && ((t = new L.A({ name: e })), Y.set(e, t)), t);
 }
-function Q(e) {
+function Z(e) {
     return (null == K[e] && (K = { ...K, [e]: new R.A({ url: e }) }), K[e]);
 }
 function J(e) {
@@ -78,7 +78,7 @@ function ee(e) {
         if (null != t) return t;
         J(e.application_id);
     }
-    return (0, A.A)(e) && null != e.url ? Q(e.url) : (0, E.A)(e) ? Z(e.name) : null;
+    return (0, A.A)(e) && null != e.url ? Z(e.url) : (0, E.A)(e) ? Q(e.name) : null;
 }
 function et(e) {
     let t = x.A.getVoiceStateForUser(e);
@@ -97,7 +97,7 @@ function ei(e, t, n) {
         _ = (0, C.L)(t, l, "NowPlayingViewStore - partiedMembers"),
         E = _.map((e) => e.id),
         A = _.filter((t) => e.has(t.id)),
-        f = !1,
+        h = !1,
         m = [],
         L = new Set(),
         b = !1,
@@ -105,10 +105,10 @@ function ei(e, t, n) {
     for (let e of _) {
         let t = y.A.getAnyStreamForUser(e.id),
             n = D.A.getChannel(t?.channelId);
-        if ((0, h.qR)(n)) continue;
+        if ((0, f.qR)(n)) continue;
         let i = q(e.id);
         if ((null != t && w.push({ stream: t, streamUser: e, activity: i }), null == i)) continue;
-        let a = (0, g.A)(i);
+        let a = (0, T.A)(i);
         if (null == a) continue;
         b = a === O.WY;
         let l = (function (e) {
@@ -120,8 +120,8 @@ function ei(e, t, n) {
                     null
                 );
             if (e === O.WY) return O.HT;
-            if (e.startsWith("xbox:")) return Z(e.slice(5));
-            if (e.startsWith(R.K)) return Q(e.slice(R.K.length));
+            if (e.startsWith("xbox:")) return Q(e.slice(5));
+            if (e.startsWith(R.K)) return Z(e.slice(R.K.length));
             let t = I.A.getApplication(e);
             return null != t ? t : (J(e), null);
         })(a);
@@ -135,7 +135,7 @@ function ei(e, t, n) {
                     userId: e.id,
                     application: l,
                     channelId: n,
-                    isContentGated: (0, h.qR)(r),
+                    isContentGated: (0, f.qR)(r),
                     currentUser: s,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: D.A,
@@ -146,7 +146,7 @@ function ei(e, t, n) {
             )
                 continue;
         }
-        if (!T.IS(i) || null == l || L.has(l.id)) continue;
+        if (!g.IS(i) || null == l || L.has(l.id)) continue;
         let E = null != i ? ee(i) : null;
         (null == E || E.id !== l.id) && (i = null);
         let A = [];
@@ -161,7 +161,7 @@ function ei(e, t, n) {
                           n = null != t ? ee(t) : null;
                       return null != n && n.id === l.id;
                   })),
-            (A = r().orderBy(A, [en], ["desc"])).length !== _.length && (f = !0),
+            (A = r().orderBy(A, [en], ["desc"])).length !== _.length && (h = !0),
             L.add(l.id),
             m.push({
                 application: l,
@@ -212,7 +212,7 @@ function ei(e, t, n) {
         isSpotifyActivity: b,
         priorityMembers: A.map((e) => ({ user: e, status: U.A.getStatus(e.id) })),
         partiedMembers: _,
-        showPlayingMembers: f,
+        showPlayingMembers: h,
         guildContext: a,
         currentActivities: ((i = (e) => e.startedPlayingTime ?? 0),
         r()(m).orderBy(
@@ -305,7 +305,7 @@ let es = r().throttle(() => {
                 $.size > 0)
             ) {
                 let e = Array.from($);
-                (f.Ay.fetchApplications(e).catch(F.tEg), e.forEach((e) => X.add(e)), $.clear());
+                (h.Ay.fetchApplications(e).catch(F.tEg), e.forEach((e) => X.add(e)), $.clear());
             }
             H = !0;
         }

@@ -11,13 +11,13 @@ var i = n(536637),
     _ = n(477427),
     E = n(811091),
     A = n(152007),
-    h = n(469881),
-    f = n(37411),
+    f = n(469881),
+    h = n(37411),
     I = n(652215);
 (n(792996),
     n.d(
         t,
-        { aK: () => h.A },
+        { aK: () => f.A },
         {
             D3: function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
@@ -40,32 +40,32 @@ var i = n(536637),
                     r = e.parent_id,
                     s = (0, _.ME)(i, r);
                 function l(e) {
-                    return (0, a.Lt)(e, f.CP.ALL_MESSAGES)
+                    return (0, a.Lt)(e, h.CP.ALL_MESSAGES)
                         ? _.Qe[I.orn.ALL_MESSAGES]
-                        : (0, a.Lt)(e, f.CP.ONLY_MENTIONS)
+                        : (0, a.Lt)(e, h.CP.ONLY_MENTIONS)
                           ? _.Qe[I.orn.ONLY_MENTIONS]
-                          : (0, a.Lt)(e, f.CP.NO_MESSAGES)
+                          : (0, a.Lt)(e, h.CP.NO_MESSAGES)
                             ? _.Qe[I.orn.NO_MESSAGES]
                             : _.Qe[I.orn.NULL];
                 }
                 let d = A.A.flags(e.id) ?? 0,
                     E = l(d),
-                    h = A.A.isMuted(e.id),
+                    f = A.A.isMuted(e.id),
                     p = (0, _.DZ)(A.A.getMuteConfig(e.id)),
-                    { can_send_message: m, parent_channel_type: g, ...T } = n,
+                    { can_send_message: m, parent_channel_type: T, ...g } = n,
                     S = {
-                        ...T,
+                        ...g,
                         channel_id: e.id,
                         guild_id: i,
                         parent_id: r,
                         channel_type: e.type,
-                        has_interacted_with_thread: (d & f.CP.HAS_INTERACTED) != 0,
+                        has_interacted_with_thread: (d & h.CP.HAS_INTERACTED) != 0,
                         parent_is_muted: c.Ay.isGuildOrCategoryOrChannelMuted(i, r),
                         old_thread_notification_setting: E,
                         new_thread_notification_setting: null != t.flags ? l(t.flags) : E,
                         parent_notification_setting: s.channel_message_notification_settings,
-                        old_thread_is_muted: h,
-                        new_thread_is_muted: t.muted ?? h,
+                        old_thread_is_muted: f,
+                        new_thread_is_muted: t.muted ?? f,
                         old_thread_muted_until: p,
                         new_thread_muted_until: null != t.mute_config ? (0, _.DZ)(t.mute_config) : p,
                     };

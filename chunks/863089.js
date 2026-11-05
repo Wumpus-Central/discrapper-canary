@@ -1,11 +1,11 @@
-var e = l(855986),
-    A = l(485296);
-l.d(
-    s,
+var l = e(855986),
+    n = e(485296);
+e.d(
+    t,
     {},
     {
-        A: function (t, s) {
-            return (0, e.bG)([A.A], () => (null != t ? A.A.getVoiceVolume(t, s) : -1 / 0), [t, s]);
+        A: function (s, t) {
+            return (0, l.bG)([n.A], () => (null != s ? n.A.getVoiceVolume(s, t) : -1 / 0), [s, t]);
         },
     },
 );

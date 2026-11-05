@@ -10,8 +10,8 @@ var i = n(115560),
     _ = n(9302),
     E = n(391973),
     A = n(652215);
-let h = new a.A("OverlayActionCreators"),
-    f = {
+let f = new a.A("OverlayActionCreators"),
+    h = {
         overlayReady(e) {
             r.h.dispatch({ type: "OVERLAY_READY", pid: e });
         },
@@ -41,8 +41,8 @@ let h = new a.A("OverlayActionCreators"),
         },
         setInstanceLocked(e) {
             __OVERLAY__
-                ? f.setInputLocked(e, (0, _.getPID)())
-                : h.error("Attempting to start an overlay session outside of the overlay context");
+                ? h.setInputLocked(e, (0, _.getPID)())
+                : f.error("Attempting to start an overlay session outside of the overlay context");
         },
         setEnabled(e, t) {
             r.h.dispatch({ type: "OVERLAY_SET_ENABLED", legacyEnabled: e, oopEnabled: t });
@@ -80,7 +80,7 @@ let h = new a.A("OverlayActionCreators"),
         startSession() {
             __OVERLAY__
                 ? r.h.dispatch({ type: "OVERLAY_START_SESSION" })
-                : h.error("Attempting to start an overlay session outside of the overlay context");
+                : f.error("Attempting to start an overlay session outside of the overlay context");
         },
         activateRegion(e) {
             r.h.dispatch({ type: "OVERLAY_ACTIVATE_REGION", region: e });
@@ -118,18 +118,18 @@ let h = new a.A("OverlayActionCreators"),
                 a = o.A.getWidgetConfig(A.uss.TEXT),
                 l = o.A.getWidgetConfig(A.uss.GUILDS_TEXT),
                 d = o.A.getWidgetDefaultSettings(A.uss.GUILDS_TEXT),
-                h = o.A.getWidgetDefaultSettings(A.uss.GUILDS),
-                f = o.A.getWidgetDefaultSettings(A.uss.TEXT);
+                f = o.A.getWidgetDefaultSettings(A.uss.GUILDS),
+                h = o.A.getWidgetDefaultSettings(A.uss.TEXT);
             if (
                 ((0, s.xp)(A.uss.TEXT, { pinned: e }),
-                0 === n.length || null == r || null == a || null == l || null == d || null == h || null == f)
+                0 === n.length || null == r || null == a || null == l || null == d || null == f || null == h)
             )
                 return;
             let I = c.A.windowSize(),
                 p = { width: 0, height: 0 },
                 m = { top: 0, left: 0, right: 0, bottom: 0 },
-                g = { width: 312, height: 0 },
-                T = { top: 0, left: 0, right: 0, bottom: 0 },
+                T = { width: 312, height: 0 },
+                g = { top: 0, left: 0, right: 0, bottom: 0 },
                 S = { width: 0, height: 0 };
             if (
                 (n.forEach((e) => {
@@ -139,18 +139,18 @@ let h = new a.A("OverlayActionCreators"),
                             ((p = (0, u.fd)(r, I)), (0, E.uv)(n));
                             break;
                         case A.uss.GUILDS:
-                            ((m = (0, u.NR)(i, r, I)), (g = (0, u.fd)(r, I)), (0, E.uv)(n));
+                            ((m = (0, u.NR)(i, r, I)), (T = (0, u.fd)(r, I)), (0, E.uv)(n));
                             break;
                         case A.uss.GUILDS_TEXT:
-                            ((T = (0, u.NR)(i, r, I)), (S = (0, u.fd)(r, I)), (0, E.uv)(n));
+                            ((g = (0, u.NR)(i, r, I)), (S = (0, u.fd)(r, I)), (0, E.uv)(n));
                     }
                 }),
                 e)
             ) {
                 let e = "auto" === S.width ? d.minSize.width : S.width;
-                e -= h.minSize.width;
-                let [n, r] = (0, u.M4)(T, { ...S, width: h.minSize.width }, I),
-                    [a, s] = (0, u.n7)(T, { ...S, width: e }, I, { x: 10, y: 10 }),
+                e -= f.minSize.width;
+                let [n, r] = (0, u.M4)(g, { ...S, width: f.minSize.width }, I),
+                    [a, s] = (0, u.n7)(g, { ...S, width: e }, I, { x: 10, y: 10 }),
                     l = o.A.getWidgetDefaultSettings(A.uss.TEXT);
                 if (null == l) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
                 (0, E.jn)({ ...l, type: A.uss.TEXT, id: (0, i.A)(), size: s, anchor: a, layoutId: t });
@@ -158,9 +158,9 @@ let h = new a.A("OverlayActionCreators"),
                 if (null == c) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
                 (0, E.jn)({ ...c, type: A.uss.GUILDS, id: (0, i.A)(), size: r, anchor: n, layoutId: t });
             } else {
-                let e = "auto" === p.width ? f.minSize.width : p.width;
-                e += h.minSize.width;
-                let [n, r] = (0, u.M4)(m, { height: g.height, width: e }, I),
+                let e = "auto" === p.width ? h.minSize.width : p.width;
+                e += f.minSize.width;
+                let [n, r] = (0, u.M4)(m, { height: T.height, width: e }, I),
                     a = o.A.getWidgetDefaultSettings(A.uss.GUILDS_TEXT);
                 if (null == a) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
                 (0, E.jn)({ ...a, type: A.uss.GUILDS_TEXT, id: (0, i.A)(), layoutId: t, anchor: n, size: r });
@@ -213,4 +213,4 @@ let h = new a.A("OverlayActionCreators"),
             r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_ACK_CHANNEL", channelId: e });
         },
     };
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

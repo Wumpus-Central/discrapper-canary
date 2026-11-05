@@ -15,15 +15,15 @@ n.d(
                     disabled: _,
                     required: E,
                     onQueryChange: A,
-                    onKeyDown: h,
-                    onFocus: f,
+                    onKeyDown: f,
+                    onFocus: h,
                     onBlur: I,
                     placeholder: p,
                     closeOnSelect: m,
-                    selectionMode: g,
+                    selectionMode: T,
                 } = c,
                 {
-                    isOpen: T,
+                    isOpen: g,
                     setIsOpen: S,
                     refs: N,
                     floatingStyles: C,
@@ -34,9 +34,9 @@ n.d(
             return (0, i.jsxs)(a.iS, {
                 ...c,
                 isCollapsible: !0,
-                isOpen: T,
+                isOpen: g,
                 setIsOpen: S,
-                closeOnSelect: m ?? "single" === g,
+                closeOnSelect: m ?? "single" === T,
                 children: [
                     (0, i.jsx)(a.a3, {
                         hideTags: t,
@@ -48,12 +48,12 @@ n.d(
                         placeholder: p,
                         ...u,
                         ...R(),
-                        onKeyDown: h,
+                        onKeyDown: f,
                         onBlur: I,
                         onQueryChange: A,
-                        onFocus: f,
+                        onFocus: h,
                     }),
-                    T &&
+                    g &&
                         (0, i.jsx)("div", {
                             ref: N.setFloating,
                             className: o.S_,

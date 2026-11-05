@@ -15,8 +15,8 @@ var l = n(485845),
     g = n(734057),
     x = n(31717),
     E = n(317525),
-    y = n(287809),
-    S = n(317681),
+    S = n(287809),
+    y = n(317681),
     C = n(186306),
     A = n(323350),
     b = n(35277),
@@ -42,8 +42,8 @@ function _(e, t) {
         1 !== t.options.length ||
         !0 === t.options[0].required ||
         T.has(t.options[0].type) ||
-        S.O7(e).length > 0 ||
-        null == S.n$(e)
+        y.O7(e).length > 0 ||
+        null == y.n$(e)
     )
         return !1;
     let n = I.VW.getFirstText(e);
@@ -111,17 +111,17 @@ function R(e) {
     p && s.H2(n, m);
 }
 function w(e) {
-    let t = S.n$(e);
+    let t = y.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
 function O(e, t) {
-    let n = S.O7(e)[0];
+    let n = y.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
-    if (null == l || n === S.O7(e)[0]) return;
+    if (null == l || n === y.O7(e)[0]) return;
     let { command: i, commandText: r } = w(e);
     !(null == i || null == r || r.endsWith(" ")) &&
         I.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
@@ -135,7 +135,7 @@ function L(e, t, n) {
     let s = i.value?.toString();
     return l.type === r.n4.CHANNEL || (l.type === r.n4.MENTIONABLE && null != g.A.getChannel(s))
         ? `<#${s}>	`
-        : l.type === r.n4.USER || (l.type === r.n4.MENTIONABLE && null != y.default.getUser(s))
+        : l.type === r.n4.USER || (l.type === r.n4.MENTIONABLE && null != S.default.getUser(s))
           ? `<@${s}>`
           : l.type === r.n4.ROLE || (l.type === r.n4.MENTIONABLE && null != E.A.getRole(t.guild_id, s ?? ""))
             ? `<@&${s}>`
@@ -151,7 +151,7 @@ n.d(
                 isInline: h,
                 isVoid: g,
                 onChange: E,
-                deleteBackward: y,
+                deleteBackward: S,
                 deleteForward: M,
                 deleteFragment: P,
             } = e;
@@ -188,7 +188,7 @@ n.d(
                 (e.isInline = (e) => !!N.has(e.type) || h(e)),
                 (e.isVoid = (e) => !!("applicationCommandOption" === e.type && T.has(e.optionType)) || g(e)),
                 (e.deleteBackward = (t) => {
-                    O(e, () => y(t));
+                    O(e, () => S(t));
                 }),
                 (e.deleteForward = (t) => {
                     O(e, () => M(t));
@@ -200,7 +200,7 @@ n.d(
                 U = null,
                 V = null,
                 W = null,
-                F = null;
+                B = null;
             return (
                 (e.onChange = () => {
                     if (null != t) {
@@ -210,8 +210,8 @@ n.d(
                             I.VW.richValue(e) !== D ||
                             !I.Ot.equals(e.selection, U) ||
                             n.activeCommand !== V ||
-                            null == F ||
-                            a.some((e, t) => F[t] !== e)
+                            null == B ||
+                            a.some((e, t) => B[t] !== e)
                         ) {
                             let u = C.o.withMergedEntry(e, () =>
                                 (function (e) {
@@ -224,10 +224,10 @@ n.d(
                                         } = e,
                                         { command: h, commandText: g } = w(t),
                                         E = n.activeCommand,
-                                        y = t.chatInputType.commands?.enabled === !0,
+                                        S = t.chatInputType.commands?.enabled === !0,
                                         C = null != p.A.getPendingReply(a.id);
                                     if (
-                                        (!y && E?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
+                                        (!S && E?.integration_types?.includes(l.b.GUILD_INSTALL)) ||
                                         (C &&
                                             E?.inputType !== c.y$.BUILT_IN_TEXT &&
                                             E?.inputType !== c.y$.BUILT_IN_INTEGRATION)
@@ -244,7 +244,7 @@ n.d(
                                         if (
                                             null == g ||
                                             !g.startsWith(e) ||
-                                            (0 === S.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
+                                            (0 === y.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
                                         )
                                             return (
                                                 i.A.clearDraftCommand(a.id, x.C.ChannelMessage), j(t, a.id, E, !0), null
@@ -255,7 +255,7 @@ n.d(
                                                     let l,
                                                         { initialValues: i, activeCommand: r } = n;
                                                     if (null == r) return null;
-                                                    let s = (r.options?.length ?? 0) > 0 ? S.pY(e, r) : null,
+                                                    let s = (r.options?.length ?? 0) > 0 ? y.pY(e, r) : null,
                                                         a = (0, A.WO)(I.VW.richValue(e), {
                                                             mode: "raw",
                                                             range: {
@@ -342,7 +342,7 @@ n.d(
                                                         g
                                                     );
                                                 })(t, a, n),
-                                                l = S.SQ(t, E, a.id);
+                                                l = y.SQ(t, E, a.id);
                                             return (
                                                 R({
                                                     guildId: a.guild_id,
@@ -398,7 +398,7 @@ n.d(
                                     if (null != E && null != h) {
                                         !(function (e, t) {
                                             if (null == t.options || 0 === t.options.length) return !1;
-                                            let n = S.pY(e, t);
+                                            let n = y.pY(e, t);
                                             return (
                                                 0 !== n.length &&
                                                 (I.VW.withoutNormalizing(e, () => {
@@ -428,7 +428,7 @@ n.d(
                                                 !0)
                                             );
                                         })(t, E) && _(t, E);
-                                        let e = S.SQ(t, E, a.id),
+                                        let e = y.SQ(t, E, a.id),
                                             n = I.VW.above(t, {
                                                 match: (e) =>
                                                     I.VW.isInline(t, e) && "applicationCommandOption" === e.type,
@@ -462,7 +462,7 @@ n.d(
                                 let t = C.o.currentEntry(e);
                                 (null != t && (t.commandId = u.commandId), (W = u.optionValues));
                             } else W = null;
-                            ((D = I.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (F = a));
+                            ((D = I.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (B = a));
                         }
                     }
                     E();

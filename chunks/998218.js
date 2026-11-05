@@ -18,9 +18,9 @@ let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
         "media.giphy.com",
         "i.giphy.com",
     ]),
-    h = r().v4().source,
-    f = RegExp(
-        `(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|${h}|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?`,
+    f = r().v4().source,
+    h = RegExp(
+        `(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|${f}|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?`,
         "ig",
     ),
     I = new Set([
@@ -36,11 +36,11 @@ function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (u.test(e) || (t && I.has(e.toLowerCase())));
 }
-function g(e) {
+function T(e) {
     let t = (0, o.fb)();
     return null != t && e === `media--${t}`;
 }
-function T(e) {
+function g(e) {
     return null != e && "discord:" === e;
 }
 function S(e) {
@@ -51,7 +51,7 @@ function S(e) {
     return (
         null != i &&
         ((!!(0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname)) ||
-            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || g(t)))) ||
+            !!((0, o.iT)() && ((t = i.hostname), null != (n = (0, o.fb)()) && (t === n || T(t)))) ||
             i.hostname === window.GLOBAL_ENV.CDN_HOST ||
             _.test(i.hostname))
     );
@@ -63,7 +63,7 @@ function N(e, t, n) {
         null != i &&
         (!!(
             ((0, o.iT)() && ("localhost" === i.hostname || "127.0.0.1" === i.hostname) && "4000" === i.port) ||
-            ((0, o.iT)() && g(i.hostname))
+            ((0, o.iT)() && T(i.hostname))
         ) ||
             E.test(i.hostname))
     );
@@ -82,10 +82,10 @@ function O(e) {
     return !1;
 }
 function R(e) {
-    return null != e && T(l.qg(e).protocol);
+    return null != e && g(l.qg(e).protocol);
 }
 let L = {
-    URL_REGEX: f,
+    URL_REGEX: h,
     makeUrl: function (e, t) {
         let n = (t ?? (0, o.m6)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
         return `${location.protocol}//${n}${e}`;
@@ -95,7 +95,7 @@ let L = {
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: T,
+    isDiscordProtocol: g,
     isDiscordUrl: O,
     isDiscordUri: R,
     isDiscordCdnUrl: function (e) {

@@ -11,13 +11,13 @@ let c = null,
     _ = null,
     E = null,
     A = null,
-    h = !1,
-    f = null,
+    f = !1,
+    h = null,
     I = !1,
     p = !1,
     m = null,
-    g = !1,
-    T = null;
+    T = !1,
+    g = null;
 function S(e) {
     let { activeSubscriptions: t, record: n } = e,
         i = t.findIndex((e) => e.id === n.id);
@@ -33,12 +33,12 @@ function N() {
         (_ = null),
         (E = null),
         (A = null),
-        (h = !1),
-        (f = null),
+        (f = !1),
+        (h = null),
         (I = !1),
         (p = !1),
-        (g = !1),
-        (T = null));
+        (T = !1),
+        (g = null));
 }
 function C(e) {
     return e.status !== d.Dmq.UNPAID;
@@ -64,7 +64,7 @@ class R extends i.Ay.Store {
         return null != c;
     }
     hasFetchedMostRecentPremiumTypeSubscription() {
-        return h;
+        return f;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
         return I;
@@ -100,7 +100,7 @@ class R extends i.Ay.Store {
         return _;
     }
     getPreviousPremiumTypeSubscription() {
-        return f;
+        return h;
     }
     getIsSubscriptionEligibleForReward() {
         return m;
@@ -109,10 +109,10 @@ class R extends i.Ay.Store {
         return p;
     }
     getIsFetchingMostRecentSubscription() {
-        return g;
+        return T;
     }
     getLastLazyPerkSync() {
-        return T;
+        return g;
     }
     getPremiumGroupSubscription() {
         return O(d.rzx.PREMIUM, (e) => e.hasAnyPremiumGroup && e.statusAllowsPerks, !0);
@@ -139,7 +139,7 @@ let L = new R(r.h, {
             (u = r),
             (E = a),
             (A = s),
-            (T = n));
+            (g = n));
     },
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function (e) {
         let { subscription: t } = e;
@@ -151,20 +151,20 @@ let L = new R(r.h, {
             null != A && n.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: n })));
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function () {
-        g = !0;
+        T = !0;
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
-        if (((h = !0), (g = !1), null != t)) {
+        if (((f = !0), (T = !1), null != t)) {
             if (t.user_id !== o.default.getId()) {
-                h = !1;
+                f = !1;
                 return;
             }
             _ = l.h.createFromServer(t);
         }
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: function () {
-        g = !1;
+        T = !1;
     },
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
         let { subscription: t } = e;
@@ -173,7 +173,7 @@ let L = new R(r.h, {
                 I = !1;
                 return;
             }
-            f = l.h.createFromServer(t);
+            h = l.h.createFromServer(t);
         }
     },
     BILLING_SUBSCRIPTION_RESET: N,

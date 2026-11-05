@@ -1,8 +1,8 @@
 var e = r(288106),
     u = r(604913),
     i = r(993408),
-    a = r(623373),
-    l = r(792996);
+    l = r(623373),
+    a = r(792996);
 function o(n) {
     return n?.tenantMetadata?.collectibles?.type === u.hE.TARGETED_OFFER;
 }
@@ -19,8 +19,8 @@ r.d(
         MX: function (n) {
             return o(n) && n?.rewardConfig?.discount != null
                 ? n.rewardConfig?.discount?.type === e.RP.PERCENT && 100 === n.rewardConfig.discount.amount
-                    ? l.intl.string(l.t["302tKP"])
-                    : l.intl.string(l.t["7EGhnE"])
+                    ? a.intl.string(a.t["302tKP"])
+                    : a.intl.string(a.t["7EGhnE"])
                 : null;
         },
         PY: function (n, t) {
@@ -30,7 +30,7 @@ r.d(
                 (0, i.G0)(n) ||
                 !n.isFirstParty ||
                 ((0, i.aw)(n) && !t.includeBundles) ||
-                !(r.fiatEnabled && (0, a.go)(n))
+                !(r.fiatEnabled && (0, l.go)(n))
                 ? null
                 : t;
         },

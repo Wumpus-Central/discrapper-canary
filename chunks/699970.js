@@ -11,13 +11,13 @@ t.d(
         X: function (e) {
             let n = (0, l.bG)([s.A], () => s.A.getChannel(e), [e]),
                 t = a.MJ(o.xBc.REQUEST_TO_SPEAK, n),
-                [c, d] = i.useState(t);
+                [c, u] = i.useState(t);
             return (
-                t !== c && d(t),
+                t !== c && u(t),
                 [
                     c,
                     function (e) {
-                        null != n && (d(e), (0, r.b6)(n, o.xBc.REQUEST_TO_SPEAK, e));
+                        null != n && (u(e), (0, r.b6)(n, o.xBc.REQUEST_TO_SPEAK, e));
                     },
                 ]
             );

@@ -2,8 +2,8 @@
     v1: () => er,
     gU: () => el,
     Ay: () => eu,
-    lq: () => Q,
-    ok: () => Z,
+    lq: () => Z,
+    ok: () => Q,
     WL: () => ec,
     If: () => ed,
     Yd: () => W,
@@ -25,13 +25,13 @@ var c = n(662090),
     _ = n(734057),
     E = n(808728),
     A = n(994500),
-    h = n(309010),
-    f = n(351906),
+    f = n(309010),
+    h = n(351906),
     I = n(287809),
     p = n(997625),
     m = n(427262),
-    g = n(268988),
-    T = n(801146),
+    T = n(268988),
+    g = n(801146),
     S = n(902008),
     N = n(5990),
     C = n(257120);
@@ -170,7 +170,7 @@ function W(e, t) {
                 !0)
         );
     }
-    if (t.type === D.I4_.DMS && !f.A.hidePersonalInformation) {
+    if (t.type === D.I4_.DMS && !h.A.hidePersonalInformation) {
         let t;
         return (
             (r = a),
@@ -233,10 +233,10 @@ function q(e) {
     let t = e.getMatch(1);
     return "true" === t ? (e.setData("pinned", !0), !0) : "false" === t && (e.setData("pinned", !1), !0);
 }
-function Z(e) {
+function Q(e) {
     return $(e, Y());
 }
-function Q(e) {
+function Z(e) {
     return $(e, K());
 }
 function J(e, t, n) {
@@ -272,13 +272,13 @@ function et(e) {
                         A.A.isBlockedOrIgnored(n.id) ||
                         (e.push({ user: n, text: m.Ay.getUserTag(n) }), t.add(n.id));
                 }
-                let r = h.Ay.getCurrentlySelectedChannelId(n.guildId);
+                let r = f.Ay.getCurrentlySelectedChannelId(n.guildId);
                 return (
                     p.Ay.getRecentlyTalked(r, i).forEach((e) => {
                         let { record: t } = e;
                         return l(t);
                     }),
-                    g.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => l(I.default.getUser(e))),
+                    T.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => l(I.default.getUser(e))),
                     e.slice(0, i)
                 );
             }
@@ -327,7 +327,7 @@ function et(e) {
     let d = I.default.getCurrentUser(),
         u = t.toLowerCase().replace(/^@/, ""),
         E = null != d && t.length > 0 && (b.intl.string(b.t.Qf3ptv).startsWith(u) || D.ME.substr(1).startsWith(u)),
-        f = s
+        h = s
             .filter((e) => {
                 let { record: t } = e;
                 return !A.A.isBlockedOrIgnored(t.id) && (!E || t.id !== d?.id);
@@ -336,7 +336,7 @@ function et(e) {
                 let { record: t } = e;
                 return { text: m.Ay.getUserTag(t), user: t };
             });
-    return (E && f.unshift({ text: D.ME, user: d }), f);
+    return (E && h.unshift({ text: D.ME, user: d }), h);
 }
 function en(e) {
     let { query: t, searchContext: n, maxResults: i } = e;
@@ -372,7 +372,7 @@ function en(e) {
                       return t;
                   });
               if (0 === e.length) {
-                  let e = h.Ay.getChannelId(t),
+                  let e = f.Ay.getChannelId(t),
                       n = i.find((t) => t.id === e);
                   null != n && (i.splice(i.indexOf(n), 1), i.unshift(n));
               }
@@ -382,7 +382,7 @@ function en(e) {
                   .map((e) => ({ text: `${r[e.id]?.name ?? (0, u.m1)(e, I.default, A.A)}`, channel: e, key: e.id }))
                   .value();
           })(t, n.guildId, i)
-        : n.type !== D.I4_.DMS || f.A.hidePersonalInformation
+        : n.type !== D.I4_.DMS || h.A.hidePersonalInformation
           ? []
           : (function (e, t, n) {
                 let i = p.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, boosters: (0, p.X3)(c.rD.GROUP_DM) }),
@@ -396,7 +396,7 @@ function en(e) {
                         .filter((e) => null != e.text && null != e.channel && null != e.key)
                         .value();
                 if (0 === e.length && n) {
-                    let e = h.Ay.getChannelId(),
+                    let e = f.Ay.getChannelId(),
                         t = _.A.getChannel(e);
                     if (null != t && t.isPrivate()) {
                         let n = a.findIndex((t) => {
@@ -583,7 +583,7 @@ function ea(e) {
             key: B(b.intl.string(b.t.WNpFHa)),
             plainText: b.intl.string(b.t.WNpFHa),
             validator: () => {
-                let t = e ?? T.A.getSelectedSearchContext();
+                let t = e ?? g.A.getSelectedSearchContext();
                 return null != t && (0, N.HM)(t);
             },
             getAutocompletions: en,
@@ -594,7 +594,7 @@ function ea(e) {
             follows: [D.LWr.FILTER_IN],
             componentType: "ANSWER",
             validator: (t) => {
-                let n = e ?? T.A.getSelectedSearchContext();
+                let n = e ?? g.A.getSelectedSearchContext();
                 return null != n && W(t, n);
             },
             queryKey: "channel_id",

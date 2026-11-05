@@ -12,13 +12,13 @@ var c = n(780594),
     _ = n(64460),
     E = n(158781),
     A = n(775121),
-    h = n(429582),
-    f = n(484697),
+    f = n(429582),
+    h = n(484697),
     I = n(532624),
     p = n(723702),
     m = n(350535),
-    g = n(652215);
-let T = new Set([
+    T = n(652215);
+let g = new Set([
         "esc",
         "shift+esc",
         "pageup",
@@ -72,12 +72,12 @@ function R() {
                     let e = [];
                     for (let t of Object.values(E.zR))
                         if (t?.comboKeysBindGlobal === !0)
-                            for (let n of A.A.getRegistrableBinds(t)) T.has(n) || e.push(n);
+                            for (let n of A.A.getRegistrableBinds(t)) g.has(n) || e.push(n);
                     if (!p.isPlatformEmbedded)
                         for (let t of Object.values(I.Ay.getUserAgnosticState()))
                             t.enabled &&
                                 t.shortcut.length > 0 &&
-                                t.action !== g.hCu.UNASSIGNED &&
+                                t.action !== T.hCu.UNASSIGNED &&
                                 e.push((0, m.dI)(t.shortcut));
                     return e;
                 })()
@@ -111,13 +111,13 @@ let D = function (e) {
         return (I.Ay.addChangeListener(t), () => I.Ay.removeChangeListener(t));
     },
     b = function (e, t) {
-        let n = (0, f.fl)(e),
+        let n = (0, h.fl)(e),
             i = L.get(e),
             r = !1;
         if ("keydown" === t.type) {
             if (
                 null == n ||
-                ((0, h.t8)(n) ? !(0, h.r8)(n) : !n.ownerDocument.hasFocus() || n.ownerDocument.activeElement !== n) ||
+                ((0, f.t8)(n) ? !(0, f.r8)(n) : !n.ownerDocument.hasFocus() || n.ownerDocument.activeElement !== n) ||
                 !R().has(C(t))
             )
                 return;
@@ -137,7 +137,7 @@ let D = function (e) {
     v = function (e) {
         let t = L.get(e);
         if ((L.delete(e), null == t)) return;
-        let n = (0, f.fl)(e);
+        let n = (0, h.fl)(e);
         for (let e of t.values()) y(n, { ...e, type: "keyup" });
     },
     P = { muted: !1 },
@@ -207,10 +207,10 @@ class H extends r.A {
     stores = new Map().set(a.A, V);
     _unsubscribeKeybinds = null;
     _initialize() {
-        (s._.subscribe(g.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
+        (s._.subscribe(T.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
     }
     _terminate() {
-        for (let e of (s._.unsubscribe(g.jej.IFRAME_UNMOUNT, F),
+        for (let e of (s._.unsubscribe(T.jej.IFRAME_UNMOUNT, F),
         this._unsubscribeKeybinds?.(),
         (this._unsubscribeKeybinds = null),
         M.values()))

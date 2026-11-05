@@ -32,7 +32,7 @@ function g(e) {
         l = t[0];
     return (0, s.jsx)("div", {
         className: a()(h.EO, { [h.Gj]: n, [h.Kv]: !n }),
-        children: (0, s.jsx)(y, { props: l, useFullWidth: !n, isSingleItem: !0, maxWidth: i }),
+        children: (0, s.jsx)(I, { props: l, useFullWidth: !n, isSingleItem: !0, maxWidth: i }),
     });
 }
 function p(e) {
@@ -43,7 +43,7 @@ function p(e) {
         children: t.map((e) =>
             (0, s.jsx)(
                 "div",
-                { className: h.XE, children: (0, s.jsx)(y, { props: e, maxWidth: n, maxHeight: n }) },
+                { className: h.XE, children: (0, s.jsx)(I, { props: e, maxWidth: n, maxHeight: n }) },
                 e.item.uniqueId,
             ),
         ),
@@ -56,7 +56,7 @@ function j(e) {
     return (0, s.jsxs)("div", {
         className: a()(h.SQ, h.o_),
         children: [
-            (0, s.jsx)("div", { className: h.es, children: (0, s.jsx)(y, { props: t[0], maxWidth: n }) }),
+            (0, s.jsx)("div", { className: h.es, children: (0, s.jsx)(I, { props: t[0], maxWidth: n }) }),
             (0, s.jsx)("div", {
                 className: h.N$,
                 children: (0, s.jsx)("div", {
@@ -66,7 +66,7 @@ function j(e) {
                         .map((e) =>
                             (0, s.jsx)(
                                 "div",
-                                { className: h.$w, children: (0, s.jsx)(y, { props: e, maxWidth: l, maxHeight: 173 }) },
+                                { className: h.$w, children: (0, s.jsx)(I, { props: e, maxWidth: l, maxHeight: 173 }) },
                                 e.item.uniqueId,
                             ),
                         ),
@@ -81,7 +81,7 @@ function C(e) {
     return (0, s.jsx)("div", {
         className: h.av,
         children: t.map((e) =>
-            (0, s.jsx)(y, { props: e, maxWidth: n, maxHeight: 173, displayGridItem: !0 }, e.item.uniqueId),
+            (0, s.jsx)(I, { props: e, maxWidth: n, maxHeight: 173, displayGridItem: !0 }, e.item.uniqueId),
         ),
     });
 }
@@ -91,11 +91,11 @@ function f(e) {
     return (0, s.jsx)("div", {
         className: h._f,
         children: t.map((e) =>
-            (0, s.jsx)(y, { props: e, maxWidth: n, maxHeight: n, displayGridItem: !0 }, e.item.uniqueId),
+            (0, s.jsx)(I, { props: e, maxWidth: n, maxHeight: n, displayGridItem: !0 }, e.item.uniqueId),
         ),
     });
 }
-function y(e) {
+function I(e) {
     var t, i;
     let {
             props: n,
@@ -146,7 +146,7 @@ i.d(
                             children: d.map((e) =>
                                 (0, s.jsx)(
                                     "div",
-                                    { className: h.Br, children: (0, s.jsx)(y, { props: e }) },
+                                    { className: h.Br, children: (0, s.jsx)(I, { props: e }) },
                                     e.item.uniqueId,
                                 ),
                             ),

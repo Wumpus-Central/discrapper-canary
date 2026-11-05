@@ -11,13 +11,13 @@ var i,
     _ = n(608299),
     E = n(149468),
     A = n(207777),
-    h = n(477900),
-    f = n(192308),
+    f = n(477900),
+    h = n(192308),
     I = n(853742),
     p = n(458914),
     m = n(451909),
-    g = n(195880),
-    T = n(677413),
+    T = n(195880),
+    g = n(677413),
     S = n(46653),
     N = n(734057),
     C = n(31717),
@@ -90,8 +90,8 @@ function H(e) {
     } = e;
     return r.useCallback(
         async (e, r, A) => {
-            var h, f, I, p, g;
-            let T = null == n,
+            var f, h, I, p, T;
+            let g = null == n,
                 S = F(i, a),
                 O = i.name ?? "";
             if ("" === O && d) {
@@ -121,16 +121,16 @@ function H(e) {
                 (c.A.clearDraft(t.id, C.C.ThreadSettings),
                 c.A.clearDraft(t.id, C.C.FirstThreadMessage),
                 o?.(D),
-                (T || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
-                    ((h = D),
-                    (f = e),
+                (g || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
+                    ((f = D),
+                    (h = e),
                     (I = r),
                     (p = A),
-                    null != (g = E) && null != p && p.length > 0
-                        ? g(h, p, f, I)
+                    null != (T = E) && null != p && p.length > 0
+                        ? T(f, p, h, I)
                         : null != I && I.length > 0
-                          ? u.A.sendStickers(h.id, I, m.Ay.parse(h, f), { location: w.Hx.THREAD_CREATION })
-                          : u.A.sendMessage(h.id, m.Ay.parse(h, f), void 0, { location: w.Hx.THREAD_CREATION }))),
+                          ? u.A.sendStickers(f.id, I, m.Ay.parse(f, h), { location: w.Hx.THREAD_CREATION })
+                          : u.A.sendMessage(f.id, m.Ay.parse(f, h), void 0, { location: w.Hx.THREAD_CREATION }))),
                 _.A.clearAll(t.id, C.C.FirstThreadMessage));
         },
         [t, n, i, o, a, l, d, E],
@@ -155,17 +155,17 @@ function W(e) {
         upload: d,
         activityAction: u,
         applicationId: A,
-        voiceChatEnabled: h,
+        voiceChatEnabled: f,
     } = e;
     return r.useCallback(
-        async (e, r, f) => {
+        async (e, r, h) => {
             var m;
-            let g,
+            let T,
                 N,
                 O,
                 R,
                 L = 0,
-                [y, v] = (0, T.Ay)(e);
+                [y, v] = (0, g.Ay)(e);
             y && ((e = v), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
             let P = (0, b.Gl)(t, null),
                 M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
@@ -178,7 +178,7 @@ function W(e) {
                 x =
                     null != u
                         ? ((m = u),
-                          null == (N = null != (g = m.activity?.session_id) ? g : S.default.getSessionId())
+                          null == (N = null != (T = m.activity?.session_id) ? T : S.default.getSessionId())
                               ? null
                               : {
                                     type: m.type,
@@ -191,10 +191,10 @@ function W(e) {
                 (null != x &&
                     null != u &&
                     ((G.message.application_id = u.activity?.application_id), (G.message.activity = x)),
-                null != f && f.length > 0)
+                null != h && h.length > 0)
             )
                 try {
-                    let e = await d(f);
+                    let e = await d(h);
                     ((O = e.uploaderFile), (G.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t))));
                 } catch (r) {
                     let { file: e, code: n, reason: i } = r;
@@ -222,7 +222,7 @@ function W(e) {
                     channelId: t.id,
                     postId: R.id,
                     applicationId: A,
-                    voiceChatEnabled: h,
+                    voiceChatEnabled: f,
                 }),
                 null != G.message.application_id &&
                     E.Ay.trackWithMetadata(U.HAw.INVITE_SENT, {
@@ -237,7 +237,7 @@ function W(e) {
                 R
             );
         },
-        [t, n, i, o, l, d, u, h, A],
+        [t, n, i, o, l, d, u, f, A],
     );
 }
 async function Y(e, t, i, r) {
@@ -278,7 +278,7 @@ async function Y(e, t, i, r) {
         else if (M.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {
-                    let t = (0, g.m)();
+                    let t = (0, T.m)();
                     if (null != r.body.attachments && r.body.attachments.length > 0) {
                         var c;
                         (o.h.dispatch({
@@ -288,11 +288,11 @@ async function Y(e, t, i, r) {
                             attachments: r.body.attachments,
                         }),
                             (c = e.id),
-                            (0, f.mM)(async () => {
+                            (0, h.mM)(async () => {
                                 let { default: e } = await Promise.all([n.e(328276), n.e(473384), n.e(666009)]).then(
                                     n.bind(n, 33216),
                                 );
-                                return (n) => (0, h.jsx)(e, { ...n, channelId: c, messageId: t });
+                                return (n) => (0, f.jsx)(e, { ...n, channelId: c, messageId: t });
                             }));
                     }
                 } else

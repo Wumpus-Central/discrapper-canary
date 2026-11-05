@@ -10,28 +10,28 @@ var i = n(477900),
     _ = n(194261),
     E = n(782134),
     A = n(890856),
-    h = n(834730),
-    f = n(565645),
+    f = n(834730),
+    h = n(565645),
     I = n(253932),
     p = n(287809),
     m = n(458976),
-    g = n(453997),
-    T = n(792348),
+    T = n(453997),
+    g = n(792348),
     S = n(533491),
     N = n(257645),
     C = n(792996),
     O = n(948611);
 function R(e) {
     let { sound: t, disabled: n, setIsChildTooltipShowing: a, previewSound: l, analyticsLocations: o } = e,
-        { emojiId: A, emojiName: h } = t,
-        { text: f, icon: I } = (function (e) {
+        { emojiId: A, emojiName: f } = t,
+        { text: h, icon: I } = (function (e) {
             switch (e) {
-                case g.p.FAVORITE:
+                case T.p.FAVORITE:
                     return {
                         text: C.intl.string(C.t["iJA/TE"]),
                         icon: (0, i.jsx)(d.StarIcon, { size: "xs", color: "currentColor", className: O.zr }),
                     };
-                case g.p.FREQUENTLY_USED:
+                case T.p.FREQUENTLY_USED:
                     return {
                         text: C.intl.string(C.t["+cGVV6"]),
                         icon: (0, i.jsx)(c.ClockIcon, { size: "xs", color: "currentColor", className: O.zr }),
@@ -46,7 +46,7 @@ function R(e) {
         m = r.useCallback(() => {
             a(!1);
         }, [a]),
-        T = (0, i.jsx)("div", {
+        g = (0, i.jsx)("div", {
             onMouseEnter: p,
             onMouseLeave: m,
             children: (0, i.jsx)(S.PI, { sound: t, previewSound: l, analyticsLocations: o }),
@@ -55,7 +55,7 @@ function R(e) {
             onMouseEnter: null != I ? p : void 0,
             onMouseLeave: null != I ? m : void 0,
             children: (0, i.jsx)(u.m, {
-                text: f,
+                text: h,
                 position: "top",
                 children: (0, i.jsx)("div", { className: O.Wo, children: I }),
             }),
@@ -67,11 +67,11 @@ function R(e) {
                   (0, i.jsx)(_.LockIcon, {
                       size: "refresh_sm",
                       color: "currentColor",
-                      className: s()(O.C4, O.hz, O.B3, { [O.hn]: null != A || null != h }),
+                      className: s()(O.C4, O.hz, O.B3, { [O.hn]: null != A || null != f }),
                   }),
                   (0, i.jsx)("div", {
                       className: O.d7,
-                      children: (0, i.jsxs)("div", { className: O.O5, children: [T, N] }),
+                      children: (0, i.jsxs)("div", { className: O.O5, children: [g, N] }),
                   }),
               ],
           })
@@ -81,7 +81,7 @@ function R(e) {
                   (0, i.jsx)("div", { className: O.LQ }),
                   (0, i.jsxs)("div", {
                       className: O.O5,
-                      children: [T, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), N],
+                      children: [g, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), N],
                   }),
               ],
           });
@@ -99,7 +99,7 @@ n.d(
                     interactive: c,
                     onMouseEnter: _,
                     openUpsellForSound: E,
-                    analyticsLocations: g,
+                    analyticsLocations: T,
                     ref: S,
                 } = e,
                 { name: L, emojiId: y, emojiName: D } = t,
@@ -108,7 +108,7 @@ n.d(
                     playSoundboardSound: v,
                     previewSound: P,
                     isPlayingSound: M,
-                } = (0, T.A)(
+                } = (0, g.A)(
                     t,
                     n?.id ?? null,
                     I.dG.getSetting()?.volume ?? 100,
@@ -123,9 +123,9 @@ n.d(
                 [B, V] = r.useState(!1),
                 H = r.useCallback(
                     (e) => {
-                        F ? E?.(e) : v(g);
+                        F ? E?.(e) : v(T);
                     },
-                    [F, E, v, g],
+                    [F, E, v, T],
                 );
             return (0, i.jsx)("li", {
                 ref: S,
@@ -147,8 +147,8 @@ n.d(
                                 "aria-hidden": !0,
                                 ref: U,
                                 children: [
-                                    k && (0, i.jsx)(f.A, { emojiId: y, emojiName: D, className: O.Zg }),
-                                    (0, i.jsx)(h.E, {
+                                    k && (0, i.jsx)(h.A, { emojiId: y, emojiName: D, className: O.Zg }),
+                                    (0, i.jsx)(f.E, {
                                         variant: "body-xs/medium",
                                         color: c ? "text-default" : "text-muted",
                                         className: s()(O.TW, { [O.hn]: k }),
@@ -161,7 +161,7 @@ n.d(
                                 disabled: F,
                                 setIsChildTooltipShowing: V,
                                 previewSound: P,
-                                analyticsLocations: g,
+                                analyticsLocations: T,
                             }),
                         ],
                     }),

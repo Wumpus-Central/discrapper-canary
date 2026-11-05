@@ -19,20 +19,20 @@ n.d(
                     transitionState: t,
                     animationVariant: n = "default",
                     size: a = "md",
-                    paddingSize: h = "sm",
-                    fullScreenOnMobile: f = !0,
+                    paddingSize: f = "sm",
+                    fullScreenOnMobile: h = !0,
                     returnRef: I,
                     role: p = "dialog",
                     "aria-label": m,
-                    dismissable: g = !0,
-                    maxHeight: T = "default",
+                    dismissable: T = !0,
+                    maxHeight: g = "default",
                     onClose: S,
                     contentOutsideContainer: N,
                     trackingProps: C,
                     children: O,
                 } = e,
                 R = r.useId(),
-                L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: g }), [g, R, S]),
+                L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: T }), [T, R, S]),
                 y = (0, _.kS)(t, n),
                 D = r.useRef(null);
             return (0, i.jsx)(u.V.Provider, {
@@ -48,14 +48,14 @@ n.d(
                     children: (0, i.jsx)(c.F, {
                         forceLevel: 1,
                         children: (0, i.jsxs)("div", {
-                            className: s()(A.outerContainer, { [A.fullScreenOnMobile]: f }),
+                            className: s()(A.outerContainer, { [A.fullScreenOnMobile]: h }),
                             children: [
                                 N,
                                 (0, i.jsx)(l.animated.div, {
                                     ref: D,
                                     "data-mana-component": "modal",
-                                    className: s()(A.container, A[`size-${a}`], A[`padding-size-${h}`], {
-                                        [A.maxHeightViewport]: "viewport" === T,
+                                    className: s()(A.container, A[`size-${a}`], A[`padding-size-${f}`], {
+                                        [A.maxHeightViewport]: "viewport" === g,
                                         [A.exiting]: t === E.i.EXITING || t === E.i.EXITED,
                                     }),
                                     style: y,

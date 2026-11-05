@@ -10,7 +10,7 @@ var i = n(406935),
 let _ = new r.Ep(),
     E = new r.Ep(),
     A = new r.Ep();
-class h extends a.A {
+class f extends a.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         USER_SETTINGS_PROTO_UPDATE: () => this.handleUserSettingsProtoUpdate(),
@@ -92,5 +92,5 @@ class h extends a.A {
         } else null != E && E.stop();
     };
 }
-let f = new h();
-n.d(t, {}, { A: f });
+let h = new f();
+n.d(t, {}, { A: h });

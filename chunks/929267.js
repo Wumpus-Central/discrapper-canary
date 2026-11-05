@@ -20,9 +20,9 @@ n.d(
                 E = a.Ay.getGuildScheduledEvent(t);
             if (null == E) return;
             let A = (0, s.m)(n, t),
-                { startTime: h } = (0, l.YR)(E, n),
-                f = E?.scheduled_start_time != null ? (0, o.j)(A, h, new Date(E?.scheduled_start_time)) : null,
-                I = null != f && d.lV.has(f) ? null : (n ?? (0, o.G3)(E)),
+                { startTime: f } = (0, l.YR)(E, n),
+                h = E?.scheduled_start_time != null ? (0, o.j)(A, f, new Date(E?.scheduled_start_time)) : null,
+                I = null != h && d.lV.has(h) ? null : (n ?? (0, o.G3)(E)),
                 p = u(E.id),
                 m = u(E.id, I);
             null == I

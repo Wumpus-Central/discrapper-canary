@@ -14,7 +14,7 @@ var r = n(477900),
 function m() {
     window.getSelection()?.removeAllRanges();
 }
-function A(e) {
+function y(e) {
     let {
             children: t,
             close: n,
@@ -24,20 +24,20 @@ function A(e) {
             position: h,
             align: f,
             impressionName: g,
-            impressionProperties: A,
-            disableClickTrap: y = !1,
+            impressionProperties: y,
+            disableClickTrap: A = !1,
             repositionOnContentChange: v = !1,
         } = e,
-        w = i.useRef(n);
+        x = i.useRef(n);
     i.useEffect(() => {
-        w.current = n;
+        x.current = n;
     });
-    let x = i.useRef(o);
+    let w = i.useRef(o);
     (i.useEffect(() => {
-        x.current = o;
+        w.current = o;
     }),
-        i.useEffect(() => () => x.current?.(), []),
-        (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
+        i.useEffect(() => () => w.current?.(), []),
+        (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: y }));
     let E = (0, c.aL)(),
         b = i.useCallback(() => {
             E.dispatch(p.jej.POPOUT_SHOW);
@@ -53,11 +53,11 @@ function A(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? b() : (C(), "outside-press" === n && setTimeout(m, 0), w.current());
+            e ? b() : (C(), "outside-press" === n && setTimeout(m, 0), x.current());
         },
         overrideTargetRect: u,
         placement: (0, s.Pv)(h ?? "right", f ?? "top"),
-        blockPointerEvents: !y,
+        blockPointerEvents: !A,
         crossAccessFlip: !1,
         autoUpdate: v,
         renderLayer: (e) => {
@@ -67,7 +67,7 @@ function A(e) {
         children: () => null,
     });
 }
-class y extends i.PureComponent {
+class A extends i.PureComponent {
     state = { render: void 0 };
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
@@ -120,7 +120,7 @@ class y extends i.PureComponent {
             null != u &&
             l.context === e &&
             t.ownerDocument?.defaultView === o
-            ? (0, r.jsx)(A, {
+            ? (0, r.jsx)(y, {
                   target: t,
                   rect: s,
                   close: this.close,
@@ -156,7 +156,7 @@ n.d(
                 l = (0, o.bG)([h.A], () => h.A.theme),
                 { appContext: s, renderWindow: a } = i.useContext(c.Ay);
             return (0, r.jsx)(
-                y,
+                A,
                 { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: u.Z_ },
                 t,
             );

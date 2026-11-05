@@ -22,16 +22,16 @@ n.d(
                 })),
                 m = n?.total === 0,
                 p = e.handleStepChange,
-                C = e.handlePaymentSourceAdd,
-                h = i.useCallback(() => {
+                h = e.handlePaymentSourceAdd,
+                C = i.useCallback(() => {
                     if (t) return void p(r.pn.GIFT_CUSTOMIZATION);
                 }, [p, t]),
                 f = i.useCallback(
                     () =>
                         d
                             ? (0, l.jsx)(o.Ed, { shouldShowUnifiedHeader: !0 })
-                            : (0, l.jsx)(a.RL, { handlePaymentSourceAdd: C }),
-                    [d, C],
+                            : (0, l.jsx)(a.RL, { handlePaymentSourceAdd: h }),
+                    [d, h],
                 ),
                 E = i.useMemo(
                     () =>
@@ -46,8 +46,8 @@ n.d(
                     [t, m],
                 ),
                 S = i.useMemo(
-                    () => ({ tenantProvidedReviewButtonProps: E, onBack: h, backButtonEligible: t }),
-                    [h, E, t],
+                    () => ({ tenantProvidedReviewButtonProps: E, onBack: C, backButtonEligible: t }),
+                    [C, E, t],
                 );
             return (0, l.jsx)(s.Y, { ...e, renderStepBody: f, tenantCheckoutFooterProps: S });
         },

@@ -16,19 +16,19 @@ s.d(
                             clips: a,
                             onShareComplete: n,
                             messageReference: o,
-                            povTargetInformation: u,
-                            onShared: d,
+                            povTargetInformation: d,
+                            onShared: u,
                         } = s;
                         if (0 === a.length) return;
-                        let m = (0, i.t)(e);
+                        let c = (0, i.t)(e);
                         (0, r.H1)(a.map((e) => e.id));
                         try {
                             await (0, l.K)(a, {
-                                channelId: m ? e : void 0,
+                                channelId: c ? e : void 0,
                                 analyticsLocations: t,
                                 messageReference: o,
-                                povTargetInformation: u,
-                                onShared: d,
+                                povTargetInformation: d,
+                                onShared: u,
                             });
                         } catch (e) {
                         } finally {

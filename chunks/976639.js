@@ -12,8 +12,8 @@ var r = n(665260),
     _ = n(225142),
     E = n(701785),
     A = n(374084),
-    h = n(65995),
-    f = n(473529),
+    f = n(65995),
+    h = n(473529),
     I = n(978165),
     p = n(340837);
 class m extends s.A {
@@ -84,7 +84,7 @@ class m extends s.A {
         i?.[t] !== !0 && null != r && r.actionType === A.NewMemberActionTypes.CHAT && (0, _.eC)(e, t);
     };
     _getOrLoadOnboardingMemberActions = async (e) => {
-        let t = (0, f.K)(e),
+        let t = (0, h.K)(e),
             n = l.A.isFullServerPreview(e);
         if (!t && !n) return {};
         let i = c.Ay.getSelfMember(e);
@@ -102,9 +102,9 @@ class m extends s.A {
         }
     };
     _getOrLoadMemberActions = async (e, t) => {
-        let { completedActions: n, loading: i } = h.A.getState(e);
+        let { completedActions: n, loading: i } = f.A.getState(e);
         return null == n && !i && (0, r.Lt)(t.flags ?? 0, p.D.STARTED_HOME_ACTIONS) ? await (0, _.aW)(e) : n;
     };
 }
-let g = new m();
-n.d(t, {}, { A: g });
+let T = new m();
+n.d(t, {}, { A: T });

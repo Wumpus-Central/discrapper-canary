@@ -26,16 +26,16 @@ let v = s.memo(function (e) {
             mirror: v = !1,
             paused: E = !1,
             streamPreviewURL: C,
-            videoSpinnerContext: j,
-            userId: I,
+            videoSpinnerContext: I,
+            userId: j,
             streamKey: S,
             emptyPreviewAspectRatio: _ = "16 / 9",
         } = e,
         [b, N] = s.useState(!0),
-        [y, T] = s.useState(null),
-        L = s.useCallback(
+        [y, L] = s.useState(null),
+        T = s.useCallback(
             (e) => {
-                ("cover-landscape" === A && T(e), n?.(e));
+                ("cover-landscape" === A && L(e), n?.(e));
             },
             [A, n],
         ),
@@ -46,7 +46,7 @@ let v = s.memo(function (e) {
         s.useEffect(() => {
             a || (r ? o.onSpinnerStarted() : null != l && o.trackSpinnerDuration(n, i, l));
         }, [r, a, l, o, n, i]);
-    })({ location: "VideoStream", videoSpinnerContext: j, userId: I, streamId: t, loading: b, paused: E });
+    })({ location: "VideoStream", videoSpinnerContext: I, userId: j, streamId: t, loading: b, paused: E });
     let { onReady: R } = (function (e) {
             let { streamId: t, userId: n, videoSpinnerContext: i, streamKey: l, loading: r, paused: a = !1 } = e,
                 o = s.useRef(new c.Ep()),
@@ -70,7 +70,7 @@ let v = s.memo(function (e) {
                     }, [n, p]),
                 }
             );
-        })({ streamId: t, userId: I, loading: b, videoSpinnerContext: j, streamKey: S, paused: E }),
+        })({ streamId: t, userId: j, loading: b, videoSpinnerContext: I, streamKey: S, paused: E }),
         k = s.useCallback(() => {
             (N(!1), R());
         }, [R]);
@@ -81,7 +81,7 @@ let v = s.memo(function (e) {
                 (0, l.jsx)(r, {
                     className: a()(x.video, (0, h.t)(x, "video", D), { [x.mirror]: v }, p),
                     streamId: t,
-                    onResize: L,
+                    onResize: T,
                     onReady: k,
                     paused: E,
                 }),

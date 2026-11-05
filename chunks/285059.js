@@ -93,5 +93,5 @@ class A extends i.A {
                 }
     }
 }
-let h = new A();
-n.d(t, {}, { A: h });
+let f = new A();
+n.d(t, {}, { A: f });

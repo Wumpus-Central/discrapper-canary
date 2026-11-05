@@ -10,7 +10,7 @@ var i = n(477900),
     _ = n(652215),
     E = n(682901),
     A = n(792996),
-    h = n(212e3);
+    f = n(212e3);
 n.d(
     t,
     {},
@@ -23,7 +23,7 @@ n.d(
                     [t],
                 );
             return (0, i.jsxs)("div", {
-                className: s()(h.D, (0, o.q)(n) && h.r),
+                className: s()(f.D, (0, o.q)(n) && f.r),
                 children: [
                     (0, i.jsx)(d.E, { variant: "body-sm/medium", color: "text-default", children: a }),
                     (0, i.jsx)(c.A, {

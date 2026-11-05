@@ -12,15 +12,15 @@ var i = n(435558),
     f = n(956396),
     E = n(635222),
     I = n(225123),
-    g = n(594061),
-    h = n(919638),
+    h = n(594061),
+    g = n(919638),
     p = n(403362),
     A = n(157559),
     _ = n(652215),
     N = n(355097),
     C = n(792996);
 function y(e) {
-    if (h.A.totalUnavailableGuilds > 0 || !I.A.isConnected()) return e;
+    if (g.A.totalUnavailableGuilds > 0 || !I.A.isConnected()) return e;
     let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? f.A.getEmoji(e) ?? m.Ay.getByName(e)).filter(p.Vq);
     return [...(0, E.A)(t).keys()];
 }
@@ -64,7 +64,7 @@ n.d(
         Sw: function (e) {
             let t = x(e);
             null != t &&
-                g.bW.updateAsync(
+                h.bW.updateAsync(
                     "favoriteEmojis",
                     (e) => {
                         if (((e.emojis = y(e.emojis)), !e.emojis.includes(t))) return !1;
@@ -76,7 +76,7 @@ n.d(
         V4: function (e) {
             let t = x(e);
             null != t &&
-                g.bW.updateAsync(
+                h.bW.updateAsync(
                     "favoriteEmojis",
                     (e) =>
                         ((e.emojis = y(e.emojis)), s().size(e.emojis) >= 250)
@@ -103,7 +103,7 @@ n.d(
             );
         },
         dK: function (e) {
-            g.wc.updateAsync(
+            h.wc.updateAsync(
                 "textAndImages",
                 (t) => {
                     ((t.diversitySurrogate = r.hU.create()), (t.diversitySurrogate.value = e));

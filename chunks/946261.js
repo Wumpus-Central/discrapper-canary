@@ -10,8 +10,8 @@ var i = n(435558),
     _ = n(856383),
     E = n(257645);
 let A = "default",
-    h = /^( Device)?( \([^()]+\))+$/,
-    f = A;
+    f = /^( Device)?( \([^()]+\))+$/,
+    h = A;
 async function I() {
     if (null != window.navigator.mediaDevices)
         try {
@@ -23,24 +23,24 @@ async function I() {
                     .findIndex((e) => e.id === c.Ay.getOutputDeviceId()),
                 l = i[c.Ay.getOutputDeviceId()];
             if (null == l) {
-                f = A;
+                h = A;
                 return;
             }
             let o = n.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
                 d = o[s];
-            if (((e = l.name), (t = d?.label ?? "").startsWith(e) && null != t.substring(e.length).match(h))) {
-                f = d.deviceId;
+            if (((e = l.name), (t = d?.label ?? "").startsWith(e) && null != t.substring(e.length).match(f))) {
+                h = d.deviceId;
                 return;
             }
             if (
                 ((d = r()(o).maxBy((e) => (0, a.jM)(e.label, l.name))), null == d || 0.6 > (0, a.jM)(d.label, l.name))
             ) {
-                f = A;
+                h = A;
                 return;
             }
-            f = d.deviceId;
+            h = d.deviceId;
         } catch {
-            f = A;
+            h = A;
         }
 }
 function p(e, t) {
@@ -51,7 +51,7 @@ function m(e) {
     p("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
 }
 u.isPlatformEmbedded && (c.Ay.addChangeListener(I), I());
-let g = class {
+let T = class {
     name;
     _volume;
     _playbackRate = 1;
@@ -125,7 +125,7 @@ let g = class {
                             ((i.volume = Math.min((c.Ay.getOutputVolume() / 100) * this._volume, 1)),
                                 1 !== this._playbackRate &&
                                     ((i.preservesPitch = !1), (i.playbackRate = this._playbackRate)),
-                                u.isPlatformEmbedded && i.setSinkId(this.outputChannel === E.a.DEFAULT ? A : f),
+                                u.isPlatformEmbedded && i.setSinkId(this.outputChannel === E.a.DEFAULT ? A : h),
                                 e(i));
                         }),
                         (i.onerror = () => {
@@ -147,12 +147,12 @@ let g = class {
 };
 n.d(
     t,
-    { B: () => f },
+    { B: () => h },
     {
         C: function (e, t) {
             let n = new Audio((0, o.A)(e));
             ((n.volume = (0, d.A)(t)), n.play());
         },
-        WebAudioSound: g,
+        WebAudioSound: T,
     },
 );

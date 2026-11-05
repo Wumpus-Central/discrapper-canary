@@ -37,13 +37,13 @@ function c(e) {
             scrollToEnd: _,
             onNavigatePreviousAtStart: E,
             onNavigateNextAtEnd: A,
-            setFocus: h,
-            setFocusOnList: f,
+            setFocus: f,
+            setFocusOnList: h,
             preserveFocusPosition: I = !0,
             useVirtualFocus: p = !1,
             wrap: m = !1,
-            orientation: g = o.Gl.VERTICAL,
-            disableClickOnSpace: T = !1,
+            orientation: T = o.Gl.VERTICAL,
+            disableClickOnSpace: g = !1,
         } = e,
         S = i.useRef(n ? (0, s.t$)(t, n) : null),
         N = i.useRef(!1),
@@ -63,15 +63,15 @@ function c(e) {
     }, [c]);
     let y = i.useCallback(
             (e, t) => {
-                O.current && (h ?? L)(e, t);
+                O.current && (f ?? L)(e, t);
             },
-            [h],
+            [f],
         ),
         D = i.useCallback(
             (e) => {
-                O.current && (f ?? L)(e);
+                O.current && (h ?? L)(e);
             },
-            [f],
+            [h],
         ),
         b = i.useCallback(
             (e) => {
@@ -156,7 +156,7 @@ function c(e) {
             function a() {
                 N.current = !0;
             }
-        }, [c, t, I, y, f, D, b]));
+        }, [c, t, I, y, h, D, b]));
     let w = i.useMemo(
             () => ({
                 wrap: m,
@@ -181,8 +181,8 @@ function c(e) {
         k = i.useCallback(
             (e) => {
                 if (!O.current || (!p && !U.current)) return;
-                let n = g === o.Gl.HORIZONTAL ? o.D$.RIGHT : o.D$.DOWN,
-                    i = g === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
+                let n = T === o.Gl.HORIZONTAL ? o.D$.RIGHT : o.D$.DOWN,
+                    i = T === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
                 switch (e.key) {
                     case n:
                         (e.stopPropagation(), e.preventDefault(), G());
@@ -210,7 +210,7 @@ function c(e) {
                         return;
                     case o.D$.SPACE:
                     case o.D$.ENTER: {
-                        if ((e.key === o.D$.SPACE && T) || e.repeat) return;
+                        if ((e.key === o.D$.SPACE && g) || e.repeat) return;
                         let t = S.current;
                         if (null != t) {
                             let n = R((0, s.Mz)(t)),
@@ -221,7 +221,7 @@ function c(e) {
                     }
                 }
             },
-            [G, x, t, g, _, u, b, p],
+            [G, x, t, T, _, u, b, p],
         ),
         F = i.useCallback(
             (e) => {
@@ -233,7 +233,7 @@ function c(e) {
         () => ({
             id: t,
             containerProps: { onKeyDown: k, ref: C, tabIndex: P && I ? -1 : 0 },
-            orientation: g,
+            orientation: T,
             setFocus: F,
             async focusLastVisibleItem() {
                 var e, n;
@@ -272,6 +272,6 @@ function c(e) {
                 return e ? (0, s.HP)(e) : null;
             },
         }),
-        [t, k, g, P, I, F, x, G, b],
+        [t, k, T, P, I, F, x, G, b],
     );
 }

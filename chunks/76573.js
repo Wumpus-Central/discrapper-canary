@@ -23,13 +23,13 @@ var i,
     _,
     E,
     A,
-    h,
     f,
+    h,
     I,
     p,
     m,
-    g,
     T,
+    g,
     S = n(852015),
     N = n(144367),
     C = n(428420),
@@ -1527,7 +1527,7 @@ var j =
         (E[(E.APPLE_APP_STORE = 6)] = "APPLE_APP_STORE"),
         (E[(E.GOOGLE_PLAY = 7)] = "GOOGLE_PLAY"),
         E),
-    Z =
+    Q =
         (((A = {})[(A.AGE_ASSURANCE_GROUP_UNSPECIFIED = 0)] = "AGE_ASSURANCE_GROUP_UNSPECIFIED"),
         (A[(A.AGE_ASSURANCE_GROUP_13 = 1)] = "AGE_ASSURANCE_GROUP_13"),
         (A[(A.AGE_ASSURANCE_GROUP_14 = 2)] = "AGE_ASSURANCE_GROUP_14"),
@@ -1539,18 +1539,18 @@ var j =
         (A[(A.AGE_ASSURANCE_GROUP_25_34 = 8)] = "AGE_ASSURANCE_GROUP_25_34"),
         (A[(A.AGE_ASSURANCE_GROUP_35_UP = 9)] = "AGE_ASSURANCE_GROUP_35_UP"),
         A),
-    Q =
-        (((h = {})[(h.USER_LINK_TYPE_UNSPECIFIED = 0)] = "USER_LINK_TYPE_UNSPECIFIED"),
-        (h[(h.PARENT = 1)] = "PARENT"),
-        (h[(h.CHILD = 2)] = "CHILD"),
-        h),
-    J =
-        (((f = {})[(f.USER_LINK_STATUS_UNSPECIFIED = 0)] = "USER_LINK_STATUS_UNSPECIFIED"),
-        (f[(f.PENDING = 1)] = "PENDING"),
-        (f[(f.ACTIVE = 2)] = "ACTIVE"),
-        (f[(f.INACTIVE = 3)] = "INACTIVE"),
-        (f[(f.DECLINED = 4)] = "DECLINED"),
+    Z =
+        (((f = {})[(f.USER_LINK_TYPE_UNSPECIFIED = 0)] = "USER_LINK_TYPE_UNSPECIFIED"),
+        (f[(f.PARENT = 1)] = "PARENT"),
+        (f[(f.CHILD = 2)] = "CHILD"),
         f),
+    J =
+        (((h = {})[(h.USER_LINK_STATUS_UNSPECIFIED = 0)] = "USER_LINK_STATUS_UNSPECIFIED"),
+        (h[(h.PENDING = 1)] = "PENDING"),
+        (h[(h.ACTIVE = 2)] = "ACTIVE"),
+        (h[(h.INACTIVE = 3)] = "INACTIVE"),
+        (h[(h.DECLINED = 4)] = "DECLINED"),
+        h),
     ee =
         (((I = {})[(I.NONE_UNSPECIFIED = 0)] = "NONE_UNSPECIFIED"),
         (I[(I.SUBSCRIPTION = 1)] = "SUBSCRIPTION"),
@@ -1571,51 +1571,51 @@ var j =
         (m[(m.MEMBER = 2)] = "MEMBER"),
         m),
     ei =
-        (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (g[(g.ANIMATED_EMOJIS = 1)] = "ANIMATED_EMOJIS"),
-        (g[(g.EMOJIS_EVERYWHERE = 2)] = "EMOJIS_EVERYWHERE"),
-        (g[(g.STICKERS_EVERYWHERE = 3)] = "STICKERS_EVERYWHERE"),
-        (g[(g.SOUNDBOARD_EVERYWHERE = 4)] = "SOUNDBOARD_EVERYWHERE"),
-        (g[(g.ANIMATED_AVATAR = 5)] = "ANIMATED_AVATAR"),
-        (g[(g.CUSTOM_DISCRIMINATOR = 6)] = "CUSTOM_DISCRIMINATOR"),
-        (g[(g.PREMIUM_GUILD_MEMBER_PROFILE = 7)] = "PREMIUM_GUILD_MEMBER_PROFILE"),
-        (g[(g.PROFILE_PREMIUM_FEATURES = 8)] = "PROFILE_PREMIUM_FEATURES"),
-        (g[(g.STREAM_MID_QUALITY = 9)] = "STREAM_MID_QUALITY"),
-        (g[(g.STREAM_HIGH_QUALITY = 10)] = "STREAM_HIGH_QUALITY"),
-        (g[(g.CUSTOM_NOTIFICATION_SOUNDS = 11)] = "CUSTOM_NOTIFICATION_SOUNDS"),
-        (g[(g.VIDEO_FILTER_ASSETS = 12)] = "VIDEO_FILTER_ASSETS"),
-        (g[(g.INCREASED_FILE_UPLOAD_SIZE = 13)] = "INCREASED_FILE_UPLOAD_SIZE"),
-        (g[(g.INCREASED_GUILD_LIMIT = 14)] = "INCREASED_GUILD_LIMIT"),
-        (g[(g.INCREASED_MESSAGE_LENGTH = 15)] = "INCREASED_MESSAGE_LENGTH"),
-        (g[(g.NITRO_REACTION_TOGGLE = 16)] = "NITRO_REACTION_TOGGLE"),
-        (g[(g.CLIENT_THEMES = 17)] = "CLIENT_THEMES"),
-        (g[(g.PREMIUM_COLLECTIBLES = 18)] = "PREMIUM_COLLECTIBLES"),
-        (g[(g.CUSTOM_CALL_SOUNDS = 19)] = "CUSTOM_CALL_SOUNDS"),
-        (g[(g.PREMIUM_VOICE_FILTERS = 21)] = "PREMIUM_VOICE_FILTERS"),
-        (g[(g.CHAT_WALLPAPERS = 22)] = "CHAT_WALLPAPERS"),
-        (g[(g.MONTHLY_ORBS = 23)] = "MONTHLY_ORBS"),
-        (g[(g.SHOP_DISCOUNTS = 24)] = "SHOP_DISCOUNTS"),
-        (g[(g.MORE_QUEST_ORBS = 25)] = "MORE_QUEST_ORBS"),
-        (g[(g.PROFILE_BADGES = 26)] = "PROFILE_BADGES"),
-        (g[(g.APP_ICONS = 27)] = "APP_ICONS"),
-        (g[(g.BOOST_DISCOUNT = 28)] = "BOOST_DISCOUNT"),
-        (g[(g.FREE_BOOSTS = 29)] = "FREE_BOOSTS"),
-        (g[(g.INSTALL_PREMIUM_APPLICATIONS = 30)] = "INSTALL_PREMIUM_APPLICATIONS"),
-        (g[(g.INCREASED_VIDEO_UPLOAD_QUALITY = 31)] = "INCREASED_VIDEO_UPLOAD_QUALITY"),
-        (g[(g.DISPLAY_NAME_STYLES = 32)] = "DISPLAY_NAME_STYLES"),
-        (g[(g.VAD_COLORS = 33)] = "VAD_COLORS"),
-        (g[(g.CUSTOM_TYPING_INDICATOR = 34)] = "CUSTOM_TYPING_INDICATOR"),
-        (g[(g.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
-        (g[(g.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
-        (g[(g.SCHEDULED_MESSAGES = 37)] = "SCHEDULED_MESSAGES"),
-        g),
+        (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (T[(T.ANIMATED_EMOJIS = 1)] = "ANIMATED_EMOJIS"),
+        (T[(T.EMOJIS_EVERYWHERE = 2)] = "EMOJIS_EVERYWHERE"),
+        (T[(T.STICKERS_EVERYWHERE = 3)] = "STICKERS_EVERYWHERE"),
+        (T[(T.SOUNDBOARD_EVERYWHERE = 4)] = "SOUNDBOARD_EVERYWHERE"),
+        (T[(T.ANIMATED_AVATAR = 5)] = "ANIMATED_AVATAR"),
+        (T[(T.CUSTOM_DISCRIMINATOR = 6)] = "CUSTOM_DISCRIMINATOR"),
+        (T[(T.PREMIUM_GUILD_MEMBER_PROFILE = 7)] = "PREMIUM_GUILD_MEMBER_PROFILE"),
+        (T[(T.PROFILE_PREMIUM_FEATURES = 8)] = "PROFILE_PREMIUM_FEATURES"),
+        (T[(T.STREAM_MID_QUALITY = 9)] = "STREAM_MID_QUALITY"),
+        (T[(T.STREAM_HIGH_QUALITY = 10)] = "STREAM_HIGH_QUALITY"),
+        (T[(T.CUSTOM_NOTIFICATION_SOUNDS = 11)] = "CUSTOM_NOTIFICATION_SOUNDS"),
+        (T[(T.VIDEO_FILTER_ASSETS = 12)] = "VIDEO_FILTER_ASSETS"),
+        (T[(T.INCREASED_FILE_UPLOAD_SIZE = 13)] = "INCREASED_FILE_UPLOAD_SIZE"),
+        (T[(T.INCREASED_GUILD_LIMIT = 14)] = "INCREASED_GUILD_LIMIT"),
+        (T[(T.INCREASED_MESSAGE_LENGTH = 15)] = "INCREASED_MESSAGE_LENGTH"),
+        (T[(T.NITRO_REACTION_TOGGLE = 16)] = "NITRO_REACTION_TOGGLE"),
+        (T[(T.CLIENT_THEMES = 17)] = "CLIENT_THEMES"),
+        (T[(T.PREMIUM_COLLECTIBLES = 18)] = "PREMIUM_COLLECTIBLES"),
+        (T[(T.CUSTOM_CALL_SOUNDS = 19)] = "CUSTOM_CALL_SOUNDS"),
+        (T[(T.PREMIUM_VOICE_FILTERS = 21)] = "PREMIUM_VOICE_FILTERS"),
+        (T[(T.CHAT_WALLPAPERS = 22)] = "CHAT_WALLPAPERS"),
+        (T[(T.MONTHLY_ORBS = 23)] = "MONTHLY_ORBS"),
+        (T[(T.SHOP_DISCOUNTS = 24)] = "SHOP_DISCOUNTS"),
+        (T[(T.MORE_QUEST_ORBS = 25)] = "MORE_QUEST_ORBS"),
+        (T[(T.PROFILE_BADGES = 26)] = "PROFILE_BADGES"),
+        (T[(T.APP_ICONS = 27)] = "APP_ICONS"),
+        (T[(T.BOOST_DISCOUNT = 28)] = "BOOST_DISCOUNT"),
+        (T[(T.FREE_BOOSTS = 29)] = "FREE_BOOSTS"),
+        (T[(T.INSTALL_PREMIUM_APPLICATIONS = 30)] = "INSTALL_PREMIUM_APPLICATIONS"),
+        (T[(T.INCREASED_VIDEO_UPLOAD_QUALITY = 31)] = "INCREASED_VIDEO_UPLOAD_QUALITY"),
+        (T[(T.DISPLAY_NAME_STYLES = 32)] = "DISPLAY_NAME_STYLES"),
+        (T[(T.VAD_COLORS = 33)] = "VAD_COLORS"),
+        (T[(T.CUSTOM_TYPING_INDICATOR = 34)] = "CUSTOM_TYPING_INDICATOR"),
+        (T[(T.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
+        (T[(T.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
+        (T[(T.SCHEDULED_MESSAGES = 37)] = "SCHEDULED_MESSAGES"),
+        T),
     er =
-        (((T = {})[(T.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
-        (T[(T.SOURCE_NITRO = 1)] = "SOURCE_NITRO"),
-        (T[(T.SOURCE_THIRDPARTY_CROISSANT = 2)] = "SOURCE_THIRDPARTY_CROISSANT"),
-        (T[(T.SOURCE_BOT = 3)] = "SOURCE_BOT"),
-        (T[(T.SOURCE_HEXAGON_CAMPAIGN = 4)] = "SOURCE_HEXAGON_CAMPAIGN"),
-        T);
+        (((g = {})[(g.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
+        (g[(g.SOURCE_NITRO = 1)] = "SOURCE_NITRO"),
+        (g[(g.SOURCE_THIRDPARTY_CROISSANT = 2)] = "SOURCE_THIRDPARTY_CROISSANT"),
+        (g[(g.SOURCE_BOT = 3)] = "SOURCE_BOT"),
+        (g[(g.SOURCE_HEXAGON_CAMPAIGN = 4)] = "SOURCE_HEXAGON_CAMPAIGN"),
+        g);
 class ea extends O.G {
     constructor() {
         super("discord_protos.users.v1.TimeOfDay", [
@@ -1683,7 +1683,7 @@ class el extends O.G {
             { no: 8, name: "global_name", kind: "message", T: () => R.hU },
             { no: 9, name: "avatar_decoration_data", kind: "message", T: () => ec },
             { no: 10, name: "primary_guild", kind: "message", T: () => eS },
-            { no: 11, name: "collectibles", kind: "message", T: () => eg },
+            { no: 11, name: "collectibles", kind: "message", T: () => eT },
             { no: 12, name: "safety_state", kind: "message", T: () => H },
             { no: 13, name: "display_name_styles", kind: "message", T: () => eA },
             { no: 14, name: "vad_colors", kind: "message", T: () => tc },
@@ -1731,7 +1731,7 @@ class el extends O.G {
                     r.primaryGuild = eS.internalBinaryRead(e, e.uint32(), n, r.primaryGuild);
                     break;
                 case 11:
-                    r.collectibles = eg.internalBinaryRead(e, e.uint32(), n, r.collectibles);
+                    r.collectibles = eT.internalBinaryRead(e, e.uint32(), n, r.collectibles);
                     break;
                 case 12:
                     r.safetyState = H.internalBinaryRead(e, e.uint32(), n, r.safetyState);
@@ -1763,7 +1763,7 @@ class el extends O.G {
             e.avatarDecorationData &&
                 ec.internalBinaryWrite(e.avatarDecorationData, t.tag(9, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(10, S.O0.LengthDelimited).fork(), n).join(),
-            e.collectibles && eg.internalBinaryWrite(e.collectibles, t.tag(11, S.O0.LengthDelimited).fork(), n).join(),
+            e.collectibles && eT.internalBinaryWrite(e.collectibles, t.tag(11, S.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(12, S.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
                 eA.internalBinaryWrite(e.displayNameStyles, t.tag(13, S.O0.LengthDelimited).fork(), n).join(),
@@ -2031,7 +2031,7 @@ class eE extends O.G {
     }
 }
 let eA = new eE();
-class eh extends O.G {
+class ef extends O.G {
     constructor() {
         super("discord_protos.users.v1.UserTypingIndicatorStyle", [
             { no: 1, name: "emojis", kind: "message", repeat: 1, T: () => ep },
@@ -2091,7 +2091,7 @@ class eh extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let ef = new eh();
+let eh = new ef();
 class eI extends O.G {
     constructor() {
         super("discord_protos.users.v1.TypingIndicatorEmoji", [
@@ -2176,8 +2176,8 @@ class em extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eg = new em();
-class eT extends O.G {
+let eT = new em();
+class eg extends O.G {
     constructor() {
         super("discord_protos.users.v1.UserPrimaryGuild", [
             { no: 1, name: "identity_guild_id", kind: "message", T: () => R.ol },
@@ -2233,7 +2233,7 @@ class eT extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eS = new eT();
+let eS = new eg();
 class eN extends O.G {
     constructor() {
         super("discord_protos.users.v1.ScheduleRule", [
@@ -2617,10 +2617,10 @@ class eF extends O.G {
             { no: 1, name: "linked_users", kind: "map", K: 6, V: { kind: "message", T: () => ej } },
             { no: 2, name: "safety_feature_limits", kind: "map", K: 13, V: { kind: "message", T: () => e$ } },
             { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => ez } },
-            { no: 4, name: "quest", kind: "message", T: () => eQ },
+            { no: 4, name: "quest", kind: "message", T: () => eZ },
             { no: 5, name: "primary_guild", kind: "message", T: () => eS },
             { no: 6, name: "cross_platform_restriction", kind: "message", T: () => ey },
-            { no: 7, name: "collectibles", kind: "message", T: () => eg },
+            { no: 7, name: "collectibles", kind: "message", T: () => eT },
             { no: 8, name: "safety_state", kind: "message", T: () => H },
             { no: 9, name: "premium_state", kind: "message", T: () => e0 },
             { no: 10, name: "display_name_styles", kind: "message", T: () => eA },
@@ -2632,7 +2632,7 @@ class eF extends O.G {
             { no: 16, name: "country_data", kind: "message", T: () => to },
             { no: 17, name: "is_pending_required_action", kind: "scalar", T: 8 },
             { no: 18, name: "anonymization_info", kind: "message", T: () => ek },
-            { no: 19, name: "typing_indicator_style", kind: "message", T: () => ef },
+            { no: 19, name: "typing_indicator_style", kind: "message", T: () => eh },
             { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 },
             { no: 21, name: "vad_colors", kind: "message", T: () => tc },
             { no: 22, name: "hidden_flags", kind: "scalar", T: 4 },
@@ -2669,7 +2669,7 @@ class eF extends O.G {
                     this.binaryReadMap3(r.safetyFlags, e, n);
                     break;
                 case 4:
-                    r.quest = eQ.internalBinaryRead(e, e.uint32(), n, r.quest);
+                    r.quest = eZ.internalBinaryRead(e, e.uint32(), n, r.quest);
                     break;
                 case 5:
                     r.primaryGuild = eS.internalBinaryRead(e, e.uint32(), n, r.primaryGuild);
@@ -2678,7 +2678,7 @@ class eF extends O.G {
                     r.crossPlatformRestriction = ey.internalBinaryRead(e, e.uint32(), n, r.crossPlatformRestriction);
                     break;
                 case 7:
-                    r.collectibles = eg.internalBinaryRead(e, e.uint32(), n, r.collectibles);
+                    r.collectibles = eT.internalBinaryRead(e, e.uint32(), n, r.collectibles);
                     break;
                 case 8:
                     r.safetyState = H.internalBinaryRead(e, e.uint32(), n, r.safetyState);
@@ -2714,7 +2714,7 @@ class eF extends O.G {
                     r.anonymizationInfo = ek.internalBinaryRead(e, e.uint32(), n, r.anonymizationInfo);
                     break;
                 case 19:
-                    r.typingIndicatorStyle = ef.internalBinaryRead(e, e.uint32(), n, r.typingIndicatorStyle);
+                    r.typingIndicatorStyle = eh.internalBinaryRead(e, e.uint32(), n, r.typingIndicatorStyle);
                     break;
                 case 20:
                     r.disableStaffDiscount = e.bool();
@@ -2817,11 +2817,11 @@ class eF extends O.G {
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 ez.internalBinaryWrite(e.safetyFlags[i], t, n),
                 t.join().join());
-        (e.quest && eQ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
+        (e.quest && eZ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
                 ey.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, S.O0.LengthDelimited).fork(), n).join(),
-            e.collectibles && eg.internalBinaryWrite(e.collectibles, t.tag(7, S.O0.LengthDelimited).fork(), n).join(),
+            e.collectibles && eT.internalBinaryWrite(e.collectibles, t.tag(7, S.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(8, S.O0.LengthDelimited).fork(), n).join(),
             e.premiumState && e0.internalBinaryWrite(e.premiumState, t.tag(9, S.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
@@ -2838,7 +2838,7 @@ class eF extends O.G {
             e.anonymizationInfo &&
                 ek.internalBinaryWrite(e.anonymizationInfo, t.tag(18, S.O0.LengthDelimited).fork(), n).join(),
             e.typingIndicatorStyle &&
-                ef.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join(),
+                eh.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount),
             e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.hiddenFlags && t.tag(22, S.O0.Varint).uint64(e.hiddenFlags));
@@ -2869,7 +2869,7 @@ class eB extends O.G {
                 no: 6,
                 name: "estimated_age_group",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceGroup", Z],
+                T: () => ["discord_protos.users.v1.AgeAssuranceGroup", Q],
             },
             { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 },
             { no: 8, name: "cooldown_reset_at", kind: "message", T: () => L.D },
@@ -2958,7 +2958,7 @@ class eH extends O.G {
     constructor() {
         super("discord_protos.users.v1.LinkedUser", [
             { no: 1, name: "user_id", kind: "scalar", T: 6 },
-            { no: 2, name: "link_type", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkType", Q] },
+            { no: 2, name: "link_type", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkType", Z] },
             { no: 3, name: "link_status", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkStatus", J] },
             { no: 4, name: "requestor_id", kind: "scalar", T: 6 },
             { no: 5, name: "created_at", kind: "message", T: () => L.D },
@@ -3197,7 +3197,7 @@ class eq extends O.G {
     }
 }
 new eq();
-class eZ extends O.G {
+class eQ extends O.G {
     constructor() {
         super("discord_protos.users.v1.QuestMetadata", [{ no: 1, name: "quests_completed", kind: "scalar", T: 13 }]);
     }
@@ -3231,7 +3231,7 @@ class eZ extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eQ = new eZ();
+let eZ = new eQ();
 class eJ extends O.G {
     constructor() {
         super("discord_protos.users.v1.PremiumState", [
@@ -3356,8 +3356,8 @@ class e3 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfig", [
             { no: 1, name: "source", kind: "enum", repeat: 1, T: () => ["discord_protos.users.v1.PerkSource", er] },
-            { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e4 },
-            { no: 3, name: "increased_guild_limit", kind: "message", oneof: "kind", T: () => e7 },
+            { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e7 },
+            { no: 3, name: "increased_guild_limit", kind: "message", oneof: "kind", T: () => e4 },
             { no: 4, name: "display_name_styles", kind: "message", oneof: "kind", T: () => te },
             { no: 5, name: "client_themes", kind: "message", oneof: "kind", T: () => tn },
             { no: 6, name: "app_icons", kind: "message", oneof: "kind", T: () => tr },
@@ -3385,7 +3385,7 @@ class e3 extends O.G {
                 case 2:
                     r.kind = {
                         oneofKind: "increasedFileUploadSize",
-                        increasedFileUploadSize: e4.internalBinaryRead(
+                        increasedFileUploadSize: e7.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -3396,7 +3396,7 @@ class e3 extends O.G {
                 case 3:
                     r.kind = {
                         oneofKind: "increasedGuildLimit",
-                        increasedGuildLimit: e7.internalBinaryRead(e, e.uint32(), n, r.kind.increasedGuildLimit),
+                        increasedGuildLimit: e4.internalBinaryRead(e, e.uint32(), n, r.kind.increasedGuildLimit),
                     };
                     break;
                 case 4:
@@ -3434,9 +3434,9 @@ class e3 extends O.G {
             t.join();
         }
         ("increasedFileUploadSize" === e.kind.oneofKind &&
-            e4.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
+            e7.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
             "increasedGuildLimit" === e.kind.oneofKind &&
-                e7.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
+                e4.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
             "displayNameStyles" === e.kind.oneofKind &&
                 te.internalBinaryWrite(e.kind.displayNameStyles, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             "clientThemes" === e.kind.oneofKind &&
@@ -3484,7 +3484,7 @@ class e5 extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e5();
+let e7 = new e5();
 class e8 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", [
@@ -3521,7 +3521,7 @@ class e8 extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e8();
+let e4 = new e8();
 class e9 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigDisplayNameStyles", [

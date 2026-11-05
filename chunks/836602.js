@@ -11,23 +11,23 @@ let c = {},
     _ = {},
     E = new Set([...d.Cr, "373", o.Hy]),
     A = {},
-    h = u,
-    f = l.XlH.CLOSED,
+    f = u,
+    h = l.XlH.CLOSED,
     I = {};
 function p() {
-    ((f = l.XlH.OPEN), (I = {}));
+    ((h = l.XlH.OPEN), (I = {}));
 }
 function m() {
-    ((f = l.XlH.CLOSED), (I = {}));
-}
-function g() {
-    h = u;
+    ((h = l.XlH.CLOSED), (I = {}));
 }
 function T() {
+    f = u;
+}
+function g() {
     ((A = {}), (I = {}));
 }
 function S() {
-    (T(), g(), m());
+    (g(), T(), m());
 }
 class N extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -35,7 +35,7 @@ class N extends r.Ay.Store {
         return i;
     }
     getFormState() {
-        return f;
+        return h;
     }
     getErrors(e) {
         return I[e ?? l.ME] ?? _;
@@ -44,10 +44,10 @@ class N extends r.Ay.Store {
         return A[e ?? l.ME] ?? c;
     }
     getTryItOutChanges() {
-        return h;
+        return f;
     }
     hasTryItOutChanges() {
-        return Object.values(h).some((e) => void 0 !== e);
+        return Object.values(f).some((e) => void 0 !== e);
     }
     hasUnsavedChanges() {
         return Object.values(A).some((e) => Object.values(e).some((e) => void 0 !== e));
@@ -73,11 +73,11 @@ let C = new N(a.h, {
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== l.nc_.ACCOUNT) return !1;
-        ((f = l.XlH.OPEN), (I = {}));
+        ((h = l.XlH.OPEN), (I = {}));
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        ((i = null == t || E.has(t) ? void 0 : t), (f = l.XlH.OPEN), (I = {}));
+        ((i = null == t || E.has(t) ? void 0 : t), (h = l.XlH.OPEN), (I = {}));
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
@@ -86,17 +86,17 @@ let C = new N(a.h, {
     USER_PROFILE_SETTINGS_CLOSE: m,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
-        ((f = l.XlH.SUBMITTING), (I = {}));
+        ((h = l.XlH.SUBMITTING), (I = {}));
     },
     USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guildId: t } = e;
-        if (f !== l.XlH.SUBMITTING) return !1;
-        ((f = l.XlH.OPEN), (I[t ?? l.ME] = _));
+        if (h !== l.XlH.SUBMITTING) return !1;
+        ((h = l.XlH.OPEN), (I[t ?? l.ME] = _));
     },
     USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        if (f !== l.XlH.SUBMITTING) return !1;
-        ((f = l.XlH.OPEN), (I[t ?? l.ME] = n ?? _));
+        if (h !== l.XlH.SUBMITTING) return !1;
+        ((h = l.XlH.OPEN), (I[t ?? l.ME] = n ?? _));
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
         let { type: t, guildId: n, ...i } = e;
@@ -104,40 +104,40 @@ let C = new N(a.h, {
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function (e) {
         let { avatar: t } = e;
-        h = { ...h, tryItOutAvatar: t };
+        f = { ...f, tryItOutAvatar: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
         let { avatarDecoration: t } = e;
-        h = { ...h, tryItOutAvatarDecoration: t };
+        f = { ...f, tryItOutAvatarDecoration: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function (e) {
         let { profileEffect: t } = e;
-        h = { ...h, tryItOutProfileEffect: t };
+        f = { ...f, tryItOutProfileEffect: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function (e) {
         let { banner: t } = e;
-        h = { ...h, tryItOutBanner: t };
+        f = { ...f, tryItOutBanner: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
         let { themeColors: t } = e;
-        h = { ...h, tryItOutThemeColors: t };
+        f = { ...f, tryItOutThemeColors: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function (e) {
         let { displayNameStyles: t } = e;
-        h = { ...h, tryItOutDisplayNameStyles: t };
+        f = { ...f, tryItOutDisplayNameStyles: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE: function (e) {
         let { customTypingIndicatorStyle: t } = e;
-        h = { ...h, tryItOutCustomTypingIndicatorStyle: t };
+        f = { ...f, tryItOutCustomTypingIndicatorStyle: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
         let { lastPreset: t, banner: n, themeColors: i, avatarDecoration: r, displayNameStyles: a } = e;
-        h = {
-            ...h,
-            tryItOutLastPreset: void 0 !== t ? t : h.tryItOutLastPreset,
+        f = {
+            ...f,
+            tryItOutLastPreset: void 0 !== t ? t : f.tryItOutLastPreset,
             tryItOutBanner: n,
             tryItOutThemeColors: i,
-            tryItOutAvatarDecoration: void 0 !== r ? r : h.tryItOutAvatarDecoration,
+            tryItOutAvatarDecoration: void 0 !== r ? r : f.tryItOutAvatarDecoration,
             tryItOutDisplayNameStyles: a,
         };
     },
@@ -184,8 +184,8 @@ let C = new N(a.h, {
             }),
         );
     },
-    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: g,
+    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: g,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: T,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
         if ((A[l.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
         A[l.ME] = { ...A[l.ME], pendingLegacyUsernameDisabled: void 0 };
@@ -196,7 +196,7 @@ let C = new N(a.h, {
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        ((f = l.XlH.OPEN), (I[t ?? l.ME] = n ?? _));
+        ((h = l.XlH.OPEN), (I[t ?? l.ME] = n ?? _));
     },
     LOGOUT: S,
 });

@@ -10,8 +10,8 @@ var i = n(435558),
     _ = n(835517),
     E = n(459830),
     A = n(652215);
-let h = /\.webp($|\?|#)/i,
-    f = /\.avif($|\?|#)/i,
+let f = /\.webp($|\?|#)/i,
+    h = /\.avif($|\?|#)/i,
     I = [
         16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640,
         1024, 1280, 1536, 2048, 3072, 4096,
@@ -43,11 +43,11 @@ n.d(
                     animated: p = !1,
                     srcIsAnimated: m = !1,
                 } = e,
-                g = i,
-                T = a;
-            (c < 1 && ((g = Math.round(i * c)), (T = Math.round(a * c))),
-                null != s && (g = Math.min(g, s)),
-                null != o && (T = Math.min(T, o)));
+                T = i,
+                g = a;
+            (c < 1 && ((T = Math.round(i * c)), (g = Math.round(a * c))),
+                null != s && (T = Math.min(T, s)),
+                null != o && (g = Math.min(g, o)));
             let S = (0, _.A)();
             return (function (e) {
                 let {
@@ -62,16 +62,16 @@ n.d(
                     srcIsAnimated: p = !1,
                 } = e;
                 if (t.startsWith("data:image") || u.A.isDiscordCdnUrl(t)) return t;
-                let [m, g] = (function (e) {
+                let [m, T] = (function (e) {
                     let [t, n] = e.split("?");
                     return [t, l.qg(n)];
                 })(t);
-                (null != c && (g.format = c),
-                    null != A && (g.quality = A),
-                    I && p && (h.test(t) || f.test(t)) && (g.animated = !0),
-                    f.test(t) && (g.format = "webp"));
-                let T = (0, d.Uj)({ width: s, height: o, maxWidth: 4096, maxHeight: 4096 });
-                if (((s = T.width), (o = T.height), s !== i || o !== a)) {
+                (null != c && (T.format = c),
+                    null != A && (T.quality = A),
+                    I && p && (f.test(t) || h.test(t)) && (T.animated = !0),
+                    h.test(t) && (T.format = "webp"));
+                let g = (0, d.Uj)({ width: s, height: o, maxWidth: 4096, maxHeight: 4096 });
+                if (((s = g.width), (o = g.height), s !== i || o !== a)) {
                     let e = (function (e) {
                             try {
                                 let { getAttachmentImageLadderConfig: t } = n(502571),
@@ -91,15 +91,15 @@ n.d(
                             maxUpscale: (0, E.iE)(e, (0, _.A)()),
                             ladder: e.ladder,
                         })),
-                        (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height)));
+                        (t.width !== i || t.height !== a) && ((T.width = 0 | t.width), (T.height = 0 | t.height)));
                 }
-                return (r().isEmpty(g) || (m += "?" + l.As(g)), m);
+                return (r().isEmpty(T) || (m += "?" + l.As(T)), m);
             })({
                 src: t,
                 sourceWidth: i,
                 sourceHeight: a,
-                targetWidth: (g *= S),
-                targetHeight: (T *= S),
+                targetWidth: (T *= S),
+                targetHeight: (g *= S),
                 format: A,
                 quality: I,
                 animated: p,

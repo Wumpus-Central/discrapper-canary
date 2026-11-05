@@ -4,15 +4,15 @@ var i = n(477900),
     s = n.n(l),
     a = n(649852),
     o = n.n(a),
-    u = n(115560),
-    c = n(855986),
+    c = n(115560),
+    u = n(855986),
     d = n(52133),
     m = n(684013),
     h = n(869146),
     g = n(373954),
     f = n(723702),
-    p = n(41984),
-    A = n(127242),
+    A = n(41984),
+    p = n(127242),
     E = n(545807),
     b = n(392164),
     C = n(85290);
@@ -25,7 +25,7 @@ function v(e, t) {
         bottom: Math.ceil(t.bottom),
     };
 }
-let T = r.createContext(
+let y = r.createContext(
     new (class {
         resizeObserver;
         mutationObserver;
@@ -48,7 +48,7 @@ let T = r.createContext(
             let t = this.zones.get(e);
             null != t && this.resizeObserver.unobserve(t.element);
             let n = e.getBoundingClientRect();
-            (this.zones.set(e, { element: e, zone: v(t?.zone.name ?? (0, u.A)(), n) }),
+            (this.zones.set(e, { element: e, zone: v(t?.zone.name ?? (0, c.A)(), n) }),
                 this.elements.add(e),
                 this.resizeObserver.observe(e),
                 this.updateZones());
@@ -109,9 +109,9 @@ n.d(
     {
         A: function (e) {
             let { observe: t = !0, className: n, style: l, children: a } = e,
-                o = r.useContext(T),
-                u = (0, c.bG)([A.A], () => A.A.hasRenderDebugMode(p.x7.ClickZones)),
-                d = (0, c.bG)([g.default], () => g.default.disableClickableRegions),
+                o = r.useContext(y),
+                c = (0, u.bG)([p.A], () => p.A.hasRenderDebugMode(A.x7.ClickZones)),
+                d = (0, u.bG)([g.default], () => g.default.disableClickableRegions),
                 [{ refHandler: m, setObserve: h }] = r.useState(() => {
                     let e = null;
                     return {
@@ -130,7 +130,7 @@ n.d(
                 (0, i.jsx)("div", {
                     ref: m,
                     style: l,
-                    className: s()(n, C.v, u && C.p),
+                    className: s()(n, C.v, c && C.p),
                     "data-click-zone": !0,
                     children: a,
                 })

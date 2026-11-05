@@ -1,4 +1,4 @@
-(n.d(t, { pz: () => f, Qh: () => h, Xd: () => A, AK: () => E, Zm: () => u, qM: () => _ }), n(321073));
+(n.d(t, { pz: () => h, Qh: () => f, Xd: () => A, AK: () => E, Zm: () => u, qM: () => _ }), n(321073));
 var i = n(620632),
     r = n(73153),
     a = n(403362),
@@ -205,9 +205,9 @@ function A(e) {
             }));
     });
 }
-function h(e, t) {
+function f(e, t) {
     return i.Bo.post({ url: c.Rsh.GUILD_POWERUP_TOGGLE(e, t), rejectWithError: !0 });
 }
-function f(e, t) {
+function h(e, t) {
     return i.Bo.del({ url: c.Rsh.GUILD_POWERUP_TOGGLE(e, t), rejectWithError: !0 });
 }

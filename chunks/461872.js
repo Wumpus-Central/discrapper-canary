@@ -1,4 +1,4 @@
-n.d(t, { kU: () => p, EN: () => _, CC: () => h, c0: () => f, M: () => A, Xj: () => E, YC: () => I, eP: () => u });
+n.d(t, { kU: () => p, EN: () => _, CC: () => f, c0: () => h, M: () => A, Xj: () => E, YC: () => I, eP: () => u });
 var i,
     r = n(468311),
     a = n(706121),
@@ -509,7 +509,7 @@ let _ = {
                 "https://cdn.discordapp.com/assets/content/e48d7443a8d5f24d7d83b1fa383207099c57808d1ed20905065b45dfa64bee2f.png",
         },
     },
-    h = {
+    f = {
         [s.D.CHILL]: {
             layer: "https://cdn.discordapp.com/assets/content/e9ab4e79b0b185d1fbd0a99813e4c20b7816d96fb1ebcb29347f6c6ed204efd0.png",
             thumbnail:
@@ -586,7 +586,7 @@ let _ = {
                 "https://cdn.discordapp.com/assets/content/fb409ae8fb4edf94583a815c5548a60b6451ef2f016a3374832f4588e31f1f93.png",
         },
     },
-    f = {
+    h = {
         [l.N.CAP]: {
             layer: "https://cdn.discordapp.com/assets/content/8ffe29263b07b0bb095d875ee43d6a1b9b7c7c6bde684cd136d02f66ef250802.png",
             thumbnail:

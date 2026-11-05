@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(855986),
     r = n(73153),
     a = n(956956),
@@ -93,7 +93,7 @@ function A(e) {
     if (null == e) return !1;
     E = (0, a.XF)(e) ?? (0, a.rE)();
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "RegionalFeatureConfigStore";
     getRegionalFeatureConfig() {
         return _;
@@ -123,7 +123,7 @@ class h extends i.Ay.Store {
         return E;
     }
 }
-let f = new h(r.h, {
+let h = new f(r.h, {
     CONNECTION_OPEN: function (e) {
         (A(e.countryCode),
             (_ = null != e.regionalFeatureConfig ? u.fromConnectionOpen(e.regionalFeatureConfig) : null));

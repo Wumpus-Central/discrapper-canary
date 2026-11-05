@@ -11,13 +11,13 @@ var r = n(855986),
     _ = n(287809),
     E = n(188567),
     A = n(723702),
-    h = n(646865),
-    f = n(240583),
+    f = n(646865),
+    h = n(240583),
     I = n(956518),
     p = n(878549),
     m = n(969151),
-    g = n(847381),
-    T = n(108959),
+    T = n(847381),
+    g = n(108959),
     S = n(487887),
     N = n(5867),
     C = n(652215);
@@ -46,7 +46,7 @@ class y {
         ((this.items = []), this.invalidate());
     }
     getItems(e) {
-        let { enabled: t } = f.c.getConfig({ location: "embedded_activity_store" });
+        let { enabled: t } = h.c.getConfig({ location: "embedded_activity_store" });
         if (!t || "all" === e) return this.items;
         switch (e) {
             case "visible":
@@ -97,7 +97,7 @@ function z(e) {
             compositeInstanceId: l,
             location: o,
             participants: A,
-            contentClassification: f,
+            contentClassification: h,
         } = {
             applicationId: e.application_id,
             launchId: e.launch_id,
@@ -106,8 +106,8 @@ function z(e) {
             participants: e.participants.map(X),
             contentClassification: e.content_classification,
         },
-        g = (0, I.Ay)(r);
-    if (null == g) return;
+        T = (0, I.Ay)(r);
+    if (null == T) return;
     let S = (0, m.H)(o),
         O = 0 === (null != S ? (v.get(S)?.getItems("all") ?? R) : R).length,
         L = (P.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
@@ -124,10 +124,10 @@ function z(e) {
             location: o,
             launchId: s,
             compositeInstanceId: l,
-            url: g,
+            url: T,
             userIds: new Set(y),
             participants: A,
-            contentClassification: f,
+            contentClassification: h,
             referrerId: F?.referrerId ?? V?.referrerId,
             customId: F?.customId ?? V?.customId,
             proxyTicket: B?.proxyTicket,
@@ -137,7 +137,7 @@ function z(e) {
         o.id === F.location.id &&
         r === F.applicationId &&
         ((!G && Array.from(F.userIds).some((e) => e === w)) || !k)
-            ? Z(F)
+            ? Q(F)
             : G &&
               (null == F || F.applicationId !== r || F.location.id !== o.id) &&
               (x === d.default.getSessionId() &&
@@ -150,9 +150,9 @@ function z(e) {
                               participants: l,
                               isFirstActivityInChannel: o,
                               isStart: A,
-                              referrerId: f,
+                              referrerId: h,
                               customId: p,
-                              inviterUserId: g,
+                              inviterUserId: T,
                               proxyTicket: S,
                               renderInFramePool: O,
                           } = e,
@@ -173,7 +173,7 @@ function z(e) {
                           launchId: n,
                           compositeInstanceId: r,
                           location: s,
-                          referrerId: f,
+                          referrerId: h,
                           customId: p,
                           proxyTicket: S,
                           renderInFramePool: O,
@@ -186,14 +186,14 @@ function z(e) {
                               isStart: A,
                               participants: l,
                               embeddedActivity: P,
-                              inviterUserId: g,
+                              inviterUserId: T,
                           }));
-                      let M = (0, h.f)();
+                      let M = (0, f.f)();
                       (!0 === O
                           ? (j = N.Gd.DISCONNECTED)
                           : M
                             ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW), a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }))
-                            : (j = y !== u.Ay.getChannelId() || (0, T.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
+                            : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
                                   return `${e}:${t}`;
@@ -214,7 +214,7 @@ function z(e) {
                       proxyTicket: W.proxyTicket,
                       renderInFramePool: V?.renderInFramePool,
                   }),
-              Q({ channelId: S ?? null, applicationId: r })),
+              Z({ channelId: S ?? null, applicationId: r })),
         (t = y.length > 0 ? W : null),
         $(P, o.id).upsert(r, o.id, t),
         null != (n = (0, m.H)(o)) && ($(v, n).upsert(r, o.id, t), $(b, K((0, m.D)(o))).upsert(r, o.id, t)));
@@ -224,10 +224,10 @@ function q(e) {
         z(e);
     });
 }
-function Z(e) {
+function Q(e) {
     (D.delete(e.applicationId), E._.dispatch(C.jej.RELEASE_ACTIVITY_WEB_VIEW));
 }
-function Q(e) {
+function Z(e) {
     let { applicationId: t, channelId: n } = e;
     U.delete(M(n, t));
 }
@@ -396,7 +396,7 @@ let ee = new J(a.h, {
             ee
                 .getEmbeddedActivitiesForLocationIncludingHidden(e.location)
                 .some((t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n)) ||
-                Z(e);
+                Q(e);
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
@@ -441,11 +441,11 @@ let ee = new J(a.h, {
     },
     EMBEDDED_ACTIVITY_LAUNCH_FAIL: function (e) {
         let { applicationId: t, channelId: n } = e;
-        (Q({ applicationId: t, channelId: n }), w.delete(t));
+        (Z({ applicationId: t, channelId: n }), w.delete(t));
     },
     EMBEDDED_ACTIVITY_LAUNCH_CANCEL: function (e) {
         let { applicationId: t, channelId: n } = e;
-        (Q({ applicationId: t, channelId: n }), w.delete(t));
+        (Z({ applicationId: t, channelId: n }), w.delete(t));
     },
     EMBEDDED_ACTIVITY_CLOSE: function (e) {
         let { applicationId: t } = e,
@@ -486,7 +486,7 @@ let ee = new J(a.h, {
         let r = Date.now();
         (!(function (e) {
             let { activities: t, now: n } = e,
-                i = (0, g.A)((0, A.R0)()),
+                i = (0, T.A)((0, A.R0)()),
                 r = t.reduce((e, t) => {
                     let r = t.client_platform_config[i];
                     if (null == r.label_from || null == r.label_until) return e;

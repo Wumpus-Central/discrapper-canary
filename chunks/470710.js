@@ -21,7 +21,7 @@ function A() {
         ((_[t] = _[t] ?? { channelId: t, ringing: [] }), l.h.dispatch({ type: "CALL_CONNECT", channelId: t }), !0)
     );
 }
-class h extends a.Ay.Store {
+class f extends a.Ay.Store {
     static displayName = "CallStore";
     initialize() {
         this.waitFor(o.A, d.Ay, c.A);
@@ -48,7 +48,7 @@ class h extends a.Ay.Store {
         return { calls: _, enqueuedRings: E };
     }
 }
-let f = new h(l.h, {
+let h = new f(l.h, {
     CONNECTION_OPEN: function () {
         return A(!0);
     },
@@ -118,4 +118,4 @@ let f = new h(l.h, {
         null == t && (E = {});
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: h });

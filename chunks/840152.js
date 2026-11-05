@@ -11,13 +11,13 @@ var i = n(478437),
     _ = n(73153),
     E = n(138399),
     A = n(439372),
-    h = n(931480),
-    f = n(617617),
+    f = n(931480),
+    h = n(617617),
     I = n(927813),
     p = n(652215);
 let m = 10 * I.A.Millis.SECOND,
-    g = 5 * I.A.Millis.MINUTE;
-class T extends A.A {
+    T = 5 * I.A.Millis.MINUTE;
+class g extends A.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
         CHANNEL_SELECT: (e) => this.onChannelSelect(e),
@@ -26,7 +26,7 @@ class T extends A.A {
         LOGOUT: () => this.onLogout(),
     };
     stores = new Map([[c.A, () => this.onPremiumGiftingIntentStoreChange()]]);
-    reconcileBackoff = new u.A(m, g);
+    reconcileBackoff = new u.A(m, T);
     isReconciling = !1;
     heldGiftingPromptSystemMessage = !1;
     lastReconciledDismissalAtMs = new Map();
@@ -46,7 +46,7 @@ class T extends A.A {
         return c.A.getFriendAnniversaries().length > 0;
     }
     getServerDismissalTimestampMs() {
-        return Number(f.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
+        return Number(h.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
     }
     attemptReconcileFetch() {
         let e = this.getServerDismissalTimestampMs();
@@ -67,7 +67,7 @@ class T extends A.A {
             if ((this.lastReconciledDismissalAtMs.set(t, Math.max(e ?? 0, n)), null == e || n <= e)) continue;
             let i = s.A.getDMFromUserId(t);
             if (null != i)
-                for (let e of h.A.getMessages(i))
+                for (let e of f.A.getMessages(i))
                     e.type === p.lAJ.GIFTING_PROMPT &&
                         e.giftingPrompt?.recipientUserId === t &&
                         _.h.dispatch({ type: "MESSAGE_DELETE", id: e.id, channelId: i });
@@ -99,7 +99,7 @@ class T extends A.A {
     }
 }
 var S = n(682901);
-let N = new (class extends T {
+let N = new (class extends g {
     isChannelEligible(e) {
         switch (e.type) {
             case i.r.DM:

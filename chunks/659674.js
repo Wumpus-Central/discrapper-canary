@@ -11,13 +11,13 @@ var i = n(435558),
 let _ = /sketchfab/i,
     E = /^https:\/\/sketchfab\.com/i,
     A = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
     I = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
     p = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/,
-    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/[0-9]+\/?\?(?=.*skuIds=)/,
-    T =
+    T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/[0-9]+\/?\?(?=.*skuIds=)/,
+    g =
         /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/,
     S = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/,
     N = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
@@ -68,7 +68,7 @@ n.d(
             return (
                 e.type === c.Auw.ARTICLE &&
                 null != e.url &&
-                (m.test(e.url) || g.test(e.url) || p.test(e.url) || T.test(e.url))
+                (m.test(e.url) || T.test(e.url) || p.test(e.url) || g.test(e.url))
             );
         },
         NV: function (e) {
@@ -101,7 +101,7 @@ n.d(
         fK: function (e, t, n) {
             var i, a;
             let l,
-                h = {
+                f = {
                     id: r().uniqueId("embed_"),
                     url: n.url,
                     type: n.type,
@@ -113,14 +113,14 @@ n.d(
                 };
             if (
                 (null != n.footer &&
-                    (h.footer = {
+                    (f.footer = {
                         text: n.footer.text,
                         iconURL: n.footer.icon_url,
                         iconProxyURL: n.footer.proxy_icon_url,
                     }),
                 null != n.author &&
                     null != n.author.name &&
-                    (h.author = {
+                    (f.author = {
                         name: n.author.name,
                         url: n.author.url,
                         iconURL: n.author.icon_url,
@@ -128,26 +128,26 @@ n.d(
                     }),
                 null != n.provider &&
                     null != n.provider.name &&
-                    (h.provider = { name: n.provider.name, url: n.provider.url }),
-                null != n.timestamp && (h.timestamp = s()(new Date(n.timestamp))),
-                null != n.color && (h.color = n.color),
+                    (f.provider = { name: n.provider.name, url: n.provider.url }),
+                null != n.timestamp && (f.timestamp = s()(new Date(n.timestamp))),
+                null != n.color && (f.color = n.color),
                 null != n.thumbnail && C(n.thumbnail))
             )
-                switch (h.type) {
+                switch (f.type) {
                     case c.Auw.ARTICLE:
                     case c.Auw.IMAGE:
-                        h.image = O(n.thumbnail);
+                        f.image = O(n.thumbnail);
                         break;
                     default:
-                        h.thumbnail = O(n.thumbnail);
+                        f.thumbnail = O(n.thumbnail);
                 }
             if (
-                (null != n.image && C(n.image) && (h.image = O(n.image)),
+                (null != n.image && C(n.image) && (f.image = O(n.image)),
                 null != n.video &&
-                    (null == h.thumbnail &&
+                    (null == f.thumbnail &&
                         null != n.video.proxy_url &&
                         C(n.video) &&
-                        (h.thumbnail = {
+                        (f.thumbnail = {
                             width: n.video.width,
                             height: n.video.height,
                             url:
@@ -159,7 +159,7 @@ n.d(
                                 }),
                                 l.toString()),
                         }),
-                    null != h.thumbnail &&
+                    null != f.thumbnail &&
                         C(n.video) &&
                         (function (e, t, n) {
                             if ((null != t && _.test(t.name)) || E.test(n.url)) return !1;
@@ -171,27 +171,27 @@ n.d(
                                 i
                             );
                         })(t, n.provider, n.video) &&
-                        (h.video = O(n.video))),
+                        (f.video = O(n.video))),
                 null != n.audio &&
                     null != n.audio.proxy_url &&
-                    (h.audio = {
+                    (f.audio = {
                         url: n.audio.url,
                         proxyURL: n.audio.proxy_url,
                         contentType: n.audio.content_type ?? void 0,
                         description: n.audio.description,
                     }),
-                u.pd.has(h.type)
-                    ? (h.fields = (n.fields ?? []).map((e) => {
+                u.pd.has(f.type)
+                    ? (f.fields = (n.fields ?? []).map((e) => {
                           let { name: t, value: n, inline: i } = e;
                           return { rawName: t, rawValue: n, inline: i };
                       }))
-                    : (h.fields = []),
+                    : (f.fields = []),
                 null != n.components)
             ) {
                 let e = (0, o.ZV)(n.components);
-                h.components = e.length > 0 ? e : void 0;
+                f.components = e.length > 0 ? e : void 0;
             }
-            return h;
+            return f;
         },
         fS: function (e, t) {
             return e.isPrivate() ? !e.isManaged() : t.can(c.xBc.EMBED_LINKS, e);
@@ -218,7 +218,7 @@ n.d(
             );
         },
         p6: function (e) {
-            return e.type === c.Auw.ARTICLE && null != e.url && (f.test(e.url) || h.test(e.url));
+            return e.type === c.Auw.ARTICLE && null != e.url && (h.test(e.url) || f.test(e.url));
         },
     },
 );

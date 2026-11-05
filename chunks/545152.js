@@ -11,13 +11,13 @@ var i = n(284009),
     _ = n(358579),
     E = n(149468),
     A = n(224868),
-    h = n(121681),
-    f = n(7584),
+    f = n(121681),
+    h = n(7584),
     I = n(706727),
     p = n(964363),
     m = n(409481),
-    g = n(963852),
-    T = n(195880),
+    T = n(963852),
+    g = n(195880),
     S = n(7909),
     N = n(773669),
     C = n(71393),
@@ -51,14 +51,14 @@ function B(e) {
     } = e;
     if (null == i.channel) return;
     let { channel: E, guild: A } = i,
-        h = E.id,
-        f = A?.id,
+        f = E.id,
+        h = A?.id,
         p = {
             applicationId: t,
-            channelId: h,
-            guildId: f,
+            channelId: f,
+            guildId: h,
             data: n,
-            nonce: u.nonce ?? (0, T.m)(),
+            nonce: u.nonce ?? (0, g.m)(),
             attachments: r,
             maxSizeCallback: s,
             analytics_location: o,
@@ -70,7 +70,7 @@ function B(e) {
         onCreate: u.onCreate,
         onSuccess: u.onSuccess,
         onFailure: u.onFailure,
-        data: { interactionType: a.G.APPLICATION_COMMAND, applicationId: t, channelId: h },
+        data: { interactionType: a.G.APPLICATION_COMMAND, applicationId: t, channelId: f },
     }),
         null != r && r.length > 0
             ? (async function (e, t, n, i) {
@@ -95,7 +95,7 @@ function B(e) {
                       ({ totalSize: l, largestUploadedFileSize: o } = await W(e, !0)),
                       (!e.some((e) => e.error === x.t02.ENTITY_TOO_LARGE) && !(l > a)) || (s(o), !1)
                   );
-              })(r, p.nonce, f, s).then((e) => {
+              })(r, p.nonce, h, s).then((e) => {
                   e && V(p, l);
               })
             : V(p, l));
@@ -115,7 +115,7 @@ async function H(e, t, n) {
             await d.wz(i.botId);
         } catch {}
     let o = {
-        ...(0, g.Ay)({
+        ...(0, T.Ay)({
             channelId: t.channel.id,
             content: "",
             type: n.type === c.kc.CHAT ? x.lAJ.CHAT_INPUT_COMMAND : x.lAJ.CONTEXT_MENU_COMMAND,
@@ -127,7 +127,7 @@ async function H(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: a.G.APPLICATION_COMMAND,
-            user: (0, g.Vi)(R.default.getCurrentUser()),
+            user: (0, T.Vi)(R.default.getCurrentUser()),
         },
         interaction_data: n,
     };
@@ -209,8 +209,8 @@ n.d(
             (null == i.autocomplete &&
                 s.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: m }),
                 await S.A.unarchiveThreadIfNecessary(i.channel.id));
-            let g = [],
-                T = [],
+            let T = [],
+                g = [],
                 C = (0, G.Qr)(m);
             if (null != t.options)
                 for (let e of t.options) {
@@ -232,15 +232,15 @@ n.d(
                         )
                             continue;
                         (r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
-                            g.push({ type: e.type, name: e.name, value: t, focused: a }));
+                            T.push({ type: e.type, name: e.name, value: t, focused: a }));
                         continue;
                     }
                     if (e.type === c.n4.ATTACHMENT) {
                         if (null != i.autocomplete) continue;
                         let t = O.A.getUpload(i.channel.id, e.name, C);
                         if (null == t) continue;
-                        let n = T.length;
-                        (T.push(t), g.push({ type: e.type, name: e.name, value: n, focused: a }));
+                        let n = g.length;
+                        (g.push(t), T.push({ type: e.type, name: e.name, value: n, focused: a }));
                         continue;
                     }
                     let s = P.Gk(n[e.name]);
@@ -334,12 +334,12 @@ n.d(
                     }
                     ("" !== t || null == i.autocomplete || a) &&
                         (r()(null != i.autocomplete || null != t, `Unexpected value for option "${e.name}"`),
-                        null != t && g.push({ type: e.type, name: e.name, value: t, focused: a }));
+                        null != t && T.push({ type: e.type, name: e.name, value: t, focused: a }));
                 }
             if (null != t.subCommandPath)
                 for (let e = t.subCommandPath.length - 1; e >= 0; e -= 1) {
                     let { name: n, type: i } = t.subCommandPath[e];
-                    g = [{ type: i, name: n, options: g }];
+                    T = [{ type: i, name: n, options: T }];
                 }
             if (null != t.execute)
                 return (
@@ -350,7 +350,7 @@ n.d(
                         location: j(m),
                         source: p,
                     }),
-                    t.execute(g, i)
+                    t.execute(T, i)
                 );
             if (
                 t.inputType === w.y$.BUILT_IN ||
@@ -364,7 +364,7 @@ n.d(
                 guild_id: t.guildId,
                 name: t.rootCommand?.name ?? t.untranslatedName,
                 type: t.type,
-                options: g,
+                options: T,
                 application_command: t.rootCommand,
             };
             (null != a && (R.target_id = a),
@@ -375,7 +375,7 @@ n.d(
                           applicationId: t.applicationId,
                           data: R,
                           context: i,
-                          attachments: T,
+                          attachments: g,
                           maxSizeCallback: l,
                           onMessageSuccess: function () {
                               let e;
@@ -383,13 +383,13 @@ n.d(
                                   e
                                       .map((e) =>
                                           "emoji" === e.type
-                                              ? new f.zT({
+                                              ? new h.zT({
                                                     names: [e.name.replaceAll(":", "")],
                                                     surrogates: "",
                                                     unicodeVersion: 6,
                                                 })
                                               : "customEmoji" === e.type
-                                                ? h.Ay.getCustomEmojiById(e.emojiId)
+                                                ? f.Ay.getCustomEmojiById(e.emojiId)
                                                 : null,
                                       )
                                       .filter(y.Vq),

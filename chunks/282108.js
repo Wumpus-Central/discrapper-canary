@@ -11,30 +11,30 @@ var i = n(665260),
     _ = n(403362),
     E = n(930125),
     A = n(705833),
-    h = n(811602),
-    f = n(630986);
+    f = n(811602),
+    h = n(630986);
 function I() {
-    return Object.values(h.Jn).filter((e) => null == e.isEligible || e.isEligible?.());
+    return Object.values(f.Jn).filter((e) => null == e.isEligible || e.isEligible?.());
 }
 function p(e) {
     let { channelId: t, authorId: n } = b(e);
     return null == t || null == e
-        ? h.LO.NONE
+        ? f.LO.NONE
         : (function (e, t) {
               let n = u.default.getCurrentUser();
-              if (null == n || t === n.id) return h.LO.NONE;
+              if (null == n || t === n.id) return f.LO.NONE;
               let i = L(e, t, [o.A, c.A]);
-              return null == i ? h.LO.NONE : m(i);
+              return null == i ? f.LO.NONE : m(i);
           })(t, n);
 }
 function m(e) {
     let t = I();
     return null == e
-        ? h.LO.NONE
+        ? f.LO.NONE
         : O(t.map((t) => (D(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.Vq));
 }
-function g(e, t) {
-    if (t === h.LO.NONE || null == e) return !1;
+function T(e, t) {
+    if (t === f.LO.NONE || null == e) return !1;
     if (
         e.attachments?.some((e) => S({ type: E.D.Attachment, media: e }, t).length > 0) ||
         e.embeds?.some((e) => S({ type: E.D.Embed, media: e }, t).length > 0)
@@ -46,23 +46,23 @@ function g(e, t) {
         null == n || 0 === n.length)
     )
         return !1;
-    for (let e of n) if (g(e.message, t)) return !0;
+    for (let e of n) if (T(e.message, t)) return !0;
     return !1;
 }
-function T(e) {
+function g(e) {
     let t = [];
-    if ((null != e.components && t.push(...(0, f.A)(e.components)), null != e.embeds))
-        for (let n of e.embeds) null != n.components && t.push(...(0, f.A)(n.components));
+    if ((null != e.components && t.push(...(0, h.A)(e.components)), null != e.embeds))
+        for (let n of e.embeds) null != n.components && t.push(...(0, h.A)(n.components));
     return t;
 }
 function S(e, t) {
-    if (t === h.LO.NONE) return [];
+    if (t === f.LO.NONE) return [];
     let n = R(t);
-    return 0 === n.length ? [] : n.filter((t) => C(t, e)).map((e) => h.Jn[e].obscureReason);
+    return 0 === n.length ? [] : n.filter((t) => C(t, e)).map((e) => f.Jn[e].obscureReason);
 }
 function N(e, t) {
     var n, i, r, a, l, o, d;
-    if (t === h.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
+    if (t === f.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
     let c = R(t);
     if (0 === c.length) return !1;
     switch (e.type) {
@@ -110,7 +110,7 @@ function N(e, t) {
 }
 function C(e, t) {
     if (null == e) return !1;
-    let n = h.Jn[e];
+    let n = f.Jn[e];
     if (null != n.devSettingKey && s.Ay.get(n.devSettingKey)) return !0;
     switch (t.type) {
         case E.D.Embed:
@@ -124,22 +124,22 @@ function C(e, t) {
     }
 }
 function O(e) {
-    let t = h.LO.NONE;
+    let t = f.LO.NONE;
     for (let n of e)
         switch (n) {
-            case h.kn.EXPLICIT:
-                t |= h.LO.EXPLICIT;
+            case f.kn.EXPLICIT:
+                t |= f.LO.EXPLICIT;
                 break;
-            case h.kn.GORE:
-                t |= h.LO.GORE;
+            case f.kn.GORE:
+                t |= f.LO.GORE;
                 break;
-            case h.kn.SELF_HARM:
-                t |= h.LO.SELF_HARM;
+            case f.kn.SELF_HARM:
+                t |= f.LO.SELF_HARM;
         }
     return t;
 }
 function R(e) {
-    if (e === h.LO.NONE) return [];
+    if (e === f.LO.NONE) return [];
     let t = [];
     for (let n of I()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
@@ -159,7 +159,7 @@ function L(e, t) {
 }
 function y(e, t) {
     let n = A.A.validContentScanVersion;
-    return -1 !== e && (t.includes(h.kn.GORE) || t.includes(h.kn.SELF_HARM) ? null == e || e < n : null == e);
+    return -1 !== e && (t.includes(f.kn.GORE) || t.includes(f.kn.SELF_HARM) ? null == e || e < n : null == e);
 }
 function D(e) {
     return null != e && [r.TO.BLOCK, r.TO.BLUR].includes(e);
@@ -191,12 +191,12 @@ function b(e) {
             Fg: p,
             KM: function (e) {
                 let t = p(e);
-                return g(e, t);
+                return T(e, t);
             },
             LE: O,
             M: function (e) {
                 let t = p(e);
-                if (t === h.LO.NONE) return { attachmentIds: [], embedIds: [] };
+                if (t === f.LO.NONE) return { attachmentIds: [], embedIds: [] };
                 let n = e.attachments?.filter((e) => N({ type: E.D.Attachment, media: e }, t)),
                     i = e.embeds?.filter((e) => N({ type: E.D.Embed, media: e }, t));
                 return {
@@ -212,11 +212,11 @@ function b(e) {
             ku: I,
             mS: function e(t, n) {
                 let i = n ?? p(t);
-                if (i === h.LO.NONE) return !1;
+                if (i === f.LO.NONE) return !1;
                 if (
                     t.attachments?.some((e) => N({ type: E.D.Attachment, media: e }, i)) ||
                     t.embeds?.some((e) => N({ type: E.D.Embed, media: e }, i)) ||
-                    T(t).some((e) => N({ type: E.D.GenericMedia, media: e }, i))
+                    g(t).some((e) => N({ type: E.D.GenericMedia, media: e }, i))
                 )
                     return !0;
                 let r = null;
@@ -232,13 +232,13 @@ function b(e) {
             },
             nx: b,
             qo: function (e, t) {
-                if (t === h.LO.NONE) return !1;
+                if (t === f.LO.NONE) return !1;
                 let n = R(t);
                 return 0 !== n.length && n.filter((t) => C(t, e)).length > 0;
             },
             s9: function (e) {
-                return !T(e).some((e) => e.loadingState === a.TD.LOADING);
+                return !g(e).some((e) => e.loadingState === a.TD.LOADING);
             },
-            y5: g,
+            y5: T,
         },
     ));

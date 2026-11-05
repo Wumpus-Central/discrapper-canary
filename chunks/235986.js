@@ -17,13 +17,13 @@ function E(e) {
         align: o = u.STRETCH,
         wrap: E = _.NO_WRAP,
         shrink: A = 1,
-        grow: h = 1,
-        basis: f = "auto",
+        grow: f = 1,
+        basis: h = "auto",
         style: I,
         ...p
     } = e;
     return (0, i.jsx)("div", {
-        style: { flexShrink: A, flexGrow: h, flexBasis: f, ...I },
+        style: { flexShrink: A, flexGrow: f, flexBasis: h, ...I },
         className: s()(l.Uu, r, a, o, E, n),
         ...p,
         children: t,

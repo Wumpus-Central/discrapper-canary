@@ -4,8 +4,8 @@ var l = n(477900),
     r = n(503698),
     s = n.n(r),
     a = n(855986),
-    u = n(52133),
-    o = n(342952),
+    o = n(52133),
+    u = n(342952),
     d = n(778712),
     c = n(646514),
     h = n(890856),
@@ -15,12 +15,12 @@ var l = n(477900),
     E = n(47167),
     A = n(713654),
     f = n(573435),
-    p = n(145497),
-    S = n(166444),
+    S = n(145497),
+    p = n(166444),
     N = n(565860),
     T = n(648427),
-    y = n(379078),
-    x = n(704554),
+    x = n(379078),
+    y = n(704554),
     _ = n(812020),
     C = n(95701),
     v = n(734057),
@@ -46,8 +46,8 @@ let U = (e) => [
         })(e),
     ],
     P = {
-        searchType: y.n.FUZZY,
-        sortType: y.r.JARO_WINKLER,
+        searchType: x.n.FUZZY,
+        sortType: x.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
             let { channel: t, voiceStates: n } = e;
             return [
@@ -60,12 +60,12 @@ let U = (e) => [
         },
         throttleMs: 100,
     },
-    V = { searchType: y.n.FUZZY, sortType: y.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
+    V = { searchType: x.n.FUZZY, sortType: x.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
     H = i.memo(function (e) {
         let { channel: t, query: n } = e,
             [r] = (0, a.bG)([M.A], () => [M.A.getVoiceStatesForChannel(t.id), M.A.getVoiceStateVersion()], [t.id], w.D),
-            [s, u] = i.useState([]);
-        (0, x.RT)(n, Object.values(r), u, V);
+            [s, o] = i.useState([]);
+        (0, y.RT)(n, Object.values(r), o, V);
         let c = (0, a.yK)(
                 [M.A, k.default, _.A, j.A],
                 () =>
@@ -90,7 +90,7 @@ let U = (e) => [
             g = Math.max(s.length, 2);
         return null == h
             ? null
-            : (0, l.jsx)(o.A, {
+            : (0, l.jsx)(u.A, {
                   users: c,
                   guildId: h,
                   maxUsers: Math.min(g, 4),
@@ -173,19 +173,19 @@ function Y() {
 function K(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++)
-        if (e[n].channel !== t[n].channel || !(0, u.v)(e[n].voiceStates ?? [], t[n].voiceStates ?? [])) return !1;
+        if (e[n].channel !== t[n].channel || !(0, o.v)(e[n].voiceStates ?? [], t[n].voiceStates ?? [])) return !1;
     return !0;
 }
-let z = i.memo(function (e) {
+let X = i.memo(function (e) {
         let { channel: t } = e,
             n = t.getGuildId(),
             i = (0, a.bG)([D.A], () => D.A.getGuild(n), [n]);
         if (null == i)
             switch (t.type) {
                 case F.rbe.DM:
-                    return (0, l.jsx)(S.Pk, { channel: t, size: d._3.SIZE_32 });
+                    return (0, l.jsx)(p.Pk, { channel: t, size: d._3.SIZE_32 });
                 case F.rbe.GROUP_DM:
-                    return (0, l.jsx)(S.IC, { channel: t, size: d._3.SIZE_32 });
+                    return (0, l.jsx)(p.IC, { channel: t, size: d._3.SIZE_32 });
                 default:
                     return null;
             }
@@ -195,7 +195,7 @@ let z = i.memo(function (e) {
             height: 32,
             children: (0, l.jsx)("div", {
                 className: L.Ko,
-                children: (0, l.jsx)(p.j, {
+                children: (0, l.jsx)(S.j, {
                     guildId: i.id,
                     guildName: i.name ?? G.intl.string(G.t.DmIUGK),
                     guildIcon: i.icon,
@@ -204,25 +204,25 @@ let z = i.memo(function (e) {
             }),
         });
     }),
-    X = i.memo(function (e) {
+    z = i.memo(function (e) {
         let {
                 channelId: t,
                 isHighlighted: n,
                 currentVoiceChannel: i,
                 onClick: r,
-                onMouseOver: u,
-                onMouseLeave: o,
+                onMouseOver: o,
+                onMouseLeave: u,
                 query: d,
                 showVoiceAvatars: m = !0,
             } = e,
             I = (0, a.bG)([v.A], () => v.A.getChannel(t), [t]),
             f = (0, E.Ay)(I),
-            p = I?.getGuildId(),
-            S = (0, a.bG)([D.A], () => D.A.getGuild(p), [p]),
-            N = (0, A.gU)(I, S),
+            S = I?.getGuildId(),
+            p = (0, a.bG)([D.A], () => D.A.getGuild(S), [S]),
+            N = (0, A.gU)(I, p),
             T = i?.id === t,
-            y = T ? "text-feedback-positive" : n ? "interactive-text-active" : "text-muted",
-            x = T ? c.A.colors.TEXT_FEEDBACK_POSITIVE : n ? c.A.colors.INTERACTIVE_TEXT_ACTIVE : c.A.colors.ICON_MUTED;
+            x = T ? "text-feedback-positive" : n ? "interactive-text-active" : "text-muted",
+            y = T ? c.A.colors.TEXT_FEEDBACK_POSITIVE : n ? c.A.colors.INTERACTIVE_TEXT_ACTIVE : c.A.colors.ICON_MUTED;
         return null == I
             ? null
             : (0, l.jsxs)(h.s, {
@@ -230,20 +230,20 @@ let z = i.memo(function (e) {
                   focusProps: { offset: 4 },
                   "aria-label": f ?? "",
                   onClick: () => r(t),
-                  onMouseOver: () => u(t),
-                  onMouseLeave: () => o(t),
+                  onMouseOver: () => o(t),
+                  onMouseLeave: () => u(t),
                   children: [
-                      (0, l.jsx)("div", { className: L._N, children: (0, l.jsx)(z, { channel: I }) }),
+                      (0, l.jsx)("div", { className: L._N, children: (0, l.jsx)(X, { channel: I }) }),
                       (0, l.jsxs)("div", {
                           className: L.rg,
                           children: [
                               (0, l.jsxs)("div", {
                                   className: L.Ks,
                                   children: [
-                                      null != N ? (0, l.jsx)(N, { color: x, size: "xs", className: L.p }) : void 0,
+                                      null != N ? (0, l.jsx)(N, { color: y, size: "xs", className: L.p }) : void 0,
                                       (0, l.jsx)(g.E, {
                                           variant: T ? "body-sm/semibold" : "body-sm/medium",
-                                          color: y,
+                                          color: x,
                                           className: L.rU,
                                           children: (0, E.m1)(I, k.default, j.A),
                                       }),
@@ -251,8 +251,8 @@ let z = i.memo(function (e) {
                               }),
                               (0, l.jsx)(g.E, {
                                   variant: T ? "body-xs/semibold" : "body-xs/medium",
-                                  color: y,
-                                  children: S?.name ?? f,
+                                  color: x,
+                                  children: p?.name ?? f,
                               }),
                           ],
                       }),
@@ -277,8 +277,8 @@ let z = i.memo(function (e) {
                 currentVoiceChannel: r,
                 onSelect: s,
                 hasQuery: a,
-                query: u,
-                scrollable: o = !0,
+                query: o,
+                scrollable: u = !0,
                 showVoiceAvatars: d = !0,
             } = e,
             [c, h] = i.useState(null);
@@ -288,7 +288,7 @@ let z = i.memo(function (e) {
         function E() {
             h(null);
         }
-        let A = o ? m.Ip : "div";
+        let A = u ? m.Ip : "div";
         return (0, l.jsxs)("div", {
             children: [
                 (0, l.jsx)("div", {
@@ -301,7 +301,7 @@ let z = i.memo(function (e) {
                         a && 0 === n.length && (0, l.jsx)(B, { emptyText: G.intl.string(G.t.nxSS03) }),
                         n.map((e) =>
                             (0, l.jsx)(
-                                X,
+                                z,
                                 {
                                     channelId: e,
                                     isHighlighted: e === c,
@@ -311,7 +311,7 @@ let z = i.memo(function (e) {
                                     },
                                     onMouseOver: I,
                                     onMouseLeave: E,
-                                    query: u,
+                                    query: o,
                                     showVoiceAvatars: d,
                                 },
                                 e,
@@ -362,9 +362,9 @@ n.d(
     {
         Ay: function (e) {
             let { currentVoiceChannel: t, onClose: n, onSelect: r, allAvailableChannelRows: s } = e,
-                [a, u] = i.useState(""),
-                [o, d] = i.useState([]);
-            (0, x.RT)(a, s, d, P);
+                [a, o] = i.useState(""),
+                [u, d] = i.useState([]);
+            (0, y.RT)(a, s, d, P);
             let c = i.useCallback(
                     (e) => {
                         "Escape" === e.key && n();
@@ -387,8 +387,8 @@ n.d(
                 [n, c],
             );
             let g = "" !== a.trim(),
-                m = o.length > 20,
-                E = { count: m ? 20 : o.length },
+                m = u.length > 20,
+                E = { count: m ? 20 : u.length },
                 A = i.useMemo(
                     () => ({ onMouseDown: $, onMouseMove: $, onMouseUp: $, onMouseEnter: $, onMouseLeave: $ }),
                     [],
@@ -404,11 +404,11 @@ n.d(
                             query: a,
                             placeholder: G.intl.string(G.t.UyA6ST),
                             onClear: function () {
-                                u("");
+                                o("");
                             },
                             onKeyDown: c,
                             onChange: function (e) {
-                                u(e);
+                                o(e);
                             },
                             inputProps: { "aria-label": G.intl.string(G.t.UyA6ST) },
                         }),
@@ -416,7 +416,7 @@ n.d(
                     g
                         ? (0, l.jsx)(Z, {
                               sectionHeader: m ? G.intl.format(G.t.qdXiQ1, E) : G.intl.format(G.t["Aq+8wB"], E),
-                              channelIds: o
+                              channelIds: u
                                   .map((e) => {
                                       let { channel: t } = e;
                                       return t.id;

@@ -36,12 +36,12 @@ n.d(
                           });
                 };
             (d && (A = r.memo(A)), (A.displayName = `Suspense(${o || "Unknown"})`));
-            let h = A;
+            let f = A;
             return (
-                (h.preload = () => {
+                (f.preload = () => {
                     _();
                 }),
-                h
+                f
             );
         },
     },

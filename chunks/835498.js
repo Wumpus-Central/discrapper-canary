@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(435558),
     r = n.n(i),
     a = n(855986),
@@ -25,8 +25,8 @@ function A(e, t) {
     if (!m.isSampling(e)) return !1;
     (m.stopSampling(e, n), m.startSampling(e));
 }
-let h = { [u.oh.AUDIO_INPUT]: new s.W0(), [u.oh.AUDIO_OUTPUT]: new s.W0(), [u.oh.VIDEO_INPUT]: new s.W0() },
-    f = { [u.oh.AUDIO_INPUT]: {}, [u.oh.AUDIO_OUTPUT]: {}, [u.oh.VIDEO_INPUT]: {} },
+let f = { [u.oh.AUDIO_INPUT]: new s.W0(), [u.oh.AUDIO_OUTPUT]: new s.W0(), [u.oh.VIDEO_INPUT]: new s.W0() },
+    h = { [u.oh.AUDIO_INPUT]: {}, [u.oh.AUDIO_OUTPUT]: {}, [u.oh.VIDEO_INPUT]: {} },
     I = { [u.oh.AUDIO_INPUT]: new o.A(E), [u.oh.AUDIO_OUTPUT]: new o.A(E), [u.oh.VIDEO_INPUT]: new o.A(E) };
 class p extends a.Ay.PersistedStore {
     static displayName = "DeviceFrecencyStore";
@@ -35,25 +35,25 @@ class p extends a.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(d.Ay, c.default),
             [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT, u.oh.VIDEO_INPUT].forEach((t) => {
-                (e?.[t] != null && I[t].overwriteHistory(e[t]), h[t].reset());
+                (e?.[t] != null && I[t].overwriteHistory(e[t]), f[t].reset());
             }));
     }
     reset() {
         [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT, u.oh.VIDEO_INPUT].forEach((e) => {
-            (h[e].reset(), (f[e] = {}));
+            (f[e].reset(), (h[e] = {}));
         });
     }
     track(e, t, n) {
-        (null == f[e][t] && (f[e][t] = 0), (f[e][t] += n), I[e].track(t, { usesSinceLastTrack: n }));
+        (null == h[e][t] && (h[e][t] = 0), (h[e][t] += n), I[e].track(t, { usesSinceLastTrack: n }));
     }
     isSampling(e) {
-        return h[e].isRunning();
+        return f[e].isRunning();
     }
     startSampling(e) {
-        h[e].start();
+        f[e].start();
     }
     stopSampling(e, t) {
-        let n = h[e];
+        let n = f[e];
         n.stop();
         let i = n.elapsed().asMilliseconds();
         if (i > 0) {
@@ -82,7 +82,7 @@ class p extends a.Ay.PersistedStore {
         let e = { [u.oh.AUDIO_INPUT]: [], [u.oh.AUDIO_OUTPUT]: [], [u.oh.VIDEO_INPUT]: [] };
         return (
             [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT].forEach((t) => {
-                (this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(f[t])));
+                (this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(h[t])));
             }),
             {
                 duration_input_device_used_ids: e[u.oh.AUDIO_INPUT].map((e) => {
@@ -125,4 +125,4 @@ let m = new p(l.h, {
             m.reset();
         },
     }),
-    g = m;
+    T = m;

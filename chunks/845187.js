@@ -16,17 +16,17 @@ n.d(
     {
         a: A,
         default: function (e) {
-            let { applicationId: t, transitionState: n, onClose: h } = e,
-                [f, I] = r.useState(!1),
+            let { applicationId: t, transitionState: n, onClose: f } = e,
+                [h, I] = r.useState(!1),
                 [p] = (0, d.A)([t]),
                 m = p?.name ?? "This Activity";
-            async function g() {
+            async function T() {
                 let e = "temporary";
-                (f &&
+                (h &&
                     ((e = "permanent"),
                     o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
                     c.default.track(_.HAw.MODAL_DISMISSED, { type: A, dismiss_type: e }),
-                    await h());
+                    await f());
             }
             return (
                 r.useEffect(() => {
@@ -35,24 +35,24 @@ n.d(
                 (0, i.jsx)(a.a, {
                     size: "md",
                     transitionState: n,
-                    onClose: g,
+                    onClose: T,
                     "aria-label": E.intl.string(E.t.NQkK4l),
                     title: E.intl.string(E.t.NQkK4l),
                     actionBarInput: (0, i.jsx)(s.S, {
-                        checked: f,
-                        onChange: () => I(!f),
+                        checked: h,
+                        onChange: () => I(!h),
                         label: E.intl.string(E.t["5E9SB9"]),
                         labelType: "secondary",
                     }),
                     actions: [
-                        { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: g },
+                        { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: T },
                         {
                             variant: "primary",
                             text: E.intl.string(E.t["/wlDqi"]),
                             onClick: async function () {
                                 (c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
                                     u.Ay.setEnableHardwareAcceleration(!0),
-                                    await g());
+                                    await T());
                             },
                         },
                     ],

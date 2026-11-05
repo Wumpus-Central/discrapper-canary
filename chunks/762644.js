@@ -1,13 +1,13 @@
 var i = n(582128),
     s = n(451988),
     a = n(811091),
-    l = n(820672);
+    r = n(820672);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let t = null != e ? a.default.extractTimestamp(e) + l.M : null,
+            let t = null != e ? a.default.extractTimestamp(e) + r.M : null,
                 n = i.useCallback(
                     (e) => {
                         if (null == t) return () => {};

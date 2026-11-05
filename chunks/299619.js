@@ -15,20 +15,20 @@ let l = (e) => {
             ...E
         } = e,
         A = !_ && !o && l,
-        h = r.useRef(null);
-    function f() {
+        f = r.useRef(null);
+    function h() {
         o &&
-            h?.current?.play()?.catch((e) => {
+            f?.current?.play()?.catch((e) => {
                 if (null != d) d(e);
                 else throw e;
             });
     }
     function I() {
-        o && h?.current?.pause();
+        o && f?.current?.pause();
     }
     (r.useLayoutEffect(
         () => () => {
-            let { current: e } = h;
+            let { current: e } = f;
             null != e &&
                 (function (e) {
                     (e.removeAttribute("src"),
@@ -45,21 +45,21 @@ let l = (e) => {
     ),
         r.useLayoutEffect(
             () => (
-                "function" == typeof n ? (n(null), n(h.current)) : null != n && (n.current = h.current),
+                "function" == typeof n ? (n(null), n(f.current)) : null != n && (n.current = f.current),
                 () => {
                     "function" == typeof n ? n(null) : null != n && (n.current = null);
                 }
             ),
-            [n, h],
+            [n, f],
         ));
     let p = E.tabIndex ?? (!0 === E.controls ? 0 : -1);
     return (0, i.jsx)("video", {
         "aria-label": t,
-        ref: h,
+        ref: f,
         autoPlay: A,
-        onMouseEnter: f,
+        onMouseEnter: h,
         onMouseLeave: I,
-        onFocus: f,
+        onFocus: h,
         onBlur: I,
         style:
             u === a.d.MOSAIC

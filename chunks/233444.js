@@ -46,8 +46,8 @@ var i,
         (s.DECISION_OUTCOME = "decision_outcome"),
         (s.GUILD_ROOM_NOTE_OUTCOME = "guild_room_note_outcome"),
         s),
-    h = n(385244),
-    f =
+    f = n(385244),
+    h =
         (((l = {}).MESSAGE_SEND = "message_send"),
         (l.GUILD_JOIN = "guild_join"),
         (l.USERNAME_UPDATE = "username_update"),
@@ -66,8 +66,8 @@ var i,
         (d.CLAN_TAG = "clan_tag"),
         d),
     m = n(855986),
-    g = n(47167),
-    T = n(734057),
+    T = n(47167),
+    g = n(734057),
     S = n(576705),
     N = n(994500),
     C = n(287809),
@@ -97,7 +97,7 @@ function P(e, t) {
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L.FXj,
         r = arguments.length > 3 ? arguments[3] : void 0,
         a = arguments.length > 4 ? arguments[4] : void 0,
-        s = null != t ? (0, g.m1)(t, C.default, N.A) : y.intl.string(y.t.J90oLW),
+        s = null != t ? (0, T.m1)(t, C.default, N.A) : y.intl.string(y.t.J90oLW),
         l = (function (e) {
             let t = v(e, A.BLOCK_PROFILE_UPDATE_TYPE);
             if (null != t) return t;
@@ -114,7 +114,7 @@ function P(e, t) {
             let t = v(e, A.QUARANTINE_USER);
             if (null != t) return t;
         })(e),
-        h = (function (e) {
+        f = (function (e) {
             let t = v(e, A.DECISION_OUTCOME);
             if (null != t) return t;
         })(e),
@@ -136,13 +136,13 @@ function P(e, t) {
                 case I.QUARANTINE_USER:
                     var r = n;
                     switch (r) {
-                        case f.MESSAGE_SEND:
+                        case h.MESSAGE_SEND:
                             return y.intl.string(y.t.PmSMMS);
-                        case f.GUILD_JOIN:
+                        case h.GUILD_JOIN:
                             return y.intl.string(y.t.m9wWzo);
-                        case f.USERNAME_UPDATE:
+                        case h.USERNAME_UPDATE:
                             return y.intl.string(y.t.KNSkC6);
-                        case f.CLAN_TAG_UPDATE:
+                        case h.CLAN_TAG_UPDATE:
                             return y.intl.string(y.t.qV4K6j);
                         default:
                             return;
@@ -153,8 +153,8 @@ function P(e, t) {
         })(l, o, d);
         if (null != e) return e;
     }
-    let T = S.A.can(L.xBc.VIEW_CHANNEL, t);
-    n = null == t ? (e) => e : T ? i : L.FXj;
+    let g = S.A.can(L.xBc.VIEW_CHANNEL, t);
+    n = null == t ? (e) => e : g ? i : L.FXj;
     let O = (function (e, t, n) {
         let i = v(e, A.VOICE_CHANNEL_STATUS_OUTCOME);
         if (null == i) return null;
@@ -172,14 +172,14 @@ function P(e, t) {
         ? R
         : null != m
           ? p === E.MODAL && null != a
-              ? h !== _.BLOCKED
+              ? f !== _.BLOCKED
                   ? y.intl.format(y.t["4xL9Sk"], {
                         applicationName: m,
                         interactionUserHook: a,
                         integrationOwnerHook: r,
                     })
                   : y.intl.format(y.t.S3lNIT, { applicationName: m, interactionUserHook: a, integrationOwnerHook: r })
-              : h !== _.BLOCKED
+              : f !== _.BLOCKED
                 ? y.intl.format(y.t.AXQufN, {
                       applicationName: m,
                       channelName: s,
@@ -192,7 +192,7 @@ function P(e, t) {
                       channelHook: n,
                       integrationOwnerHook: r,
                   })
-          : h !== _.BLOCKED
+          : f !== _.BLOCKED
             ? y.intl.format(y.t.IZg0VQ, { channelName: s, channelHook: n })
             : y.intl.format(y.t.lOIOSK, { channelName: s, channelHook: n });
 }
@@ -211,14 +211,14 @@ function M(e) {
     }
 }
 function U(e) {
-    let t = v(e, h.E.NOTIFICATION_TYPE),
-        n = v(e, h.E.JOIN_ATTEMPTS),
-        i = v(e, h.E.RAID_DATETIME),
-        r = v(e, h.E.DMS_SENT),
-        a = v(e, h.E.RAID_TYPE),
-        s = v(e, h.E.RESOLVED_REASON),
-        l = v(e, h.E.DECISION_ID),
-        o = v(e, h.E.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
+    let t = v(e, f.E.NOTIFICATION_TYPE),
+        n = v(e, f.E.JOIN_ATTEMPTS),
+        i = v(e, f.E.RAID_DATETIME),
+        r = v(e, f.E.DMS_SENT),
+        a = v(e, f.E.RAID_TYPE),
+        s = v(e, f.E.RESOLVED_REASON),
+        l = v(e, f.E.DECISION_ID),
+        o = v(e, f.E.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
     return {
         notificationType: (null == t ? null : t) ?? void 0,
         joinAttempts: null != n ? parseInt(n) : void 0,
@@ -251,14 +251,14 @@ function w(e) {
         applicationName: v(e, A.APPLICATION_NAME),
         interactionUserId: v(e, A.INTERACTION_USER_ID),
         interactionCallbackType: v(e, A.INTERACTION_CALLBACK_TYPE),
-        embedChannel: T.A.getChannel(t),
+        embedChannel: g.A.getChannel(t),
         embedChannelId: t,
         alertActionsExecution: i ?? void 0,
     };
 }
 function G(e) {
     let t = c.useMemo(() => w(e), [e]),
-        n = (0, m.bG)([T.A], () => T.A.getChannel(t.embedChannelId), [t.embedChannelId]);
+        n = (0, m.bG)([g.A], () => g.A.getChannel(t.embedChannelId), [t.embedChannelId]);
     return { ...t, embedChannel: n };
 }
 function x(e) {
@@ -280,5 +280,5 @@ function k(e) {
     }
 }
 function F(e) {
-    return v(e, h.E.ACTION_BY_USER_ID);
+    return v(e, f.E.ACTION_BY_USER_ID);
 }

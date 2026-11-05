@@ -23,7 +23,7 @@ n.d(
             let { channel: t, currentGuildId: n } = e,
                 i = (0, a.bG)([l.default], () => l.default.getCurrentUser()),
                 E = o.Ay.canUseSoundboardEverywhere(i),
-                [A, h, f, I] = (0, a.yK)([d.A], () => [
+                [A, f, h, I] = (0, a.yK)([d.A], () => [
                     d.A.isFetching(),
                     d.A.getSounds(),
                     d.A.getFavorites(),
@@ -64,11 +64,11 @@ n.d(
                             }
                             let E = (0, u.XP)(c(a), !1),
                                 A = c(o),
-                                h = [],
-                                f = [];
+                                f = [],
+                                h = [];
                             function I() {
                                 let e = n ? 6 : 5;
-                                return h.length >= e && (n || f.length > 0);
+                                return f.length >= e && (n || h.length > 0);
                             }
                             for (let e of E) {
                                 let t = {
@@ -76,7 +76,7 @@ n.d(
                                     type: "favorite",
                                     analyticsLocationSection: s.A.SOUNDBOARD_FAVORITES_SECTION,
                                 };
-                                if ((_(e) ? f.push(t) : h.push(t), I())) break;
+                                if ((_(e) ? h.push(t) : f.push(t), I())) break;
                             }
                             if (!I())
                                 for (let e of A) {
@@ -85,16 +85,16 @@ n.d(
                                         type: "frequently_used",
                                         analyticsLocationSection: s.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
                                     };
-                                    if ((_(e) ? f.push(t) : h.push(t), I())) break;
+                                    if ((_(e) ? h.push(t) : f.push(t), I())) break;
                                 }
-                            return { unlockedFavoritesAndFrequentlyUsedSounds: h, lockedSounds: f };
+                            return { unlockedFavoritesAndFrequentlyUsedSounds: f, lockedSounds: h };
                         }, [d, i, a, o, t, n]);
                     return { unlockedFavoritesAndFrequentlyUsedSounds: _, lockedSounds: E };
                 })({
                     channel: t,
                     canUseCrossGuildSounds: E,
-                    allSounds: h,
-                    favoriteSoundsIds: f,
+                    allSounds: f,
+                    favoriteSoundsIds: h,
                     allFrequentlyUsedSoundIds: I,
                 });
             return {
@@ -145,7 +145,7 @@ n.d(
                         let d = o.slice(0, l);
                         return r ? [...d, e] : d;
                     }, [i, a, t, n]);
-                })({ allSounds: h, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: p, lockedSounds: m }),
+                })({ allSounds: f, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: p, lockedSounds: m }),
                 hasLockedSound: m.length > 0,
                 isFetching: A,
             };

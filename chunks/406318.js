@@ -11,13 +11,13 @@ var i = n(855986),
     _ = n(927813),
     E = n(157347),
     A = n(551816),
-    h = n(233693),
-    f = n(811315),
-    I = n.n(f),
+    f = n(233693),
+    h = n(811315),
+    I = n.n(h),
     p = n(229527),
     m = n(316031),
-    g = n(859126);
-function T() {
+    T = n(859126);
+function g() {
     return {
         query: "",
         requireUnusualDmActivity: !1,
@@ -32,7 +32,7 @@ function T() {
         selectedSort: void 0,
     };
 }
-let S = Object.freeze(T());
+let S = Object.freeze(g());
 function N(e, t) {
     return null != e && !!e.toLowerCase().includes(t.toLowerCase());
 }
@@ -41,13 +41,13 @@ class C {
     _searchState;
     hasDefaultQuery;
     constructor(e) {
-        ((this.guildId = e), (this._searchState = T()), (this.hasDefaultQuery = !0));
+        ((this.guildId = e), (this._searchState = g()), (this.hasDefaultQuery = !0));
     }
     get requiresUsernameMatch() {
         return this._searchState.query.trim().length > 0;
     }
     reset() {
-        ((this._searchState = T()), (this.hasDefaultQuery = !0));
+        ((this._searchState = g()), (this.hasDefaultQuery = !0));
     }
     updateSearchState(e) {
         return (
@@ -55,7 +55,7 @@ class C {
         );
     }
     resetSearchState() {
-        return !this.hasDefaultQuery && ((this._searchState = T()), (this.hasDefaultQuery = !0), !0);
+        return !this.hasDefaultQuery && ((this._searchState = g()), (this.hasDefaultQuery = !0), !0);
     }
     getSearchState() {
         return this._searchState;
@@ -78,7 +78,7 @@ class C {
                 (t.length > 0 &&
                     !(function (e, t) {
                         if ("" === t.trim()) return !1;
-                        let [n, i] = (0, g.H)(t);
+                        let [n, i] = (0, T.H)(t);
                         for (let t of i) if (e.userId === t) return !0;
                         for (let t of n) if (N(e.nick, t)) return !0;
                         if (null == e.user) return !1;
@@ -137,7 +137,7 @@ class L {
         ((this._initialized = !0),
             (this._search = new C(this.guildId)),
             (this._members = new A.z8(this.guildId)),
-            (this._pagination = new h.qi(this.guildId, this._members.values(this.getSearchIndex()))));
+            (this._pagination = new f.qi(this.guildId, this._members.values(this.getSearchIndex()))));
     }
     get isInitialized() {
         return this._initialized;
@@ -148,7 +148,7 @@ class L {
             (this._members?.reset(), this._pagination?.reset(), this._search?.reset(), e && this.initialize());
     }
     get searchChunkSize() {
-        return null != this._pagination && this._initialized ? (0, h.n4)(this._pagination.getPaginationState()) : 0;
+        return null != this._pagination && this._initialized ? (0, f.n4)(this._pagination.getPaginationState()) : 0;
     }
     getMember(e) {
         return null != this._members && this._initialized ? (this._members.getMemberByUserId(e) ?? null) : null;
@@ -343,7 +343,7 @@ class L {
         return r ? (this.updatePaginationChunks(), this.updatePaginationState({ currentPage: 1 }), !0) : n;
     }
     getSearchState() {
-        return null != this._search && this._initialized ? this._search.getSearchState() : T();
+        return null != this._search && this._initialized ? this._search.getSearchState() : g();
     }
     hasDefaultSearchState() {
         return null == this._search || !this._initialized || this._search.hasDefaultQuery;
@@ -377,7 +377,7 @@ class L {
         this._pagination?.reset();
     }
     getPaginationState() {
-        return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, h.vg)();
+        return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, f.vg)();
     }
     getPaginatedMembers() {
         return null != this._pagination && this._initialized

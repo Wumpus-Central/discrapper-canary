@@ -37,22 +37,22 @@ function u(e) {
             source: E,
             commandOrigin: A,
         } = e,
-        h = c(t);
-    if (n?.id === h.activeCommand?.id) return !1;
-    ((h.activeCommand = n),
-        (h.activeCommandSection = i),
-        (h.activeOptionName = null),
-        (h.preferredCommandId = null),
-        (h.initialValues = r ?? {}),
-        (h.commandOrigin = A ?? null),
-        (h.source = E));
-    let f = {};
+        f = c(t);
+    if (n?.id === f.activeCommand?.id) return !1;
+    ((f.activeCommand = n),
+        (f.activeCommandSection = i),
+        (f.activeOptionName = null),
+        (f.preferredCommandId = null),
+        (f.initialValues = r ?? {}),
+        (f.commandOrigin = A ?? null),
+        (f.source = E));
+    let h = {};
     return (
         n?.options != null &&
             n.options.forEach((e) => {
-                f[e.name] = { isActive: !1, hasValue: !1, lastValidationResult: null, optionValue: null };
+                h[e.name] = { isActive: !1, hasValue: !1, lastValidationResult: null, optionValue: null };
             }),
-        (h.optionStates = f),
+        (f.optionStates = h),
         null != n &&
             (0, l.my)({
                 command: n,
@@ -162,7 +162,7 @@ class A extends i.Ay.Store {
         return { ...c(e) };
     }
 }
-let h = new A(r.h, {
+let f = new A(r.h, {
     CONNECTION_OPEN: d,
     CHANNEL_SELECT: d,
     LOGOUT: d,
@@ -183,4 +183,4 @@ let h = new A(r.h, {
         return l || o || d;
     },
 });
-n.d(t, {}, { A: h });
+n.d(t, {}, { A: f });

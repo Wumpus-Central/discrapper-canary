@@ -11,8 +11,8 @@ var i = n(587895),
     _ = n(969151),
     E = n(817636),
     A = n(108959),
-    h = n(90804),
-    f = n(748975),
+    f = n(90804),
+    h = n(748975),
     I = n(487887);
 function p(e) {
     return (0, o.w)((0, o.f)(), () =>
@@ -23,8 +23,8 @@ function p(e) {
                     activityChannelId: o,
                     locationObject: p,
                     analyticsLocations: m,
-                    componentId: g,
-                    sectionName: T,
+                    componentId: T,
+                    sectionName: g,
                     source: S,
                     inviterUserId: N,
                     customId: C,
@@ -44,7 +44,7 @@ function p(e) {
                     b.applicationId === n &&
                     (0, _.H)(b.location) === a.Ay.getVoiceChannelId())
             )
-                return ((0, f.A)(L, b.location), Promise.resolve(!0));
+                return ((0, h.A)(L, b.location), Promise.resolve(!0));
             let v = await (0, E.A)(n, o);
             if (
                 !(await (0, u.O)({
@@ -60,7 +60,7 @@ function p(e) {
                 let e = (0, A.A)(R.id),
                     n = I.lk.includes(R.type);
                 if (e) {
-                    if (!(await (0, h.A)({ channelId: R.id, bypassChangeModal: null != t }))) return !1;
+                    if (!(await (0, f.A)({ channelId: R.id, bypassChangeModal: null != t }))) return !1;
                 } else if (!(0, l.pE)(R) || !n) return !1;
             } else if (null == R) return !1;
             return (
@@ -71,8 +71,8 @@ function p(e) {
                     isStart: !1,
                     analyticsLocations: m,
                     locationObject: p,
-                    componentId: g,
-                    sectionName: T,
+                    componentId: T,
+                    sectionName: g,
                     source: S,
                     inviterUserId: N,
                     customId: C,

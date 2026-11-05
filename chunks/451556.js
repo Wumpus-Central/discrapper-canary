@@ -12,7 +12,7 @@ t.d(
     {
         A: function (e, n) {
             let t = (0, l.bG)([o.A], () => o.A.getChannel(n)),
-                d = t?.getGuildId();
+                u = t?.getGuildId();
             return null == e
                 ? null
                 : (0, i.jsx)(s.rX, {
@@ -24,7 +24,7 @@ t.d(
                               (0, r.r3)({
                                   application: e,
                                   entrypoint: "activity_ui_channel_call",
-                                  contextualGuildId: d ?? void 0,
+                                  contextualGuildId: u ?? void 0,
                                   contextualChannelId: t?.id,
                               }),
                           icon: a.FlagIcon,

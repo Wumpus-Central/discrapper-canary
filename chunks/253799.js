@@ -1,16 +1,16 @@
-var a,
-    n =
-        (((a = {}).MAIN_ACTION = "main_action"),
-        (a.EDIT = "edit"),
-        (a.FAVORITE = "favorite"),
-        (a.EXPORT_TO_SOUNDBOARD = "export_to_soundboard"),
-        (a.COPY_TO_CLIPBOARD = "copy_to_clipboard"),
-        (a.EXPORT_TO_FILE = "export_to_file"),
-        (a.DELETE = "delete"),
-        (a.SHOW_IN_FOLDER = "show_in_folder"),
-        (a.OPEN_IN_INSPECTOR = "open_in_inspector"),
-        (a.CLIP_FEEDBACK = "clip_feedback"),
-        a);
+var n,
+    a =
+        (((n = {}).MAIN_ACTION = "main_action"),
+        (n.EDIT = "edit"),
+        (n.FAVORITE = "favorite"),
+        (n.EXPORT_TO_SOUNDBOARD = "export_to_soundboard"),
+        (n.COPY_TO_CLIPBOARD = "copy_to_clipboard"),
+        (n.EXPORT_TO_FILE = "export_to_file"),
+        (n.DELETE = "delete"),
+        (n.SHOW_IN_FOLDER = "show_in_folder"),
+        (n.OPEN_IN_INSPECTOR = "open_in_inspector"),
+        (n.CLIP_FEEDBACK = "clip_feedback"),
+        n);
 let i = new Set([
     "main_action",
     "edit",
@@ -23,4 +23,4 @@ let i = new Set([
     "open_in_inspector",
     "clip_feedback",
 ]);
-l.d(t, {}, { C: n, I: i });
+l.d(t, {}, { C: a, I: i });

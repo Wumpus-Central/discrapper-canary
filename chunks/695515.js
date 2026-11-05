@@ -11,13 +11,13 @@ let c = null,
     _ = {},
     E = !1,
     A = w(),
-    h = G(),
-    f = null,
+    f = G(),
+    h = null,
     I = null,
     p = U(),
     m = !1,
-    g = !1,
     T = !1,
+    g = !1,
     S = null,
     N = null,
     C = [],
@@ -73,7 +73,7 @@ function x() {
     );
 }
 function k(e) {
-    void 0 !== e && (h = e);
+    void 0 !== e && (f = e);
 }
 function F(e, t) {
     let n = t ? A : w();
@@ -114,14 +114,14 @@ function H(e) {
     v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function j() {
-    ((g = !0), (T = !1));
+    ((T = !0), (g = !1));
 }
 function W() {
-    if (!g) return !1;
-    ((g = !1), (T = !0));
+    if (!T) return !1;
+    ((T = !1), (g = !0));
 }
 function Y() {
-    g = !1;
+    T = !1;
 }
 function K(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -134,8 +134,8 @@ function K(e) {
             topUserActivities: _,
             topGuildActivities: E,
             totalSpendAmount: A,
-            totalSpendCurrency: h,
-            spendingLimit: f,
+            totalSpendCurrency: f,
+            spendingLimit: h,
             monthlyPurchases: I,
             invoices: p,
             gifts: N,
@@ -151,12 +151,12 @@ function K(e) {
         (C = _),
         (O = E),
         (R = A),
-        (L = h),
-        (y = f ?? null),
+        (L = f),
+        (y = h ?? null),
         (D = I ?? null),
         (P = i ?? null),
-        (g = !1),
         (T = !1),
+        (g = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (m = !0));
 }
@@ -182,8 +182,8 @@ function z(e) {
         totalSpendAmount: _,
         totalSpendCurrency: E,
         invoices: A,
-        gifts: h,
-        spendingLimit: f,
+        gifts: f,
+        spendingLimit: h,
         monthlyPurchases: I,
     } = t;
     ((c = a),
@@ -192,14 +192,14 @@ function z(e) {
         k(i),
         B(r),
         null != A && V(A),
-        null != h && H(h),
+        null != f && H(f),
         (C = o),
         (O = d),
-        (g = !1),
+        (T = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (R = _),
         (L = E),
-        (y = f ?? null),
+        (y = h ?? null),
         (D = I ?? null));
 }
 function q(e) {
@@ -207,17 +207,17 @@ function q(e) {
         { actions: n, guilds: i } = t;
     (F(n, !0), B(i));
 }
-function Z(e) {
+function Q(e) {
     let { linkedUsers: t } = e;
     x(t);
 }
-function Q(e) {
+function Z(e) {
     let { linkedUsers: t } = e;
     x(t, !0);
 }
 function J(e) {
     let { linkCode: t, expiresAt: n } = e;
-    ((f = t), (I = n));
+    ((h = t), (I = n));
 }
 function ee(e) {
     let { tab: t } = e;
@@ -247,13 +247,13 @@ function er() {
     ((c = null),
         (u = null),
         (_ = {}),
-        (f = null),
+        (h = null),
         (I = null),
         (A = w()),
-        (h = G()),
+        (f = G()),
         (M = {}),
-        (g = !1),
         (T = !1),
+        (g = !1),
         (S = null),
         (p = U()),
         (E = !1),
@@ -284,8 +284,8 @@ class ea extends r.A {
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_FAILURE: Y,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: q,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: X,
-            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: Z,
-            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Q,
+            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: Q,
+            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Z,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: J,
             FAMILY_CENTER_HANDLE_TAB_SELECT: ee,
             SET_LOCATION_METADATA: ei,
@@ -301,7 +301,7 @@ class ea extends r.A {
             (x(e.linkedUsers),
             B(e.guilds),
             F(e.teenActivity),
-            (h = e.teenActivityTotals.reduce((e, t) => {
+            (f = e.teenActivityTotals.reduce((e, t) => {
                 let [n, i] = t.split(":"),
                     r = (function (e) {
                         for (let t of Object.values(d.NV)) if (t.toString() === e) return t;
@@ -315,7 +315,7 @@ class ea extends r.A {
             version: ea.LATEST_SNAPSHOT_VERSION,
             data: {
                 linkedUsers: Object.values(_),
-                teenActivityTotals: Object.entries(h).map((e) => {
+                teenActivityTotals: Object.entries(f).map((e) => {
                     let [t, n] = e;
                     return `${t}:${n}`;
                 }),
@@ -347,10 +347,10 @@ class ea extends r.A {
         return null != t ? Array.from(t.values()) : [];
     }
     getTotalForDisplayType(e) {
-        return h[e];
+        return f[e];
     }
     getLinkCode() {
-        return f;
+        return h;
     }
     getLinkCodeExpiresAt() {
         return I;
@@ -374,10 +374,10 @@ class ea extends r.A {
         return N;
     }
     isLoading() {
-        return g;
+        return T;
     }
     hasInitialLoadFailed() {
-        return T;
+        return g;
     }
     getTopUserActivities() {
         return C;

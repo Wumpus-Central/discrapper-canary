@@ -1,9 +1,9 @@
 var r = n(477900),
-    i = n(582128),
-    s = n(778712),
+    o = n(582128),
+    i = n(778712),
     a = n(97808),
-    l = n(834730),
-    o = n(854627),
+    s = n(834730),
+    l = n(854627),
     c = n(589152),
     g = n(792996),
     u = n(896423);
@@ -14,20 +14,20 @@ n.d(
         A: function () {
             let t = (0, c.b)().slice(0, 3),
                 e = t[0],
-                { avatarSrc: n, eventHandlers: d } = (0, o.A)({
+                { avatarSrc: n, eventHandlers: m } = (0, l.A)({
                     userId: e?.id,
-                    size: s._3.SIZE_24,
+                    size: i._3.SIZE_24,
                     animateOnHover: !0,
                 });
-            function m(t) {
+            function d(t) {
                 return null != t.globalName ? t.globalName : t.username;
             }
-            let x = i.useMemo(
+            let I = o.useMemo(
                 () =>
                     t.length >= 2
-                        ? g.intl.formatToPlainString(g.t.c7ETJH, { username: m(t[0]) })
+                        ? g.intl.formatToPlainString(g.t.c7ETJH, { username: d(t[0]) })
                         : 1 === t.length
-                          ? g.intl.formatToPlainString(g.t.dpjXPL, { username: m(t[0]) })
+                          ? g.intl.formatToPlainString(g.t.dpjXPL, { username: d(t[0]) })
                           : "",
                 [t],
             );
@@ -40,14 +40,14 @@ n.d(
                               className: u.__invalid_icon,
                               src: n,
                               "aria-label": e.username,
-                              size: s._3.SIZE_24,
-                              ...d,
+                              size: i._3.SIZE_24,
+                              ...m,
                           }),
-                          (0, r.jsx)(l.E, {
+                          (0, r.jsx)(s.E, {
                               className: u.Qq,
                               variant: "body-sm/normal",
                               color: "text-overlay-light",
-                              children: x,
+                              children: I,
                           }),
                       ],
                   });

@@ -6,8 +6,8 @@ var l,
     E = n(317525),
     u = n(71393),
     o = n(287809),
-    _ = n(841549),
-    c =
+    c = n(841549),
+    _ =
         (((l = {})[(l.LOADING = 0)] = "LOADING"),
         (l[(l.SUCCESS_STILL_INDEXING = 1)] = "SUCCESS_STILL_INDEXING"),
         (l[(l.SUCCESS_EMPTY = 2)] = "SUCCESS_EMPTY"),
@@ -25,7 +25,7 @@ n.d(
                     let i = o.default.getUser(e.userId);
                     null != i &&
                         (r.stopPropagation(),
-                        (0, _.Mg)(r, {
+                        (0, c.Mg)(r, {
                             user: i,
                             guildId: e.guildId,
                             analyticsLocations: null != n ? [n] : a,
@@ -36,7 +36,7 @@ n.d(
                 [e, a, l, n, t],
             );
         },
-        IY: c,
+        IY: _,
         Ko: function (e, t) {
             let { guildId: n, userId: l, colorRoleId: r } = e;
             (0, s.openUserProfileModal)({ userId: l, guildId: n, sourceAnalyticsLocations: t, roleId: r });
@@ -49,7 +49,7 @@ n.d(
                     let a = o.default.getUser(e.userId);
                     null != a &&
                         (r.stopPropagation(),
-                        (0, _.B8)(r, {
+                        (0, c.B8)(r, {
                             user: a,
                             guildId: e.guildId,
                             analyticsLocations: null != t ? [t] : l,
