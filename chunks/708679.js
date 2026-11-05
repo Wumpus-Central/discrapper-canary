@@ -13,27 +13,27 @@ var r = n(620632),
     h = n(652215),
     g = n(191850),
     x = n(792996);
-let b = "ConjureHeldPrompts",
-    j = new Map(),
-    v = new Map();
+let j = "ConjureHeldPrompts",
+    v = new Map(),
+    b = new Map();
 function y(e, t) {
     let n =
-        j.get(e) ??
+        v.get(e) ??
         (async () => {
             try {
                 await t();
             } catch (t) {
-                throw (j.delete(e), t);
+                throw (v.delete(e), t);
             }
         })();
-    return (j.set(e, n), n);
+    return (v.set(e, n), n);
 }
 function w() {
-    return l.w.get(b) ?? {};
+    return l.w.get(j) ?? {};
 }
 function C(e) {
     let { [e]: t, ...n } = w();
-    l.w.set(b, n);
+    l.w.set(j, n);
 }
 function N(e, t, n) {
     (C(e),
@@ -72,7 +72,7 @@ n.d(
                 i = (0, d.a5)(n.nonce);
             if (!0 === n.sent) {
                 let l = a.some((e) => "user" === e.role && !0 !== e.held && e.id !== i && e.content === n.message),
-                    s = o.A.getHistoryLoads(e) > (v.get(e) ?? 0);
+                    s = o.A.getHistoryLoads(e) > (b.get(e) ?? 0);
                 l
                     ? C(e)
                     : !s ||
@@ -87,8 +87,8 @@ n.d(
                 return;
             }
             "open" === d.Ay.getConnState(e) &&
-                (l.w.set(b, { ...w(), [e]: { ...n, sent: !0 } }),
-                v.set(e, o.A.getHistoryLoads(e)),
+                (l.w.set(j, { ...w(), [e]: { ...n, sent: !0 } }),
+                b.set(e, o.A.getHistoryLoads(e)),
                 (0, d.dv)(e, n.message, n.attachments, { nonce: n.nonce }) || N(e, n, t));
         },
         JN: function (e, t, n) {
@@ -105,7 +105,7 @@ n.d(
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                 r = arguments.length > 3 ? arguments[3] : void 0;
             if (p.Ay.getProject(e)?.install_scope_setup != null)
-                l.w.set(b, { ...w(), [e]: { message: t, attachments: n, nonce: (0, i.m)(), guildId: r } });
+                l.w.set(j, { ...w(), [e]: { message: t, attachments: n, nonce: (0, i.m)(), guildId: r } });
             else (0, d.dv)(e, t, n);
         },
         RW: function (e) {

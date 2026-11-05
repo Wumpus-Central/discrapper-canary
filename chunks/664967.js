@@ -4,20 +4,20 @@ var l = i(477900),
     c = i(477782),
     r = i(328162),
     a = i(194261),
-    s = i(585510),
-    d = i(834409),
+    d = i(585510),
+    s = i(834409),
     u = i(903093),
-    p = i(652215),
-    v = i(792996);
+    v = i(652215),
+    y = i(792996);
 i.d(
     n,
     {},
     {
         A: function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                { shouldShowIncidentActions: y, isUnderLockdown: g, incidentData: b } = (0, s.Li)(e.id),
+                { shouldShowIncidentActions: g, isUnderLockdown: p, incidentData: b } = (0, d.Li)(e.id),
                 k = t.useCallback(() => {
-                    let n = { source: d.Eo.CONTEXT_MENU, alertType: (0, u.$5)(b) };
+                    let n = { source: s.Eo.CONTEXT_MENU, alertType: (0, u.$5)(b) };
                     (0, o.mM)(async () => {
                         let { default: t } = await Promise.all([
                             i.e(231541),
@@ -30,12 +30,12 @@ i.d(
                         return (i) => (0, l.jsx)(t, { ...i, guildId: e.id, analyticsData: n });
                     });
                 }, [e.id, b]);
-            return e.features.has(p.GuildFeatures.COMMUNITY) && y
+            return e.features.has(v.GuildFeatures.COMMUNITY) && g
                 ? (0, l.jsx)(c.Dr, {
                       id: "server-lockdown",
-                      label: g ? v.intl.string(v.t["+tSVi3"]) : v.intl.string(v.t.EPlEdu),
-                      icon: n ? (g ? r.w : a.LockIcon) : void 0,
-                      leadingAccessory: n ? { type: "icon", icon: g ? r.w : a.LockIcon } : void 0,
+                      label: p ? y.intl.string(y.t["+tSVi3"]) : y.intl.string(y.t.EPlEdu),
+                      icon: n ? (p ? r.w : a.LockIcon) : void 0,
+                      leadingAccessory: n ? { type: "icon", icon: p ? r.w : a.LockIcon } : void 0,
                       action: k,
                       color: "danger",
                   })

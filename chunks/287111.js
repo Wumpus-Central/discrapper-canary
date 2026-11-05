@@ -36,20 +36,20 @@ function x(e, t) {
         console.error("[conjure] attachment cleanup failed", e);
     });
 }
-function b(e, t) {
+function j(e, t) {
     (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && x(e, t.ref.id));
 }
-function j(e, t) {
+function v(e, t) {
     let { deleteFromWorker: n } = t,
         { draftsByProject: r } = f.getState(),
         l = r[e];
     if (null == l) return;
     for (let t of Object.values(l))
-        for (let r of t ?? u) n ? b(e, r) : null != r.previewUrl && URL.revokeObjectURL(r.previewUrl);
+        for (let r of t ?? u) n ? j(e, r) : null != r.previewUrl && URL.revokeObjectURL(r.previewUrl);
     let { [e]: a, ...i } = r;
     f.setState({ draftsByProject: i });
 }
-function v(e) {
+function b(e) {
     return c.intl.formatToPlainString(o.default.JZ59Bo, { size: (0, i.sM)((0, i.Ju)(e)) });
 }
 function y(e, t) {
@@ -59,11 +59,11 @@ function y(e, t) {
     return (h(e, t, u), n.flatMap((e) => (null != e.ref ? [e.ref] : [])));
 }
 (r.h.subscribe("LOGOUT", () => {
-    for (let e of Object.keys(f.getState().draftsByProject)) j(e, { deleteFromWorker: !0 });
+    for (let e of Object.keys(f.getState().draftsByProject)) v(e, { deleteFromWorker: !0 });
 }),
     r.h.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (e) => {
         let { projectId: t } = e;
-        j(t, { deleteFromWorker: !1 });
+        v(t, { deleteFromWorker: !1 });
     }),
     n.d(
         t,
@@ -84,7 +84,7 @@ function y(e, t) {
                 let r = p(e, t),
                     l = r.find((e) => e.localId === n);
                 null != l &&
-                    (b(e, l),
+                    (j(e, l),
                     h(
                         e,
                         t,
@@ -127,15 +127,15 @@ function y(e, t) {
                         },
                     );
             },
-            iW: v,
+            iW: b,
             lc: y,
             rh: function (e, t, n, r) {
-                return (0, i.Oq)(t.size, r) ? (0, s.c9)(e, t, n, r) : Promise.resolve({ errorText: v(r) });
+                return (0, i.Oq)(t.size, r) ? (0, s.c9)(e, t, n, r) : Promise.resolve({ errorText: b(r) });
             },
             xJ: function (e, t) {
                 let n = p(e, t);
                 if (0 !== n.length) {
-                    for (let t of n) b(e, t);
+                    for (let t of n) j(e, t);
                     h(e, t, u);
                 }
             },

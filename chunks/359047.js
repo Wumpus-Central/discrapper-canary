@@ -5,19 +5,19 @@ var t = i(192308),
     c = i(588190),
     r = i(770666),
     a = i(823508),
-    s = i(792996);
+    d = i(792996);
 i.d(
     n,
     {},
     {
         A: function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                d = (0, r.A)(e),
+                s = (0, r.A)(e),
                 u = (0, a.A)();
-            return d
+            return s
                 ? (0, l.jsx)(o.Dr, {
                       id: "create-event",
-                      label: s.intl.string(s.t["60lJ0C"]),
+                      label: d.intl.string(d.t["60lJ0C"]),
                       icon: n ? c.U : void 0,
                       leadingAccessory: n ? { type: "icon", icon: c.U } : void 0,
                       action: function () {

@@ -22,9 +22,9 @@ n.d(
                     actions: n,
                     breadcrumb: g,
                     project: x,
-                    onOpenProjectSettings: b,
-                    transparent: j = !1,
-                    onBack: v,
+                    onOpenProjectSettings: j,
+                    transparent: v = !1,
+                    onBack: b,
                     hideShareTarget: y = !1,
                 } = e,
                 w = p.intl.string(m.default.FzfmQ8),
@@ -32,21 +32,21 @@ n.d(
                 N = (0, d.Ay)(y ? null : (x ?? null));
             return (0, r.jsx)(u.A, {
                 hideSearch: !0,
-                transparent: j,
+                transparent: v,
                 toolbar: n,
                 className: h.wx,
                 "aria-label": t,
                 children: (0, r.jsxs)("div", {
                     className: h.QF,
                     children: [
-                        null != v
+                        null != b
                             ? (0, r.jsx)(l.m, {
                                   asContainer: !0,
                                   text: C,
                                   position: "bottom",
                                   children: (0, r.jsx)(a.D, {
                                       className: h.Gv,
-                                      onClick: v,
+                                      onClick: b,
                                       "aria-label": C,
                                       children: (0, r.jsx)(i.Z, { size: "refresh_sm", color: "currentColor" }),
                                   }),
@@ -69,14 +69,14 @@ n.d(
                                   ],
                               })
                             : null,
-                        null != x && null != b
+                        null != x && null != j
                             ? (0, r.jsx)(l.m, {
                                   asContainer: !0,
                                   text: w,
                                   position: "bottom",
                                   children: (0, r.jsx)(a.D, {
                                       className: h.FF,
-                                      onClick: b,
+                                      onClick: j,
                                       "aria-label": w,
                                       children: (0, r.jsx)(f.A, { project: x, size: "header" }),
                                   }),

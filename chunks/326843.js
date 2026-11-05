@@ -1,10 +1,10 @@
-var r = a(165610);
-a.d(
-    u,
+var i = n(165610);
+n.d(
+    t,
     {},
     {
-        A: function (n, u) {
-            return (0, r.x1)(n) && n.data.runsInBackground && u.allowConjureRunInBackground;
+        A: function (e, t) {
+            return (0, i.x1)(e) && e.data.runsInBackground && t.allowConjureRunInBackground;
         },
     },
 );

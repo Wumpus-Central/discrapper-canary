@@ -38,13 +38,13 @@ n.d(
                     iconClassName: i,
                     onAddFiles: s,
                     onImport: x,
-                    onSendToOtherProjects: b,
+                    onSendToOtherProjects: j,
                 } = e,
-                j = l.useRef(null),
                 v = l.useRef(null),
+                b = l.useRef(null),
                 y = h.intl.string(h.t.d56gCa),
                 w = l.useCallback((e) => {
-                    let t = j.current;
+                    let t = v.current;
                     null != t && ((t.accept = e), t.click());
                 }, []),
                 C = l.useCallback(
@@ -56,7 +56,7 @@ n.d(
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("input", {
-                        ref: j,
+                        ref: v,
                         type: "file",
                         multiple: !0,
                         hidden: !0,
@@ -65,7 +65,7 @@ n.d(
                         "aria-hidden": !0,
                     }),
                     (0, r.jsx)(o.Y, {
-                        targetElementRef: v,
+                        targetElementRef: b,
                         position: "top",
                         align: "left",
                         animation: o.Y.Animation.NONE,
@@ -101,13 +101,13 @@ n.d(
                                                   action: x,
                                               })
                                             : null,
-                                        null != b
+                                        null != j
                                             ? (0, r.jsx)(u.Dr, {
                                                   id: "send-to-other-projects",
                                                   label: h.intl.string(p.default["5HmLrK"]),
                                                   iconLeft: f.t,
                                                   leadingAccessory: { type: "icon", icon: f.t },
-                                                  action: b,
+                                                  action: j,
                                               })
                                             : null,
                                     ],
@@ -118,7 +118,7 @@ n.d(
                             let { isShown: l } = t;
                             return (0, r.jsx)("button", {
                                 ...e,
-                                ref: v,
+                                ref: b,
                                 type: "button",
                                 className: a,
                                 disabled: n,

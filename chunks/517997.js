@@ -1,8 +1,8 @@
 var i = t(448761),
     l = t(855986),
     a = t(870136),
-    s = t(406704),
-    r = t(576705),
+    r = t(406704),
+    s = t(576705),
     o = t(287809),
     c = t(652215),
     d = t(818348);
@@ -14,25 +14,25 @@ function u(e, n, t) {
 }
 function g(e, n, t, i, l) {
     let a = n.hasFlag(c.pr7.EPHEMERAL),
-        s = n.state === c.cmJ.SENT,
-        r = !e.isArchivedThread() || l;
-    return t && s && !a && !i && r;
+        r = n.state === c.cmJ.SENT,
+        s = !e.isArchivedThread() || l;
+    return t && r && !a && !i && s;
 }
 t.d(
     n,
     {},
     {
         r: function (e, n) {
-            let t = (0, s.Et)(e),
-                i = u(e, n, r.A),
+            let t = (0, r.Et)(e),
+                i = u(e, n, s.A),
                 l = o.default.getCurrentUser(),
                 [, c] = (0, a.U0)(l?.id, e.getGuildId() ?? void 0);
             return g(e, n, i, c, t);
         },
         u: function (e, n) {
-            let t = (0, s.lK)(e),
+            let t = (0, r.lK)(e),
                 [, i] = (0, a.c)(e?.getGuildId() ?? void 0),
-                o = (0, l.bG)([r.A], () => null != e && null != n && u(e, n, r.A));
+                o = (0, l.bG)([s.A], () => null != e && null != n && u(e, n, s.A));
             return null != e && null != n && g(e, n, o, i, t);
         },
     },

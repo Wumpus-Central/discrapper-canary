@@ -1,12 +1,12 @@
 var i = t(855986),
     l = t(73153),
     a = t(967198);
-let s = null,
-    r = null,
+let r = null,
+    s = null,
     o = { reportedMessages: {} };
 function c() {
     let e = a.A.getLastSelectedGuildId();
-    e !== s && ((r = null), (s = e ?? null));
+    e !== r && ((s = null), (r = e ?? null));
 }
 class d extends i.Ay.PersistedStore {
     static displayName = "ReportToModStore";
@@ -26,7 +26,7 @@ class d extends i.Ay.PersistedStore {
         return o;
     }
     isUserBanned(e) {
-        return r?.get(e) ?? null;
+        return s?.get(e) ?? null;
     }
     getReportedMessages() {
         return o.reportedMessages;
@@ -42,27 +42,27 @@ let u = new d(l.h, {
     },
     GUILD_BAN_ADD: function (e) {
         let { user: n, guildId: t } = e;
-        t !== s || (null != r && r.set(n.id, !0));
+        t !== r || (null != s && s.set(n.id, !0));
     },
     GUILD_BAN_REMOVE: function (e) {
         let { user: n, guildId: t } = e;
-        t !== s || (null != r && r.set(n.id, !1));
+        t !== r || (null != s && s.set(n.id, !1));
     },
     GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
         let { bans: n, guildId: t, userIds: i } = e;
-        if (t !== s) return;
+        if (t !== r) return;
         let l = new Set(n.map((e) => e.user?.id)),
             a = Array.from(new Set(i ?? [])).filter((e) => !l.has(e));
-        (null == r && (r = new Map()),
+        (null == s && (s = new Map()),
             l.forEach((e) => {
-                r?.set(e, !0);
+                s?.set(e, !0);
             }),
             a.forEach((e) => {
-                r?.set(e, !1);
+                s?.set(e, !1);
             }));
     },
     LOGOUT: function () {
-        ((s = null), (r = null), (o.reportedMessages = {}));
+        ((r = null), (s = null), (o.reportedMessages = {}));
     },
 });
 t.d(n, {}, { A: u });
