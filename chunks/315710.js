@@ -2,92 +2,86 @@ var i = n(582128),
     r = n(557361);
 let a = "u" < typeof document ? void 0 : document,
     s = null == a ? () => void 0 : r.Ay,
-    l = null == a ? i.useEffect : i.useLayoutEffect;
-function o(e) {
-    return null != e && "element" in e ? e.element : e;
-}
-let d = 0,
-    c = new Set(),
-    u = { current: !0 };
-function _(e) {
+    l = null == a ? i.useEffect : i.useLayoutEffect,
+    o = 0,
+    d = new Set(),
+    c = { current: !0 };
+function u(e) {
     var t, n, r;
-    let _,
+    let u,
+        _,
         E,
         A,
         f,
-        h,
-        I = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    ((t = I.returnRef),
-        (n = !0 === I.disable),
-        (r = !0 === I.disableReturn),
-        (_ = i.useRef(a?.activeElement)),
-        (E = i.useRef(null)),
-        (A = i.useRef(t)),
-        (f = i.useRef(n)),
-        (h = i.useRef(r)),
+        h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    ((t = h.returnRef),
+        (n = !0 === h.disable),
+        (r = !0 === h.disableReturn),
+        (u = i.useRef(a?.activeElement)),
+        (_ = i.useRef(null)),
+        (E = i.useRef(t)),
+        (A = i.useRef(n)),
+        (f = i.useRef(r)),
         l(() => {
-            (null != e.current && (E.current = e.current), (A.current = t), (f.current = n), (h.current = r));
+            (null != e.current && (_.current = e.current), (E.current = t), (A.current = n), (f.current = r));
         }),
         l(() => {
-            let e = null == E.current ? null : { containerElementRef: E, disabledRef: f, sequence: d++ };
+            let e = null == _.current ? null : { containerElementRef: _, disabledRef: A, sequence: o++ };
             return (
-                null != e && c.add(e),
+                null != e && d.add(e),
                 () => {
-                    if (!f.current && !h.current) {
-                        let t = A.current?.current ?? null,
-                            n = o(t),
-                            i = null != t && "element" in t && !n?.isConnected ? null : n;
-                        if (null != (i ?? _.current)) {
-                            let t = !0,
-                                n = [],
-                                r = E.current?.ownerDocument ?? a,
+                    if (!A.current && !f.current) {
+                        let t = E.current?.current ?? null;
+                        if (null != (t ?? u.current)) {
+                            let n = !0,
+                                i = [],
+                                r = _.current?.ownerDocument ?? a,
                                 s = r?.activeElement;
-                            n =
+                            i =
                                 null != s && null != e
-                                    ? Array.from(c).filter((t) => {
+                                    ? Array.from(d).filter((t) => {
                                           let { containerElementRef: n, disabledRef: i, sequence: r } = t;
                                           return !i.current && r > e.sequence && n.current?.contains(s) === !0;
                                       })
                                     : [];
                             let l = null == s || s === r?.body,
-                                d = null != s && E.current?.contains(s) === !0;
-                            if (null == i) {
-                                let e = null == E.current;
-                                t = l || d || n.length > 0 || e;
+                                o = null != s && _.current?.contains(s) === !0;
+                            if (null == t) {
+                                let e = null == _.current;
+                                n = l || o || i.length > 0 || e;
                             }
-                            t &&
+                            n &&
                                 requestAnimationFrame(() => {
-                                    let t = A.current?.current ?? null,
-                                        i = o(t),
-                                        r = i?.isConnected ? i : _.current,
-                                        s = E.current?.ownerDocument ?? a,
-                                        u = s?.activeElement,
-                                        f = l || d;
-                                    Array.from(c).some((t) => {
-                                        let n, i;
+                                    let t = E.current?.current ?? null,
+                                        n = t?.isConnected ? t : u.current,
+                                        r = _.current?.ownerDocument ?? a,
+                                        s = r?.activeElement,
+                                        c = l || o;
+                                    Array.from(d).some((t) => {
+                                        let i, r;
                                         return (
                                             t !== e &&
-                                            null != u &&
-                                            t.containerElementRef.current?.contains(u) === !0 &&
-                                            ((n = null != e && t.sequence < e.sequence),
-                                            (i = null != r && t.containerElementRef.current?.contains(r) === !0),
-                                            !f || !n || !i)
+                                            null != s &&
+                                            t.containerElementRef.current?.contains(s) === !0 &&
+                                            ((i = null != e && t.sequence < e.sequence),
+                                            (r = null != n && t.containerElementRef.current?.contains(n) === !0),
+                                            !c || !i || !r)
                                         );
                                     }) ||
-                                        null == r ||
-                                        !r.isConnected ||
-                                        n.some((e) => c.has(e) && !e.disabledRef.current) ||
-                                        (null != t && r === i ? t.focus() : r.focus({ preventScroll: !0 }));
+                                        null == n ||
+                                        !n.isConnected ||
+                                        i.some((e) => d.has(e) && !e.disabledRef.current) ||
+                                        (t?.isConnected ? n.focus() : n.focus({ preventScroll: !0 }));
                                 });
                         }
                     }
-                    null != e && c.delete(e);
+                    null != e && d.delete(e);
                 }
             );
         }, []));
-    let p = i.useMemo(() => I.attachTo ?? e.current?.ownerDocument ?? a, [I.attachTo, e]),
-        m = i.useRef(null);
-    return s(I.disable ? m : e, { disable: I.disable, disableReturnRef: u, attachTo: p });
+    let I = i.useMemo(() => h.attachTo ?? e.current?.ownerDocument ?? a, [h.attachTo, e]),
+        p = i.useRef(null);
+    return s(h.disable ? p : e, { disable: h.disable, disableReturnRef: c, attachTo: I });
 }
 n.d(
     t,
@@ -95,11 +89,11 @@ n.d(
     {
         Ok: function (e) {
             let { disableReturn: t } = e;
-            return (_(e.containerRef, { disableReturn: t }), e.children);
+            return (u(e.containerRef, { disableReturn: t }), e.children);
         },
         se: function () {
             return r.rx.isActive();
         },
-        tj: _,
+        tj: u,
     },
 );

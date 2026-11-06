@@ -153,10 +153,10 @@ function P(e, t, n, l, r) {
         case "emoji":
         case "customEmoji":
             if ((t.startsWith(u[0], l) || (l = H(e, t, l, t.length)), t.startsWith(u[0], l)))
-                return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+                return F({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
             throw Error(`Slate: Unable to find emoji: ${u[0]} in ${t} at ${l}`);
         case "soundboard":
-            return B({
+            return F({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -174,7 +174,7 @@ function P(e, t, n, l, r) {
             if (null != r)
                 return (
                     i()(r === u[0], "Slate: text mentions must exactly match the regex match"),
-                    B({
+                    F({
                         result: e,
                         sourceText: t,
                         text: r,
@@ -183,11 +183,11 @@ function P(e, t, n, l, r) {
                         data: { text: r },
                     })
                 );
-            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: s } });
+            return F({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: { id: s } });
         }
         case "staticRouteLink":
             let { id: c, itemId: d } = n;
-            return B({
+            return F({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -196,7 +196,7 @@ function P(e, t, n, l, r) {
                 data: { id: c, itemId: d },
             });
         case "gameMention":
-            return B({
+            return F({
                 result: e,
                 sourceText: t,
                 text: u[0],
@@ -206,7 +206,7 @@ function P(e, t, n, l, r) {
             });
         case "timestamp":
         case "timestampMentionInput":
-            return B({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
+            return F({ result: e, sourceText: t, text: u[0], originalStart: l, attributes: [a], data: n });
         case "em":
         case "autolink":
         case "mailto":
@@ -246,11 +246,11 @@ function P(e, t, n, l, r) {
                     type: a,
                 });
             return (
-                (l = F({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
+                (l = B({ result: e, sourceText: t, syntaxCharacters: n, pos: l, attributes: o })),
                 r.push(a),
                 (l = W(e, t, s ?? "", l, r)),
                 r.pop(),
-                (l = F({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
+                (l = B({ result: e, sourceText: t, syntaxCharacters: i, pos: l, attributes: c })),
                 G(t, l)
             );
         }
@@ -294,7 +294,7 @@ function V(e) {
 function W(e, t, n, l, i) {
     return (
         "string" == typeof n
-            ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
+            ? (l = F({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
                   l = P(e, t, n, l, i);
@@ -302,7 +302,7 @@ function W(e, t, n, l, i) {
         G(t, l)
     );
 }
-function F(e) {
+function B(e) {
     let { result: t, sourceText: n, syntaxCharacters: l, pos: i, attributes: r } = e;
     if (l.length > 0) {
         let e = n.indexOf(l, i);
@@ -312,7 +312,7 @@ function F(e) {
     }
     return i;
 }
-function B(e) {
+function F(e) {
     let { result: t, sourceText: n, text: l, originalStart: i, attributes: r, data: s } = e,
         a = G(n, i);
     for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
@@ -334,7 +334,7 @@ function K(e, t, n) {
 function H(e, t, n, l) {
     for (; n < l;)
         if (A.has(t[n]))
-            ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
+            ((n = B({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
                 (n = G(t, n)));
         else break;
     return n;
@@ -514,15 +514,6 @@ let q = {
             );
         },
         focus(e) {
-            let { restoreSelectionImmediately: t = !1 } =
-                arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (t && null != e.selection) {
-                let [t, n] = s.rL.toDOMPoint(e, e.selection.anchor),
-                    [l, i] = s.rL.toDOMPoint(e, e.selection.focus),
-                    r = s.rL.findDocumentOrShadowRoot(e);
-                (s.rL.focus(e), r.getSelection()?.setBaseAndExtent(t, n, l, i));
-                return;
-            }
             s.rL.isFocused(e) || (s.rL.focus(e), s.rL.deselect(e));
         },
         getSelectionOverlap(e, t) {

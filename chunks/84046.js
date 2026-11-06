@@ -67,15 +67,6 @@ class V extends i.PureComponent {
         let r = (0, O.h3)(t.slice(n, l), t.slice(n, i));
         return { word: r.word, fullWord: r.fullWord, isAtStart: 0 === n && !r.didTrimPrefix };
     }
-    getFocusReturnTarget() {
-        let e = this;
-        return {
-            get element() {
-                return e._ref?._textArea ?? null;
-            },
-            focus: this.focus,
-        };
-    }
     focus = () => {
         let { _ref: e } = this;
         null != e && e.focus();
@@ -269,8 +260,8 @@ class V extends i.PureComponent {
     }
 }
 var W = n(149468),
-    F = n(146849),
-    B = n(152959),
+    B = n(146849),
+    F = n(152959),
     G = n(188567),
     K = n(317681),
     H = n(186306),
@@ -457,8 +448,8 @@ function eb(e) {
         eU = i.useRef(null),
         eV = i.useRef(null),
         eW = i.useRef(!0),
-        eF = i.useRef(!0),
-        eB = C || b,
+        eB = i.useRef(!0),
+        eF = C || b,
         eG = i.useCallback(
             (e, t, n) => {
                 let { value: l, selection: i } = n,
@@ -497,9 +488,9 @@ function eb(e) {
                 )
                     if ("parent" === t)
                         try {
-                            ((eF.current = !1), e.onChange());
+                            ((eB.current = !1), e.onChange());
                         } finally {
-                            eF.current = !0;
+                            eB.current = !0;
                         }
                     else e.onChange();
             },
@@ -562,14 +553,6 @@ function eb(e) {
             submit(e) {
                 (e?.preventDefault(), e$());
             },
-            getFocusReturnTarget: () => ({
-                get element() {
-                    return el.rL.toDOMNode(ez, ez);
-                },
-                focus() {
-                    Q.VW.focus(ez, { restoreSelectionImmediately: !0 });
-                },
-            }),
             focus() {
                 Q.VW.focus(ez);
             },
@@ -833,12 +816,12 @@ function eb(e) {
         { handlePaste: eX, handleGlobalPaste: eY } =
             ((o = i.useCallback(
                 (e) => {
-                    if (eB) return !0;
+                    if (eF) return !0;
                     if (!0 === e.defaultPrevented) return !1;
                     let t = k(e);
                     return (t && (e.preventDefault(), e.stopPropagation()), t);
                 },
-                [eB, k],
+                [eF, k],
             )),
             (u = i.useCallback(
                 (e) => {
@@ -859,7 +842,7 @@ function eb(e) {
         ),
         e0 = i.useCallback(
             (e) => {
-                e !== eV.current ? eF.current && T?.(null, (0, q.WO)(e, { mode: "raw" }), e) : eF.current && ep();
+                e !== eV.current ? eB.current && T?.(null, (0, q.WO)(e, { mode: "raw" }), e) : eB.current && ep();
             },
             [ep, T],
         );
@@ -873,8 +856,8 @@ function eb(e) {
             }
             return (E.A.addChangeListener(e), () => E.A.removeChangeListener(e));
         }, [g, ez, eq]));
-    let e1 = (0, F.I2)({ location: "SlateChannelTextArea" }).enabled,
-        e2 = (0, B.n9)(e1),
+    let e1 = (0, B.I2)({ location: "SlateChannelTextArea" }).enabled,
+        e2 = (0, F.n9)(e1),
         e5 = i.useCallback(
             (e) => [
                 ...(e1
@@ -984,7 +967,7 @@ function eb(e) {
                     guildId: g.guild_id,
                     className: s()(eA.gf, N),
                     placeholder: I,
-                    readOnly: eB,
+                    readOnly: eF,
                     spellCheck: eI,
                     autoFocus: !eN,
                     canFocus: !C,
@@ -1071,25 +1054,13 @@ class eN extends i.Component {
         this.props.focused && this.props.onSelectionChanged(document.getSelection?.()?.toString());
     };
     focus = () => {
-        this.focusEditor((e) => e.focus());
-    };
-    focusEditor(e) {
         this._focusBlurQueue?.then(() => {
             this.setState({ focused: !0 }, () => {
-                let t = this.ref.current;
-                null != t && e(t);
+                let e = this.ref.current;
+                null != e && e.focus();
             });
         });
-    }
-    getFocusReturnTarget() {
-        let e = this;
-        return {
-            get element() {
-                return e.ref.current?.getFocusReturnTarget().element ?? null;
-            },
-            focus: () => this.focusEditor((e) => e.getFocusReturnTarget().focus()),
-        };
-    }
+    };
     blur() {
         let e = this.ref.current;
         null != e && e.blur();
@@ -1098,8 +1069,9 @@ class eN extends i.Component {
         this.ref.current?.submit(e);
     }
     insertEmoji(e) {
-        let { emoji: t, willClose: n } = e;
-        null != t && this.ref.current?.insertEmoji({ emoji: t, addSpace: n });
+        let { emoji: t, willClose: n } = e,
+            l = this.ref.current;
+        null != t && null != l && (l.insertEmoji({ emoji: t, addSpace: n }), n && this.focus());
     }
     insertGIF(e) {
         let { textValue: t } = this.props,
