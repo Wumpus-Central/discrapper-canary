@@ -1874,7 +1874,7 @@ class eV extends p.A {
     currentEncryptorProtocolVersion = 0;
     remoteUserIds = new Set();
     secureFramesTransitions = new Map();
-    latestPreparedTransitionVersion = 0;
+    latestPreparedTransitionVersion = null;
     lastSecureFramesStateUpdate = null;
     constructor(e, t, n) {
         (super(),
@@ -1902,7 +1902,8 @@ class eV extends p.A {
             ? this.logger.error("Refusing to create a decryptor for the local user ID")
             : (this.remoteUserIds.add(e),
               this.mlsSession.AddRecognizedUser(e),
-              this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, ek.DECRYPT));
+              null != this.latestPreparedTransitionVersion &&
+                  this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, ek.DECRYPT));
     }
     destroyUser(e) {
         (this.remoteUserIds.delete(e),
