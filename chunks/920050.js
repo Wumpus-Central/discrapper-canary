@@ -1,6 +1,6 @@
-(i.r(t),
-    i.d(
-        t,
+(D.r(e),
+    D.d(
+        e,
         {},
         {
             BADGE_CARD_ID: "badge",
@@ -23,7 +23,6 @@
             PROFILES_CARD_ID: "profiles",
             QUEST_ORB_MULTIPLIER_CARD_ID: "orbMultiplier",
             RECURRING_3P_PROMOTIONS_CARD_ID: "3p",
-            RIOT_CREDIT_CAMPAIGN_PERK_CARD_ID: "riotCreditCampaign",
             RUST_3PP_CARD_ID: "rust3PP",
             SERVER_BOOSTS_CARD_ID: "serverBoosts",
             SPECIAL_MEMBER_PRICING_CARD_ID: "memberPricing",

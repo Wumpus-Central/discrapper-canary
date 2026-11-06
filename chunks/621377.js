@@ -695,7 +695,7 @@ function eQ(e) {
                                                         n.e(755936),
                                                         n.e(147662),
                                                         n.e(316344),
-                                                        n.e(396705),
+                                                        n.e(973973),
                                                         n.e(274501),
                                                         n.e(544571),
                                                         n.e(692990),
@@ -708,7 +708,7 @@ function eQ(e) {
                                                         n.e(958038),
                                                         n.e(532039),
                                                         n.e(719466),
-                                                        n.e(885553),
+                                                        n.e(787412),
                                                         n.e(576909),
                                                         n.e(830228),
                                                         n.e(27355),
@@ -780,8 +780,7 @@ function eQ(e) {
                                                         n.e(521574),
                                                         n.e(209729),
                                                         n.e(800311),
-                                                        n.e(22330),
-                                                        n.e(197238),
+                                                        n.e(52775),
                                                         n.e(474907),
                                                         n.e(791824),
                                                         n.e(24922),
@@ -970,9 +969,9 @@ function e1(e) {
 }
 var e2 = n(34188),
     e8 = n(700623),
-    e3 = n(177953),
+    e7 = n(177953),
     e4 = n(825484),
-    e7 = n(683071),
+    e3 = n(683071),
     e6 = n(900797),
     e9 = n(847374),
     e5 = n(10716),
@@ -1309,7 +1308,7 @@ function tb(e) {
         className: tI.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e3.GroupIcon, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e7.GroupIcon, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(b.E, {
                 variant: "body-sm/semibold",
                 color: "interactive-text-default",
@@ -1355,7 +1354,7 @@ function tT(e) {
             : s && !i && (0, I.Z$)(n)
               ? (0, r.jsx)("div", {
                     className: tI.ai,
-                    children: (0, r.jsx)(e7.w, {
+                    children: (0, r.jsx)(e3.w, {
                         type: "warning",
                         message: et.intl.format(et.t["s/3hjE"], {}),
                         role: "none",
@@ -1529,10 +1528,10 @@ var tY = n(111042),
     t1 = n(594061),
     t2 = n(811091),
     t8 = n(630248),
-    t3 = n(355097);
+    t7 = n(355097);
 function t4(e, t) {
     o.useEffect(() => {
-        t1.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t1.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1576,7 +1575,7 @@ function t4(e, t) {
         return [...r, ...o];
     }, [s, l, n, t]);
 }
-var t7 = n(785728),
+var t3 = n(785728),
     t6 = n(712440),
     t9 = n(733110),
     t5 = n(73153);
@@ -2217,9 +2216,9 @@ function n0(e) {
 var n1 = n(984516),
     n2 = n(935573),
     n8 = n(651753),
-    n3 = n(485845),
+    n7 = n(485845),
     n4 = n(994369),
-    n7 = n(240591),
+    n3 = n(240591),
     n6 = n(46477);
 function n9(e, t) {
     var n, l;
@@ -2477,7 +2476,7 @@ function lA(e) {
                             includeNonEmbeddedApps: a,
                         } = e,
                         r = "channel" === t.type ? t.channel : void 0,
-                        c = (0, n7.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
+                        c = (0, n3.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
                         d = (0, g.SD)(t, c, i),
                         u = (0, g.A4)(c, i),
                         m = o.useCallback(
@@ -2522,7 +2521,7 @@ function lA(e) {
                     return n9(c, {
                         limit: l,
                         filterPredicates: [
-                            ((m = (0, n7.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
+                            ((m = (0, n3.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
                             (p = {}),
                             (e) => {
                                 let { context: n, userId: l, roleIds: i, isImpersonating: s } = m;
@@ -2659,7 +2658,7 @@ function lA(e) {
                     return n9(u, {
                         limit: i,
                         filterPredicates: [
-                            ((d = (0, n7.Bh)("channel" === t.type ? t.channel : void 0, [
+                            ((d = (0, n3.Bh)("channel" === t.type ? t.channel : void 0, [
                                 M.kc.CHAT,
                                 M.kc.PRIMARY_ENTRY_POINT,
                             ])),
@@ -2736,7 +2735,7 @@ function lA(e) {
                             query: n,
                             guildId: r,
                             page: c,
-                            integrationType: n3.b.USER_INSTALL,
+                            integrationType: n7.b.USER_INSTALL,
                             minUserInstallCommandCount: 1,
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
@@ -2748,7 +2747,7 @@ function lA(e) {
                                 query: n,
                                 guildId: r,
                                 page: c,
-                                integrationType: n3.b.USER_INSTALL,
+                                integrationType: n7.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
@@ -2767,7 +2766,7 @@ function lA(e) {
                                     query: n,
                                     guildId: r,
                                     page: t + 1,
-                                    integrationType: n3.b.USER_INSTALL,
+                                    integrationType: n7.b.USER_INSTALL,
                                     minUserInstallCommandCount: 1,
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
@@ -2795,7 +2794,7 @@ function lA(e) {
                             guildId: l,
                             options: {
                                 page: n,
-                                integrationType: n3.b.USER_INSTALL,
+                                integrationType: n7.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
@@ -3207,7 +3206,7 @@ function lb(e) {
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t7.A)(e.id));
+                            return !(!1 === m && (0, t3.A)(e.id));
                         }
                         return l
                             ? u
@@ -3404,7 +3403,7 @@ function lL(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t7.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t3.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

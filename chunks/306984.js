@@ -187,7 +187,7 @@ function k(t, e) {
 function C() {
     (0, o.mM)(
         async () => {
-            let { default: t } = await Promise.all([n.e(506933), n.e(847799), n.e(701218)]).then(n.bind(n, 839225));
+            let { default: t } = await Promise.all([n.e(450963), n.e(847799), n.e(701218)]).then(n.bind(n, 839225));
             return (e) => (0, i.jsx)(t, { ...e });
         },
         { modalKey: "slayer-storefront-announcement-modal" },

@@ -127,10 +127,6 @@ n.d(
                 return r ?? null;
             }, [t, o, a, r]);
         },
-        OF: function (e) {
-            for (let t of e.redemptions) for (let e of t.rewards) if (null != e.promo_code) return e.promo_code;
-            return null;
-        },
         Oj: function (e) {
             var t, n;
             return {

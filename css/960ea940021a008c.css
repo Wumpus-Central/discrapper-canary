@@ -117,42 +117,4 @@
     justify-content: center
 }
 
-.richTooltipContent_xlDuA- {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    gap: var(--space-8);
-    max-width: 272px;
-    padding: var(--space-8) var(--space-12)
-}
-
-.richTooltipContentLg_xlDuA- {
-    gap: var(--space-16);
-    max-width: 372px;
-    padding: var(--space-16)
-}
-
-.assetContainer_xlDuA- {
-    align-items: center;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center
-}
-
-.assetContainer_xlDuA->* {
-    height: auto;
-    max-width: 100%
-}
-
-.textContent_xlDuA- {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    min-width: 0
-}
-
-.noAsset_xlDuA- .textContent_xlDuA- {
-    text-align: center
-}
-
-/*# sourceMappingURL=506933.b24c8a42d600bc31.css.map*/
+/*# sourceMappingURL=960ea940021a008c.css.map*/
