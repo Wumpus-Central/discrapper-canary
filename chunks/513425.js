@@ -284,12 +284,18 @@ let M = new R(r.h, {
         if (null == s || s.some((e) => e.id === n)) return !1;
         let l = (0, o.iW)("assistant", r, { ts: a, id: n });
         ((l.kind = "side_reply"), (l.in_reply_to = i));
-        let d = s.findIndex((e) => e.id === i);
-        if (-1 === d) return void E.set(t, [...s, l]);
-        let { disposition: c } = s[d];
-        null != c && (l.acknowledges = c);
-        let u = "answered" === c && P(s[d + 1]);
-        (E.set(t, [...s.slice(0, d + 1), l, ...s.slice(u ? d + 2 : d + 1)]), u && C(t));
+        let c = s.findIndex((e) => e.id === i);
+        if (-1 === c) return void E.set(t, [...s, l]);
+        let { disposition: u } = s[c];
+        null != u && (l.acknowledges = u);
+        let _ = "answered" === u && P(s[c + 1]),
+            A = [...s.slice(0, c + 1), l, ...s.slice(_ ? c + 2 : c + 1)],
+            f = A.findLastIndex((e) => "assistant" === e.role && !(0, d.B5)(e));
+        if ("answered" === u && -1 !== f && f < c && !(0, d.BL)(A[f])) {
+            let [e] = A.splice(f, 1);
+            A.splice(c + 1, 0, e);
+        }
+        (E.set(t, A), _ && C(t));
     },
     CONJURE_CHAT_PUBLISH_NOTICE: function (e) {
         let { projectId: t, id: n, content: i, timestamp: r, publishNotice: a } = e,
