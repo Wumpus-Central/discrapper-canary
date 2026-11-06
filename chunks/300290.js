@@ -712,8 +712,8 @@ let e2 = function (e) {
           });
 };
 var e6 = l(191711),
-    e9 = l(226658);
-function e5(e) {
+    e5 = l(226658);
+function e9(e) {
     let { loadId: t } = e,
         l = y.A.useField("categoryId"),
         s = eJ(),
@@ -760,7 +760,7 @@ function e5(e) {
     return null == s
         ? null
         : (0, a.jsxs)("div", {
-              className: e9.k,
+              className: e5.k,
               children: [
                   (0, a.jsx)(J.E, {
                       variant: "body-sm/medium",
@@ -935,7 +935,7 @@ function tr(e) {
                                     !f &&
                                         (0, a.jsxs)("div", {
                                             className: tt.eW,
-                                            children: [(0, a.jsx)(e5, { loadId: t }), (0, a.jsx)(te, { loadId: t })],
+                                            children: [(0, a.jsx)(e9, { loadId: t }), (0, a.jsx)(te, { loadId: t })],
                                         }),
                                     m && (0, a.jsx)(e4, { loadId: t }),
                                 ],
@@ -1499,22 +1499,22 @@ function t2() {
 function t6() {
     return (0, a.jsx)(tQ, { title: E.intl.string(E.t.qpGTIa), children: (0, a.jsx)(tJ, {}) });
 }
-var t9 = l(541830);
-let t5 = null;
+var t5 = l(541830);
+let t9 = null;
 class t3 extends i.Ay.Store {
     static displayName = "GlobalDiscoveryGamesStore";
     getTrendingGames() {
-        return t5;
+        return t9;
     }
 }
 let t4 = new t3(T.h, {
     LOGOUT: function () {
-        if (null == t5) return !1;
-        t5 = null;
+        if (null == t9) return !1;
+        t9 = null;
     },
     GLOBAL_DISCOVERY_GAMES_TRENDING_FETCH_SUCCESS: function (e) {
         let { data: t } = e;
-        t5 = {
+        t9 = {
             week: t.week,
             games: t.games.map((e) => {
                 let { game: t, ...l } = e;
@@ -1630,7 +1630,7 @@ function ld(e) {
             gameId: t.id,
             source: ty.GameProfileSources.GlobalDiscoveryGamesTrendingShelf,
         }),
-        i = n.useMemo(() => t.genres.slice(0, 2).map(t9.du).join(" \u2022 "), [t]);
+        i = n.useMemo(() => t.genres.slice(0, 2).map(t5.du).join(" \u2022 "), [t]);
     return (0, a.jsxs)(eh.D, {
         ...s,
         className: K()(li.Nr, { [li.vk]: null != r }),
@@ -1734,7 +1734,7 @@ function lf(e) {
           })
         : (0, a.jsx)(J.E, { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: t.name });
 }
-var lj = l(697794),
+var lj = l(564508),
     lA = l(184989),
     ly = l(20112);
 function lb(e) {

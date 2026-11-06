@@ -9,20 +9,27 @@ n.d(
     {},
     {
         A: function (e) {
-            let { applicationId: t, channel: n, analyticsContext: s, launch: d, invite: c } = e;
+            let { applicationId: t, channel: n, analyticsContext: s, launch: d, invite: c, showErrorModal: u } = e;
             if (null == n) {
-                let e = a.A.launchFrame({ applicationId: t, surface: l.sd, analyticsContext: s, launch: d, invite: c });
+                let e = a.A.launchFrame({
+                    applicationId: t,
+                    surface: l.sd,
+                    analyticsContext: s,
+                    launch: d,
+                    invite: c,
+                    showErrorModal: u,
+                });
                 return { frameId: (0, l.VA)(t, l.sd), launched: e };
             }
-            let u = { type: i.U.APP_CHANNEL, ...n },
-                _ = a.A.launchFrame({
+            let _ = { type: i.U.APP_CHANNEL, ...n },
+                E = a.A.launchFrame({
                     applicationId: t,
-                    surface: u,
+                    surface: _,
                     analyticsContext: s,
                     launch: d,
                     showErrorModal: !1,
                 }).catch(() => {});
-            return ((0, r.pX)(o.BVt.CHANNEL(n.guildId, n.channelId)), { frameId: (0, l.VA)(t, u), launched: _ });
+            return ((0, r.pX)(o.BVt.CHANNEL(n.guildId, n.channelId)), { frameId: (0, l.VA)(t, _), launched: E });
         },
         m: function (e) {
             return null == s.A.getFrame((0, l.VA)(e, l.sd));

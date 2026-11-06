@@ -217,7 +217,7 @@ function Y(e, t) {
     if ((p.A.trackLinkClicked(M), null != u)) {
         if (u(t)) return;
     } else {
-        let { default: e } = n(697794),
+        let { default: e } = n(564508),
             r = e(M, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: y, channelId: D });
         if (null != r && r(t)) return;
     }

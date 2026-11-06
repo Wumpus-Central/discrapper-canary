@@ -4,7 +4,7 @@ n.d(
     {},
     {
         A: async function (e, t) {
-            let { default: r } = await Promise.resolve().then(n.bind(n, 697794)),
+            let { default: r } = await Promise.resolve().then(n.bind(n, 564508)),
                 a = r(e, { skipExtensionCheck: t, analyticsLocations: [] });
             if (null != a) a(null);
             else if (i.isPlatformEmbedded) window.open(e);
