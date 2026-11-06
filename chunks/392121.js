@@ -111,7 +111,6 @@ let r = (0, n(945810).mj)({
         i.M.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
         i.M.PINOT_MEMBER_SETTING_NEW_BADGE,
         i.M.PINOT_MEMBER_COACHMARK,
-        i.M.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE,
     ]);
 function s(e) {
     return (
