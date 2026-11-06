@@ -25,6 +25,7 @@ let u = (0, r.UT)(l.A, {
                 try {
                     let { body: e } = await a.Bo.get({
                             url: d.Rsh.GAMES_AUTOCOMPLETE,
+                            signal: void 0,
                             query: { q: n, filter_group: t },
                             rejectWithError: !1,
                         }),
