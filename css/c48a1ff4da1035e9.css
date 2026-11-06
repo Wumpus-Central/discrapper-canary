@@ -457,14 +457,17 @@
 .icon__wphjE {
     color: var(--interactive-text-default);
     height: 24px;
-    margin: 12px;
     width: 24px
 }
 
 .iconWrapper__wphjE {
+    align-items: center;
     background-color: var(--background-surface-high);
     border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
     height: 48px;
+    justify-content: center;
     width: 48px
 }
 
@@ -494,4 +497,4 @@
     margin-bottom: var(--space-16)
 }
 
-/*# sourceMappingURL=f407e0b46e174017.css.map*/
+/*# sourceMappingURL=c48a1ff4da1035e9.css.map*/
