@@ -6714,6 +6714,13 @@ let dy = {
                 url: "https://www.gamelife.it/cava0261-discord-25-eur-codice-di-attivazione?attribute_values=4",
             },
         ],
+        [dC.d.FR]: [
+            {
+                id: "micromania",
+                name: "Micromania",
+                url: "https://www.micromania.fr/p/carte-discord-25-euros-166241.html",
+            },
+        ],
     },
     dv = [];
 function dj(e) {
