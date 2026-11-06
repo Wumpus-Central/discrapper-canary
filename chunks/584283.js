@@ -119,8 +119,8 @@ var b = n(666176),
     H = n(574660),
     V = n(409626),
     F = n(692969),
-    z = n(928550),
-    Y = n(913659),
+    Y = n(928550),
+    z = n(913659),
     K = n(659051),
     W = n(359549),
     J = n(835517),
@@ -300,7 +300,7 @@ function ec(e) {
             let { bot: n } = t;
             return {
                 iconSrc:
-                    (e.activity?.icon_override != null ? (0, Y.uD)(t.id, e.activity?.icon_override) : null) ??
+                    (e.activity?.icon_override != null ? (0, z.uD)(t.id, e.activity?.icon_override) : null) ??
                     f.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: n }),
                 name: e.activity?.name_override ?? t.name,
             };
@@ -318,7 +318,7 @@ function ec(e) {
                                 let s = 600 * (0, J.A)(),
                                     r =
                                         (n?.assets?.invite_cover_image != null
-                                            ? (0, Y.uD)(n.application_id, n.assets.invite_cover_image, s)
+                                            ? (0, z.uD)(n.application_id, n.assets.invite_cover_image, s)
                                             : null) ??
                                         l ??
                                         i.getCoverImageURL(s) ??
@@ -345,7 +345,7 @@ function ec(e) {
         { openGameProfileModal: y, launchableAppId: b } =
             ((t = o.id),
             (n = A.author.id),
-            (s = (0, z.dB)(t)),
+            (s = (0, Y.dB)(t)),
             {
                 openGameProfileModal: (0, F.A)({
                     location: "Rich Presence Activity Invite Embed",
@@ -528,7 +528,7 @@ function ex(e) {
             ((t = n.id),
             (null == o || null == o.assets || null == o.assets.large_image
                 ? null
-                : (0, Y.uD)(t, o.assets.large_image, [160, 160])) ?? void 0),
+                : (0, z.uD)(t, o.assets.large_image, [160, 160])) ?? void 0),
         info: j,
         actions: I,
         onClickContent: m,

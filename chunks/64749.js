@@ -19,8 +19,8 @@ var i = n(477900),
     A = n(713654),
     I = n(915089),
     b = n(967144),
-    S = n(69282),
-    C = n(657048),
+    C = n(69282),
+    S = n(657048),
     _ = n(963307),
     v = n(734057),
     T = n(317525),
@@ -47,7 +47,7 @@ function U(e) {
 let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
-        o = (0, S.Xx)({ guildId: n, roleId: s, size: 16 }),
+        o = (0, C.Xx)({ guildId: n, roleId: s, size: 16 }),
         h = (0, d.bG)([T.A], () => T.A.getRole(n, s)),
         x = a.includes(_.QP) ? "" : "@",
         E = (0, c.r)(u.A.unsafe_rawColors.PRIMARY_300).hsl(),
@@ -57,7 +57,7 @@ let w = l.memo(function (e) {
         className: r()(L.xZ, L.ex, l),
         children: [
             (0, i.jsx)(m.W, { className: L.__invalid_roleDot, color: j, colors: f, background: !1, tooltip: !1 }),
-            null != o ? (0, i.jsx)(C.A, { className: L.YS, ...o, enableTooltip: !1 }) : x,
+            null != o ? (0, i.jsx)(S.A, { className: L.YS, ...o, enableTooltip: !1 }) : x,
             (0, i.jsx)(g.E, { variant: O, className: L.pP, children: a }),
         ],
     });
@@ -98,8 +98,8 @@ n.d(
                     className: A,
                 } = e,
                 b = (0, I.GV)(),
-                S = (0, d.bG)([T.A], () => T.A.getRolesSnapshot(t)),
-                C = l.useMemo(
+                C = (0, d.bG)([T.A], () => T.A.getRolesSnapshot(t)),
+                S = l.useMemo(
                     () =>
                         (function (e, t, n) {
                             if (null == e) return {};
@@ -114,10 +114,10 @@ n.d(
                                 }),
                                 i
                             );
-                        })(a, c, S),
-                    [a, c, S],
+                        })(a, c, C),
+                    [a, c, C],
                 ),
-                _ = l.useMemo(() => Object.keys(C), [C]),
+                _ = l.useMemo(() => Object.keys(S), [S]),
                 [y, R] = l.useState(""),
                 [O, w] = l.useState(!1),
                 [F, H] = l.useState(!1),
@@ -172,7 +172,7 @@ n.d(
             }, [O, F]);
             let $ = l.useCallback(
                     (e) => {
-                        let t = { ...C };
+                        let t = { ...S };
                         (k(e) ? (t[e.id] = U(e.record)) : M(e) && (t[e.id] = P(e.record)),
                             J(t),
                             R(""),
@@ -183,7 +183,7 @@ n.d(
                                 null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
                             }, 16));
                     },
-                    [J, C],
+                    [J, S],
                 ),
                 ee = l.useCallback(
                     (e) => {
@@ -207,9 +207,9 @@ n.d(
                     () =>
                         _.map((e) => {
                             var n;
-                            return ((n = C[e]), { ...n.tag, label: B(n.row, t, L.yS) });
+                            return ((n = S[e]), { ...n.tag, label: B(n.row, t, L.yS) });
                         }),
-                    [C, _, t],
+                    [S, _, t],
                 );
             return (0, i.jsxs)("div", {
                 className: r()(L.MT, A),
@@ -226,7 +226,7 @@ n.d(
                                 ref: Y,
                                 onRemoveTag: (e) => {
                                     let t = _[e],
-                                        { [t]: n, ...i } = C;
+                                        { [t]: n, ...i } = S;
                                     (J(i), R(""), Z());
                                 },
                                 onQueryChange: function (e) {

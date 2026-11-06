@@ -59,9 +59,9 @@ r.d(
                     parsedUserId: m,
                     content: v,
                     inlinePreview: L = !1,
-                    viewingChannelId: I,
+                    viewingChannelId: R,
                 } = e,
-                R = o.useRef(null),
+                I = o.useRef(null),
                 { analyticsLocations: b } = (0, s.Ay)(u.A.USER_MENTION),
                 C = (0, a.bG)([p.default], () => p.default.getUser(c)),
                 _ = (0, a.bG)([h.A], () => h.A.getChannel(T)),
@@ -175,7 +175,7 @@ r.d(
                                         return (n) =>
                                             (0, t.jsx)(e, {
                                                 ...n,
-                                                viewingChannelId: I,
+                                                viewingChannelId: R,
                                                 user: C,
                                                 channel: _,
                                                 guildId: k,
@@ -300,14 +300,14 @@ r.d(
                 M = (0, a.bG)([h.A, y.Ay, f.A], () => g.Ay.getNickname(k, T, C));
             if (null == C) return (0, t.jsx)(S, { userId: m, className: n, children: v });
             function w(e) {
-                return (0, t.jsx)(A.A, { ref: R, className: n, onContextMenu: U, ...e, children: `@${M ?? x}` });
+                return (0, t.jsx)(A.A, { ref: I, className: n, onContextMenu: U, ...e, children: `@${M ?? x}` });
             }
             return L
                 ? (0, t.jsx)(s.f5, { value: b, children: w() })
                 : (0, t.jsx)(s.f5, {
                       value: b,
                       children: (0, t.jsx)(d.A, {
-                          targetElementRef: R,
+                          targetElementRef: I,
                           user: C,
                           guildId: k ?? void 0,
                           channelId: T,

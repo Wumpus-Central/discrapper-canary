@@ -76,7 +76,7 @@ n.d(
                                 }));
                         };
                 }, [S, T]),
-                z = s.useMemo(() => {
+                Y = s.useMemo(() => {
                     if (null != k)
                         return (e) => {
                             (k(e),
@@ -99,7 +99,7 @@ n.d(
                 children: [
                     G &&
                         (0, l.jsxs)(C, {
-                            onClick: z,
+                            onClick: Y,
                             className: a()(E.cy, w, { [E.wk]: U }),
                             children: [
                                 U &&

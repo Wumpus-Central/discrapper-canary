@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     RB: "wand_N9h0kO",
     mv: "wandSelected_N9h0kO",
     JZ: "projectTileBacking_N9h0kO",
