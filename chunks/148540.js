@@ -998,7 +998,7 @@ function ip(e) {
         }),
     });
 }
-var ig = s(927071);
+var ig = s(121795);
 function iN(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: A } = s,
