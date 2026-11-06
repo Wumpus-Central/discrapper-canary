@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 668462, Version Hash: f807e33d064bfa0166c0760db15a95e307b7ae5f`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 668464, Version Hash: efc8195379717e72937f4c06e58be075c45e5f20`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "668462";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "668464";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15729,7 +15729,7 @@ let IW = "isHideDevBanner",
                     className: td()(Ij.Wz, Ij.mr),
                     children: [
                         (0, v.jsx)(IH, { className: Ij.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "668462" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "668464" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -24045,6 +24045,7 @@ let gd = (0, tW.Fe)({
                     n.e(67422),
                     n.e(136204),
                     n.e(726511),
+                    n.e(947502),
                     n.e(531741),
                     n.e(390213),
                     n.e(736926),
@@ -38026,8 +38027,8 @@ let DR = {
                               n.e(382563),
                               n.e(235313),
                               n.e(474610),
-                              n.e(947502),
                               n.e(579245),
+                              n.e(947502),
                               n.e(245996),
                               n.e(700792),
                               n.e(965789),
@@ -47981,6 +47982,7 @@ let Ge = (0, i9.Fe)({
                 n.e(67422),
                 n.e(136204),
                 n.e(726511),
+                n.e(947502),
                 n.e(531741),
                 n.e(390213),
                 n.e(736926),
