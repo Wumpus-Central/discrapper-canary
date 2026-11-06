@@ -1494,6 +1494,7 @@ var j =
         (c[(c.CHIRPING = 9)] = "CHIRPING"),
         (c[(c.KEYSMASHING = 10)] = "KEYSMASHING"),
         (c[(c.THINKING = 11)] = "THINKING"),
+        (c[(c.SQUEAKING = 12)] = "SQUEAKING"),
         c),
     X =
         (((u = {})[(u.UNSPECIFIED = 0)] = "UNSPECIFIED"),
