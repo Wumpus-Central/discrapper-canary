@@ -1592,21 +1592,21 @@ function lr(e) {
     });
 }
 function la(e) {
-    let { projectId: t } = e,
-        n = eA.intl.string(ln.default.bWzWw9),
-        l = a.useCallback(
+    let { projectId: t, guildId: n, selected: l } = e,
+        i = eA.intl.string(ln.default.bWzWw9),
+        s = a.useCallback(
             (e) => {
-                (e.stopPropagation(), (0, ee.tb)(t));
+                (e.stopPropagation(), (0, ee.tb)(t), l && (0, eu.pX)((0, J.EB)(n)));
             },
-            [t],
+            [t, n, l],
         );
     return (0, r.jsx)(ei.m, {
-        text: n,
+        text: i,
         ariaHidden: !0,
         children: (0, r.jsx)(es.D, {
             className: ep.Xs,
-            onClick: l,
-            "aria-label": n,
+            onClick: s,
+            "aria-label": i,
             children: (0, r.jsx)(er.XSmallIcon, { size: "xs", color: "currentColor", className: ep.gE }),
         }),
     });
@@ -1700,7 +1700,7 @@ let lo = a.memo(function (e) {
                                                     children: (0, r.jsx)(nD.A, { count: Math.max(1, u) }),
                                                 })
                                               : null,
-                                        s ? null : (0, r.jsx)(la, { projectId: o }),
+                                        (0, r.jsx)(la, { projectId: o, guildId: l, selected: s }),
                                     ],
                                 }),
                             ],
