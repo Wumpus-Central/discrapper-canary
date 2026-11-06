@@ -2202,6 +2202,7 @@ function aZ(e) {
                       className: aF.yB,
                       value: i,
                       onChange: (e) => n(e.target.value),
+                      maxLength: 250,
                       disabled: c || o,
                       placeholder: m,
                       "aria-label": m,
