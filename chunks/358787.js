@@ -1,4 +1,4 @@
-n.d(t, { i: () => J, A: () => $ });
+n.d(t, { iE: () => J, Ay: () => $ });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -80,15 +80,15 @@ function _(e) {
         }),
     });
 }
-var N = n(85563),
-    b = n(739508),
+var b = n(85563),
+    N = n(739508),
     C = n(188567),
     y = n(722178),
     v = n(83617),
     j = n(615396),
     O = n(526292),
-    L = n(881489),
-    R = n(573359),
+    R = n(881489),
+    L = n(573359),
     D = n(423814),
     P = n(774774),
     G = n(543767),
@@ -215,7 +215,7 @@ function Q() {
     return (0, i.jsxs)("div", {
         className: H.Up,
         children: [
-            (0, i.jsx)(N.A, { className: H.sq, "aria-label": U.intl.string(U.t.FSOz78) }),
+            (0, i.jsx)(b.A, { className: H.sq, "aria-label": U.intl.string(U.t.FSOz78) }),
             (0, i.jsx)("div", { className: H.CJ }),
         ],
     });
@@ -242,178 +242,221 @@ let $ = function (e) {
             busy: I,
             analyticsLocation: P,
         } = e,
-        { analyticsLocations: G } = (0, h.Ay)(E.A.SUBSCRIPTION_HEADER),
-        M = (0, S.A)({ forceFetch: !1 }),
-        { fractionalState: V } = M,
-        J = V === B.xc.FP_SUB_PAUSED,
-        $ = (0, D.O)(),
-        ee = $?.discount?.amount,
-        et = (0, O.k5)(),
-        en = (0, O.nf)(),
-        ei = (0, L.ds)();
-    function el() {
-        (t.status === X.Dmq.ACTIVE || t.status === X.Dmq.PAST_DUE || t.status === X.Dmq.PAUSE_PENDING || J) && er();
-    }
-    function es() {
-        t.status === X.Dmq.BILLING_RETRY && er(F.g.CONFIRM);
-    }
-    function er(e) {
-        (0, u.mM)(async () => {
-            let { PremiumBrandRefreshSubscriptionCancellationModal: l } = await Promise.all([
-                n.e(489361),
-                n.e(216806),
-                n.e(310734),
-                n.e(384820),
-                n.e(594161),
-                n.e(435432),
-                n.e(80347),
-                n.e(830554),
-            ]).then(n.bind(n, 673761));
-            return (n) =>
-                (0, i.jsx)(l, {
-                    ...n,
-                    premiumSubscription: t,
-                    analyticsLocation: P,
-                    analyticsLocations: G,
-                    initialStep: e,
-                });
-        });
-    }
-    function ea() {
-        if (null != t && null != t.premiumPlanIdFromItems) {
-            let e = x.A.get(t.premiumPlanIdFromItems);
-            if (null == e) return void Y.info(`Plan not fetched for plan id: ${t.premiumPlanIdFromItems}`);
-            let s = (0, v._w)(e, T?.id, !1),
-                d = s.length > 0 ? s[0] : t.currency,
-                c = !0;
-            if ((1 === s.length && T?.id === t.paymentSourceId && (0, v.jJ)(e.id, d, T?.id) && (c = !1), c))
-                (0, p.A)({
-                    initialPlanId: t.premiumPlanIdFromItems,
-                    analyticsLocations: G,
-                    analyticsLocation: P,
-                    analyticsObject: W,
-                    subscription: t,
-                });
-            else {
-                let e, s;
-                (a()(null != r, "Expected renewalInvoicePreview"),
-                    a()(null != l, "Expected currentInvoicePreview"),
-                    (e = (0, o.uniqueId)("premium-resubscribe-modal")),
-                    (s = !1),
-                    (0, u.mM)(
-                        async () => {
-                            let { PremiumResubscribeModal: e } = await Promise.all([
-                                n.e(996036),
-                                n.e(594161),
-                                n.e(128354),
-                            ]).then(n.bind(n, 674809));
-                            return (n) =>
-                                (0, i.jsx)(e, {
-                                    ...n,
-                                    premiumSubscription: t,
-                                    analyticsLocations: G,
-                                    fractionalPremiumInfo: M,
-                                    currentInvoicePreview: l,
-                                    renewalInvoicePreview: r,
-                                    onClose: async () => {
-                                        s ||
-                                            ((s = !0),
-                                            C._.dispatch(X.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                                            R.A.isDisplayingWowMomentConfirmation && R.A.isAnimated
-                                                ? setTimeout(() => {
-                                                      n.onClose();
-                                                  }, 1e3)
-                                                : await n.onClose());
-                                    },
+        {
+            fractionalPremiumInfo: G,
+            hasFractionalPremiumWithSub: M,
+            unsubscribe: V,
+            billingRetryCancel: J,
+            resubscribe: $,
+            resume: ee,
+            extendPause: et,
+            endSubscription: en,
+            switchPlans: ei,
+        } = (function (e) {
+            let { analyticsLocations: t } = (0, h.Ay)(E.A.SUBSCRIPTION_HEADER),
+                l = (0, S.A)({ forceFetch: !1 });
+            return (function (e) {
+                let {
+                        subscription: t,
+                        currentInvoicePreview: l,
+                        renewalInvoicePreview: s,
+                        paymentSource: r,
+                        analyticsLocation: d,
+                        fractionalPremiumInfo: c,
+                        analyticsLocations: g,
+                    } = e,
+                    m = c.fractionalState === B.xc.FP_SUB_PAUSED;
+                function E(e) {
+                    (0, u.mM)(async () => {
+                        let { PremiumBrandRefreshSubscriptionCancellationModal: l } = await Promise.all([
+                            n.e(489361),
+                            n.e(216806),
+                            n.e(310734),
+                            n.e(384820),
+                            n.e(594161),
+                            n.e(435432),
+                            n.e(80347),
+                            n.e(830554),
+                        ]).then(n.bind(n, 673761));
+                        return (n) =>
+                            (0, i.jsx)(l, {
+                                ...n,
+                                premiumSubscription: t,
+                                analyticsLocation: d,
+                                analyticsLocations: g,
+                                initialStep: e,
+                            });
+                    });
+                }
+                return {
+                    fractionalPremiumInfo: c,
+                    hasFractionalPremiumWithSub: m,
+                    unsubscribe: function () {
+                        (t.status === X.Dmq.ACTIVE ||
+                            t.status === X.Dmq.PAST_DUE ||
+                            t.status === X.Dmq.PAUSE_PENDING ||
+                            m) &&
+                            E();
+                    },
+                    billingRetryCancel: function () {
+                        t.status === X.Dmq.BILLING_RETRY && E(F.g.CONFIRM);
+                    },
+                    resubscribe: function () {
+                        if (null != t && null != t.premiumPlanIdFromItems) {
+                            let e = x.A.get(t.premiumPlanIdFromItems);
+                            if (null == e)
+                                return void Y.info(`Plan not fetched for plan id: ${t.premiumPlanIdFromItems}`);
+                            let m = (0, v._w)(e, r?.id, !1),
+                                A = m.length > 0 ? m[0] : t.currency,
+                                E = !0;
+                            if (
+                                (1 === m.length && r?.id === t.paymentSourceId && (0, v.jJ)(e.id, A, r?.id) && (E = !1),
+                                E)
+                            )
+                                (0, p.A)({
+                                    initialPlanId: t.premiumPlanIdFromItems,
+                                    analyticsLocations: g,
+                                    analyticsLocation: d,
+                                    analyticsObject: W,
+                                    subscription: t,
                                 });
-                        },
-                        {
-                            onCloseRequest: () => {
-                                s ||
-                                    ((s = !0),
-                                    C._.dispatch(X.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                                    R.A.isDisplayingWowMomentConfirmation && R.A.isAnimated
-                                        ? setTimeout(() => {
-                                              (0, u.Oo)(e);
-                                          }, 1e3)
-                                        : (0, u.Oo)(e));
-                            },
-                            modalKey: e,
-                        },
-                    ));
-            }
-        }
-    }
-    function eo() {
-        K.includes(t.status) && null != t.pauseEndsAt
-            ? t.status === X.Dmq.PAUSED && t.pauseReason !== z.qf.USER_TEMPORARY_BAN
-                ? (0, p.A)({
-                      initialPlanId: t.premiumPlanIdFromItems,
-                      analyticsLocations: G,
-                      analyticsLocation: P,
-                      analyticsObject: W,
-                      subscription: t,
-                      skipConfirm: !0,
-                  })
-                : A.U(t, G)
-            : (0, b.pM)(Error("Invalid subscription to resume"), {
-                  extra: { subscriptionId: t.id, status: t.status, pauseEndsAt: t.pauseEndsAt },
-              });
-    }
-    function eu() {
-        t.status === X.Dmq.PAUSED && er(F.g.PAUSE_SELECT);
-    }
-    function ed() {
-        er(F.g.WHAT_YOU_LOSE);
-    }
-    let ec = y.Ay.getPlanIdFromInvoice(t, l);
-    if ((0, f.m1)(ec)) return null;
-    let eg = y.Ay.getStatusFromInvoice(t, l),
-        em = y.Ay.getPremiumType(ec),
-        eA = {
-            [H.Vd]: em === B.PremiumTypes.TIER_0,
-            [H.aS]: em === B.PremiumTypes.TIER_1,
-            [H.hA]: em === B.PremiumTypes.TIER_2,
-            [H.aD]: eg === X.Dmq.CANCELED,
-            [H.WY]: eg === X.Dmq.PAUSE_PENDING,
-            [H.Ft]: eg === X.Dmq.PAUSED && !J,
-            [H.GD]: (0, y.PK)(eg),
+                            else {
+                                let e, r;
+                                (a()(null != s, "Expected renewalInvoicePreview"),
+                                    a()(null != l, "Expected currentInvoicePreview"),
+                                    (e = (0, o.uniqueId)("premium-resubscribe-modal")),
+                                    (r = !1),
+                                    (0, u.mM)(
+                                        async () => {
+                                            let { PremiumResubscribeModal: e } = await Promise.all([
+                                                n.e(996036),
+                                                n.e(594161),
+                                                n.e(128354),
+                                            ]).then(n.bind(n, 674809));
+                                            return (n) =>
+                                                (0, i.jsx)(e, {
+                                                    ...n,
+                                                    premiumSubscription: t,
+                                                    analyticsLocations: g,
+                                                    fractionalPremiumInfo: c,
+                                                    currentInvoicePreview: l,
+                                                    renewalInvoicePreview: s,
+                                                    onClose: async () => {
+                                                        r ||
+                                                            ((r = !0),
+                                                            C._.dispatch(X.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                                                            L.A.isDisplayingWowMomentConfirmation && L.A.isAnimated
+                                                                ? setTimeout(() => {
+                                                                      n.onClose();
+                                                                  }, 1e3)
+                                                                : await n.onClose());
+                                                    },
+                                                });
+                                        },
+                                        {
+                                            onCloseRequest: () => {
+                                                r ||
+                                                    ((r = !0),
+                                                    C._.dispatch(X.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                                                    L.A.isDisplayingWowMomentConfirmation && L.A.isAnimated
+                                                        ? setTimeout(() => {
+                                                              (0, u.Oo)(e);
+                                                          }, 1e3)
+                                                        : (0, u.Oo)(e));
+                                            },
+                                            modalKey: e,
+                                        },
+                                    ));
+                            }
+                        }
+                    },
+                    resume: function () {
+                        K.includes(t.status) && null != t.pauseEndsAt
+                            ? t.status === X.Dmq.PAUSED && t.pauseReason !== z.qf.USER_TEMPORARY_BAN
+                                ? (0, p.A)({
+                                      initialPlanId: t.premiumPlanIdFromItems,
+                                      analyticsLocations: g,
+                                      analyticsLocation: d,
+                                      analyticsObject: W,
+                                      subscription: t,
+                                      skipConfirm: !0,
+                                  })
+                                : A.U(t, g)
+                            : (0, N.pM)(Error("Invalid subscription to resume"), {
+                                  extra: { subscriptionId: t.id, status: t.status, pauseEndsAt: t.pauseEndsAt },
+                              });
+                    },
+                    extendPause: function () {
+                        t.status === X.Dmq.PAUSED && E(F.g.PAUSE_SELECT);
+                    },
+                    endSubscription: function () {
+                        E(F.g.WHAT_YOU_LOSE);
+                    },
+                    switchPlans: function () {
+                        (0, p.A)({ analyticsLocations: g, analyticsLocation: d, analyticsObject: W, subscription: t });
+                    },
+                };
+            })({ ...e, fractionalPremiumInfo: l, analyticsLocations: t });
+        })({
+            subscription: t,
+            currentInvoicePreview: l,
+            renewalInvoicePreview: r,
+            paymentSource: T,
+            analyticsLocation: P,
+        }),
+        el = (0, D.O)(),
+        es = el?.discount?.amount,
+        er = (0, O.k5)(),
+        ea = (0, O.nf)(),
+        eo = (0, R.ds)(),
+        eu = y.Ay.getPlanIdFromInvoice(t, l);
+    if ((0, f.m1)(eu)) return null;
+    let ed = y.Ay.getStatusFromInvoice(t, l),
+        ec = y.Ay.getPremiumType(eu),
+        eg = {
+            [H.Vd]: ec === B.PremiumTypes.TIER_0,
+            [H.aS]: ec === B.PremiumTypes.TIER_1,
+            [H.hA]: ec === B.PremiumTypes.TIER_2,
+            [H.aD]: ed === X.Dmq.CANCELED,
+            [H.WY]: ed === X.Dmq.PAUSE_PENDING,
+            [H.Ft]: ed === X.Dmq.PAUSED && !M,
+            [H.GD]: (0, y.PK)(ed),
         },
-        eE = null;
-    switch (em) {
+        em = null;
+    switch (ec) {
         case B.PremiumTypes.TIER_0:
-            eE = (0, i.jsxs)("div", {
+            em = (0, i.jsxs)("div", {
                 className: H.Up,
                 children: [
-                    (0, i.jsx)(N.A, { className: H.sq, "aria-label": U.intl.string(U.t["t9uG/o"]) }),
+                    (0, i.jsx)(b.A, { className: H.sq, "aria-label": U.intl.string(U.t["t9uG/o"]) }),
                     (0, i.jsx)("div", { className: H.sT }),
                 ],
             });
             break;
         case B.PremiumTypes.TIER_1:
-            eE = (0, i.jsx)(Q, {});
+            em = (0, i.jsx)(Q, {});
             break;
         case B.PremiumTypes.TIER_2:
-            eE = (0, i.jsx)(_, { className: H.V6, "aria-label": U.intl.string(U.t.lpNrPu) });
+            em = (0, i.jsx)(_, { className: H.V6, "aria-label": U.intl.string(U.t.lpNrPu) });
     }
-    let eh = K.includes(t.status) && !J ? q : Z;
-    return (0, i.jsx)(eh, {
-        wordMark: eE,
+    let eA = K.includes(t.status) && !M ? q : Z;
+    return (0, i.jsx)(eA, {
+        wordMark: em,
         subscriptionInfo:
             (a()(null != l, "Expected currentInvoicePreview"),
             (0, i.jsx)("div", {
                 className: H.MS,
-                children: ei
+                children: eo
                     ? U.intl.format(U.t["/SfHwl"], { weeks: 1 })
                     : (0, y.nB)({
-                          planId: ec,
+                          planId: eu,
                           subscription: t,
                           renewalInvoicePreview: l,
                           renewalInvoiceWithEntitlementsPreview: r,
-                          hasDiscountApplied: et,
-                          activeDiscountInfo: en,
-                          hasFractionalPremiumWithSub: J,
-                          fractionalPremiumInfo: M,
+                          hasDiscountApplied: er,
+                          activeDiscountInfo: ea,
+                          hasFractionalPremiumWithSub: M,
+                          fractionalPremiumInfo: G,
                       }),
             })),
         buttons: (function () {
@@ -440,14 +483,7 @@ let $ = function (e) {
                         children: (0, i.jsx)(w.A, {
                             className: s()(H.au, H.lB),
                             disabled: e,
-                            onClick: () => {
-                                (0, p.A)({
-                                    analyticsLocations: G,
-                                    analyticsLocation: P,
-                                    analyticsObject: W,
-                                    subscription: t,
-                                });
-                            },
+                            onClick: ei,
                             text: U.intl.string(U.t["dylp/7"]),
                         }),
                     });
@@ -458,7 +494,7 @@ let $ = function (e) {
                             className: H.Nn,
                             children: (0, i.jsx)(m.Q, {
                                 variant: "always-white",
-                                onClick: el,
+                                onClick: V,
                                 disabled: I,
                                 size: "sm",
                                 text: U.intl.string(U.t["ETE/oC"]),
@@ -477,7 +513,7 @@ let $ = function (e) {
                         size: "sm",
                         text: U.intl.string(U.t.iIvF2z),
                         loading: I,
-                        onClick: ea,
+                        onClick: $,
                     }),
                 });
             switch (e) {
@@ -485,7 +521,7 @@ let $ = function (e) {
                     return (0, i.jsx)(c.$, {
                         variant: "overlay-primary",
                         size: "sm",
-                        onClick: es,
+                        onClick: J,
                         loading: I,
                         text: U.intl.string(U.t["ETE/oC"]),
                     });
@@ -498,7 +534,7 @@ let $ = function (e) {
                                 children: (0, i.jsx)(m.Q, {
                                     variant: "always-white",
                                     disabled: I,
-                                    onClick: el,
+                                    onClick: V,
                                     size: "sm",
                                     text: U.intl.string(U.t.cM1H0K),
                                 }),
@@ -511,13 +547,13 @@ let $ = function (e) {
                                     size: "sm",
                                     text: U.intl.string(U.t.TgV5Qf),
                                     loading: I,
-                                    onClick: eo,
+                                    onClick: ee,
                                 }),
                             }),
                         ],
                     });
                 case X.Dmq.PAUSED:
-                    if (J) return n();
+                    if (M) return n();
                     let { durations: l } = (0, j.Vy)(t);
                     return (0, i.jsxs)("div", {
                         className: H.Lv,
@@ -528,14 +564,14 @@ let $ = function (e) {
                                     l.length > 0
                                         ? (0, i.jsx)(m.Q, {
                                               variant: "always-white",
-                                              onClick: eu,
+                                              onClick: et,
                                               disabled: I,
                                               size: "sm",
                                               text: U.intl.string(U.t.jNHWt6),
                                           })
                                         : (0, i.jsx)(m.Q, {
                                               variant: "always-white",
-                                              onClick: ed,
+                                              onClick: en,
                                               disabled: I,
                                               size: "sm",
                                               text: U.intl.string(U.t.cM1H0K),
@@ -549,7 +585,7 @@ let $ = function (e) {
                                     size: "sm",
                                     text: U.intl.string(U.t.zpi5pg),
                                     loading: I,
-                                    onClick: eo,
+                                    onClick: ee,
                                 }),
                             }),
                         ],
@@ -559,8 +595,8 @@ let $ = function (e) {
                     return n();
             }
         })(),
-        statusClasses: eA,
-        shouldUseDiscountMarketing: et,
-        discountAmount: ee,
+        statusClasses: eg,
+        shouldUseDiscountMarketing: er,
+        discountAmount: es,
     });
 };

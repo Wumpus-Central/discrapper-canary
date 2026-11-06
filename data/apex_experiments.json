@@ -6025,6 +6025,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-11-subscription-management-settings-brand-refresh",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-11-waterwheels-discover",
     "kind": "user",
     "defaultConfig": {
