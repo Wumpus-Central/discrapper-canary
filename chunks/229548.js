@@ -21,12 +21,12 @@ l.d(
         vB: function (e, t) {
             return (0, u.Cc)(e ? n.M.GAME_SERVER_NEW_GAMES_COACHMARK : null, i.Yh.FEATURED_PRODUCT_ID, t);
         },
-        ww: function (e, t, l) {
+        ww: function (e, t, l, i) {
             return (0, u.D8)(
                 e ? n.M.BOOST_TO_UNLOCK_COACHMARK : null,
                 t,
                 { cooldownDurationMs: r.bW, numTimesToRecur: 5 },
-                l,
+                i,
             );
         },
     },
