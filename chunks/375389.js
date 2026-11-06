@@ -261,7 +261,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
         (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("668429", 10))) || (s.client_build_number = I),
+    isNaN((I = parseInt("668434", 10))) || (s.client_build_number = I),
     null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
@@ -802,7 +802,7 @@ var ec = (((d = {}).ABOUT = "about"), (d.STORE = "store"), d),
         (C.STORE = "store"),
         (C.PRIVACY = "privacy"),
         C);
-let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"],
+let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list", "@waterwheels"],
     eC = q(
         Object.freeze({
             INDEX: "/",

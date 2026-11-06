@@ -5,8 +5,9 @@ var a = n(435220);
 let s = "@favorites",
     l = "@guilds-empty-nux",
     o = "@guild-upsell-list",
-    d = ["@me", s, l, "@inbox", o],
-    c = Object.freeze({
+    d = "@waterwheels",
+    c = ["@me", s, l, "@inbox", o, d],
+    u = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
@@ -194,5 +195,5 @@ let s = "@favorites",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    u = (0, i.dN)(c, [":", "?", "@"]);
-n.d(t, {}, { BV: u, Cr: d, YY: s, c$: l, qx: o });
+    _ = (0, i.dN)(u, [":", "?", "@"]);
+n.d(t, {}, { BV: _, Cr: c, GA: d, YY: s, c$: l, qx: o });

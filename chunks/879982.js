@@ -1,4 +1,4 @@
-n.d(t, { q: () => y });
+n.d(t, { q: () => D });
 var i = n(855986),
     r = n(73153),
     a = n(746080);
@@ -76,9 +76,12 @@ var I = n(246338),
     O = n(808728),
     R = n(71393),
     L = n(309010);
-function y(e) {
+n(645959);
+var y = n(652215);
+function D(e) {
+    if (e === y.GAA) return [null, null];
     let t = u.getLastProjectId(e);
-    if (null != t && D(e)) return [a.VV.CONJURE, t];
+    if (null != t && b(e)) return [a.VV.CONJURE, t];
     let n = L.Ay.getChannelId(e),
         i = O.A.getDefaultChannel(e)?.id ?? void 0;
     if ((n === a.VV.GUILD_ONBOARDING && !T.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, g.K)(e)))
@@ -87,15 +90,14 @@ function y(e) {
         return (0, S.tT)(R.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [i, null];
     if (n === a.VV.GAME_SHOP && (0, N.Ye)(e)) return [n, null];
     if (n === a.VV.CONJURE || n === a.VV.CONJURE_PROJECT) {
-        if (!D(e)) return [i, null];
+        if (!b(e)) return [i, null];
         let t = n === a.VV.CONJURE_PROJECT ? h.getReturnProjectId(e) : null;
         return null != t ? [a.VV.CONJURE_PROJECT, t] : [a.VV.CONJURE, null];
     }
     let r = C.A.getChannel(n);
     return null == r || ((0, m.ai)(e) && !p.A.isChannelOrParentFavorited(r)) ? [i, null] : [n, null];
 }
-function D(e) {
+function b(e) {
     let t = R.A.getGuild(e);
     return null != t && (0, I.N)(t, "getChannelIdForGuildTransition");
 }
-(n(645959), n(652215));
