@@ -17051,6 +17051,7 @@ function f3(e) {
             onOpenProjectSettings: tQ,
             onBack: k,
             hideShareTarget: null != k,
+            preview: null != s,
             actions:
                 null == s
                     ? null
