@@ -14,7 +14,7 @@ let a = !(function () {
         return !1;
     }
 })()
-    ? new r.J()
+    ? new r.Jx()
     : new (class {
           get(e, t) {
               let n = i.getItem(e);
