@@ -1,4 +1,4 @@
-n.d(t, { Ni: () => ea, y$: () => eo, t4: () => el, Q9: () => es });
+n.d(t, { Ni: () => es, y$: () => ed, t4: () => eo, Q9: () => el });
 var i = n(882035),
     r = n(136857),
     a = n(428865),
@@ -306,19 +306,20 @@ function X(e) {
 var z = n(811315),
     q = n.n(z),
     Q = n(529412),
-    Z = n(998312),
-    J = n(860841),
-    ee = n(442467),
-    et = n(371710),
-    en = n(120700),
-    ei = n(379912),
-    er = n(705822);
-let [ea, es] = (0, g.A)();
-function el(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
-    return es()(e, t);
-}
+    Z = n(742655),
+    J = n(998312),
+    ee = n(860841),
+    et = n(442467),
+    en = n(371710),
+    ei = n(120700),
+    er = n(379912),
+    ea = n(705822);
+let [es, el] = (0, g.A)();
 function eo(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
+    return el()(e, t);
+}
+function ed(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -509,7 +510,7 @@ function eo(e) {
                 },
                 resetPaymentAuthentication: () => e({ ...W }),
             },
-            ...(0, er.e)(e, i),
+            ...(0, ea.e)(e, i),
             ...((E = []),
             {
                 getPaymentSourceNotices: () => {
@@ -619,7 +620,7 @@ function eo(e) {
                         return null != t && null != i && null == t.findInvoiceItemByPlanId(i);
                     },
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {
@@ -688,12 +689,12 @@ function eo(e) {
                         let { isTrial: n } = t,
                             { isGift: i, getGiftSubscriptionPlanId: r } = e();
                         return null != r()
-                            ? J.u$.SUBSCRIPTION_NEW_PURCHASE
+                            ? ee.u$.SUBSCRIPTION_NEW_PURCHASE
                             : i
-                              ? J.u$.PREMIUM_GIFT
+                              ? ee.u$.PREMIUM_GIFT
                               : n
-                                ? J.u$.PREMIUM_WITH_TRIAL
-                                : J.u$.SUBSCRIPTION_NEW_PURCHASE;
+                                ? ee.u$.PREMIUM_WITH_TRIAL
+                                : ee.u$.SUBSCRIPTION_NEW_PURCHASE;
                     },
                     getPremiumDiscriminatedInvoicePreview: (t) => {
                         let { invoiceError: n, isTrial: i } = t,
@@ -711,7 +712,7 @@ function eo(e) {
                             o = l("primaryInvoicesError");
                         return null == r
                             ? null
-                            : (0, J.Qh)({
+                            : (0, ee.Qh)({
                                   invoiceTypeDiscriminator: n,
                                   checkoutInvoicePreview: r,
                                   renewalInvoicePreview: a,
@@ -730,6 +731,10 @@ function eo(e) {
                         let { subscriptionPlanInvoiceItem: r } = (0, O.Sb)(t, i);
                         return r?.discounts.some((e) => e.type === Y.iS.QUANTITY_DISCOUNT) ?? !1;
                     },
+                    getHasQuantityDiscount: () => {
+                        let { isGift: t, quantity: n, getInvoiceHasQuantityDiscount: i } = e();
+                        return i() || (t && null != (0, Z.t8)(n));
+                    },
                 };
             })(i),
             ...{
@@ -744,11 +749,11 @@ function eo(e) {
                 setHasClearedDefaultGiftMessage: (t) => e({ hasClearedDefaultGiftMessage: t }),
                 getIsRecurringGiftCheckout: () => {
                     let { isRecurringGift: e, selectedPlanId: t } = i();
-                    return e && null != t && (0, et.dI)(t);
+                    return e && null != t && (0, en.dI)(t);
                 },
                 getGiftSubscriptionPlanId: () => {
                     let { selectedPlanId: e, getIsRecurringGiftCheckout: t } = i();
-                    return null != e && t() ? (0, et.o_)(e) : null;
+                    return null != e && t() ? (0, en.o_)(e) : null;
                 },
             },
             ...{
@@ -797,7 +802,7 @@ function eo(e) {
                                 return !0;
                         }
                         if (
-                            ((r && !c) || a === en.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
+                            ((r && !c) || a === ei.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
                             (null == t || !t.canRedeemTrial())
                         )
                             return !0;
@@ -812,10 +817,10 @@ function eo(e) {
                     return null === r && t
                         ? H.intl.string(H.t.CpOiEO)
                         : l
-                          ? H.intl.string(ei.default["7r4HPu"])
+                          ? H.intl.string(er.default["7r4HPu"])
                           : null != n
                             ? n
-                            : H.intl.string(ei.default.BPzQj4);
+                            : H.intl.string(er.default.BPzQj4);
                 },
                 getCheckoutReviewButtonProps: (e) => {
                     let {
@@ -832,7 +837,7 @@ function eo(e) {
                         A = !_ && !E("isCheckoutDataLoading"),
                         f = l?.text;
                     null == f &&
-                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(ei.default.BPzQj4));
+                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(er.default.BPzQj4));
                     let h = l?.variant,
                         I = c({ hasPaymentSources: a, tenantProvidedButtonText: f }),
                         p = {
@@ -882,7 +887,7 @@ function eo(e) {
                                 };
                 },
             },
-            ...(0, ee.d)(e, i),
+            ...(0, et.d)(e, i),
             get: (e) => (null != A[e] ? A[e]() : null),
             contextMetadata: s,
             order: o,
