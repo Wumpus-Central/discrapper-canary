@@ -31,4 +31,10 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=60b0323e15275e0a.css.map*/
+.link_OhOESF {
+    color: currentColor;
+    margin-inline-start: var(--space-8);
+    text-decoration: underline
+}
+
+/*# sourceMappingURL=ad2489e02fdeecc5.css.map*/

@@ -1467,10 +1467,10 @@ let ig = (0, it.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var ip = i(612413);
-let ih = new Date(Date.UTC(2026, 10, 5));
-var iN = i(188275),
-    iA = i(749962),
+var ip = i(612413),
+    ih = i(188275);
+let iN = new Date(Date.UTC(2026, 10, 5));
+var iA = i(749962),
     ib = i(691450),
     ij = i(700755),
     iE = i(647024),
@@ -1622,14 +1622,14 @@ function iy(e) {
                                       day: "numeric",
                                       month: "short",
                                       timeZone: "UTC",
-                                  }).format(ih),
-                                  termsUrl: el.A.getArticleURL(eK.MVz.RUST_PROMOTION),
+                                  }).format(iN),
+                                  termsUrl: (0, ih.X3)(ih.IG),
                               }),
                               subscriptionRequired: !0,
                               isThirdPartyPerk: !0,
                               pillText: eC.intl.string(eC.t.y2b7CA),
                               caption: (0, c.jsx)("img", {
-                                  src: (0, t4.YE)(iN.IG, "1499479228243251242", 128),
+                                  src: (0, t4.YE)(ih.IG, "1499479228243251242", 128),
                                   alt: "Rust",
                               }),
                               backgroundAssetUrl:
@@ -1638,7 +1638,7 @@ function iy(e) {
                               ctaText: eC.intl.string(iE.default.NmBRGV),
                               ctaIcon: t8.LinkExternalSmallIcon,
                               ctaIconPosition: "end",
-                              onCtaClick: () => (0, t9.default)({ applicationId: iN.IG }),
+                              onCtaClick: () => (0, t9.default)({ applicationId: ih.IG }),
                               analyticsOptions: { thirdPartyPartner: "rust" },
                               ctaDisabled: m,
                               ctaLoading: m,

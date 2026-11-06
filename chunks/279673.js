@@ -4,4 +4,5 @@ n.exports = {
     FS: "textContainer_OhOESF",
     jZ: "endContainer_OhOESF",
     Kk: "icon_OhOESF",
+    nf: "link_OhOESF",
 };
