@@ -60,7 +60,7 @@ function y(e) {
     N();
     let r = (function (e) {
         let t = A.Ay.getProject(e);
-        if (null == t || null == (0, f.fL)(t)) return null;
+        if (null == t || null == (0, f.DC)(t)) return null;
         let n = c.A.getMessages(e),
             i = (0, u.Ji)(n);
         if (null == i) return null;

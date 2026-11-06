@@ -11,10 +11,11 @@ var r = n(73153),
     p = n(664619),
     h = n(519325),
     _ = n(513845),
-    f = n(392739),
-    g = n(573083),
-    E = n(855859),
-    S = n(869018);
+    f = n(122393),
+    g = n(392739),
+    E = n(573083),
+    S = n(855859),
+    m = n(869018);
 n.d(
     t,
     {},
@@ -43,13 +44,13 @@ n.d(
                             build: n.build,
                             probe: n.probe,
                         }),
-                            !0 !== n.probe && n.spec?.mode === "widget" && (0, E.b)(e, "widget"));
+                            !0 !== n.probe && n.spec?.mode === "widget" && (0, S.b)(e, "widget"));
                         try {
                             r = await h.A.relayPreviewCapture(e, n.id, {
                                 probe: n.probe,
                                 spec: n.spec,
                                 build: n.build,
-                                onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, f.bm)(e, n.id)),
+                                onAccepted: async () => (t.sendCaptureAck(n.id, "accepted"), await (0, g.bm)(e, n.id)),
                                 resolveUploadUrl: () =>
                                     (async function (e) {
                                         let { ticket: t, baseUrl: n } = await (0, l.BK)(e);
@@ -83,7 +84,7 @@ n.d(
                                 e,
                                 n.id,
                                 n.request,
-                                async () => (t.sendControlAck(n.id, "accepted"), (await (0, f.bm)(e, n.id)) != null),
+                                async () => (t.sendControlAck(n.id, "accepted"), (await (0, g.bm)(e, n.id)) != null),
                             );
                             (console.debug("[conjure] control relay answered", {
                                 id: n.id,
@@ -112,17 +113,17 @@ n.d(
             },
             control_claim(e, t) {
                 let { projectId: n } = t;
-                (0, f.n1)(n, e.id);
+                (0, g.n1)(n, e.id);
             },
             capture_claim(e, t) {
                 let { projectId: n } = t;
-                (0, f.n1)(n, e.id, e.upload_token);
+                (0, g.n1)(n, e.id, e.upload_token);
             },
             preview_operation(e, t) {
                 let { projectId: n } = t;
                 "begin" === e.phase
-                    ? ((0, _.T5)(n), (0, g.pF)(n, "tuning" === e.mode), h.A.beginPreviewOperation(n))
-                    : ((0, g.pF)(n, !1), h.A.endPreviewOperation(n));
+                    ? ((0, _.T5)(n), (0, E.pF)(n, "tuning" === e.mode), h.A.beginPreviewOperation(n))
+                    : ((0, E.pF)(n, !1), h.A.endPreviewOperation(n));
             },
             widget_refreshed() {
                 !(async function () {
@@ -168,9 +169,10 @@ n.d(
         },
         uk: {
             preview_app_published(e, t) {
-                let { projectId: n } = t,
-                    r = u.Ay.getProject(n)?.preview_application_id;
-                null != r && ((0, p._b)(r).catch(() => void 0), !0 === e.has_activity && (0, S.V)(n, { known: !0 }));
+                let { projectId: n } = t;
+                (0, f.L)(n);
+                let r = u.Ay.getProject(n)?.preview_application_id;
+                null != r && ((0, p._b)(r).catch(() => void 0), !0 === e.has_activity && (0, m.V)(n, { known: !0 }));
             },
             preview_ready(e, t) {
                 let { projectId: n } = t;

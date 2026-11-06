@@ -38,15 +38,15 @@ function G() {
 var O = t(434279),
     K = t(972013),
     U = t(927731),
-    z = t(140735),
-    D = t(320448),
+    D = t(140735),
+    z = t(320448),
     J = t(847374),
     R = t(821609),
     W = t(289873),
     F = t(682163),
     M = t(71393),
-    L = t(685105),
-    B = t(919485);
+    B = t(685105),
+    L = t(919485);
 let T = "collaborating";
 var X = t(738601),
     q = t(73153);
@@ -143,12 +143,12 @@ function ei(e) {
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)(et.A, { activity: x, className: ea.XJ }),
-                                  (0, n.jsx)(z.A, { children: es.intl.string(er[x]) }),
+                                  (0, n.jsx)(D.A, { children: es.intl.string(er[x]) }),
                               ],
                           })
                         : null,
                     (0, n.jsx)(m.K, {
-                        icon: p ? D.ChevronSmallRightIcon : J.ChevronSmallDownIcon,
+                        icon: p ? z.ChevronSmallRightIcon : J.ChevronSmallDownIcon,
                         variant: "icon-only",
                         size: "sm",
                         "aria-label": es.intl.formatToPlainString(p ? en.default.bEFqlW : en.default["+0dHt6"], {
@@ -178,7 +178,7 @@ function ed(e) {
         projects: t,
         forceExpanded: a || t.some((e) => e.id === r.selectedProjectId),
         className: ea.uW,
-        children: (0, n.jsx)(L.A, { projects: t, ...r, hideServer: !0 }),
+        children: (0, n.jsx)(B.A, { projects: t, ...r, hideServer: !0 }),
     });
 }
 function ec(e) {
@@ -217,11 +217,11 @@ function ec(e) {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   i.length > 0 || d.length > 0
-                      ? (0, n.jsxs)(B.A, {
+                      ? (0, n.jsxs)(L.A, {
                             title: es.intl.string(en.default.w9wAEy),
                             className: ea.uW,
                             children: [
-                                (0, n.jsx)(L.A, { projects: i, ...s }),
+                                (0, n.jsx)(B.A, { projects: i, ...s }),
                                 d.length > 0
                                     ? (0, n.jsx)(ei, {
                                           groupKey: T,
@@ -229,7 +229,7 @@ function ec(e) {
                                           projects: d,
                                           forceExpanded: r || d.some((e) => e.id === s.selectedProjectId),
                                           className: ea.mK,
-                                          children: (0, n.jsx)(L.A, { projects: d, ...s, showServer: !0 }),
+                                          children: (0, n.jsx)(B.A, { projects: d, ...s, showServer: !0 }),
                                       })
                                     : null,
                             ],
@@ -249,8 +249,8 @@ function ej(e) {
         a,
         { selectedProjectId: r, workspaceGuildId: i, onNavigate: d } = e,
         [c, o] = s.useState(""),
-        z = (0, eu.A)("sidebar"),
-        D =
+        D = (0, eu.A)("sidebar"),
+        z =
             ((l = (0, E.U)(G)),
             (t = (0, j.yK)([k.Ay], () => k.Ay.getFlattenedGuildIds())),
             (a = (0, j.bG)([S.default], () => S.default.getCurrentUser()?.id)),
@@ -261,7 +261,7 @@ function ej(e) {
                             s = [],
                             a = new Map();
                         for (let l of e) {
-                            let e = (0, _.fL)(l);
+                            let e = (0, _.DC)(l);
                             if (null == e) {
                                 (l.owner_user_id === t ? n : s).push(l);
                                 continue;
@@ -285,7 +285,7 @@ function ej(e) {
                 }),
                 [l, t, a, c],
             )),
-        J = (0, j.bG)([w.Ay], () => "success" === w.Ay.getOwnedProjectsFetchState()) && !D.hasProjects,
+        J = (0, j.bG)([w.Ay], () => "success" === w.Ay.getOwnedProjectsFetchState()) && !z.hasProjects,
         R = s.useCallback((e) => d(e.id, "project_list"), [d]),
         W = s.useCallback(
             (e) => {
@@ -302,8 +302,8 @@ function ej(e) {
             [i],
         ),
         M = s.useCallback((e) => d(e, "create"), [d]),
-        L = (0, eo.A)(i, M),
-        B = (0, j.bG)([K.A], () => K.A.isPinned()),
+        B = (0, eo.A)(i, M),
+        L = (0, j.bG)([K.A], () => K.A.isPinned()),
         T = es.intl.string(en.default["DE7U+m"]),
         X = null == r;
     return (0, n.jsxs)("nav", {
@@ -329,8 +329,8 @@ function ej(e) {
                     (0, n.jsxs)("div", {
                         className: ea.$s,
                         children: [
-                            (0, n.jsx)(v.A, { importing: L.importing, disabled: null == i, onClick: L.open }),
-                            B
+                            (0, n.jsx)(v.A, { importing: B.importing, disabled: null == i, onClick: B.open }),
+                            L
                                 ? null
                                 : (0, n.jsx)(h.m, {
                                       text: T,
@@ -345,13 +345,13 @@ function ej(e) {
                                           onClick: U._,
                                       }),
                                   }),
-                            L.input,
+                            B.input,
                         ],
                     }),
                 ],
             }),
             (0, n.jsxs)(g.Ip, {
-                ref: z,
+                ref: D,
                 className: ea.XG,
                 fade: !0,
                 children: [
@@ -383,7 +383,7 @@ function ej(e) {
                         ],
                     }),
                     (0, n.jsx)(ec, {
-                        groups: D,
+                        groups: z,
                         query: c,
                         selectedProjectId: r,
                         onSelect: R,

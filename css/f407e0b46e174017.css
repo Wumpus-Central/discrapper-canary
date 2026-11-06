@@ -74,6 +74,24 @@
     display: inline-flex
 }
 
+.box_70vT0W {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    padding: var(--space-12)
+}
+
+.box_70vT0W,
+.row_70vT0W {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.row_70vT0W {
+    align-items: flex-start;
+    color: var(--text-subtle)
+}
+
 .header_-KMphV {
     display: flex;
     font-weight: var(--font-weight-medium);
@@ -476,4 +494,4 @@
     margin-bottom: var(--space-16)
 }
 
-/*# sourceMappingURL=475e027799ac3c6e.css.map*/
+/*# sourceMappingURL=f407e0b46e174017.css.map*/

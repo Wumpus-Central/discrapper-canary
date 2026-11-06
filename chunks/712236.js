@@ -1,4 +1,4 @@
-s.d(t, { A: () => tn });
+s.d(t, { A: () => ts });
 var n = s(477900),
     a = s(582128),
     l = s(503698),
@@ -1155,24 +1155,20 @@ var e4 = s(698638),
     te = s(260024);
 class tt extends Error {}
 function ts(e) {
-    let t = f.A.getGuild(e);
-    return null != t && (0, _.sM)(t, "ConjureHomePage") ? "guild" : null;
-}
-function tn(e) {
     let t,
         s,
         l,
-        { guildId: f, onConjurePage: p = !1 } = e,
-        y = (0, G.bG)([z.A], () => z.A.getDraft(F));
-    (0, L.N$)(y);
-    let _ = (0, M.A)(p ? "home" : null),
-        [T, H] = a.useState(!1),
-        [q, K] = a.useState(null),
+        { guildId: p, onConjurePage: y = !1 } = e,
+        T = (0, G.bG)([z.A], () => z.A.getDraft(F));
+    (0, L.N$)(T);
+    let H = (0, M.A)(y ? "home" : null),
+        [q, K] = a.useState(!1),
         [U, $] = a.useState(null),
-        [B, X] = a.useState(() => O.w.get(R) ?? null ?? !0),
-        Y = a.useRef(null),
-        Z = a.useMemo(() => W().map((e) => ({ ...e, image: V[e.id] })), []),
-        J =
+        [B, X] = a.useState(null),
+        [Y, Z] = a.useState(() => O.w.get(R) ?? null ?? !0),
+        J = a.useRef(null),
+        Q = a.useMemo(() => W().map((e) => ({ ...e, image: V[e.id] })), []),
+        ee =
             ((t = e9.useField("attachments")),
             (s = (0, eJ.sm)(e6)),
             {
@@ -1194,8 +1190,8 @@ function tn(e) {
                 removeAttachment: e8,
                 hasErrors: l.some((e) => "error" === e.draft.status),
             }),
-        { attachments: Q, addFiles: ee } = J,
-        et = (function (e) {
+        { attachments: et, addFiles: es } = ee,
+        en = (function (e) {
             let { guildId: t, modelSettings: s } = e,
                 [n, l] = a.useState(!1),
                 r = a.useRef(!1);
@@ -1238,30 +1234,41 @@ function tn(e) {
                     [t, s],
                 ),
             };
-        })({ guildId: f, modelSettings: U }),
-        { importArchive: es } = et,
-        en = T || et.importing,
-        el = "" !== y.trim() || Q.length > 0,
-        er = en || !el || J.hasErrors,
-        ei = (0, x.yN)(a.useCallback((e) => es(e, p ? "user" : ts(f)), [es, p, f])),
-        ec = a.useCallback((e) => ee(Array.from(e)), [ee]);
-    (0, D.p)(Y);
-    let eo = a.useCallback((e) => {
-            ((0, P.I)(F, e), K(null));
+        })({ guildId: p, modelSettings: B }),
+        { importArchive: el } = en,
+        er = q || en.importing,
+        ei = "" !== T.trim() || et.length > 0,
+        ec = er || !ei || ee.hasErrors,
+        eo = (0, x.yN)(
+            a.useCallback(
+                (e) => {
+                    let t;
+                    return el(
+                        e,
+                        y ? "user" : null != (t = f.A.getGuild(p)) && (0, _.sM)(t, "ConjureHomePage") ? "guild" : null,
+                    );
+                },
+                [el, y, p],
+            ),
+        ),
+        ed = a.useCallback((e) => es(Array.from(e)), [es]);
+    (0, D.p)(J);
+    let eu = a.useCallback((e) => {
+            ((0, P.I)(F, e), $(null));
         }, []),
-        ed = a.useCallback(
+        em = a.useCallback(
             (e) => {
-                eo(e);
-                let t = Y.current;
+                eu(e);
+                let t = J.current;
                 null != t && (t.focus(), t.setSelectionRange(e.length, e.length));
             },
-            [eo],
+            [eu],
         ),
-        eu = a.useRef(!1),
-        em = a.useCallback(async () => {
-            let e = y.trim();
-            if (("" !== e || 0 !== Q.length) && !eu.current) {
-                ((eu.current = !0), H(!0), K(null));
+        eh = a.useRef(!1),
+        ef = a.useCallback(async () => {
+            let e = T.trim();
+            if (("" !== e || 0 !== et.length) && !eh.current) {
+                ((eh.current = !0), K(!0), $(null));
                 try {
                     let t = await (async function (e, t) {
                         let s = (function () {
@@ -1282,12 +1289,12 @@ function tn(e) {
                                 t
                             );
                         }
-                    })(y, (t) =>
+                    })(T, (t) =>
                         b({
-                            guildId: f,
-                            installScope: p ? null : ts(f),
+                            guildId: p,
+                            installScope: "user",
                             prompt: e,
-                            modelSettings: U,
+                            modelSettings: B,
                             start: async (s) => {
                                 let n = [];
                                 if (t.length > 0)
@@ -1306,20 +1313,20 @@ function tn(e) {
                                     } catch {
                                         throw (await (0, N.xx)(s).catch(() => void 0), new tt());
                                     }
-                                (0, w.P6)(s, e, n, p ? void 0 : f);
+                                (0, w.P6)(s, e, n, y ? void 0 : p);
                             },
                         }),
                     );
-                    ((eu.current = !1), H(!1), (0, A.A)(t, "create"));
+                    ((eh.current = !1), K(!1), (0, A.A)(t, "create"));
                 } catch (e) {
-                    (K(e instanceof tt ? I.intl.string(C.default["903H7m"]) : (0, j.mG)(e)), (eu.current = !1), H(!1));
+                    ($(e instanceof tt ? I.intl.string(C.default["903H7m"]) : (0, j.mG)(e)), (eh.current = !1), K(!1));
                 }
             }
-        }, [y, U, f, p, Q]),
-        eh = a.useCallback((e) => {
-            (O.w.set(R, e), X(e));
+        }, [T, B, p, y, et]),
+        ex = a.useCallback((e) => {
+            (O.w.set(R, e), Z(e));
         }, []),
-        ef = I.intl.string(B ? C.default.kar7jh : C.default.WSc5Y2);
+        eg = I.intl.string(Y ? C.default.kar7jh : C.default.WSc5Y2);
     return (0, n.jsx)("div", {
         className: r()(te.MY, e7.T),
         children: (0, n.jsxs)("div", {
@@ -1328,15 +1335,15 @@ function tn(e) {
                 (0, n.jsxs)("main", {
                     className: te.iW,
                     children: [
-                        en
+                        er
                             ? null
                             : (0, n.jsx)(m.A, {
                                   title: I.intl.string(C.default.gy7byi),
                                   description: I.intl.string(C.default["dkv/WO"]),
                                   icons: e4.ir,
-                                  onDrop: ec,
+                                  onDrop: ed,
                               }),
-                        p
+                        y
                             ? null
                             : (0, n.jsx)(k.A, {
                                   title: I.intl.string(C.default.uk6jhJ),
@@ -1345,20 +1352,20 @@ function tn(e) {
                                       icon: i.MenuIcon,
                                       color: "var(--icon-strong)",
                                       className: te.FW,
-                                      tooltip: ef,
-                                      "aria-label": ef,
-                                      selected: B,
-                                      onClick: () => eh(!B),
+                                      tooltip: eg,
+                                      "aria-label": eg,
+                                      selected: Y,
+                                      onClick: () => ex(!Y),
                                   }),
                               }),
                         (0, n.jsx)(c.Ip, {
-                            ref: _,
+                            ref: H,
                             className: te.XG,
                             children: (0, n.jsxs)("div", {
                                 className: te.Qs,
                                 children: [
                                     (0, n.jsxs)("div", {
-                                        className: r()(te.Lv, { [te.$O]: p }),
+                                        className: r()(te.Lv, { [te.$O]: y }),
                                         children: [
                                             (0, n.jsxs)("div", {
                                                 className: te.ZK,
@@ -1387,19 +1394,19 @@ function tn(e) {
                                                 className: te.ZK,
                                                 children: [
                                                     (0, n.jsx)(eF, {
-                                                        idea: y,
-                                                        inputRef: Y,
-                                                        onIdeaChange: eo,
-                                                        onSubmit: em,
-                                                        submitting: en,
-                                                        submitDisabled: er,
-                                                        error: q,
-                                                        modelSettings: U,
-                                                        onModelSettingsChange: $,
-                                                        attachments: J,
-                                                        onImport: ei.open,
+                                                        idea: T,
+                                                        inputRef: J,
+                                                        onIdeaChange: eu,
+                                                        onSubmit: ef,
+                                                        submitting: er,
+                                                        submitDisabled: ec,
+                                                        error: U,
+                                                        modelSettings: B,
+                                                        onModelSettingsChange: X,
+                                                        attachments: ee,
+                                                        onImport: eo.open,
                                                     }),
-                                                    ei.input,
+                                                    eo.input,
                                                     (0, n.jsx)(u.E, {
                                                         variant: "footnote/normal",
                                                         color: "text-muted",
@@ -1409,14 +1416,14 @@ function tn(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, n.jsx)(ea, { inspirations: Z, onCopyPrompt: ed }),
+                                    (0, n.jsx)(ea, { inspirations: Q, onCopyPrompt: em }),
                                     (0, n.jsx)(eB, {}),
                                 ],
                             }),
                         }),
                     ],
                 }),
-                B && !p ? (0, n.jsx)(eA, { guildId: f, archiveImport: et }) : null,
+                Y && !y ? (0, n.jsx)(eA, { guildId: p, archiveImport: en }) : null,
             ],
         }),
     });

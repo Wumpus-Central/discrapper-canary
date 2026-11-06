@@ -40,7 +40,7 @@ function I(t) {
                 "guild" === l &&
                 null != n &&
                 !!(0, C.lE)(n.publishState) &&
-                ("activity" === n.surface ? a && null == e && !0 !== i : "bot" === n.surface && !1 === u)
+                (!1 === u || ("activity" === n.surface && a && null == e && !0 !== i))
             );
         })({ ...t, status: i }),
         u = (function (t) {
@@ -67,7 +67,7 @@ function I(t) {
                               : null;
                       })(t)
                     : null,
-            missingSurface: a ? ("activity" === i.surface ? "channel" : "bot") : null,
+            missingSurface: a ? ("activity" === i.surface && !1 !== t.botInGuild ? "channel" : "bot") : null,
         };
     return r && n?.bot_permissions_changed === !0
         ? { ...s, label: M.intl.string(y.default["tUeY/h"]), action: "review_permissions" }
