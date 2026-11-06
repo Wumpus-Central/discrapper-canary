@@ -18,13 +18,13 @@ var l = n(477900),
 function v(e) {
     return !e.defaultPrevented && 0 === e.button && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
 }
-function _(e) {
+function C(e) {
     let { navId: t, option: n, selectedKey: r } = e;
     return "page" === n.type
-        ? (0, l.jsx)(C, { option: n, selectedKey: r })
-        : (0, l.jsx)(y, { navId: t, option: n, selectedKey: r });
+        ? (0, l.jsx)(y, { option: n, selectedKey: r })
+        : (0, l.jsx)(_, { navId: t, option: n, selectedKey: r });
 }
-function C(e) {
+function y(e) {
     var t;
     let { option: n, selectedKey: s } = e,
         i = n.key === s,
@@ -56,15 +56,15 @@ function C(e) {
         }),
     });
 }
-function y(e) {
+function _(e) {
     let { navId: t, option: n, selectedKey: s } = e,
         { route: i } = n,
         o = `${t}-${n.key}`,
-        _ = (function e(t, n) {
+        C = (function e(t, n) {
             return t.key === n || ("menu" === t.type && t.options.some((t) => e(t, n)));
         })(n, s),
-        C = r.useRef(null),
         y = r.useRef(null),
+        _ = r.useRef(null),
         b = r.useRef(!1),
         { isHovered: S, setIsHovered: I, onMouseEnter: A, onMouseLeave: j, cancelTimers: L } = (0, x.A)(100, 100),
         k = r.useCallback(() => {
@@ -78,14 +78,14 @@ function y(e) {
                 (L(),
                     b.current && !f.Ay.keyboardModeEnabled && (0, p.uS)(),
                     I(!1),
-                    e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : C.current?.focus())));
+                    e && requestAnimationFrame(() => (null != _.current ? _.current.focus() : y.current?.focus())));
             },
             [L, I],
         ),
-        T = r.useCallback(() => {
+        R = r.useCallback(() => {
             S ? O(!1) : N();
         }, [S, N, O]),
-        R = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
             },
@@ -99,7 +99,7 @@ function y(e) {
             [S, N, O],
         ),
         D = (0, l.jsx)(u.E, { variant: "body-md/medium", color: "none", children: n.text }),
-        B = (0, l.jsx)(m.ChevronSmallDownIcon, {
+        P = (0, l.jsx)(m.ChevronSmallDownIcon, {
             size: "sm",
             color: "currentColor",
             className: a()(E.OW, { [E.g3]: S }),
@@ -107,7 +107,7 @@ function y(e) {
     return (0, l.jsx)("li", {
         className: E.I,
         children: (0, l.jsx)(g.Y, {
-            targetElementRef: C,
+            targetElementRef: y,
             shouldShow: S,
             position: "bottom",
             align: "left",
@@ -152,14 +152,14 @@ function y(e) {
             children: (e) =>
                 null != i
                     ? (0, l.jsxs)("span", {
-                          ref: C,
-                          className: a()(E.ie, E.iL, { [E.wH]: _ }),
+                          ref: y,
+                          className: a()(E.ie, E.iL, { [E.wH]: C }),
                           children: [
                               (0, l.jsx)(c.D, {
                                   tag: "a",
                                   role: "link",
                                   href: i,
-                                  onClick: R,
+                                  onClick: T,
                                   onMouseEnter: k,
                                   onMouseLeave: j,
                                   "aria-current": n.key === s ? "page" : void 0,
@@ -169,31 +169,31 @@ function y(e) {
                               }),
                               (0, l.jsx)(c.D, {
                                   ...e,
-                                  innerRef: y,
+                                  innerRef: _,
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
-                                  onClick: T,
+                                  onClick: R,
                                   onKeyDown: M,
                                   onMouseEnter: k,
                                   onMouseLeave: j,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
                                   className: a()(E.LA, E.nE),
-                                  children: B,
+                                  children: P,
                               }),
                           ],
                       })
                     : (0, l.jsxs)(c.D, {
                           ...e,
-                          innerRef: C,
+                          innerRef: y,
                           role: "button",
                           "aria-haspopup": "true",
-                          onClick: T,
+                          onClick: R,
                           onKeyDown: M,
                           onMouseEnter: k,
                           onMouseLeave: j,
-                          className: a()(E.ie, E.LA, { [E.wH]: _ }),
-                          children: [D, B],
+                          className: a()(E.ie, E.LA, { [E.wH]: C }),
+                          children: [D, P],
                       }),
         }),
     });
@@ -269,7 +269,7 @@ function j(e) {
                 (0, l.jsx)("ul", {
                     onKeyDown: A,
                     className: E.P_,
-                    children: p.map((e) => (0, l.jsx)(_, { navId: m, option: e, selectedKey: n }, e.key)),
+                    children: p.map((e) => (0, l.jsx)(C, { navId: m, option: e, selectedKey: n }, e.key)),
                 }),
         ],
     });
@@ -284,13 +284,13 @@ function L(e) {
             t.map((e, t) =>
                 (0, l.jsx)(
                     i.Ae,
-                    { index: t, onItemLayout: a, children: (0, l.jsx)(_, { navId: c, option: e }) },
+                    { index: t, onItemLayout: a, children: (0, l.jsx)(C, { navId: c, option: e }) },
                     e.key,
                 ),
             ),
             (0, l.jsx)("div", {
                 ref: o,
-                children: (0, l.jsx)(_, {
+                children: (0, l.jsx)(C, {
                     navId: c,
                     option: { type: "menu", key: "more-measure", text: r, expandLabel: s, options: [] },
                 }),

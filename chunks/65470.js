@@ -18,12 +18,12 @@ n.d(
                     giftMessage: u,
                     onClick: p,
                     buttonTextOverride: m,
-                    ...x
+                    ...h
                 } = t,
-                { analyticsLocations: h } = (0, s.Ay)(),
+                { analyticsLocations: x } = (0, s.Ay)(),
                 { openGiftModal: b } = (0, a.$)({
                     giftRecipient: null,
-                    analyticsLocations: h,
+                    analyticsLocations: x,
                     analyticsObject: { object: d.ZSU.BUTTON_CTA, objectType: d.btD.GIFT, ...n },
                     giftMessage: u,
                     subscriptionTier: e,
@@ -37,7 +37,7 @@ n.d(
                         (b(), p?.(t));
                     }),
                 icon: l.GiftIcon,
-                ...x,
+                ...h,
                 text: A,
             });
         },

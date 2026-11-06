@@ -30,11 +30,11 @@ function v(e) {
               className: p.hm,
               children: (0, l.jsx)(m.v3.Provider, {
                   value: f,
-                  children: n.map((e, t) => (0, l.jsx)(C, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: n.map((e, t) => (0, l.jsx)(y, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
-function _(e) {
+function C(e) {
     let { isLoading: t, products: n, tab: r } = e,
         a = (0, m.Mk)(r),
         i = h.intl.string(h.t.HP8LNG);
@@ -57,11 +57,11 @@ function _(e) {
             getItemKey: E,
             maintainFocusOnReorder: !0,
             renderItem: (e, t, n) =>
-                (0, l.jsx)(C, { item: e, index: n, prioritizedCurrency: a, listItemProps: t }, e.skuId),
+                (0, l.jsx)(y, { item: e, index: n, prioritizedCurrency: a, listItemProps: t }, e.skuId),
         }),
     });
 }
-function C(e) {
+function y(e) {
     let { item: t, index: n, prioritizedCurrency: r, listItemProps: s } = e;
     return (0, l.jsx)(a.R9, {
         newValue: { tilePosition: n, pageSection: "top 4", categoryPosition: 0 },
@@ -96,7 +96,7 @@ n.d(
                 case "feed":
                     return (0, l.jsx)(v, { isLoading: f, products: x, tab: m });
                 case "hscroll":
-                    return (0, l.jsx)(_, { isLoading: f, products: x, tab: m });
+                    return (0, l.jsx)(C, { isLoading: f, products: x, tab: m });
             }
         },
     },

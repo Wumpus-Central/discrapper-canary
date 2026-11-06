@@ -25,8 +25,8 @@ function T(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: E } = e,
         [p, T] = s.useState(g),
         [M, f] = s.useState(null),
-        [R, L] = s.useState("init"),
-        b = p === c.tI.PERSONAL,
+        [R, b] = s.useState("init"),
+        L = p === c.tI.PERSONAL,
         D = (0, l.bG)([h.A], () => h.A.getGuildId()),
         x = (0, l.bG)(
             [I.A],
@@ -36,7 +36,7 @@ function T(e) {
             },
             [t],
         ),
-        G = b ? null : x;
+        G = L ? null : x;
     s.useEffect(() => {
         D !== t && E();
     }, [t, E, D]);
@@ -46,19 +46,19 @@ function T(e) {
         U = s.useCallback(async () => {
             if ("init" === R) {
                 if (D !== t) return void (await E());
-                (L("submitting"), f(null));
+                (b("submitting"), f(null));
                 try {
                     await (async function (e, t) {
                         let n = t ? c.tI.PERSONAL : c.tI.GUILD;
                         (await (0, m.JM)(n), await (0, m.Sh)(e));
-                    })(t, b);
+                    })(t, L);
                 } catch (e) {
-                    (S.error("Failed to save guild theme NUX preference", e), f(_.intl.string(_.t.fEptJP)), L("init"));
+                    (S.error("Failed to save guild theme NUX preference", e), f(_.intl.string(_.t.fEptJP)), b("init"));
                     return;
                 }
-                (L("submitted"), n(C.i.TAKE_ACTION), await E());
+                (b("submitted"), n(C.i.TAKE_ACTION), await E());
             }
-        }, [t, b, n, E, D, R]),
+        }, [t, L, n, E, D, R]),
         y = s.useCallback(async () => {
             ("submitted" !== R && n(C.i.USER_DISMISS), await E());
         }, [n, E, R]),
@@ -69,7 +69,7 @@ function T(e) {
             ],
             [],
         ),
-        P = b ? _.intl.string(_.t.cvoikF) : _.intl.string(_.t["cY+Oob"]);
+        P = L ? _.intl.string(_.t.cvoikF) : _.intl.string(_.t["cY+Oob"]);
     return (0, i.jsx)(r.k, {
         size: "md",
         transitionState: A,
@@ -86,7 +86,7 @@ function T(e) {
         actions: [
             {
                 text: P,
-                variant: b ? "secondary" : "primary",
+                variant: L ? "secondary" : "primary",
                 loading: "submitting" === R,
                 disabled: "submitting" === R,
                 onClick: U,
@@ -106,7 +106,7 @@ function T(e) {
                     label: _.intl.string(_.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                b && (0, i.jsx)(u.w, { type: "warning", message: _.intl.string(_.t.tTHQAy), role: "status" }),
+                L && (0, i.jsx)(u.w, { type: "warning", message: _.intl.string(_.t.tTHQAy), role: "status" }),
                 null != M && (0, i.jsx)(u.w, { type: "critical", message: M, role: "alert" }),
             ],
         }),
