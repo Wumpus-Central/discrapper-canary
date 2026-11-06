@@ -2672,7 +2672,6 @@ var tE = n(335871),
         (o[(o.SEO = 7)] = "SEO"),
         (o[(o.MARKETING = 8)] = "MARKETING"),
         (o[(o.DESIGN_DOCS = 9)] = "DESIGN_DOCS"),
-        (o[(o.APP_LAUNCH = 10)] = "APP_LAUNCH"),
         o),
     tp = (((d = {})[(d.ENABLED = 0)] = "ENABLED"), (d[(d.DISABLED = 1)] = "DISABLED"), d),
     tm =

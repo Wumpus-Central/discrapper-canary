@@ -12,6 +12,5 @@ var l =
     (r[(r.ExposureTrackingEnabled = 2)] = "ExposureTrackingEnabled"),
     (r[(r.DependentExperiment = 4)] = "DependentExperiment"),
     (r[(r.UseAsEligibility = 8)] = "UseAsEligibility"),
-    (r[(r.IsAppLaunch = 16)] = "IsAppLaunch"),
     r);
 let o = "2031446579660906796";
