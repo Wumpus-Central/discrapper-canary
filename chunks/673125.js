@@ -165,8 +165,14 @@ class E extends s.Ay.Store {
     get challenges() {
         return this.state.challenges;
     }
+    challengesForOrbWalletCache = null;
     get challengesForOrbWallet() {
-        return this.state.challenges.filter((e) => u.has(e.achievementStatus));
+        let { challenges: e } = this.state;
+        return (
+            (null == this.challengesForOrbWalletCache || this.challengesForOrbWalletCache.source !== e) &&
+                (this.challengesForOrbWalletCache = { source: e, result: e.filter((e) => u.has(e.achievementStatus)) }),
+            this.challengesForOrbWalletCache.result
+        );
     }
     get hasFetchedChallenges() {
         return this.state.hasFetchedChallenges;
