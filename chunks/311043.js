@@ -70,9 +70,9 @@ let h = new f(r.h, {
         ((l = new Map()), (o = new Set()), (d = new Set()), (c = new Set()));
     },
     GAME_FETCH: function (e) {
-        let { gameIds: t } = e;
+        let { gameIds: t, force: n = !1 } = e;
         t.forEach((e) => {
-            (o.add(e), d.delete(e));
+            (o.add(e), d.delete(e), n && c.delete(e));
         });
     },
     GAME_FETCH_CANCELLED: function (e) {
