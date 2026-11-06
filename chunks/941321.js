@@ -1,46 +1,58 @@
-let _,
-    r = null;
-function a() {
-    return ((null === r || 0 === r.byteLength) && (r = new Uint8Array(_.memory.buffer)), r);
+let r;
+function _(e, n) {
+    return ((e >>>= 0), f().subarray(e / 1, e / 1 + n));
 }
-let f = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 });
-f.decode();
-let i = 0,
-    l = 0;
-n.d(
-    t,
+let i = null;
+function f() {
+    return ((null === i || 0 === i.byteLength) && (i = new Uint8Array(r.memory.buffer)), i);
+}
+function a(e, n) {
+    let t = n(+e.length, 1) >>> 0;
+    return (f().set(e, t / 1), (s = e.length), t);
+}
+function c(e) {
+    let n = r.__wbindgen_externrefs.get(e);
+    return (r.__externref_table_dealloc(e), n);
+}
+let l = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 });
+l.decode();
+let o = 0,
+    s = 0;
+t.d(
+    n,
     {},
     {
-        bL: function () {
-            let e = _.__wbindgen_externrefs,
-                t = e.grow(4);
-            (e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1));
+        aL: function (e, n) {
+            let t = a(e, r.__wbindgen_malloc),
+                i = s,
+                f = r.lossy_recompress_gif(t, i, n);
+            if (f[3]) throw c(f[2]);
+            var l = _(f[0], f[1]).slice();
+            return (r.__wbindgen_free(f[0], +f[1], 1), l);
         },
-        iI: function (e, t, n, r, f, i, d, c, o) {
-            let b,
-                s = ((b = (0, _.__wbindgen_malloc)(+e.length, 1) >>> 0), a().set(e, b / 1), (l = e.length), b),
-                u = l,
-                g = _.crop_and_rotate_gif(s, u, t, n, r, f, i, d, null == c ? 0xffffff : c, null == o ? 0xffffff : o);
-            if (g[3]) {
-                let e;
-                throw ((w = g[2]), (e = _.__wbindgen_externrefs.get(w)), _.__externref_table_dealloc(w), e);
-            }
-            var w,
-                p,
-                x,
-                h = ((p = g[0]), (x = g[1]), (p >>>= 0), a().subarray(p / 1, p / 1 + x)).slice();
-            return (_.__wbindgen_free(g[0], +g[1], 1), h);
+        bL: function () {
+            let e = r.__wbindgen_externrefs,
+                n = e.grow(4);
+            (e.set(0, void 0), e.set(n + 0, void 0), e.set(n + 1, null), e.set(n + 2, !0), e.set(n + 3, !1));
+        },
+        iI: function (e, n, t, i, f, l, o, d, u) {
+            let b = a(e, r.__wbindgen_malloc),
+                g = s,
+                w = r.crop_and_rotate_gif(b, g, n, t, i, f, l, o, null == d ? 0xffffff : d, null == u ? 0xffffff : u);
+            if (w[3]) throw c(w[2]);
+            var p = _(w[0], w[1]).slice();
+            return (r.__wbindgen_free(w[0], +w[1], 1), p);
         },
         lI: function (e) {
-            _ = e;
+            r = e;
         },
-        pY: function (e, t) {
-            var n, _;
+        pY: function (e, n) {
+            var t, r;
             return (
-                (n = e >>> 0),
-                (i += _ = t) >= 0x7ff00000 &&
-                    ((f = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 })).decode(), (i = _)),
-                f.decode(a().subarray(n, n + _))
+                (t = e >>> 0),
+                (o += r = n) >= 0x7ff00000 &&
+                    ((l = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 })).decode(), (o = r)),
+                l.decode(f().subarray(t, t + r))
             );
         },
     },
