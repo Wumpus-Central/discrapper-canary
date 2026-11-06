@@ -1,54 +1,57 @@
-n.d(t, { A: () => I });
-var i = n(477900);
+n.d(t, { A: () => S });
+var l = n(477900);
 n(582128);
-var l = n(503698),
-    s = n.n(l),
+var i = n(503698),
+    s = n.n(i),
     r = n(855986),
     a = n(192308),
     o = n(821609),
     u = n(403581),
     c = n(793574),
     d = n(688810),
-    m = n(287809),
-    p = n(129230),
-    g = n(722178),
-    f = n(834708),
-    h = n(154486);
-let x = (0, n(945810).mj)({
+    m = n(676030),
+    p = n(71393),
+    g = n(287809),
+    f = n(129230),
+    h = n(834708),
+    x = n(154486);
+let A = (0, n(945810).mj)({
     name: "2026-10-hd-streaming-contextual-referrals",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var A = n(232198),
-    v = n(652215),
-    E = n(792996),
-    C = n(890054);
-function I(e) {
-    let { streamerId: t, idle: n } = e,
-        l = (0, r.bG)([m.default], () => m.default.getUser(t) ?? null, [t]),
-        s = g.Ay.canStreamQuality(g.Ay.StreamQuality.HIGH, l),
-        a = (0, f.d)(l),
-        o = x.useConfig({ location: "HD_STREAMING_CONTEXTUAL_UPSELL" }).enabled;
-    return null != l && a && !s && o ? (0, i.jsx)(j, { streamer: l, idle: n }) : null;
-}
-function j(e) {
-    let { streamer: t, idle: n } = e;
-    return (0, h.p)(t.id) ? (0, i.jsx)(S, { recipient: t, idle: n }) : null;
-}
+var v = n(232198),
+    E = n(652215),
+    C = n(753070),
+    I = n(792996),
+    j = n(890054);
 function S(e) {
-    let { recipient: t, idle: l } = e,
+    let { streamerId: t, guildId: n, idle: i } = e,
+        s = (0, r.bG)([g.default], () => g.default.getUser(t) ?? null, [t]),
+        a = (0, r.bG)([p.A], () => (null != n ? (p.A.getGuild(n)?.premiumTier ?? null) : null), [n]),
+        o = (0, m.A)(C.jQ.PRESET_VIDEO, C.on.RESOLUTION_1080, C.kn.FPS_60, s ?? void 0, a),
+        u = (0, h.d)(s),
+        c = A.useConfig({ location: "HD_STREAMING_CONTEXTUAL_UPSELL" }).enabled;
+    return null != s && u && !o && c ? (0, l.jsx)(_, { streamer: s, idle: i }) : null;
+}
+function _(e) {
+    let { streamer: t, idle: n } = e;
+    return (0, x.p)(t.id) ? (0, l.jsx)(b, { recipient: t, idle: n }) : null;
+}
+function b(e) {
+    let { recipient: t, idle: i } = e,
         { analyticsLocations: r } = (0, d.Ay)(c.A.HD_STREAMING_CONTEXTUAL_UPSELL);
-    return (0, i.jsx)("div", {
-        className: s()(C.x, { [C.N]: l }),
-        children: (0, i.jsx)(o.$, {
+    return (0, l.jsx)("div", {
+        className: s()(j.x, { [j.N]: i }),
+        children: (0, l.jsx)(o.$, {
             variant: "overlay-primary",
             size: "sm",
-            text: E.intl.string(E.t["n/a182"]),
+            text: I.intl.string(I.t["n/a182"]),
             icon: u.NitroWheelIcon,
             onClick: function (e) {
                 (e.stopPropagation(),
-                    p.default.track(v.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: r }),
+                    f.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: r }),
                     (0, a.mM)(async () => {
                         let { default: e } = await Promise.all([
                             n.e(768071),
@@ -59,11 +62,11 @@ function S(e) {
                             n.e(313699),
                         ]).then(n.bind(n, 536110));
                         return (n) =>
-                            (0, i.jsx)(e, {
+                            (0, l.jsx)(e, {
                                 ...n,
                                 recipient: t,
                                 sourceAnalyticsLocation: c.A.HD_STREAMING_CONTEXTUAL_UPSELL,
-                                modalVariant: A.H.HD_STREAMING,
+                                modalVariant: v.H.HD_STREAMING,
                             });
                     }));
             },
