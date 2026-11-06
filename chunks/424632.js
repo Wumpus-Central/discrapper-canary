@@ -2,7 +2,17 @@
 var a = r(435558),
     n = r(830917),
     i = r(339984);
-function o(e, t, r, a) {
+function o(e) {
+    return new Promise((t) => {
+        let r = new FileReader();
+        ((r.onload = (e) => {
+            let r = e.target?.result;
+            "string" == typeof r ? t(r) : t("");
+        }),
+            r.readAsDataURL(e));
+    });
+}
+function l(e, t, r, a) {
     let n = r,
         i = a;
     return (r > 432 && ((n = 432), (i = (432 / r) * a)), r / a < e)
@@ -64,7 +74,7 @@ r.d(
             }
         },
         Qx: function (e, t, r, a) {
-            if (null != a) return o(a, 432 / a, t, r);
+            if (null != a) return l(a, 432 / a, t, r);
             switch (e) {
                 case i.HL.AVATAR:
                 case i.HL.AVATAR_DECORATION:
@@ -73,19 +83,19 @@ r.d(
                     return { width: t, height: r };
                 case i.HL.BANNER:
                     let n = i.pj;
-                    return o(i.wL, n, t, r);
+                    return l(i.wL, n, t, r);
                 case i.HL.GUILD_BANNER:
-                    let l = i.Jz;
-                    return o(i.AB, l, t, r);
+                    let o = i.Jz;
+                    return l(i.AB, o, t, r);
                 case i.HL.VIDEO_BACKGROUND:
                     let h = i.yi;
-                    return o(i.G9, h, t, r);
+                    return l(i.G9, h, t, r);
                 case i.HL.SCHEDULED_EVENT_IMAGE:
-                    return o(2.5, 172.8, t, r);
+                    return l(2.5, 172.8, t, r);
                 case i.HL.HOME_HEADER:
-                    return o(4, 108, t, r);
+                    return l(4, 108, t, r);
                 case i.HL.PERSONAL_WIDGET_COVER:
-                    return o(i.PS, i.sW, t, r);
+                    return l(i.PS, i.sW, t, r);
             }
         },
         l$: function (e, t, r) {
@@ -102,77 +112,76 @@ r.d(
             let {
                     file: t,
                     image: a,
-                    cropDimensions: o,
-                    cropOriginCoordinates: l,
-                    maxDimensions: h,
-                    imageRotation: u = 0,
-                    flipHorizontal: c = !1,
-                    resizeWidth: s = null,
-                    resizeHeight: f = null,
+                    cropDimensions: l,
+                    cropOriginCoordinates: h,
+                    maxDimensions: u,
+                    imageRotation: c = 0,
+                    flipHorizontal: s = !1,
+                    resizeWidth: f = null,
+                    resizeHeight: m = null,
                 } = e,
                 {
-                    sourceX: m,
-                    sourceY: A,
+                    sourceX: A,
+                    sourceY: d,
                     sourceWidth: E,
-                    sourceHeight: d,
+                    sourceHeight: w,
                 } = (0, n.R7)({
                     image: a,
-                    cropDimensions: o,
-                    cropOriginCoordinates: l,
-                    maxDimensions: h,
-                    imageRotation: u,
-                    flipHorizontal: c,
+                    cropDimensions: l,
+                    cropOriginCoordinates: h,
+                    maxDimensions: u,
+                    imageRotation: c,
+                    flipHorizontal: s,
                 }),
-                w = await t.arrayBuffer(),
-                _ = new Worker(new URL("/assets/" + r.u(539885), r.b)),
-                b = new Promise((e, r) => {
-                    _.onmessage = (a) => {
+                _ = Math.max(0, Math.round(A)),
+                b = Math.max(0, Math.round(d)),
+                g = Math.round(E),
+                p = Math.round(w),
+                y = a.naturalWidth - _,
+                M = a.naturalHeight - b,
+                H = Math.min(g, y),
+                L = Math.min(p, M);
+            if (
+                0 === _ &&
+                0 === b &&
+                H === a.naturalWidth &&
+                L === a.naturalHeight &&
+                c % 360 == 0 &&
+                !s &&
+                null == f &&
+                null == m
+            )
+                return { result: o(t), cancelFn: () => {} };
+            let D = await t.arrayBuffer(),
+                P = new Worker(new URL("/assets/" + r.u(539885), r.b)),
+                R = new Promise((e, r) => {
+                    P.onmessage = (a) => {
                         let { data: n } = a;
-                        if (n.type === i.lA.CROP_ANIMATED_IMAGE_COMPLETE) {
-                            var o;
-                            (e(
-                                ((o = new Blob([n.result], { type: t.type })),
-                                new Promise((e) => {
-                                    let t = new FileReader();
-                                    ((t.onload = (t) => {
-                                        let r = t.target?.result;
-                                        "string" == typeof r ? e(r) : e("");
-                                    }),
-                                        t.readAsDataURL(o));
-                                })),
-                            ),
-                                _.terminate());
-                        } else if (n.type === i.lA.CROP_ANIMATED_IMAGE_ERROR) {
+                        if (n.type === i.lA.CROP_ANIMATED_IMAGE_COMPLETE)
+                            (e(o(new Blob([n.result], { type: t.type }))), P.terminate());
+                        else if (n.type === i.lA.CROP_ANIMATED_IMAGE_ERROR) {
                             let e = n?.error,
                                 t = e?.message ?? "Unknown error";
-                            (r(Error(`Error cropping animated image: ${t}`)), _.terminate());
+                            (r(Error(`Error cropping animated image: ${t}`)), P.terminate());
                         }
                     };
                 }),
-                g = "image/webp" === t.type ? "webp" : "gif",
-                p = Math.max(0, Math.round(m)),
-                y = Math.max(0, Math.round(A)),
-                M = Math.round(E),
-                H = Math.round(d),
-                L = a.naturalWidth - p,
-                D = a.naturalHeight - y,
-                P = Math.min(M, L),
-                R = Math.min(H, D);
+                I = "image/webp" === t.type ? "webp" : "gif";
             return (
-                _.postMessage({
+                P.postMessage({
                     type: i.lA.CROP_ANIMATED_IMAGE_START,
-                    data: new Uint8Array(w),
-                    x: p,
-                    y: y,
-                    width: P,
-                    height: R,
-                    imageRotation: 0 | u,
-                    flipHorizontal: c,
-                    resizeWidth: s,
-                    resizeHeight: f,
-                    format: g,
+                    data: new Uint8Array(D),
+                    x: _,
+                    y: b,
+                    width: H,
+                    height: L,
+                    imageRotation: 0 | c,
+                    flipHorizontal: s,
+                    resizeWidth: f,
+                    resizeHeight: m,
+                    format: I,
                 }),
-                { result: b, cancelFn: () => _.terminate() }
+                { result: R, cancelFn: () => P.terminate() }
             );
         },
     },
