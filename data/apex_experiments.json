@@ -3708,20 +3708,6 @@
     }
   },
   {
-    "name": "2026-09-game-profiles-v3-commerce-tab",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-09-game-profiles-v3-communities-tab",
     "kind": "user",
     "defaultConfig": null,

@@ -879,11 +879,11 @@ function w(e) {
                                 n.e(144791),
                                 n.e(631951),
                                 n.e(571180),
-                                n.e(483521),
+                                n.e(762922),
                                 n.e(858838),
                                 n.e(134358),
                                 n.e(921566),
-                            ]).then(n.bind(n, 130968));
+                            ]).then(n.bind(n, 581745));
                             return (t) =>
                                 (0, s.jsx)(e, {
                                     gameId: a.gameId,
