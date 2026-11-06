@@ -7834,6 +7834,7 @@ class cR extends r.Component {
                     return (0, s.jsx)(nO, { skuId: e.skuId, tab: e.tab, channel: t }, l);
                 }
                 case tR.I.EXPERIMENT:
+                case tR.I.USER_WISHLIST:
                     return null;
                 case tR.I.GAME_ORGANIZATION_INVITE:
                     return (0, s.jsx)(iJ, { code: l }, l);

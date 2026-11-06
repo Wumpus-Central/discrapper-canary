@@ -95,6 +95,7 @@ function P(e, t) {
                 case p.I.GAME_PROFILE:
                 case p.I.GAME_SERVER_SHARE:
                 case p.I.CONJURE_PROJECT:
+                case p.I.USER_WISHLIST:
                     break;
                 case p.I.USER_PROFILE:
                     if ((0, L.l)("MessageCodedLinkManager")) {

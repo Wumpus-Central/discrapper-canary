@@ -1190,6 +1190,7 @@ ${a}`),
                                                     case m.I.GAME_SERVER_SHARE:
                                                     case m.I.GAME_ORGANIZATION_INVITE:
                                                     case m.I.CONJURE_PROJECT:
+                                                    case m.I.USER_WISHLIST:
                                                         break;
                                                     default:
                                                         throw Error(`Unknown coded link type: ${t}`);
