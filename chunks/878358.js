@@ -12,8 +12,8 @@ var i = a(477900),
     b = a(460905),
     _ = a(687966),
     p = a(554830),
-    x = a(866665),
-    m = a(939249),
+    m = a(866665),
+    x = a(939249),
     g = a(565645),
     A = a(142617),
     v = a(819648),
@@ -141,11 +141,11 @@ function G(e) {
 function H(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
-        ? (0, i.jsx)(x.m, {
+        ? (0, i.jsx)(m.m, {
               text: T.intl.string(O.default.UjtEWE),
               caretConfig: { align: "end" },
               ariaHidden: !0,
-              children: (0, i.jsx)(m.D, {
+              children: (0, i.jsx)(x.D, {
                   className: n()(y.qr, y.vk),
                   onClick: a,
                   "aria-label": T.intl.string(O.default.UjtEWE),

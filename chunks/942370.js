@@ -1,11 +1,11 @@
-var i,
-    r = (((i = {}).RPC = "rpc"), (i.WEB = "web"), i);
+var n,
+    o = (((n = {}).RPC = "rpc"), (n.WEB = "web"), n);
 let l =
-    221552 == n.j
+    221552 == i.j
         ? {
               ACTIVISION_APPLICATION_ID: "1526711602038968440",
               CALL_OF_DUTY_APPLICATION_ID: "1554868854029811803",
               IMGUI_APPLICATION_ID: "1412940519742636124",
           }
         : null;
-n.d(t, {}, { T: l, _: r });
+i.d(t, {}, { T: l, _: o });
