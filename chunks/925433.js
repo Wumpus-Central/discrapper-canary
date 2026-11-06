@@ -1580,29 +1580,29 @@ var as = a(765671),
     ad = a(406956);
 let al = (0, t3.j5)(L.Kr);
 function ao(e) {
-    let { value: t, alignment: a = "left" } = e,
-        i = (0, p.bG)([F.Ay], () => F.Ay.useReducedMotion),
-        [s, n] = h.useState(0),
-        c = i ? t : s;
+    let { value: t, alignment: a = "left", className: i } = e,
+        s = (0, p.bG)([F.Ay], () => F.Ay.useReducedMotion),
+        [n, c] = h.useState(0),
+        d = s ? t : n;
     h.useEffect(() => {
-        if (i) return;
+        if (s) return;
         let e = performance.now(),
             a = requestAnimationFrame(function i(r) {
                 let s = Math.min((r - e) / 500, 1);
-                (n(Math.round(t * s)), s < 1 && (a = requestAnimationFrame(i)));
+                (c(Math.round(t * s)), s < 1 && (a = requestAnimationFrame(i)));
             });
         return () => cancelAnimationFrame(a);
-    }, [t, i]);
-    let d = "center" === a ? an.m : ac.w;
+    }, [t, s]);
+    let l = "center" === a ? an.m : ac.w;
     return (0, r.jsxs)("div", {
-        className: ad.lY,
+        className: b()(ad.lY, i),
         children: [
             (0, r.jsx)("div", { className: ad.VL, children: t }),
-            (0, r.jsx)(d, {
+            (0, r.jsx)(l, {
                 className: ad.lW,
                 fit: "layout",
                 withReducedMotion: "short-loop",
-                dataBinding: { DisplayValue: c, TextColor: al },
+                dataBinding: { DisplayValue: d, TextColor: al },
             }),
             (0, r.jsx)(g.A, { children: t.toLocaleString(ec.intl.currentLocale) }),
         ],
@@ -2389,7 +2389,7 @@ function ia(e) {
     });
 }
 function ii(e) {
-    return (0, r.jsx)(ie, { ...e, shellImage: a7 });
+    return (0, r.jsx)(ie, { ...e, shellImage: a7, className: a9.Ku });
 }
 var ir = a(842807);
 let is = [];
@@ -2410,7 +2410,7 @@ function ic(e) {
                                 icon: e9.GameControllerIcon,
                                 children: ec.intl.string(en.default.HM2fjf),
                             }),
-                            (0, r.jsx)(ao, { value: a }),
+                            (0, r.jsx)(ao, { value: a, className: ir.ai }),
                         ],
                     }),
                     (0, r.jsx)("div", {
@@ -2462,10 +2462,7 @@ function id(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(a1.Ip, {
-                orientation: "horizontal",
-                scrollbarGutter: !1,
-                fade: !0,
+            (0, r.jsx)("div", {
                 className: b()(ir.ag, ir.Zs),
                 children: L.Jb.map((e) => {
                     let { list: a, label: i } = e,
@@ -2483,7 +2480,7 @@ function il() {
         i = !t && null != a;
     return (0, r.jsx)(tP, {
         children: (0, r.jsx)("div", {
-            className: ir.kL,
+            className: b()(ir.kL, { [ir.TF]: i }),
             children: i ? (0, r.jsx)(id, { gameStats: a }) : (0, r.jsx)(ic, { gameStats: e }),
         }),
     });

@@ -1,6 +1,7 @@
 t.exports = {
     LO: "game_M5fVqw",
     Ms: "topGame_M5fVqw",
+    Ku: "globalGame_M5fVqw",
     Tn: "visual_M5fVqw",
     vf: "shell_M5fVqw",
     Qw: "art_M5fVqw",
