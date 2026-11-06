@@ -963,7 +963,7 @@ function t_() {
         x = h.useRef(!1),
         g = t ? 0 : Math.round(100 * e),
         A = !b && (s || c || u),
-        v = 0 === g ? tl.VoiceXIcon : g > 90 ? to.VoiceNormalIcon : tu.VoiceLowIcon;
+        v = 0 === g ? tl.VoiceXIcon : g > 50 ? to.VoiceNormalIcon : tu.VoiceLowIcon;
     (h.useLayoutEffect(() => {
         null != i.current && (i.current.volume = e);
     }, [e]),

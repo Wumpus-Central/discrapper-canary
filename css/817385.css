@@ -404,7 +404,8 @@
 }
 
 .buttonWithSlider_ma_sAl {
-    border-inline-start: 0
+    border-inline-start: 0;
+    padding-inline-start: 1px
 }
 
 .control_vDbele {
@@ -495,4 +496,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=817385.830a8bc593c2ac45.css.map*/
+/*# sourceMappingURL=817385.a4586fc4461ac9b8.css.map*/
