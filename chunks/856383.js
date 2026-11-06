@@ -46,6 +46,7 @@ let c = {
         return (
             window.DiscordSentry?.withScope((t) => {
                 (null != i.tags && t.setTags(i.tags),
+                    null != i.fingerprint && t.setFingerprint(i.fingerprint),
                     t.setExtras(i.extra),
                     (n = window.DiscordSentry?.captureException(e)));
             }),
