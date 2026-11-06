@@ -184,8 +184,8 @@ function U(e) {
 }
 var V = n(524007),
     W = n(47167),
-    B = n(713654),
-    F = n(688810),
+    F = n(713654),
+    B = n(688810),
     G = n(573435),
     K = n(739053),
     H = n(82498),
@@ -197,7 +197,7 @@ var Q = n(682901),
     Z = n(211319);
 let X = function (e) {
     let { emojis: t } = e,
-        { analyticsLocations: n } = (0, F.Ay)();
+        { analyticsLocations: n } = (0, B.Ay)();
     i.useEffect(() => {
         (z.default.track($.HAw.PREMIUM_UPSELL_VIEWED, { type: Q.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
             (0, K.sq)($.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, H.uq)(Q.e.EMOJI_AUTOCOMPLETE_INLINE)));
@@ -445,7 +445,7 @@ class eA extends ep {
 class eb extends ep {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === $.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, B.gU)(e);
+            n = e.type === $.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, F.gU)(e);
         return (0, l.jsxs)(I, {
             children: [
                 null != n && (0, l.jsx)(N, { children: (0, l.jsx)(n, { className: b.Kk }) }),

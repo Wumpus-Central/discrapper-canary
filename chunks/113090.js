@@ -1,25 +1,25 @@
-var s = i(582128),
-    n = i(855986),
-    a = i(73153),
-    l = i(233317);
-i.d(
+var i = s(582128),
+    n = s(855986),
+    a = s(73153),
+    l = s(233317);
+s.d(
     t,
     {},
     {
         A: function () {
             let { useCachedData: e = !1, fetch: t = !0 } =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                { premiumGroupMembership: i, isFetchingMembership: r } = (0, n.cf)([l.A], () => ({
+                { premiumGroupMembership: s, isFetchingMembership: r } = (0, n.cf)([l.A], () => ({
                     premiumGroupMembership: l.A.getMembership(),
                     isFetchingMembership: l.A.isFetchingMembership(),
                 }));
             return (
-                (0, s.useEffect)(() => {
+                (0, i.useEffect)(() => {
                     !t ||
                         (e && l.A.hasFetchedMembership()) ||
                         a.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
                 }, [t, e]),
-                { premiumGroupMembership: i, isLoading: r }
+                { premiumGroupMembership: s, isLoading: r }
             );
         },
     },

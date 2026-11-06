@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(844222),
     f = n(580573),
     h = n(775602),
-    m = n(139136),
-    p = n(665411),
+    p = n(139136),
+    m = n(665411),
     C = n(474012),
     y = n(929283),
     E = n(842385),
@@ -43,7 +43,7 @@ function x(e) {
         case s.R.PROFILE_EFFECT:
             return (0, l.jsx)("div", {
                 className: P.xC,
-                children: (0, l.jsx)(m.A, {
+                children: (0, l.jsx)(p.A, {
                     skuId: t.item.skuId,
                     isHighlighted: n,
                     removeSetHeight: !0,
@@ -67,7 +67,7 @@ function x(e) {
         case s.R.PROFILE_FRAME:
             return (0, l.jsx)("div", {
                 className: P.pI,
-                children: (0, l.jsx)(p.A, { frame: t.item, transparentBackground: !0 }),
+                children: (0, l.jsx)(m.A, { frame: t.item, transparentBackground: !0 }),
             });
         default:
             return null;
@@ -91,9 +91,9 @@ function R(e) {
 function T(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
         s = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
-        { theme: m, saturation: p } = (0, o.wR)(),
+        { theme: p, saturation: m } = (0, o.wR)(),
         { highContrastModeEnabled: C } = r.useContext(d.C),
-        [y, E, _, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: m, saturation: p, highContrastModeEnabled: C }).rgba();
+        [y, E, _, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: p, saturation: m, highContrastModeEnabled: C }).rgba();
     return (0, l.jsx)("div", {
         className: P.yv,
         children: (0, l.jsx)(f.u, {

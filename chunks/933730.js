@@ -35,8 +35,8 @@ n.d(
                     dismissPopover: n,
                     title: i,
                     body: h,
-                    assetUrl: v,
-                    ctaType: N,
+                    assetUrl: N,
+                    ctaType: v,
                     ctaTextOverride: x,
                     perkCardId: I,
                     analyticsLocation: y,
@@ -48,7 +48,7 @@ n.d(
                     (0, A.A)(T.BVt.NITRO_HOME, { search: (0, l.As)({ perk: I }) });
                 }, [I]),
                 U = r.useCallback(() => {
-                    switch ((n(_.i.TAKE_ACTION), N)) {
+                    switch ((n(_.i.TAKE_ACTION), v)) {
                         case 0:
                             S();
                             break;
@@ -59,9 +59,9 @@ n.d(
                                 onSubscriptionConfirmation: S,
                             });
                     }
-                }, [M, N, n, S]),
+                }, [M, v, n, S]),
                 D =
-                    0 === N
+                    0 === v
                         ? { text: null != x ? x : O.intl.string(O.t.pVBlCH), variant: "secondary", onClick: U }
                         : {
                               text: null != x ? x : O.intl.string(O.t.hIVbiP),
@@ -84,12 +84,12 @@ n.d(
                             "data-mana-component": "popover",
                             children: [
                                 (0, a.jsx)(m.p, { onClick: () => n(_.i.USER_DISMISS) }),
-                                null != v &&
+                                null != N &&
                                     (0, a.jsx)("div", {
                                         className: R.Q,
-                                        children: (0, P.r1)(v)
+                                        children: (0, P.r1)(N)
                                             ? (0, a.jsx)(p.A, {
-                                                  src: v,
+                                                  src: N,
                                                   autoPlay: !1 === j,
                                                   loop: !0,
                                                   muted: !0,
@@ -97,7 +97,7 @@ n.d(
                                                   "aria-hidden": !0,
                                                   className: R.$,
                                               })
-                                            : (0, a.jsx)("img", { src: v, alt: "", "aria-hidden": !0, className: R.$ }),
+                                            : (0, a.jsx)("img", { src: N, alt: "", "aria-hidden": !0, className: R.$ }),
                                     }),
                                 (0, a.jsx)(u.D, { title: i, body: h }),
                                 (0, a.jsx)(d.Z, { actions: [D] }),

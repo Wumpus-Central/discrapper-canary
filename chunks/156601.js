@@ -21,24 +21,24 @@ t.d(
                     subscriptionTier: r,
                     interval: t = x.WT.MONTH,
                     className: l,
-                    isGift: A = !1,
-                    variant: T,
-                    priceOptions: I,
+                    isGift: T = !1,
+                    variant: I,
+                    priceOptions: A,
                     isApplicationHome: E,
                     enablePremiumBrandRefresh: f,
                 } = e,
                 g = (0, s.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
-                R = (0, a.q)((0, d.Ay)());
+                j = (0, a.q)((0, d.Ay)());
             if (!g) return (0, n.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: h.xB });
-            let j = m.A.getForSkuAndInterval((0, p.mH)(r), t),
-                _ = null != j ? (0, p.sS)(j, I, !1, A) : null;
+            let R = m.A.getForSkuAndInterval((0, p.mH)(r), t),
+                _ = null != R ? (0, p.sS)(R, A, !1, T) : null;
             if (f) {
                 let e = t === x.WT.YEAR;
                 return (0, n.jsxs)("div", {
                     children: [
                         (0, n.jsx)(o.E, {
                             variant: e ? "heading-sm/semibold" : "heading-xxl/semibold",
-                            color: e ? "text-muted" : R ? "text-strong" : "text-overlay-light",
+                            color: e ? "text-muted" : j ? "text-strong" : "text-overlay-light",
                             tag: "span",
                             children: (0, n.jsx)("span", { children: _ }),
                         }),
@@ -53,7 +53,7 @@ t.d(
             }
             return (0, n.jsx)(u.D, {
                 color: E ? "none" : "text-overlay-light",
-                variant: T ?? "heading-sm/medium",
+                variant: I ?? "heading-sm/medium",
                 className: i()(h.SW, l),
                 children: (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)("span", { className: E ? void 0 : h.q9, children: _ }), " / ", (0, p.FJ)(t)],

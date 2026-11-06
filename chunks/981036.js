@@ -9,7 +9,7 @@ var l = n(477900),
     d = n(820287),
     f = n(999784),
     h = n(429308);
-function m(e) {
+function p(e) {
     let { onClick: t, loading: n, disabled: r, text: i, tooltipText: a, ...u } = e,
         c = { text: i, ...u },
         d = (0, l.jsx)(s.$, { ...c, onClick: t, loading: n, disabled: r, text: i });
@@ -30,12 +30,12 @@ n.d(
                           children: [
                               null != i ? (0, l.jsx)(d.A, { onClick: i }) : null,
                               n && (0, l.jsx)(f.A, {}),
-                              (0, l.jsx)(m, { ...t }),
+                              (0, l.jsx)(p, { ...t }),
                           ],
                       }),
                   })
                 : (0, l.jsx)(u.H, { leading: o, actions: s });
         },
-        p: m,
+        p: p,
     },
 );

@@ -78,8 +78,8 @@ var R = n(931664),
     U = n(722178),
     V = n(462180),
     W = n(375499),
-    B = n(554146),
-    F = n(43105),
+    F = n(554146),
+    B = n(43105),
     G = n(263775),
     K = n(151271),
     H = n(490035),
@@ -91,8 +91,8 @@ function Q(e) {
         a = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
         u = (0, H.H)("DefaultEmojisPopover"),
         c = (0, K.RQ)((e) => null != e.activeView),
-        [d, h] = (0, G.kn)(u && !c ? [B.M.DEFAULT_EMOJIS_POPOVER] : []),
-        m = d === B.M.DEFAULT_EMOJIS_POPOVER,
+        [d, h] = (0, G.kn)(u && !c ? [F.M.DEFAULT_EMOJIS_POPOVER] : []),
+        m = d === F.M.DEFAULT_EMOJIS_POPOVER,
         f = i.useCallback(() => {
             (h(z.i.TAKE_ACTION), (0, K.bf)(q.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
         }, [h, n, r]),
@@ -100,7 +100,7 @@ function Q(e) {
             h(z.i.USER_DISMISS);
         }, [h]);
     return m
-        ? (0, l.jsx)(F.A, {
+        ? (0, l.jsx)(B.A, {
               targetElementRef: t,
               graphic: {
                   type: "image",
@@ -320,8 +320,8 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             j = k.isSubmitButtonEnabled,
             V = !T || k.isAppsButtonEnabled,
             W = !T || k.isEmojiButtonEnabled,
-            B = !T || k.isGifButtonEnabled,
-            F = !T || k.isStickerButtonEnabled,
+            F = !T || k.isGifButtonEnabled,
+            B = !T || k.isStickerButtonEnabled,
             G =
                 ((n = A.id),
                 (x = y),
@@ -392,13 +392,13 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             y.gifs?.button != null &&
                 null == K &&
                 v &&
-                B &&
+                F &&
                 !N &&
                 q.push((0, l.jsx)(er, { disabled: C, type: y, channel: A }, "gif")),
             y.stickers?.button != null &&
                 null == K &&
                 v &&
-                F &&
+                B &&
                 !N &&
                 q.push((0, l.jsx)(eh, { disabled: C, type: y, channel: A }, "sticker"))),
         y.emojis?.button != null &&

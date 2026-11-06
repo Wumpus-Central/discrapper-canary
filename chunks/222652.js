@@ -1,17 +1,17 @@
-var s,
-    n = i(743368),
-    a = i(975807),
-    l = i(723702),
-    r = i(196099);
-i(375776);
-var c = i(727811),
-    o = i(263910),
-    d = i(102488),
-    u = i(631368),
-    m = i(831768),
-    x = i(792996),
-    g = (((s = {}).DEFAULT = "default"), (s.SUBSCRIBE = "subscribe"), s);
-i.d(
+var i,
+    n = s(743368),
+    a = s(975807),
+    l = s(723702),
+    r = s(196099);
+s(375776);
+var c = s(727811),
+    o = s(263910),
+    d = s(102488),
+    u = s(631368),
+    m = s(831768),
+    x = s(792996),
+    g = (((i = {}).DEFAULT = "default"), (i.SUBSCRIBE = "subscribe"), i);
+s.d(
     t,
     {},
     {
@@ -19,11 +19,11 @@ i.d(
         z: function () {
             let e,
                 t = (0, u.$)(),
-                { status: i, requestInProgress: s, redirect: g } = (0, d.L)(),
+                { status: s, requestInProgress: i, redirect: g } = (0, d.L)(),
                 p = (0, o.A)(g),
-                f = (0, r.M)("xbox");
+                h = (0, r.M)("xbox");
             if (t === u.C.NO_ACCESS) return { kind: "subscribe", text: x.intl.string(x.t.sEAnVH) };
-            let h = (function (e) {
+            let f = (function (e) {
                 switch (e) {
                     case c.P.NOT_CLAIMED:
                     case c.P.CLAIM_IN_PROGRESS:
@@ -37,37 +37,37 @@ i.d(
                     case c.P.CANCELLATION_IN_PROGRESS:
                         return { text: x.intl.string(m.default.wBz9aO), disabled: !0 };
                 }
-            })(i);
+            })(s);
             if (t === u.C.NONE)
                 return {
                     kind: "default",
-                    claimStatus: i,
-                    requestInProgress: s,
-                    text: h.text,
+                    claimStatus: s,
+                    requestInProgress: i,
+                    text: f.text,
                     disabled: !0,
                     loading: !0,
-                    icon: h.icon,
-                    iconPosition: h.iconPosition,
+                    icon: f.icon,
+                    iconPosition: f.iconPosition,
                 };
-            if (i === c.P.NOT_CLAIMED || i === c.P.CLAIM_IN_PROGRESS)
+            if (s === c.P.NOT_CLAIMED || s === c.P.CLAIM_IN_PROGRESS)
                 e = () => {
                     p();
                 };
-            else if (i === c.P.CLAIMED) {
+            else if (s === c.P.CLAIMED) {
                 let t = (0, l.uF)() ? "msxbox://" : "https://xbox.com/play";
                 e = () => {
-                    ((0, a.A)(t), f(r.H.PARTNER_PAGE_REDIRECT, t));
+                    ((0, a.A)(t), h(r.H.PARTNER_PAGE_REDIRECT, t));
                 };
             }
             return {
                 kind: "default",
-                claimStatus: i,
-                requestInProgress: s,
-                text: h.text,
-                disabled: (h.disabled ?? !1) || s,
-                loading: s,
-                icon: h.icon,
-                iconPosition: h.iconPosition,
+                claimStatus: s,
+                requestInProgress: i,
+                text: f.text,
+                disabled: (f.disabled ?? !1) || i,
+                loading: i,
+                icon: f.icon,
+                iconPosition: f.iconPosition,
                 onClick: e,
             };
         },

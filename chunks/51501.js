@@ -1,25 +1,25 @@
-var I = A(682901),
-    E = A(652215);
-let _ = new Map([
-    [E.ThZ.FRIEND_ANNIVERSARIES_CHAT, I.np.FRIEND_ANNIVERSARY],
-    [E.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON, I.np.FRIEND_ANNIVERSARY],
-    [E.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK, I.np.FRIEND_ANNIVERSARY],
+var l = n(682901),
+    i = n(652215);
+let r = new Map([
+    [i.ThZ.FRIEND_ANNIVERSARIES_CHAT, l.np.FRIEND_ANNIVERSARY],
+    [i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON, l.np.FRIEND_ANNIVERSARY],
+    [i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK, l.np.FRIEND_ANNIVERSARY],
 ]);
-A.d(
-    R,
+n.d(
+    t,
     {},
     {
-        $u: function (N) {
-            return N === I.np.FRIEND_ANNIVERSARY
+        $u: function (e) {
+            return e === l.np.FRIEND_ANNIVERSARY
                 ? {
-                      chat: E.ThZ.FRIEND_ANNIVERSARIES_CHAT,
-                      actionButton: E.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-                      actionButtonCoachmark: E.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+                      chat: i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
+                      actionButton: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                      actionButtonCoachmark: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
                   }
                 : {};
         },
-        NE: function (N) {
-            return _.get(N) ?? null;
+        NE: function (e) {
+            return r.get(e) ?? null;
         },
     },
 );

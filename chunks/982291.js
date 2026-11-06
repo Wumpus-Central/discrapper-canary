@@ -44,11 +44,11 @@ function f(e) {
         f = (0, o.A)({ isGift: d, skuId: n }),
         E = (0, p.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: f })),
         S = (0, u.px)(c, d && !s, C),
-        g = i.useMemo(() => {
+        I = i.useMemo(() => {
             let e = null == t ? a.pn.PLAN_SELECT : a.pn.REVIEW;
             return (E && (e = a.pn.REVIEW), S && (e = a.pn.SELECT_FREE_SKU), e);
         }, [E, S, t]);
-    return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: g });
+    return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: I });
 }
 n.d(
     t,

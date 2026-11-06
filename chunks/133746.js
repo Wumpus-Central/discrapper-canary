@@ -38,7 +38,7 @@ var U = n(5867),
     V = n(940169);
 function W(e) {
     let { ref: t, ...n } = e,
-        { channel: r, type: W, editorHeight: B, onVisibilityChange: F, editorScrollerRef: G, barsHeight: K } = n,
+        { channel: r, type: W, editorHeight: F, onVisibilityChange: B, editorScrollerRef: G, barsHeight: K } = n,
         H = (0, g.GV)(),
         z = (0, o.bG)([S.A], () => S.A.getGuild(r.guild_id) ?? null, [r.guild_id]),
         q = i.useRef(null),
@@ -179,7 +179,7 @@ function W(e) {
         X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
         Y = (0, f.aI)($.selectedIndex);
     (0, p.gf)(H, $.isVisible, Y);
-    let J = (0, C.l)({ editorHeight: B, type: W, state: $ }),
+    let J = (0, C.l)({ editorHeight: F, type: W, state: $ }),
         ee = (0, o.bG)(
             [h.Ay],
             () => {
@@ -196,8 +196,8 @@ function W(e) {
         );
     if (
         (i.useEffect(() => {
-            F($.isVisible);
-        }, [F, $.isVisible]),
+            B($.isVisible);
+        }, [B, $.isVisible]),
         !$.isVisible || null == $.query || void 0 === J)
     )
         return null;
@@ -216,7 +216,7 @@ function W(e) {
     let el = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === n.position, [V.mO]: ee },
         ei = 490;
     null != J && (ei = W.autocomplete?.small ? 200 : $.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let er = Math.max(B, G?.current?.clientHeight ?? 0),
+    let er = Math.max(F, G?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, er);
     ei = Math.min(window.innerHeight - 120 - es - (K ?? 0), ei);
     let ea = (0, l.jsx)(f.Ay, {

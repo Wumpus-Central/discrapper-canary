@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(231723),
     f = n(430993),
     h = n(632088),
-    m = n(500380),
-    p = n(956956),
+    p = n(500380),
+    m = n(956956),
     C = n(820287),
     y = n(708791),
     E = n(981036),
@@ -32,7 +32,7 @@ function x(e) {
             ...d
         } = e,
         f = r.useCallback(
-            () => (null == c ? null : (0, l.jsx)("img", { alt: "", className: P.bI, src: (0, m.t)(c) })),
+            () => (null == c ? null : (0, l.jsx)("img", { alt: "", className: P.bI, src: (0, p.t)(c) })),
             [c],
         ),
         h = r.useMemo(() => {
@@ -40,7 +40,7 @@ function x(e) {
         }, [a, u, i]),
         C = null != c && null != o,
         y = r.useMemo(() => {
-            if (!C && null != c) return { text: (0, p.j7)((0, p.ni)(c)), leadingIcon: f };
+            if (!C && null != c) return { text: (0, m.j7)((0, m.ni)(c)), leadingIcon: f };
         }, [C, c, f]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -70,9 +70,9 @@ function R(e) {
                 shouldExpressCheckoutBeVisible: t.shouldExpressCheckoutBeVisible,
             };
         }),
-        m = (0, l.jsx)(E.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
-        p = f && null != s,
-        I = p && h,
+        p = (0, l.jsx)(E.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
+        m = f && null != s,
+        I = m && h,
         S = null != t,
         {
             direction: A,
@@ -98,7 +98,7 @@ function R(e) {
                 children: [
                     I ? null : T,
                     I ? (0, l.jsx)(y.rI, {}) : null,
-                    p ? (0, l.jsx)(y.Zr, { stripeExpressCheckoutComponent: s, fallbackComponent: m }) : m,
+                    m ? (0, l.jsx)(y.Zr, { stripeExpressCheckoutComponent: s, fallbackComponent: p }) : p,
                     I && null != T ? (0, l.jsx)("div", { className: P.aY, children: T }) : null,
                 ],
             }),

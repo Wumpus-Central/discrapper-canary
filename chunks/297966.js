@@ -1,7 +1,7 @@
-var s,
+var i,
     n,
     a,
-    l = (((s = {})[(s.XGPP = 1)] = "XGPP"), s),
+    l = (((i = {})[(i.XGPP = 1)] = "XGPP"), i),
     r =
         (((n = {}).NOT_FETCHED = "NOT_FETCHED"),
         (n.FETCHING = "FETCHING"),
@@ -16,4 +16,4 @@ var s,
         (a[(a.EXPIRED = 5)] = "EXPIRED"),
         (a[(a.CANCELLATION_PENDING = 6)] = "CANCELLATION_PENDING"),
         a);
-i.d(t, {}, { db: r, gR: c, n9: l });
+s.d(t, {}, { db: r, gR: c, n9: l });

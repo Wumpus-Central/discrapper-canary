@@ -200,7 +200,7 @@ n.d(
                 U = null,
                 V = null,
                 W = null,
-                B = null;
+                F = null;
             return (
                 (e.onChange = () => {
                     if (null != t) {
@@ -210,8 +210,8 @@ n.d(
                             I.VW.richValue(e) !== D ||
                             !I.Ot.equals(e.selection, U) ||
                             n.activeCommand !== V ||
-                            null == B ||
-                            a.some((e, t) => B[t] !== e)
+                            null == F ||
+                            a.some((e, t) => F[t] !== e)
                         ) {
                             let u = C.o.withMergedEntry(e, () =>
                                 (function (e) {
@@ -462,7 +462,7 @@ n.d(
                                 let t = C.o.currentEntry(e);
                                 (null != t && (t.commandId = u.commandId), (W = u.optionValues));
                             } else W = null;
-                            ((D = I.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (B = a));
+                            ((D = I.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (F = a));
                         }
                     }
                     E();

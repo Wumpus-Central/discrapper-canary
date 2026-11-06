@@ -19,9 +19,9 @@ n.d(
     {},
     {
         E: function (e) {
-            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, C.i)(),
+            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: I } = (0, C.i)(),
                 {
-                    activeSubscription: I,
+                    activeSubscription: g,
                     isPremium: y,
                     isGift: A,
                     checkoutPriceOptions: P,
@@ -49,7 +49,7 @@ n.d(
                 L = e.handleStepChange,
                 k = (0, d.J$)(P.paymentSourceId),
                 w = (0, C.R)({ hasOpenInvoice: R ?? !1 }),
-                D = null != I && !A,
+                D = null != g && !A,
                 U = i.useCallback(
                     () =>
                         D
@@ -68,7 +68,7 @@ n.d(
                               }),
                     [j, D, T, _, e.reviewWarningMessage, R, w, L],
                 ),
-                G = null != g ? g.id : void 0,
+                G = null != I ? I.id : void 0,
                 F = i.useMemo(() => ({ user_trial_offer_id: G }), [G]),
                 B = i.useMemo(
                     () =>
@@ -101,12 +101,12 @@ n.d(
                             isGift: A,
                             isRecurringGiftCheckout: b,
                             selectedPlan: N,
-                            premiumSubscription: I,
+                            premiumSubscription: g,
                             planGroup: T,
                             isPrepaidPaymentSource: k,
                             isInPastDueCheckout: w,
                         }),
-                    [A, b, N, I, k, w, T],
+                    [A, b, N, g, k, w, T],
                 ),
                 H = i.useMemo(
                     () =>

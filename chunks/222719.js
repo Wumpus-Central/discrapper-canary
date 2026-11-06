@@ -12,9 +12,9 @@ var l = t(503698),
     p = t(722178),
     x = t(526292),
     h = t(423814),
-    A = t(77528),
-    T = t(511484),
-    I = t(156601),
+    T = t(77528),
+    I = t(511484),
+    A = t(156601),
     E = t(682901),
     f = t(792996),
     g = t(832773);
@@ -28,8 +28,8 @@ t.d(
                     premiumTier: t,
                     offerTierMatchesCard: l,
                     offerType: s,
-                    showYearlyPrice: R,
-                    priceOptions: j,
+                    showYearlyPrice: j,
+                    priceOptions: R,
                     textVariant: _,
                     className: v,
                     isApplicationHome: N,
@@ -44,14 +44,14 @@ t.d(
                 L = (0, x.k5)(),
                 D = (0, x.nf)(),
                 S = t === E.PremiumTypes.TIER_0 ? E.pe.TIER_0 : E.pe.TIER_2,
-                G = O?.hasActiveTrial ? C?.premiumType : L ? E.PremiumTypes.TIER_2 : null,
-                H = (0, A.V)(),
-                k = (0, h.O)(),
-                F = t === E.PremiumTypes.TIER_0 ? E.gD.PREMIUM_MONTH_TIER_0 : E.gD.PREMIUM_MONTH_TIER_2,
-                B = (0, T.N1)(F),
-                w = null != k && (0, T.YJ)(k) === F,
-                V = H?.subscriptionTrial;
-            if (!N && !r && null != G && t === G && null != O && null != O.planIdFromItems) {
+                H = O?.hasActiveTrial ? C?.premiumType : L ? E.PremiumTypes.TIER_2 : null,
+                k = (0, T.V)(),
+                F = (0, h.O)(),
+                G = t === E.PremiumTypes.TIER_0 ? E.gD.PREMIUM_MONTH_TIER_0 : E.gD.PREMIUM_MONTH_TIER_2,
+                B = (0, I.N1)(G),
+                w = null != F && (0, I.YJ)(F) === G,
+                V = k?.subscriptionTrial;
+            if (!N && !r && null != H && t === H && null != O && null != O.planIdFromItems) {
                 let e = null != O.trialEndsAt ? a()(O?.trialEndsAt).diff(a()(), "d") : 0,
                     r = E.hd[O.planIdFromItems],
                     t = p.Ay.formatPriceString(p.Ay.getDefaultPrice(r.id), r.interval),
@@ -101,13 +101,13 @@ t.d(
                             price: e,
                         }),
                     });
-                if (null != k && null != B && w)
+                if (null != F && null != B && w)
                     return (0, n.jsx)(o.D, {
                         variant: y,
                         color: b,
                         className: i()(g.K, P),
                         children: f.intl.format(f.t.sJTwHQ, {
-                            numMonths: k.discount.intervalCount ?? 1,
+                            numMonths: F.discount.intervalCount ?? 1,
                             discountedPrice: B,
                             regularPrice: e,
                         }),
@@ -115,22 +115,22 @@ t.d(
             }
             return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(I.A, {
+                    (0, n.jsx)(A.A, {
                         subscriptionTier: S,
                         isGift: r,
                         className: null != v ? v : g.q,
-                        priceOptions: j,
+                        priceOptions: R,
                         variant: _,
                         isApplicationHome: N,
                         enablePremiumBrandRefresh: M,
                     }),
-                    R &&
-                        (0, n.jsx)(I.A, {
+                    j &&
+                        (0, n.jsx)(A.A, {
                             subscriptionTier: S,
                             interval: E.WT.YEAR,
                             className: null != v ? v : g.q,
                             isGift: r,
-                            priceOptions: j,
+                            priceOptions: R,
                             variant: _,
                             isApplicationHome: N,
                             enablePremiumBrandRefresh: M,

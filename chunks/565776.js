@@ -1,16 +1,16 @@
-i.d(t, { A: () => A });
-var n = i(435558),
-    r = i.n(n),
-    a = i(855986),
-    s = i(73153),
-    l = i(619019),
-    o = i(287809),
-    _ = i(38910);
-let u = {},
-    d = 0,
+n.d(t, { A: () => p });
+var i = n(435558),
+    r = n.n(i),
+    a = n(855986),
+    s = n(73153),
+    l = n(619019),
+    o = n(287809),
+    u = n(38910);
+let d = {},
+    c = 0,
     S = !1,
-    c = !1;
-function E(e) {
+    _ = !1;
+function h(e) {
     let t = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
@@ -20,53 +20,53 @@ function E(e) {
         contactNames: t,
     };
 }
-class I extends a.Ay.Store {
+class E extends a.Ay.Store {
     static displayName = "FriendSuggestionStore";
     initialize() {
         this.waitFor(o.default);
     }
     getSuggestionCount() {
-        return d;
+        return c;
     }
     getSuggestions() {
-        return Object.entries(u).map((e) => {
-            let [t, i] = e;
-            return i;
+        return Object.entries(d).map((e) => {
+            let [t, n] = e;
+            return n;
         });
     }
     getSuggestion(e) {
-        return u[e];
+        return d[e];
     }
 }
-let A = new I(s.h, {
+let p = new E(s.h, {
     CONNECTION_OPEN: function (e) {
-        ((u = {}),
-            (d = e.friendSuggestionCount) > 0
-                ? ((c = !0), !S && c && ((S = !0), (c = !1), _.A.fetch()))
+        ((d = {}),
+            (c = e.friendSuggestionCount) > 0
+                ? ((_ = !0), !S && _ && ((S = !0), (_ = !1), u.A.fetch()))
                 : (function () {
                       arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                   })());
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
-        let t = E(e.suggestion);
-        if (null != u[t.key]) return !1;
-        (d++, (u = { ...u, [t.key]: t }));
+        let t = h(e.suggestion);
+        if (null != d[t.key]) return !1;
+        (c++, (d = { ...d, [t.key]: t }));
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        ((d = Math.max(0, --d)), delete u[e.suggestedUserId]);
+        ((c = Math.max(0, --c)), delete d[e.suggestedUserId]);
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
         ((S = !1),
             (t = e.suggestions),
-            (u = r()
+            (d = r()
                 .chain(t)
-                .map((e) => E(e))
+                .map((e) => h(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (d = r().keys(u).length));
+            (c = r().keys(d).length));
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        ((S = !1), (u = {}));
+        ((S = !1), (d = {}));
     },
 });

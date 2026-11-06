@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(830382),
     E = n(191115),
     S = n(722178),
-    g = n(652215),
-    I = n(682901),
+    I = n(652215),
+    g = n(682901),
     y = n(166532),
     A = n(566980),
     P = n(216641),
@@ -153,8 +153,8 @@ function $(e) {
             setEntitlementsGranted: ef,
             setAppliedUserDiscounts: eE,
             setUpdatedSubscription: eS,
-            isExpressCheckoutEnabledForFooter: eg,
-            setExpressCheckoutStatus: eI,
+            isExpressCheckoutEnabledForFooter: eI,
+            setExpressCheckoutStatus: eg,
             order: ey,
             isOrderAwaitingSettlement: eA,
             setIsOrderSigning: eP,
@@ -230,7 +230,7 @@ function $(e) {
     );
     let { hasEntitlements: eX } = (0, x.X)(eB, eR),
         e0 = null;
-    ep === g.VVm.ONE_TIME &&
+    ep === I.VVm.ONE_TIME &&
         (a()(null != en, "SKU must be selected for one-time purchases"),
         (e0 = ej[en] ?? null),
         a()(null != e0, "SKU must exist and be fetched."));
@@ -240,7 +240,7 @@ function $(e) {
                 eq(!0),
                 (0, s.ET)(),
                 ed(null),
-                T.default.track(g.HAw.PAYMENT_FLOW_COMPLETED, {
+                T.default.track(I.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...n,
                     subtotal: el?.subtotal,
                     tax: el?.tax,
@@ -257,7 +257,7 @@ function $(e) {
             (e) => {
                 (eo(A.h.FAIL),
                     ed(e),
-                    T.default.track(g.HAw.PAYMENT_FLOW_FAILED, {
+                    T.default.track(I.HAw.PAYMENT_FLOW_FAILED, {
                         ...n,
                         payment_error_code: e?.code,
                         payment_source_id: eW?.id,
@@ -406,7 +406,7 @@ function $(e) {
                 let e, n, i, w;
                 if ((t(), r)) return;
                 let D = !0 === k ? R?.paymentLegs : null;
-                if (T === g.VVm.ONE_TIME)
+                if (T === I.VVm.ONE_TIME)
                     (a()(null != _, "SKU must exist and be fetched."),
                         a()(null != R, "invoicePreview must exist."),
                         (e = await (0, f.XU)(_.applicationId, _.id, {
@@ -448,7 +448,7 @@ function $(e) {
                     else if (s) {
                         let t = R.total,
                             n = R.currency;
-                        e = await (0, f.XU)(I.tv, d.skuId, {
+                        e = await (0, f.XU)(g.tv, d.skuId, {
                             expectedAmount: t,
                             expectedCurrency: n,
                             paymentSource: y,
@@ -460,15 +460,15 @@ function $(e) {
                             applyWalletBalance: k,
                             expectedPaymentLegs: D,
                         });
-                    } else if (null != y && null != P && P.status === g.Dmq.PAST_DUE && null != A) {
+                    } else if (null != y && null != P && P.status === I.Dmq.PAST_DUE && null != A) {
                         let l = C.currency ?? R.currency;
-                        e = g.AD1.has(y.type)
+                        e = I.AD1.has(y.type)
                             ? await (0, c.LD)(P, A, y, l, N)
                             : await (0, c.nV)(P, { paymentSource: y, currency: l }, n, t, u, o, N);
                     } else if (null != P) {
                         let l = (0, S.Pg)(P, d.id, 1, new Set(m)),
                             i = { paymentSource: y, currency: C.currency ?? R.currency };
-                        (P.status === g.Dmq.PAUSED && (i.status = g.Dmq.ACTIVE),
+                        (P.status === I.Dmq.PAUSED && (i.status = I.Dmq.ACTIVE),
                             P.isPausedAllowsResumeButNotUpdates || (i.items = l),
                             (e = await (0, c.nV)(P, i, n, t, u, o, N)));
                     } else
@@ -530,13 +530,13 @@ function $(e) {
             applyWalletBalance: ev ?? el?.applyWalletBalance,
         });
     }
-    let e9 = null != L || (ep === g.VVm.ONE_TIME && !eR),
+    let e9 = null != L || (ep === I.VVm.ONE_TIME && !eR),
         te = D && !e9;
     i.useLayoutEffect(() => {
-        eg && null != r && eI(H.i.UNAVAILABLE);
-    }, [eg, r, eI]);
+        eI && null != r && eg(H.i.UNAVAILABLE);
+    }, [eI, r, eg]);
     let tt =
-        eg && null == r
+        eI && null == r
             ? (0, l.jsx)(R.E1, {
                   type: "purchase_if_possible",
                   disablePurchase: $,

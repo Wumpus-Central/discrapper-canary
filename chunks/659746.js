@@ -9,12 +9,12 @@ var l,
     c = t(930861),
     d = t(602853),
     m = t(404374),
-    A = t(998304),
-    p = t(682901),
+    p = t(998304),
+    A = t(682901),
     E = t(855310);
 let P = Object.freeze({
-    DURATION: { [p.PremiumTypes.TIER_0]: 1e3, [p.PremiumTypes.TIER_1]: 1e3, [p.PremiumTypes.TIER_2]: 1500 },
-    DELAY: { [p.PremiumTypes.TIER_0]: 400, [p.PremiumTypes.TIER_1]: 400, [p.PremiumTypes.TIER_2]: 2200 },
+    DURATION: { [A.PremiumTypes.TIER_0]: 1e3, [A.PremiumTypes.TIER_1]: 1e3, [A.PremiumTypes.TIER_2]: 1500 },
+    DELAY: { [A.PremiumTypes.TIER_0]: 400, [A.PremiumTypes.TIER_1]: 400, [A.PremiumTypes.TIER_2]: 2200 },
     FLASH_TIME_PERCENT: 0.72,
     FLASH_DURATION_PERCENT: 0.08,
 });
@@ -25,7 +25,7 @@ var C =
     (l.GUILD_BOOST_APPLIED = "GUILD_BOOST_APPLIED"),
     (l.PREMIUM_PAYMENT_STARTED = "PREMIUM_PAYMENT_STARTED"),
     l);
-class M extends r.PureComponent {
+class y extends r.PureComponent {
     animation = new h.A.Value(0);
     static Types = C;
     componentDidMount() {
@@ -39,7 +39,7 @@ class M extends r.PureComponent {
         let { flashColor: e } = this.props,
             a = P.FLASH_TIME_PERCENT,
             t = P.FLASH_DURATION_PERCENT,
-            l = (0, A.tp)(e, 0);
+            l = (0, p.tp)(e, 0);
         return {
             backgroundColor: this.animation.interpolate({
                 inputRange: [0, a, a, a + t, 1],
@@ -63,8 +63,8 @@ class M extends r.PureComponent {
             case "PREMIUM_PAYMENT_STARTED":
             case "PREMIUM_UPGRADED":
             case "PREMIUM_UPDATED":
-                if (e === p.PremiumTypes.TIER_0) return m.gi.PREMIUM_TIER_0;
-                if (e === p.PremiumTypes.TIER_1) return m.gi.PREMIUM_TIER_1;
+                if (e === A.PremiumTypes.TIER_0) return m.gi.PREMIUM_TIER_0;
+                if (e === A.PremiumTypes.TIER_1) return m.gi.PREMIUM_TIER_1;
                 return m.gi.PREMIUM_TIER_2;
             default:
                 throw Error("Unsupported ShineAnimation type specified");
@@ -289,11 +289,11 @@ class M extends r.PureComponent {
         });
     }
 }
-function y(e) {
+function M(e) {
     let { theme: a, ...t } = e,
         l = (0, d.r)(u.A.unsafe_rawColors.WHITE).hex(),
         r = (0, d.r)(u.A.unsafe_rawColors.BRAND_500).hex(),
         s = (0, o.M)(a) ? l : r;
-    return (0, n.jsx)(M, { ...t, theme: a, flashColor: s });
+    return (0, n.jsx)(y, { ...t, theme: a, flashColor: s });
 }
-((y.Types = C), t.d(a, {}, { Ay: y, Or: C }));
+((M.Types = C), t.d(a, {}, { Ay: M, Or: C }));

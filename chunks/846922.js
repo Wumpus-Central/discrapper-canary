@@ -1,17 +1,17 @@
-var n,
-    r = i(196765),
-    a = i(121894),
+var i,
+    r = n(196765),
+    a = n(121894),
     s =
-        (((n = {})[(n.ALL_CHANNELS_ACCESS = 0)] = "ALL_CHANNELS_ACCESS"),
-        (n[(n.SOME_CHANNELS_ACCESS = 1)] = "SOME_CHANNELS_ACCESS"),
-        n);
+        (((i = {})[(i.ALL_CHANNELS_ACCESS = 0)] = "ALL_CHANNELS_ACCESS"),
+        (i[(i.SOME_CHANNELS_ACCESS = 1)] = "SOME_CHANNELS_ACCESS"),
+        i);
 let l = (0, r.v)((e) => ({
     listings: {},
-    setListing: (t, i) => (0, a.r)(() => e((e) => ({ listings: { ...e.listings, [t]: i(e.listings[t]) } }))),
+    setListing: (t, n) => (0, a.r)(() => e((e) => ({ listings: { ...e.listings, [t]: n(e.listings[t]) } }))),
     editStateIdsForGroup: {},
-    setEditStateIdsForGroup: (t, i) =>
+    setEditStateIdsForGroup: (t, n) =>
         (0, a.r)(() => {
-            e((e) => ({ editStateIdsForGroup: { ...e.editStateIdsForGroup, [t]: i(e.editStateIdsForGroup[t]) } }));
+            e((e) => ({ editStateIdsForGroup: { ...e.editStateIdsForGroup, [t]: n(e.editStateIdsForGroup[t]) } }));
         }),
 }));
-i.d(t, {}, { h: s, y: l });
+n.d(t, {}, { h: s, y: l });

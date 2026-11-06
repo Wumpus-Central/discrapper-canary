@@ -15,8 +15,8 @@ let d = (0, n(945810).mj)({
 });
 var f = n(739508),
     h = n(120700),
-    m = n(818348);
-let p = new Set([h.C.COLLECTIBLES_CHECKOUT, h.C.SLAYER_STOREFRONT_CHECKOUT]);
+    p = n(818348);
+let m = new Set([h.C.COLLECTIBLES_CHECKOUT, h.C.SLAYER_STOREFRONT_CHECKOUT]);
 var C = n(169797),
     y = n(792996);
 let E = r.createContext({ order: null, isOrderCreationEnabled: !1 });
@@ -58,8 +58,8 @@ function I(e) {
                     onOrderCreated: h,
                 } = e,
                 C = d.useConfig({ location: "payment_modal" }).enabled,
-                y = i === m.kM.VIRTUAL_CURRENCY,
-                E = null != a && p.has(a);
+                y = i === p.kM.VIRTUAL_CURRENCY,
+                E = null != a && m.has(a);
             t = !!y || (!!E && !0 !== s && C);
             let _ = null != n ? n[0] : void 0,
                 [g, I] = (0, r.useState)(null),

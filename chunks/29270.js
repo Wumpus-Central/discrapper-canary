@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(241989),
     E = n(516106),
     S = n(818296),
-    g = n(977445),
-    I = n(525877),
+    I = n(977445),
+    g = n(525877),
     y = n(486020),
     A = n(580630),
     P = n(403581),
@@ -168,7 +168,7 @@ function er(e) {
 }
 function ea(e) {
     let { productLine: t, application: n, isGift: r } = e,
-        a = (0, I.o)({ application: n, productLine: t, isGift: r }),
+        a = (0, g.o)({ application: n, productLine: t, isGift: r }),
         s = i.useMemo(() => {
             let e = [];
             return (null != a && e.push(a), e.length > 0 ? e : null);
@@ -184,7 +184,7 @@ function es(e) {
 function eo(e) {
     let { application: t } = e,
         n = (0, s.bG)([c.A], () => c.A.getFetchState()),
-        r = (0, g.uS)(t.id),
+        r = (0, I.uS)(t.id),
         o = t.supportsEmbeddedSurface(a.U.MAIN) && n === c.$.ERROR,
         u = i.useMemo(() => {
             let e = [];
@@ -232,8 +232,8 @@ function ec(e) {
         { isGift: s, giftRecipient: c } = (0, Y.Pv)(),
         {
             sku: f,
-            application: g,
-            eligiblePaymentGateways: I,
+            application: I,
+            eligiblePaymentGateways: g,
             disabled: y,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, E.t4)((e) => ({
@@ -266,7 +266,7 @@ function ec(e) {
                 })(n, { skuId: f.id, paymentSourceType: a, isGift: s }),
             [n, f.id, a, s],
         ),
-        x = i.useMemo(() => ({ paymentGatewayRestrictions: I, shouldUseUnifiedCheckoutUI: !0 }), [I]),
+        x = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         _ = (0, l.jsx)(p.N, {
             label: k.intl.string(k.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -314,7 +314,7 @@ function ec(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: R, sku: f, application: g, giftRecipient: c }),
+                (t = { priceText: R, sku: f, application: I, giftRecipient: c }),
                 e === d.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(el, { ...t })
                     : e === d.C.GUILD_PRODUCT_CHECKOUT
@@ -323,7 +323,7 @@ function ec(e) {
                         ? (0, l.jsx)(er, { ...t })
                         : (0, l.jsx)(en, { ...t })
             );
-        }, [n, f, g, c, R]),
+        }, [n, f, I, c, R]),
         B = i.useMemo(() => (null != r ? (0, A.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         W = (0, S.g)(N ?? null),
         K = i.useMemo(
@@ -403,8 +403,8 @@ function ec(e) {
                 paymentMethodContent: _,
                 legalContent: P,
                 promotionalNoticeContent: K,
-                upperInlineNoticeContent: (0, l.jsx)(eu, { application: g }),
-                footerInlineNoticeContent: (0, l.jsx)(es, { productLine: f.productLine, application: g, isGift: s }),
+                upperInlineNoticeContent: (0, l.jsx)(eu, { application: I }),
+                footerInlineNoticeContent: (0, l.jsx)(es, { productLine: f.productLine, application: I, isGift: s }),
                 invoiceTotalDueLabel: k.intl.string(H.default.Zxav97),
                 invoiceTotalDueValue: B,
             }),

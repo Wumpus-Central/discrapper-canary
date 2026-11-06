@@ -133,8 +133,8 @@ var O = n(994500),
     U = n.n(D),
     V = n(111159),
     W = n(952270),
-    B = n(320448),
-    F = n(964486),
+    F = n(320448),
+    B = n(964486),
     G = n(624793),
     K = n(682163),
     H = n(465794),
@@ -189,7 +189,7 @@ function ea(e) {
     let { sourceGuildName: t, isExternal: n } = e,
         { analyticsLocations: l } = (0, y.Ay)(S.A.SOUNDBOARD_ECHO, S.A.PREMIUM_UPSELL);
     return (
-        (0, F.Ay)(() => {
+        (0, B.Ay)(() => {
             !(function (e) {
                 let { isExternal: t, analyticsLocations: n } = e;
                 X.default.track(Y.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -368,7 +368,7 @@ function ec(e) {
         S = r.useCallback((e) => e?.focus(), []),
         { analyticsLocations: C } = (0, y.Ay)();
     return (
-        (0, F.Ay)(() => {
+        (0, B.Ay)(() => {
             el({ action: ee.HOVER, guildId: t, channelId: n, echo: { sound: l, startedAt: a }, analyticsLocations: C });
         }),
         (0, i.jsxs)("div", {
@@ -402,7 +402,7 @@ function ec(e) {
                                       variant: "body-sm/medium",
                                       children: ei.intl.string(ei.t["UQT3/h"]),
                                   }),
-                                  (0, i.jsx)(B.ChevronSmallRightIcon, { size: "xs", color: "currentColor" }),
+                                  (0, i.jsx)(F.ChevronSmallRightIcon, { size: "xs", color: "currentColor" }),
                               ],
                           }),
                       }),
@@ -598,7 +598,7 @@ function eE(e) {
         null == t || null == T)
     )
         return null;
-    let { emojiId: W, emojiName: B, emojiAnimated: F, name: G } = l;
+    let { emojiId: W, emojiName: F, emojiAnimated: B, name: G } = l;
     return (0, i.jsxs)("div", {
         className: a()(eg.Iv, { [eg.E$]: d }),
         style: { height: 36 },
@@ -640,13 +640,13 @@ function eE(e) {
                     onClick: d ? () => null : w,
                     "aria-label": ei.intl.formatToPlainString(ei.t.VOmeSq, { name: G }),
                     children: [
-                        (null != B || null != W) &&
+                        (null != F || null != W) &&
                             (0, i.jsx)(x.A, {
                                 size: "reaction",
                                 className: eg.FA,
                                 emojiId: W,
-                                emojiName: B,
-                                animated: F,
+                                emojiName: F,
+                                animated: B,
                             }),
                         (0, i.jsx)(p.E, { variant: "body-md/medium", children: G }),
                         (0, i.jsx)("div", { className: eg.SU }),

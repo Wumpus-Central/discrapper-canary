@@ -282,8 +282,8 @@ let eW = i.memo(function (e) {
         e2 = i.useCallback(() => ey.current?.focus(), []),
         e3 = (0, eA.n)(C);
     (0, eO.N_)(E, eD, C.id);
-    let { eventEmitter: e4, handleEditorSelectionChanged: e7 } = (0, eO.ml)(ey, c, d),
-        e5 = i.useCallback(
+    let { eventEmitter: e4, handleEditorSelectionChanged: e5 } = (0, eO.ml)(ey, c, d),
+        e7 = i.useCallback(
             (e) => {
                 function t(e) {
                     return (
@@ -364,7 +364,7 @@ let eW = i.memo(function (e) {
             },
             [T, X, Y, C.id, eu, ec, e3],
         ),
-        { submit: e8, handleSubmit: e6 } = (0, eO.Zx)(e5, E, ey, ev, C.id),
+        { submit: e8, handleSubmit: e6 } = (0, eO.Zx)(e7, E, ey, ev, C.id),
         { autocompleteRef: e9, handleMaybeShowAutocomplete: te, handleHideAutocomplete: tt } = (0, eO.v7)(),
         tn = i.useCallback(() => ev?.current?.hide(), []),
         { editorHeight: tl, handleResize: ti } = (0, eO.ck)(y),
@@ -391,7 +391,7 @@ let eW = i.memo(function (e) {
         { handleAutocompleteVisibilityChange: th } = (0, eO.uW)(E, C.id),
         tm = (0, eO.NO)(ey, E, C.id),
         tg = (0, eO.Vu)(e8, E, ey, C.id),
-        tp = (0, eO.C)({ editorRef: ey, disabled: eD, textValue: c, channelId: C.id, chatInputType: E, submit: e5 });
+        tp = (0, eO.C)({ editorRef: ey, disabled: eD, textValue: c, channelId: C.id, chatInputType: E, submit: e7 });
     (0, eb.R)(e4, C.guild_id, C.id);
     let [tA, tf] = i.useState(!1),
         tC = i.useCallback(() => {
@@ -516,7 +516,7 @@ let eW = i.memo(function (e) {
                                                         onEnter: ta,
                                                         onSpace: tr,
                                                         onMoveSelection: to,
-                                                        onSelectionChanged: e7,
+                                                        onSelectionChanged: e5,
                                                         onMaybeShowAutocomplete: te,
                                                         onHideAutocomplete: tt,
                                                         promptToUpload: N,
@@ -830,8 +830,8 @@ let e2 = (0, n(945810).mj)({
 });
 var e3 = n(319365),
     e4 = n(151271),
-    e7 = n(407278),
-    e5 = n(81400),
+    e5 = n(407278),
+    e7 = n(81400),
     e8 = n(353182),
     e6 = n(727875);
 function e9(e) {
@@ -893,7 +893,7 @@ function tr(e) {
 function to(e) {
     let { guild: t } = e,
         { analyticsLocations: n } = (0, ei.Ay)(el.A.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [i, s] = (0, e5.j8)({ guildId: t?.id ?? "", analyticsLocations: n }),
+        [i, s] = (0, e7.j8)({ guildId: t?.id ?? "", analyticsLocations: n }),
         a = s ? eB.intl.string(eB.t["9ph2v7"]) : eB.intl.string(eB.t.ldh9Cg),
         r = s ? eB.intl.string(eB.t["/PGQf0"]) : eB.intl.string(eB.t.WikgZ1);
     return (0, l.jsx)("div", {
@@ -1214,17 +1214,17 @@ var t0 = n(208343),
     t2 = n(810685),
     t3 = n(806621),
     t4 = n(596344);
-let t7 = function (e, t) {
+let t5 = function (e, t) {
     let n = (0, t3.r)(t),
         l = (0, h.bG)([t4.A], () => t4.A.getMessages(t.id).length > 0, [t]);
     return null != e && e.hasFlag(eF.nhx.QUARANTINED) && n && !l;
 };
-var t5 = n(831502);
+var t7 = n(831502);
 let t8 = function () {
     return (0, l.jsx)(e9, {
         bannerIcon: (0, l.jsx)(t2.M, { alt: "", width: 80, height: 40 }),
         bannerHeader: eB.intl.string(eB.t.EouHwv),
-        bannerSubtext: eB.intl.format(eB.t.PThBel, { appealLink: t5.q }),
+        bannerSubtext: eB.intl.format(eB.t.PThBel, { appealLink: t7.q }),
     });
 };
 var t6 = n(118517),
@@ -1991,9 +1991,9 @@ let n$ = i.memo(function (e) {
         { channel: a, guild: r, chatInputType: o, filterAfterTimestamp: c } = e,
         { placeholder: d, accessibilityLabel: u } = (0, nI.A)({ channel: a }),
         m = (0, tU.A)(),
-        g = t7(nu.default.getCurrentUser(), a),
+        g = t5(nu.default.getCurrentUser(), a),
         [p] = (0, tu.c)(r?.id),
-        A = (0, e5.uZ)(r?.id),
+        A = (0, e7.uZ)(r?.id),
         C = (0, h.bG)([nu.default], () => nu.default.getCurrentUser()),
         E = (0, h.bG)([tn.Ay], () => null != C && (tn.Ay.getMember(r?.id ?? "", C?.id)?.isPending ?? !1)),
         x = (0, h.bG)([tK.A], () => tK.A.isEnabled()),
@@ -2011,7 +2011,7 @@ let n$ = i.memo(function (e) {
         j = (0, h.bG)([tV.Ay, tt.default], () => tV.Ay.getUserCombo(tt.default.getId(), a.id)),
         v = (0, S.rj)(a),
         T = (0, S.aW)(a),
-        N = (0, e7.L)(a.id),
+        N = (0, e5.L)(a.id),
         M = v.length > 0 || a.rateLimitPerUser > 0 || null != j || null != T || N,
         { showLinkedLobbyApplicationLoadingIndicator: R } = (0, nE.A)(a.linkedLobby),
         D = e2.useConfig({ location: "ChannelChat" }).announcementComposer,

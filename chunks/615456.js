@@ -48,11 +48,11 @@ function S(e) {
         }),
     });
 }
-function g() {
+function I() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(h.H, { actions: e });
 }
-var I = n(636950);
+var g = n(636950);
 function y() {
     let [e, t] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
@@ -60,14 +60,14 @@ function y() {
             (0, l.jsx)(s.A, {}),
             (0, l.jsx)(o.dZ, {
                 children: (0, l.jsx)(S, {
-                    className: I.r,
+                    className: g.r,
                     isEmailResent: e,
                     resendEmail: async function () {
                         (t(!0), await (0, d.lo)());
                     },
                 }),
             }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(g, {}) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(I, {}) }),
         ],
     });
 }
@@ -167,10 +167,10 @@ function q(e) {
         })),
         f = (0, x.Hp)(),
         E = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: g } = (0, B.Jn)(),
-        { isGift: I } = (0, b.Pv)(),
-        y = (0, D.A)({ isGift: I, skuId: d }),
-        T = !E || !S || g || !c,
+        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: I } = (0, B.Jn)(),
+        { isGift: g } = (0, b.Pv)(),
+        y = (0, D.A)({ isGift: g, skuId: d }),
+        T = !E || !S || I || !c,
         N = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(K.tv));
     (0, v.A)(
         "Payment Modal",
@@ -179,7 +179,7 @@ function q(e) {
         {
             hasFetchedSubscriptions: E,
             hasFetchedSubscriptionPlans: S,
-            subscriptionPriceOptionsLoading: g,
+            subscriptionPriceOptionsLoading: I,
             hasFetchedPaymentSources: c,
         },
         { tags: { app_context: "billing" } },
@@ -202,7 +202,7 @@ function q(e) {
                               ? a(r.pn.PLAN_SELECT)
                               : a(r.pn.SKU_SELECT)
                     : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })));
-    }, [h, s, o, p, f, N, n, T, a, t, d, m, y, C, I, j, u]),
+    }, [h, s, o, p, f, N, n, T, a, t, d, m, y, C, g, j, u]),
     T)
         ? (0, l.jsx)(L.A, {})
         : f

@@ -1,13 +1,13 @@
-var s = i(582128),
-    n = i(855986),
-    a = i(73153),
-    l = i(233317);
-i.d(
+var i = s(582128),
+    n = s(855986),
+    a = s(73153),
+    l = s(233317);
+s.d(
     t,
     {},
     {
         A: function (e) {
-            let { useCachedData: t = !1, fetch: i = !0 } =
+            let { useCachedData: t = !1, fetch: s = !0 } =
                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 {
                     premiumGroupMembers: r,
@@ -19,11 +19,11 @@ i.d(
                     isUpdatingMembers: l.A.isUpdatingMembers(),
                 }));
             return (
-                (0, s.useEffect)(() => {
-                    !i ||
+                (0, i.useEffect)(() => {
+                    !s ||
                         (t && l.A.hasFetchedMembers()) ||
                         (null != e && a.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: e }));
-                }, [i, e, t]),
+                }, [s, e, t]),
                 { premiumGroupMembers: r, isLoading: c || o }
             );
         },

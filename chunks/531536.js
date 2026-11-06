@@ -31,7 +31,7 @@ n.d(
     {
         W: h,
         v: function (e) {
-            let { className: t, product: n, title: r, subtitle: m, badge: p } = e,
+            let { className: t, product: n, title: r, subtitle: p, badge: m } = e,
                 C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
                 y = (0, c.tP)(n);
             return null == y
@@ -56,12 +56,12 @@ n.d(
                               }),
                           }),
                       }),
-                      badge: p,
+                      badge: m,
                       title:
                           null != r &&
                           (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", children: r }),
                       body:
-                          null != m && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: m }),
+                          null != p && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: p }),
                   });
         },
     },

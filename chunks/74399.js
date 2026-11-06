@@ -1,10 +1,10 @@
-var n = i(855986),
-    r = i(73153),
-    a = i(95701),
-    s = i(734057);
+var i = n(855986),
+    r = n(73153),
+    a = n(95701),
+    s = n(734057);
 let l = {},
     o = {};
-class _ extends n.Ay.Store {
+class u extends i.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
@@ -19,13 +19,13 @@ class _ extends n.Ay.Store {
         return o[e];
     }
 }
-let u = new _(r.h, {
+let d = new u(r.h, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
-        let { selectedTemplate: t, guildId: i } = e,
-            n = Object.values(s.A.getMutableGuildChannelsForGuild(i));
+        let { selectedTemplate: t, guildId: n } = e,
+            i = Object.values(s.A.getMutableGuildChannelsForGuild(n));
         t.listings.forEach((e) => {
             e.channels.forEach((e) => {
-                let t = n.find((t) => t.name === e.name);
+                let t = i.find((t) => t.name === e.name);
                 if (void 0 !== t) e.id = t.id;
                 else if (!(e.id in o)) {
                     let t = (0, a.createChannelRecord)(e);
@@ -35,8 +35,8 @@ let u = new _(r.h, {
         });
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: function (e) {
-        let { templates: t, guildId: i } = e;
-        l[i] = t;
+        let { templates: t, guildId: n } = e;
+        l[n] = t;
     },
 });
-i.d(t, {}, { A: u });
+n.d(t, {}, { A: d });

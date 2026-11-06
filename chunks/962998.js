@@ -35,9 +35,9 @@ function y(e, t) {
     null != n && (m.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
 let O = new Set(p.n),
-    b = new Set(["activity", "automod", "widget", "bot"]);
-function T(e) {
-    return null != e && b.has(e) ? e : null;
+    T = new Set(["activity", "automod", "widget", "bot"]);
+function b(e) {
+    return null != e && T.has(e) ? e : null;
 }
 let k = new Map();
 function C(e, t) {
@@ -215,7 +215,7 @@ n.d(
                         turnId: e.turn_id,
                         patch: {
                             publishCta: {
-                                surface: T(e.publish_cta.surface),
+                                surface: b(e.publish_cta.surface),
                                 reason: "new_ui" === e.publish_cta.reason ? "new_ui" : "first_publish",
                             },
                         },
@@ -237,7 +237,7 @@ n.d(
                               : !0 === n.has_unpublished_changes
                                 ? "live_outdated"
                                 : "live_current",
-                    surface: T(e.surface),
+                    surface: b(e.surface),
                     previewAppChannels: Array.isArray(e.preview_app_channels)
                         ? e.preview_app_channels.filter((e) => "string" == typeof e)
                         : [],

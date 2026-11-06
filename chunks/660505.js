@@ -15,13 +15,13 @@ var l = n(477900),
     f = n(695537),
     E = n(901930),
     S = n(725836),
-    g = n(580133),
-    I = n(516106),
+    I = n(580133),
+    g = n(516106),
     y = n(379912),
     A = n(792996),
     P = n(663466);
 function v() {
-    let e = (0, I.t4)((e) => (0, f.qn)(e.order));
+    let e = (0, g.t4)((e) => (0, f.qn)(e.order));
     return null == e || null == e.redirect_url
         ? null
         : (0, l.jsx)(m.E, {
@@ -43,7 +43,7 @@ function x() {
 function _() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(S.UY, { children: (0, l.jsx)(g.f, {}) }),
+            (0, l.jsx)(S.UY, { children: (0, l.jsx)(I.f, {}) }),
             (0, l.jsx)("div", { className: P.k, role: "status", children: (0, l.jsx)(x, {}) }),
         ],
     });
@@ -64,9 +64,9 @@ function N(e) {
         {
             paymentSourceId: E,
             purchaseError: S,
-            setCheckoutCurrency: g,
+            setCheckoutCurrency: I,
             isOrderSigningInProgress: y,
-        } = (0, I.t4)((e) => ({
+        } = (0, g.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             purchaseError: e.purchaseError,
             setCheckoutCurrency: e.setCheckoutCurrency,
@@ -78,7 +78,7 @@ function N(e) {
         { paymentSources: v } = (0, T.j)(),
         x = (0, c.W)(v, E),
         N = (0, s.iB)({ paymentSourceId: E, location: "CheckoutBaseReviewStep" }),
-        j = (0, I.t4)((e) =>
+        j = (0, g.t4)((e) =>
             e.getIsReviewSubmitDisabled({ paymentSource: x, isWalletPurchaseDisabled: N, isTrial: r }),
         );
     i.useEffect(() => {
@@ -86,8 +86,8 @@ function N(e) {
     }, [S]);
     let R = n.onBack,
         O = i.useCallback(() => {
-            (g(void 0), null != R && R());
-        }, [g, R]),
+            (I(void 0), null != R && R());
+        }, [I, R]),
         M = i.useMemo(() => t(), [t]),
         L = (0, l.jsx)(d.U, {
             ...n,
