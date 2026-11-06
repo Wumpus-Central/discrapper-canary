@@ -691,7 +691,12 @@ function e5(e) {
             disabled: n = !1,
         } = e,
         c = h.useRef(null),
-        d = e1.includes(t);
+        { isMoreMenuActive: d, moreTabOption: l } = (function (e) {
+            let t = !eq.includes(e),
+                [a, i] = h.useState(null);
+            return (t && a !== e && i(e), { isMoreMenuActive: t, moreTabOption: a });
+        })(t),
+        o = d || null == l;
     return (0, r.jsx)(eW.Y, {
         targetElementRef: c,
         position: "right",
@@ -709,8 +714,8 @@ function e5(e) {
                 onClose: i,
             });
         },
-        children: (e, a) => {
-            let { isShown: l } = a;
+        children: (e, t) => {
+            let { isShown: u } = t;
             return (0, r.jsxs)("button", {
                 ...e,
                 ref: c,
@@ -718,20 +723,22 @@ function e5(e) {
                 disabled: n,
                 "aria-disabled": null != i,
                 "aria-describedby": s,
-                "aria-haspopup": "menu",
+                "aria-haspopup": o ? "menu" : void 0,
+                "aria-expanded": o ? u : void 0,
+                "aria-current": d,
                 onClick: function (t) {
-                    null != i ? U(i) : e.onClick(t);
+                    null != i ? U(i) : d || null == l ? e.onClick(t) : a(l);
                 },
                 onKeyDown: (t) => {
                     (e.onKeyDown(t), ("ArrowLeft" === t.key || "ArrowRight" === t.key) && t.stopPropagation());
                 },
-                className: b()(e0.Mf, e0.OS, { [e0.vu]: d || l }),
+                className: b()(e0.Mf, e0.OS, { [e0.vu]: d || u }),
                 children: [
                     (0, r.jsx)(et.E, {
                         tag: "span",
                         variant: "heading-sm/semibold",
                         color: "none",
-                        children: d ? (0, v.cq)(t) : ec.intl.string(en.default["iXpQc+"]),
+                        children: null != l ? (0, v.cq)(l) : ec.intl.string(en.default["iXpQc+"]),
                     }),
                     (0, r.jsx)(eY.ChevronSmallRightIcon, { size: "refresh_sm", color: "currentColor" }),
                 ],
