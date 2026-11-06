@@ -1,4 +1,5 @@
-var i = n(273185);
+var i = n(658760),
+    r = n(273185);
 n.d(
     t,
     {},
@@ -6,7 +7,7 @@ n.d(
         et: function (e) {
             if (null == e) return;
             let { url: t, proxy_url: n } = e;
-            return null != t && null != n ? ((0, i.r1)(t) ? `${n}?format=webp` : n) : t;
+            return null != t && null != n ? ((0, r.r1)(t) ? (0, i.K)(n, "webp") : n) : t;
         },
         m3: function (e) {
             if (null == e) return;

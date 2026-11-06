@@ -44,29 +44,30 @@ function T(e) {
             subscription: B,
             skipConfirm: V,
             shouldDisallowPlanSelection: H,
-            initialPaymentSourceId: j,
-            startingStepOverride: W,
+            hasPreviousStepOutsideCheckout: j,
+            initialPaymentSourceId: W,
+            startingStepOverride: Y,
         } = e,
-        Y = r()("payment-modal"),
-        K = (0, h.mH)(P),
-        $ = y || K !== (0, h.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
-        X = $?.rewardSkuIds[0] ?? null,
-        z = !1;
-    function q() {
-        z ||
-            ((z = !0),
+        K = r()("payment-modal"),
+        $ = (0, h.mH)(P),
+        X = y || $ !== (0, h.mH)(m.pe.TIER_2) ? null : A.A.getMarketingMomentPromotion(),
+        z = X?.rewardSkuIds[0] ?? null,
+        q = !1;
+    function Q() {
+        q ||
+            ((q = !0),
             f._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                 ? setTimeout(() => {
-                      (0, a.Oo)(Y);
+                      (0, a.Oo)(K);
                   }, 1e3)
-                : (0, a.Oo)(Y));
+                : (0, a.Oo)(K));
     }
-    function Q(e) {
+    function Z(e) {
         ((0, o.ET)(), (0, l.ET)(), e && null != S && S());
     }
-    function Z() {
-        return (0, a.Oo)(Y);
+    function J() {
+        return (0, a.Oo)(K);
     }
     return Promise.all([
         n.e(237427),
@@ -659,11 +660,11 @@ function T(e) {
         })
         .then((e) =>
             e.openCheckoutModal({
-                checkoutConfiguration: { applicationId: G, skuId: K ?? null, initialPaymentSourceId: j },
+                checkoutConfiguration: { applicationId: G, skuId: $ ?? null, initialPaymentSourceId: W },
                 forwardedPaymentModalProps: {
                     analyticsObject: C,
                     initialPlanId: t,
-                    startingStepOverride: W,
+                    startingStepOverride: Y,
                     analyticsLocation: O,
                     followupSKUInfo: i,
                     onSubscriptionConfirmation: S,
@@ -676,8 +677,8 @@ function T(e) {
                     skipConfirm: !!V,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
-                            z ||
-                                ((z = !0),
+                            q ||
+                                ((q = !0),
                                 f._.dispatch(I.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 E.A.isDisplayingWowMomentConfirmation && E.A.isAnimated
                                     ? setTimeout(() => {
@@ -688,10 +689,10 @@ function T(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != X && $.endDate >= new Date())
+                                    e && null != z && X.endDate >= new Date())
                                 ) {
-                                    await (0, c.RE)(X);
-                                    let e = u.A.getProduct(X);
+                                    await (0, c.RE)(z);
+                                    let e = u.A.getProduct(z);
                                     null != e &&
                                         (0, _.A)({
                                             product: e,
@@ -701,7 +702,7 @@ function T(e) {
                                         });
                                 }
                             }
-                        })(e, Z),
+                        })(e, J),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: R, analyticsLocations: N },
                 checkoutHandlers: { onClose: T, onComplete: g },
@@ -714,13 +715,14 @@ function T(e) {
                     subscriptionTier: P,
                     subscription: B,
                     shouldDisallowPlanSelection: H,
-                    initialPaymentSourceId: j,
+                    hasPreviousStepOutsideCheckout: j,
+                    initialPaymentSourceId: W,
                 },
                 modalAPIOptions: {
-                    modalKey: Y,
+                    modalKey: K,
                     skipCloseModalOnCloseRequest: !0,
-                    onCloseRequest: q,
-                    onCloseCallback: Q,
+                    onCloseRequest: Q,
+                    onCloseCallback: Z,
                 },
             }),
         );

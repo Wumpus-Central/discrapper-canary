@@ -623,6 +623,10 @@ function ed(e) {
                         let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
+                    getHasPreviousStepOutsideCheckout: () => {
+                        let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
+                        return null != t && (t.hasPreviousStepOutsideCheckout ?? !1);
+                    },
                     getIsInOneStepSubscriptionCheckout: (t) => {
                         let { isTrial: n, selectedSkuId: i } = t,
                             {
