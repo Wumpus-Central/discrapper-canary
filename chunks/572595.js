@@ -1,7 +1,7 @@
 var r = n(477900);
 n(582128);
 var i = n(192308),
-    l = n(440938),
+    l = n(857512),
     s = n(4227),
     a = n(466459);
 let u = "collectibles shop product details modal";

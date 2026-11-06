@@ -13,7 +13,7 @@ var l,
     h = n(543862),
     p = n(196736),
     f = n(129230),
-    x = n(440938);
+    x = n(857512);
 let E = a.createContext(null);
 function v(e) {
     let { blockType: t, children: n } = e,
@@ -948,8 +948,8 @@ var eZ = n(918467),
     e6 = n(805251),
     e3 = n(993408),
     e9 = n(598047),
-    e4 = n(396583),
-    e7 = n(270823);
+    e7 = n(396583),
+    e4 = n(270823);
 let te = a.memo((e) => {
         let { endsAt: t, onCountdownEnd: n } = e,
             l = (0, e9.A)(),
@@ -966,13 +966,13 @@ let te = a.memo((e) => {
                 return 0 === t && 0 === n && 0 === l && 0 === r;
             })(m);
         return (
-            (0, e4.A)(o, g || !(l && r) ? null : 1e3),
+            (0, e7.A)(o, g || !(l && r) ? null : 1e3),
             a.useEffect(() => {
                 g && !c.current && ((c.current = !0), n());
             }, [g, n]),
             (0, s.jsxs)("div", {
                 ref: d,
-                className: e7.qW,
+                className: e4.qW,
                 role: "timer",
                 children: [
                     (function (e) {
@@ -983,9 +983,9 @@ let te = a.memo((e) => {
                             a.Fragment,
                             {
                                 children: [
-                                    t > 0 && (0, s.jsx)("div", { className: e7.kx, "aria-hidden": !0 }),
+                                    t > 0 && (0, s.jsx)("div", { className: e4.kx, "aria-hidden": !0 }),
                                     (0, s.jsx)("div", {
-                                        className: e7.t8,
+                                        className: e4.t8,
                                         "aria-hidden": !0,
                                         children: e
                                             .split("")
@@ -996,7 +996,7 @@ let te = a.memo((e) => {
                                                         tag: "span",
                                                         variant: "heading-xl/semibold",
                                                         color: "currentColor",
-                                                        className: e7.m3,
+                                                        className: e4.m3,
                                                         children: e,
                                                     },
                                                     t,
@@ -1017,17 +1017,17 @@ let te = a.memo((e) => {
         let { collectionName: t, percentOff: n, endsAt: l, countdownStyle: r, onShopSale: a, onCountdownEnd: i } = e;
         return (0, s.jsxs)("div", {
             className: o()(
-                e7.kL,
+                e4.kL,
                 (function (e) {
                     switch (e) {
                         case eJ.d2.LIGHT:
-                            return e7.BB;
+                            return e4.BB;
                         case eJ.d2.DARK:
-                            return e7.XT;
+                            return e4.XT;
                         case eJ.d2.GRADIENT_V1:
-                            return e7.eg;
+                            return e4.eg;
                         default:
-                            return e7.XT;
+                            return e4.XT;
                     }
                 })(r),
             ),
@@ -1036,11 +1036,11 @@ let te = a.memo((e) => {
                 (0, s.jsx)(N.E, {
                     variant: "body-md/semibold",
                     color: "currentColor",
-                    className: e7.Rc,
+                    className: e4.Rc,
                     children: R.intl.format(R.t["97Qza2"], { percent: n, collectionName: t }),
                 }),
                 (0, s.jsx)("div", {
-                    className: e7.lO,
+                    className: e4.lO,
                     children: (0, s.jsx)(g.$, {
                         variant: "overlay-primary",
                         fullWidth: !0,
