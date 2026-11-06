@@ -1,83 +1,103 @@
-var e = i(477900),
-    E = i(582128),
+var E = i(477900),
+    e = i(582128),
     _ = i(189213),
-    r = i(192308),
-    I = i(975807),
-    s = i(871309),
-    l = i(36149),
-    A = i(945276),
-    C = i(780964),
-    c = i(766075),
-    o = i(975571),
-    a = i(390248),
-    u = i(652215),
-    L = i(792996);
+    I = i(192308),
+    r = i(975807),
+    l = i(871309),
+    o = i(171576),
+    s = i(36149),
+    a = i(945276),
+    A = i(780964),
+    C = i(766075),
+    c = i(975571),
+    L = i(390248),
+    R = i(652215),
+    M = i(792996),
+    g = i(221858);
 i.d(
     n,
     {},
     {
         default: function (t) {
-            let { channelId: n, messageId: R, transitionState: M, onClose: T } = t,
-                g = (0, A.A)(),
-                f = (0, l.yM)(),
-                N = (0, a._R)(),
-                d = E.useMemo(() => f && N, [f, N]),
-                h = E.useCallback(
+            let { channelId: n, messageId: u, transitionState: T, onClose: N } = t,
+                d = (0, a.A)(),
+                D = (0, s.yM)(),
+                S = (0, L._R)(),
+                k = e.useMemo(() => D && S, [D, S]),
+                O = e.useCallback(
                     (t) => {
-                        (0, a.hv)({ action: t, channelId: n, messageId: R });
+                        (0, L.hv)({ action: t, channelId: n, messageId: u });
                     },
-                    [n, R],
-                ),
-                O = E.useCallback(() => {
-                    (T(),
-                        h(a.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
-                        (0, r.mM)(async () => {
-                            let { default: t } = await i(544135);
-                            return (i) => (0, e.jsx)(t, { channelId: n, messageId: R, ...i });
-                        }));
-                }, [n, R, T, h]);
+                    [n, u],
+                );
+            function f() {
+                (O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE),
+                    (0, r.A)(c.A.getArticleURL(R.MVz.EXPLICIT_MEDIA_REDACTION)));
+            }
+            let h = e.useCallback(() => {
+                (N(),
+                    O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+                    (0, I.mM)(async () => {
+                        let { default: t } = await i(544135);
+                        return (i) => (0, E.jsx)(t, { channelId: n, messageId: u, ...i });
+                    }));
+            }, [n, u, N, O]);
             return (
-                E.useEffect(() => {
-                    (0, a.hv)({ action: a.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: n, messageId: R });
-                }, [n, R]),
-                (0, e.jsx)(_.a, {
-                    title: L.intl.string(L.t.sGW77l),
-                    subtitle: (function () {
-                        if (d) return L.intl.string(L.t["5e0geG"]);
-                        let t = L.intl.string(L.t.RUw0ZC),
-                            n = L.intl.string(L.t["E/oQYL"]);
-                        return g ? t : n;
-                    })(),
+                e.useEffect(() => {
+                    (0, L.hv)({ action: L.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: n, messageId: u });
+                }, [n, u]),
+                (0, E.jsx)(_.a, {
+                    title: S ? M.intl.string(M.t["2t3DCx"]) : M.intl.string(M.t.sGW77l),
+                    subtitle: k
+                        ? M.intl.format(M.t["24JQP1"], {
+                              handleOnTeenAgeGroupHook: function () {
+                                  (O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE),
+                                      l.A.openUrl(c.A.getArticleURL(M.intl.string(g.default.agiNYw))));
+                              },
+                          })
+                        : S
+                          ? M.intl.string(M.t["3y2fov"])
+                          : !0 === d
+                            ? M.intl.format(M.t.kIEcIY, { handleOnHelpCenterHook: f })
+                            : M.intl.string(M.t["E/oQYL"]),
                     actions: [
-                        (function () {
-                            if (!N && !d) return { text: L.intl.string(L.t.ZH7P2h), onClick: O, variant: "secondary" };
-                        })(),
-                        d
+                        k
                             ? {
-                                  text: L.intl.string(L.t.hvVgAZ),
+                                  text: M.intl.string(M.t.bmbHPA),
                                   onClick: function () {
-                                      (h(a.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE),
-                                          s.A.openUrl(o.A.getArticleURL(u.MVz.AGE_VERIFICATION_LEARN_MORE)));
+                                      (O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), N());
                                   },
+                                  variant: "secondary",
                               }
-                            : g
+                            : S
+                              ? { text: M.intl.string(M.t.hvVgAZ), onClick: f, variant: "secondary" }
+                              : { text: M.intl.string(M.t.GMeoVu), onClick: h, variant: "secondary" },
+                        k
+                            ? { text: M.intl.string(M.t.hvVgAZ), onClick: f }
+                            : S
                               ? {
-                                    text: L.intl.string(L.t["9D+zGX"]),
+                                    text: M.intl.string(M.t.DVywUB),
                                     onClick: function () {
-                                        (h(a.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
-                                            (0, c.openUserSettings)(C.X.CONTENT_FILTERS_SETTING),
-                                            T());
+                                        (O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
+                                            N(),
+                                            l.A.showAgeVerificationGetStartedModal({
+                                                entryPoint: o.q1.SENSITIVE_MEDIA_LEARN_MORE,
+                                            }));
                                     },
                                 }
-                              : {
-                                    text: L.intl.string(L.t.hvVgAZ),
-                                    onClick: function () {
-                                        (0, I.A)(o.A.getArticleURL(u.MVz.EXPLICIT_MEDIA_REDACTION));
-                                    },
-                                },
-                    ].filter((t) => void 0 !== t),
-                    onClose: () => (T(), h(a.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
-                    transitionState: M,
+                              : !0 === d
+                                ? {
+                                      text: M.intl.string(M.t["9D+zGX"]),
+                                      onClick: function () {
+                                          (O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
+                                              (0, C.openUserSettings)(A.X.CONTENT_FILTERS_SETTING),
+                                              N());
+                                      },
+                                  }
+                                : { text: M.intl.string(M.t.hvVgAZ), onClick: f },
+                    ],
+                    onClose: () => (N(), O(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
+                    transitionState: T,
                 })
             );
         },

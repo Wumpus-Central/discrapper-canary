@@ -25,21 +25,32 @@ var y = i(988341),
     N = i(129230),
     p = i(652215);
 function f(e) {
-    let { actionName: n, badge: i, displayedUserId: l, isSociallyNavigated: t } = e,
-        a = b.default.getCurrentUser()?.id,
-        s = null != i && null != a ? v.Ay.getBadgeById(i.badge_id, a) : void 0,
-        r = null != i && null != a ? v.Ay.getRemainingToNextTier(i.badge_id, a) : void 0,
-        d = null != l ? v.Ay.getBadges(l).filter((e) => e.owned).length : void 0;
+    let {
+            actionName: n,
+            badge: i,
+            displayedUserId: l,
+            isSociallyNavigated: t,
+            hasUnreadIndicator: a,
+            source: s,
+            surface: r,
+        } = e,
+        d = b.default.getCurrentUser()?.id,
+        o = null != i && null != d ? v.Ay.getBadgeById(i.badge_id, d) : void 0,
+        c = null != i && null != d ? v.Ay.getRemainingToNextTier(i.badge_id, d) : void 0,
+        u = null != l ? v.Ay.getBadges(l).filter((e) => e.owned).length : void 0;
     N.default.track(p.HAw.BADGE_DIRECTORY_ACTION, {
         badge_action: n,
         badge_id: i?.badge_id,
         badge_tier: null != i ? ((i.owned ? i.current_tier : i.next_tier) ?? i.tiers?.[0]?.key) : void 0,
         badge_owner_id: l,
-        is_owned: s?.owned ?? !1,
-        progress_to_next_tier: r,
+        is_owned: o?.owned ?? !1,
+        progress_to_next_tier: c,
         is_earnable: i?.is_earnable ?? !1,
         is_socially_navigated: t,
-        total_badges_owned: d,
+        total_badges_owned: u,
+        has_unread_indicator: a,
+        surface: r,
+        source: s,
     });
 }
 var I = i(248284),
