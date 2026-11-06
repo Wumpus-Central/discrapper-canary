@@ -1,8 +1,8 @@
-(a.d(t, { default: () => T }), a(323874), a(14289), a(35956));
+(a.d(t, { default: () => F }), a(323874), a(14289), a(35956));
 var n = a(477900),
     i = a(582128),
-    o = a(503698),
-    s = a.n(o),
+    s = a(503698),
+    o = a.n(s),
     l = a(224640),
     r = a(20742),
     c = a(638495),
@@ -21,68 +21,69 @@ var n = a(477900),
 let R = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
     x = /^\/(media\/(?:v1\.[a-zA-Z0-9=&_-]+\/)?[a-zA-Z0-9]+\/[a-zA-Z0-9_-]+\.(gif|webp|mp4))$/,
     E = /^\/([a-zA-Z0-9/_-]+\.(gif|webp|webm|mp4|png))$/,
-    b = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
-    j = new Set(["static.klipy.com"]);
-var I = a(339984),
+    I = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
+    b = new Set(["static.klipy.com"]);
+var j = a(339984),
     N = a(792996),
-    S = a(721757);
-function T(e) {
+    T = a(721757);
+function F(e) {
     let {
             transitionState: t,
-            onClose: o,
-            onComplete: T,
-            uploadType: C,
-            showUpsellHeader: F,
-            analyticsPage: G,
+            onClose: s,
+            onComplete: F,
+            uploadType: S,
+            showUpsellHeader: G,
+            analyticsPage: C,
             returnRef: L,
+            compressGIFToFitBytes: P,
         } = e,
-        [P, k] = i.useState(!1),
-        H = (0, c.k)(),
-        { analyticsLocations: O } = (0, d.Ay)(u.A.GIF_PICKER);
+        [k, H] = i.useState(!1),
+        O = (0, c.k)(),
+        { analyticsLocations: U } = (0, d.Ay)(u.A.GIF_PICKER);
     i.useEffect(() => {
         $.default.track(y.HAw.OPEN_MODAL, {
             type: y.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: O,
-            location: { page: G },
+            location_stack: U,
+            location: { page: C },
         });
-    }, [O, G]);
-    let U = C === I.HL.AVATAR || C === I.HL.BANNER,
-        v = (0, w.b)(!U),
-        z = N.intl.string(N.t["xsC+/y"]);
+    }, [U, C]);
+    let v = S === j.HL.AVATAR || S === j.HL.BANNER,
+        z = (0, w.b)(!v),
+        B = N.intl.string(N.t["xsC+/y"]);
     return (0, n.jsx)(d.f5, {
-        value: O,
+        value: U,
         children: (0, n.jsxs)(l.d, {
-            onClose: o,
+            onClose: s,
             transitionState: t,
-            "aria-label": z,
+            "aria-label": B,
             children: [
-                (0, n.jsx)(r.rQ, { title: z }),
+                (0, n.jsx)(r.rQ, { title: B }),
                 (0, n.jsxs)(h.F, {
                     children: [
-                        F &&
-                            !v &&
+                        G &&
+                            !z &&
                             (0, n.jsx)("div", {
-                                className: S.It,
+                                className: T.It,
                                 children: (0, n.jsx)(g.A, {
-                                    type: C,
-                                    analyticsPage: G,
+                                    type: S,
+                                    analyticsPage: C,
                                     analyticsSection: y.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                                     isGIF: !0,
                                 }),
                             }),
                         (0, n.jsxs)("div", {
-                            className: S.SD,
+                            className: T.SD,
                             children: [
                                 (0, n.jsx)(A.A, {
-                                    className: s()(S.XC, { [S.bX]: P }),
+                                    className: o()(T.XC, { [T.bX]: k }),
                                     onSelectGIF: async function (e) {
                                         let { gifSrc: t } = e;
-                                        if (null == t || P) return;
-                                        k(!0);
+                                        if (null == t || k) return;
+                                        H(!0);
                                         let i = (function (e) {
                                                 let t = new URL(`${window.location.protocol}${e}`),
                                                     { ASSET_ENDPOINT: a } = window.GLOBAL_ENV;
-                                                if (b.has(t.hostname)) {
+                                                if (I.has(t.hostname)) {
                                                     if (null == t.pathname.match(R))
                                                         throw Error("Unexpected Tenor GIF path.");
                                                     let e = `${y.Rsh.TENOR_ASSET_PATH}${t.pathname}`;
@@ -99,7 +100,7 @@ function T(e) {
                                                     let e = `${y.Rsh.GIPHY_ASSET_PATH}${t.pathname}`;
                                                     return `${location.protocol}${a}${e}`;
                                                 }
-                                                if (j.has(t.hostname)) {
+                                                if (b.has(t.hostname)) {
                                                     if (null == t.pathname.match(E))
                                                         throw Error("Unexpected Klipy GIF path.");
                                                     let e = `${y.Rsh.KLIPY_ASSET_PATH}${t.pathname}`;
@@ -107,8 +108,8 @@ function T(e) {
                                                 }
                                                 return `https://${t.hostname}${t.pathname}${t.search}`;
                                             })(t),
-                                            s = await fetch(i),
-                                            l = await s.blob(),
+                                            o = await fetch(i),
+                                            l = await o.blob(),
                                             r =
                                                 "" !== l.type
                                                     ? l.type
@@ -128,7 +129,7 @@ function T(e) {
                                                           }
                                                       })(i),
                                             c = `selected.${(0, f.B)(r) ?? "gif"}`;
-                                        (o(),
+                                        (s(),
                                             (0, p.mM)(
                                                 async () => {
                                                     let { default: e } = await Promise.all([
@@ -146,21 +147,22 @@ function T(e) {
                                                         (0, n.jsx)(e, {
                                                             imageUri: i,
                                                             file: new File([l], c, { type: r }),
-                                                            onCrop: T,
-                                                            uploadType: C,
-                                                            showUpsellHeader: F,
+                                                            onCrop: F,
+                                                            uploadType: S,
+                                                            showUpsellHeader: G,
                                                             returnRef: L,
+                                                            compressGIFToFitBytes: P,
                                                             ...t,
                                                         });
                                                 },
-                                                { contextKey: H },
+                                                { contextKey: O },
                                             ));
                                     },
                                     headingColor: "text-subtle",
                                     hideFavorites: !0,
                                 }),
-                                P && (0, n.jsx)(m.y, { className: S.u1 }),
-                                F && v && (0, n.jsx)(_.A, { uploadType: C, showUpsell: !0, className: S.Kt }),
+                                k && (0, n.jsx)(m.y, { className: T.u1 }),
+                                G && z && (0, n.jsx)(_.A, { uploadType: S, showUpsell: !0, className: T.Kt }),
                             ],
                         }),
                     ],

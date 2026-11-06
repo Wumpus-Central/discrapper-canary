@@ -75,9 +75,9 @@ var F = l(143945),
     H = l(652215);
 function K(e) {
     let { error: t, variant: l, color: i } = e;
-    return (0, n.jsx)(P.E, { variant: l, color: i, children: W(t) });
+    return (0, n.jsx)(P.E, { variant: l, color: i, children: U(t) });
 }
-function W(e) {
+function U(e) {
     switch (e) {
         case H.t02.TOO_MANY_EMOJI:
         case H.t02.TOO_MANY_ANIMATED_EMOJI:
@@ -105,7 +105,7 @@ function W(e) {
             return T.intl.string(T.t.iufib1);
     }
 }
-function U(e) {
+function W(e) {
     if (e?.body?.code != null) {
         let t = Number(e.body.code);
         if (!Number.isNaN(t)) return t;
@@ -243,8 +243,8 @@ function eh(e) {
         [z, F] = i.useState(null),
         H = (0, eu.I)(o ?? eo.tE, 500),
         K = i.useRef(null),
-        W = i.useRef(0),
-        U = i.useCallback(
+        U = i.useRef(0),
+        W = i.useCallback(
             function () {
                 let e =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { x: d.current.x, y: d.current.y };
@@ -263,9 +263,9 @@ function eh(e) {
             (e) => {
                 if (null == b) return;
                 let t = ej(b, e, G);
-                (x(e), S(t), U(), H?.());
+                (x(e), S(t), W(), H?.());
             },
-            [b, U, G, H],
+            [b, W, G, H],
         ),
         $ = i.useCallback(() => {
             if (null == h.current || null == b) return;
@@ -273,11 +273,11 @@ function eh(e) {
                 t = b.height,
                 l = b.width,
                 n = ej({ width: t, height: l }, j, G);
-            (p(e), N({ width: t, height: l }), S(n), U(), H?.());
-        }, [b, A, U, j, G, H]),
+            (p(e), N({ width: t, height: l }), S(n), W(), H?.());
+        }, [b, A, W, j, G, H]),
         B = i.useCallback(() => {
-            null != h.current && (v((e) => !e), U(), H?.());
-        }, [h, U, H]),
+            null != h.current && (v((e) => !e), W(), H?.());
+        }, [h, W, H]),
         J = i.useCallback(() => {
             if (null == b) return {};
             let { height: e, width: t } = ef(
@@ -309,9 +309,9 @@ function eh(e) {
             let { x: t, y: l } = d.current;
             _ &&
                 (e.clientX !== t || e.clientY !== l) &&
-                (U({ x: (t = e.clientX - y.x), y: (l = e.clientY - y.y) }), H?.());
+                (W({ x: (t = e.clientX - y.x), y: (l = e.clientY - y.y) }), H?.());
         },
-        [_, y, U, H],
+        [_, y, W, H],
     );
     i.useEffect(() => {
         if (_) return (window.addEventListener("mousemove", X), () => window.removeEventListener("mousemove", X));
@@ -353,7 +353,7 @@ function eh(e) {
                             j,
                         ),
                         { result: r, cancelFn: s } = await (0, ec.ny)(t);
-                    ((Z.current = s), (e = await r));
+                    ((Z.current = s), (e = (await r).imageUri));
                 } catch (e) {
                     (em.error("Error cropping animated image", e), (r = D.j.ANIMATED_CROPPING));
                 } finally {
@@ -386,8 +386,8 @@ function eh(e) {
                 t = h.current.naturalHeight;
             (N({ width: e, height: t }), p(0), v(!1));
             let l = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-            (x(l), F(l), (W.current += 1), S(ej({ width: e, height: t }, l, G)), U({ x: 0, y: 0 }));
-        }, [h, G, U]),
+            (x(l), F(l), (U.current += 1), S(ej({ width: e, height: t }, l, G)), W({ x: 0, y: 0 }));
+        }, [h, G, W]),
         ex = i.useCallback(() => {
             eh();
         }, [eh]);
@@ -509,7 +509,7 @@ function eh(e) {
                                                   hideBubble: !0,
                                                   "aria-label": T.intl.string(T.t["2hPcVJ"]),
                                               },
-                                              W.current,
+                                              U.current,
                                           ),
                                       (0, n.jsx)(el.m, {
                                           text: T.intl.string(T.t.Ch32tT),
@@ -657,7 +657,7 @@ let eb = new A.A("EmojiStudio"),
                     })),
                         y.X({ emojiId: t.id, userImage: { ...P } }));
                 } catch (e) {
-                    (X(!1), et(U(e)), eb.error("Failed to upload emoji.", e));
+                    (X(!1), et(W(e)), eb.error("Failed to upload emoji.", e));
                     return;
                 }
                 if (null != A)
@@ -667,7 +667,7 @@ let eb = new A.A("EmojiStudio"),
                         if (429 === e.status)
                             N.A.show({ title: T.intl.string(T.t.iufib1), body: T.intl.string(T.t.Whhv4w) });
                         else {
-                            (X(!1), et(U(e)), eb.error("Failed to delete emoji.", e));
+                            (X(!1), et(W(e)), eb.error("Failed to delete emoji.", e));
                             return;
                         }
                     }
@@ -843,7 +843,7 @@ let eb = new A.A("EmojiStudio"),
                                             onError: (e) => en(e),
                                             labelledBy: "guild-selector-label",
                                             isEmojiAnimated: eE,
-                                            errorMessage: null != el ? W(el) : void 0,
+                                            errorMessage: null != el ? U(el) : void 0,
                                         }),
                                     }),
                               (0, n.jsxs)("div", {
