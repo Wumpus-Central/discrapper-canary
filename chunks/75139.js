@@ -18,54 +18,48 @@ var i = n(477900),
     y = n(177953),
     I = n(683438),
     j = n(475825),
-    N = n(367513),
-    v = n(442433),
-    E = n(59520),
-    b = n(793574),
-    S = n(688810),
-    T = n(139286),
-    _ = n(43189),
-    R = n(480890),
-    O = n(812771),
-    L = n(58736),
-    P = n(267102),
-    M = n(342296),
+    v = n(367513),
+    N = n(442433),
+    E = n(793574),
+    b = n(688810),
+    S = n(139286),
+    T = n(43189),
+    _ = n(480890),
+    R = n(812771),
+    O = n(58736),
+    L = n(267102),
+    P = n(342296),
     w = n(46653),
-    U = n(696451),
-    D = n(576705),
-    V = n(996439),
-    G = n(63995),
-    k = n(113783),
-    B = n(597886),
-    F = n(776781),
-    z = n(105530),
-    H = n(224648),
-    W = n(374873);
+    M = n(696451),
+    U = n(113783),
+    D = n(776781),
+    V = n(105530),
+    G = n(224648),
+    k = n(374873);
 n(276831);
-var $ = n(806931),
-    Y = n(818348),
-    K = n(383899),
-    X = n(792996),
-    q = n(645265);
-let Z = l.memo(function (e) {
+var B = n(806931),
+    F = n(383899),
+    z = n(792996),
+    H = n(645265);
+let W = l.memo(function (e) {
     let { participant: t, channel: a, guildId: r, showRequestToSpeakActions: o = !1 } = e,
-        { user: C, userNick: y, blocked: I, ignored: j, rtsState: N } = t,
-        E = l.useRef(null),
-        _ = (0, P.Us)(),
-        { newestAnalyticsLocation: O } = (0, S.Ay)(b.A.AUDIENCE_TILE),
-        L = (0, d.bG)([U.Ay], () => U.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
-        D = N === z.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-    function V(e) {
-        ((0, T.x)({
+        { user: C, userNick: y, blocked: I, ignored: j, rtsState: v } = t,
+        T = l.useRef(null),
+        R = (0, L.Us)(),
+        { newestAnalyticsLocation: O } = (0, b.Ay)(E.A.AUDIENCE_TILE),
+        U = (0, d.bG)([M.Ay], () => M.Ay.getMember(r, C.id)?.premiumSince != null, [r, C.id]),
+        D = v === V.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+    function G(e) {
+        ((0, S.x)({
             type: c.ImpressionTypes.MENU,
             name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
             properties: {
                 location: "StageAudienceSidebar",
                 is_tile_owner: C.id === w.default.getId(),
-                tile_type: $.qs.USER,
+                tile_type: B.qs.USER,
             },
         }),
-            (0, v.L3)(
+            (0, N.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
@@ -103,17 +97,17 @@ let Z = l.memo(function (e) {
                             showMediaItems: !0,
                             showStageChannelItems: !0,
                             showChatItems: !1,
-                            onInteraction: (0, R.s)("GuildChannelUserContextMenu", O, {
+                            onInteraction: (0, _.s)("GuildChannelUserContextMenu", O, {
                                 targetUserId: C.id,
-                                tileType: $.qs.USER,
+                                tileType: B.qs.USER,
                             }),
                         });
                 },
-                { context: _ },
+                { context: R },
             ));
     }
-    return (0, i.jsx)(M.A, {
-        targetElementRef: E,
+    return (0, i.jsx)(P.A, {
+        targetElementRef: T,
         user: C,
         guildId: r,
         channelId: a.id,
@@ -122,29 +116,29 @@ let Z = l.memo(function (e) {
         clickTrap: !0,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: q.Z8,
+                className: H.Z8,
                 children: [
                     (0, i.jsxs)(h.D, {
-                        innerRef: E,
-                        className: q.VU,
-                        onContextMenu: V,
+                        innerRef: T,
+                        className: H.VU,
+                        onContextMenu: G,
                         ...e,
                         children: [
                             (0, i.jsx)(p.eu, {
                                 src: C.getAvatarURL(r, 32, !1),
                                 size: m._3.SIZE_32,
-                                className: s()(q.e$, { [q.zj]: I || j }),
+                                className: s()(H.e$, { [H.zj]: I || j }),
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsx)(A.E, {
-                                className: q.wR,
+                                className: H.wR,
                                 variant: "body-sm/medium",
                                 color: "text-strong",
                                 children: y,
                             }),
                             I ? (0, i.jsx)(f.DenyIcon, { size: "xs", color: u.A.colors.TEXT_FEEDBACK_CRITICAL }) : null,
                             j ? (0, i.jsx)(g.EyeSlashIcon, { size: "xs", color: u.A.colors.ICON_MUTED }) : null,
-                            L
+                            U
                                 ? (0, i.jsx)(x.BoostGemIcon, {
                                       size: "xs",
                                       color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
@@ -152,7 +146,7 @@ let Z = l.memo(function (e) {
                                 : null,
                         ],
                     }),
-                    o ? (0, i.jsx)(W.s6, { channel: a, userId: C.id, awaitingUserAck: D }) : null,
+                    o ? (0, i.jsx)(k.s6, { channel: a, userId: C.id, awaitingUserAck: D }) : null,
                 ],
             }),
     });
@@ -162,81 +156,74 @@ n.d(
     {},
     {
         A: function (e) {
-            var t;
-            let n,
-                a,
-                { channel: s, guildId: r, maxWidth: c } = e,
-                u = (0, F.Ni)(s.id),
-                h = (0, d.bG)([D.A], () => D.A.can(Y.xB.MANAGE_CHANNELS, s) || D.A.can(Y.xB.MANAGE_ROLES, s)),
-                p = (0, k.J2)(s.id),
-                m =
-                    ((t = s.id),
-                    (n = (0, d.bG)([G.A], () => [t, G.A.getParticipantsVersion(t)], [t], V.D)),
-                    (a = l.useMemo(() => [...G.A.getMutableParticipants(n[0], B.ip.AUDIENCE)], [n])),
-                    (0, E.J)(a, (0, H.Uo)(t))),
-                [f, g] = l.useState(""),
-                x = l.useDeferredValue(f),
-                v = u ? x.trim() : "",
-                b = "" !== v,
-                S = l.useMemo(() => {
-                    if ("" === v) return m;
-                    let e = v.toLowerCase();
-                    return m.filter(
+            let { channel: t, guildId: n, maxWidth: a } = e,
+                s = (0, D.Ni)(t.id),
+                r = (0, D.Oq)(t),
+                c = (0, U.J2)(t.id),
+                d = (0, G.wB)(t.id),
+                [u, h] = l.useState(""),
+                p = l.useDeferredValue(u),
+                m = s ? p.trim() : "",
+                f = "" !== m,
+                g = l.useMemo(() => {
+                    if ("" === m) return d;
+                    let e = m.toLowerCase();
+                    return d.filter(
                         (t) =>
                             o()(e, t.user.username.toLowerCase()) ||
                             (null != t.user.globalName && o()(e, t.user.globalName.toLowerCase())) ||
                             o()(e, t.userNick.toLowerCase()),
                     );
-                }, [m, v]),
-                T = [p.length, Math.max(1, S.length)],
-                R = (0, i.jsx)(L.Ay.Icon, {
+                }, [d, m]),
+                x = [c.length, Math.max(1, g.length)],
+                N = (0, i.jsx)(O.Ay.Icon, {
                     icon: C.XSmallIcon,
-                    tooltip: X.intl.string(X.t.cpT0Cq),
-                    onClick: () => N.A.updateStageAudienceSidebarOpen(s.id, !1),
+                    tooltip: z.intl.string(z.t.cpT0Cq),
+                    onClick: () => v.A.updateStageAudienceSidebarOpen(t.id, !1),
                 });
-            return (0, i.jsx)(O.A, {
-                sidebarType: O.X.StageAudienceSidebar,
-                maxWidth: c,
+            return (0, i.jsx)(R.A, {
+                sidebarType: R.X.StageAudienceSidebar,
+                maxWidth: a,
                 minWidth: 240,
-                floatingLayer: _.Ay,
+                floatingLayer: T.Ay,
                 children: (0, i.jsxs)("div", {
-                    className: q.kL,
+                    className: H.kL,
                     children: [
-                        (0, i.jsxs)(L.Ay, {
-                            toolbar: R,
-                            "aria-label": X.intl.string(X.t.suRApw),
+                        (0, i.jsxs)(O.Ay, {
+                            toolbar: N,
+                            "aria-label": z.intl.string(z.t.suRApw),
                             children: [
-                                (0, i.jsx)(L.Ay.ChannelIcon, {
+                                (0, i.jsx)(O.Ay.ChannelIcon, {
                                     icon: y.GroupIcon,
-                                    "aria-label": X.intl.string(X.t.suRApw),
+                                    "aria-label": z.intl.string(z.t.suRApw),
                                 }),
-                                (0, i.jsx)(L.Ay.Title, { children: X.intl.string(X.t.suRApw) }),
+                                (0, i.jsx)(O.Ay.Title, { children: z.intl.string(z.t.suRApw) }),
                             ],
                         }),
-                        h || u
+                        r || s
                             ? (0, i.jsxs)("div", {
-                                  className: q.ne,
+                                  className: H.ne,
                                   children: [
-                                      h ? (0, i.jsx)(W.d1, { useVerboseLabel: !0, channel: s }) : null,
-                                      u
+                                      r ? (0, i.jsx)(k.d1, { useVerboseLabel: !0, channel: t }) : null,
+                                      s
                                           ? (0, i.jsx)(I.I, {
-                                                query: f,
-                                                onChange: g,
-                                                onClear: () => g(""),
-                                                "aria-label": X.intl.string(K.default.sFXd49),
-                                                placeholder: X.intl.string(K.default.sFXd49),
+                                                query: u,
+                                                onChange: h,
+                                                onClear: () => h(""),
+                                                "aria-label": z.intl.string(F.default.sFXd49),
+                                                placeholder: z.intl.string(F.default.sFXd49),
                                             })
                                           : null,
                                   ],
                               })
                             : null,
                         (0, i.jsx)(j.OZ, {
-                            className: q.p_,
-                            sections: T,
+                            className: H.p_,
+                            sections: x,
                             sectionHeight: function (e) {
                                 switch (e) {
                                     case 0:
-                                        return 40 * (p.length > 0);
+                                        return 40 * (c.length > 0);
                                     case 1:
                                         return 40;
                                 }
@@ -247,51 +234,51 @@ n.d(
                                     case 0:
                                         return 40;
                                     case 1:
-                                        return S.length > 0 ? 40 : 88;
+                                        return g.length > 0 ? 40 : 88;
                                 }
                                 return 0;
                             },
                             renderRow: function (e) {
-                                let { section: t, row: n } = e;
-                                switch (t) {
+                                let { section: l, row: a } = e;
+                                switch (l) {
                                     case 0: {
-                                        let e = p[n];
+                                        let e = c[a];
                                         return (0, i.jsx)(
-                                            Z,
-                                            { participant: e, channel: s, guildId: r, showRequestToSpeakActions: u },
+                                            W,
+                                            { participant: e, channel: t, guildId: n, showRequestToSpeakActions: s },
                                             `request-${e.id}`,
                                         );
                                     }
                                     case 1: {
-                                        if (0 === S.length)
+                                        if (0 === g.length)
                                             return (0, i.jsxs)(
                                                 "div",
                                                 {
-                                                    className: q.p$,
+                                                    className: H.p$,
                                                     children: [
                                                         (0, i.jsx)(A.E, {
                                                             variant: "body-lg/semibold",
                                                             color: "text-strong",
-                                                            children: b
-                                                                ? X.intl.string(K.default.Hn6jKn)
-                                                                : X.intl.string(X.t.FsP3VU),
+                                                            children: f
+                                                                ? z.intl.string(F.default.Hn6jKn)
+                                                                : z.intl.string(z.t.FsP3VU),
                                                         }),
                                                         (0, i.jsx)(A.E, {
-                                                            className: q.XG,
+                                                            className: H.XG,
                                                             variant: "body-sm/normal",
                                                             color: "text-default",
-                                                            children: b
-                                                                ? X.intl.format(K.default["0lYpuQ"], { query: v })
-                                                                : X.intl.string(K.default.eo2IxJ),
+                                                            children: f
+                                                                ? z.intl.format(F.default["0lYpuQ"], { query: m })
+                                                                : z.intl.string(F.default.eo2IxJ),
                                                         }),
                                                     ],
                                                 },
                                                 "audience-empty",
                                             );
-                                        let e = S[n];
+                                        let e = g[a];
                                         return (0, i.jsx)(
-                                            Z,
-                                            { participant: e, channel: s, guildId: r },
+                                            W,
+                                            { participant: e, channel: t, guildId: n },
                                             `audience-${e.id}`,
                                         );
                                     }
@@ -302,15 +289,15 @@ n.d(
                                 let { section: t } = e;
                                 switch (t) {
                                     case 0:
-                                        if (0 === p.length) break;
+                                        if (0 === c.length) break;
                                         return (0, i.jsx)(
                                             A.E,
                                             {
-                                                className: q.bV,
+                                                className: H.bV,
                                                 variant: "body-xs/semibold",
                                                 color: "text-muted",
-                                                children: X.intl.formatToPlainString(X.t["5z7q5a"], {
-                                                    numHands: p.length,
+                                                children: z.intl.formatToPlainString(z.t["5z7q5a"], {
+                                                    numHands: c.length,
                                                 }),
                                             },
                                             "requests-section",
@@ -319,16 +306,16 @@ n.d(
                                         return (0, i.jsx)(
                                             A.E,
                                             {
-                                                className: q.bV,
+                                                className: H.bV,
                                                 variant: "body-xs/semibold",
                                                 color: "text-muted",
-                                                children: b
-                                                    ? X.intl.formatToPlainString(K.default.C6rvri, {
-                                                          filteredSize: S.length,
-                                                          totalSize: m.length,
+                                                children: f
+                                                    ? z.intl.formatToPlainString(F.default.C6rvri, {
+                                                          filteredSize: g.length,
+                                                          totalSize: d.length,
                                                       })
-                                                    : X.intl.formatToPlainString(X.t.vUrsZ9, {
-                                                          audienceSize: m.length,
+                                                    : z.intl.formatToPlainString(z.t.vUrsZ9, {
+                                                          audienceSize: d.length,
                                                       }),
                                             },
                                             "audience-section",

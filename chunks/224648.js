@@ -8,6 +8,16 @@ var i = t(582128),
     c = t(63995),
     u = t(113783),
     d = t(597886);
+function A(e) {
+    let n = (0, u.zy)(e, d.ip.AUDIENCE),
+        [t, l] = i.useState(!1);
+    return (
+        i.useEffect(() => {
+            n > 100 ? l(!0) : n < 75 && l(!1);
+        }, [n]),
+        5e3 * !!t
+    );
+}
 t.d(
     n,
     {},
@@ -50,15 +60,11 @@ t.d(
                 [x[3 * !!h], x[1], f[2]],
             ];
         },
-        Uo: function (e) {
-            let n = (0, u.zy)(e, d.ip.AUDIENCE),
-                [t, l] = i.useState(!1);
-            return (
-                i.useEffect(() => {
-                    n > 100 ? l(!0) : n < 75 && l(!1);
-                }, [n]),
-                5e3 * !!t
-            );
+        Uo: A,
+        wB: function (e) {
+            let n = (0, s.bG)([c.A], () => [e, c.A.getParticipantsVersion(e)], [e], o.D),
+                t = i.useMemo(() => [...c.A.getMutableParticipants(n[0], d.ip.AUDIENCE)], [n]);
+            return (0, a.J)(t, A(e));
         },
     },
 );

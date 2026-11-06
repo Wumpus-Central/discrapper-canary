@@ -20,6 +20,9 @@ n.d(
         Ni: function (e) {
             return (0, r.bG)([s.A, o.A], () => null != e && o.A.can(_.xBc.MUTE_MEMBERS, s.A.getChannel(e)), [e]);
         },
+        Oq: function (e) {
+            return (0, r.bG)([o.A], () => o.A.can(_.xBc.MANAGE_CHANNELS, e) || o.A.can(_.xBc.MANAGE_ROLES, e), [e]);
+        },
         pC: function (e) {
             return (
                 null != e &&
