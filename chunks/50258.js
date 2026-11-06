@@ -39,7 +39,14 @@ class C extends a.Ay.PersistedStore {
         t)) {
             let e = N(n),
                 i = t[n];
-            h[n] = { hashedName: e, variantId: i, isOverride: !0, exposureTrackingEnabled: !1, useAsEligibility: !1 };
+            h[n] = {
+                hashedName: e,
+                variantId: i,
+                isOverride: !0,
+                isAppLaunch: !1,
+                exposureTrackingEnabled: !1,
+                useAsEligibility: !1,
+            };
         }
         g = this.loadTrackedExposures();
     }
@@ -65,6 +72,7 @@ class C extends a.Ay.PersistedStore {
                                 variantId: i,
                                 trackedVariantId: d,
                                 isOverride: (s & o.fd.IsOverride) != 0,
+                                isAppLaunch: (s & o.fd.IsAppLaunch) != 0,
                                 revision: l,
                                 exposureTrackingEnabled: (s & o.fd.ExposureTrackingEnabled) != 0,
                                 useAsEligibility: (s & o.fd.UseAsEligibility) != 0,
@@ -85,6 +93,7 @@ class C extends a.Ay.PersistedStore {
                     variantId: i,
                     trackedVariantId: d,
                     isOverride: ((s ??= 0) & o.fd.IsOverride) != 0,
+                    isAppLaunch: (s & o.fd.IsAppLaunch) != 0,
                     revision: l,
                     exposureTrackingEnabled: (s & o.fd.ExposureTrackingEnabled) != 0,
                     useAsEligibility: (s & o.fd.UseAsEligibility) != 0,
@@ -94,7 +103,10 @@ class C extends a.Ay.PersistedStore {
         }
     }
     createOverride(e, t) {
-        ((A = { ...A, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
+        ((A = {
+            ...A,
+            [e]: { hashedName: N(e), variantId: t, isOverride: !0, isAppLaunch: !1, exposureTrackingEnabled: !1 },
+        }),
             this.trackExposureSuppression(e, "client_override"));
     }
     deleteOverride(e) {
@@ -102,7 +114,10 @@ class C extends a.Ay.PersistedStore {
         A = n;
     }
     createSessionOverride(e, t) {
-        f = { ...f, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
+        f = {
+            ...f,
+            [e]: { hashedName: N(e), variantId: t, isOverride: !0, isAppLaunch: !1, exposureTrackingEnabled: !1 },
+        };
     }
     deleteSessionOverride(e) {
         let { [e]: t, ...n } = f;
