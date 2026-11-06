@@ -1,6 +1,7 @@
 e.exports = {
     A4: "control_vDbele",
     aX: "back_vDbele",
+    eZ: "replay_vDbele",
     K2: "next_vDbele",
     GA: "labeled_vDbele",
     Bq: "filled_vDbele",
