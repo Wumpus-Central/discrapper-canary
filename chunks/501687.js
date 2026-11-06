@@ -40,8 +40,8 @@ let T = l.memo(function (e) {
         { source: n, masterSec: r, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: x } = e,
         T = l.useRef(null),
         [S, I] = l.useState(!1),
-        j = E(n, r),
-        N = r - n.startSec,
+        N = E(n, r),
+        j = r - n.startSec,
         R = r < n.startSec,
         M = Math.ceil(v(n, r)),
         O = (0, p.rB)(M),
@@ -50,18 +50,18 @@ let T = l.memo(function (e) {
     (l.useEffect(() => {
         let e = T.current;
         if (null != e) {
-            if (!j) return void e.pause();
-            if (Math.abs(e.currentTime - N) > 0.35)
+            if (!N) return void e.pause();
+            if (Math.abs(e.currentTime - j) > 0.35)
                 try {
-                    e.currentTime = N;
+                    e.currentTime = j;
                 } catch {}
             ((e.playbackRate = o), s ? e.play().catch(() => {}) : e.pause());
         }
-    }, [j, N, s, o, S]),
+    }, [N, j, s, o, S]),
         l.useEffect(() => (d?.(n.id, T.current), () => d?.(n.id, null)), [d, n.id]));
-    let w = c && !j && 0 !== M;
+    let w = c && !N && 0 !== M;
     return (
-        c && j
+        c && N
             ? (t = y.intl.formatToPlainString(_.default.zc1itm, { name: P }))
             : c && (t = y.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: P, time: O })),
         (0, i.jsxs)("div", {
@@ -116,7 +116,7 @@ let T = l.memo(function (e) {
 });
 var S = n(683063),
     I = n(599507);
-let j = l.memo(function (e) {
+let N = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: r, currentMasterTimeSec: s, onSelect: o } = e,
         d = t.owner?.name ?? n ?? y.intl.string(_.default["6XuC8e"]),
         m = E(t, s),
@@ -168,7 +168,7 @@ let j = l.memo(function (e) {
         ],
     });
 });
-var N = n(340710);
+var j = n(340710);
 function R(e) {
     let {
             ref: t,
@@ -201,7 +201,7 @@ function R(e) {
         ),
         [B, H] = l.useState(R.durationSec ?? 0),
         [V, W] = l.useState(R.id),
-        [z, K] = l.useState(0),
+        [K, z] = l.useState(0),
         [Y, q] = l.useState(!1),
         [Q, $] = l.useState(1),
         {
@@ -414,7 +414,7 @@ function R(e) {
             (ed.current = i),
             (ex.current = { ...ex.current, activeSource: n }),
             W(n.id),
-            K(i));
+            z(i));
     }
     function eE(e) {
         eC(R.id, e);
@@ -496,7 +496,7 @@ function R(e) {
                 },
                 seekTo: (e) => {
                     let t = o()(e, 0, ex.current.masterDurationSec);
-                    if ((K(t), E(ex.current.activeSource, t))) {
+                    if ((z(t), E(ex.current.activeSource, t))) {
                         ed.current = null;
                         let e = D.current;
                         (null != e && (e.currentTime = t - ex.current.activeSource.startSec),
@@ -521,7 +521,7 @@ function R(e) {
         ));
     let e_ = l.useRef(V);
     function ey(e) {
-        e.id !== ei.id && eC(e.id, z);
+        e.id !== ei.id && eC(e.id, K);
     }
     function eb(e) {
         er() || L.onCanPlay?.(e);
@@ -534,16 +534,16 @@ function R(e) {
             let e = ed.current;
             null == e || null != ec.current || E(ex.current.activeSource, e) || ex.current.revertToOriginal(e);
         }, [h]));
-    let eT = !E(ei, z);
+    let eT = !E(ei, K);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(c.D, {
                 onClick: L.onClick ?? void 0,
-                className: a()(N.dw, { [N.x2]: O }),
+                className: a()(j.dw, { [j.x2]: O }),
                 children: [
                     (0, i.jsxs)(T, {
                         source: ei,
-                        masterSec: z,
+                        masterSec: K,
                         isPlaying: Y,
                         playbackRate: Q,
                         isGridView: O,
@@ -551,7 +551,7 @@ function R(e) {
                             (0, i.jsxs)(m.A, {
                                 ...L,
                                 ref: F,
-                                className: a()(s, { [N._b]: eT, [N.l3]: O }),
+                                className: a()(s, { [j._b]: eT, [j.l3]: O }),
                                 poster: (0, f.s)(ei.poster ?? r, ei, U, G),
                                 onCanPlay: eb,
                                 onCanPlayThrough: eb,
@@ -560,7 +560,7 @@ function R(e) {
                                     if (null != t && null == ec.current && null == ed.current) {
                                         $(t.playbackRate);
                                         let e = Math.max(0, ei.startSec + t.currentTime);
-                                        (K(e), ei.id !== R.id && e >= ei.startSec + ei.durationSec - 0.12 && eE(e));
+                                        (z(e), ei.id !== R.id && e >= ei.startSec + ei.durationSec - 0.12 && eE(e));
                                     }
                                     g?.(e);
                                 },
@@ -595,7 +595,7 @@ function R(e) {
                                     ei.id !== R.id ? eE(ei.startSec + (D.current?.currentTime ?? 0)) : v?.(e);
                                 },
                                 onPlay: function (e) {
-                                    (q(!0), eo(z), b?.(e));
+                                    (q(!0), eo(K), b?.(e));
                                 },
                                 onPause: function (e) {
                                     (q(!1), eu(), S?.(e));
@@ -604,7 +604,7 @@ function R(e) {
                             }),
                             (0, i.jsx)("canvas", {
                                 ref: X,
-                                className: N.bQ,
+                                className: j.bQ,
                                 style: { objectFit: Z },
                                 hidden: J,
                                 "aria-hidden": !0,
@@ -617,7 +617,7 @@ function R(e) {
                                 T,
                                 {
                                     source: e,
-                                    masterSec: z,
+                                    masterSec: K,
                                     isPlaying: Y,
                                     playbackRate: Q,
                                     isGridView: !0,
@@ -631,37 +631,37 @@ function R(e) {
             en.length > 1 &&
                 !k &&
                 (0, i.jsxs)("div", {
-                    className: N.c2,
+                    className: j.c2,
                     "data-testid": "discord-web-multi-video-player-povs",
                     children: [
                         !O &&
                             en.map((e) =>
                                 (0, i.jsx)(
-                                    j,
+                                    N,
                                     {
                                         source: e,
                                         label:
                                             e.id === R.id ? (e.label ?? y.intl.string(_.default["9tdsDk"])) : e.label,
                                         isActive: e.id === ei.id,
                                         isOriginal: e.id === R.id,
-                                        currentMasterTimeSec: z,
+                                        currentMasterTimeSec: K,
                                         onSelect: ey,
                                     },
                                     e.id,
                                 ),
                             ),
                         (0, i.jsx)(c.D, {
-                            className: N.LI,
+                            className: j.LI,
                             "aria-label": y.intl.string(_.default.lykjkX),
                             "aria-pressed": !1,
                             onClick: function (e) {
                                 if ((e.stopPropagation(), O)) {
                                     (er() && es(!0), P(!1));
                                     let e = en.find((e) => e.id === em.current);
-                                    eC(null != e && E(e, z) ? e.id : R.id, z);
+                                    eC(null != e && E(e, K) ? e.id : R.id, K);
                                     return;
                                 }
-                                ((em.current = ei.id), P(!0), ea(z, !0), eC(R.id, z));
+                                ((em.current = ei.id), P(!0), ea(K, !0), eC(R.id, K));
                             },
                             "data-testid": "discord-web-multi-video-player-grid-toggle",
                             children: (0, i.jsx)(d.GridSquareIcon, { size: "xs", color: "currentColor" }),

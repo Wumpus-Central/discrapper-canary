@@ -33,22 +33,22 @@ function g(e) {
         M = r.useCallback(() => {
             D(!1);
         }, []),
-        w = "username" === t,
-        T = null != u && null != u.primaryColor && null != u.secondaryColor,
-        x = w && T,
+        T = "username" === t,
+        w = null != u && null != u.primaryColor && null != u.secondaryColor,
+        I = T && w,
         {
-            gradientStyle: I,
+            gradientStyle: x,
             gradientClassname: G,
-            gradientGlowClassname: N,
+            gradientGlowClassname: H,
         } = (0, f.v5)({ colorStrings: u, roleStyle: "username", animateGradient: A || y || b?.animate }),
-        H = (0, f.CR)(n),
-        C = { className: a()(E.UU, m, S, { [E.Xh]: w, [G]: x }), children: H },
-        L = { className: a()(E.lD, N, S), children: n },
+        N = (0, f.CR)(n),
+        C = { className: a()(E.UU, m, S, { [E.Xh]: T, [G]: I }), children: N },
+        L = { className: a()(E.lD, H, S), children: n },
         v =
             "dot" === t
                 ? (0, l.jsx)(_.W, {
                       color: i,
-                      colors: T ? u : null,
+                      colors: w ? u : null,
                       name: o,
                       className: "left" === c ? E.Hf : E.WN,
                       hoverOverride: A || y || b?.animate,
@@ -62,12 +62,12 @@ function g(e) {
             "left" === c && v,
             (0, l.jsxs)("span", {
                 className: a()(E.VW, { [E.mO]: h }),
-                style: { color: w && !T && null != i ? i : void 0, ...(x ? I : {}) },
+                style: { color: T && !w && null != i ? i : void 0, ...(I ? x : {}) },
                 children: [
                     null != p
                         ? (0, l.jsx)(s.E, { tag: "span", color: "currentColor", variant: p, ...C })
                         : (0, l.jsx)("span", { ...C }),
-                    x &&
+                    I &&
                         (null != p
                             ? (0, l.jsx)(s.E, {
                                   tag: "span",

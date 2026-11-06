@@ -13,7 +13,7 @@ n.d(
     {},
     {
         b: function (a) {
-            let { onClose: e, img: n, title: u, body: x, content: N } = a;
+            let { onClose: e, img: n, title: u, body: N, content: x } = a;
             return (0, t.jsxs)(o.A, {
                 children: [
                     (0, t.jsxs)(r.rQ, {
@@ -36,9 +36,9 @@ n.d(
                                 tag: "p",
                                 variant: "body-md/normal",
                                 color: "text-default",
-                                children: x,
+                                children: N,
                             }),
-                            N,
+                            x,
                         ],
                     }),
                     (0, t.jsx)(r.jl, {

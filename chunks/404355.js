@@ -8,8 +8,8 @@ t.d(
     {
         A: function (n) {
             let { iconComponent: e, ...t } = n,
-                { Component: o, events: a } = (0, l.O)();
-            return (0, i.jsx)(s.l, { isTrayButton: !1, color: "disconnect", iconComponent: e ?? o, ...a, ...t });
+                { Component: a, events: o } = (0, l.O)();
+            return (0, i.jsx)(s.l, { isTrayButton: !1, color: "disconnect", iconComponent: e ?? a, ...o, ...t });
         },
     },
 );

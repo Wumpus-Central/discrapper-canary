@@ -1,3 +1,3 @@
-var s,
-    c = (((s = {}).MOBILE = "mobile"), (s.DESKTOP = "desktop"), (s.WEB = "web"), (s.DEVICE_CODE = "device_code"), s);
-p.d(d, {}, { I: c });
+var i,
+    a = (((i = {}).MOBILE = "mobile"), (i.DESKTOP = "desktop"), (i.WEB = "web"), (i.DEVICE_CODE = "device_code"), i);
+r.d(t, {}, { I: a });

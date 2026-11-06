@@ -29,8 +29,8 @@ n.d(
                     authorizing: m.A.isFetchingAuthorization,
                 })),
                 [x, I] = l.useState(T ?? ""),
-                [_, N] = l.useState("8080"),
-                [b, C] = l.useState("localhost"),
+                [_, b] = l.useState("8080"),
+                [N, C] = l.useState("localhost"),
                 y = S.test(x);
             l.useEffect(() => d.SH, []);
             let v = null != T && T === x,
@@ -48,20 +48,20 @@ n.d(
                                   case "proxy":
                                       return (0, c.Ay)(n);
                               }
-                          })(b, _, x);
+                          })(N, _, x);
                           null != (await d.q1(x, e)) && t();
                       },
                 O = l.useMemo(
                     () => [
                         {
                             loading: f,
-                            disabled: !y || 0 === x.length || ("localhost" === b && 0 === _.length),
+                            disabled: !y || 0 === x.length || ("localhost" === N && 0 === _.length),
                             variant: v ? "critical-primary" : "active",
                             text: v ? A.intl.string(A.t.d6TR3I) : A.intl.string(A.t.qwuK5I),
                             onClick: j,
                         },
                     ],
-                    [x.length, f, v, y, _.length, j, b],
+                    [x.length, f, v, y, _.length, j, N],
                 );
             return (0, i.jsxs)(r.a, {
                 title: A.intl.string(A.t.f8fzky),
@@ -100,7 +100,7 @@ n.d(
                                     selectionMode: "single",
                                     label: A.intl.string(A.t["/GTqXG"]),
                                     disabled: !y || "" === x,
-                                    value: b,
+                                    value: N,
                                     options: [
                                         { value: "localhost", label: A.intl.string(A.t["+Y9Y6r"]), id: "localhost" },
                                         { value: "proxy", label: A.intl.string(A.t.uaksyW), id: "proxy" },
@@ -111,7 +111,7 @@ n.d(
                                     placeholder: "URL Origin Type",
                                 }),
                             }),
-                            "localhost" !== b
+                            "localhost" !== N
                                 ? null
                                 : (0, i.jsx)("div", {
                                       className: E.I,
@@ -120,7 +120,7 @@ n.d(
                                           label: A.intl.string(A.t.fF4zxq),
                                           value: _,
                                           maxLength: 5,
-                                          onChange: (e) => N(e),
+                                          onChange: (e) => b(e),
                                           disabled: f,
                                       }),
                                   }),

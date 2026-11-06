@@ -25,11 +25,11 @@ var p = n(120692),
     T = n(920134),
     S = n(73153),
     I = n(95701),
-    j = n(596344),
-    N = n(652215);
-let R = (0, u.UT)(j.A, {
+    N = n(596344),
+    j = n(652215);
+let R = (0, u.UT)(N.A, {
     getQueryId: (e, t, n, i, l) => (null != n && null != t && null != i && l ? e.id : null),
-    get: (e) => (j.A.isReady(e.id) ? j.A.getMessages(e.id) : null),
+    get: (e) => (N.A.isReady(e.id) ? N.A.getMessages(e.id) : null),
     load: async (e, t, n, i) => {
         if (null == n || null == t) return;
         let l = e.id;
@@ -39,7 +39,7 @@ let R = (0, u.UT)(j.A, {
                 channel: new I.Lt({
                     id: l,
                     parent_id: t,
-                    type: N.rbe.MEDIA_THREAD,
+                    type: j.rbe.MEDIA_THREAD,
                     name: e.title ?? "",
                     guild_id: n ?? "null",
                     ownerId: i,
@@ -48,7 +48,7 @@ let R = (0, u.UT)(j.A, {
                 messageId: e.id,
             }));
     },
-    getIsLoading: (e) => j.A.isLoadingMessages(e.id),
+    getIsLoading: (e) => N.A.isLoadingMessages(e.id),
 });
 var M = n(451909),
     O = n(118517),
@@ -72,7 +72,7 @@ function W(e, t) {
     let n = t?.current?.currentTime;
     return null == n ? { attachment_id: e, timestamp: 0 } : { attachment_id: e, timestamp: Math.floor(1e3 * n) };
 }
-function z(e) {
+function K(e) {
     let {
             controlBarAnimationSpring: t,
             attachment: n,
@@ -85,13 +85,13 @@ function z(e) {
         m = n.id,
         S = (0, b.QZ)(o),
         I = null != d && d < 460,
-        z = S.slice(0, I ? 2 : 3),
-        Y = (0, u.bG)([j.A], () => j.A.getMessage(r, s), [r, s]),
+        K = S.slice(0, I ? 2 : 3),
+        Y = (0, u.bG)([N.A], () => N.A.getMessage(r, s), [r, s]),
         q = (0, u.bG)([L.A], () => L.A.getChannel(r), [r]),
         Q = (0, u.bG)([L.A], () => L.A.getChannel(m), [m]),
         { enableMediaComments: $ } = U.useConfig({ location: "ClipEmbedMediaMentionBar" }),
         { activeLayer: X, videoRef: Z } = (0, f.X$)(),
-        J = (0, h.Lt)(n.flags ?? 0, N.sbO.HAS_TIMELINE_COMMENTS),
+        J = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
         { data: ee } = R(n, r, o, Y?.author.id, $ && J),
         et = l.useRef(null);
     function en(e, t) {
@@ -132,7 +132,7 @@ function z(e) {
         children: [
             (0, i.jsx)("div", {
                 className: V.gm,
-                children: z.map((e) =>
+                children: K.map((e) =>
                     (0, i.jsx)(
                         g.u,
                         {
@@ -155,7 +155,7 @@ function z(e) {
                     ),
                 ),
             }),
-            (0, i.jsx)(K, {}),
+            (0, i.jsx)(z, {}),
             (0, i.jsx)(A.Y, {
                 layerContext: X,
                 targetElementRef: et,
@@ -206,7 +206,7 @@ function z(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: W(m, Z),
                         }),
-                            D._.dispatch(N.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            D._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
                     children: (0, i.jsx)(E.ArrowAngleLeftUpIcon, { size: "sm" }),
                 }),
@@ -215,7 +215,7 @@ function z(e) {
                 !I &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(K, {}),
+                        (0, i.jsx)(z, {}),
                         (0, i.jsx)(x.D, {
                             className: V.jC,
                             tag: "span",
@@ -235,7 +235,7 @@ function z(e) {
         ],
     });
 }
-function K() {
+function z() {
     return (0, i.jsx)("div", { className: V.yF });
 }
 var Y = n(555115),
@@ -262,9 +262,9 @@ function el(e) {
             hidden: c = !1,
         } = e,
         { enableMediaComments: d } = U.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
-        m = (0, h.Lt)(n.flags ?? 0, N.sbO.HAS_TIMELINE_COMMENTS),
+        m = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
         { isActive: g, isControlBarExpanded: A } = (0, f.X$)(),
-        C = (0, u.bG)([j.A], () => j.A.getMessage(s, o), [s, o]),
+        C = (0, u.bG)([N.A], () => N.A.getMessage(s, o), [s, o]),
         { data: E } = R(n, s, a, C?.author.id, d && m && g);
     return (l.useEffect(() => {
         g && R.refetch(n, s, a, C?.author.id, d && m && g);
@@ -339,7 +339,7 @@ function ea(e) {
         null == t)
     )
         return null;
-    let j = (0, i.jsx)(x.D, {
+    let N = (0, i.jsx)(x.D, {
         className: en.xL,
         style: { left: a, display: r ? "none" : "block" },
         inert: r,
@@ -374,7 +374,7 @@ function ea(e) {
         }),
     });
     return null == u
-        ? j
+        ? N
         : (0, i.jsx)(g.u, {
               positionKey: `${m}`,
               forceOpen: h && null == s && !v,
@@ -386,7 +386,7 @@ function ea(e) {
               assetSize: 16,
               lineClamp: 1,
               body: u,
-              children: j,
+              children: N,
           });
 }
 var es = n(478531),
@@ -495,13 +495,13 @@ function e_(e) {
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([k.default, j.A], () => {
-            let e = j.A.getMessage(n, r);
+        f = (0, u.bG)([k.default, N.A], () => {
+            let e = N.A.getMessage(n, r);
             return (
                 null != e &&
                 e.author?.id !== k.default.getId() &&
                 (null == e.messageReference ||
-                    j.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
+                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
         p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
@@ -554,8 +554,8 @@ function eb(e) {
             setIsGridView: S,
             isGridView: I,
         } = e,
-        j = (0, u.bG)([m.A], () => m.A.theme),
-        { activeLayer: N } = (0, f.X$)(),
+        N = (0, u.bG)([m.A], () => m.A.theme),
+        { activeLayer: j } = (0, f.X$)(),
         { ref: R, width: M } = (0, s.Ay)();
     return (0, i.jsx)(c.N, {
         theme: o.NJ.ONYX,
@@ -573,7 +573,7 @@ function eb(e) {
                         playerState: t,
                         isControlBarExpanded: l,
                         isFullScreen: A,
-                        activeLayer: N,
+                        activeLayer: j,
                         showTextContent: E,
                         isGridView: I,
                         setIsGridView: S,
@@ -598,8 +598,8 @@ function eb(e) {
                         null != x &&
                         null != v &&
                         (0, i.jsx)(d.NA.Provider, {
-                            value: j,
-                            children: (0, i.jsx)(z, {
+                            value: N,
+                            children: (0, i.jsx)(K, {
                                 controlBarAnimationSpring: n,
                                 attachment: h,
                                 channelId: x,

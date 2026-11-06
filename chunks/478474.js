@@ -9,13 +9,13 @@ var r = n(935462),
     d = n(936525),
     m = n(792996),
     u = n(844768),
-    x = n(332633);
+    N = n(332633);
 n.d(
     e,
     {},
     {
         s: function (a) {
-            let { onContinue: e, onClose: n, title: N, body: h } = a;
+            let { onContinue: e, onClose: n, title: x, body: h } = a;
             return (0, t.jsxs)(d.A, {
                 children: [
                     (0, t.jsxs)(r.rQ, {
@@ -24,8 +24,8 @@ n.d(
                         className: u.wx,
                         separator: !1,
                         children: [
-                            (0, t.jsx)("img", { src: x, className: u.bm, width: "254", height: "127", alt: "" }),
-                            (0, t.jsx)(s.D, { className: u.DD, variant: "heading-xl/semibold", children: N }),
+                            (0, t.jsx)("img", { src: N, className: u.bm, width: "254", height: "127", alt: "" }),
+                            (0, t.jsx)(s.D, { className: u.DD, variant: "heading-xl/semibold", children: x }),
                             null != n && (0, t.jsx)(r.s_, { "data-migration-pending": !0, className: u.b, onClick: n }),
                         ],
                     }),

@@ -24,18 +24,18 @@ var i = n(477900),
     T = n(534514),
     S = n(834730),
     I = n(241003),
-    j = n(975571),
-    N = n(652215),
+    N = n(975571),
+    j = n(652215),
     R = n(792996),
     M = n(690807);
-let O = j.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
+let O = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
 class P extends l.PureComponent {
-    static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
+    static defaultProps = { types: [j.Fz7.CAPTCHA], onCaptchaVerify: j.tEg, onLogout: j.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === N.Fz7.CAPTCHA
+                e === j.Fz7.CAPTCHA
                     ? (0, i.jsx)(I.A, { onVerify: l, theme: n }, t)
                     : (0, i.jsx)(y.$, { onClick: () => this.handleClick(e), text: E.A.getButtonTitle(e) }, e),
             ),
@@ -112,7 +112,7 @@ class P extends l.PureComponent {
                                 (0, i.jsx)(S.E, {
                                     variant: "body-sm/semibold",
                                     className: M.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: j.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: v()(M.qr, M.mf), children: "\u2022" }),
                                 (0, i.jsx)(S.E, {
@@ -171,8 +171,8 @@ function D() {
             [],
         ),
         l.useEffect(() => {
-            y?.[0] === N.Fz7.PHONE &&
-                x?.[0] === N.Fz7.EMAIL &&
+            y?.[0] === j.Fz7.PHONE &&
+                x?.[0] === j.Fz7.EMAIL &&
                 (0, o.mM)(
                     async () => {
                         let { Alert: e } = await Promise.all([n.e(844331), n.e(542369)]).then(n.bind(n, 291064));
@@ -192,7 +192,7 @@ function D() {
             captchaKey: v,
             onCaptchaVerify: function (e) {
                 s.Bo.post({
-                    url: N.Rsh.CAPTCHA,
+                    url: j.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
@@ -202,7 +202,7 @@ function D() {
             },
             theme: t,
             onClick: (e) => {
-                e === N.Fz7.EMAIL_OR_PHONE || e === N.Fz7.EMAIL || e === N.Fz7.REVERIFY_EMAIL
+                e === j.Fz7.EMAIL_OR_PHONE || e === j.Fz7.EMAIL || e === j.Fz7.REVERIFY_EMAIL
                     ? b()
                     : (0, o.mM)(
                           async () => {

@@ -9,15 +9,15 @@ var t = n(477900),
     d = n(235986),
     m = n(417869),
     u = n(936525),
-    x = n(844768);
-let N = function (a) {
+    N = n(844768);
+let x = function (a) {
     let { label: e, subLabel: n, icon: r } = a;
     return (0, t.jsxs)("div", {
-        className: x.Lw,
+        className: N.Lw,
         children: [
-            (0, t.jsx)("div", { className: x.j3, children: (0, t.jsx)(r, { size: "md", color: "currentColor" }) }),
+            (0, t.jsx)("div", { className: N.j3, children: (0, t.jsx)(r, { size: "md", color: "currentColor" }) }),
             (0, t.jsxs)("div", {
-                className: x.ET,
+                className: N.ET,
                 children: [
                     (0, t.jsx)(c.E, { variant: "body-sm/medium", color: "text-default", children: e }),
                     null != n && (0, t.jsx)(c.E, { variant: "body-xs/normal", color: "text-subtle", children: n }),
@@ -33,9 +33,9 @@ function p(a) {
             onContinue: n,
             onClose: p,
             img: j,
-            headerConnect: b,
+            headerConnect: C,
             headerReconnect: g,
-            body: C,
+            body: b,
             learnMoreLink: v,
             valueProps: E,
         } = a,
@@ -48,33 +48,33 @@ function p(a) {
             (0, t.jsxs)(i.rQ, {
                 "data-migration-pending": !0,
                 direction: d.A.Direction.VERTICAL,
-                className: x.wx,
+                className: N.wx,
                 separator: !1,
                 children: [
-                    (0, t.jsxs)("div", { className: x.bm, children: [j, " "] }),
+                    (0, t.jsxs)("div", { className: N.bm, children: [j, " "] }),
                     (0, t.jsx)(l.D, {
-                        className: x.DD,
+                        className: N.DD,
                         variant: "heading-xl/semibold",
-                        children: k && null != g ? g : b,
+                        children: k && null != g ? g : C,
                     }),
-                    (0, t.jsx)(i.s_, { "data-migration-pending": !0, className: x.b, onClick: p }),
+                    (0, t.jsx)(i.s_, { "data-migration-pending": !0, className: N.b, onClick: p }),
                 ],
             }),
             (0, t.jsxs)(i.$m, {
                 "data-migration-pending": !0,
-                className: x.rf,
+                className: N.rf,
                 children: [
-                    (0, t.jsx)(c.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: C }),
+                    (0, t.jsx)(c.E, { tag: "p", variant: "body-md/normal", color: "text-default", children: b }),
                     (0, t.jsx)("div", {
-                        className: x.Mh,
+                        className: N.Mh,
                         children: E.map((a, e) => {
                             let { label: n, subLabel: s, icon: i } = a;
                             return (0, t.jsxs)(
                                 r.Fragment,
                                 {
                                     children: [
-                                        (0, t.jsx)(N, { label: n, subLabel: s, icon: i }, n),
-                                        e !== E.length - 1 && (0, t.jsx)("div", { className: x.Cs }),
+                                        (0, t.jsx)(x, { label: n, subLabel: s, icon: i }, n),
+                                        e !== E.length - 1 && (0, t.jsx)("div", { className: N.Cs }),
                                     ],
                                 },
                                 n,
@@ -93,10 +93,10 @@ function p(a) {
             }),
             (0, t.jsx)(i.jl, {
                 "data-migration-pending": !0,
-                className: x.qr,
+                className: N.qr,
                 children: (0, t.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: x.wC,
+                    className: N.wC,
                     children: (0, t.jsx)(o.$, { variant: "primary", text: h.intl.string(h.t["3PatSz"]), onClick: n }),
                 }),
             }),

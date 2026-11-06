@@ -38,7 +38,7 @@
     tZ: () => eX,
     SD: () => eg,
     p5: () => e0,
-    Ns: () => e8,
+    Ns: () => e7,
     sb: () => e1,
     Qo: () => eW,
     I3: () => eU,
@@ -164,8 +164,8 @@ function ea(e, t, n, r) {
         c = e.userStatus?.enrolledAt != null,
         d = t.userStatus?.enrolledAt != null,
         f = 20 * b.A.Millis.MINUTE,
-        A = e7(e, f),
-        E = e7(t, f);
+        A = e8(e, f),
+        E = e8(t, f);
     if (o) {
         var _, T, I;
         let u,
@@ -842,10 +842,10 @@ function e6(e) {
                 (l.current = e));
         }, [n, r]));
 }
-function e8(e) {
+function e7(e) {
     return i.useMemo(() => P.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
 }
-function e7(e, t) {
+function e8(e, t) {
     let n = e.userStatus?.completedAt != null;
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
