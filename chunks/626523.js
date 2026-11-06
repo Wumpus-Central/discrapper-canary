@@ -24,7 +24,7 @@ function u(e) {
         n = e?.type === "image/webp",
         [i, u] = a.useState(!1),
         [c, s] = a.useState(null),
-        f = n && c !== e;
+        m = n && c !== e;
     a.useEffect(() => {
         let a = !1;
         return (
@@ -129,7 +129,7 @@ function u(e) {
             }
         );
     }, [e, t, n]);
-    let m = i && c === e,
-        A = t || m;
-    return { isGIF: t, isWebP: n, isAnimatedWebPFile: m, isCheckingAnimation: f, isEditableAnimatedImage: A };
+    let f = i && c === e,
+        A = t || f;
+    return { isGIF: t, isWebP: n, isAnimatedWebPFile: f, isCheckingAnimation: m, isEditableAnimatedImage: A };
 }

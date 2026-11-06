@@ -1,4 +1,4 @@
-n.d(t, { A: () => eb });
+n.d(t, { A: () => ey });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -20,8 +20,8 @@ var p = n(120692),
     x = n(939249),
     v = n(834730),
     _ = n(138399),
-    y = n(565645),
-    b = n(822123),
+    b = n(565645),
+    y = n(822123),
     T = n(920134),
     S = n(73153),
     I = n(95701),
@@ -52,8 +52,8 @@ let R = (0, u.UT)(N.A, {
 });
 var M = n(451909),
     O = n(118517),
-    P = n(747926),
-    k = n(46653),
+    k = n(747926),
+    P = n(46653),
     L = n(734057),
     D = n(188567),
     w = n(475815);
@@ -83,7 +83,7 @@ function K(e) {
             containerWidth: d,
         } = e,
         m = n.id,
-        S = (0, b.QZ)(o),
+        S = (0, y.QZ)(o),
         I = null != d && d < 460,
         K = S.slice(0, I ? 2 : 3),
         Y = (0, u.bG)([N.A], () => N.A.getMessage(r, s), [r, s]),
@@ -106,7 +106,7 @@ function K(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = Y.author.id === k.default.getId();
+                    n = Y.author.id === P.default.getId();
                 _.A.sendMessage(q.id, M.Ay.parse(q, t), !1, {
                     location: F.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
@@ -142,7 +142,7 @@ function K(e) {
                                 type: "button",
                                 className: V.x6,
                                 onClick: (t) => en(t, e),
-                                children: (0, i.jsx)(y.A, {
+                                children: (0, i.jsx)(b.A, {
                                     emojiId: e.id,
                                     emojiName: null != e.id ? e.name : e.surrogates,
                                     shouldAnimate: !1,
@@ -198,7 +198,7 @@ function K(e) {
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == Y || null == Z?.current?.currentTime)) return;
                         w._U(Z.current) && w.sP(Z.current);
-                        let t = Y.author.id === k.default.getId();
+                        let t = Y.author.id === P.default.getId();
                         ((0, O.Yf)({
                             channel: q,
                             message: Y,
@@ -220,7 +220,7 @@ function K(e) {
                             className: V.jC,
                             tag: "span",
                             onClick: function (e) {
-                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, P.JA)(Q)));
+                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, k.JA)(Q)));
                             },
                             "aria-label": el,
                             children: (0, i.jsx)(v.E, {
@@ -309,7 +309,7 @@ function ea(e) {
         { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, f.X$)(),
         [h, A] = l.useState(!1),
         [C, E] = l.useState(!1),
-        [v, b] = l.useState(!1);
+        [v, y] = l.useState(!1);
     l.useEffect(() => {
         let e = c.current;
         if (null != e) return (e.addEventListener("timeupdate", n), () => e.removeEventListener("timeupdate", n));
@@ -327,9 +327,9 @@ function ea(e) {
             let e = !1;
             return (
                 !(async function () {
-                    b(!0);
+                    y(!0);
                     let t = await I(ei(T));
-                    !e && t.finished && b(!1);
+                    !e && t.finished && y(!1);
                 })(),
                 () => {
                     e = !0;
@@ -356,7 +356,7 @@ function ea(e) {
             style: S,
             children:
                 null != s
-                    ? (0, i.jsx)(y.A, {
+                    ? (0, i.jsx)(b.A, {
                           emojiId: s.emojiId,
                           emojiName: s.emojiName,
                           shouldAnimate: h,
@@ -472,7 +472,7 @@ function e_(e) {
     let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
         { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
         d = (0, u.bG)(
-            [ef.Ay, k.default],
+            [ef.Ay, P.default],
             () =>
                 (function (e, t) {
                     let n,
@@ -491,17 +491,17 @@ function e_(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, k.default.getId(), ef.Ay),
+                })(t, P.default.getId(), ef.Ay),
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([k.default, N.A], () => {
+        f = (0, u.bG)([P.default, N.A], () => {
             let e = N.A.getMessage(n, r);
             return (
                 null != e &&
-                e.author?.id !== k.default.getId() &&
+                e.author?.id !== P.default.getId() &&
                 (null == e.messageReference ||
-                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
+                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== P.default.getId())
             );
         }),
         p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
@@ -532,8 +532,8 @@ function e_(e) {
           })
         : null;
 }
-var ey = n(862649);
-function eb(e) {
+var eb = n(862649);
+function ey(e) {
     let {
             playerState: t,
             controlBarAnimationSpring: n,
@@ -548,8 +548,8 @@ function eb(e) {
             channelId: x,
             messageId: v,
             showSpeakingIndicators: _,
-            clipUserIds: y,
-            durationSeconds: b,
+            clipUserIds: b,
+            durationSeconds: y,
             showTimelineComments: T,
             setIsGridView: S,
             isGridView: I,
@@ -562,11 +562,11 @@ function eb(e) {
         children: (e) =>
             (0, i.jsxs)("div", {
                 ref: R,
-                className: a()(ey.MU, e),
+                className: a()(eb.MU, e),
                 children: [
                     (0, i.jsx)(es.A, {
                         createdAt: null != h.clip_created_at ? Date.parse(h.clip_created_at) : void 0,
-                        participantIds: C ? y : [],
+                        participantIds: C ? b : [],
                         applicationId: h.application?.id,
                         title: h.title,
                         guildId: g,
@@ -592,7 +592,7 @@ function eb(e) {
                         _ &&
                         null != h.clip_events_timeline &&
                         null != x &&
-                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: y, channelId: x }),
+                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: b, channelId: x }),
                     r &&
                         null != g &&
                         null != x &&
@@ -618,7 +618,7 @@ function eb(e) {
                             channelId: x,
                             messageId: v,
                             guildId: g,
-                            durationSeconds: h.duration_secs ?? b,
+                            durationSeconds: h.duration_secs ?? y,
                             hidden: !T,
                         }),
                 ],

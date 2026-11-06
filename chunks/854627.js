@@ -35,7 +35,7 @@ n.d(
                 {
                     avatarPlaceholderSrc: m,
                     avatarDecorationSrc: T,
-                    eventHandlers: _,
+                    eventHandlers: I,
                 } = (0, u.A)({
                     user: f,
                     guildId: n,
@@ -50,11 +50,11 @@ n.d(
                 isAnimating: p,
                 eventHandlers: {
                     onMouseEnter: r.useCallback(() => {
-                        (R.onMouseEnter(), _.onMouseEnter());
-                    }, [R, _]),
+                        (R.onMouseEnter(), I.onMouseEnter());
+                    }, [R, I]),
                     onMouseLeave: r.useCallback(() => {
-                        (R.onMouseLeave(), _.onMouseLeave());
-                    }, [R, _]),
+                        (R.onMouseLeave(), I.onMouseLeave());
+                    }, [R, I]),
                 },
             };
         },

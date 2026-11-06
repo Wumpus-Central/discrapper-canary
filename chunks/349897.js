@@ -45,8 +45,8 @@ function _(e) {
                     style: {
                         left: r ? p.to((e) => t - e) : t,
                         right: n,
-                        width: r ? p.to((e) => `${y + 2 * e}px`) : y,
-                        height: r ? p.to((e) => `${y + 2 * e}px`) : y,
+                        width: r ? p.to((e) => `${b + 2 * e}px`) : b,
+                        height: r ? p.to((e) => `${b + 2 * e}px`) : b,
                     },
                     children: (0, i.jsx)(h, {
                         size: "custom",
@@ -58,8 +58,8 @@ function _(e) {
             }),
     });
 }
-let y = 12,
-    b = { tension: 500, friction: 30, clamp: !0 };
+let b = 12,
+    y = { tension: 500, friction: 30, clamp: !0 };
 function T(e) {
     switch (e) {
         case g.B.LAUGHTER:
@@ -107,7 +107,7 @@ n.d(
                 s = l.useRef(null),
                 [{ expansion: o }, u] = (0, p.z)(() => ({
                     expansion: 0,
-                    config: b,
+                    config: y,
                     onRest: () => {
                         null == s.current && a(null);
                     },
@@ -137,7 +137,7 @@ n.d(
                     return (l.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms), l.map((e) => e.event));
                 }, [e, d, t, n]),
                 f = l.useMemo(
-                    () => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: y, gapPx: 4 })),
+                    () => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: b, gapPx: 4 })),
                     [m],
                 ),
                 g = l.useCallback(

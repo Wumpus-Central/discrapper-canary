@@ -38,8 +38,8 @@ var l = n(477900),
     V = n(593284),
     W = n(967144);
 n(209932);
-var F = n(342296),
-    B = n(734057),
+var B = n(342296),
+    F = n(734057),
     G = n(317525),
     K = n(994500),
     H = n(351906),
@@ -108,7 +108,7 @@ function ei(e) {
             position: "top",
             "aria-label": Q.Ay.getUserTag(s, { decoration: "never" }),
             asContainer: !0,
-            children: (0, l.jsx)(F.A, {
+            children: (0, l.jsx)(B.A, {
                 targetElementRef: o,
                 user: s,
                 guildId: n,
@@ -160,7 +160,7 @@ function er(e) {
 }
 function es(e) {
     let { id: t } = e,
-        n = (0, y.bG)([B.A], () => B.A.getChannel(t)),
+        n = (0, y.bG)([F.A], () => F.A.getChannel(t)),
         i = X.intl.string(X.t.zLZPmk).toLowerCase(),
         r = "text",
         s = !0;

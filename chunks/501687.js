@@ -33,8 +33,8 @@ function v(e, t) {
     return t >= n ? n - t : 0;
 }
 var _ = n(683825),
-    y = n(792996),
-    b = n(243189);
+    b = n(792996),
+    y = n(243189);
 let T = l.memo(function (e) {
     let t,
         { source: n, masterSec: r, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: x } = e,
@@ -45,8 +45,8 @@ let T = l.memo(function (e) {
         R = r < n.startSec,
         M = Math.ceil(v(n, r)),
         O = (0, p.rB)(M),
-        P = n.owner?.name ?? n.label ?? y.intl.string(_.default["6XuC8e"]),
-        { ref: k, width: L, height: D } = (0, u.Ay)();
+        k = n.owner?.name ?? n.label ?? b.intl.string(_.default["6XuC8e"]),
+        { ref: P, width: L, height: D } = (0, u.Ay)();
     (l.useEffect(() => {
         let e = T.current;
         if (null != e) {
@@ -62,22 +62,22 @@ let T = l.memo(function (e) {
     let w = c && !N && 0 !== M;
     return (
         c && N
-            ? (t = y.intl.formatToPlainString(_.default.zc1itm, { name: P }))
-            : c && (t = y.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: P, time: O })),
+            ? (t = b.intl.formatToPlainString(_.default.zc1itm, { name: k }))
+            : c && (t = b.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: k, time: O })),
         (0, i.jsxs)("div", {
-            className: b.Vs,
+            className: y.Vs,
             role: c ? "group" : void 0,
             "aria-label": t,
             "data-testid": "discord-web-multi-video-player-grid-tile",
             children: [
                 (0, i.jsxs)("div", {
-                    ref: k,
-                    className: a()(b.iH, { [b.om]: c }),
+                    ref: P,
+                    className: a()(y.iH, { [y.om]: c }),
                     children: [
                         x ??
                             (0, i.jsx)(m.A, {
                                 ref: T,
-                                className: a()(b.cr, { [b.qb]: w }),
+                                className: a()(y.cr, { [y.qb]: w }),
                                 poster: (0, f.s)(n.poster, n, L, D),
                                 preload: "auto",
                                 playsInline: !0,
@@ -92,7 +92,7 @@ let T = l.memo(function (e) {
                         c &&
                             null != n.owner &&
                             (0, i.jsx)("div", {
-                                className: b.cL,
+                                className: y.cL,
                                 children: (0, i.jsx)(h.eu, {
                                     src: n.owner.avatarUrl,
                                     size: (L ?? 0) > 300 ? g._3.SIZE_32 : g._3.SIZE_20,
@@ -103,7 +103,7 @@ let T = l.memo(function (e) {
                 }),
                 w &&
                     (0, i.jsxs)("div", {
-                        className: b.rm,
+                        className: y.rm,
                         "aria-hidden": !0,
                         children: [
                             (0, i.jsx)(A.HourglassIcon, { size: "xs", color: "currentColor" }),
@@ -118,9 +118,9 @@ var S = n(683063),
     I = n(599507);
 let N = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: r, currentMasterTimeSec: s, onSelect: o } = e,
-        d = t.owner?.name ?? n ?? y.intl.string(_.default["6XuC8e"]),
+        d = t.owner?.name ?? n ?? b.intl.string(_.default["6XuC8e"]),
         m = E(t, s),
-        { ref: C, width: x, height: b } = (0, u.Ay)(m, l, r);
+        { ref: C, width: x, height: y } = (0, u.Ay)(m, l, r);
     if (!m && !l && !r) {
         let e = (0, p.rB)(v(t, s));
         return (0, i.jsx)(S.u, {
@@ -131,7 +131,7 @@ let N = l.memo(function (e) {
             ariaHidden: !0,
             children: (0, i.jsx)("div", {
                 className: I.RG,
-                "aria-label": y.intl.formatToPlainString(_.default.JFaxs2, { name: d, time: e }),
+                "aria-label": b.intl.formatToPlainString(_.default.JFaxs2, { name: d, time: e }),
                 "data-testid": "discord-web-multi-video-player-pov-out-of-range",
                 children: (0, i.jsx)(h.eu, { src: t.owner?.avatarUrl, size: g._3.SIZE_32, "aria-hidden": !0 }),
             }),
@@ -140,8 +140,8 @@ let N = l.memo(function (e) {
     return (0, i.jsxs)(c.D, {
         className: a()(I.uF, { [I._]: l }),
         "aria-label": l
-            ? y.intl.formatToPlainString(_.default["RSMzC/"], { name: d })
-            : y.intl.formatToPlainString(_.default["4AH1Vb"], { name: d }),
+            ? b.intl.formatToPlainString(_.default["RSMzC/"], { name: d })
+            : b.intl.formatToPlainString(_.default["4AH1Vb"], { name: d }),
         "aria-current": l,
         onClick: function (e) {
             (e.stopPropagation(), o(t));
@@ -155,7 +155,7 @@ let N = l.memo(function (e) {
                     (0, i.jsx)("img", {
                         ref: C,
                         className: I.a1,
-                        src: (0, f.s)(t.poster, t, x, b),
+                        src: (0, f.s)(t.poster, t, x, y),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -181,14 +181,14 @@ function R(e) {
             onEnded: A,
             onLoadedMetadata: C,
             onError: v,
-            onPlay: b,
+            onPlay: y,
             onPause: S,
             children: I,
             original: R,
             subSources: M,
             isGridView: O,
-            setIsGridView: P,
-            suppressSourceSelection: k = !1,
+            setIsGridView: k,
+            suppressSourceSelection: P = !1,
             ...L
         } = e,
         D = l.useRef(null),
@@ -520,10 +520,10 @@ function R(e) {
             [],
         ));
     let e_ = l.useRef(V);
-    function ey(e) {
+    function eb(e) {
         e.id !== ei.id && eC(e.id, K);
     }
-    function eb(e) {
+    function ey(e) {
         er() || L.onCanPlay?.(e);
     }
     (l.useEffect(() => {
@@ -553,8 +553,8 @@ function R(e) {
                                 ref: F,
                                 className: a()(s, { [j._b]: eT, [j.l3]: O }),
                                 poster: (0, f.s)(ei.poster ?? r, ei, U, G),
-                                onCanPlay: eb,
-                                onCanPlayThrough: eb,
+                                onCanPlay: ey,
+                                onCanPlayThrough: ey,
                                 onTimeUpdate: function (e) {
                                     let t = D.current;
                                     if (null != t && null == ec.current && null == ed.current) {
@@ -595,7 +595,7 @@ function R(e) {
                                     ei.id !== R.id ? eE(ei.startSec + (D.current?.currentTime ?? 0)) : v?.(e);
                                 },
                                 onPlay: function (e) {
-                                    (q(!0), eo(K), b?.(e));
+                                    (q(!0), eo(K), y?.(e));
                                 },
                                 onPause: function (e) {
                                     (q(!1), eu(), S?.(e));
@@ -629,7 +629,7 @@ function R(e) {
                 ],
             }),
             en.length > 1 &&
-                !k &&
+                !P &&
                 (0, i.jsxs)("div", {
                     className: j.c2,
                     "data-testid": "discord-web-multi-video-player-povs",
@@ -641,27 +641,27 @@ function R(e) {
                                     {
                                         source: e,
                                         label:
-                                            e.id === R.id ? (e.label ?? y.intl.string(_.default["9tdsDk"])) : e.label,
+                                            e.id === R.id ? (e.label ?? b.intl.string(_.default["9tdsDk"])) : e.label,
                                         isActive: e.id === ei.id,
                                         isOriginal: e.id === R.id,
                                         currentMasterTimeSec: K,
-                                        onSelect: ey,
+                                        onSelect: eb,
                                     },
                                     e.id,
                                 ),
                             ),
                         (0, i.jsx)(c.D, {
                             className: j.LI,
-                            "aria-label": y.intl.string(_.default.lykjkX),
+                            "aria-label": b.intl.string(_.default.lykjkX),
                             "aria-pressed": !1,
                             onClick: function (e) {
                                 if ((e.stopPropagation(), O)) {
-                                    (er() && es(!0), P(!1));
+                                    (er() && es(!0), k(!1));
                                     let e = en.find((e) => e.id === em.current);
                                     eC(null != e && E(e, K) ? e.id : R.id, K);
                                     return;
                                 }
-                                ((em.current = ei.id), P(!0), ea(K, !0), eC(R.id, K));
+                                ((em.current = ei.id), k(!0), ea(K, !0), eC(R.id, K));
                             },
                             "data-testid": "discord-web-multi-video-player-grid-toggle",
                             children: (0, i.jsx)(d.GridSquareIcon, { size: "xs", color: "currentColor" }),

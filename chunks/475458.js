@@ -1,32 +1,32 @@
-t.d(l, { yv: () => i });
-var n = t(582128),
-    a = t(855986),
-    u = t(287809);
-(t(792996), t(427262));
-var r = t(513425),
-    s = t(503275);
-function i(e) {
-    let l = e?.id,
-        t = e?.owner_user_id,
-        i = (0, a.yK)(
+n.d(e, { yv: () => s });
+var t = n(582128),
+    a = n(855986),
+    u = n(287809);
+(n(792996), n(427262));
+var r = n(513425),
+    i = n(503275);
+function s(l) {
+    let e = l?.id,
+        n = l?.owner_user_id,
+        s = (0, a.yK)(
             [r.A],
             () =>
-                null == l
+                null == e
                     ? []
                     : [
                           ...new Set(
-                              r.A.getMessages(l)
-                                  .flatMap((e) => (null != e.user_id && e.user_id !== t ? [e.user_id] : []))
+                              r.A.getMessages(e)
+                                  .flatMap((l) => (null != l.user_id && l.user_id !== n ? [l.user_id] : []))
                                   .reverse(),
                           ),
                       ],
-            [l, t],
+            [e, n],
         );
-    n.useEffect(() => {
-        null != t && ((0, s.Y_)(t), i.forEach(s.Y_));
-    }, [t, i]);
-    let c = (0, a.bG)([u.default], () => (null == t ? null : u.default.getUser(t)), [t]),
-        o = (0, a.yK)([u.default], () => i.map((e) => u.default.getUser(e)).filter((e) => null != e), [i]);
-    return n.useMemo(() => ({ creator: c ?? null, collaborators: o }), [c, o]);
+    t.useEffect(() => {
+        null != n && ((0, i.Y_)(n), s.forEach(i.Y_));
+    }, [n, s]);
+    let c = (0, a.bG)([u.default], () => (null == n ? null : u.default.getUser(n)), [n]),
+        o = (0, a.yK)([u.default], () => s.map((l) => u.default.getUser(l)).filter((l) => null != l), [s]);
+    return t.useMemo(() => ({ creator: c ?? null, collaborators: o }), [c, o]);
 }
-t(191850);
+n(191850);

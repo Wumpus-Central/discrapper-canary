@@ -1,117 +1,117 @@
-t.d(l, { A: () => b });
-var n = t(582128),
-    a = t(855986),
-    u = t(587895),
-    r = t(287809),
-    s = t(260498),
-    i = t(73153);
+n.d(e, { A: () => _ });
+var t = n(582128),
+    a = n(855986),
+    u = n(587895),
+    r = n(287809),
+    i = n(260498),
+    s = n(73153);
 let c = new Map();
 class o extends a.Ay.Store {
-    getStatus(e) {
-        return c.get(e) ?? null;
+    getStatus(l) {
+        return c.get(l) ?? null;
     }
 }
-let d = new o(i.h, {
-    CONJURE_SHARED_PROJECT_STATUS: function (e) {
-        let { applicationId: l, status: t } = e;
-        if (null != t) c.set(l, t);
-        else if (!c.delete(l)) return !1;
+let d = new o(s.h, {
+    CONJURE_SHARED_PROJECT_STATUS: function (l) {
+        let { applicationId: e, status: n } = l;
+        if (null != n) c.set(e, n);
+        else if (!c.delete(e)) return !1;
     },
     LOGOUT: function () {
         if (0 === c.size) return !1;
         c.clear();
     },
 });
-var f = t(158390),
-    p = t(627363),
-    y = t(233470),
-    g = t(714020),
-    A = t(652215);
-let m = null;
-function _() {
-    if (null != m) {
-        for (let e of m.backoffs.values()) e.cancel();
-        m = null;
+var f = n(158390),
+    p = n(627363),
+    g = n(233470),
+    y = n(714020),
+    A = n(652215);
+let h = null;
+function m() {
+    if (null != h) {
+        for (let l of h.backoffs.values()) l.cancel();
+        h = null;
     }
 }
-function h(e, l) {
-    i.h.dispatch({ type: "CONJURE_SHARED_PROJECT_STATUS", applicationId: e, status: l });
+function v(l, e) {
+    s.h.dispatch({ type: "CONJURE_SHARED_PROJECT_STATUS", applicationId: l, status: e });
 }
-function b(e) {
-    let l = (0, a.bG)([d], () => d.getStatus(e), [e]),
-        t = (0, a.bG)([u.A], () => u.A.getApplication(e) ?? null, [e]),
-        i = l?.type === "ready" ? l.projectId : null,
-        c = (0, a.bG)([s.Ay], () => (null != i ? (s.Ay.getProject(i) ?? null) : null), [i]),
+function _(l) {
+    let e = (0, a.bG)([d], () => d.getStatus(l), [l]),
+        n = (0, a.bG)([u.A], () => u.A.getApplication(l) ?? null, [l]),
+        s = e?.type === "ready" ? e.projectId : null,
+        c = (0, a.bG)([i.Ay], () => (null != s ? (i.Ay.getProject(s) ?? null) : null), [s]),
         o = (0, a.bG)([r.default], () => r.default.getCurrentUser()?.id ?? null),
-        b = null == l || (null != i && null == c);
+        _ = null == e || (null != s && null == c);
     return (
-        n.useEffect(() => {
-            b &&
+        t.useEffect(() => {
+            _ &&
                 null != o &&
-                (function (e) {
-                    let l =
-                        ((null != m && (0, y.a3)(m.session)) ||
-                            (_(), (m = { session: (0, y.gg)(), loading: new Set(), backoffs: new Map() })),
-                        m);
-                    if (null == l.session.userId || l.loading.has(e) || l.backoffs.get(e)?.pending === !0) return;
-                    let t = d.getStatus(e);
-                    (null == t || ("ready" === t.type && null == s.Ay.getProject(t.projectId))) &&
-                        (async function e(l, t) {
-                            (l.loading.add(t), null == d.getStatus(t) && h(t, { type: "loading" }));
-                            let n = null;
+                (function (l) {
+                    let e =
+                        ((null != h && (0, g.a3)(h.session)) ||
+                            (m(), (h = { session: (0, g.gg)(), loading: new Set(), backoffs: new Map() })),
+                        h);
+                    if (null == e.session.userId || e.loading.has(l) || e.backoffs.get(l)?.pending === !0) return;
+                    let n = d.getStatus(l);
+                    (null == n || ("ready" === n.type && null == i.Ay.getProject(n.projectId))) &&
+                        (async function l(e, n) {
+                            (e.loading.add(n), null == d.getStatus(n) && v(n, { type: "loading" }));
+                            let t = null;
                             try {
-                                n = await (async function (e, l) {
-                                    u.A.isHydrated(e) || (await p.Ay.fetchApplications([e]));
-                                    let t = u.A.getApplication(e)?.conjureProjectId;
-                                    if (null == t) return { type: "unavailable" };
-                                    if (null != s.Ay.getProject(t)) return { type: "ready", projectId: t };
-                                    if ((await (0, y.b8)(), s.Ay.getProjectLimitFailureCode() === A.t02.INVALID_ACCESS))
+                                t = await (async function (l, e) {
+                                    u.A.isHydrated(l) || (await p.Ay.fetchApplications([l]));
+                                    let n = u.A.getApplication(l)?.conjureProjectId;
+                                    if (null == n) return { type: "unavailable" };
+                                    if (null != i.Ay.getProject(n)) return { type: "ready", projectId: n };
+                                    if ((await (0, g.b8)(), i.Ay.getProjectLimitFailureCode() === A.t02.INVALID_ACCESS))
                                         return { type: "info_only" };
                                     try {
-                                        await (0, y.U1)(t, void 0, l);
-                                    } catch (e) {
-                                        switch ((0, g.A)(e)) {
+                                        await (0, g.U1)(n, void 0, e);
+                                    } catch (l) {
+                                        switch ((0, y.A)(l)) {
                                             case A.t02.INVALID_ACCESS:
                                             case A.t02.UNKNOWN_CONJURE_PROJECT:
                                                 return { type: "no_access" };
                                             default:
-                                                throw e;
+                                                throw l;
                                         }
                                     }
-                                    return { type: "ready", projectId: t };
-                                })(t, l.session);
+                                    return { type: "ready", projectId: n };
+                                })(n, e.session);
                             } catch {}
-                            if ((l.loading.delete(t), l !== m || !(0, y.a3)(l.session))) {
-                                m?.loading.has(t) !== !0 && d.getStatus(t)?.type === "loading" && h(t, null);
+                            if ((e.loading.delete(n), e !== h || !(0, g.a3)(e.session))) {
+                                h?.loading.has(n) !== !0 && d.getStatus(n)?.type === "loading" && v(n, null);
                                 return;
                             }
-                            let a = l.backoffs.get(t);
-                            if (null == n) {
-                                (null == a && ((a = new f.A(5e3, 3e5)), l.backoffs.set(t, a)),
+                            let a = e.backoffs.get(n);
+                            if (null == t) {
+                                (null == a && ((a = new f.A(5e3, 3e5)), e.backoffs.set(n, a)),
                                     a.fail(() => {
-                                        l !== m || l.loading.has(t) || e(l, t);
+                                        e !== h || e.loading.has(n) || l(e, n);
                                     }));
                                 return;
                             }
-                            (a?.succeed(), l.backoffs.delete(t), h(t, n));
-                        })(l, e);
-                })(e);
-        }, [e, b, o]),
-        n.useMemo(
+                            (a?.succeed(), e.backoffs.delete(n), v(n, t));
+                        })(e, l);
+                })(l);
+        }, [l, _, o]),
+        t.useMemo(
             () =>
-                null == l || "loading" === l.type
+                null == e || "loading" === e.type
                     ? { type: "loading" }
-                    : "unavailable" === l.type || "no_access" === l.type
-                      ? { type: l.type }
-                      : null == t
+                    : "unavailable" === e.type || "no_access" === e.type
+                      ? { type: e.type }
+                      : null == n
                         ? { type: "unavailable" }
-                        : "info_only" === l.type
-                          ? { type: "info_only", application: t }
+                        : "info_only" === e.type
+                          ? { type: "info_only", application: n }
                           : null == c
                             ? { type: "loading" }
-                            : { type: "ready", application: t, project: c, canRemix: (0, s.H_)(c) },
-            [l, t, c],
+                            : { type: "ready", application: n, project: c, canRemix: (0, i.H_)(c) },
+            [e, n, c],
         )
     );
 }
-i.h.subscribe("LOGOUT", _);
+s.h.subscribe("LOGOUT", m);
