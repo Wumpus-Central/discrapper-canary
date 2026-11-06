@@ -10,14 +10,14 @@ var a = n(477900),
     d = n(95701),
     h = n(129230),
     f = n(467135),
-    C = n(195255),
-    g = n(457417),
+    g = n(195255),
+    C = n(457417),
     p = n(189213),
     m = n(837381),
-    M = n(475825),
-    b = n(928039),
-    E = n(61916);
-function S(e) {
+    b = n(475825),
+    M = n(928039),
+    S = n(61916);
+function E(e) {
     let {
             rowData: t,
             message: n,
@@ -32,8 +32,8 @@ function S(e) {
             sections: d,
             sectionHeight: h,
             renderRow: f,
-            rowHeight: C,
-        } = (0, E.s)({
+            rowHeight: g,
+        } = (0, S.s)({
             rowData: t,
             message: n,
             originChannel: r,
@@ -42,23 +42,23 @@ function S(e) {
             disableSelection: o,
             rowClassName: u,
         }),
-        g = l.useRef(null),
-        p = (0, b.A)("forward-modal", g);
+        C = l.useRef(null),
+        p = (0, M.A)("forward-modal", C);
     return (0, a.jsx)(m.hD, {
         navigator: p,
         children: (0, a.jsx)(m.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, a.jsx)(M.OZ, {
+                return (0, a.jsx)(b.OZ, {
                     ref: (e) => {
-                        ((g.current = e), (t.current = e?.getScrollerNode() ?? null));
+                        ((C.current = e), (t.current = e?.getScrollerNode() ?? null));
                     },
                     ...n,
                     ...c,
                     sections: d,
                     sectionHeight: h,
                     renderRow: f,
-                    rowHeight: C,
+                    rowHeight: g,
                 });
             },
         }),
@@ -74,7 +74,7 @@ function k() {
             message: r,
             channel: s,
             updateSelectShareDestinations: i,
-        } = (0, g.Vw)(),
+        } = (0, C.Vw)(),
         { results: o, updateSearchText: u } = (0, x.R)({ selectedDestinations: e, includeMissingDMs: !0 });
     (0, l.useEffect)(() => {
         u(n);
@@ -95,7 +95,8 @@ function k() {
             [e, i],
         ),
         d = e.length >= t;
-    return (0, a.jsx)(S, {
+    return (0, a.jsx)(E, {
+        disableFocusRingScope: !0,
         paddingBottom: 16,
         paddingTop: 16,
         rowData: o,
@@ -110,7 +111,7 @@ function k() {
 var w = n(683438),
     A = n(792996);
 function j() {
-    let { searchText: e, updateSearchText: t } = (0, g.Vw)(),
+    let { searchText: e, updateSearchText: t } = (0, C.Vw)(),
         n = l.useRef(null);
     return (
         (0, l.useEffect)(() => {
@@ -133,36 +134,36 @@ function j() {
 }
 var y = n(465532),
     T = n(355622),
-    v = n(408018),
-    D = n(989161),
-    H = n(31717),
-    O = n(115412);
-let P = () => {
-    let { message: e, channel: t, updateMessageText: n } = (0, g.Vw)(),
-        r = (0, i.bG)([H.A], () => H.A.getDraft(e.channel_id, H.C.ChannelMessage)),
-        [s, o] = l.useState(() => (0, v.ur)(r)),
+    R = n(408018),
+    v = n(989161),
+    D = n(31717),
+    H = n(115412);
+let O = () => {
+    let { message: e, channel: t, updateMessageText: n } = (0, C.Vw)(),
+        r = (0, i.bG)([D.A], () => D.A.getDraft(e.channel_id, D.C.ChannelMessage)),
+        [s, o] = l.useState(() => (0, R.ur)(r)),
         { textValue: u, richValue: c } = s;
     (0, l.useEffect)(() => {
         n(u);
     }, [n, u]);
     let d = l.useCallback(
             (t, n, a) => {
-                (o({ textValue: n, richValue: a }), y.A.saveDraft(e.channel_id, n, H.C.ChannelMessage));
+                (o({ textValue: n, richValue: a }), y.A.saveDraft(e.channel_id, n, D.C.ChannelMessage));
             },
             [e],
         ),
         [h, f] = l.useState(!1),
-        C = l.useCallback(() => f(!0), []),
+        g = l.useCallback(() => f(!0), []),
         p = l.useCallback(() => f(!1), []);
     return (
         (0, l.useEffect)(
             () => () => {
-                y.A.clearDraft(e.channel_id, H.C.ChannelMessage);
+                y.A.clearDraft(e.channel_id, D.C.ChannelMessage);
             },
             [e],
         ),
-        (0, a.jsx)(D.Ay, {
-            innerClassName: O.O,
+        (0, a.jsx)(v.Ay, {
+            innerClassName: H.O,
             onChange: d,
             placeholder: A.intl.string(A.t.ZroO3G),
             channel: t,
@@ -170,27 +171,27 @@ let P = () => {
             richValue: c,
             type: T.oU.SHARE_CUSTOM_CLIENT_THEME_INPUT,
             onBlur: p,
-            onFocus: C,
+            onFocus: g,
             focused: h,
             onSubmit: async () => ({ shouldClear: !0, shouldRefocus: !1 }),
-            parentModalKey: g.dJ,
+            parentModalKey: C.dJ,
             autoCompletePosition: "bottom",
             emojiPickerCloseOnModalOuterClick: !0,
             disableThemedBackground: !0,
         })
     );
 };
-var R = n(958904);
+var P = n(958904);
 function V(e) {
     let { transitionState: t, onClose: n } = e,
-        { send: l, sending: r, canSend: s } = (0, g.Vw)();
+        { send: l, sending: r, canSend: s } = (0, C.Vw)();
     return (0, a.jsx)(p.a, {
-        title: A.intl.string(R.default.zgFs8C),
+        title: A.intl.string(P.default.zgFs8C),
         actions: [{ variant: "primary", text: A.intl.string(A.t.TXNS7S), onClick: l, loading: r, disabled: !s() }],
         transitionState: t,
         onClose: n,
         input: (0, a.jsx)(j, {}),
-        actionBarInput: (0, a.jsx)(P, {}),
+        actionBarInput: (0, a.jsx)(O, {}),
         children: (0, a.jsx)(k, {}),
     });
 }
@@ -198,18 +199,18 @@ var I = n(138399),
     N = n(451909),
     U = n(223863),
     B = n(734057),
-    q = n(403362),
-    F = n(381941),
+    F = n(403362),
+    q = n(381941),
     G = n(652215);
 let K = (e) => {
     let { transitionState: t, onClose: n } = e,
-        p = (0, l.useRef)((0, g.E3)()).current,
+        p = (0, l.useRef)((0, C.E3)()).current,
         {
             selectedDestinations: m,
-            messageText: M,
-            canSend: b,
-            setSend: E,
-            updateMessage: S,
+            messageText: b,
+            canSend: M,
+            setSend: S,
+            updateMessage: E,
             updateChannel: x,
         } = (0, r.P)(p),
         [_, k] = l.useState(!1),
@@ -220,39 +221,39 @@ let K = (e) => {
                 colors: w.map((e) => e.replace("#", "")),
                 gradient_angle: j,
                 base_mix: A,
-                base_theme: (0, C.O)(y),
+                base_theme: (0, g.O)(y),
             }),
             [w, j, A, y],
         ),
-        v = l.useMemo(() => (0, d.createChannelRecord)({ id: "1", type: s.r.DM }), []),
-        D = l.useMemo(() => (0, o.rh)({ ...(0, u.Ay)({ channelId: v.id, content: "" }) }), [v]);
+        R = l.useMemo(() => (0, d.createChannelRecord)({ id: "1", type: s.r.DM }), []),
+        v = l.useMemo(() => (0, o.rh)({ ...(0, u.Ay)({ channelId: R.id, content: "" }) }), [R]);
     (0, l.useEffect)(() => {
-        (S(D), x(v), k(!0));
-    }, [D, v, S, x]);
-    let H = l.useCallback(async () => {
-        if (!b()) return Promise.reject();
+        (E(v), x(R), k(!0));
+    }, [v, R, E, x]);
+    let D = l.useCallback(async () => {
+        if (!M()) return Promise.reject();
         (await (async (e, t, n) =>
             Promise.allSettled(
-                (await Promise.all(e.map(U.pk))).filter(q.Vq).map(async (e) =>
+                (await Promise.all(e.map(U.pk))).filter(F.Vq).map(async (e) =>
                     (async (e, t, n) => {
                         let a = B.A.getChannel(n);
                         if (null == a) throw Error("Unable to find destination channel for message");
                         let l = N.Ay.parse(a, t);
                         return I.A.sendMessage(a.id, l, !1, {
-                            location: F.Hx.SHARE_CUSTOM_THEME,
+                            location: q.Hx.SHARE_CUSTOM_THEME,
                             eagerDispatch: !1,
                             sharedCustomTheme: e,
                         });
                     })(t, n, e),
                 ),
-            ))(m, T, M),
+            ))(m, T, b),
             h.default.track(G.HAw.CUSTOM_THEME_SHARED, { num_destinations: m.length }),
             await n());
-    }, [T, m, M, b, n]);
+    }, [T, m, b, M, n]);
     return ((0, l.useEffect)(() => {
-        E(H);
-    }, [H, E]),
+        S(D);
+    }, [D, S]),
     _)
-        ? (0, a.jsx)(g.KH.Provider, { value: p, children: (0, a.jsx)(V, { transitionState: t, onClose: n }) })
+        ? (0, a.jsx)(C.KH.Provider, { value: p, children: (0, a.jsx)(V, { transitionState: t, onClose: n }) })
         : null;
 };
