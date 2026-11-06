@@ -18,6 +18,10 @@ n.d(
             }
             return !1;
         },
+        f_: function (e) {
+            let t = e.status;
+            return null != t && (429 === t || (t >= 500 && 503 !== t));
+        },
         qS: function (e) {
             return !i.Z.has(e.id);
         },

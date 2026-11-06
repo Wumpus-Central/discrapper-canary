@@ -42,12 +42,7 @@ let u = (0, r.UT)(l.A, {
             }
         })(e, t),
     getIsLoading: (e, t) => l.A.isFetching(e, t),
-    retryConfig: {
-        retryableErrors: function (e) {
-            let t = e.status;
-            return null != t && (429 === t || (t >= 500 && 503 !== t));
-        },
-    },
+    retryConfig: { retryableErrors: o.f_ },
     staleAfter: 3600,
     failureStaleAfter: 60,
 });

@@ -106,6 +106,13 @@ let h = new f(r.h, {
             (o.delete(e), d.add(e));
         });
     },
+    GAME_SEARCH_FETCH_SUCCESS: function (e) {
+        let { games: t } = e;
+        if (0 === t.length) return !1;
+        t.forEach((e) => {
+            (l.set(e.id, new s.A(e)), c.delete(e.id), d.delete(e.id));
+        });
+    },
     SEARCH_MESSAGES_SUCCESS: E,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { messages: t } = e;

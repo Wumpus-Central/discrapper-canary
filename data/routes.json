@@ -342,6 +342,7 @@
   "GAMES": "/games",
   "GAMES_AUTOCOMPLETE": "/games/autocomplete",
   "GAMES_TRENDING": "/games/trending",
+  "GAMES_SEARCH": "/games/search",
   "APPLICATION_ICON": "/applications/:param/app-icons/:param.png",
   "APPLICATION_RPC": "/oauth2/applications/:param/rpc",
   "APPLICATION_ASSETS": "/oauth2/applications/:param/assets",
