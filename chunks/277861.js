@@ -52,7 +52,11 @@ n.d(
                         "submitted" === e.status)
                     )
                         return void d.A.showManualReviewPendingModal();
-                    if ("decided_teen" === e.status) return void d.A.showManualReviewDecidedTeenModal(e.teen_age_range);
+                    if ("decided_teen" === e.status)
+                        return void d.A.showManualReviewDecidedTeenModal({
+                            teenAgeRange: e.teen_age_range,
+                            decidedPassed: !0 === e.decided_passed,
+                        });
                     d.A.showManualReviewWebview(e.verification_webview_url, () => {
                         (0, s.qn)() && I();
                     });

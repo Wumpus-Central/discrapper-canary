@@ -244,10 +244,11 @@ let C = {
         });
     },
     showManualReviewDecidedTeenModal: function (e) {
+        let { teenAgeRange: t, decidedPassed: r } = e;
         (0, a.mM)(
             async () => {
-                let { default: t } = await Promise.all([n.e(585503), n.e(479054)]).then(n.bind(n, 130845));
-                return (n) => (0, i.jsx)(t, { ...n, teenAgeRange: e });
+                let { default: e } = await Promise.all([n.e(585503), n.e(272647)]).then(n.bind(n, 986362));
+                return (n) => (0, i.jsx)(e, { ...n, teenAgeRange: t, decidedPassed: r });
             },
             { modalKey: m.xO },
         );
