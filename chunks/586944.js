@@ -17,8 +17,8 @@ var r,
     S = l(822382),
     y = l(902008),
     A = l(617713),
-    E = l(616252),
-    b = l(753806),
+    b = l(616252),
+    E = l(753806),
     I = l(775427),
     R = l(145331);
 l(321073);
@@ -142,7 +142,7 @@ function ey(e) {
         text: ec.intl.string(ec.t.dwAvX1),
         position: "left",
         children: (0, n.jsx)(K.D, {
-            onClick: () => E.A.clearSearchHistory(t),
+            onClick: () => b.A.clearSearchHistory(t),
             className: em.Wf,
             title: ec.intl.string(ec.t.dwAvX1),
             "aria-label": ec.intl.string(ec.t.dwAvX1),
@@ -159,7 +159,7 @@ function eA(e) {
         ],
     });
 }
-function eE(e) {
+function eb(e) {
     let { headerId: t, titleText: l, trailingIcon: r } = e;
     return (0, n.jsxs)("div", {
         id: t,
@@ -167,7 +167,7 @@ function eE(e) {
         children: [(0, n.jsx)(G.E, { variant: "body-xs/semibold", color: "text-subtle", children: l }), r],
     });
 }
-function eb(e) {
+function eE(e) {
     let { navId: t, item: l, startingIndex: r, selectedIndex: s } = e,
         a = r,
         { rows: o, title: i, trailingIcon: c } = l.data;
@@ -175,7 +175,7 @@ function eb(e) {
         title: i,
         showDivider: r > 0,
         children: [
-            (0, n.jsx)(eE, { headerId: i, titleText: i, trailingIcon: c }),
+            (0, n.jsx)(eb, { headerId: i, titleText: i, trailingIcon: c }),
             o.map((e) => {
                 let { icon: r, label: o, sublabel: c, onSelect: u } = e.data,
                     d = s === a,
@@ -359,7 +359,7 @@ function eG(e) {
                     return (
                         (s += c.length),
                         (0, n.jsx)(
-                            eb,
+                            eE,
                             { navId: l, item: e, startingIndex: d, selectedIndex: r },
                             `${e.type}--${u}-${d}`,
                         )
@@ -384,7 +384,7 @@ function eq(e) {
         f = s.useCallback(
             (e) => {
                 let { query: t, performSearch: l, replace: n } = e;
-                (b.A.setSearchQuery({
+                (E.A.setSearchQuery({
                     query: t,
                     performSearch: l,
                     replace: n,
@@ -469,7 +469,7 @@ function eq(e) {
                                         ((0, R.kc)({
                                             searchContext: l,
                                             searchQuery: W.A.getSearchResultsQuery(c),
-                                            searchQueryString: b.A.getSearchInputText(l),
+                                            searchQueryString: E.A.getSearchInputText(l),
                                             searchTokenType: i,
                                             searchAutocompleteGroup: i,
                                             searchAutocompleteMode: r,
@@ -522,7 +522,7 @@ function eq(e) {
                 (0, R.kc)({
                     searchContext: l,
                     searchQuery: W.A.getSearchResultsQuery(p),
-                    searchQueryString: b.A.getSearchInputText(l),
+                    searchQueryString: E.A.getSearchInputText(l),
                     searchTokenType: f,
                     searchAutocompleteGroup: a,
                     searchAutocompleteMode: c,
@@ -555,7 +555,7 @@ function eq(e) {
                                       children: ec.intl.string(ec.t["1axf1T"]),
                                   })
                                 : void 0,
-                            onSelect: () => b.A.openSearchFiltersModal(l),
+                            onSelect: () => E.A.openSearchFiltersModal(l),
                         });
                     },
                     [l],
@@ -892,17 +892,17 @@ function eq(e) {
         }
         A.current = { itemsData: x, selectedIndex: u, modeType: s, query: a };
     }, [x, u, r.mode.type, r.query, h]);
-    let E = s.useRef(null),
+    let b = s.useRef(null),
         I = r.query;
     return (
         s.useEffect(() => {
             if ("" === I) {
-                E.current = null;
+                b.current = null;
                 return;
             }
             let e = x.length;
-            E.current !== e &&
-                ((E.current = e), v.O.announce(ec.intl.formatToPlainString(ec.t.ZGVL3g, { count: e }), "polite"));
+            b.current !== e &&
+                ((b.current = e), v.O.announce(ec.intl.formatToPlainString(ec.t.ZGVL3g, { count: e }), "polite"));
         }, [x.length, I]),
         s.useImperativeHandle(c, () => ({
             selectedIndex: u,
@@ -951,7 +951,7 @@ function eU(e) {
                     ((0, R.kc)({
                         searchContext: r,
                         searchQuery: W.A.getSearchResultsQuery(t),
-                        searchQueryString: b.A.getSearchInputText(r),
+                        searchQueryString: E.A.getSearchInputText(r),
                         searchTokenType: l.mode.filter,
                         searchAutocompleteGroup: ei.x2k.DATES,
                         searchAutocompleteMode: l.mode,
@@ -960,7 +960,7 @@ function eU(e) {
                         isSearchFilterComplete: !1,
                         searchAutocompleteSelectAction: ef.oi.CLICK,
                     }),
-                        b.A.setSearchQuery({
+                        E.A.setSearchQuery({
                             query: e.format(ei.ump) + " ",
                             performSearch: !0,
                             replace: !1,
@@ -1147,7 +1147,7 @@ function e8(e) {
             Promise.resolve().then(() => L.rL.blur(m));
         }, [m]),
         U = s.useCallback(() => {
-            b.A.cleanUpSearchState(l);
+            E.A.cleanUpSearchState(l);
         }, [l]),
         B = s.useCallback(
             (e) => {
@@ -1155,9 +1155,12 @@ function e8(e) {
                 let t = e?.relatedTarget,
                     r = document.getElementById(eJ);
                 (null != t && null != r && r.contains(t)) ||
-                    (A.A.setFocused(l, !1), I(!1), 0 === $().length && 0 === e1(d).length && U());
+                    (A.A.setFocused(l, !1),
+                    I(!1),
+                    L.rL.toDOMNode(m, m).removeAttribute("aria-activedescendant"),
+                    0 === $().length && 0 === e1(d).length && U());
             },
-            [U, d, $, l],
+            [U, d, m, $, l],
         ),
         Y = s.useCallback(
             (e) => {
@@ -1199,7 +1202,7 @@ function e8(e) {
             if (!Q.current) return;
             !z.current && L.rL.isFocused(m) && I(!0);
             let e = $();
-            (k(e.length > 0), E.A.updateSearchQueryText(l, e));
+            (k(e.length > 0), b.A.updateSearchQueryText(l, e));
             let t = (0, S._o)(e),
                 { selection: r } = m,
                 n = null != r ? j.Q6.end(r).offset : e.length,
@@ -1333,16 +1336,20 @@ function e8(e) {
         ));
     let er = s.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), 0 === $().length)
-                    ? G()
-                    : (Y(""), (0, R.iK)({ searchContext: l }), U(), y || q());
+                if ((e.preventDefault(), e.stopPropagation(), 0 === $().length)) return void G();
+                let t = L.rL.isFocused(m);
+                (Y(""),
+                    L.rL.toDOMNode(m, m).removeAttribute("aria-activedescendant"),
+                    (0, R.iK)({ searchContext: l }),
+                    U(),
+                    t ? G() : q());
             },
-            [q, U, y, G, $, Y, l],
+            [q, U, m, G, $, Y, l],
         ),
         en = s.useCallback(
             (e) => {
                 let t = L.rL.toDOMNode(m, m);
-                null != e
+                null != e && e >= 0
                     ? t.setAttribute("aria-activedescendant", `${eJ}-${e}`)
                     : t.removeAttribute("aria-activedescendant");
             },
@@ -1395,6 +1402,7 @@ function e8(e) {
         position: "bottom",
         animation: _.Y.Animation.NONE,
         shouldShow: y,
+        onRequestClose: () => B(),
         autoInvert: !1,
         children: (e, r) => {
             let { isShown: s } = r;
@@ -1439,7 +1447,7 @@ function e8(e) {
     });
 }
 var e4 = l(921242);
-let te = o()(b.A.fetchMessages, 500);
+let te = o()(E.A.fetchMessages, 500);
 function tt(e) {
     let { searchContext: t, className: l } = e,
         r = (0, S.bS)(t),
@@ -1456,7 +1464,7 @@ function tt(e) {
             ),
             [r],
         ));
-    let { isSearching: o, hasResults: b } = (0, i.cf)([p.A], () => {
+    let { isSearching: o, hasResults: E } = (0, i.cf)([p.A], () => {
             let e = p.A.getTotalCount(r);
             return { hasResults: null != e && e > 0, isSearching: p.A.getIsFetching(r) };
         }),
@@ -1477,7 +1485,7 @@ function tt(e) {
                 let { queryString: l, query: r, searchEverywhere: n, searchQuerySource: s } = e;
                 (A.A.refreshQueryId(t),
                     (0, R.fd)({ searchContext: t, query: r, queryString: l, searchQuerySource: s }),
-                    E.A.updateSearchMode(t, ei.BBH.NEWEST),
+                    b.A.updateSearchMode(t, ei.BBH.NEWEST),
                     te({ searchContext: t, searchQueryString: l, searchEverywhere: n, offset: 0 }));
             },
             [t],
@@ -1508,7 +1516,7 @@ function tt(e) {
         className: l,
         searchContext: t,
         isSearching: o,
-        hasResults: b,
+        hasResults: E,
         keyboardModeEnabled: a,
         onSearch: C,
         placeholder: L,
