@@ -10,10 +10,10 @@ var l = n(477900),
     m = n(915089),
     p = n(95701);
 n(682901);
-var h = n(652215),
-    C = n(792996),
+var C = n(652215),
+    h = n(792996),
     f = n(540796);
-let E = (0, p.createChannelRecord)({ id: "1", type: h.rbe.DM }),
+let E = (0, p.createChannelRecord)({ id: "1", type: C.rbe.DM }),
     S = (0, m.Ld)();
 n.d(
     t,
@@ -21,12 +21,12 @@ n.d(
     {
         A: function (e) {
             let {
-                    label: t = C.intl.string(C.t.B3miE8),
+                    label: t = h.intl.string(h.t.B3miE8),
                     onTextChange: n,
                     pendingText: r,
                     currentText: m,
                     className: p,
-                    innerClassName: h,
+                    innerClassName: C,
                     disableThemedBackground: g = !1,
                 } = e,
                 [I, y] = i.useState(r ?? m),
@@ -60,7 +60,7 @@ n.d(
                                     (0, l.jsx)(d.Ay, {
                                         "aria-describedby": `${e.describedById} ${S}`,
                                         "aria-labelledby": e.labelId,
-                                        innerClassName: a()(f.Tg, h),
+                                        innerClassName: a()(f.Tg, C),
                                         editorClassName: f.OT,
                                         maxCharacterCount: 190,
                                         onChange: x,
@@ -80,7 +80,7 @@ n.d(
                                     }),
                                     (0, l.jsx)(o.A, {
                                         id: S,
-                                        children: C.intl.format(C.t["+DFxLc"], { maxLength: 190 }),
+                                        children: h.intl.format(h.t["+DFxLc"], { maxLength: 190 }),
                                     }),
                                 ],
                             }),

@@ -50,13 +50,13 @@ n.d(
                 customGraphic: d,
                 className: m,
                 textVariant: p = "body-sm/medium",
-                textColor: h = "currentColor",
+                textColor: C = "currentColor",
             } = e;
             return (0, l.jsx)(u, {
                 className: r()(o.Cu, m),
                 gradientColor: n,
                 ...(null != d ? { customGraphic: d } : { Icon: i, iconSize: c }),
-                children: (0, l.jsx)(s.E, { variant: p, color: h, className: o.Ct, children: t }),
+                children: (0, l.jsx)(s.E, { variant: p, color: C, className: o.Ct, children: t }),
             });
         },
     },

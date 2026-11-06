@@ -9,8 +9,8 @@ var l = n(284009),
     d = n(516106),
     m = n(129230),
     p = n(723702),
-    h = n(418200),
-    C = n(166532),
+    C = n(418200),
+    h = n(166532),
     f = n(566980),
     E = n(671334),
     S = n(652215),
@@ -51,7 +51,7 @@ n.d(
                 { paymentAuthenticationState: O } = (0, s.o)(),
                 { isPremiumGroupPurchase: M, isEligibleForTrial: L } = (0, o.i)(),
                 { step: k } = (0, u.Ay)(),
-                { isGift: w } = (0, h.Pv)(),
+                { isGift: w } = (0, C.Pv)(),
                 D = {
                     ...(0, E.p)(),
                     paymentSources: A,
@@ -66,25 +66,25 @@ n.d(
                 U =
                     I ??
                     function () {
-                        l(Object.values(A).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
-                            trackedFromStep: C.pn.PAYMENT_ELEMENT,
+                        l(Object.values(A).length < 1 && null == n ? h.pn.PLAN_SELECT : h.pn.REVIEW, {
+                            trackedFromStep: h.pn.PAYMENT_ELEMENT,
                         });
                     };
             i()(null != k, "Step should be set here");
             let G = (0, r.A)(() => Date.now(), [k]),
-                F = C.pn.PAYMENT_ELEMENT;
+                F = h.pn.PAYMENT_ELEMENT;
             return (0, E.Y)({
                 addPaymentMethodStepState: D,
                 initialStep: F,
-                prependSteps: [C.pn.PROMOTION_INFO],
-                appendSteps: [C.pn.REVIEW, C.pn.CONFIRM],
+                prependSteps: [h.pn.PROMOTION_INFO],
+                appendSteps: [h.pn.REVIEW, h.pn.CONFIRM],
                 useCheckoutStep: !0,
                 analyticsData: t,
                 onReturn: M ? void 0 : U,
                 onComplete: (e) => {
-                    C.l_.has(e)
-                        ? (v(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
-                        : l(C.pn.REVIEW, { trackedFromStep: e });
+                    h.l_.has(e)
+                        ? (v(f.h.COMPLETED), l(h.pn.CONFIRM, { trackedFromStep: e }))
+                        : l(h.pn.REVIEW, { trackedFromStep: e });
                 },
                 onStepChange: (e) => {
                     let { currentStep: n, toStep: l } = e,

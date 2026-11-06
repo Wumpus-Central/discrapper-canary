@@ -1,5 +1,5 @@
-var i,
-    l = n(499979),
+var l,
+    i = n(499979),
     s = n(626584),
     r = n(46653),
     a = n(734057),
@@ -9,13 +9,13 @@ var i,
     d = n(129230),
     m = n(652215),
     p =
-        (((i = {}).SELF_VIDEO = "self_video"),
-        (i.SELF_STREAM = "self_stream"),
-        (i.REMOTE_VIDEO = "remote_video"),
-        (i.REMOTE_STREAM = "remote_stream"),
-        (i.CHANGE_VIDEO_BACKGROUND = "change_video_background"),
-        (i.REPLAY_VIDEO_STREAM = "replay_video_stream"),
-        i);
+        (((l = {}).SELF_VIDEO = "self_video"),
+        (l.SELF_STREAM = "self_stream"),
+        (l.REMOTE_VIDEO = "remote_video"),
+        (l.REMOTE_STREAM = "remote_stream"),
+        (l.CHANGE_VIDEO_BACKGROUND = "change_video_background"),
+        (l.REPLAY_VIDEO_STREAM = "replay_video_stream"),
+        l);
 let g = new Map();
 n.d(
     t,
@@ -28,13 +28,13 @@ n.d(
                 this.logger = new s.A(e);
             }
             onSpinnerStarted() {
-                null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.tB)());
+                null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, i.tB)());
             }
             trackSpinnerDuration(e, t, n) {
-                let i;
+                let l;
                 if (null == this.spinnerVisibleStart) return;
-                let s = ((i = (g.get(n) ?? 0) + 1), g.set(n, i), i),
-                    p = (0, l.tB)() - this.spinnerVisibleStart;
+                let s = ((l = (g.get(n) ?? 0) + 1), g.set(n, l), l),
+                    p = (0, i.tB)() - this.spinnerVisibleStart;
                 if (((this.spinnerVisibleStart = null), p < 0))
                     return void this.logger.warn(`spinner duration is negative: ${p} ms
         [${e}, count for stream: ${s}]`);

@@ -1,5 +1,5 @@
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     s = n(120692),
     r = n(855986),
     a = n(866323),
@@ -22,7 +22,7 @@ n.d(
             let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
                 { emoji: x, sentAt: A } = n,
                 v = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
-                [E, C] = l.useState(!0),
+                [E, C] = i.useState(!0),
                 I = !v,
                 j = (0, a.p)(E, {
                     from: { rotate: -120 },
@@ -34,7 +34,7 @@ n.d(
                         "leave" === n && c();
                     },
                 });
-            return (l.useEffect(() => {
+            return (i.useEffect(() => {
                 let e;
                 return (
                     Date.now() - A >= f
@@ -56,10 +56,10 @@ n.d(
                       let { rotate: n } = e;
                       return (
                           t &&
-                          (0, i.jsx)(s.animated.div, {
+                          (0, l.jsx)(s.animated.div, {
                               className: m._,
                               style: { transform: n.to(h) },
-                              children: (0, i.jsx)(o.A, {
+                              children: (0, l.jsx)(o.A, {
                                   className: m.F,
                                   emojiId: x.id,
                                   emojiName: x.name,

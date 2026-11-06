@@ -1,5 +1,5 @@
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     s = n(435558),
     r = n(451988),
     a = n(964486),
@@ -9,7 +9,7 @@ var i = n(477900),
     d = n(129230),
     m = n(652215);
 let p = { x: 0, y: 0 },
-    g = l.createContext({
+    g = i.createContext({
         enabled: !1,
         zoomLevel: 1,
         minZoom: 1,
@@ -29,66 +29,66 @@ let p = { x: 0, y: 0 },
         setPanOffset: () => {},
         clampPanOffset: () => p,
         doZoom: () => {},
-        wrapperRef: l.createRef(),
+        wrapperRef: i.createRef(),
     }),
     f = (0, s.debounce)((e, t, n) => {
-        let i = null,
-            l = null;
+        let l = null,
+            i = null;
         if (null != n && (0, o.wL)(n)) {
             let e = (0, o.Iy)(n),
                 t = (0, u.Ee)(e, c.A);
-            ((i = t?.name ?? null), (l = t?.id ?? null));
+            ((l = t?.name ?? null), (i = t?.id ?? null));
         }
         d.default.track(m.HAw.VIDEO_STREAM_ZOOM_CHANGED, {
             zoom_level: e,
             method: t,
-            share_application_name: i,
-            share_application_id: l,
+            share_application_name: l,
+            share_application_id: i,
         });
     }, 2e3),
-    h = l.memo(function (e) {
+    h = i.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
-            [c, d] = l.useState(n),
-            [m, h] = l.useState(!1),
-            [x, A] = l.useState(!1),
-            [v, E] = l.useState(!1),
-            [C, I] = l.useState(!1),
-            [j, S] = l.useState(16 / 9),
-            [_, b] = l.useState({ x: 0, y: 0 }),
-            N = l.useRef(null),
-            y = l.useRef(null);
+            [c, d] = i.useState(n),
+            [m, h] = i.useState(!1),
+            [x, A] = i.useState(!1),
+            [v, E] = i.useState(!1),
+            [C, I] = i.useState(!1),
+            [j, S] = i.useState(16 / 9),
+            [_, b] = i.useState({ x: 0, y: 0 }),
+            N = i.useRef(null),
+            y = i.useRef(null);
         (0, a.l0)(() => {
             y.current?.stop();
         });
-        let L = l.useCallback(
+        let T = i.useCallback(
                 (e, t) => {
                     if (null == N.current) return p;
                     let n = t ?? c,
-                        i = N.current.clientWidth,
-                        l = N.current.clientHeight,
-                        r = (i * (n - 1)) / 2,
-                        a = (l * (n - 1)) / 2;
+                        l = N.current.clientWidth,
+                        i = N.current.clientHeight,
+                        r = (l * (n - 1)) / 2,
+                        a = (i * (n - 1)) / 2;
                     return { x: (0, s.clamp)(e.x, -r, r), y: (0, s.clamp)(e.y, -a, a) };
                 },
                 [c],
             ),
-            T = l.useCallback(
-                (e, i, l) => {
+            L = i.useCallback(
+                (e, l, i) => {
                     let a = (0, s.clamp)(e, n, o);
-                    if (null == i || a === c) return;
+                    if (null == l || a === c) return;
                     h(!0);
                     let u = a / c;
-                    (b((e) => L({ x: (e.x - i.x) * u + i.x, y: (e.y - i.y) * u + i.y }, a)),
+                    (b((e) => T({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
                         d(a),
-                        f(a, l, t),
+                        f(a, i, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
                             h(!1);
                         }));
                 },
-                [L, o, n, t, c],
+                [T, o, n, t, c],
             ),
-            D = l.useMemo(
+            R = i.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -105,22 +105,22 @@ let p = { x: 0, y: 0 },
                     setIsSlidering: I,
                     videoAspectRatio: j,
                     setVideoAspectRatio: S,
-                    doZoom: T,
+                    doZoom: L,
                     panOffset: _,
                     setPanOffset: b,
                     wrapperRef: N,
-                    clampPanOffset: L,
+                    clampPanOffset: T,
                 }),
-                [L, T, x, C, v, m, o, n, _, j, c],
+                [T, L, x, C, v, m, o, n, _, j, c],
             );
-        return (0, i.jsx)(g.Provider, { value: D, children: u });
+        return (0, l.jsx)(g.Provider, { value: R, children: u });
     });
 n.d(
     t,
     {},
     {
         Ay: function (e) {
-            return e.enableZoom ? (0, i.jsx)(h, { ...e }) : e.children;
+            return e.enableZoom ? (0, l.jsx)(h, { ...e }) : e.children;
         },
         e9: g,
         qd: p,

@@ -17,8 +17,8 @@ n.d(
                     paymentModalStepProps: { handleStepChange: t },
                     layout: n,
                     renderStepBody: p,
-                    renderLeftColumn: h,
-                    renderRightColumn: C,
+                    renderLeftColumn: C,
+                    renderRightColumn: h,
                     renderBottomContent: f,
                     primaryCTAButtonProps: E,
                     onBackClick: S,
@@ -35,11 +35,11 @@ n.d(
                             ? p()
                             : (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      (0, l.jsxs)("div", { className: m.D, children: [h(), C()] }),
+                                      (0, l.jsxs)("div", { className: m.D, children: [C(), h()] }),
                                       null != f && f(),
                                   ],
                               }),
-                    [n, p, h, C, f],
+                    [n, p, C, h, f],
                 ),
                 v = i.useMemo(() => ({ ...E, onClick: A, text: d.intl.string(d.t.XiOHRX) }), [E, A]);
             return (0, l.jsxs)(l.Fragment, {

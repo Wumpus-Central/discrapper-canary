@@ -1,6 +1,6 @@
 (n(134528), n(947204));
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     s = n(520698),
     r = n(412780),
     a = n(262012);
@@ -11,30 +11,30 @@ n.d(
         A: function (e) {
             let { currentUserId: t, participant: n } = e,
                 o = (0, s.A)(n.type),
-                [u, c] = l.useState(),
-                [d, m] = l.useState(),
-                [p, g] = l.useState(),
-                [f, h] = l.useState(),
+                [u, c] = i.useState(),
+                [d, m] = i.useState(),
+                [p, g] = i.useState(),
+                [f, h] = i.useState(),
                 x = n.id.split(":").at(-1),
                 A = t === x,
-                v = l.useCallback((e, t, n) => {
-                    var i, l;
+                v = i.useCallback((e, t, n) => {
+                    var l, i;
                     let s = n ? r.Ay.getOutboundStats(t) : r.Ay.getInboundStats(e, t),
                         a =
-                            void 0 === (i = s?.resolution) || (0 === i.width && 0 === i.height)
+                            void 0 === (l = s?.resolution) || (0 === l.width && 0 === l.height)
                                 ? "unknown"
-                                : i.width + " x " + i.height;
+                                : l.width + " x " + l.height;
                     (c("unknown" === a ? "-" : (s?.codec ?? "unknown")),
                         m("unknown" === a ? "-" : a),
                         g(
                             s?.bitrateEstimate !== void 0
-                                ? ((l = s.bitrateEstimate), `${(l / 1e3).toFixed(2)} Kbps`)
+                                ? ((i = s.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                                 : "unknown",
                         ),
                         h("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
                 }, []);
             return (
-                l.useEffect(() => {
+                i.useEffect(() => {
                     function e() {
                         return v(x, o, A);
                     }
@@ -42,37 +42,37 @@ n.d(
                     let t = setInterval(e, 1e3);
                     return () => clearInterval(t);
                 }, [A, x, o, v]),
-                (0, i.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: a.w,
                     children: [
-                        (0, i.jsx)("div", { children: (0, i.jsx)("strong", { children: "Stream Info" }) }),
-                        (0, i.jsxs)("div", {
+                        (0, l.jsx)("div", { children: (0, l.jsx)("strong", { children: "Stream Info" }) }),
+                        (0, l.jsxs)("div", {
                             className: a.l,
                             children: [
-                                (0, i.jsx)("span", { children: "Video Codec: " }),
-                                (0, i.jsx)("strong", { children: u }),
+                                (0, l.jsx)("span", { children: "Video Codec: " }),
+                                (0, l.jsx)("strong", { children: u }),
                             ],
                         }),
-                        (0, i.jsxs)("div", {
+                        (0, l.jsxs)("div", {
                             className: a.l,
                             children: [
-                                (0, i.jsx)("span", { children: "Resolution: " }),
-                                (0, i.jsx)("strong", { children: d }),
+                                (0, l.jsx)("span", { children: "Resolution: " }),
+                                (0, l.jsx)("strong", { children: d }),
                             ],
                         }),
-                        (0, i.jsxs)("div", {
+                        (0, l.jsxs)("div", {
                             className: a.l,
                             children: [
-                                (0, i.jsx)("span", { children: "FPS: " }),
-                                (0, i.jsx)("strong", { children: f }),
+                                (0, l.jsx)("span", { children: "FPS: " }),
+                                (0, l.jsx)("strong", { children: f }),
                             ],
                         }),
                         A &&
-                            (0, i.jsxs)("div", {
+                            (0, l.jsxs)("div", {
                                 className: a.l,
                                 children: [
-                                    (0, i.jsx)("span", { children: "Bitrate Estimate: " }),
-                                    (0, i.jsx)("strong", { children: p }),
+                                    (0, l.jsx)("span", { children: "Bitrate Estimate: " }),
+                                    (0, l.jsx)("strong", { children: p }),
                                 ],
                             }),
                     ],

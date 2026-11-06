@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(120700),
     m = n(854354),
     p = n(886767),
-    h = n(69882),
-    C = n(744615),
+    C = n(69882),
+    h = n(744615),
     f = n(241989),
     E = n(516106),
     S = n(818296),
@@ -173,7 +173,7 @@ function ea(e) {
             let e = [];
             return (null != a && e.push(a), e.length > 0 ? e : null);
         }, [a]);
-    return (0, l.jsx)(h.Wl, { footerInlineNoticeProps: s });
+    return (0, l.jsx)(C.Wl, { footerInlineNoticeProps: s });
 }
 function es(e) {
     let { productLine: t, application: n, isGift: i } = e;
@@ -206,14 +206,14 @@ function eo(e) {
                 e.length > 0 ? e : null
             );
         }, [r, o]);
-    return (0, l.jsx)(h.zJ, { upperInlineNoticeProps: u, shouldShowGlobalNotices: !0 });
+    return (0, l.jsx)(C.zJ, { upperInlineNoticeProps: u, shouldShowGlobalNotices: !0 });
 }
 function eu(e) {
     let { application: t } = e,
         n = (0, E.t4)((e) => e.unifiedCheckoutFlow);
     return n === d.C.SLAYER_STOREFRONT_CHECKOUT || n === d.C.PREMIUM_APPS_OTP_CHECKOUT
         ? (0, l.jsx)(eo, { application: t })
-        : (0, l.jsx)(h.zJ, { upperInlineNoticeProps: null, shouldShowGlobalNotices: !0 });
+        : (0, l.jsx)(C.zJ, { upperInlineNoticeProps: null, shouldShowGlobalNotices: !0 });
 }
 function ec(e) {
     let { handlePaymentSourceAdd: t } = e,
@@ -309,7 +309,7 @@ function ec(e) {
                 })({ sku: f, invoicePreview: r }),
             [f, r],
         ),
-        M = i.useMemo(() => (null != j ? (0, l.jsx)(C.Vm, { ...j }) : null), [j]),
+        M = i.useMemo(() => (null != j ? (0, l.jsx)(h.Vm, { ...j }) : null), [j]),
         F = i.useMemo(() => {
             var e, t;
             return (
@@ -396,7 +396,7 @@ function ec(e) {
         children: [
             n === d.C.COLLECTIBLES_CHECKOUT &&
                 (0, l.jsx)(V, { requiredCheckoutFlow: d.C.COLLECTIBLES_CHECKOUT, invoicePreview: r, product: N }),
-            (0, l.jsx)(h.T_, {
+            (0, l.jsx)(C.T_, {
                 headerBadgeConfig: ee,
                 purchaseItemContent: F,
                 invoiceSummaryContent: M,

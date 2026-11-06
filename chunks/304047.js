@@ -1,5 +1,5 @@
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(866665),
@@ -24,12 +24,12 @@ n.d(
     {
         M: function (e) {
             let { userId: t, applicationId: n, channel: s, hideWhenInactive: o, idle: u } = e,
-                [g, f] = l.useState(!1),
-                h = l.useRef(null),
-                A = l.useCallback(() => f(!0), []),
-                v = l.useCallback(() => f(!1), []),
+                [g, f] = i.useState(!1),
+                h = i.useRef(null),
+                A = i.useCallback(() => f(!0), []),
+                v = i.useCallback(() => f(!1), []),
                 j = C.intl.string(C.t["wg/30i"]);
-            return (0, i.jsx)(c.Y, {
+            return (0, l.jsx)(c.Y, {
                 targetElementRef: h,
                 shouldShow: g,
                 animation: c.Y.Animation.FADE,
@@ -38,20 +38,20 @@ n.d(
                 spacing: 8,
                 onRequestClose: v,
                 renderPopout: () =>
-                    (0, i.jsx)(d.N, {
+                    (0, l.jsx)(d.N, {
                         theme: E.NJ.DARK,
                         children: (e) =>
-                            (0, i.jsx)(x.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
+                            (0, l.jsx)(x.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
                     }),
                 children: () =>
-                    (0, i.jsx)("div", {
+                    (0, l.jsx)("div", {
                         ref: h,
-                        children: (0, i.jsx)(a.m, {
+                        children: (0, l.jsx)(a.m, {
                             text: j,
                             shouldShow: !g && void 0,
-                            children: (0, i.jsx)("div", {
+                            children: (0, l.jsx)("div", {
                                 className: r()(I.V7, { [I.kl]: o, [I.N7]: u }),
-                                children: (0, i.jsx)(m.K, {
+                                children: (0, l.jsx)(m.K, {
                                     size: "sm",
                                     variant: "overlay-secondary",
                                     onClick: (e) => {
@@ -67,28 +67,28 @@ n.d(
         },
         X: function (e) {
             let { applicationId: t, hideApplicationName: n } = e,
-                { gameId: l, gameRecord: s } = (0, h.A)({ applicationId: t }),
+                { gameId: i, gameRecord: s } = (0, h.A)({ applicationId: t }),
                 c = (0, f.A)({
                     location: "SocialLayerCommerceGameDetailsButton",
-                    gameId: l ?? void 0,
+                    gameId: i ?? void 0,
                     source: g.GameProfileSources.CallTile,
                     trackEntryPointImpression: !0,
                 }),
                 d = s?.getIconURL(v.iu.SMALL);
             if (null == c || null == s || (0, A.uJ)(d)) return null;
             let m = C.intl.string(C.t.ajHoOr);
-            return (0, i.jsx)(a.m, {
+            return (0, l.jsx)(a.m, {
                 text: m,
-                children: (0, i.jsxs)(o.D, {
+                children: (0, l.jsxs)(o.D, {
                     className: r()(I.dY, I.ac, { [I.M7]: n }),
                     onClick: c,
                     "aria-label": m,
                     children: [
-                        (0, i.jsx)("div", {
+                        (0, l.jsx)("div", {
                             className: I.jy,
-                            children: (0, i.jsx)("img", { className: I.Se, src: d, alt: "", "aria-hidden": !0 }),
+                            children: (0, l.jsx)("img", { className: I.Se, src: d, alt: "", "aria-hidden": !0 }),
                         }),
-                        !n && (0, i.jsx)(u.E, { variant: "body-sm/normal", className: I.Wk, children: s.name }),
+                        !n && (0, l.jsx)(u.E, { variant: "body-sm/normal", className: I.Wk, children: s.name }),
                     ],
                 }),
             });

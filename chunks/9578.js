@@ -7,9 +7,9 @@ var n = l(477900),
     o = l(688810),
     c = l(889558);
 let u = r.memo(function (e) {
-    let { onClick: t, trusted: l, title: i, href: u, children: m, messageId: h, channelId: C, ...g } = e,
-        { analyticsLocations: v } = (0, o.Ay)(d.A.MASKED_LINK),
-        x = r.useCallback((t) => (0, c.h)(e, t, v), [v, e]),
+    let { onClick: t, trusted: l, title: i, href: u, children: m, messageId: h, channelId: g, ...v } = e,
+        { analyticsLocations: C } = (0, o.Ay)(d.A.MASKED_LINK),
+        x = r.useCallback((t) => (0, c.h)(e, t, C), [C, e]),
         p = r.useCallback(
             (e) => {
                 1 === e.button && x(e);
@@ -18,7 +18,7 @@ let u = r.memo(function (e) {
         ),
         f = s().sanitizeUrl(u);
     return (0, n.jsx)(a.Anchor, {
-        ...g,
+        ...v,
         title: i,
         target: "_blank",
         rel: "noreferrer noopener",

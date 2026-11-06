@@ -1,5 +1,5 @@
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     s = n(115560),
     r = n(855986),
     a = n(73153),
@@ -16,23 +16,23 @@ n.d(
         A: function (e) {
             let { channelId: t, guildId: n, userId: g, containerDimensions: f } = e,
                 h = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
-                [x, A] = l.useState([]),
+                [x, A] = i.useState([]),
                 v = x.length < 50;
-            l.useEffect(() => {
+            i.useEffect(() => {
                 function e(e) {
-                    let { channelId: i, userId: l, emoji: r, animationType: a, animationId: o } = e;
-                    if (null != g && g !== l) return;
+                    let { channelId: l, userId: i, emoji: r, animationType: a, animationId: o } = e;
+                    if (null != g && g !== i) return;
                     let d = null != r && null != a && null != o;
-                    if (i === t && !h && v && d) {
+                    if (l === t && !h && v && d) {
                         let e = (0, c.Br)(r),
-                            i = null != r.id && !r.animated,
+                            l = null != r.id && !r.animated,
                             d = {
                                 id: (0, s.A)(),
                                 animationType: a,
                                 animationId: o,
-                                shouldResize: i,
+                                shouldResize: l,
                                 url: e,
-                                userId: l,
+                                userId: i,
                             };
                         (A((e) => [...e, d]),
                             u.Ay.trackWithMetadata(m.HAw.VOICE_CHANNEL_EFFECT_VIEWED, { channel_id: t, guild_id: n }));
@@ -45,22 +45,22 @@ n.d(
                     }
                 );
             }, [t, n, g, h, v]);
-            let E = l.useCallback((e) => {
+            let E = i.useCallback((e) => {
                 A((t) => {
                     let n = [...t],
-                        i = n.findIndex((t) => t.id === e);
-                    return (n.splice(i, 1), n);
+                        l = n.findIndex((t) => t.id === e);
+                    return (n.splice(l, 1), n);
                 });
             }, []);
             return h
                 ? null
-                : (0, i.jsx)("div", {
+                : (0, l.jsx)("div", {
                       className: p.Y,
                       style: { width: f.width },
-                      children: (0, i.jsx)("div", {
+                      children: (0, l.jsx)("div", {
                           className: p.z,
                           children: x.map((e) =>
-                              (0, i.jsx)(d.A, { containerDimensions: f, effect: e, onComplete: E }, e.id),
+                              (0, l.jsx)(d.A, { containerDimensions: f, effect: e, onComplete: E }, e.id),
                           ),
                       }),
                   });

@@ -1,6 +1,6 @@
 n.d(t, { $: () => A, A: () => v });
-var i,
-    l = n(477900),
+var l,
+    i = n(477900),
     s = n(582128),
     r = n(503698),
     a = n.n(r),
@@ -14,12 +14,12 @@ var i,
 let f = 20 * p.A.Millis.SECOND;
 var h = n(821589),
     x = n(950183),
-    A = (((i = {}).CONTAIN = "contain"), (i.COVER = "cover"), (i.COVER_LANDSCAPE = "cover-landscape"), i);
+    A = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
 let v = s.memo(function (e) {
     let {
             streamId: t,
             onResize: n,
-            wrapperClassName: i,
+            wrapperClassName: l,
             videoComponent: r,
             className: p,
             fit: A = "contain",
@@ -32,38 +32,38 @@ let v = s.memo(function (e) {
             emptyPreviewAspectRatio: _ = "16 / 9",
         } = e,
         [b, N] = s.useState(!0),
-        [y, L] = s.useState(null),
-        T = s.useCallback(
+        [y, T] = s.useState(null),
+        L = s.useCallback(
             (e) => {
-                ("cover-landscape" === A && L(e), n?.(e));
+                ("cover-landscape" === A && T(e), n?.(e));
             },
             [A, n],
         ),
-        D = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
+        R = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
     !(function (e) {
-        let { location: t, videoSpinnerContext: n, userId: i, streamId: l, loading: r, paused: a = !1 } = e,
+        let { location: t, videoSpinnerContext: n, userId: l, streamId: i, loading: r, paused: a = !1 } = e,
             [o] = s.useState(() => new d.M(t));
         s.useEffect(() => {
-            a || (r ? o.onSpinnerStarted() : null != l && o.trackSpinnerDuration(n, i, l));
-        }, [r, a, l, o, n, i]);
+            a || (r ? o.onSpinnerStarted() : null != i && o.trackSpinnerDuration(n, l, i));
+        }, [r, a, i, o, n, l]);
     })({ location: "VideoStream", videoSpinnerContext: I, userId: j, streamId: t, loading: b, paused: E });
-    let { onReady: R } = (function (e) {
-            let { streamId: t, userId: n, videoSpinnerContext: i, streamKey: l, loading: r, paused: a = !1 } = e,
+    let { onReady: D } = (function (e) {
+            let { streamId: t, userId: n, videoSpinnerContext: l, streamKey: i, loading: r, paused: a = !1 } = e,
                 o = s.useRef(new c.Ep()),
-                p = i === d.u.SELF_STREAM || i === d.u.REMOTE_STREAM ? u.x.STREAM : u.x.DEFAULT;
+                p = l === d.u.SELF_STREAM || l === d.u.REMOTE_STREAM ? u.x.STREAM : u.x.DEFAULT;
             return (
                 s.useEffect(() => {
                     if (!r || a || !m.X.isIncomingVideoEnabled()) return;
                     let e = o.current;
                     return (
                         e.start(f, () => {
-                            (0, g.Z)(t, n, p, l);
+                            (0, g.Z)(t, n, p, i);
                         }),
                         () => {
                             e.stop();
                         }
                     );
-                }, [a, t, r, p, l, n]),
+                }, [a, t, r, p, i, n]),
                 {
                     onReady: s.useCallback(() => {
                         (o.current.stop(), (0, g.W)(p, n));
@@ -72,35 +72,35 @@ let v = s.memo(function (e) {
             );
         })({ streamId: t, userId: j, loading: b, videoSpinnerContext: I, streamKey: S, paused: E }),
         k = s.useCallback(() => {
-            (N(!1), R());
-        }, [R]);
-    return (0, l.jsxs)("div", {
-        className: a()(x.wrapper, i),
+            (N(!1), D());
+        }, [D]);
+    return (0, i.jsxs)("div", {
+        className: a()(x.wrapper, l),
         children: [
             null != t &&
-                (0, l.jsx)(r, {
-                    className: a()(x.video, (0, h.t)(x, "video", D), { [x.mirror]: v }, p),
+                (0, i.jsx)(r, {
+                    className: a()(x.video, (0, h.t)(x, "video", R), { [x.mirror]: v }, p),
                     streamId: t,
-                    onResize: T,
+                    onResize: L,
                     onReady: k,
                     paused: E,
                 }),
             E
                 ? null
-                : (0, l.jsx)("div", {
+                : (0, i.jsx)("div", {
                       className: a()(x.previewWrapper, { [x.loading]: b }),
                       children:
                           b &&
-                          (0, l.jsxs)(s.Fragment, {
+                          (0, i.jsxs)(s.Fragment, {
                               children: [
                                   null != C
-                                      ? (0, l.jsx)("img", { src: C, alt: "", className: x.previewImage })
-                                      : (0, l.jsx)("div", {
+                                      ? (0, i.jsx)("img", { src: C, alt: "", className: x.previewImage })
+                                      : (0, i.jsx)("div", {
                                             className: x.emptyPreviewWrapper,
                                             style: { aspectRatio: _ },
-                                            children: (0, l.jsx)("div", { className: x.emptyPreview }),
+                                            children: (0, i.jsx)("div", { className: x.emptyPreview }),
                                         }),
-                                  (0, l.jsx)(o.y, { className: x.spinner }),
+                                  (0, i.jsx)(o.y, { className: x.spinner }),
                               ],
                           }),
                   }),

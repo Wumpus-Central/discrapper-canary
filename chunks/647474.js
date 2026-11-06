@@ -1,9 +1,9 @@
-var s = n(477900),
-    r = n(582128),
+var r = n(477900),
+    s = n(582128),
     o = n(503698),
     c = n.n(o),
-    i = n(317097),
-    l = n(52133),
+    l = n(317097),
+    i = n(52133),
     a = n(417098),
     u = n(43990),
     d = n(406810),
@@ -12,14 +12,14 @@ var s = n(477900),
     h = n(421108),
     j = n(818348),
     f = n(792996),
-    v = n(395822);
-function N(t) {
+    k = n(395822);
+function v(t) {
     let { days: e } = t;
-    return (0, s.jsxs)("div", {
-        className: v.S5,
+    return (0, r.jsxs)("div", {
+        className: k.S5,
         children: [
-            (0, s.jsx)(d.ClockIcon, { size: "sm", color: "currentColor" }),
-            (0, s.jsx)(m.E, {
+            (0, r.jsx)(d.ClockIcon, { size: "sm", color: "currentColor" }),
+            (0, r.jsx)(m.E, {
                 variant: "body-sm/medium",
                 color: "currentColor",
                 children: f.intl.formatToPlainString(f.t.BXpdIg, { days: e }),
@@ -27,19 +27,19 @@ function N(t) {
         ],
     });
 }
-function k(t) {
+function N(t) {
     let {
-        timeLeft: { days: e, hours: n, minutes: r, seconds: o },
+        timeLeft: { days: e, hours: n, minutes: s, seconds: o },
     } = t;
-    function i(t) {
+    function l(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = String(t).padStart(2, "0").split("");
-        return (0, s.jsx)(s.Fragment, {
+        return (0, r.jsx)(r.Fragment, {
             children: n.map((t, n) =>
-                (0, s.jsx)(
+                (0, r.jsx)(
                     m.E,
                     {
-                        className: c()(v.g2, { [v.$2]: e }),
+                        className: c()(k.g2, { [k.$2]: e }),
                         variant: "body-sm/semibold",
                         color: "currentColor",
                         children: t,
@@ -49,12 +49,12 @@ function k(t) {
             ),
         });
     }
-    function l() {
-        return (0, s.jsx)(m.E, { className: v.At, variant: "body-lg/semibold", children: ":" });
+    function i() {
+        return (0, r.jsx)(m.E, { className: k.At, variant: "body-lg/semibold", children: ":" });
     }
-    return (0, s.jsxs)("div", {
-        className: v.kz,
-        children: [e > 0 && i(e), e > 0 && l(), i(n), l(), i(r), l(), i(o, !0)],
+    return (0, r.jsxs)("div", {
+        className: k.kz,
+        children: [e > 0 && l(e), e > 0 && i(), l(n), i(), l(s), i(), l(o, !0)],
     });
 }
 n.d(
@@ -62,32 +62,32 @@ n.d(
     {},
     {
         A: function (t) {
-            let { className: e, color: n = "default", sticky: r = !1, children: o } = t,
-                l = r ? v.qf : void 0;
+            let { className: e, color: n = "default", sticky: s = !1, children: o } = t,
+                i = s ? k.qf : void 0;
             function d() {
                 let {
                     className: t,
                     noticeColor: e,
                     customStyle: n,
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                return (0, s.jsx)(a.$T, { className: t, color: e, style: n, children: o });
+                return (0, r.jsx)(a.$T, { className: t, color: e, style: n, children: o });
             }
             if ("nitro-pink" === n)
                 return d({
-                    className: c()(v.cI, v.p3, l, e),
+                    className: c()(k.cI, k.p3, i, e),
                     customStyle: {
                         "--custom-notice-background": "var(--background-surface-highest)",
                         "--custom-notice-text": "var(--text-strong)",
                         "--custom-notice-button-hover": "var(--background-surface-highest)",
                     },
                 });
-            if ((0, i.qt)(n)) {
-                let t = (0, i.OK)((0, i.LX)(n)) > 0.5 ? j.NJ.DARK : j.NJ.LIGHT;
-                return (0, s.jsx)(u.N, {
+            if ((0, l.qt)(n)) {
+                let t = (0, l.OK)((0, l.LX)(n)) > 0.5 ? j.NJ.DARK : j.NJ.LIGHT;
+                return (0, r.jsx)(u.N, {
                     theme: t,
                     children: (t) =>
                         d({
-                            className: c()(t, v.cI, l, e),
+                            className: c()(t, k.cI, i, e),
                             customStyle: {
                                 "--custom-notice-background": n,
                                 "--custom-notice-text": "var(--text-strong)",
@@ -96,23 +96,23 @@ n.d(
                         }),
                 });
             }
-            return (0, s.jsx)(u.N, {
+            return (0, r.jsx)(u.N, {
                 theme: j.NJ.DARK,
-                children: (t) => d({ className: c()(t, v.cI, l, e), noticeColor: a.Hv.BRAND }),
+                children: (t) => d({ className: c()(t, k.cI, i, e), noticeColor: a.Hv.BRAND }),
             });
         },
         S: function (t) {
             let { endDatetime: e } = t,
-                [n, o] = r.useState(() => (0, h.ZH)(e));
+                [n, o] = s.useState(() => (0, h.ZH)(e));
             return ((0, x.A)(() => {
                 let t = (0, h.ZH)(e);
-                o((e) => (null == t ? null : null != e && (0, l.A)(e, t) ? e : t));
+                o((e) => (null == t ? null : null != e && (0, i.A)(e, t) ? e : t));
             }, 1e3),
             null == n)
                 ? null
                 : n.days > 0
-                  ? (0, s.jsx)(N, { days: n.days })
-                  : (0, s.jsx)(k, { timeLeft: n });
+                  ? (0, r.jsx)(v, { days: n.days })
+                  : (0, r.jsx)(N, { timeLeft: n });
         },
     },
 );

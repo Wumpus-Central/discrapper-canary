@@ -10,18 +10,18 @@ var l = n(477900),
     d = n(351906),
     m = n(708791),
     p = n(997101),
-    h = n(120700),
-    C = n(677959),
+    C = n(120700),
+    h = n(677959),
     f = n(516106),
     E = n(652215),
     S = n(379912),
     g = n(792996),
     I = n(170691);
-let y = new Set([h.C.ORB_CHECKOUT]);
+let y = new Set([C.C.ORB_CHECKOUT]);
 function A(e) {
     let { onGiftCardRedeemed: t } = e,
         n = (0, f.t4)((e) => e.unifiedCheckoutFlow);
-    return null != n && y.has(n) ? null : (0, l.jsx)(C.Z4, { className: I.K, onComplete: t });
+    return null != n && y.has(n) ? null : (0, l.jsx)(h.Z4, { className: I.K, onComplete: t });
 }
 function P(e) {
     let { onPaymentSourceAdd: t } = e,
@@ -37,11 +37,11 @@ function P(e) {
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             checkoutStoreCountry: e.get("checkoutStoreCountry"),
         })),
-        o = (n === h.C.COLLECTIBLES_CHECKOUT && !i) || (n === h.C.PREMIUM_CHECKOUT && i && !r),
+        o = (n === C.C.COLLECTIBLES_CHECKOUT && !i) || (n === C.C.PREMIUM_CHECKOUT && i && !r),
         u = s === p.d.BR,
         c = a.some((e) => e.type === E.hes.PIX);
     return o && u && !c && null != t
-        ? (0, l.jsx)(C.y, {
+        ? (0, l.jsx)(h.y, {
               className: I.K,
               text: g.intl.string(S.default.JPRQ9L),
               onClick: () => t({ linkWalletEnabled: !1 }),
@@ -61,8 +61,8 @@ function R(e) {
             paymentSourceId: n,
             label: c,
             additionalPaymentSourceDropdownProps: p,
-            disabled: h,
-            location: C,
+            disabled: C,
+            location: h,
             onPaymentSourceAdd: E,
             subscriptionPaymentSourceId: I,
             hideCurrencySelect: y,
@@ -125,8 +125,8 @@ function R(e) {
                     hasCheckoutContextLoaded: e.get("hasCheckoutContextLoaded"),
                 })),
                 {
-                    dropdownPaymentSources: h,
-                    giftCardsEnabled: C,
+                    dropdownPaymentSources: C,
+                    giftCardsEnabled: h,
                     dropdownPaymentSourceId: E,
                     handleDropdownPaymentSourceChange: S,
                     giftCardCheckboxProps: g,
@@ -189,25 +189,25 @@ function R(e) {
                 setPendingGiftCardWalletSelection: c,
             });
             let b = i.useMemo(() => {
-                    let e = h.find((e) => e.isDefault);
+                    let e = C.find((e) => e.isDefault);
                     return null != e ? e.id : void 0;
-                }, [h]),
+                }, [C]),
                 N = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
             return {
-                giftCardsEnabled: C,
+                giftCardsEnabled: h,
                 giftCardCheckboxProps: g,
                 walletCoversSubtotal: I,
                 walletCoversTotal: y,
                 basePaymentSourceDropdownProps: i.useMemo(
                     () => ({
                         selectedPaymentSourceId: E,
-                        paymentSources: h,
+                        paymentSources: C,
                         defaultPaymentSourceId: b,
                         hidePersonalInformation: N,
                         onChange: S,
                         dropdownLoading: m,
                     }),
-                    [E, h, b, N, S, m],
+                    [E, C, b, N, S, m],
                 ),
                 isSubscriptionPaidByWallet: A,
                 hidePersonalInformation: N,
@@ -216,7 +216,7 @@ function R(e) {
         })({
             paymentSourceId: M,
             setPaymentSourceId: O,
-            location: C,
+            location: h,
             subscriptionPaymentSourceId: I,
             pendingGiftCardWalletSelection: L,
             setPendingGiftCardWalletSelection: k,
@@ -244,7 +244,7 @@ function R(e) {
         et = i.useCallback(() => {
             (k(!0), q());
         }, [q]),
-        en = i.useMemo(() => Z || Q || (h ?? !1), [Z, Q, h]),
+        en = i.useMemo(() => Z || Q || (C ?? !1), [Z, Q, C]),
         { giftCardCheckboxProps: el, disabled: ei } = i.useMemo(
             () =>
                 null != T
@@ -282,8 +282,8 @@ function R(e) {
         }, [w, el, ec, ei]),
         em = w && eu,
         ep = em && W && G,
-        eh = em && !W && ec,
-        eC = null != ea,
+        eC = em && !W && ec,
+        eh = null != ea,
         ef = ep && eo.paymentSources.length > 0,
         eE = i.useMemo(() => {
             if (null != ea) return ea;
@@ -311,12 +311,12 @@ function R(e) {
                                 setIsSubmitting: eg,
                             }),
                             fallbackComponent: null,
-                            showDividerBelow: !eh,
+                            showDividerBelow: !eC,
                         }),
                     ec && ed,
-                    !eh && eE,
+                    !eC && eE,
                     !ec && ed,
-                    !eC && !em && void 0 !== es && (0, l.jsx)(b.q, { ...es }),
+                    !eh && !em && void 0 !== es && (0, l.jsx)(b.q, { ...es }),
                 ],
             }),
             w ? (0, l.jsx)(A, { onGiftCardRedeemed: et }) : null,

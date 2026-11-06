@@ -1,10 +1,10 @@
-var i = n(945810);
-let l = { enabled: !1 },
-    s = (0, i.mj)({
+var l = n(945810);
+let i = { enabled: !1 },
+    s = (0, l.mj)({
         name: "2026-08-game-profiles-vc",
         kind: "user",
-        defaultConfig: l,
-        variations: { 0: l, 1: { enabled: !0 } },
+        defaultConfig: i,
+        variations: { 0: i, 1: { enabled: !0 } },
     });
 n.d(
     t,

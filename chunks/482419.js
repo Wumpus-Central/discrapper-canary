@@ -20,27 +20,27 @@ n.d(
                     isPrepaidPaymentSource: m,
                     isCustomGift: p,
                 } = e,
-                { invoicePreview: h } = t,
-                C = (0, o.t4)((e) => e.getGiftSubscriptionPlanId()),
+                { invoicePreview: C } = t,
+                h = (0, o.t4)((e) => e.getGiftSubscriptionPlanId()),
                 f = [];
             f =
                 t.type === r.u$.PREMIUM_GIFT
-                    ? (0, i.fk)(h, { isCustomGift: p, isPrepaidPaymentSource: m, subscriptionPlan: n })
-                    : (0, i.IY)(h, {
+                    ? (0, i.fk)(C, { isCustomGift: p, isPrepaidPaymentSource: m, subscriptionPlan: n })
+                    : (0, i.IY)(C, {
                           isPrepaidPaymentSource: m,
                           invoiceSummaryType: t.type,
                           subscriptionPlan: n,
                           subscriptionTrial: d,
-                          invoicePlanId: C ?? void 0,
+                          invoicePlanId: h ?? void 0,
                       }).lineItems;
-            let E = (0, a.lp)(h, { manualLineItems: f, includeTaxLineItem: !0 }),
-                S = (0, a.Dn)(h);
+            let E = (0, a.lp)(C, { manualLineItems: f, includeTaxLineItem: !0 }),
+                S = (0, a.Dn)(C);
             return (
                 null != S && E.push(S),
                 (0, l.jsx)(s.Vm, {
                     label: c.intl.string(u.default.eoXh7B),
                     lineItems: E,
-                    currency: h.currency,
+                    currency: C.currency,
                     defaultExpanded: null != S,
                 })
             );

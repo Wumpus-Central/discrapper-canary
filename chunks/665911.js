@@ -16,7 +16,7 @@ function u(e) {
                 return (0, n.jsx)(r.Fragment, { children: (0, n.jsx)(d.default, { url: t.target }, t.target) }, u.key);
             let m = l(t.content, u),
                 h = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
-                C = e?.mustConfirmExternalLink
+                g = e?.mustConfirmExternalLink
                     ? (e) => (
                           e?.stopPropagation(),
                           e?.preventDefault(),
@@ -46,7 +46,7 @@ function u(e) {
                           trusted: function () {
                               return c(t);
                           },
-                          onClick: C,
+                          onClick: g,
                           messageId: u.messageId,
                           channelId: u.channelId,
                           children: m,

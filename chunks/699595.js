@@ -12,13 +12,13 @@ n.d(
             let t,
                 { priceOptions: n, trialId: u, metadata: c, discountInvoicePreview: d } = e,
                 { isEligibleForDiscount: m, discountOffer: p } = (0, o.i)(),
-                h = (0, a.YJ)(p),
-                C = !0 === n.loaded,
+                C = (0, a.YJ)(p),
+                h = !0 === n.loaded,
                 f = null != d,
                 [E, S] = (0, i.YV)({
-                    items: null != h ? [{ planId: h, quantity: 1 }] : [],
+                    items: null != C ? [{ planId: C, quantity: 1 }] : [],
                     renewal: !1,
-                    preventFetch: f || !m || null == h || !C,
+                    preventFetch: f || !m || null == C || !h,
                     trialId: u,
                     paymentSourceId: n.paymentSourceId,
                     currency: n.currency,
@@ -29,12 +29,12 @@ n.d(
                     let e = m ? (g ?? null) : null;
                     return {
                         discountOffer: p,
-                        applicablePlan: h,
+                        applicablePlan: C,
                         discountInvoicePreview: e,
-                        discountAmountOff: null != h ? (0, a.pg)(e, h) : null,
+                        discountAmountOff: null != C ? (0, a.pg)(e, C) : null,
                         discountInvoiceError: S,
                     };
-                }, [p, h, g, S, m]);
+                }, [p, C, g, S, m]);
             return (
                 (t = (0, s.t4)((e) => {
                     let { setPremiumDiscountInfo: t } = e;

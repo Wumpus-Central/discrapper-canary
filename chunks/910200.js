@@ -10,14 +10,14 @@ var i = n(503698),
     d = n(812095),
     m = n(421108),
     p = n(898744);
-function h(e) {
+function C(e) {
     let {
         className: t,
         Icon: n = a.TagIcon,
         iconSize: i,
         customGraphic: m,
-        gradientColor: h = "green",
-        tooltip: C,
+        gradientColor: C = "green",
+        tooltip: h,
         text: f,
         trailing: E,
         ...S
@@ -25,7 +25,7 @@ function h(e) {
     function g() {
         return (0, l.jsx)(c.A, {
             className: r()(p.Xx, t),
-            gradientColor: h,
+            gradientColor: C,
             ...(null != m ? { customGraphic: m } : { Icon: n, iconSize: i }),
             ...S,
             children: (0, l.jsxs)("div", {
@@ -41,15 +41,15 @@ function h(e) {
             }),
         });
     }
-    return null != C && "object" == typeof C
-        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...C, children: g() })
-        : null != C && "string" == typeof C
-          ? (0, l.jsx)(u.m, { text: C, asContainer: !0, tag: "div", children: g() })
+    return null != h && "object" == typeof h
+        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: g() })
+        : null != h && "string" == typeof h
+          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: g() })
           : g();
 }
-function C(e) {
+function h(e) {
     let { trailingText: t, ...n } = e;
-    return (0, l.jsx)(h, {
+    return (0, l.jsx)(C, {
         trailing:
             null != t
                 ? (0, l.jsx)(s.E, {
@@ -65,13 +65,13 @@ n.d(
     t,
     {},
     {
-        Ay: h,
+        Ay: C,
         O0: function (e) {
             let { text: t, endDatetime: n, ...i } = e,
                 r = (0, m.dA)(n);
             return null != n && null == r
                 ? null
-                : (0, l.jsx)(C, { text: t, trailingText: null != r ? r : void 0, ...i });
+                : (0, l.jsx)(h, { text: t, trailingText: null != r ? r : void 0, ...i });
         },
     },
 );
