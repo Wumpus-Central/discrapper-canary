@@ -14,5 +14,11 @@ var i,
         (i.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS = "topical_navigation_multiple_impressions"),
         (i.GUILD_ROOM_JOINED = "guild_room_joined"),
         (i.YOUTUBE_3PP_MODAL_DISMISSED = "youtube_3pp_modal_dismissed"),
+        (i.GUILD_CREATED = "guild_created"),
+        (i.FRIEND_REQUEST_SENT = "friend_request_sent"),
+        (i.FRIEND_REQUEST_ACCEPTED = "friend_request_accepted"),
+        (i.USER_BLOCKED = "user_blocked"),
+        (i.REPORT_SUBMITTED = "report_submitted"),
+        (i.GROUP_DM_CREATED = "group_dm_created"),
         i);
 n.d(t, {}, { w: r });

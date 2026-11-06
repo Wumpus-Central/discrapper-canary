@@ -14,6 +14,12 @@ let i = {
     topical_navigation_multiple_impressions: 100,
     guild_room_joined: 100,
     youtube_3pp_modal_dismissed: 100,
+    guild_created: 25,
+    friend_request_sent: 1,
+    friend_request_accepted: 1,
+    user_blocked: 1,
+    report_submitted: 2,
+    group_dm_created: 2,
 };
 var r = n(620632),
     a = n(73153),
