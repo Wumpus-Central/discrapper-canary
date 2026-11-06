@@ -9515,7 +9515,7 @@ function dw() {
     return (0, p.jsx)(sK.H, { guildId: e?.id, refetchOnMount: !0, children: (0, p.jsx)(dU, {}) });
 }
 var dF = n(450510),
-    dB = n(696357),
+    dB = n(284305),
     dH = n(383272),
     dV = n(414133);
 let dz = { description: "", channels: [], enabled: !1 },
