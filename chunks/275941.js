@@ -3638,7 +3638,7 @@ let lD = function () {
         t =
             null != (e = (0, x.bG)([lL.A], () => lL.A.getMinimumAge()))
                 ? z.intl.formatToPlainString(z.t.Sn7icL, { minAge: e })
-                : z.intl.string(z.t.WqEH4D);
+                : z.intl.string(z.t.r2AEw1);
     return (0, u.jsx)(G.Ay, {
         children: (0, u.jsxs)("div", {
             className: lO.hQ,
