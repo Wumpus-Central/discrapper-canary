@@ -64,7 +64,7 @@ function P(e) {
         ],
     });
 }
-function G(e) {
+function U(e) {
     let { stats: t } = e,
         { topGuild: a, topGuildAcronymCharacter: s, topEmoji: n, topGame: d } = t,
         l = r.useMemo(
@@ -118,7 +118,7 @@ function G(e) {
         ],
     });
 }
-function U(e) {
+function G(e) {
     let { isCheckpointEnabled: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -142,20 +142,20 @@ function H(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
         ? (0, i.jsx)(x.m, {
-              text: T.intl.string(R.default["hfFIo/"]),
+              text: T.intl.string(O.default.UjtEWE),
               caretConfig: { align: "end" },
               ariaHidden: !0,
               children: (0, i.jsx)(m.D, {
                   className: n()(y.qr, y.vk),
                   onClick: a,
-                  "aria-label": T.intl.string(R.default["hfFIo/"]),
-                  children: (0, i.jsx)(U, { isCheckpointEnabled: t }),
+                  "aria-label": T.intl.string(O.default.UjtEWE),
+                  children: (0, i.jsx)(G, { isCheckpointEnabled: t }),
               }),
           })
         : (0, i.jsx)("div", {
               className: y.qr,
               "aria-hidden": !0,
-              children: (0, i.jsx)(U, { isCheckpointEnabled: t }),
+              children: (0, i.jsx)(G, { isCheckpointEnabled: t }),
           });
 }
 a.d(
@@ -181,7 +181,7 @@ a.d(
                         ? (0, i.jsx)(j.A, { powerLevel: h.powerLevel, powerLevelUnits: h.powerLevelUnits })
                         : null,
                     null != s ? (0, i.jsx)(w.A, { character: s }) : null,
-                    null != h ? (0, i.jsx)(G, { stats: h }) : null,
+                    null != h ? (0, i.jsx)(U, { stats: h }) : null,
                     (0, i.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
                 ],
             });
