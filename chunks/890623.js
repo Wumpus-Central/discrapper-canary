@@ -1513,47 +1513,50 @@ function nT(e) {
 function nI(e, t, i) {
     return (0, l.jsx)(nT, {
         title: et.intl.string(ee.default.gMeekL),
-        subtitle: (function (e) {
-            switch (e.kind) {
-                case "off":
-                    return et.intl.string(ee.default.YEnpaj);
-                case "on":
-                    return e.monthlyText;
-                case "close-to-limit":
-                    return (0, l.jsxs)(l.Fragment, {
-                        children: [
-                            e.monthlyText,
-                            " \xb7 ",
-                            (0, l.jsx)(x.E, {
-                                variant: "body-sm/normal",
-                                color: "text-feedback-warning",
-                                tag: "span",
-                                children: e.remainingText,
-                            }),
-                        ],
-                    });
-                case "spent":
-                    return (0, l.jsxs)(l.Fragment, {
-                        children: [
-                            e.monthlyText,
-                            " \xb7 ",
-                            (0, l.jsx)(x.E, {
-                                variant: "body-sm/normal",
-                                color: "text-feedback-critical",
-                                tag: "span",
-                                children: et.intl.string(ee.default.Q2msVQ),
-                            }),
-                        ],
-                    });
-                case "blocked":
-                    return (0, l.jsx)(x.E, {
-                        variant: "body-sm/normal",
-                        color: "text-feedback-critical",
-                        tag: "span",
-                        children: et.intl.string(ee.default.FUu2b0),
-                    });
-            }
-        })(t),
+        subtitle:
+            null != t
+                ? (function (e) {
+                      switch (e.kind) {
+                          case "off":
+                              return et.intl.string(ee.default.YEnpaj);
+                          case "on":
+                              return e.monthlyText;
+                          case "close-to-limit":
+                              return (0, l.jsxs)(l.Fragment, {
+                                  children: [
+                                      e.monthlyText,
+                                      " \xb7 ",
+                                      (0, l.jsx)(x.E, {
+                                          variant: "body-sm/normal",
+                                          color: "text-feedback-warning",
+                                          tag: "span",
+                                          children: e.remainingText,
+                                      }),
+                                  ],
+                              });
+                          case "spent":
+                              return (0, l.jsxs)(l.Fragment, {
+                                  children: [
+                                      e.monthlyText,
+                                      " \xb7 ",
+                                      (0, l.jsx)(x.E, {
+                                          variant: "body-sm/normal",
+                                          color: "text-feedback-critical",
+                                          tag: "span",
+                                          children: et.intl.string(ee.default.Q2msVQ),
+                                      }),
+                                  ],
+                              });
+                          case "blocked":
+                              return (0, l.jsx)(x.E, {
+                                  variant: "body-sm/normal",
+                                  color: "text-feedback-critical",
+                                  tag: "span",
+                                  children: et.intl.string(ee.default.FUu2b0),
+                              });
+                      }
+                  })(t)
+                : void 0,
         buttonText: et.intl.string(et.t.bt75uw),
         onButtonPress: () => {
             (0, Z.mM)(async () => {
@@ -1584,8 +1587,9 @@ function nS(e) {
 }
 function n_(e) {
     let { teenId: t } = e,
-        n = th.fD.useControlledSetting(t);
-    return nI(t, no(n));
+        n = no(th.fD.useControlledSetting(t)),
+        l = (0, B.Vt)(t);
+    return nI(t, l ? n : null);
 }
 function nC(e) {
     let { teenId: t, readOnly: r = !1 } = e,

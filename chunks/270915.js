@@ -1,150 +1,178 @@
-l.d(n, { default: () => k });
-var a = l(477900),
-    i = l(582128),
-    e = l(646514),
-    r = l(189213),
-    o = l(331322),
-    s = l(738188),
-    u = l(834730),
-    d = l(858899),
-    c = l(95477),
-    g = l(580630),
-    m = l(465323),
-    f = l(855986),
-    h = l(389462),
-    p = l(695515),
-    b = l(361157),
-    x = l(665956),
-    C = l(792996),
-    y = l(681364);
-function k(t) {
-    let { transitionState: n, onClose: l, teenId: k } = t,
+e.d(n, { default: () => S });
+var l = e(477900),
+    a = e(582128),
+    i = e(646514),
+    r = e(189213),
+    s = e(331322),
+    o = e(738188),
+    u = e(834730),
+    d = e(858899),
+    c = e(95477),
+    g = e(289873),
+    f = e(580630),
+    m = e(465323),
+    h = e(855986),
+    p = e(389462),
+    x = e(899847),
+    y = e(695515),
+    b = e(361157),
+    C = e(153739),
+    k = e(665956),
+    v = e(792996),
+    E = e(681364);
+function S(t) {
+    let { transitionState: n, onClose: e, teenId: S } = t,
         {
-            amountInput: v,
-            handleAmountChange: j,
-            currency: S,
-            currencySymbol: E,
-            exponent: A,
-            isClearingCap: N,
-            isOverspending: B,
-            canSave: M,
-            isSubmitting: P,
-            renewalDate: w,
-            monthlySpend: L,
-            save: D,
-        } = (function (t) {
-            let n = h.fD.useControlledSetting(t),
-                l = (0, f.bG)([p.A], () => p.A.getSpendingLimit()),
-                a = (0, f.bG)([p.A], () => p.A.getMonthlyPurchases()?.total_amount ?? null),
-                e = (n?.currency ?? l?.currency ?? "usd").toLowerCase(),
-                r = m.yR[e] ?? 2,
-                o = i.useMemo(() => (0, b.Qn)(e), [e]),
-                s = i.useMemo(b.o3, []),
-                [u, d] = i.useState(() => (null == n ? "" : String(n.amount / 10 ** r))),
-                c = i.useCallback((t) => d((0, b.cU)(t, r)), [r]),
-                g = "" === u && null != n,
-                x = parseFloat(u),
-                C = !Number.isNaN(x) && x >= 0,
-                y = g || C,
-                k = C ? Math.round(x * 10 ** r) : null,
-                v = null != a && a > 0 && null != k && k <= a,
-                [j, S] = i.useState(!1),
-                E = i.useCallback(async () => {
-                    if (y) {
-                        S(!0);
+            isLoaded: j,
+            amountInput: A,
+            handleAmountChange: T,
+            currency: L,
+            currencySymbol: N,
+            exponent: w,
+            isClearingCap: B,
+            isOverspending: M,
+            canSave: P,
+            isSubmitting: F,
+            renewalDate: D,
+            monthlySpend: G,
+            save: I,
+        } = (function (t, n) {
+            let e = (0, C.Vt)(t),
+                l = p.fD.useControlledSetting(t),
+                i = (0, h.bG)([y.A], () => y.A.getSpendingLimit()),
+                r = (0, h.bG)([y.A], () => y.A.getMonthlyPurchases()?.total_amount ?? null),
+                s = (l?.currency ?? i?.currency ?? "usd").toLowerCase(),
+                o = m.yR[s] ?? 2,
+                u = a.useMemo(() => (0, b.Qn)(s), [s]),
+                d = a.useMemo(b.o3, []),
+                c = a.useRef(!1),
+                g = a.useEffectEvent(() => {
+                    ((c.current = !0), n());
+                });
+            (a.useEffect(() => {
+                if (e) return;
+                let n = x.Ay.onTeenSettingsLoadFailure(t, g);
+                return (x.Ay.fetchTeenSettingsAndConsents(t), n);
+            }, [t, e]),
+                a.useEffect(
+                    () => () => {
+                        c.current && x.Ay.showTeenSettingsLoadErrorToast();
+                    },
+                    [],
+                ));
+            let [f, k] = a.useState(null),
+                v = f ?? (null == l ? "" : String(l.amount / 10 ** o)),
+                E = a.useCallback((t) => k((0, b.cU)(t, o)), [o]),
+                S = "" === v && null != l,
+                j = parseFloat(v),
+                A = !Number.isNaN(j) && j >= 0,
+                T = e && (S || A),
+                L = A ? Math.round(j * 10 ** o) : null,
+                N = null != r && r > 0 && null != L && L <= r,
+                [w, B] = a.useState(!1),
+                M = a.useCallback(async () => {
+                    if (T) {
+                        B(!0);
                         try {
-                            g
-                                ? await h.fD.updateControlledSetting(t, null)
-                                : null != k && (await h.fD.updateControlledSetting(t, { amount: k, currency: e }));
+                            S
+                                ? await p.fD.updateControlledSetting(t, null)
+                                : null != L && (await p.fD.updateControlledSetting(t, { amount: L, currency: s }));
                         } finally {
-                            S(!1);
+                            B(!1);
                         }
                     }
-                }, [y, g, k, t, e]);
+                }, [T, S, L, t, s]);
             return {
-                amountInput: u,
-                handleAmountChange: c,
-                currency: e,
-                currencySymbol: o,
-                exponent: r,
-                isClearingCap: g,
-                isOverspending: v,
-                canSave: y,
-                isSubmitting: j,
-                renewalDate: s,
-                monthlySpend: a,
-                save: E,
+                isLoaded: e,
+                amountInput: v,
+                handleAmountChange: E,
+                currency: s,
+                currencySymbol: u,
+                exponent: o,
+                isClearingCap: S,
+                isOverspending: N,
+                canSave: T,
+                isSubmitting: w,
+                renewalDate: d,
+                monthlySpend: r,
+                save: M,
             };
-        })(k);
-    async function F() {
+        })(S, e);
+    async function R() {
         try {
-            (await D(), (0, d.P0)({ text: C.intl.string(x.default["2WKfG1"]), variant: "success" }), l());
+            (await I(), (0, d.P0)({ text: v.intl.string(k.default["2WKfG1"]), variant: "success" }), e());
         } catch {
-            (0, d.P0)({ text: C.intl.string(x.default.Wu8BK2), variant: "critical" });
+            (0, d.P0)({ text: v.intl.string(k.default.Wu8BK2), variant: "critical" });
         }
     }
-    let G = [
-            { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: l, disabled: P },
-            N
-                ? {
-                      variant: "critical-primary",
-                      text: C.intl.string(x.default.JZDGJ8),
-                      onClick: F,
-                      disabled: P,
-                      loading: P,
-                  }
-                : { text: C.intl.string(C.t["R3BPH+"]), onClick: F, disabled: !M || P, loading: P },
-        ],
-        I = null != L && L > 0 ? (0, g.$g)(L, S) : null;
-    return (0, a.jsx)(r.a, {
+    let W = { variant: "secondary", text: v.intl.string(v.t["ETE/oC"]), onClick: e, disabled: F },
+        _ = B
+            ? {
+                  variant: "critical-primary",
+                  text: v.intl.string(k.default.JZDGJ8),
+                  onClick: R,
+                  disabled: F,
+                  loading: F,
+              }
+            : { text: v.intl.string(v.t["R3BPH+"]), onClick: R, disabled: !P || F, loading: F },
+        K = null != G && G > 0 ? (0, f.$g)(G, L) : null;
+    return (0, l.jsx)(r.a, {
         transitionState: n,
-        onClose: l,
-        title: C.intl.string(x.default.oBkFiL),
-        subtitle: C.intl.string(x.default.IFguF2),
-        actions: G,
-        children: (0, a.jsxs)(o.B, {
-            gap: 8,
-            children: [
-                (0, a.jsx)(u.E, { variant: "body-sm/semibold", children: C.intl.string(x.default.gMeekL) }),
-                (0, a.jsx)(u.E, {
-                    variant: "body-sm/normal",
-                    color: "text-muted",
-                    children: C.intl.formatToPlainString(x.default.IWdrfp, { date: w }),
-                }),
-                (0, a.jsx)("div", {
-                    className: B ? y.B : void 0,
-                    children: (0, a.jsx)(c.k, {
-                        label: C.intl.string(x.default.gMeekL),
-                        hideLabel: !0,
-                        value: v,
-                        onChange: j,
-                        leading: v.length > 0 ? E : void 0,
-                        placeholder: C.intl.string(x.default.YEnpaj),
-                        inputMode: A > 0 ? "decimal" : "numeric",
-                    }),
-                }),
-                null == I
-                    ? null
-                    : B
-                      ? (0, a.jsxs)(o.B, {
-                            direction: "horizontal",
-                            gap: 6,
-                            align: "start",
-                            children: [
-                                (0, a.jsx)(s.WarningIcon, { size: "sm", color: e.A.colors.ICON_FEEDBACK_WARNING }),
-                                (0, a.jsx)(u.E, {
-                                    variant: "body-sm/normal",
-                                    className: y.i,
-                                    children: C.intl.formatToPlainString(x.default.Tk6x4X, { amount: I, date: w }),
-                                }),
-                            ],
-                        })
-                      : (0, a.jsx)(u.E, {
-                            variant: "body-sm/normal",
-                            color: "text-muted",
-                            children: C.intl.formatToPlainString(x.default.pfAlRY, { amount: I }),
-                        }),
-            ],
-        }),
+        onClose: e,
+        title: v.intl.string(k.default.oBkFiL),
+        subtitle: v.intl.string(k.default.IFguF2),
+        actions: j ? [W, _] : [W],
+        children: j
+            ? (0, l.jsxs)(s.B, {
+                  gap: 8,
+                  children: [
+                      (0, l.jsx)(u.E, { variant: "body-sm/semibold", children: v.intl.string(k.default.gMeekL) }),
+                      (0, l.jsx)(u.E, {
+                          variant: "body-sm/normal",
+                          color: "text-muted",
+                          children: v.intl.formatToPlainString(k.default.IWdrfp, { date: D }),
+                      }),
+                      (0, l.jsx)("div", {
+                          className: M ? E.B : void 0,
+                          children: (0, l.jsx)(c.k, {
+                              label: v.intl.string(k.default.gMeekL),
+                              hideLabel: !0,
+                              value: A,
+                              onChange: T,
+                              leading: A.length > 0 ? N : void 0,
+                              placeholder: v.intl.string(k.default.YEnpaj),
+                              inputMode: w > 0 ? "decimal" : "numeric",
+                          }),
+                      }),
+                      null == K
+                          ? null
+                          : M
+                            ? (0, l.jsxs)(s.B, {
+                                  direction: "horizontal",
+                                  gap: 6,
+                                  align: "start",
+                                  children: [
+                                      (0, l.jsx)(o.WarningIcon, {
+                                          size: "sm",
+                                          color: i.A.colors.ICON_FEEDBACK_WARNING,
+                                      }),
+                                      (0, l.jsx)(u.E, {
+                                          variant: "body-sm/normal",
+                                          className: E.i,
+                                          children: v.intl.formatToPlainString(k.default.Tk6x4X, {
+                                              amount: K,
+                                              date: D,
+                                          }),
+                                      }),
+                                  ],
+                              })
+                            : (0, l.jsx)(u.E, {
+                                  variant: "body-sm/normal",
+                                  color: "text-muted",
+                                  children: v.intl.formatToPlainString(k.default.pfAlRY, { amount: K }),
+                              }),
+                  ],
+              })
+            : (0, l.jsx)(g.y, {}),
     });
 }

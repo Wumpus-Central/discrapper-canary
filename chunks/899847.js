@@ -2,13 +2,15 @@ var i = n(620632),
     r = n(873298),
     a = n(73153),
     s = n(110676),
-    l = n(159201),
-    o = n(761821),
-    d = n(129230),
-    c = n(842144),
-    u = n(191627),
-    _ = n(652215);
-async function E(e) {
+    l = n(662502),
+    o = n(159201),
+    d = n(761821),
+    c = n(129230),
+    u = n(842144),
+    _ = n(191627),
+    E = n(652215),
+    A = n(835002);
+async function f(e) {
     let t = new Set();
     (e.forEach((e) => {
         if (null != e.invoice_items && e.invoice_items.length > 0) {
@@ -18,12 +20,17 @@ async function E(e) {
     }),
         await Promise.all(Array.from(t).map((e) => (0, s.RE)(e))));
 }
-async function A(e) {
+async function h(e) {
     let t = new Set();
     (e.forEach((e) => {
         null != e.sku_id && t.add(e.sku_id);
     }),
         await Promise.all(Array.from(t).map((e) => (0, s.RE)(e))));
+}
+let I = new Map(),
+    p = new Map();
+function m() {
+    l.A.showFailedToast(A.OB.FAMILY_CENTER_TEEN_SETTINGS_LOAD_ERROR);
 }
 n.d(
     t,
@@ -35,7 +42,7 @@ n.d(
                     { showLoading: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 t && a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
                 try {
-                    e = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: (0, i.fT)() });
+                    e = await i.Bo.get({ url: E.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: (0, i.fT)() });
                 } catch {
                     return (a.h.dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" }), null);
                 }
@@ -58,8 +65,8 @@ n.d(
                         gifts: r?.gifts ?? [],
                     };
                 return (
-                    null != d.invoices && d.invoices.length > 0 && (await E(d.invoices)),
-                    null != d.gifts && d.gifts.length > 0 && (await A(d.gifts)),
+                    null != d.invoices && d.invoices.length > 0 && (await f(d.invoices)),
+                    null != d.gifts && d.gifts.length > 0 && (await h(d.gifts)),
                     a.h.dispatch({
                         type: "FAMILY_CENTER_INITIAL_LOAD",
                         familyCenterTeenActivity: d,
@@ -79,7 +86,7 @@ n.d(
             },
             async fetchLinkedUsers() {
                 let { body: e } = await i.Bo.get({
-                        url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
+                        url: E.Rsh.FAMILY_CENTER_LINKED_USERS,
                         rejectWithError: (0, i.fT)(),
                     }),
                     t = { linkedUsers: e.linked_users, users: e.users };
@@ -87,7 +94,7 @@ n.d(
             },
             async getConnectionPrerequisites(e, t) {
                 let { body: n } = await i.Bo.get({
-                    url: _.Rsh.FAMILY_CENTER_CONNECTION_PREREQUISITES,
+                    url: E.Rsh.FAMILY_CENTER_CONNECTION_PREREQUISITES,
                     query: { teen_id: e, link_code: t },
                     rejectWithError: !0,
                 });
@@ -101,7 +108,7 @@ n.d(
             },
             async requestLink(e, t) {
                 let { body: n } = await i.Bo.post({
-                        url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
+                        url: E.Rsh.FAMILY_CENTER_LINKED_USERS,
                         body: { recipient_id: e, code: t },
                         rejectWithError: (0, i.fT)(),
                     }),
@@ -111,7 +118,7 @@ n.d(
             async fetchTeenActivity(e) {
                 let t;
                 a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-                let n = _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e);
+                let n = E.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e);
                 try {
                     t = await i.Bo.get({ url: n, rejectWithError: (0, i.fT)() });
                 } catch (e) {
@@ -136,8 +143,8 @@ n.d(
                         gifts: s?.gifts ?? [],
                     };
                 return (
-                    l.invoices && l.invoices.length > 0 && (await E(l.invoices)),
-                    l.gifts && l.gifts.length > 0 && (await A(l.gifts)),
+                    l.invoices && l.invoices.length > 0 && (await f(l.invoices)),
+                    l.gifts && l.gifts.length > 0 && (await h(l.gifts)),
                     a.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: l }),
                     null != r.restricted_schedule &&
                         a.h.dispatch({
@@ -150,7 +157,7 @@ n.d(
             },
             async fetchMoreTeenActivity(e, t, n, r) {
                 let { body: s } = await i.Bo.get({
-                        url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, n, r),
+                        url: E.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, n, r),
                         rejectWithError: (0, i.fT)(),
                     }),
                     { teen_audit_log: l } = s,
@@ -168,8 +175,8 @@ n.d(
                         gifts: l?.gifts ?? [],
                     };
                 return (
-                    d.default.track(_.HAw.FAMILY_CENTER_ACTION, {
-                        action: u.qb.LoadMore,
+                    c.default.track(E.HAw.FAMILY_CENTER_ACTION, {
+                        action: _.qb.LoadMore,
                         selected_teen_id: e,
                         action_display_type: t,
                     }),
@@ -183,35 +190,61 @@ n.d(
             selectTab(e) {
                 a.h.dispatch({ type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: e });
             },
-            fetchTeenSettingsAndConsents: (e) =>
-                i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(e), rejectWithError: (0, i.fT)() }).then(
-                    (t) => {
-                        let { body: n } = t,
-                            { settings: i, consents: r } = n;
+            async fetchTeenSettingsAndConsents(e) {
+                let t = I.get(e);
+                if (null != t) return t;
+                let n = (async function (e) {
+                    try {
+                        let { body: t } = await i.Bo.get({
+                                url: E.Rsh.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(e),
+                                rejectWithError: (0, i.fT)(),
+                            }),
+                            { settings: n, consents: r } = t;
                         a.h.dispatch({
                             type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS",
                             userId: e,
-                            settings: i,
+                            settings: n,
                             consents: r,
                         });
-                    },
-                ),
+                    } catch {
+                        let t = p.get(e);
+                        null != t && t.size > 0 ? t.forEach((e) => e()) : m();
+                    }
+                })(e);
+                I.set(e, n);
+                try {
+                    await n;
+                } finally {
+                    I.delete(e);
+                }
+            },
+            onTeenSettingsLoadFailure(e, t) {
+                let n = p.get(e) ?? new Set();
+                return (
+                    n.add(t),
+                    p.set(e, n),
+                    () => {
+                        (n.delete(t), 0 === n.size && p.delete(e));
+                    }
+                );
+            },
+            showTeenSettingsLoadErrorToast: m,
             async updateTeenSettings(e, t, n) {
-                let s = (0, l.f)(r.nT, t),
-                    d = c.A.getSettings(e)?.[t],
-                    u = (0, l.a)(d, n, s, r.nT, t);
-                if (null == u) return;
-                let { body: E } = await i.Bo.patch({
-                        url: _.Rsh.FAMILY_CENTER_TEEN_SETTINGS(e),
-                        body: { settings: (0, o.ob)(r.nT, u) },
+                let s = (0, o.f)(r.nT, t),
+                    l = u.A.getSettings(e)?.[t],
+                    c = (0, o.a)(l, n, s, r.nT, t);
+                if (null == c) return;
+                let { body: _ } = await i.Bo.patch({
+                        url: E.Rsh.FAMILY_CENTER_TEEN_SETTINGS(e),
+                        body: { settings: (0, d.ob)(r.nT, c) },
                         rejectWithError: (0, i.fT)(),
                     }),
-                    { settings: A } = E;
+                    { settings: A } = _;
                 a.h.dispatch({ type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: e, settings: A });
             },
             updateTeenConsents: (e, t, n) =>
                 i.Bo.patch({
-                    url: _.Rsh.FAMILY_CENTER_TEEN_CONSENTS(e),
+                    url: E.Rsh.FAMILY_CENTER_TEEN_CONSENTS(e),
                     body: { grant: t, revoke: n },
                     rejectWithError: (0, i.fT)(),
                 }).then((t) => {
@@ -220,7 +253,7 @@ n.d(
                 }),
         },
         HB: async function () {
-            await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: (0, i.fT)() }).then((e) => {
+            await i.Bo.get({ url: E.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: (0, i.fT)() }).then((e) => {
                 let { body: t } = e,
                     n = t.link_code,
                     i = t.expires_at;
@@ -228,11 +261,11 @@ n.d(
             });
         },
         Xz: async function () {
-            await i.Bo.post({ url: _.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: !0 });
+            await i.Bo.post({ url: E.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: !0 });
         },
         e$: async function (e) {
             await i.Bo.del({
-                url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
+                url: E.Rsh.FAMILY_CENTER_LINKED_USERS,
                 body: { linked_user_id: e },
                 rejectWithError: (0, i.fT)(),
             }).then((t) => {
@@ -249,7 +282,7 @@ n.d(
         },
         nt: async function (e, t) {
             await i.Bo.patch({
-                url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
+                url: E.Rsh.FAMILY_CENTER_LINKED_USERS,
                 body: { linked_user_id: e, link_status: t },
                 rejectWithError: (0, i.fT)(),
             }).then((e) => {

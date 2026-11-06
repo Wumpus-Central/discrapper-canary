@@ -52,6 +52,8 @@ n.d(
                     return o.intl.string(d.default.vVwFCK);
                 case l.OB.FAMILY_CENTER_TEEN_SETTINGS_SAVE_ERROR:
                     return o.intl.string(c.default.fZG8IY);
+                case l.OB.FAMILY_CENTER_TEEN_SETTINGS_LOAD_ERROR:
+                    return o.intl.string(c.default.onKDuP);
                 default:
                     return o.intl.string(o.t["+c5xtT"]);
             }

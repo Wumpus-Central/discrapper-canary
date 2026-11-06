@@ -13,6 +13,9 @@ n.d(
                 if (null != t) return t;
             });
         },
+        Vt: function (e) {
+            return (0, l.bG)([r.A], () => null != e && r.A.hasSettingsForUser(e));
+        },
         tl: function () {
             let e = s.A.getSelectedTeenId(),
                 { hasLoadedSettings: t, isLoading: n } = (0, l.cf)([r.A], () => ({
