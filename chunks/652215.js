@@ -781,7 +781,7 @@ let nL = Object.freeze({
         USER_BADGES: (e) => `/users/${e}/badges`,
         USER_BADGE: (e, t) => `/users/${e}/badges/${t}`,
         USER_BADGE_SETTINGS: "/users/@me/badges/settings",
-        USER_BADGE_ACK: (e) => `/users/@me/badges/${e}/ack`,
+        USER_BADGE_ACK: (e) => `/users/@me/badges/${e}/acknowledge`,
         USER_PROFILE_WIDGETS: "/users/@me/widgets",
         USER_PROFILE_SUGGESTED_GAMES: "/users/@me/widgets/suggested-games",
         USER_PROFILE_WIDGET_ASSET_UPLOAD: "/users/@me/widgets/assets/upload",
