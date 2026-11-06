@@ -5,22 +5,24 @@ var n = l(477900),
     s = l(94977),
     a = l(148810),
     d = l(521502),
-    o = l(380610),
-    c = l(536637),
+    o = l(380610);
+(l(323874), l(14289), l(35956));
+var c = l(536637),
     u = l.n(c),
     m = l(331322),
     h = l(834730),
-    C = l(404778),
-    g = l(821609),
-    v = l(975807),
+    g = l(404778),
+    v = l(821609),
+    C = l(975807),
     x = l(792996),
     p = l(205624);
 let f = r.memo(function (e) {
     let { url: t } = e,
         l = r.useMemo(() => (0, s.t)(t), [t]),
-        [i] = r.useState(Date.now),
-        a = l?.targetBuildOverride.discord_campaign_builder,
-        d = r.useCallback(() => (0, v.A)(t), [t]);
+        i = "dads-stg.discord.tools" === new URL(t).hostname,
+        [a] = r.useState(Date.now),
+        d = l?.targetBuildOverride.discord_campaign_builder,
+        o = r.useCallback(() => (0, C.A)(t), [t]);
     return (0, n.jsxs)(m.B, {
         className: p.i,
         gap: 12,
@@ -30,10 +32,10 @@ let f = r.memo(function (e) {
             (0, n.jsx)(h.E, {
                 variant: "body-xs/semibold",
                 color: "text-subtle",
-                children: x.intl.string(x.t["7i6b0c"]),
+                children: x.intl.string(i ? x.t.YH7r25 : x.t["7i6b0c"]),
             }),
-            (0, n.jsx)(C.c, {}),
-            null != a && null != l
+            (0, n.jsx)(g.c, {}),
+            null != d && null != l
                 ? (0, n.jsxs)(m.B, {
                       gap: 12,
                       children: [
@@ -43,14 +45,14 @@ let f = r.memo(function (e) {
                                   (0, n.jsx)(h.E, {
                                       variant: "body-sm/normal",
                                       color: "text-subtle",
-                                      children: x.intl.string("branch" === a.type ? x.t.p9TwTG : x.t.RCYGot),
+                                      children: x.intl.string("branch" === d.type ? x.t.p9TwTG : x.t.RCYGot),
                                   }),
                                   (0, n.jsx)(h.E, {
                                       variant: "body-md/semibold",
                                       color: "text-strong",
                                       lineClamp: 2,
-                                      title: a.id,
-                                      children: "id" === a.type ? a.id.slice(0, 7) : a.id,
+                                      title: d.id,
+                                      children: "id" === d.type ? d.id.slice(0, 7) : d.id,
                                   }),
                               ],
                           }),
@@ -60,8 +62,8 @@ let f = r.memo(function (e) {
                                   color: "text-subtle",
                                   title: l.expiresAt,
                                   children: x.intl.formatToPlainString(
-                                      Date.parse(l.expiresAt) <= i ? x.t["4OJ/F8"] : x.t.BKITAL,
-                                      { time: u()(l.expiresAt).from(i) },
+                                      Date.parse(l.expiresAt) <= a ? x.t["4OJ/F8"] : x.t.BKITAL,
+                                      { time: u()(l.expiresAt).from(a) },
                                   ),
                               }),
                       ],
@@ -71,8 +73,8 @@ let f = r.memo(function (e) {
                       color: "text-subtle",
                       children: x.intl.string(x.t.l9qBG8),
                   }),
-            (0, n.jsx)(C.c, {}),
-            (0, n.jsx)(g.$, { text: x.intl.string(x.t.q5jLJB), onClick: d, fullWidth: !0 }),
+            (0, n.jsx)(g.c, {}),
+            (0, n.jsx)(v.$, { text: x.intl.string(x.t.q5jLJB), onClick: o, fullWidth: !0 }),
         ],
     });
 });
@@ -81,11 +83,11 @@ var j = l(503698),
     b = l.n(j),
     k = l(284009),
     y = l.n(k),
-    N = l(939249),
-    w = l(173936),
+    w = l(939249),
+    N = l(173936),
     E = l(28863),
-    A = l(885574),
-    L = l(579872),
+    L = l(885574),
+    A = l(579872),
     B = l(495867),
     M = l(280977);
 let O = r.memo(function (e) {
@@ -131,10 +133,10 @@ let O = r.memo(function (e) {
 var _ = l(957565),
     T = l(975571),
     I = l(723702),
-    S = l(435558),
-    R = l.n(S),
-    D = l(46653),
-    H = l(986238),
+    R = l(435558),
+    S = l.n(R),
+    H = l(46653),
+    D = l(986238),
     Z = l(652215),
     G = l(100281);
 function P(e) {
@@ -150,11 +152,11 @@ function P(e) {
     return (
         r.useEffect(() => () => clearTimeout(s.current), []),
         _.p5
-            ? (0, n.jsxs)(N.D, {
+            ? (0, n.jsxs)(w.D, {
                   className: b()(G.S, l ? G.pG : null),
                   onClick: a,
                   children: [
-                      (0, n.jsx)(w.LinkIcon, { size: "md", color: "currentColor", className: G.n7 }),
+                      (0, n.jsx)(N.LinkIcon, { size: "md", color: "currentColor", className: G.n7 }),
                       l ? x.intl.string(x.t.GmrIJY) : x.intl.string(x.t.iVzBOh),
                   ],
               })
@@ -180,7 +182,7 @@ function V(e) {
                     (0, n.jsx)("div", { className: G.Jb, children: l }),
                 ],
             }),
-            (0, n.jsx)(g.$, { text: a, loading: o, variant: i, onClick: s, fullWidth: !0, disabled: d }),
+            (0, n.jsx)(v.$, { text: a, loading: o, variant: i, onClick: s, fullWidth: !0, disabled: d }),
         ],
     });
 }
@@ -211,7 +213,7 @@ let $ = function (e) {
                         className: G.Pl,
                         href: T.A.getArticleURL(Z.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
-                        children: (0, n.jsx)(A.CircleInformationIcon, {
+                        children: (0, n.jsx)(L.CircleInformationIcon, {
                             size: "xs",
                             color: "currentColor",
                             className: G.G,
@@ -260,11 +262,11 @@ let $ = function (e) {
                                           targetBuildOverride: s,
                                       } = e,
                                       a = Object.keys(s);
-                                  if (0 === R().intersection(a, t).length)
+                                  if (0 === S().intersection(a, t).length)
                                       return {
                                           valid: !1,
                                           reason: x.intl.formatToPlainString(x.t.wySUzv, {
-                                              requestedTargets: a.map((e) => H.v_[e] ?? "unknown").join(", "),
+                                              requestedTargets: a.map((e) => D.v_[e] ?? "unknown").join(", "),
                                           }),
                                       };
                                   if (null != l && l !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
@@ -289,7 +291,7 @@ let $ = function (e) {
                                   let d = null != n ? new Date(n).getTime() : null;
                                   return null != d && d < Date.now()
                                       ? { valid: !1, reason: x.intl.string(x.t["8eRE6S"]) }
-                                      : r.length > 0 && !r.includes(D.default.getId())
+                                      : r.length > 0 && !r.includes(H.default.getId())
                                         ? { valid: !1, reason: x.intl.string(x.t.qZgV0a) }
                                         : { valid: !0 };
                               })(i, o);
@@ -311,23 +313,23 @@ let $ = function (e) {
                                   "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved",
                               );
                               let { discord_web: m, discord_developers: h } = i.targetBuildOverride,
-                                  C = m ?? h;
+                                  g = m ?? h;
                               return (
                                   (y()(
-                                      null != C,
+                                      null != g,
                                       "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
                                   ),
                                   null == r || null == r.discord_web
                                       ? 1
-                                      : C.id !== r.discord_web.id || C.type !== r.discord_web.type)
+                                      : g.id !== r.discord_web.id || g.type !== r.discord_web.type)
                                       ? ((l = x.intl.string(x.t.nOunHC)), (t = s), (n = "primary"))
                                       : ((l = x.intl.string(x.t.tX4xrt)), (t = a), (n = "critical-primary")),
                                   V({
-                                      subHead: x.intl.string("branch" === C.type ? x.t.p9TwTG : x.t.RCYGot),
-                                      buildDetails: C.id,
+                                      subHead: x.intl.string("branch" === g.type ? x.t.p9TwTG : x.t.RCYGot),
+                                      buildDetails: g.id,
                                       buttonClick: function () {
                                           B.A.isConnected()
-                                              ? L.A.show({
+                                              ? A.A.show({
                                                     title: x.intl.string(x.t.tiu1ly),
                                                     body: x.intl.string(x.t["zK+lqW"]),
                                                     onConfirm: t,
@@ -354,8 +356,8 @@ let $ = function (e) {
         ],
     });
 };
-var z = l(390486);
-async function U() {
+var U = l(390486);
+async function z() {
     (await (0, a.iD)(), window.location.reload(!0));
 }
 let F = r.memo(function (e) {
@@ -373,7 +375,7 @@ let F = r.memo(function (e) {
                           })(s.override?.targetBuildOverride)
                         : null == c
                           ? Promise.reject(Error("Invalid override payload"))
-                          : ((0, z.R6)(s.override, c),
+                          : ((0, U.R6)(s.override, c),
                             (async function (e) {
                                 if (200 !== (await (0, a.oA)(e)).status) throw Error("Build override couldn't apply");
                                 window.location.reload(!0);
@@ -386,7 +388,7 @@ let F = r.memo(function (e) {
                   linkMeta: s.override,
                   currentOverrides: l.overrides,
                   applyBuildOverride: h,
-                  clearBuildOverride: U,
+                  clearBuildOverride: z,
                   url: u,
               })
             : null;
