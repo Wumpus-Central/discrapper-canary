@@ -279,7 +279,6 @@ function N() {
                 gravityScrollEvent: (e) => r.h.dispatch({ type: "ICYMI_SCROLL_EVENT", timestamp: e }),
                 setFilters: (e) => r.h.dispatch({ type: "SET_ICYMI_FILTERS", filters: e }),
                 giveFeedback: () => r.h.dispatch({ type: "ICYMI_FEEDBACK_GIVEN" }),
-                clearReadStates: () => r.h.dispatch({ type: "CLEAR_ICYMI_READ_STATES" }),
                 addedRecommendedGuild: () => r.h.dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" }),
                 setVideosMuted(e) {
                     r.h.dispatch({ type: "ICYMI_SET_VIDEOS_MUTED", muted: e });

@@ -66,10 +66,10 @@ function F(e) {
     let { guild_id: t, icon_url: n, online: i, members: a, ...s } = e;
     return { ...s, guildId: t, iconUrl: n, online: Number(i), members: Number(a) };
 }
-function Y(e) {
+function H(e) {
     return (j.warn(`Rejected Waterwheels card: ${e}`), { ok: !1, reason: e });
 }
-var H = n(46653),
+var Y = n(46653),
     V = n(734057),
     P = n(504047),
     B = n(71393),
@@ -151,9 +151,6 @@ let el = new ed(A.h, {
                 e.data.message_context?.external_content_application_id != null ||
                 ea(e.data.channel_id, e.data.message_id) ||
                 (er.readIdToTimestampMap[e.id] = 0);
-    },
-    CLEAR_ICYMI_READ_STATES: function () {
-        er.readIdToTimestampMap = {};
     },
 });
 var eo = n(6161);
@@ -350,8 +347,8 @@ let eC = +Q.A.Millis.DAY,
     eU = {},
     eR = {},
     eF = {},
-    eY = 0,
-    eH = !1,
+    eH = 0,
+    eY = !1,
     eV = !1,
     eP = !1,
     eB = null,
@@ -397,12 +394,12 @@ function e2(e) {
                 !U(e.layout) ||
                 !Array.isArray(e.actions)
             )
-                return Y("invalid_card");
-            if (!L.includes(e.layout.type)) return Y("unknown_layout");
-            if (!e.actions.every((e) => U(e) && Object.values(O).includes(e.type))) return Y("unknown_action");
+                return H("invalid_card");
+            if (!L.includes(e.layout.type)) return H("unknown_layout");
+            if (!e.actions.every((e) => U(e) && Object.values(O).includes(e.type))) return H("unknown_action");
             if (void 0 !== e.client_eligibility && "notifications_permission" !== e.client_eligibility)
-                return Y("unknown_eligibility");
-            if (!e.actions.every(R)) return Y("invalid_card");
+                return H("unknown_eligibility");
+            if (!e.actions.every(R)) return H("invalid_card");
             return {
                 ok: !0,
                 card: {
@@ -434,7 +431,7 @@ function e2(e) {
                 },
             };
         } catch {
-            return Y("invalid_card");
+            return H("invalid_card");
         }
     })(e.data?.item);
     return !!t.ok && ((ej[e.id] = { ...e, card: t.card }), !0);
@@ -489,7 +486,7 @@ function te() {
 }
 function tt(e) {
     let t, n, i, a, s;
-    if ((eG.length > 0 && ((eN = eG), (eG = []), (ek = [])), eY++, null != e)) ((eW = e.newUnread), (ez = e.newRead));
+    if ((eG.length > 0 && ((eN = eG), (eG = []), (ek = [])), eH++, null != e)) ((eW = e.newUnread), (ez = e.newRead));
     else {
         let [e, t] = tn(eN);
         ((eW = e), (ez = t));
@@ -645,7 +642,7 @@ function tl(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
         r = ej[n];
     if (null == r || r.type !== Z.Mm.MESSAGE) return !1;
-    let d = H.default.getId() === i;
+    let d = Y.default.getId() === i;
     "MESSAGE_REACTION_ADD" === t
         ? (r.message = r.message.addReaction(a, d, { colors: e.colors, reactionType: s }))
         : (r.message = r.message.removeReaction(a, d, s));
@@ -666,7 +663,7 @@ class tc extends o.Ay.PersistedStore {
     static displayName = "ICYMIStore";
     static persistKey = "ICYMIStore";
     initialize(e) {
-        (this.waitFor(C.A, H.default, V.A, S.A, x.A, P.A, D.Ay, B.A, en, N.A, el, K.A, J.A, W.Ay, z.A, X.Ay, q.default),
+        (this.waitFor(C.A, Y.default, V.A, S.A, x.A, P.A, D.Ay, B.A, en, N.A, el, K.A, J.A, W.Ay, z.A, X.Ay, q.default),
             null != e &&
                 ((eN = e.dehydratedItems ?? []).forEach((e) => {
                     eL[e.id] = e;
@@ -679,7 +676,7 @@ class tc extends o.Ay.PersistedStore {
                 (e4 = e.lastTakenICYMISurvey ?? 0)));
     }
     getVersion() {
-        return eY;
+        return eH;
     }
     getDehydratedItems() {
         return eN;
@@ -798,8 +795,8 @@ let tu = new tc(A.h, {
             (ew = null),
             (eR = {}),
             (eF = {}),
-            (eY = 0),
-            (eH = !1),
+            (eH = 0),
+            (eY = !1),
             (eV = !1),
             (eP = !1),
             (eW = []),
@@ -877,10 +874,10 @@ let tu = new tc(A.h, {
             te(),
             (eO = { load_id: i, load_time_millis: Date.now() - a, feed_item_ids: eG.map((e) => e.id) }));
         let [d, l] = tn(eG);
-        if (((ek = ti(d)), !eP || 0 === eY || s))
-            ((eY = 0), !e1 && e6(d, eG) ? ((eV = !0), (eH = !0)) : (eV = !1), tt({ newUnread: d, newRead: l }));
+        if (((ek = ti(d)), !eP || 0 === eH || s))
+            ((eH = 0), !e1 && e6(d, eG) ? ((eV = !0), (eY = !0)) : (eV = !1), tt({ newUnread: d, newRead: l }));
         else {
-            eY > 0 && (eK = null);
+            eH > 0 && (eK = null);
             let e = ek.length > 3;
             (r || (eV = e), e && (eI([...d, ...l], 0, 15, ej), d.length + l.length === 0 && (e5 = !0)));
         }
@@ -974,7 +971,7 @@ let tu = new tc(A.h, {
         (tt(), (eV = !1));
     },
     ICYMI_TAB_OPENED: function () {
-        ((eP = !0), (eb = Date.now()), eH && ((eH = !1), (eV = !1)), eJ < 5 && eJ++);
+        ((eP = !0), (eb = Date.now()), eY && ((eY = !1), (eV = !1)), eJ < 5 && eJ++);
     },
     ICYMI_FEEDBACK_GIVEN: function () {
         eJ = 6;
@@ -984,7 +981,7 @@ let tu = new tc(A.h, {
         let { messageId: t, reactions: n } = e,
             i = ej[t];
         if (null == i || i.type !== Z.Mm.MESSAGE) return !1;
-        let a = H.default.getId();
+        let a = Y.default.getId();
         i.message = i.message.addReactionBatch(n, a);
     },
     MESSAGE_REACTION_REMOVE: tl,
@@ -1475,8 +1472,8 @@ var tG = n(177953),
     tU = n(826383),
     tR = n(9448),
     tF = n(974930),
-    tY = n(641786);
-function tH(e) {
+    tH = n(641786);
+function tY(e) {
     let { eventId: t } = e,
         n = (0, o.bG)([D.Ay], () => D.Ay.getGuildScheduledEvent(t), [t]),
         i = (0, o.bG)([B.A], () => B.A.getGuild(n?.guild_id), [n]),
@@ -1497,30 +1494,30 @@ function tH(e) {
     if (null == n || null == i) return null;
     let f = null != n.description && n.description.length > 0;
     return (0, a.jsxs)("div", {
-        className: tY.Qo,
+        className: tH.Qo,
         children: [
             (0, a.jsx)("div", {
-                className: tY.At,
+                className: tH.At,
                 children: (0, a.jsx)(tM.E, {
                     variant: "body-sm/semibold",
                     color: l ? "status-positive" : "text-brand",
                     children: _,
                 }),
             }),
-            (0, a.jsx)(tM.E, { variant: "body-lg/semibold", className: f ? tY.X_ : void 0, children: n.name }),
+            (0, a.jsx)(tM.E, { variant: "body-lg/semibold", className: f ? tH.X_ : void 0, children: n.name }),
             f &&
                 (0, a.jsx)(tM.E, {
                     variant: "body-md/normal",
                     color: "text-subtle",
-                    className: tY.tj,
+                    className: tH.tj,
                     children: (0, tL.l)(n.description ?? "", !0, { guildId: i.id }),
                 }),
-            (0, a.jsx)("hr", { className: tY.Yl }),
+            (0, a.jsx)("hr", { className: tH.Yl }),
             (0, a.jsxs)("div", {
-                className: tY.oo,
+                className: tH.oo,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: tY.ik,
+                        className: tH.ik,
                         children: [
                             (0, a.jsx)(tG.GroupIcon, { size: "xs", color: "currentColor" }),
                             (0, a.jsx)(tM.E, {
@@ -1531,13 +1528,13 @@ function tH(e) {
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: tY.ik,
+                        className: tH.ik,
                         children: [
                             null != h ? (0, a.jsx)(h, { size: "xs", color: "currentColor" }) : null,
                             (0, a.jsx)(tM.E, {
                                 variant: "body-xs/normal",
                                 color: "text-muted",
-                                className: tY.HA,
+                                className: tH.HA,
                                 children: g ?? (null != p ? (0, tL.y)(p, !0) : null),
                             }),
                         ],
@@ -1655,16 +1652,16 @@ function t3(e) {
     return null == d || null == l || 0 === c.length
         ? null
         : (0, a.jsxs)("div", {
-              className: tY.kL,
+              className: tH.kL,
               children: [
                   null != r
                       ? (0, a.jsx)("div", {
-                            className: tY.gn,
-                            children: (0, a.jsx)("div", { className: tY.DD, children: r }),
+                            className: tH.gn,
+                            children: (0, a.jsx)("div", { className: tH.DD, children: r }),
                         })
                       : null,
                   (0, a.jsx)("div", {
-                      className: tY.MJ,
+                      className: tH.MJ,
                       children: c.map((e) =>
                           (0, a.jsx)(
                               t5,
@@ -1686,7 +1683,7 @@ function t4(e) {
     let { item: t } = e;
     switch (t.data.kind) {
         case "guildEvent":
-            return (0, a.jsx)(tH, { eventId: t.data.eventId });
+            return (0, a.jsx)(tY, { eventId: t.data.eventId });
         case "message":
         case "forumThread":
             return (0, a.jsx)(t3, { item: t });
