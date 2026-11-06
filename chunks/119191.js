@@ -18,16 +18,16 @@ function p(t) {
             useFlexboxLayout: y = !1,
             keybindClassName: m,
         } = t,
-        g = (0, l.bG)([r.Ay], () => {
+        I = (0, l.bG)([r.Ay], () => {
             let t = r.Ay.getVisibleGame();
             return null != t && t.elevated && r.Ay.canShowAdminWarning;
         }),
-        I = (0, o.NP)();
-    return g
+        g = (0, o.NP)();
+    return I
         ? (0, n.jsx)(a.E, {
               variant: "footnote/semibold",
               color: p ? "text-feedback-warning" : "text-muted",
-              children: I
+              children: g
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
                             (t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL));

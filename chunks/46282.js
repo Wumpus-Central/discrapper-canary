@@ -12,8 +12,8 @@ var n = i(477900),
     p = i(71393),
     y = i(754712),
     m = i(576705),
-    g = i(309010),
-    I = i(287809),
+    I = i(309010),
+    g = i(287809),
     E = i(753070),
     _ = i(792996);
 async function S(t) {
@@ -27,8 +27,8 @@ async function S(t) {
         allowOneClickGoLive: p,
         onBeforeShowModal: y,
         onModalStreamStart: m,
-        onOneClickGoLive: g,
-        appContext: I,
+        onOneClickGoLive: I,
+        appContext: g,
         selectSource: S = !1,
     } = t;
     if (u && c) {
@@ -39,7 +39,7 @@ async function S(t) {
                 t = e ? E.jQ.PRESET_AUTO : E.jQ.PRESET_VIDEO;
             }
             let [i] = await (0, d.A)(e, { preset: t, analyticsLocations: f });
-            if (i) return void g?.();
+            if (i) return void I?.();
         }
         if (null == a)
             return void (0, r.P0)({ text: _.intl.string(_.t.OKnWyb), variant: "critical", surface: "overlay" });
@@ -69,7 +69,7 @@ async function S(t) {
                     return (i) =>
                         (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: S, onStreamStart: m, analyticsLocations: f });
                 },
-                { contextKey: null != I ? (0, s.TI)(I) : void 0 },
+                { contextKey: null != g ? (0, s.TI)(g) : void 0 },
             ));
     }
 }
@@ -88,9 +88,9 @@ i.d(
                     appContext: s,
                     selectSource: o = !1,
                 } = t,
-                d = g.Ay.getVoiceChannelId(),
+                d = I.Ay.getVoiceChannelId(),
                 A = f.A.getChannel(d),
-                E = I.default.getCurrentUser(),
+                E = g.default.getCurrentUser(),
                 _ = null != A && (0, u.vz)(A, p.A, m.A),
                 N = (0, c.A)(y.Ay);
             await S({
@@ -110,9 +110,9 @@ i.d(
         },
         y: function (t) {
             let { pid: e, allowOneClickGoLive: i = !1, onBeforeShowModal: n, onOneClickGoLive: r, appContext: s } = t,
-                o = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
+                o = (0, a.bG)([I.Ay], () => I.Ay.getVoiceChannelId()),
                 d = (0, a.bG)([f.A], () => f.A.getChannel(o), [o]),
-                A = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
+                A = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
                 E = (0, a.bG)([y.Ay], () => (0, c.A)(y.Ay)),
                 _ = (0, a.bG)([p.A, m.A], () => null != d && (0, u.vz)(d, p.A, m.A));
             return l.useCallback(async () => {

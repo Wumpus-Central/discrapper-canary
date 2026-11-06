@@ -37,8 +37,8 @@ let v = n.memo(function (e) {
             isGroupStart: j,
             animateAvatar: k,
             subscribeToComponentDispatch: T,
-            renderThreadAccessory: G,
-            trackAnnouncementViews: D = !1,
+            renderThreadAccessory: D,
+            trackAnnouncementViews: G = !1,
             inlineEditor: B,
             ...U
         } = e,
@@ -66,7 +66,7 @@ let v = n.memo(function (e) {
         ),
         q = (0, g.Xx)({ guildId: O.guild_id, roleId: Z.iconRoleId }),
         W = (0, r.bG)([c.A], () => null != c.A.getMessage(s.id), [s.id]),
-        $ = (0, I.A)({ message: s, channel: O, announcementEnabled: D }),
+        $ = (0, I.A)({ message: s, channel: O, announcementEnabled: G }),
         ee = (0, M.fF)(s),
         es = (0, M.ZD)(s);
     return (0, l.jsx)(p.A, {
@@ -81,7 +81,7 @@ let v = n.memo(function (e) {
         childrenSystemMessage: (0, y.A)({ ...e, disableInteraction: K }),
         onContextMenu: a,
         onClick: v,
-        hasThread: G && null != Q && s.hasFlag(L.pr7.HAS_THREAD),
+        hasThread: D && null != Q && s.hasFlag(L.pr7.HAS_THREAD),
         hasReply: s.type === L.lAJ.REPLY,
         "aria-labelledby": ee,
         "aria-describedby": es,

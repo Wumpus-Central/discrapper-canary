@@ -13,8 +13,8 @@ var n = i(477900),
     p = i(559647),
     y = i(866665),
     m = i(408278),
-    g = i(297152),
-    I = i(834730),
+    I = i(297152),
+    g = i(834730),
     E = i(821609),
     _ = i(308368),
     S = i(298990),
@@ -88,26 +88,26 @@ function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([W.default], () => W.default.getUser(i.author_id)),
-        [g, I] = l.useState("unsent"),
+        [I, g] = l.useState("unsent"),
         [E, S] = l.useState(!1);
     l.useEffect(() => {
-        if ("sent" === g) {
+        if ("sent" === I) {
             let t = setTimeout(() => S(!0), 2e3);
             return () => clearTimeout(t);
         }
-    }, [g]);
+    }, [I]);
     let C = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
         h = null != C,
         T = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === g ? (E ? d.ChatIcon : A.CheckmarkSmallBoldIcon) : h ? f.GroupPlusIcon : p.SendMessageIcon),
+        (e = "sent" === I ? (E ? d.ChatIcon : A.CheckmarkSmallBoldIcon) : h ? f.GroupPlusIcon : p.SendMessageIcon),
         (0, n.jsx)(y.m, {
             text: T,
             "aria-label": T,
             children: (0, n.jsx)(m.K, {
                 icon: e,
                 "aria-label": T,
-                loading: "sending" === g,
+                loading: "sending" === I,
                 onClick: E
                     ? async function () {
                           if (null == u) return;
@@ -119,10 +119,10 @@ function ts(t) {
                               (0, tt.YX)(tn.uss.ACTIVITY, { type: tt.Z5.REDIRECT, value: tt.IP.CHAT, userId: u.id }));
                       }
                     : async function (t) {
-                          if (null != u && "unsent" === g) {
+                          if (null != u && "unsent" === I) {
                               t.stopPropagation();
                               try {
-                                  if ((I("sending"), h && null != C))
+                                  if ((g("sending"), h && null != C))
                                       await _.A.sendActivityInviteUser({
                                           type: tn.xL.JOIN,
                                           userId: u.id,
@@ -164,9 +164,9 @@ function ts(t) {
                                           value: tt.IP.INVITE_SENT,
                                           userId: u.id,
                                       }),
-                                      I("sent"));
+                                      g("sent"));
                               } catch (t) {
-                                  I("unsent");
+                                  g("unsent");
                               }
                           }
                       },
@@ -188,7 +188,7 @@ function to(t) {
         text: f,
         "aria-label": f,
         children: (0, n.jsx)(m.K, {
-            icon: "sent" === u ? A.CheckmarkSmallBoldIcon : g.HandRequestSpeakIcon,
+            icon: "sent" === u ? A.CheckmarkSmallBoldIcon : I.HandRequestSpeakIcon,
             "aria-label": f,
             loading: "sending" === u,
             onClick: async function (t) {
@@ -250,7 +250,7 @@ function tu(t) {
                           (0, n.jsxs)("div", {
                               className: tr.Yn,
                               children: [
-                                  (0, n.jsx)(I.E, {
+                                  (0, n.jsx)(g.E, {
                                       className: tr.Xh,
                                       variant: "body-md/medium",
                                       color: "text-strong",
@@ -321,7 +321,7 @@ function td(t) {
                   !r &&
                       (0, n.jsx)("div", {
                           className: tr.v4,
-                          children: (0, n.jsx)(I.E, {
+                          children: (0, n.jsx)(g.E, {
                               variant: "body-xs/medium",
                               color: "subtle" === s ? "text-subtle" : "text-default",
                               tag: "div",

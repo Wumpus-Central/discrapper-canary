@@ -1,5 +1,5 @@
-let r = new Set(["link", "url", "autolink", "mailto", "tel", "attachmentLink", "devLink"]);
-function l(e) {
+let l = new Set(["link", "url", "autolink", "mailto", "tel", "attachmentLink", "devLink"]);
+function r(e) {
     return `:${e.replace(/^:+|:+$/g, "")}:`;
 }
 function i(e) {
@@ -14,11 +14,11 @@ function i(e) {
               : i(e.content);
 }
 function a(e) {
-    if (r.has(e.type)) {
+    if (l.has(e.type)) {
         let n = i(e.target);
         return { type: "inlineCode", content: n.length > 0 ? n : i(e.content) };
     }
-    if ("customEmoji" === e.type) return { type: "text", content: l(String(e.name ?? "")) };
+    if ("customEmoji" === e.type) return { type: "text", content: r(String(e.name ?? "")) };
     let n = { ...e };
     return (
         null != e.content && "string" != typeof e.content && (n.content = u(e.content)),
@@ -29,4 +29,4 @@ function a(e) {
 function u(e) {
     return Array.isArray(e) ? e.map(a) : a(e);
 }
-t.d(n, {}, { A: u, u: l });
+t.d(n, {}, { A: u, u: r });

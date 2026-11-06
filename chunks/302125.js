@@ -63,8 +63,8 @@ var S = n(51906),
     L = n(498642),
     P = n(186111),
     O = n(596344),
-    G = n(576705),
-    U = n(811091),
+    U = n(576705),
+    G = n(811091),
     w = n(652215),
     F = n(727419),
     H = n(794967),
@@ -105,19 +105,19 @@ function ee(e) {
                 C,
                 E = (function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.NOr;
-                    return null != e && U.default.extractTimestamp(e) < Date.now() - t;
+                    return null != e && G.default.extractTimestamp(e) < Date.now() - t;
                 })(t?.id),
                 {
                     canInvite: x,
                     canManageGuild: I,
                     canMessage: S,
                 } = (0, o.cf)(
-                    [G.A],
+                    [U.A],
                     () => ({
-                        canInvite: (0, M.K)(G.A, t, e),
-                        canManageGuild: null != t && G.A.can(w.xBc.MANAGE_GUILD, t),
-                        canMessage: null != e && G.A.can(w.xBc.SEND_MESSAGES, e),
-                        canCreateChannel: null != t && G.A.can(w.xBc.MANAGE_CHANNELS, t),
+                        canInvite: (0, M.K)(U.A, t, e),
+                        canManageGuild: null != t && U.A.can(w.xBc.MANAGE_GUILD, t),
+                        canMessage: null != e && U.A.can(w.xBc.SEND_MESSAGES, e),
+                        canCreateChannel: null != t && U.A.can(w.xBc.MANAGE_CHANNELS, t),
                     }),
                     [t, e],
                 ),
@@ -166,7 +166,7 @@ function ee(e) {
                             function l(e) {
                                 return (
                                     null != t &&
-                                    U.default.extractTimestamp(e.channel.id) - U.default.extractTimestamp(t.id) > 500
+                                    G.default.extractTimestamp(e.channel.id) - G.default.extractTimestamp(t.id) > 500
                                 );
                             }
                             return e[k.I].some(l) || n.some(l);

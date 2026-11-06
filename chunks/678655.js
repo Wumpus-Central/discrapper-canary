@@ -48,17 +48,17 @@ let P = function (e) {
     });
 };
 var O = n(73153),
-    G = n(857071);
-let U = null,
+    U = n(857071);
+let G = null,
     w = null;
 function F() {
-    let e = G.A.mostRecentLurkedGuildId();
-    null != e ? ((U = e), (w = null)) : ((w = null != U ? U : null), (U = null));
+    let e = U.A.mostRecentLurkedGuildId();
+    null != e ? ((G = e), (w = null)) : ((w = null != G ? G : null), (G = null));
 }
 class H extends r.Ay.Store {
     static displayName = "LurkerModePopoutStore";
     initialize() {
-        this.syncWith([G.A], F);
+        this.syncWith([U.A], F);
     }
     shouldShowPopout(e) {
         return w === e;
@@ -372,7 +372,7 @@ function eh(e) {
         o = (0, r.bG)([et.A], () => et.A.getCheck(s)),
         c = t.type === _.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(_.GuildFeatures.NEWS),
         d = (0, r.bG)([Y.A], () => (c ? Y.A.getFollowerStatsForChannel(t.id) : null)),
-        u = (0, r.bG)([G.A], () => G.A.isLurking(s)),
+        u = (0, r.bG)([U.A], () => U.A.isLurking(s)),
         h = (0, r.bG)([el.default], () => el.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([Q.Ay], () => null != h && (Q.Ay.getMember(s, h.id)?.isPending ?? !1)),

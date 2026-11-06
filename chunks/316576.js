@@ -49,8 +49,8 @@ var R = n(406704),
     L = n(74477),
     P = n(87207),
     O = n(629016),
-    G = n(576705),
-    U = n(894768),
+    U = n(576705),
+    G = n(894768),
     w = n(188567),
     F = n(723702),
     H = n(518960),
@@ -419,7 +419,7 @@ let eR = s.memo(function (e) {
         W = (0, x.Us)(),
         $ = s.useRef(null),
         q = s.useRef(null),
-        Z = (0, o.bG)([U.A], () => U.A.getActivities()),
+        Z = (0, o.bG)([G.A], () => G.A.getActivities()),
         J = (0, f.E)(),
         X = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         Y = (0, o.yK)(
@@ -432,7 +432,7 @@ let eR = s.memo(function (e) {
         [et, en] = s.useState(null),
         el = (0, p.sw)() && (J || ee),
         ei = l.isPrivate(),
-        es = (0, o.bG)([G.A], () => ei || (G.A.can(eb.xBc.ATTACH_FILES, l) && G.A.can(eb.xBc.SEND_MESSAGES, l)));
+        es = (0, o.bG)([U.A], () => ei || (U.A.can(eb.xBc.ATTACH_FILES, l) && U.A.can(eb.xBc.SEND_MESSAGES, l)));
     function ea() {
         ((0, c.mM)(
             async () => {
@@ -625,7 +625,7 @@ let eR = s.memo(function (e) {
             isAppsButtonEnabled: !V || z,
             canRecordVoiceMessage: eL && eP,
         }),
-        { isCoachmarkVisible: eG, dismissCoachmark: eU } = (function (e) {
+        { isCoachmarkVisible: eU, dismissCoachmark: eG } = (function (e) {
             let { isEligible: t } = e,
                 [n, l] = (0, y.kn)(t ? [b] : []);
             return { isCoachmarkVisible: n === b, dismissCoachmark: l };
@@ -640,7 +640,7 @@ let eR = s.memo(function (e) {
             position: "top",
             positionKey: et ?? "null",
             onRequestOpen: () => {
-                (en("attachMenu"), eG && eU(v.i.TAKE_ACTION));
+                (en("attachMenu"), eU && eG(v.i.TAKE_ACTION));
             },
             onRequestClose: () => {
                 (0, c.ue)() || en(null);
@@ -695,7 +695,7 @@ let eR = s.memo(function (e) {
                 }),
             }),
             (0, i.jsx)("div", { className: eM.Jd, children: eF }),
-            eG && (0, i.jsx)(M, { targetElementRef: q, onDismiss: eU }),
+            eU && (0, i.jsx)(M, { targetElementRef: q, onDismiss: eG }),
         ],
     });
 });

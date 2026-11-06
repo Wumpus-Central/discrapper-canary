@@ -111,7 +111,7 @@ function O(e) {
         })
     );
 }
-function G(e) {
+function U(e) {
     let { channel: t, narrow: n } = e,
         s = (0, L.H_)(t);
     return (
@@ -151,7 +151,7 @@ function G(e) {
         })
     );
 }
-var U = n(626360);
+var G = n(626360);
 let w = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
         d = (0, j.A)(t),
@@ -175,12 +175,12 @@ let w = i.memo(function (e) {
         : t.isArchivedLockedThread()
           ? (0, l.jsx)(O, { channel: t, narrow: n })
           : t.isLockedThread()
-            ? (0, l.jsx)(G, { channel: t, narrow: n })
+            ? (0, l.jsx)(U, { channel: t, narrow: n })
             : h
               ? (0, l.jsx)(_, { channel: t, clearUnreadsNotice: m })
               : g.visible
                 ? (0, l.jsx)(T.KT, { channel: t, onDismiss: g.dismiss })
-                : d && u.includes(U.i.OPT_IN_CHANNEL)
+                : d && u.includes(G.i.OPT_IN_CHANNEL)
                   ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                   : null;
 });
