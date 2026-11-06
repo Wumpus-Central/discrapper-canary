@@ -11,24 +11,27 @@ var i,
         (i[(i.SUCCESS = 2)] = "SUCCESS"),
         (i[(i.ERROR = 3)] = "ERROR"),
         i);
-let u = { isMuted: !1, progress: null },
+let u = { volume: 1, isMuted: !1, progress: null },
     h = {},
     f = { ...u },
     b = null,
     _ = null,
     p = null,
-    x = 0,
-    m = null,
+    m = 0,
+    x = null,
     g = !1;
 class A extends s.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
-    static migrations = [(e) => ({ ...e, progress: null })];
+    static migrations = [(e) => ({ ...e, progress: null }), (e) => ({ volume: 1, ...e })];
     getState() {
         return f;
     }
     initialize(e) {
         (this.waitFor(c.default), null != e && (f = { ...f, ...e }));
+    }
+    get volume() {
+        return f.volume;
     }
     get isMuted() {
         return f.isMuted;
@@ -43,10 +46,10 @@ class A extends s.Ay.PersistedStore {
         return p;
     }
     get fetchState() {
-        return x;
+        return m;
     }
     get isFetching() {
-        return 1 === x;
+        return 1 === m;
     }
     get isSaving() {
         return g;
@@ -55,23 +58,28 @@ class A extends s.Ay.PersistedStore {
         return f.progress;
     }
     get selectedCharacterTraits() {
-        return m ?? p ?? h;
+        return x ?? p ?? h;
     }
 }
 let v = new A(n.h, {
     CHECKPOINT_TOGGLE_MUTE: function () {
         f.isMuted = !f.isMuted;
     },
+    CHECKPOINT_SET_VOLUME: function (e) {
+        let { volume: t } = e;
+        if (f.volume === t && !f.isMuted) return !1;
+        ((f.volume = t), (f.isMuted = !1));
+    },
     CHECKPOINT_FETCH_START: function () {
-        x = 1;
+        m = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
         ((b = e.stats),
             (_ = e.globalStats),
             (p = e.character),
-            (x = 2),
+            (m = 2),
             null == p && null != f.progress
-                ? ((m = (function (e) {
+                ? ((x = (function (e) {
                       let t = (0, d.ki)(c.default.getCurrentUser()),
                           a = {};
                       for (let i of Object.values(r.V)) {
@@ -80,37 +88,37 @@ let v = new A(n.h, {
                       }
                       return a;
                   })(f.progress.selectedCharacterTraits)),
-                  (f.progress = { ...f.progress, selectedCharacterTraits: m }))
-                : (m = null));
+                  (f.progress = { ...f.progress, selectedCharacterTraits: x }))
+                : (x = null));
     },
     CHECKPOINT_FETCH_FAILED: function () {
-        x = 3;
+        m = 3;
     },
     CHECKPOINT_COMPLETE_START: function () {
         g = !0;
     },
     CHECKPOINT_COMPLETE_SUCCESS: function (e) {
-        ((p = e.character), (m = null), (g = !1));
+        ((p = e.character), (x = null), (g = !1));
     },
     CHECKPOINT_COMPLETE_FAILED: function () {
         g = !1;
     },
     CHECKPOINT_RESET_SUCCESS: function () {
-        ((p = null), (m = null), (f.progress = null));
+        ((p = null), (x = null), (f.progress = null));
     },
     CHECKPOINT_SELECT_CHARACTER_TRAIT: function (e) {
-        ((m = { ...(m ?? p ?? h), [e.trait]: e.optionId }),
-            null != f.progress && (f.progress = { ...f.progress, selectedCharacterTraits: m }));
+        ((x = { ...(x ?? p ?? h), [e.trait]: e.optionId }),
+            null != f.progress && (f.progress = { ...f.progress, selectedCharacterTraits: x }));
     },
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e,
-            a = m ?? p ?? h,
+            a = x ?? p ?? h,
             { progress: i } = f;
         if (i?.stage === t && i.selectedCharacterTraits === a) return !1;
         f.progress = { stage: t, selectedCharacterTraits: a };
     },
     LOGOUT: function () {
-        ((f = { ...u }), (b = null), (_ = null), (p = null), (x = 0), (m = null), (g = !1));
+        ((f = { ...u }), (b = null), (_ = null), (p = null), (m = 0), (x = null), (g = !1));
     },
 });
 a.d(t, {}, { A: v, T: o });

@@ -46,6 +46,9 @@ a.d(
         l4: function (e) {
             return r.h.dispatch({ type: "CHECKPOINT_SAVE_PROGRESS", stage: e });
         },
+        ls: function (e) {
+            return r.h.dispatch({ type: "CHECKPOINT_SET_VOLUME", volume: e });
+        },
         nX: async function (e) {
             if ((f.A.initializeIfNeeded(), f.A.isFetching)) return f.T.FETCHING;
             r.h.dispatch({ type: "CHECKPOINT_FETCH_START" });
