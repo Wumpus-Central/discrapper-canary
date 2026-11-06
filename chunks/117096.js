@@ -507,7 +507,8 @@ let eb = function (e) {
         h = (0, j.P)({ user: c, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
         g = n.guild_id,
         f = a.useCallback(() => {
-            null != g && (0, v.pX)(H.BVt.CHANNEL(g, eo.VV.GUILD_SPACE));
+            null != g &&
+                ((0, e_.jb)(g, e_.Rk.WHITEBOARD_SYSTEM_MESSAGE), (0, v.pX)(H.BVt.CHANNEL(g, eo.VV.GUILD_SPACE)));
         }, [g]),
         A = s.connected_user_count - r.length,
         E = 0 === r.length || A <= 0;

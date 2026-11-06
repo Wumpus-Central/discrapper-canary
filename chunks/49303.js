@@ -61,6 +61,7 @@ n.d(
             LEADER_BADGE: "leader_badge",
             LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
             MUSIC_SYSTEM_MESSAGE: "music_system_message",
+            WHITEBOARD_SYSTEM_MESSAGE: "whiteboard_system_message",
         },
         jM: function (e, t, n) {
             let { widget: r, widgetCount: a } = n;
