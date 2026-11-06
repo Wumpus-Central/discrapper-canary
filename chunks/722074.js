@@ -844,6 +844,7 @@ class H extends o.G {
             { no: 6, name: "body_localized", kind: "message", T: () => u.X },
             { no: 7, name: "cta_label_localized", kind: "message", T: () => u.X },
             { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => V.ol },
+            { no: 9, name: "shop_collection_id", kind: "message", T: () => V.ol },
         ]);
     }
     create(e) {
@@ -889,6 +890,9 @@ class H extends o.G {
                         r.navigableStorefrontApplicationId,
                     );
                     break;
+                case 9:
+                    r.shopCollectionId = V.ol.internalBinaryRead(e, e.uint32(), n, r.shopCollectionId);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -912,7 +916,9 @@ class H extends o.G {
             e.navigableStorefrontApplicationId &&
                 V.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, a.O0.LengthDelimited).fork(), n)
-                    .join());
+                    .join(),
+            e.shopCollectionId &&
+                V.ol.internalBinaryWrite(e.shopCollectionId, t.tag(9, a.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -991,6 +997,7 @@ class $ extends o.G {
             { no: 6, name: "body_localized", kind: "message", T: () => u.X },
             { no: 7, name: "cta_label_localized", kind: "message", T: () => u.X },
             { no: 8, name: "navigable_storefront_application_id", kind: "message", T: () => V.ol },
+            { no: 9, name: "shop_collection_id", kind: "message", T: () => V.ol },
         ]);
     }
     create(e) {
@@ -1036,6 +1043,9 @@ class $ extends o.G {
                         r.navigableStorefrontApplicationId,
                     );
                     break;
+                case 9:
+                    r.shopCollectionId = V.ol.internalBinaryRead(e, e.uint32(), n, r.shopCollectionId);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -1059,7 +1069,9 @@ class $ extends o.G {
             e.navigableStorefrontApplicationId &&
                 V.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(8, a.O0.LengthDelimited).fork(), n)
-                    .join());
+                    .join(),
+            e.shopCollectionId &&
+                V.ol.internalBinaryWrite(e.shopCollectionId, t.tag(9, a.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }

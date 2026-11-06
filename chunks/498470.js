@@ -1,15 +1,18 @@
 var c = n(308588),
     _ = n(509434),
-    O = n(403581),
-    T = n(104510),
-    o = n(987144),
-    a = n(778705),
-    i = n(976860),
-    s = n(44724),
-    E = n(71393),
-    l = n(682901),
-    r = n(92737),
-    I = n(652215);
+    o = n(403581),
+    O = n(34188),
+    i = n(104510),
+    a = n(793574),
+    T = n(110676),
+    s = n(987144),
+    E = n(778705),
+    l = n(976860),
+    r = n(44724),
+    I = n(71393),
+    N = n(682901),
+    P = n(92737),
+    u = n(652215);
 n.d(
     e,
     {},
@@ -19,63 +22,73 @@ n.d(
                 buttonAction: e,
                 deeplinkSection: n,
                 applicationId: _,
+                shopCollectionId: o,
                 guildId: O,
-                analyticsLocations: T = [],
+                analyticsLocations: i = [],
                 analyticsLocation: A,
-                onClose: N,
+                onClose: R,
             } = t;
             switch (e) {
                 case c.d.OPEN_GUILD_BOOST_CHECKOUT:
                     return () => {
-                        let t = null != O ? E.A.getGuild(O) : null;
+                        let t = null != O ? I.A.getGuild(O) : null;
                         null != t &&
-                            (0, o.g)({ guild: t, analyticsLocations: T, analyticsLocation: A ?? {}, onClose: N });
+                            (0, s.g)({ guild: t, analyticsLocations: i, analyticsLocation: A ?? {}, onClose: R });
                     };
                 case c.d.OPEN_SOCIAL_LAYER_STOREFRONT:
                     return () => {
-                        (null != _ && (0, s.default)({ applicationId: _ }), N?.());
+                        (null != _ && (0, r.default)({ applicationId: _ }), R?.());
+                    };
+                case c.d.OPEN_SHOP:
+                    return () => {
+                        ((0, T.Cz)({
+                            initialCollectionId: o,
+                            analyticsLocations: i,
+                            analyticsSource: a.A.PREMIUM_MARKETING,
+                        }),
+                            R?.());
                     };
                 case c.d.OPEN_MARKETING_PAGE:
                     return () => {
                         let t =
                             null != n && "" !== n
-                                ? `${I.BVt.APPLICATION_STORE}?${r.x}=${encodeURIComponent(n)}`
-                                : I.BVt.APPLICATION_STORE;
-                        ((0, i.pX)(t), N?.());
+                                ? `${u.BVt.APPLICATION_STORE}?${P.x}=${encodeURIComponent(n)}`
+                                : u.BVt.APPLICATION_STORE;
+                        ((0, l.pX)(t), R?.());
                     };
                 case c.d.OPEN_TIER_1_PAYMENT_MODAL:
                     return () =>
-                        (0, a.A)({
-                            subscriptionTier: l.pe.TIER_1,
-                            analyticsLocations: T,
-                            analyticsObject: { ...A, object: I.ZSU.BUTTON_CTA, objectType: I.btD.TIER_1 },
+                        (0, E.A)({
+                            subscriptionTier: N.pe.TIER_1,
+                            analyticsLocations: i,
+                            analyticsObject: { ...A, object: u.ZSU.BUTTON_CTA, objectType: u.btD.TIER_1 },
                             onClose: (t) => {
-                                t && N?.();
+                                t && R?.();
                             },
                         });
                 case c.d.OPEN_PLAN_SELECTION_MODAL:
-                    return () => (0, a.A)({ analyticsLocations: T });
+                    return () => (0, E.A)({ analyticsLocations: i });
                 case c.d.OPEN_PREMIUM_GROUP_PAYMENT_MODAL:
                     return () =>
-                        (0, a.A)({
-                            subscriptionTier: l.pe.TIER_2,
-                            initialPlanId: l.gD.PREMIUM_GROUP_MONTH,
-                            analyticsLocations: T,
-                            analyticsObject: { ...A, object: I.ZSU.BUTTON_CTA, objectType: I.btD.TIER_2 },
+                        (0, E.A)({
+                            subscriptionTier: N.pe.TIER_2,
+                            initialPlanId: N.gD.PREMIUM_GROUP_MONTH,
+                            analyticsLocations: i,
+                            analyticsObject: { ...A, object: u.ZSU.BUTTON_CTA, objectType: u.btD.TIER_2 },
                             onClose: (t) => {
-                                t && N?.();
+                                t && R?.();
                             },
                         });
                 case c.d.OPEN_TIER_2_PAYMENT_MODAL:
                 case c.d.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
                 default:
                     return () =>
-                        (0, a.A)({
-                            subscriptionTier: l.pe.TIER_2,
-                            analyticsLocations: T,
-                            analyticsObject: { ...A, object: I.ZSU.BUTTON_CTA, objectType: I.btD.TIER_2 },
+                        (0, E.A)({
+                            subscriptionTier: N.pe.TIER_2,
+                            analyticsLocations: i,
+                            analyticsObject: { ...A, object: u.ZSU.BUTTON_CTA, objectType: u.btD.TIER_2 },
                             onClose: (t) => {
-                                t && N?.();
+                                t && R?.();
                             },
                         });
             }
@@ -85,10 +98,12 @@ n.d(
             switch (e ?? c.d.UNSPECIFIED) {
                 case c.d.OPEN_SOCIAL_LAYER_STOREFRONT:
                     return { icon: _.LinkExternalSmallIcon, iconPosition: "end" };
+                case c.d.OPEN_SHOP:
+                    return { icon: O.ShopIcon };
                 case c.d.OPEN_GUILD_BOOST_CHECKOUT:
-                    return { icon: T.BoostGemIcon };
+                    return { icon: i.BoostGemIcon };
                 default:
-                    return { icon: O.NitroWheelIcon };
+                    return { icon: o.NitroWheelIcon };
             }
         },
     },

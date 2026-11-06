@@ -10,8 +10,8 @@ var o = n(613412),
     u = n(28863),
     p = n(212245),
     m = n(688810),
-    x = n(139286),
-    h = n(498470),
+    h = n(139286),
+    x = n(498470),
     b = n(637706),
     g = n(767316);
 n.d(
@@ -22,21 +22,22 @@ n.d(
             let { componentId: e, promotionId: n, promotionBannerMarketingComponentFields: A } = t,
                 { analyticsLocations: N } = (0, m.Ay)(),
                 j = (0, p.p)();
-            (0, x.A)({
+            (0, h.A)({
                 type: o.ImpressionTypes.VIEW,
                 name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
                 properties: { component_type: l.C.MARKETING_PAGE_BANNER, component_id: e, promotion_id: n },
             });
-            let v = (0, h.h)({
+            let v = (0, x.h)({
                     buttonAction: A.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
                     deeplinkSection: A.button?.deeplinkSection,
                     applicationId: A.button?.navigableStorefrontApplicationId?.value,
+                    shopCollectionId: A.button?.shopCollectionId?.value,
                     analyticsLocations: N,
                     analyticsLocation: j.location,
                 }),
-                y = (0, b.a)(A.body),
-                I = (0, b.C)(A.helpArticle, A.helpArticleId),
-                { icon: T, iconPosition: C } = (0, h.x)({ buttonAction: A.button?.buttonAction });
+                I = (0, b.a)(A.body),
+                y = (0, b.C)(A.helpArticle, A.helpArticleId),
+                { icon: C, iconPosition: T } = (0, x.x)({ buttonAction: A.button?.buttonAction });
             return (0, i.jsxs)("div", {
                 className: g.kL,
                 children: [
@@ -57,15 +58,15 @@ n.d(
                                 color: "text-subtle",
                                 className: g.tb,
                                 children: [
-                                    y,
-                                    null != I &&
+                                    I,
+                                    null != y &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 "\xa0",
                                                 (0, i.jsx)(u.Anchor, {
                                                     className: g.$T,
-                                                    href: I.url,
-                                                    children: I.linkText,
+                                                    href: y.url,
+                                                    children: y.linkText,
                                                 }),
                                             ],
                                         }),
@@ -81,8 +82,8 @@ n.d(
                                 size: "md",
                                 onClick: v,
                                 text: A.button.copy,
-                                icon: T,
-                                iconPosition: C,
+                                icon: C,
+                                iconPosition: T,
                             }),
                         }),
                 ],

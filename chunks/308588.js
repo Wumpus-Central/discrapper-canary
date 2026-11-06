@@ -16,6 +16,7 @@ var i,
         (i[(i.OPEN_PREMIUM_GROUP_PAYMENT_MODAL = 6)] = "OPEN_PREMIUM_GROUP_PAYMENT_MODAL"),
         (i[(i.OPEN_SOCIAL_LAYER_STOREFRONT = 7)] = "OPEN_SOCIAL_LAYER_STOREFRONT"),
         (i[(i.OPEN_GUILD_BOOST_CHECKOUT = 8)] = "OPEN_GUILD_BOOST_CHECKOUT"),
+        (i[(i.OPEN_SHOP = 9)] = "OPEN_SHOP"),
         i);
 class u extends l.G {
     constructor() {
@@ -30,6 +31,7 @@ class u extends l.G {
             { no: 3, name: "deeplink_section", kind: "scalar", T: 9 },
             { no: 4, name: "copy_localized", kind: "message", T: () => d.X },
             { no: 5, name: "navigable_storefront_application_id", kind: "message", T: () => o.ol },
+            { no: 6, name: "shop_collection_id", kind: "message", T: () => o.ol },
         ]);
     }
     create(e) {
@@ -66,6 +68,9 @@ class u extends l.G {
                         a.navigableStorefrontApplicationId,
                     );
                     break;
+                case 6:
+                    a.shopCollectionId = o.ol.internalBinaryRead(e, e.uint32(), n, a.shopCollectionId);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -85,7 +90,9 @@ class u extends l.G {
             e.navigableStorefrontApplicationId &&
                 o.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(5, r.O0.LengthDelimited).fork(), n)
-                    .join());
+                    .join(),
+            e.shopCollectionId &&
+                o.ol.internalBinaryWrite(e.shopCollectionId, t.tag(6, r.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }

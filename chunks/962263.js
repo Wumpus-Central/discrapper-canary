@@ -11,8 +11,8 @@ var r = n(477900),
     m = n(826673),
     _ = n(856383),
     p = n(308588),
-    E = n(821609),
-    h = n(28863),
+    h = n(821609),
+    E = n(28863),
     N = n(543862),
     A = n(129230),
     M = n(637706),
@@ -27,18 +27,18 @@ var x = n(503698),
     L = n(613412),
     y = n(877624),
     v = n(855986),
-    R = n(815021),
-    C = n(935462),
-    D = n(805251),
-    k = n(534514),
+    C = n(815021),
+    k = n(935462),
+    R = n(805251),
+    D = n(534514),
     P = n(834730),
     j = n(315629),
     S = n(73153),
     w = n(775602),
     G = n(139286),
     U = n(693942),
-    K = n(265705),
-    H = n(915089),
+    H = n(265705),
+    K = n(915089),
     V = n(607470),
     F = n(383055),
     $ = n(186111),
@@ -49,7 +49,7 @@ function q(e) {
     let { tagText: t, className: n } = e;
     return (0, r.jsx)("div", {
         className: I()(z.Gr, n),
-        children: (0, r.jsx)(D.E, { type: { text: t }, variant: "premium" }),
+        children: (0, r.jsx)(R.E, { type: { text: t }, variant: "premium" }),
     });
 }
 function Q(e) {
@@ -62,7 +62,7 @@ function Q(e) {
             (0, r.jsxs)("div", {
                 className: I()(z.Zz, { [z.tF]: l }),
                 children: [
-                    (0, r.jsx)(k.D, { variant: "heading-sm/semibold", className: z.Hf, children: t }),
+                    (0, r.jsx)(D.D, { variant: "heading-sm/semibold", className: z.Hf, children: t }),
                     (0, r.jsxs)(P.E, { variant: "body-md/medium", color: "text-subtle", children: [n, a?.()] }),
                 ],
             }),
@@ -81,17 +81,17 @@ function W(e) {
             header: u,
             headerClassName: m,
             modalTopPill: p,
-            subHeader: E,
-            subHeaderExtra: h,
+            subHeader: h,
+            subHeaderExtra: E,
             featureCards: M,
             changeLogId: f,
             button: b,
             body: x,
-            disclaimer: D,
+            disclaimer: R,
             disclaimerExtra: q,
         } = e,
         { onClose: W, transitionState: Z } = s,
-        J = (0, H.GV)(),
+        J = (0, K.GV)(),
         X = M.length % 2 == 0,
         ee = (0, v.bG)([w.Ay], () => w.Ay.useReducedMotion),
         [et, en] = a.useState(Date.now()),
@@ -103,8 +103,8 @@ function W(e) {
         em = a.useRef(er),
         e_ = a.useRef(eo),
         ep = a.useRef(el),
-        eE = a.useRef(ec),
-        [eh, eN] = a.useState(B),
+        eh = a.useRef(ec),
+        [eE, eN] = a.useState(B),
         eA = a.useRef(!1),
         { promotionKey: eM } = null != i ? i : {};
     (0, G.A)({
@@ -119,7 +119,7 @@ function W(e) {
             t = e - eu.current,
             n = em.current,
             r = e_.current;
-        return (ep.current && (ea((n += t)), eE.current || ei((r += t))), en(e), [n, r]);
+        return (ep.current && (ea((n += t)), eh.current || ei((r += t))), en(e), [n, r]);
     }
     return (
         a.useEffect(() => {
@@ -165,18 +165,18 @@ function W(e) {
                     }
                 })(),
                 (eA.current = !0));
-        }, [c, eh]),
+        }, [c, eE]),
         a.useEffect(
             () => () => {
-                null != eh &&
-                    eh.forEach((e) => {
+                null != eE &&
+                    eE.forEach((e) => {
                         URL.revokeObjectURL(e.src);
                     });
             },
-            [eh],
+            [eE],
         ),
         a.useEffect(() => {
-            ((eu.current = et), (em.current = er), (e_.current = eo), (ep.current = el), (eE.current = ec));
+            ((eu.current = et), (em.current = er), (e_.current = eo), (ep.current = el), (eh.current = ec));
         }, [et, er, eo, el, ec]),
         a.useEffect(
             () => () => {
@@ -216,7 +216,7 @@ function W(e) {
                 }
             );
         }, [f, n, eM]),
-        (0, r.jsx)(C.EO, {
+        (0, r.jsx)(k.EO, {
             "data-migration-pending": !0,
             className: I()(z.zr, z.kv, l),
             transitionState: Z,
@@ -228,9 +228,9 @@ function W(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: z.cG,
-                        children: (0, r.jsx)(R.J, { "data-migration-pending": !0, onClick: async () => await W() }),
+                        children: (0, r.jsx)(C.J, { "data-migration-pending": !0, onClick: async () => await W() }),
                     }),
-                    (0, r.jsxs)(C.$m, {
+                    (0, r.jsxs)(k.$m, {
                         "data-migration-pending": !0,
                         className: z.Qs,
                         scrollbarType: "auto",
@@ -267,7 +267,7 @@ function W(e) {
                                                 (eg(), ed(e.currentTarget.muted), es(!1));
                                             },
                                             disablePictureInPicture: !0,
-                                            children: eh?.map((e) => {
+                                            children: eE?.map((e) => {
                                                 let t = (0, O.getLanguages)().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
@@ -285,7 +285,7 @@ function W(e) {
                                             }),
                                         });
                                     case "embed":
-                                        return (0, r.jsx)(K.rr, {
+                                        return (0, r.jsx)(H.rr, {
                                             className: I()(z.Ki, d),
                                             allowFullScreen: !1,
                                             href: c.href,
@@ -319,18 +319,18 @@ function W(e) {
                             (0, r.jsxs)("div", {
                                 className: z.Z,
                                 children: [
-                                    (0, r.jsx)(k.D, { variant: "nitro-md", className: I()(z.TK, m), children: u }),
+                                    (0, r.jsx)(D.D, { variant: "nitro-md", className: I()(z.TK, m), children: u }),
                                     (0, r.jsxs)(P.E, {
                                         variant: "body-md/medium",
                                         color: "text-subtle",
                                         className: z.uI,
-                                        children: [E, h?.()],
+                                        children: [h, E?.()],
                                     }),
                                 ],
                             }),
                             null != x &&
                                 "" !== x &&
-                                (0, r.jsx)(k.D, { variant: "heading-lg/semibold", className: z.G3, children: x }),
+                                (0, r.jsx)(D.D, { variant: "heading-lg/semibold", className: z.G3, children: x }),
                             M.length > 0 &&
                                 (0, r.jsx)("div", {
                                     className: z.IS,
@@ -344,13 +344,13 @@ function W(e) {
                         className: z.xQ,
                         children: [
                             b(),
-                            null != D &&
-                                "" !== D &&
+                            null != R &&
+                                "" !== R &&
                                 (0, r.jsxs)(P.E, {
                                     variant: "body-xs/medium",
                                     color: "text-subtle",
                                     className: z.ed,
-                                    children: [D, q?.()],
+                                    children: [R, q?.()],
                                 }),
                         ],
                     }),
@@ -376,78 +376,87 @@ function J(e) {
         y = (0, l.q)(L);
     if ("announcementModalVariant1" === m.properties.oneofKind) {
         let e = (function (e) {
-            let {
-                    componentId: t,
-                    promotionId: n,
-                    promotion: a,
-                    content: i,
-                    renderModalProps: l,
-                    analyticsLocations: s,
-                    analyticsLocation: c,
-                    isLightTheme: d,
+            let t,
+                {
+                    componentId: n,
+                    promotionId: a,
+                    promotion: i,
+                    content: l,
+                    renderModalProps: s,
+                    analyticsLocations: c,
+                    analyticsLocation: d,
+                    isLightTheme: u,
                 } = e,
-                u = `AnnouncementModalVariant1_${t}`,
-                { onClose: m } = l,
-                x = i.button?.copy ?? O.intl.string(O.t.YScQSF),
-                I = i.button?.buttonAction,
-                L =
-                    I === p.d.OPEN_MARKETING_PAGE
-                        ? "jump_to_mkt_button"
-                        : I === p.d.OPEN_SOCIAL_LAYER_STOREFRONT
-                          ? "jump_to_slayer_storefront_button"
-                          : "get_nitro_button",
-                y = (0, f.h)({
-                    buttonAction: i.button?.buttonAction,
-                    deeplinkSection: i.button?.deeplinkSection,
-                    applicationId: i.button?.navigableStorefrontApplicationId?.value,
-                    analyticsLocations: s,
-                    analyticsLocation: c,
-                    onClose: m,
+                m = `AnnouncementModalVariant1_${n}`,
+                { onClose: x } = s,
+                I = l.button?.copy ?? O.intl.string(O.t.YScQSF),
+                L = l.button?.buttonAction;
+            switch (L) {
+                case p.d.OPEN_MARKETING_PAGE:
+                    t = "jump_to_mkt_button";
+                    break;
+                case p.d.OPEN_SOCIAL_LAYER_STOREFRONT:
+                    t = "jump_to_slayer_storefront_button";
+                    break;
+                case p.d.OPEN_SHOP:
+                    t = "jump_to_shop_button";
+                    break;
+                default:
+                    t = "get_nitro_button";
+            }
+            let y = (0, f.h)({
+                    buttonAction: l.button?.buttonAction,
+                    deeplinkSection: l.button?.deeplinkSection,
+                    applicationId: l.button?.navigableStorefrontApplicationId?.value,
+                    shopCollectionId: l.button?.shopCollectionId?.value,
+                    analyticsLocations: c,
+                    analyticsLocation: d,
+                    onClose: x,
                 }),
-                v = (0, M.C)(i.helpArticle, i.helpArticleId),
-                R =
+                v = (0, M.C)(l.helpArticle, l.helpArticleId),
+                C =
                     null != v
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: b.$T, href: v.url, children: v.linkText }),
+                                      (0, r.jsx)(E.Anchor, { className: b.$T, href: v.url, children: v.linkText }),
                                   ],
                               })
                         : void 0,
-                C = (0, M.C)(i.disclaimer?.disclaimerHelpArticle, ""),
-                D =
-                    null != C
+                k = (0, M.C)(l.disclaimer?.disclaimerHelpArticle, ""),
+                R =
+                    null != k
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: b.$T, href: C.url, children: C.linkText }),
+                                      (0, r.jsx)(E.Anchor, { className: b.$T, href: k.url, children: k.linkText }),
                                   ],
                               })
                         : void 0,
-                k = { type: "video", src: d ? i.heroArtVideoLinkLightTheme : i.videoLink };
+                D = { type: "video", src: u ? l.heroArtVideoLinkLightTheme : l.videoLink };
             return (
-                null != i.heroArtVideoSubtitles &&
-                    (k.subtitles = i.heroArtVideoSubtitles.map((e) => ({
+                null != l.heroArtVideoSubtitles &&
+                    (D.subtitles = l.heroArtVideoSubtitles.map((e) => ({
                         locale: e.locale,
                         src: e.link,
                         isDefault: !1,
                     }))),
-                ("" !== i.heroArtImageLinkDarkTheme || "" !== i.heroArtImageLinkLightTheme) &&
-                    (k = { type: "image", src: d ? i.heroArtImageLinkLightTheme : i.heroArtImageLinkDarkTheme }),
+                ("" !== l.heroArtImageLinkDarkTheme || "" !== l.heroArtImageLinkLightTheme) &&
+                    (D = { type: "image", src: u ? l.heroArtImageLinkLightTheme : l.heroArtImageLinkDarkTheme }),
                 {
-                    componentId: t,
-                    promotionId: n,
-                    promotion: a,
-                    renderModalProps: l,
-                    header: i.header,
-                    modalTopPill: i.modalTopPill,
-                    subHeader: i.subheader,
-                    subHeaderExtra: R,
-                    body: i.body,
-                    heroArt: k,
-                    featureCards: i.featureCards.map((e) => {
+                    componentId: n,
+                    promotionId: a,
+                    promotion: i,
+                    renderModalProps: s,
+                    header: l.header,
+                    modalTopPill: l.modalTopPill,
+                    subHeader: l.subheader,
+                    subHeaderExtra: C,
+                    body: l.body,
+                    heroArt: D,
+                    featureCards: l.featureCards.map((e) => {
                         let t = (0, M.C)(e.helpArticle, ""),
                             n =
                                 null != t
@@ -455,7 +464,7 @@ function J(e) {
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   "\xa0",
-                                                  (0, r.jsx)(h.Anchor, {
+                                                  (0, r.jsx)(E.Anchor, {
                                                       className: b.$T,
                                                       href: t.url,
                                                       children: t.linkText,
@@ -467,27 +476,29 @@ function J(e) {
                             header: e.header,
                             subHeader: e.body,
                             subHeaderExtra: n,
-                            imageSrc: d ? e.imageLinkLightTheme : e.imageLink,
+                            imageSrc: u ? e.imageLinkLightTheme : e.imageLink,
                             tagText: "" !== e.pill ? e.pill : void 0,
                         };
                     }),
-                    changeLogId: u,
+                    changeLogId: m,
                     button: function () {
                         let e = Date.now(),
-                            { icon: t, iconPosition: a } = (0, f.x)({ buttonAction: i.button?.buttonAction });
-                        return (0, r.jsx)(E.$, {
+                            { icon: n, iconPosition: i } = (0, f.x)({ buttonAction: l.button?.buttonAction });
+                        return (0, r.jsx)(h.$, {
                             variant: "expressive",
                             size: "md",
                             onClick: async function () {
                                 A.default.track(T.HAw.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: u,
-                                    cta_type: L,
+                                    change_log_id: m,
+                                    cta_type: t,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
-                                    target: u,
+                                    target: m,
                                 });
                                 try {
-                                    (I === p.d.OPEN_MARKETING_PAGE || I === p.d.OPEN_SOCIAL_LAYER_STOREFRONT) &&
-                                        (await (0, N.qr)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, n, {
+                                    (L === p.d.OPEN_MARKETING_PAGE ||
+                                        L === p.d.OPEN_SOCIAL_LAYER_STOREFRONT ||
+                                        L === p.d.OPEN_SHOP) &&
+                                        (await (0, N.qr)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, a, {
                                             dismissAction: g.i.TAKE_ACTION,
                                         }));
                                 } catch (e) {
@@ -496,13 +507,13 @@ function J(e) {
                                     y();
                                 }
                             },
-                            text: x,
-                            icon: t,
-                            iconPosition: a,
+                            text: I,
+                            icon: n,
+                            iconPosition: i,
                         });
                     },
-                    disclaimer: i.disclaimer?.disclaimerText !== "" ? i.disclaimer?.disclaimerText : void 0,
-                    disclaimerExtra: D,
+                    disclaimer: l.disclaimer?.disclaimerText !== "" ? l.disclaimer?.disclaimerText : void 0,
+                    disclaimerExtra: R,
                 }
             );
         })({
