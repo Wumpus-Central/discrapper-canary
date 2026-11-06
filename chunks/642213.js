@@ -1,57 +1,57 @@
-var i = u(138399),
-    t = u(964486),
-    c = u(775602),
-    l = u(149468),
-    a = u(362280),
-    s = u(81437),
-    r = u(378570),
-    A = u(114129),
-    _ = u(442325),
-    d = u(734057),
-    o = u(129230),
-    b = u(188567),
-    C = u(652215);
-u.d(
+var u = i(138399),
+    t = i(964486),
+    c = i(775602),
+    l = i(149468),
+    a = i(362280),
+    s = i(81437),
+    o = i(378570),
+    r = i(114129),
+    A = i(442325),
+    _ = i(734057),
+    d = i(129230),
+    b = i(188567),
+    C = i(652215);
+i.d(
     e,
     {},
     {
-        KW: function (n, e, u) {
+        KW: function (n, e, i) {
             function t() {
                 let { id: t, channel_id: c } = n;
-                if (null != d.A.getChannel(c)) {
-                    i.A.trackJump(c, t, e);
-                    let n = _.A.isEnabled() ? _.A.getTabForChannel(c) : null;
-                    (null != n && (0, A.ZD)(n.id), (0, r.ci)(c, t));
+                if (null != _.A.getChannel(c)) {
+                    u.A.trackJump(c, t, e);
+                    let n = A.A.isEnabled() ? A.A.getTabForChannel(c) : null;
+                    (null != n && (0, r.ZD)(n.id, "inbox"), (0, o.ci)(c, t));
                 }
-                u();
+                i();
             }
             (0, s.A)(n, t) && t();
         },
-        n4: function (n, e, u, i) {
-            (0, l.zV)(C.HAw.INBOX_CHANNEL_CLICKED, { channel_id: n, guild_id: e, type: u });
-            let t = _.A.isEnabled() ? _.A.getTabForChannel(n) : null;
-            (null != t ? (0, A.ZD)(t.id) : (0, a.A)(C.BVt.CHANNEL(e, n)), i());
+        n4: function (n, e, i, u) {
+            (0, l.zV)(C.HAw.INBOX_CHANNEL_CLICKED, { channel_id: n, guild_id: e, type: i });
+            let t = A.A.isEnabled() ? A.A.getTabForChannel(n) : null;
+            (null != t ? (0, r.ZD)(t.id, "inbox") : (0, a.A)(C.BVt.CHANNEL(e, n)), u());
         },
         xN: function (n) {
             (0, t.Ay)(() => {
                 function e() {
                     n.current?.scrollPageUp({ animate: !c.Ay.useReducedMotion });
                 }
-                function u() {
+                function i() {
                     n.current?.scrollPageDown({ animate: !c.Ay.useReducedMotion });
                 }
                 return (
-                    b._.subscribe(C.jej.SCROLL_PAGE_DOWN, u),
+                    b._.subscribe(C.jej.SCROLL_PAGE_DOWN, i),
                     b._.subscribe(C.jej.SCROLL_PAGE_UP, e),
                     () => {
-                        (b._.unsubscribe(C.jej.SCROLL_PAGE_DOWN, u), b._.unsubscribe(C.jej.SCROLL_PAGE_UP, e));
+                        (b._.unsubscribe(C.jej.SCROLL_PAGE_DOWN, i), b._.unsubscribe(C.jej.SCROLL_PAGE_UP, e));
                     }
                 );
             });
         },
         yW: function (n) {
             (0, t.Ay)(() => {
-                o.default.track(C.HAw.OPEN_POPOUT, { type: n });
+                d.default.track(C.HAw.OPEN_POPOUT, { type: n });
             });
         },
     },

@@ -110,7 +110,7 @@ class ec extends r.PureComponent {
         (0, h.bz)();
         let t = e.getGuildId() ?? es.ME,
             n = w.A.isEnabled() ? w.A.getTabForChannel(e.id) : null;
-        (null != n ? (0, U.ZD)(n.id, !0) : (0, M.uh)(t, e.id), f.A.channelListScrollTo(t, e.id));
+        (null != n ? (0, U.ZD)(n.id, "call", !0) : (0, M.uh)(t, e.id), f.A.channelListScrollTo(t, e.id));
         let i = this.activeStreamForSelectedParticipant;
         null != i && A.A.selectParticipant(i.channelId, (0, L._z)(i));
     };

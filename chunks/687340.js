@@ -1,23 +1,23 @@
-var a = t(477900);
-t(582128);
-var s = t(855986),
-    d = t(477782),
-    r = t(945810),
-    e = t(162199),
-    l = t(114129),
-    p = t(442325),
-    u = t(792996);
-t.d(
-    i,
+var a = i(477900);
+i(582128);
+var e = i(855986),
+    s = i(477782),
+    d = i(945810),
+    r = i(162199),
+    u = i(114129),
+    c = i(442325),
+    l = i(792996);
+i.d(
+    t,
     {},
     {
         A: function (n) {
-            return (0, s.bG)([p.A, r.Bt], () => p.A.isEnabled()) && null != n
-                ? (0, a.jsx)(d.Dr, {
+            return (0, e.bG)([c.A, d.Bt], () => c.A.isEnabled()) && null != n
+                ? (0, a.jsx)(s.Dr, {
                       id: "open-in-new-tab",
-                      label: u.intl.string(u.t["5Qo0S6"]),
+                      label: l.intl.string(l.t["5Qo0S6"]),
                       action: () => {
-                          (0, l.Bd)(n.id, (0, e.j)(n));
+                          (0, u.Bd)(n.id, (0, r.j)(n), "context_menu");
                       },
                   })
                 : null;

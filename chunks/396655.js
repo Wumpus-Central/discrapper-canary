@@ -713,7 +713,7 @@ class tC extends r.PureComponent {
     handleSelectChannel = () => {
         let { channel: e } = this.props,
             t = tu.A.getTabForChannel(e.id);
-        null != t ? (0, tc.ZD)(t.id) : (0, td.pX)(eL.BVt.CHANNEL(eL.ME, e.id));
+        null != t ? (0, tc.ZD)(t.id, "guilds_bar") : (0, td.pX)(eL.BVt.CHANNEL(eL.ME, e.id));
     };
     handleContextMenu = (e) => {
         let { channel: t } = this.props,

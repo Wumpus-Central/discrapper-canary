@@ -1,8 +1,8 @@
 var i = t(477900),
     l = t(582128),
     s = t(978940),
-    o = t(597798),
-    a = t(688810),
+    a = t(597798),
+    o = t(688810),
     c = t(384059),
     r = t(114129),
     u = t(442325),
@@ -16,13 +16,13 @@ t.d(
     {
         A: function (n) {
             let { channel: e, centerButton: t = !1, onCallJoined: p, ...h } = n,
-                { parentAnalyticsLocation: _ } = (0, a.Ay)(),
+                { parentAnalyticsLocation: _ } = (0, o.Ay)(),
                 j = t ? d.l : d.A,
                 k = e.isManaged() || !e.isPrivate() ? b.intl.string(b.t.S0W8Z5) : b.intl.string(b.t["0D/6Rz"]),
                 L = l.useCallback(() => {
                     (p?.(), (0, c.lO)(_, c.OP.JOIN_CALL, e.id));
                     let n = u.A.isEnabled() ? u.A.getTabForChannel(e.id) : null;
-                    (null != n && (0, r.ZD)(n.id, !0), o.default.selectVoiceChannel(e.id));
+                    (null != n && (0, r.ZD)(n.id, "call", !0), a.default.selectVoiceChannel(e.id));
                 }, [e.id, p, _]);
             return (
                 l.useEffect(

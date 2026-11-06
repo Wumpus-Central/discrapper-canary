@@ -150,7 +150,7 @@ function ec(e) {
                                     }),
                                     x.default.selectVoiceChannel(n.id, !0));
                                 let e = O.A.isEnabled() ? O.A.getTabForChannel(n.id) : null;
-                                null != e ? (0, D.ZD)(e.id, !0) : (0, w.uh)(n.guild_id ?? Q.ME, n.id);
+                                null != e ? (0, D.ZD)(e.id, "call", !0) : (0, w.uh)(n.guild_id ?? Q.ME, n.id);
                             },
                         });
                     },

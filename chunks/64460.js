@@ -19,7 +19,7 @@ let u = {
             u = parseInt(t.split("+")[1], 10);
         if ((0 === u && (u = 10), l.A.isTabBarVisible())) {
             let e = l.A.getTabs()[u - 1];
-            return (null != e && (0, s.ZD)(e.id), !1);
+            return (null != e && (0, s.ZD)(e.id, "keyboard_number"), !1);
         }
         if (
             !isNaN(u) &&

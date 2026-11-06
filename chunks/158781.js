@@ -233,7 +233,7 @@ let eS = {
             if (s.A.isOpen()) return !1;
             if (!u.A.isEnabled()) return (l.A.hasLayers() || (0, a.WU)(), !1);
             let e = o.Ay.getCurrentlySelectedChannelId();
-            return null != e && ((0, c.D5)(e, d.A.getGuildId() ?? null), !1);
+            return null != e && ((0, c.D5)(e, d.A.getGuildId() ?? null, "keyboard_shortcut"), !1);
         },
     },
     [y.IWg.CLOSE_CHANNEL_TAB]: {
@@ -242,7 +242,7 @@ let eS = {
         action() {
             if (!u.A.isEnabled() || l.A.hasLayers() || (0, r.ue)() || s.A.isOpen()) return;
             let e = u.A.getActiveTab();
-            if (null != e && !(u.A.getTabs().length <= 1)) return ((0, c.f5)(e.id), !1);
+            if (null != e && !(u.A.getTabs().length <= 1)) return ((0, c.f5)(e.id, "keyboard_shortcut"), !1);
         },
     },
     [y.IWg.TOGGLE_CHANNEL_TAB_PIN]: {
@@ -250,7 +250,7 @@ let eS = {
         comboKeysBindGlobal: !0,
         action() {
             let e = u.A.getActiveTab();
-            if (null != e) return ((0, c.RL)(e.id, !e.pinned), !1);
+            if (null != e) return ((0, c.RL)(e.id, !e.pinned, "keyboard_shortcut"), !1);
         },
     },
     [y.IWg.SEARCH_EMOJIS]: z.L,

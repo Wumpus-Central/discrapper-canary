@@ -1,8 +1,8 @@
-(n.r(t), n.d(t, { default: () => K }));
+(n.r(t), n.d(t, { default: () => q }));
 var r = n(477900),
     l = n(582128),
-    s = n(855986),
-    i = n(663341),
+    i = n(855986),
+    s = n(663341),
     a = n(189252),
     u = n(945810),
     c = n(253400),
@@ -18,45 +18,45 @@ var r = n(477900),
     C = n(812993),
     y = n(939249),
     k = n(834730),
-    I = n(366605),
-    w = n(329921),
-    A = n(789645),
-    R = n(442433),
-    v = n(571694),
-    M = n(47167),
-    E = n(713654),
+    w = n(366605),
+    A = n(329921),
+    I = n(789645),
+    v = n(442433),
+    R = n(571694),
+    E = n(47167),
+    M = n(713654),
     N = n(5180),
     j = n(682163),
-    S = n(734057),
-    P = n(71393),
+    P = n(734057),
+    S = n(71393),
     D = n(218461),
     z = n(543465),
     B = n(287809);
 n(712960);
 var T = n(652215),
     L = n(792996),
-    U = n(133281);
+    _ = n(133281);
 function F() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
-let G = new Map(),
-    O = new Set(),
-    $ = !1;
-function X(e) {
+let U = new Map(),
+    G = new Set(),
+    O = !1;
+function $(e) {
     let {
             tab: t,
-            isActive: i,
+            isActive: s,
             closable: a,
             registerTabNode: u,
             onDragStart: c,
             onDragMove: f,
-            onDragEnd: X,
-            onCloseStart: Y,
-            onRequestClose: _,
+            onDragEnd: $,
+            onCloseStart: X,
+            onRequestClose: Y,
         } = e,
-        [V, H] = l.useState(() => ($ || (($ = !0), d.A.getTabs().forEach((e) => O.add(e.id))), !O.has(t.id) && !F()));
+        [V, H] = l.useState(() => (O || ((O = !0), d.A.getTabs().forEach((e) => G.add(e.id))), !G.has(t.id) && !F()));
     (l.useEffect(() => {
-        O.add(t.id);
+        G.add(t.id);
     }, [t.id]),
         l.useEffect(() => {
             if (!V) return;
@@ -64,48 +64,51 @@ function X(e) {
             return () => clearTimeout(e);
         }, [V]));
     let [K, q] = l.useState(!1),
-        W = (0, s.bG)([S.A], () => ("channel" === t.kind ? S.A.getChannel(t.channelId) : null), [t]),
-        Z = (0, s.bG)([P.A], () => ("channel" === t.kind ? P.A.getGuild(t.guildId) : null), [t]),
-        Q = (0, s.bG)([B.default], () => (null != W && W.isDM() ? B.default.getUser(W.getRecipientId()) : null), [W]),
-        J = (0, M.Ay)(W);
-    "channel" === t.kind && null != J && G.set(t.channelId, J);
-    let ee = "route" === t.kind ? t.routeLabel : (J ?? G.get(t.channelId) ?? L.intl.string(L.t.zLZPmk)),
+        W = (0, i.bG)([P.A], () => ("channel" === t.kind ? P.A.getChannel(t.channelId) : null), [t]),
+        Z = (0, i.bG)([S.A], () => ("channel" === t.kind ? S.A.getGuild(t.guildId) : null), [t]),
+        Q = (0, i.bG)([B.default], () => (null != W && W.isDM() ? B.default.getUser(W.getRecipientId()) : null), [W]),
+        J = (0, E.Ay)(W);
+    "channel" === t.kind && null != J && U.set(t.channelId, J);
+    let ee = "route" === t.kind ? t.routeLabel : (J ?? U.get(t.channelId) ?? L.intl.string(L.t.zLZPmk)),
         et = l.useCallback(() => {
-            (0, o.ZD)(t.id);
+            (0, o.ZD)(t.id, "tab_click");
         }, [t.id]),
-        en = l.useCallback(() => {
-            if (!K && a) {
-                if ((Y(t.id), F())) return void _(t.id);
-                (q(!0),
-                    setTimeout(() => {
-                        (_(t.id), d.A.getTabs().some((e) => e.id === t.id) && q(!1));
-                    }, 150));
-            }
-        }, [K, a, Y, _, t.id]),
+        en = l.useCallback(
+            (e) => {
+                if (!K && a) {
+                    if ((X(t.id), F())) return void Y(t.id, e);
+                    (q(!0),
+                        setTimeout(() => {
+                            (Y(t.id, e), d.A.getTabs().some((e) => e.id === t.id) && q(!1));
+                        }, 150));
+                }
+            },
+            [K, a, X, Y, t.id],
+        ),
         er = l.useCallback(
             (e) => {
-                1 === e.button && (e.preventDefault(), en());
+                1 === e.button && (e.preventDefault(), en("middle_click"));
             },
             [en],
         ),
         el = l.useCallback(
             (e) => {
-                (0, R.L3)(e, async () => {
+                (0, v.L3)(e, async () => {
                     let { default: e } = await n.e(99401).then(n.bind(n, 774448));
-                    return (n) => (0, r.jsx)(e, { ...n, tab: t, onRequestClose: en });
+                    return (n) => (0, r.jsx)(e, { ...n, tab: t, onRequestClose: () => en("context_menu") });
                 });
             },
             [t, en],
         ),
         {
-            nodeRef: es,
-            handlePointerDown: ei,
+            nodeRef: ei,
+            handlePointerDown: es,
             handlePointerMove: ea,
             handlePointerUp: eu,
             handleClickCapture: ec,
         } = (function (e) {
-            let { itemId: t, onDragStart: n, onDragMove: r, onDragEnd: s } = e,
-                i = l.useRef(null),
+            let { itemId: t, onDragStart: n, onDragMove: r, onDragEnd: i } = e,
+                s = l.useRef(null),
                 a = l.useRef(null),
                 u = l.useRef(!1),
                 c = l.useCallback((e) => {
@@ -120,7 +123,7 @@ function X(e) {
                             if (!l.dragging) {
                                 if (3 > Math.hypot(e.clientX - l.startX, e.clientY - l.startY)) return;
                                 ((l.dragging = !0),
-                                    i.current?.setPointerCapture(e.pointerId),
+                                    s.current?.setPointerCapture(e.pointerId),
                                     n(t, e.clientX, e.clientY));
                             }
                             (e.preventDefault(), r(t, e.clientX, e.clientY));
@@ -129,7 +132,7 @@ function X(e) {
                     [n, r, t],
                 );
             return {
-                nodeRef: i,
+                nodeRef: s,
                 handlePointerDown: c,
                 handlePointerMove: o,
                 handlePointerUp: l.useCallback(
@@ -137,26 +140,26 @@ function X(e) {
                         let t = a.current;
                         null != t &&
                             t.pointerId === e.pointerId &&
-                            ((a.current = null), t.dragging && ((u.current = !0), s()));
+                            ((a.current = null), t.dragging && ((u.current = !0), i()));
                     },
-                    [s],
+                    [i],
                 ),
                 handleClickCapture: l.useCallback((e) => {
                     u.current && ((u.current = !1), e.preventDefault(), e.stopPropagation());
                 }, []),
             };
-        })({ itemId: t.id, onDragStart: c, onDragMove: f, onDragEnd: X }),
+        })({ itemId: t.id, onDragStart: c, onDragMove: f, onDragEnd: $ }),
         eo = l.useCallback(
             (e) => {
-                ((es.current = e), u(t.id, e));
+                ((ei.current = e), u(t.id, e));
             },
-            [es, u, t.id],
+            [ei, u, t.id],
         ),
         {
             mentionCount: ed,
             isLowImportanceMention: ef,
             showUnreadDot: eh,
-        } = (0, s.cf)(
+        } = (0, i.cf)(
             [D.Ay, z.Ay],
             () => {
                 if ("channel" !== t.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
@@ -173,25 +176,25 @@ function X(e) {
         eg = null;
     if ("route" === t.kind)
         t.routePath === T.BVt.FRIENDS
-            ? (eg = (0, r.jsx)(p.FriendsIcon, { size: "xs", color: "currentColor", className: U.PA }))
+            ? (eg = (0, r.jsx)(p.FriendsIcon, { size: "xs", color: "currentColor", className: _.PA }))
             : t.routePath === T.BVt.COLLECTIBLES_SHOP
-              ? (eg = (0, r.jsx)(m.ShopIcon, { size: "xs", color: "currentColor", className: U.PA }))
+              ? (eg = (0, r.jsx)(m.ShopIcon, { size: "xs", color: "currentColor", className: _.PA }))
               : t.routePath === T.BVt.QUEST_HOME &&
-                (eg = (0, r.jsx)(x.QuestsIcon, { size: "xs", color: "currentColor", className: U.PA }));
-    else if ((0, N.ai)(t.guildId)) eg = (0, r.jsx)(b.StarIcon, { size: "xs", color: "currentColor", className: U.PA });
+                (eg = (0, r.jsx)(x.QuestsIcon, { size: "xs", color: "currentColor", className: _.PA }));
+    else if ((0, N.ai)(t.guildId)) eg = (0, r.jsx)(b.StarIcon, { size: "xs", color: "currentColor", className: _.PA });
     else if (null != W && W.isThread()) {
-        let e = (0, E.gU)(W);
-        null != e && (eg = (0, r.jsx)(e, { size: "xs", color: "currentColor", className: U.PA }));
-    } else if (null != Z) eg = (0, r.jsx)(j.Ay, { guild: Z, size: j.Ay.Sizes.SMOL, active: !0, className: U.$f });
+        let e = (0, M.gU)(W);
+        null != e && (eg = (0, r.jsx)(e, { size: "xs", color: "currentColor", className: _.PA }));
+    } else if (null != Z) eg = (0, r.jsx)(j.Ay, { guild: Z, size: j.Ay.Sizes.SMOL, active: !0, className: _.$f });
     else if (null != W && (W.isDM() || W.isGroupDM())) {
-        let e = null != Q ? Q.getAvatarURL(void 0, 16) : (0, v.Y)(W, 16);
-        null != e && (eg = (0, r.jsx)("img", { className: U.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
+        let e = null != Q ? Q.getAvatarURL(void 0, 16) : (0, R.Y)(W, 16);
+        null != e && (eg = (0, r.jsx)("img", { className: _.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
     }
     let ep = null;
     return (
         ed > 0 &&
             (ep = (0, r.jsx)("div", {
-                className: U.WK,
+                className: _.WK,
                 "aria-hidden": !0,
                 children: (0, r.jsx)(C.hV, {
                     count: ed,
@@ -200,8 +203,8 @@ function X(e) {
             })),
         (0, r.jsxs)("div", {
             ref: eo,
-            className: h()(U.Mf, { [U.yR]: i, [U.MY]: V, [U.nE]: K }),
-            onPointerDown: ei,
+            className: h()(_.Mf, { [_.yR]: s, [_.MY]: V, [_.nE]: K }),
+            onPointerDown: es,
             onPointerMove: ea,
             onPointerUp: eu,
             onPointerCancel: eu,
@@ -210,44 +213,44 @@ function X(e) {
             onDoubleClick: (e) => e.stopPropagation(),
             children: [
                 (0, r.jsxs)(y.D, {
-                    className: U.eg,
+                    className: _.eg,
                     onClick: et,
                     onAuxClick: er,
-                    "aria-current": i ? "page" : void 0,
+                    "aria-current": s ? "page" : void 0,
                     children: [
-                        null != eg && (0, r.jsxs)("span", { className: U.P0, children: [eg, ep] }),
+                        null != eg && (0, r.jsxs)("span", { className: _.P0, children: [eg, ep] }),
                         (0, r.jsxs)(k.E, {
                             variant: "body-sm/medium",
-                            className: U.HA,
-                            children: [ee, (0, r.jsx)("span", { className: U.Zi, "aria-hidden": !0 })],
+                            className: _.HA,
+                            children: [ee, (0, r.jsx)("span", { className: _.Zi, "aria-hidden": !0 })],
                         }),
                     ],
                 }),
                 t.pinned
                     ? (0, r.jsxs)("div", {
-                          className: U.n3,
+                          className: _.n3,
                           "aria-hidden": !0,
                           children: [
-                              (0, r.jsx)(I.PinIcon, { size: "xs", color: "currentColor" }),
-                              !i && eh && (0, r.jsx)(w.N, { className: U.UU, variant: "neutral" }),
+                              (0, r.jsx)(w.PinIcon, { size: "xs", color: "currentColor" }),
+                              !s && eh && (0, r.jsx)(A.N, { className: _.UU, variant: "neutral" }),
                           ],
                       })
                     : a
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                !i &&
+                                !s &&
                                     eh &&
                                     (0, r.jsx)("div", {
-                                        className: U.XE,
+                                        className: _.XE,
                                         "aria-hidden": !0,
-                                        children: (0, r.jsx)(w.N, { variant: "neutral" }),
+                                        children: (0, r.jsx)(A.N, { variant: "neutral" }),
                                     }),
                                 (0, r.jsx)(y.D, {
-                                    className: U.b,
-                                    onClick: en,
+                                    className: _.b,
+                                    onClick: () => en("close_button"),
                                     onPointerDown: (e) => e.stopPropagation(),
                                     "aria-label": L.intl.formatToPlainString(L.t["A/PzIa"], { channelName: ee }),
-                                    children: (0, r.jsx)(A.XSmallIcon, { size: "xs" }),
+                                    children: (0, r.jsx)(I.XSmallIcon, { size: "xs" }),
                                 }),
                             ],
                         })
@@ -257,8 +260,8 @@ function X(e) {
     );
 }
 n(321073);
-let Y = "left 150ms ease-out";
-function _() {
+let X = "left 150ms ease-out";
+function Y() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 function V(e) {
@@ -274,7 +277,8 @@ function V(e) {
         (e.style.transition = ""));
 }
 var H = n(266553);
-function K() {
+let K = !1;
+function q() {
     let e,
         t,
         n,
@@ -288,35 +292,35 @@ function K() {
         C,
         y,
         k,
-        I,
         w,
         A,
-        R,
+        I,
         v,
-        M,
+        R,
         E,
+        M,
         N,
         j,
-        S,
         P,
+        S,
         D,
         {
             tabs: z,
             activeTabId: B,
             isVisible: T,
-        } = (0, s.cf)([d.A, u.Bt], () => ({
+        } = (0, i.cf)([d.A, u.Bt], () => ({
             tabs: d.A.getTabs(),
             activeTabId: d.A.getActiveTabId(),
             isVisible: d.A.isTabBarVisible(),
         })),
         {
-            setStripRef: U,
+            setStripRef: _,
             registerTabNode: F,
-            setNewTabButtonRef: G,
-            handleDragStart: O,
-            handleDragMove: $,
-            handleDragEnd: K,
-            handleCloseStart: q,
+            setNewTabButtonRef: U,
+            handleDragStart: G,
+            handleDragMove: O,
+            handleDragEnd: q,
+            handleCloseStart: W,
         } = ((e = l.useRef(null)),
         (t = l.useRef(new Map())),
         (n = l.useRef(null)),
@@ -330,22 +334,22 @@ function K() {
         (C = l.useRef(0)),
         (y = l.useRef(0)),
         (k = l.useRef(0)),
-        (I = l.useRef(0)),
-        (w = l.useCallback((e, n) => {
+        (w = l.useRef(0)),
+        (A = l.useCallback((e, n) => {
             null != n ? t.current.set(e, n) : t.current.delete(e);
         }, [])),
-        (A = l.useCallback((e) => {
+        (I = l.useCallback((e) => {
             n.current = e;
         }, [])),
-        (R = l.useCallback((t) => {
+        (v = l.useCallback((t) => {
             e.current = t;
         }, [])),
-        (v = l.useRef(new Map())),
-        (M = z.map((e) => e.id).join(",")),
+        (R = l.useRef(new Map())),
+        (E = z.map((e) => e.id).join(",")),
         l.useLayoutEffect(() => {
             if (null != f.current) return;
             let e = t.current,
-                n = v.current;
+                n = R.current;
             e.forEach((e) => {
                 ((e.style.transition = ""), (e.style.transform = ""));
             });
@@ -354,15 +358,15 @@ function K() {
                 (e.forEach((e, t) => {
                     r.set(t, e.getBoundingClientRect().left);
                 }),
-                n.size === r.size && Array.from(r.keys()).every((e) => n.has(e)) && !_())
+                n.size === r.size && Array.from(r.keys()).every((e) => n.has(e)) && !Y())
             ) {
                 let t = [];
                 if (
                     (e.forEach((e, l) => {
-                        let s = n.get(l),
-                            i = r.get(l);
-                        if (null == s || null == i) return;
-                        let a = s - i;
+                        let i = n.get(l),
+                            s = r.get(l);
+                        if (null == i || null == s) return;
+                        let a = i - s;
                         Math.abs(a) > 0.5 && t.push({ node: e, delta: a });
                     }),
                     t.length > 0)
@@ -380,9 +384,9 @@ function K() {
                             ));
                 }
             }
-            v.current = r;
-        }, [M]),
-        (E = l.useRef(!1)),
+            R.current = r;
+        }, [E]),
+        (M = l.useRef(!1)),
         (N = l.useRef(!1)),
         (j = l.useCallback(() => {
             N.current = !0;
@@ -397,7 +401,7 @@ function K() {
                         (t.style.maxWidth = `${e}px`));
                 }));
         }, [])),
-        (S = l.useCallback(() => {
+        (P = l.useCallback(() => {
             ((N.current = !1),
                 t.current.forEach((e) => {
                     ((e.style.flexGrow = ""),
@@ -417,22 +421,22 @@ function K() {
                         t.clientX <= r.right + 32 &&
                         t.clientY >= r.top - 32 &&
                         t.clientY <= r.bottom + 32;
-                l !== E.current && ((E.current = l), l || S());
+                l !== M.current && ((M.current = l), l || P());
             }
             return (window.addEventListener("mousemove", t), () => window.removeEventListener("mousemove", t));
-        }, [S]),
-        (P = l.useCallback(() => {
+        }, [P]),
+        (S = l.useCallback(() => {
             let t = e.current,
                 n = null != t && t.matches(":hover");
-            ((E.current = n), n && j());
+            ((M.current = n), n && j());
         }, [j])),
         (D = l.useCallback(
             (r, l) => {
-                let s = e.current,
-                    i = t.current.get(r);
-                if (null == s || null == i) return;
-                let a = s.getBoundingClientRect(),
-                    u = parseFloat(getComputedStyle(s).columnGap);
+                let i = e.current,
+                    s = t.current.get(r);
+                if (null == i || null == s) return;
+                let a = i.getBoundingClientRect(),
+                    u = parseFloat(getComputedStyle(i).columnGap);
                 b.current = Number.isFinite(u) ? u : 0;
                 let c = [];
                 z.forEach((e) => {
@@ -455,41 +459,41 @@ function K() {
                             (t.style.height = `${e.height}px`),
                             (t.style.margin = "0"));
                     }));
-                let w = _(),
-                    A = [],
-                    R = 1 / 0,
-                    v = -1 / 0;
+                let A = Y(),
+                    I = [],
+                    v = 1 / 0,
+                    R = -1 / 0;
                 (c.forEach((e) => {
                     let { id: t, node: n } = e,
                         l = o.get(n);
                     if (null == l) return;
-                    let s = l.left - a.left;
-                    if (((R = Math.min(R, s)), (v = Math.max(v, s + l.width)), t === r)) {
+                    let i = l.left - a.left;
+                    if (((v = Math.min(v, i)), (R = Math.max(R, i + l.width)), t === r)) {
                         x.current = l.width;
                         return;
                     }
-                    (w || (n.style.transition = Y), A.push({ node: n, size: l.width, center: s + l.width / 2 }));
+                    (A || (n.style.transition = X), I.push({ node: n, size: l.width, center: i + l.width / 2 }));
                 }),
-                    (p.current = A),
-                    (m.current = Number.isFinite(R) ? R : 0),
+                    (p.current = I),
+                    (m.current = Number.isFinite(v) ? v : 0),
                     (h.current = l));
-                let M = parseFloat(i.style.left);
-                g.current = M;
-                let E = Number.isFinite(v) ? v : 0;
-                ((C.current = Math.min(m.current, M)),
-                    (y.current = Math.max(E - x.current, M)),
+                let E = parseFloat(s.style.left);
+                g.current = E;
+                let M = Number.isFinite(R) ? R : 0;
+                ((C.current = Math.min(m.current, E)),
+                    (y.current = Math.max(M - x.current, E)),
                     (k.current = z.findIndex((e) => e.id === r)),
-                    (I.current = M),
+                    (w.current = E),
                     (f.current = r),
-                    (i.style.zIndex = "1"),
-                    (i.style.boxShadow = "0 4px 12px var(--elevation-high)"));
+                    (s.style.zIndex = "1"),
+                    (s.style.boxShadow = "0 4px 12px var(--elevation-high)"));
             },
             [z],
         )),
         {
-            setStripRef: R,
-            registerTabNode: w,
-            setNewTabButtonRef: A,
+            setStripRef: v,
+            registerTabNode: A,
+            setNewTabButtonRef: I,
             handleDragStart: D,
             handleDragMove: l.useCallback((e, n) => {
                 if (f.current !== e) return;
@@ -497,35 +501,35 @@ function K() {
                 if (null == r) return;
                 let l = Math.min(Math.max(g.current + n - h.current, C.current), y.current);
                 r.style.left = `${l}px`;
-                let s = p.current,
-                    i = x.current,
-                    a = l + i,
-                    u = g.current + i / 2,
+                let i = p.current,
+                    s = x.current,
+                    a = l + s,
+                    u = g.current + s / 2,
                     c = 0;
-                for (let e of s) {
+                for (let e of i) {
                     let t = e.center > u ? a : l;
                     e.center < t && c++;
                 }
                 let o = b.current,
                     d = m.current,
-                    w = d;
-                (s.forEach((e, t) => {
-                    (t === c && ((w = d), (d += i + o)), (e.node.style.left = `${d}px`), (d += e.size + o));
+                    A = d;
+                (i.forEach((e, t) => {
+                    (t === c && ((A = d), (d += s + o)), (e.node.style.left = `${d}px`), (d += e.size + o));
                 }),
-                    c >= s.length && (w = d),
+                    c >= i.length && (A = d),
                     (k.current = c),
-                    (I.current = w));
+                    (w.current = A));
             }, []),
             handleDragEnd: l.useCallback(() => {
                 let e = f.current;
                 if (null == e) return;
                 let r = t.current.get(e),
-                    l = I.current;
+                    l = w.current;
                 (0, o.Aq)(e, k.current);
-                let s = !1;
-                function i() {
-                    if (s) return;
-                    ((s = !0),
+                let i = !1;
+                function s() {
+                    if (i) return;
+                    ((i = !0),
                         t.current.forEach(V),
                         null != n.current && V(n.current),
                         (f.current = null),
@@ -534,36 +538,42 @@ function K() {
                     (t.current.forEach((t, n) => {
                         e.set(n, t.getBoundingClientRect().left);
                     }),
-                        (v.current = e));
+                        (R.current = e));
                 }
                 let a = null != r ? parseFloat(r.style.left) : 0 / 0;
-                null == r || _() || !Number.isFinite(a) || 0.5 > Math.abs(a - l)
-                    ? i()
-                    : ((r.style.transition = Y),
+                null == r || Y() || !Number.isFinite(a) || 0.5 > Math.abs(a - l)
+                    ? s()
+                    : ((r.style.transition = X),
                       (r.style.left = `${l}px`),
-                      r.addEventListener("transitionend", i, { once: !0 }),
-                      setTimeout(i, 200));
+                      r.addEventListener("transitionend", s, { once: !0 }),
+                      setTimeout(s, 200));
             }, []),
-            handleCloseStart: P,
-        }),
-        [W, Z] = l.useState(() => new Set()),
-        Q = l.useCallback(
+            handleCloseStart: S,
+        });
+    l.useEffect(() => {
+        if (K) return;
+        K = !0;
+        let e = d.A.getActiveTab();
+        null != e && (0, o.FP)(e, "app_start", !1, !0);
+    }, []);
+    let [Z, Q] = l.useState(() => new Set()),
+        J = l.useCallback(
             (e) => {
-                (q(), Z((t) => new Set(t).add(e)));
+                (W(), Q((t) => new Set(t).add(e)));
             },
-            [q],
+            [W],
         ),
-        J = l.useCallback((e) => {
-            ((0, o.f5)(e),
-                Z((t) => {
+        ee = l.useCallback((e, t) => {
+            ((0, o.f5)(e, t),
+                Q((t) => {
                     let n = new Set(t);
                     return (n.delete(e), n);
                 }));
         }, []);
     if (!T) return null;
-    let ee = z.filter((e) => !W.has(e.id)).length > 1;
+    let et = z.filter((e) => !Z.has(e.id)).length > 1;
     return (0, r.jsxs)("div", {
-        ref: U,
+        ref: _,
         className: H.$,
         role: "group",
         "aria-label": L.intl.string(L.t.es0PkU),
@@ -571,27 +581,27 @@ function K() {
         children: [
             z.map((e) =>
                 (0, r.jsx)(
-                    X,
+                    $,
                     {
                         tab: e,
                         isActive: e.id === B,
-                        closable: ee,
+                        closable: et,
                         registerTabNode: F,
-                        onDragStart: O,
-                        onDragMove: $,
-                        onDragEnd: K,
-                        onCloseStart: Q,
-                        onRequestClose: J,
+                        onDragStart: G,
+                        onDragMove: O,
+                        onDragEnd: q,
+                        onCloseStart: J,
+                        onRequestClose: ee,
                     },
                     e.id,
                 ),
             ),
             (0, r.jsx)("div", {
-                ref: G,
+                ref: U,
                 className: H.Y,
                 children: (0, r.jsx)(a.A, {
-                    icon: i.PlusLargeIcon,
-                    onClick: o.JC,
+                    icon: s.PlusLargeIcon,
+                    onClick: () => (0, o.JC)("new_tab_button"),
                     "aria-label": L.intl.string(L.t.GR7NIF),
                 }),
             }),

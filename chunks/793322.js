@@ -133,7 +133,7 @@ function H(e) {
                 case _.rD.IN_APP_NAVIGATION:
                     B.has(e.record.type) || (t = S.A.getTabForRoute(e.record.path));
             }
-            return null != t && ((0, g.ZD)(t.id), !0);
+            return null != t && ((0, g.ZD)(t.id, "quick_switcher"), !0);
         })(e))
     )
         return void r.h.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: e });
@@ -151,7 +151,9 @@ function H(e) {
             if (null == (t = O.A.getChannel(y.id))) break;
             C ? s.A.updateChatOpen(y.id, !0) : c.default.selectVoiceChannel(y.id);
             let e = S.A.isEnabled() ? S.A.getTabForChannel(y.id) : null;
-            null != e ? (0, g.ZD)(e.id, !C) : (0, m.iN)(t.id, { state: { analyticsSource: D }, navigationReplace: !0 });
+            null != e
+                ? (0, g.ZD)(e.id, "quick_switcher", !C)
+                : (0, m.iN)(t.id, { state: { analyticsSource: D }, navigationReplace: !0 });
             break;
         }
         case _.rD.USER:
@@ -226,7 +228,7 @@ n.d(
                     var s, l;
                     let t = O.A.getChannel(e.record.id);
                     if (null == t) return void H(e);
-                    ((s = t.id), (l = t.getGuildId() ?? null), n(), (0, g.D5)(s, l));
+                    ((s = t.id), (l = t.getGuildId() ?? null), n(), (0, g.D5)(s, l, "quick_switcher"));
                     return;
                 }
                 case _.rD.USER:
@@ -237,7 +239,7 @@ n.d(
                                 location: "Quickswitcher",
                                 navigateToChannel: !1,
                             });
-                            (0, g.D5)(t, null);
+                            (0, g.D5)(t, null, "quick_switcher");
                         })().catch(() => {}));
                     return;
                 default:
