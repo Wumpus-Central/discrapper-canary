@@ -1,15 +1,19 @@
-n.d(t, { H: () => p });
+n.d(t, { H: () => f });
 var i = n(477900),
-    s = n(582128),
-    r = n(43105),
-    a = n(727419),
+    s = n(582128);
+if (221552 == n.j) var a = n(43105);
+var r = n(727419),
     o = n(975571),
     l = n(726362),
     c = n(391523),
     d = n(652215),
     u = n(137005),
-    _ = n(792996);
-function p(e) {
+    p = n(792996);
+let m =
+    221552 == n.j
+        ? "https://cdn.discordapp.com/assets/content/8d3ce9025ba058683db6904fe74153a834b5331af2c89da160918f0e416b9a92.svg"
+        : null;
+function f(e) {
     let { guildId: t, targetElementRef: n } = e;
     return (
         s.useEffect(() => {
@@ -19,18 +23,15 @@ function p(e) {
             onClick: (e) => e.stopPropagation(),
             onKeyPress: (e) => e.stopPropagation(),
             onContextMenu: (e) => e.stopPropagation(),
-            children: (0, i.jsx)(r.A, {
+            children: (0, i.jsx)(a.A, {
                 targetElementRef: n,
                 badge: "new",
-                title: _.intl.string(u.default.BpbdcS),
-                body: _.intl.string(u.default.PY2mND),
-                graphic: {
-                    type: "image",
-                    src: "https://cdn.discordapp.com/assets/content/8d3ce9025ba058683db6904fe74153a834b5331af2c89da160918f0e416b9a92.svg",
-                },
+                title: p.intl.string(u.default.BpbdcS),
+                body: p.intl.string(u.default.PY2mND),
+                graphic: { type: "image", src: m },
                 gradientColor: "purple",
                 textLink: {
-                    text: _.intl.string(_.t.hvVgAZ),
+                    text: p.intl.string(p.t.hvVgAZ),
                     link: o.A.getArticleURL(d.MVz.SERVER_WEB_PAGES_ADMIN),
                     onClick: function () {
                         (0, c.Yy)({ noticeType: "admin_settings", guildId: t }, "learn_more");
@@ -38,12 +39,12 @@ function p(e) {
                 },
                 actions: [
                     {
-                        text: _.intl.string(u.default.AMw39B),
+                        text: p.intl.string(u.default.AMw39B),
                         variant: "primary",
                         onClick: function () {
                             ((0, c.Yy)({ noticeType: "admin_settings", guildId: t }, "open_settings"),
                                 (0, l.dM)(t),
-                                a.A.open(t, d.BEX.DISCOVERY_LANDING_PAGE));
+                                r.A.open(t, d.BEX.DISCOVERY_LANDING_PAGE));
                         },
                     },
                 ],
