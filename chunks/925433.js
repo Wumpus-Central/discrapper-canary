@@ -4633,32 +4633,32 @@ function ry(e) {
         f = h.useMemo(
             () =>
                 (function (e) {
-                    let { stage: t, traits: a, layout: i, mobileLift: r = 0, textureScale: s } = e,
-                        { base: n, shoes: c, outfit: d, face: l, hat: o, wearable: u, aura: h } = (0, y.XI)(a),
-                        f = rn[d],
-                        b = {};
+                    let { stage: t, isHidden: a, traits: i, layout: r, mobileLift: s = 0, textureScale: n } = e,
+                        { base: c, shoes: d, outfit: l, face: o, hat: u, wearable: h, aura: f } = (0, y.XI)(i),
+                        b = rn[l],
+                        _ = {};
                     return (
                         rA.forEach((e) => {
-                            let t = Number(e) === f?.riveId ? f.texture : rt;
-                            b[`outfit${e}Image`] = rg(t.name, s);
+                            let t = Number(e) === b?.riveId ? b.texture : rt;
+                            _[`outfit${e}Image`] = rg(t.name, n);
                         }),
                         {
-                            device: i,
-                            mobileLift: r,
-                            chapterID: rw[t],
-                            faceID: l,
-                            shoesID: c,
-                            headwearID: ra[o],
-                            wearableID: ri[u],
-                            outfitID: f?.riveId ?? 0,
-                            auraImage: rg(rr[h].name, s),
-                            baseColorImage: rg(rs[n].name, s),
-                            ...("MobilePortrait" === i && t === w.s9.INTRODUCTION ? rE : rI[i]),
-                            ...b,
+                            device: r,
+                            mobileLift: s,
+                            chapterID: a && t === w.s9.FACE ? rw[w.s9.IDLE] : rw[t],
+                            faceID: o,
+                            shoesID: d,
+                            headwearID: ra[u],
+                            wearableID: ri[h],
+                            outfitID: b?.riveId ?? 0,
+                            auraImage: rg(rr[f].name, n),
+                            baseColorImage: rg(rs[c].name, n),
+                            ...("MobilePortrait" === r && t === w.s9.INTRODUCTION ? rE : rI[r]),
+                            ..._,
                         }
                     );
-                })({ stage: i, traits: o, layout: "Desktop", textureScale: c }),
-            [i, o, c],
+                })({ stage: i, isHidden: s, traits: o, layout: "Desktop", textureScale: c }),
+            [i, s, o, c],
         ),
         [_, m] = h.useState(null),
         x = (function (e) {
