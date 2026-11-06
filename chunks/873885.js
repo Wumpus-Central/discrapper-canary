@@ -1,22 +1,18 @@
 var t = n(477900),
     r = n(582128),
-    s = n(284009),
-    i = n.n(s),
-    l = n(13202),
-    c = n(935462),
-    o = n(834730),
-    d = n(534514),
-    m = n(821609),
-    u = n(811893),
-    x = n(73153),
-    N = n(370480),
-    h = n(738104),
-    p = n(235986),
-    j = n(626584),
-    b = n(936525),
-    g = n(792996),
-    C = n(844768);
-let v = new j.A("TwoWayLink");
+    s = n(935462),
+    i = n(834730),
+    l = n(534514),
+    c = n(821609),
+    o = n(811893),
+    d = n(73153),
+    m = n(235986),
+    u = n(626584),
+    N = n(936525),
+    x = n(277657),
+    h = n(792996),
+    p = n(844768);
+let j = new u.A("TwoWayLink");
 n.d(
     e,
     {},
@@ -25,103 +21,101 @@ n.d(
             let {
                     platformType: e,
                     isWaitingForConnection: n,
-                    onWaitingForConnection: s,
-                    expectedCallbackState: j,
-                    onAuthToken: E,
-                    onError: k,
-                    onClose: f,
-                    img: A,
-                    title: w,
-                    body: y,
-                    redirectDestination: L,
+                    onWaitingForConnection: u,
+                    expectedCallbackState: C,
+                    onAuthToken: g,
+                    onError: b,
+                    onClose: v,
+                    img: E,
+                    title: k,
+                    body: f,
+                    redirectDestination: A,
                 } = a,
-                D = r.useCallback(async () => {
+                w = r.useCallback(async () => {
                     let a;
                     try {
-                        if (((a = await (0, h.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
-                            throw Error("missing authorizeURL");
+                        a = await (0, x.V)(e);
                     } catch (a) {
-                        (v.error("Error opening provider authorize page", a), k());
+                        (j.error("Error opening provider authorize page", a), b());
                         return;
                     }
-                    let { state: n } = (0, N.vA)(a);
-                    (i()(null != n, "Authorize URL state query parameter must be present"), s?.(n));
-                }, [e, k, s]),
-                R = r.useCallback(
+                    u?.(a);
+                }, [e, b, u]),
+                _ = r.useCallback(
                     (a) => {
                         let { callbackCode: n, callbackState: t } = a;
-                        t !== j
-                            ? v.warn(`${e} link: received mismatching callback state!`)
-                            : E({ callbackCode: n, callbackState: t });
+                        t !== C
+                            ? j.warn(`${e} link: received mismatching callback state!`)
+                            : g({ callbackCode: n, callbackState: t });
                     },
-                    [e, j, E],
+                    [e, C, g],
                 );
             return (
                 r.useEffect(
                     () => (
-                        x.h.subscribe("USER_CONNECTIONS_LINK_CALLBACK", R),
+                        d.h.subscribe("USER_CONNECTIONS_LINK_CALLBACK", _),
                         () => {
-                            x.h.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", R);
+                            d.h.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", _);
                         }
                     ),
-                    [R],
+                    [_],
                 ),
-                (0, t.jsxs)(b.A, {
+                (0, t.jsxs)(N.A, {
                     children: [
-                        (0, t.jsxs)(c.rQ, {
+                        (0, t.jsxs)(s.rQ, {
                             "data-migration-pending": !0,
-                            direction: p.A.Direction.VERTICAL,
-                            className: C.wx,
+                            direction: m.A.Direction.VERTICAL,
+                            className: p.wx,
                             separator: !1,
                             children: [
-                                (0, t.jsx)(o.E, {
-                                    className: C.u1,
+                                (0, t.jsx)(i.E, {
+                                    className: p.u1,
                                     variant: "body-xs/semibold",
                                     color: "text-default",
-                                    children: g.intl.format(g.t.fHz6eR, { number: 1, total: 2 }),
+                                    children: h.intl.format(h.t.fHz6eR, { number: 1, total: 2 }),
                                 }),
-                                (0, t.jsxs)("div", { className: C.bm, children: [A, " "] }),
-                                (0, t.jsx)(d.D, { className: C.DD, variant: "heading-xl/semibold", children: w }),
-                                null != f &&
-                                    (0, t.jsx)(c.s_, { "data-migration-pending": !0, className: C.b, onClick: f }),
+                                (0, t.jsxs)("div", { className: p.bm, children: [E, " "] }),
+                                (0, t.jsx)(l.D, { className: p.DD, variant: "heading-xl/semibold", children: k }),
+                                null != v &&
+                                    (0, t.jsx)(s.s_, { "data-migration-pending": !0, className: p.b, onClick: v }),
                             ],
                         }),
-                        (0, t.jsxs)(c.$m, {
+                        (0, t.jsxs)(s.$m, {
                             "data-migration-pending": !0,
-                            className: C.rf,
+                            className: p.rf,
                             scrollbarGutter: !1,
                             children: [
-                                (0, t.jsx)(o.E, {
+                                (0, t.jsx)(i.E, {
                                     tag: "p",
                                     variant: "body-md/normal",
                                     color: "text-default",
-                                    children: y,
+                                    children: f,
                                 }),
                                 !n &&
-                                    null != L &&
-                                    (0, t.jsx)(o.E, {
+                                    null != A &&
+                                    (0, t.jsx)(i.E, {
                                         tag: "p",
                                         variant: "body-sm/normal",
                                         color: "text-default",
-                                        children: g.intl.format(g.t.XhlYYn, { redirectUrl: L }),
+                                        children: h.intl.format(h.t.XhlYYn, { redirectUrl: A }),
                                     }),
                             ],
                         }),
-                        (0, t.jsx)(c.jl, {
+                        (0, t.jsx)(s.jl, {
                             "data-migration-pending": !0,
-                            className: C.qr,
-                            children: (0, t.jsx)(m.$, {
+                            className: p.qr,
+                            children: (0, t.jsx)(c.$, {
                                 variant: n ? "secondary" : "primary",
-                                text: g.intl.format(n ? g.t["8Laby+"] : g.t["6623tt"], {
+                                text: h.intl.format(n ? h.t["8Laby+"] : h.t["6623tt"], {
                                     popoutWindowIcon: {},
                                     popoutWindowIconHook: () =>
-                                        (0, t.jsx)(u.WindowLaunchIcon, {
+                                        (0, t.jsx)(o.WindowLaunchIcon, {
                                             color: "currentColor",
-                                            className: C.LE,
+                                            className: p.LE,
                                             size: "xs",
                                         }),
                                 }),
-                                onClick: D,
+                                onClick: w,
                                 fullWidth: !0,
                             }),
                         }),

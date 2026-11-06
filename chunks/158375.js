@@ -1,46 +1,46 @@
-e.d(n, { default: () => k });
-var o,
-    i = e(477900),
-    r = e(582128),
-    s = e(935462),
-    c = e(430690),
-    l = e(670404),
+(o.r(t), o.d(t, { default: () => k }));
+var e,
+    i = o(477900),
+    r = o(582128),
+    s = o(935462),
+    c = o(430690),
+    l = o(670404),
     a =
-        (((o = {}).PLAYSTATION = "https://discord.com/connections/playstation/link"),
-        (o.PLAYSTATION_STAGING = "https://discord.com/connections/playstation-stg/link"),
-        o),
-    d = e(333748),
-    p = e(910316),
-    T = e(652215),
-    C = e(544105);
-function g(t) {
-    let { platformType: n, authToken: e, onContinue: o, onError: r, onClose: s } = t,
-        c = n === T.fg2.PLAYSTATION_STAGING ? d.i.PLAYSTATION_STAGING_APPLICATION_ID : d.i.PLAYSTATION_APPLICATION_ID,
-        l = n === T.fg2.PLAYSTATION_STAGING ? a.PLAYSTATION_STAGING : a.PLAYSTATION;
+        (((e = {}).PLAYSTATION = "https://discord.com/connections/playstation/link"),
+        (e.PLAYSTATION_STAGING = "https://discord.com/connections/playstation-stg/link"),
+        e),
+    d = o(333748),
+    p = o(910316),
+    C = o(652215),
+    T = o(544105);
+function g(n) {
+    let { platformType: t, authToken: o, onContinue: e, onError: r, onClose: s } = n,
+        c = t === C.fg2.PLAYSTATION_STAGING ? d.i.PLAYSTATION_STAGING_APPLICATION_ID : d.i.PLAYSTATION_APPLICATION_ID,
+        l = t === C.fg2.PLAYSTATION_STAGING ? a.PLAYSTATION_STAGING : a.PLAYSTATION;
     return (0, i.jsx)(p.W, {
-        platformType: n,
+        platformType: t,
         clientId: c,
-        scopes: C.NL,
-        authToken: e,
-        onContinue: o,
+        scopes: T.NL,
+        authToken: o,
+        onContinue: e,
         onError: r,
         onClose: s,
         redirectUri: l,
     });
 }
-var h = e(478474),
-    N = e(792996);
-function A(t) {
-    let { onContinue: n, onClose: e, errorCode: o } = t,
-        r = o === T.t02.UNDER_MINIMUM_AGE ? N.intl.string(N.t["3dIn2A"]) : N.intl.string(N.t.qE9nqE);
-    return (0, i.jsx)(h.s, { title: N.intl.string(N.t.eY3qHd), body: r, onClose: e, onContinue: n });
+var h = o(478474),
+    N = o(792996);
+function A(n) {
+    let { onContinue: t, onClose: o, errorCode: e } = n,
+        r = e === C.t02.UNDER_MINIMUM_AGE ? N.intl.string(N.t["3dIn2A"]) : N.intl.string(N.t.qE9nqE);
+    return (0, i.jsx)(h.s, { title: N.intl.string(N.t.eY3qHd), body: r, onClose: o, onContinue: t });
 }
-var I = e(983851),
-    u = e(687966),
-    b = e(975571),
-    f = e(458172);
-function m(t) {
-    let { platformType: n, onContinue: e, onClose: o } = t,
+var I = o(983851),
+    u = o(687966),
+    b = o(975571),
+    f = o(458172);
+function m(n) {
+    let { platformType: t, onContinue: o, onClose: e } = n,
         s = r.useMemo(
             () => [
                 {
@@ -52,15 +52,15 @@ function m(t) {
             ],
             [],
         ),
-        c = b.A.getArticleURL(T.MVz.PS_CONNECTION),
+        c = b.A.getArticleURL(C.MVz.PS_CONNECTION),
         l = N.intl.format(N.t.kqZQNe, { helpdeskArticleUrl: c });
     return (0, i.jsx)(f.B, {
-        platformType: n,
+        platformType: t,
         headerConnect: N.intl.string(N.t.xAWHOy),
         headerReconnect: N.intl.string(N.t["ZJ/vBh"]),
         body: l,
-        onClose: o,
-        onContinue: e,
+        onClose: e,
+        onContinue: o,
         img: (0, i.jsx)("img", {
             src: "https://cdn.discordapp.com/assets/content/09152e47812b0b36abe406a49de1cc71ebae44cd025b7f7ce471ecf1bd152285.png",
             width: 230,
@@ -70,18 +70,18 @@ function m(t) {
         valueProps: s,
     });
 }
-var x = e(873885);
-function S(t) {
+var x = o(873885);
+function S(n) {
     let {
-            platformType: n,
-            isWaitingForConnection: e,
-            onWaitingForConnection: o,
+            platformType: t,
+            isWaitingForConnection: o,
+            onWaitingForConnection: e,
             expectedCallbackState: r,
             onAuthToken: s,
             onError: c,
             onClose: l,
-        } = t,
-        a = e
+        } = n,
+        a = o
             ? (0, i.jsx)("img", {
                   src: "https://cdn.discordapp.com/assets/content/0784339e68320272c6863d3ceb5170eba05ce95a3b5e362086da529fc3f8bfff.png",
                   width: "231",
@@ -94,12 +94,12 @@ function S(t) {
                   height: "160",
                   alt: "",
               }),
-        d = e ? N.intl.string(N.t.TTIocg) : N.intl.string(N.t["6n+UPR"]),
-        p = e ? N.intl.string(N.t.MNmoKH) : N.intl.string(N.t.JaaqIf);
+        d = o ? N.intl.string(N.t.TTIocg) : N.intl.string(N.t["6n+UPR"]),
+        p = o ? N.intl.string(N.t.MNmoKH) : N.intl.string(N.t.JaaqIf);
     return (0, i.jsx)(x.b, {
-        platformType: n,
-        isWaitingForConnection: e,
-        onWaitingForConnection: o,
+        platformType: t,
+        isWaitingForConnection: o,
+        onWaitingForConnection: e,
         expectedCallbackState: r,
         onAuthToken: s,
         onError: c,
@@ -109,44 +109,44 @@ function S(t) {
         body: p,
     });
 }
-var j = e(162185),
-    O = e(326513);
-function P(t) {
-    let { onClose: n } = t;
+var j = o(162185),
+    O = o(326513);
+function P(n) {
+    let { onClose: t } = n;
     return (0, i.jsx)(j.b, {
         img: (0, i.jsx)("img", { src: O.A, width: "124 ", height: "160", alt: "" }),
         title: N.intl.string(N.t.e6SOl0),
         body: N.intl.string(N.t.QjAZAQ),
-        onClose: n,
+        onClose: t,
     });
 }
-var E = e(52643),
-    _ = e(844768);
-function k(t) {
-    let { transitionState: n, onClose: e, analyticsLocation: o, platformType: r } = t,
+var E = o(52643),
+    _ = o(844768);
+function k(n) {
+    let { transitionState: t, onClose: o, analyticsLocation: e, platformType: r, pendingCallbackState: a } = n,
         {
-            slide: a,
-            gotoNext: d,
-            gotoError: p,
+            slide: d,
+            gotoNext: p,
+            gotoError: C,
             handleWaitingForConnection: T,
-            handleAuthToken: C,
-            expectedCallbackState: h,
-            callbackData: N,
-            errorCode: I,
-        } = (0, l.m)(o, r);
+            handleAuthToken: h,
+            expectedCallbackState: N,
+            callbackData: I,
+            errorCode: u,
+        } = (0, l.m)(e, r, a);
     return (0, i.jsx)(s.EO, {
         "data-migration-pending": !0,
         className: _.yl,
-        transitionState: n,
+        transitionState: t,
         disableTrack: !0,
         parentComponent: "PlayStationLinkModal",
         children: (0, i.jsxs)(c.t, {
-            activeSlide: a,
+            activeSlide: d,
             width: 408,
             children: [
                 (0, i.jsx)(c.q, {
                     id: E.N.LANDING,
-                    children: (0, i.jsx)(m, { platformType: r, onContinue: d, onClose: e }),
+                    children: (0, i.jsx)(m, { platformType: r, onContinue: p, onClose: o }),
                 }),
                 (0, i.jsx)(c.q, {
                     id: E.N.PRE_CONNECT,
@@ -154,9 +154,9 @@ function k(t) {
                         platformType: r,
                         isWaitingForConnection: !1,
                         onWaitingForConnection: T,
-                        onAuthToken: C,
-                        onError: p,
-                        onClose: e,
+                        onAuthToken: h,
+                        onError: C,
+                        onClose: o,
                     }),
                 }),
                 (0, i.jsx)(c.q, {
@@ -164,21 +164,22 @@ function k(t) {
                     children: (0, i.jsx)(S, {
                         platformType: r,
                         isWaitingForConnection: !0,
-                        expectedCallbackState: h,
-                        onAuthToken: C,
-                        onError: p,
-                        onClose: e,
+                        onWaitingForConnection: T,
+                        expectedCallbackState: N,
+                        onAuthToken: h,
+                        onError: C,
+                        onClose: o,
                     }),
                 }),
                 (0, i.jsx)(c.q, {
                     id: E.N.DISCORD_CONSENT,
-                    children: (0, i.jsx)(g, { platformType: r, authToken: N, onContinue: d, onError: p, onClose: e }),
+                    children: (0, i.jsx)(g, { platformType: r, authToken: I, onContinue: p, onError: C, onClose: o }),
                 }),
                 (0, i.jsx)(c.q, {
                     id: E.N.ERROR,
-                    children: (0, i.jsx)(A, { onContinue: d, onClose: e, errorCode: I }),
+                    children: (0, i.jsx)(A, { onContinue: p, onClose: o, errorCode: u }),
                 }),
-                (0, i.jsx)(c.q, { id: E.N.SUCCESS, children: (0, i.jsx)(P, { onClose: e }) }),
+                (0, i.jsx)(c.q, { id: E.N.SUCCESS, children: (0, i.jsx)(P, { onClose: o }) }),
             ],
         }),
     });

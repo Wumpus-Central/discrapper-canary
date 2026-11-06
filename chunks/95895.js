@@ -145,6 +145,7 @@ function _(n) {
                     id: k.N.PRE_CONNECT_WAITING,
                     children: (0, e.jsx)(b, {
                         isWaitingForConnection: !0,
+                        onWaitingForConnection: h,
                         expectedCallbackState: N,
                         onAuthToken: x,
                         onError: g,

@@ -590,7 +590,7 @@ var i = {
     "./SkipForwardIcon.web.tsx": ["898196", [698101]],
     "./BlueskyBrandIcon.web.tsx": ["429790", [359379]],
     "./ChevronSmallDownIcon.web.tsx": ["847374", []],
-    "./PlaystationNeutralIcon.web.tsx": ["22363", [68904]],
+    "./PlaystationNeutralIcon.web.tsx": ["22363", []],
     "./ChannelListMagnifyingGlassIcon.web.tsx": ["740426", []],
     "./EmojiGrumpyFaceIcon.web.tsx": ["471529", [152082]],
     "./SkullIcon.web.tsx": ["918715", []],

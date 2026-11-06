@@ -1,4 +1,4 @@
-e.d(t, { default: () => W });
+(e.r(t), e.d(t, { default: () => V }));
 var i = e(477900),
     o = e(582128),
     s = e(935462),
@@ -7,13 +7,13 @@ var i = e(477900),
     a = e(333748),
     c = e(910316),
     d = e(652215),
-    h = e(544105);
-function g(n) {
+    g = e(544105);
+function h(n) {
     let { authToken: t, onContinue: e, onError: o, onClose: s } = n;
     return (0, i.jsx)(c.W, {
         platformType: d.fg2.XBOX,
         clientId: a.i.XBOX_APPLICATION_ID,
-        scopes: h.sS,
+        scopes: g.sS,
         authToken: t,
         onContinue: e,
         onError: o,
@@ -90,7 +90,7 @@ function O(n) {
                   alt: "",
               }),
         c = t ? x.intl.string(x.t.EuwcxO) : x.intl.string(x.t["e/z3na"]),
-        h = t ? x.intl.string(x.t["1GjS/W"]) : x.intl.string(x.t["7tXu0i"]);
+        g = t ? x.intl.string(x.t["1GjS/W"]) : x.intl.string(x.t["7tXu0i"]);
     return (0, i.jsx)(E.b, {
         platformType: d.fg2.XBOX,
         isWaitingForConnection: t,
@@ -101,7 +101,7 @@ function O(n) {
         onClose: l,
         img: a,
         title: c,
-        body: h,
+        body: g,
     });
 }
 var A = e(534514),
@@ -146,11 +146,11 @@ function w() {
                     }),
                 ],
             }),
-            (0, i.jsx)(y.Ay, { className: k.C9, text: h.EY, size: 90 }),
+            (0, i.jsx)(y.Ay, { className: k.C9, text: g.EY, size: 90 }),
         ],
     });
 }
-function _(n) {
+function W(n) {
     let { onClose: t } = n;
     return (0, i.jsx)(S.b, {
         img: (0, i.jsx)("img", { src: R.A, width: "124", height: "160", alt: "" }),
@@ -160,56 +160,57 @@ function _(n) {
         onClose: t,
     });
 }
-var B = e(52643),
-    V = e(844768);
-function W(n) {
-    let { transitionState: t, onClose: e, analyticsLocation: o } = n,
+var _ = e(52643),
+    B = e(844768);
+function V(n) {
+    let { transitionState: t, onClose: e, analyticsLocation: o, pendingCallbackState: a } = n,
         {
-            slide: a,
-            gotoNext: c,
-            gotoError: h,
-            handleWaitingForConnection: C,
-            handleAuthToken: x,
-            expectedCallbackState: u,
-            callbackData: b,
-        } = (0, l.m)(o, d.fg2.XBOX);
+            slide: c,
+            gotoNext: g,
+            gotoError: C,
+            handleWaitingForConnection: x,
+            handleAuthToken: u,
+            expectedCallbackState: b,
+            callbackData: m,
+        } = (0, l.m)(o, d.fg2.XBOX, a);
     return (0, i.jsx)(s.EO, {
         "data-migration-pending": !0,
-        className: V.yl,
+        className: B.yl,
         transitionState: t,
         disableTrack: !0,
         parentComponent: "XboxLinkModal",
         children: (0, i.jsxs)(r.t, {
-            activeSlide: a,
+            activeSlide: c,
             width: 408,
             children: [
-                (0, i.jsx)(r.q, { id: B.N.LANDING, children: (0, i.jsx)(X, { onContinue: c, onClose: e }) }),
+                (0, i.jsx)(r.q, { id: _.N.LANDING, children: (0, i.jsx)(X, { onContinue: g, onClose: e }) }),
                 (0, i.jsx)(r.q, {
-                    id: B.N.PRE_CONNECT,
+                    id: _.N.PRE_CONNECT,
                     children: (0, i.jsx)(O, {
                         isWaitingForConnection: !1,
-                        onWaitingForConnection: C,
-                        onAuthToken: x,
-                        onError: h,
+                        onWaitingForConnection: x,
+                        onAuthToken: u,
+                        onError: C,
                         onClose: e,
                     }),
                 }),
                 (0, i.jsx)(r.q, {
-                    id: B.N.PRE_CONNECT_WAITING,
+                    id: _.N.PRE_CONNECT_WAITING,
                     children: (0, i.jsx)(O, {
                         isWaitingForConnection: !0,
-                        expectedCallbackState: u,
-                        onAuthToken: x,
-                        onError: h,
+                        onWaitingForConnection: x,
+                        expectedCallbackState: b,
+                        onAuthToken: u,
+                        onError: C,
                         onClose: e,
                     }),
                 }),
                 (0, i.jsx)(r.q, {
-                    id: B.N.DISCORD_CONSENT,
-                    children: (0, i.jsx)(g, { authToken: b, onContinue: c, onError: h, onClose: e }),
+                    id: _.N.DISCORD_CONSENT,
+                    children: (0, i.jsx)(h, { authToken: m, onContinue: g, onError: C, onClose: e }),
                 }),
-                (0, i.jsx)(r.q, { id: B.N.ERROR, children: (0, i.jsx)(f, { onContinue: c, onClose: e }) }),
-                (0, i.jsx)(r.q, { id: B.N.SUCCESS, children: (0, i.jsx)(_, { onClose: e }) }),
+                (0, i.jsx)(r.q, { id: _.N.ERROR, children: (0, i.jsx)(f, { onContinue: g, onClose: e }) }),
+                (0, i.jsx)(r.q, { id: _.N.SUCCESS, children: (0, i.jsx)(W, { onClose: e }) }),
             ],
         }),
     });

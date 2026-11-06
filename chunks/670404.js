@@ -8,51 +8,52 @@ n.d(
     {},
     {
         m: function (a, e) {
-            let [n, c] = t.useState(i.N.LANDING),
-                o = (0, r.Ay)(n),
-                [d, m] = t.useState(null),
-                [u, x] = t.useState(null),
-                [N, h] = t.useState(void 0),
-                p = t.useCallback(() => {
-                    switch (n) {
+            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+                [c, o] = t.useState(null != n ? i.N.PRE_CONNECT_WAITING : i.N.LANDING),
+                d = (0, r.Ay)(c),
+                [m, u] = t.useState(n),
+                [N, x] = t.useState(null),
+                [h, p] = t.useState(void 0),
+                j = t.useCallback(() => {
+                    switch (c) {
                         case i.N.LANDING:
-                            c(i.N.PRE_CONNECT);
+                            o(i.N.PRE_CONNECT);
                             break;
                         case i.N.DISCORD_CONSENT:
-                            c(i.N.SUCCESS);
+                            o(i.N.SUCCESS);
                             break;
                         case i.N.ERROR:
-                            c(i.N.PRE_CONNECT);
+                            o(i.N.PRE_CONNECT);
                     }
-                }, [n]),
-                j = t.useCallback((a) => {
-                    (m(null), h(a), c(i.N.ERROR));
-                }, []),
-                b = t.useCallback((a) => {
-                    (m(a), c(i.N.PRE_CONNECT_WAITING));
+                }, [c]),
+                C = t.useCallback((a) => {
+                    (u(null), p(a), o(i.N.ERROR));
                 }, []),
                 g = t.useCallback((a) => {
-                    (m(null), x(a), c(i.N.DISCORD_CONSENT));
+                    (u(a), o(i.N.PRE_CONNECT_WAITING));
+                }, []),
+                b = t.useCallback((a) => {
+                    (u(null), x(a), o(i.N.DISCORD_CONSENT));
                 }, []);
             return (
                 t.useEffect(() => {
-                    n !== o &&
+                    c !== d &&
                         s.default.track(l.HAw.ACCOUNT_LINK_STEP, {
                             location_stack: a,
-                            previous_step: o,
-                            current_step: n,
+                            previous_step: d,
+                            current_step: c,
                             platform_type: e,
                         });
-                }, [n, o, a, e]),
+                }, [c, d, a, e]),
                 {
-                    slide: n,
-                    gotoNext: p,
-                    gotoError: j,
-                    handleWaitingForConnection: b,
-                    handleAuthToken: g,
-                    expectedCallbackState: d,
-                    callbackData: u,
-                    errorCode: N,
+                    slide: c,
+                    gotoNext: j,
+                    gotoError: C,
+                    handleWaitingForConnection: g,
+                    handleAuthToken: b,
+                    expectedCallbackState: m,
+                    callbackData: N,
+                    errorCode: h,
                 }
             );
         },

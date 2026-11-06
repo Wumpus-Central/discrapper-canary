@@ -235,7 +235,7 @@ function ty(t) {
         : null;
 }
 var tv = e(573648),
-    tO = e(80320),
+    tO = e(522978),
     tj = e(417869);
 function tP(t) {
     let { platformType: n, icon: e, onAction: i } = t,
