@@ -62,6 +62,7 @@ var i,
         (r.MESSAGE_REQUESTS = "message-requests"),
         (r.AGE_VERIFICATION_AGEKEY_RETURN = "agekey-return"),
         (r.CONJURE = "conjure"),
+        (r.CONJURE_PROJECT_LINK = "conjure-project-link"),
         r),
     o =
         (((a = {}).NONE = "none"),
