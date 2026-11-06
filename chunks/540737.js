@@ -1,53 +1,60 @@
-var l = r(73153),
-    o = r(181658),
-    u = r(773669),
-    n = r(371794),
-    c = r(100704),
-    s = r(821925),
-    i = r(103348),
-    a = r(652215);
-function d(e) {
+var r = l(73153),
+    o = l(181658),
+    u = l(773669),
+    n = l(371794),
+    c = l(100704),
+    s = l(821925),
+    i = l(634393),
+    a = l(103348),
+    d = l(652215);
+function f(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, i.Kd)();
     if (!e) return !1;
-    let t = s.A.getFetchStateForSku(e);
-    if ("loading" === t) return !1;
+    let l = s.A.getFetchStateForSku(e);
+    if ("loading" === l) return !1;
+    if ("success" === l && s.A.getPricingKeyForSku(e) !== t) return !0;
     let r = s.A.getFetchedAtForSku(e);
     if (null != r) {
-        let e = "error" === t ? c.qq : c.HB;
+        let e = "error" === l ? c.qq : c.HB;
         return Date.now() - r > e;
     }
     return !0;
 }
-r.d(
+l.d(
     t,
     {},
     {
-        jn: d,
+        jn: f,
         tu: async function (e) {
-            let { skuIds: t, ignoreCache: r = !1 } = e,
-                c = t.filter(d);
-            if (0 !== c.length)
+            let { skuIds: t, ignoreCache: l = !1 } = e,
+                c = (0, i.tz)(),
+                s = (0, i.Kd)(c),
+                h = t.filter((e) => f(e, s));
+            if (0 !== h.length)
                 try {
-                    l.h.dispatch({ type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH", skuIds: c });
+                    r.h.dispatch({ type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH", skuIds: h });
                     let e = await (0, n.aP)({
-                        url: a.Rsh.STOREFRONT_PRODUCTS_BY_SKU_IDS,
+                        url: d.Rsh.STOREFRONT_PRODUCTS_BY_SKU_IDS,
                         query: {
-                            sku_ids: c,
+                            ...c,
+                            sku_ids: h,
                             locale: u.default.locale,
                             with_bundled_skus: !0,
                             include_google_sku_ids: !1,
-                            ignore_cache: r,
+                            ignore_cache: l,
                         },
                         rejectWithError: !0,
                     });
-                    l.h.dispatch({
+                    r.h.dispatch({
                         type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS",
-                        skuIds: c,
-                        products: e.body.products.map(i.A.fromServer),
+                        skuIds: h,
+                        products: e.body.products.map(a.A.fromServer),
+                        pricingKey: s,
                     });
                 } catch (e) {
-                    l.h.dispatch({
+                    r.h.dispatch({
                         type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE",
-                        skuIds: c,
+                        skuIds: h,
                         apiError: new o.A(e),
                     });
                 }

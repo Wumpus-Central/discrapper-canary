@@ -2,9 +2,10 @@ var l = n(582128),
     a = n(855986),
     s = n(350172),
     i = n(730202),
-    r = n(295586),
-    o = n(510801),
-    c = n(682301);
+    r = n(634393),
+    o = n(295586),
+    c = n(510801),
+    d = n(682301);
 n.d(
     t,
     {},
@@ -12,26 +13,27 @@ n.d(
         A: function (e) {
             let { includeUnpublished: t = !1, includePricing: n = !1 } =
                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                d = e ?? "";
+                u = e ?? "",
+                m = (0, r.Nm)();
             l.useEffect(() => {
-                "" !== d && r.p.requestCollections([d], { includeUnpublished: t, includePricing: n });
-            }, [d, t, n]);
-            let { collection: u, fetchState: m } = (0, a.cf)(
+                "" !== u && o.p.requestCollections([u], { includeUnpublished: t, includePricing: n });
+            }, [u, t, n, m]);
+            let { collection: g, fetchState: E } = (0, a.cf)(
                     [i.A],
-                    () => ({ collection: i.A.getCollection(d), fetchState: i.A.getFetchState(d) }),
-                    [d],
+                    () => ({ collection: i.A.getCollection(u), fetchState: i.A.getFetchState(u) }),
+                    [u],
                 ),
-                g = (0, c.Hd)(d, m),
-                E = l.useMemo(() => (null != u ? o.A.fromStorefrontCollectionRecord(u) : null), [u]),
-                h = l.useMemo(() => ("error" === m || g ? "error" : null != E ? "ready" : "loading"), [m, g, E]);
+                h = (0, d.Hd)(u, E),
+                f = l.useMemo(() => (null != g ? c.A.fromStorefrontCollectionRecord(g) : null), [g]),
+                x = l.useMemo(() => ("error" === E || h ? "error" : null != f ? "ready" : "loading"), [E, h, f]);
             return {
-                category: E,
-                state: h,
+                category: f,
+                state: x,
                 retry: l.useCallback(() => {
-                    "" !== d &&
+                    "" !== u &&
                         (0, s._v)(
                             {
-                                collectionIds: [d],
+                                collectionIds: [u],
                                 includeUnpublishedCollections: t,
                                 includeUnpublishedProducts: t,
                                 includePricing: n,
@@ -39,7 +41,7 @@ n.d(
                             },
                             { retryAfterError: !0 },
                         );
-                }, [d, t, n]),
+                }, [u, t, n]),
             };
         },
     },
