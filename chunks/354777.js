@@ -1,4 +1,4 @@
-t.d(e, { Ay: () => h, Le: () => p, ko: () => m, Tz: () => w, jp: () => k, z2: () => f });
+t.d(e, { Ay: () => h, Le: () => m, ko: () => p, Tz: () => A, jp: () => w, b6: () => k, z2: () => f });
 var o = t(46054);
 (t(380610), t(100392));
 var l = t(856383),
@@ -47,8 +47,8 @@ function d(n) {
 function c(n) {
     return "link" === n.type || "attachmentLink" === n.type;
 }
-function m(n, e) {
-    let t = p({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
+function p(n, e) {
+    let t = m({ channelId: n.channel_id, messageId: n.id, authorId: n.author?.id, renderOptions: e }),
         o = null != n.webhookId;
     return {
         ...t,
@@ -58,7 +58,7 @@ function m(n, e) {
         soundboardSounds: n.soundboardSounds ?? [],
     };
 }
-function p(n) {
+function m(n) {
     let { channelId: e, messageId: t, authorId: o, renderOptions: l } = n;
     return {
         channelId: e,
@@ -90,17 +90,17 @@ function y(n, e, t) {
     let {
             toAST: o = !1,
             hideSimpleEmbedContent: u = !0,
-            formatInline: p = !1,
+            formatInline: m = !1,
             postProcessor: y,
             contentMessage: h,
         } = t,
         f = !1,
         k = !1,
         w = (h ?? e).content,
-        A = n(w, !0, m(e, t), (n, t, m) => {
-            let { ast: A, hasSpoilerEmbeds: L } = (function (n) {
-                var e, t, o, u, m;
-                let p,
+        A = n(w, !0, p(e, t), (n, t, p) => {
+            let { ast: A, hasSpoilerEmbeds: b } = (function (n) {
+                var e, t, o, u, p;
+                let m,
                     {
                         ast: y,
                         inline: h,
@@ -108,16 +108,16 @@ function y(n, e, t) {
                         message: k,
                         contentMessage: w,
                         messageContent: A,
-                        hideSimpleEmbedContent: L,
-                        formatInline: b,
+                        hideSimpleEmbedContent: b,
+                        formatInline: L,
                         toAST: g,
                     } = n,
                     I = Array.isArray(y) ? y : [y],
-                    C = !1;
+                    S = !1;
                 return (
                     f && (I = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
-                    L && ((e = I), (t = (w ?? k).embeds), (I = (0, i.k5)(t) && (0, i.iz)((0, i.dn)(e, c)) ? [] : e)),
-                    b ||
+                    b && ((e = I), (t = (w ?? k).embeds), (I = (0, i.k5)(t) && (0, i.iz)((0, i.dn)(e, c)) ? [] : e)),
+                    L ||
                         k.type === r.lAJ.MEDIA_MENTION_MESSAGE ||
                         ((o = I),
                         (I = h
@@ -127,15 +127,15 @@ function y(n, e, t) {
                                   (o[0].content = s(o[0].content)),
                               o))),
                     (u = I),
-                    (p = { onlyLinkContent: (0, i.dn)(u, c).onlyLinks, stripGameServerShareLinks: !0 }),
+                    (m = { onlyLinkContent: (0, i.dn)(u, c).onlyLinks, stripGameServerShareLinks: !0 }),
                     (I = u.filter((n) => {
                         let e = "link" === n.type ? (n.target ?? null) : null;
-                        return null == e || !(0, i.c_)(e, p);
+                        return null == e || !(0, i.c_)(e, m);
                     })),
                     (w ?? k).embeds.length > 0 &&
-                        ((m = I),
-                        (C = h ? d(m) : "paragraph" === m[0].type && m[0].content instanceof Array && d(m[0].content))),
-                    b &&
+                        ((p = I),
+                        (S = h ? d(p) : "paragraph" === p[0].type && p[0].content instanceof Array && d(p[0].content))),
+                    L &&
                         (I = (function n(e) {
                             return (
                                 e.forEach((e) => {
@@ -152,22 +152,22 @@ function y(n, e, t) {
                                 e
                             );
                         })(I)),
-                    { ast: I, hasSpoilerEmbeds: C }
+                    { ast: I, hasSpoilerEmbeds: S }
                 );
             })({
                 ast: n,
                 inline: t,
-                hasBailedAst: (k = m ?? !1),
+                hasBailedAst: (k = p ?? !1),
                 message: e,
                 contentMessage: h,
                 messageContent: w,
                 hideSimpleEmbedContent: u,
-                formatInline: p,
+                formatInline: m,
                 toAST: o,
             });
-            f = L;
-            let b = A;
-            return (null != y && (b = y(b, t)), b);
+            f = b;
+            let L = A;
+            return (null != y && (L = y(L, t)), L);
         });
     return { hasSpoilerEmbeds: f, hasBailedAst: k, content: A };
 }
@@ -179,7 +179,11 @@ function f(n, e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return y(n, e, t);
 }
-function k(n, e) {
+function k(n) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return y(e.formatInline ? o.A.parseInlineReplyToAST : o.A.parseToAST, n, { ...e, toAST: !0 });
+}
+function w(n, e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return (function (n, e) {
         let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -214,7 +218,7 @@ function k(n, e) {
         );
     })(n, e, t);
 }
-function w(n, e, t) {
+function A(n, e, t) {
     return (0, o.A.parseAutoModerationSystemMessage)(
         n,
         !0,
