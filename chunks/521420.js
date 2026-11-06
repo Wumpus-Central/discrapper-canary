@@ -1,1 +1,1 @@
-e.exports = { R_: "heading_gt10gI", Nr: "card_gt10gI", kz: "titleArea_gt10gI" };
+i.exports = { R: "heading_gt10gI", D: "title_gt10gI" };

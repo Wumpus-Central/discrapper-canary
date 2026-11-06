@@ -1,4 +1,4 @@
-e.exports = {
+i.exports = {
     kL: "container_b0Gizz",
     rz: "heroSlot_b0Gizz",
     zn: "breadcrumbAnchor_b0Gizz",
@@ -22,9 +22,6 @@ e.exports = {
     nb: "pageFooter_b0Gizz",
     J2: "footerFilters_b0Gizz",
     bb: "relatedHeader_b0Gizz",
-    EU: "relatedDropItem_b0Gizz",
-    vK: "relatedDropCard_b0Gizz",
     M$: "skeletonHeading_b0Gizz",
     A9: "skeletonFeaturedRow_b0Gizz",
-    nl: "skeletonFeaturedBlock_b0Gizz",
 };

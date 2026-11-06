@@ -54,6 +54,94 @@
     color: #000
 }
 
+.marketingBlock_nQ1zr7 {
+    align-items: flex-start;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    padding: var(--space-32) var(--space-24) var(--space-24);
+    position: relative
+}
+
+.marketingBlock_nQ1zr7:hover {
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .14))
+}
+
+.fill_nQ1zr7 {
+    flex: 1;
+    height: 236px
+}
+
+.carousel_nQ1zr7 {
+    aspect-ratio: 530/236;
+    flex-shrink: 0;
+    min-width: 460px
+}
+
+.marketingBlockBadge_nQ1zr7 {
+    display: flex;
+    min-height: var(--space-16)
+}
+
+.marketingBlockTitleArea_nQ1zr7 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    padding-block: var(--space-6) var(--space-8)
+}
+
+@keyframes skeletonPulse_nQ1zr7 {
+    0% {
+        background: var(--background-base-lower)
+    }
+
+    30% {
+        background: var(--background-base-low)
+    }
+
+    70% {
+        background: var(--background-base-low)
+    }
+
+    to {
+        background: var(--background-base-lower)
+    }
+}
+
+.skeleton_nQ1zr7 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border: 2px solid var(--border-muted);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    display: flex;
+    padding: var(--space-16)
+}
+
+.full-motion .skeleton_nQ1zr7 {
+    animation: skeletonPulse_nQ1zr7 2s ease-in-out infinite alternate;
+    animation-fill-mode: backwards
+}
+
+.skeletonLogo_nQ1zr7 {
+    background-color: var(--icon-muted);
+    border-radius: var(--radius-xs);
+    height: var(--space-48);
+    opacity: .1;
+    width: 50%
+}
+
+.title_pwplSz {
+    max-width: 300px
+}
+
 .loadingContainer_XBXDcd {
     align-items: stretch;
     box-sizing: border-box;
@@ -116,24 +204,6 @@
 .flexEnd_XBXDcd {
     align-items: flex-end;
     justify-content: flex-end
-}
-
-@keyframes placeholderPulse_XBXDcd {
-    0% {
-        background: var(--background-base-lower)
-    }
-
-    30% {
-        background: var(--background-base-low)
-    }
-
-    70% {
-        background: var(--background-base-low)
-    }
-
-    to {
-        background: var(--background-base-lower)
-    }
 }
 
 .shopContainer_XBXDcd {
@@ -207,56 +277,6 @@
     inset-inline-end: 0;
     top: 0;
     width: 50%
-}
-
-.featuredBlock_XBXDcd {
-    background-position: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: var(--radius-lg);
-    cursor: pointer;
-    display: flex;
-    flex: 1;
-    height: 236px;
-    overflow: visible;
-    position: relative
-}
-
-.featuredBlock_XBXDcd:hover {
-    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .14))
-}
-
-.featuredBlockTextContainer_XBXDcd {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    justify-content: center;
-    padding-block: 54px 72px;
-    padding-inline: 24px 0
-}
-
-.featuredBlockTitleText_XBXDcd {
-    font-family: var(--font-headline);
-    max-width: 320px;
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
-.featuredBlockBodyText_XBXDcd {
-    max-width: 300px
-}
-
-.featuredBlockBadge_XBXDcd {
-    display: flex;
-    inset-inline-start: 24px;
-    position: absolute;
-    top: 32px
-}
-
-.featuredBlockButtonContainer_XBXDcd {
-    bottom: 24px;
-    inset-inline-start: 24px;
-    position: absolute
 }
 
 .heroBlock_XBXDcd {
@@ -573,28 +593,6 @@
     pointer-events: none
 }
 
-.featuredBlockSkeleton_XBXDcd {
-    align-items: center;
-    background-color: var(--background-base-low);
-    border: 2px solid var(--border-muted);
-    box-sizing: border-box;
-    display: flex;
-    padding: var(--space-16)
-}
-
-.full-motion .featuredBlockSkeleton_XBXDcd {
-    animation: placeholderPulse_XBXDcd 2s ease-in-out infinite alternate;
-    animation-fill-mode: backwards
-}
-
-.featuredBlockSkeletonLogo_XBXDcd {
-    background-color: var(--icon-muted);
-    border-radius: var(--radius-xs);
-    height: var(--space-48);
-    opacity: .1;
-    width: 50%
-}
-
 .bannerBlockContainer_XBXDcd {
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-lg);
@@ -849,4 +847,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=6763b748d9136b02.css.map*/
+/*# sourceMappingURL=7e0dd7ad2c1092eb.css.map*/
