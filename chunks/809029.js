@@ -3,7 +3,7 @@ var l = n(477900),
     r = n(403581),
     a = n(418200),
     s = n(166532),
-    o = n(915931),
+    o = n(615656),
     u = n(810498),
     c = n(335056),
     d = n(722178),
@@ -59,7 +59,7 @@ n.d(
                                   hasOpenInvoice: R,
                                   isInPastDueCheckout: w,
                               })
-                            : (0, l.jsx)(o._, {
+                            : (0, l.jsx)(o.M, {
                                   handlePaymentSourceAdd: j,
                                   handleStepChange: L,
                                   planGroup: T,
@@ -111,7 +111,7 @@ n.d(
                 H = i.useMemo(
                     () =>
                         (function (e) {
-                            let { isTrial: t, buttonLabel: n } = e;
+                            let { isPremiumTrial: t, buttonLabel: n } = e;
                             return t
                                 ? {
                                       variant: "expressive",
@@ -120,7 +120,7 @@ n.d(
                                       icon: () => (0, l.jsx)(r.NitroWheelIcon, { color: "currentColor" }),
                                   }
                                 : { variant: "active", text: n, dataTestId: "purchase" };
-                        })({ isTrial: t, buttonLabel: B }),
+                        })({ isPremiumTrial: t, buttonLabel: B }),
                     [t, B],
                 ),
                 { claimableRewards: W } = (0, a.Pv)(),

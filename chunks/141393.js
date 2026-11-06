@@ -5080,7 +5080,7 @@ function rw(e) {
 }
 var rD = n(328056),
     rU = n(335056),
-    rG = n(915931);
+    rG = n(615656);
 let rF = {
     CHECKOUT_FLOW: en.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
     CUSTOM_PREDICATE_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(rw, { ...e }) },
@@ -5139,7 +5139,7 @@ let rF = {
                           (0, r.jsx)(eH.dZ, {
                               children:
                                   null == d
-                                      ? (0, r.jsx)(rG._, {
+                                      ? (0, r.jsx)(rG.M, {
                                             planGroup: n,
                                             handlePaymentSourceAdd: P,
                                             metadata: A ? void 0 : p,

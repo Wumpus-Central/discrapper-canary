@@ -675,6 +675,7 @@ var ey =
         (N.SEO_CONVERSATION_SUMMARIES_VIEWED = "seo_conversation_summaries_viewed"),
         (N.SEO_CONVERSATION_SUMMARIES_CTA_CLICKED = "seo_conversation_summaries_cta_clicked"),
         (N.SEO_TRENDING_GAMES_CTA_CLICKED = "seo_trending_games_cta_clicked"),
+        (N.SEO_POPULAR_GAMES_CTA_CLICKED = "seo_popular_games_cta_clicked"),
         (N.SEO_AGGREGATOR_PAGE_VIEWED = "seo_aggregator_page_viewed"),
         (N.SEO_AGGREGATOR_CTA_CLICKED = "seo_aggregator_page_cta_clicked"),
         (N.SEO_AGGREGATOR_SEARCH_PERFORMED = "seo_aggregator_search_performed"),

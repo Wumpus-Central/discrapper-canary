@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => c, UU: () => d, $x: () => u });
+n.d(t, { U: () => d });
 var i = n(855986),
     r = n(513425),
     a = n(874421),
@@ -47,10 +47,4 @@ function d(e) {
                 }),
         t,
     );
-}
-function c() {
-    return d(() => l.Ay.getOwnedProjects());
-}
-function u() {
-    return d(() => l.Ay.getSharedWithMeProjects());
 }

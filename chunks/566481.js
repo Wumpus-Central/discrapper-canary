@@ -1,127 +1,110 @@
-(l.r(n), l.d(n, { default: () => W }), l(321073));
-var i = l(477900),
-    t = l(582128),
-    a = l(503698),
-    r = l.n(a),
-    d = l(806163),
-    s = l(152367),
-    o = l(442433),
-    u = l(636449),
-    c = l(263715),
-    p = l(283001),
-    h = l(751841),
-    j = l(381991),
-    x = l(111582),
-    m = l(16619),
-    g = l(855986),
-    f = l(165862),
-    C = l(477782),
-    b = l(972013),
-    A = l(927731),
-    k = l(191850),
-    N = l(792996);
-function I(e) {
-    let { onImport: n, importDisabled: l } = e,
-        t = (0, g.bG)([b.A], () => b.A.isPinned());
-    return (0, i.jsxs)(f.W, {
+(n.r(l), n.d(l, { default: () => G }), n(321073));
+var i = n(477900),
+    t = n(582128),
+    r = n(503698),
+    d = n.n(r),
+    a = n(806163),
+    s = n(152367),
+    o = n(442433),
+    u = n(636449),
+    c = n(263715),
+    j = n(283001),
+    p = n(751841),
+    h = n(381991),
+    x = n(111582),
+    g = n(16619),
+    f = n(855986),
+    m = n(165862),
+    A = n(477782),
+    b = n(972013),
+    C = n(927731),
+    k = n(191850),
+    v = n(792996);
+function w(e) {
+    let { onImport: l, importDisabled: n } = e,
+        t = (0, f.bG)([b.A], () => b.A.isPinned());
+    return (0, i.jsxs)(m.W, {
         navId: "conjure-rail",
         onClose: o.Z_,
         onSelect: o.Z_,
-        "aria-label": N.intl.string(k.default.uk6jhJ),
+        "aria-label": v.intl.string(k.default.uk6jhJ),
         children: [
-            (0, i.jsxs)(C.rX, {
+            (0, i.jsxs)(A.rX, {
                 children: [
-                    (0, i.jsx)(C.Dr, { id: "new-project", label: N.intl.string(k.default["34+ZcS"]), action: j.o }),
-                    (0, i.jsx)(C.Dr, { id: "import", label: N.intl.string(k.default.tx8Azx), disabled: l, action: n }),
+                    (0, i.jsx)(A.Dr, { id: "new-project", label: v.intl.string(k.default["34+ZcS"]), action: h.o }),
+                    (0, i.jsx)(A.Dr, { id: "import", label: v.intl.string(k.default.tx8Azx), disabled: n, action: l }),
                 ],
             }),
-            (0, i.jsx)(C.rX, {
+            (0, i.jsx)(A.rX, {
                 children: t
-                    ? (0, i.jsx)(C.Dr, { id: "unpin", label: N.intl.string(k.default.dFMslg), action: A.l })
-                    : (0, i.jsx)(C.Dr, { id: "pin", label: N.intl.string(k.default["DE7U+m"]), action: A._ }),
+                    ? (0, i.jsx)(A.Dr, { id: "unpin", label: v.intl.string(k.default.dFMslg), action: C.l })
+                    : (0, i.jsx)(A.Dr, { id: "pin", label: v.intl.string(k.default["DE7U+m"]), action: C._ }),
             }),
         ],
     });
 }
-var S = l(837381),
-    w = l(812993),
-    _ = l(289873),
-    v = l(602853),
-    E = l(646514),
-    M = l(862328),
-    D = l(67811),
-    y = l(941971),
-    z = l(900848),
-    L = l(550591),
-    R = l(522265),
-    Z = l(104299),
-    B = l(738601),
-    J = l(840091);
-let P = { width: (0, w.o6)(0) },
-    F = { width: 12, height: 12 },
-    U = t.memo(function (e) {
-        let { project: n } = e,
-            l = n.id,
-            [a, d] = t.useState(!1),
-            s = (0, S.Vd)(`conjure-${l}`, 2),
-            o = (0, B.yX)(l),
-            { url: u, glyphSize: c } = (0, R.A)(n, (0, v.r)(E.A.modules.guildbar.AVATAR_SIZE)),
-            p = [
-                n.name,
-                "working" === o
-                    ? N.intl.string(k.default["Y8pS+n"])
-                    : "unread" === o
-                      ? N.intl.string(k.default["N+3Pzk"])
+var _ = n(837381),
+    D = n(812993),
+    E = n(602853),
+    I = n(646514),
+    M = n(862328),
+    N = n(67811),
+    S = n(941971),
+    z = n(900848),
+    y = n(550591),
+    B = n(522265),
+    J = n(104299),
+    L = n(738601),
+    R = n(97101),
+    Z = n(840091);
+let F = { width: (0, D.o6)(0) },
+    U = { width: 12, height: 12 },
+    X = t.memo(function (e) {
+        let { project: l } = e,
+            n = l.id,
+            [r, d] = t.useState(!1),
+            a = (0, _.Vd)(`conjure-${n}`, 2),
+            s = (0, L.yX)(n),
+            { url: o, glyphSize: u } = (0, B.A)(l, (0, E.r)(I.A.modules.guildbar.AVATAR_SIZE)),
+            c = [
+                l.name,
+                "working" === s
+                    ? v.intl.string(k.default["Y8pS+n"])
+                    : "unread" === s
+                      ? v.intl.string(k.default["N+3Pzk"])
                       : null,
             ]
                 .filter((e) => null != e)
                 .join(", "),
-            h = t.useCallback(() => (0, j.A)(l), [l]);
+            j = t.useCallback(() => (0, h.A)(n), [n]);
         return (0, i.jsxs)(z.c, {
             children: [
-                (0, i.jsx)(y.A, { overlay: !0, hovered: a, selected: !1 }),
-                (0, i.jsx)(L.A, {
+                (0, i.jsx)(S.A, { overlay: !0, hovered: r, selected: !1 }),
+                (0, i.jsx)(y.A, {
                     hideOnClick: !0,
-                    text: n.name,
+                    text: l.name,
                     selected: !1,
                     children: (0, i.jsx)(M.Q, {
                         selected: !0,
-                        lowerBadge: (function (e) {
-                            switch (e) {
-                                case "working":
-                                    return (0, i.jsx)("span", {
-                                        className: J.qS,
-                                        "aria-hidden": !0,
-                                        children: (0, i.jsx)(_.y, {
-                                            type: _.t.SPINNING_CIRCLE_SIMPLE,
-                                            className: J.u1,
-                                            itemClassName: J.pu,
-                                        }),
-                                    });
-                                case "unread":
-                                    return (0, i.jsx)("span", { className: r()(J.qS, J.Zm), "aria-hidden": !0 });
-                                default:
-                                    return null;
-                            }
-                        })(o),
-                        lowerBadgeSize: "unread" === o ? F : P,
-                        children: (0, i.jsx)(D.j, {
-                            ...s,
-                            ariaLabel: p,
-                            icon: u,
-                            selected: a,
-                            onClick: h,
+                        lowerBadge: null != s ? (0, i.jsx)(R.A, { activity: s }) : null,
+                        lowerBadgeSize: "unread" === s ? U : F,
+                        children: (0, i.jsx)(N.j, {
+                            ...a,
+                            ariaLabel: c,
+                            icon: o,
+                            selected: r,
+                            onClick: j,
                             onMouseEnter: () => d(!0),
                             onMouseLeave: () => d(!1),
                             children:
-                                null == u
+                                null == o
                                     ? (0, i.jsx)("div", {
-                                          className: J.JZ,
-                                          children: (0, i.jsx)(Z.A, {
-                                              applicationId: n.application_id,
-                                              name: n.name,
-                                              glyphSize: c,
-                                              className: J.Q_,
+                                          className: Z.JZ,
+                                          children: (0, i.jsx)(J.A, {
+                                              applicationId: l.application_id,
+                                              name: l.name,
+                                              glyphSize: u,
+                                              className: Z.Q_,
                                           }),
                                       })
                                     : null,
@@ -131,58 +114,58 @@ let P = { width: (0, w.o6)(0) },
             ],
         });
     });
-var X = l(652215);
-function G() {
-    (0, j.A)(null);
-}
-function O(e) {
-    (0, j.A)(e, "create");
+var O = n(652215);
+function P() {
+    (0, h.A)(null);
 }
 function W(e) {
-    let { projects: n } = e,
-        l = (0, h.tb)((0, d.zy)().pathname),
-        a = (0, m.rX)("ConjureRailFolder"),
-        j = (0, x.A)(a, O),
-        { open: g } = j,
-        f = n.length > 0,
-        C = t.useMemo(() => {
+    (0, h.A)(e, "create");
+}
+function G(e) {
+    let { projects: l } = e,
+        n = (0, p.tb)((0, a.zy)().pathname),
+        r = (0, g.rX)("ConjureRailFolder"),
+        h = (0, x.A)(r, W),
+        { open: f } = h,
+        m = l.length > 0,
+        A = t.useMemo(() => {
             let e = (0, c.xW)({
                 folderId: u.U.CONJURE_FOLDER,
-                folderName: N.intl.string(k.default.uk6jhJ),
-                expanded: f,
+                folderName: v.intl.string(k.default.uk6jhJ),
+                expanded: m,
                 guildIds: [],
             });
-            for (let l of n) e.children.push((0, c.EL)(l.id, e.id));
+            for (let n of l) e.children.push((0, c.EL)(n.id, e.id));
             return e;
-        }, [n, f]),
-        b = t.useMemo(() => new Map(n.map((e) => [e.id, e])), [n]),
-        A = t.useCallback(
+        }, [l, m]),
+        b = t.useMemo(() => new Map(l.map((e) => [e.id, e])), [l]),
+        C = t.useCallback(
             (e) => {
-                let n = e.type === c.PJ.GUILD ? b.get(e.id) : null;
-                return null != n ? (0, i.jsx)(U, { project: n }, n.id) : null;
+                let l = e.type === c.PJ.GUILD ? b.get(e.id) : null;
+                return null != l ? (0, i.jsx)(X, { project: l }, l.id) : null;
             },
             [b],
         ),
-        S = t.useCallback((e) => (0, o.jA)(e, () => (0, i.jsx)(I, { onImport: g, importDisabled: null == a })), [g, a]);
+        _ = t.useCallback((e) => (0, o.jA)(e, () => (0, i.jsx)(w, { onImport: f, importDisabled: null == r })), [f, r]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(p.A, {
-                folderNode: C,
-                selected: l,
-                expanded: f,
+            (0, i.jsx)(j.A, {
+                folderNode: A,
+                selected: n,
+                expanded: m,
                 draggable: !1,
                 sorting: !1,
-                onExpandCollapse: X.tEg,
-                onHeaderClick: G,
-                onContextMenu: S,
+                onExpandCollapse: O.tEg,
+                onHeaderClick: P,
+                onContextMenu: _,
                 folderButtonSize: "icon",
                 folderButtonContent: (0, i.jsx)("div", {
-                    className: r()(J.RB, { [J.mv]: l }),
+                    className: d()(Z.RB, { [Z.mv]: n }),
                     children: (0, i.jsx)(s.MagicWandIcon, { size: "md", color: "currentColor" }),
                 }),
-                renderChildNode: A,
+                renderChildNode: C,
             }),
-            j.input,
+            h.input,
         ],
     });
 }

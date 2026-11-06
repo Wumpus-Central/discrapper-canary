@@ -13,4 +13,13 @@ _.exports = {
     QI: "homeRow__xoAVS",
     uW: "section__xoAVS",
     jP: "showMore__xoAVS",
+    x_: "groupHeader__xoAVS",
+    SZ: "groupTitle__xoAVS",
+    ab: "groupTitleLink__xoAVS",
+    $t: "groupIcon__xoAVS",
+    hv: "groupName__xoAVS",
+    XJ: "groupActivity__xoAVS",
+    mK: "subsection__xoAVS",
+    E8: "listState__xoAVS",
+    WD: "listEmpty__xoAVS",
 };

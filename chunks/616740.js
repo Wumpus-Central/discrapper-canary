@@ -5980,7 +5980,7 @@ function al(e) {
             a.useEffect(() => {
                 n && "unattempted" === q.Ay.getGuildProjectsFetchState(t) && (0, $.listProjects)(t);
             }, [n, t]),
-            (i = (0, X.UU)(() => (n ? (0, Q.cR)(t) : et), [n, t])),
+            (i = (0, X.U)(() => (n ? (0, Q.cR)(t) : et), [n, t])),
             (s = (0, Z.A)(i, l)),
             (o = (0, h.yK)(ee.F4, () => i.filter((e) => (0, ee.gM)(e.id)).map((e) => e.id), [i])),
             (c = (function (e) {

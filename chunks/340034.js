@@ -8,33 +8,35 @@ var i = n(683071),
     u = n(516106),
     c = n(881489),
     d = n(781949);
+function m(e) {
+    let { isGift: t, isTrial: n, unifiedCheckoutFlow: l } = e;
+    return l === r.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT
+        ? o.I0.SubscriptionApplication
+        : t
+          ? o.I0.GiftNitro
+          : n
+            ? o.I0.SubscriptionTrial
+            : o.I0.Subscription;
+}
 n.d(
     t,
     {},
     {
-        P: function (e) {
-            let { isGift: t, isTrial: n, isInvoiceBilledImmediately: i = !0, subscriptionTrial: c, ...d } = e,
-                { unifiedCheckoutFlow: m } = (0, u.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
-                p = (function (e) {
-                    let { isGift: t, isTrial: n, unifiedCheckoutFlow: l } = e;
-                    return l === r.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT
-                        ? o.I0.SubscriptionApplication
-                        : t
-                          ? o.I0.GiftNitro
-                          : n
-                            ? o.I0.SubscriptionTrial
-                            : o.I0.Subscription;
-                })({ isGift: t, isTrial: n, unifiedCheckoutFlow: m }),
-                { discountOffer: h } = (0, s.i)();
+        PI: function (e) {
+            let { isGift: t, isTrial: n, isInvoiceBilledImmediately: i = !0, subscriptionTrial: r, ...o } = e,
+                { unifiedCheckoutFlow: c } = (0, u.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
+                d = m({ isGift: t, isTrial: n, unifiedCheckoutFlow: c }),
+                { discountOffer: p } = (0, s.i)();
             return (0, l.jsx)(a.$, {
-                ...d,
+                ...o,
                 isInvoiceBilledImmediately: i,
-                subscriptionTrial: c,
-                discountOffer: h,
-                unifiedLegalType: p,
+                subscriptionTrial: r,
+                discountOffer: p,
+                unifiedLegalType: d,
             });
         },
-        l: function (e) {
+        X_: m,
+        l$: function (e) {
             let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: a } = e,
                 { fractionalPremiumBannerMessage: s } = (function (e) {
                     let {

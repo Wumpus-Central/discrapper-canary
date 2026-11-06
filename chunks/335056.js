@@ -380,7 +380,7 @@ function V(e) {
                     }),
                 l &&
                     e.push({
-                        directContent: (0, i.jsx)(E.l, { fractionalPremiumInfo: a }),
+                        directContent: (0, i.jsx)(E.l$, { fractionalPremiumInfo: a }),
                         key: "fractional-premium-notice",
                     }),
                 s && e.push({ type: "info", message: (0, f.Nn)(), role: "none", key: "premium-group-purchase-notice" }),
@@ -603,7 +603,7 @@ function K(e) {
             () =>
                 null == N || null == b || em
                     ? null
-                    : (0, i.jsx)(E.P, {
+                    : (0, i.jsx)(E.PI, {
                           fractionalPremiumInfo: Z,
                           overrideRenewalDate: X,
                           activeSubscription: M,
