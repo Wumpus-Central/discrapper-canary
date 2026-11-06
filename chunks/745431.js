@@ -3186,14 +3186,7 @@ function iv(e) {
 let ip = s.memo(function (e) {
         let { parentChannel: t, textValue: n } = e,
             l = new lJ.Ay({ channel_id: t.id, content: n }),
-            { content: s } = (0, eG.A)(l, {
-                hideSimpleEmbedContent: !0,
-                formatInline: !1,
-                allowList: !0,
-                allowHeading: !0,
-                previewLinkTarget: !0,
-                allowLinks: !0,
-            }),
+            { content: s } = (0, eG.A)(l, { allowList: !0, allowHeading: !0, previewLinkTarget: !0, allowLinks: !0 }),
             a = (0, lq.Ay)({ message: l, channel: t, compact: !1 }, s, !1);
         return (0, i.jsx)("div", { className: r()(im.SL, im.ly), children: a });
     }),

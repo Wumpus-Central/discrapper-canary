@@ -20,8 +20,8 @@ var s = t(477900),
     j = t(182179),
     E = t(85109),
     O = t(756377),
-    S = t(741097),
-    y = t(734057),
+    y = t(741097),
+    S = t(734057),
     b = t(71393),
     M = t(596344),
     T = t(218461),
@@ -132,8 +132,8 @@ let ef = (0, w.v)((e, n) => ({
 var ej = t(265872),
     eE = t(305866),
     eO = t(933832),
-    eS = t(606096),
-    ey = t(997146),
+    ey = t(606096),
+    eS = t(997146),
     eb = t(165862),
     eM = t(477782),
     eT = t(782603),
@@ -245,8 +245,8 @@ let ez = {
         label: eD.intl.string(eD.t["9p3D9p"]),
         Icon: (e) =>
             E.A.isMessageBookmarked(e.message.channel_id, e.message.id)
-                ? (0, s.jsx)(eS.BookmarkIcon, { ...e })
-                : (0, s.jsx)(ey.BookmarkOutlineIcon, { ...e }),
+                ? (0, s.jsx)(ey.BookmarkIcon, { ...e })
+                : (0, s.jsx)(eS.BookmarkOutlineIcon, { ...e }),
         interactionType: k.X8.BOOKMARK,
         Menu: (e) => {
             let { message: n, renderPopoutProps: t } = e,
@@ -272,8 +272,8 @@ let ez = {
                                       ? (0, s.jsx)(eM.Dr, {
                                             id: "remove-from-for-later",
                                             label: eD.intl.string(eD.t.SvXS1Z),
-                                            icon: eS.BookmarkIcon,
-                                            leadingAccessory: { type: "icon", icon: eS.BookmarkIcon },
+                                            icon: ey.BookmarkIcon,
+                                            leadingAccessory: { type: "icon", icon: ey.BookmarkIcon },
                                             action: () =>
                                                 (0, eC.x)({
                                                     channelId: n.channel_id,
@@ -284,8 +284,8 @@ let ez = {
                                       : (0, s.jsx)(eM.Dr, {
                                             id: "create-bookmark",
                                             label: eD.intl.string(eD.t["9p3D9p"]),
-                                            icon: ey.BookmarkOutlineIcon,
-                                            leadingAccessory: { type: "icon", icon: ey.BookmarkOutlineIcon },
+                                            icon: eS.BookmarkOutlineIcon,
+                                            leadingAccessory: { type: "icon", icon: eS.BookmarkOutlineIcon },
                                             action: () =>
                                                 (0, eC.Y)({
                                                     channelId: n.channel_id,
@@ -371,7 +371,7 @@ function e$(e) {
         j = { width: (0, W.FT)(t), height: (0, W.FT)(t) },
         E = (0, a.useId)(),
         O = 1.2 * A.size,
-        S =
+        y =
             null != x &&
             (0, s.jsxs)("svg", {
                 width: O,
@@ -432,7 +432,7 @@ function e$(e) {
               onMouseLeave: u ?? void 0,
               "aria-label": f ?? void 0,
               "aria-hidden": g,
-              children: [n, S],
+              children: [n, y],
           })
         : (0, s.jsxs)("div", {
               className: l()(eH.iE, h),
@@ -443,7 +443,7 @@ function e$(e) {
               role: "img",
               "aria-label": f ?? void 0,
               "aria-hidden": g,
-              children: [n, S],
+              children: [n, y],
           });
 }
 function eF(e) {
@@ -747,11 +747,8 @@ function eQ(e) {
         { previewContent: o, Icon: c } = (function (e) {
             let { message: n, isUnread: t, isSelected: i } = e,
                 { content: r } = (0, em.A)(n, {
-                    hideSimpleEmbedContent: !0,
-                    allowList: !1,
                     allowHeading: !0,
                     allowLinks: !0,
-                    previewLinkTarget: !1,
                     formatInline: !0,
                     noStyleAndInteraction: !0,
                 });
@@ -834,9 +831,9 @@ let e0 = (0, a.memo)(
             c = n.message,
             d = (0, k.op)(),
             { params: u } = (0, H.W5)(),
-            h = (0, o.bG)([y.A], () => {
+            h = (0, o.bG)([S.A], () => {
                 if (null == c) return null;
-                let e = y.A.getChannel(n.channelId);
+                let e = S.A.getChannel(n.channelId);
                 return null != e
                     ? e
                     : new eI.jb({
@@ -1006,13 +1003,13 @@ function nc(e) {
         {
             isLoading: E,
             isLoadingComplete: O,
-            hasLoadedEver: S,
+            hasLoadedEver: y,
         } = (0, o.cf)([_.A], () => ({
             isLoading: _.A.isLoading,
             isLoadingComplete: _.A.isLoadingComplete,
             hasLoadedEver: _.A.hasLoadedEver,
         })),
-        { messageCategoryOpenStates: y, toggleOpenState: b } = nt(),
+        { messageCategoryOpenStates: S, toggleOpenState: b } = nt(),
         M =
             ((n = (0, o.yK)([_.A], () => _.A.getNotifyingChannelIds() ?? [])),
             (0, o.bG)(
@@ -1079,7 +1076,7 @@ function nc(e) {
         }, [t, i]),
         w = 0 === t.length && 0 === i.length,
         K = w && O,
-        z = !S || (r && w),
+        z = !y || (r && w),
         X = a.useMemo(() => nr.filter((e) => D[e].length > 0), [D]),
         P = a.useMemo(() => {
             if (x)
@@ -1089,10 +1086,10 @@ function nc(e) {
                 ];
             let e = [];
             for (let n of X)
-                if ((e.push({ type: "section-header", category: n }), y[n]))
+                if ((e.push({ type: "section-header", category: n }), S[n]))
                     for (let t of D[n]) e.push({ type: "message", messageGroup: t, isUnread: n === e_.Ur.UNREAD });
             return e;
-        }, [x, i, t, X, y, D]),
+        }, [x, i, t, X, S, D]),
         Y = a.useMemo(() => [P.length], [P.length]),
         H = a.useCallback((e, n) => (P[n]?.type === "section-header" ? 32 : 64), [P]),
         $ = a.useCallback(
@@ -1104,9 +1101,9 @@ function nc(e) {
                           nl,
                           {
                               group: t.category,
-                              isOpen: y[t.category],
+                              isOpen: S[t.category],
                               toggleOpenedState: () => {
-                                  let e = y[t.category];
+                                  let e = S[t.category];
                                   (b(t.category), (0, k.Ut)({ section: t.category, enabled: !e, viewId: A }));
                               },
                           },
@@ -1114,7 +1111,7 @@ function nc(e) {
                       )
                     : u(t.messageGroup, t.isUnread);
             },
-            [P, y, b, A, u],
+            [P, S, b, A, u],
         ),
         F = P[P.length - 1],
         V = F?.type === "section-header",
@@ -1137,10 +1134,10 @@ function nc(e) {
             p.current = 0;
         }, [Z]));
     let J = a.useCallback(() => {
-        let e = nr.filter((e) => y[e]).reduce((e, n) => e + D[n].length, 0),
+        let e = nr.filter((e) => S[e]).reduce((e, n) => e + D[n].length, 0),
             n = I.current?.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - e);
-    }, [y, D]);
+    }, [S, D]);
     return (
         a.useEffect(() => {
             z || E || p.current >= 2 || 0 >= J() || ((!V || M) && (p.current++, c?.(e_.VA.FILL_SCROLLER)));
@@ -1219,7 +1216,7 @@ function ng(e) {
                     : (v.default.compare(a.id, n) >= 0 || a.kind === e_.yL.MENTION) && t.push(a);
             return { readMessages: t, unreadMessages: s };
         }),
-        { fetchState: u, loadMore: h } = (0, S.A)(i === e_.Io.BOOKMARKS),
+        { fetchState: u, loadMore: h } = (0, y.A)(i === e_.Io.BOOKMARKS),
         g = a.useCallback(
             (e) => {
                 if (i === e_.Io.BOOKMARKS) {
@@ -1273,7 +1270,7 @@ function ng(e) {
                               {
                                   id: n.id,
                                   channelId: n.channel_id,
-                                  guildId: y.A.getBasicChannel(n.channel_id)?.guild_id,
+                                  guildId: S.A.getBasicChannel(n.channel_id)?.guild_id,
                                   kind: e_.yL.BOOKMARK,
                                   message: n,
                               },

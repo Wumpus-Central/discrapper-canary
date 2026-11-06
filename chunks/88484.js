@@ -1,6 +1,6 @@
-t.d(n, { Ay: () => y, Wz: () => j, $J: () => I, p3: () => g, ld: () => v });
-var r = t(477900),
-    l = t(582128),
+t.d(n, { Ay: () => I, Wz: () => v, $J: () => j, p3: () => g });
+var l = t(477900),
+    r = t(582128),
     i = t(146849),
     a = t(647660),
     u = t(129230),
@@ -17,46 +17,40 @@ function g(e) {
     let {
         hideSimpleEmbedContent: n = !0,
         formatInline: t = !1,
-        noStyleAndInteraction: r = !1,
+        noStyleAndInteraction: l = !1,
         allowHeading: i = !1,
         allowList: a = !1,
         allowLinks: u = !1,
         allowDevLinks: s = !1,
         previewLinkTarget: o = !1,
         viewingChannelId: c,
-        postProcessor: d,
-        restrictedPreview: h = !1,
+        restrictedPreview: d = !1,
     } = e;
-    return l.useMemo(
+    return r.useMemo(
         () => ({
             hideSimpleEmbedContent: n,
             formatInline: t,
-            noStyleAndInteraction: r,
+            noStyleAndInteraction: l,
             allowHeading: i,
             allowList: a,
             allowLinks: u,
             allowDevLinks: s,
             previewLinkTarget: o,
             viewingChannelId: c,
-            allowGameMentions: !0,
-            postProcessor: d,
-            restrictedPreview: h,
+            restrictedPreview: d,
         }),
-        [n, t, r, i, a, u, s, o, c, d, h],
+        [n, t, l, i, a, u, s, o, c, d],
     );
 }
 function v(e, n) {
-    return (0, i.I2)({ location: n }).enabled && null == e.postProcessor;
+    let { restrictedPreview: t, ...l } = n;
+    return (0, c.Ay)(e, { ...l, allowGameMentions: !0, postProcessor: t ? h.A : void 0 });
 }
-function j(e, n) {
-    let { restrictedPreview: t, postProcessor: r, ...l } = n;
-    return (0, c.Ay)(e, { ...l, postProcessor: t ? (e, n) => (0, h.A)(r?.(e, n) ?? e) : r });
-}
-function I(e) {
+function j(e) {
     if (null != e.customRenderedContent) return e.customRenderedContent;
     if (e.isUnsupported) return { content: p.intl.string(p.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
     if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(f.pr7.LOADING))
-        return { content: (0, r.jsx)(m.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+        return { content: (0, l.jsx)(m.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
     if (e.type === f.lAJ.CHANGELOG) {
         let { renderChangelogMessageMarkup: n } = t(550997);
         return n(e, x, {
@@ -67,44 +61,44 @@ function I(e) {
     }
     return null;
 }
-function y(e) {
-    let { message: n, options: t, parsed: i } = e,
-        u = g(t),
-        c = v(u, "MessageRenderedContent"),
-        h = n.id,
-        m = n.channel_id,
-        p = (0, s.U)(n),
-        x = n.author?.id,
-        { viewingChannelId: y, formatInline: A, noStyleAndInteraction: C } = u,
-        k = l.useMemo(
+function I(e) {
+    let { message: n, options: t, parsed: u } = e,
+        c = g(t),
+        h = (0, i.I2)({ location: "MessageRenderedContent" }).enabled,
+        m = n.id,
+        p = n.channel_id,
+        x = (0, s.U)(n),
+        I = n.author?.id,
+        { viewingChannelId: y, formatInline: A, noStyleAndInteraction: C } = c,
+        k = r.useMemo(
             () => ({
-                messageId: h,
-                channelId: m,
+                messageId: m,
+                channelId: p,
                 viewingChannelId: y,
-                guildId: p,
-                authorId: x,
+                guildId: x,
+                authorId: I,
                 formatInline: A,
                 noStyleAndInteraction: C,
             }),
-            [h, m, y, p, x, A, C],
+            [m, p, y, x, I, A, C],
         );
-    return l.useMemo(() => {
-        let e = I(n);
+    return r.useMemo(() => {
+        let e = j(n);
         return null != e
             ? e.content
-            : c
-              ? (0, r.jsx)(l.Suspense, {
-                    children: (0, r.jsx)(d.O.Provider, {
+            : h
+              ? (0, l.jsx)(r.Suspense, {
+                    children: (0, l.jsx)(d.O.Provider, {
                         value: k,
-                        children: (0, r.jsx)(a.A, {
+                        children: (0, l.jsx)(a.A, {
                             content: n.content,
-                            parsed: i,
+                            parsed: u,
                             allowJumboEmoji: !A && n.type !== f.lAJ.MEDIA_MENTION_MESSAGE,
-                            hideSingleLinkContent: u.hideSimpleEmbedContent && (0, o.k5)(n.embeds),
-                            redactRestrictedContent: u.restrictedPreview,
+                            hideSingleLinkContent: c.hideSimpleEmbedContent && (0, o.k5)(n.embeds),
+                            redactRestrictedContent: c.restrictedPreview,
                         }),
                     }),
                 })
-              : j(n, u).content;
-    }, [n.content, n.customRenderedContent, n.embeds, n.interaction, n.state, n.type, u, c, i, k]);
+              : v(n, c).content;
+    }, [n.content, n.customRenderedContent, n.embeds, n.interaction, n.state, n.type, c, h, u, k]);
 }

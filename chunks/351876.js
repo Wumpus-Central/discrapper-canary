@@ -1,4 +1,4 @@
-n.d(t, { U: () => R });
+n.d(t, { U: () => F });
 var i = n(477900),
     a = n(582128),
     l = n(834730);
@@ -18,27 +18,27 @@ var o = n(435558),
     A = n(548146),
     v = n(383055),
     I = n(394839),
-    w = n(538355),
-    E = n(715628),
-    S = n(752636),
+    E = n(538355),
+    S = n(715628),
+    w = n(752636),
     x = n(288254),
     C = n(734057),
-    L = n(287809),
-    P = n(515718),
-    T = n(811091),
-    _ = n(207913),
-    b = n(393033);
+    P = n(287809),
+    _ = n(515718),
+    b = n(811091),
+    j = n(207913),
+    L = n(393033);
 n(239093);
-var j = n(652215),
+var T = n(652215),
     O = n(838541),
     M = n(366454);
-function k(e) {
+function N(e) {
     let { message: t } = e,
         { attachments: n } = t;
     if (0 === n.length) return null;
     let a = 1 === n.length;
     function l(e, n) {
-        let i = (0, r.Lt)(e.originalItem.flags ?? 0, j.sbO.IS_SPOILER) || (0, x.BV)(C.A.getChannel(t.channel_id));
+        let i = (0, r.Lt)(e.originalItem.flags ?? 0, T.sbO.IS_SPOILER) || (0, x.BV)(C.A.getChannel(t.channel_id));
         return (0, c.iW)(e.originalItem, n, i);
     }
     return (0, i.jsx)("div", {
@@ -52,9 +52,9 @@ function k(e) {
                     downloadUrl: e.proxy_url,
                     height: e.height,
                     width: e.width,
-                    spoiler: (0, r.Lt)(e.flags ?? 0, j.sbO.IS_SPOILER),
+                    spoiler: (0, r.Lt)(e.flags ?? 0, T.sbO.IS_SPOILER),
                     contentType: e.content_type,
-                    srcIsAnimated: (0, r.Lt)(e.flags ?? 0, j.sbO.IS_ANIMATED),
+                    srcIsAnimated: (0, r.Lt)(e.flags ?? 0, T.sbO.IS_ANIMATED),
                 },
                 message: t,
                 mediaLayoutType: O.d.MOSAIC,
@@ -69,7 +69,7 @@ function k(e) {
                         let a = 372,
                             l = 279;
                         if (null != t.width && null != t.height) {
-                            let e = (0, P.U8)({ width: t.width, height: t.height, maxWidth: 372, maxHeight: 279 });
+                            let e = (0, _.U8)({ width: t.width, height: t.height, maxWidth: 372, maxHeight: 279 });
                             ((a = (0, o.clamp)(Math.round(t.width * e), 0, 372)),
                                 (l = (0, o.clamp)(Math.round(t.height * e), 0, 279)));
                         }
@@ -111,17 +111,17 @@ function k(e) {
         }),
     });
 }
-function N(e) {
+function U(e) {
     let t,
         { flaggedContent: n } = e,
-        l = (0, s.bG)([L.default], () => L.default.getCurrentUser()),
+        l = (0, s.bG)([P.default], () => P.default.getCurrentUser()),
         [o, r] = a.useState({}),
         [h, c] = a.useState(!0),
-        g = (0, s.bG)([_.A], () => _.A.getUsername()),
+        g = (0, s.bG)([j.A], () => j.A.getUsername()),
         A = n[0],
         v =
             ((t = A.attachments.map((e) => {
-                let t = { ...e, filename: e.filename ?? "", flags: (0, b.Q7)(e), size: 0, proxy_url: e.url };
+                let t = { ...e, filename: e.filename ?? "", flags: (0, L.Q7)(e), size: 0, proxy_url: e.url };
                 return (0, m.u)(e.filename) || (0, m.AE)(e.filename)
                     ? { ...t, width: o[e.id]?.width ?? 372, height: o[e.id]?.height ?? 279 }
                     : t;
@@ -131,21 +131,15 @@ function N(e) {
                     author: l ?? { id: "", avatar: void 0, discriminator: "0000", username: g },
                     nonce: A.id,
                     content: A.content,
-                    type: j.lAJ.DEFAULT,
+                    type: T.lAJ.DEFAULT,
                     channelId: "",
                 }),
-                timestamp: new Date(T.default.extractTimestamp(A.id)).toISOString(),
+                timestamp: new Date(b.default.extractTimestamp(A.id)).toISOString(),
                 attachments: t,
-                state: j.cmJ.SENT,
+                state: T.cmJ.SENT,
             })),
         I = (0, f.Ay)(v),
-        x = (0, w.A)(v, {
-            hideSimpleEmbedContent: !1,
-            allowList: !1,
-            allowHeading: !1,
-            allowLinks: !1,
-            previewLinkTarget: !1,
-        });
+        x = (0, E.A)(v, { hideSimpleEmbedContent: !1 });
     return (a.useEffect(() => {
         Promise.all(
             A.attachments
@@ -186,7 +180,7 @@ function N(e) {
                   ? (0, i.jsx)(d.y, {})
                   : (0, i.jsx)(y.A, {
                         compact: !1,
-                        childrenHeader: (0, S.A)({
+                        childrenHeader: (0, w.A)({
                             author: { ...l, colorString: "", colorStrings: null, nick: l?.username ?? g },
                             message: v,
                             channel: void 0,
@@ -197,29 +191,29 @@ function N(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1,
                         }),
-                        childrenAccessories: (0, i.jsx)(k, { message: v }),
-                        childrenMessageContent: (0, E.A)({ message: v }, x.content),
+                        childrenAccessories: (0, i.jsx)(N, { message: v }),
+                        childrenMessageContent: (0, S.A)({ message: v }, x.content),
                         hasThread: !1,
                         hasReply: !1,
                         author: I,
                     }),
           });
 }
-var U = n(792996),
-    H = n(551275);
-function R(e) {
+var k = n(792996),
+    R = n(551275);
+function F(e) {
     let { flaggedContent: t } = e;
     return 0 === t.length
         ? null
         : (0, i.jsxs)("div", {
-              className: H.T,
+              className: R.T,
               children: [
                   (0, i.jsx)(l.E, {
                       variant: "body-sm/medium",
                       color: "text-muted",
-                      children: U.intl.string(U.t.s64CMg),
+                      children: k.intl.string(k.t.s64CMg),
                   }),
-                  (0, i.jsx)(N, { flaggedContent: t }),
+                  (0, i.jsx)(U, { flaggedContent: t }),
               ],
           });
 }

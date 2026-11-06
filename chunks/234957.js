@@ -7,7 +7,7 @@ var l = i(477900),
     c = i(448368),
     o = i(538355),
     u = i(652215);
-let g = { formatInline: !0, allowGameMentions: !0 },
+let g = { formatInline: !0 },
     A = n.memo(function (e) {
         let { baseMessage: s, channel: i, referencedMessage: n, compact: u = !1 } = e,
             A = n.state === t.a.LOADED ? n.message : void 0,
