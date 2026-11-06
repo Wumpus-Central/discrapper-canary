@@ -1,33 +1,34 @@
-n.d(t, { sv: () => m, eh: () => T, XD: () => R, sN: () => I, d3: () => O, rM: () => _ });
+n.d(t, { sv: () => _, eh: () => I, XD: () => T, sN: () => O, d3: () => b, rM: () => S });
 var r = n(477900);
 n(582128);
 var a = n(317097),
-    i = n(192308);
-n(16407);
-var l = n(724165),
-    u = n(61310),
-    o = n(101058),
-    s = n(486020),
-    A = n(453771),
-    d = n(427262),
-    c = n(469054),
-    v = n(601298),
-    E = n(73153),
-    f = n(478644),
-    g = n(339984),
-    p = n(792996);
-function R(e) {
+    i = n(192308),
+    l = n(16407),
+    u = n(724165),
+    o = n(61310),
+    s = n(101058),
+    A = n(486020),
+    d = n(453771),
+    c = n(515718),
+    v = n(427262),
+    E = n(469054),
+    f = n(601298),
+    g = n(73153),
+    p = n(478644),
+    R = n(339984),
+    m = n(792996);
+function T(e) {
     let {
             uploadType: t,
             guildId: a,
-            analyticsSource: s,
-            filters: A,
-            isTryItOut: d = !1,
-            stackingBehavior: R,
-            returnRef: m,
+            analyticsSource: A,
+            filters: v,
+            isTryItOut: T = !1,
+            stackingBehavior: _,
+            returnRef: I,
         } = e,
-        T = (0, u.Y)(t, a),
-        _ = null;
+        S = (0, o.Y)(t, a),
+        O = null;
     (0, i.mM)(
         async () => {
             let { default: e } = await Promise.all([
@@ -54,83 +55,96 @@ function R(e) {
             ]).then(n.bind(n, 685663));
             return (n) =>
                 (0, r.jsx)(e, {
-                    filters: A,
-                    maxFileSizeBytes: f.j,
-                    imageSpecifications: t === g.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
+                    filters: v,
+                    maxFileSizeBytes: p.j,
+                    imageSpecifications: t === R.HL.BANNER ? m.intl.string(m.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        _ = null != T ? l.A.fromBlob(T, e) : null;
+                        O = null != S ? u.A.fromBlob(S, e) : null;
                     },
                     onComplete: async (e) => {
-                        var n;
-                        let { assetOrigin: r, imageUri: i, staticImageUri: u, file: A, originalAsset: f } = e;
-                        null == _ && null != T && (_ = l.A.fromBlob(T, A));
-                        let R = (await _?.getOriginalMd5()) ?? null,
-                            m = A.name.replace(/\.[^/.]+$/, ""),
-                            I = { imageUri: i, staticImageUri: u, originalMd5: R };
+                        var n, r;
+                        let { assetOrigin: i, imageUri: o, staticImageUri: v, file: _, originalAsset: I } = e;
+                        if (i !== E.E.ARCHIVED_ASSET) {
+                            let e = (0, c.EW)(o);
+                            if (e > p.j) {
+                                return void ((r = e),
+                                (0, l.openUploadError)({
+                                    title: m.intl.string(m.t["/tGlcj"]),
+                                    help: m.intl.formatToPlainString(m.t.q0rsrZ, {
+                                        fileSize: (0, d.Hb)(r),
+                                        maxSize: (0, d.Hb)(p.j),
+                                    }),
+                                }));
+                            }
+                        }
+                        null == O && null != S && (O = u.A.fromBlob(S, _));
+                        let b = (await O?.getOriginalMd5()) ?? null,
+                            D = _.name.replace(/\.[^/.]+$/, ""),
+                            M = { imageUri: o, staticImageUri: v, originalMd5: b };
                         ((n = {
-                            ...(t === g.HL.AVATAR
+                            ...(t === R.HL.AVATAR
                                 ? {
                                       uploadType: t,
-                                      pendingImage: (0, v.X)({
-                                          ...I,
-                                          assetOrigin: r,
-                                          description: (0, o.Rh)({ filename: m, assetOrigin: r }),
-                                          originalAsset: f,
+                                      pendingImage: (0, f.X)({
+                                          ...M,
+                                          assetOrigin: i,
+                                          description: (0, s.Rh)({ filename: D, assetOrigin: i }),
+                                          originalAsset: I,
                                       }),
                                   }
                                 : {
                                       uploadType: t,
-                                      pendingImage: (0, v.X)({
-                                          ...I,
-                                          assetOrigin: c.E.NEW_ASSET,
-                                          description: "" !== m ? m : p.intl.string(p.t.yiRnNO),
+                                      pendingImage: (0, f.X)({
+                                          ...M,
+                                          assetOrigin: E.E.NEW_ASSET,
+                                          description: "" !== D ? D : m.intl.string(m.t.yiRnNO),
                                           originalAsset: void 0,
                                       }),
                                   }),
-                            file: A,
+                            file: _,
                             guildId: a,
-                            analyticsSource: s,
-                            isTryItOut: d,
+                            analyticsSource: A,
+                            isTryItOut: T,
                         }),
-                            E.h.dispatch({ ...n, type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL" }));
+                            g.h.dispatch({ ...n, type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL" }));
                     },
                     uploadType: t,
                     showUpsellHeader: !0,
-                    returnRef: m,
+                    returnRef: I,
                     ...n,
                 });
         },
-        { stackingBehavior: R },
+        { stackingBehavior: _ },
     );
 }
-function m(e, t, n) {
+function _(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
     let { size: a = 80, canAnimate: i = !0 } = r,
         l = null === e;
     return l && null == t
-        ? s.Ay.getDefaultAvatarURL(n.id, n.discriminator)
+        ? A.Ay.getDefaultAvatarURL(n.id, n.discriminator)
         : l || t?.avatar == null
           ? n.getAvatarURL(void 0, a, i)
           : n.getAvatarURL(t?.guildId, a, i);
 }
-function T(e) {
+function I(e) {
     let { pendingNickname: t, pendingGlobalName: n, user: r, guildMember: a } = e,
         i = "" === t ? null : (t ?? a?.nick),
         l = "" === n ? r.username : n;
-    return i ?? l ?? d.Ay.getName(r);
+    return i ?? l ?? v.Ay.getName(r);
 }
-function _(e, t, n) {
+function S(e, t, n) {
     n(e ?? (null != t ? null : void 0));
 }
-function I(e) {
+function O(e) {
     return (null != e ? (0, a.OK)(e) : 1) > 0.25;
 }
-function O(e) {
+function b(e) {
     return null == e
         ? e
         : e.replace(/[0-9.,]+ ?kb/gi, (e) => {
               let t = 1024 * parseInt(e, 10);
-              return isNaN(t) ? e : (0, A.Hb)(t);
+              return isNaN(t) ? e : (0, d.Hb)(t);
           });
 }
