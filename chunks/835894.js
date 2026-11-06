@@ -9651,7 +9651,7 @@ let ov = {
             });
     },
     EnableCommunityModal: async () => {
-        let { default: e } = await Promise.all([a.e(443159), a.e(553203), a.e(82721), a.e(452823), a.e(761120)]).then(
+        let { default: e } = await Promise.all([a.e(443159), a.e(82721), a.e(553203), a.e(452823), a.e(761120)]).then(
             a.bind(a, 218595),
         );
         return (t) =>
