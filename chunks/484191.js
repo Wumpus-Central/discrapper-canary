@@ -23,12 +23,12 @@ n.d(
             let { participants: t, channel: n, hasConnectPermission: y } = e,
                 I = t.filter(g.Xw),
                 j = (0, h.H)(n.guild_id),
-                N = l.useCallback(() => {
+                v = l.useCallback(() => {
                     j
                         ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id))
                         : o.default.selectVoiceChannel(n.id);
                 }, [n.id, n.guild_id, j]),
-                v = 4 === I.length ? 2 : 3,
+                N = 4 === I.length ? 2 : 3,
                 E = (0, d.Ay)(n),
                 b = (0, p.R)("ChannelCallEmpty");
             return (0, i.jsxs)("div", {
@@ -37,7 +37,7 @@ n.d(
                     (0, i.jsx)(f.A, { disableAnimation: b }),
                     (0, i.jsx)("div", {
                         className: C.os,
-                        style: { maxWidth: 168 * v },
+                        style: { maxWidth: 168 * N },
                         children: I.slice(0, 5).map((e) =>
                             (0, i.jsx)(
                                 A.Ay,
@@ -84,7 +84,7 @@ n.d(
                         children: (0, i.jsx)(r.$, {
                             variant: "overlay-primary",
                             text: y ? x.intl.string(x.t["96ANUN"]) : x.intl.string(x.t.TVBCKZ),
-                            onClick: N,
+                            onClick: v,
                             disabled: !y,
                         }),
                     }),

@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(809369),
     I = n(687782),
     j = n(792996),
-    N = n(531281);
-function v(e) {
+    v = n(531281);
+function N(e) {
     let { title: t, image: n } = e;
     return (0, i.jsxs)(d.B, {
         direction: "horizontal",
@@ -27,15 +27,15 @@ function v(e) {
         gap: 8,
         fullWidth: !1,
         padding: 12,
-        className: N.rv,
+        className: v.rv,
         children: [
             n,
             (0, i.jsxs)(d.B, {
                 gap: 0,
                 fullWidth: !1,
-                className: N.x8,
+                className: v.x8,
                 children: [
-                    (0, i.jsx)(u.E, { variant: "body-md/medium", lineClamp: 1, className: N.x9, children: t }),
+                    (0, i.jsx)(u.E, { variant: "body-md/medium", lineClamp: 1, className: v.x9, children: t }),
                     (0, i.jsxs)(d.B, {
                         direction: "horizontal",
                         align: "center",
@@ -112,19 +112,19 @@ n.d(
                                                   },
                                                   children: (0, i.jsxs)("div", {
                                                       ref: r,
-                                                      className: s()(N.hB, l),
+                                                      className: s()(v.hB, l),
                                                       children: [
                                                           (0, i.jsx)(c.F, {}),
-                                                          (0, i.jsx)(v, { title: t, image: n }),
+                                                          (0, i.jsx)(N, { title: t, image: n }),
                                                       ],
                                                   }),
                                               })
                                             : (0, i.jsxs)("div", {
                                                   ref: r,
-                                                  className: s()(N.hB, N.Kc, h, l),
+                                                  className: s()(v.hB, v.Kc, h, l),
                                                   children: [
                                                       (0, i.jsx)(c.F, {}),
-                                                      (0, i.jsx)(v, { title: t, image: n }),
+                                                      (0, i.jsx)(N, { title: t, image: n }),
                                                   ],
                                               }),
                                 }),

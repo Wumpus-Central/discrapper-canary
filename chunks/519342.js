@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(793574),
     I = n(628983),
     j = n(85448),
-    N = n(614881),
-    v = n(480890),
+    v = n(614881),
+    N = n(480890),
     E = n(450149),
     b = n(607407),
     S = n(776231),
@@ -29,8 +29,8 @@ var i = n(477900),
     O = n(51082),
     L = n(541157),
     P = n(616356),
-    M = n(734057),
-    w = n(309010),
+    w = n(734057),
+    M = n(309010),
     U = n(287809),
     D = n(977997),
     V = n(531685),
@@ -112,7 +112,7 @@ function ea(e) {
         es = (0, d.bG)([U.default], () => U.default.getCurrentUser()?.id === t),
         { isMenuOpen: er, setMenuOpen: eo } = l.useContext(W.t),
         ec = !!es && er,
-        ed = (0, d.bG)([M.A], () => M.A.getChannel(n)?.guild_id),
+        ed = (0, d.bG)([w.A], () => w.A.getChannel(n)?.guild_id),
         eu = (0, L.Nd)(
             (0, d.bG)([D.A], () => D.A.getVoiceState(ed, t)),
             (0, L.oN)(),
@@ -136,13 +136,13 @@ function ea(e) {
             onRest: () => eI(!1),
             onStart: () => eI(!0),
         }),
-        eN = (0, d.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === n),
-        ev = (0, d.bG)([I.A], () => {
+        ev = (0, d.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === n),
+        eN = (0, d.bG)([I.A], () => {
             let e = I.A.getParticipant(n, t);
             return (0, J.Xw)(e) ? e : null;
         }),
-        eE = (0, O.y9)(ev ?? void 0),
-        eb = eN && eE && null != ev,
+        eE = (0, O.y9)(eN ?? void 0),
+        eb = ev && eE && null != eN,
         eS = l.useCallback(() => {
             null != ed &&
                 ((0, B.EB)({ guildId: ed, channelId: n, interactionType: "clicked" }),
@@ -150,10 +150,10 @@ function ea(e) {
         }, [ed, n, ec, eb, es, Y]),
         eT = l.useCallback(
             (e) => {
-                let t = M.A.getChannel(n);
+                let t = w.A.getChannel(n);
                 if (null != ed && null != ea && null != t)
                     return (0, R.r)(e, ea, t, { context: ei }, (e, t) =>
-                        (0, v.s)(e, y.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: ea.id })(t),
+                        (0, N.s)(e, y.A.GUILD_ROOM, { tileType: J.qs.USER, targetUserId: ea.id })(t),
                     );
             },
             [ed, ea, n, ei],
@@ -175,8 +175,8 @@ function ea(e) {
             : eu?.isVoiceMuted()
               ? et.intl.formatToPlainString(et.t.Hd1oVG, { username: eL })
               : eL,
-        eM = (0, $.Sb)({ position: { x: a, y: u }, targetLabel: eP }),
-        ew = null != eM;
+        ew = (0, $.Sb)({ position: { x: a, y: u }, targetLabel: eP }),
+        eM = null != ew;
     if (null == ea || null == ed) return null;
     let eU = (0, m.Kj)(H),
         eD = eU.status + 2 * eU.offset,
@@ -185,9 +185,9 @@ function ea(e) {
         ek = null != eV ? `${eV}?width=${eG}&height=${eG}` : null,
         eB = (0, m.n$)(ep, em),
         eF = eb
-            ? (0, i.jsx)(N.A, {
+            ? (0, i.jsx)(v.A, {
                   userId: ea.id,
-                  participant: ev,
+                  participant: eN,
                   size: H,
                   muted: eu?.isVoiceMuted() ?? !1,
                   deafen: eu?.isVoiceDeafened() ?? !1,
@@ -250,14 +250,14 @@ function ea(e) {
             onMouseEnter: e_,
             onClick: eS,
             onContextMenu: eT,
-            ...eM,
+            ...ew,
             children: eF,
         });
         return (0, i.jsx)(r.animated.div, {
             role: "listitem",
             className: s()(en.f1, { [en.hY]: eR }),
             style: ez,
-            children: null != eh ? (0, i.jsx)(el, { title: ef, stream: eh, shouldShow: !ew, children: e }) : e,
+            children: null != eh ? (0, i.jsx)(el, { title: ef, stream: eh, shouldShow: !eM, children: e }) : e,
         });
     }
     let eH = (0, i.jsx)("div", { className: en.R3, children: eF }),
@@ -267,7 +267,7 @@ function ea(e) {
             onMouseEnter: e_,
             onClick: eS,
             onContextMenu: eT,
-            ...eM,
+            ...ew,
             children: eH,
         }),
         e$ = ey && es ? 500 : 100;
@@ -294,12 +294,12 @@ function ea(e) {
                                           (n(), eS());
                                       },
                                       onContextMenu: eT,
-                                      ...eM,
+                                      ...ew,
                                       children: eF,
                                   });
                               return null != eh
-                                  ? (0, i.jsx)(el, { title: ef, stream: eh, shouldShow: !ec && !ew, children: a })
-                                  : (0, i.jsx)(X.A, { name: ef, shouldShow: !ec && !ew, delay: e$, children: a });
+                                  ? (0, i.jsx)(el, { title: ef, stream: eh, shouldShow: !ec && !eM, children: a })
+                                  : (0, i.jsx)(X.A, { name: ef, shouldShow: !ec && !eM, delay: e$, children: a });
                           },
                       }),
                       (0, i.jsx)(Z.O.Popup, {
@@ -328,8 +328,8 @@ function ea(e) {
                   ],
               })
             : null != eh
-              ? (0, i.jsx)(el, { title: ef, stream: eh, shouldShow: !ew, children: eW })
-              : (0, i.jsx)(X.A, { name: ef, shouldShow: !ew, delay: e$, children: eW }),
+              ? (0, i.jsx)(el, { title: ef, stream: eh, shouldShow: !eM, children: eW })
+              : (0, i.jsx)(X.A, { name: ef, shouldShow: !eM, delay: e$, children: eW }),
     });
 }
 function es(e) {
@@ -366,7 +366,7 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, roomWidth: n } = e,
-                l = (0, d.bG)([M.A], () => M.A.getChannel(t)?.guild_id),
+                l = (0, d.bG)([w.A], () => w.A.getChannel(t)?.guild_id),
                 a = (0, d.bG)([z.A], () => z.A.getRoomUsers(t)),
                 { numericAvatarSize: s, avatarSize: r } = (0, Y.F)(n);
             return 0 === a.size || null == l

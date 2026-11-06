@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(163432),
     I = n(652215),
     j = n(806931),
-    N = n(804273),
-    v = n(517689);
+    v = n(804273),
+    N = n(517689);
 let E = 16 / 9;
 n.d(
     t,
@@ -38,8 +38,8 @@ n.d(
                     channel: O,
                     selectedParticipant: L,
                     showParticipants: P = !0,
-                    className: M,
-                    width: w,
+                    className: w,
+                    width: M,
                     height: U,
                     layout: D,
                     idle: V,
@@ -65,16 +65,16 @@ n.d(
             let ea = l.useMemo(
                     () =>
                         K && X
-                            ? w / (U - 2 * el)
+                            ? M / (U - 2 * el)
                             : q && null != B && B.width > 0 && B.height > 0
                               ? B.width / B.height
                               : E,
-                    [q, B, K, w, U, el, X],
+                    [q, B, K, M, U, el, X],
                 ),
                 es = U - 2 * el,
-                er = K && X ? w : es * ea,
-                eo = Math.floor(Math.min(w, er) / ea),
-                ec = U > w / ea + 72 + 120 + 8;
+                er = K && X ? M : es * ea,
+                eo = Math.floor(Math.min(M, er) / ea),
+                ec = U > M / ea + 72 + 120 + 8;
             t = Q || K ? (Q ? -16 : -8) : 40 + Math.max(0, 72 - (U - eo) / 2);
             let ed = Math.max(0, 72 - (U - eo) / 2);
             l.useEffect(() => {
@@ -122,23 +122,23 @@ n.d(
                     (F(e), W(!1));
                 }, []),
                 eC = Q ? [] : (0, C.Cf)(S, L, k),
-                { visibleParticipants: ey, participantTileWidth: eI } = (0, y.i)(w, T);
+                { visibleParticipants: ey, participantTileWidth: eI } = (0, y.i)(M, T);
             return (0, i.jsxs)("div", {
-                className: s()(v.zr, N.tR, M),
+                className: s()(N.zr, v.tR, w),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: v.QX,
+                        className: N.QX,
                         style: { opacity: q && H ? 0 : 1 },
                         children: [
                             (0, i.jsxs)(r.animated.div, {
-                                className: v.pc,
+                                className: N.pc,
                                 style: { top: em.value.to((e) => -(120 * e) / 2) },
                                 children: [
                                     (0, i.jsx)(r.animated.div, {
                                         style: { width: eA.value },
-                                        className: v.tN,
+                                        className: N.tN,
                                         children: (0, i.jsx)("div", {
-                                            className: N.xS,
+                                            className: v.xS,
                                             style: { aspectRatio: ea },
                                             children: eg((e, t, l) => {
                                                 let { key: s } = l;
@@ -146,15 +146,15 @@ n.d(
                                                     ? (0, i.jsx)(
                                                           r.animated.div,
                                                           {
-                                                              className: N.qX,
+                                                              className: v.qX,
                                                               style: e,
                                                               children: (0, i.jsx)(g.Ay, {
                                                                   focused: !0,
-                                                                  noBorder: er >= w || es >= U,
+                                                                  noBorder: er >= M || es >= U,
                                                                   channel: O,
-                                                                  className: N.JS,
+                                                                  className: v.JS,
                                                                   videoComponent: G,
-                                                                  width: w,
+                                                                  width: M,
                                                                   participant: t,
                                                                   onClick: n,
                                                                   onDoubleClick: b,
@@ -173,7 +173,7 @@ n.d(
                                     }),
                                     et
                                         ? (0, i.jsx)(r.animated.div, {
-                                              className: s()(v.$l, { [v.N7]: V }),
+                                              className: s()(N.$l, { [N.N7]: V }),
                                               style: { bottom: ef.value },
                                               children: (0, i.jsx)(h.A, {
                                                   channelId: O.id,
@@ -185,7 +185,7 @@ n.d(
                                 ],
                             }),
                             (0, i.jsx)(r.animated.div, {
-                                className: v.Vx,
+                                className: N.Vx,
                                 style: {
                                     translateY: ep.value.to((e) => (120 * e) / 2),
                                     opacity: ep.value,
@@ -209,7 +209,7 @@ n.d(
                     eC.length > 0
                         ? (0, i.jsx)(x.A, {
                               onContextMenuParticipant: a,
-                              width: w,
+                              width: M,
                               height: U,
                               channel: O,
                               participants: eC,

@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(309010),
     I = n(977997),
     j = n(188567),
-    N = n(303227),
-    v = n(889426),
+    v = n(303227),
+    N = n(889426),
     E = n(652215),
     b = n(806931),
     S = n(527133);
@@ -31,9 +31,9 @@ n.d(
             let { channelId: t, popoutType: n, width: T, height: _, idle: R, onClose: O } = e,
                 L = (0, m.Us)(),
                 P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
-                M = (0, s.bG)([g.A], () => g.A.getChannel(t)),
-                w = (0, s.bG)([x.A], () => x.A.getGuild(M?.getGuildId())),
-                U = (0, s.bG)([y.Ay], () => null != M && y.Ay.getVoiceChannelId() === M.id),
+                w = (0, s.bG)([g.A], () => g.A.getChannel(t)),
+                M = (0, s.bG)([x.A], () => x.A.getGuild(w?.getGuildId())),
+                U = (0, s.bG)([y.Ay], () => null != w && y.Ay.getVoiceChannelId() === w.id),
                 {
                     participants: D,
                     filteredParticipants: V,
@@ -42,7 +42,7 @@ n.d(
                     layout: B,
                     participantsOpen: F,
                 } = (0, s.cf)([d.A], () => {
-                    let e = null != M ? d.A.getLayout(M.id, L) : E.DUB.NORMAL;
+                    let e = null != w ? d.A.getLayout(w.id, L) : E.DUB.NORMAL;
                     return {
                         participants: d.A.getParticipants(t),
                         filteredParticipants: d.A.getFilteredParticipants(t),
@@ -54,7 +54,7 @@ n.d(
                 }),
                 z = (0, s.bG)([u.default], () => u.default.getAwaitingRemoteSessionInfo());
             return ((0, l.useEffect)(() => {
-                if (null != M)
+                if (null != w)
                     return (
                         j._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                         () => {
@@ -62,16 +62,16 @@ n.d(
                         }
                     );
                 function e() {
-                    null != M && (0, N.UV)(!1, t);
+                    null != w && (0, v.UV)(!1, t);
                 }
-            }, [M, t]),
-            null == M)
+            }, [w, t]),
+            null == w)
                 ? null
                 : (0, i.jsx)(r.D, {
                       style: { width: T, height: _ },
                       className: S.Lw,
                       onClick: function (e) {
-                          null == M ||
+                          null == w ||
                               ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) ||
                               O();
                       },
@@ -79,9 +79,9 @@ n.d(
                       "aria-hidden": !0,
                       children: (0, i.jsx)(A.A, {
                           inCall: U,
-                          channel: M,
+                          channel: w,
                           hasConnectPermission: !0,
-                          guild: w,
+                          guild: M,
                           participants: D,
                           filteredParticipants: V,
                           participantsVersion: G,
@@ -90,10 +90,10 @@ n.d(
                           idle: R,
                           mode: k,
                           onSelectParticipant: function (e, t) {
-                              if (null != M) {
+                              if (null != w) {
                                   if (
                                       (0, b.Ay)(e) &&
-                                      (0, p.eo)(M, I.A, x.A, C.A, u.default)[0] &&
+                                      (0, p.eo)(w, I.A, x.A, C.A, u.default)[0] &&
                                       0 ===
                                           f.A.getAllActiveStreams().filter(
                                               (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,
@@ -101,12 +101,12 @@ n.d(
                                   )
                                       return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
                                   P?.id === e.id
-                                      ? o.A.selectParticipant(M.id, null)
-                                      : o.A.selectParticipant(M.id, e.id);
+                                      ? o.A.selectParticipant(w.id, null)
+                                      : o.A.selectParticipant(w.id, e.id);
                               }
                           },
                           onContextMenuParticipant: function (e, n, i, l) {
-                              (0, v.A)({
+                              (0, N.A)({
                                   participant: e,
                                   event: n,
                                   minimalContextMenu: i,

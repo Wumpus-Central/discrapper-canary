@@ -23,8 +23,8 @@ let y = (0, s.A)((e) => {
         participantsVersion: y,
         layout: I,
         onSelectParticipant: j,
-        onContextMenuParticipant: N,
-        onFullscreenParticipant: v,
+        onContextMenuParticipant: v,
+        onFullscreenParticipant: N,
         channel: E,
         hasConnectPermission: b,
         className: S,
@@ -34,8 +34,8 @@ let y = (0, s.A)((e) => {
         height: O,
         idle: L,
         mode: P,
-        popoutType: M,
-        awaitingRemoteSessionInfo: w,
+        popoutType: w,
+        awaitingRemoteSessionInfo: M,
         callContainerDimensions: U,
     } = e;
     l.useEffect(() => {
@@ -46,11 +46,11 @@ let y = (0, s.A)((e) => {
             [n, y],
         ),
         V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
-    if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
+    if (M?.channelId === E.id) return (0, i.jsx)(p.A, { height: O });
     if (E?.isGuildVocalOrThread() && !T)
         return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
     if (((n = T ? n : t), P === g._Of.VOICE))
-        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
+        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: v });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
@@ -66,21 +66,21 @@ let y = (0, s.A)((e) => {
                 participants: D,
                 totalNumberOfParticipants: t.length,
                 onClick: j,
-                onDoubleClick: v,
-                onContextMenu: N,
+                onDoubleClick: N,
+                onContextMenu: v,
                 inCall: T,
-                popoutType: M,
+                popoutType: w,
             }),
         });
     }
     return (0, i.jsx)(A.A, {
-        onFullscreenParticipant: v,
-        onContextMenuParticipant: N,
+        onFullscreenParticipant: N,
+        onContextMenuParticipant: v,
         onSelectParticipant: j,
         selectedParticipant: s,
         filteredParticipants: D,
         participants: t,
-        popoutType: M,
+        popoutType: w,
         className: S,
         idle: L,
         height: O,

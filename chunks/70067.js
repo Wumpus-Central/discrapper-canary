@@ -26,10 +26,10 @@ n.d(
                 ),
                 I = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
                 j = (0, a.bG)([d.A], () => d.A.getNotes(t).length >= 20),
-                N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
-                v = l.useRef(null),
+                v = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
+                N = l.useRef(null),
                 E = l.useCallback(() => {
-                    v.current?.focus();
+                    N.current?.focus();
                 }, []),
                 b = (0, h.Y1)(t);
             l.useEffect(() => {
@@ -50,9 +50,9 @@ n.d(
                       label: f.intl.string(j ? A.default.k4cbsb : A.default["lL1Y+d"]),
                       position: g,
                       width: x,
-                      disabled: !N || I || j,
+                      disabled: !v || I || j,
                       onClick: S,
-                      innerRef: v,
+                      innerRef: N,
                   })
                 : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: g, width: x });
         },

@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(806931),
     I = n(792996),
     j = n(836905),
-    N = n(938442),
-    v = n(138267);
+    v = n(938442),
+    N = n(138267);
 let E = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
@@ -83,14 +83,14 @@ class b extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, d.M)(e),
-            a = s()(j._y, { [v.cp]: l, [v.QB]: !l });
+            a = s()(j._y, { [N.cp]: l, [N.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
             className: s()(j.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: s()(j.XY, N.xM, N.wq, N.Hu),
+                    className: s()(j.XY, v.xM, v.wq, v.Hu),
                     children: (0, i.jsx)(r.A.div, { className: a, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -104,8 +104,8 @@ n.d(
     {
         A: function (e) {
             var t;
-            let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: N } = e,
-                v = (0, p.Ay)(),
+            let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: v } = e,
+                N = (0, p.Ay)(),
                 E = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
                 S = (0, o.bG)([x.A], () => x.A.isFocused()),
                 T = (0, f.oN)(),
@@ -141,7 +141,7 @@ n.d(
                         {
                             className: j.Wp,
                             width: (0, u.FT)(E),
-                            theme: v,
+                            theme: N,
                             children: (0, i.jsx)(h.s, {
                                 "aria-label": d,
                                 onClick: (t) => r?.(e, t),
@@ -150,7 +150,7 @@ n.d(
                                     C.Ay,
                                     {
                                         userId: t.id,
-                                        src: t.getAvatarURL(N, (0, u.FT)(E), n && S),
+                                        src: t.getAvatarURL(v, (0, u.FT)(E), n && S),
                                         size: E,
                                         muted: o?.isVoiceMuted() ?? !1,
                                         deafen: o?.isVoiceDeafened() ?? !1,

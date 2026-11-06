@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(711478),
     I = n(487048),
     j = n(232571),
-    N = n(519342),
-    v = n(241215),
+    v = n(519342),
+    N = n(241215),
     E = n(207274),
     b = n(70067),
     S = n(956480),
@@ -36,8 +36,8 @@ n.d(
                 L = (0, u.bG)([f.A], () => f.A.getRoom(t)?.background ?? d.I.DEFAULT),
                 {
                     background: P,
-                    backgroundBlurred: M,
-                    seats: w,
+                    backgroundBlurred: w,
+                    seats: M,
                     aspectRatio: U,
                     plants: D,
                     duck: V,
@@ -55,7 +55,7 @@ n.d(
                 Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
                 Q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
                 J = Z.size,
-                ee = Math.max(0, Object.values(w).length - Z.size),
+                ee = Math.max(0, Object.values(M).length - Z.size),
                 et = D.length + +(null != V) + +(null != G) + Q.length,
                 [en, ei] = l.useState(!1),
                 el = l.useMemo(() => ({ isMenuOpen: en, setMenuOpen: ei }), [en, ei]);
@@ -74,7 +74,7 @@ n.d(
                 (0, i.jsxs)("div", {
                     className: O.kL,
                     style: {
-                        backgroundImage: `url(${Y ? M : P})`,
+                        backgroundImage: `url(${Y ? w : P})`,
                         backgroundSize: W ? `auto ${100 * K}%` : `${100 * K}% auto`,
                     },
                     ref: H,
@@ -82,7 +82,7 @@ n.d(
                     "aria-label": B(),
                     children: [
                         Y
-                            ? (0, i.jsx)(v.A, {
+                            ? (0, i.jsx)(N.A, {
                                   channelId: t,
                                   popoutType: n,
                                   width: F,
@@ -116,11 +116,11 @@ n.d(
                                                           (0, i.jsxs)("div", {
                                                               ref: q,
                                                               children: [
-                                                                  (0, i.jsx)(N.A, { channelId: t, roomWidth: $ }),
+                                                                  (0, i.jsx)(v.A, { channelId: t, roomWidth: $ }),
                                                                   (0, i.jsx)("div", {
                                                                       role: "list",
                                                                       "aria-label": es,
-                                                                      children: Object.entries(w).map((e) => {
+                                                                      children: Object.entries(M).map((e) => {
                                                                           let [n, l] = e;
                                                                           return (0, i.jsx)(
                                                                               j.A,

@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(488947),
     I = n(806931),
     j = n(786739),
-    N = n(792996),
-    v = n(649914);
+    v = n(792996),
+    N = n(649914);
 function E(e) {
     let { applicationId: t, channelId: n, guildId: s, overlay: r } = e,
         o = l.useMemo(() => ({ type: a.U.VOICE_CHANNEL, channelId: n, guildId: s }), [n, s]),
@@ -30,9 +30,9 @@ function E(e) {
             if (null != x && C.frame.data.proxyTicketRefreshing) return (0, i.jsx)(p.j, {});
             return null != x
                 ? (0, i.jsxs)("div", {
-                      className: v.oI,
+                      className: N.oI,
                       children: [
-                          (0, i.jsx)(m.A, { frame: C.frame, application: C.application, className: v.Z7 }),
+                          (0, i.jsx)(m.A, { frame: C.frame, application: C.application, className: N.Z7 }),
                           r,
                           (0, i.jsx)(c.A, { frameId: C.frame.id }),
                       ],
@@ -40,17 +40,17 @@ function E(e) {
                 : (0, i.jsx)(h.A, {
                       frameId: C.frame.id,
                       level: u.A.WithinCallContent,
-                      className: v.Z7,
+                      className: N.Z7,
                       overlay: (0, i.jsxs)(i.Fragment, { children: [r, (0, i.jsx)(c.A, { frameId: C.frame.id })] }),
                   });
         case A.n.RenderingElsewhere:
-            return (0, i.jsx)(p.A, { description: N.intl.string(N.t["2KIDX+"]) });
+            return (0, i.jsx)(p.A, { description: v.intl.string(v.t["2KIDX+"]) });
         case A.n.NoApplication:
-            return (0, i.jsx)(p.A, { description: N.intl.string(j.default.TQptZV) });
+            return (0, i.jsx)(p.A, { description: v.intl.string(j.default.TQptZV) });
         case A.n.DoesNotSupportSurface:
-            return (0, i.jsx)(p.A, { description: N.intl.string(j.default["13FYwI"]) });
+            return (0, i.jsx)(p.A, { description: v.intl.string(j.default["13FYwI"]) });
         case A.n.Error:
-            return (0, i.jsx)(p.A, { heading: N.intl.string(N.t.VquUff), error: N.intl.string(N.t["Sd9D/R"]) });
+            return (0, i.jsx)(p.A, { heading: v.intl.string(v.t.VquUff), error: v.intl.string(v.t["Sd9D/R"]) });
         case A.n.AwaitingLaunch:
         case A.n.Loading:
             return (0, i.jsx)(p.j, {});
@@ -80,10 +80,10 @@ n.d(
                 { ref: m, width: A, height: f } = (0, r.Ay)(),
                 g = p.length > 0 && null != A && null != f ? h?.(p, { width: A, height: f }) : null;
             return (0, i.jsx)("div", {
-                className: v.MT,
+                className: N.MT,
                 children: (0, i.jsx)("div", {
                     ref: m,
-                    className: v.dw,
+                    className: N.dw,
                     children: (0, i.jsx)(E, { applicationId: c, channelId: d, guildId: u, overlay: g }),
                 }),
             });

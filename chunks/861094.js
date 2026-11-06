@@ -41,11 +41,11 @@ n.d(
                     }
                     let I = r + C * r,
                         j = u + y * u,
-                        N = o + C * o,
-                        v = h + y * h,
+                        v = o + C * o,
+                        N = h + y * h,
                         E = C / t,
                         b = y / n;
-                    return `matrix3d(${[I / t, N / t, 0, E, j / n, v / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
+                    return `matrix3d(${[I / t, v / t, 0, E, j / n, N / n, 0, b, 0, 0, 1, 0, 0, 0, 0, 1].join(", ")})`;
                 })(l, t, a),
             };
         },

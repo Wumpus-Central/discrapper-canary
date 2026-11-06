@@ -20,8 +20,8 @@ var n = l(477900),
     L = l(124861),
     x = l(318346),
     b = l(362862),
-    v = l(672619),
-    O = l(923138),
+    O = l(672619),
+    v = l(923138),
     R = l(12510),
     T = l(673125),
     y = l(821609),
@@ -33,9 +33,9 @@ var n = l(477900),
     M = l(577473),
     F = l(34188),
     B = l(369606),
-    P = l(28863),
-    D = l(305866),
-    W = l(475743),
+    W = l(28863),
+    P = l(305866),
+    D = l(475743),
     k = l(303136),
     H = l(975571),
     G = l(626031),
@@ -162,7 +162,7 @@ function es(e) {
 }
 function ei(e) {
     let { orbBalance: t, headerTagsContent: l } = e,
-        s = (0, W.Ay)(t),
+        s = (0, D.Ay)(t),
         i = a.useMemo(
             () => (null != t && !!(t.toString().length > 10)) || (null != s && !!(s.toString().length > 10)),
             [t, s],
@@ -372,7 +372,7 @@ function eh(e) {
                         }),
                     (0, n.jsx)(j.E, {
                         variant: "body-xs/normal",
-                        children: (0, n.jsx)(P.Anchor, {
+                        children: (0, n.jsx)(W.Anchor, {
                             target: "_blank",
                             rel: "author",
                             href: H.A.getArticleURL(ee.MVz.ORBS_WALLET),
@@ -395,7 +395,7 @@ function eu(e) {
             returnRef: h,
         } = e,
         [u, d] = a.useState(!1);
-    return (0, n.jsxs)(D.l, {
+    return (0, n.jsxs)(P.l, {
         className: i()(et.ql, et.Ut),
         ref: o,
         returnRef: h,
@@ -425,11 +425,11 @@ var ed = l(554146),
     eL = l(321538),
     ex = l(758836),
     eb = l(682901);
-function ev(e) {
+function eO(e) {
     let { analyticsLocations: t = [], shopTab: l = ex.G2.ORBS } = e;
     (0, eg.Cz)({ tab: l, analyticsLocations: t, analyticsSource: m.A.ORBS_BALANCE_MENU });
 }
-function eO() {
+function ev() {
     (0, eL.mA)({ fromContent: e_.u.ORBS_BALANCE_MENU });
 }
 function eR(e) {
@@ -439,11 +439,11 @@ function eR(e) {
 let eT = {
     "1531422538125676707": (e) => {
         let { analyticsLocations: t } = e;
-        ev({ analyticsLocations: t, shopTab: ex.G2.HOME });
+        eO({ analyticsLocations: t, shopTab: ex.G2.HOME });
     },
     "1531422538125676708": (e) => {
         let { analyticsLocations: t } = e;
-        ev({ analyticsLocations: t, shopTab: ex.G2.HOME });
+        eO({ analyticsLocations: t, shopTab: ex.G2.HOME });
     },
     "1531422538125676709": (e) => {
         let { analyticsLocations: t } = e;
@@ -528,7 +528,7 @@ function eI(e) {
             { analyticsPage: i, forceVisible: r, onClose: t, onCloseWallet: s },
             {
                 ctaClickHandler: a.useCallback(() => {
-                    ev({ analyticsLocations: c });
+                    eO({ analyticsLocations: c });
                 }, [c]),
                 dismissibleContent: ed.M.ORB_WALLET_SHOP_CTA_CARD,
                 ctaObject: m.A.ORB_WALLET_SHOP_CTA,
@@ -614,13 +614,13 @@ let eB = [
         orbRewardAmount: 100,
     },
 ];
-async function eP(e) {
+async function eW(e) {
     (console.log(`Claiming challenge ${e}`), await new Promise((e) => setTimeout(e, 1e3)));
 }
-function eD(e, t) {
+function eP(e, t) {
     return e ? (null != t && t >= 1400 ? "shop_orbs" : null) : "nitro_upsell";
 }
-function eW(e) {
+function eD(e) {
     let {
             userHasPremium: t,
             onClose: l,
@@ -629,7 +629,7 @@ function eW(e) {
             forceVisible: i = !1,
             onCloseWallet: r = ee.tEg,
         } = e,
-        c = eD(t, a);
+        c = eP(t, a);
     return "shop_orbs" === c
         ? (0, n.jsx)(eI, { onClose: l, analyticsPage: s, forceVisible: i, onCloseWallet: r })
         : "nitro_upsell" === c
@@ -661,7 +661,7 @@ function eG(e) {
             : null,
         renderPrimaryCard: (e) => {
             let { onClose: n } = e;
-            return eW({ userHasPremium: t, onClose: n, orbBalance: l, forceVisible: !0 });
+            return eD({ userHasPremium: t, onClose: n, orbBalance: l, forceVisible: !0 });
         },
         orbChallengesCard: (0, n.jsx)(eo, {
             isLoading: s,
@@ -676,11 +676,11 @@ function eG(e) {
             badgeText: X.intl.format(t ? K.default.OHLdjq : K.default.WOMrJf, { multiplier: 1.2 }),
             badgeAccessibilityLabel: eH(t, 1.2),
             challenges: i ? [] : eB,
-            onClaim: eP,
+            onClaim: eW,
         }),
         orbWalletFooter: (0, n.jsx)(eh, {
-            onQuestsClick: () => eO(),
-            onShopClick: () => ev({ analyticsLocations: [] }),
+            onQuestsClick: () => ev(),
+            onShopClick: () => eO({ analyticsLocations: [] }),
             totalOrbsRedeemed: r,
         }),
     });
@@ -699,7 +699,7 @@ function eV() {
 }
 function eY(e) {
     let { analyticsPage: t = m.A.ORB_WALLET, analyticsLocations: s = [], onCloseWallet: i = ee.tEg } = e,
-        { challengesForOrbWallet: r, hasFetchedChallenges: c, refetch: h } = (0, O.z)({ shouldFetch: !0 }),
+        { challengesForOrbWallet: r, hasFetchedChallenges: c, refetch: h } = (0, v.z)({ shouldFetch: !0 }),
         d = (0, E.L)(eb.PremiumTypes.TIER_2),
         C = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
         { nitroGatedOrbMultiplier: _, orbChallengesDisplayError: g } = (0, o.cf)([T.Ay], () => ({
@@ -762,7 +762,7 @@ function eY(e) {
                 }),
             [r, s, t, i],
         ),
-        v = a.useCallback(() => {
+        O = a.useCallback(() => {
             (0, u.mM)(async () => {
                 let { default: e } = await Promise.all([l.e(671464), l.e(112206), l.e(709998), l.e(480388)]).then(
                     l.bind(l, 195759),
@@ -773,7 +773,7 @@ function eY(e) {
                 };
             });
         }, []),
-        y = a.useCallback((e) => (f ? (v(), Promise.resolve()) : (0, R.Xz)(e)), [f, v]);
+        y = a.useCallback((e) => (f ? (O(), Promise.resolve()) : (0, R.Xz)(e)), [f, O]);
     return (0, n.jsx)(eo, {
         title: X.intl.string(K.default.H6Ny8N),
         isLoading: !c,
@@ -793,9 +793,9 @@ function eK(e) {
             onCloseWallet: i = ee.tEg,
             isProfilePopout: r,
         } = e,
-        { balance: h } = (0, v.W0)(),
+        { balance: h } = (0, O.W0)(),
         u = (0, b.Hy)({ location: "StatefulOrbWallet" }),
-        { totalRedeemed: d } = (0, v.rQ)({ disableFetch: !u }),
+        { totalRedeemed: d } = (0, O.rQ)({ disableFetch: !u }),
         g = (0, E.L)(eb.PremiumTypes.TIER_2),
         { analyticsLocations: A } = (0, C.Ay)(m.A.ORB_WALLET);
     a.useEffect(() => {
@@ -803,15 +803,15 @@ function eK(e) {
     }, [u]);
     let f = a.useCallback(() => {
             ((0, x.Y)({ pageType: s, sectionType: m.A.ORB_WALLET_FOOTER, ctaObject: m.A.ORB_WALLET_SHOP_CTA }),
-                ev({ analyticsLocations: A }),
+                eO({ analyticsLocations: A }),
                 i("navigation"));
         }, [A, s, i]),
-        O = a.useCallback(() => {
+        v = a.useCallback(() => {
             ((0, x.Y)({ pageType: s, sectionType: m.A.ORB_WALLET_FOOTER, ctaObject: m.A.ORB_WALLET_QUEST_HOME_CTA }),
-                eO(),
+                ev(),
                 i("navigation"));
         }, [s, i]),
-        y = a.useMemo(() => eD(g, h), [g, h]),
+        y = a.useMemo(() => eP(g, h), [g, h]),
         { challengesForOrbWallet: N, hasFetchedChallenges: S } = (0, o.cf)([T.Ay], () => ({
             challengesForOrbWallet: T.Ay.challengesForOrbWallet,
             hasFetchedChallenges: T.Ay.hasFetchedChallenges,
@@ -837,8 +837,8 @@ function eK(e) {
         M = (0, _.p)(),
         F = a.useMemo(
             () =>
-                r ? { onQuestsClick: O, onShopClick: f } : { onQuestsClick: M ? null : O, onShopClick: U ? null : f },
-            [M, U, O, f, r],
+                r ? { onQuestsClick: v, onShopClick: f } : { onQuestsClick: M ? null : v, onShopClick: U ? null : f },
+            [M, U, v, f, r],
         );
     return u
         ? (0, n.jsx)(eu, {
@@ -848,7 +848,7 @@ function eK(e) {
               headerTagsContent: (0, n.jsx)(eV, {}),
               renderPrimaryCard: (e) => {
                   let { onClose: t } = e;
-                  return eW({ userHasPremium: g, onClose: t, orbBalance: h, analyticsPage: s, onCloseWallet: i });
+                  return eD({ userHasPremium: g, onClose: t, orbBalance: h, analyticsPage: s, onCloseWallet: i });
               },
               orbChallengesCard: (0, n.jsx)(eY, { analyticsPage: s, analyticsLocations: A, onCloseWallet: i }),
               orbWalletFooter: (0, n.jsx)(eh, { ...F, totalOrbsRedeemed: d }),

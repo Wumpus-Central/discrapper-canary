@@ -68,13 +68,13 @@ let S = l.memo(function (e) {
             },
             [F, y, P, H],
         ),
-        K = l.useCallback(
+        X = l.useCallback(
             (e) => {
                 j(e) && (e.preventDefault(), e.stopPropagation(), W(!0), Q({ x: e.clientX, y: e.clientY }));
             },
             [Q],
         ),
-        X = l.useCallback(
+        K = l.useCallback(
             (e) => {
                 U && (e.preventDefault(), e.stopPropagation(), Q({ x: e.clientX, y: e.clientY }));
             },
@@ -152,8 +152,8 @@ let S = l.memo(function (e) {
                               onPointerDown: function (e) {
                                   j(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
-                              onMouseDown: K,
-                              onMouseMove: X,
+                              onMouseDown: X,
+                              onMouseMove: K,
                               onMouseUp: q,
                               children: [
                                   (0, i.jsx)(J, {

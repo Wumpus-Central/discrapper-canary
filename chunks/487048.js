@@ -64,8 +64,8 @@ n.d(
                         boundingBoxCorners: t,
                     };
                 }, [n]),
-                { ref: N, width: v, height: E } = (0, r.Ay)(),
-                b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(j, v, E, x)), [j, v, E]),
+                { ref: v, width: N, height: E } = (0, r.Ay)(),
+                b = l.useMemo(() => (null == N || null == E ? null : (0, p.t)(j, N, E, x)), [j, N, E]),
                 S = Math.min(48, Math.max(20, 0.025 * a)),
                 T = (0, o.yK)([d.A, u.default], () => {
                     if ((0, c.F2)(t)) return [];
@@ -77,7 +77,7 @@ n.d(
                 _ = (0, h.Y1)(t),
                 R = l.useMemo(() => (null == E ? 0 : -(((j.topLeft.y + j.topRight.y) / 2 / 100) * E)), [j, E]);
             return (0, i.jsxs)("div", {
-                ref: N,
+                ref: v,
                 className: g.nj,
                 inert: _,
                 style: {
@@ -88,8 +88,8 @@ n.d(
                     clipPath: y,
                 },
                 children: [
-                    T.length > 0 && null != b && null != v
-                        ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: v })
+                    T.length > 0 && null != b && null != N
+                        ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: N })
                         : (0, i.jsx)(A.A, { channelId: t, center: I, iconSize: S }),
                     (0, i.jsx)(m.A, { className: s()(g.MQ, g.zq) }),
                 ],

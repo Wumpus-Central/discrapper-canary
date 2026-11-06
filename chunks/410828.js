@@ -19,8 +19,8 @@ var l = n(855986),
     y = n(776781),
     I = n(446600),
     j = n(571909),
-    N = n(623413),
-    v = n(717965),
+    v = n(623413),
+    N = n(717965),
     E = n(895903),
     b = n(383899),
     S = n(792996),
@@ -56,7 +56,7 @@ n.d(
             let { channel: t } = e,
                 { analyticsLocations: n } = (0, h.Ay)(u.A.VOICE_CONTROL_TRAY),
                 { isOnStartStageScreen: l } = (0, j.Ay)();
-            return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(v.A, { channel: t, isOnStartStageScreen: l }) });
+            return (0, i.jsx)(h.f5, { value: n, children: (0, i.jsx)(N.A, { channel: t, isOnStartStageScreen: l }) });
         },
         di: function (e) {
             let { channel: t, className: n } = e,
@@ -125,7 +125,7 @@ n.d(
                                 }),
                             ],
                         })
-                  : (0, i.jsx)(N.A, { participants: c, channel: t, hasConnectPermission: l });
+                  : (0, i.jsx)(v.A, { participants: c, channel: t, hasConnectPermission: l });
         },
         nd: function (e) {
             return (0, l.bG)(

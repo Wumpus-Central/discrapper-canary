@@ -21,7 +21,7 @@ n.d(
                 x = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
                 [C, y] = (0, l.useState)(""),
                 [I, j] = (0, l.useState)(""),
-                [N, v] = (0, l.useState)((0, c.x7)("")),
+                [v, N] = (0, l.useState)((0, c.x7)("")),
                 [E, b] = (0, l.useState)(x),
                 S = (0, l.useRef)(!1);
             return (0, i.jsx)(s.l, {
@@ -32,12 +32,12 @@ n.d(
                     maxCharacterCount: 512,
                     showRemainingCharsAfterCount: 10,
                     onChange: function (e, t, n) {
-                        (j(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t)));
+                        (j(t), N(n), y(u.Ay.translateInlineEmojiToSurrogates(t)));
                     },
                     placeholder: A.intl.string(m.default.IAcEEn),
                     channel: t,
                     textValue: I,
-                    richValue: N,
+                    richValue: v,
                     type: o.oU.GUILD_ROOM,
                     onFocus: () => {
                         b(!0);

@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(643421),
     I = n(263775),
     j = n(409626),
-    N = n(613902),
-    v = n(692969),
+    v = n(613902),
+    N = n(692969),
     E = n(980822),
     b = n(834757),
     S = n(682163),
@@ -29,8 +29,8 @@ var i = n(477900),
     O = n(240248),
     L = n(49999),
     P = n(818348),
-    M = n(792996),
-    w = n(472344);
+    w = n(792996),
+    M = n(472344);
 function U(e) {
     let [t, n] = (0, I.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
@@ -48,16 +48,16 @@ function D(e) {
         "aria-haspopup": m,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(t, w.kL),
+        className: s()(t, M.kL),
         ref: n,
         children: [
             (0, i.jsxs)(c.D, {
-                className: w.BQ,
+                className: M.BQ,
                 onClick: h,
                 "aria-expanded": p,
                 "aria-haspopup": m,
                 children: [
-                    null != l && (0, i.jsx)("div", { className: s()(w.zc, { [w.RT]: a }), children: l }),
+                    null != l && (0, i.jsx)("div", { className: s()(M.zc, { [M.RT]: a }), children: l }),
                     (0, i.jsx)(d.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
@@ -68,17 +68,17 @@ function D(e) {
 function V(e) {
     let { className: t, applicationId: n } = e,
         { gameId: l, gameRecord: a } = (0, E.A)({ applicationId: n }),
-        r = (0, v.A)({ gameId: l ?? void 0, source: j.GameProfileSources.VcHeaderActivity });
+        r = (0, N.A)({ gameId: l ?? void 0, source: j.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
     let o = a?.getIconURL(S.iu.MEDIUM),
         c = (0, O.uJ)(o)
-            ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
-            : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
+            ? (0, i.jsx)(h.GameControllerIcon, { className: M.Kk })
+            : (0, i.jsx)("img", { className: M.Kk, src: o, alt: "", "aria-hidden": !0 });
     return (0, i.jsx)(D, {
-        className: s()(t, w.LM),
+        className: s()(t, M.LM),
         icon: c,
         isAppIcon: !(0, O.uJ)(o),
-        text: M.intl.string(M.t.f7aVGn),
+        text: w.intl.string(w.t.f7aVGn),
         onClick: r,
     });
 }
@@ -94,8 +94,8 @@ n.d(
                 y = u?.id,
                 I = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
                 j = null != y ? I[y] : null,
-                v = (0, C.h)(j),
-                E = (0, N.E)({ location: "SocialLayerCommerceStreamHeader" }),
+                N = (0, C.h)(j),
+                E = (0, v.E)({ location: "SocialLayerCommerceStreamHeader" }),
                 O = E ? (j ?? y ?? null) : j,
                 G = (0, C.h)(O),
                 {
@@ -132,18 +132,18 @@ n.d(
                     renderPopout: ec,
                     positionKey: ed,
                 } = l.useMemo(() => {
-                    if (!E && (null == v || null == j)) return { isAppIcon: !1 };
+                    if (!E && (null == N || null == j)) return { isAppIcon: !1 };
                     if (ei && null != O) {
                         let e = el ?? G?.getIconURL(S.iu.SMALL),
                             t = null != e && null == el,
                             l =
                                 null != e
-                                    ? (0, i.jsx)("img", { className: w.Kk, src: e, alt: "", "aria-hidden": !0 })
-                                    : (0, i.jsx)(h.GameControllerIcon, { className: w.Kk });
+                                    ? (0, i.jsx)("img", { className: M.Kk, src: e, alt: "", "aria-hidden": !0 })
+                                    : (0, i.jsx)(h.GameControllerIcon, { className: M.Kk });
                         return {
                             isAppIcon: t,
                             icon: l,
-                            text: ea ?? M.intl.string(M.t["9njbm2"]),
+                            text: ea ?? w.intl.string(w.t["9njbm2"]),
                             renderPopout: function (e) {
                                 return null == O
                                     ? null
@@ -160,11 +160,11 @@ n.d(
                             positionKey: "widget-version",
                         };
                     }
-                    if (null == v || null == j) return { isAppIcon: !1 };
+                    if (null == N || null == j) return { isAppIcon: !1 };
                     let { icon: e, text: t } =
                         H === n.id
-                            ? { icon: (0, i.jsx)(p.ShopIcon, { className: w.Kk }), text: M.intl.string(M.t.e6S76Q) }
-                            : { icon: (0, i.jsx)(m.GiftIcon, { className: w.Kk }), text: M.intl.string(M.t["8ZzYIv"]) };
+                            ? { icon: (0, i.jsx)(p.ShopIcon, { className: M.Kk }), text: w.intl.string(w.t.e6S76Q) }
+                            : { icon: (0, i.jsx)(m.GiftIcon, { className: M.Kk }), text: w.intl.string(w.t["8ZzYIv"]) };
                     return {
                         isAppIcon: !1,
                         icon: e,
@@ -182,7 +182,7 @@ n.d(
                         },
                         positionKey: "feature-card-version",
                     };
-                }, [E, ei, O, G, v, j, H, n.id, s, ee, K, et, el, ea]);
+                }, [E, ei, O, G, N, j, H, n.id, s, ee, K, et, el, ea]);
             return k || J || (null == ec && !E)
                 ? null
                 : (0, i.jsx)(A.N, {

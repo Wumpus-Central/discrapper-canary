@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(686502),
     I = n(175203),
     j = n(263854),
-    N = n(652215),
-    v = n(886179);
+    v = n(652215),
+    N = n(886179);
 n.d(
     t,
     {},
@@ -37,10 +37,10 @@ n.d(
                     totalNumberOfParticipants: R,
                     popoutType: O,
                 } = e,
-                L = (0, A.Us)() === N.BRT.POPOUT,
+                L = (0, A.Us)() === v.BRT.POPOUT,
                 P = (0, r.bG)([x.A], () => x.A.getGuild(S.guild_id), [S.guild_id]),
-                { dismissedActivityEntryPointTileChannel: M } = (0, j.P)(),
-                w = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
+                { dismissedActivityEntryPointTileChannel: w } = (0, j.P)(),
+                M = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(S.id), [S]),
                 U = (0, g.vp)(S.id, t),
                 D = l.useCallback(() => {
                     (0, s.r)(() => {
@@ -48,19 +48,19 @@ n.d(
                     });
                 }, [S.id]);
             l.useEffect(() => {
-                null != M &&
-                    S.id !== M &&
+                null != w &&
+                    S.id !== w &&
                     (0, s.r)(() => {
                         j.P.setState({ dismissedActivityEntryPointTileChannel: null });
                     });
-            }, [S.id, M]);
+            }, [S.id, w]);
             let V = (0, r.bG)([C.A], () => S.isPrivate() || (0, m.K)(C.A, P, S), [P, S]),
                 G = P?.afkChannelId === S.id,
                 k = S.userLimit <= 0 || S.userLimit > 1,
                 B = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(S.id).length <= 0),
                 F = (0, p.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
                 z = (0, d.et)(S.id) !== d.xy.CAN_LAUNCH,
-                H = null != M && M === S.id,
+                H = null != w && w === S.id,
                 W = U.map(
                     (e) => (t) =>
                         (0, i.jsx)(
@@ -68,7 +68,7 @@ n.d(
                             {
                                 participant: e,
                                 channel: S,
-                                className: v.V,
+                                className: N.V,
                                 onClick: n,
                                 onDoubleClick: E,
                                 onContextMenu: b,
@@ -97,7 +97,7 @@ n.d(
             null != P &&
                 !G &&
                 !S.isGuildStageVoice() &&
-                (w >= 2 && $ && !F && !H
+                (M >= 2 && $ && !F && !H
                     ? W.push((e) =>
                           (0, i.jsx)(y.y, {
                               channel: S,
@@ -105,11 +105,11 @@ n.d(
                               width: e,
                               inPopout: L,
                               handleClose: D,
-                              userParticipantCount: w,
+                              userParticipantCount: M,
                           }),
                       )
                     : k &&
-                      1 === w &&
+                      1 === M &&
                       V &&
                       W.push((e) =>
                           (0, i.jsx)(y.y, {
@@ -118,7 +118,7 @@ n.d(
                               width: e,
                               inPopout: L,
                               handleClose: D,
-                              userParticipantCount: w,
+                              userParticipantCount: M,
                               activitiesEnabled: $,
                           }),
                       ));

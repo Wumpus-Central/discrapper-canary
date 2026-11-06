@@ -30,7 +30,7 @@ function j(e) {
         return null != t && null == t.position;
     });
 }
-function N(e) {
+function v(e) {
     let t = j(e),
         n = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
     return t && n;
@@ -56,15 +56,15 @@ n.d(
                 [i, n, a, s],
             );
         },
-        Y1: N,
+        Y1: v,
         bE: function (e) {
             let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
                 x = j(t),
-                v = N(t),
+                N = v(t),
                 E = l.useId(),
                 [b, S] = l.useState(null),
                 T = l.useRef(null);
-            (v || null == b || S(null),
+            (N || null == b || S(null),
                 l.useEffect(() => {
                     if (x)
                         return (
@@ -78,17 +78,17 @@ n.d(
                     }
                 }, [x, t]),
                 l.useEffect(() => {
-                    if (v)
+                    if (N)
                         return () => {
                             T.current = null;
                         };
-                }, [v]),
+                }, [N]),
                 l.useEffect(() => {
-                    v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
-                }, [v, n]));
+                    N && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
+                }, [N, n]));
             let _ = l.useMemo(
                 () =>
-                    v
+                    N
                         ? {
                               descriptionId: E,
                               setPreviewTarget: (e) => {
@@ -103,12 +103,12 @@ n.d(
                               },
                           }
                         : null,
-                [v, E, t],
+                [N, E, t],
             );
             return (0, i.jsxs)(I.Provider, {
                 value: _,
                 children: [
-                    v &&
+                    N &&
                         (0, i.jsx)(r.Ok, {
                             containerRef: n,
                             disableReturn: !0,

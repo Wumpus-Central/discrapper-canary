@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(47167),
     I = n(882840),
     j = n(713654),
-    N = n(522265),
-    v = n(104299),
+    v = n(522265),
+    N = n(104299),
     E = n(611371),
     b = n(769015),
     S = n(208971),
@@ -29,8 +29,8 @@ var i = n(477900),
     O = n(360729),
     L = n(508654),
     P = n(974930),
-    M = n(961314),
-    w = n(58736),
+    w = n(961314),
+    M = n(58736),
     U = n(742589),
     D = n(376352),
     V = n(353428),
@@ -73,16 +73,16 @@ function ei(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(w.Ay.Divider, { className: ee.yF }),
+                    (0, i.jsx)(M.Ay.Divider, { className: ee.yF }),
                     (0, i.jsx)(b.A, {
                         game: n,
                         className: ee.RI,
                         unknownGameIconFallback:
                             null != n.conjureProjectId
-                                ? (0, i.jsx)(v.A, {
+                                ? (0, i.jsx)(N.A, {
                                       applicationId: n.id,
                                       name: n.name,
-                                      glyphSize: (0, N.w)(24).glyphSize,
+                                      glyphSize: (0, v.w)(24).glyphSize,
                                       className: ee.RI,
                                   })
                                 : void 0,
@@ -100,12 +100,12 @@ function ei(e) {
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(w.Ay.Divider, { className: ee.yF }),
+                (0, i.jsx)(M.Ay.Divider, { className: ee.yF }),
                 (0, i.jsx)(en, { user: e, channel: a, stream: n, color: "text-strong" }),
                 (0, i.jsx)(D.F, { user: e, stream: n, channel: a }),
             ],
         });
-    } else o && (t = (0, i.jsx)(M.A, { guildEvent: s, recurrenceId: r }));
+    } else o && (t = (0, i.jsx)(w.A, { guildEvent: s, recurrenceId: r }));
     return (0, i.jsx)("div", { className: ee.kL, children: t });
 }
 n.d(
@@ -119,16 +119,16 @@ n.d(
                     appContext: o,
                     inCall: f,
                     isChatOpen: g,
-                    isStageAudienceSidebarOpen: N,
-                    exitFullScreen: v,
+                    isStageAudienceSidebarOpen: v,
+                    exitFullScreen: N,
                     guildRoomVisible: b,
                 } = e,
                 L = (0, r.bG)([Y.A], () => Y.A.getSelectedParticipant(t.id), [t.id]),
                 { enabled: P } = (0, O.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
-                M = P && !t.isGuildStageVoice(),
+                w = P && !t.isGuildStageVoice(),
                 D = (0, r.bG)([R.A], () => R.A.getVideoOverlayVisibility()),
                 H = (0, W.kM)(t) && (0, $.F)(o),
-                en = M && !b && !H,
+                en = w && !b && !H,
                 el = (0, y.Ay)(t),
                 ea = t.isGuildStageVoice(),
                 es = (0, F.nd)(t),
@@ -196,7 +196,7 @@ n.d(
             return (0, i.jsxs)("div", {
                 className: ee.SC,
                 children: [
-                    (0, i.jsxs)(w.Ay, {
+                    (0, i.jsxs)(M.Ay, {
                         onDoubleClick: U.I,
                         transparent: !0,
                         className: ee.jr,
@@ -208,28 +208,28 @@ n.d(
                             appContext: o,
                             inCall: f,
                             isChatOpen: g,
-                            isStageAudienceSidebarOpen: N,
-                            exitFullScreen: v,
+                            isStageAudienceSidebarOpen: v,
+                            exitFullScreen: N,
                             focusedApplication: ec,
                             shouldShowHeaderParticipants: !0,
                             guildRoomVisible: b,
                             guildRoomVideoOverlayVisible: D,
                         }),
                         children: [
-                            (0, i.jsx)(w.Ay.Title, {
+                            (0, i.jsx)(M.Ay.Title, {
                                 wrapperClassName: ee.DD,
                                 onClick: en ? ef : void 0,
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         null != eo
-                                            ? (0, i.jsx)(w.Ay.ChannelIcon, {
+                                            ? (0, i.jsx)(M.Ay.ChannelIcon, {
                                                   icon: eo,
                                                   "aria-label": ed,
                                                   color: en ? "white" : void 0,
                                               })
                                             : null,
                                         er,
-                                        M && (0, i.jsx)(E.A, { className: ee.q0 }),
+                                        w && (0, i.jsx)(E.A, { className: ee.q0 }),
                                         eA &&
                                             (0, i.jsx)(u.m, {
                                                 text: Q.intl.string(Q.t.QyZ4Td),
@@ -246,7 +246,7 @@ n.d(
                             ea
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(w.Ay.Divider, { className: ee.yF }),
+                                          (0, i.jsx)(M.Ay.Divider, { className: ee.yF }),
                                           (0, i.jsx)(F.Pb, { channel: t }),
                                       ],
                                   })

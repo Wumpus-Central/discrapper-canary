@@ -61,15 +61,15 @@ n.d(
                 { user: $, streamId: B, speaking: Z } = t,
                 Y = $.id === z,
                 Q = (0, R.Ay)(t),
-                K = (0, a.bG)([T.A], () => T.A.isFocused()),
-                X = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
+                X = (0, a.bG)([T.A], () => T.A.isFocused()),
+                K = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
                 q = (0, a.bG)([L.Ay], () => null != $.id && L.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
                     $.id,
                     t.type,
                 ]),
                 J = (0, E.A)(n.guild_id, $.id),
                 ee = D.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${G.intl.string(G.t["pFO/Ph"])}` : ""),
-                et = Z && (X || K),
+                et = Z && (K || X),
                 en = o < 124 ? H : V,
                 { avatarSrc: ei, avatarDecorationSrc: el } = (0, _.A)({
                     userId: $.id,

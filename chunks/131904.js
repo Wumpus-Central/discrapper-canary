@@ -58,7 +58,7 @@ class x extends l.Ay.Store {
         return m;
     }
 }
-let E = new x(i.h, {
+let p = new x(i.h, {
     PINOT_FETCH_SUCCESS: function (e) {
         let { guildId: n, features: t } = e;
         if (a.A.getGuild()?.id !== n || null != u[n]) return !1;
@@ -104,4 +104,4 @@ let E = new x(i.h, {
         ((u = {}), (d = {}), (c = {}), (h = !1), (f = null), (m = null));
     },
 });
-t.d(n, {}, { A: E });
+t.d(n, {}, { A: p });

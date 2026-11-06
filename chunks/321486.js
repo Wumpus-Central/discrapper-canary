@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(927813),
     I = n(562153),
     j = n(218394),
-    N = n(920639),
-    v = n(393371),
+    v = n(920639),
+    N = n(393371),
     E = n(360627),
     b = n(809369),
     S = n(652215),
@@ -29,8 +29,8 @@ var i = n(477900),
 let O = 10 * y.A.Millis.SECOND,
     L = { tension: 220, friction: 30, clamp: !0 },
     P = { x: "100%" },
-    M = { x: "0%" },
-    w = { x: "-100%" };
+    w = { x: "0%" },
+    M = { x: "-100%" };
 n.d(
     t,
     {},
@@ -76,15 +76,15 @@ n.d(
                 return () => clearTimeout(e);
             }, [$, Z, G, Y, et]);
             let en = l.useCallback(() => {
-                    ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
+                    ((0, v.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
                 }, [H]),
                 ei = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
                 el = (0, c.p)(H, {
                     keys: () => `${D.sequence}:${(0, g._z)(H)}`,
-                    initial: M,
+                    initial: w,
                     from: P,
-                    enter: M,
-                    leave: w,
+                    enter: w,
+                    leave: M,
                     config: L,
                 });
             function ea() {
@@ -122,7 +122,7 @@ n.d(
                                         (0, i.jsx)(r.animated.div, {
                                             className: R.G8,
                                             style: e,
-                                            children: (0, i.jsx)(v.A, { stream: t, previewClassName: R.oz }),
+                                            children: (0, i.jsx)(N.A, { stream: t, previewClassName: R.oz }),
                                         }),
                                     ),
                                 }),

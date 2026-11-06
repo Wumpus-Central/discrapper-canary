@@ -19,8 +19,8 @@ var i = n(477900),
     y = n(920639),
     I = n(360729),
     j = n(410828),
-    N = n(51082),
-    v = n(275731),
+    v = n(51082),
+    N = n(275731),
     E = n(289552),
     b = n(246356),
     S = n(977851),
@@ -30,8 +30,8 @@ var i = n(477900),
     O = n(708416),
     L = n(488947),
     P = n(170011),
-    M = n(241606),
-    w = n(309010),
+    w = n(241606),
+    M = n(309010),
     U = n(485296),
     D = n(628983),
     V = n(546871),
@@ -46,7 +46,7 @@ function H(e) {
             let e = Date.now();
             return s()(U.A.getSpeakers())
                 .map((e) => D.A.getParticipant(t, e))
-                .filter((e) => null != e && e.type === k.lp.USER && e.speaking && !(0, N.Ay)(e))
+                .filter((e) => null != e && e.type === k.lp.USER && e.speaking && !(0, v.Ay)(e))
                 .sortBy((t) => -U.A.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -78,7 +78,7 @@ n.d(
                     appContext: a,
                     inCall: s,
                     isChatOpen: o,
-                    isStageAudienceSidebarOpen: N,
+                    isStageAudienceSidebarOpen: v,
                     focusedApplication: R,
                     shouldShowHeaderParticipants: U,
                     guildRoomVisible: W,
@@ -105,7 +105,7 @@ n.d(
                     location: "ChannelCallHeaderToolbar",
                 }),
                 et = J && !t.isGuildStageVoice(),
-                en = (0, r.bG)([w.Ay], () => w.Ay.getVoiceChannelId() === X),
+                en = (0, r.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === X),
                 ei = (0, L.F)(a),
                 el = (0, O.kM)(t) && ei,
                 ea = (0, O.Fh)(t, s) && ei,
@@ -144,7 +144,7 @@ n.d(
                 q && eo.push((0, i.jsx)(H, { channelId: X, guildId: t.guild_id }, "current-speaker")),
                 eo.push((0, i.jsx)(g.A, { className: z.x6, channelId: X }, "clips-enabled-indicator")),
                 Z?.type === k.lp.STREAM &&
-                    (eo.push((0, i.jsx)(v.A, { className: z.x6, participant: Z }, "warning")),
+                    (eo.push((0, i.jsx)(N.A, { className: z.x6, participant: Z }, "warning")),
                     eo.push(
                         (0, i.jsx)(
                             x.A,
@@ -212,12 +212,12 @@ n.d(
             }
             return (
                 t.isGuildStageVoice() &&
-                    !N &&
+                    !v &&
                     eo.push((0, i.jsx)(j.di, { channel: t, className: z.x6 }, "stage-audience")),
                 ea &&
                     eo.push(
                         (0, i.jsx)(
-                            M.A,
+                            w.A,
                             { channel: t, returnsToRoom: et && W, className: z.x6 },
                             "voice-channel-app-toggle",
                         ),

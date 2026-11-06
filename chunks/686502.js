@@ -18,8 +18,8 @@ var i = n(477900),
     y = n(789645),
     I = n(964486),
     j = n(994428),
-    N = n(855446),
-    v = n(793574),
+    v = n(855446),
+    N = n(793574),
     E = n(688810),
     b = n(975412),
     S = n(392054),
@@ -29,15 +29,15 @@ var i = n(477900),
     O = n(272812),
     L = n(652215),
     P = n(792996),
-    M = n(253802),
-    w = n(867010);
+    w = n(253802),
+    M = n(867010);
 function U(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(E.f5, {
         value: a,
         children: (0, i.jsxs)(O.A, {
-            className: M.zr,
+            className: w.zr,
             children: [
                 (0, i.jsx)(c.m, {
                     asContainer: !0,
@@ -50,9 +50,9 @@ function U(e) {
                                 analyticsLocation: r,
                             });
                         },
-                        className: M.F1,
+                        className: w.F1,
                         children: (0, i.jsx)("div", {
-                            className: M.zc,
+                            className: w.zc,
                             children: (0, i.jsx)(u.AppsIcon, {
                                 size: "custom",
                                 color: "currentColor",
@@ -67,11 +67,11 @@ function U(e) {
                     children: (e) =>
                         (0, i.jsx)(d.D, {
                             onClick: l,
-                            className: s()(e, M.lg),
+                            className: s()(e, w.lg),
                             children: (0, i.jsx)(p.CircleXIcon, {
                                 size: "md",
                                 color: "currentColor",
-                                className: M.yP,
+                                className: w.yP,
                                 secondaryColor: o.A.colors.INTERACTIVE_TEXT_DEFAULT.css,
                             }),
                         }),
@@ -88,7 +88,7 @@ function D(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.mM)(
             async () => {
@@ -122,9 +122,9 @@ function D(e) {
             theme: L.NJ8.ONYX,
             children: (e) =>
                 (0, i.jsxs)(O.A, {
-                    className: s()(M.zr, M.co, e),
+                    className: s()(w.zr, w.co, e),
                     children: [
-                        (0, i.jsx)("img", { src: w, className: M.Qw, alt: "" }),
+                        (0, i.jsx)("img", { src: M, className: w.Qw, alt: "" }),
                         (0, i.jsxs)(f.e, {
                             justify: "center",
                             align: "center",
@@ -158,30 +158,30 @@ function V(e) {
         });
     });
     let u = (0, j.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: h } = (0, E.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(E.f5, {
         value: h,
         children: (0, i.jsxs)(O.A, {
-            className: M.zr,
+            className: w.zr,
             children: [
                 o > 300
                     ? (0, i.jsx)(C.E, {
-                          className: M.R_,
+                          className: w.R_,
                           variant: o > 550 ? "body-md/semibold" : "body-sm/semibold",
                           children: P.intl.string(P.t["7BKMcG"]),
                       })
                     : null,
                 (0, i.jsx)("div", {
-                    className: s()(M.Di, { [M.qy]: o <= 300 }),
+                    className: s()(w.Di, { [w.qy]: o <= 300 }),
                     children: u.map((e) =>
                         (0, i.jsx)(
-                            N.C,
+                            v.C,
                             {
                                 context: p,
                                 activityItem: e,
-                                aspectRatio: N.C.AspectRatio.SIXTEEN_BY_NINE,
-                                animatedDivClass: M.KU,
+                                aspectRatio: v.C.AspectRatio.SIXTEEN_BY_NINE,
+                                animatedDivClass: w.KU,
                                 commandOrigin: S.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
@@ -189,7 +189,7 @@ function V(e) {
                     ),
                 }),
                 (0, i.jsxs)(d.D, {
-                    className: M.HI,
+                    className: w.HI,
                     onClick: function () {
                         (R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
@@ -204,7 +204,7 @@ function V(e) {
                     ],
                 }),
                 (0, i.jsx)(d.D, {
-                    className: M.cG,
+                    className: w.cG,
                     onClick: function () {
                         (R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
@@ -213,7 +213,7 @@ function V(e) {
                         }),
                             a());
                     },
-                    children: (0, i.jsx)(y.XSmallIcon, { size: "md", color: "currentColor", className: M.b }),
+                    children: (0, i.jsx)(y.XSmallIcon, { size: "md", color: "currentColor", className: w.b }),
                 }),
             ],
         }),

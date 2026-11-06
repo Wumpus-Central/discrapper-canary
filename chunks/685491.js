@@ -1,11 +1,11 @@
 n.d(t, { G: () => eg });
 var l = n(477900),
-    s = n(582128),
-    a = n(503698),
-    i = n.n(a),
+    a = n(582128),
+    s = n(503698),
+    i = n.n(s),
     r = n(696292),
-    c = n(855986),
-    o = n(939249),
+    o = n(855986),
+    c = n(939249),
     d = n(926268),
     u = n(34188),
     m = n(646514),
@@ -36,8 +36,8 @@ let R = (0, T.mj)({
 });
 var M = n(652215),
     k = n(143461),
-    G = n(792996),
-    P = n(848913);
+    P = n(792996),
+    G = n(848913);
 let D = [
         k.default.bKvkzB,
         k.default["U+7iha"],
@@ -69,24 +69,24 @@ let D = [
     B = "collectibles-search-suggestions",
     F = `${B}-header`;
 function H() {
-    return (0, A.sampleSize)(D, 7).map((e) => G.intl.string(e));
+    return (0, A.sampleSize)(D, 7).map((e) => P.intl.string(e));
 }
 function w(e) {
     e.preventDefault();
 }
 function U(e) {
-    let { suggestions: t, selectedIndex: n, onSelect: s, onHover: a } = e;
+    let { suggestions: t, selectedIndex: n, onSelect: a, onHover: s } = e;
     return (0, l.jsxs)("div", {
-        className: P.Gn,
+        className: G.Gn,
         onMouseDown: w,
         children: [
             (0, l.jsx)("div", {
                 id: F,
-                className: P.Xe,
+                className: G.Xe,
                 children: (0, l.jsx)(v.E, {
                     variant: "body-xs/semibold",
                     color: "text-subtle",
-                    children: G.intl.string(G.t.eYMbUC),
+                    children: P.intl.string(P.t.eYMbUC),
                 }),
             }),
             (0, l.jsx)("div", {
@@ -94,18 +94,18 @@ function U(e) {
                 id: B,
                 tabIndex: -1,
                 "aria-labelledby": F,
-                className: P.sq,
+                className: G.sq,
                 children: t.map((e, t) =>
                     (0, l.jsx)(
-                        o.D,
+                        c.D,
                         {
                             id: `${B}-${t}`,
                             role: "option",
                             tabIndex: -1,
                             "aria-selected": t === n,
-                            className: P.h,
-                            onClick: () => s(t),
-                            onMouseEnter: () => a(t),
+                            className: G.h,
+                            onClick: () => a(t),
+                            onMouseEnter: () => s(t),
                             children: (0, l.jsx)(v.E, { variant: "body-sm/medium", color: "text-strong", children: e }),
                         },
                         e,
@@ -116,20 +116,20 @@ function U(e) {
     });
 }
 let z = (e) => {
-    let { option: t, optionKey: n, isFocused: s, isResumed: a } = e;
+    let { option: t, optionKey: n, isFocused: a, isResumed: s } = e;
     return (0, l.jsx)("div", {
         "aria-hidden": !0,
-        className: i()(P.pQ, { [P.Eo]: s }),
+        className: i()(G.pQ, { [G.Eo]: a }),
         children: (0, l.jsx)(v.E, {
             tag: "span",
             variant: "body-sm/normal",
             color: "none",
-            children: G.intl.format(k.default.bRwRwX, {
+            children: P.intl.format(k.default.bRwRwX, {
                 option: (0, l.jsx)(
                     "span",
                     {
-                        className: i()(P.I5, { [P.vZ]: a }),
-                        children: (0, l.jsx)("span", { className: P.e_, children: t }),
+                        className: i()(G.I5, { [G.vZ]: s }),
+                        children: (0, l.jsx)("span", { className: G.e_, children: t }),
                     },
                     n,
                 ),
@@ -138,41 +138,41 @@ let z = (e) => {
     });
 };
 function V(e) {
-    let { handleTransition: t, selectedTab: n, isNarrow: a, hasText: r } = e,
+    let { handleTransition: t, selectedTab: n, isNarrow: s, hasText: r } = e,
         d = (0, j.A)(H),
         { searchQuery: u, onSetSearchQuery: m } = (0, S.vs)(),
-        [g, E] = s.useState(""),
-        h = s.useRef(!1),
+        [g, E] = a.useState(""),
+        h = a.useRef(!1),
         f = (0, O.uM)(),
         { enabled: x, searchBarWidthPx: C } = R.useConfig({ location: "collectibles_search_bar" }),
-        p = s.useRef(null),
-        [A, v] = s.useState(!1),
-        T = s.useRef(null),
-        [k, D] = s.useState(!1),
-        [F, w] = s.useState(!1),
-        [V, K] = s.useState(-1),
-        [Y, W] = s.useState(0),
-        [$, Z] = s.useState(!1),
+        p = a.useRef(null),
+        [A, v] = a.useState(!1),
+        T = a.useRef(null),
+        [k, D] = a.useState(!1),
+        [F, w] = a.useState(!1),
+        [V, K] = a.useState(-1),
+        [Y, W] = a.useState(0),
+        [$, Z] = a.useState(!1),
         q = x && k && !F && "" === g,
-        Q = (0, c.bG)([L.Ay], () => L.Ay.useReducedMotion),
+        Q = (0, o.bG)([L.Ay], () => L.Ay.useReducedMotion),
         X = x && !Q;
-    (s.useEffect(() => {
+    (a.useEffect(() => {
         E(u);
     }, [u]),
-        s.useEffect(() => {
+        a.useEffect(() => {
             h.current = !1;
         }, [n]),
-        s.useEffect(() => {
+        a.useEffect(() => {
             if (!X || "" !== g || k) return;
             let e = setInterval(() => {
                 (W((e) => (e + 1) % d.length), Z(!1));
             }, 7e3);
             return () => clearInterval(e);
         }, [X, g, k, d]),
-        s.useEffect(() => {
-            v(a && r);
-        }, [a, r]));
-    let J = s.useCallback(
+        a.useEffect(() => {
+            v(s && r);
+        }, [s, r]));
+    let J = a.useCallback(
             (e, t, l) => {
                 N.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: f?.sessionId,
@@ -188,7 +188,7 @@ function V(e) {
             },
             [n, f],
         ),
-        ee = s.useCallback(
+        ee = a.useCallback(
             (e) => {
                 let l = e.trim();
                 (E(l), n === y.G2.CATALOG)
@@ -197,14 +197,14 @@ function V(e) {
             },
             [n, m, t],
         ),
-        et = s.useCallback(
+        et = a.useCallback(
             (e) => {
                 let t = d[e];
                 (E(t), ee(t), K(-1), J(t, y.Xi.SEARCH_SUGGESTION, e));
             },
             [ee, J, d],
         ),
-        en = s.useCallback(
+        en = a.useCallback(
             (e) => {
                 if (q && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
                     e.preventDefault();
@@ -226,35 +226,35 @@ function V(e) {
             },
             [g, ee, q, V, et, d],
         ),
-        el = s.useCallback((e) => {
+        el = a.useCallback((e) => {
             (E(e), w(!1), K(-1));
         }, []),
-        es = s.useCallback(() => {
+        ea = a.useCallback(() => {
             (D(!0), Z(!0), w(!1), K(-1));
         }, []),
-        ea = s.useCallback(() => {
+        es = a.useCallback(() => {
             (J(y.uY.SEARCH_ICON, y.Xi.SEARCH), v(!0), setTimeout(() => p.current?.focus()));
         }, [J]),
-        ei = s.useCallback(() => {
+        ei = a.useCallback(() => {
             J(y.uY.SEARCH_BAR, y.Xi.SEARCH);
         }, [J]),
-        er = s.useCallback(() => {
-            (E(""), m(""), J(y.uY.SEARCH_BAR_CLEAR, y.Xi.SEARCH), a && v(!1));
-        }, [m, J, a]),
-        ec = s.useCallback(() => {
-            (D(!1), a && "" === g && v(!1));
-        }, [a, g]),
-        eo = a && !A,
-        ed = G.intl.string(G.t.arz34K),
-        eu = (0, l.jsx)(o.D, {
-            className: P.qc,
-            onClick: ea,
+        er = a.useCallback(() => {
+            (E(""), m(""), J(y.uY.SEARCH_BAR_CLEAR, y.Xi.SEARCH), s && v(!1));
+        }, [m, J, s]),
+        eo = a.useCallback(() => {
+            (D(!1), s && "" === g && v(!1));
+        }, [s, g]),
+        ec = s && !A,
+        ed = P.intl.string(P.t.arz34K),
+        eu = (0, l.jsx)(c.D, {
+            className: G.qc,
+            onClick: es,
             "aria-label": ed,
             children: (0, l.jsx)(_.MagnifyingGlassIcon, { size: "xs", color: "currentColor" }),
         }),
         em = d[Y],
         eg = (0, l.jsxs)("div", {
-            className: P.up,
+            className: G.up,
             children: [
                 (0, l.jsx)(I.I, {
                     size: "sm",
@@ -263,8 +263,8 @@ function V(e) {
                     query: g,
                     onChange: el,
                     onClear: er,
-                    onFocus: es,
-                    onBlur: ec,
+                    onFocus: ea,
+                    onBlur: eo,
                     inputProps: {
                         maxLength: 256,
                         ...(x
@@ -285,7 +285,7 @@ function V(e) {
             ],
         }),
         eE = { "--custom-search-bar-width": `${C}px` };
-    return eo
+    return ec
         ? (0, l.jsx)("div", { style: eE, children: eu })
         : (0, l.jsx)(b.Y, {
               targetElementRef: T,
@@ -301,7 +301,7 @@ function V(e) {
               autoInvert: !1,
               children: () =>
                   (0, l.jsx)("div", {
-                      className: i()(P.ON, { [P.Nz]: A }),
+                      className: i()(G.ON, { [G.Nz]: A }),
                       style: eE,
                       children: (0, l.jsx)("div", { ref: T, children: eg }),
                   }),
@@ -321,54 +321,54 @@ var Y = n(278416),
     et = n(627363),
     en = n(587895),
     el = n(733391),
-    es = n(832163),
-    ea = n(44724),
+    ea = n(832163),
+    es = n(44724),
     ei = n(486020),
     er = n(22007),
-    ec = n(105518);
-let eo = [
-    { tab: y.G2.OFFER_ELIGIBLE, labelKey: G.t.hY8Ft1 },
-    { tab: y.G2.AVATAR_DECORATIONS, labelKey: G.t.dRZYNE },
-    { tab: y.G2.NAMEPLATES, labelKey: G.t.V68Fqz },
-    { tab: y.G2.PROFILE_EFFECTS, labelKey: G.t["1cNjtx"] },
-    { tab: y.G2.PROFILE_FRAMES, labelKey: G.t.ecTJkR },
-    { tab: y.G2.BUNDLES, labelKey: G.t.FYFpps },
-    { tab: y.G2.COLLABS, labelKey: G.t["+W8gb+"] },
-    { tab: y.G2.CATALOG, labelKey: G.t.xFcotU },
+    eo = n(105518);
+let ec = [
+    { tab: y.G2.OFFER_ELIGIBLE, labelKey: P.t.hY8Ft1 },
+    { tab: y.G2.AVATAR_DECORATIONS, labelKey: P.t.dRZYNE },
+    { tab: y.G2.NAMEPLATES, labelKey: P.t.V68Fqz },
+    { tab: y.G2.PROFILE_EFFECTS, labelKey: P.t["1cNjtx"] },
+    { tab: y.G2.PROFILE_FRAMES, labelKey: P.t.ecTJkR },
+    { tab: y.G2.BUNDLES, labelKey: P.t.FYFpps },
+    { tab: y.G2.COLLABS, labelKey: P.t["+W8gb+"] },
+    { tab: y.G2.CATALOG, labelKey: P.t.xFcotU },
 ];
 var ed = n(460348);
 n(801416);
 var eu = n(518477),
     em = n(835018);
 function eg(e) {
-    let { selectedTab: t, selectedCollectionId: n, handleTransition: a } = e,
-        A = (0, c.bG)([p.default], () => p.default.getCurrentUser()),
+    let { selectedTab: t, selectedCollectionId: n, handleTransition: s } = e,
+        A = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
         v = (0, ed.yB)("CollectiblesShopHeaderBar"),
         { searchQuery: _ } = (0, S.vs)(),
-        I = s.useRef(null),
-        [b, j] = s.useState(!1);
+        I = a.useRef(null),
+        [b, j] = a.useState(!1);
     (0, g.g)(
         I,
-        s.useCallback((e) => {
+        a.useCallback((e) => {
             j(e.contentRect.width < 800);
         }, []),
     );
     let L = t === y.G2.ORBS ? M.liQ.SHOP_ORBS_TAB : M.liQ.COLLECTIBLES_SHOP,
-        T = s.useCallback(() => {
+        T = a.useCallback(() => {
             ((0, x.Y)({ pageType: L, sectionType: M.JJy.ORBS_BALANCE_MENU, ctaObject: M.ZSU.CTA_TO_QUEST_HOME }),
                 (0, h.mA)({ fromContent: r.u.ORBS_BALANCE_MENU }));
         }, [L]),
-        R = s.useCallback(() => {
+        R = a.useCallback(() => {
             A?.id != null && (0, f.openUserProfileModal)({ userId: A.id, tabSection: eu.RP.WISHLIST });
         }, [A?.id]),
         k = (function (e) {
             let t,
                 n,
                 l,
-                a,
+                s,
                 i,
                 r,
-                o,
+                c,
                 d,
                 u,
                 m,
@@ -382,22 +382,22 @@ function eg(e) {
                 S = (0, W.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
                 { gameShops: A, hasGameShops: v } =
                     ((t = (0, O.uM)()),
-                    (n = (0, c.yK)(
-                        [es.A],
-                        () => (es.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
+                    (n = (0, o.yK)(
+                        [ea.A],
+                        () => (ea.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
                         [],
                     )),
-                    s.useEffect(() => {
+                    a.useEffect(() => {
                         (0, el.Xw)();
                     }, []),
-                    s.useEffect(() => {
+                    a.useEffect(() => {
                         n.length > 0 &&
                             et.Ay.fetchApplications(
                                 n.map((e) => e.applicationId),
                                 !1,
                             );
                     }, [n]),
-                    (l = s.useCallback(
+                    (l = a.useCallback(
                         (e) => {
                             (N.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: t?.sessionId,
@@ -407,11 +407,11 @@ function eg(e) {
                                 tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
                                 cta_name: "go_to_game_shop",
                             }),
-                                (0, ea.default)({ applicationId: e }).catch(() => {}));
+                                (0, es.default)({ applicationId: e }).catch(() => {}));
                         },
                         [t],
                     )),
-                    (a = (0, c.bG)(
+                    (s = (0, o.bG)(
                         [en.A],
                         () =>
                             n.flatMap((e) => {
@@ -438,16 +438,16 @@ function eg(e) {
                         ee(),
                     )),
                     {
-                        gameShops: s.useMemo(
+                        gameShops: a.useMemo(
                             () =>
-                                a.map((e) => ({
+                                s.map((e) => ({
                                     type: "page",
                                     key: e.id,
                                     text: e.label,
                                     iconSrc: e.iconSrc,
                                     onClick: () => l(e.id),
                                 })),
-                            [a, l],
+                            [s, l],
                         ),
                         hasGameShops: n.length > 0,
                     }),
@@ -455,13 +455,13 @@ function eg(e) {
                 I =
                     ((i = (0, q.A)(M.FYj)),
                     (r = (0, Q.XF)(i)),
-                    (o = r?.shared.navigation?.tab),
-                    (d = o?.title),
+                    (c = r?.shared.navigation?.tab),
+                    (d = c?.title),
                     (u = r?.collectionId),
                     (f =
                         (null == d || null == u || i?.rewardStatus === Z.GM.CONSUMED
                             ? null
-                            : { title: d, icon: o?.icon, collectionId: u }) ??
+                            : { title: d, icon: c?.icon, collectionId: u }) ??
                         ((m = (0, Q.NN)(i)),
                         (g = m?.navigation?.tab),
                         (E = g?.title),
@@ -470,49 +470,49 @@ function eg(e) {
                     (x = f?.title),
                     (C = f?.icon),
                     (p = f?.collectionId),
-                    s.useMemo(
+                    a.useMemo(
                         () => (null == x || null == p ? null : { title: x, icon: C, collectionId: p }),
                         [x, C, p],
                     ));
-            return s.useMemo(() => {
+            return a.useMemo(() => {
                 let t = (function (e) {
                         let { hasActivePromotion: t } = e;
-                        return eo.filter((e) => {
+                        return ec.filter((e) => {
                             let { tab: n } = e;
                             return n !== y.G2.OFFER_ELIGIBLE || !!t;
                         });
                     })({ hasActivePromotion: _ }).map((t) => {
                         let { tab: n, labelKey: l } = t,
-                            s = n === y.G2.OFFER_ELIGIBLE ? Y.TagIcon : void 0;
+                            a = n === y.G2.OFFER_ELIGIBLE ? Y.TagIcon : void 0;
                         return {
                             type: "page",
                             key: n,
-                            text: G.intl.string(l),
+                            text: P.intl.string(l),
                             onClick: () => e(n),
-                            trailingIndicator: null != s ? { type: "icon", icon: s } : void 0,
+                            trailingIndicator: null != a ? { type: "icon", icon: a } : void 0,
                         };
                     }),
                     n = [
                         {
                             type: "page",
                             key: y.G2.HOME,
-                            text: G.intl.string(G.t["xNiB/O"]),
+                            text: P.intl.string(P.t["xNiB/O"]),
                             route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(y.G2.HOME),
                             onClick: () => e(y.G2.HOME),
                         },
                         {
                             type: "menu",
                             key: y.G2.CATALOG,
-                            text: G.intl.string(G.t.FshAeN),
+                            text: P.intl.string(P.t.FshAeN),
                             route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(y.G2.CATALOG),
                             onClick: () => e(y.G2.CATALOG),
-                            expandLabel: G.intl.string(G.t["+w36yH"]),
+                            expandLabel: P.intl.string(P.t["+w36yH"]),
                             options: t,
                         },
                         {
                             type: "page",
                             key: y.G2.ORBS,
-                            text: G.intl.string(G.t.fG3RIg),
+                            text: P.intl.string(P.t.fG3RIg),
                             route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(y.G2.ORBS),
                             onClick: () => e(y.G2.ORBS),
                         },
@@ -522,15 +522,15 @@ function eg(e) {
                         n.push({
                             type: "menu",
                             key: y.G2.GAME_SHOPS,
-                            text: G.intl.string(G.t.FkjcWY),
-                            expandLabel: G.intl.string(G.t.bf9uMH),
+                            text: P.intl.string(P.t.FkjcWY),
+                            expandLabel: P.intl.string(P.t.bf9uMH),
                             options: A,
                         }),
                     S &&
                         n.push({
                             type: "page",
                             key: y.G2.GAME_SERVERS,
-                            text: G.intl.string(ec.default.vCzwM7),
+                            text: P.intl.string(eo.default.vCzwM7),
                             route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(y.G2.GAME_SERVERS),
                             onClick: () => e(y.G2.GAME_SERVERS),
                             badge: "beta",
@@ -551,14 +551,14 @@ function eg(e) {
                 return n;
             }, [e, _, I, S, v, A]);
         })(
-            s.useCallback(
+            a.useCallback(
                 (e) => {
-                    a(e);
+                    s(e);
                 },
-                [a],
+                [s],
             ),
         ),
-        P = s.useMemo(() => {
+        G = a.useMemo(() => {
             if (null == n) return !1;
             let e = k.find((e) => e.key === y.G2.PROMOTION);
             if (null == e) return !1;
@@ -576,36 +576,36 @@ function eg(e) {
             className: i()(em.jr, { [ed.jP]: v }),
             toolbar: (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(V, { handleTransition: a, selectedTab: t, isNarrow: b, hasText: "" !== _ }),
-                    (0, l.jsx)(o.D, {
+                    (0, l.jsx)(V, { handleTransition: s, selectedTab: t, isNarrow: b, hasText: "" !== _ }),
+                    (0, l.jsx)(c.D, {
                         className: em.ij,
                         onClick: R,
-                        "aria-label": G.intl.string(G.t["7lZ31J"]),
+                        "aria-label": P.intl.string(P.t["7lZ31J"]),
                         children: (0, l.jsx)(d.HeartIcon, { size: "xs", color: "currentColor" }),
                     }),
                     (0, l.jsx)(C.SS, {
                         analyticsPage: L,
                         cardAlignment: C.SS.CardAlignment.END,
-                        ctaText: G.intl.string(G.t.VC4Mq0),
+                        ctaText: P.intl.string(P.t.VC4Mq0),
                         ctaOnClick: T,
                     }),
                 ],
             }),
             hideSearch: !0,
             children: [
-                (0, l.jsx)(o.D, {
+                (0, l.jsx)(c.D, {
                     className: em.sU,
-                    onClick: () => a(y.G2.HOME),
-                    "aria-label": G.intl.string(G.t["5upuqx"]),
+                    onClick: () => s(y.G2.HOME),
+                    "aria-label": P.intl.string(P.t["5upuqx"]),
                     children: (0, l.jsx)(u.ShopIcon, { size: "md", color: m.A.colors.TEXT_DEFAULT }),
                 }),
                 (0, l.jsx)(K.A, {
-                    "aria-label": G.intl.string(G.t["5upuqx"]),
+                    "aria-label": P.intl.string(P.t["5upuqx"]),
                     className: em.IV,
                     options: k,
-                    selectedKey: P,
-                    overflowLabel: G.intl.string(G.t["UKOtz+"]),
-                    overflowExpandLabel: G.intl.string(G.t.PEtHiE),
+                    selectedKey: G,
+                    overflowLabel: P.intl.string(P.t["UKOtz+"]),
+                    overflowExpandLabel: P.intl.string(P.t.PEtHiE),
                 }),
             ],
         }),

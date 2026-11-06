@@ -27,7 +27,7 @@ n.d(
                     participants: y,
                     onSelectParticipant: I,
                 } = e,
-                [j, N] = (function () {
+                [j, v] = (function () {
                     let [e, t] = l.useState(() => o.w.get(x, m.CUs.BOTTOM_RIGHT));
                     return [
                         e,
@@ -36,7 +36,7 @@ n.d(
                         }, []),
                     ];
                 })(),
-                v = l.useRef(null),
+                N = l.useRef(null),
                 E = null == C.getGuildId() ? 70 : 50,
                 b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
                 S = y.length,
@@ -49,7 +49,7 @@ n.d(
                     [S],
                 );
             l.useLayoutEffect(() => {
-                v.current?.ensureIsInPosition();
+                N.current?.ensureIsInPosition();
             }, [y.length]);
             let R = l.useCallback(
                     (e) => {
@@ -60,9 +60,9 @@ n.d(
                 ),
                 O = l.useCallback(
                     (e, t) => {
-                        N(t);
+                        v(t);
                     },
-                    [N],
+                    [v],
                 );
             return (0, i.jsx)("div", {
                 className: f.kL,
@@ -70,7 +70,7 @@ n.d(
                     position: j,
                     id: 0,
                     width: T,
-                    ref: v,
+                    ref: N,
                     onMove: O,
                     onResize: R,
                     maxX: t,

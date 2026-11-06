@@ -31,8 +31,8 @@ n.d(
                 {
                     tileStyle: I,
                     tileWidth: j,
-                    rows: N,
-                    columns: v,
+                    rows: v,
+                    columns: N,
                 } = l.useMemo(
                     () =>
                         (function (e, t, n) {
@@ -65,21 +65,21 @@ n.d(
                         })(x, C, y),
                     [x, C, y],
                 ),
-                E = v + 1,
+                E = N + 1,
                 b = E * j + (E - 1) * 8 <= f,
                 S = Math.floor(j / c) + 8,
-                T = Math.max(0, y - S * N) / 2;
+                T = Math.max(0, y - S * v) / 2;
             return (0, i.jsx)(r.A, {
                 fade: !0,
                 className: t,
                 listPadding: [h + T, 0, p + T - 8, 8],
                 renderRow: function (e) {
-                    let t = e * v;
+                    let t = e * N;
                     return (0, i.jsx)(
                         "div",
                         {
                             className: o.nM,
-                            children: n?.slice(t, t + v)?.map((e, n) => {
+                            children: n?.slice(t, t + N)?.map((e, n) => {
                                 let l = t + n;
                                 return (0, i.jsx)(
                                     "div",
@@ -87,8 +87,8 @@ n.d(
                                         style: I,
                                         className: s()(o.Vs, {
                                             [o.E3]: b,
-                                            [o.k4]: l >= (N - 1) * v,
-                                            [o.Kk]: (l + 1) % v == 0 || l === x - 1,
+                                            [o.k4]: l >= (v - 1) * N,
+                                            [o.Kk]: (l + 1) % N == 0 || l === x - 1,
                                         }),
                                         children: (0, i.jsx)("div", { className: o.eP, children: e(j) }),
                                     },
@@ -99,8 +99,8 @@ n.d(
                         e,
                     );
                 },
-                rowCount: N,
-                rowCountBySection: [N],
+                rowCount: v,
+                rowCountBySection: [v],
                 rowHeight: S,
                 onResize: A,
             });

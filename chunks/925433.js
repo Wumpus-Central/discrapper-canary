@@ -111,11 +111,11 @@ a(321073);
 var D = a(920495),
     L = a(532294),
     P = a(739187);
-function G(e) {
+function U(e) {
     let t = (0, v.Cz)(e);
     null != t && ((0, P.V)(), (0, s.P0)({ text: t, variant: "critical" }));
 }
-function U(e) {
+function G(e) {
     let t = (0, p.bG)([l.A], () => l.A.isMuted),
         a = h.useRef(null);
     return (
@@ -453,8 +453,8 @@ function eL(e) {
     });
 }
 var eP = a(51104),
-    eG = a(67915);
-function eU(e, t) {
+    eU = a(67915);
+function eG(e, t) {
     return e === v.v7.OUTFIT ? (null != t ? (0, y.FA)(t) : void 0) : t;
 }
 function eH(e) {
@@ -468,8 +468,8 @@ function eH(e) {
             let { customizationOption: t, onSelectOption: a } = e,
                 i = v.hw[t],
                 { selectedOptionId: r, savedOptionId: s } = (0, p.cf)([l.A], () => ({
-                    selectedOptionId: eU(t, l.A.selectedCharacterTraits[i]),
-                    savedOptionId: eU(t, l.A.character?.[i]),
+                    selectedOptionId: eG(t, l.A.selectedCharacterTraits[i]),
+                    savedOptionId: eG(t, l.A.character?.[i]),
                 })),
                 n = h.useCallback(
                     (e, t) => {
@@ -483,7 +483,7 @@ function eH(e) {
                         case v.v7.OUTFIT:
                             return y.ps;
                         case v.v7.OUTFIT_COLOR:
-                            return (0, y.wD)(t ?? eG.r.NONE);
+                            return (0, y.wD)(t ?? eU.r.NONE);
                         default:
                             return;
                     }
@@ -720,7 +720,7 @@ function e5(e) {
                 "aria-describedby": s,
                 "aria-haspopup": "menu",
                 onClick: function (t) {
-                    null != i ? G(i) : e.onClick(t);
+                    null != i ? U(i) : e.onClick(t);
                 },
                 onKeyDown: (t) => {
                     (e.onKeyDown(t), ("ArrowLeft" === t.key || "ArrowRight" === t.key) && t.stopPropagation());
@@ -779,7 +779,7 @@ function e6(e) {
                                         "aria-disabled": null != n,
                                         "aria-describedby": f,
                                         onChange: () => {
-                                            null != n ? G(n) : s(e);
+                                            null != n ? U(n) : s(e);
                                         },
                                     }),
                                 }),
@@ -1127,7 +1127,7 @@ function tT(e) {
         c = null != a,
         d = h.useMemo(() => (0, ep.throttle)((e) => e(), 500, { trailing: !1 }), []);
     function l(e) {
-        null != a ? G(a) : d(e);
+        null != a ? U(a) : d(e);
     }
     switch (t) {
         case w.gr.HOME:
@@ -1208,8 +1208,8 @@ function tD() {
 (a(134528), a(947204));
 var tL = a(675970),
     tP = a(559106),
-    tG = a(366056),
-    tU = a(292801),
+    tU = a(366056),
+    tG = a(292801),
     tH = a(155718),
     tF = a(294454),
     tK = a(489414),
@@ -1291,7 +1291,7 @@ function tQ() {
                                   className: tZ.R_,
                                   children: [
                                       (0, r.jsx)(tX, {
-                                          icon: tG.ExperimentalCheckpointIcon,
+                                          icon: tU.ExperimentalCheckpointIcon,
                                           children: ec.intl.string(tt.default.ir6nEQ),
                                       }),
                                       (0, r.jsx)(ei, {
@@ -1373,7 +1373,7 @@ function tQ() {
                                   className: tZ.RC,
                                   children: ec.intl.string(ec.t.I3ltXO),
                               }),
-                              (0, r.jsx)(tU.ArrowAngleRightUpIcon, { size: "refresh_sm", color: "currentColor" }),
+                              (0, r.jsx)(tG.ArrowAngleRightUpIcon, { size: "refresh_sm", color: "currentColor" }),
                           ],
                       }),
                   ],
@@ -1855,7 +1855,7 @@ function aN() {
         s = (i ? a.emojis : e?.emojis) ?? aE,
         [n, c] = h.useState(0),
         d = s[n],
-        o = U(_);
+        o = G(_);
     return (0, r.jsx)(tM, {
         children: (0, r.jsxs)("div", {
             className: aI.kL,
@@ -1912,21 +1912,21 @@ var aT = a(360450),
     aD = a(570287),
     aL = a(486020),
     aP = a(801305);
-let aG = [],
-    aU = (0, t1.j5)(L.Kr),
+let aU = [],
+    aG = (0, t1.j5)(L.Kr),
     aH = { r: 0, g: 0, b: 0, a: 1 },
     aF = {
         "Avatar01/Stroke": aH,
-        "Avatar01/Fill": aU,
+        "Avatar01/Fill": aG,
         "Avatar02/Stroke": aH,
-        "Avatar02/Fill": aU,
+        "Avatar02/Fill": aG,
         "Avatar03/Stroke": aH,
-        "Avatar03/Fill": aU,
+        "Avatar03/Fill": aG,
         "Avatar04/Stroke": aH,
-        "Avatar04/Fill": aU,
+        "Avatar04/Fill": aG,
         "Avatar05/Stroke": aH,
-        "Avatar05/Fill": aU,
-        ConnectorColor: aU,
+        "Avatar05/Fill": aG,
+        ConnectorColor: aG,
     };
 function aK(e) {
     return null != e ? aL.Ay.getUserAvatarURL(e, !1, 160, "png") : void 0;
@@ -1934,7 +1934,7 @@ function aK(e) {
 function aB(e) {
     let t,
         { route: a, onNextStep: i, onPreviousStep: s } = e,
-        n = (0, p.bG)([l.A], () => l.A.stats?.users ?? aG),
+        n = (0, p.bG)([l.A], () => l.A.stats?.users ?? aU),
         c = (0, p.bG)([l.A], () => l.A.stats?.sidekick),
         d = (0, p.bG)([R.default], () => R.default.getCurrentUser()),
         o = (0, p.bG)([F.Ay], () => F.Ay.useReducedMotion),
@@ -2671,7 +2671,7 @@ function iD() {
                             className: ik.R_,
                             children: [
                                 (0, r.jsx)(tX, {
-                                    icon: tG.ExperimentalCheckpointIcon,
+                                    icon: tU.ExperimentalCheckpointIcon,
                                     children: ec.intl.string(tt.default.ir6nEQ),
                                 }),
                                 (0, r.jsx)(ei, {
@@ -2698,7 +2698,7 @@ function iD() {
                                 }),
                                 (0, r.jsx)(iP, {
                                     label: ec.intl.string(tt.default["8XPMJj"]),
-                                    icon: null != a ? (0, r.jsx)(ib, { guild: a.guild, size: 40 }) : (0, r.jsx)(iG, {}),
+                                    icon: null != a ? (0, r.jsx)(ib, { guild: a.guild, size: 40 }) : (0, r.jsx)(iU, {}),
                                     name: null != a ? a.guild.name : ec.intl.string(en.default.GultYJ),
                                 }),
                                 (0, r.jsx)(iL, {
@@ -2716,7 +2716,7 @@ function iD() {
                                                   alt: "",
                                                   className: ik.Kk,
                                               })
-                                            : (0, r.jsx)(iG, {}),
+                                            : (0, r.jsx)(iU, {}),
                                     name:
                                         null == i
                                             ? ec.intl.string(ec.t.PoWNfe)
@@ -2733,7 +2733,7 @@ function iD() {
                                     icon:
                                         null != n
                                             ? (0, r.jsx)("img", { src: n, alt: "", className: b()(ik.Kk, ik.Gt) })
-                                            : (0, r.jsx)(iG, {}),
+                                            : (0, r.jsx)(iU, {}),
                                     name: null != s ? s.name : ec.intl.string(ec.t.PoWNfe),
                                 }),
                             ],
@@ -2774,26 +2774,26 @@ function iP(e) {
         ],
     });
 }
-function iG() {
+function iU() {
     return (0, r.jsx)("div", {
         className: b()(ik.Kk, ik.Gc),
         children: (0, r.jsx)(a0.UnknownGameIcon, { size: "md", color: "currentColor" }),
     });
 }
-var iU = a(651946);
+var iG = a(651946);
 function iH() {
     let e = (0, p.bG)([l.A], () => l.A.stats?.guilds?.guilds[0]),
         t = Math.round(e?.numDaysInteracted ?? 0),
         a = (0, I.bD)(e?.numDaysInteractedPercentile);
     return (0, r.jsx)(tM, {
         children: (0, r.jsxs)("div", {
-            className: iU.kL,
+            className: iG.kL,
             children: [
                 (0, r.jsxs)("div", {
-                    className: iU.wx,
+                    className: iG.wx,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: iU.R_,
+                            className: iG.R_,
                             children: [
                                 (0, r.jsx)(tX, { icon: ti.ServerIcon, children: ec.intl.string(en.default["M+a+t1"]) }),
                                 (0, r.jsx)(an, { value: t }),
@@ -2813,18 +2813,18 @@ function iH() {
                 }),
                 null != e &&
                     (0, r.jsx)("div", {
-                        className: iU.bU,
+                        className: iG.bU,
                         children: (0, r.jsxs)("div", {
-                            className: iU.Nr,
+                            className: iG.Nr,
                             style: { width: 360 },
                             children: [
                                 (0, r.jsx)(ib, { guild: e.guild, size: 360 }),
                                 (0, r.jsxs)("div", {
-                                    className: iU.zH,
+                                    className: iG.zH,
                                     children: [
                                         (0, r.jsx)(ei, {
                                             variant: "heading-xxl/medium",
-                                            className: iU.J5,
+                                            className: iG.J5,
                                             lineClamp: 1,
                                             children: e.guild.name,
                                         }),
@@ -2978,7 +2978,7 @@ let iX = {
     [w.s9.AURA]: { icon: e4.CalendarIcon, label: en.default.y2Y1DD },
     [w.s9.ASSEMBLED]: { icon: aR.FriendsIcon, label: ec.t.TdEu5X },
     [w.s9.FINALIZE]: { icon: iW.PaintPaletteIcon, label: en.default.gmMD2I },
-    [w.s9.SUMMARY]: { icon: tG.ExperimentalCheckpointIcon, label: tt.default.y4M1na },
+    [w.s9.SUMMARY]: { icon: tU.ExperimentalCheckpointIcon, label: tt.default.y4M1na },
 };
 function iZ(e) {
     let {
@@ -4278,77 +4278,77 @@ let i8 = i4("tex_none"),
         [i5.R.IRIDESCENT]: i4("tex_base_15_iridescent"),
     },
     ra = {
-        [eG.r.NONE]: null,
-        [eG.r.BADDIE_DEFAULT]: { riveId: 1, texture: i4("tex_outfit_01_baddie") },
-        [eG.r.TRAVELER_DEFAULT]: { riveId: 10, texture: i4("tex_outfit_10_traveler") },
-        [eG.r.STREAMER_DEFAULT]: { riveId: 3, texture: i4("tex_outfit_03_streamer") },
-        [eG.r.CAMPER_DEFAULT]: { riveId: 4, texture: i4("tex_outfit_04_camper") },
-        [eG.r.ATHLETE_DEFAULT]: { riveId: 5, texture: i4("tex_outfit_05_athlete") },
-        [eG.r.COWPOKE_DEFAULT]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke") },
-        [eG.r.GOTH_DEFAULT]: { riveId: 7, texture: i4("tex_outfit_07_goth") },
-        [eG.r.ASTRONAUT_DEFAULT]: { riveId: 8, texture: i4("tex_outfit_08_astronaut") },
-        [eG.r.JESTER_DEFAULT]: { riveId: 9, texture: i4("tex_outfit_09_jester") },
-        [eG.r.TRASH_CAN_DEFAULT]: { riveId: 2, texture: i4("tex_outfit_02_trash") },
-        [eG.r.MAGE_DEFAULT]: { riveId: 11, texture: i4("tex_outfit_11_mage") },
-        [eG.r.MECH_DEFAULT]: { riveId: 12, texture: i4("tex_outfit_12_mech") },
-        [eG.r.KNIGHT_DEFAULT]: { riveId: 13, texture: i4("tex_outfit_13_knight") },
-        [eG.r.MAGICAL_DEFAULT]: { riveId: 14, texture: i4("tex_outfit_14_magical") },
-        [eG.r.BADDIE_MONOCHROME]: { riveId: 1, texture: i4("tex_outfit_01_baddie_monochrome") },
-        [eG.r.BADDIE_VIOLET]: { riveId: 1, texture: i4("tex_outfit_01_baddie_violet") },
-        [eG.r.BADDIE_PASTEL]: { riveId: 1, texture: i4("tex_outfit_01_baddie_pastel") },
-        [eG.r.BADDIE_SUNSET]: { riveId: 1, texture: i4("tex_outfit_01_baddie_sunset") },
-        [eG.r.TRAVELER_HAZE]: { riveId: 10, texture: i4("tex_outfit_10_traveler_haze") },
-        [eG.r.TRAVELER_MOSS]: { riveId: 10, texture: i4("tex_outfit_10_traveler_moss") },
-        [eG.r.TRAVELER_CHRONO]: { riveId: 10, texture: i4("tex_outfit_10_traveler_chrono") },
-        [eG.r.TRAVELER_UMBER]: { riveId: 10, texture: i4("tex_outfit_10_traveler_umber") },
-        [eG.r.STREAMER_FLAMES]: { riveId: 3, texture: i4("tex_outfit_03_streamer_flames") },
-        [eG.r.STREAMER_STRIPES]: { riveId: 3, texture: i4("tex_outfit_03_streamer_stripes") },
-        [eG.r.STREAMER_SMILEY]: { riveId: 3, texture: i4("tex_outfit_03_streamer_smiley") },
-        [eG.r.STREAMER_VINTAGE]: { riveId: 3, texture: i4("tex_outfit_03_streamer_vintage") },
-        [eG.r.CAMPER_PLAID]: { riveId: 4, texture: i4("tex_outfit_04_camper_plaid") },
-        [eG.r.CAMPER_SWAMP]: { riveId: 4, texture: i4("tex_outfit_04_camper_swamp") },
-        [eG.r.CAMPER_GLAMP]: { riveId: 4, texture: i4("tex_outfit_04_camper_glamp") },
-        [eG.r.CAMPER_AMBER]: { riveId: 4, texture: i4("tex_outfit_04_camper_amber") },
-        [eG.r.ATHLETE_BLOCKED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_blocked") },
-        [eG.r.ATHLETE_FADED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_faded") },
-        [eG.r.ATHLETE_CHECKERED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_checkered") },
-        [eG.r.ATHLETE_LINED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_lined") },
-        [eG.r.COWPOKE_ONYX]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_onyx") },
-        [eG.r.COWPOKE_STEEL]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_steel") },
-        [eG.r.COWPOKE_DENIM]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_denim") },
-        [eG.r.COWPOKE_BLUSH]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_blush") },
-        [eG.r.GOTH_SIREN]: { riveId: 7, texture: i4("tex_outfit_07_goth_siren") },
-        [eG.r.GOTH_SERPENT]: { riveId: 7, texture: i4("tex_outfit_07_goth_serpent") },
-        [eG.r.GOTH_RAVEN]: { riveId: 7, texture: i4("tex_outfit_07_goth_raven") },
-        [eG.r.GOTH_VAMP]: { riveId: 7, texture: i4("tex_outfit_07_goth_vamp") },
-        [eG.r.ASTRONAUT_STARDUST]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_stardust") },
-        [eG.r.ASTRONAUT_MARTIAN]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_martian") },
-        [eG.r.ASTRONAUT_SOLAR]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_solar") },
-        [eG.r.ASTRONAUT_COSMIC]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_cosmic") },
-        [eG.r.JESTER_CONFETTI]: { riveId: 9, texture: i4("tex_outfit_09_jester_confetti") },
-        [eG.r.JESTER_CARNIVAL]: { riveId: 9, texture: i4("tex_outfit_09_jester_carnival") },
-        [eG.r.JESTER_SUNRISE]: { riveId: 9, texture: i4("tex_outfit_09_jester_sunrise") },
-        [eG.r.JESTER_NIGHTFALL]: { riveId: 9, texture: i4("tex_outfit_09_jester_nightfall") },
-        [eG.r.TRASH_CAN_BLACKOUT]: { riveId: 2, texture: i4("tex_outfit_02_trash_blackout") },
-        [eG.r.TRASH_CAN_CAUTION]: { riveId: 2, texture: i4("tex_outfit_02_trash_caution") },
-        [eG.r.TRASH_CAN_BUBBLEGUM]: { riveId: 2, texture: i4("tex_outfit_02_trash_bubblegum") },
-        [eG.r.TRASH_CAN_TOXIC]: { riveId: 2, texture: i4("tex_outfit_02_trash_toxic") },
-        [eG.r.MAGE_SHADOW]: { riveId: 11, texture: i4("tex_outfit_11_mage_shadow") },
-        [eG.r.MAGE_DUSK]: { riveId: 11, texture: i4("tex_outfit_11_mage_dusk") },
-        [eG.r.MAGE_WILDWOOD]: { riveId: 11, texture: i4("tex_outfit_11_mage_wildwood") },
-        [eG.r.MAGE_WINTER]: { riveId: 11, texture: i4("tex_outfit_11_mage_winter") },
-        [eG.r.MECH_AERO]: { riveId: 12, texture: i4("tex_outfit_12_mech_aero") },
-        [eG.r.MECH_VIPER]: { riveId: 12, texture: i4("tex_outfit_12_mech_viper") },
-        [eG.r.MECH_ULTRAVIOLET]: { riveId: 12, texture: i4("tex_outfit_12_mech_ultraviolet") },
-        [eG.r.MECH_SANDSTORM]: { riveId: 12, texture: i4("tex_outfit_12_mech_sandstorm") },
-        [eG.r.KNIGHT_IRON]: { riveId: 13, texture: i4("tex_outfit_13_knight_iron") },
-        [eG.r.KNIGHT_RUST]: { riveId: 13, texture: i4("tex_outfit_13_knight_rust") },
-        [eG.r.KNIGHT_PETAL]: { riveId: 13, texture: i4("tex_outfit_13_knight_petal") },
-        [eG.r.KNIGHT_GLACIER]: { riveId: 13, texture: i4("tex_outfit_13_knight_glacier") },
-        [eG.r.MAGICAL_SAPPHIRE]: { riveId: 14, texture: i4("tex_outfit_14_magical_sapphire") },
-        [eG.r.MAGICAL_AMETHYST]: { riveId: 14, texture: i4("tex_outfit_14_magical_amethyst") },
-        [eG.r.MAGICAL_FROST]: { riveId: 14, texture: i4("tex_outfit_14_magical_frost") },
-        [eG.r.MAGICAL_CITRINE]: { riveId: 14, texture: i4("tex_outfit_14_magical_citrine") },
+        [eU.r.NONE]: null,
+        [eU.r.BADDIE_DEFAULT]: { riveId: 1, texture: i4("tex_outfit_01_baddie") },
+        [eU.r.TRAVELER_DEFAULT]: { riveId: 10, texture: i4("tex_outfit_10_traveler") },
+        [eU.r.STREAMER_DEFAULT]: { riveId: 3, texture: i4("tex_outfit_03_streamer") },
+        [eU.r.CAMPER_DEFAULT]: { riveId: 4, texture: i4("tex_outfit_04_camper") },
+        [eU.r.ATHLETE_DEFAULT]: { riveId: 5, texture: i4("tex_outfit_05_athlete") },
+        [eU.r.COWPOKE_DEFAULT]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke") },
+        [eU.r.GOTH_DEFAULT]: { riveId: 7, texture: i4("tex_outfit_07_goth") },
+        [eU.r.ASTRONAUT_DEFAULT]: { riveId: 8, texture: i4("tex_outfit_08_astronaut") },
+        [eU.r.JESTER_DEFAULT]: { riveId: 9, texture: i4("tex_outfit_09_jester") },
+        [eU.r.TRASH_CAN_DEFAULT]: { riveId: 2, texture: i4("tex_outfit_02_trash") },
+        [eU.r.MAGE_DEFAULT]: { riveId: 11, texture: i4("tex_outfit_11_mage") },
+        [eU.r.MECH_DEFAULT]: { riveId: 12, texture: i4("tex_outfit_12_mech") },
+        [eU.r.KNIGHT_DEFAULT]: { riveId: 13, texture: i4("tex_outfit_13_knight") },
+        [eU.r.MAGICAL_DEFAULT]: { riveId: 14, texture: i4("tex_outfit_14_magical") },
+        [eU.r.BADDIE_MONOCHROME]: { riveId: 1, texture: i4("tex_outfit_01_baddie_monochrome") },
+        [eU.r.BADDIE_VIOLET]: { riveId: 1, texture: i4("tex_outfit_01_baddie_violet") },
+        [eU.r.BADDIE_PASTEL]: { riveId: 1, texture: i4("tex_outfit_01_baddie_pastel") },
+        [eU.r.BADDIE_SUNSET]: { riveId: 1, texture: i4("tex_outfit_01_baddie_sunset") },
+        [eU.r.TRAVELER_HAZE]: { riveId: 10, texture: i4("tex_outfit_10_traveler_haze") },
+        [eU.r.TRAVELER_MOSS]: { riveId: 10, texture: i4("tex_outfit_10_traveler_moss") },
+        [eU.r.TRAVELER_CHRONO]: { riveId: 10, texture: i4("tex_outfit_10_traveler_chrono") },
+        [eU.r.TRAVELER_UMBER]: { riveId: 10, texture: i4("tex_outfit_10_traveler_umber") },
+        [eU.r.STREAMER_FLAMES]: { riveId: 3, texture: i4("tex_outfit_03_streamer_flames") },
+        [eU.r.STREAMER_STRIPES]: { riveId: 3, texture: i4("tex_outfit_03_streamer_stripes") },
+        [eU.r.STREAMER_SMILEY]: { riveId: 3, texture: i4("tex_outfit_03_streamer_smiley") },
+        [eU.r.STREAMER_VINTAGE]: { riveId: 3, texture: i4("tex_outfit_03_streamer_vintage") },
+        [eU.r.CAMPER_PLAID]: { riveId: 4, texture: i4("tex_outfit_04_camper_plaid") },
+        [eU.r.CAMPER_SWAMP]: { riveId: 4, texture: i4("tex_outfit_04_camper_swamp") },
+        [eU.r.CAMPER_GLAMP]: { riveId: 4, texture: i4("tex_outfit_04_camper_glamp") },
+        [eU.r.CAMPER_AMBER]: { riveId: 4, texture: i4("tex_outfit_04_camper_amber") },
+        [eU.r.ATHLETE_BLOCKED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_blocked") },
+        [eU.r.ATHLETE_FADED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_faded") },
+        [eU.r.ATHLETE_CHECKERED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_checkered") },
+        [eU.r.ATHLETE_LINED]: { riveId: 5, texture: i4("tex_outfit_05_athlete_lined") },
+        [eU.r.COWPOKE_ONYX]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_onyx") },
+        [eU.r.COWPOKE_STEEL]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_steel") },
+        [eU.r.COWPOKE_DENIM]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_denim") },
+        [eU.r.COWPOKE_BLUSH]: { riveId: 6, texture: i4("tex_outfit_06_cowpoke_blush") },
+        [eU.r.GOTH_SIREN]: { riveId: 7, texture: i4("tex_outfit_07_goth_siren") },
+        [eU.r.GOTH_SERPENT]: { riveId: 7, texture: i4("tex_outfit_07_goth_serpent") },
+        [eU.r.GOTH_RAVEN]: { riveId: 7, texture: i4("tex_outfit_07_goth_raven") },
+        [eU.r.GOTH_VAMP]: { riveId: 7, texture: i4("tex_outfit_07_goth_vamp") },
+        [eU.r.ASTRONAUT_STARDUST]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_stardust") },
+        [eU.r.ASTRONAUT_MARTIAN]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_martian") },
+        [eU.r.ASTRONAUT_SOLAR]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_solar") },
+        [eU.r.ASTRONAUT_COSMIC]: { riveId: 8, texture: i4("tex_outfit_08_astronaut_cosmic") },
+        [eU.r.JESTER_CONFETTI]: { riveId: 9, texture: i4("tex_outfit_09_jester_confetti") },
+        [eU.r.JESTER_CARNIVAL]: { riveId: 9, texture: i4("tex_outfit_09_jester_carnival") },
+        [eU.r.JESTER_SUNRISE]: { riveId: 9, texture: i4("tex_outfit_09_jester_sunrise") },
+        [eU.r.JESTER_NIGHTFALL]: { riveId: 9, texture: i4("tex_outfit_09_jester_nightfall") },
+        [eU.r.TRASH_CAN_BLACKOUT]: { riveId: 2, texture: i4("tex_outfit_02_trash_blackout") },
+        [eU.r.TRASH_CAN_CAUTION]: { riveId: 2, texture: i4("tex_outfit_02_trash_caution") },
+        [eU.r.TRASH_CAN_BUBBLEGUM]: { riveId: 2, texture: i4("tex_outfit_02_trash_bubblegum") },
+        [eU.r.TRASH_CAN_TOXIC]: { riveId: 2, texture: i4("tex_outfit_02_trash_toxic") },
+        [eU.r.MAGE_SHADOW]: { riveId: 11, texture: i4("tex_outfit_11_mage_shadow") },
+        [eU.r.MAGE_DUSK]: { riveId: 11, texture: i4("tex_outfit_11_mage_dusk") },
+        [eU.r.MAGE_WILDWOOD]: { riveId: 11, texture: i4("tex_outfit_11_mage_wildwood") },
+        [eU.r.MAGE_WINTER]: { riveId: 11, texture: i4("tex_outfit_11_mage_winter") },
+        [eU.r.MECH_AERO]: { riveId: 12, texture: i4("tex_outfit_12_mech_aero") },
+        [eU.r.MECH_VIPER]: { riveId: 12, texture: i4("tex_outfit_12_mech_viper") },
+        [eU.r.MECH_ULTRAVIOLET]: { riveId: 12, texture: i4("tex_outfit_12_mech_ultraviolet") },
+        [eU.r.MECH_SANDSTORM]: { riveId: 12, texture: i4("tex_outfit_12_mech_sandstorm") },
+        [eU.r.KNIGHT_IRON]: { riveId: 13, texture: i4("tex_outfit_13_knight_iron") },
+        [eU.r.KNIGHT_RUST]: { riveId: 13, texture: i4("tex_outfit_13_knight_rust") },
+        [eU.r.KNIGHT_PETAL]: { riveId: 13, texture: i4("tex_outfit_13_knight_petal") },
+        [eU.r.KNIGHT_GLACIER]: { riveId: 13, texture: i4("tex_outfit_13_knight_glacier") },
+        [eU.r.MAGICAL_SAPPHIRE]: { riveId: 14, texture: i4("tex_outfit_14_magical_sapphire") },
+        [eU.r.MAGICAL_AMETHYST]: { riveId: 14, texture: i4("tex_outfit_14_magical_amethyst") },
+        [eU.r.MAGICAL_FROST]: { riveId: 14, texture: i4("tex_outfit_14_magical_frost") },
+        [eU.r.MAGICAL_CITRINE]: { riveId: 14, texture: i4("tex_outfit_14_magical_citrine") },
     };
 var ri = (((i = {}).SLOT = "slot"), (i.TRAIT = "trait"), (i.LAYOUT = "layout"), (i.ALWAYS = "always"), i);
 let rr = /^tex_(aura|base_\d+|outfit)_/,
@@ -4826,7 +4826,7 @@ function rR(e) {
                 })(n, T),
             [n, T],
         ),
-        O = U(_),
+        O = G(_),
         y = M(),
         P = (0, v.k0)(n, y),
         H = h.useId(),
@@ -4852,7 +4852,7 @@ function rR(e) {
         q = h.useCallback(
             (e) => {
                 if (!l.A.isSaving) {
-                    if (null != P) return void G(P);
+                    if (null != P) return void U(P);
                     (O(), c(e));
                 }
             },

@@ -57,22 +57,22 @@ n.d(
     {},
     {
         A: function (e) {
-            let { channelId: t, x: n, y, label: I, roomWidth: j, seat: N } = e,
-                v = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
+            let { channelId: t, x: n, y, label: I, roomWidth: j, seat: v } = e,
+                N = (0, a.bG)([d.Ay], () => d.Ay.getVoiceChannelId() === t),
                 E = (0, a.bG)([p.A], () =>
                     p.A.getRoomUsers(t)
                         .values()
-                        .some((e) => e.seat === N || (e.position?.x === n && e.position?.y === y)),
+                        .some((e) => e.seat === v || (e.position?.x === n && e.position?.y === y)),
                 ),
                 b = (0, a.bG)([c.A], () => c.A.getChannel(t)?.guild_id),
                 S = l.useCallback(async () => {
                     null != b &&
-                        (v
-                            ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: N }).catch((e) =>
+                        (N
+                            ? (0, u.AQ)(b, t, { user_position: { x: n, y }, user_seat: v }).catch((e) =>
                                   (0, h.b)({ silent: !0 }),
                               )
-                            : ((0, u.TJ)({ x: n, y }, N), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
-                }, [v, b, t, n, y, N]),
+                            : ((0, u.TJ)({ x: n, y }, v), (await (0, o.A)({ channelId: t })) || (0, u.Ys)()));
+                }, [N, b, t, n, y, v]),
                 T = (0, m.Sb)({
                     position: { x: n, y },
                     targetLabel: g.intl.formatToPlainString(f.default.NYm6Cb, { seatLabel: I }),
@@ -81,7 +81,7 @@ n.d(
             let { numericAvatarSize: _ } = (0, A.F)(j),
                 R = 1.2 * Math.max(_, 24);
             return (0, i.jsx)(s.m, {
-                text: v || null != T ? null : g.intl.string(g.t["96ANUN"]),
+                text: N || null != T ? null : g.intl.string(g.t["96ANUN"]),
                 children: (0, i.jsx)(r.D, {
                     role: "listitem",
                     "aria-label": I,

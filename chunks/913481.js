@@ -62,7 +62,7 @@ n.d(
                 A = (0, r.bG)([u.A], () => u.A.getPendingNote(t)),
                 y = (0, r.bG)([u.A], () => u.A.getCreatingNotes(t)),
                 j = (0, r.bG)([u.A], () => u.A.getNotes(t)),
-                N = (0, r.bG)([o.Ay], () => o.Ay.keyboardModeEnabled);
+                v = (0, r.bG)([o.Ay], () => o.Ay.keyboardModeEnabled);
             (0, l.useEffect)(() => {
                 function e(e) {
                     d.current = { x: e.clientX, y: e.clientY, hasValue: !0 };
@@ -72,13 +72,13 @@ n.d(
                     () => document.removeEventListener("mousemove", e)
                 );
             }, []);
-            let { interactionsEnabled: v } = (0, h.mf)({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
-            if (!v || (0 === j.length && null == A && 0 === y.length)) return null;
+            let { interactionsEnabled: N } = (0, h.mf)({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
+            if (!N || (0 === j.length && null == A && 0 === y.length)) return null;
             let E = null != A && null == A.position;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     E &&
-                        !N &&
+                        !v &&
                         (0, i.jsx)("div", {
                             ref: a,
                             className: C.kL,

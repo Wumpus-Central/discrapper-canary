@@ -33,8 +33,8 @@ var i = n(477900),
     P = n(602853),
     D = n(654107),
     O = n(450373),
-    U = n(531685),
-    G = n(486020),
+    G = n(531685),
+    U = n(486020),
     w = n(837529),
     B = n(686189),
     H = n(714719),
@@ -42,7 +42,7 @@ var i = n(477900),
 function F(e) {
     let { user: t, displayProfile: n, guildId: s, bannerHeight: o, avatarSize: d, avatarInsetStart: c } = e,
         [u, m] = l.useState(!1),
-        h = (0, r.bG)([U.A], () => U.A.isFocused()),
+        h = (0, r.bG)([G.A], () => G.A.isFocused()),
         g = p.kt.getSetting(),
         A = (0, w.Nx)(),
         { bannerSrc: x, status: f } = (0, B.A)({ displayProfile: n ?? null, size: 480, canAnimate: g ? h : u }),
@@ -57,7 +57,7 @@ function F(e) {
     return (0, i.jsx)(H.A, {
         bannerSrc: I,
         backgroundColor: f === B.D.COMPLETE || A ? j : M.A.unsafe_rawColors.PRIMARY_800.css,
-        showGifTag: !g && (0, G.o4)(I),
+        showGifTag: !g && (0, U.o4)(I),
         height: o,
         cutout: { align: "start", insetStart: c + N / 2 - b, insetBottom: y / 2, radius: b },
         onInteractionStart: () => m(!0),
@@ -69,15 +69,15 @@ var Y = n(46653),
     K = n(35241),
     W = n(587168),
     J = n(193738),
-    X = n(987307),
-    Z = n(996988);
+    Z = n(987307),
+    X = n(996988);
 function q(e) {
     let { user: t, guildId: n } = e;
     return t.isNonUserBot()
         ? (0, i.jsx)(K.A, { user: t })
         : t.bot
           ? (0, i.jsx)(z.A, { user: t, guildId: n })
-          : (0, i.jsx)(X.yo, { user: t, guildId: n });
+          : (0, i.jsx)(Z.yo, { user: t, guildId: n });
 }
 function $(e) {
     let { user: t, guildId: n } = e;
@@ -85,7 +85,7 @@ function $(e) {
         ? null
         : (0, i.jsxs)(W.A, {
               children: [
-                  !t.isNonUserBot() && (0, i.jsx)(J.A, { user: t, themeType: Z.d.EMBED }),
+                  !t.isNonUserBot() && (0, i.jsx)(J.A, { user: t, themeType: X.d.EMBED }),
                   (0, i.jsx)(q, { user: t, guildId: n ?? void 0 }),
               ],
           });
@@ -142,11 +142,11 @@ function ed(e) {
         { analyticsLocations: P } = (0, c.Ay)(d.A.USER_PROFILE_EMBED),
         D = (0, f.pb)({ layout: "EMBED", userId: t.id, guildId: n, channelId: a, messageId: A }),
         O = (0, m.A)(y?.profileFrame?.skuId),
-        U = y?.private === !0,
-        G = (0, l.useRef)(null),
+        G = y?.private === !0,
+        U = (0, l.useRef)(null),
         [w, B] = (0, v.A)(),
-        H = (0, s.A)(G, B),
-        { isHovering: V } = (0, g.A)(G),
+        H = (0, s.A)(U, B),
+        { isHovering: V } = (0, g.A)(U),
         Y = p.kt.useSetting(),
         z = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
         K = y?.profileEffect?.skuId,
@@ -171,7 +171,7 @@ function ed(e) {
                 user: t,
                 displayProfile: y,
                 size: "sm",
-                style: U ? ea : er,
+                style: G ? ea : er,
                 containerRef: H,
                 headingRef: E,
                 headingText: et.intl.formatToPlainString(et.t["8yRya1"], { name: M }),
@@ -179,7 +179,7 @@ function ed(e) {
                     null != K ? (0, i.jsx)(u.A, { skuId: K, autoPlay: Y, isHovering: V, useOpacityOnHover: !W }) : null,
                 profileFrame: null != O ? (0, i.jsx)(h.A, { frame: O, fadeIn: !1 }) : null,
                 children: [
-                    U && (0, i.jsx)(b.A, { className: el.i9 }),
+                    G && (0, i.jsx)(b.A, { className: el.i9 }),
                     (0, i.jsx)(F, {
                         user: t,
                         displayProfile: y,
@@ -202,7 +202,7 @@ function ed(e) {
                         user: t,
                         guildId: L ?? void 0,
                         channelId: a ?? void 0,
-                        themeType: Z.d.EMBED,
+                        themeType: X.d.EMBED,
                         className: el.WO,
                         referenceClassName: el.RQ,
                         disableToolbar: !0,
@@ -216,10 +216,10 @@ function ed(e) {
                         onClickName: J,
                         pronouns: y?.pronouns,
                         className: el.eF,
-                        trailing: (0, i.jsx)(j.A, { displayProfile: y, themeType: Z.d.EMBED }),
+                        trailing: (0, i.jsx)(j.A, { displayProfile: y, themeType: X.d.EMBED }),
                     }),
                     (0, i.jsx)(eo, { user: t, guildId: n, channelId: a }),
-                    U && (0, i.jsx)(S.A.Overlay, { className: el.In, children: (0, i.jsx)(T.A, { username: M }) }),
+                    G && (0, i.jsx)(S.A.Overlay, { className: el.In, children: (0, i.jsx)(T.A, { username: M }) }),
                     (0, i.jsx)(ei, { onOpenProfile: J }),
                 ],
             }),
