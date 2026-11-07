@@ -23,7 +23,7 @@ var c = n(186111),
     T = n(120692),
     R = n(475743),
     y = n(494280),
-    v = n(859703),
+    v = n(122760),
     Q = n(971276),
     N = n(851936),
     U = n(568329),
@@ -1007,8 +1007,8 @@ var e$ = n(889137),
     e8 = n(976019),
     e5 = n(442734),
     e9 = n(114046),
-    e3 = n(695366),
-    e4 = n(438457),
+    e4 = n(695366),
+    e3 = n(438457),
     te = n(144779),
     tt = n(417869),
     tn = n(178540),
@@ -1022,7 +1022,7 @@ function tl(e) {
     return (0, s.jsx)(ey.D, {
         className: to.Z0,
         onClick: () => {
-            ((0, e4.r)({
+            ((0, e3.r)({
                 type: te.F.CLICK_INTERNAL,
                 adCreativeType: i.p.QUEST,
                 adCreativeId: n.id,
@@ -1065,7 +1065,7 @@ function tx(e) {
         { startingConsoleQuest: c, startConsoleQuest: C } = (0, x.Wj)({
             questId: t.id,
             beforeRequest: () => {
-                ((0, e4.r)({
+                ((0, e3.r)({
                     type: te.F.CLICK_INTERNAL,
                     adCreativeType: i.p.QUEST,
                     adCreativeId: t.id,
@@ -1139,7 +1139,7 @@ function tx(e) {
             (0, s.jsxs)("div", {
                 className: tc.oK,
                 children: [
-                    (0, s.jsx)(e3.CircleErrorIcon, {
+                    (0, s.jsx)(e4.CircleErrorIcon, {
                         size: "custom",
                         color: "currentColor",
                         className: 0 === u.length ? tc.pH : tc.JA,
@@ -1223,7 +1223,7 @@ function tE(e) {
             (0, s.jsxs)("div", {
                 className: tm.wx,
                 children: [
-                    (0, s.jsx)(e3.CircleErrorIcon, {
+                    (0, s.jsx)(e4.CircleErrorIcon, {
                         size: "custom",
                         color: "currentColor",
                         className: tm.Kk,

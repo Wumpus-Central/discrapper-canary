@@ -231,7 +231,7 @@ function k(e) {
         endsAt: e.ends_at,
     };
 }
-var F = n(859703),
+var F = n(122760),
     B = n(506988),
     V = n(405670),
     H = n(479442),
@@ -543,126 +543,146 @@ function eh(e) {
     o.h.dispatch({ type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId: e });
 }
 async function eI(e, t) {
-    let n = Date.now(),
-        i = x.recordQuestRequestAttempt("/quests/decision", t, e);
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = Date.now(),
+        r = x.recordQuestRequestAttempt("/quests/decision", t, e);
     o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: e });
     try {
         let d,
-            c = await (0, I.Ht)(),
-            E = await (0, h.sN)(),
-            A = (0, m.pc)(),
-            T = null != A ? A() : [],
-            S = O.Ay.getGuildsTree(),
-            L = T.filter((e) => {
+            E,
+            A = await (0, I.Ht)(),
+            T = await (0, h.sN)(),
+            S = (0, m.pc)(),
+            L = null != S ? S() : [],
+            y = O.Ay.getGuildsTree(),
+            D = L.filter((e) => {
                 if ((0, g.tZ)(e)) return !1;
-                let t = S.getNode(e);
+                let t = y.getNode(e);
                 return t?.parentId == null || N.A.isFolderExpanded(t.parentId);
             }).slice(0, 50),
-            y = new URLSearchParams({ placement: String(e) });
-        (c?.uuid != null && y.append("client_heartbeat_session_id", c.uuid),
-            null != E.uuid && y.append("client_ad_session_id", E.uuid),
-            L.forEach((e) => y.append("visible_guild_ids", e)));
-        let D = (
+            b = new URLSearchParams({ placement: String(e) });
+        (A?.uuid != null && b.append("client_heartbeat_session_id", A.uuid),
+            null != T.uuid && b.append("client_ad_session_id", T.uuid),
+            D.forEach((e) => b.append("visible_guild_ids", e)));
+        let v = (
                 await l.Bo.get({
-                    url: `${P.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${y.toString()}`,
+                    url: `${P.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${b.toString()}`,
                     rejectWithError: !1,
                     context: { connection_type: C.A.getType() },
                 })
             ).body,
-            b = !1;
+            M = !1;
         e === B.p9.MOBILE_HOME_DOCK_AREA
-            ? (b = Y.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled)
+            ? (M = Y.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled)
             : e === B.p9.DESKTOP_ACCOUNT_PANEL_AREA &&
-              (b = H.w.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled);
-        let v = D.creative?.creative_type !== a.p.BOUNTY || b ? D.creative : null,
-            M = null,
-            U = null;
-        if (null != v)
-            switch (v.creative_type) {
-                case a.p.QUEST:
-                    ((d = (0, $.Yn)(v.creative_content)), (M = { type: a.p.QUEST, questId: d.id }));
+              (M = H.w.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled);
+        let U = v.creative?.creative_type !== a.p.BOUNTY || M ? v.creative : null,
+            G = null,
+            k = null;
+        if (null != U)
+            switch (U.creative_type) {
+                case a.p.QUEST: {
+                    let e = U.creative_content,
+                        t = e.id,
+                        i = v.user_status,
+                        r = null != i && i.quest_id !== t;
+                    ((d =
+                        n && void 0 !== i && !r
+                            ? (E = (0, $.rO)({
+                                  id: t,
+                                  config: e,
+                                  user_status: i,
+                                  targeted_content: [],
+                                  preview: !1,
+                                  traffic_metadata_sealed: v.traffic_metadata_sealed,
+                              })).config
+                            : (0, $.Yn)(e)),
+                        (G = { type: a.p.QUEST, questId: d.id }),
+                        n && (void 0 === i || r) && (await ee()));
                     break;
+                }
                 case a.p.BOUNTY:
-                    let G = (0, u.t)(v.creative_content);
-                    M = { type: a.p.BOUNTY, bounty: G };
+                    let F = (0, u.t)(U.creative_content);
+                    G = { type: a.p.BOUNTY, bounty: F };
                     break;
                 case a.p.PLAYABLE:
-                    var r, s;
-                    let k = {
-                        id: (r = v.creative_content).id,
-                        applicationId: r.application_id,
-                        advertiserName: r.advertiser_name,
-                        productName: r.product_name,
-                        productIcon: (0, _.dv)(r.product_icon),
-                        videoPreview: (0, _.Zf)(r.video_preview),
-                        imagePreview: (0, _.Zf)(r.image_preview),
+                    var s, c;
+                    let V = {
+                        id: (s = U.creative_content).id,
+                        applicationId: s.application_id,
+                        advertiserName: s.advertiser_name,
+                        productName: s.product_name,
+                        productIcon: (0, _.dv)(s.product_icon),
+                        videoPreview: (0, _.Zf)(s.video_preview),
+                        imagePreview: (0, _.Zf)(s.image_preview),
                         cta: {
-                            url: (s = r.cta).url,
-                            buttonLabel: s.button_label,
-                            android: null != s.android ? { androidAppId: s.android.android_app_id } : void 0,
-                            ios: null != s.ios ? { iosAppId: s.ios.ios_app_id } : void 0,
+                            url: (c = s.cta).url,
+                            buttonLabel: c.button_label,
+                            android: null != c.android ? { androidAppId: c.android.android_app_id } : void 0,
+                            ios: null != c.ios ? { iosAppId: c.ios.ios_app_id } : void 0,
                         },
-                        rewardTimerSeconds: r.reward_timer_seconds,
+                        rewardTimerSeconds: s.reward_timer_seconds,
                     };
-                    M = { type: a.p.PLAYABLE, playable: k };
+                    G = { type: a.p.PLAYABLE, playable: V };
                     break;
                 case a.p.NO_FILL:
-                    U = v.creative_content?.ad_content_id ?? null;
+                    k = U.creative_content?.ad_content_id ?? null;
             }
         else {
-            let e = D.quest;
-            null != e && ((d = (0, $.Yn)(e)), (M = { type: a.p.QUEST, questId: d.id }));
+            let e = v.quest;
+            null != e && ((d = (0, $.Yn)(e)), (G = { type: a.p.QUEST, questId: d.id }), n && (await ee()));
         }
         (o.h.dispatch({
             type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
+            questWithUserStatus: E,
             quest: d,
-            creative: M,
-            isNoFill: v?.creative_type === a.p.NO_FILL,
-            noFillAdContentId: U,
+            creative: G,
+            isNoFill: U?.creative_type === a.p.NO_FILL,
+            noFillAdContentId: k,
             adDecisionData: {
-                ad_id: D.ad_identifiers?.ad_id,
-                adset_id: D.ad_identifiers?.adset_id,
-                ad_set_id: D.ad_identifiers?.ad_set_id,
-                campaign_id: D.ad_identifiers?.campaign_id,
-                creative_id: D.ad_identifiers?.creative_id,
-                creative_type: D.ad_identifiers?.creative_type,
-                decision_id: D.request_id,
-                is_targeted: null != D.ad_identifiers,
+                ad_id: v.ad_identifiers?.ad_id,
+                adset_id: v.ad_identifiers?.adset_id,
+                ad_set_id: v.ad_identifiers?.ad_set_id,
+                campaign_id: v.ad_identifiers?.campaign_id,
+                creative_id: v.ad_identifiers?.creative_id,
+                creative_type: v.ad_identifiers?.creative_type,
+                decision_id: v.request_id,
+                is_targeted: null != v.ad_identifiers,
             },
-            metadataSealed: D.metadata_sealed,
-            trafficMetadataSealed: D.traffic_metadata_sealed,
-            provenanceMetadataSealed: D.provenance_metadata_sealed,
-            adContext: D.ad_context,
-            responseTtlSeconds: D.response_ttl_seconds,
+            metadataSealed: v.metadata_sealed,
+            trafficMetadataSealed: v.traffic_metadata_sealed,
+            provenanceMetadataSealed: v.provenance_metadata_sealed,
+            adContext: v.ad_context,
+            responseTtlSeconds: v.response_ttl_seconds,
             placement: e,
-            fetchedAt: n,
+            fetchedAt: i,
         }),
-            x.recordQuestRequestApiResponse(i, {
+            x.recordQuestRequestApiResponse(r, {
                 wasSuccessful: !0,
-                adRequestId: String(D.request_id),
-                currentCreative: M,
-                currentFetchedAt: n,
+                adRequestId: String(v.request_id),
+                currentCreative: G,
+                currentFetchedAt: i,
             }));
-        let F = (0, f.K2)(M);
-        if (null == M || null == F) return;
-        (e === B.p9.DESKTOP_ACCOUNT_PANEL_AREA && w.A.startTracking(F, M.type),
+        let j = (0, f.K2)(G);
+        if (null == G || null == j) return;
+        (e === B.p9.DESKTOP_ACCOUNT_PANEL_AREA && w.A.startTracking(j, G.type),
             R.default.track(P.HAw.QUEST_DECISION_RECEIVED, {
                 ...(0, p.A)(),
-                quest_id: M.type === a.p.QUEST ? F : null,
-                ad_content_id: F,
-                creative_type: M.type,
+                quest_id: G.type === a.p.QUEST ? j : null,
+                ad_content_id: j,
+                creative_type: G.type,
                 caller_source: t,
-                ad_request_id: String(D.request_id),
+                ad_request_id: String(v.request_id),
             }));
-    } catch (r) {
-        (x.recordQuestRequestApiResponse(i, { wasSuccessful: !1, currentFetchedAt: n }),
+    } catch (n) {
+        (x.recordQuestRequestApiResponse(r, { wasSuccessful: !1, currentFetchedAt: i }),
             R.default.track(P.HAw.QUEST_DECISION_ROUNDTRIP_ERROR, {
                 ...(0, p.A)(),
-                reason: r?.message ?? null,
-                api_error: new d.A(r).getAnyErrorMessage(),
+                reason: n?.message ?? null,
+                api_error: new d.A(n).getAnyErrorMessage(),
                 caller_source: t,
             }),
-            o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: new d.A(r), placement: e }));
+            o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: new d.A(n), placement: e }));
     }
 }
 function ep(e, t) {

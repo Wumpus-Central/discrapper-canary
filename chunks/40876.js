@@ -689,6 +689,7 @@ let r = {
             "LOCAL_ACTIVITY_UPDATE",
             "RPC_APP_DISCONNECTED",
             "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
+            "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
             "STREAM_START",
             "STREAM_CREATE",
             "STREAM_CLOSE",

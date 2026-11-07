@@ -1,7 +1,7 @@
 var i = n(517846),
     r = n(439372),
     a = n(669700),
-    s = n(859703);
+    s = n(122760);
 class l extends r.A {
     questCompletionStates = new Map();
     handleQuestStoreChange = () => {

@@ -14,7 +14,7 @@ var i = n(412703),
     h = n(927813),
     I = n(403362),
     p = n(343559),
-    m = n(859703),
+    m = n(122760),
     T = n(506988),
     g = n(759366),
     S = n(590202),
@@ -245,6 +245,14 @@ class G extends a.A {
         );
     }
     actions = {
+        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: (e) => {
+            let { questWithUserStatus: t } = e;
+            null != t &&
+                this.syncHeartbeats(
+                    [i.n.PLAY_ON_DESKTOP, i.n.STREAM_ON_DESKTOP],
+                    "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
+                );
+        },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: () =>
             this.syncHeartbeats([i.n.PLAY_ON_DESKTOP, i.n.STREAM_ON_DESKTOP], "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS"),
         QUESTS_ENROLL_SUCCESS: () =>
