@@ -1457,7 +1457,11 @@ class j extends N.A {
             encodingVideoDegradationPreference: this.videoDegradationPreference,
             reconnectInterval: this.reconnectInterval,
         };
-        return ((0, v.$b)(F.VIDEO_EFFECTS) && this.context === O.x.STREAM && (e.enableVideoEffects = !0), e);
+        return (
+            (0, v.$b)(F.VIDEO_EFFECTS) && this.context === O.x.STREAM && (e.enableVideoEffects = !0),
+            this.context === O.x.STREAM && this.experimentFlags.has(O.fd.STREAM_OPUS_DTX) && (e.dtx = !0),
+            e
+        );
     }
     handleSpeakingNative = (e, t, n) => {
         let i = O.ME.NONE;

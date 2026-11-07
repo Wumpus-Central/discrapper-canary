@@ -1324,7 +1324,7 @@ function eC(e) {
         ssrcs: d,
         extensions: c,
         rtxPayload: u,
-        sendingVideo: _,
+        dtx: _,
         stereo: E,
         enableAudioNack: f,
     } = e;
@@ -1384,7 +1384,7 @@ function eC(e) {
                 h.rtp.push({ codec: s, encoding: 2, payload: l, rate: 48e3 }),
                 s === D.UK.OPUS &&
                     h.fmtp.push({
-                        config: `minptime=10;useinbandfec=1;usedtx=${_ ? "0" : "1"}${E ? ";stereo=1;sprop-stereo=1" : ""}`,
+                        config: `minptime=10;useinbandfec=1;usedtx=${!1 === _ ? "0" : "1"}${E ? ";stereo=1;sprop-stereo=1" : ""}`,
                         payload: l,
                     }),
                 (h.maxptime = 60));
@@ -2621,7 +2621,7 @@ class eZ extends e_ {
                         videoCodec: s,
                         videoPayloadType: l,
                         videoBitRate: o,
-                        sendingVideo: d,
+                        dtx: d,
                         stereo: c,
                         rtxPayloadType: u,
                         ssrcs: _,
@@ -2650,7 +2650,7 @@ class eZ extends e_ {
                                     ssrcs: t,
                                     extensions: E,
                                     rtxPayload: "audio" === p ? null : u,
-                                    sendingVideo: d,
+                                    dtx: d,
                                     stereo: c,
                                     enableAudioNack: A,
                                 }),
@@ -2667,7 +2667,7 @@ class eZ extends e_ {
                 videoCodec: s,
                 videoPayloadType: l,
                 videoBitRate: 2500,
-                sendingVideo: o,
+                dtx: !o || (this.context === D.x.STREAM && this.experimentFlags.has(D.fd.STREAM_OPUS_DTX)),
                 stereo: this.isScreenShareAudioEnabled(),
                 rtxPayloadType: d,
                 ssrcs: u,
