@@ -212,6 +212,48 @@
     height: 100%
 }
 
+@keyframes guildSpaceChannelRowShine_edinHs {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    40%,
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.highlight_edinHs {
+    border-radius: var(--radius-sm);
+    bottom: 1px;
+    position: absolute;
+    top: 1px;
+    inset-inline: 0;
+    overflow: hidden;
+    pointer-events: none
+}
+
+.highlight_edinHs:before {
+    background-image: linear-gradient(90deg, #394aff, #e901d9);
+    content: "";
+    inset: 0;
+    opacity: .16;
+    position: absolute
+}
+
+.highlight_edinHs:after {
+    background-image: linear-gradient(110deg, hsla(0, 0%, 100%, 0) 30%, hsla(0, 0%, 100%, .7) 50%, hsla(0, 0%, 100%, 0) 70%);
+    content: "";
+    inset: 0;
+    opacity: .2;
+    position: absolute;
+    transform: translateX(-100%)
+}
+
+.full-motion .highlight_edinHs:after {
+    animation: guildSpaceChannelRowShine_edinHs 2.6s ease-in-out infinite
+}
+
 .container_QSrt0b {
     position: relative
 }
@@ -710,4 +752,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=ed1ab6525c3040dd.css.map*/
+/*# sourceMappingURL=eeab8c6e57b1e622.css.map*/
