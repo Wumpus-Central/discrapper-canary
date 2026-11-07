@@ -96,6 +96,9 @@ class D extends r.Ay.PersistedStore {
     getAllMarketingComponentsByType(e, t) {
         return C?.componentType === e && C.promotionId === t ? [C] : (S.get(t)?.get(e) ?? []);
     }
+    getMarketingComponentsByTypeAcrossPromotions(e) {
+        return C?.componentType === e ? [C] : (g.get(e) ?? []);
+    }
     getMarketingComponentByType(e) {
         if (C?.componentType === e) return C;
         let t = o.default.getCurrentUser(),
