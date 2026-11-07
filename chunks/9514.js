@@ -32,7 +32,7 @@ function x(l, t) {
 }
 async function k(l, t) {
     try {
-        let n = await (0, h.U1)(l, t);
+        let n = await (0, h.U1)(l, t, (0, h.gg)());
         return n.ok ? !0 === n.body.share_links_enabled : null;
     } catch {
         return null;
@@ -88,6 +88,7 @@ function P(l) {
             try {
                 (await (0, h.CW)(t.id, { reset_share_links: !0 }),
                     p(null),
+                    B(!1),
                     (0, d.P0)({ text: v.intl.string(_.default.w9w1Zh), variant: "success" }));
             } catch {
                 (0, d.P0)({ text: v.intl.string(_.default["5lL390"]), variant: "critical" });
