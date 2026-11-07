@@ -41,6 +41,8 @@
 }
 
 .text_csMpAf {
+    min-width: 0;
+    overflow-wrap: anywhere;
     padding: var(--space-4)
 }
 
@@ -1477,4 +1479,4 @@ html .tabBadge_u88IQl {
     text-align: center
 }
 
-/*# sourceMappingURL=599618.15990d6ab5cceadf.css.map*/
+/*# sourceMappingURL=599618.a6de683040fbb8f9.css.map*/
