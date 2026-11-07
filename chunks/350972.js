@@ -28,7 +28,7 @@ var i,
         (s.COLOR_WAVE = "ColorWaveIcon"),
         (s.MIDNIGHT_PRISM = "MidnightPrismIcon"),
         s),
-    o =
+    c =
         (((r = {}).DRIP = "DripIcon"),
         (r.SLIMY = "SlimyIcon"),
         (r.ZOMBIE = "ZombieIcon"),

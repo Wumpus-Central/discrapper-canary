@@ -95,7 +95,7 @@ function I() {
         null
     );
 }
-let S = i.memo(function () {
+let _ = i.memo(function () {
     let { isEligible: e, isSelected: t } = (0, o.lK)(),
         n = i.useRef(!1);
     return (i.useLayoutEffect(() => {
@@ -109,7 +109,7 @@ let S = i.memo(function () {
         ? (0, l.jsx)(I, {})
         : null;
 });
-var _ = n(225123),
+var S = n(225123),
     b = n(181079),
     j = n(146092),
     v = n(834730),
@@ -186,9 +186,9 @@ function H() {
 var k = n(866665),
     B = n(939249),
     F = n(789645),
-    K = n(821609),
-    z = n(47167),
-    W = n(485947),
+    W = n(821609),
+    K = n(47167),
+    z = n(485947),
     Y = n(61916),
     X = n(223863),
     J = n(994500),
@@ -209,7 +209,7 @@ function Q(e) {
                           (0, l.jsxs)("div", {
                               className: Z.wx,
                               children: [
-                                  (0, l.jsx)(W.A, { className: Z.TK, children: O.intl.string(D.default.oHWnLy) }),
+                                  (0, l.jsx)(z.A, { className: Z.TK, children: O.intl.string(D.default.oHWnLy) }),
                                   (0, l.jsx)(k.m, {
                                       text: O.intl.string(O.t.WAI6xu),
                                       children: (0, l.jsx)(B.D, {
@@ -234,7 +234,7 @@ function Q(e) {
                                       Y.N,
                                       {
                                           result: e,
-                                          trailing: (0, l.jsx)(K.$, {
+                                          trailing: (0, l.jsx)(W.$, {
                                               variant: "secondary",
                                               size: "sm",
                                               text: O.intl.string(O.t.OYkgVk),
@@ -242,7 +242,7 @@ function Q(e) {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? q.Ay.getName(e.record)
-                                                          : (0, z.m1)(e.record, $.default, J.A),
+                                                          : (0, K.m1)(e.record, $.default, J.A),
                                               }),
                                               onClick: () =>
                                                   (async function (e) {
@@ -275,7 +275,7 @@ function et(e) {
         { guildChannels: o, shouldShowEmptyState: c, hasNoChannels: u } = (0, a.D)(),
         { density: h } = (0, s.wR)();
     return (
-        (t = (0, d.bG)([_.A], () => _.A.isConnected())),
+        (t = (0, d.bG)([S.A], () => S.A.isConnected())),
         (n = (0, d.bG)([b.A], () => b.A.pruneInactiveThreads)),
         i.useEffect(() => {
             t &&
@@ -290,7 +290,7 @@ function et(e) {
         }, [t, n]),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(S, {}),
+                (0, l.jsx)(_, {}),
                 c
                     ? (0, l.jsxs)("div", { className: ee.XG, children: [(0, l.jsx)(Q, {}), (0, l.jsx)(H, {})] })
                     : (0, l.jsxs)(l.Fragment, {

@@ -1,6 +1,6 @@
 var l = n(582128),
-    a = n(855986),
-    s = n(350172),
+    s = n(855986),
+    a = n(350172),
     i = n(730202),
     r = n(634393),
     o = n(295586),
@@ -18,7 +18,7 @@ n.d(
             l.useEffect(() => {
                 "" !== u && o.p.requestCollections([u], { includeUnpublished: t, includePricing: n });
             }, [u, t, n, m]);
-            let { collection: g, fetchState: E } = (0, a.cf)(
+            let { collection: g, fetchState: E } = (0, s.cf)(
                     [i.A],
                     () => ({ collection: i.A.getCollection(u), fetchState: i.A.getFetchState(u) }),
                     [u],
@@ -31,7 +31,7 @@ n.d(
                 state: x,
                 retry: l.useCallback(() => {
                     "" !== u &&
-                        (0, s._v)(
+                        (0, a._v)(
                             {
                                 collectionIds: [u],
                                 includeUnpublishedCollections: t,

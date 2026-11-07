@@ -11,50 +11,50 @@ var r = n(477900),
     A = n(710969),
     C = n(792996),
     E = n(674456),
-    T = n(661965);
+    g = n(661965);
 n.d(
-    e,
+    t,
     {},
     {
         E: function () {
             (0, c.mM)(async () => {
-                let { QuestRewardModalUnverified: t } = await Promise.resolve().then(n.bind(n, 175248));
-                return (e) => (0, r.jsx)(t, { ...e });
+                let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));
+                return (t) => (0, r.jsx)(e, { ...t });
             });
         },
-        QuestRewardModalUnverified: function (t) {
-            let { transitionState: e, onClose: n } = t,
+        QuestRewardModalUnverified: function (e) {
+            let { transitionState: t, onClose: n } = e,
                 c = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.email),
-                [g, _] = i.useState({ status: "unknown" });
+                [T, _] = i.useState({ status: "unknown" });
             i.useEffect(() => {
                 (_({ status: "loading" }),
                     d.A.verifyResend().then(
                         () => _({ status: "success" }),
-                        (t) => {
+                        (e) => {
                             (_({ status: "error" }),
-                                (0, A.RF)(t, { tags: { location: "QuestsRewardModalUnverified" } }));
+                                (0, A.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } }));
                         },
                     ));
             }, []);
             let p =
-                "error" === g.status
+                "error" === T.status
                     ? C.intl.string(C.t.vjying)
-                    : "success" === g.status
+                    : "success" === T.status
                       ? C.intl.format(C.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
                       : void 0;
             return (0, r.jsxs)(l.k, {
-                transitionState: e,
+                transitionState: t,
                 onClose: n,
-                graphic: "loading" === g.status ? void 0 : { type: "image", src: T },
-                title: "loading" === g.status ? void 0 : C.intl.string(C.t.c8eASM),
+                graphic: "loading" === T.status ? void 0 : { type: "image", src: g },
+                title: "loading" === T.status ? void 0 : C.intl.string(C.t.c8eASM),
                 subtitle: p,
                 actions:
-                    "loading" === g.status
+                    "loading" === T.status
                         ? void 0
                         : [{ variant: "secondary", text: C.intl.string(C.t.cpT0Cq), onClick: n }],
                 children: [
-                    "loading" === g.status && (0, r.jsx)(u.y, {}),
-                    "success" === g.status &&
+                    "loading" === T.status && (0, r.jsx)(u.y, {}),
+                    "success" === T.status &&
                         (0, r.jsxs)("div", {
                             className: E.d,
                             children: [

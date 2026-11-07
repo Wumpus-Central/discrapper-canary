@@ -1,7 +1,7 @@
 var l = n(477900);
 n(582128);
-var a = n(877624),
-    s = n(554146),
+var s = n(877624),
+    a = n(554146),
     i = n(263775),
     r = n(549996),
     o = n(613556),
@@ -13,11 +13,11 @@ n.d(
     {
         A: function (e) {
             let { tab: t, handleTransition: n } = e,
-                u = (0, r.c)(a.C.SHOP_NAGBAR),
+                u = (0, r.c)(s.C.SHOP_NAGBAR),
                 m = u?.properties.properties.oneofKind === "shopNagbar" ? u.properties.properties.shopNagbar : null,
                 g = u?.promotionId,
                 [E, h] = (0, i.Cc)(
-                    null != m && null != g ? s.M.PREMIUM_SHOP_NAGBAR_NOTICE : null,
+                    null != m && null != g ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null,
                     g ?? "",
                     d.m.NOTICE_BAR,
                     !0,

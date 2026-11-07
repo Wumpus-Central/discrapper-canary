@@ -1,23 +1,23 @@
-var A = t(855986),
-    n = t(462887),
-    l = t(736653),
-    T = t(775602);
-t.d(
+var A = _(855986),
+    n = _(462887),
+    l = _(736653),
+    T = _(775602);
+_.d(
     e,
     {},
     {
-        T: function (_, e) {
-            let t = (0, l.Ay)(),
+        T: function (t, e) {
+            let _ = (0, l.Ay)(),
                 N = (0, A.bG)([T.Ay], () => T.Ay.useReducedMotion);
-            return null == _
+            return null == t
                 ? null
-                : (0, n.M)(t) || e
+                : (0, n.M)(_) || e
                   ? N
-                      ? _.darkStaticUrl
-                      : _.darkUrl
+                      ? t.darkStaticUrl
+                      : t.darkUrl
                   : N
-                    ? _.lightStaticUrl
-                    : _.lightUrl;
+                    ? t.lightStaticUrl
+                    : t.lightUrl;
         },
     },
 );

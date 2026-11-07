@@ -4,8 +4,8 @@ var i = n(477900),
     r = n(855986);
 if (588245 != n.j) var l = n(785007);
 if (588245 != n.j) var a = n(534514);
-if (588245 != n.j) var o = n(331322);
-var c = n(73153),
+if (588245 != n.j) var c = n(331322);
+var o = n(73153),
     u = n(915089),
     d = n(450232),
     m = n(526162),
@@ -15,9 +15,9 @@ var c = n(73153),
     x = n.n(f),
     p = n(866665),
     A = n(939249),
-    b = n(194261),
-    y = n(653523),
-    v = n(350972),
+    y = n(194261),
+    v = n(653523),
+    b = n(350972),
     S = n(677056),
     j = n(746322),
     I = n(652215),
@@ -30,13 +30,13 @@ function C(e) {
             style: r,
             onSelect: l,
             isSelected: a = !1,
-            tabIndex: o,
-            children: c,
+            tabIndex: c,
+            children: o,
             locked: u = !1,
             disabled: d = !1,
         } = e,
         [m, h] = s.useState((0, j.gG)(t).name),
-        f = t === v.Ic.PIRATE;
+        f = t === b.Ic.PIRATE;
     return (0, i.jsx)(p.m, {
         text: m,
         onTooltipShow: () =>
@@ -59,32 +59,32 @@ function C(e) {
                     "aria-label": m,
                     "aria-checked": a,
                     "aria-disabled": d,
-                    tabIndex: o ?? (a ? 0 : -1),
+                    tabIndex: c ?? (a ? 0 : -1),
                     className: g()(E.Ni, { [E.wH]: a }, n),
                     onClick: a ? I.tEg : () => l?.(t),
-                    children: c,
+                    children: o,
                 }),
-                a && (0, i.jsx)(y.H$, {}),
+                a && (0, i.jsx)(v.H$, {}),
                 u &&
                     (0, i.jsx)("div", {
                         className: E.RK,
-                        children: (0, i.jsx)(b.LockIcon, { className: E.AA, color: "currentColor" }),
+                        children: (0, i.jsx)(y.LockIcon, { className: E.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
 function T(e) {
-    let { size: t = j.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: o, locked: c } = e,
+    let { size: t = j.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: c, locked: o } = e,
         u = s.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
     return (0, i.jsx)(C, {
         style: u,
-        onSelect: l ? void 0 : o,
+        onSelect: l ? void 0 : c,
         isSelected: r,
         id: n.id,
         className: l ? E.r9 : void 0,
         tabIndex: a,
-        locked: c,
+        locked: o,
         disabled: l,
         children: (0, i.jsx)(S.A, { id: n.id, size: t }),
     });
@@ -106,7 +106,7 @@ function w(e) {
                         icon: e,
                         isSelected: s === e.id,
                         onSelect: (e) => {
-                            c.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+                            o.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
                         },
                         disabled: t,
                         tabIndex: 0 !== r || t ? void 0 : 0,
@@ -119,7 +119,7 @@ function w(e) {
     });
 }
 function R(e) {
-    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: c } = e,
+    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: o } = e,
         m = (0, u.GV)(),
         { ref: h, ...g } = (0, l._u)({ orientation: "horizontal", labelledBy: m });
     return (0, i.jsx)("div", {
@@ -157,12 +157,12 @@ function R(e) {
                         r?.(),
                     ],
                 }),
-                (0, i.jsx)(o.B, {
+                (0, i.jsx)(c.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(w, { disabled: n, size: c }),
+                    children: (0, i.jsx)(w, { disabled: n, size: o }),
                 }),
             ],
         }),

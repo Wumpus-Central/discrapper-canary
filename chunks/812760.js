@@ -1,8 +1,8 @@
 n.d(t, { A: () => I });
 var l = n(477900),
-    a = n(582128),
-    s = n(503698),
-    i = n.n(s),
+    s = n(582128),
+    a = n(503698),
+    i = n.n(a),
     r = n(77692),
     o = n(164636),
     c = n(534514),
@@ -18,23 +18,23 @@ var l = n(477900),
     p = n(792996),
     S = n(543136);
 let A = function (e) {
-    let { category: t, daysRemainingText: n = p.t.Io7ozn, className: a } = e;
+    let { category: t, daysRemainingText: n = p.t.Io7ozn, className: s } = e;
     if (!(0, x.HF)(t.unpublishedAt)) return null;
-    let s = (0, x.WU)(t.unpublishedAt),
-        r = s > 1 ? p.intl.formatToPlainString(n, { days: s }) : p.intl.string(p.t.Bc13HF);
+    let a = (0, x.WU)(t.unpublishedAt),
+        r = a > 1 ? p.intl.formatToPlainString(n, { days: a }) : p.intl.string(p.t.Bc13HF);
     return (0, l.jsx)("div", {
-        className: i()(S.Z, a),
+        className: i()(S.Z, s),
         children: (0, l.jsx)(C.E, { type: { text: r }, variant: "inverted" }),
     });
 };
-var v = n(212407),
-    _ = n(761977);
+var _ = n(212407),
+    v = n(761977);
 function I(e) {
     let { category: t, onSelect: n } = e,
-        s = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        a = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
         x = (0, o.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: I } = (0, v.MV)(t),
-        b = a.useRef(null),
+        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: I } = (0, _.MV)(t),
+        b = s.useRef(null),
         j = null != I,
         L =
             null != n
@@ -50,12 +50,12 @@ function I(e) {
                 : {};
     return (0, l.jsxs)("div", {
         ref: b,
-        className: i()(_.sW, { [_.by]: j, [_.vk]: null != n }),
+        className: i()(v.sW, { [v.by]: j, [v.vk]: null != n }),
         ...L,
         children: [
             (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
-                className: _.Db,
+                className: v.Db,
                 children: j
                     ? (0, l.jsx)(d._, {
                           src: I,
@@ -67,18 +67,18 @@ function I(e) {
                       })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)("img", { className: _.ze, src: C, alt: "" }),
+                              (0, l.jsx)("img", { className: v.ze, src: C, alt: "" }),
                               null != S &&
-                                  !s &&
+                                  !a &&
                                   x &&
-                                  (0, l.jsx)(h.A, { src: S, className: _.tr, autoPlay: !0, loop: !0 }),
+                                  (0, l.jsx)(h.A, { src: S, className: v.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
-            (0, l.jsx)(A, { category: t, className: _.v0, daysRemainingText: p.t["8gsP5M"] }),
+            (0, l.jsx)(A, { category: t, className: v.v0, daysRemainingText: p.t["8gsP5M"] }),
             null != n &&
                 (0, l.jsx)("div", {
-                    className: _.IG,
+                    className: v.IG,
                     children: (0, l.jsx)(u.m, {
                         text: p.intl.string(p.t["o1ol+T"]),
                         children: (0, l.jsx)(m.ChevronLargeRightIcon, {

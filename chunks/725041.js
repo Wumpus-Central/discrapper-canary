@@ -55,7 +55,7 @@ n.d(
             let j = r.useCallback(async () => {
                     ((0, p.Wd)(t), await b());
                 }, [t, b]),
-                w = r.useCallback(async () => {
+                G = r.useCallback(async () => {
                     (m.A.open(t, C.BEX.ENGAGEMENT, void 0, C.nd0.ENGAGEMENT_GUILD_SPACE), await b());
                 }, [t, b]);
             return S !== t
@@ -74,7 +74,7 @@ n.d(
                       title: I.intl.string(_.default.x9aorn),
                       subtitle: I.intl.string(_.default.HXmZlY),
                       actions: [
-                          ...(y ? [{ text: I.intl.string(I.t["154/bL"]), variant: "secondary", onClick: w }] : []),
+                          ...(y ? [{ text: I.intl.string(I.t["154/bL"]), variant: "secondary", onClick: G }] : []),
                           { text: I.intl.string(_.default["/Ld1Ju"]), variant: "primary", onClick: j },
                       ],
                       children: (0, l.jsxs)(a.B, {

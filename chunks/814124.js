@@ -10,8 +10,8 @@ var n = l(477900),
     u = l(793574),
     _ = l(688810),
     h = l(812095),
-    C = l(604913),
-    A = l(65238),
+    A = l(604913),
+    C = l(65238),
     m = l(129230),
     I = l(975571),
     E = l(857512),
@@ -21,13 +21,13 @@ var n = l(477900),
     N = l(652215),
     T = l(792996),
     g = l(899737);
-let v = { [C.Pz.DEFAULT]: g.Hk, [C.Pz.NITRO]: g.O5 };
+let v = { [A.Pz.DEFAULT]: g.Hk, [A.Pz.NITRO]: g.O5 };
 function b(e) {
     let {
             tab: t,
-            promotionFlavor: l = C.Pz.DEFAULT,
+            promotionFlavor: l = A.Pz.DEFAULT,
             icon: a,
-            headerText: A,
+            headerText: C,
             helpCenterId: x,
             helpCenterLinkText: L,
             ctaText: b,
@@ -71,7 +71,7 @@ function b(e) {
                                             variant: "body-sm/normal",
                                             color: "text-overlay-light",
                                             children: [
-                                                null != A ? (0, h.U)(A) : null,
+                                                null != C ? (0, h.U)(C) : null,
                                                 null != f &&
                                                     (0, n.jsxs)(n.Fragment, {
                                                         children: [
@@ -122,7 +122,7 @@ let S =
               let { tab: t, handleTransition: l } = e,
                   a = (0, E.uM)(),
                   o = (0, x.HH)(),
-                  s = (0, A.ml)(o)?.reward,
+                  s = (0, C.ml)(o)?.reward,
                   c = s?.storefront?.nagbar,
                   r = s?.flavor,
                   p = i.useCallback(() => {

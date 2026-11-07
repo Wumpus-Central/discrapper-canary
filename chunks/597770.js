@@ -1,24 +1,24 @@
-t.r(e);
-var A = t(477900);
-t(582128);
-var n = t(646514),
-    l = t(996682),
-    T = t(27989);
-t.d(
+_.r(e);
+var A = _(477900);
+_(582128);
+var n = _(646514),
+    l = _(996682),
+    T = _(27989);
+_.d(
     e,
     {},
     {
-        GiftIcon: function (_) {
+        GiftIcon: function (t) {
             let {
                     size: e = "md",
-                    width: t,
+                    width: _,
                     height: N,
                     color: E = n.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: r = "",
                     ...O
-                } = _,
+                } = t,
                 R = (0, T.J)(e),
-                I = R?.width ?? t,
+                I = R?.width ?? _,
                 i = R?.height ?? N;
             return (0, A.jsxs)("svg", {
                 ...(0, l.A)(O),
