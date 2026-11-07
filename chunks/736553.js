@@ -212,6 +212,11 @@
                         throw Error("WebSocket not open");
                     this.socket.send(JSON.stringify({ type: "set_smart_context", enabled: e }));
                 }
+                sendDownstreamUpdates(e) {
+                    if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
+                        throw Error("WebSocket not open");
+                    this.socket.send(JSON.stringify({ type: "set_downstream_updates", enabled: e }));
+                }
                 sendHostAccess(e) {
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
                         throw Error("WebSocket not open");
