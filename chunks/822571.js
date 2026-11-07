@@ -48,6 +48,11 @@ class c extends s.A {
             (this.promotionEndDate = e.promotionEndDate),
             (this.promotionPriority = e.promotionPriority));
     }
+    get surface() {
+        let e = this.properties.properties,
+            t = e.oneofKind;
+        return null == t ? null : (e[t] ?? null);
+    }
     getFormatVariableValues(e) {
         var t;
         let n;
