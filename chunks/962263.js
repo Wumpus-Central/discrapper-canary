@@ -19,25 +19,25 @@ var r = n(477900),
     f = n(498470),
     T = n(652215),
     g = n(49999),
-    O = n(792996),
-    b = n(696918);
+    b = n(792996),
+    O = n(696918);
 (n(323874), n(14289), n(35956));
 var x = n(503698),
     I = n.n(x),
     L = n(613412),
-    y = n(877624),
+    y = n(517352),
     v = n(855986),
-    C = n(815021),
+    R = n(815021),
     k = n(935462),
-    R = n(805251),
-    D = n(534514),
-    P = n(834730),
+    P = n(805251),
+    C = n(534514),
+    D = n(834730),
     j = n(315629),
     S = n(73153),
     w = n(775602),
     G = n(139286),
-    U = n(693942),
-    H = n(265705),
+    H = n(693942),
+    U = n(265705),
     K = n(915089),
     V = n(607470),
     F = n(383055),
@@ -45,95 +45,96 @@ var x = n(503698),
     Y = n(774774),
     z = n(209012);
 let B = [];
-function q(e) {
+function W(e) {
     let { tagText: t, className: n } = e;
     return (0, r.jsx)("div", {
         className: I()(z.Gr, n),
-        children: (0, r.jsx)(R.E, { type: { text: t }, variant: "premium" }),
+        children: (0, r.jsx)(P.E, { type: { text: t }, variant: "premium" }),
     });
 }
-function Q(e) {
+function q(e) {
     let { header: t, subHeader: n, subHeaderExtra: a, imageSrc: o, tagText: i, wideStyle: l } = e;
     return (0, r.jsxs)("div", {
         className: I()(z.Vr, { [z.tF]: l }),
         children: [
-            null != i ? (0, r.jsx)(q, { tagText: i, className: z.bX }) : null,
+            null != i ? (0, r.jsx)(W, { tagText: i, className: z.bX }) : null,
             (0, r.jsx)("img", { alt: "", className: I()(z._n, { [z.tF]: l }), src: o }),
             (0, r.jsxs)("div", {
                 className: I()(z.Zz, { [z.tF]: l }),
                 children: [
-                    (0, r.jsx)(D.D, { variant: "heading-sm/semibold", className: z.Hf, children: t }),
-                    (0, r.jsxs)(P.E, { variant: "body-md/medium", color: "text-subtle", children: [n, a?.()] }),
+                    (0, r.jsx)(C.D, { variant: "heading-sm/semibold", className: z.Hf, children: t }),
+                    (0, r.jsxs)(D.E, { variant: "body-md/medium", color: "text-subtle", children: [n, a?.()] }),
                 ],
             }),
         ],
     });
 }
-function W(e) {
+function Q(e) {
     let {
             componentId: t,
-            promotionId: n,
-            promotion: i,
-            className: l,
-            renderModalProps: s,
-            heroArt: c,
-            heroArtClassName: d,
-            header: u,
-            headerClassName: m,
-            modalTopPill: p,
-            subHeader: h,
-            subHeaderExtra: E,
-            featureCards: M,
-            changeLogId: f,
-            button: b,
-            body: x,
-            disclaimer: R,
-            disclaimerExtra: q,
+            componentType: n = y.oW.ANNOUNCEMENT_MODAL_VARIANT_1,
+            promotionId: i,
+            promotion: l,
+            className: s,
+            renderModalProps: c,
+            heroArt: d,
+            heroArtClassName: u,
+            header: m,
+            headerClassName: p,
+            modalTopPill: h,
+            subHeader: E,
+            subHeaderExtra: M,
+            featureCards: f,
+            changeLogId: O,
+            button: x,
+            body: P,
+            disclaimer: W,
+            disclaimerExtra: Q,
         } = e,
-        { onClose: W, transitionState: Z } = s,
-        J = (0, K.GV)(),
-        X = M.length % 2 == 0,
-        ee = (0, v.bG)([w.Ay], () => w.Ay.useReducedMotion),
-        [et, en] = a.useState(Date.now()),
-        [er, ea] = a.useState(0),
-        [eo, ei] = a.useState(0),
-        [el, es] = a.useState(!1),
-        [ec, ed] = a.useState(!0),
-        eu = a.useRef(et),
-        em = a.useRef(er),
-        e_ = a.useRef(eo),
-        ep = a.useRef(el),
-        eh = a.useRef(ec),
-        [eE, eN] = a.useState(B),
-        eA = a.useRef(!1),
-        { promotionKey: eM } = null != i ? i : {};
+        { onClose: Z, transitionState: J } = c,
+        X = (0, K.GV)(),
+        ee = f.length % 2 == 0,
+        et = (0, v.bG)([w.Ay], () => w.Ay.useReducedMotion),
+        [en, er] = a.useState(Date.now()),
+        [ea, eo] = a.useState(0),
+        [ei, el] = a.useState(0),
+        [es, ec] = a.useState(!1),
+        [ed, eu] = a.useState(!0),
+        em = a.useRef(en),
+        e_ = a.useRef(ea),
+        ep = a.useRef(ei),
+        eh = a.useRef(es),
+        eE = a.useRef(ed),
+        [eN, eA] = a.useState(B),
+        eM = a.useRef(!1),
+        { promotionKey: ef } = null != l ? l : {};
     (0, G.A)({
         type: L.ImpressionTypes.MODAL,
         name: L.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_id: t, component_type: y.C.ANNOUNCEMENT_MODAL, promotion_id: n },
+        properties: { component_id: t, component_type: n, promotion_id: i },
     });
-    let ef = a.useRef(null),
-        eT = a.useRef(!1);
-    function eg() {
+    let eT = a.useRef(null),
+        eg = a.useRef(!1);
+    function eb() {
         let e = Date.now(),
-            t = e - eu.current,
-            n = em.current,
-            r = e_.current;
-        return (ep.current && (ea((n += t)), eh.current || ei((r += t))), en(e), [n, r]);
+            t = e - em.current,
+            n = e_.current,
+            r = ep.current;
+        return (eh.current && (eo((n += t)), eE.current || el((r += t))), er(e), [n, r]);
     }
     return (
         a.useEffect(() => {
-            let e = ef.current?.getScrollerNode();
+            let e = eT.current?.getScrollerNode();
             if (null == e) return;
             function r() {
-                eT.current ||
-                    ef.current?.isScrolledToBottom() !== !0 ||
-                    ((eT.current = !0),
+                eg.current ||
+                    eT.current?.isScrolledToBottom() !== !0 ||
+                    ((eg.current = !0),
                     A.default.track(T.HAw.PREMIUM_MARKETING_COMPONENT_BOTTOM_VIEWED, {
                         component_id: t,
-                        component_type: y.C.ANNOUNCEMENT_MODAL,
-                        visible_on_mount: ef.current?.isScrolledToTop() ?? !1,
-                        promotion_id: n,
+                        component_type: n,
+                        visible_on_mount: eT.current?.isScrolledToTop() ?? !1,
+                        promotion_id: i,
                     }));
             }
             let a = new ResizeObserver(r);
@@ -145,13 +146,13 @@ function W(e) {
                     (e.removeEventListener("scroll", r), a.disconnect());
                 }
             );
-        }, [t, n]),
+        }, [t, n, i]),
         a.useEffect(() => {
-            (!0 !== eA.current &&
+            (!0 !== eM.current &&
                 (async function () {
                     try {
-                        if ("video" !== c.type || null == c.subtitles) return;
-                        let e = c.subtitles?.map(async (e) => {
+                        if ("video" !== d.type || null == d.subtitles) return;
+                        let e = d.subtitles?.map(async (e) => {
                             let t = await fetch(e.src);
                             if (!t.ok) throw Error(`Failed to fetch the subtitle file ${e.src}`);
                             let n = await t.text(),
@@ -159,68 +160,68 @@ function W(e) {
                                 a = URL.createObjectURL(r);
                             return { ...e, src: a };
                         });
-                        eN(await Promise.all(e));
+                        eA(await Promise.all(e));
                     } catch (e) {
-                        (_.A.captureException(e), eN(B));
+                        (_.A.captureException(e), eA(B));
                     }
                 })(),
-                (eA.current = !0));
-        }, [c, eE]),
+                (eM.current = !0));
+        }, [d, eN]),
         a.useEffect(
             () => () => {
-                null != eE &&
-                    eE.forEach((e) => {
+                null != eN &&
+                    eN.forEach((e) => {
                         URL.revokeObjectURL(e.src);
                     });
             },
-            [eE],
+            [eN],
         ),
         a.useEffect(() => {
-            ((eu.current = et), (em.current = er), (e_.current = eo), (ep.current = el), (eh.current = ec));
-        }, [et, er, eo, el, ec]),
+            ((em.current = en), (e_.current = ea), (ep.current = ei), (eh.current = es), (eE.current = ed));
+        }, [en, ea, ei, es, ed]),
         a.useEffect(
             () => () => {
-                if ("video" === c.type || "embed" === c.type) {
-                    let [e, t] = eg();
+                if ("video" === d.type || "embed" === d.type) {
+                    let [e, t] = eb();
                     (A.default.track(T.HAw.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: f,
+                        change_log_id: O,
                         seconds_played: Math.round(e / 1e3),
                     }),
                         A.default.track(T.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: f,
+                            change_log_id: O,
                             seconds_unmuted: Math.round(t / 1e3),
                         }));
                 }
             },
-            [f, c.type],
+            [O, d.type],
         ),
         a.useEffect(() => {
             if ($.A.getLayers().includes(T.zgK.COMPONENT_PLAYGROUND)) return;
-            (0, N.Vh)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, { snowflakeId: n });
+            (0, N.Vh)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, { snowflakeId: i });
             let e = Date.now();
             return (
-                A.default.track(T.HAw.CHANGE_LOG_OPENED, { change_log_id: f }),
+                A.default.track(T.HAw.CHANGE_LOG_OPENED, { change_log_id: O }),
                 () => {
                     (A.default.track(T.HAw.CHANGE_LOG_CLOSED, {
-                        change_log_id: f,
+                        change_log_id: O,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
-                        (0, N.qr)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, n, {
+                        (0, N.qr)(o.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, i, {
                             dismissAction: g.i.DISMISS,
                         }),
                         S.h.dispatch({
                             type: "PREMIUM_MARKETING_ANNOUNCEMENT_MODAL_DISMISSED",
-                            promotionId: n,
-                            promotionKey: eM,
+                            promotionId: i,
+                            promotionKey: ef,
                         }));
                 }
             );
-        }, [f, n, eM]),
+        }, [O, i, ef]),
         (0, r.jsx)(k.EO, {
             "data-migration-pending": !0,
-            className: I()(z.zr, z.kv, l),
-            transitionState: Z,
-            "aria-labelledby": J,
+            className: I()(z.zr, z.kv, s),
+            transitionState: J,
+            "aria-labelledby": X,
             parentComponent: "PremiumAnnouncementModalVariant1",
             children: (0, r.jsxs)(j.h, {
                 color: "nitro-pink",
@@ -228,47 +229,47 @@ function W(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: z.cG,
-                        children: (0, r.jsx)(C.J, { "data-migration-pending": !0, onClick: async () => await W() }),
+                        children: (0, r.jsx)(R.J, { "data-migration-pending": !0, onClick: async () => await Z() }),
                     }),
                     (0, r.jsxs)(k.$m, {
                         "data-migration-pending": !0,
                         className: z.Qs,
                         scrollbarType: "auto",
                         overflow: "auto",
-                        scrollerRef: ef,
+                        scrollerRef: eT,
                         children: [
                             (function () {
-                                switch (c.type) {
+                                switch (d.type) {
                                     case "video":
                                         return (0, r.jsx)(V.A, {
-                                            className: I()(z.Ki, d),
-                                            autoPlay: !ee,
+                                            className: I()(z.Ki, u),
+                                            autoPlay: !et,
                                             loop: !0,
                                             muted: !0,
                                             controls: !0,
                                             controlsList: "nofullscreen nodownload noremoteplayback noplaybackrate",
-                                            src: c.src,
-                                            poster: c.poster,
+                                            src: d.src,
+                                            poster: d.poster,
                                             onPlay: (e) => {
                                                 (A.default.track(T.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: f,
+                                                    change_log_id: O,
                                                 }),
-                                                    en(Date.now()),
-                                                    es(!0),
-                                                    ed(e.currentTarget.muted));
+                                                    er(Date.now()),
+                                                    ec(!0),
+                                                    eu(e.currentTarget.muted));
                                             },
                                             onEnded: (e) => {
-                                                (eg(), ed(e.currentTarget.muted), es(!1));
+                                                (eb(), eu(e.currentTarget.muted), ec(!1));
                                             },
                                             onVolumeChange: (e) => {
-                                                (eg(), ed(e.currentTarget.muted));
+                                                (eb(), eu(e.currentTarget.muted));
                                             },
                                             onPause: (e) => {
-                                                (eg(), ed(e.currentTarget.muted), es(!1));
+                                                (eb(), eu(e.currentTarget.muted), ec(!1));
                                             },
                                             disablePictureInPicture: !0,
-                                            children: eE?.map((e) => {
-                                                let t = (0, O.getLanguages)().find((t) => t.code === e.locale);
+                                            children: eN?.map((e) => {
+                                                let t = (0, b.getLanguages)().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, r.jsx)(
@@ -285,33 +286,33 @@ function W(e) {
                                             }),
                                         });
                                     case "embed":
-                                        return (0, r.jsx)(H.rr, {
-                                            className: I()(z.Ki, d),
+                                        return (0, r.jsx)(U.rr, {
+                                            className: I()(z.Ki, u),
                                             allowFullScreen: !1,
-                                            href: c.href,
-                                            thumbnail: c.thumbnail,
-                                            video: c.embed,
-                                            provider: U.mt.YOUTUBE,
-                                            maxWidth: c.embed.width,
-                                            maxHeight: c.embed.height,
+                                            href: d.href,
+                                            thumbnail: d.thumbnail,
+                                            video: d.embed,
+                                            provider: H.mt.YOUTUBE,
+                                            maxWidth: d.embed.width,
+                                            maxHeight: d.embed.height,
                                             renderVideoComponent: F.$o,
                                             renderImageComponent: F.LL,
                                             renderLinkComponent: F.bU,
                                             onPlay: () => {
                                                 A.default.track(T.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: f,
+                                                    change_log_id: O,
                                                 });
                                             },
                                         });
                                     case "image":
-                                        return (0, r.jsx)("img", { alt: "", className: I()(z.Ki, d), src: c.src });
+                                        return (0, r.jsx)("img", { alt: "", className: I()(z.Ki, u), src: d.src });
                                     default:
                                         return null;
                                 }
                             })(),
-                            null != p && "" !== p
+                            null != h && "" !== h
                                 ? (0, r.jsx)(Y.e4, {
-                                      text: p,
+                                      text: h,
                                       colorOptions: Y.at.PREMIUM_TIER_2_WHITE_FILL,
                                       className: z.ON,
                                   })
@@ -319,23 +320,23 @@ function W(e) {
                             (0, r.jsxs)("div", {
                                 className: z.Z,
                                 children: [
-                                    (0, r.jsx)(D.D, { variant: "nitro-md", className: I()(z.TK, m), children: u }),
-                                    (0, r.jsxs)(P.E, {
+                                    (0, r.jsx)(C.D, { variant: "nitro-md", className: I()(z.TK, p), children: m }),
+                                    (0, r.jsxs)(D.E, {
                                         variant: "body-md/medium",
                                         color: "text-subtle",
                                         className: z.uI,
-                                        children: [h, E?.()],
+                                        children: [E, M?.()],
                                     }),
                                 ],
                             }),
-                            null != x &&
-                                "" !== x &&
-                                (0, r.jsx)(D.D, { variant: "heading-lg/semibold", className: z.G3, children: x }),
-                            M.length > 0 &&
+                            null != P &&
+                                "" !== P &&
+                                (0, r.jsx)(C.D, { variant: "heading-lg/semibold", className: z.G3, children: P }),
+                            f.length > 0 &&
                                 (0, r.jsx)("div", {
                                     className: z.IS,
-                                    children: M.map((e, t) =>
-                                        (0, r.jsx)(Q, { ...e, wideStyle: X }, `${e.header}_${t}`),
+                                    children: f.map((e, t) =>
+                                        (0, r.jsx)(q, { ...e, wideStyle: ee }, `${e.header}_${t}`),
                                     ),
                                 }),
                         ],
@@ -343,14 +344,14 @@ function W(e) {
                     (0, r.jsxs)("div", {
                         className: z.xQ,
                         children: [
-                            b(),
-                            null != R &&
-                                "" !== R &&
-                                (0, r.jsxs)(P.E, {
+                            x(),
+                            null != W &&
+                                "" !== W &&
+                                (0, r.jsxs)(D.E, {
                                     variant: "body-xs/medium",
                                     color: "text-subtle",
                                     className: z.ed,
-                                    children: [R, q?.()],
+                                    children: [W, Q?.()],
                                 }),
                         ],
                     }),
@@ -389,7 +390,7 @@ function J(e) {
                 } = e,
                 m = `AnnouncementModalVariant1_${n}`,
                 { onClose: x } = s,
-                I = l.button?.copy ?? O.intl.string(O.t.YScQSF),
+                I = l.button?.copy ?? b.intl.string(b.t.YScQSF),
                 L = l.button?.buttonAction;
             switch (L) {
                 case p.d.OPEN_MARKETING_PAGE:
@@ -414,37 +415,37 @@ function J(e) {
                     onClose: x,
                 }),
                 v = (0, M.C)(l.helpArticle, l.helpArticleId),
-                C =
+                R =
                     null != v
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(E.Anchor, { className: b.$T, href: v.url, children: v.linkText }),
+                                      (0, r.jsx)(E.Anchor, { className: O.$T, href: v.url, children: v.linkText }),
                                   ],
                               })
                         : void 0,
                 k = (0, M.C)(l.disclaimer?.disclaimerHelpArticle, ""),
-                R =
+                P =
                     null != k
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(E.Anchor, { className: b.$T, href: k.url, children: k.linkText }),
+                                      (0, r.jsx)(E.Anchor, { className: O.$T, href: k.url, children: k.linkText }),
                                   ],
                               })
                         : void 0,
-                D = { type: "video", src: u ? l.heroArtVideoLinkLightTheme : l.videoLink };
+                C = { type: "video", src: u ? l.heroArtVideoLinkLightTheme : l.videoLink };
             return (
                 null != l.heroArtVideoSubtitles &&
-                    (D.subtitles = l.heroArtVideoSubtitles.map((e) => ({
+                    (C.subtitles = l.heroArtVideoSubtitles.map((e) => ({
                         locale: e.locale,
                         src: e.link,
                         isDefault: !1,
                     }))),
                 ("" !== l.heroArtImageLinkDarkTheme || "" !== l.heroArtImageLinkLightTheme) &&
-                    (D = { type: "image", src: u ? l.heroArtImageLinkLightTheme : l.heroArtImageLinkDarkTheme }),
+                    (C = { type: "image", src: u ? l.heroArtImageLinkLightTheme : l.heroArtImageLinkDarkTheme }),
                 {
                     componentId: n,
                     promotionId: a,
@@ -453,9 +454,9 @@ function J(e) {
                     header: l.header,
                     modalTopPill: l.modalTopPill,
                     subHeader: l.subheader,
-                    subHeaderExtra: C,
+                    subHeaderExtra: R,
                     body: l.body,
-                    heroArt: D,
+                    heroArt: C,
                     featureCards: l.featureCards.map((e) => {
                         let t = (0, M.C)(e.helpArticle, ""),
                             n =
@@ -465,7 +466,7 @@ function J(e) {
                                               children: [
                                                   "\xa0",
                                                   (0, r.jsx)(E.Anchor, {
-                                                      className: b.$T,
+                                                      className: O.$T,
                                                       href: t.url,
                                                       children: t.linkText,
                                                   }),
@@ -513,7 +514,7 @@ function J(e) {
                         });
                     },
                     disclaimer: l.disclaimer?.disclaimerText !== "" ? l.disclaimer?.disclaimerText : void 0,
-                    disclaimerExtra: R,
+                    disclaimerExtra: P,
                 }
             );
         })({
@@ -526,7 +527,7 @@ function J(e) {
             analyticsLocation: x,
             isLightTheme: y,
         });
-        return (0, r.jsx)(W, { ...e });
+        return (0, r.jsx)(Q, { ...e });
     }
     return (
         _.A.captureMessage(

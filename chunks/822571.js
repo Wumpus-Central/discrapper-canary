@@ -3,9 +3,10 @@ var i = n(181370),
     a = n(722074),
     s = n(315069),
     l = n(927813),
-    o = n(767589);
+    o = n(767589),
+    d = n(693369);
 n(852218);
-class d extends s.A {
+class c extends s.A {
     id;
     componentType;
     properties;
@@ -21,9 +22,9 @@ class d extends s.A {
             i = null != e.end_date ? new Date(e.end_date) : null,
             r = t?.startDate ?? null,
             s = t?.endDate ?? null;
-        return new d({
+        return new c({
             id: e.id,
-            componentType: e.component_type,
+            componentType: (0, d.u)(e.component_type),
             properties: (0, o.ii)(a.m, e.properties),
             promotionId: e.promotion_id,
             startDate: n,
@@ -72,4 +73,4 @@ class d extends s.A {
         return r().v3(`${this.promotionId}:${e}`) % 1e4 < n;
     }
 }
-n.d(t, {}, { A: d });
+n.d(t, {}, { A: c });

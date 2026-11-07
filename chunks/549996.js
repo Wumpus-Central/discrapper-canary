@@ -1,53 +1,57 @@
-var A = t(582128),
-    n = t(855986),
-    l = t(19191),
-    T = t(158476),
-    N = t(412260),
-    E = t(852218);
-t.d(
+var A = _(582128),
+    n = _(855986),
+    l = _(19191),
+    T = _(158476),
+    N = _(412260),
+    E = _(852218);
+_.d(
     e,
     {},
     {
-        c: function (_) {
-            A.useEffect(() => {
-                (0, T.BE)();
-            }, []);
-            let e = (0, n.bG)([N.A, l.A], () => {
-                    let e = N.A.getMarketingComponentByType(_);
-                    if (null == e) return null;
-                    let t = e.promotionId,
-                        A = N.A.getPromotionByTypeAndId(E.pt.MARKETING_MOMENT, t);
-                    if (A?.trialId != null) {
-                        let _ = l.A.getUserTrialOffer(A.trialId);
-                        if (null == _ || _.hasExpired) return null;
-                    }
-                    return e;
-                }),
-                t = (0, n.bG)([N.A], () => N.A.getPromotionByTypeAndId(E.pt.MARKETING_MOMENT, e?.promotionId ?? "")),
-                r = t?.endDate,
-                [O, R] = A.useState(!1),
-                I = A.useRef(null);
-            return (
+        c: function (t) {
+            return (function (t) {
                 A.useEffect(() => {
-                    if (null != r) {
-                        let _ = r.getTime() - Date.now();
-                        return (
-                            _ > 0 && _ < 864e5
-                                ? (R(!1),
-                                  clearTimeout(I.current),
-                                  (I.current = setTimeout(() => {
-                                      R(!0);
-                                  }, _)))
-                                : _ <= 0 && R(!0),
-                            () => {
-                                clearTimeout(I.current);
-                            }
-                        );
-                    }
-                    (R(!1), clearTimeout(I.current));
-                }, [r]),
-                O ? null : e
-            );
+                    (0, T.BE)();
+                }, []);
+                let e = (0, n.bG)([N.A, l.A], () => {
+                        let e = t();
+                        if (null == e) return null;
+                        let _ = e.promotionId,
+                            A = N.A.getPromotionByTypeAndId(E.pt.MARKETING_MOMENT, _);
+                        if (A?.trialId != null) {
+                            let t = l.A.getUserTrialOffer(A.trialId);
+                            if (null == t || t.hasExpired) return null;
+                        }
+                        return e;
+                    }),
+                    _ = (0, n.bG)([N.A], () =>
+                        N.A.getPromotionByTypeAndId(E.pt.MARKETING_MOMENT, e?.promotionId ?? ""),
+                    ),
+                    r = _?.endDate,
+                    [O, R] = A.useState(!1),
+                    I = A.useRef(null);
+                return (
+                    A.useEffect(() => {
+                        if (null != r) {
+                            let t = r.getTime() - Date.now();
+                            return (
+                                t > 0 && t < 864e5
+                                    ? (R(!1),
+                                      clearTimeout(I.current),
+                                      (I.current = setTimeout(() => {
+                                          R(!0);
+                                      }, t)))
+                                    : t <= 0 && R(!0),
+                                () => {
+                                    clearTimeout(I.current);
+                                }
+                            );
+                        }
+                        (R(!1), clearTimeout(I.current));
+                    }, [r]),
+                    O ? null : e
+                );
+            })(() => N.A.getMarketingComponentByType(t));
         },
     },
 );

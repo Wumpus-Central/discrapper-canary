@@ -1,41 +1,47 @@
-n.d(t, { i: () => f });
+n.d(t, { i: () => E });
 var l = n(477900),
     i = n(582128),
     r = n(877624),
     a = n(516106),
     s = n(549996),
     o = n(613412),
-    u = n(251843),
-    c = n(262427),
-    d = n(139286),
-    m = n(462718);
-function p(e) {
-    let { componentId: t, promotionId: n, promotionBannerMarketingComponentFields: i } = e;
-    (0, d.A)({
+    u = n(517352),
+    c = n(251843),
+    d = n(262427),
+    m = n(139286),
+    p = n(462718);
+function C(e) {
+    let {
+        componentId: t,
+        componentType: n = u.oW.PAYMENT_MODAL_BANNER,
+        promotionId: i,
+        promotionBannerMarketingComponentFields: r,
+    } = e;
+    (0, m.A)({
         type: o.ImpressionTypes.VIEW,
         name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: r.C.PAYMENT_MODAL_BANNER, component_id: t, promotion_id: n },
+        properties: { component_type: n, component_id: t, promotion_id: i },
     });
-    let a = (0, l.jsx)(u._, { src: i.assetUrl, width: 48, height: 48, zoomable: !1 });
-    return (0, l.jsx)(c.J, { className: m.No, customGraphic: a, text: i.body });
+    let a = (0, l.jsx)(c._, { src: r.assetUrl, width: 48, height: 48, zoomable: !1 });
+    return (0, l.jsx)(d.J, { className: p.No, customGraphic: a, text: r.body });
 }
-var C = n(418200),
-    h = n(682901);
-function f(e) {
+var h = n(418200),
+    f = n(682901);
+function E(e) {
     let { planSkuId: t, invoice: n } = e,
-        { isGift: o } = (0, C.Pv)(),
+        { isGift: o } = (0, h.Pv)(),
         u = (0, a.t4)((e) => e.get("selectedPlanAttributes").isPremiumGroupPurchase),
         c = (0, s.c)(r.C.PAYMENT_MODAL_BANNER);
     return i.useMemo(
         () =>
             o ||
             u ||
-            t !== h.pe.TIER_2 ||
+            t !== f.pe.TIER_2 ||
             null == c ||
             "paymentModalBanner" !== c.properties.properties.oneofKind ||
-            (c.properties.contentIdentifier === h.iu && n?.orbsReward !== 1e4)
+            (c.properties.contentIdentifier === f.iu && n?.orbsReward !== 1e4)
                 ? null
-                : (0, l.jsx)(p, {
+                : (0, l.jsx)(C, {
                       componentId: c.id,
                       promotionId: c.promotionId,
                       promotionBannerMarketingComponentFields: c.properties.properties.paymentModalBanner,

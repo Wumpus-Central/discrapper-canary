@@ -1,7 +1,7 @@
 var i = n(477900);
 n(582128);
 var o = n(613412),
-    l = n(877624),
+    l = n(517352),
     s = n(308588),
     a = n(670474),
     r = n(821609),
@@ -19,31 +19,36 @@ n.d(
     {},
     {
         x: function (t) {
-            let { componentId: e, promotionId: n, promotionBannerMarketingComponentFields: A } = t,
-                { analyticsLocations: N } = (0, m.Ay)(),
-                j = (0, p.p)();
+            let {
+                    componentId: e,
+                    componentType: n = l.oW.MARKETING_PAGE_BANNER,
+                    promotionId: A,
+                    promotionBannerMarketingComponentFields: N,
+                } = t,
+                { analyticsLocations: j } = (0, m.Ay)(),
+                v = (0, p.p)();
             (0, h.A)({
                 type: o.ImpressionTypes.VIEW,
                 name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-                properties: { component_type: l.C.MARKETING_PAGE_BANNER, component_id: e, promotion_id: n },
+                properties: { component_type: n, component_id: e, promotion_id: A },
             });
-            let v = (0, x.h)({
-                    buttonAction: A.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
-                    deeplinkSection: A.button?.deeplinkSection,
-                    applicationId: A.button?.navigableStorefrontApplicationId?.value,
-                    shopCollectionId: A.button?.shopCollectionId?.value,
-                    analyticsLocations: N,
-                    analyticsLocation: j.location,
+            let I = (0, x.h)({
+                    buttonAction: N.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
+                    deeplinkSection: N.button?.deeplinkSection,
+                    applicationId: N.button?.navigableStorefrontApplicationId?.value,
+                    shopCollectionId: N.button?.shopCollectionId?.value,
+                    analyticsLocations: j,
+                    analyticsLocation: v.location,
                 }),
-                I = (0, b.a)(A.body),
-                y = (0, b.C)(A.helpArticle, A.helpArticleId),
-                { icon: C, iconPosition: T } = (0, x.x)({ buttonAction: A.button?.buttonAction });
+                y = (0, b.a)(N.body),
+                C = (0, b.C)(N.helpArticle, N.helpArticleId),
+                { icon: T, iconPosition: _ } = (0, x.x)({ buttonAction: N.button?.buttonAction });
             return (0, i.jsxs)("div", {
                 className: g.kL,
                 children: [
                     (0, i.jsx)("div", {
                         className: g.LY,
-                        children: (0, i.jsx)("img", { src: A.assetUrl, className: g.ot, alt: "" }),
+                        children: (0, i.jsx)("img", { src: N.assetUrl, className: g.ot, alt: "" }),
                     }),
                     (0, i.jsxs)("div", {
                         className: g.IH,
@@ -51,22 +56,22 @@ n.d(
                             (0, i.jsx)(c.D, {
                                 variant: "heading-sm/semibold",
                                 color: "text-strong",
-                                children: A.header,
+                                children: N.header,
                             }),
                             (0, i.jsxs)(d.E, {
                                 variant: "body-md/medium",
                                 color: "text-subtle",
                                 className: g.tb,
                                 children: [
-                                    I,
-                                    null != y &&
+                                    y,
+                                    null != C &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 "\xa0",
                                                 (0, i.jsx)(u.Anchor, {
                                                     className: g.$T,
-                                                    href: y.url,
-                                                    children: y.linkText,
+                                                    href: C.url,
+                                                    children: C.linkText,
                                                 }),
                                             ],
                                         }),
@@ -74,16 +79,16 @@ n.d(
                             }),
                         ],
                     }),
-                    null != A.button &&
+                    null != N.button &&
                         (0, i.jsx)("div", {
                             className: g.UD,
                             children: (0, i.jsx)(r.$, {
-                                variant: A.buttonVariant === a.F.PRIMARY ? "primary" : "expressive",
+                                variant: N.buttonVariant === a.F.PRIMARY ? "primary" : "expressive",
                                 size: "md",
-                                onClick: v,
-                                text: A.button.copy,
-                                icon: C,
-                                iconPosition: T,
+                                onClick: I,
+                                text: N.button.copy,
+                                icon: T,
+                                iconPosition: _,
                             }),
                         }),
                 ],

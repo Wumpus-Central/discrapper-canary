@@ -1,6 +1,6 @@
 var n = l(477900),
     i = l(613412),
-    a = l(877624),
+    a = l(517352),
     o = l(139286),
     s = l(498470),
     c = l(604913),
@@ -12,14 +12,21 @@ l.d(
     {},
     {
         A: function (e) {
-            let { shopNagbar: t, componentId: l, promotionId: u, tab: _, onDismiss: h } = e;
+            let {
+                shopNagbar: t,
+                componentId: l,
+                componentType: u = a.oW.SHOP_NAGBAR,
+                promotionId: _,
+                tab: h,
+                onDismiss: A,
+            } = e;
             if (
                 ((0, o.A)({
                     type: i.ImpressionTypes.VIEW,
                     name: i.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-                    properties: { component_type: a.C.SHOP_NAGBAR, component_id: l, promotion_id: u },
+                    properties: { component_type: u, component_id: l, promotion_id: _ },
                 }),
-                _ === p.G2.ORBS)
+                h === p.G2.ORBS)
             )
                 return null;
             let C = (0, s.h)({
@@ -27,20 +34,20 @@ l.d(
                     deeplinkSection: t.deeplinkSection,
                     applicationId: t.navigableStorefrontApplicationId?.value,
                     shopCollectionId: t.shopCollectionId?.value,
-                    onClose: () => h(d.i.TAKE_ACTION),
+                    onClose: () => A(d.i.TAKE_ACTION),
                 }),
-                { icon: A } = (0, s.x)({ buttonAction: t.ctaAction });
+                { icon: m } = (0, s.x)({ buttonAction: t.ctaAction });
             return (0, n.jsx)(r.Z, {
-                tab: _,
+                tab: h,
                 promotionFlavor: c.Pz.NITRO,
                 icon: c.cR.NITRO,
                 headerText: t.body,
                 ctaText: "" !== t.ctaLabel ? t.ctaLabel : void 0,
-                ctaIcon: A,
+                ctaIcon: m,
                 helpCenterId: t.helpArticle?.id !== "" ? t.helpArticle?.id : void 0,
                 helpCenterLinkText: t.helpArticle?.linkText !== "" ? t.helpArticle?.linkText : void 0,
                 onCtaClick: C,
-                onDismiss: () => h(d.i.USER_DISMISS),
+                onDismiss: () => A(d.i.USER_DISMISS),
             });
         },
     },
