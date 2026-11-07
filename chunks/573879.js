@@ -1,6 +1,7 @@
 var i,
     r =
-        (((i = {}).YOU_ACCOUNT_ACTION_SHEET = "you_account_action_sheet"),
+        (((i = {}).ACCOUNT_SWITCHER_RAIL = "account_switcher_rail"),
+        (i.YOU_ACCOUNT_ACTION_SHEET = "you_account_action_sheet"),
         (i.CHOOSE_ACCOUNT = "choose_account"),
         (i.MANAGE_ACCOUNTS_MODAL = "manage_accounts_modal"),
         (i.MULTI_ACCOUNTS_LIST = "multi_accounts_list"),

@@ -494,6 +494,7 @@ var i,
         (i.POLL_VOTES = "poll votes"),
         (i.YOU_SCREEN = "you screen"),
         (i.YOU_ACCOUNT_ACTION_SHEET = "you account action sheet"),
+        (i.ACCOUNT_SWITCHER_RAIL = "account switcher rail"),
         (i.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW =
             "billing payment modal paused subscription resume invoice preview"),
         (i.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW =
