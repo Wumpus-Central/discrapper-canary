@@ -4875,6 +4875,7 @@ var ih =
         (eP.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED = "collectibles_shop_feed_shuffle_clicked"),
         (eP.COLLECTIBLES_SHOP_FEED_SORT_CHANGED = "collectibles_shop_feed_sort_changed"),
         (eP.COLLECTIBLES_SHOP_SEARCH_STARTED = "collectibles_shop_search_started"),
+        (eP.COLLECTIBLES_SHOP_SEARCH_QUERY_SUBMITTED = "collectibles_shop_search_query_submitted"),
         (eP.SHOP_CARD_HOVERED = "shop_card_hovered"),
         (eP.SHOP_PRODUCT_DETAIL_PAGE_CLICKED = "shop_product_detail_page_clicked"),
         (eP.SHOP_CARD_CLICKED = "shop_card_clicked"),
