@@ -1,1 +1,1 @@
-e.exports = { cP: "trailingContainer_edinHs", Zt: "highlight_edinHs" };
+e.exports = { c: "trailingContainer_edinHs" };
