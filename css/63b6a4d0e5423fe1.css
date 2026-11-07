@@ -1,0 +1,40 @@
+.serverIcon_n-XI9_ {
+    flex-shrink: 0
+}
+
+.widget_n-XI9_ {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    box-sizing: border-box
+}
+
+.appIcon_n-XI9_,
+.widget_n-XI9_ {
+    border-radius: var(--radius-md)
+}
+
+.appIcon_n-XI9_ {
+    flex-shrink: 0;
+    height: 48px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 48px
+}
+
+.avatar_n-XI9_ {
+    border-radius: var(--radius-round);
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
+}
+
+.notice_n-XI9_ {
+    color: var(--text-muted)
+}
+
+.noticeIcon_n-XI9_ {
+    flex-shrink: 0;
+    margin-top: calc(var(--space-4) - 1px)
+}
+
+/*# sourceMappingURL=63b6a4d0e5423fe1.css.map*/

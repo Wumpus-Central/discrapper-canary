@@ -1,18 +1,24 @@
-n(321073);
-var i = n(115560),
-    r = n(5463),
-    l = n(897720),
-    s = n(644434),
-    a = n(652215);
-function o(e, t) {
+i(321073);
+var n = i(115560),
+    d = i(190488),
+    h = i(5463),
+    l = i(897720),
+    a = i(644434),
+    r = i(652215);
+function u(e, t) {
     return null != e && Number.isFinite(e.width) && Number.isFinite(e.height) && e.width > 0 && e.height > 0
-        ? { width: Math.round(e.width) + s.GY.width, height: Math.round(e.height) + s.GY.height }
+        ? { width: Math.round(e.width) + a.GY.width, height: Math.round(e.height) + a.GY.height }
         : t;
 }
-function d(e, t) {
-    return o(e.overlay_widget?.min_size, t.minSize);
+function o(e, t) {
+    return u(e.overlay_widget?.min_size, t.minSize);
 }
-n.d(
+function s(e, t) {
+    return (0, d.j)(t) && null != t.guild_id
+        ? { applicationId: e, projectId: t.id, guildId: t.guild_id }
+        : { applicationId: e, projectId: t.id };
+}
+i.d(
     t,
     {},
     {
@@ -25,73 +31,86 @@ n.d(
             );
         },
         c3: function (e) {
-            let { layoutId: t, listed: n, existing: s, layoutSize: u, defaultSettings: c, createId: h = i.A } = e,
-                m = { create: [], deleteWidgetIds: [], metaUpdates: [], minSizeUpdates: [] },
-                g = new Map();
-            for (let e of n) {
+            let {
+                    layoutId: t,
+                    listed: i,
+                    existing: d,
+                    layoutSize: a,
+                    defaultSettings: c,
+                    removable: p,
+                    createId: f = n.A,
+                } = e,
+                g = { create: [], deleteWidgetIds: [], metaUpdates: [], minSizeUpdates: [] },
+                m = new Map();
+            for (let e of i) {
                 let t = e.application_id;
-                g.has(t) || g.set(t, e);
+                m.has(t) || m.set(t, e);
             }
-            let p = new Set();
-            for (let e of s) {
+            let w = new Set();
+            for (let e of d) {
                 if (!(0, l.Du)(e)) {
-                    m.deleteWidgetIds.push(e.id);
+                    g.deleteWidgetIds.push(e.id);
                     continue;
                 }
-                let { applicationId: t, projectId: n } = e.meta,
-                    i = g.get(t);
-                if (null == i || p.has(t)) {
-                    m.deleteWidgetIds.push(e.id);
+                let { applicationId: t, projectId: i, guildId: n } = e.meta,
+                    d = m.get(t);
+                if (w.has(t)) {
+                    g.deleteWidgetIds.push(e.id);
                     continue;
                 }
-                (p.add(t),
-                    n !== i.id && m.metaUpdates.push({ widgetId: e.id, meta: { applicationId: t, projectId: i.id } }));
-                let r = d(i, c);
-                (e.minSize.width !== r.width || e.minSize.height !== r.height) &&
-                    m.minSizeUpdates.push({ widgetId: e.id, minSize: r });
+                if (null == d) {
+                    (null != n ? p.server : p.owned) && g.deleteWidgetIds.push(e.id);
+                    continue;
+                }
+                w.add(t);
+                let h = s(t, d);
+                (i !== h.projectId || n !== h.guildId) && g.metaUpdates.push({ widgetId: e.id, meta: h });
+                let a = o(d, c);
+                (e.minSize.width !== a.width || e.minSize.height !== a.height) &&
+                    g.minSizeUpdates.push({ widgetId: e.id, minSize: a });
             }
-            let f = p.size;
-            for (let [e, n] of g) {
-                if (p.has(e)) continue;
+            let y = w.size;
+            for (let [e, i] of m) {
+                if (w.has(e)) continue;
                 let {
-                    anchor: i,
-                    size: l,
-                    minSize: s,
-                } = (function (e, t, n, i) {
-                    let l = d(e, i),
-                        s = o(
+                    anchor: n,
+                    size: d,
+                    minSize: l,
+                } = (function (e, t, i, n) {
+                    let d = o(e, n),
+                        l = u(
                             e.overlay_widget?.default_size,
                             (function (e) {
-                                let { width: t, height: n } = e.size;
+                                let { width: t, height: i } = e.size;
                                 return {
                                     width: "number" == typeof t ? t : e.minSize.width,
-                                    height: "number" == typeof n ? n : e.minSize.height,
+                                    height: "number" == typeof i ? i : e.minSize.height,
                                 };
-                            })(i),
+                            })(n),
                         ),
-                        a = Math.max(s.width, l.width),
-                        u = Math.max(s.height, l.height);
-                    if (n.width <= 0 || n.height <= 0)
-                        return { anchor: i.anchor, size: { width: a, height: u }, minSize: l };
-                    ((a = Math.min(a, n.width)), (u = Math.min(u, n.height)));
-                    let c = 24 * t,
-                        h = Math.max(0, Math.min((n.width - a) / 2 + c, n.width - a)),
-                        m = Math.max(0, Math.min(0.15 * n.height + c, n.height - u));
-                    return { anchor: (0, r.NO)({ top: m, left: h }, n), size: { width: a, height: u }, minSize: l };
-                })(n, f, u, c);
-                (f++,
-                    m.create.push({
-                        id: h(),
+                        a = Math.max(l.width, d.width),
+                        r = Math.max(l.height, d.height);
+                    if (i.width <= 0 || i.height <= 0)
+                        return { anchor: n.anchor, size: { width: a, height: r }, minSize: d };
+                    ((a = Math.min(a, i.width)), (r = Math.min(r, i.height)));
+                    let s = 24 * t,
+                        c = Math.max(0, Math.min((i.width - a) / 2 + s, i.width - a)),
+                        p = Math.max(0, Math.min(0.15 * i.height + s, i.height - r));
+                    return { anchor: (0, h.NO)({ top: p, left: c }, i), size: { width: a, height: r }, minSize: d };
+                })(i, y, a, c);
+                (y++,
+                    g.create.push({
+                        id: f(),
                         layoutId: t,
-                        type: a.uss.CONJURE,
-                        anchor: i,
-                        size: (0, r.R9)({ fixed: !0, ...l }, u),
-                        minSize: s,
+                        type: r.uss.CONJURE,
+                        anchor: n,
+                        size: (0, h.R9)({ fixed: !0, ...d }, a),
+                        minSize: l,
                         pinned: c.pinned,
-                        meta: { applicationId: e, projectId: n.id },
+                        meta: s(e, i),
                     }));
             }
-            return m;
+            return g;
         },
     },
 );

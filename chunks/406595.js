@@ -76,7 +76,7 @@ function P(e, t) {
             return e;
     }
 }
-function L(e) {
+function U(e) {
     var t;
     let n,
         { tab: i, targetId: r, isOnline: l, affinityScore: s, hasMention: a, hasUnread: o, addedTimestampMs: u } = e,
@@ -104,7 +104,7 @@ function L(e) {
         d
     );
 }
-function U(e) {
+function L(e) {
     let { tab: t, targetId: n, addedTimestampMs: i, guildAffinityNormalizationMax: r, pruneInvalid: l } = e;
     if (t === A.x.FRIENDS) {
         if (null == g.default.getUser(n)) return { kind: "NOT_READY_YET" };
@@ -116,7 +116,7 @@ function U(e) {
                 l = s.A.getUserAffinity(t)?.communicationProbability ?? 0,
                 a = o.A.getDMFromUserId(t),
                 { hasMention: u, hasUnread: d } = null != a ? x(a) : { hasMention: !1, hasUnread: !1 };
-            return L({
+            return U({
                 tab: e,
                 targetId: t,
                 isOnline: r,
@@ -140,7 +140,7 @@ function U(e) {
                 (0, a.ke)(r.type) || r.isDM() || r.isMultiUserDM() || r.isPrivate()
                     ? x(t)
                     : { hasMention: !1, hasUnread: !1 };
-        return L({
+        return U({
             tab: e,
             targetId: t,
             isOnline: !1,
@@ -174,7 +174,7 @@ function b(e) {
         let l = D(e);
         for (let [s, a] of l.entries()) {
             let o = M(e, s),
-                u = U({
+                u = L({
                     tab: e,
                     targetId: s,
                     addedTimestampMs: a.addedTimestampMs,
@@ -213,7 +213,7 @@ function F(e) {
         s = l.get(n),
         a = M(t, n);
     if (null == s) return E.delete(a);
-    let o = U({
+    let o = L({
         tab: t,
         targetId: n,
         addedTimestampMs: s.addedTimestampMs,
@@ -338,7 +338,7 @@ let Y = new B(
                       i = D(e.tab);
                   i.set(e.targetId, { targetId: e.targetId, addedTimestampMs: n });
                   let r = O(),
-                      l = U({
+                      l = L({
                           tab: e.tab,
                           targetId: e.targetId,
                           addedTimestampMs: n,

@@ -55,6 +55,10 @@ let r = {
     },
     ConjureBackgroundFramesManager: { actions: ["FRAME_LAUNCH_START"], inlineRequire: () => n(124500).A },
     ConjureProjectReconnectManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(10341).A },
+    ConjureServerOverlayWidgetsManager: {
+        actions: ["CONJURE_SERVER_OVERLAY_WIDGETS_FETCH_SUCCESS", "GUILD_DELETE"],
+        inlineRequire: () => n(866808).A,
+    },
     ConjureTurnNotificationManager: {
         actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],
         inlineRequire: () => n(464615).A,

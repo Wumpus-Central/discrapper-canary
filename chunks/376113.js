@@ -12,16 +12,16 @@ var i = n(477900),
     h = n(939249),
     g = n(717421),
     f = n(684013),
-    A = n(789645),
-    p = n(616566);
+    p = n(789645),
+    A = n(616566);
 let E = (e) => {
     let { className: t, onDismiss: n, "aria-label": r } = e;
     return (0, i.jsx)(h.D, {
         role: "button",
         onClick: n,
-        className: s()(p.r, t),
+        className: s()(A.r, t),
         "aria-label": r,
-        children: (0, i.jsx)(A.XSmallIcon, { size: "xs", color: "currentColor", colorClass: p.M }),
+        children: (0, i.jsx)(p.XSmallIcon, { size: "xs", color: "currentColor", colorClass: A.M }),
     });
 };
 E.displayName = "DismissButton";
@@ -42,37 +42,32 @@ let x = r.memo(function (e) {
             maxBodyLines: l,
             expand: g = !1,
             onNotificationShow: f,
-            onDismissClick: A,
-            onConfirmClick: p,
+            onDismissClick: p,
+            onConfirmClick: A,
             onCancelClick: b,
             onNotificationClick: y,
             hint: x,
             cancelText: S,
             confirmText: O,
-            icon: k,
-            body: N,
-            title: M,
-            renderFooter: P,
-            contentOpacity: D,
-            status: j,
-            containerRef: w,
-            className: U,
-            wrapperClassName: z,
-            unreadAccessory: L,
+            confirmVariant: k = "active",
+            icon: N,
+            body: M,
+            title: P,
+            renderFooter: D,
+            contentOpacity: j,
+            status: w,
+            containerRef: U,
+            className: z,
+            wrapperClassName: L,
+            unreadAccessory: V,
         } = e,
-        [V, F] = r.useState(!1),
-        G = g || V || j === I.yFH.FOCUSED,
-        W = (0, o.bG)([v.A, C.A], () => v.A.isInputLocked(C.A.getTargetPID()));
+        [F, G] = r.useState(!1),
+        W = g || F || w === I.yFH.FOCUSED,
+        H = (0, o.bG)([v.A, C.A], () => v.A.isInputLocked(C.A.getTargetPID()));
     r.useEffect(() => {
         f?.();
     }, [f]);
-    let H = r.useCallback(
-            (e) => {
-                (e.stopPropagation(), A?.(e));
-            },
-            [A],
-        ),
-        B = r.useCallback(
+    let B = r.useCallback(
             (e) => {
                 (e.stopPropagation(), p?.(e));
             },
@@ -80,67 +75,73 @@ let x = r.memo(function (e) {
         ),
         q = r.useCallback(
             (e) => {
+                (e.stopPropagation(), A?.(e));
+            },
+            [A],
+        ),
+        X = r.useCallback(
+            (e) => {
                 (e.stopPropagation(), b?.(e));
             },
             [b],
         ),
-        X = r.useCallback(() => {
-            F(!0);
-        }, []),
         K = r.useCallback(() => {
-            F(!1);
+            G(!0);
+        }, []),
+        Y = r.useCallback(() => {
+            G(!1);
         }, []);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: s()(_.af, z),
+                className: s()(_.af, L),
                 onScroll: R,
                 children: [
                     (0, i.jsx)(h.D, {
-                        innerRef: w,
+                        innerRef: U,
                         ignoreKeyPress: !0,
-                        onMouseOver: X,
-                        onMouseLeave: K,
+                        onMouseOver: K,
+                        onMouseLeave: Y,
                         onClick: y,
-                        className: s()(_.kL, { [_.vk]: null != y }, U),
+                        className: s()(_.kL, { [_.vk]: null != y }, z),
                         children:
-                            ((t = P?.(G, W)),
+                            ((t = D?.(W, H)),
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsxs)(a.animated.div, {
                                         className: _.VM,
-                                        style: { opacity: D },
+                                        style: { opacity: j },
                                         children: [
-                                            null == k
+                                            null == N
                                                 ? null
-                                                : "string" == typeof k
+                                                : "string" == typeof N
                                                   ? (0, i.jsx)(d.eu, {
-                                                        src: k,
+                                                        src: N,
                                                         size: m._3.SIZE_40,
                                                         className: _.my,
                                                         "aria-hidden": !0,
                                                     })
-                                                  : (0, i.jsx)("div", { className: _.my, children: k }),
+                                                  : (0, i.jsx)("div", { className: _.my, children: N }),
                                             (0, i.jsxs)("div", {
                                                 className: _.zH,
                                                 children: [
-                                                    null != M
+                                                    null != P
                                                         ? (0, i.jsx)(c.E, {
                                                               color: "interactive-text-default",
                                                               variant: "body-sm/semibold",
                                                               lineClamp: 2,
-                                                              children: M,
+                                                              children: P,
                                                           })
                                                         : null,
-                                                    null != N
+                                                    null != M
                                                         ? (0, i.jsx)(c.E, {
                                                               color: "interactive-text-default",
                                                               variant: "body-sm/normal",
-                                                              lineClamp: null != l ? l * (G ? 2 : 1) : void 0,
-                                                              children: N,
+                                                              lineClamp: null != l ? l * (W ? 2 : 1) : void 0,
+                                                              children: M,
                                                           })
                                                         : null,
-                                                    ((n = "function" == typeof x ? x(G, W) : x),
+                                                    ((n = "function" == typeof x ? x(W, H) : x),
                                                     null != x
                                                         ? (0, i.jsx)(c.E, {
                                                               className: _.aK,
@@ -149,18 +150,18 @@ let x = r.memo(function (e) {
                                                               children: n,
                                                           })
                                                         : null),
-                                                    null == p && null == b
+                                                    null == A && null == b
                                                         ? null
                                                         : (0, i.jsxs)("div", {
                                                               className: _.UD,
                                                               children: [
-                                                                  null != p
+                                                                  null != A
                                                                       ? (0, i.jsx)("div", {
                                                                             className: _.x6,
                                                                             children: (0, i.jsx)(u.$, {
                                                                                 size: "sm",
-                                                                                variant: "active",
-                                                                                onClick: B,
+                                                                                variant: k,
+                                                                                onClick: q,
                                                                                 text: O ?? T.intl.string(T.t.BddRzS),
                                                                             }),
                                                                         })
@@ -171,7 +172,7 @@ let x = r.memo(function (e) {
                                                                             children: (0, i.jsx)(u.$, {
                                                                                 size: "sm",
                                                                                 variant: "secondary",
-                                                                                onClick: q,
+                                                                                onClick: X,
                                                                                 text: S ?? T.intl.string(T.t["ETE/oC"]),
                                                                             }),
                                                                         })
@@ -192,10 +193,10 @@ let x = r.memo(function (e) {
                                 ],
                             })),
                     }),
-                    null == L ? null : (0, i.jsx)("div", { className: _.B3, children: L(V) }),
+                    null == V ? null : (0, i.jsx)("div", { className: _.B3, children: V(F) }),
                 ],
             }),
-            (0, i.jsx)(E, { className: _.r, onDismiss: H, "aria-label": T.intl.string(T.t.LnEgqX) }),
+            (0, i.jsx)(E, { className: _.r, onDismiss: B, "aria-label": T.intl.string(T.t.LnEgqX) }),
         ],
     });
 });
@@ -236,8 +237,8 @@ function N(e) {
                 onDismissClick: d,
                 onNotificationClick: m,
                 onConfirmClick: h,
-                onCancelClick: A,
-                renderFooter: p,
+                onCancelClick: p,
+                renderFooter: A,
                 animationWrapperClassName: E,
             },
         } = t,
@@ -284,11 +285,11 @@ function N(e) {
         ),
         R = r.useCallback(
             (e) => {
-                A?.(e, c);
+                p?.(e, c);
             },
-            [A, c],
+            [p, c],
         ),
-        N = r.useCallback((e, t) => p?.(e, c, t), [p, c]),
+        N = r.useCallback((e, t) => A?.(e, c, t), [A, c]),
         {
             props: {
                 onNotificationShow: M,
@@ -325,7 +326,7 @@ function N(e) {
                 onDismissClick: C,
                 onNotificationClick: T,
                 onConfirmClick: null != h ? _ : void 0,
-                onCancelClick: null != A ? R : void 0,
+                onCancelClick: null != p ? R : void 0,
                 renderFooter: N,
                 expand: !1,
                 index: n,

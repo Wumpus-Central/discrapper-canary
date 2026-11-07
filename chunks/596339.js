@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 668744, Version Hash: c65ef193898a17b194e805078d673b9ced45f18a`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 668751, Version Hash: 1c9c2c369fa7f2433fc8c61fbed548a28579064f`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "668744";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "668751";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -4291,7 +4291,7 @@ let st = (0, i9.Fe)({
                 n.e(43853),
                 n.e(102170),
                 n.e(401071),
-                n.e(721654),
+                n.e(436753),
                 n.e(283543),
                 n.e(715958),
                 n.e(560042),
@@ -4870,7 +4870,7 @@ let st = (0, i9.Fe)({
                 n.e(465574),
                 n.e(679700),
                 n.e(540077),
-                n.e(195316),
+                n.e(967102),
                 n.e(220803),
                 n.e(654624),
                 n.e(195782),
@@ -4881,6 +4881,7 @@ let st = (0, i9.Fe)({
                 n.e(262720),
                 n.e(454085),
                 n.e(483518),
+                n.e(462155),
                 n.e(531997),
                 n.e(394704),
                 n.e(649351),
@@ -15727,7 +15728,7 @@ let IW = "isHideDevBanner",
                     className: td()(Ij.Wz, Ij.mr),
                     children: [
                         (0, v.jsx)(IH, { className: Ij.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "668744" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "668751" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -33196,10 +33197,10 @@ var Rx = n(448875),
     RF = n(244055),
     RB = n(998979),
     RV = n(276983),
-    RH = n(781045),
+    RH = n(908276),
     Rj = n(442331),
     RW = n(955639),
-    RY = n(191827),
+    RY = n(934058),
     RK = n(679737),
     R$ = n(932183),
     RX = n(37595);
@@ -36758,42 +36759,43 @@ async function DI(e, t, n) {
             disable_guild_select: T,
             integration_type: g,
             pid: S,
-            signal: N,
-            isSocketRpcPrivateScope: C,
+            iframeId: N,
+            signal: C,
+            isSocketRpcPrivateScope: O,
         } = e;
-    if (N?.aborted) throw new OM.A({ errorCode: H.Lw6.UNKNOWN_ERROR }, "Request aborted");
+    if (C?.aborted) throw new OM.A({ errorCode: H.Lw6.UNKNOWN_ERROR }, "Request aborted");
     if (null == o) throw new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "No Client ID provided");
-    if (!C && null != c)
+    if (!O && null != c)
         throw new OM.A(
             { errorCode: H.Lw6.OAUTH2_ERROR },
             "Redirect URI cannot be used in the RPC OAuth2 Authorization flow",
         );
-    let O = [];
+    let R = [];
     if (
-        ("string" == typeof f ? (O = f.split(" ").filter((e) => e.length > 0)) : Array.isArray(f) && (O = f),
+        ("string" == typeof f ? (R = f.split(" ").filter((e) => e.length > 0)) : Array.isArray(f) && (R = f),
         null == ek.default.getCurrentUser())
     )
         throw new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "Client is not logged in");
     if (null != g) r = Number(g);
     else {
-        function R(e) {
+        function L(e) {
             return (0, R5.D)(e) && e?.integrationTypesConfig?.[Do.b.USER_INSTALL] != null;
         }
         let e = nA.A.getApplication(o);
-        r = R(e) || R((e = nM.Ay.createFromServer(await (0, DE.TA)(o, N)))) ? Do.b.USER_INSTALL : Do.b.GUILD_INSTALL;
+        r = L(e) || L((e = nM.Ay.createFromServer(await (0, DE.TA)(o, C)))) ? Do.b.USER_INSTALL : Do.b.GUILD_INSTALL;
     }
     try {
         [a, { disclosures: s, allAcked: l }] = await Promise.all([
             (0, Du.qY)({
                 clientId: o,
-                scopes: O,
+                scopes: R,
                 responseType: d,
                 redirectUri: c,
                 codeChallenge: u,
                 codeChallengeMethod: _,
                 state: E,
                 integrationType: r,
-                signal: N,
+                signal: C,
             }),
             (0, Dc.vG)(o),
         ]);
@@ -36810,7 +36812,7 @@ async function DI(e, t, n) {
                 await (0, Du.Gq)({
                     authorize: !0,
                     clientId: o,
-                    scopes: O,
+                    scopes: R,
                     responseType: d,
                     redirectUri: c,
                     codeChallenge: u,
@@ -36827,23 +36829,23 @@ async function DI(e, t, n) {
                 `OAuth2 Authorize Error: ${e?.message || "Unknown Error"}`,
             );
         }
-    n?.(a.application, p, S);
-    let L = DA.x3;
+    n?.(a.application, p, S, N);
+    let y = DA.x3;
     try {
-        L = SP.iu(h ?? 0);
+        y = SP.iu(h ?? 0);
     } catch (e) {}
     if (
         (null != a.integration_type &&
             Object.values(Do.b).includes(a.integration_type) &&
             (i = new Map()).set(a.integration_type, a),
-        null != Dh[a.application.id] && (await Dh[a.application.id].process(), N?.aborted))
+        null != Dh[a.application.id] && (await Dh[a.application.id].process(), C?.aborted))
     )
         throw new OM.A({ errorCode: H.Lw6.UNKNOWN_ERROR }, "Request aborted");
     return t({
         clientId: o,
         authorizations: i,
-        scopes: O,
-        parsedPermissions: L,
+        scopes: R,
+        parsedPermissions: y,
         responseType: d,
         redirectUri: c,
         codeChallenge: u,
@@ -36856,7 +36858,8 @@ async function DI(e, t, n) {
         disclosures: s,
         integrationType: r,
         pid: S,
-        signal: N,
+        iframeId: N,
+        signal: C,
     });
 }
 async function Dp(e, t) {
@@ -36912,50 +36915,53 @@ let Dm =
                     disclosures: A,
                     integrationType: f,
                     pid: h,
-                    signal: I,
+                    iframeId: I,
+                    signal: p,
                 } = e,
-                p = `OAuth2Authorize_${t}_${c}_${u}`,
-                m = null != f ? n?.get(f) : void 0,
-                T = m?.application ?? nA.A.getApplication(t);
-            return new Promise((e, m) => {
-                let g = (0, yB.d5)(h),
-                    S = LL.SY;
-                null != T && null != (0, Ly.Ay)({ application: T, channelId: u })
-                    ? (S = "popout")
-                    : g.context === H.BRT.POPOUT && (S = "popout");
-                let N = !1;
-                function C(n) {
+                m = `OAuth2Authorize_${t}_${c}_${u}`,
+                T = null != f ? n?.get(f) : void 0,
+                g = T?.application ?? nA.A.getApplication(t);
+            return new Promise((e, T) => {
+                if (null == h && null != I && (0, yB.yf)(I) && !(0, yB.Yc)())
+                    return void T(new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "The overlay must be open to authorize"));
+                let S = (0, yB.d5)(h),
+                    N = LL.SY;
+                (null != g && null != (0, Ly.Ay)({ application: g, channelId: u })) || S.context === H.BRT.POPOUT
+                    ? (N = "popout")
+                    : null != I && (0, yu.LV)(I) === H.BRT.POPOUT && (N = "popout");
+                let C = !1;
+                function O(n) {
                     let { clientId: i, location: r } = n;
                     if (null == i || i === t) {
-                        if (((N = !0), null == r)) {
-                            (m(new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
-                                g.lock());
+                        if (((C = !0), null == r)) {
+                            (T(new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                                S.lock());
                             return;
                         }
-                        (e(r), null == s || null == T)
-                            ? g.lock()
+                        (e(r), null == s || null == g)
+                            ? S.lock()
                             : null == new URL(r).searchParams.get("error")
                               ? (0, tY.qf)(
-                                    (e) => (0, v.jsx)(Dl.Sm, { application: T, ...e }),
+                                    (e) => (0, v.jsx)(Dl.Sm, { application: g, ...e }),
                                     {
                                         onCloseCallback: () => {
-                                            g.lock();
+                                            S.lock();
                                         },
                                     },
-                                    S,
+                                    N,
                                 )
                               : (0, tY.qf)(
                                     (e) => (0, v.jsx)(Dl.xb, { ...e }),
                                     {
                                         onCloseCallback: () => {
-                                            g.lock();
+                                            S.lock();
                                         },
                                     },
-                                    S,
+                                    N,
                                 );
                     }
                 }
-                let { cleanup: O } = (function (e, t) {
+                let { cleanup: R } = (function (e, t) {
                     function n() {
                         (0, tY.Oo)(e) &&
                             (0, tY.qf)((e) =>
@@ -36975,7 +36981,7 @@ let Dm =
                             },
                         }
                     );
-                })(p, I);
+                })(m, p);
                 (0, tY.qf)(
                     (e) =>
                         (0, v.jsx)(Da.OAuth2AuthorizeModal, {
@@ -36984,7 +36990,7 @@ let Dm =
                             clientId: t,
                             scopes: i ?? [],
                             disclosures: A ?? [],
-                            callback: C,
+                            callback: O,
                             responseType: a,
                             redirectUri: s,
                             codeChallenge: l,
@@ -36998,22 +37004,22 @@ let Dm =
                             integrationType: f,
                         }),
                     {
-                        modalKey: p,
+                        modalKey: m,
                         onCloseCallback: () => {
-                            (O(),
-                                N ||
-                                    (m(new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
-                                    g.lock()));
+                            (R(),
+                                C ||
+                                    (T(new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
+                                    S.lock()));
                         },
                     },
-                    S,
+                    N,
                 );
             });
         }),
-        (L = function (e, t, n) {
-            if ((0, yB.kS)(n) || !eF.isPlatformEmbedded) return;
-            let i = (0, Ly.Ay)({ application: e, channelId: t });
-            ((0, eF.uF)() ? eB.Ay.minimize(i) : eB.Ay.restore(i), eB.Ay.focus(i));
+        (L = function (e, t, n, i) {
+            if ((0, yB.kS)(n) || !eF.isPlatformEmbedded || (null != i && (0, yB.yf)(i))) return;
+            let r = (0, Ly.Ay)({ application: e, channelId: t });
+            ((0, eF.uF)() ? eB.Ay.minimize(r) : eB.Ay.restore(r), eB.Ay.focus(r));
         }),
         {
             [H.e$_.AUTHENTICATE]: RL(H.e$_.AUTHENTICATE, {
@@ -37110,31 +37116,30 @@ let Dm =
                             )
                         );
                     let s = null != i.scopes && "" !== i.scopes ? i.scopes : i.scope;
-                    return (
-                        delete i.scopes,
-                        DI({ ...i, scope: s, signal: n, isSocketRpcPrivateScope: a }, R, L)
-                            .then((e) => {
-                                if (((t.authorization.authing = !1), null == e))
-                                    throw new OM.A({ errorCode: H.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
-                                let n = new URL(e),
-                                    i = n.searchParams.get("code");
-                                if (a) return { code: i, location: e };
-                                let r = n.searchParams.get("error");
-                                if (null != r && "" !== r) {
-                                    let e = n.searchParams.get("error_description") ?? "unknown error";
-                                    throw new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, `OAuth2 Error: ${r}: ${e}`);
-                                }
-                                if (null == i)
-                                    throw new OM.A(
-                                        { errorCode: H.Lw6.OAUTH2_ERROR },
-                                        "OAuth2 Error: Unable to find auth code",
-                                    );
-                                return { code: i };
-                            })
-                            .catch((e) => {
-                                throw ((t.authorization.authing = !1), e);
-                            })
-                    );
+                    delete i.scopes;
+                    let l = t.source.type === gl.z4.POST_MESSAGE ? t.source.iframeId : void 0;
+                    return DI({ ...i, scope: s, iframeId: l, signal: n, isSocketRpcPrivateScope: a }, R, L)
+                        .then((e) => {
+                            if (((t.authorization.authing = !1), null == e))
+                                throw new OM.A({ errorCode: H.Lw6.UNKNOWN_ERROR }, "Unknown error occurred");
+                            let n = new URL(e),
+                                i = n.searchParams.get("code");
+                            if (a) return { code: i, location: e };
+                            let r = n.searchParams.get("error");
+                            if (null != r && "" !== r) {
+                                let e = n.searchParams.get("error_description") ?? "unknown error";
+                                throw new OM.A({ errorCode: H.Lw6.OAUTH2_ERROR }, `OAuth2 Error: ${r}: ${e}`);
+                            }
+                            if (null == i)
+                                throw new OM.A(
+                                    { errorCode: H.Lw6.OAUTH2_ERROR },
+                                    "OAuth2 Error: Unable to find auth code",
+                                );
+                            return { code: i };
+                        })
+                        .catch((e) => {
+                            throw ((t.authorization.authing = !1), e);
+                        });
                 },
             }),
         }),
@@ -44915,7 +44920,7 @@ let UX = (0, tW.Fe)({
             n.e(43853),
             n.e(102170),
             n.e(401071),
-            n.e(721654),
+            n.e(436753),
             n.e(283543),
             n.e(715958),
             n.e(560042),
@@ -45889,7 +45894,7 @@ let UX = (0, tW.Fe)({
             n.e(465574),
             n.e(679700),
             n.e(540077),
-            n.e(195316),
+            n.e(967102),
             n.e(361796),
             n.e(220803),
             n.e(195782),
@@ -45901,6 +45906,7 @@ let UX = (0, tW.Fe)({
             n.e(454085),
             n.e(483518),
             n.e(185928),
+            n.e(462155),
             n.e(531997),
             n.e(394704),
             n.e(954180),
