@@ -86,7 +86,7 @@ class A {
     }
 }
 var R = n(736553),
-    v = n(472119);
+    v = n(382541);
 n(205816);
 let U = {
     app_build_request: !0,

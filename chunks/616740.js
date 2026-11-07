@@ -1634,7 +1634,8 @@ let lo = a.memo(function (e) {
                             let { default: e } = await Promise.all([
                                 n.e(551257),
                                 n.e(246969),
-                                n.e(566976),
+                                n.e(880672),
+                                n.e(999873),
                                 n.e(387634),
                                 n.e(525499),
                                 n.e(916519),

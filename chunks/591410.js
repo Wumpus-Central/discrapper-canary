@@ -11,8 +11,8 @@ var i = t(477900),
     g = t(939249),
     m = t(339350),
     h = t(821609),
-    f = t(331322),
-    x = t(534514),
+    x = t(331322),
+    f = t(534514),
     p = t(477782),
     j = t(687966),
     I = t(404778),
@@ -22,7 +22,7 @@ var i = t(477900),
     C = t(284460),
     v = t(531913),
     y = t(417270),
-    N = t(164163),
+    N = t(872344),
     D = t(792996),
     T = t(429913),
     P = t(5960),
@@ -30,10 +30,10 @@ var i = t(477900),
     k = t(692969),
     _ = t(454908),
     w = t(46653),
-    S = t(183555),
-    W = t(40989),
-    M = t(58266);
-function O(e) {
+    W = t(183555),
+    O = t(40989),
+    S = t(58266);
+function M(e) {
     let {
         isCurrentUser: n,
         isLoading: t,
@@ -49,12 +49,12 @@ function O(e) {
         ? null
         : (d && ((r = !1), (a = !1), (c = void 0)),
           (0, i.jsxs)("div", {
-              className: M.qr,
+              className: S.qr,
               children: [
                   t || l || r || a
                       ? null
                       : (0, i.jsxs)("div", {
-                            className: M.o8,
+                            className: S.o8,
                             children: [
                                 (0, i.jsx)(m.HourglassIcon, { size: "xxs" }),
                                 (0, i.jsx)(u.E, {
@@ -81,36 +81,55 @@ function O(e) {
           }));
 }
 function G(e) {
-    return (0, i.jsxs)(f.B, {
-        direction: "horizontal",
-        gap: 24,
-        padding: 12,
-        fullWidth: !1,
-        className: M.lO,
+    let n = (0, i.jsxs)(x.B, {
+        gap: 4,
         children: [
-            (0, i.jsxs)(f.B, {
-                gap: 4,
-                children: [
-                    e.showSuggestedForYou &&
-                        (0, i.jsx)(u.E, {
-                            variant: "body-xs/medium",
-                            color: "text-default",
-                            children: D.intl.string(D.t.zMUr6Z),
-                        }),
-                    (0, i.jsx)(x.D, { variant: "heading-xs/medium", color: "text-default", children: e.heading }),
-                    (0, i.jsx)(u.E, { variant: "body-xs/normal", color: "text-subtle", children: e.content }),
-                ],
-            }),
-            (0, i.jsx)(f.B, {
-                direction: "horizontal",
-                gap: 12,
-                align: "center",
-                justify: "end",
-                fullWidth: !1,
-                children: e.buttons,
-            }),
+            e.showSuggestedForYou &&
+                (0, i.jsx)(u.E, {
+                    variant: "body-xs/medium",
+                    color: "text-default",
+                    children: D.intl.string(D.t.zMUr6Z),
+                }),
+            (0, i.jsx)(f.D, { variant: "heading-xs/medium", color: "text-default", children: e.heading }),
+            (0, i.jsx)(u.E, { variant: "body-xs/normal", color: "text-subtle", children: e.content }),
+            e.attribution,
         ],
     });
+    return null != e.icon
+        ? (0, i.jsxs)(x.B, {
+              gap: 12,
+              padding: 12,
+              fullWidth: !1,
+              className: S.lO,
+              children: [
+                  (0, i.jsxs)(x.B, { direction: "horizontal", gap: 12, align: "start", children: [e.icon, n] }),
+                  (0, i.jsx)(x.B, {
+                      direction: "horizontal",
+                      gap: 12,
+                      align: "center",
+                      justify: "end",
+                      children: e.buttons,
+                  }),
+              ],
+          })
+        : (0, i.jsxs)(x.B, {
+              direction: "horizontal",
+              gap: 24,
+              padding: 12,
+              fullWidth: !1,
+              className: S.lO,
+              children: [
+                  n,
+                  (0, i.jsx)(x.B, {
+                      direction: "horizontal",
+                      gap: 12,
+                      align: "center",
+                      justify: "end",
+                      fullWidth: !1,
+                      children: e.buttons,
+                  }),
+              ],
+          });
 }
 let L = Object.assign(
     function (e) {
@@ -119,29 +138,30 @@ let L = Object.assign(
                 widget: t,
                 disableCTA: r,
                 disableCTAActions: m,
-                cta: h,
+                exclusiveCTA: h = !1,
+                cta: x,
                 subtle: f = !1,
-                embedded: x = !1,
-                allowEditing: G,
-                disableInteraction: L,
-                index: F,
-                trailingContent: U,
+                embedded: G = !1,
+                allowEditing: L,
+                disableInteraction: F,
+                index: U,
+                trailingContent: z,
                 interactiveLinks: H = !1,
             } = e,
-            z = (function (e) {
-                let { trackUserProfileAction: n } = (0, S.NJ)(),
+            B = (function (e) {
+                let { trackUserProfileAction: n } = (0, W.NJ)(),
                     { user: t, widget: r, cta: s } = e,
                     o = (0, c.bG)([w.default], () => w.default.getId()) === t.id,
                     m = (0, T.h)(r.applicationId),
                     h = m?.getIconURL(16),
-                    f = (function (e) {
+                    x = (function (e) {
                         let n = e?.getCanonicalGameId(),
                             { data: t } = (0, _.I)(n);
                         return t;
                     })(m),
-                    x = (0, k.A)({
+                    f = (0, k.A)({
                         location: "UserProfileApplicationWidget",
-                        applicationId: f?.id,
+                        applicationId: x?.id,
                         source: R.GameProfileSources.UserProfileApplicationWidget,
                         sourceUserId: t.id,
                         trackEntryPointImpression: !0,
@@ -174,35 +194,35 @@ let L = Object.assign(
                         !Array.from(d._.APPLICATION_IDENTITIES_SCOPES).some((e) => v.scopes.includes(e)) &&
                         !v.scopes.includes(d.F.SDK_SOCIAL_LAYER) &&
                         !v.scopes.includes(d.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    W = (0, i.jsxs)(i.Fragment, {
+                    O = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
-                                ? (0, i.jsx)("img", { className: M.Z2, src: h, width: 16, height: 16, alt: "" })
-                                : (0, i.jsx)("span", { className: M.qP }),
+                                ? (0, i.jsx)("img", { className: S.Z2, src: h, width: 16, height: 16, alt: "" })
+                                : (0, i.jsx)("span", { className: S.qP }),
                             (0, i.jsx)(u.E, {
                                 variant: "body-sm/medium",
-                                children: m?.name != null ? m.name : (0, i.jsx)("div", { className: M.jC }),
+                                children: m?.name != null ? m.name : (0, i.jsx)("div", { className: S.jC }),
                             }),
                         ],
                     }),
-                    O =
-                        null == f
-                            ? (0, i.jsx)("div", { className: M.qd, children: W })
-                            : (0, i.jsx)(g.D, { className: a()(M.qd, M.vk), onClick: x, children: W });
+                    M =
+                        null == x
+                            ? (0, i.jsx)("div", { className: S.qd, children: O })
+                            : (0, i.jsx)(g.D, { className: a()(S.qd, S.vk), onClick: f, children: O });
                 return {
                     isCurrentUser: o,
-                    game: f,
-                    openGameProfileModal: x,
+                    game: x,
+                    openGameProfileModal: f,
                     handleConnect: N,
                     showConnectCta: D,
                     showReconnectCta: P,
-                    headerTitle: O,
+                    headerTitle: M,
                 };
             })(e),
             q = (0, v.A)(n.id, t.applicationId),
-            B = e.rendererProps ?? q,
-            K = (0, P.A)(t.applicationId, z.isCurrentUser),
-            Y = (function (e, n) {
+            K = e.rendererProps ?? q,
+            Y = (0, P.A)(t.applicationId, B.isCurrentUser),
+            J = (function (e, n) {
                 let { pending: t, refresh: l } = (0, N.A)(e);
                 return n
                     ? (0, i.jsx)(p.Dr, {
@@ -213,8 +233,8 @@ let L = Object.assign(
                           action: l,
                       })
                     : null;
-            })(t.applicationId, !0 === K && !0 !== L),
-            J =
+            })(t.applicationId, !0 === Y && !0 !== F),
+            V =
                 H ||
                 (function (e) {
                     let { disableInteraction: n } = e;
@@ -222,52 +242,52 @@ let L = Object.assign(
                 })(e)
                     ? C.hO
                     : void 0,
-            V = B.surfaceConfigs[o.m.WIDGET_TOP],
-            X = B.surfaceConfigs[o.m.WIDGET_BOTTOM];
-        return null == V || null == X
+            X = K.surfaceConfigs[o.m.WIDGET_TOP],
+            Z = K.surfaceConfigs[o.m.WIDGET_BOTTOM];
+        return null == X || null == Z
             ? null
-            : (0, i.jsxs)(W.A, {
+            : (0, i.jsxs)(O.A, {
                   userId: n.id,
                   widget: t,
-                  allowEditing: G,
-                  disableInteraction: L,
-                  index: F,
-                  trailingContent: U,
-                  className: a()(M.Y5, { [M.aK]: f, [M.F9]: x }),
-                  headerClassName: M.JE,
+                  allowEditing: L,
+                  disableInteraction: F,
+                  index: U,
+                  trailingContent: z,
+                  className: a()(S.Y5, { [S.aK]: f, [S.F9]: G }),
+                  headerClassName: S.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != z.game
+                          null != B.game
                               ? (0, i.jsx)(p.Dr, {
                                     id: "view-game-profile",
                                     label: D.intl.string(D.t.ajHoOr),
                                     leadingAccessory: { type: "icon", icon: j.GameControllerIcon },
-                                    action: z.openGameProfileModal,
+                                    action: B.openGameProfileModal,
                                 })
                               : null,
-                          Y,
+                          J,
                       ],
                   }),
                   children: [
                       (0, i.jsx)(s.kH, {
-                          ...B,
+                          ...K,
                           surface: o.m.WIDGET_TOP,
-                          surfaceConfig: V,
-                          header: z.headerTitle,
-                          renderText: J,
+                          surfaceConfig: X,
+                          header: B.headerTitle,
+                          renderText: V,
                       }),
                       (0, i.jsx)(I.c, {}),
-                      (0, i.jsx)(s.kH, { ...B, surface: o.m.WIDGET_BOTTOM, surfaceConfig: X, renderText: J }),
-                      (0, i.jsx)(O, {
-                          isCurrentUser: z.isCurrentUser,
-                          isLoading: B.isLoading,
-                          hasData: B.hasIdentity,
-                          showConnectCta: z.showConnectCta,
-                          showReconnectCta: z.showReconnectCta,
-                          handleConnect: z.handleConnect,
+                      (0, i.jsx)(s.kH, { ...K, surface: o.m.WIDGET_BOTTOM, surfaceConfig: Z, renderText: V }),
+                      (0, i.jsx)(M, {
+                          isCurrentUser: B.isCurrentUser,
+                          isLoading: K.isLoading,
+                          hasData: K.hasIdentity,
+                          showConnectCta: !h && B.showConnectCta,
+                          showReconnectCta: !h && B.showReconnectCta,
+                          handleConnect: B.handleConnect,
                           disableCTA: r,
-                          disableCTAActions: !0 === m || !1 !== K,
-                          cta: h,
+                          disableCTAActions: !h && (!0 === m || !1 !== Y),
+                          cta: x,
                       }),
                   ],
               });

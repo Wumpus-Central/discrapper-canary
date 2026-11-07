@@ -28,8 +28,9 @@ let d = new Map(),
     O = null,
     R = new Set(),
     L = new Map(),
-    y = "unattempted";
-class D extends i.Ay.Store {
+    y = "unattempted",
+    D = "unattempted";
+class b extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -108,11 +109,14 @@ class D extends i.Ay.Store {
     getOwnedProjectsFetchState() {
         return y;
     }
+    getSharedWithMeProjectsFetchState() {
+        return D;
+    }
     isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-let b = new D(r.h, {
+let v = new b(r.h, {
     LOGOUT: function () {
         if (
             (T++,
@@ -148,13 +152,14 @@ let b = new D(r.h, {
             (O = null),
             (g = !1),
             (y = "unattempted"),
+            (D = "unattempted"),
             (S = null),
             (N = !1),
             (C = null));
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t ? L.set(t, "loading") : ((y = "loading"), (p = !1)), (O = { type: "loading" }));
+        (null != t ? L.set(t, "loading") : ((y = "loading"), (D = "loading"), (p = !1)), (O = { type: "loading" }));
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
@@ -166,7 +171,7 @@ let b = new D(r.h, {
         for (let e of ((function (e) {
             for (let t of e) !0 === t.running ? I.add(t.id) : I.delete(t.id);
         })(i),
-        null != n && (R.add(n), L.set(n, "success")),
+        null != n ? (R.add(n), L.set(n, "success")) : (D = "success"),
         c.keys()))
             d.has(e) || c.delete(e);
         for (let [e, t] of u) d.has(t) || u.delete(e);
@@ -174,7 +179,8 @@ let b = new D(r.h, {
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t ? L.set(t, "error") : (y = "error"), (O = { type: "error", fetchedAt: Date.now() }));
+        (null != t ? L.set(t, "error") : ((y = "error"), (D = "error")),
+            (O = { type: "error", fetchedAt: Date.now() }));
     },
     CONJURE_PARTICIPATING_PROJECTS_MARK: function (e) {
         let { projectIds: t } = e,
@@ -258,7 +264,7 @@ n.d(
     t,
     {},
     {
-        Ay: b,
+        Ay: v,
         H_: function (e) {
             return l(e) || o(e) || (0, s.XE)(e);
         },

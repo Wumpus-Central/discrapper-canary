@@ -1,0 +1,14 @@
+.header_J4L9gE {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16)
+}
+
+.title_J4L9gE {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-inline-end: auto
+}
+
+/*# sourceMappingURL=f9aa880a8a54d8ad.css.map*/
