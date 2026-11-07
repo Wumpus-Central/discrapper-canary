@@ -83,6 +83,7 @@ n.d(
                     inReplyTo: e.in_reply_to,
                     content: e.content,
                     timestamp: e.ts,
+                    attachments: e.attachments,
                 });
             },
             source_checkpoint(e, t) {

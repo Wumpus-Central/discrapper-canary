@@ -279,23 +279,23 @@ let M = new R(r.h, {
         (E.set(t, l), null != s && C(t));
     },
     CONJURE_CHAT_SIDE_REPLY: function (e) {
-        let { projectId: t, id: n, inReplyTo: i, content: r, timestamp: a } = e,
-            s = E.get(t);
-        if (null == s || s.some((e) => e.id === n)) return !1;
-        let l = (0, o.iW)("assistant", r, { ts: a, id: n });
-        ((l.kind = "side_reply"), (l.in_reply_to = i));
-        let c = s.findIndex((e) => e.id === i);
-        if (-1 === c) return void E.set(t, [...s, l]);
-        let { disposition: u } = s[c];
-        null != u && (l.acknowledges = u);
-        let _ = "answered" === u && P(s[c + 1]),
-            A = [...s.slice(0, c + 1), l, ...s.slice(_ ? c + 2 : c + 1)],
-            f = A.findLastIndex((e) => "assistant" === e.role && !(0, d.B5)(e));
-        if ("answered" === u && -1 !== f && f < c && !(0, d.BL)(A[f])) {
-            let [e] = A.splice(f, 1);
-            A.splice(c + 1, 0, e);
+        let { projectId: t, id: n, inReplyTo: i, content: r, timestamp: a, attachments: s } = e,
+            l = E.get(t);
+        if (null == l || l.some((e) => e.id === n)) return !1;
+        let c = (0, o.iW)("assistant", r, { ts: a, id: n, attachments: s });
+        ((c.kind = "side_reply"), (c.in_reply_to = i));
+        let u = l.findIndex((e) => e.id === i);
+        if (-1 === u) return void E.set(t, [...l, c]);
+        let { disposition: _ } = l[u];
+        null != _ && (c.acknowledges = _);
+        let A = "answered" === _ && P(l[u + 1]),
+            f = [...l.slice(0, u + 1), c, ...l.slice(A ? u + 2 : u + 1)],
+            h = f.findLastIndex((e) => "assistant" === e.role && !(0, d.B5)(e));
+        if ("answered" === _ && -1 !== h && h < u && !(0, d.BL)(f[h])) {
+            let [e] = f.splice(h, 1);
+            f.splice(u + 1, 0, e);
         }
-        (E.set(t, A), _ && C(t));
+        (E.set(t, f), A && C(t));
     },
     CONJURE_CHAT_PUBLISH_NOTICE: function (e) {
         let { projectId: t, id: n, content: i, timestamp: r, publishNotice: a } = e,
