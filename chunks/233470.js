@@ -220,21 +220,26 @@ function ee(e) {
     let t = Z.get(e);
     return (Z.delete(e), null != t && F(t.session) && Date.now() - t.at < 5e3) ? t.read : null;
 }
-async function et(e, t, n) {
-    let i = await a.Bo.get({ url: y.Rsh.CONJURE_PROJECT(e), rejectWithError: !1, signal: t });
+async function et(e, t, n, i) {
+    let r = await a.Bo.get({
+        url: y.Rsh.CONJURE_PROJECT(e),
+        query: null != i ? { ticket: i } : void 0,
+        rejectWithError: !1,
+        signal: t,
+    });
     return (
         (null == n || F(n)) &&
             t?.aborted !== !0 &&
-            (l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: i.body.project }),
+            (l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: r.body.project }),
             b(e, {
-                bot_permissions_changed: i.body.bot_permissions_changed,
-                integration_installed: i.body.integration_installed,
-                preview_ready: i.body.preview_ready,
-                has_activity: i.body.has_activity,
-                owner_authorization_revoked: i.body.owner_authorization_revoked,
-                preview_app_channels: i.body.preview_app_channels,
+                bot_permissions_changed: r.body.bot_permissions_changed,
+                integration_installed: r.body.integration_installed,
+                preview_ready: r.body.preview_ready,
+                has_activity: r.body.has_activity,
+                owner_authorization_revoked: r.body.owner_authorization_revoked,
+                preview_app_channels: r.body.preview_app_channels,
             })),
-        i
+        r
     );
 }
 async function en(e) {

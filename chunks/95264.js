@@ -6,7 +6,8 @@ i.d(
     {},
     {
         A: function (e, t) {
-            let d = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "remix";
+            let d = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "remix",
+                n = arguments.length > 3 ? arguments[3] : void 0;
             (0, a.mM)(async () => {
                 let { default: a } = await Promise.all([
                     i.e(142753),
@@ -31,7 +32,7 @@ i.d(
                     i.e(716875),
                     i.e(194422),
                 ]).then(i.bind(i, 312405));
-                return (i) => (0, r.jsx)(a, { ...i, project: e, mode: d, currentGuildId: t });
+                return (i) => (0, r.jsx)(a, { ...i, project: e, mode: d, currentGuildId: t, shareTicket: n });
             });
         },
     },

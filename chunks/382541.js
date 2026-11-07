@@ -4,9 +4,9 @@ var i = n(620632),
     a = n(652215);
 let s = new Map(),
     l = [];
-async function o(e) {
-    let { body: t } = await i.Bo.post({ url: e, rejectWithError: !0 });
-    return d(t);
+async function o(e, t) {
+    let { body: n } = await i.Bo.post({ url: e, body: t, rejectWithError: !0 });
+    return d(n);
 }
 function d(e) {
     let { ticket: t, url: n } = e;
@@ -37,8 +37,8 @@ n.d(
             let t = s.get(e);
             return null != t && t.until > Date.now() ? t.ticket : (s.delete(e), o(a.Rsh.CONJURE_PROJECT_WS_TICKET(e)));
         },
-        gA: function (e) {
-            return o(a.Rsh.CONJURE_PROJECT_REMIX_TICKET(e));
+        gA: function (e, t) {
+            return o(a.Rsh.CONJURE_PROJECT_REMIX_TICKET(e), t);
         },
         k9: function () {
             s.clear();

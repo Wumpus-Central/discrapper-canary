@@ -234,7 +234,7 @@ function ei(e) {
                     t = null != I ? new URLSearchParams(I).getAll("tab") : [];
                 1 === t.length && "wishlist" === t[0] ? r(A.I.USER_WISHLIST, `${k}${e}`) : r(A.I.USER_PROFILE, e);
             }
-            let z = (0, l.t)(e);
+            let z = (0, l.tY)(e);
             if ((null != z && r(A.I.CONJURE_PROJECT, z.applicationId), "/shop" === h)) {
                 let t = null != I ? (0, i.qg)(I) : null,
                     n = t?.tab,

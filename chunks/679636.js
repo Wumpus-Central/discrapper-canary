@@ -1356,9 +1356,9 @@ function nD(e) {
 function nO(e) {
     return (0, s.jsx)(ns, { children: (0, s.jsx)(nD, { ...e }) });
 }
+var nU = n(729160);
 (n(323874), n(14289), n(35956));
-var nU = n(729160),
-    nG = n(194261),
+var nG = n(194261),
     nw = n(95264),
     nB = n(529424),
     nH = n(995907),
@@ -1368,14 +1368,15 @@ var nU = n(729160),
     nz = n(191850),
     nK = n(471066);
 function nW(e) {
-    let { applicationId: t, guildId: n, channelId: i } = e,
-        l = (0, nB.A)(t),
-        a = r.useMemo(() => ({ guildId: n, channelId: i }), [n, i]);
-    switch (l.type) {
+    let { applicationId: t, guildId: n, channelId: i, ticket: l = null } = e,
+        a = (0, nB.A)(t, l),
+        o = r.useMemo(() => ({ guildId: n, channelId: i }), [n, i]);
+    switch (a.type) {
         case "loading":
         case "unavailable":
             return null;
         case "no_access":
+        case "expired":
             return (0, s.jsx)("div", {
                 className: nK.Nr,
                 children: (0, s.jsxs)("div", {
@@ -1385,7 +1386,7 @@ function nW(e) {
                         (0, s.jsx)(A.E, {
                             variant: "body-sm/medium",
                             color: "text-muted",
-                            children: K.intl.string(nz.default.mQma36),
+                            children: K.intl.string("expired" === a.type ? nz.default.wahvH2 : nz.default.mQma36),
                         }),
                     ],
                 }),
@@ -1394,8 +1395,8 @@ function nW(e) {
             return (0, s.jsxs)("div", {
                 className: nK.Nr,
                 children: [
-                    (0, s.jsx)(nF.go, { application: l.application }),
-                    (0, s.jsx)(nZ, { application: l.application, source: a }),
+                    (0, s.jsx)(nF.go, { application: a.application }),
+                    (0, s.jsx)(nZ, { application: a.application, source: o, ticket: l }),
                     (0, s.jsx)(A.E, {
                         variant: "body-xs/normal",
                         color: "text-muted",
@@ -1404,48 +1405,55 @@ function nW(e) {
                 ],
             });
         case "ready":
-            return (0, s.jsx)(nJ, { application: l.application, project: l.project, canRemix: l.canRemix, source: a });
+            return (0, s.jsx)(nJ, {
+                application: a.application,
+                project: a.project,
+                canRemix: a.canRemix,
+                source: o,
+                ticket: l,
+            });
     }
 }
 function nJ(e) {
-    let { application: t, project: n, canRemix: i, source: l } = e,
-        { type: r, launching: a, launchFailed: o, run: d } = (0, nH.A)(t.id, n, l);
+    let { application: t, project: n, canRemix: i, source: l, ticket: r } = e,
+        { type: a, launching: o, launchFailed: d, run: c } = (0, nH.A)(t.id, n, l);
     return (0, s.jsxs)("div", {
         className: nK.Nr,
         children: [
-            null != r
-                ? (0, s.jsx)(nV.A, { application: t, type: r, launching: a, onAction: d })
+            null != a
+                ? (0, s.jsx)(nV.A, { application: t, type: a, launching: o, onAction: c })
                 : (0, s.jsx)(nF.go, { application: t }),
-            o
+            d
                 ? (0, s.jsx)(A.E, {
                       variant: "body-sm/normal",
                       color: "text-feedback-critical",
                       children: K.intl.string(nz.default.hh2nuX),
                   })
                 : null,
-            (0, s.jsx)(nZ, { application: t, source: l }),
+            (0, s.jsx)(nZ, { application: t, source: l, ticket: r }),
             (0, s.jsx)(nF.r8, { project: n }),
             (0, s.jsxs)("div", {
                 className: nK.qr,
                 children: [
                     (0, s.jsx)(nF.HP, { project: n, guildId: l.guildId }),
-                    i ? (0, s.jsx)(nX, { project: n, guildId: l.guildId }) : null,
+                    i ? (0, s.jsx)(nX, { project: n, guildId: l.guildId, ticket: r }) : null,
                 ],
             }),
         ],
     });
 }
 function nZ(e) {
-    let { application: t, source: n } = e;
+    let { application: t, source: n, ticket: i } = e;
     return (0, s.jsx)(eM.D, {
         className: nK.Rt,
         "aria-label": K.intl.formatToPlainString(nz.default.c8DqSD, { name: t.name }),
-        onClick: () => (0, nY.default)(t.id, n),
+        onClick: () => (0, nY.default)(t.id, n, i),
         children: (0, s.jsx)(nF.PJ, { application: t, descriptionLineClamp: 2 }),
     });
 }
 function nX(e) {
-    let { project: t, guildId: n } = e;
+    let { project: t, guildId: n, ticket: i } = e,
+        l = i ?? void 0;
     return (0, s.jsxs)(tH.e, {
         size: "sm",
         className: nK.o1,
@@ -1453,12 +1461,12 @@ function nX(e) {
             (0, s.jsx)(eg.$, {
                 variant: "secondary",
                 text: K.intl.string(nz.default["6RGR3m"]),
-                onClick: () => (0, nw.A)(t, n),
+                onClick: () => (0, nw.A)(t, n, "remix", l),
             }),
             (0, s.jsx)(eg.$, {
                 variant: "secondary",
                 text: K.intl.string(nz.default["UsUa/c"]),
-                onClick: () => (0, nw.A)(t, n, "copy"),
+                onClick: () => (0, nw.A)(t, n, "copy", l),
             }),
         ],
     });
@@ -7856,7 +7864,11 @@ class cD extends r.Component {
                 case tR.I.GAME_ORGANIZATION_INVITE:
                     return (0, s.jsx)(iq, { code: l }, l);
                 case tR.I.CONJURE_PROJECT:
-                    return (0, s.jsx)(nW, { applicationId: l, guildId: t.guild_id ?? null, channelId: t.id }, l);
+                    return (0, s.jsx)(
+                        nW,
+                        { applicationId: l, guildId: t.guild_id ?? null, ticket: (0, nU.iW)(r), channelId: t.id },
+                        l,
+                    );
                 default:
                     throw Error(`Unknown coded link type: ${i}`);
             }
@@ -8092,7 +8104,7 @@ class cD extends r.Component {
                           let { type: t, url: n } = e;
                           if (t === er.Auw.RICH || null == n) return !1;
                           try {
-                              return null != (0, nU.t)(new URL(n));
+                              return null != (0, nU.tY)(new URL(n));
                           } catch {
                               return !1;
                           }
