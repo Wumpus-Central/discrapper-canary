@@ -6430,7 +6430,7 @@ function a9(e) {
             ? a3.m[n.id].render({ className: a8.$ })
             : a5.xO.has(n.id)
               ? (0, r.jsx)("img", {
-                    src: "https://cdn.discordapp.com/assets/content/6ba64b4470d6007e033d81e066d4cfd3ed0e6361e26be90aa5f8c2f3051086e7.png",
+                    src: "https://cdn.discordapp.com/assets/content/07fc7c8c8a40a12e6c6ebe438da46b8fc7fadf4b26011e7caf83c3613fe13143.png",
                     alt: "",
                     className: a8.$,
                 })
