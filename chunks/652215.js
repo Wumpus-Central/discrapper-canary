@@ -2640,7 +2640,6 @@ var nF =
         (eo.APPEAL_INGESTION_CONFIRM_SUBMISSION = "Appeal Ingestion Confirm Submission"),
         (eo.APPEAL_INGESTION_REQUEST_SENT = "Appeal Ingestion Request Sent"),
         (eo.APPEAL_INGESTION_THANKS = "Appeal Ingestion Thanks"),
-        (eo.APPEAL_INGESTION_SPAM = "Appeal Ingestion Spam"),
         (eo.SETTINGS_SURVEY_OVERRIDE = "Survey Override"),
         (eo.QUEST_PREVIEW_TOOL = "Quest Preview Tool"),
         (eo.QUEST_PREVIEW_TOOL_2 = "Quest Preview Tool 2"),

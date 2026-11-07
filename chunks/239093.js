@@ -14,7 +14,6 @@ var i,
         (r[(r.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
         (r[(r.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
         (r[(r.ClickAgeVerificationLink = 3)] = "ClickAgeVerificationLink"),
-        (r[(r.ClickSpamWebformLink = 4)] = "ClickSpamWebformLink"),
         (r[(r.ClickLearnMoreLink = 5)] = "ClickLearnMoreLink"),
         (r[(r.ClickCommunityGuidelinesLink = 6)] = "ClickCommunityGuidelinesLink"),
         (r[(r.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
@@ -31,7 +30,6 @@ Object.freeze({
     CONFIRM_SUBMISSION: _.JJy.APPEAL_INGESTION_CONFIRM_SUBMISSION,
     REQUEST_SENT: _.JJy.APPEAL_INGESTION_REQUEST_SENT,
     THANKS: _.JJy.APPEAL_INGESTION_THANKS,
-    SPAM: _.JJy.APPEAL_INGESTION_SPAM,
 });
 var h =
     (((s = {})[(s.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
@@ -95,8 +93,6 @@ n.d(
             static APPEALS_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
             static WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847";
             static AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731";
-            static SPAM_LINK =
-                "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
             static LEARN_MORE_UU_APPEAL_LINK = "https://support.discord.com/hc/articles/360041820932";
             static APP_APPEAL_LINK = "https://dis.gd/app-appeal";
         },
