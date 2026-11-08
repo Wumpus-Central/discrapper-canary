@@ -1358,10 +1358,11 @@ function nB(e) {
                 let t = 0,
                     n = !1;
                 for (let i of e) {
-                    let e = (0, nx.AK)(i);
-                    n ||= "working" === e;
-                    let r = (0, M.fL)(P.Ay.getProject(i));
-                    null == r || e_.Ay.isMuted(r) || ("unread" === e && (t += Math.max(1, (0, nG.xp)(i))));
+                    let e = P.Ay.getProject(i),
+                        r = (0, nx.AK)(i);
+                    n ||= "working" === r && null != e && P.Ay.isRailProject(e);
+                    let a = (0, M.fL)(e);
+                    null == a || e_.Ay.isMuted(a) || ("unread" === r && (t += Math.max(1, (0, nG.xp)(i))));
                 }
                 return { unreadCount: t, working: n };
             })(e),

@@ -30,7 +30,10 @@ let d = new Map(),
     L = new Map(),
     y = "unattempted",
     D = "unattempted";
-class b extends i.Ay.Store {
+function b(e) {
+    return l(e) || h.has(e.id);
+}
+class v extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -38,7 +41,10 @@ class b extends i.Ay.Store {
         return Array.from(d.values()).filter(l);
     }
     getRailProjects() {
-        return Array.from(d.values()).filter((e) => l(e) || h.has(e.id));
+        return Array.from(d.values()).filter(b);
+    }
+    isRailProject(e) {
+        return b(e);
     }
     getUnloadedParticipatingProjectIds() {
         return Array.from(h).filter((e) => !d.has(e));
@@ -116,7 +122,7 @@ class b extends i.Ay.Store {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-let v = new b(r.h, {
+let P = new v(r.h, {
     LOGOUT: function () {
         if (
             (T++,
@@ -264,7 +270,7 @@ n.d(
     t,
     {},
     {
-        Ay: v,
+        Ay: P,
         H_: function (e) {
             return l(e) || o(e) || (0, s.XE)(e);
         },
