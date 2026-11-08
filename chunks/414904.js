@@ -195,7 +195,7 @@ function V(e) {
         children: (0, i.jsx)(d.E, { variant: "body-md/medium", color: "text-subtle", children: t }),
     });
 }
-function F(e) {
+function Y(e) {
     let { widgets: t, onAddWidget: l, isSubmitting: n, trackUserProfileEditAction: r } = e;
     return (0, i.jsxs)("ul", {
         "aria-label": b.intl.string(b.t["+EIBSA"]),
@@ -219,7 +219,7 @@ function F(e) {
         ],
     });
 }
-function Y(e) {
+function F(e) {
     let { offers: t, onClose: l, trackUserProfileEditAction: n } = e,
         r = (0, a.cf)(
             [U.A],
@@ -299,33 +299,34 @@ function T(e) {
         O = E.length > 0,
         [R, L] = n.useState(null),
         W =
-            R ??
-            (function (e) {
-                let {
-                    initialCategory: t,
-                    hasInterests: l,
-                    hasGameStats: i,
-                    hasServerWidgets: n,
-                    highlightedApplicationIds: r,
-                } = e;
-                return (r?.length ?? 0) > 0
-                    ? "gameStats"
-                    : null != t
-                      ? t
-                      : l
-                        ? "interests"
-                        : i
+            null != R && ("fromYourServers" !== R || O)
+                ? R
+                : (function (e) {
+                      let {
+                          initialCategory: t,
+                          hasInterests: l,
+                          hasGameStats: i,
+                          hasServerWidgets: n,
+                          highlightedApplicationIds: r,
+                      } = e;
+                      return (r?.length ?? 0) > 0
                           ? "gameStats"
-                          : n
-                            ? "fromYourServers"
-                            : "interests";
-            })({
-                initialCategory: f,
-                hasInterests: G,
-                hasGameStats: U,
-                hasServerWidgets: O,
-                highlightedApplicationIds: g,
-            }),
+                          : null != t
+                            ? t
+                            : l
+                              ? "interests"
+                              : i
+                                ? "gameStats"
+                                : n
+                                  ? "fromYourServers"
+                                  : "interests";
+                  })({
+                      initialCategory: f,
+                      hasInterests: G,
+                      hasGameStats: U,
+                      hasServerWidgets: O,
+                      highlightedApplicationIds: g,
+                  }),
         [H, D] = n.useState(!1),
         M = n.useCallback(() => {
             (D(!0), l());
@@ -354,7 +355,7 @@ function T(e) {
                     ? O
                         ? (0, i.jsx)("div", {
                               className: K.lU,
-                              children: (0, i.jsx)(Y, { offers: E, onClose: l, trackUserProfileEditAction: d }),
+                              children: (0, i.jsx)(F, { offers: E, onClose: l, trackUserProfileEditAction: d }),
                           })
                         : (0, i.jsx)(V, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
                     : "gameStats" === W
@@ -374,7 +375,7 @@ function T(e) {
                       : G
                         ? (0, i.jsx)("div", {
                               className: K.lU,
-                              children: (0, i.jsx)(F, {
+                              children: (0, i.jsx)(Y, {
                                   widgets: N,
                                   onAddWidget: M,
                                   isSubmitting: H,

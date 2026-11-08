@@ -1,4 +1,4 @@
-a.d(e, { A: () => I });
+a.d(e, { A: () => h });
 var i = a(485845),
     l = a(179771),
     n = a(858899),
@@ -8,14 +8,15 @@ var i = a(485845),
     o = a(958805),
     d = a(61881),
     u = a(735321),
-    p = a(998218),
-    A = a(361504),
-    f = a(260498),
-    E = a(191850),
-    m = a(792996);
-let g = new Set();
-function I(t, e) {
-    let a = f.Ay.findProjectByApplicationId(t)?.id;
+    p = a(856383),
+    A = a(998218),
+    f = a(361504),
+    E = a(260498),
+    m = a(191850),
+    g = a(792996);
+let I = new Set();
+function h(t, e) {
+    let a = E.Ay.findProjectByApplicationId(t)?.id;
     null != a &&
         (0, r.openOAuth2Modal)({
             clientId: t,
@@ -25,19 +26,19 @@ function I(t, e) {
             integrationType: i.b.GUILD_INSTALL,
             callback: (i) => {
                 let { location: l } = i,
-                    r = p.A.toURLSafe(l ?? "")?.searchParams.get("code");
+                    r = A.A.toURLSafe(l ?? "")?.searchParams.get("code");
                 return (
                     null != r &&
                         (async function (t, e, a, i) {
-                            if (!g.has(e)) {
-                                g.add(e);
+                            if (!I.has(e)) {
+                                I.add(e);
                                 try {
                                     await (async function (t, e, a, i) {
                                         try {
                                             (await (async function (t, e) {
                                                 let a,
                                                     i = await fetch(
-                                                        `${((a = (0, A.d)()), null != a ? a : (0, A.b)() ? "http://localhost:8787" : window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") ? "https://conjure.town" : "https://conjure.city")}/agent/widget-consent`,
+                                                        `${((a = (0, f.d)()), null != a ? a : (0, f.b)() ? "http://localhost:8787" : window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") ? "https://conjure.town" : "https://conjure.city")}/agent/widget-consent`,
                                                         {
                                                             method: "POST",
                                                             headers: { "content-type": "application/json" },
@@ -57,13 +58,18 @@ function I(t, e) {
                                                     }
                                                 })(e));
                                         } catch {
-                                            (0, n.P0)({ text: m.intl.string(E.default.to9Sp4), variant: "critical" });
+                                            (0, n.P0)({ text: g.intl.string(m.default.to9Sp4), variant: "critical" });
                                             return;
                                         }
-                                        (i?.(), await (0, s.i)(e));
+                                        try {
+                                            i?.();
+                                        } catch (t) {
+                                            p.A.captureException(t);
+                                        }
+                                        await (0, s.i)(e);
                                     })(t, e, a, i);
                                 } finally {
-                                    g.delete(e);
+                                    I.delete(e);
                                 }
                             }
                         })(a, t, r, e),
