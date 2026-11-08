@@ -12,14 +12,14 @@ var r = n(477900),
     m = n(559447),
     p = n(645131),
     h = n(296872);
-let E = (0, a.UT)(p.A, {
+let g = (0, a.UT)(p.A, {
     getQueryId: (e) => (null != e ? `embedded-app-csp:${e}` : null),
     get: (e) => (null != e ? p.A.getPolicy(e) : null),
     load: async (e) => {
         null != e && (await (0, m.y)(e));
     },
 });
-var g = n(115560),
+var E = n(115560),
     b = n(331322),
     v = n(534514),
     S = n(834730),
@@ -87,11 +87,11 @@ let A = (0, O.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var R = n(676279);
-let I = new Set(),
+var I = n(676279);
+let R = new Set(),
     L = new Set();
 function k(e) {
-    if (!I.has(e)) for (let t of (I.add(e), L)) t();
+    if (!R.has(e)) for (let t of (R.add(e), L)) t();
 }
 function C(e) {
     return (
@@ -190,6 +190,8 @@ function eo(e) {
         a = o.top + Math.min(Math.max(t.y, 0), o.height);
     return (0, r.jsx)(er.A, {
         userId: t.userId,
+        guildId: t.guildId,
+        channelId: t.channelId,
         targetElementRef: u,
         shouldShow: !0,
         position: "right",
@@ -223,10 +225,10 @@ function em(e) {
             nativeView: y = !1,
         } = e,
         w = (0, W.xi)({}),
-        O = (0, o.useMemoOne)(() => (0, g.A)(), [t]),
+        O = (0, o.useMemoOne)(() => (0, E.A)(), [t]),
         A = l.useRef(null),
-        [R, I] = l.useState(!1),
-        L = y && !R && (0, ea.H9)(),
+        [I, R] = l.useState(!1),
+        L = y && !I && (0, ea.H9)(),
         k = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : t,
@@ -296,7 +298,7 @@ function em(e) {
         N = (function (e) {
             let t = (0, h.XF)("useEmbeddedAppCSP"),
                 n = t && null != e ? (0, f.S)(e) : null,
-                { data: r, error: l } = E(n);
+                { data: r, error: l } = g(n);
             return t
                 ? null == n
                     ? { status: "developer-served" }
@@ -347,9 +349,9 @@ function em(e) {
                         O,
                         t,
                         () => em(e),
-                        () => I(!0),
+                        () => R(!0),
                     )),
-                    null == eo.current && I(!0)),
+                    null == eo.current && R(!0)),
                     (0, $.M7)(O, e),
                     null != e.contentWindow && (0, $.Yt)(e.contentWindow, O));
             },
@@ -448,7 +450,7 @@ function ep(e) {
         p = (0, T._o)(),
         h =
             ((t = i.url),
-            (0, R.nr)()
+            (0, I.nr)()
                 ? (function (e, t) {
                       let n =
                               A.useConfig({ location: "useEmbeddedAppStorageAccess" }).enabled && null != e
@@ -456,9 +458,9 @@ function ep(e) {
                                   : null,
                           { cookiesWork: r, markCookiesWork: u } = (function (e, t) {
                               let [n, r] = l.useState(null),
-                                  u = l.useSyncExternalStore(C, () => null != e && I.has(e));
+                                  u = l.useSyncExternalStore(C, () => null != e && R.has(e));
                               l.useEffect(() => {
-                                  if (null == e || I.has(e)) return;
+                                  if (null == e || R.has(e)) return;
                                   let n = !0;
                                   return (
                                       !(async function (e) {
@@ -554,7 +556,7 @@ function ep(e) {
                       return null == n || !0 === r ? _ : null == r ? M : { status: "needed", popup: s, openPopup: o };
                   })(t, p)
                 : _),
-        E = l.useCallback(
+        g = l.useCallback(
             (e) => {
                 (m(!0), a?.(e));
             },
@@ -565,12 +567,12 @@ function ep(e) {
             className: ec.Qf,
             children: (0, r.jsx)(w, { popup: h.popup, onOpenPopup: h.openPopup }),
         });
-    let g = "ready" === h.status,
+    let E = "ready" === h.status,
         b = u || "checking" === h.status;
     return (0, r.jsxs)("div", {
         className: ec.Qf,
         children: [
-            d && g
+            d && E
                 ? null
                 : (0, r.jsx)("div", {
                       className: s()(ec.Qf, !0 !== n ? ec.SL : void 0, b ? ec.k$ : void 0, o),
@@ -578,7 +580,7 @@ function ep(e) {
                   }),
             (0, r.jsx)("div", {
                 className: s()(ec.Qf, d ? void 0 : ec.Ar),
-                children: g ? (0, r.jsx)(em, { ...i, onLoad: E }) : null,
+                children: E ? (0, r.jsx)(em, { ...i, onLoad: g }) : null,
             }),
         ],
     });
