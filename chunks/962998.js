@@ -39,10 +39,10 @@ let O = new Set(p.n),
 function b(e) {
     return null != e && T.has(e) ? e : null;
 }
-let k = new Map();
+let N = new Map();
 function C(e, t) {
-    let n = k.get(e);
-    null != n && (k.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
+    let n = N.get(e);
+    null != n && (N.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
 n.d(
     t,
@@ -148,9 +148,9 @@ n.d(
             },
             publish_options(e, t) {
                 let { projectId: n } = t,
-                    r = k.get(n);
+                    r = N.get(n);
                 if (null == r || r.nonce !== e.nonce) return;
-                (k.delete(n), clearTimeout(r.timeout));
+                (N.delete(n), clearTimeout(r.timeout));
                 let s = e.options;
                 !0 !== e.ok ||
                 null == s ||
@@ -308,7 +308,7 @@ n.d(
                 C(e, "Superseded by a newer publish request");
                 let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
                     o = setTimeout(() => C(e, "Could not load publish destinations. Try again."), 15e3);
-                k.set(e, { resolve: t, reject: n, timeout: o, nonce: s });
+                N.set(e, { resolve: t, reject: n, timeout: o, nonce: s });
                 try {
                     r.sendPublishOptions(s);
                 } catch {

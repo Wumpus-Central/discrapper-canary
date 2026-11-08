@@ -63,8 +63,8 @@ function x(e) {
         _ = r.useRef(null),
         D = l === T.S7L.RTC_CONNECTED,
         x = r.useCallback((e) => (0, i.jsx)(I.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: P, connectionStatusText: L } = m.A.getStatus(l, S),
-        U = (0, g.KN)("RTCConnectionStatus");
+        { connectionStatus: P, connectionStatusText: U } = m.A.getStatus(l, S),
+        L = (0, g.KN)("RTCConnectionStatus");
     return (0, i.jsxs)("div", {
         className: y.pe,
         children: [
@@ -93,7 +93,7 @@ function x(e) {
                                 (0, i.jsxs)("div", {
                                     className: y.ei,
                                     children: [
-                                        d && U
+                                        d && L
                                             ? null
                                             : (0, i.jsx)(O, {
                                                   accessory: C,
@@ -102,7 +102,7 @@ function x(e) {
                                                           ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), r(e));
                                                       },
                                                       children: (0, i.jsx)(N, {
-                                                          text: L,
+                                                          text: U,
                                                           textVariant: E,
                                                           hasVideo: S,
                                                           className: v[P],
@@ -111,7 +111,7 @@ function x(e) {
                                                   }),
                                               }),
                                         d
-                                            ? (0, i.jsx)(O, { accessory: U ? C : null, enlarged: !0, children: o })
+                                            ? (0, i.jsx)(O, { accessory: L ? C : null, enlarged: !0, children: o })
                                             : null,
                                     ],
                                 }),

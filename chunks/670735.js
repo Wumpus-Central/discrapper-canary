@@ -12,19 +12,19 @@ var r = n(477900),
     g = n(825484),
     p = n(148810),
     m = n(521502),
-    y = n(380610),
-    A = n(913379),
+    A = n(380610),
+    y = n(913379),
     v = n(976860),
-    x = n(129230),
-    w = n(856383),
-    E = n(253400),
+    E = n(129230),
+    x = n(856383),
+    w = n(253400),
     b = n(721668),
     C = n(652215),
     N = n(792996),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    return null == (0, c.bG)([m.A], () => ((0, y.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null))
+    return null == (0, c.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null))
         ? null
         : (0, r.jsx)(f.$, {
               variant: "primary",
@@ -42,7 +42,7 @@ function _() {
 }
 let D = s().throttle(
     (e) => {
-        A.A.increment(
+        y.A.increment(
             {
                 name: u.K.APP_CRASHED,
                 tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
@@ -63,8 +63,8 @@ class I extends i.PureComponent {
         let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
         let r = (0, d.b)(),
-            i = w.A.captureCrash(e, { extra: t });
-        (x.default.track(C.HAw.APP_CRASHED, {
+            i = x.A.captureCrash(e, { extra: t });
+        (E.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -74,7 +74,7 @@ class I extends i.PureComponent {
             error_level: "fatal",
         }),
             D(r),
-            E.Ay.cleanupDisplaySleep());
+            w.Ay.cleanupDisplaySleep());
     }
     _handleSubmitReport() {
         location.reload(!0);

@@ -13,16 +13,16 @@ var i = n(855986),
     g = n(287809),
     p = n(645959),
     m = n(652215),
-    y = n(792996);
-let A = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
+    A = n(792996);
+let y = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     v = null,
-    x = null,
+    E = null,
+    x = [],
     w = [],
-    E = [],
     b = [];
 function C(e) {
-    ((w = [...w, e]),
-        (b = _((E = E.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: w.includes(e.data.record.id) }))))),
+    ((x = [...x, e]),
+        (b = _((w = w.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: x.includes(e.data.record.id) }))))),
         k.emitChange());
 }
 function N(e) {
@@ -39,12 +39,12 @@ function _(e) {
     for (let r of e) r.type === o.rD.USER && !0 === r.playingSameGame ? t.push(r) : n.push(r);
     return 0 === t.length || 0 === n.length
         ? e
-        : [O(y.intl.formatToPlainString(y.t.HBJiRR, { name: v.name })), ...t, O(y.intl.string(y.t.Jf0OOQ)), ...n];
+        : [O(A.intl.formatToPlainString(A.t.HBJiRR, { name: v.name })), ...t, O(A.intl.string(A.t.Jf0OOQ)), ...n];
 }
 function D() {
     return (
         (null != v || null != r) &&
-        ((v = null), null != r && (r.destroy(), (r = null)), null != x && (x(), (x = null)), !0)
+        ((v = null), null != r && (r.destroy(), (r = null)), null != E && (E(), (E = null)), !0)
     );
 }
 function I(e) {
@@ -58,13 +58,13 @@ function I(e) {
                       }),
                   )
                 : null,
-        n = E.map((e) => {
+        n = w.map((e) => {
             if (e.type !== o.rD.USER || (null != t && !t.has(e.data.record.id))) return e;
             let n = h.A.getStatus(e.data.record.id),
                 r = N(e.data.record.id);
             return n === e.status && r === e.playingSameGame ? e : { ...e, status: n, playingSameGame: r };
         });
-    return !n.every((e, t) => e === E[t]) && ((b = _((E = n))), !0);
+    return !n.every((e, t) => e === w[t]) && ((b = _((w = n))), !0);
 }
 function S() {
     return I(null);
@@ -91,14 +91,14 @@ class T extends i.Ay.Store {
 let k = new T(l.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             ((v = e.activity),
-                (x = e.resolve),
-                (w = []),
+                (E = e.resolve),
+                (x = []),
                 null == r &&
                     (r = new o.Ay(
                         (e, t) => {
                             let n;
                             ((b = _(
-                                (E = (
+                                (w = (
                                     "" === t.trim()
                                         ? ((n = []),
                                           p.A.getPrivateChannelIds().forEach((e) => {
@@ -121,7 +121,7 @@ let k = new T(l.h, {
                                                 let { record: t } = e;
                                                 return {
                                                     type: o.rD.USER,
-                                                    sent: w.includes(t.id),
+                                                    sent: x.includes(t.id),
                                                     status: h.A.getStatus(t.id),
                                                     playingSameGame: N(t.id),
                                                     data: e,
@@ -133,7 +133,7 @@ let k = new T(l.h, {
                                                     r = d.A.getGuild(t.guild_id);
                                                 return {
                                                     type: o.rD.TEXT_CHANNEL,
-                                                    sent: w.includes(t.id),
+                                                    sent: x.includes(t.id),
                                                     categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
                                                     guildName: r?.name ?? "",
                                                     data: e,
@@ -141,7 +141,7 @@ let k = new T(l.h, {
                                             }
                                             case o.rD.GROUP_DM: {
                                                 let { record: t } = e;
-                                                return { type: o.rD.GROUP_DM, sent: w.includes(t.id), data: e };
+                                                return { type: o.rD.GROUP_DM, sent: x.includes(t.id), data: e };
                                             }
                                             default:
                                                 return null;
@@ -151,7 +151,7 @@ let k = new T(l.h, {
                             )),
                                 k.emitChange());
                         },
-                        A,
+                        y,
                         100,
                     )),
                 r.search(""));
@@ -197,5 +197,5 @@ let k = new T(l.h, {
         LOCAL_ACTIVITY_UPDATE: j,
         RPC_APP_DISCONNECTED: j,
     }),
-    P = 221552 == n.j ? k : null;
-n.d(t, {}, { A: P });
+    R = 221552 == n.j ? k : null;
+n.d(t, {}, { A: R });

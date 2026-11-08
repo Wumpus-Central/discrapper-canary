@@ -17,7 +17,7 @@ var l = n(477900),
     C = n(805251),
     p = n(792996),
     S = n(543136);
-let A = function (e) {
+let _ = function (e) {
     let { category: t, daysRemainingText: n = p.t.Io7ozn, className: s } = e;
     if (!(0, x.HF)(t.unpublishedAt)) return null;
     let a = (0, x.WU)(t.unpublishedAt),
@@ -27,16 +27,16 @@ let A = function (e) {
         children: (0, l.jsx)(C.E, { type: { text: r }, variant: "inverted" }),
     });
 };
-var _ = n(212407),
+var A = n(212407),
     v = n(761977);
 function I(e) {
     let { category: t, onSelect: n } = e,
         a = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
         x = (0, o.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: I } = (0, _.MV)(t),
+        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: I } = (0, A.MV)(t),
         b = s.useRef(null),
-        j = null != I,
-        L =
+        L = null != I,
+        j =
             null != n
                 ? {
                       role: "button",
@@ -50,13 +50,13 @@ function I(e) {
                 : {};
     return (0, l.jsxs)("div", {
         ref: b,
-        className: i()(v.sW, { [v.by]: j, [v.vk]: null != n }),
-        ...L,
+        className: i()(v.sW, { [v.by]: L, [v.vk]: null != n }),
+        ...j,
         children: [
             (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
                 className: v.Db,
-                children: j
+                children: L
                     ? (0, l.jsx)(d._, {
                           src: I,
                           fit: "cover",
@@ -75,7 +75,7 @@ function I(e) {
                           ],
                       }),
             }),
-            (0, l.jsx)(A, { category: t, className: v.v0, daysRemainingText: p.t["8gsP5M"] }),
+            (0, l.jsx)(_, { category: t, className: v.v0, daysRemainingText: p.t["8gsP5M"] }),
             null != n &&
                 (0, l.jsx)("div", {
                     className: v.IG,

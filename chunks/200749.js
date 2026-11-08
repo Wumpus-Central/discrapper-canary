@@ -21,7 +21,7 @@ n.d(
                 className: h,
                 artURL: g,
                 noArt: f = !1,
-                selected: A = !1,
+                selected: p = !1,
             } = e;
             return (0, i.jsxs)(o.A, {
                 className: h,
@@ -58,7 +58,7 @@ n.d(
                               children: u,
                           })
                         : null,
-                    A || null == n
+                    p || null == n
                         ? null
                         : (0, i.jsx)("div", {
                               className: c.outerButton,

@@ -33,9 +33,9 @@ function x(e) {
     return M !== e && ((M = e), !0);
 }
 function P(e) {
-    return ((N = e), (T = 0), L());
+    return ((N = e), (T = 0), U());
 }
-function L() {
+function U() {
     let e, t, n;
     if (!_) return !1;
     let r = g.A.getChannel(R);
@@ -110,7 +110,7 @@ function L() {
         !1
     );
 }
-function U() {
+function L() {
     if (!_) return !1;
     let e = v;
     return (v = E.A.getFriendCount() > 0) !== e;
@@ -160,7 +160,7 @@ function F() {
 }
 function j(e) {
     if (e.key !== C.TLS) return !1;
-    ((_ = !0), U(), (i = F()), (R = null), P(""));
+    ((_ = !0), L(), (i = F()), (R = null), P(""));
 }
 function k(e) {
     if (e.key !== C.TLS) return !1;
@@ -170,15 +170,15 @@ function V() {
     (null != i && (i.destroy(), (i = null)), O());
 }
 function H() {
-    return !!_ && L();
+    return !!_ && U();
 }
 class B extends r.Ay.Store {
     static displayName = "PrivateChannelRecipientsInviteStore";
     initialize() {
         (this.waitFor(g.A, A.A, a.A, p.A, m.Ay, I.A, E.A, o.A, S.default),
-            this.syncWith([S.default, g.A], L),
+            this.syncWith([S.default, g.A], U),
             this.syncWith([o.A], H),
-            this.syncWith([E.A], U));
+            this.syncWith([E.A], L));
     }
     getResults() {
         return y;
@@ -211,12 +211,12 @@ let W = new B(l.h, {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
         let i = _;
-        return (O(), (_ = i), (R = n), L());
+        return (O(), (_ = i), (R = n), U());
     },
     MODAL_PUSH: j,
     SHOW_ACTION_SHEET: j,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        ((_ = !0), U(), (i = F()), (R = e.channelId), P(""));
+        ((_ = !0), L(), (i = F()), (R = e.channelId), P(""));
     },
     MODAL_POP: k,
     HIDE_ACTION_SHEET: k,

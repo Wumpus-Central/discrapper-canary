@@ -12,8 +12,8 @@ var r = n(503698),
     h = n(46653),
     g = n(200749),
     f = n(792996),
-    A = n(604889);
-let p = n(913516);
+    p = n(604889);
+let A = n(913516);
 n.d(
     t,
     {},
@@ -28,10 +28,10 @@ n.d(
                     }),
                 );
             return (0, i.jsx)("div", {
-                className: l()(A.Qs, A.FY),
+                className: l()(p.Qs, p.FY),
                 children: (0, i.jsx)(g.A, {
-                    className: A.FP,
-                    artURL: p,
+                    className: p.FP,
+                    artURL: A,
                     noArt: r,
                     selected: E,
                     size: (0, g.J)(n),
@@ -39,10 +39,10 @@ n.d(
                     description: E
                         ? null
                         : (0, i.jsxs)("div", {
-                              className: l()(A.t2, { [A.y8]: !b }),
+                              className: l()(p.t2, { [p.y8]: !b }),
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: A.lO,
+                                      className: p.lO,
                                       children: (0, i.jsx)(a.$, {
                                           variant: "secondary",
                                           size: b ? "sm" : "md",
@@ -51,7 +51,7 @@ n.d(
                                   }),
                                   C
                                       ? (0, i.jsx)("div", {
-                                            className: l()(A.lO, A.EU),
+                                            className: l()(p.lO, p.EU),
                                             children: (0, i.jsx)(o.m, {
                                                 text: f.intl.string(f.t.wCrzut),
                                                 children: (0, i.jsx)(c.K, {

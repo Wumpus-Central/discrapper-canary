@@ -28,8 +28,8 @@ var i = n(477900),
     O = n(91242),
     x = n(898879),
     P = n(293495),
-    L = n(267102),
-    U = n(293432),
+    U = n(267102),
+    L = n(293432),
     w = n(46653),
     b = n(186111),
     G = n(287809),
@@ -133,7 +133,7 @@ n.d(
                 { applicationId: d, frameId: c } = t,
                 h = (0, I.A)(),
                 f = (0, a.bG)([O.A], () => (0, V.ny)(O.A.getFrame(c)), [c]),
-                g = (0, L.Us)() === k.BRT.APP,
+                g = (0, U.Us)() === k.BRT.APP,
                 A = null != h && (0, p.H)(h.location) === o.id && h.applicationId === d,
                 m = f?.id,
                 _ = f?.data.layoutMode,
@@ -143,7 +143,7 @@ n.d(
                 { url: F } = (0, E.A)({ applicationId: d, names: W, size: 1024 }),
                 j = !l && w,
                 H = !w,
-                Y = (0, a.bG)([b.A, U.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: U.A }));
+                Y = (0, a.bG)([b.A, L.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: L.A }));
             return (
                 r.useEffect(() => {
                     if (j && null == m && null != h && !Y) {

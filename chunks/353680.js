@@ -198,10 +198,10 @@ let g = [" ", "Enter"],
 function m(e) {
     (e.preventDefault(), e.stopImmediatePropagation());
 }
-function y(e, t) {
+function A(e, t) {
     return t.includes(e.key);
 }
-function A(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (!!t && !1 === e.isTrusted) || (e.key?.toLowerCase() === "d" && (e.metaKey || e.ctrlKey) && !e.altKey);
 }
@@ -245,7 +245,7 @@ class v {
             this.endDrag());
     }
     handleGlobalKeyDown = (e) => {
-        this.monitor.isDragging() && y(e, p) && (this.endDrag(e), this._announcer.announceCancel());
+        this.monitor.isDragging() && A(e, p) && (this.endDrag(e), this._announcer.announceCancel());
     };
     setDndMode(e) {
         this.options?.onDndModeChanged(e);
@@ -295,7 +295,7 @@ class v {
             return { x: r, y: n };
         })(this.sourceNodes.get(e));
     handleDragStart = (e, t) => {
-        if (!A(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
+        if (!y(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
             return;
         if (this.monitor.isDragging()) return void this.actions.publishDragSource();
         m(t);
@@ -313,7 +313,7 @@ class v {
             this._announcer.announceDrag(n, e));
     };
     handleDrop = (e) => {
-        y(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
+        A(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
         (null != e && m(e),
@@ -323,25 +323,25 @@ class v {
             this.setDndMode(!1));
     }
 }
-let x = (0, l.eV)("keydown", (e) => !!A(e) && (e.preventDefault(), !0)),
-    w = (0, l.eV)(
+let E = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
+    x = (0, l.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
-    E = {
+    w = {
         backends: [
-            { id: "html5", backend: i.t, transition: w },
+            { id: "html5", backend: i.t, transition: x },
             {
                 id: "keyboard",
                 backend: (e, t, n) => new v(e, t, n),
                 context: { window, document },
                 options: { onDndModeChanged: o.ef, announcer: s.O },
                 preview: !0,
-                transition: x,
+                transition: E,
             },
         ],
     };
 function b(e) {
     let { children: t } = e;
-    return (0, r.jsx)(l.QP, { options: E, children: t });
+    return (0, r.jsx)(l.QP, { options: w, children: t });
 }

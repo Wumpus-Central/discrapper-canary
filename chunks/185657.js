@@ -65,7 +65,7 @@ function x() {
 function P(e) {
     return e.type === l.$.PLAYING || e.type === l.$.COMPETING || e.type === l.$.WATCHING || e.type === l.$.STREAMING;
 }
-function L(e) {
+function U(e) {
     let t = (function (e) {
         let t = p.default.getUser(e);
         if (null == t) return null;
@@ -129,14 +129,14 @@ function L(e) {
                                       : { category: "OFFLINE", displayActivities: o }),
                         O = "IN_GAME" === v ? (M[0]?.name ?? null) : null,
                         x = R.get(f) ?? [],
-                        [L] = C.A.isFavorite(E.x.FRIENDS, f),
-                        U = g.Ay.getVoiceChannelId() ?? g.Ay.getChannelId(),
-                        w = null != U ? c.A.getChannel(U)?.guild_id : null,
+                        [U] = C.A.isFavorite(E.x.FRIENDS, f),
+                        L = g.Ay.getVoiceChannelId() ?? g.Ay.getChannelId(),
+                        w = null != L ? c.A.getChannel(L)?.guild_id : null,
                         b = h.A.getStatus(f),
                         G = b === T.clD.ONLINE,
                         F = M.some(P),
                         j = b === T.clD.DND || b === T.clD.IDLE,
-                        k = I.Ay.getName(w, U, p);
+                        k = I.Ay.getName(w, L, p);
                     return {
                         id: f,
                         userId: f,
@@ -144,7 +144,7 @@ function L(e) {
                         activities: M,
                         nickname: N,
                         category: "FRIEND",
-                        activityCategory: L ? null : v,
+                        activityCategory: U ? null : v,
                         groupIds: x,
                         sortKey: (function (e) {
                             let {
@@ -202,19 +202,19 @@ function L(e) {
     })(e);
     return null == t ? v.delete(e) : v.set(e, t);
 }
-function U() {
+function L() {
     (v.clear(), O(), x());
     let e = !1;
     for (let [t, n] of f.A.getMutableRelationships().entries())
-        (n === T.eA$.PENDING_INCOMING || n === T.eA$.PENDING_OUTGOING) && (e = L(t) || e);
-    for (let t of d.A.getUserAffinitiesMap().keys()) f.A.isFriend(t) || (e = L(t) || e);
-    for (let t of f.A.getFriendIDs()) e = L(t) || e;
+        (n === T.eA$.PENDING_INCOMING || n === T.eA$.PENDING_OUTGOING) && (e = U(t) || e);
+    for (let t of d.A.getUserAffinitiesMap().keys()) f.A.isFriend(t) || (e = U(t) || e);
+    for (let t of f.A.getFriendIDs()) e = U(t) || e;
     return e;
 }
 class w extends s.Ay.Store {
     static displayName = "FriendsWidgetFriendsStore";
     initialize() {
-        (this.waitFor(c.A, u.A, C.A, h.A, f.A, g.Ay, A.A, d.A, p.default, m.A), U());
+        (this.waitFor(c.A, u.A, C.A, h.A, f.A, g.Ay, A.A, d.A, p.default, m.A), L());
     }
     getRows(e) {
         return [v.values(e), v.version];
@@ -231,19 +231,19 @@ let G = new w(
     __OVERLAY__
         ? {}
         : {
-              POST_CONNECTION_OPEN: b(U),
-              OVERLAY_INITIALIZE: b(U),
-              CACHE_LOADED: b(U),
-              CACHE_LOADED_LAZY: b(U),
-              FRIENDS_LIST_POPOUT_MOUNTED: b(U),
+              POST_CONNECTION_OPEN: b(L),
+              OVERLAY_INITIALIZE: b(L),
+              CACHE_LOADED: b(L),
+              CACHE_LOADED_LAZY: b(L),
+              FRIENDS_LIST_POPOUT_MOUNTED: b(L),
               OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: b(function (e) {
-                  return e.tab === E.x.FRIENDS && L(e.targetId);
+                  return e.tab === E.x.FRIENDS && U(e.targetId);
               }),
               PRESENCE_UPDATES: b(function (e) {
                   let t = !1;
                   for (let n of e.updates) {
                       let e = n.user?.id;
-                      null != e && (t = L(e) || t);
+                      null != e && (t = U(e) || t);
                   }
                   return t;
               }),
@@ -251,37 +251,37 @@ let G = new w(
                   let t = !1;
                   for (let n of e.presences) {
                       let e = n.user?.id;
-                      null != e && (t = L(e) || t);
+                      null != e && (t = U(e) || t);
                   }
                   return t;
               }),
               ACTIVITY_METADATA_UPDATE: b(function (e) {
-                  return L(e.userId);
+                  return U(e.userId);
               }),
               VOICE_STATE_UPDATES: b(function (e) {
                   let t = !1;
-                  for (let n of e.voiceStates) t = L(n.userId) || t;
+                  for (let n of e.voiceStates) t = U(n.userId) || t;
                   return t;
               }),
               VOICE_CHANNEL_SELECT: b(function (e) {
                   x();
                   let t = !1;
-                  for (let e of f.A.getFriendIDs()) t = L(e) || t;
+                  for (let e of f.A.getFriendIDs()) t = U(e) || t;
                   return t;
               }),
               RELATIONSHIP_ADD: b(function (e) {
-                  return L(e.relationship.id);
+                  return U(e.relationship.id);
               }),
               RELATIONSHIP_REMOVE: b(function (e) {
-                  return L(e.relationship.id);
+                  return U(e.relationship.id);
               }),
               RELATIONSHIP_UPDATE: b(function (e) {
-                  return L(e.relationship.id);
+                  return U(e.relationship.id);
               }),
               RELATIONSHIP_PENDING_INCOMING_REMOVED: b(function (e) {
                   let t = !1;
                   for (let e of v.values("FRIEND_REQUESTS", !0))
-                      e.relationshipType === T.eA$.PENDING_INCOMING && (t = L(e.userId) || t);
+                      e.relationshipType === T.eA$.PENDING_INCOMING && (t = U(e.userId) || t);
                   return t;
               }),
               CREATE_FRIEND_GROUP: b(function (e) {
@@ -290,33 +290,33 @@ let G = new w(
               DELETE_FRIEND_GROUP: b(function (e) {
                   O();
                   let t = !1;
-                  for (let e of f.A.getFriendIDs()) t = L(e) || t;
+                  for (let e of f.A.getFriendIDs()) t = U(e) || t;
                   return t;
               }),
               ADD_USERS_TO_GROUP: b(function (e) {
                   O();
                   let t = !1;
-                  for (let n of e.userIds) t = L(n) || t;
+                  for (let n of e.userIds) t = U(n) || t;
                   return t;
               }),
               REMOVE_USERS_FROM_GROUP: b(function (e) {
                   O();
                   let t = !1;
-                  for (let n of e.userIds) t = L(n) || t;
+                  for (let n of e.userIds) t = U(n) || t;
                   return t;
               }),
               LOAD_USER_AFFINITIES_V2_SUCCESS: b(function (e) {
                   let t = !1;
-                  for (let e of d.A.getUserAffinitiesMap().keys()) t = L(e) || t;
+                  for (let e of d.A.getUserAffinitiesMap().keys()) t = U(e) || t;
                   return t;
               }),
               USER_UPDATE: b(function (e) {
-                  return L(e.user.id);
+                  return U(e.user.id);
               }),
               CURRENT_USER_UPDATE: b(function (e) {
                   x();
                   let t = !1;
-                  for (let e of f.A.getFriendIDs()) t = L(e) || t;
+                  for (let e of f.A.getFriendIDs()) t = U(e) || t;
                   return t;
               }),
               LOGOUT: b(function () {

@@ -14,7 +14,7 @@ var r = n(477900),
 function m() {
     window.getSelection()?.removeAllRanges();
 }
-function y(e) {
+function A(e) {
     let {
             children: t,
             close: n,
@@ -24,27 +24,27 @@ function y(e) {
             position: h,
             align: f,
             impressionName: g,
-            impressionProperties: y,
-            disableClickTrap: A = !1,
+            impressionProperties: A,
+            disableClickTrap: y = !1,
             repositionOnContentChange: v = !1,
         } = e,
-        x = i.useRef(n);
+        E = i.useRef(n);
     i.useEffect(() => {
-        x.current = n;
+        E.current = n;
     });
-    let w = i.useRef(o);
+    let x = i.useRef(o);
     (i.useEffect(() => {
-        w.current = o;
+        x.current = o;
     }),
-        i.useEffect(() => () => w.current?.(), []),
-        (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: y }));
-    let E = (0, c.aL)(),
+        i.useEffect(() => () => x.current?.(), []),
+        (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
+    let w = (0, c.aL)(),
         b = i.useCallback(() => {
-            E.dispatch(p.jej.POPOUT_SHOW);
-        }, [E]),
+            w.dispatch(p.jej.POPOUT_SHOW);
+        }, [w]),
         C = i.useCallback(() => {
-            E.dispatch(p.jej.POPOUT_HIDE);
-        }, [E]),
+            w.dispatch(p.jej.POPOUT_HIDE);
+        }, [w]),
         N = a.ownerDocument;
     return (0, r.jsx)(s.Ow, {
         focus: "modal",
@@ -53,11 +53,11 @@ function y(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? b() : (C(), "outside-press" === n && setTimeout(m, 0), x.current());
+            e ? b() : (C(), "outside-press" === n && setTimeout(m, 0), E.current());
         },
         overrideTargetRect: u,
         placement: (0, s.Pv)(h ?? "right", f ?? "top"),
-        blockPointerEvents: !A,
+        blockPointerEvents: !y,
         crossAccessFlip: !1,
         autoUpdate: v,
         renderLayer: (e) => {
@@ -67,7 +67,7 @@ function y(e) {
         children: () => null,
     });
 }
-class A extends i.PureComponent {
+class y extends i.PureComponent {
     state = { render: void 0 };
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
@@ -120,7 +120,7 @@ class A extends i.PureComponent {
             null != u &&
             l.context === e &&
             t.ownerDocument?.defaultView === o
-            ? (0, r.jsx)(y, {
+            ? (0, r.jsx)(A, {
                   target: t,
                   rect: s,
                   close: this.close,
@@ -156,7 +156,7 @@ n.d(
                 l = (0, o.bG)([h.A], () => h.A.theme),
                 { appContext: s, renderWindow: a } = i.useContext(c.Ay);
             return (0, r.jsx)(
-                A,
+                y,
                 { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: u.Z_ },
                 t,
             );

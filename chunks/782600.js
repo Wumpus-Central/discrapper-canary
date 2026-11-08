@@ -94,8 +94,8 @@ var D = n(754712),
     O = n(129230),
     x = n(652215),
     P = n(792996),
-    L = n(193221);
-class U extends l.PureComponent {
+    U = n(193221);
+class L extends l.PureComponent {
     _initTimeout = new h.Ep();
     _silenceTimeout = new h.Ep();
     _messageTimeout = new h.Ep();
@@ -177,11 +177,11 @@ class U extends l.PureComponent {
             : (0, r.jsx)("span", {
                   "aria-live": "polite",
                   "aria-atomic": "true",
-                  className: L.b_,
+                  className: U.b_,
                   children: (0, r.jsx)(f.E, {
                       variant: "body-xs/normal",
                       color: "text-subtle",
-                      className: L.Qe,
+                      className: U.Qe,
                       children: n ? (i ? e : t) : void 0,
                   }),
               });
@@ -208,20 +208,20 @@ class U extends l.PureComponent {
         S && e && !d && this._micTestStop();
         let T = s.length >= l.length ? s : l;
         return (0, r.jsxs)("div", {
-            className: a()(L.kL, I),
+            className: a()(U.kL, I),
             children: [
                 (0, r.jsx)(g.D, {
                     label: t ?? void 0,
                     hideLabel: m,
                     description: m ? null : n,
                     children: (0, r.jsxs)("div", {
-                        className: a()(L.ak, { [L.mi]: m, [L.EX]: "sm" === u }),
+                        className: a()(U.ak, { [U.mi]: m, [U.EX]: "sm" === u }),
                         children: [
                             !m &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: L.km,
+                                            className: U.km,
                                             "aria-hidden": !0,
                                             children: (0, r.jsx)(A.$, {
                                                 buttonRef: h,
@@ -306,7 +306,7 @@ function w(e) {
         }),
         h = (0, d.bG)([R.A], () => R.A.isConnected()),
         { ref: f, width: g } = (0, I.Ay)();
-    return (0, r.jsx)(U, {
+    return (0, r.jsx)(L, {
         isVoiceConnected: h,
         inputVolume: s,
         outputVolume: a,

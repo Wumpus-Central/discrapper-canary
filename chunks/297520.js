@@ -15,8 +15,8 @@ var i = a(477900),
     m = a(688810),
     g = a(724302),
     I = a(587895),
-    L = a(429913),
-    h = a(611371),
+    h = a(429913),
+    L = a(611371),
     x = a(403362);
 let N = {
     LEAGUE_OF_LEGENDS: "1402418696126992445",
@@ -80,8 +80,8 @@ var T = a(210598),
     D = a(886100),
     O = a(598748),
     b = a(855986),
-    G = a(141628),
-    w = a(531913),
+    w = a(141628),
+    G = a(531913),
     C = a(287809),
     F = a(183555),
     W = a(378145);
@@ -91,7 +91,7 @@ function k(t) {
 }
 function U(t) {
     let { applicationId: e, size: a = "default", userId: l } = t,
-        n = (0, w.A)(l, e),
+        n = (0, G.A)(l, e),
         s = n.surfaceConfigs[O.m.ADD_WIDGET_PREVIEW];
     return null == s
         ? null
@@ -108,7 +108,7 @@ function U(t) {
 function B(t) {
     let { applicationId: e, size: a = "default" } = t,
         { trackUserProfileAction: n } = (0, F.NJ)(),
-        s = (0, L.h)(e),
+        s = (0, h.h)(e),
         { hasAlreadyLinked: r, canStartAuthorization: c, startAuthorization: o, fetched: d } = (0, g.RD)(s),
         { analyticsLocations: u } = (0, m.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
         p = l.useCallback(() => {
@@ -121,7 +121,7 @@ function B(t) {
         : (0, i.jsxs)("div", {
               className: W.qr,
               children: [
-                  (0, i.jsx)(G.ExperimentalGameControllerLinkIcon, { size: "xs" }),
+                  (0, i.jsx)(w.ExperimentalGameControllerLinkIcon, { size: "xs" }),
                   (0, i.jsx)(f.E, {
                       variant: "body-sm/medium",
                       color: "text-subtle",
@@ -187,7 +187,7 @@ function Y(t) {
               className: H.k,
               offsetBottom: -2.5,
               children: [
-                  (0, i.jsx)(h.A, { variant: "secondary" }),
+                  (0, i.jsx)(L.A, { variant: "secondary" }),
                   (0, i.jsx)(f.E, {
                       variant: "body-sm/medium",
                       color: "text-subtle",
@@ -218,12 +218,12 @@ function Z(t) {
             onSelect: D,
         } = t,
         { icon: O, isNew: b } = $[e.type] ?? {},
-        G = "small" === c,
-        w = e.type === r.x.APPLICATION,
-        C = w ? e.applicationId : void 0,
-        F = (0, L.h)(C),
+        w = "small" === c,
+        G = e.type === r.x.APPLICATION,
+        C = G ? e.applicationId : void 0,
+        F = (0, h.h)(C),
         { hasAlreadyLinked: W, canStartAuthorization: U, startAuthorization: M } = (0, g.RD)(F),
-        V = null == D && w && !W && U,
+        V = null == D && G && !W && U,
         { analyticsLocations: z } = (0, m.Ay)(E.A.USER_PROFILE_APPLICATION_WIDGET),
         q = l.useCallback(() => {
             if (!I) {
@@ -242,13 +242,13 @@ function Z(t) {
                 : "string" == typeof H
                   ? (0, i.jsx)("img", { src: H, alt: "", width: 16, height: 16, className: Q.Kk })
                   : H,
-        tt = o && w,
+        tt = o && G,
         te = V ? d.LinkIcon : u.CirclePlusIcon,
         ta = T || (b?.() ?? !1),
-        ti = !w,
+        ti = !G,
         tl =
             e.type === r.x.PERSONAL && "default" !== c
-                ? (0, i.jsx)(h.A, {})
+                ? (0, i.jsx)(L.A, {})
                 : ta
                   ? (0, i.jsx)(p.E, { type: "new", variant: "primary" })
                   : null;
@@ -256,7 +256,7 @@ function Z(t) {
         className: s()(Q.LG, o && Q.oE),
         children: [
             (0, i.jsxs)(A.D, {
-                className: s()(Q.PH, G && Q.PG, I && Q.Lq),
+                className: s()(Q.PH, w && Q.PG, I && Q.Lq),
                 ...n,
                 onClick: q,
                 "aria-label":

@@ -29,8 +29,8 @@ if (221552 == n.j) var R = n(888366);
 if (221552 == n.j) var O = n(241541);
 var x = n(387755),
     P = n(308528),
-    L = n(711950),
-    U = n(574332),
+    U = n(711950),
+    L = n(574332),
     w = n(73153);
 let b = {
     search(e, t) {
@@ -331,7 +331,7 @@ async function ey(e, t) {
     }
     if (0 !== n.length)
         try {
-            let t = await U.Ay.createInvite(
+            let t = await L.Ay.createInvite(
                     e,
                     {
                         max_age: (function (e) {
@@ -404,8 +404,8 @@ var ev = n(279208),
     eO = n(812020),
     ex = n(95701),
     eP = n(734057),
-    eL = n(71393),
-    eU = n(958590),
+    eU = n(71393),
+    eL = n(958590),
     ew = n(584777),
     eb = n(495867),
     eG = n(218461),
@@ -729,7 +729,7 @@ class ts extends r.PureComponent {
         null == e ||
             !e.isMultiUserDM() ||
             this.isPartyFull() ||
-            U.Ay.createInvite(e.id, { max_age: this.props.inviteMaxAgeSeconds }, ei.PE1.GROUP_DM);
+            L.Ay.createInvite(e.id, { max_age: this.props.inviteMaxAgeSeconds }, ei.PE1.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -1332,7 +1332,7 @@ class ts extends r.PureComponent {
         };
     })();
     handleAddFriendNavigation = () => {
-        (L.A.transitionToSection(ei.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
+        (U.A.transitionToSection(ei.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
     };
     handleScroll = () => {
         let e = this.scrollerRef.current;
@@ -1523,17 +1523,17 @@ function ta(e) {
 }
 function to(e) {
     let { channel: t, onComplete: n, entryPointType: r, ...l } = e,
-        s = (0, o.cf)([ej.A, ew.A, eU.A, eL.A, eF.A], () => {
+        s = (0, o.cf)([ej.A, ew.A, eL.A, eU.A, eF.A], () => {
             let e;
             return (
-                null != t && null != (e = eU.A.getInvite(t.id)) && e.isExpired() && (e = null),
+                null != t && null != (e = eL.A.getInvite(t.id)) && e.isExpired() && (e = null),
                 {
                     ...ew.A.getState(),
                     hasFriends: eF.A.getFriendCount() > 0,
                     invite: e,
                     hideDiscriminator: ej.A.hidePersonalInformation,
                     hideInstantInvites: ej.A.hideInstantInvites,
-                    hasGuilds: eL.A.getGuildCount() > 0,
+                    hasGuilds: eU.A.getGuildCount() > 0,
                 }
             );
         }),

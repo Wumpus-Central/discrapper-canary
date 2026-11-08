@@ -12,8 +12,8 @@ var i = n(477900),
     h = n(929921),
     g = n(754712),
     f = n(723702),
-    A = n(74329),
-    p = n(192308),
+    p = n(74329),
+    A = n(192308),
     E = n(231723),
     b = n(212245),
     C = n(676030),
@@ -50,7 +50,7 @@ function M(e) {
             let { preset: a, resolution: o, fps: u, soundshareEnabled: d } = (0, l.cf)([h.A], () => h.A.getState()),
                 m = (0, l.bG)([g.Ay], () => g.Ay.getGoLiveSource()),
                 f = (0, l.bG)([R.default], () => R.default.getCurrentUser()),
-                A = (0, l.bG)([T.A], () => T.A.getGuild(e?.guildId)?.premiumTier),
+                p = (0, l.bG)([T.A], () => T.A.getGuild(e?.guildId)?.premiumTier),
                 { location: N } = (0, b.p)(),
                 M = (0, l.bG)([_.Ay, I.A], () => I.A.getChannel(_.Ay.getVoiceChannelId())),
                 P = r.useCallback(
@@ -74,7 +74,7 @@ function M(e) {
                         } else {
                             var a;
                             ((a = { ...N, object: x.ZSU.RADIO_ITEM, objectType: s }),
-                                (0, p.mM)(
+                                (0, A.mM)(
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e(629972),
@@ -107,13 +107,13 @@ function M(e) {
                 j = (0, v.A)("useStreamSettingsItems", f, e.guildId),
                 w = o === j?.maxResolution && u === j?.maxFPS;
             function U(e) {
-                return w ? ((0, y.A)(e, f, A, M) ?? o) : o;
+                return w ? ((0, y.A)(e, f, p, M) ?? o) : o;
             }
             let z = U(u),
                 L = S.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
                         l = U(t),
-                        a = (0, C.A)(S.jQ.PRESET_CUSTOM, l, t, f, A, M);
+                        a = (0, C.A)(S.jQ.PRESET_CUSTOM, l, t, f, p, M);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -131,7 +131,7 @@ function M(e) {
                 }),
                 V = S.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, C.A)(S.jQ.PRESET_CUSTOM, t, D, f, A, M);
+                        l = (0, C.A)(S.jQ.PRESET_CUSTOM, t, D, f, p, M);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -154,7 +154,7 @@ function M(e) {
                 ],
             });
         })(t, w),
-        H = (0, A.A)(t, w, N.FX),
+        H = (0, p.A)(t, w, N.FX),
         B = null != U && F && (!U.startsWith("screen") || G),
         q = (0, l.bG)([g.Ay], () => g.Ay.getUseSystemScreensharePicker() && (0, f.j9)()),
         X = r.useCallback(() => {

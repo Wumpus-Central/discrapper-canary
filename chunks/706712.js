@@ -135,7 +135,7 @@ function j(e, t) {
         onResetFrameData: h,
     };
 }
-function y(e) {
+function C(e) {
     let t = e.dispatcher.getIsSchedulerBackgrounded(),
         n = r.useRef(t);
     n.current = t;
@@ -147,9 +147,9 @@ function y(e) {
         [n, i]
     );
 }
-function C(e) {
+function y(e) {
     let { socket: t, isAverageFrameTime: n } = e,
-        [l, s] = y(t),
+        [l, s] = C(t),
         {
             currentFPS: a,
             averageFrameTime: c,
@@ -160,15 +160,15 @@ function C(e) {
             bufferFramecountRef: E,
             frameCheckerEffect: S,
         } = j(n, l),
-        [C, T, b] = v(t),
-        [_, w] = I(C, S),
-        N = performance.now() - s.current < 5e3,
+        [y, T, b] = v(t),
+        [_, N] = I(y, S),
+        w = performance.now() - s.current < 5e3,
         R = T(c, E.current);
     (0, m.Ay)(
         () => (
             _(),
             () => {
-                w();
+                N();
             }
         ),
     );
@@ -211,7 +211,7 @@ function C(e) {
                         className: p.af,
                         children: ["(Dropped: ", ((f.current / A.current) * 100).toFixed(4), "%)"],
                     }),
-                    N &&
+                    w &&
                         (0, i.jsx)(d.m, {
                             position: "left",
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -270,7 +270,7 @@ function C(e) {
                             color: R > 1 ? "text-feedback-critical" : "text-subtle",
                             children: [R.toFixed(2), "ms"],
                         }),
-                        N &&
+                        w &&
                             (0, i.jsx)(d.m, {
                                 position: "left",
                                 text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -471,7 +471,7 @@ function _(e) {
         ],
     });
 }
-function w() {
+function N() {
     let [, e] = r.useState({});
     r.useEffect(() => {
         let t = setInterval(() => {
@@ -490,13 +490,13 @@ n.d(
             let e = (0, a.bG)([g.A], () => g.A.getSocket()),
                 [t, n] = r.useState(!1);
             return (
-                w(),
+                N(),
                 (0, i.jsx)("div", {
                     className: s()(f.nd, p.nd),
                     children: (0, i.jsxs)(h.Ip, {
                         className: p.nd,
                         children: [
-                            (0, i.jsx)(C, { socket: e, isAverageFrameTime: t }),
+                            (0, i.jsx)(y, { socket: e, isAverageFrameTime: t }),
                             (0, i.jsx)(T, { socket: e, isAverageFrameTime: t, onToggleAverageFrameTime: n }),
                             (0, i.jsx)(b, { socket: e }),
                             (0, i.jsx)(_, { socket: e }),
@@ -505,11 +505,11 @@ n.d(
                 })
             );
         },
-        DQ: y,
+        DQ: C,
         Dj: j,
         F5: v,
         L6: x,
-        ZX: w,
+        ZX: N,
         km: I,
     },
 );

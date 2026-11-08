@@ -15,8 +15,8 @@ l.d(
             let { id: l, status: s, error: u } = t,
                 f = (0, a.bG)([i.Ay], () => "open" === i.Ay.getConnState(e), [e]),
                 m = (0, a.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
-                [g, h] = n.useState(null),
-                p = n.useCallback(() => h({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
+                [g, p] = n.useState(null),
+                h = n.useCallback(() => p({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
                 b = g?.frame === t ? g : null,
                 x = b?.ok === !0 && f;
             if ("undone" === s) return null;
@@ -27,11 +27,11 @@ l.d(
                     note: null,
                     action: null,
                 };
-            let v = "failed" === u || b?.ok === !1;
+            let y = "failed" === u || b?.ok === !1;
             return {
                 label: c.intl.string(d.default.iBrh0c),
                 body: c.intl.string(d.default.sRY8wn),
-                note: "busy" === u ? c.intl.string(d.default.QoixaY) : v ? c.intl.string(d.default["9fvHNe"]) : null,
+                note: "busy" === u ? c.intl.string(d.default.QoixaY) : y ? c.intl.string(d.default["9fvHNe"]) : null,
                 action:
                     "expired" === s
                         ? null
@@ -39,7 +39,7 @@ l.d(
                               text: c.intl.string("active" === s ? d.default["7q2YyD"] : d.default.FzX9h8),
                               confirm: "committed" === s,
                               disabled: !f || x || ("committed" === s && !m),
-                              onPress: p,
+                              onPress: h,
                           },
             };
         },

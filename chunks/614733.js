@@ -16,7 +16,7 @@ l.d(
             let l = (0, r.bG)([o.A], () => o.A.hidePersonalInformation),
                 m = (0, c.B5)(e),
                 g = (0, r.cf)([u.A], () => Object.fromEntries(m.map((e) => [e.id, u.A.getStatus(e.id)])), [m]),
-                h = a.useMemo(
+                p = a.useMemo(
                     () =>
                         m.map((t) => ({
                             id: t.id,
@@ -32,10 +32,10 @@ l.d(
                         })),
                     [e, l, g, m],
                 ),
-                p = (0, c.S6)(e, t);
+                h = (0, c.S6)(e, t);
             return {
-                options: h,
-                onQueryChange: a.useCallback((e) => p(e.currentTarget.value), [p]),
+                options: p,
+                onQueryChange: a.useCallback((e) => h(e.currentTarget.value), [h]),
                 matchSorterOptions: f,
             };
         },

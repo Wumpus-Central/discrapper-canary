@@ -17,14 +17,14 @@ n.d(
             let g = (0, c.AO)(e),
                 f = (0, r.bG)([u.default], () => u.default.getId());
             if (null == e) return null;
-            let A = (0, o._z)(e),
-                p = d.A.getVideoStats(A) ?? {},
+            let p = (0, o._z)(e),
+                A = d.A.getVideoStats(p) ?? {},
                 E = {
-                    media_session_id: d.A.getMediaSessionId(A),
-                    rtc_connection_id: d.A.getRtcConnectionId(A),
-                    stream_region: d.A.getRegion(A),
-                    max_viewers: d.A.getMaxViewers(A),
-                    ...p,
+                    media_session_id: d.A.getMediaSessionId(p),
+                    rtc_connection_id: d.A.getRtcConnectionId(p),
+                    stream_region: d.A.getRegion(p),
+                    max_viewers: d.A.getMaxViewers(p),
+                    ...A,
                 };
             return (0, i.jsx)(s.Dr, {
                 id: "report-stream-problem",

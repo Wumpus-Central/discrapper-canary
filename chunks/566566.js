@@ -14,7 +14,7 @@ n.d(
     {
         A: function (e) {
             let { userId: t, width: n, avError: h, selected: g = !1, noArt: f = !1 } = e,
-                A = (0, a.B1)(h)?.errorCode;
+                p = (0, a.B1)(h)?.errorCode;
             return (0, i.jsx)(c.A, {
                 artURL: m,
                 header: d.intl.string(d.t["z+mxvo"]),
@@ -24,7 +24,7 @@ n.d(
                 description: d.intl.format(d.t.d486Wm, {
                     helpUrl: o.A.getArticleURL(u.MVz.VOICE_VIDEO_TROUBLESHOOTING),
                 }),
-                errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: A }),
+                errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: p }),
                 onCTAClick: function () {
                     ((0, s.W)(r.x.DEFAULT, t),
                         l.default.setDisableLocalVideo(t, u.bb8.DISABLED, r.x.DEFAULT, !1),

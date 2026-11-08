@@ -12,7 +12,7 @@ var r = n(503698),
     h = n(734057),
     g = n(818348),
     f = n(792996),
-    A = n(2753);
+    p = n(2753);
 n.d(
     t,
     {},
@@ -23,32 +23,32 @@ n.d(
             (0, d.Ay)(() => {
                 r?.isGuildStageVoice() && (0, u.Xi)((0, m._z)(t), !1);
             });
-            let p = n < 550 ? "small" : n < 1e3 ? "medium" : "large";
+            let A = n < 550 ? "small" : n < 1e3 ? "medium" : "large";
             return (0, i.jsx)(a.N, {
                 disableAdaptiveTheme: !0,
                 theme: g.NJ.ONYX,
                 children: (e) =>
                     (0, i.jsx)("div", {
-                        className: l()(A.container, e),
+                        className: l()(p.container, e),
                         children: (0, i.jsxs)("div", {
-                            className: A.content,
+                            className: p.content,
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: l()(A.artContainer, A[p]),
-                                    children: (0, i.jsx)("div", { className: l()(A.art, A[p]) }),
+                                    className: l()(p.artContainer, p[A]),
+                                    children: (0, i.jsx)("div", { className: l()(p.art, p[A]) }),
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: A.cta,
+                                    className: p.cta,
                                     children: [
                                         (0, i.jsx)(o.D, {
                                             color: "none",
-                                            variant: "small" === p ? "heading-sm/medium" : "heading-lg/medium",
-                                            className: A.header,
+                                            variant: "small" === A ? "heading-sm/medium" : "heading-lg/medium",
+                                            className: p.header,
                                             children: f.intl.formatToMarkdownString(f.t.Kb4Ukp, {}),
                                         }),
                                         (0, i.jsx)(c.$, {
                                             variant: "secondary",
-                                            size: "small" === p ? "sm" : "md",
+                                            size: "small" === A ? "sm" : "md",
                                             onClick: (e) => {
                                                 (e.stopPropagation(), (0, u.Xi)((0, m._z)(t)));
                                             },

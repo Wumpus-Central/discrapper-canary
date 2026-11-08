@@ -1,17 +1,17 @@
-var i = n(855986),
-    r = n(869146),
-    l = n(392164);
-function s() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.A;
-    return e.getWindow(l.f) ?? window;
+var d = i(855986),
+    e = i(869146),
+    r = i(392164);
+function u() {
+    let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e.A;
+    return n.getWindow(r.f) ?? window;
 }
-n.d(
+i.d(
     t,
     {},
     {
         A: function () {
-            return (0, i.bG)([r.A], () => s(r.A));
+            return (0, d.bG)([e.A], () => u(e.A));
         },
-        b: s,
+        b: u,
     },
 );

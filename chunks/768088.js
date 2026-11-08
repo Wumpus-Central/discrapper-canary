@@ -14,7 +14,7 @@ n.d(
     {
         A: function (e) {
             let { stream: t, width: n, avError: m, avErrorContext: h, selected: g = !1, noArt: f = !1 } = e,
-                A = (function (e) {
+                p = (function (e) {
                     switch (e?.type) {
                         case s.iy.SCREENSHARE_OS_ERROR:
                             return d.intl.format(d.t.e9LMuh, { errorMessage: e.errorMessage });
@@ -23,14 +23,14 @@ n.d(
                             return d.intl.string(d.t.rSlOep);
                     }
                 })(h),
-                p = (0, s.B1)(m ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
+                A = (0, s.B1)(m ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
             return (0, i.jsx)(c.A, {
-                header: A,
+                header: p,
                 size: (0, c.J)(n),
                 noArt: f,
                 selected: g,
                 description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(u.MVz.STREAM_FAILED) }),
-                errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: p }),
+                errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: A }),
                 onCTAClick: () => {
                     ((0, l.W)(r.x.STREAM, t.ownerId), (0, a.A)(t));
                 },

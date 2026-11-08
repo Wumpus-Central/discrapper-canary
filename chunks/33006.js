@@ -8,8 +8,8 @@ var s = n(143236),
     d = n(111162),
     u = n(998218),
     h = n(253400),
-    p = n(636401),
-    g = n(861621),
+    g = n(636401),
+    p = n(861621),
     A = n(313731),
     E = n(324029),
     f = n(72611),
@@ -70,14 +70,14 @@ class R extends A.A {
     _socket;
     constructor(e, t, n) {
         if ((super({ type: I.z4.WEBSOCKET }, t, n), -1 === ["etf", "json"].indexOf(n)))
-            throw new p.A({ closeCode: S.YI$.INVALID_ENCODING }, `Invalid Encoding: ${n}`);
+            throw new g.A({ closeCode: S.YI$.INVALID_ENCODING }, `Invalid Encoding: ${n}`);
         if ("etf" === n && null == o)
-            throw new p.A({ closeCode: S.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
+            throw new g.A({ closeCode: S.YI$.INVALID_ENCODING }, "Erlpack cannot be used on this client");
         this._socket = e;
     }
     send(e) {
         ((d.default.isLoggingOverlayEvents || (e.cmd !== S.e$_.OVERLAY && e.evt !== S.ZE4.OVERLAY)) &&
-            y.info(`Socket Emit: ${this.id}`, (0, g.A)(e)),
+            y.info(`Socket Emit: ${this.id}`, (0, p.A)(e)),
             null != o && "etf" === this.encoding
                 ? this._socket.send(o.pack(e), { binary: !0 })
                 : this._socket.send(JSON.stringify(e)));
@@ -91,7 +91,7 @@ class b extends A.A {
     _closeCallback;
     constructor(e, t, n, o) {
         if ((super({ type: I.z4.HTTP }, n, o), "json" !== o))
-            throw new p.A({ closeCode: S.YI$.INVALID_ENCODING }, `Invalid Encoding: ${o}`);
+            throw new g.A({ closeCode: S.YI$.INVALID_ENCODING }, `Invalid Encoding: ${o}`);
         ((this._sendCallback = e), (this._closeCallback = t));
     }
     send(e) {
@@ -194,7 +194,7 @@ class P extends s.EventEmitter {
             return;
         }
         ((d.default.isLoggingOverlayEvents || n.cmd !== S.e$_.OVERLAY) &&
-            y.info(`Socket Message: ${e.id}`, (0, g.A)(n)),
+            y.info(`Socket Message: ${e.id}`, (0, p.A)(n)),
             this.emit("request", e, n));
     }
 }

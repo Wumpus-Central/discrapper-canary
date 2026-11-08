@@ -16,19 +16,19 @@ n.d(
                 [h, f] = i.useState(null),
                 g = i.useRef(void 0),
                 p = i.useRef(new Set()),
-                [m, y] = i.useState(!1),
-                A = (0, s.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
+                [m, A] = i.useState(!1),
+                y = (0, s.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
                 v = i.useCallback((e) => {
-                    (p.current.delete(e), y(p.current.size > 0));
+                    (p.current.delete(e), A(p.current.size > 0));
                 }, []),
-                x = i.useCallback((e) => (p.current.add(e), y(!0), () => v(e)), [v]),
-                w = i.useCallback((e, t) => {
+                E = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
+                x = i.useCallback((e, t) => {
                     for (let n of p.current) n(e, t);
                 }, []);
             i.useEffect(() => {
                 h?.clearConfetti();
-            }, [h, A]);
-            let E = i.useCallback((e) => {
+            }, [h, y]);
+            let w = i.useCallback((e) => {
                     (window.clearTimeout(g.current),
                         (g.current = window.setTimeout(() => {
                             ((e.width = 0), (e.height = 0));
@@ -44,29 +44,29 @@ n.d(
                 }, []),
                 C = i.useCallback(
                     (e) => {
-                        E(e.canvas);
+                        w(e.canvas);
                     },
-                    [E],
+                    [w],
                 );
             return (
                 i.useEffect(() => {
                     let e = h?.getCanvas();
                     if (null == e) return;
-                    let t = new ResizeObserver(() => E(e));
+                    let t = new ResizeObserver(() => w(e));
                     return (
                         t.observe(e),
                         () => {
                             (t.disconnect(), window.clearTimeout(g.current));
                         }
                     );
-                }, [h, E]),
+                }, [h, w]),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.k, {
                             confettiCanvas: h,
                             spriteCanvas: n,
                             baseConfig: u.Mw,
-                            addClickListener: x,
+                            addClickListener: E,
                             removeClickListener: v,
                             children: t,
                         }),
@@ -74,7 +74,7 @@ n.d(
                             ref: f,
                             className: d.J,
                             environment: u.XA,
-                            onClick: m ? w : void 0,
+                            onClick: m ? x : void 0,
                             onBeforeRender: b,
                             onAfterRender: C,
                         }),

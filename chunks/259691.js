@@ -10,8 +10,8 @@ var n = l(477900),
     f = l(161431),
     m = l(407653),
     g = l(191850),
-    h = l(792996),
-    p = l(587041);
+    p = l(792996),
+    h = l(587041);
 l.d(
     t,
     {},
@@ -20,14 +20,14 @@ l.d(
             let { attachmentId: t } = e,
                 l = a.useContext(c.Fu),
                 r = (0, f.Od)(l, t),
-                b = r?.name ?? h.intl.string(g.default.ff9Q4C),
+                b = r?.name ?? p.intl.string(g.default.ff9Q4C),
                 x = (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: p.xn }), b],
+                    children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: h.xn }), b],
                 });
             return null != l && null != r && o.XB.has(r.content_type)
                 ? (0, n.jsx)(s.D, {
                       tag: "span",
-                      className: i()(p.Pq, p.Td),
+                      className: i()(h.Pq, h.Td),
                       onClick: async () => {
                           let e;
                           try {
@@ -42,10 +42,10 @@ l.d(
                               location: "ConjureChat",
                           });
                       },
-                      "aria-label": h.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
+                      "aria-label": p.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
                       children: x,
                   })
-                : (0, n.jsx)("span", { className: p.Pq, children: x });
+                : (0, n.jsx)("span", { className: h.Pq, children: x });
         },
     },
 );

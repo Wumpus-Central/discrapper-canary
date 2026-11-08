@@ -89,7 +89,7 @@ let g = i.createContext(new h(!0));
 function f(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let A = { mass: 0.8, friction: 25, tension: 320 };
+let p = { mass: 0.8, friction: 25, tension: 320 };
 n.d(
     t,
     {},
@@ -102,7 +102,7 @@ n.d(
                     void 0,
                     [],
                 ),
-                p = i.useRef(h),
+                A = i.useRef(h),
                 E = i.useContext(g),
                 b = i.useMemo(() => {
                     let t = !1;
@@ -120,7 +120,7 @@ n.d(
                                           n,
                                       );
                                   }
-                                  let { current: g } = p,
+                                  let { current: g } = A,
                                       E = {
                                           opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
                                           scale: i ? Math.min(1 - h / 4, 1) : 1,
@@ -139,7 +139,7 @@ n.d(
                                                 height: i ? r : l,
                                             },
                                       to: E,
-                                      config: A,
+                                      config: p,
                                   }),
                                       (t = !0));
                               });
@@ -150,13 +150,13 @@ n.d(
                     if (t === l.wL.YEETED) {
                         let t = E.getLayoutSpecs(e);
                         if (null == t) return void n();
-                        (p.current({
+                        (A.current({
                             to: {
                                 scale: 0.8,
                                 opacity: 0,
                                 transform: f(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
                             },
-                            config: A,
+                            config: p,
                         }),
                             setTimeout(n, 300));
                     }

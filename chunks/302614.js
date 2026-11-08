@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(869146),
     g = n(373954),
     f = n(723702),
-    A = n(41984),
-    p = n(127242),
+    p = n(41984),
+    A = n(127242),
     E = n(545807),
     b = n(392164),
     C = n(85290);
@@ -110,7 +110,7 @@ n.d(
         A: function (e) {
             let { observe: t = !0, className: n, style: l, children: a } = e,
                 o = r.useContext(y),
-                c = (0, u.bG)([p.A], () => p.A.hasRenderDebugMode(A.x7.ClickZones)),
+                c = (0, u.bG)([A.A], () => A.A.hasRenderDebugMode(p.x7.ClickZones)),
                 d = (0, u.bG)([g.default], () => g.default.disableClickableRegions),
                 [{ refHandler: m, setObserve: h }] = r.useState(() => {
                     let e = null;

@@ -59,8 +59,8 @@ function P(e) {
             onSelect: r,
             onClose: N,
             maybeRenderPTTCheckbox: P = !1,
-            renderDeafenCheckbox: L = !1,
-            renderInputProfiles: U = !1,
+            renderDeafenCheckbox: U = !1,
+            renderInputProfiles: L = !1,
             renderOutputDevices: w = !1,
             renderOutputVolume: b = !1,
             renderInputDevices: G = !1,
@@ -107,7 +107,7 @@ function P(e) {
             "aria-label": R.intl.string(R.t.ZR1Ss6),
             className: x.MK,
             children: [
-                (0, i.jsxs)(u.rX, { children: [G && W, U && J, w && Y] }),
+                (0, i.jsxs)(u.rX, { children: [G && W, L && J, w && Y] }),
                 (0, i.jsxs)(u.rX, {
                     children: [
                         F && $,
@@ -141,7 +141,7 @@ function P(e) {
                                 action: () => d.default.setMode(et, void 0, void 0, { analyticsLocations: H }),
                                 disabled: z === M.m.STUDIO,
                             }),
-                        L &&
+                        U &&
                             (0, i.jsx)(
                                 u.sL,
                                 {

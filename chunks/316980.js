@@ -11,8 +11,8 @@ function c(e, n, l) {
     let {
             project: c,
             remixProject: v,
-            editProject: m,
-            isSettled: f,
+            editProject: f,
+            isSettled: m,
         } = (function (e, n, l) {
             let o = (0, s.m0)({ guildId: n ?? void 0, location: "ConjureAppHoverCard" }) && null != n;
             t.useEffect(() => {
@@ -60,10 +60,10 @@ function c(e, n, l) {
             () => ({
                 creator: x,
                 remixProject: v,
-                editProject: m,
-                isSettled: null != e && f && (null == g || null != x || p === g),
+                editProject: f,
+                isSettled: null != e && m && (null == g || null != x || p === g),
             }),
-            [x, v, m, e, f, g, p],
+            [x, v, f, e, m, g, p],
         )
     );
 }

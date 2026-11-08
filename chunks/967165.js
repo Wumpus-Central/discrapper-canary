@@ -8,8 +8,8 @@ var t = l(477900),
     d = l(834730),
     c = l(627363),
     v = l(421773),
-    m = l(499466),
-    f = l(537129),
+    f = l(499466),
+    m = l(537129),
     g = l(104299),
     p = l(316980),
     j = l(827656),
@@ -25,20 +25,20 @@ function C(e) {
             onCardEnter: i,
             onCardLeave: d,
             onClose: v,
-            position: m,
-            animationPosition: f,
+            position: f,
+            animationPosition: m,
             spacing: g,
         } = e,
         j = (0, c.YY)(n).data,
         x = j?.conjureProjectId != null ? j : null,
         { creator: C, remixProject: h, editProject: A, isSettled: H } = (0, p.A)(x, l, u || o),
-        L = o && null != x;
+        P = o && null != x;
     return (0, t.jsx)(s.Y, {
         targetElementRef: r,
-        position: m,
-        animationPosition: f,
+        position: f,
+        animationPosition: m,
         spacing: g,
-        shouldShow: L,
+        shouldShow: P,
         onRequestClose: v,
         renderPopout: () =>
             null != x
@@ -71,8 +71,8 @@ function E(e) {
             guildId: s,
             cardRef: c,
             onMouseEnter: v,
-            onMouseLeave: m,
-            onClose: f,
+            onMouseLeave: f,
+            onClose: m,
         } = e,
         p = n.getIconURL(96),
         C = n.description?.trim();
@@ -80,7 +80,7 @@ function E(e) {
         ref: c,
         className: x.Nr,
         onMouseEnter: v,
-        onMouseLeave: m,
+        onMouseLeave: f,
         onClick: h,
         onMouseDown: h,
         onContextMenu: h,
@@ -120,7 +120,7 @@ function E(e) {
                       remixProject: r,
                       editProject: o,
                       guildId: s,
-                      onClose: f,
+                      onClose: m,
                   })
                 : null,
         ],
@@ -142,17 +142,17 @@ l.d(
                 [x, h] = r.useState(!1),
                 [E, A] = r.useState(!1),
                 H = r.useRef(null),
-                L = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
-                P = (0, m.m0)({ guildId: l ?? void 0, location: "ConjureAppHoverCard" });
+                P = r.useRef({ targetHovered: !1, targetFocused: !1, cardHovered: !1 }),
+                L = (0, f.m0)({ guildId: l ?? void 0, location: "ConjureAppHoverCard" });
             r.useEffect(() => {
-                P && (0, f.A)(n);
-            }, [P, n]);
+                L && (0, m.A)(n);
+            }, [L, n]);
             let b = r.useCallback(() => {
-                    ((L.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), j(), c(!1), A(!1));
+                    ((P.current = { targetHovered: !1, targetFocused: !1, cardHovered: !1 }), j(), c(!1), A(!1));
                 }, [j, c]),
                 I = r.useCallback(
                     (e, n) => {
-                        let l = L.current;
+                        let l = P.current;
                         ((l[e] = n),
                             A(l.targetHovered || l.targetFocused || l.cardHovered),
                             n ? g() : l.targetHovered || l.targetFocused || l.cardHovered || p());
@@ -181,7 +181,7 @@ l.d(
                 }
                 function l(e) {
                     if ((0, a.vq)(e.relatedTarget, Node) && H.current?.contains(e.relatedTarget) === !0) {
-                        L.current.targetHovered = !1;
+                        P.current.targetHovered = !1;
                         return;
                     }
                     I("targetHovered", !1);

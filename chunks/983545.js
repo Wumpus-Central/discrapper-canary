@@ -35,7 +35,7 @@ n.d(
                     return (0, d.dF)(e) || (t = e) === d.G2.COLLABS || t === d.G2.OFFER_ELIGIBLE ? d.G2.CATALOG : e;
                 }, [e]),
                 [p, S] = l.useState(C),
-                [A, _] = l.useState(d.Pf.VISIBLE);
+                [_, A] = l.useState(d.Pf.VISIBLE);
             (l.useEffect(() => {
                 p !== d.G2.GAME_SERVERS && f(p);
             }, [p, f]),
@@ -74,17 +74,17 @@ n.d(
                         if (p !== e) {
                             if (l && !t) {
                                 var i;
-                                (_(d.Pf.OUT), await ((i = 800 * 1.1), new Promise((e) => setTimeout(e, i))));
+                                (A(d.Pf.OUT), await ((i = 800 * 1.1), new Promise((e) => setTimeout(e, i))));
                             }
                             (S(e === d.G2.HOME || e === d.G2.ORBS || e === d.G2.GAME_SERVERS ? e : d.G2.CATALOG),
-                                l && !t && _(d.Pf.IN),
+                                l && !t && A(d.Pf.IN),
                                 x.push(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { searchQuery: s?.searchQuery }),
-                                _(d.Pf.VISIBLE));
+                                A(d.Pf.VISIBLE));
                         }
                     },
                     [x, n, a, g, E, h, p, v, t],
                 );
-            return { selectedTab: p, transitionState: A, transitionToTab: I };
+            return { selectedTab: p, transitionState: _, transitionToTab: I };
         },
     },
 );

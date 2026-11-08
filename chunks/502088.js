@@ -236,7 +236,7 @@ function x(e, t) {
 function P(e, t) {
     return 0.8 * (null != e.guildId ? D(t.getNormalizedGuildAffinity(e.guildId)) : 0);
 }
-class L {
+class U {
     candidate;
     signals;
     _activeNowScoreSource;
@@ -279,7 +279,7 @@ class L {
         );
     }
 }
-var U = n(406595),
+var L = n(406595),
     w = n(240516),
     b = n(652215),
     G = (((r = {}).Text = "TEXT"), (r.Voice = "VOICE"), r);
@@ -439,7 +439,7 @@ function X() {
 function Q(e, t) {
     let n = u.A.getChannel(e);
     if (null == n) return !1;
-    let [i] = U.A.isFavorite(E.x.MESSAGES, e);
+    let [i] = L.A.isFavorite(E.x.MESSAGES, e);
     if (i || n.isPrivate?.()) return !1;
     let r = n.getGuildId?.() ?? null;
     return (
@@ -464,7 +464,7 @@ function ee(e, t, n) {
     if (null == r || r.kind !== N.GuildText) return null;
     let l = H.getChannel(e);
     if (null != l) return l;
-    let s = new L(r, t, n);
+    let s = new U(r, t, n);
     return (H.upsert(s), s);
 }
 function et(e, t, n) {
@@ -483,7 +483,7 @@ function et(e, t, n) {
     if (null == r || r.kind !== N.GuildVoice) return null;
     let l = B.getChannel(e);
     if (null != l) return l;
-    let s = new L(r, t, n);
+    let s = new U(r, t, n);
     return (B.upsert(s), s);
 }
 let en = 30 * m.A.Millis.MINUTE;
@@ -541,7 +541,7 @@ function er(e) {
 class el extends l.Ay.Store {
     static displayName = "OverlayActiveNowStore";
     initialize() {
-        this.waitFor(u.A, d.A, U.A, _.default, c.A, f.Ay, h.A, a.A, A.default, g.Ay, p.A);
+        this.waitFor(u.A, d.A, L.A, _.default, c.A, f.Ay, h.A, a.A, A.default, g.Ay, p.A);
     }
     getActiveNowChannelByChannelId(e, t) {
         return "TEXT" === t ? H.getChannel(e) : B.getChannel(e);

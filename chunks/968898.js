@@ -19,14 +19,14 @@ var i = n(477900),
     I = n(302614),
     v = n(887287),
     j = n(119191),
-    y = n(581730),
-    C = n(481484),
+    C = n(581730),
+    y = n(481484),
     T = n(792996),
     b = n(408454);
 function _(e, t) {
     let n = r.useRef(e?.showExtrasHintTimestamp),
         [i, l] = r.useState(!1),
-        s = (0, C.A)(),
+        s = (0, y.A)(),
         a = r.useRef(void 0);
     return (
         r.useEffect(() => {
@@ -61,7 +61,7 @@ n.d(
     {
         CS: function (e) {
             let { onClick: t } = e;
-            if ((0, C.A)()) return null;
+            if ((0, y.A)()) return null;
             let n = T.intl.string(T.t["3D5yo/"]);
             return (0, i.jsx)(c.m, {
                 text: n,
@@ -76,7 +76,7 @@ n.d(
         GQ: function (e) {
             let { widgetId: t, showAllStreams: n } = e,
                 r = n ? T.intl.string(T.t.q2B3rh) : T.intl.string(T.t.JKGi6o);
-            return (0, C.A)()
+            return (0, y.A)()
                 ? null
                 : (0, i.jsx)(c.m, {
                       text: r,
@@ -96,7 +96,7 @@ n.d(
         O0: function (e) {
             let { id: t, pinned: n } = e,
                 r = n ? T.intl.string(T.t.cSu80j) : T.intl.string(T.t.cM8Vnm),
-                l = (0, C.A)();
+                l = (0, y.A)();
             return (0, i.jsx)(c.m, {
                 text: r,
                 "aria-label": r,
@@ -128,7 +128,7 @@ n.d(
         },
         hM: function (e) {
             let { label: t, onClick: n } = e;
-            return (0, C.A)()
+            return (0, y.A)()
                 ? null
                 : (0, i.jsx)(c.m, {
                       text: t,
@@ -161,7 +161,7 @@ n.d(
                                   children: (0, i.jsx)(d.E, {
                                       variant: "body-xs/semibold",
                                       color: "text-strong",
-                                      children: (0, j.sI)((0, y.Jn)(), T.t["1XA04X"], {
+                                      children: (0, j.sI)((0, C.Jn)(), T.t["1XA04X"], {
                                           useFlexboxLayout: !0,
                                           highlightAdminWarningIfElevated: !1,
                                           keybindClassName: b.P,

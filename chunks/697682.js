@@ -17,13 +17,13 @@ var m = n(543699),
     h = n(527212),
     g = n(991988),
     f = n(917445);
-let A = (0, n(945810).mj)({
+let p = (0, n(945810).mj)({
     name: "2026-09-video-background-profile-fetch",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var p = n(652215),
+var A = n(652215),
     E = n(996988),
     b = n(621647);
 let C = function (e) {
@@ -39,9 +39,9 @@ let C = function (e) {
         } = e,
         T = l ?? n,
         _ = (0, c.Ay)(T, a.A.unsafe_rawColors.PRIMARY_800.css),
-        R = A.useConfig({ location: "VideoBackground" }).enabled,
+        R = p.useConfig({ location: "VideoBackground" }).enabled,
         x = (0, h.Ay)(u ?? "", C),
-        S = (0, m.tM)(x?.themeColors?.[0]) ?? p.NJ8.DARK,
+        S = (0, m.tM)(x?.themeColors?.[0]) ?? A.NJ8.DARK,
         { profileThemeStyle: O, profileThemeClassName: k } = (0, g.A)({
             theme: S,
             themeType: E.d.VIDEO_TILE_BACKGROUND,
