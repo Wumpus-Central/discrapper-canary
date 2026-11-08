@@ -5,4 +5,4 @@ let i = (0, n(537975).tJ)({
     joinedAt: new Date(),
     maxMembers: 5e5,
 });
-n.d(t, {}, { A: "Auto-Added Threads", Rq: [0, 7, 14], _z: i, l0: "auto-added" });
+n.d(t, {}, { A: "Auto-Added Threads", AK: "own-category", Gv: "per-guild", Rq: [0, 7, 14], _z: i, l0: "auto-added" });

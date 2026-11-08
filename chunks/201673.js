@@ -881,7 +881,7 @@ let t2 = (0, h.zZ)(S.X.APPEARANCE_IN_APP_ICON_CATEGORY, {
     }),
     t5 = (0, h.gN)(S.X.APPEARANCE_CHAT_RELATED_SETTINGS, { buildLayout: () => [t3] });
 var t4 = n(143129),
-    t6 = n(146092),
+    t6 = n(794412),
     t8 = n(749884),
     t7 = n(708526);
 let t9 = eC.A.getArticleURL(_.MVz.FAVORITES_GUILD),

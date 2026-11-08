@@ -876,7 +876,7 @@ let nd = F(
                         });
                 }, [l]),
                 I = (function (e, t) {
-                    let n = (0, h.bG)([tx.A], () => tx.A.autoAddJoinedThreads),
+                    let n = (0, h.bG)([tx.A], () => tx.A.autoAddThreadsMode === nl.AK),
                         { isAtLimit: l } = (0, nn.ft)();
                     return n &&
                         l &&

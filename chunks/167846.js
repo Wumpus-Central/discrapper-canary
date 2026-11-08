@@ -1,134 +1,144 @@
-n.d(t, { default: () => h });
+n.d(e, { default: () => b });
 var a = n(477900),
     i = n(189213),
     l = n(331322),
-    r = n(150934),
-    s = n(771871),
-    d = n(834730),
-    u = n(582128),
+    r = n(771871),
+    s = n(404778),
+    u = n(834730),
+    d = n(582128),
     c = n(855986),
     o = n(181079),
-    p = n(146092),
-    f = n(349828),
-    b = n(708526),
-    g = n(792996);
-function h(e) {
-    let { onClose: t, transitionState: n } = e,
-        h = (function (e) {
-            let t = (0, c.bG)([o.A], () => o.A.autoAddJoinedThreads),
+    f = n(794412),
+    g = n(349828),
+    p = n(708526),
+    v = n(792996);
+function b(t) {
+    let { onClose: e, transitionState: n } = t,
+        b = (function (t) {
+            let e = (0, c.bG)([o.A], () => o.A.autoAddThreadsMode),
                 n = (0, c.bG)([o.A], () => o.A.pruneInactiveThreads),
                 a = (0, c.bG)([o.A], () => o.A.pruneInactiveThreadsDays),
                 i = (0, c.bG)([o.A], () => o.A.pruneInactiveThreadsScope),
-                [l, r] = u.useState(t),
-                [s, d] = u.useState(n),
-                [f, b] = u.useState(a),
-                [g, h] = u.useState(i),
-                [v, S] = u.useState(!1),
-                [A, x] = u.useState(!1),
-                k = u.useRef(!1),
-                y = u.useRef(!0);
-            u.useEffect(
+                [l, r] = d.useState(e),
+                [s, u] = d.useState(n),
+                [g, p] = d.useState(a),
+                [v, b] = d.useState(i),
+                [h, m] = d.useState(!1),
+                [A, S] = d.useState(!1),
+                x = d.useRef(!1),
+                T = d.useRef(!0);
+            d.useEffect(
                 () => (
-                    (y.current = !0),
+                    (T.current = !0),
                     () => {
-                        y.current = !1;
+                        T.current = !1;
                     }
                 ),
                 [],
             );
-            let C = l !== t || s !== n || (s && (f !== a || g !== i));
+            let k = s ? g : -1,
+                C = l !== e || s !== n || (s && (g !== a || v !== i));
             return {
                 autoAdd: l,
                 setAutoAdd: r,
                 prune: s,
-                setPrune: d,
-                days: f,
-                setDays: b,
+                setPrune: u,
+                days: g,
+                setDays: p,
+                pruneTiming: k,
+                setPruneTiming: function (t) {
+                    -1 === t ? u(!1) : (u(!0), p(t));
+                },
                 canSave: C,
-                scope: g,
-                setScope: h,
-                loading: v,
+                scope: v,
+                setScope: b,
+                loading: h,
                 error: A,
                 save: async function () {
-                    if (C && !k.current) {
-                        ((k.current = !0), S(!0), x(!1));
+                    if (C && !x.current) {
+                        ((x.current = !0), m(!0), S(!1));
                         try {
-                            ((0, p.Ub)(l), await (0, p.u$)(s, f, g), y.current && e());
+                            ((0, f.Ub)(l), await (0, f.u$)(s, g, v), T.current && t());
                         } catch {
-                            y.current && x(!0);
+                            T.current && S(!0);
                         } finally {
-                            ((k.current = !1), y.current && S(!1));
+                            ((x.current = !1), T.current && m(!1));
                         }
                     }
                 },
             };
-        })(t),
-        { loading: v } = h;
+        })(e),
+        { loading: h } = b;
     return (0, a.jsx)(i.a, {
-        title: g.intl.string(b.default.hklnjs),
+        title: v.intl.string(p.default.hklnjs),
         transitionState: n,
-        onClose: t,
+        onClose: e,
         actions: [
-            { text: g.intl.string(g.t["ETE/oC"]), variant: "secondary", disabled: v, onClick: t },
+            { text: v.intl.string(v.t["ETE/oC"]), variant: "secondary", disabled: h, onClick: e },
             {
-                text: g.intl.string(g.t["R3BPH+"]),
+                text: v.intl.string(v.t["R3BPH+"]),
                 variant: "primary",
-                disabled: v || !h.canSave,
-                loading: v,
-                onClick: h.save,
+                disabled: h || !b.canSave,
+                loading: h,
+                onClick: b.save,
             },
         ],
         children: (0, a.jsxs)(l.B, {
             gap: 16,
             children: [
-                (0, a.jsx)(r.S, {
-                    label: g.intl.string(b.default.DIyQIF),
-                    description: g.intl.string(b.default.d15FpO),
-                    checked: h.autoAdd,
-                    disabled: v,
-                    onChange: h.setAutoAdd,
+                (0, a.jsx)(r.z, {
+                    label: v.intl.string(p.default.IY55rr),
+                    value: b.autoAdd,
+                    onChange: b.setAutoAdd,
+                    disabled: h,
+                    options: [
+                        {
+                            name: v.intl.string(p.default.z6aUMH),
+                            desc: v.intl.string(p.default["5pZtcn"]),
+                            value: g.Gv,
+                        },
+                        {
+                            name: v.intl.string(p.default.MOBbbf),
+                            desc: v.intl.string(p.default["4wUEWy"]),
+                            value: g.AK,
+                        },
+                        { name: v.intl.string(p.default["uJRN0+"]), value: "never" },
+                    ],
                 }),
-                (0, a.jsx)(r.S, {
-                    label: g.intl.string(b.default["bI/czq"]),
-                    description: g.intl.string(b.default.RRsgY0),
-                    checked: h.prune,
-                    disabled: v,
-                    onChange: h.setPrune,
+                (0, a.jsx)(s.c, {}),
+                (0, a.jsx)(r.z, {
+                    label: v.intl.string(p.default.THUVKS),
+                    description: v.intl.string(p.default["89dcNP"]),
+                    value: b.pruneTiming,
+                    onChange: b.setPruneTiming,
+                    disabled: h,
+                    options: [
+                        ...g.Rq.map((t) => ({
+                            name:
+                                0 === t
+                                    ? v.intl.string(p.default.EIVQqq)
+                                    : v.intl.formatToPlainString(p.default.ankeKO, { days: t }),
+                            value: t,
+                        })),
+                        { name: v.intl.string(p.default.LxrV05), value: -1 },
+                    ],
                 }),
-                h.prune
-                    ? (0, a.jsxs)(a.Fragment, {
-                          children: [
-                              (0, a.jsx)(s.z, {
-                                  label: g.intl.string(b.default.THUVKS),
-                                  value: h.days,
-                                  onChange: h.setDays,
-                                  options: f.Rq.map((e) => ({
-                                      name:
-                                          0 === e
-                                              ? g.intl.string(b.default.EIVQqq)
-                                              : g.intl.formatToPlainString(b.default.eic1d0, { days: e }),
-                                      value: e,
-                                      disabled: v,
-                                  })),
-                              }),
-                              (0, a.jsx)(s.z, {
-                                  label: g.intl.string(b.default.KIzpqi),
-                                  value: h.scope,
-                                  onChange: h.setScope,
-                                  options: [
-                                      { name: f.A, value: f.l0, disabled: v },
-                                      { name: g.intl.string(b.default["gOUr+P"]), value: "all", disabled: v },
-                                  ],
-                              }),
-                          ],
-                      })
-                    : null,
-                h.error
-                    ? (0, a.jsx)(d.E, {
+                (0, a.jsx)(r.z, {
+                    label: v.intl.string(p.default.YFhloA),
+                    value: b.scope,
+                    onChange: b.setScope,
+                    disabled: h || !b.prune,
+                    options: [
+                        { name: v.intl.string(p.default.fDT7MF), value: g.l0 },
+                        { name: v.intl.string(p.default["gOUr+P"]), value: "all" },
+                    ],
+                }),
+                b.error
+                    ? (0, a.jsx)(u.E, {
                           variant: "body-sm/normal",
                           color: "text-feedback-critical",
                           role: "alert",
-                          children: g.intl.string(b.default.toOYQw),
+                          children: v.intl.string(p.default.toOYQw),
                       })
                     : null,
             ],

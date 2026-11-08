@@ -11,7 +11,7 @@ let u = {},
     E = 0,
     A = !1,
     f = !1,
-    h = !1,
+    h = "never",
     I = !0,
     p = 0,
     m = d.l0;
@@ -37,8 +37,9 @@ function T() {
                 }));
         }
     let c = e?.guildVisible?.value ?? !(0, i.isEmpty)(n),
-        T = e?.autoAddJoinedThreads ?? !1,
-        g = e?.pruneInactiveThreads?.value ?? !0,
+        T = "never";
+    e?.autoAddJoinedThreads === !0 && (T = e.autoAddJoinedThreadsPerGuild ? d.Gv : d.AK);
+    let g = e?.pruneInactiveThreads?.value ?? !0,
         S = e?.pruneInactiveThreadsDays ?? 0,
         N = e?.pruneAllFavoritedThreads === !0 ? "all" : d.l0;
     return (
@@ -60,8 +61,8 @@ class g extends r.Ay.Store {
     get favoriteGuildEnabled() {
         return f;
     }
-    get autoAddJoinedThreads() {
-        return h && f;
+    get autoAddThreadsMode() {
+        return f ? h : "never";
     }
     get pruneInactiveThreads() {
         return I && f;
