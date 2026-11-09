@@ -5938,6 +5938,22 @@
     }
   },
   {
+    "name": "2026-11-cross-platform-game-bar",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-11-game-exit-promo-bloons",
     "kind": "user",
     "defaultConfig": {
