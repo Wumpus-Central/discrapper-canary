@@ -1,41 +1,39 @@
-var l = t(582128),
-    u = t(621466),
-    r = t(475815);
-function i(e) {
+var i = n(582128),
+    r = n(621466),
+    a = n(475815);
+function s(e) {
     return null == e ? null : document.querySelector(`[data-frame-id="${CSS.escape(e)}"]`);
 }
-function a(e) {
-    let n, t;
-    return (
-        null != e &&
-        ((t =
-            (n = document).fullscreenElement ??
-            n.webkitFullscreenElement ??
-            n.mozFullScreenElement ??
-            n.msFullscreenElement ??
-            null),
-        ((0, u.vq)(t, Element) ? t.getAttribute("data-frame-id") : null) === e)
-    );
+function l() {
+    let e = document,
+        t = e.fullscreenElement ?? e.webkitFullscreenElement ?? e.mozFullScreenElement ?? e.msFullscreenElement ?? null;
+    return (0, r.vq)(t, HTMLElement) && t.hasAttribute("data-frame-id") ? t : null;
 }
-function c(e) {
-    return (0, r.a3)(document, e);
+function o(e) {
+    return null != e && (l()?.getAttribute("data-frame-id") ?? null) === e;
 }
-t.d(
-    n,
+function d(e) {
+    return (0, a.a3)(document, e);
+}
+n.d(
+    t,
     {},
     {
         BL: function (e) {
-            if (!a(e)) return;
-            let n = i(e);
-            null != n && (0, r.sP)(n);
+            if (!o(e)) return;
+            let t = s(e);
+            null != t && (0, a.sP)(t);
         },
         U8: function (e) {
-            let n = i(e);
-            null != n && (0, r.Ub)(n) && (a(e) ? (0, r.sP)(n) : (0, r.tl)(n));
+            let t = s(e);
+            null != t && (0, a.Ub)(t) && (o(e) ? (0, a.sP)(t) : (0, a.tl)(t));
+        },
+        YQ: function () {
+            return i.useSyncExternalStore(d, l);
         },
         cR: function (e) {
-            return l.useSyncExternalStore(c, () => a(e));
+            return i.useSyncExternalStore(d, () => o(e));
         },
-        fl: i,
+        fl: s,
     },
 );
