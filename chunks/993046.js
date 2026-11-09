@@ -64,7 +64,7 @@ function m(e) {
         }
         let e = u.find((e) => {
                 let t = e[o];
-                if (null == t) return !1;
+                if (null == t || t.amount <= 0) return !1;
                 switch (t.type) {
                     case A.Ns.DISCOUNT:
                         return !0;
