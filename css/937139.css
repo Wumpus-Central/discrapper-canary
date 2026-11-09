@@ -1392,7 +1392,8 @@
     gap: var(--space-10);
     inset-inline-end: var(--space-32);
     position: absolute;
-    top: var(--space-32)
+    top: var(--space-32);
+    z-index: 1
 }
 
-/*# sourceMappingURL=937139.4e519ccf578b5b2b.css.map*/
+/*# sourceMappingURL=937139.cf8088217b373b21.css.map*/
