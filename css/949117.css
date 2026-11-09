@@ -835,6 +835,11 @@
     width: fit-content
 }
 
+.children_w5-7vi:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .game_M5fVqw {
     display: flex;
     flex-direction: column;
@@ -845,6 +850,10 @@
 
 .globalGame_M5fVqw {
     width: calc(var(--custom-checkpoint-game-art-width) + var(--space-12) + var(--space-80))
+}
+
+.globalGame_M5fVqw .details_M5fVqw {
+    padding-inline-end: var(--space-16)
 }
 
 .visual_M5fVqw {
@@ -915,7 +924,8 @@
 }
 
 .globalContainer_eVi7eB {
-    gap: calc(var(--space-64) + var(--space-8))
+    gap: calc(var(--space-64) + var(--space-8));
+    padding-block: var(--space-24)
 }
 
 @media (max-height:800px) {
@@ -1396,4 +1406,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=937139.cf8088217b373b21.css.map*/
+/*# sourceMappingURL=949117.f33f19b488452bfd.css.map*/

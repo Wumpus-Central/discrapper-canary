@@ -630,14 +630,14 @@ var eV = l(83827),
     e2 = l(692969),
     e6 = l(396583),
     e3 = l(46653),
-    e9 = l(994500);
-function e4(e, t) {
+    e4 = l(994500);
+function e9(e, t) {
     let l = t.user_id,
         n = (0, R.bG)([e3.default], () => e3.default.getId() === l, [l]);
     return es(e, l, { showYouSuffix: n });
 }
 function e8(e) {
-    return (0, R.bG)([e9.A], () => (e9.A.isBlocked(e) ? "blocked" : e9.A.isIgnored(e) ? "ignored" : null), [e]);
+    return (0, R.bG)([e4.A], () => (e4.A.isBlocked(e) ? "blocked" : e4.A.isIgnored(e) ? "ignored" : null), [e]);
 }
 function e7(e) {
     switch (e) {
@@ -678,7 +678,7 @@ function tl(e) {
             onClick: u,
             metricWidth: m,
         } = e,
-        h = e4(t, l),
+        h = e9(t, l),
         f = l.application_ids[0],
         x = null != f ? eh(a, f) : void 0,
         g = l.user_id,
@@ -1048,7 +1048,7 @@ function t_(e) {
             onClick: u,
         } = e,
         m = ef(r, l.application_ids),
-        h = e4(t, l),
+        h = e9(t, l),
         f = e8(l.user_id),
         x = null != f,
         { primary: g, secondaryShort: p } = eF(l, a),
@@ -1757,7 +1757,7 @@ function t2(e) {
 }
 var t6 = l(22231),
     t3 = l(445187);
-function t9(e) {
+function t4(e) {
     let { alt: t, ariaLabel: l, ariaHidden: n, role: r, width: d, height: o, className: c, style: u } = e,
         m = s.useMemo(
             () => (0, a.H)({ width: d, height: o, intrinsicWidth: 288, intrinsicHeight: 192, style: u }),
@@ -1773,7 +1773,7 @@ function t9(e) {
         role: r ?? "img",
     });
 }
-var t4 = l(770178),
+var t9 = l(770178),
     t8 = l(104171),
     t7 = l(619019),
     t5 = l(165862),
@@ -1789,7 +1789,7 @@ var la = l(948852),
 function ld(e) {
     let { guildId: t, applicationId: l, userIds: n, totalUsers: a, gameName: r } = e,
         d = s.useRef(null),
-        c = (0, R.yK)([e9.A], () => n.filter((e) => !e9.A.isBlockedOrIgnored(e)).slice(0, 5), [n]),
+        c = (0, R.yK)([e4.A], () => n.filter((e) => !e4.A.isBlockedOrIgnored(e)).slice(0, 5), [n]),
         u = (0, R.yK)([K.default], () => c.map((e) => K.default.getUser(e)).filter(ec.Vq), [c]),
         m = (0, R.cf)(
             [en.Ay],
@@ -1934,7 +1934,7 @@ function lf(e) {
     let { guildId: t, requirement: l, onClick: n } = e;
     return (0, i.jsx)(S, {
         className: lh.p$,
-        illustration: t9,
+        illustration: t4,
         title: I.intl.string(Z.default.ULK65a),
         body: I.intl.format(null != l ? Z.default.JDAHQV : Z.default.LeSGal, { memberCount: 3 }),
         action:
@@ -2005,10 +2005,10 @@ function lp(e) {
     let { guildId: t, memberIds: l, totalUsers: n, totalGames: s, isCompact: a } = e,
         r = a ? 2 : 4,
         d = (0, R.yK)(
-            [e9.A, K.default],
+            [e4.A, K.default],
             () =>
                 l
-                    .filter((e) => !e9.A.isBlockedOrIgnored(e))
+                    .filter((e) => !e4.A.isBlockedOrIgnored(e))
                     .map((e) => K.default.getUser(e))
                     .filter(ec.Vq)
                     .slice(0, r),
@@ -2068,7 +2068,7 @@ function lj(e) {
                         i = t < 480;
                     l((e) => (e.visibleCount === n && e.isCompact === i ? e : { visibleCount: n, isCompact: i }));
                 }, []);
-            return ((0, t4.g)(e, n, [], { fireOnMount: !0 }), { ref: e, ...t });
+            return ((0, t9.g)(e, n, [], { fireOnMount: !0 }), { ref: e, ...t });
         })(),
         { requirement: u } = (0, Q.T4)(t),
         m = lc(l),
@@ -2427,7 +2427,7 @@ function lZ(e) {
                                     l.e(601152),
                                     l.e(319714),
                                     l.e(331249),
-                                    l.e(937139),
+                                    l.e(949117),
                                     l.e(921611),
                                     l.e(686889),
                                     l.e(560570),
@@ -2735,10 +2735,10 @@ var l0 = l(872351),
     l2 = l(628137);
 let l6 = "none",
     l3 = (e, t) => (0, i.jsx)(b.E, { tag: "span", variant: "body-xs/medium", color: "text-strong", children: e }, t);
-function l9(e) {
+function l4(e) {
     return e;
 }
-function l4(e) {
+function l9(e) {
     return e?.direction ?? l6;
 }
 function l8(e) {
@@ -2772,8 +2772,8 @@ function nt(e) {
     var t;
     let { guildId: l, song: n } = e,
         a = (0, R.yK)(
-            [e9.A],
-            () => (n.facepile_user_ids ?? []).filter((e) => !e9.A.isBlockedOrIgnored(e)).slice(0, 3),
+            [e4.A],
+            () => (n.facepile_user_ids ?? []).filter((e) => !e4.A.isBlockedOrIgnored(e)).slice(0, 3),
             [n.facepile_user_ids],
         );
     (0, W.k6)(l, a);
@@ -2786,7 +2786,7 @@ function nt(e) {
         role: "group",
         "aria-label":
             ((t = n.unique_listeners),
-            I.intl.formatToPlainString(Z.default.AzIhRB, { count: t, trend: l6, countHook: l9 })),
+            I.intl.formatToPlainString(Z.default.AzIhRB, { count: t, trend: l6, countHook: l4 })),
         children: (0, i.jsx)(t8.Ay, {
             users: d,
             guildId: l,
@@ -2877,7 +2877,7 @@ function ni(e) {
                                 color: "text-subtle",
                                 children:
                                     ((t = a.plays),
-                                    I.intl.format(Z.default["7hHUIS"], { count: t, trend: l4(r), countHook: l3 })),
+                                    I.intl.format(Z.default["7hHUIS"], { count: t, trend: l9(r), countHook: l3 })),
                             }),
                             null != r && (0, i.jsx)(ne, { trend: r }),
                         ],
@@ -2958,7 +2958,7 @@ function nc(e) {
                         : I.intl.format(Z.default.yGqf0D, {
                               memberCount: a.distinct_listeners,
                               artistCount: a.distinct_artists,
-                              trend: l4(h),
+                              trend: l9(h),
                               memberCountHook: l3,
                               artistCountHook: l3,
                           }),
@@ -3274,7 +3274,7 @@ function nD(e) {
 }
 function nM(e) {
     let { guildId: t, user: l, identity: n, rank: s, listener: a, onClick: r } = e,
-        d = (0, R.bG)([e9.A], () => (e9.A.isBlocked(l.id) ? "blocked" : e9.A.isIgnored(l.id) ? "ignored" : null), [
+        d = (0, R.bG)([e4.A], () => (e4.A.isBlocked(l.id) ? "blocked" : e4.A.isIgnored(l.id) ? "ignored" : null), [
             l.id,
         ]),
         c = null != d;
@@ -3708,7 +3708,7 @@ function nq(e) {
                               ? null
                               : I.intl.format(Z.default.AzIhRB, {
                                     count: r.distinct_listeners,
-                                    trend: l4(p),
+                                    trend: l9(p),
                                     countHook: l3,
                                 }),
                       trend: p,
@@ -3757,8 +3757,8 @@ function n2(e) {
 }
 var n6 = l(890497),
     n3 = l(734057),
-    n9 = l(317525),
-    n4 = l(576705),
+    n4 = l(317525),
+    n9 = l(576705),
     n8 = l(811091),
     n7 = l(44167);
 l(321073);
@@ -4132,7 +4132,7 @@ let iv = {
                     "edit" === r && null == n
                         ? (0, i.jsx)(w, {
                               minHeight: 273,
-                              graphic: (0, i.jsx)(t9, { alt: "", ariaHidden: !0, width: 200 }),
+                              graphic: (0, i.jsx)(t4, { alt: "", ariaHidden: !0, width: 200 }),
                               title: I.intl.string(Z.default.v59XPT),
                               subtitle: I.intl.string(Z.default.Bayri1),
                           })
@@ -4175,7 +4175,7 @@ let iv = {
                         },
                         [t],
                     )),
-                    (0, t4.g)(n, a, [t], { fireOnMount: !0 }),
+                    (0, t9.g)(n, a, [t], { fireOnMount: !0 }),
                     s.useEffect(
                         () => () => {
                             lL.setState((e) => {
@@ -4341,10 +4341,10 @@ let iv = {
                 l,
                 n = (0, n7.n)(),
                 a = (0, R.bG)(
-                    [n3.A, n4.A],
+                    [n3.A, n9.A],
                     () => {
                         let e = null != n ? n3.A.getChannel(n) : void 0;
-                        return null != e && n4.A.can(tb.xBc.USE_EMBEDDED_ACTIVITIES, e);
+                        return null != e && n9.A.can(tb.xBc.USE_EMBEDDED_ACTIVITIES, e);
                     },
                     [n],
                 ),
@@ -4442,8 +4442,8 @@ let iv = {
                 n = n8.default.castGuildIdAsEveryoneGuildRoleId(l),
                 a = (0, n7.n)(),
                 r = (0, R.bG)([n3.A], () => (null != a ? n3.A.getChannel(a) : void 0), [a]),
-                d = (0, R.bG)([n4.A], () => null != r && n4.A.can(tb.xBc.MANAGE_ROLES, r), [r]),
-                o = (0, R.bG)([n9.A], () => (null == l ? im : n9.A.getSortedRoles(l).filter((e) => e.id !== n)), [
+                d = (0, R.bG)([n9.A], () => null != r && n9.A.can(tb.xBc.MANAGE_ROLES, r), [r]),
+                o = (0, R.bG)([n4.A], () => (null == l ? im : n4.A.getSortedRoles(l).filter((e) => e.id !== n)), [
                     l,
                     n,
                 ]),
