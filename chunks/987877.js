@@ -1,44 +1,35 @@
 (t(323874), t(14289), t(35956));
-var l = t(597798),
-    a = t(448741),
-    i = t(235393),
-    r = t(376943),
-    s = t(362280),
-    o = t(734057),
-    c = t(696451),
-    u = t(71393),
-    d = t(449054),
-    m = t(811091),
-    h = t(923257),
-    p = t(652215),
-    x = t(575279);
+var l = t(448741),
+    a = t(235393),
+    i = t(362280),
+    r = t(696451),
+    s = t(71393),
+    o = t(449054),
+    c = t(811091),
+    u = t(652215),
+    d = t(575279);
 t.d(
     n,
     {},
     {
-        o: async function (e, n, t, g) {
+        o: async function (e, n, t, m) {
             if (null == n) return;
             if (
-                (i.A.trackDiscordLinkClicked({ guildId: e, channelId: n, messageId: t }),
-                null != e && !c.Ay.isCurrentUserGuest(e))
+                (a.A.trackDiscordLinkClicked({ guildId: e, channelId: n, messageId: t }),
+                null != e && !r.Ay.isCurrentUserGuest(e))
             ) {
-                let l = u.A.getGuild(e);
-                if (l?.joinedAt == null)
+                let a = s.A.getGuild(e);
+                if (a?.joinedAt == null)
                     try {
-                        await d.Z2(e, {}, { channelId: n, messageId: t });
+                        await o.Z2(e, {}, { channelId: n, messageId: t });
                         return;
                     } catch (e) {
-                        if (e instanceof a.w) return;
+                        if (e instanceof l.w) return;
                     }
             }
-            let j = o.A.getChannel(n);
-            if (null != j && null == t && j.isGuildVocal() && (0, r.nc)(j)) {
-                let { navigateOnly: e } = h.h.getConfig({ location: "channel_mention" });
-                if (!e) return void l.default.selectVoiceChannel(j.id);
-            }
-            let f = new URLSearchParams();
-            (null != g && m.default.isProbablyAValidSnowflake(g) && f.append(x.Nl, g),
-                (0, s.A)(p.BVt.CHANNEL(e, n, t), { search: f.toString() }));
+            let h = new URLSearchParams();
+            (null != m && c.default.isProbablyAValidSnowflake(m) && h.append(d.Nl, m),
+                (0, i.A)(u.BVt.CHANNEL(e, n, t), { search: h.toString() }));
         },
     },
 );

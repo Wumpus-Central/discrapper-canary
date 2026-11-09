@@ -936,22 +936,6 @@
     }
   },
   {
-    "name": "2026-02-voice-channel-link-click",
-    "kind": "user",
-    "defaultConfig": {
-      "navigateOnly": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "navigateOnly": true
-      }
-    }
-  },
-  {
     "name": "2026-02-wgc-dirty-regions-all",
     "kind": "user",
     "defaultConfig": {
