@@ -24,8 +24,8 @@ var l = n(477900),
     _ = n(775602),
     j = n(149468),
     v = n(211401),
-    T = n(989837),
-    N = n(500049),
+    N = n(989837),
+    T = n(500049),
     M = n(721768),
     R = n(151596),
     D = n(842209),
@@ -33,8 +33,8 @@ var l = n(477900),
     L = n(392054),
     P = n(168186),
     O = n(545152),
-    U = n(972995),
-    G = n(355622),
+    G = n(972995),
+    U = n(355622),
     w = n(408018);
 (n(321073), n(323874), n(14289), n(35956));
 var F = n(120692),
@@ -89,12 +89,12 @@ var eo = n(598071),
     e_ = n(719442),
     ej = n(267102),
     ev = n(787564),
-    eT = n(323350),
-    eN = n(339200),
+    eN = n(323350),
+    eT = n(339200),
     eM = n(68059),
     eR = n(551483);
 let eD = {
-    ...G.oU.GENERIC_RICH_TEXTAREA,
+    ...U.oU.GENERIC_RICH_TEXTAREA,
     markdown: { disableBlockQuotes: !0, disableCodeBlocks: !0, disableInlineCode: !0 },
 };
 function ek(e) {
@@ -133,9 +133,9 @@ function ek(e) {
                         (e.insertSoftBreak = () => {}),
                         (e.insertText = (n) => {
                             let l = n.replace(/\r\n|\r|\n/g, " ");
-                            (0, eT.WO)(eN.VW.richValue(e), { mode: "raw" }).length -
+                            (0, eN.WO)(eT.VW.richValue(e), { mode: "raw" }).length -
                                 (null != e.selection && e_.Q6.isExpanded(e.selection)
-                                    ? (0, eT.WO)(eN.VW.richValue(e), { mode: "raw", range: e.selection }).length
+                                    ? (0, eN.WO)(eT.VW.richValue(e), { mode: "raw", range: e.selection }).length
                                     : 0) +
                                 l.length <=
                                 140 && t(l);
@@ -156,8 +156,8 @@ function ek(e) {
         }, [g, o]));
     let p = i.useCallback(
             (e) => {
-                let t = (0, eT.WO)(e, { mode: "raw" }),
-                    n = (0, eT.WO)(e, { mode: "plain" }),
+                let t = (0, eN.WO)(e, { mode: "raw" }),
+                    n = (0, eN.WO)(e, { mode: "plain" }),
                     l = t !== m.current;
                 ((m.current = t), d(n), l && c(t));
             },
@@ -185,8 +185,8 @@ function ek(e) {
 var eL = n(84046),
     eP = n(4025),
     eO = n(989161),
-    eU = n(851023),
-    eG = n(102077),
+    eG = n(851023),
+    eU = n(102077),
     ew = n(652215);
 (n(827669), n(294920));
 var eF = n(478644),
@@ -220,15 +220,15 @@ let ez = i.memo(function (e) {
             onBlur: b,
             onFocus: j,
             onKeyDown: v,
-            onSubmit: T,
-            promptToUpload: N,
+            onSubmit: N,
+            promptToUpload: T,
             canMentionRoles: M,
             canMentionChannels: R,
             maxCharacterCount: D,
             placeholder: L,
             "aria-describedby": P,
             "aria-labelledby": O,
-            setEditorRef: U,
+            setEditorRef: G,
             autoCompletePosition: w,
             disableThemedBackground: H = !1,
             emojiPickerCloseOnModalOuterClick: B,
@@ -250,18 +250,18 @@ let ez = i.memo(function (e) {
         e_ = i.useRef(null),
         ej = i.useRef(null),
         ev = i.useRef(X);
-    U?.(ey.current);
-    let { activeCommand: eT } = (0, h.cf)([k.A], () => ({
+    G?.(ey.current);
+    let { activeCommand: eN } = (0, h.cf)([k.A], () => ({
             activeCommand: E.commands?.enabled ? k.A.getActiveCommand(C.id) : null,
             activeCommandSection: E.commands?.enabled ? k.A.getActiveCommandSection(C.id) : null,
         })),
         {
-            isLurking: eN,
+            isLurking: eT,
             isPendingMember: eM,
             disabled: eR,
             canAttachFiles: eD,
-            canEveryoneSendMessages: eU,
-        } = (0, eO.Sk)(C, E, eT, A),
+            canEveryoneSendMessages: eG,
+        } = (0, eO.Sk)(C, E, eN, A),
         ew = !ef.D_.useSetting() && !(0, eS.Ct)() && null != window.ResizeObserver,
         eF = !ew || !E.commands?.enabled || !x || "/" !== c,
         ez = (0, ep.A)(),
@@ -307,7 +307,7 @@ let ez = i.memo(function (e) {
                     s = ex.A.getUploads(C.id, eC.C.ChannelMessage),
                     a = s.find((e) => e.id === Y);
                 if (null == a)
-                    return T({
+                    return N({
                         ...e,
                         value: l,
                         announcementSendOptions: { createThread: e1 && eu, threadName: i, publish: ec },
@@ -352,7 +352,7 @@ let ez = i.memo(function (e) {
                             size: null,
                         });
                     }),
-                    T({
+                    N({
                         ...e,
                         value: l,
                         components: n,
@@ -360,7 +360,7 @@ let ez = i.memo(function (e) {
                     }).then(t)
                 );
             },
-            [T, X, Y, C.id, eu, ec, e1],
+            [N, X, Y, C.id, eu, ec, e1],
         ),
         { submit: e7, handleSubmit: e5 } = (0, eO.Zx)(e4, E, ey, ej, C.id),
         { autocompleteRef: e8, handleMaybeShowAutocomplete: e6, handleHideAutocomplete: e9 } = (0, eO.v7)(),
@@ -496,9 +496,9 @@ let ez = i.memo(function (e) {
                                                         placeholder: L,
                                                         required: p,
                                                         accessibilityLabel: f,
-                                                        isPreviewing: (eN || eM) && eU,
+                                                        isPreviewing: (eT || eM) && eG,
                                                         channel: C,
-                                                        type: G.oU.CREATE_ANNOUNCEMENT_POST,
+                                                        type: U.oU.CREATE_ANNOUNCEMENT_POST,
                                                         canPasteFiles: eD,
                                                         uploadPromptCharacterCount: 4e3,
                                                         maxCharacterCount: D ?? ez,
@@ -517,7 +517,7 @@ let ez = i.memo(function (e) {
                                                         onSelectionChanged: e3,
                                                         onMaybeShowAutocomplete: e6,
                                                         onHideAutocomplete: e9,
-                                                        promptToUpload: N,
+                                                        promptToUpload: T,
                                                         fontSize: eJ,
                                                         spellcheckEnabled: eX,
                                                         canOnlyUseTextCommands: !1,
@@ -529,7 +529,7 @@ let ez = i.memo(function (e) {
                                     }),
                                     (0, l.jsx)("div", {
                                         className: eB.KK,
-                                        children: (0, l.jsx)(eG.A, {
+                                        children: (0, l.jsx)(eU.A, {
                                             channelId: C.id,
                                             type: E,
                                             canAttachFiles: eD,
@@ -549,7 +549,7 @@ let ez = i.memo(function (e) {
                                     children: [
                                         (0, l.jsx)(eq, { channel: C }),
                                         (0, l.jsx)(eP.A, {
-                                            type: G.oU.CREATE_ANNOUNCEMENT_POST,
+                                            type: U.oU.CREATE_ANNOUNCEMENT_POST,
                                             disabled: eR,
                                             channel: C,
                                             handleSubmit: e5,
@@ -723,7 +723,7 @@ function e$(e) {
                   r
                       ? (0, l.jsx)(ec.Ay, {
                             className: eB.jM,
-                            children: (0, l.jsx)(eU.A, {
+                            children: (0, l.jsx)(eG.A, {
                                 tooltip: eH.intl.string(eH.t.VjC21x),
                                 onClick: n,
                                 dangerous: !0,
@@ -1031,7 +1031,7 @@ var tS = n(885071),
     t_ = n(176781),
     tj = n(683825),
     tv = n(273692);
-function tT() {
+function tN() {
     return (0, l.jsx)(e6, {
         textStyles: tv.U,
         bannerIcon: (0, l.jsx)(t_.ClipsIcon, { size: "lg" }),
@@ -1039,22 +1039,22 @@ function tT() {
         bannerSubtext: eH.intl.string(tj.default["7mR8Bv"]),
     });
 }
-var tN = n(458914),
+var tT = n(458914),
     tM = n(959698),
     tR = n(521427),
     tD = n(751258),
     tk = n(451909),
     tL = n(926262),
-    tP = n(567008),
+    tP = n(812266),
     tO = n(537174),
-    tU = n(973196),
-    tG = n(361729),
+    tG = n(973196),
+    tU = n(361729),
     tw = n(308718);
 function tF() {
     return (0, l.jsx)(e6, {
         containerStyles: tw.k,
-        bannerHeader: eH.intl.string(tG.default.e7ydX0),
-        bannerSubtext: eH.intl.string(tG.default.POfugg),
+        bannerHeader: eH.intl.string(tU.default.e7ydX0),
+        bannerSubtext: eH.intl.string(tU.default.POfugg),
     });
 }
 var tH = n(591563),
@@ -1283,18 +1283,18 @@ function n_() {
 }
 var nj = n(544990),
     nv = n(678655),
-    nT = n(858899),
-    nN = n(336590),
+    nN = n(858899),
+    nT = n(336590),
     nM = n(190857),
     nR = n(378570),
     nD = n(138298),
     nk = n(260771);
 function nL(e) {
     let { channel: t } = e,
-        n = (0, nN.k)(),
+        n = (0, nT.k)(),
         s = (0, h.bG)([nd.default], () => nd.default.getUser(t.getRecipientId())),
         a = i.useCallback(() => {
-            (0, nT.P0)({ text: eH.intl.string(eH.t["EDYbS+"]), variant: "critical" });
+            (0, nN.P0)({ text: eH.intl.string(eH.t["EDYbS+"]), variant: "critical" });
         }, []),
         r = i.useCallback(() => {
             nD.A.closeChannelSidebar(ns.fe);
@@ -1347,8 +1347,8 @@ function nL(e) {
 }
 var nP = n(698279),
     nO = n(381941),
-    nU = n(650583),
-    nG = n(999900);
+    nG = n(650583),
+    nU = n(999900);
 function nw(e) {
     e.preventDefault();
 }
@@ -1409,10 +1409,10 @@ class nK extends i.PureComponent {
             i = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey,
             s = 0 !== this.state.textValue.length;
         switch (e.key) {
-            case nU.dh.DELETE:
-            case nU.dh.BACKSPACE:
+            case nG.dh.DELETE:
+            case nG.dh.BACKSPACE:
                 return void this.handleIncrementCombo("", 1);
-            case nU.dh.ARROW_UP:
+            case nG.dh.ARROW_UP:
                 if (i || s) return;
                 if ((e.preventDefault(), t))
                     ex.A.getUploadCount(l.id, eC.C.ChannelMessage) > 0
@@ -1431,7 +1431,7 @@ class nK extends i.PureComponent {
                           : null != n && this.handleEditLastMessage(n);
                 }
                 return;
-            case nU.dh.ESCAPE:
+            case nG.dh.ESCAPE:
                 if (i || e.target !== e.currentTarget) return;
                 if ((e.preventDefault(), t)) return void (0, b.Bm)();
                 if (ex.A.getUploadCount(l.id, eC.C.ChannelMessage) > 0)
@@ -1483,7 +1483,7 @@ class nK extends i.PureComponent {
             chatInputType: i,
             channel: { id: s },
         } = this.props;
-        if (i === G.oU.NORMAL && s !== nc.Ay.getChannelId()) return;
+        if (i === U.oU.NORMAL && s !== nc.Ay.getChannelId()) return;
         C.A.changeDraft(s, t, eC.C.ChannelMessage);
         let a = "" !== t && n !== this.state.richValue,
             r = a && !nF.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
@@ -1517,7 +1517,7 @@ class nK extends i.PureComponent {
                 );
             let e = k.A.getCommandOrigin(h.id);
             if (null == e || e === L.iw.CHAT) {
-                let { isAuthorized: e } = await (0, U.q)({
+                let { isAuthorized: e } = await (0, G.q)({
                     applicationId: i.applicationId,
                     channel: h,
                     commandIntegrationTypes: i.integration_types,
@@ -1525,8 +1525,8 @@ class nK extends i.PureComponent {
                 if (!e) return Promise.resolve({ shouldClear: !1, shouldRefocus: !0 });
             } else if (e === L.iw.APPLICATION_LAUNCHER || e === L.iw.IMAGE_RECS_MENU || e === L.iw.IMAGE_RECS_SUBMENU) {
                 let { location: t, sectionName: n } = (0, nI.bV)(i) ?? {},
-                    l = e === L.iw.APPLICATION_LAUNCHER ? T.A.lastShownEntrypoint() : N.s4.TEXT,
-                    { isAuthorized: s } = await (0, U.q)({
+                    l = e === L.iw.APPLICATION_LAUNCHER ? N.A.lastShownEntrypoint() : T.s4.TEXT,
+                    { isAuthorized: s } = await (0, G.q)({
                         applicationId: i.applicationId,
                         channel: h,
                         commandIntegrationTypes: i.integration_types,
@@ -1596,7 +1596,7 @@ class nK extends i.PureComponent {
                 ((S.eagerDispatch = !1),
                     (S.attachmentsToUpload = n),
                     (S.onAttachmentUploadError = (e, t, n) => {
-                        (0, tN.k)({ file: e, guildId: h.getGuildId(), analyticsLocations: [], code: t, reason: n }) &&
+                        (0, tT.k)({ file: e, guildId: h.getGuildId(), analyticsLocations: [], code: t, reason: n }) &&
                             y();
                     }),
                     I.A.clearAll(h.id, eC.C.ChannelMessage));
@@ -1653,12 +1653,12 @@ class nK extends i.PureComponent {
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
                           focused: t,
-                          className: nG.gM,
+                          className: nU.gM,
                           channel: e,
                           placeholder: d,
                           accessibilityLabel: u,
                           pendingReply: r,
-                          type: G.oU.CREATE_ANNOUNCEMENT_POST,
+                          type: U.oU.CREATE_ANNOUNCEMENT_POST,
                           onChange: this.handleTextareaChange,
                           onSubmit: this.handleSendMessage,
                           onResize: s,
@@ -1676,7 +1676,7 @@ class nK extends i.PureComponent {
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
                           focused: t,
-                          className: nG.gM,
+                          className: nU.gM,
                           channel: e,
                           placeholder: d,
                           accessibilityLabel: u,
@@ -1710,7 +1710,7 @@ class nK extends i.PureComponent {
                 );
             },
             children: () =>
-                p ? (0, l.jsx)(g.b, { isShaking: h > 0, intensity: h, className: nG.Xn, children: E }) : E,
+                p ? (0, l.jsx)(g.b, { isShaking: h > 0, intensity: h, className: nU.Xn, children: E }) : E,
         });
     }
 }
@@ -1765,12 +1765,12 @@ class nV extends i.PureComponent {
         let { keyboardModeEnabled: t, chatInputType: n, channel: l } = this.props;
         if (t)
             switch (e.key) {
-                case nU.dh.ARROW_LEFT:
-                    n === G.oU.SIDEBAR &&
+                case nG.dh.ARROW_LEFT:
+                    n === U.oU.SIDEBAR &&
                         ng._.dispatch(ew.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: nc.Ay.getChannelId() });
                     return;
-                case nU.dh.ARROW_RIGHT:
-                    n === G.oU.NORMAL &&
+                case nG.dh.ARROW_RIGHT:
+                    n === U.oU.NORMAL &&
                         ng._.dispatch(ew.jej.FOCUS_CHANNEL_TEXT_AREA, {
                             channelId: ns.Ay.getCurrentSidebarChannelId(l.id),
                         });
@@ -1782,12 +1782,12 @@ class nV extends i.PureComponent {
     };
     openEmojiPacks = (e) => {
         let { channel: t, chatInputType: n, announcementComposerEnabled: l } = this.props,
-            i = t.type === ew.rbe.GUILD_ANNOUNCEMENT && l ? G.oU.CREATE_ANNOUNCEMENT_POST : n;
+            i = t.type === ew.rbe.GUILD_ANNOUNCEMENT && l ? U.oU.CREATE_ANNOUNCEMENT_POST : n;
         (0, e3.bf)(nP.kx.EMOJI, i, t.id, { showSelectedEmojiPackId: e });
     };
     handleOpenAppLauncher = (e) => {
         let { applicationId: t } = e;
-        return v.R(N.s4.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
+        return v.R(T.s4.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
     };
     handleChatInteract = () => {
         this.dispatchGroupRef.current?.bumpDispatchPriority();
@@ -1801,7 +1801,7 @@ class nV extends i.PureComponent {
             showAutomodUserProfileChatBlocker: a,
         } = e;
         return t.isMediaThread()
-            ? (0, l.jsx)(tT, {})
+            ? (0, l.jsx)(tN, {})
             : this.props.restrictedPreview && t.type === ew.rbe.DM
               ? (0, l.jsx)(nL, { channel: t })
               : t.type === ew.rbe.DM && n
@@ -1840,18 +1840,18 @@ class nV extends i.PureComponent {
                 announcementComposerEnabled: _,
             } = this.props,
             { textAreaFocused: j, textAreaHighlighted: v } = this.state,
-            T = o === G.oU.SIDEBAR;
+            N = o === U.oU.SIDEBAR;
         e =
-            T && t.type === ew.rbe.GUILD_VOICE
+            N && t.type === ew.rbe.GUILD_VOICE
                 ? eH.t.pnnyFZ
-                : T && t.type === ew.rbe.GUILD_STAGE_VOICE
+                : N && t.type === ew.rbe.GUILD_STAGE_VOICE
                   ? eH.t.YInSkq
                   : d.k.THREADS.has(t.type)
                     ? eH.t["OkzL+Q"]
                     : eH.t.UbNmGc;
-        let N = (0, l.jsx)("div", { className: nG.li, children: (0, l.jsx)(n_, {}) }),
+        let T = (0, l.jsx)("div", { className: nU.li, children: (0, l.jsx)(n_, {}) }),
             M = (0, l.jsx)("div", {
-                className: nG.li,
+                className: nU.li,
                 children: (0, l.jsx)(ni.A, {
                     childRef: this.containerDomRef,
                     tutorialId: "writing-messages",
@@ -1881,7 +1881,7 @@ class nV extends i.PureComponent {
                     }),
                 }),
             }),
-            R = b ? N : M,
+            R = b ? T : M,
             D = (0, nE.m1)(t, nd.default, no.A);
         return (0, l.jsx)(
             y.A,
@@ -1903,15 +1903,15 @@ class nV extends i.PureComponent {
                                     handler: this.handleOpenAppLauncher,
                                 }),
                                 (0, l.jsxs)(nH, {
-                                    isSidebar: T,
-                                    className: nG.q2,
+                                    isSidebar: N,
+                                    className: nU.q2,
                                     "aria-label": eH.intl.formatToPlainString(e, { channelName: D }),
                                     onMouseDown: this.handleChatInteract,
                                     onKeyDown: this.handleKeyDown,
                                     onFocus: this.handleChatInteract,
                                     style: this.props.guildOfficialMessageStyle,
                                     children: [
-                                        (0, l.jsx)(ny.A, { channel: t, guild: n, narrow: T }),
+                                        (0, l.jsx)(ny.A, { channel: t, guild: n, narrow: N }),
                                         (0, l.jsxs)(p.F, {
                                             component: (0, l.jsx)(A.A, {
                                                 children: (0, l.jsx)(p.H, {
@@ -1930,7 +1930,7 @@ class nV extends i.PureComponent {
                                                                 filterAfterTimestamp: m,
                                                                 showingQuarantineBanner: h,
                                                                 typingGradient: S,
-                                                                hideSummaries: o === G.oU.OVERLAY,
+                                                                hideSummaries: o === U.oU.OVERLAY,
                                                             }),
                                                         }),
                                                         E
@@ -1945,7 +1945,7 @@ class nV extends i.PureComponent {
                                                               (0, l.jsxs)("form", {
                                                                   ref: this.inputFormRef,
                                                                   onSubmit: nw,
-                                                                  className: a()(nG.Zd, { [nG.Mf]: !b }),
+                                                                  className: a()(nU.Zd, { [nU.Mf]: !b }),
                                                                   children: [
                                                                       C && (0, l.jsx)(tY, { channelId: t.id }),
                                                                       t.isPrivate()
@@ -1987,7 +1987,7 @@ let nW = i.memo(function (e) {
         s,
         { channel: a, guild: r, chatInputType: o, filterAfterTimestamp: c } = e,
         { placeholder: d, accessibilityLabel: u } = (0, nx.A)({ channel: a }),
-        m = (0, tU.A)(),
+        m = (0, tG.A)(),
         g = t4(nd.default.getCurrentUser(), a),
         [p] = (0, td.c)(r?.id),
         A = (0, e7.uZ)(r?.id),
@@ -2007,9 +2007,9 @@ let nW = i.memo(function (e) {
         b = ((n = a.id), (0, h.bG)([eC.A], () => eC.A.getScheduledMessage(n))),
         j = (0, h.bG)([tK.Ay, te.default], () => tK.Ay.getUserCombo(te.default.getId(), a.id)),
         v = (0, S.rj)(a),
-        T = (0, S.aW)(a),
-        N = (0, e4.L)(a.id),
-        M = v.length > 0 || a.rateLimitPerUser > 0 || null != j || null != T || N,
+        N = (0, S.aW)(a),
+        T = (0, e4.L)(a.id),
+        M = v.length > 0 || a.rateLimitPerUser > 0 || null != j || null != N || T,
         { showLinkedLobbyApplicationLoadingIndicator: R } = (0, nC.A)(a.linkedLobby),
         D = e1.useConfig({ location: "ChannelChat" }).announcementComposer,
         k = (0, tO.A)((0, tR.GP)(r, "ChannelChat") ? (r?.officialMessageColor ?? nO.aj) : null),

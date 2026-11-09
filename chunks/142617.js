@@ -14,8 +14,8 @@ let r = (0, i.mj)({
     s = (0, i.mj)({
         name: "2026-10-build-a-bear-qa",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+        defaultConfig: { mode: "off" },
+        variations: { 0: { mode: "off" }, 1: { mode: "all" }, 2: { mode: "reset_only" } },
     });
 n.d(
     t,
@@ -29,8 +29,8 @@ n.d(
             let { enabled: t } = a.useConfig({ location: e });
             return t;
         },
-        TX: function (e) {
-            let { enabled: t } = s.useConfig({ location: e });
+        hF: function (e) {
+            let { mode: t } = s.useConfig({ location: e });
             return t;
         },
         w: function (e) {

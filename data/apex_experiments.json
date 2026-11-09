@@ -4616,7 +4616,7 @@
     "name": "2026-10-build-a-bear-qa",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "mode": "off"
     },
     "variations": {
       "0": {
@@ -4624,7 +4624,10 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "mode": "all"
+      },
+      "2": {
+        "mode": "reset_only"
       }
     }
   },
