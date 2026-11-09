@@ -4,8 +4,8 @@ var i = n(855986),
     u = n(543862),
     s = n(617617),
     o = n(927813),
-    E = n(811091),
-    a = n(851746),
+    a = n(811091),
+    E = n(851746),
     d = n(103411),
     _ = n(49999),
     c = n(792996);
@@ -26,7 +26,7 @@ n.d(
             if (null == e) return !1;
             let n = e.isReferralTrial,
                 i = !e.isRedeemed,
-                r = new Date(E.default.extractTimestamp(e.id)),
+                r = new Date(a.default.extractTimestamp(e.id)),
                 l = new Date();
             return n && i && l >= r;
         },
@@ -35,8 +35,8 @@ n.d(
         },
         Tp: function () {
             let t = (0, d.m)(!1),
-                e = (0, i.bG)([a.A], () => a.A.getReferralsRemaining()),
-                n = (0, i.bG)([a.A], () => a.A.getReminderStateId()),
+                e = (0, i.bG)([E.A], () => E.A.getReferralsRemaining()),
+                n = (0, i.bG)([E.A], () => E.A.getReminderStateId()),
                 u = (0, i.bG)([s.A], () => null != n && (0, l.u$)(r.M.REFERRAL_PROGRAM_POPOVER_V2, n).isDismissed);
             return null != n && t && !u && null != e && e > 0;
         },
@@ -45,9 +45,6 @@ n.d(
         },
         ne: function (t) {
             null != t && (0, u.qr)(r.M.REFERRAL_PROGRAM_POPOVER_V2, t, { dismissAction: _.i.INDIRECT_ACTION });
-        },
-        sZ: function () {
-            (0, l.Dr)(r.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER);
         },
     },
 );
