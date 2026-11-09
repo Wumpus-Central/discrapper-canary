@@ -425,6 +425,8 @@ var i,
         (i.GUILD_BOOSTING_REVIEW_PRORATED = "guild boosting review prorated"),
         (i.GUILD_BOOSTING_REVIEW_RENEWAL = "guild boosting review renewal"),
         (i.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE = "guild role subscription payment source with invoice"),
+        (i.GAME_SERVER_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE =
+            "game server subscription payment source with invoice"),
         (i.PREMIUM_PLAN_SELECT = "premium_plan_select"),
         (i.CANCEL_INVOICE_PREVIEW = "cancel_invoice_preview"),
         (i.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT = "premium subscription fine print content"),
