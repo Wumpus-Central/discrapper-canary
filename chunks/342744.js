@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(781300),
     S = n(253390),
     T = n(166403),
-    p = n(722178),
-    f = n(682502),
+    f = n(722178),
+    p = n(682502),
     x = n(816571),
     I = n(792996),
     _ = n(17456);
@@ -48,7 +48,7 @@ function C(e) {
         case 2:
             return (0, i.jsx)(N, {});
         default:
-            throw new f.f({ message: `Unexpected step: ${t}` });
+            throw new p.f({ message: `Unexpected step: ${t}` });
     }
 }
 n.d(
@@ -62,7 +62,7 @@ n.d(
                 T.A.hasFetchedSubscriptions() || (0, h.hP)();
             }, []);
             let d = (0, a.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
-                [f, _] = l.useState(1),
+                [p, _] = l.useState(1),
                 [b, N] = l.useState(!1),
                 [y, v] = l.useState(null),
                 j = l.useCallback(async () => {
@@ -71,17 +71,17 @@ n.d(
                             (N(!0), v(null));
                             let e = (0, S.v)(d, 1);
                             (r()(
-                                (0, p.bx)(e) <= (0, p.bx)(d.additionalPlans),
+                                (0, f.bx)(e) <= (0, f.bx)(d.additionalPlans),
                                 "Uncanceling should not increase the number of guild subscriptions",
                             ),
                                 await (async function (e, t, n, i) {
-                                    let l = (0, p.aE)(e, t);
+                                    let l = (0, f.aE)(e, t);
                                     (await (0, c.Ey)(n),
                                         await (0, h.nV)(
                                             e,
                                             { items: l },
                                             { amount: 0, currency: e.currency },
-                                            (0, p.UC)(l, e.currency, e.paymentSourceId),
+                                            (0, f.UC)(l, e.currency, e.paymentSourceId),
                                             i,
                                         ));
                                 })(d, e, t, u),
@@ -103,7 +103,7 @@ n.d(
                     onClose: async () => await s(),
                     size: "sm",
                     title: (function () {
-                        switch (f) {
+                        switch (p) {
                             case 1:
                                 return I.intl.string(I.t.l52ih2);
                             case 2:
@@ -113,7 +113,7 @@ n.d(
                         }
                     })(),
                     actions: (function () {
-                        switch (f) {
+                        switch (p) {
                             case 1:
                                 return [
                                     { variant: "secondary", text: I.intl.string(I.t.oEAioF), disabled: b, onClick: s },
@@ -128,7 +128,7 @@ n.d(
                     children: (0, i.jsx)(x.d, {
                         errorHandlingBehavior: "close-and-alert",
                         guildBoostSlotId: t,
-                        children: (0, i.jsx)(C, { step: f, errorMsg: y, premiumSubscription: d }),
+                        children: (0, i.jsx)(C, { step: p, errorMsg: y, premiumSubscription: d }),
                     }),
                 }),
             });

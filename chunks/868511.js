@@ -21,8 +21,8 @@ n.d(
             let { onClose: t, transitionState: n } = e,
                 {
                     authorizedApplicationId: T,
-                    authorizationError: p,
-                    authorizing: f,
+                    authorizationError: f,
+                    authorizing: p,
                 } = (0, s.cf)([m.A], () => ({
                     authorizedApplicationId: m.A.testModeApplicationId,
                     authorizationError: m.A.error,
@@ -54,14 +54,14 @@ n.d(
                 O = l.useMemo(
                     () => [
                         {
-                            loading: f,
+                            loading: p,
                             disabled: !y || 0 === x.length || ("localhost" === N && 0 === _.length),
                             variant: v ? "critical-primary" : "active",
                             text: v ? A.intl.string(A.t.d6TR3I) : A.intl.string(A.t.qwuK5I),
                             onClick: j,
                         },
                     ],
-                    [x.length, f, v, y, _.length, j, N],
+                    [x.length, p, v, y, _.length, j, N],
                 );
             return (0, i.jsxs)(r.a, {
                 title: A.intl.string(A.t.f8fzky),
@@ -70,11 +70,11 @@ n.d(
                 onClose: t,
                 transitionState: n,
                 children: [
-                    null == p
+                    null == f
                         ? null
                         : (0, i.jsx)("div", {
                               className: h.SX,
-                              children: (0, i.jsx)(a.w, { type: "critical", message: p, role: "alert" }),
+                              children: (0, i.jsx)(a.w, { type: "critical", message: f, role: "alert" }),
                           }),
                     (0, i.jsxs)(g.A, {
                         direction: g.A.Direction.VERTICAL,
@@ -91,7 +91,7 @@ n.d(
                                     onChange: function (e) {
                                         I(e);
                                     },
-                                    disabled: f,
+                                    disabled: p,
                                 }),
                             }),
                             (0, i.jsx)("div", {
@@ -121,7 +121,7 @@ n.d(
                                           value: _,
                                           maxLength: 5,
                                           onChange: (e) => b(e),
-                                          disabled: f,
+                                          disabled: p,
                                       }),
                                   }),
                         ],

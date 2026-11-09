@@ -95,8 +95,8 @@ function R(e, t, n) {
 }
 var w = n(694403),
     O = n(323350),
-    L = n(235599),
-    M = n(551483);
+    M = n(235599),
+    L = n(551483);
 function P(e) {
     let t = l.useContext(o.Ay),
         n = m.SI.useSetting(),
@@ -107,7 +107,7 @@ function P(e) {
             let l = (0, r.ie)();
             return (
                 (l.children = (0, f.x7)("")),
-                (l.selection = { anchor: M.K, focus: M.K }),
+                (l.selection = { anchor: L.K, focus: L.K }),
                 D({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 (l.nativeMarkdownSyntax = g),
                 l
@@ -195,7 +195,7 @@ function D(e) {
                     insertTextData: u,
                 } = e;
                 return (
-                    ((e = (0, L.o$)(e)).addMark = n),
+                    ((e = (0, M.o$)(e)).addMark = n),
                     (e.removeMark = l),
                     (e.setFragmentData = s),
                     (e.insertData = a),
@@ -597,12 +597,12 @@ function D(e) {
                                     r = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = E.VW.getParentVoid(e, l)) && !M.XR.includes(t[0].type);
+                                    null != l && null != (t = E.VW.getParentVoid(e, l)) && !L.XR.includes(t[0].type);
                                 )
                                     ((l = E.VW.before(e, l, { unit: "offset" })), (r = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = E.VW.getParentVoid(e, i)) && !M.XR.includes(n[0].type);
+                                    null != i && null != (n = E.VW.getParentVoid(e, i)) && !L.XR.includes(n[0].type);
                                 )
                                     ((i = E.VW.after(e, i, { unit: "offset" })), (r = !0));
                                 r &&

@@ -53,7 +53,7 @@ let D = s().throttle(
     100,
     { trailing: !1 },
 );
-class I extends i.PureComponent {
+class S extends i.PureComponent {
     state = { error: null, info: null };
     discordErrorsSet = !1;
     componentDidCatch(e, t) {
@@ -126,4 +126,4 @@ class I extends i.PureComponent {
         return e;
     }
 }
-n.d(t, {}, { A: I });
+n.d(t, {}, { A: S });

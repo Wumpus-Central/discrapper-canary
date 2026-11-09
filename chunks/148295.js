@@ -1,10 +1,10 @@
-var i,
-    r =
+var r,
+    i =
         588245 != a.j
-            ? (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
-              (i[(i.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
-              (i[(i.ZERO_DATA = 2)] = "ZERO_DATA"),
-              i)
+            ? (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
+              (r[(r.NO_PERSONAL_DATA = 1)] = "NO_PERSONAL_DATA"),
+              (r[(r.ZERO_DATA = 2)] = "ZERO_DATA"),
+              r)
             : null;
 let s = { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } },
     n = {
@@ -27,7 +27,7 @@ a.d(
     t,
     {},
     {
-        S: r,
+        S: i,
         g: function (e) {
             switch (e) {
                 case 0:

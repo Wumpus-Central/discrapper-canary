@@ -127,7 +127,7 @@ function O(e, t) {
         I.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
         b.b.insertText(e, " ");
 }
-function L(e, t, n) {
+function M(e, t, n) {
     let l = e.activeCommand?.options?.find((e) => e.name === n),
         i = e.initialValues[n];
     if (null == l || null == i) return null;
@@ -152,7 +152,7 @@ n.d(
                 isVoid: g,
                 onChange: E,
                 deleteBackward: S,
-                deleteForward: M,
+                deleteForward: L,
                 deleteFragment: P,
             } = e;
             ((e.insertData = (l) => {
@@ -191,7 +191,7 @@ n.d(
                     O(e, () => S(t));
                 }),
                 (e.deleteForward = (t) => {
-                    O(e, () => M(t));
+                    O(e, () => L(t));
                 }),
                 (e.deleteFragment = (t) => {
                     O(e, () => P(t));
@@ -278,7 +278,7 @@ n.d(
                                                         if (null != s)
                                                             for (let l of s) {
                                                                 e.add(l.name);
-                                                                let i = L(n, t, l.name) ?? l.text,
+                                                                let i = M(n, t, l.name) ?? l.text,
                                                                     r = {
                                                                         type: "applicationCommandOption",
                                                                         optionName: l.name,
@@ -294,7 +294,7 @@ n.d(
                                                                 let e, i;
                                                                 o.length > 0 && !T.has(l.type)
                                                                     ? ((e = o), (o = ""))
-                                                                    : (e = (i = L(n, t, l.name)) ?? "");
+                                                                    : (e = (i = M(n, t, l.name)) ?? "");
                                                                 let r = {
                                                                     type: "applicationCommandOption",
                                                                     optionName: l.name,

@@ -1,6 +1,6 @@
-var i = a(477900),
-    r = a(503698),
-    s = a.n(r),
+var r = a(477900),
+    i = a(503698),
+    s = a.n(i),
     n = a(259204),
     c = a(343053),
     d = a(48763),
@@ -13,9 +13,9 @@ a.d(
         A: function (e) {
             let { character: t } = e,
                 { size: a } = (0, c.Z)();
-            return (0, i.jsx)("div", {
+            return (0, r.jsx)("div", {
                 className: s()(l.characterColumn, l[a]),
-                children: (0, i.jsx)(n.A, { character: t, size: o[a], className: l.character }),
+                children: (0, r.jsx)(n.A, { character: t, size: o[a], className: l.character }),
             });
         },
     },

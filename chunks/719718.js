@@ -1,16 +1,16 @@
-var i,
-    r = a(127639),
+var r,
+    i = a(127639),
     s = a(855986),
     n = a(73153),
     c = a(287809),
     d = a(474090),
     l = a(817379),
     o =
-        (((i = {})[(i.INIT = 0)] = "INIT"),
-        (i[(i.FETCHING = 1)] = "FETCHING"),
-        (i[(i.SUCCESS = 2)] = "SUCCESS"),
-        (i[(i.ERROR = 3)] = "ERROR"),
-        i);
+        (((r = {})[(r.INIT = 0)] = "INIT"),
+        (r[(r.FETCHING = 1)] = "FETCHING"),
+        (r[(r.SUCCESS = 2)] = "SUCCESS"),
+        (r[(r.ERROR = 3)] = "ERROR"),
+        r);
 let u = { volume: 1, isMuted: !1, progress: null },
     h = {},
     f = { ...u },
@@ -82,9 +82,9 @@ let v = new A(n.h, {
                 ? ((x = (function (e) {
                       let t = (0, d.ki)(c.default.getCurrentUser()),
                           a = {};
-                      for (let i of Object.values(r.V)) {
-                          let r = e[i];
-                          null == r || (0, l.tS)(i, r, { stats: b, hasNitro: t, savedCharacter: p }) || (a[i] = r);
+                      for (let r of Object.values(i.V)) {
+                          let i = e[r];
+                          null == i || (0, l.tS)(r, i, { stats: b, hasNitro: t, savedCharacter: p }) || (a[r] = i);
                       }
                       return a;
                   })(f.progress.selectedCharacterTraits)),
@@ -113,8 +113,8 @@ let v = new A(n.h, {
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e,
             a = x ?? p ?? h,
-            { progress: i } = f;
-        if (i?.stage === t && i.selectedCharacterTraits === a) return !1;
+            { progress: r } = f;
+        if (r?.stage === t && r.selectedCharacterTraits === a) return !1;
         f.progress = { stage: t, selectedCharacterTraits: a };
     },
     LOGOUT: function () {

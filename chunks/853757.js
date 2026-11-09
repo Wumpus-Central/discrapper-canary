@@ -1,4 +1,4 @@
-n.d(t, { A: () => eI, q: () => eN });
+n.d(t, { A: () => eS, q: () => eN });
 var r = n(477900),
     i = n(582128),
     l = n(503698),
@@ -25,8 +25,8 @@ var r = n(477900),
     O = n(933958),
     _ = n(793574),
     D = n(688810),
-    I = n(590703),
-    S = n(681582),
+    S = n(590703),
+    I = n(681582),
     j = n(573435),
     T = n(71855),
     k = n(203480),
@@ -295,13 +295,13 @@ class e_ extends i.Component {
             n = t.document,
             r = n.head;
         a()(null != r, "Window document head was null");
-        let i = r.querySelector(`style[${I.Vg}]`);
+        let i = r.querySelector(`style[${S.Vg}]`);
         if (null != i) {
             i.textContent = e;
             return;
         }
         let l = n.createElement("style");
-        (l.setAttribute(I.Vg, "true"), (l.textContent = e), r.appendChild(l));
+        (l.setAttribute(S.Vg, "true"), (l.textContent = e), r.appendChild(l));
     }
     handleBlur = () => {
         this.props.onBlur?.();
@@ -357,7 +357,7 @@ class e_ extends i.Component {
                                                 (0, r.jsx)(G.Wr, {
                                                     appContext: p ?? eo.BRT.POPOUT,
                                                     renderWindow: o,
-                                                    children: (0, r.jsx)(S.l, {
+                                                    children: (0, r.jsx)(I.l, {
                                                         children: (0, r.jsx)(M.ks, {
                                                             children: (0, r.jsxs)(L.Yf, {
                                                                 children: [
@@ -424,7 +424,7 @@ function eD(e) {
         (0, r.jsx)("div", { "data-popout-root": !0, ref: o, children: l })
     );
 }
-let eI = function (e) {
+let eS = function (e) {
     let { ref: t, ...n } = e,
         { guestWindow: i, isFullScreen: l } = (0, h.cf)([ew.A], () => ({
             guestWindow: ew.A.getWindow(n.windowKey),
@@ -437,7 +437,7 @@ let eI = function (e) {
     }));
     (0, k.A)(i, !1);
     let { analyticsLocations: u } = (0, D.Ay)(_.A.POPOUT_WINDOW),
-        { clientThemesClassName: d, clientThemesCSS: c } = (0, I.Ay)(),
+        { clientThemesClassName: d, clientThemesCSS: c } = (0, S.Ay)(),
         f = (0, eg.NC)(),
         g = n.themeOverride ?? f;
     return null == i

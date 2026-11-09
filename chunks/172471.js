@@ -58,18 +58,18 @@ let T = (0, i.E2)(l.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [A.intl.string(A.t.IHMsPn)],
     Component: () => (0, s.jsx)(S, {}),
 });
-var p = n(873298),
-    f = n(253932);
+var f = n(873298),
+    p = n(253932);
 let x = (0, i.Qx)(l.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
         useTitle: () => A.intl.string(A.t.dyamEI),
-        useValue: () => f.PZ.useSetting(),
-        setValue: (e) => f.PZ.updateSetting(e),
+        useValue: () => p.PZ.useSetting(),
+        setValue: (e) => p.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: A.intl.string(A.t.FMWYvb), value: p.PZ.AUTO },
-                { name: A.intl.string(A.t.p8NOwi), value: p.PZ.H12 },
-                { name: A.intl.string(A.t["+o/sOo"]), value: p.PZ.H23 },
+                { name: A.intl.string(A.t.FMWYvb), value: f.PZ.AUTO },
+                { name: A.intl.string(A.t.p8NOwi), value: f.PZ.H12 },
+                { name: A.intl.string(A.t["+o/sOo"]), value: f.PZ.H23 },
             ];
         },
     }),

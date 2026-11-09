@@ -1,5 +1,5 @@
-var i = a(620632),
-    r = a(73153),
+var r = a(620632),
+    i = a(73153),
     s = a(308528),
     n = a(138399),
     c = a(451909),
@@ -16,26 +16,26 @@ a.d(
     {},
     {
         IB: function (e, t) {
-            return r.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });
+            return i.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });
         },
         K8: function () {
-            (r.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" }), (0, b.d3)(f.A.isMuted));
+            (i.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" }), (0, b.d3)(f.A.isMuted));
         },
         fr: async function (e, t) {
             let a = await s.A.getOrEnsurePrivateChannel(t),
-                i = l.A.getChannel(a);
-            if (null == i) throw Error("Failed to open private channel");
-            let r = c.Ay.parse(i, e),
-                d = await n.A.sendMessage(i.id, r, !1, { location: "checkpoint-sidekick" });
+                r = l.A.getChannel(a);
+            if (null == r) throw Error("Failed to open private channel");
+            let i = c.Ay.parse(r, e),
+                d = await n.A.sendMessage(r.id, i, !1, { location: "checkpoint-sidekick" });
             return ((0, b.S5)(t), d);
         },
         jA: async function (e, t, a) {
-            let i = (await Promise.all(e.map(d.pk))).filter(o.Vq);
+            let r = (await Promise.all(e.map(d.pk))).filter(o.Vq);
             for (let e of await Promise.allSettled(
-                i.map((e) => {
-                    let i = l.A.getChannel(e);
-                    if (null != i)
-                        return n.A.sendMessage(i.id, c.Ay.parse(i, t), !1, {
+                r.map((e) => {
+                    let r = l.A.getChannel(e);
+                    if (null != r)
+                        return n.A.sendMessage(r.id, c.Ay.parse(r, t), !1, {
                             location: "checkpoint",
                             checkpointCardType: a,
                         });
@@ -44,19 +44,19 @@ a.d(
                 if ("rejected" === e.status) throw e.reason;
         },
         l4: function (e) {
-            return r.h.dispatch({ type: "CHECKPOINT_SAVE_PROGRESS", stage: e });
+            return i.h.dispatch({ type: "CHECKPOINT_SAVE_PROGRESS", stage: e });
         },
         ls: function (e) {
-            return r.h.dispatch({ type: "CHECKPOINT_SET_VOLUME", volume: e });
+            return i.h.dispatch({ type: "CHECKPOINT_SET_VOLUME", volume: e });
         },
         nX: async function (e) {
             if ((f.A.initializeIfNeeded(), f.A.isFetching)) return f.T.FETCHING;
-            r.h.dispatch({ type: "CHECKPOINT_FETCH_START" });
+            i.h.dispatch({ type: "CHECKPOINT_FETCH_START" });
             try {
-                let { body: t } = await i.Bo.get({ url: _.Rsh.CHECKPOINT, rejectWithError: !0 });
+                let { body: t } = await r.Bo.get({ url: _.Rsh.CHECKPOINT, rejectWithError: !0 });
                 if (null != e)
                     return (
-                        r.h.dispatch({
+                        i.h.dispatch({
                             type: "CHECKPOINT_FETCH_SUCCESS",
                             stats: (0, u.g)(e),
                             globalStats: (0, h._R)(t.global_stats),
@@ -65,7 +65,7 @@ a.d(
                         f.T.SUCCESS
                     );
                 return (
-                    r.h.dispatch({
+                    i.h.dispatch({
                         type: "CHECKPOINT_FETCH_SUCCESS",
                         stats: null != t.stats ? (0, h.BF)(t.stats) : null,
                         globalStats: (0, h._R)(t.global_stats),
@@ -74,32 +74,32 @@ a.d(
                     f.T.SUCCESS
                 );
             } catch {
-                return (r.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" }), f.T.ERROR);
+                return (i.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" }), f.T.ERROR);
             }
         },
         sm: async function () {
-            r.h.dispatch({ type: "CHECKPOINT_RESET_START" });
+            i.h.dispatch({ type: "CHECKPOINT_RESET_START" });
             try {
                 return (
-                    await i.Bo.del({ url: _.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }),
-                    r.h.dispatch({ type: "CHECKPOINT_RESET_SUCCESS" }),
+                    await r.Bo.del({ url: _.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }),
+                    i.h.dispatch({ type: "CHECKPOINT_RESET_SUCCESS" }),
                     !0
                 );
             } catch {
-                return (r.h.dispatch({ type: "CHECKPOINT_RESET_FAILED" }), !1);
+                return (i.h.dispatch({ type: "CHECKPOINT_RESET_FAILED" }), !1);
             }
         },
         yE: async function (e) {
-            r.h.dispatch({ type: "CHECKPOINT_COMPLETE_START" });
+            i.h.dispatch({ type: "CHECKPOINT_COMPLETE_START" });
             try {
                 return (
-                    await i.Bo.post({ url: _.Rsh.CHECKPOINT_COMPLETE, body: e, rejectWithError: !0 }),
-                    r.h.dispatch({ type: "CHECKPOINT_COMPLETE_SUCCESS", character: e }),
+                    await r.Bo.post({ url: _.Rsh.CHECKPOINT_COMPLETE, body: e, rejectWithError: !0 }),
+                    i.h.dispatch({ type: "CHECKPOINT_COMPLETE_SUCCESS", character: e }),
                     (0, b.$D)(),
                     !0
                 );
             } catch {
-                return (r.h.dispatch({ type: "CHECKPOINT_COMPLETE_FAILED" }), !1);
+                return (i.h.dispatch({ type: "CHECKPOINT_COMPLETE_FAILED" }), !1);
             }
         },
     },

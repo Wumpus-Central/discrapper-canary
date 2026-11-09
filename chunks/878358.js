@@ -1,5 +1,5 @@
-var i = a(477900),
-    r = a(582128),
+var r = a(477900),
+    i = a(582128),
     s = a(503698),
     n = a.n(s),
     c = a(646514),
@@ -35,83 +35,83 @@ let M = {
 };
 function k(e) {
     let { src: t } = e;
-    return (0, i.jsx)("img", { src: t, alt: "", className: y.Gl });
+    return (0, r.jsx)("img", { src: t, alt: "", className: y.Gl });
 }
 function D() {
-    return (0, i.jsx)(d.UnknownGameIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
+    return (0, r.jsx)(d.UnknownGameIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
 }
 function L(e) {
     let { character: t } = e;
-    return (0, i.jsx)("div", {
+    return (0, r.jsx)("div", {
         className: y.Ij,
-        children: (0, i.jsx)(l.E, { variant: "footnote/normal", color: "text-overlay-dark", children: t }),
+        children: (0, r.jsx)(l.E, { variant: "footnote/normal", color: "text-overlay-dark", children: t }),
     });
 }
 function P(e) {
     let { icon: t, stat: a } = e;
-    return (0, i.jsxs)("li", {
+    return (0, r.jsxs)("li", {
         className: y.N8,
         children: [
             t,
-            (0, i.jsx)(l.E, {
+            (0, r.jsx)(l.E, {
                 variant: "body-sm/medium",
                 color: "text-overlay-dark",
                 lineClamp: 1,
                 "aria-hidden": !0,
                 children: a.text,
             }),
-            (0, i.jsx)(o.A, { children: a.accessibilityLabel }),
+            (0, r.jsx)(o.A, { children: a.accessibilityLabel }),
         ],
     });
 }
 function U(e) {
     let { stats: t } = e,
         { topGuild: a, topGuildAcronymCharacter: s, topEmoji: n, topGame: d } = t,
-        l = r.useMemo(
+        l = i.useMemo(
             () => (null != a ? N.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
             [a],
         ),
-        o = r.useMemo(
+        o = i.useMemo(
             () =>
                 d?.applicationImageId != null
                     ? N.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
                     : void 0,
             [d],
         ),
-        p = r.useMemo(() => (null != l ? (0, i.jsx)(k, { src: l }) : (0, i.jsx)(L, { character: s })), [l, s]);
-    return (0, i.jsxs)("ul", {
+        p = i.useMemo(() => (null != l ? (0, r.jsx)(k, { src: l }) : (0, r.jsx)(L, { character: s })), [l, s]);
+    return (0, r.jsxs)("ul", {
         className: y.M1,
         children: [
-            (0, i.jsx)(P, {
-                icon: (0, i.jsx)(u.MicrophoneIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+            (0, r.jsx)(P, {
+                icon: (0, r.jsx)(u.MicrophoneIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.voice,
             }),
-            (0, i.jsx)(P, {
-                icon: (0, i.jsx)(h.ChatIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+            (0, r.jsx)(P, {
+                icon: (0, r.jsx)(h.ChatIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.messages,
             }),
-            null != t.topGuildName ? (0, i.jsx)(P, { icon: p, stat: t.topGuildName }) : null,
-            (0, i.jsx)(P, {
-                icon: (0, i.jsx)(f.ServerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+            null != t.topGuildName ? (0, r.jsx)(P, { icon: p, stat: t.topGuildName }) : null,
+            (0, r.jsx)(P, {
+                icon: (0, r.jsx)(f.ServerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.topGuildDaysInteracted,
             }),
-            (0, i.jsx)(P, {
-                icon: (0, i.jsx)(b.ReactionIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+            (0, r.jsx)(P, {
+                icon: (0, r.jsx)(b.ReactionIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.reactions,
             }),
             null != t.topEmojiName && null != n
-                ? (0, i.jsx)(P, {
-                      icon: (0, i.jsx)(g.A, { emojiId: n.emojiId, emojiName: n.emojiName, alt: "", className: y.Gl }),
+                ? (0, r.jsx)(P, {
+                      icon: (0, r.jsx)(g.A, { emojiId: n.emojiId, emojiName: n.emojiName, alt: "", className: y.Gl }),
                       stat: t.topEmojiName,
                   })
                 : null,
-            (0, i.jsx)(P, {
-                icon: (0, i.jsx)(_.GameControllerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+            (0, r.jsx)(P, {
+                icon: (0, r.jsx)(_.GameControllerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.daysPlayed,
             }),
             null != t.topGameName
-                ? (0, i.jsx)(P, {
-                      icon: null != o ? (0, i.jsx)(k, { src: o }) : (0, i.jsx)(D, {}),
+                ? (0, r.jsx)(P, {
+                      icon: null != o ? (0, r.jsx)(k, { src: o }) : (0, r.jsx)(D, {}),
                       stat: t.topGameName,
                   })
                 : null,
@@ -120,19 +120,19 @@ function U(e) {
 }
 function G(e) {
     let { isCheckpointEnabled: t } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(l.E, {
+            (0, r.jsx)(l.E, {
                 variant: "display-xs",
                 color: "text-overlay-dark",
                 className: y.K8,
                 children: T.intl.string(R.default["CdU/PF"]),
             }),
             t
-                ? (0, i.jsx)("div", {
+                ? (0, r.jsx)("div", {
                       className: y.wC,
                       "aria-hidden": !0,
-                      children: (0, i.jsx)(p.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
+                      children: (0, r.jsx)(p.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
                   })
                 : null,
         ],
@@ -141,21 +141,21 @@ function G(e) {
 function H(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
-        ? (0, i.jsx)(m.m, {
+        ? (0, r.jsx)(m.m, {
               text: T.intl.string(O.default.UjtEWE),
               caretConfig: { align: "end" },
               ariaHidden: !0,
-              children: (0, i.jsx)(x.D, {
+              children: (0, r.jsx)(x.D, {
                   className: n()(y.qr, y.vk),
                   onClick: a,
                   "aria-label": T.intl.string(O.default.UjtEWE),
-                  children: (0, i.jsx)(G, { isCheckpointEnabled: t }),
+                  children: (0, r.jsx)(G, { isCheckpointEnabled: t }),
               }),
           })
-        : (0, i.jsx)("div", {
+        : (0, r.jsx)("div", {
               className: y.qr,
               "aria-hidden": !0,
-              children: (0, i.jsx)(G, { isCheckpointEnabled: t }),
+              children: (0, r.jsx)(G, { isCheckpointEnabled: t }),
           });
 }
 a.d(
@@ -167,22 +167,22 @@ a.d(
                 { character: s, stats: c, cardColorPalette: d } = t,
                 l = null != s && null != c,
                 u = (0, A.FX)("Checkpoint2026CardDisplayComponent"),
-                h = r.useMemo(() => (null != c ? (0, v.R8)(c) : null), [c]);
-            return (0, i.jsxs)(I.A, {
+                h = i.useMemo(() => (null != c ? (0, v.R8)(c) : null), [c]);
+            return (0, r.jsxs)(I.A, {
                 cardColorPalette: d,
                 size: C.W.SM,
                 className: n()(y.Nr, { [y.Q9]: l }),
                 style: M,
                 children: [
-                    (0, i.jsx)(o.A, { children: T.intl.string(O.default.Og2R9d) }),
-                    (0, i.jsx)(E.A, {}),
-                    (0, i.jsx)(S.A, { variant: null != s ? "full" : "short", className: y.Ss }),
+                    (0, r.jsx)(o.A, { children: T.intl.string(O.default.Og2R9d) }),
+                    (0, r.jsx)(E.A, {}),
+                    (0, r.jsx)(S.A, { variant: null != s ? "full" : "short", className: y.Ss }),
                     null != s && null != h
-                        ? (0, i.jsx)(j.A, { powerLevel: h.powerLevel, powerLevelUnits: h.powerLevelUnits })
+                        ? (0, r.jsx)(j.A, { powerLevel: h.powerLevel, powerLevelUnits: h.powerLevelUnits })
                         : null,
-                    null != s ? (0, i.jsx)(w.A, { character: s }) : null,
-                    null != h ? (0, i.jsx)(U, { stats: h }) : null,
-                    (0, i.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
+                    null != s ? (0, r.jsx)(w.A, { character: s }) : null,
+                    null != h ? (0, r.jsx)(U, { stats: h }) : null,
+                    (0, r.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
                 ],
             });
         },

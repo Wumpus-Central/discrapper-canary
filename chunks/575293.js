@@ -55,7 +55,7 @@ function O(e) {
         defaultComponent: (0, l.jsx)(s, { className: _.p }),
     });
 }
-function L(e) {
+function M(e) {
     let { guildId: t, channel: n, className: r } = e,
         { channelAction: c, completed: x } = (0, v.j4)(t, n),
         E = (0, v.Lr)(t, c?.channelId),
@@ -64,18 +64,18 @@ function L(e) {
         A = (0, d.r)(h.A.colors.WHITE),
         N = R[(0, S.C)()],
         [T, k] = i.useState(!1),
-        [L] = i.useState(new a.A.Value(0)),
-        [M] = i.useState(new a.A.Value(0));
+        [M] = i.useState(new a.A.Value(0)),
+        [L] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
-            ? a.A.timing(L, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
+            ? a.A.timing(M, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
                   k(!0),
               )
-            : a.A.timing(L, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, L, C, y]),
+            : a.A.timing(M, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, M, C, y]),
         i.useEffect(() => {
-            x && T && a.A.timing(M, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, M, T, y]));
+            x && T && a.A.timing(L, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, L, T, y]));
     let P = i.useCallback(() => {
         null != E && (0, b.qo)(t, E.channelId);
     }, [t, E]);
@@ -86,7 +86,7 @@ function L(e) {
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: s()(_.vK, _.vk, { [_.pJ]: n.isForumChannel() }),
                                 onClick: P,
@@ -120,7 +120,7 @@ function L(e) {
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: s()(_.vK, { [_.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: [
                                 (0, l.jsx)(O, {
                                     channelId: c.channelId,
@@ -166,7 +166,7 @@ n.d(
                 s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
                 a = (0, v.jY)(t),
                 u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(k.GuildFeatures.GUILD_SERVER_GUIDE));
-            return a || s || !r || !u ? null : (0, l.jsx)(L, { guildId: t, channel: n, className: i });
+            return a || s || !r || !u ? null : (0, l.jsx)(M, { guildId: t, channel: n, className: i });
         },
     },
 );

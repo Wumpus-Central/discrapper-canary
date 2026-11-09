@@ -1,11 +1,11 @@
-var i = a(115560),
-    r = a(719718);
+var r = a(115560),
+    i = a(719718);
 let s = new (class {
     sessionId = null;
     didPlayerShareDataWithDiscord = !1;
     stepName = null;
     initialize(e) {
-        ((this.sessionId = (0, i.A)()), (this.didPlayerShareDataWithDiscord = e), (this.stepName = null));
+        ((this.sessionId = (0, r.A)()), (this.didPlayerShareDataWithDiscord = e), (this.stepName = null));
     }
     setStepName(e) {
         this.stepName = e;
@@ -16,7 +16,7 @@ let s = new (class {
     getAnalyticsProperties() {
         return {
             checkpoint_session_id: this.sessionId,
-            has_personalized_data: this.didPlayerShareDataWithDiscord && null != r.A.stats,
+            has_personalized_data: this.didPlayerShareDataWithDiscord && null != i.A.stats,
         };
     }
 })();

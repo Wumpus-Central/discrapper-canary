@@ -1,7 +1,7 @@
 a.d(t, { A: () => f });
-var i = a(477900),
-    r = a(503698),
-    s = a.n(r),
+var r = a(477900),
+    i = a(503698),
+    s = a.n(i),
     n = a(140735),
     c = a(834730),
     d = a(343053);
@@ -16,30 +16,30 @@ let h = [
 ];
 function f(e) {
     let { powerLevel: t, powerLevelUnits: a } = e,
-        { size: r } = (0, d.Z)();
-    return (0, i.jsxs)(i.Fragment, {
+        { size: i } = (0, d.Z)();
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(n.A, { children: o.intl.formatToPlainString(l.default["/nxqc2"], { powerLevel: t }) }),
-            (0, i.jsxs)("div", {
-                className: s()(u.powerBar, u[r]),
+            (0, r.jsx)(n.A, { children: o.intl.formatToPlainString(l.default["/nxqc2"], { powerLevel: t }) }),
+            (0, r.jsxs)("div", {
+                className: s()(u.powerBar, u[i]),
                 "aria-hidden": !0,
                 children: [
-                    (0, i.jsx)(c.E, {
+                    (0, r.jsx)(c.E, {
                         variant: "mono-md/normal",
                         color: "text-overlay-dark",
                         className: u.text,
                         children: "LVL",
                     }),
-                    (0, i.jsx)(c.E, {
+                    (0, r.jsx)(c.E, {
                         variant: "mono-md/bold",
                         color: "text-overlay-dark",
                         className: s()(u.text, u.level),
                         children: t,
                     }),
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: u.units,
                         children: h.map((e, t) =>
-                            (0, i.jsx)(
+                            (0, r.jsx)(
                                 "img",
                                 { src: e, alt: "", className: s()(u.unit, { [u.unitUnfilled]: t >= a }) },
                                 t,

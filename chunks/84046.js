@@ -33,8 +33,8 @@ var _ = n(826745),
     R = n(442433),
     w = n(721768),
     O = n(555424),
-    L = n(723702),
-    M = n(677134),
+    M = n(723702),
+    L = n(677134),
     P = n(652215),
     D = n(650583);
 let U = /(\t|\s)/;
@@ -235,12 +235,12 @@ class V extends i.PureComponent {
         this.props.maybeShowAutocomplete();
     };
     handleContextMenu = (e) => {
-        L.isPlatformEmbedded &&
+        M.isPlatformEmbedded &&
             (0, R.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([n.e(431917), n.e(342312)]).then(n.bind(n, 216603));
-                    return (t) => (0, l.jsx)(e, { ...t, text: (0, M.u)() });
+                    return (t) => (0, l.jsx)(e, { ...t, text: (0, L.u)() });
                 },
                 { align: "bottom", enableSpellCheck: !0 },
             );
@@ -421,8 +421,8 @@ function eb(e) {
             onFocus: _,
             onBlur: R,
             onKeyDown: w,
-            onKeyUp: L,
-            onTab: M,
+            onKeyUp: M,
+            onTab: L,
             onEnter: U,
             onSpace: V,
             onSubmit: et,
@@ -440,8 +440,8 @@ function eb(e) {
             "aria-haspopup": eR,
             "aria-activedescendant": ew,
             "aria-controls": eO,
-            "aria-invalid": eL,
-            "aria-describedby": eM,
+            "aria-invalid": eM,
+            "aria-describedby": eL,
             "aria-labelledby": eP,
             "aria-autocomplete": eD,
         } = d,
@@ -804,8 +804,8 @@ function eb(e) {
             channel: g,
             disableEnterToSubmit: eT,
             onKeyDown: w,
-            onKeyUp: L,
-            onTab: M,
+            onKeyUp: M,
+            onTab: L,
             onEnter: U,
             onSpace: V,
             allowNewLines: ek,
@@ -987,8 +987,8 @@ function eb(e) {
                     "aria-activedescendant": ew,
                     "aria-controls": eO,
                     "aria-labelledby": eP,
-                    "aria-describedby": eM,
-                    "aria-invalid": eL,
+                    "aria-describedby": eL,
+                    "aria-invalid": eM,
                     "aria-autocomplete": eD,
                     "aria-required": v,
                 }),

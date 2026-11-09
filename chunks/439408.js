@@ -34,8 +34,8 @@ n.d(
                             "aria-disabled": c,
                             children: t.map((e, l) => {
                                 let { value: s, icon: d, title: g, description: m, accent: h } = e,
-                                    p = s === n,
-                                    f = `${A}-${l}-title`,
+                                    f = s === n,
+                                    p = `${A}-${l}-title`,
                                     x = `${A}-${l}-description`,
                                     I = null != m && "" !== m;
                                 return (0, i.jsx)(
@@ -49,13 +49,13 @@ n.d(
                                             type: "button",
                                             role: "radio",
                                             className: u.X0,
-                                            "aria-checked": p,
+                                            "aria-checked": f,
                                             "aria-disabled": c,
-                                            "aria-labelledby": f,
+                                            "aria-labelledby": p,
                                             "aria-describedby": I ? x : void 0,
                                             disabled: c,
                                             tabIndex: c || l !== S ? -1 : 0,
-                                            "data-nitro-gradient": (p && "nitro" === h) || void 0,
+                                            "data-nitro-gradient": (f && "nitro" === h) || void 0,
                                             onClick: () => T(l),
                                             onKeyDown: (e) =>
                                                 (function (e, n) {
@@ -88,7 +88,7 @@ n.d(
                                                 (0, i.jsx)("span", {
                                                     className: u.q3,
                                                     "aria-hidden": !0,
-                                                    children: (0, i.jsx)(a.T, { disabled: !1, checked: p }),
+                                                    children: (0, i.jsx)(a.T, { disabled: !1, checked: f }),
                                                 }),
                                                 null != d &&
                                                     (0, i.jsx)(d, {
@@ -99,7 +99,7 @@ n.d(
                                                         focusable: !1,
                                                     }),
                                                 (0, i.jsx)(o.E, {
-                                                    id: f,
+                                                    id: p,
                                                     tag: "span",
                                                     variant: "body-md/normal",
                                                     children: g,

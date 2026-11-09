@@ -86,7 +86,7 @@ function D(e, t, n) {
     let r = e * t;
     return e > 0.5 ? r - n : e < 0.5 ? r : r - n / 2;
 }
-let I = i.memo(function (e) {
+let S = i.memo(function (e) {
     let {
             wheelWidth: t,
             wheelHeight: n,
@@ -104,9 +104,9 @@ let I = i.memo(function (e) {
         p = i.useRef([]),
         m = i.useRef(!1),
         A = i.useRef(null),
-        [x, I] = i.useState(0),
-        [S, j] = i.useState({ x: 0, y: 0 }),
-        T = Math.abs(S.x) + Math.abs(S.y) > 0,
+        [x, S] = i.useState(0),
+        [I, j] = i.useState({ x: 0, y: 0 }),
+        T = Math.abs(I.x) + Math.abs(I.y) > 0,
         k = i.useMemo(() => v().chunk(f, _), [f]),
         R = i.useCallback(
             (e, t) => {
@@ -194,7 +194,7 @@ let I = i.memo(function (e) {
                 let t = x + (e.deltaY > 0 ? 1 : -1);
                 t >= 0 &&
                     t < k.length &&
-                    (null != A.current && (k[t].length > A.current ? P(t, A.current) : L()), I(t));
+                    (null != A.current && (k[t].length > A.current ? P(t, A.current) : L()), S(t));
             },
             [c, x, k, P, L],
         ),
@@ -281,7 +281,7 @@ let I = i.memo(function (e) {
                                         cy: 144,
                                         r: 28.8,
                                     }),
-                                T && (0, r.jsx)("circle", { className: C.JV, cx: 144 + S.x, cy: 144 + S.y, r: 28.8 }),
+                                T && (0, r.jsx)("circle", { className: C.JV, cx: 144 + I.x, cy: 144 + I.y, r: 28.8 }),
                             ],
                         }),
                         o &&
@@ -315,7 +315,7 @@ let I = i.memo(function (e) {
         }),
     });
 });
-var S = n(533491),
+var I = n(533491),
     j = n(980504),
     T = n(613967);
 function k(e) {
@@ -398,7 +398,7 @@ function k(e) {
             () =>
                 C.map((e) =>
                     (0, r.jsx)(
-                        S.Ay,
+                        I.Ay,
                         { interactive: x, className: T.a, sound: e, focused: _ === e.soundId, channel: n },
                         e.soundId,
                     ),
@@ -409,7 +409,7 @@ function k(e) {
         ? null
         : (0, r.jsx)(a.f5, {
               value: R,
-              children: (0, r.jsx)(I, {
+              children: (0, r.jsx)(S, {
                   wheelWidth: y,
                   wheelHeight: v,
                   itemWidth: 96,

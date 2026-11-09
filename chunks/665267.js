@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(77528),
     S = n(792656),
     T = n(511484),
-    p = n(811611),
-    f = n(129230),
+    f = n(811611),
+    p = n(129230),
     x = n(830543),
     I = n(652215),
     _ = n(385803),
@@ -56,7 +56,7 @@ function O(e) {
         { analyticsLocations: r } = (0, u.Ay)(o.A.USER_SETTINGS);
     return (l.useEffect(() => {
         n &&
-            (f.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
+            (p.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: b.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: r,
             }),
@@ -82,7 +82,7 @@ function R() {
                       }),
                   }),
                   (0, i.jsx)("div", { className: C.BU }),
-                  (0, i.jsx)(p.Ay, { type: b.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: b.pe.TIER_2 }),
+                  (0, i.jsx)(f.Ay, { type: b.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: b.pe.TIER_2 }),
               ],
           })
         : null;

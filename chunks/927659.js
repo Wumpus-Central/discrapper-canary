@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => eM, aI: () => eh, Sz: () => em });
+n.d(t, { Ay: () => eL, aI: () => eh, Sz: () => em });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -79,10 +79,10 @@ function w(e) {
 }
 var O = n(664929);
 n(827669);
-var L = n(792996),
-    M = n(633331);
+var M = n(792996),
+    L = n(633331);
 function P(e, t, n) {
-    return (0, l.jsx)(w, { className: M.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    return (0, l.jsx)(w, { className: L.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: r } = e,
@@ -100,7 +100,7 @@ function D(e) {
             };
         }, [t.options, n]),
         u = (0, l.jsx)("div", {
-            className: M.$2,
+            className: L.$2,
             children: o.map((e) => (0, l.jsx)(C.E, { variant: "body-sm/normal", children: e.displayName }, e.name)),
         }),
         c = s.map((e) => P(e, n?.[e.name], r)),
@@ -109,9 +109,9 @@ function D(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(d.D, {
-                              className: M.Ki,
+                              className: L.Ki,
                               variant: "body-xs/semibold",
-                              children: L.intl.string(L.t["5C107K"]),
+                              children: M.intl.string(M.t["5C107K"]),
                           }),
                           a.map((e) => P(e, n?.[e.name], r)),
                       ],
@@ -124,18 +124,18 @@ function D(e) {
                       "aria-label": !1,
                       delay: 200,
                       children: (0, l.jsx)(C.E, {
-                          className: M.kP,
+                          className: L.kP,
                           color: "text-muted",
                           variant: "body-sm/normal",
                           children:
                               0 === a.length
-                                  ? L.intl.formatToPlainString(L.t["0mI72g"], { count: o.length })
-                                  : L.intl.formatToPlainString(L.t.BP8N0K, { count: o.length }),
+                                  ? M.intl.formatToPlainString(M.t["0mI72g"], { count: o.length })
+                                  : M.intl.formatToPlainString(M.t.BP8N0K, { count: o.length }),
                       }),
                   })
                 : null;
     return (0, l.jsxs)(l.Fragment, {
-        children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: M.gM, children: [h, m] }) : null],
+        children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: L.gM, children: [h, m] }) : null],
     });
 }
 function U(e) {
@@ -159,26 +159,26 @@ function U(e) {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
-        className: s()(M.iE, m ? null : M.r9),
+        className: s()(L.iE, m ? null : L.r9),
         children: [
-            null != g ? (0, l.jsx)(g, { className: M.Sl, channel: a, section: h, width: 32, height: 32 }) : null,
+            null != g ? (0, l.jsx)(g, { className: L.Sl, channel: a, section: h, width: 32, height: 32 }) : null,
             (0, l.jsxs)("div", {
-                className: M.QR,
+                className: L.QR,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: M.nY,
+                        className: L.nY,
                         children: [
-                            (0, l.jsx)(T, { className: M.DD, children: "/" + n.displayName }),
+                            (0, l.jsx)(T, { className: L.DD, children: "/" + n.displayName }),
                             o ? (0, l.jsx)(D, { command: n, optionStates: c, onOptionClick: d }) : null,
                         ],
                     }),
                     (0, l.jsx)(k, {
-                        className: s()(M.h_, null != t ? M.z3 : null),
+                        className: s()(L.h_, null != t ? L.z3 : null),
                         children: t ?? f?.displayDescription ?? n.displayDescription,
                     }),
                 ],
             }),
-            (0, l.jsx)(j, { className: M.sP, children: x ?? h?.name }),
+            (0, l.jsx)(j, { className: L.sP, children: x ?? h?.name }),
         ],
     });
 }
@@ -230,7 +230,7 @@ let X = function (e) {
     return (0, l.jsxs)(I, {
         className: Z.UX,
         children: [
-            (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: L.intl.format(L.t.uEky42, { count: t.length }) }) }),
+            (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: M.intl.format(M.t.uEky42, { count: t.length }) }) }),
             (0, l.jsx)(j, { children: r }),
         ],
     });
@@ -244,7 +244,7 @@ var Y = n(168017),
     ei = n(71393);
 function er(e) {
     let { sound: t } = e,
-        n = (0, y.bG)([ei.A], () => ("0" === t.guildId ? L.intl.string(L.t.Rtvk9X) : ei.A.getGuild(t.guildId)?.name));
+        n = (0, y.bG)([ei.A], () => ("0" === t.guildId ? M.intl.string(M.t.Rtvk9X) : ei.A.getGuild(t.guildId)?.name));
     return (0, l.jsxs)(I, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
@@ -424,7 +424,7 @@ class eC extends ep {
                         ],
                     }),
                 }),
-                t ? null : (0, l.jsx)(j, { children: L.intl.string(L.t["/91tbr"]) }),
+                t ? null : (0, l.jsx)(j, { children: M.intl.string(M.t["/91tbr"]) }),
             ],
         });
     }
@@ -536,7 +536,7 @@ class eT extends ep {
                     (0, l.jsxs)(v, {
                         children: [
                             (0, l.jsx)(T, { children: r.name }),
-                            null != t && (0, l.jsx)(k, { children: L.intl.format(L.t.PAutaQ, { queryMatch: t }) }),
+                            null != t && (0, l.jsx)(k, { children: M.intl.format(M.t.PAutaQ, { queryMatch: t }) }),
                         ],
                     }),
                     null != e && (0, l.jsx)(j, { children: e }),
@@ -586,7 +586,7 @@ function eO(e) {
         r = i.useMemo(() => ({ id: t }), [t]);
     return (0, l.jsx)(ef.Provider, { value: r, children: n });
 }
-class eL extends i.PureComponent {
+class eM extends i.PureComponent {
     static Generic = eg;
     static Loading = ex;
     static Title = eE;
@@ -616,4 +616,4 @@ class eL extends i.PureComponent {
             : null;
     }
 }
-let eM = eL;
+let eL = eM;

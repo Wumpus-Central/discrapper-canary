@@ -69,8 +69,8 @@ function E() {
 var h = n(631670),
     S = n(933725),
     T = n(253932),
-    p = n(774914);
-function f() {
+    f = n(774914);
+function p() {
     let { canSubmit: e, errors: t } = (0, s.cf)([u.A], () => ({ canSubmit: u.A.canSubmit(), errors: u.A.getErrors() })),
         [n, c] = l.useState(!1),
         A = l.useMemo(() => (Object.keys(t ?? {}).length > 0 ? g.intl.string(g.t["84MExs"]) : null), [t]),
@@ -92,7 +92,7 @@ function f() {
                             avatarAssetOrigin: e.pendingAvatar?.assetOrigin,
                         }),
                         (0, h.pZ)());
-                } else n?.body?.username != null && (0, p.E)();
+                } else n?.body?.username != null && (0, f.E)();
             }
             if (Object.keys(n).length > 0) {
                 let { bannerOriginalMd5: e, ...t } = n,
@@ -114,13 +114,13 @@ function f() {
             }
             (l && (0, h.x8)(), c(!1));
         }, []),
-        f = l.useCallback(() => {
+        p = l.useCallback(() => {
             (0, h.IM)();
         }, []);
-    return (0, i.jsx)(r.A, { submitting: n, onSave: E, onReset: f, disabled: !e, errorMessage: A ?? void 0 });
+    return (0, i.jsx)(r.A, { submitting: n, onSave: E, onReset: p, disabled: !e, errorMessage: A ?? void 0 });
 }
 var x = n(729934),
     I = n(355097);
 function _() {
-    return x.A.useField("subsection") === I.Eq.GUILD ? (0, i.jsx)(E, {}) : (0, i.jsx)(f, {});
+    return x.A.useField("subsection") === I.Eq.GUILD ? (0, i.jsx)(E, {}) : (0, i.jsx)(p, {});
 }

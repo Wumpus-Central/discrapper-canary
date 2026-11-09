@@ -1,6 +1,6 @@
-var i = a(477900),
-    r = a(503698),
-    s = a.n(r),
+var r = a(477900),
+    i = a(503698),
+    s = a.n(i),
     n = a(646514),
     c = a(111159),
     d = a(343053),
@@ -11,9 +11,9 @@ a.d(
     {
         A: function () {
             let { size: e } = (0, d.Z)();
-            return (0, i.jsx)("div", {
+            return (0, r.jsx)("div", {
                 className: s()(l.logo, l[e]),
-                children: (0, i.jsx)(c.ClydeIcon, {
+                children: (0, r.jsx)(c.ClydeIcon, {
                     color: n.A.colors.ICON_OVERLAY_DARK,
                     size: "custom",
                     className: l.icon,

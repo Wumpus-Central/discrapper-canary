@@ -25,8 +25,8 @@ t.d(
                 C = r.useId(),
                 j = r.useId(),
                 v = x ?? C,
-                I = null != p ? j : void 0,
-                [N, A] = r.useState(void 0),
+                N = null != p ? j : void 0,
+                [I, A] = r.useState(void 0),
                 [y, E] = r.useState(void 0),
                 S = void 0 !== y;
             return (0, l.jsx)("div", {
@@ -36,9 +36,9 @@ t.d(
                 children: (0, l.jsx)(a.hN, {
                     "data-migration-pending": !0,
                     titleId: v,
-                    errorId: I,
+                    errorId: N,
                     error: p ?? void 0,
-                    isFocused: N,
+                    isFocused: I,
                     setIsFocused: A,
                     hasValue: y,
                     setHasValue: E,
@@ -54,7 +54,7 @@ t.d(
                                       error: p,
                                       className: u,
                                       id: v,
-                                      errorId: I,
+                                      errorId: N,
                                       ...g,
                                       children: h,
                                   })

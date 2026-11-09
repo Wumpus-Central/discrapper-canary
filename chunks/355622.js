@@ -324,7 +324,7 @@ let c = {
         layout: 1,
         expressionPicker: { onlyEmojis: !0 },
     },
-    L = {
+    M = {
         analyticsName: "guild_room",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -366,7 +366,7 @@ n.d(
             FORWARD_MESSAGE_INPUT: R,
             SHARE_CUSTOM_CLIENT_THEME_INPUT: w,
             CONJURE_PATCH_NOTES: O,
-            GUILD_ROOM: L,
+            GUILD_ROOM: M,
         },
         wt: u,
     },

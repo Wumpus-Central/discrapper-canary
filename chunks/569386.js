@@ -24,8 +24,8 @@ var g = n(503698),
     h = n(534514),
     S = n(834730),
     T = n(688810),
-    p = n(139286),
-    f = n(793943),
+    f = n(139286),
+    p = n(793943),
     x = n(996254),
     I = n(830543),
     _ = n(738419),
@@ -35,7 +35,7 @@ var g = n(503698),
 function y(e) {
     let { className: t } = e,
         { analyticsLocations: n } = (0, T.Ay)();
-    (0, p.A)({
+    (0, f.A)({
         name: A.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: A.ImpressionTypes.VIEW,
         properties: { location_stack: n },
@@ -59,7 +59,7 @@ function y(e) {
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
                         ((0, _.b0)(_.G8.APPEARANCE_SETTINGS),
-                            (0, f.nf)(f.HP.CUSTOM_THEME, { from: f.xv.SETTING }),
+                            (0, p.nf)(p.HP.CUSTOM_THEME, { from: p.xv.SETTING }),
                             (0, I.default)());
                     },
                 }),
@@ -81,17 +81,17 @@ let v = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
 var j = n(366010),
     O = n(775602),
     R = n(875317),
-    L = n(97469),
-    D = n(413599),
+    D = n(97469),
+    L = n(413599),
     P = n(253932),
     G = n(818348);
 let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
-        let e = (0, L.qo)();
-        return (0, s.bG)([D.A, O.Ay], () => {
-            let t = D.A.theme,
+        let e = (0, D.qo)();
+        return (0, s.bG)([L.A, O.Ay], () => {
+            let t = L.A.theme,
                 n = O.Ay.useForcedColors;
             return e && (0, j.q)(t) && !n;
         });
@@ -100,15 +100,15 @@ let M = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
         let e = null != P.eh.useSetting().customUserThemeSettings,
             t = null != (0, R.Q)(),
             n = (0, a.V)();
-        return (0, s.bG)([D.A, r.A], () => {
-            let i = D.A.theme,
+        return (0, s.bG)([L.A, r.A], () => {
+            let i = L.A.theme,
                 l = r.A.gradientPreset;
             return !n && (0, j.q)(i) && null == l && !e && !t;
         });
     },
     useDisabled: function () {
-        return (0, s.bG)([D.A, O.Ay], () => {
-            let e = D.A.theme,
+        return (0, s.bG)([L.A, O.Ay], () => {
+            let e = L.A.theme,
                 t = O.Ay.useForcedColors;
             return e !== G.NJ.LIGHT || t;
         });
@@ -154,11 +154,11 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     Component: function () {
         var e;
         let { analyticsLocations: t } = (0, T.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
-            [n, i, l, a, o] = (0, s.yK)([D.A, r.A], () => [
-                D.A.themePreferenceForSystemTheme(Y.Fc.LIGHT),
-                D.A.themePreferenceForSystemTheme(Y.Fc.DARK),
-                D.A.getSyncedClientTheme(Y.Fc.LIGHT)?.backgroundGradientPresetId,
-                D.A.getSyncedClientTheme(Y.Fc.DARK)?.backgroundGradientPresetId,
+            [n, i, l, a, o] = (0, s.yK)([L.A, r.A], () => [
+                L.A.themePreferenceForSystemTheme(Y.Fc.LIGHT),
+                L.A.themePreferenceForSystemTheme(Y.Fc.DARK),
+                L.A.getSyncedClientTheme(Y.Fc.LIGHT)?.backgroundGradientPresetId,
+                L.A.getSyncedClientTheme(Y.Fc.DARK)?.backgroundGradientPresetId,
                 r.A.isPreview,
             ]);
         function d(e, n, i) {
@@ -258,25 +258,25 @@ let Z = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
 });
 var q = n(462887),
     Q = n(817281),
-    J = (n(644235), n(189916));
-let $ = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
+    $ = (n(644235), n(189916));
+let J = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         useTitle: () => u.intl.string(u.t.c445ix),
         useSubtitle: () => u.intl.string(u.t["+tBsvs"]),
         useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
         useValue: function () {
-            return (0, s.bG)([D.A], () => D.A.isSameAsDeviceThemeEnabled());
+            return (0, s.bG)([L.A], () => L.A.isSameAsDeviceThemeEnabled());
         },
         setValue: function (e) {
             e
                 ? (function () {
                       if (
                           (Q.Ay.setShouldSyncAppearanceSettings(!1),
-                          null == D.A.getSyncedClientTheme(Y.Fc.LIGHT) && null == D.A.getSyncedClientTheme(Y.Fc.DARK))
+                          null == L.A.getSyncedClientTheme(Y.Fc.LIGHT) && null == L.A.getSyncedClientTheme(Y.Fc.DARK))
                       ) {
-                          let e = D.A.theme,
+                          let e = L.A.theme,
                               t = (0, q.M)(e) ? Y.Fc.DARK : Y.Fc.LIGHT,
                               n = r.A.gradientPreset?.id,
-                              i = !r.A.isPreview || (0, J.oB)(n) ? n : void 0;
+                              i = !r.A.isPreview || (0, $.oB)(n) ? n : void 0;
                           ((0, H.NA)({ [t]: e }),
                               null != i ? (0, H.qX)(t, { backgroundGradientPresetId: i }) : (0, H.qX)(t, { theme: e }));
                       }
@@ -288,5 +288,5 @@ let $ = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
     ee = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [$, Z, w, M, v, d],
+        buildLayout: () => [J, Z, w, M, v, d],
     });

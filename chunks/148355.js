@@ -244,7 +244,7 @@ let w = (e) => {
                                     (0, l.jsx)(u.animated.div, {
                                         className: I.tm,
                                         style: e,
-                                        children: (0, l.jsx)(L, {
+                                        children: (0, l.jsx)(M, {
                                             className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -271,7 +271,7 @@ let w = (e) => {
             )
         );
     };
-function L(e) {
+function M(e) {
     let {
             isInteracting: t = !1,
             disableAnimation: n = !1,
@@ -324,4 +324,4 @@ function L(e) {
         `${c.id},${u}`,
     );
 }
-n.d(t, {}, { A: L, h: j });
+n.d(t, {}, { A: M, h: j });

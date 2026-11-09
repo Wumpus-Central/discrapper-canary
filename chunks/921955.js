@@ -47,7 +47,7 @@ function D() {
         ((v = null), null != r && (r.destroy(), (r = null)), null != E && (E(), (E = null)), !0)
     );
 }
-function I(e) {
+function S(e) {
     if (null == v || null == r) return !1;
     let t =
             null != e
@@ -66,8 +66,8 @@ function I(e) {
         });
     return !n.every((e, t) => e === w[t]) && ((b = _((w = n))), !0);
 }
-function S() {
-    return I(null);
+function I() {
+    return S(null);
 }
 function j() {
     let e = null != v && null != v.application_id ? c.A.getApplicationActivity(v.application_id) : null;
@@ -190,10 +190,10 @@ let k = new T(l.h, {
         },
         PRESENCE_UPDATES: function (e) {
             let { updates: t } = e;
-            return I(t);
+            return S(t);
         },
-        PRESENCES_REPLACE: S,
-        CONNECTION_OPEN_SUPPLEMENTAL: S,
+        PRESENCES_REPLACE: I,
+        CONNECTION_OPEN_SUPPLEMENTAL: I,
         LOCAL_ACTIVITY_UPDATE: j,
         RPC_APP_DISCONNECTED: j,
     }),
