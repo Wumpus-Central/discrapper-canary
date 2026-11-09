@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => k, Q: () => b });
 var i = n(310784),
     r = n.n(i),
     a = n(404144),
@@ -9778,14 +9778,21 @@ let { Themes: c } = d.zv,
             PX_192: 192,
         },
     },
-    D = o()(T, (e) => r()(e)),
-    b = {
+    D = new Set(Object.values(p));
+function b(e) {
+    return "string" == typeof e && D.has(e);
+}
+function v(e) {
+    return b(e) ? e : p.DARK;
+}
+let P = o()(T, (e) => r()(e)),
+    M = {
         themes: d.NJ,
         modules: O,
         colors: o()(m, (e, t) => ({
-            css: U(t),
+            css: x(t),
             resolve(n) {
-                let i = n.theme,
+                let i = v(n.theme),
                     r = e[i],
                     a = r.raw,
                     s = r.opacity;
@@ -9798,21 +9805,21 @@ let { Themes: c } = d.zv,
                     let e = S[t]?.[i];
                     null != e && ((a = e.raw ?? a), (s = e.opacity ?? s));
                 }
-                if (1 === s) return b.unsafe_rawColors[a].resolve(n);
+                if (1 === s) return M.unsafe_rawColors[a].resolve(n);
                 {
-                    let e = D[a];
-                    return (0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), v(e, n.saturation));
+                    let e = P[a];
+                    return (0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), U(e, n.saturation));
                 }
             },
         })),
         unsafe_rawColors: o()(T, (e, t) => {
-            let n = D[t];
-            return { css: U(t), resolve: (e) => v(n, e?.saturation ?? 1) };
+            let n = P[t];
+            return { css: x(t), resolve: (e) => U(n, e?.saturation ?? 1) };
         }),
         shadows: o()(N, (e, t) => ({
-            css: U(t),
+            css: x(t),
             resolve(t) {
-                let n = t.theme;
+                let n = v(t.theme);
                 return { boxShadow: e[n].boxShadow, filter: e[n].filter, nativeStyles: e[n].nativeStyles };
             },
         })),
@@ -9830,43 +9837,43 @@ let { Themes: c } = d.zv,
             ...o()(y, (e) => `${e}px`),
         },
     };
-function v(e, t) {
+function U(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).hex("rgba");
+            return w(e, t, n).hex("rgba");
         },
         hsl() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).css("hsl");
+            return w(e, t, n).css("hsl");
         },
         hex() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).hex();
+            return w(e, t, n).hex();
         },
         int() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                i = P(e, t, n),
+                i = w(e, t, n),
                 r = i.num();
             return 1 !== i.alpha() ? (r << 8) | Math.round(255 * i.alpha()) : r;
         },
         rgba() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return P(e, t, n).rgba();
+            return w(e, t, n).rgba();
         },
     };
 }
-function P(e, t, n) {
+function w(e, t, n) {
     let i = s()(n.opacity ?? 1, 0, 1),
         r = e;
     return (1 !== t && (r = r.set("hsl.s", r.get("hsl.s") * t)), 1 !== i && (r = r.alpha(r.alpha() * i)), r);
 }
-function M(e) {
+function G(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function U(e, t) {
-    let n = null != t ? M(t) : null,
-        i = M(e);
+function x(e, t) {
+    let n = null != t ? G(t) : null,
+        i = G(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let w = b;
+let k = M;

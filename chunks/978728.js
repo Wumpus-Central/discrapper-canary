@@ -1147,32 +1147,35 @@ function tP(e, t) {
 }
 var tU = a(652215),
     tG = a(650583);
-function tH(e, t) {
-    let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = ey(e),
-        i = h.useRef(!1);
-    function s() {
-        a || r();
+function tH(e) {
+    let { source: t, onClick: a, disabled: r = !1 } = e,
+        i = ey(t),
+        s = h.useRef(!1);
+    function n() {
+        r || i();
     }
     return {
-        playSound: s,
-        soundProps: {
-            onPointerDown: function (e) {
-                e.button === tU.hE4.PRIMARY && ((i.current = !0), s());
-            },
-            onKeyDown: function (e) {
-                (e.key === tG.dh.ENTER || e.key === tG.dh.SPACE) && ((i.current = !0), e.repeat || s());
-            },
-            onClick: function () {
-                (i.current || s(), (i.current = !1), t());
-            },
+        playSound: n,
+        onPointerDown: function (e) {
+            e.button === tU.hE4.PRIMARY && ((s.current = !0), n());
+        },
+        onKeyDown: function (e) {
+            (e.key === tG.dh.ENTER || e.key === tG.dh.SPACE) && ((s.current = !0), e.repeat || n());
+        },
+        onClickWithSound: function () {
+            (s.current || n(), (s.current = !1), a());
         },
     };
 }
 var tF = a(753875);
 function tK(e) {
     let { "aria-label": t, "aria-describedby": a, icon: r, onClick: s, disabled: n = !1 } = e,
-        { playSound: c, soundProps: d } = tH(tT, s, n);
+        {
+            playSound: c,
+            onPointerDown: d,
+            onKeyDown: l,
+            onClickWithSound: o,
+        } = tH({ source: tT, onClick: s, disabled: n });
     return (
         tP(
             "ArrowLeft",
@@ -1182,7 +1185,9 @@ function tK(e) {
             n,
         ),
         (0, i.jsx)(ee, {
-            ...d,
+            onPointerDown: d,
+            onKeyDown: l,
+            onClick: o,
             size: "md",
             className: b()(tF.A4, tF.aX),
             "aria-disabled": n,
@@ -1203,7 +1208,12 @@ function tB(e) {
             disabled: d = !1,
             sound: l = tR,
         } = e,
-        { playSound: o, soundProps: u } = tH(l, s, d);
+        {
+            playSound: o,
+            onPointerDown: u,
+            onKeyDown: h,
+            onClickWithSound: f,
+        } = tH({ source: l, onClick: s, disabled: d });
     return (
         tP(
             "ArrowRight",
@@ -1213,7 +1223,9 @@ function tB(e) {
             d,
         ),
         (0, i.jsx)(et, {
-            ...u,
+            onPointerDown: u,
+            onKeyDown: h,
+            onClick: f,
             size: n,
             className: b()(tF.A4, tF.K2, c),
             "aria-disabled": d,
@@ -1235,9 +1247,11 @@ function tV(e) {
 }
 function tz(e) {
     let { onClick: t } = e,
-        { soundProps: a } = tH(tR, t);
+        { onPointerDown: a, onKeyDown: r, onClickWithSound: s } = tH({ source: tR, onClick: t });
     return (0, i.jsx)(ee, {
-        ...a,
+        onPointerDown: a,
+        onKeyDown: r,
+        onClick: s,
         size: "md",
         className: b()(tF.A4, tF.eZ),
         "aria-label": ex.intl.string(em.default.u40i9u),
@@ -1509,6 +1523,39 @@ function ah() {
         f = n.find((e) => {
             let { cardType: t } = e;
             return t === c;
+        }),
+        b = ey(eS),
+        {
+            onPointerDown: p,
+            onKeyDown: m,
+            onClickWithSound: x,
+        } = tH({
+            source: tR,
+            onClick: function () {
+                if (null == f) return;
+                let { cardType: e, checkpointData: t } = f;
+                (0, t7.fO)({
+                    message: new aa.Ay({
+                        content: "",
+                        components: [{ type: t9.I5.CHECKPOINT_CARD, id: (0, ae.X1)("0"), checkpointData: t }],
+                    }),
+                    source: "checkpoint",
+                    customSendHandler: async (t, a, r) => {
+                        let { withMessage: i } = a;
+                        r(!0);
+                        try {
+                            (await (0, d.jA)(t, i ?? "", e),
+                                (0, u.Pe)(e),
+                                (0, t7.Be)(),
+                                (0, s.P0)({ text: ex.intl.string(ex.t.kwmYkt), variant: "success" }));
+                        } catch {
+                            (0, s.P0)({ text: ex.intl.string(ex.t.iufib1), variant: "critical" });
+                        } finally {
+                            r(!1);
+                        }
+                    },
+                });
+            },
         });
     return null == f
         ? null
@@ -1562,7 +1609,9 @@ function ah() {
                                           }
                                       })(t),
                                       checked: t === f.cardType,
-                                      onSelect: () => o(t),
+                                      onSelect: () => {
+                                          (b(), o(t));
+                                      },
                                       children: (0, i.jsx)(at.A, { checkpointData: r }),
                                   },
                                   t,
@@ -1570,36 +1619,12 @@ function ah() {
                           }),
                       }),
                       (0, i.jsxs)(et, {
+                          onPointerDown: p,
+                          onKeyDown: m,
+                          onClick: x,
                           size: "custom",
                           className: ao.sY,
                           "aria-label": ex.intl.string(ex.t.I3ltXO),
-                          onClick: function () {
-                              if (null == f) return;
-                              let { cardType: e, checkpointData: t } = f;
-                              (0, t7.fO)({
-                                  message: new aa.Ay({
-                                      content: "",
-                                      components: [
-                                          { type: t9.I5.CHECKPOINT_CARD, id: (0, ae.X1)("0"), checkpointData: t },
-                                      ],
-                                  }),
-                                  source: "checkpoint",
-                                  customSendHandler: async (t, a, r) => {
-                                      let { withMessage: i } = a;
-                                      r(!0);
-                                      try {
-                                          (await (0, d.jA)(t, i ?? "", e),
-                                              (0, u.Pe)(e),
-                                              (0, t7.Be)(),
-                                              (0, s.P0)({ text: ex.intl.string(ex.t.kwmYkt), variant: "success" }));
-                                      } catch {
-                                          (0, s.P0)({ text: ex.intl.string(ex.t.iufib1), variant: "critical" });
-                                      } finally {
-                                          r(!1);
-                                      }
-                                  },
-                              });
-                          },
                           children: [
                               (0, i.jsx)(eo.E, {
                                   variant: "mono-md/bold",
@@ -1626,7 +1651,7 @@ function aA(e) {
         a = (0, _.bG)([G.default], () => G.default.getCurrentUser()),
         r = (0, am.tx)(a),
         s = (0, _.bG)([X.Ay], () => X.Ay.useReducedMotion),
-        { playSound: n, soundProps: c } = tH(tR, t);
+        { playSound: n, onPointerDown: c, onKeyDown: d, onClickWithSound: l } = tH({ source: tR, onClick: t });
     return (
         tP("ArrowRight", function (e) {
             (e.repeat || n(), t());
@@ -1666,7 +1691,9 @@ function aA(e) {
                             ],
                         }),
                         (0, i.jsxs)(et, {
-                            ...c,
+                            onPointerDown: c,
+                            onKeyDown: d,
+                            onClick: l,
                             size: "custom",
                             className: ax.ni,
                             "aria-label": ex.intl.string(ex.t.I0v0Qv),
@@ -3359,12 +3386,14 @@ function im(e) {
             onRouteClick: d,
         } = e,
         l = ex.intl.string(a),
-        { soundProps: o } = tH(c, () => d(r), s);
+        { onPointerDown: o, onKeyDown: u, onClickWithSound: h } = tH({ source: c, onClick: () => d(r), disabled: s });
     return (0, i.jsx)(rg.m, {
         text: l,
         ariaHidden: !0,
         children: (0, i.jsxs)(a0.D, {
-            ...o,
+            onPointerDown: o,
+            onKeyDown: u,
+            onClick: h,
             role: "tab",
             "aria-selected": !1,
             className: b()(i_.PM, i_.CD, { [i_.vk]: !s }),
