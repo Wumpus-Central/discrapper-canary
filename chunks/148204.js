@@ -3,7 +3,6 @@ e.exports = {
     C9: "detailScroller_Nw13mb",
     Rm: "detailHeader_Nw13mb",
     Gw: "detailCloseButton_Nw13mb",
-    mC: "betaPill_Nw13mb",
     y2: "badgeGraphic_Nw13mb",
     Zl: "badgeGraphicAnimatedNitro_Nw13mb",
     OU: "badgeInfo_Nw13mb",

@@ -28,8 +28,6 @@ e.exports = {
     _r: "badgeTitle_zoUCAE",
     rI: "badgeAccessoryRows_zoUCAE",
     U3: "badgeAccessoryLine_zoUCAE",
-    Gb: "badgeBetaTag_zoUCAE",
-    LS: "badgeBetaTagIcon_zoUCAE",
     zN: "badgeAccessoryDot_zoUCAE",
     pC: "badgeAccessoryGroup_zoUCAE",
     Hq: "badgeAccessorySegment_zoUCAE",

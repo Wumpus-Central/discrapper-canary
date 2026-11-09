@@ -25,9 +25,6 @@ n.d(
             let n = e.owned ? e.current_tier : e.next_tier;
             return (null != n ? t.find((e) => e.key === n) : void 0) ?? t[0];
         },
-        HW: function (e) {
-            return l.has(e);
-        },
         Jn: function (e) {
             return s.has(e);
         },
