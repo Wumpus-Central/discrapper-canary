@@ -126,10 +126,10 @@ class W extends T.A {
         O.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        !(0, p.ri)(h.Ay) ||
-            (this.applyNativeClipsSettings(),
-            (0, p.Pm)() &&
-                (this.loadClipsFromStorage(), this.maybeStartNtpClock(), this.updateHardwareClassification()));
+        (0, p.ri)(h.Ay) &&
+            ((this.applyNativeClipsSettings(), (0, p.Pm)())
+                ? (this.loadClipsFromStorage(), this.maybeStartNtpClock(), this.updateHardwareClassification())
+                : a.h.dispatch({ type: "CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE" }));
     }
     async applyClipsDefaultSettings(e, t) {
         let n = v.Ay.getState().clipsSettings.clipsEnabled,
@@ -194,15 +194,15 @@ class W extends T.A {
     }
     async updateHardwareClassification() {
         ((this.classifyHardwarePromise ??= this.classifyHardware()), await this.classifyHardwarePromise);
-        let e = v.Ay.getHardwareClassification();
-        if (null == e) return;
-        let t = this.getClipsDefaultSettingsDecision(e);
-        if (null != t)
+        let e = v.Ay.getHardwareClassification(),
+            t = null != e ? this.getClipsDefaultSettingsDecision(e) : null;
+        if (null != e && null != t)
             try {
                 await this.applyClipsDefaultSettings(e, t);
             } catch (e) {
                 P.GU.error("Failed to apply clips default settings", e);
             }
+        a.h.dispatch({ type: "CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE" });
     }
     async classifyHardware() {
         try {
