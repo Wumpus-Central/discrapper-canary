@@ -1,8 +1,8 @@
 e.d(n, { A: () => tR });
 var i = e(477900),
-    r = e(582128),
-    a = e(503698),
-    l = e.n(a),
+    a = e(582128),
+    r = e(503698),
+    l = e.n(r),
     s = e(115560),
     o = e(612324),
     c = e(575593),
@@ -62,14 +62,14 @@ var T = e(503089),
     tn = e(758836),
     te = e(682901),
     ti = e(818348),
-    tr = e(792996),
-    ta = e(508672);
+    ta = e(792996),
+    tr = e(508672);
 function tl(t) {
     let {
             product: n,
             cardRef: e,
-            hasShopDiscount: r,
-            analyticsLocations: a,
+            hasShopDiscount: a,
+            analyticsLocations: r,
             selectedVariantIndex: l,
             fiatPrice: s,
             text: o,
@@ -77,9 +77,9 @@ function tl(t) {
             productLabel: d,
             tabIndex: u,
         } = t,
-        x = null != s ? (0, M.$g)(s.amount, s.currency) : (0, q.R8)(n, r, !1),
+        x = null != s ? (0, M.$g)(s.amount, s.currency) : (0, q.R8)(n, a, !1),
         I = (0, b.uM)()?.sessionId,
-        k = o ?? tr.intl.formatToPlainString(tr.t["cNSL/j"], { price: x });
+        k = o ?? ta.intl.formatToPlainString(ta.t["cNSL/j"], { price: x });
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
@@ -88,84 +88,84 @@ function tl(t) {
                 (0, O.A)({
                     skuId: (0, Z.Y)({ product: n, selectedVariantIndex: l }),
                     returnRef: e,
-                    analyticsLocations: a,
+                    analyticsLocations: r,
                     discoverySessionId: I,
                 }));
         },
         text: k,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: k, productLabel: d }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: k, productLabel: d }),
         fullWidth: !0,
         tabIndex: u,
     });
 }
 function ts(t) {
-    let { text: n, onTrackClick: e, productLabel: r, tabIndex: a } = t,
-        l = n ?? tr.intl.string(tr.t.sEAnVH);
+    let { text: n, onTrackClick: e, productLabel: a, tabIndex: r } = t,
+        l = n ?? ta.intl.string(ta.t.sEAnVH);
     return (0, i.jsx)(U.A, {
         subscriptionTier: te.pe.TIER_2,
         fullWidth: !0,
         buttonTextOverride: l,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: l, productLabel: r }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: l, productLabel: a }),
         onClick: (t) => {
             (t.stopPropagation(), e?.(tn.sH.UNLOCK_WITH_NITRO));
         },
-        tabIndex: a,
+        tabIndex: r,
     });
 }
 function to(t) {
-    let { handlePreviewButtonClick: n, text: e, onTrackClick: r, productLabel: a, tabIndex: l } = t,
-        s = e ?? tr.intl.string(tr.t.FdGl5A);
+    let { handlePreviewButtonClick: n, text: e, onTrackClick: a, productLabel: r, tabIndex: l } = t,
+        s = e ?? ta.intl.string(ta.t.FdGl5A);
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
-            (t.stopPropagation(), r?.(tn.sH.VIEW_DETAILS), n(t));
+            (t.stopPropagation(), a?.(tn.sH.VIEW_DETAILS), n(t));
         },
         text: s,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: s, productLabel: a }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: s, productLabel: r }),
         fullWidth: !0,
         tabIndex: l,
     });
 }
 function tc(t) {
-    let { handleUseNow: n, isApplying: e, text: r, onTrackClick: a, productLabel: l, tabIndex: s } = t,
-        o = r ?? tr.intl.string(tr.t.MAS7uK);
+    let { handleUseNow: n, isApplying: e, text: a, onTrackClick: r, productLabel: l, tabIndex: s } = t,
+        o = a ?? ta.intl.string(ta.t.MAS7uK);
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
-            (t.stopPropagation(), a?.(tn.sH.USE_NOW), n());
+            (t.stopPropagation(), r?.(tn.sH.USE_NOW), n());
         },
         loading: e,
         text: o,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: o, productLabel: l }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: o, productLabel: l }),
         fullWidth: !0,
         tabIndex: s,
     });
 }
 function td(t) {
-    let { text: n, onTrackClick: e, productLabel: r, tabIndex: a } = t,
+    let { text: n, onTrackClick: e, productLabel: a, tabIndex: r } = t,
         l = (0, V.A)(),
-        s = n ?? tr.intl.string(tr.t["2p2aYz"]);
+        s = n ?? ta.intl.string(ta.t["2p2aYz"]);
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
             (t.stopPropagation(), e?.(tn.sH.EDIT_PROFILE), l());
         },
         text: s,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: s, productLabel: r }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: s, productLabel: a }),
         fullWidth: !0,
-        tabIndex: a,
+        tabIndex: r,
     });
 }
 function tu(t) {
-    let { skuId: n, onClick: e, text: r, productLabel: a, tabIndex: l } = t,
-        s = r ?? tr.intl.string(tr.t.FdGl5A);
+    let { skuId: n, onClick: e, text: a, productLabel: r, tabIndex: l } = t,
+        s = a ?? ta.intl.string(ta.t.FdGl5A);
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
             (t.stopPropagation(), e(n));
         },
         text: s,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: s, productLabel: a }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: s, productLabel: r }),
         fullWidth: !0,
         tabIndex: l,
     });
@@ -174,15 +174,15 @@ function tx(t) {
     let {
             product: n,
             isClaimPremiumProductDisabled: e,
-            isClaiming: r,
-            analyticsLocations: a,
+            isClaiming: a,
+            analyticsLocations: r,
             text: l,
             onClickAnalytics: s,
             onTrackClick: o,
             productLabel: c,
             tabIndex: d,
         } = t,
-        u = l ?? tr.intl.string(tr.t.zp6caO);
+        u = l ?? ta.intl.string(ta.t.zp6caO);
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
@@ -191,15 +191,15 @@ function tx(t) {
                     (s?.("claim premium product button"),
                         o?.(tn.sH.ADD_TO_COLLECTION),
                         await (0, W.iJ)(n.skuId),
-                        (0, tt.A)({ product: n, analyticsLocations: a, purchaseType: tn.gs.PREMIUM_PURCHASE }));
+                        (0, tt.A)({ product: n, analyticsLocations: r, purchaseType: tn.gs.PREMIUM_PURCHASE }));
                 })());
         },
         disabled: e,
-        loading: r,
-        loadingStartedLabel: tr.intl.string(tr.t["TYw+9s"]),
-        loadingFinishedLabel: tr.intl.string(tr.t.Pg1UP5),
+        loading: a,
+        loadingStartedLabel: ta.intl.string(ta.t["TYw+9s"]),
+        loadingFinishedLabel: ta.intl.string(ta.t.Pg1UP5),
         text: u,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: u, productLabel: c }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: u, productLabel: c }),
         fullWidth: !0,
         tabIndex: d,
     });
@@ -208,8 +208,8 @@ function tI(t) {
     let {
             product: n,
             checkoutEligiblePrices: e,
-            analyticsLocations: r,
-            selectedVariantIndex: a,
+            analyticsLocations: a,
+            selectedVariantIndex: r,
             text: l,
             onClickAnalytics: s,
             onTrackClick: o,
@@ -217,49 +217,49 @@ function tI(t) {
             tabIndex: d,
         } = t,
         u = (0, b.uM)()?.sessionId,
-        x = l ?? tr.intl.formatToPlainString(tr.t.yi41qQ, { orbPrice: e[0].amount });
+        x = l ?? ta.intl.formatToPlainString(ta.t.yi41qQ, { orbPrice: e[0].amount });
     return (0, i.jsx)(R.$, {
         variant: "primary",
         text:
             l ??
-            tr.intl.format(tr.t.JC15qj, {
+            ta.intl.format(ta.t.JC15qj, {
                 orbPrice: e[0].amount,
-                orbIconHook: () => (0, i.jsx)(D.A, { className: ta.f }),
+                orbIconHook: () => (0, i.jsx)(D.A, { className: tr.f }),
             }),
         onClick: (t) => {
             (t.stopPropagation(),
                 s?.("claim with orbs button"),
                 o?.(tn.sH.BUY_WITH_ORBS),
                 (0, w.B4)({
-                    skuId: (0, Z.Y)({ product: n, selectedVariantIndex: a }),
+                    skuId: (0, Z.Y)({ product: n, selectedVariantIndex: r }),
                     onComplete: (t) => {
                         ((0, W.gB)(),
                             (0, tt.A)({
                                 product: n,
-                                analyticsLocations: r,
+                                analyticsLocations: a,
                                 itemConsumed: t?.entitlements?.[0]?.consumed,
                                 purchaseType: tn.gs.ORB,
                             }));
                     },
-                    analyticsLocations: r,
+                    analyticsLocations: a,
                     discoverySessionId: u,
                 }));
         },
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: x, productLabel: c }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: x, productLabel: c }),
         fullWidth: !0,
         tabIndex: d,
     });
 }
 function tk(t) {
-    let { handlePreviewButtonClick: n, text: e, onTrackClick: r, productLabel: a, tabIndex: l } = t,
-        s = e ?? tr.intl.string(tr.t.GpnHfH);
+    let { handlePreviewButtonClick: n, text: e, onTrackClick: a, productLabel: r, tabIndex: l } = t,
+        s = e ?? ta.intl.string(ta.t.GpnHfH);
     return (0, i.jsx)(R.$, {
         variant: "primary",
         onClick: (t) => {
-            (t.stopPropagation(), r?.(tn.sH.PAYMENT_OPTIONS), n(t));
+            (t.stopPropagation(), a?.(tn.sH.PAYMENT_OPTIONS), n(t));
         },
         text: s,
-        "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], { ctaLabel: s, productLabel: a }),
+        "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], { ctaLabel: s, productLabel: r }),
         fullWidth: !0,
         tabIndex: l,
     });
@@ -268,8 +268,8 @@ function tp(t) {
     let {
             product: n,
             cardRef: e,
-            selectedVariantIndex: r,
-            onClick: a,
+            selectedVariantIndex: a,
+            onClick: r,
             text: l,
             prioritizedCurrency: s,
             onClickAnalytics: o,
@@ -302,7 +302,7 @@ function tp(t) {
         ]),
         { handleUseNow: D, isApplying: w, canUseNow: M } = (0, z.p)({ product: n }),
         W = l ?? C ?? void 0;
-    if (null != a) return (0, i.jsx)(tu, { onClick: a, skuId: n.skuId, text: l, productLabel: R, tabIndex: d });
+    if (null != r) return (0, i.jsx)(tu, { onClick: r, skuId: n.skuId, text: l, productLabel: R, tabIndex: d });
     if (f && !x && !g) return (0, i.jsx)(ts, { text: l, onTrackClick: c, productLabel: R, tabIndex: d });
     if (!j || T)
         return (0, i.jsx)(to, { handlePreviewButtonClick: O, text: l, onTrackClick: c, productLabel: R, tabIndex: d });
@@ -327,7 +327,7 @@ function tp(t) {
             product: n,
             checkoutEligiblePrices: y,
             analyticsLocations: _,
-            selectedVariantIndex: r,
+            selectedVariantIndex: a,
             text: l,
             onClickAnalytics: o,
             onTrackClick: c,
@@ -358,7 +358,7 @@ function tp(t) {
               cardRef: e,
               hasShopDiscount: I,
               analyticsLocations: _,
-              selectedVariantIndex: r,
+              selectedVariantIndex: a,
               fiatPrice: E,
               text: W,
               onTrackClick: c,
@@ -370,8 +370,8 @@ let tC = function (t) {
     let {
             skuId: n,
             cardRef: e,
-            onClick: r,
-            text: a,
+            onClick: a,
+            text: r,
             prioritizedCurrency: l,
             onClickAnalytics: s,
             onTrackClick: o,
@@ -385,8 +385,8 @@ let tC = function (t) {
         product: x,
         cardRef: e,
         selectedVariantIndex: u,
-        onClick: r,
-        text: a,
+        onClick: a,
+        text: r,
         prioritizedCurrency: l,
         onClickAnalytics: s,
         onTrackClick: o,
@@ -401,8 +401,8 @@ function tT(t) {
     let {
             product: n,
             selectedVariantIndex: e,
-            cardRef: r,
-            onClick: a,
+            cardRef: a,
+            onClick: r,
             icon: l,
             prioritizedCurrency: s,
             onClickAnalytics: o,
@@ -415,16 +415,16 @@ function tT(t) {
         p = (0, tg.X)(n, s),
         C = (0, J.ql)(n, k.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, o),
         f = (0, S.s7)(n);
-    return null != a || null != l
+    return null != r || null != l
         ? (0, i.jsx)(tb.K, {
               variant: "primary",
-              "aria-label": tr.intl.formatToPlainString(tr.t["5UYoSr"], {
-                  ctaLabel: tr.intl.string(tr.t.SKNnqq),
+              "aria-label": ta.intl.formatToPlainString(ta.t["5UYoSr"], {
+                  ctaLabel: ta.intl.string(ta.t.SKNnqq),
                   productLabel: f,
               }),
               icon: l ?? tm.EyeIcon,
               onClick: (t) => {
-                  (t.stopPropagation(), null != a ? a(n.skuId) : (c?.(tn.sH.OPEN_DETAILS), C(t)));
+                  (t.stopPropagation(), null != r ? r(n.skuId) : (c?.(tn.sH.OPEN_DETAILS), C(t)));
               },
               tabIndex: d,
           })
@@ -435,7 +435,7 @@ function tT(t) {
                     primary: !0,
                     product: n,
                     selectedVariantIndex: e,
-                    returnRef: r,
+                    returnRef: a,
                     tooltipDelay: 250,
                     onTrackClick: c,
                     tabIndex: d,
@@ -447,8 +447,8 @@ let tj = function (t) {
     let {
             skuId: n,
             cardRef: e,
-            onClick: r,
-            icon: a,
+            onClick: a,
+            icon: r,
             prioritizedCurrency: l,
             onClickAnalytics: s,
             onTrackClick: o,
@@ -462,8 +462,8 @@ let tj = function (t) {
         product: x,
         cardRef: e,
         selectedVariantIndex: u,
-        onClick: r,
-        icon: a,
+        onClick: a,
+        icon: r,
         prioritizedCurrency: l,
         onClickAnalytics: s,
         onTrackClick: o,
@@ -475,32 +475,32 @@ var tv = e(484469),
     tP = e(301198),
     ty = e(668253);
 function tS(t) {
-    let { product: n, selectedVariantIndex: e, isCardHovered: r, onTrackClick: a, tabIndex: l } = t;
+    let { product: n, selectedVariantIndex: e, isCardHovered: a, onTrackClick: r, tabIndex: l } = t;
     return (0, i.jsx)(tP.R, {
         product: n,
         selectedVariantIndex: e,
-        isCardHovered: r,
+        isCardHovered: a,
         className: ty.i,
-        onTrackClick: a,
+        onTrackClick: r,
         tabIndex: l,
     });
 }
 let th = function (t) {
-    let { skuId: n, isCardHovered: e, onTrackClick: r, tabIndex: a } = t,
+    let { skuId: n, isCardHovered: e, onTrackClick: a, tabIndex: r } = t,
         l = (0, J.Vm)(n),
         s = (0, $.Q)(l);
     return null == l
         ? null
-        : (0, i.jsx)(tS, { product: l, selectedVariantIndex: s, isCardHovered: e, onTrackClick: r, tabIndex: a });
+        : (0, i.jsx)(tS, { product: l, selectedVariantIndex: s, isCardHovered: e, onTrackClick: a, tabIndex: r });
 };
 var tL = e(935094),
     tE = e(521e3),
     t_ = e(496552);
-let tN = r.memo(function (t) {
+let tN = a.memo(function (t) {
         let {
                 product: n,
                 hideWishlistButton: e,
-                hideProductName: a,
+                hideProductName: r,
                 hideVariantSwitcher: s,
                 hidePrice: d,
                 hidePrimaryCTA: I,
@@ -531,18 +531,18 @@ let tN = r.memo(function (t) {
             tt = (0, m.Mk)(),
             te = tt?.tab,
             ti = (0, b.uM)(),
-            tr = r.useMemo(() => (0, J.UU)(n, te, ti), [n, te, ti]),
-            ta = (0, S.s7)(n),
-            tl = r.useId(),
-            ts = r.useRef(null),
+            ta = a.useMemo(() => (0, J.UU)(n, te, ti), [n, te, ti]),
+            tr = (0, S.s7)(n),
+            tl = a.useId(),
+            ts = a.useRef(null),
             { isHoveringOrFocusing: to } = (0, C.A)(ts),
             tc = (0, tE.$c)(n.skuId),
             td = (0, y.U)(n),
             tu = (0, o.A)(ts, td),
-            tx = (0, J.ql)(n, k.A.COLLECTIBLES_SHOP_CARD, tr),
+            tx = (0, J.ql)(n, k.A.COLLECTIBLES_SHOP_CARD, ta),
             { analyticsLocations: tI } = (0, p.Ay)(),
             tk = (0, A.f)({ product: n, analyticsLocations: tI }),
-            tp = r.useCallback(
+            tp = a.useCallback(
                 (t) => {
                     null != T ? T(t) : (tk(tn.sH.OPEN_DETAILS), tx(t));
                 },
@@ -551,16 +551,16 @@ let tN = r.memo(function (t) {
         (0, P.x)(to, n);
         let tb = n.type === c.R.BUNDLE && n.previewAssets?.fgStatic != null,
             tm = n.type === c.R.VARIANTS_GROUP && !s,
-            tf = r.useMemo(() => ({ maxVariantsToShow: 4, onClick: tx }), [tx]),
+            tf = a.useMemo(() => ({ maxVariantsToShow: 4, onClick: tx }), [tx]),
             tg = n.type === c.R.BUNDLE && !F,
             tT = !I || !f,
-            tv = !(d && a) || tm,
+            tv = !(d && r) || tm,
             tP = tv || tT,
             ty = tT || tm;
         return (0, i.jsx)(u.s, {
             ref: tu,
             onClick: tp,
-            "aria-label": ta,
+            "aria-label": tr,
             "aria-describedby": tl,
             className: l()(B, t_.ty, { [t_.yo]: to }),
             buttonProps: { ...$, role: "button" },
@@ -574,6 +574,7 @@ let tN = r.memo(function (t) {
                 value: tc ? ts : null,
                 children: (0, i.jsxs)("div", {
                     id: tl,
+                    "data-testid": "collectibles-shop-product-card",
                     className: t_.qt,
                     style: { aspectRatio: W },
                     children: [
@@ -581,7 +582,7 @@ let tN = r.memo(function (t) {
                             n.previewAssets?.bgStatic != null &&
                             (0, i.jsx)("img", { className: t_.vD, src: n.previewAssets.bgStatic, alt: "" }),
                         (0, i.jsx)("div", {
-                            className: l()(t_.Dq, { [t_.$r]: !a || tv || ty, [t_.T9]: tb }),
+                            className: l()(t_.Dq, { [t_.$r]: !r || tv || ty, [t_.T9]: tb }),
                             children: (0, i.jsx)(E.A, { skuId: n.skuId, isCardHovered: to, overrideVariantIndex: z }),
                         }),
                         (0, i.jsxs)("div", {
@@ -614,11 +615,11 @@ let tN = r.memo(function (t) {
                                                 (0, i.jsxs)("div", {
                                                     className: t_.xE,
                                                     children: [
-                                                        !(a && d) &&
+                                                        !(r && d) &&
                                                             (0, i.jsxs)("div", {
                                                                 className: t_.Ly,
                                                                 children: [
-                                                                    !a &&
+                                                                    !r &&
                                                                         (0, i.jsx)(L.A, {
                                                                             skuId: n.skuId,
                                                                             className: l()(w, t_.tZ),
@@ -663,7 +664,7 @@ let tN = r.memo(function (t) {
                                                                     onClick: j,
                                                                     text: V,
                                                                     prioritizedCurrency: X,
-                                                                    onClickAnalytics: tr,
+                                                                    onClickAnalytics: ta,
                                                                     onTrackClick: tk,
                                                                     tabIndex: q,
                                                                 }),
@@ -674,7 +675,7 @@ let tN = r.memo(function (t) {
                                                                     onClick: N,
                                                                     icon: D,
                                                                     prioritizedCurrency: X,
-                                                                    onClickAnalytics: tr,
+                                                                    onClickAnalytics: ta,
                                                                     onTrackClick: tk,
                                                                     tabIndex: q,
                                                                 }),
@@ -692,8 +693,8 @@ let tN = r.memo(function (t) {
     }),
     tR = function (t) {
         let n,
-            { skuId: e, ...a } = t,
-            o = r.useContext(J.v3),
+            { skuId: e, ...r } = t,
+            o = a.useContext(J.v3),
             { state: c, product: u } = (0, j.IK)(e, {
                 needsCategory: !1,
                 seedCategoryStore: !0,
@@ -703,7 +704,7 @@ let tN = r.memo(function (t) {
             k = u ?? ("loading" === c ? x : void 0),
             p = (0, I.A)(() => ({ cardId: (0, s.A)() })),
             C = ((n = (0, T.c)("product_card")), e === d.j.PREMIUM_TIER_2_1_DAY && !n),
-            m = r.useMemo(() => ({ ...o, productOverride: k, standalonePreview: !0 }), [o, k]);
+            m = a.useMemo(() => ({ ...o, productOverride: k, standalonePreview: !0 }), [o, k]);
         return C
             ? null
             : null == k
@@ -716,7 +717,7 @@ let tN = r.memo(function (t) {
                         e === d.j.PREMIUM_TIER_2_3_DAY ? (0, i.jsx)(g, { location: "product_card" }) : null,
                         (0, i.jsx)(J.v3.Provider, {
                             value: m,
-                            children: (0, i.jsx)(tN, { product: k, ...a, cardClassName: l()(a.cardClassName, t_.w) }),
+                            children: (0, i.jsx)(tN, { product: k, ...r, cardClassName: l()(r.cardClassName, t_.w) }),
                         }),
                     ],
                 });

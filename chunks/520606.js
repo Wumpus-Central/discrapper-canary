@@ -8,6 +8,7 @@ class s extends i.A {
     gifterUserId;
     sku;
     addedAt;
+    shopExpiresAt;
     constructor(t) {
         (super(),
             (this.skuId = t.sku_id),
@@ -16,7 +17,8 @@ class s extends i.A {
             (this.isOwned = t.is_owned),
             (this.gifterUserId = t.gifter_user_id),
             (this.sku = t.sku),
-            (this.addedAt = t.added_at));
+            (this.addedAt = t.added_at),
+            (this.shopExpiresAt = null != t.shop_expires_at ? new Date(t.shop_expires_at) : void 0));
     }
     static fromServer(t) {
         let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: n, gifter_user_id: u, sku: o, ...a } = t;
