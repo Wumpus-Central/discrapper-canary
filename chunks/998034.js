@@ -1,4 +1,4 @@
-(n.d(t, { g: () => l5, A: () => re }), n(321073));
+(n.d(t, { g: () => l7, A: () => re }), n(321073));
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -297,8 +297,8 @@ var e0 = n(176781),
     e3 = n(766075),
     e6 = n(734066),
     e8 = n(419490),
-    e7 = n(409067),
-    e5 = n(271597),
+    e5 = n(409067),
+    e7 = n(271597),
     e9 = n(534514),
     e4 = n(475358),
     te = n(866665),
@@ -324,7 +324,7 @@ function tC(e) {
         r = (0, tg.Y_)(),
         a = l.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), t?.(), (0, e5.p)({ initialEditingClipId: r.id }));
+                (e.stopPropagation(), e.preventDefault(), t?.(), (0, e7.p)({ initialEditingClipId: r.id }));
             },
             [r, t],
         );
@@ -347,7 +347,7 @@ let ty = l.memo(function (e) {
         o = l.useRef(null),
         { isHoveringOrFocusing: u } = (0, th.A)(o),
         c = l.useCallback(() => {
-            (r?.(), (0, e5.p)({ initialEditingClipId: t.id }));
+            (r?.(), (0, e7.p)({ initialEditingClipId: t.id }));
         }, [t.id, r]);
     return (0, i.jsx)(tg.Cl, {
         clip: t,
@@ -407,7 +407,7 @@ function tj(e) {
         ),
         h = !o.showPovClipsInGallery,
         g = l.useMemo(() => {
-            let e = s.filter((e) => e.type === tT.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, e7.kD)(e)));
+            let e = s.filter((e) => e.type === tT.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, e5.kD)(e)));
             return (e.sort((e, t) => t.createdAt - e.createdAt), e);
         }, [s, h]),
         A = l.useMemo(() => g.slice(0, 16), [g]),
@@ -571,7 +571,7 @@ function tM(e) {
                 return a
                     ? e.filter((e) => {
                           let t = e8.Ay.getClipById(e);
-                          return null != t && !(0, e7.kD)(t);
+                          return null != t && !(0, e5.kD)(t);
                       }).length
                     : e.length;
             },
@@ -579,7 +579,7 @@ function tM(e) {
         ),
         o = l.useCallback(
             (e) => {
-                (t(), (0, e5.p)({ initialEditingClipId: e }));
+                (t(), (0, e7.p)({ initialEditingClipId: e }));
             },
             [t],
         ),
@@ -734,8 +734,8 @@ function t2(e) {
 var t3 = n(397562),
     t6 = n(206835),
     t8 = n(183555),
-    t7 = n(465318),
-    t5 = n(527212),
+    t5 = n(465318),
+    t7 = n(527212),
     t9 = n(702476),
     t4 = n(718019),
     ne = n(567556),
@@ -1420,14 +1420,14 @@ function n6(e) {
           });
 }
 var n8 = n(894768),
-    n7 = n(818348),
-    n5 = n(709516);
+    n5 = n(818348),
+    n7 = n(709516);
 function n9() {
     let e = (0, c.bG)([n8.A], () => n8.A.getStatus()),
         t = (0, nd.MU)(e) ?? "",
-        n = e === n7.cl.INVISIBLE || e === n7.cl.OFFLINE;
+        n = e === n5.cl.INVISIBLE || e === n5.cl.OFFLINE;
     return (0, i.jsxs)("div", {
-        className: n5.k,
+        className: n7.k,
         children: [
             (0, i.jsxs)(A.A, { tag: "div", children: [eD.intl.string(eD.t.AHoLf4), ":"] }),
             t,
@@ -1501,7 +1501,7 @@ var ia = n(996988),
 function iu(e) {
     let { currentUser: t, onClose: n, setPopoutRef: r, highlightBadge: s, openedAt: o, className: u } = e,
         m = __OVERLAY__,
-        h = (0, t5.Ay)(t.id, void 0),
+        h = (0, t7.Ay)(t.id, void 0),
         { analyticsLocations: g } = (0, P.Ay)(k.A.USER_PROFILE_ACCOUNT_POPOUT),
         C = (0, t8.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, t3.A)(g, h, n3.R7.ACCOUNT_POPOUT);
@@ -1739,7 +1739,7 @@ function iu(e) {
         q = l.useCallback(() => {
             (R(), Y());
         }, [R, Y]),
-        Q = t7.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
+        Q = t5.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
         $ = (0, nA.Hy)({ location: "UserProfileAccountPopout" }),
         X = (0, ej.FX)("UserProfileAccountPopout"),
         Z = (0, tV.A)((e) => e.shouldScrollToOrbsMenuItem),
@@ -2247,7 +2247,7 @@ function i8(e) {
         ],
     });
 }
-function i7(e) {
+function i5(e) {
     let t = (0, c.bG)([i$.A], () => i$.A.getGuild(e.guildId));
     function n(t) {
         e.onDismiss?.(t);
@@ -2280,7 +2280,7 @@ function i7(e) {
         ],
     });
 }
-var i5 = n(843010),
+var i7 = n(843010),
     i9 = n(764231),
     i4 = n(208223);
 function le(e) {
@@ -2288,7 +2288,7 @@ function le(e) {
         l = t$(),
         r = (0, c.bG)([tH.Ay], () => tH.Ay.useReducedMotion),
         a = (0, tV.A)((e) => e.isOpen),
-        s = (0, i5.G)();
+        s = (0, i7.G)();
     return r || null == l || a || s
         ? null
         : (0, i.jsx)(iU.zJ, {
@@ -2408,7 +2408,7 @@ function ll(e) {
         })(e.currentUser, { shouldShow: l });
     return l
         ? r === d.M.GUILD_TAG_AVAILABLE_COACHMARK_V2
-            ? (0, i.jsx)(i7, {
+            ? (0, i.jsx)(i5, {
                   guildId: e.guildId,
                   onDismiss: a,
                   targetElementRef: e.targetElementRef,
@@ -2442,7 +2442,7 @@ function ll(e) {
                                             markAsDismissed: l,
                                             position: "top",
                                             targetElementRef: e.targetElementRef,
-                                            onCheckItOut: e5.p,
+                                            onCheckItOut: e7.p,
                                             children: e.children,
                                         });
                                     case d.M.BADGE_DIRECTORY_NUX_POPOVER:
@@ -2977,7 +2977,7 @@ function l0(e) {
         }, [a]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, lJ.A)("1794230667829", !0);
+        let e = (0, lJ.A)("1794230895713", !0);
         t =
             null != e
                 ? eD.intl.formatToPlainString(eD.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3031,7 +3031,7 @@ let l2 = iR.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
     l3 = 2.5 * ts.A.Millis.SECOND,
     l6 = 2 * ts.A.Millis.MINUTE,
     l8 = 5 * ts.A.Millis.SECOND;
-function l7(e) {
+function l5(e) {
     let {
             ref: t,
             speaking: n,
@@ -3157,7 +3157,7 @@ function l7(e) {
               }),
           });
 }
-class l5 extends l.PureComponent {
+class l7 extends l.PureComponent {
     speakingWhileMutedTooltipTimeout = new m.Ep();
     lastSpeakingWhileMutedNotificationTime = void 0;
     state = { hovered: !1, shouldShowNametagTooltip: !1, shouldShowSpeakingWhileMutedTooltip: !1, hoveringOnMute: !1 };
@@ -4232,7 +4232,7 @@ class l5 extends l.PureComponent {
                   badgeDirectoryNuxPopoverVariant: t,
                   additionalDCs: l.avatar,
                   isOrbchievementsEnabled: r,
-                  children: (0, i.jsx)(l7, {
+                  children: (0, i.jsx)(l5, {
                       ...this.props,
                       ref: this.avatarWithPopoutRef,
                       handleMouseLeave: this.handleMouseLeave,
@@ -4487,7 +4487,7 @@ function re() {
         );
     return (0, i.jsx)(P.f5, {
         value: Y,
-        children: (0, i.jsx)(l5, {
+        children: (0, i.jsx)(l7, {
             currentUser: a,
             username: K,
             activities: m,

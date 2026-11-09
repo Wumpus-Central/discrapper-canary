@@ -5604,7 +5604,7 @@ function ap(e) {
             appIconSrc: y,
         } = ((t = (0, c.bG)([nG.default], () => nG.default.getCurrentUser())),
         (n = (0, c.bG)([eP.Ay], () => eP.Ay.getProject(p))),
-        (l = n?.application_id),
+        (l = n?.preview_application_id ?? n?.application_id),
         (r = (0, c.bG)([iq.A], () => iq.A.getApplication(l)?.getIconURL(80) ?? null, [l])),
         (s = n?.name ?? P.intl.string(T.default.JEYq8M)),
         (u = (0, c.bG)([nG.default], () => (null != l ? nG.default.getUser(l) : void 0), [l])),
