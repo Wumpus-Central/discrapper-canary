@@ -1,4 +1,4 @@
-n.d(t, { default: () => eg });
+n.d(t, { default: () => eE });
 var r = n(477900),
     a = n(582128),
     i = n(323889),
@@ -13,29 +13,29 @@ function m(e, t) {
     let n = e[t];
     return null == n || "" === n ? null : { url: n, aspectRatio: t };
 }
-var p = n(91982),
-    h = n(506988);
+var h = n(91982),
+    p = n(506988);
 function _(e) {
     return { label: e.productName, buttonLabel: e.cta.buttonLabel, iconImageUri: e.productIcon };
 }
 var C = n(637691),
     v = n(738883),
-    f = n(669912),
-    A = n(280905),
+    A = n(669912),
+    f = n(280905),
     g = n(503698),
-    b = n.n(g),
-    E = n(760914),
-    R = n(815714);
-let T = { sm: 48, lg: 92 };
-function x(e) {
+    E = n.n(g),
+    R = n(760914),
+    T = n(815714);
+let x = { sm: 48, lg: 92 };
+function S(e) {
     let { iconImageUri: t, size: n } = e,
-        a = T[n],
-        i = b()(R.Z2, { [R.Ke]: "sm" === n, [R.EX]: "lg" === n }),
+        a = x[n],
+        i = E()(T.Z2, { [T.Ke]: "sm" === n, [T.EX]: "lg" === n }),
         s = { "--custom-product-icon-size": `${a}px` };
     return null == t
         ? (0, r.jsx)("div", { "aria-hidden": !0, className: i, style: s })
         : (0, r.jsx)("img", {
-              src: (0, E.lR)({ assetUrl: t, width: a, height: a }),
+              src: (0, R.lR)({ assetUrl: t, width: a, height: a }),
               alt: "",
               width: a,
               height: a,
@@ -43,7 +43,7 @@ function x(e) {
               style: s,
           });
 }
-var S = n(855986),
+var b = n(855986),
     I = n(858899),
     O = n(43990),
     D = n(672619),
@@ -88,29 +88,29 @@ function J(e) {
         d = K({ bounty: t, onClose: l, sourceQuestContent: n }),
         u = a.useCallback(() => {
             let e = (0, H.qf)(s.current?.parentNode, s.current);
-            (null != e && (0, H.sP)(e), d(h.uF.VIDEO_MODAL_ICON_END_CARD));
+            (null != e && (0, H.sP)(e), d(p.uF.VIDEO_MODAL_ICON_END_CARD));
         }, [s, d]);
     return (0, r.jsx)(O.N, {
         theme: W.NJ8.DARK,
         disableAdaptiveTheme: !0,
         children: (e) =>
-            (0, r.jsx)(A.R, {
+            (0, r.jsx)(f.R, {
                 adContentId: t.id,
                 adCreativeType: i.p.BOUNTY,
-                questContent: h.uF.VIDEO_MODAL_END_CARD,
+                questContent: p.uF.VIDEO_MODAL_END_CARD,
                 sourceQuestContent: n,
                 children: (n) =>
                     (0, r.jsx)(Q.D, {
                         innerRef: n,
-                        className: b()(e, R.hn),
+                        className: E()(e, T.hn),
                         focusProps: X,
                         onClick: u,
                         children: (0, r.jsxs)("div", {
-                            className: R.jT,
+                            className: T.jT,
                             children: [
-                                (0, r.jsx)(x, { iconImageUri: o.iconImageUri, size: "lg" }),
+                                (0, r.jsx)(S, { iconImageUri: o.iconImageUri, size: "lg" }),
                                 (0, r.jsxs)("div", {
-                                    className: R.z9,
+                                    className: T.z9,
                                     children: [
                                         (0, r.jsx)(Y.E, {
                                             tag: "div",
@@ -144,7 +144,7 @@ function ei(e) {
     let { animateIn: t } = e;
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
-        className: b()(et.z6, { [et.HY]: t }),
+        className: E()(et.z6, { [et.HY]: t }),
         children: [
             (0, r.jsx)("div", { className: et.AW }),
             (0, r.jsx)(ee.CheckmarkSmallBoldIcon, {
@@ -180,7 +180,7 @@ function es(e) {
                     children: [
                         (0, r.jsx)("circle", { className: et.tB, cx: 16, cy: 16, r: 15.5 }),
                         (0, r.jsx)("circle", {
-                            className: b()(et.qB, { [et.LQ]: u <= 0, [et.Aq]: s }),
+                            className: E()(et.qB, { [et.LQ]: u <= 0, [et.Aq]: s }),
                             cx: 16,
                             cy: 16,
                             r: 14.4,
@@ -210,25 +210,17 @@ var el = n(115560),
     eu = n(69114),
     ec = n(913379),
     em = n(544180),
-    ep = n(297727);
-let eh = [25, 50, 75];
+    eh = n(297727);
+let ep = [25, 50, 75];
 function e_(e, t) {
     return null != t ? Math.min(e, t) : e;
 }
 (n(221596), n(500522));
-var eC = n(879371);
-function ev() {
-    let e = a.useMemo(
-        () =>
-            (0, E.lR)({
-                assetUrl:
-                    "https://cdn.discordapp.com/assets/content/8db8015bf879338028eb3094d2ca5567c70f6ea9a6bb60068b0f00ca712e5bf6.webp",
-                width: 34,
-                height: 34,
-            }),
-        [],
-    );
-    return (0, r.jsx)("img", { src: e, alt: "", className: R.RN });
+var eC = n(879371),
+    ev = n(970908);
+function eA() {
+    let e = a.useMemo(() => (0, R.lR)({ assetUrl: ev.A, width: 34, height: 34 }), []);
+    return (0, r.jsx)("img", { src: e, alt: "", className: T.RN });
 }
 function ef(e) {
     let {
@@ -241,7 +233,7 @@ function ef(e) {
             onClose: u,
         } = e,
         c = a.useRef(null),
-        m = (0, S.bG)([y.A], () => y.A.isBountyCompleted(t.id)),
+        m = (0, b.bG)([y.A], () => y.A.isBountyCompleted(t.id)),
         _ = a.useCallback(() => {
             !(async function (e, t) {
                 try {
@@ -264,7 +256,7 @@ function ef(e) {
                 u = a.useRef(null),
                 c = a.useRef(!1),
                 m = a.useRef(null),
-                p = a.useRef(-1),
+                h = a.useRef(-1),
                 _ = a.useRef(new Set()),
                 C = a.useCallback(
                     () => ({ video_session_id: o, impression_id: d(), reward_timer_seconds: r }),
@@ -285,9 +277,9 @@ function ef(e) {
                         network_connection_speed: em.A.getEffectiveConnectionSpeed(),
                     };
                 }, []),
-                f = a.useMemo(
+                A = a.useMemo(
                     () =>
-                        (0, ep.n0)({
+                        (0, eh.n0)({
                             getImpressionId: d,
                             onEmit: (e) => {
                                 (0, j.Qg)({
@@ -295,7 +287,7 @@ function ef(e) {
                                     adCreativeType: i.p.BOUNTY,
                                     event: W.HAw.QUEST_CONTENT_ENGAGED_VIEWED,
                                     properties: {
-                                        ...(0, w.fF)(h.uF.VIDEO_MODAL),
+                                        ...(0, w.fF)(p.uF.VIDEO_MODAL),
                                         ...(0, eu.A)(),
                                         ...e,
                                         impression_id: d(),
@@ -308,7 +300,7 @@ function ef(e) {
                         }),
                     [t, n, d],
                 ),
-                A = a.useCallback(
+                f = a.useCallback(
                     (e, r, a, s) => {
                         _.current.has(e) ||
                             (_.current.add(e),
@@ -327,38 +319,38 @@ function ef(e) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             a = (0, L.zh)(e, t),
                             i = e >= r;
-                        if ((A("start", 0, 0, !1), i || n)) {
+                        if ((f("start", 0, 0, !1), i || n)) {
                             let n = Math.max(r, e);
-                            A("threshold", n, (0, L.zh)(n, t), !0);
+                            f("threshold", n, (0, L.zh)(n, t), !0);
                         }
-                        if ((0, L.di)(t)) for (let t of eh) a >= t / 100 && A(`p${t}`, e, a, i);
-                        n && A("end", t, 1, !0);
+                        if ((0, L.di)(t)) for (let t of ep) a >= t / 100 && f(`p${t}`, e, a, i);
+                        n && f("end", t, 1, !0);
                     },
-                    [r, A],
+                    [r, f],
                 ),
-                b = a.useCallback(
+                E = a.useCallback(
                     (e, t, n) => {
                         (g(e, t),
-                            f.onProgress({
+                            A.onProgress({
                                 positionSeconds: n,
                                 durationSeconds: t,
                                 isPlaying: null != l.current && !l.current.paused && !l.current.seeking,
                             }));
                     },
-                    [g, f, l],
+                    [g, A, l],
                 ),
-                E = a.useCallback(() => {
-                    f.pause();
-                }, [f]),
-                R = a.useCallback(
+                R = a.useCallback(() => {
+                    A.pause();
+                }, [A]),
+                T = a.useCallback(
                     (e, t) => {
                         g(e, t, !0);
                     },
                     [g],
                 ),
-                T = a.useCallback(
+                x = a.useCallback(
                     (e, r) => {
-                        e !== ed.Q6.PLAYING && f.pause();
+                        e !== ed.Q6.PLAYING && A.pause();
                         let a = l.current;
                         null == a ||
                             r !== ed.KB.USER ||
@@ -371,9 +363,9 @@ function ef(e) {
                                     sourceQuestContent: n,
                                 }));
                     },
-                    [t, n, l, C, f],
+                    [t, n, l, C, A],
                 ),
-                x = a.useCallback(
+                S = a.useCallback(
                     (e) => {
                         let r = m.current;
                         null != r &&
@@ -388,10 +380,10 @@ function ef(e) {
                     },
                     [t, n, v],
                 ),
-                S = a.useCallback(() => {
-                    if ((f.pause(), null != m.current)) return;
-                    p.current += 1;
-                    let e = { ...C(), buffer_index: p.current };
+                b = a.useCallback(() => {
+                    if ((A.pause(), null != m.current)) return;
+                    h.current += 1;
+                    let e = { ...C(), buffer_index: h.current };
                     ((m.current = e),
                         (0, j.Qg)({
                             adContentId: t,
@@ -400,7 +392,7 @@ function ef(e) {
                             properties: { ...e, ...v() },
                             sourceQuestContent: n,
                         }));
-                }, [t, n, C, v, f]),
+                }, [t, n, C, v, A]),
                 I = a.useCallback(
                     (e) => {
                         c.current ||
@@ -448,13 +440,13 @@ function ef(e) {
                 );
             return {
                 getVideoProperties: C,
-                handleVideoProgress: b,
-                handleSeek: E,
-                handleVideoEnd: R,
-                handlePlayerStateChange: T,
+                handleVideoProgress: E,
+                handleSeek: R,
+                handleVideoEnd: T,
+                handlePlayerStateChange: x,
                 handleReadyForDisplay: I,
-                handleBufferingStart: S,
-                handleBufferingEnd: x,
+                handleBufferingStart: b,
+                handleBufferingEnd: S,
                 handleVideoError: O,
                 handleHlsInstance: a.useCallback((e) => {
                     u.current = e;
@@ -469,12 +461,12 @@ function ef(e) {
         }),
         {
             maxWatchedSeconds: v,
-            durationSeconds: f,
-            rewardTargetSeconds: A,
+            durationSeconds: A,
+            rewardTargetSeconds: f,
             isRewardEarned: g,
-            rewardRemainingSeconds: E,
-            isSeekInteraction: T,
-            maxSeekableTimeSeconds: x,
+            rewardRemainingSeconds: R,
+            isSeekInteraction: x,
+            maxSeekableTimeSeconds: S,
             handleProgressUpdate: Q,
             handleSeek: Y,
             handleEnded: H,
@@ -490,8 +482,8 @@ function ef(e) {
                     onVideoEnd: d,
                 } = e,
                 [u, c] = a.useState(0),
-                [m, p] = a.useState(0),
-                { isSeekInteraction: h, handleSeek: _ } = (function () {
+                [m, h] = a.useState(0),
+                { isSeekInteraction: p, handleSeek: _ } = (function () {
                     let [e, t] = a.useState(!1),
                         n = a.useRef(null);
                     return (
@@ -514,54 +506,54 @@ function ef(e) {
                     );
                 })(),
                 [C, v] = a.useState(n),
-                f = a.useRef(0),
-                A = a.useRef(n),
+                A = a.useRef(0),
+                f = a.useRef(n),
                 g = a.useRef(i),
-                b = e_(t, C),
-                E = i || u >= b,
-                R = a.useCallback((e) => {
-                    ((A.current = e), v(e));
+                E = e_(t, C),
+                R = i || u >= E,
+                T = a.useCallback((e) => {
+                    ((f.current = e), v(e));
                 }, []),
-                T = a.useCallback(
+                x = a.useCallback(
                     (e) => {
-                        let n = Math.max(f.current, e);
+                        let n = Math.max(A.current, e);
                         return (
-                            (f.current = n), c(n), !g.current && n >= e_(t, A.current) && ((g.current = !0), s()), n
+                            (A.current = n), c(n), !g.current && n >= e_(t, f.current) && ((g.current = !0), s()), n
                         );
                     },
                     [t, s],
                 ),
-                x = a.useCallback(
-                    (e, t) => {
-                        ((0, L.di)(t) && R(t), p(e), l(T(e), A.current ?? t, e));
-                    },
-                    [R, T, l],
-                ),
                 S = a.useCallback(
                     (e, t) => {
-                        (T(e), p(t), _(), o(e, t));
+                        ((0, L.di)(t) && T(t), h(e), l(x(e), f.current ?? t, e));
                     },
-                    [T, _, o],
+                    [T, x, l],
+                ),
+                b = a.useCallback(
+                    (e, t) => {
+                        (x(e), h(t), _(), o(e, t));
+                    },
+                    [x, _, o],
                 ),
                 I = a.useCallback(() => {
                     let e = r.current,
-                        t = f.current;
-                    (null != e && (0, L.di)(e.duration) && (R(e.duration), (t = T(e.duration))),
-                        d(t, A.current ?? e?.duration ?? 0 / 0));
-                }, [r, R, T, d]),
+                        t = A.current;
+                    (null != e && (0, L.di)(e.duration) && (T(e.duration), (t = x(e.duration))),
+                        d(t, f.current ?? e?.duration ?? 0 / 0));
+                }, [r, T, x, d]),
                 O = 0;
             return (
                 null != C && (0, L.di)(C) ? (O = C) : null != n && (0, L.di)(n) && (O = n),
                 {
                     maxWatchedSeconds: u,
                     durationSeconds: O,
-                    rewardTargetSeconds: b,
-                    isRewardEarned: E,
-                    rewardRemainingSeconds: E ? 0 : b - m,
-                    isSeekInteraction: h,
+                    rewardTargetSeconds: E,
+                    isRewardEarned: R,
+                    rewardRemainingSeconds: R ? 0 : E - m,
+                    isSeekInteraction: p,
                     maxSeekableTimeSeconds: u,
-                    handleProgressUpdate: x,
-                    handleSeek: S,
+                    handleProgressUpdate: S,
+                    handleSeek: b,
                     handleEnded: I,
                 }
             );
@@ -584,9 +576,9 @@ function ef(e) {
                 sourceQuestContent: n,
                 properties: {
                     ...z(),
-                    content_name: (0, w.jO)(h.uF.VIDEO_MODAL),
-                    content_id: h.uF.VIDEO_MODAL,
-                    video_progress: (0, L.zh)(v, f),
+                    content_name: (0, w.jO)(p.uF.VIDEO_MODAL),
+                    content_id: p.uF.VIDEO_MODAL,
+                    video_progress: (0, L.zh)(v, A),
                     threshold_met: v >= t.rewardTimerSeconds,
                 },
             });
@@ -594,9 +586,9 @@ function ef(e) {
     a.useEffect(() => () => $(), []);
     let { volume: q, muted: K, setVolume: X, setMuted: Z } = (0, F.A)(),
         { balance: ee } = (0, D.W0)(),
-        et = a.useMemo(() => (0, r.jsx)(ev, {}), []),
+        et = a.useMemo(() => (0, r.jsx)(eA, {}), []),
         en = a.useMemo(() => P.intl.formatToPlainString(P.t["nLXlh+"], { orbAmount: 50 }), []),
-        er = (0, B.A)({ targetSec: A, label: en, isCompleted: g, icon: et, clickable: x >= A }),
+        er = (0, B.A)({ targetSec: f, label: en, isCompleted: g, icon: et, clickable: S >= f }),
         ea = a.useCallback(
             () =>
                 (0, r.jsx)(O.N, {
@@ -604,12 +596,12 @@ function ef(e) {
                     disableAdaptiveTheme: !0,
                     children: (e) =>
                         (0, r.jsxs)("div", {
-                            className: b()(e, R.gP),
+                            className: E()(e, T.gP),
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: R.Cq,
+                                    className: T.Cq,
                                     children: [
-                                        (0, r.jsx)(es, { totalSeconds: A, remainingSeconds: E, isSeekInteraction: T }),
+                                        (0, r.jsx)(es, { totalSeconds: f, remainingSeconds: R, isSeekInteraction: x }),
                                         (0, r.jsx)(N.Ay, {
                                             variant: "overlay-secondary",
                                             balance: ee,
@@ -618,17 +610,17 @@ function ef(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: R.ne, children: (0, r.jsx)(V.A, { onClose: u }) }),
+                                (0, r.jsx)("div", { className: T.ne, children: (0, r.jsx)(V.A, { onClose: u }) }),
                             ],
                         }),
                 }),
-            [u, ee, E, A, T],
+            [u, ee, R, f, x],
         ),
         ei = a.useCallback(
             () => (0, r.jsx)(J, { bounty: t, sourceQuestContent: n, videoRef: c, onClose: u }),
             [t, n, u],
         );
-    return (0, r.jsx)(p.Ft, {
+    return (0, r.jsx)(h.Ft, {
         ref: c,
         parentTransitionState: d,
         autoplay: !0,
@@ -640,7 +632,7 @@ function ef(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !g,
         getPlaybackBlockedMessage: U.b,
-        maxSeekableTimeSec: x,
+        maxSeekableTimeSec: S,
         initialVolume: q,
         initialMuted: K,
         onVolumeChange: X,
@@ -662,9 +654,9 @@ function ef(e) {
         hidePlaybackSpeedBtn: !0,
     });
 }
-function eA(e) {
-    let { transitionState: t, onClose: n, bounty: i, sourceQuestContent: o, openedAtMs: p, impressionRef: A } = e,
-        { url: g, orientation: b } = a.useMemo(() => {
+function eg(e) {
+    let { transitionState: t, onClose: n, bounty: i, sourceQuestContent: o, openedAtMs: h, impressionRef: f } = e,
+        { url: g, orientation: E } = a.useMemo(() => {
             var e, t;
             let n =
                 ((e = i),
@@ -694,48 +686,48 @@ function eA(e) {
                 ? { url: i.videoHls, orientation: "portrait" }
                 : { url: n.url, orientation: n.aspectRatio === s.x.PORTRAIT ? "portrait" : "landscape" };
         }, [i]),
-        E = _(i),
-        R = E.label ?? i.advertiserName,
-        T = K({ bounty: i, onClose: n, sourceQuestContent: o });
-    return (0, r.jsx)(f.A, {
+        R = _(i),
+        T = R.label ?? i.advertiserName,
+        x = K({ bounty: i, onClose: n, sourceQuestContent: o });
+    return (0, r.jsx)(A.A, {
         transitionState: t,
-        orientation: b,
-        ariaLabel: R,
+        orientation: E,
+        ariaLabel: T,
         impressionRef: (e) => {
-            A.current = e;
+            f.current = e;
         },
         video: (0, r.jsx)(ef, {
             bounty: i,
             sourceQuestContent: o,
             src: g,
-            orientation: b,
-            openedAtMs: p,
+            orientation: E,
+            openedAtMs: h,
             parentTransitionState: t,
             onClose: n,
         }),
         footer: (0, r.jsx)(v.A, {
-            prefix: (0, r.jsx)(x, { iconImageUri: E.iconImageUri, size: "sm" }),
+            prefix: (0, r.jsx)(S, { iconImageUri: R.iconImageUri, size: "sm" }),
             advertiserDetails: (0, r.jsx)(C.A, {
-                title: R,
+                title: T,
                 subtitle: P.intl.string(P.t.o6FLcF),
-                onClick: () => T(h.uF.VIDEO_MODAL),
+                onClick: () => x(p.uF.VIDEO_MODAL),
             }),
             primaryAction: (0, r.jsx)(l.$, {
                 variant: "primary",
-                text: E.buttonLabel,
-                onClick: () => T(h.uF.VIDEO_MODAL_PRIMARY_CTA),
+                text: R.buttonLabel,
+                onClick: () => x(p.uF.VIDEO_MODAL_PRIMARY_CTA),
             }),
         }),
     });
 }
-function eg(e) {
-    return (0, r.jsx)(A.R, {
+function eE(e) {
+    return (0, r.jsx)(f.R, {
         adContentId: e.bounty.id,
         adCreativeType: i.p.BOUNTY,
-        questContent: h.uF.VIDEO_MODAL,
-        minViewTimeSeconds: p.bq,
+        questContent: p.uF.VIDEO_MODAL,
+        minViewTimeSeconds: h.bq,
         trackGuildAndChannelMetadata: !0,
         sourceQuestContent: e.sourceQuestContent,
-        children: (t) => (0, r.jsx)(eA, { ...e, impressionRef: t }),
+        children: (t) => (0, r.jsx)(eg, { ...e, impressionRef: t }),
     });
 }

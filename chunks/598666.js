@@ -336,8 +336,8 @@ function er() {
                                 n.e(941394),
                                 n.e(852701),
                                 n.e(182045),
-                                n.e(318223),
-                            ]).then(n.bind(n, 579666));
+                                n.e(568610),
+                            ]).then(n.bind(n, 808953));
                             return (n) => (0, l.jsx)(e, { ...n, bounty: t, sourceQuestContent: s, openedAtMs: a });
                         },
                         { modalKey: "BOUNTY_VIDEO_MODAL" },
