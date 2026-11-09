@@ -20,6 +20,7 @@ e.exports = {
     nu: "composerPlusButton_CQ1SDL",
     Qu: "composerPlusIcon_CQ1SDL",
     Y0: "composerAttachButton_CQ1SDL",
+    PG: "composerStopButton_CQ1SDL",
     sq: "composerEditor_CQ1SDL",
     jp: "composerInput_CQ1SDL",
     fF: "composerSend_CQ1SDL",

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => M, b: () => b }), n(667532), n(321073), n(30146));
+(n.d(t, { A: () => U, b: () => b }), n(667532), n(321073), n(30146));
 var i = n(855986),
     r = n(73153),
     a = n(260498);
@@ -148,6 +148,15 @@ function v(e) {
           });
 }
 function P(e) {
+    return e.some((e) => "queued" === e.disposition)
+        ? e.map((e) => {
+              if ("queued" !== e.disposition) return e;
+              let { disposition: t, ...n } = e;
+              return n;
+          })
+        : e;
+}
+function M(e) {
     return (
         null != e &&
         "assistant" === e.role &&
@@ -157,7 +166,7 @@ function P(e) {
         !(0, d.BL)(e)
     );
 }
-let M = new R(r.h, {
+let U = new R(r.h, {
     LOGOUT: function () {
         if (
             0 === E.size &&
@@ -214,7 +223,7 @@ let M = new R(r.h, {
         if (-1 !== A) {
             if (!0 !== _[A].held || !0 === u) return !1;
             let e = _.map((e, t) => (t === A ? { ...e, held: void 0 } : e));
-            return (s(n) || (0, d.q2)(e) || e.push((0, o.iW)("assistant", "")), E.set(t, e), void C(t));
+            return (s(n) || (0, d.q2)(e) || (e = P(e)).push((0, o.iW)("assistant", "")), E.set(t, e), void C(t));
         }
         let f = (0, o.iW)("user", n, { ts: l, id: i, userId: a, attachments: c });
         !0 === u && (f.held = !0);
@@ -224,7 +233,7 @@ let M = new R(r.h, {
             return;
         }
         let I = [..._, f];
-        (!0 === u || s(n) || (0, d.q2)(I) || I.push((0, o.iW)("assistant", "")), E.set(t, I), C(t));
+        (!0 === u || s(n) || (0, d.q2)(I) || (I = P(I)).push((0, o.iW)("assistant", "")), E.set(t, I), C(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: i, disposition: r } = e,
@@ -247,7 +256,7 @@ let M = new R(r.h, {
             }
         }
         if (-1 === u || u > s) return c !== a && void E.set(t, c);
-        let _ = P(c[s + 1]) ? s + 2 : s + 1;
+        let _ = M(c[s + 1]) ? s + 2 : s + 1;
         (E.set(t, [
             ...c.slice(0, u),
             { ...c[u], continued: !0, finished_at: c[u].finished_at ?? Date.now() },
@@ -288,7 +297,7 @@ let M = new R(r.h, {
         if (-1 === u) return void E.set(t, [...l, c]);
         let { disposition: _ } = l[u];
         null != _ && (c.acknowledges = _);
-        let A = "answered" === _ && P(l[u + 1]),
+        let A = "answered" === _ && M(l[u + 1]),
             f = [...l.slice(0, u + 1), c, ...l.slice(A ? u + 2 : u + 1)],
             h = f.findLastIndex((e) => "assistant" === e.role && !(0, d.B5)(e));
         if ("answered" === _ && -1 !== h && h < u && !(0, d.BL)(f[h])) {

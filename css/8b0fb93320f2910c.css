@@ -662,6 +662,10 @@
     opacity: .5
 }
 
+.composerStopButton_CQ1SDL:disabled {
+    pointer-events: none
+}
+
 .composerEditor_CQ1SDL {
     flex: 1;
     -webkit-mask-image: linear-gradient(transparent, #000 calc((var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2), #000 calc(100% - (var(--custom-channel-textarea-text-area-height, 44px) - 22px)/2), transparent);
@@ -1080,4 +1084,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=4f3bc74968576389.css.map*/
+/*# sourceMappingURL=8b0fb93320f2910c.css.map*/
