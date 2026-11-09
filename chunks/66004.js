@@ -14,8 +14,8 @@ n.d(
     {},
     {
         A: function (e) {
-            let { channelId: t, guildId: n, userId: g, containerDimensions: f } = e,
-                h = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
+            let { channelId: t, guildId: n, userId: g, containerDimensions: h } = e,
+                f = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 [x, A] = i.useState([]),
                 v = x.length < 50;
             i.useEffect(() => {
@@ -23,7 +23,7 @@ n.d(
                     let { channelId: l, userId: i, emoji: r, animationType: a, animationId: o } = e;
                     if (null != g && g !== i) return;
                     let d = null != r && null != a && null != o;
-                    if (l === t && !h && v && d) {
+                    if (l === t && !f && v && d) {
                         let e = (0, c.Br)(r),
                             l = null != r.id && !r.animated,
                             d = {
@@ -44,7 +44,7 @@ n.d(
                         a.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
                     }
                 );
-            }, [t, n, g, h, v]);
+            }, [t, n, g, f, v]);
             let E = i.useCallback((e) => {
                 A((t) => {
                     let n = [...t],
@@ -52,15 +52,15 @@ n.d(
                     return (n.splice(l, 1), n);
                 });
             }, []);
-            return h
+            return f
                 ? null
                 : (0, l.jsx)("div", {
                       className: p.Y,
-                      style: { width: f.width },
+                      style: { width: h.width },
                       children: (0, l.jsx)("div", {
                           className: p.z,
                           children: x.map((e) =>
-                              (0, l.jsx)(d.A, { containerDimensions: f, effect: e, onComplete: E }, e.id),
+                              (0, l.jsx)(d.A, { containerDimensions: h, effect: e, onComplete: E }, e.id),
                           ),
                       }),
                   });

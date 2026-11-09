@@ -10,8 +10,8 @@ var l = n(477900),
     m = n(92259),
     p = n(893007),
     g = n(218429),
-    f = n(964486),
-    h = n(461782),
+    h = n(964486),
+    f = n(461782),
     x = n(754712),
     A = n(40056),
     v = n(792996),
@@ -25,7 +25,7 @@ function j(e) {
 }
 let S = i.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: b } = i.useContext(h.k3),
+        { onActive: S, onPreventIdle: _, onAllowIdle: b } = i.useContext(f.k3),
         {
             enabled: N,
             zoomLevel: y,
@@ -43,14 +43,14 @@ let S = i.memo(function (e) {
             setPanOffset: F,
             clampPanOffset: H,
         } = i.useContext(A.e9),
-        [U, W] = i.useState(!1),
-        z = i.useRef(null),
+        [U, z] = i.useState(!1),
+        W = i.useRef(null),
         $ = y > T,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
         Z = i.useCallback(() => {
-            (W(!1), b("interact"));
+            (z(!1), b("interact"));
         }, [b]),
         Y = i.useMemo(() => {
             let e = 120 * Math.min(G, 32 / 9);
@@ -58,8 +58,8 @@ let S = i.memo(function (e) {
         }, [G]),
         Q = i.useCallback(
             (e) => {
-                if (null == z.current || null == P.current) return;
-                let t = z.current.getBoundingClientRect(),
+                if (null == W.current || null == P.current) return;
+                let t = W.current.getBoundingClientRect(),
                     n = P.current.clientWidth,
                     l = P.current.clientHeight,
                     i = e.x - t.left,
@@ -70,7 +70,7 @@ let S = i.memo(function (e) {
         ),
         X = i.useCallback(
             (e) => {
-                j(e) && (e.preventDefault(), e.stopPropagation(), W(!0), Q({ x: e.clientX, y: e.clientY }));
+                j(e) && (e.preventDefault(), e.stopPropagation(), z(!0), Q({ x: e.clientX, y: e.clientY }));
             },
             [Q],
         ),
@@ -82,7 +82,7 @@ let S = i.memo(function (e) {
         ),
         q = i.useCallback(
             (e) => {
-                !U || j(e) || (e.preventDefault(), e.stopPropagation(), W(!1));
+                !U || j(e) || (e.preventDefault(), e.stopPropagation(), z(!1));
             },
             [U],
         ),
@@ -130,7 +130,7 @@ let S = i.memo(function (e) {
             },
             [w, S, M],
         );
-    return ((0, f.l0)(() => {
+    return ((0, h.l0)(() => {
         el.current?.stop();
     }),
     N && null != n)
@@ -146,7 +146,7 @@ let S = i.memo(function (e) {
                           onMouseEnter: B,
                           onMouseLeave: Z,
                           children: (0, l.jsxs)("div", {
-                              ref: z,
+                              ref: W,
                               className: C.Wc,
                               style: Y,
                               onPointerDown: function (e) {

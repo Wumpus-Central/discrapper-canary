@@ -1,20 +1,20 @@
-var n = l(945810);
-let a = { enabled: !1 },
-    i = (0, n.mj)({
+var i = n(945810);
+let r = { enabled: !1 },
+    a = (0, i.mj)({
         name: "2026-11-autoclips-ea-upsell",
         kind: "user",
-        defaultConfig: a,
-        variations: { 0: a, 1: { enabled: !0 } },
+        defaultConfig: r,
+        variations: { 0: r, 1: { enabled: !0 } },
     });
-l.d(
+n.d(
     t,
     {},
     {
         C: function (e) {
-            return i.getConfig({ location: e });
+            return a.getConfig({ location: e });
         },
         r: function (e) {
-            return i.useConfig({ location: e });
+            return a.useConfig({ location: e });
         },
     },
 );

@@ -4,7 +4,7 @@ var l = n(812095),
     a = n(324157),
     i = n(927812),
     o = n(306396);
-function c(e, t) {
+function u(e, t) {
     let n = (0, s.XF)(e);
     if (null != n && null != t.categorySkuId && n.collectionId === t.categorySkuId) return n;
 }
@@ -12,11 +12,11 @@ n.d(
     t,
     {},
     {
-        HF: c,
+        HF: u,
         O8: function (e, t, n, s) {
-            var u, d, m;
+            var c, d, m;
             let g,
-                h = c(e, t);
+                h = u(e, t);
             if (null == e || null == h) return t;
             let p = (0, o.Q7)(h, n),
                 f = {
@@ -30,10 +30,10 @@ n.d(
             if (h.subtype === r.h5.BASIC) return { ...t, title: x, summary: E };
             let v =
                 p?.rewardStates != null
-                    ? ((u = p.rewardStates),
+                    ? ((c = p.rewardStates),
                       (d = e.rewardStatus),
                       (m = e.progress?.current ?? 0),
-                      null != (g = (0, i.x)(u, d, m)?.heroUrl) && "" !== g ? g : void 0)
+                      null != (g = (0, i.x)(c, d, m)?.heroUrl) && "" !== g ? g : void 0)
                     : void 0;
             return {
                 ...t,

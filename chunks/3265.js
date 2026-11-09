@@ -31,13 +31,13 @@ let l = {
     };
 function u(t) {
     let { artboard: e = "box-wumpus", stateMachine: n, ...u } = t,
-        { status: c, buffer: g } = (0, r.CE)(o),
-        b = (0, r.m2)(o);
+        { status: c, buffer: b } = (0, r.CE)(o),
+        g = (0, r.m2)(o);
     return c === r.BW.Loading
         ? null
         : (0, a.jsx)(i.w, {
-              ...(b ? { key: "override" } : {}),
-              buffer: g,
+              ...(g ? { key: "override" } : {}),
+              buffer: b,
               artboard: e,
               stateMachine: n,
               artboardProperties: l,

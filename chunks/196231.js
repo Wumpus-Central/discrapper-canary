@@ -4,8 +4,8 @@ var l = n(477900),
     a = n(805251),
     i = n(129230),
     o = n(857512),
-    c = n(590180),
-    u = n(993408),
+    u = n(590180),
+    c = n(993408),
     d = n(304210),
     m = n(597783),
     g = n(347478),
@@ -22,7 +22,7 @@ function _(e) {
         s = (0, g.$)(r) ? r : null;
     return null != s
         ? (0, l.jsx)(p.b, { promotion: s })
-        : (0, u.HF)(n)
+        : (0, c.HF)(n)
           ? (0, l.jsx)(a.E, { type: { text: v.intl.string(v.t["h/uBCR"]) }, variant: "inverted" })
           : null;
 }
@@ -35,25 +35,25 @@ n.d(
                     layout: t,
                     category: n,
                     subblock: a,
-                    enablePreview: u,
+                    enablePreview: c,
                     pageType: d = x.G2.HOME,
                     handleTransition: g,
                     listItemProps: p,
                 } = e,
                 y = a?.categorySkuId;
-            null == y && null != a && (y = c.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
+            null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
             let b = y ?? n?.skuId ?? "",
                 { handleCardVisibilityChange: S } = (0, m.Z)(b, d, "marketing featured block"),
-                I = (0, f.s4)(n, a, u),
-                A = r.useRef(null),
+                A = (0, f.s4)(n, a, c),
+                I = r.useRef(null),
                 k = a?.bodyText,
-                L = n?.isOrbsExclusive,
-                j = a?.name ?? n?.name,
-                N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
+                j = n?.isOrbsExclusive,
+                L = a?.name ?? n?.name,
+                N = null != L ? v.intl.formatToPlainString(v.t.frSHlf, { destination: L }) : void 0,
                 O = (0, o.uM)(),
                 R = r.useCallback(
                     (e, t) => {
-                        (g({ sourceButton: e, categorySkuId: b, isInternalShopDeeplink: !0, isOrbsExclusive: L }),
+                        (g({ sourceButton: e, categorySkuId: b, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
                             i.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: O?.sessionId,
                                 sku_id: b,
@@ -65,7 +65,7 @@ n.d(
                                 cta_name: t,
                             }));
                     },
-                    [g, b, L, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [g, b, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
                 T = r.useCallback(() => {
                     R("shop marketing take me there button", "Take me there button");
@@ -74,13 +74,13 @@ n.d(
                     R("shop marketing tile", null);
                 }, [R]);
             return (0, l.jsx)(s.L, {
-                innerRef: A,
+                innerRef: I,
                 onChange: S,
                 threshold: 0,
                 children: (0, l.jsx)(h.Ay, {
                     layout: t,
-                    innerRef: A,
-                    backgroundImageUrl: I,
+                    innerRef: I,
+                    backgroundImageUrl: A,
                     title:
                         null != k
                             ? { text: k, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }

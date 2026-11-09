@@ -27,11 +27,11 @@ function A(e) {
     let p = (0, l.Kj)(r),
         { name: g, rarity: m } = _,
         { color: T } = (0, u.ag)(m),
-        N = (0, s.M)(A) ? C : E,
-        f = (p.size - p.offset - 2 * p.stroke) * 0.8,
+        f = (0, s.M)(A) ? C : E,
+        N = (p.size - p.offset - 2 * p.stroke) * 0.8,
         I = p.size - p.stroke,
-        S = { width: 0.4 * f, height: 0.4 * f },
-        x = { width: S.width + 1, height: S.height + 1, right: p.stroke + 1, bottom: p.stroke + 1, padding: 0 };
+        x = { width: 0.4 * N, height: 0.4 * N },
+        S = { width: x.width + 1, height: x.height + 1, right: p.stroke + 1, bottom: p.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: h.kL,
         style: { width: I, height: I, padding: p.stroke },
@@ -39,17 +39,17 @@ function A(e) {
         children: [
             (0, i.jsx)("div", {
                 className: h.r5,
-                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? T : N.trophy, width: f, height: f }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? T : f.trophy, width: N, height: N }),
             }),
             !n &&
                 (0, i.jsx)("div", {
                     className: h.dq,
-                    style: x,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...S }),
+                    style: S,
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: f.locked, ...x }),
                 }),
             n &&
                 m === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: h.dq, style: x, children: (0, i.jsx)(d.A, { className: h.ox, ...S }) }),
+                (0, i.jsx)("div", { className: h.dq, style: S, children: (0, i.jsx)(d.A, { className: h.ox, ...x }) }),
         ],
     });
 }

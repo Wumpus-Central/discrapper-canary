@@ -22,15 +22,15 @@ n.d(
             let { children: t } = e,
                 { springConfig: n, isExpanded: m } = s.useContext(d),
                 p = (0, r.bG)([c.Ay], () => c.Ay.useReducedMotion),
-                { ref: x, height: h = null } = (0, o.Ay)(),
-                f = (0, u.Ay)(h) ?? null,
+                { ref: x, height: f = null } = (0, o.Ay)(),
+                h = (0, u.Ay)(f) ?? null,
                 [{ height: C }, v] = (0, i.z)(() => ({ from: { height: 0 }, config: n }));
             return (
                 s.useLayoutEffect(() => {
-                    null !== h && v({ height: h, immediate: !m || p || null === f });
-                }, [h, v, m, p, f]),
+                    null !== f && v({ height: f, immediate: !m || p || null === h });
+                }, [f, v, m, p, h]),
                 (0, l.jsx)(a.animated.div, {
-                    style: { height: null === f ? "auto" : C, overflow: "hidden" },
+                    style: { height: null === h ? "auto" : C, overflow: "hidden" },
                     children: (0, l.jsx)("div", { style: { overflow: "hidden" }, ref: x, children: t }),
                 })
             );

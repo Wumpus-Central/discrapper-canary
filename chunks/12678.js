@@ -4,8 +4,8 @@ var l = n(582128),
     a = n(688810),
     i = n(739053),
     o = n(82498),
-    c = n(129230),
-    u = n(722178),
+    u = n(129230),
+    c = n(722178),
     d = n(870216),
     m = n(758836),
     g = n(652215),
@@ -52,8 +52,8 @@ n.d(
             let { analyticsLocations: n } = p(e);
             l.useEffect(() => {
                 null == t ||
-                    u.Ay.canUseCollectibles(t) ||
-                    (c.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, { type: h.e.COLLECTIBLES_SHOP, location_stack: n }),
+                    c.Ay.canUseCollectibles(t) ||
+                    (u.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, { type: h.e.COLLECTIBLES_SHOP, location_stack: n }),
                     (0, i.sq)(g.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(h.e.COLLECTIBLES_SHOP)));
             }, [n, t]);
         },
@@ -61,18 +61,18 @@ n.d(
         uS: function (e, t, n, r) {
             let { sourceButton: s, enabled: a = !0 } =
                     arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-                { analyticsLocations: i, analyticsSource: o, currentTabLocation: u, newestAnalyticsLocation: d } = p(t);
+                { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = p(t);
             l.useEffect(() => {
-                if (!a || r !== m.Pf.VISIBLE || d !== u) return;
+                if (!a || r !== m.Pf.VISIBLE || d !== c) return;
                 let l = t === m.G2.CATALOG ? s : o;
-                c.default.track(g.HAw.COLLECTIBLES_SHOP_VIEWED, {
+                u.default.track(g.HAw.COLLECTIBLES_SHOP_VIEWED, {
                     location_stack: i,
                     source: l,
                     page_session_id: e,
                     page_type: t === m.G2.CATALOG ? "full" : t,
                     category: t === m.G2.HOME ? void 0 : n,
                 });
-            }, [i, e, t, n, u, r, s, o, d, a]);
+            }, [i, e, t, n, c, r, s, o, d, a]);
         },
     },
 );

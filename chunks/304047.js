@@ -10,8 +10,8 @@ var l = n(477900),
     m = n(408278),
     p = n(597770),
     g = n(409626),
-    f = n(692969),
-    h = n(980822),
+    h = n(692969),
+    f = n(980822),
     x = n(909004),
     A = n(240248),
     v = n(487887),
@@ -24,13 +24,13 @@ n.d(
     {
         M: function (e) {
             let { userId: t, applicationId: n, channel: s, hideWhenInactive: o, idle: u } = e,
-                [g, f] = i.useState(!1),
-                h = i.useRef(null),
-                A = i.useCallback(() => f(!0), []),
-                v = i.useCallback(() => f(!1), []),
+                [g, h] = i.useState(!1),
+                f = i.useRef(null),
+                A = i.useCallback(() => h(!0), []),
+                v = i.useCallback(() => h(!1), []),
                 j = C.intl.string(C.t["wg/30i"]);
             return (0, l.jsx)(c.Y, {
-                targetElementRef: h,
+                targetElementRef: f,
                 shouldShow: g,
                 animation: c.Y.Animation.FADE,
                 position: "left",
@@ -45,7 +45,7 @@ n.d(
                     }),
                 children: () =>
                     (0, l.jsx)("div", {
-                        ref: h,
+                        ref: f,
                         children: (0, l.jsx)(a.m, {
                             text: j,
                             shouldShow: !g && void 0,
@@ -67,8 +67,8 @@ n.d(
         },
         X: function (e) {
             let { applicationId: t, hideApplicationName: n } = e,
-                { gameId: i, gameRecord: s } = (0, h.A)({ applicationId: t }),
-                c = (0, f.A)({
+                { gameId: i, gameRecord: s } = (0, f.A)({ applicationId: t }),
+                c = (0, h.A)({
                     location: "SocialLayerCommerceGameDetailsButton",
                     gameId: i ?? void 0,
                     source: g.GameProfileSources.CallTile,

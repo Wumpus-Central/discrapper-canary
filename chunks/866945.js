@@ -24,7 +24,7 @@ n.d(
             let T = r.useCallback(() => {
                     null != _ && (_(), (0, h.N)(g, C.YX.DISMISS));
                 }, [g, _]),
-                N = r.useCallback(() => {
+                f = r.useCallback(() => {
                     (n(), (0, h.N)(g, C.YX.LEARN_MORE));
                 }, [g, n]);
             return (0, i.jsxs)("div", {
@@ -37,11 +37,11 @@ n.d(
                         children:
                             null != s
                                 ? E.intl.format(t, {
-                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
+                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: f, children: e }, t),
                                       count: s,
                                   })
                                 : E.intl.format(t, {
-                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
+                                      hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: f, children: e }, t),
                                   }),
                     }),
                     m && (0, i.jsx)(d.D, { className: A.b, onClick: T, children: (0, i.jsx)(u.XSmallIcon, {}) }),

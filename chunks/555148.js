@@ -11,8 +11,8 @@ var l = n(477900),
     m = n(367513),
     p = n(401843),
     g = n(964486),
-    f = n(684339),
-    h = n(164617),
+    h = n(684339),
+    f = n(164617),
     x = n(402216),
     A = n(626584),
     v = n(525505),
@@ -42,8 +42,8 @@ let M = i.memo(function (e) {
             isDragging: d,
             setIsDragging: m,
             panOffset: p,
-            setPanOffset: f,
-            zoomLevel: h,
+            setPanOffset: h,
+            zoomLevel: f,
             isWheeling: x,
             setIsWheeling: A,
             isSlidering: v,
@@ -57,13 +57,13 @@ let M = i.memo(function (e) {
         [G, P] = i.useState(0),
         [V, F] = i.useState(null),
         [H, U] = i.useState(null),
-        [W, z] = i.useState(!1),
+        [z, W] = i.useState(!1),
         $ = i.useRef(new b.Ep()),
         B = i.useRef(new b.Ep()),
         Z = i.useRef(0),
         Y = i.useRef(new b.Ep()),
         Q = i.useRef(null),
-        X = h > c,
+        X = f > c,
         K = i.useCallback(
             (e) => {
                 (e.width > 0 && e.height > 0 && E(e.width / e.height), s?.(e));
@@ -94,9 +94,9 @@ let M = i.memo(function (e) {
                 let t = q(e),
                     n = t.x - H.x,
                     l = t.y - H.y;
-                (f(j({ x: V.x + n, y: V.y + l })), M(t));
+                (h(j({ x: V.x + n, y: V.y + l })), M(t));
             },
-            [j, H, V, u, q, d, X, o, f],
+            [j, H, V, u, q, d, X, o, h],
         ),
         et = i.useCallback(
             (e) => {
@@ -126,7 +126,7 @@ let M = i.memo(function (e) {
                     B.current.start(
                         40,
                         () => {
-                            (I(h * 1.1 ** (0, _.clamp)(Z.current / 100, -1, 1), q(e), "wheel"), (Z.current = 0));
+                            (I(f * 1.1 ** (0, _.clamp)(Z.current / 100, -1, 1), q(e), "wheel"), (Z.current = 0));
                         },
                         !1,
                     ),
@@ -135,7 +135,7 @@ let M = i.memo(function (e) {
                         A(!1);
                     }));
             },
-            [u, I, h, q, o, A],
+            [u, I, f, q, o, A],
         );
     ((0, N.i4)(
         C,
@@ -150,38 +150,38 @@ let M = i.memo(function (e) {
                 }
                 let { width: i, height: s } = l;
                 (1 > Math.abs(t - i) && 1 > Math.abs(n - s)) ||
-                    (z(!0),
-                    f((e) => {
-                        let l = (i * (h - 1)) / 2,
-                            r = (s * (h - 1)) / 2,
-                            a = (t * (h - 1)) / 2,
-                            o = (n * (h - 1)) / 2;
+                    (W(!0),
+                    h((e) => {
+                        let l = (i * (f - 1)) / 2,
+                            r = (s * (f - 1)) / 2,
+                            a = (t * (f - 1)) / 2,
+                            o = (n * (f - 1)) / 2;
                         return j({ x: (0 !== l ? e.x / l : 0) * a, y: (0 !== r ? e.y / r : 0) * o });
                     }),
                     (Q.current = { width: t, height: n }),
                     Y.current.start(100, () => {
-                        z(!1);
+                        W(!1);
                     }));
             },
-            [j, X, h, f],
+            [j, X, f, h],
         ),
-        [X, h],
+        [X, f],
     ),
         (0, g.l0)(() => {
             ($.current.stop(), B.current.stop(), Y.current.stop());
         }),
         i.useEffect(() => {
-            null != n && (0, T.c)(n, void 0, u && X ? h : 1);
-        }, [u, X, n, h]));
+            null != n && (0, T.c)(n, void 0, u && X ? f : 1);
+        }, [u, X, n, f]));
     let es = i.useMemo(() => {
         let e = j(p);
         return {
-            "--custom-zoom-scale": h,
+            "--custom-zoom-scale": f,
             "--custom-pan-x": `${e.x}px`,
             "--custom-pan-y": `${e.y}px`,
-            "--custom-zoom-transition": d || W || x || v ? "none" : "transform 0.15s ease-out",
+            "--custom-zoom-transition": d || z || x || v ? "none" : "transform 0.15s ease-out",
         };
-    }, [j, d, W, x, v, p, h]);
+    }, [j, d, z, x, v, p, f]);
     return (0, l.jsx)("div", {
         ref: C,
         className: r()(D.iE, a, { [D.rc]: u && X, [D.d$]: d }),
@@ -208,8 +208,8 @@ var w = n(964404),
     F = n(754712),
     H = n(531685),
     U = n(200749),
-    W = n(566331),
-    z = n(768088),
+    z = n(566331),
+    W = n(768088),
     $ = n(256195),
     B = n(834730),
     Z = n(1215),
@@ -294,7 +294,7 @@ function ei(e) {
         K = (0, a.bG)([H.A], () => H.A.isFocused()),
         q = (0, a.bG)([w.Ay], () => w.Ay.pauseSelfStreamPreviewWhenUnfocused),
         el = B?.ownerId === y,
-        ei = el && q && !K && A === h.N.NO_POPOUT,
+        ei = el && q && !K && A === f.N.NO_POPOUT,
         es = null != B ? (0, I.A)(B, R, R.id === y, ei) : null,
         er = S < 195;
     (0, g.Ay)(() => {
@@ -314,9 +314,9 @@ function ei(e) {
         T)
     )
         return (0, l.jsx)(X, { stream: t.stream, isSmall: er, selected: n, isSelfStream: R.id === y });
-    if (B?.state === J.XYD.ENDED) return (0, l.jsx)(W.A, { selected: n, stream: B, width: S });
+    if (B?.state === J.XYD.ENDED) return (0, l.jsx)(z.A, { selected: n, stream: B, width: S });
     if (null != ea || B?.state === J.XYD.FAILED)
-        return (0, l.jsx)(z.A, { avError: ea?.type, avErrorContext: ea, selected: n, stream: t.stream, width: S });
+        return (0, l.jsx)(W.A, { avError: ea?.type, avErrorContext: ea, selected: n, stream: t.stream, width: S });
     if (t.type === ee.lp.HIDDEN_STREAM) return (0, l.jsx)($.A, { selected: n, participant: t, width: S });
     if (null != B && !n && null != N && F.Ay.supports(et.O5.VIDEO))
         return (0, l.jsxs)(l.Fragment, {
@@ -325,13 +325,13 @@ function ei(e) {
                     M,
                     {
                         onResize: s,
-                        wrapperClassName: r()(A !== h.N.CALL_TILE ? Q.tN : void 0, _),
+                        wrapperClassName: r()(A !== f.N.CALL_TILE ? Q.tN : void 0, _),
                         className: Q.Qs,
                         streamId: D,
                         videoComponent: N,
                         fit: x,
                         paused: b || B?.state === J.XYD.PAUSED || ei,
-                        videoSpinnerContext: el ? f.u.SELF_STREAM : f.u.REMOTE_STREAM,
+                        videoSpinnerContext: el ? h.u.SELF_STREAM : h.u.REMOTE_STREAM,
                         userId: R.id,
                         streamKey: t.id,
                     },

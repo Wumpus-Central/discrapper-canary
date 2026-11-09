@@ -31,7 +31,7 @@ let p = { x: 0, y: 0 },
         doZoom: () => {},
         wrapperRef: i.createRef(),
     }),
-    f = (0, s.debounce)((e, t, n) => {
+    h = (0, s.debounce)((e, t, n) => {
         let l = null,
             i = null;
         if (null != n && (0, o.wL)(n)) {
@@ -46,10 +46,10 @@ let p = { x: 0, y: 0 },
             share_application_id: i,
         });
     }, 2e3),
-    h = i.memo(function (e) {
+    f = i.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
             [c, d] = i.useState(n),
-            [m, h] = i.useState(!1),
+            [m, f] = i.useState(!1),
             [x, A] = i.useState(!1),
             [v, E] = i.useState(!1),
             [C, I] = i.useState(!1),
@@ -76,14 +76,14 @@ let p = { x: 0, y: 0 },
                 (e, l, i) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == l || a === c) return;
-                    h(!0);
+                    f(!0);
                     let u = a / c;
                     (b((e) => T({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
                         d(a),
-                        f(a, i, t),
+                        h(a, i, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
-                            h(!1);
+                            f(!1);
                         }));
                 },
                 [T, o, n, t, c],
@@ -96,7 +96,7 @@ let p = { x: 0, y: 0 },
                     maxZoom: o,
                     setZoomLevel: d,
                     isZooming: m,
-                    setIsZooming: h,
+                    setIsZooming: f,
                     isDragging: x,
                     setIsDragging: A,
                     isWheeling: v,
@@ -120,7 +120,7 @@ n.d(
     {},
     {
         Ay: function (e) {
-            return e.enableZoom ? (0, l.jsx)(h, { ...e }) : e.children;
+            return e.enableZoom ? (0, l.jsx)(f, { ...e }) : e.children;
         },
         e9: g,
         qd: p,

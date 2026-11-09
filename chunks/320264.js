@@ -27,16 +27,16 @@ var i = n(477900),
     g = n(329308),
     m = n(571694),
     T = n(47167),
-    N = n(713654),
-    f = n(503698),
-    I = n.n(f),
-    S = n(62986);
-let x = function (e) {
+    f = n(713654),
+    N = n(503698),
+    I = n.n(N),
+    x = n(62986);
+let S = function (e) {
     let { value: t = 0, text: n, className: r, lowImportance: s, ...l } = e;
     return null != n
-        ? (0, i.jsx)("div", { className: I()(S.i, r, s && S.H), ...l, children: n })
+        ? (0, i.jsx)("div", { className: I()(x.i, r, s && x.H), ...l, children: n })
         : t > 0
-          ? (0, i.jsx)("div", { className: I()(S.i, r, s && S.H), ...l, children: t })
+          ? (0, i.jsx)("div", { className: I()(x.i, r, s && x.H), ...l, children: t })
           : null;
 };
 var O = n(769015),
@@ -144,7 +144,7 @@ class Y extends r.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
-            t = (0, N.gU)(e);
+            t = (0, f.gU)(e);
         if (null == t) return null;
         let n = (0, k.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
@@ -159,7 +159,7 @@ class Y extends r.Component {
             t,
             { mentions: n, category: r, channel: s, isMentionLowImportance: l } = this.props;
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n, lowImportance: l })),
+            null != n && n > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: n, lowImportance: l })),
             null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, T.m1)(r, b.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: w.UU,
@@ -228,7 +228,7 @@ class F extends r.Component {
         let e,
             { mentions: t, channel: n } = this.props;
         return (
-            null != t && t > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: t })),
+            null != t && t > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [(0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(n, b.default, y.A) }), e],
@@ -293,7 +293,7 @@ class z extends r.Component {
             { user: t, mentions: n } = this.props,
             r = this.getDisplayNickname();
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n })),
+            null != n && n > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: n })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [

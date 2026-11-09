@@ -12,17 +12,17 @@ n.d(
         X: function (e) {
             let { isHovered: t, asset: n, poster: c, className: d, autoPlay: m = !1, ref: p } = e,
                 { isExpanded: x } = (0, u.H)(),
-                h = (0, a.bG)([r.Ay], () => r.Ay.useReducedMotion),
-                f = s.useRef(null);
+                f = (0, a.bG)([r.Ay], () => r.Ay.useReducedMotion),
+                h = s.useRef(null);
             return (
                 s.useEffect(() => {
-                    null != f.current &&
-                        (x && (!h || t) ? ((f.current.currentTime = 0), f.current.play()) : f.current.pause());
-                }, [f, x, t, h]),
-                (0, o.A)(f),
+                    null != h.current &&
+                        (x && (!f || t) ? ((h.current.currentTime = 0), h.current.play()) : h.current.pause());
+                }, [h, x, t, f]),
+                (0, o.A)(h),
                 (0, l.jsx)(i.A, {
                     ref: (e) => {
-                        ((f.current = e), null != p && ("function" == typeof p ? p(e) : (p.current = e)));
+                        ((h.current = e), null != p && ("function" == typeof p ? p(e) : (p.current = e)));
                     },
                     autoPlay: m,
                     poster: c,

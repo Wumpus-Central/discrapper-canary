@@ -4,8 +4,8 @@ var l = n(477900),
     a = n(587895),
     i = n(465794),
     o = n(69236),
-    c = n(44724),
-    u = n(421108),
+    u = n(44724),
+    c = n(421108),
     d = n(873297),
     m = n(682901),
     g = n(792996),
@@ -28,23 +28,23 @@ n.d(
                     endTime: y,
                     ctaType: b = "storefront",
                     logoUrl: S,
-                    termsUrl: I,
-                    backgroundImageUrl: A,
+                    termsUrl: A,
+                    backgroundImageUrl: I,
                 } = e,
-                k = (0, u.ur)(y) ?? void 0,
-                L = (0, o.W8)(),
-                j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
+                k = (0, c.ur)(y) ?? void 0,
+                j = (0, o.W8)(),
+                L = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 N = r.useMemo(() => {
                     if ("none" !== b)
-                        return "nitro" !== b || L
+                        return "nitro" !== b || j
                             ? {
                                   kind: "button",
                                   text:
-                                      null != j
-                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: j })
+                                      null != L
+                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: L })
                                           : g.intl.string(g.t.apFNLU),
-                                  onClick: () => (0, c.default)({ applicationId: t }),
-                                  onMouseDown: () => (0, c.G)({ applicationId: t }),
+                                  onClick: () => (0, u.default)({ applicationId: t }),
+                                  onMouseDown: () => (0, u.G)({ applicationId: t }),
                               }
                             : {
                                   kind: "custom",
@@ -55,7 +55,7 @@ n.d(
                                       buttonTextOverride: g.intl.string(g.t.pj0XBN),
                                   }),
                               };
-                }, [b, t, j, L]);
+                }, [b, t, L, j]);
             return (0, l.jsx)(d.A, {
                 skuIds: E,
                 resolvedSkuIds: v,
@@ -67,8 +67,8 @@ n.d(
                 logoUrl: S,
                 cta: N,
                 timeLeftText: k,
-                termsUrl: I,
-                backgroundImageUrl: A,
+                termsUrl: A,
+                backgroundImageUrl: I,
                 analyticsSection: "slayer-storefront-promotional-banner",
                 analyticsTileType: "SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER",
                 analyticsImpressionType: "social_layer_storefront_promotional_banner",

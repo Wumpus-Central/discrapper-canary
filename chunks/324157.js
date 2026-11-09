@@ -6,7 +6,7 @@ let a = /\{(promotion_end_date|claim_end_date|help_center_url)\}/g,
 function o(e, t) {
     return null == e ? "" : e.toLocaleDateString(t, { month: "long", day: "numeric", year: "numeric" });
 }
-function c(e, t) {
+function u(e, t) {
     let n = null;
     return (
         null != t.helpCenterId && "" !== t.helpCenterId && (n = l.A.getArticleURL(t.helpCenterId)),
@@ -34,7 +34,7 @@ n.d(
                 {
                     promotion: i,
                     promotionProgress: o,
-                    progressIndicator: u,
+                    progressIndicator: c,
                     helpCenterId: d,
                     daysRemaining: m,
                     locale: g,
@@ -42,18 +42,18 @@ n.d(
                 h =
                     ((t = i.rewardStatus),
                     (n = o?.current ?? 0),
-                    (a = (0, r.x)(u.rewardStates, t, n)),
-                    { title: a?.title ?? u.title, description: a?.description ?? u.description }),
+                    (a = (0, r.x)(c.rewardStates, t, n)),
+                    { title: a?.title ?? c.title, description: a?.description ?? c.description }),
                 p = { locale: g, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
                 f = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
                 x = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
             return {
-                title: c(h.title, p),
-                description: ((l = h.description), null != l && "" !== l ? c(l, p) : null),
+                title: u(h.title, p),
+                description: ((l = h.description), null != l && "" !== l ? u(l, p) : null),
                 progressText: f,
                 timeLeftText: x,
             };
         },
-        wJ: c,
+        wJ: u,
     },
 );

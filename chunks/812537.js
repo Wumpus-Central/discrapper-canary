@@ -11,8 +11,8 @@ var i = s(477900),
     m = s(534514),
     x = s(403581),
     g = s(793574),
-    p = s(688810),
-    h = s(722178),
+    h = s(688810),
+    p = s(722178),
     f = s(580630),
     N = s(423814),
     A = s(77528),
@@ -128,7 +128,7 @@ function F(e) {
         } = e,
         r = n ? a : (0, f.$g)(s.amount, s.currency);
     function c(e) {
-        return l ? `${e}/${(0, h.FJ)(_.WT.MONTH)}` : e;
+        return l ? `${e}/${(0, p.FJ)(_.WT.MONTH)}` : e;
     }
     return (0, i.jsx)("thead", {
         children: (0, i.jsxs)("tr", {
@@ -166,16 +166,16 @@ let V = function (e) {
             variant: o = "default",
         } = e,
         d = "settings" === o,
-        { analyticsLocations: u } = (0, p.Ay)(g.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        { analyticsLocations: u } = (0, h.Ay)(g.A.PREMIUM_MARKETING_PLAN_COMPARISON),
         x = (0, A.V)(),
         G = x?.subscriptionTrial?.skuId,
         w = (0, N.O)(),
         H = (0, j.YJ)(w),
         V = null != w && (0, j.U9)(w, _.pe.TIER_2) && H === _.gD.PREMIUM_MONTH_TIER_2,
         W = (0, j.N1)(H),
-        z = null != W ? `${W}/${(0, h.FJ)(_.WT.MONTH)}` : "",
-        Y = (0, h.JM)(_.gD.PREMIUM_MONTH_TIER_0),
-        X = (0, h.JM)(_.gD.PREMIUM_MONTH_TIER_2),
+        z = null != W ? `${W}/${(0, p.FJ)(_.WT.MONTH)}` : "",
+        Y = (0, p.JM)(_.gD.PREMIUM_MONTH_TIER_0),
+        X = (0, p.JM)(_.gD.PREMIUM_MONTH_TIER_2),
         K = (function () {
             let e = (0, E.b)("premium_marketing_comparison"),
                 t = [
@@ -299,8 +299,8 @@ let V = function (e) {
                             {
                                 id: 4,
                                 label: M.intl.string(M.t["ufhQC+"]),
-                                tier0ColumnData: { text: (0, h.EJ)(_.PremiumTypes.TIER_0) },
-                                tier2ColumnData: { text: (0, h.EJ)(_.PremiumTypes.TIER_2) },
+                                tier0ColumnData: { text: (0, p.EJ)(_.PremiumTypes.TIER_0) },
+                                tier2ColumnData: { text: (0, p.EJ)(_.PremiumTypes.TIER_2) },
                             },
                             {
                                 id: 11,
@@ -377,7 +377,7 @@ let V = function (e) {
         t = (0, i.jsx)(b.R, { className: l()(U.Io, U.SP), text: e });
     }
     let Z = G === _.pe.TIER_0 || c === _.PremiumTypes.TIER_0;
-    return (0, i.jsx)(p.f5, {
+    return (0, i.jsx)(h.f5, {
         value: u,
         children: (0, i.jsxs)("div", {
             className: l()(U.zr, s, { [U.W0]: d }),

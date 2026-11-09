@@ -5,8 +5,8 @@ var r = n(503698),
     a = n(435558),
     i = n(855986),
     o = n(775602),
-    c = n(577568);
-let u = 2 * Math.PI * 57,
+    u = n(577568);
+let c = 2 * Math.PI * 57,
     d = "var(--status-positive)",
     m = "var(--background-mod-strong)",
     g = -Math.PI / 2;
@@ -24,11 +24,11 @@ n.d(
             if (E > 1 && E <= 12) {
                 let e, n, i;
                 return (0, l.jsxs)("div", {
-                    className: c.iE,
+                    className: u.iE,
                     children: [
                         f,
                         (0, l.jsx)("svg", {
-                            className: c.hN,
+                            className: u.hN,
                             viewBox: "0 0 120 120",
                             children: ((e = p / 60),
                             (n = (0, a.clamp)(Math.floor(t), 0, E)),
@@ -45,9 +45,9 @@ n.d(
                                     "g",
                                     {
                                         children: [
-                                            (0, l.jsx)("path", { className: c.u4, d: e.d, strokeWidth: 6, stroke: m }),
+                                            (0, l.jsx)("path", { className: u.u4, d: e.d, strokeWidth: 6, stroke: m }),
                                             (0, l.jsx)("path", {
-                                                className: s()(c.mX, { [c.Vr]: !x }),
+                                                className: s()(u.mX, { [u.Vr]: !x }),
                                                 d: e.d,
                                                 strokeWidth: 6,
                                                 stroke: r,
@@ -64,24 +64,24 @@ n.d(
                     ],
                 });
             }
-            let v = u * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
+            let v = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
             return (0, l.jsxs)("div", {
-                className: c.iE,
+                className: u.iE,
                 children: [
                     f,
                     (0, l.jsxs)("svg", {
-                        className: c.hN,
+                        className: u.hN,
                         viewBox: "0 0 120 120",
                         children: [
-                            (0, l.jsx)("circle", { className: c.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: m }),
+                            (0, l.jsx)("circle", { className: u.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: m }),
                             (0, l.jsx)("circle", {
-                                className: s()(c.M0, { [c.Vr]: !x }),
+                                className: s()(u.M0, { [u.Vr]: !x }),
                                 cx: 60,
                                 cy: 60,
                                 r: 57,
                                 strokeWidth: 6,
                                 stroke: r,
-                                strokeDasharray: u,
+                                strokeDasharray: c,
                                 strokeDashoffset: v,
                             }),
                         ],

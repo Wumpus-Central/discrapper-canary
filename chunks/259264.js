@@ -11,8 +11,8 @@ var l,
     m = n(590087),
     p = n(927813),
     g = n(37965);
-let f = 20 * p.A.Millis.SECOND;
-var h = n(821589),
+let h = 20 * p.A.Millis.SECOND;
+var f = n(821589),
     x = n(950183),
     A = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
 let v = s.memo(function (e) {
@@ -56,7 +56,7 @@ let v = s.memo(function (e) {
                     if (!r || a || !m.X.isIncomingVideoEnabled()) return;
                     let e = o.current;
                     return (
-                        e.start(f, () => {
+                        e.start(h, () => {
                             (0, g.Z)(t, n, p, i);
                         }),
                         () => {
@@ -79,7 +79,7 @@ let v = s.memo(function (e) {
         children: [
             null != t &&
                 (0, i.jsx)(r, {
-                    className: a()(x.video, (0, h.t)(x, "video", R), { [x.mirror]: v }, p),
+                    className: a()(x.video, (0, f.t)(x, "video", R), { [x.mirror]: v }, p),
                     streamId: t,
                     onResize: L,
                     onReady: k,

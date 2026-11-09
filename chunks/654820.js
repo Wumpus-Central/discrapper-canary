@@ -14,7 +14,7 @@ n.d(
                 [u, c] = i.useState(),
                 [d, m] = i.useState(),
                 [p, g] = i.useState(),
-                [f, h] = i.useState(),
+                [h, f] = i.useState(),
                 x = n.id.split(":").at(-1),
                 A = t === x,
                 v = i.useCallback((e, t, n) => {
@@ -31,7 +31,7 @@ n.d(
                                 ? ((i = s.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                                 : "unknown",
                         ),
-                        h("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
+                        f("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
                 }, []);
             return (
                 i.useEffect(() => {
@@ -64,7 +64,7 @@ n.d(
                             className: a.l,
                             children: [
                                 (0, l.jsx)("span", { children: "FPS: " }),
-                                (0, l.jsx)("strong", { children: f }),
+                                (0, l.jsx)("strong", { children: h }),
                             ],
                         }),
                         A &&

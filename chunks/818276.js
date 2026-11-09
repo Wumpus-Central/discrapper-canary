@@ -13,12 +13,12 @@ n.d(
     {
         A: function (e) {
             let { children: t, layoutVariant: n, backgroundImage: a, onMouseEnter: m, onMouseLeave: p } = e,
-                { expansionSpring: x, collapsedContentRef: h } = s.useContext(u.PW),
-                { isExpanded: f } = (0, c.H)();
+                { expansionSpring: x, collapsedContentRef: f } = s.useContext(u.PW),
+                { isExpanded: h } = (0, c.H)();
             return (0, l.jsx)(i.animated.div, {
-                ref: h,
-                "aria-hidden": f,
-                className: r()(d.hR, { [d.Ag]: f, [d.MN]: "inset" === n }),
+                ref: f,
+                "aria-hidden": h,
+                className: r()(d.hR, { [d.Ag]: h, [d.MN]: "inset" === n }),
                 style: { opacity: (0, o.a)(x.to({ range: [0, 1], output: [1, 0] })), backgroundImage: a },
                 onMouseEnter: m,
                 onMouseLeave: p,

@@ -1,8 +1,8 @@
 var i = n(477900);
 n(582128);
-var l = n(192308);
-function r(e, t) {
-    return (0, l.mM)(
+var r = n(192308);
+function s(e, t) {
+    return (0, r.mM)(
         async () => {
             let { default: t } = await Promise.all([
                 n.e(114386),
@@ -21,9 +21,9 @@ n.d(
     t,
     {},
     {
-        C: r,
+        C: s,
         t: function (e) {
-            return r({ variant: e, source: "devtools" });
+            return s({ variant: e, source: "devtools" });
         },
     },
 );

@@ -18,11 +18,11 @@ var r = n(855986),
     g = n(24181),
     m = n(503698),
     T = n.n(m),
-    N = n(38021),
-    f = n(366010),
+    f = n(38021),
+    N = n(366010),
     I = n(866665),
-    S = n(408278),
-    x = n(465794),
+    x = n(408278),
+    S = n(465794),
     O = n(652215),
     U = n(49999),
     v = n(682901),
@@ -30,16 +30,16 @@ var r = n(855986),
     R = n(591888);
 function j(e) {
     let { description: t, canUseCustomCallSounds: n, onNavigateToFeature: r, markAsDismissed: s } = e,
-        { theme: l } = (0, N.wR)();
+        { theme: l } = (0, f.wR)();
     return (0, i.jsxs)("div", {
-        className: T()(R.Du, (0, f.q)(l) && R.rf, null != s && R.Zt),
+        className: T()(R.Du, (0, N.q)(l) && R.rf, null != s && R.Zt),
         children: [
             null != s
                 ? (0, i.jsx)("div", {
                       className: R.VN,
                       children: (0, i.jsx)(I.m, {
                           text: L.intl.string(L.t.cpT0Cq),
-                          children: (0, i.jsx)(S.K, {
+                          children: (0, i.jsx)(x.K, {
                               icon: a.XSmallIcon,
                               "aria-label": L.intl.string(L.t.cpT0Cq),
                               size: "sm",
@@ -64,7 +64,7 @@ function j(e) {
             }),
             n
                 ? (0, i.jsx)(u.$, { size: "sm", onClick: r, text: L.intl.string(L.t.RzWDqY) })
-                : (0, i.jsx)(x.A, {
+                : (0, i.jsx)(S.A, {
                       size: "sm",
                       subscriptionTier: v.pe.TIER_2,
                       buttonTextOverride: L.intl.string(L.t.pj0XBN),
@@ -82,19 +82,19 @@ function y(e) {
     var t;
     let { onClose: n, markAsDismissed: m } = e,
         T = g.H.useConfig({ location: "entrance_sound_picker_upsell" }),
-        N = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
-        f =
-            (t = N?.premiumType) === v.PremiumTypes.TIER_2
+        f = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
+        N =
+            (t = f?.premiumType) === v.PremiumTypes.TIER_2
                 ? L.intl.string(L.t.jqO5Qn)
                 : null == t
                   ? L.intl.string(L.t.f2qjw5)
                   : L.intl.string(L.t.SblICW),
-        I = p.Ay.canUseCustomCallSounds(N);
-    function S() {
+        I = p.Ay.canUseCustomCallSounds(f);
+    function x() {
         ((0, A.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), m?.(U.i.PRIMARY));
     }
     return T
-        ? (0, i.jsx)(j, { description: f, canUseCustomCallSounds: I, onNavigateToFeature: S, markAsDismissed: m })
+        ? (0, i.jsx)(j, { description: N, canUseCustomCallSounds: I, onNavigateToFeature: x, markAsDismissed: m })
         : (0, i.jsxs)(C.A, {
               isShown: !0,
               type: C.i.PREMIUM,
@@ -116,9 +116,9 @@ function y(e) {
                           (0, i.jsx)(c.D, { variant: "heading-xs/semibold", children: L.intl.string(L.t.dTbAxx) }),
                       ],
                   }),
-                  (0, i.jsx)(d.E, { variant: "body-sm/normal", children: f }),
+                  (0, i.jsx)(d.E, { variant: "body-sm/normal", children: N }),
                   I
-                      ? (0, i.jsx)(u.$, { onClick: S, text: L.intl.string(L.t.RzWDqY), fullWidth: !0 })
+                      ? (0, i.jsx)(u.$, { onClick: x, text: L.intl.string(L.t.RzWDqY), fullWidth: !0 })
                       : (0, i.jsx)(h.A, {
                             textOptions: { textOverride: L.intl.string(L.t.pj0XBN) },
                             subscriptionTier: v.pe.TIER_2,

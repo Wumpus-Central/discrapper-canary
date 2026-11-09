@@ -10,8 +10,8 @@ var l = n(477900),
     m = n(695366),
     p = n(367513),
     g = n(684339),
-    f = n(628983),
-    h = n(520698),
+    h = n(628983),
+    f = n(520698),
     x = n(164617),
     A = n(958713),
     v = n(525505),
@@ -56,14 +56,14 @@ n.d(
                     pulseSpeakingIndicator: H = !1,
                     paused: U = !1,
                 } = e,
-                W = T.Ay.getVideoComponent(),
-                z = (0, a.bG)([y.default], () => y.default.getId()),
+                z = T.Ay.getVideoComponent(),
+                W = (0, a.bG)([y.default], () => y.default.getId()),
                 { user: $, streamId: B, speaking: Z } = t,
-                Y = $.id === z,
+                Y = $.id === W,
                 Q = (0, D.Ay)(t),
                 X = (0, a.bG)([L.A], () => L.A.isFocused()),
                 K = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
-                q = (0, a.bG)([T.Ay], () => null != $.id && T.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
+                q = (0, a.bG)([T.Ay], () => null != $.id && T.Ay.isLocalVideoDisabled($.id, (0, f.A)(t.type)), [
                     $.id,
                     t.type,
                 ]),
@@ -77,7 +77,7 @@ n.d(
                     size: en,
                     animateOnHover: !et,
                 }),
-                es = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(n.id)),
+                es = (0, a.bG)([h.A], () => h.A.getSelectedParticipant(n.id)),
                 er = (0, v.A)(O.x.DEFAULT, t.user.id),
                 ea = (0, A.A)(t.user.id),
                 eo = (0, S.e)(n, "UserTile"),
@@ -90,7 +90,7 @@ n.d(
                 let { channel: e, selectedParticipant: t, user: n, isStageUnifiedCall: l } = ec.current;
                 !l && e.isGuildStageVoice() && !Q && t?.id === n.id && p.A.selectParticipant(e.id, null);
             }, [Q]),
-            s && !q && !M && Q && !u && null != W && T.Ay.supports(O.O5.VIDEO))
+            s && !q && !M && Q && !u && null != z && T.Ay.supports(O.O5.VIDEO))
                 ? null != er && null == ea
                     ? (0, l.jsx)(k.A, { avError: er, userId: t.id, width: o, selected: u })
                     : (0, l.jsx)(
@@ -101,9 +101,9 @@ n.d(
                               className: P.Qs,
                               mirror: Y,
                               streamId: B,
-                              videoComponent: W,
+                              videoComponent: z,
                               fit: d,
-                              videoSpinnerContext: $.id === z ? g.u.SELF_VIDEO : g.u.REMOTE_VIDEO,
+                              videoSpinnerContext: $.id === W ? g.u.SELF_VIDEO : g.u.REMOTE_VIDEO,
                               paused: U,
                               userId: $.id,
                           },

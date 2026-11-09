@@ -4,8 +4,8 @@ var l = n(582128),
     a = n(857512),
     i = n(12678),
     o = n(652215),
-    c = n(650583);
-let u = new Set([c.N$.ArrowUp, c.N$.ArrowDown, c.N$.PageUp, c.N$.PageDown, c.N$.Home, c.N$.End, c.N$.Tab]);
+    u = n(650583);
+let c = new Set([u.N$.ArrowUp, u.N$.ArrowDown, u.N$.PageUp, u.N$.PageDown, u.N$.Home, u.N$.End, u.N$.Tab]);
 function d(e, t, n, l) {
     let { scrollTop: r = 0, scrollOffset: a = 0, scrollHeight: i = 0, scrollWidth: o = 0 } = l;
     if (i > 0) {
@@ -27,7 +27,7 @@ n.d(
         r: function (e, t) {
             let n,
                 s,
-                c,
+                u,
                 m,
                 { analyticsSource: g } = (0, i.lC)(t),
                 h = (0, r.I)(d, 5e3, [], { trailing: !0 }),
@@ -36,7 +36,7 @@ n.d(
                 x =
                     ((n = l.useRef(0)),
                     (s = l.useRef(!1)),
-                    (c = l.useRef(!1)),
+                    (u = l.useRef(!1)),
                     (m = l.useRef(0)),
                     l.useEffect(() => {
                         let t = e.current?.getScrollerNode();
@@ -58,7 +58,7 @@ n.d(
                                         window.removeEventListener("pointerup", o),
                                         window.removeEventListener("pointercancel", o),
                                         (s.current = !1),
-                                        (c.current = !1));
+                                        (u.current = !1));
                                 }
                             );
                         function l() {
@@ -68,18 +68,18 @@ n.d(
                             s.current = !1;
                         }
                         function a(e) {
-                            u.has(e.key) && l();
+                            c.has(e.key) && l();
                         }
                         function i(e) {
-                            e.target === t && ((c.current = !0), (m.current = Date.now()), l());
+                            e.target === t && ((u.current = !0), (m.current = Date.now()), l());
                         }
                         function o() {
-                            c.current && ((c.current = !1), l());
+                            u.current && ((u.current = !1), l());
                         }
                     }, [e]),
                     l.useCallback(
                         () =>
-                            (c.current && Date.now() - m.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
+                            (u.current && Date.now() - m.current < 3e4) || (s.current && Date.now() - n.current < 1e3),
                         [],
                     ));
             return {

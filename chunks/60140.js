@@ -4,8 +4,8 @@ var l = n(477900),
     a = n(857512),
     i = n(590180),
     o = n(511265),
-    c = n(313276),
-    u = n(206077),
+    u = n(313276),
+    c = n(206077),
     d = n(987421),
     m = n(561769),
     g = n(484469),
@@ -78,10 +78,10 @@ n.d(
                 s,
                 { heroBlockRecord: a, layout: d, tab: m, isBlockLoading: g = !1 } = e,
                 { products: h } =
-                    ((t = (0, c.A)()),
+                    ((t = (0, u.A)()),
                     (n = (0, o.p)()),
                     (s = r.useMemo(() => (g ? [] : n(t(a.rankedSkuIds))), [g, t, a.rankedSkuIds, n])),
-                    { products: (0, u.X)(s) }),
+                    { products: (0, c.X)(s) }),
                 p = r.useMemo(
                     () =>
                         !g &&

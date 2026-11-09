@@ -28,8 +28,8 @@ n.d(
                 {
                     recalculateAnimationPositions: p,
                     registerComponent: x,
-                    unregisterComponent: h,
-                    expansionSpring: f,
+                    unregisterComponent: f,
+                    expansionSpring: h,
                     mountPoints: C,
                 } = s.useContext(u),
                 v = s.useRef(null),
@@ -43,24 +43,24 @@ n.d(
                     return (
                         null != e && x(e, n, c),
                         () => {
-                            null != e && h(n, c);
+                            null != e && f(n, c);
                         }
                     );
-                }, [n, c, x, h]));
-            let j = s.useCallback(
+                }, [n, c, x, f]));
+            let g = s.useCallback(
                 (e) => {
                     let { height: t } = e;
                     y.current !== t && (p(), (y.current = t));
                 },
                 [p],
             );
-            (0, i.i4)(v, j);
-            let g = C.get(n)?.current,
+            (0, i.i4)(v, g);
+            let j = C.get(n)?.current,
                 A = null;
             return (
-                null == g
+                null == j
                     ? (A = null)
-                    : d && null != f
+                    : d && null != h
                       ? (A = (0, l.jsxs)(l.Fragment, {
                             children: [
                                 "collapsed" === c &&
@@ -68,28 +68,28 @@ n.d(
                                         (0, l.jsx)(r.animated.div, {
                                             style: {
                                                 position: "absolute",
-                                                opacity: (0, o.a)(f.to({ range: [0, 1], output: [1, 0] })),
+                                                opacity: (0, o.a)(h.to({ range: [0, 1], output: [1, 0] })),
                                             },
                                             children: t(N),
                                         }),
-                                        g,
+                                        j,
                                     ),
                                 "expanded" === c &&
                                     (0, a.createPortal)(
                                         (0, l.jsx)(r.animated.div, {
                                             style: {
                                                 position: "absolute",
-                                                opacity: (0, o.a)(f.to({ range: [0, 1], output: [0, 1] })),
+                                                opacity: (0, o.a)(h.to({ range: [0, 1], output: [0, 1] })),
                                             },
                                             children: t(N),
                                         }),
-                                        g,
+                                        j,
                                     ),
                             ],
                         }))
-                      : "collapsed" === c && (A = (0, a.createPortal)(t(N), g)),
+                      : "collapsed" === c && (A = (0, a.createPortal)(t(N), j)),
                 (0, l.jsxs)("div", {
-                    style: { opacity: +((null == A && "collapsed" === c) || null == g) },
+                    style: { opacity: +((null == A && "collapsed" === c) || null == j) },
                     ref: m,
                     children: [t(v), A],
                 })
@@ -100,7 +100,7 @@ n.d(
                 [o, c] = s.useState({}),
                 [d, m] = s.useState([]),
                 [p, x] = s.useState(() => new Map()),
-                h = s.useCallback((e, t, n) => {
+                f = s.useCallback((e, t, n) => {
                     (c((l) => {
                         let s = l[t] ?? { expanded: null, collapsed: null };
                         return { ...l, [t]: { ...s, [n]: e } };
@@ -110,7 +110,7 @@ n.d(
                             return (n.set(t, s.createRef()), n);
                         }));
                 }, []),
-                f = s.useCallback((e, t) => {
+                h = s.useCallback((e, t) => {
                     let n = !1;
                     (c((l) => {
                         let s = l[e] ?? { expanded: null, collapsed: null };
@@ -137,14 +137,14 @@ n.d(
                             m = u.top - c.top,
                             p = r.left - i.left + 12,
                             x = u.left - c.left,
-                            h = -r.right + i.right + 12,
-                            f = -u.right + c.right;
+                            f = -r.right + i.right + 12,
+                            h = -u.right + c.right;
                         e.push({
                             id: t,
                             collapsedLeft: x,
                             expandedLeft: p,
-                            collapsedRight: f,
-                            expandedRight: h,
+                            collapsedRight: h,
+                            expandedRight: f,
                             collapsedTop: m,
                             expandedTop: d,
                             width: r.width,
@@ -154,8 +154,8 @@ n.d(
                 }, [o, n, a, m]),
                 v = s.useMemo(
                     () => ({
-                        registerComponent: h,
-                        unregisterComponent: f,
+                        registerComponent: f,
+                        unregisterComponent: h,
                         animatedComponents: o,
                         expandedContentRef: n,
                         collapsedContentRef: a,
@@ -165,7 +165,7 @@ n.d(
                         expansionSpring: i,
                         mountPoints: p,
                     }),
-                    [h, f, o, n, a, r, C, d, i, p],
+                    [f, h, o, n, a, r, C, d, i, p],
                 );
             return (0, l.jsx)(u.Provider, { value: v, children: t });
         },

@@ -4,8 +4,8 @@ var l,
     a = n(503698),
     i = n.n(a),
     o = n(939249),
-    c = n(534514),
-    u = n(821609),
+    u = n(534514),
+    c = n(821609),
     d = n(692651),
     m = 221552 == n.j ? (((l = {}).FILL = "fill"), (l.CAROUSEL = "carousel"), l) : null;
 let g = { fill: d.GS, carousel: d.Dk };
@@ -47,7 +47,7 @@ n.d(
                         className: d.P4,
                         children:
                             null != l &&
-                            (0, r.jsx)(c.D, {
+                            (0, r.jsx)(u.D, {
                                 id: v,
                                 lineClamp: 4,
                                 className: l.className,
@@ -57,7 +57,7 @@ n.d(
                                 children: l.text,
                             }),
                     }),
-                    (0, r.jsx)(u.$, {
+                    (0, r.jsx)(c.$, {
                         variant: "overlay-primary",
                         text: a,
                         tabIndex: -1,

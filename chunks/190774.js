@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     kL: "container_KeBYth",
     xn: "thumbnail_KeBYth",
     ui: "slotMiddle_KeBYth",

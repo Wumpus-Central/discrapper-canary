@@ -10,8 +10,8 @@ var l = n(477900),
     m = n(96969);
 let p = 6 * c.A.Millis.SECOND,
     g = 2 * c.A.Millis.SECOND,
-    f = 2 * c.A.Millis.SECOND;
-function h(e) {
+    h = 2 * c.A.Millis.SECOND;
+function f(e) {
     return `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
 }
 n.d(
@@ -37,7 +37,7 @@ n.d(
             return (i.useEffect(() => {
                 let e;
                 return (
-                    Date.now() - A >= f
+                    Date.now() - A >= h
                         ? (0, d.a)(t)
                         : (e = setTimeout(
                               () => {
@@ -58,7 +58,7 @@ n.d(
                           t &&
                           (0, l.jsx)(s.animated.div, {
                               className: m._,
-                              style: { transform: n.to(h) },
+                              style: { transform: n.to(f) },
                               children: (0, l.jsx)(o.A, {
                                   className: m.F,
                                   emojiId: x.id,

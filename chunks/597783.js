@@ -4,8 +4,8 @@ var l = n(582128),
     a = n(722178),
     i = n(857512),
     o = n(590180),
-    c = n(993408),
-    u = n(331884),
+    u = n(993408),
+    c = n(331884),
     d = n(652215);
 n.d(
     t,
@@ -15,12 +15,12 @@ n.d(
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
                 m = (0, i.uM)(),
                 g = (0, r.bG)([o.A], () => o.A.getProduct(e)),
-                h = (0, u.o)(),
+                h = (0, c.o)(),
                 p = a.Ay.canUseShopDiscounts(h),
                 f = l.useRef(null),
                 x = l.useCallback(() => {
-                    let l = null != g ? (0, c.Br)(g, p, !1) : null,
-                        r = null != g ? (0, c.c7)(g, p, !1) : void 0;
+                    let l = null != g ? (0, u.Br)(g, p, !1) : null,
+                        r = null != g ? (0, u.c7)(g, p, !1) : void 0;
                     s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                         collectibles_shop_session_id: m?.sessionId,
                         sku_id: e,
