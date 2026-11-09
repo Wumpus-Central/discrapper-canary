@@ -20,12 +20,12 @@ let p = 10 + Math.random() * (10 * E.A.Millis.SECOND),
     T = null,
     g = !1;
 class S extends s.A {
-    actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: O, APP_STATE_UPDATE: C };
+    actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: R, APP_STATE_UPDATE: O, LOGOUT: C };
     _initialize() {
         (A.bW.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
-                L(m, !1);
+                y(m, !1);
             },
         }),
             A.bW.beforeSendCallbacks.push({
@@ -108,30 +108,43 @@ class S extends s.A {
     }
 }
 function N() {
-    ((g = !0), L(p, !0));
+    ((g = !0), y(p, !0));
 }
-function C(e) {
-    g && "active" !== e.state && (clearTimeout(T), (T = null), R(!1));
+function C() {
+    ((g = !1), clearTimeout(T), (T = null));
 }
-function O() {
-    g && (clearTimeout(T), (T = null), R(!1));
+function O(e) {
+    g && "active" !== e.state && (clearTimeout(T), (T = null), L(!1));
 }
-async function R(e) {
-    (L(m, !1),
-        !f.A.hasLoaded(I.oD.FRECENCY_AND_FAVORITES_SETTINGS) &&
-            (u.A.hasPendingUsage() ||
-                d.Ay.hasPendingUsage() ||
-                l.Ay.hasPendingUsage() ||
-                o.A.hasPendingUsage() ||
-                c.A.hasPendingUsage() ||
-                (_.A.hasPendingUsage() && !e)) &&
-            ((0, A.cE)(), await A.bW.loadIfNecessary()),
+function R() {
+    g && (clearTimeout(T), (T = null), L(!1));
+}
+async function L(e) {
+    if (g) {
+        if (
+            (y(m, !1),
+            !f.A.hasLoaded(I.oD.FRECENCY_AND_FAVORITES_SETTINGS) &&
+                (u.A.hasPendingUsage() ||
+                    d.Ay.hasPendingUsage() ||
+                    l.Ay.hasPendingUsage() ||
+                    o.A.hasPendingUsage() ||
+                    c.A.hasPendingUsage() ||
+                    (_.A.hasPendingUsage() && !e)))
+        ) {
+            (0, A.cE)();
+            try {
+                await A.bW.loadIfNecessary();
+            } catch {
+                return;
+            }
+        }
         r().forEach(A.Df, (e) => {
             e.markDirtyIfHasPendingChange();
-        }));
+        });
+    }
 }
-function L(e, t) {
-    (null != T && clearTimeout(T), (T = setTimeout(() => R(t), e)));
+function y(e, t) {
+    (null != T && clearTimeout(T), (T = setTimeout(() => L(t), e)));
 }
-let y = new S();
-n.d(t, {}, { A: y });
+let D = new S();
+n.d(t, {}, { A: D });
