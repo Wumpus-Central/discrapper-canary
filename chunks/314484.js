@@ -10,6 +10,7 @@ r.exports = {
     Ve: "headerLeadGameIcon_AH5XKr",
     Vl: "headerLeadMeta_AH5XKr",
     FK: "headerLeadDot_AH5XKr",
+    o5: "headerTrailing_AH5XKr",
     $s: "headerActions_AH5XKr",
     jN: "editPanel_AH5XKr",
     vu: "active_AH5XKr",

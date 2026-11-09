@@ -824,18 +824,18 @@ function e2(e) {
     });
 }
 n(600253);
-var e9 = n(741934);
+var e5 = n(741934);
 n(926675);
 var e8 = n(305866),
-    e5 = n(55999),
-    e7 = n(229087),
-    e6 = n(394245),
+    e9 = n(55999),
+    e6 = n(229087),
+    e7 = n(394245),
     e4 = n(382701),
     e3 = n(408519);
 function te(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
-        o = d.useMemo(() => n?.filter((e) => null != (0, e6.W)(e)) ?? [], [n]),
+        o = d.useMemo(() => n?.filter((e) => null != (0, e7.W)(e)) ?? [], [n]),
         c = o.length > 0,
         u = r && o.length < 20,
         { trackUserProfileEditAction: m } = (0, eK.NJ)(),
@@ -908,7 +908,7 @@ function te(e) {
                       children: [
                           o.map((e) =>
                               (0, i.jsx)(
-                                  e7.A,
+                                  e6.A,
                                   {
                                       tag: e,
                                       variant: "filled",
@@ -938,7 +938,7 @@ function te(e) {
                           children: o
                               .slice(0, E)
                               .map((e) =>
-                                  (0, i.jsx)(e7.A, { tag: e, variant: "filled", onRemove: r ? () => k(e) : void 0 }, e),
+                                  (0, i.jsx)(e6.A, { tag: e, variant: "filled", onRemove: r ? () => k(e) : void 0 }, e),
                               ),
                       }),
                   P &&
@@ -949,10 +949,10 @@ function te(e) {
                           onOpenChange: b,
                           disableInteraction: a,
                           children: o.map((e) =>
-                              (0, i.jsx)(e7.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
+                              (0, i.jsx)(e6.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
-                  u && (0, i.jsx)(e5.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
+                  u && (0, i.jsx)(e9.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
               ],
           })
         : null;
@@ -1106,7 +1106,7 @@ function tm(e) {
                     "aria-pressed": l,
                     "aria-label": v.intl.formatToPlainString(v.t.zrtAwA, { clipNumber: n + 1 }),
                     onClick: () => a(t.key),
-                    children: (0, i.jsx)(e9.A, { item: t, ringSize: "sm", className: tu.nC }),
+                    children: (0, i.jsx)(e5.A, { item: t, ringSize: "sm", className: tu.nC }),
                 }),
                 g &&
                     (0, i.jsxs)(i.Fragment, {
@@ -1491,7 +1491,7 @@ function tU(e) {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e(459368),
-                            n.e(821717),
+                            n.e(685432),
                             n.e(269714),
                             n.e(19385),
                             n.e(718955),
@@ -1522,6 +1522,7 @@ function tU(e) {
                             n.e(237834),
                             n.e(875842),
                             n.e(858337),
+                            n.e(820683),
                             n.e(97210),
                             n.e(838090),
                             n.e(757598),
@@ -1536,6 +1537,7 @@ function tU(e) {
                             n.e(501962),
                             n.e(538733),
                             n.e(280559),
+                            n.e(100126),
                             n.e(17736),
                             n.e(974049),
                             n.e(237715),
@@ -1547,9 +1549,11 @@ function tU(e) {
                             n.e(823077),
                             n.e(626750),
                             n.e(689160),
+                            n.e(827037),
                             n.e(520342),
-                            n.e(478740),
-                        ]).then(n.bind(n, 917119));
+                            n.e(795365),
+                            n.e(7501),
+                        ]).then(n.bind(n, 254876));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -1593,7 +1597,7 @@ function tU(e) {
                               onMouseEnter: el,
                               onMouseLeave: es,
                               children: [
-                                  (0, i.jsx)(e9.A, {
+                                  (0, i.jsx)(e5.A, {
                                       item: _,
                                       ringSize: "lg",
                                       isPlaying: ei,
@@ -1862,7 +1866,7 @@ function t0(e) {
 }
 var t1 = n(61881);
 let t2 = d.createContext(null);
-function t9(e) {
+function t5(e) {
     let { widgetType: t, children: n } = e,
         l = (0, u.bG)([t1.A], () => {
             let e = t1.A.getPendingWidgets();
@@ -1882,21 +1886,21 @@ function t8() {
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var t5 = n(67438);
-function t7(e) {
+var t9 = n(67438);
+function t6(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
         a = l ? v.intl.string(v.t["3FdPBT"]) : v.intl.format(v.t.W8K2GH, { maxGames: n });
     return (0, i.jsxs)("div", {
-        className: l ? t5.O : t5.k,
+        className: l ? t9.O : t9.k,
         children: [
             l && (0, i.jsx)(t0, { widget: t, widgetType: t.type }),
             (0, i.jsx)(g.E, { variant: "body-xs/normal", color: "text-subtle", children: a }),
         ],
     });
 }
-var t6 = n(683071),
+var t7 = n(683071),
     t4 = n(312252);
 function t3(e) {
     let { widgetType: t, gameCount: n } = e,
@@ -1905,7 +1909,7 @@ function t3(e) {
         ? null
         : (0, i.jsx)("div", {
               className: t4.l,
-              children: (0, i.jsx)(t6.w, {
+              children: (0, i.jsx)(t7.w, {
                   type: "warning",
                   message: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
                   role: "alert",
@@ -1980,7 +1984,7 @@ function na(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t6, { widget: n }),
     });
 }
 function ns(e) {
@@ -2003,7 +2007,7 @@ function ns(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t6, { widget: n }),
     });
 }
 var nr = n(793693);
@@ -2147,7 +2151,7 @@ function nI(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t6, { widget: n }),
     });
 }
 function nE(e) {
@@ -2169,7 +2173,7 @@ function nE(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t7, { widget: n }),
+                : (0, i.jsx)(t6, { widget: n }),
     });
 }
 var nv = n(875620);
@@ -2286,7 +2290,7 @@ function ny(e) {
 }
 function nw(e) {
     let { widget: t, ...n } = e;
-    return (0, i.jsx)(t9, { widgetType: t.type, children: (0, i.jsx)(ny, { widget: t, ...n }) });
+    return (0, i.jsx)(t5, { widgetType: t.type, children: (0, i.jsx)(ny, { widget: t, ...n }) });
 }
 function nR(e) {
     let { widget: t, ...n } = e;

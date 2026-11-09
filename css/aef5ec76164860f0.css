@@ -203,9 +203,17 @@
     width: 3px
 }
 
-.headerActions_AH5XKr {
+.headerTrailing_AH5XKr {
+    gap: var(--space-16)
+}
+
+.headerActions_AH5XKr,
+.headerTrailing_AH5XKr {
     align-items: center;
-    display: flex;
+    display: flex
+}
+
+.headerActions_AH5XKr {
     gap: var(--space-8)
 }
 
@@ -248,4 +256,4 @@
     transform: translateX(0)
 }
 
-/*# sourceMappingURL=dfbb121e3efa9e58.css.map*/
+/*# sourceMappingURL=aef5ec76164860f0.css.map*/

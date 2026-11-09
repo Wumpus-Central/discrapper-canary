@@ -13,5 +13,8 @@ l.d(
         C: function (e) {
             return i.getConfig({ location: e });
         },
+        r: function (e) {
+            return i.useConfig({ location: e });
+        },
     },
 );

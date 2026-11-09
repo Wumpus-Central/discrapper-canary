@@ -1,3 +1,53 @@
+.group_DY30Hz {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    gap: var(--space-4);
+    padding: var(--space-4)
+}
+
+.group_DY30Hz,
+.segment_DY30Hz {
+    align-items: center;
+    display: flex
+}
+
+.segment_DY30Hz {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    gap: var(--space-6);
+    padding: var(--space-6) var(--space-8);
+    position: relative;
+    white-space: nowrap
+}
+
+.segment_DY30Hz:hover:not([aria-checked=true]) {
+    background-color: var(--background-mod-subtle);
+    color: var(--interactive-text-hover)
+}
+
+.segment_DY30Hz[aria-checked=true] {
+    background-color: var(--background-surface-high);
+    color: var(--interactive-text-active);
+    cursor: default
+}
+
+.segment_DY30Hz:not([aria-checked=true])+.segment_DY30Hz:not([aria-checked=true]):before {
+    background-color: var(--border-subtle);
+    content: "";
+    inset-block: var(--space-8);
+    inset-inline-start: calc(var(--space-4)/-2 - .5px);
+    position: absolute;
+    width: 1px
+}
+
 .clipForm_XKaV_y {
     background: var(--background-base-lower);
     border-inline-start: 1px solid var(--border-muted);
@@ -211,4 +261,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=fe3f6c0bf80ee65e.css.map*/
+/*# sourceMappingURL=910ec9e5b8a5f1f0.css.map*/
