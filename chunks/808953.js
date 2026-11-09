@@ -5,9 +5,9 @@ var r = n(477900),
     s = n(984827),
     l = n(821609),
     o = n(284009),
-    d = n.n(o);
+    u = n.n(o);
 (s.x.PORTRAIT, s.x.PORTRAIT);
-let u = { preferred: s.x.LANDSCAPE, supported: [s.x.LANDSCAPE, s.x.PORTRAIT] },
+let d = { preferred: s.x.LANDSCAPE, supported: [s.x.LANDSCAPE, s.x.PORTRAIT] },
     c = { [s.x.PORTRAIT]: 9 / 16, [s.x.LANDSCAPE]: 16 / 9 };
 function m(e, t) {
     let n = e[t];
@@ -20,8 +20,8 @@ function _(e) {
 }
 var C = n(637691),
     v = n(738883),
-    A = n(669912),
-    f = n(280905),
+    f = n(669912),
+    A = n(280905),
     g = n(503698),
     E = n.n(g),
     R = n(760914),
@@ -85,16 +85,16 @@ let X = { offset: 4 };
 function J(e) {
     let { bounty: t, sourceQuestContent: n, videoRef: s, onClose: l } = e,
         o = _(t),
-        d = K({ bounty: t, onClose: l, sourceQuestContent: n }),
-        u = a.useCallback(() => {
+        u = K({ bounty: t, onClose: l, sourceQuestContent: n }),
+        d = a.useCallback(() => {
             let e = (0, H.qf)(s.current?.parentNode, s.current);
-            (null != e && (0, H.sP)(e), d(p.uF.VIDEO_MODAL_ICON_END_CARD));
-        }, [s, d]);
+            (null != e && (0, H.sP)(e), u(p.uF.VIDEO_MODAL_ICON_END_CARD));
+        }, [s, u]);
     return (0, r.jsx)(O.N, {
         theme: W.NJ8.DARK,
         disableAdaptiveTheme: !0,
         children: (e) =>
-            (0, r.jsx)(f.R, {
+            (0, r.jsx)(A.R, {
                 adContentId: t.id,
                 adCreativeType: i.p.BOUNTY,
                 questContent: p.uF.VIDEO_MODAL_END_CARD,
@@ -104,7 +104,7 @@ function J(e) {
                         innerRef: n,
                         className: E()(e, T.hn),
                         focusProps: X,
-                        onClick: u,
+                        onClick: d,
                         children: (0, r.jsxs)("div", {
                             className: T.jT,
                             children: [
@@ -162,13 +162,13 @@ function es(e) {
     let { totalSeconds: n, remainingSeconds: i, isSeekInteraction: s } = e,
         l = i <= 0,
         [o] = a.useState(l),
-        d = Math.max(1, Math.ceil(i)),
-        u = 0;
+        u = Math.max(1, Math.ceil(i)),
+        d = 0;
     return (
-        l ? (u = 1) : n > 0 && (u = 1 - i / n),
+        l ? (d = 1) : n > 0 && (d = 1 - i / n),
         (0, r.jsxs)("div", {
             role: "timer",
-            "aria-label": l ? P.intl.string(P.t["0F4Peo"]) : P.intl.formatToPlainString(P.t["45cddS"], { seconds: d }),
+            "aria-label": l ? P.intl.string(P.t["0F4Peo"]) : P.intl.formatToPlainString(P.t["45cddS"], { seconds: u }),
             className: et.O1,
             children: [
                 (0, r.jsxs)("svg", {
@@ -180,13 +180,13 @@ function es(e) {
                     children: [
                         (0, r.jsx)("circle", { className: et.tB, cx: 16, cy: 16, r: 15.5 }),
                         (0, r.jsx)("circle", {
-                            className: E()(et.qB, { [et.LQ]: u <= 0, [et.Aq]: s }),
+                            className: E()(et.qB, { [et.LQ]: d <= 0, [et.Aq]: s }),
                             cx: 16,
                             cy: 16,
                             r: 14.4,
                             strokeWidth: 3.2,
                             strokeDasharray: `${en} ${en}`,
-                            strokeDashoffset: en - ((t = u) >= 1 ? en : Math.max(0.01, t * en - 3.2)),
+                            strokeDashoffset: en - ((t = d) >= 1 ? en : Math.max(0.01, t * en - 3.2)),
                             transform: ea,
                         }),
                     ],
@@ -198,7 +198,7 @@ function es(e) {
                           variant: "body-xs/semibold",
                           color: "text-strong",
                           className: et.YA,
-                          children: d,
+                          children: u,
                       }),
             ],
         })
@@ -206,8 +206,8 @@ function es(e) {
 }
 var el = n(115560),
     eo = n(731738),
-    ed = n(876230),
-    eu = n(69114),
+    eu = n(876230),
+    ed = n(69114),
     ec = n(913379),
     em = n(544180),
     eh = n(297727);
@@ -218,19 +218,19 @@ function e_(e, t) {
 (n(221596), n(500522));
 var eC = n(879371),
     ev = n(970908);
-function eA() {
+function ef() {
     let e = a.useMemo(() => (0, R.lR)({ assetUrl: ev.A, width: 34, height: 34 }), []);
     return (0, r.jsx)("img", { src: e, alt: "", className: T.RN });
 }
-function ef(e) {
+function eA(e) {
     let {
             bounty: t,
             sourceQuestContent: n,
             src: s,
             orientation: l,
             openedAtMs: o,
-            parentTransitionState: d,
-            onClose: u,
+            parentTransitionState: u,
+            onClose: d,
         } = e,
         c = a.useRef(null),
         m = (0, b.bG)([y.A], () => y.A.isBountyCompleted(t.id)),
@@ -252,21 +252,21 @@ function ef(e) {
         C = (function (e) {
             let { bountyId: t, sourceQuestContent: n, rewardTimerSeconds: r, openedAtMs: s, videoRef: l } = e,
                 [o] = a.useState(() => (0, el.A)()),
-                d = (0, G.wW)(),
-                u = a.useRef(null),
+                u = (0, G.wW)(),
+                d = a.useRef(null),
                 c = a.useRef(!1),
                 m = a.useRef(null),
                 h = a.useRef(-1),
                 _ = a.useRef(new Set()),
                 C = a.useCallback(
-                    () => ({ video_session_id: o, impression_id: d(), reward_timer_seconds: r }),
-                    [o, d, r],
+                    () => ({ video_session_id: o, impression_id: u(), reward_timer_seconds: r }),
+                    [o, u, r],
                 ),
                 v = a.useCallback(() => {
                     var e;
                     let t;
                     return {
-                        ...((t = null != (e = u.current) && e.currentLevel >= 0 ? e.levels[e.currentLevel] : void 0),
+                        ...((t = null != (e = d.current) && e.currentLevel >= 0 ? e.levels[e.currentLevel] : void 0),
                         null == e || null == t
                             ? { hls_level_index: null, hls_segment_res_width: null, hls_segment_res_height: null }
                             : {
@@ -277,10 +277,10 @@ function ef(e) {
                         network_connection_speed: em.A.getEffectiveConnectionSpeed(),
                     };
                 }, []),
-                A = a.useMemo(
+                f = a.useMemo(
                     () =>
                         (0, eh.n0)({
-                            getImpressionId: d,
+                            getImpressionId: u,
                             onEmit: (e) => {
                                 (0, j.Qg)({
                                     adContentId: t,
@@ -288,9 +288,9 @@ function ef(e) {
                                     event: W.HAw.QUEST_CONTENT_ENGAGED_VIEWED,
                                     properties: {
                                         ...(0, w.fF)(p.uF.VIDEO_MODAL),
-                                        ...(0, eu.A)(),
+                                        ...(0, ed.A)(),
                                         ...e,
-                                        impression_id: d(),
+                                        impression_id: u(),
                                         apple_advertising_id: null,
                                         android_advertising_id: null,
                                     },
@@ -298,9 +298,9 @@ function ef(e) {
                                 });
                             },
                         }),
-                    [t, n, d],
+                    [t, n, u],
                 ),
-                f = a.useCallback(
+                A = a.useCallback(
                     (e, r, a, s) => {
                         _.current.has(e) ||
                             (_.current.add(e),
@@ -319,29 +319,29 @@ function ef(e) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             a = (0, L.zh)(e, t),
                             i = e >= r;
-                        if ((f("start", 0, 0, !1), i || n)) {
+                        if ((A("start", 0, 0, !1), i || n)) {
                             let n = Math.max(r, e);
-                            f("threshold", n, (0, L.zh)(n, t), !0);
+                            A("threshold", n, (0, L.zh)(n, t), !0);
                         }
-                        if ((0, L.di)(t)) for (let t of ep) a >= t / 100 && f(`p${t}`, e, a, i);
-                        n && f("end", t, 1, !0);
+                        if ((0, L.di)(t)) for (let t of ep) a >= t / 100 && A(`p${t}`, e, a, i);
+                        n && A("end", t, 1, !0);
                     },
-                    [r, f],
+                    [r, A],
                 ),
                 E = a.useCallback(
                     (e, t, n) => {
                         (g(e, t),
-                            A.onProgress({
+                            f.onProgress({
                                 positionSeconds: n,
                                 durationSeconds: t,
                                 isPlaying: null != l.current && !l.current.paused && !l.current.seeking,
                             }));
                     },
-                    [g, A, l],
+                    [g, f, l],
                 ),
                 R = a.useCallback(() => {
-                    A.pause();
-                }, [A]),
+                    f.pause();
+                }, [f]),
                 T = a.useCallback(
                     (e, t) => {
                         g(e, t, !0);
@@ -350,20 +350,20 @@ function ef(e) {
                 ),
                 x = a.useCallback(
                     (e, r) => {
-                        e !== ed.Q6.PLAYING && A.pause();
+                        e !== eu.Q6.PLAYING && f.pause();
                         let a = l.current;
                         null == a ||
-                            r !== ed.KB.USER ||
-                            ((e !== ed.Q6.PLAYING || a.paused) &&
+                            r !== eu.KB.USER ||
+                            ((e !== eu.Q6.PLAYING || a.paused) &&
                                 (0, j.Qg)({
                                     adContentId: t,
                                     adCreativeType: i.p.BOUNTY,
-                                    event: e === ed.Q6.PAUSED ? W.HAw.AD_VIDEO_PAUSED : W.HAw.AD_VIDEO_RESUMED,
+                                    event: e === eu.Q6.PAUSED ? W.HAw.AD_VIDEO_PAUSED : W.HAw.AD_VIDEO_RESUMED,
                                     properties: { ...C(), video_timestamp_seconds: a.currentTime },
                                     sourceQuestContent: n,
                                 }));
                     },
-                    [t, n, l, C, A],
+                    [t, n, l, C, f],
                 ),
                 S = a.useCallback(
                     (e) => {
@@ -381,7 +381,7 @@ function ef(e) {
                     [t, n, v],
                 ),
                 b = a.useCallback(() => {
-                    if ((A.pause(), null != m.current)) return;
+                    if ((f.pause(), null != m.current)) return;
                     h.current += 1;
                     let e = { ...C(), buffer_index: h.current };
                     ((m.current = e),
@@ -392,7 +392,7 @@ function ef(e) {
                             properties: { ...e, ...v() },
                             sourceQuestContent: n,
                         }));
-                }, [t, n, C, v, A]),
+                }, [t, n, C, v, f]),
                 I = a.useCallback(
                     (e) => {
                         c.current ||
@@ -408,25 +408,27 @@ function ef(e) {
                     [t, n, s, C, v],
                 ),
                 O = a.useCallback(
-                    (e) => {
-                        let r = l.current;
-                        null != r &&
-                            ((0, j.Qg)({
-                                adContentId: t,
-                                adCreativeType: i.p.BOUNTY,
-                                event: W.HAw.AD_VIDEO_ERROR,
-                                properties: {
-                                    ...C(),
-                                    ...v(),
-                                    video_progress: (0, L.zh)(r.currentTime, r.duration),
-                                    video_error_type: e,
-                                    video_error_code: r.error?.code,
-                                    video_error_message: r.error?.message,
-                                    video_network_state: r.networkState,
-                                },
-                                sourceQuestContent: n,
-                            }),
-                            (e === ed.SB.SOURCE_ERROR || e === ed.SB.NO_VALID_SOURCE) &&
+                    (e, r) => {
+                        let a = l.current;
+                        if (null == a) return;
+                        let s = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
+                        ((0, j.Qg)({
+                            adContentId: t,
+                            adCreativeType: i.p.BOUNTY,
+                            event: W.HAw.AD_VIDEO_ERROR,
+                            properties: {
+                                ...C(),
+                                ...v(),
+                                video_progress: (0, L.zh)(a.currentTime, a.duration),
+                                video_error_type: e,
+                                video_error_code: a.error?.code,
+                                video_error_message: a.error?.message,
+                                video_network_state: a.networkState,
+                                ...s,
+                            },
+                            sourceQuestContent: n,
+                        }),
+                            (e === eu.SB.SOURCE_ERROR || e === eu.SB.NO_VALID_SOURCE) &&
                                 ec.A.increment({
                                     name: eo.K.QUEST_VIDEO_ERROR,
                                     tags: [
@@ -449,7 +451,7 @@ function ef(e) {
                 handleBufferingEnd: S,
                 handleVideoError: O,
                 handleHlsInstance: a.useCallback((e) => {
-                    u.current = e;
+                    d.current = e;
                 }, []),
             };
         })({
@@ -461,8 +463,8 @@ function ef(e) {
         }),
         {
             maxWatchedSeconds: v,
-            durationSeconds: A,
-            rewardTargetSeconds: f,
+            durationSeconds: f,
+            rewardTargetSeconds: A,
             isRewardEarned: g,
             rewardRemainingSeconds: R,
             isSeekInteraction: x,
@@ -479,9 +481,9 @@ function ef(e) {
                     onRewardEarned: s,
                     onVideoProgress: l,
                     onVideoSeek: o,
-                    onVideoEnd: d,
+                    onVideoEnd: u,
                 } = e,
-                [u, c] = a.useState(0),
+                [d, c] = a.useState(0),
                 [m, h] = a.useState(0),
                 { isSeekInteraction: p, handleSeek: _ } = (function () {
                     let [e, t] = a.useState(!1),
@@ -506,26 +508,26 @@ function ef(e) {
                     );
                 })(),
                 [C, v] = a.useState(n),
-                A = a.useRef(0),
-                f = a.useRef(n),
+                f = a.useRef(0),
+                A = a.useRef(n),
                 g = a.useRef(i),
                 E = e_(t, C),
-                R = i || u >= E,
+                R = i || d >= E,
                 T = a.useCallback((e) => {
-                    ((f.current = e), v(e));
+                    ((A.current = e), v(e));
                 }, []),
                 x = a.useCallback(
                     (e) => {
-                        let n = Math.max(A.current, e);
+                        let n = Math.max(f.current, e);
                         return (
-                            (A.current = n), c(n), !g.current && n >= e_(t, f.current) && ((g.current = !0), s()), n
+                            (f.current = n), c(n), !g.current && n >= e_(t, A.current) && ((g.current = !0), s()), n
                         );
                     },
                     [t, s],
                 ),
                 S = a.useCallback(
                     (e, t) => {
-                        ((0, L.di)(t) && T(t), h(e), l(x(e), f.current ?? t, e));
+                        ((0, L.di)(t) && T(t), h(e), l(x(e), A.current ?? t, e));
                     },
                     [T, x, l],
                 ),
@@ -537,21 +539,21 @@ function ef(e) {
                 ),
                 I = a.useCallback(() => {
                     let e = r.current,
-                        t = A.current;
+                        t = f.current;
                     (null != e && (0, L.di)(e.duration) && (T(e.duration), (t = x(e.duration))),
-                        d(t, f.current ?? e?.duration ?? 0 / 0));
-                }, [r, T, x, d]),
+                        u(t, A.current ?? e?.duration ?? 0 / 0));
+                }, [r, T, x, u]),
                 O = 0;
             return (
                 null != C && (0, L.di)(C) ? (O = C) : null != n && (0, L.di)(n) && (O = n),
                 {
-                    maxWatchedSeconds: u,
+                    maxWatchedSeconds: d,
                     durationSeconds: O,
                     rewardTargetSeconds: E,
                     isRewardEarned: R,
                     rewardRemainingSeconds: R ? 0 : E - m,
                     isSeekInteraction: p,
-                    maxSeekableTimeSeconds: u,
+                    maxSeekableTimeSeconds: d,
                     handleProgressUpdate: S,
                     handleSeek: b,
                     handleEnded: I,
@@ -578,7 +580,7 @@ function ef(e) {
                     ...z(),
                     content_name: (0, w.jO)(p.uF.VIDEO_MODAL),
                     content_id: p.uF.VIDEO_MODAL,
-                    video_progress: (0, L.zh)(v, A),
+                    video_progress: (0, L.zh)(v, f),
                     threshold_met: v >= t.rewardTimerSeconds,
                 },
             });
@@ -586,9 +588,9 @@ function ef(e) {
     a.useEffect(() => () => $(), []);
     let { volume: q, muted: K, setVolume: X, setMuted: Z } = (0, F.A)(),
         { balance: ee } = (0, D.W0)(),
-        et = a.useMemo(() => (0, r.jsx)(eA, {}), []),
+        et = a.useMemo(() => (0, r.jsx)(ef, {}), []),
         en = a.useMemo(() => P.intl.formatToPlainString(P.t["nLXlh+"], { orbAmount: 50 }), []),
-        er = (0, B.A)({ targetSec: f, label: en, isCompleted: g, icon: et, clickable: S >= f }),
+        er = (0, B.A)({ targetSec: A, label: en, isCompleted: g, icon: et, clickable: S >= A }),
         ea = a.useCallback(
             () =>
                 (0, r.jsx)(O.N, {
@@ -601,7 +603,7 @@ function ef(e) {
                                 (0, r.jsxs)("div", {
                                     className: T.Cq,
                                     children: [
-                                        (0, r.jsx)(es, { totalSeconds: f, remainingSeconds: R, isSeekInteraction: x }),
+                                        (0, r.jsx)(es, { totalSeconds: A, remainingSeconds: R, isSeekInteraction: x }),
                                         (0, r.jsx)(N.Ay, {
                                             variant: "overlay-secondary",
                                             balance: ee,
@@ -610,19 +612,19 @@ function ef(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: T.ne, children: (0, r.jsx)(V.A, { onClose: u }) }),
+                                (0, r.jsx)("div", { className: T.ne, children: (0, r.jsx)(V.A, { onClose: d }) }),
                             ],
                         }),
                 }),
-            [u, ee, R, f, x],
+            [d, ee, R, A, x],
         ),
         ei = a.useCallback(
-            () => (0, r.jsx)(J, { bounty: t, sourceQuestContent: n, videoRef: c, onClose: u }),
-            [t, n, u],
+            () => (0, r.jsx)(J, { bounty: t, sourceQuestContent: n, videoRef: c, onClose: d }),
+            [t, n, d],
         );
     return (0, r.jsx)(h.Ft, {
         ref: c,
-        parentTransitionState: d,
+        parentTransitionState: u,
         autoplay: !0,
         autoFocus: !0,
         orientation: l,
@@ -655,7 +657,7 @@ function ef(e) {
     });
 }
 function eg(e) {
-    let { transitionState: t, onClose: n, bounty: i, sourceQuestContent: o, openedAtMs: h, impressionRef: f } = e,
+    let { transitionState: t, onClose: n, bounty: i, sourceQuestContent: o, openedAtMs: h, impressionRef: A } = e,
         { url: g, orientation: E } = a.useMemo(() => {
             let e,
                 t =
@@ -664,7 +666,7 @@ function eg(e) {
                         null != i.videoRenditions
                             ? (function (e, t) {
                                   let { preferred: n, supported: r } = t;
-                                  d()(r.includes(n), "Preferred aspect ratio must be in supported renditions list");
+                                  u()(r.includes(n), "Preferred aspect ratio must be in supported renditions list");
                                   let a = m(e, n);
                                   if (null != a) return a;
                                   let i = c[n],
@@ -678,10 +680,10 @@ function eg(e) {
                                       a < l && ((l = a), (s = r));
                                   }
                                   return s;
-                              })(i.videoRenditions, u)
+                              })(i.videoRenditions, d)
                             : null)
                         ? e
-                        : u.supported.includes(s.x.PORTRAIT)
+                        : d.supported.includes(s.x.PORTRAIT)
                           ? { url: i.videoHls, aspectRatio: s.x.PORTRAIT }
                           : null;
             return null == t
@@ -691,14 +693,14 @@ function eg(e) {
         R = _(i),
         T = R.label ?? i.advertiserName,
         x = K({ bounty: i, onClose: n, sourceQuestContent: o });
-    return (0, r.jsx)(A.A, {
+    return (0, r.jsx)(f.A, {
         transitionState: t,
         orientation: E,
         ariaLabel: T,
         impressionRef: (e) => {
-            f.current = e;
+            A.current = e;
         },
-        video: (0, r.jsx)(ef, {
+        video: (0, r.jsx)(eA, {
             bounty: i,
             sourceQuestContent: o,
             src: g,
@@ -723,7 +725,7 @@ function eg(e) {
     });
 }
 function eE(e) {
-    return (0, r.jsx)(f.R, {
+    return (0, r.jsx)(A.R, {
         adContentId: e.bounty.id,
         adCreativeType: i.p.BOUNTY,
         questContent: p.uF.VIDEO_MODAL,
