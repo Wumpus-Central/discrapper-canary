@@ -443,6 +443,7 @@ var eV =
         (c.EMOJI_IN_BURST_REACTION_HOVER = "emoji_in_burst_reaction_hover"),
         (c.EMOJI_IN_BURST_REACTION_HOVER_UPSELL = "emoji_in_burst_reaction_hover_upsell"),
         (c.DEFAULT_EMOJI_MESSAGE_POPOUT = "default_emoji_message_popout"),
+        (c.DEFAULT_EMOJI_PICKER = "default_emoji_picker"),
         (c.DEFAULT_EMOJI_REACTION_POPOUT = "default_emoji_reaction_popout"),
         (c.EMOJI_PICKER_FLOATING_UPSELL = "emoji_picker_floating_upsell"),
         (c.STICKER_PICKER_FLOATING_UPSELL = "sticker_picker_floating_upsell"),

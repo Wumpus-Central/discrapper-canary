@@ -8,6 +8,7 @@ var i = n(582128),
     d = n(652215),
     u = n(682901);
 let h = {
+    emoji_picker: { upsellType: u.e.DEFAULT_EMOJI_PICKER, location: s.A.DEFAULT_EMOJI_PICKER_UPSELL },
     message_emoji_popout: {
         upsellType: u.e.DEFAULT_EMOJI_MESSAGE_POPOUT,
         location: s.A.DEFAULT_EMOJI_MESSAGE_POPOUT_UPSELL,
