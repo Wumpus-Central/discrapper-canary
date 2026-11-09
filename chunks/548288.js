@@ -50,7 +50,7 @@ async function w(e) {
     let v = o.flatMap((e) => I.A.getForSKU(e).map((e) => e.id));
     return P.UnifiedCheckoutFlowManagerSingletons[P.CL.GAME_SERVER_SUBSCRIPTION_CHECKOUT].get().openCheckoutModal({
         checkoutConfiguration: { skuId: i, activeSubscription: d ?? null },
-        forwardedPaymentModalProps: { initialPlanId: h, planGroup: v, skipConfirm: !0 },
+        sharedCheckoutParams: { planGroup: v, skipConfirm: !0, initialPlanId: h },
         unifiedCheckoutProviderProps: { analyticsLocations: [k.A.GAME_SERVER_SETUP_MODAL] },
         tenantParams: {
             serverName: n,
@@ -89,9 +89,9 @@ async function w(e) {
     });
 }
 var z = l(349085),
-    M = l(115815),
-    V = l(289444),
-    L = l(231513),
+    V = l(115815),
+    L = l(289444),
+    M = l(231513),
     R = l(885574),
     G = l(105518),
     D = l(792996),
@@ -284,7 +284,7 @@ var J = l(199781),
 let ei = [];
 function el(e) {
     let { region: i, disabled: l } = e,
-        { pingText: s, pingCircleStyle: t } = (0, M.b)(i.pingUrl);
+        { pingText: s, pingCircleStyle: t } = (0, V.b)(i.pingUrl);
     return (0, a.jsxs)("div", {
         className: ee.wV,
         children: [
@@ -339,7 +339,7 @@ function es(e) {
             initialRegionName: P,
             initialServerName: I,
             activeSubscription: U,
-            onViewServer: M,
+            onViewServer: V,
             ...R
         } = e,
         O = null != U,
@@ -357,7 +357,7 @@ function es(e) {
         [et, en] = s.useState(k),
         [er, ed] = s.useState(S ?? n[0]?.id),
         ec = (0, d.bG)([p.default], () => E.Ay.canUseShopDiscounts(p.default.getCurrentUser())),
-        { isValid: eo, errors: eu } = (0, V.u)(Y),
+        { isValid: eo, errors: eu } = (0, L.u)(Y),
         em = n.find((e) => e.id === er) ?? n[0],
         ex =
             !ec &&
@@ -380,7 +380,7 @@ function es(e) {
         ef = s.useMemo(
             () =>
                 [...W]
-                    .sort((e, i) => (0, L.A)(e, i, K))
+                    .sort((e, i) => (0, M.A)(e, i, K))
                     .map((e) => ({ value: e, label: e.name, disabled: !0 !== e.enabled })),
             [W, K],
         ),
@@ -397,9 +397,9 @@ function es(e) {
                 initialRegionId: et,
                 initialRegionName: P,
                 initialServerName: Y,
-                onViewServer: M,
+                onViewServer: V,
             });
-        }, [i, l, t, n, U, er, et, P, Y, M]),
+        }, [i, l, t, n, U, er, et, P, Y, V]),
         ey = s.useCallback(() => {
             if (null != em) {
                 if (O) {
@@ -413,7 +413,7 @@ function es(e) {
                                 activeSubscription: U,
                                 isPlanUpgrade: eg,
                                 planGroup: n.map((e) => e.id),
-                                onViewServer: M,
+                                onViewServer: V,
                                 onBack: eC,
                             }),
                         R.onClose());
@@ -427,12 +427,12 @@ function es(e) {
                         gameId: l,
                         serverName: Y,
                         regionId: et,
-                        onViewServer: M,
+                        onViewServer: V,
                         onBack: eC,
                     }),
                     R.onClose());
             }
-        }, [O, eg, ej, eb, U, eE, em, n, et, i, l, Y, R, eC, M]),
+        }, [O, eg, ej, eb, U, eE, em, n, et, i, l, Y, R, eC, V]),
         eA = X.eh[r.X.SHOCKBYTE] ?? "";
     return (0, a.jsxs)(m.d, {
         ...R,

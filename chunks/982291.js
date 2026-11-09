@@ -12,8 +12,16 @@ var l = n(477900),
     C = n(818348);
 function h(e) {
     let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: r } = e,
-        { purchaseType: o } = (0, p.t4)((e) => ({ purchaseType: e.purchaseType })),
-        u = i.useCallback(
+        {
+            purchaseType: o,
+            continueSessionToInitialStep: u,
+            initialPlanId: d,
+        } = (0, p.t4)((e) => ({
+            purchaseType: e.purchaseType,
+            continueSessionToInitialStep: e.getSharedCheckoutParams().continueSessionToInitialStep,
+            initialPlanId: e.getInitialPlanId(),
+        })),
+        m = i.useCallback(
             () =>
                 (function (e) {
                     let {
@@ -31,24 +39,28 @@ function h(e) {
                 })({ returnStep: t, returnStepIfNoPaymentSources: n, paymentModalStepProps: r, purchaseType: o }),
             [t, n, r, o],
         );
-    return (0, l.jsx)(s.x, { ...r, onReturn: u });
+    return (0, l.jsx)(s.x, { ...r, onReturn: m, initialPlanId: d, continueSessionToInitialStep: u });
 }
 function f(e) {
-    let { initialPlanId: t } = e,
-        { selectedSkuId: n, isRecurringGiftCheckout: s } = (0, p.t4)((e) => ({
+    let {
+            selectedSkuId: t,
+            isRecurringGiftCheckout: n,
+            initialPlanId: s,
+        } = (0, p.t4)((e) => ({
+            initialPlanId: e.getInitialPlanId(),
             selectedSkuId: e.selectedSkuId,
             isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
         })),
         c = (0, m.A)(),
         { isGift: d, claimableRewards: C } = (0, r.Pv)(),
-        f = (0, o.A)({ isGift: d, skuId: n }),
+        f = (0, o.A)({ isGift: d, skuId: t }),
         E = (0, p.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: f })),
-        S = (0, u.px)(c, d && !s, C),
-        I = i.useMemo(() => {
-            let e = null == t ? a.pn.PLAN_SELECT : a.pn.REVIEW;
+        S = (0, u.px)(c, d && !n, C),
+        g = i.useMemo(() => {
+            let e = null == s ? a.pn.PLAN_SELECT : a.pn.REVIEW;
             return (E && (e = a.pn.REVIEW), S && (e = a.pn.SELECT_FREE_SKU), e);
-        }, [E, S, t]);
-    return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: I });
+        }, [E, S, s]);
+    return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: g });
 }
 n.d(
     t,

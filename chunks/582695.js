@@ -75,25 +75,27 @@ function R(e) {
             onClose: i,
             onComplete: r,
             initialPlanId: o,
-            purchaseType: u,
-            stepConfigs: d,
-            loadId: c,
-            excludeSubscriptionPlansBySKU: p,
-            renderHeader: m,
-            disablePurchases: b,
+            purchaseType: d,
+            stepConfigs: c,
+            loadId: p,
+            excludeSubscriptionPlansBySKU: m,
+            renderHeader: b,
+            disablePurchases: h,
         } = e,
-        h = `${a}-${n}-${c}`;
+        x = `${a}-${n}-${p}`,
+        y = u.useMemo(() => ({ initialPlanId: o }), [o]);
     return (0, s.jsx)(
         S.M,
         {
-            stepConfigs: d,
+            stepConfigs: c,
             applicationId: l,
             skuIDs: null != a ? [a] : [],
             isGift: n,
             activeSubscription: null,
-            purchaseType: u,
-            excludeSubscriptionPlansBySKU: p,
-            overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
+            purchaseType: d,
+            excludeSubscriptionPlansBySKU: m,
+            sharedCheckoutParams: y,
+            overrideCustomCheckoutFlow: h ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
             children: (0, s.jsx)(C.Qt, {
                 children: (0, s.jsx)(j.dX, {
                     isGift: n,
@@ -105,16 +107,15 @@ function R(e) {
                             onComplete: r,
                             applicationId: l,
                             skuId: a,
-                            initialPlanId: o,
                             analyticsLocations: t,
-                            renderHeader: m,
+                            renderHeader: b,
                         },
-                        h,
+                        x,
                     ),
                 }),
             }),
         },
-        h,
+        x,
     );
 }
 var M = l(652215);
@@ -925,7 +926,6 @@ let eY = {
                                                                 children: (0, s.jsx)(T.q, {
                                                                     transitionState: r,
                                                                     onClose: i,
-                                                                    initialPlanId: null,
                                                                     analyticsLocations: e,
                                                                 }),
                                                             }),

@@ -34,46 +34,47 @@ n.d(
                     checkoutInvoicePreview: e,
                     selectedSkuId: t,
                     isPremium: n,
-                    isPremiumGroupPurchase: s,
-                    referralTrialOfferId: u,
-                    isGift: d,
+                    isPremiumGroupPurchase: u,
+                    premiumTenantParams: d,
+                    isGift: m,
                 } = (0, o.t4)((e) => {
                     let t = e.get("selectedPlanAttributes");
                     return {
                         checkoutInvoicePreview: e.checkoutInvoicePreview,
                         selectedSkuId: e.selectedSkuId,
-                        referralTrialOfferId: e.referralTrialOfferId,
+                        premiumTenantParams: e.getTenantParams(s.C.PREMIUM_CHECKOUT) ?? {},
                         isGift: e.isGift,
                         isPremium: t.isPremiumPurchase,
                         isPremiumGroupPurchase: t.isPremiumGroupPurchase,
                     };
                 }),
-                m = (0, r.V)(u ?? void 0),
-                p = !s && !d && null != t,
-                C = !!(p && null != m && c.kb[m.trialId].skus.includes(t) && !s),
-                h = (0, i.O)(),
-                f =
+                { referralTrialOfferId: p } = d,
+                C = (0, r.V)(p),
+                h = !u && !m && null != t,
+                f = !!(h && null != C && c.kb[C.trialId].skus.includes(t) && !u),
+                E = (0, i.O)(),
+                S =
                     null != t &&
-                    null != h &&
-                    null != h.discount &&
-                    null != h.discount.planIds &&
-                    h.discount.planIds.some((e) => c.hd[e].skuId === t),
-                E = !!(p && null != h && f),
-                S = l.useMemo(
-                    () => null != h && null != h.discount && null != e && (0, a.Ro)(e, h.discount.id),
-                    [h, e],
+                    null != E &&
+                    null != E.discount &&
+                    null != E.discount.planIds &&
+                    E.discount.planIds.some((e) => c.hd[e].skuId === t),
+                g = !!(h && null != E && S),
+                I = l.useMemo(
+                    () => null != E && null != E.discount && null != e && (0, a.Ro)(e, E.discount.id),
+                    [E, e],
                 );
             return l.useMemo(
                 () => ({
                     isPremium: n,
-                    isPremiumGroupPurchase: s,
-                    isEligibleForTrial: C,
-                    isEligibleForDiscount: E,
-                    userTrialOffer: m,
-                    discountOffer: h,
-                    currentInvoiceHasMatchingDiscountOffer: S,
+                    isPremiumGroupPurchase: u,
+                    isEligibleForTrial: f,
+                    isEligibleForDiscount: g,
+                    userTrialOffer: C,
+                    discountOffer: E,
+                    currentInvoiceHasMatchingDiscountOffer: I,
                 }),
-                [n, s, C, E, m, h, S],
+                [n, u, f, g, C, E, I],
             );
         },
     },

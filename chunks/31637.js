@@ -1,4 +1,4 @@
-i.d(e, { x: () => tk, A: () => tD });
+i.d(e, { x: () => tk, A: () => tP });
 var l = i(477900),
     n = i(582128),
     s = i(503698),
@@ -6,8 +6,8 @@ var l = i(477900),
     a = i(855986),
     o = i(534514),
     c = i(696986),
-    u = i(866665),
-    d = i(707554),
+    d = i(866665),
+    u = i(707554),
     m = i(123292),
     h = i(885574),
     x = i(331322),
@@ -28,40 +28,40 @@ var l = i(477900),
     T = i(417360),
     k = i(792105),
     L = i(35275),
-    D = i(939249),
-    P = i(377578),
+    P = i(939249),
+    D = i(377578),
     G = i(898612),
     R = i(232492),
-    U = i(461859);
-function M(t) {
+    M = i(461859);
+function U(t) {
     let { benefit: e, guildId: i } = t,
         n = (0, R.A)(i, e.ref_id),
-        s = (0, l.jsx)(P.A, { guildId: i, emojiId: e.emoji_id, emojiName: e.emoji_name }),
+        s = (0, l.jsx)(D.A, { guildId: i, emojiId: e.emoji_id, emojiName: e.emoji_name }),
         a =
             null != n
-                ? (0, l.jsx)(D.D, {
-                      className: U.__invalid_channelLink,
+                ? (0, l.jsx)(P.D, {
+                      className: M.__invalid_channelLink,
                       onClick: n.navigateToChannel,
                       "aria-label": n.ariaLabel,
                       role: "link",
                       children: (0, l.jsx)(v.E, {
                           variant: "body-md/medium",
                           color: "text-strong",
-                          className: r()(U.UU, U.F$),
+                          className: r()(M.UU, M.F$),
                           children: (0, G.A)(e),
                       }),
                   })
                 : (0, l.jsx)(v.E, {
                       variant: "body-md/medium",
                       color: "text-strong",
-                      className: U.UU,
+                      className: M.UU,
                       children: (0, G.A)(e),
                   });
     return (0, l.jsxs)("div", {
-        className: U.kL,
+        className: M.kL,
         children: [
             (0, l.jsxs)("div", {
-                className: U.op,
+                className: M.op,
                 children: [
                     a,
                     (0, l.jsx)(v.E, {
@@ -71,7 +71,7 @@ function M(t) {
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: U.qq, children: s }),
+            (0, l.jsx)("div", { className: M.qq, children: s }),
         ],
     });
 }
@@ -164,7 +164,7 @@ function tt(t) {
                     }),
                 ],
             }),
-            (0, l.jsx)(D.D, {
+            (0, l.jsx)(P.D, {
                 onClick: s,
                 children: n
                     ? (0, l.jsx)(q.ChevronSmallUpIcon, { size: "md", color: "currentColor", className: J.Rm })
@@ -182,8 +182,8 @@ var te = i(284009),
     ta = i(202384),
     to = i(513461),
     tc = i(212455),
-    tu = i(51758),
-    td = i(857071),
+    td = i(51758),
+    tu = i(857071),
     tm = i(589078),
     th = i(97352),
     tx = i(624456),
@@ -284,14 +284,13 @@ function tN(t) {
         ],
     });
 }
-var tI = i(354033),
-    tC = i(652215);
-let tE = function (t, e, i, s) {
+var tI = i(354033);
+let tC = function (t, e, i, s) {
     let r,
-        o = (0, a.bG)([td.A], () => td.A.isLurking(e)),
-        c = (0, tu.H)(e),
-        u = (0, a.bG)([tc.A], () => (null != e ? tc.A.getRequest(e) : null)),
-        d = u?.applicationStatus === to.B5.SUBMITTED,
+        o = (0, a.bG)([tu.A], () => tu.A.isLurking(e)),
+        c = (0, td.H)(e),
+        d = (0, a.bG)([tc.A], () => (null != e ? tc.A.getRequest(e) : null)),
+        u = d?.applicationStatus === to.B5.SUBMITTED,
         m = t?.subscription_plans[0],
         h = m?.id,
         x = t?.published === !0,
@@ -324,8 +323,8 @@ let tE = function (t, e, i, s) {
         T = (0, I.dL)(t?.id),
         { analyticsLocations: k } = (0, tr.Ay)(),
         L = v?.isPurchasedViaAppleGeneric,
-        D = !o && null != f && p && !d && !N && !C && !L;
-    d || (o && !c)
+        P = !o && null != f && p && !u && !N && !C && !L;
+    u || (o && !c)
         ? (r = W.intl.string(W.t.pQK5ho))
         : A === h
           ? (r = W.intl.formatToPlainString(W.t.UlBRTl, {
@@ -336,7 +335,7 @@ let tE = function (t, e, i, s) {
             : C
               ? (r = W.intl.string(W.t["0lPoT2"]))
               : L && (r = W.intl.string(W.t.cEMaCt));
-    let P = (0, j.A)(B.Yl);
+    let D = (0, j.A)(B.Yl);
     n.useEffect(() => {
         x && null != g && (0, ts.ur)(g);
     }, [x, g]);
@@ -362,34 +361,24 @@ let tE = function (t, e, i, s) {
                     listing: a,
                     guildId: o,
                     trialId: c,
-                    analyticsLocation: u,
-                    analyticsSubscriptionType: d,
-                    renderPurchaseConfirmation: m,
-                    planGroup: h,
-                    reviewWarningMessage: x,
+                    analyticsLocation: d,
+                    renderPurchaseConfirmation: u,
+                    planGroup: m,
+                    reviewWarningMessage: h,
                 } = t;
                 tm.UnifiedCheckoutFlowManagerSingletons[tm.CL.GUILD_ROLE_CHECKOUT]
                     .get()
                     .openCheckoutModal({
                         checkoutConfiguration: { skuId: r, activeSubscription: i },
+                        sharedCheckoutParams: { initialPlanId: e, trialId: c, planGroup: m, reviewWarningMessage: h },
                         unifiedCheckoutProviderProps: { analyticsLocations: s },
-                        forwardedPaymentModalProps: {
-                            trialId: c,
-                            initialPlanId: e,
-                            analyticsObject: n,
-                            analyticsLocation: u,
-                            analyticsSubscriptionType: d,
-                            renderPurchaseConfirmation: m,
-                            planGroup: h,
-                            reviewWarningMessage: x,
-                        },
+                        forwardedPaymentModalProps: { analyticsObject: n, analyticsLocation: d },
                         checkoutHandlers: { onClose: l },
                         modalAPIOptions: { modalKey: "guild-role-subscription-payment-modal" },
-                        tenantParams: { listing: a, guildId: o },
+                        tenantParams: { listing: a, guildId: o, renderPurchaseConfirmation: u },
                     });
             })({
                 activeSubscription: v,
-                analyticsSubscriptionType: tC.rzx.GUILD,
                 trialId: i,
                 analyticsLocations: k,
                 analyticsLocation: s,
@@ -397,25 +386,26 @@ let tE = function (t, e, i, s) {
                 skuId: m.sku_id,
                 planGroup: b,
                 renderPurchaseConfirmation: (i, n) =>
-                    P
+                    D
                         ? (0, l.jsx)(tN, { listing: t, onClose: n, guildId: e })
                         : (0, l.jsx)(tI.X, { listing: t, onClose: n, guildId: e }),
                 reviewWarningMessage: n,
                 listing: t,
                 guildId: e,
             });
-        }, [x, t, m, v, b, e, k, s, S, T, P]),
+        }, [x, t, m, v, b, e, k, s, S, T, D]),
         R = n.useCallback(() => {
             (0, ta.Ze)(e);
         }, [e]);
-    return { openModal: c ? R : G, canOpenModal: D, cannotOpenReason: r, isCheckingTrialEligibility: y };
+    return { openModal: c ? R : G, canOpenModal: P, cannotOpenReason: r, isCheckingTrialEligibility: y };
 };
-var ty = i(998535);
+var tE = i(652215),
+    ty = i(998535);
 function tS(t) {
     let { benefits: e, header: i, guildId: s } = t,
         [r, a] = n.useState(!1),
-        u = r ? e : e.slice(0, 5),
-        d = e.length > 5,
+        d = r ? e : e.slice(0, 5),
+        u = e.length > 5,
         m = e.length - 5,
         h = W.intl.formatToPlainString(W.t.XSdy72, { numTruncated: m }),
         x = (0, _.GV)();
@@ -435,11 +425,11 @@ function tS(t) {
                   (0, l.jsx)("ul", {
                       className: ty.Pp,
                       "aria-labelledby": x,
-                      children: u.map((t, e) =>
-                          (0, l.jsx)("li", { children: (0, l.jsx)(M, { guildId: s, benefit: t }, (0, N.nh)(t)) }, e),
+                      children: d.map((t, e) =>
+                          (0, l.jsx)("li", { children: (0, l.jsx)(U, { guildId: s, benefit: t }, (0, N.nh)(t)) }, e),
                       ),
                   }),
-                  d &&
+                  u &&
                       (0, l.jsx)(tL, {
                           isViewAll: r,
                           onToggle: function () {
@@ -471,7 +461,7 @@ function tT(t) {
                       className: ty.vX,
                       children: r.map((t, e) =>
                           (0, l.jsx)(
-                              u.m,
+                              d.m,
                               {
                                   text: t.name,
                                   "aria-label": !1,
@@ -494,17 +484,17 @@ function tk(t) {
     let { listingId: e, guildId: i, className: n } = t,
         s = (0, S.A)(i, e),
         [a] = C.lZ(e),
-        u = (0, T.A)(a),
+        d = (0, T.A)(a),
         [m] = C.$O(e),
         h = C.It(e, i),
         [x] = C.UN(e, i);
-    return null == s && 0 === u.length && 0 === m.length && 0 === x.size
+    return null == s && 0 === d.length && 0 === m.length && 0 === x.size
         ? null
         : (0, l.jsxs)("div", {
               className: r()(ty.bp, n),
               children: [
                   null != s &&
-                      (0, l.jsxs)(d.F, {
+                      (0, l.jsxs)(u.F, {
                           component: (0, l.jsx)(o.D, {
                               variant: "body-xs/semibold",
                               color: "text-default",
@@ -516,7 +506,7 @@ function tk(t) {
                               (0, l.jsx)(k.A, { role: h, guildId: i, className: ty.gP }),
                           ],
                       }),
-                  (0, l.jsx)(tS, { header: W.intl.string(W.t.LtfhAj), benefits: u, guildId: i }),
+                  (0, l.jsx)(tS, { header: W.intl.string(W.t.LtfhAj), benefits: d, guildId: i }),
                   (0, l.jsx)(tS, { header: W.intl.string(W.t["8oxWpO"]), benefits: m, guildId: i }),
                   (0, l.jsx)(tT, { guildId: i, listingId: e }),
               ],
@@ -527,17 +517,17 @@ function tL(t) {
         s = i ? W.intl.string(W.t["r/xxPU"]) : n;
     return (0, l.jsx)(m.Q, { text: s, onClick: e, textVariant: "body-xs/medium", variant: "secondary" });
 }
-let tD = function (t) {
+let tP = function (t) {
     let e,
         { listingId: i, guildId: s, groupListingId: o, analyticsLocation: c } = t,
         m = (0, I.dB)(i),
-        { openModal: _, canOpenModal: A, cannotOpenReason: y, isCheckingTrialEligibility: S } = tE(m, s, o, c),
+        { openModal: _, canOpenModal: A, cannotOpenReason: y, isCheckingTrialEligibility: S } = tC(m, s, o, c),
         T = (0, a.bG)([b.A], () => b.A.isSyncing),
-        { activeSubscription: k, activeSubscriptionListing: D } = (0, E.A)(o),
-        P = D?.id === i,
-        G = k?.status === tC.Dmq.CANCELED,
-        [R, U] = n.useState(!1),
-        [M, O] = n.useState(!1),
+        { activeSubscription: k, activeSubscriptionListing: P } = (0, E.A)(o),
+        D = P?.id === i,
+        G = k?.status === tE.Dmq.CANCELED,
+        [R, M] = n.useState(!1),
+        [U, O] = n.useState(!1),
         F = n.useCallback((t) => {
             let e = !1;
             (null != t && (e = t.scrollHeight - t.clientHeight > 1), O(e));
@@ -578,7 +568,7 @@ let tD = function (t) {
                                       interval_count: Y.interval_count,
                                   }),
                               }),
-                              (0, l.jsx)(u.m, {
+                              (0, l.jsx)(d.m, {
                                   text: W.intl.formatToPlainString(W.t.FYyR4o, { activeTrialUserLimit: z ?? 0 }),
                                   children: (0, l.jsx)(h.CircleInformationIcon, {
                                       size: "xs",
@@ -609,7 +599,7 @@ let tD = function (t) {
                                           gap: 16,
                                           children: [
                                               H && (0, l.jsx)("div", { className: ty.yF }),
-                                              P
+                                              D
                                                   ? (0, l.jsx)(g.$, {
                                                         disabled: !0,
                                                         fullWidth: !0,
@@ -646,14 +636,14 @@ let tD = function (t) {
                                                       (0, l.jsx)(v.E, {
                                                           variant: "body-sm/normal",
                                                           color: "text-default",
-                                                          className: r()((!M || !R) && ty.Zp),
+                                                          className: r()((!U || !R) && ty.Zp),
                                                           children: (0, l.jsx)("div", { ref: F, children: V }),
                                                       }),
-                                                      M &&
+                                                      U &&
                                                           (0, l.jsx)(tL, {
                                                               isViewAll: R,
                                                               onToggle: function () {
-                                                                  return U((t) => !t);
+                                                                  return M((t) => !t);
                                                               },
                                                               showMoreText: tl,
                                                           }),
@@ -663,7 +653,7 @@ let tD = function (t) {
                                       }),
                               ],
                           }),
-                          Q && (0, l.jsx)(d.F, { children: (0, l.jsx)(tk, { listingId: i, guildId: s }) }),
+                          Q && (0, l.jsx)(u.F, { children: (0, l.jsx)(tk, { listingId: i, guildId: s }) }),
                       ],
                   }),
               ],

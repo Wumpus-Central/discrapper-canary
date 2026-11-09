@@ -1,7 +1,7 @@
 var t = a(477900),
-    l = a(582128),
-    o = a(688810),
-    r = a(418200),
+    o = a(582128),
+    r = a(688810),
+    l = a(418200),
     s = a(852682),
     i = a(199453),
     u = a(860215),
@@ -13,25 +13,19 @@ function p(n) {
     let {
             TenantPaymentModalRenderer: e,
             renderModalProps: a,
-            paymentModalVersion: r = "v2",
+            paymentModalVersion: l = "v2",
             paymentModalOnClose: i,
             tenantParams: u,
             ...d
         } = n,
         p = a.onClose,
-        P = l.useCallback(() => {
+        P = o.useCallback(() => {
             p();
         }, [p]),
-        { analyticsLocations: h } = (0, o.Ay)(),
-        m = l.useMemo(
-            () => ({
-                analyticsLocations: h,
-                initialPlanId: null,
-                onClose: null != i ? i : P,
-                ...d,
-                paymentModalVersion: r,
-            }),
-            [h, r, P, d, i],
+        { analyticsLocations: h } = (0, r.Ay)(),
+        m = o.useMemo(
+            () => ({ analyticsLocations: h, onClose: null != i ? i : P, ...d, paymentModalVersion: l }),
+            [h, l, P, d, i],
         );
     return null != e
         ? (0, t.jsx)(e, { originalPaymentModalProps: m, renderPaymentModal: c, renderModalProps: a, tenantParams: u })
@@ -59,7 +53,7 @@ a.d(
                     renderHeader: M,
                     stepConfigs: f,
                     activeSubscription: k,
-                    initialPaymentSourceId: x,
+                    sharedCheckoutParams: x,
                     analyticsLocations: I,
                     giftContextProps: j,
                     onComplete: S,
@@ -76,11 +70,11 @@ a.d(
                     overrideAnalyticParams: G,
                     tenantAnalyticsLocation: N,
                 } = C.TENANT_PROVIDER_CONFIGS,
-                O = l.useMemo(() => (null != N ? [...I, N] : I), [I, N]),
-                V = null != j ? r.dX : r.Mq,
+                O = o.useMemo(() => (null != N ? [...I, N] : I), [I, N]),
+                V = null != j ? l.dX : l.Mq,
                 g = null != j && j.isGift,
                 q = null != G ? G.payment_gateway : void 0,
-                A = l.useMemo(() => (null != m && null != s ? { [m]: s } : {}), [m, s]),
+                A = o.useMemo(() => (null != m && null != s ? { [m]: s } : {}), [m, s]),
                 D = {
                     unifiedCheckoutFlow: m,
                     skuId: e ?? null,
@@ -89,7 +83,7 @@ a.d(
                     discoverySessionId: c,
                     stepConfigs: f,
                     activeSubscription: k,
-                    initialPaymentSourceId: x,
+                    sharedCheckoutParams: x,
                     purchaseType: R,
                     analyticsLocations: O,
                     paymentGateway: q,
@@ -123,7 +117,7 @@ a.d(
                         }),
                     }),
                 });
-            return (0, t.jsx)(o.f5, {
+            return (0, t.jsx)(r.f5, {
                 value: O,
                 children: (0, t.jsx)(u.rV, {
                     skuIDs: null != e ? [e] : [],

@@ -1,7 +1,7 @@
 var n = t(192308),
-    c = t(73153),
-    i = t(589078);
-let u = "orb-checkout-payment-modal-key";
+    i = t(73153),
+    r = t(589078);
+let c = "orb-checkout-payment-modal-key";
 t.d(
     o,
     {},
@@ -11,11 +11,11 @@ t.d(
                     skuId: o,
                     onComplete: t,
                     analyticsLocations: n = [],
-                    analyticsSourceLocation: r,
+                    analyticsSourceLocation: u,
                     discoverySessionId: a,
                     applicationId: d,
-                    contextKey: p,
-                    onCloseCallback: h,
+                    contextKey: h,
+                    onCloseCallback: p,
                 } = e,
                 s = !1;
             return (function (e) {
@@ -23,21 +23,22 @@ t.d(
                     discoverySessionId: o,
                     skuId: t,
                     onComplete: n,
-                    analyticsLocations: r = [],
+                    analyticsLocations: u = [],
                     analyticsSourceLocation: a,
                     applicationId: d,
-                    contextKey: p,
-                    onCloseCallback: h,
+                    contextKey: h,
+                    onCloseCallback: p,
                 } = e;
                 return (
-                    c.h.dispatch({ type: "PAYMENT_MODAL_OPEN" }),
-                    i.UnifiedCheckoutFlowManagerSingletons[i.CL.ORB_CHECKOUT]
+                    i.h.dispatch({ type: "PAYMENT_MODAL_OPEN" }),
+                    r.UnifiedCheckoutFlowManagerSingletons[r.CL.ORB_CHECKOUT]
                         .get()
                         .openCheckoutModal({
                             checkoutConfiguration: { discoverySessionId: o, skuId: t, applicationId: d },
-                            unifiedCheckoutProviderProps: { analyticsLocations: r, analyticsSourceLocation: a },
+                            sharedCheckoutParams: { skipConfirm: !0 },
+                            unifiedCheckoutProviderProps: { analyticsLocations: u, analyticsSourceLocation: a },
                             checkoutHandlers: { onComplete: n },
-                            modalAPIOptions: { contextKey: p, onCloseCallback: h, modalKey: u },
+                            modalAPIOptions: { contextKey: h, onCloseCallback: p, modalKey: c },
                         })
                 );
             })({
@@ -47,14 +48,14 @@ t.d(
                     (s || t(e), (s = !0));
                 },
                 applicationId: d,
-                contextKey: p,
+                contextKey: h,
                 analyticsLocations: n,
-                analyticsSourceLocation: r,
-                onCloseCallback: h,
+                analyticsSourceLocation: u,
+                onCloseCallback: p,
             });
         },
         o6: function () {
-            return (0, n.Ry)(u);
+            return (0, n.Ry)(c);
         },
     },
 );

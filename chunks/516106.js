@@ -1,4 +1,4 @@
-n.d(t, { Ni: () => es, y$: () => ed, t4: () => eo, Q9: () => el });
+n.d(t, { Ni: () => el, y$: () => ec, t4: () => ed, Q9: () => eo });
 var i = n(882035),
     r = n(136857),
     a = n(428865),
@@ -277,7 +277,7 @@ function M(e, t) {
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
 var U = n(26279),
-    w = n(504275),
+    w = n(260273),
     G = n(219538);
 let x = { lastOrderUpdateRevision: 0 };
 var k = n(158032),
@@ -305,21 +305,22 @@ function X(e) {
 }
 var z = n(811315),
     q = n.n(z),
-    Q = n(529412),
-    J = n(742655),
-    Z = n(998312),
-    ee = n(860841),
-    et = n(442467),
-    en = n(371710),
-    ei = n(120700),
-    er = n(379912),
-    ea = n(705822);
-let [es, el] = (0, g.A)();
-function eo(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
-    return el()(e, t);
-}
+    Q = n(800471),
+    J = n(529412),
+    Z = n(742655),
+    ee = n(998312),
+    et = n(860841),
+    en = n(442467),
+    ei = n(371710),
+    er = n(120700),
+    ea = n(379912),
+    es = n(705822);
+let [el, eo] = (0, g.A)();
 function ed(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
+    return eo()(e, t);
+}
+function ec(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -399,7 +400,7 @@ function ed(e) {
                     isOrderAwaitingSettlement: () => i().isOrderSigning && i().get("isOrderSigningInProgress"),
                 });
         return {
-            ...(0, w.p)(e, i, t),
+            ...(0, w.p5)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -510,7 +511,7 @@ function ed(e) {
                 },
                 resetPaymentAuthentication: () => e({ ...W }),
             },
-            ...(0, ea.e)(e, i),
+            ...(0, es.e)(e, i),
             ...((E = []),
             {
                 getPaymentSourceNotices: () => {
@@ -603,7 +604,7 @@ function ed(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, Q.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled: i && (0, J.dW)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;
@@ -620,11 +621,11 @@ function ed(e) {
                         return null != t && null != i && null == t.findInvoiceItemByPlanId(i);
                     },
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(ee.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getHasPreviousStepOutsideCheckout: () => {
-                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(ee.C.PREMIUM_CHECKOUT);
                         return null != t && (t.hasPreviousStepOutsideCheckout ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {
@@ -656,21 +657,29 @@ function ed(e) {
                             })
                         );
                     },
-                    getVerifiedTrialId: (t) => {
-                        let { trialId: n } = t,
-                            { referralTrialOfferId: i, selectedSkuId: r, get: a } = e(),
-                            s = a("isPremiumPurchase"),
-                            l = n ?? i ?? null,
-                            o = null != l && l in D.kb ? D.kb[l].skus : [];
-                        return null != l && (!s || o.includes(r)) ? l : null;
+                    getVerifiedTrialId: () => {
+                        let {
+                                sharedCheckoutParams: { trialId: t },
+                                selectedSkuId: n,
+                                get: i,
+                                getTenantParams: r,
+                            } = e(),
+                            a = r(ee.C.PREMIUM_CHECKOUT),
+                            s = null != a ? a.referralTrialOfferId : void 0,
+                            l = i("isPremiumPurchase"),
+                            o = t ?? s ?? null,
+                            d = null != o && o in D.kb ? D.kb[o].skus : [];
+                        return null != o && (!l || d.includes(n)) ? o : null;
                     },
-                    getEffectivePlanGroup: (n) => {
-                        let { planGroup: i } = n,
-                            { selectedPlanId: r } = e();
-                        if (null != i && (null == r || i.includes(r))) return i;
-                        if (null != r) {
-                            if ((0, L.xq)(r)) return D.LE;
-                            if ((0, L.z4)(r)) return D.DA;
+                    getEffectivePlanGroup: () => {
+                        let {
+                            sharedCheckoutParams: { planGroup: n },
+                            selectedPlanId: i,
+                        } = e();
+                        if (null != n && (null == i || n.includes(i))) return n;
+                        if (null != i) {
+                            if ((0, L.xq)(i)) return D.LE;
+                            if ((0, L.z4)(i)) return D.DA;
                         }
                         return t;
                     },
@@ -681,6 +690,19 @@ function ed(e) {
                             : q()(t, n.premiumPlanOptions)
                               ? n.premiumPlanOptions
                               : ((n.premiumPlanOptions = t), t);
+                    },
+                    getInitialPlanId: (t) => {
+                        let {
+                                defaultPlanId: n,
+                                selectedSkuId: i,
+                                activeSubscription: r,
+                                sharedCheckoutParams: a,
+                                getAvailableDefaultPlanId: s,
+                            } = e(),
+                            { initialPlanId: l, continueSessionToInitialStep: o } = a;
+                        if (null == n || null == o) return l;
+                        let d = t ?? i;
+                        return s({ skuId: d }) ?? (0, Q.x)(d, r);
                     },
                     getAvailableDefaultPlanId: function () {
                         let { skuId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -693,12 +715,12 @@ function ed(e) {
                         let { isTrial: n } = t,
                             { isGift: i, getGiftSubscriptionPlanId: r } = e();
                         return null != r()
-                            ? ee.u$.SUBSCRIPTION_NEW_PURCHASE
+                            ? et.u$.SUBSCRIPTION_NEW_PURCHASE
                             : i
-                              ? ee.u$.PREMIUM_GIFT
+                              ? et.u$.PREMIUM_GIFT
                               : n
-                                ? ee.u$.PREMIUM_WITH_TRIAL
-                                : ee.u$.SUBSCRIPTION_NEW_PURCHASE;
+                                ? et.u$.PREMIUM_WITH_TRIAL
+                                : et.u$.SUBSCRIPTION_NEW_PURCHASE;
                     },
                     getPremiumDiscriminatedInvoicePreview: (t) => {
                         let { invoiceError: n, isTrial: i } = t,
@@ -716,7 +738,7 @@ function ed(e) {
                             o = l("primaryInvoicesError");
                         return null == r
                             ? null
-                            : (0, ee.Qh)({
+                            : (0, et.Qh)({
                                   invoiceTypeDiscriminator: n,
                                   checkoutInvoicePreview: r,
                                   renewalInvoicePreview: a,
@@ -737,7 +759,7 @@ function ed(e) {
                     },
                     getHasQuantityDiscount: () => {
                         let { isGift: t, quantity: n, getInvoiceHasQuantityDiscount: i } = e();
-                        return i() || (t && null != (0, J.t8)(n));
+                        return i() || (t && null != (0, Z.t8)(n));
                     },
                 };
             })(i),
@@ -753,11 +775,11 @@ function ed(e) {
                 setHasClearedDefaultGiftMessage: (t) => e({ hasClearedDefaultGiftMessage: t }),
                 getIsRecurringGiftCheckout: () => {
                     let { isRecurringGift: e, selectedPlanId: t } = i();
-                    return e && null != t && (0, en.dI)(t);
+                    return e && null != t && (0, ei.dI)(t);
                 },
                 getGiftSubscriptionPlanId: () => {
                     let { selectedPlanId: e, getIsRecurringGiftCheckout: t } = i();
-                    return null != e && t() ? (0, en.o_)(e) : null;
+                    return null != e && t() ? (0, ei.o_)(e) : null;
                 },
             },
             ...{
@@ -806,7 +828,7 @@ function ed(e) {
                                 return !0;
                         }
                         if (
-                            ((r && !c) || a === ei.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
+                            ((r && !c) || a === er.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
                             (null == t || !t.canRedeemTrial())
                         )
                             return !0;
@@ -821,10 +843,10 @@ function ed(e) {
                     return null === r && t
                         ? H.intl.string(H.t.CpOiEO)
                         : l
-                          ? H.intl.string(er.default["7r4HPu"])
+                          ? H.intl.string(ea.default["7r4HPu"])
                           : null != n
                             ? n
-                            : H.intl.string(er.default.BPzQj4);
+                            : H.intl.string(ea.default.BPzQj4);
                 },
                 getCheckoutReviewButtonProps: (e) => {
                     let {
@@ -841,7 +863,7 @@ function ed(e) {
                         A = !_ && !E("isCheckoutDataLoading"),
                         f = l?.text;
                     null == f &&
-                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(er.default.BPzQj4));
+                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(ea.default.BPzQj4));
                     let h = l?.variant,
                         I = c({ hasPaymentSources: a, tenantProvidedButtonText: f }),
                         p = {
@@ -891,7 +913,7 @@ function ed(e) {
                                 };
                 },
             },
-            ...(0, et.d)(e, i),
+            ...(0, en.d)(e, i),
             get: (e) => (null != A[e] ? A[e]() : null),
             contextMetadata: s,
             order: o,

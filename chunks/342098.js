@@ -1,45 +1,36 @@
-n(938796);
-var e = n(284009),
-    a = n.n(e),
-    i = n(339048),
-    l = n(391048),
-    d = n(589078),
-    s = n(675219),
-    r = n(163437),
-    u = n(97352),
-    c = n(67480),
-    p = n(652215);
-function P(o) {
+e(938796);
+var a = e(284009),
+    n = e.n(a),
+    i = e(339048),
+    l = e(391048),
+    s = e(589078),
+    d = e(675219),
+    r = e(163437),
+    u = e(97352),
+    c = e(67480);
+function p(o) {
     let {
         initialPlanId: t,
-        activeSubscription: n,
-        analyticsObject: e,
-        analyticsLocation: a,
+        activeSubscription: e,
+        analyticsObject: a,
+        analyticsLocation: n,
         analyticsLocations: i,
-        analyticsSubscriptionType: r,
-        planGroup: u,
-        skuId: c,
-        guildId: p,
-        reviewWarningMessage: P,
+        planGroup: r,
+        skuId: u,
+        guildId: c,
+        reviewWarningMessage: p,
         applicationId: C,
-        showBenefitsFirst: h,
-        onComplete: f,
+        showBenefitsFirst: P,
+        onComplete: h,
         forcesTransitionToGuild: k,
     } = o;
-    return new s.od({ checkoutFlow: d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
-        checkoutConfiguration: { skuId: c, applicationId: C, activeSubscription: n },
-        checkoutHandlers: { onComplete: f },
+    return new d.od({ checkoutFlow: s.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
+        checkoutConfiguration: { skuId: u, applicationId: C, activeSubscription: e },
+        sharedCheckoutParams: { initialPlanId: t, planGroup: r, reviewWarningMessage: p },
+        checkoutHandlers: { onComplete: h },
         unifiedCheckoutProviderProps: { analyticsLocations: i },
-        forwardedPaymentModalProps: {
-            initialPlanId: t,
-            analyticsLocation: a,
-            analyticsObject: e,
-            analyticsSubscriptionType: r,
-            planGroup: u,
-            guildId: p ?? void 0,
-            reviewWarningMessage: P,
-        },
-        tenantParams: { forcesTransitionToGuild: k ?? !1, showBenefitsFirst: h, guildId: p },
+        forwardedPaymentModalProps: { analyticsLocation: n, analyticsObject: a },
+        tenantParams: { forcesTransitionToGuild: k ?? !1, showBenefitsFirst: P, guildId: c },
         modalAPIOptions: {
             modalKey: "application-payment-modal",
             onCloseCallback: () => {
@@ -48,32 +39,31 @@ function P(o) {
         },
     });
 }
-n.d(
+e.d(
     t,
     {},
     {
-        A: P,
+        A: p,
         l: async function (o) {
-            let { applicationId: t, skuId: n, initialPlanId: e, analyticsLocationObject: l, analyticsLocations: d } = o,
-                s = c.A.get(n),
-                C = u.A.getForSKU(n);
-            a()(null != s, "Failed to find SKU");
-            let h = (0, r.bg)(s.flags);
-            (a()(h, "Guild application subscriptions unsupported!"),
+            let { applicationId: t, skuId: e, initialPlanId: a, analyticsLocationObject: l, analyticsLocations: s } = o,
+                d = c.A.get(e),
+                C = u.A.getForSKU(e);
+            n()(null != d, "Failed to find SKU");
+            let P = (0, r.bg)(d.flags);
+            (n()(P, "Guild application subscriptions unsupported!"),
                 await (async function (o, t) {
-                    let n = (await (0, i.LM)(o))
+                    let e = (await (0, i.LM)(o))
                         .filter((o) => null == o.ends_at || new Date(o.ends_at) > new Date())
                         .find((o) => o.sku_id === t);
-                    a()(null == n, "User already has an active subscription to this SKU");
-                })(t, n),
-                P({
-                    initialPlanId: e ?? C[0]?.id,
+                    n()(null == e, "User already has an active subscription to this SKU");
+                })(t, e),
+                p({
+                    initialPlanId: a ?? C[0]?.id,
                     activeSubscription: null,
-                    analyticsLocations: d,
+                    analyticsLocations: s,
                     analyticsLocationObject: l,
-                    analyticsSubscriptionType: p.rzx.APPLICATION,
                     planGroup: [],
-                    skuId: n,
+                    skuId: e,
                     guildId: null,
                     showBenefitsFirst: !1,
                     applicationId: t,

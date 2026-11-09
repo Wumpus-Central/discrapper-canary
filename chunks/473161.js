@@ -639,11 +639,7 @@ l.d(
                         let { UnifiedCheckoutFlowManagerSingletons: l } = e;
                         return l[s.C.GUILD_BOOST_CHECKOUT].get().openCheckoutModal({
                             checkoutConfiguration: { skuId: p.pe.GUILD, applicationId: w, activeSubscription: G },
-                            forwardedPaymentModalProps: {
-                                guildId: C,
-                                onSubscriptionConfirmation: b,
-                                analyticsObject: y,
-                            },
+                            forwardedPaymentModalProps: { analyticsObject: y },
                             checkoutHandlers: {
                                 onClose: (e) => {
                                     null != P && P(e);
@@ -661,6 +657,7 @@ l.d(
                                 intent: k,
                                 disablePremiumUpsell: M,
                                 onSubscribeComplete: A,
+                                onSubscriptionConfirmation: b,
                                 closeGuildPerksModal: S,
                                 analyticsLocation: y,
                             },

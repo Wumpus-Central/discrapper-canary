@@ -1,19 +1,21 @@
-var l = n(516106),
-    i = n(77528),
-    r = n(682901);
+var l = n(120700),
+    i = n(516106),
+    r = n(77528),
+    a = n(682901);
 n.d(
     t,
     {},
     {
         A: function (e) {
             let { isGift: t, skuId: n } = e,
-                a = (0, l.t4)((e) => e.referralTrialOfferId ?? void 0),
-                s = (0, i.V)(a);
-            return !t && null != s && null != n && r.kb[s.trialId].skus.includes(n);
+                s = (0, i.t4)((e) => e.getTenantParams(l.C.PREMIUM_CHECKOUT)),
+                o = null != s ? s.referralTrialOfferId : void 0,
+                u = (0, r.V)(o);
+            return !t && null != u && null != n && a.kb[u.trialId].skus.includes(n);
         },
         t: function (e) {
             let { userTrialOffer: t, isGift: n, skuId: l } = e;
-            return !n && null != t && null != l && r.kb[t.trialId].skus.includes(l);
+            return !n && null != t && null != l && a.kb[t.trialId].skus.includes(l);
         },
     },
 );

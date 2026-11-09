@@ -660,21 +660,20 @@ function T(e) {
         })
         .then((e) =>
             e.openCheckoutModal({
-                checkoutConfiguration: { applicationId: G, skuId: $ ?? null, initialPaymentSourceId: W },
+                checkoutConfiguration: { applicationId: G, skuId: $ ?? null },
+                sharedCheckoutParams: {
+                    initialPlanId: t,
+                    initialPaymentSourceId: W,
+                    trialId: M,
+                    openInvoiceId: w,
+                    planGroup: m.LE,
+                    startingStepOverride: Y,
+                    skipConfirm: !!V,
+                },
                 forwardedPaymentModalProps: {
                     analyticsObject: C,
-                    initialPlanId: t,
-                    startingStepOverride: Y,
                     analyticsLocation: O,
-                    followupSKUInfo: i,
-                    onSubscriptionConfirmation: S,
-                    postSuccessGuild: U,
-                    trialId: M,
-                    planGroup: m.LE,
-                    openInvoiceId: w,
                     returnRef: F,
-                    subscriptionTier: P,
-                    skipConfirm: !!V,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
                             q ||
@@ -710,13 +709,14 @@ function T(e) {
                 tenantParams: {
                     confirmationFooter: L,
                     defaultPlanId: void 0,
-                    referralCode: null,
                     referralTrialOfferId: x,
                     subscriptionTier: P,
                     subscription: B,
+                    followupSKUInfo: i,
+                    onSubscriptionConfirmation: S,
+                    postSuccessGuild: U,
                     shouldDisallowPlanSelection: H,
                     hasPreviousStepOutsideCheckout: j,
-                    initialPaymentSourceId: W,
                 },
                 modalAPIOptions: {
                     modalKey: K,
