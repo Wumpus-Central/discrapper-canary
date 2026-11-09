@@ -7,8 +7,8 @@
         BadgesCoachmarkRive: () => r.U,
         BoostGemLevelOneRive: () => f.t,
         BoostGemLevelThreeRive: () => k.z,
-        BoostGemLevelTwoRive: () => P.J,
-        BoostThisServerRive: () => I.D,
+        BoostGemLevelTwoRive: () => I.J,
+        BoostThisServerRive: () => P.D,
         CheckpointCardRive: () => v,
         CheckpointCharacterRive: () => w.W,
         CheckpointFriendsRive: () => N.m,
@@ -21,21 +21,21 @@
         GameServerHostingRive: () => X.E,
         GlowButtonRive: () => j.s,
         JetpackWumpusWithTrinketsRive: () => E.e,
-        NitroCoinRive: () => T.s,
-        NitroQuestOrbsMultiplierRive: () => U.E,
-        NitroRewardsMouseRive: () => H.C,
+        NitroCoinRive: () => H.s,
+        NitroQuestOrbsMultiplierRive: () => T.E,
+        NitroRewardsMouseRive: () => U.C,
         NitroWishlistingWumpusRive: () => $,
-        OrbsIllustration_HandsRive: () => tt.a,
-        PerfTestRive: () => te.Q,
-        PulseGradientRive: () => tn.M,
-        ServerHubPerkRive: () => ta.f,
-        TabHoverGradientRive: () => to.U,
-        TeenScreenTimeRive: () => ti.w,
-        ThemeAwareNitroWishlistingWumpusRive: () => tr.u,
-        UnlockRive: () => tl.V,
-        VibingWumpusBackgroundRive: () => ts.R,
-        VibingWumpusRive: () => td.Z,
-        WandAndSparklesRive: () => tS,
+        OrbsIllustration_HandsRive: () => ti,
+        PerfTestRive: () => tr.Q,
+        PulseGradientRive: () => tl.M,
+        ServerHubPerkRive: () => td.f,
+        TabHoverGradientRive: () => ts.U,
+        TeenScreenTimeRive: () => tu.w,
+        ThemeAwareNitroWishlistingWumpusRive: () => tc.u,
+        UnlockRive: () => tb.V,
+        VibingWumpusBackgroundRive: () => tm.R,
+        VibingWumpusRive: () => tg.Z,
+        WandAndSparklesRive: () => tk,
     }));
 var a = n(586036),
     o = n(953927),
@@ -47,8 +47,8 @@ let s =
     "https://cdn.discordapp.com/assets/content/f9902a37a9e65cbeee19648efc6501868d5394d331eb8e8fff9405e9b42adbad.riv";
 var u = n(729901),
     c = n(611361),
-    g = n(799226),
-    b = n(270597);
+    b = n(799226),
+    g = n(270597);
 let m = { Web: { fill: "color" }, Mobile: { fill: "color" } },
     S = { Web: ["Instance"], Mobile: ["Instance"] },
     M = { Web: ["State Machine 1"], Mobile: ["State Machine 1"] },
@@ -56,26 +56,26 @@ let m = { Web: { fill: "color" }, Mobile: { fill: "color" } },
         Web: function (t) {
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, playIfNeeded: o } = (0, c.o)();
-            return ((0, b.QJ)("fill", a, e?.fill, n?.fill, o), null);
+            return ((0, g.QJ)("fill", a, e?.fill, n?.fill, o), null);
         },
         Mobile: function (t) {
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, playIfNeeded: o } = (0, c.o)();
-            return ((0, b.QJ)("fill", a, e?.fill, n?.fill, o), null);
+            return ((0, g.QJ)("fill", a, e?.fill, n?.fill, o), null);
         },
     };
 function B(t) {
     let { artboard: e = "Web", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
-        { status: r, buffer: c } = (0, g.CE)(s),
-        b = (0, g.m2)(s),
+        { status: r, buffer: c } = (0, b.CE)(s),
+        g = (0, b.m2)(s),
         B = d.useCallback(() => {
             let t = C[e];
             return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
         }, [e, a, o]);
-    return r === g.BW.Loading
+    return r === b.BW.Loading
         ? null
         : (0, l.jsx)(u.w, {
-              ...(b ? { key: "override" } : {}),
+              ...(g ? { key: "override" } : {}),
               buffer: c,
               artboard: e,
               stateMachine: n,
@@ -89,11 +89,11 @@ function B(t) {
 B.riveSrc = s;
 var f = n(54759),
     k = n(817943),
-    P = n(768179),
-    I = n(449349);
-let L =
+    I = n(768179),
+    P = n(449349);
+let h =
         "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv",
-    h = {
+    L = {
         Main: {
             reducedMotion: "boolean",
             Icon: "artboard",
@@ -275,7 +275,7 @@ let L =
             FillColor: "color",
         },
     },
-    D = {
+    O = {
         Main: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
         "Cassette Icon": [],
         Cassette: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
@@ -303,7 +303,7 @@ let L =
         Globe: [],
         Card: ["Bonsai", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"],
     },
-    O = {
+    D = {
         Main: ["State Machine 1"],
         "Cassette Icon": ["State Machine 1", "State Machine 2"],
         Cassette: ["State Machine 1"],
@@ -336,16 +336,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -353,16 +353,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -370,16 +370,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -387,16 +387,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -404,16 +404,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -421,16 +421,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -438,16 +438,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -455,16 +455,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -472,16 +472,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -489,16 +489,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -506,16 +506,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -523,16 +523,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -540,16 +540,16 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
@@ -557,48 +557,48 @@ let L =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, rive: i, playIfNeeded: r } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
-                (0, b.gl)("Icon", a, i, e?.Icon, r),
-                (0, b.gl)("Illustration", a, i, e?.Illustration, r),
-                (0, b.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
-                (0, b.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
-                (0, b.k6)("LVL", a, e?.LVL, n?.LVL, r),
-                (0, b.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
-                (0, b.k6)("id#", a, e?.["id#"], n?.["id#"], r),
-                (0, b.k6)("Outof", a, e?.Outof, n?.Outof, r),
-                (0, b.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, r),
+                (0, g.gl)("Icon", a, i, e?.Icon, r),
+                (0, g.gl)("Illustration", a, i, e?.Illustration, r),
+                (0, g.Of)("AnimationState", a, e?.AnimationState, n?.AnimationState, r),
+                (0, g.Of)("PowerMeter", a, e?.PowerMeter, n?.PowerMeter, r),
+                (0, g.k6)("LVL", a, e?.LVL, n?.LVL, r),
+                (0, g.k6)("PersonaName", a, e?.PersonaName, n?.PersonaName, r),
+                (0, g.k6)("id#", a, e?.["id#"], n?.["id#"], r),
+                (0, g.k6)("Outof", a, e?.Outof, n?.Outof, r),
+                (0, g.QJ)("FillColor", a, e?.FillColor, n?.FillColor, r),
                 null
             );
         },
     };
 function v(t) {
     let { artboard: e = "Main", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
-        { status: r, buffer: s } = (0, g.CE)(L),
-        c = (0, g.m2)(L),
-        b = d.useCallback(() => {
+        { status: r, buffer: s } = (0, b.CE)(h),
+        c = (0, b.m2)(h),
+        g = d.useCallback(() => {
             let t = p[e];
             return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
         }, [e, a, o]);
-    return r === g.BW.Loading
+    return r === b.BW.Loading
         ? null
         : (0, l.jsx)(u.w, {
               ...(c ? { key: "override" } : {}),
               buffer: s,
               artboard: e,
               stateMachine: n,
-              artboardProperties: h,
-              artboardViewModelInstances: D,
-              artboardStateMachines: O,
-              renderDataBinding: b,
+              artboardProperties: L,
+              artboardViewModelInstances: O,
+              artboardStateMachines: D,
+              renderDataBinding: g,
               ...i,
           });
 }
-v.riveSrc = L;
+v.riveSrc = h;
 var w = n(516749),
     N = n(360450);
 let V =
         "https://cdn.discordapp.com/assets/content/756c8e37a14fc267712502cc0892be86b2e98d9132fe075f9ba75fd9e9a0aa48.riv",
-    A = {
+    _ = {
         "Checkpoint Intro Desktop": {
             reducedMotion: "boolean",
             Subtitle: "string",
@@ -627,7 +627,7 @@ let V =
             StartButton: "string",
         },
     },
-    _ = {
+    A = {
         "Checkpoint Intro Desktop": ["Instance"],
         Globe: ["Instance"],
         "Globe Single Line": [],
@@ -650,10 +650,10 @@ let V =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
-                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
-                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
-                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, g.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, g.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, g.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
                 null
             );
         },
@@ -661,10 +661,10 @@ let V =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
-                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
-                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
-                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, g.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, g.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, g.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
                 null
             );
         },
@@ -672,10 +672,10 @@ let V =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
-                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
-                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
-                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, g.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, g.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, g.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
                 null
             );
         },
@@ -683,33 +683,33 @@ let V =
             let { dataBinding: e, onDataBindingChange: n } = t,
                 { instance: a, reducedMotionEnabled: o, playIfNeeded: i } = (0, c.o)();
             return (
-                (0, b.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
-                (0, b.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
-                (0, b.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
-                (0, b.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
+                (0, g.Dr)("reducedMotion", a, e?.reducedMotion ?? o, void 0, i),
+                (0, g.k6)("Subtitle", a, e?.Subtitle, n?.Subtitle, i),
+                (0, g.Dr)("StartButton Pressed", a, e?.["StartButton Pressed"], n?.["StartButton Pressed"], i),
+                (0, g.k6)("StartButton", a, e?.StartButton, n?.StartButton, i),
                 null
             );
         },
     };
 function y(t) {
     let { artboard: e = "Checkpoint Intro Desktop", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
-        { status: r, buffer: s } = (0, g.CE)(V),
-        c = (0, g.m2)(V),
-        b = d.useCallback(() => {
+        { status: r, buffer: s } = (0, b.CE)(V),
+        c = (0, b.m2)(V),
+        g = d.useCallback(() => {
             let t = R[e];
             return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
         }, [e, a, o]);
-    return r === g.BW.Loading
+    return r === b.BW.Loading
         ? null
         : (0, l.jsx)(u.w, {
               ...(c ? { key: "override" } : {}),
               buffer: s,
               artboard: e,
               stateMachine: n,
-              artboardProperties: A,
-              artboardViewModelInstances: _,
+              artboardProperties: _,
+              artboardViewModelInstances: A,
               artboardStateMachines: F,
-              renderDataBinding: b,
+              renderDataBinding: g,
               ...i,
           });
 }
@@ -722,9 +722,9 @@ var W = n(206701),
     X = n(828334),
     j = n(470170),
     E = n(970002),
-    T = n(883888),
-    U = n(454153),
-    H = n(915945);
+    H = n(883888),
+    T = n(454153),
+    U = n(915945);
 let K =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
     Z = { "Nitro Wishlist": { reducedMotion: "boolean" } },
@@ -734,18 +734,18 @@ let K =
         "Nitro Wishlist": function (t) {
             let { dataBinding: e } = t,
                 { instance: n, reducedMotionEnabled: a, playIfNeeded: o } = (0, c.o)();
-            return ((0, b.Dr)("reducedMotion", n, e?.reducedMotion ?? a, void 0, o), null);
+            return ((0, g.Dr)("reducedMotion", n, e?.reducedMotion ?? a, void 0, o), null);
         },
     };
 function $(t) {
     let { artboard: e = "Nitro Wishlist", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
-        { status: r, buffer: s } = (0, g.CE)(K),
-        c = (0, g.m2)(K),
-        b = d.useCallback(() => {
+        { status: r, buffer: s } = (0, b.CE)(K),
+        c = (0, b.m2)(K),
+        g = d.useCallback(() => {
             let t = Y[e];
             return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
         }, [e, a, o]);
-    return r === g.BW.Loading
+    return r === b.BW.Loading
         ? null
         : (0, l.jsx)(u.w, {
               ...(c ? { key: "override" } : {}),
@@ -755,53 +755,92 @@ function $(t) {
               artboardProperties: Z,
               artboardViewModelInstances: z,
               artboardStateMachines: q,
-              renderDataBinding: b,
+              renderDataBinding: g,
               ...i,
           });
 }
 $.riveSrc = K;
-var tt = n(190485),
-    te = n(3265),
-    tn = n(893030),
-    ta = n(480749),
-    to = n(704007),
-    ti = n(287172),
-    tr = n(580573),
-    tl = n(213695),
-    td = n(372880),
-    ts = n(3200);
-let tu =
-        "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    tc = { "Surprise Me": { fill: "color" } },
-    tg = { "Surprise Me": [""] },
-    tb = { "Surprise Me": ["State Machine 1"] },
-    tm = {
-        "Surprise Me": function (t) {
-            let { dataBinding: e, onDataBindingChange: n } = t,
-                { instance: a, playIfNeeded: o } = (0, c.o)();
-            return ((0, b.QJ)("fill", a, e?.fill, n?.fill, o), null);
+let tt =
+        "https://cdn.discordapp.com/assets/content/1f36d546a4ac8054dbd6ab0384a6aa4bf3c574c8b435c58e0e4e8d922a0a4cce.riv",
+    te = { "Bounties Illo Hands": { reducedMotion: "boolean" }, "Orb shine": { reducedMotion: "boolean" } },
+    tn = { "Bounties Illo Hands": ["Instance"], "Orb shine": ["Instance"] },
+    ta = { "Bounties Illo Hands": ["State Machine 1"], "Orb shine": ["SM_Orb"] },
+    to = {
+        "Bounties Illo Hands": function (t) {
+            let { dataBinding: e } = t,
+                { instance: n, reducedMotionEnabled: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, g.Dr)("reducedMotion", n, e?.reducedMotion ?? a, void 0, o), null);
+        },
+        "Orb shine": function (t) {
+            let { dataBinding: e } = t,
+                { instance: n, reducedMotionEnabled: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, g.Dr)("reducedMotion", n, e?.reducedMotion ?? a, void 0, o), null);
         },
     };
-function tS(t) {
-    let { artboard: e = "Surprise Me", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
-        { status: r, buffer: s } = (0, g.CE)(tu),
-        c = (0, g.m2)(tu),
-        b = d.useCallback(() => {
-            let t = tm[e];
+function ti(t) {
+    let { artboard: e = "Bounties Illo Hands", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: s } = (0, b.CE)(tt),
+        c = (0, b.m2)(tt),
+        g = d.useCallback(() => {
+            let t = to[e];
             return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
         }, [e, a, o]);
-    return r === g.BW.Loading
+    return r === b.BW.Loading
         ? null
         : (0, l.jsx)(u.w, {
               ...(c ? { key: "override" } : {}),
               buffer: s,
               artboard: e,
               stateMachine: n,
-              artboardProperties: tc,
-              artboardViewModelInstances: tg,
-              artboardStateMachines: tb,
-              renderDataBinding: b,
+              artboardProperties: te,
+              artboardViewModelInstances: tn,
+              artboardStateMachines: ta,
+              renderDataBinding: g,
               ...i,
           });
 }
-tS.riveSrc = tu;
+ti.riveSrc = tt;
+var tr = n(3265),
+    tl = n(893030),
+    td = n(480749),
+    ts = n(704007),
+    tu = n(287172),
+    tc = n(580573),
+    tb = n(213695),
+    tg = n(372880),
+    tm = n(3200);
+let tS =
+        "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
+    tM = { "Surprise Me": { fill: "color" } },
+    tC = { "Surprise Me": [""] },
+    tB = { "Surprise Me": ["State Machine 1"] },
+    tf = {
+        "Surprise Me": function (t) {
+            let { dataBinding: e, onDataBindingChange: n } = t,
+                { instance: a, playIfNeeded: o } = (0, c.o)();
+            return ((0, g.QJ)("fill", a, e?.fill, n?.fill, o), null);
+        },
+    };
+function tk(t) {
+    let { artboard: e = "Surprise Me", stateMachine: n, dataBinding: a, onDataBindingChange: o, ...i } = t,
+        { status: r, buffer: s } = (0, b.CE)(tS),
+        c = (0, b.m2)(tS),
+        g = d.useCallback(() => {
+            let t = tf[e];
+            return null == t ? null : (0, l.jsx)(t, { dataBinding: a, onDataBindingChange: o });
+        }, [e, a, o]);
+    return r === b.BW.Loading
+        ? null
+        : (0, l.jsx)(u.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: s,
+              artboard: e,
+              stateMachine: n,
+              artboardProperties: tM,
+              artboardViewModelInstances: tC,
+              artboardStateMachines: tB,
+              renderDataBinding: g,
+              ...i,
+          });
+}
+tk.riveSrc = tS;

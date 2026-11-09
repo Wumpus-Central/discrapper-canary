@@ -1,4 +1,4 @@
-n.d(t, { A: () => ei });
+n.d(t, { A: () => eo });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -11,43 +11,43 @@ var l = n(477900),
     m = n(290136),
     p = n(646514),
     x = n(365199),
-    h = n(506988),
-    f = n(760914),
+    f = n(506988),
+    h = n(760914),
     C = n(590202),
     v = n(971649),
     N = n(574112),
     y = n(557637),
-    j = n(398025),
-    g = n(321538),
+    g = n(398025),
+    j = n(321538),
     A = n(139210),
     E = n(568329),
     _ = n(165862),
     T = n(477782),
     R = n(743368),
-    Q = n(265872),
-    B = n(442433),
-    b = n(438457),
-    M = n(144779),
-    I = n(494280),
+    b = n(265872),
+    Q = n(442433),
+    B = n(438457),
+    I = n(144779),
+    M = n(494280),
     S = n(845890),
     U = n(963713),
-    P = n(818348),
-    w = n(792996);
+    w = n(818348),
+    P = n(792996);
 function F(e) {
     let { onSelect: t, onClose: n } = e,
         s = (0, U.o5)(),
         a = (0, U.Q8)(s),
         r = (0, v.wW)(),
-        i = (0, I.Yh)(a);
+        i = (0, M.Yh)(a);
     return (0, l.jsxs)(_.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
         onSelect: function () {
-            null != t ? t() : (0, B.Z_)();
+            null != t ? t() : (0, Q.Z_)();
         },
         navId: "quest-bar-bounty",
-        "aria-label": w.intl.string(w.t.ogxXGq),
-        onClose: n ?? P.tE,
+        "aria-label": P.intl.string(P.t.ogxXGq),
+        onClose: n ?? w.tE,
         children: [
             (0, l.jsx)(
                 T.rX,
@@ -59,10 +59,10 @@ function F(e) {
                             (0, N._Q)(
                                 { adContentId: s.id, adCreativeType: o.p.BOUNTY, cta: s.cta },
                                 {
-                                    content: h.uF.QUEST_BAR_V2,
+                                    content: f.uF.QUEST_BAR_V2,
                                     ctaContent: C.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
                                     impressionId: r(),
-                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                                 },
                             );
                         },
@@ -78,29 +78,29 @@ function F(e) {
                     children: [
                         (0, l.jsx)(T.Dr, {
                             id: "display-disclosure",
-                            label: w.intl.string(w.t.GcsZKJ),
+                            label: P.intl.string(P.t.GcsZKJ),
                             action: function () {
-                                (0, g.Zc)(a, {
-                                    content: h.uF.QUEST_BAR_V2,
+                                (0, j.Zc)(a, {
+                                    content: f.uF.QUEST_BAR_V2,
                                     ctaContent: C.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
                                     impressionId: r(),
-                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                                 });
                             },
                         }),
                         (0, l.jsx)(T.Dr, {
                             id: "hide-entrypoint",
-                            label: w.intl.string(w.t.NN79E9),
+                            label: P.intl.string(P.t.NN79E9),
                             action: function () {
-                                ((0, b.r)({
-                                    type: M.F.CLICK_INTERNAL,
+                                ((0, B.r)({
+                                    type: I.F.CLICK_INTERNAL,
                                     ...i,
                                     questContentCTA: C.Cy.CONTEXT_MENU_HIDE_CONTENT,
-                                    surfaceId: h.uF.QUEST_BAR_V2,
-                                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                                    surfaceId: f.uF.QUEST_BAR_V2,
+                                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                                     impressionId: r(),
                                 }),
-                                    (0, S.Xo)(i, h.uF.QUEST_BAR_V2));
+                                    (0, S.Xo)(i, f.uF.QUEST_BAR_V2));
                             },
                         }),
                     ],
@@ -117,17 +117,17 @@ function O(e) {
         u = (0, v.wW)(),
         c = s.useRef(null),
         d = s.useCallback(() => {
-            ((0, b.r)({
-                type: M.F.CLICK_INTERNAL,
-                ...(0, I.Yh)(o),
+            ((0, B.r)({
+                type: I.F.CLICK_INTERNAL,
+                ...(0, M.Yh)(o),
                 questContentCTA: C.Cy.OPEN_CONTEXT_MENU,
-                surfaceId: h.uF.QUEST_BAR_V2,
-                sourceQuestContent: h.uF.QUEST_BAR_V2,
+                surfaceId: f.uF.QUEST_BAR_V2,
+                sourceQuestContent: f.uF.QUEST_BAR_V2,
                 impressionId: u(),
             }),
                 null != n && n());
         }, [o, u, n]);
-    return (0, l.jsx)(Q.Y, {
+    return (0, l.jsx)(b.Y, {
         targetElementRef: c,
         onRequestOpen: d,
         onRequestClose: a,
@@ -135,7 +135,7 @@ function O(e) {
             let { closePopout: t } = e;
             return (0, l.jsx)(F, { onSelect: r, onClose: t });
         },
-        animation: Q.Y.Animation.NONE,
+        animation: b.Y.Animation.NONE,
         children: (e) => (0, l.jsx)("div", { ref: c, children: t(e) }),
     });
 }
@@ -152,26 +152,26 @@ function D() {
             onCtxMenuOpen: _,
             onCtxMenuClose: T,
             onCtxMenuSelect: R,
-            isExpanded: Q,
-            isExpansionAnimationComplete: B,
-            collapsedHeight: b,
+            isExpanded: b,
+            isExpansionAnimationComplete: Q,
+            collapsedHeight: B,
         } = (0, k.H)(),
-        { productIcon: M } = e,
-        I = s.useCallback(() => {
-            (0, g.Zc)(t, {
-                content: h.uF.QUEST_BAR_V2,
+        { productIcon: I } = e,
+        M = s.useCallback(() => {
+            (0, j.Zc)(t, {
+                content: f.uF.QUEST_BAR_V2,
                 ctaContent: C.Cy.OPEN_DISCLOSURE,
-                sourceQuestContent: h.uF.QUEST_BAR_V2,
+                sourceQuestContent: f.uF.QUEST_BAR_V2,
             });
         }, [t]),
         S = s.useCallback(() => {
             (0, N._Q)(
                 { adContentId: e.id, adCreativeType: o.p.BOUNTY, cta: e.cta },
                 {
-                    content: h.uF.QUEST_BAR_HEADER,
+                    content: f.uF.QUEST_BAR_HEADER,
                     ctaContent: C.Cy.OPEN_GAME_LINK,
                     impressionId: n(),
-                    sourceQuestContent: h.uF.QUEST_BAR_V2,
+                    sourceQuestContent: f.uF.QUEST_BAR_V2,
                 },
             );
         }, [e.cta, e.id, n]);
@@ -182,13 +182,13 @@ function D() {
             (0, l.jsxs)(i.animated.div, {
                 className: L.W2,
                 style: {
-                    transform: a.to({ range: [0, 1], output: [b / 2 - 24 - 6, 0] }).to((e) => `translateY(${e}px)`),
+                    transform: a.to({ range: [0, 1], output: [B / 2 - 24 - 6, 0] }).to((e) => `translateY(${e}px)`),
                 },
                 children: [
-                    null != M &&
+                    null != I &&
                         (0, l.jsx)(u.D, {
                             onClick: S,
-                            className: r()(L.iY, L.vk, { [L.wm]: Q && B }),
+                            className: r()(L.iY, L.vk, { [L.wm]: b && Q }),
                             children: (0, l.jsx)(i.animated.div, {
                                 className: L.U$,
                                 style: {
@@ -199,7 +199,7 @@ function D() {
                                     children: (t) =>
                                         (0, l.jsx)("img", {
                                             ref: t,
-                                            src: (0, f.lR)({ assetUrl: M, width: 32, height: 32 }),
+                                            src: (0, h.lR)({ assetUrl: I, width: 32, height: 32 }),
                                             alt: e.advertiserName,
                                             width: 32,
                                             height: 32,
@@ -218,7 +218,7 @@ function D() {
                                     (0, l.jsx)(i.animated.div, {
                                         "aria-hidden": !0,
                                         className: r()(t, L.it),
-                                        style: { opacity: (0, j.a)(a.to({ range: [0, 1], output: [1, 0] })) },
+                                        style: { opacity: (0, g.a)(a.to({ range: [0, 1], output: [1, 0] })) },
                                         children: (0, l.jsx)(d.E, {
                                             variant: "body-sm/medium",
                                             color: "text-strong",
@@ -231,12 +231,12 @@ function D() {
                                 className: L.OO,
                                 children: (0, l.jsxs)(u.D, {
                                     className: r()(L.y8, L.RK),
-                                    onClick: I,
+                                    onClick: M,
                                     children: [
                                         (0, l.jsx)(d.E, {
                                             color: "text-overlay-light",
                                             variant: "body-xs/normal",
-                                            children: w.intl.string(w.t.o6FLcF),
+                                            children: P.intl.string(P.t.o6FLcF),
                                         }),
                                         (0, l.jsx)(m.CircleQuestionIcon, { color: p.A.colors.WHITE, className: L.P$ }),
                                     ],
@@ -256,7 +256,7 @@ function D() {
                         (0, l.jsx)(u.D, {
                             ...e,
                             className: r()(L.oz, L.rb),
-                            "aria-label": w.intl.string(w.t.DEoVWZ),
+                            "aria-label": P.intl.string(P.t.DEoVWZ),
                             children: (0, l.jsx)(x.MoreHorizontalIcon, {
                                 size: "md",
                                 color: "currentColor",
@@ -269,20 +269,19 @@ function D() {
     });
 }
 var Y = n(855986),
-    W = n(190485),
-    q = n(534514),
-    H = n(821609),
+    W = n(534514),
+    q = n(821609),
     X = n(775602),
-    G = n(500180),
-    K = n(792620),
-    $ = n(192308),
-    z = n(415441),
-    Z = n(419403);
-function J(e) {
+    H = n(500180),
+    G = n(792620),
+    K = n(192308),
+    $ = n(415441),
+    z = n(419403);
+function Z(e) {
     let { isAnimated: t, className: n } = e,
         s = (0, Y.bG)([X.Ay], () => X.Ay.useReducedMotion);
     return (0, l.jsx)("img", {
-        className: r()(Z.Q, n),
+        className: r()(z.Q, n),
         src:
             t && !s
                 ? "https://cdn.discordapp.com/assets/content/64e328defbecc228c5ed250346b964b80c3fcdc293982496962fc482f917864c.webp"
@@ -291,43 +290,42 @@ function J(e) {
         "aria-hidden": !0,
     });
 }
-var ee = n(783569),
-    et = n(333949),
-    en = n(632036),
-    el = n(53440);
-let es = { url: n(970908).A, mimetype: "video/webm", isAnimated: !0 };
-function ea() {
+var J = n(783569),
+    ee = n(333949),
+    et = n(632036),
+    en = n(53440),
+    el = n(970908);
+let es =
+        "https://cdn.discordapp.com/assets/content/305f47e78a81697b98faffc80e5b7c0dfdc1829144937eec1665324417d146f2.png",
+    ea = { url: el.A, mimetype: "video/webm", isAnimated: !0 };
+function er() {
     let e = (0, U.o5)(),
         { imagePreview: t, videoPreview: a, productName: u, videoDurationSeconds: m } = e,
         { isExpanded: p, isExpansionAnimationComplete: x, collapsedHeight: N } = (0, k.H)(),
-        { expansionSpring: g } = s.useContext(E.PW),
+        { expansionSpring: j } = s.useContext(E.PW),
         A = (0, v.wW)(),
         _ = (0, Y.bG)([X.Ay], () => X.Ay.useReducedMotion),
         [T, R] = s.useState(!1),
-        Q = s.useRef(null);
-    s.useEffect(() => {
-        p && Q.current?.pause();
-    }, [p]);
-    let B = s.useMemo(() => (null == a ? null : { url: a, mimetype: (0, f.vm)(a), isAnimated: !0 }), [a]),
-        I = !_ || T,
-        S = s.useMemo(() => {
+        b = s.useMemo(() => (null == a ? null : { url: a, mimetype: (0, h.vm)(a), isAnimated: !0 }), [a]),
+        Q = !_ || T,
+        M = s.useMemo(() => {
             let e = m ?? 0;
-            return e <= 0 ? w.intl.string(w.t.kfks9Y) : (0, G.AF)((0, K.X3)({ progressSeconds: 0, targetSeconds: e }));
+            return e <= 0 ? P.intl.string(P.t.kfks9Y) : (0, H.AF)((0, G.X3)({ progressSeconds: 0, targetSeconds: e }));
         }, [m]),
-        P = s.useCallback(() => {
-            ((0, b.r)({
-                type: M.F.CLICK_INTERNAL,
+        S = s.useCallback(() => {
+            ((0, B.r)({
+                type: I.F.CLICK_INTERNAL,
                 adCreativeType: o.p.BOUNTY,
                 adCreativeId: e.id,
                 questContentCTA: C.Cy.START_BOUNTY,
-                surfaceId: h.uF.QUEST_BAR_V2,
-                sourceQuestContent: h.uF.QUEST_BAR_V2,
+                surfaceId: f.uF.QUEST_BAR_V2,
+                sourceQuestContent: f.uF.QUEST_BAR_V2,
                 impressionId: A(),
             }),
                 (function (e) {
                     let { bounty: t, sourceQuestContent: s } = e,
                         a = performance.now();
-                    (0, $.mM)(
+                    (0, K.mM)(
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e(974119),
@@ -344,12 +342,13 @@ function ea() {
                         },
                         { modalKey: "BOUNTY_VIDEO_MODAL" },
                     );
-                })({ bounty: e, sourceQuestContent: h.uF.QUEST_BAR_V2 }));
+                })({ bounty: e, sourceQuestContent: f.uF.QUEST_BAR_V2 }));
         }, [e, A]),
-        F = p && x,
-        O = !p || x;
+        w = p && x,
+        F = !p || x,
+        O = w || _ ? (0, h.UX)(es, { format: "webp" }) : es;
     return (0, l.jsxs)("div", {
-        className: el.rf,
+        className: en.rf,
         onMouseEnter: () => {
             _ && !T && R(!0);
         },
@@ -358,81 +357,75 @@ function ea() {
         },
         children: [
             (0, l.jsxs)("div", {
-                className: el.xX,
+                className: en.xX,
                 children: [
                     (0, l.jsxs)(i.animated.div, {
-                        className: el.Tj,
-                        style: { opacity: (0, j.a)(g.to({ range: [0, 1], output: [0, 1] })) },
+                        className: en.Tj,
+                        style: { opacity: (0, g.a)(j.to({ range: [0, 1], output: [0, 1] })) },
                         children: [
                             null != t &&
                                 (0, l.jsx)(y._M, {
                                     id: "QuestBarBounty_previewImage",
-                                    children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: el.$_ }),
+                                    children: (e) => (0, l.jsx)("img", { ref: e, src: t, alt: "", className: en.$_ }),
                                 }),
-                            null != B &&
+                            null != b &&
                                 (0, l.jsx)(y._M, {
                                     id: "QuestBarBounty_previewVideo",
                                     children: (e) =>
-                                        (0, l.jsx)(et.X, {
+                                        (0, l.jsx)(ee.X, {
                                             ref: e,
                                             isHovered: T,
-                                            asset: B,
+                                            asset: b,
                                             poster: t,
-                                            className: r()(el.$_, null != t && el.Ki, { [el.mv]: I || null == t }),
+                                            className: r()(en.$_, null != t && en.Ki, { [en.mv]: Q || null == t }),
                                         }),
                                 }),
                         ],
                     }),
                     (0, l.jsx)(i.animated.div, {
-                        className: el.PY,
-                        style: { top: N, opacity: (0, j.a)(g.to({ range: [0, 1], output: [1, 0] })) },
-                        children: (0, l.jsx)(J, { isAnimated: !F }),
+                        className: en.PY,
+                        style: { top: N, opacity: (0, g.a)(j.to({ range: [0, 1], output: [1, 0] })) },
+                        children: (0, l.jsx)(Z, { isAnimated: !w }),
                     }),
                     (0, l.jsx)(i.animated.div, {
-                        className: el.ch,
-                        style: { opacity: (0, j.a)(g.to({ range: [0, 1], output: [1, 0] })) },
-                        children: (0, l.jsx)(W.a, {
-                            ref: Q,
-                            autoplay: !p,
-                            stateMachine: "State Machine 1",
-                            fit: "contain",
-                            className: el.QF,
-                        }),
+                        className: en.ch,
+                        style: { opacity: (0, g.a)(j.to({ range: [0, 1], output: [1, 0] })) },
+                        children: (0, l.jsx)("img", { src: O, alt: "", className: en.QF }),
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: el.tV }),
-            (p || !x) && (0, l.jsx)(J, { className: el.dq, isAnimated: !0 }),
-            (0, l.jsx)(ee.T, {
+            (0, l.jsx)("div", { className: en.tV }),
+            (p || !x) && (0, l.jsx)(Z, { className: en.dq, isAnimated: !0 }),
+            (0, l.jsx)(J.T, {
                 children: (0, l.jsx)(c.N, {
                     theme: V.NJ8.DARK,
                     disableAdaptiveTheme: !0,
                     children: (e) =>
                         (0, l.jsxs)("div", {
-                            className: r()(e, el.Qs),
+                            className: r()(e, en.Qs),
                             children: [
                                 (0, l.jsx)("div", {
-                                    className: r()(en.al, en.Yi, el.Qq),
-                                    children: (0, l.jsx)(z.N, {
-                                        showVideo: F,
+                                    className: r()(et.al, et.Yi, en.Qq),
+                                    children: (0, l.jsx)($.N, {
+                                        showVideo: w,
                                         imageAsset: {
-                                            asset: es,
+                                            asset: ea,
                                             assetId: "QuestBarBounty_rewardTileStatic",
-                                            alt: w.intl.string(w.t.UMclVN),
-                                            className: en.XM,
+                                            alt: P.intl.string(P.t.UMclVN),
+                                            className: et.XM,
                                         },
                                         videoAsset: {
-                                            asset: es,
+                                            asset: ea,
                                             assetId: "QuestBarBounty_rewardTileAnimated",
-                                            className: r()(en.eB, en.WY),
+                                            className: r()(et.eB, et.WY),
                                         },
                                         imageSize: { width: 64, height: 64 },
                                     }),
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: el.C,
+                                    className: en.C,
                                     children: [
-                                        (0, l.jsx)(q.D, {
+                                        (0, l.jsx)(W.D, {
                                             color: "text-strong",
                                             variant: "heading-sm/medium",
                                             lineClamp: 2,
@@ -440,18 +433,18 @@ function ea() {
                                         }),
                                         (0, l.jsx)(d.E, {
                                             variant: "body-xs/normal",
-                                            children: w.intl.string(w.t["1uzE2S"]),
+                                            children: P.intl.string(P.t["1uzE2S"]),
                                         }),
                                     ],
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: r()({ [el._o]: !O }),
-                                    children: (0, l.jsx)(H.$, {
+                                    className: r()({ [en._o]: !F }),
+                                    children: (0, l.jsx)(q.$, {
                                         variant: "primary",
                                         size: "md",
                                         fullWidth: !0,
-                                        text: S,
-                                        onClick: P,
+                                        text: M,
+                                        onClick: S,
                                     }),
                                 }),
                             ],
@@ -461,7 +454,7 @@ function ea() {
         ],
     });
 }
-var er = n(742860);
-function ei() {
-    return (0, l.jsx)(er.A, { layoutVariant: "inset", header: (0, l.jsx)(D, {}), children: (0, l.jsx)(ea, {}) });
+var ei = n(742860);
+function eo() {
+    return (0, l.jsx)(ei.A, { layoutVariant: "inset", header: (0, l.jsx)(D, {}), children: (0, l.jsx)(er, {}) });
 }

@@ -1,78 +1,78 @@
-l.d(t, { default: () => eA });
-var n = l(477900),
-    a = l(582128),
-    s = l(284009),
-    i = l.n(s),
-    r = l(189213),
-    u = l(858899),
-    o = l(270003),
-    c = l(683071),
-    d = l(452027),
-    m = l(532446),
-    f = l(95477),
-    h = l(893007),
-    g = l(181658),
-    x = l(964486),
-    v = l(759886),
-    b = l(643374),
-    j = l(129230),
-    p = l(796774),
-    y = l(503698),
-    C = l.n(y),
-    N = l(939249),
-    S = l(29080),
-    w = l(782134),
-    M = l(834730),
-    E = l(927813),
-    k = l(904054),
-    A = l(462180),
-    T = l(882035),
-    I = l(121894);
-(l(323874), l(14289), l(35956));
-var F = l(335416),
-    D = l(792996);
-function P(e, t, l) {
-    return -1 === e ? 0 : e - (t * e) / l;
+t.d(l, { default: () => eT });
+var n = t(477900),
+    a = t(582128),
+    s = t(284009),
+    i = t.n(s),
+    r = t(189213),
+    u = t(858899),
+    o = t(270003),
+    c = t(683071),
+    d = t(452027),
+    m = t(532446),
+    f = t(95477),
+    h = t(893007),
+    g = t(181658),
+    x = t(964486),
+    v = t(759886),
+    b = t(643374),
+    j = t(129230),
+    p = t(796774),
+    y = t(503698),
+    C = t.n(y),
+    N = t(939249),
+    S = t(29080),
+    w = t(782134),
+    M = t(834730),
+    E = t(927813),
+    k = t(904054),
+    A = t(462180),
+    T = t(882035),
+    I = t(121894);
+(t(323874), t(14289), t(35956));
+var F = t(335416),
+    D = t(792996);
+function P(e, l, t) {
+    return -1 === e ? 0 : e - (l * e) / t;
 }
 function O(e) {
     return e / 1e3;
 }
-function R(e, t, l) {
-    return -1 === e ? l : e + (t * (l - e)) / l;
+function R(e, l, t) {
+    return -1 === e ? t : e + (l * (t - e)) / t;
 }
-function L(e, t, l, n) {
-    return (t >= 0 && l > 0 ? ((e - (t - (l * t) / n)) * 100) / l : (100 * e) / n).toFixed(4);
+function L(e, l, t, n) {
+    return (l >= 0 && t > 0 ? ((e - (l - (t * l) / n)) * 100) / t : (100 * e) / n).toFixed(4);
 }
 let _ = (0, T.h)((e) => ({
     audio: null,
     file: null,
     loading: !1,
-    loadAudioFromFile: async (t) => {
-        if (((0, I.r)(() => e({ file: t, audio: null, loading: null != t })), null == t)) return;
-        let l = await (async function (e) {
+    loadAudioFromFile: async (l) => {
+        if (((0, I.r)(() => e({ file: l, audio: null, loading: null != l })), null == l)) return;
+        let t = await (async function (e) {
             if (!F.VM.has(e.type)) throw Error(D.intl.formatToPlainString(D.t["2y3xGU"], { fileType: e.type }));
-            let t = new Audio(URL.createObjectURL(e));
+            let l = new Audio(URL.createObjectURL(e));
             return (
-                await new Promise((e, l) => {
+                await new Promise((e, t) => {
                     function n() {
-                        (t.removeEventListener("canplaythrough", a), t.removeEventListener("error", s));
+                        (l.removeEventListener("canplaythrough", a), l.removeEventListener("error", s));
                     }
                     function a() {
                         (n(), e());
                     }
                     function s() {
-                        (n(), l(Error(D.intl.formatToPlainString(D.t["6w+Dyr"], {}))));
+                        (n(), t(Error(D.intl.formatToPlainString(D.t["6w+Dyr"], {}))));
                     }
-                    (t.addEventListener("canplaythrough", a), t.addEventListener("error", s), t.load());
+                    (l.addEventListener("canplaythrough", a), l.addEventListener("error", s), l.load());
                 }),
-                t
+                l
             );
-        })(t);
-        null != l && (0, I.r)(() => e({ audio: l, loading: !1 }));
+        })(l);
+        null != t && (0, I.r)(() => e({ audio: t, loading: !1 }));
     },
     maxVolume: 1,
-    setMaxVolume: (t) => {
-        (0, I.r)(() => e({ maxVolume: t }));
+    setMaxVolume: (l) => {
+        (0, I.r)(() => e({ maxVolume: l }));
     },
 }));
 function G() {
@@ -88,74 +88,74 @@ function G() {
         A.x,
     );
 }
-var J = l(147925),
-    U = l(435558),
-    V = l(646514),
-    z = l(602853),
-    B = l(289873),
-    H = l(736653),
-    Y = l(115560),
-    q = l(602674);
-let Q = new Worker(new URL("/assets/" + l.u(658777), l.b)),
+var J = t(147925),
+    U = t(435558),
+    V = t(646514),
+    z = t(602853),
+    B = t(289873),
+    H = t(736653),
+    Y = t(115560),
+    q = t(602674);
+let Q = new Worker(new URL("/assets/" + t.u(658777), t.b)),
     W = (0, q.v)(),
     X = { ...F.Jh };
-var $ = l(35854);
+var $ = t(35854);
 let K = a.memo(function (e) {
-        let { file: t, audio: l, className: s, waveformSettings: i } = e,
+        let { file: l, audio: t, className: s, waveformSettings: i } = e,
             [r, u] = a.useState({ width: 0, height: 0 }),
             o = a.useRef(null),
             c = a.useMemo(() => {
-                let e = l?.duration ?? 1;
+                let e = t?.duration ?? 1;
                 return { fineTuning: -1, fineTuningResolution: e / F.Jh.fineTuningScale, duration: e, ...(i ?? {}) };
-            }, [l, i]),
+            }, [t, i]),
             d = (function (e) {
-                let [t, l] = a.useState(null),
+                let [l, t] = a.useState(null),
                     [n, s] = a.useState(null);
                 return (
                     a.useEffect(() => {
                         if (null == e) return;
-                        let t = (0, F.Ux)(e);
-                        t !== n &&
-                            (s(t),
-                            l(null),
+                        let l = (0, F.Ux)(e);
+                        l !== n &&
+                            (s(l),
+                            t(null),
                             (async function (e) {
                                 if (null == W) throw Error("Failed to create audio context");
-                                let t = await e.arrayBuffer();
-                                return (await W.decodeAudioData(t)).getChannelData(0);
-                            })(e).then(l));
+                                let l = await e.arrayBuffer();
+                                return (await W.decodeAudioData(l)).getChannelData(0);
+                            })(e).then(t));
                     }, [n, e]),
-                    t
+                    l
                 );
-            })(t),
-            m = (function (e, t, l) {
+            })(l),
+            m = (function (e, l, t) {
                 let [n, s] = a.useState(null),
                     [i, r] = a.useState(null),
                     [u, o] = a.useState(1),
                     { setMaxVolume: c } = G(),
                     d = a.useCallback(
-                        (e, t) => {
+                        (e, l) => {
                             var n;
                             (r(null),
-                                ((n = t.offsetWidth),
-                                new Promise((t) => {
+                                ((n = l.offsetWidth),
+                                new Promise((l) => {
                                     let a = (0, Y.A)();
-                                    (Q?.addEventListener("message", function e(l) {
+                                    (Q?.addEventListener("message", function e(t) {
                                         let {
                                             data: { waveform: n, id: s, normalizedVolumeMultipler: i },
-                                        } = l;
-                                        (a === s && (t(n), o(i)), Q?.removeEventListener("message", e));
+                                        } = t;
+                                        (a === s && (l(n), o(i)), Q?.removeEventListener("message", e));
                                     }),
-                                        Q?.postMessage({ id: a, options: l, config: X, width: n, rawBufferData: e }));
+                                        Q?.postMessage({ id: a, options: t, config: X, width: n, rawBufferData: e }));
                                 })).then(r));
                         },
-                        [l],
+                        [t],
                     );
                 return (
                     a.useEffect(() => {
-                        if (null == e || null == t) return;
-                        let a = (0, F.HL)(e, l);
-                        n !== a && (s(a), d(e, t));
-                    }, [e, d, t, l, n]),
+                        if (null == e || null == l) return;
+                        let a = (0, F.HL)(e, t);
+                        n !== a && (s(a), d(e, l));
+                    }, [e, d, l, t, n]),
                     a.useEffect(() => {
                         c(u);
                     }, [u, c]),
@@ -165,7 +165,7 @@ let K = a.memo(function (e) {
             f = (0, H.Ay)(),
             h = (0, z.r)(V.A.colors.ICON_STRONG).hex(),
             g = null == d || null == m,
-            x = (0 === r.width || 0 === r.height || g) && null != t,
+            x = (0 === r.width || 0 === r.height || g) && null != l,
             v = a.useCallback(() => {
                 null != o.current && u({ width: o.current.offsetWidth, height: o.current.offsetHeight });
             }, []);
@@ -184,18 +184,18 @@ let K = a.memo(function (e) {
             a.useEffect(() => {
                 if (null == o.current) return;
                 let e = o.current,
-                    t = e.getContext("2d");
-                if (null == t) return;
-                let { width: l, height: n } = e;
+                    l = e.getContext("2d");
+                if (null == l) return;
+                let { width: t, height: n } = e;
                 if (0 !== r.width && 0 !== r.height && null != m && m.length > 0) {
-                    let e = l / m.length,
+                    let e = t / m.length,
                         a = -(e * (F.Jh.waveformBarWidth - 1));
-                    (t.clearRect(0, 0, l, n), (t.fillStyle = h));
-                    for (let l = 0; l < m.length; l++) {
-                        let s = m[l] * n,
-                            i = l * e + a,
+                    (l.clearRect(0, 0, t, n), (l.fillStyle = h));
+                    for (let t = 0; t < m.length; t++) {
+                        let s = m[t] * n,
+                            i = t * e + a,
                             r = n / 2 - s / 2;
-                        t.fillRect(i, r, e - a, s);
+                        l.fillRect(i, r, e - a, s);
                     }
                 }
             }, [h, r, f, m]),
@@ -213,17 +213,17 @@ let K = a.memo(function (e) {
         );
     }),
     Z = a.memo(function (e) {
-        let { fineTuning: t, fineTuningResolution: l, duration: a } = e,
+        let { fineTuning: l, fineTuningResolution: t, duration: a } = e,
             { file: s, audio: i } = G();
         return (0, n.jsx)(K, {
             file: s,
             audio: i,
-            waveformSettings: { fineTuning: t, fineTuningResolution: l, duration: a },
+            waveformSettings: { fineTuning: l, fineTuningResolution: t, duration: a },
         });
     });
-var ee = l(518070);
-let et = a.memo(function (e) {
-    let { playing: t, onPausePlayback: l, onPlaybackChange: s, onChangePosition: i, disabled: r = !1 } = e,
+var ee = t(518070);
+let el = a.memo(function (e) {
+    let { playing: l, onPausePlayback: t, onPlaybackChange: s, onChangePosition: i, disabled: r = !1 } = e,
         u = { ...F.Jh },
         { audio: o } = G(),
         c = null != o,
@@ -245,9 +245,9 @@ let et = a.memo(function (e) {
         (g(0), v(0), j(e), A(e));
     }, [o]);
     let _ = a.useCallback(
-            (e, t) => {
-                if ((l(), 0 === e.button))
-                    switch (t) {
+            (e, l) => {
+                if ((t(), 0 === e.button))
+                    switch (l) {
                         case 0:
                             y(!0);
                             break;
@@ -258,7 +258,7 @@ let et = a.memo(function (e) {
                             M(!0);
                     }
             },
-            [l],
+            [t],
         ),
         U = a.useCallback((e) => {
             switch (e) {
@@ -276,26 +276,26 @@ let et = a.memo(function (e) {
         V = a.useCallback(
             (e) => {
                 if (null == o || !p) return;
-                let t = parseInt(e.target.value),
-                    l = t > b ? b : t;
-                (s(O(l)), g(l), v(l));
+                let l = parseInt(e.target.value),
+                    t = l > b ? b : l;
+                (s(O(t)), g(t), v(t));
             },
             [o, s, b, p],
         ),
         z = a.useCallback(
             (e) => {
                 if (null == o || !N) return;
-                let t = parseInt(e.target.value);
-                t < h ? (s(O(h)), v(h)) : t > b ? (s(O(b)), v(b)) : (s(O(t)), v(t));
+                let l = parseInt(e.target.value);
+                l < h ? (s(O(h)), v(h)) : l > b ? (s(O(b)), v(b)) : (s(O(l)), v(l));
             },
             [o, s, b, N, h],
         ),
         B = a.useCallback(
             (e) => {
                 if (null == o || !w) return;
-                let t = parseInt(e.target.value),
-                    l = t > h ? t : h;
-                (s(O(h)), v(h), j(l));
+                let l = parseInt(e.target.value),
+                    t = l > h ? l : h;
+                (s(O(h)), v(h), j(t));
             },
             [o, s, w, h],
         );
@@ -307,17 +307,17 @@ let et = a.memo(function (e) {
             let e;
             if (null != o)
                 return (
-                    t &&
+                    l &&
                         (e = setInterval(() => {
                             o.currentTime < O(b)
                                 ? o.currentTime >= O(x) && v(o.currentTime * E.A.Millis.SECOND)
-                                : (l(O(h)), v(h));
+                                : (t(O(h)), v(h));
                         }, 16)),
                     () => {
                         clearInterval(e);
                     }
                 );
-        }, [o, b, l, x, t, h]),
+        }, [o, b, t, x, l, h]),
         a.useEffect(() => {
             if (u.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
@@ -418,7 +418,7 @@ let et = a.memo(function (e) {
                         (0, n.jsx)("div", {
                             className: ee.i0,
                             children: (0, n.jsx)("div", {
-                                className: C()(ee.lG, { [ee.cB]: N || p || w || t }),
+                                className: C()(ee.lG, { [ee.cB]: N || p || w || l }),
                                 style: { left: `${L(x, T, D, k)}%` },
                             }),
                         }),
@@ -432,11 +432,11 @@ let et = a.memo(function (e) {
         })
     );
 });
-var el = l(980504),
-    en = l(933237);
+var et = t(980504),
+    en = t(933237);
 let ea = { startPositionMs: 0, endPositionMs: 2 * (10 * E.A.Millis.SECOND), playheadPositionMs: 0 },
     es = a.memo(function (e) {
-        let { className: t, volume: l, disabled: s = !1, onChange: i } = e,
+        let { className: l, volume: t, disabled: s = !1, onChange: i } = e,
             { audio: r } = G(),
             [u, o] = a.useState(!1),
             [c, d] = a.useState(ea),
@@ -463,11 +463,11 @@ let ea = { startPositionMs: 0, endPositionMs: 2 * (10 * E.A.Millis.SECOND), play
                 if (null != r) {
                     if (u) return void b();
                     (m >= f ? (r.currentTime = O(h)) : (r.currentTime = O(m)),
-                        (r.volume = (0, k.A)(l)),
+                        (r.volume = (0, k.A)(t)),
                         r.play(),
                         o(!0));
                 }
-            }, [r, f, b, m, u, h, l]),
+            }, [r, f, b, m, u, h, t]),
             p = a.useCallback(
                 (e) => {
                     (d(e), i?.({ startMs: e.startPositionMs, endMs: e.endPositionMs }));
@@ -481,7 +481,7 @@ let ea = { startPositionMs: 0, endPositionMs: 2 * (10 * E.A.Millis.SECOND), play
                 [r],
             );
         return (0, n.jsxs)("div", {
-            className: C()(en.kL, { [en.J_]: g, [en.r9]: !g || s }, t),
+            className: C()(en.kL, { [en.J_]: g, [en.r9]: !g || s }, l),
             children: [
                 (0, n.jsxs)("div", {
                     className: en.k0,
@@ -504,7 +504,7 @@ let ea = { startPositionMs: 0, endPositionMs: 2 * (10 * E.A.Millis.SECOND), play
                         }),
                     ],
                 }),
-                (0, n.jsx)(et, {
+                (0, n.jsx)(el, {
                     playing: u,
                     onPlaybackChange: y,
                     onPausePlayback: b,
@@ -514,22 +514,22 @@ let ea = { startPositionMs: 0, endPositionMs: 2 * (10 * E.A.Millis.SECOND), play
             ],
         });
     });
-var ei = l(102597),
-    er = l(353672);
+var ei = t(102597),
+    er = t(353672);
 let eu = a.memo(function (e) {
-    let { sound: t, volume: l, disabled: s } = e,
+    let { sound: l, volume: t, disabled: s } = e,
         [i, r] = a.useState(!1),
         u = a.useRef(null),
         { file: o, audio: c, loadAudioFromFile: d } = G(),
-        m = a.useMemo(() => (0, ei.A)(t.soundId), [t]);
+        m = a.useMemo(() => (0, ei.A)(l.soundId), [l]);
     return (
         a.useEffect(() => {
             null == u.current &&
-                (u.current = (async function (e, t) {
-                    let l = await fetch(e);
-                    return new File([await l.blob()], t, { type: "audio/mp3" });
-                })(m, t.name).then(d));
-        }, [m, d, t.name]),
+                (u.current = (async function (e, l) {
+                    let t = await fetch(e);
+                    return new File([await t.blob()], l, { type: "audio/mp3" });
+                })(m, l.name).then(d));
+        }, [m, d, l.name]),
         (0, n.jsxs)("div", {
             className: er.i1,
             children: [
@@ -539,7 +539,7 @@ let eu = a.memo(function (e) {
                         : function () {
                               null != c &&
                                   (c.paused
-                                      ? ((c.volume = (0, k.A)(l)),
+                                      ? ((c.volume = (0, k.A)(t)),
                                         (c.currentTime = 0),
                                         c.play(),
                                         r(!0),
@@ -560,56 +560,56 @@ let eu = a.memo(function (e) {
         })
     );
 });
-var eo = l(735529);
+var eo = t(735529);
 let ec = a.memo(function (e) {
-    let { sound: t, volume: l, disabled: a = !1, onChange: s } = e,
+    let { sound: l, volume: t, disabled: a = !1, onChange: s } = e,
         { file: i } = G();
     return (0, n.jsx)(d.D, {
         label: D.intl.string(D.t.CCRKNz),
         children: (0, n.jsxs)("div", {
             className: eo.UV,
             children: [
-                null != t && (0, n.jsx)(eu, { sound: t, volume: l, disabled: a }),
-                null == t && null != i && (0, n.jsx)(es, { className: eo.lF, volume: l, disabled: a, onChange: s }),
+                null != l && (0, n.jsx)(eu, { sound: l, volume: t, disabled: a }),
+                null == l && null != i && (0, n.jsx)(es, { className: eo.lF, volume: t, disabled: a, onChange: s }),
             ],
         }),
     });
 });
-var ed = l(903259),
-    em = l(855986),
-    ef = l(444550),
-    eh = l(983851),
-    eg = l(682163),
-    ex = l(931991),
-    ev = l(71393),
-    eb = l(576705),
-    ej = l(711014),
-    ep = l(287809),
-    ey = l(473145),
-    eC = l(811091),
-    eN = l(209932),
-    eS = l(652215),
-    ew = l(19438);
+var ed = t(903259),
+    em = t(855986),
+    ef = t(444550),
+    eh = t(983851),
+    eg = t(682163),
+    ex = t(931991),
+    ev = t(71393),
+    eb = t(576705),
+    ej = t(711014),
+    ep = t(287809),
+    ey = t(473145),
+    eC = t(811091),
+    eN = t(209932),
+    eS = t(652215),
+    ew = t(19438);
 function eM(e) {
-    let { availableSlots: t, className: l } = e;
+    let { availableSlots: l, className: t } = e;
     return (0, n.jsxs)(M.E, {
-        className: C()(ew._E, l),
+        className: C()(ew._E, t),
         variant: "body-sm/medium",
         color: "text-strong",
         children: [
             (0, n.jsx)(eh.VoiceNormalIcon, { size: "md", color: "currentColor", className: ew.Xk }),
-            D.intl.format(D.t["8Dyg1C"], { slots: t }),
+            D.intl.format(D.t["8Dyg1C"], { slots: l }),
         ],
     });
 }
 function eE(e) {
-    let t,
-        { label: l, value: s, className: i, onChange: r } = e,
+    let l,
+        { label: t, value: s, className: i, onChange: r } = e,
         u = (0, em.cf)([ej.Ay, eb.A, ep.default, ev.A], () => {
             let e = {};
-            for (let t of ej.Ay.getFlattenedGuildIds()) {
-                let l = ev.A.getGuild(t);
-                null != l && (0, ex.ie)(l, eb.A, ep.default).canCreateExpressions && (e[l.id] = l);
+            for (let l of ej.Ay.getFlattenedGuildIds()) {
+                let t = ev.A.getGuild(l);
+                null != t && (0, ex.ie)(t, eb.A, ep.default).canCreateExpressions && (e[t.id] = t);
             }
             return e;
         }),
@@ -617,9 +617,9 @@ function eE(e) {
             [eN.A],
             () => {
                 let e = {};
-                for (let [t, l] of eC.default.entries(u)) {
-                    let n = (0, ey.tO)(l, eN.A.getSoundsForGuild(t) ?? el.pD, l.premiumTier);
-                    e[t] = n;
+                for (let [l, t] of eC.default.entries(u)) {
+                    let n = (0, ey.tO)(t, eN.A.getSoundsForGuild(l) ?? et.pD, t.premiumTier);
+                    e[l] = n;
                 }
                 return e;
             },
@@ -631,8 +631,8 @@ function eE(e) {
     let c = a.useMemo(
             () =>
                 Object.values(u).map((e) => {
-                    let { name: t, id: l } = e;
-                    return { label: t, value: l, disabled: o[l] <= 0 };
+                    let { name: l, id: t } = e;
+                    return { label: l, value: t, disabled: o[t] <= 0 };
                 }),
             [u, o],
         ),
@@ -650,10 +650,10 @@ function eE(e) {
         ),
         m = a.useCallback(
             (e) => {
-                let t = e?.value;
-                return null == t || "" === t
+                let l = e?.value;
+                return null == l || "" === l
                     ? null
-                    : (0, n.jsx)(eM, { className: C()({ [ew.QJ]: e?.disabled }), availableSlots: o[t] });
+                    : (0, n.jsx)(eM, { className: C()({ [ew.QJ]: e?.disabled }), availableSlots: o[l] });
             },
             [o],
         ),
@@ -664,9 +664,9 @@ function eE(e) {
             },
             [o, r],
         ),
-        g = null == (t = o[s ?? ""]) || t > 0 ? s : void 0;
+        g = null == (l = o[s ?? ""]) || l > 0 ? s : void 0;
     return (0, n.jsx)(ef.p, {
-        label: l,
+        label: t,
         className: i,
         onChange: h,
         value: g,
@@ -679,10 +679,11 @@ function eE(e) {
         "data-migration-pending": !0,
     });
 }
-let ek = [{ name: "audio", extensions: ["mp3", "wav", "ogg", "opus", "x-wav", "mp4"] }];
-function eA(e) {
-    let { guildId: t, sourceFile: l, existingSound: s, onClose: y, transitionState: C, showGuildPicker: N = !1 } = e,
-        [S, w] = a.useState(l?.name ?? s?.name ?? ""),
+var ek = t(131501);
+let eA = [{ name: "audio", extensions: ["mp3", "wav", "ogg", "opus", "x-wav", "mp4"] }];
+function eT(e) {
+    let { guildId: l, sourceFile: t, existingSound: s, onClose: y, transitionState: C, showGuildPicker: N = !1 } = e,
+        [S, w] = a.useState(t?.name ?? s?.name ?? ""),
         [M, E] = a.useState(s?.volume ?? 1),
         [k, A] = a.useState(M),
         [T, I] = a.useState(M);
@@ -694,24 +695,24 @@ function eA(e) {
         [B, H] = a.useState(null),
         [Y, q] = a.useState(null),
         [Q, W] = a.useState("ready"),
-        [X, $] = a.useState(t);
+        [X, $] = a.useState(l);
     function K(e) {
         if (e instanceof g.A) H(e);
         else if (e instanceof Error) {
-            let t = { status: 500, body: { message: e.message } };
-            H(new g.A(t));
+            let l = { status: 500, body: { message: e.message } };
+            H(new g.A(l));
         } else H(new g.A(e));
     }
     a.useEffect(() => {
-        l?.file != null &&
+        t?.file != null &&
             (async function (e) {
                 try {
                     (await _(e), W("ready"), H(null));
                 } catch (e) {
                     K(e);
                 }
-            })(l.file);
-    }, [l?.file, _]);
+            })(t.file);
+    }, [t?.file, _]);
     let Z = (function (e) {
             switch (e) {
                 case "encoding":
@@ -724,21 +725,21 @@ function eA(e) {
             return null;
         })(Q),
         ee = "uploading" === Q || "encoding" === Q,
-        et = null != s,
-        el =
+        el = null != s,
+        et =
             S.length >= 2 &&
-            (et || null != L) &&
+            (el || null != L) &&
             null != X &&
             (function (e) {
                 if (null == e) return !0;
-                let t = (e.endMs - e.startMs) / 1e3;
-                return t > 0 && t <= 5;
+                let l = (e.endMs - e.startMs) / 1e3;
+                return l > 0 && l <= 5;
             })(Y),
-        en = a.useCallback(async (e, t) => {
+        en = a.useCallback(async (e, l) => {
             W("encoding");
             try {
-                let l = await (0, ed.Yo)(e, t);
-                return (W("ready"), l);
+                let t = await (0, ed.Yo)(e, l);
+                return (W("ready"), t);
             } catch (e) {
                 throw (W("encoding-failed"), e);
             }
@@ -748,14 +749,14 @@ function eA(e) {
             i()(null != X, "Cannot submit soundboard sound with no guildId");
             let e = L;
             if (null != Y) {
-                let t = await en(L, Y);
-                if (null == t) return;
-                e = t;
+                let l = await en(L, Y);
+                if (null == l) return;
+                e = l;
             }
-            let t = (0, ed.YK)(e);
+            let l = (0, ed.YK)(e);
             W("uploading");
             try {
-                (await (0, ed.JX)({ readPromise: t, guildId: X, name: S, volume: M, emojiId: F, emojiName: O }),
+                (await (0, ed.JX)({ readPromise: l, guildId: X, name: S, volume: M, emojiId: F, emojiName: O }),
                     W("ready"));
             } catch (e) {
                 throw new g.A(e);
@@ -764,7 +765,7 @@ function eA(e) {
         es = a.useCallback(async () => {
             (i()(null != X, "Cannot submit soundboard sound with no guildId"), z(!0), H(null));
             try {
-                (et
+                (el
                     ? await (0, p.xV)({
                           guildId: X,
                           soundId: s.soundId,
@@ -780,7 +781,7 @@ function eA(e) {
             } finally {
                 (W("ready"), z(!1), E(1), U(1));
             }
-        }, [et, y, X, s, S, M, F, O, ea, U]);
+        }, [el, y, X, s, S, M, F, O, ea, U]);
     ((0, x.Ay)(() => {
         (_(null), j.default.track(eS.HAw.OPEN_MODAL, { type: "Soundboard Upload Sound", guild_id: X }));
     }),
@@ -788,6 +789,7 @@ function eA(e) {
             E(Math.min(M, J));
         }, [M, E, J]));
     let ei = (0, n.jsx)(v.A, {
+            className: ek.Gm,
             guildId: X,
             emojiId: F,
             emojiName: O,
@@ -800,19 +802,19 @@ function eA(e) {
             () => [
                 { variant: "secondary", text: D.intl.string(D.t.Khpixd), onClick: y, disabled: V },
                 {
-                    text: et ? D.intl.string(D.t.bZY171) : D.intl.string(D.t.RGJbYB),
+                    text: el ? D.intl.string(D.t.bZY171) : D.intl.string(D.t.RGJbYB),
                     onClick: es,
                     variant: "primary",
-                    disabled: !el,
+                    disabled: !et,
                     loading: V,
                 },
             ],
-            [es, el, V, et, y],
+            [es, et, V, el, y],
         );
     return (0, n.jsx)(r.a, {
         onClose: y,
         transitionState: C,
-        title: et ? D.intl.string(D.t.HmsZGS) : D.intl.string(D.t["ioD/9I"]),
+        title: el ? D.intl.string(D.t.HmsZGS) : D.intl.string(D.t["ioD/9I"]),
         actions: er,
         children: (0, n.jsxs)(o.n, {
             children: [
@@ -820,8 +822,8 @@ function eA(e) {
                     !B.hasFieldErrors() &&
                     (0, n.jsx)(c.w, { type: "critical", message: B.message, role: "alert" }),
                 N ? (0, n.jsx)(eE, { label: D.intl.string(D.t.UYt7iQ), value: X, onChange: $ }) : null,
-                (et || null != L) && (0, n.jsx)(ec, { sound: s, volume: M, disabled: ee, onChange: q }),
-                et || null != l
+                (el || null != L) && (0, n.jsx)(ec, { sound: s, volume: M, disabled: ee, onChange: q }),
+                el || null != t
                     ? null
                     : (0, n.jsx)(d.D, {
                           required: !0,
@@ -838,19 +840,22 @@ function eA(e) {
                                       K(e);
                                   }
                               },
-                              filters: ek,
+                              filters: eA,
                           }),
                       }),
                 (0, n.jsxs)(m.M, {
                     children: [
-                        (0, n.jsx)(f.k, {
-                            required: !0,
-                            label: D.intl.string(D.t.NpJGaM),
-                            placeholder: D.intl.string(D.t.NpJGaM),
-                            error: B?.getFirstFieldErrorMessage("name"),
-                            value: S,
-                            onChange: w,
-                            maxLength: 32,
+                        (0, n.jsx)("div", {
+                            className: ek.Gm,
+                            children: (0, n.jsx)(f.k, {
+                                required: !0,
+                                label: D.intl.string(D.t.NpJGaM),
+                                placeholder: D.intl.string(D.t.NpJGaM),
+                                error: B?.getFirstFieldErrorMessage("name"),
+                                value: S,
+                                onChange: w,
+                                maxLength: 32,
+                            }),
                         }),
                         ei,
                     ],

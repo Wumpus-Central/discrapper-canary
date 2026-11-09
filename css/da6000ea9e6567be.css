@@ -26,14 +26,19 @@
     width: 124px
 }
 
+.collapsedIllustrationAsset_Vp8y6R {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .collapsedIllustrationAsset_Vp8y6R,
 .media_Vp8y6R {
+    display: block;
     height: 100%;
     width: 100%
 }
 
 .media_Vp8y6R {
-    display: block;
     -o-object-fit: cover;
     object-fit: cover
 }
@@ -270,4 +275,4 @@
     border-radius: 8px 8px 0 0
 }
 
-/*# sourceMappingURL=a64430642ac6c474.css.map*/
+/*# sourceMappingURL=da6000ea9e6567be.css.map*/
