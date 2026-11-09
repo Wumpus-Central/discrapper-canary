@@ -1148,7 +1148,7 @@ function ez(e) {
     }),
     eB(["GUILD_MEMBERS_CHUNK"], (e) => {
         a.Ay.Emitter.batched(() => {
-            (ex.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
+            (ex.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found, nonce: e.nonce }),
                 null != e.presences && e$(e.presences, e.guild_id).forEach(ez),
                 eP.A.flush("GUILD_MEMBERS_CHUNK"));
         });
@@ -2189,7 +2189,11 @@ let e9 = new e4(l.h, {
                     ? r()(e.userIds)
                           .chunk(100)
                           .forEach((t) => {
-                              F.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
+                              F.requestGuildMembers(e.guildIds, {
+                                  userIds: t,
+                                  presences: !!e.presences,
+                                  nonce: e.nonce,
+                              });
                           })
                     : F.requestGuildMembers(e.guildIds, { query: e.query, limit: e.limit, presences: !!e.presences })),
             !1

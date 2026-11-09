@@ -566,6 +566,10 @@ let F = new k(r.h, {
         let { guildId: t, user: n } = e;
         return M(t).removeMember(n.id);
     },
+    GUILD_MEMBER_REMOVE_LOCAL: function (e) {
+        let { guildId: t, userId: n } = e;
+        return M(t).removeMember(n);
+    },
     GUILD_ROLE_UPDATE: G,
     GUILD_ROLE_DELETE: G,
     GUILD_MEMBER_PROFILE_UPDATE: function (e) {

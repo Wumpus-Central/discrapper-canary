@@ -1814,8 +1814,8 @@ class eZ extends eX.EventEmitter {
         this.send(eQ.VOICE_SERVER_PING, null);
     }
     requestGuildMembers(e, t) {
-        let { query: n, limit: i, userIds: r, presences: a } = t;
-        this.send(eQ.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: a });
+        let { query: n, limit: i, userIds: r, presences: a, nonce: s } = t;
+        this.send(eQ.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: a, nonce: s });
     }
     searchRecentMembers(e, t) {
         let { query: n, continuationToken: i } = t;

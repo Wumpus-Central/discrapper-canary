@@ -308,6 +308,8 @@ let F = {
             presences: n,
         });
     },
+    requestMembersByIdWithNonce: (e, t, n) =>
+        s.h.dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds: [e], userIds: t, presences: !1, nonce: n }),
     move(e, t, n, i) {
         s.h.dispatch({ type: "GUILD_MOVE", fromIndex: e, toIndex: t, fromFolderIndex: n, toFolderIndex: i });
     },
