@@ -3,8 +3,8 @@ var l = n(477900),
     a = n(582128),
     r = n(66455),
     i = n(607470),
-    s = n(609174),
-    u = n(367974),
+    u = n(609174),
+    s = n(367974),
     c = n(77729),
     o = n(292490);
 function d(e) {
@@ -13,7 +13,7 @@ function d(e) {
 }
 function f(e) {
     let { children: t, ref: n } = e,
-        r = (0, s.Y_)();
+        r = (0, u.Y_)();
     return (
         a.useImperativeHandle(n, () => ({ releaseSource() {}, seek() {} }), []),
         (0, l.jsxs)("div", {
@@ -31,7 +31,7 @@ function p(e) {
             children: p,
             ref: m,
         } = e,
-        v = (0, s.Y_)(),
+        v = (0, u.Y_)(),
         h = a.useRef(null),
         x = (0, r.A)(v.editMetadata?.start ?? 0),
         C = (0, a.useMemo)(
@@ -56,7 +56,7 @@ function p(e) {
         m,
         () => ({
             releaseSource() {
-                (0, u.A)(h.current);
+                (0, s.A)(h.current);
             },
             seek(e) {
                 y(e);
@@ -94,7 +94,7 @@ function p(e) {
             let e = h.current;
             if (null != e)
                 return () => {
-                    (0, u.A)(e);
+                    (0, s.A)(e);
                 };
         }, [C, h, k]),
         a.useEffect(() => {

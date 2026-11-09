@@ -1,27 +1,27 @@
-var i = n(855986),
-    l = n(793574),
-    s = n(818349),
-    r = n(419490),
-    a = n(489496);
-function o(e) {
-    let t = (0, s.K)(e),
-        { clipsEnabled: n } = r.Ay.getState().clipsSettings;
+var e = i(855986),
+    l = i(793574),
+    a = i(818349),
+    p = i(419490),
+    c = i(489496);
+function s(n) {
+    let t = (0, a.K)(n),
+        { clipsEnabled: i } = p.Ay.getState().clipsSettings;
     (null != t.enableAutoclipping &&
-        t.enableAutoclipping !== r.Ay.getEnableAutoclipping() &&
-        a.uL(t.enableAutoclipping, !0, l.A.CLIPS_SETTINGS),
-        t.clipsEnabled !== n &&
-            a.yO({ clipsEnabled: t.clipsEnabled, trackAnalytics: !0, analyticsLocation: l.A.CLIPS_SETTINGS }));
+        t.enableAutoclipping !== p.Ay.getEnableAutoclipping() &&
+        c.uL(t.enableAutoclipping, !0, l.A.CLIPS_SETTINGS),
+        t.clipsEnabled !== i &&
+            c.yO({ clipsEnabled: t.clipsEnabled, trackAnalytics: !0, analyticsLocation: l.A.CLIPS_SETTINGS }));
 }
-n.d(
+i.d(
     t,
     {},
     {
         U: function () {
             return {
-                value: (0, i.bG)([r.Ay], () =>
-                    (0, s.r)(r.Ay.getState().clipsSettings.clipsEnabled, r.Ay.getEnableAutoclipping()),
+                value: (0, e.bG)([p.Ay], () =>
+                    (0, a.r)(p.Ay.getState().clipsSettings.clipsEnabled, p.Ay.getEnableAutoclipping()),
                 ),
-                onChange: o,
+                onChange: s,
             };
         },
     },

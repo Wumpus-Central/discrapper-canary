@@ -12,11 +12,11 @@ var r = n(477900),
     h = n(421108),
     j = n(818348),
     f = n(792996),
-    k = n(395822);
-function v(t) {
+    N = n(395822);
+function k(t) {
     let { days: e } = t;
     return (0, r.jsxs)("div", {
-        className: k.S5,
+        className: N.S5,
         children: [
             (0, r.jsx)(d.ClockIcon, { size: "sm", color: "currentColor" }),
             (0, r.jsx)(m.E, {
@@ -27,7 +27,7 @@ function v(t) {
         ],
     });
 }
-function N(t) {
+function v(t) {
     let {
         timeLeft: { days: e, hours: n, minutes: s, seconds: o },
     } = t;
@@ -39,7 +39,7 @@ function N(t) {
                 (0, r.jsx)(
                     m.E,
                     {
-                        className: c()(k.g2, { [k.$2]: e }),
+                        className: c()(N.g2, { [N.$2]: e }),
                         variant: "body-sm/semibold",
                         color: "currentColor",
                         children: t,
@@ -50,10 +50,10 @@ function N(t) {
         });
     }
     function i() {
-        return (0, r.jsx)(m.E, { className: k.At, variant: "body-lg/semibold", children: ":" });
+        return (0, r.jsx)(m.E, { className: N.At, variant: "body-lg/semibold", children: ":" });
     }
     return (0, r.jsxs)("div", {
-        className: k.kz,
+        className: N.kz,
         children: [e > 0 && l(e), e > 0 && i(), l(n), i(), l(s), i(), l(o, !0)],
     });
 }
@@ -63,7 +63,7 @@ n.d(
     {
         A: function (t) {
             let { className: e, color: n = "default", sticky: s = !1, children: o } = t,
-                i = s ? k.qf : void 0;
+                i = s ? N.qf : void 0;
             function d() {
                 let {
                     className: t,
@@ -74,7 +74,7 @@ n.d(
             }
             if ("nitro-pink" === n)
                 return d({
-                    className: c()(k.cI, k.p3, i, e),
+                    className: c()(N.cI, N.p3, i, e),
                     customStyle: {
                         "--custom-notice-background": "var(--background-surface-highest)",
                         "--custom-notice-text": "var(--text-strong)",
@@ -87,7 +87,7 @@ n.d(
                     theme: t,
                     children: (t) =>
                         d({
-                            className: c()(t, k.cI, i, e),
+                            className: c()(t, N.cI, i, e),
                             customStyle: {
                                 "--custom-notice-background": n,
                                 "--custom-notice-text": "var(--text-strong)",
@@ -98,7 +98,7 @@ n.d(
             }
             return (0, r.jsx)(u.N, {
                 theme: j.NJ.DARK,
-                children: (t) => d({ className: c()(t, k.cI, i, e), noticeColor: a.Hv.BRAND }),
+                children: (t) => d({ className: c()(t, N.cI, i, e), noticeColor: a.Hv.BRAND }),
             });
         },
         S: function (t) {
@@ -111,8 +111,8 @@ n.d(
             null == n)
                 ? null
                 : n.days > 0
-                  ? (0, r.jsx)(v, { days: n.days })
-                  : (0, r.jsx)(N, { timeLeft: n });
+                  ? (0, r.jsx)(k, { days: n.days })
+                  : (0, r.jsx)(v, { timeLeft: n });
         },
     },
 );

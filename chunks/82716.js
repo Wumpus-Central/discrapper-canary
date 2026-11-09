@@ -2,8 +2,8 @@ var l = n(477900),
     a = n(582128),
     r = n(27232),
     i = n(505930),
-    s = n(866665),
-    u = n(408278),
+    u = n(866665),
+    s = n(408278),
     c = n(609174),
     o = n(489496),
     d = n(683825),
@@ -21,11 +21,11 @@ n.d(
                     [e],
                 );
             return (0, l.jsx)(
-                s.m,
+                u.m,
                 {
                     text: f.intl.string(e.isFavorite ? d.default.IZsalP : d.default.ihBfyA),
                     position: "top",
-                    children: (0, l.jsx)(u.K, {
+                    children: (0, l.jsx)(s.K, {
                         onClick: t,
                         icon: e.isFavorite ? r.StarIcon : i.StarOutlineIcon,
                         "aria-label": f.intl.string(f.t.k8fFjp),

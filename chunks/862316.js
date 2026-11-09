@@ -44,10 +44,10 @@ var k = t(632760),
     D = t(24686),
     G = t(147190),
     H = t(556300),
-    V = t(990474);
+    $ = t(990474);
 t(938796);
-var $ = t(380610),
-    B = t(355435),
+var B = t(380610),
+    V = t(355435),
     z = t(486889),
     K = t(333421),
     F = t(100392),
@@ -262,10 +262,10 @@ function ed(e) {
             parse: (e, n) => ({ target: e, type: "devLink" }),
             react: (e, n, t) => {
                 let i = e.target[0];
-                return (0, $.h4)(i)
+                return (0, B.h4)(i)
                     ? (0, l.jsxs)(
                           a.Fragment,
-                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(B.default, { url: i }, i)] },
+                          { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(V.default, { url: i }, i)] },
                           t.key,
                       )
                     : (0, F.W0)(i)
@@ -350,7 +350,7 @@ function ed(e) {
             })(e),
         ),
         channelMention: (0, H.A)(e),
-        commandMention: (0, V.Ay)(e),
+        commandMention: (0, $.Ay)(e),
         attachmentLink: {
             react(n, a, i) {
                 let s = i.noStyleAndInteraction

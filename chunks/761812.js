@@ -1,1 +1,1 @@
-e.exports = { B: "smallCardItem_-T_N-w" };
+s.exports = { B: "smallCardItem_-T_N-w" };

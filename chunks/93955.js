@@ -17,13 +17,13 @@ var l = n(477900),
     E = n(288106),
     v = n(604913),
     C = n(65238),
-    y = n(773669),
-    _ = n(975571),
+    _ = n(773669),
+    y = n(975571),
     b = n(304210),
     S = n(324157),
     I = n(480750),
     A = n(727142);
-let j = function (e) {
+let k = function (e) {
     let { text: t, icon: n, indicatorColor: r } = e;
     return (0, l.jsxs)("span", {
         className: A.I,
@@ -41,7 +41,7 @@ let j = function (e) {
     });
 };
 var L = n(262056),
-    k = n(775602),
+    j = n(775602),
     N = n(295986);
 function O(e) {
     let { assetPath: t } = e,
@@ -68,7 +68,7 @@ function O(e) {
 }
 let R = function (e) {
     let { assetPath: t, progress: n, progressText: r, progressColor: s } = e,
-        a = (0, i.bG)([k.Ay], () => k.Ay.useReducedMotion)
+        a = (0, i.bG)([j.Ay], () => j.Ay.useReducedMotion)
             ? (0, l.jsx)(O, { assetPath: t })
             : (0, l.jsx)("img", { src: t, alt: "", className: N.C, width: 120, height: 120 });
     return null == n
@@ -86,12 +86,12 @@ let R = function (e) {
 var T = n(821609),
     M = n(450481),
     D = n(792996),
-    P = n(634293);
-function B(e) {
+    B = n(634293);
+function P(e) {
     let { product: t, onUseNowClick: n, useNowButtonVariant: r = "overlay-secondary" } = e,
         { handleUseNow: s, isApplying: a } = (0, M.p)({ product: t });
     return (0, l.jsx)("div", {
-        className: P.l,
+        className: B.l,
         children: (0, l.jsx)(T.$, {
             variant: r,
             onClick: () => {
@@ -116,10 +116,10 @@ let w = function (e) {
         onUseNowClick: o,
     } = e;
     return t === E.GM.CONSUMED && null != n
-        ? (0, l.jsx)(B, { product: n, onUseNowClick: o, useNowButtonVariant: s })
+        ? (0, l.jsx)(P, { product: n, onUseNowClick: o, useNowButtonVariant: s })
         : t === E.GM.EARNED
           ? (0, l.jsx)("div", {
-                className: P.l,
+                className: B.l,
                 children: (0, l.jsx)(T.$, {
                     text: D.intl.string(D.t.pVBlCH),
                     variant: r,
@@ -168,7 +168,7 @@ function X(e) {
             onClaim: E,
         } = e,
         v = null != s ? d : i,
-        { handleInlineHelpTextClick: C, handleClaim: y, handleUseNowClick: _ } = z(t, n, E);
+        { handleInlineHelpTextClick: C, handleClaim: _, handleUseNowClick: y } = z(t, n, E);
     return (0, l.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
@@ -185,15 +185,15 @@ function X(e) {
                 children: [
                     null != v &&
                         (0, l.jsx)(c.E, { variant: "body-md/semibold", color: "text-strong", children: (0, x.U)(v) }),
-                    null != m && (0, l.jsx)(j, { icon: u.ClockIcon, text: m }),
+                    null != m && (0, l.jsx)(k, { icon: u.ClockIcon, text: m }),
                     (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: h,
                         claimRewardButtonVariant: p,
                         useNowButtonVariant: p,
                         isClaiming: f,
-                        onClaim: y,
-                        onUseNowClick: _,
+                        onClaim: _,
+                        onUseNowClick: y,
                     }),
                 ],
             }),
@@ -209,21 +209,21 @@ function Y(e) {
             progressColor: f,
             backgroundUrl: v,
             title: C,
-            description: y,
+            description: _,
             progressText: b,
             timeLeftText: S,
             contentThemeClassName: A,
-            rewardProduct: k,
+            rewardProduct: j,
             claimRewardButtonVariant: N,
             helpCenterId: O,
             isClaiming: T,
             onClaim: M,
         } = e,
-        P = null != O && "" !== O ? _.A.getArticleURL(O) : null,
-        { handleInlineHelpTextClick: B, handleClaim: H, handleUseNowClick: U } = z(t, n, M),
+        B = null != O && "" !== O ? y.A.getArticleURL(O) : null,
+        { handleInlineHelpTextClick: P, handleClaim: H, handleUseNowClick: U } = z(t, n, M),
         G = r.useCallback(() => {
-            null != P && ((0, I.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(P));
-        }, [t, n, P]);
+            null != B && ((0, I.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(B));
+        }, [t, n, B]);
     return (0, l.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
@@ -239,7 +239,7 @@ function Y(e) {
                 gap: 10,
                 align: "start",
                 className: F._,
-                onClick: B,
+                onClick: P,
                 children: [
                     (0, l.jsxs)(o.B, {
                         direction: "vertical",
@@ -251,11 +251,11 @@ function Y(e) {
                                 color: "text-strong",
                                 children: (0, x.U)(C),
                             }),
-                            null != y &&
+                            null != _ &&
                                 (0, l.jsx)(c.E, {
                                     variant: "body-sm/medium",
                                     color: "text-subtle",
-                                    children: (0, x.U)(y),
+                                    children: (0, x.U)(_),
                                 }),
                         ],
                     }),
@@ -265,8 +265,8 @@ function Y(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != b && (0, l.jsx)(j, { text: b, indicatorColor: f ?? L.W }),
-                            null != S && (0, l.jsx)(j, { icon: u.ClockIcon, text: S }),
+                            null != b && (0, l.jsx)(k, { text: b, indicatorColor: f ?? L.W }),
+                            null != S && (0, l.jsx)(k, { icon: u.ClockIcon, text: S }),
                         ],
                     }),
                 ],
@@ -279,14 +279,14 @@ function Y(e) {
                 children: [
                     (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
-                        rewardProduct: k,
+                        rewardProduct: j,
                         claimRewardButtonVariant: N,
                         isClaiming: T,
                         onClaim: H,
                         onUseNowClick: U,
                     }),
                     t.rewardStatus !== E.GM.EARNED &&
-                        null != P &&
+                        null != B &&
                         (0, l.jsx)(m.m, {
                             text: D.intl.string(D.t.FdGl5A),
                             ariaHidden: !0,
@@ -305,7 +305,7 @@ function Y(e) {
 }
 function q(e) {
     let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: o, isClaiming: c, onClaim: u } = e,
-        d = (0, i.bG)([y.default], () => y.default.locale);
+        d = (0, i.bG)([_.default], () => _.default.locale);
     r.useEffect(() => {
         (0, I.l)(s, n, $.Z.PROMO_VIEWED);
     }, [s.id, n]);
@@ -336,11 +336,11 @@ function q(e) {
         x.showProgressRing && null == C)
     )
         return null;
-    let _ = x.showProgressRing && null != C,
+    let y = x.showProgressRing && null != C,
         {
             title: b,
             description: A,
-            progressText: j,
+            progressText: k,
             timeLeftText: L,
         } = (0, S.MZ)({
             promotion: s,
@@ -350,16 +350,16 @@ function q(e) {
             daysRemaining: v,
             locale: d,
         }),
-        k = {
+        j = {
             promotion: s,
             surface: n,
             assetPath: x.assetPath,
-            progress: _ ? C : null,
+            progress: y ? C : null,
             progressColor: h?.progressColor,
             backgroundUrl: g.backgroundUrl,
             title: b,
             description: A,
-            progressText: j,
+            progressText: k,
             timeLeftText: L,
             contentThemeClassName: V[f],
             rewardProduct: o,
@@ -368,7 +368,7 @@ function q(e) {
             isClaiming: c,
             onClaim: u,
         };
-    return "condensed" === t ? (0, l.jsx)(X, { ...k }) : (0, l.jsx)(Y, { ...k });
+    return "condensed" === t ? (0, l.jsx)(X, { ...j }) : (0, l.jsx)(Y, { ...j });
 }
 let Z = function (e) {
     let { variant: t, surface: n, collectionId: s } = e,

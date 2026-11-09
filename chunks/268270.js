@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     os: "heroBlock_sIa-bu",
     vK: "banner_sIa-bu",
     no: "responsive_sIa-bu",

@@ -30,7 +30,7 @@ function v(e) {
               className: p.hm,
               children: (0, l.jsx)(m.v3.Provider, {
                   value: f,
-                  children: n.map((e, t) => (0, l.jsx)(y, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: n.map((e, t) => (0, l.jsx)(_, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
@@ -57,11 +57,11 @@ function C(e) {
             getItemKey: E,
             maintainFocusOnReorder: !0,
             renderItem: (e, t, n) =>
-                (0, l.jsx)(y, { item: e, index: n, prioritizedCurrency: a, listItemProps: t }, e.skuId),
+                (0, l.jsx)(_, { item: e, index: n, prioritizedCurrency: a, listItemProps: t }, e.skuId),
         }),
     });
 }
-function y(e) {
+function _(e) {
     let { item: t, index: n, prioritizedCurrency: r, listItemProps: s } = e;
     return (0, l.jsx)(a.R9, {
         newValue: { tilePosition: n, pageSection: "top 4", categoryPosition: 0 },

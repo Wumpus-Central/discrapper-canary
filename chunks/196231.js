@@ -16,7 +16,7 @@ var l = n(477900),
     E = n(652215),
     v = n(792996),
     C = n(762917);
-function y(e) {
+function _(e) {
     let { skuId: t, unpublishedAt: n } = e,
         r = (0, d.ty)(t),
         s = (0, g.$)(r) ? r : null;
@@ -40,16 +40,16 @@ n.d(
                     handleTransition: g,
                     listItemProps: p,
                 } = e,
-                _ = a?.categorySkuId;
-            null == _ && null != a && (_ = c.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
-            let b = _ ?? n?.skuId ?? "",
+                y = a?.categorySkuId;
+            null == y && null != a && (y = c.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
+            let b = y ?? n?.skuId ?? "",
                 { handleCardVisibilityChange: S } = (0, m.Z)(b, d, "marketing featured block"),
                 I = (0, f.s4)(n, a, u),
                 A = r.useRef(null),
-                j = a?.bodyText,
+                k = a?.bodyText,
                 L = n?.isOrbsExclusive,
-                k = a?.name ?? n?.name,
-                N = null != k ? v.intl.formatToPlainString(v.t.frSHlf, { destination: k }) : void 0,
+                j = a?.name ?? n?.name,
+                N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
                 O = (0, o.uM)(),
                 R = r.useCallback(
                     (e, t) => {
@@ -82,10 +82,10 @@ n.d(
                     innerRef: A,
                     backgroundImageUrl: I,
                     title:
-                        null != j
-                            ? { text: j, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
+                        null != k
+                            ? { text: k, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
                             : void 0,
-                    badge: (0, l.jsx)(y, { skuId: b, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
+                    badge: (0, l.jsx)(_, { skuId: b, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: v.intl.string(v.t.jVcuVY),
                     "aria-label": N,
                     onButtonClick: T,

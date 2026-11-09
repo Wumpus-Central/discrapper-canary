@@ -1,12 +1,12 @@
-n.d(
-    t,
+a.d(
+    u,
     {},
     {
-        K: function (e) {
-            return "off" === e ? { clipsEnabled: !1 } : { clipsEnabled: !0, enableAutoclipping: "auto" === e };
+        K: function (n) {
+            return "off" === n ? { clipsEnabled: !1 } : { clipsEnabled: !0, enableAutoclipping: "auto" === n };
         },
-        r: function (e, t) {
-            return e ? (t ? "auto" : "manual") : "off";
+        r: function (n, u) {
+            return n ? (u ? "auto" : "manual") : "off";
         },
     },
 );
