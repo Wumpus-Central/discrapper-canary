@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 669244, Version Hash: e8bb2bd58e5230148936a47bf3ed0a1aafa307c2`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 669247, Version Hash: e1d74a215095290d10fe8626f25008a26af77ff6`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "669244";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "669247";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -2551,7 +2551,7 @@ let rh = (0, i9.Fe)({
             n.e(812618),
             n.e(154663),
             n.e(34486),
-            n.e(20671),
+            n.e(123943),
             n.e(460703),
             n.e(36579),
             n.e(12960),
@@ -2562,8 +2562,8 @@ let rh = (0, i9.Fe)({
             n.e(433452),
             n.e(959275),
             n.e(624649),
-        ]).then(n.bind(n, 367234)),
-    webpackId: 367234,
+        ]).then(n.bind(n, 519954)),
+    webpackId: 519954,
 });
 var rI = n(499466),
     rp = n(751841);
@@ -13571,7 +13571,7 @@ function fg(e) {
                     n.e(812618),
                     n.e(154663),
                     n.e(34486),
-                    n.e(20671),
+                    n.e(123943),
                     n.e(460703),
                     n.e(36579),
                     n.e(12960),
@@ -15747,7 +15747,7 @@ let IW = "isHideDevBanner",
                     className: td()(Ij.Wz, Ij.mr),
                     children: [
                         (0, v.jsx)(IH, { className: Ij.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "669244" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "669247" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
