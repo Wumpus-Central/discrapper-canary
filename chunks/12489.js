@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(858899),
     r = n(192308),
     a = n(976860),
@@ -37,21 +37,23 @@ class u extends l.A {
 var _ = n(573879),
     E = n(652215),
     A = n(792996);
-let f = new (class extends u {
-    onSwitchStart() {}
-    onSwitchSuccess(e, t) {
-        setTimeout(() => {
-            (t && (0, a.pX)(E.BVt.ME),
-                (0, i.P0)({
-                    text: A.intl.formatToPlainString(A.t.wx7O3L, { username: e.username }),
-                    variant: "success",
-                }));
-        }, 100);
-    }
-    onSwitchError() {
-        (0, i.P0)({ text: A.intl.string(A.t.pqvKWA), variant: "critical" });
-    }
-    onSwitchComplete() {
-        ((0, r.Oo)(_.ov), (0, r.Oo)(_.Gl));
-    }
-})();
+let f = "SWITCH_ACCOUNTS_TOAST",
+    h = new (class extends u {
+        onSwitchStart() {}
+        onSwitchSuccess(e, t) {
+            setTimeout(() => {
+                (t && (0, a.pX)(E.BVt.ME),
+                    (0, i.P0)({
+                        text: A.intl.formatToPlainString(A.t.wx7O3L, { username: e.username }),
+                        variant: "success",
+                        toastKey: f,
+                    }));
+            }, 100);
+        }
+        onSwitchError() {
+            (0, i.P0)({ text: A.intl.string(A.t.pqvKWA), variant: "critical", toastKey: f });
+        }
+        onSwitchComplete() {
+            ((0, r.Oo)(_.ov), (0, r.Oo)(_.Gl));
+        }
+    })();

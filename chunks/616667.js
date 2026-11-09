@@ -50,7 +50,9 @@ function A(e) {
             return (
                 i.useEffect(() => {
                     if (null == l) return;
-                    let t = setTimeout(() => (0, h.VD)(e), p);
+                    let t = setTimeout(() => {
+                        h.WE.getState().currentToastMap.get(e) === l && (0, h.VD)(e);
+                    }, p);
                     return () => clearTimeout(t);
                 }, [l, p, e]),
                 i.useEffect(() => {
