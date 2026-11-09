@@ -57,6 +57,7 @@ n.d(
                 anchorRef: t,
                 asContainer: !0,
                 forceOpen: (null != n && a) || T,
+                onTooltipHide: T ? m : void 0,
                 hideOnClick: !1,
                 position: "bottom",
                 align: "right",
