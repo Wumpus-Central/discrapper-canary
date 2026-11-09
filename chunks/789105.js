@@ -33,9 +33,12 @@ function f(e) {
     return null != e && Date.now() - new Date(e).getTime() < 6e4;
 }
 function h(e) {
-    let { id: t, addedMembers: n } = e,
-        i = r.default.getId();
-    null == i || null == n || (n.some((e) => e.userId === i) && (0, a.Ye)(t).catch(o.tEg));
+    let { id: t, addedMembers: n, removedMemberIds: i } = e,
+        s = r.default.getId();
+    null == s ||
+        (i?.includes(s) === !0
+            ? (0, a.i_)(t, { trackAnalytics: !1 })
+            : n?.some((e) => e.userId === s) === !0 && (0, a.Ye)(t).catch(o.tEg));
 }
 function I(e) {
     let { channel: t } = e;
