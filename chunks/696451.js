@@ -500,13 +500,14 @@ let ed = new eo(l.h, {
             }));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
-        e.guilds.forEach((e) => {
+        (e.guilds.forEach((e) => {
             let t = e.id;
             (J({ id: t, members: e.members }),
                 e.activity_instances?.forEach((e) => {
                     Z(t, e.participants);
                 }));
-        });
+        }),
+            U++);
     },
     OVERLAY_INITIALIZE: function (e) {
         let { guildMembers: t } = e;
