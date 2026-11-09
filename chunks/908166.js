@@ -11,18 +11,20 @@ t.d(
                     selectedSkuId: a,
                     skuIds: t,
                     isGift: s,
-                    getOrCreateSetupIntent: i,
+                    isRecurringGiftCheckout: i,
+                    getOrCreateSetupIntent: h,
                 } = (0, r.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     skuIds: e.skuIds,
                     isGift: e.isGift,
+                    isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
                     getOrCreateSetupIntent: e.getOrCreateSetupIntent,
                 })),
-                h = a ?? (1 === t.length ? t[0] : void 0),
-                u = l.useMemo(() => ({ currency: e, sku_id: h, is_gift: s }), [e, h, s]);
+                u = a ?? (1 === t.length ? t[0] : void 0),
+                o = l.useMemo(() => ({ currency: e, sku_id: u, is_gift: s, is_recurring: i }), [e, u, s, i]);
             return {
-                createSetupIntent: l.useCallback(() => i(u, { forceRecreate: !0 }), [i, u]),
-                createSetupIntentDeduped: l.useCallback(() => i(u), [i, u]),
+                createSetupIntent: l.useCallback(() => h(o, { forceRecreate: !0 }), [h, o]),
+                createSetupIntentDeduped: l.useCallback(() => h(o), [h, o]),
             };
         },
     },
