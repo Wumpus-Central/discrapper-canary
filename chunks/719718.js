@@ -17,10 +17,11 @@ let u = { volume: 1, isMuted: !1, progress: null },
     b = null,
     _ = null,
     p = null,
-    m = 0,
-    x = null,
-    g = !1;
-class A extends s.Ay.PersistedStore {
+    m = !1,
+    x = 0,
+    g = null,
+    A = !1;
+class v extends s.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     static migrations = [(e) => ({ ...e, progress: null }), (e) => ({ volume: 1, ...e })];
@@ -45,23 +46,26 @@ class A extends s.Ay.PersistedStore {
     get character() {
         return p;
     }
-    get fetchState() {
+    get compactAssets() {
         return m;
     }
+    get fetchState() {
+        return x;
+    }
     get isFetching() {
-        return 1 === m;
+        return 1 === x;
     }
     get isSaving() {
-        return g;
+        return A;
     }
     get progress() {
         return f.progress;
     }
     get selectedCharacterTraits() {
-        return x ?? p ?? h;
+        return g ?? p ?? h;
     }
 }
-let v = new A(n.h, {
+let w = new v(n.h, {
     CHECKPOINT_TOGGLE_MUTE: function () {
         f.isMuted = !f.isMuted;
     },
@@ -71,15 +75,16 @@ let v = new A(n.h, {
         ((f.volume = t), (f.isMuted = !1));
     },
     CHECKPOINT_FETCH_START: function () {
-        m = 1;
+        x = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
         ((b = e.stats),
             (_ = e.globalStats),
             (p = e.character),
-            (m = 2),
+            (m = e.compactAssets),
+            (x = 2),
             null == p && null != f.progress
-                ? ((x = (function (e) {
+                ? ((g = (function (e) {
                       let t = (0, d.ki)(c.default.getCurrentUser()),
                           a = {};
                       for (let r of Object.values(i.V)) {
@@ -88,37 +93,37 @@ let v = new A(n.h, {
                       }
                       return a;
                   })(f.progress.selectedCharacterTraits)),
-                  (f.progress = { ...f.progress, selectedCharacterTraits: x }))
-                : (x = null));
+                  (f.progress = { ...f.progress, selectedCharacterTraits: g }))
+                : (g = null));
     },
     CHECKPOINT_FETCH_FAILED: function () {
-        m = 3;
+        x = 3;
     },
     CHECKPOINT_COMPLETE_START: function () {
-        g = !0;
+        A = !0;
     },
     CHECKPOINT_COMPLETE_SUCCESS: function (e) {
-        ((p = e.character), (x = null), (g = !1));
+        ((p = e.character), (g = null), (A = !1));
     },
     CHECKPOINT_COMPLETE_FAILED: function () {
-        g = !1;
+        A = !1;
     },
     CHECKPOINT_RESET_SUCCESS: function () {
-        ((p = null), (x = null), (f.progress = null));
+        ((p = null), (g = null), (f.progress = null));
     },
     CHECKPOINT_SELECT_CHARACTER_TRAIT: function (e) {
-        ((x = { ...(x ?? p ?? h), [e.trait]: e.optionId }),
-            null != f.progress && (f.progress = { ...f.progress, selectedCharacterTraits: x }));
+        ((g = { ...(g ?? p ?? h), [e.trait]: e.optionId }),
+            null != f.progress && (f.progress = { ...f.progress, selectedCharacterTraits: g }));
     },
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e,
-            a = x ?? p ?? h,
+            a = g ?? p ?? h,
             { progress: r } = f;
         if (r?.stage === t && r.selectedCharacterTraits === a) return !1;
         f.progress = { stage: t, selectedCharacterTraits: a };
     },
     LOGOUT: function () {
-        ((f = { ...u }), (b = null), (_ = null), (p = null), (m = 0), (x = null), (g = !1));
+        ((f = { ...u }), (b = null), (_ = null), (p = null), (m = !1), (x = 0), (g = null), (A = !1));
     },
 });
-a.d(t, {}, { A: v, T: o });
+a.d(t, {}, { A: w, T: o });

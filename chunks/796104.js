@@ -53,7 +53,8 @@ a.d(
             if ((f.A.initializeIfNeeded(), f.A.isFetching)) return f.T.FETCHING;
             i.h.dispatch({ type: "CHECKPOINT_FETCH_START" });
             try {
-                let { body: t } = await r.Bo.get({ url: _.Rsh.CHECKPOINT, rejectWithError: !0 });
+                let { body: t } = await r.Bo.get({ url: _.Rsh.CHECKPOINT, rejectWithError: !0 }),
+                    a = t.compact_assets;
                 if (null != e)
                     return (
                         i.h.dispatch({
@@ -61,6 +62,7 @@ a.d(
                             stats: (0, u.g)(e),
                             globalStats: (0, h._R)(t.global_stats),
                             character: null,
+                            compactAssets: a,
                         }),
                         f.T.SUCCESS
                     );
@@ -70,6 +72,7 @@ a.d(
                         stats: null != t.stats ? (0, h.BF)(t.stats) : null,
                         globalStats: (0, h._R)(t.global_stats),
                         character: t.character,
+                        compactAssets: a,
                     }),
                     f.T.SUCCESS
                 );

@@ -1,4 +1,4 @@
-a.d(t, { D: () => se });
+a.d(t, { D: () => st });
 var r,
     i = a(477900),
     s = a(858899),
@@ -4825,8 +4825,9 @@ let iD = /^tex_(aura|base_\d+|outfit)_/,
         tex_wearable_11_deviantTail_smoke_idle_spritesheet: iK,
     },
     iV = [1, 1.25, 1.5, 1.75, 2, 3],
-    iz = Math.max(...iV);
-function iW(e, t) {
+    iz = Math.min(...iV),
+    iW = Math.max(...iV);
+function iY(e, t) {
     let { url: a, width: r, height: i, widthAt1x: s } = iS[e];
     if (null == s) return a;
     let n = (t * s) / r;
@@ -4836,9 +4837,9 @@ function iW(e, t) {
         o = d * Math.round((i / d) * n);
     return `${a}?width=${l}&height=${o}`;
 }
-let iY = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
-    iq = iY.map((e) => `outfit${e}Image`),
-    iX = {
+let iq = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
+    iX = iq.map((e) => `outfit${e}Image`),
+    iZ = {
         [w.s9.IDLE]: 0,
         [w.s9.INTRODUCTION]: 1,
         [w.s9.FACE]: 2,
@@ -4851,7 +4852,7 @@ let iY = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"
         [w.s9.FINALIZE]: 8,
         [w.s9.SUMMARY]: 8,
     },
-    iZ = {
+    iQ = {
         Desktop: {
             gradientTopOpacity: 0,
             gradientTopPosition: 0,
@@ -4883,10 +4884,10 @@ let iY = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"
             gradientRightPosition: 100,
         },
     },
-    iQ = { ...iZ.MobilePortrait, gradientTopPosition: 55, gradientBottomPosition: 90 };
-var iJ = a(574381);
-let i$ = new Set([1]),
-    i0 = Object.keys(iS).map((e) => ({
+    iJ = { ...iQ.MobilePortrait, gradientTopPosition: 55, gradientBottomPosition: 90 };
+var i$ = a(574381);
+let i0 = new Set([1]),
+    i1 = Object.keys(iS).map((e) => ({
         name: e,
         role: (function (e) {
             if (iD.test(e)) return { type: "slot" };
@@ -4898,9 +4899,9 @@ let i$ = new Set([1]),
                 i = null != r ? iG[r[1].toLowerCase()] : void 0;
             return null != i ? { type: "trait", path: "faceID", riveId: i } : { type: "always" };
         })(e),
-        swapKey: (0, iJ.un)() ? `${e}-${iS[e].riveId}` : e,
+        swapKey: (0, i$.un)() ? `${e}-${iS[e].riveId}` : e,
     }));
-function i1(e) {
+function i5(e) {
     let { faceID: t, headwearID: a, shoesID: r, wearableID: i, chapterID: s, device: n } = e;
     return h.useMemo(() => {
         var e;
@@ -4908,7 +4909,7 @@ function i1(e) {
         return (
             (e = { faceID: t, headwearID: a, shoesID: r, wearableID: i }),
             (c = new Set()),
-            i0.forEach((t) => {
+            i1.forEach((t) => {
                 let { name: a, role: r } = t;
                 switch (r.type) {
                     case ik.SLOT:
@@ -4920,38 +4921,36 @@ function i1(e) {
                         r.layouts.includes(n) && c.add(a);
                         break;
                     case ik.ALWAYS:
-                        ("tex_wireframe_spritesheet" !== a || i$.has(s)) && c.add(a);
+                        ("tex_wireframe_spritesheet" !== a || i0.has(s)) && c.add(a);
                 }
             }),
             c
         );
     }, [t, a, r, i, s, n]);
 }
-var i5 = a(971940);
-async function i6(e) {
+var i6 = a(971940);
+async function i2(e) {
     try {
         let t = await fetch(e);
         if (!t.ok) return null;
-        return await (0, i5.decodeImage)(new Uint8Array(await t.arrayBuffer()));
+        return await (0, i6.decodeImage)(new Uint8Array(await t.arrayBuffer()));
     } catch {
         return null;
     }
 }
-var i2 = a(168862);
-function i3(e) {
+var i3 = a(168862);
+function i4(e) {
     let t,
         a,
         { stage: r, isHidden: s } = e,
         n = (0, _.bG)([iA.A], () => {
-            var e, t;
-            let a,
-                r = iA.A.windowSize();
-            return (
-                (e = r.width),
-                (t = r.height),
-                (a = Math.max(e / 960, t / 540) * (0, eV.A)()),
-                iV.find((e) => e >= a) ?? iz
-            );
+            let e = iA.A.windowSize();
+            return (function (e, t) {
+                let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (a) return iz;
+                let r = Math.max(e / 960, t / 540) * (0, eV.A)();
+                return iV.find((e) => e >= r) ?? iW;
+            })(e.width, e.height);
         }),
         [c, d] = h.useState(n);
     n > c && d(n);
@@ -4968,22 +4967,22 @@ function i3(e) {
                         b = iM[l],
                         _ = {};
                     return (
-                        iY.forEach((e) => {
+                        iq.forEach((e) => {
                             let t = Number(e) === b?.riveId ? b.texture : iC;
-                            _[`outfit${e}Image`] = iW(t.name, n);
+                            _[`outfit${e}Image`] = iY(t.name, n);
                         }),
                         {
                             device: i,
                             mobileLift: s,
-                            chapterID: a && t === w.s9.FACE ? iX[w.s9.IDLE] : iX[t],
+                            chapterID: a && t === w.s9.FACE ? iZ[w.s9.IDLE] : iZ[t],
                             faceID: o,
                             shoesID: d,
                             headwearID: iT[u],
                             wearableID: iR[h],
                             outfitID: b?.riveId ?? 0,
-                            auraImage: iW(iO[f].name, n),
-                            baseColorImage: iW(iy[c].name, n),
-                            ...("MobilePortrait" === i && t === w.s9.INTRODUCTION ? iQ : iZ[i]),
+                            auraImage: iY(iO[f].name, n),
+                            baseColorImage: iY(iy[c].name, n),
+                            ...("MobilePortrait" === i && t === w.s9.INTRODUCTION ? iJ : iQ[i]),
                             ..._,
                         }
                     );
@@ -5009,14 +5008,14 @@ function i3(e) {
                         }, [t]),
                         h.useMemo(() => new Set([...r, ...a]), [r, a])
                     );
-                })({ visibleTextureNames: i1(t), requestedTextureNames: i1(a) });
+                })({ visibleTextureNames: i5(t), requestedTextureNames: i5(a) });
             return h.useMemo(() => {
                 let e;
                 return (
                     (e = {}),
-                    i0.forEach((t) => {
+                    i1.forEach((t) => {
                         let { name: a, swapKey: s } = t,
-                            n = i.has(a) ? iW(a, r) : iC.url;
+                            n = i.has(a) ? iY(a, r) : iC.url;
                         e[s] = { source: { uri: n } };
                     }),
                     e
@@ -5041,7 +5040,7 @@ function i3(e) {
                         null == t
                             ? null
                             : {
-                                  load: i6,
+                                  load: i2,
                                   swap: (e) => e.forEach((e, a) => t.get(a)?.setRenderImage(e)),
                                   release: (e) => e.forEach((e) => e.unref()),
                               },
@@ -5123,7 +5122,7 @@ function i3(e) {
             var t;
             let { visibleDataBinding: a, requestedDataBinding: r } = e,
                 [i, s] = h.useState({}),
-                n = (t = r.outfitID) > 0 ? iq[t - 1] : null,
+                n = (t = r.outfitID) > 0 ? iX[t - 1] : null,
                 c = null != n ? r[n] : void 0,
                 d = null == n || a?.[n] === c || i[n] === c,
                 l = a ?? r;
@@ -5133,7 +5132,7 @@ function i3(e) {
                 onDataBindingChange: h.useMemo(() => {
                     let e = {};
                     return (
-                        iq.forEach((t) => {
+                        iX.forEach((t) => {
                             e[t] = (e) => {
                                 s((a) => (a[t] === e ? a : { ...a, [t]: e }));
                             };
@@ -5148,7 +5147,7 @@ function i3(e) {
     return (0, i.jsx)("div", {
         role: "img",
         "aria-label": (0, iv.O)(o),
-        className: b()(i2.dw, { [i2.RK]: null != p }),
+        className: b()(i3.dw, { [i3.RK]: null != p }),
         children: (0, i.jsx)(ig.W, {
             artboard: "AB_Master",
             stateMachine: "SM_Master",
@@ -5161,17 +5160,17 @@ function i3(e) {
             withReducedMotion: "play",
             dataBinding: R,
             onDataBindingChange: T,
-            className: i2.lW,
+            className: i3.lW,
         }),
     });
 }
-var i4 = a(517782);
-function i8() {
+var i8 = a(517782);
+function i9() {
     let e = h.useId(),
         t = h.useRef(null);
     return (h.useEffect(() => (p.O.moveTo?.(e, t.current), () => p.O.remove?.(e)), [e]), (0, i.jsx)(m.A, { ref: t }));
 }
-function i9(e) {
+function i7(e) {
     let t,
         { didPlayerShareDataWithDiscord: a, onClose: r } = e;
     ((0, _.bG)([l.A], () => l.A.fetchState),
@@ -5342,16 +5341,16 @@ function i9(e) {
         theme: Z.NJ.DARK,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: b()(e, i4.kL),
+                className: b()(e, i8.kL),
                 style: U,
                 role: "dialog",
                 "aria-modal": !0,
                 "aria-label": ex.intl.string(t_.default["CdU/PF"]),
                 children: [
-                    (0, i.jsx)(i8, {}),
+                    (0, i.jsx)(i9, {}),
                     (0, i.jsx)(J, { isVisible: E }),
                     (0, i.jsxs)("div", {
-                        className: i4.$s,
+                        className: i8.$s,
                         children: [
                             (0, i.jsx)(tC, {}),
                             (0, i.jsx)(ee, {
@@ -5363,13 +5362,13 @@ function i9(e) {
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: b()(i4.qd, { [i4.R]: E }),
-                        children: (0, i.jsx)(i3, { stage: f, isHidden: E }),
+                        className: b()(i8.qd, { [i8.R]: E }),
+                        children: (0, i.jsx)(i4, { stage: f, isHidden: E }),
                     }),
-                    (0, w.Rq)(n) && (0, i.jsx)("div", { className: i4.qd, children: (0, i.jsx)(tv, { route: n }) }),
+                    (0, w.Rq)(n) && (0, i.jsx)("div", { className: i8.qd, children: (0, i.jsx)(tv, { route: n }) }),
                     j &&
                         (0, i.jsx)("div", {
-                            className: i4.qd,
+                            className: i8.qd,
                             children: (0, i.jsx)(ih, { route: n, onNextStep: et, onPreviousStep: $ }),
                         }),
                     (0, i.jsx)(tQ, {
@@ -5394,10 +5393,10 @@ function i9(e) {
             }),
     });
 }
-function i7() {
+function se() {
     return !!c._.hasSubscribers(tU.jej.MODAL_CLOSE) && (c._.dispatch(tU.jej.MODAL_CLOSE), !0);
 }
-async function se(e) {
+async function st(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         a = arguments.length > 2 ? arguments[2] : void 0,
         r = await (0, d.nX)(a);
@@ -5409,8 +5408,8 @@ async function se(e) {
           (0, n.B8)(
               (e) => {
                   let { closeLayer: a } = e;
-                  return (0, i.jsx)(i9, { didPlayerShareDataWithDiscord: t, onClose: a });
+                  return (0, i.jsx)(i7, { didPlayerShareDataWithDiscord: t, onClose: a });
               },
-              { onEscape: i7 },
+              { onEscape: se },
           ));
 }
