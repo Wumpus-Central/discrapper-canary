@@ -1629,7 +1629,7 @@ function al(e) {
                                         ej.Anchor,
                                         {
                                             className: ac.nf,
-                                            href: ar.A.getArticleURL(an.MVz.CHECKPOINT_2026),
+                                            href: ar.A.getArticleURL(an.MVz.CHECKPOINT),
                                             useDefaultUnderlineStyles: !1,
                                             children: e,
                                         },
