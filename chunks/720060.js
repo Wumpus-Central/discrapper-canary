@@ -828,14 +828,14 @@ var e5 = n(741934);
 n(926675);
 var e8 = n(305866),
     e9 = n(55999),
-    e6 = n(229087),
-    e7 = n(394245),
+    e7 = n(229087),
+    e6 = n(394245),
     e4 = n(382701),
     e3 = n(408519);
 function te(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
-        o = d.useMemo(() => n?.filter((e) => null != (0, e7.W)(e)) ?? [], [n]),
+        o = d.useMemo(() => n?.filter((e) => null != (0, e6.W)(e)) ?? [], [n]),
         c = o.length > 0,
         u = r && o.length < 20,
         { trackUserProfileEditAction: m } = (0, eK.NJ)(),
@@ -908,7 +908,7 @@ function te(e) {
                       children: [
                           o.map((e) =>
                               (0, i.jsx)(
-                                  e6.A,
+                                  e7.A,
                                   {
                                       tag: e,
                                       variant: "filled",
@@ -938,7 +938,7 @@ function te(e) {
                           children: o
                               .slice(0, E)
                               .map((e) =>
-                                  (0, i.jsx)(e6.A, { tag: e, variant: "filled", onRemove: r ? () => k(e) : void 0 }, e),
+                                  (0, i.jsx)(e7.A, { tag: e, variant: "filled", onRemove: r ? () => k(e) : void 0 }, e),
                               ),
                       }),
                   P &&
@@ -949,7 +949,7 @@ function te(e) {
                           onOpenChange: b,
                           disableInteraction: a,
                           children: o.map((e) =>
-                              (0, i.jsx)(e6.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
+                              (0, i.jsx)(e7.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
                   u && (0, i.jsx)(e9.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
@@ -1552,6 +1552,7 @@ function tU(e) {
                             n.e(827037),
                             n.e(520342),
                             n.e(795365),
+                            n.e(527714),
                             n.e(7501),
                         ]).then(n.bind(n, 254876));
                         return (t) =>
@@ -1887,7 +1888,7 @@ function t8() {
     return e;
 }
 var t9 = n(67438);
-function t6(e) {
+function t7(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
@@ -1900,7 +1901,7 @@ function t6(e) {
         ],
     });
 }
-var t7 = n(683071),
+var t6 = n(683071),
     t4 = n(312252);
 function t3(e) {
     let { widgetType: t, gameCount: n } = e,
@@ -1909,7 +1910,7 @@ function t3(e) {
         ? null
         : (0, i.jsx)("div", {
               className: t4.l,
-              children: (0, i.jsx)(t7.w, {
+              children: (0, i.jsx)(t6.w, {
                   type: "warning",
                   message: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
                   role: "alert",
@@ -1984,7 +1985,7 @@ function na(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t6, { widget: n }),
+                : (0, i.jsx)(t7, { widget: n }),
     });
 }
 function ns(e) {
@@ -2007,7 +2008,7 @@ function ns(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t6, { widget: n }),
+                : (0, i.jsx)(t7, { widget: n }),
     });
 }
 var nr = n(793693);
@@ -2151,7 +2152,7 @@ function nI(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t6, { widget: n }),
+                : (0, i.jsx)(t7, { widget: n }),
     });
 }
 function nE(e) {
@@ -2173,7 +2174,7 @@ function nE(e) {
                       allowEditing: s,
                       disableInteraction: r,
                   })
-                : (0, i.jsx)(t6, { widget: n }),
+                : (0, i.jsx)(t7, { widget: n }),
     });
 }
 var nv = n(875620);
