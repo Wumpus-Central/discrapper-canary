@@ -533,6 +533,27 @@
     position: relative
 }
 
+.banner_2igI1n {
+    align-items: center;
+    background: var(--background-feedback-mod-info);
+    border: 1px solid var(--inlinenotice-border-info);
+    border-radius: var(--radius-lg);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-12) var(--space-16)
+}
+
+.message_2igI1n {
+    flex: 1;
+    margin-inline-end: var(--space-8);
+    min-width: 0
+}
+
+.message_2igI1n a {
+    color: currentColor;
+    text-decoration: underline
+}
+
 .home_Et7tR8 {
     flex: 1;
     min-height: 0
@@ -570,4 +591,4 @@
     padding: var(--space-8) 0
 }
 
-/*# sourceMappingURL=ee83e6481a856242.css.map*/
+/*# sourceMappingURL=d9ed43a19e164253.css.map*/

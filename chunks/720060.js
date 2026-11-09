@@ -824,10 +824,10 @@ function e2(e) {
     });
 }
 n(600253);
-var e5 = n(741934);
+var e9 = n(741934);
 n(926675);
-var e9 = n(305866),
-    e8 = n(55999),
+var e8 = n(305866),
+    e5 = n(55999),
     e7 = n(229087),
     e6 = n(394245),
     e4 = n(382701),
@@ -952,7 +952,7 @@ function te(e) {
                               (0, i.jsx)(e7.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
-                  u && (0, i.jsx)(e8.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
+                  u && (0, i.jsx)(e5.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
               ],
           })
         : null;
@@ -974,7 +974,7 @@ function tt(e) {
               onRequestOpen: () => a(!0),
               onRequestClose: () => a(!1),
               renderPopout: () =>
-                  (0, i.jsx)(e9.l, {
+                  (0, i.jsx)(e8.l, {
                       className: e3.Kt,
                       "aria-label": o,
                       returnRef: t,
@@ -1106,7 +1106,7 @@ function tm(e) {
                     "aria-pressed": l,
                     "aria-label": v.intl.formatToPlainString(v.t.zrtAwA, { clipNumber: n + 1 }),
                     onClick: () => a(t.key),
-                    children: (0, i.jsx)(e5.A, { item: t, ringSize: "sm", className: tu.nC }),
+                    children: (0, i.jsx)(e9.A, { item: t, ringSize: "sm", className: tu.nC }),
                 }),
                 g &&
                     (0, i.jsxs)(i.Fragment, {
@@ -1506,7 +1506,7 @@ function tU(e) {
                             n.e(228767),
                             n.e(323079),
                             n.e(437655),
-                            n.e(616045),
+                            n.e(664064),
                             n.e(5257),
                             n.e(970846),
                             n.e(795807),
@@ -1548,8 +1548,8 @@ function tU(e) {
                             n.e(626750),
                             n.e(689160),
                             n.e(520342),
-                            n.e(127851),
-                        ]).then(n.bind(n, 657766));
+                            n.e(478740),
+                        ]).then(n.bind(n, 917119));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -1593,7 +1593,7 @@ function tU(e) {
                               onMouseEnter: el,
                               onMouseLeave: es,
                               children: [
-                                  (0, i.jsx)(e5.A, {
+                                  (0, i.jsx)(e9.A, {
                                       item: _,
                                       ringSize: "lg",
                                       isPlaying: ei,
@@ -1790,7 +1790,7 @@ function t$(e) {
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(e9.l, {
+            return (0, i.jsx)(e8.l, {
                 className: tJ.C2,
                 "aria-label": v.intl.string(v.t.uqw8wK),
                 children: (0, i.jsxs)(tW.iS, {
@@ -1862,7 +1862,7 @@ function t0(e) {
 }
 var t1 = n(61881);
 let t2 = d.createContext(null);
-function t5(e) {
+function t9(e) {
     let { widgetType: t, children: n } = e,
         l = (0, u.bG)([t1.A], () => {
             let e = t1.A.getPendingWidgets();
@@ -1876,20 +1876,20 @@ function t5(e) {
         r = d.useMemo(() => ({ expanded: a, setExpanded: s }), [a]);
     return (0, i.jsx)(t2.Provider, { value: r, children: n });
 }
-function t9() {
+function t8() {
     let e = d.useContext(t2);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var t8 = n(67438);
+var t5 = n(67438);
 function t7(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
         a = l ? v.intl.string(v.t["3FdPBT"]) : v.intl.format(v.t.W8K2GH, { maxGames: n });
     return (0, i.jsxs)("div", {
-        className: l ? t8.O : t8.k,
+        className: l ? t5.O : t5.k,
         children: [
             l && (0, i.jsx)(t0, { widget: t, widgetType: t.type }),
             (0, i.jsx)(g.E, { variant: "body-xs/normal", color: "text-subtle", children: a }),
@@ -1943,7 +1943,7 @@ function nl(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, nt.r)(),
         r = s(t),
-        { expanded: o, setExpanded: d } = t9(),
+        { expanded: o, setExpanded: d } = t8(),
         c = o ? a : a.slice(0, 2),
         u = a.length > 2,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2110,7 +2110,7 @@ function nj(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, nt.r)(),
         r = s(t),
-        { expanded: o, setExpanded: d } = t9(),
+        { expanded: o, setExpanded: d } = t8(),
         c = o ? a : a.slice(0, 8),
         u = a.length > 8,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2205,7 +2205,7 @@ function nC(e) {
 function nA(e) {
     let { userId: t, widgetType: n, ...l } = e,
         { games: a, onAddGame: s } = (0, tq.S)(n),
-        { setExpanded: r } = t9(),
+        { setExpanded: r } = t8(),
         { trackUserProfileEditAction: o } = (0, eK.NJ)(),
         c = d.useCallback(
             (e) => {
@@ -2245,7 +2245,7 @@ function nN(e) {
 }
 function ny(e) {
     let { widget: t, user: n, allowEditing: l, disableInteraction: a, ...s } = e,
-        { setExpanded: r } = t9(),
+        { setExpanded: r } = t8(),
         { shouldShowSuggestions: o, handleDismissSuggestions: c } = (function (e) {
             let [t, n] = d.useState(!1),
                 i = eV(e.type),
@@ -2286,7 +2286,7 @@ function ny(e) {
 }
 function nw(e) {
     let { widget: t, ...n } = e;
-    return (0, i.jsx)(t5, { widgetType: t.type, children: (0, i.jsx)(ny, { widget: t, ...n }) });
+    return (0, i.jsx)(t9, { widgetType: t.type, children: (0, i.jsx)(ny, { widget: t, ...n }) });
 }
 function nR(e) {
     let { widget: t, ...n } = e;
