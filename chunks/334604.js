@@ -1,4 +1,14 @@
-n.d(t, { nL: () => v, uz: () => y, TT: () => N, rK: () => D, Av: () => b, kv: () => R, d1: () => L });
+n.d(t, {
+    nL: () => M,
+    $x: () => b,
+    uz: () => D,
+    TT: () => N,
+    GG: () => C,
+    rK: () => v,
+    Av: () => P,
+    kv: () => L,
+    d1: () => y,
+});
 var i = n(77729);
 n(321073);
 var r = n(87955),
@@ -287,8 +297,11 @@ class p {
     getCachedMisspelling() {
         return { misspelledWord: this.misspelledWord, corrections: this.corrections };
     }
-    replaceMisspelling(e) {
-        h.replaceMisspelling(e);
+    clearCachedMisspelling() {
+        ((this.misspelledWord = ""), (this.corrections = []));
+    }
+    replaceMisspelling(e, t) {
+        h.replaceMisspelling(e, t);
     }
     applyLocale(e) {
         h.setLocale(e)?.then((t) => {
@@ -356,7 +369,10 @@ function S() {
 function N() {
     return (0, g.xl)() && S();
 }
-let C = N()
+function C() {
+    return N() && i.A?.features.supports("spellcheck_popout_windows") === !0;
+}
+let O = N()
         ? new Promise((e) => {
               Promise.resolve().then(() =>
                   (0, T.B)(() =>
@@ -375,32 +391,35 @@ let C = N()
               );
           })
         : null,
-    O = null;
-async function R(e) {
-    let t = await C;
+    R = null;
+async function L(e) {
+    let t = await O;
     null != t && (t.enabled = e);
 }
-async function L(e) {
-    let t = await C;
+async function y(e) {
+    let t = await O;
     null != t && t.setLearnedWords(e);
 }
-async function y() {
+async function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
-        t = await C;
+        t = await O;
     if (null == t) return { misspelledWord: "", corrections: [] };
     let { misspelledWord: n, corrections: i } = t.getCachedMisspelling();
     return { misspelledWord: n, corrections: i.slice(0, e) };
 }
-async function D(e) {
-    let t = await C;
-    null != t && t.replaceMisspelling(e);
+function b() {
+    R?.clearCachedMisspelling();
 }
-function b(e) {
-    null != O && O.setAppLocale(e);
+async function v(e, t) {
+    let n = await O;
+    null != n && n.replaceMisspelling(e, t);
 }
-function v(e) {
+function P(e) {
+    null != R && R.setAppLocale(e);
+}
+function M(e) {
     return S() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
 }
-C?.then((e) => {
-    O = e;
+O?.then((e) => {
+    R = e;
 });

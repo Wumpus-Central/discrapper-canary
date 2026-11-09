@@ -1,4 +1,4 @@
-l.d(t, { A: () => v });
+l.d(t, { A: () => T });
 var n = l(477900),
     r = l(582128),
     i = l(377941),
@@ -13,22 +13,26 @@ var n = l(477900),
     L = l(652215),
     f = l(792996);
 function v(e) {
+    let t = e.ownerDocument.defaultView;
+    return t?.windowKey;
+}
+function T(e) {
     let { text: t = "", target: l } = e,
         i = (0, c.bG)([p.A], () => p.A.isEnabled()),
-        v = r.useRef({ ...e, spellcheckEnabled: i });
-    v.current = { ...e, spellcheckEnabled: i };
-    let T = r.useRef(!1),
-        [h, m] = r.useState(""),
-        [H, b] = r.useState([]),
-        A = "" !== t ? t : (0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement) ? l.value : "",
-        g = (0, c.bG)([p.A], () => p.A.findLearnedWordIn(A), [A]),
-        x = r.useCallback(() => {
-            let { spellcheckEnabled: e, onHeightUpdate: t } = v.current;
+        T = r.useRef({ ...e, spellcheckEnabled: i });
+    T.current = { ...e, spellcheckEnabled: i };
+    let h = r.useRef(!1),
+        [m, H] = r.useState(""),
+        [b, A] = r.useState([]),
+        g = "" !== t ? t : (0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement) ? l.value : "",
+        x = (0, c.bG)([p.A], () => p.A.findLearnedWordIn(g), [g]),
+        w = r.useCallback(() => {
+            let { spellcheckEnabled: e, onHeightUpdate: t } = T.current;
             e &&
                 (0, E.TT)() &&
                 (0, E.uz)().then((e) => {
                     let { misspelledWord: l, corrections: n } = e;
-                    T.current && (m(l), b([...n]), t());
+                    h.current && (H(l), A([...n]), t());
                 });
         }, []),
         C = r.useCallback(() => {
@@ -39,21 +43,21 @@ function v(e) {
         }, [l]);
     if (
         (r.useEffect(() => {
-            let e = (0, E.nL)(x);
+            let e = (0, E.nL)(w);
             return (
-                (T.current = !0),
+                (h.current = !0),
                 () => {
-                    ((T.current = !1), e());
+                    ((h.current = !1), e());
                 }
             );
-        }, [x]),
+        }, [w]),
         r.useEffect(() => {
-            x();
-        }, [i, x]),
+            w();
+        }, [i, w]),
         !(0, E.TT)())
     )
         return [null, null];
-    let M = H.map((e, t) =>
+    let y = b.map((e, t) =>
             (0, n.jsx)(
                 s.Dr,
                 {
@@ -79,7 +83,7 @@ function v(e) {
                                           return r;
                                       })(e.value, t, i);
                                   if (null == c) {
-                                      ((0, E.rK)(l), e.focus());
+                                      ((0, E.rK)(l, v(e)), e.focus());
                                       return;
                                   }
                                   let [s, o] = c,
@@ -98,34 +102,34 @@ function v(e) {
                                       let t = s + l.length;
                                       ((e.selectionStart = t), (e.selectionEnd = t));
                                   }
-                              })(l, h, e)
-                            : ((0, E.rK)(e), (0, a.vq)(l, HTMLElement) && l.focus());
+                              })(l, m, e)
+                            : ((0, E.rK)(e, v(l)), (0, a.vq)(l, HTMLElement) && l.focus());
                     },
                 },
                 `correction-${t}`,
             ),
         ),
-        y = "" !== h;
+        M = "" !== m;
     return [
-        M,
+        y,
         (0, n.jsxs)(n.Fragment, {
             children: [
-                y
+                M
                     ? (0, n.jsx)(s.Dr, {
                           id: "add-to-dictionary",
                           label: f.intl.string(f.t.HJmG1G),
                           action: () => {
-                              (o.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: h }), C());
+                              (o.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: m }), C());
                           },
                       })
                     : null,
-                null == g || y
+                null == x || M
                     ? null
                     : (0, n.jsx)(s.Dr, {
                           id: "remove-from-dictionary",
                           label: f.intl.string(f.t.xXqIX0),
                           action: () => {
-                              (o.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: g }), C());
+                              (o.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: x }), C());
                           },
                       }),
                 (0, n.jsx)(s.sL, {
