@@ -4,58 +4,56 @@ var n = t(477900),
     a = t(939249),
     i = t(320448),
     o = t(778705),
-    c = t(871123),
-    u = t(906383),
-    d = t(421108),
-    m = t(910200),
-    x = t(682901),
-    h = t(873417);
+    c = t(288106),
+    u = t(871123),
+    d = t(906383),
+    m = t(421108),
+    x = t(910200),
+    h = t(682901),
+    b = t(873417);
 t.d(
     l,
     {},
     {
         e: function (e) {
-            let { promotion: l, reward: t, applicationId: b, analyticsLocations: p, onUpsellClick: j } = e,
-                f = (0, u.Pc)(l),
-                _ = null != t ? null : r.NitroWheelIcon,
-                N = s.useCallback(() => {
-                    (j(),
+            let { promotion: l, reward: t, applicationId: p, analyticsLocations: j, onUpsellClick: f } = e,
+                _ = (0, d.Pc)(l),
+                N = (0, m.tm)(l.endsAt),
+                v = l.rewardStatus === c.GM.EARNED && null != t,
+                I = N && v ? null : l.endsAt,
+                g = null != t ? null : r.NitroWheelIcon,
+                k = s.useCallback(() => {
+                    (f(),
                         (0, o.A)({
-                            subscriptionTier: x.pe.TIER_2,
-                            applicationId: b,
-                            analyticsLocations: p,
-                            ...(0, c.zl)(l.rewardRequirements),
+                            subscriptionTier: h.pe.TIER_2,
+                            applicationId: p,
+                            analyticsLocations: j,
+                            ...(0, u.zl)(l.rewardRequirements),
                         }));
-                }, [j, b, p, l.rewardRequirements]);
-            return null != l.endsAt && null == (0, d.ZH)(l.endsAt)
+                }, [f, p, j, l.rewardRequirements]);
+            return N && !v
                 ? null
                 : "nitro" !== l.flavor
-                  ? (0, n.jsx)(m.O0, {
-                        className: h.l,
-                        Icon: l.Icon,
-                        text: l.text,
-                        endDatetime: l.endsAt,
-                        tooltip: l.tooltip,
-                    })
-                  : (0, u.ad)(f)
+                  ? (0, n.jsx)(x.O0, { className: b.l, Icon: l.Icon, text: l.text, endDatetime: I, tooltip: l.tooltip })
+                  : (0, d.ad)(_)
                     ? (0, n.jsx)(a.D, {
-                          className: h.U,
-                          onClick: N,
-                          children: (0, n.jsx)(m.Ay, {
-                              className: h.l,
+                          className: b.U,
+                          onClick: k,
+                          children: (0, n.jsx)(x.Ay, {
+                              className: b.l,
                               gradientColor: "nitro-pink",
-                              Icon: _,
+                              Icon: g,
                               text: l.text,
                               tooltip: l.tooltip,
                               trailing: (0, n.jsx)(i.ChevronSmallRightIcon, { size: "xs", color: "currentColor" }),
                           }),
                       })
-                    : (0, n.jsx)(m.O0, {
-                          className: h.l,
+                    : (0, n.jsx)(x.O0, {
+                          className: b.l,
                           gradientColor: "nitro-pink",
-                          Icon: _,
+                          Icon: g,
                           text: l.text,
-                          endDatetime: l.endsAt,
+                          endDatetime: I,
                           tooltip: l.tooltip,
                       });
         },
