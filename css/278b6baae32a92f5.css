@@ -1,0 +1,56 @@
+.group_I_XU7P {
+    margin-top: 20px
+}
+
+.title_I_XU7P {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.experimentDate_I_XU7P {
+    color: var(--channels-default)
+}
+
+.emptyState_I_XU7P {
+    margin-top: 36px;
+    text-align: center
+}
+
+.description_I_XU7P {
+    margin-top: 4px
+}
+
+.divider_I_XU7P {
+    margin-top: 20px
+}
+
+.debugTitle_I_XU7P {
+    margin-top: 16px
+}
+
+.pre_I_XU7P {
+    white-space: pre
+}
+
+.card_I_XU7P {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-16)
+}
+
+.collapsible_I_XU7P {
+    background: none;
+    padding: var(--space-8)
+}
+
+.collapsible_I_XU7P code {
+    background-color: var(--background-code);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-4)
+}
+
+/*# sourceMappingURL=278b6baae32a92f5.css.map*/

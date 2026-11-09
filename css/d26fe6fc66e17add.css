@@ -74,4 +74,36 @@
     border-color: hsl(var(--primary-400-hsl)/.3)
 }
 
-/*# sourceMappingURL=7f341ddc3fb7e447.css.map*/
+.row_ah9SVt {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.row_ah9SVt>:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.fields_ah9SVt {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr)
+}
+
+@media (max-width:600px) {
+    .fields_ah9SVt {
+        grid-template-columns: minmax(0, 1fr)
+    }
+
+    .row_ah9SVt {
+        align-items: flex-start;
+        flex-direction: column
+    }
+}
+
+/*# sourceMappingURL=d26fe6fc66e17add.css.map*/
