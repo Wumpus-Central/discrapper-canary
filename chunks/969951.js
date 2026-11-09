@@ -4,7 +4,7 @@ var s = r(354328),
     i = r(635358),
     c = r(855986),
     u = r(343446),
-    a = r(110676),
+    a = r(429811),
     o = r(590180);
 function h(e, t) {
     let r = e?.paymentGateway;

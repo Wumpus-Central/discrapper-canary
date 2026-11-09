@@ -286,6 +286,22 @@
     width: 100%
 }
 
+.heroBlockTakeover_XBXDcd {
+    clip-path: inset(0 calc(var(--space-32)*-1))
+}
+
+.heroBlockEmptyCards_XBXDcd {
+    min-height: 350px
+}
+
+.heroBlockEmptyCards_XBXDcd:has(>.responsive_XBXDcd.banner_XBXDcd) {
+    min-height: max(24vw, 200px)
+}
+
+.heroBlockEmptyCards_XBXDcd:has(>.rivBanner_XBXDcd) {
+    min-height: max(24vw, 210px)
+}
+
 .heroBlockContent_XBXDcd {
     box-sizing: border-box;
     max-width: 1080px;
@@ -305,6 +321,15 @@
     .heroBlockContent_XBXDcd.promotionIndex_XBXDcd {
         --custom-hero-content-inline-padding: 20px
     }
+}
+
+.heroBlockContentTakeover_XBXDcd {
+    padding-top: var(--space-24)
+}
+
+.heroBlockContentTakeover_XBXDcd>div {
+    max-width: none;
+    padding-inline: 0
 }
 
 .heroBlockContentPromotion_XBXDcd {
@@ -847,4 +872,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=7e0dd7ad2c1092eb.css.map*/
+/*# sourceMappingURL=429c21ad7f0e1142.css.map*/

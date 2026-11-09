@@ -376,7 +376,7 @@ let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
     F = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
 var G = l(263911),
     Y = l(403581),
-    j = l(504262),
+    j = l(873297),
     H = l(758836),
     q = l(792996);
 function K() {}

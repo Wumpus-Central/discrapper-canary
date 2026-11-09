@@ -162,7 +162,7 @@ function eI(e) {
     });
 }
 var ex = t(196231),
-    ej = t(353448),
+    ej = t(64018),
     eE = t(146053);
 function eb(e) {
     return e.skuId;
