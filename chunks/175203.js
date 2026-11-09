@@ -681,7 +681,7 @@ let eX = i.memo((e) => {
                                         variant: ej ? "body-sm/normal" : "body-md/normal",
                                         children: eR,
                                     }),
-                                eu && null != f
+                                eu && null != f && !ej
                                     ? (0, s.jsx)(en.A, { streamerId: f, guildId: E.getGuildId(), idle: l })
                                     : null,
                                 ek,
