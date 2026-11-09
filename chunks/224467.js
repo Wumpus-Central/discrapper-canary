@@ -2,7 +2,7 @@
     v1: () => er,
     gU: () => el,
     Ay: () => eu,
-    lq: () => Z,
+    lq: () => J,
     ok: () => Q,
     WL: () => ec,
     If: () => ed,
@@ -236,10 +236,10 @@ function q(e) {
 function Q(e) {
     return $(e, Y());
 }
-function Z(e) {
+function J(e) {
     return $(e, K());
 }
-function J(e, t, n) {
+function Z(e, t, n) {
     return ee(e, t, [...Array.from(v()), ...Array.from(P()), ...Array.from(M()), ...Object.keys(x())]).map((e) => ({
         ...e,
         group: n,
@@ -533,7 +533,7 @@ function ea(e) {
             plainText: b.intl.string(b.t["qZ+7BA"]),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return J(t, n, D.LWr.FILTER_BEFORE);
+                return Z(t, n, D.LWr.FILTER_BEFORE);
             },
         },
         [D.LWr.FILTER_ON]: {
@@ -543,7 +543,7 @@ function ea(e) {
             plainText: b.intl.string(b.t.h2NzSd),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return J(t, n, D.LWr.FILTER_ON);
+                return Z(t, n, D.LWr.FILTER_ON);
             },
         },
         [D.LWr.FILTER_AFTER]: {
@@ -553,7 +553,7 @@ function ea(e) {
             plainText: b.intl.string(b.t.KSDx7M),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return J(t, n, D.LWr.FILTER_AFTER);
+                return Z(t, n, D.LWr.FILTER_AFTER);
             },
         },
         [D.LWr.ANSWER_BEFORE]: {

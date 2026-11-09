@@ -59,8 +59,8 @@ var i = n(477900),
     z = n(287809),
     q = n(486020),
     Q = n(488926),
-    Z = n(998218),
-    J = n(123677),
+    J = n(998218),
+    Z = n(123677),
     ee = n(501592),
     et = n(652215),
     en = n(792996);
@@ -443,7 +443,7 @@ var eH = n(665260),
     ez = n(778712),
     eq = n(21200);
 let eQ = (0, ez.FT)(ez._3.SIZE_80);
-function eZ(e) {
+function eJ(e) {
     let { user: t, application: n, bot: a, accountScopes: s, showLogout: l, location: o, scopes: d } = e,
         c = (0, eX.i)(),
         u = q.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
@@ -565,7 +565,7 @@ function eZ(e) {
         ],
     });
 }
-var eJ = n(321987),
+var eZ = n(321987),
     e0 = n(595244);
 function e1(e) {
     let { selectedGuildId: t, selectedChannelId: n, onChannelChange: a, error: s } = e,
@@ -764,7 +764,7 @@ let e6 = (0, F.Fe)({
 });
 function e5() {
     let e = (0, l.zy)(),
-        t = r.useMemo(() => (0, J._)(e.search), [e.search]);
+        t = r.useMemo(() => (0, Z._)(e.search), [e.search]);
     (0, P.A)();
     let a = !e.search.includes("response_type"),
         [s, o] = r.useState(!1),
@@ -845,10 +845,10 @@ function e5() {
                               (0, i.jsx)(m.y, {}),
                           ],
                       })),
-            (0, i.jsx)(eJ.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: e3.ah, children: e }) })
+            (0, i.jsx)(eZ.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: e3.ah, children: e }) })
         );
     }
-    return (0, i.jsx)(eJ.$, {
+    return (0, i.jsx)(eZ.$, {
         removeChildWrapper: !0,
         children: (0, i.jsx)(e7, {
             transitionState: I.i.ENTERED,
@@ -890,7 +890,7 @@ function e7(e) {
                       ],
                   })
                 : null;
-    return (0, i.jsx)(eJ.f, {
+    return (0, i.jsx)(eZ.f, {
         ...e,
         onClose: () => Promise.resolve(e.onClose?.()),
         size: E,
@@ -1073,9 +1073,9 @@ function te(e) {
             () => (null == eY ? null : eX?.integrationTypesConfig?.[eY]?.oauth2InstallParams),
             [eX?.integrationTypesConfig, eY],
         ),
-        { requestedScopes: eQ, accountScopes: eJ } = r.useMemo(() => {
+        { requestedScopes: eQ, accountScopes: eZ } = r.useMemo(() => {
             let e = e$ ? eq?.scopes : D,
-                t = (0, J.e)(e ?? []),
+                t = (0, Z.e)(e ?? []),
                 n = es.k$.filter((e) => t.includes(e));
             return { requestedScopes: t, accountScopes: n };
         }, [eq?.scopes, D, e$]),
@@ -1138,8 +1138,8 @@ function te(e) {
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eQ, canceled: t }),
                             eo?.());
                     else if (null != n.location) {
-                        let e = Z.A.toURLSafe(n.location)?.pathname;
-                        Z.A.isDiscordUrl(n.location) && e === et.BVt.OAUTH2_AUTHORIZED
+                        let e = J.A.toURLSafe(n.location)?.pathname;
+                        J.A.isDiscordUrl(n.location) && e === et.BVt.OAUTH2_AUTHORIZED
                             ? (0, j.pX)(et.BVt.OAUTH2_AUTHORIZED, {
                                   state: { application: eI?.application, guild: eW },
                               })
@@ -1322,10 +1322,10 @@ function te(e) {
                             connectedAccount: ex,
                             applicationName: eI.application.name,
                         }),
-                    (0, i.jsx)(eL, { application: eI.application, accountScopes: eJ }),
+                    (0, i.jsx)(eL, { application: eI.application, accountScopes: eZ }),
                     (0, i.jsx)(eU, {
                         application: eI.application,
-                        accountScopes: eJ,
+                        accountScopes: eZ,
                         requestedScopes: eQ,
                         integrationType: eY,
                         errors: tp,
@@ -1392,11 +1392,11 @@ function te(e) {
         (tf &&
             null != eI &&
             null != eB &&
-            (c = (0, i.jsx)(eZ, {
+            (c = (0, i.jsx)(eJ, {
                 user: eB,
                 application: eI.application,
                 bot: eI.bot,
-                accountScopes: eJ,
+                accountScopes: eZ,
                 showLogout: B || !1,
                 location: ef,
                 scopes: eQ,
@@ -1439,8 +1439,8 @@ function te(e) {
 }
 function tt(e, t) {
     if (null == t.location || (null != e.callback && e.callback(t))) return;
-    let { host: n, pathname: r, searchParams: a } = Z.A.toURLSafe(t.location) ?? {},
-        s = Z.A.isDiscordHostname(n ?? null) || window.location.host === n;
+    let { host: n, pathname: r, searchParams: a } = J.A.toURLSafe(t.location) ?? {},
+        s = J.A.isDiscordHostname(n ?? null) || window.location.host === n;
     if (s && r === et.BVt.OAUTH2_AUTHORIZED)
         (0, O.qf)((e) => (0, i.jsx)(e0.dR, { guild: t.guild, application: t.application, ...e }));
     else if (s && r?.startsWith(et.BVt.OAUTH2_ERROR)) {
@@ -1449,7 +1449,7 @@ function tt(e, t) {
             let t = a?.get("error_description") ?? a?.get("error") ?? en.intl.string(en.t.mqn873);
             return (
                 Array.isArray(t) && (t = t[0]),
-                (0, i.jsx)(eJ.f, { ...e, children: (0, i.jsx)(e0.gz, { message: t, onClose: e.onClose }) })
+                (0, i.jsx)(eZ.f, { ...e, children: (0, i.jsx)(e0.gz, { message: t, onClose: e.onClose }) })
             );
         });
     } else window.open(t.location, "_blank")?.focus();
@@ -1461,11 +1461,11 @@ function ti(e, t) {
     (0, O.qf)((t) => (0, i.jsx)(e7, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
 }
 function tr(e) {
-    let { hostname: t = "", host: n, pathname: i, search: r } = Z.A.toURLSafe(e) ?? {};
+    let { hostname: t = "", host: n, pathname: i, search: r } = J.A.toURLSafe(e) ?? {};
     return null != i &&
         null != r &&
-        (Z.A.isDiscordHostname(t) || n === window.location.host) &&
+        (J.A.isDiscordHostname(t) || n === window.location.host) &&
         (i.startsWith(`/api${et.Rsh.OAUTH2_AUTHORIZE}`) || i.startsWith(et.BVt.OAUTH2_AUTHORIZE))
-        ? (0, J._)(r)
+        ? (0, Z._)(r)
         : null;
 }

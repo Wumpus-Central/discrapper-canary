@@ -280,8 +280,8 @@ function K(e) {
         q = 0;
     1 !== k && (q |= _.REDUCE_SATURATION_ENABLED);
     let Q = (0, P.C)(),
-        Z = (0, N.qK)("RootThemeContextProvider"),
-        J = (0, N.k5)("RootThemeContextProvider"),
+        J = (0, N.qK)("RootThemeContextProvider"),
+        Z = (0, N.k5)("RootThemeContextProvider"),
         ee = (0, N.lV)("RootThemeContextProvider"),
         et = O.useConfig({ location: "RootThemeContextProvider" }).enabled,
         en = (0, m.m2)({ isPopoutWindow: l }),
@@ -404,13 +404,13 @@ function K(e) {
             enabledExperiments: a.useMemo(() => {
                 let e = [];
                 return (
-                    Z && e.push("refresh-fast-follow-avatars"),
-                    J && e.push("refresh-fast-follow-guild-bg"),
+                    J && e.push("refresh-fast-follow-avatars"),
+                    Z && e.push("refresh-fast-follow-guild-bg"),
                     ee && e.push("refresh-fast-follow-distinct-borders"),
                     et && e.push("rive-web-perf"),
                     e
                 );
-            }, [Z, J, ee, et]),
+            }, [J, Z, ee, et]),
             focused: C,
             mainWindowVisible: M,
             locale: A,
@@ -441,8 +441,8 @@ function K(e) {
                 highContrastMode: X,
                 isPopoutWindow: l,
                 rootClassName: o()(en, {
-                    "refresh-fast-follow-avatars": Z,
-                    "refresh-fast-follow-guild-bg": J,
+                    "refresh-fast-follow-avatars": J,
+                    "refresh-fast-follow-guild-bg": Z,
                     "refresh-fast-follow-distinct-borders": ee,
                 }),
                 children: i,

@@ -1,22 +1,22 @@
-var t = s(350835),
-    n = s(121681),
-    i = s(95701),
-    r = s(690521),
-    a = s(488926),
-    c = s(652215);
-s.d(
-    l,
+var l = n(350835),
+    i = n(121681),
+    r = n(95701),
+    s = n(690521),
+    a = n(488926),
+    u = n(652215);
+n.d(
+    t,
     {},
     {
         A: function (e) {
-            let { activity: l, user: s, channel: d } = e;
-            if (null == s || l?.type !== t.$.CUSTOM_STATUS || null == l.emoji) return !1;
-            let u = l.emoji;
-            if (null == u.id || null == d || !(0, i.ke)(d.type)) return !0;
-            let o = n.Ay.getUsableCustomEmojiById(u.id),
-                m = r.Ay.isInternalEmojiForGuildId(o, d.getGuildId()),
-                h = a.$3({ permission: c.xBc.USE_EXTERNAL_EMOJIS, user: s, context: d });
-            return !m || h;
+            let { activity: t, user: n, channel: o } = e;
+            if (null == n || t?.type !== l.$.CUSTOM_STATUS || null == t.emoji) return !1;
+            let d = t.emoji;
+            if (null == d.id || null == o || !(0, r.ke)(o.type)) return !0;
+            let c = i.Ay.getUsableCustomEmojiById(d.id),
+                h = s.Ay.isInternalEmojiForGuildId(c, o.getGuildId()),
+                m = a.$3({ permission: u.xBc.USE_EXTERNAL_EMOJIS, user: n, context: o });
+            return !h || m;
         },
     },
 );

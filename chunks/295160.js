@@ -1,44 +1,44 @@
-var t,
-    n = s(477900),
-    i = s(582128),
-    r = s(503698),
-    a = s.n(r),
-    c = s(778712),
-    d = s(235986),
-    u = s(141504),
-    o = (((t = o || {}).SINGLE_AVATAR = "1"), (t.MULTIPLE_AVATAR = "2"), t);
-let m = { [c._3.SIZE_32]: u.dT, [c._3.SIZE_40]: u.Jb };
-class h extends i.Component {
+var l,
+    i = n(477900),
+    r = n(582128),
+    s = n(503698),
+    a = n.n(s),
+    u = n(778712),
+    o = n(235986),
+    d = n(141504),
+    c = (((l = c || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
+let h = { [u._3.SIZE_32]: d.dT, [u._3.SIZE_40]: d.Jb };
+class m extends r.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
-    static Types = o;
+    static Types = c;
     render() {
-        let { type: e, avatarSize: l, className: s, childrenClassName: t, doNotAnimate: i } = this.props;
+        let { type: e, avatarSize: t, className: n, childrenClassName: l, doNotAnimate: r } = this.props;
         return "2" === e
-            ? (0, n.jsxs)("div", {
-                  className: a()(u.ce, u.jO, s),
+            ? (0, i.jsxs)("div", {
+                  className: a()(d.ce, d.jO, n),
                   children: [
-                      (0, n.jsxs)(d.A, {
+                      (0, i.jsxs)(o.A, {
                           children: [
-                              (0, n.jsx)("div", { className: a()(u.RH, m[l], u.hC) }),
-                              (0, n.jsx)("div", { className: a()(u.RH, m[l], u.hC) }),
-                              (0, n.jsx)("div", { className: a()(u.RH, m[l]) }),
+                              (0, i.jsx)("div", { className: a()(d.RH, h[t], d.hC) }),
+                              (0, i.jsx)("div", { className: a()(d.RH, h[t], d.hC) }),
+                              (0, i.jsx)("div", { className: a()(d.RH, h[t]) }),
                           ],
                       }),
-                      (0, n.jsx)(d.A, { grow: 1, className: u.eC, style: { maxWidth: this.placeholderMaxWidth } }),
+                      (0, i.jsx)(o.A, { grow: 1, className: d.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
-            : (0, n.jsxs)(d.A, {
-                  className: a()(u.qf, !i && u.lN, s),
+            : (0, i.jsxs)(o.A, {
+                  className: a()(d.qf, !r && d.lN, n),
                   children: [
-                      (0, n.jsx)("div", { className: a()(u.RH, m[l], t) }),
-                      (0, n.jsx)(d.A, {
+                      (0, i.jsx)("div", { className: a()(d.RH, h[t], l) }),
+                      (0, i.jsx)(o.A, {
                           grow: 1,
-                          className: a()(u.gM, t),
+                          className: a()(d.gM, l),
                           style: { maxWidth: this.placeholderMaxWidth },
                       }),
                   ],
               });
     }
 }
-s.d(l, {}, { A: h });
+n.d(t, {}, { A: m });

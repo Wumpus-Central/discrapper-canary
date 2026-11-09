@@ -128,8 +128,8 @@ var W = n(862328),
     z = n(969151),
     q = n(941971),
     Q = n(900848),
-    Z = n(771640),
-    J = n(366811),
+    J = n(771640),
+    Z = n(366811),
     ee = n(616356),
     et = n(734057),
     en = n(309010),
@@ -317,7 +317,7 @@ function eG() {
         })),
         S = (0, _.bG)([en.Ay], () => en.Ay.getChannelId(eL.YYv)),
         N = (0, _.bG)([et.A], () => et.A.getChannel(S)),
-        C = (0, J.A)((e) => e.guildId),
+        C = (0, Z.A)((e) => e.guildId),
         O = (0, es.ai)(C),
         { badge: R, unread: L } = (0, _.cf)([el.A, et.A, ed.default, eo.A, ec.A, eu.Ay, e_.Ay], () => {
             let e = er.default.keys(g),
@@ -370,8 +370,8 @@ function eG() {
             (A = !1),
             (f = !1),
             t ? ((u = !s), (E = s), (A = n), (f = o)) : ((A = a), (f = d)),
-            (0, Z.oi)({ audio: u, video: E, screenshare: A, liveStage: !1, isCurrentUserConnected: t, activity: f })),
-        D = R > 0 ? (0, Z.wN)(R) : null;
+            (0, J.oi)({ audio: u, video: E, screenshare: A, liveStage: !1, isCurrentUserConnected: t, activity: f })),
+        D = R > 0 ? (0, J.wN)(R) : null;
     return (0, i.jsxs)(Q.c, {
         children: [
             (0, i.jsx)(q.A, { overlay: !0, selected: O, hovered: I, unread: L && !T }),
@@ -425,28 +425,28 @@ var ex = n(633965),
     ez = n(173860),
     eq = n(383394),
     eQ = n(131677),
-    eZ = n(73153);
-let eJ = {};
+    eJ = n(73153);
+let eZ = {};
 class e0 extends _.Ay.PersistedStore {
     static displayName = "ViewHistoryStore";
     static persistKey = "ViewHistoryStore";
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
-                "number" == typeof e[t] && (eJ[t] = e[t]);
+                "number" == typeof e[t] && (eZ[t] = e[t]);
             });
     }
     getState() {
-        return eJ;
+        return eZ;
     }
     hasViewed(e) {
-        return null != eJ[e];
+        return null != eZ[e];
     }
 }
-let e1 = new e0(eZ.h, {
+let e1 = new e0(eJ.h, {
     VIEW_HISTORY_MARK_VIEW: function (e) {
         let { key: t } = e;
-        eJ[t] = Date.now();
+        eZ[t] = Date.now();
     },
 });
 var e2 = n(531685),
@@ -855,8 +855,8 @@ class tC extends r.PureComponent {
                         children: (0, i.jsx)(W.Q, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, Z.wN)(r, void 0, !0) : null,
-                            upperBadge: (0, Z.oi)({ audio: a, video: s, screenshare: l, isCurrentUserConnected: o }),
+                            lowerBadge: r > 0 ? (0, J.wN)(r, void 0, !0) : null,
+                            upperBadge: (0, J.oi)({ audio: a, video: s, screenshare: l, isCurrentUserConnected: o }),
                             lowerBadgeSize: { width: (0, ti.o6)(r) },
                             children: h(),
                         }),
@@ -1072,17 +1072,17 @@ function tX(e) {
 var tz = n(565787),
     tq = n(791606),
     tQ = n(486020),
-    tZ = n(183588);
-function tJ(e) {
+    tJ = n(183588);
+function tZ(e) {
     let [t, a] = r.useState(!1),
         s = (0, c.Vd)(`guild-${e.id}`);
     return (0, i.jsx)(Q.c, {
         children: (0, i.jsx)(tb.A, {
             text: e.name,
             children: (0, i.jsx)(W.Q, {
-                className: tZ.o,
+                className: tJ.o,
                 selected: t,
-                lowerBadge: (0, i.jsx)(ti.fk, { icon: (0, tz.k)(tq.A), disableColor: !0, className: tZ._ }),
+                lowerBadge: (0, i.jsx)(ti.fk, { icon: (0, tz.k)(tq.A), disableColor: !0, className: tJ._ }),
                 children: (0, i.jsx)(Y.j, {
                     name: e.name,
                     onMouseEnter: function () {
@@ -1211,7 +1211,7 @@ function nC(e) {
     let S = t || o || p,
         N = (0, i.jsx)(W.Q, {
             selected: !0,
-            lowerBadge: a > 0 ? (0, Z.wN)(a) : null,
+            lowerBadge: a > 0 ? (0, J.wN)(a) : null,
             upperBadge: g,
             lowerBadgeSize: { width: (0, ti.o6)(a) },
             children: (0, i.jsx)(Y.j, {
@@ -1266,7 +1266,7 @@ function nC(e) {
 }
 function nO() {
     let e = (function () {
-            let e = (0, J.A)((e) => e.guildId),
+            let e = (0, Z.A)((e) => e.guildId),
                 { pathname: t } = (0, d.zy)(),
                 n = t.startsWith(eL.BVt.GUILD_DISCOVERY) || t.startsWith(eL.BVt.GLOBAL_DISCOVERY),
                 i = t.startsWith(eL.BVt.GUILD_MEMBER_VERIFICATION("")),
@@ -1387,7 +1387,7 @@ let nW = r.memo(function (e) {
         { folderNode: h, ...I } = e,
         { id: p, name: m, color: T, children: g } = h,
         S = r.useMemo(() => g.map((e) => e.id), [g]),
-        N = (0, J.A)((e) => e.guildId),
+        N = (0, Z.A)((e) => e.guildId),
         C = (0, _.bG)([eq.A], () => eq.A.isFolderExpanded(p)),
         O = (0, nV.y)(h),
         R =
@@ -1467,10 +1467,10 @@ function nz(e) {
 }
 var nq = n(347951),
     nQ = n(34162);
-function nZ(e) {
+function nJ(e) {
     return (0, _.bG)([nQ.A], () => nQ.A.getGuildMediaState(e), [e]);
 }
-var nJ = n(126600),
+var nZ = n(126600),
     n0 = n(607399),
     n1 = n(164636),
     n2 = n(817281),
@@ -2600,17 +2600,17 @@ let iN = r.memo(function (e) {
             "aria-posinset": D,
         } = e,
         { id: b, parentId: v } = t,
-        P = e.upperBadge ?? (0, Z.hP)({ unavailable: I, conjureWorking: L, mediaState: h }),
+        P = e.upperBadge ?? (0, J.hP)({ unavailable: I, conjureWorking: L, mediaState: h }),
         M = e.lowerBadge ?? void 0;
     null == M && m > 0
         ? (M =
-              (0, Z.wN)(
+              (0, J.wN)(
                   m,
                   T ? f.A.colors.BACKGROUND_MOD_STRONG.css : f.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
               ) ?? void 0)
-        : null == M && null != O && (M = (0, Z.eW)({ guildJoinRequestStatus: O }) ?? void 0);
+        : null == M && null != O && (M = (0, J.eW)({ guildJoinRequestStatus: O }) ?? void 0);
     let U = e.lowerBadgeSize ?? { width: (0, ti.o6)(m) },
-        [{ dragging: w }, x] = (0, nJ.i)({
+        [{ dragging: w }, x] = (0, nZ.i)({
             type: e$.PJ.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
@@ -2629,7 +2629,7 @@ let iN = r.memo(function (e) {
         [H, j] = r.useState(!1),
         [K, X] = r.useState(!1),
         [z] = r.useState(() => new A.J_(70, () => X(!0))),
-        J = (0, n5.nr)() && !n0.Fr;
+        Z = (0, n5.nr)() && !n0.Fr;
     r.useEffect(() => () => z.cancel(), [z]);
     let ee = r.useCallback(() => {
             null != o ? (0, td.pX)(o, { state: ig }) : (0, n6.u)(b, { state: ig });
@@ -2700,7 +2700,7 @@ let iN = r.memo(function (e) {
                 K || j(!1);
             },
         }),
-        e_ = J
+        e_ = Z
             ? (0, i.jsx)(Y.j, {
                   ariaLabel: ec,
                   name: d.name,
@@ -2747,7 +2747,7 @@ let iN = r.memo(function (e) {
               }),
         eE = K || H ? eu : e_,
         eA = (0, i.jsx)(tH.g4, { children: (0, i.jsx)(ip.A, {}) }),
-        ef = J
+        ef = Z
             ? (0, i.jsx)(G.animated.div, {
                   ref: S
                       ? (e) => {
@@ -2802,8 +2802,8 @@ let iO = r.memo(function (e) {
         l = nz(s),
         o = (0, _.bG)([e2.A], () => e2.A.isFocused()),
         d = (0, _.bG)([nb.A], () => nb.A.isUnavailable(a)),
-        c = (0, J.A)((e) => e.guildId),
-        u = nZ(a),
+        c = (0, Z.A)((e) => e.guildId),
+        u = nJ(a),
         {
             badge: E,
             unread: A,
@@ -2886,7 +2886,7 @@ function iG(e) {
               contextMenu: iw,
               lowerBadge:
                   r?.applicationStatus === ir.B5.REJECTED
-                      ? (0, Z.eW)({ guildJoinRequestStatus: r.applicationStatus })
+                      ? (0, J.eW)({ guildJoinRequestStatus: r.applicationStatus })
                       : void 0,
               route: eL.BVt.GUILD_MEMBER_VERIFICATION(n),
           });
@@ -3013,11 +3013,11 @@ function iB(e) {
         s = (0, _.bG)([e2.A], () => e2.A.isFocused()),
         l =
             t ===
-            (0, J.A)((e) => {
+            (0, Z.A)((e) => {
                 let { guildId: t } = e;
                 return t;
             }),
-        o = nZ(t);
+        o = nJ(t);
     return null == a
         ? null
         : (0, i.jsx)(iN, { guildNode: n, guild: a, animatable: s, selected: l, draggable: !1, mediaState: o });
@@ -3228,7 +3228,7 @@ function iX(e) {
         }),
         o = l.getRoots(),
         d = (0, _.yK)([eV.A], () => eV.A.getGeoRestrictedGuilds()).map((e) =>
-            (0, i.jsx)(tJ, { id: e.id, name: e.name, icon: e.icon }, e.id),
+            (0, i.jsx)(tZ, { id: e.id, name: e.name, icon: e.icon }, e.id),
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -3282,7 +3282,7 @@ function iz(e) {
                 c = n ? o : w;
             return { shown: n && (s || i || c.length > 0), projects: c };
         })("GuildsBar"),
-        { pathname: Z } = (0, d.zy)(),
+        { pathname: J } = (0, d.zy)(),
         { entrypoint: ee } = (0, eF.X8)({ location: "GuildsBar" }),
         et = +!!q + (Q.shown ? 1 + Q.projects.length : 0) + +(ee === eF.RK.SERVER_RAIL_TOP),
         en = r.useMemo(() => {
@@ -3316,7 +3316,7 @@ function iz(e) {
             return (ed.default.addChangeListener(e), () => ed.default.removeChangeListener(e));
         }, []));
     let { analyticsLocations: ei } = (0, O.Ay)(C.A.GUILDS_LIST),
-        er = iY(Z);
+        er = iY(J);
     ((0, S.u5)(() => {
         if (!k.current && 0 !== u.size) {
             if (!er) {
@@ -3328,10 +3328,10 @@ function iz(e) {
     }),
         r.useEffect(() => {
             if ((en.setGuildsTree(u), k.current || 0 === u.size)) return;
-            let e = J.A.getState().guildId;
+            let e = Z.A.getState().guildId;
             en.scrollToGuild(e, !1);
             let t = null;
-            return J.A.subscribe((e) => {
+            return Z.A.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), en.scrollToGuild(t, !1));
             });

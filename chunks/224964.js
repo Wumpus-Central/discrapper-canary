@@ -1,28 +1,28 @@
-var t = s(582128),
-    n = s(164636),
-    i = s(21161),
-    r = s(3137);
-s.d(
-    l,
+var l = n(582128),
+    i = n(164636),
+    r = n(21161),
+    s = n(3137);
+n.d(
+    t,
     {},
     {
         A: function () {
-            let { createMultipleConfettiAt: e } = t.useContext(i.x),
-                l = (0, n.bG)([r.A], () => r.A.getState()),
-                s = t.useCallback(
+            let { createMultipleConfettiAt: e } = l.useContext(r.x),
+                t = (0, i.bG)([s.A], () => s.A.getState()),
+                n = l.useCallback(
                     (e) => ({
                         size: { type: "static-random", minValue: e.confettiSize - 7, maxValue: e.confettiSize + 7 },
                     }),
                     [],
                 );
-            return t.useMemo(
+            return l.useMemo(
                 () => ({
-                    fire: (t, n, i) => {
-                        let r = i?.settings != null ? { ...l, ...i.settings } : l;
-                        e(t, n, s(r), (i?.count ?? r.confettiCount) * (i?.countMultiplier ?? 1), { sprite: i?.sprite });
+                    fire: (l, i, r) => {
+                        let s = r?.settings != null ? { ...t, ...r.settings } : t;
+                        e(l, i, n(s), (r?.count ?? s.confettiCount) * (r?.countMultiplier ?? 1), { sprite: r?.sprite });
                     },
                 }),
-                [e, s, l],
+                [e, n, t],
             );
         },
     },

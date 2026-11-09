@@ -54,8 +54,8 @@ var S = n(51906),
     _ = n(383669),
     j = n(793574),
     v = n(149468),
-    T = n(435558),
-    N = n.n(T),
+    N = n(435558),
+    T = n.n(N),
     M = n(855687),
     R = n(143413),
     D = n(734057),
@@ -63,8 +63,8 @@ var S = n(51906),
     L = n(498642),
     P = n(186111),
     O = n(596344),
-    U = n(576705),
-    G = n(811091),
+    G = n(576705),
+    U = n(811091),
     w = n(652215),
     F = n(727419),
     H = n(794967),
@@ -89,7 +89,7 @@ function ee(e) {
         E = (0, o.bG)([h.default], () => C?.ownerId === h.default.getId(), [C]),
         {
             steps: S,
-            shouldAnimate: T,
+            shouldAnimate: N,
             isOldGuild: ee,
         } = (function (e, t) {
             var s;
@@ -105,23 +105,23 @@ function ee(e) {
                 C,
                 E = (function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.NOr;
-                    return null != e && G.default.extractTimestamp(e) < Date.now() - t;
+                    return null != e && U.default.extractTimestamp(e) < Date.now() - t;
                 })(t?.id),
                 {
                     canInvite: x,
                     canManageGuild: I,
                     canMessage: S,
                 } = (0, o.cf)(
-                    [U.A],
+                    [G.A],
                     () => ({
-                        canInvite: (0, M.K)(U.A, t, e),
-                        canManageGuild: null != t && U.A.can(w.xBc.MANAGE_GUILD, t),
-                        canMessage: null != e && U.A.can(w.xBc.SEND_MESSAGES, e),
-                        canCreateChannel: null != t && U.A.can(w.xBc.MANAGE_CHANNELS, t),
+                        canInvite: (0, M.K)(G.A, t, e),
+                        canManageGuild: null != t && G.A.can(w.xBc.MANAGE_GUILD, t),
+                        canMessage: null != e && G.A.can(w.xBc.SEND_MESSAGES, e),
+                        canCreateChannel: null != t && G.A.can(w.xBc.MANAGE_CHANNELS, t),
                     }),
                     [t, e],
                 ),
-                T = (0, o.bG)(
+                N = (0, o.bG)(
                     [$.default],
                     () => $.default.getCurrentUser()?.desktop === !0 || $.default.getCurrentUser()?.mobile === !0,
                 ),
@@ -146,12 +146,12 @@ function ee(e) {
                         ((c = (0, o.bG)([D.A], () =>
                             null != t ? D.A.getMutableBasicGuildChannelsForGuild(t.id) : null,
                         )),
-                        (s = i.useMemo(() => (null == c ? [] : N().values(c)), [c])),
+                        (s = i.useMemo(() => (null == c ? [] : T().values(c)), [c])),
                         (d = (0, o.bG)([h.default], () => h.default.getId())),
                         (0, o.bG)([O.A], () =>
-                            N().some(s, (e) => {
+                            T().some(s, (e) => {
                                 let t = O.A.getMessages(e.id).toArray();
-                                return N().some(t, (e) => e.author.id === d && !(0, R.A)(e));
+                                return T().some(t, (e) => e.author.id === d && !(0, R.A)(e));
                             }),
                         )),
                     guildPersonalized:
@@ -166,7 +166,7 @@ function ee(e) {
                             function l(e) {
                                 return (
                                     null != t &&
-                                    G.default.extractTimestamp(e.channel.id) - G.default.extractTimestamp(t.id) > 500
+                                    U.default.extractTimestamp(e.channel.id) - U.default.extractTimestamp(t.id) > 500
                                 );
                             }
                             return e[k.I].some(l) || n.some(l);
@@ -287,7 +287,7 @@ function ee(e) {
                     }
                 );
             }, [em, I]);
-            let ep = !(T || ee || et || en || el),
+            let ep = !(N || ee || et || en || el),
                 eA = [];
             if (!E) {
                 (x &&
@@ -319,7 +319,7 @@ function ee(e) {
                             key: "download",
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             title: Y.intl.string(Y.t.pGVNI9),
-                            completed: T,
+                            completed: N,
                             onClick: eo,
                         }));
                 let e = I
@@ -363,7 +363,7 @@ function ee(e) {
                 ]).start();
             }, [s, t, A]),
             {
-                titleAnimatedStyle: T
+                titleAnimatedStyle: N
                     ? {
                           transform: [
                               { translateY: t.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
@@ -379,7 +379,7 @@ function ee(e) {
                 r.A.div,
                 {
                     className: x.cW,
-                    style: T ? { opacity: en[t] } : {},
+                    style: N ? { opacity: en[t] } : {},
                     children: (0, l.jsx)(I, {
                         iconUrl: e.iconUrl,
                         header: e.title,

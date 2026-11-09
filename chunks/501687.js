@@ -43,10 +43,10 @@ let T = l.memo(function (e) {
         N = E(n, r),
         j = r - n.startSec,
         R = r < n.startSec,
-        M = Math.ceil(v(n, r)),
-        O = (0, p.rB)(M),
-        k = n.owner?.name ?? n.label ?? b.intl.string(_.default["6XuC8e"]),
-        { ref: P, width: L, height: D } = (0, u.Ay)();
+        O = Math.ceil(v(n, r)),
+        M = (0, p.rB)(O),
+        P = n.owner?.name ?? n.label ?? b.intl.string(_.default["6XuC8e"]),
+        { ref: k, width: L, height: D } = (0, u.Ay)();
     (l.useEffect(() => {
         let e = T.current;
         if (null != e) {
@@ -59,11 +59,11 @@ let T = l.memo(function (e) {
         }
     }, [N, j, s, o, S]),
         l.useEffect(() => (d?.(n.id, T.current), () => d?.(n.id, null)), [d, n.id]));
-    let w = c && !N && 0 !== M;
+    let w = c && !N && 0 !== O;
     return (
         c && N
-            ? (t = b.intl.formatToPlainString(_.default.zc1itm, { name: k }))
-            : c && (t = b.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: k, time: O })),
+            ? (t = b.intl.formatToPlainString(_.default.zc1itm, { name: P }))
+            : c && (t = b.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: P, time: M })),
         (0, i.jsxs)("div", {
             className: y.Vs,
             role: c ? "group" : void 0,
@@ -71,7 +71,7 @@ let T = l.memo(function (e) {
             "data-testid": "discord-web-multi-video-player-grid-tile",
             children: [
                 (0, i.jsxs)("div", {
-                    ref: P,
+                    ref: k,
                     className: a()(y.iH, { [y.om]: c }),
                     children: [
                         x ??
@@ -107,7 +107,7 @@ let T = l.memo(function (e) {
                         "aria-hidden": !0,
                         children: [
                             (0, i.jsx)(A.HourglassIcon, { size: "xs", color: "currentColor" }),
-                            (0, i.jsx)(C.E, { variant: "body-xs/medium", color: "none", children: O }),
+                            (0, i.jsx)(C.E, { variant: "body-xs/medium", color: "none", children: M }),
                         ],
                     }),
             ],
@@ -185,10 +185,10 @@ function R(e) {
             onPause: S,
             children: I,
             original: R,
-            subSources: M,
-            isGridView: O,
-            setIsGridView: k,
-            suppressSourceSelection: P = !1,
+            subSources: O,
+            isGridView: M,
+            setIsGridView: P,
+            suppressSourceSelection: k = !1,
             ...L
         } = e,
         D = l.useRef(null),
@@ -267,7 +267,7 @@ function R(e) {
                 }
             );
         })(D),
-        en = l.useMemo(() => [{ ...R, startSec: 0, durationSec: B }, ...M], [R, M, B]),
+        en = l.useMemo(() => [{ ...R, startSec: 0, durationSec: B }, ...O], [R, O, B]),
         ei = en.find((e) => e.id === V) ?? en[0],
         {
             registerFollowerElement: el,
@@ -367,7 +367,7 @@ function R(e) {
                     handleDriverPause: C,
                 }
             );
-        })({ elementRef: D, sources: en, activeSourceId: ei.id, isGridView: O }),
+        })({ elementRef: D, sources: en, activeSourceId: ei.id, isGridView: M }),
         ec = l.useRef(null),
         ed = l.useRef(null),
         em = l.useRef(R.id),
@@ -539,19 +539,19 @@ function R(e) {
         children: [
             (0, i.jsxs)(c.D, {
                 onClick: L.onClick ?? void 0,
-                className: a()(j.dw, { [j.x2]: O }),
+                className: a()(j.dw, { [j.x2]: M }),
                 children: [
                     (0, i.jsxs)(T, {
                         source: ei,
                         masterSec: K,
                         isPlaying: Y,
                         playbackRate: Q,
-                        isGridView: O,
+                        isGridView: M,
                         children: [
                             (0, i.jsxs)(m.A, {
                                 ...L,
                                 ref: F,
-                                className: a()(s, { [j._b]: eT, [j.l3]: O }),
+                                className: a()(s, { [j._b]: eT, [j.l3]: M }),
                                 poster: (0, f.s)(ei.poster ?? r, ei, U, G),
                                 onCanPlay: ey,
                                 onCanPlayThrough: ey,
@@ -611,8 +611,8 @@ function R(e) {
                             }),
                         ],
                     }),
-                    O &&
-                        M.map((e) =>
+                    M &&
+                        O.map((e) =>
                             (0, i.jsx)(
                                 T,
                                 {
@@ -629,12 +629,12 @@ function R(e) {
                 ],
             }),
             en.length > 1 &&
-                !P &&
+                !k &&
                 (0, i.jsxs)("div", {
                     className: j.c2,
                     "data-testid": "discord-web-multi-video-player-povs",
                     children: [
-                        !O &&
+                        !M &&
                             en.map((e) =>
                                 (0, i.jsx)(
                                     N,
@@ -655,13 +655,13 @@ function R(e) {
                             "aria-label": b.intl.string(_.default.lykjkX),
                             "aria-pressed": !1,
                             onClick: function (e) {
-                                if ((e.stopPropagation(), O)) {
-                                    (er() && es(!0), k(!1));
+                                if ((e.stopPropagation(), M)) {
+                                    (er() && es(!0), P(!1));
                                     let e = en.find((e) => e.id === em.current);
                                     eC(null != e && E(e, K) ? e.id : R.id, K);
                                     return;
                                 }
-                                ((em.current = ei.id), k(!0), ea(K, !0), eC(R.id, K));
+                                ((em.current = ei.id), P(!0), ea(K, !0), eC(R.id, K));
                             },
                             "data-testid": "discord-web-multi-video-player-grid-toggle",
                             children: (0, i.jsx)(d.GridSquareIcon, { size: "xs", color: "currentColor" }),

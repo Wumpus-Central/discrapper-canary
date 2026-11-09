@@ -36,8 +36,8 @@ n.d(
                     [g],
                 ),
                 [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
-                { columnCounts: y, focusedX: x, focusedY: O } = N,
-                [T] = i.useState(() => (0, r.nF)(C, 16));
+                { columnCounts: y, focusedX: x, focusedY: j } = N,
+                [O] = i.useState(() => (0, r.nF)(C, 16));
             return (
                 i.useEffect(() => {
                     C({ type: s.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
@@ -60,8 +60,8 @@ n.d(
                         _ = i.useRef(g),
                         N = c(o(t, u, d)),
                         [C, y] = i.useState(!1),
-                        [x, O] = i.useState(!1),
-                        [T, j] = i.useState(!1),
+                        [x, j] = i.useState(!1),
+                        [O, T] = i.useState(!1),
                         [S] = i.useState(
                             () =>
                                 new r.Lp((e) => {
@@ -84,7 +84,7 @@ n.d(
                                 let i = o(t, e, n);
                                 (null != f ? f(e, n, i) : Promise.resolve()).then(() => {
                                     let e = c(i);
-                                    null != e ? (b(e), O(!1)) : requestAnimationFrame(() => O(!0));
+                                    null != e ? (b(e), j(!1)) : requestAnimationFrame(() => j(!0));
                                 });
                             },
                             [t, f, b],
@@ -94,9 +94,9 @@ n.d(
                                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                                     [n, i] = null != E ? E(u, d) : [u, d];
                                 if ((n !== u || i !== d) && (I({ type: s.n.SET_FOCUSED_POSITION, x: n, y: i }), !e))
-                                    return void j(!0);
+                                    return void T(!0);
                                 let l = c(o(t, n, i));
-                                null != l && (j(!0), b(l));
+                                null != l && (T(!0), b(l));
                             },
                             [I, u, d, E, t, b],
                         ),
@@ -114,10 +114,10 @@ n.d(
                         _.current && null == e && P(!0);
                     }, []);
                     (i.useEffect(() => {
-                        C && x && null != N && (b(N), O(!1));
+                        C && x && null != N && (b(N), j(!1));
                     }, [x, N]),
                         i.useEffect(() => {
-                            C && (T || R(u, d), j(!1));
+                            C && (O || R(u, d), T(!1));
                         }, [u, d]));
                     let D = i.useCallback(
                             (e) => {
@@ -178,7 +178,7 @@ n.d(
                         w = i.useCallback(
                             (e) =>
                                 e.currentTarget !== e.target
-                                    ? (C || (y(!0), j(!0)), !1)
+                                    ? (C || (y(!0), T(!0)), !1)
                                     : C
                                       ? (v(!1), !1)
                                       : void (h && null != N ? R(u, d) : v(!0)),
@@ -227,8 +227,8 @@ n.d(
                     navId: t,
                     columnCounts: y,
                     focusedX: x,
-                    focusedY: O,
-                    dispatch: T,
+                    focusedY: j,
+                    dispatch: O,
                     onSelect: m,
                     prepareFocus: f,
                     getNewFocusPosition: E,

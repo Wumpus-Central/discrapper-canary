@@ -1,11 +1,11 @@
-var t = s(705751);
-s.d(
-    l,
+var l = n(705751);
+n.d(
+    t,
     {},
     {
         r: function (e) {
-            let l;
-            return (e.isSystemUser() ? (l = t.nu.SYSTEM_DM) : e.bot && (l = t.nu.BOT), l);
+            let t;
+            return (e.isSystemUser() ? (t = l.nu.SYSTEM_DM) : e.bot && (t = l.nu.BOT), t);
         },
     },
 );

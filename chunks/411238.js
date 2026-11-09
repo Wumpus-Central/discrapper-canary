@@ -1,4 +1,4 @@
-(n.d(t, { TB: () => J, lx: () => $, Wv: () => K, q1: () => z, nR: () => q, kY: () => X }), n(938796));
+(n.d(t, { TB: () => Z, lx: () => $, Wv: () => K, q1: () => z, nR: () => q, kY: () => X }), n(938796));
 var i = n(665260),
     r = n(855986),
     a = n(155718),
@@ -267,7 +267,7 @@ function q(e) {
 function Q(e, t, n) {
     return `${(0, o.az)(e)} (${(0, o.az)((0, E.m1)(t, U.default, v.A, !0))}${null != n ? `, ${(0, o.az)((0, E.m1)(n, U.default, v.A))}` : ""})`;
 }
-function Z(e, t, n, i) {
+function J(e, t, n, i) {
     switch (e.type) {
         case j.rbe.GROUP_DM:
             return n;
@@ -293,7 +293,7 @@ function Z(e, t, n, i) {
             return t;
     }
 }
-function J(e, t, n) {
+function Z(e, t, n) {
     let r,
         s = w.Ay.getName(e.getGuildId(), e.id, n),
         l = s;
@@ -329,18 +329,18 @@ function J(e, t, n) {
     else if (null != t.activity && null != t.application)
         r =
             t.activity.type === j.xL.JOIN
-                ? Y.intl.formatToPlainString(Z(e, Y.t.E8CgCh, Y.t.c6KHWJ, Y.t.Fy7rJN), {
+                ? Y.intl.formatToPlainString(J(e, Y.t.E8CgCh, Y.t.c6KHWJ, Y.t.Fy7rJN), {
                       user: s,
                       game: t.application.name,
                   })
                 : t.activity.type === j.xL.JOIN_REQUEST
-                  ? Y.intl.formatToPlainString(Z(e, Y.t["/TD0la"], Y.t["/TD0la"], Y.t["/TD0la"]), {
+                  ? Y.intl.formatToPlainString(J(e, Y.t["/TD0la"], Y.t["/TD0la"], Y.t["/TD0la"]), {
                         user: s,
                         game: t.application.name,
                     })
                   : "";
     else if (null != t.activity && t.activity.type === j.xL.LISTEN) {
-        let t = Z(e, Y.t.SaDdmN, Y.t.qsODhp, Y.t.WeiMTW);
+        let t = J(e, Y.t.SaDdmN, Y.t.qsODhp, Y.t.WeiMTW);
         r = Y.intl.formatToPlainString(t, { user: s });
     } else if (null != c && c.length > 0) r = Y.intl.formatToPlainString(Y.t.zY4v1B, { stickerName: c[0].name });
     else if (t.type === j.lAJ.PREMIUM_REFERRAL)

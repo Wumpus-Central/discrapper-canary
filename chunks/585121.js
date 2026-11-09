@@ -18,7 +18,7 @@ let A = function (e) {
         T = (0, o.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
-        x = (function (e) {
+        g = (function (e) {
             switch (e) {
                 case d.Or.PREMIUM_UPDATED:
                     return m.intl.string(m.t["75Wt0E"]);
@@ -31,7 +31,7 @@ let A = function (e) {
     return (0, l.jsxs)("div", {
         className: p.kL,
         children: [
-            (0, l.jsx)(s.D, { className: p.wx, variant: "nitro-lg", color: "text-strong", children: x }),
+            (0, l.jsx)(s.D, { className: p.wx, variant: "nitro-lg", color: "text-strong", children: g }),
             null != y &&
                 (0, l.jsxs)("div", {
                     className: p.Dz,

@@ -466,7 +466,7 @@ function Q(e) {
         return _.id;
     })(e);
 }
-let Z = {
+let J = {
         [P.he.GIROPAY]: {
             confirmationType: "stripe_redirect_confirmation",
             constructStripeConfirmPaymentHandler: (e) => {
@@ -524,7 +524,7 @@ let Z = {
             },
         },
     },
-    J = {
+    Z = {
         [P.he.SEPA_DEBIT]: {
             confirmationType: "stripe_direct_confirmation",
             constructStripeConfirmPaymentHandler: (e) => {
@@ -562,9 +562,9 @@ class et extends ee {
     constructor(e, t) {
         var n;
         if (null == e) throw y("Payment source cannot be null on a redirect.");
-        if ((super(e, t), (n = this.paymentSourceType), N.CmT.has(n) && n in Z))
-            this.handlerRegistry = Z[this.paymentSourceType];
-        else if (this.paymentSourceType in J) this.handlerRegistry = J[this.paymentSourceType];
+        if ((super(e, t), (n = this.paymentSourceType), N.CmT.has(n) && n in J))
+            this.handlerRegistry = J[this.paymentSourceType];
+        else if (this.paymentSourceType in Z) this.handlerRegistry = Z[this.paymentSourceType];
         else throw y("Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
     }
     async getStripe(e) {

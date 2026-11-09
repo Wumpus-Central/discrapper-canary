@@ -1,13 +1,13 @@
-s(582128);
-var t = s(164636),
-    n = s(3137);
-s.d(
-    l,
+n(582128);
+var l = n(164636),
+    i = n(3137);
+n.d(
+    t,
     {},
     {
         A: function (e) {
-            let { children: l, confettiLocation: s } = e;
-            return (0, t.bG)([n.A], () => n.A.isEnabled({ confettiLocation: s })) ? l : null;
+            let { children: t, confettiLocation: n } = e;
+            return (0, l.bG)([i.A], () => i.A.isEnabled({ confettiLocation: n })) ? t : null;
         },
     },
 );

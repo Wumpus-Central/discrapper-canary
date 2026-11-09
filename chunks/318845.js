@@ -49,9 +49,9 @@ let p = function (e) {
             listPadding: C,
             rowCount: y,
             getScrollOffsetForIndex: x,
-            getScrollOffsetForCategory: O,
-            categoryHeight: T,
-            onScroll: j,
+            getScrollOffsetForCategory: j,
+            categoryHeight: O,
+            onScroll: T,
             renderCategoryListItem: S,
             rowCountBySection: b,
             renderSection: R,
@@ -136,20 +136,20 @@ let p = function (e) {
                     let e = E(l) ?? h.current;
                     null == e || e >= r - 1 || N(e + 1, !0);
                 }, [N, l, r]),
-                O = s.useCallback(() => {
+                j = s.useCallback(() => {
                     let e = E(l) ?? h.current;
                     null == e || e <= 0 || N(e - 1, !1);
                 }, [N, l]),
-                T = (0, u.Ay)({
+                O = (0, u.Ay)({
                     id: t,
                     isEnabled: p,
                     setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: y,
                     onNavigateNextAtEnd: x,
-                    onNavigatePreviousAtStart: O,
+                    onNavigatePreviousAtStart: j,
                 }),
-                j = T.setFocus;
+                T = O.setFocus;
             return (
                 s.useEffect(() => {
                     if (!c || a < 0 || a >= r) return;
@@ -158,14 +158,14 @@ let p = function (e) {
                     let t = 0,
                         s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((h.current = a), j(i(a)));
+                                ((h.current = a), T(i(a)));
                             });
                         });
                     return () => {
                         (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, c, i, j, r]),
-                T
+                }, [a, n, c, i, T, r]),
+                O
             );
         })({
             navId: v ?? "expression-picker-categories-disabled",
@@ -197,15 +197,15 @@ let p = function (e) {
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
                 (d.setActiveCategoryIndex(e),
-                    "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e, { offset: O?.(e) }));
+                    "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e, { offset: j?.(e) }));
             },
-            [n, d, O],
+            [n, d, j],
         ),
         G = s.useCallback((e) => S(l[e], e, () => U(e), P === e), [P, l, U, S]),
-        F = s.useMemo(() => ("function" == typeof T ? (e) => T(l[e], e) : T), [l, T]),
+        F = s.useMemo(() => ("function" == typeof O ? (e) => O(l[e], e) : O), [l, O]),
         J = (0, i.jsx)(o.A, {
             listPadding: C,
-            onScroll: j,
+            onScroll: T,
             ref: t,
             renderListHeader: A,
             listHeaderHeight: _,
@@ -217,7 +217,7 @@ let p = function (e) {
             renderSection: R,
             role: M ? "none presentation" : void 0,
         }),
-        K = (0, i.jsxs)("div", {
+        V = (0, i.jsxs)("div", {
             className: r()(g.i, N),
             children: [
                 M
@@ -231,5 +231,5 @@ let p = function (e) {
                 p?.(U),
             ],
         });
-    return M ? (0, i.jsx)(a.hD, { navigator: k, children: K }) : K;
+    return M ? (0, i.jsx)(a.hD, { navigator: k, children: V }) : V;
 };

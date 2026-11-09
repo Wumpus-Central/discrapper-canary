@@ -306,8 +306,8 @@ function X(e) {
 var z = n(811315),
     q = n.n(z),
     Q = n(529412),
-    Z = n(742655),
-    J = n(998312),
+    J = n(742655),
+    Z = n(998312),
     ee = n(860841),
     et = n(442467),
     en = n(371710),
@@ -620,11 +620,11 @@ function ed(e) {
                         return null != t && null != i && null == t.findInvoiceItemByPlanId(i);
                     },
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getHasPreviousStepOutsideCheckout: () => {
-                        let t = e().getTenantParams(J.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(Z.C.PREMIUM_CHECKOUT);
                         return null != t && (t.hasPreviousStepOutsideCheckout ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {
@@ -737,7 +737,7 @@ function ed(e) {
                     },
                     getHasQuantityDiscount: () => {
                         let { isGift: t, quantity: n, getInvoiceHasQuantityDiscount: i } = e();
-                        return i() || (t && null != (0, Z.t8)(n));
+                        return i() || (t && null != (0, J.t8)(n));
                     },
                 };
             })(i),

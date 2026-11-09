@@ -235,11 +235,11 @@ class F extends L.G {
             { no: 11, name: "bot", kind: "message", oneof: "filter", T: () => eW },
             { no: 12, name: "user_age_range", kind: "message", oneof: "filter", T: () => eK },
             { no: 13, name: "user_id_range", kind: "message", oneof: "filter", T: () => eq },
-            { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => eZ },
+            { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => eJ },
             { no: 15, name: "unit_id_in_range_by_hash", kind: "message", oneof: "filter", T: () => e0 },
             { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e2 },
             { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e7 },
-            { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => Z },
+            { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => J },
             { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => e4 },
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => te },
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => tn },
@@ -338,7 +338,7 @@ class F extends L.G {
                 case 14:
                     r.filter = {
                         oneofKind: "userHasFlag",
-                        userHasFlag: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.userHasFlag),
+                        userHasFlag: eJ.internalBinaryRead(e, e.uint32(), n, r.filter.userHasFlag),
                     };
                     break;
                 case 15:
@@ -362,7 +362,7 @@ class F extends L.G {
                 case 18:
                     r.filter = {
                         oneofKind: "clientSystemLocale",
-                        clientSystemLocale: Z.internalBinaryRead(e, e.uint32(), n, r.filter.clientSystemLocale),
+                        clientSystemLocale: J.internalBinaryRead(e, e.uint32(), n, r.filter.clientSystemLocale),
                     };
                     break;
                 case 19:
@@ -481,7 +481,7 @@ class F extends L.G {
             "userIdRange" === e.filter.oneofKind &&
                 eq.internalBinaryWrite(e.filter.userIdRange, t.tag(13, C.O0.LengthDelimited).fork(), n).join(),
             "userHasFlag" === e.filter.oneofKind &&
-                eZ.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, C.O0.LengthDelimited).fork(), n).join(),
+                eJ.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, C.O0.LengthDelimited).fork(), n).join(),
             "unitIdInRangeByHash" === e.filter.oneofKind &&
                 e0.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, C.O0.LengthDelimited).fork(), n).join(),
             "clientReleaseChannel" === e.filter.oneofKind &&
@@ -489,7 +489,7 @@ class F extends L.G {
             "always" === e.filter.oneofKind &&
                 e7.internalBinaryWrite(e.filter.always, t.tag(17, C.O0.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
-                Z.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, C.O0.LengthDelimited).fork(), n).join(),
+                J.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, C.O0.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
                 e4.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, C.O0.LengthDelimited).fork(), n).join(),
             "userPremiumType" === e.filter.oneofKind &&
@@ -785,8 +785,8 @@ class Q extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let Z = new Q();
-class J extends L.G {
+let J = new Q();
+class Z extends L.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.ClientLocation",
@@ -825,7 +825,7 @@ class J extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let ee = new J();
+let ee = new Z();
 class et extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.ClientLocation.Place", [
@@ -2064,8 +2064,8 @@ class eQ extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eZ = new eQ();
-class eJ extends L.G {
+let eJ = new eQ();
+class eZ extends L.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UnitIdInRangeByHash",
@@ -2118,7 +2118,7 @@ class eJ extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e0 = new eJ();
+let e0 = new eZ();
 class e1 extends L.G {
     constructor() {
         super(
@@ -3656,7 +3656,7 @@ class tX extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan", [
             { no: 1, name: "measurement_plan", kind: "message", T: () => tQ },
-            { no: 2, name: "rollout_plan", kind: "message", T: () => tJ },
+            { no: 2, name: "rollout_plan", kind: "message", T: () => tZ },
         ]);
     }
     create(e) {
@@ -3677,7 +3677,7 @@ class tX extends L.G {
                     r.measurementPlan = tQ.internalBinaryRead(e, e.uint32(), n, r.measurementPlan);
                     break;
                 case 2:
-                    r.rolloutPlan = tJ.internalBinaryRead(e, e.uint32(), n, r.rolloutPlan);
+                    r.rolloutPlan = tZ.internalBinaryRead(e, e.uint32(), n, r.rolloutPlan);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -3692,7 +3692,7 @@ class tX extends L.G {
     internalBinaryWrite(e, t, n) {
         (e.measurementPlan &&
             tQ.internalBinaryWrite(e.measurementPlan, t.tag(1, C.O0.LengthDelimited).fork(), n).join(),
-            e.rolloutPlan && tJ.internalBinaryWrite(e.rolloutPlan, t.tag(2, C.O0.LengthDelimited).fork(), n).join());
+            e.rolloutPlan && tZ.internalBinaryWrite(e.rolloutPlan, t.tag(2, C.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -3749,7 +3749,7 @@ class tq extends L.G {
     }
 }
 let tQ = new tq();
-class tZ extends L.G {
+class tJ extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan.RolloutPlan", [
             {
@@ -3799,7 +3799,7 @@ class tZ extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tJ = new tZ();
+let tZ = new tJ();
 class t0 extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep", [

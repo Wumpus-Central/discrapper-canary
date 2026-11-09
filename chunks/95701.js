@@ -205,8 +205,8 @@ let B = new Set([
 (I.rbe.GUILD_TEXT, I.rbe.GUILD_ANNOUNCEMENT, I.rbe.GUILD_FORUM, I.rbe.GUILD_VOICE, I.rbe.GUILD_APP);
 let q = new Set([I.rbe.GUILD_APP]),
     Q = new Set([...q]),
-    Z = new Set([...q, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]);
-function J(e) {
+    J = new Set([...q, I.rbe.GUILD_FORUM, I.rbe.GUILD_MEDIA]);
+function Z(e) {
     let t = {};
     return (
         e?.forEach((e) => {
@@ -606,7 +606,7 @@ class ec extends ed {
             ownerId: e.owner_id,
             parent_id: e.parent_id,
             parentChannelThreadType: void 0,
-            permissionOverwrites_: J(e.permission_overwrites),
+            permissionOverwrites_: Z(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user,
             rawRecipients: null != e.recipients ? e.recipients : [],
@@ -683,7 +683,7 @@ class eu extends ed {
             nsfw_: e.nsfw ?? !1,
             originChannelId: e.origin_channel_id,
             parent_id: e.parent_id,
-            permissionOverwrites_: J(e.permission_overwrites),
+            permissionOverwrites_: Z(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user ?? 0,
             rtcRegion: e.rtc_region,
@@ -737,7 +737,7 @@ class e_ extends ed {
             name: e.name ?? "",
             nsfw_: e.nsfw ?? !1,
             parent_id: e.parent_id,
-            permissionOverwrites_: J(e.permission_overwrites),
+            permissionOverwrites_: Z(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user ?? 0,
             themeColor: e.theme_color,
@@ -803,7 +803,7 @@ class eA extends ed {
             name: e.name ?? "",
             nsfw_: e.nsfw ?? !1,
             parent_id: e.parent_id,
-            permissionOverwrites_: J(e.permission_overwrites),
+            permissionOverwrites_: Z(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user ?? 0,
             template: e.template,
@@ -1069,7 +1069,7 @@ n.d(
         },
         nA: eE,
         nO: function (e) {
-            return !Z.has(e);
+            return !J.has(e);
         },
         nb: K,
         oH: S,

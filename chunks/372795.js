@@ -17,8 +17,8 @@ n.d(
                     fps: o,
                     interactive: c = !1,
                     paused: d = !1,
-                    drawWidth: m,
-                    className: f,
+                    drawWidth: f,
+                    className: m,
                     "aria-label": h,
                     onStateChange: g,
                 } = e,
@@ -46,7 +46,7 @@ n.d(
                     [t, n],
                 ),
                 w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-                S = null == m ? 0 : Math.round(m * Math.min(w, 2)),
+                S = null == f ? 0 : Math.round(f * Math.min(w, 2)),
                 A = (0, a.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
                 C = (0, a.AV)(t, n),
                 N = r.useRef(C);
@@ -122,7 +122,7 @@ n.d(
             }
             return (0, l.jsx)("canvas", {
                 ref: p,
-                className: f,
+                className: m,
                 role: c ? "application" : "img",
                 "aria-label": h,
                 tabIndex: c ? 0 : -1,

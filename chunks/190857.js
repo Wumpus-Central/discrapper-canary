@@ -20,15 +20,15 @@ function C(e) {
         [I, S] = l.useState(!1),
         [y, b] = l.useState(!1),
         [_, j] = l.useState(!1),
-        [v, T] = l.useState(!1),
-        [N, M] = l.useState(!1),
+        [v, N] = l.useState(!1),
+        [T, M] = l.useState(!1),
         R = I || y || _,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
                     S(!0);
                     try {
-                        (await (0, h.RK)(e), T(!0), i?.());
+                        (await (0, h.RK)(e), N(!0), i?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         E?.(e);
@@ -165,6 +165,6 @@ function C(e) {
         isRejectLoading: y,
         isUserProfileLoading: _,
         isOptimisticAccepted: v,
-        isOptimisticRejected: N,
+        isOptimisticRejected: T,
     };
 }

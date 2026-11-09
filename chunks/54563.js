@@ -50,10 +50,10 @@ let R = (0, u.UT)(N.A, {
     },
     getIsLoading: (e) => N.A.isLoadingMessages(e.id),
 });
-var M = n(451909),
-    O = n(118517),
-    k = n(747926),
-    P = n(46653),
+var O = n(451909),
+    M = n(118517),
+    P = n(747926),
+    k = n(46653),
     L = n(734057),
     D = n(188567),
     w = n(475815);
@@ -106,8 +106,8 @@ function K(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = Y.author.id === P.default.getId();
-                _.A.sendMessage(q.id, M.Ay.parse(q, t), !1, {
+                    n = Y.author.id === k.default.getId();
+                _.A.sendMessage(q.id, O.Ay.parse(q, t), !1, {
                     location: F.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
                     messageReference: { channel_id: q.id, guild_id: q.getGuildId() ?? void 0, message_id: s },
@@ -198,8 +198,8 @@ function K(e) {
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == Y || null == Z?.current?.currentTime)) return;
                         w._U(Z.current) && w.sP(Z.current);
-                        let t = Y.author.id === P.default.getId();
-                        ((0, O.Yf)({
+                        let t = Y.author.id === k.default.getId();
+                        ((0, M.Yf)({
                             channel: q,
                             message: Y,
                             shouldMention: !e.shiftKey && !t,
@@ -220,7 +220,7 @@ function K(e) {
                             className: V.jC,
                             tag: "span",
                             onClick: function (e) {
-                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, k.JA)(Q)));
+                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, P.JA)(Q)));
                             },
                             "aria-label": el,
                             children: (0, i.jsx)(v.E, {
@@ -472,7 +472,7 @@ function e_(e) {
     let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
         { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
         d = (0, u.bG)(
-            [ef.Ay, P.default],
+            [ef.Ay, k.default],
             () =>
                 (function (e, t) {
                     let n,
@@ -491,17 +491,17 @@ function e_(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, P.default.getId(), ef.Ay),
+                })(t, k.default.getId(), ef.Ay),
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([P.default, N.A], () => {
+        f = (0, u.bG)([k.default, N.A], () => {
             let e = N.A.getMessage(n, r);
             return (
                 null != e &&
-                e.author?.id !== P.default.getId() &&
+                e.author?.id !== k.default.getId() &&
                 (null == e.messageReference ||
-                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== P.default.getId())
+                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
         p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
@@ -556,7 +556,7 @@ function ey(e) {
         } = e,
         N = (0, u.bG)([m.A], () => m.A.theme),
         { activeLayer: j } = (0, f.X$)(),
-        { ref: R, width: M } = (0, s.Ay)();
+        { ref: R, width: O } = (0, s.Ay)();
     return (0, i.jsx)(c.N, {
         theme: o.NJ.ONYX,
         children: (e) =>
@@ -605,7 +605,7 @@ function ey(e) {
                                 channelId: x,
                                 messageId: v,
                                 guildId: g,
-                                containerWidth: M,
+                                containerWidth: O,
                                 hidden: !l || p,
                             }),
                         }),

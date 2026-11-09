@@ -4,8 +4,8 @@ var i = n(136722),
     u = n(71393),
     s = n(576705),
     o = n(967198),
-    E = n(287809),
-    a = n(488926),
+    a = n(287809),
+    E = n(488926),
     d = n(811091),
     _ = n(974103),
     c = n(903093),
@@ -35,14 +35,14 @@ var i = n(136722),
             },
             dj: function () {
                 let t = (function (t) {
-                        let e = E.default.getCurrentUser(),
+                        let e = a.default.getCurrentUser(),
                             n = R.A.getIncidentsByGuild();
                         for (let r of d.default.keys(n).map((t) => u.A.getGuild(t))) {
                             if (null == r) continue;
                             let l = n[r.id];
                             if (
                                 !(null == l || (!(0, c.k$)(l) && !(0, c._J)(l)) || ((0, c._J)(l) && r.id !== t)) &&
-                                i.X8(a.cc({ user: e, context: r, checkElevated: !1 }), A.Sz)
+                                i.X8(E.cc({ user: e, context: r, checkElevated: !1 }), A.Sz)
                             )
                                 return r.id;
                         }

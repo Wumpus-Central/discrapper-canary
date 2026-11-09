@@ -258,7 +258,7 @@ function Q(e) {
         return t;
     });
 }
-function Z() {
+function J() {
     return W(() => {
         let e = !1;
         for (let t of Array.from(y.values()))
@@ -266,7 +266,7 @@ function Z() {
         return e;
     });
 }
-function J() {
+function Z() {
     return W(() => {
         H();
     });
@@ -279,8 +279,8 @@ class ee extends r.Ay.PersistedStore {
             (R = e?.voiceGroupingEnabled ?? !0),
             K(),
             this.waitFor(d.A, o.default, c.A, u.A, _.A, E.default, A.A),
-            this.syncWith([o.default], J),
-            this.syncWith([c.A], Z));
+            this.syncWith([o.default], Z),
+            this.syncWith([c.A], J));
     }
     getState() {
         return { groupingMode: O, voiceGroupingEnabled: R };

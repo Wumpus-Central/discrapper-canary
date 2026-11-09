@@ -11,35 +11,35 @@ let r = new Set([
     "child_unavailable",
 ]);
 n.d(
-    t,
+    e,
     {},
     {
-        K9: function (e, t) {
-            if (e.has(t)) return null;
-            let n = new Set(e);
-            return (n.add(t), n);
+        K9: function (t, e) {
+            if (t.has(e)) return null;
+            let n = new Set(t);
+            return (n.add(e), n);
         },
-        Q6: function (e, t) {
-            if (!e.has(t)) return e;
-            let n = new Set(e);
-            return (n.delete(t), n);
+        Q6: function (t, e) {
+            if (!t.has(e)) return t;
+            let n = new Set(t);
+            return (n.delete(e), n);
         },
-        Xl: function (e) {
-            let t = [],
+        Xl: function (t) {
+            let e = [],
                 n = new Set();
-            for (let r of e) {
-                let e =
+            for (let r of t) {
+                let t =
                     "string" != typeof r.type || "" === r.type || "string" != typeof r.label || "" === r.label.trim()
                         ? null
                         : r.configured
                           ? "authorize"
                           : "finish-setup";
-                null == e || n.has(r.type) || (n.add(r.type), t.push({ connection: r, offer: e }));
+                null == t || n.has(r.type) || (n.add(r.type), e.push({ connection: r, offer: t }));
             }
-            return t;
+            return e;
         },
-        ls: function (e, t) {
-            switch (t) {
+        ls: function (t, e) {
+            switch (e) {
                 case "not_configured":
                     return "not_configured";
                 case "not_deployed":
@@ -55,13 +55,13 @@ n.d(
                 case "bad_connection_type":
                     return "unknown";
             }
-            return 404 === e ? "not_declared" : e >= 500 ? "unavailable" : "unknown";
+            return 404 === t ? "not_declared" : t >= 500 ? "unavailable" : "unknown";
         },
-        rG: function (e) {
-            return "string" == typeof e && r.has(e) ? e : null;
+        rG: function (t) {
+            return "string" == typeof t && r.has(t) ? t : null;
         },
-        rq: function (e) {
-            return "not_configured" === e ? "setup" : "generic";
+        rq: function (t) {
+            return "not_configured" === t ? "setup" : "generic";
         },
     },
 );

@@ -275,7 +275,7 @@ function q(e) {
     );
 }
 let Q = {},
-    Z = [
+    J = [
         function () {
             let e = A.Ay.getShortcuts();
             return (
@@ -334,8 +334,8 @@ let Q = {},
             return (0, h.j9)() ? q(g.hCu.SAVE_SCREENSHOT) : z(g.hCu.SAVE_SCREENSHOT, "f12");
         },
     ];
-function J() {
-    return (V(), Z.reduce((e, t) => t() || e, !1));
+function Z() {
+    return (V(), J.reduce((e, t) => t() || e, !1));
 }
 d.A.setGetKeybindList(() => {
     let e = [];
@@ -448,19 +448,19 @@ class ee extends l.Ay.DeviceSettingsStore {
     }
 }
 let et = new ee(o.h, {
-    CONNECTION_OPEN: J,
+    CONNECTION_OPEN: Z,
     LOGIN_SUCCESS: function () {
         return (
             (async () => {
-                (await (0, p.AD)(), J() && et.emitChange());
+                (await (0, p.AD)(), Z() && et.emitChange());
             })(),
             !1
         );
     },
-    AUDIO_SET_MODE: J,
-    OVERLAY_SET_ENABLED: J,
-    RPC_APP_CONNECTED: J,
-    RPC_APP_DISCONNECTED: J,
+    AUDIO_SET_MODE: Z,
+    OVERLAY_SET_ENABLED: Z,
+    RPC_APP_CONNECTED: Z,
+    RPC_APP_DISCONNECTED: Z,
     KEYBINDS_ADD_KEYBIND: function (e) {
         let { keybind: t } = e;
         Y(K(t));
@@ -489,7 +489,7 @@ let et = new ee(o.h, {
         ((U = t),
             (b = {}),
             (P = 0),
-            Object.values(v).filter((e) => G.includes(e.action) && e.managed).length !== G.length && J(),
+            Object.values(v).filter((e) => G.includes(e.action) && e.managed).length !== G.length && Z(),
             s().forEach(v, (e) => {
                 P = Math.max(parseInt(e.id, 10), P) + 1;
                 try {

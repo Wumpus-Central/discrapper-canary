@@ -165,11 +165,11 @@ function Q(e) {
             throw Error(`Unknown experiment type: ${e}`);
     }
 }
-function Z(e, t) {
+function J(e, t) {
     let n = G[e];
     return !(null == n || Date.now() - n.time > 6048e5) && n.hash === t;
 }
-function J(e) {
+function Z(e) {
     let {
             experimentId: t,
             descriptor: n,
@@ -197,7 +197,7 @@ function J(e) {
     let c = o === y.vf.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
         _ = q(t, n, i, c),
         A = Q(n);
-    if ((d && x.get(_) === A) || Z(_, A)) return !1;
+    if ((d && x.get(_) === A) || J(_, A)) return !1;
     switch (n.type) {
         case y.Vh.USER: {
             let e = {
@@ -523,7 +523,7 @@ class eh extends _.A {
             o.A.Early,
         );
     }
-    trackExposure = J;
+    trackExposure = Z;
     initialize() {
         G = (function () {
             let e = l.w.get(b);
@@ -631,7 +631,7 @@ class eh extends _.A {
                 null != r.holdoutControlBucket &&
                 r.holdoutName !== n &&
                 ((u = e(t, r.holdoutName)), u?.bucket != null) &&
-                (!0 !== u.override && J({ experimentId: r.holdoutName, descriptor: u }),
+                (!0 !== u.override && Z({ experimentId: r.holdoutName, descriptor: u }),
                 u?.bucket === r.holdoutControlBucket)
                 ? null
                 : {
@@ -726,7 +726,7 @@ class eh extends _.A {
         };
     }
     hasExperimentTrackedExposure(e, t, n, i) {
-        return Z(q(e, t, n, i), Q(t));
+        return J(q(e, t, n, i), Q(t));
     }
 }
 let eI = new eh();

@@ -64,8 +64,8 @@ var h = n(626584),
     z = n(403362),
     q = n(537975),
     Q = n(695184),
-    Z = n(488926),
-    J = n(257120),
+    J = n(488926),
+    Z = n(257120),
     ee = n(811091),
     et = n(240248),
     en = n(427262),
@@ -175,7 +175,7 @@ function eT(e, t) {
             return 7;
         }
         if (i.test(e)) return 5;
-        if (r.split(/(?:,| )+/).every((t) => RegExp(J.A.escape(t), "i").test(e))) return 3;
+        if (r.split(/(?:,| )+/).every((t) => RegExp(Z.A.escape(t), "i").test(e))) return 3;
         if (s && a()(r, e)) return 1;
     } catch (e) {
         es.error(e);
@@ -366,7 +366,7 @@ let eR = (0, X.L_)((e, t, n) => {
                 query: i,
                 members: t,
                 limit: r,
-                filter: (e) => d.isPrivate() || Z.$3({ permission: E.xBc.VIEW_CHANNEL, user: e, context: d }),
+                filter: (e) => d.isPrivate() || J.$3({ permission: E.xBc.VIEW_CHANNEL, user: e, context: d }),
                 allowSnowflake: l,
             });
         },
@@ -434,8 +434,8 @@ let eR = (0, X.L_)((e, t, n) => {
                                 let t = e.toLocaleLowerCase();
                                 return {
                                     queryLower: t,
-                                    exactQuery: RegExp(`^${J.A.escape(t)}`, "i"),
-                                    containQuery: RegExp(J.A.escape(t), "i"),
+                                    exactQuery: RegExp(`^${Z.A.escape(t)}`, "i"),
+                                    containQuery: RegExp(Z.A.escape(t), "i"),
                                     isFullMatch: !1,
                                 };
                             });
@@ -443,8 +443,8 @@ let eR = (0, X.L_)((e, t, n) => {
                         let t = e.toLocaleLowerCase();
                         n.unshift({
                             queryLower: t,
-                            exactQuery: RegExp(`^${J.A.escape(t).replace(" ", "( |-)")}`, "i"),
-                            containQuery: RegExp(J.A.escape(t).replace(" ", "( |-)"), "i"),
+                            exactQuery: RegExp(`^${Z.A.escape(t).replace(" ", "( |-)")}`, "i"),
+                            containQuery: RegExp(Z.A.escape(t).replace(" ", "( |-)"), "i"),
                             isFullMatch: !0,
                         });
                     }
@@ -534,8 +534,8 @@ let eR = (0, X.L_)((e, t, n) => {
             let { query: t, limit: n = 10, fuzzy: i = !0, allowSnowflake: r, filter: a = el, boosters: s = {} } = e,
                 l = "" === t ? "" : t.toLocaleLowerCase(),
                 o = {
-                    exactQuery: RegExp(`^${J.A.escape(l)}`, "i"),
-                    containQuery: RegExp(J.A.escape(l), "i"),
+                    exactQuery: RegExp(`^${Z.A.escape(l)}`, "i"),
+                    containQuery: RegExp(Z.A.escape(l), "i"),
                     queryLower: l,
                 },
                 d = [];
@@ -578,8 +578,8 @@ let eR = (0, X.L_)((e, t, n) => {
             let { query: t, limit: n = 10, fuzzy: i = !0, filter: r = el, boosters: a = {} } = e,
                 s = (0, et.sS)((0, et.S8)(t.toLocaleLowerCase())),
                 o = {
-                    exactQuery: RegExp(`^${J.A.escape(s)}`, "i"),
-                    containQuery: RegExp(J.A.escape(s), "i"),
+                    exactQuery: RegExp(`^${Z.A.escape(s)}`, "i"),
+                    containQuery: RegExp(Z.A.escape(s), "i"),
                     queryLower: s,
                 },
                 d = l()(_.A.getMutablePrivateChannels()).values().value(),
@@ -617,8 +617,8 @@ let eR = (0, X.L_)((e, t, n) => {
             let { query: t, limit: n = 10, fuzzy: i = !0, filter: r = el } = e,
                 a = t.toLocaleLowerCase(),
                 s = {
-                    exactQuery: RegExp(`^${J.A.escape(a)}`, "i"),
-                    containQuery: RegExp(J.A.escape(a), "i"),
+                    exactQuery: RegExp(`^${Z.A.escape(a)}`, "i"),
+                    containQuery: RegExp(Z.A.escape(a), "i"),
                     queryLower: a,
                 },
                 l = eA(),
@@ -635,8 +635,8 @@ let eR = (0, X.L_)((e, t, n) => {
             let { query: t, limit: n = 10, fuzzy: i = !0 } = e,
                 r = t.toLocaleLowerCase(),
                 a = {
-                    exactQuery: RegExp(`^${J.A.escape(r)}`, "i"),
-                    containQuery: RegExp(J.A.escape(r), "i"),
+                    exactQuery: RegExp(`^${Z.A.escape(r)}`, "i"),
+                    containQuery: RegExp(Z.A.escape(r), "i"),
                     queryLower: r,
                 },
                 s = {
@@ -680,8 +680,8 @@ let eR = (0, X.L_)((e, t, n) => {
             let { query: t, limit: n = 10, fuzzy: i = !0, filter: r = el } = e,
                 a = t.toLocaleLowerCase(),
                 s = {
-                    exactQuery: RegExp(`^${J.A.escape(a)}`, "i"),
-                    containQuery: RegExp(J.A.escape(a), "i"),
+                    exactQuery: RegExp(`^${Z.A.escape(a)}`, "i"),
+                    containQuery: RegExp(Z.A.escape(a), "i"),
                     queryLower: a,
                 },
                 o = l()($.A.getSKUs()).values().value(),
@@ -818,8 +818,8 @@ let eR = (0, X.L_)((e, t, n) => {
         queryChoice(e) {
             let { query: t, choices: n, limit: i = 10, fuzzy: r = !0 } = e,
                 a = t.toLocaleLowerCase(),
-                s = RegExp(`^${J.A.escape(a)}`, "i"),
-                o = RegExp(J.A.escape(a), "i"),
+                s = RegExp(`^${Z.A.escape(a)}`, "i"),
+                o = RegExp(Z.A.escape(a), "i"),
                 d = l()(n)
                     .map((e, t) => {
                         let n = eT(
@@ -837,8 +837,8 @@ let eR = (0, X.L_)((e, t, n) => {
             let { query: t, guild: n } = e,
                 i = t.toLocaleLowerCase(),
                 r = {
-                    exactQuery: RegExp(`^${J.A.escape(i)}`, "i"),
-                    containQuery: RegExp(J.A.escape(i), "i"),
+                    exactQuery: RegExp(`^${Z.A.escape(i)}`, "i"),
+                    containQuery: RegExp(Z.A.escape(i), "i"),
                     queryLower: i,
                 },
                 a = (0, m.K)(n.id) && !n.features.has(E.GuildFeatures.HUB),
@@ -933,8 +933,8 @@ let eR = (0, X.L_)((e, t, n) => {
                 if ("" === l) continue;
                 let e = l.toLocaleLowerCase(),
                     o = (0, et.sS)(e),
-                    d = RegExp(`^${J.A.escape(o)}`, "i"),
-                    c = RegExp(`${J.A.escape(o)}`, "i");
+                    d = RegExp(`^${Z.A.escape(o)}`, "i"),
+                    c = RegExp(`${Z.A.escape(o)}`, "i");
                 R.A.getStickerMetadataArrays().forEach((l) => {
                     l.forEach((l, o) => {
                         let u = 0,

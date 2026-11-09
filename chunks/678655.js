@@ -24,8 +24,8 @@ var l = n(477900),
     _ = n(652215),
     j = n(624458),
     v = n(821124),
-    T = n(202384),
-    N = n(513461),
+    N = n(202384),
+    T = n(513461),
     M = n(709977),
     R = n(212455),
     D = n(772707),
@@ -48,17 +48,17 @@ let P = function (e) {
     });
 };
 var O = n(73153),
-    U = n(857071);
-let G = null,
+    G = n(857071);
+let U = null,
     w = null;
 function F() {
-    let e = U.A.mostRecentLurkedGuildId();
-    null != e ? ((G = e), (w = null)) : ((w = null != G ? G : null), (G = null));
+    let e = G.A.mostRecentLurkedGuildId();
+    null != e ? ((U = e), (w = null)) : ((w = null != U ? U : null), (U = null));
 }
 class H extends r.Ay.Store {
     static displayName = "LurkerModePopoutStore";
     initialize() {
-        this.syncWith([U.A], F);
+        this.syncWith([G.A], F);
     }
     shouldShowPopout(e) {
         return w === e;
@@ -162,7 +162,7 @@ class eu extends i.PureComponent {
     };
     handleShowMemberVerification = () => {
         let { guild: e } = this.props;
-        null != e && (0, T.Ze)(e.id);
+        null != e && (0, N.Ze)(e.id);
     };
     handleClaimAccount = () => {
         E.R();
@@ -225,7 +225,7 @@ class eu extends i.PureComponent {
     };
     renderMemberVerificationSuccessModal = () => {
         let { guild: e, guildJoinRequest: t } = this.props,
-            n = t?.applicationStatus === N.B5.APPROVED;
+            n = t?.applicationStatus === T.B5.APPROVED;
         if (null == e || null == t || !n || (0, v.NK)(t)) return null;
         function i() {
             null != e && null != t && j.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -260,12 +260,12 @@ class eu extends i.PureComponent {
                 showLinkedLobbyApplicationLoadingIndicator: b,
                 requiredLinkedLobbyApplication: j,
                 shouldRelaunchLinkedLobbyApplication: v,
-                pendingGameProfileReturn: T,
+                pendingGameProfileReturn: N,
                 guild: M,
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: R, shouldShowLurkerModeSuccessPopout: D } = this.state,
             k = { theme: d, useReducedMotion: I };
-        if (null != T && ((e && !h) || t)) ed(k, T);
+        if (null != N && ((e && !h) || t)) ed(k, N);
         else if (e && !h) {
             if (((k.message = L.intl.string(L.t.Hl0Mqh)), null != p && p >= 1e3)) {
                 let e = 1e3 * Math.floor(p / 1e3);
@@ -282,13 +282,13 @@ class eu extends i.PureComponent {
                 (k.onButtonClick = f ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (f)
             switch (y?.applicationStatus) {
-                case N.B5.SUBMITTED:
+                case T.B5.SUBMITTED:
                     ((k.message = L.intl.string(L.t["5iLvSx"])),
                         (k.subtitle = L.intl.string(L.t.FdsK4h)),
                         (k.buttonText = L.intl.string(L.t.mqtdmQ)),
                         (k.onButtonClick = this.handleCancelApplication));
                     break;
-                case N.B5.REJECTED:
+                case T.B5.REJECTED:
                     ((k.message = L.intl.string(L.t.lk30cY)),
                         (k.buttonText = L.intl.string(L.t["8RrsHr"])),
                         (k.onButtonClick = this.handleViewApplicationRejection));
@@ -319,7 +319,7 @@ class eu extends i.PureComponent {
                           : o
                             ? ((k.message = L.intl.formatToPlainString(L.t["2JA2GH"], { min: _.$8o.ACCOUNT_AGE })),
                               (k.countdown = c))
-                            : null != T && ed(k, T)
+                            : null != N && ed(k, N)
                   : ((k.imageSrc = j.getIconURL(er.iu.SMALL) ?? void 0),
                     v
                         ? (k.message = L.intl.format(L.t["SU2mY/"], { name: j.name }))
@@ -372,7 +372,7 @@ function eh(e) {
         o = (0, r.bG)([et.A], () => et.A.getCheck(s)),
         c = t.type === _.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(_.GuildFeatures.NEWS),
         d = (0, r.bG)([Y.A], () => (c ? Y.A.getFollowerStatsForChannel(t.id) : null)),
-        u = (0, r.bG)([U.A], () => U.A.isLurking(s)),
+        u = (0, r.bG)([G.A], () => G.A.isLurking(s)),
         h = (0, r.bG)([el.default], () => el.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([Q.Ay], () => null != h && (Q.Ay.getMember(s, h.id)?.isPending ?? !1)),
@@ -385,7 +385,7 @@ function eh(e) {
             requiredLinkedLobbyApplication: j,
             shouldRelaunchLinkedLobbyApplication: v,
         } = (0, es.A)(t.linkedLobby),
-        T = (function (e) {
+        N = (function (e) {
             let { channelId: t } = e,
                 n = (0, r.bG)([b.A], () => {
                     let e = b.A.getPendingReturn();
@@ -425,14 +425,14 @@ function eh(e) {
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,
             showMemberVerificationModal: g && p,
-            guildJoinRequestStatus: E?.applicationStatus ?? N.B5.STARTED,
+            guildJoinRequestStatus: E?.applicationStatus ?? T.B5.STARTED,
             guildJoinRequest: E,
             showLinkedLobbyApplicationLoadingIndicator: x,
             requiredLinkedLobbyApplication: j,
             shouldRelaunchLinkedLobbyApplication: v,
             useReducedMotion: C.Ay.useReducedMotion,
             isStaff: m,
-            pendingGameProfileReturn: T,
+            pendingGameProfileReturn: N,
         };
     return (0, l.jsx)(eu, { ...D, channel: t, children: n });
 }

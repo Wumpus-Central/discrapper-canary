@@ -77,13 +77,13 @@ function Q(e) {
     let t = new Set(u);
     (t.delete(e), (u = t));
 }
-function Z(e) {
+function J(e) {
     let t = new Set(A);
     (t.delete(e), (A = t));
 }
-function J(e) {
+function Z(e) {
     let { adCreativeId: t } = e;
-    Z(t);
+    J(t);
 }
 function ee() {
     (et(),
@@ -422,11 +422,11 @@ let er = new ei(P.h, {
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
-            (X(t.questId, { userStatus: t }), Z(t.questId));
+            (X(t.questId, { userStatus: t }), J(t.questId));
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
             let { questId: t } = e;
-            Z(t);
+            J(t);
         },
         AD_CONTENT_DISMISS_BEGIN: function (e) {
             let { adCreativeId: t } = e,
@@ -435,8 +435,8 @@ let er = new ei(P.h, {
             let i = new Set(f);
             (i.add(t), (f = i));
         },
-        AD_CONTENT_DISMISS_SUCCESS: J,
-        AD_CONTENT_DISMISS_FAILURE: J,
+        AD_CONTENT_DISMISS_SUCCESS: Z,
+        AD_CONTENT_DISMISS_FAILURE: Z,
         ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET: function (e) {
             let { adCreativeId: t } = e;
             if (!f.has(t)) return !1;

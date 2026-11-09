@@ -160,7 +160,7 @@ let z = [
     ].concat(H.Ay.getCategories()),
     q = { pendingUsages: [], emojiReactionPendingUsages: [], expandedSectionsByGuildIds: new Set() },
     Q = null;
-class Z {
+class J {
     id;
     _userId;
     _emojis = null;
@@ -213,7 +213,7 @@ class Z {
         return (this._computeEmojiUsability(), this._hiddenEmojiIds);
     }
 }
-let J = F.default.fromTimestamp(Date.now() - 60 * w.A.Millis.DAY),
+let Z = F.default.fromTimestamp(Date.now() - 60 * w.A.Millis.DAY),
     ee = [],
     et = [],
     en = new Set(),
@@ -300,7 +300,7 @@ class e_ {
                 (this.customEmojisByGroup.has(a)
                     ? this.customEmojisByGroup.get(a)?.push(n)
                     : this.customEmojisByGroup.set(a, [n]),
-                    F.default.compare(e.id, J) >= 0 &&
+                    F.default.compare(e.id, Z) >= 0 &&
                         (this.newlyAddedEmoji.has(a)
                             ? this.newlyAddedEmoji.get(a)?.push(n)
                             : this.newlyAddedEmoji.set(a, [n])),
@@ -507,7 +507,7 @@ function em(e) {
     let n = U.default.getCurrentUser();
     if (null == n) return;
     let i = !!(0, L.un)() && !1;
-    ea[e] = new Z(e, n.id, t, i);
+    ea[e] = new J(e, n.id, t, i);
 }
 function eT() {
     let e = D.A.settings,

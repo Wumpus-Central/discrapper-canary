@@ -40,7 +40,7 @@ n.d(
             let C = null != g ? g.emoji : void 0,
                 y = null != C && C.animated,
                 x = null != C && !o.Ay.isInternalEmojiForGuildId(C, h?.getGuildId()),
-                O = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+                j = null != C ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
             return (0, i.jsx)(a.A, {
                 title: E.intl.string(E.t["0+11FF"]),
                 description: E.intl.string(E.t.dURIzS),
@@ -50,7 +50,7 @@ n.d(
                 upsellViewedTrackingData: {
                     type: t,
                     is_external: x,
-                    location: { ...A, object: O },
+                    location: { ...A, object: j },
                     location_stack: N,
                     sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
                     has_search_query: null != _ && "" !== _,

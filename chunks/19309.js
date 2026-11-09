@@ -1,10 +1,10 @@
-s.d(
-    l,
+n.d(
+    t,
     {},
     {
         A: function (e) {
-            let l = e?.getBoundingClientRect();
-            return null == l ? null : { x: l.left, y: l.top };
+            let t = e?.getBoundingClientRect();
+            return null == t ? null : { x: t.left, y: t.top };
         },
     },
 );

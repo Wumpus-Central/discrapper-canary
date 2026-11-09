@@ -1,49 +1,49 @@
-var s = i(582128),
-    n = i(855986),
-    l = i(617617),
-    a = i(734057),
-    r = i(994500),
-    o = i(287809),
-    d = i(811602),
-    u = i(282108),
-    m = i(975214);
-i.d(
+var s = n(582128),
+    l = n(855986),
+    i = n(617617),
+    a = n(734057),
+    r = n(994500),
+    o = n(287809),
+    u = n(811602),
+    d = n(282108),
+    c = n(975214);
+n.d(
     t,
     {},
     {
         P: function (e) {
             let t,
-                i,
-                c,
+                n,
+                m,
                 h,
                 x,
-                { channelId: g, authorId: p } = null == e ? {} : (0, u.nx)(e);
+                { channelId: g, authorId: p } = null == e ? {} : (0, d.nx)(e);
             return (
-                (t = (0, u.ku)()),
-                (i = (0, n.bG)([o.default], () => o.default.getCurrentUser())),
-                (c = (0, n.bG)([a.A, r.A], () => (0, u.c2)(g, p, [a.A, r.A]))),
-                (h = (0, n.bG)(
-                    [l.A],
-                    () => t.reduce((e, t) => ({ ...e, [t.harmType]: t.getProtoUserSettings(l.A.settings) }), {}),
+                (t = (0, d.ku)()),
+                (n = (0, l.bG)([o.default], () => o.default.getCurrentUser())),
+                (m = (0, l.bG)([a.A, r.A], () => (0, d.c2)(g, p, [a.A, r.A]))),
+                (h = (0, l.bG)(
+                    [i.A],
+                    () => t.reduce((e, t) => ({ ...e, [t.harmType]: t.getProtoUserSettings(i.A.settings) }), {}),
                     [t],
-                    m.M,
+                    c.M,
                 )),
                 0 ===
                 (x = s.useMemo(
                     () =>
-                        null == c || p === i?.id || null == i
+                        null == m || p === n?.id || null == n
                             ? []
                             : t
                                   .map((e) => {
                                       let t = h[e.harmType],
-                                          i = null == c ? null : e.getUserSettingsWithDefaults(t)[c];
-                                      return (0, u.f)(i) ? e.harmType : null;
+                                          n = null == m ? null : e.getUserSettingsWithDefaults(t)[m];
+                                      return (0, d.f)(n) ? e.harmType : null;
                                   })
                                   .filter((e) => null != e),
-                    [c, t, h, p, i],
+                    [m, t, h, p, n],
                 )).length
-                    ? d.LO.NONE
-                    : (0, u.LE)(x)
+                    ? u.LO.NONE
+                    : (0, d.LE)(x)
             );
         },
     },

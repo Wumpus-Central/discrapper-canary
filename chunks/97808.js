@@ -531,11 +531,11 @@ function b(e) {
             ...q
         } = (0, c.z)({ config: g, from: H, to: j }, S() ? "animate-always" : "animate-never"),
         Q = (0, p.FT)(C),
-        Z = (0, p.Kj)(C),
-        J = 2.5 * Z.status,
-        ee = 1.5 * Z.status,
-        et = null != b ? (2.5 * Z.status - Z.status) / 2 : 0,
-        en = Z.size + Math.ceil(et),
+        J = (0, p.Kj)(C),
+        Z = 2.5 * J.status,
+        ee = 1.5 * J.status,
+        et = null != b ? (2.5 * J.status - J.status) / 2 : 0,
+        en = J.size + Math.ceil(et),
         [ei, er, ea] = (0, c.z)(
             {
                 config: { tension: 450, friction: 20, clamp: !0 },
@@ -550,7 +550,7 @@ function b(e) {
         ariaLabel: G,
         ariaHidden: w,
         typingOffset: et,
-        specs: Z,
+        specs: J,
         children: (0, i.jsxs)("svg", {
             width: en,
             height: en,
@@ -582,7 +582,7 @@ function b(e) {
                         speakingStylesConfig: m,
                     }),
                 }),
-                null != U && O(U, Z, b, { isMobile: o, isTyping: E, isVR: !1 }),
+                null != U && O(U, J, b, { isMobile: o, isTyping: E, isVR: !1 }),
                 (0, i.jsx)(d.m, {
                     text: P ? (0, h.MU)(b) : null,
                     ariaHidden: !0,
@@ -590,27 +590,27 @@ function b(e) {
                     spacing: (function (e, t, n) {
                         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                         return 5 - (n && !i ? 0 : 0.5 * e) + 1.5 * t;
-                    })(Z.status, Z.stroke, o, E),
+                    })(J.status, J.stroke, o, E),
                     delay: M,
                     children: (0, i.jsxs)(l.animated.g, {
                         transform: ei.scale.to((e) => {
                             let t, n, i, r, a, s;
-                            return `scale(${e}) ${((t = Z.status * e), (n = (Z.status - t) / 2), (i = Z.size - t - (null != b ? (2.5 * t - t) / 2 : 0) - Z.offset - n), (r = Z.size - 1.5 * t - Z.offset - n), (a = Math.round((i / e) * 100) / 100), (s = Math.round((r / e) * 100) / 100), `translate(${a}, ${s})`)}`;
+                            return `scale(${e}) ${((t = J.status * e), (n = (J.status - t) / 2), (i = J.size - t - (null != b ? (2.5 * t - t) / 2 : 0) - J.offset - n), (r = J.size - 1.5 * t - J.offset - n), (a = Math.round((i / e) * 100) / 100), (s = Math.round((r / e) * 100) / 100), `translate(${a}, ${s})`)}`;
                         }),
                         children: [
                             (0, i.jsxs)("svg", {
-                                width: J,
+                                width: Z,
                                 height: ee,
-                                viewBox: `0 0 ${J} ${ee}`,
+                                viewBox: `0 0 ${Z} ${ee}`,
                                 className: P ? T.Oi : void 0,
                                 children: [
-                                    (0, _.pF)(q, Z.status, V),
-                                    (0, i.jsx)(l.animated.rect, { fill: z, width: J, height: ee, mask: `url(#${V})` }),
+                                    (0, _.pF)(q, J.status, V),
+                                    (0, i.jsx)(l.animated.rect, { fill: z, width: Z, height: ee, mask: `url(#${V})` }),
                                     (0, i.jsx)(u.C, {
                                         ref: A,
                                         location: "Avatar",
-                                        dotRadius: Z.status / 4,
-                                        x: 0.15 * J,
+                                        dotRadius: J.status / 4,
+                                        x: 0.15 * Z,
                                         y: 0.5 * ee,
                                         hide: !E,
                                     }),

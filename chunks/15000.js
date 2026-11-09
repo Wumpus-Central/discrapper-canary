@@ -27,9 +27,9 @@ var i = n(477900),
     N = n(975571),
     j = n(652215),
     R = n(792996),
-    M = n(690807);
-let O = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
-class k extends l.PureComponent {
+    O = n(690807);
+let M = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
+class P extends l.PureComponent {
     static defaultProps = { types: [j.Fz7.CAPTCHA], onCaptchaVerify: j.tEg, onLogout: j.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
@@ -44,7 +44,7 @@ class k extends l.PureComponent {
     render() {
         return (0, i.jsxs)(y.B, {
             gap: 16,
-            className: M.Ot,
+            className: O.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
@@ -52,7 +52,7 @@ class k extends l.PureComponent {
                 (0, i.jsxs)(y.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: v()(M.kL, { [M.Fr]: _.Fr }),
+                    className: v()(O.kL, { [O.Fr]: _.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -63,9 +63,9 @@ class k extends l.PureComponent {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: M.Sl }),
+                                (0, i.jsx)("div", { className: O.Sl }),
                                 (0, i.jsxs)(y.B, {
-                                    className: M.FS,
+                                    className: O.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
@@ -77,7 +77,7 @@ class k extends l.PureComponent {
                                         }),
                                         (0, i.jsx)(S.E, {
                                             variant: "body-md/normal",
-                                            children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
+                                            children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: M }),
                                         }),
                                     ],
                                 }),
@@ -100,7 +100,7 @@ class k extends l.PureComponent {
                     children: [
                         (0, i.jsx)(S.E, {
                             variant: "body-sm/normal",
-                            className: M.qr,
+                            className: O.qr,
                             children: R.intl.string(R.t.qqYun3),
                         }),
                         (0, i.jsxs)(y.B, {
@@ -111,13 +111,13 @@ class k extends l.PureComponent {
                             children: [
                                 (0, i.jsx)(S.E, {
                                     variant: "body-sm/semibold",
-                                    className: M.qr,
+                                    className: O.qr,
                                     children: R.intl.format(R.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: v()(M.qr, M.mf), children: "\u2022" }),
+                                (0, i.jsx)("div", { className: v()(O.qr, O.mf), children: "\u2022" }),
                                 (0, i.jsx)(S.E, {
                                     variant: "body-sm/semibold",
-                                    className: M.qr,
+                                    className: O.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
@@ -132,7 +132,7 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var P = n(87404),
+var k = n(87404),
     L = n(53516);
 function D() {
     let { action: e, theme: t } = (0, a.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
@@ -148,7 +148,7 @@ function D() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: h.Ay },
+                { modalKey: k.H1, Layer: h.Ay },
             ));
     }
     return (
@@ -184,10 +184,10 @@ function D() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: h.Ay, onCloseCallback: y },
+                    { modalKey: k.Pr, Layer: h.Ay, onCloseCallback: y },
                 );
         }, [x, b]),
-        (0, i.jsx)(k, {
+        (0, i.jsx)(P, {
             types: x,
             captchaKey: v,
             onCaptchaVerify: function (e) {

@@ -28,9 +28,9 @@ n.d(
                         })(d);
                     continue;
                 }
-                let m = d.secretRequest?.fields ?? [];
-                if (0 === m.length || !(0, r.BL)(d)) continue;
-                let f =
+                let f = d.secretRequest?.fields ?? [];
+                if (0 === f.length || !(0, r.BL)(d)) continue;
+                let m =
                     c ||
                     (function (e) {
                         let t = e.secretRequest;
@@ -38,14 +38,14 @@ n.d(
                             t?.over_mcp === !0 && (!0 !== e.finished || (null != t.request_id && s.has(t.request_id)))
                         );
                     })(d);
-                for (let e of (f && null == n
+                for (let e of (m && null == n
                     ? l.set(d.render_id, "pending")
-                    : f && null != n && m.every((e) => n.has(e.name))
+                    : m && null != n && f.every((e) => n.has(e.name))
                       ? l.set(d.render_id, "received")
                       : o
-                        ? l.set(d.render_id, m.some((e) => u.has(e.name)) ? "superseded" : "inactive")
+                        ? l.set(d.render_id, f.some((e) => u.has(e.name)) ? "superseded" : "inactive")
                         : l.set(d.render_id, "open"),
-                m))
+                f))
                     u.add(e.name);
                 ((o = !0), (c = !1));
             }

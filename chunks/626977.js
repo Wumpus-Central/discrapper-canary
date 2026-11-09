@@ -63,9 +63,9 @@ function _(e) {
 }
 var j = n(228098),
     v = n(157259),
-    T = n(284305),
-    N = n(503698),
-    M = n.n(N),
+    N = n(284305),
+    T = n(503698),
+    M = n.n(T),
     R = n(149468),
     D = n(129230),
     k = n(7909),
@@ -111,7 +111,7 @@ function O(e) {
         })
     );
 }
-function U(e) {
+function G(e) {
     let { channel: t, narrow: n } = e,
         s = (0, L.H_)(t);
     return (
@@ -151,7 +151,7 @@ function U(e) {
         })
     );
 }
-var G = n(626360);
+var U = n(626360);
 let w = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
         d = (0, j.A)(t),
@@ -169,18 +169,18 @@ let w = i.memo(function (e) {
             let d = i.useCallback(() => l(""), []);
             return { showUnreadsNotice: n === e.id, clearUnreadsNotice: d };
         })(t),
-        g = (0, T.GH)(t, "channel_chat_notice");
+        g = (0, N.GH)(t, "channel_chat_notice");
     return t.isMediaThread()
         ? null
         : t.isArchivedLockedThread()
           ? (0, l.jsx)(O, { channel: t, narrow: n })
           : t.isLockedThread()
-            ? (0, l.jsx)(U, { channel: t, narrow: n })
+            ? (0, l.jsx)(G, { channel: t, narrow: n })
             : h
               ? (0, l.jsx)(_, { channel: t, clearUnreadsNotice: m })
               : g.visible
-                ? (0, l.jsx)(T.KT, { channel: t, onDismiss: g.dismiss })
-                : d && u.includes(G.i.OPT_IN_CHANNEL)
+                ? (0, l.jsx)(N.KT, { channel: t, onDismiss: g.dismiss })
+                : d && u.includes(U.i.OPT_IN_CHANNEL)
                   ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                   : null;
 });

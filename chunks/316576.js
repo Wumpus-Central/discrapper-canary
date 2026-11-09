@@ -24,8 +24,8 @@ let b = S.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 var _ = n(566908),
     j = n(43105),
     v = n(49999),
-    T = n(792996),
-    N = n(474218);
+    N = n(792996),
+    T = n(474218);
 function M(e) {
     let { targetElementRef: t, onDismiss: n } = e;
     return (0, i.jsx)(j.A, {
@@ -37,10 +37,10 @@ function M(e) {
         scrollBehavior: "close",
         caretConfig: { align: "start" },
         onRequestClose: () => n(v.i.USER_DISMISS),
-        title: T.intl.string(T.t.ZT58S4),
-        body: [T.intl.format(T.t.A2yQnt, {})],
-        actions: [{ text: T.intl.string(T.t["NX+WJN"]), onClick: () => n(v.i.USER_DISMISS) }],
-        graphic: { type: "image", src: N.A },
+        title: N.intl.string(N.t.ZT58S4),
+        body: [N.intl.format(N.t.A2yQnt, {})],
+        actions: [{ text: N.intl.string(N.t["NX+WJN"]), onClick: () => n(v.i.USER_DISMISS) }],
+        graphic: { type: "image", src: T.A },
     });
 }
 var R = n(406704),
@@ -49,8 +49,8 @@ var R = n(406704),
     L = n(74477),
     P = n(87207),
     O = n(629016),
-    U = n(576705),
-    G = n(894768),
+    G = n(576705),
+    U = n(894768),
     w = n(188567),
     F = n(723702),
     H = n(518960),
@@ -110,7 +110,7 @@ var er = n(350835),
         l),
     ej = n(412136);
 let ev = /(.*)```(\w+)\n(.*)```(.*)/s;
-function eT(e) {
+function eN(e) {
     let {
             channel: t,
             options: l,
@@ -167,7 +167,7 @@ function eT(e) {
             onSelect: d,
             navId: "channel-attach",
             onClose: r,
-            "aria-label": T.intl.string(T.t.Xm41aV),
+            "aria-label": N.intl.string(N.t.Xm41aV),
             children: l.map(function (e) {
                 switch (e.type) {
                     case e_.UPLOAD_A_FILE:
@@ -357,7 +357,7 @@ function eT(e) {
                                                   K.Dr,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: T.intl.string(T.t.eCzSdd),
+                                                      label: N.intl.string(N.t.eCzSdd),
                                                       iconLeft: V.GroupIcon,
                                                       leadingAccessory: { type: "icon", icon: V.GroupIcon },
                                                       action: () => Q.A.summarizeThread(t, !1),
@@ -368,7 +368,7 @@ function eT(e) {
                                                   K.Dr,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: T.intl.string(T.t["HOe+Hq"]),
+                                                      label: N.intl.string(N.t["HOe+Hq"]),
                                                       iconLeft: z.UserIcon,
                                                       leadingAccessory: { type: "icon", icon: z.UserIcon },
                                                       action: () => Q.A.summarizeThread(t),
@@ -402,7 +402,7 @@ function eT(e) {
         })
     );
 }
-var eN = n(696016),
+var eT = n(696016),
     eM = n(657851);
 let eR = s.memo(function (e) {
     let {
@@ -411,7 +411,7 @@ let eR = s.memo(function (e) {
             draftType: a,
             editorTextContent: S,
             setValue: j,
-            canOnlyUseTextCommands: N,
+            canOnlyUseTextCommands: T,
             chatInputType: K,
         } = e,
         V = (0, k.n)("ChannelAttachButton"),
@@ -419,7 +419,7 @@ let eR = s.memo(function (e) {
         W = (0, x.Us)(),
         $ = s.useRef(null),
         q = s.useRef(null),
-        Z = (0, o.bG)([G.A], () => G.A.getActivities()),
+        Z = (0, o.bG)([U.A], () => U.A.getActivities()),
         J = (0, f.E)(),
         X = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         Y = (0, o.yK)(
@@ -432,7 +432,7 @@ let eR = s.memo(function (e) {
         [et, en] = s.useState(null),
         el = (0, p.sw)() && (J || ee),
         ei = l.isPrivate(),
-        es = (0, o.bG)([U.A], () => ei || (U.A.can(eb.xBc.ATTACH_FILES, l) && U.A.can(eb.xBc.SEND_MESSAGES, l)));
+        es = (0, o.bG)([G.A], () => ei || (G.A.can(eb.xBc.ATTACH_FILES, l) && G.A.can(eb.xBc.SEND_MESSAGES, l)));
     function ea() {
         ((0, c.mM)(
             async () => {
@@ -489,7 +489,7 @@ let eR = s.memo(function (e) {
                         picker: { onPick: (e) => Q({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
-            { modalKey: eN.nm },
+            { modalKey: eT.nm },
         ),
             en(null));
     }
@@ -533,11 +533,11 @@ let eR = s.memo(function (e) {
                 p = [];
             return (
                 t &&
-                    (p.push({ type: "UPLOAD_A_FILE", icon: ec.FileUpIcon, display: T.intl.string(T.t["d3+iYs"]) }),
+                    (p.push({ type: "UPLOAD_A_FILE", icon: ec.FileUpIcon, display: N.intl.string(N.t["d3+iYs"]) }),
                     p.push({
                         type: "UPLOAD_TEXT_AS_FILE",
                         icon: ec.FileUpIcon,
-                        display: T.intl.string(T.t["G9s+EM"]),
+                        display: N.intl.string(N.t["G9s+EM"]),
                     })),
                 s &&
                     t &&
@@ -546,17 +546,17 @@ let eR = s.memo(function (e) {
                     p.push({
                         type: "CLIPS",
                         icon: ed.ClipsIcon,
-                        display: T.intl.string(T.t.o034cv),
+                        display: N.intl.string(N.t.o034cv),
                         badgeVal: o,
                         badgeColor: eo.A.colors.BACKGROUND_BRAND.css,
                     }),
-                n && p.push({ type: "CREATE_THREAD", icon: eu.ThreadPlusIcon, display: T.intl.string(T.t.rBIGBL) }),
-                c && p.push({ type: "POLL", icon: eh.PollsIcon, display: T.intl.string(T.t.Flr51u) }),
+                n && p.push({ type: "CREATE_THREAD", icon: eu.ThreadPlusIcon, display: N.intl.string(N.t.rBIGBL) }),
+                c && p.push({ type: "POLL", icon: eh.PollsIcon, display: N.intl.string(N.t.Flr51u) }),
                 l &&
                     i &&
                     (m
-                        ? p.push({ type: "SLASH_COMMAND", icon: em.AppsIcon, display: T.intl.string(T.t.Bbvp6G) })
-                        : p.push({ type: "APP_LAUNCHER", icon: em.AppsIcon, display: T.intl.string(T.t.hSQgW9) })),
+                        ? p.push({ type: "SLASH_COMMAND", icon: em.AppsIcon, display: N.intl.string(N.t.Bbvp6G) })
+                        : p.push({ type: "APP_LAUNCHER", icon: em.AppsIcon, display: N.intl.string(N.t.hSQgW9) })),
                 r.forEach((e) => {
                     !(0, ex.A)(e, eb.jUm.EMBEDDED) &&
                         (e.type === er.$.PLAYING &&
@@ -564,7 +564,7 @@ let eR = s.memo(function (e) {
                             p.push({
                                 type: "INVITE_TO_GAME",
                                 icon: eg.DpadIcon,
-                                display: T.intl.formatToPlainString(T.t["KHLo+F"], {
+                                display: N.intl.formatToPlainString(N.t["KHLo+F"], {
                                     channel: (0, eI.m1)(a, ey.default, eS.A, !0),
                                     game: null != e ? e.name : "",
                                 }),
@@ -575,7 +575,7 @@ let eR = s.memo(function (e) {
                             p.push({
                                 type: "INVITE_TO_LISTEN",
                                 icon: ep.UserPlayIcon,
-                                display: T.intl.formatToPlainString(T.t.I479px, {
+                                display: N.intl.formatToPlainString(N.t.I479px, {
                                     channel: (0, eI.m1)(a, ey.default, eS.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
@@ -586,7 +586,7 @@ let eR = s.memo(function (e) {
                             p.push({
                                 type: "INVITE_TO_WATCH",
                                 icon: eA.EyeIcon,
-                                display: T.intl.formatToPlainString(T.t["EvCP/g"], {
+                                display: N.intl.formatToPlainString(N.t["EvCP/g"], {
                                     channel: (0, eI.m1)(a, ey.default, eS.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
@@ -597,17 +597,17 @@ let eR = s.memo(function (e) {
                     p.push({
                         type: "SCHEDULED_MESSAGE",
                         icon: ef.CalendarPlusIcon,
-                        display: T.intl.string(T.t["3+ii4F"]),
+                        display: N.intl.string(N.t["3+ii4F"]),
                     }),
                 g &&
                     p.push({
                         type: "RECORD_VOICE_MESSAGE",
                         icon: eC.MicrophoneIcon,
-                        display: T.intl.string(T.t.lwy6aX),
+                        display: N.intl.string(N.t.lwy6aX),
                     }),
                 a.isThread() &&
                     h &&
-                    p.push({ type: "SUMMARIZE_THREAD", icon: eE.MagicWandIcon, display: T.intl.string(T.t.EXfguE) }),
+                    p.push({ type: "SUMMARIZE_THREAD", icon: eE.MagicWandIcon, display: N.intl.string(N.t.EXfguE) }),
                 p
             );
         })({
@@ -615,7 +615,7 @@ let eR = s.memo(function (e) {
             canStartThreads: e_ || ej,
             useSlate: ev,
             hasClips: el,
-            canUseApplicationCommands: !N,
+            canUseApplicationCommands: !T,
             channel: l,
             activities: Y,
             newClipsCount: X?.length ?? 0,
@@ -626,7 +626,7 @@ let eR = s.memo(function (e) {
             isAppsButtonEnabled: !V || z,
             canRecordVoiceMessage: eL && eP,
         }),
-        { isCoachmarkVisible: eU, dismissCoachmark: eG } = (function (e) {
+        { isCoachmarkVisible: eG, dismissCoachmark: eU } = (function (e) {
             let { isEligible: t } = e,
                 [n, l] = (0, y.kn)(t ? [b] : []);
             return { isCoachmarkVisible: n === b, dismissCoachmark: l };
@@ -641,14 +641,14 @@ let eR = s.memo(function (e) {
             position: "top",
             positionKey: et ?? "null",
             onRequestOpen: () => {
-                (en("attachMenu"), eU && eG(v.i.TAKE_ACTION));
+                (en("attachMenu"), eG && eU(v.i.TAKE_ACTION));
             },
             onRequestClose: () => {
                 (0, c.ue)() || en(null);
             },
             renderPopout: (e) => {
                 if ("attachMenu" === et)
-                    return (0, i.jsx)(eT, {
+                    return (0, i.jsx)(eN, {
                         ...e,
                         onClose: () => en(null),
                         options: eO,
@@ -668,7 +668,7 @@ let eR = s.memo(function (e) {
                     className: r()(eM.g$, t),
                     childClassName: eM.wh,
                     isActive: !1,
-                    "aria-label": T.intl.string(T.t.d56gCa),
+                    "aria-label": N.intl.string(N.t.d56gCa),
                     onDoubleClick: es ? () => $.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
@@ -696,7 +696,7 @@ let eR = s.memo(function (e) {
                 }),
             }),
             (0, i.jsx)("div", { className: eM.Jd, children: eF }),
-            eU && (0, i.jsx)(M, { targetElementRef: q, onDismiss: eG }),
+            eG && (0, i.jsx)(M, { targetElementRef: q, onDismiss: eU }),
         ],
     });
 });

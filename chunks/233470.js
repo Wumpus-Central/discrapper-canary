@@ -8,7 +8,7 @@
     K: () => em,
     l5: () => eI,
     $N: () => e_,
-    b8: () => J,
+    b8: () => Z,
     U1: () => ei,
     lZ: () => eg,
     su: () => q,
@@ -193,11 +193,11 @@ function Q(e) {
                   });
         })();
 }
-let Z = null;
-function J() {
+let J = null;
+function Z() {
     let e = E.default.getCurrentUser()?.id ?? null;
     if (null == e || O.Ay.hasFetchedProjectLimit()) return Promise.resolve();
-    if (Z?.userId === e) return Z.settled;
+    if (J?.userId === e) return J.settled;
     let t = (async function (e) {
         let t = null,
             n = null;
@@ -207,11 +207,11 @@ function J() {
         } catch (e) {
             n = (0, y.A)(e);
         }
-        (Z?.userId === e && (Z = null),
+        (J?.userId === e && (J = null),
             E.default.getCurrentUser()?.id === e &&
                 o.h.dispatch({ type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: t, failureCode: n }));
     })(e);
-    return ((Z = { userId: e, settled: t }), t);
+    return ((J = { userId: e, settled: t }), t);
 }
 let ee = new Map();
 function et(e) {

@@ -1,31 +1,31 @@
-var l = t(582128),
-    u = t(855986),
-    r = t(47294),
-    i = t(16961),
-    a = t(869146),
-    c = t(91242),
-    o = t(241696),
+var r = t(582128),
+    i = t(855986),
+    a = t(47294),
+    l = t(16961),
+    u = t(869146),
+    o = t(91242),
+    c = t(241696),
     d = t(567245),
-    f = t(652215);
+    A = t(652215);
 t.d(
-    n,
+    e,
     {},
     {
-        A: function (e) {
-            let n = (0, i.G)(),
-                t = (0, u.bG)(
-                    [a.A, c.A],
-                    () => a.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT) && null != e && c.A.getMainFrame()?.id === e.id,
-                    [e],
+        A: function (n) {
+            let e = (0, l.G)(),
+                t = (0, i.bG)(
+                    [u.A, o.A],
+                    () => u.A.getWindowOpen(A.MLl.ACTIVITY_POPOUT) && null != n && o.A.getMainFrame()?.id === n.id,
+                    [n],
                 );
             return {
-                canPopout: n,
+                canPopout: e,
                 isPoppedOut: t,
-                popOut: l.useCallback(() => {
-                    null != e && (0, r.A)({ onConfirm: () => (0, o.A)(e.id) });
-                }, [e]),
-                popIn: l.useCallback(() => {
-                    (0, r.A)({ onConfirm: () => (0, d.E)() });
+                popOut: r.useCallback(() => {
+                    null != n && (0, a.A)({ onConfirm: () => (0, c.A)(n.id) });
+                }, [n]),
+                popIn: r.useCallback(() => {
+                    (0, a.A)({ onConfirm: () => (0, d.E)() });
                 }, []),
             };
         },

@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     pz: "sidebar_1d0xGU",
     wx: "header_1d0xGU",
     XG: "scroller_1d0xGU",

@@ -1,4 +1,4 @@
-n.d(t, { A: () => J });
+n.d(t, { A: () => Z });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -134,7 +134,7 @@ let Q = r.memo(function () {
         ],
     });
 });
-class Z extends r.Component {
+class J extends r.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -305,7 +305,7 @@ class Z extends r.Component {
         });
     }
 }
-let J = function (e) {
+let Z = function (e) {
     let { density: t } = (0, h.wR)(),
         { version: n, theme: a, children: s, listScrollerRef: l } = e,
         o = r.Children.count(s),
@@ -374,7 +374,7 @@ let J = function (e) {
         value: f,
         children: (0, i.jsx)(d.hD, {
             navigator: w,
-            children: (0, i.jsx)(Z, {
+            children: (0, i.jsx)(J, {
                 ...e,
                 density: t,
                 channels: E,

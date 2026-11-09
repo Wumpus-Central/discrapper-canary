@@ -61,26 +61,26 @@ function K(e, t) {
     let n,
         i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = Y(e),
-        a = J.indices[r];
+        a = Z.indices[r];
     return (
         null != a
             ? ("fetchState" in t && a.fetchState.fetching && a.fetchState.abort.abort(), (n = { ...a, ...t }))
             : i && (n = { serverVersion: x, fetchState: { fetching: !1 }, ...t }),
         void 0 !== n &&
-            ((J.indices[r] = n),
+            ((Z.indices[r] = n),
             "application" === e.type &&
-                (J.applicationIndices.set(r, n), (J.applicationIndicesVersion = J.applicationIndicesVersion + 1))),
+                (Z.applicationIndices.set(r, n), (Z.applicationIndicesVersion = Z.applicationIndicesVersion + 1))),
         a
     );
 }
 function $(e) {
     let t = Y(e),
-        n = J.indices[t];
-    (n?.fetchState.fetching && n.fetchState.abort.abort(), delete J.indices[t]);
+        n = Z.indices[t];
+    (n?.fetchState.fetching && n.fetchState.abort.abort(), delete Z.indices[t]);
 }
 function X() {
-    for (let e of Object.values(J.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
-    J.indices = {};
+    for (let e of Object.values(Z.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
+    Z.indices = {};
 }
 async function z(e) {
     let t = new AbortController(),
@@ -168,7 +168,7 @@ function q(e) {
 function Q() {
     K({ type: "user" }, { serverVersion: x });
 }
-class Z extends d.Ay.Store {
+class J extends d.Ay.Store {
     static displayName = "ApplicationCommandIndexStore";
     indices = {};
     applicationIndices = new Map();
@@ -180,10 +180,10 @@ class Z extends d.Ay.Store {
             this.waitFor(R.Ay, E.A, p.default, m.A, T.Ay, g.A, S.default),
             this.syncWith([h.default], () => {
                 let e;
-                (e = h.default.locale) !== J.oldLocale &&
+                (e = h.default.locale) !== Z.oldLocale &&
                     (X(),
-                    (J.collator = new Intl.Collator(e, { sensitivity: "accent", numeric: !0 })),
-                    (J.oldLocale = e));
+                    (Z.collator = new Intl.Collator(e, { sensitivity: "accent", numeric: !0 })),
+                    (Z.oldLocale = e));
             }));
     }
     getContextState(e) {
@@ -231,7 +231,7 @@ class Z extends d.Ay.Store {
                 es(i) &&
                 (N.default.track(U.HAw.APPLICATION_COMMAND_CACHE_FETCH, {
                     miss: null == r.result,
-                    size: Object.keys(J.indices).length,
+                    size: Object.keys(Z.indices).length,
                 }),
                 el(r) &&
                     null != i &&
@@ -269,17 +269,17 @@ class Z extends d.Ay.Store {
             );
     }
 }
-let J = new Z(c.h, {
+let Z = new J(c.h, {
     LOGOUT: X,
     CONNECTION_OPEN: function () {
-        for (let e of Object.values(J.indices)) e.serverVersion = x;
+        for (let e of Object.values(Z.indices)) e.serverVersion = x;
         for (let e of W) q(e);
         ((W = []), (j = !0));
     },
     APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
         let { target: t } = e,
             n = Y(t);
-        el(J.indices[n] ?? V) && z(t);
+        el(Z.indices[n] ?? V) && z(t);
     },
     APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: q,
     APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
@@ -288,17 +288,17 @@ let J = new Z(c.h, {
     },
     APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function (e) {
         let { applicationId: t, channelId: n, guildId: i } = e;
-        (J.hasContextStateApplication({ applicationId: t, channelId: n, guildId: i }) &&
+        (Z.hasContextStateApplication({ applicationId: t, channelId: n, guildId: i }) &&
             K(null != i ? { type: "guild", guildId: i } : { type: "channel", channelId: n }, { serverVersion: x }),
-            J.hasUserStateApplication(t) && K({ type: "user" }, { serverVersion: x }),
-            J.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x }));
+            Z.hasUserStateApplication(t) && K({ type: "user" }, { serverVersion: x }),
+            Z.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x }));
     },
     APPLICATION_COMMAND_INDEX_APPLICATION_STALE: function (e) {
         let { applicationId: t } = e;
-        for (let e of Reflect.ownKeys(J.indices))
-            ("string" == typeof e && J.applicationIndices.has(e)) ||
-                (J.indices[e] = { ...J.indices[e], serverVersion: x });
-        J.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x });
+        for (let e of Reflect.ownKeys(Z.indices))
+            ("string" == typeof e && Z.applicationIndices.has(e)) ||
+                (Z.indices[e] = { ...Z.indices[e], serverVersion: x });
+        Z.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x });
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -327,7 +327,7 @@ let J = new Z(c.h, {
             n =
                 (function (e, t) {
                     let n = Y({ type: "guild", guildId: e }),
-                        i = J.indices[n]?.result;
+                        i = Z.indices[n]?.result;
                     if (null == i) return !1;
                     let r = !1;
                     return (
@@ -350,7 +350,7 @@ let J = new Z(c.h, {
 });
 function ee(e, t, n) {
     let [r, a] = i.useState(!0),
-        s = (0, d.cf)([J], () => ("channel" === e.type ? J.getContextState(e) : J.getUserState()));
+        s = (0, d.cf)([Z], () => ("channel" === e.type ? Z.getContextState(e) : Z.getUserState()));
     return (
         i.useEffect(() => {
             if (r) {
@@ -363,7 +363,7 @@ function ee(e, t, n) {
                     es(e.channel) &&
                     (N.default.track(U.HAw.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == s.result,
-                        size: Object.keys(J.indices).length,
+                        size: Object.keys(Z.indices).length,
                     }),
                     el(s) &&
                         (null != e.channel.guild_id
@@ -377,7 +377,7 @@ function ee(e, t, n) {
 }
 function et(e, t) {
     let [n, r] = i.useState(!0),
-        a = (0, d.cf)([J], () => J.getUserState());
+        a = (0, d.cf)([Z], () => Z.getUserState());
     return (
         i.useEffect(() => {
             n && (t && el(a) && e && (0, L.$)({ type: "user" }), r(!1));
@@ -395,12 +395,12 @@ function ei(e, t, n) {
         s = !1 !== t.applicationCommands,
         l = ee(e, s, n.allowFetch),
         o = et(s, n.allowFetch),
-        c = (0, d.bG)([J], () => J.getApplicationStates()),
-        u = (0, d.bG)([J], () => J.applicationIndicesVersion);
+        c = (0, d.bG)([Z], () => Z.getApplicationStates()),
+        u = (0, d.bG)([Z], () => Z.applicationIndicesVersion);
     return (
         !(function (e, t) {
             let [n, r] = i.useState(!0),
-                a = (0, d.bG)([J], () => J.getApplicationState(e));
+                a = (0, d.bG)([Z], () => Z.getApplicationState(e));
             i.useEffect(() => {
                 n && (t && el(a) && null != e && (0, L.$)({ type: "application", applicationId: e }), r(!1));
             }, [t, e, a, n]);
@@ -694,17 +694,17 @@ function ec(e, t) {
     return n;
 }
 function eu(e, t) {
-    return J.collator.compare(e, t);
+    return Z.collator.compare(e, t);
 }
 n.d(
     t,
     {},
     {
         A4: et,
-        Ay: J,
+        Ay: Z,
         ON: function (e, t) {
             let [n, r] = i.useState(!0),
-                a = (0, d.cf)([J], () => J.indices[e] ?? V);
+                a = (0, d.cf)([Z], () => Z.indices[e] ?? V);
             return (
                 i.useEffect(() => {
                     n &&
@@ -712,7 +712,7 @@ n.d(
                         (t &&
                             (N.default.track(U.HAw.APPLICATION_COMMAND_CACHE_FETCH, {
                                 miss: null == a.result,
-                                size: Object.keys(J.indices).length,
+                                size: Object.keys(Z.indices).length,
                             }),
                             el(a) && (0, L.$)({ type: "guild", guildId: e })),
                         r(!1));
@@ -733,13 +733,13 @@ n.d(
                     isGuildInstalled: !0,
                     isUserInstalled: !0,
                 };
-            let r = J.getContextState(e),
-                a = J.getUserState(),
+            let r = Z.getContextState(e),
+                a = Z.getUserState(),
                 s = r.result?.sections ?? {},
                 l = a.result?.sections ?? {},
                 o = s[t],
                 d = l[t],
-                c = J.getApplicationState(t).result?.sections?.[t];
+                c = Z.getApplicationState(t).result?.sections?.[t];
             if (null != o && null != d) {
                 for (let e in ((n = d.descriptor), (i = []), d.commands)) {
                     let t = d.commands[e];
@@ -785,15 +785,15 @@ n.d(
         ZA: ei,
         Zn: async function (e) {
             let t = Y(e),
-                n = J.indices[t] ?? V;
+                n = Z.indices[t] ?? V;
             if (!el(n)) {
                 if (n.fetchState.fetching) {
                     let e = n.fetchState.promise;
-                    return (await e, J.indices[t] ?? V);
+                    return (await e, Z.indices[t] ?? V);
                 }
                 return n;
             }
-            return (await z(e), J.indices[t] ?? V);
+            return (await z(e), Z.indices[t] ?? V);
         },
     },
 );

@@ -778,8 +778,8 @@ var W = n(834757),
 let z = {},
     q = {},
     Q = {},
-    Z = {},
     J = {},
+    Z = {},
     ee = {},
     et = M.SO9.THEATRE,
     en = {};
@@ -839,7 +839,7 @@ class ea extends o.Ay.Store {
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return Z[e];
+        return J[e];
     }
     getLastNonZeroRemoteVideoSinkWantsTime(e) {
         return ee[e];
@@ -920,7 +920,7 @@ let es = new ea(
                           (t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart());
                       }),
                       null == a && (a = o),
-                      (Z[E] = s),
+                      (J[E] = s),
                       (Q[E] = a),
                       null != a)
                   ) {
@@ -936,7 +936,7 @@ let es = new ea(
                           }),
                           en[E]?.analyticsContext.updateStreamApplication(q[E]));
                   } else en[E]?.analyticsContext.updateStreamApplication(null);
-                  null != c ? (J[E] = c) : delete J[E];
+                  null != c ? (Z[E] = c) : delete Z[E];
               },
               STREAM_STOP: function (e) {
                   let { appContext: t, streamKey: n } = e;
@@ -945,16 +945,16 @@ let es = new ea(
                           let { analyticsContext: n, isOwner: i } = e;
                           (n.setActionContext(t), i && n.trackEnd());
                       }),
-                      (Z[n] = null),
+                      (J[n] = null),
                       (Q[n] = null),
-                      delete J[n]);
+                      delete Z[n]);
               },
               STREAM_CREATE: function (e) {
                   let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: s, viewerIds: l } = e,
                       o = en[t],
                       d = (0, G.Iy)(t);
                   if (null == o && null != n) {
-                      (null == Q[t] && (q[t] = null), null == q[t] && null == Z[t] && (q[t] = (0, W.Ee)(d, $.A)));
+                      (null == Q[t] && (q[t] = null), null == q[t] && null == J[t] && (q[t] = (0, W.Ee)(d, $.A)));
                       let e = new H({
                           streamRegion: s,
                           streamApplication: q[t],
@@ -970,10 +970,10 @@ let es = new ea(
                                   else return "screen";
                               else if (platform?.name === "Safari") return "window";
                               return "unknown";
-                          })(Z[t]),
+                          })(J[t]),
                           actionContext: z[t]?.appContext,
                           numViewers: null != l ? l.length : 0,
-                          goLiveModalDurationMs: J[t],
+                          goLiveModalDurationMs: Z[t],
                           analyticsLocations: z[t]?.analyticsLocations,
                       });
                       (a()(null != i, "Creating RTCConnection without session."),

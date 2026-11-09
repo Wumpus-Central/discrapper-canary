@@ -41,8 +41,8 @@ n.d(
                 j = null != b && (_ ?? 0) >= b,
                 {
                     approveRequest: v,
-                    rejectRequest: T,
-                    submitting: N,
+                    rejectRequest: N,
+                    submitting: T,
                 } = (0, p.W)(I?.guildId, I?.userId, I?.joinRequestId);
             return null != I && I.applicationStatus === g.B5.SUBMITTED && S
                 ? (0, l.jsxs)("div", {
@@ -55,7 +55,7 @@ n.d(
                                   variant: "active",
                                   size: "sm",
                                   text: f.intl.string(f.t.BzjDQJ),
-                                  loading: N,
+                                  loading: T,
                                   onClick: v,
                                   disabled: j,
                               }),
@@ -64,8 +64,8 @@ n.d(
                               variant: "critical-primary",
                               size: "sm",
                               text: f.intl.string(f.t.hDtbsz),
-                              onClick: T,
-                              disabled: N,
+                              onClick: N,
+                              disabled: T,
                           }),
                           n &&
                               (0, l.jsx)(a.$, {

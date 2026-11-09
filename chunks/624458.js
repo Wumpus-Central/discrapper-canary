@@ -4,8 +4,8 @@ var i = n(620632),
     u = n(597798),
     s = n(95701),
     o = n(51271),
-    E = n(844944),
-    a = n(513461),
+    a = n(844944),
+    E = n(513461),
     d = n(212455),
     _ = n(652215),
     c = n(792996);
@@ -15,9 +15,9 @@ n.d(
     {
         A: {
             fetchGuildJoinRequests: async function (t) {
-                let { guildId: e, status: n = a.B5.SUBMITTED, before: l, after: u, limit: s = 25, force: o = !1 } = t,
-                    c = o || !E.A.hasFetched(e);
-                if (!E.A.isFetching() && c) {
+                let { guildId: e, status: n = E.B5.SUBMITTED, before: l, after: u, limit: s = 25, force: o = !1 } = t,
+                    c = o || !a.A.hasFetched(e);
+                if (!a.A.isFetching() && c) {
                     r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
                     try {
                         let t = await i.Bo.get({
@@ -26,12 +26,12 @@ n.d(
                                 rejectWithError: (0, i.fT)(),
                             }),
                             o = t.body.total,
-                            E = (t.body.guild_join_requests ?? []).map(d.j);
+                            a = (t.body.guild_join_requests ?? []).map(d.j);
                         return (
                             r.h.dispatch({
                                 type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
                                 status: n,
-                                requests: E,
+                                requests: a,
                                 total: o,
                                 limit: s,
                                 guildId: e,
@@ -76,10 +76,10 @@ n.d(
                 }
             },
             updateGuildJoinRequest: async function (t, e, n) {
-                let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.B5.APPROVED,
+                let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : E.B5.APPROVED,
                     s = arguments.length > 4 ? arguments[4] : void 0;
                 (0, o.iN)({ guildId: t, actionType: u, applicationUserId: e });
-                let E = await i.Bo.patch({
+                let a = await i.Bo.patch({
                     url: _.Rsh.GUILD_JOIN_REQUEST(t, n),
                     body: { action: u, rejection_reason: s },
                     rejectWithError: (0, i.fT)(),
@@ -95,8 +95,8 @@ n.d(
                 r.h.dispatch({
                     type: "GUILD_JOIN_REQUEST_UPDATE",
                     guildId: t,
-                    status: E.body.application_status,
-                    request: E.body,
+                    status: a.body.application_status,
+                    request: a.body,
                 });
             },
             resetGuildJoinRequest: async function (t) {
