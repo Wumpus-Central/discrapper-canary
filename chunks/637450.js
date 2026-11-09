@@ -2751,6 +2751,7 @@ var tE = n(335871),
         (S[(S.IN_PROGRESS = 2)] = "IN_PROGRESS"),
         (S[(S.AWAITING_MANUAL_APPROVAL = 3)] = "AWAITING_MANUAL_APPROVAL"),
         (S[(S.COMPLETED = 4)] = "COMPLETED"),
+        (S[(S.AWAITING_FINAL_HEALTH_CHECK = 5)] = "AWAITING_FINAL_HEALTH_CHECK"),
         S),
     tP =
         (((N = {})[(N.UNSPECIFIED = 0)] = "UNSPECIFIED"),

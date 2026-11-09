@@ -657,34 +657,36 @@ function ef(e) {
 function eg(e) {
     let { transitionState: t, onClose: n, bounty: i, sourceQuestContent: o, openedAtMs: h, impressionRef: f } = e,
         { url: g, orientation: E } = a.useMemo(() => {
-            var e, t;
-            let n =
-                ((e = i),
-                (t = u),
-                null == e.videoRenditions
-                    ? t.supported.includes(s.x.PORTRAIT)
-                        ? { url: e.videoHls, aspectRatio: s.x.PORTRAIT }
-                        : null
-                    : (function (e, t) {
-                          let { preferred: n, supported: r } = t;
-                          d()(r.includes(n), "Preferred aspect ratio must be in supported renditions list");
-                          let a = m(e, n);
-                          if (null != a) return a;
-                          let i = c[n],
-                              s = null,
-                              l = 1 / 0;
-                          for (let t of r) {
-                              if (t === n) continue;
-                              let r = m(e, t);
-                              if (null == r) continue;
-                              let a = Math.abs(c[t] - i);
-                              a < l && ((l = a), (s = r));
-                          }
-                          return s;
-                      })(e.videoRenditions, t));
-            return null == n
+            let e,
+                t =
+                    null !=
+                    (e =
+                        null != i.videoRenditions
+                            ? (function (e, t) {
+                                  let { preferred: n, supported: r } = t;
+                                  d()(r.includes(n), "Preferred aspect ratio must be in supported renditions list");
+                                  let a = m(e, n);
+                                  if (null != a) return a;
+                                  let i = c[n],
+                                      s = null,
+                                      l = 1 / 0;
+                                  for (let t of r) {
+                                      if (t === n) continue;
+                                      let r = m(e, t);
+                                      if (null == r) continue;
+                                      let a = Math.abs(c[t] - i);
+                                      a < l && ((l = a), (s = r));
+                                  }
+                                  return s;
+                              })(i.videoRenditions, u)
+                            : null)
+                        ? e
+                        : u.supported.includes(s.x.PORTRAIT)
+                          ? { url: i.videoHls, aspectRatio: s.x.PORTRAIT }
+                          : null;
+            return null == t
                 ? { url: i.videoHls, orientation: "portrait" }
-                : { url: n.url, orientation: n.aspectRatio === s.x.PORTRAIT ? "portrait" : "landscape" };
+                : { url: t.url, orientation: t.aspectRatio === s.x.PORTRAIT ? "portrait" : "landscape" };
         }, [i]),
         R = _(i),
         T = R.label ?? i.advertiserName,
