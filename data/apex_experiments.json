@@ -3990,22 +3990,6 @@
     }
   },
   {
-    "name": "2026-09-nameplate-video-preload-none",
-    "kind": "user",
-    "defaultConfig": {
-      "preload": "auto"
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "preload": "none"
-      }
-    }
-  },
-  {
     "name": "2026-09-new-orb-reward-visuals",
     "kind": "user",
     "defaultConfig": {
