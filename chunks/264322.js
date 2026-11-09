@@ -250,6 +250,7 @@ class J extends d.Ay.Store {
             builtIns: t.builtIns,
             scoreMethod: n.scoreMethod,
             allowEmptySections: n.allowEmptySections,
+            allowFetch: n.allowFetch,
             contextState: r,
             userState: a,
             applicationStates: n.allowApplicationState ? l : new Map(),
@@ -414,6 +415,7 @@ function ei(e, t, n) {
                     builtIns: t.builtIns,
                     scoreMethod: n.scoreMethod,
                     allowEmptySections: n.allowEmptySections,
+                    allowFetch: n.allowFetch,
                     contextState: l,
                     userState: o,
                     launcherContext: e,
@@ -429,6 +431,7 @@ function ei(e, t, n) {
                 s,
                 n.scoreMethod,
                 n.allowEmptySections,
+                n.allowFetch,
                 n.sortOptions,
                 n.allowApplicationState,
                 n.applicationId,
@@ -453,50 +456,51 @@ function er(e) {
             allowApplicationCommands: o = !0,
             singleApplicationId: d,
             allowEmptySections: c = !1,
-            scoreMethod: u = y.M.NONE,
-            sortOptions: _ = en,
-            installOnDemand: A = !1,
+            allowFetch: u = !1,
+            scoreMethod: _ = y.M.NONE,
+            sortOptions: A = en,
+            installOnDemand: f = !1,
         } = e,
-        { commandTypes: f } = t,
-        h = a?.toLowerCase(),
-        p = h?.split(" "),
-        m = s === y.n.ONLY_TEXT,
-        T = s !== y.n.DENY ? (0, C.Ez)(f, !0, m) : [],
-        S = [],
-        N = {
+        { commandTypes: h } = t,
+        p = a?.toLowerCase(),
+        m = p?.split(" "),
+        T = s === y.n.ONLY_TEXT,
+        S = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
+        N = [],
+        O = {
             permissionContext: t,
-            query: h,
-            splitQuery: p,
+            query: p,
+            splitQuery: m,
             allowEmptySections: c,
-            scoreMethod: u,
-            installOnDemand: A,
+            scoreMethod: _,
+            installOnDemand: f,
         },
-        O = n.result?.sections ?? {},
-        L = i.result?.sections ?? {},
-        D = new Set();
+        L = n.result?.sections ?? {},
+        D = i.result?.sections ?? {},
+        b = new Set();
     if (o) {
         if (t.hasBaseAccessPermissions)
-            for (let e in O) {
-                let t = O[e];
-                (null == d || t.descriptor.id === d) && D.add(e);
+            for (let e in L) {
+                let t = L[e];
+                (null == d || t.descriptor.id === d) && b.add(e);
             }
-        for (let e in L) {
-            let t = L[e];
-            (null == d || t.descriptor.id === d) && D.add(e);
+        for (let e in D) {
+            let t = D[e];
+            (null == d || t.descriptor.id === d) && b.add(e);
         }
     }
-    let b = new Map();
+    let v = new Map();
     for (let [e, t] of r)
         if (null == d || e === d) {
             let e = t.result?.sections;
-            if (null != e) for (let t of Object.keys(e)) (D.add(t), b.set(t, e[t]));
+            if (null != e) for (let t of Object.keys(e)) (b.add(t), v.set(t, e[t]));
         }
-    for (let e of Array.from(D)) {
+    for (let e of Array.from(b)) {
         let t,
             n,
-            i = O[e],
-            r = L[e],
-            a = b.get(e),
+            i = L[e],
+            r = D[e],
+            a = v.get(e),
             s = null != i,
             o = null != r;
         if (null != i && null != r) {
@@ -517,43 +521,43 @@ function er(e) {
                   : null != a && ((t = a.descriptor), (n = Object.values(a.commands)));
         (l()(null != t, "Failed to select application descriptor"),
             l()(null != n, "Failed to select list of application commands"));
-        let d = ea(t, n, s, o, N);
-        null != d && S.push(d);
+        let d = ea(t, n, s, o, O);
+        null != d && N.push(d);
     }
     if (
-        (_.applications.useFrecency && I.bW.loadIfNecessary(),
-        S.sort((e, t) => {
-            if (_.applications.useScore && u === y.M.APPLICATION_ONLY) {
+        (u && A.applications.useFrecency && I.bW.loadIfNecessary(),
+        N.sort((e, t) => {
+            if (A.applications.useScore && _ === y.M.APPLICATION_ONLY) {
                 let n = e.data[0]?.score ?? Number.MAX_VALUE,
                     i = t.data[0]?.score ?? Number.MAX_VALUE;
                 if (n !== i) return n - i;
             }
-            if (_.applications.useFrecency) {
+            if (A.applications.useFrecency) {
                 let n = E.A.getScoreWithoutLoadingLatest(e.section.id),
                     i = E.A.getScoreWithoutLoadingLatest(t.section.id);
                 if (n !== i) return i - n;
             }
             return eu(e.section.name, t.section.name);
         }),
-        T.length > 0 || !0 === c)
+        S.length > 0 || !0 === c)
     ) {
-        let e = ea(C.gZ[M.Ik.BUILT_IN], T, !0, !0, N);
-        null != e && S.push(e);
+        let e = ea(C.gZ[M.Ik.BUILT_IN], S, !0, !0, O);
+        null != e && N.push(e);
     }
-    let v = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
-    if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
+    let P = N.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
+    if (_ === y.M.COMMAND_ONLY || _ === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
             n = g.A.getGuild(t?.context?.guild_id),
-            i = S.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
-        _.commands.useFrecency && i && I.bW.loadIfNecessary();
+            i = N.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
+        u && A.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;
-        v.sort((e, t) => {
-            if (_.commands.useScore) {
+        P.sort((e, t) => {
+            if (A.commands.useScore) {
                 let n = e.score ?? 0,
                     i = t.score ?? 0;
                 if (n !== i) return n - i;
             }
-            if (_.commands.useFrecency) {
+            if (A.commands.useFrecency) {
                 let n = R.Ay.getScoreWithoutLoadingLatest(r, e),
                     i = R.Ay.getScoreWithoutLoadingLatest(r, t);
                 if (n !== i) return i - n;
@@ -562,9 +566,9 @@ function er(e) {
         });
     }
     return {
-        commands: v,
-        descriptors: S.map((e) => e.section),
-        sectionedCommands: S,
+        commands: P,
+        descriptors: N.map((e) => e.section),
+        sectionedCommands: N,
         loading:
             n?.fetchState.fetching === !0 ||
             i?.fetchState.fetching === !0 ||
