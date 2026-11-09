@@ -602,7 +602,7 @@ function to(e) {
                         onClick: function () {
                             (o && a(tr.i.TAKE_ACTION), t());
                         },
-                        children: (0, l.jsx)(Y.PlusMediumIcon, { size: "md", color: "currentColor" }),
+                        children: (0, l.jsx)(P.NitroWheelIcon, { size: "md", color: "currentColor" }),
                     }),
                 }),
                 o && (0, l.jsx)(ts.N, { className: ta.aW, size: "md", cutout: "base-lower" }),
