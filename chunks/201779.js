@@ -39,16 +39,15 @@ var i,
         (r.SHARE = "share"),
         r);
 let d = new Set([
-        "voice_face",
-        "messages_outfit",
-        "servers_headwear",
-        "emoji_shoes",
-        "games_wearable",
-        "game_time_aura",
-        "finalize_character",
-    ]),
-    c = new Set(["sidekick_leave"]);
-var u =
+    "voice_face",
+    "messages_outfit",
+    "servers_headwear",
+    "emoji_shoes",
+    "games_wearable",
+    "game_time_aura",
+    "finalize_character",
+]);
+var c =
         (((a = {}).IDLE = "idle"),
         (a.INTRODUCTION = "introduction"),
         (a.FACE = "face"),
@@ -61,7 +60,7 @@ var u =
         (a.FINALIZE = "finalize"),
         (a.SUMMARY = "summary"),
         a),
-    _ =
+    u =
         (((s = {}).VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
@@ -79,7 +78,7 @@ var u =
         (s.SUMMARY = "summary"),
         (s.SHARE = "share"),
         s);
-let E = {
+let _ = {
     home: { characterStage: "idle" },
     introduction: { characterStage: "introduction" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
@@ -123,11 +122,10 @@ n.d(
             return d.has(e);
         },
         UG: function (e) {
-            return E[e];
+            return _[e];
         },
-        cy: c,
         gr: o,
-        oI: _,
-        s9: u,
+        oI: u,
+        s9: c,
     },
 );
