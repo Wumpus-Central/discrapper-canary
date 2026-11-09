@@ -9,6 +9,9 @@ let a = {
     asIterable: function (e) {
         return e;
     },
+    captureMessageData: function (e) {
+        return (e) => e.data;
+    },
     Array: i,
     Map: i,
     Set: i,
@@ -34,6 +37,7 @@ let a = {
     Element: i,
     Attr: i,
     NodeList: i,
+    Worker: i,
     Blob: i,
     String: i,
     HTMLMediaElement: i,
@@ -53,8 +57,9 @@ let a = {
         "keys",
         "setPrototypeOf",
     ]),
+    ObjectURL: r("URL", ["createObjectURL", "revokeObjectURL"]),
     Math: r("Math", ["abs"]),
-    Reflect: r("Reflect", ["construct", "defineProperty", "get"]),
+    Reflect: r("Reflect", ["construct", "defineProperty", "deleteProperty", "get"]),
     Symbol: r("Symbol", ["asyncIterator", "iterator", "toStringTag"]),
     Crypto: r("crypto", ["getRandomValues"]),
     Constructor: globalThis,
