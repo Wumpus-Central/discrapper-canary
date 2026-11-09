@@ -209,7 +209,6 @@ n.d(
                                 collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
                                 excludedPlatforms: e.excluded_platforms ?? [],
                                 disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
-                                allowOrbsSpending: !0 === e.allow_orbs_spending,
                             })) ?? [],
                         n = null;
                     (null != e.announcement_modal_config &&
