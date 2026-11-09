@@ -18,24 +18,23 @@ var i = n(477900),
     y = n(643421),
     I = n(263775),
     j = n(409626),
-    v = n(613902),
-    N = n(692969),
-    E = n(980822),
-    b = n(834757),
-    S = n(682163),
-    T = n(832163),
-    _ = n(909004),
-    R = n(46653),
-    O = n(240248),
-    L = n(49999),
-    P = n(818348),
-    w = n(792996),
-    M = n(472344);
-function U(e) {
+    v = n(692969),
+    N = n(980822),
+    E = n(834757),
+    b = n(682163),
+    S = n(832163),
+    T = n(909004),
+    _ = n(46653),
+    R = n(240248),
+    O = n(49999),
+    L = n(818348),
+    P = n(792996),
+    w = n(472344);
+function M(e) {
     let [t, n] = (0, I.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
-function D(e) {
+function U(e) {
     let {
         className: t,
         containerRef: n,
@@ -48,16 +47,16 @@ function D(e) {
         "aria-haspopup": m,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(t, M.kL),
+        className: s()(t, w.kL),
         ref: n,
         children: [
             (0, i.jsxs)(c.D, {
-                className: M.BQ,
+                className: w.BQ,
                 onClick: h,
                 "aria-expanded": p,
                 "aria-haspopup": m,
                 children: [
-                    null != l && (0, i.jsx)("div", { className: s()(M.zc, { [M.RT]: a }), children: l }),
+                    null != l && (0, i.jsx)("div", { className: s()(w.zc, { [w.RT]: a }), children: l }),
                     (0, i.jsx)(d.E, { variant: "body-sm/normal", color: "text-strong", lineClamp: 1, children: r }),
                 ],
             }),
@@ -65,20 +64,20 @@ function D(e) {
         ],
     });
 }
-function V(e) {
+function D(e) {
     let { className: t, applicationId: n } = e,
-        { gameId: l, gameRecord: a } = (0, E.A)({ applicationId: n }),
-        r = (0, N.A)({ gameId: l ?? void 0, source: j.GameProfileSources.VcHeaderActivity });
+        { gameId: l, gameRecord: a } = (0, N.A)({ applicationId: n }),
+        r = (0, v.A)({ gameId: l ?? void 0, source: j.GameProfileSources.VcHeaderActivity });
     if (null == r) return null;
-    let o = a?.getIconURL(S.iu.MEDIUM),
-        c = (0, O.uJ)(o)
-            ? (0, i.jsx)(h.GameControllerIcon, { className: M.Kk })
-            : (0, i.jsx)("img", { className: M.Kk, src: o, alt: "", "aria-hidden": !0 });
-    return (0, i.jsx)(D, {
-        className: s()(t, M.LM),
+    let o = a?.getIconURL(b.iu.MEDIUM),
+        c = (0, R.uJ)(o)
+            ? (0, i.jsx)(h.GameControllerIcon, { className: w.Kk })
+            : (0, i.jsx)("img", { className: w.Kk, src: o, alt: "", "aria-hidden": !0 });
+    return (0, i.jsx)(U, {
+        className: s()(t, w.LM),
         icon: c,
-        isAppIcon: !(0, O.uJ)(o),
-        text: w.intl.string(w.t.f7aVGn),
+        isAppIcon: !(0, R.uJ)(o),
+        text: P.intl.string(P.t.f7aVGn),
         onClick: r,
     });
 }
@@ -90,81 +89,79 @@ n.d(
             let t,
                 { user: n, stream: a, channel: s } = e,
                 [c, d] = l.useState(!1),
-                u = (0, b.AO)(a),
+                u = (0, E.AO)(a),
                 y = u?.id,
-                I = (0, r.bG)([T.A], () => T.A.getDetectableIdsToApplicationIds()),
+                I = (0, r.bG)([S.A], () => S.A.getDetectableIdsToApplicationIds()),
                 j = null != y ? I[y] : null,
-                N = (0, C.h)(j),
-                E = (0, v.E)({ location: "SocialLayerCommerceStreamHeader" }),
-                O = E ? (j ?? y ?? null) : j,
-                G = (0, C.h)(O),
+                v = (0, C.h)(j),
+                N = j ?? y ?? null,
+                R = (0, C.h)(N),
                 {
-                    isLoading: k,
-                    applicationWidgetConfig: B,
-                    profileApplicationWidget: F,
-                    userApplicationIdentity: z,
-                } = (0, x.A)(n.id, O),
-                H = (0, r.bG)([R.default], () => R.default.getId()),
-                W = l.useRef(null),
-                [$, Y] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
-                [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-                { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, g.RD)(H === n.id ? G : null),
-                J = H === n.id && Z && !Q,
-                ee = l.useCallback(() => {
+                    isLoading: V,
+                    applicationWidgetConfig: G,
+                    profileApplicationWidget: k,
+                    userApplicationIdentity: B,
+                } = (0, x.A)(n.id, N),
+                F = (0, r.bG)([_.default], () => _.default.getId()),
+                z = l.useRef(null),
+                [H, W] = M(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
+                [$, Y] = M(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
+                { hasAlreadyLinked: K, canStartAuthorization: X, fetched: q } = (0, g.RD)(F === n.id ? R : null),
+                Z = F === n.id && X && !q,
+                Q = l.useCallback(() => {
                     d(!1);
                 }, []),
-                et = l.useCallback(() => {
-                    X(L.i.USER_DISMISS);
-                }, [X]),
-                en = K && null != B && (q || Z),
-                ei = null != F || en,
-                { rankIconUrl: el, rankText: ea } =
-                    ((t = z?.profile),
+                J = l.useCallback(() => {
+                    Y(O.i.USER_DISMISS);
+                }, [Y]),
+                ee = $ && null != G && (K || X),
+                et = null != k || ee,
+                { rankIconUrl: en, rankText: ei } =
+                    ((t = B?.profile),
                     l.useMemo(() => {
-                        if (null == t || "1346069614634864772" !== O) return {};
+                        if (null == t || "1346069614634864772" !== N) return {};
                         let e = t.data?.primary?.rank_name;
                         return { rankIconUrl: t.data?.primary?.rank_image?.proxy_url, rankText: e };
-                    }, [O, t])),
+                    }, [N, t])),
                 {
-                    isAppIcon: es,
-                    icon: er,
-                    text: eo,
-                    renderPopout: ec,
-                    positionKey: ed,
+                    isAppIcon: el,
+                    icon: ea,
+                    text: es,
+                    renderPopout: er,
+                    positionKey: eo,
                 } = l.useMemo(() => {
-                    if (!E && (null == N || null == j)) return { isAppIcon: !1 };
-                    if (ei && null != O) {
-                        let e = el ?? G?.getIconURL(S.iu.SMALL),
-                            t = null != e && null == el,
+                    if (et && null != N) {
+                        let e = en ?? R?.getIconURL(b.iu.SMALL),
+                            t = null != e && null == en,
                             l =
                                 null != e
-                                    ? (0, i.jsx)("img", { className: M.Kk, src: e, alt: "", "aria-hidden": !0 })
-                                    : (0, i.jsx)(h.GameControllerIcon, { className: M.Kk });
+                                    ? (0, i.jsx)("img", { className: w.Kk, src: e, alt: "", "aria-hidden": !0 })
+                                    : (0, i.jsx)(h.GameControllerIcon, { className: w.Kk });
                         return {
                             isAppIcon: t,
                             icon: l,
-                            text: ea ?? w.intl.string(w.t["9njbm2"]),
+                            text: ei ?? P.intl.string(P.t["9njbm2"]),
                             renderPopout: function (e) {
-                                return null == O
+                                return null == N
                                     ? null
-                                    : (0, i.jsx)(_.V, {
+                                    : (0, i.jsx)(T.V, {
                                           className: e,
                                           userId: n.id,
                                           channel: s,
-                                          applicationId: O,
-                                          onClose: ee,
-                                          canShowCTA: K,
-                                          onDismissCTA: et,
+                                          applicationId: N,
+                                          onClose: Q,
+                                          canShowCTA: $,
+                                          onDismissCTA: J,
                                       });
                             },
                             positionKey: "widget-version",
                         };
                     }
-                    if (null == N || null == j) return { isAppIcon: !1 };
+                    if (null == v || null == j) return { isAppIcon: !1 };
                     let { icon: e, text: t } =
-                        H === n.id
-                            ? { icon: (0, i.jsx)(p.ShopIcon, { className: M.Kk }), text: w.intl.string(w.t.e6S76Q) }
-                            : { icon: (0, i.jsx)(m.GiftIcon, { className: M.Kk }), text: w.intl.string(w.t["8ZzYIv"]) };
+                        F === n.id
+                            ? { icon: (0, i.jsx)(p.ShopIcon, { className: w.Kk }), text: P.intl.string(P.t.e6S76Q) }
+                            : { icon: (0, i.jsx)(m.GiftIcon, { className: w.Kk }), text: P.intl.string(P.t["8ZzYIv"]) };
                     return {
                         isAppIcon: !1,
                         icon: e,
@@ -172,44 +169,44 @@ n.d(
                         renderPopout: function (e) {
                             return null == j
                                 ? null
-                                : (0, i.jsx)(_.Z, {
+                                : (0, i.jsx)(T.Z, {
                                       className: e,
                                       userId: n.id,
                                       channel: s,
                                       applicationId: j,
-                                      onClose: ee,
+                                      onClose: Q,
                                   });
                         },
                         positionKey: "feature-card-version",
                     };
-                }, [E, ei, O, G, N, j, H, n.id, s, ee, K, et, el, ea]);
-            return k || J || (null == ec && !E)
+                }, [et, N, R, v, j, F, n.id, s, Q, $, J, en, ei]);
+            return V || Z
                 ? null
                 : (0, i.jsx)(A.N, {
-                      theme: P.NJ.DARK,
+                      theme: L.NJ.DARK,
                       children: (e) =>
-                          null == ec
-                              ? (0, i.jsx)(V, { className: e, applicationId: y })
+                          null == er
+                              ? (0, i.jsx)(D, { className: e, applicationId: y })
                               : (0, i.jsx)(f.Y, {
-                                    targetElementRef: W,
+                                    targetElementRef: z,
                                     shouldShow: c,
                                     animation: f.Y.Animation.FADE,
                                     position: "bottom",
-                                    positionKey: ed,
+                                    positionKey: eo,
                                     align: "center",
                                     spacing: 8,
-                                    onRequestClose: ee,
-                                    renderPopout: () => ec(e),
+                                    onRequestClose: Q,
+                                    renderPopout: () => er(e),
                                     children: () =>
-                                        (0, i.jsx)(D, {
+                                        (0, i.jsx)(U, {
                                             className: e,
-                                            containerRef: W,
-                                            icon: er,
-                                            isAppIcon: es,
-                                            text: eo,
-                                            showBadge: $,
+                                            containerRef: z,
+                                            icon: ea,
+                                            isAppIcon: el,
+                                            text: es,
+                                            showBadge: H,
                                             onClick: () => {
-                                                (Y(L.i.TAKE_ACTION), d((e) => !e));
+                                                (W(O.i.TAKE_ACTION), d((e) => !e));
                                             },
                                             "aria-expanded": c,
                                             "aria-haspopup": "dialog",
