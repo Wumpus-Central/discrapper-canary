@@ -27,7 +27,7 @@ async function O(e) {
     null != R && r.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: b });
     let v = O ?? (null != R ? { application_id: b, session_id: R } : null),
         P =
-            null != v && (0, p.m)(b)
+            null != v
                 ? await (async function (e, t) {
                       try {
                           let n = await (0, l.yb)(e, t);

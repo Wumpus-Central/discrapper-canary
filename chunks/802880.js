@@ -153,7 +153,7 @@ var tu = e(323384),
     tg = e(273626),
     tm = e(429913),
     tp = e(860204),
-    tx = e(25451),
+    tx = e(366430),
     tI = e(928550),
     t_ = e(513772),
     tN = e(695311);
@@ -171,7 +171,7 @@ function tE(t) {
             fullWidth: r !== tr.d.MODAL_V2,
             onClick: (t) => {
                 (t.stopPropagation(),
-                    null != u && (0, tx.X)(u)
+                    null != u && (0, tx.U4)(u)
                         ? (i?.({ action: "PRESS_PLAY_BUTTON" }),
                           a?.(),
                           (0, tp.A)({ application: u, userId: n.id, activity: e }))
