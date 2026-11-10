@@ -486,7 +486,11 @@ let eR = s.memo(function (e) {
                         ...t,
                         channelId: l.id,
                         initialMainLink: C.oH.ALL_CLIPS,
-                        picker: { onPick: (e) => Q({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
+                        picker: {
+                            onPick: (e) => Q({ clips: [e], showExportingModal: !0 }),
+                            action: C.qh.SHARE,
+                            allowMultiSelect: !0,
+                        },
                     });
             },
             { modalKey: eT.nm },
