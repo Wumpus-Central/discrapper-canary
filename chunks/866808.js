@@ -28,7 +28,8 @@ function m(e) {
     if ("unavailable" in t && !0 === t.unavailable) return;
     let n = new Set(s.A.getOwnedProjects().map((e) => e.application_id)),
         r = new Set();
-    for (let e of s.A.getServerProjects()) e.guild_id !== t.id || n.has(e.application_id) || r.add(e.application_id);
+    for (let e of [...s.A.getServerProjects(), ...s.A.getProjects()])
+        e.guild_id !== t.id || n.has(e.application_id) || r.add(e.application_id);
     let a = I((e) => {
         let { meta: i } = e;
         return !n.has(i.applicationId) && (i.guildId === t.id || r.has(i.applicationId));

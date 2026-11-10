@@ -3,19 +3,23 @@ n(582128);
 var l = n(430392),
     i = n(323384),
     a = n(127062),
-    o = n(177953),
-    u = n(950305),
-    s = n(331322),
-    c = n(834730),
-    d = n(191850),
-    f = n(792996),
-    p = n(32924);
-let h = {
+    o = n(280645),
+    u = n(687966),
+    s = n(177953),
+    c = n(950305),
+    d = n(331322),
+    p = n(834730),
+    f = n(191850),
+    h = n(792996),
+    m = n(32924);
+let g = {
     bots: l.RobotIcon,
     channels: i.AppsIcon,
     test_app: a.BeakerIcon,
-    collaboration: o.GroupIcon,
-    only_you: u.UserIcon,
+    profile_widget: o.IdCardIcon,
+    overlay: u.GameControllerIcon,
+    collaboration: s.GroupIcon,
+    only_you: c.UserIcon,
 };
 n.d(
     e,
@@ -23,25 +27,25 @@ n.d(
     {
         A: function (t) {
             let { rows: e } = t;
-            return (0, r.jsxs)(s.B, {
+            return (0, r.jsxs)(d.B, {
                 gap: 8,
                 children: [
-                    (0, r.jsx)(c.E, {
+                    (0, r.jsx)(p.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
-                        children: f.intl.string(d.default["kG/2e8"]),
+                        children: h.intl.string(f.default["kG/2e8"]),
                     }),
                     (0, r.jsx)("div", {
-                        className: p.a,
+                        className: m.a,
                         children: e.map((t) => {
-                            let e = h[t.key];
+                            let e = g[t.key];
                             return (0, r.jsxs)(
                                 "div",
                                 {
-                                    className: p.n,
+                                    className: m.n,
                                     children: [
                                         (0, r.jsx)(e, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
-                                        (0, r.jsx)(c.E, {
+                                        (0, r.jsx)(p.E, {
                                             variant: "body-sm/medium",
                                             color: "text-subtle",
                                             children: t.text,

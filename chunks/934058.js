@@ -12,12 +12,16 @@ let c = [],
     A = !1,
     f = 0,
     h = 0;
-function I(e, t) {
+function I() {
+    let e = new Set(E.map((e) => e.application_id));
+    return s.Ay.getOwnedProjects().filter((t) => (0, l.j)(t) && !e.has(t.application_id));
+}
+function p(e, t) {
     return e.length === t.length && e.every((e, n) => e === t[n]);
 }
-function p() {
+function m() {
     let e = s.Ay.getOwnedProjects().filter(l.o);
-    I(e, _) || (_ = 0 === e.length ? c : e);
+    p(e, _) || (_ = 0 === e.length ? c : e);
     let t = new Set(_.map((e) => e.application_id)),
         n = (function () {
             let e = new Set();
@@ -27,26 +31,26 @@ function p() {
             }
             return e;
         })(),
-        i = [..._, ...E.filter((e) => !t.has(e.application_id) && n.has(e.application_id))];
-    I(i, u) || (u = 0 === i.length ? c : i);
+        i = [..._, ...[...E, ...I()].filter((e) => !t.has(e.application_id) && n.has(e.application_id))];
+    p(i, u) || (u = 0 === i.length ? c : i);
 }
-function m() {
+function T() {
     let e = u;
-    return (p(), u !== e);
+    return (m(), u !== e);
 }
-function T(e) {
+function g(e) {
     let { guildId: t } = e;
-    if (!E.some((e) => e.guild_id === t)) return !1;
+    if (![...E, ...I()].some((e) => e.guild_id === t)) return !1;
     h++;
 }
-class g extends i.Ay.Store {
+class S extends i.Ay.Store {
     static displayName = "ConjureOverlayWidgetsStore";
     initialize() {
         (this.waitFor(s.Ay, a.A),
             a.A.initializeIfNeeded(),
-            p(),
-            this.syncWith([s.Ay], () => (p(), !0)),
-            this.syncWith([a.A], m));
+            m(),
+            this.syncWith([s.Ay], () => (m(), !0)),
+            this.syncWith([a.A], T));
     }
     getProjects() {
         return u;
@@ -76,28 +80,28 @@ class g extends i.Ay.Store {
         return f;
     }
 }
-let S = new g(r.h, {
+let N = new S(r.h, {
     CONJURE_SERVER_OVERLAY_WIDGETS_FETCH_SUCCESS: function (e) {
         let { projects: t } = e,
             n = t.filter(l.j);
-        ((E = 0 === n.length ? c : n), (A = !0), (f = 0), p());
+        ((E = 0 === n.length ? c : n), (A = !0), (f = 0), m());
     },
     CONJURE_SERVER_OVERLAY_WIDGETS_FETCH_FAIL: function () {
         f++;
     },
-    INTEGRATION_DELETE: T,
-    GUILD_INTEGRATIONS_UPDATE: T,
+    INTEGRATION_DELETE: g,
+    GUILD_INTEGRATIONS_UPDATE: g,
     CONJURE_SERVER_OVERLAY_WIDGETS_GUILD_REMOVE: function (e) {
         let { guildId: t } = e,
             n = E.filter((e) => e.guild_id !== t);
         if (n.length === E.length) return !1;
-        ((E = 0 === n.length ? c : n), p());
+        ((E = 0 === n.length ? c : n), m());
     },
     CONNECTION_OPEN: function () {
-        ((A = !1), (f = 0), h++, p());
+        ((A = !1), (f = 0), h++, m());
     },
     LOGOUT: function () {
         ((u = c), (_ = c), (E = c), (A = !1), (f = 0), h++);
     },
 });
-n.d(t, {}, { A: S });
+n.d(t, {}, { A: N });
