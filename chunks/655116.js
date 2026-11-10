@@ -11,7 +11,7 @@ var s = n(435558),
     A = n(573648),
     f = n(504337),
     h = n(626584),
-    I = n(397369),
+    I = n(644727),
     p = n(46653),
     m = n(417869),
     T = n(885576),
@@ -53,7 +53,7 @@ function Q() {
         if (null != n) return { socket: t, device: n };
     }
 }
-function Z(e) {
+function J(e) {
     _.h.dispatch({
         type: "SPOTIFY_PLAYER_STATE",
         accountId: e,
@@ -65,7 +65,7 @@ function Z(e) {
         context: null,
     });
 }
-function J(e) {
+function Z(e) {
     return g.A.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.pH)(e.party.id));
 }
 let ee = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
@@ -329,9 +329,9 @@ function eu(e, t) {
         })
         .then((n) => {
             let i = n.body;
-            null != i ? ec(e, t, i).then(() => n) : Z(e);
+            null != i ? ec(e, t, i).then(() => n) : J(e);
         })
-        .catch(() => Z(e));
+        .catch(() => J(e));
 }
 class e_ extends d.Ay.Store {
     static displayName = "SpotifyStore";
@@ -341,7 +341,7 @@ class e_ extends d.Ay.Store {
                 (function () {
                     if (null == r || null == Q()) return !1;
                     let { userId: e } = r,
-                        t = J(e);
+                        t = Z(e);
                     if (null == t)
                         return (
                             j.start(w, () => {
@@ -398,7 +398,7 @@ class e_ extends d.Ay.Store {
     }
     getActivity() {
         let e, t, n;
-        if (null == i) return null != r ? J(r.userId) : null;
+        if (null == i) return null != r ? Z(r.userId) : null;
         let {
                 track: { artists: a, album: s, name: l, id: o, duration: d, isLocal: c, type: u },
                 startTime: _,
@@ -494,11 +494,11 @@ let eE = new e_(_.h, {
                 .values(X)
                 .find((e) => null != e)),
             ed(p.default.getId()),
-            null == u || N ? W.stop() : W.start(u.duration - E + G, () => Z(T.id)),
+            null == u || N ? W.stop() : W.start(u.duration - E + G, () => J(T.id)),
             null != r && ((!o && E > 0) || null == A || (null != S && r.trackId !== S.track.id))
                 ? (B.info(`Listen along active but playback stopped or track changed. Stopping listen along in ${G}ms`),
                   Y.start(G, () => {
-                      (B.info("Stopping listening along"), (0, f.A)(), Z(T.id));
+                      (B.info("Stopping listening along"), (0, f.A)(), J(T.id));
                   }))
                 : Y.isStarted() && (B.info("Listen along stop cancelled as playback of track resumed"), Y.stop()),
             O === i ||

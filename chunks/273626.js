@@ -12,7 +12,7 @@ var i = n(488428),
     E = n(306044),
     A = n(626584),
     f = n(953384),
-    h = n(397369),
+    h = n(644727),
     I = n(760751),
     p = n(499785),
     m = n(403362),
@@ -108,8 +108,8 @@ async function X(e) {
 var z = n(878014),
     q = n(568598),
     Q = n(628983),
-    Z = n(577483),
-    J = n(625180),
+    J = n(577483),
+    Z = n(625180),
     ee = n(860204),
     et = n(366430),
     en = n(290863),
@@ -465,9 +465,9 @@ let eE = {
                               preferAppChannel: r,
                               channelId: a,
                           });
-                      (0, Z.A)(i);
+                      (0, J.A)(i);
                       try {
-                          let e = await J.A.launchFrame({
+                          let e = await Z.A.launchFrame({
                               applicationId: n,
                               surface: null != u && null != _ ? { type: w.U.MAIN, channelId: u.id, guildId: _ } : er.sd,
                               analyticsContext: E,

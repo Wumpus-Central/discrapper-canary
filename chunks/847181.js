@@ -9,7 +9,7 @@ var n = i(284009),
     c = i(587895),
     d = i(628983),
     f = i(419490),
-    A = i(397369),
+    A = i(644727),
     p = i(432005),
     y = i(411238),
     m = i(208284),
@@ -183,13 +183,13 @@ var tK = i(941971),
     t0 = i(355622),
     t1 = i(408018),
     t8 = i(989161),
-    t9 = i(451909),
-    t2 = i(135621),
-    t3 = i(381941),
-    t4 = i(158602);
+    t2 = i(451909),
+    t9 = i(135621),
+    t4 = i(381941),
+    t7 = i(158602);
 function t5(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
-        a = (0, t2.A)(),
+        a = (0, t9.A)(),
         { placeholder: r, accessibilityLabel: o } = (0, tQ.A)({ channel: n }),
         [s, c] = X.useState(() => (0, t1.N3)()),
         { textValue: d, richValue: f } = s,
@@ -217,7 +217,7 @@ function t5(t) {
         E = X.useCallback(
             () => (
                 d.length > a ||
-                    (tq.A.sendMessage(n.id, t9.Ay.parse(n, d), !1, { location: t3.Hx.OVERLAY }),
+                    (tq.A.sendMessage(n.id, t2.Ay.parse(n, d), !1, { location: t4.Hx.OVERLAY }),
                     u.A.setInputLocked(!0, P.A.getTargetPID()),
                     u.A.updateNotificationStatus(e, z.yFH.DISMISSED),
                     l?.(d)),
@@ -226,9 +226,9 @@ function t5(t) {
             [d, a, n, e, l],
         );
     return (0, $.jsx)("div", {
-        className: t4.k,
+        className: t7.k,
         children: (0, $.jsx)(t8.Ay, {
-            innerClassName: t4.T,
+            innerClassName: t7.T,
             onChange: g,
             placeholder: r,
             accessibilityLabel: o,
@@ -247,7 +247,7 @@ function t5(t) {
         }),
     });
 }
-var t7 = i(119191),
+var t3 = i(119191),
     t6 = i(361729);
 function et(t) {
     t && (0, tB.Ak)(k.c, 0.4, void 0, void 0, { trackNotificationFailure: !0 });
@@ -725,7 +725,7 @@ let ew = new ej(s.h, {
                         : (0, $.jsx)("img", { src: i(513653), className: ef.Kk, alt: "" }),
                 title: o,
                 hint: function () {
-                    return (0, t7.sI)((0, F.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
+                    return (0, t3.sI)((0, F.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
                 },
                 ...a,
                 onNotificationShow: (t) => {
@@ -930,7 +930,7 @@ let ew = new ej(s.h, {
                     hint: (t, e) =>
                         t || !e || (!l && (0, tW.$)())
                             ? null
-                            : (0, t7.sI)((0, F.Jn)(), l ? t6.default.VMcw8s : J.t.ykjOAJ),
+                            : (0, t3.sI)((0, F.Jn)(), l ? t6.default.VMcw8s : J.t.ykjOAJ),
                     maxBodyLines: 2,
                     renderFooter: (i, n, a) =>
                         l || (0, tW.$)()
