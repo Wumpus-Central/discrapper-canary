@@ -4,7 +4,9 @@ function r(e) {
     return "number" == typeof e && Object.hasOwn(i.bt, e);
 }
 function a(e, t) {
-    return r(t) && e.properties.oneofKind === i.bt[t];
+    if ("number" == typeof t) return r(t) && e.properties.oneofKind === i.bt[t];
+    for (let n of t) if (a(e, n)) return !0;
+    return !1;
 }
 n.d(
     t,

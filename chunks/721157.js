@@ -1,40 +1,36 @@
 var i,
     a,
-    r = n(462887),
-    l = n(448645),
-    o = n(550099),
-    s = n(682901),
-    d = n(652215);
+    r = n(517352),
+    l = n(462887),
+    s = n(448645),
+    o = n(693369),
+    d = n(550099),
+    c = n(682901),
+    u = n(652215);
 n(792996);
-let c = new Set([s.k4, s.Dw, s.pX, s.Hp, s.fY, s.bi, s.J7, s.a7, s.Tt]);
-var u =
+let f = [
+        r.oW.PREMIUM_HOME_REWARDS_PERK_CARD,
+        r.oW.MARKETING_PAGE_REWARDS_BENTO_BOX,
+        r.oW.OUTBOUND_PROMOTION_POPOVER,
+        r.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD,
+    ],
+    m = new Set([c.k4, c.Dw, c.pX, c.Hp, c.fY, c.bi, c.J7, c.a7, c.Tt]);
+var g =
         (((i = {}).NO_SUBSCRIPTION = "no_subscription"),
         (i.NOT_TIER_2_SUBSCRIPTION = "not_tier_2_subscription"),
         (i.SUBSCRIPTION_STATUS_NOT_ALLOWED = "subscription_status_not_allowed"),
         (i.TRIAL_USER_NOT_ELIGIBLE = "trial_user_not_eligible"),
         i),
-    m = (((a = {}).CAN_CLAIM = "CAN_CLAIM"), (a.BLOCK_CLAIM = "BLOCKED"), (a.UPSELL = "UPSELL"), a);
-function f(e) {
-    let { properties: t } = e.properties;
-    switch (t.oneofKind) {
-        case "premiumHomeRewardsPerkCard":
-            return t.premiumHomeRewardsPerkCard.asset;
-        case "marketingPageRewardsBentoBox":
-            return t.marketingPageRewardsBentoBox.asset;
-        case "outboundPromotionPopover":
-            return t.outboundPromotionPopover.asset;
-        case "outboundPromotionClaimModalCard":
-            return t.outboundPromotionClaimModalCard.asset;
-        default:
-            return;
-    }
+    b = (((a = {}).CAN_CLAIM = "CAN_CLAIM"), (a.BLOCK_CLAIM = "BLOCKED"), (a.UPSELL = "UPSELL"), a);
+function p(e) {
+    if ((0, o.a9)(e, f)) return e.surface.asset;
 }
 n.d(
     t,
     {},
     {
-        Co: f,
-        ON: u,
+        Co: p,
+        ON: g,
         P3: function (e) {
             switch (e) {
                 case null:
@@ -48,25 +44,25 @@ n.d(
             }
         },
         VO: function (e, t, n) {
-            let i = (0, o.A)(e, t),
-                a = null != i ? f(i) : void 0;
-            if (null != a) return (0, r.M)(n) ? a.darkUrl : a.lightUrl;
+            let i = (0, d.A)(e, t),
+                a = null != i ? p(i) : void 0;
+            if (null != a) return (0, l.M)(n) ? a.darkUrl : a.lightUrl;
         },
         ij: function (e, t) {
             if (null == t)
                 return e?.isPremiumGroupMember() === !0
                     ? { isEligible: !0, reason: null }
                     : { isEligible: !1, reason: "no_subscription" };
-            let n = (0, l.EL)(t);
-            if (null == n || s.hd[n.planId]?.premiumType !== s.PremiumTypes.TIER_2)
+            let n = (0, s.EL)(t);
+            if (null == n || c.hd[n.planId]?.premiumType !== c.PremiumTypes.TIER_2)
                 return { isEligible: !1, reason: "not_tier_2_subscription" };
-            let i = t.status === d.Dmq.PAUSED && e?.isFractionalPremium() === !0;
+            let i = t.status === u.Dmq.PAUSED && e?.isFractionalPremium() === !0;
             return t.statusAllowsPerks || i
-                ? null != t.trialId && t.hasActiveTrial && !c.has(t.trialId)
+                ? null != t.trialId && t.hasActiveTrial && !m.has(t.trialId)
                     ? { isEligible: !1, reason: "trial_user_not_eligible" }
                     : { isEligible: !0, reason: null }
                 : { isEligible: !1, reason: "subscription_status_not_allowed" };
         },
-        zE: m,
+        zE: b,
     },
 );
