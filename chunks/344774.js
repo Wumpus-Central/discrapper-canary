@@ -1,49 +1,48 @@
-var n = l(477900);
-l(582128);
-var a = l(855986),
-    u = l(772707),
-    e = l(345942),
-    r = l(71393),
-    d = l(124077),
-    o = l(674725),
-    s = l(673383),
-    c = l(752222),
-    p = l(792996);
-l.d(
-    i,
+var n = i(477900);
+i(582128);
+var a = i(855986),
+    u = i(189213),
+    e = i(345942),
+    r = i(71393),
+    d = i(124077),
+    s = i(674725),
+    o = i(673383),
+    c = i(752222),
+    p = i(792996);
+i.d(
+    l,
     {},
     {
         default: function (t) {
-            let i,
-                l,
-                { code: f, reason: g, transitionState: k, onClose: C } = t,
-                h = (0, o.A)(f),
-                A = h?.guildId,
-                b = (0, a.bG)([r.A], () => null != A && null != r.A.getGuild(A));
-            if (null == h) return null;
-            let { title: m, subtitle: v } =
-                ((i = (0, d.A)({ displayNoun: h.displayNoun, lowercase: !0 })),
-                (l = g === s.ru.NO_CHARACTERS ? c.default.lXyJMS : c.default["IIR/NZ"]),
+            let l,
+                i,
+                { code: f, reason: C, transitionState: g, onClose: k } = t,
+                A = (0, s.A)(f),
+                b = A?.guildId,
+                h = (0, a.bG)([r.A], () => null != b && null != r.A.getGuild(b));
+            if (null == A) return null;
+            let { title: m, subtitle: y } =
+                ((l = (0, d.A)({ displayNoun: A.displayNoun, lowercase: !0 })),
+                (i = C === o.ru.NO_CHARACTERS ? c.default.lXyJMS : c.default["IIR/NZ"]),
                 {
-                    title: p.intl.formatToPlainString(c.default.DinVUQ, { noun: i }),
-                    subtitle: p.intl.formatToPlainString(l, { noun: i, guildName: h.linkedGuild.name }),
+                    title: p.intl.formatToPlainString(c.default.DinVUQ, { noun: l }),
+                    subtitle: p.intl.formatToPlainString(i, { noun: l, guildName: A.linkedGuild.name }),
                 });
-            return (0, n.jsx)(u.k, {
-                transitionState: k,
-                onClose: C,
-                graphic: void 0,
+            return (0, n.jsx)(u.a, {
+                transitionState: g,
+                onClose: k,
                 title: m,
-                subtitle: v,
+                subtitle: y,
                 actions: [
-                    b
+                    h
                         ? {
                               text: p.intl.string(c.default.H1wMHV),
                               variant: "primary",
                               onClick: function () {
-                                  null != A && (C(), (0, e.u)(A));
+                                  null != b && (k(), (0, e.u)(b));
                               },
                           }
-                        : { text: p.intl.string(p.t.cpT0Cq), variant: "secondary", onClick: C },
+                        : { text: p.intl.string(p.t.cpT0Cq), variant: "secondary", onClick: k },
                 ],
             });
         },

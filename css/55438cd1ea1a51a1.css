@@ -1,0 +1,17 @@
+.icon_44_CBJ {
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+    height: var(--size-96);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--size-96)
+}
+
+.dot_44_CBJ {
+    background-color: var(--icon-muted);
+    border-radius: var(--radius-round);
+    height: var(--size-8);
+    width: var(--size-8)
+}
+
+/*# sourceMappingURL=55438cd1ea1a51a1.css.map*/
