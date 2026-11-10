@@ -113,7 +113,6 @@ function x(t, l) {
         appChannelId: i,
         ownerInstallMissing:
             "user" === n.install_scope &&
-            null == n.install_scope_setup &&
             (0, A.PV)(n) &&
             A.Ay.getIntegrationStatus(t)?.owner_authorization_revoked === !0,
         input: {

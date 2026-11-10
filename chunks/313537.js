@@ -3,7 +3,7 @@ var i = n(71393),
     a = n(434279),
     s = n(260498);
 function l(e) {
-    if (null == e || null != e.install_scope_setup) return null;
+    if (null == e) return null;
     if ("guild" === e.install_scope) return (0, a.wu)(e);
     let t = e.guild_id ?? null;
     return null != t && null != i.A.getGuild(t) ? t : null;

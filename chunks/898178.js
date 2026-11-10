@@ -8,8 +8,8 @@ var r = n(477900),
     s = n(782134),
     c = n(113494),
     d = n(12470),
-    p = n(811893),
-    f = n(165862),
+    f = n(811893),
+    p = n(165862),
     h = n(477782),
     m = n(92446),
     g = n(173936),
@@ -20,8 +20,8 @@ var r = n(477900),
     w = n(408278),
     j = n(365199),
     k = n(872344),
-    _ = n(742589),
-    S = n(147036),
+    S = n(742589),
+    _ = n(147036),
     I = n(957565),
     P = n(171691),
     C = n(785389),
@@ -51,7 +51,7 @@ function W(t) {
                 s = null == o ? a : o.target,
                 c = s?.appName ?? t.name,
                 d = l.useMemo(() => (0, F.w)(t, s), [t, s]),
-                p = l.useCallback(async () => {
+                f = l.useCallback(async () => {
                     (n(!0), i(null), u({ target: a }));
                     try {
                         await (0, q.kY)(t.id);
@@ -68,17 +68,17 @@ function W(t) {
                 keptChannels: null == s ? null : (0, z.Mi)(s),
                 pending: e,
                 error: r,
-                submit: p,
+                submit: f,
             };
         })(e),
-        { appName: u, rows: s, keptChannels: c, pending: d, error: p } = o;
+        { appName: u, rows: s, keptChannels: c, pending: d, error: f } = o;
     return (0, r.jsx)(O.a, {
         transitionState: n,
         onClose: i,
         role: "alertdialog",
         title: T.intl.formatToPlainString(D.default.cAxBIL, { app: u }),
         size: "sm",
-        notice: null == p ? void 0 : { type: "critical", message: p, role: "alert" },
+        notice: null == f ? void 0 : { type: "critical", message: f, role: "alert" },
         actions: [
             { text: T.intl.string(T.t["ETE/oC"]), variant: "secondary", onClick: i, disabled: d },
             {
@@ -112,7 +112,7 @@ function Y(t) {
     let { project: e, target: n, action: i, ...o } = t,
         [u, s] = l.useState(n.canRemovePreviewBot),
         [c, d] = l.useState(!1),
-        [p, f] = l.useState(null),
+        [f, p] = l.useState(null),
         h = "delete" === i,
         m = h ? (0, z.fI)(n) : (0, z.Kd)(n),
         g = h ? null : (0, z.L4)(n),
@@ -126,7 +126,7 @@ function Y(t) {
         title: h ? x : (0, z.WX)((0, Z.tb)(D.default.x6FvsZ, n.appName)),
         subtitle: h ? (0, z.J)(n) : T.intl.string(D.default["8OKM1N"]),
         "aria-label": x,
-        notice: null == p ? void 0 : { message: p, type: "critical", role: "alert" },
+        notice: null == f ? void 0 : { message: f, type: "critical", role: "alert" },
         actions: [
             { text: T.intl.string(T.t["ETE/oC"]), variant: "secondary", onClick: o.onClose },
             {
@@ -136,11 +136,11 @@ function Y(t) {
                 disabled: c,
                 onClick: () => {
                     (async function () {
-                        (d(!0), f(null));
+                        (d(!0), p(null));
                         let t = h ? (0, q.xx)(e.id) : (0, U.YI)(e.id, { alsoRemovePreviewBot: u }),
                             r = await t.catch(() => null);
                         (d(!1), r?.ok !== !0)
-                            ? f(T.intl.string(h ? D.default["0XDHob"] : D.default.PJ2Fkn))
+                            ? p(T.intl.string(h ? D.default["0XDHob"] : D.default.PJ2Fkn))
                             : (h || (0, a.P0)({ text: (0, z.p_)(n), variant: "success" }), o.onClose());
                     })().catch(() => {});
                 },
@@ -172,13 +172,13 @@ function tt(t) {
         [o, u] = l.useState(!1),
         [s, c] = l.useState(null),
         d = (0, i.bG)([J.A], () => J.A.getApplication(e.application_id)?.name ?? e.name, [e.application_id, e.name]),
-        p = T.intl.formatToPlainString(D.default.m8KWic, { app: d });
+        f = T.intl.formatToPlainString(D.default.m8KWic, { app: d });
     return (0, r.jsx)(O.a, {
         ...n,
         role: "alertdialog",
-        title: p,
+        title: f,
         subtitle: T.intl.string(D.default.wve4kB),
-        "aria-label": p,
+        "aria-label": f,
         notice: null == s ? void 0 : { message: s, type: "critical", role: "alert" },
         actions: [
             { text: T.intl.string(T.t["ETE/oC"]), variant: "secondary", onClick: n.onClose },
@@ -218,7 +218,7 @@ function ti(t) {
             projectGuildId: v,
             isOwner: w,
             canRemix: j,
-            onPublish: _,
+            onPublish: S,
             publishLabel: F,
             publishDisabled: O = !1,
             onOpenProjectSettings: R,
@@ -236,8 +236,8 @@ function ti(t) {
             onToggleDebug: ts,
             debugOpen: tc = !1,
             refreshApplicationId: td,
-            previewProjectId: tp,
-            onCloseMenu: tf,
+            previewProjectId: tf,
+            onCloseMenu: tp,
         } = t,
         th = (0, X.iI)(e),
         tm = (0, P.lQ)(e) && !ti,
@@ -272,12 +272,12 @@ function ti(t) {
                     [e, t, a],
                 ),
             };
-        })(tp ?? null, tl),
-        tw = (0, i.bG)([H.A], () => (null == tp ? tr : H.A.getDeclaredConnections(tp))),
+        })(tf ?? null, tl),
+        tw = (0, i.bG)([H.A], () => (null == tf ? tr : H.A.getDeclaredConnections(tf))),
         tj = l.useMemo(() => (0, C.Xl)(tw), [tw]),
         tk = (0, z.Bs)(e),
-        t_ = (0, z.CU)(e) && w,
-        tS = (0, i.bG)(
+        tS = (0, z.CU)(e) && w,
+        t_ = (0, i.bG)(
             [B.Ay],
             () => {
                 let t = B.Ay.getProject(e);
@@ -290,17 +290,11 @@ function ti(t) {
             () => {
                 var t;
                 let n = B.Ay.getProject(e);
-                return (
-                    null != n &&
-                    "guild" === (t = n).install_scope &&
-                    null == t.install_scope_setup &&
-                    null != t.guild_id &&
-                    (0, B.PV)(t)
-                );
+                return null != n && "guild" === (t = n).install_scope && (0, B.PV)(t);
             },
             [e],
         ),
-        tP = null != R || w || tS,
+        tP = null != R || w || t_,
         tC = (function (t) {
             let { canRefresh: e, refreshPending: n, offers: r, connectPending: l } = t,
                 i = [];
@@ -339,21 +333,21 @@ function ti(t) {
         t$ = I.p5,
         tq = th ? o.BellIcon : u.BellSlashIcon,
         tB = ti ? s.PlayIcon : c.PauseIcon,
-        tz = tu ? d.WindowReturnIcon : p.WindowLaunchIcon;
-    return (0, r.jsxs)(f.W, {
+        tz = tu ? d.WindowReturnIcon : f.WindowLaunchIcon;
+    return (0, r.jsxs)(p.W, {
         "data-menu-migrated": !0,
         navId: `conjure-project-actions-${e}`,
         "aria-label": T.intl.string(T.t.ogxXGq),
-        onClose: tf,
-        onSelect: tf,
+        onClose: tp,
+        onSelect: tp,
         children: [
-            null != _
+            null != S
                 ? (0, r.jsx)(h.rX, {
                       children: (0, r.jsx)(h.Dr, {
                           id: "publish",
                           label: F ?? T.intl.string(D.default["120EFN"]),
                           disabled: O,
-                          action: _,
+                          action: S,
                       }),
                   })
                 : null,
@@ -471,7 +465,7 @@ function ti(t) {
                                     icon: g.LinkIcon,
                                     leadingAccessory: { type: "icon", icon: g.LinkIcon },
                                     action: () =>
-                                        (0, I.C)((0, S.n)(b, te.VV.CONJURE, e), () =>
+                                        (0, I.C)((0, _.n)(b, te.VV.CONJURE, e), () =>
                                             (0, a.P0)({ text: T.intl.string(T.t["L/PwZf"]), variant: "success" }),
                                         ),
                                 })
@@ -533,7 +527,7 @@ function ti(t) {
                                     },
                                 })
                               : null,
-                          t_
+                          tS
                               ? (0, r.jsx)(h.Dr, {
                                     id: "unpublish",
                                     label: T.intl.string(D.default.jYAR58),
@@ -610,7 +604,7 @@ function ta(t) {
                                   onClick: l,
                               }),
                           })
-                        : (0, r.jsx)(_.A.Icon, {
+                        : (0, r.jsx)(S.A.Icon, {
                               icon: j.MoreHorizontalIcon,
                               tooltip: T.intl.string(T.t["UKOtz+"]),
                               "aria-label": T.intl.string(T.t["UKOtz+"]),

@@ -5,11 +5,11 @@ var l = n(855986),
 function i(e) {
     let t = e?.guild_id,
         n = (0, l.bG)([a.A], () => (null != t ? (a.A.getGuild(t) ?? null) : null), [t]);
-    return null == e || null != e.install_scope_setup
+    return null == e
         ? null
         : "user" === e.install_scope
           ? { kind: "user", label: s.intl.string(r.default.KxFFKT) }
-          : "guild" === e.install_scope && null != n
+          : null != n
             ? { kind: "guild", label: n.name, guild: n }
             : null;
 }
@@ -22,7 +22,7 @@ n.d(
         },
         V: i,
         ns: function (e) {
-            return "guild" === e.install_scope && null == e.guild_id && null == e.install_scope_setup;
+            return "guild" === e.install_scope && null == e.guild_id;
         },
     },
 );

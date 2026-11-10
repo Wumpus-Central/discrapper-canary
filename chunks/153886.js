@@ -680,13 +680,7 @@ function eE(e) {
                             [eo],
                         ),
                         e_ = a.useCallback(async () => {
-                            if (
-                                null == i ||
-                                null == l ||
-                                null == i.preview_application_id ||
-                                null != i.install_scope_setup ||
-                                q.current === l
-                            )
+                            if (null == i || null == l || null == i.preview_application_id || q.current === l)
                                 return !0;
                             if (J.current) return !1;
                             ((J.current = !0), O(!0));

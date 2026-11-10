@@ -94,7 +94,7 @@ function T(e) {
                                     let m = (0, _.iR)({
                                         name: l,
                                         guild_id: t,
-                                        install_scope: e.install_scope ?? "guild",
+                                        install_scope: e.install_scope,
                                         remix_source_project_id: e.id,
                                         remix_share_ticket: i,
                                         nonce: f,

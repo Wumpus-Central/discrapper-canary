@@ -78,11 +78,6 @@
                         throw Error("WebSocket not open");
                     this.socket.send(JSON.stringify({ type: "retry_remix" }));
                 }
-                sendKeepInstallScope() {
-                    if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
-                        throw Error("WebSocket not open");
-                    this.socket.send(JSON.stringify({ type: "keep_install_scope" }));
-                }
                 sendInterrupt() {
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
                         throw Error("WebSocket not open");

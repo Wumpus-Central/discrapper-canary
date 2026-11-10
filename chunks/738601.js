@@ -9,15 +9,14 @@ var i = n(582128),
     u = n(722701);
 let _ = [d.Ay, l.A, u.A, s.Ay, a.A];
 function E(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return d.Ay.isProjectDeleting(e) || (0, c.j)(a.A.settings, e)
         ? null
         : l.A.isThinking(e) || d.Ay.isProjectRunning(e) || u.A.getPublishStatus(e)?.publishing === !0
           ? "working"
-          : (0, o.tz)(e) || ((t = d.Ay.getProject(e)), t?.install_scope_setup != null && (0, d.PV)(t))
+          : (0, o.tz)(e)
             ? "unread"
-            : n && null != l.A.getFinishedAt(e)
+            : t && null != l.A.getFinishedAt(e)
               ? "working"
               : null;
 }

@@ -4,7 +4,6 @@
     ensureConnection: () => er,
     fu: () => el,
     P6: () => ed,
-    a5: () => B,
     dv: () => es,
     Wx: () => ei,
     r2: () => ea,
@@ -30,8 +29,8 @@ var r = n(158390),
     S = n(223347),
     m = n(392739),
     y = n(463660),
-    O = n(260498),
-    T = n(233470),
+    T = n(260498),
+    O = n(233470),
     b = n(962998),
     N = n(416473),
     C = n(525530),
@@ -165,18 +164,17 @@ function B(e) {
     return `optimistic:${e}`;
 }
 let q = new Map();
-function $(e, t, n) {
-    let { content: r, nonce: s, attachments: o } = t;
-    (q.set(s, l.default.getCurrentUser()?.id),
+function $(e, t) {
+    let { content: n, nonce: r, attachments: s } = t;
+    (q.set(r, l.default.getCurrentUser()?.id),
         i.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
-            content: r,
-            id: B(s),
+            content: n,
+            id: B(r),
             userId: l.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
-            attachments: o,
-            held: n,
+            attachments: s,
         }));
 }
 function Y(e, t, n) {
@@ -217,15 +215,15 @@ let F = {
         ...{
             project_named(e, t) {
                 let { projectId: n } = t,
-                    r = O.Ay.getProject(n);
+                    r = T.Ay.getProject(n);
                 (null != r &&
                     null != e.name &&
                     i.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: { ...r, name: e.name } }),
-                    (0, T._b)(n).catch(() => {}));
+                    (0, O._b)(n).catch(() => {}));
             },
             app_profile_updated(e, t) {
                 let { projectId: n } = t;
-                (0, T._b)(n).catch(() => {});
+                (0, O._b)(n).catch(() => {});
             },
         },
         ...b.rS,
@@ -582,10 +580,10 @@ function es(e, t, n) {
     }
 }
 function ei(e, t, n) {
-    let { held: r, nonce: s = (0, o.m)() } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    let r = (0, o.m)();
     return (
-        $(e, { content: t.trim(), nonce: s, attachments: null != n && n.length > 0 ? n : void 0 }, r),
-        { nonce: s, messageKey: B(s) }
+        $(e, { content: t.trim(), nonce: r, attachments: null != n && n.length > 0 ? n : void 0 }),
+        { nonce: r, messageKey: B(r) }
     );
 }
 function eo(e, t) {
@@ -620,7 +618,7 @@ function eu(e) {
 }
 class ep extends s.Ay.Store {
     initialize() {
-        this.waitFor(c.A, h.A, O.Ay, l.default);
+        this.waitFor(c.A, h.A, T.Ay, l.default);
     }
     getConnState(e) {
         return j.get(e) ?? "connecting";
@@ -642,7 +640,7 @@ let eh = new ep(i.h, {
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let t = !1;
-        for (let e of Array.from(x.keys())) null == O.Ay.getProject(e) && en(e) && (t = !0);
+        for (let e of Array.from(x.keys())) null == T.Ay.getProject(e) && en(e) && (t = !0);
         if (!t) return !1;
     },
     LOGOUT: function () {

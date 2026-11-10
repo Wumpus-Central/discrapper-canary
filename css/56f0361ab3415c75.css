@@ -460,13 +460,6 @@
     width: 1280px
 }
 
-.pill_PW_tfH {
-    border-radius: var(--radius-round);
-    display: inline-flex;
-    flex: 0 0 auto;
-    margin-inline-start: var(--space-8)
-}
-
 .channelView_ajKoHp {
     flex: 1;
     flex-direction: row;
@@ -548,4 +541,4 @@
     display: none
 }
 
-/*# sourceMappingURL=62a4a9002992da61.css.map*/
+/*# sourceMappingURL=56f0361ab3415c75.css.map*/
