@@ -1,6 +1,6 @@
 var i = n(477900),
     a = n(582128),
-    r = n(877624),
+    r = n(517352),
     l = n(793574),
     o = n(688810),
     s = n(975571),
@@ -23,17 +23,17 @@ n.d(
         A: function (e) {
             let { enabled: t } = f.A.useConfig({ location: e }),
                 { enabled: n } = m.A.useConfig({ location: e }),
-                { assetUrl: T } = (0, g.A)(r.C.MARKETING_PAGE_REWARDS_BENTO_BOX),
-                { analyticsLocations: _ } = (0, o.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX);
+                { assetUrl: _ } = (0, g.A)(r.oW.MARKETING_PAGE_REWARDS_BENTO_BOX),
+                { analyticsLocations: T } = (0, o.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX);
             return (0, a.useMemo)(
                 () =>
-                    t && n && null != T
+                    t && n && null != _
                         ? {
                               name: d.N.CODE_BLURPLE,
                               caption: (0, i.jsx)("img", { src: C.A, alt: "Call of Duty: MW4" }),
                               title: E.intl.string(P.default.E1sPHw),
                               description: E.intl.string(P.default.py5vQi),
-                              previewImage: T,
+                              previewImage: _,
                               descriptionCta: E.intl.string(A.default.WMK6Pg),
                               actions: [
                                   {
@@ -46,14 +46,14 @@ n.d(
                                               subtitle: E.intl.format(p.default.ieA3V0, {
                                                   termsUrl: s.A.getArticleURL(b.MVz.CODE_BLURPLE_PROMOTION),
                                               }),
-                                              analyticsLocations: _,
+                                              analyticsLocations: T,
                                               isLocked: !0,
                                           }),
                                   },
                               ],
                           }
                         : null,
-                [t, n, T, _],
+                [t, n, _, T],
             );
         },
     },

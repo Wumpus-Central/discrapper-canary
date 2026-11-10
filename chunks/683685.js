@@ -1,6 +1,6 @@
 var i = n(477900);
 n(582128);
-var a = n(877624),
+var a = n(517352),
     r = n(793574),
     l = n(920050),
     o = n(757036),
@@ -16,7 +16,7 @@ n.d(
         A: function (e) {
             let { targetElementRef: t, dismissPopover: n, children: f } = e,
                 g = (0, o.L)(),
-                { assetUrl: b } = (0, d.A)(a.C.OUTBOUND_PROMOTION_POPOVER);
+                { assetUrl: b } = (0, d.A)(a.oW.OUTBOUND_PROMOTION_POPOVER);
             return (0, i.jsx)(s.A, {
                 targetElementRef: t,
                 dismissPopover: n,
