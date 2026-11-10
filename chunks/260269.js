@@ -322,20 +322,20 @@ function e3(e) {
     });
 }
 var e8 = n(613412),
-    e5 = n(164636),
-    e7 = n(139286),
+    e7 = n(164636),
+    e5 = n(139286),
     e2 = n(727419),
     e9 = n(792996),
     e4 = n(330766);
 function te(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e5.bG)([P.A, em.default], () => {
+        l = (0, e7.bG)([P.A, em.default], () => {
             let e = em.default.getCurrentUser(),
                 n = P.A.getGuild(t);
             return null != n && (0, eE.bM)(n, e);
         });
     return (
-        (0, e7.A)({
+        (0, e5.A)({
             type: e8.ImpressionTypes.POPOUT,
             name: e8.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -796,8 +796,8 @@ var tz = n(503698),
     t6 = n(104171),
     t3 = n(47167),
     t8 = n(713654),
-    t5 = n(976860),
-    t7 = n(129095),
+    t7 = n(976860),
+    t5 = n(129095),
     t2 = n(110618),
     t9 = n(46653),
     t4 = n(309010),
@@ -1065,7 +1065,7 @@ function nC(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t5.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t5.av)(t), (0, t7.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1491,10 +1491,10 @@ let n0 = new nJ(m.h),
     ],
     n3 = n6.map((e) => e.store).filter(nt.Vq),
     n8 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n5(e) {
+function n7(e) {
     e.stopPropagation();
 }
-let n7 = [];
+let n5 = [];
 function n2(e) {
     var t, n;
     let i,
@@ -1518,7 +1518,7 @@ function n2(e) {
             (c = d && u),
             l.useMemo(() => {
                 let e = [];
-                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n7);
+                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n5);
             }, [c])),
         [g, I] = (0, q.ww)(m, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
@@ -1565,7 +1565,7 @@ function n2(e) {
                     return null;
             }
         })();
-    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n5, children: R });
+    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n7, children: R });
 }
 let n9 = function (e) {
     let { guild: t } = e;
@@ -2030,6 +2030,7 @@ class ir extends l.PureComponent {
                     n.e(344502),
                     n.e(146070),
                     n.e(836863),
+                    n.e(538733),
                     n.e(854622),
                     n.e(629482),
                     n.e(590365),
@@ -2061,7 +2062,7 @@ class ir extends l.PureComponent {
                     n.e(335395),
                     n.e(636373),
                     n.e(882777),
-                    n.e(56520),
+                    n.e(19220),
                     n.e(945413),
                     n.e(402026),
                     n.e(163235),
@@ -2755,8 +2756,8 @@ function io(e) {
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e5 = (0, eb.Dq)(G) && !e8,
-        e7 = (function (e) {
+        e7 = (0, eb.Dq)(G) && !e8,
+        e5 = (function (e) {
             let t = (0, es.u)(ei.oW.GUILD_HEADER_COACHMARK),
                 n = t?.surface,
                 i = null != e && !(0, $.ai)(e),
@@ -2770,28 +2771,28 @@ function io(e) {
                 marketingComponent: t,
                 markAsDismissed: l,
             };
-        })(e5 ? null : b),
-        [e2, e9] = (0, q.kn)(e5 ? [] : e3, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
-        [e4, te] = (0, eD.vB)(eQ && !1 === eV && !(0, $.ai)(b) && !e5, el.m.GUILD_HEADER_TOOLTIPS),
+        })(e7 ? null : b),
+        [e2, e9] = (0, q.kn)(e7 ? [] : e3, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [e4, te] = (0, eD.vB)(eQ && !1 === eV && !(0, $.ai)(b) && !e7, el.m.GUILD_HEADER_TOOLTIPS),
         [tt, tn] = (0, q.D8)(
-            e0 && !e5 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e0 && !e7 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             b,
             { cooldownDurationMs: eL.bW, numTimesToRecur: 5 },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ti, ts] = (0, q.D8)(
-            e6 && !e5 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e6 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             b,
             { cooldownDurationMs: eL.mD },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         tl = l.useMemo(
             () =>
-                e7.shouldShow && null != e7.marketingComponent
+                e5.shouldShow && null != e5.marketingComponent
                     ? {
                           contentType: o.M.GUILD_HEADER_COACHMARK,
-                          data: { marketingComponent: e7.marketingComponent },
-                          markAsDismissed: e7.markAsDismissed,
+                          data: { marketingComponent: e5.marketingComponent },
+                          markAsDismissed: e5.markAsDismissed,
                       }
                     : null != e2
                       ? { contentType: e2, data: null, markAsDismissed: e9 }
@@ -2802,7 +2803,7 @@ function io(e) {
                           : ti === o.M.EXPIRING_POWERUP_COACHMARK && null != e1
                             ? { contentType: ti, data: { featuredExpiringPowerup: e1 }, markAsDismissed: ts }
                             : null,
-            [e7.shouldShow, e7.marketingComponent, e7.markAsDismissed, e2, e4, tt, ti, eJ, e1, e9, te, tn, ts],
+            [e5.shouldShow, e5.marketingComponent, e5.markAsDismissed, e2, e4, tt, ti, eJ, e1, e9, te, tn, ts],
         );
     return (0, s.jsx)(ir, {
         guildId: b,
@@ -2820,7 +2821,7 @@ function io(e) {
         hasChannelNotice: null != V || X,
         anyLayerOpen: K || F || W,
         showGuildHeaderTutorial: Y,
-        showPriorityHeaderNotice: e5,
+        showPriorityHeaderNotice: e7,
         showGuildTemplateDirtyTooltip: eg,
         showNewUnreadsBar: e_,
         isHeaderPopoutOpen: eC,
