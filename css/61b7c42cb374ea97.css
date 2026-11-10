@@ -381,10 +381,18 @@
     flex-direction: column
 }
 
+.educationCopy_vdR1t6 {
+    flex-direction: column
+}
+
+.educationCopy_vdR1t6,
 .eyebrow_vdR1t6 {
-    align-items: center;
     display: flex;
     gap: var(--space-4)
+}
+
+.eyebrow_vdR1t6 {
+    align-items: center
 }
 
 .title_vdR1t6 {
@@ -408,6 +416,252 @@
     flex-shrink: 0;
     position: relative;
     width: calc(33.33333cqi - var(--space-16)*2/3)
+}
+
+.hero_MIigO5,
+.section_MIigO5 {
+    overflow: hidden
+}
+
+.copy_MIigO5,
+.hero_MIigO5,
+.section_MIigO5 {
+    display: flex;
+    flex-direction: column
+}
+
+.copy_MIigO5 {
+    gap: var(--space-8)
+}
+
+.hero_MIigO5 {
+    border-bottom: 1px solid var(--border-subtle);
+    gap: var(--space-24);
+    padding: calc(var(--custom-clips-header-height) + var(--space-24)) var(--space-24) var(--space-24)
+}
+
+.heroGrid_MIigO5 {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
+.traitCard_MIigO5,
+.videoCard_MIigO5 {
+    aspect-ratio: 16/9;
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative
+}
+
+.videoPoster_MIigO5 {
+    align-items: center;
+    background: radial-gradient(circle at 70% 20%, var(--background-brand), transparent 55%), linear-gradient(135deg, var(--background-brand), var(--background-base-lowest));
+    color: var(--text-overlay-light);
+    inset: 0;
+    justify-content: center
+}
+
+.cardFooter_MIigO5,
+.videoPoster_MIigO5 {
+    display: flex;
+    position: absolute
+}
+
+.cardFooter_MIigO5 {
+    inset-inline: 0;
+    bottom: 0;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.videoAction_MIigO5 {
+    align-items: center;
+    color: var(--text-overlay-light);
+    display: flex;
+    gap: var(--space-8)
+}
+
+.traitCard_MIigO5 {
+    border-style: dashed;
+    color: var(--text-muted)
+}
+
+.traitCard_MIigO5:before {
+    background: linear-gradient(180deg, transparent 50%, 80%, var(--background-brand));
+    content: "";
+    inset: 0;
+    opacity: .25;
+    pointer-events: none;
+    position: absolute
+}
+
+.traitIcon_MIigO5 {
+    display: flex;
+    inset-inline-start: calc(var(--space-12) - 1px);
+    position: absolute;
+    top: calc(var(--space-12) - 1px)
+}
+
+.avatarPile_MIigO5,
+.skeletonRow_MIigO5,
+.traitMeta_MIigO5 {
+    align-items: center;
+    display: flex
+}
+
+.skeletonRow_MIigO5 {
+    gap: var(--space-4)
+}
+
+.skeleton_MIigO5 {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-xs);
+    height: 16px
+}
+
+.skeletonShort_MIigO5 {
+    width: 24px
+}
+
+.skeletonLong_MIigO5 {
+    width: 64px
+}
+
+.skeletonMedium_MIigO5 {
+    width: 48px
+}
+
+.traitMeta_MIigO5 {
+    gap: var(--space-8)
+}
+
+.traitTag_MIigO5 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--text-overlay-light);
+    display: flex;
+    gap: var(--space-4);
+    height: 24px;
+    padding-inline: var(--space-8)
+}
+
+.avatar_MIigO5 {
+    background: var(--background-mod-normal);
+    border-radius: 50%;
+    height: 24px;
+    width: 24px
+}
+
+.avatar_MIigO5:not(:last-child) {
+    --custom-next-avatar-x: calc(150% - var(--space-6));
+    margin-inline-end: calc(var(--space-6)*-1);
+    -webkit-mask-image: radial-gradient(circle at var(--custom-next-avatar-x) 50%, transparent 14px, var(--background-base-lowest) 14.5px);
+    mask-image: radial-gradient(circle at var(--custom-next-avatar-x) 50%, transparent 14px, var(--background-base-lowest) 14.5px)
+}
+
+.avatar_MIigO5:not(:last-child):dir(rtl) {
+    --custom-next-avatar-x: calc(-50% + var(--space-6))
+}
+
+.section_MIigO5 {
+    align-items: center;
+    padding: calc(var(--custom-clips-header-height) + var(--space-64)) var(--space-24) var(--space-32)
+}
+
+.emptyContent_MIigO5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-40);
+    width: min(833px, 100%)
+}
+
+.stage_MIigO5 {
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.emptyVideoCard_MIigO5 {
+    box-shadow: var(--shadow-high);
+    width: min(620px, 100%)
+}
+
+.radial_MIigO5 {
+    --custom-radial-radius: 3740px;
+    --custom-radial-near: 4.2deg;
+    --custom-radial-far: 12.1deg;
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.radialCard_MIigO5 {
+    background: var(--background-base-lower);
+    inset-inline-start: calc(50% - 232px);
+    opacity: .5;
+    position: absolute;
+    top: calc(50% - 142px);
+    transform-origin: 50% calc(50% + var(--custom-radial-radius));
+    width: 464px
+}
+
+.radialFarLeft_MIigO5 {
+    transform: rotate(calc(var(--custom-radial-far)*-1))
+}
+
+.radialLeft_MIigO5 {
+    transform: rotate(calc(var(--custom-radial-near)*-1))
+}
+
+.radialRight_MIigO5 {
+    transform: rotate(var(--custom-radial-near))
+}
+
+.radialFarRight_MIigO5 {
+    transform: rotate(var(--custom-radial-far))
+}
+
+.emptyInfo_MIigO5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    text-align: center
+}
+
+.valueProps_MIigO5 {
+    margin-top: var(--space-80);
+    width: min(833px, 100%)
+}
+
+.valueProp_MIigO5,
+.valueProps_MIigO5 {
+    display: flex;
+    gap: var(--space-16)
+}
+
+.valueProp_MIigO5 {
+    background: var(--background-base-low);
+    border-radius: var(--radius-lg);
+    color: var(--icon-default);
+    flex: 1 1 0;
+    flex-direction: column;
+    min-width: 0;
+    padding: var(--space-16)
+}
+
+.valuePropText_MIigO5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
 }
 
 .session_2njDLD {
@@ -563,6 +817,15 @@
     margin-top: var(--custom-clips-scroll-inset, 0)
 }
 
+.educationGradient_Et7tR8 {
+    height: var(--custom-clips-home-gradient-height);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    pointer-events: none;
+    transform: translateY(calc(var(--custom-clips-home-scroll-top, 0px)*-1))
+}
+
 .spinnerContainer_Et7tR8 {
     align-items: center;
     display: flex;
@@ -591,4 +854,4 @@
     padding: var(--space-8) 0
 }
 
-/*# sourceMappingURL=d9ed43a19e164253.css.map*/
+/*# sourceMappingURL=61b7c42cb374ea97.css.map*/
