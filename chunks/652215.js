@@ -956,6 +956,7 @@ let nL = Object.freeze({
         COLLECTIBLES_VALID_GIFT_RECIPIENT: "/users/@me/valid-collectibles-gift-recipient",
         COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
         COLLECTIBLES_MARKETING: "/users/@me/collectibles-marketing",
+        COLLECTIBLES_COLLECTION_SEQUENCED_OFFERS: "/collectibles-collection-sequenced-offers",
         COLLECTIBLES_SHOP: "/collectibles-shop",
         GUILD_MEMBER_BANNER: function (e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";

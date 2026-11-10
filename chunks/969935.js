@@ -1,20 +1,21 @@
 n.d(t, {
-    gn: () => en,
-    iJ: () => eo,
-    Sw: () => ee,
-    CK: () => ei,
-    LX: () => ec,
-    Jp: () => ea,
-    gB: () => er,
-    h$: () => e_,
-    RE: () => es,
-    Cz: () => Z,
-    RD: () => et,
-    FH: () => eu,
-    rh: () => el,
-    Or: () => eE,
-    ue: () => eA,
-    JJ: () => ed,
+    gn: () => er,
+    iJ: () => ec,
+    Sw: () => en,
+    CK: () => ea,
+    LX: () => e_,
+    Jp: () => el,
+    gB: () => es,
+    IV: () => eE,
+    h$: () => ef,
+    RE: () => eo,
+    Cz: () => et,
+    RD: () => ei,
+    FH: () => eA,
+    rh: () => ed,
+    Or: () => eh,
+    ue: () => eI,
+    JJ: () => eu,
 });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
@@ -598,11 +599,27 @@ class q {
 var Q = n(100057),
     J = n(181774);
 function Z(e) {
+    return null != e ? new Date(e) : null;
+}
+function ee(e) {
+    let { position: t, assets: n, card_shape: i } = e;
+    return {
+        position: t,
+        cardShape: i,
+        assets: {
+            locked: n.locked,
+            hint: n.hint,
+            idleAnimation: n.idle_animation,
+            revealAnimation: n.reveal_animation,
+        },
+    };
+}
+function et(e) {
     let { tab: t, initialCollectionId: i, ...r } = e;
     {
         let { default: e } = n(830543),
             { default: a } = n(408166);
-        (ee(r),
+        (en(r),
             e(),
             (0, E.M)(),
             a(),
@@ -615,14 +632,14 @@ function Z(e) {
             ));
     }
 }
-function ee(e) {
+function en(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_OPEN", ...e });
 }
-function et(e) {
+function ei(e) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId: e });
 }
 (n(295811), n(870216));
-function en(e, t) {
+function er(e, t) {
     return (
         !!e?.noCache == !!t?.noCache &&
         !!e?.includeUnpublished == !!t?.includeUnpublished &&
@@ -634,7 +651,7 @@ function en(e, t) {
         e?.skipNumCategories === t?.skipNumCategories
     );
 }
-async function ei(e, t, n) {
+async function ea(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
     let i = (0, J.ao)(e),
         r = c.Ay.get("shop_show_debug_overlay");
@@ -666,7 +683,7 @@ async function ei(e, t, n) {
             r && I(`fetchCollectiblesCategories failed: ${e.message}`));
     }
 }
-async function er() {
+async function es() {
     if (m.A.isFetching) return;
     o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
     let e = c.Ay.get("shop_show_debug_overlay");
@@ -691,7 +708,7 @@ async function er() {
         );
     }
 }
-async function ea(e, t) {
+async function el(e, t) {
     o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
     try {
         let n = { locale: A.default.locale };
@@ -710,16 +727,16 @@ async function ea(e, t) {
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t, endedAt: Date.now() }));
     }
 }
-async function es(e, t) {
-    f.A.isFetchingProduct(e) || f.A.isProductFetchBackedOff(e) || (await ea(e, t));
+async function eo(e, t) {
+    f.A.isFetchingProduct(e) || f.A.isProductFetchBackedOff(e) || (await el(e, t));
 }
-function el(e) {
+function ed(e) {
     let t = Date.now();
     for (let n of (0, T.XS)([e]))
         null == f.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }
-async function eo(e) {
+async function ec(e) {
     o.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
     try {
         let t = await l.Bo.put({ url: w.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
@@ -729,7 +746,7 @@ async function eo(e) {
         throw (o.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: e, error: t }), t);
     }
 }
-async function ed(e, t) {
+async function eu(e, t) {
     try {
         return (
             await l.Bo.get({
@@ -742,7 +759,7 @@ async function ed(e, t) {
         return ((0, u.o)(new d.LG(e)), !1);
     }
 }
-async function ec(e) {
+async function e_(e) {
     let { release: t = a.P.PROD } = e;
     o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
     let n = { platform: r.DESKTOP };
@@ -754,7 +771,25 @@ async function ec(e) {
         ((0, u.o)(new d.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" }));
     }
 }
-function eu(e) {
+async function eE() {
+    o.h.dispatch({ type: "COLLECTIBLES_SEQUENCED_OFFERS_FETCH" });
+    try {
+        var e;
+        let t = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_COLLECTION_SEQUENCED_OFFERS, rejectWithError: !0 });
+        o.h.dispatch({
+            type: "COLLECTIBLES_SEQUENCED_OFFERS_FETCH_SUCCESS",
+            sequencedOffers: {
+                collectionId: (e = t.body).collection_id,
+                startsAt: Z(e.starts_at),
+                endsAt: Z(e.ends_at),
+                promotions: e.promotions.map(ee),
+            },
+        });
+    } catch (e) {
+        ((0, u.o)(new d.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_SEQUENCED_OFFERS_FETCH_FAILURE" }));
+    }
+}
+function eA(e) {
     let { ttlMs: t } = e,
         n = p.A.getCachedMarketingsBySurfaces(t);
     return (
@@ -784,7 +819,7 @@ function eu(e) {
         !0)
     );
 }
-async function e_(e, t, n) {
+async function ef(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
     let i = (0, J.ao)(t, e);
     t?.logPerf &&
@@ -811,9 +846,9 @@ async function e_(e, t, n) {
         ((0, u.o)(t), o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t }));
     }
 }
-function eE(e) {
+function eh(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride: e });
 }
-function eA(e) {
+function eI(e) {
     o.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
 }
