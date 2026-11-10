@@ -1,70 +1,80 @@
-(n.d(t, { A: () => F, k: () => k }), n(142703));
+(n.d(t, { A: () => Y, k: () => W }), n(142703));
 var i = n(613412),
     r = n(136722),
     a = n(620632),
     s = n(73153),
     l = n(178253),
     o = n(612200),
-    d = n(323073),
-    c = n(45645),
-    u = n(448741),
-    _ = n(357566),
-    E = n(879408),
-    A = n(568185),
-    f = n(362280),
-    h = n(854492),
-    I = n(398884),
-    p = n(700241),
-    m = n(879982),
-    T = n(976860),
-    g = n(288254),
-    S = n(46653),
-    N = n(383394),
-    C = n(808728),
-    O = n(71393),
-    R = n(309010),
-    L = n(967198),
-    y = n(287809),
-    D = n(129230),
-    b = n(488926),
-    v = n(499785),
-    P = n(157559),
-    M = n(652215),
-    U = n(204925),
-    w = n(792996);
-function G(e) {
-    P.A.show({ title: w.intl.string(w.t.cTaRxF), body: w.intl.formatToPlainString(w.t["VSd+Aj"], { quantity: e }) });
+    d = n(323073);
+(n(323874), n(14289), n(35956));
+var c = n(376943),
+    u = n(569745),
+    _ = n(288254),
+    E = n(734057),
+    A = n(71393),
+    f = n(652215),
+    h = n(746080);
+let I = /\/threads\/(\d+)/;
+function p(e) {
+    let t = E.A.getChannel(e);
+    return null != t && !(0, d.qR)(t) && !(0, _.BV)(t);
 }
-function x(e) {
+var m = n(45645),
+    T = n(448741),
+    g = n(357566),
+    S = n(879408),
+    N = n(568185),
+    C = n(362280),
+    O = n(854492),
+    R = n(398884),
+    L = n(700241),
+    y = n(879982),
+    D = n(976860),
+    b = n(46653),
+    v = n(383394),
+    P = n(808728),
+    M = n(309010),
+    U = n(967198),
+    w = n(287809),
+    G = n(129230),
+    x = n(488926),
+    k = n(499785),
+    F = n(157559),
+    B = n(204925),
+    V = n(792996);
+function H(e) {
+    F.A.show({ title: V.intl.string(V.t.cTaRxF), body: V.intl.formatToPlainString(V.t["VSd+Aj"], { quantity: e }) });
+}
+function j(e) {
     s.h.dispatch({ type: "GUILD_DELETE", guild: { id: e } });
 }
-function k(e) {
+function W(e) {
     return new Promise((t) =>
-        O.A.addConditionalChangeListener(() => {
-            let n = O.A.getGuild(e);
+        A.A.addConditionalChangeListener(() => {
+            let n = A.A.getGuild(e);
             return null == n || (t(n), !1);
         }),
     );
 }
-let F = {
+let Y = {
     joinGuild: async function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             { source: i, loadId: r, lurkLocation: l, autoNavigate: d = !0 } = t,
-            E = t.lurker ?? !1,
-            A = y.default.getCurrentUser();
-        if (A?.hasFlag(M.nhx.QUARANTINED)) throw ((0, p.default)(), new u.w());
-        s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: E, source: i, loadId: r });
+            c = t.lurker ?? !1,
+            u = w.default.getCurrentUser();
+        if (u?.hasFlag(f.nhx.QUARANTINED)) throw ((0, L.default)(), new T.w());
+        s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: c, source: i, loadId: r });
         try {
-            let t = L.A.getGuildId(),
-                o = e === t && null != O.A.getGuild(e) ? R.Ay.getChannelId(e) : null,
-                c = await a.Bo.put({
-                    url: M.Rsh.GUILD_JOIN(e),
+            let t = U.A.getGuildId(),
+                o = e === t && null != A.A.getGuild(e) ? M.Ay.getChannelId(e) : null,
+                u = await a.Bo.put({
+                    url: f.Rsh.GUILD_JOIN(e),
                     query: {
-                        lurker: E,
-                        session_id: E ? S.default.getSessionId() : null,
+                        lurker: c,
+                        session_id: c ? b.default.getSessionId() : null,
                         recommendation_load_id: r,
-                        location: E && null != l ? l : null,
-                        from_directory: i === M.Q4z.DIRECTORY_ENTRY || null,
+                        location: c && null != l ? l : null,
+                        from_directory: i === f.Q4z.DIRECTORY_ENTRY || null,
                     },
                     context: { source: i },
                     oldFormErrors: !0,
@@ -72,89 +82,89 @@ let F = {
                     rejectWithError: (0, a.fT)(),
                 });
             if (
-                (null != c.body.join_request &&
-                    s.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: c.body.join_request }),
-                null == O.A.getGuild(e) && c.body.show_verification_form && d)
+                (null != u.body.join_request &&
+                    s.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: u.body.join_request }),
+                null == A.A.getGuild(e) && u.body.show_verification_form && d)
             )
-                return ((0, _.q)(e), c);
+                return ((0, g.q)(e), u);
             if (
-                (null != c.body.welcome_screen &&
+                (null != u.body.welcome_screen &&
                     s.h.dispatch({
                         type: "WELCOME_SCREEN_UPDATE",
-                        guildId: c.body.id,
-                        welcomeScreen: c.body.welcome_screen,
+                        guildId: u.body.id,
+                        welcomeScreen: u.body.welcome_screen,
                     }),
-                null != c.body.approximate_presence_count &&
+                null != u.body.approximate_presence_count &&
                     s.h.dispatch({
                         type: "ONLINE_GUILD_MEMBER_COUNT_UPDATE",
-                        guildId: c.body.id,
-                        count: c.body.approximate_presence_count,
+                        guildId: u.body.id,
+                        count: u.body.approximate_presence_count,
                     }),
-                !E && d)
+                !c && d)
             ) {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 197463));
                 await t({ guildId: e, returnChannelId: o });
             }
-            return c;
+            return u;
         } catch (t) {
-            if (t.body?.code === M.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED)
-                throw ((0, o.yO)(U.w_.JOIN_LARGE_GUILD_UNDERAGE), new u.w({ cause: t }));
-            if (t.body?.code === M.t02.TOO_MANY_USER_GUILDS)
-                throw ((0, I.Om)(y.default.getCurrentUser()) ? G(200) : G(100), new u.w({ cause: t }));
-            if (t.body?.code === M.t02.GUILD_AT_CAPACITY)
+            if (t.body?.code === f.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED)
+                throw ((0, o.yO)(B.w_.JOIN_LARGE_GUILD_UNDERAGE), new T.w({ cause: t }));
+            if (t.body?.code === f.t02.TOO_MANY_USER_GUILDS)
+                throw ((0, R.Om)(w.default.getCurrentUser()) ? H(200) : H(100), new T.w({ cause: t }));
+            if (t.body?.code === f.t02.GUILD_AT_CAPACITY)
                 throw (
-                    P.A.show({ title: w.intl.string(w.t.ZZlox4), body: w.intl.string(w.t.ZUEGFn) }),
-                    new u.w({ cause: t })
+                    F.A.show({ title: V.intl.string(V.t.ZZlox4), body: V.intl.string(V.t.ZUEGFn) }),
+                    new T.w({ cause: t })
                 );
             if (
-                (E && t.body?.code === M.t02.UNKNOWN_GUILD && x(e),
-                t.body?.code === M.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED)
+                (c && t.body?.code === f.t02.UNKNOWN_GUILD && j(e),
+                t.body?.code === f.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED)
             )
-                throw (E && x(e), (0, c.e)(e), new u.w({ cause: t }));
+                throw (c && j(e), (0, m.e)(e), new T.w({ cause: t }));
             throw t;
         }
     },
-    waitForGuild: k,
+    waitForGuild: W,
     async transitionToGuildSync(e, t, n, i) {
         var r;
-        let a = ((r = (await k(e)).id), null != n ? n : (0, m.q)(r)[0]),
+        let a = ((r = (await W(e)).id), null != n ? n : (0, y.q)(r)[0]),
             s = t;
         (t?.hasOwnProperty("welcomeModalChannelId") &&
             null == t.welcomeModalChannelId &&
             (s = { ...t, welcomeModalChannelId: a ?? void 0 }),
-            (0, f.A)(M.BVt.CHANNEL(e, a, i), s),
+            (0, C.A)(f.BVt.CHANNEL(e, a, i), s),
             await new Promise(setImmediate));
     },
-    deleteGuild: x,
+    deleteGuild: j,
     selectGuild(e) {
-        (0, h.j)(e);
+        (0, O.j)(e);
     },
     createGuild(e) {
         s.h.dispatch({ type: "GUILD_CREATE", guild: e });
     },
     setServerMute: (e, t, n) =>
         a.Bo.patch({
-            url: M.Rsh.GUILD_MEMBER(e, t),
+            url: f.Rsh.GUILD_MEMBER(e, t),
             body: { mute: n },
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         }),
     setServerDeaf: (e, t, n) =>
         a.Bo.patch({
-            url: M.Rsh.GUILD_MEMBER(e, t),
+            url: f.Rsh.GUILD_MEMBER(e, t),
             body: { deaf: n },
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         }),
     setChannel(e, t, n) {
-        a.Bo.patch({ url: M.Rsh.GUILD_MEMBER(e, t), body: { channel_id: n }, oldFormErrors: !0, rejectWithError: !0 });
+        a.Bo.patch({ url: f.Rsh.GUILD_MEMBER(e, t), body: { channel_id: n }, oldFormErrors: !0, rejectWithError: !0 });
     },
     setMemberFlags(e, t, n) {
-        a.Bo.patch({ url: M.Rsh.GUILD_MEMBER(e, t), body: { flags: n }, oldFormErrors: !0, rejectWithError: !0 });
+        a.Bo.patch({ url: f.Rsh.GUILD_MEMBER(e, t), body: { flags: n }, oldFormErrors: !0, rejectWithError: !0 });
     },
     kickUser: (e, t, n, i) =>
         a.Bo.del({
-            url: M.Rsh.GUILD_MEMBER(e, t),
+            url: f.Rsh.GUILD_MEMBER(e, t),
             query: { reason: n, moderator_report_id: i },
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
@@ -171,8 +181,8 @@ let F = {
             location: o,
             moderatorReportId: d,
         } = e;
-        return v.A.patch({
-            url: M.Rsh.GUILD_MEMBER(t, n),
+        return k.A.patch({
+            url: f.Rsh.GUILD_MEMBER(t, n),
             reason: l,
             body: { communication_disabled_until: r, moderator_report_id: d },
             oldFormErrors: !0,
@@ -192,16 +202,16 @@ let F = {
     },
     banUser: (e, t, n, i, r) =>
         a.Bo.put({
-            url: M.Rsh.GUILD_BAN(e, t),
+            url: f.Rsh.GUILD_BAN(e, t),
             reason: i,
             body: { delete_message_seconds: n, moderator_report_id: r },
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         }),
-    unbanUser: (e, t) => a.Bo.del({ url: M.Rsh.GUILD_BAN(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() }),
+    unbanUser: (e, t) => a.Bo.del({ url: f.Rsh.GUILD_BAN(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() }),
     banMultipleUsers: (e, t, n, i) =>
         a.Bo.post({
-            url: M.Rsh.BULK_GUILD_BAN_V2(e),
+            url: f.Rsh.BULK_GUILD_BAN_V2(e),
             body: { user_ids: t, delete_message_seconds: n },
             reason: i,
             oldFormErrors: !0,
@@ -209,7 +219,7 @@ let F = {
         }),
     async startBulkBan(e, t, n, i) {
         try {
-            if ((await this.banMultipleUsers(e, t, n, i), E.A.consumeCompletedBeforeStarted(e, S.default.getId())))
+            if ((await this.banMultipleUsers(e, t, n, i), S.A.consumeCompletedBeforeStarted(e, b.default.getId())))
                 return;
             s.h.dispatch({ type: "GUILD_BULK_BAN_STARTED", guildId: e });
         } catch (t) {
@@ -219,14 +229,14 @@ let F = {
     async createRole(e, t, n, i) {
         let { skipSelect: o = !1 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
             d = {
-                name: null != t && "" !== t ? t : w.intl.string(w.t.QBMHvB),
+                name: null != t && "" !== t ? t : V.intl.string(V.t.QBMHvB),
                 color: n ?? 0,
                 colors: i ?? { primary_color: n ?? 0, secondary_color: null, tertiary_color: null },
-                permissions: b.x3,
+                permissions: x.x3,
             };
         try {
             let t = await a.Bo.post({
-                    url: M.Rsh.GUILD_ROLES(e),
+                    url: f.Rsh.GUILD_ROLES(e),
                     oldFormErrors: !0,
                     body: d,
                     rejectWithError: (0, a.fT)(),
@@ -235,7 +245,7 @@ let F = {
             return (
                 (n.permissions = r.iu(n.permissions)),
                 o || s.h.dispatch({ type: "GUILD_SETTINGS_ROLE_SELECT", roleId: t.body.id, role: n }),
-                A.A.checkGuildTemplateDirty(e),
+                N.A.checkGuildTemplateDirty(e),
                 n
             );
         } catch (e) {
@@ -246,42 +256,42 @@ let F = {
         let { icon: i, unicodeEmoji: r, ...s } = n,
             l = null === i || i?.startsWith("data:") ? i : void 0,
             o = await a.Bo.patch({
-                url: M.Rsh.GUILD_ROLE(e, t),
+                url: f.Rsh.GUILD_ROLE(e, t),
                 body: { ...s, icon: l, unicode_emoji: r },
                 oldFormErrors: !0,
                 rejectWithError: (0, a.fT)(),
             });
-        return (A.A.checkGuildTemplateDirty(e), o);
+        return (N.A.checkGuildTemplateDirty(e), o);
     },
     updateRolePermissions: (e, t, n) =>
         a.Bo.patch({
-            url: M.Rsh.GUILD_ROLE(e, t),
+            url: f.Rsh.GUILD_ROLE(e, t),
             body: { permissions: n },
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         }),
     deleteRole(e, t) {
-        a.Bo.del({ url: M.Rsh.GUILD_ROLE(e, t), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
-            A.A.checkGuildTemplateDirty(e);
+        a.Bo.del({ url: f.Rsh.GUILD_ROLE(e, t), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+            N.A.checkGuildTemplateDirty(e);
         });
     },
     async batchChannelUpdate(e, t) {
         let n = await a.Bo.patch({
-            url: M.Rsh.GUILD_CHANNELS(e),
+            url: f.Rsh.GUILD_CHANNELS(e),
             body: t,
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         });
-        return (A.A.checkGuildTemplateDirty(e), n);
+        return (N.A.checkGuildTemplateDirty(e), n);
     },
     async batchRoleUpdate(e, t) {
         let n = await a.Bo.patch({
-            url: M.Rsh.GUILD_ROLES(e),
+            url: f.Rsh.GUILD_ROLES(e),
             body: t,
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         });
-        return (A.A.checkGuildTemplateDirty(e), n);
+        return (N.A.checkGuildTemplateDirty(e), n);
     },
     requestMembers(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
@@ -321,7 +331,7 @@ let F = {
         s.h.dispatch({ type: "GUILD_MOVE_BY_ID", sourceId: e, targetId: t, moveToBelow: n, combine: i });
     },
     createGuildFolderLocal(e, t) {
-        (D.default.track(M.HAw.GUILD_FOLDER_CREATED),
+        (G.default.track(f.HAw.GUILD_FOLDER_CREATED),
             s.h.dispatch({ type: "GUILD_FOLDER_CREATE_LOCAL", sourceIds: e, name: t }));
     },
     editGuildFolderLocal(e, t, n) {
@@ -331,8 +341,8 @@ let F = {
         s.h.dispatch({ type: "GUILD_FOLDER_DELETE_LOCAL", targetId: e });
     },
     toggleGuildFolderExpand(e) {
-        let t = N.A.isFolderExpanded(e);
-        (D.default.track(M.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
+        let t = v.A.isFolderExpanded(e);
+        (G.default.track(f.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
             s.h.dispatch({ type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: e }));
     },
     setGuildFolderExpanded(e, t) {
@@ -345,11 +355,35 @@ let F = {
         s.h.dispatch({ type: "GUILD_NSFW_AGREE", guildId: e });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) return void (0, T.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
-        let t = C.A.getDefaultChannel(e);
-        null == t || (0, d.qR)(t) || (0, g.BV)(t)
-            ? (0, T.pX)(M.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
-            : (0, T.pX)(M.BVt.CHANNEL(e, t.id));
+        let t = (function () {
+            let e = window.navigation,
+                t = e?.currentEntry?.index;
+            if (null == e || null == t) return null;
+            let n = e.entries();
+            for (let e = t; e >= 0; e--) {
+                let t = n[e].url;
+                if (null == t) continue;
+                let { pathname: i, search: r, hash: a } = new URL(t);
+                if (!(0, u.Q)(i) || i === f.BVt.APP || i.startsWith(`${f.BVt.APP}/`)) continue;
+                let s = (0, c.vu)(i),
+                    l = s?.channelId;
+                if (null == l || (0, h.jq)(l)) {
+                    if (null != s && s.guildId !== f.ME) {
+                        let e = s.guildId;
+                        if (null == A.A.getGuild(e) || (0, d.k8)(e)) continue;
+                    }
+                } else if (!p(l)) continue;
+                let o = i.match(I)?.[1];
+                if (null == o || p(o)) return `${i}${r}${a}`;
+            }
+            return null;
+        })();
+        if (null != t) return void (0, D.pX)(t);
+        if (null == e) return void (0, D.pX)(f.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
+        let n = P.A.getDefaultChannel(e);
+        null == n || (0, d.qR)(n) || (0, _.BV)(n)
+            ? (0, D.pX)(f.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
+            : (0, D.pX)(f.BVt.CHANNEL(e, n.id));
     },
     spoilerAgree(e) {
         s.h.dispatch({ type: "CHANNEL_SPOILER_AGREE", channelId: e });
@@ -358,11 +392,11 @@ let F = {
         s.h.dispatch({ type: "CHANNEL_SPOILER_AGREE_CLEAR", channelId: e });
     },
     escapeToDefaultChannel(e) {
-        let t = C.A.getDefaultChannel(e);
-        null != t ? (0, T.pX)(M.BVt.CHANNEL(e, t.id)) : (0, T.pX)(M.BVt.FRIENDS);
+        let t = P.A.getDefaultChannel(e);
+        null != t ? (0, D.pX)(f.BVt.CHANNEL(e, t.id)) : (0, D.pX)(f.BVt.FRIENDS);
     },
     async fetchApplications(e, t) {
-        let n = { url: M.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() };
+        let n = { url: f.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() };
         null != t && (n.query = { channel_id: t });
         let i = (await a.Bo.get(n)).body;
         s.h.dispatch({ type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: e, applications: i });
@@ -373,7 +407,7 @@ let F = {
             i = { limit: t };
         (null != n && (i.after = n),
             await a.Bo.get({
-                url: M.Rsh.GUILD_BANS(e),
+                url: f.Rsh.GUILD_BANS(e),
                 oldFormErrors: !0,
                 query: i,
                 rejectWithError: (0, a.fT)(),
@@ -387,7 +421,7 @@ let F = {
         (null != n && n.length > 0 && (r.user_ids = n),
             null != t && t.trim().length > 0 && (r.query = t),
             await a.Bo.get({
-                url: M.Rsh.GUILD_BANS_SEARCH(e),
+                url: f.Rsh.GUILD_BANS_SEARCH(e),
                 oldFormErrors: !0,
                 query: r,
                 rejectWithError: (0, a.fT)(),
@@ -396,13 +430,13 @@ let F = {
             }));
     },
     async fetchGuildBans(e) {
-        await a.Bo.get({ url: M.Rsh.GUILD_BANS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then((e) => {
+        await a.Bo.get({ url: f.Rsh.GUILD_BANS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then((e) => {
             s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS", bans: e.body });
         });
     },
     fetchGuildRoleConnectionsEligibility: (e, t) =>
         a.Bo.get({
-            url: M.Rsh.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
+            url: f.Rsh.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         }).then((e) => {
@@ -418,14 +452,14 @@ let F = {
         }),
     async assignGuildRoleConnection(e, t) {
         await a.Bo.post({
-            url: M.Rsh.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
+            url: f.Rsh.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         });
     },
     async unassignGuildRoleConnection(e, t) {
         await a.Bo.post({
-            url: M.Rsh.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
+            url: f.Rsh.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         });
@@ -433,7 +467,7 @@ let F = {
     getGuildRoleConnectionsConfigurations: async (e) =>
         (
             await a.Bo.get({
-                url: M.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
+                url: f.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
                 oldFormErrors: !0,
                 rejectWithError: (0, a.fT)(),
             })

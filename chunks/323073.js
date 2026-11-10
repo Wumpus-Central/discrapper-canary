@@ -29,13 +29,18 @@ function L() {
     return !0 !== e.nsfwAllowed || t;
 }
 function y(e) {
-    return !!L() && null != e && v(u.A.getChannel(e));
+    if (!L() || null == e) return !1;
+    let t = E.A.getGuild(e);
+    return null != t && (0, c.wh)(t);
 }
 function D(e) {
-    return (0, T.r)() && y(e);
+    return !!L() && null != e && P(u.A.getChannel(e));
 }
-let b = new Set([g.w_.FAMILY_CENTER, g.w_.DEEP_LINK_PROMPT]);
-function v(e) {
+function b(e) {
+    return (0, T.r)() && D(e);
+}
+let v = new Set([g.w_.FAMILY_CENTER, g.w_.DEEP_LINK_PROMPT]);
+function P(e) {
     if (null == e) return !1;
     let t = _.A.didAgree(e.guild_id),
         n = f.default.getCurrentUser()?.nsfwAllowed === !1,
@@ -47,7 +52,7 @@ function v(e) {
         u = E.A.getGuild(d);
     return null != u && (0, c.wh)(u) && l;
 }
-function P(e) {
+function M(e) {
     let t = (0, s.n2)(),
         n = (0, r.bG)([_.A], () => _.A.didAgree(e?.guild_id)),
         a = (0, r.bG)([f.default], () => f.default.getCurrentUser()?.nsfwAllowed === !1),
@@ -61,7 +66,7 @@ n.d(
     { $v: () => m.$v, Gc: () => m.Gc },
     {
         Bc: R,
-        F2: D,
+        F2: b,
         Gn: function (e) {
             let t = (0, s.b8)(),
                 n = (0, T.a)(),
@@ -117,9 +122,9 @@ n.d(
             return (0, m.Gc)(e) && t;
         },
         Tv: function (e) {
-            return !!D(e) && ((0, p.yO)(g.w_.NSFW_VOICE_CHANNEL, e), !0);
+            return !!b(e) && ((0, p.yO)(g.w_.NSFW_VOICE_CHANNEL, e), !0);
         },
-        UK: y,
+        UK: D,
         k$: function (e) {
             let t = (0, s.b8)(),
                 n = (0, c.wh)(e),
@@ -168,24 +173,19 @@ n.d(
                         modalType: a.A5.NSFW_CHANNEL_VERIFIED,
                     };
         },
+        k8: y,
         kK: function (e, t, n) {
             let i;
-            if (
-                (function (e) {
-                    if (!L() || null == e) return !1;
-                    let t = E.A.getGuild(e);
-                    return null != t && (0, c.wh)(t);
-                })(e)
-            ) {
+            if (y(e)) {
                 let e = null != n && R.has(n) ? n : g.w_.NSFW_SERVER;
                 (0, p.yO)(e);
                 return;
             }
-            if (null != (i = f.default.getCurrentUser()) && null == i.nsfwAllowed && y(t))
+            if (null != (i = f.default.getCurrentUser()) && null == i.nsfwAllowed && D(t))
                 return void (0, p.yO)(n ?? g.w_.NSFW_CHANNEL);
         },
         ni: function (e) {
-            let t = P(e),
+            let t = M(e),
                 n = (0, d.IL)(e);
             return t || n;
         },
@@ -194,13 +194,13 @@ n.d(
                 t = (0, s.u5)();
             return e && t;
         },
-        qR: v,
+        qR: P,
         sP: function () {
             let e = (0, o.aX)(i.t.COMMANDS_TOGGLE),
                 t = (0, s.n2)();
             return e && t;
         },
-        vL: P,
+        vL: M,
         xq: function () {
             let e = f.default.getCurrentUser();
             return null != e && I.default.extractTimestamp(e.id) > C.getTime() && null == e.nsfwAllowed;
@@ -209,10 +209,10 @@ n.d(
             return O.includes(e.nsfwLevel);
         },
         zt: function (e) {
-            if (b.has(e)) return g.ln.DATE_OF_BIRTH;
+            if (v.has(e)) return g.ln.DATE_OF_BIRTH;
             if ((0, T.r)()) return g.ln.AGE_ASSURANCE;
             let t = u.A.getChannel(A.Ay.getChannelId());
-            return f.default.getCurrentUser()?.nsfwAllowed === !1 && (v(t) || R.has(e))
+            return f.default.getCurrentUser()?.nsfwAllowed === !1 && (P(t) || R.has(e))
                 ? g.ln.AGE_ASSURANCE
                 : g.ln.DATE_OF_BIRTH;
         },
