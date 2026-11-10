@@ -1,71 +1,74 @@
 var r = n(620632),
     a = n(73153),
     i = n(626584),
-    u = n(287809),
+    _ = n(287809),
     o = n(927813),
-    s = n(773527),
-    c = n(211824);
-let l = new i.A("HexagonActionCreators"),
-    d = 10 * o.A.Millis.SECOND,
-    f = null;
-function h(e) {
-    a.h.dispatch({ type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues: e });
+    E = n(773527),
+    u = n(211824);
+let c = new i.A("HexagonActionCreators"),
+    s = 10 * o.A.Millis.SECOND,
+    O = null;
+function l(t) {
+    a.h.dispatch({ type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues: t });
 }
 n.d(
-    t,
+    e,
     {},
     {
-        Br: function (e) {
-            return (0, s.Rd)(u.default.getCurrentUser(), e)
+        Br: function (t) {
+            return (0, E.Rd)(_.default.getCurrentUser(), t)
                 ? Promise.resolve(!0)
-                : (null == f &&
-                      (f = (async function (e) {
+                : (null == O &&
+                      (O = (async function (t) {
                           try {
-                              return await (async function (e) {
+                              return await (async function (t) {
                                   try {
                                       await (async function () {
-                                          await r.Bo.post({ url: c.tK, rejectWithError: !0 });
+                                          await r.Bo.post({ url: u.tK, rejectWithError: !0 });
                                       })();
-                                  } catch (e) {
-                                      return (l.warn(`Failed to enroll in the Hexagon campaign: ${e}`), !1);
+                                  } catch (t) {
+                                      return (c.warn(`Failed to enroll in the Hexagon campaign: ${t}`), !1);
                                   }
                                   return (
-                                      (await (function (e) {
-                                          function t() {
-                                              return (0, s.Rd)(u.default.getCurrentUser(), e);
+                                      (await (function (t) {
+                                          function e() {
+                                              return (0, E.Rd)(_.default.getCurrentUser(), t);
                                           }
-                                          return t()
+                                          return e()
                                               ? Promise.resolve(!0)
-                                              : new Promise((e) => {
+                                              : new Promise((t) => {
                                                     function n() {
-                                                        t() &&
-                                                            (clearTimeout(r), u.default.removeChangeListener(n), e(!0));
+                                                        e() &&
+                                                            (clearTimeout(r), _.default.removeChangeListener(n), t(!0));
                                                     }
                                                     let r = setTimeout(() => {
-                                                        (u.default.removeChangeListener(n), e(!1));
-                                                    }, d);
-                                                    u.default.addChangeListener(n);
+                                                        (_.default.removeChangeListener(n), t(!1));
+                                                    }, s);
+                                                    _.default.addChangeListener(n);
                                                 });
-                                      })(e)) || l.warn(`Timed out waiting for the Hexagon campaign ${e} perk to sync`),
+                                      })(t)) || c.warn(`Timed out waiting for the Hexagon campaign ${t} perk to sync`),
                                       !0
                                   );
-                              })(e);
+                              })(t);
                           } finally {
-                              f = null;
+                              O = null;
                           }
-                      })(e)),
-                  f);
+                      })(t)),
+                  O);
+        },
+        Lo: function (t) {
+            (0, E.z9)(t) || l({ appIconId: t });
         },
         Tf: function () {
             a.h.dispatch({ type: "HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES_VISITED" });
         },
-        VN: function (e) {
-            a.h.dispatch({ type: "HEXAGON_CAMPAIGN_PERK_APPLIED", perk: e });
+        VN: function (t) {
+            a.h.dispatch({ type: "HEXAGON_CAMPAIGN_PERK_APPLIED", perk: t });
         },
         WT: function () {
-            let e = u.default.getCurrentUser()?.displayNameStyles ?? null;
-            (0, s.Jy)(e) || h({ displayNameStyles: e });
+            let t = _.default.getCurrentUser()?.displayNameStyles ?? null;
+            (0, E.Jy)(t) || l({ displayNameStyles: t });
         },
-        fv: h,
+        fv: l,
     },
 );

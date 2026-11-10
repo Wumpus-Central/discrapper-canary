@@ -6073,6 +6073,76 @@
     }
   },
   {
+    "name": "2026-11-quest-home-tile-single-elements",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "newLayoutWithSearch": true
+      },
+      "2": {
+        "newLayoutWithSearch": true,
+        "iconOnlyCTA": true
+      },
+      "3": {
+        "newLayoutWithSearch": true,
+        "badge": {
+          "duration": true,
+          "new": false,
+          "countdown": false
+        }
+      },
+      "4": {
+        "newLayoutWithSearch": true,
+        "badge": {
+          "duration": false,
+          "new": true,
+          "countdown": false
+        }
+      },
+      "5": {
+        "newLayoutWithSearch": true,
+        "badge": {
+          "duration": false,
+          "new": false,
+          "countdown": true
+        }
+      },
+      "6": {
+        "newLayoutWithSearch": true,
+        "showGameLogo": false
+      },
+      "7": {
+        "newLayoutWithSearch": true,
+        "showQuestTitle": false
+      },
+      "8": {
+        "newLayoutWithSearch": true,
+        "compactReward": true
+      },
+      "9": {
+        "newLayoutWithSearch": true,
+        "shorterHeight": true
+      },
+      "10": {
+        "newLayoutWithSearch": true,
+        "gameIconReward": true
+      },
+      "11": {
+        "newLayoutWithSearch": true,
+        "badge": {
+          "duration": true,
+          "new": true,
+          "countdown": false
+        }
+      }
+    }
+  },
+  {
     "name": "2026-11-return-full-quest-status-in-decision",
     "kind": "user",
     "defaultConfig": {

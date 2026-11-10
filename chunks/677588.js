@@ -1,24 +1,26 @@
-var r = n(477900);
-n(582128);
-var i = n(28863),
-    d = n(834730),
-    s = n(211824),
-    u = n(701256),
-    a = n(792996);
-function m(e, t) {
-    return (0, r.jsx)(i.Anchor, { href: s.j, children: e }, t);
-}
-function c() {
-    return a.intl.format(u.default.y2YmJv, { nonPremiumEndDate: s.Fg, premiumEndDate: s.zv, learnMoreHook: m });
-}
+var s = n(149468),
+    u = n(943667),
+    r = n(129230),
+    i = n(124759),
+    l = n(652215),
+    A = n(375577);
 n.d(
     t,
     {},
     {
-        A: function (e) {
-            let { variant: t = "body-sm/normal" } = e;
-            return (0, r.jsx)(d.E, { variant: t, color: "text-muted", children: c() });
+        MZ: function (e) {
+            return ((0, u.A)(e) && e.messageReference.guild_id === i.Vi) || (null != e.author && e.author.id === i.hs);
         },
-        R: c,
+        NB: function () {
+            return A;
+        },
+        sx: function (e) {
+            r.default.track(l.HAw.USER_FLOW_TRANSITION, {
+                flow_type: i.bK,
+                from_step: e.fromStep,
+                to_step: e.toStep,
+                ...(0, s.H$)(e.guildId),
+            });
+        },
     },
 );

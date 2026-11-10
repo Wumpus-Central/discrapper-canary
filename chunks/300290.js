@@ -712,8 +712,8 @@ let e2 = function (e) {
           });
 };
 var e6 = l(191711),
-    e5 = l(226658);
-function e9(e) {
+    e9 = l(226658);
+function e5(e) {
     let { loadId: t } = e,
         l = y.A.useField("categoryId"),
         s = eJ(),
@@ -760,7 +760,7 @@ function e9(e) {
     return null == s
         ? null
         : (0, a.jsxs)("div", {
-              className: e5.k,
+              className: e9.k,
               children: [
                   (0, a.jsx)(J.E, {
                       variant: "body-sm/medium",
@@ -778,8 +778,8 @@ function e9(e) {
               ],
           });
 }
-var e3 = l(468646);
-let e4 = function (e) {
+var e4 = l(468646);
+let e3 = function (e) {
     let { loadId: t } = e,
         l = y.A.useField("categoryId"),
         s = (0, i.bG)([eK.A], () => eK.A.getCategoryName(l)),
@@ -795,9 +795,9 @@ let e4 = function (e) {
         c = -1 === l ? E.intl.string(E.t.Ivw1Is) : E.intl.formatToPlainString(E.t["+1WAFb"], { categoryName: s }),
         d = -1 === l ? E.intl.string(E.t.aXvEjd) : E.intl.format(E.t.XLioqn, { onClick: r });
     return (0, a.jsxs)("div", {
-        className: e3.k,
+        className: e4.k,
         children: [
-            (0, a.jsx)(g.D, { variant: "heading-xl/semibold", className: e3.w, children: c }),
+            (0, a.jsx)(g.D, { variant: "heading-xl/semibold", className: e4.w, children: c }),
             (0, a.jsx)(J.E, { variant: "body-md/normal", color: "text-default", children: d }),
         ],
     });
@@ -935,9 +935,9 @@ function tr(e) {
                                     !f &&
                                         (0, a.jsxs)("div", {
                                             className: tt.eW,
-                                            children: [(0, a.jsx)(e9, { loadId: t }), (0, a.jsx)(te, { loadId: t })],
+                                            children: [(0, a.jsx)(e5, { loadId: t }), (0, a.jsx)(te, { loadId: t })],
                                         }),
-                                    m && (0, a.jsx)(e4, { loadId: t }),
+                                    m && (0, a.jsx)(e3, { loadId: t }),
                                 ],
                             },
                             s,
@@ -1272,7 +1272,7 @@ function td() {
         })
     );
 }
-var to = l(635668),
+var to = l(642509),
     tu = l(976860),
     tm = l(726845),
     tg = l(285395),
@@ -1499,22 +1499,22 @@ function t2() {
 function t6() {
     return (0, a.jsx)(tQ, { title: E.intl.string(E.t.qpGTIa), children: (0, a.jsx)(tJ, {}) });
 }
-var t5 = l(541830);
-let t9 = null;
-class t3 extends i.Ay.Store {
+var t9 = l(541830);
+let t5 = null;
+class t4 extends i.Ay.Store {
     static displayName = "GlobalDiscoveryGamesStore";
     getTrendingGames() {
-        return t9;
+        return t5;
     }
 }
-let t4 = new t3(T.h, {
+let t3 = new t4(T.h, {
     LOGOUT: function () {
-        if (null == t9) return !1;
-        t9 = null;
+        if (null == t5) return !1;
+        t5 = null;
     },
     GLOBAL_DISCOVERY_GAMES_TRENDING_FETCH_SUCCESS: function (e) {
         let { data: t } = e;
-        t9 = {
+        t5 = {
             week: t.week,
             games: t.games.map((e) => {
                 let { game: t, ...l } = e;
@@ -1568,11 +1568,11 @@ let ls = {
         [lt.TACTICAL]: ll.default.DnEG4n,
     },
     la = [],
-    ln = (0, i.UT)(t4, {
+    ln = (0, i.UT)(t3, {
         getQueryId: (e) => (null != e ? `global-discovery-games-trending:${e}` : null),
         staleAfter: 6 * tk.A.Seconds.HOUR,
         failureStaleAfter: 5 * tk.A.Seconds.MINUTE,
-        get: () => t4.getTrendingGames(),
+        get: () => t3.getTrendingGames(),
         load: async (e) => {
             let t = await p.Bo.get({ url: v.Rsh.GAMES_TRENDING, rejectWithError: !0 });
             tF.default.getCurrentUser()?.id === e &&
@@ -1630,7 +1630,7 @@ function ld(e) {
             gameId: t.id,
             source: ty.GameProfileSources.GlobalDiscoveryGamesTrendingShelf,
         }),
-        i = n.useMemo(() => t.genres.slice(0, 2).map(t5.du).join(" \u2022 "), [t]);
+        i = n.useMemo(() => t.genres.slice(0, 2).map(t9.du).join(" \u2022 "), [t]);
     return (0, a.jsxs)(eh.D, {
         ...s,
         className: K()(li.Nr, { [li.vk]: null != r }),
