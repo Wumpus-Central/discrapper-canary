@@ -1,130 +1,180 @@
 n(321073);
-var i = n(517352),
-    r = n(855986),
-    a = n(73153),
-    s = n(617617),
-    l = n(835095),
-    o = n(287809),
-    d = n(822571),
-    c = n(693369),
-    u = n(852218),
-    _ = n(891786);
-function E() {
+var i = n(435558),
+    r = n.n(i),
+    a = n(517352),
+    s = n(855986),
+    l = n(73153),
+    o = n(773669),
+    d = n(617617),
+    c = n(835095),
+    u = n(287809),
+    _ = n(583613),
+    E = n(683760),
+    A = n(822571),
+    f = n(693369),
+    h = n(852218),
+    I = n(891786);
+function p() {
     return {
         hasFetchedConsumedInboundPromotionId: !1,
         consumedInboundPromotionId: null,
         lastSeenOutboundPromotionStartDate: null,
     };
 }
-let A = E();
-function f() {
+let m = p();
+function T() {
     return {
-        [u.pt.THIRD_PARTY]: {},
-        [u.pt.BOGO]: {},
-        [u.pt.THIRD_PARTY_DIRECT_FULFILLMENT]: {},
-        [u.pt.MARKETING_MOMENT]: {},
-        [u.pt.THIRD_PARTY_INBOUND]: {},
-        [u.pt.THIRD_PARTY_OUTBOUND]: {},
-        [u.pt.GIFT_PROMOTION]: {},
-        [u.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
+        [h.pt.THIRD_PARTY]: {},
+        [h.pt.BOGO]: {},
+        [h.pt.THIRD_PARTY_DIRECT_FULFILLMENT]: {},
+        [h.pt.MARKETING_MOMENT]: {},
+        [h.pt.THIRD_PARTY_INBOUND]: {},
+        [h.pt.THIRD_PARTY_OUTBOUND]: {},
+        [h.pt.GIFT_PROMOTION]: {},
+        [h.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
     };
 }
-let h = !1,
-    I = null,
-    p = null,
-    m = f(),
-    T = null,
-    g = new Map(),
-    S = new Map(),
-    N = new Map(),
-    C = null,
-    O = [],
-    R = !1;
-function L() {
+let g = !1,
+    S = null,
+    N = null,
+    C = T(),
+    O = null,
+    R = new Map(),
+    L = new Map(),
+    y = new Map(),
+    D = null,
+    b = [],
+    v = (0, _.L_)((e, t, i, r) => {
+        let { resolveCampaignComponents: a } = n(811784);
+        return a(e.components, t, i, e.endDate, r);
+    });
+function P() {
+    let e = u.default.getCurrentUser(),
+        t = [];
+    if (null != D && e?.isStaff() === !0) {
+        let n = E.A.hasPremiumTypeOverride(e) ? E.A.getPremiumTypeOverride() : void 0;
+        t = v(D, e, o.default.locale, n);
+    }
+    return !r().isEqual(t, b) && ((b = t), !0);
+}
+function M() {
+    return null != D && P();
+}
+let U = null,
+    w = [],
+    G = !1;
+function x() {
     let e = null;
-    for (let t of Object.values(m[u.pt.THIRD_PARTY_OUTBOUND])) (null == e || t.startDate > e) && (e = t.startDate);
+    for (let t of Object.values(C[h.pt.THIRD_PARTY_OUTBOUND])) (null == e || t.startDate > e) && (e = t.startDate);
     return e?.toISOString() ?? null;
 }
-function y() {
-    T = s.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
+function k() {
+    O = d.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
 }
-class D extends r.Ay.PersistedStore {
+class F extends s.Ay.PersistedStore {
     static displayName = "PromotionsStore";
     static persistKey = "PromotionsPersistedStore";
     initialize(e) {
-        (null != e && (A = e), this.waitFor(s.A, o.default), this.syncWith([s.A], y));
+        (null != e && (m = e),
+            this.waitFor(d.A, u.default, o.default, E.A),
+            this.syncWith([u.default, o.default, E.A], M),
+            this.syncWith([d.A], k));
     }
     get outboundPromotions() {
-        return Object.values(m[u.pt.THIRD_PARTY_OUTBOUND]);
+        return Object.values(C[h.pt.THIRD_PARTY_OUTBOUND]);
     }
     get outboundRecurringPromotions() {
-        return Object.values(m[u.pt.THIRD_PARTY_OUTBOUND_RECURRING]);
+        return Object.values(C[h.pt.THIRD_PARTY_OUTBOUND_RECURRING]);
     }
     get lastSeenOutboundPromotionStartDate() {
-        return A.lastSeenOutboundPromotionStartDate;
+        return m.lastSeenOutboundPromotionStartDate;
     }
     get lastDismissedOutboundPromotionStartDate() {
-        return T;
+        return O;
     }
     get lastFetchedActivePromotions() {
-        return I;
+        return S;
     }
     get lastFetchedActivePromotionsLocale() {
-        return p;
+        return N;
     }
     get isFetchingActivePromotions() {
-        return h;
+        return g;
     }
     get hasFetchedConsumedInboundPromotionId() {
-        return A.hasFetchedConsumedInboundPromotionId;
+        return m.hasFetchedConsumedInboundPromotionId;
     }
     get consumedInboundPromotionId() {
-        return A.consumedInboundPromotionId;
+        return m.consumedInboundPromotionId;
     }
     get promotionsByType() {
-        return m;
+        return C;
     }
     getPromotionByTypeAndId(e, t) {
-        return m[e]?.[t];
+        return C[e]?.[t];
+    }
+    getMarketingPromotionForEligibility(e) {
+        return this.campaignOverrideId === e ? null : this.getPromotionByTypeAndId(h.pt.MARKETING_MOMENT, e);
     }
     getPromotionByTypeAndKey(e, t) {
-        return Object.values(m[e]).find((e) => e.promotionKey === t);
+        return Object.values(C[e]).find((e) => e.promotionKey === t);
     }
     getState() {
-        return A;
+        return m;
     }
     getAllMarketingComponentsByType(e, t) {
-        return C?.componentType === e && C.promotionId === t ? [C] : (S.get(t)?.get(e) ?? []);
+        return null != D && u.default.getCurrentUser()?.isStaff() === !0
+            ? this.campaignOverrideComponents.filter((n) => n.componentType === e && n.promotionId === t)
+            : U?.componentType === e && U.promotionId === t
+              ? [U]
+              : (L.get(t)?.get(e) ?? []);
     }
     getMarketingComponentsByTypeAcrossPromotions(e) {
-        return C?.componentType === e ? [C] : (g.get(e) ?? []);
+        return null != D && u.default.getCurrentUser()?.isStaff() === !0
+            ? this.campaignOverrideComponents.filter((t) => t.componentType === e)
+            : U?.componentType === e
+              ? [U]
+              : (R.get(e) ?? []);
+    }
+    get campaignOverrideId() {
+        return u.default.getCurrentUser()?.isStaff() !== !0 ? null : (D?.promotionId ?? null);
+    }
+    get campaignOverrideRows() {
+        return u.default.getCurrentUser()?.isStaff() !== !0 ? [] : (D?.components ?? []);
+    }
+    get campaignOverrideComponents() {
+        return u.default.getCurrentUser()?.isStaff() !== !0 ? [] : b;
     }
     getMarketingComponentByType(e) {
-        if (C?.componentType === e) return C;
-        let t = o.default.getCurrentUser(),
+        if (null != D && u.default.getCurrentUser()?.isStaff() === !0)
+            return this.campaignOverrideComponents.find((t) => t.componentType === e) ?? null;
+        if (U?.componentType === e) return U;
+        let t = u.default.getCurrentUser(),
             n = new Date();
-        return (0, _.A)(g.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
+        return (0, I.A)(R.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
     }
     getMarketingComponentBySurface(e) {
-        return (0, c.U)(e) ? this.getMarketingComponentByKind(i.bt[e]) : null;
+        return (0, f.U)(e) ? this.getMarketingComponentByKind(a.bt[e]) : null;
     }
     getMarketingComponentByKind(e) {
-        if (C?.properties.properties.oneofKind === e) return C;
-        let t = o.default.getCurrentUser(),
+        if (null != D && u.default.getCurrentUser()?.isStaff() === !0)
+            return this.campaignOverrideComponents.find((t) => t.properties.properties.oneofKind === e) ?? null;
+        if (U?.properties.properties.oneofKind === e) return U;
+        let t = u.default.getCurrentUser(),
             n = new Date();
-        return (0, _.A)(N.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
+        return (0, I.A)(y.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
     }
     hasPromotion(e) {
-        return Object.values(m).some((t) => Object.values(t).some((t) => t.promotionKey === e));
+        return Object.values(C).some((t) => Object.values(t).some((t) => t.promotionKey === e));
     }
     getPromotionsByPartner(e) {
         return {
-            oneTime: Object.values(m[u.pt.THIRD_PARTY_OUTBOUND]).filter((t) => t.partnerId === e),
-            recurring: Object.values(m[u.pt.THIRD_PARTY_OUTBOUND_RECURRING]).filter((t) => t.partnerId === e),
+            oneTime: Object.values(C[h.pt.THIRD_PARTY_OUTBOUND]).filter((t) => t.partnerId === e),
+            recurring: Object.values(C[h.pt.THIRD_PARTY_OUTBOUND_RECURRING]).filter((t) => t.partnerId === e),
         };
     }
     getGiftPromotion() {
-        let e = m[u.pt.GIFT_PROMOTION],
+        let e = C[h.pt.GIFT_PROMOTION],
             t = Object.keys(e);
         return 0 === t.length ? null : e[t[0]];
     }
@@ -132,7 +182,7 @@ class D extends r.Ay.PersistedStore {
         return this.getGiftPromotion()?.rewardSkuIds ?? [];
     }
     getMarketingMomentPromotion() {
-        let e = m[u.pt.MARKETING_MOMENT],
+        let e = C[h.pt.MARKETING_MOMENT],
             t = Object.keys(e);
         if (0 === t.length) return null;
         let n = e[t[0]];
@@ -143,94 +193,108 @@ class D extends r.Ay.PersistedStore {
     }
     getActiveBogoRewardPromotion() {
         let e = new Date();
-        return Object.values(m[u.pt.MARKETING_MOMENT]).find((t) => t.hasBogoReward && t.endDate >= e) ?? null;
+        return Object.values(C[h.pt.MARKETING_MOMENT]).find((t) => t.hasBogoReward && t.endDate >= e) ?? null;
     }
     hasActiveBogoRewardPromotion() {
         return null !== this.getActiveBogoRewardPromotion();
     }
     get claimedOutboundPromotionCodes() {
-        return O;
+        return w;
     }
     get claimedOutboundPromotionCodesLoaded() {
-        return R;
+        return G;
     }
 }
-let b = new D(a.h, {
+let B = new F(l.h, {
+    CAMPAIGN_OVERRIDE_SET: function (e) {
+        return u.default.getCurrentUser()?.isStaff() === !0 && ((D = null == e.promotionId ? null : e), P(), !0);
+    },
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: function (e) {
         let { promotions: t, consumedInboundPromotionId: n } = e;
-        ((m = f()),
-            (N = new Map()),
-            (g = new Map()),
-            (S = new Map()),
-            (C = null),
+        ((C = T()),
+            (y = new Map()),
+            (R = new Map()),
+            (L = new Map()),
+            (U = null),
             t.forEach((e) => {
-                let t = l.A.createFromServer(e);
-                m[e.promotion_type][e.id] = t;
+                let t = c.A.createFromServer(e);
+                C[e.promotion_type][e.id] = t;
                 let n = new Map();
-                (S.set(e.id, n),
+                (L.set(e.id, n),
                     e.marketing_components?.forEach((e) => {
-                        let i = d.A.createFromServer(e, t),
-                            r = g.get(i.componentType) ?? [];
-                        (r.push(i), g.set(i.componentType, r));
+                        let i = A.A.createFromServer(e, t),
+                            r = R.get(i.componentType) ?? [];
+                        (r.push(i), R.set(i.componentType, r));
                         let a = n.get(i.componentType) ?? [];
                         (a.push(i), n.set(i.componentType, a));
                         let s = i.properties.properties.oneofKind;
                         if (null != s) {
-                            let e = N.get(s) ?? [];
-                            (e.push(i), N.set(s, e));
+                            let e = y.get(s) ?? [];
+                            (e.push(i), y.set(s, e));
                         }
                     }));
             }),
-            (I = Date.now()),
-            (h = !1),
-            A.hasFetchedConsumedInboundPromotionId ||
-                ((A.hasFetchedConsumedInboundPromotionId = !0), (A.consumedInboundPromotionId = n)));
+            (S = Date.now()),
+            (g = !1),
+            m.hasFetchedConsumedInboundPromotionId ||
+                ((m.hasFetchedConsumedInboundPromotionId = !0), (m.consumedInboundPromotionId = n)));
     },
     ACTIVE_PROMOTIONS_FETCH: function (e) {
         let { locale: t } = e;
-        ((h = !0), (p = t));
+        ((g = !0), (N = t));
     },
     ACTIVE_PROMOTIONS_FETCH_FAIL: function () {
-        ((m = f()), (N = new Map()), (g = new Map()), (S = new Map()), (C = null), (h = !1));
+        ((C = T()), (y = new Map()), (R = new Map()), (L = new Map()), (U = null), (g = !1));
     },
     ACTIVE_PROMOTIONS_CLEAR: function () {
-        ((m = f()), (N = new Map()), (g = new Map()), (S = new Map()), (C = null), (h = !1), (I = Date.now()));
+        ((C = T()), (y = new Map()), (R = new Map()), (L = new Map()), (U = null), (g = !1), (S = Date.now()));
     },
     OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
-        if (0 === Object.values(m[u.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
-        let e = L();
-        null != e && (T = e);
+        if (0 === Object.values(C[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
+        let e = x();
+        null != e && (O = e);
     },
     OUTBOUND_PROMOTIONS_SEEN: function () {
-        if (0 === Object.values(m[u.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
-        let e = L();
-        null != e && ((T = e), (A.lastSeenOutboundPromotionStartDate = e));
+        if (0 === Object.values(C[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
+        let e = x();
+        null != e && ((O = e), (m.lastSeenOutboundPromotionStartDate = e));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS: function (e) {
         let { claimedOutboundPromotionCodes: t } = e;
-        ((O = t), (R = !0));
+        ((w = t), (G = !0));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL: function (e) {
-        ((O = []), (R = !0));
+        ((w = []), (G = !0));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODE_ADD: function (e) {
         let { claimedOutboundPromotionCode: t } = e;
         if (
-            O.some((e) => {
+            w.some((e) => {
                 let { promotion: n } = e;
                 return n.id === t.promotion.id;
             })
         )
             return !1;
-        O = [...O, t];
+        w = [...w, t];
     },
     LOGOUT: function () {
-        ((A = E()), (h = !1), (I = null), (m = f()), N.clear(), g.clear(), S.clear(), (C = null), (O = []), (R = !1));
+        ((D = null),
+            (b = []),
+            (m = p()),
+            (g = !1),
+            (S = null),
+            (C = T()),
+            y.clear(),
+            R.clear(),
+            L.clear(),
+            (U = null),
+            (w = []),
+            (G = !1));
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,
-            n = null != t.promotion ? l.A.createFromServer(t.promotion) : null;
-        ((C = d.A.createFromServer(t, n)), null != n && (m[n.promotionType][n.id] = n));
+            n = null != t.promotion ? c.A.createFromServer(t.promotion) : null;
+        ((U = A.A.createFromServer(t, n)), null != n && (C[n.promotionType][n.id] = n));
     },
 });
-n.d(t, {}, { A: b });
+n.d(t, {}, { A: B });

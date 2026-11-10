@@ -8,8 +8,8 @@ var n = r(477900),
     c = r(315629),
     u = r(855986),
     d = r(453903),
-    f = r(765671),
-    p = r(186111),
+    p = r(765671),
+    f = r(186111),
     m = r(795127),
     h = r(844222),
     x = r(866323),
@@ -30,8 +30,8 @@ function w(e) {
             alignmentStrategy: L = "trigger-center",
             caretConfig: M,
             hasVideo: N = !1,
-            gradientColor: E,
-            gradientOffsetBottom: R = 0.4,
+            gradientColor: R,
+            gradientOffsetBottom: E = 0.4,
             onPositionChange: $,
             onNudgeChange: Q,
             scrollBehavior: P = "sticky",
@@ -47,8 +47,8 @@ function w(e) {
         [O, T] = o.useState(w),
         W = o.useRef(w),
         D = o.useRef(0),
-        { ref: K, width: U, height: q } = (0, f.Ay)(),
-        V = (0, u.bG)([p.A], () => p.A.getLayers()),
+        { ref: K, width: U, height: q } = (0, p.Ay)(),
+        V = (0, u.bG)([f.A], () => f.A.getLayers()),
         X = V[V.length - 1] ?? "base",
         H = o.useRef($);
     o.useEffect(() => {
@@ -180,13 +180,13 @@ function w(e) {
                             ...u,
                             setDialogRef: r,
                             modal: A,
-                            className: s()(null != E ? C.popoverContentWithGradient : C.popover, {
+                            className: s()(null != R ? C.popoverContentWithGradient : C.popover, {
                                 [C["popover--video"]]: N,
                             }),
                             returnRef: B,
                             children: (0, n.jsx)(b.Provider, { value: en, children: t }),
                         }),
-                        f = {
+                        p = {
                             ...e,
                             "--custom-caret-edge-offset-horizontal": "20px",
                             "--custom-caret-edge-offset-vertical": "22px",
@@ -196,12 +196,13 @@ function w(e) {
                     return (0, n.jsx)(i.animated.div, {
                         ref: K,
                         "data-mana-component": "popover",
-                        style: f,
+                        className: C.popoverRoot,
+                        style: p,
                         children:
-                            null != E
+                            null != R
                                 ? (0, n.jsx)(c.h, {
-                                      offsetBottom: R,
-                                      color: E,
+                                      offsetBottom: E,
+                                      color: R,
                                       className: C.popoverGradientWrapper,
                                       children: d,
                                   })
