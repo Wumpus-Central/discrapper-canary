@@ -242,7 +242,11 @@ t.d(
                             let { section: t, row: l } = e;
                             switch (t) {
                                 case 0:
-                                    return (0, i.jsx)(K, { channel: n }, "rts-toggle");
+                                    return (0, i.jsx)(
+                                        "div",
+                                        { className: B.L$, children: (0, i.jsx)(K, { channel: n }) },
+                                        "rts-toggle",
+                                    );
                                 case 1: {
                                     if (0 === s.length) return (0, i.jsx)(z, {}, "participants-empty");
                                     let e = s[l];
