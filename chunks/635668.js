@@ -386,10 +386,8 @@ let e0 = i.memo(function (e) {
         ),
         V = i.useCallback(
             (e) => {
-                let t = e.target;
-                if (!t.matches(":focus-visible")) return;
-                let n = t.closest(s);
-                null != n && B(n, H);
+                let t = e.target.closest(s);
+                null != t && B(t, H);
             },
             [s, B, H],
         ),
