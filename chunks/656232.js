@@ -1250,16 +1250,15 @@ var nd = n(506774),
     nh = n(526162),
     nI = n(236814);
 function np() {
-    let [e, t, n] = (0, _.yK)([eC.default, nh.A], () => [
+    let [e, t] = (0, _.yK)([eC.default, nh.A], () => [
             nh.A.getCurrentDesktopIcon(),
             nE.Ay.isPremium(eC.default.getCurrentUser()),
-            nh.A.canKeepDesktopIconWithoutPremium(nh.A.getCurrentDesktopIcon()),
         ]),
-        r = (0, n_.fy)().activePanel === n_.HP.APP_ICON,
-        a = (0, nI.gG)(e),
-        s = a.id !== nA.LW.DEFAULT && (t || n || r),
-        l = (0, i.jsx)(nu.ClydeIcon, { size: "custom", color: "currentColor", width: 24, height: 24 });
-    return null != a && s ? (0, i.jsx)(nf.A, { id: a.id, size: nI.N8.SIZE_48 }) : l;
+        n = (0, n_.fy)().activePanel === n_.HP.APP_ICON,
+        r = (0, nI.gG)(e),
+        a = r.id !== nA.LW.DEFAULT && (t || n),
+        s = (0, i.jsx)(nu.ClydeIcon, { size: "custom", color: "currentColor", width: 24, height: 24 });
+    return null != r && a ? (0, i.jsx)(nf.A, { id: r.id, size: nI.N8.SIZE_48 }) : s;
 }
 var nm = n(531260),
     nT = n(411976),

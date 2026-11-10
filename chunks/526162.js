@@ -20,9 +20,9 @@ function v(e) {
     return (0, a.z9)(e) && (0, l.$X)(g.vB.APP_ICON);
 }
 function y() {
-    (A = !u.Ay.canUsePremiumAppIcons(c.default.getCurrentUser())) && !x(p.client.desktop) && S(b());
+    (A = !u.Ay.canUsePremiumAppIcons(c.default.getCurrentUser())) && !x(p.client.desktop) && b(S());
 }
-function S(e) {
+function b(e) {
     ((p.client.desktop = e),
         A ||
             v(e) ||
@@ -32,7 +32,7 @@ function S(e) {
                 icon_premium_tier: e !== d.LW.DEFAULT ? f.PremiumTypes.TIER_2 : null,
             }));
 }
-function b() {
+function S() {
     let e = p.client.committedDesktop ?? p.client.desktop;
     return x(e) ? e : d.LW.DEFAULT;
 }
@@ -41,7 +41,7 @@ function j() {
         let e = p.client.committedDesktop ?? p.client.desktop;
         return p.client.desktop !== e && void (p.client.desktop = e);
     }
-    let e = b();
+    let e = S();
     p.client = { desktop: e, committedDesktop: e, coachmarkImpressions: 2 };
 }
 class N extends i.Ay.PersistedStore {
@@ -59,19 +59,13 @@ class N extends i.Ay.PersistedStore {
     getCurrentDesktopIcon() {
         return p?.client?.desktop;
     }
-    getCommittedDesktopIcon() {
-        return A ? b() : (p.client.committedDesktop ?? p.client.desktop);
-    }
-    canKeepDesktopIconWithoutPremium(e) {
-        return x(e);
-    }
 }
 let E = new N(s.h, {
     APP_ICON_UPDATED: function (e) {
         let { id: t } = e;
         if (null == t) return !1;
         (A || null != p.client.committedDesktop || (p.client.committedDesktop = p.client.desktop),
-            S(t),
+            b(t),
             ((!A && !v(t)) || t === d.LW.DEFAULT || x(t)) && (p.client.committedDesktop = t));
     },
     APP_ICON_EDITOR_RESET: j,
