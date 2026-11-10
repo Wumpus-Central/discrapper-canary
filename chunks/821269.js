@@ -1,26 +1,26 @@
-var i = l(582128),
-    a = l(855986),
-    s = l(994500),
-    n = l(287809),
-    r = l(922590);
-let d = [];
+var n = l(582128),
+    i = l(855986),
+    a = l(994500),
+    r = l(287809),
+    s = l(922590);
+let u = [];
 l.d(
     t,
     {},
     {
         q: function (e) {
             let { userId: t } = e,
-                l = (0, a.bG)([s.A, n.default], () => s.A.isFriend(t) || n.default.getUser(t)?.isProvisional),
-                u = (0, r.f1)(t);
-            return i.useMemo(
+                l = (0, i.bG)([a.A, r.default], () => a.A.isFriend(t) || r.default.getUser(t)?.isProvisional),
+                o = (0, s.f1)(t);
+            return n.useMemo(
                 () =>
                     l
-                        ? d
-                        : u.map((e) => {
+                        ? u
+                        : o.map((e) => {
                               let { applicationId: t } = e;
                               return t;
                           }),
-                [u, l],
+                [o, l],
             );
         },
     },

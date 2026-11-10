@@ -1,23 +1,23 @@
-var t = i(855986),
-    r = i(696451),
-    a = i(317525),
-    l = i(576705),
-    u = i(372058),
-    c = i(652215);
-function o(e, n, i, t) {
-    var r;
-    if (null == e.linkedGameOrganization || !n.can(c.xBc.CREATE_INSTANT_INVITE, e)) return !1;
-    let a = i.getSelfMember(e.id);
-    return null != a && ((r = e.id), a.roles.some((e) => t.getRole(r, e)?.tags.game_organization_can_invite === null));
+var e = t(855986),
+    i = t(696451),
+    r = t(317525),
+    a = t(576705),
+    u = t(372058),
+    o = t(652215);
+function s(n, l, t, e) {
+    var i;
+    if (null == n.linkedGameOrganization || !l.can(o.xBc.CREATE_INSTANT_INVITE, n)) return !1;
+    let r = t.getSelfMember(n.id);
+    return null != r && ((i = n.id), r.roles.some((n) => e.getRole(i, n)?.tags.game_organization_can_invite === null));
 }
-i.d(
-    n,
+t.d(
+    l,
     {},
     {
-        Ay: function (e, n) {
-            let i = (0, u.E9)(n);
-            return (0, t.bG)([r.Ay, a.A, l.A], () => i && o(e, l.A, r.Ay, a.A), [i, e]);
+        Ay: function (n, l) {
+            let t = (0, u.E9)(l);
+            return (0, e.bG)([i.Ay, r.A, a.A], () => t && s(n, a.A, i.Ay, r.A), [t, n]);
         },
-        Dr: o,
+        Dr: s,
     },
 );

@@ -149,7 +149,7 @@ function Q(e) {
         (U[n] = (U[n] ?? 0) + 1),
         null != e.linkedLobby ? ((v[n] = v[n] ?? {}), (v[n][t] = e)) : delete v[n]?.[t]);
 }
-function Z(e) {
+function J(e) {
     let { id: t, channels: n, threads: i } = e;
     switch (n.op) {
         case "full_sync":
@@ -166,7 +166,7 @@ function Z(e) {
     }
     if (null != i) for (let e of i) q(e);
 }
-function J(e) {
+function Z(e) {
     if (!h.A_.has(e.channel.type)) return !1;
     let t = $(e.channel.id);
     X((t = null == t ? e.channel : t.merge({ ...e.channel.toJS(), bitrate: e.channel.bitrate ?? t.bitrate })));
@@ -398,7 +398,7 @@ let ed = new el(l.h, {
         e.guilds))
             ("partial" === n.dataMode &&
                 (r().forEach(t[n.id], Q), C.fileOnly(`Restoring guild channels for ${n.id} #:${eo(n.id)}`)),
-                Z(n));
+                J(n));
         es();
     },
     CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: function (e) {
@@ -415,7 +415,7 @@ let ed = new el(l.h, {
         (delete r[n], X(i.set("permissionOverwrites", r)));
     },
     GUILD_CREATE: function (e) {
-        Z(e.guild);
+        J(e.guild);
     },
     GUILD_DELETE: function (e) {
         (C.fileOnly(`GuildDelete of ${e.guild.id}`), Y(e.guild.id), G.delete(e.guild.id), u.A.invalidate(e.guild.id));
@@ -453,7 +453,7 @@ let ed = new el(l.h, {
     },
     SEARCH_MESSAGES_SUCCESS: er,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: er,
-    THREAD_CREATE: J,
+    THREAD_CREATE: Z,
     THREAD_DELETE: en,
     THREAD_LIST_SYNC: function (e) {
         let { threads: t } = e;
@@ -461,6 +461,6 @@ let ed = new el(l.h, {
             h.A_.has(e.type) && X(e);
         });
     },
-    THREAD_UPDATE: J,
+    THREAD_UPDATE: Z,
 });
 n.d(t, {}, { A: ed, D: H });

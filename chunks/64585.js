@@ -23,14 +23,14 @@ function T() {
         t = u.A.comboSoundsEnabled;
     return !!e && !!t && null != c.Ay.getChannelId();
 }
-function f() {
+function N() {
     if (0 === p.length || !T() || _) return;
     _ = !0;
     let [e, t] = p[p.length - 1];
-    ((0, s.Ak)(e, t), (g = setTimeout(N, 1e3)));
+    ((0, s.Ak)(e, t), (g = setTimeout(f, 1e3)));
 }
-function N() {
-    (p.pop(), (_ = !1), f());
+function f() {
+    (p.pop(), (_ = !1), N());
 }
 class I extends r.A {
     _initialize() {
@@ -76,7 +76,7 @@ class I extends r.A {
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     n = o.A.isConnected();
-                (p.push([e, t * (n ? 0.1 : 1)]), f());
+                (p.push([e, t * (n ? 0.1 : 1)]), N());
             })("poggermode_achievement_unlock");
     }
 }

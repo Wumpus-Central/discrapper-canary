@@ -238,8 +238,8 @@ var K = n(321090),
     z = n(394072),
     q = n(644434);
 let Q = new s.A("OverlayV3Store"),
-    Z = new Set(),
     J = new Set(),
+    Z = new Set(),
     ee = null,
     et = null,
     en = null,
@@ -258,8 +258,8 @@ function e_(e, t) {
     if (null != ee) {
         null != t && (ed[e] = t);
         try {
-            if ((ee.trackGame(e), Z.has(e))) return;
-            (Z.add(e),
+            if ((ee.trackGame(e), J.has(e))) return;
+            (J.add(e),
                 (0, f.dK)(e, "maybeTrackGame", { newOverlayMethod: null != t ? _.Ue[t] : null }),
                 a.A.updateOverlayState(e, _.AR.WAITING_FOR_POPOUT_OPEN, "OverlayStore.maybeTrackGame"));
         } catch (t) {
@@ -268,18 +268,18 @@ function e_(e, t) {
     }
 }
 function eE(e) {
-    if (!Z.has(e)) return;
+    if (!J.has(e)) return;
     let t = ed[e],
         n = eo[e];
     ((0, f.dK)(e, "removeTrackedGame", { overlayMethod: null != t ? _.Ue[t] : null, overlayState: n }),
-        Z.delete(e),
+        J.delete(e),
         delete eo[e],
         delete ed[e],
-        J.delete(e));
+        Z.delete(e));
     try {
         if (null == ee) return;
         (ee.untrackGame(e), Q.verbose(`Removing tracked game ${e}`));
-        let t = Z.values().next().value;
+        let t = J.values().next().value;
         es === e && (es = t ?? null);
     } catch (t) {
         (Q.error("Error removing tracked game:", t), (0, f.mD)(e, t, { crashType: "native" }));
@@ -323,7 +323,7 @@ function eI() {
 }
 function ep(e) {
     if (A.A.getPopoutInitializationStages().allDone) {
-        if (!J.has(e))
+        if (!Z.has(e))
             return void a.A.updateOverlayState(e, _.AR.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
         a.A.successfullyShown(e);
     }
@@ -375,7 +375,7 @@ class eg extends i.Ay.Store {
         this.waitFor(o.default, d.A, y, Y, K.A, $.A, T.A, A.A, l.Ay);
     }
     isOverlayV3EnabledForPID(e) {
-        return Z.has(e);
+        return J.has(e);
     }
     getWidgetByType(e) {
         let t = d.A.getLayout(q.GJ);
@@ -408,13 +408,13 @@ class eg extends i.Ay.Store {
         return null == ec[e] ? null : ec[e];
     }
     isFocused(e) {
-        return null != et && -1 !== e && (!!Z.has(e) || e === c.DEV_PID) && et === e;
+        return null != et && -1 !== e && (!!J.has(e) || e === c.DEV_PID) && et === e;
     }
     getFocusedRunningGame() {
         return null == et ? null : (l.Ay.getGameOrTransformedSubgameForPID(et) ?? null);
     }
     isReady(e) {
-        return !!Z.has(e) && eo[e] === _.AR.OVERLAY_RENDERING;
+        return !!J.has(e) && eo[e] === _.AR.OVERLAY_RENDERING;
     }
     getOverlayState(e) {
         return eo[e] ?? null;
@@ -447,7 +447,7 @@ let eS = new eg(
                   },
                   OVERLAY_FOCUSED: eT,
                   OVERLAY_OOP_UI_INITIALIZED: function () {
-                      Z.forEach((e) => {
+                      J.forEach((e) => {
                           ep(e);
                       });
                   },
@@ -492,12 +492,12 @@ let eS = new eg(
                               if (!T.A.isOverlayEnabled)
                                   return void (function () {
                                       try {
-                                          for (let e of Z) ee?.untrackGame(e);
-                                          (Z.clear(),
+                                          for (let e of J) ee?.untrackGame(e);
+                                          (J.clear(),
                                               (0, f._r)(null, "clearTrackedGames"),
                                               (eo = {}),
                                               (ed = {}),
-                                              J.clear(),
+                                              Z.clear(),
                                               Q.verbose("Cleared all tracked games"));
                                       } catch (e) {
                                           (Q.error("Error clearing tracked games:", e),
@@ -510,8 +510,8 @@ let eS = new eg(
                                       .filter((e) => l.Ay.getOverlayEnabledForGame(e))
                                       .map((e) => e.pid),
                               );
-                              for (let t of new Set([...Z].filter((t) => !e.has(t)))) eE(t);
-                              for (let e of Z) e_(e);
+                              for (let t of new Set([...J].filter((t) => !e.has(t)))) eE(t);
+                              for (let e of J) e_(e);
                           })());
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
@@ -551,7 +551,7 @@ let eS = new eg(
                   },
                   OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN: function (e) {
                       let { pid: t } = e;
-                      (J.add(t), ep(t));
+                      (Z.add(t), ep(t));
                   },
                   OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: function (e) {
                       let { initialized: t } = e;

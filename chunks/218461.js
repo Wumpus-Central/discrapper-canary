@@ -61,8 +61,8 @@ var w = n(970278),
     z = n(71393),
     q = n(885576),
     Q = n(596344),
-    Z = n(576705),
-    J = n(994500),
+    J = n(576705),
+    Z = n(994500),
     ee = n(309010),
     et = n(543465),
     en = n(287809),
@@ -143,7 +143,7 @@ function ey(e) {
 function eD(e, t) {
     let n = K.A.getChannel(e.channel_id);
     return (
-        !(null == n || J.A.isBlockedOrIgnoredForMessage(e)) &&
+        !(null == n || Z.A.isBlockedOrIgnoredForMessage(e)) &&
         !!(
             (0, O.Ay)({
                 message: e,
@@ -544,7 +544,7 @@ class eU {
             !!(0, A.G3)(e) &&
             ("basicPermissions" in e
                 ? V.A.has(e.basicPermissions, er.hVb.VIEW_CHANNEL)
-                : !I.A.isChannelGated(this.guildId, this.channelId) || Z.A.can(er.xBc.VIEW_CHANNEL, e))
+                : !I.A.isChannelGated(this.guildId, this.channelId) || J.A.can(er.xBc.VIEW_CHANNEL, e))
         );
     }
     canBeUnread() {
@@ -584,7 +584,7 @@ class eU {
         if ("basicPermissions" in e) {
             if (!V.A.has(e.basicPermissions, er.hVb.VIEW_CHANNEL))
                 return { mentionCount: 0, unread: !1, isMentionLowImportance: !1 };
-        } else if (I.A.isChannelGated(this.guildId, this.channelId) && !Z.A.can(er.xBc.VIEW_CHANNEL, e))
+        } else if (I.A.isChannelGated(this.guildId, this.channelId) && !J.A.can(er.xBc.VIEW_CHANNEL, e))
             return { mentionCount: 0, unread: !1, isMentionLowImportance: !1 };
         return i || r
             ? { mentionCount: this.mentionCount, unread: !1, isMentionLowImportance: this.isMentionLowImportance }
@@ -830,7 +830,7 @@ class eU {
                             (i = e),
                             !(null != (r = t.guildId) && w.A.isActive(r, n.parent_id, t.channelId)) && eB(t, i))
                         ) &&
-                        (!(this.mentionCount > 0) || Z.A.canBasicChannel(eu, a))
+                        (!(this.mentionCount > 0) || J.A.canBasicChannel(eu, a))
                     )))
         );
     }
@@ -1040,7 +1040,7 @@ function eq() {
         t = !1;
     return (
         eE !== e
-            ? ((t = eJ(eE)), eZ({ previousChannelId: eE, newChannelId: e }), (eE = e))
+            ? ((t = eZ(eE)), eJ({ previousChannelId: eE, newChannelId: e }), (eE = e))
             : (t =
                   eV(
                       {
@@ -1069,11 +1069,11 @@ function eQ(e) {
             })
         );
 }
-function eZ(e) {
+function eJ(e) {
     let { previousChannelId: t, newChannelId: n } = e;
     t !== n && null != t && eh.delete(t);
 }
-function eJ(e) {
+function eZ(e) {
     if (null == e) return !1;
     let t = eU.get(e);
     return !t.hasUnread() && ((t.oldestUnreadMessageId = null), !0);
@@ -1115,7 +1115,7 @@ class e7 extends o.Ay.Store {
             K.A,
             ee.Ay,
             Q.A,
-            Z.A,
+            J.A,
             f.A,
             w.A,
             G.A,
@@ -1145,8 +1145,8 @@ class e7 extends o.Ay.Store {
                 G.A,
                 Q.A,
                 D.A,
-                Z.A,
                 J.A,
+                Z.A,
                 ee.Ay,
                 et.Ay,
                 F.A,
@@ -1395,9 +1395,9 @@ let e4 = new e7(_.h, {
         },
         OVERLAY_INITIALIZE: function (e) {
             let { readStates: t, selectedChannelId: n } = e;
-            (eL(), (ef = null), eZ({ previousChannelId: e_, newChannelId: n }), (e_ = n));
+            (eL(), (ef = null), eJ({ previousChannelId: e_, newChannelId: n }), (e_ = n));
             let i = Y.Ay.getCurrentSidebarChannelId(n);
-            (eZ({ previousChannelId: eE, newChannelId: i }),
+            (eJ({ previousChannelId: eE, newChannelId: i }),
                 (eE = i),
                 eU.clearAll(),
                 t.forEach((e) => {
@@ -1507,7 +1507,7 @@ let e4 = new e7(_.h, {
                     : o || (0, M.i$)() === r || (l.oldestUnreadMessageId = a.id),
                 !d && l.unreadCount++,
                 !(
-                    J.A.isBlockedOrIgnoredForMessage(a) ||
+                    Z.A.isBlockedOrIgnoredForMessage(a) ||
                     (a.type === er.lAJ.RECIPIENT_REMOVE && u?.type === er.rbe.GROUP_DM)
                 ))
             ) {
@@ -1590,9 +1590,9 @@ let e4 = new e7(_.h, {
                 ((e.ackMessageIdAtChannelSelect = e.ackMessageId ?? W.default.fromTimestamp(e.getAckTimestamp())),
                     e.recordLastViewedTime());
             }
-            (eZ({ previousChannelId: e_, newChannelId: t }), eZ({ previousChannelId: eE, newChannelId: n }));
+            (eJ({ previousChannelId: e_, newChannelId: t }), eJ({ previousChannelId: eE, newChannelId: n }));
             let r = !1;
-            (e_ !== t && ((r = eJ(e_) || r), (r = eJ(eE) || r)),
+            (e_ !== t && ((r = eZ(e_) || r), (r = eZ(eE) || r)),
                 (e_ === t || (i?.type != null && er.kvI.GUILD_THREADS_ONLY.has(i.type))) &&
                     (r =
                         eV(
@@ -1635,7 +1635,7 @@ let e4 = new e7(_.h, {
                 ((i = eU.get(t)).ackMessageIdAtChannelSelect =
                     i.ackMessageId ?? W.default.fromTimestamp(i.getAckTimestamp())),
                 i.recordLastViewedTime(),
-                eJ(t),
+                eZ(t),
                 eV({ section: er.JJy.OVERLAY, object: n, objectType: er.btD.ACK_AUTOMATIC }, t),
                 !0)
             );
@@ -1920,7 +1920,7 @@ let e4 = new e7(_.h, {
         },
         CLEAR_OLDEST_UNREAD_MESSAGE: function (e) {
             let { channelId: t } = e;
-            return eJ(t);
+            return eZ(t);
         },
         TRY_ACK: function (e) {
             let { channelId: t, location: n } = e;

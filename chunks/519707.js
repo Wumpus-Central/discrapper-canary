@@ -1,15 +1,15 @@
-let l = (0, n(945810).mj)({
+let a = (0, s(945810).mj)({
     name: "2026-10-shop-sku-nitro-upsell-refresh",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-n.d(
-    t,
+s.d(
+    n,
     {},
     {
         J: function (e) {
-            return l.useConfig({ location: e }).enabled;
+            return a.useConfig({ location: e }).enabled;
         },
     },
 );

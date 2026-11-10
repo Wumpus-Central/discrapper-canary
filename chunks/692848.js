@@ -38,15 +38,15 @@ l.d(
                 guildId: p,
                 channelId: c,
                 disableGuildSelect: d,
-                source: m,
-                oauth2Callback: A,
+                source: A,
+                oauth2Callback: m,
             } = e;
             if (null != l) {
                 (n.default.track(r.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
                     application_id: t,
                     guild_id: p,
                     auth_type: "custom_url",
-                    source: m,
+                    source: A,
                     device_platform: i.Fr ? "mobile_web" : "desktop_web",
                 }),
                     (0, o.h)({ href: l }));
@@ -60,7 +60,7 @@ l.d(
                     application_id: t,
                     guild_id: p,
                     auth_type: "in_app",
-                    source: m,
+                    source: A,
                     device_platform: i.Fr ? "mobile_web" : "desktop_web",
                 }),
                     (0, a.openOAuth2Modal)({
@@ -68,7 +68,7 @@ l.d(
                         guildId: p,
                         channelId: c,
                         disableGuildSelect: d,
-                        callback: A,
+                        callback: m,
                     }));
                 return;
             }
@@ -77,7 +77,7 @@ l.d(
                     application_id: t,
                     guild_id: p,
                     auth_type: "in_app",
-                    source: m,
+                    source: A,
                     device_platform: i.Fr ? "mobile_web" : "desktop_web",
                 }),
                 (0, a.openOAuth2Modal)({
@@ -87,7 +87,7 @@ l.d(
                     disableGuildSelect: d,
                     scopes: u.scopes,
                     permissions: null != u.permissions ? s.iu(u.permissions) : void 0,
-                    callback: A,
+                    callback: m,
                 }));
         },
     },

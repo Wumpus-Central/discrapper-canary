@@ -256,11 +256,11 @@ function Q() {
     let e = I.A.getChannel(S.Ay.getChannelId());
     return null != e && H(e.getGuildId(), [e.id]);
 }
-function Z(e) {
+function J(e) {
     let { user: t, guildId: n } = e;
     return t.id === h.default.getId() && W(n);
 }
-function J(e) {
+function Z(e) {
     let { channelId: t } = e,
         n = I.A.getChannel(t);
     return null != n && H(n.getGuildId(), [n.id]);
@@ -399,9 +399,9 @@ class eg extends m.A {
             GUILD_CREATE: X,
             GUILD_DELETE: z,
             MESSAGE_CREATE: ee,
-            MESSAGE_ACK: J,
+            MESSAGE_ACK: Z,
             BULK_ACK: er,
-            UPDATE_CHANNEL_DIMENSIONS: J,
+            UPDATE_CHANNEL_DIMENSIONS: Z,
             CHANNEL_SELECT: et,
             CHANNEL_DELETE: q,
             WINDOW_FOCUS: Q,
@@ -420,7 +420,7 @@ class eg extends m.A {
             THREAD_MEMBER_UPDATE: ed,
             THREAD_MEMBERS_UPDATE: ec,
             PASSIVE_UPDATE_V2: e_,
-            GUILD_MEMBER_UPDATE: Z,
+            GUILD_MEMBER_UPDATE: J,
             USER_GUILD_SETTINGS_FULL_UPDATE: eI,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE: em,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: em,
@@ -430,17 +430,17 @@ class eg extends m.A {
             GUILD_SCHEDULED_EVENT_CREATE: es,
             GUILD_SCHEDULED_EVENT_UPDATE: es,
             GUILD_SCHEDULED_EVENT_DELETE: el,
-            CHANNEL_RTC_UPDATE_CHAT_OPEN: J,
-            LOAD_MESSAGES_SUCCESS: J,
-            CHANNEL_ACK: J,
-            CHANNEL_LOCAL_ACK: J,
+            CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
+            LOAD_MESSAGES_SUCCESS: Z,
+            CHANNEL_ACK: Z,
+            CHANNEL_LOCAL_ACK: Z,
             NOTIFICATION_SETTINGS_UPDATE: $,
             RECOMPUTE_READ_STATES: $,
-            VOICE_CHANNEL_SELECT: J,
-            ENABLE_AUTOMATIC_ACK: J,
-            RESORT_THREADS: J,
+            VOICE_CHANNEL_SELECT: Z,
+            ENABLE_AUTOMATIC_ACK: Z,
+            RESORT_THREADS: Z,
             NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: ep,
-            TRY_ACK: J,
+            TRY_ACK: Z,
             LOAD_RECENT_MENTIONS_SUCCESS: eT,
         });
     }

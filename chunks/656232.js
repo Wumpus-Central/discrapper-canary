@@ -507,8 +507,8 @@ var ez = n(633965),
     e6 = n(757780),
     e5 = n(263715),
     e7 = n(967198),
-    e8 = n(173860),
-    e4 = n(383394),
+    e4 = n(173860),
+    e8 = n(383394),
     e9 = n(131677),
     te = n(73153);
 let tt = {};
@@ -555,8 +555,8 @@ function tu(e) {
             tc(e2.Ay.getGuildFolders(), e9.A.getUnreadPrivateChannelIds(), ed.default.getStoreChangeSentinel()),
         ),
         a = (0, _.bG)([tr.A], () => tr.A.isFocused()),
-        s = (0, _.bG)([e4.A], () => e4.A.getExpandedFolders());
-    return (0, i.jsx)(e8.A, {
+        s = (0, _.bG)([e8.A], () => e8.A.getExpandedFolders());
+    return (0, i.jsx)(e4.A, {
         ...n,
         ref: t,
         items: r,
@@ -1154,8 +1154,8 @@ function t7(e) {
         }),
     });
 }
-var t8 = n(565787),
-    t4 = n(791606),
+var t4 = n(565787),
+    t8 = n(791606),
     t9 = n(486020),
     ne = n(183588);
 function nt(e) {
@@ -1167,7 +1167,7 @@ function nt(e) {
             children: (0, i.jsx)(W.Q, {
                 className: ne.o,
                 selected: t,
-                lowerBadge: (0, i.jsx)(tf.fk, { icon: (0, t8.k)(t4.A), disableColor: !0, className: ne._ }),
+                lowerBadge: (0, i.jsx)(tf.fk, { icon: (0, t4.k)(t8.A), disableColor: !0, className: ne._ }),
                 children: (0, i.jsx)(Y.j, {
                     name: e.name,
                     onMouseEnter: function () {
@@ -1470,7 +1470,7 @@ let nZ = r.memo(function (e) {
         { id: p, name: m, color: T, children: g } = h,
         S = r.useMemo(() => g.map((e) => e.id), [g]),
         N = (0, Z.A)((e) => e.guildId),
-        C = (0, _.bG)([e4.A], () => e4.A.isFolderExpanded(p)),
+        C = (0, _.bG)([e8.A], () => e8.A.isFolderExpanded(p)),
         O = (0, nq.y)(h),
         R =
             ((t = (0, _.bG)([tE.A], () => tE.A.getGuildId())),
@@ -1549,10 +1549,10 @@ function n6(e) {
 }
 var n5 = n(347951),
     n7 = n(34162);
-function n8(e) {
+function n4(e) {
     return (0, _.bG)([n7.A], () => n7.A.getGuildMediaState(e), [e]);
 }
-var n4 = n(126600),
+var n8 = n(126600),
     n9 = n(607399),
     ie = n(164636),
     it = n(817281),
@@ -2690,7 +2690,7 @@ let iP = r.memo(function (e) {
               ) ?? void 0)
         : null == M && null != O && (M = (0, J.eW)({ guildJoinRequestStatus: O }) ?? void 0);
     let U = e.lowerBadgeSize ?? { width: (0, tf.o6)(m) },
-        [{ dragging: w }, x] = (0, n4.i)({
+        [{ dragging: w }, x] = (0, n8.i)({
             type: e5.PJ.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
@@ -2883,7 +2883,7 @@ let iU = r.memo(function (e) {
         o = (0, _.bG)([tr.A], () => tr.A.isFocused()),
         d = (0, _.bG)([nF.A], () => nF.A.isUnavailable(a)),
         c = (0, Z.A)((e) => e.guildId),
-        u = n8(a),
+        u = n4(a),
         {
             badge: E,
             unread: A,
@@ -3097,7 +3097,7 @@ function iz(e) {
                 let { guildId: t } = e;
                 return t;
             }),
-        o = n8(t);
+        o = n4(t);
     return null == a
         ? null
         : (0, i.jsx)(iP, { guildNode: n, guild: a, animatable: s, selected: l, draggable: !1, mediaState: o });

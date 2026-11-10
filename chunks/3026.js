@@ -12,9 +12,9 @@ t.d(
             let { children: n, "aria-label": t, className: l, position: c, delay: d, lineClamp: u = 1, ...m } = e,
                 h = i.useRef(null),
                 x = t ?? ("string" == typeof n && n),
-                j = {};
+                g = {};
             return (
-                null != u && u > 1 && (j = { lineClamp: u, WebkitLineClamp: u }),
+                null != u && u > 1 && (g = { lineClamp: u, WebkitLineClamp: u }),
                 (0, s.jsx)(r.ST, {
                     ...m,
                     position: c ?? "top",
@@ -35,7 +35,7 @@ t.d(
                                     i?.();
                             },
                             onMouseLeave: r,
-                            style: j,
+                            style: g,
                             children: n,
                         });
                     },

@@ -1,5 +1,5 @@
-var l = t(477900),
-    r = t(582128),
+var r = t(477900),
+    l = t(582128),
     i = t(714414),
     a = t(196765),
     u = t(976245),
@@ -17,7 +17,7 @@ function o() {
     }));
 }
 let c = (0, u.y)()(() => ({ revealedIds: new Set(), hoveredId: null, reveal() {}, setHovered() {} })),
-    d = r.createContext(c);
+    d = l.createContext(c);
 function h(e) {
     return "link" === e.type;
 }
@@ -32,18 +32,18 @@ t.d(
         },
         L1: function (e) {
             let { children: n } = e,
-                [t] = r.useState(o);
-            return (0, l.jsx)(d.Provider, { value: t, children: n });
+                [t] = l.useState(o);
+            return (0, r.jsx)(d.Provider, { value: t, children: n });
         },
         dC: function (e) {
             let { children: n, id: t } = e,
-                i = r.useContext(d),
+                i = l.useContext(d),
                 u = (0, a.P)(i, (e) => e.revealedIds.has(t)),
                 o = (0, a.P)(i, (e) => e.hoveredId === t),
-                c = r.useCallback(() => i.getState().reveal(t), [i, t]),
-                h = r.useCallback(() => i.getState().setHovered(t, !0), [i, t]),
-                m = r.useCallback(() => i.getState().setHovered(t, !1), [i, t]);
-            return (0, l.jsx)(s.Ay, {
+                c = l.useCallback(() => i.getState().reveal(t), [i, t]),
+                h = l.useCallback(() => i.getState().setHovered(t, !0), [i, t]),
+                m = l.useCallback(() => i.getState().setHovered(t, !1), [i, t]);
+            return (0, r.jsx)(s.Ay, {
                 type: s.Ay.Types.TEXT,
                 obscured: !u,
                 hovered: o,

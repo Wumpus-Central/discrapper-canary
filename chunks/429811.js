@@ -8,7 +8,7 @@ n.d(t, {
     gB: () => er,
     h$: () => e_,
     RE: () => es,
-    Cz: () => J,
+    Cz: () => Z,
     RD: () => et,
     FH: () => eu,
     rh: () => el,
@@ -596,8 +596,8 @@ class q {
     }
 }
 var Q = n(100057),
-    Z = n(181774);
-function J(e) {
+    J = n(181774);
+function Z(e) {
     let { tab: t, initialCollectionId: i, ...r } = e;
     {
         let { default: e } = n(830543),
@@ -636,7 +636,7 @@ function en(e, t) {
 }
 async function ei(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
-    let i = (0, Z.ao)(e),
+    let i = (0, J.ao)(e),
         r = c.Ay.get("shop_show_debug_overlay");
     (e?.logPerf &&
         (0, Q.z)({
@@ -786,7 +786,7 @@ function eu(e) {
 }
 async function e_(e, t, n) {
     o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
-    let i = (0, Z.ao)(t, e);
+    let i = (0, J.ao)(t, e);
     t?.logPerf &&
         (0, Q.z)({
             sessionId: n?.sessionId,

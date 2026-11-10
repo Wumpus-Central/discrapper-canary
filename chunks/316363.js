@@ -306,8 +306,8 @@ function X(e) {
 var z = n(442467),
     q = n(371710),
     Q = n(120700),
-    Z = n(379912),
-    J = n(705822),
+    J = n(379912),
+    Z = n(705822),
     ee = n(811315),
     et = n.n(ee),
     en = n(800471),
@@ -511,7 +511,7 @@ function ec(e) {
                 },
                 resetPaymentAuthentication: () => e({ ...W }),
             },
-            ...(0, J.e)(e, i),
+            ...(0, Z.e)(e, i),
             ...((E = []),
             {
                 getPaymentSourceNotices: () => {
@@ -843,10 +843,10 @@ function ec(e) {
                     return null === r && t
                         ? H.intl.string(H.t.CpOiEO)
                         : l
-                          ? H.intl.string(Z.default["7r4HPu"])
+                          ? H.intl.string(J.default["7r4HPu"])
                           : null != n
                             ? n
-                            : H.intl.string(Z.default.BPzQj4);
+                            : H.intl.string(J.default.BPzQj4);
                 },
                 getCheckoutReviewButtonProps: (e) => {
                     let {
@@ -863,7 +863,7 @@ function ec(e) {
                         A = !_ && !E("isCheckoutDataLoading"),
                         f = l?.text;
                     null == f &&
-                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(Z.default.BPzQj4));
+                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(J.default.BPzQj4));
                     let h = l?.variant,
                         I = c({ hasPaymentSources: a, tenantProvidedButtonText: f }),
                         p = {

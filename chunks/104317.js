@@ -24,16 +24,16 @@ n.d(
                     projectId: t,
                     steps: n,
                     fallbackLabel: h,
-                    live: p,
-                    durationMs: k,
+                    live: k,
+                    durationMs: p,
                     connectsDown: x = !1,
                     closed: g = !1,
-                    tier: _,
+                    tier: j,
                 } = e,
-                j = (0, i.SY)(n),
-                b = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), _),
-                v = p ? void 0 : k,
-                y = null != v ? (0, s.nY)(v) : null != j ? (0, i.WQ)(j) : (h ?? m.intl.string(c.default.t8skVB)),
+                _ = (0, i.SY)(n),
+                b = (0, r.Q7)(m.intl.string(c.default.uk6jhJ), j),
+                v = k ? void 0 : p,
+                y = null != v ? (0, s.nY)(v) : null != _ ? (0, i.WQ)(_) : (h ?? m.intl.string(c.default.t8skVB)),
                 w =
                     n.length > 1 ||
                     n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
@@ -48,8 +48,8 @@ n.d(
                 }),
                 line: y,
                 anchor: !0,
-                live: p,
-                settled: null != v || (!p && g),
+                live: k,
+                settled: null != v || (!k && g),
                 connectsDown: x,
                 detail: w
                     ? (0, l.jsx)("ol", {
@@ -57,7 +57,7 @@ n.d(
                           children: n.map((e) =>
                               (0, l.jsx)(
                                   o.A,
-                                  { projectId: t, node: e, presentation: "detail", active: p && e === j },
+                                  { projectId: t, node: e, presentation: "detail", active: k && e === _ },
                                   e.id,
                               ),
                           ),

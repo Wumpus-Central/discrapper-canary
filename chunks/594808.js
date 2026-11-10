@@ -1,5 +1,5 @@
-var l = t(477900),
-    r = t(582128),
+var r = t(477900),
+    l = t(582128),
     i = t(503698),
     a = t.n(i),
     u = t(265431),
@@ -14,30 +14,30 @@ var l = t(477900),
     x = t(792996),
     g = t(389760);
 function v(e) {
-    return { text: e, icon: (0, l.jsx)(o.n, { className: g.Kk, dotRadius: 3.5, themed: !0 }) };
+    return { text: e, icon: (0, r.jsx)(o.n, { className: g.Kk, dotRadius: 3.5, themed: !0 }) };
 }
 function j(e) {
     return {
         text: e ?? x.intl.string(x.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, l.jsx)(c.CircleErrorIcon, { size: "xs", color: "currentColor", className: a()(g.Kk, g.ik) }),
+        icon: (0, r.jsx)(c.CircleErrorIcon, { size: "xs", color: "currentColor", className: a()(g.Kk, g.ik) }),
     };
 }
 function I(e) {
-    let { className: n, icon: t, text: r, color: i } = e;
-    return (0, l.jsxs)("div", {
+    let { className: n, icon: t, text: l, color: i } = e;
+    return (0, r.jsxs)("div", {
         className: a()(g.iE, n),
         children: [
             t,
-            (0, l.jsx)(d.E, { variant: "body-md/normal", color: i, scaleFontToUserSetting: !0, children: r }),
+            (0, r.jsx)(d.E, { variant: "body-md/normal", color: i, scaleFontToUserSetting: !0, children: l }),
         ],
     });
 }
-let y = r.memo(function (e) {
+let y = l.memo(function (e) {
     let { message: n, className: t, component: i } = e,
         a = (0, u.A)(),
         o = (0, s.bG)([m.Ay], () => m.Ay.getInteraction(n), [n]);
-    r.useEffect(() => {
+    l.useEffect(() => {
         let e = null;
         if (n.hasFlag(p.pr7.LOADING) && null != o) {
             let t = (0, f.I5)(n.id) - Date.now();
@@ -67,6 +67,6 @@ let y = r.memo(function (e) {
     }
     if (null == c) return null;
     let { text: d, icon: g, color: y } = c;
-    return (0, l.jsx)(I, { icon: g, text: d, className: t, color: y });
+    return (0, r.jsx)(I, { icon: g, text: d, className: t, color: y });
 });
 t.d(n, {}, { Ay: y, PS: j, S0: I });

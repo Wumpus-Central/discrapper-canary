@@ -27,10 +27,10 @@ function m(e) {
         T = l.useCallback(() => {
             (t(_.i.TAKE_ACTION), (0, c.openUserSettings)(o.X.ACCOUNT_STANDING_CATEGORY));
         }, [t]),
-        f = l.useCallback(() => {
+        N = l.useCallback(() => {
             t(_.i.USER_DISMISS);
         }, [t]),
-        N = i ? g.intl.string(p.default.f7c7qE) : g.intl.string(p.default.jssaTD),
+        f = i ? g.intl.string(p.default.f7c7qE) : g.intl.string(p.default.jssaTD),
         I = i
             ? { text: g.intl.string(p.default.ZzcLhc), onClick: r, external: !1 }
             : { text: g.intl.string(p.default["Bp/1dq"]), link: E.M1, external: !0 },
@@ -40,13 +40,13 @@ function m(e) {
     return (0, s.jsx)(a.A, {
         targetElementRef: n,
         shouldShow: !0,
-        onRequestClose: f,
+        onRequestClose: N,
         position: "top",
         caretConfig: { align: "end" },
         size: "md",
         graphic: { type: "image", src: "/assets/397709a27ee3c251.svg", aspectRatio: "6/4" },
         title: g.intl.string(p.default.GdTVPF),
-        body: N,
+        body: f,
         textLink: I,
         actions: [x],
     });

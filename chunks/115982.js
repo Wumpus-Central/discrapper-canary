@@ -102,19 +102,19 @@ function m(e, t) {
                 segment: n,
             };
         }
-        function p(e, t) {
+        function k(e, t) {
             let n = a.get(e);
             if (null != n) return n;
             let l = { taskId: e, task: h("task", "task", t), steps: [] };
             return (a.set(e, l), l);
         }
-        function k(e, n, a, r) {
-            if ("task" === a || "task" === n) return null != e ? p(e, r).task : (t = t ?? h("task", "task", r));
+        function p(e, n, a, r) {
+            if ("task" === a || "task" === n) return null != e ? k(e, r).task : (t = t ?? h("task", "task", r));
             let s = `${e ?? ""} ${n}`,
                 i = u.get(s);
             if (null != i) return i;
             let o = h(n, "step", r);
-            return (u.set(s, o), null != e ? p(e, r).steps.push(o) : l.push(o), o);
+            return (u.set(s, o), null != e ? k(e, r).steps.push(o) : l.push(o), o);
         }
         let x = (function (e) {
                 let t = new Set();
@@ -157,7 +157,7 @@ function m(e, t) {
             let e = f[t] ?? 0;
             if ("node" === n.kind && null != n.node) {
                 let t = n.node,
-                    l = k(n.task_id, t.id, t.node_kind ?? "step", e);
+                    l = p(n.task_id, t.id, t.node_kind ?? "step", e);
                 if (
                     ((l.touched = ++d),
                     null != t.label_key && (l.labelKey = t.label_key),
@@ -195,7 +195,7 @@ function m(e, t) {
                 continue;
             }
             if ("error" === n.kind || "terminal_error" === n.kind) {
-                let l = k(void 0, `${n.kind}-${t}`, "step", e);
+                let l = p(void 0, `${n.kind}-${t}`, "step", e);
                 ((l.touched = ++d),
                     (l.labelKey = (function (e) {
                         let t = "error" === e.kind ? e.failure_kind : void 0,
@@ -212,9 +212,9 @@ function m(e, t) {
                 (e.detailDrivenBy = t.map((e) => e.driven_by ?? null)),
                 (e.detailError = t.map((e) => e.error ?? null)));
         }
-        let _ = [...a.values()];
-        for (let e of _) n || "running" !== e.task.status || (e.task.status = "incomplete");
-        return { steps: l, tasks: _, ...(null != t ? { turn: t } : {}) };
+        let j = [...a.values()];
+        for (let e of j) n || "running" !== e.task.status || (e.task.status = "incomplete");
+        return { steps: l, tasks: j, ...(null != t ? { turn: t } : {}) };
     })(e, { turnActive: t }));
 }
 n.d(

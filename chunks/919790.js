@@ -39,12 +39,12 @@ function h(e) {
               onClick: m,
           });
 }
-function p(e) {
+function k(e) {
     let { projectId: t, viewableImages: n, viewerIndex: s, unavailableIds: c, markUnavailable: m } = e,
-        { id: h, name: p } = n[s],
-        [k, x] = a.useState(null),
+        { id: h, name: k } = n[s],
+        [p, x] = a.useState(null),
         g = c.has(h),
-        [_, j] = a.useState(0);
+        [j, _] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
@@ -58,7 +58,7 @@ function p(e) {
                 e = !0;
             }
         );
-    }, [t, h, _]);
+    }, [t, h, j]);
     let b = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, i.PK)(t, e.id), alt: e.name })),
@@ -76,17 +76,17 @@ function p(e) {
         );
     }, [t, n, s, c]);
     return g
-        ? (0, l.jsx)(f, { name: p, unavailable: !0 })
+        ? (0, l.jsx)(f, { name: k, unavailable: !0 })
         : (0, l.jsx)(u.n, {
-              name: p,
-              thumbSrc: k,
-              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: p }),
+              name: k,
+              thumbSrc: p,
+              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: k }),
               onClick: b,
               onThumbError: () => {
                   (x(null),
                       (0, i.n6)(t, h).then(
                           (e) => {
-                              e ? 0 === _ && j(1) : m(h);
+                              e ? 0 === j && _(1) : m(h);
                           },
                           () => {},
                       ));
@@ -111,7 +111,7 @@ n.d(
                         ? (0, l.jsx)(f, { name: e.name }, n)
                         : m(e)
                           ? (0, l.jsx)(
-                                p,
+                                k,
                                 {
                                     projectId: t,
                                     viewableImages: r,

@@ -1,36 +1,36 @@
-var i = l(477900);
+var n = l(477900);
 l(582128);
-var a = l(834730),
-    s = l(429913),
-    n = l(102876),
-    r = l(792996);
+var i = l(834730),
+    a = l(429913),
+    r = l(102876),
+    s = l(792996);
 l.d(
     t,
     {},
     {
         A: function (e) {
             let { applicationIds: t } = e,
-                l = (0, s.A)(t).filter((e) => null != e);
+                l = (0, a.A)(t).filter((e) => null != e);
             if (0 === l.length) return null;
-            let d = null;
+            let u = null;
             if (1 === l.length)
-                d = r.intl.format(r.t.wQ6urw, {
-                    applicationName: () => (0, i.jsx)(n.A, { application: l[0] }, l[0].id),
+                u = s.intl.format(s.t.wQ6urw, {
+                    applicationName: () => (0, n.jsx)(r.A, { application: l[0] }, l[0].id),
                 });
             else if (2 === l.length)
-                d = r.intl.format(r.t.C98CSN, {
-                    applicationName: () => (0, i.jsx)(n.A, { application: l[0] }, l[0].id),
-                    applicationName2: () => (0, i.jsx)(n.A, { application: l[1] }, l[1].id),
+                u = s.intl.format(s.t.C98CSN, {
+                    applicationName: () => (0, n.jsx)(r.A, { application: l[0] }, l[0].id),
+                    applicationName2: () => (0, n.jsx)(r.A, { application: l[1] }, l[1].id),
                 });
             else {
                 let e = l[l.length - 1],
                     t = l.slice(0, -1);
-                d = r.intl.format(r.t.UxpwAh, {
-                    applications: () => t.map((e) => (0, i.jsx)(n.A, { application: e, useComma: !0 }, e.id)),
-                    applicationNameLast: () => (0, i.jsx)(n.A, { application: e }, e.id),
+                u = s.intl.format(s.t.UxpwAh, {
+                    applications: () => t.map((e) => (0, n.jsx)(r.A, { application: e, useComma: !0 }, e.id)),
+                    applicationNameLast: () => (0, n.jsx)(r.A, { application: e }, e.id),
                 });
             }
-            return (0, i.jsx)(a.E, { variant: "body-sm/normal", children: d });
+            return (0, n.jsx)(i.E, { variant: "body-sm/normal", children: u });
         },
     },
 );

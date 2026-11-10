@@ -1214,8 +1214,8 @@ class Q extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let Z = new Q();
-class J extends o.G {
+let J = new Q();
+class Z extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTabTooltip", [
             { no: 1, name: "header", kind: "scalar", T: 9 },
@@ -1276,7 +1276,7 @@ class J extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let ee = new J();
+let ee = new Z();
 class et extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GiftReminderCoachmark", [
@@ -1704,7 +1704,7 @@ class eT extends o.G {
             { no: 13, name: "gift_reminder_nagbar", kind: "message", oneof: "properties", T: () => er },
             { no: 14, name: "gift_reminder_coachmark", kind: "message", oneof: "properties", T: () => en },
             { no: 15, name: "premium_tab_tooltip", kind: "message", oneof: "properties", T: () => ee },
-            { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => Z },
+            { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => J },
             { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => q },
             { no: 19, name: "plan_select_card_banner", kind: "message", oneof: "properties", T: () => X },
             { no: 20, name: "billing_settings_banner", kind: "message", oneof: "properties", T: () => K.h },
@@ -1855,7 +1855,7 @@ class eT extends o.G {
                 case 16:
                     r.properties = {
                         oneofKind: "premiumTabPopover",
-                        premiumTabPopover: Z.internalBinaryRead(e, e.uint32(), n, r.properties.premiumTabPopover),
+                        premiumTabPopover: J.internalBinaryRead(e, e.uint32(), n, r.properties.premiumTabPopover),
                     };
                     break;
                 case 17:
@@ -2092,7 +2092,7 @@ class eT extends o.G {
                     .internalBinaryWrite(e.properties.premiumTabTooltip, t.tag(15, a.O0.LengthDelimited).fork(), n)
                     .join(),
             "premiumTabPopover" === e.properties.oneofKind &&
-                Z.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, a.O0.LengthDelimited).fork(), n).join(),
+                J.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, a.O0.LengthDelimited).fork(), n).join(),
             "nagbar" === e.properties.oneofKind &&
                 q.internalBinaryWrite(e.properties.nagbar, t.tag(17, a.O0.LengthDelimited).fork(), n).join(),
             "planSelectCardBanner" === e.properties.oneofKind &&

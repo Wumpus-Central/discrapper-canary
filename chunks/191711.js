@@ -1,21 +1,21 @@
-var n,
-    s = l(477900),
-    i = l(582128),
+var i,
+    n = l(477900),
+    s = l(582128),
     a = l(503698),
     r = l.n(a),
     o = l(165862),
     c = l(477782),
     d = l(628284),
     u = l(265872),
-    m = l(834730),
-    h = l(900797),
+    h = l(834730),
+    m = l(900797),
     p = l(646514),
     g = l(847374),
     x = l(773669),
     v = l(619189);
 function j(e) {
-    let { items: t, onClose: l, onSelect: n, selected: i, ...a } = e;
-    return (0, s.jsx)(o.W, {
+    let { items: t, onClose: l, onSelect: i, selected: s, ...a } = e;
+    return (0, n.jsx)(o.W, {
         "data-menu-migrated-auto": !0,
         className: v.MK,
         navId: "global-discovery-search-filter-options",
@@ -23,20 +23,20 @@ function j(e) {
         hideScroller: !0,
         onClose: l,
         onSelect: l,
-        children: (0, s.jsx)(
+        children: (0, n.jsx)(
             c.rX,
             {
                 children: t.map((e) => {
                     let { id: t, name: l, count: a } = e;
-                    return (0, s.jsx)(
+                    return (0, n.jsx)(
                         c.Dr,
                         {
                             id: t,
                             label: l,
                             subtext: a.toLocaleString(x.default.locale),
-                            icon: t === i ? d.CircleCheckIcon : void 0,
-                            leadingAccessory: t === i ? { type: "icon", icon: d.CircleCheckIcon } : void 0,
-                            action: () => n(t),
+                            icon: t === s ? d.CircleCheckIcon : void 0,
+                            leadingAccessory: t === s ? { type: "icon", icon: d.CircleCheckIcon } : void 0,
+                            action: () => i(t),
                         },
                         t,
                     );
@@ -46,15 +46,15 @@ function j(e) {
         ),
     });
 }
-var C = (((n = {}).FILLED = "FILLED"), (n.TRANSPARENT = "TRANSPARENT"), n);
+var A = (((i = {}).FILLED = "FILLED"), (i.TRANSPARENT = "TRANSPARENT"), i);
 l.d(
     t,
     {},
     {
         A: function (e) {
-            let { items: t, title: l, onSelect: n, selected: a, variant: o = "TRANSPARENT", ...c } = e,
-                d = i.useRef(null),
-                x = i.useMemo(
+            let { items: t, title: l, onSelect: i, selected: a, variant: o = "TRANSPARENT", ...c } = e,
+                d = s.useRef(null),
+                x = s.useMemo(
                     () =>
                         (function (e) {
                             switch (e) {
@@ -66,38 +66,38 @@ l.d(
                         })(o),
                     [o],
                 );
-            return (0, s.jsx)(u.Y, {
+            return (0, n.jsx)(u.Y, {
                 targetElementRef: d,
                 renderPopout: (e) => {
                     let { closePopout: l } = e;
-                    return (0, s.jsx)(j, {
+                    return (0, n.jsx)(j, {
                         selected: a,
                         onClose: l,
                         items: t,
-                        onSelect: n,
+                        onSelect: i,
                         "aria-label": c["aria-label"],
                     });
                 },
                 position: "bottom",
                 align: "left",
                 children: (e, t) => {
-                    let { isShown: n } = t;
-                    return (0, s.jsxs)("div", {
+                    let { isShown: i } = t;
+                    return (0, n.jsxs)("div", {
                         ...e,
                         ref: d,
                         className: r()(v.pb, x),
                         children: [
-                            (0, s.jsx)(m.E, {
+                            (0, n.jsx)(h.E, {
                                 variant: "body-sm/medium",
                                 color: "interactive-text-default",
                                 children: l,
                             }),
-                            n
-                                ? (0, s.jsx)(h.ChevronSmallUpIcon, {
+                            i
+                                ? (0, n.jsx)(m.ChevronSmallUpIcon, {
                                       size: "xs",
                                       color: p.A.colors.INTERACTIVE_TEXT_DEFAULT,
                                   })
-                                : (0, s.jsx)(g.ChevronSmallDownIcon, {
+                                : (0, n.jsx)(g.ChevronSmallDownIcon, {
                                       size: "xs",
                                       color: p.A.colors.INTERACTIVE_TEXT_DEFAULT,
                                   }),
@@ -106,6 +106,6 @@ l.d(
                 },
             });
         },
-        H: C,
+        H: A,
     },
 );

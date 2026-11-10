@@ -528,7 +528,7 @@ let q = {
             },
         },
     };
-class Z {
+class J {
     paymentSource;
     payment;
     paymentSourceType;
@@ -543,7 +543,7 @@ class Z {
         window.open(e);
     }
 }
-class J extends Z {
+class Z extends J {
     stripeByMerchantAccountId = new Map();
     handlerRegistry;
     constructor(e, t) {
@@ -633,7 +633,7 @@ class J extends Z {
         }
     }
 }
-class ee extends Z {
+class ee extends J {
     constructor(e, t) {
         if (null == e) throw R("Payment source cannot be null on a redirect.");
         super(e, t);
@@ -868,7 +868,7 @@ async function eu(e, t, n, i, r) {
     }
 }
 function e_(e, t) {
-    return null != t && b.Kc.has(t.type) ? new ee(t, e).confirmPayment() : new J(t, e).confirmPayment();
+    return null != t && b.Kc.has(t.type) ? new ee(t, e).confirmPayment() : new Z(t, e).confirmPayment();
 }
 async function eE(e, t, n) {
     s.h.dispatch({ type: "BILLING_SUBSCRIPTION_CANCEL_START" });

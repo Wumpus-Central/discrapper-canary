@@ -942,7 +942,7 @@ function eb(e) {
             },
             [g.id, ez],
         ),
-        e8 = i.useCallback(
+        e6 = i.useCallback(
             (e) =>
                 (function (e) {
                     let { attributes: t, children: n, leaf: i, text: r } = e;
@@ -980,7 +980,7 @@ function eb(e) {
                     onKeyUp: eZ,
                     decorate: e5,
                     renderExtraElement: e3,
-                    renderExtraLeaf: e8,
+                    renderExtraLeaf: e6,
                     "aria-owns": ej,
                     "aria-haspopup": eR,
                     "aria-expanded": e_,

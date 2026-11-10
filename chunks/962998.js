@@ -34,10 +34,10 @@ function y(e, t) {
     let n = m.get(e);
     null != n && (m.delete(e), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let O = new Set(p.n),
-    T = new Set(["activity", "automod", "widget", "bot"]);
+let T = new Set(p.n),
+    O = new Set(["activity", "automod", "widget", "bot"]);
 function b(e) {
-    return null != e && T.has(e) ? e : null;
+    return null != e && O.has(e) ? e : null;
 }
 let N = new Map();
 function C(e, t) {
@@ -196,7 +196,7 @@ n.d(
             },
             publish_progress(e, t) {
                 let { projectId: n } = t;
-                if (!O.has(e.stage)) return;
+                if (!T.has(e.stage)) return;
                 let s = Number.isFinite(e.stage_elapsed_ms) ? Math.max(0, e.stage_elapsed_ms) : 0;
                 ("approval" !== e.stage &&
                     r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId: n, approvalUrl: null }),

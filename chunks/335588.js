@@ -65,12 +65,12 @@ function k(e) {
         : (0, _.TM)()
           ? D.A
           : w.A;
-    let Z = V || B ? "nitro-pink" : "green";
+    let Y = V || B ? "nitro-pink" : "green";
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.p, { onClick: G, isVisible: !0 }),
             (0, i.jsx)(c.h, {
-                color: Z,
+                color: Y,
                 className: P.kL,
                 children: (0, i.jsxs)(u.l, {
                     "aria-label": n,

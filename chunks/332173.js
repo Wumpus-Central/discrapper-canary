@@ -19,8 +19,8 @@ t.d(
                     color: m,
                     roleColors: h,
                     iconType: x,
-                    onMouseEnter: j,
-                    onMouseLeave: g,
+                    onMouseEnter: g,
+                    onMouseLeave: j,
                     ...p
                 } = e,
                 [b, N] = i.useState(!1),
@@ -31,15 +31,15 @@ t.d(
                 }),
                 v = i.useCallback(
                     (e) => {
-                        (N(!0), j?.(e));
+                        (N(!0), g?.(e));
                     },
-                    [N, j],
+                    [N, g],
                 ),
                 C = i.useCallback(
                     (e) => {
-                        (N(!1), g?.(e));
+                        (N(!1), j?.(e));
                     },
-                    [N, g],
+                    [N, j],
                 ),
                 A = {};
             return (

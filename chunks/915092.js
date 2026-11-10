@@ -33,9 +33,9 @@ var i,
     P = n(723702),
     D = n(850670),
     O = n(206589),
-    U = n(125017);
+    G = n(125017);
 n(938796);
-var G = n(665260),
+var U = n(665260),
     w = n(574381),
     B = n(134861),
     H = n(528767),
@@ -263,7 +263,7 @@ function el(e) {
                 isGameLaunchable: d,
             } = e;
             if (l.author.id === i || !(0, K.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
-            let c = (0, U._)(t);
+            let c = (0, G._)(t);
             if (!(0, z.A)(c) || (0, W.U)(c) || (0, O.w)(n, t) || (0, D.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
@@ -271,7 +271,7 @@ function el(e) {
                 let e = (function (e) {
                     if (null == e) return null;
                     let t = e.application_id;
-                    if (null == t || !(0, G.Lt)(e.flags ?? 0, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) return null;
+                    if (null == t || !(0, U.Lt)(e.flags ?? 0, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) return null;
                     let n = H.A.getRemoteApplicationActivity(t);
                     return null == n ||
                         (0, V.e)(n) ||
@@ -282,7 +282,7 @@ function el(e) {
                                     return (0, w.m0)() ? t === o.y.ANDROID : !!(0, w.un)() && t === o.y.IOS;
                                 })(n)))
                         ? null
-                        : (0, G.Lt)(n.flags ?? 0, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)
+                        : (0, U.Lt)(n.flags ?? 0, F.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)
                           ? (n.platform ?? null)
                           : null;
                 })(t);
@@ -317,7 +317,7 @@ function el(e) {
                 !(0, Y.A)(e, F.jUm.JOIN)
             )
                 return !1;
-            let l = (0, U._)(e);
+            let l = (0, G._)(e);
             return !(!(0, z.A)(l) || (0, W.U)(l));
         })(I, t, n, c),
         ef = (0, O.w)(y, I),

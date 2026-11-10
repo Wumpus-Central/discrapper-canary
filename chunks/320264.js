@@ -27,9 +27,9 @@ var i = n(477900),
     g = n(329308),
     m = n(571694),
     T = n(47167),
-    f = n(713654),
-    N = n(503698),
-    I = n.n(N),
+    N = n(713654),
+    f = n(503698),
+    I = n.n(f),
     x = n(62986);
 let S = function (e) {
     let { value: t = 0, text: n, className: r, lowImportance: s, ...l } = e;
@@ -144,7 +144,7 @@ class Y extends r.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
-            t = (0, f.gU)(e);
+            t = (0, N.gU)(e);
         if (null == t) return null;
         let n = (0, k.Jg)(e) ?? "";
         return (0, i.jsx)("div", {

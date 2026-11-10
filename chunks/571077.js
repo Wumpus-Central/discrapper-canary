@@ -1,20 +1,20 @@
-var t = n(477900);
+var i = n(477900);
 n(582128);
 var l = n(855986),
-    a = n(34188),
-    r = n(192308),
+    r = n(34188),
+    a = n(192308),
     o = n(658575),
     d = n(123791),
     u = n(851767),
     c = n(993401),
     s = n(792996);
 function p(e) {
-    let { user: i, onClick: n, ...l } = e;
+    let { user: t, onClick: n, ...l } = e;
     return (
-        (0, d.C)(i.id),
-        (0, t.jsx)(c.FD, {
+        (0, d.C)(t.id),
+        (0, i.jsx)(c.FD, {
             action: "PRESS_APP_STOREFRONT",
-            icon: a.ShopIcon,
+            icon: r.ShopIcon,
             text: s.intl.string(s.t.V7j5aZ),
             onClick: n,
             variant: "primary",
@@ -23,20 +23,20 @@ function p(e) {
     );
 }
 n.d(
-    i,
+    t,
     {},
     {
         A: function (e) {
-            let { user: i, guildId: a, ...d } = e,
-                c = (0, l.bG)([u.A], () => u.A.getUserProfile(i.id)?.application),
+            let { user: t, guildId: r, ...d } = e,
+                c = (0, l.bG)([u.A], () => u.A.getUserProfile(t.id)?.application),
                 s = (0, o.G)(c?.id ?? "");
             return null != c && s
-                ? (0, t.jsx)(p, {
-                      user: i,
-                      guildId: a,
+                ? (0, i.jsx)(p, {
+                      user: t,
+                      guildId: r,
                       onClick: function () {
                           null != c &&
-                              (0, r.mM)(async () => {
+                              (0, a.mM)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e(426782),
                                       n.e(538855),
@@ -239,7 +239,7 @@ n.d(
                                       n.e(99534),
                                       n.e(320428),
                                   ]).then(n.bind(n, 719847));
-                                  return (i) => (0, t.jsx)(e, { appId: c.id, guildId: a, ...i });
+                                  return (t) => (0, i.jsx)(e, { appId: c.id, guildId: r, ...t });
                               });
                       },
                       ...d,

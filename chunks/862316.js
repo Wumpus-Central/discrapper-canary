@@ -12,8 +12,8 @@ var l = t(477900),
     h = t(121681),
     p = t(232042),
     x = t(906754),
-    g = t(332173),
-    j = t(37632),
+    j = t(332173),
+    g = t(37632),
     f = t(534890),
     A = t(792996),
     y = t(879386);
@@ -180,7 +180,7 @@ let eu = {
         react: (e, n, t) =>
             (0, S.dq)(e.id)
                 ? (0, l.jsxs)(
-                      g.A,
+                      j.A,
                       {
                           role: "link",
                           onClick: function () {
@@ -190,7 +190,7 @@ let eu = {
                           iconType: e.id,
                           children: [
                               n(e.mainContent, t),
-                              null != e.itemContent ? (0, l.jsx)(j.A, {}) : null,
+                              null != e.itemContent ? (0, l.jsx)(g.A, {}) : null,
                               null != e.itemContent ? n(e.itemContent, t) : null,
                           ],
                       },
@@ -388,7 +388,7 @@ function ed(e) {
                               });
                           };
                 return (0, l.jsxs)(
-                    g.A,
+                    j.A,
                     {
                         role: "link",
                         href: n.attachmentUrl,

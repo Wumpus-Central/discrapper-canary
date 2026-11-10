@@ -9,24 +9,24 @@ var l = n(477900),
     d = n(4227),
     m = n(993408),
     A = n(792996),
-    f = n(623672);
+    h = n(623672);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { skuId: t, canUsePremiumCollectibles: n, isPurchaseSection: h, isPremiumSection: E } = e,
+            let { skuId: t, canUsePremiumCollectibles: n, isPurchaseSection: E, isPremiumSection: f } = e,
                 x = (0, m.aT)(t),
                 p = (0, r.bG)([u.A, d.A], () => {
                     let e = u.A.getProduct(t),
                         n = d.A.getPurchase(t);
                     return null != n ? (0, m.gA)(n) : (0, m.G0)(e);
                 });
-            return h || (E && n)
+            return E || (f && n)
                 ? null
                 : x
                   ? (0, l.jsx)("div", {
-                        className: f.A,
+                        className: h.A,
                         children: (0, l.jsx)(o.E, { type: "new", variant: "premium", icon: s.LockIcon }),
                     })
                   : (0, l.jsx)(a.fk, {
@@ -40,7 +40,7 @@ n.d(
                                   })
                             : () => (0, l.jsx)(s.LockIcon, { size: "xxs", color: "currentColor" }),
                         color: i.A.colors.ICON_OVERLAY_DARK.css,
-                        className: f.b,
+                        className: h.b,
                         "aria-label": p ? A.intl.string(A.t.X3Ekj8) : A.intl.string(A.t.Ac5fm1),
                     });
         },

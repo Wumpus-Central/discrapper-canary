@@ -1,9 +1,9 @@
 var l = n(477900),
     i = n(503698),
     r = n.n(i),
-    o = n(194261),
-    s = n(834730),
-    a = n(792996),
+    a = n(194261),
+    o = n(834730),
+    s = n(792996),
     u = n(169655);
 n.d(
     t,
@@ -14,11 +14,11 @@ n.d(
             return (0, l.jsxs)("div", {
                 className: r()(u.v, t),
                 children: [
-                    (0, l.jsx)(o.LockIcon, { size: "xs", color: "currentColor" }),
-                    (0, l.jsx)(s.E, {
+                    (0, l.jsx)(a.LockIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsx)(o.E, {
                         variant: "body-sm/semibold",
                         className: u.Q,
-                        children: a.intl.string(a.t.KPnd2O),
+                        children: s.intl.string(s.t.KPnd2O),
                     }),
                 ],
             });

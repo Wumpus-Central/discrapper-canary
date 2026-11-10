@@ -216,8 +216,8 @@ function P(e) {
             handleSelectionChange: z,
             onSelectionChange: q,
             isOpen: Q,
-            setIsOpen: Z,
-            options: J,
+            setIsOpen: J,
+            options: Z,
             selectedOptions: ee,
             filteredOptions: et,
             query: en,
@@ -229,8 +229,8 @@ function P(e) {
         el = es && !0 !== l,
         eo = null != w ? (0, R.ZN)(j, w) : void 0,
         ed = r.useCallback(() => {
-            K || Z?.((e) => (e || v.current?.focus(), !e));
-        }, [K, Z]),
+            K || J?.((e) => (e || v.current?.focus(), !e));
+        }, [K, J]),
         ec = r.useCallback(() => {
             !0 === V && ("multiple" === x ? q([]) : q(null), ei(""), v.current?.focus());
         }, [q, x, V, ei]),
@@ -241,13 +241,13 @@ function P(e) {
             [f, ea, en],
         ),
         e_ = r.useCallback(() => {
-            K || Z?.(!0);
-        }, [Z, K]),
+            K || J?.(!0);
+        }, [J, K]),
         eE = r.useCallback(
             (e) => {
-                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), Z?.(!1), g?.(e));
+                e.relatedTarget?.closest(`[data-list-id="${j}"]`) == null && (ea(!1), J?.(!1), g?.(e));
             },
-            [g, Z, j, ea],
+            [g, J, j, ea],
         );
     r.useEffect(() => {
         es &&
@@ -257,8 +257,8 @@ function P(e) {
             }, 10));
     }, [ee, es, O]);
     let eA = r.useCallback(() => {
-            K || (Z?.(!0), v.current?.focus());
-        }, [Z, K]),
+            K || (J?.(!0), v.current?.focus());
+        }, [J, K]),
         ef = r.useCallback(() => {
             v.current?.select();
         }, []),
@@ -279,7 +279,7 @@ function P(e) {
                     case "PageDown":
                         if (
                             ((n = "PageDown" === e.key ? 10 : 1),
-                            0 === t || (e.preventDefault(), Z?.(!0), e.altKey || !Q))
+                            0 === t || (e.preventDefault(), J?.(!0), e.altKey || !Q))
                         )
                             return;
                         G((e) => {
@@ -297,12 +297,12 @@ function P(e) {
                                 let i = e - n;
                                 return i < 0 && Y ? t - 1 : Math.max(i, 0);
                             }),
-                            Z?.(!0));
+                            J?.(!0));
                         break;
                     case "Enter":
                         if ((e.preventDefault(), e.stopPropagation(), !Q)) {
                             if (0 === t) return;
-                            Z?.(!0);
+                            J?.(!0);
                             return;
                         }
                         if (null == w || t - 1 < w) return;
@@ -330,13 +330,13 @@ function P(e) {
                         G(t - 1);
                 }
             },
-            [x, H, V, X, Y, Q, N, ec, z, ee, en, Z, et, w, G],
+            [x, H, V, X, Y, Q, N, ec, z, ee, en, J, et, w, G],
         ),
         ep = r.useCallback(
             (e) => {
-                (ea(!0), ei(e.target.value), Z?.(!0), A?.(e), G(null));
+                (ea(!0), ei(e.target.value), J?.(!0), A?.(e), G(null));
             },
-            [A, ea, ei, Z, G],
+            [A, ea, ei, J, G],
         ),
         em = r.useMemo(() => {
             if (0 === ee.length) return null;
@@ -435,7 +435,7 @@ function P(e) {
                 selectionMode: x,
                 selectedItems: ee,
                 onSelectionChange: z,
-                listItems: J,
+                listItems: Z,
             }),
         ],
     });

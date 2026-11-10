@@ -1,8 +1,8 @@
 n(321073);
 var l = n(381849),
     r = n(5377),
-    i = n(191850),
-    a = n(792996);
+    a = n(191850),
+    i = n(792996);
 function s(e) {
     let t = Date.parse(e);
     return Number.isNaN(t) ? null : t;
@@ -15,7 +15,7 @@ function o(e) {
     return (t.setHours(0, 0, 0, 0), t.getTime());
 }
 function c(e) {
-    return a.intl.string("preview" === e ? i.default.Ebk40C : i.default.S65Rv3);
+    return i.intl.string("preview" === e ? a.default.Ebk40C : a.default.S65Rv3);
 }
 n.d(
     t,
@@ -32,15 +32,15 @@ n.d(
             let n = u(t);
             return "stable" === e
                 ? {
-                      title: a.intl.string(i.default.G9wD92),
-                      body: a.intl.formatToPlainString(i.default.vyxJO8, { time: n }),
-                      confirmText: a.intl.string(i.default.kap49k),
+                      title: i.intl.string(a.default.G9wD92),
+                      body: i.intl.formatToPlainString(a.default.vyxJO8, { time: n }),
+                      confirmText: i.intl.string(a.default.kap49k),
                       critical: !0,
                   }
                 : {
-                      title: a.intl.string(i.default.rR8rgj),
-                      body: a.intl.formatToPlainString(i.default.KfgzUO, { environment: c(e), time: n }),
-                      confirmText: a.intl.string(i.default.XfeFw5),
+                      title: i.intl.string(a.default.rR8rgj),
+                      body: i.intl.formatToPlainString(a.default.KfgzUO, { environment: c(e), time: n }),
+                      confirmText: i.intl.string(a.default.XfeFw5),
                       critical: !1,
                   };
         },
@@ -52,19 +52,19 @@ n.d(
                         .replace(/\s+/g, " ")
                         .trim();
                     if ("" === t || "Deploy" === t) {
-                        let e = a.intl.string(i.default.sFC5fT);
+                        let e = i.intl.string(a.default.sFC5fT);
                         return { short: e, full: e };
                     }
                     if (/^Restore version [0-9a-f]{7,40}$/.test(t) || "Already at this version" === t) {
-                        let e = a.intl.string(i.default.Vk8vB1);
+                        let e = i.intl.string(a.default.Vk8vB1);
                         return { short: e, full: e };
                     }
                     return { short: t.length > 90 ? `${t.slice(0, 89).trimEnd()}\u{2026}` : t, full: t };
                 })(e);
             return t
                 ? {
-                      short: a.intl.formatToPlainString(i.default.Z4n6LX, { title: n.short }),
-                      full: a.intl.formatToPlainString(i.default.Z4n6LX, { title: n.full }),
+                      short: i.intl.formatToPlainString(a.default.Z4n6LX, { title: n.short }),
+                      full: i.intl.formatToPlainString(a.default.Z4n6LX, { title: n.full }),
                   }
                 : n;
         },
@@ -76,23 +76,23 @@ n.d(
                 title: (function (e) {
                     switch (e.origin) {
                         case "auto_deploy":
-                            if ("stable" === e.deployEnvironment) return a.intl.string(i.default["4TpI2y"]);
-                            if ("preview" === e.deployEnvironment) return a.intl.string(i.default.NdyxPu);
-                            return a.intl.string(i.default["4JCH6A"]);
+                            if ("stable" === e.deployEnvironment) return i.intl.string(a.default["4TpI2y"]);
+                            if ("preview" === e.deployEnvironment) return i.intl.string(a.default.NdyxPu);
+                            return i.intl.string(a.default["4JCH6A"]);
                         case "undo":
-                            return a.intl.string(i.default.VjJT5R);
+                            return i.intl.string(a.default.VjJT5R);
                         default: {
                             let t = e.label.trim();
                             return "" === t || "Manual restore point" === t
-                                ? a.intl.string(i.default.ObcM6b)
-                                : a.intl.formatToPlainString(i.default["UKyQ+E"], { label: t });
+                                ? i.intl.string(a.default.ObcM6b)
+                                : i.intl.formatToPlainString(a.default["UKyQ+E"], { label: t });
                         }
                     }
                 })(e),
                 restoreToMs: e.expired ? null : n,
                 detail: [
                     null != n ? u(n) : null,
-                    null != l ? a.intl.formatToPlainString(i.default.V7YNvf, { title: l }) : null,
+                    null != l ? i.intl.formatToPlainString(a.default.V7YNvf, { title: l }) : null,
                 ]
                     .filter((e) => null != e)
                     .join(" \xb7 "),
@@ -115,8 +115,8 @@ n.d(
         },
         u4: function (e, t) {
             return t
-                ? a.intl.string(i.default.h3WBgO)
-                : a.intl.string("preview" === e ? i.default.cjJdqL : i.default.yLsAhA);
+                ? i.intl.string(a.default.h3WBgO)
+                : i.intl.string("preview" === e ? a.default.cjJdqL : a.default.yLsAhA);
         },
         v9: function (e, t, n) {
             let l = [];
@@ -134,12 +134,12 @@ n.d(
                                   : (function (e, t) {
                                         let n = o(e),
                                             l = o(t);
-                                        if (n === l) return a.intl.string(i.default.CADyoV);
+                                        if (n === l) return i.intl.string(a.default.CADyoV);
                                         let r = new Date(l);
                                         if ((r.setDate(r.getDate() - 1), n === r.getTime()))
-                                            return a.intl.string(i.default.mghe4b);
+                                            return i.intl.string(a.default.mghe4b);
                                         let s = new Date(e).getFullYear() === new Date(t).getFullYear();
-                                        return new Date(e).toLocaleDateString(a.intl.currentLocale, {
+                                        return new Date(e).toLocaleDateString(i.intl.currentLocale, {
                                             weekday: "long",
                                             month: "long",
                                             day: "numeric",

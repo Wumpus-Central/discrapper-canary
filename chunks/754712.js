@@ -105,14 +105,14 @@ function Q(e, t) {
             (0, z.xb)(e);
     }
 }
-let Z = (0, W.mj)({
+let J = (0, W.mj)({
     name: "2025-08-browser-hevc",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var J = n(400845);
-let ee = (0, J.Ay)({
+var Z = n(400845);
+let ee = (0, Z.Ay)({
         kind: "user",
         name: "2025-11-global-frame-pool-lock",
         defaultConfig: { enabled: !1 },
@@ -186,7 +186,7 @@ let eo = [
         { name: "small_NC", maxSampleRate: 16e3, filename: "krisp-nc-o-lite-v1.kef" },
         { name: "full_NC", maxSampleRate: 96e3, filename: "krisp-nc-o-med-v7-fp16.kef" },
     ],
-    ed = (0, J.Ay)({
+    ed = (0, Z.Ay)({
         kind: "user",
         name: "2025-10-low-latency-rate-control",
         defaultConfig: { enabled: !1 },
@@ -205,7 +205,7 @@ let eu = (0, W.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    e_ = (0, J.Ay)({
+    e_ = (0, Z.Ay)({
         kind: "user",
         name: "2026-07-nvenc-reconstructed-frames",
         defaultConfig: { enabled: !1 },
@@ -307,8 +307,8 @@ let ez = new I.A("MediaEngineStore"),
         max_output_noise_level_dbfs: -50,
         fixed_gain_db: 0,
     },
-    eZ = { left: 1, right: 1 },
-    eJ = 5 * eU.A.Millis.SECOND,
+    eJ = { left: 1, right: 1 },
+    eZ = 5 * eU.A.Millis.SECOND,
     e0 = 2 * eU.A.Millis.SECOND,
     e1 = 30 * eU.A.Millis.SECOND,
     e2 = "https://ciscobinary.openh264.org/libopenh264-2.7.0-linux64.8.so.bz2",
@@ -455,8 +455,8 @@ let tV = new Set(),
     tz = !0,
     tq = !1,
     tQ = !1,
-    tZ = !1,
     tJ = !1,
+    tZ = !1,
     t0 = {};
 function t1(e) {
     return (function (e) {
@@ -567,7 +567,7 @@ function t4() {
                         useQuartzCapturer: !0,
                         allowScreenCaptureKit: no(),
                         videoHookStaleFrameTimeoutMs: 500,
-                        graphicsCaptureStaleFrameTimeoutMs: eJ,
+                        graphicsCaptureStaleFrameTimeoutMs: eZ,
                         hdrCaptureMode: n,
                         enableGlobalFramePoolLock: (function (e) {
                             let { location: t, disable: n = !1 } = e;
@@ -1093,7 +1093,7 @@ class nM extends y.Ay.Store {
                         e.setExperimentFlag(e$.fd.SIGNAL_AV1_HARDWARE_DECODE, !0),
                         e.setExperimentFlag(e$.fd.H265_HARDWARE_DECODE_AVAILABLE, !0));
                 if ((0, p.HZ)()) {
-                    let { enabled: t } = Z.getConfig({ location: "MediaEngineStore" });
+                    let { enabled: t } = J.getConfig({ location: "MediaEngineStore" });
                     e.setExperimentFlag(e$.fd.BROWSER_HEVC, t);
                 }
                 for (let i of ((0, p.uF)() &&
@@ -1313,7 +1313,7 @@ class nM extends y.Ay.Store {
                 if (!e8.supports(e$.O5.VAAPI) || window.DiscordNative?.processUtils?.getSystemInfo == null) return;
                 let e = await window.DiscordNative.processUtils.getSystemInfo();
                 (e.electronGPUInfo?.gpuDevice ?? []).some((e) => 4098 === e.vendorId) &&
-                    ((tZ = !0), (tQ = e8.supports(e$.O5.GAMESCOPE_CAPTURE)));
+                    ((tJ = !0), (tQ = e8.supports(e$.O5.GAMESCOPE_CAPTURE)));
             })(),
             l.reset(),
             (0, eb.w)().then((e) => {
@@ -1426,8 +1426,8 @@ class nM extends y.Ay.Store {
             nR(),
             (0, p.xl)() &&
                 p.isPlatformEmbedded &&
-                !tJ &&
-                ((tJ = !0),
+                !tZ &&
+                ((tZ = !0),
                 setTimeout(async function e() {
                     let t = await new Promise((e) => {
                         m.Ay.pollQueueMetrics((t) => {
@@ -1630,7 +1630,7 @@ class nM extends y.Ay.Store {
     getLocalPan(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e$.x.DEFAULT,
             n = t3(t).localPans[e];
-        return null != n ? n : eZ;
+        return null != n ? n : eJ;
     }
     getLocalVolume(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e$.x.DEFAULT,
@@ -1833,7 +1833,7 @@ class nM extends y.Ay.Store {
         return e8.supports(e$.O5.NATIVE_SCREENSHARE_PICKER);
     }
     getUseVaapiEncoder() {
-        return tZ;
+        return tJ;
     }
     getVideoEncoderExperiments(e, t) {
         let n = ["unk"];
@@ -2483,7 +2483,7 @@ let nw = (i = new nM(P.h, {
                 useQuartzCapturer: !0,
                 allowScreenCaptureKit: no(),
                 videoHookStaleFrameTimeoutMs: 500,
-                graphicsCaptureStaleFrameTimeoutMs: eJ,
+                graphicsCaptureStaleFrameTimeoutMs: eZ,
                 hdrCaptureMode: d,
                 videoHookAllowDx12: u,
                 minCaptureWidth: _,

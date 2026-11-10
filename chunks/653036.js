@@ -8,8 +8,8 @@ var l = n(430392),
     s = n(177953),
     c = n(950305),
     d = n(331322),
-    p = n(834730),
-    f = n(191850),
+    f = n(834730),
+    p = n(191850),
     h = n(792996),
     m = n(32924);
 let g = {
@@ -30,10 +30,10 @@ n.d(
             return (0, r.jsxs)(d.B, {
                 gap: 8,
                 children: [
-                    (0, r.jsx)(p.E, {
+                    (0, r.jsx)(f.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
-                        children: h.intl.string(f.default["kG/2e8"]),
+                        children: h.intl.string(p.default["kG/2e8"]),
                     }),
                     (0, r.jsx)("div", {
                         className: m.a,
@@ -45,7 +45,7 @@ n.d(
                                     className: m.n,
                                     children: [
                                         (0, r.jsx)(e, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
-                                        (0, r.jsx)(p.E, {
+                                        (0, r.jsx)(f.E, {
                                             variant: "body-sm/medium",
                                             color: "text-subtle",
                                             children: t.text,

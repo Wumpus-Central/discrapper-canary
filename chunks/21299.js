@@ -1,7 +1,7 @@
 (n.d(t, {
     U_: () => K,
     I: () => M,
-    Yq: () => U,
+    Yq: () => G,
     T0: () => L,
     ri: () => V,
     Jo: () => D,
@@ -9,7 +9,7 @@
     Ge: () => O,
     H9: () => R,
     Ck: () => z,
-    VL: () => G,
+    VL: () => U,
     UY: () => B,
     Am: () => H,
     r4: () => w,
@@ -90,10 +90,10 @@ function D(e, t) {
 function O(e, t) {
     return P(T("referencedAvatarProfile", e, t));
 }
-function U(e, t) {
+function G(e, t) {
     return P(T("interactionAvatarProfile", e, t));
 }
-function G(e, t, s, o) {
+function U(e, t, s, o) {
     let { id: d } = t,
         { id: u, flags: m } = e,
         h = (0, r.Lt)(m, p.pr7.EPHEMERAL),

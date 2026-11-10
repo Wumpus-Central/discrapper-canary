@@ -15,21 +15,21 @@ var n = l(477900),
 l(518477);
 var p = l(996988),
     v = l(792996),
-    x = l(247261);
-let E = (0, u.FT)(u._3.SIZE_16);
+    b = l(247261);
+let x = (0, u.FT)(u._3.SIZE_16);
 l.d(
     t,
     {},
     {
         A: function (e) {
-            let { user: t, guild: b, nick: j, onSelect: y } = e,
+            let { user: t, guild: E, nick: j, onSelect: y } = e,
                 { theme: C, themeType: M } = (0, g.E)(),
-                S = t.hasAvatarForGuild(b.id),
+                S = t.hasAvatarForGuild(E.id),
                 I = i.useId(),
-                N = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: b.name });
+                N = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: E.name });
             return (0, n.jsxs)(o.D, {
                 focusProps: M === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-                className: x.nM,
+                className: b.nM,
                 "aria-label": N,
                 "aria-describedby": S || null != j ? I : void 0,
                 onClick: y,
@@ -628,16 +628,16 @@ l.d(
                             l.e(415046),
                             l.e(935277),
                         ]).then(l.bind(l, 871638));
-                        return (t) => (0, n.jsx)(e, { ...t, guild: b });
+                        return (t) => (0, n.jsx)(e, { ...t, guild: E });
                     });
                 },
                 children: [
                     (0, n.jsx)(A.Ay, {
                         "aria-hidden": !0,
                         tabIndex: -1,
-                        guild: b,
+                        guild: E,
                         showBadge: !0,
-                        className: null != b.icon ? x.Kk : x.lN,
+                        className: null != E.icon ? b.Kk : b.lN,
                         badgeStrokeColor: (0, s.M)(C)
                             ? a.A.unsafe_rawColors.PRIMARY_600.css
                             : a.A.unsafe_rawColors.WHITE.css,
@@ -647,25 +647,25 @@ l.d(
                         active: !0,
                     }),
                     (0, n.jsxs)("div", {
-                        className: x.zH,
+                        className: b.zH,
                         children: [
-                            (0, n.jsx)("div", { className: x.UU, children: b.name }),
+                            (0, n.jsx)("div", { className: b.UU, children: E.name }),
                             S &&
                                 (0, n.jsxs)("div", {
                                     id: I,
-                                    className: x.C9,
+                                    className: b.C9,
                                     children: [
                                         (0, n.jsx)(c.eu, {
-                                            src: t.getAvatarURL(b.id, E),
+                                            src: t.getAvatarURL(E.id, x),
                                             size: u._3.SIZE_16,
-                                            className: x.my,
+                                            className: b.my,
                                             "aria-hidden": !0,
                                         }),
                                         (0, n.jsx)(f.E, {
                                             variant: "body-xs/medium",
                                             children: (0, n.jsx)(r.A, {
                                                 delay: 300,
-                                                children: j ?? h.Ay.getName(b.id, void 0, t),
+                                                children: j ?? h.Ay.getName(E.id, void 0, t),
                                             }),
                                         }),
                                     ],

@@ -10,8 +10,8 @@ var s,
     m = t(408278),
     h = t(39623),
     x = t(952270),
-    j = t(939249),
-    g = t(871309),
+    g = t(939249),
+    j = t(871309),
     p = t(171576),
     b = t(36149),
     N = t(390248),
@@ -25,11 +25,11 @@ function E(e) {
         s = l.useRef(null);
     return ((0, c.f)(s, n), (0, i.jsx)("span", { ref: s, "aria-hidden": n, className: C.AV, children: t }));
 }
-function S(e) {
+function y(e) {
     let { className: n } = e;
     return (0, i.jsx)("div", { className: r()(C.pR, n), children: v.intl.string(v.t["F+x38C"]) });
 }
-function y(e) {
+function S(e) {
     let { className: n, isSingleMosaicItem: t, obscureOnly: s } = e;
     return (0, i.jsx)("div", {
         className: r()(C.W5, n),
@@ -53,13 +53,13 @@ function O(e) {
     let { reason: n = I.Oc.SPOILER, className: t, isSingleMosaicItem: s = !1 } = e;
     switch (n) {
         case I.Oc.SPOILER:
-            return (0, i.jsx)(S, { className: t });
+            return (0, i.jsx)(y, { className: t });
         case I.Oc.EXPLICIT_CONTENT:
         case I.Oc.GORE_CONTENT:
         case I.Oc.SELF_HARM_CONTENT:
-            return (0, i.jsx)(y, { isSingleMosaicItem: s, className: t });
+            return (0, i.jsx)(S, { isSingleMosaicItem: s, className: t });
         case I.Oc.POTENTIAL_EXPLICIT_CONTENT:
-            return (0, i.jsx)(y, { isSingleMosaicItem: s, className: t, obscureOnly: !0 });
+            return (0, i.jsx)(S, { isSingleMosaicItem: s, className: t, obscureOnly: !0 });
         default:
             return (0, f.xb)(n);
     }
@@ -96,7 +96,7 @@ class _ extends l.PureComponent {
             (0, N.Wi)({ obscure: this.state.visible }),
             this.props.shouldAgeVerify)
         )
-            return void g.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.OBSCURED_MEDIA });
+            return void j.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.OBSCURED_MEDIA });
         let { onToggleObscurity: n } = this.props;
         (null != n && n(e), this.setState((e) => ({ visible: !e.visible })));
     };
@@ -141,7 +141,7 @@ class _ extends l.PureComponent {
                                     }),
                           ],
                       })
-                    : (0, i.jsxs)(j.D, {
+                    : (0, i.jsxs)(g.D, {
                           onClick: h ? void 0 : this.removeObscurity,
                           "aria-label": h ? void 0 : this.ariaLabel,
                           "aria-expanded": h,
@@ -192,7 +192,7 @@ class _ extends l.PureComponent {
                                     }),
                           ],
                       })
-                    : (0, i.jsxs)(j.D, {
+                    : (0, i.jsxs)(g.D, {
                           "aria-label": this.ariaLabel,
                           "aria-expanded": u,
                           className: r()(n, C.ur, C.q2, C.x, { [C.R]: !u }),
@@ -224,7 +224,7 @@ class _ extends l.PureComponent {
                 let m = u || d || !s,
                     h = l.Children.toArray(e(m)),
                     x = l.Children.map(h, (e) => (l.isValidElement(e) && null != n ? n(e, m) : e));
-                return (0, i.jsx)(j.D, {
+                return (0, i.jsx)(g.D, {
                     tag: "span",
                     onClick: m ? void 0 : this.removeObscurity,
                     onMouseEnter: o,
@@ -271,9 +271,9 @@ class _ extends l.PureComponent {
         }
     }
 }
-function R(e) {
+function G(e) {
     let n = (0, N._R)() && null != e.reason && I.tY.has(e.reason),
         t = (0, b.yM)();
     return (0, i.jsx)(_, { ...e, shouldAgeVerify: n, isVerifiedTeen: t });
 }
-((R.Types = A), (R.Reasons = I.Oc), t.d(n, {}, { Ay: R, Bs: k }));
+((G.Types = A), (G.Reasons = I.Oc), t.d(n, {}, { Ay: G, Bs: k }));

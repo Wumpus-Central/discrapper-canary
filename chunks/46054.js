@@ -4,58 +4,58 @@ var t = r(435558),
     a = r(862316),
     i = r(605275),
     u = r(551965);
-let s = null,
-    c = l.aV;
-s = r(937767).A;
+let c = null,
+    s = l.aV;
+c = r(937767).A;
 let A = ["url", "autolink", "link", "mailto", "tel"];
 function d(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         t = {};
     return (
-        null != e.mention && null != s && (t = { mention: !0 === r.shouldStopPropagation ? (0, a.xS)(s) : s }),
+        null != e.mention && null != c && (t = { mention: !0 === r.shouldStopPropagation ? (0, a.xS)(c) : c }),
         (0, u.A)([e, ...n, t])
     );
 }
-let h = { enableBuildOverrides: !1, enableEmojiClick: !0 },
-    y = o().once(() => d(i.Ay.RULES, [(0, a.Ay)({ enableBuildOverrides: !0 })])),
-    f = o().once(() => (0, u.A)([y(), (0, a.r3)()])),
-    p = o().once(() => o().omit(d(i.Ay.RULES, [(0, a.Ay)(h)]), "paragraph", "newline"));
-function g() {
+let y = { enableBuildOverrides: !1, enableEmojiClick: !0 },
+    h = o().once(() => d(i.Ay.RULES, [(0, a.Ay)({ enableBuildOverrides: !0 })])),
+    p = o().once(() => (0, u.A)([h(), (0, a.r3)()])),
+    f = o().once(() => o().omit(d(i.Ay.RULES, [(0, a.Ay)(y)]), "paragraph", "newline"));
+function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, a.Ay)({
-        ...h,
+        ...y,
         emojiTooltipPosition: "bottom",
         shouldCloseDefaultModals: !0,
         shouldStopPropagation: !0,
         ...e,
     });
 }
-let E = o().once(() =>
-        d(i.Ay.CHANNEL_TOPIC_RULES, [g(), (0, a.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }], {
+let g = o().once(() =>
+        d(i.Ay.CHANNEL_TOPIC_RULES, [E(), (0, a.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }], {
             shouldStopPropagation: !0,
         }),
     ),
     S = o().once(() =>
         d(
             i.Ay.CHANNEL_TOPIC_RULES,
-            [g({ emojiFocusable: !1 }), (0, a.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }],
+            [E({ emojiFocusable: !1 }), (0, a.r3)(), { codeBlock: { react: i.Ay.RULES.text.react } }],
             { shouldStopPropagation: !0 },
         ),
     ),
-    T = o().once(() => d(i.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, a.Ay)({ ...h, enableEmojiClick: !1 })])),
-    m = o().once(() => d(i.Ay.EMBED_TITLE_RULES, [(0, a.Ay)(h)])),
-    v = o().once(() => o().omit(d(i.Ay.EMBED_TITLE_RULES, [(0, a.Ay)(h)]), A)),
-    L = o().once(() => d(i.Ay.INLINE_REPLY_RULES, [(0, a.Ay)(h)])),
-    R = o().once(() => d(i.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, a.Ay)(h)])),
+    T = o().once(() => d(i.Ay.VOICE_CHANNEL_STATUS_RULES, [(0, a.Ay)({ ...y, enableEmojiClick: !1 })])),
+    v = o().once(() => d(i.Ay.EMBED_TITLE_RULES, [(0, a.Ay)(y)])),
+    m = o().once(() => o().omit(d(i.Ay.EMBED_TITLE_RULES, [(0, a.Ay)(y)]), A)),
+    R = o().once(() => d(i.Ay.INLINE_REPLY_RULES, [(0, a.Ay)(y)])),
+    L = o().once(() => d(i.Ay.GUILD_VERIFICATION_FORM_RULES, [(0, a.Ay)(y)])),
     I = o().once(() => {
-        let e = { ...h, shouldStopPropagation: !0 };
+        let e = { ...y, shouldStopPropagation: !0 };
         return d(i.Ay.GUILD_EVENT_RULES, [(0, a.Ay)(e)], e);
     }),
-    b = o().once(() => o().omit(I(), "subtext")),
-    C = o().once(() => d(i.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Ay)(h)])),
-    _ = o().once(() =>
+    _ = o().once(() => o().omit(I(), "subtext")),
+    k = o().once(() => d(i.Ay.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Ay)(y)])),
+    C = o().once(() =>
         o().omit(
-            d(i.Ay.RULES, [(0, a.Ay)(h)]),
+            d(i.Ay.RULES, [(0, a.Ay)(y)]),
             "paragraph",
             "newline",
             "strong",
@@ -68,57 +68,57 @@ let E = o().once(() =>
             ...A,
         ),
     ),
-    k = { text: i.Ay.RULES.text },
-    U = o().once(() => c(y())),
-    x = o().once(() => c(f())),
-    M = o().once(() => c(E())),
-    w = o().once(() => c(S())),
-    N = o().once(() => c(T())),
-    P = o().once(() => c(m())),
-    j = o().once(() => c(v())),
-    G = o().once(() => c(L())),
-    O = o().once(() => c(R())),
-    D = o().once(() => c(I())),
-    B = o().once(() => c(C())),
-    F = o().once(() => c(p())),
-    V = o().once(() => l.X(y())),
-    X = o().once(() => l.X(E())),
-    H = o().once(() => l.X(m())),
-    W = o().once(() => l.X(v())),
-    Y = o().once(() => l.X(L())),
-    $ = o().once(() => l.X(C())),
+    U = { text: i.Ay.RULES.text },
+    b = o().once(() => s(h())),
+    x = o().once(() => s(p())),
+    M = o().once(() => s(g())),
+    N = o().once(() => s(S())),
+    w = o().once(() => s(T())),
+    P = o().once(() => s(v())),
+    j = o().once(() => s(m())),
+    G = o().once(() => s(R())),
+    O = o().once(() => s(L())),
+    B = o().once(() => s(I())),
+    D = o().once(() => s(k())),
+    F = o().once(() => s(f())),
+    V = o().once(() => l.X(h())),
+    X = o().once(() => l.X(g())),
+    H = o().once(() => l.X(v())),
+    W = o().once(() => l.X(m())),
+    Y = o().once(() => l.X(R())),
+    $ = o().once(() => l.X(k())),
     q = {
         combineAndInjectMentionRule: d,
         createReactRules: a.Ay,
-        defaultReactRuleOptions: h,
+        defaultReactRuleOptions: y,
         get defaultRules() {
-            return y();
+            return h();
         },
         get topicRules() {
-            return E();
+            return g();
         },
         get guildEventRules() {
             return I();
         },
         get guildEventLocationRules() {
-            return b();
-        },
-        get notifCenterV2MessagePreviewRules() {
             return _();
         },
-        lockscreenWidgetMessageRules: k,
+        get notifCenterV2MessagePreviewRules() {
+            return C();
+        },
+        lockscreenWidgetMessageRules: U,
         astParserFor: l.X,
-        reactParserFor: c,
+        reactParserFor: s,
         parse: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return U()(...n);
+            return b()(...n);
         },
         parseRichEmbedText: (e, n, r, t) => x()(e, n, { allowGameMentions: !0, ...r }, t),
         parseTopic: (e, n, r, t) => M()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
-        parseTruncatedTopic: (e, n, r, t) => w()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
+        parseTruncatedTopic: (e, n, r, t) => N()(e, n, { allowLinks: !0, allowGameMentions: !0, ...r }, t),
         parseVoiceChannelStatus: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return N()(...n);
+            return w()(...n);
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
@@ -138,11 +138,11 @@ let E = o().once(() =>
         },
         parseGuildEventDescription: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return D()(...n);
+            return B()(...n);
         },
         parseAutoModerationSystemMessage: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return B()(...n);
+            return D()(...n);
         },
         parseForumPostGuidelines: function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];

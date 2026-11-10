@@ -27,10 +27,10 @@ function A(e) {
     let p = (0, l.Kj)(r),
         { name: g, rarity: m } = _,
         { color: T } = (0, u.ag)(m),
-        f = (0, s.M)(A) ? C : E,
-        N = (p.size - p.offset - 2 * p.stroke) * 0.8,
+        N = (0, s.M)(A) ? C : E,
+        f = (p.size - p.offset - 2 * p.stroke) * 0.8,
         I = p.size - p.stroke,
-        x = { width: 0.4 * N, height: 0.4 * N },
+        x = { width: 0.4 * f, height: 0.4 * f },
         S = { width: x.width + 1, height: x.height + 1, right: p.stroke + 1, bottom: p.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: h.kL,
@@ -39,13 +39,13 @@ function A(e) {
         children: [
             (0, i.jsx)("div", {
                 className: h.r5,
-                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? T : f.trophy, width: N, height: N }),
+                children: (0, i.jsx)(a.TrophyIcon, { size: "custom", color: n ? T : N.trophy, width: f, height: f }),
             }),
             !n &&
                 (0, i.jsx)("div", {
                     className: h.dq,
                     style: S,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: f.locked, ...x }),
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...x }),
                 }),
             n &&
                 m === u.md.LEGENDARY &&

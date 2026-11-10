@@ -17,7 +17,7 @@
     jh: () => es,
     r8: () => eI,
     qY: () => eg,
-    CV: () => Z,
+    CV: () => J,
     vD: () => Q,
     zh: () => ey,
     qV: () => eD,
@@ -26,7 +26,7 @@
     QG: () => eh,
     Gt: () => eu,
     UZ: () => ec,
-    Ov: () => J,
+    Ov: () => Z,
     lx: () => eE,
     R2: () => et,
     Gn: () => ef,
@@ -291,10 +291,10 @@ async function Q(e) {
     }
     return { errorHints: [] };
 }
-async function Z(e) {
+async function J(e) {
     await l.Bo.post({ url: P.Rsh.QUEST_ON_CONSOLE_STOP(e), rejectWithError: !1 });
 }
-async function J() {
+async function Z() {
     await l.Bo.del({ url: P.Rsh.QUESTS_RESET_RECENT_QUEST_COMPLETIONS, rejectWithError: !1 });
 }
 async function ee() {

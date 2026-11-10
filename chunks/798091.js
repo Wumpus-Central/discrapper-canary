@@ -17,7 +17,7 @@ function A(e) {
         { enabled: p } = (0, d.K)({ location: n }),
         g = (0, r.bG)([l.default], () => l.default.getId()),
         m = null != (t = (0, r.bG)([l.default], () => l.default.getId())) && u.default.age(t) >= h.I,
-        { hasFetchedPaymentSources: T, hasValidPaymentMethod: f } = (0, r.cf)(
+        { hasFetchedPaymentSources: T, hasValidPaymentMethod: N } = (0, r.cf)(
             [o.A],
             () => ({
                 hasFetchedPaymentSources: o.A.hasFetchedPaymentSources,
@@ -30,8 +30,8 @@ function A(e) {
             }),
             [A],
         ),
-        N = p && m,
-        I = N && _;
+        f = p && m,
+        I = f && _;
     return (
         i.useEffect(() => {
             !I ||
@@ -43,6 +43,6 @@ function A(e) {
                     null == e && (E = g);
                 }));
         }, [I, g]),
-        N && E !== g && T && !f
+        f && E !== g && T && !N
     );
 }

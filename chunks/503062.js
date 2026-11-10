@@ -1,72 +1,72 @@
-var i = l(477900),
-    a = l(582128),
-    s = l(503698),
-    n = l.n(s),
-    r = l(855986),
-    d = l(778712),
-    u = l(97808),
-    o = l(939249),
+var n = l(477900),
+    i = l(582128),
+    a = l(503698),
+    r = l.n(a),
+    s = l(855986),
+    u = l(778712),
+    o = l(97808),
+    d = l(939249),
     c = l(935154),
     f = l(442433),
-    A = l(297413),
-    m = l(714114),
+    m = l(297413),
+    A = l(714114),
     h = l(342312),
-    p = l(178418),
-    g = l(87664),
+    g = l(178418),
+    p = l(87664),
     v = l(449582),
-    x = l(88686),
-    j = l(214881),
-    b = l(290863),
-    y = l(427262),
-    C = l(253400),
-    E = l(854627),
-    I = l(939496),
-    N = l(652215),
-    S = l(996988),
-    M = l(792996),
-    _ = l(135650);
-let w = d._3.SIZE_40,
-    R = C.Ay.getEnableHardwareAcceleration();
+    b = l(88686),
+    x = l(214881),
+    E = l(290863),
+    j = l(427262),
+    y = l(253400),
+    C = l(854627),
+    M = l(939496),
+    S = l(652215),
+    I = l(996988),
+    N = l(792996),
+    T = l(135650);
+let w = u._3.SIZE_40,
+    _ = y.Ay.getEnableHardwareAcceleration();
 l.d(
     t,
     {},
     {
         A: function (e) {
-            let { user: t, status: s, guildId: d, channelId: C, onSelect: T } = e,
-                { theme: k, themeType: F } = (0, I.E)(),
-                L = a.useMemo(() => t.isNonUserBot() || (0, p.c)(t, C), [t, C]),
-                { activities: U, isMobileOnline: P } = (0, r.cf)([b.A], () => ({
-                    activities: b.A.getActivities(t.id),
-                    isMobileOnline: b.A.isMobileOnline(t.id),
+            let { user: t, status: a, guildId: u, channelId: y, onSelect: L } = e,
+                { theme: k, themeType: R } = (0, M.E)(),
+                P = i.useMemo(() => t.isNonUserBot() || (0, g.c)(t, y), [t, y]),
+                { activities: F, isMobileOnline: U } = (0, s.cf)([E.A], () => ({
+                    activities: E.A.getActivities(t.id),
+                    isMobileOnline: E.A.isMobileOnline(t.id),
                 })),
-                D = (0, g.A)(t.id),
-                { voiceChannel: O } = (0, m.Ay)({ userId: t.id, guildId: d }),
-                [z, G] = a.useState(!1),
+                D = (0, p.A)(t.id),
+                { voiceChannel: O } = (0, A.Ay)({ userId: t.id, guildId: u }),
+                [G, z] = i.useState(!1),
                 {
                     avatarSrc: W,
-                    avatarDecorationSrc: H,
-                    eventHandlers: K,
-                } = (0, E.A)({ userId: t.id, guildId: d, size: w, animateOnHover: !z }),
-                $ = R ? u.Js : u.eu,
-                B = a.useRef(null),
-                Y = a.useId(),
-                Z = (0, v.r)({ user: t, guildId: d }),
-                q = (0, y.tx)(t),
-                Q = L ? null : (0, y.MU)(s, { isMobile: P }),
-                V =
-                    null != Q
-                        ? M.intl.formatToPlainString(M.t["9Gofqp"], { name: q, presence: Q })
-                        : M.intl.formatToPlainString(M.t.fGlxFS, { name: q }),
-                J = a.useCallback(() => G(!0), []),
-                X = a.useCallback(() => G(!1), []);
-            return (0, i.jsxs)(o.D, {
-                onMouseEnter: J,
+                    avatarDecorationSrc: Z,
+                    eventHandlers: H,
+                } = (0, C.A)({ userId: t.id, guildId: u, size: w, animateOnHover: !G }),
+                B = _ ? o.Js : o.eu,
+                K = i.useRef(null),
+                Y = i.useId(),
+                $ = (0, v.r)({ user: t, guildId: u }),
+                J = (0, j.tx)(t),
+                q = P ? null : (0, j.MU)(a, { isMobile: U }),
+                Q =
+                    null != q
+                        ? N.intl.formatToPlainString(N.t["9Gofqp"], { name: J, presence: q })
+                        : N.intl.formatToPlainString(N.t.fGlxFS, { name: J }),
+                V = i.useCallback(() => z(!0), []),
+                X = i.useCallback(() => z(!1), []);
+            return (0, n.jsxs)(d.D, {
+                onMouseEnter: V,
                 onMouseLeave: X,
-                focusProps: F === S.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-                className: n()(_.nM, { [_.EY]: null != Z }),
-                "aria-label": V,
+                focusProps: R === I.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+                className: r()(T.nM, { [T.EY]: null != $ }),
+                "aria-label": Q,
                 "aria-describedby": Y,
-                onClick: T,
+                onClick: L,
                 onContextMenu: function (e) {
                     (0, f.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -83,46 +83,46 @@ l.d(
                             l.e(856753),
                             l.e(532418),
                         ]).then(l.bind(l, 668569));
-                        return (l) => (0, i.jsx)(e, { ...l, user: t });
+                        return (l) => (0, n.jsx)(e, { ...l, user: t });
                     });
                 },
                 children: [
-                    (0, i.jsx)(j.A, {
-                        nameplate: z ? Z : null,
-                        hovered: z,
-                        content: B,
-                        placement: x.u.MUTUAL_FRIENDS_LIST,
+                    (0, n.jsx)(x.A, {
+                        nameplate: G ? $ : null,
+                        hovered: G,
+                        content: K,
+                        placement: b.u.MUTUAL_FRIENDS_LIST,
                     }),
-                    (0, i.jsxs)("div", {
-                        ref: B,
-                        className: _.Qs,
+                    (0, n.jsxs)("div", {
+                        ref: K,
+                        className: T.Qs,
                         children: [
-                            (0, i.jsx)($, {
-                                ...K,
+                            (0, n.jsx)(B, {
+                                ...H,
                                 src: W,
-                                avatarDecoration: H,
+                                avatarDecoration: Z,
                                 "aria-hidden": !0,
                                 size: w,
-                                status: L ? N.clD.UNKNOWN : s,
-                                statusBackdropColor: L ? void 0 : (0, c.C$)(k),
-                                isMobile: P,
-                                className: _.my,
+                                status: P ? S.clD.UNKNOWN : a,
+                                statusBackdropColor: P ? void 0 : (0, c.C$)(k),
+                                isMobile: U,
+                                className: T.my,
                             }),
-                            (0, i.jsxs)("div", {
-                                className: _.zH,
+                            (0, n.jsxs)("div", {
+                                className: T.zH,
                                 children: [
-                                    (0, i.jsx)(A.A, {
+                                    (0, n.jsx)(m.A, {
                                         user: t,
-                                        className: _.Tc,
-                                        usernameClass: _.QC,
-                                        discriminatorClass: _.D2,
+                                        className: T.Tc,
+                                        usernameClass: T.QC,
+                                        discriminatorClass: T.D2,
                                         showGuildTag: !0,
                                     }),
-                                    (0, i.jsx)("div", {
+                                    (0, n.jsx)("div", {
                                         id: Y,
-                                        children: (0, i.jsx)(h.A, {
+                                        children: (0, n.jsx)(h.A, {
                                             user: t,
-                                            activities: U,
+                                            activities: F,
                                             applicationStream: D,
                                             voiceChannel: O,
                                         }),

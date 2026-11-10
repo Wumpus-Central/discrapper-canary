@@ -657,8 +657,8 @@ var e0 = n(554146),
     e2 = n(192308),
     e5 = n(28863),
     e3 = n(695366),
-    e8 = n(834730),
-    e6 = n(789645),
+    e6 = n(834730),
+    e8 = n(789645),
     e4 = n(565645),
     e9 = n(775602),
     e7 = n(826673),
@@ -716,13 +716,13 @@ function ts(e) {
                       color: "currentColor",
                       className: tr.QW,
                   }),
-                  (0, l.jsx)(e8.E, { variant: "body-sm/medium", color: "text-default", className: tr.L5, children: p }),
+                  (0, l.jsx)(e6.E, { variant: "body-sm/medium", color: "text-default", className: tr.L5, children: p }),
                   (0, l.jsx)(I.D, {
                       className: tr.b,
                       onClick: function () {
                           return (0, e7.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
                       },
-                      children: (0, l.jsx)(e6.XSmallIcon, { size: "xs", color: "currentColor" }),
+                      children: (0, l.jsx)(e8.XSmallIcon, { size: "xs", color: "currentColor" }),
                   }),
               ],
           });
@@ -774,7 +774,7 @@ function tf(e) {
                 onClick: () => (null != i ? i() : td(t.id)),
                 children: [
                     (0, l.jsx)(tu.PlusSmallIcon, { size: "sm", color: "currentColor" }),
-                    (0, l.jsx)(e8.E, {
+                    (0, l.jsx)(e6.E, {
                         variant: "body-xs/semibold",
                         color: a ? "currentColor" : "text-muted",
                         children: eG.intl.string(eG.t["8Fu/S7"]),
@@ -1303,14 +1303,14 @@ function tA(e) {
             },
             [eK, p, B],
         ),
-        e8 = i.useCallback(() => {
+        e6 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
             null != e && U(e);
         }, []),
-        e6 = i.useCallback(() => {
+        e8 = i.useCallback(() => {
             let e = (0, W.Dd)(ej.PremiumTypes.TIER_2);
-            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
-        }, [e8]),
+            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e6 });
+        }, [e6]),
         e4 = i.useCallback((e) => (e3(e, t) ? 65 : 32), [t, e3]),
         e9 = i.useCallback(
             (e) => {
@@ -1436,7 +1436,7 @@ function tA(e) {
                 eq
                     ? (0, l.jsx)(ee.d, {
                           showUpsell: eB,
-                          text: e6(),
+                          text: e8(),
                           button: to(),
                           buttonAnalyticsObject: { section: ev.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(en.l, {
@@ -1447,7 +1447,7 @@ function tA(e) {
                           }),
                       })
                     : null,
-            [e6, to, eq, eB],
+            [e8, to, eq, eB],
         ),
         tc = i.useCallback(
             (e) =>

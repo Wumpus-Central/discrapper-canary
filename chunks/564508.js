@@ -273,18 +273,18 @@ function $(e) {
             ),
             !0
         );
-    let { host: q, hostname: Q, pathname: Z, search: J, hash: ee } = H.A.toURLSafe(e) ?? {},
+    let { host: q, hostname: Q, pathname: J, search: Z, hash: ee } = H.A.toURLSafe(e) ?? {},
         et = H.A.isDiscordHostname(Q ?? null) || H.A.isDiscordLocalhost(q ?? null, Q ?? null);
-    if (et && (Z?.startsWith("/application-directory") || Z?.startsWith("/discovery/applications"))) {
-        let e = Z.split("/"),
-            t = Z?.startsWith("/discovery/applications"),
+    if (et && (J?.startsWith("/application-directory") || J?.startsWith("/discovery/applications"))) {
+        let e = J.split("/"),
+            t = J?.startsWith("/discovery/applications"),
             i = e[t ? 3 : 2],
             r = "search" === i,
             a = t && "categories" === i && "featured" !== e[4];
         return (t) => {
             let i, s, l;
             if ((t?.preventDefault(), r)) {
-                let e = new URLSearchParams(J);
+                let e = new URLSearchParams(Z);
                 ((i = e.get("q") ?? void 0), (s = e.get("category_id") ?? void 0), (l = e.get("page") ?? void 0));
             } else a && (s = e[4]);
             return (
@@ -304,14 +304,14 @@ function $(e) {
             );
         };
     }
-    if (null != Z && et && H.A.isAppRoute(Z)) {
+    if (null != J && et && H.A.isAppRoute(J)) {
         let e = { navigationReplace: !1, openChannel: !0 };
         return (
-            null != J && (e.search = J), null != ee && (e.hash = ee), (t) => (t?.preventDefault(), (0, O.A)(Z, e), !0)
+            null != Z && (e.search = Z), null != ee && (e.hash = ee), (t) => (t?.preventDefault(), (0, O.A)(J, e), !0)
         );
     }
-    if (et && Z?.startsWith("/users/")) {
-        let e = Z.match(/^\/users\/(\d+)/);
+    if (et && J?.startsWith("/users/")) {
+        let e = J.match(/^\/users\/(\d+)/);
         if (null != e) {
             let t = e[1];
             return (e) => (
@@ -326,7 +326,7 @@ function $(e) {
             );
         }
     }
-    if (null != Z && et) {
+    if (null != J && et) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: i } = n(610056),
             r = t(e);
         if (null != r)
@@ -339,8 +339,8 @@ function $(e) {
                 !0
             );
     }
-    let en = (0, C.SK)(Z);
-    if (null != Z && et && null != en)
+    let en = (0, C.SK)(J);
+    if (null != J && et && null != en)
         return (e) => {
             e?.preventDefault();
             let { guildId: t, guildEventId: i } = en;
@@ -376,18 +376,18 @@ function $(e) {
                 !0
             );
         };
-    if (et && Z?.startsWith("/settings/")) {
+    if (et && J?.startsWith("/settings/")) {
         let { openUserSettings: e } = n(766075),
             { parseSettingsUrl: t, trackParseSettingsUrl: i } = n(718446);
         return (n) => {
             n?.preventDefault();
-            let r = t({ path: Z, search: J });
+            let r = t({ path: J, search: Z });
             return (
                 i(r, "link_click"), e(r.target, { analyticsLocations: a, path: r.path, searchParams: r.params }), !0
             );
         };
     }
-    if (et && Z === W.BVt.FEATURE("badges"))
+    if (et && J === W.BVt.FEATURE("badges"))
         return (e) => (
             e?.preventDefault(),
             n
@@ -399,9 +399,9 @@ function $(e) {
                 }),
             !0
         );
-    if (et && Z?.startsWith("/playground")) {
+    if (et && J?.startsWith("/playground")) {
         let { parsePlaygroundUrl: e } = n(682492),
-            { collection: t, story: i, controlOverrides: r } = e(Z, J);
+            { collection: t, story: i, controlOverrides: r } = e(J, Z);
         return (e) => (
             e?.preventDefault(),
             Promise.all([n.e(60800), n.e(129263)])
@@ -413,12 +413,12 @@ function $(e) {
             !0
         );
     }
-    if (et && Z?.startsWith("/discovery/quests"))
+    if (et && J?.startsWith("/discovery/quests"))
         return (e) => (e?.preventDefault(), (0, L.m)({ fromContent: r.u.QUEST_BADGE }), !0);
-    if (et && Z?.startsWith("/quest-home"))
-        return (e) => (e?.preventDefault(), (0, y.pX)(W.BVt.QUEST_HOME, { search: J, hash: ee }), !0);
-    if (et && Z?.startsWith("/quest-bar-preview")) {
-        let e = new URLSearchParams(J ?? "").get("ad_creative_ids");
+    if (et && J?.startsWith("/quest-home"))
+        return (e) => (e?.preventDefault(), (0, y.pX)(W.BVt.QUEST_HOME, { search: Z, hash: ee }), !0);
+    if (et && J?.startsWith("/quest-bar-preview")) {
+        let e = new URLSearchParams(Z ?? "").get("ad_creative_ids");
         if (null != e)
             return (t) => (
                 t?.preventDefault(),
@@ -431,13 +431,13 @@ function $(e) {
                 !0
             );
     }
-    return et && Z?.startsWith("/quest-preview")
+    return et && J?.startsWith("/quest-preview")
         ? (e) => (
               e?.preventDefault(),
-              (0, y.pX)(W.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${Z.split("/").at(-1)}`),
+              (0, y.pX)(W.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${J.split("/").at(-1)}`),
               !0
           )
-        : et && Z?.startsWith("/discovery/servers")
+        : et && J?.startsWith("/discovery/servers")
           ? (e) => (
                 e?.preventDefault(),
                 Promise.resolve()

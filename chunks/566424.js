@@ -19,12 +19,12 @@ n.d(
                     glyph: t,
                     line: n,
                     live: r,
-                    settled: p,
-                    tint: k,
+                    settled: k,
+                    tint: p,
                     detail: x,
                     connected: g = !1,
-                    connectsDown: _ = !1,
-                    anchor: j = !1,
+                    connectsDown: j = !1,
+                    anchor: _ = !1,
                 } = e,
                 [b, v] = a.useState(!1),
                 y = a.useRef(null);
@@ -65,11 +65,11 @@ n.d(
                 ref: y,
                 className: h.K1,
                 "data-live": r,
-                "data-settled": p,
+                "data-settled": k,
                 "data-connected": g,
-                "data-connects-down": _,
-                "data-conjure-turn-status": j ? "true" : void 0,
-                style: null != k ? { "--custom-conjure-shimmer-tint": k } : void 0,
+                "data-connects-down": j,
+                "data-conjure-turn-status": _ ? "true" : void 0,
+                style: null != p ? { "--custom-conjure-shimmer-tint": p } : void 0,
                 children: [
                     I
                         ? (0, l.jsx)(d.D, {
