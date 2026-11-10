@@ -20508,7 +20508,7 @@ var NY = n(738188),
     NK = n(987197),
     NZ = n(822585),
     Nq = n(840387),
-    NQ = n(890623),
+    NQ = n(281906),
     NJ = n(665956);
 let N$ = (0, h.E2)(S.X.FAMILY_CENTER_SETTING, {
         Component: NQ.p,
