@@ -1,22 +1,19 @@
 var i = a(477900),
     n = a(582128),
-    l = a(503698),
-    s = a.n(l),
+    s = a(503698),
+    l = a.n(s),
     r = a(935462),
-    c = a(192308),
-    d = a(825484),
-    o = a(821609),
-    u = a(789645),
-    p = a(548411),
-    f = a(663417),
-    m = a(393033),
-    g = a(171576),
-    h = a(36149),
-    k = a(40449),
-    v = a(664188),
-    x = a(792996),
-    b = a(511002),
-    w = a(679017);
+    c = a(825484),
+    d = a(821609),
+    o = a(789645),
+    u = a(548411),
+    p = a(663417),
+    f = a(393033),
+    m = a(171576),
+    g = a(664188),
+    h = a(792996),
+    v = a(511002),
+    x = a(679017);
 a.d(
     t,
     {},
@@ -25,25 +22,21 @@ a.d(
             let {
                     onClose: t,
                     onComplete: a,
-                    transitionState: l,
-                    webviewUrl: C,
-                    isExpressiveModalV2: j,
-                    entryPoint: E,
+                    transitionState: s,
+                    webviewUrl: k,
+                    isExpressiveModalV2: w,
+                    entryPoint: b,
                 } = e,
-                y = (0, m.W$)(),
-                [W, I] = n.useState(0),
-                T = n.useCallback(() => {
+                C = (0, f.W$)(),
+                [j, E] = n.useState(0),
+                y = n.useCallback(() => {
                     (a(), t());
                 }, [a, t]),
-                L = n.useCallback(() => {
-                    (0, c.kB)(k.SW) && !j && T();
-                }, [T, j]);
-            (0, h.dZ)(L);
-            let M = n.useCallback(
+                W = n.useCallback(
                     (e) => {
-                        if ("" !== C) {
-                            if (!j) {
-                                y && e?.data?.eventType === "Verification.Result" && T();
+                        if ("" !== k) {
+                            if (!w) {
+                                C && e?.data?.eventType === "Verification.Result" && y();
                                 return;
                             }
                             e?.data?.eventType === "Verification.Result"
@@ -51,63 +44,63 @@ a.d(
                                 : e?.data?.eventType === "Widget.ExitReview" && t();
                         }
                     },
-                    [C, j, y, T, a, t],
+                    [k, w, C, y, a, t],
                 ),
-                R = n.useCallback(() => {
-                    I(W + 1);
-                }, [W]);
+                I = n.useCallback(() => {
+                    E(j + 1);
+                }, [j]);
             n.useEffect(
                 () => (
-                    window.addEventListener("message", M),
+                    window.addEventListener("message", W),
                     () => {
-                        window.removeEventListener("message", M);
+                        window.removeEventListener("message", W);
                     }
                 ),
-                [M],
+                [W],
             );
-            let A = E === g.q1.MANUAL_REVIEW;
+            let T = b === m.q1.MANUAL_REVIEW;
             return (0, i.jsxs)(r.EO, {
                 "data-migration-pending": !0,
-                transitionState: l,
-                className: s()(w.zr, b.rh),
+                transitionState: s,
+                className: l()(x.zr, v.rh),
                 parentComponent: "AgeVerificationExpressiveModal",
                 size: r.rI.MEDIUM,
-                "aria-label": x.intl.string(v.default.eKo6mw),
+                "aria-label": h.intl.string(g.default.eKo6mw),
                 children: [
                     (0, i.jsx)(r.$m, {
                         "data-migration-pending": !0,
-                        className: s()(w.Qs, w.WM),
+                        className: l()(x.Qs, x.WM),
                         scrollbarType: "none",
                         children: (0, i.jsx)(
                             "iframe",
                             {
                                 id: "frame",
-                                title: x.intl.string(v.default.eKo6mw),
-                                src: C,
-                                className: w.pU,
+                                title: h.intl.string(g.default.eKo6mw),
+                                src: k,
+                                className: x.pU,
                                 allow: "camera; microphone;publickey-credentials-get;publickey-credentials-create",
                             },
-                            W,
+                            j,
                         ),
                     }),
                     (0, i.jsx)(r.jl, {
                         "data-migration-pending": !0,
-                        children: (0, i.jsxs)(d.e, {
+                        children: (0, i.jsxs)(c.e, {
                             fullWidth: !0,
                             children: [
-                                (0, i.jsx)(o.$, {
+                                (0, i.jsx)(d.$, {
                                     fullWidth: !0,
                                     variant: "secondary",
-                                    icon: A ? u.XSmallIcon : p.ArrowLargeLeftIcon,
-                                    text: x.intl.string(A ? x.t.cpT0Cq : v.default.b7Oqdu),
+                                    icon: T ? o.XSmallIcon : u.ArrowLargeLeftIcon,
+                                    text: h.intl.string(T ? h.t.cpT0Cq : g.default.b7Oqdu),
                                     onClick: t,
                                 }),
-                                (0, i.jsx)(o.$, {
+                                (0, i.jsx)(d.$, {
                                     fullWidth: !0,
                                     variant: "secondary",
-                                    icon: f.RefreshIcon,
-                                    text: x.intl.string(v.default["0vTx7j"]),
-                                    onClick: R,
+                                    icon: p.RefreshIcon,
+                                    text: h.intl.string(g.default["0vTx7j"]),
+                                    onClick: I,
                                 }),
                             ],
                         }),
