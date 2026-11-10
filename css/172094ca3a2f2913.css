@@ -81,4 +81,22 @@
     padding: 0 var(--space-16) var(--space-8)
 }
 
-/*# sourceMappingURL=efcd52ae61e07a3e.css.map*/
+.math_KFT5TX {
+    contain: paint;
+    display: inline-block;
+    max-height: 20em;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+.displayMath_KFT5TX,
+.mathContent_KFT5TX {
+    display: block
+}
+
+.mathContent_KFT5TX {
+    min-width: -moz-max-content;
+    min-width: max-content
+}
+
+/*# sourceMappingURL=172094ca3a2f2913.css.map*/
