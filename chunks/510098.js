@@ -427,7 +427,7 @@ class Q extends R.EventEmitter {
         );
     }
 }
-var Z =
+var J =
     (((r = {}).Stream = "stream"),
     (r.Video = "video"),
     (r.Mute = "mute"),
@@ -438,7 +438,7 @@ var Z =
     (r.VideoPermission = "video-permission"),
     (r.AddVideoTrack = "add-video-track"),
     r);
-class J extends p.A {
+class Z extends p.A {
     audio;
     video = new Q();
     desktop = null;
@@ -769,18 +769,18 @@ class e_ extends S.A {
     audioContext;
     constructor(e) {
         (super(e.context, e.userId),
-            (this.input = new J(e.audioContext)),
+            (this.input = new Z(e.audioContext)),
             e.audioContext.addEventListener("statechange", this.handleAudioContextStateChange),
             (this.audioContext = e.audioContext),
-            this.input.on(Z.AudioPermission, this.handleAudioPermission),
-            this.input.on(Z.VideoPermission, this.handleVideoPermission),
-            this.input.on(Z.Video, this.handleVideo),
-            this.input.on(Z.Mute, (e) => this.emit(W.y.Mute, e)),
-            this.input.on(Z.Stream, this.handleStream),
-            this.input.on(Z.DesktopSourceEnd, this.handleDesktopSourceEnd),
-            this.input.on(Z.Speaking, this.handleInputSpeaking),
-            this.input.on(Z.AddVideoTrack, this.handleAddVideoTrack),
-            this.input.on(Z.Video, this.handleAddVideoTrack),
+            this.input.on(J.AudioPermission, this.handleAudioPermission),
+            this.input.on(J.VideoPermission, this.handleVideoPermission),
+            this.input.on(J.Video, this.handleVideo),
+            this.input.on(J.Mute, (e) => this.emit(W.y.Mute, e)),
+            this.input.on(J.Stream, this.handleStream),
+            this.input.on(J.DesktopSourceEnd, this.handleDesktopSourceEnd),
+            this.input.on(J.Speaking, this.handleInputSpeaking),
+            this.input.on(J.AddVideoTrack, this.handleAddVideoTrack),
+            this.input.on(J.Video, this.handleAddVideoTrack),
             this.on("newListener", this.handleNewListener),
             this.initializeStreamParameters(e.streamParameters));
     }
@@ -2048,7 +2048,7 @@ let eq = A().name?.toLowerCase().includes("firefox");
 function eQ(e, t) {
     (e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly"));
 }
-class eZ extends e_ {
+class eJ extends e_ {
     pc;
     sdp = null;
     negotiating = !1;
@@ -2697,7 +2697,7 @@ class eZ extends e_ {
         (this.input.reset(),
             this.setConnectionState(D.$I.CONNECTED),
             this.on(W.y.Stats, this.handleStats),
-            this.input.on(Z.VoiceActivity, this.handleVoiceActivity));
+            this.input.on(J.VoiceActivity, this.handleVoiceActivity));
     }
     async handleNegotiationNeeded() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -2827,7 +2827,7 @@ class eZ extends e_ {
         }
     };
 }
-function eJ(e) {
+function eZ(e) {
     return e.split("-")[0];
 }
 class e0 extends e_ {
@@ -2847,13 +2847,13 @@ class e0 extends e_ {
             (t.direction = null != this.input.stream ? em.SENDRECV : em.SENDONLY),
             (this.fpc = t));
         let n = new eP(this.voiceBitrate);
-        (n.on("addtrack", (e, t) => this.createOutput(eJ(e), t)),
-            n.on("removetrack", (e, t) => this.destroyOutput(eJ(e), t)),
+        (n.on("addtrack", (e, t) => this.createOutput(eZ(e), t)),
+            n.on("removetrack", (e, t) => this.destroyOutput(eZ(e), t)),
             n.once("connected", () => {
                 (this.input.reset(),
                     this.setConnectionState(D.$I.CONNECTED),
                     this.on(W.y.Stats, this.handleStats),
-                    this.input.on(Z.VoiceActivity, this.handleVoiceActivity));
+                    this.input.on(J.VoiceActivity, this.handleVoiceActivity));
             }),
             n.on("connecting", () => this.setConnectionState(D.$I.DTLS_CONNECTING)),
             n.on("checking", () => this.setConnectionState(D.$I.ICE_CHECKING)),
@@ -3298,7 +3298,7 @@ class ti extends p.A {
                 }),
                 (r = `${null != A().name && "" !== A().name ? A().name : "unknown"} ${null != A().version && "" !== A().version ? A().version : "unknown"}`),
                 (a = new g.Vy(`Connection(${i.context})`)),
-                ec.PF ? (a.info(`Using Unified Plan (${r})`), new eZ(i)) : (a.info(`Using Plan B (${r})`), new e0(i)));
+                ec.PF ? (a.info(`Using Unified Plan (${r})`), new eJ(i)) : (a.info(`Using Plan B (${r})`), new e0(i)));
         return (
             (E.streamUserId = c),
             E.setOutputVolume(this.outputVolume),
@@ -3540,6 +3540,9 @@ class ti extends p.A {
     }
     getMLSSigningKey(e, t) {
         return Promise.reject(Error("getMLSSigningKey is not supported."));
+    }
+    generateDavePairwiseFingerprint(e, t, n, i, r) {
+        return Promise.reject(Error("generateDavePairwiseFingerprint is not supported."));
     }
     setSidechainCompression(e) {}
     setSidechainCompressionStrength(e) {}

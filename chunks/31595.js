@@ -1,4 +1,4 @@
-n.d(t, { A: () => ei });
+(n.d(t, { A: () => ei }), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var i,
     r,
     a,
@@ -292,6 +292,7 @@ var F =
         (r.SCREEN_SOUNDSHARE = "screen_soundshare"),
         (r.NATIVE_SCREENSHARE_PICKER = "native_screenshare_picker"),
         (r.MLS_PAIRWISE_FINGERPRINTS = "mls_pairwise_fingerprints"),
+        (r.DAVE_PAIRWISE_FINGERPRINT = "dave_pairwise_fingerprint"),
         (r.OFFLOAD_ADM_CONTROLS = "offload_adm_controls"),
         (r.AUDIO_CODEC_RED = "audio_codec_red"),
         (r.SIDECHAIN_COMPRESSION = "sidechain_compression"),
@@ -2009,6 +2010,8 @@ class ei extends d.A {
                 return (0, v.$b)(F.NATIVE_SCREENSHARE_PICKER);
             case O.O5.MLS_PAIRWISE_FINGERPRINTS:
                 return (0, v.$b)(F.MLS_PAIRWISE_FINGERPRINTS);
+            case O.O5.DAVE_PAIRWISE_FINGERPRINT:
+                return (0, v.$b)(F.DAVE_PAIRWISE_FINGERPRINT);
             case O.O5.OFFLOAD_ADM_CONTROLS:
                 return (0, v.$b)(F.OFFLOAD_ADM_CONTROLS);
             case O.O5.VAAPI:
@@ -2635,6 +2638,16 @@ class ei extends d.A {
             null != r.getMLSSigningKey
                 ? r.getMLSSigningKey(e, t, (e, t) => n({ key: e, signature: t }))
                 : i(Error("NOT_IMPLEMENTED"));
+        });
+    }
+    generateDavePairwiseFingerprint(e, t, n, i, r) {
+        return new Promise((a, s) => {
+            let l = (0, v.lE)();
+            null == l.generateDavePairwiseFingerprint
+                ? s(Error("NOT_IMPLEMENTED"))
+                : l.generateDavePairwiseFingerprint(e, new Uint8Array(t), n, new Uint8Array(i), r, (e) => {
+                      0 === e.byteLength ? s(Error("Native pairwise fingerprint generation failed")) : a(e);
+                  });
         });
     }
     setSidechainCompression(e) {

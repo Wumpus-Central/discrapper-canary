@@ -168,6 +168,9 @@ class o extends i.A {
     getMLSSigningKey(e, t) {
         return Promise.reject(Error("NOT_IMPLEMENTED"));
     }
+    generateDavePairwiseFingerprint(e, t, n, i, r) {
+        return Promise.reject(Error("NOT_IMPLEMENTED"));
+    }
     setSidechainCompression(e) {}
     setSidechainCompressionStrength(e) {}
     setVoiceSampleRateCap(e) {}
