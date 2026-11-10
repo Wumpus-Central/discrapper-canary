@@ -1,28 +1,28 @@
-s(508300);
-var n = s(73153),
-    r = s(830215),
-    a = s(627784),
-    i = s(77729),
-    l = s(626584),
-    o = s(129230),
-    c = s(464477),
-    d = s(402002),
-    u = s(917136),
-    h = s(293731),
-    p = s(652215);
-let m = new l.A("ConditionalMediation");
-s.d(
+n(508300);
+var s = n(73153),
+    r = n(830215),
+    a = n(77729),
+    i = n(626584),
+    l = n(129230),
+    o = n(464477),
+    c = n(402002),
+    d = n(917136),
+    u = n(243512),
+    h = n(293731),
+    p = n(652215);
+let m = new i.A("ConditionalMediation");
+n.d(
     t,
     {},
     {
         a: async function (e) {
-            let { abortController: t, loginSource: s, giftCodeSKUId: l, isMultiAccount: N } = e;
-            if (null == i.A && null != window.PublicKeyCredential) {
+            let { abortController: t, loginSource: n, giftCodeSKUId: i, isMultiAccount: N } = e;
+            if (null == a.A && null != window.PublicKeyCredential) {
                 let e,
-                    i = await PublicKeyCredential.isConditionalMediationAvailable?.(),
+                    a = await PublicKeyCredential.isConditionalMediationAvailable?.(),
                     E = (await PublicKeyCredential.getClientCapabilities?.())?.conditionalGet;
-                if (!i && !E) return;
-                let { challenge: g, ticket: f } = await (0, u.Ud)();
+                if (!a && !E) return;
+                let { challenge: g, ticket: f } = await (0, d.Ud)();
                 try {
                     e = await (0, h.J)(g, t.signal);
                 } catch (e) {
@@ -34,33 +34,29 @@ s.d(
                             m.warn(e.name, e.message);
                             break;
                         default:
-                            ((0, c.Os)(e), m.error(e.name, e.message));
+                            ((0, o.Os)(e), m.error(e.name, e.message));
                     }
                     return;
                 }
-                (n.h.dispatch({ type: "PASSWORDLESS_START" }),
-                    o.default.track(p.HAw.LOGIN_ATTEMPTED, {
+                (s.h.dispatch({ type: "PASSWORDLESS_START" }),
+                    l.default.track(p.HAw.LOGIN_ATTEMPTED, {
                         source: p.mdB.PASSWORDLESS_CONDITIONAL_UI,
                         login_method: "passwordless",
-                        login_source: s,
-                        gift_code_sku_id: l,
+                        login_source: n,
+                        gift_code_sku_id: i,
                     }));
                 try {
                     await r.A.loginWebAuthn({
                         ticket: f,
                         credential: e,
-                        source: s,
-                        giftCodeSKUId: l,
+                        source: n,
+                        giftCodeSKUId: i,
                         isMultiAccount: N,
                     });
                 } catch (t) {
                     throw (
-                        n.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: t }),
-                        t instanceof a.LG &&
-                            null != t.status &&
-                            t.status >= 400 &&
-                            t.status < 500 &&
-                            (await d.A.signalUnknownCredential(e)),
+                        s.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: t }),
+                        (0, u.j)(t) && (await c.A.signalUnknownCredential(e)),
                         t
                     );
                 }

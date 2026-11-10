@@ -13,28 +13,29 @@ var r,
     A = n(976860),
     f = n(402002),
     h = n(917136),
-    I = n(46653),
-    p = n(153488),
-    m = n(353835),
-    T = n(499785),
-    g = n(136969),
-    S = n(652215),
-    N = n(516780);
-let C = new _.A("AuthenticationActionCreators"),
-    O = null;
-var R = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
-function L(e) {
-    m.A.clearNavigationHistory();
-    let t = { type: "LOGOUT", userId: I.default.getId() ?? void 0, ...e };
+    I = n(243512),
+    p = n(46653),
+    m = n(153488),
+    T = n(353835),
+    g = n(499785),
+    S = n(136969),
+    N = n(652215),
+    C = n(516780);
+let O = new _.A("AuthenticationActionCreators"),
+    R = null;
+var L = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
+function y(e) {
+    T.A.clearNavigationHistory();
+    let t = { type: "LOGOUT", userId: p.default.getId() ?? void 0, ...e };
     d.h.dispatch(t).catch((e) => {
-        throw (C.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
+        throw (O.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
     });
 }
-function y(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-    if ((L(), null == t)) return;
+function D(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N.BVt.DEFAULT_LOGGED_OUT;
+    if ((y(), null == t)) return;
     let n = (0, E.Y)();
-    null == n ? (0, A.pX)(t, { source: e }) : (g.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
+    null == n ? (0, A.pX)(t, { source: e }) : (S.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
 }
 n.d(
     t,
@@ -56,8 +57,8 @@ n.d(
                 } = e;
                 return (
                     d.h.dispatch({ type: "LOGIN", isPasswordAttempt: !0 }),
-                    T.A.post({
-                        url: S.Rsh.LOGIN,
+                    g.A.post({
+                        url: N.Rsh.LOGIN,
                         body: { login: t, password: n, undelete: i, login_source: r, gift_code_sku_id: s },
                         retries: 2,
                         oldFormErrors: !0,
@@ -102,7 +103,7 @@ n.d(
                             let i = new c.Wl(e);
                             if (null != e.body && e.body?.suspended_user_token != null)
                                 throw (
-                                    u && L({ isSwitchingAccount: !0 }),
+                                    u && y({ isSwitchingAccount: !0 }),
                                     d.h.dispatch({
                                         type: "LOGIN_SUSPENDED_USER",
                                         suspendedUserToken: e.body?.suspended_user_token,
@@ -111,17 +112,17 @@ n.d(
                                 );
                             let r = e.body?.code;
                             throw (
-                                r === S.t02.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && "" !== n
+                                r === N.t02.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && "" !== n
                                     ? d.h.dispatch({
                                           type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION",
                                           credentials: { login: t, password: n },
                                       })
-                                    : r === S.t02.ACCOUNT_DISABLED && null != n && "" !== n
+                                    : r === N.t02.ACCOUNT_DISABLED && null != n && "" !== n
                                       ? d.h.dispatch({
                                             type: "LOGIN_ACCOUNT_DISABLED",
                                             credentials: { login: t, password: n },
                                         })
-                                      : r === S.t02.PHONE_VERIFICATION_REQUIRED
+                                      : r === N.t02.PHONE_VERIFICATION_REQUIRED
                                         ? d.h.dispatch({
                                               type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED",
                                               credentials: { login: t, password: n },
@@ -143,14 +144,14 @@ n.d(
                     mfaType: l,
                     loginInstanceId: o,
                 } = e;
-                return T.A.post({
-                    url: S.Rsh.LOGIN_MFA(l),
+                return g.A.post({
+                    url: N.Rsh.LOGIN_MFA(l),
                     body: {
                         code: t,
                         ticket: n,
                         login_source: i,
                         gift_code_sku_id: r,
-                        login_instance_id: o ?? I.default.getLoginInstanceId(),
+                        login_instance_id: o ?? p.default.getLoginInstanceId(),
                     },
                     retries: 2,
                     oldFormErrors: !0,
@@ -168,7 +169,7 @@ n.d(
                                 type: "LOGIN_SUSPENDED_USER",
                                 suspendedUserToken: e.body.suspended_user_token,
                             });
-                        if (e.body?.code === S.t02.MFA_INVALID_CODE) throw Error(e.body.message);
+                        if (e.body?.code === N.t02.MFA_INVALID_CODE) throw Error(e.body.message);
                         throw e;
                     });
             },
@@ -193,14 +194,7 @@ n.d(
                             isMultiAccount: a,
                         });
                     } catch (e) {
-                        throw (
-                            e instanceof c.LG &&
-                                null != e.status &&
-                                e.status >= 400 &&
-                                e.status < 500 &&
-                                (await f.A.signalUnknownCredential(s)),
-                            e
-                        );
+                        throw ((0, I.j)(e) && (await f.A.signalUnknownCredential(s)), e);
                     }
                 } catch (e) {
                     throw (d.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: e }), e);
@@ -208,8 +202,8 @@ n.d(
             },
             loginWebAuthn(e) {
                 let { ticket: t, credential: n, source: i, giftCodeSKUId: r, isMultiAccount: s } = e;
-                return T.A.post({
-                    url: S.Rsh.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+                return g.A.post({
+                    url: N.Rsh.WEBAUTHN_CONDITIONAL_UI_LOGIN,
                     body: { credential: n, ticket: t, source: i, giftCodeSKUId: r },
                     retries: 1,
                     trackedActionData: { event: a.NetworkActionNames.USER_LOGIN_PASSWORDLESS },
@@ -249,8 +243,8 @@ n.d(
                 d.h.dispatch({ type: "LOGIN" });
                 try {
                     let t = (
-                        await T.A.post({
-                            url: S.Rsh.ONE_TIME_LOGIN,
+                        await g.A.post({
+                            url: N.Rsh.ONE_TIME_LOGIN,
                             body: { ticket: e },
                             oldFormErrors: !0,
                             trackedActionData: { event: a.NetworkActionNames.USER_ONE_TIME_LOGIN },
@@ -270,52 +264,52 @@ n.d(
                 d.h.dispatch({ type: "LOGIN_STATUS_RESET" });
             },
             logoutInternal(e) {
-                L(e);
+                y(e);
             },
             logout(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT,
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N.BVt.DEFAULT_LOGGED_OUT,
                     n = arguments.length > 2 ? arguments[2] : void 0;
-                return T.A.post({
-                    url: S.Rsh.LOGOUT,
+                return g.A.post({
+                    url: N.Rsh.LOGOUT,
                     body: {
-                        provider: (0, N.oH)(),
-                        token: o.w.get(S.Xlh),
+                        provider: (0, C.oH)(),
+                        token: o.w.get(N.Xlh),
                         voip_provider: null,
-                        voip_token: o.w.get(S.Ahp),
+                        voip_token: o.w.get(N.Ahp),
                     },
                     oldFormErrors: !0,
                     trackedActionData: { event: a.NetworkActionNames.USER_LOGOUT, properties: { logout_source: e } },
                     ...(null != n && { headers: { authorization: s.getToken(n) ?? "" } }),
                     rejectWithError: (0, l.fT)(),
                 }).finally(() => {
-                    (null == n || n === I.default.getId()) && y(e, t);
+                    (null == n || n === p.default.getId()) && D(e, t);
                 });
             },
             switchAccountToken(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    n = I.default.getToken();
+                    n = p.default.getToken();
                 return (
-                    C.log("Switching accounts", { wasLoggedIn: null != n, tokenHasChanged: e !== n }),
-                    L({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
+                    O.log("Switching accounts", { wasLoggedIn: null != n, tokenHasChanged: e !== n }),
+                    y({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
                     this.loginToken(e, !0).then(() => {
-                        let t = e === I.default.getToken();
-                        return (C.log("Switched accounts finished", { isCorrectToken: t }), t);
+                        let t = e === p.default.getToken();
+                        return (O.log("Switched accounts finished", { isCorrectToken: t }), t);
                     })
                 );
             },
             verifySSOToken(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-                return l.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).then(
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N.BVt.DEFAULT_LOGGED_OUT;
+                return l.Bo.get({ url: N.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).then(
                     () => !0,
                     (n) => {
                         if (n?.status !== 401) throw n;
-                        return (y(e, t), !1);
+                        return (D(e, t), !1);
                     },
                 );
             },
             async verify(e) {
-                let t = await T.A.post({
-                    url: S.Rsh.VERIFY,
+                let t = await g.A.post({
+                    url: N.Rsh.VERIFY,
                     body: { token: e },
                     trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
                     rejectWithError: (0, l.fT)(),
@@ -323,22 +317,22 @@ n.d(
                 return (d.h.dispatch({ type: "LOGIN_SUCCESS", token: t.body.token }), t.body.user_id);
             },
             authorizePayment: (e) =>
-                T.A.post({
-                    url: S.Rsh.AUTHORIZE_PAYMENT,
+                g.A.post({
+                    url: N.Rsh.AUTHORIZE_PAYMENT,
                     body: { token: e },
                     trackedActionData: { event: a.NetworkActionNames.AUTHORIZE_PAYMENT },
                     rejectWithError: !0,
                 }),
             authorizeIPAddress: (e) =>
-                T.A.post({
-                    url: S.Rsh.AUTHORIZE_IP,
+                g.A.post({
+                    url: N.Rsh.AUTHORIZE_IP,
                     body: { token: e },
                     trackedActionData: { event: a.NetworkActionNames.AUTHORIZE_IP },
                     rejectWithError: !0,
                 }),
             verifyResend: () =>
-                T.A.post({
-                    url: S.Rsh.VERIFY_RESEND,
+                g.A.post({
+                    url: N.Rsh.VERIFY_RESEND,
                     oldFormErrors: !0,
                     trackedActionData: { event: a.NetworkActionNames.USER_VERIFY_RESEND },
                     rejectWithError: (0, l.fT)(),
@@ -346,9 +340,9 @@ n.d(
             async resetPassword(e, t, n) {
                 d.h.dispatch({ type: "LOGIN" });
                 let i = { token: e, password: t, source: n },
-                    r = o.w.get(S.Xlh),
-                    s = (0, N.oH)();
-                (null != s && null != r && ((i.push_provider = s), (i.push_token = r)), o.w.get(S.Ahp));
+                    r = o.w.get(N.Xlh),
+                    s = (0, C.oH)();
+                (null != s && null != r && ((i.push_provider = s), (i.push_token = r)), o.w.get(N.Ahp));
                 try {
                     let {
                         mfa: e,
@@ -359,8 +353,8 @@ n.d(
                         backup: o,
                         totp: d,
                     } = (
-                        await T.A.post({
-                            url: S.Rsh.RESET_PASSWORD,
+                        await g.A.post({
+                            url: N.Rsh.RESET_PASSWORD,
                             body: i,
                             oldFormErrors: !0,
                             trackedActionData: { event: a.NetworkActionNames.USER_RESET_PASSWORD },
@@ -384,8 +378,8 @@ n.d(
             async resetPasswordMFAv2(e) {
                 let { method: t, code: n, ticket: i, password: r, token: s, source: l } = e;
                 d.h.dispatch({ type: "LOGIN_MFA" });
-                let o = await T.A.post({
-                    url: S.Rsh.RESET_PASSWORD,
+                let o = await g.A.post({
+                    url: N.Rsh.RESET_PASSWORD,
                     body: { code: n, ticket: i, password: r, token: s, source: l, method: t },
                     oldFormErrors: !0,
                     trackedActionData: { event: a.NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: !0 } },
@@ -396,8 +390,8 @@ n.d(
             async forgotPassword(e) {
                 d.h.dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
                 try {
-                    let t = await T.A.post({
-                        url: S.Rsh.FORGOT_PASSWORD,
+                    let t = await g.A.post({
+                        url: N.Rsh.FORGOT_PASSWORD,
                         body: { login: e },
                         oldFormErrors: !0,
                         trackedActionData: { event: a.NetworkActionNames.FORGOT_PASSWORD },
@@ -406,7 +400,7 @@ n.d(
                     return (d.h.dispatch({ type: "FORGOT_PASSWORD_SENT" }), t.body.method);
                 } catch (n) {
                     let t = new c.Wl(n);
-                    if (t.code === S.t02.PHONE_VERIFICATION_REQUIRED)
+                    if (t.code === N.t02.PHONE_VERIFICATION_REQUIRED)
                         return (
                             d.h.dispatch({
                                 type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION",
@@ -424,20 +418,20 @@ n.d(
                 d.h.dispatch({ type: "EXPERIMENTS_FETCH", withGuildExperiments: e });
             },
             getLocationMetadata: () =>
-                null != O
-                    ? O
+                null != R
+                    ? R
                     : (clearTimeout(i),
                       (i = setTimeout(() => {
                           d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 });
                       }, 5e3)),
-                      (O = l.Bo.get({
-                          url: S.Rsh.AUTH_LOCATION_METADATA,
+                      (R = l.Bo.get({
+                          url: N.Rsh.AUTH_LOCATION_METADATA,
                           retries: 2,
                           oldFormErrors: !0,
                           rejectWithError: !0,
                       }).then(
                           (e) => {
-                              if ((clearTimeout(i), null == p.A.getAuthenticationConsentRequired())) {
+                              if ((clearTimeout(i), null == m.A.getAuthenticationConsentRequired())) {
                                   let t = e?.body?.consent_required ?? !0;
                                   d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: t });
                               }
@@ -447,7 +441,7 @@ n.d(
                                       countryCode: e?.body?.country_code ?? void 0,
                                       minimumAge: e?.body?.minimum_age ?? void 0,
                                   }),
-                                  (O = null),
+                                  (R = null),
                                   e?.body?.promotional_email_opt_in != null)
                               ) {
                                   let t = e.body.promotional_email_opt_in;
@@ -461,13 +455,13 @@ n.d(
                           () => {
                               (clearTimeout(i),
                                   d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }),
-                                  (O = null));
+                                  (R = null));
                           },
                       ))),
             closeSuspendedUser() {
                 d.h.dispatch({ type: "CLOSE_SUSPENDED_USER" });
             },
         },
-        W: R,
+        W: L,
     },
 );
