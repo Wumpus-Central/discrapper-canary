@@ -2344,7 +2344,7 @@ let n6 = (0, eH.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     );
 var ia = n(506774),
     io = n(28863),
-    ic = n(781300),
+    ic = n(669815),
     iu = n(404374),
     id = n(780964),
     im = n(766075),

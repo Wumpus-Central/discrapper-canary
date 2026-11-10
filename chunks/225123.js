@@ -1450,10 +1450,10 @@ function ez(e) {
         ej({ type: t, entitlement: e });
     }),
     eB(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        (0, el.f)() && (n(781300).$o(), W.jv(eA.A.getFetchedSKUIDs()));
+        (0, el.f)() && (n(669815).$o(), W.jv(eA.A.getFetchedSKUIDs()));
     }),
     eB(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        (Y.rQ(), (0, el.f)() && n(781300).hP());
+        (Y.rQ(), (0, el.f)() && n(669815).hP());
     }),
     eB(["WISHLIST_ITEM_PURCHASED"], (e) => {
         ej({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
