@@ -24,7 +24,7 @@ class c extends s.A {
             s = t?.endDate ?? null;
         return new c({
             id: e.id,
-            componentType: (0, d.u)(e.component_type),
+            componentType: (0, d.uq)(e.component_type),
             properties: (0, o.ii)(a.m, e.properties),
             promotionId: e.promotion_id,
             startDate: n,

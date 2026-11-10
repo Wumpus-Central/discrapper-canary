@@ -8,7 +8,7 @@ n.d(
     {},
     {
         A: function (e, t) {
-            if (!(0, r.U)(t)) return null;
+            if (!(0, r.Uy)(t)) return null;
             let n = i.bt[t],
                 [s] = l.A.getPromotionsByPartner(e).oneTime;
             if (null == s) return null;

@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(202475),
     m = n(418200),
     p = n(316363),
-    C = n(764724),
-    h = n(473617),
+    h = n(764724),
+    C = n(473617),
     f = n(558620),
     E = n(669510),
     S = n(448645),
@@ -23,7 +23,7 @@ var A = n(682901),
     P = n(337091),
     v = n(792996),
     x = n(814576),
-    _ = n(84674),
+    _ = n(314666),
     T = n(480060),
     b = n(773444),
     N = n(503698),
@@ -103,14 +103,14 @@ let Y = i.memo(function (e) {
                 checkoutInvoicePreview: e.checkoutInvoicePreview,
                 hasQuantityDiscount: e.getHasQuantityDiscount(),
             })),
-            { discountOffer: d, currentInvoiceHasMatchingDiscountOffer: C } = (0, g.i)(),
-            { selectedPlanFromFluxStore: h } = (0, f.D)(),
+            { discountOffer: d, currentInvoiceHasMatchingDiscountOffer: h } = (0, g.i)(),
+            { selectedPlanFromFluxStore: C } = (0, f.D)(),
             { selectedGiftingPromotionRewards: E } = (0, m.Pv)(),
             { daysCount: S, userTrialOffer: I } = (0, x.O8)(),
             y = i.useMemo(() => {
                 if (null != r && r.type === a.u$.PREMIUM_WITH_TRIAL && null != I)
                     return (0, l.jsx)(H, { text: v.intl.format(V.default.IAsfR5, { daysCount: S }) });
-                if (null != d && C) {
+                if (null != d && h) {
                     let e = d.discount,
                         t = e.intervalCount;
                     if (e.intervalType === A.Ff.MONTH)
@@ -125,16 +125,16 @@ let Y = i.memo(function (e) {
                     : n && null != t && !u
                       ? (0, l.jsx)(H, {
                             text:
-                                h.interval === A.WT.YEAR
+                                C.interval === A.WT.YEAR
                                     ? v.intl.format(V.default["7sYIBL"], { savingsPercent: t })
                                     : v.intl.format(V.default.uCXulJ, {
-                                          intervalCount: h.intervalCount,
+                                          intervalCount: C.intervalCount,
                                           savingsPercent: t,
                                       }),
                         })
                       : null;
-            }, [I, C, d, S, r, t, n, u, h.interval, h.intervalCount, s, E]),
-            P = (0, _.i)({ planSkuId: h.skuId, invoice: o }),
+            }, [I, h, d, S, r, t, n, u, C.interval, C.intervalCount, s, E]),
+            P = (0, _.i)({ planSkuId: C.skuId, invoice: o }),
             T = y ?? P ?? null;
         return null == T ? null : (0, l.jsx)(c.iA, { children: T });
     }),
@@ -150,11 +150,11 @@ let Y = i.memo(function (e) {
                 subscriptionPeriodEnd: e.getInvoiceSubscriptionPeriodEnd(),
             })),
             { isEligibleForTrial: u, isPremiumGroupPurchase: d } = (0, g.i)(),
-            { selectedPlanFromFluxStore: m, selectedPlanId: C } = (0, f.D)(),
-            { copy: h } = (0, x.O8)(),
+            { selectedPlanFromFluxStore: m, selectedPlanId: h } = (0, f.D)(),
+            { copy: C } = (0, x.O8)(),
             E = (0, b.pt)({
                 fractionalPremiumInfo: n,
-                selectedPlanId: C,
+                selectedPlanId: h,
                 planGroup: t,
                 premiumSubscription: s,
                 isGift: a,
@@ -182,7 +182,7 @@ let Y = i.memo(function (e) {
                               directContent: (0, l.jsx)(T.l, {
                                   fractionalPremiumInfo: n,
                                   isEligibleForTrial: u,
-                                  trialPeriodCopy: h,
+                                  trialPeriodCopy: C,
                                   subscriptionPeriodEnd: o,
                               }),
                               key: "fractional-premium-notice",
@@ -197,7 +197,7 @@ let Y = i.memo(function (e) {
                     null != S && e.push({ directContent: S, key: "xbox-perks-notice" }),
                     e.length > 0 ? e : null
                 );
-            }, [E, n, u, h, o, d, S]),
+            }, [E, n, u, C, o, d, S]),
             N = i.useMemo(() => {
                 let e = [...(r ?? []), ...(_ ?? [])];
                 return e.length > 0 ? e : null;
@@ -253,8 +253,8 @@ var eo = n(587895),
     ed = n(682163),
     em = n(563020),
     ep = n(813267),
-    eC = n(163437),
-    eh = n(71393),
+    eh = n(163437),
+    eC = n(71393),
     ef = n(67480),
     eE = n(486020),
     eS = n(580630);
@@ -287,13 +287,13 @@ function eI(e) {
             return null != t ? t.guildId : null;
         }),
         { application: u, guild: c } = (0, O.cf)(
-            [eo.A, ef.A, eh.A],
+            [eo.A, ef.A, eC.A],
             () => {
                 let e = ef.A.get(t.skuId),
-                    n = null != e && (0, eC.bg)(e.flags);
+                    n = null != e && (0, eh.bg)(e.flags);
                 return {
                     application: null != e ? eo.A.getApplication(e.applicationId) : null,
-                    guild: n || null == o ? null : eh.A.getGuild(o),
+                    guild: n || null == o ? null : eC.A.getGuild(o),
                 };
             },
             [t.skuId, o],
@@ -312,7 +312,7 @@ function eI(e) {
 function ey(e) {
     let { subscriptionPlan: t, invoicePreview: n, description: i, isTrial: a, target: s, ...o } = e,
         { guildId: u } = (0, p.t4)((e) => e.getTenantParams(r.C.GUILD_ROLE_CHECKOUT) ?? { guildId: null }),
-        c = (0, O.bG)([eh.A], () => (null != u ? eh.A.getGuild(u) : null), [u]),
+        c = (0, O.bG)([eC.A], () => (null != u ? eC.A.getGuild(u) : null), [u]),
         d = eg({ subscriptionPlan: t, invoicePreview: n, isTrial: a });
     return (0, l.jsx)(ec.f7, {
         ...d,
@@ -393,8 +393,8 @@ function eP(e) {
             currentInvoiceHasMatchingDiscountOffer: ed,
             fractionalPremiumInfo: em,
             isGiftingMultiPeriodPremium: ep,
-            giftSavingsPercent: eC,
-            headerBadgeConfig: eh,
+            giftSavingsPercent: eh,
+            headerBadgeConfig: eC,
             hasPremiumSubscriptionCredit: ef,
             paymentSourceOptionalWarningCopy: eE,
         } = (function () {
@@ -419,7 +419,7 @@ function eP(e) {
                     extraSentryInformation: { selectedPlanId: s, giftSubscriptionPlanId: r },
                 });
             let { giftRecipient: c } = (0, m.Pv)(),
-                { discountOffer: d, isPremiumGroupPurchase: C, currentInvoiceHasMatchingDiscountOffer: h } = (0, g.i)(),
+                { discountOffer: d, isPremiumGroupPurchase: h, currentInvoiceHasMatchingDiscountOffer: C } = (0, g.i)(),
                 E = (0, q.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
                 I = e && (0, ee.uH)(a),
                 y = (0, S.L_)({ planId: a.id, isGift: !0, priceOptions: t, subscriptionPlan: a }),
@@ -443,9 +443,9 @@ function eP(e) {
                 isRecurringGiftCheckoutLoading: l && !o,
                 giftRecipient: c,
                 isCustomGift: e && (0, J.Ik)(c),
-                isPremiumGroupPurchase: C,
+                isPremiumGroupPurchase: h,
                 discountOffer: d,
-                currentInvoiceHasMatchingDiscountOffer: h,
+                currentInvoiceHasMatchingDiscountOffer: C,
                 fractionalPremiumInfo: E,
                 isGiftingMultiPeriodPremium: I,
                 giftSavingsPercent: y,
@@ -480,14 +480,14 @@ function eP(e) {
                     purchaseDisabled: g,
                     newItems: I,
                     preventInvoiceFetch: y,
-                } = (0, h.TP)({ selectedPlanId: t, priceOptions: n }),
+                } = (0, C.TP)({ selectedPlanId: t, priceOptions: n }),
                 A = null != E,
                 P = i.useMemo(() => (null != E ? [{ planId: E, quantity: 1 }] : I), [E, I]),
                 {
                     universalInvoiceRequestParams: v,
                     checkoutInvoiceRequestParams: x,
                     renewalInvoiceRequestParams: _,
-                } = (0, h.jq)({ items: P, preventFetch: y, priceOptions: n, trialId: l, subscriptionMetadata: r }),
+                } = (0, C.jq)({ items: P, preventFetch: y, priceOptions: n, trialId: l, subscriptionMetadata: r }),
                 T = i.useMemo(
                     () =>
                         S && !A
@@ -513,7 +513,7 @@ function eP(e) {
                 i.useEffect(() => {
                     o(b);
                 }, [b, o]));
-            let { discountInvoiceError: N } = (0, C.W)({ priceOptions: n, trialId: l, metadata: r });
+            let { discountInvoiceError: N } = (0, h.W)({ priceOptions: n, trialId: l, metadata: r });
             return {
                 checkoutInvoicePreview: u,
                 renewalInvoicePreview: c,
@@ -551,7 +551,7 @@ function eP(e) {
             );
         }, [A, eE]),
         eM =
-            ((t = { giftSavingsPercent: eC, isGiftingMultiPeriodPremium: ep, discriminatedInvoicePreview: eP }),
+            ((t = { giftSavingsPercent: eh, isGiftingMultiPeriodPremium: ep, discriminatedInvoicePreview: eP }),
             eA(_) ? null : (0, l.jsx)(Y, { ...t })),
         { priceOptions: eL, planPricesLoading: ek } = (0, S.Pr)(b, T, N),
         ew = {
@@ -574,7 +574,7 @@ function eP(e) {
             paymentMethodContent: eR,
             promotionalNoticeContent: eM,
             tenantProvidesPromotionalNoticeContainer: !0,
-            headerBadgeConfig: eh,
+            headerBadgeConfig: eC,
         },
         eD = null == eP || eP.type === a.u$.LOADING,
         eU = i.useMemo(() => {
@@ -651,7 +651,7 @@ function eP(e) {
         );
     if (null == eP && null != N) return (0, l.jsx)(c.T_, { ...ew, legalContent: null });
     if (null == eP || eP.type === a.u$.LOADING || W)
-        return (0, l.jsx)(c.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: eh });
+        return (0, l.jsx)(c.Ed, { shouldShowUnifiedHeader: !0, headerBadgeConfig: eC });
     let eB = (function (e, t) {
             let {
                 shouldAllowPlanSelect: n,

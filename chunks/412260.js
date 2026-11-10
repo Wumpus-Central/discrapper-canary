@@ -154,7 +154,7 @@ class F extends s.Ay.PersistedStore {
         return (0, I.A)(R.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
     }
     getMarketingComponentBySurface(e) {
-        return (0, f.U)(e) ? this.getMarketingComponentByKind(a.bt[e]) : null;
+        return (0, f.Uy)(e) ? this.getMarketingComponentByKind(a.bt[e]) : null;
     }
     getMarketingComponentByKind(e) {
         if (null != D && u.default.getCurrentUser()?.isStaff() === !0)

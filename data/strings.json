@@ -29104,6 +29104,7 @@
   "ZSmz+r": "Hide Audience",
   "Ds8IST": "Show Audience",
   "IQmRBE": "Show Audience, {count, plural,one {# request}other {# requests} to speak pending",
+  "TdMGe4": "{speakerCount, plural,one {# speaker}other {# speakers}, {audienceCount, plural,one {# audience member}other {# audience members}",
   "HUcd3y": "Allow requests to speak from @everyone",
   "P63Z/o": "No one is on stage yet",
   "XaJ3qC": "Collapse",

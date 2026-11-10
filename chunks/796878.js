@@ -1,8 +1,8 @@
 var o = n(477900);
 n(582128);
-var l = n(877624),
+var l = n(517352),
     a = n(683063),
-    r = n(549996),
+    r = n(641436),
     i = n(807098),
     d = n(92551),
     s = n(792996);
@@ -12,11 +12,8 @@ n.d(
     {
         A: function (e) {
             let { children: t } = e,
-                n = (0, r.c)(l.C.PREMIUM_TAB_TOOLTIP),
-                u =
-                    null != n && "premiumTabTooltip" === n.properties.properties.oneofKind
-                        ? n.properties.properties.premiumTabTooltip
-                        : null,
+                n = (0, r.u)(l.oW.PREMIUM_TAB_TOOLTIP),
+                u = n?.surface,
                 p = (0, i.T)(u?.asset);
             if (null == u || null == n) return t;
             let c = n.getFormatVariableValues(s.intl.currentLocale),

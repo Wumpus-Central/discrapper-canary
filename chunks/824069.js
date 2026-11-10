@@ -1,44 +1,37 @@
 var n = t(477900);
 t(582128);
-var l = t(877624),
+var l = t(517352),
     i = t(834730),
     s = t(28863),
-    a = t(549996),
+    a = t(641436),
     c = t(807098),
-    o = t(637706),
-    u = t(788883),
-    d = t(592455);
+    u = t(637706),
+    o = t(788883),
+    m = t(592455);
 t.d(
     r,
     {},
     {
         K: function () {
-            let e = (0, a.c)(l.C.PLAN_SELECT_CARD_BANNER),
-                r =
-                    null != e && "planSelectCardBanner" === e.properties.properties.oneofKind
-                        ? e.properties.properties.planSelectCardBanner
-                        : null,
-                t = (0, c.T)(r?.asset);
-            if (null == e || null == r || "" === r.body) return null;
-            let m = (0, o.C)(r.helpArticle, "");
+            let e = (0, a.u)(l.oW.PLAN_SELECT_CARD_BANNER),
+                r = (0, c.T)(e?.surface.asset);
+            if (null == e || "" === e.surface.body) return null;
+            let { surface: t, id: d, promotionId: p, componentType: x } = e,
+                h = (0, u.C)(t.helpArticle, "");
             return (0, n.jsxs)("div", {
-                className: d.kL,
+                className: m.kL,
                 children: [
-                    (0, n.jsx)(u.A, {
-                        componentType: l.C.PLAN_SELECT_CARD_BANNER,
-                        componentId: e.id,
-                        promotionId: e.promotionId,
-                    }),
-                    null != t && (0, n.jsx)("img", { alt: "", className: d.Sl, src: t }),
+                    (0, n.jsx)(o.A, { componentType: x, componentId: d, promotionId: p }),
+                    null != r && (0, n.jsx)("img", { alt: "", className: m.Sl, src: r }),
                     (0, n.jsxs)(i.E, {
                         variant: "body-md/normal",
                         color: "text-default",
-                        className: d.rf,
+                        className: m.rf,
                         children: [
-                            r.body,
-                            null != m &&
+                            t.body,
+                            null != h &&
                                 (0, n.jsxs)(n.Fragment, {
-                                    children: ["\xa0", (0, n.jsx)(s.Anchor, { href: m.url, children: m.linkText })],
+                                    children: ["\xa0", (0, n.jsx)(s.Anchor, { href: h.url, children: h.linkText })],
                                 }),
                         ],
                     }),

@@ -1,5 +1,5 @@
 var i = t(582128),
-    l = t(877624),
+    l = t(517352),
     a = t(855986),
     r = t(554146),
     o = t(841702),
@@ -7,7 +7,7 @@ var i = t(582128),
     u = t(412260),
     c = t(860300),
     d = t(682901);
-function A(e) {
+function f(e) {
     return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2, d.gD.PREMIUM_3_MONTH_TIER_2].includes(e?.id);
 }
 t.d(
@@ -40,7 +40,7 @@ t.d(
         },
         MD: function () {
             let { enabled: e } = c.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
-            if (!e || null == u.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR)) return !1;
+            if (!e || null == u.A.getMarketingComponentBySurface(l.oW.GIFT_REMINDER_NAGBAR)) return !1;
             let n = u.A.getGiftPromotion()?.id;
             return (
                 null != n &&
@@ -48,7 +48,7 @@ t.d(
                 !(0, s.u$)(r.M.GIFTING_PROMOTION_REMINDER, n).isDismissed
             );
         },
-        Mq: A,
+        Mq: f,
         gc: function (e) {
             if (null != e)
                 return {
@@ -59,11 +59,11 @@ t.d(
                 };
         },
         kz: function (e, n, t) {
-            let i = A(e);
+            let i = f(e);
             return null != t && 1 === t.length && i && n;
         },
         px: function (e, n, t) {
-            let i = A(e),
+            let i = f(e),
                 l = null != t && t.length >= 1;
             return n && i && l;
         },

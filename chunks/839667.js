@@ -15,8 +15,8 @@ var i,
     h = s(369143),
     f = s(107834),
     N = s(793574),
-    b = s(688810),
-    A = s(669815),
+    A = s(688810),
+    b = s(669815),
     j = s(86379),
     E = s(160946),
     T = s(500597),
@@ -43,7 +43,7 @@ var v = s(611924),
     W = s(482589),
     z = s(511484),
     Y = s(175020),
-    X = s(877624),
+    X = s(517352),
     K = s(192308),
     Z = s(331322),
     q = s(834730),
@@ -62,7 +62,7 @@ var v = s(611924),
     eo = s(881489),
     ed = s(423814),
     eu = s(77528),
-    em = s(549996),
+    em = s(641436),
     ex = s(172218);
 function eg() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -89,8 +89,8 @@ let eh = function (e) {
 };
 var ef = s(371764),
     eN = s(103411),
-    eb = s(65470),
-    eA = s(792656),
+    eA = s(65470),
+    eb = s(792656),
     ej = s(536637),
     eE = s.n(ej),
     eT = s(496431),
@@ -433,13 +433,13 @@ let te = (e) => {
                   }
                 : { blur: 0 },
         ),
-        b = (0, o.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * r), [r]),
-        [A, j] = (0, o.useState)(0),
+        A = (0, o.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * r), [r]),
+        [b, j] = (0, o.useState)(0),
         [E, T] = (0, o.useState)(1),
-        C = (0, e5.z)({ xOffset: A, config: { tension: 10, friction: 10, duration: b } });
+        C = (0, e5.z)({ xOffset: b, config: { tension: 10, friction: 10, duration: A } });
     return ((0, e8.A)(() => {
         (j(E * (0.5 * Math.random() * 5 + 2.5)), T((e) => -1 * e));
-    }, b),
+    }, A),
     l)
         ? d
         : (0, c.jsx)(e7.animated.div, {
@@ -878,7 +878,7 @@ function tN(e) {
                             gap: 12,
                             className: tu.oF,
                             children: [
-                                (0, c.jsx)(eA.A, {
+                                (0, c.jsx)(eb.A, {
                                     size: "md",
                                     buttonTextOverride: eC.intl.string(eC.t["2+luBl"]),
                                     iconOverride: J.NitroWheelIcon,
@@ -899,7 +899,7 @@ function tN(e) {
         }),
     });
 }
-function tb(e) {
+function tA(e) {
     let {
             className: t,
             buttonVisibilityRef: i,
@@ -1035,7 +1035,7 @@ function tb(e) {
                                         );
                                     },
                                 }),
-                                (0, c.jsx)(eb.A, {
+                                (0, c.jsx)(eA.A, {
                                     variant: "secondary",
                                     size: "md",
                                     buttonTextOverride: eC.intl.string(eC.t["3KomGa"]),
@@ -1053,7 +1053,7 @@ function tb(e) {
         }),
     });
 }
-function tA(e) {
+function tb(e) {
     let { className: t, isInReverseTrial: s, shouldShowReferralProgressBar: i } = e,
         {
             headingTop: n,
@@ -1064,20 +1064,22 @@ function tA(e) {
             discountedPrice: d,
             buttonVisibilityRef: u,
         } = tE(),
-        { analyticsLocations: m } = (0, b.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
-        x = (0, em.c)(X.C.MARKETING_PAGE_BANNER),
+        { analyticsLocations: m } = (0, A.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
+        x = (0, em.u)(X.oW.MARKETING_PAGE_BANNER),
         g = null != r && r.status === eK.Dmq.CANCELED,
         p = null;
-    null != x &&
-        "marketingPageBanner" === x.properties.properties.oneofKind &&
-        (p = (0, c.jsx)(ef.x, {
-            componentId: x.id,
-            promotionId: x.promotionId,
-            promotionBannerMarketingComponentFields: x.properties.properties.marketingPageBanner,
-        }));
+    if (null != x) {
+        let { surface: e, id: t, promotionId: s, componentType: i } = x;
+        p = (0, c.jsx)(ef.x, {
+            componentId: t,
+            componentType: i,
+            promotionId: s,
+            promotionBannerMarketingComponentFields: e,
+        });
+    }
     let h = (0, eu.V)(),
         f = (0, ed.O)(),
-        A = (0, z.U9)(f, tf.pe.TIER_2) ? tf.pe.TIER_2 : void 0,
+        b = (0, z.U9)(f, tf.pe.TIER_2) ? tf.pe.TIER_2 : void 0,
         j = null != r && r.status !== eK.Dmq.ACCOUNT_HOLD && r.hasAnyPremiumNitro,
         E = (0, es.A)(),
         T = E.isFractionalPremiumActive && !j && null == p && !l;
@@ -1087,8 +1089,8 @@ function tA(e) {
             ? (0, c.jsxs)("div", {
                   className: tu.UJ,
                   children: [
-                      (0, c.jsx)(eA.A, { size: "md", subscriptionTier: h?.subscriptionTrial?.skuId ?? A }),
-                      (0, c.jsx)(eb.A, {
+                      (0, c.jsx)(eb.A, { size: "md", subscriptionTier: h?.subscriptionTrial?.skuId ?? b }),
+                      (0, c.jsx)(eA.A, {
                           variant: "secondary",
                           size: "md",
                           buttonTextOverride: eC.intl.string(eC.t["3KomGa"]),
@@ -1107,7 +1109,7 @@ function tA(e) {
         });
     }
     return l && null != o && null != r
-        ? (0, c.jsx)(tb, {
+        ? (0, c.jsx)(tA, {
               className: t,
               buttonVisibilityRef: u,
               userDiscountOffer: o,
@@ -1131,7 +1133,7 @@ function tA(e) {
 let [tj, tE] = (0, ea.A)(),
     tT = function (e) {
         let { className: t, buttonVisibilityRef: s, userDiscountOffer: i, discountedPrice: n } = e,
-            { analyticsLocations: a } = (0, b.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
+            { analyticsLocations: a } = (0, A.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
             l = (0, eo.ds)(),
             r = (0, ec.QQ)(),
             d = (0, x.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
@@ -1140,7 +1142,7 @@ let [tj, tE] = (0, ea.A)(),
             g = eC.intl.string(eC.t.qYKftX),
             p = (0, eN.m)(),
             { fractionalState: h, endsAt: f } = (0, es.A)(),
-            A = (0, et.Ay)(f, et.yE.CREDITS_ENDS_IN),
+            b = (0, et.Ay)(f, et.yE.CREDITS_ENDS_IN),
             j = h !== tf.xc.NONE && !l;
         j && (m = !0);
         let E = o.useMemo(() => {
@@ -1157,10 +1159,10 @@ let [tj, tE] = (0, ea.A)(),
                         (0, c.jsx)("div", {
                             ...e,
                             className: tu.V_,
-                            children: (0, c.jsx)("div", { className: tu.eL, children: (0, c.jsx)(eh, { text: A }) }),
+                            children: (0, c.jsx)("div", { className: tu.eL, children: (0, c.jsx)(eh, { text: b }) }),
                         }),
                 });
-            }, [j, g, A]),
+            }, [j, g, b]),
             T = o.useMemo(
                 () => ({
                     headingTop: E,
@@ -1173,11 +1175,11 @@ let [tj, tE] = (0, ea.A)(),
                 }),
                 [E, m, u, d, i, n, s],
             );
-        return (0, c.jsx)(b.f5, {
+        return (0, c.jsx)(A.f5, {
             value: a,
             children: (0, c.jsx)(tj.Provider, {
                 value: T,
-                children: (0, c.jsx)(tA, { className: t, isInReverseTrial: l, shouldShowReferralProgressBar: p }),
+                children: (0, c.jsx)(tb, { className: t, isInReverseTrial: l, shouldShowReferralProgressBar: p }),
             }),
         });
     };
@@ -1213,7 +1215,7 @@ let tP = function () {
                         className: t_.MQ,
                         children: [
                             (0, c.jsx)(tv.l, { size: "sm", location: N.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB }),
-                            (0, c.jsx)(eb.A, { size: "sm", variant: "overlay-secondary" }),
+                            (0, c.jsx)(eA.A, { size: "sm", variant: "overlay-secondary" }),
                         ],
                     }),
                 ],
@@ -1242,7 +1244,7 @@ function tz(e) {
         return (0, c.jsxs)("div", {
             className: tW.R$,
             children: [
-                (0, c.jsx)(eA.A, {
+                (0, c.jsx)(eb.A, {
                     defaultTextOverride: s.text,
                     variantOverride: "overlay-primary",
                     size: "md",
@@ -1301,7 +1303,7 @@ function tY(e) {
         name: tD.ImpressionNames.PERK_DISCOVERABILITY_CARD,
         properties: { name: tG.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
     });
-    let { analyticsLocations: i } = (0, b.Ay)(N.A.CROISSANT_PREMIUM_HERO_CARD),
+    let { analyticsLocations: i } = (0, A.Ay)(N.A.CROISSANT_PREMIUM_HERO_CARD),
         n = o.useCallback(() => {
             (0, K.mM)(async () => {
                 let { default: e } = await Promise.all([s.e(878140), s.e(532203)]).then(s.bind(s, 15654));
@@ -1311,7 +1313,7 @@ function tY(e) {
     return (0, c.jsx)(tO.N, {
         theme: eK.NJ8.DARK,
         children: (e) =>
-            (0, c.jsx)(b.f5, {
+            (0, c.jsx)(A.f5, {
                 value: i,
                 children: (0, c.jsx)("div", {
                     className: u()(e, tW.kL),
@@ -1417,8 +1419,8 @@ function tJ(e) {
     });
 }
 function tQ(e) {
-    let { analyticsLocations: t } = (0, b.Ay)(N.A.CROISSANT_PREMIUM_PERK_CARD);
-    return (0, c.jsx)(b.f5, { value: t, children: (0, c.jsx)(tJ, { ...e }) });
+    let { analyticsLocations: t } = (0, A.Ay)(N.A.CROISSANT_PREMIUM_PERK_CARD);
+    return (0, c.jsx)(A.f5, { value: t, children: (0, c.jsx)(tJ, { ...e }) });
 }
 var t$ = s(744082);
 s(321073);
@@ -1483,8 +1485,8 @@ let sh = (0, t2.mj)({
 });
 var sf = s(612413);
 let sN = new Date(Date.UTC(2026, 10, 5));
-var sb = s(749962),
-    sA = s(691450),
+var sA = s(749962),
+    sb = s(691450),
     sj = s(647024),
     sE = s(524698),
     sT = s(635088),
@@ -1521,7 +1523,7 @@ function s_(e) {
         } = (function () {
             let e,
                 t,
-                { analyticsLocations: s } = (0, b.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
+                { analyticsLocations: s } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
                 i = ((e = (0, sg.eh)()), (t = (0, sg.fR)()), null != e ? e : t),
                 n = (function (e) {
                     let { location: t } = e,
@@ -1547,8 +1549,8 @@ function s_(e) {
                         n && null == i
                             ? {
                                   id: tG.CALL_OF_DUTY_3PP_EXPIRED_CARD_ID,
-                                  title: eC.intl.string(sb.default["IcD/7p"]),
-                                  description: eC.intl.formatToPlainString(sb.default.hausFi, {
+                                  title: eC.intl.string(sA.default["IcD/7p"]),
+                                  description: eC.intl.formatToPlainString(sA.default.hausFi, {
                                       date: new Intl.DateTimeFormat(eC.intl.currentLocale, {
                                           day: "numeric",
                                           month: "long",
@@ -1557,7 +1559,7 @@ function s_(e) {
                                   }),
                                   isThirdPartyPerk: !0,
                                   phase: sx.L.EXPIRED,
-                                  pillText: eC.intl.string(sb.default.fxF0Jz),
+                                  pillText: eC.intl.string(sA.default.fxF0Jz),
                                   caption: (0, c.jsx)("img", { src: sT.A, alt: "Call of Duty: MW4" }),
                                   backgroundAssetUrl:
                                       "https://cdn.discordapp.com/assets/content/74dd725dde373bfdbced9606d5201ed2c555fc895f4da644a8de314de6906be3.webp",
@@ -1566,8 +1568,8 @@ function s_(e) {
                     t = a
                         ? {
                               id: tG.LOGITECH_3PP_CARD_ID,
-                              title: eC.intl.string(sA.default.OlObRa),
-                              description: eC.intl.format(sA.default.ZGOJ8R, {
+                              title: eC.intl.string(sb.default.OlObRa),
+                              description: eC.intl.format(sb.default.ZGOJ8R, {
                                   discountPercent: 30,
                                   termsUrl: el.A.getArticleURL(eK.MVz.LOGITECH_PROMOTION),
                               }),
@@ -1578,8 +1580,8 @@ function s_(e) {
                               onCtaClick: () =>
                                   (0, sp.P)({
                                       partnerIds: [t1.XY],
-                                      title: eC.intl.string(sA.default["2I7nK+"]),
-                                      subtitle: eC.intl.format(sA.default.W8jOD0, {
+                                      title: eC.intl.string(sb.default["2I7nK+"]),
+                                      subtitle: eC.intl.format(sb.default.W8jOD0, {
                                           termsUrl: el.A.getArticleURL(eK.MVz.LOGITECH_PROMOTION),
                                       }),
                                       analyticsLocations: s,
@@ -1671,7 +1673,7 @@ function s_(e) {
                                   "https://cdn.discordapp.com/assets/content/e07fd53d33f374f567964ff5b7843f09bc6943288891cfed6e573df04ba9741c.webp",
                               blurTint: "#18181C",
                               caption: (0, c.jsx)("img", { src: sC.A, alt: "YouTube Premium" }),
-                              ctaText: eC.intl.string(sb.default.fcopjf),
+                              ctaText: eC.intl.string(sA.default.fcopjf),
                               onCtaClick: () =>
                                   (0, sp.P)({
                                       partnerIds: [t1.NC],
@@ -1773,7 +1775,7 @@ function s_(e) {
                     }
                   : null,
         f = null != h ? h.card.id : null,
-        A = i && null == h,
+        b = i && null == h,
         j =
             i ||
             g.length > 0 ||
@@ -1793,7 +1795,7 @@ function s_(e) {
               glowing: t === sR || s === h.card.id,
               autoClickCta: s === h.card.id,
           }))
-        : A && (E = (0, c.jsx)("div", { className: st.JE, children: (0, c.jsx)(tY, { glowing: t === sR }) })),
+        : b && (E = (0, c.jsx)("div", { className: st.JE, children: (0, c.jsx)(tY, { glowing: t === sR }) })),
     null != E || j)
         ? (0, c.jsx)(si, {
               id: sR,
@@ -1846,7 +1848,7 @@ var sy = s(313133),
     sP = s(67423);
 let sS = function (e) {
     let { isVisible: t, premiumSubscription: i, churnDiscountOffer: n, discountedPrice: a } = e,
-        { analyticsLocations: l } = (0, b.Ay)(N.A.CHURN_DISCOUNT_PERSISTENT_CTA),
+        { analyticsLocations: l } = (0, A.Ay)(N.A.CHURN_DISCOUNT_PERSISTENT_CTA),
         r = (0, e5.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
@@ -2306,8 +2308,8 @@ function iN(e) {
         [a, t],
     );
 }
-var ib = s(562819),
-    iA = s(793943);
+var iA = s(562819),
+    ib = s(793943);
 function ij(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a, height: l, className: r, style: d } = e,
         u = o.useMemo(
@@ -2374,9 +2376,9 @@ function iz() {
         p,
         h,
         f,
-        A,
+        b,
         j,
-        { analyticsLocations: E } = (0, b.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
+        { analyticsLocations: E } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
         T = (0, s3.X)("useWhatsNewPerkCards"),
         C = (0, s6.A)({ analyticsLocations: E }),
         I = (0, o.useCallback)(() => {
@@ -2386,7 +2388,7 @@ function iz() {
         }, [E]),
         R = (0, o.useCallback)(() => {
             (0, en.openUserSettings)(ei.X.PROFILE_PANEL, { analyticsLocations: E }, () =>
-                (0, ib.L)({ analyticsLocations: E }),
+                (0, iA.L)({ analyticsLocations: E }),
             );
         }, [E]),
         v = (0, o.useCallback)(() => {
@@ -2472,11 +2474,11 @@ function iz() {
             }, [n, m, d, p, a, g, t, h, f, E, s, i])),
         { nitroOrbsRewardsCard: y, questOrbMultiplierCard: P } = io(),
         D =
-            ((A = (0, iP.L)(tf.PremiumTypes.TIER_2)),
+            ((b = (0, iP.L)(tf.PremiumTypes.TIER_2)),
             (j = (0, s7.rX)()),
             (0, o.useMemo)(
                 () =>
-                    A && j
+                    b && j
                         ? {
                               id: tG.NITRO_FILE_UPLOAD_WHATS_NEW_CARD_ID,
                               title: eC.intl.string(iS.default["/cV3ka"]),
@@ -2484,7 +2486,7 @@ function iz() {
                               primaryAsset: (0, c.jsx)(sV.I, { alt: "", ariaHidden: !0 }),
                           }
                         : null,
-                [A, j],
+                [b, j],
             )),
         M = iN(E),
         O = (function () {
@@ -2524,7 +2526,7 @@ function iz() {
                     primaryAsset: iW,
                     ctaText: eC.intl.string(eC.t.jVcuVY),
                     onCtaClick: () => {
-                        (0, iA.nf)(iA.HP.CUSTOM_THEME);
+                        (0, ib.nf)(ib.HP.CUSTOM_THEME);
                     },
                 },
                 {
@@ -2581,7 +2583,7 @@ function i$(e) {
                 t = (0, s3.X)("useFavoritesPerkCards"),
                 s = (0, s5.Lh)(),
                 i = (0, s8.N)(s)?.standard ?? null,
-                { analyticsLocations: n } = (0, b.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
+                { analyticsLocations: n } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
                 a = (0, s2.A)({ scrollPosition: iY._F.TRY_IT_OUT, analyticsLocations: n }),
                 l = (0, o.useCallback)(() => {
                     (0, en.openUserSettings)(ei.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: n });
@@ -2606,7 +2608,7 @@ function i$(e) {
                 }, [n]),
                 p = iz(),
                 h = (0, o.useMemo)(() => p.map((e) => e?.id), [p]),
-                { nitroOrbsRewardsCard: f, questOrbMultiplierCard: A } = io(),
+                { nitroOrbsRewardsCard: f, questOrbMultiplierCard: b } = io(),
                 j = iN(n),
                 E = (0, o.useMemo)(
                     () => [
@@ -2752,7 +2754,7 @@ function i$(e) {
                             categories: ["vip"],
                         },
                         null != f ? { ...f, categories: ["vip"] } : null,
-                        null != A ? { ...A, categories: ["vip"] } : null,
+                        null != b ? { ...b, categories: ["vip"] } : null,
                         {
                             id: tG.PERMADECOS_CARD_ID,
                             title: eC.intl.string(eC.t.L14NZN),
@@ -2761,7 +2763,7 @@ function i$(e) {
                             categories: ["vip"],
                         },
                     ],
-                    [e, i, f, A, j, a, l, r, d, u, m, g, x, t],
+                    [e, i, f, b, j, a, l, r, d, u, m, g, x, t],
                 );
             return (0, o.useMemo)(() => E.filter((e) => null != e && !h.includes(e.id)), [E, h]);
         })(),
@@ -2911,7 +2913,7 @@ let i8 = "/assets/cd2be35d285d4675.svg",
                 glowingSectionId: p,
                 glowingPerkId: h,
                 scrollBlock: f,
-                scrollInline: A,
+                scrollInline: b,
             } = o.useMemo(() => {
                 let e = new URLSearchParams(s.search),
                     t = e.get("perk"),
@@ -2922,7 +2924,7 @@ let i8 = "/assets/cd2be35d285d4675.svg",
                       ? { scrollTargetId: i, glowingSectionId: i, scrollBlock: "start" }
                       : {};
             }, [s.search]);
-        i7(d ?? "", null != d, f, A);
+        i7(d ?? "", null != d, f, b);
         let [j, E] = o.useState(!1),
             T = (0, V.p)(),
             C = o.useRef(null),
@@ -2931,7 +2933,7 @@ let i8 = "/assets/cd2be35d285d4675.svg",
             P = (0, z.iU)(tf.gD.PREMIUM_MONTH_TIER_2, T, a),
             S = !I && y,
             D = (0, x.bG)([H.A], () => (null != t ? H.A.getUserProfile(t) : null)),
-            { analyticsLocations: k } = (0, b.Ay)(N.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
+            { analyticsLocations: k } = (0, A.Ay)(N.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
             [L, X] = o.useState(!1);
         return null != D && (l || null != r)
             ? (0, c.jsxs)(G.Gt, {
@@ -2939,7 +2941,7 @@ let i8 = "/assets/cd2be35d285d4675.svg",
                   ref: i,
                   children: [
                       (0, c.jsx)(i3, {
-                          children: (0, c.jsxs)(b.f5, {
+                          children: (0, c.jsxs)(A.f5, {
                               value: k,
                               children: [
                                   (0, c.jsx)(U.L, {
@@ -3118,12 +3120,12 @@ var np = s(118751),
     nh = s(773669),
     nf = s(97352),
     nN = s(526292),
-    nb = s(387278),
-    nA = s(369827),
+    nA = s(387278),
+    nb = s(369827),
     nj = s(803496);
 function nE(e) {
     let t = (0, x.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
-        s = (0, nA.L)(),
+        s = (0, nb.L)(),
         i = t?.paymentSourceId ?? s,
         { priceOptions: n } = (0, nj.A)({
             activeSubscription: t,
@@ -3209,8 +3211,8 @@ function nv(e) {
                 h = (0, nN.k5)(),
                 f = (0, x.bG)([nh.default], () => nh.default.locale),
                 N = (0, z.U9)(p, t),
-                b = (0, z.N1)(n),
-                A = (0, z.N1)(a),
+                A = (0, z.N1)(n),
+                b = (0, z.N1)(a),
                 [j, E] = (0, x.yK)([nf.A], () => [nf.A.get(n), nf.A.get(a)], [n, a]),
                 T = null != j ? (0, er.sS)(j, r) : null,
                 C = null != E ? (0, er.sS)(E, r) : null,
@@ -3221,11 +3223,11 @@ function nv(e) {
                           })
                         : null,
                 R = p?.discount?.planIds,
-                v = nT(a, N, R, A, C),
-                _ = nT(n, N, R, b, T),
+                v = nT(a, N, R, b, C),
+                _ = nT(n, N, R, A, T),
                 y = p?.discount.userUsageLimitInterval,
                 P = p?.discount.userUsageLimit ?? 1,
-                S = !l || v || _ || null == E ? null : (0, nb.Cj)(E, !1, r),
+                S = !l || v || _ || null == E ? null : (0, nA.Cj)(E, !1, r),
                 D = !_ || m,
                 O = (function (e) {
                     let { skuId: t, monthlyHasDiscount: s, isMonthlyPlanDisabled: i } = e;
@@ -3243,10 +3245,10 @@ function nv(e) {
                                       usageInterval: y,
                                       discountDuration: P,
                                       regularPrice: C,
-                                      discountedPrice: A,
+                                      discountedPrice: b,
                                   })
                                 : null) ?? S,
-                        secondaryText: v ? A : C,
+                        secondaryText: v ? b : C,
                         secondarySubText: v ? C : null,
                         badgeText: v ? I : null,
                         useGradientSelectedBorder: l && (d || v || D),
@@ -3261,10 +3263,10 @@ function nv(e) {
                                   usageInterval: y,
                                   discountDuration: P,
                                   regularPrice: T,
-                                  discountedPrice: b,
+                                  discountedPrice: A,
                               })
                             : null,
-                        secondaryText: _ ? b : T,
+                        secondaryText: _ ? A : T,
                         secondarySubText: _ ? T : null,
                         badgeText: _ ? I : null,
                         useGradientSelectedBorder: l && (d || _),
@@ -3274,12 +3276,12 @@ function nv(e) {
                 U = k === a ? v : k === n && _;
             return { planRadioOptions: L, selectedPlanId: k, setSelectedPlanId: i, shouldSuppressDiscountCta: N && !U };
         })({ skuId: t }),
-        b = n ? "expressive" : "secondary",
-        { buttonText: A } = (0, nd.A)({ subscriptionTier: t }),
+        A = n ? "expressive" : "secondary",
+        { buttonText: b } = (0, nd.A)({ subscriptionTier: t }),
         { subscribeButtonProps: j } = (0, no.$)({
             subscriptionTier: t,
-            variantOverride: b,
-            buttonTextOverride: N ? A : void 0,
+            variantOverride: A,
+            buttonTextOverride: N ? b : void 0,
         }),
         E = (0, c.jsxs)(c.Fragment, {
             children: [
@@ -3507,13 +3509,13 @@ function n_(e) {
 function ny(e) {
     let { innerRef: t, className: s, variant: i = "default" } = e,
         n = "settings" === i,
-        { analyticsLocations: a } = (0, b.Ay)(N.A.PREMIUM_MARKETING_TIER_CARD),
+        { analyticsLocations: a } = (0, A.Ay)(N.A.PREMIUM_MARKETING_TIER_CARD),
         l = (0, ns.pw)(t),
         r = (0, im.PA)(),
         o = !n && r,
         d = (0, x.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
         m = { [nI.iR]: !d && !n };
-    return (0, c.jsx)(b.f5, {
+    return (0, c.jsx)(A.f5, {
         value: a,
         children: (0, c.jsxs)(Z.B, {
             direction: "vertical",
@@ -3597,7 +3599,7 @@ let nk = function (e) {
         children: (0, c.jsxs)("div", {
             className: nO.UD,
             children: [
-                (0, c.jsx)(eA.A, {
+                (0, c.jsx)(eb.A, {
                     enableMarketingSubscribeCopyTest: !a,
                     size: "md",
                     subscriptionTier: s,
@@ -3605,7 +3607,7 @@ let nk = function (e) {
                     isPersistentCTA: !0,
                     premiumModalAnalyticsLocation: r,
                 }),
-                (0, c.jsx)(eb.A, { variant: "secondary", size: "md" }),
+                (0, c.jsx)(eA.A, { variant: "secondary", size: "md" }),
             ],
         }),
     });
@@ -3648,8 +3650,8 @@ let nU = function () {
 var nG = s(989756);
 function nw(e) {
     let { ref: t, ...s } = e,
-        { analyticsLocations: i } = (0, b.Ay)(N.A.PREMIUM_MARKETING_FOOTER_CTA);
-    return (0, c.jsx)(b.f5, {
+        { analyticsLocations: i } = (0, A.Ay)(N.A.PREMIUM_MARKETING_FOOTER_CTA);
+    return (0, c.jsx)(A.f5, {
         value: i,
         children: (0, c.jsx)("div", {
             ref: t,
@@ -3725,7 +3727,7 @@ let nH = function (e) {
                     className: t_.MQ,
                     children: [
                         null != n && (0, c.jsx)(tv.l, { size: "sm", location: N.A.PREMIUM_WISHLIST_MARKETING_PAGE }),
-                        (0, c.jsx)(eb.A, { size: "sm", variant: "overlay-secondary" }),
+                        (0, c.jsx)(eA.A, { size: "sm", variant: "overlay-secondary" }),
                     ],
                 }),
             ],
@@ -3822,7 +3824,7 @@ function nJ() {
                                                     }),
                                                     (0, c.jsx)("div", {
                                                         className: nq.xF,
-                                                        children: (0, c.jsx)(eA.A, {
+                                                        children: (0, c.jsx)(eb.A, {
                                                             variantOverride: "secondary",
                                                             size: "md",
                                                             subscriptionTier: tf.pe.TIER_2,
@@ -4064,20 +4066,20 @@ var ao = s(14057);
 let ad = o.memo(function (e) {
     let { className: t, subscriptionTier: s, isEligibleForBogoPromotion: i, ref: n, variant: a = "default" } = e,
         l = "settings" === a,
-        { analyticsLocations: r } = (0, b.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
+        { analyticsLocations: r } = (0, A.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
         o = al(),
         d = n4.useConfig({ location: "PremiumBrandRefreshMarketingHeroHeading" }).enabled,
         m = (0, ae.A)(),
         g = null != m,
         { visibilityPercentageRef: p, visibilityPercentage: h } = eg(!(0, x.bG)([ee.Ay], () => ee.Ay.useReducedMotion)),
         f = (0, i4.b)(),
-        A = !g && f.length > 0,
-        j = (0, em.c)(X.C.MARKETING_PAGE_BANNER),
-        E = null != j && "marketingPageBanner" === j.properties.properties.oneofKind,
+        b = !g && f.length > 0,
+        j = (0, em.u)(X.oW.MARKETING_PAGE_BANNER),
+        E = null != j,
         T = (0, nN.ar)() && !E,
         C = (0, ed.O)(),
         I = (null != C && tf.U4.includes(C.discountId)) || E;
-    return (0, c.jsx)(b.f5, {
+    return (0, c.jsx)(A.f5, {
         value: r,
         children: (0, c.jsxs)("div", {
             ref: n,
@@ -4112,7 +4114,7 @@ let ad = o.memo(function (e) {
                                             className: ao.eZ,
                                             children: (0, c.jsx)(as, { referrer: m }),
                                         }),
-                                    A &&
+                                    b &&
                                         (0, c.jsx)("div", {
                                             className: ao.Qn,
                                             children: (0, c.jsx)(ai.A, {
@@ -4125,7 +4127,7 @@ let ad = o.memo(function (e) {
                                     (0, c.jsxs)("div", {
                                         className: T ? ao.es : ao.UJ,
                                         children: [
-                                            (0, c.jsx)(eA.A, {
+                                            (0, c.jsx)(eb.A, {
                                                 enableMarketingSubscribeCopyTest: !l,
                                                 size: "md",
                                                 fullWidth: T,
@@ -4133,7 +4135,7 @@ let ad = o.memo(function (e) {
                                                 subscriptionTier: I && null == s ? tf.pe.NONE : s,
                                                 buttonTextOverride: I ? eC.intl.string(eC.t["2pG5Ga"]) : void 0,
                                             }),
-                                            !T && (0, c.jsx)(eb.A, { variant: "secondary", size: "md" }),
+                                            !T && (0, c.jsx)(eA.A, { variant: "secondary", size: "md" }),
                                         ],
                                     }),
                                     (0, c.jsx)("div", {
@@ -4146,13 +4148,12 @@ let ad = o.memo(function (e) {
                                                 : eC.intl.format(eC.t.kt9wxs, { cheapestMonthlyPrice: o }),
                                         }),
                                     }),
-                                    null != j &&
-                                        "marketingPageBanner" === j.properties.properties.oneofKind &&
+                                    E &&
                                         (0, c.jsx)(ef.x, {
                                             componentId: j.id,
+                                            componentType: j.componentType,
                                             promotionId: j.promotionId,
-                                            promotionBannerMarketingComponentFields:
-                                                j.properties.properties.marketingPageBanner,
+                                            promotionBannerMarketingComponentFields: j.surface,
                                         }),
                                 ],
                             }),
@@ -4233,13 +4234,13 @@ let ap = () => {
         r = (0, x.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
         [d, g] = o.useState(!1),
         [p, h] = o.useState(!1),
-        [f, A] = o.useState(!1),
+        [f, b] = o.useState(!1),
         [j, E] = o.useState(!1),
         T = (0, x.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
         C = null != T ? (0, er.EL)(T) : null,
         I = null != C ? er.Ay.getSkuIdForPlan(C.planId) : null,
         _ = null !== I && I !== tf.pe.TIER_2 ? tf.pe.TIER_2 : null,
-        { analyticsLocations: y } = (0, b.Ay)(N.A.PREMIUM_MARKETING);
+        { analyticsLocations: y } = (0, A.Ay)(N.A.PREMIUM_MARKETING);
     o.useEffect(() => {
         E(!0);
     }, []);
@@ -4309,7 +4310,7 @@ let ap = () => {
                         e &&
                             !f &&
                             (O.default.track(eK.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: y }),
-                            A(!0));
+                            b(!0));
                     },
                     children: (0, c.jsx)("div", { ref: a, className: ag._Z }),
                 }),
@@ -4326,8 +4327,8 @@ let ap = () => {
 var ah = s(862482),
     af = s(300349),
     aN = s(106512),
-    ab = s(412260),
-    aA = s(662367),
+    aA = s(412260),
+    ab = s(662367),
     aj = s(374403),
     aE = s(396375),
     aT = s(900797),
@@ -4373,10 +4374,10 @@ function aO(e) {
             isEarlyAccess: o = !1,
             variant: d = "default",
         } = e,
-        { analyticsLocations: m } = (0, b.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
+        { analyticsLocations: m } = (0, A.Ay)(N.A.PREMIUM_MARKETING_PERK_CARD),
         x = (0, c.jsx)("img", { src: n, alt: "", className: u()(a, aD.perksCardArt) }),
         g = "settings" === d;
-    return (0, c.jsx)(b.f5, {
+    return (0, c.jsx)(A.f5, {
         value: m,
         children: (0, c.jsxs)("div", {
             className: u()(aD.perkCard, i, { [aD.settingsCard]: g }),
@@ -4550,7 +4551,7 @@ let ak = function (e) {
             };
         })({ styles: aD }),
         r = (0, e3.bG)([ee.Ay], () => ee.Ay.useReducedMotion),
-        { analyticsLocations: d } = (0, b.Ay)();
+        { analyticsLocations: d } = (0, A.Ay)();
     return (0, c.jsxs)("div", {
         className: u()(aD.perksContainer, t, {
             [aD.partiallyHidden]: i && !n,
@@ -4814,12 +4815,12 @@ function aZ(e) {
 }
 let aq = function (e) {
     let { className: t, buttonClassName: s, subscriptionTier: i, isDarkMode: n, ref: a } = e,
-        { analyticsLocations: l } = (0, b.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
+        { analyticsLocations: l } = (0, A.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
         r = (0, ec.QQ)(),
         o = (0, nN.ar)(),
         d = (0, i4.b)().length > 0,
         m = eC.intl.string(eC.t.YCZldK);
-    return (0, c.jsx)(b.f5, {
+    return (0, c.jsx)(A.f5, {
         value: l,
         children: (0, c.jsxs)("div", {
             ref: a,
@@ -4881,7 +4882,7 @@ let a1 = () => {
             [d, m] = o.useState(!1),
             [g, p] = o.useState(!1),
             h = !l && !d,
-            [f, A] = o.useState(!1),
+            [f, b] = o.useState(!1),
             j = (0, x.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
             E = null != j ? (0, er.EL)(j) : null,
             T = null != E ? er.Ay.getSkuIdForPlan(E.planId) : null,
@@ -4890,16 +4891,14 @@ let a1 = () => {
             _ = I?.subscriptionTrial?.skuId,
             y = (0, nN.ar)(),
             P = !e && y,
-            S = (0, x.bG)([ab.A], () => {
-                let e = ab.A.getMarketingComponentByType(X.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
-                return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
-                    ? null
-                    : e.properties.properties.billingSettingsNitroGiftBanner;
+            S = (0, x.bG)([aA.A], () => {
+                let e = aA.A.getMarketingComponentBySurface(X.oW.BILLING_SETTINGS_NITRO_GIFT_BANNER);
+                return null == e ? null : e.surface;
             }),
             D = (0, aj.Q)(),
-            { analyticsLocations: k } = (0, b.Ay)(N.A.PREMIUM_MARKETING);
+            { analyticsLocations: k } = (0, A.Ay)(N.A.PREMIUM_MARKETING);
         o.useEffect(() => {
-            A(!0);
+            b(!0);
         }, []);
         let L = e
             ? (0, c.jsx)("div", {
@@ -5004,7 +5003,7 @@ let a1 = () => {
                         }),
                     ],
                 }),
-                null != D && (0, c.jsx)("div", { className: a$.Ol, children: (0, c.jsx)(aA.I, { component: D }) }),
+                null != D && (0, c.jsx)("div", { className: a$.Ol, children: (0, c.jsx)(ab.I, { component: D }) }),
                 L,
                 e ? (0, c.jsx)(aU, { className: a$.OE }) : (0, c.jsx)(ak, { className: a$.B_ }),
                 (0, c.jsx)("div", {
@@ -5063,7 +5062,7 @@ let a6 = function (e) {
     let { entrypoint: t = tf.tU.UserSettings } = e;
     (0, v.P)(R);
     let s = (0, j.Hp)(),
-        { sourceAnalyticsLocations: i, analyticsLocations: n } = (0, b.Ay)(N.A.PREMIUM_MARKETING),
+        { sourceAnalyticsLocations: i, analyticsLocations: n } = (0, A.Ay)(N.A.PREMIUM_MARKETING),
         a = (0, x.bG)([M.A], () => M.A.hasFetchedSubscriptions()),
         l = (0, x.bG)([D.A], () => D.A.hasFetchedPaymentSources),
         r = (0, x.bG)([S.default], () => S.default.getCurrentUser()),
@@ -5078,7 +5077,7 @@ let a6 = function (e) {
         o.useEffect(() => {
             !(async function () {
                 let e = Date.now();
-                (await Promise.all([A.hP(), A.$o(), (0, p.zS)(null, null, eK.tF5.DISCOVERY)]),
+                (await Promise.all([b.hP(), b.$o(), (0, p.zS)(null, null, eK.tF5.DISCOVERY)]),
                     (B.current = Date.now() - e),
                     w(!1));
             })();
@@ -5116,7 +5115,7 @@ let a6 = function (e) {
             : s
               ? (0, c.jsx)(T.uK, {})
               : K && H
-                ? (0, c.jsx)(b.f5, { value: n, children: (0, c.jsx)(i9, { userId: d }) })
+                ? (0, c.jsx)(A.f5, { value: n, children: (0, c.jsx)(i9, { userId: d }) })
                 : z
                   ? null
                   : (0, c.jsx)("div", { className: u()(a3.kL, a3.Lq), children: (0, c.jsx)(g.y, {}) });
@@ -5124,5 +5123,5 @@ let a6 = function (e) {
         ? !X && !s && K && H
             ? Z
             : (0, c.jsxs)(c.Fragment, { children: [K && (0, c.jsx)(f.A, {}), Z] })
-        : (0, c.jsx)(b.f5, { value: n, children: (0, c.jsx)(a2, { entrypoint: t }) });
+        : (0, c.jsx)(A.f5, { value: n, children: (0, c.jsx)(a2, { entrypoint: t }) });
 };
