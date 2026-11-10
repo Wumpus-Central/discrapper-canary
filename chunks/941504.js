@@ -692,7 +692,7 @@ function e0(e) {
                                   (0, C.jsx)(eR.m, {
                                       text: s.intl.string(r.default["6vB9E2"]),
                                       children: (0, C.jsx)(eo.Anchor, {
-                                          href: n.detail_url,
+                                          href: `https://discord.com${n.detail_url}`,
                                           target: "_blank",
                                           rel: "noopener noreferrer",
                                           "aria-label": s.intl.string(r.default["6vB9E2"]),
