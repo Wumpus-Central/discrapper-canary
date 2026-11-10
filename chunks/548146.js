@@ -18,8 +18,8 @@ var o = i(682176),
     _ = i(515718),
     f = i(587481),
     y = i(998218),
-    I = i(869938),
-    C = i(465856),
+    C = i(869938),
+    I = i(465856),
     v = i(383055),
     x = i(447991);
 i(838541);
@@ -90,7 +90,7 @@ function w(e, t) {
         alt: i.description,
         poster: t,
         fileSize: i.size,
-        fileName: (0, C.A)(i),
+        fileName: (0, I.A)(i),
         src: i.url,
         placeholder: i.placeholder,
         placeholderVersion: i.placeholder_version,
@@ -115,8 +115,8 @@ function P(e) {
             S = null != o.width && null != o.height && o.height > o.width ? "portrait" : "landscape",
             A = !0 === t.isSingleMosaicItem,
             y = "portrait" === S,
-            I = null != o.description && "" !== o.description ? o.description : T.intl.string(T.t.FlNoSV),
-            { width: C, height: M } =
+            C = null != o.description && "" !== o.description ? o.description : T.intl.string(T.t.FlNoSV),
+            { width: I, height: M } =
                 ((e = t.maxWidth ?? 550),
                 (a = t.maxHeight ?? 350),
                 (d = e >= 240 && a >= 180),
@@ -128,17 +128,17 @@ function P(e) {
                     minWidth: 240 * !!d,
                     minHeight: 180 * !!d,
                 })),
-            k = C < 400 && !l,
+            k = I < 400 && !l,
             E =
                 ((p = t.width ?? 0),
                 (g = t.height ?? 0),
-                p <= 0 || g <= 0 || C <= 0 || M <= 0
+                p <= 0 || g <= 0 || I <= 0 || M <= 0
                     ? i
                     : (0, s.AE)({
                           src: i,
                           width: p,
                           height: g,
-                          ratio: (0, _.U8)({ width: p, height: g, maxWidth: C, maxHeight: M }),
+                          ratio: (0, _.U8)({ width: p, height: g, maxWidth: I, maxHeight: M }),
                       })),
             w = (0, v.Ir)({
                 alt: o.description,
@@ -152,7 +152,7 @@ function P(e) {
                 (0, n.jsxs)("div", {
                     className: t.className ?? void 0,
                     style: {
-                        width: C,
+                        width: I,
                         height: M,
                         position: "relative",
                         display: "flex",
@@ -162,7 +162,7 @@ function P(e) {
                     children: [
                         (0, n.jsx)(x.A, {
                             crossOrigin: null,
-                            alt: I,
+                            alt: C,
                             src: o.url,
                             poster: E,
                             fileSizeBytes: o.size,
@@ -186,7 +186,7 @@ function P(e) {
                             renderOverlay: t.renderOverlayContent ?? void 0,
                             hideFullScreenBtn: !(t.allowFullScreen ?? !0),
                             hideSkipButtons: !A,
-                            compactTimeDisplay: !A || y || k,
+                            autoCompactTimeDisplay: !0,
                             autoHideVolumeSlider: !A || y,
                             floatingVolumeSlider: (A && y) || k,
                             hidePlaybackSpeedBtn: !!A && !!y && "inline",
@@ -210,7 +210,7 @@ function P(e) {
 }
 function b(e) {
     let t = e.item.originalItem;
-    return (0, v.gL)({ ...e, fileSize: t.size, fileName: (0, C.A)(t), src: t.url });
+    return (0, v.gL)({ ...e, fileSize: t.size, fileName: (0, I.A)(t), src: t.url });
 }
 function z(e) {
     let { message: t, item: i } = e,
@@ -259,7 +259,7 @@ function z(e) {
     return (0, v.P$)({
         ...e,
         fileSize: n.size,
-        fileName: (0, C.A)(n),
+        fileName: (0, I.A)(n),
         src: n.url,
         durationSecs: n.duration_secs,
         waveform: n.waveform,
@@ -275,11 +275,11 @@ function L(e) {
     return (0, v._d)({
         ...e,
         url: t.url,
-        fileName: (0, C.A)(t),
+        fileName: (0, I.A)(t),
         fileSize: t.size,
         contentType: t.content_type,
         defaultExpanded:
-            0 === (0, I.A)(i) &&
+            0 === (0, C.A)(i) &&
             1 === i.attachments.filter((e) => !(0, r.Lt)(e.flags ?? 0, S.sbO.IS_THUMBNAIL)).length &&
             0 === i.embeds.length &&
             0 === i.codedLinks.length &&
@@ -291,5 +291,5 @@ function L(e) {
 }
 function N(e) {
     let t = e.item.originalItem;
-    return (0, v.Dk)({ ...e, url: t.url, fileName: (0, C.A)(t), fileSize: t.size });
+    return (0, v.Dk)({ ...e, url: t.url, fileName: (0, I.A)(t), fileSize: t.size });
 }
