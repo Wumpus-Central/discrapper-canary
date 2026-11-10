@@ -1,11 +1,11 @@
 var o = n(477900),
     l = n(582128),
-    a = n(877624),
+    a = n(517352),
     r = n(554146),
     i = n(28863),
     d = n(543862),
     s = n(129230),
-    u = n(549996),
+    u = n(641436),
     p = n(498470),
     c = n(92551),
     b = n(637706),
@@ -19,8 +19,8 @@ n.d(
     {},
     {
         A: function () {
-            let e = (0, u.c)(a.C.NAGBAR),
-                t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
+            let e = (0, u.u)(a.oW.NAGBAR),
+                t = e?.surface,
                 n = e?.id,
                 N = e?.promotionId,
                 T = l.useCallback(
@@ -68,7 +68,7 @@ n.d(
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(m.A, {
-                              componentType: a.C.NAGBAR,
+                              componentType: e.componentType,
                               componentId: n,
                               promotionId: N,
                               dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,

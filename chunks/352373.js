@@ -2,13 +2,13 @@ n.d(t, { A: () => C });
 var i = n(582128),
     r = n(379197),
     a = n(488430),
-    s = n(877624),
+    s = n(517352),
     l = n(855986),
     o = n(554146),
     d = n(192308),
     c = n(543862),
     u = n(263775),
-    _ = n(549996),
+    _ = n(641436),
     E = n(412260),
     A = n(457421),
     f = n(327019),
@@ -39,12 +39,9 @@ let C = function () {
             var e, t;
             let n,
                 r,
-                a = (0, _.c)(s.C.SHOP_COACHMARK),
+                a = (0, _.u)(s.oW.SHOP_COACHMARK),
                 l =
-                    ((e =
-                        a?.properties.properties.oneofKind === "shopCoachmark"
-                            ? a.properties.properties.shopCoachmark
-                            : null),
+                    ((e = a?.surface ?? null),
                     (n = (0, I.T)(e?.asset)),
                     (0, i.useMemo)(
                         () =>
@@ -67,12 +64,9 @@ let C = function () {
                                   },
                         [n, e],
                     )),
-                d = (0, _.c)(s.C.SHOP_TAB_TOOLTIP),
+                d = (0, _.u)(s.oW.SHOP_TAB_TOOLTIP),
                 c =
-                    ((t =
-                        d?.properties.properties.oneofKind === "shopTabTooltip"
-                            ? d.properties.properties.shopTabTooltip
-                            : null),
+                    ((t = d?.surface ?? null),
                     (r = (0, I.T)(t?.asset)),
                     (0, i.useMemo)(
                         () =>
