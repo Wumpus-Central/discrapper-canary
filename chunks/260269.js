@@ -320,20 +320,20 @@ function e3(e) {
     });
 }
 var e8 = n(613412),
-    e2 = n(164636),
-    e7 = n(139286),
+    e7 = n(164636),
+    e2 = n(139286),
     e5 = n(727419),
     e9 = n(792996),
     e4 = n(330766);
 function te(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e2.bG)([P.A, eE.default], () => {
+        l = (0, e7.bG)([P.A, eE.default], () => {
             let e = eE.default.getCurrentUser(),
                 n = P.A.getGuild(t);
             return null != n && (0, em.bM)(n, e);
         });
     return (
-        (0, e7.A)({
+        (0, e2.A)({
             type: e8.ImpressionTypes.POPOUT,
             name: e8.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -796,8 +796,8 @@ var tz = n(503698),
     t6 = n(104171),
     t3 = n(47167),
     t8 = n(713654),
-    t2 = n(976860),
-    t7 = n(129095),
+    t7 = n(976860),
+    t2 = n(129095),
     t5 = n(110618),
     t9 = n(46653),
     t4 = n(309010),
@@ -1065,7 +1065,7 @@ function nC(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t2.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t2.av)(t), (0, t7.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1491,10 +1491,10 @@ let n0 = new nJ(E.h),
     ],
     n3 = n6.map((e) => e.store).filter(nt.Vq),
     n8 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n2(e) {
+function n7(e) {
     e.stopPropagation();
 }
-let n7 = [];
+let n2 = [];
 function n5(e) {
     var t, n;
     let i,
@@ -1518,7 +1518,7 @@ function n5(e) {
             (c = d && u),
             l.useMemo(() => {
                 let e = [];
-                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n7);
+                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n2);
             }, [c])),
         [g, I] = (0, q.ww)(E, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
@@ -1565,7 +1565,7 @@ function n5(e) {
                     return null;
             }
         })();
-    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n2, children: R });
+    return null == R ? null : (0, s.jsx)("div", { onContextMenu: n7, children: R });
 }
 let n9 = function (e) {
     let { guild: t } = e;
@@ -2076,6 +2076,7 @@ class ir extends l.PureComponent {
                     n.e(564850),
                     n.e(504370),
                     n.e(941040),
+                    n.e(96539),
                     n.e(124791),
                     n.e(648344),
                     n.e(170104),
@@ -2083,14 +2084,13 @@ class ir extends l.PureComponent {
                     n.e(474610),
                     n.e(256769),
                     n.e(299854),
-                    n.e(620656),
                     n.e(902564),
                     n.e(608557),
                     n.e(495786),
                     n.e(428967),
                     n.e(30441),
                     n.e(704727),
-                    n.e(782791),
+                    n.e(447937),
                     n.e(538345),
                     n.e(214285),
                     n.e(248330),
@@ -2336,13 +2336,14 @@ class ir extends l.PureComponent {
     renderMenuPopout = async () => {
         let { default: e } = await Promise.all([
             n.e(142867),
-            n.e(620656),
+            n.e(96539),
             n.e(466718),
             n.e(309004),
             n.e(365011),
             n.e(343116),
             n.e(256373),
             n.e(419690),
+            n.e(966308),
             n.e(113446),
             n.e(632607),
             n.e(317699),
@@ -2753,8 +2754,8 @@ function io(e) {
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e2 = (0, eb.Dq)(G) && !e8,
-        e7 = (function (e) {
+        e7 = (0, eb.Dq)(G) && !e8,
+        e2 = (function (e) {
             let t = (0, es.c)(ei.C.GUILD_HEADER_COACHMARK),
                 n =
                     null != t && "guildHeaderCoachmark" === t.properties.properties.oneofKind
@@ -2773,34 +2774,34 @@ function io(e) {
                 coachmark: n,
                 markAsDismissed: l,
             };
-        })(e2 ? null : b),
-        [e5, e9] = (0, q.kn)(e2 ? [] : e3, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
-        [e4, te] = (0, eD.vB)(eQ && !1 === eV && !(0, $.ai)(b) && !e2, el.m.GUILD_HEADER_TOOLTIPS),
+        })(e7 ? null : b),
+        [e5, e9] = (0, q.kn)(e7 ? [] : e3, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [e4, te] = (0, eD.vB)(eQ && !1 === eV && !(0, $.ai)(b) && !e7, el.m.GUILD_HEADER_TOOLTIPS),
         [tt, tn] = (0, q.D8)(
-            e0 && !e2 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e0 && !e7 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             b,
             { cooldownDurationMs: eL.bW, numTimesToRecur: 5 },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ti, ts] = (0, q.D8)(
-            e6 && !e2 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e6 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             b,
             { cooldownDurationMs: eL.mD },
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         tl = l.useMemo(
             () =>
-                e7.shouldShow && null != e7.coachmark
+                e2.shouldShow && null != e2.coachmark
                     ? {
                           contentType: o.M.GUILD_HEADER_COACHMARK,
                           data: {
                               marketingComponent: {
-                                  componentId: e7.componentId,
-                                  promotionId: e7.promotionId,
-                                  coachmark: e7.coachmark,
+                                  componentId: e2.componentId,
+                                  promotionId: e2.promotionId,
+                                  coachmark: e2.coachmark,
                               },
                           },
-                          markAsDismissed: e7.markAsDismissed,
+                          markAsDismissed: e2.markAsDismissed,
                       }
                     : null != e5
                       ? { contentType: e5, data: null, markAsDismissed: e9 }
@@ -2812,11 +2813,11 @@ function io(e) {
                             ? { contentType: ti, data: { featuredExpiringPowerup: e1 }, markAsDismissed: ts }
                             : null,
             [
-                e7.shouldShow,
-                e7.coachmark,
-                e7.componentId,
-                e7.promotionId,
-                e7.markAsDismissed,
+                e2.shouldShow,
+                e2.coachmark,
+                e2.componentId,
+                e2.promotionId,
+                e2.markAsDismissed,
                 e5,
                 e4,
                 tt,
@@ -2845,7 +2846,7 @@ function io(e) {
         hasChannelNotice: null != V || X,
         anyLayerOpen: K || F || W,
         showGuildHeaderTutorial: Y,
-        showPriorityHeaderNotice: e2,
+        showPriorityHeaderNotice: e7,
         showGuildTemplateDirtyTooltip: eg,
         showNewUnreadsBar: e_,
         isHeaderPopoutOpen: eC,
