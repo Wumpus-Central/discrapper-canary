@@ -5,53 +5,53 @@ var o = n(477900),
     i = n(206248),
     d = n(43105),
     s = n(273185),
-    p = n(24981),
-    u = n(498470),
+    u = n(549996),
+    p = n(498470),
     c = n(807098),
     b = n(92551),
     m = n(637706),
     _ = n(788883),
     A = n(49999),
-    f = n(792996);
+    I = n(792996);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { children: t, targetElementRef: n, dismissPopover: I } = e,
-                N = (0, p.c)(a.C.PREMIUM_TAB_POPOVER),
+            let { children: t, targetElementRef: n, dismissPopover: f } = e,
+                N = (0, u.c)(a.C.PREMIUM_TAB_POPOVER),
                 T =
                     null != N && "premiumTabPopover" === N.properties.properties.oneofKind
                         ? N.properties.properties.premiumTabPopover
                         : null,
-                g = (0, c.T)(T?.asset),
-                E = l.useMemo(() => null != g && (0, s.r1)(g), [g]),
+                E = (0, c.T)(T?.asset),
+                g = l.useMemo(() => null != E && (0, s.r1)(E), [E]),
                 S = N?.id,
                 y = N?.promotionId;
             if (null == T || null == N || null == S || null == y) return t;
-            let C = N.getFormatVariableValues(f.intl.currentLocale),
-                O = (0, b.n)(T.header, C);
-            if (!O.ok) return t;
-            let h = (0, b.d)(T.body, C);
-            if (!h.ok) return t;
-            let R = (0, b.n)(T.button?.copy ?? "", C);
+            let O = N.getFormatVariableValues(I.intl.currentLocale),
+                R = (0, b.n)(T.header, O);
             if (!R.ok) return t;
+            let h = (0, b.d)(T.body, O);
+            if (!h.ok) return t;
+            let C = (0, b.n)(T.button?.copy ?? "", O);
+            if (!C.ok) return t;
             let v = (0, o.jsx)(_.A, {
                     componentType: a.C.PREMIUM_TAB_POPOVER,
                     componentId: S,
                     promotionId: y,
                     dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
                 }),
-                { icon: P, iconPosition: M } = (0, u.x)({ buttonAction: T.button?.buttonAction });
+                { icon: P, iconPosition: M } = (0, p.x)({ buttonAction: T.button?.buttonAction });
             function L() {
-                return I(A.i.USER_DISMISS);
+                return f(A.i.USER_DISMISS);
             }
             let x =
                     null != T.button
                         ? {
-                              text: R.content,
+                              text: C.content,
                               variant: "expressive",
-                              onClick: (0, u.h)({
+                              onClick: (0, p.h)({
                                   buttonAction: T.button.buttonAction,
                                   deeplinkSection: T.button.deeplinkSection,
                                   applicationId: T.button.navigableStorefrontApplicationId?.value,
@@ -66,7 +66,7 @@ n.d(
                 U = null != G ? { text: G.linkText, link: G.url } : void 0,
                 B = {
                     targetElementRef: n,
-                    title: O.content,
+                    title: R.content,
                     body: h.content,
                     textLink: U,
                     position: "right",
@@ -75,15 +75,15 @@ n.d(
                     caretConfig: { align: "start" },
                     onRequestClose: L,
                 };
-            if (E) {
-                let e = { ...B, assetUrl: g ?? "", action: x, disableMediaViewer: !0 };
+            if (g) {
+                let e = { ...B, assetUrl: E ?? "", action: x, disableMediaViewer: !0 };
                 return (0, o.jsxs)(o.Fragment, {
                     children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
                 });
             }
             let D = {
                 ...B,
-                graphic: null != g ? { type: "image", src: g, aspectRatio: "16/9" } : void 0,
+                graphic: null != E ? { type: "image", src: E, aspectRatio: "16/9" } : void 0,
                 size: "md",
                 actions: null != x ? [x] : void 0,
                 gradientColor: "nitro-pink",

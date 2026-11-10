@@ -5,21 +5,21 @@ var o = n(477900),
     i = n(28863),
     d = n(543862),
     s = n(129230),
-    p = n(24981),
-    u = n(498470),
+    u = n(549996),
+    p = n(498470),
     c = n(92551),
     b = n(637706),
     m = n(788883),
     _ = n(635995),
     A = n(652215),
-    f = n(49999),
-    I = n(792996);
+    I = n(49999),
+    f = n(792996);
 n.d(
     t,
     {},
     {
         A: function () {
-            let e = (0, p.c)(a.C.NAGBAR),
+            let e = (0, u.c)(a.C.NAGBAR),
                 t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
                 n = e?.id,
                 N = e?.promotionId,
@@ -33,36 +33,36 @@ n.d(
                     },
                     [N],
                 ),
-                g = l.useCallback(() => {
+                E = l.useCallback(() => {
                     (s.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR }),
-                        T(f.i.USER_DISMISS));
+                        T(I.i.USER_DISMISS));
                 }, [T]),
-                E = l.useRef(null);
+                g = l.useRef(null);
             if (
                 (l.useEffect(() => {
                     null == t ||
                         null == N ||
-                        (E.current !== N &&
-                            ((E.current = N),
+                        (g.current !== N &&
+                            ((g.current = N),
                             (0, d.Wx)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: N })));
                 }, [t, N]),
                 null == e || null == t || null == n || null == N)
             )
                 return null;
-            let S = (0, u.h)({
+            let S = (0, p.h)({
                     buttonAction: t.ctaAction,
                     deeplinkSection: t.deeplinkSection,
                     applicationId: t.navigableStorefrontApplicationId?.value,
                     shopCollectionId: t.shopCollectionId?.value,
                     onClose: () => {
-                        T(f.i.TAKE_ACTION);
+                        T(I.i.TAKE_ACTION);
                     },
                 }),
                 y = (0, b.C)(t.helpArticle, ""),
-                { icon: C, iconPosition: O } = (0, u.x)({ buttonAction: t.ctaAction }),
-                h = e.getFormatVariableValues(I.intl.currentLocale),
-                R = (0, c.d)(t.body, h);
-            if (!R.ok) return null;
+                { icon: O, iconPosition: R } = (0, p.x)({ buttonAction: t.ctaAction }),
+                h = e.getFormatVariableValues(f.intl.currentLocale),
+                C = (0, c.d)(t.body, h);
+            if (!C.ok) return null;
             let v = (0, c.n)(t.ctaLabel, h);
             return v.ok
                 ? (0, o.jsxs)(o.Fragment, {
@@ -74,11 +74,11 @@ n.d(
                               dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
                           }),
                           (0, o.jsxs)(_.T0, {
-                              onClick: g,
+                              onClick: E,
                               children: [
                                   (0, o.jsxs)(_.In, {
                                       children: [
-                                          R.content,
+                                          C.content,
                                           null != y &&
                                               (0, o.jsxs)(o.Fragment, {
                                                   children: [
@@ -97,8 +97,8 @@ n.d(
                                               }),
                                                   S());
                                           },
-                                          icon: C,
-                                          iconPosition: O,
+                                          icon: O,
+                                          iconPosition: R,
                                       }),
                               ],
                           }),
