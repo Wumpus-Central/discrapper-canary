@@ -129,7 +129,7 @@ var i,
         (m[(m.DARKER = 3)] = "DARKER"),
         (m[(m.MIDNIGHT = 4)] = "MIDNIGHT"),
         m),
-    J =
+    Z =
         (((T = {})[(T.MINT_APPLE = 0)] = "MINT_APPLE"),
         (T[(T.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
         (T[(T.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
@@ -155,7 +155,7 @@ var i,
         (T[(T.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
         (T[(T.HEXAGON = 23)] = "HEXAGON"),
         T),
-    Z = (((g = {})[(g.AUTO = 0)] = "AUTO"), (g[(g.H12 = 1)] = "H12"), (g[(g.H23 = 2)] = "H23"), g),
+    J = (((g = {})[(g.AUTO = 0)] = "AUTO"), (g[(g.H12 = 1)] = "H12"), (g[(g.H23 = 2)] = "H23"), g),
     ee =
         (((S = {})[(S.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
         (S[(S.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = "LAUNCH_PAD_GESTURE_FULL_SCREEN"),
@@ -2698,7 +2698,7 @@ class eq extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
             { no: 1, name: "status", kind: "message", T: () => P.hU },
-            { no: 2, name: "custom_status", kind: "message", T: () => eZ },
+            { no: 2, name: "custom_status", kind: "message", T: () => eJ },
             { no: 3, name: "show_current_game", kind: "message", T: () => P._t },
             { no: 4, name: "status_expires_at_ms", kind: "scalar", T: 6 },
             { no: 5, name: "status_created_at_ms", kind: "message", T: () => P.ol },
@@ -2722,7 +2722,7 @@ class eq extends v.G {
                     r.status = P.hU.internalBinaryRead(e, e.uint32(), n, r.status);
                     break;
                 case 2:
-                    r.customStatus = eZ.internalBinaryRead(e, e.uint32(), n, r.customStatus);
+                    r.customStatus = eJ.internalBinaryRead(e, e.uint32(), n, r.customStatus);
                     break;
                 case 3:
                     r.showCurrentGame = P._t.internalBinaryRead(e, e.uint32(), n, r.showCurrentGame);
@@ -2745,7 +2745,7 @@ class eq extends v.G {
     }
     internalBinaryWrite(e, t, n) {
         (e.status && P.hU.internalBinaryWrite(e.status, t.tag(1, y.O0.LengthDelimited).fork(), n).join(),
-            e.customStatus && eZ.internalBinaryWrite(e.customStatus, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
+            e.customStatus && eJ.internalBinaryWrite(e.customStatus, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
             e.showCurrentGame &&
                 P._t.internalBinaryWrite(e.showCurrentGame, t.tag(3, y.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.statusExpiresAtMs && t.tag(4, y.O0.Bit64).fixed64(e.statusExpiresAtMs),
@@ -2756,7 +2756,7 @@ class eq extends v.G {
     }
 }
 let eQ = new eq();
-class eJ extends v.G {
+class eZ extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomStatus", [
             { no: 1, name: "text", kind: "scalar", T: 9 },
@@ -2820,7 +2820,7 @@ class eJ extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eZ = new eJ();
+let eJ = new eZ();
 class e0 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.LocalizationSettings", [
@@ -2933,7 +2933,7 @@ class e6 extends v.G {
                 no: 9,
                 name: "timestamp_hour_cycle",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.TimestampHourCycle", Z],
+                T: () => ["discord_protos.discord_users.v1.TimestampHourCycle", J],
             },
             { no: 10, name: "happening_now_cards_disabled", kind: "message", T: () => P._t },
             {
@@ -4495,7 +4495,7 @@ let tz = new tX();
 class tq extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureSettings", [
-            { no: 1, name: "projects", kind: "map", K: 6, V: { kind: "message", T: () => tZ } },
+            { no: 1, name: "projects", kind: "map", K: 6, V: { kind: "message", T: () => tJ } },
         ]);
     }
     create(e) {
@@ -4534,7 +4534,7 @@ class tq extends v.G {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    s = tZ.internalBinaryRead(t, t.uint32(), n);
+                    s = tJ.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -4542,20 +4542,20 @@ class tq extends v.G {
                     );
             }
         }
-        e[a ?? "0"] = s ?? tZ.create();
+        e[a ?? "0"] = s ?? tJ.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.projects))
             (t.tag(1, y.O0.LengthDelimited).fork().tag(1, y.O0.Bit64).fixed64(i),
                 t.tag(2, y.O0.LengthDelimited).fork(),
-                tZ.internalBinaryWrite(e.projects[i], t, n),
+                tJ.internalBinaryWrite(e.projects[i], t, n),
                 t.join().join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tQ = new tq();
-class tJ extends v.G {
+class tZ extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ConjureProjectSettings", [
             { no: 1, name: "muted", kind: "scalar", T: 8 },
@@ -4599,7 +4599,7 @@ class tJ extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tZ = new tJ();
+let tJ = new tZ();
 n.d(
     t,
     {},
@@ -4615,7 +4615,7 @@ n.d(
         KJ: eu,
         KP: $,
         NS: q,
-        PZ: Z,
+        PZ: J,
         Q0: ed,
         Qd: W,
         Sx: Q,
@@ -4625,13 +4625,13 @@ n.d(
         X9: e$,
         Y2: w,
         YW: eO,
-        Zy: tZ,
+        Zy: tJ,
         ak: ti,
         eF: G,
         fL: K,
         he: k,
         iL: ea,
-        ju: J,
+        ju: Z,
         kW: et,
         nT: el,
         nx: ef,

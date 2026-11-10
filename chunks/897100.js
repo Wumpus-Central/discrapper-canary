@@ -1,11 +1,11 @@
-var e = i(164636),
-    l = i(46653);
-i.d(
+var i = e(164636),
+    l = e(46653);
+e.d(
     n,
     {},
     {
         A: function () {
-            return (0, e.bG)([l.default], () => l.default.isAuthenticated());
+            return (0, i.bG)([l.default], () => l.default.isAuthenticated());
         },
     },
 );

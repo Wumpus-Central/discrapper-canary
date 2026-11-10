@@ -295,8 +295,8 @@ var K = n(898105),
 n(325392);
 var q = n(160759),
     Q = n(564973),
-    J = n(409067),
-    Z = n(923566),
+    Z = n(409067),
+    J = n(923566),
     ee = n(227628),
     et = n(468550),
     en = n(171251),
@@ -357,16 +357,16 @@ let el = new (class extends Y {
         let n = !P.Ay.getSettings().showPovClipsInGallery;
         t.clipIds.some((t) => {
             let i = P.Ay.getClipById(t);
-            return null != i && i.applicationId === e && (!n || !(0, J.kD)(i));
+            return null != i && i.applicationId === e && (!n || !(0, Z.kD)(i));
         }) && (0, et.M8)(e);
     }
     maybeOfferAutoclipsEaUpsell(e) {
         let { games: t, removed: n } = e;
-        if (t.length > 0) return void (0, Z.eM)();
+        if (t.length > 0) return void (0, J.eM)();
         let i = n.map((e) => e.id).find((e) => null != e);
         null == i ||
             (0, m.YE)(I.default.getCurrentUser(), ea.PremiumTypes.TIER_2) ||
-            ((0, K.C)("ClipsManager").enabled && (0, Z.OT)(i));
+            ((0, K.C)("ClipsManager").enabled && (0, J.OT)(i));
     }
     showClipsToast() {
         (0, i.P0)({ text: es.intl.string(es.t["d+41qJ"]), icon: r.ClipsIcon, duration: M.Vi });

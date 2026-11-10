@@ -69,12 +69,12 @@ function N(e) {
     function Q(e) {
         return null != e && q ? S(z, e) : e;
     }
-    function J(e) {
+    function Z(e) {
         return Math.min(Math.max(((e - L) / (y - L)) * 100, 0), 100);
     }
-    let Z = (0, l.J)();
+    let J = (0, l.J)();
     function ee(e) {
-        return null != P ? P(e) : Z.format(e);
+        return null != P ? P(e) : J.format(e);
     }
     let et = (0, A.S)({
             value: Q(O),
@@ -83,7 +83,7 @@ function N(e) {
             maxValue: q ? z.length - 1 : y,
             step: q ? 1 : D,
             isDisabled: a,
-            numberFormatter: Z,
+            numberFormatter: J,
             onChange: (e) => b?.(q ? z[e] : e),
             onChangeEnd: (e) => v?.(q ? z[e] : e),
         }),
@@ -129,7 +129,7 @@ function N(e) {
         })({ state: et, trackRef: V, inputRef: W, sortedMarks: z, minValue: L, maxValue: y, disabled: a }),
         ed = ((t = et.getThumbValue(0)), q ? z[t] : t),
         ec = ee(ed),
-        eu = `${J(ed)}%`,
+        eu = `${Z(ed)}%`,
         e_ = el && $,
         eE = !a && (e_ || es || Y);
     function eA(e) {
@@ -164,7 +164,7 @@ function N(e) {
                             {
                                 "aria-hidden": !0,
                                 className: s()(T.Gy, T.zt, { [T.Jh]: e.value === w }),
-                                style: { insetInlineStart: `${J(e.value)}%` },
+                                style: { insetInlineStart: `${Z(e.value)}%` },
                                 children: [
                                     (0, i.jsx)("div", { className: T.nj, children: t }),
                                     null != t ? (0, i.jsx)("div", { className: T.gf }) : null,

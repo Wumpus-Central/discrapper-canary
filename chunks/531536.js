@@ -8,18 +8,18 @@ var r = n(503698),
     c = n(474012),
     o = n(607123),
     d = n(287809),
-    f = n(137504);
-function h(e) {
+    h = n(137504);
+function f(e) {
     let { title: t, body: n, image: r, badge: a, className: s, textGroupClassName: u } = e;
     return (0, l.jsxs)("div", {
-        className: i()(f.kL, s),
+        className: i()(h.kL, s),
         children: [
-            null != r && (0, l.jsx)("div", { className: f.Sl, children: r }),
+            null != r && (0, l.jsx)("div", { className: h.Sl, children: r }),
             (0, l.jsxs)("div", {
-                className: f.Qs,
+                className: h.Qs,
                 children: [
-                    null != a && (0, l.jsx)("div", { className: f.oL, children: a }),
-                    (0, l.jsxs)("div", { className: i()(f.Z, u), children: [t, n] }),
+                    null != a && (0, l.jsx)("div", { className: h.oL, children: a }),
+                    (0, l.jsxs)("div", { className: i()(h.Z, u), children: [t, n] }),
                 ],
             }),
         ],
@@ -29,30 +29,30 @@ n.d(
     t,
     {},
     {
-        W: h,
+        W: f,
         v: function (e) {
             let { className: t, product: n, title: r, subtitle: p, badge: m } = e,
                 C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
                 y = (0, c.tP)(n);
             return null == y
                 ? null
-                : (0, l.jsx)(h, {
+                : (0, l.jsx)(f, {
                       className: t,
                       image: (0, l.jsx)("div", {
-                          className: f.yn,
+                          className: h.yn,
                           children: (0, l.jsx)("div", {
-                              className: i()(f.ML, {
-                                  [f.M]: n?.type === a.R.AVATAR_DECORATION,
-                                  [f.Hm]: n?.type === a.R.PROFILE_EFFECT,
-                                  [f.hH]: n?.type === a.R.PROFILE_FRAME,
-                                  [f.qF]: n?.type === a.R.NAMEPLATE,
-                                  [f.l2]: n?.type === a.R.BUNDLE,
+                              className: i()(h.ML, {
+                                  [h.M]: n?.type === a.R.AVATAR_DECORATION,
+                                  [h.Hm]: n?.type === a.R.PROFILE_EFFECT,
+                                  [h.hH]: n?.type === a.R.PROFILE_FRAME,
+                                  [h.qF]: n?.type === a.R.NAMEPLATE,
+                                  [h.l2]: n?.type === a.R.BUNDLE,
                               }),
                               children: (0, l.jsx)(o.pL, {
                                   collectiblesItem: y,
                                   user: C,
-                                  nameplatePreviewStyle: f.M4,
-                                  nameplatePreviewRescalerStyle: f.N1,
+                                  nameplatePreviewStyle: h.M4,
+                                  nameplatePreviewRescalerStyle: h.N1,
                               }),
                           }),
                       }),

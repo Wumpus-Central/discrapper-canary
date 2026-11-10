@@ -211,11 +211,11 @@ function Q(e) {
     let { linkedUsers: t } = e;
     x(t);
 }
-function J(e) {
+function Z(e) {
     let { linkedUsers: t } = e;
     x(t, !0);
 }
-function Z(e) {
+function J(e) {
     let { linkCode: t, expiresAt: n } = e;
     ((h = t), (I = n));
 }
@@ -285,8 +285,8 @@ class ea extends r.A {
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: q,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: X,
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: Q,
-            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: J,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Z,
+            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Z,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: J,
             FAMILY_CENTER_HANDLE_TAB_SELECT: ee,
             SET_LOCATION_METADATA: ei,
             LOGOUT: er,

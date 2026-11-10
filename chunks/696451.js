@@ -240,10 +240,10 @@ function Q(e, t) {
     if (null == n || null == n[t]) return !1;
     (delete n[t], F(e, t), U++);
 }
-function J(e, t) {
-    return Z({ id: e, members: t.filter(o.A).map((e) => e.member) });
+function Z(e, t) {
+    return J({ id: e, members: t.filter(o.A).map((e) => e.member) });
 }
-function Z(e) {
+function J(e) {
     let t = e.id;
     t in L || (L[e.id] = {});
     let n = C.A.getGuild(t);
@@ -337,7 +337,7 @@ function en(e, t) {
     return (
         e?.members != null &&
         null != t &&
-        Z({
+        J({
             id: t,
             members: Object.entries(e.members)
                 .map((t) => {
@@ -496,15 +496,15 @@ let ed = new eo(l.h, {
         (P ? (P = !1) : ((L = {}), (y = {})),
             (v = {}),
             e.guilds.forEach((e) => {
-                Z(e);
+                J(e);
             }));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         (e.guilds.forEach((e) => {
             let t = e.id;
-            (Z({ id: t, members: e.members }),
+            (J({ id: t, members: e.members }),
                 e.activity_instances?.forEach((e) => {
-                    J(t, e.participants);
+                    Z(t, e.participants);
                 }));
         }),
             U++);
@@ -523,7 +523,7 @@ let ed = new eo(l.h, {
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        return Z(t);
+        return J(t);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
@@ -699,7 +699,7 @@ let ed = new eo(l.h, {
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { instance: t } = e,
             n = (0, d.D)(t.location);
-        return null != n && J(n, t.participants);
+        return null != n && Z(n, t.participants);
     },
     INTERACTION_MODAL_CREATE: function (e) {
         let t = S.A.getChannel(e.channelId);

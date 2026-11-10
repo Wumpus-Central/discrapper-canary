@@ -335,7 +335,7 @@ function Q(e, t, n, i) {
         { content: r, emoji: a }
     );
 }
-function J(e, t) {
+function Z(e, t) {
     let n,
         i = e?.getGuildId(),
         a = null != i ? N.A.getGuild(i) : null,
@@ -408,7 +408,7 @@ function J(e, t) {
         isNotification: !1,
     };
 }
-function Z(e) {
+function J(e) {
     return e;
 }
 function ee(e, t, n) {
@@ -416,7 +416,7 @@ function ee(e, t, n) {
         a = null != i ? i.getGuildId() : null,
         l = null != a ? N.A.getGuild(a) : null,
         o = n ? X : r().omit(X, ["spoiler", "timestamp", "unicodeEmoji"]),
-        d = n ? Z : u.Ay.translateSurrogatesToInlineEmoji,
+        d = n ? J : u.Ay.translateSurrogatesToInlineEmoji,
         c = s().parserFor(o),
         _ = { inline: !0, guild: l, channelId: t, isNotification: n };
     return Q(c(e, _), _, d);
@@ -430,7 +430,7 @@ n.d(
                 var n, i;
                 let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
                     a = arguments.length > 3 ? arguments[3] : void 0,
-                    s = r ?? J(e, a),
+                    s = r ?? Z(e, a),
                     l = { content: t, tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] };
                 return (
                     (n = l.content),
@@ -443,7 +443,7 @@ n.d(
                     l
                 );
             },
-            parsePreprocessor: (e, t) => z(t, J(e)),
+            parsePreprocessor: (e, t) => z(t, Z(e)),
             unparse: (e, t, n) => ee(e, t, n).content,
             unparseWithMeta: ee,
         },

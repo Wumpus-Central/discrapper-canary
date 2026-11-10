@@ -110,7 +110,7 @@ function C(e) {
                     : T,
             [H, C],
         ),
-        J = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 let t;
                 if (!0 === c && 1 === K.length && K.includes(e)) return;
@@ -126,7 +126,7 @@ function C(e) {
             },
             [c, K, D, Y, _],
         ),
-        Z = r.useCallback((e, t) => {
+        J = r.useCallback((e, t) => {
             let { label: n, description: r } = e,
                 a = N(e);
             return (0, i.jsxs)("div", {
@@ -214,9 +214,9 @@ function C(e) {
                         disabled: u || n.disabled,
                         focused: t === b,
                         onClick: () => {
-                            u || n.disabled || J(n);
+                            u || n.disabled || Z(n);
                         },
-                        children: P?.(n, s) ?? Z(n, s),
+                        children: P?.(n, s) ?? J(n, s),
                     },
                     n.index,
                 );

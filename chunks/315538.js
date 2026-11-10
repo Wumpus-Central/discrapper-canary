@@ -1,4 +1,4 @@
-n.d(t, { A: () => J });
+n.d(t, { A: () => Z });
 var i = n(515029),
     r = n.n(i),
     a = n(226782),
@@ -423,4 +423,4 @@ class Q extends d.A {
         CHANNEL_RTC_UPDATE_CHAT_OPEN: z,
     };
 }
-let J = new Q();
+let Z = new Q();

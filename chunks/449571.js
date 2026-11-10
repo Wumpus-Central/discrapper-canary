@@ -54,9 +54,9 @@ function Y(e) {
             let e = O.A.pipWindow;
             return { dockedRect: null != e ? O.A.getDockedRect(e.id) : null, isHidden: O.A.isEmbeddedActivityHidden() };
         }),
-        J = (0, b.xi)({ channelId: t?.id }),
+        Z = (0, b.xi)({ channelId: t?.id }),
         {
-            activityParticipant: Z,
+            activityParticipant: J,
             selectedParticipant: ee,
             participantsOpen: et,
         } = (0, l.cf)([I.A], () => ({
@@ -70,7 +70,7 @@ function Y(e) {
             selectedParticipant: null != t ? I.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && I.A.getParticipantsOpen(t.id),
         })),
-        en = z || null != J,
+        en = z || null != Z,
         ei = (0, M.A)(t?.id),
         er = t?.id,
         ea = t?.getGuildId(),
@@ -92,7 +92,7 @@ function Y(e) {
             let e = t.getGuildId() ?? F.ME;
             (u.A.channelListScrollTo(e, t.id), (0, S.uh)(e, t.id));
         }
-        null == J && (0, _.bz)();
+        null == Z && (0, _.bz)();
     }
     function eA() {
         E(!a);
@@ -104,7 +104,7 @@ function Y(e) {
                 d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: v });
             }
         }, [v, eu]),
-        null == A || null == X || ((0, M.A)(t?.id) && null == Z) || null == $ || !0 === A.renderInFramePool)
+        null == A || null == X || ((0, M.A)(t?.id) && null == J) || null == $ || !0 === A.renderInFramePool)
     )
         return null;
     let ef = Array.from(A.userIds)
@@ -131,7 +131,7 @@ function Y(e) {
                         className: "theme-dark",
                         children: (function (e) {
                             let { onActive: n, onForceIdle: r, idle: s, isActivityInTextChannel: l, users: o } = e;
-                            return eu && null != A && (Z?.type === B.lp.ACTIVITY || l)
+                            return eu && null != A && (J?.type === B.lp.ACTIVITY || l)
                                 ? A.config?.useInteractivePIP
                                     ? (0, i.jsx)(w.tM, {
                                           onJumpToChannel: eE,
@@ -160,7 +160,7 @@ function Y(e) {
                                             users: o,
                                             embeddedActivity: A,
                                         })
-                                      : null == Z
+                                      : null == J
                                         ? null
                                         : (0, i.jsxs)(i.Fragment, {
                                               children: [
@@ -179,7 +179,7 @@ function Y(e) {
                                                       onJumpToChannel: eE,
                                                       channel: t,
                                                       applicationId: A.applicationId,
-                                                      selectedParticipant: Z,
+                                                      selectedParticipant: J,
                                                       embeddedActivity: A,
                                                   }),
                                               ],

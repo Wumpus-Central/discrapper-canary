@@ -315,12 +315,12 @@ let q = {
         },
     },
     Q = new a.A("AVErrorManager");
-function J(e, t) {
+function Z(e, t) {
     let n = new Set();
     for (let i of e) t.has(i) || n.add(i);
     return n;
 }
-class Z extends r.A {
+class J extends r.A {
     actions = {
         MEDIA_ENGINE_SET_AUDIO_ENABLED: this.updateActiveErrors,
         AUDIO_INPUT_DETECTED: this.updateActiveErrors,
@@ -373,12 +373,12 @@ class Z extends r.A {
         let c = new Set(r.keys()),
             u = new Set(a.keys());
         if (c.size > u.size)
-            for (let e of J(c, u)) {
+            for (let e of Z(c, u)) {
                 let t = r.get(e);
                 null != t && (0, d.QW)(t);
             }
         if (u.size > c.size)
-            for (let e of J(u, c)) {
+            for (let e of Z(u, c)) {
                 let t = a.get(e);
                 if (null != t) {
                     let { type: e, ...n } = t;
@@ -416,7 +416,7 @@ class Z extends r.A {
                     $ = null != o ? K : g.A.getRTCConnection(),
                     X = null != o ? K?.analyticsContext?.streamApplication : null,
                     { resolution: z, fps: q } = p.A.getState(),
-                    { gameName: Q, gameId: J, exe: Z, distributor: ee } = (0, A.wH)(X),
+                    { gameName: Q, gameId: Z, exe: J, distributor: ee } = (0, A.wH)(X),
                     et = r.isErrorOutbound,
                     en = c ?? y.x.DEFAULT,
                     ei = null != Y ? Y.ownerId : j,
@@ -505,8 +505,8 @@ class Z extends r.A {
                                 return r > 0 ? a : null;
                             })(ea),
                             share_application_name: Q ?? null,
-                            share_application_id: J ?? null,
-                            share_application_executable: Z ?? null,
+                            share_application_id: Z ?? null,
+                            share_application_executable: J ?? null,
                             share_application_distributor: ee ?? null,
                             cpu_brand: t?.cpu_brand ?? null,
                             cpu_vendor: t?.cpu_vendor ?? null,
@@ -553,4 +553,4 @@ class Z extends r.A {
             })(t, n);
     }
 }
-let ee = new Z();
+let ee = new J();

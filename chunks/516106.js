@@ -306,8 +306,8 @@ function X(e) {
 var z = n(811315),
     q = n.n(z),
     Q = n(800471),
-    J = n(529412),
-    Z = n(742655),
+    Z = n(529412),
+    J = n(742655),
     ee = n(998312),
     et = n(860841),
     en = n(442467),
@@ -604,7 +604,7 @@ function ec(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, J.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled: i && (0, Z.dW)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;
@@ -759,7 +759,7 @@ function ec(e) {
                     },
                     getHasQuantityDiscount: () => {
                         let { isGift: t, quantity: n, getInvoiceHasQuantityDiscount: i } = e();
-                        return i() || (t && null != (0, Z.t8)(n));
+                        return i() || (t && null != (0, J.t8)(n));
                     },
                 };
             })(i),

@@ -60,8 +60,8 @@ var i = n(613412),
     z = n(969151),
     q = n(817636),
     Q = n(782091),
-    J = n(108959),
-    Z = n(400115),
+    Z = n(108959),
+    J = n(400115),
     ee = n(90804),
     et = n(946255),
     en = n(10532),
@@ -110,7 +110,7 @@ async function ed(e) {
         ) {
             if (!e_) return !0;
             return (
-                (0, Z.j)(s, {
+                (0, J.j)(s, {
                     isStart: l,
                     inviterUserId: z,
                     channelId: t ?? null,
@@ -343,7 +343,7 @@ async function ed(e) {
                 )
                     return { result: "failure", reason: 7 };
                 if (null != u) {
-                    let e = (0, J.A)(u.id),
+                    let e = (0, Z.A)(u.id),
                         n = ei.lk.includes(u.type);
                     if (e) {
                         if (!(await (0, ee.A)({ channelId: u.id, bypassChangeModal: null != t })))

@@ -264,11 +264,11 @@ function q(e, t) {
 function Q() {
     ((B = null), (V = 0), (H = []), null != i && (i.destroy(), (i = null)));
 }
-function J() {
+function Z() {
     if (null == i) return !1;
     i.refreshGameProfiles();
 }
-class Z extends s.Ay.PersistedStore {
+class J extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
@@ -318,7 +318,7 @@ class Z extends s.Ay.PersistedStore {
         };
     }
 }
-let ee = new Z(o.h, {
+let ee = new J(o.h, {
     CONNECTION_OPEN: K,
     CONNECTION_OPEN_SUPPLEMENTAL: K,
     QUICKSWITCHER_SHOW: X,
@@ -378,7 +378,7 @@ let ee = new Z(o.h, {
         (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
             z(e.channelId));
     },
-    GAME_AUTOCOMPLETE_FETCH_SUCCESS: J,
-    GAME_AUTOCOMPLETE_FETCH_FAILURE: J,
+    GAME_AUTOCOMPLETE_FETCH_SUCCESS: Z,
+    GAME_AUTOCOMPLETE_FETCH_FAILURE: Z,
 });
 n.d(t, {}, { A: ee });

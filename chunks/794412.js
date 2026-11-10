@@ -3,7 +3,7 @@ n.d(t, {
     S_: () => $,
     nR: () => et,
     Ye: () => ei,
-    Nz: () => Z,
+    Nz: () => J,
     fv: () => en,
     i_: () => X,
     uM: () => eo,
@@ -218,14 +218,14 @@ function q() {
     return S.A.pruneInactiveThreads;
 }
 let Q = 0,
-    J = null;
-async function Z() {
+    Z = null;
+async function J() {
     let e = A.default.getId();
-    if (!q() || (e === J && Date.now() - Q < T.A.Millis.DAY)) return;
+    if (!q() || (e === Z && Date.now() - Q < T.A.Millis.DAY)) return;
     let t = S.A.pruneInactiveThreadsScope,
         n = t === P.l0 ? (0, N.PG)() : null;
     if (n?.length === 0) return;
-    ((Q = Date.now()), (J = e));
+    ((Q = Date.now()), (Z = e));
     let i = { days: S.A.pruneInactiveThreadsDays, categoryIds: n };
     if ((await (0, N.FT)(n), !q() || S.A.pruneInactiveThreadsScope !== t)) return;
     let r = p.Ay.getChannelId(),

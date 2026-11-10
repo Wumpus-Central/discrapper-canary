@@ -1,4 +1,4 @@
-(n.d(t, { A: () => Z }), n(938796), n(321073), n(142703));
+(n.d(t, { A: () => J }), n(938796), n(321073), n(142703));
 var i = n(435558),
     r = n.n(i),
     a = n(127258),
@@ -244,7 +244,7 @@ class Q extends l.Ay.Store {
         return B;
     }
 }
-let J = new Q(o.h, {
+let Z = new Q(o.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -380,7 +380,7 @@ let J = new Q(o.h, {
                               } catch {}
                           F.log("Push notification message not in cache, adding directly", t.id, t.channel_id);
                           let a = c.A.getOrCreate(e);
-                          (c.A.commit(a.receivePushNotification(t, n)), J.emitChange());
+                          (c.A.commit(a.receivePushNotification(t, n)), Z.emitChange());
                       })(t, i, l),
                       !1)
                     : (F.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
@@ -560,4 +560,4 @@ let J = new Q(o.h, {
             null != t && null != t.author && null != n && t.author.id === n.id && (B = !0);
         },
     }),
-    Z = J;
+    J = Z;

@@ -145,7 +145,7 @@ function R(e) {
         X = null != D || null != K || $,
         z = a.useRef(null),
         q = a.useRef(!1),
-        { rive: Q, RiveComponent: J } = (0, l.useRive)(
+        { rive: Q, RiveComponent: Z } = (0, l.useRive)(
             {
                 eventTarget: S?.current,
                 ...(null != _ ? { riveFile: _ } : { buffer: E }),
@@ -225,9 +225,9 @@ function R(e) {
         }),
         [Q],
     );
-    let Z = X && (Y || null != w || null != H) ? Q : null,
-        ee = (0, l.useViewModel)(Z),
-        et = (0, l.useViewModelInstance)(ee, null != K ? { name: K, rive: Z } : { useDefault: !0, rive: Z }),
+    let J = X && (Y || null != w || null != H) ? Q : null,
+        ee = (0, l.useViewModel)(J),
+        et = (0, l.useViewModelInstance)(ee, null != K ? { name: K, rive: J } : { useDefault: !0, rive: J }),
         en =
             ((t = Q),
             (n = V),
@@ -383,7 +383,7 @@ function R(e) {
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(J, { className: p, style: g, "aria-hidden": !0 }),
+            (0, r.jsx)(Z, { className: p, style: g, "aria-hidden": !0 }),
             null != D ? (0, r.jsx)(h.j.Provider, { value: ea, children: D() }) : null,
         ],
     });

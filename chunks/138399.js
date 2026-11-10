@@ -114,14 +114,14 @@ class Q extends H.Ay.Store {
         }
     }
 }
-let J = new Q(o.h, {
+let Z = new Q(o.h, {
         MESSAGE_CREATE: function (e) {
             let { optimistic: t, message: n } = e,
                 i = n.nonce;
-            t || null == i || J.recordGatewayResponse(i);
+            t || null == i || Z.recordGatewayResponse(i);
         },
     }),
-    Z = { init() {}, donateSentMessage(e, t) {}, deleteAllInteractions() {} };
+    J = { init() {}, donateSentMessage(e, t) {}, deleteAllInteractions() {} };
 var ee = n(963852),
     et = n(195880),
     en = n(488004),
@@ -731,7 +731,7 @@ let eK = {
             let s = function () {
                 return e$._sendMessage(e, t, i);
             };
-            return (null == i.scheduledTimestamp && J.recordMessageSendAttempt(e, a, i), eC.A.isReady(e))
+            return (null == i.scheduledTimestamp && Z.recordMessageSendAttempt(e, a, i), eC.A.isReady(e))
                 ? s()
                 : n && "131" !== e
                   ? (eH.info(`Waiting for channel ${e} to be ready before sending.`),
@@ -808,7 +808,7 @@ ${a}`),
                 context: { location: eF.Hx.GREET },
             }).then(
                 (n) => (
-                    Z.donateSentMessage(n.body.content, e),
+                    J.donateSentMessage(n.body.content, e),
                     e$.receiveMessage(e, n.body),
                     o.h.dispatch({ type: "STICKER_TRACK_USAGE", stickerIds: [t] }),
                     n
@@ -1053,7 +1053,7 @@ ${a}`),
                             if (E.ok) {
                                 var O, b, G, k, F, B, V;
                                 let a;
-                                (Z.donateSentMessage(l, e),
+                                (J.donateSentMessage(l, e),
                                     e$.receiveMessage(e, E.body, !0, {
                                         sendAnalytics: { duration: A, queueSize: d },
                                         poll: R,
@@ -1070,7 +1070,7 @@ ${a}`),
                                         joinRequestUserId: n,
                                     });
                                 }
-                                (J.recordMessageSendApiResponse(ep),
+                                (Z.recordMessageSendApiResponse(ep),
                                     o.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ey.R.SendMessage,

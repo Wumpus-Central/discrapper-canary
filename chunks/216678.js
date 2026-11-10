@@ -1,17 +1,17 @@
-var e = n(391048),
-    a = n(589078);
-n.d(
+var a = e(391048),
+    n = e(589078);
+e.d(
     t,
     {},
     {
         q: function (o) {
-            let t = a.UnifiedCheckoutFlowManagerSingletons[a.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
+            let t = n.UnifiedCheckoutFlowManagerSingletons[n.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
                 {
-                    applicationId: n,
+                    applicationId: e,
                     skuId: i,
                     onClose: l,
-                    onComplete: d,
-                    analyticsLocations: s,
+                    onComplete: s,
+                    analyticsLocations: d,
                     analyticsLocationObject: r,
                     contextKey: u,
                     isGift: c = !1,
@@ -21,13 +21,13 @@ n.d(
                     modalKey: "premium-apps-otp-checkout-modal",
                     contextKey: u,
                     onCloseCallback() {
-                        (0, e.ET)();
+                        (0, a.ET)();
                     },
                 },
-                checkoutConfiguration: { applicationId: n, skuId: i },
-                unifiedCheckoutProviderProps: { analyticsLocations: s },
+                checkoutConfiguration: { applicationId: e, skuId: i },
+                unifiedCheckoutProviderProps: { analyticsLocations: d },
                 forwardedPaymentModalProps: { analyticsObject: r },
-                checkoutHandlers: { onClose: l, onComplete: d },
+                checkoutHandlers: { onClose: l, onComplete: s },
                 giftContextProps: { isGift: c },
             });
         },

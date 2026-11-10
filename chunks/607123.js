@@ -7,8 +7,8 @@ var l = n(477900),
     c = n(646514),
     o = n(38021),
     d = n(844222),
-    f = n(580573),
-    h = n(775602),
+    h = n(580573),
+    f = n(775602),
     p = n(139136),
     m = n(665411),
     C = n(474012),
@@ -16,8 +16,8 @@ var l = n(477900),
     E = n(842385),
     _ = n(761365),
     g = n(366523),
-    I = n(403362),
-    S = n(652215),
+    S = n(403362),
+    I = n(652215),
     A = n(778712),
     P = n(880465);
 function x(e) {
@@ -90,13 +90,13 @@ function R(e) {
 }
 function T(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
-        s = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        s = (0, u.bG)([f.Ay], () => f.Ay.useReducedMotion),
         { theme: p, saturation: m } = (0, o.wR)(),
         { highContrastModeEnabled: C } = r.useContext(d.C),
         [y, E, _, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: p, saturation: m, highContrastModeEnabled: C }).rgba();
     return (0, l.jsx)("div", {
         className: P.yv,
-        children: (0, l.jsx)(f.u, {
+        children: (0, l.jsx)(h.u, {
             className: a()(P.MO, n),
             dataBinding: { reducedMotion: i || s, logoColor: { r: y, g: E, b: _, a: g } },
             eventTargetRef: t,
@@ -119,20 +119,20 @@ n.d(
                 disableHover: u,
             } = e;
             switch (t.productLine) {
-                case S.EZt.COLLECTIBLES:
+                case I.EZt.COLLECTIBLES:
                     return (0, l.jsx)(v, { sku: t, isFocused: n, user: r, guildId: i });
-                case S.EZt.SOCIAL_LAYER_GAME_ITEM:
+                case I.EZt.SOCIAL_LAYER_GAME_ITEM:
                     return (0, l.jsx)(R, { sku: t, isFocused: n });
-                case S.EZt.APPLICATION:
-                case S.EZt.BOOST:
-                case S.EZt.GUILD_ROLE:
+                case I.EZt.APPLICATION:
+                case I.EZt.BOOST:
+                case I.EZt.GUILD_ROLE:
                     return null;
-                case S.EZt.PREMIUM:
+                case I.EZt.PREMIUM:
                     return (0, l.jsx)(T, { eventTargetRef: a, assetClassName: s, disableHover: u });
-                case S.EZt.GUILD_PRODUCT:
+                case I.EZt.GUILD_PRODUCT:
                     return null;
                 default:
-                    (0, I.xb)(t.productLine);
+                    (0, S.xb)(t.productLine);
             }
         },
         pL: x,

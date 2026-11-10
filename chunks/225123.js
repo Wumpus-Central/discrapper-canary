@@ -239,8 +239,8 @@ var W = n(73825),
     z = n(501803),
     q = n(996512),
     Q = n(518782),
-    J = n(257249),
-    Z = n(505527),
+    Z = n(257249),
+    J = n(505527),
     ee = n(894139),
     et = n(761821);
 function en(e) {
@@ -1415,7 +1415,7 @@ function ez(e) {
             messageId: e.message_id,
             userId: e.user_id,
             emoji: { id: e.answer_id, name: "" },
-            reactionType: Z.v.VOTE,
+            reactionType: J.v.VOTE,
         });
     }),
     eB(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
@@ -1423,7 +1423,7 @@ function ez(e) {
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
-            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: Z.v.VOTE })),
+            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: J.v.VOTE })),
         });
     }),
     eB(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {
@@ -1645,7 +1645,7 @@ function ez(e) {
             customId: e.custom_id,
             application: e.application,
             title: e.title,
-            components: (0, J.ZV)(e.components),
+            components: (0, Z.ZV)(e.components),
             nonce: e.nonce,
             resolved: e.resolved,
         });
@@ -2026,8 +2026,8 @@ let eQ = window.DiscordNative;
 F.dispatcher.getDispatchHandler = function (e) {
     return eF[e];
 };
-let eJ = new c.A("ConnectionStore"),
-    eZ = 0,
+let eZ = new c.A("ConnectionStore"),
+    eJ = 0,
     e0 = null,
     e1 = !0,
     e2 = null,
@@ -2064,23 +2064,23 @@ class e4 extends a.Ay.Store {
         return F.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return eZ;
+        return eJ;
     }
 }
 let e9 = new e4(l.h, {
     START_SESSION: function () {
         return F.isClosed()
-            ? (eJ.verbose("Socket is reconnecting because of starting new session"), F.connect())
-            : (eJ.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+            ? (eZ.verbose("Socket is reconnecting because of starting new session"), F.connect())
+            : (eZ.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
     },
     LOGIN_SUCCESS: function () {
         return (
-            eJ.verbose("session refresh dispatched", { isEstablished: F.isSessionEstablished() }),
+            eZ.verbose("session refresh dispatched", { isEstablished: F.isSessionEstablished() }),
             !!F.isSessionEstablished() && (F.close(), F.connect())
         );
     },
     LOGOUT: function (e) {
-        (e.isSwitchingAccount && B.handleAccountSwitch(), eJ.verbose("Closing socket because of logout"), F.close());
+        (e.isSwitchingAccount && B.handleAccountSwitch(), eZ.verbose("Closing socket because of logout"), F.close());
     },
     CLEAR_CACHES: function (e) {
         return (
@@ -2093,7 +2093,7 @@ let e9 = new e4(l.h, {
     },
     CONNECTION_OPEN: (e) => {
         !(async function (e) {
-            ((eZ = Date.now()), (e0 = e.sessionId), B.handleConnectionOpen());
+            ((eJ = Date.now()), (e0 = e.sessionId), B.handleConnectionOpen());
             let t = {},
                 n = s.w.get("discord_update_restart_timestamp"),
                 i = null != n && Date.now() - parseInt(n, 10) < 3e5;
@@ -2121,7 +2121,7 @@ let e9 = new e4(l.h, {
         e3 = null;
     },
     CONNECTION_CLOSED: function () {
-        (eJ.verbose("connection closed dispatched"), (eZ = Date.now()));
+        (eZ.verbose("connection closed dispatched"), (eJ = Date.now()));
     },
     RTC_CONNECTION_STATE: function (e) {
         if (e.state !== G.S7L.DISCONNECTED) return !1;
@@ -2143,7 +2143,7 @@ let e9 = new e4(l.h, {
             if (A.default.getId() !== t.userId) return e;
             if (t.sessionId === e0) {
                 if (null != e3)
-                    return (eJ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e3), e);
+                    return (eZ.verbose("Ignoring voice state for own session due to VSU lock on channel:", e3), e);
                 V.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== V.guildId) return e;

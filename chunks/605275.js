@@ -283,8 +283,8 @@ let q = {
     },
 };
 var Q = n(78390),
-    J = n(379418),
-    Z = n(551965);
+    Z = n(379418),
+    J = n(551965);
 n(73510);
 var ee = n(827669);
 let et = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
@@ -559,10 +559,10 @@ let eo = {
         timestamp: {
             order: y.Ay.order - 1,
             requiredFirstCharacters: ["<"],
-            match: (e) => J.l9.exec(e),
+            match: (e) => Z.l9.exec(e),
             parse(e) {
                 let [t, n, i] = e,
-                    r = (0, J.EH)(n, i);
+                    r = (0, Z.EH)(n, i);
                 return null == r ? { type: "text", content: t } : ((r.type = "timestamp"), r);
             },
         },
@@ -606,7 +606,7 @@ let eo = {
         list: Y.A,
         subtext: $.A,
     },
-    ed = (0, Z.A)([eo, q]),
+    ed = (0, J.A)([eo, q]),
     ec = r().omit(ed, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]),
     eu = r().omit(ed, [
         "inlineCode",
@@ -637,7 +637,7 @@ let eo = {
         "gameMention",
     ]),
     eE = r().omit(
-        (0, Z.A)([
+        (0, J.A)([
             ed,
             {
                 inlineCode: {
@@ -673,7 +673,7 @@ function em(e, t, n) {
     let i = t + n;
     return i === e.length || "" === e.charAt(i).trim();
 }
-let eT = (0, Z.A)([
+let eT = (0, J.A)([
         {
             highlightWord: {
                 order: -1,

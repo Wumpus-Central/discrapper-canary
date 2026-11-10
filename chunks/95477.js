@@ -175,13 +175,13 @@ n.d(
                 q = "password" === c;
             X && (t || !w || !q) && z(!1);
             let Q = w && q,
-                J = Q && X ? "text" : c,
-                Z = null,
+                Z = Q && X ? "text" : c,
+                J = null,
                 ee = !$ && ("boolean" == typeof U ? U && null != f && "" !== f : U.show);
             Q
-                ? (Z = (0, i.jsx)(v, { inputSize: C, isRevealed: X, disabled: t, onClick: () => z((e) => !e) }))
+                ? (J = (0, i.jsx)(v, { inputSize: C, isRevealed: X, disabled: t, onClick: () => z((e) => !e) }))
                 : ee
-                  ? (Z = (0, i.jsx)(b, {
+                  ? (J = (0, i.jsx)(b, {
                         inputSize: C,
                         onClick: function (e) {
                             (null != x.onClear ? x.onClear(e) : x.onChange?.("", d),
@@ -191,7 +191,7 @@ n.d(
                         },
                         disabled: t,
                     }))
-                  : null != S && (Z = (0, i.jsx)(D, { accessory: S, inputSize: C }));
+                  : null != S && (J = (0, i.jsx)(D, { accessory: S, inputSize: C }));
             let et = null;
             null != g && (et = (0, i.jsx)(D, { accessory: g, inputSize: C }));
             let en = G ? (0, i.jsx)(O.n, { value: f, maxLength: A }) : null;
@@ -207,7 +207,7 @@ n.d(
                     readOnly: $,
                     className: s()(L.container, L[C], {
                         [L.hasLeading]: null != et,
-                        [L.hasTrailing]: null != Z,
+                        [L.hasTrailing]: null != J,
                         [L.hasTags]: j,
                     }),
                     children: [
@@ -222,7 +222,7 @@ n.d(
                                 readOnly: $,
                                 required: k.required,
                                 "aria-required": k.required,
-                                type: J,
+                                type: Z,
                                 placeholder: u,
                                 maxLength: A,
                                 minLength: I,
@@ -246,7 +246,7 @@ n.d(
                                 ref: Y,
                             }),
                         }),
-                        Z,
+                        J,
                     ],
                 }),
             });

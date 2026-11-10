@@ -206,8 +206,8 @@ n.d(
                     ref: q,
                     disabled: F,
                 }),
-                J = "expressive" === n,
-                Z = r.useContext(d.C),
+                Z = "expressive" === n,
+                J = r.useContext(d.C),
                 { theme: ee, i18n: et } = (0, E.G9)(),
                 en = (0, l.q)(ee),
                 ei = r.useRef(!1);
@@ -265,9 +265,9 @@ n.d(
                     style: { "--__button-min-width": es },
                     ...W,
                     children: [
-                        J &&
+                        Z &&
                             (0, i.jsx)(N, {
-                                hasReducedMotion: Z.reducedMotion.enabled,
+                                hasReducedMotion: J.reducedMotion.enabled,
                                 buttonRef: q,
                                 isLightMode: en,
                                 disabled: F,
@@ -278,7 +278,7 @@ n.d(
                     ],
                 }),
             });
-            return J
+            return Z
                 ? (0, i.jsx)("div", {
                       className: s()(I.expressiveWrapper, { [I.fullWidth]: $, [I.hasText]: X }),
                       children: el,

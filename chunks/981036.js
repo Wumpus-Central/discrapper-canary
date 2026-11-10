@@ -7,8 +7,8 @@ var l = n(477900),
     c = n(364840),
     o = n(866665),
     d = n(820287),
-    f = n(999784),
-    h = n(429308);
+    h = n(999784),
+    f = n(429308);
 function p(e) {
     let { onClick: t, loading: n, disabled: r, text: i, tooltipText: a, ...u } = e,
         c = { text: i, ...u },
@@ -26,10 +26,10 @@ n.d(
             return null != t.tooltipText || n
                 ? (0, l.jsx)(c.j, {
                       children: (0, l.jsxs)("div", {
-                          className: a()(h.wm, null != i ? h.LT : h.Ub),
+                          className: a()(f.wm, null != i ? f.LT : f.Ub),
                           children: [
                               null != i ? (0, l.jsx)(d.A, { onClick: i }) : null,
-                              n && (0, l.jsx)(f.A, {}),
+                              n && (0, l.jsx)(h.A, {}),
                               (0, l.jsx)(p, { ...t }),
                           ],
                       }),

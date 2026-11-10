@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(742655),
     E = n(892349),
     S = n(35587),
-    I = n(446263),
-    g = n(683166),
+    g = n(446263),
+    I = n(683166),
     y = n(45938),
     A = n(722178),
     P = n(418200),
@@ -76,7 +76,7 @@ function R(e) {
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(I.A, {
+                                children: (0, l.jsx)(g.A, {
                                     defaultAnimationState: p.oA.LOOP,
                                     giftStyle: F,
                                     className: N.qq,
@@ -90,7 +90,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(g.A, {
+                              ? (0, l.jsx)(I.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: S,
                                     premiumType: _.WN[n],

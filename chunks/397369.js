@@ -107,8 +107,8 @@ let $ = new I.A("RunningGameStore"),
             name: f.A.get(K.fg2.SPOTIFY).name,
         },
     ],
-    J = [],
-    Z = !0,
+    Z = [],
+    J = !0,
     ee = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
     et = new Set(),
     en = [],
@@ -362,7 +362,7 @@ function eQ() {
         y.Ay.setGameCandidateOverrides(e);
     }
 }
-function eJ(e, t) {
+function eZ(e, t) {
     let n = ef.gameOverrides[e];
     null != n && ((ef.gameOverrides[t] = n), delete ef.gameOverrides[e]);
     let i = ef.enableOverlay[e];
@@ -372,7 +372,7 @@ function eJ(e, t) {
     let a = ef.enableDetection[e];
     null != a && ((ef.enableDetection[t] = a), delete ef.enableDetection[e]);
 }
-function eZ(e) {
+function eJ(e) {
     null != e &&
         0 !== e.length &&
         (e.forEach((e) => {
@@ -394,7 +394,7 @@ function eZ(e) {
                         (t) =>
                             null == t.id && null == t.distributor && null == t.processGame && t.exePath === e.exePath,
                     );
-                    null != t && (eJ(eF(t), eF(e)), (t.name = e.name), (t.id = e.id));
+                    null != t && (eZ(eF(t), eF(e)), (t.name = e.name), (t.id = e.id));
                 })(e),
                 ef.gamesSeen.some((t) => {
                     if (t.name === e.name || (null != t.id && t.id === e.id)) {
@@ -407,7 +407,7 @@ function eZ(e) {
                             t.processGame !== e.processGame && (t.processGame = e.processGame),
                             t.distributor !== e.distributor && (t.distributor = e.distributor),
                             t.gameName !== e.gameName && (t.gameName = e.gameName),
-                            t.id === e.id && eF(t) !== eF(e) && (eJ(eF(t), eF(e)), (t.exePath = e.exePath)),
+                            t.id === e.id && eF(t) !== eF(e) && (eZ(eF(t), eF(e)), (t.exePath = e.exePath)),
                             eM(t, e),
                             !0
                         );
@@ -629,7 +629,7 @@ if (z) {
     };
 }
 function e3() {
-    p.A.hasLoadedExperiments && q.length > 0 && (eZ(q), (q = []));
+    p.A.hasLoadedExperiments && q.length > 0 && (eJ(q), (q = []));
 }
 class e6 extends u.Ay.Store {
     static displayName = "RunningGameStore";
@@ -789,7 +789,7 @@ class e6 extends u.Ay.Store {
         return e_.find((t) => (0, S.A)(e, t.windowHandle))?.name ?? null;
     }
     get canShowAdminWarning() {
-        return Z && !this.isSystemServiceInitialized("input-service");
+        return J && !this.isSystemServiceInitialized("input-service");
     }
     isDetectionEnabled(e) {
         return eK(e);
@@ -806,14 +806,14 @@ class e6 extends u.Ay.Store {
 }
 let e5 = new e6(E.h, {
         RUNNING_GAMES_CHANGE: function (e) {
-            eZ(er);
+            eJ(er);
         },
         RUNNING_NON_GAMES_CHANGE: function () {},
         CANDIDATE_GAMES_CHANGE: function (e) {
             ei = e.games;
         },
         PERMISSION_CLEAR_PTT_ADMIN_WARNING: function () {
-            Z = !1;
+            J = !1;
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
@@ -838,7 +838,7 @@ let e5 = new e6(E.h, {
             } else ((t = eF(i)), i.hidden && (eA[t] = !0), (i.hidden = !1));
             ((null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)),
                 (ef.gameOverrides[t] = { ...i, add: !0 }),
-                eZ(er),
+                eJ(er),
                 eQ(),
                 eX(),
                 ek());
@@ -937,13 +937,13 @@ let e5 = new e6(E.h, {
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, h.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
                     if (eC.has(e.pid) || eO.has(e.cleanedExePath)) return !1;
-                    let t = J.some((t) => e.cleanedExePath.includes(t));
+                    let t = Z.some((t) => e.cleanedExePath.includes(t));
                     return (t && eC.add(e.pid), t);
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
                 G.default.track(K.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
-                    keywords: J,
+                    keywords: Z,
                     paths: t,
                     debugging_level: eR,
                     interval_seconds: eL,

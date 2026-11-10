@@ -255,8 +255,8 @@ let B = BigInt(0),
     z = BigInt(0x80000000),
     q = BigInt(0x100000000),
     Q = BigInt(0x10000000000),
-    J = BigInt(0x1000000000000),
-    Z = BigInt("72057594037927936"),
+    Z = BigInt(0x1000000000000),
+    J = BigInt("72057594037927936"),
     ee = BigInt("18446744073709551615"),
     et = BigInt("18446744073709551616"),
     en = BigInt("340282366920938463463374607431768211455"),
@@ -514,11 +514,11 @@ let el = new (class {
                                         : r < X
                                           ? 5
                                           : 4
-                                    : r < J
+                                    : r < Z
                                       ? r < Q
                                           ? 3
                                           : 2
-                                      : +(r < Z));
+                                      : +(r < J));
                         (this._expand(a + 6),
                             a < 256
                                 ? ((this._u[this._i] = 110),
@@ -1789,7 +1789,7 @@ var eX = n(143236),
         (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         s);
-class eJ extends eX.EventEmitter {
+class eZ extends eX.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(eQ.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1887,7 +1887,7 @@ class eJ extends eX.EventEmitter {
         this.send(eQ.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
-var eZ = n(33282),
+var eJ = n(33282),
     e0 = n(697277),
     e1 = n(751124),
     e2 = n(852015),
@@ -2103,7 +2103,7 @@ function tA(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
 let tf = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class th extends eJ {
+class th extends eZ {
     gatewayBackoff;
     handleIdentify;
     dispatchExceptionBackoff = new u.A(1e3, tE);
@@ -2205,7 +2205,7 @@ class th extends eJ {
         var e, t, n;
         let i, r;
         if (!this.willReconnect()) return void ts.verbose("Skipping _connect because willReconnect is false");
-        if (eZ.j()) return void ts.info("Skipping _connect because socket is paused");
+        if (eJ.j()) return void ts.info("Skipping _connect because socket is paused");
         ((this.connectionState = b.A.CONNECTING), (this.nextReconnectIsImmediate = !1));
         let a = this.compressionHandler.getAlgorithm(),
             s = tl.getName(),

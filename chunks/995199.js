@@ -406,7 +406,7 @@ function Q() {
             }),
     });
 }
-function J(e, t, n, i, r) {
+function Z(e, t, n, i, r) {
     let a = null != t ? `dev://playground/${e.id}/${t.id}` : `dev://playground/${e.id}`;
     if (!n || null == t) return a;
     let s = K(t, i, r),
@@ -416,7 +416,7 @@ function J(e, t, n, i, r) {
     for (let e of l) o.set(e, s[e]);
     return `${a}?${o.toString()}`;
 }
-function Z(e) {
+function J(e) {
     (0, O.C)(e, () => (0, E.P0)({ text: "Copied playground link", variant: "success" }));
 }
 function ee(e) {
@@ -425,8 +425,8 @@ function ee(e) {
         o = R.x.useField("currentDefaults"),
         E = r.useRef(null),
         A = r.useMemo(() => null != n && Object.keys(K(n, a, o)).length > 0, [n, a, o]),
-        f = r.useCallback(() => Z(J(t, n, !0, a, o)), [t, n, a, o]),
-        h = r.useCallback(() => Z(J(t, n, !1, a, o)), [t, n, a, o]);
+        f = r.useCallback(() => J(Z(t, n, !0, a, o)), [t, n, a, o]),
+        h = r.useCallback(() => J(Z(t, n, !1, a, o)), [t, n, a, o]);
     return A
         ? (0, i.jsxs)("div", {
               role: "group",

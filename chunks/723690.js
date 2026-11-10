@@ -31,25 +31,25 @@ s.d(
                 } = e,
                 v = (0, l.bG)([m.A], () => m.A.getNickname(t.id)),
                 C = n.useContext(A.A),
-                L = t.getAvatarURL(C, (0, o.FT)(o._3.SIZE_32), s),
+                D = t.getAvatarURL(C, (0, o.FT)(o._3.SIZE_32), s),
                 {
-                    avatarDecorationSrc: S,
-                    eventHandlers: { onMouseEnter: D, onMouseLeave: w },
+                    avatarDecorationSrc: G,
+                    eventHandlers: { onMouseEnter: S, onMouseLeave: L },
                 } = (0, d.A)({ user: t, guildId: C, size: (0, h.Te)(o._3.SIZE_32), onlyAnimateOnHoverOrFocus: !0 });
             n.useEffect(() => {
-                s ? D() : w();
-            }, [s, D, w]);
-            let G = I ? u.Js : u.eu;
+                s ? S() : L();
+            }, [s, S, L]);
+            let _ = I ? u.Js : u.eu;
             return (0, i.jsxs)("div", {
                 className: r()(N.eF, f, { [N.yo]: s }),
                 children: [
-                    (0, i.jsx)(G, {
-                        src: L,
+                    (0, i.jsx)(_, {
+                        src: D,
                         size: o._3.SIZE_32,
                         status: E,
                         isMobile: g,
                         isVR: y,
-                        avatarDecoration: S,
+                        avatarDecoration: G,
                         "aria-label": t.username,
                         className: N.my,
                     }),

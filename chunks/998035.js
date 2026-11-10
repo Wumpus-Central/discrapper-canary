@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(855986),
     o = n(364840),
     d = n(821609),
-    f = n(862482),
-    h = n(109802),
+    h = n(862482),
+    f = n(109802),
     p = n(452027),
     m = n(778712),
     C = n(534514),
@@ -17,8 +17,8 @@ var l = n(477900),
     E = n(890497),
     _ = n(398590),
     g = n(49229),
-    I = n(966327),
-    S = n(516106),
+    S = n(966327),
+    I = n(516106),
     A = n(674658),
     P = n(769015),
     x = n(242874),
@@ -62,12 +62,12 @@ function er(e) {
             deliveryReady: s,
             privateGiftLink: o,
             rewardSkuIds: d,
-            canShowGiftingBadgePostPurchase: f,
-            openGiftingBadgePostPurchaseModal: h,
+            canShowGiftingBadgePostPurchase: h,
+            openGiftingBadgePostPurchaseModal: f,
             onClose: p,
         } = e,
         [C, y] = r.useState([]),
-        [S, A] = r.useState(!1),
+        [I, A] = r.useState(!1),
         { isLoading: P, potentialRecipients: v } = (function () {
             r.useEffect(() => {
                 (g.A.fetchRelationships(), (0, T.u)());
@@ -98,12 +98,12 @@ function er(e) {
         j = k ? !s : null == t,
         U = 1 === C.length,
         w = C.length > 1 && null == a,
-        O = S || 0 === C.length || C.length > i || L.length !== C.length || (U ? null == t : !s) || w,
+        O = I || 0 === C.length || C.length > i || L.length !== C.length || (U ? null == t : !s) || w,
         er = v.map((e) => ({
             id: e.id,
             value: e.id,
             label: H.Ay.getUserTag(e),
-            leading: (0, l.jsx)(I.A, { user: e, size: m._3.SIZE_20 }),
+            leading: (0, l.jsx)(S.A, { user: e, size: m._3.SIZE_20 }),
             disabled: k && C.length >= i && !C.includes(e.id),
         })),
         ea = (0, z.D)(d),
@@ -152,7 +152,7 @@ function er(e) {
                                               hideLabel: !0,
                                               placeholder: et.intl.string(en.default.xdDO7f),
                                               loading: P || j,
-                                              disabled: j || S,
+                                              disabled: j || I,
                                               value: C,
                                               onSelectionChange: ec,
                                               options: er,
@@ -164,7 +164,7 @@ function er(e) {
                                       label: et.intl.string(et.t.MJw05f),
                                       placeholder: et.intl.string(et.t.J019jZ),
                                       loading: P || j,
-                                      disabled: j || S,
+                                      disabled: j || I,
                                       value: C[0],
                                       onSelectionChange: (e) => ec(null != e ? [e] : []),
                                       options: er,
@@ -192,7 +192,7 @@ function er(e) {
                         {
                             variant: "secondary",
                             text: et.intl.string(en.default["qTXpj/"]),
-                            disabled: ea || S,
+                            disabled: ea || I,
                             onClick: function () {
                                 (p(),
                                     (0, _.bz)(),
@@ -203,16 +203,16 @@ function er(e) {
                                               shouldShowPromotionalExperience: !0,
                                               analyticsLocations: R,
                                               purchaseType: ee.gs.GIFT,
-                                              onCloseCallback: f ? h : void 0,
+                                              onCloseCallback: h ? f : void 0,
                                           })
-                                        : f && h());
+                                        : h && f());
                             },
                         },
                         {
                             variant: "primary",
                             text: et.intl.string(et.t["+EgwQn"]),
                             disabled: O,
-                            loading: ea || S,
+                            loading: ea || I,
                             onClick: async function () {
                                 var e;
                                 let r;
@@ -243,8 +243,8 @@ function er(e) {
                                         failedRecipients: r.failedRecipients,
                                         rewardSkuIds: d,
                                         purchaseQuantity: i,
-                                        canShowGiftingBadgePostPurchase: f,
-                                        openGiftingBadgePostPurchaseModal: h,
+                                        canShowGiftingBadgePostPurchase: h,
+                                        openGiftingBadgePostPurchaseModal: f,
                                     }),
                                     (0, Q.mM)(async () => {
                                         let { default: t } = await Promise.all([n.e(719466), n.e(692318)]).then(
@@ -290,8 +290,8 @@ function ec(e) {
             giftMessageError: b,
             isSendingMessage: N,
         } = e,
-        [D, B] = r.useState(h.e.Modes.DEFAULT),
-        G = (0, S.t4)((e) => e.getIsRecurringGiftCheckout()),
+        [D, B] = r.useState(f.e.Modes.DEFAULT),
+        G = (0, I.t4)((e) => e.getIsRecurringGiftCheckout()),
         K = (0, c.bG)([k.A], () => k.A.enabled),
         Z = T || (null != x && null != M),
         W = g?.productLine === ea.EZt.COLLECTIBLES,
@@ -319,10 +319,10 @@ function ec(e) {
         let e;
         if (null == t) return null;
         switch (D) {
-            case h.e.Modes.SUCCESS:
+            case f.e.Modes.SUCCESS:
                 e = et.intl.string(et.t.XVvPjU);
                 break;
-            case h.e.Modes.ERROR:
+            case f.e.Modes.ERROR:
                 e = et.intl.string(et.t.i4GM3L);
                 break;
             default:
@@ -330,7 +330,7 @@ function ec(e) {
         }
         return (0, l.jsx)(p.D, {
             label: et.intl.string(et.t["/dG4NA"]),
-            children: (0, l.jsx)(h.e, {
+            children: (0, l.jsx)(f.e, {
                 hideMessage: K ? et.intl.string(et.t["0RLn47"]) : null,
                 value: (0, U.Zq)(t),
                 mode: D,
@@ -339,17 +339,17 @@ function ec(e) {
                     (null != g && (0, U.AK)(new L.A({ code: t, maxUses: 1 }), g),
                         (0, j.C)(
                             e,
-                            () => B(h.e.Modes.SUCCESS),
-                            () => B(h.e.Modes.ERROR),
+                            () => B(f.e.Modes.SUCCESS),
+                            () => B(f.e.Modes.ERROR),
                         ),
                         setTimeout(() => {
-                            B(h.e.Modes.DEFAULT);
+                            B(f.e.Modes.DEFAULT);
                         }, 1500));
                 },
                 supportsCopy: j.p5,
                 className: eu.__invalid_copyInput,
-                buttonColor: f.XD.LINK,
-                buttonLook: f.pR.LINK,
+                buttonColor: h.XD.LINK,
+                buttonLook: h.pR.LINK,
             }),
         });
     }
@@ -406,7 +406,7 @@ function ec(e) {
                                           (0, l.jsxs)("div", {
                                               className: eu.jx,
                                               children: [
-                                                  (0, l.jsx)(I.A, { user: M, size: m._3.SIZE_24 }),
+                                                  (0, l.jsx)(S.A, { user: M, size: m._3.SIZE_24 }),
                                                   (0, l.jsx)(C.D, {
                                                       variant: "heading-lg/semibold",
                                                       children: H.Ay.getName(M),
@@ -487,15 +487,15 @@ function ed(e) {
     }, []);
     let [i, a] = r.useState(),
         [s, o] = r.useState(!1),
-        [f, h] = r.useState(!1),
+        [h, f] = r.useState(!1),
         { userAffinities: p, isLoading: C } = (0, c.cf)([M.A], () => ({
             userAffinities: M.A.getUserAffinitiesMap(),
             isLoading: M.A.isFetching(),
         })),
         y = Array.from(p.keys()).sort((e, t) => M.A.compare(e, t)),
         _ = (0, c.bG)([b.A], () => b.A.getFriendIDs()),
-        S = u().difference(_, y),
-        A = [...y, ...S],
+        I = u().difference(_, y),
+        A = [...y, ...I],
         P = (0, c.bG)([N.default], () => N.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
     if (null == P || 0 === P.length) return null;
     let v = u().sortBy(P, (e) => A.indexOf(e.id));
@@ -518,22 +518,22 @@ function ed(e) {
                             id: e.id,
                             value: e,
                             label: `${H.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(I.A, { user: e, size: m._3.SIZE_20 }),
+                            leading: (0, l.jsx)(S.A, { user: e, size: m._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {
                         className: eu.Qg,
                         children: (0, l.jsx)(d.$, {
                             disabled: null == i,
-                            loading: f,
+                            loading: h,
                             onClick: () => {
-                                (h(!0),
+                                (f(!0),
                                     (0, x.UN)(i, t)
                                         .then(() => {
                                             n();
                                         })
                                         .catch(() => {
-                                            (o(!0), h(!1));
+                                            (o(!0), f(!1));
                                         }));
                             },
                             text: et.intl.string(et.t["+EgwQn"]),

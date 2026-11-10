@@ -85,11 +85,11 @@ function Q(e) {
     }
     return { host: e, pathPrefix: null };
 }
-function J(e, t) {
+function Z(e, t) {
     return t.host?.replace(/^www[.]/i, "") === e.host;
 }
-function Z(e, t) {
-    if (!J(e, t)) return null;
+function J(e, t) {
+    if (!Z(e, t)) return null;
     let n = t.pathname ?? "",
         i = e.pathPrefix ?? "";
     if (!n.startsWith(i)) return null;
@@ -97,7 +97,7 @@ function Z(e, t) {
     return "" === r ? null : r;
 }
 function ee(e) {
-    return Z(W, e) ?? Z(Y, e) ?? Z(K, e) ?? Z($, e) ?? Z(X, e);
+    return J(W, e) ?? J(Y, e) ?? J(K, e) ?? J($, e) ?? J(X, e);
 }
 function et(e) {
     let t = el(e);
@@ -108,17 +108,17 @@ function et(e) {
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null,
         };
-    let n = Z(H, t),
-        i = Z(j, t),
-        r = Z(W, t) ?? Z(Y, t) ?? Z(K, t) ?? Z($, t) ?? Z(X, t);
+    let n = J(H, t),
+        i = J(j, t),
+        r = J(W, t) ?? J(Y, t) ?? J(K, t) ?? J($, t) ?? J(X, t);
     return { url: t, inviteHostRemainingPath: n, templateHostRemainingPath: i, primaryHostRemainingPath: r };
 }
 function en(e) {
     if (e.includes("\\")) {
         let t = el(e);
         if (null == t) return !1;
-        if (J(H, t)) return !0;
-        if ([W, Y, K, $, X].some((e) => J(e, t))) return t.pathname?.toUpperCase().includes(A.I.INVITE) ?? !1;
+        if (Z(H, t)) return !0;
+        if ([W, Y, K, $, X].some((e) => Z(e, t))) return t.pathname?.toUpperCase().includes(A.I.INVITE) ?? !1;
     }
     return !1;
 }

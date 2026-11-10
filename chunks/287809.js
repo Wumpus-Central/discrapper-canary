@@ -292,7 +292,7 @@ function Q(e) {
         null != t && P(t, !0);
     });
 }
-function J(e) {
+function Z(e) {
     let { guildScheduledEventUsers: t, guildId: n } = e;
     t.forEach((e) => {
         let { user: t, member: i } = e;
@@ -302,16 +302,16 @@ function J(e) {
         null != r && C(t.id, n, r);
     });
 }
-function Z(e) {
+function J(e) {
     (null != e.other_user && y(e.other_user), null != e.message && P(e.message, !0));
 }
 function ee(e) {
     let { items: t } = e;
-    t.forEach(Z);
+    t.forEach(J);
 }
 function et(e) {
     let { item: t } = e;
-    Z(t);
+    J(t);
 }
 function en(e) {
     let { message: t } = e;
@@ -593,7 +593,7 @@ class eB extends m.A {
             LOAD_THREADS_SUCCESS: z,
             LOAD_ARCHIVED_THREADS_SUCCESS: z,
             LOAD_FORUM_POSTS: q,
-            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: J,
+            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: Z,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: ee,
             NOTIFICATION_CENTER_ITEM_CREATE: et,
             LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: Q,

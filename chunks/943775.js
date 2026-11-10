@@ -1,14 +1,14 @@
-var e = i(998218);
-i.d(
+var i = e(998218);
+e.d(
     n,
     {},
     {
         A: function (t, n) {
-            let i = t.getIconSource(n);
-            if (null != i && "number" != typeof i) {
+            let e = t.getIconSource(n);
+            if (null != e && "number" != typeof e) {
                 let t;
-                if ((Array.isArray(i) ? i.length > 0 && (t = i[0].uri) : (t = i.uri), null != t))
-                    return e.A.toURLSafe(t) ?? void 0;
+                if ((Array.isArray(e) ? e.length > 0 && (t = e[0].uri) : (t = e.uri), null != t))
+                    return i.A.toURLSafe(t) ?? void 0;
             }
         },
     },

@@ -24,7 +24,7 @@ n.d(
                     subscriptionTrial: E,
                 } = e,
                 { immediateDelivery: S } = (0, s.U)(),
-                { checkoutReviewButtonLabel: I, isExpressCheckoutVisibleInFooter: g } = (0, u.t4)((e) => ({
+                { checkoutReviewButtonLabel: g, isExpressCheckoutVisibleInFooter: I } = (0, u.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                     isExpressCheckoutVisibleInFooter:
                         e.getExpressCheckoutVisibilityState().isExpressCheckoutVisibleInFooter,
@@ -44,7 +44,7 @@ n.d(
                     subscriptionTrial: E,
                 }),
                 _ = {
-                    purchaseButtonText: I,
+                    purchaseButtonText: g,
                     totalDue: C ? y.total : 0,
                     renewalPrice: v,
                     multiPeriodDiscountAttributes: x,
@@ -57,7 +57,7 @@ n.d(
                 variant: { type: h, ..._ },
                 paymentSourceType: n,
                 immediateDelivery: S,
-                isExpressCheckout: g,
+                isExpressCheckout: I,
             });
         },
     },

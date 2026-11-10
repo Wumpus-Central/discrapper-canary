@@ -1540,12 +1540,12 @@ var j =
         (A[(A.AGE_ASSURANCE_GROUP_25_34 = 8)] = "AGE_ASSURANCE_GROUP_25_34"),
         (A[(A.AGE_ASSURANCE_GROUP_35_UP = 9)] = "AGE_ASSURANCE_GROUP_35_UP"),
         A),
-    J =
+    Z =
         (((f = {})[(f.USER_LINK_TYPE_UNSPECIFIED = 0)] = "USER_LINK_TYPE_UNSPECIFIED"),
         (f[(f.PARENT = 1)] = "PARENT"),
         (f[(f.CHILD = 2)] = "CHILD"),
         f),
-    Z =
+    J =
         (((h = {})[(h.USER_LINK_STATUS_UNSPECIFIED = 0)] = "USER_LINK_STATUS_UNSPECIFIED"),
         (h[(h.PENDING = 1)] = "PENDING"),
         (h[(h.ACTIVE = 2)] = "ACTIVE"),
@@ -2618,7 +2618,7 @@ class eF extends O.G {
             { no: 1, name: "linked_users", kind: "map", K: 6, V: { kind: "message", T: () => ej } },
             { no: 2, name: "safety_feature_limits", kind: "map", K: 13, V: { kind: "message", T: () => e$ } },
             { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => ez } },
-            { no: 4, name: "quest", kind: "message", T: () => eJ },
+            { no: 4, name: "quest", kind: "message", T: () => eZ },
             { no: 5, name: "primary_guild", kind: "message", T: () => eS },
             { no: 6, name: "cross_platform_restriction", kind: "message", T: () => ey },
             { no: 7, name: "collectibles", kind: "message", T: () => eT },
@@ -2670,7 +2670,7 @@ class eF extends O.G {
                     this.binaryReadMap3(r.safetyFlags, e, n);
                     break;
                 case 4:
-                    r.quest = eJ.internalBinaryRead(e, e.uint32(), n, r.quest);
+                    r.quest = eZ.internalBinaryRead(e, e.uint32(), n, r.quest);
                     break;
                 case 5:
                     r.primaryGuild = eS.internalBinaryRead(e, e.uint32(), n, r.primaryGuild);
@@ -2818,7 +2818,7 @@ class eF extends O.G {
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 ez.internalBinaryWrite(e.safetyFlags[i], t, n),
                 t.join().join());
-        (e.quest && eJ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
+        (e.quest && eZ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
                 ey.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, S.O0.LengthDelimited).fork(), n).join(),
@@ -2959,8 +2959,8 @@ class eH extends O.G {
     constructor() {
         super("discord_protos.users.v1.LinkedUser", [
             { no: 1, name: "user_id", kind: "scalar", T: 6 },
-            { no: 2, name: "link_type", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkType", J] },
-            { no: 3, name: "link_status", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkStatus", Z] },
+            { no: 2, name: "link_type", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkType", Z] },
+            { no: 3, name: "link_status", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkStatus", J] },
             { no: 4, name: "requestor_id", kind: "scalar", T: 6 },
             { no: 5, name: "created_at", kind: "message", T: () => L.D },
             { no: 6, name: "updated_at", kind: "message", T: () => L.D },
@@ -3232,8 +3232,8 @@ class eQ extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eJ = new eQ();
-class eZ extends O.G {
+let eZ = new eQ();
+class eJ extends O.G {
     constructor() {
         super("discord_protos.users.v1.PremiumState", [
             {
@@ -3307,7 +3307,7 @@ class eZ extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e0 = new eZ();
+let e0 = new eJ();
 class e1 extends O.G {
     constructor() {
         super("discord_protos.users.v1.StoreCountry", [

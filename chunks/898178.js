@@ -8,8 +8,8 @@ var r = n(477900),
     s = n(782134),
     c = n(113494),
     d = n(12470),
-    f = n(811893),
-    p = n(165862),
+    p = n(811893),
+    f = n(165862),
     h = n(477782),
     m = n(92446),
     g = n(173936),
@@ -20,69 +20,69 @@ var r = n(477900),
     w = n(408278),
     j = n(365199),
     k = n(872344),
-    S = n(742589),
-    _ = n(147036),
-    P = n(957565),
-    C = n(171691),
-    I = n(785389),
-    M = n(889558),
-    A = n(860402),
+    _ = n(742589),
+    S = n(147036),
+    I = n(957565),
+    P = n(171691),
+    C = n(785389),
+    A = n(889558),
+    M = n(860402),
     D = n(191850),
-    $ = n(792996);
-let T = new Set();
-var E = n(826058),
-    B = n(233470),
-    z = n(260498),
-    q = n(733791),
+    T = n(792996);
+let E = new Set();
+var $ = n(826058),
+    q = n(233470),
+    B = n(260498),
+    z = n(733791),
     F = n(680032),
-    N = n(189213),
-    O = n(331322),
-    R = n(834730),
+    O = n(189213),
+    R = n(331322),
+    L = n(834730),
     G = n(192308),
-    W = n(653036);
-function L(t) {
+    N = n(653036);
+function W(t) {
     let { project: e, transitionState: n, onClose: i } = t,
         o = (function (t) {
             let [e, n] = l.useState(!1),
                 [r, i] = l.useState(null);
-            l.useEffect(() => (0, B.GO)(t.id), [t.id]);
-            let a = (0, q.Bs)(t.id),
+            l.useEffect(() => (0, q.GO)(t.id), [t.id]);
+            let a = (0, z.Bs)(t.id),
                 [o, u] = l.useState(null),
                 s = null == o ? a : o.target,
                 c = s?.appName ?? t.name,
                 d = l.useMemo(() => (0, F.w)(t, s), [t, s]),
-                f = l.useCallback(async () => {
+                p = l.useCallback(async () => {
                     (n(!0), i(null), u({ target: a }));
                     try {
-                        await (0, B.kY)(t.id);
+                        await (0, q.kY)(t.id);
                     } catch {
-                        return (i($.intl.string(D.default["d+wTRF"])), u(null), n(!1), null);
+                        return (i(T.intl.string(D.default["d+wTRF"])), u(null), n(!1), null);
                     }
                     n(!1);
-                    let e = z.Ay.getIntegrationStatus(t.id)?.owner_authorization_revoked === !0;
-                    return $.intl.formatToPlainString(e ? D.default.tOu7uv : D.default.TWYUzf, { app: c });
+                    let e = B.Ay.getIntegrationStatus(t.id)?.owner_authorization_revoked === !0;
+                    return T.intl.formatToPlainString(e ? D.default.tOu7uv : D.default.TWYUzf, { app: c });
                 }, [c, a, t.id]);
             return {
                 appName: c,
                 rows: d,
-                keptChannels: null == s ? null : (0, q.Mi)(s),
+                keptChannels: null == s ? null : (0, z.Mi)(s),
                 pending: e,
                 error: r,
-                submit: f,
+                submit: p,
             };
         })(e),
-        { appName: u, rows: s, keptChannels: c, pending: d, error: f } = o;
-    return (0, r.jsx)(N.a, {
+        { appName: u, rows: s, keptChannels: c, pending: d, error: p } = o;
+    return (0, r.jsx)(O.a, {
         transitionState: n,
         onClose: i,
         role: "alertdialog",
-        title: $.intl.formatToPlainString(D.default.cAxBIL, { app: u }),
+        title: T.intl.formatToPlainString(D.default.cAxBIL, { app: u }),
         size: "sm",
-        notice: null == f ? void 0 : { type: "critical", message: f, role: "alert" },
+        notice: null == p ? void 0 : { type: "critical", message: p, role: "alert" },
         actions: [
-            { text: $.intl.string($.t["ETE/oC"]), variant: "secondary", onClick: i, disabled: d },
+            { text: T.intl.string(T.t["ETE/oC"]), variant: "secondary", onClick: i, disabled: d },
             {
-                text: $.intl.string(D.default.VAb6aE),
+                text: T.intl.string(D.default.VAb6aE),
                 variant: "critical-primary",
                 onClick: async function () {
                     let t = await o.submit();
@@ -92,65 +92,65 @@ function L(t) {
                 disabled: d,
             },
         ],
-        children: (0, r.jsxs)(O.B, {
+        children: (0, r.jsxs)(R.B, {
             gap: 12,
             children: [
-                (0, r.jsx)(W.A, { rows: s }),
-                null != c ? (0, r.jsx)(R.E, { variant: "body-sm/normal", color: "text-muted", children: c }) : null,
+                (0, r.jsx)(N.A, { rows: s }),
+                null != c ? (0, r.jsx)(L.E, { variant: "body-sm/normal", color: "text-muted", children: c }) : null,
             ],
         }),
     });
 }
-var X = n(442331),
-    K = n(616334);
+var H = n(442331),
+    V = n(616334);
 n(321073);
-var H = n(189714),
-    V = n(314116),
+var X = n(189714),
+    K = n(314116),
     U = n(664619),
-    Q = n(706935);
-function Z(t) {
+    Z = n(706935);
+function Y(t) {
     let { project: e, target: n, action: i, ...o } = t,
         [u, s] = l.useState(n.canRemovePreviewBot),
         [c, d] = l.useState(!1),
-        [f, p] = l.useState(null),
+        [p, f] = l.useState(null),
         h = "delete" === i,
-        m = h ? (0, q.fI)(n) : (0, q.Kd)(n),
-        g = h ? null : (0, q.L4)(n),
-        y = (0, q.Mi)(n),
+        m = h ? (0, z.fI)(n) : (0, z.Kd)(n),
+        g = h ? null : (0, z.L4)(n),
+        y = (0, z.Mi)(n),
         x = h
-            ? $.intl.formatToPlainString(D.default.CJBhb2, { name: n.projectName })
-            : $.intl.formatToPlainString(D.default.x6FvsZ, { app: n.appName });
-    return (0, r.jsx)(N.a, {
+            ? T.intl.formatToPlainString(D.default.CJBhb2, { name: n.projectName })
+            : T.intl.formatToPlainString(D.default.x6FvsZ, { app: n.appName });
+    return (0, r.jsx)(O.a, {
         ...o,
         role: "alertdialog",
-        title: h ? x : (0, q.WX)((0, Q.tb)(D.default.x6FvsZ, n.appName)),
-        subtitle: h ? (0, q.J)(n) : $.intl.string(D.default["8OKM1N"]),
+        title: h ? x : (0, z.WX)((0, Z.tb)(D.default.x6FvsZ, n.appName)),
+        subtitle: h ? (0, z.J)(n) : T.intl.string(D.default["8OKM1N"]),
         "aria-label": x,
-        notice: null == f ? void 0 : { message: f, type: "critical", role: "alert" },
+        notice: null == p ? void 0 : { message: p, type: "critical", role: "alert" },
         actions: [
-            { text: $.intl.string($.t["ETE/oC"]), variant: "secondary", onClick: o.onClose },
+            { text: T.intl.string(T.t["ETE/oC"]), variant: "secondary", onClick: o.onClose },
             {
-                text: $.intl.string(h ? D.default.aC42bN : D.default.BGF8VT),
+                text: T.intl.string(h ? D.default.aC42bN : D.default.BGF8VT),
                 variant: "critical-primary",
                 loading: c,
                 disabled: c,
                 onClick: () => {
                     (async function () {
-                        (d(!0), p(null));
-                        let t = h ? (0, B.xx)(e.id) : (0, U.YI)(e.id, { alsoRemovePreviewBot: u }),
+                        (d(!0), f(null));
+                        let t = h ? (0, q.xx)(e.id) : (0, U.YI)(e.id, { alsoRemovePreviewBot: u }),
                             r = await t.catch(() => null);
                         (d(!1), r?.ok !== !0)
-                            ? p($.intl.string(h ? D.default["0XDHob"] : D.default.PJ2Fkn))
-                            : (h || (0, a.P0)({ text: (0, q.p_)(n), variant: "success" }), o.onClose());
+                            ? f(T.intl.string(h ? D.default["0XDHob"] : D.default.PJ2Fkn))
+                            : (h || (0, a.P0)({ text: (0, z.p_)(n), variant: "success" }), o.onClose());
                     })().catch(() => {});
                 },
             },
         ],
-        children: (0, r.jsxs)(O.B, {
+        children: (0, r.jsxs)(R.B, {
             gap: 12,
             children: [
                 m.length > 0 || null != g
-                    ? (0, r.jsx)(Q.Ay, {
+                    ? (0, r.jsx)(Z.Ay, {
                           items: m,
                           optionalItem:
                               null == g
@@ -158,13 +158,13 @@ function Z(t) {
                                   : { item: g, checked: u, onChange: s, disabled: !n.canRemovePreviewBot },
                       })
                     : null,
-                null != y ? (0, r.jsx)(R.E, { variant: "body-sm/normal", color: "text-muted", children: y }) : null,
+                null != y ? (0, r.jsx)(L.E, { variant: "body-sm/normal", color: "text-muted", children: y }) : null,
             ],
         }),
     });
 }
-function Y(t) {
-    (0, G.qf)((e) => (0, r.jsx)(Z, { ...e, ...t }));
+function Q(t) {
+    (0, G.qf)((e) => (0, r.jsx)(Y, { ...e, ...t }));
 }
 var J = n(587895);
 function tt(t) {
@@ -172,18 +172,18 @@ function tt(t) {
         [o, u] = l.useState(!1),
         [s, c] = l.useState(null),
         d = (0, i.bG)([J.A], () => J.A.getApplication(e.application_id)?.name ?? e.name, [e.application_id, e.name]),
-        f = $.intl.formatToPlainString(D.default.m8KWic, { app: d });
-    return (0, r.jsx)(N.a, {
+        p = T.intl.formatToPlainString(D.default.m8KWic, { app: d });
+    return (0, r.jsx)(O.a, {
         ...n,
         role: "alertdialog",
-        title: f,
-        subtitle: $.intl.string(D.default.wve4kB),
-        "aria-label": f,
+        title: p,
+        subtitle: T.intl.string(D.default.wve4kB),
+        "aria-label": p,
         notice: null == s ? void 0 : { message: s, type: "critical", role: "alert" },
         actions: [
-            { text: $.intl.string($.t["ETE/oC"]), variant: "secondary", onClick: n.onClose },
+            { text: T.intl.string(T.t["ETE/oC"]), variant: "secondary", onClick: n.onClose },
             {
-                text: $.intl.string(D.default.GqcQyH),
+                text: T.intl.string(D.default.GqcQyH),
                 variant: "critical-primary",
                 loading: o,
                 disabled: o,
@@ -193,11 +193,11 @@ function tt(t) {
                         let t = await (0, U.R_)(e.id);
                         (u(!1), t)
                             ? ((0, a.P0)({
-                                  text: $.intl.formatToPlainString(D.default.b8LN7N, { app: d }),
+                                  text: T.intl.formatToPlainString(D.default.b8LN7N, { app: d }),
                                   variant: "success",
                               }),
                               n.onClose())
-                            : c($.intl.string(D.default["rE/0SD"]));
+                            : c(T.intl.string(D.default["rE/0SD"]));
                     })().catch(() => {});
                 },
             },
@@ -218,15 +218,15 @@ function ti(t) {
             projectGuildId: v,
             isOwner: w,
             canRemix: j,
-            onPublish: S,
+            onPublish: _,
             publishLabel: F,
-            publishDisabled: N = !1,
-            onOpenProjectSettings: O,
-            onExport: R,
-            onImport: W,
+            publishDisabled: O = !1,
+            onOpenProjectSettings: R,
+            onExport: L,
+            onImport: N,
             onRemix: U,
-            onConnectTool: Q,
-            onHistory: Z,
+            onConnectTool: Z,
+            onHistory: Y,
             onDismiss: J,
             onTogglePreviewPaused: tn,
             previewPaused: ti = !1,
@@ -236,78 +236,78 @@ function ti(t) {
             onToggleDebug: ts,
             debugOpen: tc = !1,
             refreshApplicationId: td,
-            previewProjectId: tf,
-            onCloseMenu: tp,
+            previewProjectId: tp,
+            onCloseMenu: tf,
         } = t,
-        th = (0, H.iI)(e),
-        tm = (0, C.lQ)(e) && !ti,
-        tg = l.useContext(E.bI),
+        th = (0, X.iI)(e),
+        tm = (0, P.lQ)(e) && !ti,
+        tg = l.useContext($.bI),
         { pending: ty, refresh: tx } = (0, k.A)(td ?? null),
         { pending: tb, connect: tv } = (function (t, e) {
-            let [n, r] = l.useState(T),
-                i = l.useRef(T),
+            let [n, r] = l.useState(E),
+                i = l.useRef(E),
                 a = l.useCallback((t) => {
-                    ((i.current = (0, I.Q6)(i.current, t)), r(i.current));
+                    ((i.current = (0, C.Q6)(i.current, t)), r(i.current));
                 }, []);
             return {
                 pending: n,
                 connect: l.useCallback(
                     (n) => {
                         if (null == t) return;
-                        let l = (0, I.K9)(i.current, n.type);
+                        let l = (0, C.K9)(i.current, n.type);
                         null != l &&
                             ((i.current = l),
                             r(l),
                             (async function () {
-                                let r = await (0, A.JI)(t, n.type);
+                                let r = await (0, M.JI)(t, n.type);
                                 (a(n.type), "url" === r.type)
-                                    ? (0, M.h)({ href: r.url, trusted: !1 })
+                                    ? (0, A.h)({ href: r.url, trusted: !1 })
                                     : e(
-                                          "setup" === (0, I.rq)(r.error)
-                                              ? $.intl.string(D.default["jCQ/1B"])
-                                              : $.intl.string(D.default.POxkSh),
+                                          "setup" === (0, C.rq)(r.error)
+                                              ? T.intl.string(D.default["jCQ/1B"])
+                                              : T.intl.string(D.default.POxkSh),
                                       );
                             })().catch(() => a(n.type)));
                     },
                     [e, t, a],
                 ),
             };
-        })(tf ?? null, tl),
-        tw = (0, i.bG)([X.A], () => (null == tf ? tr : X.A.getDeclaredConnections(tf))),
-        tj = l.useMemo(() => (0, I.Xl)(tw), [tw]),
-        tk = (0, q.Bs)(e),
-        tS = (0, q.CU)(e) && w,
-        t_ = (0, i.bG)(
-            [z.Ay],
+        })(tp ?? null, tl),
+        tw = (0, i.bG)([H.A], () => (null == tp ? tr : H.A.getDeclaredConnections(tp))),
+        tj = l.useMemo(() => (0, C.Xl)(tw), [tw]),
+        tk = (0, z.Bs)(e),
+        t_ = (0, z.CU)(e) && w,
+        tS = (0, i.bG)(
+            [B.Ay],
             () => {
-                let t = z.Ay.getProject(e);
-                return null != t && (0, z.jf)(t);
+                let t = B.Ay.getProject(e);
+                return null != t && (0, B.jf)(t);
             },
             [e],
         ),
-        tP = (0, i.bG)(
-            [z.Ay],
+        tI = (0, i.bG)(
+            [B.Ay],
             () => {
                 var t;
-                let n = z.Ay.getProject(e);
+                let n = B.Ay.getProject(e);
                 return (
                     null != n &&
                     "guild" === (t = n).install_scope &&
                     null == t.install_scope_setup &&
                     null != t.guild_id &&
-                    (0, z.PV)(t)
+                    (0, B.PV)(t)
                 );
             },
             [e],
         ),
-        tC = null != O || w || t_,
-        tI = (function (t) {
+        tP = null != R || w || tS,
+        tC = (function (t) {
             let { canRefresh: e, refreshPending: n, offers: r, connectPending: l } = t,
                 i = [];
             for (let { connection: t, offer: a } of (e &&
                 i.push({
                     id: "preview-refresh",
-                    label: $.intl.string(D.default["/nOi5n"]),
+                    label: T.intl.string(D.default["/nOi5n"]),
                     kind: "refresh",
                     disabled: n,
                 }),
@@ -316,14 +316,14 @@ function ti(t) {
                     "authorize" === a
                         ? {
                               id: `preview-connect-${t.type}`,
-                              label: $.intl.formatToPlainString(D.default.DEwmI5, { label: t.label }),
+                              label: T.intl.formatToPlainString(D.default.DEwmI5, { label: t.label }),
                               kind: "connect",
                               connectionType: t.type,
                               disabled: l.has(t.type),
                           }
                         : {
                               id: `preview-connect-${t.type}`,
-                              label: $.intl.formatToPlainString(D.default.GnHcWc, { label: t.label }),
+                              label: T.intl.formatToPlainString(D.default.GnHcWc, { label: t.label }),
                               kind: "connect",
                               connectionType: t.type,
                               disabled: !0,
@@ -331,29 +331,29 @@ function ti(t) {
                 );
             return i;
         })({ canRefresh: null != td, refreshPending: ty, offers: tj, connectPending: tb }),
-        tM = l.useMemo(() => new Map(tw.map((t) => [t.type, t])), [tw]),
-        tA = null != U && j,
-        tD = w && null != W,
-        t$ = tA || null != R || tD || null != Q || null != Z,
-        tT = P.p5 && null != b,
-        tE = P.p5,
-        tB = th ? o.BellIcon : u.BellSlashIcon,
-        tz = ti ? s.PlayIcon : c.PauseIcon,
-        tq = tu ? d.WindowReturnIcon : f.WindowLaunchIcon;
-    return (0, r.jsxs)(p.W, {
+        tA = l.useMemo(() => new Map(tw.map((t) => [t.type, t])), [tw]),
+        tM = null != U && j,
+        tD = w && null != N,
+        tT = tM || null != L || tD || null != Z || null != Y,
+        tE = I.p5 && null != b,
+        t$ = I.p5,
+        tq = th ? o.BellIcon : u.BellSlashIcon,
+        tB = ti ? s.PlayIcon : c.PauseIcon,
+        tz = tu ? d.WindowReturnIcon : p.WindowLaunchIcon;
+    return (0, r.jsxs)(f.W, {
         "data-menu-migrated": !0,
         navId: `conjure-project-actions-${e}`,
-        "aria-label": $.intl.string($.t.ogxXGq),
-        onClose: tp,
-        onSelect: tp,
+        "aria-label": T.intl.string(T.t.ogxXGq),
+        onClose: tf,
+        onSelect: tf,
         children: [
-            null != S
+            null != _
                 ? (0, r.jsx)(h.rX, {
                       children: (0, r.jsx)(h.Dr, {
                           id: "publish",
-                          label: F ?? $.intl.string(D.default["120EFN"]),
-                          disabled: N,
-                          action: S,
+                          label: F ?? T.intl.string(D.default["120EFN"]),
+                          disabled: O,
+                          action: _,
                       }),
                   })
                 : null,
@@ -363,10 +363,10 @@ function ti(t) {
                           null != tn
                               ? (0, r.jsx)(h.Dr, {
                                     id: "toggle-preview-paused",
-                                    icon: tz,
-                                    leadingAccessory: { type: "icon", icon: tz },
-                                    label: $.intl.string(ti ? D.default.ZKd2Cw : D.default.VHxerm),
-                                    subtext: tm ? $.intl.string(D.default.WjdaFw) : void 0,
+                                    icon: tB,
+                                    leadingAccessory: { type: "icon", icon: tB },
+                                    label: T.intl.string(ti ? D.default.ZKd2Cw : D.default.VHxerm),
+                                    subtext: tm ? T.intl.string(D.default.WjdaFw) : void 0,
                                     disabled: ta || tm,
                                     action: tn,
                                 })
@@ -374,10 +374,10 @@ function ti(t) {
                           null != to
                               ? (0, r.jsx)(h.Dr, {
                                     id: "toggle-popout",
-                                    icon: tq,
-                                    leadingAccessory: { type: "icon", icon: tq },
-                                    label: $.intl.string(tu ? $.t["NKV/MO"] : $.t["3Zypbv"]),
-                                    subtext: tm && !tu ? $.intl.string(D.default.WjdaFw) : void 0,
+                                    icon: tz,
+                                    leadingAccessory: { type: "icon", icon: tz },
+                                    label: T.intl.string(tu ? T.t["NKV/MO"] : T.t["3Zypbv"]),
+                                    subtext: tm && !tu ? T.intl.string(D.default.WjdaFw) : void 0,
                                     disabled: tm && !tu,
                                     action: to,
                                 })
@@ -389,7 +389,7 @@ function ti(t) {
                 ? (0, r.jsx)(h.rX, {
                       children: (0, r.jsx)(h.sL, {
                           id: "debug",
-                          label: $.intl.string(D.default.Mt5k9d),
+                          label: T.intl.string(D.default.Mt5k9d),
                           leftIcon: m.BugIcon,
                           leadingAccessory: { type: "icon", icon: m.BugIcon },
                           checked: tc,
@@ -397,9 +397,9 @@ function ti(t) {
                       }),
                   })
                 : null,
-            tI.length > 0
+            tC.length > 0
                 ? (0, r.jsx)(h.rX, {
-                      children: tI.map((t) =>
+                      children: tC.map((t) =>
                           (0, r.jsx)(
                               h.Dr,
                               {
@@ -409,7 +409,7 @@ function ti(t) {
                                   dontCloseOnAction: !0,
                                   action: () => {
                                       if ("refresh" === t.kind) return void tx();
-                                      let e = null == t.connectionType ? null : tM.get(t.connectionType);
+                                      let e = null == t.connectionType ? null : tA.get(t.connectionType);
                                       null != e && tv(e);
                                   },
                               },
@@ -422,86 +422,86 @@ function ti(t) {
                 children: [
                     (0, r.jsx)(h.Dr, {
                         id: "mute",
-                        label: $.intl.string(th ? D.default.s9rCuH : D.default["a+i/As"]),
-                        icon: tB,
-                        leadingAccessory: { type: "icon", icon: tB },
-                        action: () => (0, H.$L)(e, !th),
+                        label: T.intl.string(th ? D.default.s9rCuH : D.default["a+i/As"]),
+                        icon: tq,
+                        leadingAccessory: { type: "icon", icon: tq },
+                        action: () => (0, X.$L)(e, !th),
                     }),
                     null != J
-                        ? (0, r.jsx)(h.Dr, { id: "dismiss", label: $.intl.string(D.default.bWzWw9), action: J })
+                        ? (0, r.jsx)(h.Dr, { id: "dismiss", label: T.intl.string(D.default.bWzWw9), action: J })
                         : null,
                 ],
             }),
-            t$
+            tT
                 ? (0, r.jsxs)(h.rX, {
                       children: [
-                          tA
-                              ? (0, r.jsx)(h.Dr, { id: "remix", label: $.intl.string(D.default["276ll6"]), action: U })
+                          tM
+                              ? (0, r.jsx)(h.Dr, { id: "remix", label: T.intl.string(D.default["276ll6"]), action: U })
                               : null,
-                          null != R
-                              ? (0, r.jsx)(h.Dr, { id: "export", label: $.intl.string(D.default.WsEEP7), action: R })
+                          null != L
+                              ? (0, r.jsx)(h.Dr, { id: "export", label: T.intl.string(D.default.WsEEP7), action: L })
                               : null,
                           tD
-                              ? (0, r.jsx)(h.Dr, { id: "import", label: $.intl.string(D.default.rWGY3e), action: W })
-                              : null,
-                          null != Q
-                              ? (0, r.jsx)(h.Dr, {
-                                    id: "connect-tool",
-                                    label: $.intl.string(D.default.yOIql5),
-                                    action: Q,
-                                })
+                              ? (0, r.jsx)(h.Dr, { id: "import", label: T.intl.string(D.default.rWGY3e), action: N })
                               : null,
                           null != Z
                               ? (0, r.jsx)(h.Dr, {
-                                    id: "history",
-                                    label: $.intl.string(D.default["3hIVou"]),
+                                    id: "connect-tool",
+                                    label: T.intl.string(D.default.yOIql5),
                                     action: Z,
+                                })
+                              : null,
+                          null != Y
+                              ? (0, r.jsx)(h.Dr, {
+                                    id: "history",
+                                    label: T.intl.string(D.default["3hIVou"]),
+                                    action: Y,
                                 })
                               : null,
                       ],
                   })
                 : null,
-            tE
+            t$
                 ? (0, r.jsxs)(h.rX, {
                       children: [
-                          tT
+                          tE
                               ? (0, r.jsx)(h.Dr, {
                                     id: "copy-link",
-                                    label: $.intl.string($.t.WqhZss),
+                                    label: T.intl.string(T.t.WqhZss),
                                     icon: g.LinkIcon,
                                     leadingAccessory: { type: "icon", icon: g.LinkIcon },
                                     action: () =>
-                                        (0, P.C)((0, _.n)(b, te.VV.CONJURE, e), () =>
-                                            (0, a.P0)({ text: $.intl.string($.t["L/PwZf"]), variant: "success" }),
+                                        (0, I.C)((0, S.n)(b, te.VV.CONJURE, e), () =>
+                                            (0, a.P0)({ text: T.intl.string(T.t["L/PwZf"]), variant: "success" }),
                                         ),
                                 })
                               : null,
                           (0, r.jsx)(h.Dr, {
                               id: "copy-project-id",
-                              label: $.intl.string(D.default["nm/zuU"]),
+                              label: T.intl.string(D.default["nm/zuU"]),
                               icon: y.IdIcon,
                               leadingAccessory: { type: "icon", icon: y.IdIcon },
                               action: () =>
-                                  (0, P.C)(e, () =>
-                                      (0, a.P0)({ text: $.intl.string(D.default.CmfaZG), variant: "success" }),
+                                  (0, I.C)(e, () =>
+                                      (0, a.P0)({ text: T.intl.string(D.default.CmfaZG), variant: "success" }),
                                   ),
                           }),
                       ],
                   })
                 : null,
-            w || tC || tk?.canRemoveBot === !0
+            w || tP || tk?.canRemoveBot === !0
                 ? (0, r.jsxs)(h.rX, {
                       children: [
-                          tC
+                          tP
                               ? (0, r.jsx)(h.Dr, {
                                     id: "settings",
-                                    label: $.intl.string(D.default.FzfmQ8),
+                                    label: T.intl.string(D.default.FzfmQ8),
                                     icon: x.SettingsIcon,
                                     leadingAccessory: { type: "icon", icon: x.SettingsIcon },
                                     action:
-                                        O ??
+                                        R ??
                                         (() =>
-                                            (0, K.A)(e, {
+                                            (0, V.A)(e, {
                                                 guildId: v ?? b,
                                                 initialTab: "project",
                                                 isPreview: !0,
@@ -512,35 +512,35 @@ function ti(t) {
                           tk?.canRemoveBot === !0
                               ? (0, r.jsx)(h.Dr, {
                                     id: "remove-from-server",
-                                    label: $.intl.formatToPlainString(D.default["3gKG2j"], { server: tk.guildName }),
+                                    label: T.intl.formatToPlainString(D.default["3gKG2j"], { server: tk.guildName }),
                                     color: "danger",
                                     action: () => {
-                                        let t = z.Ay.getProject(e);
-                                        null != t && Y({ project: t, target: tk, action: "remove" });
+                                        let t = B.Ay.getProject(e);
+                                        null != t && Q({ project: t, target: tk, action: "remove" });
                                     },
                                 })
                               : null,
-                          tP
+                          tI
                               ? (0, r.jsx)(h.Dr, {
                                     id: "make-personal",
-                                    label: $.intl.string(D.default.jNGawP),
+                                    label: T.intl.string(D.default.jNGawP),
                                     color: "danger",
                                     action: () => {
                                         var t;
-                                        let n = z.Ay.getProject(e);
+                                        let n = B.Ay.getProject(e);
                                         null != n &&
-                                            ((t = { project: n }), (0, G.qf)((e) => (0, r.jsx)(L, { ...e, ...t })));
+                                            ((t = { project: n }), (0, G.qf)((e) => (0, r.jsx)(W, { ...e, ...t })));
                                     },
                                 })
                               : null,
-                          tS
+                          t_
                               ? (0, r.jsx)(h.Dr, {
                                     id: "unpublish",
-                                    label: $.intl.string(D.default.jYAR58),
+                                    label: T.intl.string(D.default.jYAR58),
                                     color: "danger",
                                     action: () => {
                                         var t;
-                                        let n = z.Ay.getProject(e);
+                                        let n = B.Ay.getProject(e);
                                         null != n &&
                                             ((t = { project: n }), (0, G.qf)((e) => (0, r.jsx)(tt, { ...e, ...t })));
                                     },
@@ -549,21 +549,21 @@ function ti(t) {
                           w
                               ? (0, r.jsx)(h.Dr, {
                                     id: "delete",
-                                    label: $.intl.string($.t.oyYWHE),
+                                    label: T.intl.string(T.t.oyYWHE),
                                     color: "danger",
                                     action: () => {
-                                        let t = z.Ay.getProject(e);
-                                        if (null != t && null != tk) Y({ project: t, target: tk, action: "delete" });
+                                        let t = B.Ay.getProject(e);
+                                        if (null != t && null != tk) Q({ project: t, target: tk, action: "delete" });
                                         else
-                                            (0, V.A)({
-                                                title: $.intl.formatToPlainString(D.default.CJBhb2, { name: n }),
-                                                subtitle: $.intl.string(D.default["0OmrVn"]),
-                                                confirmText: $.intl.string($.t.oyYWHE),
+                                            (0, K.A)({
+                                                title: T.intl.formatToPlainString(D.default.CJBhb2, { name: n }),
+                                                subtitle: T.intl.string(D.default["0OmrVn"]),
+                                                confirmText: T.intl.string(T.t.oyYWHE),
                                                 variant: "critical",
                                                 onConfirm: () => {
-                                                    (0, B.K)(e, () =>
+                                                    (0, q.K)(e, () =>
                                                         (0, a.P0)({
-                                                            text: $.intl.string(D.default["0XDHob"]),
+                                                            text: T.intl.string(D.default["0XDHob"]),
                                                             variant: "critical",
                                                         }),
                                                     );
@@ -599,21 +599,21 @@ function ta(t) {
                 children:
                     "iconButton" === e
                         ? (0, r.jsx)(v.m, {
-                              text: $.intl.string($.t["UKOtz+"]),
+                              text: T.intl.string(T.t["UKOtz+"]),
                               children: (0, r.jsx)(w.K, {
                                   icon: j.MoreHorizontalIcon,
                                   size: "sm",
                                   variant: "icon-only",
-                                  "aria-label": $.intl.string($.t["UKOtz+"]),
+                                  "aria-label": T.intl.string(T.t["UKOtz+"]),
                                   "aria-haspopup": "menu",
                                   "aria-expanded": a,
                                   onClick: l,
                               }),
                           })
-                        : (0, r.jsx)(S.A.Icon, {
+                        : (0, r.jsx)(_.A.Icon, {
                               icon: j.MoreHorizontalIcon,
-                              tooltip: $.intl.string($.t["UKOtz+"]),
-                              "aria-label": $.intl.string($.t["UKOtz+"]),
+                              tooltip: T.intl.string(T.t["UKOtz+"]),
+                              "aria-label": T.intl.string(T.t["UKOtz+"]),
                               "aria-haspopup": "menu",
                               "aria-expanded": a,
                               selected: a,

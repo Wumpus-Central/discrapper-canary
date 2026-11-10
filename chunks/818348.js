@@ -133,7 +133,7 @@ var q = (((o = {}).GOOGLE_PAY = "google_pay"), (o.APPLE_PAY = "apple_pay"), o),
         (d[(d.PIX_AUTOMATICO = 21)] = "PIX_AUTOMATICO"),
         (d[(d.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST"),
         d);
-let J = new Map([
+let Z = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -142,7 +142,7 @@ let J = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    Z = new Map([
+    J = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
@@ -910,7 +910,7 @@ n.d(
         Gg: z,
         Jo: "https://status.discord.com",
         KI: j,
-        Kc: J,
+        Kc: Z,
         L_: eM,
         Lt: eh,
         Lw: em,
@@ -940,7 +940,7 @@ n.d(
         hV: eE,
         he: Q,
         kM: K,
-        kv: Z,
+        kv: J,
         mX: eb,
         me: "RpcApplicationLogger",
         nf: ef,

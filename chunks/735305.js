@@ -14,7 +14,7 @@ var l = n(284009),
     f = n(566980),
     E = n(671334),
     S = n(652215),
-    I = n(682901);
+    g = n(682901);
 n.d(
     t,
     {},
@@ -24,7 +24,7 @@ n.d(
                     analyticsData: t,
                     initialPlanId: n,
                     handleStepChange: l,
-                    onReturn: g,
+                    onReturn: I,
                     continueSessionToInitialStep: y,
                 } = e,
                 { paymentSources: A } = (0, a.j)(),
@@ -64,7 +64,7 @@ n.d(
                     isGift: w,
                 },
                 U =
-                    g ??
+                    I ??
                     function () {
                         l(Object.values(A).length < 1 && null == n ? h.pn.PLAN_SELECT : h.pn.REVIEW, {
                             trackedFromStep: h.pn.PAYMENT_ELEMENT,
@@ -99,7 +99,7 @@ n.d(
                 },
                 isEligibleForTrial: L,
                 allowDesktopRedirectPurchase:
-                    (0, p.xl)() && null != P && [I.pe.TIER_0, I.pe.TIER_2].includes(P) && !w && null == j,
+                    (0, p.xl)() && null != P && [g.pe.TIER_0, g.pe.TIER_2].includes(P) && !w && null == j,
                 continueSessionToInitialStep: y,
             });
         },

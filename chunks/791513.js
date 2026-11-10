@@ -145,8 +145,8 @@ var P = n(395504),
     z = n(551851),
     q = n(281405),
     Q = n(652215),
-    J = n(746080),
-    Z = n(818348);
+    Z = n(746080),
+    J = n(818348);
 let ee = "placeholder-channel-id",
     et = new Set([String(q.n.GUILD_DIRECTORY)]);
 class en {
@@ -626,8 +626,8 @@ class es extends er {
     shouldShowEmptyCategory() {
         return !!(
             super.shouldShowEmptyCategory() ||
-            (H.A.can(Z.xB.MANAGE_CHANNELS, this.record) &&
-                H.A.can(Z.xB.VIEW_CHANNEL, this.record) &&
+            (H.A.can(J.xB.MANAGE_CHANNELS, this.record) &&
+                H.A.can(J.xB.VIEW_CHANNEL, this.record) &&
                 s().isEmpty(this.channels) &&
                 (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id)))
         );
@@ -955,7 +955,7 @@ class eA extends eE {
             activeJoinedRelevantThreads: i,
             activeJoinedUnreadThreads: r,
         } = e;
-        if (!H.A.can(Z.xB.VIEW_CHANNEL, this.record)) {
+        if (!H.A.can(J.xB.VIEW_CHANNEL, this.record)) {
             if (this.id === n) return { renderLevel: 4, threadIds: [] };
             else if (!c.A.isChannelGatedAndVisible(this.record.guild_id, this.record.id))
                 return { renderLevel: 1, threadIds: [] };
@@ -968,7 +968,7 @@ class eA extends eE {
             u = (o || d || (!this.category.isCollapsed && !this.isMuted) ? i[this.id] : r[this.id]) ?? {},
             _ = eT(this.record, u, t, n, l.hideMutedChannels);
         return this.id !== l.moderatorReportChannelId || l.moderatorReportChannelEnabled
-            ? l.optInEnabled && l.hideResourceChannels && this.record.hasFlag(J.lx.IS_GUILD_RESOURCE_CHANNEL)
+            ? l.optInEnabled && l.hideResourceChannels && this.record.hasFlag(Z.lx.IS_GUILD_RESOURCE_CHANNEL)
                 ? { renderLevel: o ? 4 : 1, threadIds: _ }
                 : !l.optInEnabled || l.optedInChannels.has(this.id) || (null != a && l.optedInChannels.has(a))
                   ? o || d || !s().isEmpty(_) || j.Ay.getMentionCount(this.id) > 0
@@ -990,7 +990,7 @@ class eA extends eE {
 class ef extends eE {
     computeState(e) {
         let { selectedChannel: t, selectedVoiceChannelId: n, activeJoinedRelevantThreads: i } = e;
-        return H.A.can(Z.xB.VIEW_CHANNEL, this.record)
+        return H.A.can(J.xB.VIEW_CHANNEL, this.record)
             ? { renderLevel: 4, threadIds: eT(this.record, i[this.id] ?? {}, t, n, !1) }
             : { renderLevel: 1, threadIds: [] };
     }
@@ -998,7 +998,7 @@ class ef extends eE {
 class eh extends eE {
     computeState(e) {
         let { selectedChannel: t, selectedVoiceChannelId: n, activeJoinedRelevantThreads: i } = e;
-        return H.A.can(Z.xB.VIEW_CHANNEL, this.record)
+        return H.A.can(J.xB.VIEW_CHANNEL, this.record)
             ? eN(this.category.guild, this.record, e)
                 ? { renderLevel: eS(this, e) ? 4 : 3, threadIds: eT(this.record, i[this.id] ?? {}, t, n, !1) }
                 : { renderLevel: 2, threadIds: [] }
@@ -1025,7 +1025,7 @@ class eI extends eA {
 class ep extends eA {
     getRenderLevel(e) {
         let t = this.category.guild;
-        return !H.A.can(Z.xB.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || eg(t, this.record)
+        return !H.A.can(J.xB.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || eg(t, this.record)
             ? 1
             : this.category.isCollapsed
               ? s().some(W.A.getVoiceStatesForChannel(this.record.id))
@@ -1109,7 +1109,7 @@ function eN(e, t, n) {
         e.optedInChannels.has(t.id) ||
         t.isThread() ||
         (null != t.parent_id && e.optedInChannels.has(t.parent_id)) ||
-        (e.hideResourceChannels && t.hasFlag(J.lx.IS_GUILD_RESOURCE_CHANNEL)) ||
+        (e.hideResourceChannels && t.hasFlag(Z.lx.IS_GUILD_RESOURCE_CHANNEL)) ||
         (t.isGuildVocal() && (!z.A.isVoiceCategoryCollapsed(e.id) || s().some(W.A.getVoiceStatesForChannel(t.id))))
     )
         return !1;

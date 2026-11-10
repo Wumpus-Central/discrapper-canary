@@ -54,15 +54,15 @@ function Q(e) {
         n = null != o.w.get(h.ilC);
     R.verbose(e, { tokenManagerHasToken: t, storageHasToken: n });
 }
-function J() {
+function Z() {
     let e = o.w.get(y);
     if (null != e && e.length > 0) return e;
     let t = o.w.get("analytics_installation");
     return null != t && t.length > 0 ? (o.w.set(y, t), t) : null;
 }
-function Z() {
+function J() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((U = o.w.get(L)), (G = J()), null != K)) return K;
+    if (((U = o.w.get(L)), (G = Z()), null != K)) return K;
     let t = null != U ? U : a.getToken();
     return !(0, I.m)() || (!e && null != t) || N.A.isHandoffAvailable()
         ? Promise.resolve()
@@ -141,7 +141,7 @@ function el() {
 function eo(e) {
     Q("handleLogout called.");
     let t = er();
-    (e?.isSwitchingAccount || (t && et(), Z()),
+    (e?.isSwitchingAccount || (t && et(), J()),
         l.Ay.PersistedStore.clearAll({
             omit: [
                 "InstallationManagerStore",
@@ -178,9 +178,9 @@ function eo(e) {
 class ed extends l.Ay.Store {
     static displayName = "AuthenticationStore";
     initialize() {
-        if (((b = o.w.get(D)), (G = J()), null == a.getToken())) {
+        if (((b = o.w.get(D)), (G = Z()), null == a.getToken())) {
             let t = null == G || 0 === G.length,
-                i = Z();
+                i = J();
             if (t) {
                 function e() {
                     Promise.resolve()
@@ -342,7 +342,7 @@ let ec = new ed(
         },
         LOGIN_RESET: function (e) {
             let { isMultiAccount: t } = e;
-            ((k = h.aUe.NONE), (V = ""), (H = !1), (j = null), (r = null), (i = null), t || (ea(), er(), Z(!1)));
+            ((k = h.aUe.NONE), (V = ""), (H = !1), (j = null), (r = null), (i = null), t || (ea(), er(), J(!1)));
         },
         LOGIN_STATUS_RESET: function () {
             k = h.aUe.NONE;
@@ -363,7 +363,7 @@ let ec = new ed(
                       (U = t),
                       (w = t),
                       o.w.set(L, U))
-                    : Z()
+                    : J()
                 : null != t &&
                   U !== t &&
                   T.default.track(h.HAw.EXTERNAL_FINGERPRINT_DROPPED, {

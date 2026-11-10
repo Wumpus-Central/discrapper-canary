@@ -240,7 +240,7 @@ function Q() {
         (K = null),
         (Y = null));
 }
-function J() {
+function Z() {
     if (null == (0, R.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
         return !1;
     for (let e of (Q(), q(), G ?? [])) {
@@ -259,7 +259,7 @@ function J() {
         })),
     );
 }
-function Z() {
+function J() {
     let e = q(),
         t = (function () {
             let e = d.Ay.getSettingsFilteredMentions();
@@ -291,7 +291,7 @@ function ee(e) {
 function et(e) {
     let { channel: t } = e;
     if (!k.getMessages().some((e) => e.channelId === t.id)) return !1;
-    J();
+    Z();
 }
 class en extends a.Ay.Store {
     static displayName = "NotificationsInboxStore";
@@ -403,31 +403,31 @@ let ei = new en(s.h, {
         let { ids: t } = e;
         return k.deleteMessages(t);
     },
-    CONNECTION_OPEN: J,
+    CONNECTION_OPEN: Z,
     LOGOUT: function () {
         Q();
     },
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: Z,
-    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: Z,
-    USER_GUILD_SETTINGS_GUILD_UPDATE: Z,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE: Z,
-    GUILD_CREATE: J,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: J,
+    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: J,
+    USER_GUILD_SETTINGS_GUILD_UPDATE: J,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE: J,
+    GUILD_CREATE: Z,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
         if (S.Ay.allowNoMessages(t)) return !1;
-        J();
+        Z();
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if (!k.getMessages().some((e) => e.guildId === t.id)) return !1;
-        J();
+        Z();
     },
     THREAD_DELETE: et,
     CHANNEL_DELETE: et,
     THREAD_MEMBER_UPDATE: function (e) {
         let { userId: t } = e;
         if (t !== N.default.getCurrentUser()?.id) return !1;
-        J();
+        Z();
     },
     THREAD_MEMBERS_UPDATE: function (e) {
         let { id: t, addedMembers: n, removedMemberIds: i } = e,
@@ -435,9 +435,9 @@ let ei = new en(s.h, {
         if (null == r) return !1;
         if (n?.some((e) => e.userId === r)) {
             let e = h.A.getBasicChannel(t);
-            return !(null == e || _.A.isMuted(t)) && (0, E.l)(e) !== U.CP.NO_MESSAGES && void J();
+            return !(null == e || _.A.isMuted(t)) && (0, E.l)(e) !== U.CP.NO_MESSAGES && void Z();
         }
-        return !!i?.includes(r) && void J();
+        return !!i?.includes(r) && void Z();
     },
     NOTIFICATIONS_INBOX_OPEN: function () {
         B = !1;

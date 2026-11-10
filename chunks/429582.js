@@ -112,14 +112,14 @@ ${q.map((e) => `@property --native-frame-view-hole-${e} { syntax: '*'; inherits:
 html body ${z}, html body ${z} * {
   pointer-events: auto !important;
 }`,
-    J = [
+    Z = [
         ["--native-frame-view-hole-color", "backgroundColor"],
         ["--native-frame-view-hole-image", "backgroundImage"],
         ["--native-frame-view-hole-size", "backgroundSize"],
         ["--native-frame-view-hole-position", "backgroundPosition"],
         ["--native-frame-view-hole-repeat", "backgroundRepeat"],
     ],
-    Z = new Map(),
+    J = new Map(),
     ee = new Map(),
     et = new Set(),
     en = null,
@@ -134,9 +134,9 @@ function er(e) {
     return "rgba(0, 0, 0, 0)" !== e.backgroundColor || "none" !== e.backgroundImage;
 }
 function ea(e, t) {
-    for (let [t] of (e.removeAttribute(W), J)) e.style.removeProperty(t);
+    for (let [t] of (e.removeAttribute(W), Z)) e.style.removeProperty(t);
     for (let t of ["x", "y", "width", "height"]) e.style.removeProperty(`--native-frame-view-hole-${t}`);
-    (t && (e.style.position = ""), Z.delete(e), (f = !0));
+    (t && (e.style.position = ""), J.delete(e), (f = !0));
 }
 let es = 2 / 64;
 function el(e) {
@@ -227,7 +227,7 @@ function ep(e) {
                 return eN(() => {
                     for (let [i, r] of eu(n))
                         for (let n of document.elementsFromPoint(i, r)) {
-                            if (n.contains(t) || Z.has(n) || ee.has(n)) break;
+                            if (n.contains(t) || J.has(n) || ee.has(n)) break;
                             if (e.contains(n) && (n.checkVisibility?.({ opacityProperty: !0 }) ?? !0) && eI(n))
                                 return !0;
                         }
@@ -272,7 +272,7 @@ function eT(e) {
 function eg(e) {
     let t = eS(e);
     if (null == t) return !1;
-    for (let n of [...Z.keys(), ...ee.keys(), ...et]) if (t.contains(n) && !n.contains(e)) return !0;
+    for (let n of [...J.keys(), ...ee.keys(), ...et]) if (t.contains(n) && !n.contains(e)) return !0;
     return !1;
 }
 function eS(e) {
@@ -304,7 +304,7 @@ function eC(e) {
             }
             for (let t of n.slice(a)) {
                 let n = e_(t);
-                if (Z.has(t) || ee.has(t)) {
+                if (J.has(t) || ee.has(t)) {
                     e.push(`${n}p`);
                     continue;
                 }
@@ -328,7 +328,7 @@ function eO() {
 function eR(e) {
     if (((I = !1), (m = e[0]?.clip ?? null), (T = 1 === e.length ? e[0].iframe : null), (h = performance.now()), x)) {
         for (let e of ((x = !1), ee.keys())) e.removeAttribute(Y);
-        for (let [e, t] of (ee.clear(), [...Z])) ea(e, t);
+        for (let [e, t] of (ee.clear(), [...J])) ea(e, t);
     }
     null == en &&
         e.length > 0 &&
@@ -339,7 +339,7 @@ function eR(e) {
         a = new Set(),
         s = new Map();
     function l(e, n) {
-        !(!(0, i.vq)(e, HTMLElement) || t.has(e)) && (Z.has(e) || ee.has(e) || er(getComputedStyle(e))) && t.set(e, n);
+        !(!(0, i.vq)(e, HTMLElement) || t.has(e)) && (J.has(e) || ee.has(e) || er(getComputedStyle(e))) && t.set(e, n);
     }
     for (let { iframe: t, clip: i } of e) {
         let e = t.closest(`[${$}]`),
@@ -393,7 +393,7 @@ function eR(e) {
                 t.map((e) => [
                     e,
                     (function (e) {
-                        if (Z.has(e))
+                        if (J.has(e))
                             return [
                                 e.style.getPropertyValue("--native-frame-view-hole-color"),
                                 e.style.getPropertyValue("--native-frame-view-hole-image"),
@@ -436,7 +436,7 @@ function eR(e) {
         for (let t of a.keys()) (e.delete(t), ee.has(t) || t.setAttribute(Y, ""));
         for (let [e, t] of (ee.clear(), a)) ee.set(e, t);
     })(t),
-    [...Z]))
+    [...J]))
         t.has(e) || ea(e, n);
     for (let e of [...et])
         o.has(e) ||
@@ -447,11 +447,11 @@ function eR(e) {
             })(e);
     for (let e of t.keys())
         !(function (e) {
-            if (Z.has(e)) return;
+            if (J.has(e)) return;
             let t = getComputedStyle(e);
-            for (let [n, i] of J) e.style.setProperty(n, t[i]);
+            for (let [n, i] of Z) e.style.setProperty(n, t[i]);
             let n = "static" === t.position;
-            (n && (e.style.position = "relative"), e.setAttribute(W, ""), Z.set(e, n), (f = !0));
+            (n && (e.style.position = "relative"), e.setAttribute(W, ""), J.set(e, n), (f = !0));
         })(e);
     for (let e of o.keys()) (e.setAttribute(K, ""), et.has(e) || (f = !0), et.add(e));
     let u = new Map([...t, ...o]),
@@ -492,7 +492,7 @@ function eR(e) {
         (L = !0));
 }
 function eL(e) {
-    for (let [t, n] of ((m = e), [...Z.keys(), ...et].map((e) => [e, ed(e)]))) ec(t, e, n);
+    for (let [t, n] of ((m = e), [...J.keys(), ...et].map((e) => [e, ed(e)]))) ec(t, e, n);
     (M?.mutations.takeRecords(), (I = !0));
 }
 let ey = null,
@@ -513,7 +513,7 @@ function ex(e, t) {
                 null == l ||
                 l === document.body ||
                 l === document.documentElement ||
-                (!e.contains(l) && !l.contains(e) && !Z.has(l) && !ee.has(l) && ![...et].some((e) => e.contains(l)))
+                (!e.contains(l) && !l.contains(e) && !J.has(l) && !ee.has(l) && ![...et].some((e) => e.contains(l)))
             )
                 return !1;
         }
@@ -684,7 +684,7 @@ function eX() {
         b.clear();
     } else if (!x && !i) {
         let e = performance.now() - h >= 250;
-        if (n && !e && 1 === t.length && Z.size + et.size > 0 && null != p) {
+        if (n && !e && 1 === t.length && J.size + et.size > 0 && null != p) {
             let { x: e, y: n, width: i, height: a } = t[0].clip;
             e >= p.left - 0.5 &&
                 n >= p.top - 0.5 &&
@@ -798,7 +798,7 @@ function eq() {
     for (let t of (U.clear(), e)) U.add(t);
 }
 let eQ = ["left", "middle", "right"],
-    eJ = {
+    eZ = {
         pointer: "default",
         hand: "pointer",
         crosshair: "crosshair",
@@ -844,7 +844,7 @@ let eQ = ["left", "middle", "right"],
         custom: "default",
         null: "default",
     },
-    eZ = "data-native-frame-view-cursor",
+    eJ = "data-native-frame-view-cursor",
     e0 = null,
     e1 = new Map(),
     e2 = 1;
@@ -964,12 +964,12 @@ n.d(
                                     let n = e0.sheet;
                                     if (null == n) return;
                                     let r = e2++;
-                                    t.setAttribute(eZ, String(r));
-                                    let a = n.insertRule(`[${eZ}="${r}"] {}`, n.cssRules.length);
+                                    t.setAttribute(eJ, String(r));
+                                    let a = n.insertRule(`[${eJ}="${r}"] {}`, n.cssRules.length);
                                     ((i = n.cssRules[a]), e1.set(e, i));
                                 }
                                 i.style.cursor = n;
-                            })(e, n, Object.hasOwn(eJ, t) ? eJ[t] : t.includes("-panning") ? "all-scroll" : "default");
+                            })(e, n, Object.hasOwn(eZ, t) ? eZ[t] : t.includes("-panning") ? "all-scroll" : "default");
                     }),
                     c.onUnder?.(eF),
                     c.onExit((e, t) => {
@@ -1159,7 +1159,7 @@ n.d(
                                           (function (e, t) {
                                               let n = e1.get(e);
                                               if (null == n) return;
-                                              (e1.delete(e), t.removeAttribute(eZ));
+                                              (e1.delete(e), t.removeAttribute(eJ));
                                               let i = e0?.sheet;
                                               if (null == i) return;
                                               let r = [...i.cssRules].indexOf(n);

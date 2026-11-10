@@ -38,7 +38,7 @@ function S(e) {
             return (t.source, null);
     }
 }
-function I(e) {
+function g(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
@@ -80,7 +80,7 @@ function I(e) {
         ],
     });
 }
-function g(e) {
+function I(e) {
     let { orbAmount: t, className: n, discount: i = p.rr, variant: a = "body-md/semibold" } = e,
         s =
             i !== p.rr && i.discountPercentage >= 5
@@ -128,8 +128,8 @@ n.d(
                 variant: s = "body-md/semibold",
             } = e;
             return n === C.Yr.DISCORD_ORB
-                ? (0, l.jsx)(g, { orbAmount: t, className: r, discount: a, variant: s })
-                : (0, l.jsx)(I, {
+                ? (0, l.jsx)(I, { orbAmount: t, className: r, discount: a, variant: s })
+                : (0, l.jsx)(g, {
                       priceAmount: t,
                       priceCurrency: n,
                       discountIconConfig: i,

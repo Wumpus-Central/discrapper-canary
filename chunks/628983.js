@@ -104,16 +104,16 @@ function Q(e) {
         n = t?.isDM() && 1 ? v.jd.AUTO : v.jd.NONE;
     return k[e] ?? [n, v.jd.NONE];
 }
-function J(e) {
+function Z(e) {
     if (null == k[e]) return !1;
     let [t] = k[e];
     return t !== v.jd.NONE;
 }
-function Z(e) {
+function J(e) {
     null == F[e] && (F[e] = { gridDurationMs: 0, focusDurationMs: 0, toggleCount: 0, lastUpdate: 0 });
     let t = F[e],
         n = performance.now(),
-        i = J(e);
+        i = Z(e);
     if (t.lastUpdate > 0) {
         let e = n - t.lastUpdate;
         t[i ? "focusDurationMs" : "gridDurationMs"] += e;
@@ -121,9 +121,9 @@ function Z(e) {
     t.lastUpdate = n;
 }
 function ee(e, t) {
-    Z(e);
-    let n = J(e);
-    (null == t ? delete k[e] : (k[e] = t), n !== J(e) && F[e].toggleCount++);
+    J(e);
+    let n = Z(e);
+    (null == t ? delete k[e] : (k[e] = t), n !== Z(e) && F[e].toggleCount++);
 }
 function et(e) {
     return e.size(D.r4.STREAM) > 0 || e.size(D.r4.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -327,7 +327,7 @@ let eA = new eE(o.h, {
             null != n &&
                 ((!G.has(n) || b.getConfig({ location: "handleVoiceChannelSelect" }).closeChatOnLeave) && G.delete(n),
                 delete W[n],
-                Z(n));
+                J(n));
         t !== n && null != n && (i = z((e) => e.rebuild(), [n]));
         let r = ei();
         return i || r;

@@ -7,8 +7,8 @@ var l = n(477900),
     c = n(430993),
     o = n(430690),
     d = n(71804),
-    f = n(883645),
-    h = n(601194),
+    h = n(883645),
+    f = n(601194),
     p = n(516106),
     m = n(573359),
     C = n(166532),
@@ -26,9 +26,9 @@ n.d(
                     let { header: t, disableDefaultSlideTransformStyling: n, ...l } = e;
                     return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
                 })(e),
-                { step: s, stepConfigs: E } = (0, f.Ay)(),
-                { setBodyNode: _, setFooterNode: g, setModalOverlayNode: I } = (0, h.Gm)(),
-                S = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
+                { step: s, stepConfigs: E } = (0, h.Ay)(),
+                { setBodyNode: _, setFooterNode: g, setModalOverlayNode: S } = (0, f.Gm)(),
+                I = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
                 { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, p.t4)((e) => ({
                     setReadySlideId: e.setReadySlideId,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -36,8 +36,8 @@ n.d(
                 x = E.find((e) => e.key === s);
             if (
                 (r.useEffect(() => {
-                    I(null);
-                }, [s, I]),
+                    S(null);
+                }, [s, S]),
                 null == x)
             )
                 throw new d.v({
@@ -72,7 +72,7 @@ n.d(
                                                 onSlideReady: (e) => A(e),
                                                 width: "100%",
                                                 disableDefaultTransformStyling: M || n,
-                                                overflow: S ? "visible" : void 0,
+                                                overflow: I ? "visible" : void 0,
                                                 children: E.filter((e) => null != e.key).map((e) =>
                                                     (0, l.jsx)(
                                                         o.q,
@@ -92,7 +92,7 @@ n.d(
                                   (0, l.jsx)("div", { ref: (e) => g(e) }),
                                   (0, l.jsx)("div", {
                                       ref: (e) => {
-                                          I(e);
+                                          S(e);
                                       },
                                   }),
                               ],
@@ -102,12 +102,12 @@ n.d(
         },
         UX: function (e) {
             let { children: t } = e,
-                { footerNode: n } = (0, h.Gm)();
+                { footerNode: n } = (0, f.Gm)();
             return null == n ? null : s.createPortal(t, n);
         },
         dZ: function (e) {
             let { children: t } = e,
-                { bodyNode: n } = (0, h.Gm)();
+                { bodyNode: n } = (0, f.Gm)();
             return null == n ? null : s.createPortal(t, n);
         },
     },

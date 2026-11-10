@@ -13,21 +13,21 @@ n.d(
             let n = (0, i.yK)([a.A], () => e.map((e) => a.A.get(e))),
                 o = (0, i.yK)([u.A], () => e.map((e) => u.A.getProduct(e))),
                 d = (0, i.yK)([u.A], () => e.map((e) => u.A.getProductFetch(e))),
-                f = (0, i.yK)([u.A], () => e.map((e) => u.A.isProductFetchBackedOff(e)));
+                h = (0, i.yK)([u.A], () => e.map((e) => u.A.isProductFetchBackedOff(e)));
             return (
                 (0, l.useEffect)(() => {
                     for (let [l, i] of e.entries()) {
                         let e = n[l],
                             a = o[l],
                             u = d[l],
-                            h = !0 === t && a?.type === r.R.BUNDLE && 0 === a.items.length;
-                        (null == a || h) &&
+                            f = !0 === t && a?.type === r.R.BUNDLE && 0 === a.items.length;
+                        (null == a || f) &&
                             (null == e || e.productLine === c.EZt.COLLECTIBLES) &&
                             u?.state !== "fetching" &&
-                            !f[l] &&
+                            !h[l] &&
                             (0, s.Jp)(i, { includeBundles: t });
                     }
-                }, [e, n, d, o, t, f]),
+                }, [e, n, d, o, t, h]),
                 o.some((e, t) => d[t]?.state === "fetching" || (null == e && d[t]?.state !== "error"))
             );
         },

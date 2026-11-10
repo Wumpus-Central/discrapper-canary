@@ -60,8 +60,8 @@ function T(e, t, n, a) {
                 innerRole: z,
                 innerAriaLabel: q,
                 innerAriaMultiselectable: Q,
-                innerAriaOrientation: J,
-                innerClassName: Z,
+                innerAriaOrientation: Z,
+                innerClassName: J,
                 innerTag: ee = "div",
                 disableFocusRingScope: et = !1,
                 ref: en,
@@ -299,9 +299,9 @@ function T(e, t, n, a) {
                                 role: z,
                                 "aria-label": q,
                                 "aria-multiselectable": Q,
-                                "aria-orientation": J,
+                                "aria-orientation": Z,
                                 style: { height: e_ },
-                                className: s()(m.Qs, Z),
+                                className: s()(m.Qs, J),
                                 ref: ea,
                                 children: (0, i.jsx)(d.t, {
                                     disableFocusRingScope: et,
@@ -366,7 +366,7 @@ function T(e, t, n, a) {
                                     }),
                                 }),
                             }),
-                        [ee, X, z, q, Q, J, e_, Z, eE, x, k, M, U, w, F, eu, et],
+                        [ee, X, z, q, Q, Z, e_, J, eE, x, k, M, U, w, F, eu, et],
                     ),
                     r.useMemo(
                         () =>

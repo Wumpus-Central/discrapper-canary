@@ -13,8 +13,8 @@ n.d(
                 { purchaseErrorBlockRef: n } = (0, a.L)(),
                 [i, u] = r.useState(null),
                 [c, o] = r.useState(null),
-                [d, f] = r.useState(null),
-                h = r.useMemo(
+                [d, h] = r.useState(null),
+                f = r.useMemo(
                     () => ({
                         purchaseErrorBlockRef: n,
                         bodyNode: i,
@@ -22,11 +22,11 @@ n.d(
                         footerNode: c,
                         setFooterNode: o,
                         modalOverlayNode: d,
-                        setModalOverlayNode: f,
+                        setModalOverlayNode: h,
                     }),
                     [n, i, c, d],
                 );
-            return (0, l.jsx)(s, { value: h, children: t });
+            return (0, l.jsx)(s, { value: f, children: t });
         },
     },
 );

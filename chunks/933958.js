@@ -214,7 +214,7 @@ function z(e) {
                       proxyTicket: W.proxyTicket,
                       renderInFramePool: V?.renderInFramePool,
                   }),
-              J({ channelId: S ?? null, applicationId: r })),
+              Z({ channelId: S ?? null, applicationId: r })),
         (t = y.length > 0 ? W : null),
         $(P, o.id).upsert(r, o.id, t),
         null != (n = (0, m.H)(o)) && ($(v, n).upsert(r, o.id, t), $(b, K((0, m.D)(o))).upsert(r, o.id, t)));
@@ -227,11 +227,11 @@ function q(e) {
 function Q(e) {
     (D.delete(e.applicationId), E._.dispatch(C.jej.RELEASE_ACTIVITY_WEB_VIEW));
 }
-function J(e) {
+function Z(e) {
     let { applicationId: t, channelId: n } = e;
     U.delete(M(n, t));
 }
-class Z extends r.Ay.PersistedStore {
+class J extends r.Ay.PersistedStore {
     static displayName = "EmbeddedActivitiesStore";
     static persistKey = "EmbeddedActivities";
     initialize(e) {
@@ -383,7 +383,7 @@ class Z extends r.Ay.PersistedStore {
         return Y;
     }
 }
-let ee = new Z(a.h, {
+let ee = new J(a.h, {
     ACTIVITY_LAYOUT_MODE_UPDATE: function (e) {
         let { applicationId: t, layoutMode: n } = e;
         V.set(t, n);
@@ -441,11 +441,11 @@ let ee = new Z(a.h, {
     },
     EMBEDDED_ACTIVITY_LAUNCH_FAIL: function (e) {
         let { applicationId: t, channelId: n } = e;
-        (J({ applicationId: t, channelId: n }), w.delete(t));
+        (Z({ applicationId: t, channelId: n }), w.delete(t));
     },
     EMBEDDED_ACTIVITY_LAUNCH_CANCEL: function (e) {
         let { applicationId: t, channelId: n } = e;
-        (J({ applicationId: t, channelId: n }), w.delete(t));
+        (Z({ applicationId: t, channelId: n }), w.delete(t));
     },
     EMBEDDED_ACTIVITY_CLOSE: function (e) {
         let { applicationId: t } = e,

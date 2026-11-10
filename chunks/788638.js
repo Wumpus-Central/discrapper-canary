@@ -5,7 +5,7 @@ e.exports = {
     Ao: "roleRowDragging_YEKbw3",
     co: "dragIcon_YEKbw3",
     Ji: "roleNameContainer_YEKbw3",
-    a: "shield_YEKbw3 " + t(601645).WY,
+    a: "shield_YEKbw3 " + o(601645).WY,
     UT: "roleIcon_YEKbw3",
     s2: "lock_YEKbw3",
     tU: "subscriptionRoleIcon_YEKbw3",

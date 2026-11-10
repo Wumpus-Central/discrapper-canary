@@ -1,4 +1,4 @@
-(n.d(t, { A: () => tJ }), n(321073));
+(n.d(t, { A: () => tZ }), n(321073));
 var i,
     r,
     a,
@@ -256,13 +256,13 @@ let q = (0, F.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    J = (0, F.mj)({
+    Z = (0, F.mj)({
         name: "2026-06-server-ladder",
         kind: "user",
         defaultConfig: { bitrate: 9e6, enabled: !1 },
         variations: { 1: { bitrate: 35e5, enabled: !0 } },
     }),
-    Z = (0, F.mj)({
+    J = (0, F.mj)({
         name: "2026-09-single-cpu-copy",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -545,7 +545,7 @@ function eQ(e) {
                 : void 0,
     }));
 }
-function eJ(e) {
+function eZ(e) {
     return (
         e?.map((e) => {
             var t;
@@ -577,7 +577,7 @@ function eJ(e) {
         }) ?? []
     );
 }
-var eZ =
+var eJ =
     (((l = {}).Connecting = "connecting"),
     (l.Connect = "connect"),
     (l.Disconnect = "disconnect"),
@@ -735,7 +735,7 @@ class e0 extends S.A {
                         this.handleHeartbeatAck(a);
                         break;
                     case 12:
-                        this.emit("video", a.user_id, a.audio_ssrc, a.video_ssrc, eJ(a.streams));
+                        this.emit("video", a.user_id, a.audio_ssrc, a.video_ssrc, eZ(a.streams));
                         break;
                     case 11:
                         this.emit("client-connect", a.user_ids);
@@ -901,7 +901,7 @@ class e0 extends S.A {
         let t = (0, C.tB)() - this.connectionStartTime;
         (this.logger.info(`[READY] took ${t} ms`),
             this.serverVersion >= 6 && this.send(16, {}),
-            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, eJ(e.streams), e.experiments));
+            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, eZ(e.streams), e.experiments));
     }
     supportsSfuUpdate() {
         return this.serverVersion >= 10;
@@ -3102,7 +3102,7 @@ function tQ() {
     for (let n of tq) e.push({ ...n, t: t - n.t });
     return JSON.stringify(e);
 }
-class tJ extends S.A {
+class tZ extends S.A {
     context;
     userId;
     sessionId;
@@ -3402,38 +3402,38 @@ class tJ extends S.A {
                 (this._isStageChannel = null),
                 this._latchIsStageChannel()),
             (r = this._socket = new e0(this.endpoint, this.context)).on(
-                eZ.Connecting,
+                eJ.Connecting,
                 this._handleConnecting.bind(this, r),
             ),
-            r.on(eZ.Connect, this._handleConnect.bind(this, r)),
-            r.on(eZ.Disconnect, this._handleDisconnect.bind(this, r)),
-            r.on(eZ.Resuming, this._handleResuming.bind(this, r)),
-            r.on(eZ.Ready, this._handleReady.bind(this, r)),
-            r.on(eZ.SelectProtocolAck, this._handleSelectProtocolAck.bind(this)),
-            r.on(eZ.SfuUpdate, this._handleSfuUpdate.bind(this, r)),
-            r.on(eZ.Speaking, this._handleSpeaking.bind(this, r)),
-            r.on(eZ.Video, this._handleVideo.bind(this, r)),
-            r.on(eZ.Ping, this._handleControlPing.bind(this)),
-            r.on(eZ.ClientDisconnect, this._handleClientDisconnect.bind(this)),
-            r.on(eZ.ClientConnect, this._handleClientConnect.bind(this)),
-            r.on(eZ.Codecs, this._handleCodecs.bind(this)),
-            r.on(eZ.MediaSessionId, this._handleMediaSessionId.bind(this)),
-            r.on(eZ.MediaSinkWants, this._handleMediaSinkWants.bind(this)),
-            r.on(eZ.VoiceBackendVersion, this._handleCodeVersion.bind(this)),
-            r.on(eZ.KeyframeInterval, this._handleKeyframeInterval.bind(this)),
-            r.on(eZ.Flags, this.handleFlags.bind(this)),
-            r.on(eZ.Platform, this.handlePlatform.bind(this)),
-            r.on(eZ.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)),
-            r.on(eZ.SecureFramesInit, this._handleSecureFramesInit.bind(this)),
-            r.on(eZ.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)),
-            r.on(eZ.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)),
-            r.on(eZ.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)),
-            r.on(eZ.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)),
-            r.on(eZ.MLSProposals, this._handleMLSProposals.bind(this, r)),
-            r.on(eZ.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
-            r.on(eZ.MLSWelcome, this._handleMLSWelcome.bind(this)),
-            r.on(eZ.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
-            r.on(eZ.SendMessage, this._recordMessageEvent.bind(this, 5)),
+            r.on(eJ.Connect, this._handleConnect.bind(this, r)),
+            r.on(eJ.Disconnect, this._handleDisconnect.bind(this, r)),
+            r.on(eJ.Resuming, this._handleResuming.bind(this, r)),
+            r.on(eJ.Ready, this._handleReady.bind(this, r)),
+            r.on(eJ.SelectProtocolAck, this._handleSelectProtocolAck.bind(this)),
+            r.on(eJ.SfuUpdate, this._handleSfuUpdate.bind(this, r)),
+            r.on(eJ.Speaking, this._handleSpeaking.bind(this, r)),
+            r.on(eJ.Video, this._handleVideo.bind(this, r)),
+            r.on(eJ.Ping, this._handleControlPing.bind(this)),
+            r.on(eJ.ClientDisconnect, this._handleClientDisconnect.bind(this)),
+            r.on(eJ.ClientConnect, this._handleClientConnect.bind(this)),
+            r.on(eJ.Codecs, this._handleCodecs.bind(this)),
+            r.on(eJ.MediaSessionId, this._handleMediaSessionId.bind(this)),
+            r.on(eJ.MediaSinkWants, this._handleMediaSinkWants.bind(this)),
+            r.on(eJ.VoiceBackendVersion, this._handleCodeVersion.bind(this)),
+            r.on(eJ.KeyframeInterval, this._handleKeyframeInterval.bind(this)),
+            r.on(eJ.Flags, this.handleFlags.bind(this)),
+            r.on(eJ.Platform, this.handlePlatform.bind(this)),
+            r.on(eJ.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)),
+            r.on(eJ.SecureFramesInit, this._handleSecureFramesInit.bind(this)),
+            r.on(eJ.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)),
+            r.on(eJ.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)),
+            r.on(eJ.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)),
+            r.on(eJ.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)),
+            r.on(eJ.MLSProposals, this._handleMLSProposals.bind(this, r)),
+            r.on(eJ.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
+            r.on(eJ.MLSWelcome, this._handleMLSWelcome.bind(this)),
+            r.on(eJ.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
+            r.on(eJ.SendMessage, this._recordMessageEvent.bind(this, 5)),
             (this._connectStartTime = (0, C.tB)()),
             this._connectCount++,
             (this._connecting = !0),
@@ -4292,7 +4292,7 @@ class tJ extends S.A {
                     if (e?.maxBitrate != null) return e.maxBitrate;
                 }
                 if (E && !A && r && !a) {
-                    let { bitrate: e } = J.getConfig({ location: "RTCConnection" });
+                    let { bitrate: e } = Z.getConfig({ location: "RTCConnection" });
                     return e;
                 }
                 return "AV1" === i && ((0 === t && n < 10) || (r && a))
@@ -4305,7 +4305,7 @@ class tJ extends S.A {
             u.setFakeGoLiveEncodePixelCount(e?.maxResolution === tH.on.RESOLUTION_1080 ? 921600 : null);
         }
         if (eT.Ay.supports(z.O5.IMAGE_QUALITY_MEASUREMENT)) {
-            let { enabled: e } = Z.getConfig({ location: "RTCConnection" }),
+            let { enabled: e } = J.getConfig({ location: "RTCConnection" }),
                 t = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
             (e && (t += ",singleCpuCopy"),
                 u.setVideoQualityMeasurement(t),
@@ -4386,7 +4386,7 @@ class tJ extends S.A {
                                       address: this._sfuEndpoint.address,
                                       port: this._sfuEndpoint.port,
                                   })),
-                            n.once(eZ.Encryption, (e, t) => {
+                            n.once(eJ.Encryption, (e, t) => {
                                 u === this._connection && (u.setEncryption(e, t), (this._encryptionMode = e));
                             }),
                             (this._selectProtocolAckAt = null),
@@ -4395,7 +4395,7 @@ class tJ extends S.A {
                         break;
                     case "webrtc":
                         (this.logger.info("Sending local SDP to RTC server."),
-                            n.once(eZ.SDP, this._handleSDP.bind(this)),
+                            n.once(eJ.SDP, this._handleSDP.bind(this)),
                             (this._selectProtocolAckAt = null),
                             (this._selectProtocolSentAt = performance.now()),
                             n.selectProtocol(t, this.getRTCConnectionId(), i));

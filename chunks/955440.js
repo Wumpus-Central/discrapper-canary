@@ -1,8 +1,8 @@
-var e = i(855986),
-    l = i(73825),
-    r = i(97352),
-    s = i(652215);
-let a = (0, e.UT)(r.A, {
+var i = e(855986),
+    l = e(73825),
+    r = e(97352),
+    s = e(652215);
+let a = (0, i.UT)(r.A, {
     getQueryId: s.fic.SUBSCRIPTION_PLAN,
     get: (t) => {
         let n = r.A.getForSKU(t);
@@ -11,4 +11,4 @@ let a = (0, e.UT)(r.A, {
     load: (t) => (0, l.ur)(t).then(() => {}),
     getIsLoading: (t) => r.A.isFetchingForSKU(t),
 });
-i.d(n, {}, { A: a });
+e.d(n, {}, { A: a });

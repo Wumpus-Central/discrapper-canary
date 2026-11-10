@@ -96,8 +96,8 @@ function A(e) {
     let X = (0, s.s9)($, { escapeKey: A }),
         z = (0, s.Mk)($, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === G, handleClose: (0, s.iB)() }),
         { getReferenceProps: q, getFloatingProps: Q } = (0, s.bv)([X, z]),
-        J = Y.hide?.referenceHidden ? "hidden" : "visible",
-        Z = D ? c.sM : r.Fragment,
+        Z = Y.hide?.referenceHidden ? "hidden" : "visible",
+        J = D ? c.sM : r.Fragment,
         ee = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -106,7 +106,7 @@ function A(e) {
                 id: V,
                 children:
                     h &&
-                    (0, i.jsxs)(Z, {
+                    (0, i.jsxs)(J, {
                         ownerDocument: f,
                         children: [
                             b ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
@@ -114,12 +114,12 @@ function A(e) {
                                 id: p,
                                 className: d()(m, u.q),
                                 [_]: !0,
-                                style: { ...j, visibility: J },
+                                style: { ...j, visibility: Z },
                                 ref: H.setFloating,
                                 ...Q(),
                                 children: (0, i.jsx)(E.Provider, {
                                     value: ee,
-                                    children: P({ placement: W, update: K, hidden: "hidden" === J, shift: Y.shift }),
+                                    children: P({ placement: W, update: K, hidden: "hidden" === Z, shift: Y.shift }),
                                 }),
                             })),
                             "none" === n

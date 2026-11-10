@@ -171,11 +171,11 @@ function Q() {
     let e = _.default.getToken();
     (j !== e && ((j = e), s.w.remove(P), (F = { state: "loaded", session: null }), W(), (k = 0)), X());
 }
-function J() {
+function Z() {
     let e = A.A.getState();
     B !== e && ((B = e), X());
 }
-function Z(e) {
+function J(e) {
     let { focused: t } = e;
     V !== t && ((V = t), X());
 }
@@ -193,9 +193,9 @@ function en() {
 }
 function ei() {
     (I.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
-        A.A.addChangeListener(J),
+        A.A.addChangeListener(Z),
         _.default.addChangeListener(Q),
-        l.h.subscribe("WINDOW_FOCUS", Z),
+        l.h.subscribe("WINDOW_FOCUS", J),
         l.h.subscribe("APP_STATE_UPDATE", et),
         l.h.subscribe("CONNECTION_OPEN", q),
         (0, N.JK)().listen(ee),
