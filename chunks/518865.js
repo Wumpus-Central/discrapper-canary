@@ -24,13 +24,15 @@ r.d(
                 : null;
         },
         PY: function (n, t) {
+            let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+            if (o(r)) return r;
             if (null == t || t.rewardStatus !== e.GM.EARNED || !o(t)) return null;
-            let r = t.rewardConfig?.discount;
-            return null == r ||
+            let u = t.rewardConfig?.discount;
+            return null == u ||
                 (0, i.G0)(n) ||
                 !n.isFirstParty ||
                 ((0, i.aw)(n) && !t.includeBundles) ||
-                !(r.fiatEnabled && (0, l.go)(n))
+                !(u.fiatEnabled && (0, l.go)(n))
                 ? null
                 : t;
         },
