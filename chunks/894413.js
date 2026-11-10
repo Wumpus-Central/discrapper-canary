@@ -86,7 +86,7 @@ let S = l.memo(function (e) {
             }),
             T = null != A ? (A <= 0 ? 0 : 1) : C.to((e) => (e <= 0 ? 0 : 1)),
             k = a !== u.Q6.ENDED,
-            M = Math.max(0, (f ?? 0) - v),
+            M = Math.max(0, f ?? 0),
             j = m.filter((e) => e.endPx >= v && e.startPx <= x),
             D = { borderRadius: `${p}px` };
         return (0, r.jsxs)(b.animated.div, {
