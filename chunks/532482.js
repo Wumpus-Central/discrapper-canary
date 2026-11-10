@@ -1,270 +1,323 @@
-(n.r(t), n.d(t, { default: () => q }));
+(n.r(t), n.d(t, { default: () => et }));
 var r = n(477900),
     l = n(582128),
     i = n(855986),
     s = n(663341),
     a = n(189252),
     u = n(945810),
-    c = n(253400),
-    o = n(114129),
-    d = n(442325),
-    f = n(503698),
-    h = n.n(f),
-    g = n(646514),
-    p = n(214947),
-    m = n(34188),
-    x = n(577473),
-    b = n(27232),
-    C = n(812993),
-    y = n(939249),
-    k = n(834730),
-    w = n(366605),
-    A = n(329921),
-    I = n(789645),
-    v = n(442433),
-    R = n(571694),
-    E = n(47167),
-    M = n(713654),
-    N = n(5180),
-    j = n(682163),
-    P = n(734057),
-    S = n(71393),
-    D = n(218461),
-    z = n(543465),
-    B = n(287809);
+    o = n(309010),
+    c = n(287809),
+    d = n(253400),
+    f = n(300259),
+    h = n(442325),
+    m = n(716099),
+    g = n(503698),
+    p = n.n(g),
+    b = n(646514),
+    x = n(366605),
+    C = n(214947),
+    y = n(34188),
+    k = n(577473),
+    w = n(403581),
+    A = n(27232),
+    E = n(812993),
+    I = n(866665),
+    M = n(939249),
+    R = n(834730),
+    v = n(329921),
+    N = n(789645),
+    P = n(442433),
+    S = n(571694),
+    T = n(47167),
+    j = n(713654),
+    D = n(5180),
+    z = n(682163),
+    B = n(734057),
+    L = n(71393),
+    O = n(218461),
+    _ = n(543465),
+    F = n(114129);
 n(712960);
-var T = n(652215),
-    L = n(792996),
-    _ = n(133281);
-function F() {
+var G = n(652215),
+    U = n(792996),
+    $ = n(133281);
+function X() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
-let U = new Map(),
-    G = new Set(),
-    O = !1;
-function $(e) {
-    let {
-            tab: t,
-            isActive: s,
-            closable: a,
-            registerTabNode: u,
-            onDragStart: c,
-            onDragMove: f,
-            onDragEnd: $,
-            onCloseStart: X,
-            onRequestClose: Y,
-        } = e,
-        [V, H] = l.useState(() => (O || ((O = !0), d.A.getTabs().forEach((e) => G.add(e.id))), !G.has(t.id) && !F()));
-    (l.useEffect(() => {
-        G.add(t.id);
-    }, [t.id]),
-        l.useEffect(() => {
-            if (!V) return;
-            let e = setTimeout(() => H(!1), 150);
-            return () => clearTimeout(e);
-        }, [V]));
-    let [K, q] = l.useState(!1),
-        W = (0, i.bG)([P.A], () => ("channel" === t.kind ? P.A.getChannel(t.channelId) : null), [t]),
-        Z = (0, i.bG)([S.A], () => ("channel" === t.kind ? S.A.getGuild(t.guildId) : null), [t]),
-        Q = (0, i.bG)([B.default], () => (null != W && W.isDM() ? B.default.getUser(W.getRecipientId()) : null), [W]),
-        J = (0, E.Ay)(W);
-    "channel" === t.kind && null != J && U.set(t.channelId, J);
-    let ee = "route" === t.kind ? t.routeLabel : (J ?? U.get(t.channelId) ?? L.intl.string(L.t.zLZPmk)),
-        et = l.useCallback(() => {
-            (0, o.ZD)(t.id, "tab_click");
+let Y = new Map(),
+    V = new Set(),
+    K = !1,
+    H = l.memo(function (e) {
+        let {
+                tab: t,
+                isActive: s,
+                closable: a,
+                isExiting: u,
+                isConnectedVoiceChannel: o,
+                registerTabNode: d,
+                onDragStart: m,
+                onDragMove: g,
+                onDragEnd: H,
+                onExited: W,
+            } = e,
+            [Z, q] = l.useState(
+                () => (K || ((K = !0), h.A.getTabs().forEach((e) => V.add(e.id))), !V.has(t.id) && !X()),
+            );
+        (l.useEffect(() => {
+            V.add(t.id);
         }, [t.id]),
-        en = l.useCallback(
-            (e) => {
-                if (!K && a) {
-                    if ((X(t.id), F())) return void Y(t.id, e);
-                    (q(!0),
-                        setTimeout(() => {
-                            (Y(t.id, e), d.A.getTabs().some((e) => e.id === t.id) && q(!1));
-                        }, 150));
-                }
-            },
-            [K, a, X, Y, t.id],
-        ),
-        er = l.useCallback(
-            (e) => {
-                1 === e.button && (e.preventDefault(), en("middle_click"));
-            },
-            [en],
-        ),
-        el = l.useCallback(
-            (e) => {
-                (0, v.L3)(e, async () => {
-                    let { default: e } = await n.e(99401).then(n.bind(n, 774448));
-                    return (n) => (0, r.jsx)(e, { ...n, tab: t, onRequestClose: () => en("context_menu") });
-                });
-            },
-            [t, en],
-        ),
-        {
-            nodeRef: ei,
-            handlePointerDown: es,
-            handlePointerMove: ea,
-            handlePointerUp: eu,
-            handleClickCapture: ec,
-        } = (function (e) {
-            let { itemId: t, onDragStart: n, onDragMove: r, onDragEnd: i } = e,
-                s = l.useRef(null),
-                a = l.useRef(null),
-                u = l.useRef(!1),
-                c = l.useCallback((e) => {
-                    0 === e.button &&
-                        ((u.current = !1),
-                        (a.current = { pointerId: e.pointerId, startX: e.clientX, startY: e.clientY, dragging: !1 }));
-                }, []),
-                o = l.useCallback(
-                    (e) => {
-                        let l = a.current;
-                        if (null != l && l.pointerId === e.pointerId) {
-                            if (!l.dragging) {
-                                if (3 > Math.hypot(e.clientX - l.startX, e.clientY - l.startY)) return;
-                                ((l.dragging = !0),
-                                    s.current?.setPointerCapture(e.pointerId),
-                                    n(t, e.clientX, e.clientY));
+            l.useEffect(() => {
+                if (!Z) return;
+                let e = setTimeout(() => q(!1), 150);
+                return () => clearTimeout(e);
+            }, [Z]));
+        let Q = (0, i.bG)([B.A], () => ("channel" === t.kind ? B.A.getChannel(t.channelId) : null), [t]),
+            J = (0, i.bG)([L.A], () => ("channel" === t.kind ? L.A.getGuild(t.guildId) : null), [t]),
+            ee = (0, i.bG)([c.default], () => (null != Q && Q.isDM() ? c.default.getUser(Q.getRecipientId()) : null), [
+                Q,
+            ]),
+            et = (0, T.Ay)(Q);
+        "channel" === t.kind && null != et && Y.set(t.channelId, et);
+        let en = "route" === t.kind ? t.routeLabel : (et ?? Y.get(t.channelId) ?? U.intl.string(U.t.zLZPmk)),
+            er = l.useCallback(() => {
+                (0, F.ZD)(t.id, "tab_click");
+            }, [t]),
+            el = l.useCallback(
+                (e) => {
+                    !u && a && (0, F.f5)(t.id, e);
+                },
+                [u, a, t.id],
+            );
+        l.useEffect(() => {
+            if (!u) return;
+            if (X()) return void W(t.id);
+            let e = setTimeout(() => W(t.id), 150);
+            return () => clearTimeout(e);
+        }, [u, W, t.id]);
+        let ei = l.useCallback(
+                (e) => {
+                    1 === e.button && (e.preventDefault(), el("middle_click"));
+                },
+                [el],
+            ),
+            es = l.useCallback(
+                (e) => {
+                    (0, P.L3)(e, async () => {
+                        let { default: e } = await n.e(99401).then(n.bind(n, 774448));
+                        return (n) => (0, r.jsx)(e, { ...n, tab: t, onRequestClose: () => el("context_menu") });
+                    });
+                },
+                [t, el],
+            ),
+            [ea, eu] = l.useState(!1),
+            eo = l.useCallback(
+                (e, t) => {
+                    (eu(!0), m(e, t));
+                },
+                [m],
+            ),
+            ec = l.useCallback(() => {
+                (eu(!1), H());
+            }, [H]),
+            {
+                nodeRef: ed,
+                handlePointerDown: ef,
+                handlePointerMove: eh,
+                handlePointerUp: em,
+                handleClickCapture: eg,
+            } = (function (e) {
+                let { itemId: t, onDragStart: n, onDragMove: r, onDragEnd: i } = e,
+                    s = l.useRef(null),
+                    a = l.useRef(null),
+                    u = l.useRef(!1),
+                    o = l.useCallback((e) => {
+                        0 === e.button &&
+                            ((u.current = !1),
+                            (a.current = {
+                                pointerId: e.pointerId,
+                                startX: e.clientX,
+                                startY: e.clientY,
+                                dragging: !1,
+                            }));
+                    }, []),
+                    c = l.useCallback(
+                        (e) => {
+                            let l = a.current;
+                            if (null != l && l.pointerId === e.pointerId) {
+                                if (!l.dragging) {
+                                    if (3 > Math.hypot(e.clientX - l.startX, e.clientY - l.startY)) return;
+                                    ((l.dragging = !0),
+                                        s.current?.setPointerCapture(e.pointerId),
+                                        n(t, e.clientX, e.clientY));
+                                }
+                                (e.preventDefault(), r(t, e.clientX, e.clientY));
                             }
-                            (e.preventDefault(), r(t, e.clientX, e.clientY));
-                        }
-                    },
-                    [n, r, t],
-                );
-            return {
-                nodeRef: s,
-                handlePointerDown: c,
-                handlePointerMove: o,
-                handlePointerUp: l.useCallback(
-                    (e) => {
-                        let t = a.current;
-                        null != t &&
-                            t.pointerId === e.pointerId &&
-                            ((a.current = null), t.dragging && ((u.current = !0), i()));
-                    },
-                    [i],
-                ),
-                handleClickCapture: l.useCallback((e) => {
-                    u.current && ((u.current = !1), e.preventDefault(), e.stopPropagation());
-                }, []),
-            };
-        })({ itemId: t.id, onDragStart: c, onDragMove: f, onDragEnd: $ }),
-        eo = l.useCallback(
-            (e) => {
-                ((ei.current = e), u(t.id, e));
-            },
-            [ei, u, t.id],
-        ),
-        {
-            mentionCount: ed,
-            isLowImportanceMention: ef,
-            showUnreadDot: eh,
-        } = (0, i.cf)(
-            [D.Ay, z.Ay],
-            () => {
-                if ("channel" !== t.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
-                let e = D.Ay.getMentionCount(t.channelId),
-                    n = z.Ay.isGuildOrCategoryOrChannelMuted(t.guildId, t.channelId);
+                        },
+                        [n, r, t],
+                    );
                 return {
-                    mentionCount: e,
-                    isLowImportanceMention: D.Ay.getIsMentionLowImportance(t.channelId),
-                    showUnreadDot: 0 === e && !n && D.Ay.hasUnread(t.channelId),
+                    nodeRef: s,
+                    handlePointerDown: o,
+                    handlePointerMove: c,
+                    handlePointerUp: l.useCallback(
+                        (e) => {
+                            let t = a.current;
+                            null != t &&
+                                t.pointerId === e.pointerId &&
+                                ((a.current = null), t.dragging && ((u.current = !0), i()));
+                        },
+                        [i],
+                    ),
+                    handleClickCapture: l.useCallback((e) => {
+                        u.current && ((u.current = !1), e.preventDefault(), e.stopPropagation());
+                    }, []),
                 };
-            },
-            [t],
-        ),
-        eg = null;
-    if ("route" === t.kind)
-        t.routePath === T.BVt.FRIENDS
-            ? (eg = (0, r.jsx)(p.FriendsIcon, { size: "xs", color: "currentColor", className: _.PA }))
-            : t.routePath === T.BVt.COLLECTIBLES_SHOP
-              ? (eg = (0, r.jsx)(m.ShopIcon, { size: "xs", color: "currentColor", className: _.PA }))
-              : t.routePath === T.BVt.QUEST_HOME &&
-                (eg = (0, r.jsx)(x.QuestsIcon, { size: "xs", color: "currentColor", className: _.PA }));
-    else if ((0, N.ai)(t.guildId)) eg = (0, r.jsx)(b.StarIcon, { size: "xs", color: "currentColor", className: _.PA });
-    else if (null != W && W.isThread()) {
-        let e = (0, M.gU)(W);
-        null != e && (eg = (0, r.jsx)(e, { size: "xs", color: "currentColor", className: _.PA }));
-    } else if (null != Z) eg = (0, r.jsx)(j.Ay, { guild: Z, size: j.Ay.Sizes.SMOL, active: !0, className: _.$f });
-    else if (null != W && (W.isDM() || W.isGroupDM())) {
-        let e = null != Q ? Q.getAvatarURL(void 0, 16) : (0, R.Y)(W, 16);
-        null != e && (eg = (0, r.jsx)("img", { className: _.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
-    }
-    let ep = null;
-    return (
-        ed > 0 &&
-            (ep = (0, r.jsx)("div", {
-                className: _.WK,
+            })({ itemId: t.id, onDragStart: eo, onDragMove: g, onDragEnd: ec }),
+            ep = l.useCallback(
+                (e) => {
+                    ((ed.current = e), d(t.id, e));
+                },
+                [ed, d, t.id],
+            ),
+            {
+                mentionCount: eb,
+                isLowImportanceMention: ex,
+                showUnreadDot: eC,
+            } = (0, i.cf)(
+                [O.Ay, _.Ay],
+                () => {
+                    if ("channel" !== t.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
+                    let e = O.Ay.getMentionCount(t.channelId),
+                        n = _.Ay.isGuildOrCategoryOrChannelMuted(t.guildId, t.channelId);
+                    return {
+                        mentionCount: e,
+                        isLowImportanceMention: O.Ay.getIsMentionLowImportance(t.channelId),
+                        showUnreadDot: 0 === e && !n && O.Ay.hasUnread(t.channelId),
+                    };
+                },
+                [t],
+            ),
+            ey = (0, r.jsx)(x.PinIcon, { size: "sm", color: "currentColor", className: $.PA }),
+            ek = t.pinned && null == t.pinScope,
+            ew = null;
+        if (!ek) {
+            if ("route" === t.kind)
+                t.routePath === G.BVt.FRIENDS
+                    ? (ew = (0, r.jsx)(C.FriendsIcon, { size: "sm", color: "currentColor", className: $.PA }))
+                    : t.routePath === G.BVt.COLLECTIBLES_SHOP
+                      ? (ew = (0, r.jsx)(y.ShopIcon, { size: "sm", color: "currentColor", className: $.PA }))
+                      : t.routePath === G.BVt.QUEST_HOME
+                        ? (ew = (0, r.jsx)(k.QuestsIcon, { size: "sm", color: "currentColor", className: $.PA }))
+                        : t.routePath === G.BVt.APPLICATION_STORE &&
+                          (ew = (0, r.jsx)(w.NitroWheelIcon, { size: "sm", color: "currentColor", className: $.PA }));
+            else if ((0, D.ai)(t.guildId))
+                ew = (0, r.jsx)(A.StarIcon, { size: "sm", color: "currentColor", className: $.PA });
+            else if (null != Q && Q.isThread()) {
+                let e = (0, j.gU)(Q);
+                null != e && (ew = (0, r.jsx)(e, { size: "sm", color: "currentColor", className: $.PA }));
+            } else if (null != J)
+                ew = (0, r.jsx)(z.Ay, { guild: J, size: z.Ay.Sizes.SMOL, active: !0, className: $.$f });
+            else if (null != Q && (Q.isDM() || Q.isGroupDM())) {
+                let e = null != ee ? ee.getAvatarURL(void 0, 18) : (0, S.Y)(Q, 18);
+                null != e &&
+                    (ew = (0, r.jsx)("img", { className: $.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
+            }
+        }
+        let eA = "channel" !== t.kind || null == J || null == Q || Q.isThread() ? null : (0, j.gU)(Q),
+            eE = null;
+        eb > 0 &&
+            (eE = (0, r.jsx)("div", {
+                className: $.WK,
                 "aria-hidden": !0,
-                children: (0, r.jsx)(C.hV, {
-                    count: ed,
-                    color: ef ? g.A.colors.BACKGROUND_MOD_STRONG.css : g.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                children: (0, r.jsx)(E.hV, {
+                    count: eb,
+                    color: ex ? b.A.colors.BACKGROUND_MOD_STRONG.css : b.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                 }),
-            })),
-        (0, r.jsxs)("div", {
-            ref: eo,
-            className: h()(_.Mf, { [_.yR]: s, [_.MY]: V, [_.nE]: K }),
-            onPointerDown: es,
-            onPointerMove: ea,
-            onPointerUp: eu,
-            onPointerCancel: eu,
-            onClickCapture: ec,
-            onContextMenu: el,
+            }));
+        let eI =
+            ek && null != J ? U.intl.formatToPlainString(U.t.HPMTD3, { channelName: en, guildName: J.name }) : void 0;
+        return (0, r.jsxs)("div", {
+            ref: ep,
+            className: p()($.Mf, { [$.yR]: s, [$.MY]: Z, [$.nE]: u }),
+            onPointerDown: ef,
+            onPointerMove: eh,
+            onPointerUp: em,
+            onPointerCancel: em,
+            onClickCapture: eg,
+            onContextMenu: es,
             onDoubleClick: (e) => e.stopPropagation(),
             children: [
-                (0, r.jsxs)(y.D, {
-                    className: _.eg,
-                    onClick: et,
-                    onAuxClick: er,
-                    "aria-current": s ? "page" : void 0,
-                    children: [
-                        null != eg && (0, r.jsxs)("span", { className: _.P0, children: [eg, ep] }),
-                        (0, r.jsxs)(k.E, {
-                            variant: "body-sm/medium",
-                            className: _.HA,
-                            children: [ee, (0, r.jsx)("span", { className: _.Zi, "aria-hidden": !0 })],
-                        }),
-                    ],
+                (0, r.jsx)(I.m, {
+                    position: "bottom",
+                    text: eI,
+                    shouldShow: !ea,
+                    children: (0, r.jsxs)(M.D, {
+                        className: $.eg,
+                        onClick: er,
+                        onAuxClick: ei,
+                        "aria-current": s ? "page" : void 0,
+                        children: [
+                            (t.pinned || null != ew) &&
+                                (0, r.jsxs)("span", { className: $.P0, children: [t.pinned && ey, ew, eE] }),
+                            null != eA &&
+                                (0, r.jsx)(eA, {
+                                    size: "xs",
+                                    color: "currentColor",
+                                    className: p()($.j1, { [$.Av]: o }),
+                                }),
+                            (0, r.jsxs)(R.E, {
+                                variant: "body-sm/medium",
+                                color: "none",
+                                className: $.HA,
+                                children: [en, (0, r.jsx)("span", { className: $.Zi, "aria-hidden": !0 })],
+                            }),
+                        ],
+                    }),
                 }),
-                t.pinned
-                    ? (0, r.jsxs)("div", {
-                          className: _.n3,
-                          "aria-hidden": !0,
+                a
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(w.PinIcon, { size: "xs", color: "currentColor" }),
-                              !s && eh && (0, r.jsx)(A.N, { className: _.UU, variant: "neutral" }),
+                              !s &&
+                                  eC &&
+                                  (0, r.jsx)("div", {
+                                      className: $.XE,
+                                      "aria-hidden": !0,
+                                      children: (0, r.jsx)(v.N, { variant: "neutral" }),
+                                  }),
+                              (0, r.jsx)(I.m, {
+                                  position: "bottom",
+                                  text: U.intl.string(U.t.In6PEK),
+                                  keyboardShortcut: f.nK.binds["0"],
+                                  ariaHidden: !0,
+                                  children: (0, r.jsx)(M.D, {
+                                      className: $.b,
+                                      onClick: () => el("close_button"),
+                                      onPointerDown: (e) => e.stopPropagation(),
+                                      "aria-label": U.intl.formatToPlainString(U.t["A/PzIa"], { channelName: en }),
+                                      children: (0, r.jsx)(N.XSmallIcon, { size: "sm" }),
+                                  }),
+                              }),
                           ],
                       })
-                    : a
-                      ? (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                !s &&
-                                    eh &&
-                                    (0, r.jsx)("div", {
-                                        className: _.XE,
-                                        "aria-hidden": !0,
-                                        children: (0, r.jsx)(A.N, { variant: "neutral" }),
-                                    }),
-                                (0, r.jsx)(y.D, {
-                                    className: _.b,
-                                    onClick: () => en("close_button"),
-                                    onPointerDown: (e) => e.stopPropagation(),
-                                    "aria-label": L.intl.formatToPlainString(L.t["A/PzIa"], { channelName: ee }),
-                                    children: (0, r.jsx)(I.XSmallIcon, { size: "xs" }),
-                                }),
-                            ],
-                        })
-                      : null,
+                    : null,
             ],
-        })
-    );
-}
+        });
+    });
 n(321073);
-let X = "left 150ms ease-out";
-function Y() {
+let W = "left 150ms ease-out";
+function Z() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
-function V(e) {
+function q(e, t) {
+    ((e.style.flexGrow = "0"),
+        (e.style.flexShrink = "0"),
+        (e.style.flexBasis = `${t}px`),
+        (e.style.maxWidth = `${t}px`));
+}
+function Q(e) {
+    ((e.style.flexGrow = ""), (e.style.flexShrink = ""), (e.style.flexBasis = ""), (e.style.maxWidth = ""));
+}
+function J(e) {
     ((e.style.position = ""),
         (e.style.boxSizing = ""),
         (e.style.left = ""),
@@ -276,80 +329,88 @@ function V(e) {
         (e.style.boxShadow = ""),
         (e.style.transition = ""));
 }
-var H = n(266553);
-let K = !1;
-function q() {
+var ee = n(266553);
+function et() {
     let e,
         t,
         n,
-        f,
-        h,
         g,
         p,
-        m,
-        x,
         b,
+        x,
         C,
         y,
         k,
         w,
         A,
-        I,
-        v,
-        R,
         E,
+        I,
         M,
+        R,
+        v,
         N,
-        j,
         P,
         S,
+        T,
+        j,
         D,
+        z,
+        B,
+        L,
+        O,
+        _,
+        G,
         {
-            tabs: z,
-            activeTabId: B,
-            isVisible: T,
-        } = (0, i.cf)([d.A, u.Bt], () => ({
-            tabs: d.A.getTabs(),
-            activeTabId: d.A.getActiveTabId(),
-            isVisible: d.A.isTabBarVisible(),
+            tabs: $,
+            activeTabId: X,
+            isVisible: Y,
+            isAtMaxTabs: V,
+            maxTabs: K,
+        } = (0, i.cf)([h.A, u.Bt, c.default], () => ({
+            tabs: h.A.getTabs(),
+            activeTabId: h.A.getActiveTabId(),
+            isVisible: h.A.isTabBarVisible(),
+            isAtMaxTabs: h.A.isAtMaxTabs(),
+            maxTabs: h.A.getMaxTabs(),
         })),
+        et = (0, i.bG)([o.Ay], () => o.Ay.getVoiceChannelId()),
         {
-            setStripRef: _,
-            registerTabNode: F,
-            setNewTabButtonRef: U,
-            handleDragStart: G,
-            handleDragMove: O,
-            handleDragEnd: q,
-            handleCloseStart: W,
+            setStripRef: en,
+            registerTabNode: er,
+            setNewTabButtonRef: el,
+            handleDragStart: ei,
+            handleDragMove: es,
+            handleDragEnd: ea,
+            handleCloseStart: eu,
         } = ((e = l.useRef(null)),
         (t = l.useRef(new Map())),
         (n = l.useRef(null)),
-        (f = l.useRef(null)),
-        (h = l.useRef(0)),
-        (g = l.useRef(0)),
-        (p = l.useRef([])),
-        (m = l.useRef(0)),
-        (x = l.useRef(0)),
+        (g = l.useRef(null)),
+        (p = l.useRef(0)),
         (b = l.useRef(0)),
+        (x = l.useRef([])),
         (C = l.useRef(0)),
         (y = l.useRef(0)),
         (k = l.useRef(0)),
         (w = l.useRef(0)),
-        (A = l.useCallback((e, n) => {
+        (A = l.useRef(0)),
+        (E = l.useRef(0)),
+        (I = l.useRef(0)),
+        (M = l.useCallback((e, n) => {
             null != n ? t.current.set(e, n) : t.current.delete(e);
         }, [])),
-        (I = l.useCallback((e) => {
+        (R = l.useCallback((e) => {
             n.current = e;
         }, [])),
         (v = l.useCallback((t) => {
             e.current = t;
         }, [])),
-        (R = l.useRef(new Map())),
-        (E = z.map((e) => e.id).join(",")),
+        (N = l.useRef(new Map())),
+        (P = $.map((e) => e.id).join(",")),
         l.useLayoutEffect(() => {
-            if (null != f.current) return;
+            if (null != g.current) return;
             let e = t.current,
-                n = R.current;
+                n = N.current;
             e.forEach((e) => {
                 ((e.style.transition = ""), (e.style.transform = ""));
             });
@@ -358,7 +419,7 @@ function q() {
                 (e.forEach((e, t) => {
                     r.set(t, e.getBoundingClientRect().left);
                 }),
-                n.size === r.size && Array.from(r.keys()).every((e) => n.has(e)) && !Y())
+                n.size === r.size && Array.from(r.keys()).every((e) => n.has(e)) && !Z())
             ) {
                 let t = [];
                 if (
@@ -384,35 +445,64 @@ function q() {
                             ));
                 }
             }
-            R.current = r;
-        }, [E]),
-        (M = l.useRef(!1)),
-        (N = l.useRef(!1)),
-        (j = l.useCallback(() => {
-            N.current = !0;
+            N.current = r;
+        }, [P]),
+        (S = l.useRef(!1)),
+        (T = l.useRef(!1)),
+        (j = l.useRef(new Map())),
+        (D = l.useCallback(() => {
+            let e = new Map();
+            return (
+                j.current.forEach((t, n) => {
+                    (clearTimeout(t), e.set(n, n.getBoundingClientRect().width));
+                }),
+                e.forEach((e, t) => {
+                    ((t.style.transition = ""), q(t, e));
+                }),
+                j.current.clear(),
+                e
+            );
+        }, [])),
+        (z = l.useCallback((e) => {
+            if (Z()) return;
+            let t = [];
+            if (
+                (e.forEach((e, n) => {
+                    let r = n.getBoundingClientRect().width;
+                    Math.abs(r - e) > 0.5 && t.push({ node: n, from: e, to: r });
+                }),
+                0 !== t.length)
+            ) {
+                for (let { node: e, from: n } of t) ((e.style.transition = ""), q(e, n));
+                for (let { node: e, to: n } of (t[0].node.offsetWidth, t)) {
+                    ((e.style.transition = "flex-basis 150ms ease-out, max-width 150ms ease-out"), q(e, n));
+                    let t = setTimeout(() => {
+                        (j.current.delete(e), (e.style.transition = ""), Q(e));
+                    }, 150);
+                    j.current.set(e, t);
+                }
+            }
+        }, [])),
+        l.useEffect(() => {
+            let e = j.current;
+            return () => e.forEach((e) => clearTimeout(e));
+        }, []),
+        (B = l.useCallback(() => {
+            ((T.current = !0), D());
             let e = new Map();
             (t.current.forEach((t) => {
                 "" === t.style.flexBasis && e.set(t, t.getBoundingClientRect().width);
             }),
-                e.forEach((e, t) => {
-                    ((t.style.flexGrow = "0"),
-                        (t.style.flexShrink = "0"),
-                        (t.style.flexBasis = `${e}px`),
-                        (t.style.maxWidth = `${e}px`));
-                }));
-        }, [])),
-        (P = l.useCallback(() => {
-            ((N.current = !1),
-                t.current.forEach((e) => {
-                    ((e.style.flexGrow = ""),
-                        (e.style.flexShrink = ""),
-                        (e.style.flexBasis = ""),
-                        (e.style.maxWidth = ""));
-                }));
-        }, [])),
+                e.forEach((e, t) => q(t, e)));
+        }, [D])),
+        (L = l.useCallback(() => {
+            ((T.current = !1), D());
+            let e = new Map();
+            (t.current.forEach((t) => e.set(t, t.getBoundingClientRect().width)), t.current.forEach(Q), z(e));
+        }, [D, z])),
         l.useEffect(() => {
             function t(t) {
-                if (!N.current) return;
+                if (!T.current) return;
                 let n = e.current;
                 if (null == n) return;
                 let r = n.getBoundingClientRect(),
@@ -421,190 +511,211 @@ function q() {
                         t.clientX <= r.right + 32 &&
                         t.clientY >= r.top - 32 &&
                         t.clientY <= r.bottom + 32;
-                l !== M.current && ((M.current = l), l || P());
+                l !== S.current && ((S.current = l), l || L());
             }
             return (window.addEventListener("mousemove", t), () => window.removeEventListener("mousemove", t));
-        }, [P]),
-        (S = l.useCallback(() => {
+        }, [L]),
+        (O = l.useCallback(() => {
             let t = e.current,
                 n = null != t && t.matches(":hover");
-            ((M.current = n), n && j());
-        }, [j])),
-        (D = l.useCallback(
-            (r, l) => {
-                let i = e.current,
-                    s = t.current.get(r);
-                if (null == i || null == s) return;
-                let a = i.getBoundingClientRect(),
-                    u = parseFloat(getComputedStyle(i).columnGap);
-                b.current = Number.isFinite(u) ? u : 0;
-                let c = [];
-                z.forEach((e) => {
-                    let n = t.current.get(e.id);
-                    null != n && c.push({ id: e.id, node: n });
-                });
-                let o = new Map();
-                c.forEach((e) => {
-                    let { node: t } = e;
-                    return o.set(t, t.getBoundingClientRect());
-                });
-                let d = n.current;
-                (null != d && o.set(d, d.getBoundingClientRect()),
-                    o.forEach((e, t) => {
-                        ((t.style.position = "absolute"),
-                            (t.style.boxSizing = "border-box"),
-                            (t.style.left = `${e.left - a.left}px`),
-                            (t.style.top = `${e.top - a.top}px`),
-                            (t.style.width = `${e.width}px`),
-                            (t.style.height = `${e.height}px`),
-                            (t.style.margin = "0"));
-                    }));
-                let A = Y(),
-                    I = [],
-                    v = 1 / 0,
-                    R = -1 / 0;
-                (c.forEach((e) => {
-                    let { id: t, node: n } = e,
-                        l = o.get(n);
-                    if (null == l) return;
-                    let i = l.left - a.left;
-                    if (((v = Math.min(v, i)), (R = Math.max(R, i + l.width)), t === r)) {
-                        x.current = l.width;
-                        return;
-                    }
-                    (A || (n.style.transition = X), I.push({ node: n, size: l.width, center: i + l.width / 2 }));
-                }),
-                    (p.current = I),
-                    (m.current = Number.isFinite(v) ? v : 0),
-                    (h.current = l));
-                let E = parseFloat(s.style.left);
-                g.current = E;
-                let M = Number.isFinite(R) ? R : 0;
-                ((C.current = Math.min(m.current, E)),
-                    (y.current = Math.max(M - x.current, E)),
-                    (k.current = z.findIndex((e) => e.id === r)),
-                    (w.current = E),
-                    (f.current = r),
-                    (s.style.zIndex = "1"),
-                    (s.style.boxShadow = "0 4px 12px var(--elevation-high)"));
-            },
-            [z],
-        )),
+            ((S.current = n), n && B());
+        }, [B])),
+        (_ = l.useRef($)),
+        l.useLayoutEffect(() => {
+            _.current = $;
+        }, [$]),
+        (G = l.useCallback((r, l) => {
+            let i = _.current,
+                s = e.current,
+                a = t.current.get(r);
+            if (null == s || null == a) return;
+            let u = s.getBoundingClientRect(),
+                o = parseFloat(getComputedStyle(s).columnGap);
+            k.current = Number.isFinite(o) ? o : 0;
+            let c = [];
+            i.forEach((e) => {
+                let n = t.current.get(e.id);
+                null != n && c.push({ id: e.id, node: n });
+            });
+            let d = new Map();
+            c.forEach((e) => {
+                let { node: t } = e;
+                return d.set(t, t.getBoundingClientRect());
+            });
+            let f = n.current;
+            (null != f && d.set(f, f.getBoundingClientRect()),
+                d.forEach((e, t) => {
+                    ((t.style.position = "absolute"),
+                        (t.style.boxSizing = "border-box"),
+                        (t.style.left = `${e.left - u.left}px`),
+                        (t.style.top = `${e.top - u.top}px`),
+                        (t.style.width = `${e.width}px`),
+                        (t.style.height = `${e.height}px`),
+                        (t.style.margin = "0"));
+                }));
+            let h = Z(),
+                m = [],
+                M = 1 / 0,
+                R = i.find((e) => e.id === r)?.pinned === !0,
+                v = 1 / 0,
+                N = -1 / 0;
+            (c.forEach((e) => {
+                let { id: t, node: n } = e,
+                    l = d.get(n);
+                if (null == l) return;
+                let s = l.left - u.left;
+                if (
+                    ((M = Math.min(M, s)),
+                    i.find((e) => e.id === t)?.pinned === R && ((v = Math.min(v, s)), (N = Math.max(N, s + l.width))),
+                    t === r)
+                ) {
+                    y.current = l.width;
+                    return;
+                }
+                (h || (n.style.transition = W), m.push({ node: n, size: l.width, center: s + l.width / 2 }));
+            }),
+                (x.current = m),
+                (C.current = Number.isFinite(M) ? M : 0),
+                (p.current = l));
+            let P = parseFloat(a.style.left);
+            b.current = P;
+            let S = Number.isFinite(v) ? v : P,
+                T = Number.isFinite(N) ? N : P + y.current;
+            ((w.current = Math.min(S, P)),
+                (A.current = Math.max(T - y.current, P)),
+                (E.current = i.findIndex((e) => e.id === r)),
+                (I.current = P),
+                (g.current = r),
+                (a.style.zIndex = "1"),
+                (a.style.boxShadow = "0 4px 12px var(--elevation-high)"));
+        }, [])),
         {
             setStripRef: v,
-            registerTabNode: A,
-            setNewTabButtonRef: I,
-            handleDragStart: D,
+            registerTabNode: M,
+            setNewTabButtonRef: R,
+            handleDragStart: G,
             handleDragMove: l.useCallback((e, n) => {
-                if (f.current !== e) return;
+                if (g.current !== e) return;
                 let r = t.current.get(e);
                 if (null == r) return;
-                let l = Math.min(Math.max(g.current + n - h.current, C.current), y.current);
+                let l = Math.min(Math.max(b.current + n - p.current, w.current), A.current);
                 r.style.left = `${l}px`;
-                let i = p.current,
-                    s = x.current,
+                let i = x.current,
+                    s = y.current,
                     a = l + s,
-                    u = g.current + s / 2,
-                    c = 0;
+                    u = b.current + s / 2,
+                    o = 0;
                 for (let e of i) {
                     let t = e.center > u ? a : l;
-                    e.center < t && c++;
+                    e.center < t && o++;
                 }
-                let o = b.current,
-                    d = m.current,
-                    A = d;
+                let c = k.current,
+                    d = C.current,
+                    f = d;
                 (i.forEach((e, t) => {
-                    (t === c && ((A = d), (d += s + o)), (e.node.style.left = `${d}px`), (d += e.size + o));
+                    (t === o && ((f = d), (d += s + c)), (e.node.style.left = `${d}px`), (d += e.size + c));
                 }),
-                    c >= i.length && (A = d),
-                    (k.current = c),
-                    (w.current = A));
+                    o >= i.length && (f = d),
+                    (E.current = o),
+                    (I.current = f));
             }, []),
             handleDragEnd: l.useCallback(() => {
-                let e = f.current;
+                let e = g.current;
                 if (null == e) return;
                 let r = t.current.get(e),
-                    l = w.current;
-                (0, o.Aq)(e, k.current);
+                    l = I.current;
+                (0, F.Aq)(e, E.current);
                 let i = !1;
                 function s() {
                     if (i) return;
                     ((i = !0),
-                        t.current.forEach(V),
-                        null != n.current && V(n.current),
-                        (f.current = null),
-                        (p.current = []));
+                        t.current.forEach(J),
+                        null != n.current && J(n.current),
+                        (g.current = null),
+                        (x.current = []));
                     let e = new Map();
                     (t.current.forEach((t, n) => {
                         e.set(n, t.getBoundingClientRect().left);
                     }),
-                        (R.current = e));
+                        (N.current = e));
                 }
                 let a = null != r ? parseFloat(r.style.left) : 0 / 0;
-                null == r || Y() || !Number.isFinite(a) || 0.5 > Math.abs(a - l)
+                null == r || Z() || !Number.isFinite(a) || 0.5 > Math.abs(a - l)
                     ? s()
-                    : ((r.style.transition = X),
+                    : ((r.style.transition = W),
                       (r.style.left = `${l}px`),
                       r.addEventListener("transitionend", s, { once: !0 }),
                       setTimeout(s, 200));
             }, []),
-            handleCloseStart: S,
-        });
-    l.useEffect(() => {
-        if (K) return;
-        K = !0;
-        let e = d.A.getActiveTab();
-        null != e && (0, o.FP)(e, "app_start", !1, !0);
-    }, []);
-    let [Z, Q] = l.useState(() => new Set()),
-        J = l.useCallback(
-            (e) => {
-                (W(), Q((t) => new Set(t).add(e)));
-            },
-            [W],
-        ),
-        ee = l.useCallback((e, t) => {
-            ((0, o.f5)(e, t),
-                Q((t) => {
-                    let n = new Set(t);
-                    return (n.delete(e), n);
-                }));
-        }, []);
-    if (!T) return null;
-    let et = z.filter((e) => !Z.has(e.id)).length > 1;
-    return (0, r.jsxs)("div", {
-        ref: _,
-        className: H.$,
-        role: "group",
-        "aria-label": L.intl.string(L.t.es0PkU),
-        onDoubleClick: () => c.Ay.maximize(),
-        children: [
-            z.map((e) =>
-                (0, r.jsx)(
-                    $,
-                    {
-                        tab: e,
-                        isActive: e.id === B,
-                        closable: et,
-                        registerTabNode: F,
-                        onDragStart: G,
-                        onDragMove: O,
-                        onDragEnd: q,
-                        onCloseStart: J,
-                        onRequestClose: ee,
-                    },
-                    e.id,
-                ),
-            ),
-            (0, r.jsx)("div", {
-                ref: U,
-                className: H.Y,
-                children: (0, r.jsx)(a.A, {
-                    icon: s.PlusLargeIcon,
-                    onClick: () => (0, o.JC)("new_tab_button"),
-                    "aria-label": L.intl.string(L.t.GR7NIF),
-                }),
+            handleCloseStart: O,
+        }),
+        [eo, ec] = l.useState(() => new Map()),
+        [ed, ef] = l.useState($);
+    if (ed !== $) {
+        let e = ed.filter((e) => !$.some((t) => t.id === e.id));
+        (e.length > 0 &&
+            ec((t) => {
+                let n = new Map(t);
+                return (e.forEach((e) => n.set(e.id, { tab: e, index: ed.indexOf(e) })), n);
             }),
-        ],
-    });
+            ef($));
+    }
+    let eh = l.useRef(0);
+    l.useLayoutEffect(() => {
+        (eo.size > eh.current && eu(), (eh.current = eo.size));
+    }, [eo, eu]);
+    let em = l.useCallback((e) => {
+        ec((t) => {
+            let n = new Map(t);
+            return (n.delete(e), n);
+        });
+    }, []);
+    if (!Y) return null;
+    let eg = V ? U.intl.formatToPlainString(U.t["I8l3Z+"], { count: K }) : void 0,
+        ep = $.length > 1,
+        eb = [...$];
+    return (
+        eo.forEach((e) => {
+            let { tab: t, index: n } = e;
+            return eb.splice(Math.min(n, eb.length), 0, t);
+        }),
+        (0, r.jsxs)("div", {
+            ref: en,
+            className: ee.$,
+            role: "group",
+            "aria-label": U.intl.string(U.t.es0PkU),
+            onDoubleClick: () => d.Ay.maximize(),
+            children: [
+                eb.map((e) =>
+                    (0, r.jsx)(
+                        H,
+                        {
+                            tab: e,
+                            isActive: e.id === X,
+                            closable: ep,
+                            isExiting: eo.has(e.id),
+                            isConnectedVoiceChannel: "channel" === e.kind && e.channelId === et,
+                            registerTabNode: er,
+                            onDragStart: ei,
+                            onDragMove: es,
+                            onDragEnd: ea,
+                            onExited: em,
+                        },
+                        e.id,
+                    ),
+                ),
+                (0, r.jsx)("div", {
+                    ref: el,
+                    className: ee.Y,
+                    children: (0, r.jsx)(a.A, {
+                        icon: s.PlusLargeIcon,
+                        onClick: () => (0, m.k)("new_tab_button"),
+                        disabled: null != eg,
+                        tooltip: eg ?? U.intl.string(U.t.GR7NIF),
+                        tooltipKeyboardShortcut: null == eg ? f.T3.binds["0"] : void 0,
+                    }),
+                }),
+            ],
+        })
+    );
 }

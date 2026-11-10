@@ -1,40 +1,37 @@
-var i = t(477900),
-    l = t(582128),
-    s = t(978940),
-    a = t(597798),
-    o = t(688810),
-    c = t(384059),
-    r = t(114129),
-    u = t(442325),
-    C = t(188567),
-    d = t(693409),
-    A = t(652215),
-    b = t(792996);
-t.d(
-    e,
+var i = e(477900),
+    s = e(582128),
+    o = e(978940),
+    c = e(597798),
+    a = e(688810),
+    l = e(384059),
+    r = e(114129),
+    u = e(188567),
+    C = e(693409),
+    d = e(652215),
+    p = e(792996);
+e.d(
+    t,
     {},
     {
         A: function (n) {
-            let { channel: e, centerButton: t = !1, onCallJoined: p, ...h } = n,
-                { parentAnalyticsLocation: _ } = (0, o.Ay)(),
-                j = t ? d.l : d.A,
-                k = e.isManaged() || !e.isPrivate() ? b.intl.string(b.t.S0W8Z5) : b.intl.string(b.t["0D/6Rz"]),
-                L = l.useCallback(() => {
-                    (p?.(), (0, c.lO)(_, c.OP.JOIN_CALL, e.id));
-                    let n = u.A.isEnabled() ? u.A.getTabForChannel(e.id) : null;
-                    (null != n && (0, r.ZD)(n.id, "call", !0), a.default.selectVoiceChannel(e.id));
-                }, [e.id, p, _]);
+            let { channel: t, centerButton: e = !1, onCallJoined: A, ...b } = n,
+                { parentAnalyticsLocation: h } = (0, a.Ay)(),
+                _ = e ? C.l : C.A,
+                j = t.isManaged() || !t.isPrivate() ? p.intl.string(p.t.S0W8Z5) : p.intl.string(p.t["0D/6Rz"]),
+                k = s.useCallback(() => {
+                    (A?.(), (0, l.lO)(h, l.OP.JOIN_CALL, t.id), (0, r.oZ)(t.id), c.default.selectVoiceChannel(t.id));
+                }, [t.id, A, h]);
             return (
-                l.useEffect(
+                s.useEffect(
                     () => (
-                        C._.subscribe(A.jej.CALL_ACCEPT, L),
+                        u._.subscribe(d.jej.CALL_ACCEPT, k),
                         () => {
-                            C._.unsubscribe(A.jej.CALL_ACCEPT, L);
+                            u._.unsubscribe(d.jej.CALL_ACCEPT, k);
                         }
                     ),
-                    [L],
+                    [k],
                 ),
-                (0, i.jsx)(j, { ...h, iconComponent: s.PhoneCallIcon, label: k, onClick: L, isTrayButton: !1 })
+                (0, i.jsx)(_, { ...b, iconComponent: o.PhoneCallIcon, label: j, onClick: k, isTrayButton: !1 })
             );
         },
     },

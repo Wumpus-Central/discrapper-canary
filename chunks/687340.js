@@ -1,23 +1,26 @@
-var a = i(477900);
+var e = i(477900);
 i(582128);
-var e = i(855986),
-    s = i(477782),
-    d = i(945810),
-    r = i(162199),
-    u = i(114129),
-    c = i(442325),
-    l = i(792996);
+var a = i(855986),
+    d = i(477782),
+    s = i(945810),
+    c = i(162199),
+    l = i(114129),
+    r = i(442325),
+    u = i(254838),
+    b = i(792996);
 i.d(
-    t,
+    n,
     {},
     {
-        A: function (n) {
-            return (0, e.bG)([c.A, d.Bt], () => c.A.isEnabled()) && null != n
-                ? (0, a.jsx)(s.Dr, {
+        A: function (t) {
+            let n = (0, a.bG)([r.A, s.Bt], () => r.A.isEnabled()),
+                i = (0, a.bG)([r.A], () => r.A.getActiveTabId());
+            return n && null != t
+                ? (0, e.jsx)(d.Dr, {
                       id: "open-in-new-tab",
-                      label: l.intl.string(l.t["5Qo0S6"]),
+                      label: b.intl.string(b.t["5Qo0S6"]),
                       action: () => {
-                          (0, u.Bd)(n.id, (0, r.j)(n), "context_menu");
+                          (0, u.H)() && (0, l.Bd)(t.id, (0, c.j)(t), "context_menu", i);
                       },
                   })
                 : null;

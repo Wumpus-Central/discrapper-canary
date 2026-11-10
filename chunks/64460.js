@@ -17,7 +17,7 @@ let u = {
     action(e, t) {
         let n,
             u = parseInt(t.split("+")[1], 10);
-        if ((0 === u && (u = 10), l.A.isTabBarVisible())) {
+        if ((0 === u && (u = 10), l.A.isEnabled())) {
             let e = l.A.getTabs()[u - 1];
             return (null != e && (0, s.ZD)(e.id, "keyboard_number"), !1);
         }
