@@ -13,4 +13,6 @@ t.exports = {
     qS: "badge_IqWmhA",
     IZ: "editIcon_IqWmhA",
     Do: "badgeVectorSrc_IqWmhA",
+    TW: "hasUnreadDot_IqWmhA",
+    Zm: "unreadDot_IqWmhA",
 };

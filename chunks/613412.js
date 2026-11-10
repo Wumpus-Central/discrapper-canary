@@ -2,13 +2,13 @@ let i, r, a, s, l, o, d, c, u;
 (n.r(t),
     n.d(t, {
         AnalyticsActionHandlers: () => $,
-        ImpressionGroups: () => Z.q,
+        ImpressionGroups: () => J.q,
         ImpressionNames: () => ee.IJ,
-        ImpressionTypes: () => Z.z,
+        ImpressionTypes: () => J.z,
         NetworkActionNames: () => ee.D3,
         SpanComponentNames: () => ee.yk,
         SpanTtiNames: () => ee.wJ,
-        analyticsTrackingStoreMaker: () => J,
+        analyticsTrackingStoreMaker: () => Z,
         encodeProperties: () => p,
         extendSuperProperties: () => eg,
         getBrowser: () => eh,
@@ -77,7 +77,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
     z = null,
     q = !1,
     Q = () => Promise.resolve({ sessionId: void 0 }),
-    J = (e) => {
+    Z = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
@@ -298,7 +298,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         }
         return new C(t, n);
     };
-var Z = n(412728),
+var J = n(412728),
     ee = n(239947),
     et = n(214958),
     en = n.n(et);
@@ -539,7 +539,7 @@ eg(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("669921", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("669928", 10))) || (l.client_build_number = d),
     null == (c = eE?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

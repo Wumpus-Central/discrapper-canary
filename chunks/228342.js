@@ -258,12 +258,12 @@ let B = !1,
 function Q(e) {
     return q[e] ?? {};
 }
-function J(e, t) {
+function Z(e, t) {
     let n = q[e]?.error,
         i = q[e]?.error_description;
     ((q[e] = { ...q[e], ...t }), null != n && (q[e].error = n), null != i && (q[e].error_description = i));
 }
-let Z = "none",
+let J = "none",
     ee = (function (e) {
         let t = Promise.resolve(null),
             n = [],
@@ -282,13 +282,13 @@ let Z = "none",
             };
         return ((o.isMutexHeld = () => n.length > 0), (o.getLockHolders = () => n), o);
     })({
-        onContention: (e, t) => z.verbose(`overlayLock contention: lastMutexCall ${Z}`),
+        onContention: (e, t) => z.verbose(`overlayLock contention: lastMutexCall ${J}`),
         onContentionResolved: () => z.verbose("overlayLock contention: resolved."),
         onTimeout: (e, t) => {
-            let n = `overlayLock: lastMutexCall ${Z}}`;
+            let n = `overlayLock: lastMutexCall ${J}}`;
             z.error(n);
             let i = Q((0, M.getPID)());
-            (J((0, M.getPID)(), { ...i, error_description: n, success: !1 }),
+            (Z((0, M.getPID)(), { ...i, error_description: n, success: !1 }),
                 v.default.track(w.HAw.OVERLAY_HOOK_RESULT, Q((0, M.getPID)())));
         },
         timeoutMs: 18e4,
@@ -339,10 +339,10 @@ async function ei(e) {
     try {
         if (P.Ay.supportsFeature(w.BYE.CREATE_HOST_ON_ATTACH))
             if (k.size > 0) {
-                Z = "reconcile.getOverlayURL";
+                J = "reconcile.getOverlayURL";
                 let t = await el();
-                ((Z = "reconcile.createHostProcess"), e.createHostProcess(t, ec, ed));
-            } else ((Z = "reconcile.destroyHostProcess"), e.destroyHostProcess(), es((0, M.getPID)()));
+                ((J = "reconcile.createHostProcess"), e.createHostProcess(t, ec, ed));
+            } else ((J = "reconcile.destroyHostProcess"), e.destroyHostProcess(), es((0, M.getPID)()));
         else if (B) {
             let t = await el();
             e.createHostProcess(t, ec, ed);
@@ -420,33 +420,33 @@ async function er(e) {
             ) {
                 case T.Ue.Hook:
                     let r = new Date().getTime();
-                    (J(i.pid, { mounting_started_at: r, fullscreen_type: await (0, N.E1)(i.pid, 0) }),
+                    (Z(i.pid, { mounting_started_at: r, fullscreen_type: await (0, N.E1)(i.pid, 0) }),
                         k.has(i.pid) ||
                             (await (async function (e) {
                                 ee.isMutexHeld() || z.error("_attachPIDMustBeLocked: overlayMutex is not held.", e);
                                 let t = Q(e).mounting_started_at ?? new Date().getTime();
-                                J(e, { mounting_started_at: t });
+                                Z(e, { mounting_started_at: t });
                                 let n = k.get(e);
                                 if (null != n)
                                     return void z.warn(`Trying to attach to pid=${e}, that is already in status: ${n}`);
                                 (await o.A.updateOverlayState(e, T.AR.WAITING_FOR_OVERLAY_OPEN, "attachPID"),
-                                    (Z = "attach.getOverlayModule"));
+                                    (J = "attach.getOverlayModule"));
                                 let i = await (0, U.R)();
                                 if (null == i)
                                     return void z.error(
                                         `Trying to attach to pid=${e}, but overlay module failed loaded`,
                                     );
-                                ((Z = "attach.transitionOverlayPIDStatus"),
+                                ((J = "attach.transitionOverlayPIDStatus"),
                                     en(e, "ATTACHING"),
-                                    (Z = "attach.attachToProcess"));
+                                    (J = "attach.attachToProcess"));
                                 let r = await c.GH(e);
                                 null == r
-                                    ? ((Z = "attach.transitionOverlayPIDStatus (CONNECTING)"),
+                                    ? ((J = "attach.transitionOverlayPIDStatus (CONNECTING)"),
                                       en(e, "CONNECTING", "ATTACHING"),
-                                      (Z = "attach.reconcileHostProcess"),
+                                      (J = "attach.reconcileHostProcess"),
                                       await ei(i),
                                       i.connectProcess(e))
-                                    : ((Z = "attach.transitionOverlayPIDStatus (HOOK_FAILED)"),
+                                    : ((J = "attach.transitionOverlayPIDStatus (HOOK_FAILED)"),
                                       en(e, "HOOK_FAILED", "ATTACHING"),
                                       z.warn(`Could not hook to pid=${e}, error=${r}`));
                             })(i.pid)),
@@ -464,21 +464,21 @@ async function er(e) {
                                         );
                                     en(e, "DISCONNECTING");
                                     try {
-                                        Z = "detach.getOverlayModule";
+                                        J = "detach.getOverlayModule";
                                         let t = await (0, U.R)();
                                         if (null == t)
                                             return void z.error(
                                                 `Trying to detach from pid=${e}, but overlay module failed loaded`,
                                             );
                                         (e !== M.DEV_PID &&
-                                            ((Z = "detach.cancelAttachToProcess"),
+                                            ((J = "detach.cancelAttachToProcess"),
                                             await c.c1(e),
                                             await (0, a.yy)(16),
-                                            (Z = "detach.disconnectProcess"),
+                                            (J = "detach.disconnectProcess"),
                                             await t.disconnectProcess(e)),
-                                            (Z = "detach.transitionOverlayPIDStatus"),
+                                            (J = "detach.transitionOverlayPIDStatus"),
                                             en(e, null),
-                                            (Z = "detach.reconcileHostProcess"),
+                                            (J = "detach.reconcileHostProcess"),
                                             await ei(t));
                                     } catch (t) {
                                         ((0, p.pj)(t, T.Ue.Hook),
@@ -531,7 +531,7 @@ function ed(e) {
 function ec(e, t, n) {
     let i = A.Ay.getGameForPID(e),
         r = null != i ? D.A.findGame(i) : null;
-    (J(e, {
+    (Z(e, {
         ...{ game_name: i?.name, game_id: null == r ? null : r.id, success: t, overlay_method: T.Ue[T.Ue.Hook], ...n },
     }),
         (0, l.Vz)(M.YU, b.A.getDefaultLayout(M.YU), 0, { width: n.graphics_width, height: n.graphics_height }));
@@ -591,7 +591,7 @@ function eE(e) {
                         (0, M.is)(r),
                         o.A.overlayReady(r));
                     let s = Q(r);
-                    J(r, {
+                    Z(r, {
                         ...s,
                         total_mount_time_ms:
                             null != s.mounting_started_at ? new Date().getTime() - s.mounting_started_at : void 0,
@@ -754,7 +754,7 @@ let em = new ep(
                       let { port: t } = e;
                       W = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "c2b0fef991affecb5acbec69b192e29b9f5b9e83"),
+                      (n.append("build_id", "4fbe90ad4ad167f4a27f63c26d22f0bbf20c1752"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", W),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
@@ -764,7 +764,7 @@ let em = new ep(
                       if (null == G[t]) return;
                       let i = n instanceof Error ? n : Error(n ?? "Unknown error");
                       (en(t, "CRASHED"),
-                          J(t, {
+                          Z(t, {
                               renderer_crash_count: (Q(t).renderer_crash_count ?? 0) + 1,
                               error: n instanceof Error ? n.message : n,
                               error_description: n instanceof Error ? n.stack : void 0,
