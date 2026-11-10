@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 670082, Version Hash: 2d7fff45875433fe4bd91b5ad55f6932992131bd`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 670086, Version Hash: 82ccc96ded105c7fe17b2523c9c5322f525969b6`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670082";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670086";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15826,7 +15826,7 @@ let Iz = "isHideDevBanner",
                     className: td()(IX.Wz, IX.mr),
                     children: [
                         (0, v.jsx)(I$, { className: IX.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "670082" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "670086" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -46029,7 +46029,7 @@ let wn = (0, tW.Fe)({
             n.e(733771),
             n.e(655602),
             n.e(866008),
-            n.e(958146),
+            n.e(479919),
             n.e(531158),
             n.e(244645),
             n.e(946039),
@@ -47332,13 +47332,15 @@ let Gl = (0, i9.Fe)({
                                                                                     (0, v.jsx)(UB.b, {}),
                                                                                     (0, v.jsx)(wW, {}),
                                                                                     (0, v.jsx)(No.up, {}),
-                                                                                    (0, v.jsx)(Ux.P, {}),
-                                                                                    (0, v.jsx)(Uq.C8, {}),
-                                                                                    (0, v.jsx)(vH.ok, {}),
-                                                                                    (0, v.jsx)(wo, {
-                                                                                        children: (0, v.jsx)(UV.N, {
-                                                                                            appContext: H.BRT.APP,
-                                                                                        }),
+                                                                                    (0, v.jsxs)(wo, {
+                                                                                        children: [
+                                                                                            (0, v.jsx)(Ux.P, {}),
+                                                                                            (0, v.jsx)(Uq.C8, {}),
+                                                                                            (0, v.jsx)(vH.ok, {}),
+                                                                                            (0, v.jsx)(UV.N, {
+                                                                                                appContext: H.BRT.APP,
+                                                                                            }),
+                                                                                        ],
                                                                                     }),
                                                                                     (0, v.jsx)(UJ, {}),
                                                                                     (0, v.jsx)(wy, {}),
