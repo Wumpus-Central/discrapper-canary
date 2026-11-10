@@ -456,18 +456,18 @@ let e6 = "app-download-item",
 function e7() {
     return !1;
 }
-function e8(e) {
+function e4(e) {
     let t = ed.default.getMutableGuildStates();
     return (
         (e === eL.sFm.SERVER_DISCOVERY_BADGE && !e1.hasViewed(eL.sFm.SERVER_DISCOVERY_BADGE)) ||
         (e !== e6 && e !== e5 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let e4 = (0, e3.L_)((e, t, n) => ["null", ...t, ...e, e5, eL.sFm.E3_SERVER_DISCOVERY_BADGE, e6]);
+let e8 = (0, e3.L_)((e, t, n) => ["null", ...t, ...e, e5, eL.sFm.E3_SERVER_DISCOVERY_BADGE, e6]);
 function e9(e) {
     let { ref: t, ...n } = e,
         r = (0, _.yK)([eW.Ay, eQ.A, ed.default], () =>
-            e4(eW.Ay.getGuildFolders(), eQ.A.getUnreadPrivateChannelIds(), ed.default.getStoreChangeSentinel()),
+            e8(eW.Ay.getGuildFolders(), eQ.A.getUnreadPrivateChannelIds(), ed.default.getStoreChangeSentinel()),
         ),
         a = (0, _.bG)([e2.A], () => e2.A.isFocused()),
         s = (0, _.bG)([eq.A], () => eq.A.getExpandedFolders());
@@ -478,7 +478,7 @@ function e9(e) {
         isUnread: e7,
         textUnread: ey.intl.string(ey.t.y2b7CA),
         textMention: ey.intl.string(ey.t.y2b7CA),
-        isMentioned: e8,
+        isMentioned: e4,
         animate: a,
         expandedFolders: s,
     });
@@ -1114,8 +1114,8 @@ var t0 = n(696292),
     t6 = n(837057),
     t5 = n(310419),
     t7 = n(488995),
-    t8 = n(324580),
-    t4 = n(221596);
+    t4 = n(324580),
+    t8 = n(221596);
 let t9 = function (e) {
     let { selected: t, onClick: n, questId: a, className: s, ref: l } = e,
         o = r.useCallback(() => {
@@ -1125,14 +1125,14 @@ let t9 = function (e) {
                 case t7.GlobalDiscoveryTab.QUESTS:
                     return (0, t6.transitionToGlobalDiscovery)({
                         tab: t7.GlobalDiscoveryTab.QUESTS,
-                        location: t4.rE.DISCOVERY_COMPASS,
+                        location: t8.rE.DISCOVERY_COMPASS,
                         questContent: t0.u.DISCOVERY_COMPASS,
                         questId: a,
                     });
                 case t7.GlobalDiscoveryTab.SERVERS:
                     return (0, t6.transitionToGlobalDiscovery)({
                         tab: t7.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: t8.J8.GUILDS_BAR,
+                        entrypoint: t4.J8.GUILDS_BAR,
                     });
                 case t7.GlobalDiscoveryTab.APPS:
                     return (0, t6.transitionToGlobalDiscovery)({
@@ -1162,7 +1162,7 @@ var ne = n(506774),
     nt = n(509963),
     nn = n(111159),
     ni = n(793943),
-    nr = n(722178),
+    nr = n(448645),
     na = n(350972),
     ns = n(677056),
     nl = n(526162),
@@ -1478,8 +1478,8 @@ var nJ = n(126600),
     n6 = n(345942),
     n5 = n(676279),
     n7 = n(866323),
-    n8 = n(682163),
-    n4 = n(327580);
+    n4 = n(682163),
+    n8 = n(327580);
 function n9(e) {
     let { guild: t, show: n, active: r, onAnimationStart: a, onAnimationRest: l } = e,
         o = {},
@@ -1497,21 +1497,21 @@ function n9(e) {
                 (0, i.jsx)(
                     "div",
                     {
-                        className: n4.qc,
+                        className: n8.qc,
                         children: (0, i.jsx)("div", {
-                            className: s()(n4.MJ, n4.L0),
+                            className: s()(n8.MJ, n8.L0),
                             style: { margin: 0 },
                             children: (0, i.jsx)(G.animated.div, {
-                                className: n4.NG,
+                                className: n8.NG,
                                 style: e,
                                 children: (0, i.jsx)("div", {
-                                    className: n4.qJ,
+                                    className: n8.qJ,
                                     children: (0, i.jsx)("div", {
-                                        className: n4.jg,
-                                        children: (0, i.jsx)(n8.Ay, {
+                                        className: n8.jg,
+                                        children: (0, i.jsx)(n4.Ay, {
                                             guild: t,
-                                            size: n8.Ay.Sizes.SMOL,
-                                            className: n4.VL,
+                                            size: n4.Ay.Sizes.SMOL,
+                                            className: n8.VL,
                                         }),
                                     }),
                                 }),

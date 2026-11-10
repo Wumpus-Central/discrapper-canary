@@ -37,7 +37,7 @@ var x = n(613412),
     D = n(887695),
     U = n(435558),
     V = n(962125),
-    W = n(722178),
+    W = n(448645),
     B = n(240864),
     F = n(212633);
 let G = (0, U.throttle)(
@@ -659,9 +659,9 @@ var e0 = n(554146),
     e3 = n(695366),
     e8 = n(834730),
     e6 = n(789645),
-    e7 = n(565645),
-    e4 = n(775602),
-    e9 = n(826673),
+    e4 = n(565645),
+    e9 = n(775602),
+    e7 = n(826673),
     te = n(371680),
     tt = n(532624),
     tn = n(531685),
@@ -673,14 +673,14 @@ function ts(e) {
         r = (0, d.RQ)((e) => e.searchQuery),
         s = (0, m.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
         a = (0, m.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
-        o = (0, m.bG)([e4.Ay], () => e4.Ay.useReducedMotion, []),
+        o = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion, []),
         u = (0, m.bG)([tn.A], () => tn.A.isFocused()),
         c = (0, m.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(ev.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
         return (0, l.jsx)(te.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, l.jsx)(e7.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
+                    ? (0, l.jsx)(e4.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
                     : (0, l.jsx)(e1.ImageIcon, { size: "md", color: "currentColor", className: tr.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(L.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
@@ -696,7 +696,7 @@ function ts(e) {
                 return (t) => (0, l.jsx)(e, { ...t });
             }));
     }
-    let f = (0, e9.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
+    let f = (0, e7.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
         p =
             null != c && (0, tl.uF)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
@@ -720,7 +720,7 @@ function ts(e) {
                   (0, l.jsx)(I.D, {
                       className: tr.b,
                       onClick: function () {
-                          return (0, e9.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
+                          return (0, e7.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
                       },
                       children: (0, l.jsx)(e6.XSmallIcon, { size: "xs", color: "currentColor" }),
                   }),
@@ -1311,15 +1311,15 @@ function tA(e) {
             let e = (0, W.Dd)(ej.PremiumTypes.TIER_2);
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
         }, [e8]),
-        e7 = i.useCallback((e) => (e3(e, t) ? 65 : 32), [t, e3]),
-        e4 = i.useCallback(
+        e4 = i.useCallback((e) => (e3(e, t) ? 65 : 32), [t, e3]),
+        e9 = i.useCallback(
             (e) => {
                 let t = e === eK.length - 1;
                 return eq && t ? 70 : ez && e === eH ? 20 : 0;
             },
             [eK.length, ez, eq, eH],
         ),
-        e9 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
+        e7 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
         te = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
@@ -1412,9 +1412,9 @@ function tA(e) {
                     inExpressionPicker: v,
                     newSoundCountByGuildId: eD ? eo : void 0,
                     isNewSound: Z,
-                    getSectionHeaderHeight: e7,
+                    getSectionHeaderHeight: e4,
                 }),
-            [q, C, ez, t, v, eD, eo, Z, e7],
+            [q, C, ez, t, v, eD, eo, Z, e4],
         ),
         to = i.useCallback(() => {
             let e = (0, Y.qD)();
@@ -1502,12 +1502,12 @@ function tA(e) {
                     renderRow: e5,
                     renderSectionHeader: te,
                     renderSectionFooter: tt,
-                    renderSection: e9,
+                    renderSection: e7,
                     renderCategoryList: ta,
                     renderHeaderAccessories: tr,
                     rowHeight: 48,
-                    sectionHeaderHeight: e7,
-                    sectionFooterHeight: e4,
+                    sectionHeaderHeight: e4,
+                    sectionFooterHeight: e9,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,
                     renderEmptySearchState: ty,

@@ -1,4 +1,4 @@
-t.d(n, { default: () => n4 });
+t.d(n, { default: () => n9 });
 var i,
     s = t(477900),
     r = t(582128),
@@ -318,7 +318,7 @@ var ev =
     eT = t(763754),
     eO = t(20851),
     eL = t(641318),
-    eP = t(722178),
+    eP = t(448645),
     eb = t(780898),
     eS = t(158008);
 function eD(e) {
@@ -723,8 +723,8 @@ function e5(e) {
     );
 }
 var e3 = t(462887),
-    e9 = t(278416),
-    e4 = t(866665),
+    e4 = t(278416),
+    e9 = t(866665),
     e7 = t(821609),
     ne = t(318254),
     nn = t(825484),
@@ -743,7 +743,7 @@ var e3 = t(462887),
 function ng(e) {
     let { className: n, isPartiallyPurchased: t } = e;
     return t
-        ? (0, s.jsx)(e4.m, {
+        ? (0, s.jsx)(e9.m, {
               position: "top",
               align: "left",
               text: $.intl.string($.t.y1VWkZ),
@@ -872,7 +872,7 @@ function nO(e) {
     return (0, s.jsxs)("div", {
         className: nT.k,
         children: [
-            (0, s.jsx)(e4.m, {
+            (0, s.jsx)(e9.m, {
                 text: $.intl.string($.t.MPFyJ5),
                 "aria-label": $.intl.string($.t.X3Ekj8),
                 children: (0, s.jsx)(ny.NitroWheelIcon, { size: "md", color: "currentColor", className: nT.o }),
@@ -968,7 +968,7 @@ function nU(e) {
             (0, s.jsxs)("div", {
                 className: nG.fZ,
                 children: [
-                    (0, s.jsx)(e9.TagIcon, { size: "xs", color: "currentColor", className: nG.CE }),
+                    (0, s.jsx)(e4.TagIcon, { size: "xs", color: "currentColor", className: nG.CE }),
                     (0, s.jsx)(G.E, { variant: "body-xs/medium", color: "none", children: n }),
                 ],
             }),
@@ -1171,7 +1171,7 @@ function nH(e) {
                                                           orbPrice: e.amount,
                                                       })),
                                                       (c = l ? `${a}, ${t}` : a),
-                                                      (0, s.jsx)(e4.m, {
+                                                      (0, s.jsx)(e9.m, {
                                                           position: "top",
                                                           text: t,
                                                           shouldShow: l,
@@ -1419,7 +1419,7 @@ function n5(e) {
             children: [
                 (0, s.jsx)("div", {
                     className: n6.GV,
-                    children: (0, s.jsx)(e4.m, {
+                    children: (0, s.jsx)(e9.m, {
                         text: $.intl.string($.t["Hr/q/6"]),
                         children: (0, s.jsx)(e7.$, {
                             variant: "overlay-secondary",
@@ -1476,8 +1476,8 @@ function n5(e) {
     );
 }
 var n3 = t(80801);
-let n9 = (0, u.FT)(u._3.SIZE_152),
-    n4 = function (e) {
+let n4 = (0, u.FT)(u._3.SIZE_152),
+    n9 = function (e) {
         let {
                 transitionState: n,
                 onClose: t,
@@ -1559,8 +1559,8 @@ let n9 = (0, u.FT)(u._3.SIZE_152),
                 pendingChanges: V,
                 pendingAvatarSrc:
                     void 0 !== V.pendingAvatar
-                        ? (0, E.sv)((0, f.V7)({ userId: z.id, image: V.pendingAvatar, size: n9 }), null, z, {
-                              size: n9,
+                        ? (0, E.sv)((0, f.V7)({ userId: z.id, image: V.pendingAvatar, size: n4 }), null, z, {
+                              size: n4,
                           })
                         : void 0,
             },

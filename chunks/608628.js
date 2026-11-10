@@ -11,7 +11,7 @@ var n = r(477900),
     f = r(866665),
     m = r(939249),
     p = r(287809),
-    g = r(722178);
+    g = r(448645);
 let h = (0, r(945810).mj)({
     name: "2026-11-nitro-upload-badge",
     kind: "user",

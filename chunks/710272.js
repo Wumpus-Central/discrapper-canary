@@ -72,7 +72,7 @@ let E = [
     },
     { check: (e) => !!S.AKn.test(e) && { body: x.intl.string(x.t.sTwS1a) }, analyticsType: "API Token Warning" },
 ];
-var R = t(722178);
+var R = t(448645);
 function p(e) {
     let {
             openWarningPopout: n,

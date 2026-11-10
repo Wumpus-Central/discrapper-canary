@@ -1,16 +1,17 @@
-n.d(u, { Wo: () => p, Xb: () => h, rG: () => g, Lh: () => b, $F: () => G, p3: () => S, bu: () => A });
+n.d(u, { Wo: () => p, Xb: () => h, rG: () => S, Lh: () => g, $F: () => G, p3: () => U, bu: () => A });
 var t,
     r = n(582128),
     l = n(855986),
     i = n(439174),
-    s = n(851767),
-    a = n(287809),
-    c = n(166403),
-    f = n(474090);
-function d(e) {
-    return (0, l.bG)([s.A, a.default], () => {
+    a = n(851767),
+    f = n(287809),
+    s = n(166403),
+    c = n(474090),
+    d = n(678022);
+function m(e) {
+    return (0, l.bG)([a.A, f.default], () => {
         let u,
-            n = null != e ? s.A.getUserProfile(e) : null,
+            n = null != e ? a.A.getUserProfile(e) : null,
             t = n?.premiumSince;
         if (null == n || null == t) return null;
         if (
@@ -21,68 +22,68 @@ function d(e) {
             null != u)
         )
             return u;
-        let r = a.default.getCurrentUser();
-        return e === r?.id && r?.hasPaidTier2Subscription() ? (0, i.UO)(t) : null;
+        let r = f.default.getCurrentUser();
+        return e === r?.id && (0, d.Sn)(r) ? (0, i.UO)(t) : null;
     });
 }
-var m = n(682901),
+var o = n(682901),
     p = (((t = {}).UPCOMING = "upcoming"), (t.WITHHELD = "withheld"), (t.EARNED = "earned"), t);
-function o(e) {
+function b(e) {
     if (null == e) return e;
     let u = e instanceof Date ? e : new Date(e);
     return Number.isNaN(u.getTime()) ? null : u;
 }
-function b() {
-    let e = (0, l.bG)([a.default], () => a.default.getCurrentUser());
-    return d(e?.id) ?? null;
+function g() {
+    let e = (0, l.bG)([f.default], () => f.default.getCurrentUser());
+    return m(e?.id) ?? null;
 }
-function g(e) {
-    let u = (0, l.bG)([s.A], () => {
+function S(e) {
+    let u = (0, l.bG)([a.A], () => {
         if (null == e) return null;
-        let u = s.A.getUserProfile(e);
+        let u = a.A.getUserProfile(e);
         return u?.premiumSince;
     });
-    return (0, r.useMemo)(() => o(u), [u]);
+    return (0, r.useMemo)(() => b(u), [u]);
 }
 function h() {
-    let e = (0, l.bG)([a.default], () => a.default.getCurrentUser()),
-        u = (0, f.YE)(e, m.PremiumTypes.TIER_2),
+    let e = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
+        u = (0, c.YE)(e, o.PremiumTypes.TIER_2),
         n = (0, l.bG)(
-            [c.A],
+            [s.A],
             () => {
-                let e = c.A.getPremiumSubscription();
+                let e = s.A.getPremiumSubscription();
                 return null != e && u ? e.premiumSince : null;
             },
             [u],
         ),
-        t = g(e?.id),
+        t = S(e?.id),
         i = n ?? t;
-    return (0, r.useMemo)(() => o(i), [i]);
+    return (0, r.useMemo)(() => b(i), [i]);
 }
 function A() {
-    let e = (0, l.bG)([a.default], () => a.default.getCurrentUser()),
-        u = (0, l.bG)([c.A], () => c.A.getPremiumTypeSubscription());
-    return (0, f.YE)(e, m.PremiumTypes.TIER_2) ? (0, i.UO)(u?.premiumSince) : null;
+    let e = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
+        u = (0, l.bG)([s.A], () => s.A.getPremiumTypeSubscription());
+    return (0, d.Sn)(e) ? (0, i.UO)(u?.premiumSince) : null;
 }
 function G() {
     let e,
         u,
-        n = (0, l.bG)([a.default], () => a.default.getCurrentUser()),
-        t = S(n?.id),
+        n = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
+        t = U(n?.id),
         r =
-            ((e = b()),
-            (u = (0, l.bG)([c.A], () => c.A.getPremiumTypeSubscription())),
+            ((e = g()),
+            (u = (0, l.bG)([s.A], () => s.A.getPremiumTypeSubscription())),
             null == e || null == u || null == u.premiumSince ? null : (0, i.Xr)(e, u.premiumSince)),
-        s = h();
+        a = h();
     if (null != t) return { ...t, earnedOnDate: r, status: "earned" };
-    if (null == s) return null;
-    if (!n?.hasPaidTier2Subscription()) {
-        let e = (0, i.UO)(s);
-        if (null != e) return { ...m.VD[e], earnedOnDate: (0, i.Xr)(e, s), status: "withheld" };
+    if (null == a) return null;
+    if (!(0, d.Sn)(n)) {
+        let e = (0, i.UO)(a);
+        if (null != e) return { ...o.VD[e], earnedOnDate: (0, i.Xr)(e, a), status: "withheld" };
     }
-    return { ...Object.values(m.VD)[0], status: "upcoming" };
+    return { ...Object.values(o.VD)[0], status: "upcoming" };
 }
-function S(e) {
-    let u = d(e);
-    return null == u ? null : m.VD[u];
+function U(e) {
+    let u = m(e);
+    return null == u ? null : o.VD[u];
 }

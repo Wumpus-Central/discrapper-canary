@@ -1,77 +1,77 @@
-var t = i(477900);
-i(582128);
-var n = i(503698),
-    e = i.n(n),
-    r = i(935462),
-    l = i(862482),
-    d = i(834730),
-    c = i(930861),
-    m = i(793574),
-    o = i(688810),
-    u = i(915089),
-    E = i(976860),
-    x = i(287809),
-    h = i(474090),
-    p = i(396375),
-    g = i(764231),
-    N = i(105909),
-    j = i(627380),
-    T = i(208223),
-    v = i(682901),
-    A = i(652215),
-    I = i(792996),
-    _ = i(860688);
-i.d(
+var i = t(477900);
+t(582128);
+var n = t(503698),
+    e = t.n(n),
+    l = t(935462),
+    r = t(862482),
+    d = t(834730),
+    c = t(930861),
+    o = t(793574),
+    m = t(688810),
+    u = t(915089),
+    x = t(976860),
+    E = t(287809),
+    h = t(396375),
+    g = t(270060),
+    N = t(764231),
+    j = t(105909),
+    p = t(627380),
+    v = t(208223),
+    A = t(682901),
+    T = t(652215),
+    b = t(792996),
+    I = t(860688);
+t.d(
     s,
     {},
     {
         default: function (a) {
-            let { transitionState: s, onClose: i, displayProfile: n } = a,
-                { analyticsLocations: b } = (0, o.Ay)(m.A.TIERED_TENURE_BADGES_MODAL),
-                y = (0, u.GV)(),
-                D = Object.values(v.VD),
-                C = (0, N.p3)(n?.userId),
-                R = (0, N.$F)(),
-                S = (0, j.t)(),
-                f = x.default.getCurrentUser(),
-                k = (0, N.rG)(n?.userId ?? f?.id) ?? new Date(),
-                L = (0, h.CC)(f?.premiumType, v.PremiumTypes.TIER_2),
-                O = D.map((a) => {
-                    let { id: s, nameUnformatted: i, tenureReqNumMonths: r } = a,
-                        l = I.intl.string(i),
-                        c = (0, T.I)(s).standard,
-                        m = (0, g.T)(s, r),
-                        o = null == n,
-                        u = o && R?.id === s,
-                        E = !o && C?.id === s,
-                        x = u && (R?.status === N.Wo.EARNED || R?.status === N.Wo.WITHHELD),
-                        h = u && R?.status === N.Wo.UPCOMING,
-                        p = E || x;
-                    return (0, t.jsxs)(
+            let { transitionState: s, onClose: t, displayProfile: n } = a,
+                { analyticsLocations: _ } = (0, m.Ay)(o.A.TIERED_TENURE_BADGES_MODAL),
+                D = (0, u.GV)(),
+                y = Object.values(A.VD),
+                C = (0, j.p3)(n?.userId),
+                R = (0, j.$F)(),
+                S = (0, p.t)(),
+                f = E.default.getCurrentUser(),
+                k = (0, j.rG)(n?.userId ?? f?.id) ?? new Date(),
+                L = (0, g.h)(),
+                O = y.map((a) => {
+                    let { id: s, nameUnformatted: t, tenureReqNumMonths: l } = a,
+                        r = b.intl.string(t),
+                        c = (0, v.I)(s).standard,
+                        o = (0, N.T)(s, l),
+                        m = null == n,
+                        u = m && R?.id === s,
+                        x = !m && C?.id === s,
+                        E = u && (R?.status === j.Wo.EARNED || R?.status === j.Wo.WITHHELD),
+                        h = u && R?.status === j.Wo.UPCOMING,
+                        g = x || E;
+                    return (0, i.jsxs)(
                         "div",
                         {
-                            className: e()(_.qS, { [_.Ny]: p || h }),
+                            className: e()(I.qS, { [I.Ny]: g || h }),
                             children: [
-                                (0, t.jsx)("img", { src: c, alt: l, className: _.pq }),
-                                (0, t.jsxs)("div", {
-                                    className: _.Vv,
+                                (0, i.jsx)("img", { src: c, alt: r, className: I.pq }),
+                                (0, i.jsxs)("div", {
+                                    className: I.Vv,
                                     children: [
-                                        (0, t.jsx)(d.E, { variant: "body-md/semibold", className: _.Vd, children: l }),
-                                        (0, t.jsx)(d.E, { variant: "body-xs/normal", children: m }),
-                                        p &&
-                                            (0, t.jsx)(d.E, {
+                                        (0, i.jsx)(d.E, { variant: "body-md/semibold", className: I.Vd, children: r }),
+                                        (0, i.jsx)(d.E, { variant: "body-xs/normal", children: o }),
+                                        g &&
+                                            (0, i.jsx)(d.E, {
                                                 variant: "body-xs/normal",
                                                 color: "text-muted",
-                                                className: _.h8,
-                                                children: I.intl.formatToPlainString(I.t.Hu4jfi, { date: k }),
+                                                className: I.h8,
+                                                children: b.intl.formatToPlainString(b.t.Hu4jfi, { date: k }),
                                             }),
                                         h &&
                                             null != S &&
-                                            (0, t.jsx)(d.E, {
+                                            (0, i.jsx)(d.E, {
                                                 variant: "body-xs/normal",
                                                 color: "text-muted",
-                                                className: _.h8,
-                                                children: I.intl.formatToPlainString(I.t.PPL1Il, { days: S.days }),
+                                                className: I.h8,
+                                                children: b.intl.formatToPlainString(b.t.PPL1Il, { days: S.days }),
                                             }),
                                     ],
                                 }),
@@ -80,65 +80,65 @@ i.d(
                         s,
                     );
                 });
-            function P() {
-                ((0, E.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: b }),
-                    i?.());
+            function G() {
+                ((0, x.pX)(T.BVt.APPLICATION_STORE, { source: o.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: _ }),
+                    t?.());
             }
-            return (0, t.jsxs)(r.EO, {
+            return (0, i.jsxs)(l.EO, {
                 "data-migration-pending": !0,
                 transitionState: s,
-                "aria-labelledby": y,
-                className: e()(_.kL, "theme-dark"),
+                "aria-labelledby": D,
+                className: e()(I.kL, "theme-dark"),
                 parentComponent: "EvolvingTenureBadgeModal",
                 children: [
-                    (0, t.jsx)(r.s_, { "data-migration-pending": !0, onClick: i, className: _.b }),
-                    (0, t.jsx)(r.$m, {
+                    (0, i.jsx)(l.s_, { "data-migration-pending": !0, onClick: t, className: I.b }),
+                    (0, i.jsx)(l.$m, {
                         "data-migration-pending": !0,
-                        className: _.Qs,
+                        className: I.Qs,
                         children: L
-                            ? (0, t.jsxs)(t.Fragment, {
+                            ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, t.jsx)(d.E, {
+                                      (0, i.jsx)(d.E, {
                                           variant: "display-md",
-                                          className: _.wx,
-                                          children: I.intl.string(I.t.Og62j7),
+                                          className: I.wx,
+                                          children: b.intl.string(b.t.Og62j7),
                                       }),
-                                      (0, t.jsx)(d.E, {
+                                      (0, i.jsx)(d.E, {
                                           variant: "body-md/medium",
-                                          className: _.uI,
-                                          children: I.intl.string(I.t.IdAP91),
+                                          className: I.uI,
+                                          children: b.intl.string(b.t.IdAP91),
                                       }),
-                                      (0, t.jsx)("div", { className: _.C_, children: O }),
+                                      (0, i.jsx)("div", { className: I.C_, children: O }),
                                       null != n &&
                                           n.userId !== f?.id &&
-                                          (0, t.jsx)(c.wL, {
+                                          (0, i.jsx)(c.wL, {
                                               "data-migration-pending": !0,
-                                              className: _.AJ,
-                                              onClick: P,
-                                              children: I.intl.string(I.t.hvVgAZ),
+                                              className: I.AJ,
+                                              onClick: G,
+                                              children: b.intl.string(b.t.hvVgAZ),
                                           }),
                                   ],
                               })
-                            : (0, t.jsxs)(t.Fragment, {
+                            : (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, t.jsx)(d.E, {
+                                      (0, i.jsx)(d.E, {
                                           variant: "display-md",
-                                          className: _.wx,
-                                          children: I.intl.string(I.t.RtGeFS),
+                                          className: I.wx,
+                                          children: b.intl.string(b.t.RtGeFS),
                                       }),
-                                      (0, t.jsx)(d.E, {
+                                      (0, i.jsx)(d.E, {
                                           variant: "body-md/medium",
-                                          className: _.uI,
-                                          children: I.intl.format(I.t.ffatnT, { onClick: P }),
+                                          className: I.uI,
+                                          children: b.intl.format(b.t.ffatnT, { onClick: G }),
                                       }),
-                                      (0, t.jsx)("div", { className: _.C_, children: O }),
-                                      (0, t.jsx)(p.A, {
-                                          className: _.xF,
-                                          premiumModalAnalyticsLocation: { page: A.liQ.TIERED_TENURE_BADGES_MODAL },
-                                          textOptions: { subscribeText: I.intl.string(I.t.JST6jl) },
-                                          subscriptionTier: v.pe.TIER_2,
+                                      (0, i.jsx)("div", { className: I.C_, children: O }),
+                                      (0, i.jsx)(h.A, {
+                                          className: I.xF,
+                                          premiumModalAnalyticsLocation: { page: T.liQ.TIERED_TENURE_BADGES_MODAL },
+                                          textOptions: { subscribeText: b.intl.string(b.t.JST6jl) },
+                                          subscriptionTier: A.pe.TIER_2,
                                           showGradient: !0,
-                                          color: l.XD.BRAND,
+                                          color: r.XD.BRAND,
                                       }),
                                   ],
                               }),
