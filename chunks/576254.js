@@ -1,8 +1,8 @@
-n.d(t, { $X: () => d, Lz: () => o });
+n.d(t, { FL: () => d, $X: () => c, Lz: () => o });
 var i = n(855986),
     r = n(287809),
     a = n(945810),
-    s = n(189916);
+    s = n(773527);
 let l = (0, a.mj)({
     kind: "user",
     name: "2026-09-hexagon-campaign-client",
@@ -19,5 +19,12 @@ function o(e, t) {
     return (0, s.U5)({ perk: e, premiumType: a, isCampaignEnabled: n });
 }
 function d(e, t) {
+    return (0, s.U5)({
+        perk: e,
+        premiumType: r.default.getCurrentUser()?.premiumType,
+        isCampaignEnabled: l.getConfig({ location: t }).enabled,
+    });
+}
+function c(e, t) {
     return (0, s.YY)(e, r.default.getCurrentUser()?.premiumType, t);
 }
