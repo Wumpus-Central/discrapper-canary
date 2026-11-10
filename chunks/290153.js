@@ -1,4 +1,4 @@
-(n.d(t, { A: () => em }), n(321073));
+(n.d(t, { A: () => ef }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(607399),
@@ -85,8 +85,9 @@ var R = n(931664),
     H = n(490035),
     z = n(49999),
     q = n(698279),
-    $ = n(236432);
-function Q(e) {
+    $ = n(236432),
+    Q = n(298079);
+function Z(e) {
     let { targetElementRef: t, type: n, channelId: r } = e,
         a = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
         u = (0, H.H)("DefaultEmojisPopover"),
@@ -105,7 +106,7 @@ function Q(e) {
               graphic: {
                   type: "image",
                   src: a
-                      ? "https://cdn.discordapp.com/assets/content/5981958b8cc17387911929588ea3d63ce0b2d5469feb0d0b304482312f877a82.svg"
+                      ? Q.A
                       : "https://cdn.discordapp.com/assets/content/31005fc3700808e96f5863cc2e9396930e592fdffcd85e1ec942d10c8b3fc2c9.webp",
                   aspectRatio: "6/4",
               },
@@ -121,12 +122,12 @@ function Q(e) {
           })
         : null;
 }
-var Z = n(355622),
-    X = n(495088);
-let Y = i.memo(function (e) {
+var X = n(355622),
+    Y = n(495088);
+let J = i.memo(function (e) {
     let { disabled: t, type: n, channelId: r, ref: s } = e,
         [a, o, u, c] = (0, K.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], V.x),
-        d = n === Z.oU.NORMAL,
+        d = n === X.oU.NORMAL,
         h = i.useRef(null),
         m = i.useCallback(() => {
             (0, K.r$)(q.kx.EMOJI, n, r);
@@ -134,12 +135,12 @@ let Y = i.memo(function (e) {
     return t
         ? null
         : (0, l.jsxs)("div", {
-              className: E()(q.VQ, X.UD),
+              className: E()(q.VQ, Y.UD),
               ref: s,
               children: [
                   (0, l.jsx)(W.A, {
                       ref: h,
-                      className: X.Z8,
+                      className: Y.Z8,
                       onClick: m,
                       active: a === q.kx.EMOJI && o === n && c === r,
                       "aria-controls": u,
@@ -147,22 +148,22 @@ let Y = i.memo(function (e) {
                       focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
                       canShowNUXPremiumTooltip: d,
                   }),
-                  d && (0, l.jsx)(Q, { targetElementRef: h, type: n, channelId: r }),
+                  d && (0, l.jsx)(Z, { targetElementRef: h, type: n, channelId: r }),
               ],
           });
 });
-var J = n(530134),
-    ee = n(3203),
-    et = n(866665),
-    en = n(617617),
-    el = n(234320),
-    ei = n(243185);
-let er = i.memo(function (e) {
+var ee = n(530134),
+    et = n(3203),
+    en = n(866665),
+    el = n(617617),
+    ei = n(234320),
+    er = n(243185);
+let es = i.memo(function (e) {
     let { disabled: t, type: n, channel: r, ref: a } = e,
         [o, u] = i.useState(!1),
         c = (0, s.bG)(
-            [en.A],
-            () => o && Object.values(en.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
+            [el.A],
+            () => o && Object.values(el.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
         [d, h, m, f] = (0, K.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], V.x),
         g = i.useRef(0),
@@ -173,22 +174,22 @@ let er = i.memo(function (e) {
                     (u(!1), (g.current = 0));
                 }, 2e3)));
         }, []);
-    (0, el.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
+    (0, ei.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
     let S = i.useCallback(() => {
             (0, K.r$)(q.kx.GIF, n, r.id);
         }, [n, r.id]),
-        { Component: y, events: C, play: A } = (0, ee.V)();
+        { Component: y, events: C, play: A } = (0, et.V)();
     if (t) return null;
     let b = d === q.kx.GIF && h === n && f === r.id;
-    return (0, l.jsx)(et.m, {
+    return (0, l.jsx)(en.m, {
         text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
         shouldShow: c,
         forceOpen: c,
         children: (0, l.jsx)("div", {
             ref: a,
-            className: E()(q.VQ, X.UD),
-            children: (0, l.jsx)(ei.A, {
-                className: X.x6,
+            className: E()(q.VQ, Y.UD),
+            children: (0, l.jsx)(er.A, {
+                className: Y.x6,
                 onMouseEnter: C.onMouseEnter,
                 onMouseLeave: C.onMouseLeave,
                 onClick: () => {
@@ -205,30 +206,30 @@ let er = i.memo(function (e) {
         }),
     });
 });
-var es = n(307069),
-    ea = n(559647),
-    eo = n(757261);
-let eu = i.memo(function (e) {
+var ea = n(307069),
+    eo = n(559647),
+    eu = n(757261);
+let ec = i.memo(function (e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)("div", { className: eo.me }),
+            (0, l.jsx)("div", { className: eu.me }),
             (0, l.jsx)("div", {
-                className: eo.kL,
+                className: eu.kL,
                 children: (0, l.jsx)("div", {
-                    className: eo.UD,
-                    children: (0, l.jsx)(ei.A, {
-                        className: eo.x6,
-                        childClassName: E()(eo.Z4, { [eo.r9]: n, [eo.xb]: !n }),
+                    className: eu.UD,
+                    children: (0, l.jsx)(er.A, {
+                        className: eu.x6,
+                        childClassName: E()(eu.Z4, { [eu.r9]: n, [eu.xb]: !n }),
                         onClick: t,
                         disabled: n,
                         isActive: !1,
                         noHover: n,
                         "aria-label": T.intl.string(T.t.oeb1vg),
-                        children: (0, l.jsx)(ea.SendMessageIcon, {
+                        children: (0, l.jsx)(eo.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: eo.AO,
+                            className: eu.AO,
                         }),
                     }),
                 }),
@@ -236,9 +237,9 @@ let eu = i.memo(function (e) {
         ],
     });
 });
-var ec = n(744682);
-let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hover", start: 90, duration: 40 } },
-    eh = i.memo(function (e) {
+var ed = n(744682);
+let eh = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hover", start: 90, duration: 40 } },
+    em = i.memo(function (e) {
         let t,
             r,
             s,
@@ -266,7 +267,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             }, [])),
             (o = i.useCallback(
                 (e) =>
-                    (0, l.jsx)(ec.P, { ...e, src: () => n.e(2890).then(n.t.bind(n, 279825, 19)), ref: t, markers: ed }),
+                    (0, l.jsx)(ed.P, { ...e, src: () => n.e(2890).then(n.t.bind(n, 279825, 19)), ref: t, markers: eh }),
                 [],
             )),
             {
@@ -279,10 +280,10 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
         return u
             ? null
             : (0, l.jsx)("div", {
-                  className: E()(q.VQ, X.UD),
+                  className: E()(q.VQ, Y.UD),
                   ref: h,
-                  children: (0, l.jsx)(ei.A, {
-                      className: E()(X.x6, X.KE),
+                  children: (0, l.jsx)(er.A, {
+                      className: E()(Y.x6, Y.KE),
                       ...C,
                       onClick: () => {
                           (S(), A());
@@ -297,7 +298,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                   }),
               });
     }),
-    em = i.memo(function (e) {
+    ef = i.memo(function (e) {
         var t, n, x, E;
         let S,
             {
@@ -366,7 +367,7 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return l && i && null == r;
             })({ channel: A, chatInputType: y }),
-            ee = y.submit?.button != null && (y.submit?.ignorePreference || j),
+            X = y.submit?.button != null && (y.submit?.ignorePreference || j),
             et = (0, O.A)(A, y);
         ((t = A.id),
             (S = (0, L.wX)()),
@@ -388,28 +389,28 @@ let ed = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 null == K &&
                 !z &&
                 (null == Q || U.Ay.isPremiumEligible(Q)) &&
-                q.push((0, l.jsx)(es.A, { disabled: C, channel: A }, "gift")),
+                q.push((0, l.jsx)(ea.A, { disabled: C, channel: A }, "gift")),
             y.gifs?.button != null &&
                 null == K &&
                 v &&
                 B &&
                 !N &&
-                q.push((0, l.jsx)(er, { disabled: C, type: y, channel: A }, "gif")),
+                q.push((0, l.jsx)(es, { disabled: C, type: y, channel: A }, "gif")),
             y.stickers?.button != null &&
                 null == K &&
                 v &&
                 F &&
                 !N &&
-                q.push((0, l.jsx)(eh, { disabled: C, type: y, channel: A }, "sticker"))),
+                q.push((0, l.jsx)(em, { disabled: C, type: y, channel: A }, "sticker"))),
         y.emojis?.button != null &&
             !N &&
             en &&
             (v || N
-                ? W && q.push((0, l.jsx)(Y, { disabled: C, type: y, channelId: A.id }, "emoji"))
-                : q.push((0, l.jsx)(J.A, { disabled: C, type: y, channel: A }, "expression"))),
+                ? W && q.push((0, l.jsx)(J, { disabled: C, type: y, channelId: A.id }, "emoji"))
+                : q.push((0, l.jsx)(ee.A, { disabled: C, type: y, channel: A }, "expression"))),
         Z && V && q.push((0, l.jsx)(_, { channelId: A.id, type: y }, "appLauncher")),
-        ee && q.push((0, l.jsx)(eu, { onClick: b, disabled: C || G }, "submit")),
+        X && q.push((0, l.jsx)(ec, { onClick: b, disabled: C || G }, "submit")),
         0 === q.length)
             ? null
-            : (0, l.jsx)("div", { className: X.Uo, children: q });
+            : (0, l.jsx)("div", { className: Y.Uo, children: q });
     });

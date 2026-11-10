@@ -141,7 +141,7 @@ var er = n(458350),
     ec = n(86944),
     eh = n(915089),
     eg = n(375499),
-    ep = n(920134),
+    ep = n(863576),
     eA = n(770335),
     em = n(611371),
     eE = n(769015);
@@ -317,8 +317,8 @@ function e9(e) {
               ),
           });
 }
-var e2 = n(746080),
-    e6 = n(290261),
+var e6 = n(746080),
+    e2 = n(290261),
     te = n(307731),
     tt = n(818348),
     tn = n(354817),
@@ -612,7 +612,7 @@ class tu extends a.PureComponent {
                 contentFlags: b,
             } = this.state,
             N = ta(A),
-            S = ((A === tl ? e2.lx.IS_GAME_INVITES_CHANNEL : null) ?? 0) | b | ((l?.flags ?? 0) & eM),
+            S = ((A === tl ? e6.lx.IS_GAME_INVITES_CHANNEL : null) ?? 0) | b | ((l?.flags ?? 0) & eM),
             f = (function (e) {
                 if (e === tl) return [{ name: "No Mic" }];
             })(A),
@@ -634,9 +634,9 @@ class tu extends a.PureComponent {
                         let { row: n } = e;
                         null != n.id &&
                             "" !== n.id &&
-                            (n.rowType === e6.T6.ROLE
+                            (n.rowType === e2.T6.ROLE
                                 ? t.push((0, eQ.j)(n.id, ei.r2.ROLE))
-                                : n.rowType === e6.T6.MEMBER && t.push((0, eQ.j)(n.id, ei.r2.MEMBER)));
+                                : n.rowType === e2.T6.MEMBER && t.push((0, eQ.j)(n.id, ei.r2.MEMBER)));
                     }));
             }
             this.setState({ errors: {}, submitting: !0 });
