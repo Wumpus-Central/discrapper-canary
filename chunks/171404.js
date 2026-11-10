@@ -18640,7 +18640,7 @@ function pz(e, t) {
     return a;
 }
 function pK(e, t) {
-    return e5().merge(e5().cloneDeep(pb.X), { isSpatial: t }, e);
+    return e5().merge(e5().cloneDeep(pb.X), e5().cloneDeep(t), e);
 }
 function pY(e, t) {
     let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pb.X;
@@ -18782,9 +18782,12 @@ function pQ() {
             overrides: px.A.getSpatialAudioOverrides(),
             spatialEnabled: px.A.isSpatialAudioEnabled(),
         })),
-        { enabled: a } = pv.A.useConfig({ location: "DevToolsSpatialAudioPanel" }),
-        n = t && a,
-        l = (function (e, t) {
+        { enabled: a, positioningModel: n } = pv.A.useConfig({ location: "DevToolsSpatialAudioPanel" }),
+        l = o.useMemo(
+            () => ({ isSpatial: t && a, positioning: { model: px.A.getExperimentPositioningModel(n) } }),
+            [t, a, n],
+        ),
+        i = (function (e, t) {
             let [a, n] = o.useState(() => e5().omit(tQ.w.get(pV) ?? {}, pW)),
                 l = [pW, ...Object.keys(a).sort((e, t) => e.localeCompare(t))];
             function i(e) {
@@ -18824,39 +18827,39 @@ function pQ() {
                     return (d({ ...a, [n]: t }), r(n), pi.default.setSpatialAudioOverrides(e5().cloneDeep(t)), n);
                 },
             };
-        })(e, n),
-        { baseline: i } = l,
-        s = o.useMemo(() => pK(e, n), [e, n]),
-        c = o.useMemo(() => pK(i, n), [i, n]),
-        m = pY(s, c),
-        h = o.useMemo(
+        })(e, l),
+        { baseline: s } = i,
+        c = o.useMemo(() => pK(e, l), [e, l]),
+        m = o.useMemo(() => pK(s, l), [s, l]),
+        h = pY(c, m),
+        p = o.useMemo(
             () => ({
-                resolved: s,
-                isOverridden: (e) => !e5().isEqual(e5().get(s, e), e5().get(c, e)),
+                resolved: c,
+                isOverridden: (e) => !e5().isEqual(e5().get(c, e), e5().get(m, e)),
                 set: (t, a) =>
                     pi.default.setSpatialAudioOverrides(
-                        "isSpatial" !== t || e5().has(i, t) || a !== e5().get(c, t)
+                        "isSpatial" !== t || e5().has(s, t) || a !== e5().get(m, t)
                             ? e5().set(e5().cloneDeep(e), t, a)
                             : pS(e, t),
                     ),
                 reset: (t) =>
                     pi.default.setSpatialAudioOverrides(
-                        e5().has(i, t) ? e5().set(e5().cloneDeep(e), t, e5().cloneDeep(e5().get(i, t))) : pS(e, t),
+                        e5().has(s, t) ? e5().set(e5().cloneDeep(e), t, e5().cloneDeep(e5().get(s, t))) : pS(e, t),
                     ),
             }),
-            [e, i, s, c],
+            [e, s, c, m],
         );
     return (0, r.jsx)(x.Ip, {
         className: t2.nd,
         children: (0, r.jsx)(pE.Provider, {
-            value: h,
+            value: p,
             children: (0, r.jsxs)("div", {
                 className: pj.kL,
                 children: [
-                    (0, r.jsx)(pJ, { overrides: e, modified: m > 0, profiles: l }),
+                    (0, r.jsx)(pJ, { overrides: e, modified: h > 0, profiles: i }),
                     (0, r.jsx)(p$, {
-                        overrideCount: m,
-                        onResetAll: () => pi.default.setSpatialAudioOverrides(e5().cloneDeep(i)),
+                        overrideCount: h,
+                        onResetAll: () => pi.default.setSpatialAudioOverrides(e5().cloneDeep(s)),
                     }),
                     (0, r.jsxs)(u.n, {
                         label: "Output",

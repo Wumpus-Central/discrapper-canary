@@ -1938,7 +1938,8 @@
     "kind": "user",
     "defaultConfig": {
       "enabled": false,
-      "defaultOn": false
+      "defaultOn": false,
+      "positioningModel": ""
     },
     "variations": {
       "0": {
@@ -1947,7 +1948,13 @@
       },
       "1": {
         "enabled": true,
-        "defaultOn": true
+        "defaultOn": true,
+        "positioningModel": ""
+      },
+      "2": {
+        "enabled": true,
+        "defaultOn": true,
+        "positioningModel": "conversation"
       }
     }
   },

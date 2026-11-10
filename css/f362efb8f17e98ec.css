@@ -334,6 +334,7 @@
 
 .clickableOverlay_-l8fcd {
     border-radius: inherit;
+    cursor: pointer;
     inset: 0;
     position: absolute;
     z-index: 1
@@ -495,4 +496,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=d45c85d92b389af0.css.map*/
+/*# sourceMappingURL=f362efb8f17e98ec.css.map*/
