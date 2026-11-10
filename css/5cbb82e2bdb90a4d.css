@@ -663,11 +663,81 @@
     height: 100%
 }
 
+.container_4RYWy2 {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden
+}
+
+.loaderContainer_4RYWy2 {
+    padding: 64px 0
+}
+
+.loadingText_4RYWy2 {
+    margin-bottom: 24px;
+    text-align: center
+}
+
+.header_4RYWy2 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    display: flex;
+    padding: 16px
+}
+
+.headerIcon_4RYWy2 {
+    margin-inline-end: 16px
+}
+
+.checklistItem_4RYWy2 {
+    display: flex;
+    padding: 16px
+}
+
+.separator_4RYWy2 {
+    background-color: var(--border-muted);
+    border: none;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 16px;
+    position: relative
+}
+
+.checklistIcon_4RYWy2 {
+    flex: 0 0 20px;
+    margin-inline-end: 16px
+}
+
+.checklistText_4RYWy2 {
+    flex: 1 1 auto
+}
+
+.doesNot_4RYWy2 {
+    color: var(--text-feedback-critical)
+}
+
+.healthPending_4RYWy2 {
+    color: var(--text-feedback-warning)
+}
+
+.healthFailingDescription_4RYWy2 {
+    margin-bottom: 8px
+}
+
+.indent_4RYWy2 {
+    margin-inline-start: 16px
+}
+
 .settingsColumn_BFckb0 {
     max-width: var(--custom-guild-settings-discovery-landing-page-max-width-tab)
 }
 
-.settingsContainer_BFckb0 {}
+.settingsContainer_BFckb0 {
+    container-type: inline-size;
+}
 
 .settingsScroller_BFckb0 {}
 
@@ -701,8 +771,7 @@
 
 .checklist_BFckb0 {
     background-color: var(--background-base-low);
-    flex-basis: 248px;
-    flex-grow: 0;
+    flex: 0 0 248px;
     margin-inline-start: 40px;
     position: sticky;
     top: 16px
@@ -864,4 +933,30 @@
     background-image: url("/assets/b00e3f0a7090b61f.svg")
 }
 
-/*# sourceMappingURL=a1b258fa26bf5b64.css.map*/
+.hint_BFckb0:hover {
+    text-decoration: underline
+}
+
+@container (max-width: 800px) {
+    .container_BFckb0 {
+        flex-direction: column;
+        gap: var(--space-40)
+    }
+
+    .mainContent_BFckb0 {
+        min-width: 0
+    }
+
+    .checklist_BFckb0,
+    .mainContent_BFckb0 {
+        flex-basis: auto;
+        width: 100%
+    }
+
+    .checklist_BFckb0 {
+        margin-inline-start: 0;
+        position: static
+    }
+}
+
+/*# sourceMappingURL=5cbb82e2bdb90a4d.css.map*/

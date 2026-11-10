@@ -10,4 +10,5 @@ e.exports = {
     Au: "socialLinksContainer_BFckb0",
     $U: "imageUploaderInnerSquare_BFckb0",
     z3: "error_BFckb0",
+    aK: "hint_BFckb0",
 };

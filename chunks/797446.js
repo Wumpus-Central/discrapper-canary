@@ -313,8 +313,7 @@ function _(e, n, l) {
         case o.rX.TERMS:
             return (0, r.mM)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e(289789),
-                    t.e(977412),
+                    t.e(242517),
                     t.e(955424),
                     t.e(890152),
                     t.e(78618),
@@ -348,8 +347,7 @@ function k(e, n, l) {
         case o.rX.TERMS:
             return (0, r.mM)(async () => {
                 let { default: s } = await Promise.all([
-                    t.e(289789),
-                    t.e(977412),
+                    t.e(242517),
                     t.e(955424),
                     t.e(890152),
                     t.e(78618),
