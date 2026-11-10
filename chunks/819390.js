@@ -7780,7 +7780,7 @@ let cY = (0, h.zZ)(S.X.REDEEM_GIFT_CATEGORY, {
     });
 var cq = n(659758),
     cQ = n(839667),
-    cJ = n(877624),
+    cJ = n(517352),
     c$ = n(831259),
     c0 = n(462887),
     c1 = n(73825),
@@ -8801,10 +8801,8 @@ let gW = function () {
             [r, a] = x.useState(!0),
             o = (0, c2.A)({ forceFetch: !0 }),
             u = (0, I.bG)([d4.A], () => {
-                let e = d4.A.getMarketingComponentByType(cJ.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
-                return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
-                    ? null
-                    : e.properties.properties.billingSettingsNitroGiftBanner;
+                let e = d4.A.getMarketingComponentBySurface(cJ.oW.BILLING_SETTINGS_NITRO_GIFT_BANNER);
+                return e?.surface ?? null;
             }),
             d = !(oF.Fr || oF.v1) && null != u;
         (0, gl.i)();

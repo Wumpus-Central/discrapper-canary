@@ -1,5 +1,5 @@
 var o = n(477900),
-    l = n(877624),
+    l = n(517352),
     a = n(855986),
     r = n(417098),
     i = n(597770),
@@ -25,10 +25,8 @@ n.d(
                     location: "gift-promotion-reminder-nagbar",
                 }),
                 I = (0, a.bG)([u.A], () => {
-                    let e = u.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
-                    return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
-                        ? null
-                        : e.properties.properties.giftReminderNagbar;
+                    let e = u.A.getMarketingComponentBySurface(l.oW.GIFT_REMINDER_NAGBAR);
+                    return e?.surface ?? null;
                 });
             return null == I
                 ? null
