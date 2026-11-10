@@ -30,6 +30,7 @@ var i,
         (i[(i.SHOP_COACHMARK = 27)] = "SHOP_COACHMARK"),
         (i[(i.NITRO_PERK_CARD = 33)] = "NITRO_PERK_CARD"),
         (i[(i.COLLECTION_PAGE_MARKETING_BLOCK = 34)] = "COLLECTION_PAGE_MARKETING_BLOCK"),
+        (i[(i.GAME_EXIT_PANEL = 35)] = "GAME_EXIT_PANEL"),
         i);
 n.d(
     t,
@@ -66,6 +67,7 @@ n.d(
             27: "shopCoachmark",
             33: "nitroPerkCard",
             34: "collectionPageMarketingBlock",
+            35: "gameExitPanel",
         },
         oW: r,
     },
