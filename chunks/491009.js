@@ -1,4 +1,4 @@
-(n.d(t, { A: () => H }), n(321073), n(938796));
+(n.d(t, { A: () => W }), n(321073), n(938796));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -50,8 +50,9 @@ var O = n(155718),
     G = n(652215);
 let x = [],
     k = {},
-    F = null;
-function B() {
+    F = new Set(),
+    B = null;
+function V() {
     let e = [],
         t = y.G2.getSetting();
     null != t &&
@@ -74,8 +75,8 @@ function B() {
             n = null;
         (e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
-            null != n ? (null == F && (F = n.start ?? Date.now()), (d = n)) : (F = null));
-    } else F = null;
+            null != n ? (null == B && (B = n.start ?? Date.now()), (d = n)) : (B = null));
+    } else B = null;
     let c = null != d ? h.Ay.getSdkResolutionForPID(d.pid) : void 0,
         u = null != c && c.type !== p.r.UNRESOLVED ? c.game.id : void 0,
         _ = w.A.getRemoteActivities(),
@@ -115,17 +116,20 @@ function B() {
             type: o.$.PLAYING,
             name: d.name,
             application_id: d.id ?? t?.id,
-            timestamps: { start: F ?? d.start },
+            timestamps: { start: B ?? d.start },
             ...(0, R.CO)(d),
         });
     }
     let T = L.A.getActivity();
     return (null != T && e.push({ type: o.$.LISTENING, ...T }), !r()(x, e) && ((x = e), !0));
 }
-class V extends c.Ay.Store {
+function H(e) {
+    return e.platform === l.y.EMBEDDED && !(0, E.e)(e);
+}
+class j extends c.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(A.A, b.A, v.A, _.Ay, M.A, C, P.A, h.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => B()));
+        (this.waitFor(A.A, b.A, v.A, _.Ay, M.A, C, P.A, h.Ay, U.Ay, w.A, I.A, L.A, D.A), this.syncWith([C], () => V()));
     }
     getActivities() {
         return x;
@@ -150,39 +154,44 @@ class V extends c.Ay.Store {
         return null;
     }
 }
-let H = new V(u.h, {
-    ROBLOX_SUBGAME_UPDATE: B,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: B,
+let W = new j(u.h, {
+    ROBLOX_SUBGAME_UPDATE: V,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: V,
     OVERLAY_INITIALIZE: function (e) {
         let { localActivities: t } = e;
-        ((k = { ...t }), B());
+        ((k = { ...t }), V());
     },
     START_SESSION: function () {
-        ((k = {}), B());
+        ((k = {}), F.clear(), V());
     },
     LOCAL_ACTIVITY_UPDATE: function (e) {
         let { socketId: t, pid: n, activity: i, partyPrivacy: a } = e,
-            s = null == i ? null == k[t] : r()(k[t], [n, i, a]);
-        s || (null != i ? (k[t] = [n, i, a]) : delete k[t]);
-        let l = B();
-        return !s || l;
+            s = i?.application_id;
+        if (null != i && null != s && H(i) && F.has(s)) {
+            if (!_.Ay.getSelfEmbeddedActivities().has(s)) return !1;
+            F.delete(s);
+        }
+        let l = null == i ? null == k[t] : r()(k[t], [n, i, a]);
+        l || (null != i ? (k[t] = [n, i, a]) : delete k[t]);
+        let o = V();
+        return !l || o;
     },
     RPC_APP_DISCONNECTED: function (e) {
         let { socketId: t } = e;
-        (delete k[t], B());
+        (delete k[t], V());
     },
-    RUNNING_GAMES_CHANGE: B,
-    SOCIAL_SDK_GAMES_UPDATE: B,
-    APPLICATION_FETCH_SUCCESS: B,
-    APPLICATIONS_FETCH_SUCCESS: B,
-    GAMES_DATABASE_UPDATE: B,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: B,
-    SPOTIFY_PLAYER_STATE: B,
-    SPOTIFY_PLAYER_PLAY: B,
-    STREAMING_UPDATE: B,
-    USER_CONNECTIONS_UPDATE: B,
-    STREAM_START: B,
-    STREAM_STOP: B,
+    RUNNING_GAMES_CHANGE: V,
+    SOCIAL_SDK_GAMES_UPDATE: V,
+    APPLICATION_FETCH_SUCCESS: V,
+    APPLICATIONS_FETCH_SUCCESS: V,
+    GAMES_DATABASE_UPDATE: V,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: V,
+    SPOTIFY_PLAYER_STATE: V,
+    SPOTIFY_PLAYER_PLAY: V,
+    STREAMING_UPDATE: V,
+    USER_CONNECTIONS_UPDATE: V,
+    STREAM_START: V,
+    STREAM_STOP: V,
     USER_SETTINGS_PROTO_UPDATE: function () {
         (!(function () {
             let e = {},
@@ -200,8 +209,17 @@ let H = new V(u.h, {
             }
             t && (k = e);
         })(),
-            B());
+            V());
     },
-    EMBEDDED_ACTIVITY_CLOSE: B,
-    RUNNING_GAME_TOGGLE_DETECTION: B,
+    EMBEDDED_ACTIVITY_CLOSE: function (e) {
+        let { applicationId: t } = e;
+        F.add(t);
+        let n = s().omitBy(k, (e) => {
+                let [, n] = e;
+                return n.application_id === t && H(n);
+            }),
+            i = s().size(n) !== s().size(k);
+        return ((k = n), V() || i);
+    },
+    RUNNING_GAME_TOGGLE_DETECTION: V,
 });
