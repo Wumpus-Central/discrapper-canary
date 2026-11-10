@@ -50,7 +50,6 @@ e.exports = {
     Gl: "volumePopout_hFq1lM",
     qp: "playbackSpeedPopout_hFq1lM",
     xl: "playbackSpeedHeading_hFq1lM",
-    hA: "contentHeaderGameInfo_hFq1lM",
     iM: "accentOnHover_hFq1lM",
     BG: "transcriptOverlay_hFq1lM",
     xr: "transcriptCont_hFq1lM",

@@ -710,10 +710,11 @@ function eg(e) {
             onClose: n,
         }),
         footer: (0, r.jsx)(v.A, {
-            prefix: (0, r.jsx)(S, { iconImageUri: R.iconImageUri, size: "sm" }),
             advertiserDetails: (0, r.jsx)(C.A, {
+                prefix: (0, r.jsx)(S, { iconImageUri: R.iconImageUri, size: "sm" }),
                 title: T,
                 subtitle: P.intl.string(P.t.o6FLcF),
+                isFlush: !0,
                 onClick: () => x(p.uF.VIDEO_MODAL),
             }),
             primaryAction: (0, r.jsx)(l.$, {
