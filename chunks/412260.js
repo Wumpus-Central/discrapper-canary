@@ -129,12 +129,14 @@ class F extends s.Ay.PersistedStore {
               ? [U]
               : (L.get(t)?.get(e) ?? []);
     }
-    getMarketingComponentsByTypeAcrossPromotions(e) {
+    getMarketingComponentsBySurfaceAcrossPromotions(e) {
+        if (!(0, f.Uy)(e)) return [];
+        let t = a.bt[e];
         return null != D && u.default.getCurrentUser()?.isStaff() === !0
-            ? this.campaignOverrideComponents.filter((t) => t.componentType === e)
-            : U?.componentType === e
+            ? this.campaignOverrideComponents.filter((e) => e.properties.properties.oneofKind === t)
+            : U?.properties.properties.oneofKind === t
               ? [U]
-              : (R.get(e) ?? []);
+              : (y.get(t) ?? []);
     }
     get campaignOverrideId() {
         return u.default.getCurrentUser()?.isStaff() !== !0 ? null : (D?.promotionId ?? null);

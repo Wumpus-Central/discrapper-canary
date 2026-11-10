@@ -704,7 +704,7 @@ if (null == e7 || "0.0.0" !== e7.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 670846, Version Hash: 4001bdcac9e1260d6efc01e04404bfba70a2fde1`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 670864, Version Hash: 3c9c62f331080048a1a028c1bf8e836542ac944b`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -776,7 +776,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670846";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670864";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
         let s = ej?.processUtils?.getLastCrash;
@@ -2569,8 +2569,8 @@ let rp = (0, rt.Fe)({
             n.e(433452),
             n.e(959275),
             n.e(624649),
-        ]).then(n.bind(n, 519954)),
-    webpackId: 519954,
+        ]).then(n.bind(n, 867130)),
+    webpackId: 867130,
 });
 var rm = n(499466),
     rT = n(751841);
@@ -15848,7 +15848,7 @@ let IJ = "isHideDevBanner",
                     className: tc()(IQ.Wz, IQ.mr),
                     children: [
                         (0, P.jsx)(Iq, { className: IQ.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "670846" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "670864" }),
                         (0, P.jsx)(r, {}),
                     ],
                 })
