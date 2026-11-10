@@ -52,6 +52,12 @@ class f extends l.Ay.PersistedStore {
             return 0 !== t;
         });
     }
+    getLastChannelId(e) {
+        return _.find((t) => {
+            let { id: n } = t;
+            return n === e;
+        })?.lastChannelId;
+    }
     getHasLoggedInAccounts() {
         return _.length > 0;
     }
@@ -100,6 +106,10 @@ let h = new f(o.h, {
                 return t !== i;
             })),
             (i = null));
+    },
+    MULTI_ACCOUNT_SWITCH_START: function (e) {
+        let { lastChannelId: t } = e;
+        _ = _.map((e) => (e.id === i ? { ...e, lastChannelId: t } : e));
     },
     MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => A(e.userId, 1),
     MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => A(e.userId, 2),

@@ -1,13 +1,16 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var i = n(858899),
     r = n(192308),
     a = n(976860),
     s = n(73153),
     l = n(439372),
     o = n(868),
-    d = n(287809),
-    c = n(376463);
-class u extends l.A {
+    d = n(378570),
+    c = n(734057),
+    u = n(287809),
+    _ = n(274303),
+    E = n(376463);
+class A extends l.A {
     actions = {
         LOGOUT: (e) => this.handleLogout(e),
         MULTI_ACCOUNT_SWITCH_START: (e) => this.handleMultiAccountSwitchStart(e),
@@ -25,35 +28,39 @@ class u extends l.A {
         (0, o.m)(e.targetUserId);
     }
     handleConnectionOpen = () => {
-        let e = c.A.getSwitchResult();
+        let e = E.A.getSwitchResult();
         if (null == e) return;
-        let t = d.default.getCurrentUser();
+        let t = u.default.getCurrentUser();
         null != t &&
             (e.success ? this.onSwitchSuccess(t, e.navigateHome) : this.onSwitchError(t),
             (0, o.m)(null),
             this.onSwitchComplete());
     };
+    transitionToLastChannel(e) {
+        let t = _.A.getLastChannelId(e);
+        return null != t && null != c.A.getChannel(t) && ((0, d.iN)(t, { navigationReplace: !0 }), !0);
+    }
 }
-var _ = n(573879),
-    E = n(652215),
-    A = n(792996);
-let f = "SWITCH_ACCOUNTS_TOAST",
-    h = new (class extends u {
+var f = n(573879),
+    h = n(652215),
+    I = n(792996);
+let p = "SWITCH_ACCOUNTS_TOAST",
+    m = new (class extends A {
         onSwitchStart() {}
         onSwitchSuccess(e, t) {
             setTimeout(() => {
-                (t && (0, a.pX)(E.BVt.ME),
+                (t && !this.transitionToLastChannel(e.id) && (0, a.pX)(h.BVt.ME),
                     (0, i.P0)({
-                        text: A.intl.formatToPlainString(A.t.wx7O3L, { username: e.username }),
+                        text: I.intl.formatToPlainString(I.t.wx7O3L, { username: e.username }),
                         variant: "success",
-                        toastKey: f,
+                        toastKey: p,
                     }));
             }, 100);
         }
         onSwitchError() {
-            (0, i.P0)({ text: A.intl.string(A.t.pqvKWA), variant: "critical", toastKey: f });
+            (0, i.P0)({ text: I.intl.string(I.t.pqvKWA), variant: "critical", toastKey: p });
         }
         onSwitchComplete() {
-            ((0, r.Oo)(_.ov), (0, r.Oo)(_.Gl));
+            ((0, r.Oo)(f.ov), (0, r.Oo)(f.Gl));
         }
     })();
