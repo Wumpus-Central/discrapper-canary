@@ -44,7 +44,7 @@ function M() {
 }
 function U() {
     let e = !1;
-    if (null == i || b(i)) {
+    if (null == i || D || b(i)) {
         if (null == i) {
             let t = P();
             null != t && ((i = t), (e = !0));
@@ -109,7 +109,7 @@ class F extends a.Ay.PersistedStore {
             let e = v(E.A.getSyncedClientTheme(E.A.systemTheme)?.backgroundGradientPresetId);
             return L ? (D ? i : null != e && (0, c.oB)(e.id) ? e : void 0) : e;
         }
-        return null != i && b(i) ? i : void 0;
+        return null != i && (D || b(i)) ? i : void 0;
     }
     getLinearGradient() {
         return null == this.gradientPreset ? null : (0, C.FK)(this.gradientPreset);
@@ -131,7 +131,7 @@ class F extends a.Ay.PersistedStore {
 let B = new F(l.h, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
         let { presetId: t } = e;
-        if (((D = L && null != t && !(0, c.oB)(t)), null == t)) {
+        if (((D = L && null != t && (!(0, c.oB)(t) || !!(0, d.$X)(R.vB.CLIENT_THEME))), null == t)) {
             i = void 0;
             return;
         }

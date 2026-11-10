@@ -31,6 +31,8 @@ var i,
         (i[(i.NITRO_PERK_CARD = 33)] = "NITRO_PERK_CARD"),
         (i[(i.COLLECTION_PAGE_MARKETING_BLOCK = 34)] = "COLLECTION_PAGE_MARKETING_BLOCK"),
         (i[(i.GAME_EXIT_PANEL = 35)] = "GAME_EXIT_PANEL"),
+        (i[(i.ANNOUNCEMENT_MODAL_VIDEO_LED = 36)] = "ANNOUNCEMENT_MODAL_VIDEO_LED"),
+        (i[(i.ANNOUNCEMENT_MODAL_PANEL = 37)] = "ANNOUNCEMENT_MODAL_PANEL"),
         i);
 n.d(
     t,
@@ -68,6 +70,8 @@ n.d(
             33: "nitroPerkCard",
             34: "collectionPageMarketingBlock",
             35: "gameExitPanel",
+            36: "announcementModalVideoLed",
+            37: "announcementModalPanel",
         },
         oW: r,
     },

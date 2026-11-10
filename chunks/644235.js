@@ -6,6 +6,9 @@ var a = n(185928),
 function l(e) {
     return (0, r.M)(e) ? s.NJ.DARK : s.NJ.LIGHT;
 }
+function o(e) {
+    return null != e && e.colors.length > 0;
+}
 n.d(
     t,
     {},
@@ -20,11 +23,12 @@ n.d(
                 .join(", ")})`;
         },
         GX: function (e, t) {
-            return null != t && t.colors.length > 0 ? l(e) : e;
+            return o(t) ? l(e) : e;
         },
         PC: function (e) {
             return l(a.dP[e]);
         },
         Zu: l,
+        lo: o,
     },
 );
