@@ -35,25 +35,24 @@ r.d(
                             r.e(893190),
                             r.e(489218),
                             r.e(912875),
-                            r.e(713708),
                             r.e(862782),
                             r.e(55348),
+                            r.e(713708),
                             r.e(885533),
                             r.e(21921),
                             r.e(189673),
-                            r.e(638221),
+                            r.e(592028),
                             r.e(571210),
+                            r.e(425906),
+                            r.e(123216),
                             r.e(576432),
                             r.e(797558),
                             r.e(676418),
-                            r.e(592028),
-                            r.e(425906),
-                            r.e(123216),
-                            r.e(451162),
-                            r.e(166495),
-                            r.e(229787),
-                            r.e(88342),
                             r.e(182408),
+                            r.e(451162),
+                            r.e(229787),
+                            r.e(166495),
+                            r.e(88342),
                             r.e(936320),
                             r.e(482861),
                             r.e(830221),
@@ -97,7 +96,6 @@ r.d(
                             r.e(873786),
                             r.e(343116),
                             r.e(678195),
-                            r.e(951811),
                             r.e(557830),
                             r.e(470314),
                             r.e(70515),
@@ -117,8 +115,8 @@ r.d(
                     });
             },
             react(e, n, r) {
-                let { userId: o, channelId: i, parsedUserId: u, roleId: s, roleName: c, viewingChannelId: A } = e;
-                return null == o && (null != s || "@everyone" === c || "@here" === c)
+                let { userId: o, channelId: i, parsedUserId: u, roleId: c, roleName: s, viewingChannelId: A } = e;
+                return null == o && (null != c || "@everyone" === s || "@here" === s)
                     ? (0, t.jsx)(
                           l.A,
                           { inlinePreview: r.noStyleAndInteraction, ...e, children: n(e.content, r) },

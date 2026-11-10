@@ -46,20 +46,20 @@ function S(e) {
         { name: v, emojiId: E, emojiName: I } = l,
         S = null != A,
         [k, z] = s.useState(!1),
-        P = (0, d.bG)([x.Ay], () => (null != E ? x.Ay.getUsableCustomEmojiById(E) : null)),
-        R = S || null != b,
-        U = (!S || !k) && (null != E || null != I),
+        R = (0, d.bG)([x.Ay], () => (null != E ? x.Ay.getUsableCustomEmojiById(E) : null)),
+        U = S || null != b,
+        P = (!S || !k) && (null != E || null != I),
         T = 0 === n,
         _ = s.useRef(null),
         w = (0, d.bG)([p.Ay], () => p.Ay.keyboardModeEnabled),
         D = (0, a.jsxs)(a.Fragment, {
             children: [
-                U
+                P
                     ? (0, a.jsx)(g.A, {
                           className: o()(N.emoji, { [N.small]: T }),
                           emojiId: E,
                           emojiName: I,
-                          animated: !!P?.animated,
+                          animated: !!R?.animated,
                           size: "reaction",
                       })
                     : null,
@@ -83,10 +83,10 @@ function S(e) {
                 N.pill,
                 {
                     [N.disabled]: t,
-                    [N.clickable]: R,
+                    [N.clickable]: U,
                     [N.small]: T,
                     [N.selected]: C,
-                    [N[l.color]]: null != l.color && !R,
+                    [N[l.color]]: null != l.color && !U,
                 },
                 j,
             ),
@@ -101,7 +101,7 @@ function S(e) {
                         f.p5 &&
                         n &&
                         (0, y.L3)(e, async () => {
-                            let { default: e } = await Promise.all([i.e(638221), i.e(432612)]).then(i.bind(i, 960015));
+                            let { default: e } = await i.e(432612).then(i.bind(i, 960015));
                             return (i) => (0, a.jsx)(e, { ...i, tag: l });
                         })
                     )
@@ -111,7 +111,7 @@ function S(e) {
             onMouseLeave: () => S && z(!1),
         },
         G = (0, r.rm)(`forum-tag-${l.id}`);
-    return R
+    return U
         ? (0, a.jsx)(u.D, {
               ...G,
               innerRef: _,

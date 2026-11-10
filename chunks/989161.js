@@ -71,7 +71,6 @@ let _ = { width: 500, height: T.$V },
                 n.e(37085),
                 n.e(890027),
                 n.e(27773),
-                n.e(638221),
                 n.e(571210),
                 n.e(349460),
                 n.e(88342),
@@ -1186,7 +1185,7 @@ function tV(e) {
                 null == t
                     ? e.preventDefault()
                     : (0, tD.L3)(e, async () => {
-                          let { default: e } = await Promise.all([n.e(638221), n.e(715687)]).then(n.bind(n, 646938));
+                          let { default: e } = await n.e(715687).then(n.bind(n, 646938));
                           return (n) => (0, l.jsx)(e, { ...n, id: t, label: k.intl.string(k.t.oJ1Muw) });
                       });
             },
@@ -1478,9 +1477,9 @@ function nc(e, t, r, s, a) {
                                 n.e(508702),
                                 n.e(126437),
                                 n.e(481647),
+                                n.e(879315),
                                 n.e(749248),
                                 n.e(704434),
-                                n.e(879315),
                                 n.e(37085),
                                 n.e(890027),
                                 n.e(900361),

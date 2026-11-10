@@ -780,11 +780,9 @@ let tS = i.memo(function (e) {
                             },
                             onContextMenu: function (e) {
                                 (0, tf.L3)(e, async () => {
-                                    let { default: e } = await Promise.all([
-                                        n.e(638221),
-                                        n.e(904774),
-                                        n.e(446132),
-                                    ]).then(n.bind(n, 233503));
+                                    let { default: e } = await Promise.all([n.e(904774), n.e(446132)]).then(
+                                        n.bind(n, 233503),
+                                    );
                                     return (t) => (0, l.jsx)(e, { ...t });
                                 });
                             },

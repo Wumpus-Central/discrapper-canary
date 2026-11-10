@@ -1,4 +1,4 @@
-n.d(i, { default: () => en });
+n.d(i, { default: () => es });
 var s = n(477900);
 n(582128);
 var r = n(165862),
@@ -14,29 +14,30 @@ var r = n(165862),
     m = n(575079),
     A = n(855187),
     j = n(479335),
-    g = n(50268),
-    v = n(708645),
-    p = n(414636),
-    I = n(106401),
-    C = n(803664),
+    g = n(374846),
+    v = n(50268),
+    p = n(708645),
+    I = n(414636),
+    C = n(106401),
+    U = n(803664),
     f = n(29293),
-    U = n(509302),
-    _ = n(497600),
-    w = n(173500),
-    E = n(239211),
-    M = n(949674),
-    N = n(855986),
-    b = n(646514),
+    _ = n(509302),
+    w = n(497600),
+    E = n(173500),
+    M = n(239211),
+    N = n(949674),
+    b = n(855986),
+    T = n(646514),
     X = n(192308),
     k = n(732159),
-    T = n(778712),
-    D = n(834730),
-    G = n(97808),
-    R = n(308528),
+    O = n(778712),
+    R = n(834730),
+    D = n(97808),
+    G = n(308528),
     S = n(297413),
-    O = n(966327),
-    Z = n(287809),
-    z = n(792996),
+    Z = n(966327),
+    z = n(287809),
+    P = n(792996),
     y = n(575721);
 function B(e) {
     let { color: i, className: n } = e;
@@ -69,50 +70,50 @@ function B(e) {
     });
 }
 var L = n(984894),
-    P = n(399476),
-    W = n(889460),
-    Y = n(448290),
-    q = n(301541),
-    F = n(460597),
-    H = n(734057),
-    J = n(313998),
-    K = n(198229),
-    Q = n(243949),
-    V = n(972432),
-    $ = n(77544),
-    ee = n(652215);
-function ei(e) {
+    W = n(399476),
+    Y = n(889460),
+    q = n(448290),
+    F = n(301541),
+    H = n(460597),
+    J = n(734057),
+    K = n(313998),
+    Q = n(198229),
+    V = n(243949),
+    $ = n(972432),
+    ee = n(77544),
+    ei = n(652215);
+function en(e) {
     var i, n;
     let l,
         a,
         u,
         {
-            user: v,
-            channel: ee,
-            context: ei,
-            showChatItems: en = !0,
-            showMediaItems: es = !1,
-            showChannelCallItems: er = !1,
-            showModalItems: ed = !0,
-            onSelect: et,
-            onHeightUpdate: el,
-            onInteraction: ea,
+            user: p,
+            channel: en,
+            context: es,
+            showChatItems: er = !0,
+            showMediaItems: ed = !1,
+            showChannelCallItems: et = !1,
+            showModalItems: el = !0,
+            onSelect: ea,
+            onHeightUpdate: eo,
+            onInteraction: ec,
         } = e,
-        eo = (0, Q.A)({ userId: v.id, guildId: null }),
-        ec = (0, p.gE)(v, void 0),
-        eu = (0, Y.A)(v, null, ee.id, ei),
-        eh = ee.id,
-        ex = (0, J.A)(v, eh),
-        em = (0, q.A)(v.id, ei),
-        eA = (0, M.A)({ user: v, context: ei }),
-        ej = (0, _.A)({ user: v, channelId: ee.id, context: ei }),
-        eg = (0, f.A)({ user: v }),
-        ev = (0, V.A)(v.id),
-        ep =
-            ((i = v.id),
-            (n = ee.id),
-            (l = (0, N.bG)([Z.default], () => Z.default.getCurrentUser(), [])),
-            null == (a = (0, N.bG)([H.A], () => H.A.getChannel(n), [n])) ||
+        eu = (0, V.A)({ userId: p.id, guildId: null }),
+        eh = (0, I.gE)(p, void 0),
+        ex = (0, q.A)(p, (0, g.I)(es === ei.BRT.POPOUT ? null : en.id)),
+        em = en.id,
+        eA = (0, K.A)(p, em),
+        ej = (0, F.A)(p.id, es),
+        eg = (0, N.A)({ user: p, context: es }),
+        ev = (0, w.A)({ user: p, channelId: en.id, context: es }),
+        ep = (0, f.A)({ user: p }),
+        eI = (0, $.A)(p.id),
+        eC =
+            ((i = p.id),
+            (n = en.id),
+            (l = (0, b.bG)([z.default], () => z.default.getCurrentUser(), [])),
+            null == (a = (0, b.bG)([J.A], () => J.A.getChannel(n), [n])) ||
             a.isOwner(i) ||
             null == l ||
             !a.isOwner(l.id) ||
@@ -120,85 +121,85 @@ function ei(e) {
                 ? null
                 : (0, s.jsx)(d.Dr, {
                       id: "remove",
-                      label: z.intl.string(z.t["n5zMI+"]),
-                      action: () => R.A.removeRecipient(n, i),
+                      label: P.intl.string(P.t["n5zMI+"]),
+                      action: () => G.A.removeRecipient(n, i),
                       color: "danger",
                   })),
-        eI = (0, K.A)(v.id),
-        eC = (0, j.u)({ userId: v.id, channelId: ee.id, guildId: ee.getGuildId() }),
-        ef = (0, L.A)(v.id, ee.id),
-        eU = (0, W.A)({ user: v }),
-        e_ = (0, c.A)(null, v),
-        ew = (0, C.A)({ user: v }),
-        eE = (0, U.A)({ user: v }),
-        eM = (0, F.A)({ user: v }),
-        eN = (0, E.A)({ user: v, location: "GroupDMUserContextMenu" }),
-        eb = (0, P.A)({ user: v, location: "GroupDMUserContextMenu" }),
-        eX = (0, g.A)({ id: v.id, label: z.intl.string(z.t["/AXYnE"]) }),
-        ek = (0, $.A)(v.id),
-        eT = (0, m.A)(v.id),
-        eD = (0, x.A)(ee.id),
-        eG = (0, I.A)(v),
-        eR = (0, A.A)(v.id),
-        eS = (0, h.A)(ee.id, v.id),
-        eO = (0, w.A)({
+        eU = (0, Q.A)(p.id),
+        ef = (0, j.u)({ userId: p.id, channelId: en.id, guildId: en.getGuildId() }),
+        e_ = (0, L.A)(p.id, en.id),
+        ew = (0, Y.A)({ user: p }),
+        eE = (0, c.A)(null, p),
+        eM = (0, U.A)({ user: p }),
+        eN = (0, _.A)({ user: p }),
+        eb = (0, H.A)({ user: p }),
+        eT = (0, M.A)({ user: p, location: "GroupDMUserContextMenu" }),
+        eX = (0, W.A)({ user: p, location: "GroupDMUserContextMenu" }),
+        ek = (0, v.A)({ id: p.id, label: P.intl.string(P.t["/AXYnE"]) }),
+        eO = (0, ee.A)(p.id),
+        eR = (0, m.A)(p.id),
+        eD = (0, x.A)(en.id),
+        eG = (0, C.A)(p),
+        eS = (0, A.A)(p.id),
+        eZ = (0, h.A)(en.id, p.id),
+        ez = (0, E.A)({
             commandType: o.kc.USER,
-            commandTargetId: v.id,
-            channel: ee,
+            commandTargetId: p.id,
+            channel: en,
             guildId: void 0,
-            onHeightUpdate: el,
+            onHeightUpdate: eo,
         }),
-        eZ =
-            null == (u = (0, N.bG)([Z.default], () => Z.default.getCurrentUser())) ||
-            ee.ownerId !== u.id ||
-            v.id === u.id
+        eP =
+            null == (u = (0, b.bG)([z.default], () => z.default.getCurrentUser())) ||
+            en.ownerId !== u.id ||
+            p.id === u.id
                 ? null
                 : (0, s.jsx)(d.Dr, {
                       id: "make-dm-owner",
                       color: "danger",
-                      label: z.intl.string(z.t["6t3CyN"]),
+                      label: P.intl.string(P.t["6t3CyN"]),
                       action: () => {
                           (0, X.qf)((e) =>
                               (0, s.jsx)(k.u, {
-                                  title: z.intl.string(z.t.WZoUsm),
-                                  confirmText: z.intl.string(z.t["cY+Oob"]),
-                                  cancelText: z.intl.string(z.t["ETE/oC"]),
-                                  onConfirm: () => R.A.setDMOwner(ee.id, v.id),
+                                  title: P.intl.string(P.t.WZoUsm),
+                                  confirmText: P.intl.string(P.t["cY+Oob"]),
+                                  cancelText: P.intl.string(P.t["ETE/oC"]),
+                                  onConfirm: () => G.A.setDMOwner(en.id, p.id),
                                   ...e,
                                   children: (0, s.jsxs)("div", {
                                       className: y.Uh,
                                       children: [
-                                          (0, s.jsx)(B, { color: b.A.unsafe_rawColors.PRIMARY_300.css }),
+                                          (0, s.jsx)(B, { color: T.A.unsafe_rawColors.PRIMARY_300.css }),
                                           (0, s.jsxs)("div", {
                                               className: y.nS,
                                               children: [
                                                   (0, s.jsx)("div", {
                                                       className: y.HT,
-                                                      children: (0, s.jsx)(O.A, { user: u, size: T._3.SIZE_80 }),
+                                                      children: (0, s.jsx)(Z.A, { user: u, size: O._3.SIZE_80 }),
                                                   }),
                                                   (0, s.jsx)("div", {
                                                       className: y.to,
-                                                      children: (0, s.jsx)(O.A, { user: v, size: T._3.SIZE_80 }),
+                                                      children: (0, s.jsx)(Z.A, { user: p, size: O._3.SIZE_80 }),
                                                   }),
                                               ],
                                           }),
-                                          (0, s.jsx)(D.E, {
+                                          (0, s.jsx)(R.E, {
                                               variant: "body-md/normal",
-                                              children: z.intl.format(z.t.gsBb3F, {
+                                              children: P.intl.format(P.t.gsBb3F, {
                                                   usernameHook: (e, i) =>
                                                       (0, s.jsx)(
                                                           S.A,
                                                           {
-                                                              usernameIcon: (0, s.jsx)(G.eu, {
+                                                              usernameIcon: (0, s.jsx)(D.eu, {
                                                                   className: y.jj,
-                                                                  src: v.getAvatarURL(void 0, 16),
-                                                                  size: T._3.SIZE_16,
+                                                                  src: p.getAvatarURL(void 0, 16),
+                                                                  size: O._3.SIZE_16,
                                                                   "aria-hidden": !0,
                                                               }),
                                                               className: y.xK,
                                                               usernameClass: y.Xh,
                                                               discriminatorClass: y.D2,
-                                                              user: v,
+                                                              user: p,
                                                           },
                                                           i,
                                                       ),
@@ -210,60 +211,60 @@ function ei(e) {
                           );
                       },
                   }),
-        ez = v.isNonUserBot(),
-        ey = ee.isManaged(),
-        eB = ee.recipients?.includes(v.id);
+        ey = p.isNonUserBot(),
+        eB = en.isManaged(),
+        eL = en.recipients?.includes(p.id);
     return (0, s.jsxs)(r.W, {
         "data-menu-migrated": !0,
         navId: "user-context",
         onClose: t.Z_,
-        "aria-label": z.intl.string(z.t.liqwPJ),
-        onSelect: et,
-        onInteraction: ea,
+        "aria-label": P.intl.string(P.t.liqwPJ),
+        onSelect: ea,
+        onInteraction: ec,
         children: [
-            !ez &&
+            !ey &&
                 (0, s.jsxs)(s.Fragment, {
                     children: [
                         (0, s.jsx)(d.rX, { children: eG }),
                         (0, s.jsxs)(d.rX, {
-                            children: [ed && eo, ed && ec, en && eu, em, eA, !ey && ex, ed && ej, ed && eg, ek],
+                            children: [el && eu, el && eh, er && ex, ej, eg, !eB && eA, el && ev, el && ep, eO],
                         }),
-                        es && (0, s.jsx)(d.rX, { children: ev }),
-                        eB && (0, s.jsxs)(d.rX, { children: [!ey && ep, eZ] }),
-                        (0, s.jsx)(d.rX, { children: ed && e_ }),
-                        er && (0, s.jsxs)(d.rX, { children: [eS, eD, eT] }),
+                        ed && (0, s.jsx)(d.rX, { children: eI }),
+                        eL && (0, s.jsxs)(d.rX, { children: [!eB && eC, eP] }),
+                        (0, s.jsx)(d.rX, { children: el && eE }),
+                        et && (0, s.jsxs)(d.rX, { children: [eZ, eD, eR] }),
                         (0, s.jsxs)(d.rX, {
                             children: [
-                                es && eI,
-                                es && eC,
-                                es && ef,
-                                es && eR,
-                                eO,
                                 ed && eU,
-                                ew,
-                                eE,
+                                ed && ef,
+                                ed && e_,
+                                ed && eS,
+                                ez,
+                                el && ew,
                                 eM,
-                                ed && eb,
-                                ed && eN,
+                                eN,
+                                eb,
+                                el && eX,
+                                el && eT,
                             ],
                         }),
                     ],
                 }),
-            (0, s.jsx)(d.rX, { children: eX }),
+            (0, s.jsx)(d.rX, { children: ek }),
         ],
     });
 }
-let en = (0, a.A)(
+let es = (0, a.A)(
     (0, l.A)(
         function (e) {
-            return (0, s.jsx)(v.ZQ, {
+            return (0, s.jsx)(p.ZQ, {
                 user: e.user,
                 guildId: void 0,
                 location: "GroupDMUserContextMenu",
-                children: (0, s.jsx)(ei, { ...e }),
+                children: (0, s.jsx)(en, { ...e }),
             });
         },
-        { object: ee.ZSU.CONTEXT_MENU },
+        { object: ei.ZSU.CONTEXT_MENU },
     ),
     [u.A.CONTEXT_MENU, u.A.GROUP_DM_USER_MENU],
 );
