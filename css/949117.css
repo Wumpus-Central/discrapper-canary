@@ -67,7 +67,7 @@
 }
 
 .sm_n0gdYX {
-    padding-bottom: var(--space-12)
+    padding-bottom: calc(var(--space-12) + var(--space-16))
 }
 
 .sm_n0gdYX .character_n0gdYX {
@@ -1416,4 +1416,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=949117.f7ed0bbdc1b4454e.css.map*/
+/*# sourceMappingURL=949117.4a3cb3e59e7128f6.css.map*/
