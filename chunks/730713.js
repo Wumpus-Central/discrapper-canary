@@ -13,9 +13,9 @@ var r = n(477900),
     y = n(287809),
     g = n(562153),
     A = n(798286),
-    p = n(814278);
+    h = n(814278);
 n(603266);
-var h = n(495867),
+var p = n(495867),
     b = n(753181),
     E = n(665691),
     x = n(998759),
@@ -51,42 +51,45 @@ function O(e) {
             N()(r !== t, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
             let [s, a] = l.useState(null),
                 [i, c] = l.useState(!1),
-                o = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(t)),
-                f = (0, u.bG)([h.A], () => h.A.getSecureFramesRosterMapEntry(r)),
+                o = (0, u.bG)([p.A], () => p.A.getSecureFramesRosterMapEntry(t)),
+                f = (0, u.bG)([p.A], () => p.A.getSecureFramesRosterMapEntry(r)),
                 d = l.useCallback(
                     () =>
                         (async function (e) {
                             let t = j.default.getId(),
-                                n = h.A.getSecureFramesRosterMapEntry(e),
-                                r = h.A.getSecureFramesRosterMapEntry(t);
-                            return null == n || null == r
-                                ? null
-                                : {
-                                      fingerprint: await (function (e, t, n, r) {
-                                          let l = [
-                                                  0,
-                                                  e,
-                                                  w.fromByteArray(new Uint8Array(t)),
-                                                  n,
-                                                  w.fromByteArray(new Uint8Array(r)),
-                                              ].join(":"),
-                                              u = v.get(l);
-                                          if (null != u) return u;
-                                          let s = (
-                                              R.Ay.supports(U.O5.DAVE_PAIRWISE_FINGERPRINT)
-                                                  ? R.Ay.getMediaEngine()
-                                                        .generateDavePairwiseFingerprint(0, t, e, r, n)
-                                                        .then((e) => new Uint8Array(e))
-                                                  : (0, C._x)(0, new Uint8Array(t), e, new Uint8Array(r), n)
-                                          ).then((e) => w.fromByteArray(e));
-                                          if (v.size >= 16) {
-                                              let e = v.keys().next().value;
-                                              null != e && v.delete(e);
-                                          }
-                                          return (v.set(l, s), s.catch(() => v.delete(l)), s);
-                                      })(t, r, e, n),
-                                      fingerprintUserKey: n,
-                                  };
+                                n = p.A.getSecureFramesRosterMapEntry(e),
+                                r = p.A.getSecureFramesRosterMapEntry(t);
+                            if (null == n || null == r) return null;
+                            try {
+                                return {
+                                    fingerprint: await (function (e, t, n, r) {
+                                        let l = [
+                                                0,
+                                                e,
+                                                w.fromByteArray(new Uint8Array(t)),
+                                                n,
+                                                w.fromByteArray(new Uint8Array(r)),
+                                            ].join(":"),
+                                            u = v.get(l);
+                                        if (null != u) return u;
+                                        let s = (
+                                            R.Ay.supports(U.O5.DAVE_PAIRWISE_FINGERPRINT)
+                                                ? R.Ay.getMediaEngine()
+                                                      .generateDavePairwiseFingerprint(0, t, e, r, n)
+                                                      .then((e) => new Uint8Array(e))
+                                                : (0, C._x)(0, new Uint8Array(t), e, new Uint8Array(r), n)
+                                        ).then((e) => w.fromByteArray(e));
+                                        if (v.size >= 16) {
+                                            let e = v.keys().next().value;
+                                            null != e && v.delete(e);
+                                        }
+                                        return (v.set(l, s), s.catch(() => v.delete(l)), s);
+                                    })(t, r, e, n),
+                                    fingerprintUserKey: n,
+                                };
+                            } catch {
+                                return null;
+                            }
                         })(t),
                     [t],
                 ),
@@ -130,13 +133,13 @@ function O(e) {
         let { channelId: t, userId: n, nickname: r, onAlertOpen: s } = e,
             a = (function (e) {
                 let { userId: t } = e;
-                return (0, u.bG)([h.A, b.A], () => (0, p.m8)(t, [h.A, b.A]));
+                return (0, u.bG)([p.A, b.A], () => (0, h.m8)(t, [p.A, b.A]));
             })({ userId: n }),
             i = l.useRef(null);
         l.useEffect(() => {
             a && null == i.current
                 ? (i.current = setTimeout(() => {
-                      (s(), (0, p.Vw)({ userId: n, channelId: t, nickname: r }));
+                      (s(), (0, h.Vw)({ userId: n, channelId: t, nickname: r }));
                   }, 1e3))
                 : (clearTimeout(i.current), (i.current = null));
             let e = i.current;
@@ -157,8 +160,8 @@ function O(e) {
                 o = l.useCallback(async (e, t) => {
                     u(!0);
                     try {
-                        let n = await (0, p.A5)(1),
-                            r = await (0, p.iO)(e, t, 1);
+                        let n = await (0, h.A5)(1),
+                            r = await (0, h.iO)(e, t, 1);
                         (a(n), c(r));
                     } catch (e) {
                         (a(!1), c(!1));
@@ -174,17 +177,17 @@ function O(e) {
             );
         })({ userId: n, userKey: V }),
         J = l.useCallback(() => {
-            null != V && ((0, p.bk)(n, V, W, a, I.ThZ.E2EE_USER_VERIFY_MODAL), k());
+            null != V && ((0, h.bk)(n, V, W, a, I.ThZ.E2EE_USER_VERIFY_MODAL), k());
         }, [V, n, W, a, k]),
         Y = l.useCallback(() => {
-            null != V && ((0, p.Dh)(n, V, W), k());
+            null != V && ((0, h.Dh)(n, V, W), k());
         }, [V, n, W, k]),
         [q, X] = l.useMemo(
             () => (L ? [G.intl.string(G.t.UNUuem), "primary"] : [G.intl.string(G.t.y2b7CA), "critical"]),
             [L],
         ),
         Q = l.useMemo(
-            () => (0, p.Z1)({ isCurrentUserKeyPersistent: H, isOtherUserKeyPersistent: W, otherUserNickname: P }),
+            () => (0, h.Z1)({ isCurrentUserKeyPersistent: H, isOtherUserKeyPersistent: W, otherUserNickname: P }),
             [H, W, P],
         ),
         $ = (function (e) {
