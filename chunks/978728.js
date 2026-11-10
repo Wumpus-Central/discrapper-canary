@@ -4873,12 +4873,13 @@ let iK = /^tex_(aura|base_\d+|outfit)_/,
 function i0(e, t) {
     let { url: a, width: r, height: i, widthAt1x: s } = iM[e];
     if (null == s) return a;
-    let n = (t * s) / r;
-    if (n >= 1) return a;
-    let { columns: c, rows: d } = iZ[e] ?? iY,
-        l = c * Math.round((r / c) * n),
-        o = d * Math.round((i / d) * n);
-    return `${a}?width=${l}&height=${o}`;
+    let n = (t * s) / r,
+        c = t >= Math.round(r / s);
+    if (n >= 1 || c) return a;
+    let { columns: d, rows: l } = iZ[e] ?? iY,
+        o = d * Math.round((r / d) * n),
+        u = l * Math.round((i / l) * n);
+    return `${a}?width=${o}&height=${u}`;
 }
 let i1 = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
     i5 = i1.map((e) => `outfit${e}Image`),
@@ -4991,7 +4992,7 @@ function sr(e) {
             return (function (e, t) {
                 let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 if (a) return iJ;
-                let r = Math.max(e / 960, t / 540) * (0, ez.A)();
+                let r = Math.max(e / 945, t / 532) * (0, ez.A)();
                 return iQ.find((e) => e >= r) ?? i$;
             })(e.width, e.height);
         }),
