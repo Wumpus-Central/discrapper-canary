@@ -1,6 +1,6 @@
-var r = n(876230),
-    l = n(319354);
-let a = {
+var o = t(876230),
+    n = t(319354);
+let r = {
         barHeightPx: 64,
         footerHorizontalPaddingPx: 20,
         footerBottomPx: 4,
@@ -23,9 +23,9 @@ let a = {
         volumeGroupMarginEndPx: 0,
         volumeFlexShrink: 1,
     },
-    i = {
-        [r.oA.SM]: {
-            ...a,
+    l = {
+        [o.oA.SM]: {
+            ...r,
             barHeightPx: 40,
             footerHorizontalPaddingPx: 12,
             scrimHeightPx: 72,
@@ -34,11 +34,11 @@ let a = {
             iconSize: "sm",
             volumeSliderWidthPx: 48,
         },
-        [r.oA.MD]: { ...a },
-        [r.oA.LG]: { ...a, barHeightPx: 72, iconSize: "lg", buttonHeightPx: 32 },
+        [o.oA.MD]: { ...r },
+        [o.oA.LG]: { ...r, barHeightPx: 72, iconSize: "lg", buttonHeightPx: 32 },
     },
-    o = {
-        size: r.oA.SM,
+    a = {
+        size: o.oA.SM,
         overrides: {
             barHeightPx: 32,
             footerHorizontalPaddingPx: 4,
@@ -59,57 +59,57 @@ let a = {
             volumeFlexShrink: 0,
         },
     };
-function u(e, t) {
-    return t && e > 1;
+function x(i, e) {
+    return e && i > 1;
 }
-let s = { xxs: 10, xs: 12, sm: 14, md: 16, lg: 18 };
-n.d(
-    t,
+let d = { xxs: 10, xs: 12, sm: 14, md: 16, lg: 18 };
+t.d(
+    e,
     {},
     {
-        Dq: function (e, t, n) {
-            let r,
-                a,
-                i,
-                o = Math.max(24, l.E[e.iconSize] ?? 0),
-                u = e.controlsGapPx,
-                c = o + (t.showSkipButtons ? 2 * (u + o) : 0),
-                d = t.showInlineVolumeSlider
-                    ? e.volumeSliderMarginStartPx +
-                      2 * e.volumeSliderPaddingInlinePx +
-                      e.volumeSliderWidthPx +
-                      e.volumeGroupMarginEndPx
+        Dq: function (i, e, t) {
+            let o,
+                r,
+                l,
+                a = Math.max(24, n.E[i.iconSize] ?? 0),
+                x = i.controlsGapPx,
+                P = a + (e.showSkipButtons ? 2 * (x + a) : 0),
+                u = e.showInlineVolumeSlider
+                    ? i.volumeSliderMarginStartPx +
+                      2 * i.volumeSliderPaddingInlinePx +
+                      i.volumeSliderWidthPx +
+                      i.volumeGroupMarginEndPx
                     : 0,
-                m = s[e.timeTextVariant.split("/")[0].replace("body-", "")] ?? 14,
-                f =
+                m = d[i.timeTextVariant.split("/")[0].replace("body-", "")] ?? 14,
+                g =
+                    x +
+                    a +
                     u +
-                    o +
-                    d +
-                    e.midGroupGapPx +
-                    e.durationMarginPx +
-                    ((a = Math.floor((r = Math.floor(Math.max(0, n))) / 3600)),
-                    (i = Math.floor((r % 3600) / 60)),
+                    i.midGroupGapPx +
+                    i.durationMarginPx +
+                    ((r = Math.floor((o = Math.floor(Math.max(0, t))) / 3600)),
+                    (l = Math.floor((o % 3600) / 60)),
                     (0.389 +
-                        2 * (0.562 * (a > 0 ? String(a).length + 4 : String(i).length + 2) + (a > 0 ? 2 : 1) * 0.278) +
+                        2 * (0.562 * (r > 0 ? String(r).length + 4 : String(l).length + 2) + (r > 0 ? 2 : 1) * 0.278) +
                         0.333) *
                         m +
                         8) +
                     8,
-                p = t.trailingButtonCount + +!!t.showPlaybackSpeedBtn + +!!t.showFullScreenBtn;
-            return Math.ceil(2 * e.footerHorizontalPaddingPx + c + f + (p > 0 ? p * o + (p - 1) * u : 0));
+                h = e.trailingButtonCount + +!!e.showPlaybackSpeedBtn + +!!e.showFullScreenBtn;
+            return Math.ceil(2 * i.footerHorizontalPaddingPx + P + g + (h > 0 ? h * a + (h - 1) * x : 0));
         },
-        Kj: u,
-        X4: i,
-        Xq: o,
-        ZH: function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                l = n ? r.oA.LG : (t?.size ?? e);
-            return { size: l, config: { ...i[l], ...(!n ? t?.overrides : void 0) } };
+        Kj: x,
+        X4: l,
+        Xq: a,
+        ZH: function (i, e) {
+            let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                n = t ? o.oA.LG : (e?.size ?? i);
+            return { size: n, config: { ...l[n], ...(!t ? e?.overrides : void 0) } };
         },
-        eD: function (e) {
-            let { hideTranscriptBtn: t, hideCaptionBtn: n, hasDownloadBtn: r, extraButtonCount: l } = e,
-                a = +!t + +!n + +!!r + l;
-            return u(a, l > 0) ? 1 : a;
+        eD: function (i) {
+            let { hideTranscriptBtn: e, hideCaptionBtn: t, hasDownloadBtn: o, extraButtonCount: n } = i,
+                r = +!e + +!t + +!!o + n;
+            return x(r, n > 0) ? 1 : r;
         },
     },
 );

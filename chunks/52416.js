@@ -5,8 +5,8 @@ var o = n(477900),
     i = n(206248),
     d = n(43105),
     s = n(273185),
-    p = n(549996),
-    u = n(498470),
+    u = n(549996),
+    p = n(498470),
     c = n(807098),
     b = n(92551),
     m = n(637706),
@@ -19,16 +19,16 @@ n.d(
     {
         A: function (e) {
             let { children: t, targetElementRef: n, dismissPopover: I } = e,
-                N = (0, p.c)(a.C.PREMIUM_TAB_POPOVER),
+                N = (0, u.c)(a.C.PREMIUM_TAB_POPOVER),
                 T =
                     null != N && "premiumTabPopover" === N.properties.properties.oneofKind
                         ? N.properties.properties.premiumTabPopover
                         : null,
                 g = (0, c.T)(T?.asset),
                 E = l.useMemo(() => null != g && (0, s.r1)(g), [g]),
-                y = N?.id,
-                S = N?.promotionId;
-            if (null == T || null == N || null == y || null == S) return t;
+                S = N?.id,
+                y = N?.promotionId;
+            if (null == T || null == N || null == S || null == y) return t;
             let O = N.getFormatVariableValues(f.intl.currentLocale),
                 C = (0, b.n)(T.header, O);
             if (!C.ok) return t;
@@ -38,11 +38,11 @@ n.d(
             if (!h.ok) return t;
             let P = (0, o.jsx)(_.A, {
                     componentType: a.C.PREMIUM_TAB_POPOVER,
-                    componentId: y,
-                    promotionId: S,
+                    componentId: S,
+                    promotionId: y,
                     dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
                 }),
-                { icon: v, iconPosition: M } = (0, u.x)({ buttonAction: T.button?.buttonAction });
+                { icon: v, iconPosition: M } = (0, p.x)({ buttonAction: T.button?.buttonAction });
             function L() {
                 return I(A.i.USER_DISMISS);
             }
@@ -51,7 +51,7 @@ n.d(
                         ? {
                               text: h.content,
                               variant: "expressive",
-                              onClick: (0, u.h)({
+                              onClick: (0, p.h)({
                                   buttonAction: T.button.buttonAction,
                                   deeplinkSection: T.button.deeplinkSection,
                                   applicationId: T.button.navigableStorefrontApplicationId?.value,

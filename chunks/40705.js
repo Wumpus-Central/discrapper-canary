@@ -3,8 +3,8 @@ var r = n(477900),
     l = n(582128),
     a = n(503698),
     i = n.n(a),
-    o = n(120692),
-    u = n(621466),
+    u = n(120692),
+    o = n(621466),
     s = n(855986),
     c = n(876230),
     d = n(717421),
@@ -12,48 +12,48 @@ var r = n(477900),
     f = n(265872),
     p = n(86147),
     h = n(729475),
-    x = n(261958),
-    v = n(32880),
+    v = n(261958),
+    x = n(32880),
     g = n(165862),
     E = n(477782),
     b = n(365199),
-    P = n(268791),
+    y = n(268791),
     S = n(834730),
-    y = n(315710),
-    C = n(534514),
-    w = n(893007),
-    N = n(765548),
+    C = n(315710),
+    w = n(534514),
+    N = n(893007),
+    P = n(765548),
     A = n(775602),
     R = n(129230),
-    M = n(683574),
-    L = n(530567),
-    T = n(646514),
-    k = n(61491),
+    L = n(683574),
+    T = n(530567),
+    k = n(646514),
+    M = n(61491),
     j = n(113494),
     D = n(782134),
     I = n(417270),
     B = n(939249),
     F = n(866665),
-    G = n(792996),
-    H = n(862649);
-let $ = "-:--",
-    U = {
-        [c.Q6.PLAYING]: { icon: j.PauseIcon, label: G.intl.string(G.t.ZcgDJX) },
-        [c.Q6.PAUSED]: { icon: D.PlayIcon, label: G.intl.string(G.t.RscU7I) },
-        [c.Q6.ENDED]: { icon: I.RetryIcon, label: G.intl.string(G.t.hsvh0i) },
+    $ = n(792996),
+    U = n(862649);
+let _ = "-:--",
+    K = {
+        [c.Q6.PLAYING]: { icon: j.PauseIcon, label: $.intl.string($.t.ZcgDJX) },
+        [c.Q6.PAUSED]: { icon: D.PlayIcon, label: $.intl.string($.t.RscU7I) },
+        [c.Q6.ENDED]: { icon: I.RetryIcon, label: $.intl.string($.t.hsvh0i) },
     },
-    _ = { [c.oA.SM]: c.n4.SM, [c.oA.MD]: c.n4.MD, [c.oA.LG]: c.n4.LG };
-function K(e) {
+    O = { [c.oA.SM]: c.n4.SM, [c.oA.MD]: c.n4.MD, [c.oA.LG]: c.n4.LG };
+function Q(e) {
     let { compact: t = !1 } = e,
         [n, a] = l.useState(null),
-        [o, u] = l.useState(null),
+        [u, o] = l.useState(null),
         [s, d] = l.useState(!1),
-        { videoRef: m, controlBarConfig: f, isControlBarExpanded: p } = (0, M.X$)(),
-        h = (f ?? L.X4[c.oA.MD]).timeTextVariant;
+        { videoRef: m, controlBarConfig: f, isControlBarExpanded: p } = (0, L.X$)(),
+        h = (f ?? T.X4[c.oA.MD]).timeTextVariant;
     l.useEffect(() => {
         let e = m.current;
         function t() {
-            null != e && (a(e.currentTime), u(e.duration));
+            null != e && (a(e.currentTime), o(e.duration));
         }
         if (null != e)
             return (
@@ -67,102 +67,102 @@ function K(e) {
                 }
             );
     }, [m]);
-    let x = Number.isFinite(n) && Number.isFinite(o) ? Math.max(0, o - n) : null,
-        v = s ? (null != x ? `-${(0, k.rB)(x)}` : $) : Number.isFinite(n) ? (0, k.rB)(n) : $,
-        g = Number.isFinite(o) ? (0, k.rB)(o) : $;
+    let v = Number.isFinite(n) && Number.isFinite(u) ? Math.max(0, u - n) : null,
+        x = s ? (null != v ? `-${(0, M.rB)(v)}` : _) : Number.isFinite(n) ? (0, M.rB)(n) : _,
+        g = Number.isFinite(u) ? (0, M.rB)(u) : _;
     return (0, r.jsxs)(B.D, {
-        className: i()(H.d$, H.jk),
-        focusProps: { enabled: p, ringClassName: H.KE },
+        className: i()(U.d$, U.jk),
+        focusProps: { enabled: p, ringClassName: U.KE },
         "data-testid": "discord-web-video-player-duration",
         onClick: () => d((e) => !e),
         children: [
-            (0, r.jsx)(S.E, { variant: h, className: H.Ue, tabularNumbers: !0, children: v }),
+            (0, r.jsx)(S.E, { variant: h, className: U.Ue, tabularNumbers: !0, children: x }),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(S.E, { variant: h, className: H.zO, children: "/" }),
-                        (0, r.jsx)(S.E, { variant: h, className: H.Ue, tabularNumbers: !0, children: g }),
+                        (0, r.jsx)(S.E, { variant: h, className: U.zO, children: "/" }),
+                        (0, r.jsx)(S.E, { variant: h, className: U.Ue, tabularNumbers: !0, children: g }),
                     ],
                 }),
         ],
     });
 }
-function O(e) {
+function G(e) {
     let {
             iconComponent: t,
             visible: n,
             ariaLabel: l,
             active: a,
-            disabled: o,
-            overlay: u,
+            disabled: u,
+            overlay: o,
             tooltipLabel: s,
             tooltipDelayMs: d = 1500,
             hideTooltip: m = !1,
             shortcut: f,
             onClick: p,
             buttonSize: h = c.n4.MD,
-            className: x,
-            "data-testid": v,
+            className: v,
+            "data-testid": x,
             clickableProps: g,
             ref: E,
         } = e,
-        { controlBarConfig: b } = (0, M.X$)(),
-        P = b ?? L.X4[h],
-        S = P.iconSize,
-        y = "" !== (f ?? "").trim();
+        { controlBarConfig: b } = (0, L.X$)(),
+        y = b ?? T.X4[h],
+        S = y.iconSize,
+        C = "" !== (f ?? "").trim();
     return (0, r.jsx)(F.m, {
         text: n ? s : void 0,
-        keyboardShortcut: y ? f : void 0,
+        keyboardShortcut: C ? f : void 0,
         ariaHidden: !0,
         shouldShow: !m,
         delay: d,
         children: (0, r.jsx)(B.D, {
-            onClick: !0 === o ? void 0 : p,
-            className: i()(H.K5, { [H.Iy]: o }, x),
+            onClick: !0 === u ? void 0 : p,
+            className: i()(U.K5, { [U.Iy]: u }, v),
             "aria-label": l,
-            "aria-keyshortcuts": y ? f : void 0,
-            "aria-disabled": o,
-            focusProps: { enabled: n, ringClassName: H.KE },
-            "data-testid": v,
+            "aria-keyshortcuts": C ? f : void 0,
+            "aria-disabled": u,
+            focusProps: { enabled: n, ringClassName: U.KE },
+            "data-testid": x,
             "data-active": !0 === a,
             innerRef: E,
             ...g,
             children: (0, r.jsx)("div", {
-                className: H.K5,
-                style: { height: `${P.buttonHeightPx}px` },
+                className: U.K5,
+                style: { height: `${y.buttonHeightPx}px` },
                 children:
-                    null != u
+                    null != o
                         ? (0, r.jsxs)("span", {
-                              className: H.bT,
+                              className: U.bT,
                               children: [
                                   (0, r.jsx)(t, {
                                       size: S,
-                                      color: !0 !== o ? T.A.colors.WHITE : T.A.colors.TEXT_MUTED,
-                                      className: i()(H.jk, { [H.x2]: a, [H.Wr]: !o }),
+                                      color: !0 !== u ? k.A.colors.WHITE : k.A.colors.TEXT_MUTED,
+                                      className: i()(U.jk, { [U.x2]: a, [U.Wr]: !u }),
                                   }),
-                                  u,
+                                  o,
                               ],
                           })
                         : (0, r.jsx)(t, {
                               size: S,
-                              color: !0 !== o ? T.A.colors.WHITE : T.A.colors.TEXT_MUTED,
-                              className: i()(H.jk, { [H.x2]: a, [H.Wr]: !o }),
+                              color: !0 !== u ? k.A.colors.WHITE : k.A.colors.TEXT_MUTED,
+                              className: i()(U.jk, { [U.x2]: a, [U.Wr]: !u }),
                           }),
             }),
         }),
     });
 }
-var Q = n(636537),
-    z = n(260612),
+var H = n(636537),
+    X = n(260612),
     V = n(953727);
-function X(e) {
-    let { size: t = "md", width: n, height: l, color: a = T.A.colors.WHITE, ...i } = e,
-        o = (0, z.J)(t);
+function Y(e) {
+    let { size: t = "md", width: n, height: l, color: a = k.A.colors.WHITE, ...i } = e,
+        u = (0, X.J)(t);
     return (0, r.jsxs)("svg", {
         ...(0, V.A)(i),
         xmlns: "http://www.w3.org/2000/svg",
-        width: o?.width ?? n,
-        height: o?.height ?? l,
+        width: u?.width ?? n,
+        height: u?.height ?? l,
         viewBox: "0 0 24 24",
         fill: "none",
         color: "string" == typeof a ? a : a.css,
@@ -177,36 +177,36 @@ function X(e) {
                 strokeLinecap: "round",
                 children: [
                     (0, r.jsxs)("g", {
-                        className: H.I4,
+                        className: U.I4,
                         children: [
-                            (0, r.jsx)("path", { className: H.Ew, pathLength: "1", d: "M14 12Q14 10.2 12.5 9" }),
-                            (0, r.jsx)("path", { className: H.Ew, pathLength: "1", d: "M14 12Q14 13.8 12.5 15" }),
+                            (0, r.jsx)("path", { className: U.Ew, pathLength: "1", d: "M14 12Q14 10.2 12.5 9" }),
+                            (0, r.jsx)("path", { className: U.Ew, pathLength: "1", d: "M14 12Q14 13.8 12.5 15" }),
                         ],
                     }),
                     (0, r.jsxs)("g", {
-                        className: H.RL,
+                        className: U.RL,
                         children: [
-                            (0, r.jsx)("path", { className: H.Ew, pathLength: "1", d: "M17.5 12Q17.5 8.5 15 6.5" }),
-                            (0, r.jsx)("path", { className: H.Ew, pathLength: "1", d: "M17.5 12Q17.5 15.5 15 17.5" }),
+                            (0, r.jsx)("path", { className: U.Ew, pathLength: "1", d: "M17.5 12Q17.5 8.5 15 6.5" }),
+                            (0, r.jsx)("path", { className: U.Ew, pathLength: "1", d: "M17.5 12Q17.5 15.5 15 17.5" }),
                         ],
                     }),
                     (0, r.jsxs)("g", {
-                        className: H.zT,
+                        className: U.zT,
                         children: [
-                            (0, r.jsx)("path", { className: H.Ew, pathLength: "1", d: "M21 12Q21 7 17.5 4" }),
-                            (0, r.jsx)("path", { className: H.Ew, pathLength: "1", d: "M21 12Q21 17 17.5 20" }),
+                            (0, r.jsx)("path", { className: U.Ew, pathLength: "1", d: "M21 12Q21 7 17.5 4" }),
+                            (0, r.jsx)("path", { className: U.Ew, pathLength: "1", d: "M21 12Q21 17 17.5 20" }),
                         ],
                     }),
-                    (0, r.jsx)("path", { className: H.n0, d: "m15 9 6 6m-6 0 6-6" }),
+                    (0, r.jsx)("path", { className: U.n0, d: "m15 9 6 6m-6 0 6-6" }),
                 ],
             }),
         ],
     });
 }
-var Y = n(91034),
+var z = n(91034),
     W = n(710434),
-    q = n(634156),
-    Z = n(652215),
+    Z = n(634156),
+    q = n(652215),
     J = n(302034);
 let ee = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
     et = ee[0],
@@ -219,28 +219,28 @@ function er(e) {
             seekForwardEnabled: g,
             hideCaptionBtn: E = !1,
             hideTranscriptBtn: b = !1,
-            hideSkipButtons: P = !1,
+            hideSkipButtons: y = !1,
             hideFullScreenBtn: S = !1,
-            hidePlaybackSpeedBtn: y = !1,
-            size: C,
-            downloadUrl: w,
-            downloadContentType: T,
-            extraButtons: k,
+            hidePlaybackSpeedBtn: C = !1,
+            size: w,
+            downloadUrl: N,
+            downloadContentType: k,
+            extraButtons: M,
             autoFocus: j = !1,
             keyDownHandlerRef: D,
             volume: I,
             muted: B,
             transcriptEnabled: F,
-            captionEnabled: $,
-            handlePlaybackBtnClick: z,
+            captionEnabled: _,
+            handlePlaybackBtnClick: X,
             handleTranscriptBtnClick: V,
             handleCaptionBtnClick: ee,
             handleFullScreenBtnClick: et,
             handleSeekBackBtnClick: en,
             handleSeekForwardBtnClick: er,
             autoHideVolumeSlider: ea = !1,
-            floatingVolumeSlider: eo = !1,
-            compactTimeDisplay: eu = !1,
+            floatingVolumeSlider: eu = !1,
+            compactTimeDisplay: eo = !1,
             handleControlBarPendingInteraction: es,
             onVolumeChange: ec,
             onMutedChange: ed,
@@ -248,80 +248,80 @@ function er(e) {
         } = e,
         ef = (0, s.bG)([A.Ay], () => A.Ay.useReducedMotion),
         ep = (0, s.bG)([A.Ay], () => A.Ay.keyboardModeEnabled),
-        { isFullscreen: eh, videoRef: ex, activeLayer: ev, controlBarConfig: eg } = (0, M.X$)(),
-        eE = eg ?? L.X4[C],
-        eb = eo && !eh,
-        [eP, eS] = l.useState(B ? 0 : I),
-        [ey, eC] = l.useState(!1),
-        [ew, eN] = l.useState(!1),
+        { isFullscreen: eh, videoRef: ev, activeLayer: ex, controlBarConfig: eg } = (0, L.X$)(),
+        eE = eg ?? T.X4[w],
+        eb = eu && !eh,
+        [ey, eS] = l.useState(B ? 0 : I),
+        [eC, ew] = l.useState(!1),
+        [eN, eP] = l.useState(!1),
         [eA, eR] = l.useState(!1),
-        eM = l.useRef(null),
-        eL = l.useId(),
-        eT = l.useRef(void 0),
-        [ek, ej] = l.useState(eb);
-    eb !== ek && (ej(eb), eC(!1), eR(!1), eN(!1));
-    let eD = eb && (ey || eA || ew),
+        eL = l.useRef(null),
+        eT = l.useId(),
+        ek = l.useRef(void 0),
+        [eM, ej] = l.useState(eb);
+    eb !== eM && (ej(eb), ew(!1), eR(!1), eP(!1));
+    let eD = eb && (eC || eA || eN),
         [{ volumeAnimSpring: eI }, eB] = (0, d.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
         eF = l.useRef(null),
-        [eG, eH] = l.useState(1),
-        [e$, eU] = l.useState(I),
-        [e_, eK] = l.useState(B);
-    (I !== e$ || B !== e_) && (eU(I), eK(B), eS(B ? 0 : I));
-    let eO = l.useCallback(
+        [e$, eU] = l.useState(1),
+        [e_, eK] = l.useState(I),
+        [eO, eQ] = l.useState(B);
+    (I !== e_ || B !== eO) && (eK(I), eQ(B), eS(B ? 0 : I));
+    let eG = l.useCallback(
             (e) => {
-                (eH(e), null != ex.current && (ex.current.playbackRate = e));
+                (eU(e), null != ev.current && (ev.current.playbackRate = e));
             },
-            [ex],
+            [ev],
         ),
-        eQ = l.useCallback(() => {
-            if (null == w) return;
-            let e = T?.split("/");
-            (R.default.track(Z.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+        eH = l.useCallback(() => {
+            if (null == N) return;
+            let e = k?.split("/");
+            (R.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
-                window.open(w, "_blank"));
-        }, [w, T]),
-        ez = l.useCallback(
+                window.open(N, "_blank"));
+        }, [N, k]),
+        eX = l.useCallback(
             (e) => {
-                null != ex.current && (e !== ex.current.volume && (ex.current.volume = e), e !== eP && eS(e));
+                null != ev.current && (e !== ev.current.volume && (ev.current.volume = e), e !== ey && eS(e));
             },
-            [ex, eP],
+            [ev, ey],
         );
     function eV(e) {
-        (ez(e), ec(e), ew && (eN(!1), eb || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
+        (eX(e), ec(e), eN && (eP(!1), eb || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
     }
-    let eX = l.useCallback(() => {
-        if (null != ex.current)
-            if (0 === eP) {
+    let eY = l.useCallback(() => {
+        if (null != ev.current)
+            if (0 === ey) {
                 let e = 0 === I ? 0.3 : I;
-                (ez(e), ed(!1), ec(e));
-            } else (ec(eP), ez(0), ed(!0));
-    }, [ex, eP, ez, I, ed, ec]);
-    function eY() {
-        (eC(!0), em(!0));
+                (eX(e), ed(!1), ec(e));
+            } else (ec(ey), eX(0), ed(!0));
+    }, [ev, ey, eX, I, ed, ec]);
+    function ez() {
+        (ew(!0), em(!0));
     }
     function eW() {
-        (eC(!1), em(!1));
-    }
-    function eq() {
-        (window.clearTimeout(eT.current), eC(!0));
+        (ew(!1), em(!1));
     }
     function eZ() {
-        (window.clearTimeout(eT.current), (eT.current = window.setTimeout(() => eC(!1), 150)));
+        (window.clearTimeout(ek.current), ew(!0));
+    }
+    function eq() {
+        (window.clearTimeout(ek.current), (ek.current = window.setTimeout(() => ew(!1), 150)));
     }
     function eJ(e) {
         if ("ArrowUp" !== e.key && "ArrowDown" !== e.key) return;
         (e.preventDefault(), e.stopPropagation());
-        let t = Math.round(100 * eP),
+        let t = Math.round(100 * ey),
             n = Math.min(1, Math.max(0, ("ArrowUp" === e.key ? Math.floor(t / 10) + 1 : Math.ceil(t / 10) - 1) / 10));
-        n !== eP && eV(n);
+        n !== ey && eV(n);
     }
-    l.useEffect(() => () => window.clearTimeout(eT.current), []);
-    let e0 = (0, N.A)(em);
+    l.useEffect(() => () => window.clearTimeout(ek.current), []);
+    let e0 = (0, P.A)(em);
     l.useEffect(() => {
         if (eD)
             return (
@@ -334,13 +334,13 @@ function er(e) {
     }, [eD, es, e0]);
     let e1 = l.useCallback(
         (e) => {
-            if (!(e.metaKey || ((0, u.vq)(e.target) && (0, u.Cw)(e.target))))
+            if (!(e.metaKey || ((0, o.vq)(e.target) && (0, o.Cw)(e.target))))
                 switch (e.key) {
                     case c.TJ.PLAYBACK:
-                        (e.stopPropagation(), z());
+                        (e.stopPropagation(), X());
                         break;
                     case c.TJ.SPACE:
-                        (e.stopPropagation(), ep || (e.preventDefault(), z()));
+                        (e.stopPropagation(), ep || (e.preventDefault(), X()));
                         break;
                     case c.TJ.SEEK_BACK:
                     case c.TJ.SEEK_BACK_ALT:
@@ -357,10 +357,10 @@ function er(e) {
                         (e.stopPropagation(), S || et());
                         break;
                     case c.TJ.MUTE:
-                        (e.stopPropagation(), eX());
+                        (e.stopPropagation(), eY());
                 }
         },
-        [ee, et, z, en, er, eX, E, S, ep],
+        [ee, et, X, en, er, eY, E, S, ep],
     );
     (l.useEffect(() => {
         j && null != eF.current && eF.current.focus();
@@ -376,35 +376,35 @@ function er(e) {
         ),
         l.useEffect(
             () => (
-                eB({ volumeAnimSpring: !ea || ew || ey ? 1 : 0, immediate: ef }),
+                eB({ volumeAnimSpring: !ea || eN || eC ? 1 : 0, immediate: ef }),
                 () => {
                     eI.stop();
                 }
             ),
-            [ea, ew, ey, eB, ef, eI],
+            [ea, eN, eC, eB, ef, eI],
         ));
-    let e2 = G.intl.string(0 === eP ? G.t.YqAjXy : G.t.w4m945),
-        { icon: e6, label: e4 } = U[t],
-        e8 = (0, r.jsx)(O, {
-            iconComponent: X,
+    let e2 = $.intl.string(0 === ey ? $.t.YqAjXy : $.t.w4m945),
+        { icon: e6, label: e4 } = K[t],
+        e8 = (0, r.jsx)(G, {
+            iconComponent: Y,
             visible: a,
-            onClick: eX,
+            onClick: eY,
             ariaLabel: e2,
             tooltipLabel: e2,
             hideTooltip: eD,
             shortcut: c.TJ.MUTE,
-            buttonSize: _[C],
+            buttonSize: O[w],
             clickableProps: {
                 style: {
-                    "--custom-volume-wave-1": Math.min(1, Math.max(0, 3 * eP)),
-                    "--custom-volume-wave-2": Math.min(1, Math.max(0, 3 * eP - 1)),
-                    "--custom-volume-wave-3": Math.min(1, Math.max(0, 3 * eP - 2)),
-                    "--custom-volume-muted": +(0 === eP),
+                    "--custom-volume-wave-1": Math.min(1, Math.max(0, 3 * ey)),
+                    "--custom-volume-wave-2": Math.min(1, Math.max(0, 3 * ey - 1)),
+                    "--custom-volume-wave-3": Math.min(1, Math.max(0, 3 * ey - 2)),
+                    "--custom-volume-muted": +(0 === ey),
                 },
                 ...(eb
                     ? {
                           "aria-expanded": eD,
-                          "aria-controls": eD ? eL : void 0,
+                          "aria-controls": eD ? eT : void 0,
                           "aria-keyshortcuts": `${c.TJ.MUTE} ArrowUp ArrowDown`,
                       }
                     : void 0),
@@ -413,63 +413,63 @@ function er(e) {
         }),
         e9 = (0, r.jsx)(m.G, {
             mini: !0,
-            className: H.nA,
-            barClassName: H.i1,
-            grabberClassName: H.VA,
-            value: eP,
+            className: U.nA,
+            barClassName: U.i1,
+            grabberClassName: U.VA,
+            value: ey,
             keyboardStep: 0.1,
             minValue: 0,
             maxValue: 1,
             onValueChange: eV,
             asValueChanges: function (e) {
-                (ez(e), !ew && (eN(!0), eb || es(!0)));
+                (eX(e), !eN && (eP(!0), eb || es(!0)));
             },
             fillStyles: { background: "var(--custom-dvp-slider-fill)" },
             orientation: "horizontal",
-            "aria-label": G.intl.string(J.default.XiLvuG),
-            getAriaValueText: (e) => G.intl.formatToPlainString(J.default["5L6uDs"], { percent: Math.round(100 * e) }),
+            "aria-label": $.intl.string(J.default.XiLvuG),
+            getAriaValueText: (e) => $.intl.formatToPlainString(J.default["5L6uDs"], { percent: Math.round(100 * e) }),
         });
-    return (0, r.jsxs)(o.animated.div, {
-        className: H.uN,
-        style: { opacity: (0, o.to)([n], (e) => `${e}`) },
+    return (0, r.jsxs)(u.animated.div, {
+        className: U.uN,
+        style: { opacity: (0, u.to)([n], (e) => `${e}`) },
         children: [
             (0, r.jsxs)("div", {
-                className: H.X3,
+                className: U.X3,
                 children: [
-                    (0, r.jsx)(O, {
+                    (0, r.jsx)(G, {
                         iconComponent: e6,
                         visible: a,
                         ariaLabel: e4,
                         tooltipLabel: e4,
                         shortcut: c.TJ.PLAYBACK,
-                        onClick: z,
+                        onClick: X,
                         ref: eF,
-                        buttonSize: _[C],
+                        buttonSize: O[w],
                         "data-testid": "discord-web-video-player-play-pause-btn",
                     }),
-                    !P &&
+                    !y &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(O, {
+                                (0, r.jsx)(G, {
                                     iconComponent: W.q,
                                     visible: a,
                                     onClick: en,
-                                    ariaLabel: G.intl.string(J.default["dRVF+Z"]),
-                                    tooltipLabel: G.intl.string(J.default["dRVF+Z"]),
+                                    ariaLabel: $.intl.string(J.default["dRVF+Z"]),
+                                    tooltipLabel: $.intl.string(J.default["dRVF+Z"]),
                                     shortcut: c.TJ.SEEK_BACK,
-                                    buttonSize: _[C],
+                                    buttonSize: O[w],
                                     "data-testid": "discord-web-video-player-seek-backward-btn",
                                 }),
-                                (0, r.jsx)(O, {
-                                    iconComponent: q.i,
+                                (0, r.jsx)(G, {
+                                    iconComponent: Z.i,
                                     visible: a,
                                     onClick: er,
                                     disabled: !g,
-                                    ariaLabel: g ? G.intl.string(J.default.yV2FLL) : G.intl.string(J.default.YWbiPw),
-                                    tooltipLabel: g ? G.intl.string(J.default.yV2FLL) : G.intl.string(J.default.YWbiPw),
+                                    ariaLabel: g ? $.intl.string(J.default.yV2FLL) : $.intl.string(J.default.YWbiPw),
+                                    tooltipLabel: g ? $.intl.string(J.default.yV2FLL) : $.intl.string(J.default.YWbiPw),
                                     tooltipDelayMs: 1500 * !!g,
                                     shortcut: c.TJ.SEEK_FORWARD,
-                                    buttonSize: _[C],
+                                    buttonSize: O[w],
                                     "data-testid": "discord-web-video-player-seek-forward-btn",
                                 }),
                             ],
@@ -477,25 +477,25 @@ function er(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: i()(H.X3, H.L1),
+                className: i()(U.X3, U.L1),
                 children: [
                     eb
                         ? (0, r.jsx)(f.Y, {
-                              targetElementRef: eM,
+                              targetElementRef: eL,
                               shouldShow: eD,
                               scrollBehavior: "close",
                               onRequestClose: () => {
-                                  (window.clearTimeout(eT.current), eC(!1), eR(!1), eN(!1));
+                                  (window.clearTimeout(ek.current), ew(!1), eR(!1), eP(!1));
                               },
-                              layerContext: ev,
+                              layerContext: ex,
                               position: "top",
                               align: "center",
                               renderPopout: () =>
                                   (0, r.jsx)("div", {
-                                      id: eL,
-                                      className: i()(Q.i.blurple, H.p8, H.Gl),
-                                      onMouseEnter: eq,
-                                      onMouseLeave: eZ,
+                                      id: eT,
+                                      className: i()(H.i.blurple, U.p8, U.Gl),
+                                      onMouseEnter: eZ,
+                                      onMouseLeave: eq,
                                       "data-testid": "discord-web-video-player-volume-popout",
                                       children: (0, r.jsx)("div", {
                                           "data-testid": "discord-web-video-player-volume-slider",
@@ -504,32 +504,32 @@ function er(e) {
                                   }),
                               children: () =>
                                   (0, r.jsx)("div", {
-                                      ref: eM,
-                                      onMouseEnter: eq,
-                                      onMouseLeave: eZ,
+                                      ref: eL,
+                                      onMouseEnter: eZ,
+                                      onMouseLeave: eq,
                                       onFocus: () => eR(A.Ay.keyboardModeEnabled),
                                       onBlur: () => eR(!1),
                                       onKeyDown: eJ,
-                                      className: H.RD,
+                                      className: U.RD,
                                       "data-testid": "discord-web-video-player-volume-control",
                                       children: e8,
                                   }),
                           })
                         : (0, r.jsxs)("div", {
-                              onMouseEnter: eY,
+                              onMouseEnter: ez,
                               onMouseLeave: eW,
-                              onFocus: eY,
+                              onFocus: ez,
                               onBlur: eW,
-                              className: i()(H.RD, H.u3),
+                              className: i()(U.RD, U.u3),
                               "data-testid": "discord-web-video-player-volume-control",
                               children: [
                                   e8,
-                                  (0, r.jsx)(o.animated.div, {
-                                      className: H.MQ,
+                                  (0, r.jsx)(u.animated.div, {
+                                      className: U.MQ,
                                       "data-testid": "discord-web-video-player-volume-slider",
                                       style: {
-                                          opacity: (0, o.to)([eI], (e) => `${e}`),
-                                          width: (0, o.to)(
+                                          opacity: (0, u.to)([eI], (e) => `${e}`),
+                                          width: (0, u.to)(
                                               [eI.to({ range: [0, 1], output: [0, eE.volumeSliderWidthPx] })],
                                               (e) => `${e}px`,
                                           ),
@@ -538,14 +538,14 @@ function er(e) {
                                   }),
                               ],
                           }),
-                    (0, r.jsx)(K, { compact: eu && !eh }),
+                    (0, r.jsx)(Q, { compact: eo && !eh }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: i()(H.X3, H.ST),
+                className: i()(U.X3, U.ST),
                 children: [
                     (0, r.jsx)(el, {
-                        canCollapse: null != k && k.length > 0,
+                        canCollapse: null != M && M.length > 0,
                         buttons: (function (e) {
                             let {
                                     hideTranscriptBtn: t = !1,
@@ -554,8 +554,8 @@ function er(e) {
                                     captionEnabled: l,
                                     playerState: a,
                                     handleTranscriptBtnClick: i,
-                                    handleCaptionBtnClick: o,
-                                    downloadUrl: u,
+                                    handleCaptionBtnClick: u,
+                                    downloadUrl: o,
                                     handleDownloadButtonClick: s,
                                     extraButtons: d,
                                 } = e,
@@ -564,8 +564,8 @@ function er(e) {
                                 t ||
                                     m.push({
                                         id: "transcript",
-                                        iconComponent: x.PaperIcon,
-                                        label: G.intl.string(J.default["6EjGUv"]),
+                                        iconComponent: v.PaperIcon,
+                                        label: $.intl.string(J.default["6EjGUv"]),
                                         onClick: i,
                                         active: r && a !== c.Q6.ENDED,
                                         disabled: a === c.Q6.ENDED,
@@ -574,18 +574,18 @@ function er(e) {
                                 n ||
                                     m.push({
                                         id: "caption",
-                                        iconComponent: Y.I,
-                                        label: G.intl.string(J.default["0DbPcL"]),
-                                        onClick: o,
+                                        iconComponent: z.I,
+                                        label: $.intl.string(J.default["0DbPcL"]),
+                                        onClick: u,
                                         active: l,
                                         shortcut: c.TJ.CAPTION,
                                         "data-testid": "discord-web-video-player-captions-btn",
                                     }),
-                                null != u &&
+                                null != o &&
                                     m.push({
                                         id: "download",
-                                        iconComponent: v.DownloadIcon,
-                                        label: G.intl.string(G.t["1WjMbC"]),
+                                        iconComponent: x.DownloadIcon,
+                                        label: $.intl.string($.t["1WjMbC"]),
                                         onClick: s,
                                         "data-testid": "discord-web-video-player-download-btn",
                                     }),
@@ -596,34 +596,34 @@ function er(e) {
                             hideTranscriptBtn: b,
                             hideCaptionBtn: E,
                             transcriptEnabled: F,
-                            captionEnabled: $,
+                            captionEnabled: _,
                             playerState: t,
                             handleTranscriptBtnClick: V,
                             handleCaptionBtnClick: ee,
-                            downloadUrl: w,
-                            handleDownloadButtonClick: eQ,
-                            extraButtons: k,
+                            downloadUrl: N,
+                            handleDownloadButtonClick: eH,
+                            extraButtons: M,
                         }),
                         visible: a,
-                        size: C,
+                        size: w,
                     }),
-                    !(!0 === y || ("inline" === y && !eh)) &&
+                    !(!0 === C || ("inline" === C && !eh)) &&
                         (0, r.jsx)(ei, {
-                            playbackRate: eG,
-                            onPlaybackRateChange: eO,
+                            playbackRate: e$,
+                            onPlaybackRateChange: eG,
                             visible: a,
-                            size: C,
+                            size: w,
                             handleControlBarPendingInteraction: es,
                         }),
                     !S &&
-                        (0, r.jsx)(O, {
+                        (0, r.jsx)(G, {
                             iconComponent: eh ? p.FullscreenExitIcon : h.FullscreenEnterIcon,
                             visible: a,
                             onClick: et,
-                            ariaLabel: G.intl.string(J.default.z9Cnzv),
-                            tooltipLabel: G.intl.string(J.default.z9Cnzv),
+                            ariaLabel: $.intl.string(J.default.z9Cnzv),
+                            tooltipLabel: $.intl.string(J.default.z9Cnzv),
                             shortcut: c.TJ.FULLSCREEN,
-                            buttonSize: _[C],
+                            buttonSize: O[w],
                             "data-testid": "discord-web-video-player-fullscreen-btn",
                         }),
                 ],
@@ -635,12 +635,12 @@ function el(e) {
     let { buttons: t, canCollapse: n, visible: l, size: a } = e;
     return 0 === t.length
         ? null
-        : (0, L.Kj)(t.length, n)
+        : (0, T.Kj)(t.length, n)
           ? (0, r.jsx)(ea, { buttons: t, visible: l, size: a })
           : (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(
-                        O,
+                        G,
                         {
                             iconComponent: e.iconComponent,
                             visible: l,
@@ -652,7 +652,7 @@ function el(e) {
                             tooltipLabel: e.label,
                             tooltipDelayMs: e.tooltipDelayMs,
                             shortcut: e.shortcut,
-                            buttonSize: _[a],
+                            buttonSize: O[a],
                             "data-testid": e["data-testid"],
                         },
                         e.id,
@@ -663,18 +663,18 @@ function el(e) {
 function ea(e) {
     let { buttons: t, visible: n, size: a } = e,
         i = l.useRef(null),
-        o = G.intl.string(G.t.PdRCRg),
-        { activeLayer: u } = (0, M.X$)();
+        u = $.intl.string($.t.PdRCRg),
+        { activeLayer: o } = (0, L.X$)();
     return (0, r.jsx)(f.Y, {
         targetElementRef: i,
         position: "top",
         align: "right",
-        layerContext: u,
+        layerContext: o,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(g.W, {
                 navId: "video-player-overflow",
-                "aria-label": o,
+                "aria-label": u,
                 onClose: n,
                 onSelect: n,
                 children: t.map((e) => {
@@ -708,39 +708,39 @@ function ea(e) {
             });
         },
         children: (e) =>
-            (0, r.jsx)(O, {
+            (0, r.jsx)(G, {
                 ref: i,
                 iconComponent: b.MoreHorizontalIcon,
                 visible: n,
-                ariaLabel: o,
-                tooltipLabel: o,
-                buttonSize: _[a],
+                ariaLabel: u,
+                tooltipLabel: u,
+                buttonSize: O[a],
                 clickableProps: e,
                 "data-testid": "discord-web-video-player-overflow-menu-button",
             }),
     });
 }
 function ei(e) {
-    let { playbackRate: t, onPlaybackRateChange: n, visible: a, size: i, handleControlBarPendingInteraction: o } = e,
-        u = l.useRef(null),
-        s = G.intl.string(J.default.ZwPhbB),
-        { activeLayer: c } = (0, M.X$)();
+    let { playbackRate: t, onPlaybackRateChange: n, visible: a, size: i, handleControlBarPendingInteraction: u } = e,
+        o = l.useRef(null),
+        s = $.intl.string(J.default.ZwPhbB),
+        { activeLayer: c } = (0, L.X$)();
     return (0, r.jsx)(f.Y, {
-        targetElementRef: u,
+        targetElementRef: o,
         layerContext: c,
         position: "top",
         align: "right",
-        onRequestOpen: () => o(!0),
+        onRequestOpen: () => u(!0),
         scrollBehavior: "close",
         onRequestClose: () => {
-            (o(!1), u.current?.focus({ preventScroll: !0 }));
+            (u(!1), o.current?.focus({ preventScroll: !0 }));
         },
-        renderPopout: () => (0, r.jsx)(eo, { playbackRate: t, onPlaybackRateChange: n, label: s }),
+        renderPopout: () => (0, r.jsx)(eu, { playbackRate: t, onPlaybackRateChange: n, label: s }),
         children: (e) => {
             let n = 1 !== t;
-            return (0, r.jsx)(O, {
-                ref: u,
-                iconComponent: P.SpeedometerIcon,
+            return (0, r.jsx)(G, {
+                ref: o,
+                iconComponent: y.SpeedometerIcon,
                 visible: a,
                 active: n,
                 overlay: n
@@ -748,40 +748,40 @@ function ei(e) {
                           "aria-hidden": !0,
                           variant: "footnote/semibold",
                           color: "none",
-                          className: H.IG,
+                          className: U.IG,
                           tabularNumbers: !0,
                           children: `${t}x`,
                       })
                     : void 0,
                 ariaLabel: s,
                 tooltipLabel: s,
-                buttonSize: _[i],
-                className: n ? H.CX : void 0,
+                buttonSize: O[i],
+                className: n ? U.CX : void 0,
                 clickableProps: { ...e, "aria-haspopup": "dialog" },
                 "data-testid": "discord-web-video-player-playback-speed-btn",
             });
         },
     });
 }
-function eo(e) {
+function eu(e) {
     let { playbackRate: t, onPlaybackRateChange: n, label: a } = e,
-        o = l.useRef(null);
+        u = l.useRef(null);
     return (
-        (0, y.tj)(o),
+        (0, C.tj)(u),
         (0, r.jsxs)("div", {
-            ref: o,
-            className: i()(Q.i.blurple, H.p8, H.qp),
+            ref: u,
+            className: i()(H.i.blurple, U.p8, U.qp),
             role: "dialog",
             "aria-label": a,
             "data-testid": "discord-web-video-player-playback-speed-popout",
             children: [
-                (0, r.jsx)(C.D, {
+                (0, r.jsx)(w.D, {
                     variant: "heading-sm/semibold",
                     color: "text-default",
-                    className: H.xl,
+                    className: U.xl,
                     children: a,
                 }),
-                (0, r.jsx)(w.A, {
+                (0, r.jsx)(N.A, {
                     value: t,
                     minValue: et,
                     maxValue: en,

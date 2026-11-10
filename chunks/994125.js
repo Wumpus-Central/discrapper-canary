@@ -1,5 +1,5 @@
-var s = r(582128),
-    n = r(855986),
+var n = r(582128),
+    s = r(855986),
     a = r(287809),
     i = r(429707),
     u = r(274303);
@@ -8,7 +8,7 @@ r.d(
     {},
     {
         K: function () {
-            let t = (0, n.cf)([u.A, a.default], () => {
+            let t = (0, s.cf)([u.A, a.default], () => {
                 let t = u.A.getUsers(),
                     e = a.default.getCurrentUser();
                 return null == e ||
@@ -33,7 +33,7 @@ r.d(
                       };
             });
             return (
-                s.useEffect(() => {
+                n.useEffect(() => {
                     i.F6();
                 }, []),
                 t

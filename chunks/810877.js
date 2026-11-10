@@ -34,12 +34,12 @@ n.d(
                     analyticsLocation: I,
                 } = e,
                 b = a.A.fromBlob(o.f.EMOJI, n),
-                C = u.Ay.sanitizeEmojiName(n.name.split(".")[0]);
+                S = u.Ay.sanitizeEmojiName(n.name.split(".")[0]);
             if (u.Ay.isFileTooBig(n)) {
                 if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
                     return E(n.name, n.size, j, f);
                 else if (null != p) {
-                    var S, _;
+                    var C, _;
                     let e;
                     t = (0, i.h_)(p, 128, 128);
                     try {
@@ -48,13 +48,13 @@ n.d(
                         return E(n.name, n.size, j, f);
                     }
                     if (
-                        ((S = t),
+                        ((C = t),
                         (_ = e),
                         c.default.track(g.HAw.EMOJI_FILE_RESIZED, {
                             is_animated: !1,
                             file_type: n.type.split("/").pop(),
                             original_file_size_bytes: n.size,
-                            resized_file_size_bytes: (0, m.EW)(S),
+                            resized_file_size_bytes: (0, m.EW)(C),
                             resized_file_too_big: _,
                         }),
                         e)
@@ -67,7 +67,7 @@ n.d(
                     n = await (0, r.Gf)({
                         guildId: j,
                         image: t,
-                        name: C,
+                        name: S,
                         roles: N,
                         analyticsLocation: I,
                         originalMd5: e,

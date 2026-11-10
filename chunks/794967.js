@@ -1,14 +1,14 @@
-var t = l(620632),
-    i = l(73153),
-    r = l(327891),
-    u = l(619019),
-    o = l(652215);
-l.d(
+var l = t(620632),
+    i = t(73153),
+    r = t(327891),
+    u = t(619019),
+    o = t(652215);
+t.d(
     n,
     {},
     {
         D: function (e) {
-            return t.Bo.get({ url: o.Rsh.GUILD_WIDGET(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+            return l.Bo.get({ url: o.Rsh.GUILD_WIDGET(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
                 i.h.dispatch({
                     type: "GUILD_SETTINGS_SET_WIDGET",
                     enabled: e.body.enabled,
@@ -18,11 +18,11 @@ l.d(
         },
         c: async function (e) {
             let n = (
-                await t.Bo.get({
+                await l.Bo.get({
                     url: o.Rsh.GUILD_INTEGRATIONS(e),
                     query: { include_applications: !0, include_role_connections_metadata: !0 },
                     oldFormErrors: !0,
-                    rejectWithError: (0, t.fT)(),
+                    rejectWithError: (0, l.fT)(),
                 })
             ).body.map((e) => ({
                 ...e,

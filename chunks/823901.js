@@ -5,8 +5,8 @@ var o = n(477900),
     i = n(597770),
     d = n(688810),
     s = n(620301),
-    p = n(412260),
-    u = n(49999),
+    u = n(412260),
+    p = n(49999),
     c = n(652215),
     b = n(792996),
     m = n(971656);
@@ -24,8 +24,8 @@ n.d(
                     analyticsObject: { page: c.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
                     location: "gift-promotion-reminder-nagbar",
                 }),
-                f = (0, a.bG)([p.A], () => {
-                    let e = p.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
+                f = (0, a.bG)([u.A], () => {
+                    let e = u.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
                     return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                         ? null
                         : e.properties.properties.giftReminderNagbar;
@@ -37,7 +37,7 @@ n.d(
                       className: n,
                       children: [
                           (0, o.jsx)(r.PM, {
-                              onClick: () => t(u.i.USER_DISMISS),
+                              onClick: () => t(p.i.USER_DISMISS),
                               noticeType: c.kqX.GIFTING_PROMOTION_REMINDER,
                           }),
                           (0, o.jsx)(i.GiftIcon, {

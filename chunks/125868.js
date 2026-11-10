@@ -1,4 +1,4 @@
-P.exports = {
+e.exports = {
     Nr: "card_hYPoP0",
     SA: "iconMask_hYPoP0",
     En: "cardPlaceholder_hYPoP0",

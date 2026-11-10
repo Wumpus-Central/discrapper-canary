@@ -5,8 +5,8 @@ var o = n(477900),
     i = n(28863),
     d = n(543862),
     s = n(129230),
-    p = n(549996),
-    u = n(498470),
+    u = n(549996),
+    p = n(498470),
     c = n(92551),
     b = n(637706),
     m = n(788883),
@@ -19,7 +19,7 @@ n.d(
     {},
     {
         A: function () {
-            let e = (0, p.c)(a.C.NAGBAR),
+            let e = (0, u.c)(a.C.NAGBAR),
                 t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
                 n = e?.id,
                 N = e?.promotionId,
@@ -49,7 +49,7 @@ n.d(
                 null == e || null == t || null == n || null == N)
             )
                 return null;
-            let y = (0, u.h)({
+            let S = (0, p.h)({
                     buttonAction: t.ctaAction,
                     deeplinkSection: t.deeplinkSection,
                     applicationId: t.navigableStorefrontApplicationId?.value,
@@ -58,8 +58,8 @@ n.d(
                         T(f.i.TAKE_ACTION);
                     },
                 }),
-                S = (0, b.C)(t.helpArticle, ""),
-                { icon: O, iconPosition: C } = (0, u.x)({ buttonAction: t.ctaAction }),
+                y = (0, b.C)(t.helpArticle, ""),
+                { icon: O, iconPosition: C } = (0, p.x)({ buttonAction: t.ctaAction }),
                 R = e.getFormatVariableValues(I.intl.currentLocale),
                 h = (0, c.d)(t.body, R);
             if (!h.ok) return null;
@@ -79,11 +79,11 @@ n.d(
                                   (0, o.jsxs)(_.In, {
                                       children: [
                                           h.content,
-                                          null != S &&
+                                          null != y &&
                                               (0, o.jsxs)(o.Fragment, {
                                                   children: [
                                                       "\xa0",
-                                                      (0, o.jsx)(i.Anchor, { href: S.url, children: S.linkText }),
+                                                      (0, o.jsx)(i.Anchor, { href: y.url, children: y.linkText }),
                                                   ],
                                               }),
                                       ],
@@ -95,7 +95,7 @@ n.d(
                                               (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                                                   notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,
                                               }),
-                                                  y());
+                                                  S());
                                           },
                                           icon: O,
                                           iconPosition: C,

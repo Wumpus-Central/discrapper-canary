@@ -1,10 +1,10 @@
-var t = l(652215);
-l.d(
+var l = t(652215);
+t.d(
     n,
     {},
     {
         x: function () {
-            return t.BEX.PROFILE;
+            return l.BEX.PROFILE;
         },
     },
 );

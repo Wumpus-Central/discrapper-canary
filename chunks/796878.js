@@ -13,21 +13,21 @@ n.d(
         A: function (e) {
             let { children: t } = e,
                 n = (0, r.c)(l.C.PREMIUM_TAB_TOOLTIP),
-                p =
+                u =
                     null != n && "premiumTabTooltip" === n.properties.properties.oneofKind
                         ? n.properties.properties.premiumTabTooltip
                         : null,
-                u = (0, i.T)(p?.asset);
-            if (null == p || null == n) return t;
+                p = (0, i.T)(u?.asset);
+            if (null == u || null == n) return t;
             let c = n.getFormatVariableValues(s.intl.currentLocale),
-                b = (0, d.d)(p.body, c);
+                b = (0, d.d)(u.body, c);
             if (!b.ok) return t;
-            let m = (0, d.d)(p.header, c);
+            let m = (0, d.d)(u.header, c);
             return m.ok
                 ? (0, o.jsx)(a.u, {
                       title: m.content,
                       body: b.content,
-                      asset: null != u ? (0, o.jsx)("img", { src: u, alt: "" }) : void 0,
+                      asset: null != p ? (0, o.jsx)("img", { src: p, alt: "" }) : void 0,
                       assetSize: 80,
                       padding: "lg",
                       position: "right",

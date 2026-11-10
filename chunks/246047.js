@@ -10,11 +10,11 @@ n.d(
             return null == e ? null : null != e.domNode ? e.domNode : (0, l.vq)(e, HTMLVideoElement) ? e : null;
         },
         v: (e) => {
-            let { ref: t, src: n, onSourceError: l, isScrubbing: i, children: o, ...u } = e;
+            let { ref: t, src: n, onSourceError: l, isScrubbing: i, children: u, ...o } = e;
             return (0, r.jsxs)(a.A, {
-                ...u,
+                ...o,
                 ref: t,
-                children: [o, null != n && (0, r.jsx)("source", { onError: l, src: n })],
+                children: [u, null != n && (0, r.jsx)("source", { onError: l, src: n })],
             });
         },
     },

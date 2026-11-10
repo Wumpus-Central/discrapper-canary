@@ -1,15 +1,15 @@
-var s = r(66455),
-    n = r(964486);
+var n = r(66455),
+    s = r(964486);
 r.d(
     e,
     {},
     {
         A: function (t) {
-            let e = (0, s.A)(t);
-            (0, n.Ay)(() => {
+            let e = (0, n.A)(t);
+            (0, s.Ay)(() => {
                 let t = !1,
-                    r = requestAnimationFrame(function s() {
-                        t || (e.current?.(), (r = requestAnimationFrame(s)));
+                    r = requestAnimationFrame(function n() {
+                        t || (e.current?.(), (r = requestAnimationFrame(n)));
                     });
                 return () => {
                     ((t = !0), cancelAnimationFrame(r));

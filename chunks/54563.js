@@ -52,11 +52,11 @@ let R = (0, u.UT)(N.A, {
 });
 var O = n(451909),
     M = n(118517),
-    P = n(747926),
-    k = n(46653),
+    k = n(747926),
+    P = n(46653),
     L = n(734057),
-    D = n(188567),
-    w = n(475815);
+    w = n(188567),
+    D = n(475815);
 let U = (0, n(945810).mj)({
     kind: "user",
     name: "2026-05-clips-media-comments",
@@ -106,7 +106,7 @@ function K(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = Y.author.id === k.default.getId();
+                    n = Y.author.id === P.default.getId();
                 _.A.sendMessage(q.id, O.Ay.parse(q, t), !1, {
                     location: F.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
@@ -197,8 +197,8 @@ function K(e) {
                     className: V.x6,
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == Y || null == Z?.current?.currentTime)) return;
-                        w._U(Z.current) && w.sP(Z.current);
-                        let t = Y.author.id === k.default.getId();
+                        D._U(Z.current) && D.sP(Z.current);
+                        let t = Y.author.id === P.default.getId();
                         ((0, M.Yf)({
                             channel: q,
                             message: Y,
@@ -206,7 +206,7 @@ function K(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: W(m, Z),
                         }),
-                            D._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            w._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
                     children: (0, i.jsx)(E.ArrowAngleLeftUpIcon, { size: "sm" }),
                 }),
@@ -220,7 +220,7 @@ function K(e) {
                             className: V.jC,
                             tag: "span",
                             onClick: function (e) {
-                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, P.JA)(Q)));
+                                (e.stopPropagation(), null != Q && (D._U(Z.current) && D.sP(Z.current), (0, k.JA)(Q)));
                             },
                             "aria-label": el,
                             children: (0, i.jsx)(v.E, {
@@ -472,7 +472,7 @@ function e_(e) {
     let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
         { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
         d = (0, u.bG)(
-            [ef.Ay, k.default],
+            [ef.Ay, P.default],
             () =>
                 (function (e, t) {
                     let n,
@@ -491,17 +491,17 @@ function e_(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, k.default.getId(), ef.Ay),
+                })(t, P.default.getId(), ef.Ay),
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([k.default, N.A], () => {
+        f = (0, u.bG)([P.default, N.A], () => {
             let e = N.A.getMessage(n, r);
             return (
                 null != e &&
-                e.author?.id !== k.default.getId() &&
+                e.author?.id !== P.default.getId() &&
                 (null == e.messageReference ||
-                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
+                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== P.default.getId())
             );
         }),
         p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),

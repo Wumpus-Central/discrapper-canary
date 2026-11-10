@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => A });
 var l = n(477900),
     i = n(582128),
     r = n(843282),
@@ -68,6 +68,6 @@ function g(e) {
     let { tooltipText: t, ...n } = e;
     return (0, l.jsx)(a.m, { text: t, asContainer: !0, children: (0, l.jsx)(j, { ...n }) });
 }
-function v(e) {
+function A(e) {
     return "tooltipText" in e && null != e.tooltipText ? (0, l.jsx)(g, { ...e }) : (0, l.jsx)(j, { ...e });
 }

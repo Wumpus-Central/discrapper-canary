@@ -1,54 +1,54 @@
 (r(321073), r(435558));
 var i = r(855986),
     a = r(73153),
-    _ = r(403362),
-    o = r(324580),
+    o = r(403362),
+    _ = r(324580),
     s = r(792996);
-let n = null,
-    c = [],
+let c = null,
+    n = [],
     E = [],
     p = {};
 class D extends i.Ay.Store {
     static displayName = "GuildDiscoveryCategoryStore";
     getPrimaryCategories() {
-        return c;
+        return n;
     }
     getDiscoveryCategories() {
-        let t = o.FZ.map((t) => E.find((e) => e.categoryId === t)).filter(_.Vq);
+        let t = _.FZ.map((t) => E.find((e) => e.categoryId === t)).filter(o.Vq);
         return [{ categoryId: -1, name: s.intl.string(s.t.Ym2Ri6) }, ...t];
     }
     getClanDiscoveryCategories() {
-        let t = o.FZ.map((t) => E.find((e) => e.categoryId === t)).filter(_.Vq);
+        let t = _.FZ.map((t) => E.find((e) => e.categoryId === t)).filter(o.Vq);
         return [{ categoryId: -1, name: s.intl.string(s.t.QToH29) }, ...t];
     }
     getAllCategories() {
         return E;
     }
     getFetchedLocale() {
-        return n;
+        return c;
     }
     getCategoryName(t) {
         return -1 === t ? s.intl.string(s.t.Ym2Ri6) : p[t];
     }
 }
-let h = new D(a.h, {
+let d = new D(a.h, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (t) {
         let e,
             { categories: r, locale: i } = t,
             a = [],
-            _ = [];
+            o = [];
         if (
             (r
                 .sort((t, e) => (t.name < e.name ? -1 : 1))
                 .forEach((t) => {
-                    let { id: r, name: i, is_primary: o } = t;
+                    let { id: r, name: i, is_primary: _ } = t;
                     if (0 !== r) {
                         if (13 === r) {
                             e = { categoryId: r, name: i };
                             return;
                         }
-                        (!0 === o && a.push({ categoryId: r, name: i }),
-                            _.push({ categoryId: r, name: i }),
+                        (!0 === _ && a.push({ categoryId: r, name: i }),
+                            o.push({ categoryId: r, name: i }),
                             (p[r] = i));
                     }
                 }),
@@ -57,7 +57,7 @@ let h = new D(a.h, {
             let { categoryId: t, name: r } = e;
             (a.push({ categoryId: t, name: r }), (p[t] = r));
         }
-        ((n = i), (c = a), (E = _));
+        ((c = i), (n = a), (E = o));
     },
 });
-r.d(e, {}, { A: h });
+r.d(e, {}, { A: d });
