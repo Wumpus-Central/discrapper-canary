@@ -9,13 +9,13 @@ var l = n(477900),
     d = n(550238),
     m = n(648335),
     p = n(211528),
-    C = n(316363),
-    h = n(783327),
+    h = n(316363),
+    C = n(783327),
     f = n(856383),
     E = n(240248),
     S = n(166532),
-    g = n(676230),
-    I = n(818348),
+    I = n(676230),
+    g = n(818348),
     y = n(400400);
 let A = [S.pn.PAYMENT_ELEMENT],
     P = [
@@ -36,8 +36,8 @@ function x(e) {
             stripeElementsRef: c,
             paymentElementSelectedType: d,
             paymentMethodOrder: m,
-            addressElementKey: C,
-            analyticsContext: h,
+            addressElementKey: h,
+            analyticsContext: C,
             paymentElementFooter: f,
         } = e,
         E = (0, r.useElements)();
@@ -58,8 +58,8 @@ function x(e) {
         ),
         T = i.useMemo(() => {
             if (null == d) return !1;
-            if ((0, g.i)(d)) {
-                let { renderAddressElementInStandaloneMode: e } = g.F[d];
+            if ((0, I.i)(d)) {
+                let { renderAddressElementInStandaloneMode: e } = I.F[d];
                 return e ?? !1;
             }
         }, [d]);
@@ -69,8 +69,8 @@ function x(e) {
             (0, l.jsxs)("div", {
                 className: s()(v ? y.RK : [y.R, y.$u], {
                     [y.df]: null == d,
-                    [y._m]: d === I.he.CARD,
-                    [y.JD]: d === I.he.PAYPAL,
+                    [y._m]: d === g.he.CARD,
+                    [y.JD]: d === g.he.PAYPAL,
                 }),
                 children: [
                     (0, l.jsx)(p.Wf, {
@@ -78,7 +78,7 @@ function x(e) {
                         paymentMethodOrder: m,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
-                        analyticsContext: h,
+                        analyticsContext: C,
                     }),
                     v && f,
                 ],
@@ -87,7 +87,7 @@ function x(e) {
                 className: s()(y.K_, x ? y.RK : [y.R, y.vg]),
                 children: (0, l.jsx)(p.KS, {
                     ...u,
-                    internalKey: C,
+                    internalKey: h,
                     renderAsStandaloneElement: T,
                     billingAddressInfo: n,
                 }),
@@ -116,7 +116,7 @@ n.d(
                     customPaymentMethodIdsToSourceTypes: o,
                     paymentMethodOrder: u,
                 } = (0, c.p)({ onSetupError: t }),
-                d = (0, h.S)();
+                d = (0, C.S)();
             return a || null != s || null == d
                 ? (0, l.jsx)(_, {})
                 : (0, l.jsx)(r.Elements, {
@@ -136,11 +136,11 @@ n.d(
                     continueSessionToInitialStep: o,
                 } = e,
                 c = i.useRef(null),
-                h = i.useRef(null),
-                [g, y] = i.useState(!1),
+                C = i.useRef(null),
+                [I, y] = i.useState(!1),
                 [A, P] = i.useState(!1),
                 x = o === S.pn.CREDIT_CARD_INFORMATION || o === S.pn.PAYMENT_ELEMENT,
-                [_, b] = i.useState(x ? I.he.CARD : null),
+                [_, b] = i.useState(x ? g.he.CARD : null),
                 [N, j] = i.useState(!1),
                 [R, O] = i.useState(void 0),
                 M = (function (e) {
@@ -151,9 +151,9 @@ n.d(
                     O(Date.now().toString());
                 }, []);
             i.useEffect(() => {
-                t === S.pn.PAYMENT_ELEMENT && (h.current = null);
+                t === S.pn.PAYMENT_ELEMENT && (C.current = null);
             }, [t]);
-            let k = (0, C.t4)((e) => e.linkWalletEnabled),
+            let k = (0, h.t4)((e) => e.linkWalletEnabled),
                 w = i.useMemo(() => (k ? T : T.filter((e) => "link" !== e)), [k]),
                 D = i.useMemo(
                     () => ({
@@ -264,8 +264,8 @@ n.d(
                 stripePaymentElementProps: D,
                 stripeAddressElementProps: U,
                 stripeElementsRef: c,
-                lastConfirmedSetupIntentRef: h,
-                paymentElementReady: g,
+                lastConfirmedSetupIntentRef: C,
+                paymentElementReady: I,
                 paymentElementLoaded: A,
                 paymentElementSelectedType: _,
                 setPaymentElementSelectedType: b,

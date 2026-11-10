@@ -1,10 +1,10 @@
 var r,
     u,
-    l = n(731738),
-    i = n(913379),
+    i = n(731738),
+    l = n(913379),
     o = n(129230),
-    s = n(652215),
-    a =
+    a = n(652215),
+    s =
         (((r = {}).REGISTERED = "registered"),
         (r.NO_FRAMEWORK = "no_framework"),
         (r.NO_METADATA = "no_metadata"),
@@ -21,18 +21,18 @@ n.d(
     {},
     {
         $8: function (e, t, n) {
-            (i.A.increment({ name: l.K.IOS_ATTRIBUTION_IMPRESSION, tags: [`result:${e}`, d(t)] }),
-                o.default.track(s.HAw.IOS_ATTRIBUTION_VIEW_RESOLVED, {
+            (l.A.increment({ name: i.K.IOS_ATTRIBUTION_IMPRESSION, tags: [`result:${e}`, d(t)] }),
+                o.default.track(a.HAw.IOS_ATTRIBUTION_VIEW_RESOLVED, {
                     impression_id: n,
                     attribution_framework: t ?? "none",
                     attribution_result: e,
                 }));
         },
         s5: c,
-        vI: a,
+        vI: s,
         y9: function (e, t, n) {
-            (i.A.increment({ name: l.K.IOS_ATTRIBUTION_CLICK, tags: [`result:${e}`, d(t)] }),
-                o.default.track(s.HAw.IOS_ATTRIBUTION_CLICK_RESOLVED, {
+            (l.A.increment({ name: i.K.IOS_ATTRIBUTION_CLICK, tags: [`result:${e}`, d(t)] }),
+                o.default.track(a.HAw.IOS_ATTRIBUTION_CLICK_RESOLVED, {
                     impression_id: n,
                     attribution_framework: t ?? "none",
                     attribution_result: e,

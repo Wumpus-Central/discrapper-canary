@@ -1,11 +1,11 @@
 var r = n(914313),
     u = n(710969),
-    l = n(723702),
-    i = n(929482);
+    i = n(723702),
+    l = n(929482);
 function o() {
-    return r.Se.getConfig({ location: "quest_ios_attribution" }).enabled && (0, l.un)();
+    return r.Se.getConfig({ location: "quest_ios_attribution" }).enabled && (0, i.un)();
 }
-function s(e, t) {
+function a(e, t) {
     return (0, u.vZ)(e, t)?.is_campaign_ios_attribution_enabled === !0;
 }
 n.d(
@@ -13,9 +13,9 @@ n.d(
     {},
     {
         C$: o,
-        Oh: s,
+        Oh: a,
         vV: function (e, t, n) {
-            return o() && e && s(t, n) ? (0, i.BU)() : null;
+            return o() && e && a(t, n) ? (0, l.BU)() : null;
         },
     },
 );

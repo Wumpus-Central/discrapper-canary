@@ -5,10 +5,10 @@ var l = t(503698),
     s = t(536637),
     a = t.n(s),
     c = t(855986),
-    o = t(534514),
-    u = t(531260),
-    d = t(287809),
-    m = t(166403),
+    u = t(534514),
+    o = t(531260),
+    m = t(287809),
+    d = t(166403),
     p = t(448645),
     x = t(526292),
     h = t(423814),
@@ -38,18 +38,18 @@ t.d(
                     headingVariant: y = "heading-sm/medium",
                     headingColor: b,
                 } = e,
-                O = (0, c.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
-                C = (0, c.bG)([d.default], () => d.default.getCurrentUser()),
-                U = (0, u.A)(),
-                L = (0, x.k5)(),
+                O = (0, c.bG)([d.A], () => d.A.getPremiumTypeSubscription()),
+                U = (0, c.bG)([m.default], () => m.default.getCurrentUser()),
+                L = (0, o.A)(),
+                C = (0, x.k5)(),
                 D = (0, x.nf)(),
                 S = t === E.PremiumTypes.TIER_0 ? E.pe.TIER_0 : E.pe.TIER_2,
-                H = O?.hasActiveTrial ? C?.premiumType : L ? E.PremiumTypes.TIER_2 : null,
+                H = O?.hasActiveTrial ? U?.premiumType : C ? E.PremiumTypes.TIER_2 : null,
                 k = (0, T.V)(),
                 F = (0, h.O)(),
                 G = t === E.PremiumTypes.TIER_0 ? E.gD.PREMIUM_MONTH_TIER_0 : E.gD.PREMIUM_MONTH_TIER_2,
-                B = (0, I.N1)(G),
-                w = null != F && (0, I.YJ)(F) === G,
+                w = (0, I.N1)(G),
+                B = null != F && (0, I.YJ)(F) === G,
                 V = k?.subscriptionTrial;
             if (!N && !r && null != H && t === H && null != O && null != O.planIdFromItems) {
                 let e = null != O.trialEndsAt ? a()(O?.trialEndsAt).diff(a()(), "d") : 0,
@@ -57,7 +57,7 @@ t.d(
                     t = p.Ay.formatPriceString(p.Ay.getDefaultPrice(r.id), r.interval),
                     l = s === E.Vk.PREMIUM_TRIAL,
                     c = O.planIdFromItems === E.gD.PREMIUM_YEAR_TIER_2;
-                return (0, n.jsx)(o.D, {
+                return (0, n.jsx)(u.D, {
                     variant: y,
                     color: b,
                     className: i()((l || !c) && g.K, P),
@@ -70,7 +70,7 @@ t.d(
                                 ? f.intl.format(f.t.z2oQtA, {
                                       percent: D?.percentage ?? 20,
                                       regularPrice: t,
-                                      renewalDate: p.Ay.getExpectedRenewalDate(O, U),
+                                      renewalDate: p.Ay.getExpectedRenewalDate(O, L),
                                   })
                                 : f.intl.formatToPlainString(f.t["3ZiutU"], {
                                       percent: D?.percentage ?? 30,
@@ -87,7 +87,7 @@ t.d(
                     E.WT.MONTH,
                 );
                 if (s === E.Vk.PREMIUM_TRIAL)
-                    return (0, n.jsx)(o.D, {
+                    return (0, n.jsx)(u.D, {
                         variant: y,
                         color: b,
                         className: i()(g.K, P),
@@ -101,14 +101,14 @@ t.d(
                             price: e,
                         }),
                     });
-                if (null != F && null != B && w)
-                    return (0, n.jsx)(o.D, {
+                if (null != F && null != w && B)
+                    return (0, n.jsx)(u.D, {
                         variant: y,
                         color: b,
                         className: i()(g.K, P),
                         children: f.intl.format(f.t.sJTwHQ, {
                             numMonths: F.discount.intervalCount ?? 1,
-                            discountedPrice: B,
+                            discountedPrice: w,
                             regularPrice: e,
                         }),
                     });

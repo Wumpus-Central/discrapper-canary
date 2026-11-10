@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     EE: "colorSelection_yIaH9I",
     Ei: "colorPicker_yIaH9I",
     kM: "gradientColorPicker_yIaH9I",

@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     qr: "footer_14qEft",
     k0: "subscriberButtonContainer_14qEft",
     f4: "subscriberRowWithBanner_14qEft",

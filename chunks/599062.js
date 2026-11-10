@@ -10,8 +10,8 @@ var r = n(855986),
     d = n(287809),
     m = n(792996),
     p = n(634090),
-    C = n(626768),
-    h = n(464896),
+    h = n(626768),
+    C = n(464896),
     f = (((l = {})[(l.SHOP_PAGE = 0)] = "SHOP_PAGE"), (l[(l.GIFT_MODAL = 1)] = "GIFT_MODAL"), l);
 n.d(
     t,
@@ -26,17 +26,17 @@ n.d(
                     return e?.isStaff() || e?.isStaffPersonal();
                 }),
                 S = 1 === n ? p.tV : p.Df,
-                g = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
+                I = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
             return (0, i.jsxs)("div", {
                 className: S,
                 children: [
-                    (0, i.jsx)("img", { className: p.__invalid_loadIssueImg, src: (0, a.M)(f) ? C : h, alt: "" }),
+                    (0, i.jsx)("img", { className: p.__invalid_loadIssueImg, src: (0, a.M)(f) ? h : C, alt: "" }),
                     (0, i.jsx)(s.D, {
                         className: p.st,
                         variant: "heading-xl/semibold",
                         children: m.intl.string(m.t.i5SQ74),
                     }),
-                    (0, i.jsx)(o.E, { className: p.h_, variant: "body-md/normal", children: g }),
+                    (0, i.jsx)(o.E, { className: p.h_, variant: "body-md/normal", children: I }),
                     E &&
                         null != l &&
                         (0, i.jsx)(o.E, { variant: "body-md/normal", children: "staff-only debug: " + l }),

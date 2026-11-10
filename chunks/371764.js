@@ -32,7 +32,7 @@ n.d(
                 name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
                 properties: { component_type: n, component_id: e, promotion_id: A },
             });
-            let I = (0, x.h)({
+            let y = (0, x.h)({
                     buttonAction: N.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
                     deeplinkSection: N.button?.deeplinkSection,
                     applicationId: N.button?.navigableStorefrontApplicationId?.value,
@@ -40,9 +40,9 @@ n.d(
                     analyticsLocations: j,
                     analyticsLocation: v.location,
                 }),
-                y = (0, b.a)(N.body),
-                C = (0, b.C)(N.helpArticle, N.helpArticleId),
-                { icon: T, iconPosition: _ } = (0, x.x)({ buttonAction: N.button?.buttonAction });
+                I = (0, b.a)(N.body),
+                T = (0, b.C)(N.helpArticle, N.helpArticleId),
+                { icon: C, iconPosition: _ } = (0, x.x)({ buttonAction: N.button?.buttonAction });
             return (0, i.jsxs)("div", {
                 className: g.kL,
                 children: [
@@ -63,15 +63,15 @@ n.d(
                                 color: "text-subtle",
                                 className: g.tb,
                                 children: [
-                                    y,
-                                    null != C &&
+                                    I,
+                                    null != T &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 "\xa0",
                                                 (0, i.jsx)(u.Anchor, {
                                                     className: g.$T,
-                                                    href: C.url,
-                                                    children: C.linkText,
+                                                    href: T.url,
+                                                    children: T.linkText,
                                                 }),
                                             ],
                                         }),
@@ -85,9 +85,9 @@ n.d(
                             children: (0, i.jsx)(r.$, {
                                 variant: N.buttonVariant === a.F.PRIMARY ? "primary" : "expressive",
                                 size: "md",
-                                onClick: I,
+                                onClick: y,
                                 text: N.button.copy,
-                                icon: T,
+                                icon: C,
                                 iconPosition: _,
                             }),
                         }),

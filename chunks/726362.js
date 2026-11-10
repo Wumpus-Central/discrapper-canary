@@ -3,15 +3,15 @@ var l = t(620632),
     a = t(210470),
     r = t(603013),
     s = t(131904),
-    u = t(22464);
-function d(e) {
+    d = t(22464);
+function u(e) {
     return { channelId: e.channel_id, eligible: e.eligible, included: e.included };
 }
 function c(e) {
-    return { enabled: e.enabled, channels: e.channels.map(d) };
+    return { enabled: e.enabled, channels: e.channels.map(u) };
 }
 function o(e) {
-    return { [u.y.CHANNEL_SUMMARIES]: c(e[u.y.CHANNEL_SUMMARIES]), [u.y.CHANNEL_MESSAGES]: c(e[u.y.CHANNEL_MESSAGES]) };
+    return { [d.y.CHANNEL_SUMMARIES]: c(e[d.y.CHANNEL_SUMMARIES]), [d.y.CHANNEL_MESSAGES]: c(e[d.y.CHANNEL_MESSAGES]) };
 }
 let h = new Set();
 t.d(
@@ -48,7 +48,7 @@ t.d(
             let n = s.A.getFeatures(e);
             if (null == n || s.A.isSaving()) return;
             let t = {};
-            for (let l of u.P) {
+            for (let l of d.P) {
                 let i = s.A.getDraft(e, l);
                 if (null == i) continue;
                 let r = (0, a.Pg)(n[l], i);

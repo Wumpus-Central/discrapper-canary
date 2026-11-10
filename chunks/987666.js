@@ -18,13 +18,13 @@ n.d(
                     discriminatedInvoicePreview: d,
                     overrideRenewalDate: m,
                     fractionalPremiumInfo: p,
-                    isInvoiceBilledImmediately: C = !0,
-                    unifiedLegalType: h,
+                    isInvoiceBilledImmediately: h = !0,
+                    unifiedLegalType: C,
                     discountOffer: f,
                     subscriptionTrial: E,
                 } = e,
                 { immediateDelivery: S } = (0, s.U)(),
-                { checkoutReviewButtonLabel: g, isExpressCheckoutVisibleInFooter: I } = (0, u.t4)((e) => ({
+                { checkoutReviewButtonLabel: I, isExpressCheckoutVisibleInFooter: g } = (0, u.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                     isExpressCheckoutVisibleInFooter:
                         e.getExpressCheckoutVisibilityState().isExpressCheckoutVisibleInFooter,
@@ -34,7 +34,7 @@ n.d(
                 A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? y,
                 P = (0, r.de)({
                     overrideRenewalDate: m,
-                    currentInvoice: C ? y : void 0,
+                    currentInvoice: h ? y : void 0,
                     renewalInvoice: A,
                     isSubscriptionUpdate: null != c,
                     fractionalPremiumInfo: p,
@@ -44,8 +44,8 @@ n.d(
                     subscriptionTrial: E,
                 }),
                 _ = {
-                    purchaseButtonText: g,
-                    totalDue: C ? y.total : 0,
+                    purchaseButtonText: I,
+                    totalDue: h ? y.total : 0,
                     renewalPrice: v,
                     multiPeriodDiscountAttributes: x,
                     currency: y.currency,
@@ -54,10 +54,10 @@ n.d(
                     startDate: P,
                 };
             return (0, l.jsx)(o._P, {
-                variant: { type: h, ..._ },
+                variant: { type: C, ..._ },
                 paymentSourceType: n,
                 immediateDelivery: S,
-                isExpressCheckout: I,
+                isExpressCheckout: g,
             });
         },
     },

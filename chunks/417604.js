@@ -1,4 +1,4 @@
-n.d(t, { iB: () => E, Y0: () => S, A: () => g });
+n.d(t, { iB: () => E, Y0: () => S, A: () => I });
 var l = n(582128),
     i = n(164636),
     r = n(316363),
@@ -118,8 +118,8 @@ class p {
             : { shouldSet: !1, correctedPaymentSourceId: null };
     }
 }
-var C = n(792996),
-    h = n(140624);
+var h = n(792996),
+    C = n(140624);
 function f(e) {
     let { giftCardsEnabled: t } = e,
         {
@@ -166,9 +166,9 @@ function S(e) {
         n,
         { paymentSourceId: i, setPaymentSourceId: a, location: u, isReady: d = !0, subscriptionPaymentSourceId: E } = e,
         { enabled: S } = (0, s.c)({ location: u }),
-        { enabled: g } = (0, o.U)({ location: u }),
+        { enabled: I } = (0, o.U)({ location: u }),
         {
-            pendingPaymentSourceId: I,
+            pendingPaymentSourceId: g,
             hasInitialPaymentSourceSeed: y,
             hasAddedPaymentSourceThisSession: A,
             applyWalletBalance: P,
@@ -190,7 +190,7 @@ function S(e) {
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             dropdownPaymentSources: e.getDropdownPaymentSources(),
             storeGiftCardWallet: e.getGiftCardWallet(),
-            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: g, giftCardsEnabled: S }),
+            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: I, giftCardsEnabled: S }),
         })),
         R = S ? N : null,
         O = j ? null : R,
@@ -209,13 +209,13 @@ function S(e) {
                 subscriptionPaymentSourceId: E,
                 giftCardWallet: O,
                 isReady: d,
-                pendingPaymentSourceId: I,
+                pendingPaymentSourceId: g,
                 paymentSourceId: i,
                 giftCardsEnabled: S,
                 hasInitialPaymentSourceSeed: y,
                 hasAddedPaymentSourceThisSession: A,
             }),
-            [T, b, E, O, d, I, i, S, y, A],
+            [T, b, E, O, d, g, i, S, y, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new p(U), [U])),
@@ -300,7 +300,7 @@ function S(e) {
                         onChange: H,
                         loading: Z,
                         disabled: !Z && !V,
-                        disabledTooltip: Z || V ? void 0 : C.intl.string(h.default.ccWIdu),
+                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
         [R, j, Q, W, k, H, V, Z, $, z],
     );
@@ -321,7 +321,7 @@ function S(e) {
         isSplitPaymentMode: j,
     };
 }
-function g(e) {
+function I(e) {
     let { location: t, message: n } = e,
         o = (0, i.bG)([a.A], () => {
             let e = a.A.getPremiumTypeSubscription();

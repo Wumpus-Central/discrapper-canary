@@ -28,12 +28,12 @@ n.d(
                     if (null != t && null != t.colors && !(t.colors.length < 2))
                         return (0, x.K5)({ gradient: t.colors, angle: t.angle }, { defaultAngle: 180 });
                 }, [n.gradient]),
-                I = (0, x.x)(j, v),
-                y = null != n.textColor && "" !== n.textColor ? { color: n.textColor } : void 0,
-                C = n.helpArticle?.id;
+                y = (0, x.x)(j, v),
+                I = null != n.textColor && "" !== n.textColor ? { color: n.textColor } : void 0,
+                T = n.helpArticle?.id;
             return (0, i.jsxs)("div", {
                 className: s()(A.WR, e),
-                style: I,
+                style: y,
                 children: [
                     null != l && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: l }),
                     (0, i.jsxs)("div", {
@@ -41,13 +41,13 @@ n.d(
                         children: [
                             (0, i.jsx)(a.D, {
                                 className: A.u_,
-                                style: y,
+                                style: I,
                                 color: "text-strong",
                                 variant: "heading-lg/semibold",
                                 children: n.header,
                             }),
                             (0, i.jsx)(r.E, {
-                                style: y,
+                                style: I,
                                 color: "text-muted",
                                 variant: "body-sm/medium",
                                 children: n.body,
@@ -55,7 +55,7 @@ n.d(
                             null != n.additionalTerms &&
                                 (0, i.jsx)(r.E, {
                                     className: A.KW,
-                                    style: y,
+                                    style: I,
                                     color: "text-muted",
                                     variant: "footnote/normal",
                                     children: n.additionalTerms,
@@ -75,12 +75,12 @@ n.d(
                                             });
                                         },
                                     }),
-                                    null != C &&
-                                        "" !== C &&
+                                    null != T &&
+                                        "" !== T &&
                                         (0, i.jsx)(d.$, {
                                             variant: "secondary",
                                             text: g.intl.string(g.t.hvVgAZ),
-                                            onClick: () => window.open(p.A.getArticleURL(C), "_blank"),
+                                            onClick: () => window.open(p.A.getArticleURL(T), "_blank"),
                                         }),
                                 ],
                             }),

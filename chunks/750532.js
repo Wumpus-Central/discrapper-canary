@@ -9,13 +9,13 @@ var l = n(477900),
     d = n(316363),
     m = n(602787),
     p = n(242874),
-    C = n(573359),
-    h = n(163074),
+    h = n(573359),
+    C = n(163074),
     f = n(742655),
     E = n(892349),
     S = n(35587),
-    g = n(446263),
-    I = n(683166),
+    I = n(446263),
+    g = n(683166),
     y = n(45938),
     A = n(448645),
     P = n(418200),
@@ -39,13 +39,13 @@ function R(e) {
             purchaseState: e.purchaseState,
             quantity: e.quantity,
         })),
-        O = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        O = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
         { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, m.i)(),
         D = (0, u.S3)(),
         U = (0, o.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
-        { enabled: W } = h.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
+        { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
         V = D?.productLine === x.EZt.COLLECTIBLES,
         Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.MW)({ isGift: G, giftRecipient: B, selectedPlanId: c }),
@@ -76,7 +76,7 @@ function R(e) {
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(g.A, {
+                                children: (0, l.jsx)(I.A, {
                                     defaultAnimationState: p.oA.LOOP,
                                     giftStyle: F,
                                     className: N.qq,
@@ -90,7 +90,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(I.A, {
+                              ? (0, l.jsx)(g.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: S,
                                     premiumType: _.WN[n],

@@ -14,8 +14,8 @@ function c() {
 var d = n(830382),
     m = n(534514),
     p = n(834730),
-    C = n(28863),
-    h = n(696208),
+    h = n(28863),
+    C = n(696208),
     f = n(792996),
     E = n(203949);
 function S(e) {
@@ -39,7 +39,7 @@ function S(e) {
                                 "\xa0",
                                 n
                                     ? f.intl.string(f.t.StGVvC)
-                                    : (0, l.jsx)(C.Anchor, { onClick: i, children: f.intl.string(f.t.Ex7sk9) }),
+                                    : (0, l.jsx)(h.Anchor, { onClick: i, children: f.intl.string(f.t.Ex7sk9) }),
                             ],
                         }),
                     ],
@@ -48,11 +48,11 @@ function S(e) {
         }),
     });
 }
-function g() {
+function I() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
-    return (0, l.jsx)(h.H, { actions: e });
+    return (0, l.jsx)(C.H, { actions: e });
 }
-var I = n(636950);
+var g = n(636950);
 function y() {
     let [e, t] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
@@ -60,14 +60,14 @@ function y() {
             (0, l.jsx)(s.A, {}),
             (0, l.jsx)(o.dZ, {
                 children: (0, l.jsx)(S, {
-                    className: I.r,
+                    className: g.r,
                     isEmailResent: e,
                     resendEmail: async function () {
                         (t(!0), await (0, d.lo)());
                     },
                 }),
             }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(g, {}) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(I, {}) }),
         ],
     });
 }
@@ -117,17 +117,17 @@ function q(e) {
         d = (0, x.Hp)(),
         m = (0, W.gU)(),
         p = (0, W.Hu)(),
-        { isGift: C } = (0, b.Pv)(),
-        [h, f] = i.useState(!0),
+        { isGift: h } = (0, b.Pv)(),
+        [C, f] = i.useState(!0),
         [E, S] = (0, A.yK)([T.A], () => [T.A.isFetchingCategories, T.A.error]);
     return (i.useEffect(() => {
         let e = null != c;
         p && o && e && f(E);
     }, [p, o, c, E]),
     i.useEffect(() => {
-        if (h || d || null == n) return;
+        if (C || d || null == n) return;
         let e = m[n];
-        C &&
+        h &&
         (e?.productLine === K.EZt.COLLECTIBLES ||
             e?.productLine === K.EZt.APPLICATION ||
             e?.productLine === K.EZt.SOCIAL_LAYER_GAME_ITEM)
@@ -135,8 +135,8 @@ function q(e) {
             : 0 === Object.keys(s).length && (!a || u)
               ? t(r.pn.ADD_PAYMENT_STEPS)
               : t(r.pn.REVIEW);
-    }, [h, d, t, s, C, m, n, a, u]),
-    h)
+    }, [C, d, t, s, h, m, n, a, u]),
+    C)
         ? (0, l.jsx)(L.A, {})
         : d
           ? (0, l.jsx)(_.oO, {})
@@ -155,8 +155,8 @@ function z(e) {
             isExpressCheckoutEnabled: d,
             premiumTenantParams: m,
             continueSessionToInitialStep: p,
-            startingStepOverride: C,
-            initialPlanId: h,
+            startingStepOverride: h,
+            initialPlanId: C,
         } = (0, Y.t4)((e) => ({
             premiumTenantParams: e.getTenantParams(G.C.PREMIUM_CHECKOUT) ?? {},
             initialPlanId: e.getInitialPlanId(),
@@ -171,10 +171,10 @@ function z(e) {
         { subscriptionTier: f } = m,
         E = (0, x.Hp)(),
         S = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: g, subscriptionPriceOptionsLoading: I } = (0, H.Jn)(),
+        { hasFetchedRelatedSubscriptionPlans: I, subscriptionPriceOptionsLoading: g } = (0, H.Jn)(),
         { isGift: y } = (0, b.Pv)(),
         T = (0, D.A)({ isGift: y, skuId: s }),
-        N = !S || !g || I || !a,
+        N = !S || !I || g || !a,
         j = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(Z.tv));
     (0, v.A)(
         "Payment Modal",
@@ -182,8 +182,8 @@ function z(e) {
         5,
         {
             hasFetchedSubscriptions: S,
-            hasFetchedSubscriptionPlans: g,
-            subscriptionPriceOptionsLoading: I,
+            hasFetchedSubscriptionPlans: I,
+            subscriptionPriceOptionsLoading: g,
             hasFetchedPaymentSources: a,
         },
         { tags: { app_context: "billing" } },
@@ -194,10 +194,10 @@ function z(e) {
             N ||
                 E ||
                 (null == p || d
-                    ? null != C
-                        ? t(C)
-                        : null != h
-                          ? h !== Z.gD.PREMIUM_GROUP_MONTH || n
+                    ? null != h
+                        ? t(h)
+                        : null != C
+                          ? C !== Z.gD.PREMIUM_GROUP_MONTH || n
                               ? t(r.pn.REVIEW)
                               : t(r.pn.ADD_PAYMENT_STEPS)
                           : R
@@ -206,7 +206,7 @@ function z(e) {
                               ? t(r.pn.PLAN_SELECT)
                               : t(r.pn.SKU_SELECT)
                     : t(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: p })));
-    }, [d, p, C, u, E, j, h, N, t, f, s, o, T, c, y, R, n]),
+    }, [d, p, h, u, E, j, C, N, t, f, s, o, T, c, y, R, n]),
     N)
         ? (0, l.jsx)(L.A, {})
         : E

@@ -4,15 +4,15 @@ n(582128);
 var a = n(805251),
     r = n(406810),
     l = n(497901),
-    o = n(116716),
-    s = n(792996);
+    s = n(116716),
+    o = n(792996);
 function d(e) {
     let { endsAt: t } = e,
         n = (0, l.A)(t);
     return null == n
         ? null
         : (0, i.jsx)(a.E, {
-              type: { text: s.intl.formatToPlainString(o.default.TaUsG9, { days: n }).toLocaleUpperCase() },
+              type: { text: o.intl.formatToPlainString(s.default.TaUsG9, { days: n }).toLocaleUpperCase() },
               icon: r.ClockIcon,
           });
 }

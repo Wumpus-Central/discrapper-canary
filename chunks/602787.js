@@ -49,9 +49,9 @@ n.d(
                     };
                 }),
                 { referralTrialOfferId: p } = d,
-                C = (0, r.V)(p),
-                h = !u && !m && null != t,
-                f = !!(h && null != C && c.kb[C.trialId].skus.includes(t) && !u),
+                h = (0, r.V)(p),
+                C = !u && !m && null != t,
+                f = !!(C && null != h && c.kb[h.trialId].skus.includes(t) && !u),
                 E = (0, i.O)(),
                 S =
                     null != t &&
@@ -59,8 +59,8 @@ n.d(
                     null != E.discount &&
                     null != E.discount.planIds &&
                     E.discount.planIds.some((e) => c.hd[e].skuId === t),
-                g = !!(h && null != E && S),
-                I = l.useMemo(
+                I = !!(C && null != E && S),
+                g = l.useMemo(
                     () => null != E && null != E.discount && null != e && (0, a.Ro)(e, E.discount.id),
                     [E, e],
                 );
@@ -69,12 +69,12 @@ n.d(
                     isPremium: n,
                     isPremiumGroupPurchase: u,
                     isEligibleForTrial: f,
-                    isEligibleForDiscount: g,
-                    userTrialOffer: C,
+                    isEligibleForDiscount: I,
+                    userTrialOffer: h,
                     discountOffer: E,
-                    currentInvoiceHasMatchingDiscountOffer: I,
+                    currentInvoiceHasMatchingDiscountOffer: g,
                 }),
-                [n, u, f, g, C, E, I],
+                [n, u, f, I, h, E, g],
             );
         },
     },

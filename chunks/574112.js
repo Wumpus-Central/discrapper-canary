@@ -1,15 +1,15 @@
 (n.d(t, {
-    IG: () => y,
-    $J: () => L,
-    W1: () => P,
+    IG: () => w,
+    $J: () => P,
+    W1: () => R,
     _Q: () => D,
     se: () => G,
     v0: () => b,
     b6: () => Q,
     pu: () => k,
     Ps: () => q,
-    bg: () => R,
-    UR: () => h,
+    bg: () => L,
+    UR: () => v,
 }),
     n(321073),
     n(323874),
@@ -19,79 +19,79 @@
     n(947204));
 var r = n(115560),
     u = n(323889),
-    l = n(412703),
-    i = n(73153),
+    i = n(412703),
+    l = n(73153),
     o = n(975807),
-    s = n(438457),
-    a = n(144779),
+    a = n(438457),
+    s = n(144779),
     c = n(7588),
     d = n(249612),
     f = n(522978),
     A = n(780964),
     E = n(188567),
-    _ = n(723702),
-    T = n(914313),
-    I = n(561844),
-    C = n(590202),
+    T = n(723702),
+    _ = n(914313),
+    C = n(561844),
+    I = n(590202),
     p = n(506988);
 function S(e, t, n) {
     switch (e) {
-        case I.Dq.MAIN_CTA:
-            (0, s.r)({
-                type: a.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                questContentCTA: C.Cy.GAME_STORE_OPEN_GAME_LINK,
+        case C.Dq.MAIN_CTA:
+            (0, a.r)({
+                type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                questContentCTA: I.Cy.GAME_STORE_OPEN_GAME_LINK,
                 ...n,
                 ...t,
             });
             break;
-        case I.Dq.RATING_STAT:
-            (0, s.r)({
-                type: a.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                questContentCTA: C.Cy.GAME_STORE_OPEN_REVIEWS,
+        case C.Dq.RATING_STAT:
+            (0, a.r)({
+                type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                questContentCTA: I.Cy.GAME_STORE_OPEN_REVIEWS,
                 ...n,
                 ...t,
             });
             break;
-        case I.Dq.SEE_MORE:
-            (0, s.r)({ type: a.F.CLICK_INTERNAL, questContentCTA: C.Cy.EXPAND, ...n, ...t });
+        case C.Dq.SEE_MORE:
+            (0, a.r)({ type: s.F.CLICK_INTERNAL, questContentCTA: I.Cy.EXPAND, ...n, ...t });
     }
 }
 var m = n(651892),
     O = n(792620),
     g = n(221596),
-    N = n(652215),
-    v = n(792996);
-function h(e) {
+    h = n(652215),
+    N = n(792996);
+function v(e) {
     let t = (0, O.t)({ quest: e }) || (0, O.fE)({ quest: e }) || (0, O.I6)(e),
         n = (0, O.uD)(e),
         r = [];
     return (t && r.push(g.fO.DESKTOP), n && r.push(g.fO.CONSOLE), r);
 }
-function R(e) {
+function L(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
     for (let e of t)
         switch (e) {
-            case l.n.PLAY_ON_XBOX:
-                n.push(N.fg2.XBOX);
+            case i.n.PLAY_ON_XBOX:
+                n.push(h.fg2.XBOX);
                 break;
-            case l.n.PLAY_ON_PLAYSTATION:
-                n.push(N.fg2.PLAYSTATION);
+            case i.n.PLAY_ON_PLAYSTATION:
+                n.push(h.fg2.PLAYSTATION);
         }
     return n;
 }
-function P(e) {
+function R(e) {
     let t = (0, O.vv)(e),
         n = (0, O.vl)(e);
     return t || n;
 }
-function L(e) {
-    return "xbox" === e.connected_account_type ? N.fg2.XBOX : N.fg2.PLAYSTATION;
+function P(e) {
+    return "xbox" === e.connected_account_type ? h.fg2.XBOX : h.fg2.PLAYSTATION;
 }
 function b(e, t) {
     let { platformType: n, quest: r } = e;
-    ((0, s.r)({
-        type: a.F.CLICK_INTERNAL,
+    ((0, a.r)({
+        type: s.F.CLICK_INTERNAL,
         adCreativeType: u.p.QUEST,
         adCreativeId: r.id,
         questContentCTA: t.ctaContent,
@@ -101,27 +101,27 @@ function b(e, t) {
     }),
         (0, f.A)({ platformType: n, location: t.ctaContent }));
 }
-function y(e) {
-    return L(e) === N.fg2.XBOX ? v.t["mytEv+"] : v.t.iDiwby;
+function w(e) {
+    return P(e) === h.fg2.XBOX ? N.t["mytEv+"] : N.t.iDiwby;
 }
-function M(e) {
-    if (((0, _.un)() || "ios" === (0, _.R0)()) && e.ios?.iosAppId != null) {
+function y(e) {
+    if (((0, T.un)() || "ios" === (0, T.R0)()) && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
         return `https://apps.apple.com/app/${t}`;
     }
-    return ((0, _.m0)() || "android" === (0, _.R0)()) && e.android?.androidAppId != null
+    return ((0, T.m0)() || "android" === (0, T.R0)()) && e.android?.androidAppId != null
         ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
         : null;
 }
-function w(e) {
-    if ((0, _.m0)() && e.android?.androidAppId != null)
+function M(e) {
+    if ((0, T.m0)() && e.android?.androidAppId != null)
         return {
             url: `https://play.google.com/d?id=${e.android.androidAppId}`,
             os: "android",
             storeAppId: e.android.androidAppId,
             appId: null,
         };
-    if ((0, _.un)() && e.ios?.iosAppId != null) {
+    if ((0, T.un)() && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId.slice(2) : e.ios.iosAppId;
         return { url: `https://apps.apple.com/app/id${t}`, os: "ios", storeAppId: t, appId: parseInt(t, 10) };
     }
@@ -133,19 +133,19 @@ function U(e) {
         directLink: n,
         inlineStoreParams: r,
         trackOverlayEvent: u,
-        trackOverlaySurfaceClick: l,
-        appStoreOverlayCarouselScrollContext: i,
-        getIosAttribution: s,
-        allowExternalOpen: a = !0,
+        trackOverlaySurfaceClick: i,
+        appStoreOverlayCarouselScrollContext: l,
+        getIosAttribution: a,
+        allowExternalOpen: s = !0,
     } = e;
-    return (T.OO.getConfig({ location: "quest_open_game_link" }).enabled, a && (0, o.A)(t), Promise.resolve(!1));
+    return (_.OO.getConfig({ location: "quest_open_game_link" }).enabled, s && (0, o.A)(t), Promise.resolve(!1));
 }
 function k(e, t) {
     let n,
-        l,
         i,
+        l,
         o = (0, m.Jx)(e.config),
-        f = null == (n = e.config.ctaConfig) ? null : M({ url: (0, m.Jx)(e.config), android: n.android, ios: n.ios });
+        f = null == (n = e.config.ctaConfig) ? null : y({ url: (0, m.Jx)(e.config), android: n.android, ios: n.ios });
     (null != f && (o = f),
         (function (e) {
             try {
@@ -161,26 +161,26 @@ function k(e, t) {
                 } catch {
                     return e;
                 }
-            })(o, (i = (0, r.A)()))));
+            })(o, (l = (0, r.A)()))));
     let { impressionId: A } = t,
-        _ = null != A ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
-    (E._.dispatch(N.jej.QUEST_GAME_LINK_OPENED),
+        T = null != A ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
+    (E._.dispatch(h.jej.QUEST_GAME_LINK_OPENED),
         U({
             link: o,
             directLink: f,
             inlineStoreParams:
-                null == (l = e.config.ctaConfig)
+                null == (i = e.config.ctaConfig)
                     ? null
-                    : w({ url: (0, m.Jx)(e.config), android: l.android, ios: l.ios }),
-            trackOverlayEvent: (n, r, u, l, i) =>
-                (0, I.eA)({
+                    : M({ url: (0, m.Jx)(e.config), android: i.android, ios: i.ios }),
+            trackOverlayEvent: (n, r, u, i, l) =>
+                (0, C.eA)({
                     quest: e,
                     trackingCtx: t,
                     inlineStoreAppId: r,
                     overlayVariant: u,
                     event: n,
-                    timeSpentMs: l,
-                    overlaySurface: i,
+                    timeSpentMs: i,
+                    overlaySurface: l,
                 }),
             trackOverlaySurfaceClick: (n) =>
                 (function (e) {
@@ -197,22 +197,22 @@ function k(e, t) {
                     );
                 })({ questId: e.id, trackingCtx: t, overlaySurface: n }),
             appStoreOverlayCarouselScrollContext: { questId: e.id },
-            getIosAttribution: null != _ && null != A ? () => (0, d.FW)({ impressionId: A }) : void 0,
+            getIosAttribution: null != T && null != A ? () => (0, d.FW)({ impressionId: A }) : void 0,
         }).then((n) => {
             "custom" === n
-                ? (0, s.r)({
-                      type: a.F.CLICK_INTERNAL,
+                ? (0, a.r)({
+                      type: s.F.CLICK_INTERNAL,
                       adCreativeType: u.p.QUEST,
                       adCreativeId: e.id,
-                      questContentCTA: C.Cy.OPEN_CUSTOM_APP_STORE,
+                      questContentCTA: I.Cy.OPEN_CUSTOM_APP_STORE,
                       surfaceId: t.content,
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
                       impressionId: t.impressionId,
-                      clickId: i,
+                      clickId: l,
                   })
-                : (0, s.r)({
-                      type: a.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                : (0, a.r)({
+                      type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                       adCreativeType: u.p.QUEST,
                       adCreativeId: e.id,
                       questContentCTA: t.ctaContent,
@@ -220,36 +220,36 @@ function k(e, t) {
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
                       impressionId: t.impressionId,
-                      clickId: i,
+                      clickId: l,
                   });
         }));
 }
 function D(e, t) {
     let { adContentId: n, adCreativeType: r, cta: u } = e;
     !(function (e, t, n) {
-        let { adContentId: r, adCreativeType: u, cta: l } = e,
-            { preferExternalAppStore: i } = n,
-            f = l.url,
-            A = M(l);
-        (null != A && (f = A), E._.dispatch(N.jej.QUEST_GAME_LINK_OPENED));
-        let { impressionId: _ } = t,
-            T = null != _ ? (0, c.vV)(l.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
-            m = w(l),
-            O = null != T && null != _ ? () => (0, d.FW)({ impressionId: _ }) : void 0;
+        let { adContentId: r, adCreativeType: u, cta: i } = e,
+            { preferExternalAppStore: l } = n,
+            f = i.url,
+            A = y(i);
+        (null != A && (f = A), E._.dispatch(h.jej.QUEST_GAME_LINK_OPENED));
+        let { impressionId: T } = t,
+            _ = null != T ? (0, c.vV)(i.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
+            m = M(i),
+            O = null != _ && null != T ? () => (0, d.FW)({ impressionId: T }) : void 0;
         function g(e) {
             "custom" === e
-                ? (0, s.r)({
-                      type: a.F.CLICK_INTERNAL,
+                ? (0, a.r)({
+                      type: s.F.CLICK_INTERNAL,
                       adCreativeType: u,
                       adCreativeId: r,
-                      questContentCTA: C.Cy.OPEN_CUSTOM_APP_STORE,
+                      questContentCTA: I.Cy.OPEN_CUSTOM_APP_STORE,
                       surfaceId: t.content,
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
                       impressionId: t.impressionId,
                   })
-                : (0, s.r)({
-                      type: a.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                : (0, a.r)({
+                      type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                       adCreativeType: u,
                       adCreativeId: r,
                       questContentCTA: t.ctaContent,
@@ -259,7 +259,7 @@ function D(e, t) {
                       impressionId: t.impressionId,
                   });
         }
-        if (i && null == O) {
+        if (l && null == O) {
             ((0, o.A)(f), g(!1));
             return;
         }
@@ -267,15 +267,15 @@ function D(e, t) {
             link: f,
             directLink: A,
             inlineStoreParams: m,
-            trackOverlayEvent: (e, n, l, i, o) =>
-                (0, I.YE)({
+            trackOverlayEvent: (e, n, i, l, o) =>
+                (0, C.YE)({
                     adContentId: r,
                     adCreativeType: u,
                     trackingCtx: t,
                     inlineStoreAppId: n,
-                    overlayVariant: l,
+                    overlayVariant: i,
                     event: e,
-                    timeSpentMs: i,
+                    timeSpentMs: l,
                     overlaySurface: o,
                 }),
             trackOverlaySurfaceClick: (e) =>
@@ -299,8 +299,8 @@ function D(e, t) {
 }
 function Q(e, t) {
     let { quest: r } = e;
-    ((0, s.r)({
-        type: a.F.CLICK_INTERNAL,
+    ((0, a.r)({
+        type: s.F.CLICK_INTERNAL,
         adCreativeType: u.p.QUEST,
         adCreativeId: r.id,
         questContentCTA: t.ctaContent,
@@ -318,8 +318,8 @@ function Q(e, t) {
 }
 function G(e, t) {
     let { quest: n } = e;
-    (0, s.r)({
-        type: a.F.CLICK_INTERNAL,
+    (0, a.r)({
+        type: s.F.CLICK_INTERNAL,
         adCreativeType: u.p.QUEST,
         adCreativeId: n.id,
         questContentCTA: t.ctaContent,
@@ -329,9 +329,9 @@ function G(e, t) {
         questContentPosition: t.position,
         questContentRowIndex: t.rowIndex,
     });
-    let r = R(n);
+    let r = L(n);
     if (1 === r.length) return (0, f.A)({ platformType: r.at(0) });
-    i.h.dispatch({
+    l.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
         onComplete: (e) => (0, f.A)({ platformType: e }),
         includedPlatformTypes: new Set(r),
@@ -341,8 +341,8 @@ function G(e, t) {
 function q(e, t, n) {
     let { quest: r } = e;
     return (
-        (0, s.r)({
-            type: a.F.CLICK_INTERNAL,
+        (0, a.r)({
+            type: s.F.CLICK_INTERNAL,
             adCreativeType: u.p.QUEST,
             adCreativeId: r.id,
             questContentCTA: t.ctaContent,

@@ -1,7 +1,7 @@
-n.d(t, { r: () => b });
+n.d(t, { r: () => S });
 var i = n(823459),
-    r = n(850333),
-    s = n(506988),
+    s = n(850333),
+    r = n(506988),
     l = n(973654),
     a = n(413599),
     c = n(575155),
@@ -17,17 +17,17 @@ var i = n(823459),
     x = n(385803),
     v = n(185928),
     y = n(211824);
-async function b(e) {
+async function S(e) {
     if (!(await (0, o.Br)(y.vB.CLIENT_THEME))) return !1;
-    r.A.isPreview && ((0, i.S8)(), (0, l.XG)());
+    s.A.isPreview && ((0, i.S8)(), (0, l.XG)());
     let t = a.A.isSameAsDeviceThemeEnabled(),
-        n = (0, d.oB)(r.A.gradientPreset?.id);
+        n = (0, d.oB)(s.A.gradientPreset?.id);
     return (
         (!!n && !t) ||
-        ((!a.A.isSameAsDeviceThemeEnabled() && (0, d.oB)(r.A.gradientPreset?.id)) ||
+        ((!a.A.isSameAsDeviceThemeEnabled() && (0, d.oB)(s.A.gradientPreset?.id)) ||
             (0, o.fv)({
                 clientTheme: (function () {
-                    let e = r.A.gradientPreset;
+                    let e = s.A.gradientPreset;
                     if (a.A.isSameAsDeviceThemeEnabled())
                         return null == e || (0, d.oB)(e.id)
                             ? { theme: a.A.theme }
@@ -43,17 +43,17 @@ async function b(e) {
             }),
         t && (0, c.i)(),
         !(function (e, t) {
-            let { theme: n, backgroundGradientPresetId: r, customThemeSettings: s } = e,
-                l = null != r ? x.ag[r] : null;
+            let { theme: n, backgroundGradientPresetId: s, customThemeSettings: r } = e,
+                l = null != s ? x.ag[s] : null;
             if (null != l) {
                 ((0, f.X8)({ isPersisted: !0, analyticsLocations: t, themeName: m.ju[l.id] }),
                     (0, i.bc)(l.id),
                     (0, h.u_)({ backgroundGradientPresetId: l.id, theme: l.theme }));
                 return;
             }
-            if (((0, i.Py)(), "system" !== n && (0, g.lo)(s))) {
+            if (((0, i.Py)(), "system" !== n && (0, g.lo)(r))) {
                 ((0, f.X8)({ isPersisted: !0, analyticsLocations: t, themeName: "custom theme" }),
-                    (0, h.u_)({ theme: n, customUserThemeSettings: s }));
+                    (0, h.u_)({ theme: n, customUserThemeSettings: r }));
                 return;
             }
             ((0, f.X8)({ isPersisted: !0, analyticsLocations: t, themeName: `default ${n}` }), (0, h.u_)({ theme: n }));
@@ -62,7 +62,7 @@ async function b(e) {
         !!n ||
             ((0, u.Cy)({
                 perks: [y.vB.CLIENT_THEME],
-                content: s.uF.CLIENT_THEME_SETTINGS,
+                content: r.uF.CLIENT_THEME_SETTINGS,
                 contentSurface: u.rl.THEME_PICKER,
             }),
             !0))

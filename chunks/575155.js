@@ -1,6 +1,6 @@
 var i = n(462887),
-    r = n(817281),
-    s = n(850333),
+    s = n(817281),
+    r = n(850333),
     l = n(644235),
     a = n(773527),
     c = n(973654),
@@ -12,20 +12,20 @@ n.d(
     {
         V: function (e) {
             if (
-                (r.Ay.setShouldSyncAppearanceSettings(!1),
+                (s.Ay.setShouldSyncAppearanceSettings(!1),
                 null == o.A.getSyncedClientTheme(u.Fc.LIGHT) && null == o.A.getSyncedClientTheme(u.Fc.DARK))
             ) {
                 let t = o.A.theme,
                     n = null == e ? t : (0, l.Zu)(t),
-                    r = (0, i.M)(n) ? u.Fc.DARK : u.Fc.LIGHT,
-                    d = s.A.gradientPreset?.id,
-                    m = !s.A.isPreview || (0, a.oB)(d) ? d : void 0;
-                ((0, c.NA)({ [r]: n }),
+                    s = (0, i.M)(n) ? u.Fc.DARK : u.Fc.LIGHT,
+                    d = r.A.gradientPreset?.id,
+                    m = !r.A.isPreview || (0, a.oB)(d) ? d : void 0;
+                ((0, c.NA)({ [s]: n }),
                     null != e
-                        ? (0, c.qX)(r, { customUserThemeSettings: e })
+                        ? (0, c.qX)(s, { customUserThemeSettings: e })
                         : null != m
-                          ? (0, c.qX)(r, { backgroundGradientPresetId: m })
-                          : (0, c.qX)(r, { theme: n }));
+                          ? (0, c.qX)(s, { backgroundGradientPresetId: m })
+                          : (0, c.qX)(s, { theme: n }));
             }
             ((0, c.ZM)(!0), (0, c.k7)(u.Q_.ON));
         },

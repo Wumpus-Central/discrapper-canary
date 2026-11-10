@@ -20,12 +20,12 @@ n.d(
                     relocationCountry: d,
                     headerBadgePreset: m,
                     headerBadgeText: p,
-                    headerBadgeIcon: C,
-                    headerBadgeVariant: h,
+                    headerBadgeIcon: h,
+                    headerBadgeVariant: C,
                 } = e,
                 f = o.intl.string(o.t.q9EGps);
             n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
-            let E = { headerBadgeText: p, headerBadgeIcon: C, headerBadgeVariant: h };
+            let E = { headerBadgeText: p, headerBadgeIcon: h, headerBadgeVariant: C };
             "beta" === m
                 ? ((E.headerBadgeText = o.intl.string(o.t.oW0eUd)), (E.headerBadgeVariant = "secondary"))
                 : "trial" === m

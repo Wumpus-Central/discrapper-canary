@@ -20,8 +20,8 @@ var i = n(477900),
     x = n(688810),
     I = n(669815),
     _ = n(351906),
-    b = n(97352),
-    N = n(448645),
+    N = n(97352),
+    b = n(448645),
     C = n(83617),
     y = n(615396),
     v = n(543767),
@@ -178,7 +178,7 @@ function k(e) {
         let e;
         return (
             o()(null != t.paymentGateway, "Expected payment gateway when managed externally"),
-            (e = (0, N.tW)(t.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")),
+            (e = (0, b.tW)(t.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")),
             (0, i.jsx)(g.Anchor, {
                 href: e,
                 useDefaultUnderlineStyles: !1,
@@ -191,7 +191,7 @@ function k(e) {
     if (X.length > 0) {
         let e,
             n,
-            l = b.A.get(t.planIdForCurrencies);
+            l = N.A.get(t.planIdForCurrencies);
         o()(null != l, "Unable to fetch plan");
         let s = null != D.checkoutContext ? D.checkoutContext.allowed_currencies : null,
             a = null != s && s.length > 0 ? s : (0, C._w)(l, t.paymentSourceId, !1),

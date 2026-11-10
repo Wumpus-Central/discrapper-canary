@@ -19,8 +19,8 @@ var i = n(477900),
     x = n(169797),
     I = n(543767),
     _ = n(253390),
-    b = n(735164),
-    N = n(24659),
+    N = n(735164),
+    b = n(24659),
     C = n(178368),
     y = n(97352),
     v = n(166403),
@@ -165,11 +165,11 @@ function k(e) {
                                     children: (0, i.jsx)(A.w, { type: "critical", message: V, role: "alert" }),
                                 }),
                             (0, i.jsx)("div", { children: ee }),
-                            (0, i.jsxs)(b.Yx, {
+                            (0, i.jsxs)(N.Yx, {
                                 className: U.S,
                                 children: [
-                                    (0, i.jsx)(b.Xd, { children: M.intl.string(M.t.iqhIp4) }),
-                                    (0, i.jsx)(b.oR, {
+                                    (0, i.jsx)(N.Xd, { children: M.intl.string(M.t.iqhIp4) }),
+                                    (0, i.jsx)(N.oR, {
                                         label: M.intl.format(M.t["Vg+LRr"], { subscriptionCount: 1 }),
                                         value: (0, R.CE)((0, R.$g)(Q, t.currency), J, $),
                                         className: U.Au,
@@ -177,8 +177,8 @@ function k(e) {
                                     null != W && W.length > 0
                                         ? (0, i.jsxs)("div", {
                                               children: [
-                                                  (0, i.jsx)(b.pK, {}),
-                                                  (0, i.jsx)(N.Hc, { renewalInvoice: K, isUpdate: !0 }),
+                                                  (0, i.jsx)(N.pK, {}),
+                                                  (0, i.jsx)(b.Hc, { renewalInvoice: K, isUpdate: !0 }),
                                               ],
                                           })
                                         : null,

@@ -1,14 +1,14 @@
 var r = n(544180),
     u = n(343559),
-    l = n(122760),
-    i = n(405670),
+    i = n(122760),
+    l = n(405670),
     o = n(561844),
-    s = n(500180),
-    a = n(977416),
+    a = n(500180),
+    s = n(977416),
     c = n(792620),
     d = n(652215);
 function f(e, t) {
-    (0, a.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, u.uI)(e.id, t);
+    (0, s.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, u.uI)(e.id, t);
 }
 n(792996);
 function A(e, t) {
@@ -19,7 +19,7 @@ function E(e) {
 }
 n.d(
     t,
-    { WM: () => s.WM },
+    { WM: () => a.WM },
     {
         J$: function (e) {
             return !!(0, c.vv)(e) && (0, n(192308).kB)(E(e.id));
@@ -37,18 +37,18 @@ n.d(
         },
         vm: function (e) {
             let { questId: t, sourceQuestContent: n, videoSessionId: u } = e,
-                s = i.Ay.getState().getVideoProgress(t);
-            if (null == s) return;
-            let a = l.A.getQuest(t);
-            null != a &&
-                a.userStatus?.enrolledAt != null &&
-                a.userStatus?.completedAt == null &&
-                f(a, s.maxTimestampSec);
-            let c = A(s.maxTimestampSec, s.duration);
+                a = l.Ay.getState().getVideoProgress(t);
+            if (null == a) return;
+            let s = i.A.getQuest(t);
+            null != s &&
+                s.userStatus?.enrolledAt != null &&
+                s.userStatus?.completedAt == null &&
+                f(s, a.maxTimestampSec);
+            let c = A(a.maxTimestampSec, a.duration);
             ((0, o.av)({
                 questId: t,
                 event: d.HAw.QUEST_VIDEO_PROGRESSED,
-                properties: { progress: c, video_timestamp_seconds: s.maxTimestampSec, video_session_id: u },
+                properties: { progress: c, video_timestamp_seconds: a.maxTimestampSec, video_session_id: u },
                 sourceQuestContent: n,
             }),
                 (0, o.av)({

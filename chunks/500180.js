@@ -1,4 +1,4 @@
-n.d(t, { AF: () => c, WM: () => a });
+n.d(t, { AF: () => c, WM: () => s });
 let r = (0, n(945810).mj)({
     name: "2026-08-vq-remaining-time-truncation",
     kind: "user",
@@ -6,27 +6,27 @@ let r = (0, n(945810).mj)({
     variations: { 1: { truncateMoreThanSeconds: 30 }, 2: { truncateMoreThanSeconds: 60 } },
 });
 var u = n(792620),
-    l = n(221596),
-    i = n(792996);
+    i = n(221596),
+    l = n(792996);
 function o(e, t) {
     let { minutes: n, seconds: r } = (0, u.lG)(e),
-        l = 60 * n + r,
-        o = t?.truncate != null && l > t.truncate,
-        s = o ? t.truncate : l;
-    return s >= 60
-        ? i.intl.formatToPlainString(o ? i.t.XTdnRd : i.t.PHhTXX, { count: Math.round(s / 60) })
-        : i.intl.formatToPlainString(o ? i.t["spl/XS"] : i.t.rUfeQx, { count: s });
+        i = 60 * n + r,
+        o = t?.truncate != null && i > t.truncate,
+        a = o ? t.truncate : i;
+    return a >= 60
+        ? l.intl.formatToPlainString(o ? l.t.XTdnRd : l.t.PHhTXX, { count: Math.round(a / 60) })
+        : l.intl.formatToPlainString(o ? l.t["spl/XS"] : l.t.rUfeQx, { count: a });
 }
-function s(e, t) {
+function a(e, t) {
     let { truncateMoreThanSeconds: n } = t;
     return e.percentComplete > 0
-        ? i.intl.formatToPlainString(i.t["pF/deA"], { durationShort: o(e) })
-        : i.intl.formatToPlainString(i.t.CHrvqg, { durationShort: o(e, { truncate: n }) });
+        ? l.intl.formatToPlainString(l.t["pF/deA"], { durationShort: o(e) })
+        : l.intl.formatToPlainString(l.t.CHrvqg, { durationShort: o(e, { truncate: n }) });
 }
-function a(e) {
-    let { truncateMoreThanSeconds: t } = r.getConfig({ location: l.rE.QUESTS_CARD });
-    return s(e, { truncateMoreThanSeconds: t });
+function s(e) {
+    let { truncateMoreThanSeconds: t } = r.getConfig({ location: i.rE.QUESTS_CARD });
+    return a(e, { truncateMoreThanSeconds: t });
 }
 function c(e) {
-    return s(e, { truncateMoreThanSeconds: null });
+    return a(e, { truncateMoreThanSeconds: null });
 }

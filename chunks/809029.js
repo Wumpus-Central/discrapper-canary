@@ -9,18 +9,18 @@ var l = n(477900),
     d = n(448645),
     m = n(615396),
     p = n(120700),
-    C = n(660505),
-    h = n(558620),
+    h = n(660505),
+    C = n(558620),
     f = n(316363),
     E = n(602787),
     S = n(379912),
-    g = n(792996);
+    I = n(792996);
 n.d(
     t,
     {},
     {
         E: function (e) {
-            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: I } = (0, E.i)(),
+            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, E.i)(),
                 {
                     activeSubscription: y,
                     isPremium: A,
@@ -51,7 +51,7 @@ n.d(
                     premiumTenantParams: e.getTenantParams(p.C.PREMIUM_CHECKOUT) ?? {},
                 })),
                 { subscriptionTier: L } = j,
-                k = (0, h.A)(),
+                k = (0, C.A)(),
                 w = e.handlePaymentSourceAdd,
                 D = null != R,
                 U = null == M && null == L,
@@ -78,7 +78,7 @@ n.d(
                               }),
                     [w, W, b, T, O, D, H, F],
                 ),
-                Y = null != I ? I.id : void 0,
+                Y = null != g ? g.id : void 0,
                 K = i.useMemo(() => ({ user_trial_offer_id: Y }), [Y]),
                 Z = i.useMemo(
                     () =>
@@ -92,21 +92,21 @@ n.d(
                                 isPrepaidPaymentSource: a,
                                 isInPastDueCheckout: s,
                             } = e;
-                            if (n) return g.intl.string(g.t.YScQSF);
-                            if (t) return g.intl.string(g.t.ouo4FK);
+                            if (n) return I.intl.string(I.t.YScQSF);
+                            if (t) return I.intl.string(I.t.ouo4FK);
                             if (null != l && (0, d.ys)(l.id))
                                 return s
-                                    ? g.intl.string(S.default.LvcUx4)
+                                    ? I.intl.string(S.default.LvcUx4)
                                     : a
-                                      ? g.intl.string(g.t.cRCCJ3)
+                                      ? I.intl.string(I.t.cRCCJ3)
                                       : null != i
                                         ? i.isPausedAllowsResumeButNotUpdates
-                                            ? g.intl.string(g.t.zpi5pg)
+                                            ? I.intl.string(I.t.zpi5pg)
                                             : (0, m.Ge)(i, l.id, r)
-                                              ? g.intl.string(g.t.IJI7yk)
-                                              : g.intl.string(g.t.VPuTc5)
+                                              ? I.intl.string(I.t.IJI7yk)
+                                              : I.intl.string(I.t.VPuTc5)
                                         : (0, d.ff)(null, l);
-                            return g.intl.string(g.t.YScQSF);
+                            return I.intl.string(I.t.YScQSF);
                         })({
                             isGift: P,
                             isRecurringGiftCheckout: N,
@@ -157,7 +157,7 @@ n.d(
                     }),
                     [Q, q, K, G, T, b],
                 );
-            return (0, l.jsx)(C.Y, { ...e, renderStepBody: V, tenantCheckoutFooterProps: J, isTrial: t });
+            return (0, l.jsx)(h.Y, { ...e, renderStepBody: V, tenantCheckoutFooterProps: J, isTrial: t });
         },
     },
 );
