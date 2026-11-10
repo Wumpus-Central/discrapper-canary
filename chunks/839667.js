@@ -4992,18 +4992,7 @@ let a1 = () => {
                                     threshold: 0,
                                     active: !0,
                                     children: e
-                                        ? (0, c.jsx)(tO.N, {
-                                              theme: ax.NJ.DARK,
-                                              children: (e) =>
-                                                  (0, c.jsx)("div", {
-                                                      className: e,
-                                                      children: (0, c.jsx)(ad, {
-                                                          ref: s,
-                                                          subscriptionTier: C,
-                                                          variant: "settings",
-                                                      }),
-                                                  }),
-                                          })
+                                        ? (0, c.jsx)(ad, { ref: s, subscriptionTier: C, variant: "settings" })
                                         : (0, c.jsx)(aq, {
                                               ref: s,
                                               subscriptionTier: C,

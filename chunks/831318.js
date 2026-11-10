@@ -1,8 +1,8 @@
 var e = n(477900);
 n(582128);
 var r = n(403581),
-    a = n(772707),
-    l = n(448645),
+    l = n(772707),
+    a = n(448645),
     s = n(423814),
     o = n(77528),
     c = n(783420),
@@ -10,62 +10,64 @@ var r = n(403581),
     p = n(682901),
     d = n(792996);
 n.d(
-    i,
+    t,
     {},
     {
-        A: function (t) {
+        A: function (i) {
             let {
-                    transitionState: i,
+                    transitionState: t,
                     title: n,
                     subtitle: b,
                     graphic: k,
                     guildBoostProps: v,
-                    onClose: h,
-                    onSecondaryClick: C,
-                    secondaryCTA: T,
-                    gradientColor: x = "nitro-pink",
-                    badgeType: g = null,
-                    subscriptionTier: y = p.pe.TIER_2,
-                    hidePremiumOfferUpsell: m,
-                    children: w,
-                } = t,
-                _ = (0, o.V)(),
-                f = (0, s.O)(),
-                j = !m && (_?.subscriptionTrial?.skuId === y || (0, u.U9)(f, y)) && null == v,
-                I = d.intl.string(d.t.pj0XBN);
-            j &&
-                (null != _
-                    ? (I = (0, l.FY)({
-                          intervalType: _?.subscriptionTrial?.interval,
-                          intervalCount: _?.subscriptionTrial?.intervalCount,
+                    onClose: C,
+                    onSecondaryClick: h,
+                    onSubscribeModalClose: T,
+                    secondaryCTA: x,
+                    gradientColor: g = "nitro-pink",
+                    badgeType: y = null,
+                    subscriptionTier: m = p.pe.TIER_2,
+                    hidePremiumOfferUpsell: w,
+                    children: _,
+                } = i,
+                f = (0, o.V)(),
+                j = (0, s.O)(),
+                I = !w && (f?.subscriptionTrial?.skuId === m || (0, u.U9)(j, m)) && null == v,
+                S = d.intl.string(d.t.pj0XBN);
+            I &&
+                (null != f
+                    ? (S = (0, a.FY)({
+                          intervalType: f?.subscriptionTrial?.interval,
+                          intervalCount: f?.subscriptionTrial?.intervalCount,
                       }))
-                    : null != f && (I = d.intl.formatToPlainString(d.t.bkQ4bH, { percent: f.discount.amount })));
-            let z = "beta" === g ? "beta" : null != _ ? "free_trial" : g;
+                    : null != j && (S = d.intl.formatToPlainString(d.t.bkQ4bH, { percent: j.discount.amount })));
+            let z = "beta" === y ? "beta" : null != f ? "free_trial" : y;
             return (0, e.jsx)(c.A, {
-                subscriptionTier: y,
-                children: (t) => {
-                    let { onClick: l } = t;
-                    return (0, e.jsx)(a.k, {
+                subscriptionTier: m,
+                onSubscribeModalClose: T,
+                children: (i) => {
+                    let { onClick: a } = i;
+                    return (0, e.jsx)(l.k, {
                         title: n,
                         subtitle: b,
                         graphic: k,
-                        gradientColor: x,
-                        transitionState: i,
-                        onClose: async () => await h(),
+                        gradientColor: g,
+                        transitionState: t,
+                        onClose: async () => await C(),
                         actions: [
-                            { text: T, variant: "secondary", size: "md", onClick: C },
+                            { text: x, variant: "secondary", size: "md", onClick: h },
                             {
-                                text: I,
+                                text: S,
                                 variant: "expressive",
                                 size: "md",
-                                onClick: async (t) => {
-                                    (await h(), l(t));
+                                onClick: async (i) => {
+                                    (null == T && (await C()), a(i));
                                 },
                                 icon: r.NitroWheelIcon,
                             },
                         ],
                         ...(null !== z && { badge: { type: z, variant: "expressive" } }),
-                        children: w,
+                        children: _,
                     });
                 },
             });

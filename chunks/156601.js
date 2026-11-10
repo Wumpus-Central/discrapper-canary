@@ -25,22 +25,23 @@ t.d(
                     variant: I,
                     priceOptions: A,
                     isApplicationHome: E,
-                    enablePremiumBrandRefresh: f,
+                    color: f,
+                    enablePremiumBrandRefresh: g,
                 } = e,
-                g = (0, s.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
-                j = (0, a.q)((0, d.Ay)());
-            if (!g) return (0, n.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: h.xB });
-            let R = m.A.getForSkuAndInterval((0, p.mH)(r), t),
-                _ = null != R ? (0, p.sS)(R, A, !1, T) : null;
-            if (f) {
+                j = (0, s.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
+                R = (0, a.q)((0, d.Ay)());
+            if (!j) return (0, n.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS, className: h.xB });
+            let _ = m.A.getForSkuAndInterval((0, p.mH)(r), t),
+                v = null != _ ? (0, p.sS)(_, A, !1, T) : null;
+            if (g) {
                 let e = t === x.WT.YEAR;
                 return (0, n.jsxs)("div", {
                     children: [
                         (0, n.jsx)(o.E, {
                             variant: e ? "heading-sm/semibold" : "heading-xxl/semibold",
-                            color: e ? "text-muted" : j ? "text-strong" : "text-overlay-light",
+                            color: e ? "text-muted" : R ? "text-strong" : "text-overlay-light",
                             tag: "span",
-                            children: (0, n.jsx)("span", { children: _ }),
+                            children: (0, n.jsx)("span", { children: v }),
                         }),
                         (0, n.jsxs)(o.E, {
                             variant: "body-xs/medium",
@@ -52,11 +53,11 @@ t.d(
                 });
             }
             return (0, n.jsx)(u.D, {
-                color: E ? "none" : "text-overlay-light",
+                color: f ?? (E ? "none" : "text-overlay-light"),
                 variant: I ?? "heading-sm/medium",
                 className: i()(h.SW, l),
                 children: (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsx)("span", { className: E ? void 0 : h.q9, children: _ }), " / ", (0, p.FJ)(t)],
+                    children: [(0, n.jsx)("span", { className: E ? void 0 : h.q9, children: v }), " / ", (0, p.FJ)(t)],
                 }),
             });
         },

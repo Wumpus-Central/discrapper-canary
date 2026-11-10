@@ -23,7 +23,7 @@ n.d(
                     [t],
                 );
             return (0, i.jsxs)("div", {
-                className: s()(f.D, (0, o.q)(n) && f.r),
+                className: s()(f.Du, f.D7, (0, o.q)(n) && f.B9),
                 children: [
                     (0, i.jsx)(d.E, { variant: "body-sm/medium", color: "text-default", children: a }),
                     (0, i.jsx)(c.A, {

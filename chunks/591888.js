@@ -5,5 +5,4 @@ e.exports = {
     s7: "brandRefreshCopy_NPgbd9",
     rd: "brandRefreshTitle_NPgbd9",
     ax: "nitroWheel_NPgbd9",
-    rf: "lightBrandRefreshBanner_NPgbd9",
 };

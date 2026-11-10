@@ -1,4 +1,4 @@
-n.d(t, { m: () => y });
+n.d(t, { m: () => b });
 var i = n(477900);
 n(582128);
 var r = n(855986),
@@ -18,8 +18,8 @@ var r = n(855986),
     g = n(24181),
     m = n(503698),
     T = n.n(m),
-    f = n(38021),
-    N = n(366010),
+    N = n(38021),
+    f = n(366010),
     I = n(866665),
     x = n(408278),
     S = n(465794),
@@ -27,12 +27,13 @@ var r = n(855986),
     U = n(49999),
     v = n(682901),
     L = n(792996),
-    R = n(591888);
-function j(e) {
+    R = n(591888),
+    j = n(212e3);
+function D(e) {
     let { description: t, canUseCustomCallSounds: n, onNavigateToFeature: r, markAsDismissed: s } = e,
-        { theme: l } = (0, f.wR)();
+        { theme: l } = (0, N.wR)();
     return (0, i.jsxs)("div", {
-        className: T()(R.Du, (0, N.q)(l) && R.rf, null != s && R.Zt),
+        className: T()(R.Du, j.D7, (0, f.q)(l) && j.B9, null != s && R.Zt),
         children: [
             null != s
                 ? (0, i.jsx)("div", {
@@ -56,7 +57,11 @@ function j(e) {
                         className: R.rd,
                         children: [
                             (0, i.jsx)(o.NitroWheelIcon, { size: "sm", color: "currentColor", className: R.ax }),
-                            (0, i.jsx)(c.D, { variant: "heading-xs/semibold", children: L.intl.string(L.t.dTbAxx) }),
+                            (0, i.jsx)(c.D, {
+                                variant: "heading-xs/semibold",
+                                color: "text-strong",
+                                children: L.intl.string(L.t.dTbAxx),
+                            }),
                         ],
                     }),
                     (0, i.jsx)(d.E, { variant: "body-xs/normal", color: "text-default", children: t }),
@@ -77,46 +82,46 @@ function j(e) {
         ],
     });
 }
-var D = n(316632);
-function y(e) {
+var y = n(316632);
+function b(e) {
     var t;
     let { onClose: n, markAsDismissed: m } = e,
         T = g.H.useConfig({ location: "entrance_sound_picker_upsell" }),
-        f = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
-        N =
-            (t = f?.premiumType) === v.PremiumTypes.TIER_2
+        N = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
+        f =
+            (t = N?.premiumType) === v.PremiumTypes.TIER_2
                 ? L.intl.string(L.t.jqO5Qn)
                 : null == t
                   ? L.intl.string(L.t.f2qjw5)
                   : L.intl.string(L.t.SblICW),
-        I = p.Ay.canUseCustomCallSounds(f);
+        I = p.Ay.canUseCustomCallSounds(N);
     function x() {
         ((0, A.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), m?.(U.i.PRIMARY));
     }
     return T
-        ? (0, i.jsx)(j, { description: N, canUseCustomCallSounds: I, onNavigateToFeature: x, markAsDismissed: m })
+        ? (0, i.jsx)(D, { description: f, canUseCustomCallSounds: I, onNavigateToFeature: x, markAsDismissed: m })
         : (0, i.jsxs)(C.A, {
               isShown: !0,
               type: C.i.PREMIUM,
-              className: D.ne,
-              backgroundClassName: D.u4,
+              className: y.ne,
+              backgroundClassName: y.u4,
               children: [
                   null != m
                       ? (0, i.jsx)(l.D, {
-                            className: D.VN,
+                            className: y.VN,
                             onClick: () => m?.(U.i.DISMISS),
                             "aria-label": L.intl.string(L.t.cpT0Cq),
-                            children: (0, i.jsx)(a.XSmallIcon, { size: "xs", color: "currentColor", className: D.ut }),
+                            children: (0, i.jsx)(a.XSmallIcon, { size: "xs", color: "currentColor", className: y.ut }),
                         })
                       : null,
                   (0, i.jsxs)("div", {
-                      className: D.ex,
+                      className: y.ex,
                       children: [
-                          (0, i.jsx)(o.NitroWheelIcon, { size: "sm", color: "currentColor", className: D.ax }),
+                          (0, i.jsx)(o.NitroWheelIcon, { size: "sm", color: "currentColor", className: y.ax }),
                           (0, i.jsx)(c.D, { variant: "heading-xs/semibold", children: L.intl.string(L.t.dTbAxx) }),
                       ],
                   }),
-                  (0, i.jsx)(d.E, { variant: "body-sm/normal", children: N }),
+                  (0, i.jsx)(d.E, { variant: "body-sm/normal", children: f }),
                   I
                       ? (0, i.jsx)(u.$, { onClick: x, text: L.intl.string(L.t.RzWDqY), fullWidth: !0 })
                       : (0, i.jsx)(h.A, {

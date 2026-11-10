@@ -10,21 +10,21 @@ var r = n(503698),
     d = n(403581),
     m = n(834730),
     A = n(773669),
-    f = n(5377),
-    h = n(448645),
-    E = n(993408),
+    h = n(5377),
+    E = n(448645),
+    f = n(993408),
     x = n(519707),
     p = n(821701),
     _ = n(536572),
     g = n(792996),
-    j = n(955527);
-function L(e) {
+    L = n(955527);
+function R(e) {
     let { render: t } = e;
     return t((0, x.J)("collectibles_edit_modal_preview_details"));
 }
-function b(e) {
+function j(e) {
     let { purchase: t, isPremiumPurchase: n, locale: r } = e,
-        i = null != t.expiresAt ? (0, f.Tf)(new Date(), t.expiresAt) : null;
+        i = null != t.expiresAt ? (0, h.Tf)(new Date(), t.expiresAt) : null;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != i &&
@@ -66,68 +66,69 @@ function b(e) {
         ],
     });
 }
-function y(e) {
-    let { canUsePremiumCollectibles: t, hasLostAccess: n, nitroChurnCTA: r, nitroJoinCTA: i } = e;
-    return t
-        ? (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: g.intl.string(g.t.hmyYK8) })
-        : n
-          ? (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: r })
-          : (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: i });
-}
-function C() {
-    return (0, l.jsx)(m.E, { variant: "body-sm/medium", color: "text-default", children: g.intl.string(g.t.fEGjVQ) });
-}
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { user: t, previewSkuId: n, nitroChurnCTA: r, nitroJoinCTA: m } = e,
-                f = (0, a.bG)([A.default], () => A.default.locale),
-                { product: x, purchase: g } = (0, p.A)(n),
-                R = h.Ay.canUseCollectibles(t),
-                T = (0, E.G0)(x),
-                v = (0, E.gA)(g),
-                O = !R && v,
-                k = null != g && !O,
-                N = (0, _.Sw)(g),
-                P = (0, _.VG)(x),
-                I = T || v,
-                D = x?.type ?? g?.type,
-                F = !k && (!I || D === s.R.AVATAR_DECORATION || D === s.R.PROFILE_EFFECT);
-            if (null == x && null == g) return null;
+            let { user: t, previewSkuId: n, nitroChurnCTA: r, nitroJoinCTA: h } = e,
+                x = (0, a.bG)([A.default], () => A.default.locale),
+                { product: v, purchase: y } = (0, p.A)(n),
+                O = E.Ay.canUseCollectibles(t),
+                T = (0, f.G0)(v),
+                k = (0, f.gA)(y),
+                N = !O && k,
+                C = null != y && !N,
+                I = (0, _.Sw)(y),
+                P = (0, _.VG)(v),
+                b = T || k,
+                D = v?.type ?? y?.type,
+                F = !C && (!b || D === s.R.AVATAR_DECORATION || D === s.R.PROFILE_EFFECT);
+            if (null == v && null == y) return null;
             function M(e) {
-                let t = e && I ? c.h : "div";
+                let t = e && b ? c.h : "div";
                 return (0, l.jsx)("div", {
-                    className: i()(j.kL, { [j.D7]: !k && !e, [j.$N]: e, [j.d7]: e && I }),
+                    className: i()(L.kL, { [L.D7]: !C && !e, [L.$N]: e, [L.d7]: e && b }),
                     children: (0, l.jsxs)(t, {
-                        className: j.WH,
-                        color: e && I ? "nitro-pink" : void 0,
+                        className: L.WH,
+                        color: e && b ? "nitro-pink" : void 0,
                         children: [
                             (0, l.jsxs)(u.D, {
                                 color: "text-strong",
-                                variant: e ? "body-md/semibold" : "body-sm/semibold",
-                                className: e ? j.DD : void 0,
+                                variant: "body-sm/semibold",
+                                className: e ? L.DD : void 0,
                                 children: [
-                                    e && I && (0, l.jsx)(d.NitroWheelIcon, { size: "xs", color: "currentColor" }),
-                                    (0, o.isEmpty)(N) ? P : N,
+                                    e && b && (0, l.jsx)(d.NitroWheelIcon, { size: "xs", color: "currentColor" }),
+                                    (0, o.isEmpty)(I) ? P : I,
                                 ],
                             }),
-                            k
-                                ? (0, l.jsx)(b, { purchase: g, isPremiumPurchase: v, locale: f })
-                                : T || v
-                                  ? (0, l.jsx)(y, {
-                                        canUsePremiumCollectibles: R,
-                                        hasLostAccess: O,
-                                        nitroChurnCTA: r,
-                                        nitroJoinCTA: m,
-                                    })
-                                  : (0, l.jsx)(C, {}),
+                            C
+                                ? (0, l.jsx)(j, { purchase: y, isPremiumPurchase: k, locale: x })
+                                : (0, l.jsx)(m.E, {
+                                      variant: e ? "footnote/normal" : "body-sm/medium",
+                                      color: "text-default",
+                                      children: b
+                                          ? (function (e) {
+                                                let {
+                                                    canUsePremiumCollectibles: t,
+                                                    hasLostAccess: n,
+                                                    nitroChurnCTA: l,
+                                                    nitroJoinCTA: r,
+                                                } = e;
+                                                return t ? g.intl.string(g.t.hmyYK8) : n ? l : r;
+                                            })({
+                                                canUsePremiumCollectibles: O,
+                                                hasLostAccess: N,
+                                                nitroChurnCTA: r,
+                                                nitroJoinCTA: h,
+                                            })
+                                          : g.intl.string(g.t.fEGjVQ),
+                                  }),
                         ],
                     }),
                 });
             }
-            return F ? (0, l.jsx)(L, { render: M }) : M(!1);
+            return F ? (0, l.jsx)(R, { render: M }) : M(!1);
         },
     },
 );

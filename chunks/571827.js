@@ -19,7 +19,7 @@ n.d(
     {
         A: function (e) {
             let { itemType: t, onClose: a } = e,
-                f =
+                h =
                     t === r.R.AVATAR_DECORATION
                         ? u.e.AVATAR_DECORATION_MODAL_UPSELL
                         : t === r.R.PROFILE_EFFECT
@@ -27,9 +27,9 @@ n.d(
                           : t === r.R.NAMEPLATE
                             ? u.e.NAMEPLATE_MODAL_UPSELL
                             : null,
-                h = t === r.R.AVATAR_DECORATION || t === r.R.PROFILE_EFFECT;
-            if (null == f) return null;
-            function E(e) {
+                E = t === r.R.AVATAR_DECORATION || t === r.R.PROFILE_EFFECT;
+            if (null == h) return null;
+            function f(e) {
                 return (0, l.jsxs)("div", {
                     className: m.hc,
                     children: [
@@ -37,45 +37,51 @@ n.d(
                         (0, l.jsx)(s.E, {
                             className: m.cf,
                             variant: "body-md/medium",
-                            children: (function () {
-                                if (null == f) return null;
-                                switch (f) {
+                            children: (function (e) {
+                                if (null == h) return null;
+                                switch (h) {
                                     case u.e.AVATAR_DECORATION_MODAL_UPSELL:
                                         return d.intl.format(d.t["aFR/EI"], {
                                             onClick: () => {
-                                                (0, i.mM)(async () => {
-                                                    let { default: e } = await Promise.all([
-                                                        n.e(660953),
-                                                        n.e(764864),
-                                                    ]).then(n.bind(n, 393027));
-                                                    return (t) =>
-                                                        (0, l.jsx)(e, {
-                                                            premiumUpsellType: f,
-                                                            title: d.intl.string(d.t.JI7uhc),
-                                                            body: d.intl.string(d.t["5XvsdZ"]),
-                                                            onSecondaryClick: a,
-                                                            ...t,
-                                                        });
-                                                });
+                                                (0, i.mM)(
+                                                    async () => {
+                                                        let { default: e } = await Promise.all([
+                                                            n.e(660953),
+                                                            n.e(764864),
+                                                        ]).then(n.bind(n, 393027));
+                                                        return (t) =>
+                                                            (0, l.jsx)(e, {
+                                                                premiumUpsellType: h,
+                                                                title: d.intl.string(d.t.JI7uhc),
+                                                                body: d.intl.string(d.t["5XvsdZ"]),
+                                                                onSecondaryClick: a,
+                                                                ...t,
+                                                            });
+                                                    },
+                                                    { stackingBehavior: e ? "replaceAll" : void 0 },
+                                                );
                                             },
                                         });
                                     case u.e.PROFILE_EFFECT_MODAL_UPSELL:
                                         return d.intl.format(d.t.eWNONM, {
                                             onClick: () => {
-                                                (0, i.mM)(async () => {
-                                                    let { default: e } = await Promise.all([
-                                                        n.e(660953),
-                                                        n.e(764864),
-                                                    ]).then(n.bind(n, 393027));
-                                                    return (t) =>
-                                                        (0, l.jsx)(e, {
-                                                            premiumUpsellType: f,
-                                                            title: d.intl.string(d.t.sYm15X),
-                                                            body: d.intl.string(d.t["Hza+Bu"]),
-                                                            onSecondaryClick: a,
-                                                            ...t,
-                                                        });
-                                                });
+                                                (0, i.mM)(
+                                                    async () => {
+                                                        let { default: e } = await Promise.all([
+                                                            n.e(660953),
+                                                            n.e(764864),
+                                                        ]).then(n.bind(n, 393027));
+                                                        return (t) =>
+                                                            (0, l.jsx)(e, {
+                                                                premiumUpsellType: h,
+                                                                title: d.intl.string(d.t.sYm15X),
+                                                                body: d.intl.string(d.t["Hza+Bu"]),
+                                                                onSecondaryClick: a,
+                                                                ...t,
+                                                            });
+                                                    },
+                                                    { stackingBehavior: e ? "replaceAll" : void 0 },
+                                                );
                                             },
                                         });
                                     case u.e.NAMEPLATE_MODAL_UPSELL:
@@ -88,7 +94,7 @@ n.d(
                                                     ]).then(n.bind(n, 393027));
                                                     return (t) =>
                                                         (0, l.jsx)(e, {
-                                                            premiumUpsellType: f,
+                                                            premiumUpsellType: h,
                                                             title: d.intl.string(d.t.k7UN4k),
                                                             body: d.intl.string(d.t["0/QPxO"]),
                                                             onSecondaryClick: a,
@@ -100,12 +106,12 @@ n.d(
                                     default:
                                         return null;
                                 }
-                            })(),
+                            })(e),
                         }),
                     ],
                 });
             }
-            return h ? (0, l.jsx)(A, { render: E }) : E(!1);
+            return E ? (0, l.jsx)(A, { render: f }) : f(!1);
         },
     },
 );

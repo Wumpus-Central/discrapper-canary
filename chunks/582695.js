@@ -1036,8 +1036,8 @@ function e2() {
     return (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Purchase button is disabled for this story" });
 }
 let e8 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
-    e3 = eZ(),
-    e6 = {
+    e6 = eZ(),
+    e3 = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
         component: function (e) {
@@ -1075,7 +1075,7 @@ let e8 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
                   });
         },
         controls: {
-            skuId: { label: "SKU ID", type: "select", options: e3.options, defaultValue: e3.defaultValue },
+            skuId: { label: "SKU ID", type: "select", options: e6.options, defaultValue: e6.defaultValue },
             ...e8,
         },
     },
@@ -2251,11 +2251,11 @@ let t2 = [
             body: "Show off your style with a custom nameplate, available with Nitro.",
         },
     },
-    t3 = [
+    t6 = [
         { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
         { id: "at_limit", label: "At Limit (100 guilds)", value: 100 },
     ],
-    t6 = [
+    t3 = [
         { id: "avatar", label: "Avatar", value: t1.HL.AVATAR },
         { id: "banner", label: "Banner", value: t1.HL.BANNER },
     ];
@@ -3287,8 +3287,8 @@ let l1 = {
 l(321073);
 var l2 = l(96337),
     l8 = l(997101),
-    l3 = l(597770),
-    l6 = l(278416),
+    l6 = l(597770),
+    l3 = l(278416),
     l4 = l(169797),
     l9 = l(677959),
     l7 = l(812745);
@@ -3484,14 +3484,14 @@ let l5 = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     },
-    at = { "nitro-wheel": r.NitroWheelIcon, gift: l3.GiftIcon, orbs: i.OrbsIcon },
+    at = { "nitro-wheel": r.NitroWheelIcon, gift: l6.GiftIcon, orbs: i.OrbsIcon },
     al = l2.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     aa = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? l6.TagIcon : void 0;
+                i = a ? l3.TagIcon : void 0;
             return (0, s.jsxs)(ec.B, {
                 gap: 16,
                 align: "center",
@@ -3974,7 +3974,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                             },
                         ],
                     },
-                    { title: "Checkout Review Step", stories: [e6, e4] },
+                    { title: "Checkout Review Step", stories: [e3, e4] },
                     {
                         title: "Miscellaneous",
                         stories: [
@@ -4306,9 +4306,11 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                         a = u.useCallback(() => {
                                             let { title: t, body: a } = t8[e];
                                             (0, ev.mM)(async () => {
-                                                let { default: n } = await Promise.all([l.e(660953), l.e(764864)]).then(
-                                                    l.bind(l, 393027),
-                                                );
+                                                let { default: n } = await Promise.all([
+                                                    l.e(660953),
+                                                    l.e(785960),
+                                                    l.e(764864),
+                                                ]).then(l.bind(l, 393027));
                                                 return (l) =>
                                                     (0, s.jsx)(n, {
                                                         premiumUpsellType: e,
@@ -4374,7 +4376,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                                     placeholder: "Select state",
                                                     onSelectionChange: (e) => t(e),
                                                     value: e,
-                                                    options: t3,
+                                                    options: t6,
                                                     selectionMode: "single",
                                                     fullWidth: !0,
                                                 }),
@@ -4414,7 +4416,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                                     placeholder: "Select type",
                                                     onSelectionChange: (e) => t(e),
                                                     value: e,
-                                                    options: t6,
+                                                    options: t3,
                                                     selectionMode: "single",
                                                     fullWidth: !0,
                                                 }),
@@ -4438,7 +4440,10 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                         t = u.useCallback(() => {
                                             null != e &&
                                                 (0, ev.mM)(async () => {
-                                                    let { default: e } = await l.e(488292).then(l.bind(l, 536015));
+                                                    let { default: e } = await Promise.all([
+                                                        l.e(488292),
+                                                        l.e(968622),
+                                                    ]).then(l.bind(l, 536015));
                                                     return (t) => (0, s.jsx)(e, { ...t });
                                                 });
                                         }, [e]);
