@@ -1,4 +1,4 @@
-(n.d(t, { A: () => w }), n(574332));
+(n.d(t, { A: () => x }), n(574332));
 var i = n(439372),
     r = n(372058),
     a = n(377840),
@@ -58,14 +58,21 @@ function R(e, t) {
             }
         }));
 }
-var L = n(168543),
-    y = n(917445),
-    D = n(734057);
+var L = n(734057),
+    y = n(168543);
+let D = (0, S.mj)({
+    name: "2026-11-profile-embed-rendering-mobile",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var b = n(917445);
+let v = "MessageCodedLinkManager";
 n(299091);
-var b = n(486889),
-    v = n(818348);
-function P(e, t) {
-    let n = (0, b.Ay)(e);
+var P = n(486889),
+    M = n(818348);
+function U(e, t) {
+    let n = (0, P.Ay)(e);
     null != n &&
         0 !== n.length &&
         n.forEach((e) => {
@@ -98,21 +105,29 @@ function P(e, t) {
                 case p.I.USER_WISHLIST:
                     break;
                 case p.I.USER_PROFILE:
-                    if ((0, L.l)("MessageCodedLinkManager")) {
-                        let e = null == t ? null : D.A.getChannel(t);
+                    !(function (e, t) {
+                        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                        if (
+                            !(n
+                                ? (function (e) {
+                                      let { enabled: t } = D.getConfig({ location: e });
+                                      return t;
+                                  })(v)
+                                : (0, y.l)(v))
+                        )
+                            return;
+                        let i = null == t ? void 0 : (L.A.getChannel(t)?.guild_id ?? void 0);
                         (0, m.f)(async () => {
-                            await (0, y.A)(i, void 0, {
-                                guildId: e?.guild_id ?? void 0,
-                                withMutualGuilds: !0,
-                                withMutualFriends: !0,
-                            });
+                            try {
+                                await (0, b.A)(e, void 0, { guildId: i, withMutualGuilds: !0, withMutualFriends: !0 });
+                            } catch {}
                         });
-                    }
+                    })(i, t);
                     break;
                 case p.I.GAME_ORGANIZATION_INVITE:
                     (0, r.bz)("MessageCodedLinkManager") &&
                         (0, m.f)(async () => {
-                            (await E.fetchMany([i]), (0, a.A)(i).catch(v.tE));
+                            (await E.fetchMany([i]), (0, a.A)(i).catch(M.tE));
                         });
                     break;
                 case p.I.SOCIAL_LAYER_STOREFRONT:
@@ -153,16 +168,16 @@ function P(e, t) {
             }
         });
 }
-function M(e) {
-    (P(e.content ?? null, e.channel_id),
+function w(e) {
+    (U(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
-            return P(n.content, e.channel_id);
+            return U(n.content, e.channel_id);
         }));
 }
-class U extends i.A {
+class G extends i.A {
     constructor() {
-        (super(), (0, h.A)(this, M));
+        (super(), (0, h.A)(this, w));
     }
 }
-let w = new U();
+let x = new G();
