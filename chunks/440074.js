@@ -646,7 +646,7 @@ function eZ(e) {
         : null;
 }
 var eq = l(826673),
-    eY = l(549996),
+    eY = l(24981),
     e0 = l(412260);
 function e1(e) {
     let t = (function () {
@@ -693,14 +693,14 @@ function e1(e) {
     return { variant: e, content: d, isReserved: u };
 }
 var e9 = l(463080);
-function e6(e) {
+function e8(e) {
     let { text: t } = e;
     return (0, n.jsx)("div", {
         className: e9.ac,
         children: (0, n.jsx)(I.E, { variant: "body-sm/normal", children: t }),
     });
 }
-function e8(e) {
+function e6(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ec.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
             ? { shouldShow: !0, text: k.intl.string(L.default.l9n4QZ) }
@@ -752,7 +752,7 @@ function e8(e) {
                       color: "text-strong",
                       children: k.intl.string(L.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, n.jsx)(e6, { text: l.text }),
+                  l.shouldShow && (0, n.jsx)(e8, { text: l.text }),
                   s.shouldShow &&
                       (0, n.jsx)(eZ, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
                   o.shouldShow &&
@@ -793,8 +793,8 @@ function e5(e) {
         ],
     });
 }
-var e3 = l(862482),
-    e2 = l(944304),
+var e2 = l(862482),
+    e3 = l(944304),
     e7 = l(975571),
     te = l(380572);
 function tt(e) {
@@ -871,15 +871,15 @@ function tn(e) {
                         (0, n.jsx)(tt, { count: o, type: P.yG.TOTAL }),
                     ],
                 }),
-                (0, n.jsx)(e2.A, {
+                (0, n.jsx)(e3.A, {
                     className: tl.S6,
                     guild: l,
                     analyticsLocation: {
                         page: ec.liQ.GUILD_POWERUPS_OVERVIEW,
                         section: ec.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: e3.XD.CUSTOM,
-                    size: e3.lO.LARGE,
+                    color: e2.XD.CUSTOM,
+                    size: e2.lO.LARGE,
                     icon: (0, n.jsx)(A.BoostGemIcon, {
                         className: tl.Ng,
                         size: "sm",
@@ -971,15 +971,15 @@ function tx(e) {
                               className: th.$J,
                           }),
                       }),
-                  (0, n.jsx)(e2.A, {
+                  (0, n.jsx)(e3.A, {
                       guild: l,
                       className: th.Qs,
                       analyticsLocation: {
                           page: ec.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: ec.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: e3.XD.BRAND,
-                      size: e3.lO.MEDIUM,
+                      color: e2.XD.BRAND,
+                      size: e2.lO.MEDIUM,
                       fullWidth: !0,
                       icon: (0, n.jsx)(A.BoostGemIcon, { className: th.Ng, color: "currentColor", size: "sm" }),
                   }),
@@ -1516,7 +1516,7 @@ function tL(e) {
                               children: [
                                   R
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(tn, { guildId: N }), (0, n.jsx)(e8, { guildId: N })],
+                                            children: [(0, n.jsx)(tn, { guildId: N }), (0, n.jsx)(e6, { guildId: N })],
                                         })
                                       : (0, n.jsx)(tT, { guildId: N }),
                                   (0, n.jsx)(tG, { guildId: N }),

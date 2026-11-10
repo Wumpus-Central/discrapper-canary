@@ -5,8 +5,8 @@ var o = n(477900),
     i = n(28863),
     d = n(543862),
     s = n(129230),
-    u = n(549996),
-    p = n(498470),
+    p = n(24981),
+    u = n(498470),
     c = n(92551),
     b = n(637706),
     m = n(788883),
@@ -19,7 +19,7 @@ n.d(
     {},
     {
         A: function () {
-            let e = (0, u.c)(a.C.NAGBAR),
+            let e = (0, p.c)(a.C.NAGBAR),
                 t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
                 n = e?.id,
                 N = e?.promotionId,
@@ -49,7 +49,7 @@ n.d(
                 null == e || null == t || null == n || null == N)
             )
                 return null;
-            let S = (0, p.h)({
+            let S = (0, u.h)({
                     buttonAction: t.ctaAction,
                     deeplinkSection: t.deeplinkSection,
                     applicationId: t.navigableStorefrontApplicationId?.value,
@@ -59,12 +59,12 @@ n.d(
                     },
                 }),
                 y = (0, b.C)(t.helpArticle, ""),
-                { icon: O, iconPosition: C } = (0, p.x)({ buttonAction: t.ctaAction }),
-                R = e.getFormatVariableValues(I.intl.currentLocale),
-                h = (0, c.d)(t.body, R);
-            if (!h.ok) return null;
-            let P = (0, c.n)(t.ctaLabel, R);
-            return P.ok
+                { icon: C, iconPosition: O } = (0, u.x)({ buttonAction: t.ctaAction }),
+                h = e.getFormatVariableValues(I.intl.currentLocale),
+                R = (0, c.d)(t.body, h);
+            if (!R.ok) return null;
+            let v = (0, c.n)(t.ctaLabel, h);
+            return v.ok
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(m.A, {
@@ -78,7 +78,7 @@ n.d(
                               children: [
                                   (0, o.jsxs)(_.In, {
                                       children: [
-                                          h.content,
+                                          R.content,
                                           null != y &&
                                               (0, o.jsxs)(o.Fragment, {
                                                   children: [
@@ -88,17 +88,17 @@ n.d(
                                               }),
                                       ],
                                   }),
-                                  "" !== P.content &&
+                                  "" !== v.content &&
                                       (0, o.jsx)(_.fY, {
-                                          text: P.content,
+                                          text: v.content,
                                           onClick: function () {
                                               (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                                                   notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,
                                               }),
                                                   S());
                                           },
-                                          icon: O,
-                                          iconPosition: C,
+                                          icon: C,
+                                          iconPosition: O,
                                       }),
                               ],
                           }),

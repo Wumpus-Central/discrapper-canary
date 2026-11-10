@@ -5,8 +5,8 @@ var o = n(477900),
     i = n(206248),
     d = n(43105),
     s = n(273185),
-    u = n(549996),
-    p = n(498470),
+    p = n(24981),
+    u = n(498470),
     c = n(807098),
     b = n(92551),
     m = n(637706),
@@ -19,7 +19,7 @@ n.d(
     {
         A: function (e) {
             let { children: t, targetElementRef: n, dismissPopover: I } = e,
-                N = (0, u.c)(a.C.PREMIUM_TAB_POPOVER),
+                N = (0, p.c)(a.C.PREMIUM_TAB_POPOVER),
                 T =
                     null != N && "premiumTabPopover" === N.properties.properties.oneofKind
                         ? N.properties.properties.premiumTabPopover
@@ -29,36 +29,36 @@ n.d(
                 S = N?.id,
                 y = N?.promotionId;
             if (null == T || null == N || null == S || null == y) return t;
-            let O = N.getFormatVariableValues(f.intl.currentLocale),
-                C = (0, b.n)(T.header, O);
-            if (!C.ok) return t;
-            let R = (0, b.d)(T.body, O);
-            if (!R.ok) return t;
-            let h = (0, b.n)(T.button?.copy ?? "", O);
+            let C = N.getFormatVariableValues(f.intl.currentLocale),
+                O = (0, b.n)(T.header, C);
+            if (!O.ok) return t;
+            let h = (0, b.d)(T.body, C);
             if (!h.ok) return t;
-            let P = (0, o.jsx)(_.A, {
+            let R = (0, b.n)(T.button?.copy ?? "", C);
+            if (!R.ok) return t;
+            let v = (0, o.jsx)(_.A, {
                     componentType: a.C.PREMIUM_TAB_POPOVER,
                     componentId: S,
                     promotionId: y,
                     dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
                 }),
-                { icon: v, iconPosition: M } = (0, p.x)({ buttonAction: T.button?.buttonAction });
+                { icon: P, iconPosition: M } = (0, u.x)({ buttonAction: T.button?.buttonAction });
             function L() {
                 return I(A.i.USER_DISMISS);
             }
             let x =
                     null != T.button
                         ? {
-                              text: h.content,
+                              text: R.content,
                               variant: "expressive",
-                              onClick: (0, p.h)({
+                              onClick: (0, u.h)({
                                   buttonAction: T.button.buttonAction,
                                   deeplinkSection: T.button.deeplinkSection,
                                   applicationId: T.button.navigableStorefrontApplicationId?.value,
                                   shopCollectionId: T.button.shopCollectionId?.value,
                                   onClose: L,
                               }),
-                              icon: v,
+                              icon: P,
                               iconPosition: M,
                           }
                         : void 0,
@@ -66,8 +66,8 @@ n.d(
                 U = null != G ? { text: G.linkText, link: G.url } : void 0,
                 B = {
                     targetElementRef: n,
-                    title: C.content,
-                    body: R.content,
+                    title: O.content,
+                    body: h.content,
                     textLink: U,
                     position: "right",
                     alignmentStrategy: "edge",
@@ -78,7 +78,7 @@ n.d(
             if (E) {
                 let e = { ...B, assetUrl: g ?? "", action: x, disableMediaViewer: !0 };
                 return (0, o.jsxs)(o.Fragment, {
-                    children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
+                    children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(i.H, { ...e })],
                 });
             }
             let D = {
@@ -89,7 +89,7 @@ n.d(
                 gradientColor: "nitro-pink",
             };
             return (0, o.jsxs)(o.Fragment, {
-                children: [P, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...D })],
+                children: [v, (0, o.jsx)("div", { children: t }), (0, o.jsx)(d.A, { ...D })],
             });
         },
     },
