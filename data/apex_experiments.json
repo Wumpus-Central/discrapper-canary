@@ -6177,5 +6177,27 @@
         "reorderEnabled": true
       }
     }
+  },
+  {
+    "name": "2026-11-wishlist-countdown-mobile",
+    "kind": "user",
+    "defaultConfig": {
+      "labelsEnabled": false,
+      "reorderEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "labelsEnabled": true,
+        "reorderEnabled": false
+      },
+      "2": {
+        "labelsEnabled": true,
+        "reorderEnabled": true
+      }
+    }
   }
 ]
