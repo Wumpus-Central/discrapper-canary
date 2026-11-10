@@ -291,7 +291,6 @@ var F =
         (r.SCREEN_CAPTURE_KIT = "screen_capture_kit"),
         (r.SCREEN_SOUNDSHARE = "screen_soundshare"),
         (r.NATIVE_SCREENSHARE_PICKER = "native_screenshare_picker"),
-        (r.MLS_PAIRWISE_FINGERPRINTS = "mls_pairwise_fingerprints"),
         (r.DAVE_PAIRWISE_FINGERPRINT = "dave_pairwise_fingerprint"),
         (r.OFFLOAD_ADM_CONTROLS = "offload_adm_controls"),
         (r.AUDIO_CODEC_RED = "audio_codec_red"),
@@ -1682,9 +1681,6 @@ class j extends N.A {
     processMLSWelcome(e, t, n) {
         ((this.lastPreparedTransitionId = e), this.conn.processMLSWelcome?.(e, t, n));
     }
-    getMLSPairwiseFingerprint(e, t, n) {
-        this.conn.getMLSPairwiseFingerprint?.(e, t, n);
-    }
     presentDesktopSourcePicker(e) {
         this.conn.presentDesktopSourcePicker?.(e);
     }
@@ -2008,8 +2004,6 @@ class ei extends d.A {
                 return (0, v.$b)(F.SCREEN_CAPTURE_KIT);
             case O.O5.NATIVE_SCREENSHARE_PICKER:
                 return (0, v.$b)(F.NATIVE_SCREENSHARE_PICKER);
-            case O.O5.MLS_PAIRWISE_FINGERPRINTS:
-                return (0, v.$b)(F.MLS_PAIRWISE_FINGERPRINTS);
             case O.O5.DAVE_PAIRWISE_FINGERPRINT:
                 return (0, v.$b)(F.DAVE_PAIRWISE_FINGERPRINT);
             case O.O5.OFFLOAD_ADM_CONTROLS:

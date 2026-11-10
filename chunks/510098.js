@@ -1247,7 +1247,6 @@ class e_ extends S.A {
     processMLSProposals(e, t) {}
     prepareMLSCommitTransition(e, t, n) {}
     processMLSWelcome(e, t, n) {}
-    getMLSPairwiseFingerprint(e, t, n) {}
 }
 n(775443);
 var eE = n(800754),
@@ -3097,8 +3096,8 @@ class e5 {
     }
 }
 var e7 = n(935399),
-    e8 = n(503698),
-    e4 = n.n(e8),
+    e4 = n(503698),
+    e8 = n.n(e4),
     e9 = n(51906);
 function te(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
@@ -3147,7 +3146,7 @@ function te(e) {
             [n],
         );
     return (0, _.jsx)("video", {
-        className: e4()("media-engine-video", a),
+        className: e8()("media-engine-video", a),
         ref: l,
         autoPlay: !0,
         onPause: u,

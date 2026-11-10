@@ -1152,13 +1152,13 @@ var e1 = n(4511),
     e6 = n(811091),
     e5 = n(590087);
 let e7 = { any: 100 },
-    e8 = { any: 0 },
-    e4 = 30 * eW.A.Millis.SECOND,
+    e4 = { any: 0 },
+    e8 = 30 * eW.A.Millis.SECOND,
     e9 = 120 * eW.A.Millis.SECOND,
     te = -1 !== (0, e3.EL)();
 var tt = (((o = {}).UserSSRCUpdate = "user-ssrc-update"), (o.Update = "update"), o);
 function tn(e) {
-    return (0, ey.HZ)() ? { ...e8 } : { any: e };
+    return (0, ey.HZ)() ? { ...e4 } : { any: e };
 }
 class ti extends S.A {
     userId;
@@ -1415,7 +1415,7 @@ class ti extends S.A {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? e9 : e4;
+        return this.isStageChannel ? e9 : e8;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : z.r8.NO_OVERRIDE;
@@ -5203,9 +5203,6 @@ class tJ extends S.A {
                     : ((this._mlsSessionResetStartTime = (0, C.tB)()),
                       this._flagMLSInvalidCommitWelcome(e) && this._sendMLSKeyPackage()));
         });
-    }
-    getMLSPairwiseFingerprint(e, t, n) {
-        this._connection?.getMLSPairwiseFingerprint(e, t, n);
     }
     _handleMLSSuccess() {
         (this._trackMLSFailures({ recovered: !0, downgraded: !1 }),
