@@ -914,13 +914,13 @@ var eR = n(46653),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "670721",
-        r = "cb8ef9de4f67eb5d63042a95a4b3974631266fce".substring(0, 7),
+        n = "670730",
+        r = "a438a7eb72be5e0eba2766008e1d2b3cba960a43".substring(0, 7),
         s = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
         o = eV.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1794348411857", !1) : null,
+        u = null != o ? (0, eq.A)("1794348584123", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = eW()?.os?.toString();
@@ -1089,8 +1089,8 @@ var e5 = n(402651),
     e8 = n(669067),
     e9 = n(830543),
     e4 = n(953056);
-let e6 = new Set([eM.X.PROFILE_PANEL, eM.X.SUBSCRIPTIONS_PANEL, eM.X.FAMILY_CENTER_PANEL, eM.X.POGGERMODE_PANEL]),
-    e3 = new Map([[eM.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+let e3 = new Set([eM.X.PROFILE_PANEL, eM.X.SUBSCRIPTIONS_PANEL, eM.X.FAMILY_CENTER_PANEL, eM.X.POGGERMODE_PANEL]),
+    e6 = new Map([[eM.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e7(e) {
     let { target: t, ...n } = e,
         l = eO.A.useField("query"),
@@ -1117,8 +1117,8 @@ function e7(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e6.has(e) || (0, e8._)(e);
-                  let t = e3.get(e);
+                  e3.has(e) || (0, e8._)(e);
+                  let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
