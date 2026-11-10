@@ -143,12 +143,7 @@
 }
 
 .inFullscreenFrame_qZv3Qq {
-    --custom-app-top-bar-height: 0px;
-    --devtools-sidebar-width: 0px;
-    pointer-events: auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none
+    --custom-app-top-bar-height: 0px
 }
 
 .pool_r7XZkd {
@@ -236,4 +231,4 @@ html.disable-forced-colors * {
     --link-decoration: underline
 }
 
-/*# sourceMappingURL=981237.5979eee0421fa559.css.map*/
+/*# sourceMappingURL=981237.d249f977f36e0ba2.css.map*/
