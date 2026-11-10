@@ -1763,8 +1763,8 @@ var $ = n(477900),
     z = n(503698),
     q = n.n(z),
     Q = n(229209);
-let J = new c.Vy("DirectVideo");
-function Z(e) {
+let Z = new c.Vy("DirectVideo");
+function J(e) {
     return (function (e, t) {
         let {
                 streamId: n,
@@ -1811,14 +1811,14 @@ function Z(e) {
                             }
                         }),
                         n.addEventListener("canplaythrough", function () {
-                            (J.info(
+                            (Z.info(
                                 `handleReady for ${_.current.streamId}, have onReady callback = ${null != _.current.onReady}`,
                             ),
                                 _.current.onReady?.());
                         }),
-                        J.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
+                        Z.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
                         n.readyState > 3 &&
-                            J.error(`video element for ${_.current.streamId} was ready before attached`),
+                            Z.error(`video element for ${_.current.streamId} was ready before attached`),
                         e.appendChild(n),
                         t.disconnect(),
                         t.observe(n),
@@ -1833,7 +1833,7 @@ function Z(e) {
                 if (null != e)
                     if (i) null != e.srcObject && (e.srcObject = null);
                     else {
-                        J.info(`attaching srcObject for ${n}`);
+                        Z.info(`attaching srcObject for ${n}`);
                         let t = (0, Q.nz)(n);
                         return (
                             (e.srcObject = t.stream),
@@ -1845,23 +1845,23 @@ function Z(e) {
             }, [i, n]),
             (0, $.jsx)("div", { className: q()("media-engine-video", l), ref: d, ...o })
         );
-    })(e, Z.onContainerResized);
+    })(e, J.onContainerResized);
 }
 function ee(e) {
     let { disabled: t, deviceId: n, width: i, height: r } = e;
     return t
         ? (0, $.jsx)("div", { className: "media-engine-video", style: { width: i, height: r } })
-        : (0, $.jsx)(Z, { streamId: n, style: { width: i, height: r } });
+        : (0, $.jsx)(J, { streamId: n, style: { width: i, height: r } });
 }
-(J.enableNativeLogger(!0),
-    (Z.onContainerResized = (e, t, n) => {}),
+(Z.enableNativeLogger(!0),
+    (J.onContainerResized = (e, t, n) => {}),
     (ee.defaultProps = { disabled: !1, width: 320, height: 180 }));
 var et = n(264572).hp;
 function en(e) {
     if (null != e) return Math.round((6e3 * Math.min(100, Math.max(10, e))) / 100);
 }
 class ei extends d.A {
-    Video = Z;
+    Video = J;
     Camera = ee;
     audioInputDeviceId = O.qe;
     audioOutputDeviceId = O.qe;
@@ -2588,7 +2588,7 @@ class ei extends d.A {
               n);
     }
     setOnVideoContainerResized(e) {
-        Z.onContainerResized = e;
+        J.onContainerResized = e;
     }
     setMaxSyncDelayOverride(e) {
         let { setMaxSyncDelayOverride: t } = (0, v.lE)();

@@ -1,10 +1,10 @@
-n.d(e, { go: () => v, HP: () => b, PJ: () => I, r8: () => _ });
+n.d(e, { go: () => v, HP: () => j, PJ: () => I, r8: () => _ });
 var t = n(477900);
 n(582128);
 var a = n(503698),
     u = n.n(a),
-    i = n(331322),
-    r = n(834730),
+    r = n(331322),
+    i = n(834730),
     s = n(237528),
     c = n(97808),
     o = n(778712),
@@ -40,18 +40,18 @@ function I(l) {
             null != a
                 ? (0, t.jsx)("img", { alt: "", src: a, className: u()(m.Kk, m.Dp) })
                 : (0, t.jsx)(p.A, { applicationId: e.id, name: e.name, glyphSize: 24, className: m.Kk }),
-            (0, t.jsxs)(i.B, {
+            (0, t.jsxs)(r.B, {
                 gap: 4,
                 className: m.zH,
                 children: [
-                    (0, t.jsx)(r.E, {
+                    (0, t.jsx)(i.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
                         lineClamp: 1,
                         children: e.name,
                     }),
                     s.length > 0
-                        ? (0, t.jsx)(r.E, {
+                        ? (0, t.jsx)(i.E, {
                               variant: "body-sm/normal",
                               color: "text-default",
                               lineClamp: n,
@@ -83,7 +83,7 @@ function _(l) {
               children: a.map((l) => (0, t.jsx)("li", { children: (0, t.jsx)(s.v, { text: l }) }, l)),
           });
 }
-function b(l) {
+function j(l) {
     let { project: e, guildId: n } = l,
         { creator: a } = (0, f.yv)(e);
     return null == a
@@ -92,7 +92,7 @@ function b(l) {
               className: m.xL,
               children: [
                   (0, t.jsx)(c.eu, { src: a.getAvatarURL(n, 40), size: o._3.SIZE_20, "aria-hidden": !0 }),
-                  (0, t.jsx)(r.E, {
+                  (0, t.jsx)(i.E, {
                       variant: "body-sm/normal",
                       color: "text-default",
                       lineClamp: 1,

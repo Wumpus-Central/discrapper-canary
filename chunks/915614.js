@@ -33,9 +33,9 @@ function R(e) {
             bannerHeight: C,
             themePadding: S,
             pendingAccentColor: D,
-            animateOnHoverOrFocusOnly: M = !1,
+            animateOnHoverOrFocusOnly: P = !1,
         } = e,
-        [O, P] = r.useState(!1),
+        [M, O] = r.useState(!1),
         U = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
@@ -43,24 +43,24 @@ function R(e) {
             displayProfile: n,
             pendingBanner: _,
             size: T,
-            canAnimate: M || !B ? O : U,
+            canAnimate: P || !B ? M : U,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
         V = t.getAvatarURL(l, (0, u.FT)(j)),
         $ = (0, i.LX)((0, m.Ay)(V, H, !1)),
         F = (0, f.A)(D ?? n?.primaryColor ?? $).hex,
-        X = { align: "start", insetStart: I - S, insetBottom: y + S, radius: (0, A.A)(j) };
+        z = { align: "start", insetStart: I - S, insetBottom: y + S, radius: (0, A.A)(j) };
     return (0, a.jsx)(x.A, {
         fillClassName: s()(N.v, v),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, E.o4)(L),
         height: C,
-        cutout: X,
+        cutout: z,
         overlay: R,
-        onInteractionStart: () => P(!0),
-        onInteractionEnd: () => P(!1),
+        onInteractionStart: () => O(!0),
+        onInteractionEnd: () => O(!1),
     });
 }
 n.d(

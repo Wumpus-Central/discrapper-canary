@@ -2,8 +2,8 @@ n.d(e, { A: () => _ });
 var t = n(582128),
     a = n(855986),
     u = n(587895),
-    i = n(287809),
-    r = n(260498),
+    r = n(287809),
+    i = n(260498),
     s = n(73153),
     c = n(729160);
 let o = new Map();
@@ -44,12 +44,12 @@ function _(l) {
         n = (0, a.bG)([f], () => f.getStatus(l, e), [l, e]),
         s = (0, a.bG)([u.A], () => u.A.getApplication(l) ?? null, [l]),
         o = n?.type === "ready" ? n.projectId : null,
-        d = (0, a.bG)([r.Ay], () => (null != o ? (r.Ay.getProject(o) ?? null) : null), [o]),
-        _ = (0, a.bG)([i.default], () => i.default.getCurrentUser()?.id ?? null),
-        b = null == n || (null != o && null == d);
+        d = (0, a.bG)([i.Ay], () => (null != o ? (i.Ay.getProject(o) ?? null) : null), [o]),
+        _ = (0, a.bG)([r.default], () => r.default.getCurrentUser()?.id ?? null),
+        j = null == n || (null != o && null == d);
     return (
         t.useEffect(() => {
-            b &&
+            j &&
                 null != _ &&
                 (function (l) {
                     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -67,24 +67,24 @@ function _(l) {
                     let t = (0, c.Pl)(l, e);
                     if (n.loading.has(t) || n.backoffs.get(t)?.pending === !0) return;
                     let a = f.getStatus(l, e);
-                    (null == a || ("ready" === a.type && null == r.Ay.getProject(a.projectId))) &&
+                    (null == a || ("ready" === a.type && null == i.Ay.getProject(a.projectId))) &&
                         (async function l(e, n, t) {
                             let a = (0, c.Pl)(n, t);
                             (e.loading.add(a), null == f.getStatus(n, t) && I(a, { type: "loading" }));
-                            let i = null;
+                            let r = null;
                             try {
-                                i = await (async function (l, e, n) {
+                                r = await (async function (l, e, n) {
                                     u.A.isHydrated(l) || (await g.Ay.fetchApplications([l]));
                                     let t = u.A.getApplication(l)?.conjureProjectId;
                                     if (null == t) return { type: "unavailable" };
-                                    let a = null != r.Ay.getProject(t) && !n.ticketOnlyProjectIds.has(t);
+                                    let a = null != i.Ay.getProject(t) && !n.ticketOnlyProjectIds.has(t);
                                     if (null == e && a) return { type: "ready", projectId: t, ticketValid: !1 };
-                                    if ((await (0, y.b8)(), r.Ay.getProjectLimitFailureCode() === A.t02.INVALID_ACCESS))
+                                    if ((await (0, y.b8)(), i.Ay.getProjectLimitFailureCode() === A.t02.INVALID_ACCESS))
                                         return { type: "info_only" };
-                                    let i = !1;
+                                    let r = !1;
                                     try {
                                         let l = await (0, y.U1)(t, void 0, n.session, e ?? void 0);
-                                        i = null != e && !0 === l.body.share_ticket_valid;
+                                        r = null != e && !0 === l.body.share_ticket_valid;
                                     } catch (l) {
                                         switch ((0, h.A)(l)) {
                                             case A.t02.INVALID_ACCESS:
@@ -99,8 +99,8 @@ function _(l) {
                                     return (
                                         null == e
                                             ? n.ticketOnlyProjectIds.delete(t)
-                                            : i && !a && n.ticketOnlyProjectIds.add(t),
-                                        { type: "ready", projectId: t, ticketValid: i }
+                                            : r && !a && n.ticketOnlyProjectIds.add(t),
+                                        { type: "ready", projectId: t, ticketValid: r }
                                     );
                                 })(n, t, e);
                             } catch {}
@@ -109,17 +109,17 @@ function _(l) {
                                 return;
                             }
                             let s = e.backoffs.get(a);
-                            if (null == i) {
+                            if (null == r) {
                                 (null == s && ((s = new p.A(5e3, 3e5)), e.backoffs.set(a, s)),
                                     s.fail(() => {
                                         e !== m || e.loading.has(a) || l(e, n, t);
                                     }));
                                 return;
                             }
-                            (s?.succeed(), e.backoffs.delete(a), I(a, i));
+                            (s?.succeed(), e.backoffs.delete(a), I(a, r));
                         })(n, l, e);
                 })(l, e);
-        }, [l, e, b, _]),
+        }, [l, e, j, _]),
         t.useMemo(
             () =>
                 null == n || "loading" === n.type
@@ -132,7 +132,7 @@ function _(l) {
                           ? { type: "info_only", application: s }
                           : null == d
                             ? { type: "loading" }
-                            : { type: "ready", application: s, project: d, canRemix: n.ticketValid || (0, r.H_)(d) },
+                            : { type: "ready", application: s, project: d, canRemix: n.ticketValid || (0, i.H_)(d) },
             [n, s, d],
         )
     );

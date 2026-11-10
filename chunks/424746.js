@@ -50,19 +50,19 @@ function c(e) {
         D = r.useCallback(() => {
             null != N.current && (clearTimeout(N.current), (N.current = null));
         }, []),
-        M = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 (e && (R.current = !0), D(), _("closing"));
             },
             [D],
         );
     r.useEffect(() => D, [D]);
-    let O = r.useCallback(() => {
+    let M = r.useCallback(() => {
             ("closed" === A || "closing" === A) && (D(), _("opening-mouse"));
         }, [D, A]),
-        P = r.useCallback(() => {
-            v && M(!1);
-        }, [M, v]),
+        O = r.useCallback(() => {
+            v && P(!1);
+        }, [P, v]),
         U = r.useCallback(() => {
             if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
                 R.current = !1;
@@ -71,8 +71,8 @@ function c(e) {
             (D(), _("opening-keyboard"));
         }, [D, A]),
         B = r.useCallback(() => {
-            (y && "opening-keyboard" !== A) || M(!1);
-        }, [M, A, y]);
+            (y && "opening-keyboard" !== A) || P(!1);
+        }, [P, A, y]);
     (r.useEffect(() => {
         if ("opening-mouse" === A)
             return (
@@ -109,9 +109,9 @@ function c(e) {
                     }
                 );
             function e(e) {
-                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), M(!0));
+                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), P(!0));
             }
-        }, [I, M]));
+        }, [I, P]));
     let G = r.useMemo(
             () =>
                 null == h
@@ -119,17 +119,17 @@ function c(e) {
                     : h.map((e) => ({
                           ...e,
                           onClick: (t) => {
-                              (e.onClick?.(t), M(!1));
+                              (e.onClick?.(t), P(!1));
                           },
                       })),
-            [h, M],
+            [h, P],
         ),
         w = r.useCallback((e) => {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: O,
-        onMouseLeave: P,
+        onMouseEnter: M,
+        onMouseLeave: O,
         onFocus: U,
         onBlur: B,
         children: [
@@ -152,7 +152,7 @@ function c(e) {
                 caretConfig: { align: "custom", customOffset: T },
                 onNudgeChange: w,
                 onRequestClose: (e) => {
-                    M(null != e && (0, i.sg)(e));
+                    P(null != e && (0, i.sg)(e));
                 },
             }),
         ],

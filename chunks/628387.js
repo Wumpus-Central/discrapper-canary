@@ -1,7 +1,7 @@
-var n,
-    r = (((n = {}).PHONE = "phone"), (n.EMAIL = "email"), n);
+var s,
+    r = (((s = {}).PHONE = "phone"), (s.EMAIL = "email"), s);
 let a = /^[-() \d]+$/;
-s.d(
+n.d(
     t,
     {},
     {

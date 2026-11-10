@@ -1,25 +1,25 @@
-var n = s(477900),
-    r = s(582128),
-    a = s(492462),
-    i = s(607399),
-    l = s(855986),
-    o = s(825484),
-    c = s(821609),
-    d = s(73153),
-    u = s(830215),
-    h = s(396681),
-    p = s(15552),
-    m = s(854378),
-    N = s(701273),
-    E = s(397404),
-    g = s(976860),
-    f = s(210714),
-    y = s(46653),
-    A = s(188567),
-    w = s(652215),
-    I = s(792996),
-    x = s(498206),
-    C = s(221851);
+var s = n(477900),
+    r = n(582128),
+    a = n(492462),
+    i = n(607399),
+    l = n(855986),
+    o = n(825484),
+    c = n(821609),
+    d = n(73153),
+    u = n(830215),
+    h = n(396681),
+    p = n(15552),
+    m = n(854378),
+    N = n(701273),
+    E = n(397404),
+    g = n(976860),
+    f = n(210714),
+    y = n(46653),
+    A = n(188567),
+    w = n(652215),
+    I = n(792996),
+    x = n(498206),
+    C = n(221851);
 l.Ay.initialize();
 class v extends r.PureComponent {
     static defaultProps = { transitionTo: g.pX, replaceWith: g.bG };
@@ -44,28 +44,28 @@ class v extends r.PureComponent {
         (0, f.d0)("reset_password");
     }
     handleSubmit = async (e) => {
-        let { location: t, source: s, resetToken: n } = this.props,
+        let { location: t, source: n, resetToken: s } = this.props,
             { password: r, error: a } = this.state;
         if ((e.preventDefault(), 0 === r.length)) {
             (this.setState({ error: I.intl.string(I.t.R98xD5) }), A._.dispatch(w.jej.WAVE_EMPHASIZE));
             return;
         }
         null != a && this.setState({ error: null });
-        let i = n;
+        let i = s;
         if ((null != t && (i = (0, h.A)(t)), null != i)) {
             this.setState({ working: !0 });
             try {
                 let {
                     result: e,
                     sms: t,
-                    webauthn: n,
+                    webauthn: s,
                     ticket: a,
                     token: l,
                     totp: o,
                     backup: c,
-                } = await u.A.resetPassword(i, r, s);
+                } = await u.A.resetPassword(i, r, n);
                 e === u.W.MFA
-                    ? d.h.dispatch({ type: "LOGIN_MFA_STEP", ticket: a, sms: t, webauthn: n, totp: o, backup: c })
+                    ? d.h.dispatch({ type: "LOGIN_MFA_STEP", ticket: a, sms: t, webauthn: s, totp: o, backup: c })
                     : this.handlePasswordResetComplete(l);
             } catch (e) {
                 this.setState({ apiErrors: (0, p.p)(e) });
@@ -74,16 +74,16 @@ class v extends r.PureComponent {
         }
     };
     handleTokenSubmitMFAv2 = async (e, t) => {
-        let { location: s, mfaTicket: n, resetToken: r, source: a } = this.props,
+        let { location: n, mfaTicket: s, resetToken: r, source: a } = this.props,
             { password: i } = this.state;
         if (0 === i.length) return (d.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
         let l = r;
-        if ((null != s && (l = (0, h.A)(s)), null == l))
+        if ((null != n && (l = (0, h.A)(n)), null == l))
             return (d.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
         this.setState({ working: !0 });
         try {
-            let s = await u.A.resetPasswordMFAv2({ method: e, code: t, ticket: n, password: i, token: l, source: a });
-            this.handlePasswordResetComplete(s);
+            let n = await u.A.resetPasswordMFAv2({ method: e, code: t, ticket: s, password: i, token: l, source: a });
+            this.handlePasswordResetComplete(n);
         } finally {
             this.setState({ working: !1 });
         }
@@ -120,8 +120,8 @@ class v extends r.PureComponent {
     renderError = (e) => {
         let { apiErrors: t } = this.state;
         if (this.hasError(e)) {
-            let s = t[e];
-            return Array.isArray(s) ? s[0] : s;
+            let n = t[e];
+            return Array.isArray(n) ? n[0] : n;
         }
         return null;
     };
@@ -129,18 +129,18 @@ class v extends r.PureComponent {
         let { password: e, error: t, hasCancel: r, working: a } = this.state,
             { theme: i, authBoxClassName: l } = this.props,
             d = t ?? this.renderError("password");
-        return (0, n.jsxs)(m.Ay, {
+        return (0, s.jsxs)(m.Ay, {
             onSubmit: this.handleSubmit,
             tag: "form",
             theme: i,
             className: l,
             children: [
-                (0, n.jsx)("img", { alt: "", src: null == d ? s(79418) : s(579656), className: C.SX }),
-                (0, n.jsx)(m.hE, { children: I.intl.string(I.t["1LV6Kq"]) }),
-                (0, n.jsxs)(m.eB, {
+                (0, s.jsx)("img", { alt: "", src: null == d ? n(79418) : n(579656), className: C.SX }),
+                (0, s.jsx)(m.hE, { children: I.intl.string(I.t["1LV6Kq"]) }),
+                (0, s.jsxs)(m.eB, {
                     className: C.QX,
                     children: [
-                        (0, n.jsx)(m.pd, {
+                        (0, s.jsx)(m.pd, {
                             label: I.intl.string(I.t["8dM4FO"]),
                             className: C.SX,
                             name: "password",
@@ -152,13 +152,13 @@ class v extends r.PureComponent {
                             autoComplete: "new-password",
                             required: !0,
                         }),
-                        (0, n.jsxs)(o.e, {
+                        (0, s.jsxs)(o.e, {
                             direction: "vertical",
                             fullWidth: !0,
                             children: [
-                                (0, n.jsx)(c.$, { text: I.intl.string(I.t["FRep5/"]), type: "submit", loading: a }),
+                                (0, s.jsx)(c.$, { text: I.intl.string(I.t["FRep5/"]), type: "submit", loading: a }),
                                 r &&
-                                    (0, n.jsx)(c.$, {
+                                    (0, s.jsx)(c.$, {
                                         text: I.intl.string(I.t["ETE/oC"]),
                                         variant: "secondary",
                                         onClick: this.handleGoToLogin,
@@ -172,16 +172,16 @@ class v extends r.PureComponent {
         });
     }
     renderMFA() {
-        let { mfaTicket: e, mfaMethods: t, theme: s, authBoxClassName: r } = this.props,
+        let { mfaTicket: e, mfaMethods: t, theme: n, authBoxClassName: r } = this.props,
             a = (e) => {
-                let { mfaType: t, data: s } = e;
-                return this.handleTokenSubmitMFAv2(t, s);
+                let { mfaType: t, data: n } = e;
+                return this.handleTokenSubmitMFAv2(t, n);
             };
-        return (0, n.jsx)(m.Ay, {
+        return (0, s.jsx)(m.Ay, {
             style: { padding: 0 },
-            theme: s,
+            theme: n,
             className: r,
-            children: (0, n.jsx)(E.t, {
+            children: (0, s.jsx)(E.t, {
                 mfaFinish: a,
                 mfaChallenge: { ticket: e, methods: t },
                 onEarlyClose: () => {
@@ -192,13 +192,13 @@ class v extends r.PureComponent {
     }
     renderSucceeded() {
         let { theme: e, authBoxClassName: t } = this.props;
-        return (0, n.jsxs)(m.Ay, {
+        return (0, s.jsxs)(m.Ay, {
             theme: e,
             className: t,
             contentClassName: x.oe,
             children: [
-                (0, n.jsx)(m.hE, { className: C.C2, children: I.intl.string(I.t.WAUOoK) }),
-                (0, n.jsx)(c.$, { text: I.intl.string(I.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
+                (0, s.jsx)(m.hE, { className: C.C2, children: I.intl.string(I.t.WAUOoK) }),
+                (0, s.jsx)(c.$, { text: I.intl.string(I.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
             ],
         });
     }
@@ -210,7 +210,7 @@ class v extends r.PureComponent {
               : this.renderPasswordReset();
     }
 }
-s.d(
+n.d(
     t,
     {},
     {
@@ -219,7 +219,7 @@ s.d(
                 mfaTicket: y.default.getMFATicket(),
                 mfaMethods: y.default.getMFAMethods(),
             }));
-            return (0, n.jsx)(v, { ...e, ...t });
+            return (0, s.jsx)(v, { ...e, ...t });
         },
     },
 );

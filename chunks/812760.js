@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => b });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -6,8 +6,8 @@ var l = n(477900),
     r = n(77692),
     o = n(164636),
     c = n(534514),
-    d = n(653887),
-    u = n(866665),
+    u = n(653887),
+    d = n(866665),
     m = n(881636),
     g = n(646514),
     E = n(775602),
@@ -28,14 +28,14 @@ let _ = function (e) {
     });
 };
 var A = n(212407),
-    v = n(761977);
-function I(e) {
+    I = n(761977);
+function b(e) {
     let { category: t, onSelect: n } = e,
         a = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
         x = (0, o.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: I } = (0, A.MV)(t),
-        b = s.useRef(null),
-        L = null != I,
+        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: b } = (0, A.MV)(t),
+        v = s.useRef(null),
+        L = null != b,
         j =
             null != n
                 ? {
@@ -49,37 +49,37 @@ function I(e) {
                   }
                 : {};
     return (0, l.jsxs)("div", {
-        ref: b,
-        className: i()(v.sW, { [v.by]: L, [v.vk]: null != n }),
+        ref: v,
+        className: i()(I.sW, { [I.by]: L, [I.vk]: null != n }),
         ...j,
         children: [
             (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
-                className: v.Db,
+                className: I.Db,
                 children: L
-                    ? (0, l.jsx)(d._, {
-                          src: I,
+                    ? (0, l.jsx)(u._, {
+                          src: b,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: b,
+                          eventTargetRef: v,
                           autoplay: !0,
                       })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)("img", { className: v.ze, src: C, alt: "" }),
+                              (0, l.jsx)("img", { className: I.ze, src: C, alt: "" }),
                               null != S &&
                                   !a &&
                                   x &&
-                                  (0, l.jsx)(h.A, { src: S, className: v.tr, autoPlay: !0, loop: !0 }),
+                                  (0, l.jsx)(h.A, { src: S, className: I.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
-            (0, l.jsx)(_, { category: t, className: v.v0, daysRemainingText: p.t["8gsP5M"] }),
+            (0, l.jsx)(_, { category: t, className: I.v0, daysRemainingText: p.t["8gsP5M"] }),
             null != n &&
                 (0, l.jsx)("div", {
-                    className: v.IG,
-                    children: (0, l.jsx)(u.m, {
+                    className: I.IG,
+                    children: (0, l.jsx)(d.m, {
                         text: p.intl.string(p.t["o1ol+T"]),
                         children: (0, l.jsx)(m.ChevronLargeRightIcon, {
                             "aria-hidden": "true",

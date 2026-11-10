@@ -5,7 +5,7 @@ var l = n(582128),
     r = n(634393),
     o = n(295586),
     c = n(510801),
-    d = n(682301);
+    u = n(682301);
 n.d(
     t,
     {},
@@ -13,27 +13,27 @@ n.d(
         A: function (e) {
             let { includeUnpublished: t = !1, includePricing: n = !1 } =
                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                u = e ?? "",
+                d = e ?? "",
                 m = (0, r.Nm)();
             l.useEffect(() => {
-                "" !== u && o.p.requestCollections([u], { includeUnpublished: t, includePricing: n });
-            }, [u, t, n, m]);
+                "" !== d && o.p.requestCollections([d], { includeUnpublished: t, includePricing: n });
+            }, [d, t, n, m]);
             let { collection: g, fetchState: E } = (0, s.cf)(
                     [i.A],
-                    () => ({ collection: i.A.getCollection(u), fetchState: i.A.getFetchState(u) }),
-                    [u],
+                    () => ({ collection: i.A.getCollection(d), fetchState: i.A.getFetchState(d) }),
+                    [d],
                 ),
-                h = (0, d.Hd)(u, E),
+                h = (0, u.Hd)(d, E),
                 f = l.useMemo(() => (null != g ? c.A.fromStorefrontCollectionRecord(g) : null), [g]),
                 x = l.useMemo(() => ("error" === E || h ? "error" : null != f ? "ready" : "loading"), [E, h, f]);
             return {
                 category: f,
                 state: x,
                 retry: l.useCallback(() => {
-                    "" !== u &&
+                    "" !== d &&
                         (0, a._v)(
                             {
-                                collectionIds: [u],
+                                collectionIds: [d],
                                 includeUnpublishedCollections: t,
                                 includeUnpublishedProducts: t,
                                 includePricing: n,
@@ -41,7 +41,7 @@ n.d(
                             },
                             { retryAfterError: !0 },
                         );
-                }, [u, t, n]),
+                }, [d, t, n]),
             };
         },
     },

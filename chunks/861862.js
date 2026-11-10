@@ -193,7 +193,7 @@ function Q(e, t) {
             };
     }
 }
-async function J(e) {
+async function Z(e) {
     if (X(e)) {
         (D.verbose(`Skipping track for pid ${e} - already tracked. Determining overlay method.`),
             await er(new Set([e])));
@@ -286,7 +286,7 @@ async function J(e) {
         eu.emitChange(),
         await s.A.updateTrackedGame(e, t));
 }
-async function Z(e) {
+async function J(e) {
     if (!X(e)) return void D.verbose(`Skipping untrack for pid ${e} - not tracked`);
     D.verbose(`Untracking game ${e}`);
     let t = Y(e),
@@ -338,9 +338,9 @@ async function et() {
         ),
         t = new Set(K()),
         n = new Set([...t].filter((t) => !e.has(t)));
-    for (let e of n) (await Z(e), await (0, r.yy)(16));
+    for (let e of n) (await J(e), await (0, r.yy)(16));
     let i = new Set([...e].filter((e) => !t.has(e)));
-    for (let e of i) (await J(e), await (0, r.yy)(16));
+    for (let e of i) (await Z(e), await (0, r.yy)(16));
     let a = new Set([...t].filter((t) => e.has(t)));
     (await er(a),
         (n.size > 0 || i.size > 0) &&
@@ -465,7 +465,7 @@ async function ea(e, t) {
         e || t)
     )
         return void el();
-    for (let e of K()) (await Z(e), await (0, r.yy)(16));
+    for (let e of K()) (await J(e), await (0, r.yy)(16));
 }
 function es() {
     (et(), (P = !1), (k = null), ed());
@@ -480,11 +480,11 @@ async function el() {
             ...e,
         ]);
     for (let n of (D.info(`Retracking ${t.size} games (${e.length} already tracked)`), t))
-        (await J(n), await (0, r.yy)(16));
+        (await Z(n), await (0, r.yy)(16));
     D.info(`Retracked ${e.length} games`);
 }
 async function eo() {
-    for (let e of K()) (await Z(e), await (0, r.yy)(16));
+    for (let e of K()) (await J(e), await (0, r.yy)(16));
 }
 function ed() {
     c.A.hasLoadedExperiments && !P && ((P = !0), ea(p.x.legacyEnabled, p.x.oopEnabled));
@@ -572,14 +572,14 @@ let eu = new ec(
                       return (D.info("handleOverlaySetEnabled", { legacyEnabled: t, oopEnabled: n }), ea(t, n), !0);
                   },
                   GAME_LAUNCH_SUCCESS: function (e) {
-                      if (null != e.pids) for (let t of e.pids) J(t);
+                      if (null != e.pids) for (let t of e.pids) Z(t);
                   },
                   RUNNING_GAMES_CHANGE: function (e) {
                       for (let t of (__OVERLAY__ &&
                           D.error("Running handleRunningGamesChange While in Overlay Context!"),
                       e.added))
-                          J(t.pid);
-                      for (let t of e.removed) Z(t.pid);
+                          Z(t.pid);
+                      for (let t of e.removed) J(t.pid);
                   },
                   RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
                       if (
@@ -615,8 +615,8 @@ let eu = new ec(
                                     legacyEnabled: r,
                                     overlayV3Enabled: a,
                                 }),
-                                X(t) ? el() : J(t))
-                              : Z(t),
+                                X(t) ? el() : Z(t))
+                              : J(t),
                           !0
                       );
                   },

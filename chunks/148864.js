@@ -1,7 +1,7 @@
-let n;
-var r = s(855986),
-    a = s(73153),
-    i = s(956956);
+let s;
+var r = n(855986),
+    a = n(73153),
+    i = n(956956);
 let l = (0, i.rE)();
 function o(e) {
     let { countryCode: t } = e;
@@ -11,21 +11,21 @@ class c extends r.Ay.DeviceSettingsStore {
     static displayName = "PhoneStore";
     static persistKey = "PhoneStore";
     initialize(e) {
-        null != e && (n = e.selectedCountryCode);
+        null != e && (s = e.selectedCountryCode);
     }
     getUserAgnosticState() {
-        return { selectedCountryCode: n };
+        return { selectedCountryCode: s };
     }
     getCountryCode() {
-        return null != n ? n : l;
+        return null != s ? s : l;
     }
 }
 let d = new c(a.h, {
     PHONE_SET_COUNTRY_CODE: function (e) {
         let { countryCode: t } = e;
-        n = t;
+        s = t;
     },
     CONNECTION_OPEN: o,
     SET_LOCATION_METADATA: o,
 });
-s.d(t, {}, { A: d });
+n.d(t, {}, { A: d });

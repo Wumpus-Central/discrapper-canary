@@ -1,4 +1,4 @@
-(n.d(t, { YW: () => e6, NE: () => th, Ay: () => tc, Jz: () => td }), n(321073));
+(n.d(t, { YW: () => e4, NE: () => th, Ay: () => tc, Jz: () => td }), n(321073));
 var i = n(477900),
     r = n(582128),
     l = n(435558),
@@ -544,10 +544,10 @@ function e9(e) {
 }
 var e5 = n(650583),
     e7 = n(872330);
-let e3 = (0, z.Ld)(),
-    e8 = "PrivateChannelRecipientsInvite",
-    e6 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
-function e4(e) {
+let e8 = (0, z.Ld)(),
+    e3 = "PrivateChannelRecipientsInvite",
+    e4 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
+function e6(e) {
     if (eF.A.isFriend(e)) return !0;
     let t = eN.default.getCurrentUser(),
         n = eN.default.getUser(e);
@@ -556,7 +556,7 @@ function e4(e) {
 function te(e) {
     let t = [],
         n = [];
-    for (let i of e) e4(i) ? t.push(i) : n.push(i);
+    for (let i of e) e6(i) ? t.push(i) : n.push(i);
     return { channelRecipientIds: t, inviteLinkOnlyUserIds: n };
 }
 function tt(e) {
@@ -643,8 +643,8 @@ class ts extends r.PureComponent {
             i = "";
         return (
             null != e
-                ? ((n = t ?? e6.ADD_FRIENDS_TO_DM), (i = e.isDM() ? "DM" : "Group DM"))
-                : ((n = e6.NEW_GROUP_DM), (i = "Friends List")),
+                ? ((n = t ?? e4.ADD_FRIENDS_TO_DM), (i = e.isDM() ? "DM" : "Group DM"))
+                : ((n = e4.NEW_GROUP_DM), (i = "Friends List")),
             { entryPointType: n, entryPointSource: i }
         );
     }
@@ -880,7 +880,7 @@ class ts extends r.PureComponent {
                     role: "combobox",
                     "aria-autocomplete": "list",
                     "aria-haspopup": "listbox",
-                    "aria-controls": e3,
+                    "aria-controls": e8,
                     "aria-expanded": o,
                     "aria-activedescendant": o ? `user-row-${s}` : void 0,
                 }),
@@ -896,7 +896,7 @@ class ts extends r.PureComponent {
                   className: e7.qu,
                   children: (0, i.jsx)(em, {
                       ref: this.nitroUpsellBannerRef,
-                      location: e8,
+                      location: e3,
                       memberCount: this.getTotalSelectedMemberCount(),
                       recipientLimit: (0, K.A)({ useNitroCapExperiment: !0 }),
                   }),
@@ -964,7 +964,7 @@ class ts extends r.PureComponent {
                     fade: !0,
                     role: void 0,
                     innerRole: "group",
-                    innerId: e3,
+                    innerId: e8,
                 };
     }
     getEmptyStateListProps() {
@@ -1048,7 +1048,7 @@ class ts extends r.PureComponent {
             fade: !0,
             role: void 0,
             innerRole: "group",
-            innerId: e3,
+            innerId: e8,
         };
     }
     handleSectionToggle = (e) => {
@@ -1182,7 +1182,7 @@ class ts extends r.PureComponent {
     }
     renderNitroCapFullState() {
         let { transitionState: e, onClose: t, nitroAudience: n } = this.props;
-        if ((0, en.yh)(n)) return (0, i.jsx)(eu, { transitionState: e, onClose: t, location: e8, nitroAudience: n });
+        if ((0, en.yh)(n)) return (0, i.jsx)(eu, { transitionState: e, onClose: t, location: e3, nitroAudience: n });
         let r = (0, K.A)({ useNitroCapExperiment: !0 });
         return (0, i.jsx)(d.a, {
             transitionState: e ?? v.ip.ENTERED,
@@ -1426,7 +1426,7 @@ class ts extends r.PureComponent {
     };
     _promoteDMToGroupDM = (e, t, n, i) => {
         let r = eb.A.getChannelId() === e,
-            l = e4(t),
+            l = e6(t),
             s = l ? [...n, t] : n,
             a = l ? i : [...i, t];
         (l && n.length > 0
@@ -1547,7 +1547,7 @@ function to(e) {
             [t],
         ),
         u = (0, en.qH)(),
-        { enabled: d } = $.A.useConfig({ location: e8 }),
+        { enabled: d } = $.A.useConfig({ location: e3 }),
         c = (function (e) {
             let { location: t } = e,
                 { inviteMaxAgeSeconds: n } = e_.useConfig({ location: t });
@@ -1627,7 +1627,7 @@ function tc(e) {
                   }),
                   null != t &&
                       t.isMultiUserDM() &&
-                      (0, i.jsx)(ea, { targetElementRef: c, channelId: t.id, location: e8, onAddToGroup: f }, t.id),
+                      (0, i.jsx)(ea, { targetElementRef: c, channelId: t.id, location: e3, onAddToGroup: f }, t.id),
               ],
           });
 }

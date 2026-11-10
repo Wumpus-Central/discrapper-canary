@@ -67,9 +67,9 @@ function j(e) {
         S = j && null == A,
         {
             tooltipId: D,
-            isVisible: M,
-            targetElementRef: O,
-            trigger: P,
+            isVisible: P,
+            targetElementRef: M,
+            trigger: O,
         } = (0, i.D)({ children: t, targetElementRef: I, delay: 300, onTooltipShow: y, shouldShow: C }),
         U = null != _ && _ !== s.x.COMMON,
         B = (0, a.jsxs)("div", {
@@ -119,14 +119,14 @@ function j(e) {
             ],
         }),
         G = null != E ? `${x}. ${E}` : x,
-        w = (0, u.j)({ shouldShow: M })((e, t) =>
+        w = (0, u.j)({ shouldShow: P })((e, t) =>
             t
                 ? (0, a.jsx)(m.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(f.R, {
-                          isVisible: M,
+                          isVisible: P,
                           isRendered: !0,
-                          targetElementRef: O,
+                          targetElementRef: M,
                           content: B,
                           position: T,
                           align: "center",
@@ -136,6 +136,6 @@ function j(e) {
                   })
                 : null,
         );
-    return (0, a.jsxs)(a.Fragment, { children: [P, (0, a.jsx)(p.A, { id: D, children: G }), w] });
+    return (0, a.jsxs)(a.Fragment, { children: [O, (0, a.jsx)(p.A, { id: D, children: G }), w] });
 }
 let I = j;

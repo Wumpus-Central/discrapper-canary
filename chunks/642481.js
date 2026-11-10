@@ -56,11 +56,11 @@ function E(e) {
             },
             [h],
         ),
-        M = r.useCallback((e) => {
+        P = r.useCallback((e) => {
             T(e);
         }, []),
-        O = N ? g.caretHoverable : void 0,
-        P = {
+        M = N ? g.caretHoverable : void 0,
+        O = {
             targetElementRef: I.targetElementRef,
             shouldShow: I.shouldShow,
             hasVideo: I.hasVideo,
@@ -68,7 +68,7 @@ function E(e) {
             caretConfig: C,
             onRequestClose: S,
             gradientColor: E,
-            onPositionChange: M,
+            onPositionChange: P,
             onNudgeChange: j,
             scrollBehavior: A,
             modal: R,
@@ -80,7 +80,7 @@ function E(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...P,
+        ...O,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
@@ -95,7 +95,7 @@ function E(e) {
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: O }),
+                null != C && (0, a.jsx)(d.F, { className: M }),
             ],
         }),
     });
