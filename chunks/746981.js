@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 670434, Version Hash: 66fae29324959d0c8978e5ce81e293481e5b00da`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 670448, Version Hash: 1d55bf8a891a5229c5a5e8abb89b9eedc26b7872`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670434";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670448";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -14717,7 +14717,7 @@ function h2(e) {
         y && em.push(rF.M.CODE_BLURPLE_POPOVER),
         D && em.push(rF.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT),
         b && em.push(rF.M.NITRO_FILE_UPLOAD_1GB_UPSELL),
-        !p && P && em.push(rF.M.AUTOCLIPPING_EARLY_ACCESS_NITRO_TAB_CUE));
+        P && em.push(rF.M.AUTOCLIPPING_EARLY_ACCESS_NITRO_TAB_CUE));
     let [eT, eg] = (0, rc.kn)(en ? [] : em, { bypassAutoDismiss: !0 }),
         eS = (0, hn.c)(oc.C.PREMIUM_TAB),
         eN = (0, hn.c)(oc.C.PREMIUM_TAB_TOOLTIP),
@@ -14844,7 +14844,13 @@ function h2(e) {
                                 : eT === rF.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT ||
                                     eT === rF.M.NITRO_FILE_UPLOAD_1GB_UPSELL
                                   ? ((r = (0, v.jsx)(uW.E, { type: "new", variant: "expressive" })), (a = 2))
-                                  : ex && ((r = (0, v.jsx)(uW.E, { type: "new", variant: "expressive" })), (a = 2))
+                                  : ex &&
+                                    ((r = (0, v.jsx)(uW.E, {
+                                        type: p ? "early_access" : "new",
+                                        variant: "expressive",
+                                    })),
+                                    (a = 2),
+                                    (_ = !0))
                         : ((r = (0, v.jsx)(hI.Ag, { trialOffer: T, isTabSelected: o, badgeStyle: fJ.v.GLOWING })),
                           (a = 4),
                           (ev = !T.hasAcknowledged));
@@ -14886,7 +14892,7 @@ function h2(e) {
                                       ? (ej = hZ.ORBS_MULTIPLIER)
                                       : ev
                                         ? (ej = hZ.OFFER_TAB_BADGE_TOOLTIP)
-                                        : ex && 2 === a && ((ej = hZ.CLIPS_EARLY_ACCESS), (_ = !0));
+                                        : ex && p && 2 === a && (ej = hZ.CLIPS_EARLY_ACCESS);
     let eY = (0, v.jsx)(A2.z9, {
         listItemRef: d,
         selected: o,
@@ -15835,7 +15841,7 @@ let Iq = "isHideDevBanner",
                     className: td()(Iz.Wz, Iz.mr),
                     children: [
                         (0, v.jsx)(IX, { className: Iz.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "670434" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "670448" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
