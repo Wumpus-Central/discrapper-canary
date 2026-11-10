@@ -349,15 +349,14 @@ function ej(e) {
 let eS =
     "https://cdn.discordapp.com/assets/content/48cbcb920dfd15e45e7fe3f297ede63a7891cb0eee9fc44f27053d05d2c6b5ca.mp3";
 var eN = a(11044),
-    eC = a(461872),
-    eT = a(435558);
-let eR = (0, a(196765).v)(() => ({ hoveredOption: void 0 })),
-    eO = (0, eT.debounce)((e) => eR.setState({ hoveredOption: e }), 250);
-function ey(e) {
+    eC = a(435558);
+let eT = (0, a(196765).v)(() => ({ hoveredOption: void 0 })),
+    eR = (0, eC.debounce)((e) => eT.setState({ hoveredOption: e }), 250);
+function eO(e) {
     let { hoveredOption: t, isDelayed: a = !1 } = e;
-    a ? eO(t) : (eO.cancel(), eR.setState({ hoveredOption: t }));
+    a ? eR(t) : (eR.cancel(), eT.setState({ hoveredOption: t }));
 }
-function eM(e) {
+function ey(e) {
     let { isMuted: t, volume: a } = (0, _.cf)([l.A], () => ({ isMuted: l.A.isMuted, volume: l.A.volume })),
         r = h.useRef(null);
     return (
@@ -373,9 +372,10 @@ function eM(e) {
         }, [t, a])
     );
 }
-var ek = a(28863),
-    eD = a(793574),
-    eL = a(778705),
+var eM = a(28863),
+    ek = a(793574),
+    eD = a(778705),
+    eL = a(461872),
     eP = a(218546),
     eU = a(647093);
 let eG = `linear-gradient(to right, ${z.uz.join(", ")})`;
@@ -388,14 +388,14 @@ var eF = a(829870);
 function eK(e) {
     let { asset: t, hideRarity: a } = e,
         r =
-            t.status === eC.eP.NITRO_LOCKED
+            t.status === eL.eP.NITRO_LOCKED
                 ? ex.intl.format(em.default.E6AfCb, {
                       subscribeHook: (e, t) =>
                           (0, i.jsx)(
-                              ek.Anchor,
+                              eM.Anchor,
                               {
                                   onClick: () =>
-                                      (0, eL.A)({ analyticsLocations: [eD.A.CHECKPOINT, eD.A.CHECKPOINT_TRAIT] }),
+                                      (0, eD.A)({ analyticsLocations: [ek.A.CHECKPOINT, ek.A.CHECKPOINT_TRAIT] }),
                                   children: e,
                               },
                               t,
@@ -443,16 +443,18 @@ function eX(e) {
             disabled: d = !1,
         } = e,
         { trait: l, optionId: o, rarity: u, asset: f, status: _ } = t,
-        p = _ === eC.eP.LOCKED,
+        p = _ === eL.eP.LOCKED,
         x = h.useMemo(() => {
             if (null == f) return null;
             let e = Math.round(80 * (0, ez.A)());
             return `${f}?width=${e}&height=${e}`;
         }, [f]);
     return (0, i.jsxs)("label", {
-        className: b()(eW.uK, { [eW.wH]: r, [eW.dv]: (0, v.C5)(t), [eW.xt]: p, [eW.Ns]: _ === eC.eP.NITRO_LOCKED }),
+        className: b()(eW.uK, { [eW.wH]: r, [eW.dv]: (0, v.C5)(t), [eW.xt]: p, [eW.Ns]: _ === eL.eP.NITRO_LOCKED }),
         onMouseEnter: () => c(t),
-        onFocus: () => c(t),
+        onFocus: function () {
+            c(t);
+        },
         children: [
             (0, i.jsx)(m.A, {
                 children: (0, i.jsx)("input", {
@@ -460,8 +462,11 @@ function eX(e) {
                     name: a,
                     checked: r,
                     disabled: d,
-                    onChange: () => n(l, o),
-                    "aria-label": (0, v.v2)(t, s),
+                    "aria-disabled": d ? void 0 : p,
+                    onChange: function () {
+                        d || p || n(l, o);
+                    },
+                    "aria-label": (0, v.v2)(t, { skipRarity: s, skipDescription: !1 }),
                 }),
             }),
             null != x && (0, i.jsx)("img", { src: x, alt: "", draggable: !1, className: eW.Sl }),
@@ -487,24 +492,24 @@ function e5(e) {
         } = e,
         d = h.useId(),
         l = !(0, v.Ux)(t),
-        o = eR((e) => e.hoveredOption ?? r),
-        u = eM(
+        o = eT((e) => e.hoveredOption ?? r),
+        u = ey(
             "https://cdn.discordapp.com/assets/content/fc5527a1a369d8982c6e6fa588f732c7c5364ff00ddd0cf51646f05ad423af36.mp3",
         ),
-        f = eM(eS);
+        f = ey(eS);
     ((0, B.Ay)(() => {
         [eZ, e1, eQ, eJ, e0, e$].forEach((e) => (0, eN.N)(e));
     }),
-        h.useEffect(() => () => ey({ hoveredOption: void 0 }), [t]));
+        h.useEffect(() => () => eO({ hoveredOption: void 0 }), [t]));
     let b = h.useCallback(
             (e, t) => {
-                (ey({ hoveredOption: void 0 }), f(), s(e, t));
+                (eO({ hoveredOption: void 0 }), f(), s(e, t));
             },
             [s, f],
         ),
         _ = h.useCallback(
             (e) => {
-                (u(), ey({ hoveredOption: e.optionId !== r?.optionId ? e : void 0, isDelayed: !0 }));
+                (u(), eO({ hoveredOption: e.optionId !== r?.optionId ? e : void 0, isDelayed: !0 }));
             },
             [u, r],
         );
@@ -516,11 +521,14 @@ function e5(e) {
                 children: [
                     c,
                     (0, i.jsx)("div", {
-                        onMouseLeave: () => ey({ hoveredOption: void 0 }),
+                        onMouseLeave: () => eO({ hoveredOption: void 0 }),
                         children: (0, i.jsx)("div", {
                             role: "radiogroup",
                             "aria-label": (0, v.cq)(t),
                             className: eq.Vg,
+                            onBlur: (e) => {
+                                e.currentTarget.contains(e.relatedTarget) || eO({ hoveredOption: void 0 });
+                            },
                             children: a.map((e) =>
                                 (0, i.jsx)(
                                     eX,
@@ -531,7 +539,7 @@ function e5(e) {
                                         hideRarity: l,
                                         onSelectOption: b,
                                         onHoverOption: _,
-                                        disabled: n || e.status === eC.eP.LOCKED,
+                                        disabled: n,
                                     },
                                     e.optionId,
                                 ),
@@ -605,11 +613,11 @@ function e4(e) {
                 for (let t of i ?? F.Rk[e]) {
                     let i = (0, F.$C)(e, t),
                         s = a === t,
-                        c = eC.eP.UNLOCKED;
+                        c = eL.eP.UNLOCKED;
                     null == i || d.has(i) || s
-                        ? i !== eP.K.NITRO || n || s || (c = eC.eP.NITRO_LOCKED)
-                        : (c = eC.eP.LOCKED);
-                    let h = c === eC.eP.UNLOCKED && (i !== eP.K.NITRO || n);
+                        ? i !== eP.K.NITRO || n || s || (c = eL.eP.NITRO_LOCKED)
+                        : (c = eL.eP.LOCKED);
+                    let h = c === eL.eP.UNLOCKED && (i !== eP.K.NITRO || n);
                     (null != i && o++,
                         null != i && h && u++,
                         l.push({
@@ -627,7 +635,7 @@ function e4(e) {
                 l.sort(c);
                 let h = l.filter((e) => {
                     let { status: t } = e;
-                    return t !== eC.eP.LOCKED;
+                    return t !== eL.eP.LOCKED;
                 });
                 return { traitOptions: l, availableTraitOptions: h, totalCount: o, earnedCount: u };
             }, [t, n, i, c, a, s]);
@@ -1173,7 +1181,7 @@ var tW = a(652215),
     tY = a(650583);
 function tX(e) {
     let { source: t, onClick: a, disabled: r = !1 } = e,
-        i = eM(t),
+        i = ey(t),
         s = h.useRef(!1);
     function n() {
         r || i();
@@ -1370,7 +1378,7 @@ function t2(e) {
 function t3(e) {
     let { activeRoute: t, blockedTrait: a, blockedTraitDescriptionId: r, onBack: s, onNext: n, onReplay: c } = e,
         d = null != a,
-        l = h.useMemo(() => (0, eT.throttle)((e) => e(), 500, { trailing: !1 }), []);
+        l = h.useMemo(() => (0, eC.throttle)((e) => e(), 500, { trailing: !1 }), []);
     function o(e) {
         null != a ? Y(a) : l(e);
     }
@@ -1552,7 +1560,7 @@ function aA() {
             let { cardType: t } = e;
             return t === c;
         }),
-        b = eM(eS),
+        b = ey(eS),
         {
             onPointerDown: p,
             onKeyDown: m,
@@ -1745,7 +1753,7 @@ function aC(e) {
                             children: ex.intl.format(em.default.hcNhyq, {
                                 learnMoreHook: (e, t) =>
                                     (0, i.jsx)(
-                                        ek.Anchor,
+                                        eM.Anchor,
                                         {
                                             className: aS.nf,
                                             href: aE.A.getArticleURL(tW.MVz.CHECKPOINT),
@@ -2146,7 +2154,7 @@ function a2() {
         s = (r ? a.emojis : e?.emojis) ?? a1,
         [n, c] = h.useState(0),
         d = s[n],
-        o = eM(eS);
+        o = ey(eS);
     return (0, i.jsx)(t7, {
         children: (0, i.jsxs)("div", {
             className: a0.kL,
@@ -2444,7 +2452,7 @@ function rb(e) {
                                   ((0, u.nr)(t.id),
                                       (0, rt.A)({
                                           giftRecipient: t,
-                                          analyticsLocations: [eD.A.CHECKPOINT, eD.A.CHECKPOINT_SIDEKICK],
+                                          analyticsLocations: [ek.A.CHECKPOINT, ek.A.CHECKPOINT_SIDEKICK],
                                       }));
                               },
                               "aria-label": ex.intl.string(ex.t.Ve9Ge6),
@@ -4991,7 +4999,7 @@ function sr(e) {
     n > c && d(n);
     let o =
             ((t = (0, _.bG)([l.A], () => l.A.selectedCharacterTraits)),
-            (a = eR((e) => e.hoveredOption)),
+            (a = eT((e) => e.hoveredOption)),
             h.useMemo(() => (null != a ? { ...t, [a.trait]: a.optionId } : t), [t, a])),
         u = (0, _.bG)([q.Ay], () => q.Ay.useReducedMotion),
         f = h.useMemo(

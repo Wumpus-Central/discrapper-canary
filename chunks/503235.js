@@ -157,19 +157,21 @@ n.d(
             }
             return (e, t) => n(e) - n(t);
         },
-        v2: function (e, t) {
-            let n = [e.getName()];
+        v2: function (e) {
+            let { skipRarity: t = !1, skipDescription: n = !1 } =
+                    arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                i = [e.getName()];
             if (
                 (e.status === l.eP.LOCKED
-                    ? n.push(_.intl.string(u.default.AEDeza))
-                    : e.status === l.eP.NITRO_LOCKED && n.push(_.intl.string(u.default.F52sSw)),
-                !t)
+                    ? i.push(_.intl.string(u.default.AEDeza))
+                    : e.status === l.eP.NITRO_LOCKED && i.push(_.intl.string(u.default.F52sSw)),
+                t || null == e.rarity || i.push(_.intl.string(c.iG[e.rarity])),
+                !n)
             ) {
-                null != e.rarity && n.push(_.intl.string(c.iG[e.rarity]));
                 let t = T(e);
-                null != t && n.push(t);
+                null != t && i.push(t);
             }
-            return n.join(", ");
+            return i.join(", ");
         },
         v7: E,
     },
