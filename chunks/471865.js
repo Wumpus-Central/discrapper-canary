@@ -3,10 +3,10 @@ var r = n(620632),
     i = n(626584),
     u = n(287809),
     o = n(927813),
-    l = n(773527),
-    s = n(211824);
-let c = new i.A("HexagonActionCreators"),
-    d = 5 * o.A.Millis.SECOND,
+    s = n(773527),
+    c = n(211824);
+let l = new i.A("HexagonActionCreators"),
+    d = 10 * o.A.Millis.SECOND,
     f = null;
 function h(e) {
     a.h.dispatch({ type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues: e });
@@ -16,7 +16,7 @@ n.d(
     {},
     {
         Br: function (e) {
-            return (0, l.Rd)(u.default.getCurrentUser(), e)
+            return (0, s.Rd)(u.default.getCurrentUser(), e)
                 ? Promise.resolve(!0)
                 : (null == f &&
                       (f = (async function (e) {
@@ -24,15 +24,15 @@ n.d(
                               return await (async function (e) {
                                   try {
                                       await (async function () {
-                                          await r.Bo.post({ url: s.tK, rejectWithError: !0 });
+                                          await r.Bo.post({ url: c.tK, rejectWithError: !0 });
                                       })();
                                   } catch (e) {
-                                      return (c.warn(`Failed to enroll in the Hexagon campaign: ${e}`), !1);
+                                      return (l.warn(`Failed to enroll in the Hexagon campaign: ${e}`), !1);
                                   }
                                   return (
                                       (await (function (e) {
                                           function t() {
-                                              return (0, l.Rd)(u.default.getCurrentUser(), e);
+                                              return (0, s.Rd)(u.default.getCurrentUser(), e);
                                           }
                                           return t()
                                               ? Promise.resolve(!0)
@@ -46,7 +46,7 @@ n.d(
                                                     }, d);
                                                     u.default.addChangeListener(n);
                                                 });
-                                      })(e)) || c.warn(`Timed out waiting for the Hexagon campaign ${e} perk to sync`),
+                                      })(e)) || l.warn(`Timed out waiting for the Hexagon campaign ${e} perk to sync`),
                                       !0
                                   );
                               })(e);
@@ -56,12 +56,15 @@ n.d(
                       })(e)),
                   f);
         },
+        Tf: function () {
+            a.h.dispatch({ type: "HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES_VISITED" });
+        },
         VN: function (e) {
             a.h.dispatch({ type: "HEXAGON_CAMPAIGN_PERK_APPLIED", perk: e });
         },
         WT: function () {
             let e = u.default.getCurrentUser()?.displayNameStyles ?? null;
-            (0, l.Jy)(e) || h({ displayNameStyles: e });
+            (0, s.Jy)(e) || h({ displayNameStyles: e });
         },
         fv: h,
     },

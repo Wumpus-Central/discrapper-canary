@@ -1,44 +1,58 @@
-(n.d(t, { U5: () => A, cC: () => o, Jy: () => E, Rd: () => f, z9: () => _, oB: () => c, YY: () => d, sD: () => u }),
-    n(508425),
-    n(559949));
-var i = n(76573),
-    r = n(350972),
-    a = n(948325),
-    s = n(474090),
-    l = n(211824);
-function o(e, t) {
-    return null != t && (0, s.CC)(t, l.PC[e]) ? l.zv : l.Fg;
-}
+n.d(t, {
+    U5: () => h,
+    cC: () => d,
+    Jy: () => A,
+    Rd: () => I,
+    z9: () => E,
+    oB: () => u,
+    n2: () => f,
+    YY: () => c,
+    sD: () => _,
+});
+var i = n(508425);
+n(559949);
+var r = n(76573),
+    a = n(350972),
+    s = n(948325),
+    l = n(474090),
+    o = n(211824);
 function d(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-    return n >= o(e, t);
+    return null != t && (0, l.CC)(t, o.PC[e]) ? o.zv : o.Fg;
 }
-function c(e) {
-    return null != e && l.xG.has(e);
+function c(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
+    return n >= d(e, t);
 }
 function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-    return d(e, null, t);
+    return null != e && o.xG.has(e);
 }
 function _(e) {
-    return e === r.aS.HEXAGON;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return c(e, null, t);
 }
 function E(e) {
-    return e?.fontId === l.vl;
+    return e === a.aS.HEXAGON;
 }
 function A(e) {
+    return e?.fontId === o.vl;
+}
+function f(e) {
+    let { fontId: t, effectId: n, colors: r } = e;
+    return t === o.vl && n === i.z.SOLID && 0 === r.length;
+}
+function h(e) {
     let { perk: t, premiumType: n, isCampaignEnabled: i, now: r = Date.now() } = e;
     return !i ||
         (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-            return e >= l.zv;
+            return e >= o.zv;
         })(r)
-        ? l.S9.HIDDEN
-        : d(t, n, r)
-          ? l.S9.LOCKED
-          : l.S9.SELECTABLE;
+        ? o.S9.HIDDEN
+        : c(t, n, r)
+          ? o.S9.LOCKED
+          : o.S9.SELECTABLE;
 }
-function f(e, t) {
-    let n = (0, a.kQ)(e?.perks, l.Sp[t]);
-    return null != n && n.includes(i.g$.SOURCE_HEXAGON_CAMPAIGN);
+function I(e, t) {
+    let n = (0, s.kQ)(e?.perks, o.Sp[t]);
+    return null != n && n.includes(r.g$.SOURCE_HEXAGON_CAMPAIGN);
 }

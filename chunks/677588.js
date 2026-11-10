@@ -1,27 +1,24 @@
-var i = n(477900);
+var r = n(477900);
 n(582128);
-var r = n(28863),
-    s = n(834730),
-    l = n(211824),
-    a = n(701256),
-    c = n(792996);
-function o(e, t) {
-    return (0, i.jsx)(r.Anchor, { href: l.j, children: e }, t);
+var i = n(28863),
+    d = n(834730),
+    s = n(211824),
+    u = n(701256),
+    a = n(792996);
+function m(e, t) {
+    return (0, r.jsx)(i.Anchor, { href: s.j, children: e }, t);
+}
+function c() {
+    return a.intl.format(u.default.y2YmJv, { nonPremiumEndDate: s.Fg, premiumEndDate: s.zv, learnMoreHook: m });
 }
 n.d(
     t,
     {},
     {
-        A: function () {
-            return (0, i.jsx)(s.E, {
-                variant: "body-sm/normal",
-                color: "text-muted",
-                children: c.intl.format(a.default.y2YmJv, {
-                    nonPremiumEndDate: l.Fg,
-                    premiumEndDate: l.zv,
-                    learnMoreHook: o,
-                }),
-            });
+        A: function (e) {
+            let { variant: t = "body-sm/normal" } = e;
+            return (0, r.jsx)(d.E, { variant: t, color: "text-muted", children: c() });
         },
+        R: c,
     },
 );

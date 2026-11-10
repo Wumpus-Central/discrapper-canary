@@ -1,5 +1,6 @@
 e.exports = {
     _l: "previewSection_37eplx",
+    oE: "compact_37eplx",
     cq: "previewCards_37eplx",
     ME: "profile_37eplx",
     OT: "chatMessage_37eplx",

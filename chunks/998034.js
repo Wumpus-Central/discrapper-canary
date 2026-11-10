@@ -307,8 +307,8 @@ var e1 = n(176781),
     e3 = n(780964),
     e6 = n(766075),
     e8 = n(734066),
-    e5 = n(419490),
-    e7 = n(409067),
+    e7 = n(419490),
+    e5 = n(409067),
     e9 = n(271597),
     e4 = n(534514),
     te = n(475358),
@@ -404,11 +404,11 @@ var tS = n(696016),
 function tR(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: r, setPopoutRef: a } = e;
     (0, tp.A)();
-    let s = (0, c.yK)([e5.Ay], () => Object.values(e5.Ay.getClips())),
-        o = (0, c.bG)([e5.Ay], () => e5.Ay.getSettings()),
-        u = (0, c.bG)([e5.Ay], () => e5.Ay.getNewClipIds()),
+    let s = (0, c.yK)([e7.Ay], () => Object.values(e7.Ay.getClips())),
+        o = (0, c.bG)([e7.Ay], () => e7.Ay.getSettings()),
+        u = (0, c.bG)([e7.Ay], () => e7.Ay.getNewClipIds()),
         d = (0, td.H)(),
-        m = (0, c.bG)([e5.Ay], () => e5.Ay.getEnableAutoclipping()),
+        m = (0, c.bG)([e7.Ay], () => e7.Ay.getEnableAutoclipping()),
         f = (0, c.bG)([ts.Ay], () => ts.Ay.getKeybindForAction(J.hCu.SAVE_CLIP)),
         p = l.useCallback(
             (e) => {
@@ -418,7 +418,7 @@ function tR(e) {
         ),
         h = !o.showPovClipsInGallery,
         g = l.useMemo(() => {
-            let e = s.filter((e) => e.type === tS.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, e7.kD)(e)));
+            let e = s.filter((e) => e.type === tS.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, e5.kD)(e)));
             return (e.sort((e, t) => t.createdAt - e.createdAt), e);
         }, [s, h]),
         A = l.useMemo(() => g.slice(0, 16), [g]),
@@ -574,15 +574,15 @@ function tO(e) {
 function tM(e) {
     let { onClose: t, popoutContainerRef: n } = e,
         r = (0, e8.sw)(),
-        a = !(0, c.bG)([e5.Ay], () => e5.Ay.getSettings().showPovClipsInGallery),
+        a = !(0, c.bG)([e7.Ay], () => e7.Ay.getSettings().showPovClipsInGallery),
         s = (0, c.bG)(
-            [e5.Ay],
+            [e7.Ay],
             () => {
-                let e = e5.Ay.getNewClipIds();
+                let e = e7.Ay.getNewClipIds();
                 return a
                     ? e.filter((e) => {
-                          let t = e5.Ay.getClipById(e);
-                          return null != t && !(0, e7.kD)(t);
+                          let t = e7.Ay.getClipById(e);
+                          return null != t && !(0, e5.kD)(t);
                       }).length
                     : e.length;
             },
@@ -744,8 +744,8 @@ function t3(e) {
 }
 var t6 = n(397562),
     t8 = n(206835),
-    t5 = n(183555),
-    t7 = n(465318),
+    t7 = n(183555),
+    t5 = n(465318),
     t9 = n(527212),
     t4 = n(702476),
     ne = n(718019),
@@ -764,7 +764,7 @@ var t6 = n(397562),
     nf = n(62119);
 function np(e) {
     let { user: t, isVisible: n } = e,
-        { trackUserProfileAction: l } = (0, t5.NJ)();
+        { trackUserProfileAction: l } = (0, t7.NJ)();
     return nd.p5
         ? (0, i.jsx)(nc.A, {
               text: ew.intl.string(ew.t.y5MwJy),
@@ -995,7 +995,7 @@ var nR = n(290863),
     n3 = n(90165),
     n6 = n(49999),
     n8 = n(518477);
-function n5(e) {
+function n7(e) {
     let { targetElementRef: t, onClose: r } = e,
         [a, s] = l.useState(!1),
         o = (0, c.bG)([n2.default], () => n2.default.getId()),
@@ -1056,7 +1056,7 @@ function n5(e) {
                 n.e(814431),
                 n.e(763214),
                 n.e(291103),
-                n.e(439120),
+                n.e(887141),
                 n.e(488602),
                 n.e(426737),
                 n.e(607468),
@@ -1337,6 +1337,7 @@ function n5(e) {
                 n.e(704374),
                 n.e(186546),
                 n.e(547298),
+                n.e(617122),
                 n.e(571294),
                 n.e(598421),
                 n.e(443256),
@@ -1354,9 +1355,11 @@ function n5(e) {
                 n.e(272887),
                 n.e(47497),
                 n.e(803410),
+                n.e(237946),
                 n.e(677407),
                 n.e(550260),
-                n.e(365705),
+                n.e(349270),
+                n.e(241288),
                 n.e(69658),
                 n.e(634786),
                 n.e(469709),
@@ -1433,11 +1436,11 @@ function n5(e) {
               ],
           });
 }
-var n7 = n(894768),
+var n5 = n(894768),
     n9 = n(818348),
     n4 = n(709516);
 function ie() {
-    let e = (0, c.bG)([n7.A], () => n7.A.getStatus()),
+    let e = (0, c.bG)([n5.A], () => n5.A.getStatus()),
         t = (0, nm.MU)(e) ?? "",
         n = e === n9.cl.INVISIBLE || e === n9.cl.OFFLINE;
     return (0, i.jsxs)("div", {
@@ -1517,7 +1520,7 @@ function id(e) {
         m = __OVERLAY__,
         h = (0, t9.Ay)(t.id, void 0),
         { analyticsLocations: g } = (0, P.Ay)(k.A.USER_PROFILE_ACCOUNT_POPOUT),
-        C = (0, t5.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
+        C = (0, t7.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, t6.A)(g, h, n8.R7.ACCOUNT_POPOUT);
     let { ref: x } = (0, eI.Ay)(),
         { isHoveringOrFocusing: v, isHovering: _ } = (0, tg.A)(x);
@@ -1753,7 +1756,7 @@ function id(e) {
         q = l.useCallback(() => {
             (R(), Y());
         }, [R, Y]),
-        Q = t7.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
+        Q = t5.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
         $ = (0, nC.Hy)({ location: "UserProfileAccountPopout" }),
         X = (0, ej.FX)("UserProfileAccountPopout"),
         Z = (0, tW.A)((e) => e.shouldScrollToOrbsMenuItem),
@@ -1767,7 +1770,7 @@ function id(e) {
         en = l.useId();
     return (0, i.jsx)(P.f5, {
         value: g,
-        children: (0, i.jsx)(t5.of, {
+        children: (0, i.jsx)(t7.of, {
             value: C,
             openedAt: o,
             fetchStartedAt: h?.fetchStartedAt,
@@ -2031,7 +2034,7 @@ function id(e) {
                                     null != G && (0, i.jsx)(tD.A, { frame: G, fadeIn: F }),
                                 ],
                             }),
-                            (0, i.jsx)(n5, { targetElementRef: D, onClose: n }),
+                            (0, i.jsx)(n7, { targetElementRef: D, onClose: n }),
                             (0, i.jsx)(t2, {}),
                         ],
                     }),
@@ -2221,8 +2224,8 @@ let i6 = new i3(i0.h, {
     },
 });
 var i8 = n(514661);
-let i5 = new iB.A("GuildTagAvailableCoachmark");
-function i7(e) {
+let i7 = new iB.A("GuildTagAvailableCoachmark");
+function i5(e) {
     let t = (0, c.bG)([iZ.A], () => iZ.A.getGuild(e.guildId));
     function n(n) {
         (t?.profile?.tag != null &&
@@ -2235,7 +2238,7 @@ function i7(e) {
     }
     let { isAdopting: l, onAdoptTag: r, onEditProfile: a } = (0, i8.A)(t?.id ?? null, () => n(n6.i.TAKE_ACTION));
     if (null == t || !(0, iJ.q0)(t))
-        return (i5.error("GuildTagChangedCoachmark rendered without guildId for a guild with tags."), e.children);
+        return (i7.error("GuildTagChangedCoachmark rendered without guildId for a guild with tags."), e.children);
     let s = [
         { text: ew.intl.string(ew.t.jwEaiX), loading: l, onClick: r, variant: "primary" },
         { text: ew.intl.string(ew.t.s5vZlQ), onClick: a, variant: "secondary" },
@@ -2268,7 +2271,7 @@ function i9(e) {
     }
     let { isAdopting: l, onAdoptTag: r, onEditProfile: a } = (0, i8.A)(t?.id ?? null, () => n(n6.i.TAKE_ACTION));
     if (null == t || !(0, iJ.q0)(t))
-        return (i5.error("GuildTagAvailableCoachmark rendered without guildId for a guild with tags."), e.children);
+        return (i7.error("GuildTagAvailableCoachmark rendered without guildId for a guild with tags."), e.children);
     let s = [
         { text: ew.intl.string(ew.t.jwEaiX), loading: l, onClick: r, variant: "primary" },
         { text: ew.intl.string(ew.t.s5vZlQ), onClick: a, variant: "secondary" },
@@ -2429,7 +2432,7 @@ function la(e) {
                   children: e.children,
               })
             : s === d.M.GUILD_TAG_UPDATED_COACHMARK
-              ? (0, i.jsx)(i7, {
+              ? (0, i.jsx)(i5, {
                     guildId: e.currentUser.primaryGuild?.identityGuildId ?? null,
                     onDismiss: o,
                     targetElementRef: e.targetElementRef,
@@ -2991,7 +2994,7 @@ function l2(e) {
         }, [a]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, l1.A)("1794348584123", !0);
+        let e = (0, l1.A)("1794349116115", !0);
         t =
             null != e
                 ? ew.intl.formatToPlainString(ew.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3043,8 +3046,8 @@ function l2(e) {
 var l3 = n(358285);
 let l6 = iM.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
     l8 = 2.5 * to.A.Millis.SECOND,
-    l5 = 2 * to.A.Millis.MINUTE,
-    l7 = 5 * to.A.Millis.SECOND;
+    l7 = 2 * to.A.Millis.MINUTE,
+    l5 = 5 * to.A.Millis.SECOND;
 function l9(e) {
     let {
             ref: t,
@@ -3355,7 +3358,8 @@ class l4 extends l.PureComponent {
                     n.e(84993),
                     n.e(592268),
                     n.e(374962),
-                    n.e(439120),
+                    n.e(553627),
+                    n.e(887141),
                     n.e(736919),
                     n.e(440636),
                     n.e(568960),
@@ -3576,6 +3580,7 @@ class l4 extends l.PureComponent {
                     n.e(733115),
                     n.e(397270),
                     n.e(406222),
+                    n.e(393336),
                     n.e(761597),
                     n.e(373122),
                     n.e(649408),
@@ -3590,7 +3595,6 @@ class l4 extends l.PureComponent {
                     n.e(692990),
                     n.e(714496),
                     n.e(305834),
-                    n.e(393336),
                     n.e(745959),
                     n.e(858529),
                     n.e(481987),
@@ -3613,58 +3617,55 @@ class l4 extends l.PureComponent {
                     n.e(900361),
                     n.e(391763),
                     n.e(492762),
+                    n.e(21921),
                     n.e(885533),
                     n.e(282833),
                     n.e(393766),
-                    n.e(21921),
                     n.e(811310),
                     n.e(258398),
+                    n.e(676418),
                     n.e(844780),
                     n.e(571210),
                     n.e(572963),
-                    n.e(676418),
                     n.e(70833),
                     n.e(897073),
-                    n.e(188689),
                     n.e(161275),
                     n.e(761253),
                     n.e(401518),
-                    n.e(521930),
                     n.e(166495),
                     n.e(362274),
-                    n.e(88342),
                     n.e(49782),
                     n.e(570849),
                     n.e(45072),
                     n.e(942724),
                     n.e(139970),
                     n.e(173764),
+                    n.e(188689),
                     n.e(940258),
                     n.e(830221),
                     n.e(858164),
+                    n.e(521930),
                     n.e(357688),
                     n.e(308555),
+                    n.e(88342),
                     n.e(323624),
                     n.e(977547),
+                    n.e(508371),
+                    n.e(885434),
+                    n.e(586127),
                     n.e(554241),
                     n.e(311802),
-                    n.e(724303),
-                    n.e(508371),
-                    n.e(698965),
-                    n.e(885434),
-                    n.e(53102),
-                    n.e(586127),
                     n.e(41250),
+                    n.e(724303),
                     n.e(179049),
-                    n.e(918024),
                     n.e(132737),
+                    n.e(698965),
+                    n.e(53102),
                     n.e(344502),
                     n.e(146070),
-                    n.e(88599),
                     n.e(836863),
-                    n.e(780262),
-                    n.e(382563),
                     n.e(658216),
+                    n.e(918024),
                     n.e(854622),
                     n.e(629482),
                     n.e(590365),
@@ -3672,82 +3673,81 @@ class l4 extends l.PureComponent {
                     n.e(37977),
                     n.e(136149),
                     n.e(470068),
-                    n.e(870663),
                     n.e(817989),
-                    n.e(437065),
+                    n.e(88599),
+                    n.e(780262),
+                    n.e(382563),
                     n.e(891585),
                     n.e(720590),
-                    n.e(709640),
-                    n.e(235313),
                     n.e(147626),
                     n.e(613867),
-                    n.e(952548),
+                    n.e(870663),
                     n.e(689393),
-                    n.e(893917),
                     n.e(727779),
                     n.e(412743),
                     n.e(585503),
+                    n.e(437065),
                     n.e(203589),
-                    n.e(636373),
+                    n.e(709640),
+                    n.e(235313),
                     n.e(382465),
                     n.e(294857),
-                    n.e(230664),
                     n.e(15481),
                     n.e(179745),
-                    n.e(655708),
-                    n.e(676156),
-                    n.e(889638),
+                    n.e(952548),
+                    n.e(893917),
                     n.e(668802),
                     n.e(631358),
                     n.e(459414),
-                    n.e(553984),
                     n.e(335395),
-                    n.e(142867),
-                    n.e(884601),
-                    n.e(782969),
+                    n.e(636373),
                     n.e(882777),
                     n.e(56520),
                     n.e(945413),
                     n.e(402026),
                     n.e(163235),
-                    n.e(776766),
+                    n.e(230664),
+                    n.e(655708),
                     n.e(632756),
                     n.e(564850),
-                    n.e(504370),
                     n.e(941040),
-                    n.e(96539),
                     n.e(124791),
                     n.e(35771),
                     n.e(648344),
                     n.e(170104),
                     n.e(491793),
+                    n.e(676156),
+                    n.e(889638),
                     n.e(256769),
+                    n.e(553984),
                     n.e(902564),
-                    n.e(495786),
-                    n.e(428967),
+                    n.e(142867),
+                    n.e(884601),
+                    n.e(782969),
                     n.e(30441),
                     n.e(704727),
-                    n.e(447937),
                     n.e(538345),
                     n.e(214285),
                     n.e(248330),
                     n.e(373004),
                     n.e(803332),
-                    n.e(129080),
-                    n.e(238232),
+                    n.e(776766),
                     n.e(938149),
                     n.e(408362),
                     n.e(741678),
-                    n.e(608032),
+                    n.e(504370),
+                    n.e(96539),
                     n.e(852617),
-                    n.e(477970),
                     n.e(102698),
                     n.e(125964),
                     n.e(415266),
                     n.e(787139),
                     n.e(737021),
                     n.e(775951),
+                    n.e(495786),
+                    n.e(428967),
                     n.e(254506),
+                    n.e(447937),
                     n.e(874342),
                     n.e(138830),
                     n.e(258033),
@@ -3757,26 +3757,30 @@ class l4 extends l.PureComponent {
                     n.e(985794),
                     n.e(695358),
                     n.e(767837),
-                    n.e(579245),
                     n.e(473384),
+                    n.e(129080),
                     n.e(432209),
                     n.e(996868),
+                    n.e(238232),
                     n.e(368062),
                     n.e(859991),
                     n.e(667092),
                     n.e(225575),
-                    n.e(603998),
-                    n.e(823300),
+                    n.e(608032),
+                    n.e(477970),
                     n.e(709371),
                     n.e(466718),
                     n.e(330724),
                     n.e(599719),
+                    n.e(579245),
+                    n.e(603998),
+                    n.e(823300),
+                    n.e(987478),
                     n.e(136204),
                     n.e(531741),
                     n.e(390213),
                     n.e(736926),
                     n.e(939171),
-                    n.e(987478),
                     n.e(465157),
                     n.e(490010),
                     n.e(252229),
@@ -3831,16 +3835,17 @@ class l4 extends l.PureComponent {
                     n.e(838090),
                     n.e(536973),
                     n.e(590814),
+                    n.e(935948),
                     n.e(896804),
                     n.e(708536),
                     n.e(298107),
                     n.e(411353),
                     n.e(258709),
                     n.e(508829),
+                    n.e(215920),
                     n.e(526778),
                     n.e(603303),
                     n.e(203930),
-                    n.e(935948),
                     n.e(903663),
                     n.e(741111),
                     n.e(954289),
@@ -3852,7 +3857,6 @@ class l4 extends l.PureComponent {
                     n.e(780611),
                     n.e(201243),
                     n.e(950535),
-                    n.e(215920),
                     n.e(246969),
                     n.e(880672),
                     n.e(269786),
@@ -3886,20 +3890,22 @@ class l4 extends l.PureComponent {
                     n.e(15428),
                     n.e(151081),
                     n.e(462010),
+                    n.e(557940),
                     n.e(781949),
+                    n.e(9205),
                     n.e(504098),
                     n.e(78465),
                     n.e(746479),
                     n.e(872893),
+                    n.e(144989),
                     n.e(127659),
                     n.e(525499),
                     n.e(377663),
-                    n.e(557940),
                     n.e(341701),
-                    n.e(9205),
+                    n.e(763096),
                     n.e(42834),
-                    n.e(144989),
                     n.e(604172),
+                    n.e(225612),
                     n.e(468083),
                     n.e(548730),
                     n.e(39689),
@@ -3910,18 +3916,18 @@ class l4 extends l.PureComponent {
                     n.e(368684),
                     n.e(568881),
                     n.e(51892),
-                    n.e(763096),
                     n.e(841838),
+                    n.e(472789),
+                    n.e(137937),
                     n.e(830351),
                     n.e(396854),
-                    n.e(225612),
+                    n.e(803191),
                     n.e(350949),
-                    n.e(472789),
+                    n.e(396325),
                     n.e(967874),
-                    n.e(137937),
+                    n.e(141049),
                     n.e(760989),
                     n.e(79216),
-                    n.e(803191),
                     n.e(369501),
                     n.e(303710),
                     n.e(545006),
@@ -3931,17 +3937,15 @@ class l4 extends l.PureComponent {
                     n.e(202669),
                     n.e(886913),
                     n.e(860003),
-                    n.e(396325),
                     n.e(808979),
-                    n.e(141049),
+                    n.e(512162),
+                    n.e(866008),
+                    n.e(531158),
                     n.e(749736),
                     n.e(14020),
                     n.e(587732),
                     n.e(645830),
-                    n.e(512162),
                     n.e(733771),
-                    n.e(866008),
-                    n.e(531158),
                     n.e(946039),
                     n.e(995602),
                     n.e(850298),
@@ -3950,6 +3954,7 @@ class l4 extends l.PureComponent {
                     n.e(896480),
                     n.e(569468),
                     n.e(966598),
+                    n.e(886492),
                     n.e(101851),
                     n.e(146149),
                     n.e(360536),
@@ -3960,7 +3965,6 @@ class l4 extends l.PureComponent {
                     n.e(759174),
                     n.e(175284),
                     n.e(538733),
-                    n.e(886492),
                     n.e(576415),
                     n.e(983947),
                     n.e(944727),
@@ -3972,6 +3976,7 @@ class l4 extends l.PureComponent {
                     n.e(960816),
                     n.e(168031),
                     n.e(271203),
+                    n.e(617122),
                     n.e(932011),
                     n.e(384820),
                     n.e(102657),
@@ -4026,6 +4031,7 @@ class l4 extends l.PureComponent {
                     n.e(956814),
                     n.e(903820),
                     n.e(876892),
+                    n.e(71066),
                     n.e(334624),
                     n.e(971508),
                     n.e(816799),
@@ -4045,6 +4051,7 @@ class l4 extends l.PureComponent {
                     n.e(524084),
                     n.e(990080),
                     n.e(44264),
+                    n.e(349270),
                     n.e(444790),
                     n.e(983058),
                     n.e(87641),
@@ -4062,7 +4069,7 @@ class l4 extends l.PureComponent {
                     n.e(654658),
                     n.e(908977),
                     n.e(233049),
-                    n.e(412704),
+                    n.e(719810),
                     n.e(569443),
                     n.e(809548),
                     n.e(543456),
@@ -4145,7 +4152,7 @@ class l4 extends l.PureComponent {
             { hoveringOnMute: a } = this.state,
             s =
                 void 0 === this.lastSpeakingWhileMutedNotificationTime ||
-                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l5;
+                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l7;
         i
             ? a ||
               !e ||
@@ -4381,7 +4388,7 @@ function rt(e) {
         t &&
             n &&
             (a(!0),
-            i.current.start(l7, () => {
+            i.current.start(l5, () => {
                 a(!1);
             }));
     }, [t, n]);
@@ -4406,8 +4413,8 @@ function rn() {
             activities: m,
             streaming: f,
             status: p,
-        } = (0, c.cf)([n7.A], () => {
-            let e = n7.A.getActivities();
+        } = (0, c.cf)([n5.A], () => {
+            let e = n5.A.getActivities();
             return {
                 activities: e,
                 streaming:
@@ -4416,7 +4423,7 @@ function rn() {
                         let { type: t } = e;
                         return t === u.$.STREAMING;
                     }),
-                status: n7.A.getStatus(),
+                status: n5.A.getStatus(),
             };
         }),
         h = (0, c.bG)([iv.A], () => iv.A.getAnyStreamForUser(s)),

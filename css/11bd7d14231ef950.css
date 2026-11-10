@@ -1,25 +1,32 @@
 .previewSection_37eplx {
     background-color: var(--background-base-lower);
     box-sizing: border-box;
+    display: flex;
     flex: 1;
     flex-direction: column;
     height: 100%;
-    padding: var(--space-12)
-}
-
-.previewCards_37eplx,
-.previewSection_37eplx {
-    display: flex;
+    padding: var(--space-12);
     position: relative
 }
 
+.previewSection_37eplx.compact_37eplx {
+    background-color: transparent;
+    padding: 0
+}
+
+.previewSection_37eplx.compact_37eplx .previewCards_37eplx {
+    margin-block-start: 0
+}
+
 .previewCards_37eplx {
+    display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
     margin: 0 auto;
     margin-block-start: var(--space-32);
     padding-inline-start: var(--space-16);
+    position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
@@ -134,64 +141,4 @@
     border: 1px solid var(--border-muted)
 }
 
-.banner_07a9AE {
-    align-items: center;
-    gap: var(--space-8)
-}
-
-.banner_07a9AE,
-.copy_07a9AE {
-    display: flex;
-    min-width: 0
-}
-
-.copy_07a9AE {
-    flex-direction: column
-}
-
-.modalRoot_qIkfG- {
-    position: relative;
-    width: 800px
-}
-
-.modalRoot_qIkfG-.extendedWidth_qIkfG- {
-    max-width: 100%;
-    width: 834px
-}
-
-.modalContent_qIkfG-.modalContent_qIkfG- {
-    background-color: var(--background-surface-high);
-    border-radius: var(--radius-md) var(--radius-md) 0 0;
-    display: grid;
-    grid-template-columns: 352px 1fr;
-    overflow: hidden auto;
-    padding: 0
-}
-
-.modalContent_qIkfG-.modalContent_qIkfG-.extendedWidth_qIkfG- {
-    grid-template-columns: 424px 1fr
-}
-
-.selectionSection_qIkfG- {
-    box-sizing: border-box;
-    padding-block: var(--space-24) var(--space-24);
-    padding-inline: var(--space-24) var(--space-16)
-}
-
-.sectionHeader_qIkfG- {
-    margin-bottom: var(--space-8);
-    padding: 0
-}
-
-.closeButton_qIkfG- {
-    inset-block-start: var(--space-12);
-    inset-inline-end: var(--space-12);
-    position: absolute;
-    z-index: 1
-}
-
-.selectionSubSection_qIkfG-:not(:first-child) {
-    margin-top: var(--space-24)
-}
-
-/*# sourceMappingURL=fe1266fb7341d3ad.css.map*/
+/*# sourceMappingURL=11bd7d14231ef950.css.map*/
