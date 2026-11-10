@@ -9,14 +9,14 @@ var i = n(582128),
     u = n(309010),
     m = n(967198),
     h = n(692848),
-    g = n(204776),
+    g = n(48726),
     p = n(354287),
     A = n(652215),
     x = n(488995),
     f = n(792996);
 function I(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e,
-        a = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: r }),
+        a = (0, g.A)(e),
         o = (0, l.bG)([m.A], () => m.A.getGuildId() ?? void 0),
         h = (0, l.bG)(
             [d.A, c.A, u.Ay],

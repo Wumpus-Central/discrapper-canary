@@ -27,10 +27,13 @@ function L(e) {
     return e.id !== N.Ik.BUILT_IN;
 }
 function y(e) {
-    return L(e) && (0, f.W)(e, r.U.MAIN);
+    return e instanceof I.Ay ? e.conjureProjectId : e.conjure_project_id;
 }
 function D(e) {
-    let t = b(e),
+    return L(e) && (0, f.W)(e, r.U.MAIN);
+}
+function b(e) {
+    let t = v(e),
         n = t?.client_platform_config[(0, o.A)((0, m.R0)())],
         i = Date.now();
     return n?.label_until != null &&
@@ -40,15 +43,30 @@ function D(e) {
         ? (n?.label_type ?? l.Hr.NONE)
         : l.Hr.NONE;
 }
-function b(e) {
-    return L(e) && y(e) ? (e instanceof I.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+function v(e) {
+    return L(e) && D(e) ? (e instanceof I.Ay ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+}
+function P(e) {
+    return e instanceof I.Ay
+        ? {
+              applicationId: e.id,
+              customInstallUrl: e.customInstallUrl,
+              installParams: e.installParams,
+              integrationTypesConfig: e.integrationTypesConfig,
+          }
+        : {
+              applicationId: e.id,
+              customInstallUrl: e.custom_install_url,
+              installParams: e.install_params,
+              integrationTypesConfig: e.integration_types_config,
+          };
 }
 n.d(
     t,
     {},
     {
         $B: L,
-        Cx: b,
+        Cx: v,
         EF: function (e) {
             return {
                 applicationId: e.id,
@@ -58,7 +76,7 @@ n.d(
             };
         },
         Ii: function (e) {
-            switch (D(e)) {
+            switch (b(e)) {
                 case l.Hr.NEW:
                     return "New";
                 case l.Hr.UPDATED:
@@ -71,7 +89,7 @@ n.d(
             return !!L(e) && (e instanceof I.Ay ? e.isMonetized : e.is_monetized);
         },
         ME: function (e) {
-            let t = b(e);
+            let t = v(e);
             return null != t && t.displays_advertisements;
         },
         MJ: function (e) {
@@ -121,20 +139,9 @@ n.d(
         NO: function (e) {
             return L(e) && (0, E.n)(e, S.gfo.PROMOTED);
         },
-        Pp: function (e) {
-            return e instanceof I.Ay
-                ? {
-                      applicationId: e.id,
-                      customInstallUrl: e.customInstallUrl,
-                      installParams: e.installParams,
-                      integrationTypesConfig: e.integrationTypesConfig,
-                  }
-                : {
-                      applicationId: e.id,
-                      customInstallUrl: e.custom_install_url,
-                      installParams: e.install_params,
-                      integrationTypesConfig: e.integration_types_config,
-                  };
+        Pp: P,
+        SU: function (e) {
+            return { ...P(e), id: e.id, conjureProjectId: y(e) };
         },
         V1: function (e, t) {
             let n = null != t ? d.Ay.getGuildState(t) : null,
@@ -152,16 +159,17 @@ n.d(
                   }
                 : { iconURL: n ?? null, name: O.intl.string(O.t.UB2gG2), description: O.intl.string(O.t.X9fusn) };
         },
-        Z$: y,
+        Z$: D,
+        Zd: y,
         b7: function (e) {
             return L(e) && (0, E.n)(e, S.gfo.PARTNER);
         },
-        fl: D,
+        fl: b,
         hX: function (e) {
             let t = [];
             for (let n of e) {
                 let e = n.application_directory_collection_items.filter(
-                    (e) => e.type === i.L.APPLICATION && y(e.application),
+                    (e) => e.type === i.L.APPLICATION && D(e.application),
                 );
                 0 !== e.length && t.push({ ...n, application_directory_collection_items: e });
             }
@@ -180,7 +188,7 @@ n.d(
             return L(e) ? e.description : O.intl.string(O.t.X9fusn);
         },
         vW: function (e, t) {
-            return null == e.icon && ((e instanceof I.Ay ? e.conjureProjectId : e.conjure_project_id) ?? t) != null;
+            return null == e.icon && (y(e) ?? t) != null;
         },
     },
 );

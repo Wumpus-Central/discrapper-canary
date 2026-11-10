@@ -1,7 +1,7 @@
-var t = n(477900),
+var i = n(477900),
     l = n(582128),
-    a = n(855986),
-    r = n(192308),
+    r = n(855986),
+    a = n(192308),
     o = n(509434),
     d = n(307301),
     u = n(265872),
@@ -10,85 +10,89 @@ var t = n(477900),
     p = n(177640),
     A = n(212613),
     P = n(342384),
-    g = n(204776),
-    C = n(734057),
+    g = n(48726),
+    C = n(204776),
+    b = n(474047),
+    x = n(734057),
     _ = n(309010),
-    x = n(129230),
+    f = n(129230),
     h = n(957565),
-    f = n(998218),
-    b = n(692848),
+    I = n(998218),
+    j = n(692848),
     k = n(851767),
-    I = n(403777),
-    D = n(993401),
-    S = n(652215),
-    j = n(792996);
+    D = n(403777),
+    S = n(993401),
+    m = n(652215),
+    v = n(792996);
 n.d(
-    i,
+    t,
     {},
     {
         A: function (e) {
-            let { user: i, closePopout: n, variant: m, hideIcon: v = !1, ...E } = e,
-                R = l.useRef(null),
-                y = (0, a.bG)([k.A], () => k.A.getUserProfile(i.id)?.application),
-                O = (0, a.bG)([_.Ay, C.A], () => C.A.getChannel(_.Ay.getChannelId())),
-                F = (0, p.A)(O),
-                w = i.id,
-                G = l.useCallback(() => {
-                    null != y &&
-                        (F
-                            ? ((0, A.hg)(y.id),
-                              (0, r.Oo)((0, I.n1)(w, O?.guild_id)),
+            let { user: t, closePopout: n, variant: E, hideIcon: R = !1, ...O } = e,
+                y = l.useRef(null),
+                F = (0, r.bG)([k.A], () => k.A.getUserProfile(t.id)?.application),
+                T = (0, r.bG)([_.Ay, x.A], () => x.A.getChannel(_.Ay.getChannelId())),
+                U = (0, p.A)(T);
+            (0, b.A)(t, "BotUserProfileAddOrOpenAppButton");
+            let G = (0, g.A)(F),
+                w = t.id,
+                B = l.useCallback(() => {
+                    null != F &&
+                        (U
+                            ? ((0, A.hg)(F.id),
+                              (0, a.Oo)((0, D.n1)(w, T?.guild_id)),
                               n?.(),
-                              x.default.track(S.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: y.id }))
-                            : (0, b.o)({ applicationId: y.id, ...y }));
-                }, [y, F, w, O?.guild_id, n]),
-                N = F ? j.intl.string(j.t["Cia+A8"]) : j.intl.string(j.t.NgXl3C);
-            if (null == y || !(0, g.Ie)(y)) return null;
-            let { customInstallUrl: T } = y,
-                U = null == T || f.A.isDiscordUrl(T) ? d.PlusSmallIcon : o.LinkExternalSmallIcon,
-                L = F || v ? void 0 : U;
+                              f.default.track(m.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: F.id }))
+                            : (0, j.o)({ applicationId: F.id, ...F }));
+                }, [F, U, w, T?.guild_id, n]),
+                N = U ? v.intl.string(v.t["Cia+A8"]) : v.intl.string(v.t.NgXl3C);
+            if (null == F || !(U ? (0, C.Aj)(F) : G)) return null;
+            let { customInstallUrl: L } = F,
+                V = null == L || I.A.isDiscordUrl(L) ? d.PlusSmallIcon : o.LinkExternalSmallIcon,
+                W = U || R ? void 0 : V;
             return h.p5
-                ? (0, t.jsx)(u.Y, {
-                      targetElementRef: R,
+                ? (0, i.jsx)(u.Y, {
+                      targetElementRef: y,
                       renderPopout: (e) => {
-                          let { closePopout: i } = e;
-                          return (0, t.jsx)(c.W, {
+                          let { closePopout: t } = e;
+                          return (0, i.jsx)(c.W, {
                               "data-menu-migrated-auto": !0,
                               navId: "user-bot-profile-add-app",
-                              onClose: i,
-                              "aria-label": j.intl.string(j.t.dbkxVm),
+                              onClose: t,
+                              "aria-label": v.intl.string(v.t.dbkxVm),
                               onSelect: void 0,
-                              children: (0, t.jsx)(s.rX, {
-                                  children: (0, t.jsx)(s.Dr, {
+                              children: (0, i.jsx)(s.rX, {
+                                  children: (0, i.jsx)(s.Dr, {
                                       id: "copy",
-                                      label: j.intl.string(j.t.XWDihq),
-                                      action: () => (0, h.C)((0, P.V)(y)),
+                                      label: v.intl.string(v.t.XWDihq),
+                                      action: () => (0, h.C)((0, P.V)(F)),
                                   }),
                               }),
                           });
                       },
                       children: (e) => {
-                          let { onClick: i, ...n } = e;
-                          return (0, t.jsx)(D.FD, {
-                              buttonRef: R,
+                          let { onClick: t, ...n } = e;
+                          return (0, i.jsx)(S.FD, {
+                              buttonRef: y,
                               action: "PRESS_ADD_APP",
                               text: N,
-                              icon: L,
-                              onContextMenu: i,
-                              onClick: G,
-                              variant: m,
+                              icon: W,
+                              onContextMenu: t,
+                              onClick: B,
+                              variant: E,
                               ...n,
-                              ...E,
+                              ...O,
                           });
                       },
                   })
-                : (0, t.jsx)(D.FD, {
+                : (0, i.jsx)(S.FD, {
                       action: "PRESS_ADD_APP",
                       text: N,
-                      icon: L,
-                      onClick: G,
-                      variant: m ?? "primary",
-                      ...E,
+                      icon: W,
+                      onClick: B,
+                      variant: E ?? "primary",
+                      ...O,
                   });
         },
     },
