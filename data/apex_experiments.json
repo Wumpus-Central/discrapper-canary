@@ -4588,6 +4588,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-10-bloons-bf-deal",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-10-bounties-desktop-quest-bar",
     "kind": "user",
     "defaultConfig": {
@@ -5528,6 +5544,22 @@
   {
     "name": "2026-10-request-to-stream-non-games",
     "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-10-rust-bf-deal",
     "defaultConfig": {
       "enabled": false
     },

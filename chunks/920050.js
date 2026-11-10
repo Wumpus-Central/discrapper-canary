@@ -5,6 +5,7 @@
         {
             AUTOCLIPS_CARD_ID: "autoclips",
             BADGE_CARD_ID: "badge",
+            BLOONS_BF_DEAL_CARD_ID: "bloonsBfDeal",
             CALL_OF_DUTY_3PP_EXPIRED_CARD_ID: "callOfDuty3PPExpired",
             CLIENT_THEMES_CARD_ID: "clientThemes",
             CODE_BLURPLE_CARD_ID: "callOfDutyBlueprint",
@@ -25,6 +26,7 @@
             QUEST_ORB_MULTIPLIER_CARD_ID: "orbMultiplier",
             RECURRING_3P_PROMOTIONS_CARD_ID: "3p",
             RUST_3PP_CARD_ID: "rust3PP",
+            RUST_BF_DEAL_CARD_ID: "rustBfDeal",
             SERVER_BOOSTS_CARD_ID: "serverBoosts",
             SPECIAL_MEMBER_PRICING_CARD_ID: "memberPricing",
             SPECIAL_STICKERS_CARD_ID: "specialStickers",
