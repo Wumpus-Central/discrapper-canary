@@ -1,17 +1,17 @@
 var r = n(477900),
     i = n(582128);
-let l = i.createContext(null);
+let s = i.createContext(null);
 n.d(
     t,
     {},
     {
         Mk: function () {
-            return i.useContext(l);
+            return i.useContext(s);
         },
         iM: function (e) {
             let { tab: t, children: n } = e,
-                s = i.useMemo(() => ({ tab: t }), [t]);
-            return (0, r.jsx)(l.Provider, { value: s, children: n });
+                a = i.useMemo(() => ({ tab: t }), [t]);
+            return (0, r.jsx)(s.Provider, { value: a, children: n });
         },
     },
 );

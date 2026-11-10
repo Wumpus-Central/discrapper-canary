@@ -7,53 +7,53 @@ var i = t(477900),
     u = t(475743),
     c = t(421108),
     d = t(807098),
-    f = t(412260),
-    g = t(860300),
-    C = t(49999),
-    m = t(792996);
+    A = t(412260),
+    C = t(860300),
+    _ = t(49999),
+    N = t(792996);
 t.d(
     n,
     {},
     {
         A: function (e) {
-            let { onComplete: n, onCheckItOutClick: t, markAsDismissed: A, coachmarkConfig: p, children: b } = e,
-                I = (0, d.T)(p?.asset),
-                { enabled: h } = g.J.useConfig({ location: "GiftPromotionPopout" }),
-                T = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
-                k = (0, c.dA)(T?.endDate),
-                N = null != k,
-                j = (0, u.Ay)(N),
-                _ = l.useRef(null);
+            let { onComplete: n, onCheckItOutClick: t, markAsDismissed: f, coachmarkConfig: g, children: I } = e,
+                T = (0, d.T)(g?.asset),
+                { enabled: R } = C.J.useConfig({ location: "GiftPromotionPopout" }),
+                O = (0, a.bG)([A.A], () => A.A.getGiftPromotion()),
+                m = (0, c.dA)(O?.endDate),
+                E = null != m,
+                M = (0, u.Ay)(E),
+                G = l.useRef(null);
             l.useEffect(() => {
-                !0 !== j || N || (n(), A(C.i.AUTO_DISMISS));
-            }, [j, N, n, A]);
-            let x = {
-                text: m.intl.string(m.t.Ve9Ge6),
+                !0 !== M || E || (n(), f(_.i.AUTO_DISMISS));
+            }, [M, E, n, f]);
+            let b = {
+                text: N.intl.string(N.t.Ve9Ge6),
                 icon: o.GiftIcon,
                 onClick: () => {
-                    (t(), n(), A(C.i.TAKE_ACTION));
+                    (t(), n(), f(_.i.TAKE_ACTION));
                 },
             };
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { ref: _, children: b }),
+                    (0, i.jsx)("div", { ref: G, children: I }),
                     (0, i.jsx)(r.H, {
-                        targetElementRef: _,
+                        targetElementRef: G,
                         shouldShow: !0,
                         disableMediaViewer: !0,
                         position: "top",
                         align: "center",
-                        title: p?.header ?? "",
-                        body: p?.body ?? "",
-                        assetUrl: I ?? "",
+                        title: g?.header ?? "",
+                        body: g?.body ?? "",
+                        assetUrl: T ?? "",
                         badge:
-                            h && null != k
-                                ? { type: { text: k.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
+                            R && null != m
+                                ? { type: { text: m.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
                                 : void 0,
-                        action: x,
+                        action: b,
                         caretConfig: { align: "center" },
                         onRequestClose: function () {
-                            (n(), A(C.i.USER_DISMISS));
+                            (n(), f(_.i.USER_DISMISS));
                         },
                     }),
                 ],

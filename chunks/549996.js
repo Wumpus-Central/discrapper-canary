@@ -1,11 +1,11 @@
-var _ = n(412260),
-    A = n(641436);
-n.d(
+var n = e(412260),
+    c = e(641436);
+e.d(
     t,
     {},
     {
-        c: function (e) {
-            return (0, A.C)(() => _.A.getMarketingComponentByType(e));
+        c: function (p) {
+            return (0, c.C)(() => n.A.getMarketingComponentByType(p));
         },
     },
 );

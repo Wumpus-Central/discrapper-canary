@@ -7,7 +7,7 @@ var i = t(582128),
     u = t(412260),
     c = t(860300),
     d = t(682901);
-function f(e) {
+function A(e) {
     return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2, d.gD.PREMIUM_3_MONTH_TIER_2].includes(e?.id);
 }
 t.d(
@@ -48,7 +48,7 @@ t.d(
                 !(0, s.u$)(r.M.GIFTING_PROMOTION_REMINDER, n).isDismissed
             );
         },
-        Mq: f,
+        Mq: A,
         gc: function (e) {
             if (null != e)
                 return {
@@ -59,11 +59,11 @@ t.d(
                 };
         },
         kz: function (e, n, t) {
-            let i = f(e);
+            let i = A(e);
             return null != t && 1 === t.length && i && n;
         },
         px: function (e, n, t) {
-            let i = f(e),
+            let i = A(e),
                 l = null != t && t.length >= 1;
             return n && i && l;
         },

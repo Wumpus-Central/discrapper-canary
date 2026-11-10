@@ -11,8 +11,8 @@ var s = i(477900),
     g = i(975571),
     T = i(652215),
     E = i(792996),
-    _ = i(462150);
-let h = [
+    h = i(462150);
+let _ = [
     { getQuestion: () => E.intl.string(E.t.C4J8UB), getAnswer: () => E.intl.string(E.t.nhkk6k) },
     {
         getQuestion: () => E.intl.string(E.t.ai4ym2),
@@ -35,17 +35,17 @@ i.d(
                 [i, r] = n.useState(null),
                 [g, T] = n.useState(null);
             return (0, s.jsxs)("div", {
-                className: a()(_.iE, t),
+                className: a()(h.iE, t),
                 children: [
                     (0, s.jsx)(l.D, {
-                        className: _.R_,
+                        className: h.R_,
                         variant: "heading-xxl/semibold",
                         children: E.intl.string(E.t.HPJ6Nj),
                     }),
                     (0, s.jsx)(o.h, { size: 32 }),
                     (0, s.jsx)("ul", {
-                        className: _.p_,
-                        children: h.map((e, t) => {
+                        className: h.p_,
+                        children: _.map((e, t) => {
                             let n = i === t,
                                 l = g === t,
                                 o = n || l ? "text-default" : "text-muted";
@@ -53,16 +53,16 @@ i.d(
                                 c.D,
                                 {
                                     tag: "li",
-                                    className: a()(_.Aw, { [_.$K]: n }),
+                                    className: a()(h.Aw, { [h.$K]: n }),
                                     onClick: () => r((e) => (e === t ? null : t)),
                                     onMouseEnter: () => T(t),
                                     onMouseLeave: () => T(null),
                                     children: [
                                         (0, s.jsxs)("div", {
-                                            className: _.k7,
+                                            className: h.k7,
                                             children: [
                                                 (0, s.jsx)(d.E, {
-                                                    className: _.b1,
+                                                    className: h.b1,
                                                     color: o,
                                                     variant: "heading-sm/semibold",
                                                     tag: "span",
@@ -71,14 +71,14 @@ i.d(
                                                 (0, s.jsx)(u.ChevronSmallDownIcon, {
                                                     size: "sm",
                                                     color: m.A.colors.INTERACTIVE_ICON_DEFAULT,
-                                                    className: _.q4,
+                                                    className: h.q4,
                                                     style: { transform: n ? "rotate(180deg)" : "rotate(0deg)" },
                                                 }),
                                             ],
                                         }),
                                         n &&
                                             (0, s.jsx)(d.E, {
-                                                className: _.ZF,
+                                                className: h.ZF,
                                                 color: "text-muted",
                                                 variant: "body-sm/medium",
                                                 children: e.getAnswer(),
@@ -92,6 +92,6 @@ i.d(
                 ],
             });
         },
-        m: h,
+        m: _,
     },
 );

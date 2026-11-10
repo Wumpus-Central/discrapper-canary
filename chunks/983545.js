@@ -34,13 +34,13 @@ n.d(
                     var t;
                     return (0, u.dF)(e) || (t = e) === u.G2.COLLABS || t === u.G2.OFFER_ELIGIBLE ? u.G2.CATALOG : e;
                 }, [e]),
-                [p, S] = l.useState(C),
+                [S, p] = l.useState(C),
                 [_, A] = l.useState(u.Pf.VISIBLE);
             (l.useEffect(() => {
-                p !== u.G2.GAME_SERVERS && f(p);
-            }, [p, f]),
+                S !== u.G2.GAME_SERVERS && f(S);
+            }, [S, f]),
                 l.useEffect(() => {
-                    if ((S(C), e === u.G2.CATALOG)) {
+                    if ((p(C), e === u.G2.CATALOG)) {
                         let e = x.location.state?.searchQuery;
                         null != e ? h(e) : E();
                     } else if (e === u.G2.COLLABS) a();
@@ -51,7 +51,7 @@ n.d(
                     }
                 }, [C, e, n, a, g, E, h, x]),
                 l.useEffect(() => {
-                    if (p === u.G2.CATALOG)
+                    if (S === u.G2.CATALOG)
                         return o.vs.subscribe(
                             (e) => e.searchQuery,
                             (e) =>
@@ -60,31 +60,31 @@ n.d(
                                     e.replace({ ...n, state: { ...n.state, searchQuery: "" !== t ? t : void 0 } });
                                 })(x, e),
                         );
-                }, [p, x]));
+                }, [S, x]));
             let { clearError: I } = (0, c.S)(),
-                b = l.useCallback(
+                v = l.useCallback(
                     async (e, l, s) => {
                         if ((I(), e === u.G2.CATALOG)) s?.searchQuery != null ? h(s.searchQuery) : E();
                         else if (e === u.G2.COLLABS) a();
                         else if (e === u.G2.OFFER_ELIGIBLE) g();
-                        else if ((0, u.dF)(e) && e !== p) {
+                        else if ((0, u.dF)(e) && e !== S) {
                             let t = m[e];
                             null != t ? n(t) : E();
                         }
-                        if (p !== e) {
+                        if (S !== e) {
                             if (l && !t) {
                                 var i;
                                 (A(u.Pf.OUT), await ((i = 800 * 1.1), new Promise((e) => setTimeout(e, i))));
                             }
-                            (S(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
+                            (p(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
                                 l && !t && A(u.Pf.IN),
                                 x.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { searchQuery: s?.searchQuery }),
                                 A(u.Pf.VISIBLE));
                         }
                     },
-                    [x, n, a, g, E, h, p, I, t],
+                    [x, n, a, g, E, h, S, I, t],
                 );
-            return { selectedTab: p, transitionState: _, transitionToTab: b };
+            return { selectedTab: S, transitionState: _, transitionToTab: v };
         },
     },
 );

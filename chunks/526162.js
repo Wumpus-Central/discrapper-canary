@@ -19,10 +19,10 @@ function v(e) {
 function A(e) {
     return (0, a.z9)(e) && (0, l.$X)(g.vB.APP_ICON);
 }
-function b() {
-    (x = !u.Ay.canUsePremiumAppIcons(c.default.getCurrentUser())) && !v(p.client.desktop) && y(j());
+function y() {
+    (x = !u.Ay.canUsePremiumAppIcons(c.default.getCurrentUser())) && !v(p.client.desktop) && b(j());
 }
-function y(e) {
+function b(e) {
     ((p.client.desktop = e),
         x ||
             A(e) ||
@@ -48,7 +48,7 @@ class N extends i.Ay.PersistedStore {
     static displayName = "AppIconPersistedStoreState";
     static persistKey = "AppIconPersistedStoreState";
     initialize(e) {
-        (null != e && (p = e), this.waitFor(c.default), this.syncWith([c.default], b));
+        (null != e && (p = e), this.waitFor(c.default), this.syncWith([c.default], y));
     }
     get isUpsellPreview() {
         return x;
@@ -65,7 +65,7 @@ let E = new N(s.h, {
         let { id: t } = e;
         if (null == t) return !1;
         (x || null != p.client.committedDesktop || (p.client.committedDesktop = p.client.desktop),
-            y(t),
+            b(t),
             ((!x && !A(t)) || t === d.LW.DEFAULT || v(t)) && (p.client.committedDesktop = t));
     },
     APP_ICON_EDITOR_RESET: S,

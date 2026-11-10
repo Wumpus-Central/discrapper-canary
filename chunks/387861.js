@@ -466,8 +466,8 @@ function e5(e) {
     return (0, r.jsx)(V.E, { className: l()({ [e6.Q]: null == n }, t), color: n, ...i });
 }
 var e7 = n(976860),
-    e4 = n(95701),
-    e8 = n(46653),
+    e8 = n(95701),
+    e4 = n(46653),
     e9 = n(734057),
     te = n(184989),
     tt = n(71393),
@@ -781,7 +781,7 @@ let t1 = a.memo(function (e) {
                       : ((e = !0),
                         (t = null),
                         (n = th.ScreenArrowIcon),
-                        null != c && (0, e4.gV)(c.type) && (i = J.intl.string(J.t.uQn9B8))),
+                        null != c && (0, e8.gV)(c.type) && (i = J.intl.string(J.t.uQn9B8))),
                 (0, r.jsx)("div", {
                     className: tZ.IF,
                     children: (0, r.jsx)(tD.A, { tooltipText: i, disabled: e, onClick: t, icon: n }),
@@ -962,8 +962,8 @@ function t5(e) {
     });
 }
 var t7 = n(428689),
-    t4 = n(409626),
-    t8 = n(692969),
+    t8 = n(409626),
+    t4 = n(692969),
     t9 = n(202163),
     ne = n(475358),
     nt = n(900797),
@@ -1188,10 +1188,10 @@ function nv(e) {
 var nP = n(450173);
 function nM(e) {
     let { name: t, applicationId: n } = e,
-        i = (0, t8.A)({
+        i = (0, t4.A)({
             location: "ActivityPanelGameCard",
             applicationId: n,
-            source: t4.GameProfileSources.RtcPanel,
+            source: t8.GameProfileSources.RtcPanel,
             trackEntryPointImpression: !0,
         });
     return (0, r.jsx)(I.D, {
@@ -1212,10 +1212,10 @@ function nU(e) {
 }
 function nw(e) {
     let { name: t, gameRecord: n, application: i, game: a, isStreaming: s, ref: l } = e,
-        o = (0, t8.A)({
+        o = (0, t4.A)({
             location: "ActivityPanelGameCardIcon",
             applicationId: i?.id,
-            source: t4.GameProfileSources.RtcPanel,
+            source: t8.GameProfileSources.RtcPanel,
             trackEntryPointImpression: !1,
         }),
         d = null != o,
@@ -1594,12 +1594,12 @@ function nQ(e) {
         (d()(null != a, "Channel cannot be null during navigation click"),
             S.A.channelListScrollTo(a.guild_id ?? B.ME, a.id),
             !E &&
-                ((0, e4.gV)(a.type) &&
+                ((0, e8.gV)(a.type) &&
                     g.A.selectParticipant(
                         a.id,
                         (0, em.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
                     ),
-                (0, e4.pQ)(a.type) && (0, L.gk)(nx.Gd.PANEL)));
+                (0, e8.pQ)(a.type) && (0, L.gk)(nx.Gd.PANEL)));
     }
     null != l && null != a
         ? ((t = B.BVt.CHANNEL(l.id, a.id)), (f = `${f} / ${l.name}`))
@@ -1621,7 +1621,7 @@ function nQ(e) {
                             },
                             children: (0, r.jsx)(t_.A, { className: nH._W, children: n.name }),
                         }),
-                        null != a && (0, e4.pQ)(a.type)
+                        null != a && (0, e8.pQ)(a.type)
                             ? (0, r.jsx)(eQ.A, {
                                   href: t,
                                   onClick: h,
@@ -1703,7 +1703,7 @@ let n0 = (0, C.A)(function (e) {
         i = a.useRef(null),
         s = a.useRef(null),
         o = a.useRef(null),
-        d = (0, E.bG)([e8.default], () => e8.default.getId()),
+        d = (0, E.bG)([e4.default], () => e4.default.getId()),
         c = (0, E.bG)([eG.Ay, tl.A], () => (0, eq.A)(eG.Ay, tl.A)),
         { enabled: f } = ew.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: h, isWithinThreshold: I } = (function () {

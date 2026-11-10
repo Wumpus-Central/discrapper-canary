@@ -1,4 +1,4 @@
-n.d(t, { u: () => p, default: () => T });
+n.d(t, { u: () => S, default: () => T });
 var i = n(477900),
     s = n(582128),
     l = n(855986),
@@ -10,23 +10,23 @@ var i = n(477900),
     c = n(56562),
     A = n(626584),
     h = n(967198),
-    m = n(594061),
-    E = n(617617);
+    E = n(594061),
+    m = n(617617);
 function g() {
-    return E.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
+    return m.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
 var I = n(244696),
     C = n(49999),
     _ = n(792996),
     N = n(975366);
-let p = "GUILD_THEME_NUX_MODAL",
-    S = new A.A("GuildThemeNuxModal");
+let S = "GUILD_THEME_NUX_MODAL",
+    p = new A.A("GuildThemeNuxModal");
 function T(e) {
-    let { guildId: t, markAsDismissed: n, transitionState: A, onClose: E } = e,
-        [p, T] = s.useState(g),
+    let { guildId: t, markAsDismissed: n, transitionState: A, onClose: m } = e,
+        [S, T] = s.useState(g),
         [M, f] = s.useState(null),
         [R, b] = s.useState("init"),
-        L = p === c.tI.PERSONAL,
+        L = S === c.tI.PERSONAL,
         D = (0, l.bG)([h.A], () => h.A.getGuildId()),
         x = (0, l.bG)(
             [I.A],
@@ -38,30 +38,30 @@ function T(e) {
         ),
         G = L ? null : x;
     s.useEffect(() => {
-        D !== t && E();
-    }, [t, E, D]);
+        D !== t && m();
+    }, [t, m, D]);
     let O = s.useCallback((e) => {
             (f(null), T(e));
         }, []),
         U = s.useCallback(async () => {
             if ("init" === R) {
-                if (D !== t) return void (await E());
+                if (D !== t) return void (await m());
                 (b("submitting"), f(null));
                 try {
                     await (async function (e, t) {
                         let n = t ? c.tI.PERSONAL : c.tI.GUILD;
-                        (await (0, m.JM)(n), await (0, m.Sh)(e));
+                        (await (0, E.JM)(n), await (0, E.Sh)(e));
                     })(t, L);
                 } catch (e) {
-                    (S.error("Failed to save guild theme NUX preference", e), f(_.intl.string(_.t.fEptJP)), b("init"));
+                    (p.error("Failed to save guild theme NUX preference", e), f(_.intl.string(_.t.fEptJP)), b("init"));
                     return;
                 }
-                (b("submitted"), n(C.i.TAKE_ACTION), await E());
+                (b("submitted"), n(C.i.TAKE_ACTION), await m());
             }
-        }, [t, L, n, E, D, R]),
+        }, [t, L, n, m, D, R]),
         y = s.useCallback(async () => {
-            ("submitted" !== R && n(C.i.USER_DISMISS), await E());
-        }, [n, E, R]),
+            ("submitted" !== R && n(C.i.USER_DISMISS), await m());
+        }, [n, m, R]),
         H = s.useMemo(
             () => [
                 { value: c.tI.GUILD, id: "guild", label: _.intl.string(_.t.aN3RNQ) },
@@ -100,7 +100,7 @@ function T(e) {
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",
                     options: H,
-                    value: p,
+                    value: S,
                     onSelectionChange: O,
                     fullWidth: !0,
                     label: _.intl.string(_.t.Q7mm4g),

@@ -6,14 +6,14 @@ let n = {
     labelNormalizer: (e) => e.replace(/[\s]+/g, "-"),
     labelRenderer: (e) => `<a href="#${e}" class="mathlabel" title="Permalink to this equation">\xb6</a>`,
 };
-function s(e, t, r = 0) {
+function a(e, t, r = 0) {
     let n = 0;
     for (; t >= 0;)
         if (((t -= 1), 92 === e.src.charCodeAt(t))) n += 1;
         else break;
     return 0 !== n && n % 2 !== r;
 }
-function a(e, t) {
+function i(e, t) {
     let r = e
         .split("")
         .reverse()
@@ -28,12 +28,12 @@ r.d(
     {},
     {
         h: function (e, t) {
-            var r, i;
-            let u = Object.assign(Object.assign({ renderer: (t) => e.utils.escapeHtml(t) }, n), t);
+            var r, s;
+            let l = Object.assign(Object.assign({ renderer: (t) => e.utils.escapeHtml(t) }, n), t);
             (e.inline.ruler.before(
                 "escape",
                 "math_inline",
-                ((r = u),
+                ((r = l),
                 function (e, t) {
                     if (
                         36 !== e.src.charCodeAt(e.pos) ||
@@ -44,118 +44,118 @@ r.d(
                         let t = e.src.charAt(e.pos - 1);
                         if (t && "" !== t.trim() && !isNaN(Number(t))) return !1;
                     }
-                    if (s(e, e.pos)) return !1;
+                    if (a(e, e.pos)) return !1;
                     let n = !1;
                     r.double_inline && 36 === e.src.charCodeAt(e.pos + 1) && (n = !0);
-                    let a = e.pos + 1 + +!!n,
-                        i = !1,
-                        u = -1;
-                    for (; !i;) {
-                        if (-1 === (u = e.src.indexOf("$", a))) return !1;
-                        if (s(e, u) || (n && 36 !== e.src.charCodeAt(u + 1))) {
-                            a = u + 1;
+                    let i = e.pos + 1 + +!!n,
+                        s = !1,
+                        l = -1;
+                    for (; !s;) {
+                        if (-1 === (l = e.src.indexOf("$", i))) return !1;
+                        if (a(e, l) || (n && 36 !== e.src.charCodeAt(l + 1))) {
+                            i = l + 1;
                             continue;
                         }
-                        (n && (u += 1), (i = !0));
+                        (n && (l += 1), (s = !0));
                     }
-                    if (!i) return !1;
+                    if (!s) return !1;
                     if (!r.allow_space) {
-                        let t = e.src.charCodeAt(u - 1);
+                        let t = e.src.charCodeAt(l - 1);
                         if (e.md.utils.isWhiteSpace(t)) return !1;
                     }
                     if (!r.allow_digits) {
-                        let t = e.src.charAt(u + 1);
+                        let t = e.src.charAt(l + 1);
                         if (t && "" !== t.trim() && !isNaN(Number(t))) return !1;
                     }
-                    let l = e.src.slice(e.pos + 1, u);
-                    if ((n && (l = e.src.slice(e.pos + 2, u - 1)), !l)) return !1;
+                    let o = e.src.slice(e.pos + 1, l);
+                    if ((n && (o = e.src.slice(e.pos + 2, l - 1)), !o)) return !1;
                     if (!t) {
                         let t = e.push(n ? "math_inline_double" : "math_inline", "math", 0);
-                        ((t.content = l), (t.markup = n ? "$$" : "$"));
+                        ((t.content = o), (t.markup = n ? "$$" : "$"));
                     }
-                    return ((e.pos = u + 1), !0);
+                    return ((e.pos = l + 1), !0);
                 }),
             ),
                 e.block.ruler.before(
                     "fence",
                     "math_block",
-                    ((i = u),
+                    ((s = l),
                     function (e, t, r, n) {
-                        let s,
-                            u,
-                            l = !1,
-                            o = e.bMarks[t] + e.tShift[t],
-                            h = e.eMarks[t];
+                        let a,
+                            l,
+                            o = !1,
+                            h = e.bMarks[t] + e.tShift[t],
+                            u = e.eMarks[t];
                         if (
                             e.sCount[t] - e.blkIndent >= 4 ||
-                            o + 2 > h ||
-                            36 != e.src.charCodeAt(o) ||
-                            36 != e.src.charCodeAt(o + 1)
+                            h + 2 > u ||
+                            36 != e.src.charCodeAt(h) ||
+                            36 != e.src.charCodeAt(h + 1)
                         )
                             return !1;
                         let c = t,
-                            f = e.src.slice(o, h);
-                        if (f.trim().length > 3) {
-                            if (f.trim().endsWith("$$")) ((l = !0), (h = h - 2 - (f.length - f.trim().length)));
-                            else if (i.allow_labels) {
-                                let e = a(f, h);
-                                void 0 !== e.label && ((l = !0), (s = e.label), (h = e.end));
+                            m = e.src.slice(h, u);
+                        if (m.trim().length > 3) {
+                            if (m.trim().endsWith("$$")) ((o = !0), (u = u - 2 - (m.length - m.trim().length)));
+                            else if (s.allow_labels) {
+                                let e = i(m, u);
+                                void 0 !== e.label && ((o = !0), (a = e.label), (u = e.end));
                             }
                         }
-                        if (!l)
+                        if (!o)
                             for (; c + 1 < r;) {
                                 if (
                                     ((c += 1),
-                                    (u = e.bMarks[c] + e.tShift[c]),
-                                    (h = e.eMarks[c]),
-                                    (f = e.src.slice(u, h)).trim().endsWith("$$"))
+                                    (l = e.bMarks[c] + e.tShift[c]),
+                                    (u = e.eMarks[c]),
+                                    (m = e.src.slice(l, u)).trim().endsWith("$$"))
                                 ) {
-                                    ((l = !0), (h = h - 2 - (f.length - f.trim().length)));
+                                    ((o = !0), (u = u - 2 - (m.length - m.trim().length)));
                                     break;
                                 }
-                                if ("" == f.trim()) break;
-                                if (i.allow_labels) {
-                                    let e = a(f, h);
+                                if ("" == m.trim()) break;
+                                if (s.allow_labels) {
+                                    let e = i(m, u);
                                     if (void 0 !== e.label) {
-                                        ((l = !0), (s = e.label), (h = e.end));
+                                        ((o = !0), (a = e.label), (u = e.end));
                                         break;
                                     }
                                 }
                             }
-                        if (!l) return !1;
-                        e.line = c + +!!l;
-                        let p = e.push(s ? "math_block_label" : "math_block", "math", 0);
+                        if (!o) return !1;
+                        e.line = c + +!!o;
+                        let p = e.push(a ? "math_block_label" : "math_block", "math", 0);
                         return (
                             (p.block = !0),
-                            (p.content = e.src.slice(o + 2, h).trim()),
+                            (p.content = e.src.slice(h + 2, u).trim()),
                             (p.markup = "$$"),
                             (p.map = [t, e.line]),
-                            s && (p.info = i.labelNormalizer ? i.labelNormalizer(s) : s),
+                            a && (p.info = s.labelNormalizer ? s.labelNormalizer(a) : a),
                             !0
                         );
                     }),
                 ));
-            let l = (t) => (r, n) => {
-                let s,
-                    a = r[n].content.trim();
+            let o = (t) => (r, n) => {
+                let a,
+                    i = r[n].content.trim();
                 try {
-                    s = u.renderer(a, { displayMode: t.displayMode });
+                    a = l.renderer(i, { displayMode: t.displayMode });
                 } catch (t) {
-                    s = e.utils.escapeHtml(`${a}:${t.message}`);
+                    a = e.utils.escapeHtml(`${i}:${t.message}`);
                 }
-                let i = t.inline ? "inline" : "block",
-                    l = t.displayMode ? "div" : "span",
-                    o = t.inline ? "" : "\n",
-                    h = r[n].info,
-                    c = t.hasLabel ? `${u.labelRenderer(h)}` : "";
+                let s = t.inline ? "inline" : "block",
+                    o = t.displayMode ? "div" : "span",
+                    h = t.inline ? "" : "\n",
+                    u = r[n].info,
+                    c = t.hasLabel ? `${l.labelRenderer(u)}` : "";
                 return (
-                    [`<${l} ${h ? `id="${h}" ` : ""}class="math ${i}">`, c, s, `</${l}>`].filter((e) => !!e).join(o) + o
+                    [`<${o} ${u ? `id="${u}" ` : ""}class="math ${s}">`, c, a, `</${o}>`].filter((e) => !!e).join(h) + h
                 );
             };
-            ((e.renderer.rules.math_inline = l({ displayMode: !1, inline: !0 })),
-                (e.renderer.rules.math_inline_double = l({ displayMode: !0, inline: !0 })),
-                (e.renderer.rules.math_block = l({ displayMode: !0 })),
-                (e.renderer.rules.math_block_label = l({ displayMode: !0, hasLabel: !0 })));
+            ((e.renderer.rules.math_inline = o({ displayMode: !1, inline: !0 })),
+                (e.renderer.rules.math_inline_double = o({ displayMode: !0, inline: !0 })),
+                (e.renderer.rules.math_block = o({ displayMode: !0 })),
+                (e.renderer.rules.math_block_label = o({ displayMode: !0, hasLabel: !0 })));
         },
     },
 );

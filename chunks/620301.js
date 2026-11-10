@@ -1,4 +1,4 @@
-t.d(n, { $: () => g });
+t.d(n, { $: () => C });
 var i = t(582128),
     l = t(778705),
     a = t(634110),
@@ -18,90 +18,90 @@ let u = (0, s.mj)({
         variations: { 1: { enabled: !0 } },
     });
 var d = t(990820),
-    f = t(682901);
-function g(e) {
+    A = t(682901);
+function C(e) {
     let {
             giftRecipient: n,
             analyticsLocations: t,
             analyticsObject: s,
-            wishlistAnalyticsObject: g,
-            premiumAnalyticsObject: C,
-            analyticsLocation: m,
-            giftMessage: A,
-            subscriptionTier: p,
-            location: b,
+            wishlistAnalyticsObject: C,
+            premiumAnalyticsObject: _,
+            analyticsLocation: N,
+            giftMessage: f,
+            subscriptionTier: g,
+            location: I,
         } = e,
-        { enabled: I } = u.useConfig({ location: b }),
-        { enabled: h } = c.useConfig({ location: b }),
-        T = (0, o.F5)(b),
-        k = (0, a.tA)({ isGift: !0, giftRecipient: n }),
-        N = I && null != n,
-        j = h && null == n,
-        _ = N || j,
-        x = k && null != n;
+        { enabled: T } = u.useConfig({ location: I }),
+        { enabled: R } = c.useConfig({ location: I }),
+        O = (0, o.F5)(I),
+        m = (0, a.tA)({ isGift: !0, giftRecipient: n }),
+        E = T && null != n,
+        M = R && null == n,
+        G = E || M,
+        b = m && null != n;
     return {
         openGiftModal: i.useCallback(() => {
-            null != p
+            null != g
                 ? (0, l.A)({
                       isGift: !0,
                       giftRecipient: n ?? void 0,
-                      subscriptionTier: p,
+                      subscriptionTier: g,
                       analyticsLocations: t,
-                      analyticsLocation: m,
-                      analyticsObject: C ?? s,
-                      giftMessage: A,
+                      analyticsLocation: N,
+                      analyticsObject: _ ?? s,
+                      giftMessage: f,
                   })
-                : T
-                  ? x
+                : O
+                  ? b
                       ? (0, r.A)({
                             giftRecipient: n,
                             analyticsLocations: t,
-                            analyticsLocation: m,
-                            analyticsObject: g ?? s,
-                            giftMessage: A,
+                            analyticsLocation: N,
+                            analyticsObject: C ?? s,
+                            giftMessage: f,
                         })
                       : (0, d.A)({
                             giftRecipient: n ?? void 0,
                             analyticsLocations: t,
-                            analyticsLocation: m,
-                            analyticsObject: g ?? s,
-                            giftMessage: A,
+                            analyticsLocation: N,
+                            analyticsObject: C ?? s,
+                            giftMessage: f,
                         })
-                  : N && null != n
+                  : E && null != n
                     ? (0, d.A)({
                           giftRecipient: n,
                           analyticsLocations: t,
-                          analyticsLocation: m,
-                          analyticsObject: g ?? s,
-                          giftMessage: A,
+                          analyticsLocation: N,
+                          analyticsObject: C ?? s,
+                          giftMessage: f,
                       })
-                    : j
+                    : M
                       ? (0, d.A)({
                             analyticsLocations: t,
-                            analyticsLocation: m,
-                            analyticsObject: g ?? s,
-                            giftMessage: A,
-                            giftingOrigin: f.vQ.GUILD_CHANNEL,
+                            analyticsLocation: N,
+                            analyticsObject: C ?? s,
+                            giftMessage: f,
+                            giftingOrigin: A.vQ.GUILD_CHANNEL,
                         })
-                      : x && null != n
+                      : b && null != n
                         ? (0, r.A)({
                               giftRecipient: n,
                               analyticsLocations: t,
-                              analyticsLocation: m,
-                              analyticsObject: g ?? s,
-                              giftMessage: A,
+                              analyticsLocation: N,
+                              analyticsObject: C ?? s,
+                              giftMessage: f,
                           })
                         : (0, l.A)({
                               isGift: !0,
                               giftRecipient: n ?? void 0,
                               initialPlanId: null,
                               analyticsLocations: t,
-                              analyticsLocation: m,
-                              analyticsObject: C ?? s,
-                              giftMessage: A,
+                              analyticsLocation: N,
+                              analyticsObject: _ ?? s,
+                              giftMessage: f,
                           });
-        }, [T, N, j, x, n, t, m, s, g, C, A, p]),
-        shouldShowWishlistModal: x,
-        shouldShowGiftSelectionModal: _,
+        }, [O, E, M, b, n, t, N, s, C, _, f, g]),
+        shouldShowWishlistModal: b,
+        shouldShowGiftSelectionModal: G,
     };
 }

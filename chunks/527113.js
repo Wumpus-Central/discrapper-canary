@@ -120,7 +120,7 @@ let E = [
         getTier3Value: () => !0,
     },
 ];
-function _(e) {
+function h(e) {
     let { value: t, isBoosted: i = !1 } = e;
     return "boolean" == typeof t
         ? t
@@ -132,7 +132,7 @@ function _(e) {
               children: t,
           });
 }
-function h(e) {
+function _(e) {
     let { currentTier: t } = e,
         i = (function (e) {
             switch (e) {
@@ -176,7 +176,7 @@ i.d(
                     (0, s.jsxs)("div", {
                         className: T.wY,
                         children: [
-                            null != i && (0, s.jsx)(h, { currentTier: i.premiumTier }),
+                            null != i && (0, s.jsx)(_, { currentTier: i.premiumTier }),
                             (0, s.jsxs)("div", {
                                 className: T.tp,
                                 children: [
@@ -279,25 +279,25 @@ i.d(
                                                     !a &&
                                                         (0, s.jsx)("div", {
                                                             className: r()(T.Hn, T.pU),
-                                                            children: (0, s.jsx)(_, { value: e.getTier0Value() }),
+                                                            children: (0, s.jsx)(h, { value: e.getTier0Value() }),
                                                         }),
                                                     (0, s.jsx)("div", {
                                                         className: r()(T.Hn, T.pU),
-                                                        children: (0, s.jsx)(_, {
+                                                        children: (0, s.jsx)(h, {
                                                             value: e.getTier1Value(),
                                                             isBoosted: !0,
                                                         }),
                                                     }),
                                                     (0, s.jsx)("div", {
                                                         className: r()(T.Hn, T.pU),
-                                                        children: (0, s.jsx)(_, {
+                                                        children: (0, s.jsx)(h, {
                                                             value: e.getTier2Value(),
                                                             isBoosted: !0,
                                                         }),
                                                     }),
                                                     (0, s.jsx)("div", {
                                                         className: r()(T.Hn, T.pU),
-                                                        children: (0, s.jsx)(_, {
+                                                        children: (0, s.jsx)(h, {
                                                             value: e.getTier3Value(),
                                                             isBoosted: !0,
                                                         }),

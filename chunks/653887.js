@@ -22,10 +22,10 @@ t.d(
                                   .join(""),
                     [n],
                 ),
-                f = l.useCallback(() => (0, i.jsx)(r.Yn, { dynamicDataBinding: t }), [t]);
+                A = l.useCallback(() => (0, i.jsx)(r.Yn, { dynamicDataBinding: t }), [t]);
             return u === a.BW.Loading
                 ? null
-                : (0, i.jsx)(o.w, { buffer: c, artboardProperties: {}, renderDataBinding: f, ...s }, d);
+                : (0, i.jsx)(o.w, { buffer: c, artboardProperties: {}, renderDataBinding: A, ...s }, d);
         },
     },
 );

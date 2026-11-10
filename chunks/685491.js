@@ -15,13 +15,13 @@ var l = n(477900),
     f = n(702476),
     x = n(318346),
     C = n(863705),
-    p = n(287809),
-    S = n(365491),
+    S = n(287809),
+    p = n(365491),
     _ = n(435558),
     A = n(115560),
     I = n(834730),
-    b = n(7689),
-    v = n(683438),
+    v = n(7689),
+    b = n(683438),
     L = n(265872),
     j = n(444927),
     N = n(775602),
@@ -142,12 +142,12 @@ let K = (e) => {
 function Y(e) {
     let { handleTransition: t, selectedTab: n, isNarrow: a, hasText: r } = e,
         u = (0, j.A)(U),
-        { searchQuery: d, onSetSearchQuery: m } = (0, S.vs)(),
+        { searchQuery: d, onSetSearchQuery: m } = (0, p.vs)(),
         [g, E] = s.useState(""),
         h = s.useRef(!1),
         f = (0, T.uM)(),
         { enabled: x, searchBarWidthPx: C } = M.useConfig({ location: "collectibles_search_bar" }),
-        p = s.useRef(null),
+        S = s.useRef(null),
         [_, I] = s.useState(!1),
         y = s.useRef(null),
         [G, F] = s.useState(!1),
@@ -247,7 +247,7 @@ function Y(e) {
                 }));
         }, [f?.sessionId, es]),
         ed = s.useCallback(() => {
-            (ea(R.uY.SEARCH_ICON, R.Xi.SEARCH), I(!0), setTimeout(() => p.current?.focus()));
+            (ea(R.uY.SEARCH_ICON, R.Xi.SEARCH), I(!0), setTimeout(() => S.current?.focus()));
         }, [ea]),
         em = s.useCallback(() => {
             ea(R.uY.SEARCH_BAR, R.Xi.SEARCH);
@@ -263,14 +263,14 @@ function Y(e) {
             className: B.qc,
             onClick: ed,
             "aria-label": en,
-            children: (0, l.jsx)(b.MagnifyingGlassIcon, { size: "xs", color: "currentColor" }),
+            children: (0, l.jsx)(v.MagnifyingGlassIcon, { size: "xs", color: "currentColor" }),
         }),
         ex = (0, l.jsxs)("div", {
             className: B.up,
             children: [
-                (0, l.jsx)(v.I, {
+                (0, l.jsx)(b.I, {
                     size: "sm",
-                    ref: p,
+                    ref: S,
                     onKeyDown: eo,
                     query: g,
                     onChange: ec,
@@ -354,13 +354,13 @@ var eg = n(518477),
     eE = n(835018);
 function eh(e) {
     let { selectedTab: t, selectedCollectionId: n, handleTransition: a } = e,
-        _ = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        _ = (0, o.bG)([S.default], () => S.default.getCurrentUser()),
         A = (0, em.yB)("CollectiblesShopHeaderBar"),
-        { searchQuery: I } = (0, S.vs)(),
-        b = s.useRef(null),
-        [v, L] = s.useState(!1);
+        { searchQuery: I } = (0, p.vs)(),
+        v = s.useRef(null),
+        [b, L] = s.useState(!1);
     (0, g.g)(
-        b,
+        v,
         s.useCallback((e) => {
             L(e.contentRect.width < 800);
         }, []),
@@ -390,8 +390,8 @@ function eh(e) {
                 f,
                 x,
                 C,
-                p,
-                S = (0, q.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
+                S,
+                p = (0, q.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
                 { gameShops: _, hasGameShops: A } =
                     ((t = (0, T.uM)()),
                     (n = (0, o.yK)(
@@ -464,7 +464,7 @@ function eh(e) {
                         hasGameShops: n.length > 0,
                     }),
                 I = null != (0, ee.HH)(),
-                b =
+                v =
                     ((i = (0, X.A)(P.FYj)),
                     (r = (0, J.XF)(i)),
                     (c = r?.shared.navigation?.tab),
@@ -481,10 +481,10 @@ function eh(e) {
                         null == E || null == h ? null : { title: E, icon: g?.icon, collectionId: h })),
                     (x = f?.title),
                     (C = f?.icon),
-                    (p = f?.collectionId),
+                    (S = f?.collectionId),
                     s.useMemo(
-                        () => (null == x || null == p ? null : { title: x, icon: C, collectionId: p }),
-                        [x, C, p],
+                        () => (null == x || null == S ? null : { title: x, icon: C, collectionId: S }),
+                        [x, C, S],
                     ));
             return s.useMemo(() => {
                 let t = (function (e) {
@@ -538,7 +538,7 @@ function eh(e) {
                             expandLabel: D.intl.string(D.t.bf9uMH),
                             options: _,
                         }),
-                    S &&
+                    p &&
                         n.push({
                             type: "page",
                             key: R.G2.GAME_SERVERS,
@@ -547,21 +547,21 @@ function eh(e) {
                             onClick: () => e(R.G2.GAME_SERVERS),
                             badge: "beta",
                         }),
-                    null != b)
+                    null != v)
                 ) {
-                    let e = P.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(b.collectionId),
-                        t = (0, ec.s)(b.icon);
+                    let e = P.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(v.collectionId),
+                        t = (0, ec.s)(v.icon);
                     n.push({
                         type: "page",
                         key: R.G2.PROMOTION,
-                        text: b.title,
+                        text: v.title,
                         route: e,
                         icon: t ?? void 0,
                         onClick: () => (0, Z.pX)(e),
                     });
                 }
                 return n;
-            }, [e, I, b, S, A, _]);
+            }, [e, I, v, p, A, _]);
         })(
             s.useCallback(
                 (e) => {
@@ -580,7 +580,7 @@ function eh(e) {
             ? R.G2.PROMOTION
             : t;
     return (0, l.jsx)("div", {
-        ref: b,
+        ref: v,
         children: (0, l.jsxs)(E.A, {
             disableDoubleClick: !0,
             disableFocusRingScope: !0,
@@ -588,7 +588,7 @@ function eh(e) {
             className: i()(eE.jr, { [em.jP]: A }),
             toolbar: (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(Y, { handleTransition: a, selectedTab: t, isNarrow: v, hasText: "" !== I }),
+                    (0, l.jsx)(Y, { handleTransition: a, selectedTab: t, isNarrow: b, hasText: "" !== I }),
                     (0, l.jsx)(c.D, {
                         className: eE.ij,
                         onClick: y,

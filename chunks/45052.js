@@ -1,4 +1,4 @@
-t.d(n, { GZ: () => g, Se: () => A, Ig: () => m, Hv: () => p, F5: () => C });
+t.d(n, { GZ: () => C, Se: () => f, Ig: () => N, Hv: () => g, F5: () => _ });
 var i = t(582128),
     l = t(70283),
     a = t(855986),
@@ -13,8 +13,8 @@ let d = (0, t(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var f = t(998370);
-function g(e, n, t) {
+var A = t(998370);
+function C(e, n, t) {
     let i = (0, s.rL)(n),
         l = (0, s.rL)(t);
     return Math.min(
@@ -22,33 +22,33 @@ function g(e, n, t) {
         100,
     );
 }
-function C(e) {
-    return f.J.useConfig({ location: e }).enabled;
+function _(e) {
+    return A.J.useConfig({ location: e }).enabled;
 }
-function m(e) {
-    return f.J.getConfig({ location: e }).enabled;
+function N(e) {
+    return A.J.getConfig({ location: e }).enabled;
 }
-function A(e) {
+function f(e) {
     return e?.complex_icon_static_url ?? e?.simple_icon_url;
 }
-function p(e) {
+function g(e) {
     let { location: n, enabled: t = !0 } = e,
-        { enabled: g } = f.J.useConfig({ location: n }),
-        { enabled: C } = d.useConfig({ location: `${n}${g ? "" : "-DISABLED"}` }),
-        m = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
-        A = (0, u.HX)(r.M.NEW_GIFTING_BADGES_COACHMARK),
-        p = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
-        b = g && !A && t,
-        I = b && !C && m,
-        h = b && C && null == p;
+        { enabled: C } = A.J.useConfig({ location: n }),
+        { enabled: _ } = d.useConfig({ location: `${n}${C ? "" : "-DISABLED"}` }),
+        N = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
+        f = (0, u.HX)(r.M.NEW_GIFTING_BADGES_COACHMARK),
+        g = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
+        I = C && !f && t,
+        T = I && !_ && N,
+        R = I && _ && null == g;
     return (i.useEffect(() => {
-        h ? (0, o.Ay)(l.$.GIFTING) : I && (0, o.o0)(l.$.GIFTING);
-    }, [I, h]),
-    C)
-        ? b && null != p && !p.hidden && (m || p.owned)
+        R ? (0, o.Ay)(l.$.GIFTING) : T && (0, o.o0)(l.$.GIFTING);
+    }, [T, R]),
+    _)
+        ? I && null != g && !g.hidden && (N || g.owned)
             ? "noCount"
             : null
-        : b && m && null != p
+        : I && N && null != g
           ? "count"
           : null;
 }

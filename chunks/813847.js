@@ -1,29 +1,29 @@
-var n = l(582128),
-    i = l(568065),
-    s = l(586428),
-    r = l(792996);
-l.d(
+var l = n(582128),
+    s = n(568065),
+    i = n(586428),
+    r = n(792996);
+n.d(
     t,
     {},
     {
-        e: function (e, t, l) {
-            return n.useMemo(
+        e: function (e, t, n) {
+            return l.useMemo(
                 () =>
                     t.sourceEntitlement?.ends_at != null
                         ? { type: "expiring", expiringAt: t.sourceEntitlement.ends_at }
-                        : l && null != e.storeRemovalDate
+                        : n && null != e.storeRemovalDate
                           ? { type: "removing", removingAt: e.storeRemovalDate }
-                          : t.type === i.b_.LEVEL_ACTIVATED
+                          : t.type === s.b_.LEVEL_ACTIVATED
                             ? {
                                   type: "active",
-                                  statusText: r.intl.formatToPlainString(s.default.WRRYUT, {
+                                  statusText: r.intl.formatToPlainString(i.default.WRRYUT, {
                                       perkName: t.sourcePowerup?.title ?? r.intl.string(r.t.BfF6ED),
                                   }),
                               }
-                            : t.type !== i.b_.INACTIVE
-                              ? { type: "active", statusText: r.intl.string(s.default.FFLkmx) }
+                            : t.type !== s.b_.INACTIVE
+                              ? { type: "active", statusText: r.intl.string(i.default.FFLkmx) }
                               : void 0,
-                [t, l, e],
+                [t, n, e],
             );
         },
     },

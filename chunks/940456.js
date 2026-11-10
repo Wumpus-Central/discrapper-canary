@@ -12,9 +12,9 @@ i.d(t, {
     KH: () => v,
     pj: () => b,
     QK: () => R,
-    Ce: () => P,
+    Ce: () => V,
     as: () => U,
-    Kz: () => V,
+    Kz: () => P,
 });
 var s = i(390544),
     n = i(620632),
@@ -179,8 +179,8 @@ let T = [
             entitlementId: "6",
         },
     ];
-var _ = i(24641);
-function h(e) {
+var h = i(24641);
+function _(e) {
     return { id: e.id, name: e.name, countryCode: e.country_code, pingUrl: e.ping_url, enabled: e.enabled };
 }
 var p = i(628049),
@@ -259,7 +259,7 @@ function I(e) {
           Promise.resolve())
         : n.Bo.get({ url: f.Rsh.GAME_SERVERS(e), rejectWithError: !0, retries: 2, signal: i }).then((t) => {
               if (null != t.body) {
-                  let i = t.body.reduce((e, t) => ((e[t.id] = (0, _.A)(t)), e), {});
+                  let i = t.body.reduce((e, t) => ((e[t.id] = (0, h.A)(t)), e), {});
                   r.h.dispatch({ type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS", guildId: e, instances: i });
               }
           });
@@ -324,7 +324,7 @@ function G(e) {
         (e) => {
             r.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(h).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.map(_).sort((e, t) => e.name.localeCompare(t.name)),
             });
         },
     );
@@ -334,7 +334,7 @@ function C() {
         (e) => {
             r.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.regions.map(h).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.regions.map(_).sort((e, t) => e.name.localeCompare(t.name)),
                 creationDisabled: !0 === e.body.creation_disabled,
             });
         },
@@ -355,7 +355,7 @@ function M(e) {
     null != t &&
         r.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...t, status: s.M.STARTING } });
 }
-function P(e, t) {
+function V(e, t) {
     let i = d.A.getGameServers().find((t) => t.subscription_id === e);
     return null == i
         ? Promise.resolve()
@@ -368,7 +368,7 @@ function P(e, t) {
                   throw (y().catch(() => {}), e);
               }));
 }
-function V(e) {
+function P(e) {
     let t = d.A.getGameServers().find((t) => t.id === e);
     return (
         null != t &&
@@ -389,6 +389,6 @@ function V(e) {
 }
 function U(e, t) {
     return n.Bo.post({ url: f.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
-        r.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, _.A)(t.body) });
+        r.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, h.A)(t.body) });
     });
 }

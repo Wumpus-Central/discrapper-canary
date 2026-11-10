@@ -1,12 +1,12 @@
-var n = l(582128),
-    i = l(915667);
-l.d(
+var l = n(582128),
+    s = n(915667);
+n.d(
     t,
     {},
     {
         A: function (e, t) {
-            return n.useCallback(() => {
-                (0, i.A)(e, t);
+            return l.useCallback(() => {
+                (0, s.A)(e, t);
             }, [e, t]);
         },
     },

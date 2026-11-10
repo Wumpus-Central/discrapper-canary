@@ -1,54 +1,54 @@
-var _ = n(582128),
-    A = n(855986),
-    l = n(19191),
-    r = n(597758),
-    i = n(412260);
-function E(e) {
-    _.useEffect(() => {
-        (0, r.BE)();
+var l = n(582128),
+    r = n(855986),
+    i = n(19191),
+    u = n(597758),
+    o = n(412260);
+function a(e) {
+    l.useEffect(() => {
+        (0, u.BE)();
     }, []);
-    let t = (0, A.bG)([i.A, l.A], () => {
+    let t = (0, r.bG)([o.A, i.A], () => {
             let t = e();
             if (null == t) return null;
             let n = t.promotionId,
-                _ = i.A.getMarketingPromotionForEligibility(n);
-            if (_?.trialId != null) {
-                let e = l.A.getUserTrialOffer(_.trialId);
+                l = o.A.getMarketingPromotionForEligibility(n);
+            if (l?.trialId != null) {
+                let e = i.A.getUserTrialOffer(l.trialId);
                 if (null == e || e.hasExpired) return null;
             }
             return t;
         }),
-        n = (0, A.bG)([i.A], () => i.A.getMarketingPromotionForEligibility(t?.promotionId ?? "")),
-        E = n?.endDate,
-        N = _.useMemo(() => {
-            let e = { endDate: E, expired: !1 },
-                t = { endDate: E, expired: !0 };
-            return () => (null != E && E.getTime() <= Date.now() ? t : e);
-        }, [E]),
-        T = _.useCallback(
+        n = (0, r.bG)([o.A], () => o.A.getMarketingPromotionForEligibility(t?.promotionId ?? "")),
+        a = n?.endDate,
+        s = l.useMemo(() => {
+            let e = { endDate: a, expired: !1 },
+                t = { endDate: a, expired: !0 };
+            return () => (null != a && a.getTime() <= Date.now() ? t : e);
+        }, [a]),
+        c = l.useCallback(
             (e) => {
                 let t;
-                if (null == E) return () => {};
-                let n = E.getTime(),
-                    _ = n - Date.now();
-                if (_ <= 0 || _ >= 864e5) return () => {};
-                let A = () => {
-                    let _ = n - Date.now();
-                    _ > 0 ? (t = setTimeout(A, _)) : e();
+                if (null == a) return () => {};
+                let n = a.getTime(),
+                    l = n - Date.now();
+                if (l <= 0 || l >= 864e5) return () => {};
+                let r = () => {
+                    let l = n - Date.now();
+                    l > 0 ? (t = setTimeout(r, l)) : e();
                 };
-                return ((t = setTimeout(A, _)), () => clearTimeout(t));
+                return ((t = setTimeout(r, l)), () => clearTimeout(t));
             },
-            [E],
+            [a],
         );
-    return _.useSyncExternalStore(T, N, N).expired ? null : t;
+    return l.useSyncExternalStore(c, s, s).expired ? null : t;
 }
 n.d(
     t,
     {},
     {
-        C: E,
+        C: a,
         u: function (e) {
-            return E(() => i.A.getMarketingComponentBySurface(e));
+            return a(() => o.A.getMarketingComponentBySurface(e));
         },
     },
 );

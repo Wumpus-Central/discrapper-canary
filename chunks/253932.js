@@ -774,7 +774,7 @@ let e7 = (0, _.c$)(
         (e) => e ?? s.PZ.AUTO,
         (e) => e,
     ),
-    e4 = (0, _.c$)("appearance", "defaultGuildThemePreference", u.v, (e) => e);
+    e8 = (0, _.c$)("appearance", "defaultGuildThemePreference", u.v, (e) => e);
 ((0, _.c$)(
     "appearance",
     "launchPadMode",
@@ -787,7 +787,7 @@ let e7 = (0, _.c$)(
         (e) => e ?? s.kW.SWIPE_RIGHT_TO_LEFT_UNSET,
         (e) => e,
     ));
-let e8 = (0, _.c$)(
+let e4 = (0, _.c$)(
         "userContent",
         "lastReceivedChangelogId",
         (e) => e ?? "0",
@@ -915,7 +915,7 @@ n.d(
         on: em,
         oz: y,
         pE: e$,
-        pK: e8,
+        pK: e4,
         pR: W,
         qN: e5,
         rs: eP,
@@ -927,6 +927,6 @@ n.d(
         vf: e_,
         wv: H,
         zS: v,
-        zY: e4,
+        zY: e8,
     },
 );

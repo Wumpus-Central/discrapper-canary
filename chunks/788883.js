@@ -1,16 +1,16 @@
-var A = _(613412),
-    n = _(139286);
-_.d(
+var l = n(613412),
+    r = n(139286);
+n.d(
     t,
     {},
     {
         A: function (e) {
-            let { componentType: t, componentId: _, promotionId: l, dismissibleContent: r } = e;
+            let { componentType: t, componentId: n, promotionId: i, dismissibleContent: u } = e;
             return (
-                (0, n.A)({
-                    type: A.ImpressionTypes.VIEW,
-                    name: A.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-                    properties: { component_type: t, component_id: _, promotion_id: l, dismissible_content: r },
+                (0, r.A)({
+                    type: l.ImpressionTypes.VIEW,
+                    name: l.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+                    properties: { component_type: t, component_id: n, promotion_id: i, dismissible_content: u },
                 }),
                 null
             );

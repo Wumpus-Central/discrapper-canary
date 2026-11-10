@@ -1,4 +1,4 @@
-n.d(t, { e: () => I, A: () => S });
+n.d(t, { e: () => I, A: () => v });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -108,7 +108,7 @@ function I(e) {
         ],
     });
 }
-let S = function (e) {
+let v = function (e) {
     let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: c, renderAdjacentContent: u } = e;
     return (0, l.jsxs)("div", {
         className: i()(N.Ig, t),

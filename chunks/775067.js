@@ -19,12 +19,12 @@ function b(e) {
         p,
         { targetElementRef: A, dismissPopover: P, children: E } = e,
         C = (0, l.L)(),
-        { phase: T } = s.A.useConfig({ location: "PremiumTabPopover" });
+        { phase: _ } = s.A.useConfig({ location: "PremiumTabPopover" });
     return (
         C
             ? ((t = g.intl.string(f.default["er+5dl"])),
               (n =
-                  T === s.H.PHASE_ONE
+                  _ === s.H.PHASE_ONE
                       ? g.intl.format(m.default["4y7mjC"], { rewardPercentage: 10 })
                       : g.intl.format(f.default.b9LwCb, { rewardPercentage: 10 })),
               (b = o.g.NAVIGATE_TO_PERK),
@@ -41,7 +41,7 @@ function b(e) {
             title: t,
             body: [n],
             assetUrl:
-                T === s.H.PHASE_ONE
+                _ === s.H.PHASE_ONE
                     ? "https://cdn.discordapp.com/assets/content/45f067d19ee83d30fb1a0e6de99bf95fd2bba5da52311c69cc790ec4d17cbb16.png"
                     : "https://cdn.discordapp.com/assets/content/107bd2b0c71f6df724edc7bcf20465f867e1fa8f9051c0a0db5d58491b5f2a9f.png",
             ctaType: b,
