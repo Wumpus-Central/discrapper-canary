@@ -378,6 +378,11 @@ let ee = new Z(o.h, {
         (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
             z(e.channelId));
     },
+    CHANNEL_RTC_UPDATE_CHAT_OPEN: function (e) {
+        let { channelId: t, chatOpen: n } = e;
+        if (!n || j[0] === t) return !1;
+        z(t);
+    },
     GAME_AUTOCOMPLETE_FETCH_SUCCESS: J,
     GAME_AUTOCOMPLETE_FETCH_FAILURE: J,
 });
