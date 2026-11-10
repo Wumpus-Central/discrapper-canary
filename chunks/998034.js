@@ -307,8 +307,8 @@ var e1 = n(176781),
     e3 = n(780964),
     e6 = n(766075),
     e8 = n(734066),
-    e7 = n(419490),
-    e5 = n(409067),
+    e5 = n(419490),
+    e7 = n(409067),
     e9 = n(271597),
     e4 = n(534514),
     te = n(475358),
@@ -404,11 +404,11 @@ var tS = n(696016),
 function tR(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: r, setPopoutRef: a } = e;
     (0, tp.A)();
-    let s = (0, c.yK)([e7.Ay], () => Object.values(e7.Ay.getClips())),
-        o = (0, c.bG)([e7.Ay], () => e7.Ay.getSettings()),
-        u = (0, c.bG)([e7.Ay], () => e7.Ay.getNewClipIds()),
+    let s = (0, c.yK)([e5.Ay], () => Object.values(e5.Ay.getClips())),
+        o = (0, c.bG)([e5.Ay], () => e5.Ay.getSettings()),
+        u = (0, c.bG)([e5.Ay], () => e5.Ay.getNewClipIds()),
         d = (0, td.H)(),
-        m = (0, c.bG)([e7.Ay], () => e7.Ay.getEnableAutoclipping()),
+        m = (0, c.bG)([e5.Ay], () => e5.Ay.getEnableAutoclipping()),
         f = (0, c.bG)([ts.Ay], () => ts.Ay.getKeybindForAction(J.hCu.SAVE_CLIP)),
         p = l.useCallback(
             (e) => {
@@ -418,7 +418,7 @@ function tR(e) {
         ),
         h = !o.showPovClipsInGallery,
         g = l.useMemo(() => {
-            let e = s.filter((e) => e.type === tS.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, e5.kD)(e)));
+            let e = s.filter((e) => e.type === tS.nQ.CLIP && "" !== e.thumbnail && (!h || !(0, e7.kD)(e)));
             return (e.sort((e, t) => t.createdAt - e.createdAt), e);
         }, [s, h]),
         A = l.useMemo(() => g.slice(0, 16), [g]),
@@ -574,15 +574,15 @@ function tO(e) {
 function tM(e) {
     let { onClose: t, popoutContainerRef: n } = e,
         r = (0, e8.sw)(),
-        a = !(0, c.bG)([e7.Ay], () => e7.Ay.getSettings().showPovClipsInGallery),
+        a = !(0, c.bG)([e5.Ay], () => e5.Ay.getSettings().showPovClipsInGallery),
         s = (0, c.bG)(
-            [e7.Ay],
+            [e5.Ay],
             () => {
-                let e = e7.Ay.getNewClipIds();
+                let e = e5.Ay.getNewClipIds();
                 return a
                     ? e.filter((e) => {
-                          let t = e7.Ay.getClipById(e);
-                          return null != t && !(0, e5.kD)(t);
+                          let t = e5.Ay.getClipById(e);
+                          return null != t && !(0, e7.kD)(t);
                       }).length
                     : e.length;
             },
@@ -744,8 +744,8 @@ function t3(e) {
 }
 var t6 = n(397562),
     t8 = n(206835),
-    t7 = n(183555),
-    t5 = n(465318),
+    t5 = n(183555),
+    t7 = n(465318),
     t9 = n(527212),
     t4 = n(702476),
     ne = n(718019),
@@ -764,7 +764,7 @@ var t6 = n(397562),
     nf = n(62119);
 function np(e) {
     let { user: t, isVisible: n } = e,
-        { trackUserProfileAction: l } = (0, t7.NJ)();
+        { trackUserProfileAction: l } = (0, t5.NJ)();
     return nd.p5
         ? (0, i.jsx)(nc.A, {
               text: ew.intl.string(ew.t.y5MwJy),
@@ -995,7 +995,7 @@ var nR = n(290863),
     n3 = n(90165),
     n6 = n(49999),
     n8 = n(518477);
-function n7(e) {
+function n5(e) {
     let { targetElementRef: t, onClose: r } = e,
         [a, s] = l.useState(!1),
         o = (0, c.bG)([n2.default], () => n2.default.getId()),
@@ -1431,11 +1431,11 @@ function n7(e) {
               ],
           });
 }
-var n5 = n(894768),
+var n7 = n(894768),
     n9 = n(818348),
     n4 = n(709516);
 function ie() {
-    let e = (0, c.bG)([n5.A], () => n5.A.getStatus()),
+    let e = (0, c.bG)([n7.A], () => n7.A.getStatus()),
         t = (0, nm.MU)(e) ?? "",
         n = e === n9.cl.INVISIBLE || e === n9.cl.OFFLINE;
     return (0, i.jsxs)("div", {
@@ -1515,7 +1515,7 @@ function id(e) {
         m = __OVERLAY__,
         h = (0, t9.Ay)(t.id, void 0),
         { analyticsLocations: g } = (0, P.Ay)(k.A.USER_PROFILE_ACCOUNT_POPOUT),
-        C = (0, t7.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
+        C = (0, t5.pb)({ layout: "ACCOUNT_POPOUT", userId: t.id, guildId: void 0 });
     (0, t6.A)(g, h, n8.R7.ACCOUNT_POPOUT);
     let { ref: x } = (0, eI.Ay)(),
         { isHoveringOrFocusing: v, isHovering: _ } = (0, tg.A)(x);
@@ -1751,7 +1751,7 @@ function id(e) {
         q = l.useCallback(() => {
             (R(), Y());
         }, [R, Y]),
-        Q = t5.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
+        Q = t7.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
         $ = (0, nC.Hy)({ location: "UserProfileAccountPopout" }),
         X = (0, ej.FX)("UserProfileAccountPopout"),
         Z = (0, tW.A)((e) => e.shouldScrollToOrbsMenuItem),
@@ -1765,7 +1765,7 @@ function id(e) {
         en = l.useId();
     return (0, i.jsx)(P.f5, {
         value: g,
-        children: (0, i.jsx)(t7.of, {
+        children: (0, i.jsx)(t5.of, {
             value: C,
             openedAt: o,
             fetchStartedAt: h?.fetchStartedAt,
@@ -2029,7 +2029,7 @@ function id(e) {
                                     null != G && (0, i.jsx)(tD.A, { frame: G, fadeIn: F }),
                                 ],
                             }),
-                            (0, i.jsx)(n7, { targetElementRef: D, onClose: n }),
+                            (0, i.jsx)(n5, { targetElementRef: D, onClose: n }),
                             (0, i.jsx)(t2, {}),
                         ],
                     }),
@@ -2219,8 +2219,8 @@ let i6 = new i3(i0.h, {
     },
 });
 var i8 = n(514661);
-let i7 = new iB.A("GuildTagAvailableCoachmark");
-function i5(e) {
+let i5 = new iB.A("GuildTagAvailableCoachmark");
+function i7(e) {
     let t = (0, c.bG)([iZ.A], () => iZ.A.getGuild(e.guildId));
     function n(n) {
         (t?.profile?.tag != null &&
@@ -2233,7 +2233,7 @@ function i5(e) {
     }
     let { isAdopting: l, onAdoptTag: r, onEditProfile: a } = (0, i8.A)(t?.id ?? null, () => n(n6.i.TAKE_ACTION));
     if (null == t || !(0, iJ.q0)(t))
-        return (i7.error("GuildTagChangedCoachmark rendered without guildId for a guild with tags."), e.children);
+        return (i5.error("GuildTagChangedCoachmark rendered without guildId for a guild with tags."), e.children);
     let s = [
         { text: ew.intl.string(ew.t.jwEaiX), loading: l, onClick: r, variant: "primary" },
         { text: ew.intl.string(ew.t.s5vZlQ), onClick: a, variant: "secondary" },
@@ -2266,7 +2266,7 @@ function i9(e) {
     }
     let { isAdopting: l, onAdoptTag: r, onEditProfile: a } = (0, i8.A)(t?.id ?? null, () => n(n6.i.TAKE_ACTION));
     if (null == t || !(0, iJ.q0)(t))
-        return (i7.error("GuildTagAvailableCoachmark rendered without guildId for a guild with tags."), e.children);
+        return (i5.error("GuildTagAvailableCoachmark rendered without guildId for a guild with tags."), e.children);
     let s = [
         { text: ew.intl.string(ew.t.jwEaiX), loading: l, onClick: r, variant: "primary" },
         { text: ew.intl.string(ew.t.s5vZlQ), onClick: a, variant: "secondary" },
@@ -2427,7 +2427,7 @@ function la(e) {
                   children: e.children,
               })
             : s === d.M.GUILD_TAG_UPDATED_COACHMARK
-              ? (0, i.jsx)(i5, {
+              ? (0, i.jsx)(i7, {
                     guildId: e.currentUser.primaryGuild?.identityGuildId ?? null,
                     onDismiss: o,
                     targetElementRef: e.targetElementRef,
@@ -2989,7 +2989,7 @@ function l2(e) {
         }, [a]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, l1.A)("1794329792838", !0);
+        let e = (0, l1.A)("1794330353485", !0);
         t =
             null != e
                 ? ew.intl.formatToPlainString(ew.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3041,8 +3041,8 @@ function l2(e) {
 var l3 = n(358285);
 let l6 = iM.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
     l8 = 2.5 * to.A.Millis.SECOND,
-    l7 = 2 * to.A.Millis.MINUTE,
-    l5 = 5 * to.A.Millis.SECOND;
+    l5 = 2 * to.A.Millis.MINUTE,
+    l7 = 5 * to.A.Millis.SECOND;
 function l9(e) {
     let {
             ref: t,
@@ -4140,7 +4140,7 @@ class l4 extends l.PureComponent {
             { hoveringOnMute: a } = this.state,
             s =
                 void 0 === this.lastSpeakingWhileMutedNotificationTime ||
-                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l7;
+                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l5;
         i
             ? a ||
               !e ||
@@ -4376,7 +4376,7 @@ function rt(e) {
         t &&
             n &&
             (a(!0),
-            i.current.start(l5, () => {
+            i.current.start(l7, () => {
                 a(!1);
             }));
     }, [t, n]);
@@ -4401,8 +4401,8 @@ function rn() {
             activities: m,
             streaming: f,
             status: p,
-        } = (0, c.cf)([n5.A], () => {
-            let e = n5.A.getActivities();
+        } = (0, c.cf)([n7.A], () => {
+            let e = n7.A.getActivities();
             return {
                 activities: e,
                 streaming:
@@ -4411,7 +4411,7 @@ function rn() {
                         let { type: t } = e;
                         return t === u.$.STREAMING;
                     }),
-                status: n5.A.getStatus(),
+                status: n7.A.getStatus(),
             };
         }),
         h = (0, c.bG)([iv.A], () => iv.A.getAnyStreamForUser(s)),
