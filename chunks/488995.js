@@ -8,5 +8,6 @@ var i,
     c =
         (((s = {}).GUILDS_BAR_ICON = "guilds_bar_icon"),
         (s.VIRTUAL_CURRENCY_REHEAT_COACHMARK = "virtual_currency_reheat_coachmark"),
+        (s.GAMES_TAB_COACHMARK = "games_tab_coachmark"),
         s);
 n.d(t, {}, { GlobalDiscoveryTab: l, Pd: "servers", Um: d, dO: o, iy: ["apps", "servers", "games", "quests"], st: c });
