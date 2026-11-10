@@ -41,7 +41,7 @@ n.d(
                 case "manual":
                     return e.length > 0
                         ? S.intl.formatToPlainString(y.default.pGVUxA, { shortcut: e })
-                        : S.intl.string(y.default.bBlUzK);
+                        : S.intl.string(y.default.ms4ibY);
                 case "auto":
                     return e.length > 0
                         ? S.intl.formatToPlainString(y.default.VfytEu, { shortcut: e })

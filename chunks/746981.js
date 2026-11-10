@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 669860, Version Hash: cbeeb4a94a7f9040b591d3e0a690c42b503bf8de`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 669861, Version Hash: 7f5af9953893f47370c1fe81dd9447aeb160cd95`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "669860";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "669861";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15821,7 +15821,7 @@ let Iz = "isHideDevBanner",
                     className: td()(IX.Wz, IX.mr),
                     children: [
                         (0, v.jsx)(I$, { className: IX.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "669860" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "669861" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -16309,7 +16309,7 @@ function pk() {
                                         (0, v.jsx)(tc.D, {
                                             className: pU.JS,
                                             onClick: _,
-                                            "aria-label": tN.intl.string(tN.t.Pcrpjt),
+                                            "aria-label": tN.intl.string(hq.default.V472rn),
                                             children: (0, v.jsx)(pD, {
                                                 className: pU.c3,
                                                 clips: t,
@@ -16363,7 +16363,7 @@ function pk() {
                                 variant: "secondary",
                                 size: "sm",
                                 fullWidth: !0,
-                                text: tN.intl.string(tN.t.Pcrpjt),
+                                text: tN.intl.string(hq.default.V472rn),
                                 onClick: _,
                             }),
                         ],

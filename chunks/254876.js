@@ -77,7 +77,7 @@ function Z(e) {
                 case "off":
                     return q.intl.string(Y.default["uO/2T5"]);
                 case "manual":
-                    return q.intl.string(Y.default.bBlUzK);
+                    return q.intl.string(Y.default.ms4ibY);
                 case "auto":
                     return q.intl.string(Y.default["4gzBi+"]);
             }

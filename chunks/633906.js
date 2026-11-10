@@ -1,4 +1,4 @@
-e.d(n, { default: () => F });
+e.d(n, { default: () => D });
 var i = e(477900),
     l = e(582128),
     a = e(224640),
@@ -30,9 +30,9 @@ var i = e(477900),
     G = e(271597);
 e(696016);
 var T = e(652215),
-    L = e(683825),
-    M = e(792996),
-    V = e(698292);
+    V = e(683825),
+    L = e(792996),
+    M = e(698292);
 function O(t) {
     let { variant: n, preselectedMode: e, onClose: a } = t,
         [s] = l.useState(() => (0, A.r)((0, I.T)(), _.Ay.getEnableAutoclipping())),
@@ -46,15 +46,15 @@ function O(t) {
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(P, {}),
+            (0, i.jsx)(z, {}),
             (0, i.jsxs)("div", {
-                className: c()(V.Qs, { [V.SI]: m }),
+                className: c()(M.Qs, { [M.SI]: m }),
                 children: [
-                    (0, i.jsx)(W, { variant: n, mode: r }),
+                    (0, i.jsx)(P, { variant: n, mode: r }),
                     m
-                        ? (0, i.jsx)(q, { mode: r, saving: d, saveError: x, onChange: o, onSettings: h })
-                        : (0, i.jsx)(z, {}),
-                    (0, i.jsx)(R, {
+                        ? (0, i.jsx)(Q, { mode: r, saving: d, saveError: x, onChange: o, onSettings: h })
+                        : (0, i.jsx)(W, {}),
+                    (0, i.jsx)(q, {
                         variant: n,
                         saving: d,
                         onConfirm: async function () {
@@ -85,12 +85,12 @@ function O(t) {
         ],
     });
 }
-function P() {
+function z() {
     return (0, i.jsx)("div", {
-        className: V.Qw,
+        className: M.Qw,
         "aria-hidden": !0,
         children: (0, i.jsx)("img", {
-            className: V.d3,
+            className: M.d3,
             src: "/assets/cc9b98ec3d958835.svg",
             alt: "",
             loading: "lazy",
@@ -98,20 +98,20 @@ function P() {
         }),
     });
 }
-function W(t) {
+function P(t) {
     let { variant: n, mode: e } = t,
         l = "mode_picker" === n,
-        a = "expressive_nitro" === n || (l && "auto" === e) ? L.default.O9OeEg : L.default.Ggh4C0,
-        s = l ? L.default.BtyRCT : "expressive_non_nitro" === n ? L.default.kWigdu : L.default.M8rOjI;
+        a = "expressive_nitro" === n || (l && "auto" === e) ? V.default.O9OeEg : V.default.Ggh4C0,
+        s = l ? V.default.BtyRCT : "expressive_non_nitro" === n ? V.default.kWigdu : V.default.M8rOjI;
     return (0, i.jsxs)("div", {
-        className: V.Lv,
+        className: M.Lv,
         children: [
-            (0, i.jsx)(x.D, { variant: "nitro-md", children: M.intl.string(a) }),
-            (0, i.jsx)(g.E, { variant: "body-md/normal", color: "text-subtle", children: M.intl.string(s) }),
+            (0, i.jsx)(x.D, { variant: "nitro-md", children: L.intl.string(a) }),
+            (0, i.jsx)(g.E, { variant: "body-md/normal", color: "text-subtle", children: L.intl.string(s) }),
         ],
     });
 }
-function q(t) {
+function Q(t) {
     let { mode: n, saving: e, saveError: a, onChange: s, onSettings: r } = t,
         o = (0, u.bG)([E.Ay], () =>
             (0, k.dI)(E.Ay.getKeybindForAction(T.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, k.OH)("alt+c"), !0),
@@ -120,23 +120,23 @@ function q(t) {
             () => [
                 {
                     value: "off",
-                    title: M.intl.string(L.default["uO/2T5"]),
-                    description: M.intl.string(L.default["l/u5Cq"]),
+                    title: L.intl.string(V.default["uO/2T5"]),
+                    description: L.intl.string(V.default["l/u5Cq"]),
                     icon: m.DenyIcon,
                 },
                 {
                     value: "manual",
-                    title: M.intl.string(L.default["2Uh8Zr"]),
+                    title: L.intl.string(V.default["2Uh8Zr"]),
                     description:
                         o.length > 0
-                            ? M.intl.formatToPlainString(L.default["qYS+JH"], { keybind: o })
-                            : M.intl.string(L.default.VfTZ7q),
+                            ? L.intl.formatToPlainString(V.default.Q5BSVD, { keybind: o })
+                            : L.intl.string(V.default.VfTZ7q),
                     icon: f.ClipsIcon,
                 },
                 {
                     value: "auto",
-                    title: M.intl.string(L.default.uEs0uv),
-                    description: M.intl.string(L.default.MRWtw9),
+                    title: L.intl.string(V.default.uEs0uv),
+                    description: L.intl.string(V.default.s1pHZy),
                     icon: h.ClipsAutoIcon,
                     accent: "nitro",
                 },
@@ -149,33 +149,33 @@ function q(t) {
                 variant: "body-sm/normal",
                 color: "text-subtle",
                 children: [
-                    M.intl.string(L.default.utyPWV),
+                    L.intl.string(V.default.utyPWV),
                     " ",
                     (0, i.jsx)(v.Q, {
                         textVariant: "body-sm/normal",
-                        text: M.intl.string(L.default["7kGdh5"]),
+                        text: L.intl.string(V.default["7kGdh5"]),
                         onClick: r,
                     }),
                 ],
             }),
-            (0, i.jsx)(w.u, { label: M.intl.string(L.default.q8YDuR), value: n, onChange: s, options: d, disabled: e }),
+            (0, i.jsx)(w.u, { label: L.intl.string(V.default.q8YDuR), value: n, onChange: s, options: d, disabled: e }),
             a
                 ? (0, i.jsx)(g.E, {
                       variant: "body-sm/normal",
                       color: "text-feedback-critical",
                       role: "alert",
-                      children: M.intl.string(L.default.YXeYlM),
+                      children: L.intl.string(V.default.YXeYlM),
                   })
                 : null,
             (0, i.jsxs)(g.E, {
                 variant: "body-xs/normal",
                 color: "text-subtle",
                 children: [
-                    M.intl.string(L.default["03CMAJ"]),
+                    L.intl.string(V.default["03CMAJ"]),
                     " ",
                     (0, i.jsx)(v.Q, {
                         textVariant: "body-xs/normal",
-                        text: M.intl.string(M.t.hvVgAZ),
+                        text: L.intl.string(L.t.hvVgAZ),
                         onClick: () => window.open(N.A.getArticleURL(T.MVz.CLIPS), "_blank", "noopener,noreferrer"),
                     }),
                 ],
@@ -183,38 +183,38 @@ function q(t) {
         ],
     });
 }
-function z() {
+function W() {
     return (0, i.jsxs)("div", {
-        className: V.kR,
+        className: M.kR,
         children: [
             (0, i.jsxs)("div", {
-                className: V.Nr,
+                className: M.Nr,
                 children: [
                     (0, i.jsx)(h.ClipsAutoIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
-                    (0, i.jsx)(g.E, { variant: "body-md/medium", children: M.intl.string(L.default.pGoNG5) }),
+                    (0, i.jsx)(g.E, { variant: "body-md/medium", children: L.intl.string(V.default.pGoNG5) }),
                     (0, i.jsx)(g.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
-                        children: M.intl.string(L.default["4Ta12C"]),
+                        children: L.intl.string(V.default["4Ta12C"]),
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: V.Nr,
+                className: M.Nr,
                 children: [
                     (0, i.jsx)(p.GameControllerIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
-                    (0, i.jsx)(g.E, { variant: "body-md/medium", children: M.intl.string(L.default.L0RzNn) }),
+                    (0, i.jsx)(g.E, { variant: "body-md/medium", children: L.intl.string(V.default.L0RzNn) }),
                     (0, i.jsx)(g.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
-                        children: M.intl.string(L.default.vngMNi),
+                        children: L.intl.string(V.default.vngMNi),
                     }),
                 ],
             }),
         ],
     });
 }
-function R(t) {
+function q(t) {
     let { variant: n, saving: e, onConfirm: l, onCheckItOut: a, onSettings: s } = t,
         r = "mode_picker" === n,
         o = "expressive_non_nitro" === n;
@@ -222,27 +222,22 @@ function R(t) {
         children: [
             r || o
                 ? null
-                : (0, i.jsxs)(g.E, {
+                : (0, i.jsx)(g.E, {
                       variant: "body-xs/normal",
                       color: "text-subtle",
-                      className: V.N4,
-                      children: [
-                          M.intl.string(L.default["22Z9fP"]),
-                          " ",
-                          (0, i.jsx)(v.Q, {
-                              textVariant: "body-xs/normal",
-                              text: M.intl.string(L.default["7kGdh5"]),
-                              onClick: s,
-                          }),
-                      ],
+                      className: M.N4,
+                      children: L.intl.format(V.default.oguG2t, {
+                          settingsHook: (t, n) =>
+                              (0, i.jsx)(v.Q, { textVariant: "body-xs/normal", text: t, onClick: s }, n),
+                      }),
                   }),
             (0, i.jsxs)("div", {
-                className: V.o1,
+                className: M.o1,
                 children: [
                     (0, i.jsx)(j.$, {
                         fullWidth: !0,
                         variant: o ? "expressive" : "primary",
-                        text: M.intl.string(r ? L.default.liWTC0 : L.default.n9r54F),
+                        text: L.intl.string(r ? V.default.liWTC0 : o ? V.default.cXDBee : V.default.n9r54F),
                         onClick: r ? l : a,
                         loading: e,
                     }),
@@ -250,7 +245,7 @@ function R(t) {
                         ? (0, i.jsx)(g.E, {
                               variant: "body-xs/normal",
                               color: "text-subtle",
-                              children: M.intl.string(L.default.pMWdGA),
+                              children: L.intl.string(V.default.pMWdGA),
                           })
                         : null,
                 ],
@@ -258,27 +253,27 @@ function R(t) {
         ],
     });
 }
-function F(t) {
+function D(t) {
     let { variant: n, source: e, preselectedMode: l, ...d } = t;
     return (0, i.jsx)(a.d, {
         ...d,
         size: "lg",
-        "aria-label": M.intl.string(L.default.Ggh4C0),
+        "aria-label": L.intl.string(V.default.Ggh4C0),
         children: (0, i.jsxs)("div", {
-            className: V.Gt,
+            className: M.Gt,
             children: [
                 (0, i.jsx)("div", {
-                    className: V.W2,
+                    className: M.W2,
                     children: (0, i.jsx)(O, { variant: n, source: e, preselectedMode: l, onClose: d.onClose }),
                 }),
                 (0, i.jsx)("div", {
-                    className: V.VN,
+                    className: M.VN,
                     children: (0, i.jsx)(s.m, {
-                        text: M.intl.string(M.t.cpT0Cq),
+                        text: L.intl.string(L.t.cpT0Cq),
                         children: (0, i.jsx)(r.K, {
                             icon: o.XLargeIcon,
                             variant: "overlay-secondary",
-                            "aria-label": M.intl.string(M.t.cpT0Cq),
+                            "aria-label": L.intl.string(L.t.cpT0Cq),
                             onClick: d.onClose,
                         }),
                     }),
