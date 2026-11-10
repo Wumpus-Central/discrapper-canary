@@ -1913,7 +1913,16 @@ function iX(e) {
                           label: K.intl.formatToPlainString(iF.default["Cz/ZUM"], { noun: l }),
                           actionable: !0,
                       };
-        })({ accepted: p, isInviter: l === x, canGoToGuild: o, noun: N, isGameOrganizationFull: _ && E >= v }),
+        })({
+            accepted: p,
+            isInviter: l === x,
+            canGoToGuild: o,
+            noun: N,
+            isGameOrganizationFull: (function (e) {
+                let { memberCount: t, maxMembers: n } = e;
+                return null != t && null != n && t >= n;
+            })(c),
+        }),
         b = (0, u.bG)([iB.A], () => iB.A.isJoinFlowPending(d));
     return (0, s.jsx)(iP.h, {
         color: "purple",
