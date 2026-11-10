@@ -24,8 +24,8 @@ var l = n(477900),
     b = n(912630),
     N = n(530804),
     y = n(46653),
-    T = n(754712),
-    L = n(531685),
+    L = n(754712),
+    T = n(531685),
     R = n(562153),
     D = n(51082),
     k = n(566566),
@@ -56,20 +56,20 @@ n.d(
                     pulseSpeakingIndicator: H = !1,
                     paused: U = !1,
                 } = e,
-                z = T.Ay.getVideoComponent(),
+                z = L.Ay.getVideoComponent(),
                 W = (0, a.bG)([y.default], () => y.default.getId()),
                 { user: $, streamId: B, speaking: Z } = t,
                 Y = $.id === W,
                 Q = (0, D.Ay)(t),
-                X = (0, a.bG)([L.A], () => L.A.isFocused()),
-                K = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
-                q = (0, a.bG)([T.Ay], () => null != $.id && T.Ay.isLocalVideoDisabled($.id, (0, f.A)(t.type)), [
+                K = (0, a.bG)([T.A], () => T.A.isFocused()),
+                X = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
+                q = (0, a.bG)([L.Ay], () => null != $.id && L.Ay.isLocalVideoDisabled($.id, (0, f.A)(t.type)), [
                     $.id,
                     t.type,
                 ]),
                 J = (0, E.A)(n.guild_id, $.id),
                 ee = R.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${G.intl.string(G.t["pFO/Ph"])}` : ""),
-                et = Z && (K || X),
+                et = Z && (X || K),
                 en = o < 124 ? F : V,
                 { avatarSrc: el, avatarDecorationSrc: ei } = (0, _.A)({
                     userId: $.id,
@@ -90,7 +90,7 @@ n.d(
                 let { channel: e, selectedParticipant: t, user: n, isStageUnifiedCall: l } = ec.current;
                 !l && e.isGuildStageVoice() && !Q && t?.id === n.id && p.A.selectParticipant(e.id, null);
             }, [Q]),
-            s && !q && !M && Q && !u && null != z && T.Ay.supports(O.O5.VIDEO))
+            s && !q && !M && Q && !u && null != z && L.Ay.supports(O.O5.VIDEO))
                 ? null != er && null == ea
                     ? (0, l.jsx)(k.A, { avError: er, userId: t.id, width: o, selected: u })
                     : (0, l.jsx)(

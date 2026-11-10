@@ -29,8 +29,8 @@ let S = i.memo(function (e) {
         {
             enabled: N,
             zoomLevel: y,
-            minZoom: T,
-            maxZoom: L,
+            minZoom: L,
+            maxZoom: T,
             isDragging: R,
             isWheeling: D,
             isSlidering: k,
@@ -45,7 +45,7 @@ let S = i.memo(function (e) {
         } = i.useContext(A.e9),
         [U, z] = i.useState(!1),
         W = i.useRef(null),
-        $ = y > T,
+        $ = y > L,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
@@ -68,13 +68,13 @@ let S = i.memo(function (e) {
             },
             [H, y, P, F],
         ),
-        X = i.useCallback(
+        K = i.useCallback(
             (e) => {
                 j(e) && (e.preventDefault(), e.stopPropagation(), z(!0), Q({ x: e.clientX, y: e.clientY }));
             },
             [Q],
         ),
-        K = i.useCallback(
+        X = i.useCallback(
             (e) => {
                 U && (e.preventDefault(), e.stopPropagation(), Q({ x: e.clientX, y: e.clientY }));
             },
@@ -152,8 +152,8 @@ let S = i.memo(function (e) {
                               onPointerDown: function (e) {
                                   j(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
-                              onMouseDown: X,
-                              onMouseMove: K,
+                              onMouseDown: K,
+                              onMouseMove: X,
                               onMouseUp: q,
                               children: [
                                   (0, l.jsx)(J, {
@@ -178,15 +178,15 @@ let S = i.memo(function (e) {
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.MagnifyingGlassMinusIcon,
                                               onClick: et,
-                                              disabled: y <= T,
+                                              disabled: y <= L,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
-                                          minValue: T,
-                                          maxValue: L,
+                                          minValue: L,
+                                          maxValue: T,
                                           step: 0.01,
                                           value: y,
                                           onChange: ei,
@@ -201,7 +201,7 @@ let S = i.memo(function (e) {
                               children: (0, l.jsx)(d.K, {
                                   icon: g.MagnifyingGlassPlusIcon,
                                   onClick: en,
-                                  disabled: y >= L,
+                                  disabled: y >= T,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),

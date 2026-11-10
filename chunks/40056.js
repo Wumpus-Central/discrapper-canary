@@ -60,7 +60,7 @@ let p = { x: 0, y: 0 },
         (0, a.l0)(() => {
             y.current?.stop();
         });
-        let T = i.useCallback(
+        let L = i.useCallback(
                 (e, t) => {
                     if (null == N.current) return p;
                     let n = t ?? c,
@@ -72,13 +72,13 @@ let p = { x: 0, y: 0 },
                 },
                 [c],
             ),
-            L = i.useCallback(
+            T = i.useCallback(
                 (e, l, i) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == l || a === c) return;
                     f(!0);
                     let u = a / c;
-                    (b((e) => T({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
+                    (b((e) => L({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
                         d(a),
                         h(a, i, t),
                         null == y.current && (y.current = new r.Ep()),
@@ -86,7 +86,7 @@ let p = { x: 0, y: 0 },
                             f(!1);
                         }));
                 },
-                [T, o, n, t, c],
+                [L, o, n, t, c],
             ),
             R = i.useMemo(
                 () => ({
@@ -105,13 +105,13 @@ let p = { x: 0, y: 0 },
                     setIsSlidering: I,
                     videoAspectRatio: j,
                     setVideoAspectRatio: S,
-                    doZoom: L,
+                    doZoom: T,
                     panOffset: _,
                     setPanOffset: b,
                     wrapperRef: N,
-                    clampPanOffset: T,
+                    clampPanOffset: L,
                 }),
-                [T, L, x, C, v, m, o, n, _, j, c],
+                [L, T, x, C, v, m, o, n, _, j, c],
             );
         return (0, l.jsx)(g.Provider, { value: R, children: u });
     });

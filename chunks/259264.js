@@ -32,10 +32,10 @@ let v = s.memo(function (e) {
             emptyPreviewAspectRatio: _ = "16 / 9",
         } = e,
         [b, N] = s.useState(!0),
-        [y, T] = s.useState(null),
-        L = s.useCallback(
+        [y, L] = s.useState(null),
+        T = s.useCallback(
             (e) => {
-                ("cover-landscape" === A && T(e), n?.(e));
+                ("cover-landscape" === A && L(e), n?.(e));
             },
             [A, n],
         ),
@@ -81,7 +81,7 @@ let v = s.memo(function (e) {
                 (0, i.jsx)(r, {
                     className: a()(x.video, (0, f.t)(x, "video", R), { [x.mirror]: v }, p),
                     streamId: t,
-                    onResize: L,
+                    onResize: T,
                     onReady: k,
                     paused: E,
                 }),

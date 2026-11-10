@@ -3,8 +3,8 @@ var a = i(477900),
     r = i(503698),
     n = i.n(r),
     t = i(935462),
-    c = i(770178),
-    d = i(765548),
+    d = i(770178),
+    c = i(765548),
     o = i(857707),
     x = i(925192),
     m = i(862649);
@@ -16,13 +16,13 @@ i.d(
             let { transitionState: e, orientation: i, impressionRef: r, ariaLabel: h, video: v, footer: u } = s,
                 j = "portrait" === i,
                 [N, p] = l.useState(142),
-                C = (0, d.A)((s) => {
+                C = (0, c.A)((s) => {
                     p(s.target.offsetHeight);
                 }),
-                g = (0, c.w)(C),
-                f = l.useMemo(() => ({ isPortrait: j, portraitFooterRef: g }), [j, g]);
+                f = (0, d.w)(C),
+                g = l.useMemo(() => ({ isPortrait: j, portraitFooterRef: f }), [j, f]);
             return (0, a.jsx)(o.D.Provider, {
-                value: f,
+                value: g,
                 children: (0, a.jsx)("div", {
                     style: j ? { "--custom-portrait-footer-height": `${N}px` } : void 0,
                     children: (0, a.jsx)(t.EO, {

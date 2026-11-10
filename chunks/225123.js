@@ -2041,10 +2041,10 @@ function e5() {
 function e7() {
     return (B.update(), !1);
 }
-function e8(e) {
+function e4(e) {
     F.isSessionEstablished() && F.streamDelete(e);
 }
-class e4 extends a.Ay.Store {
+class e8 extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         (this.waitFor(A.default, f.A, h.A, I.Ay, p.A, m.A, T.Ay, g.A, S.A, E.A),
@@ -2067,7 +2067,7 @@ class e4 extends a.Ay.Store {
         return eJ;
     }
 }
-let e9 = new e4(l.h, {
+let e9 = new e8(l.h, {
     START_SESSION: function () {
         return F.isClosed()
             ? (eZ.verbose("Socket is reconnecting because of starting new session"), F.connect())
@@ -2239,7 +2239,7 @@ let e9 = new e4(l.h, {
                 ((e = S.A.getAllActiveStreamKeys().find((e) => (0, u.Iy)(e).ownerId === A.default.getId())),
                     S.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
-                        .forEach((e) => e8(e)));
+                        .forEach((e) => e4(e)));
             }
             F.streamWatch(t);
         }
@@ -2247,7 +2247,7 @@ let e9 = new e4(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return (e8(t), e6(), !1);
+        return (e4(t), e6(), !1);
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;

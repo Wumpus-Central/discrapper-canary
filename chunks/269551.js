@@ -942,8 +942,8 @@ var eJ = n(918467),
     e6 = n(785941),
     e9 = n(331322),
     e3 = n(773669),
-    e7 = n(480750),
-    e4 = n(93955),
+    e4 = n(480750),
+    e7 = n(93955),
     te = n(442036),
     tt = n(60140),
     tn = n(602051),
@@ -969,7 +969,7 @@ function tr(e) {
                           null != n.summary &&
                               "" !== n.summary &&
                               (0, s.jsx)(e9.B, {
-                                  onClick: (e) => (0, e7.h)(e, t, tn.S.HOME),
+                                  onClick: (e) => (0, e4.h)(e, t, tn.S.HOME),
                                   children: (0, s.jsx)(N.E, {
                                       variant: "body-sm/normal",
                                       className: o()(tl.Tm, tl.vd),
@@ -979,7 +979,7 @@ function tr(e) {
                               }),
                       ],
                   }),
-                  (0, s.jsx)(e4.A, { collectionId: a, variant: "condensed", surface: tn.S.HOME }),
+                  (0, s.jsx)(e7.A, { collectionId: a, variant: "condensed", surface: tn.S.HOME }),
               ],
           });
 }
@@ -1014,7 +1014,7 @@ let ts = function (e) {
                     page_category: d?.pageCategory,
                     cta_name: "shop latest category hero button",
                 }),
-                (0, e7.l)(t, tn.S.HOME, tn.Z.VIEW_ALL_ITEMS_CLICKED));
+                (0, e4.l)(t, tn.S.HOME, tn.Z.VIEW_ALL_ITEMS_CLICKED));
         }
         return null == u || null == g
             ? null

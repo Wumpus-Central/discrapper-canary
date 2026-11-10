@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     jk: "richTooltipContent_xlDuA-",
     Sx: "richTooltipContentLg_xlDuA-",
     s: "assetContainer_xlDuA-",

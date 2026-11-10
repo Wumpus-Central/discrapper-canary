@@ -8,8 +8,8 @@ var i = t(477900),
     c = t(952270),
     u = t(265872),
     h = t(939249),
-    A = t(625903),
-    m = t(396696),
+    m = t(625903),
+    A = t(396696),
     p = t(435738),
     g = t(652215),
     x = t(792996),
@@ -44,7 +44,7 @@ function I(e) {
                     checked: l,
                     leadingAccessory: { type: "icon", icon: c.EyeSlashIcon },
                     action: () => {
-                        ((0, m.Il)(), n?.());
+                        ((0, A.Il)(), n?.());
                     },
                 }),
             ],
@@ -78,7 +78,7 @@ t.d(
                         },
                         className: f.Se,
                         focusProps: { offset: 4 },
-                        children: (0, i.jsx)(A.SettingsIcon, { size: "xxs", color: "currentColor" }),
+                        children: (0, i.jsx)(m.SettingsIcon, { size: "xxs", color: "currentColor" }),
                     }),
             });
         },

@@ -7,9 +7,9 @@ i.d(
     {},
     {
         A: function (s) {
-            let { prefix: e, advertiserDetails: i, secondaryAction: t, primaryAction: c } = s,
-                { isPortrait: d, portraitFooterRef: o } = l.useContext(r.D);
-            return d && null != t
+            let { prefix: e, advertiserDetails: i, secondaryAction: t, primaryAction: d } = s,
+                { isPortrait: c, portraitFooterRef: o } = l.useContext(r.D);
+            return c && null != t
                 ? (0, a.jsxs)("div", {
                       ref: o,
                       className: n.bx,
@@ -22,17 +22,17 @@ i.d(
                                       className: n.ad,
                                       children: (0, a.jsx)("div", { className: n.Ik, children: t }),
                                   }),
-                                  c,
+                                  d,
                               ],
                           }),
                       ],
                   })
                 : (0, a.jsxs)("div", {
-                      ref: d ? o : void 0,
+                      ref: c ? o : void 0,
                       className: n.qr,
                       children: [
                           (0, a.jsxs)("div", { className: n.zH, children: [e, i] }),
-                          (0, a.jsxs)("div", { className: n.o1, children: [t, c] }),
+                          (0, a.jsxs)("div", { className: n.o1, children: [t, d] }),
                       ],
                   });
         },
