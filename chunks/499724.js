@@ -14,6 +14,7 @@ let I = h.z.object({
             "declarative",
             "declarative_sibling",
             "declarative_retired",
+            "declarative_predecessor",
         ]),
         explicit: h.z.boolean(),
         inherited: h.z.boolean(),
@@ -36,6 +37,7 @@ let I = h.z.object({
                 friend_online: I,
                 profile_updates: I,
                 server_trending: I,
+                reactions: I.extend({ value: h.z.number().int().min(0).max(2) }).optional(),
             })
             .strip(),
     });
