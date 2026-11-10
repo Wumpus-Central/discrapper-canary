@@ -145,7 +145,7 @@ function h(e) {
                 : [
                       {
                           id: l.aS.HEXAGON,
-                          iconSource: "/assets/a128387aa2660268.webp",
+                          iconSource: "/assets/236f9310543771ae.webp",
                           isPremium: (0, r.sD)(a.vB.APP_ICON),
                           expiresAt: a.zv,
                           name: c.intl.string(o.default.JC4Pii),
