@@ -55,12 +55,42 @@ let A = {
         [r.V.SHOES]: u.default.KHsJlD,
     },
     p = {
-        [r.V.FACE]: { commonMessage: u.default.mmlFSp, topMessage: u.default.PNMVaH },
-        [r.V.OUTFIT]: { commonMessage: u.default["7ycqkx"], topMessage: u.default["stpl+C"] },
-        [r.V.HAT]: { commonMessage: u.default.TTkbUY, topMessage: u.default["2UDofx"] },
-        [r.V.SHOES]: { commonMessage: u.default.vX6Vdt, topMessage: u.default.cbssIC },
-        [r.V.WEARABLE]: { commonMessage: u.default.ZHs2bR, topMessage: u.default.yoZxcn },
-        [r.V.AURA]: { commonMessage: u.default.m9gYwn, topMessage: u.default.mCmdPk },
+        [r.V.FACE]: {
+            commonMessage: u.default.mmlFSp,
+            topMessage: u.default.PNMVaH,
+            lockedCommonMessage: u.default.Yi9yiQ,
+            lockedTopMessage: u.default.ZHmprE,
+        },
+        [r.V.OUTFIT]: {
+            commonMessage: u.default["7ycqkx"],
+            topMessage: u.default["stpl+C"],
+            lockedCommonMessage: u.default.Wpd6ol,
+            lockedTopMessage: u.default.tU2fxW,
+        },
+        [r.V.HAT]: {
+            commonMessage: u.default.TTkbUY,
+            topMessage: u.default["2UDofx"],
+            lockedCommonMessage: u.default["5+8d3J"],
+            lockedTopMessage: u.default.X9NBcv,
+        },
+        [r.V.SHOES]: {
+            commonMessage: u.default.vX6Vdt,
+            topMessage: u.default.cbssIC,
+            lockedCommonMessage: u.default.cyJktg,
+            lockedTopMessage: u.default["Yjz+5u"],
+        },
+        [r.V.WEARABLE]: {
+            commonMessage: u.default.ZHs2bR,
+            topMessage: u.default.yoZxcn,
+            lockedCommonMessage: u.default["2tBPVn"],
+            lockedTopMessage: u.default.HPCBcH,
+        },
+        [r.V.AURA]: {
+            commonMessage: u.default.m9gYwn,
+            topMessage: u.default.mCmdPk,
+            lockedCommonMessage: u.default.uT5tyB,
+            lockedTopMessage: u.default["5Mc39J"],
+        },
     };
 function m(e) {
     return (0, o.nb)(e.trait, e.optionId);
@@ -73,12 +103,13 @@ function T(e) {
     }
     if (n === s.K.DEFAULT) return _.intl.string(u.default["4aaADG"]);
     if (n === s.K.NITRO)
-        return e.status === l.eP.NITRO_LOCKED
-            ? _.intl.formatToPlainString(u.default["3Wq/bk"], { subscribeHook: (e) => e })
-            : _.intl.string(u.default.sQ1bDT);
+        return e.status === l.eP.NITRO_LOCKED ? _.intl.string(u.default.vic5bB) : _.intl.string(u.default.sQ1bDT);
     if (t === r.V.BASE) return;
-    let { commonMessage: i, topMessage: o } = p[t];
-    return n === s.K.COMMON ? _.intl.string(i) : _.intl.formatToPlainString(o, { percent: 100 - a.ei[n] });
+    let { commonMessage: i, topMessage: o, lockedCommonMessage: d, lockedTopMessage: c } = p[t],
+        E = e.status === l.eP.LOCKED;
+    return n === s.K.COMMON
+        ? _.intl.string(E ? d : i)
+        : _.intl.formatToPlainString(E ? c : o, { percent: 100 - a.ei[n] });
 }
 let g = {
     [r.V.FACE]: u.default["4IdR/H"],

@@ -1211,6 +1211,16 @@
     justify-content: center
 }
 
+.noneIcon_NgozOX {
+    justify-content: flex-start;
+    width: calc(var(--space-32) - var(--space-4))
+}
+
+.noneIcon_NgozOX>svg {
+    flex-shrink: 0;
+    margin-inline-start: calc(var(--space-4)*-1/2)
+}
+
 .gameIcon_NgozOX {
     border-radius: var(--radius-xs)
 }
@@ -1406,4 +1416,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=949117.f33f19b488452bfd.css.map*/
+/*# sourceMappingURL=949117.f7ed0bbdc1b4454e.css.map*/

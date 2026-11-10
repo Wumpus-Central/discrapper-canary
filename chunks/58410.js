@@ -11,5 +11,6 @@ t.exports = {
     TJ: "itemName_NgozOX",
     Kk: "icon_NgozOX",
     Gc: "unknownIcon_NgozOX",
+    Wn: "noneIcon_NgozOX",
     Gt: "gameIcon_NgozOX",
 };
