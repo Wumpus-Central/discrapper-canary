@@ -180,11 +180,11 @@ let q = _.Ay.connectStores([P.Ay, y.A], (e) => {
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: U.Ay.getVoiceStates(t.guild_id)[t.id] };
     })(z),
-    J = _.Ay.connectStores([D.default], (e) => {
+    Z = _.Ay.connectStores([D.default], (e) => {
         let { guild: t } = e;
         return { unread: D.default.hasUnread(t.id) };
     })(k.OS),
-    Z = _.Ay.connectStores([P.Ay, v.A], (e) => {
+    J = _.Ay.connectStores([P.Ay, v.A], (e) => {
         let { channel: t } = e,
             n = null,
             i = v.A.getState().statuses;
@@ -265,7 +265,7 @@ class en extends r.PureComponent {
                         n.e(8159),
                         n.e(24312),
                         n.e(361922),
-                        n.e(65764),
+                        n.e(179028),
                         n.e(307564),
                         n.e(597622),
                         n.e(965886),
@@ -361,7 +361,7 @@ class en extends r.PureComponent {
                         n.e(528311),
                         n.e(411938),
                         n.e(653383),
-                        n.e(277838),
+                        n.e(217991),
                         n.e(9796),
                         n.e(952068),
                         n.e(768289),
@@ -481,8 +481,7 @@ class en extends r.PureComponent {
                         n.e(622936),
                         n.e(45268),
                         n.e(617281),
-                        n.e(164716),
-                        n.e(170282),
+                        n.e(733199),
                         n.e(603977),
                         n.e(655327),
                         n.e(335532),
@@ -664,7 +663,6 @@ class en extends r.PureComponent {
                         n.e(727779),
                         n.e(412743),
                         n.e(585503),
-                        n.e(795365),
                         n.e(203589),
                         n.e(636373),
                         n.e(382465),
@@ -801,7 +799,6 @@ class en extends r.PureComponent {
                         n.e(26001),
                         n.e(159957),
                         n.e(540715),
-                        n.e(877745),
                         n.e(174192),
                         n.e(414591),
                         n.e(652111),
@@ -1324,7 +1321,7 @@ class en extends r.PureComponent {
                 );
             case S.rD.GUILD:
                 return (0, i.jsx)(
-                    J,
+                    Z,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1356,7 +1353,7 @@ class en extends r.PureComponent {
                 );
             case S.rD.GROUP_DM:
                 return (0, i.jsx)(
-                    Z,
+                    J,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,

@@ -46,7 +46,7 @@ let w = (0, a.Fe)({
                 n.e(505866),
                 n.e(291329),
                 n.e(64769),
-                n.e(506933),
+                n.e(329172),
                 n.e(992956),
                 n.e(880150),
                 n.e(490743),
@@ -256,20 +256,20 @@ let B = l.Ay.connectStores([S.A, d.Ay, y.A, O.A, L.Ay, R.A, A.A, N.Ay, h.A], (e)
         z = L.Ay.getChannelId() === X,
         q = null != X && A.A.getChatOpen(X),
         Q = T || C,
-        J = Q && null != o && (0, c.q)(o.applicationId),
-        Z = !Q && null != t && z;
+        Z = Q && null != o && (0, c.q)(o.applicationId),
+        J = !Q && null != t && z;
     return {
         selectedPIPWindow: t,
         pipWindows: 0 === K.length ? k : K,
         pipWidth: j,
-        maxX: B.width - (Z && q ? $ : 0),
+        maxX: B.width - (J && q ? $ : 0),
         maxY: B.height,
         dockedRect: R.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {
             return G && (0, g.q)({ withTitleBar: i, isFullScreen: F }) ? e - (0, f.LI)({ isPopoutWindow: G }) : e;
         },
         appContext: V,
-        roundCorners: !J,
+        roundCorners: !Z,
         windowSize: B,
         inPopoutWindow: G,
         activityPIPWindow: Y,
