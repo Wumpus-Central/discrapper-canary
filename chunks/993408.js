@@ -118,9 +118,10 @@ function w(e) {
     return v(e, a.R.PROFILE_EFFECT);
 }
 function G(e) {
-    let t = new Date(),
-        n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
-    return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5);
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now(),
+        n = new Date(t),
+        i = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
+    return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - i) / 864e5);
 }
 function x(e) {
     return e?.type === a.R.BUNDLE;
