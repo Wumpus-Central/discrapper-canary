@@ -35,7 +35,7 @@ var l = n(477900),
     w = n(878014),
     D = n(202475),
     U = n(31823),
-    G = n(516106),
+    G = n(316363),
     F = n(558620),
     B = n(427675),
     H = n(169797),
@@ -280,7 +280,7 @@ function Q(e) {
                 (e4(e), ev(e));
             },
         }),
-        e5 = i.useCallback(
+        e8 = i.useCallback(
             (e) =>
                 e.customerActionCancelled
                     ? ((0, c.fE)(), eo(A.h.WAITING), { shouldReturnEarly: !0 })
@@ -289,7 +289,7 @@ function Q(e) {
                       : (eo(A.h.COMPLETED), { shouldReturnEarly: !1 }),
             [eo],
         ),
-        e8 = i.useCallback(() => {
+        e5 = i.useCallback(() => {
             eQ || e$(!1);
         }, [eQ]),
         e9 = i.useCallback(
@@ -365,7 +365,7 @@ function Q(e) {
                                 }
                         })();
                     } finally {
-                        (eA(!1), e8());
+                        (eA(!1), e5());
                     }
                 })();
             } finally {
@@ -505,8 +505,8 @@ function Q(e) {
         })({
             onPurchaseAttempt: e3,
             onPurchaseError: e4,
-            onPurchaseComplete: e5,
-            onPurchaseFinalize: e8,
+            onPurchaseComplete: e8,
+            onPurchaseFinalize: e5,
             hasRedirectURL: eQ,
             isGift: eM,
             analyticsLocation: L,

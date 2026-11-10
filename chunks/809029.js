@@ -10,9 +10,9 @@ var l = n(477900),
     m = n(615396),
     p = n(120700),
     C = n(660505),
-    h = n(463376),
-    f = n(558620),
-    E = n(516106),
+    h = n(558620),
+    f = n(316363),
+    E = n(602787),
     S = n(379912),
     g = n(792996);
 n.d(
@@ -20,7 +20,7 @@ n.d(
     {},
     {
         E: function (e) {
-            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: I } = (0, h.i)(),
+            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: I } = (0, E.i)(),
                 {
                     activeSubscription: y,
                     isPremium: A,
@@ -35,7 +35,7 @@ n.d(
                     openInvoiceId: R,
                     reviewWarningMessage: O,
                     initialPlanId: M,
-                } = (0, E.t4)((e) => ({
+                } = (0, f.t4)((e) => ({
                     initialPlanId: e.getInitialPlanId(),
                     activeSubscription: e.activeSubscription,
                     isPremium: e.get("isPremiumPurchase"),
@@ -51,14 +51,14 @@ n.d(
                     premiumTenantParams: e.getTenantParams(p.C.PREMIUM_CHECKOUT) ?? {},
                 })),
                 { subscriptionTier: L } = j,
-                k = (0, f.A)(),
+                k = (0, h.A)(),
                 w = e.handlePaymentSourceAdd,
                 D = null != R,
                 U = null == M && null == L,
                 G = i.useMemo(() => !_ && (x ? U && A : A), [x, U, A, _]),
                 F = e.handleStepChange,
                 B = (0, d.J$)(v.paymentSourceId),
-                H = (0, h.R)({ hasOpenInvoice: D ?? !1 }),
+                H = (0, E.R)({ hasOpenInvoice: D ?? !1 }),
                 W = null != y && !P,
                 V = i.useCallback(
                     () =>
