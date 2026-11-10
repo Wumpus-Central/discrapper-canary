@@ -1,9 +1,9 @@
 var r = n(477900);
 n(582128);
 var i = n(192308),
-    l = n(857512),
-    s = n(4227),
-    a = n(466459);
+    s = n(857512),
+    a = n(4227),
+    l = n(466459);
 let u = "collectibles shop product details modal";
 n.d(
     t,
@@ -18,17 +18,17 @@ n.d(
                 category: o,
                 shouldCheckoutWithOrbs: d,
                 analyticsSource: c,
-                analyticsLocations: f,
-                returnRef: I,
-                tab: v,
-                giftRecipient: m,
-                giftingOrigin: p,
+                analyticsLocations: I,
+                returnRef: v,
+                tab: f,
+                giftRecipient: p,
+                giftingOrigin: m,
                 cardId: g,
-                sessionId: A,
-                tilePosition: E,
+                sessionId: x,
+                tilePosition: h,
             } = e;
             if (t.isCategoryReward) {
-                let { isPurchased: e } = (0, a.o)(s.A, t);
+                let { isPurchased: e } = (0, l.o)(a.A, t);
                 if (!e) return;
             }
             (0, i.mM)(
@@ -190,9 +190,9 @@ n.d(
                         n.e(676418),
                         n.e(70833),
                         n.e(897073),
-                        n.e(648365),
                         n.e(161275),
                         n.e(761253),
+                        n.e(401518),
                         n.e(521930),
                         n.e(166495),
                         n.e(362274),
@@ -328,6 +328,7 @@ n.d(
                         n.e(858337),
                         n.e(190889),
                         n.e(362422),
+                        n.e(260218),
                         n.e(3131),
                         n.e(61129),
                         n.e(820683),
@@ -465,19 +466,19 @@ n.d(
                         n.e(525660),
                     ]).then(n.bind(n, 355735));
                     return (n) =>
-                        (0, r.jsx)(l.R9, {
-                            newValue: { cardId: g, sessionId: A, tilePosition: E },
+                        (0, r.jsx)(s.R9, {
+                            newValue: { cardId: g, sessionId: x, tilePosition: h },
                             children: (0, r.jsx)(e, {
                                 ...n,
                                 product: t,
                                 category: o,
                                 shouldCheckoutWithOrbs: d,
                                 analyticsSource: c,
-                                analyticsLocations: f,
-                                returnRef: I,
-                                tab: v,
-                                giftRecipient: m,
-                                giftingOrigin: p,
+                                analyticsLocations: I,
+                                returnRef: v,
+                                tab: f,
+                                giftRecipient: p,
+                                giftingOrigin: m,
                             }),
                         });
                 },
