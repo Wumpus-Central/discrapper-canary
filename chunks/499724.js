@@ -38,6 +38,8 @@ let I = h.z.object({
                 profile_updates: I,
                 server_trending: I,
                 reactions: I.extend({ value: h.z.number().int().min(0).max(2) }).optional(),
+                summary_reminder: I,
+                upcoming_server_event: I,
             })
             .strip(),
     });
