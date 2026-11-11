@@ -704,7 +704,7 @@ if (null == e7 || "0.0.0" !== e7.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671267, Version Hash: ee40f17161dd203458e5c66f29e02c9bdb90d548`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671270, Version Hash: e0d61ebc48ec0ae8c06cbaa4922fb681dc0d291d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -776,7 +776,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671267";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671270";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
         let s = ej?.processUtils?.getLastCrash;
@@ -15855,7 +15855,7 @@ let I2 = "isHideDevBanner",
                     className: tc()(I1.Wz, I1.mr),
                     children: [
                         (0, P.jsx)(I0, { className: I1.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671267" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671270" }),
                         (0, P.jsx)(r, {}),
                     ],
                 })
@@ -31358,7 +31358,7 @@ class OQ extends nu.A {
     maybeOpenServerDriveAnnouncementModal = (e, t, i) => {
         if ((0, tK.kB)(Oq)) return !1;
         let { id: r, promotionId: a } = e,
-            s = (0, Oz.H)({ promotionId: a, properties: e.properties, isPreview: t });
+            s = (0, Oz.extractAnnouncementModalContent)({ promotionId: a, properties: e.properties, isPreview: t });
         return (
             null != s &&
             ((0, tK.mM)(
@@ -46419,7 +46419,6 @@ let wT = (0, tY.Fe)({
             n.e(286197),
             n.e(191782),
             n.e(199641),
-            n.e(371032),
             n.e(676237),
             n.e(583917),
             n.e(517469),
@@ -46435,6 +46434,7 @@ let wT = (0, tY.Fe)({
             n.e(355663),
             n.e(693173),
             n.e(469709),
+            n.e(666326),
             n.e(78),
             n.e(927682),
             n.e(936001),

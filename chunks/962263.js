@@ -1,4 +1,4 @@
-n.d(t, { default: () => X, H: () => J });
+n.d(t, { default: () => X, extractAnnouncementModalContent: () => J });
 var r = n(477900),
     a = n(582128),
     o = n(517352),
@@ -21,15 +21,15 @@ var r = n(477900),
     O = n(652215),
     g = n(49999),
     b = n(792996),
-    I = n(696918),
-    x = n(693369);
+    x = n(696918),
+    I = n(693369);
 (n(323874), n(14289), n(35956));
 var L = n(503698),
     y = n.n(L),
     R = n(613412),
     v = n(855986),
-    k = n(815021),
-    C = n(935462),
+    C = n(815021),
+    k = n(935462),
     D = n(805251),
     P = n(534514),
     j = n(834730),
@@ -86,8 +86,8 @@ function Z(e) {
             subHeader: h,
             subHeaderExtra: T,
             featureCards: f,
-            changeLogId: I,
-            button: x,
+            changeLogId: x,
+            button: I,
             body: L,
             disclaimer: D,
             disclaimerExtra: q,
@@ -185,26 +185,26 @@ function Z(e) {
                 if ("video" === u.type || "embed" === u.type) {
                     let [e, t] = eg();
                     (M.default.track(O.HAw.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: I,
+                        change_log_id: x,
                         seconds_played: Math.round(e / 1e3),
                     }),
                         M.default.track(O.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: I,
+                            change_log_id: x,
                             seconds_unmuted: Math.round(t / 1e3),
                         }));
                 }
             },
-            [I, u.type],
+            [x, u.type],
         ),
         a.useEffect(() => {
             if (Y.A.getLayers().includes(O.zgK.COMPONENT_PLAYGROUND)) return;
             (0, A.Vh)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, { snowflakeId: l });
             let e = Date.now();
             return (
-                M.default.track(O.HAw.CHANGE_LOG_OPENED, { change_log_id: I }),
+                M.default.track(O.HAw.CHANGE_LOG_OPENED, { change_log_id: x }),
                 () => {
                     (M.default.track(O.HAw.CHANGE_LOG_CLOSED, {
-                        change_log_id: I,
+                        change_log_id: x,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
                         (0, A.qr)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, l, {
@@ -217,8 +217,8 @@ function Z(e) {
                         }));
                 }
             );
-        }, [I, l, eT]),
-        (0, r.jsx)(C.EO, {
+        }, [x, l, eT]),
+        (0, r.jsx)(k.EO, {
             "data-migration-pending": !0,
             className: y()(z.zr, z.kv, c),
             transitionState: J,
@@ -230,9 +230,9 @@ function Z(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: z.cG,
-                        children: (0, r.jsx)(k.J, { "data-migration-pending": !0, onClick: async () => await Z() }),
+                        children: (0, r.jsx)(C.J, { "data-migration-pending": !0, onClick: async () => await Z() }),
                     }),
-                    (0, r.jsxs)(C.$m, {
+                    (0, r.jsxs)(k.$m, {
                         "data-migration-pending": !0,
                         className: z.Qs,
                         scrollbarType: "auto",
@@ -253,7 +253,7 @@ function Z(e) {
                                             poster: u.poster,
                                             onPlay: (e) => {
                                                 (M.default.track(O.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: I,
+                                                    change_log_id: x,
                                                 }),
                                                     er(Date.now()),
                                                     ec(!0),
@@ -301,7 +301,7 @@ function Z(e) {
                                             renderLinkComponent: $.bU,
                                             onPlay: () => {
                                                 M.default.track(O.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: I,
+                                                    change_log_id: x,
                                                 });
                                             },
                                         });
@@ -345,7 +345,7 @@ function Z(e) {
                     (0, r.jsxs)("div", {
                         className: z.xQ,
                         children: [
-                            x(),
+                            I(),
                             null != D &&
                                 "" !== D &&
                                 (0, r.jsxs)(j.E, {
@@ -364,7 +364,7 @@ function Z(e) {
 function J(e) {
     let { promotionId: t, properties: n, isPreview: r } = e,
         a = l.m.clone(n);
-    if (!(0, x.lp)(a, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) return null;
+    if (!(0, I.lp)(a, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) return null;
     {
         let { isDismissed: e } = (0, _.u$)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, t);
         return !r && e ? null : (r && (a.properties.announcementModalVariant1.dismissKey = ""), a);
@@ -375,8 +375,8 @@ function X(e) {
         { location: y } = (0, c.p)(),
         { analyticsLocations: R } = (0, m.Ay)(u.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         v = (0, d.Ay)(),
-        k = (0, s.q)(v);
-    if ((0, x.lp)(L, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) {
+        C = (0, s.q)(v);
+    if ((0, I.lp)(L, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) {
         let e = (function (e) {
             let t,
                 {
@@ -391,7 +391,7 @@ function X(e) {
                     isLightTheme: m,
                 } = e,
                 _ = `AnnouncementModalVariant1_${n}`,
-                { onClose: x } = c,
+                { onClose: I } = c,
                 L = s.button?.copy ?? b.intl.string(b.t.YScQSF),
                 y = s.button?.buttonAction;
             switch (y) {
@@ -414,27 +414,27 @@ function X(e) {
                     shopCollectionId: s.button?.shopCollectionId?.value,
                     analyticsLocations: d,
                     analyticsLocation: u,
-                    onClose: x,
+                    onClose: I,
                 }),
                 v = (0, T.C)(s.helpArticle, s.helpArticleId),
-                k =
+                C =
                     null != v
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: I.$T, href: v.url, children: v.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: v.url, children: v.linkText }),
                                   ],
                               })
                         : void 0,
-                C = (0, T.C)(s.disclaimer?.disclaimerHelpArticle, ""),
+                k = (0, T.C)(s.disclaimer?.disclaimerHelpArticle, ""),
                 D =
-                    null != C
+                    null != k
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: I.$T, href: C.url, children: C.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: k.url, children: k.linkText }),
                                   ],
                               })
                         : void 0,
@@ -457,7 +457,7 @@ function X(e) {
                     header: s.header,
                     modalTopPill: s.modalTopPill,
                     subHeader: s.subheader,
-                    subHeaderExtra: k,
+                    subHeaderExtra: C,
                     body: s.body,
                     heroArt: P,
                     featureCards: s.featureCards.map((e) => {
@@ -469,7 +469,7 @@ function X(e) {
                                               children: [
                                                   "\xa0",
                                                   (0, r.jsx)(h.Anchor, {
-                                                      className: I.$T,
+                                                      className: x.$T,
                                                       href: t.url,
                                                       children: t.linkText,
                                                   }),
@@ -529,7 +529,7 @@ function X(e) {
             renderModalProps: _,
             analyticsLocations: R,
             analyticsLocation: y,
-            isLightTheme: k,
+            isLightTheme: C,
         });
         return (0, r.jsx)(Z, { ...e });
     }
