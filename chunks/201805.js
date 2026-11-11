@@ -411,8 +411,11 @@ n.d(
                         } catch (e) {}
                     })();
                 }, [d]));
-            let A = !t && !c && !a && !r && null == e && null == d;
-            return { questHomeHero: a || r ? null : d, isLoading: t || c, confirmedEmpty: A };
+            let [A, C] = i.useState(!1);
+            t || c || A || C(!0);
+            let E = !A,
+                g = !E && !a && !r && null == e && null == d;
+            return { questHomeHero: a || r ? null : d, isLoading: E, confirmedEmpty: g };
         },
         wo: j,
     },

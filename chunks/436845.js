@@ -4802,12 +4802,12 @@ function lU(e) {
     let { children: t, onQuestCtaClick: n, questHomeHero: s, isLoadingQuestHomeHero: l, hasSearchResults: i } = e,
         { hasError: a, isLoading: u } = (0, $.zT)(),
         c = null != s && !a,
-        d = c && (l || u);
+        d = l || (c && u);
     return (0, r.jsxs)("div", {
         className: o()(lH.iS, { [lH.R]: i }),
         children: [
             d && (0, r.jsx)(tJ, {}),
-            c ? !l && (0, r.jsx)(tX, { hero: s, isBannerLoading: u, onQuestCtaClick: n }) : t,
+            !l && (c ? (0, r.jsx)(tX, { hero: s, isBannerLoading: u, onQuestCtaClick: n }) : t),
         ],
     });
 }
