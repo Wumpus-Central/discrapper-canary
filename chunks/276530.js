@@ -914,13 +914,13 @@ var ew = n(46653),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "671157",
-        s = "1e4960ff78f396c90c4daf7798530bb0ce73c3a8".substring(0, 7),
+        n = "671159",
+        s = "74c22c2b58754c0fbaa5ed69d23f4d8ab691d258".substring(0, 7),
         r = eW.A?.app.getVersion(),
         l = eW.A?.app.getBuildNumber(),
         c = eW.A?.app.getAppArch(),
         o = eV.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eQ.A)("1794358995390", !1) : null,
+        u = null != o ? (0, eQ.A)("1794359021644", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = eX()?.os?.toString();
@@ -1086,10 +1086,10 @@ function e5() {
     });
 }
 var e2 = n(402651),
-    e9 = n(669067),
-    e4 = n(830543),
-    e3 = n(953056);
-let e8 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
+    e4 = n(669067),
+    e9 = n(830543),
+    e8 = n(953056);
+let e3 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
     e7 = new Map([[eL.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
@@ -1100,7 +1100,7 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eD.default.getCurrentUser() && (g(!0), (0, e4.default)());
+            null == eD.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             ew.default.addChangeListener(e),
@@ -1117,7 +1117,7 @@ function e6(e) {
               emptyState: tt,
               sidebarFooter: e5,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e9._)(e);
+                  e3.has(e) || (0, e4._)(e);
                   let t = e7.get(e);
                   (null != t &&
                       (0, o.x)({
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e3.P,
+            className: e8.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e3.t,
+        className: e8.t,
         children: [
             (0, i.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: G.intl.string(G.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: G.intl.string(G.t.XclvsB) }),
