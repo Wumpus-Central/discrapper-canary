@@ -27,9 +27,7 @@ n.d(
                 });
             function e() {
                 (0, r.mM)(async () => {
-                    let { default: e } = await Promise.all([n.e(78987), n.e(944602), n.e(825280)]).then(
-                        n.bind(n, 987482),
-                    );
+                    let { default: e } = await Promise.all([n.e(78987), n.e(825280)]).then(n.bind(n, 987482));
                     return (t) => (0, i.jsx)(e, { source: "Screenshare Unavailable", ...t });
                 });
             }
