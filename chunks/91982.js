@@ -84,13 +84,18 @@ function u(e) {
                 null != x.current && (clearInterval(x.current), (x.current = null));
             };
         }, [i, d, S, a, b, j, v, n]));
-    let M = (0, c.useCallback)(() => {
-            let e = n();
-            if (null != a && null != e) {
-                let n = Date.now();
-                (e - a.segmentStartSec > 0.2 && j({ ...a, endTimeMs: n, segmentEndSec: e }), u(null), (h.current = !1));
-            }
-        }, [a, j, n]),
+    let M = (0, c.useCallback)(
+            (e) => {
+                let t = e ?? n();
+                if (null != a && null != t) {
+                    let e = Date.now();
+                    (t - a.segmentStartSec > 0.2 && j({ ...a, endTimeMs: e, segmentEndSec: t }),
+                        u(null),
+                        (h.current = !1));
+                }
+            },
+            [a, j, n],
+        ),
         N = (0, c.useRef)(M);
     N.current = M;
     let k = (0, c.useCallback)((e, n) => {
@@ -112,8 +117,8 @@ function u(e) {
         handleFirstFrame: (0, c.useCallback)((e) => {
             f(!0);
         }, []),
-        handleSeek: (0, c.useCallback)(() => {
-            N.current();
+        handleSeek: (0, c.useCallback)((e) => {
+            N.current(e);
         }, []),
     };
 }

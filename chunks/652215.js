@@ -3933,6 +3933,7 @@ var ih =
         (eP.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED = "quest_video_enrollment_retry_attempted"),
         (eP.ATT_PROMPT_RESULT = "att_prompt_result"),
         (eP.AD_VIDEO_MODAL_CLOSED = "ad_video_modal_closed"),
+        (eP.AD_VIDEO_SEGMENT_WATCHED = "ad_video_segment_watched"),
         (eP.AD_VIDEO_PROGRESSED = "ad_video_progressed"),
         (eP.AD_VIDEO_LOOPED = "ad_video_looped"),
         (eP.AD_VIDEO_PAUSED = "ad_video_paused"),
