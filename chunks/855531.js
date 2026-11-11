@@ -15,6 +15,11 @@ n.d(
     t,
     {},
     {
+        dc: function (e) {
+            if ((0, r.Aq)()) return !1;
+            let t = s.getConfig({ location: e });
+            return t.enabled && t.questHomeRedirect;
+        },
         dp: function (e) {
             return s.useConfig({ location: e }).enabled;
         },
