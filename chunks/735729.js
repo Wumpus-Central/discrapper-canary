@@ -1,11 +1,11 @@
-var t = a(855986),
-    l = a(813645);
-a.d(
+var a = t(855986),
+    i = t(813645);
+t.d(
     n,
     {},
     {
         A: function (e) {
-            return (0, t.bG)([l.A], () => l.A.get(e), [e]);
+            return (0, a.bG)([i.A], () => i.A.get(e), [e]);
         },
     },
 );

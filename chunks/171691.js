@@ -32,7 +32,7 @@ function p(t, e) {
 function h(t) {
     return s.get(t)?.() ?? Promise.resolve(null);
 }
-function m(t) {
+function g(t) {
     if (null == f(t)) return;
     let { [t]: e, ...n } = c.getState().byProject;
     (c.setState({ byProject: n }), (0, l.mB)(t));
@@ -43,13 +43,13 @@ n.d(
     {
         C: h,
         Cw: u,
-        It: m,
+        It: g,
         K7: f,
         KZ: function (t, e) {
             (p(t, (t) => ({ ...t, markerSize: e, tool: "marker" })), (0, l.qX)(t));
         },
         My: function (t) {
-            f(t)?.active === !1 ? m(t) : p(t, (t) => ({ ...t, history: i.vd, sketchDismissedFor: null }));
+            f(t)?.active === !1 ? g(t) : p(t, (t) => ({ ...t, history: i.vd, sketchDismissedFor: null }));
         },
         QP: function (t) {
             p(t, (t) => ({ ...t, chatFocusRequest: t.chatFocusRequest + 1 }));
@@ -60,7 +60,7 @@ n.d(
         V9: function (t) {
             let e = f(t);
             if (null != e) {
-                if (!(0, a.C)(e)) return void m(t);
+                if (!(0, a.C)(e)) return void g(t);
                 (e.active && p(t, (e) => ({ ...e, active: !1, keptStill: h(t) })), (0, l.mB)(t));
             }
         },
@@ -112,7 +112,7 @@ n.d(
             });
         },
         xU: function (t) {
-            f(t)?.active === !1 ? m(t) : p(t, (t) => ({ ...t, sketchDismissedFor: t.history.present }));
+            f(t)?.active === !1 ? g(t) : p(t, (t) => ({ ...t, sketchDismissedFor: t.history.present }));
         },
     },
 );

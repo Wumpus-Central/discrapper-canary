@@ -1,46 +1,46 @@
-var t = a(582128),
-    l = a(714414),
-    i = a(856383);
+var a = t(582128),
+    i = t(714414),
+    l = t(856383);
 let r = !1,
-    d = null,
     o = null,
-    u = new Set();
+    u = null,
+    d = new Set();
 function s() {
-    return (d ??= (async () => {
-        (await (0, l.Ts)(), (r = !0), u.forEach((e) => e()));
+    return (o ??= (async () => {
+        (await (0, i.Ts)(), (r = !0), d.forEach((e) => e()));
     })());
 }
 function c() {
     return r;
 }
-a.d(
+t.d(
     n,
     {},
     {
         YK: c,
         bf: function (e) {
-            e && !r && t.use(s());
+            e && !r && a.use(s());
         },
         initNativeMarkdown: s,
         n9: function (e) {
-            let n = t.useCallback(
+            let n = a.useCallback(
                 (n) => (
-                    u.add(n),
+                    d.add(n),
                     e &&
-                        (o ??= (async () => {
+                        (u ??= (async () => {
                             try {
                                 await s();
                             } catch (e) {
-                                i.A.captureException(e);
+                                l.A.captureException(e);
                             }
                         })()),
                     () => {
-                        u.delete(n);
+                        d.delete(n);
                     }
                 ),
                 [e],
             );
-            return t.useSyncExternalStore(n, c);
+            return a.useSyncExternalStore(n, c);
         },
     },
 );

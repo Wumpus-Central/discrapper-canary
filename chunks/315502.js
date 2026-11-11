@@ -1,16 +1,16 @@
-var r = n(477900);
-n(582128);
-var i = n(503698),
-    s = n.n(i),
-    l = n(834730),
-    a = n(769306);
-n.d(
-    e,
+var l = t(477900);
+t(582128);
+var s = t(503698),
+    i = t.n(s),
+    r = t(834730),
+    o = t(769306);
+t.d(
+    n,
     {},
     {
-        A: function (t) {
-            let { hasMentions: e, truncatedCount: n, className: i } = t;
-            return (0, r.jsx)(l.E, { className: s()(a.T, i, { [a.l]: e }), variant: "body-xs/normal", children: n });
+        A: function (e) {
+            let { hasMentions: n, truncatedCount: t, className: s } = e;
+            return (0, l.jsx)(r.E, { className: i()(o.T, s, { [o.l]: n }), variant: "body-xs/normal", children: t });
         },
     },
 );

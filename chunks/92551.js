@@ -1,24 +1,24 @@
-var e = r(226536),
-    o = r(626584),
-    i = r(792996);
-let a = new o.A("MarketingStringFormat.tsx");
-function c(t, n, r) {
-    if ("" === t) return { ok: !0, content: n };
+var i = n(226536),
+    r = n(626584),
+    a = n(792996);
+let s = new r.A("MarketingStringFormat.tsx");
+function l(e, t, n) {
+    if ("" === e) return { ok: !0, content: t };
     try {
-        return { ok: !0, content: r((0, e.b2)(t, i.intl.currentLocale)) };
-    } catch (t) {
-        return (a.warn("Failed to format marketing string", t), { ok: !1, error: String(t) });
+        return { ok: !0, content: n((0, i.b2)(e, a.intl.currentLocale)) };
+    } catch (e) {
+        return (s.warn("Failed to format marketing string", e), { ok: !1, error: String(e) });
     }
 }
-r.d(
-    n,
+n.d(
+    t,
     {},
     {
-        d: function (t, n) {
-            return c(t, "", (t) => i.intl.format(() => t, n));
+        d: function (e, t) {
+            return l(e, "", (e) => a.intl.format(() => e, t));
         },
-        n: function (t, n) {
-            return c(t, "", (t) => i.intl.formatToPlainString(() => t, n));
+        n: function (e, t) {
+            return l(e, "", (e) => a.intl.formatToPlainString(() => e, t));
         },
     },
 );

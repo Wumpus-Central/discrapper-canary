@@ -11,8 +11,8 @@ var l = n(430392),
     f = n(834730),
     p = n(191850),
     h = n(792996),
-    m = n(32924);
-let g = {
+    g = n(32924);
+let m = {
     bots: l.RobotIcon,
     channels: i.AppsIcon,
     test_app: a.BeakerIcon,
@@ -36,13 +36,13 @@ n.d(
                         children: h.intl.string(p.default["kG/2e8"]),
                     }),
                     (0, r.jsx)("div", {
-                        className: m.a,
+                        className: g.a,
                         children: e.map((t) => {
-                            let e = g[t.key];
+                            let e = m[t.key];
                             return (0, r.jsxs)(
                                 "div",
                                 {
-                                    className: m.n,
+                                    className: g.n,
                                     children: [
                                         (0, r.jsx)(e, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
                                         (0, r.jsx)(f.E, {

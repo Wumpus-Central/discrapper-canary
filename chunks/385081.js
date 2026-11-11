@@ -6,14 +6,14 @@ var i = e(149468),
     o = e(811587),
     a = e(246338),
     c = e(652215);
-function p(t) {
+function s(t) {
     return null == t || "" === t ? null : t.slice(0, 256);
 }
-function s(t) {
+function p(t) {
     let n = u.Ay.getProject(t);
     return {
         project_id: t,
-        project_name: p(n?.name),
+        project_name: s(n?.name),
         application_id: n?.application_id ?? null,
         preview_application_id: n?.preview_application_id ?? null,
         install_scope: n?.install_scope ?? null,
@@ -40,7 +40,7 @@ let A = {
 };
 function R(t) {
     let { projectId: n, turnId: e, publishReason: i, surface: l } = t;
-    return { ...s(n), ...d(n, !0), turn_id: e, publish_reason: i, surface: l, client_platform: E() };
+    return { ...p(n), ...d(n, !0), turn_id: e, publish_reason: i, surface: l, client_platform: E() };
 }
 function I(t) {
     var n, e, i;
@@ -74,14 +74,14 @@ e.d(
         Hy: function (t, n) {
             let { location: e, code: l, message: _, details: u, isPreview: r = !0, turnId: o } = n;
             (0, i.zV)(c.HAw.CONJURE_ERRORED, {
-                ...s(t),
+                ...p(t),
                 is_preview: r,
                 ...d(t, r),
                 turn_id: o ?? null,
                 error_location: e,
                 error_code: l,
-                error_message: p(_),
-                error_details: p(u),
+                error_message: s(_),
+                error_details: s(u),
             });
         },
         gw: function (t) {
@@ -90,11 +90,11 @@ e.d(
         hV: function (t, n) {
             var e;
             (0, i.zV)(c.HAw.CONJURE_TURN_RESULTED, {
-                ...s(t),
+                ...p(t),
                 ...d(t, !0),
                 turn_id: n.turn_id ?? null,
                 turn_result: n.result ?? null,
-                turn_summary: p(n.detail ?? n.summary),
+                turn_summary: s(n.detail ?? n.summary),
                 turn_cost: n.cost_usd ?? null,
                 turn_duration_ms: n.duration_ms ?? null,
                 model_tier: n.model_tier ?? null,
