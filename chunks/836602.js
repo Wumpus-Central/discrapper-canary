@@ -9,48 +9,49 @@ var o = n(849077),
 let c = {},
     u = {},
     _ = {},
-    E = new Set([...d.Cr, "373", o.Hy]),
-    A = {},
-    f = u,
-    h = l.XlH.CLOSED,
-    I = {};
-function p() {
-    ((h = l.XlH.OPEN), (I = {}));
-}
+    E = { pendingGlobalName: "global_name", pendingNickname: "nick", pendingPronouns: "pronouns", pendingBio: "bio" },
+    A = new Set([...d.Cr, "373", o.Hy]),
+    f = {},
+    h = u,
+    I = l.XlH.CLOSED,
+    p = {};
 function m() {
-    ((h = l.XlH.CLOSED), (I = {}));
+    ((I = l.XlH.OPEN), (p = {}));
 }
 function T() {
-    f = u;
+    ((I = l.XlH.CLOSED), (p = {}));
 }
 function g() {
-    ((A = {}), (I = {}));
+    h = u;
 }
 function S() {
-    (g(), T(), m());
+    ((f = {}), (p = {}));
 }
-class N extends r.Ay.Store {
+function N() {
+    (S(), g(), T());
+}
+class C extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
     get selectedGuildId() {
         return i;
     }
     getFormState() {
-        return h;
+        return I;
     }
     getErrors(e) {
-        return I[e ?? l.ME] ?? _;
+        return p[e ?? l.ME] ?? _;
     }
     getPendingChanges(e) {
-        return A[e ?? l.ME] ?? c;
+        return f[e ?? l.ME] ?? c;
     }
     getTryItOutChanges() {
-        return f;
+        return h;
     }
     hasTryItOutChanges() {
-        return Object.values(f).some((e) => void 0 !== e);
+        return Object.values(h).some((e) => void 0 !== e);
     }
     hasUnsavedChanges() {
-        return Object.values(A).some((e) => Object.values(e).some((e) => void 0 !== e));
+        return Object.values(f).some((e) => Object.values(e).some((e) => void 0 !== e));
     }
     showNotice() {
         return !!(
@@ -67,86 +68,98 @@ class N extends r.Ay.Store {
         return !0;
     }
 }
-let C = new N(a.h, {
-    USER_SETTINGS_MODAL_INIT: p,
-    USER_SETTINGS_MODAL_OPEN: p,
+let O = new C(a.h, {
+    USER_SETTINGS_MODAL_INIT: m,
+    USER_SETTINGS_MODAL_OPEN: m,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== l.nc_.ACCOUNT) return !1;
-        ((h = l.XlH.OPEN), (I = {}));
+        ((I = l.XlH.OPEN), (p = {}));
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        ((i = null == t || E.has(t) ? void 0 : t), (h = l.XlH.OPEN), (I = {}));
+        ((i = null == t || A.has(t) ? void 0 : t), (I = l.XlH.OPEN), (p = {}));
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
-        ((i = null == t || E.has(t) ? void 0 : t), (I = {}));
+        ((i = null == t || A.has(t) ? void 0 : t), (p = {}));
     },
-    USER_PROFILE_SETTINGS_CLOSE: m,
-    USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
+    USER_PROFILE_SETTINGS_CLOSE: T,
+    USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: N,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
-        ((h = l.XlH.SUBMITTING), (I = {}));
+        ((I = l.XlH.SUBMITTING), (p = {}));
     },
     USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guildId: t } = e;
-        if (h !== l.XlH.SUBMITTING) return !1;
-        ((h = l.XlH.OPEN), (I[t ?? l.ME] = _));
+        if (I !== l.XlH.SUBMITTING) return !1;
+        ((I = l.XlH.OPEN), (p[t ?? l.ME] = _));
     },
     USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        if (h !== l.XlH.SUBMITTING) return !1;
-        ((h = l.XlH.OPEN), (I[t ?? l.ME] = n ?? _));
+        if (I !== l.XlH.SUBMITTING) return !1;
+        ((I = l.XlH.OPEN), (p[t ?? l.ME] = n ?? _));
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
-        let { type: t, guildId: n, ...i } = e;
-        A[n ?? l.ME] = { ...A[n ?? l.ME], ...i };
+        let { type: t, guildId: n, ...i } = e,
+            r = n ?? l.ME;
+        ((f[r] = { ...f[r], ...i }),
+            (function (e, t) {
+                let n = p[e];
+                if (null == n) return;
+                let i = Object.keys(t)
+                    .map((e) => E[e])
+                    .filter((e) => null != e && e in n);
+                if (0 === i.length) return;
+                let r = { ...n };
+                for (let e of i) delete r[e];
+                p[e] = Object.keys(r).length > 0 ? r : _;
+            })(r, i));
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function (e) {
         let { avatar: t } = e;
-        f = { ...f, tryItOutAvatar: t };
+        h = { ...h, tryItOutAvatar: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
         let { avatarDecoration: t } = e;
-        f = { ...f, tryItOutAvatarDecoration: t };
+        h = { ...h, tryItOutAvatarDecoration: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function (e) {
         let { profileEffect: t } = e;
-        f = { ...f, tryItOutProfileEffect: t };
+        h = { ...h, tryItOutProfileEffect: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function (e) {
         let { banner: t } = e;
-        f = { ...f, tryItOutBanner: t };
+        h = { ...h, tryItOutBanner: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
         let { themeColors: t } = e;
-        f = { ...f, tryItOutThemeColors: t };
+        h = { ...h, tryItOutThemeColors: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function (e) {
         let { displayNameStyles: t } = e;
-        f = { ...f, tryItOutDisplayNameStyles: t };
+        h = { ...h, tryItOutDisplayNameStyles: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE: function (e) {
         let { customTypingIndicatorStyle: t } = e;
-        f = { ...f, tryItOutCustomTypingIndicatorStyle: t };
+        h = { ...h, tryItOutCustomTypingIndicatorStyle: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
         let { lastPreset: t, banner: n, themeColors: i, avatarDecoration: r, displayNameStyles: a } = e;
-        f = {
-            ...f,
-            tryItOutLastPreset: void 0 !== t ? t : f.tryItOutLastPreset,
+        h = {
+            ...h,
+            tryItOutLastPreset: void 0 !== t ? t : h.tryItOutLastPreset,
             tryItOutBanner: n,
             tryItOutThemeColors: i,
-            tryItOutAvatarDecoration: void 0 !== r ? r : f.tryItOutAvatarDecoration,
+            tryItOutAvatarDecoration: void 0 !== r ? r : h.tryItOutAvatarDecoration,
             tryItOutDisplayNameStyles: a,
         };
     },
     USER_PROFILE_SETTINGS_CLEAR_ERRORS: function () {
-        I = {};
+        p = {};
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function () {
-        A = Object.fromEntries(
-            Object.entries(A).map((e) => {
+        f = Object.fromEntries(
+            Object.entries(f).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -165,8 +178,8 @@ let C = new N(a.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function () {
-        A = Object.fromEntries(
-            Object.entries(A).map((e) => {
+        f = Object.fromEntries(
+            Object.entries(f).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -184,20 +197,20 @@ let C = new N(a.h, {
             }),
         );
     },
-    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: g,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: T,
+    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: S,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: g,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
-        if ((A[l.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
-        A[l.ME] = { ...A[l.ME], pendingLegacyUsernameDisabled: void 0 };
+        if ((f[l.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
+        f[l.ME] = { ...f[l.ME], pendingLegacyUsernameDisabled: void 0 };
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function () {
-        if ((A[l.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
-        A[l.ME] = { ...A[l.ME], pendingPrimaryGuildId: void 0 };
+        if ((f[l.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
+        f[l.ME] = { ...f[l.ME], pendingPrimaryGuildId: void 0 };
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        ((h = l.XlH.OPEN), (I[t ?? l.ME] = n ?? _));
+        ((I = l.XlH.OPEN), (p[t ?? l.ME] = n ?? _));
     },
-    LOGOUT: S,
+    LOGOUT: N,
 });
-n.d(t, {}, { A: C, _: E });
+n.d(t, {}, { A: O, _: A });
