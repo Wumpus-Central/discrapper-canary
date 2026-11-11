@@ -1,90 +1,89 @@
-var n = l(477900),
-    a = l(582128),
-    i = l(189213),
-    r = l(858899),
-    u = l(331322),
-    p = l(664619),
-    o = l(733791),
-    s = l(298702),
-    c = l(706935),
-    d = l(191850),
-    f = l(792996);
-function A(e) {
-    let { app: t, title: l, heading: s, body: A, items: g, confirmText: m, onPlainConfirm: b, children: h, ...v } = e,
-        N = null != t.rest && g.length > 0,
-        [w, k] = a.useState(!0),
-        [y, I] = a.useState(!1),
-        [C, j] = a.useState(null);
-    return (0, n.jsx)(i.a, {
-        ...v,
+var l = a(477900),
+    i = a(582128),
+    n = a(189213),
+    r = a(858899),
+    s = a(664619),
+    o = a(733791),
+    u = a(298702),
+    c = a(936508),
+    d = a(199267),
+    p = a(706935),
+    g = a(191850),
+    m = a(792996);
+function f(t) {
+    let { app: e, title: a, heading: u, body: c, items: d, confirmText: f, onPlainConfirm: x, ...h } = t,
+        v = null != e.rest && d.length > 0,
+        [b, C] = i.useState(!0),
+        [P, k] = i.useState(!1),
+        [N, T] = i.useState(null);
+    return (0, l.jsx)(n.a, {
+        ...h,
         role: "alertdialog",
-        title: null == s ? l : (0, o.WX)(s),
-        subtitle: A,
-        "aria-label": l,
-        notice: null == C ? void 0 : { message: C, type: "critical", role: "alert" },
+        title: null == u ? a : (0, o.WX)(u),
+        subtitle: c,
+        "aria-label": a,
+        notice: null == N ? void 0 : { message: N, type: "critical", role: "alert" },
         actions: [
-            { text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: v.onClose },
+            { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: h.onClose },
             {
-                text: m,
+                text: f,
                 variant: "critical-primary",
-                loading: y,
-                disabled: y,
+                loading: P,
+                disabled: P,
                 onClick: () => {
-                    N && w
+                    v && b
                         ? (async function () {
-                              (I(!0), j(null));
-                              let e = await (0, p.YI)(t.projectId, {
-                                  guildId: t.guildId,
+                              (k(!0), T(null));
+                              let t = await (0, s.YI)(e.projectId, {
+                                  guildId: e.guildId,
                                   alsoRemovePreviewBot: !0,
                               }).catch(() => null);
-                              (I(!1), e?.ok !== !0)
-                                  ? j(f.intl.string(d.default.PJ2Fkn))
+                              (k(!1), t?.ok !== !0)
+                                  ? T(m.intl.string(g.default.PJ2Fkn))
                                   : ((0, r.P0)({
-                                        text: f.intl.formatToPlainString(d.default.SNFGxP, {
-                                            app: t.rest?.appName ?? t.targetAppName,
-                                            server: t.guildName,
+                                        text: m.intl.formatToPlainString(g.default.SNFGxP, {
+                                            app: e.rest?.appName ?? e.targetAppName,
+                                            server: e.guildName,
                                         }),
                                         variant: "success",
                                     }),
-                                    v.onClose());
+                                    h.onClose());
                           })().catch(() => {})
-                        : (b(), v.onClose());
+                        : (x(), h.onClose());
                 },
             },
         ],
-        children:
-            N || null != h
-                ? (0, n.jsxs)(u.B, {
-                      gap: 16,
-                      children: [N ? (0, n.jsx)(c.Yg, { checked: w, onChange: k, items: g }) : null, h],
-                  })
-                : null,
+        children: v ? (0, l.jsx)(p.Yg, { checked: b, onChange: C, items: d }) : null,
     });
 }
-l.d(
-    t,
+a.d(
+    e,
     {},
     {
-        BU: function (e) {
-            let { app: t, ...l } = e;
-            return (0, n.jsx)(A, {
-                ...l,
-                app: t,
-                title: f.intl.formatToPlainString(d.default.wVNCN7, { app: t.targetAppName }),
-                heading: (0, c.tb)(d.default.wVNCN7, t.targetAppName),
-                body: f.intl.string(d.default["tw+iyx"]),
-                items: null == t.rest ? [] : (0, s.S6)(t.rest),
-            });
+        VI: function (t) {
+            let { app: e, onPlainConfirm: a, ...i } = t;
+            return e.targetIsPreview
+                ? (0, l.jsx)(f, {
+                      ...i,
+                      app: e,
+                      title: m.intl.formatToPlainString(g.default.x6FvsZ, { app: e.targetAppName }),
+                      heading: (0, p.tb)(g.default.x6FvsZ, e.targetAppName),
+                      body: m.intl.formatToPlainString(g.default.f22PGK, { server: e.guildName }),
+                      items: [],
+                      confirmText: m.intl.string(g.default.BGF8VT),
+                      onPlainConfirm: a,
+                  })
+                : (0, l.jsx)(d.A, { ...i, target: (0, c.It)(e) });
         },
-        lt: function (e) {
-            let { app: t, channelId: l, ...a } = e;
-            return (0, n.jsx)(A, {
-                ...a,
-                app: t,
-                title: f.intl.string(f.t["8D8Rsb"]),
-                body: (0, c.tb)(d.default["HmNT/r"], t.targetAppName),
-                items: null == t.rest ? [] : (0, s.CB)(t.rest, l),
-                confirmText: f.intl.string(f.t["8D8Rsb"]),
+        lt: function (t) {
+            let { app: e, channelId: a, ...i } = t;
+            return (0, l.jsx)(f, {
+                ...i,
+                app: e,
+                title: m.intl.string(m.t["8D8Rsb"]),
+                body: (0, p.tb)(g.default["HmNT/r"], e.targetAppName),
+                items: null == e.rest ? [] : (0, u.CB)(e.rest, a),
+                confirmText: m.intl.string(m.t["8D8Rsb"]),
             });
         },
     },

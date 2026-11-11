@@ -6,16 +6,16 @@ var i = e(620632),
     o = e(517244),
     a = e(513845),
     c = e(233470),
-    p = e(260498),
-    s = e(385081),
+    s = e(260498),
+    p = e(385081),
     d = e(722701),
     E = e(652215);
 async function A(t, n) {
-    let { guildId: e, alsoRemovePreviewBot: l } = n;
+    let { guildId: e, alsoRemovePreviewBot: l, deleteChannels: _ } = n;
     try {
         return await i.Bo.post({
             url: E.Rsh.CONJURE_PROJECT_UNPUBLISH(t),
-            body: { guild_id: e, also_remove_preview_bot: l },
+            body: { guild_id: e, also_remove_preview_bot: l, delete_channels: _ },
             rejectWithError: !1,
         });
     } finally {
@@ -35,9 +35,9 @@ e.d(
     {},
     {
         Is: function (t, n, e) {
-            (0, s.Hy)(t, {
+            (0, p.Hy)(t, {
                 location: "publish",
-                code: s.xf.PUBLISH_FAILED,
+                code: p.xf.PUBLISH_FAILED,
                 message: `publish${e ? "-preview" : ""} failed`,
                 details: n,
                 isPreview: e,
@@ -65,12 +65,12 @@ e.d(
         },
         tZ: async function (t, n) {
             let { isPreview: e, install: i } = n,
-                l = p.Ay.getProject(t),
+                l = s.Ay.getProject(t),
                 _ = null == l ? null : e ? l.preview_application_id : l.application_id,
                 u = !e || null != i,
                 r = null != _ ? R(_, e, u ? i : null) : null,
-                { bot_permissions_changed: o, integration_installed: a, project: s } = (await (0, c.U1)(t)).body,
-                d = e ? s.preview_application_id : s.application_id;
+                { bot_permissions_changed: o, integration_installed: a, project: p } = (await (0, c.U1)(t)).body,
+                d = e ? p.preview_application_id : p.application_id;
             if (null != d) {
                 let t = { integrationInstalled: a, botPermissionsChanged: o };
                 d !== _ || null == r ? await R(d, e, t) : (await r, u || I(d, e, t));

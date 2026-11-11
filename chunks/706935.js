@@ -1,108 +1,108 @@
-var t = l(477900);
-l(582128);
-var r = l(503698),
-    i = l.n(r),
-    a = l(323384),
-    u = l(430392),
-    c = l(678708),
-    s = l(834730);
-if (221552 == l.j) var o = l(939249);
-if (221552 == l.j) var d = l(658675);
-var p = l(331322),
-    m = l(150934),
-    f = l(709066),
-    h = l(191850),
-    A = l(792996),
-    j = l(319725);
-function g(e) {
+var t = a(477900);
+a(582128);
+var l = a(503698),
+    i = a.n(l),
+    r = a(323384),
+    s = a(430392),
+    c = a(678708),
+    o = a(834730),
+    d = a(939249),
+    u = a(658675),
+    p = a(331322),
+    m = a(150934),
+    h = a(709066),
+    g = a(191850),
+    x = a(792996),
+    v = a(319725);
+function b(e) {
     let { kind: n } = e;
     switch (n) {
         case "channel":
-            return (0, t.jsx)(a.AppsIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
+            return (0, t.jsx)(r.AppsIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
         case "app":
-            return (0, t.jsx)(u.RobotIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
+            return (0, t.jsx)(s.RobotIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
         case "project":
             return (0, t.jsx)(c.FolderIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 });
     }
 }
-function b(e) {
-    let { items: n, dimmed: l = !1, children: r } = e;
+function j(e) {
+    let { items: n, dimmed: a = !1, children: l } = e;
     return (0, t.jsxs)("div", {
-        className: i()(j.aP, { [j.SR]: l }),
+        className: i()(v.aP, { [v.SR]: a }),
         children: [
             n.map((e) =>
                 (0, t.jsxs)(
                     "div",
                     {
-                        className: j.nM,
+                        className: v.nM,
                         children: [
-                            (0, t.jsx)(g, { kind: e.kind }),
-                            (0, t.jsx)(s.E, { variant: "body-sm/medium", color: "text-subtle", children: e.label }),
+                            (0, t.jsx)(b, { kind: e.kind }),
+                            (0, t.jsx)(o.E, { variant: "body-sm/medium", color: "text-subtle", children: e.label }),
                         ],
                     },
                     e.key,
                 ),
             ),
-            r,
+            l,
         ],
     });
 }
-function v(e) {
-    let { item: n, checked: l, onChange: r, disabled: a } = e;
-    return (0, t.jsxs)(o.D, {
-        className: i()(j.nM, j.hn, { [j.l$]: a }),
+function k(e) {
+    let { item: n, checked: a, onChange: l, disabled: r } = e;
+    return (0, t.jsxs)(d.D, {
+        className: i()(v.nM, v.hn, { [v.l$]: r }),
         role: "checkbox",
-        "aria-checked": l,
-        "aria-disabled": a,
-        onClick: a ? void 0 : () => r(!l),
+        "aria-checked": a,
+        "aria-disabled": r,
+        onClick: r ? void 0 : () => l(!a),
         children: [
-            (0, t.jsx)(g, { kind: n.kind }),
-            (0, t.jsx)(s.E, {
+            (0, t.jsx)(b, { kind: n.kind }),
+            (0, t.jsx)(o.E, {
                 tag: "span",
                 variant: "body-sm/medium",
                 color: "text-subtle",
-                className: j.f1,
+                className: v.f1,
                 children: n.label,
             }),
-            (0, t.jsx)(d.P, { checked: l, disabled: a }),
+            (0, t.jsx)(u.P, { checked: a, disabled: r }),
         ],
     });
 }
-l.d(
+a.d(
     n,
     {},
     {
         Ay: function (e) {
-            let { items: n, optionalItem: l } = e;
+            let { items: n, optionalItems: a = [] } = e;
             return (0, t.jsxs)(p.B, {
                 gap: 8,
                 children: [
-                    (0, t.jsx)(s.E, {
+                    (0, t.jsx)(o.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
-                        children: A.intl.string(h.default["+E2PqP"]),
+                        children: x.intl.string(g.default["+E2PqP"]),
                     }),
-                    (0, t.jsx)(b, { items: n, children: null != l ? (0, t.jsx)(v, { ...l }) : null }),
+                    (0, t.jsx)(j, { items: n, children: a.map((e) => (0, t.jsx)(k, { ...e }, e.item.key)) }),
                 ],
             });
         },
         Yg: function (e) {
-            let { checked: n, onChange: l, items: r } = e;
+            let { checked: n, onChange: a, items: l } = e;
             return (0, t.jsxs)(p.B, {
                 gap: 8,
                 children: [
-                    (0, t.jsx)(m.S, { checked: n, onChange: l, label: A.intl.string(h.default.gKA9tU) }),
-                    (0, t.jsx)(b, { items: r, dimmed: !n }),
+                    (0, t.jsx)(m.S, { checked: n, onChange: a, label: x.intl.string(g.default.gKA9tU) }),
+                    (0, t.jsx)(j, { items: l, dimmed: !n }),
                 ],
             });
         },
         tb: function (e, n) {
-            return A.intl.format(e, {
+            return x.intl.format(e, {
                 app: (0, t.jsxs)(
                     "span",
                     {
-                        className: j.Kh,
-                        children: [n, " ", (0, t.jsx)("span", { className: j.Tc, children: (0, t.jsx)(f.A, {}) })],
+                        className: v.Kh,
+                        children: [n, " ", (0, t.jsx)("span", { className: v.Tc, children: (0, t.jsx)(h.A, {}) })],
                     },
                     "app",
                 ),

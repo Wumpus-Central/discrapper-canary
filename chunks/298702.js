@@ -1,151 +1,162 @@
-var n = l(582128),
-    a = l(435558),
-    i = l(855986),
-    r = l(778858),
-    u = l(627363),
-    p = l(587895),
-    o = l(47167),
-    s = l(808728),
-    c = l(696451),
-    d = l(71393),
-    f = l(576705),
-    A = l(994500),
-    g = l(287809),
-    m = l(246338),
-    b = l(426035),
-    h = l(652215);
+var t = n(582128),
+    i = n(435558),
+    a = n(855986),
+    u = n(778858),
+    r = n(627363),
+    p = n(587895),
+    d = n(47167),
+    A = n(808728),
+    c = n(696451),
+    o = n(71393),
+    f = n(576705),
+    s = n(994500),
+    m = n(287809),
+    g = n(246338),
+    h = n(426035),
+    b = n(652215);
 let v = " (Preview)";
-function N(e) {
+function w(e) {
     return p.A.getAppIdForBotUserId(e) ?? e;
 }
-function w(e) {
-    return e.map((e) => {
-        let { id: t, name: l } = e;
-        return { key: `channel:${t}`, kind: "channel", label: `#${l}` };
-    });
+function N(e) {
+    return f.A.can(b.xBc.MANAGE_CHANNELS, e);
+}
+function I(e) {
+    return e.map((e) => (0, d.m1)(e, m.default, s.A));
 }
 function k(e) {
-    let t = new Set();
-    for (let { channel: l } of s.A.getChannels(e)[s.I]) {
-        let e = (0, m.us)(l);
-        null != e && t.add(e);
+    let l = new Set();
+    for (let { channel: n } of A.A.getChannels(e)[A.I]) {
+        let e = (0, g.us)(n);
+        null != e && l.add(e);
     }
-    return [...t];
+    return [...l];
 }
-function y(e) {
-    null != p.A.getApplication(e) || p.A.isFetchingApplication(e) || (0, u.TA)(e).catch(() => {});
+function j(e) {
+    null != p.A.getApplication(e) || p.A.isFetchingApplication(e) || (0, r.TA)(e).catch(() => {});
 }
-l.d(
-    t,
+n.d(
+    l,
     {},
     {
-        CB: function (e, t) {
+        CB: function (e, l) {
             return [
-                ...w(e.channels.filter((e) => e.id !== t)),
+                ...e.channels
+                    .filter((e) => e.id !== l)
+                    .map((e) => {
+                        let { id: l, name: n } = e;
+                        return { key: `channel:${l}`, kind: "channel", label: `#${n}` };
+                    }),
                 { key: "main-app", kind: "app", label: e.appName },
                 { key: "preview-app", kind: "app", label: e.previewAppName },
             ];
         },
-        S6: function (e) {
-            return [
-                ...w(e.channels),
-                e.targetIsPreview
-                    ? { key: "main-app", kind: "app", label: e.appName }
-                    : { key: "preview-app", kind: "app", label: e.previewAppName },
-            ];
-        },
-        SJ: N,
-        iD: function (e, t) {
-            var l, u;
-            let m,
-                w,
-                I = (0, i.bG)([p.A], () => null != t && p.A.getApplication(t)?.conjureProjectId != null, [t]);
+        SJ: w,
+        iD: function (e, l) {
+            var n, r;
+            let g,
+                C,
+                E = (0, a.bG)([p.A], () => null != l && p.A.getApplication(l)?.conjureProjectId != null, [l]);
             return (
-                n.useEffect(() => {
-                    null != t && y(t);
-                }, [t]),
-                n.useEffect(() => {
-                    if (null != e && I) for (let t of k(e)) y(t);
-                }, [e, I]),
-                (l = e),
-                (u = t),
-                (m = (0, i.bG)(
+                t.useEffect(() => {
+                    null != l && j(l);
+                }, [l]),
+                t.useEffect(() => {
+                    if (null != e && E) for (let l of k(e)) j(l);
+                }, [e, E]),
+                (n = e),
+                (r = l),
+                (g = (0, a.bG)(
                     [p.A],
                     () => {
-                        let e = null == u ? null : p.A.getApplication(u);
+                        let e = null == r ? null : p.A.getApplication(r);
                         if (e?.conjureProjectId == null) return null;
-                        let t = e.bot?.username ?? e.name;
-                        return (t.endsWith(v) ? t.slice(0, -v.length) : t).toLowerCase();
+                        let l = e.bot?.username ?? e.name;
+                        return (l.endsWith(v) ? l.slice(0, -v.length) : l).toLowerCase();
                     },
-                    [u],
+                    [r],
                 )),
-                n.useEffect(() => {
-                    null != l && null != m && r.A.requestMembers(l, m, 10, !1);
-                }, [l, m]),
-                (w = (0, i.bG)(
-                    [c.Ay, g.default, p.A],
+                t.useEffect(() => {
+                    null != n && null != g && u.A.requestMembers(n, g, 10, !1);
+                }, [n, g]),
+                (C = (0, a.bG)(
+                    [c.Ay, m.default, p.A],
                     () =>
-                        null == l || null == m
+                        null == n || null == g
                             ? []
-                            : c.Ay.getMemberIds(l)
+                            : c.Ay.getMemberIds(n)
                                   .filter((e) => {
-                                      let t = g.default.getUser(e);
-                                      return t?.bot === !0 && t.username.toLowerCase().startsWith(m);
+                                      let l = m.default.getUser(e);
+                                      return l?.bot === !0 && l.username.toLowerCase().startsWith(g);
                                   })
-                                  .map(N)
+                                  .map(w)
                                   .filter((e) => null == p.A.getApplication(e)),
-                    [l, m],
-                    a.isEqual,
+                    [n, g],
+                    i.isEqual,
                 )),
-                n.useEffect(() => {
-                    for (let e of w) y(e);
-                }, [w]),
-                (0, i.bG)(
-                    [p.A, d.A, s.A, c.Ay, f.A, g.default, A.A],
+                t.useEffect(() => {
+                    for (let e of C) j(e);
+                }, [C]),
+                (0, a.bG)(
+                    [p.A, o.A, A.A, c.Ay, f.A, m.default, s.A],
                     () =>
-                        (function (e, t) {
-                            var l, n;
-                            let a = null == e ? null : d.A.getGuild(e),
-                                i = null == t ? null : p.A.getApplication(t),
-                                r = i?.conjureProjectId;
-                            if (null == a || null == i || null == r) return null;
-                            let u = k(a.id)
+                        (function (e, l) {
+                            var n, t;
+                            let i = null == e ? null : o.A.getGuild(e),
+                                a = null == l ? null : p.A.getApplication(l),
+                                u = a?.conjureProjectId;
+                            if (null == i || null == a || null == u) return null;
+                            let r = k(i.id)
                                     .map((e) => p.A.getApplication(e))
-                                    .find((e) => e?.conjureProjectId === r),
-                                s = null == u ? [] : (0, b.xI)(a.id, u.id),
-                                m =
-                                    null != u &&
-                                    (0, b.wv)(a, i.bot?.id) &&
-                                    (0, b.wv)(a, u.bot?.id) &&
-                                    ((l = a.id),
-                                    (n = r),
-                                    c.Ay.getMemberIds(l).filter(
+                                    .find((e) => e?.conjureProjectId === u),
+                                A = null == r ? [] : (0, h.xI)(i.id, r.id),
+                                g =
+                                    ((n = i.id),
+                                    (t = u),
+                                    c.Ay.getMemberIds(n).filter(
                                         (e) =>
-                                            g.default.getUser(e)?.bot === !0 &&
-                                            p.A.getApplication(N(e))?.conjureProjectId === n,
-                                    )).every((e) => (0, b.wv)(a, e)) &&
-                                    s.every((e) => f.A.can(h.xBc.MANAGE_CHANNELS, e));
+                                            m.default.getUser(e)?.bot === !0 &&
+                                            p.A.getApplication(w(e))?.conjureProjectId === t,
+                                    )),
+                                j =
+                                    null != r &&
+                                    (0, h.wv)(i, a.bot?.id) &&
+                                    (0, h.wv)(i, r.bot?.id) &&
+                                    g.every((e) => (0, h.wv)(i, e)) &&
+                                    A.every((e) => f.A.can(b.xBc.MANAGE_CHANNELS, e)),
+                                C = null != r ? r.id !== a.id : a.name.endsWith(v),
+                                E = C ? void 0 : g.find((e) => w(e) !== a.id);
                             return {
-                                projectId: r,
-                                guildId: a.id,
-                                guildName: a.name,
-                                targetAppName: i.name,
+                                projectId: u,
+                                guildId: i.id,
+                                guildName: i.name,
+                                targetAppName: a.name,
+                                targetIsPreview: C,
+                                deletableChannelNames: I(A.filter(N)),
+                                keptChannelNames: I(A.filter((e) => !N(e))),
+                                previewApp:
+                                    null == E
+                                        ? null
+                                        : {
+                                              name: p.A.getApplication(w(E))?.name ?? `${a.name}${v}`,
+                                              canRemove: (0, h.wv)(i, E),
+                                          },
                                 rest:
-                                    null != u && 0 !== s.length && m
+                                    null != r && 0 !== A.length && j
                                         ? {
-                                              appName: u.name,
-                                              previewAppName: u.id === i.id ? `${u.name}${v}` : i.name,
-                                              channels: s.map((e) => ({
+                                              appName: r.name,
+                                              previewAppName: r.id === a.id ? `${r.name}${v}` : a.name,
+                                              channels: A.map((e) => ({
                                                   id: e.id,
-                                                  name: (0, o.m1)(e, g.default, A.A),
+                                                  name: (0, d.m1)(e, m.default, s.A),
                                               })),
-                                              targetIsPreview: u.id !== i.id,
+                                              targetIsPreview: r.id !== a.id,
                                           }
                                         : null,
                             };
-                        })(e, t),
-                    [e, t],
-                    a.isEqual,
+                        })(e, l),
+                    [e, l],
+                    i.isEqual,
                 )
             );
         },
