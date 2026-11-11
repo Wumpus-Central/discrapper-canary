@@ -331,7 +331,8 @@
 .backgroundOverlay_-l8fcd:after,
 .backgroundOverlay_-l8fcd:before,
 .heroAsset_-l8fcd,
-.heroBackground_-l8fcd {
+.heroBackground_-l8fcd,
+.hexagonCampaignOverlay_-l8fcd {
     bottom: 0;
     inset-inline-end: 0;
     inset-inline-start: 0;
@@ -395,12 +396,27 @@
     top: auto
 }
 
+.hexagonCampaignOverlay_-l8fcd {
+    background-color: var(--bg-gradient-hexagon-4);
+    inset-inline-end: auto;
+    -webkit-mask: linear-gradient(270deg, transparent, rgba(0, 0, 0, .83) 68%, #000);
+    mask: linear-gradient(270deg, transparent, rgba(0, 0, 0, .83) 68%, #000);
+    opacity: .2;
+    width: 600px;
+    z-index: 1
+}
+
+.hexagonCampaignBackgroundOverlay_-l8fcd:after {
+    opacity: .85
+}
+
 @container wrapper (width < 725px) {
     .heroAssetBlurred_-l8fcd {
         display: none
     }
 
-    .backgroundOverlay_-l8fcd:after {
+    .backgroundOverlay_-l8fcd:after,
+    .hexagonCampaignOverlay_-l8fcd {
         -webkit-mask: linear-gradient(135deg, #000, rgba(0, 0, 0, .83) 15%, transparent 30%);
         mask: linear-gradient(135deg, #000, rgba(0, 0, 0, .83) 15%, transparent 30%)
     }
@@ -590,4 +606,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=719461654218579a.css.map*/
+/*# sourceMappingURL=8748197fa5e669e0.css.map*/

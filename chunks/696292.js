@@ -80,5 +80,6 @@ var i,
         (i[(i.APP_ICON_SETTINGS = 77)] = "APP_ICON_SETTINGS"),
         (i[(i.DISPLAY_NAME_STYLES_SETTINGS = 78)] = "DISPLAY_NAME_STYLES_SETTINGS"),
         (i[(i.QUEST_HOME_HERO_BANNER = 79)] = "QUEST_HOME_HERO_BANNER"),
+        (i[(i.QUEST_HOME_HERO_STICKY_HEADER = 80)] = "QUEST_HOME_HERO_STICKY_HEADER"),
         i);
 n.d(t, {}, { u: r });
