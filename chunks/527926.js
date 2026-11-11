@@ -17,6 +17,8 @@ let s = new (class {
         return {
             checkpoint_session_id: this.sessionId,
             has_personalized_data: this.didPlayerShareDataWithDiscord && null != i.A.stats,
+            checkpoint_availability: i.A.availability,
+            checkpoint_compact_assets: i.A.compactAssets,
         };
     }
 })();
