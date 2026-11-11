@@ -1,19 +1,18 @@
-.error_b-mvah {
+.footer_snIQ1H {
     align-items: center;
+    background: #1d002e;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    height: 100%;
+    height: 240px;
     justify-content: center;
-    padding-top: 40px;
-    width: 100%
+    margin-top: var(--space-32)
 }
 
-.errorImage_b-mvah {
-    height: 150px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 150px
+.logo_snIQ1H {
+    height: auto;
+    max-width: 100%;
+    width: 224px
 }
 
 .container_6FIOtX {
@@ -103,4 +102,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=d8d77d2203f72df9.css.map*/
+/*# sourceMappingURL=0ee4842222313215.css.map*/
