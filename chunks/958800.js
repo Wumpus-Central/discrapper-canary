@@ -704,7 +704,7 @@ if (null == e7 || "0.0.0" !== e7.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 670972, Version Hash: 6a8d409c55431e6c066e88513f8782048d49a104`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 670976, Version Hash: 9e8acd2b9faca4e9acb6b84d18c354c9ad02e377`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -776,7 +776,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670972";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "670976";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
         let s = ej?.processUtils?.getLastCrash;
@@ -4993,8 +4993,8 @@ let ss = (0, rt.Fe)({
                 n.e(654658),
                 n.e(559334),
                 n.e(241288),
-                n.e(895099),
                 n.e(885101),
+                n.e(895099),
                 n.e(504787),
                 n.e(476375),
                 n.e(218307),
@@ -15850,7 +15850,7 @@ let I2 = "isHideDevBanner",
                     className: tc()(I1.Wz, I1.mr),
                     children: [
                         (0, P.jsx)(I0, { className: I1.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "670972" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "670976" }),
                         (0, P.jsx)(r, {}),
                     ],
                 })
@@ -22594,8 +22594,8 @@ let gw = (0, tY.Fe)({
                 n.e(46071),
                 n.e(99534),
                 n.e(958932),
-                n.e(895099),
                 n.e(885101),
+                n.e(895099),
                 n.e(612598),
                 n.e(68974),
                 n.e(634786),
@@ -22735,8 +22735,8 @@ let gw = (0, tY.Fe)({
                 n.e(14567),
                 n.e(394704),
                 n.e(46071),
-                n.e(895099),
                 n.e(885101),
+                n.e(895099),
                 n.e(101953),
                 n.e(867160),
                 n.e(268152),
