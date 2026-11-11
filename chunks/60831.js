@@ -32,8 +32,8 @@ function g(e) {
                             n.e(440963),
                             n.e(766031),
                             n.e(394317),
-                            n.e(304329),
                             n.e(12762),
+                            n.e(304329),
                             n.e(312478),
                         ]).then(n.bind(n, 760429));
                         return (n) => (0, i.jsx)(e, { ...n, skuId: t, product: l, productName: s, tab: r, source: a });

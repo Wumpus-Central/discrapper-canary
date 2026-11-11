@@ -1,19 +1,20 @@
-var a,
-    s,
+var s,
+    a,
     r = n(652215),
-    _ =
-        221552 == n.j
-            ? (((a = {})[(a.MESSAGE = 0)] = "MESSAGE"),
-              (a[(a.ACTIVITY = 2)] = "ACTIVITY"),
-              (a[(a.CUSTOM_STATUS = 3)] = "CUSTOM_STATUS"),
-              (a[(a.GUILD_EVENT = 5)] = "GUILD_EVENT"),
-              (a[(a.RECOMMENDED_GUILDS = 6)] = "RECOMMENDED_GUILDS"),
-              (a[(a.DISCOVER_ITEM = 100)] = "DISCOVER_ITEM"),
-              a)
-            : null;
+    _ = /^(221552|614256)$/.test(n.j)
+        ? (((s = {})[(s.MESSAGE = 0)] = "MESSAGE"),
+          (s[(s.ACTIVITY = 2)] = "ACTIVITY"),
+          (s[(s.CUSTOM_STATUS = 3)] = "CUSTOM_STATUS"),
+          (s[(s.GUILD_EVENT = 5)] = "GUILD_EVENT"),
+          (s[(s.RECOMMENDED_GUILDS = 6)] = "RECOMMENDED_GUILDS"),
+          (s[(s.DISCOVER_ITEM = 100)] = "DISCOVER_ITEM"),
+          s)
+        : null;
 let u = new Set([0, 3, 100]);
 (r.Auw.IMAGE, r.Auw.GIFV);
-var E = 221552 == n.j ? (((s = {})[(s.DEFAULT = 0)] = "DEFAULT"), (s[(s.BOOKMARKS = 2)] = "BOOKMARKS"), s) : null;
+var E = /^(221552|614256)$/.test(n.j)
+    ? (((a = {})[(a.DEFAULT = 0)] = "DEFAULT"), (a[(a.BOOKMARKS = 2)] = "BOOKMARKS"), a)
+    : null;
 n.d(
     t,
     {},

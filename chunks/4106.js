@@ -7,46 +7,54 @@ var i = n(620632),
     o = n(46653),
     d = n(287809),
     c = n(856383),
-    u = n(335934),
-    _ = n(522606),
-    E = n(652215);
-let A = Promise.resolve(),
-    f = {},
-    h = null,
-    I = o.default.isAuthenticated() ? (o.default.getId() ?? null) : null,
-    p = null != I ? (o.default.getAuthSessionIdHash() ?? null) : null,
-    m = {};
-function T() {
-    ((h = null), (f = {}), (m = {}));
+    u = n(417692),
+    _ = n(983253),
+    E = n(335934),
+    A = n(522606),
+    f = n(652215);
+let h = Promise.resolve(),
+    I = null,
+    p = 0,
+    m = new Set(),
+    T = {},
+    g = null,
+    S = o.default.isAuthenticated() ? (o.default.getId() ?? null) : null,
+    N = null != S ? (o.default.getAuthSessionIdHash() ?? null) : null,
+    C = {};
+function O() {
+    for (let e of m) e();
 }
-function g(e) {
-    I !== e && (T(), (I = e), (p = null));
+function R() {
+    ((g = null), (T = {}), I?.abort(), (C = {}), _.C2.resetSession());
 }
-function S(e) {
-    null != e && (null != p && p !== e && T(), (p = e));
+function L(e) {
+    S !== e && (R(), (S = e), (N = null));
 }
-function N() {
-    (T(), (I = null), (p = null));
+function y(e) {
+    null != e && (null != N && N !== e && R(), (N = e));
 }
-(r.h.subscribe("LOGOUT", N),
-    r.h.subscribe("LOGIN_SUCCESS", N),
+function D() {
+    (R(), (S = null), (N = null));
+}
+(r.h.subscribe("LOGOUT", D),
+    r.h.subscribe("LOGIN_SUCCESS", D),
     r.h.subscribe("LOGIN_RESET", (e) => {
         let { isMultiAccount: t } = e;
-        t || N();
+        t || D();
     }),
-    r.h.subscribe("AGE_GATE_LOGOUT_UNDERAGE_NEW_USER", N),
-    r.h.subscribe("CLOSE_SUSPENDED_USER", N),
+    r.h.subscribe("AGE_GATE_LOGOUT_UNDERAGE_NEW_USER", D),
+    r.h.subscribe("CLOSE_SUSPENDED_USER", D),
     r.h.subscribe("CONNECTION_CLOSED", (e) => {
         let { code: t } = e;
-        4004 === t && N();
+        4004 === t && D();
     }),
     r.h.subscribe("CONNECTION_OPEN", (e) => {
         let { user: t, authSessionIdHash: n } = e;
-        (g(t.id), S(n));
+        (L(t.id), y(n));
     }),
     r.h.subscribe("AUTH_SESSION_CHANGE", (e) => {
         let { authSessionIdHash: t } = e;
-        return S(t);
+        y(t);
     }),
     n.d(
         t,
@@ -57,7 +65,7 @@ function N() {
                     try {
                         let { guilds: n } = (
                             await i.Bo.post({
-                                url: E.Rsh.GRAVITY_TOPIC_GUILDS,
+                                url: f.Rsh.GRAVITY_TOPIC_GUILDS,
                                 body: { category_ids: e, offset: t },
                                 rejectWithError: !1,
                             })
@@ -71,72 +79,138 @@ function N() {
                     }
                     return !1;
                 },
+                subscribeDiscoverRequests: (e) => (
+                    m.add(e),
+                    () => {
+                        m.delete(e);
+                    }
+                ),
+                hasDiscoverRequestInFlight: () => p > 0,
                 async fetchDehydrated() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { isInitialLoad: t, isReloading: n, forceRefresh: a } = e;
                     if (
-                        (g(d.default.getCurrentUser()?.id ?? null),
-                        e.isDiscoverPickerCommit && null != I && ((f = {}), (h = { picks: l.A.getPicks() })),
-                        (0, u.Lg)("fetchDehydrated"))
+                        (L(d.default.getCurrentUser()?.id ?? null),
+                        y(o.default.getAuthSessionIdHash()),
+                        e.isDiscoverPickerCommit &&
+                            null != S &&
+                            (I?.abort(),
+                            (T = {}),
+                            (g = { picks: l.A.getPicks() }),
+                            _.C2.observeGate((0, s.SL)("fetchDehydrated")),
+                            _.C2.commitPicker(),
+                            !(async function (e) {
+                                try {
+                                    await r.h.dispatch({ type: "DISCOVER_PICKER_COMMIT", identity: e });
+                                } catch (e) {
+                                    c.A.captureException(e);
+                                }
+                            })(_.C2.capture(S, o.default.getAuthSessionIdHash() ?? null))),
+                        (0, E.Lg)("fetchDehydrated"))
                     ) {
                         if ((0, s.SL)("fetchDehydrated"))
                             return (function (e) {
                                 let { isInitialLoad: t, isReloading: n, isDiscoverPickerCommit: a } = e,
-                                    o = d.default.getCurrentUser()?.id,
-                                    u = a ? h : null,
-                                    _ = f,
-                                    I = m;
-                                function p() {
-                                    return I === m && null != o && d.default.getCurrentUser()?.id === o;
+                                    E = d.default.getCurrentUser()?.id,
+                                    A = a ? g : null,
+                                    m = T,
+                                    S = C;
+                                _.C2.observeGate((0, s.SL)("fetchDehydrated"));
+                                let N = _.C2.capture(E ?? null, o.default.getAuthSessionIdHash() ?? null),
+                                    R = !1,
+                                    L = null;
+                                function y() {
+                                    return (
+                                        S === C &&
+                                        null != E &&
+                                        o.default.isAuthenticated() &&
+                                        o.default.getId() === E &&
+                                        d.default.getCurrentUser()?.id === E &&
+                                        (o.default.getAuthSessionIdHash() ?? null) === N.authSessionIdHash
+                                    );
                                 }
-                                function T() {
-                                    return p() && (0, s.SL)("fetchDehydrated");
+                                function D() {
+                                    return y() && _.C2.canRun(N, (0, s.SL)("fetchDehydrated"));
                                 }
-                                let g = A,
-                                    S = (async function () {
-                                        try {
-                                            await (async function () {
-                                                if ((await g, !T() || (!a && _ !== f))) return;
-                                                let e = u ?? h;
+                                function b() {
+                                    return D() && m === T && _.C2.matches(N);
+                                }
+                                let v = h;
+                                p++;
+                                let P = (async function () {
+                                    try {
+                                        await (async function () {
+                                            if ((await v, !D() || (!a && m !== T))) return;
+                                            let e = A ?? g;
+                                            if (
+                                                (b() &&
+                                                    (await r.h.dispatch({
+                                                        type: "DISCOVER_REQUEST_STARTED",
+                                                        identity: N,
+                                                    }),
+                                                    (R = !0)),
+                                                D() && (a || m === T))
+                                            ) {
                                                 n && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
                                                 try {
                                                     let a = new URLSearchParams();
                                                     for (let t of e?.picks ?? l.A.getPicks()) a.append("game_ids", t);
                                                     null != e && a.append("refresh", "true");
-                                                    let s = Date.now(),
-                                                        o = await i.Bo.get({
-                                                            url: E.Rsh.GRAVITY_ITEMS_DEHYDRATED,
-                                                            query: a.toString(),
-                                                            rejectWithError: !1,
-                                                        });
-                                                    if (!T() || _ !== f) return;
+                                                    let s = Date.now();
+                                                    I = L = new AbortController();
+                                                    let o = L.signal,
+                                                        d = await (0, u.D)(L, () =>
+                                                            i.Bo.get({
+                                                                url: f.Rsh.GRAVITY_ITEMS_DEHYDRATED,
+                                                                query: a.toString(),
+                                                                rejectWithError: !1,
+                                                                signal: o,
+                                                                timeout: { deadline: 3e4 },
+                                                            }),
+                                                        );
+                                                    if (!b()) return;
+                                                    if (null != e && null != d.body.error_code)
+                                                        throw Error("Discover refresh failed");
                                                     (await r.h.dispatch({
                                                         type: "LOAD_ICYMI_DEHYDRATED",
-                                                        items: o.body.items,
-                                                        loadId: o.body.load_id,
+                                                        items: d.body.items,
+                                                        loadId: d.body.load_id,
                                                         startTime: s,
                                                         isReloading: n,
                                                         isInitialLoad: null != e || t,
+                                                        discoverRequest: N,
                                                     }),
-                                                        T() && _ === f && h === e && (h = null));
+                                                        b() && g === e && (g = null));
                                                 } finally {
-                                                    n &&
-                                                        p() &&
-                                                        r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !1 });
+                                                    (I === L && (I = null),
+                                                        n &&
+                                                            y() &&
+                                                            r.h.dispatch({
+                                                                type: "ICYMI_SET_REFRESHING",
+                                                                refreshing: !1,
+                                                            }));
                                                 }
-                                            })();
-                                        } catch (e) {
-                                            c.A.captureException(e);
-                                        }
-                                    })();
-                                return ((A = S), S);
+                                            }
+                                        })();
+                                    } catch (e) {
+                                        if (R && b())
+                                            try {
+                                                await r.h.dispatch({ type: "DISCOVER_REQUEST_FAILED", identity: N });
+                                            } catch (e) {
+                                                c.A.captureException(e);
+                                            }
+                                    } finally {
+                                        (p--, O());
+                                    }
+                                })();
+                                return ((h = P), O(), P);
                             })(e);
                         if (!e.isDiscoverPickerCommit) {
                             n && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
                             try {
                                 let e = Date.now(),
                                     s = await i.Bo.get({
-                                        url: E.Rsh.GRAVITY_ITEMS_DEHYDRATED,
+                                        url: f.Rsh.GRAVITY_ITEMS_DEHYDRATED,
                                         query: { refresh: a },
                                         rejectWithError: !1,
                                     });
@@ -155,11 +229,11 @@ function N() {
                     }
                 },
                 async gravityJoinGuild(e, t) {
-                    if ((0, u.Lg)("gravityJoinGuild") && 0 !== e.length)
+                    if ((0, E.Lg)("gravityJoinGuild") && 0 !== e.length)
                         try {
                             return (
                                 await i.Bo.post({
-                                    url: E.Rsh.GRAVITY_JOIN_GUILD,
+                                    url: f.Rsh.GRAVITY_JOIN_GUILD,
                                     body: { guild_ids: e, location: t },
                                     rejectWithError: !1,
                                 }),
@@ -170,10 +244,10 @@ function N() {
                         }
                 },
                 async fetchForNotification(e, t) {
-                    if ((0, u.Lg)("fetchInitial"))
+                    if ((0, E.Lg)("fetchInitial"))
                         try {
                             let n = await i.Bo.post({
-                                url: E.Rsh.GRAVITY_ITEMS_HYDRATE,
+                                url: f.Rsh.GRAVITY_ITEMS_HYDRATE,
                                 body: { message_items: [{ channel_id: e, message_id: t }], activity_items: [] },
                                 rejectWithError: !1,
                             });
@@ -187,11 +261,11 @@ function N() {
                         }
                 },
                 fetchForStatusNotification(e) {
-                    (0, u.Lg)("fetchInitialStatus") &&
+                    (0, E.Lg)("fetchInitialStatus") &&
                         r.h.dispatch({ type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: e });
                 },
                 async fetchHydrated(e, t, n) {
-                    if (!(0, u.Lg)("fetchHydrated")) return;
+                    if (!(0, E.Lg)("fetchHydrated")) return;
                     let { messageItems: a, activityItems: s } = n;
                     if (0 === a.length && 0 === s.length)
                         return void r.h.dispatch({
@@ -205,7 +279,7 @@ function N() {
                         });
                     try {
                         let n = await i.Bo.post({
-                            url: E.Rsh.GRAVITY_ITEMS_HYDRATE,
+                            url: f.Rsh.GRAVITY_ITEMS_HYDRATE,
                             body: { message_items: a, activity_items: s },
                             rejectWithError: !1,
                         });
@@ -220,34 +294,34 @@ function N() {
                         });
                     } catch (i) {
                         c.A.captureException(i);
-                        let n = (0, _.V)(e, t);
+                        let n = (0, A.V)(e, t);
                         r.h.dispatch({ type: "LOAD_ICYMI_HYDRATED_FAILED", hydrationId: n });
                     }
                 },
                 async getGuildChannelScores() {
-                    if ((0, u.Lg)("guildChannelScores"))
+                    if ((0, E.Lg)("guildChannelScores"))
                         try {
-                            let e = await i.Bo.get({ url: E.Rsh.GRAVITY_CUSTOM_SCORES, rejectWithError: !1 });
+                            let e = await i.Bo.get({ url: f.Rsh.GRAVITY_CUSTOM_SCORES, rejectWithError: !1 });
                             r.h.dispatch({ type: "LOAD_ICYMI_CUSTOM_SCORES", scores: e.body });
                         } catch (e) {
                             c.A.captureException(e);
                         }
                 },
                 async getRecommendedGuilds() {
-                    if ((0, u.Lg)("recommendedGuilds"))
+                    if ((0, E.Lg)("recommendedGuilds"))
                         try {
-                            let e = await i.Bo.get({ url: E.Rsh.GRAVITY_RECOMMENDED_GUILDS, rejectWithError: !1 });
+                            let e = await i.Bo.get({ url: f.Rsh.GRAVITY_RECOMMENDED_GUILDS, rejectWithError: !1 });
                             r.h.dispatch({ type: "LOAD_ICYMI_RECOMMENDED_GUILDS", guilds: e.body.guilds });
                         } catch (e) {
                             c.A.captureException(e);
                         }
                 },
                 async getMediaForCurrentStatus() {
-                    if (!(0, u.Lg)("mediaForCurrentStatus")) return;
+                    if (!(0, E.Lg)("mediaForCurrentStatus")) return;
                     let e = a.G2.getSetting();
                     if (null != e && null != e.createdAtMs)
                         try {
-                            let t = await i.Bo.get({ url: E.Rsh.GRAVITY_ATTACHMENTS, rejectWithError: !1 });
+                            let t = await i.Bo.get({ url: f.Rsh.GRAVITY_ATTACHMENTS, rejectWithError: !1 });
                             r.h.dispatch({
                                 type: "LOAD_ICYMI_CURRENT_STATUS_MEDIA",
                                 attachments: t.body.attachments,
