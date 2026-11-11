@@ -23,6 +23,7 @@ var r,
     E = a(407905);
 let j = [
         I.gr.HOME,
+        I.gr.CHARACTER_UNAVAILABLE,
         I.gr.INTRODUCTION,
         I.gr.VOICE_GENERAL,
         I.gr.VOICE_FACE,
@@ -42,6 +43,7 @@ let j = [
     ],
     S = [
         I.gr.HOME,
+        I.gr.CHARACTER_UNAVAILABLE,
         I.gr.INTRODUCTION,
         I.gr.VOICE_INTRO,
         I.gr.VOICE_STATS,
@@ -84,19 +86,21 @@ let j = [
         [I.gr.SIDEKICK_LEAVE]: E.oL,
     };
 function T(e) {
-    let { flow: t, stats: a } = e;
+    let { flow: t, stats: a, isCharacterCreatorEnabled: r = !0 } = e;
     return (t === I.Np.SHARED_DATA ? S : j).filter((e) => {
+        if (e === I.gr.CHARACTER_UNAVAILABLE) return !r;
+        if ((!r && (e === I.gr.INTRODUCTION || (0, I.Rq)(e))) || (!r && e === I.gr.SUMMARY && null === a)) return !1;
         let t = N[e];
         if (null != t) return null != a && t(a);
-        let r = C[e];
-        return null == r || void 0 === a || r(a);
+        let i = C[e];
+        return null == i || void 0 === a || i(a);
     });
 }
 function R(e) {
-    let { flow: t, stats: a, currentRoute: r, direction: i } = e,
-        s = T({ flow: t, stats: a }),
-        n = s.indexOf(r);
-    return -1 === n ? I.gr.INTRODUCTION : (s[n + i] ?? null);
+    let { flow: t, stats: a, isCharacterCreatorEnabled: r, currentRoute: i, direction: s } = e,
+        n = T({ flow: t, stats: a, isCharacterCreatorEnabled: r }),
+        c = n.indexOf(i);
+    return -1 === c ? I.gr.INTRODUCTION : (n[c + s] ?? null);
 }
 a(321073);
 let O =
@@ -107,24 +111,24 @@ let O =
         "https://cdn.discordapp.com/assets/content/aada5b40828140b41a56df82e81783cd43fd60e30ac1eb3c9f93a087b95dcf03.mp3",
     k =
         "https://cdn.discordapp.com/assets/content/04536b9e5b26d0b6e85116ce546b7d5ba97da31e7de7a1e02da262bcd5249bb0.mp3",
-    D =
+    L =
         "https://cdn.discordapp.com/assets/content/82d771ff521a99ea8e26239d2f2e48ae847e39575bc5bce396739b430b8a6fda.mp3",
-    L = [O, y, M, k, D];
+    D = [O, y, M, k, L];
 function P(e) {
     return e !== I.gr.HOME && null == (0, I.UG)(e).statsScreen;
 }
 function U(e) {
     return null != (0, I.UG)(e).statsScreen;
 }
-var G = a(127639),
-    H = a(287809),
+var H = a(127639),
+    G = a(287809),
     F = a(474090),
     K = a(817379);
 function B() {
-    return (0, p.yK)([o.A, H.default], () => {
+    return (0, p.yK)([o.A, G.default], () => {
         let { selectedCharacterTraits: e, stats: t, character: a } = o.A,
-            r = (0, F.ki)(H.default.getCurrentUser());
-        return Object.values(G.V).filter((i) => {
+            r = (0, F.ki)(G.default.getCurrentUser());
+        return Object.values(H.V).filter((i) => {
             let s = e[i];
             return null != s && (0, K.tS)(i, s, { stats: t, hasNitro: r, savedCharacter: a });
         });
@@ -1644,8 +1648,8 @@ let ej = /^tex_(aura|base_\d+|outfit)_/,
         tex_wearable_11_deviantTail_smoke_idle_spritesheet: ey,
     },
     ek = [1, 1.25, 1.5, 1.75, 2, 3],
-    eD = Math.min(...ek),
-    eL = Math.max(...ek);
+    eL = Math.min(...ek),
+    eD = Math.max(...ek);
 function eP(e, t) {
     let { url: a, width: r, height: i, widthAt1x: s } = e_[e];
     if (null == s) return a;
@@ -1658,8 +1662,8 @@ function eP(e, t) {
     return `${a}?width=${o}&height=${u}`;
 }
 let eU = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
-    eG = eU.map((e) => `outfit${e}Image`),
-    eH = {
+    eH = eU.map((e) => `outfit${e}Image`),
+    eG = {
         [I.s9.IDLE]: 0,
         [I.s9.INTRODUCTION]: 1,
         [I.s9.FACE]: 2,
@@ -1775,9 +1779,9 @@ function e0(e) {
             let e = ed.A.windowSize();
             return (function (e, t) {
                 let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (a) return eD;
+                if (a) return eL;
                 let r = Math.max(e / 945, t / 532) * (0, eI.A)();
-                return ek.find((e) => e >= r) ?? eL;
+                return ek.find((e) => e >= r) ?? eD;
             })(e.width, e.height);
         }),
         [c, d] = f.useState(n);
@@ -1802,7 +1806,7 @@ function e0(e) {
                         {
                             device: i,
                             mobileLift: s,
-                            chapterID: a && t === I.s9.FACE ? eH[I.s9.IDLE] : eH[t],
+                            chapterID: a && t === I.s9.FACE ? eG[I.s9.IDLE] : eG[t],
                             faceID: o,
                             shoesID: d,
                             headwearID: ex[u],
@@ -1950,7 +1954,7 @@ function e0(e) {
             var t;
             let { visibleDataBinding: a, requestedDataBinding: r } = e,
                 [i, s] = f.useState({}),
-                n = (t = r.outfitID) > 0 ? eG[t - 1] : null,
+                n = (t = r.outfitID) > 0 ? eH[t - 1] : null,
                 c = null != n ? r[n] : void 0,
                 d = null == n || a?.[n] === c || i[n] === c,
                 l = a ?? r;
@@ -1960,7 +1964,7 @@ function e0(e) {
                 onDataBindingChange: f.useMemo(() => {
                     let e = {};
                     return (
-                        eG.forEach((t) => {
+                        eH.forEach((t) => {
                             e[t] = (e) => {
                                 s((a) => (a[t] === e ? a : { ...a, [t]: e }));
                             };
@@ -2183,8 +2187,8 @@ function tk(e) {
         a = f.useMemo(() => ({ "--custom-checkpoint-rarity-background": t === tO.K.NITRO ? tM : W.Zy[t] }), [t]);
     return (0, i.jsx)(tb, { className: ty.q, style: a, children: tp.intl.string(W.iG[t]) });
 }
-var tD = a(829870);
-function tL(e) {
+var tL = a(829870);
+function tD(e) {
     let { asset: t, hideRarity: a } = e,
         r =
             t.status === tR.eP.NITRO_LOCKED
@@ -2202,10 +2206,10 @@ function tL(e) {
                   })
                 : (0, w.Oq)(t);
     return (0, i.jsxs)("div", {
-        className: tD.z,
+        className: tL.z,
         children: [
             (0, i.jsxs)("div", {
-                className: tD.D,
+                className: tL.D,
                 children: [
                     (0, i.jsx)(td.E, {
                         tag: "div",
@@ -2222,13 +2226,13 @@ function tL(e) {
 }
 var tP = a(646514),
     tU = a(403581),
-    tG = a(559265);
-function tH(e) {
+    tH = a(559265);
+function tG(e) {
     let { rarity: t } = e,
         a = f.useMemo(() => ({ "--custom-checkpoint-rarity-color": W.Zy[t] }), [t]);
     return t === tO.K.NITRO
-        ? (0, i.jsx)(tU.NitroWheelIcon, { size: "custom", color: tP.A.colors.ICON_SUBTLE, className: tG.d7 })
-        : (0, i.jsx)("span", { className: tG.oG, style: a });
+        ? (0, i.jsx)(tU.NitroWheelIcon, { size: "custom", color: tP.A.colors.ICON_SUBTLE, className: tH.d7 })
+        : (0, i.jsx)("span", { className: tH.oG, style: a });
 }
 function tF(e) {
     let {
@@ -2248,7 +2252,7 @@ function tF(e) {
             return `${h}?width=${e}&height=${e}`;
         }, [h]);
     return (0, i.jsxs)("label", {
-        className: _()(tG.uK, { [tG.wH]: r, [tG.dv]: (0, w.C5)(t), [tG.xt]: p, [tG.Ns]: b === tR.eP.NITRO_LOCKED }),
+        className: _()(tH.uK, { [tH.wH]: r, [tH.dv]: (0, w.C5)(t), [tH.xt]: p, [tH.Ns]: b === tR.eP.NITRO_LOCKED }),
         onMouseEnter: () => c(t),
         onFocus: function () {
             c(t);
@@ -2267,8 +2271,8 @@ function tF(e) {
                     "aria-label": (0, w.v2)(t, { skipRarity: s, skipDescription: !1 }),
                 }),
             }),
-            null != m && (0, i.jsx)("img", { src: m, alt: "", draggable: !1, className: tG.Sl }),
-            !s && null != u && (0, i.jsx)(tH, { rarity: u }),
+            null != m && (0, i.jsx)("img", { src: m, alt: "", draggable: !1, className: tH.Sl }),
+            !s && null != u && (0, i.jsx)(tG, { rarity: u }),
         ],
     });
 }
@@ -2346,7 +2350,7 @@ function tX(e) {
                     }),
                 ],
             }),
-            null != o && (0, i.jsx)(tL, { asset: o, hideRarity: l }),
+            null != o && (0, i.jsx)(tD, { asset: o, hideRarity: l }),
         ],
     });
 }
@@ -2398,7 +2402,7 @@ function tJ(e) {
         } = (function (e) {
             let { customizationOption: t, savedOptionId: a, rarityOrder: r, optionIds: i } = e,
                 s = (0, p.bG)([o.A], () => o.A.stats),
-                n = (0, p.bG)([H.default], () => (0, F.ki)(H.default.getCurrentUser())),
+                n = (0, p.bG)([G.default], () => (0, F.ki)(G.default.getCurrentUser())),
                 c = f.useMemo(() => (0, w.p8)(r), [r]);
             return f.useMemo(() => {
                 let e = w.hw[t],
@@ -2624,8 +2628,8 @@ function an(e) {
         } = e,
         b =
             ((a = (0, p.yK)([o.A], () => {
-                let e = o.A.selectedCharacterTraits[G.V.OUTFIT];
-                return null == e || (0, K.nb)(G.V.OUTFIT, e) ? t3.filter((e) => e !== w.v7.OUTFIT_COLOR) : t3;
+                let e = o.A.selectedCharacterTraits[H.V.OUTFIT];
+                return null == e || (0, K.nb)(H.V.OUTFIT, e) ? t3.filter((e) => e !== w.v7.OUTFIT_COLOR) : t3;
             })),
             (r = n === w.v7.OUTFIT_COLOR && !a.includes(w.v7.OUTFIT_COLOR)),
             f.useEffect(() => {
@@ -2709,15 +2713,15 @@ function an(e) {
                 },
             }),
         k = f.useId(),
-        D = null != u ? k : void 0,
-        L = null != v ? (0, w.cq)(v) : null;
+        L = null != u ? k : void 0,
+        D = null != v ? (0, w.cq)(v) : null;
     function P(e) {
         null != u ? Y(u) : h || (c(e), S());
     }
     function U(e) {
         "more" !== e ? P(e) : null != v && P(v);
     }
-    function H(e) {
+    function G(e) {
         "more" === e && (A || null == v) ? j() : U(e);
     }
     function F(e) {
@@ -2729,15 +2733,15 @@ function an(e) {
             "aria-selected": t,
             "aria-controls": t ? l : void 0,
             "aria-disabled": null != u,
-            "aria-describedby": D,
+            "aria-describedby": L,
             disabled: h,
             tabIndex: t ? 0 : -1,
-            onClick: () => H(e),
+            onClick: () => G(e),
             onKeyDown: (t) =>
                 (function (e, t) {
                     switch (e.key) {
                         case "Enter":
-                            (e.preventDefault(), e.stopPropagation(), H(t));
+                            (e.preventDefault(), e.stopPropagation(), G(t));
                             break;
                         case " ":
                             (e.preventDefault(), e.stopPropagation());
@@ -2757,7 +2761,7 @@ function an(e) {
                     }
                 })(t, e),
             onKeyUp: (t) => {
-                " " === t.key && (t.preventDefault(), t.stopPropagation(), H(e));
+                " " === t.key && (t.preventDefault(), t.stopPropagation(), G(e));
             },
             className: _()(as.Mf, { [as.OS]: "more" === e, [as.vu]: t }),
         };
@@ -2811,8 +2815,8 @@ function an(e) {
                         ...F("more"),
                         ref: m,
                         "aria-label":
-                            null != L
-                                ? tp.intl.formatToPlainString(t_.default.QX1VPx, { category: L })
+                            null != D
+                                ? tp.intl.formatToPlainString(t_.default.QX1VPx, { category: D })
                                 : tp.intl.string(t_.default.jepsQ6),
                         "aria-haspopup": "menu",
                         "aria-expanded": I,
@@ -2823,7 +2827,7 @@ function an(e) {
                                 tag: "span",
                                 variant: "heading-sm/semibold",
                                 color: "none",
-                                children: L ?? tp.intl.string(t_.default["iXpQc+"]),
+                                children: D ?? tp.intl.string(t_.default["iXpQc+"]),
                             }),
                             (0, i.jsx)(t2.ChevronSmallRightIcon, { size: "refresh_sm", color: "currentColor" }),
                         ],
@@ -3091,22 +3095,22 @@ var aR = a(477155),
     ay = a(417270),
     aM = a(935286),
     ak = a(405433),
-    aD = a(289873),
-    aL = a(621466);
+    aL = a(289873),
+    aD = a(621466);
 function aP(e, t) {
     let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     f.useEffect(() => {
         if (!a) return (window.addEventListener("keydown", r), () => window.removeEventListener("keydown", r));
         function r(a) {
-            (0, aL.vq)(a.target, HTMLTextAreaElement) ||
-                (0, aL.vq)(a.target, HTMLInputElement) ||
+            (0, aD.vq)(a.target, HTMLTextAreaElement) ||
+                (0, aD.vq)(a.target, HTMLInputElement) ||
                 (a.key === e && t(a));
         }
     }, [e, t, a]);
 }
 var aU = a(652215),
-    aG = a(650583);
-function aH(e) {
+    aH = a(650583);
+function aG(e) {
     let { source: t, onClick: a, disabled: r = !1 } = e,
         i = tS(t),
         s = f.useRef(!1);
@@ -3119,7 +3123,7 @@ function aH(e) {
             e.button === aU.hE4.PRIMARY && ((s.current = !0), n());
         },
         onKeyDown: function (e) {
-            (e.key === aG.dh.ENTER || e.key === aG.dh.SPACE) && ((s.current = !0), e.repeat || n());
+            (e.key === aH.dh.ENTER || e.key === aH.dh.SPACE) && ((s.current = !0), e.repeat || n());
         },
         onClickWithSound: function () {
             (s.current || n(), (s.current = !1), a());
@@ -3134,7 +3138,7 @@ function aK(e) {
             onPointerDown: d,
             onKeyDown: l,
             onClickWithSound: o,
-        } = aH({ source: aC, onClick: s, disabled: n });
+        } = aG({ source: aC, onClick: s, disabled: n });
     return (
         aP(
             "ArrowLeft",
@@ -3172,7 +3176,7 @@ function aB(e) {
             onPointerDown: u,
             onKeyDown: h,
             onClickWithSound: f,
-        } = aH({ source: l, onClick: s, disabled: d });
+        } = aG({ source: l, onClick: s, disabled: d });
     return (
         aP(
             "ArrowRight",
@@ -3206,7 +3210,7 @@ function aV(e) {
 }
 function az(e) {
     let { onClick: t } = e,
-        { onPointerDown: a, onKeyDown: r, onClickWithSound: s } = aH({ source: aT, onClick: t });
+        { onPointerDown: a, onKeyDown: r, onClickWithSound: s } = aG({ source: aT, onClick: t });
     return (0, i.jsx)(aO.m, {
         text: tp.intl.string(t_.default.cWdGf9),
         ariaHidden: !0,
@@ -3297,7 +3301,7 @@ function aQ(e) {
         children: [
             (0, i.jsx)(tu, { variant: "mono-md/normal", className: aF.Pf, children: tp.intl.string(tp.t["R3BPH+"]) }),
             c
-                ? (0, i.jsx)(aD.y, { type: aD.t.SPINNING_CIRCLE_SIMPLE, className: aF.u1, itemClassName: aF.$N })
+                ? (0, i.jsx)(aL.y, { type: aL.t.SPINNING_CIRCLE_SIMPLE, className: aF.u1, itemClassName: aF.$N })
                 : (0, i.jsx)(aM.ArrowSmallRightIcon, { size: "refresh_sm", color: "currentColor" }),
         ],
     });
@@ -3492,7 +3496,7 @@ function rh() {
             onPointerDown: _,
             onKeyDown: m,
             onClickWithSound: x,
-        } = aH({
+        } = aG({
             source: aT,
             onClick: function () {
                 if (null == u) return;
@@ -3611,10 +3615,10 @@ var rf = a(206701),
 let rg = (0, r_.j5)(W.Kr);
 function rA(e) {
     let { onStart: t } = e,
-        a = (0, p.bG)([H.default], () => H.default.getCurrentUser()),
+        a = (0, p.bG)([G.default], () => G.default.getCurrentUser()),
         r = (0, rm.tx)(a),
         s = (0, p.bG)([Q.Ay], () => Q.Ay.useReducedMotion),
-        { playSound: n, onPointerDown: c, onKeyDown: d, onClickWithSound: l } = aH({ source: aT, onClick: t });
+        { playSound: n, onPointerDown: c, onKeyDown: d, onClickWithSound: l } = aG({ source: aT, onClick: t });
     return (
         aP("ArrowRight", function (e) {
             (e.repeat || n(), t());
@@ -3772,12 +3776,12 @@ function ry(e) {
 }
 var rM = a(445199),
     rk = a(205524),
-    rD = a(690521),
-    rL = a(152321);
+    rL = a(690521),
+    rD = a(152321);
 let rP = [0, 0, 2],
     rU = [0, 1, 0],
-    rG = [0, 0, 0],
-    rH = `
+    rH = [0, 0, 0],
+    rG = `
 attribute vec4 a_position;
 attribute vec2 a_texcoord;
 uniform mat4 u_normalMatrix;
@@ -3878,7 +3882,7 @@ function rz(e) {
                 c = i.createShader(i.FRAGMENT_SHADER);
             if (null == s || null == c) return;
             if (
-                (i.shaderSource(s, rH),
+                (i.shaderSource(s, rG),
                 i.shaderSource(c, rF),
                 i.compileShader(s),
                 !i.getShaderParameter(s, i.COMPILE_STATUS))
@@ -3927,7 +3931,7 @@ function rz(e) {
                         i.vertexAttribPointer(o, 2, i.FLOAT, !1, 0, 0));
                     let n = r.clientWidth / r.clientHeight,
                         c = rk.fN(rk.vt(), A, n, 1, 2e3),
-                        f = rk.t5(rk.vt(), rP, rG, rU),
+                        f = rk.t5(rk.vt(), rP, rH, rU),
                         _ = rk.lw(rk.vt(), c, f),
                         v = rk.vt();
                     (rk.eL(v, v, t), rk.Z8(v, v, s));
@@ -3961,7 +3965,7 @@ function rz(e) {
     }, [a, d, n]);
     (f.useEffect(() => {
         null != n &&
-            ((d.current.crossOrigin = "anonymous"), (d.current.src = (0, rD.Ez)(a, 256)), (d.current.onload = C));
+            ((d.current.crossOrigin = "anonymous"), (d.current.src = (0, rL.Ez)(a, 256)), (d.current.onload = C));
     }, [a, C, d, n]),
         f.useEffect(
             () => (
@@ -4013,13 +4017,13 @@ function rz(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("canvas", {
-                    className: _()(rL.Ji, { [rL.q4]: !u }),
+                    className: _()(rD.Ji, { [rD.q4]: !u }),
                     ref: s,
                     height: 512,
                     width: 512,
                     onMouseDown: T,
                 }),
-                (0, i.jsx)("canvas", { className: rL.R, ref: c, height: 256, width: 256 }),
+                (0, i.jsx)("canvas", { className: rD.R, ref: c, height: 256, width: 256 }),
             ],
         })
     );
@@ -4161,7 +4165,7 @@ function ia(e) {
         { route: a, onNextStep: r, onPreviousStep: s } = e,
         n = (0, p.bG)([o.A], () => o.A.stats?.users ?? r8),
         c = (0, p.bG)([o.A], () => o.A.stats?.sidekick),
-        d = (0, p.bG)([H.default], () => H.default.getCurrentUser()),
+        d = (0, p.bG)([G.default], () => G.default.getCurrentUser()),
         l = (0, p.bG)([Q.Ay], () => Q.Ay.useReducedMotion),
         u = f.useRef(null),
         h = f.useRef(void 0),
@@ -4611,7 +4615,7 @@ function iy(e) {
 }
 var iM = a(842807);
 let ik = [];
-function iD(e) {
+function iL(e) {
     let { gameStats: t } = e,
         a = Math.round(t?.totalGamesPlayed ?? 0),
         r = (0, E.bD)(t?.totalGamesPlayedPercentile),
@@ -4661,7 +4665,7 @@ function iD(e) {
         ],
     });
 }
-function iL(e) {
+function iD(e) {
     let { gameStats: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -4701,12 +4705,12 @@ function iP() {
     return (0, i.jsx)(a1, {
         children: (0, i.jsx)("div", {
             className: _()(iM.kL, { [iM.TF]: r }),
-            children: r ? (0, i.jsx)(iL, { gameStats: a }) : (0, i.jsx)(iD, { gameStats: e }),
+            children: r ? (0, i.jsx)(iD, { gameStats: a }) : (0, i.jsx)(iL, { gameStats: e }),
         }),
     });
 }
 var iU = a(167662);
-function iG(e) {
+function iH(e) {
     let { messages: t } = e,
         a = Math.round(t?.numMessagesSent ?? 0),
         r = (0, E.bD)(t?.numMessagesSentPercentile);
@@ -4732,7 +4736,7 @@ function iG(e) {
         ],
     });
 }
-function iH(e) {
+function iG(e) {
     let { numWordsSent: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -4770,7 +4774,7 @@ function iF() {
                 }),
                 (0, i.jsx)("div", {
                     className: iU.C,
-                    children: r ? (0, i.jsx)(iH, { numWordsSent: a }) : (0, i.jsx)(iG, { messages: e }),
+                    children: r ? (0, i.jsx)(iG, { numWordsSent: a }) : (0, i.jsx)(iH, { messages: e }),
                 }),
             ],
         }),
@@ -5355,7 +5359,7 @@ function sp(e) {
             onRouteClick: d,
         } = e,
         l = tp.intl.string(a),
-        { onPointerDown: o, onKeyDown: u, onClickWithSound: h } = aH({ source: c, onClick: () => d(r), disabled: s });
+        { onPointerDown: o, onKeyDown: u, onClickWithSound: h } = aG({ source: c, onClick: () => d(r), disabled: s });
     return (0, i.jsx)(aO.m, {
         text: l,
         ariaHidden: !0,
@@ -5487,13 +5491,15 @@ function sA(e) {
         [n, c] = (function (e) {
             let [t, a] = f.useState(() =>
                 (function (e) {
-                    let { character: t, progress: a, stats: r } = o.A,
-                        i = null != t ? I.s9.SUMMARY : a?.stage;
-                    return T({ flow: e, stats: r }).find((e) => (0, I.UG)(e).characterStage === i) ?? I.gr.HOME;
+                    let { character: t, progress: a, stats: r, isCharacterCreatorEnabled: i } = o.A;
+                    if (!i) return I.gr.HOME;
+                    let s = null != t ? I.s9.SUMMARY : a?.stage;
+                    return T({ flow: e, stats: r }).find((e) => (0, I.UG)(e).characterStage === s) ?? I.gr.HOME;
                 })(e),
             );
             return (
                 f.useEffect(() => {
+                    if (!o.A.isCharacterCreatorEnabled) return;
                     let { characterStage: e } = (0, I.UG)(t);
                     (0, l.l4)(e);
                 }, [t]),
@@ -5512,7 +5518,7 @@ function sA(e) {
         S = (0, I.Rq)(n),
         N = (0, p.bG)([o.A], () => (o.A.fetchState === o.T.SUCCESS ? o.A.stats : void 0)),
         C = (0, p.bG)([o.A], () => o.A.character),
-        G = f.useMemo(
+        H = f.useMemo(
             () =>
                 (function (e, t) {
                     switch (e) {
@@ -5533,7 +5539,7 @@ function sA(e) {
                 })(n, C),
             [n, C],
         ),
-        H = (function () {
+        G = (function () {
             let { isMuted: e, volume: t } = (0, p.cf)([o.A], () => ({ isMuted: o.A.isMuted, volume: o.A.volume })),
                 a = f.useRef(new Map()),
                 r = f.useRef(null),
@@ -5541,7 +5547,7 @@ function sA(e) {
                     (r.current?.(), a.current.forEach((e) => e.pause()));
                 }, []);
             return (
-                f.useEffect(() => ((a.current = new Map(L.map((e) => [e, new Audio(e)]))), i), [i]),
+                f.useEffect(() => ((a.current = new Map(D.map((e) => [e, new Audio(e)]))), i), [i]),
                 f.useEffect(() => {
                     a.current.forEach((a) => {
                         ((a.muted = e), (a.volume = t));
@@ -5581,17 +5587,17 @@ function sA(e) {
                     return (
                         a === I.gr.INTRODUCTION
                             ? (r.push({ source: O, delayMs: 0 }),
-                              r.push({ source: D, delayMs: 2500 }),
+                              r.push({ source: L, delayMs: 2500 }),
                               r.push({ source: y, delayMs: 2800 }))
                             : P(t) && U(a)
                               ? r.push({ source: M, delayMs: 0 })
-                              : U(t) && P(a) && (r.push({ source: k, delayMs: 0 }), r.push({ source: D, delayMs: 0 })),
+                              : U(t) && P(a) && (r.push({ source: k, delayMs: 0 }), r.push({ source: L, delayMs: 0 })),
                         r
                     );
                 })({ previousRoute: n, route: e });
-                (null != t && H(t), c(e));
+                (null != t && G(t), c(e));
             },
-            [n, H, c],
+            [n, G, c],
         ),
         J = f.useCallback(
             (e) => {
@@ -5625,7 +5631,7 @@ function sA(e) {
         children: (e) =>
             (0, i.jsxs)("div", {
                 className: _()(e, sx.kL),
-                style: G,
+                style: H,
                 role: "dialog",
                 "aria-modal": !0,
                 "aria-label": tp.intl.string(ab.default["CdU/PF"]),
@@ -5656,7 +5662,7 @@ function sA(e) {
                         hiddenScale: 1.02,
                         keepMounted: !0,
                         className: sx.qd,
-                        style: G,
+                        style: H,
                         children: (0, i.jsx)($, { isVisible: m }),
                     }),
                     (0, i.jsx)(en, {
@@ -5673,7 +5679,7 @@ function sA(e) {
                         hiddenScale: 1.02,
                         mountAfterDelay: !0,
                         className: sx.qd,
-                        style: G,
+                        style: H,
                         children: (0, i.jsx)(sh, { route: n, onNextStep: ea, onPreviousStep: ee }),
                     }),
                     (0, i.jsx)(aZ, {

@@ -1,129 +1,138 @@
 var r,
-    i = a(127639),
-    s = a(855986),
-    n = a(73153),
-    c = a(287809),
-    d = a(474090),
-    l = a(817379),
-    o =
+    i = a(402102),
+    s = a(127639),
+    n = a(855986),
+    c = a(73153),
+    d = a(287809),
+    l = a(474090),
+    o = a(817379),
+    u =
         (((r = {})[(r.INIT = 0)] = "INIT"),
         (r[(r.FETCHING = 1)] = "FETCHING"),
         (r[(r.SUCCESS = 2)] = "SUCCESS"),
         (r[(r.ERROR = 3)] = "ERROR"),
         r);
-let u = { volume: 1, isMuted: !1, progress: null },
-    h = {},
-    f = { ...u },
-    b = null,
+let h = { volume: 1, isMuted: !1, progress: null },
+    f = {},
+    b = { ...h },
     _ = null,
     p = null,
-    m = !1,
-    x = 0,
+    m = null,
+    x = !1,
     g = null,
-    A = !1;
-class v extends s.Ay.PersistedStore {
+    A = 0,
+    v = null,
+    w = !1;
+class I extends n.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     static migrations = [(e) => ({ ...e, progress: null }), (e) => ({ volume: 1, ...e })];
     getState() {
-        return f;
-    }
-    initialize(e) {
-        (this.waitFor(c.default), null != e && (f = { ...f, ...e }));
-    }
-    get volume() {
-        return f.volume;
-    }
-    get isMuted() {
-        return f.isMuted;
-    }
-    get stats() {
         return b;
     }
-    get globalStats() {
+    initialize(e) {
+        (this.waitFor(d.default), null != e && (b = { ...b, ...e }));
+    }
+    get volume() {
+        return b.volume;
+    }
+    get isMuted() {
+        return b.isMuted;
+    }
+    get stats() {
         return _;
     }
-    get character() {
+    get globalStats() {
         return p;
     }
-    get compactAssets() {
+    get character() {
         return m;
     }
-    get fetchState() {
+    get compactAssets() {
         return x;
     }
-    get isFetching() {
-        return 1 === x;
+    get availability() {
+        return g;
     }
-    get isSaving() {
+    get isCharacterCreatorEnabled() {
+        return g === i.u.FULL;
+    }
+    get fetchState() {
         return A;
     }
+    get isFetching() {
+        return 1 === A;
+    }
+    get isSaving() {
+        return w;
+    }
     get progress() {
-        return f.progress;
+        return b.progress;
     }
     get selectedCharacterTraits() {
-        return g ?? p ?? h;
+        return v ?? m ?? f;
     }
 }
-let w = new v(n.h, {
+let E = new I(c.h, {
     CHECKPOINT_TOGGLE_MUTE: function () {
-        f.isMuted = !f.isMuted;
+        b.isMuted = !b.isMuted;
     },
     CHECKPOINT_SET_VOLUME: function (e) {
         let { volume: t } = e;
-        if (f.volume === t && !f.isMuted) return !1;
-        ((f.volume = t), (f.isMuted = !1));
+        if (b.volume === t && !b.isMuted) return !1;
+        ((b.volume = t), (b.isMuted = !1));
     },
     CHECKPOINT_FETCH_START: function () {
-        x = 1;
+        A = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
-        ((b = e.stats),
-            (_ = e.globalStats),
-            (p = e.character),
-            (m = e.compactAssets),
-            (x = 2),
-            null == p && null != f.progress
-                ? ((g = (function (e) {
-                      let t = (0, d.ki)(c.default.getCurrentUser()),
+        ((_ = e.stats),
+            (p = e.globalStats),
+            (m = e.character),
+            (x = e.compactAssets),
+            (g = e.availability),
+            (A = 2),
+            g === i.u.FULL && null == m && null != b.progress
+                ? ((v = (function (e) {
+                      let t = (0, l.ki)(d.default.getCurrentUser()),
                           a = {};
-                      for (let r of Object.values(i.V)) {
+                      for (let r of Object.values(s.V)) {
                           let i = e[r];
-                          null == i || (0, l.tS)(r, i, { stats: b, hasNitro: t, savedCharacter: p }) || (a[r] = i);
+                          null == i || (0, o.tS)(r, i, { stats: _, hasNitro: t, savedCharacter: m }) || (a[r] = i);
                       }
                       return a;
-                  })(f.progress.selectedCharacterTraits)),
-                  (f.progress = { ...f.progress, selectedCharacterTraits: g }))
-                : (g = null));
+                  })(b.progress.selectedCharacterTraits)),
+                  (b.progress = { ...b.progress, selectedCharacterTraits: v }))
+                : (v = null));
     },
     CHECKPOINT_FETCH_FAILED: function () {
-        x = 3;
+        A = 3;
     },
     CHECKPOINT_COMPLETE_START: function () {
-        A = !0;
+        w = !0;
     },
     CHECKPOINT_COMPLETE_SUCCESS: function (e) {
-        ((p = e.character), (g = null), (A = !1));
+        ((m = e.character), (v = null), (w = !1));
     },
     CHECKPOINT_COMPLETE_FAILED: function () {
-        A = !1;
+        w = !1;
     },
     CHECKPOINT_RESET_SUCCESS: function () {
-        ((p = null), (g = null), (f.progress = null));
+        ((m = null), (v = null), (b.progress = null));
     },
     CHECKPOINT_SELECT_CHARACTER_TRAIT: function (e) {
-        ((g = { ...(g ?? p ?? h), [e.trait]: e.optionId }),
-            null != f.progress && (f.progress = { ...f.progress, selectedCharacterTraits: g }));
+        ((v = { ...(v ?? m ?? f), [e.trait]: e.optionId }),
+            null != b.progress && (b.progress = { ...b.progress, selectedCharacterTraits: v }));
     },
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e,
-            a = g ?? p ?? h,
-            { progress: r } = f;
+            a = v ?? m ?? f,
+            { progress: r } = b;
         if (r?.stage === t && r.selectedCharacterTraits === a) return !1;
-        f.progress = { stage: t, selectedCharacterTraits: a };
+        b.progress = { stage: t, selectedCharacterTraits: a };
     },
     LOGOUT: function () {
-        ((f = { ...u }), (b = null), (_ = null), (p = null), (m = !1), (x = 0), (g = null), (A = !1));
+        ((b = { ...h }), (_ = null), (p = null), (m = null), (x = !1), (g = null), (A = 0), (v = null), (w = !1));
     },
 });
-a.d(t, {}, { A: w, T: o });
+a.d(t, {}, { A: E, T: u });

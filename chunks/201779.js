@@ -5,6 +5,7 @@ var i,
     l = (((i = {}).SHARED_DATA = "shared_data"), (i.NO_SHARED_DATA = "no_shared_data"), i),
     o =
         (((r = {}).HOME = "home"),
+        (r.CHARACTER_UNAVAILABLE = "character_unavailable"),
         (r.INTRODUCTION = "introduction"),
         (r.VOICE_INTRO = "voice_intro"),
         (r.VOICE_STATS = "voice_stats"),
@@ -61,7 +62,8 @@ var c =
         (a.SUMMARY = "summary"),
         a),
     u =
-        (((s = {}).VOICE_INTRO = "voice_intro"),
+        (((s = {}).CHARACTER_UNAVAILABLE = "character_unavailable"),
+        (s.VOICE_INTRO = "voice_intro"),
         (s.VOICE = "voice"),
         (s.MESSAGES_INTRO = "messages_intro"),
         (s.MESSAGES = "messages"),
@@ -80,6 +82,7 @@ var c =
         s);
 let _ = {
     home: { characterStage: "idle" },
+    character_unavailable: { characterStage: "idle", statsScreen: "character_unavailable" },
     introduction: { characterStage: "introduction" },
     voice_intro: { characterStage: "face", statsScreen: "voice_intro" },
     voice_stats: { characterStage: "face", statsScreen: "voice" },
