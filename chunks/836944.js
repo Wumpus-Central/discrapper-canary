@@ -15,8 +15,8 @@ var n = l(582128),
     S = l(73153),
     R = l(645619),
     I = l(904629);
-let c = {};
-class f extends P.Ay.PersistedStore {
+let f = {};
+class O extends P.Ay.PersistedStore {
     static displayName = "GuildPowerupsNotificationStore";
     static persistKey = "GuildPowerupsNotificationStore";
     static migrations = [
@@ -29,24 +29,24 @@ class f extends P.Ay.PersistedStore {
         ),
     ];
     getState() {
-        return c;
+        return f;
     }
     initialize(e) {
-        (this.waitFor(A.A, R.A, E.A), null != e && (c = e));
+        (this.waitFor(A.A, R.A, E.A), null != e && (f = e));
     }
     getNotificationStateForGuild(e) {
-        return c[e];
+        return f[e];
     }
 }
-let O = new f(S.h, {
+let c = new O(S.h, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
         let { guildId: t } = e,
             l = E.A.getGuild(t)?.premiumSubscriberCount ?? 0,
             n = R.A.getStateForGuild(t),
             u = A.A.getStateForGuild(t),
             r = (0, I.k)([...Object.values(n?.unlockedPowerups ?? {}), ...Object.values(u?.entitlements ?? {})]);
-        c = {
-            ...c,
+        f = {
+            ...f,
             [t]: {
                 lastSeenWarningNotification: new Date(r[r.length - 1]?.ends_at ?? Date.now()).getTime(),
                 lastBoostCount: l,
@@ -54,7 +54,7 @@ let O = new f(S.h, {
         };
     },
     GUILD_POWERUPS_RESET_NOTIFICATIONS: function () {
-        c = {};
+        f = {};
     },
 });
 var p = l(379229),
@@ -79,42 +79,42 @@ function W(e) {
     let l,
         G,
         S,
-        c,
         f,
-        K = (0, r.bG)([O], () => O.getNotificationStateForGuild(e), [e]),
+        O,
+        K = (0, r.bG)([c], () => c.getNotificationStateForGuild(e), [e]),
         H = (0, r.bG)([R.A], () => R.A.getStateForGuild(e)),
         { indicator: W, showUnread: B } =
             ((t = H ?? void 0),
             (l = (0, h.A)(e).available),
             (G = (0, k.A)(e, "useGuildPowerupsNotificationIndicator")),
             (S = (0, o.cN)(null != G ? G.dismissibleContent : null, e)),
-            (c = null != G && !S),
-            (f = (0, r.bG)([A.A], () => A.A.getStateForGuild(e))),
+            (f = null != G && !S),
+            (O = (0, r.bG)([A.A], () => A.A.getStateForGuild(e))),
             n.useMemo(() => {
                 if (null == t) return { indicator: void 0, showUnread: !1 };
                 let { unlockedPowerups: e } = t,
-                    n = (0, I.k)([...Object.values(e), ...Object.values(f?.entitlements ?? {})]),
+                    n = (0, I.k)([...Object.values(e), ...Object.values(O?.entitlements ?? {})]),
                     u = K?.lastSeenWarningNotification ?? Date.now(),
                     r = new Date(n[n.length - 1]?.ends_at).getTime(),
                     i = K?.lastBoostCount ?? 0,
                     o = n.length > 0 && u < r,
                     s = l - i;
-                return o || c
+                return o || f
                     ? { indicator: { type: p.cD.WARNING }, showUnread: !0 }
                     : l !== i && s > 0
                       ? { indicator: { type: p.cD.UNREAD, count: s }, showUnread: !0 }
                       : { indicator: void 0, showUnread: !1 };
-            }, [l, K?.lastBoostCount, K?.lastSeenWarningNotification, t, c, f?.entitlements])),
+            }, [l, K?.lastBoostCount, K?.lastSeenWarningNotification, t, f, O?.entitlements])),
         v = (function (e, t) {
             let [l, o] = (0, m.ty)(null != t),
                 G = l === i.M.GUILD_POWERUP_PERKS_COACHMARK,
                 { available: S } = (0, h.A)(e),
                 R = (0, r.bG)([E.A], () => E.A.getGuild(e)?.features.has(b.GuildFeatures.GAME_SERVERS) ?? !1),
                 I = (0, r.bG)([A.A], () => A.A.getLowestGameCostForGuild(e)),
-                c = (0, L.DD)(e, "useGuildPowerupsChannelListPopout"),
-                f = (0, C.OS)("useGuildPowerupsChannelListPopout"),
-                O = (0, L.lY)(e, "useGuildPowerupsChannelListPopout"),
-                k = c && f && !O,
+                f = (0, L.DD)(e, "useGuildPowerupsChannelListPopout"),
+                O = (0, C.OS)("useGuildPowerupsChannelListPopout"),
+                c = (0, L.lY)(e, "useGuildPowerupsChannelListPopout"),
+                k = f && O && !c,
                 K = (0, T.A)(e, t),
                 [H, W] = (0, m.FC)(null != t && !G, K),
                 B = H === i.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
@@ -124,7 +124,7 @@ function W(e) {
                         t = (0, P.bG)([N.default], () => N.default.getCurrentUser()?.isPremiumGroupMember() === !0);
                     return e === U.xc.NONE && !t;
                 })(),
-                [F, x] = (0, m.ww)(null != t && !G && !B && null != v && y, e, null != v ? v.cost - S : 0),
+                [F, x] = (0, m.ww)(null != t && !G && !B && null != v && y, e),
                 Q = F === i.M.BOOST_TO_UNLOCK_COACHMARK,
                 j = (0, w.A)(e),
                 [z, Y] = (0, m.W2)(null != t && !G && !B && !Q && null != j, e),
