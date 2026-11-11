@@ -52,11 +52,11 @@ var j = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"),
     R = n(627575),
     O = n(855986),
     M = n(155718),
-    k = n(871309),
-    P = n(287809),
+    P = n(871309),
+    k = n(287809),
     L = n(430993),
-    w = n(503698),
-    D = n.n(w),
+    D = n(503698),
+    w = n.n(D),
     U = n(825484),
     G = n(745848);
 function F(e) {
@@ -64,11 +64,11 @@ function F(e) {
     return 0 === t.length && null == n
         ? null
         : (0, r.jsxs)("footer", {
-              className: D()(G.qr, { [G.$6]: l }),
+              className: w()(G.qr, { [G.$6]: l }),
               children: [
                   null != n && (0, r.jsx)("div", { children: n }),
                   (0, r.jsx)(U.e, {
-                      className: D()(G.GC, { [G.Z7]: i }),
+                      className: w()(G.GC, { [G.Z7]: i }),
                       justify: "end",
                       fullWidth: i,
                       children: t.map((e, t) => (0, r.jsx)(m.$, { ...e }, t)),
@@ -77,19 +77,19 @@ function F(e) {
           });
 }
 let B = { bottom: 40, left: 32, right: 32, top: 32 };
-var H = n(588900);
-function V(e) {
+var V = n(588900);
+function H(e) {
     let { children: t, actions: n, footerInput: i, title: l, variant: a = "default" } = e,
         s = "app_store_lockdown" === a;
     return (0, r.jsxs)(u.B, {
         direction: "vertical",
         justify: "start",
         padding: B,
-        className: H.kL,
+        className: V.kL,
         children: [
-            (0, r.jsx)(c.D, { variant: "heading-lg/semibold", className: s ? void 0 : H.R_, children: l }),
+            (0, r.jsx)(c.D, { variant: "heading-lg/semibold", className: s ? void 0 : V.R_, children: l }),
             (0, r.jsx)(L.c, { children: t }),
-            (0, r.jsx)("div", { className: H.Ic }),
+            (0, r.jsx)("div", { className: V.Ic }),
             (0, r.jsx)(F, { actions: n, footerInput: i, actionsFullWidth: s, showDivider: s }),
         ],
     });
@@ -114,7 +114,7 @@ function ei() {
         className: en.Q,
         children: b.intl.format(_.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                k.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.PARENTAL_CONSENT_LOCKOUT }),
+                P.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -148,7 +148,7 @@ function eh(e) {
             onAccept: c,
             onDecline: m,
         } = e,
-        f = (0, O.bG)([P.default], () => P.default.getUser(n.parent_id)),
+        f = (0, O.bG)([k.default], () => k.default.getUser(n.parent_id)),
         p = f?.globalName ?? f?.username ?? n.parent_username,
         h = f?.username ?? n.parent_username,
         g = h !== p,
@@ -214,7 +214,7 @@ function eh(e) {
                                   "aria-label": b.intl.formatToPlainString(ef.default.jc1Ip7, {
                                       name: n.parent_username,
                                   }),
-                                  className: D()(ep.hP, ep.xG),
+                                  className: w()(ep.hP, ep.xG),
                                   onClick: () => !u && c(n.parent_id),
                                   children: l
                                       ? (0, r.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE_SIMPLE })
@@ -227,7 +227,7 @@ function eh(e) {
                               "aria-label": b.intl.formatToPlainString(ef.default["4GtllP"], {
                                   name: n.parent_username,
                               }),
-                              className: D()(ep.hP, ep.rr),
+                              className: w()(ep.hP, ep.rr),
                               onClick: () => !u && m(n.parent_id),
                               children: s
                                   ? (0, r.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE_SIMPLE })
@@ -383,8 +383,8 @@ let ev = {
         },
         age_verification: function (e) {
             let { onSubmit: t } = e,
-                n = (0, O.bG)([P.default], () => P.default.getCurrentUser());
-            return (0, r.jsx)(V, {
+                n = (0, O.bG)([k.default], () => k.default.getCurrentUser());
+            return (0, r.jsx)(H, {
                 title: "Lorem ipsum dolor",
                 actions: [
                     {
@@ -392,7 +392,7 @@ let ev = {
                         variant: "primary",
                         onClick: function () {
                             n?.ageVerificationStatus === M.Tk.UNVERIFIED
-                                ? k.A.showAgeVerificationGetStartedModal({
+                                ? P.A.showAgeVerificationGetStartedModal({
                                       entryPoint: p.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: j.Empty }),
                                   })
@@ -440,14 +440,14 @@ let ev = {
                 v =
                     ((t = g.pending_requests),
                     (n = (0, O.bG)([$.A], () => $.A.getLinkedUsers())),
-                    (i = (0, O.bG)([P.default], () => P.default.getCurrentUser()?.id)),
+                    (i = (0, O.bG)([k.default], () => k.default.getCurrentUser()?.id)),
                     a.useMemo(() => {
                         if (!x) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             l = [];
                         for (let t of Object.values(n)) {
                             if (null == t || t.link_status !== el.Ef.PENDING || t.requestor_id === i) continue;
-                            let n = P.default.getUser(t.user_id),
+                            let n = k.default.getUser(t.user_id),
                                 r = e.get(t.user_id);
                             l.push({
                                 parent_id: t.user_id,
@@ -464,22 +464,22 @@ let ev = {
                 I = (0, O.bG)([$.A], () => $.A.getLinkCodeExpiresAt()),
                 N = S ?? g.link_code,
                 M = I ?? Date.parse(g.link_code_expires_at),
-                k = a.useCallback(async () => {
+                P = a.useCallback(async () => {
                     try {
                         await o({ type: j.Empty });
                     } catch {
                         (0, K.P0)({ text: b.intl.string(_.default["+QRSxc"]), variant: "critical" });
                     }
                 }, [o]),
-                [w, D] = a.useState(y);
-            y && !w && D(!0);
+                [D, w] = a.useState(y);
+            y && !D && w(!0);
             let [U, G] = a.useState(!1),
                 F = a.useCallback(() => {
                     (G(!1), h());
                 }, [h]);
             (0, J.A)(F);
-            let B = !w || U,
-                H = B
+            let B = !D || U,
+                V = B
                     ? b.intl.format(_.default["6GaRTu"], { link: eE })
                     : b.intl.format(_.default["Ke+kz5"], { pendingCount: T, link: eE });
             return (0, r.jsxs)(z.d, {
@@ -500,7 +500,7 @@ let ev = {
                                 onClick: () => G(!1),
                             }),
                         }),
-                    (0, r.jsx)(q.rQ, { alignCenter: !0, title: b.intl.string(_.default.dMMSA0), subtitle: H }),
+                    (0, r.jsx)(q.rQ, { alignCenter: !0, title: b.intl.string(_.default.dMMSA0), subtitle: V }),
                     (0, r.jsxs)(L.c, {
                         children: [
                             B &&
@@ -519,7 +519,7 @@ let ev = {
                     (0, r.jsx)(Q.H, {
                         actionsFullWidth: !0,
                         actions:
-                            w && !U
+                            D && !U
                                 ? [
                                       {
                                           text: b.intl.string(_.default["RD76/V"]),
@@ -531,7 +531,7 @@ let ev = {
                                       {
                                           text: b.intl.string(_.default.OaHZUf),
                                           variant: "primary",
-                                          onClick: k,
+                                          onClick: P,
                                           disabled: !C || c,
                                       },
                                   ]
@@ -558,7 +558,7 @@ let ev = {
                         "noopener,noreferrer",
                     );
                 }, []);
-            return (0, r.jsx)(V, {
+            return (0, r.jsx)(H, {
                 title: b.intl.string(_.default.Z87TFb),
                 variant: "app_store_lockdown",
                 actions: [
@@ -693,8 +693,8 @@ let eR = function (e) {
         [i, l] = a.useState(null),
         [x, v] = a.useState(!0),
         [N, O] = a.useState(null),
-        [M, k] = a.useState(!1),
-        P = a.useCallback(async () => {
+        [M, P] = a.useState(!1),
+        k = a.useCallback(async () => {
             (v(!0), O(null));
             try {
                 let e = await (async function () {
@@ -724,7 +724,7 @@ let eR = function (e) {
         L = a.useCallback(
             async (e) => {
                 if (null !== i) {
-                    k(!0);
+                    P(!0);
                     try {
                         let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
                         (await (async function (e) {
@@ -737,27 +737,27 @@ let eR = function (e) {
                                 })
                             ).body;
                         })(t),
-                            P());
+                            k());
                     } catch (e) {
                         if (I.has(i.task_type)) throw e;
                         O(b.intl.string(_.default["+QRSxc"]));
                     } finally {
-                        k(!1);
+                        P(!1);
                     }
                 }
             },
-            [i, P],
+            [i, k],
         );
     (0, f.Ay)(() => {
-        P();
+        k();
     });
-    let w = a.useMemo(() => i?.task_type === y.AGE_VERIFICATION, [i]),
-        D = null != i && null === N && I.has(i.task_type);
+    let D = a.useMemo(() => i?.task_type === y.AGE_VERIFICATION, [i]),
+        w = null != i && null === N && I.has(i.task_type);
     return (0, r.jsxs)("div", {
         className: eI.Tp,
         children: [
             (0, r.jsx)("img", { className: eI.xX, src: eN, alt: "" }),
-            w
+            D
                 ? (0, r.jsx)(h.default, {
                       transitionState: t ?? s.ip.ENTERED,
                       entryPoint: p.q1.SAFETY_FLOWS,
@@ -767,7 +767,7 @@ let eR = function (e) {
                       },
                       dismissable: !1,
                   })
-                : D && null != i
+                : w && null != i
                   ? (0, r.jsx)(ej, { task: i, handleSubmit: L, disabled: M, transitionState: t ?? s.ip.ENTERED })
                   : (0, r.jsx)("div", {
                         className: eI.nA,
@@ -820,7 +820,7 @@ let eR = function (e) {
                                                                   fullWidth: !0,
                                                                   text: b.intl.string(b.t["7NqTJn"]),
                                                                   onClick: () => {
-                                                                      P();
+                                                                      k();
                                                                   },
                                                               }),
                                                           ],

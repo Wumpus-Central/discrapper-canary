@@ -61,10 +61,10 @@ n.d(
                                 })(x, e),
                         );
                 }, [S, x]));
-            let { clearError: I } = (0, c.S)(),
-                v = l.useCallback(
+            let { clearError: v } = (0, c.S)(),
+                I = l.useCallback(
                     async (e, l, s) => {
-                        if ((I(), e === u.G2.CATALOG)) s?.searchQuery != null ? h(s.searchQuery) : E();
+                        if ((v(), e === u.G2.CATALOG)) s?.searchQuery != null ? h(s.searchQuery) : E();
                         else if (e === u.G2.COLLABS) a();
                         else if (e === u.G2.OFFER_ELIGIBLE) g();
                         else if ((0, u.dF)(e) && e !== S) {
@@ -82,9 +82,9 @@ n.d(
                                 A(u.Pf.VISIBLE));
                         }
                     },
-                    [x, n, a, g, E, h, S, I, t],
+                    [x, n, a, g, E, h, S, v, t],
                 );
-            return { selectedTab: S, transitionState: _, transitionToTab: v };
+            return { selectedTab: S, transitionState: _, transitionToTab: I };
         },
     },
 );

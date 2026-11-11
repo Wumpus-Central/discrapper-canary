@@ -22,14 +22,14 @@ var g =
         (i.TRIAL_USER_NOT_ELIGIBLE = "trial_user_not_eligible"),
         i),
     b = (((a = {}).CAN_CLAIM = "CAN_CLAIM"), (a.BLOCK_CLAIM = "BLOCKED"), (a.UPSELL = "UPSELL"), a);
-function p(e) {
+function A(e) {
     if ((0, o.a9)(e, f)) return e.surface.asset;
 }
 n.d(
     t,
     {},
     {
-        Co: p,
+        Co: A,
         ON: g,
         P3: function (e) {
             switch (e) {
@@ -45,7 +45,7 @@ n.d(
         },
         VO: function (e, t, n) {
             let i = (0, d.A)(e, t),
-                a = null != i ? p(i) : void 0;
+                a = null != i ? A(i) : void 0;
             if (null != a) return (0, l.M)(n) ? a.darkUrl : a.lightUrl;
         },
         ij: function (e, t) {

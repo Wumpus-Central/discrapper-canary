@@ -11,8 +11,8 @@ var i,
     m = n(403581),
     g = n(775602),
     b = n(688810),
-    p = n(607470),
-    A = n(362280),
+    A = n(607470),
+    p = n(362280),
     P = n(273185),
     E = n(778705),
     _ = n(682901);
@@ -45,7 +45,7 @@ n.d(
                 { analyticsLocations: L } = (0, b.Ay)(M),
                 j = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
                 U = r.useCallback(() => {
-                    (0, A.A)(O.BVt.NITRO_HOME, { search: (0, l.As)({ perk: I }) });
+                    (0, p.A)(O.BVt.NITRO_HOME, { search: (0, l.As)({ perk: I }) });
                 }, [I]),
                 S = r.useCallback(() => {
                     switch ((n(T.i.TAKE_ACTION), v)) {
@@ -88,7 +88,7 @@ n.d(
                                     (0, a.jsx)("div", {
                                         className: R.Q,
                                         children: (0, P.r1)(h)
-                                            ? (0, a.jsx)(p.A, {
+                                            ? (0, a.jsx)(A.A, {
                                                   src: h,
                                                   autoPlay: !1 === j,
                                                   loop: !0,

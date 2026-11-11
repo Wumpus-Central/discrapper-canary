@@ -52,11 +52,11 @@ let R = (0, u.UT)(N.A, {
 });
 var O = n(451909),
     M = n(118517),
-    k = n(747926),
-    P = n(46653),
+    P = n(747926),
+    k = n(46653),
     L = n(734057),
-    w = n(188567),
-    D = n(475815);
+    D = n(188567),
+    w = n(475815);
 let U = (0, n(945810).mj)({
     kind: "user",
     name: "2026-05-clips-media-comments",
@@ -66,8 +66,8 @@ let U = (0, n(945810).mj)({
 var G = n(307731),
     F = n(381941),
     B = n(683825),
-    H = n(792996),
-    V = n(455871);
+    V = n(792996),
+    H = n(455871);
 function W(e, t) {
     let n = t?.current?.currentTime;
     return null == n ? { attachment_id: e, timestamp: 0 } : { attachment_id: e, timestamp: Math.floor(1e3 * n) };
@@ -106,7 +106,7 @@ function K(e) {
                             : "surrogates" in e && null != e.surrogates
                               ? e.surrogates
                               : e.name,
-                    n = Y.author.id === P.default.getId();
+                    n = Y.author.id === k.default.getId();
                 _.A.sendMessage(q.id, O.Ay.parse(q, t), !1, {
                     location: F.Hx.MEDIA_MENTION,
                     doNotScroll: !0,
@@ -118,9 +118,9 @@ function K(e) {
     }
     let ei = ee?.length ?? 0;
     if (!$ || null == q || null == s) return null;
-    let el = H.intl.formatToPlainString(B.default.OYDyt2, { count: ei });
+    let el = V.intl.formatToPlainString(B.default.OYDyt2, { count: ei });
     return (0, i.jsxs)(p.animated.div, {
-        className: a()(V.M0, { [V.pd]: c }),
+        className: a()(H.M0, { [H.pd]: c }),
         inert: c,
         style: {
             opacity: (0, p.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (c ? 0 : `${e}`)),
@@ -131,16 +131,16 @@ function K(e) {
         },
         children: [
             (0, i.jsx)("div", {
-                className: V.gm,
+                className: H.gm,
                 children: K.map((e) =>
                     (0, i.jsx)(
                         g.u,
                         {
-                            title: H.intl.formatToPlainString(B.default["CZCvn+"], { emoji: e.name }),
-                            body: H.intl.string(B.default.wQFVGI),
+                            title: V.intl.formatToPlainString(B.default["CZCvn+"], { emoji: e.name }),
+                            body: V.intl.string(B.default.wQFVGI),
                             children: (0, i.jsx)("button", {
                                 type: "button",
-                                className: V.x6,
+                                className: H.x6,
                                 onClick: (t) => en(t, e),
                                 children: (0, i.jsx)(b.A, {
                                     emojiId: e.id,
@@ -177,28 +177,28 @@ function K(e) {
                 clickTrap: !0,
                 children: (e) =>
                     (0, i.jsx)(g.u, {
-                        title: H.intl.string(B.default["ZEs/pI"]),
-                        body: H.intl.string(B.default.K8Khlc),
+                        title: V.intl.string(B.default["ZEs/pI"]),
+                        body: V.intl.string(B.default.K8Khlc),
                         targetElementRef: et,
                         children: (0, i.jsx)("button", {
                             ...e,
                             ref: et,
                             type: "button",
-                            className: V.x6,
+                            className: H.x6,
                             children: (0, i.jsx)(C.ReactionIcon, { size: "sm" }),
                         }),
                     }),
             }),
             (0, i.jsx)(g.u, {
-                title: H.intl.string(B.default.y2TE38),
-                body: H.intl.string(B.default.c3OIMS),
+                title: V.intl.string(B.default.y2TE38),
+                body: V.intl.string(B.default.c3OIMS),
                 children: (0, i.jsx)("button", {
                     type: "button",
-                    className: V.x6,
+                    className: H.x6,
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == Y || null == Z?.current?.currentTime)) return;
-                        D._U(Z.current) && D.sP(Z.current);
-                        let t = Y.author.id === P.default.getId();
+                        w._U(Z.current) && w.sP(Z.current);
+                        let t = Y.author.id === k.default.getId();
                         ((0, M.Yf)({
                             channel: q,
                             message: Y,
@@ -206,7 +206,7 @@ function K(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: W(m, Z),
                         }),
-                            w._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            D._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
                     children: (0, i.jsx)(E.ArrowAngleLeftUpIcon, { size: "sm" }),
                 }),
@@ -217,10 +217,10 @@ function K(e) {
                     children: [
                         (0, i.jsx)(z, {}),
                         (0, i.jsx)(x.D, {
-                            className: V.jC,
+                            className: H.jC,
                             tag: "span",
                             onClick: function (e) {
-                                (e.stopPropagation(), null != Q && (D._U(Z.current) && D.sP(Z.current), (0, k.JA)(Q)));
+                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, P.JA)(Q)));
                             },
                             "aria-label": el,
                             children: (0, i.jsx)(v.E, {
@@ -236,7 +236,7 @@ function K(e) {
     });
 }
 function z() {
-    return (0, i.jsx)("div", { className: V.yF });
+    return (0, i.jsx)("div", { className: H.yF });
 }
 var Y = n(555115),
     q = n(717421),
@@ -472,7 +472,7 @@ function e_(e) {
     let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
         { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
         d = (0, u.bG)(
-            [ef.Ay, P.default],
+            [ef.Ay, k.default],
             () =>
                 (function (e, t) {
                     let n,
@@ -491,17 +491,17 @@ function e_(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, P.default.getId(), ef.Ay),
+                })(t, k.default.getId(), ef.Ay),
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([P.default, N.A], () => {
+        f = (0, u.bG)([k.default, N.A], () => {
             let e = N.A.getMessage(n, r);
             return (
                 null != e &&
-                e.author?.id !== P.default.getId() &&
+                e.author?.id !== k.default.getId() &&
                 (null == e.messageReference ||
-                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== P.default.getId())
+                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
         p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
@@ -526,7 +526,7 @@ function e_(e) {
                   (0, i.jsx)(v.E, {
                       variant: "body-xs/semibold",
                       color: "text-overlay-light",
-                      children: H.intl.string(B.default.YKst58),
+                      children: V.intl.string(B.default.YKst58),
                   }),
               ],
           })

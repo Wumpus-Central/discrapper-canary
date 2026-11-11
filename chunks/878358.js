@@ -37,10 +37,10 @@ function k(e) {
     let { src: t } = e;
     return (0, r.jsx)("img", { src: t, alt: "", className: y.Gl });
 }
-function D() {
+function L() {
     return (0, r.jsx)(d.UnknownGameIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
 }
-function L(e) {
+function D(e) {
     let { character: t } = e;
     return (0, r.jsx)("div", {
         className: y.Ij,
@@ -78,7 +78,7 @@ function U(e) {
                     : void 0,
             [d],
         ),
-        p = i.useMemo(() => (null != l ? (0, r.jsx)(k, { src: l }) : (0, r.jsx)(L, { character: s })), [l, s]);
+        p = i.useMemo(() => (null != l ? (0, r.jsx)(k, { src: l }) : (0, r.jsx)(D, { character: s })), [l, s]);
     return (0, r.jsxs)("ul", {
         className: y.M1,
         children: [
@@ -111,14 +111,14 @@ function U(e) {
             }),
             null != t.topGameName
                 ? (0, r.jsx)(P, {
-                      icon: null != o ? (0, r.jsx)(k, { src: o }) : (0, r.jsx)(D, {}),
+                      icon: null != o ? (0, r.jsx)(k, { src: o }) : (0, r.jsx)(L, {}),
                       stat: t.topGameName,
                   })
                 : null,
         ],
     });
 }
-function G(e) {
+function H(e) {
     let { isCheckpointEnabled: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -138,7 +138,7 @@ function G(e) {
         ],
     });
 }
-function H(e) {
+function G(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
         ? (0, r.jsx)(m.m, {
@@ -149,13 +149,13 @@ function H(e) {
                   className: n()(y.qr, y.vk),
                   onClick: a,
                   "aria-label": T.intl.string(O.default.UjtEWE),
-                  children: (0, r.jsx)(G, { isCheckpointEnabled: t }),
+                  children: (0, r.jsx)(H, { isCheckpointEnabled: t }),
               }),
           })
         : (0, r.jsx)("div", {
               className: y.qr,
               "aria-hidden": !0,
-              children: (0, r.jsx)(G, { isCheckpointEnabled: t }),
+              children: (0, r.jsx)(H, { isCheckpointEnabled: t }),
           });
 }
 a.d(
@@ -182,7 +182,7 @@ a.d(
                         : null,
                     null != s ? (0, r.jsx)(w.A, { character: s }) : null,
                     null != h ? (0, r.jsx)(U, { stats: h }) : null,
-                    (0, r.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
+                    (0, r.jsx)(G, { isCheckpointEnabled: u, onClick: a }),
                 ],
             });
         },

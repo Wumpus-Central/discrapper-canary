@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(562730),
     g = n(60163),
     b = n(652215),
-    p = n(749962),
-    A = n(116716),
+    A = n(749962),
+    p = n(116716),
     P = n(770300),
     E = n(792996),
     _ = n(635088);
@@ -34,16 +34,16 @@ n.d(
                               title: E.intl.string(P.default.E1sPHw),
                               description: E.intl.string(P.default.py5vQi),
                               previewImage: O,
-                              descriptionCta: E.intl.string(A.default.WMK6Pg),
+                              descriptionCta: E.intl.string(p.default.WMK6Pg),
                               actions: [
                                   {
                                       variant: "secondary",
-                                      text: E.intl.string(A.default.WMK6Pg),
+                                      text: E.intl.string(p.default.WMK6Pg),
                                       onClick: () =>
                                           (0, u.P)({
                                               partnerIds: [c.Bt],
                                               title: E.intl.string(P.default.PFtZV6),
-                                              subtitle: E.intl.format(p.default.ieA3V0, {
+                                              subtitle: E.intl.format(A.default.ieA3V0, {
                                                   termsUrl: o.A.getArticleURL(b.MVz.CODE_BLURPLE_PROMOTION),
                                               }),
                                               analyticsLocations: T,

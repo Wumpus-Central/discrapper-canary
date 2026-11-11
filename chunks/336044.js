@@ -1,16 +1,16 @@
-let i = (0, n(196765).v)(() => ({ isApplying: !1 }));
+let l = (0, n(196765).v)(() => ({ isApplying: !1 }));
 n.d(
     t,
     {},
     {
         Rj: function (e) {
-            i.setState({ isApplying: e });
+            l.setState({ isApplying: e });
         },
         i: function () {
-            return i((e) => e.isApplying);
+            return l((e) => e.isApplying);
         },
         rs: function () {
-            return i.getState().isApplying;
+            return l.getState().isApplying;
         },
     },
 );

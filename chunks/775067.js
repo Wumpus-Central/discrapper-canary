@@ -16,8 +16,8 @@ function b(e) {
     let t,
         n,
         b,
-        p,
-        { targetElementRef: A, dismissPopover: P, children: E } = e,
+        A,
+        { targetElementRef: p, dismissPopover: P, children: E } = e,
         _ = (0, l.L)(),
         { phase: O } = o.A.useConfig({ location: "PremiumTabPopover" });
     return (
@@ -28,7 +28,7 @@ function b(e) {
                       ? g.intl.format(f.default["4y7mjC"], { rewardPercentage: 10 })
                       : g.intl.format(m.default.b9LwCb, { rewardPercentage: 10 })),
               (b = s.g.NAVIGATE_TO_PERK),
-              (p = g.intl.string(u.default.vlafDc)))
+              (A = g.intl.string(u.default.vlafDc)))
             : ((t = g.intl.string(m.default["er+5dl"])),
               (n = g.intl.format(m.default.xL7Cfe, {
                   rewardPercentage: 10,
@@ -36,7 +36,7 @@ function b(e) {
               })),
               (b = s.g.OPEN_PAYMENT_MODAL)),
         (0, i.jsx)(s.A, {
-            targetElementRef: A,
+            targetElementRef: p,
             dismissPopover: P,
             title: t,
             body: [n],
@@ -46,7 +46,7 @@ function b(e) {
                     : "https://cdn.discordapp.com/assets/content/107bd2b0c71f6df724edc7bcf20465f867e1fa8f9051c0a0db5d58491b5f2a9f.png",
             ctaType: b,
             perkCardId: d.A,
-            ctaTextOverride: p,
+            ctaTextOverride: A,
             analyticsLocation: a.A.BEST_BUY_PREMIUM_TAB_POPOVER,
             children: E,
         })

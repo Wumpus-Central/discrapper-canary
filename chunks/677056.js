@@ -1,17 +1,17 @@
-var i = n(477900);
+var l = n(477900);
 n(582128);
-var s = n(236814),
-    r = n(792996);
+var r = n(236814),
+    i = n(792996);
 n.d(
     t,
     {},
     {
         A: function (e) {
             let { id: t, size: n } = e,
-                l = (0, s.gG)(t);
-            return null == l
+                s = (0, r.gG)(t);
+            return null == s
                 ? null
-                : (0, i.jsx)("img", { src: l.iconSource, width: n, alt: r.intl.string(r.t.N4YDao), draggable: !1 });
+                : (0, l.jsx)("img", { src: s.iconSource, width: n, alt: i.intl.string(i.t.N4YDao), draggable: !1 });
         },
     },
 );

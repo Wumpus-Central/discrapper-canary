@@ -12,8 +12,8 @@ var i = n(477900),
     m = n(275357),
     g = n(652215),
     b = n(116716),
-    p = n(160071),
-    A = n(855e3),
+    A = n(160071),
+    p = n(855e3),
     P = n(792996),
     E = n(505051);
 let _ = new Date(2026, 10, 18);
@@ -25,15 +25,15 @@ function O(e) {
         T = null;
     return (
         o === f.H.PHASE_ONE
-            ? (T = P.intl.formatToPlainString(p.default.XuYNQR, { date: _, rewardPercentage: 10 }))
+            ? (T = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
             : o === f.H.PHASE_TWO &&
-              (T = P.intl.formatToPlainString(A.default["H6cz/6"], { date: _, rewardPercentage: 10 })),
+              (T = P.intl.formatToPlainString(p.default["H6cz/6"], { date: _, rewardPercentage: 10 })),
         (0, a.useMemo)(
             () =>
                 n
                     ? {
                           id: m.A,
-                          title: P.intl.string(A.default["NzvIo/"]),
+                          title: P.intl.string(p.default["NzvIo/"]),
                           description: T,
                           subscriptionRequired: !0,
                           isThirdPartyPerk: !0,
@@ -50,7 +50,7 @@ function O(e) {
                           onCtaClick: () =>
                               (0, u.P)({
                                   partnerIds: [c.P_],
-                                  title: P.intl.string(A.default["0RERAa"]),
+                                  title: P.intl.string(p.default["0RERAa"]),
                                   subtitle: P.intl.format(b.default.uytDvV, {
                                       expirationDate: _,
                                       termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
@@ -73,13 +73,13 @@ function T(e) {
         O = null;
     return (
         d === f.H.PHASE_ONE
-            ? (O = P.intl.format(p.default.MJep2r, {
+            ? (O = P.intl.format(A.default.MJep2r, {
                   date: _,
                   rewardPercentage: 10,
                   termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               }))
             : d === f.H.PHASE_TWO &&
-              (O = P.intl.format(A.default["K/UZHJ"], {
+              (O = P.intl.format(p.default["K/UZHJ"], {
                   date: _,
                   rewardPercentage: 10,
                   termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
@@ -93,7 +93,7 @@ function T(e) {
                               src: "https://cdn.discordapp.com/assets/content/1f431ddb5bf6a9d72a9b80820551561bfce12d601c7fe17275ec2c0cc1ecd048.svg",
                               alt: "My Best Buy Plus",
                           }),
-                          title: P.intl.string(A.default["NzvIo/"]),
+                          title: P.intl.string(p.default["NzvIo/"]),
                           previewImage:
                               d === f.H.PHASE_ONE
                                   ? "https://cdn.discordapp.com/assets/content/7db5e6857b36d6ea33af3c6a57f9701f26539c29fdb613ff81ec5a51d544f23f.png"
@@ -104,7 +104,7 @@ function T(e) {
                           onClick: () =>
                               (0, u.P)({
                                   partnerIds: [c.P_],
-                                  title: P.intl.string(A.default["0RERAa"]),
+                                  title: P.intl.string(p.default["0RERAa"]),
                                   subtitle: P.intl.format(b.default.uytDvV, {
                                       expirationDate: _,
                                       termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),

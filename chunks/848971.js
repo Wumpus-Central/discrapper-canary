@@ -1,40 +1,40 @@
-var i = n(477900);
+var l = n(477900);
 n(582128);
-var s = n(855986);
-if (588245 != n.j) var r = n(785007);
-if (588245 != n.j) var l = n(534514);
+var r = n(855986);
+if (588245 != n.j) var i = n(785007);
+if (588245 != n.j) var s = n(534514);
 if (588245 != n.j) var a = n(331322);
-var c = n(73153),
-    o = n(915089),
+var o = n(73153),
+    c = n(915089),
     u = n(336044),
     d = n(450232),
-    m = n(526162),
-    h = n(603880),
-    g = n(236814),
-    f = n(792996),
-    p = n(40025);
-function A(e) {
+    h = n(526162),
+    g = n(603880),
+    m = n(236814),
+    x = n(792996),
+    f = n(40025);
+function v(e) {
     let { disabled: t, size: n } = e,
-        [r] = (0, s.yK)([m.A], () => [m.A.getCurrentDesktopIcon()]),
-        l = (0, u.i)();
-    return (0, i.jsx)(i.Fragment, {
-        children: (0, g.v8)()
+        [i] = (0, r.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]),
+        s = (0, u.i)();
+    return (0, l.jsx)(l.Fragment, {
+        children: (0, m.v8)()
             .filter((e) => {
                 let { isHidden: t } = e;
                 return !t;
             })
-            .map((e, s) => {
-                let a = l || (!0 === t && e.isPremium);
-                return (0, i.jsx)(
-                    h.A,
+            .map((e, r) => {
+                let a = s || (!0 === t && e.isPremium);
+                return (0, l.jsx)(
+                    g.A,
                     {
                         icon: e,
-                        isSelected: r === e.id,
+                        isSelected: i === e.id,
                         onSelect: (e) => {
-                            !(0, u.rs)() && c.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+                            !(0, u.rs)() && o.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
                         },
                         disabled: a,
-                        tabIndex: 0 !== s || a ? void 0 : 0,
+                        tabIndex: 0 !== r || a ? void 0 : 0,
                         locked: !1,
                         size: n,
                     },
@@ -48,55 +48,55 @@ n.d(
     {},
     {
         A: function (e) {
-            let { className: t, disabled: n, isEditor: s, renderCTAButtons: c, iconSize: u } = e,
-                m = (0, o.GV)(),
-                { ref: h, ...g } = (0, r._u)({ orientation: "horizontal", labelledBy: m });
-            return (0, i.jsx)("div", {
-                ...g,
-                ref: h,
-                children: (0, i.jsxs)("div", {
+            let { className: t, disabled: n, isEditor: r, renderCTAButtons: o, iconSize: u } = e,
+                h = (0, c.GV)(),
+                { ref: g, ...m } = (0, i._u)({ orientation: "horizontal", labelledBy: h });
+            return (0, l.jsx)("div", {
+                ...m,
+                ref: g,
+                children: (0, l.jsxs)("div", {
                     className: t,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: p.wx,
+                        (0, l.jsxs)("div", {
+                            className: f.wx,
                             children: [
-                                (0, i.jsxs)("div", {
-                                    className: p.so,
+                                (0, l.jsxs)("div", {
+                                    className: f.so,
                                     children: [
-                                        !s &&
-                                            (0, i.jsxs)("div", {
-                                                className: p.DD,
+                                        !r &&
+                                            (0, l.jsxs)("div", {
+                                                className: f.DD,
                                                 children: [
-                                                    (0, i.jsx)(l.D, {
-                                                        className: p.Qw,
+                                                    (0, l.jsx)(s.D, {
+                                                        className: f.Qw,
                                                         variant: "heading-xl/medium",
                                                         color: "text-strong",
-                                                        children: f.intl.string(f.t.NThqTw),
+                                                        children: x.intl.string(x.t.NThqTw),
                                                     }),
-                                                    (0, i.jsx)(d.A, { color: "strong", size: "sm" }),
+                                                    (0, l.jsx)(d.A, { color: "strong", size: "sm" }),
                                                 ],
                                             }),
-                                        (0, i.jsx)(l.D, {
+                                        (0, l.jsx)(s.D, {
                                             variant: "body-sm/normal",
-                                            className: p.W$,
-                                            children: f.intl.string(f.t.IgENJo),
+                                            className: f.W$,
+                                            children: x.intl.string(x.t.IgENJo),
                                         }),
                                     ],
                                 }),
-                                c?.(),
+                                o?.(),
                             ],
                         }),
-                        (0, i.jsx)(a.B, {
+                        (0, l.jsx)(a.B, {
                             direction: "horizontal",
                             wrap: !0,
                             gap: 8,
                             style: { marginTop: 16 },
-                            children: (0, i.jsx)(A, { disabled: n, size: u }),
+                            children: (0, l.jsx)(v, { disabled: n, size: u }),
                         }),
                     ],
                 }),
             });
         },
-        m: A,
+        m: v,
     },
 );

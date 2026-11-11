@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(670328),
     g = n(323390),
     b = n(60163),
-    p = n(652215),
-    A = n(749962),
+    A = n(652215),
+    p = n(749962),
     P = n(116716),
     E = n(770300),
     _ = n(792996),
@@ -42,8 +42,8 @@ n.d(
                                   (0, m.P)({
                                       partnerIds: [f.Bt],
                                       title: _.intl.string(E.default.PFtZV6),
-                                      subtitle: _.intl.format(A.default.ieA3V0, {
-                                          termsUrl: o.A.getArticleURL(p.MVz.CODE_BLURPLE_PROMOTION),
+                                      subtitle: _.intl.format(p.default.ieA3V0, {
+                                          termsUrl: o.A.getArticleURL(A.MVz.CODE_BLURPLE_PROMOTION),
                                       }),
                                       analyticsLocations: n,
                                   }),

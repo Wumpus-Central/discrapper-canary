@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => I });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -28,14 +28,14 @@ let _ = function (e) {
     });
 };
 var A = n(212407),
-    I = n(761977);
-function v(e) {
+    v = n(761977);
+function I(e) {
     let { category: t, onSelect: n } = e,
         a = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
         x = (0, o.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: p, catalogBannerRive: v } = (0, A.MV)(t),
+        { catalogBannerStatic: C, catalogBannerAnimated: p, catalogBannerRive: I } = (0, A.MV)(t),
         b = s.useRef(null),
-        L = null != v,
+        L = null != I,
         j =
             null != n
                 ? {
@@ -50,15 +50,15 @@ function v(e) {
                 : {};
     return (0, l.jsxs)("div", {
         ref: b,
-        className: i()(I.sW, { [I.by]: L, [I.vk]: null != n }),
+        className: i()(v.sW, { [v.by]: L, [v.vk]: null != n }),
         ...j,
         children: [
             (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
-                className: I.Db,
+                className: v.Db,
                 children: L
                     ? (0, l.jsx)(u._, {
-                          src: v,
+                          src: I,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
@@ -67,18 +67,18 @@ function v(e) {
                       })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)("img", { className: I.ze, src: C, alt: "" }),
+                              (0, l.jsx)("img", { className: v.ze, src: C, alt: "" }),
                               null != p &&
                                   !a &&
                                   x &&
-                                  (0, l.jsx)(h.A, { src: p, className: I.tr, autoPlay: !0, loop: !0 }),
+                                  (0, l.jsx)(h.A, { src: p, className: v.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
-            (0, l.jsx)(_, { category: t, className: I.v0, daysRemainingText: S.t["8gsP5M"] }),
+            (0, l.jsx)(_, { category: t, className: v.v0, daysRemainingText: S.t["8gsP5M"] }),
             null != n &&
                 (0, l.jsx)("div", {
-                    className: I.IG,
+                    className: v.IG,
                     children: (0, l.jsx)(d.m, {
                         text: S.intl.string(S.t["o1ol+T"]),
                         children: (0, l.jsx)(m.ChevronLargeRightIcon, {

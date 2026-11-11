@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => D });
 var i = n(477900),
     l = n(582128),
     r = n(613412),
@@ -29,7 +29,7 @@ var i = n(477900),
     R = n(792996),
     O = n(690807);
 let M = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
-class k extends l.PureComponent {
+class P extends l.PureComponent {
     static defaultProps = { types: [j.Fz7.CAPTCHA], onCaptchaVerify: j.tEg, onLogout: j.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
@@ -132,9 +132,9 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var P = n(87404),
+var k = n(87404),
     L = n(53516);
-function w() {
+function D() {
     let { action: e, theme: t } = (0, a.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
         x = E.A.getVerificationTypes(e),
         [v, _] = l.useState(0),
@@ -148,7 +148,7 @@ function w() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: h.Ay },
+                { modalKey: k.H1, Layer: h.Ay },
             ));
     }
     return (
@@ -184,10 +184,10 @@ function w() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: h.Ay, onCloseCallback: y },
+                    { modalKey: k.Pr, Layer: h.Ay, onCloseCallback: y },
                 );
         }, [x, b]),
-        (0, i.jsx)(k, {
+        (0, i.jsx)(P, {
             types: x,
             captchaKey: v,
             onCaptchaVerify: function (e) {

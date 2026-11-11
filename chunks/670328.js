@@ -12,8 +12,8 @@ var i,
     m = n(289873),
     g = n(403581),
     b = n(192308),
-    p = n(793574),
-    A = n(688810),
+    A = n(793574),
+    p = n(688810),
     P = n(413599),
     E = n(129230),
     _ = n(792656),
@@ -75,10 +75,10 @@ var M = n(947641),
     k = n(975571),
     w = n(856383),
     H = n(264779),
-    Y = n(652215),
-    V = n(691450),
-    W = n(792996);
-function G() {
+    G = n(652215),
+    Y = n(691450),
+    V = n(792996);
+function W() {
     let e = (0, B.N5)(),
         t = (0, B.P6)();
     return (0, a.jsxs)("div", {
@@ -88,7 +88,7 @@ function G() {
                 variant: "body-sm/normal",
                 color: "text-muted",
                 className: x.kT,
-                children: W.intl.format(V.default["65EEvD"], { days: t }),
+                children: V.intl.format(Y.default["65EEvD"], { days: t }),
             }),
             (0, a.jsx)(D.Ay, {
                 progress: e,
@@ -115,7 +115,7 @@ let F = (e) => {
                 onClick: () => {
                     (navigator.clipboard.writeText(t.code),
                         o(i),
-                        E.default.track(Y.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                        E.default.track(G.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                             partner: t.partnerId,
                             cta_type: "copy code",
                             promotion: t.outboundTitle,
@@ -146,11 +146,11 @@ let F = (e) => {
                         size: "sm",
                         text:
                             t.redeemCtaText ??
-                            W.intl.formatToPlainString(W.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            V.intl.formatToPlainString(V.t.DF68t7, { redemptionURL: t.redemptionURL }),
                         onClick: () => {
                             (window.open(t.redemptionURL, "_blank"),
-                                E.default.track(Y.HAw.RECURRING_PROMOTION_CLAIMED),
-                                E.default.track(Y.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                E.default.track(G.HAw.RECURRING_PROMOTION_CLAIMED),
+                                E.default.track(G.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                     partner: t.partnerId,
                                     cta_type: "visit store",
                                     promotion: t.outboundTitle,
@@ -186,7 +186,7 @@ function z(e) {
                       variant: "critical-secondary",
                       size: "sm",
                       disabled: !0,
-                      text: W.intl.string(W.t["8LKchl"]),
+                      text: V.intl.string(V.t["8LKchl"]),
                   }),
               })
             : (0, a.jsx)("div", {
@@ -195,7 +195,7 @@ function z(e) {
                       icon: N.LockIcon,
                       variant: "secondary",
                       size: "sm",
-                      text: t.claimCtaText ?? W.intl.string(W.t.vwASIl),
+                      text: t.claimCtaText ?? V.intl.string(V.t.vwASIl),
                       loading: u,
                       onClick: () => {
                           (null != d
@@ -233,11 +233,11 @@ function q(e) {
             onClaim: m,
             onClaimError: g,
             isClaiming: b,
-            hideClaimButton: p = !1,
+            hideClaimButton: A = !1,
         } = e,
-        [A, P] = r.useState(t.code),
+        [p, P] = r.useState(t.code),
         [E, _] = r.useState(!1),
-        O = null == A;
+        O = null == p;
     return (0, a.jsxs)("div", {
         className: x.lA,
         children: [
@@ -264,22 +264,22 @@ function q(e) {
                                                 variant: "heading-xs/medium",
                                                 color: "text-subtle",
                                                 children: E
-                                                    ? W.intl.format(W.t.i2EuFO, {
-                                                          helpdeskArticle: k.A.getArticleURL(Y.MVz.RECURRING_PROMOTION),
+                                                    ? V.intl.format(V.t.i2EuFO, {
+                                                          helpdeskArticle: k.A.getArticleURL(G.MVz.RECURRING_PROMOTION),
                                                       })
                                                     : O
                                                       ? t.body
                                                       : null != t.bodyClaimed
-                                                        ? W.intl.format(t.bodyClaimed, { date: t.endDate })
+                                                        ? V.intl.format(t.bodyClaimed, { date: t.endDate })
                                                         : t.body,
                                             }),
                                             null != t.bodyNote &&
                                                 (0, a.jsx)(h.D, {
                                                     variant: "heading-xs/medium",
                                                     color: "text-subtle",
-                                                    children: W.intl.format(t.bodyNote, {
+                                                    children: V.intl.format(t.bodyNote, {
                                                         partnerName: R.CD[t.partnerId].label,
-                                                        helpdeskArticle: k.A.getArticleURL(Y.MVz.RECURRING_PROMOTION),
+                                                        helpdeskArticle: k.A.getArticleURL(G.MVz.RECURRING_PROMOTION),
                                                     }),
                                                 }),
                                         ],
@@ -287,7 +287,7 @@ function q(e) {
                                 ],
                             }),
                             "inline" === d &&
-                                !1 === p &&
+                                !1 === A &&
                                 (0, a.jsx)(z, {
                                     recurrence: t,
                                     canBeClaimed: O,
@@ -316,10 +316,10 @@ function q(e) {
                 ],
             }),
             "footer" === d && u,
-            null != A && (0, a.jsx)(F, { recurrence: { ...t, code: A }, analyticsLocations: f }),
+            null != p && (0, a.jsx)(F, { recurrence: { ...t, code: p }, analyticsLocations: f }),
             "footer" === d &&
-                null == A &&
-                !1 === p &&
+                null == p &&
+                !1 === A &&
                 (0, a.jsx)(K, {
                     children: (0, a.jsx)(z, {
                         recurrence: t,
@@ -369,10 +369,10 @@ function ed(e, t) {
     if (null != e) return "single_promo" === e.type ? e.config : e.configsByOutboundTitle[t];
 }
 function ec() {
-    return W.intl.formatToPlainString(W.t.p7BkHh, { discountPercentage: 20 });
+    return V.intl.formatToPlainString(V.t.p7BkHh, { discountPercentage: 20 });
 }
 function eu() {
-    return (0, Q.i)("ThirdPartyPromotionPartnerConfigs") ? W.intl.string(W.t.nmvvaN) : W.intl.string(W.t.igiSKe);
+    return (0, Q.i)("ThirdPartyPromotionPartnerConfigs") ? V.intl.string(V.t.nmvvaN) : V.intl.string(V.t.igiSKe);
 }
 let ef = {
     [R.KS]: {
@@ -381,17 +381,17 @@ let ef = {
         recurringCardAsset: es,
         outboundConfigs: {
             type: "single_promo",
-            config: { getTitle: ec, getBody: eu, getBodyClaimed: () => W.t.w8CXUl },
+            config: { getTitle: ec, getBody: eu, getBodyClaimed: () => V.t.w8CXUl },
         },
     },
     [R.XY]: {
         getLockedPreview: () => ({
             title: (0, Q.i)("ThirdPartyPromotionPartnerConfigs")
-                ? W.intl.formatToPlainString(V.default.PF1aT5, { discountPercentage: 30 })
-                : W.intl.formatToPlainString(V.default.LsJ9hj, { discountPercent: 30 }),
+                ? V.intl.formatToPlainString(Y.default.PF1aT5, { discountPercentage: 30 })
+                : V.intl.formatToPlainString(Y.default.LsJ9hj, { discountPercent: 30 }),
             body: (0, Q.i)("ThirdPartyPromotionPartnerConfigs")
-                ? W.intl.formatToPlainString(V.default.KoKwMn, {})
-                : W.intl.formatToPlainString(V.default.Yl5ww1, {}),
+                ? V.intl.formatToPlainString(Y.default.KoKwMn, {})
+                : V.intl.formatToPlainString(Y.default.Yl5ww1, {}),
             asset: el,
         }),
         landingUrl: "https://www.logitech.com/",
@@ -400,24 +400,24 @@ let ef = {
             type: "multiple_promo",
             configsByOutboundTitle: {
                 "Logitech G": {
-                    getTitle: () => W.intl.formatToPlainString(V.default.jkdhZq, { discountPercent: 30 }),
-                    getBody: () => W.intl.formatToPlainString(V.default.mH30Yx, {}),
+                    getTitle: () => V.intl.formatToPlainString(Y.default.jkdhZq, { discountPercent: 30 }),
+                    getBody: () => V.intl.formatToPlainString(Y.default.mH30Yx, {}),
                 },
                 "Logitech 5%": {
-                    getTitle: () => W.intl.formatToPlainString(V.default.zeBjoX, { discountPercent: 5 }),
-                    getBody: () => W.intl.formatToPlainString(V.default.fC4abC, { months: 6 }),
+                    getTitle: () => V.intl.formatToPlainString(Y.default.zeBjoX, { discountPercent: 5 }),
+                    getBody: () => V.intl.formatToPlainString(Y.default.fC4abC, { months: 6 }),
                 },
                 "Logitech PRO Series Sim": {
-                    getTitle: () => W.intl.formatToPlainString(V.default.pSBCjv, { discountPercent: 5 }),
-                    getBody: () => W.intl.formatToPlainString(V.default.lsRjfl, {}),
+                    getTitle: () => V.intl.formatToPlainString(Y.default.pSBCjv, { discountPercent: 5 }),
+                    getBody: () => V.intl.formatToPlainString(Y.default.lsRjfl, {}),
                 },
             },
         },
     },
     [R.NC]: {
         getLockedPreview: () => ({
-            title: W.intl.string(en.default.CwMGMb),
-            body: W.intl.string(en.default.TgHy6p),
+            title: V.intl.string(en.default.CwMGMb),
+            body: V.intl.string(en.default.TgHy6p),
             asset: eo,
         }),
         landingUrl: "https://www.youtube.com/redeem",
@@ -425,9 +425,9 @@ let ef = {
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => W.intl.string(en.default.CwMGMb),
-                getBody: () => W.intl.string(en.default.TgHy6p),
-                getRedeemCtaText: () => W.intl.string(en.default.KfOPbQ),
+                getTitle: () => V.intl.string(en.default.CwMGMb),
+                getBody: () => V.intl.string(en.default.TgHy6p),
+                getRedeemCtaText: () => V.intl.string(en.default.KfOPbQ),
                 claimButtonPlacement: X.FOOTER,
             },
         },
@@ -435,16 +435,16 @@ let ef = {
     },
     [R.P_]: {
         getLockedPreview: () => ({
-            title: W.intl.string(ea.default.ecPCdG),
-            body: W.intl.string(ea.default.evF0PO),
+            title: V.intl.string(ea.default.ecPCdG),
+            body: V.intl.string(ea.default.evF0PO),
             asset: er,
         }),
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => W.intl.string(ea.default.ecPCdG),
+                getTitle: () => V.intl.string(ea.default.ecPCdG),
                 getAsset: () => er,
-                getBody: () => W.intl.string(ea.default.evF0PO),
+                getBody: () => V.intl.string(ea.default.evF0PO),
                 claimButtonPlacement: X.FOOTER,
             },
         },
@@ -452,19 +452,19 @@ let ef = {
     },
     [R.Bt]: {
         getLockedPreview: () => ({
-            title: W.intl.string(ei.default.xDMrVa),
-            body: W.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
-            asset: (0, Z.VO)(R.Bt, J.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, Y.NJ8.DARK),
+            title: V.intl.string(ei.default.xDMrVa),
+            body: V.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
+            asset: (0, Z.VO)(R.Bt, J.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, G.NJ8.DARK),
         }),
         showSectionHeaders: !1,
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => W.intl.string(ei.default.xDMrVa),
-                getBody: () => W.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
+                getTitle: () => V.intl.string(ei.default.xDMrVa),
+                getBody: () => V.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
                 getAsset: (e, t) => (0, Z.VO)(R.Bt, J.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, t),
-                getClaimCtaText: () => W.intl.string(et.default["lbyFG+"]),
-                getRedeemCtaText: () => W.intl.string(et.default["6rwUm2"]),
+                getClaimCtaText: () => V.intl.string(et.default["lbyFG+"]),
+                getRedeemCtaText: () => V.intl.string(et.default["6rwUm2"]),
                 claimButtonPlacement: X.FOOTER,
             },
         },
@@ -473,16 +473,16 @@ let ef = {
 var em = n(831768);
 function eg() {
     return (0, a.jsx)(I, {
-        title: W.intl.string(em.default.oDfh3O),
-        body: W.intl.string(em.default.nDEuO1),
+        title: V.intl.string(em.default.oDfh3O),
+        body: V.intl.string(em.default.nDEuO1),
         asset: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
     });
 }
 var eb = n(682901);
-function ep(e, t) {
+function eA(e, t) {
     return (0, s.v)(e[0], t[0]) && (0, s.v)(e[1], t[1]);
 }
-function eA(e, t, n) {
+function ep(e, t, n) {
     let i = ef[e.partnerId ?? ""],
         a = ed(i?.outboundConfigs, e.outboundTitle);
     return {
@@ -506,9 +506,9 @@ function eP(e) {
         i,
         { records: s, claimedOutboundPromotionCodeMap: o, theme: m } = e,
         [g, b] = r.useState(!1),
-        A = [...s].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
-        E = g ? A : A.slice(0, 1),
-        _ = !g && A.length > 1,
+        p = [...s].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
+        E = g ? p : p.slice(0, 1),
+        _ = !g && p.length > 1,
         O =
             ((t = s[0]?.partnerId ?? ""),
             (n = (0, l.bG)([P.A], () => (0, d.M)(P.A.theme))),
@@ -529,7 +529,7 @@ function eP(e) {
                                 (n = ef[e.partnerId ?? ""]),
                                 (i = ed(n?.outboundConfigs, e.outboundTitle)),
                                 {
-                                    ...eA(e, t, m),
+                                    ...ep(e, t, m),
                                     asset: n?.recurringCardAsset ?? "",
                                     bodyClaimed: i?.getBodyClaimed?.(),
                                     redemptionURL:
@@ -540,8 +540,8 @@ function eP(e) {
                             partnerLogo: O,
                             showPartnerImage: !0,
                             claimButtonPlacement: X.FOOTER,
-                            footerContent: (0, a.jsx)(G, {}),
-                            analyticsLocations: [p.A.THIRD_PARTY_PROMOTIONS_MODAL],
+                            footerContent: (0, a.jsx)(W, {}),
+                            analyticsLocations: [A.A.THIRD_PARTY_PROMOTIONS_MODAL],
                         },
                         e.id,
                     );
@@ -556,7 +556,7 @@ function eP(e) {
                     children: (0, a.jsx)(f.E, {
                         variant: "body-sm/medium",
                         color: "text-subtle",
-                        children: W.intl.string(W.t.rjjZxV),
+                        children: V.intl.string(V.t.rjjZxV),
                     }),
                 }),
         ],
@@ -579,9 +579,9 @@ function e_(e) {
             analyticsLocationsProp: u,
         } = e,
         { promotionsLoaded: f } = (0, T.y7)(),
-        { analyticsLocations: g } = (0, A.Ay)(u);
+        { analyticsLocations: g } = (0, p.Ay)(u);
     return f
-        ? (0, a.jsx)(A.f5, {
+        ? (0, a.jsx)(p.f5, {
               value: g,
               children: (0, a.jsxs)(o.a, {
                   title: n,
@@ -654,27 +654,27 @@ function eT(e) {
                 );
             },
             [t],
-            ep,
+            eA,
         ),
-        { promotionsLoaded: A, claimedOutboundPromotionCodeMap: E } = (0, T.y7)();
-    if (!A) return (0, a.jsx)(m.y, {});
+        { promotionsLoaded: p, claimedOutboundPromotionCodeMap: E } = (0, T.y7)();
+    if (!p) return (0, a.jsx)(m.y, {});
     let _ = t
             .map((e) => ef[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
-        O = _ ? { recurring: W.intl.string(V.default["9Y2p6p"]), oneTime: W.intl.string(V.default.Wm58LR) } : void 0,
+        O = _ ? { recurring: V.intl.string(Y.default["9Y2p6p"]), oneTime: V.intl.string(Y.default.Wm58LR) } : void 0,
         R = (0, a.jsx)(c.B, {
             direction: "vertical",
             gap: 12,
             children: b.map((e) => {
-                let t = eA(e, E[e.id] ?? null, u),
+                let t = ep(e, E[e.id] ?? null, u),
                     n = ed(ef[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
                 return (0, a.jsx)(
                     $,
                     {
                         promotion: t,
                         claimButtonPlacement: n?.claimButtonPlacement,
-                        analyticsLocations: [p.A.THIRD_PARTY_PROMOTIONS_MODAL],
+                        analyticsLocations: [A.A.THIRD_PARTY_PROMOTIONS_MODAL],
                     },
                     e.id,
                 );
@@ -764,7 +764,7 @@ function eR(e) {
             onClose: c,
         } = e,
         u = o ? [...t, "xbox"] : t;
-    (E.default.track(Y.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: u, partner_id: u[0], location_stack: d }),
+    (E.default.track(G.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: u, partner_id: u[0], location_stack: d }),
         O.Ay.fetchActivePromotions(),
         (0, b.mM)(
             async () => {

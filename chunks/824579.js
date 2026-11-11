@@ -1,16 +1,16 @@
-let i = { resolve: (e) => {} },
-    s = new Promise((e, t) => {
-        i.resolve = e;
+let l = { resolve: (e) => {} },
+    r = new Promise((e, t) => {
+        l.resolve = e;
     });
 n.d(
     t,
     {},
     {
         K: function () {
-            i.resolve(null);
+            l.resolve(null);
         },
         t: function (e) {
-            s.then(() => {
+            r.then(() => {
                 e();
             });
         },
