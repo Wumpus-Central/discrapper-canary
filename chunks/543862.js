@@ -187,7 +187,11 @@ function x(e, t) {
     let n = l.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
 }
-let k = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION]);
+let k = new Set([
+    r.M.ACCOUNT_LINK_INVITE_FRIENDS,
+    r.M.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION,
+    r.M.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
+]);
 function F(e, t, n) {
     return t && !(null == n && k.has(e));
 }
