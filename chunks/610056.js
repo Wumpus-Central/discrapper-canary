@@ -566,7 +566,7 @@ function eJ(e) {
     });
 }
 var eZ = n(321987),
-    e0 = n(595244);
+    e0 = n(769007);
 function e1(e) {
     let { selectedGuildId: t, selectedChannelId: n, onChannelChange: a, error: s } = e,
         [l, o] = r.useState(null),
