@@ -8,107 +8,106 @@ var i = n(681154),
     d = n(343446),
     c = n(50258),
     u = n(698441),
-    _ = n(813645),
-    E = n(432005),
-    A = n(841643),
-    f = n(46653),
-    h = n(734057),
-    I = n(504047),
-    p = n(71393),
-    m = n(596344),
-    T = n(576705),
-    g = n(218461),
-    S = n(994500),
-    N = n(543465),
-    C = n(287809),
-    O = n(927813),
-    R = n(449054),
-    L = n(983253),
-    y = n(435713),
-    D = n(116127),
-    b = n(596720),
-    v = n(449e3),
-    P = n(859524),
-    M = n(522606),
-    U = n(3030),
-    w = n(733811),
-    G = n(689554),
-    x = n(652215),
-    k = n(424994);
-let F = +O.A.Millis.DAY,
-    B = "icymi_store",
-    V = 3 * O.A.Millis.DAY,
-    H = [],
-    j = null,
-    W = 0,
+    _ = n(432005),
+    E = n(841643),
+    A = n(46653),
+    f = n(734057),
+    h = n(504047),
+    I = n(71393),
+    p = n(596344),
+    m = n(576705),
+    T = n(218461),
+    g = n(994500),
+    S = n(543465),
+    N = n(287809),
+    C = n(927813),
+    O = n(449054),
+    R = n(983253),
+    L = n(435713),
+    y = n(116127),
+    D = n(596720),
+    b = n(449e3),
+    v = n(859524),
+    P = n(522606),
+    M = n(3030),
+    U = n(733811),
+    w = n(689554),
+    G = n(652215),
+    x = n(424994);
+let k = +C.A.Millis.DAY,
+    F = "icymi_store",
+    B = 3 * C.A.Millis.DAY,
+    V = [],
+    H = null,
+    j = 0,
+    W = [],
     Y = [],
-    K = [],
+    K = {},
     $ = {},
     X = {},
     z = {},
     q = {},
     Q = {},
-    J = {},
-    Z = 0,
+    J = 0,
+    Z = !1,
     ee = !1,
     et = !1,
-    en = !1,
+    en = null,
     ei = null,
-    er = null,
-    ea = 0,
+    er = 0,
+    ea = [],
     es = [],
-    el = [],
-    eo = 0,
-    ed = [],
-    ec = 0,
-    eu = !0,
-    e_ = !1,
-    eE = new Set(),
+    el = 0,
+    eo = [],
+    ed = 0,
+    ec = !0,
+    eu = !1,
+    e_ = new Set(),
+    eE = !1,
     eA = !1,
-    ef = !1,
+    ef = 0,
     eh = 0,
-    eI = 0,
-    ep = L.lo,
-    em = null;
+    eI = R.lo,
+    ep = null;
+function em() {
+    ((eI = R.lo), (ep = null));
+}
 function eT() {
-    ((ep = L.lo), (em = null));
+    (R.C2.resetSession(), em());
 }
-function eg() {
-    (L.C2.resetSession(), eT());
-}
-function eS(e) {
+function eg(e) {
     return (
         null != e.userId &&
-        f.default.isAuthenticated() &&
-        f.default.getId() === e.userId &&
-        C.default.getCurrentUser()?.id === e.userId &&
-        (f.default.getAuthSessionIdHash() ?? null) === e.authSessionIdHash
+        A.default.isAuthenticated() &&
+        A.default.getId() === e.userId &&
+        N.default.getCurrentUser()?.id === e.userId &&
+        (A.default.getAuthSessionIdHash() ?? null) === e.authSessionIdHash
     );
 }
-function eN() {
-    let e = L.C2.observeGate((0, A.SL)(B));
-    return null == em || eS(em) ? !(!e && (null == em || L.C2.matches(em))) && (eT(), !0) : (eg(), !0);
+function eS() {
+    let e = R.C2.observeGate((0, E.SL)(F));
+    return null == ep || eg(ep) ? !(!e && (null == ep || R.C2.matches(ep))) && (em(), !0) : (eT(), !0);
 }
-function eC(e) {
-    return eS(e) && L.C2.canApply(e, (0, A.SL)(B));
+function eN(e) {
+    return eg(e) && R.C2.canApply(e, (0, E.SL)(F));
 }
-function eO(e, t) {
-    if (Date.now() - W > 6 * O.A.Millis.HOUR) {
+function eC(e, t) {
+    if (Date.now() - j > 6 * C.A.Millis.HOUR) {
         let n = new Set(e.map((e) => e.id));
         return t.slice(0, 20).filter((e) => n.has(e.id)).length >= 3;
     }
     return !1;
 }
-function eR(e) {
-    if (!D.A.filterStaffContent()) return !0;
-    if ((0, P.xj)(e)) {
-        if (e.data.guild_id === b.VL) return !0;
-        let t = p.A.getGuild(e.data.guild_id);
-        if (null == t || t.features.has(x.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)) return !1;
+function eO(e) {
+    if (!y.A.filterStaffContent()) return !0;
+    if ((0, v.xj)(e)) {
+        if (e.data.guild_id === D.VL) return !0;
+        let t = I.A.getGuild(e.data.guild_id);
+        if (null == t || t.features.has(G.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)) return !1;
     }
     return !0;
 }
-function eL(e, t, n, i) {
+function eR(e, t, n, i) {
     let r = e.filter((e) => e.type !== n);
     return (
         t.forEach((e, t) => {
@@ -117,71 +116,71 @@ function eL(e, t, n, i) {
         r
     );
 }
-function ey() {
+function eL() {
     if (
-        ((es = es.filter((e) => e.type !== b.Mm.RECOMMENDED_GUILDS)),
-        (el = el.filter((e) => e.type !== b.Mm.RECOMMENDED_GUILDS)),
-        0 === ed.length)
+        ((ea = ea.filter((e) => e.type !== D.Mm.RECOMMENDED_GUILDS)),
+        (es = es.filter((e) => e.type !== D.Mm.RECOMMENDED_GUILDS)),
+        0 === eo.length)
     )
         return;
     let e = "recommendedGuilds",
-        t = p.A.getGuildsArray().filter((e) => e.features.has(x.GuildFeatures.COMMUNITY)).length >= 5,
-        n = v.A.getReadTimestamp(e);
-    if (t && null != n && Date.now() - ec > F && Date.now() - n < V) return;
-    let i = { id: e, type: b.Mm.RECOMMENDED_GUILDS, score: 50 };
-    if (((z[i.id] = i), (X[i.id] = i), 0 === es.length)) el = [i, ...el];
-    else if ((!t && es.length < 5) || (t && es.length < 10)) es = [...es, i];
+        t = I.A.getGuildsArray().filter((e) => e.features.has(G.GuildFeatures.COMMUNITY)).length >= 5,
+        n = b.A.getReadTimestamp(e);
+    if (t && null != n && Date.now() - ed > k && Date.now() - n < B) return;
+    let i = { id: e, type: D.Mm.RECOMMENDED_GUILDS, score: 50 };
+    if (((X[i.id] = i), ($[i.id] = i), 0 === ea.length)) es = [i, ...es];
+    else if ((!t && ea.length < 5) || (t && ea.length < 10)) ea = [...ea, i];
     else if (t) {
         let e = Math.round(2 * Math.random()) + 3 - 1;
-        es.splice(e, 0, i);
-    } else es.splice(5, 0, i);
+        ea.splice(e, 0, i);
+    } else ea.splice(5, 0, i);
 }
-function eD() {
+function ey() {
     let e = new Set();
     if (
-        (Y.forEach((t) => {
+        (W.forEach((t) => {
             e.add(t.id);
         }),
-        null != er)
+        null != ei)
     )
-        if (e.has(er.id)) {
-            let e = er.id,
-                t = er.type,
-                n = Y.findIndex((n) => n.id === e && n.type === t);
-            -1 !== n && ((er = Y[n]), (Y = Y.filter((t) => t.id !== e)), (Y = [er, ...Y]));
-        } else ((Y = [er, ...Y]), e.add(er.id));
-    Y.forEach((e) => {
-        ((X[e.id] = e),
-            e.type === b.Mm.CUSTOM_STATUS &&
-                (S.A.isBlockedOrIgnored(e.data.user_id) ? (q[e.id] = !0) : (z[e.id] = (0, P.YM)(e))));
+        if (e.has(ei.id)) {
+            let e = ei.id,
+                t = ei.type,
+                n = W.findIndex((n) => n.id === e && n.type === t);
+            -1 !== n && ((ei = W[n]), (W = W.filter((t) => t.id !== e)), (W = [ei, ...W]));
+        } else ((W = [ei, ...W]), e.add(ei.id));
+    W.forEach((e) => {
+        (($[e.id] = e),
+            e.type === D.Mm.CUSTOM_STATUS &&
+                (g.A.isBlockedOrIgnored(e.data.user_id) ? (z[e.id] = !0) : (X[e.id] = (0, v.YM)(e))));
     });
 }
-function eb(e) {
+function eD(e) {
     let t, n, r, a, d;
-    if ((Y.length > 0 && ((H = Y), (Y = []), (K = [])), Z++, null != e)) ((es = e.newUnread), (el = e.newRead));
+    if ((W.length > 0 && ((V = W), (W = []), (Y = [])), J++, null != e)) ((ea = e.newUnread), (es = e.newRead));
     else {
-        let [e, t] = ev(H);
-        ((es = e), (el = t));
+        let [e, t] = eb(V);
+        ((ea = e), (es = t));
     }
     ((function () {
-        let e = p.A.getGuildIds(),
+        let e = I.A.getGuildIds(),
             t = [];
         for (let n of e) {
-            if (null != Q[n] && Q[n] < 0) continue;
+            if (null != q[n] && q[n] < 0) continue;
             let e = u.Ay.getGuildScheduledEventsForGuild(n),
                 i = 0;
             for (let n of e)
                 if (!(0, u.AZ)(n)) {
                     if (null != n.channel_id) {
-                        let e = h.A.getChannel(n.channel_id);
-                        if (!T.A.can(x.xBc.VIEW_CHANNEL, e)) continue;
+                        let e = f.A.getChannel(n.channel_id);
+                        if (!m.A.can(G.xBc.VIEW_CHANNEL, e)) continue;
                     }
                     if (
-                        ((0, u.W$)(n, 2 * O.A.Seconds.DAY) || (0, u.Fd)(n)) &&
-                        (null == z[n.id] && (z[n.id] = { id: n.id, type: b.Mm.GUILD_EVENT, score: 10, event_id: n.id }),
+                        ((0, u.W$)(n, 2 * C.A.Seconds.DAY) || (0, u.Fd)(n)) &&
+                        (null == X[n.id] && (X[n.id] = { id: n.id, type: D.Mm.GUILD_EVENT, score: 10, event_id: n.id }),
                         t.push({
                             id: n.id,
-                            type: b.Mm.GUILD_EVENT,
+                            type: D.Mm.GUILD_EVENT,
                             score: 10,
                             data: { guild_id: n.guild_id, event_id: n.id, channel_id: n.channel_id ?? void 0 },
                         }),
@@ -191,23 +190,23 @@ function eb(e) {
                 }
         }
         t.sort((e, t) => {
-            let n = I.A.getGuildAffinity(e.data.guild_id),
-                i = I.A.getGuildAffinity(t.data.guild_id);
+            let n = h.A.getGuildAffinity(e.data.guild_id),
+                i = h.A.getGuildAffinity(t.data.guild_id);
             return (null != i ? i.score : 0) - (null != n ? n.score : 0);
         });
         let n = [],
             i = [];
         (t.forEach((e) => {
-            ((X[e.id] = e), null != v.A.getReadTimestamp(e.id) ? i.push(e) : n.push(e));
+            (($[e.id] = e), null != b.A.getReadTimestamp(e.id) ? i.push(e) : n.push(e));
         }),
-            (es = eL(es, n, b.Mm.GUILD_EVENT, 7)),
-            (el = eL(el, i, b.Mm.GUILD_EVENT, 7)));
+            (ea = eR(ea, n, D.Mm.GUILD_EVENT, 7)),
+            (es = eR(es, i, D.Mm.GUILD_EVENT, 7)));
     })(),
         (t = new Set()),
         (n = {}),
         (r = []),
         (a = []),
-        (d = s.A.getFeed(k.X1.GLOBAL_FEED)?.entries ?? []).sort((e, t) => e.rank - t.rank).slice(0, 5),
+        (d = s.A.getFeed(x.X1.GLOBAL_FEED)?.entries ?? []).sort((e, t) => e.rank - t.rank).slice(0, 5),
         d.forEach((e) => {
             if (
                 t.has(e.content.id) ||
@@ -225,338 +224,319 @@ function eb(e) {
                     return;
                 n[e.content.author_id].add(e.content.extra.application_id);
             }
-            null == z[e.content.id] &&
-                (z[e.content.id] = { id: e.content.id, type: b.Mm.ACTIVITY, score: 15, activity: e.content });
+            null == X[e.content.id] &&
+                (X[e.content.id] = { id: e.content.id, type: D.Mm.ACTIVITY, score: 15, activity: e.content });
             let s = {
                 id: e.content.id,
-                type: b.Mm.ACTIVITY,
+                type: D.Mm.ACTIVITY,
                 score: 15,
                 data: { user_id: e.content.author_id, content_id: e.content.id },
             };
-            (t.add(e.content.id), (X[s.id] = s), null != v.A.getReadTimestamp(s.id) ? a.push(s) : r.push(s));
+            (t.add(e.content.id), ($[s.id] = s), null != b.A.getReadTimestamp(s.id) ? a.push(s) : r.push(s));
         }),
-        (es = eL(es, r, b.Mm.ACTIVITY, 5)),
-        (el = eL(el, a, b.Mm.ACTIVITY, 5)),
-        ey(),
-        null != $.load_id &&
-            j !== $.load_id &&
-            ((0, G.h)({
-                newTrackingProps: $,
-                hasNewContent: et,
-                unreadFeedItems: es,
-                readFeedItems: el,
+        (ea = eR(ea, r, D.Mm.ACTIVITY, 5)),
+        (es = eR(es, a, D.Mm.ACTIVITY, 5)),
+        eL(),
+        null != K.load_id &&
+            H !== K.load_id &&
+            ((0, w.h)({
+                newTrackingProps: K,
+                hasNewContent: ee,
+                unreadFeedItems: ea,
+                readFeedItems: es,
                 homeSessionId: "gravity",
             }),
-            (j = $.load_id ?? null),
-            ($ = {})),
-        (eo = 0),
-        es.length + el.length === 0 && (ef = !0),
-        (0, P.kx)([...es, ...el], 0, 15, z),
-        (e_ = !1));
+            (H = K.load_id ?? null),
+            (K = {})),
+        (el = 0),
+        ea.length + es.length === 0 && (eA = !0),
+        (0, v.kx)([...ea, ...es], 0, 15, X),
+        (eu = !1));
 }
-function ev(e) {
+function eb(e) {
     let t = [],
         n = [],
         i = [];
     return (
         e.forEach((e) => {
-            let r = null != v.A.getReadTimestamp(e.id);
-            (e.type === b.Mm.MESSAGE &&
+            let r = null != b.A.getReadTimestamp(e.id);
+            (e.type === D.Mm.MESSAGE &&
                 e.data.message_context?.external_content_application_id == null &&
-                (r = r || !(0, U.$)(e.data.channel_id, e.data.message_id)),
-                r ? t.push(e) : e.type === b.Mm.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e));
+                (r = r || !(0, M.$)(e.data.channel_id, e.data.message_id)),
+                r ? t.push(e) : e.type === D.Mm.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e));
         }),
-        [[...i, ...n], t.sort((e, t) => (0, P.tI)(e.id, t.id))]
+        [[...i, ...n], t.sort((e, t) => (0, v.tI)(e.id, t.id))]
     );
 }
-function eP(e, t) {
+function ev(e, t) {
     let n = [],
-        i = new Set(H.map((e) => e.id));
+        i = new Set(V.map((e) => e.id));
     for (let r of e)
-        !(r.type === b.Mm.RECOMMENDED_GUILDS || i.has(r.id)) &&
-            null == v.A.getReadTimestamp(r.id) &&
-            (r.type !== b.Mm.MESSAGE || ((0, U.$)(r.data.channel_id, r.data.message_id) && r.data.channel_id !== t)) &&
+        !(r.type === D.Mm.RECOMMENDED_GUILDS || i.has(r.id)) &&
+            null == b.A.getReadTimestamp(r.id) &&
+            (r.type !== D.Mm.MESSAGE || ((0, M.$)(r.data.channel_id, r.data.message_id) && r.data.channel_id !== t)) &&
             n.push(r);
     return n;
 }
+function eP(e, t) {
+    return e.filter((e) => !(0, v.xj)(e) || e.data.channel_id !== t);
+}
 function eM(e, t) {
-    return e.filter((e) => !(0, P.xj)(e) || e.data.channel_id !== t);
+    (0, v.Wu)(t) === v.n$.MUTED && ((V = eP(V, e)), (ea = eP(ea, e)), (es = eP(es, e)), (W = eP(W, e)), (Y = eP(Y, e)));
 }
 function eU(e, t) {
-    (0, P.Wu)(t) === P.n$.MUTED && ((H = eM(H, e)), (es = eM(es, e)), (el = eM(el, e)), (Y = eM(Y, e)), (K = eM(K, e)));
+    return e.filter((e) => !(0, v.xj)(e) || e.data.guild_id !== t);
 }
 function ew(e, t) {
-    return e.filter((e) => !(0, P.xj)(e) || e.data.guild_id !== t);
+    (0, v.Wu)(t) === v.n$.MUTED && ((V = eU(V, e)), (ea = eU(ea, e)), (es = eU(es, e)), (W = eU(W, e)), (Y = eU(Y, e)));
 }
-function eG(e, t) {
-    (0, P.Wu)(t) === P.n$.MUTED && ((H = ew(H, e)), (es = ew(es, e)), (el = ew(el, e)), (Y = ew(Y, e)), (K = ew(K, e)));
-}
-function ex(e) {
+function eG(e) {
     let { type: t, messageId: n, userId: i, emoji: r, reactionType: a } = e,
-        s = z[n];
-    if (null == s || s.type !== b.Mm.MESSAGE) return !1;
-    let l = f.default.getId() === i;
+        s = X[n];
+    if (null == s || s.type !== D.Mm.MESSAGE) return !1;
+    let l = A.default.getId() === i;
     "MESSAGE_REACTION_ADD" === t
         ? (s.message = s.message.addReaction(r, l, { colors: e.colors, reactionType: a }))
         : (s.message = s.message.removeReaction(r, l, a));
 }
-function ek(e) {
+function ex(e) {
     let { channelId: t } = e,
         n = [],
         i = [];
-    es.forEach((e, r) => {
-        (r > eo || !en) && e.type === b.Mm.MESSAGE && e.data.channel_id === t ? n.push(e) : i.push(e);
+    ea.forEach((e, r) => {
+        (r > el || !et) && e.type === D.Mm.MESSAGE && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
-    let r = et,
-        [a, s] = ev(Y);
-    if (((K = eP(a, t)), (et = en ? r && K.length >= 3 : r && eO(i, Y)), 0 === n.length && r === et)) return !1;
-    0 !== n.length && ((es = i), (el = [...el, ...n]));
+    let r = ee,
+        [a, s] = eb(W);
+    if (((Y = ev(a, t)), (ee = et ? r && Y.length >= 3 : r && eC(i, W)), 0 === n.length && r === ee)) return !1;
+    0 !== n.length && ((ea = i), (es = [...es, ...n]));
 }
-class eF extends r.Ay.PersistedStore {
+class ek extends r.Ay.PersistedStore {
     static displayName = "ICYMIStore";
     static persistKey = "ICYMIStore";
     initialize(e) {
-        (this.waitFor(
-            c.A,
-            f.default,
-            h.A,
-            s.A,
-            d.A,
-            I.A,
-            u.Ay,
-            p.A,
-            D.A,
-            _.A,
-            v.A,
-            m.A,
-            T.A,
-            g.Ay,
-            S.A,
-            N.Ay,
-            C.default,
-        ),
-            this.syncWith([c.A, f.default, _.A, C.default], eN),
+        (this.waitFor(c.A, A.default, f.A, s.A, d.A, h.A, u.Ay, I.A, y.A, b.A, p.A, m.A, T.Ay, g.A, S.Ay, N.default),
+            this.syncWith([c.A, A.default, N.default], eS),
             null != e &&
-                ((H = e.dehydratedItems ?? []).forEach((e) => {
-                    X[e.id] = e;
+                ((V = e.dehydratedItems ?? []).forEach((e) => {
+                    $[e.id] = e;
                 }),
-                (Q = e.customGuildScores ?? {}),
-                (J = e.customChannelScoresByGuild ?? {}),
-                (ea = e.numOpens ?? 0),
-                (W = e.lastOpened ?? 0),
-                (ec = e.lastJoinedRecommendedGuild ?? 0),
-                (eI = e.lastTakenICYMISurvey ?? 0)));
+                (q = e.customGuildScores ?? {}),
+                (Q = e.customChannelScoresByGuild ?? {}),
+                (er = e.numOpens ?? 0),
+                (j = e.lastOpened ?? 0),
+                (ed = e.lastJoinedRecommendedGuild ?? 0),
+                (eh = e.lastTakenICYMISurvey ?? 0)));
     }
     getDiscoverSnapshot() {
-        return null != em && eC(em) ? ep : L.lo;
+        return null != ep && eN(ep) ? eI : R.lo;
     }
     getVersion() {
-        return Z;
+        return J;
     }
     getDehydratedItems() {
-        return H;
+        return V;
     }
     getNewDehydratedItems() {
-        return Y;
+        return W;
     }
     getDehydratedItem(e) {
-        return X[e] ?? null;
+        return $[e] ?? null;
     }
     getHydratedItem(e) {
-        return z[e] ?? null;
+        return X[e] ?? null;
     }
     getMessage(e) {
-        let t = z[e];
-        return null == t || t.type !== b.Mm.MESSAGE ? null : t.message;
+        let t = X[e];
+        return null == t || t.type !== D.Mm.MESSAGE ? null : t.message;
     }
     getHydratedItems() {
-        return z;
+        return X;
     }
     getUnreadDisplayItems() {
-        return es;
+        return ea;
     }
     getNewUnreadDehydratedItems() {
-        return K;
+        return Y;
     }
     getReadDisplayItems() {
-        return el;
+        return es;
     }
     getNextIndexToHydrate() {
-        return eo;
+        return el;
     }
     getMissingItems() {
-        return q;
+        return z;
     }
     customMuted(e, t) {
-        return this.getCustomGuildScore(e) === P.n$.MUTED || this.getCustomChannelScore(e, t) === P.n$.MUTED;
+        return this.getCustomGuildScore(e) === v.n$.MUTED || this.getCustomChannelScore(e, t) === v.n$.MUTED;
     }
     getCustomChannelScore(e, t) {
-        return null == J[e] || null == J[e][t] ? P.n$.UNKNOWN : (0, P.Wu)(J[e][t]);
+        return null == Q[e] || null == Q[e][t] ? v.n$.UNKNOWN : (0, v.Wu)(Q[e][t]);
     }
     getCustomGuildScore(e) {
-        return Q[e] ?? 0;
+        return q[e] ?? 0;
     }
     getCustomGuildScores() {
-        return Q;
+        return q;
     }
     hasNewContent() {
-        return et;
+        return ee;
     }
     getCurrentStatusAttachments(e) {
-        return null == ei || ei[0] !== e ? [] : ei[1];
+        return null == en || en[0] !== e ? [] : en[1];
     }
     getLoadId() {
-        return j;
+        return H;
     }
     hasOpenedEnoughTimes() {
-        return 5 === ea;
+        return 5 === er;
     }
     hasOpened() {
-        return en;
+        return et;
     }
     getDiscoverableGuilds() {
-        return ed;
+        return eo;
     }
     videosMuted() {
-        return eu;
+        return ec;
     }
     isRefreshing() {
-        return e_;
+        return eu;
     }
     isHydrating() {
-        return eE.size > 0;
+        return e_.size > 0;
     }
     notificationItem() {
-        return er;
+        return ei;
     }
     getIsTabFocused() {
-        return eA;
+        return eE;
     }
     isFirstPageHydrated() {
-        return ef;
+        return eA;
     }
     lastScrollEvent() {
-        return eh;
+        return ef;
     }
     lastTakenICYMISurvey() {
-        return eI;
+        return eh;
     }
     getIndexInHydratedFeed(e) {
         return "recommended_guilds" === e || "recommendedGuilds" === e
-            ? [...es, ...el].findIndex((e) => e.type === b.Mm.RECOMMENDED_GUILDS)
-            : [...es, ...el].filter((e) => null != z[e.id]).findIndex((t) => t.id === e);
+            ? [...ea, ...es].findIndex((e) => e.type === D.Mm.RECOMMENDED_GUILDS)
+            : [...ea, ...es].filter((e) => null != X[e.id]).findIndex((t) => t.id === e);
     }
     getState() {
         return {
-            dehydratedItems: H,
-            numOpens: ea,
-            customGuildScores: Q,
-            customChannelScoresByGuild: J,
-            lastOpened: W,
-            lastJoinedRecommendedGuild: ec,
-            lastTakenICYMISurvey: eI,
+            dehydratedItems: V,
+            numOpens: er,
+            customGuildScores: q,
+            customChannelScoresByGuild: Q,
+            lastOpened: j,
+            lastJoinedRecommendedGuild: ed,
+            lastTakenICYMISurvey: eh,
         };
     }
 }
-let eB = new eF(a.h, {
+let eF = new ek(a.h, {
     LOGOUT: function () {
-        (eg(),
-            (H = []),
+        (eT(),
+            (V = []),
+            (W = []),
             (Y = []),
-            (K = []),
-            (X = {}),
             ($ = {}),
+            (K = {}),
+            (X = {}),
             (z = {}),
+            (H = null),
             (q = {}),
-            (j = null),
             (Q = {}),
-            (J = {}),
-            (Z = 0),
+            (J = 0),
+            (Z = !1),
             (ee = !1),
             (et = !1),
-            (en = !1),
+            (ea = []),
             (es = []),
-            (el = []),
-            (eo = 0),
-            (W = 0),
-            (ec = 0),
-            (eu = !0),
-            (e_ = !1),
-            (eE = new Set()),
-            (er = null),
-            (eA = !1),
-            (ef = !1),
+            (el = 0),
+            (j = 0),
+            (ed = 0),
+            (ec = !0),
+            (eu = !1),
+            (e_ = new Set()),
             (ei = null),
-            (eh = 0));
+            (eE = !1),
+            (eA = !1),
+            (en = null),
+            (ef = 0));
     },
-    LOGIN_SUCCESS: eg,
+    LOGIN_SUCCESS: eT,
     LOGIN_RESET: function (e) {
         let { isMultiAccount: t } = e;
         if (t) return !1;
-        eg();
+        eT();
     },
-    AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eg,
-    CLOSE_SUSPENDED_USER: eg,
+    AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eT,
+    CLOSE_SUSPENDED_USER: eT,
     CONNECTION_CLOSED: function (e) {
         let { code: t } = e;
         if (4004 !== t) return !1;
-        eg();
+        eT();
     },
-    CONNECTION_OPEN: eN,
-    AUTH_SESSION_CHANGE: eN,
-    LAB_FEATURE_TOGGLE: eN,
-    CURRENT_USER_UPDATE: eN,
-    USER_UPDATE: eN,
-    CONNECTION_OPEN_STATE_UPDATE: eN,
-    APEX_EXPERIMENT_OVERRIDE_CREATE: eN,
-    APEX_EXPERIMENT_OVERRIDE_DELETE: eN,
-    APEX_EXPERIMENT_OVERRIDE_CLEAR: eN,
-    APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE: eN,
-    APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE: eN,
-    APEX_EXPERIMENT_CLEAR_FOR_TESTS: eN,
-    APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS: eN,
-    APEX_EXPERIMENTS_FETCH_START: eN,
-    APEX_EXPERIMENTS_FETCH_SUCCESS: eN,
-    APEX_EXPERIMENTS_FETCH_FAILURE: eN,
+    CONNECTION_OPEN: eS,
+    AUTH_SESSION_CHANGE: eS,
+    CURRENT_USER_UPDATE: eS,
+    USER_UPDATE: eS,
+    CONNECTION_OPEN_STATE_UPDATE: eS,
+    APEX_EXPERIMENT_OVERRIDE_CREATE: eS,
+    APEX_EXPERIMENT_OVERRIDE_DELETE: eS,
+    APEX_EXPERIMENT_OVERRIDE_CLEAR: eS,
+    APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE: eS,
+    APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE: eS,
+    APEX_EXPERIMENT_CLEAR_FOR_TESTS: eS,
+    APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS: eS,
+    APEX_EXPERIMENTS_FETCH_START: eS,
+    APEX_EXPERIMENTS_FETCH_SUCCESS: eS,
+    APEX_EXPERIMENTS_FETCH_FAILURE: eS,
     DISCOVER_PICKER_COMMIT: function (e) {
         let { identity: t } = e,
-            n = (0, A.SL)(B);
-        if ((L.C2.observeGate(n), !L.C2.matches(t) || !eS(t))) return !1;
-        ((ep = (0, L.Sw)(ep, { type: "commit", enabled: n })), (em = t));
+            n = (0, E.SL)(F);
+        if ((R.C2.observeGate(n), !R.C2.matches(t) || !eg(t))) return !1;
+        ((eI = (0, R.Sw)(eI, { type: "commit", enabled: n })), (ep = t));
     },
     DISCOVER_REQUEST_STARTED: function (e) {
         let { identity: t } = e;
-        if (!eC(t)) return !1;
-        ((null != em && L.C2.matches(em)) || eT(), (ep = (0, L.Sw)(ep, { type: "start" })), (em = t));
+        if (!eN(t)) return !1;
+        ((null != ep && R.C2.matches(ep)) || em(), (eI = (0, R.Sw)(eI, { type: "start" })), (ep = t));
     },
     DISCOVER_REQUEST_FAILED: function (e) {
         let { identity: t } = e;
-        if (!eC(t)) return !1;
-        ((ep = (0, L.Sw)(ep, { type: "error" })), (em = t));
+        if (!eN(t)) return !1;
+        ((eI = (0, R.Sw)(eI, { type: "error" })), (ep = t));
     },
     LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
         let { messageItem: t, customStatusItem: n } = e;
-        if (null != n) return ((er = n), null != j && ((Y = Y.length > 0 ? Y : [...H]), eD(), eb()), !0);
+        if (null != n) return ((ei = n), null != H && ((W = W.length > 0 ? W : [...V]), ey(), eD()), !0);
         if (null != t) {
             let e = {
                 id: t.message.id,
-                type: b.Mm.MESSAGE,
+                type: D.Mm.MESSAGE,
                 score: 50,
                 data: {
                     channel_id: t.channel_id,
                     message_id: t.message.id,
                     guild_id: t.guild_id,
-                    channel_type: x.rbe.GUILD_TEXT,
+                    channel_type: G.rbe.GUILD_TEXT,
                 },
             };
             if (
-                ((X[t.message.id] = e),
-                (z[t.message.id] = { ...e, message: (0, E.rh)(t.message) }),
-                null == j && null == $)
+                (($[t.message.id] = e),
+                (X[t.message.id] = { ...e, message: (0, _.rh)(t.message) }),
+                null == H && null == K)
             ) {
-                let [t, n] = ev((H = [e, ...H]));
-                ((es = t), (el = n));
-            } else ((Y = [e, ...Y]), eb());
+                let [t, n] = eb((V = [e, ...V]));
+                ((ea = t), (es = n));
+            } else ((W = [e, ...W]), eD());
             return !0;
         }
         return !1;
@@ -566,22 +546,22 @@ let eB = new eF(a.h, {
             n,
             i,
             { items: r, loadId: a, startTime: s, isInitialLoad: l, isReloading: o, discoverRequest: d } = e;
-        if (null != d && !eC(d)) return !1;
+        if (null != d && !eN(d)) return !1;
         let c =
-            ((t = new Set(b.H8)),
+            ((t = new Set(D.H8)),
             (n = new Map()),
-            (i = (0, A.SL)(B) ? (0, w.I)(r, (e, t) => n.set(e, t)) : []),
+            (i = (0, E.SL)(F) ? (0, U.I)(r, (e, t) => n.set(e, t)) : []),
             {
                 items: r
                     .filter((e) => t.has(e.type))
                     .filter((e) => {
-                        if (e.type !== b.Mm.DISCOVER_ITEM) return !0;
+                        if (e.type !== D.Mm.DISCOVER_ITEM) return !0;
                         let t = n.get(e);
-                        return null != t && ((z[e.id] = t), !0);
+                        return null != t && ((X[e.id] = t), !0);
                     })
-                    .filter(eR)
+                    .filter(eO)
                     .map((e) => {
-                        if (e.type === b.Mm.MESSAGE && null != e.data.message_context) {
+                        if (e.type === D.Mm.MESSAGE && null != e.data.message_context) {
                             let t = {};
                             (null != e.data.message_context.reply_message_id &&
                                 0 !== parseInt(e.data.message_context.reply_message_id) &&
@@ -605,31 +585,31 @@ let eB = new eF(a.h, {
                     }),
                 discoverItems: i,
             });
-        ((Y = c.items),
-            null != d && ((ep = (0, L.Sw)(ep, { type: "success", items: c.discoverItems, loadId: a })), (em = d)),
-            eD(),
-            ($ = {
+        ((W = c.items),
+            null != d && ((eI = (0, R.Sw)(eI, { type: "success", items: c.discoverItems, loadId: a })), (ep = d)),
+            ey(),
+            (K = {
                 load_id: a,
                 load_time_millis: Date.now() - s,
-                feed_item_ids: Y.flatMap((e) => {
-                    let t = (0, y.v)(e);
+                feed_item_ids: W.flatMap((e) => {
+                    let t = (0, L.v)(e);
                     return null == t ? [] : [t];
                 }),
             }));
-        let [u, _] = ev(Y);
-        if (((K = eP(u)), !en || 0 === Z || l))
-            ((Z = 0), !eA && eO(u, Y) ? ((et = !0), (ee = !0)) : (et = !1), eb({ newUnread: u, newRead: _ }));
+        let [u, _] = eb(W);
+        if (((Y = ev(u)), !et || 0 === J || l))
+            ((J = 0), !eE && eC(u, W) ? ((ee = !0), (Z = !0)) : (ee = !1), eD({ newUnread: u, newRead: _ }));
         else {
-            Z > 0 && (er = null);
-            let e = K.length > 3;
-            (o || (et = e), e && ((0, P.kx)([...u, ..._], 0, 15, z), u.length + _.length === 0 && (ef = !0)));
+            J > 0 && (ei = null);
+            let e = Y.length > 3;
+            (o || (ee = e), e && ((0, v.kx)([...u, ..._], 0, 15, X), u.length + _.length === 0 && (eA = !0)));
         }
-        (0, G.h)({
-            newTrackingProps: $,
-            hasNewContent: et,
+        (0, w.h)({
+            newTrackingProps: K,
+            hasNewContent: ee,
             unreadFeedItems: u,
             readFeedItems: _,
-            homeSessionId: eA ? "foreground_load" : "background_load",
+            homeSessionId: eE ? "foreground_load" : "background_load",
         });
     },
     LOAD_ICYMI_HYDRATED: function (e) {
@@ -641,145 +621,145 @@ let eB = new eF(a.h, {
             startingIndex: a,
             endingIndex: s,
         } = e;
-        ((ef = !0), (z = { ...z }));
+        ((eA = !0), (X = { ...X }));
         let l = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
             o = n.reduce((e, t) => ((e[t.id] = t), e), {});
         (i.forEach((e) => {
             let t = l[e.message_id];
             if (null == t) {
-                q[e.message_id] = !0;
+                z[e.message_id] = !0;
                 return;
             }
-            let n = X[e.message_id];
+            let n = $[e.message_id];
             null == n &&
                 (n = {
                     id: e.message_id,
-                    type: b.Mm.MESSAGE,
+                    type: D.Mm.MESSAGE,
                     score: -1,
                     data: {
                         guild_id: t.guild_id,
                         channel_id: t.channel_id,
                         message_id: t.message.id,
-                        channel_type: x.rbe.GUILD_TEXT,
+                        channel_type: G.rbe.GUILD_TEXT,
                         has_mention: !1,
                     },
                 });
-            let i = m.A.getMessage(t.channel_id, t.message.id);
+            let i = p.A.getMessage(t.channel_id, t.message.id);
             if (null != i) {
-                let e = (0, P.Rh)(t, n);
-                z[t.message.id] = { ...e, message: i };
-            } else z[t.message.id] = (0, P.Rh)(t, n);
+                let e = (0, v.Rh)(t, n);
+                X[t.message.id] = { ...e, message: i };
+            } else X[t.message.id] = (0, v.Rh)(t, n);
         }),
             r.forEach((e) => {
                 let t = o[e.content_id];
                 if (null == t) {
-                    q[e.content_id] = !0;
+                    z[e.content_id] = !0;
                     return;
                 }
-                let n = X[e.content_id];
+                let n = $[e.content_id];
                 if (null == n) {
-                    q[e.content_id] = !0;
+                    z[e.content_id] = !0;
                     return;
                 }
-                z[t.id] = { ...n, activity: t };
+                X[t.id] = { ...n, activity: t };
             }),
-            a === eo && (eo = s),
-            eE.delete((0, M.V)(a, s)));
+            a === el && (el = s),
+            e_.delete((0, P.V)(a, s)));
     },
     LOAD_ICYMI_CUSTOM_SCORES: function (e) {
         let { scores: t } = e;
         for (let e of t)
-            for (let t of ((Q[e.guild_id] = e.guild_score),
-            eG(e.guild_id, e.guild_score),
+            for (let t of ((q[e.guild_id] = e.guild_score),
+            ew(e.guild_id, e.guild_score),
             Object.keys(e.custom_channel_scores)))
-                (null == J[e.guild_id] && (J[e.guild_id] = {}),
-                    (J[e.guild_id][t] = e.custom_channel_scores[t]),
-                    eU(t, e.custom_channel_scores[t]));
-        ((Q = { ...Q }), (J = { ...J }));
+                (null == Q[e.guild_id] && (Q[e.guild_id] = {}),
+                    (Q[e.guild_id][t] = e.custom_channel_scores[t]),
+                    eM(t, e.custom_channel_scores[t]));
+        ((q = { ...q }), (Q = { ...Q }));
     },
     LOAD_ICYMI_RECOMMENDED_GUILDS: function (e) {
         let { guilds: t } = e;
-        ((ed = t.map((e) => (0, R.jE)(e.guild))), ey());
+        ((eo = t.map((e) => (0, O.jE)(e.guild))), eL());
     },
     ICYMI_CUSTOM_SCORES_UPDATED: function (e) {
         let { channelScores: t, guildId: n, guildScore: i } = e;
-        (null != i && ((Q[n] = i), eG(n, i), (Q = { ...Q })),
+        (null != i && ((q[n] = i), ew(n, i), (q = { ...q })),
             t?.forEach((e) => {
                 let { channelId: t, score: i } = e;
-                (null == J[n] && (J[n] = {}), (J[n][t] = i), eU(t, i), (J = { ...J }));
+                (null == Q[n] && (Q[n] = {}), (Q[n][t] = i), eM(t, i), (Q = { ...Q }));
             }));
     },
     RELOAD_ICYMI: function () {
-        if (0 === Y.length) return !1;
-        (eb(), (et = !1));
+        if (0 === W.length) return !1;
+        (eD(), (ee = !1));
     },
     ICYMI_TAB_OPENED: function () {
-        ((en = !0), (W = Date.now()), ee && ((ee = !1), (et = !1)), ea < 5 && ea++);
+        ((et = !0), (j = Date.now()), Z && ((Z = !1), (ee = !1)), er < 5 && er++);
     },
     ICYMI_FEEDBACK_GIVEN: function () {
-        ea = 6;
+        er = 6;
     },
-    MESSAGE_REACTION_ADD: ex,
+    MESSAGE_REACTION_ADD: eG,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e,
-            i = z[t];
-        if (null == i || i.type !== b.Mm.MESSAGE) return !1;
-        let r = f.default.getId();
+            i = X[t];
+        if (null == i || i.type !== D.Mm.MESSAGE) return !1;
+        let r = A.default.getId();
         i.message = i.message.addReactionBatch(n, r);
     },
-    MESSAGE_REACTION_REMOVE: ex,
+    MESSAGE_REACTION_REMOVE: eG,
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { messageId: t } = e,
-            n = z[t];
-        if (null == n || n.type !== b.Mm.MESSAGE) return !1;
+            n = X[t];
+        if (null == n || n.type !== D.Mm.MESSAGE) return !1;
         n.message = n.message.set("reactions", []);
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { messageId: t, emoji: n } = e,
-            i = z[t];
-        if (null == i || i.type !== b.Mm.MESSAGE) return !1;
+            i = X[t];
+        if (null == i || i.type !== D.Mm.MESSAGE) return !1;
         i.message = i.message.removeReactionsForEmoji(n);
     },
-    CHANNEL_ACK: ek,
-    MESSAGE_ACK: ek,
+    CHANNEL_ACK: ex,
+    MESSAGE_ACK: ex,
     ICYMI_JOINED_RECOMMENDED_GUILD: function () {
-        ec = Date.now();
+        ed = Date.now();
     },
     ICYMI_SET_VIDEOS_MUTED: function (e) {
         let { muted: t } = e;
-        eu = t;
+        ec = t;
     },
     ICYMI_SET_REFRESHING: function (e) {
         let { refreshing: t } = e;
-        e_ = t;
+        eu = t;
     },
     LOAD_ICYMI_HYDRATED_ATTEMPT: function (e) {
         let { hydrationId: t } = e;
-        eE.add(t);
+        e_.add(t);
     },
     LOAD_ICYMI_HYDRATED_FAILED: function (e) {
         let { hydrationId: t } = e;
-        eE.delete(t);
+        e_.delete(t);
     },
     ICYMI_SET_FOCUSED_TAB: function (e) {
         let { focused: t } = e;
-        eA = t;
+        eE = t;
     },
     LOAD_ICYMI_CURRENT_STATUS_MEDIA: function (e) {
         let { attachments: t, createdAtMs: n } = e;
         if (null == t || 0 === t.length) {
-            ei = null;
+            en = null;
             return;
         }
-        ei = [n, [...t]];
+        en = [n, [...t]];
     },
     ICYMI_SCROLL_EVENT: function (e) {
         let { timestamp: t } = e;
-        eh = t;
+        ef = t;
     },
     ICYMI_TAKE_SURVEY: function (e) {
         let { takenAt: t } = e;
-        eI = t;
+        eh = t;
     },
 });
-n.d(t, {}, { A: eB });
+n.d(t, {}, { A: eF });

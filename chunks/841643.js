@@ -1,12 +1,10 @@
 var i = n(855986),
     r = n(945810),
-    a = n(50258);
-n(308190);
-var s = n(813645),
-    l = n(46653),
-    o = n(287809);
-function d(e) {
-    return (o.default.getCurrentUser()?.isStaff(), !1);
+    a = n(50258),
+    s = n(46653),
+    l = n(287809);
+function o(e) {
+    return (l.default.getCurrentUser()?.isStaff(), !1);
 }
 ((0, r.mj)({
     name: "2026-11-waterwheels-discover",
@@ -18,9 +16,9 @@ function d(e) {
         t,
         {},
         {
-            SL: d,
+            SL: o,
             hY: function (e) {
-                return (0, i.bG)([a.A, l.default, s.A, o.default], () => d(e), [e]);
+                return (0, i.bG)([a.A, s.default, l.default], () => o(e), [e]);
             },
         },
     ));
