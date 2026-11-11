@@ -1,5 +1,5 @@
-var i = n(477900);
-if ((n(582128), 221552 == n.j)) var l = n(806163);
+var l = n(477900);
+if ((n(582128), 221552 == n.j)) var i = n(806163);
 var s = n(323125);
 function r() {
     let e = location.pathname + location.search;
@@ -9,7 +9,7 @@ function r() {
 let a =
     221552 == n.j
         ? function () {
-              return (0, i.jsx)(l.rd, { to: r() });
+              return (0, l.jsx)(i.rd, { to: r() });
           }
         : null;
 n.d(t, {}, { A: a, W: r });

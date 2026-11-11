@@ -63,6 +63,7 @@
     el,
     eu,
 ) {
+    "use strict";
     function ec(e) {
         return e && "object" == typeof e && "default" in e ? e : { default: e };
     }

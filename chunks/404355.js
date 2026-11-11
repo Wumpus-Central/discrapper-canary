@@ -1,15 +1,15 @@
-var i = t(477900);
-t(582128);
-var l = t(377802),
-    s = t(693409);
-t.d(
-    e,
+var i = e(477900);
+e(582128);
+var s = e(377802),
+    o = e(693409);
+e.d(
+    t,
     {},
     {
         A: function (n) {
-            let { iconComponent: e, ...t } = n,
-                { Component: a, events: o } = (0, l.O)();
-            return (0, i.jsx)(s.l, { isTrayButton: !1, color: "disconnect", iconComponent: e ?? a, ...o, ...t });
+            let { iconComponent: t, ...e } = n,
+                { Component: c, events: a } = (0, s.O)();
+            return (0, i.jsx)(o.l, { isTrayButton: !1, color: "disconnect", iconComponent: t ?? c, ...a, ...e });
         },
     },
 );

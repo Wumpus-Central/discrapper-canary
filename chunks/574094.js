@@ -1,16 +1,16 @@
 var i = n(477900),
     l = n(582128),
-    s = n(4616),
-    r = n(528962);
+    r = n(4616),
+    s = n(528962);
 function a(e, t) {
     let { innerWidth: n, innerHeight: i } = window;
     if (0 === e || 0 === t) return null;
     let l = t / e,
-        s = n,
-        r = Math.round(n * l);
+        r = n,
+        s = Math.round(n * l);
     return (
-        r < i && ((r = i), (s = Math.round(i * (l = e / t)))),
-        { naturalWidth: e, naturalHeight: t, width: s, height: r }
+        s < i && ((s = i), (r = Math.round(i * (l = e / t)))),
+        { naturalWidth: e, naturalHeight: t, width: r, height: s }
     );
 }
 n.d(
@@ -19,7 +19,7 @@ n.d(
     {
         A: function (e) {
             let { splash: t, children: n } = e,
-                [{ width: d, height: o }, h] = l.useState({ width: 0, height: 0, naturalHeight: 0, naturalWidth: 0 });
+                [{ width: o, height: d }, h] = l.useState({ width: 0, height: 0, naturalHeight: 0, naturalWidth: 0 });
             return (
                 l.useEffect(() => {
                     function e() {
@@ -32,8 +32,8 @@ n.d(
                 }, []),
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.A, {
-                            className: r.T,
+                        (0, i.jsx)(r.A, {
+                            className: s.T,
                             onLoad: function (e) {
                                 let { currentTarget: t } = e,
                                     { naturalWidth: n, naturalHeight: i } = t,
@@ -41,10 +41,10 @@ n.d(
                                 null != l && h(l);
                             },
                             src: t,
-                            width: d,
-                            height: o,
+                            width: o,
+                            height: d,
                         }),
-                        (0, i.jsx)("div", { className: r.Q, children: n }),
+                        (0, i.jsx)("div", { className: s.Q, children: n }),
                     ],
                 })
             );

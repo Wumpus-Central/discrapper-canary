@@ -1,8 +1,8 @@
-var i = n(855986),
-    l = n(73153);
+var l = n(855986),
+    i = n(73153);
 let s = {},
     r = {};
-class a extends i.Ay.Store {
+class a extends l.Ay.Store {
     static displayName = "GuildRoleMemberCountStore";
     getRoleMemberCount(e) {
         return null != e ? s[e] : null;
@@ -13,35 +13,35 @@ class a extends i.Ay.Store {
         return null == t || Date.now() - t > 12e4;
     }
 }
-let o = new a(l.h, {
+let o = new a(i.h, {
     GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function (e) {
         let { guildId: t, roleMemberCount: n } = e;
         ((s[t] = n), (r[t] = Date.now()));
     },
     GUILD_ROLE_MEMBER_COUNT_UPDATE: function (e) {
-        let { guildId: t, roleId: n, count: i } = e,
-            l = s[t];
-        if (null == l) return !1;
-        l[n] = i;
+        let { guildId: t, roleId: n, count: l } = e,
+            i = s[t];
+        if (null == i) return !1;
+        i[n] = l;
     },
     GUILD_ROLE_MEMBER_BULK_ADD: function (e) {
-        let { guildId: t, roleId: n, added: i } = e,
-            l = s[t];
-        if (null == l || null == l[n]) return !1;
-        let r = Object.keys(i).length;
-        l[n] += r;
+        let { guildId: t, roleId: n, added: l } = e,
+            i = s[t];
+        if (null == i || null == i[n]) return !1;
+        let r = Object.keys(l).length;
+        i[n] += r;
     },
     GUILD_ROLE_MEMBER_ADD: function (e) {
         let { guildId: t, roleId: n } = e,
-            i = s[t];
-        if (null == i || null == i[n]) return !1;
-        i[n] = i[n] + 1;
+            l = s[t];
+        if (null == l || null == l[n]) return !1;
+        l[n] = l[n] + 1;
     },
     GUILD_ROLE_MEMBER_REMOVE: function (e) {
         let { guildId: t, roleId: n } = e,
-            i = s[t];
-        if (null == i || null == i[n]) return !1;
-        i[n] = Math.max(i[n] - 1, 0);
+            l = s[t];
+        if (null == l || null == l[n]) return !1;
+        l[n] = Math.max(l[n] - 1, 0);
     },
     GUILD_ROLE_CREATE: function (e) {
         let { guildId: t, role: n } = e;

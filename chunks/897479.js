@@ -1,7 +1,7 @@
 var i = n(477900),
     l = n(582128),
-    s = n(806163),
-    r = n(628274),
+    r = n(806163),
+    s = n(628274),
     a = n(334465);
 n.d(
     t,
@@ -9,21 +9,21 @@ n.d(
     {
         A: function (e) {
             let { children: t, ...n } = e,
-                d = (0, s.zy)(),
-                o = (0, s.W6)(),
+                o = (0, r.zy)(),
+                d = (0, r.W6)(),
                 h = null,
                 u = null;
             return (
                 l.Children.forEach(t, (e) => {
                     if (null == h && l.isValidElement(e)) {
                         let { component: t, render: n, ...i } = e.props,
-                            s = null != i.path && "" !== i.path ? i.path : i.from;
-                        if (null == (h = null != s ? (0, a.B)(d.pathname, { ...i, path: s }) : null)) return;
-                        let r = { ...i, key: s, location: d, match: h, history: o };
-                        null != t ? (u = l.createElement(t, r)) : null != n && (u = n(r));
+                            r = null != i.path && "" !== i.path ? i.path : i.from;
+                        if (null == (h = null != r ? (0, a.B)(o.pathname, { ...i, path: r }) : null)) return;
+                        let s = { ...i, key: r, location: o, match: h, history: d };
+                        null != t ? (u = l.createElement(t, s)) : null != n && (u = n(s));
                     }
                 }),
-                (0, i.jsx)(r.F, { ...n, children: u })
+                (0, i.jsx)(s.F, { ...n, children: u })
             );
         },
     },

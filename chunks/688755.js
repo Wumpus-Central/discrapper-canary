@@ -1,8 +1,8 @@
 var s = n(582128),
     i = n(18437),
     l = n(590202),
-    r = n(792620),
-    a = n(321538),
+    a = n(792620),
+    r = n(321538),
     o = n(652215);
 n.d(
     t,
@@ -11,7 +11,7 @@ n.d(
         B: function (e) {
             let { quest: t, questContent: n, contentPosition: c, rowIndex: u, sourceQuestContent: d } = e,
                 x = (0, i.u0)(),
-                m = s.useMemo(() => (0, r.vv)(t), [t]),
+                m = s.useMemo(() => (0, a.vv)(t), [t]),
                 C = s.useCallback(() => {
                     (x({
                         questId: t.id,
@@ -19,7 +19,7 @@ n.d(
                         properties: { content_id: n, content_name: (0, l.jO)(n), content_position: c, row_index: u },
                         sourceQuestContent: d,
                     }),
-                        m && (0, a.l9)());
+                        m && (0, r.l9)());
                 }, [x, t.id, n, m, d, c, u]);
             return {
                 handleHoverStart: C,

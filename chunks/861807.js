@@ -1,7 +1,7 @@
-var i = n(855986),
-    l = n(73153);
+var l = n(855986),
+    i = n(73153);
 let s = !1;
-class r extends i.Ay.PersistedStore {
+class r extends l.Ay.PersistedStore {
     static displayName = "ParentalConsentStore";
     static persistKey = "ParentalConsentStore";
     initialize(e) {
@@ -14,7 +14,7 @@ class r extends i.Ay.PersistedStore {
         return { shouldShowGuardianConnect: s };
     }
 }
-let a = new r(l.h, {
+let a = new r(i.h, {
         GUARDIAN_CONNECT_REQUIRED: function (e) {
             let { shouldShowGuardianConnect: t } = e;
             ((s = !0 === t), a.persist());

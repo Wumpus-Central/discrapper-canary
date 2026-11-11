@@ -1,29 +1,29 @@
-var i = n(400253),
-    l = n(869733),
+var l = n(400253),
+    i = n(869733),
     s = n(80703),
     r = n(197111),
     a = n(129230),
     o = n(877062),
-    c = n(292572),
-    d = n(652215);
-let u = "template",
+    u = n(292572),
+    c = n(652215);
+let d = "template",
     h = {
-        ...c.A,
+        ...u.A,
         openNativeAppModal(e) {
-            r.A.openNativeAppModal(e, d.e$_.GUILD_TEMPLATE_BROWSER);
+            r.A.openNativeAppModal(e, c.e$_.GUILD_TEMPLATE_BROWSER);
         },
         openMobileApp(e, t) {
             if (null != platform.ua && platform.ua.toLowerCase().indexOf("googlebot") > -1) return;
-            let n = null != e ? (0, i.FH)(e) : (0, i.BH)(),
-                r = (0, l.I_)(),
-                c = (0, l.Ay)(n, { utmSource: u, fingerprint: t, attemptId: r });
-            (a.default.track(d.HAw.DEEP_LINK_CLICKED, {
+            let n = null != e ? (0, l.FH)(e) : (0, l.BH)(),
+                r = (0, i.I_)(),
+                u = (0, i.Ay)(n, { utmSource: d, fingerprint: t, attemptId: r });
+            (a.default.track(c.HAw.DEEP_LINK_CLICKED, {
                 fingerprint: (0, s.v)(t),
                 attempt_id: r,
-                source: u,
+                source: d,
                 guild_template_code: e,
             }),
-                o.A.launch(c, () => {}));
+                o.A.launch(u, () => {}));
         },
     };
 n.d(t, {}, { A: h });
