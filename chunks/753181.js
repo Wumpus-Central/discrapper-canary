@@ -861,6 +861,9 @@ class ea extends o.Ay.Store {
             i = n?.getSecureFramesRosterMap();
         return i?.get(t);
     }
+    getStreamPid(e) {
+        return Q[e];
+    }
 }
 let es = new ea(
     c.h,

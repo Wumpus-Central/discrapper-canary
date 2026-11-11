@@ -13,5 +13,6 @@ var i,
         (i.SecureFramesUpdate = "secure-frames-update"),
         (i.RosterMapUpdate = "roster-map-update"),
         (i.UsersMerged = "users-merged"),
+        (i.WebTransportAck = "web-transport-ack"),
         i);
 n.d(t, {}, { q: r });

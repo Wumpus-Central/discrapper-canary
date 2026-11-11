@@ -8,7 +8,8 @@ var i = n(386406),
     c = n(253400),
     u = n(9302),
     _ = n(652215);
-async function E() {
+let E = null;
+async function A() {
     if (!(0, d.uF)()) return Promise.reject(Error("Hook is only available on Windows"));
     if ((0, u.Zi)()) return Promise.reject(Error("Hook module is too old"));
     await c.Ay.ensureModule("discord_hook");
@@ -28,7 +29,7 @@ n.d(
     {},
     {
         GH: function (e, t) {
-            return E().then((n) => {
+            return A().then((n) => {
                 let l = a.Ay.getGameForPID(e),
                     d = l?.name,
                     c = null != l ? s.A.findGame(l) : null,
@@ -57,8 +58,19 @@ n.d(
                 });
             });
         },
+        Vz: async function (e, t, n) {
+            try {
+                let i = await (async function () {
+                    return null != E ? E : (E = await A());
+                })();
+                if (null != i.connect) return i.connect(e, t, n);
+                return null;
+            } catch {
+                return null;
+            }
+        },
         c1: function (e) {
-            return E().then((t) => {
+            return A().then((t) => {
                 t.cancelAttachToProcess(e);
             });
         },

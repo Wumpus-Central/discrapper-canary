@@ -1,4 +1,4 @@
-(n.d(t, { A: () => tJ }), n(321073));
+(n.d(t, { C: () => tX, A: () => tZ }), n(321073));
 var i,
     r,
     a,
@@ -490,7 +490,7 @@ class eF {
         return (t.push(n()), t);
     }
 }
-(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(938796));
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(938796), n(508300));
 var eB = n(284009),
     eV = n.n(eB);
 let eH = (0, F.mj)({
@@ -611,6 +611,7 @@ var eZ =
     (l.MLSWelcome = "mls-welcome"),
     (l.ReceiveMessage = "receive-message"),
     (l.SendMessage = "send-message"),
+    (l.WebTransportAck = "web-transport-ack"),
     l);
 class e0 extends S.A {
     url;
@@ -828,6 +829,19 @@ class e0 extends S.A {
                         this.emit("mls-welcome", e.transitionId, e.message);
                         break;
                     }
+                    case 35:
+                        if (null != a.certificates && null != a.token) {
+                            let e = [];
+                            for (let t of a.certificates)
+                                null != t.algorithm &&
+                                    null != t.hash &&
+                                    e.push({
+                                        algorithm: t.algorithm,
+                                        value: Uint8Array.from(atob(t.hash), (e) => e.charCodeAt(0)),
+                                    });
+                            this.emit("web-transport-ack", a.token, e);
+                        }
+                        break;
                     default:
                         this.logger.info(`Unhandled op ${i}`);
                 }
@@ -1144,6 +1158,9 @@ class e0 extends S.A {
     }
     setHeartbeatIntervalModifier(e) {
         this.heartbeatIntervalModifier = e;
+    }
+    startWebTransport() {
+        this.send(34, {});
     }
 }
 var e1 = n(4511),
@@ -3091,18 +3108,21 @@ let tY = /^https/.test("https:") ? "wss:" : "ws:",
 function t$() {
     return new T.A(1e3, 1e4);
 }
-function tX(e, t) {
+function tX(e) {
+    return e;
+}
+function tz(e, t) {
     return null != e && e.address === t.address && e.port === t.port;
 }
-let tz = 0,
-    tq = [];
-function tQ() {
+let tq = 0,
+    tQ = [];
+function tJ() {
     let e = [],
         t = (0, C.tB)();
-    for (let n of tq) e.push({ ...n, t: t - n.t });
+    for (let n of tQ) e.push({ ...n, t: t - n.t });
     return JSON.stringify(e);
 }
-class tJ extends S.A {
+class tZ extends S.A {
     context;
     userId;
     sessionId;
@@ -3121,6 +3141,7 @@ class tJ extends S.A {
     channelIds;
     _endpoint;
     port;
+    address;
     token;
     protocol;
     voiceVersion;
@@ -3235,7 +3256,7 @@ class tJ extends S.A {
             (this.streamChannelId = s),
             (this.parentMediaSessionId = l),
             (this.joinVoiceId = o),
-            (this._connectionSerial = tz++),
+            (this._connectionSerial = tq++),
             (this.logger = new b.A(`RTCConnection(${this.trueServerId}, ${this.context})`)),
             this.logger.enableNativeLogger(!0),
             (this._endpoint = null),
@@ -3352,7 +3373,7 @@ class tJ extends S.A {
             }));
     }
     recordEvent(e) {
-        for (tq.push({ ...e, t: (0, C.tB)(), n: this._connectionSerial }); tq.length > 50;) tq.shift();
+        for (tQ.push({ ...e, t: (0, C.tB)(), n: this._connectionSerial }); tQ.length > 50;) tQ.shift();
     }
     get quality() {
         let e = this.getLastPing();
@@ -3432,6 +3453,7 @@ class tJ extends S.A {
             r.on(eZ.MLSProposals, this._handleMLSProposals.bind(this, r)),
             r.on(eZ.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
             r.on(eZ.MLSWelcome, this._handleMLSWelcome.bind(this)),
+            r.on(eZ.WebTransportAck, this._handlWebTransportAck.bind(this)),
             r.on(eZ.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
             r.on(eZ.SendMessage, this._recordMessageEvent.bind(this, 5)),
             (this._connectStartTime = (0, C.tB)()),
@@ -4378,7 +4400,7 @@ class tJ extends S.A {
                             null == this._sfuEndpoint
                                 ? (this.logger.info("Clearing SFU endpoint before SELECT_PROTOCOL."),
                                   u.setUdpEndpoint(null))
-                                : tX(e, this._sfuEndpoint) ||
+                                : tz(e, this._sfuEndpoint) ||
                                   (this.logger.info(
                                       `Retargeting SFU endpoint to ${this._sfuEndpoint.address}:${this._sfuEndpoint.port}`,
                                   ),
@@ -4544,7 +4566,7 @@ class tJ extends S.A {
             return;
         }
         let i = { address: n.ip, port: n.port, modes: n.modes, uniqueId: n.unique_id ?? void 0 };
-        if (tX(this._sfuEndpoint, i) && null != this._connection) {
+        if (tz(this._sfuEndpoint, i) && null != this._connection) {
             ((this._sfuEndpoint = i), (this.port = i.port));
             return;
         }
@@ -5072,7 +5094,7 @@ class tJ extends S.A {
                     transition_id: n,
                     protocol_version: t,
                     channel_resolved: null != l,
-                    event_history: tQ(),
+                    event_history: tJ(),
                     connection_serial: this._connectionSerial,
                 }),
                 this._socket?.disconnectForRefusedDaveDowngrade(e),
@@ -5238,7 +5260,7 @@ class tJ extends S.A {
                 countDuringReset: +(null != this._mlsSessionResetStartTime),
                 firstOccurrence: n,
                 timeSinceInit: null != this._mlsInitReceivedTime ? n - this._mlsInitReceivedTime : void 0,
-                eventLog: tQ(),
+                eventLog: tJ(),
             }),
             e.includes("GetPersistedKeyPair")
                 ? R.A.show({ title: tW.intl.string(tW.t.fJUioH), body: tW.intl.string(tW.t.CQLWvo) })
@@ -5288,6 +5310,9 @@ class tJ extends S.A {
             });
     }
     _alertMLSFailureDebouced = A()(this._alertMLSFailure, 100);
+    _handlWebTransportAck(e, t) {
+        this.emit(ex.q.WebTransportAck, e, t);
+    }
     _handleNetworkOnline = () => {
         this.expeditedHeartbeat(5e3, "network detected online.");
     };
@@ -5404,4 +5429,12 @@ class tJ extends S.A {
     windowVisibilityChanged = (e) => {
         this._videoQuality?.setWindowOcclusionState(!e);
     };
+    startWebTransport() {
+        null != this._socket && this._socket.startWebTransport();
+    }
+    getVoiceAddress() {
+        return null == this._connection || null == this._sfuEndpoint || null == this.port
+            ? null
+            : { address: this._sfuEndpoint.address, port: this.port };
+    }
 }

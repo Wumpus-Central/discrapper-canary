@@ -6091,6 +6091,7 @@ var rn = (((tc = {}).ALWAYS = "ALWAYS"), (tc.ON_CLICK = "ON_CLICK"), (tc.IF_MODE
         (((tO = {})[(tO.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
         (tO[(tO.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
         (tO[(tO.ALLOW_ANY_VIEWER_CLIPS = 4)] = "ALLOW_ANY_VIEWER_CLIPS"),
+        (tO[(tO.PASS_THE_CONTROLLER_HOST = 8)] = "PASS_THE_CONTROLLER_HOST"),
         tO),
     rp = (((tR = {}).LOADING = "LOADING"), (tR.ERROR = "ERROR"), (tR.READY = "READY"), tR);
 let rm = Object.freeze({

@@ -704,7 +704,7 @@ if (null == e7 || "0.0.0" !== e7.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671243, Version Hash: c0fdec033a0f0ca5fb5c88aead2cb00447189d49`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671247, Version Hash: 3c65b5b19e77462b469ff04c474cda455f798e8b`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -776,7 +776,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671243";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671247";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
         let s = ej?.processUtils?.getLastCrash;
@@ -15855,7 +15855,7 @@ let I2 = "isHideDevBanner",
                     className: tc()(I1.Wz, I1.mr),
                     children: [
                         (0, P.jsx)(I0, { className: I1.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671243" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671247" }),
                         (0, P.jsx)(r, {}),
                     ],
                 })
@@ -43427,6 +43427,7 @@ class Um extends eE.Ay.PersistedStore {
     n(91868),
     n(406595),
     n(695515),
+    n(641070),
     n(148864),
     n(906573),
     n(911411),
