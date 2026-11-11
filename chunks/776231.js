@@ -63,8 +63,9 @@ n.d(
                 } = e;
                 if (t.startsWith("data:image") || u.A.isDiscordCdnUrl(t)) return t;
                 let [m, T] = (function (e) {
-                    let [t, n] = e.split("?");
-                    return [t, l.qg(n)];
+                    let [t, n] = e.split("?"),
+                        i = l.qg(n);
+                    return (delete i[""], [t, i]);
                 })(t);
                 (null != c && (T.format = c),
                     null != A && (T.quality = A),

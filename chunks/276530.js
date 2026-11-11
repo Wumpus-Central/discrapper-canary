@@ -914,13 +914,13 @@ var ew = n(46653),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "670977",
-        s = "23df31664bb2818978e4e0e6e21f7c871a1d836f".substring(0, 7),
+        n = "670978",
+        s = "bc6bdddd5f629a79d957a57425b792fcf2d1ced9".substring(0, 7),
         r = eW.A?.app.getVersion(),
         l = eW.A?.app.getBuildNumber(),
         c = eW.A?.app.getAppArch(),
         o = eV.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eQ.A)("1794354677826", !1) : null,
+        u = null != o ? (0, eQ.A)("1794354705342", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = eX()?.os?.toString();
@@ -1028,7 +1028,7 @@ function e1(e) {
         }),
     });
 }
-function e2() {
+function e5() {
     let e = s.useRef(null);
     return (0, i.jsxs)("div", {
         children: [
@@ -1085,11 +1085,11 @@ function e2() {
         ],
     });
 }
-var e5 = n(402651),
-    e8 = n(669067),
-    e3 = n(830543),
+var e2 = n(402651),
+    e9 = n(669067),
+    e8 = n(830543),
     e4 = n(953056);
-let e9 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
+let e3 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
     e7 = new Map([[eL.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e6(e) {
     let { target: t, ...n } = e,
@@ -1100,12 +1100,12 @@ function e6(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eD.default.getCurrentUser() && (g(!0), (0, e3.default)());
+            null == eD.default.getCurrentUser() && (g(!0), (0, e8.default)());
         }
         return (
             ew.default.addChangeListener(e),
             () => {
-                (ew.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
+                (ew.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
@@ -1115,17 +1115,17 @@ function e6(e) {
               partialRoot: eO.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e2,
+              sidebarFooter: e5,
               onViewChange: function (e) {
-                  e9.has(e) || (0, e8._)(e);
+                  e3.has(e) || (0, e9._)(e);
                   let t = e7.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e5.A.getField("source") },
+                          properties: { source: e2.A.getField("source") },
                       }),
-                      e5.A.setState({ source: void 0 }));
+                      e2.A.setState({ source: void 0 }));
               },
               target: t,
               defaultTarget: eL.X.ACCOUNT_PANEL,
