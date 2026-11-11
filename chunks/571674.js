@@ -2,7 +2,7 @@ n.r(t);
 let { createLoader: h } = n(95498),
     d = h(
         {
-            bg: () => n.e(94366).then(n.t.bind(n, 272429, 19)),
+            bg: () => n.e(94366).then(n.t.bind(n, 494810, 19)),
             cs: () => n.e(788933).then(n.t.bind(n, 529380, 19)),
             da: () => n.e(773566).then(n.t.bind(n, 4813, 19)),
             de: () => n.e(110602).then(n.t.bind(n, 609745, 19)),

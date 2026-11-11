@@ -9,7 +9,7 @@ var r = n(477900),
     u = n(889558);
 n(321073);
 var o = n(376347),
-    d = n(920184),
+    d = n(905032),
     p = n(486889),
     g = n(694403),
     m = n(417964);
@@ -61,14 +61,15 @@ function _(e) {
         return null == r ? j(e) : { type: "link", href: r.target, title: r.displayTarget, children: [r.displayTarget] };
     let l = (0, m.Fd)(e.text).trim(),
         a = (0, m.Fd)(t.title ?? "").trim();
-    if (null == r || (n.length > 0 && "" === l) || y(l) || y(a) || (0, p.F9)(l) || (0, p.F9)(a)) return j(e);
+    if (null == r || !0 === e.hasMath || (n.length > 0 && "" === l) || y(l) || y(a) || (0, p.F9)(l) || (0, p.F9)(a))
+        return j(e);
     let i = "" !== a ? a : "" !== l ? l : r.displayTarget;
     return { type: "link", href: r.target, title: i, children: n.length > 0 ? n : [r.displayTarget] };
 }
 function N(e) {
     let t = e.pop(),
         n = e[e.length - 1];
-    if (((n.text += t.text), t.hidden)) n.children.push(...t.children);
+    if (((n.text += t.text), !0 === t.hasMath && (n.hasMath = !0), t.hidden)) n.children.push(...t.children);
     else
         n.children.push(
             "a" === t.tag
@@ -85,8 +86,8 @@ function N(e) {
                   : b(t.children),
         );
 }
-var v = n(60604);
-function w(e, t, n) {
+var M = n(13746);
+function v(e, t, n) {
     if (e.length > 2048 || n.expressions <= 0 || e.length > n.characters) return null;
     (n.expressions--, (n.characters -= e.length));
     let r = 0;
@@ -95,7 +96,7 @@ function w(e, t, n) {
         "}" === t && (r = Math.max(0, r - 1));
     }
     try {
-        let n = v.Ay.renderToString(e, {
+        let n = M.Ay.renderToString(e, {
             displayMode: t,
             throwOnError: !1,
             trust: !1,
@@ -109,24 +110,24 @@ function w(e, t, n) {
         return null;
     }
 }
-var S = n(540168),
-    M = n(176002),
+var w = n(540168),
+    S = n(176002),
     T = n(165648);
 function E(e) {
     let { content: t, html: n } = e;
     return null == n
         ? (0, r.jsx)("code", { className: "inline", children: t })
-        : (0, r.jsx)("span", { className: M.Dy, dangerouslySetInnerHTML: { __html: n } });
+        : (0, r.jsx)("span", { className: S.Dy, dangerouslySetInnerHTML: { __html: n } });
 }
 function A(e) {
     let { content: t, html: n } = e;
     return null == n
-        ? (0, r.jsx)(S.d, { language: "latex", text: t })
+        ? (0, r.jsx)(w.d, { language: "latex", text: t })
         : (0, r.jsx)(s.Ip, {
-              className: i()(M.Dy, M.$S),
+              className: i()(S.Dy, S.$S),
               orientation: "auto",
               tabIndex: 0,
-              children: (0, r.jsx)("span", { className: M.uM, dangerouslySetInnerHTML: { __html: n } }),
+              children: (0, r.jsx)("span", { className: S.uM, dangerouslySetInnerHTML: { __html: n } }),
           });
 }
 function C(e) {
@@ -142,13 +143,13 @@ function C(e) {
                                     return (function (t, n, a) {
                                         let { tag: s, attrs: c } = t,
                                             h = e(t.children, a),
-                                            u = i()(M.p_, { [M.J2]: !0 === t.loose });
+                                            u = i()(S.p_, { [S.J2]: !0 === t.loose });
                                         switch (s) {
                                             case "blockquote":
                                                 return (0, r.jsxs)(
                                                     "div",
                                                     {
-                                                        className: i()(T.h, M.aV),
+                                                        className: i()(T.h, S.aV),
                                                         children: [
                                                             (0, r.jsx)("div", { className: T.r }),
                                                             (0, r.jsx)("blockquote", { children: h }),
@@ -201,11 +202,11 @@ function C(e) {
                                 case "inlineCode":
                                     return (0, r.jsx)("code", { className: "inline", children: t.content }, n);
                                 case "inlineMath":
-                                    return (0, r.jsx)(E, { content: t.content, html: w(t.content, t.display, a) }, n);
+                                    return (0, r.jsx)(E, { content: t.content, html: v(t.content, t.display, a) }, n);
                                 case "mathBlock":
-                                    return (0, r.jsx)(A, { content: t.content, html: w(t.content, !0, a) }, n);
+                                    return (0, r.jsx)(A, { content: t.content, html: v(t.content, !0, a) }, n);
                                 case "codeBlock":
-                                    return (0, r.jsx)(S.d, { language: t.language, text: t.content }, n);
+                                    return (0, r.jsx)(w.d, { language: t.language, text: t.content }, n);
                                 case "br":
                                     return (0, r.jsx)("br", {}, n);
                                 case "hr":
@@ -273,7 +274,8 @@ function C(e) {
                                         content: a.content,
                                         display: "math_inline_double" === a.type,
                                     }),
-                                        (i.text += a.content));
+                                        (i.text += a.content),
+                                        (i.hasMath = !0));
                                     break;
                                 case "fence":
                                 case "code_block":
@@ -331,9 +333,9 @@ function C(e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: i()(T.PT, M.l_), children: a }),
+            (0, r.jsx)("div", { className: i()(T.PT, S.l_), children: a }),
             "" !== n
-                ? (0, r.jsx)(c.E, { variant: "body-sm/normal", color: "text-subtle", className: M.VX, children: n })
+                ? (0, r.jsx)(c.E, { variant: "body-sm/normal", color: "text-subtle", className: S.VX, children: n })
                 : null,
         ],
     });

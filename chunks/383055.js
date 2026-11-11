@@ -180,7 +180,7 @@ let eu = "utf-8";
 var ed = n(540168),
     em = n(810917);
 let eh = (0, es.Fe)({
-    createPromise: () => Promise.all([n.e(417498), n.e(759743), n.e(411779), n.e(636550)]).then(n.bind(n, 60711)),
+    createPromise: () => Promise.all([n.e(645304), n.e(759743), n.e(934647), n.e(636550)]).then(n.bind(n, 60711)),
     webpackId: 60711,
     name: "PlaintextFileMarkdownPreview",
     renderLoader: () => (0, s.jsx)(g.y, { className: em.u1 }),

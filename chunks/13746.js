@@ -1,13 +1,13 @@
-class n extends Error {
+class a extends Error {
     constructor(e, t) {
         var r = "KaTeX parse error: " + e,
-            a = t && t.loc;
-        if (a && a.start <= a.end) {
+            n = t && t.loc;
+        if (n && n.start <= n.end) {
             var i,
                 s,
-                l = a.lexer.input;
-            ((i = a.start),
-                (s = a.end),
+                l = n.lexer.input;
+            ((i = n.start),
+                (s = n.end),
                 i === l.length ? (r += " at end of input: ") : (r += " at position " + (i + 1) + ": "));
             var o = l.slice(i, s).replace(/[^]/g, "$&\u0332");
             r +=
@@ -17,28 +17,32 @@ class n extends Error {
         }
         (super(r),
             (this.name = "ParseError"),
-            Object.setPrototypeOf(this, n.prototype),
+            (this.position = void 0),
+            (this.length = void 0),
+            (this.rawMessage = void 0),
+            Object.setPrototypeOf(this, a.prototype),
             (this.position = i),
             null != i && null != s && (this.length = s - i),
             (this.rawMessage = e));
     }
 }
-var a,
+var n,
     i,
-    s = /([A-Z])/g,
-    l = (e) => e.replace(s, "-$1").toLowerCase(),
-    o = { "&": "&amp;", ">": "&gt;", "<": "&lt;", '"': "&quot;", "'": "&#x27;" },
-    h = /[&><"']/g,
-    u = (e) => String(e).replace(h, (e) => o[e]),
-    c = (e) => {
+    s,
+    l = /([A-Z])/g,
+    o = (e) => e.replace(l, "-$1").toLowerCase(),
+    h = { "&": "&amp;", ">": "&gt;", "<": "&lt;", '"': "&quot;", "'": "&#x27;" },
+    u = /[&><"']/g,
+    c = (e) => String(e).replace(u, (e) => h[e]),
+    m = (e) => {
         if ("ordgroup" === e.type || "color" === e.type)
-            if (1 === e.body.length) return c(e.body[0]);
+            if (1 === e.body.length) return m(e.body[0]);
             else return e;
-        return "font" === e.type ? c(e.body) : e;
+        return "font" === e.type ? m(e.body) : e;
     },
-    m = new Set(["mathord", "textord", "atom"]),
-    p = (e) => m.has(c(e).type),
-    d = {
+    p = new Set(["mathord", "textord", "atom"]),
+    d = (e) => p.has(m(e).type),
+    f = {
         displayMode: {
             type: "boolean",
             description:
@@ -121,141 +125,124 @@ var a,
         },
         globalGroup: { type: "boolean", cli: !1 },
     };
-class f {
+class g {
     constructor(e) {
-        for (var t of (void 0 === e && (e = {}), (e = e || {}), Object.keys(d))) {
-            var r = d[t],
-                n = e[t];
-            this[t] =
-                void 0 !== n
-                    ? r.processor
-                        ? r.processor(n)
-                        : n
-                    : (function (e) {
-                          if ("default" in e) return e.default;
-                          var t = e.type,
-                              r = Array.isArray(t) ? t[0] : t;
-                          if ("string" != typeof r) return r.enum[0];
-                          switch (r) {
-                              case "boolean":
-                                  return !1;
-                              case "string":
-                                  return "";
-                              case "number":
-                                  return 0;
-                              case "object":
-                                  return {};
-                          }
-                      })(r);
+        for (var t of (void 0 === e && (e = {}),
+        (this.displayMode = void 0),
+        (this.output = void 0),
+        (this.leqno = void 0),
+        (this.fleqn = void 0),
+        (this.throwOnError = void 0),
+        (this.errorColor = void 0),
+        (this.macros = void 0),
+        (this.minRuleThickness = void 0),
+        (this.colorIsTextColor = void 0),
+        (this.strict = void 0),
+        (this.trust = void 0),
+        (this.maxSize = void 0),
+        (this.maxExpand = void 0),
+        (this.globalGroup = void 0),
+        (e = e || {}),
+        Object.keys(f))) {
+            var r = f[t];
+            r &&
+                (function (e, t, r, a) {
+                    var n = Object.prototype.hasOwnProperty.call(r, t) ? r[t] : void 0,
+                        i = Object.prototype.hasOwnProperty.call(a, "processor") ? a.processor : void 0;
+                    e[t] =
+                        void 0 !== n
+                            ? i
+                                ? i(n)
+                                : n
+                            : (function (e) {
+                                  if (Object.prototype.hasOwnProperty.call(e, "default") && void 0 !== e.default)
+                                      return e.default;
+                                  var t = Array.isArray(e.type) ? e.type[0] : e.type;
+                                  if ("string" != typeof t) return t.enum[0];
+                                  switch (t) {
+                                      case "boolean":
+                                          return !1;
+                                      case "string":
+                                          return "";
+                                      case "number":
+                                          return 0;
+                                      case "object":
+                                          return {};
+                                      default:
+                                          throw Error(
+                                              "Unexpected schema type; settings must declare an explicit default.",
+                                          );
+                                  }
+                              })(a);
+                })(this, t, e, r);
         }
-    }
-    reportNonstrict(e, t, r) {
-        var a = this.strict;
-        if (("function" == typeof a && (a = a(e, t, r)), a && "ignore" !== a)) {
-            if (!0 === a || "error" === a)
-                throw new n("LaTeX-incompatible input and strict mode is set to 'error': " + (t + " [") + e + "]", r);
-            "warn" === a
-                ? "u" > typeof console &&
-                  console.warn("LaTeX-incompatible input and strict mode is set to 'warn': " + (t + " [") + e + "]")
-                : "u" > typeof console &&
-                  console.warn(
-                      "LaTeX-incompatible input and strict mode is set to " +
-                          ("unrecognized '" + a + "': " + t + " [") +
-                          e +
-                          "]",
-                  );
-        }
-    }
-    useStrictBehavior(e, t, r) {
-        var n = this.strict;
-        if ("function" == typeof n)
-            try {
-                n = n(e, t, r);
-            } catch (e) {
-                n = "error";
-            }
-        return (
-            !!n &&
-            "ignore" !== n &&
-            (!0 === n ||
-                "error" === n ||
-                ("warn" === n
-                    ? ("u" > typeof console &&
-                          console.warn(
-                              "LaTeX-incompatible input and strict mode is set to 'warn': " + (t + " [") + e + "]",
-                          ),
-                      !1)
-                    : ("u" > typeof console &&
-                          console.warn(
-                              "LaTeX-incompatible input and strict mode is set to " +
-                                  ("unrecognized '" + n + "': " + t + " [") +
-                                  e +
-                                  "]",
-                          ),
-                      !1)))
-        );
     }
     isTrusted(e) {
         if ("url" in e && e.url && !e.protocol) {
             var t,
                 r,
-                n =
+                a =
                     ((t = e.url),
                     (r = /^[\x00-\x20]*([^\\/#?]*?)(:|&#0*58|&#x0*3a|&colon)/i.exec(t))
                         ? ":" === r[2] && /^[a-zA-Z][a-zA-Z0-9+\-.]*$/.test(r[1])
                             ? r[1].toLowerCase()
                             : null
                         : "_relative");
-            if (null == n) return !1;
-            e.protocol = n;
+            if (null == a) return !1;
+            e.protocol = a;
         }
         return !!("function" == typeof this.trust ? this.trust(e) : this.trust);
     }
 }
-class g {
+class b {
     constructor(e, t, r) {
-        ((this.id = e), (this.size = t), (this.cramped = r));
+        ((this.id = void 0),
+            (this.size = void 0),
+            (this.cramped = void 0),
+            (this.id = e),
+            (this.size = t),
+            (this.cramped = r));
     }
     sup() {
-        return b[v[this.id]];
+        return v[x[this.id]];
     }
     sub() {
-        return b[x[this.id]];
+        return v[y[this.id]];
     }
     fracNum() {
-        return b[y[this.id]];
+        return v[w[this.id]];
     }
     fracDen() {
-        return b[w[this.id]];
+        return v[k[this.id]];
     }
     cramp() {
-        return b[k[this.id]];
+        return v[A[this.id]];
     }
     text() {
-        return b[A[this.id]];
+        return v[C[this.id]];
     }
     isTight() {
         return this.size >= 2;
     }
 }
-var b = [
-        new g(0, 0, !1),
-        new g(1, 0, !0),
-        new g(2, 1, !1),
-        new g(3, 1, !0),
-        new g(4, 2, !1),
-        new g(5, 2, !0),
-        new g(6, 3, !1),
-        new g(7, 3, !0),
+var v = [
+        new b(0, 0, !1),
+        new b(1, 0, !0),
+        new b(2, 1, !1),
+        new b(3, 1, !0),
+        new b(4, 2, !1),
+        new b(5, 2, !0),
+        new b(6, 3, !1),
+        new b(7, 3, !0),
     ],
-    v = [4, 5, 4, 5, 6, 7, 6, 7],
-    x = [5, 5, 5, 5, 7, 7, 7, 7],
-    y = [2, 3, 4, 5, 6, 7, 6, 7],
-    w = [3, 3, 5, 5, 7, 7, 7, 7],
-    k = [1, 1, 3, 3, 5, 5, 7, 7],
-    A = [0, 1, 2, 3, 2, 3, 2, 3],
-    R = { DISPLAY: b[0], TEXT: b[2], SCRIPT: b[4], SCRIPTSCRIPT: b[6] },
-    C = [
+    x = [4, 5, 4, 5, 6, 7, 6, 7],
+    y = [5, 5, 5, 5, 7, 7, 7, 7],
+    w = [2, 3, 4, 5, 6, 7, 6, 7],
+    k = [3, 3, 5, 5, 7, 7, 7, 7],
+    A = [1, 1, 3, 3, 5, 5, 7, 7],
+    C = [0, 1, 2, 3, 2, 3, 2, 3],
+    R = { DISPLAY: v[0], TEXT: v[2], SCRIPT: v[4], SCRIPTSCRIPT: v[6] },
+    _ = [
         {
             name: "latin",
             blocks: [
@@ -277,16 +264,16 @@ var b = [
         },
         { name: "hangul", blocks: [[44032, 55215]] },
     ],
-    _ = [];
-function D(e) {
-    for (var t = 0; t < _.length; t += 2) if (e >= _[t] && e <= _[t + 1]) return !0;
+    D = [];
+function z(e) {
+    for (var t = 0; t < D.length; t += 2) if (e >= D[t] && e <= D[t + 1]) return !0;
     return !1;
 }
-C.forEach((e) => e.blocks.forEach((e) => _.push(...e)));
-var z = function (e, t, r) {
+_.forEach((e) => e.blocks.forEach((e) => D.push(...e)));
+var S = function (e, t, r) {
         t *= 1e3;
-        var n,
-            a,
+        var a,
+            n,
             i,
             s,
             l,
@@ -296,33 +283,33 @@ var z = function (e, t, r) {
             case "sqrtMain":
                 h =
                     "M95," +
-                    (622 + (n = t) + 80) +
+                    (622 + (a = t) + 80) +
                     "\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl" +
-                    n / 2.075 +
+                    a / 2.075 +
                     " -" +
-                    n +
+                    a +
                     "\nc5.3,-9.3,12,-14,20,-14\nH400000v" +
-                    (40 + n) +
+                    (40 + a) +
                     "H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM" +
-                    (834 + n) +
+                    (834 + a) +
                     " 80h400000v" +
-                    (40 + n) +
+                    (40 + a) +
                     "h-400000z";
                 break;
             case "sqrtSize1":
                 h =
                     "M263," +
-                    (601 + (a = t) + 80) +
+                    (601 + (n = t) + 80) +
                     "c0.7,0,18,39.7,52,119\nc34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120\nc340,-704.7,510.7,-1060.3,512,-1067\nl" +
-                    a / 2.084 +
+                    n / 2.084 +
                     " -" +
-                    a +
+                    n +
                     "\nc4.7,-7.3,11,-11,19,-11\nH40000v" +
-                    (40 + a) +
+                    (40 + n) +
                     "H1012.3\ns-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232\nc-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1\ns-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26\nc-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z\nM" +
-                    (1001 + a) +
+                    (1001 + n) +
                     " 80h400000v" +
-                    (40 + a) +
+                    (40 + n) +
                     "h-400000z";
                 break;
             case "sqrtSize2":
@@ -387,49 +374,44 @@ var z = function (e, t, r) {
         }
         return h;
     },
-    S = function (e, t) {
+    M = function (e, t) {
         switch (e) {
             case "\u239C":
-                return "M291 0 H417 V" + t + " H291z M291 0 H417 V" + t + " H291z";
+                let r;
+                return (r = "M291 0 H417 V" + t + " H291z") + " " + r;
             case "\u2223":
-                return "M145 0 H188 V" + t + " H145z M145 0 H188 V" + t + " H145z";
+                let a;
+                return (a = "M145 0 H188 V" + t + " H145z") + " " + a;
             case "\u2225":
+                let n, i;
                 return (
-                    "M145 0 H188 V" +
-                    t +
-                    " H145z M145 0 H188 V" +
-                    t +
-                    " H145z" +
-                    ("M367 0 H410 V" + t + " H367z M367 0 H410 V") +
-                    t +
-                    " H367z"
+                    (n = "M145 0 H188 V" + t + " H145z") + " " + n + ((i = "M367 0 H410 V" + t + " H367z") + " ") + i
                 );
             case "\u239F":
-                return "M457 0 H583 V" + t + " H457z M457 0 H583 V" + t + " H457z";
+                let s;
+                return (s = "M457 0 H583 V" + t + " H457z") + " " + s;
             case "\u23A2":
-                return "M319 0 H403 V" + t + " H319z M319 0 H403 V" + t + " H319z";
+                let l;
+                return (l = "M319 0 H403 V" + t + " H319z") + " " + l;
             case "\u23A5":
-                return "M263 0 H347 V" + t + " H263z M263 0 H347 V" + t + " H263z";
+                let o;
+                return (o = "M263 0 H347 V" + t + " H263z") + " " + o;
             case "\u23AA":
-                return "M384 0 H504 V" + t + " H384z M384 0 H504 V" + t + " H384z";
+                let h;
+                return (h = "M384 0 H504 V" + t + " H384z") + " " + h;
             case "\u23D0":
-                return "M312 0 H355 V" + t + " H312z M312 0 H355 V" + t + " H312z";
+                let u;
+                return (u = "M312 0 H355 V" + t + " H312z") + " " + u;
             case "\u2016":
+                let c, m;
                 return (
-                    "M257 0 H300 V" +
-                    t +
-                    " H257z M257 0 H300 V" +
-                    t +
-                    " H257z" +
-                    ("M478 0 H521 V" + t + " H478z M478 0 H521 V") +
-                    t +
-                    " H478z"
+                    (c = "M257 0 H300 V" + t + " H257z") + " " + c + ((m = "M478 0 H521 V" + t + " H478z") + " ") + m
                 );
             default:
                 return "";
         }
     },
-    M = {
+    T = {
         doubleleftarrow:
             "M262 157\nl10-10c34-36 62.7-77 86-123 3.3-8 5-13.3 5-16 0-5.3-6.7-8-20-8-7.3\n 0-12.2.5-14.5 1.5-2.3 1-4.8 4.5-7.5 10.5-49.3 97.3-121.7 169.3-217 216-28\n 14-57.3 25-88 33-6.7 2-11 3.8-13 5.5-2 1.7-3 4.2-3 7.5s1 5.8 3 7.5\nc2 1.7 6.3 3.5 13 5.5 68 17.3 128.2 47.8 180.5 91.5 52.3 43.7 93.8 96.2 124.5\n 157.5 9.3 8 15.3 12.3 18 13h6c12-.7 18-4 18-10 0-2-1.7-7-5-15-23.3-46-52-87\n-86-123l-10-10h399738v-40H218c328 0 0 0 0 0l-10-8c-26.7-20-65.7-43-117-69 2.7\n-2 6-3.7 10-5 36.7-16 72.3-37.3 107-64l10-8h399782v-40z\nm8 0v40h399730v-40zm0 194v40h399730v-40z",
         doublerightarrow:
@@ -454,13 +436,13 @@ var z = function (e, t, r) {
             "M7 435c-4 4-6.3 8.7-7 14 0 5.3.7 9 2 11s5.3 5.3 12\n 10c90.7 54 156 130 196 228 3.3 10.7 6.3 16.3 9 17 2 .7 5 1 9 1h5c10.7 0 16.7\n-2 18-6 2-2.7 1-9.7-3-21-32-87.3-82.7-157.7-152-211l-3-3h399907v-40H7zm93 0\nv40h399900v-40zM0 241v40h399900v-40zm0 0v40h399900v-40z",
         lefthook:
             "M400000 281 H103s-33-11.2-61-33.5S0 197.3 0 164s14.2-61.2 42.5\n-83.5C70.8 58.2 104 47 142 47 c16.7 0 25 6.7 25 20 0 12-8.7 18.7-26 20-40 3.3\n-68.7 15.7-86 37-10 12-15 25.3-15 40 0 22.7 9.8 40.7 29.5 54 19.7 13.3 43.5 21\n 71.5 23h399859zM103 281v-40h399897v40z",
-        leftlinesegment: "M40 281 V428 H0 V94 H40 V241 H400000 v40z\nM40 281 V428 H0 V94 H40 V241 H400000 v40z",
-        leftbracketunder: "M0 0 h120 V290 H399995 v120 H0z\nM0 0 h120 V290 H399995 v120 H0z",
-        leftbracketover: "M0 440 h120 V150 H399995 v-120 H0z\nM0 440 h120 V150 H399995 v-120 H0z",
-        leftmapsto: "M40 281 V448H0V74H40V241H400000v40z\nM40 281 V448H0V74H40V241H400000v40z",
+        leftlinesegment: "M40 281 V428 H0 V94 H40 V241 H400000 v40z M40 281 V428 H0 V94 H40 V241 H400000 v40z",
+        leftbracketunder: "M0 0 h120 V290 H399995 v120 H0z M0 0 h120 V290 H399995 v120 H0z",
+        leftbracketover: "M0 440 h120 V150 H399995 v-120 H0z M0 440 h120 V150 H399995 v-120 H0z",
+        leftmapsto: "M40 281 V448H0V74H40V241H400000v40z M40 281 V448H0V74H40V241H400000v40z",
         leftToFrom:
             "M0 147h400000v40H0zm0 214c68 40 115.7 95.7 143 167h22c15.3 0 23\n-.3 23-1 0-1.3-5.3-13.7-16-37-18-35.3-41.3-69-70-101l-7-8h399905v-40H95l7-8\nc28.7-32 52-65.7 70-101 10.7-23.3 16-35.7 16-37 0-.7-7.7-1-23-1h-22C115.7 265.3\n 68 321 0 361zm0-174v-40h399900v40zm100 154v40h399900v-40z",
-        longequal: "M0 50 h400000 v40H0z m0 194h40000v40H0z\nM0 50 h400000 v40H0z m0 194h40000v40H0z",
+        longequal: "M0 50 h400000 v40H0z m0 194h40000v40H0z M0 50 h400000 v40H0z m0 194h40000v40H0z",
         midbrace:
             "M200428 334\nc-100.7-8.3-195.3-44-280-108-55.3-42-101.7-93-139-153l-9-14c-2.7 4-5.7 8.7-9 14\n-53.3 86.7-123.7 153-211 199-66.7 36-137.3 56.3-212 62H0V214h199568c178.3-11.7\n 311.7-78.3 403-201 6-8 9.7-12 11-12 .7-.7 6.7-1 18-1s17.3.3 18 1c1.3 0 5 4 11\n 12 44.7 59.3 101.3 106.3 170 141s145.3 54.3 229 60h199572v120z",
         midbraceunder:
@@ -493,9 +475,9 @@ var z = function (e, t, r) {
             "M399747 705c0 7.3 6.7 11 20 11 8 0 13-.8\n 15-2.5s4.7-6.8 8-15.5c40-94 99.3-166.3 178-217 13.3-8 20.3-12.3 21-13 5.3-3.3\n 8.5-5.8 9.5-7.5 1-1.7 1.5-5.2 1.5-10.5s-2.3-10.3-7-15H0v40h399908c-34 25.3\n-64.7 57-92 95-27.3 38-48.7 77.7-64 119-3.3 8.7-5 14-5 16zM0 435v40h399900v-40z\nm0-194v40h400000v-40zm0 0v40h400000v-40z",
         righthook:
             "M399859 241c-764 0 0 0 0 0 40-3.3 68.7-15.7 86-37 10-12 15-25.3\n 15-40 0-22.7-9.8-40.7-29.5-54-19.7-13.3-43.5-21-71.5-23-17.3-1.3-26-8-26-20 0\n-13.3 8.7-20 26-20 38 0 71 11.2 99 33.5 0 0 7 5.6 21 16.7 14 11.2 21 33.5 21\n 66.8s-14 61.2-42 83.5c-28 22.3-61 33.5-99 33.5L0 241z M0 281v-40h399859v40z",
-        rightlinesegment: "M399960 241 V94 h40 V428 h-40 V281 H0 v-40z\nM399960 241 V94 h40 V428 h-40 V281 H0 v-40z",
-        rightbracketunder: "M399995 0 h-120 V290 H0 v120 H400000z\nM399995 0 h-120 V290 H0 v120 H400000z",
-        rightbracketover: "M399995 440 h-120 V150 H0 v-120 H399995z\nM399995 440 h-120 V150 H0 v-120 H399995z",
+        rightlinesegment: "M399960 241 V94 h40 V428 h-40 V281 H0 v-40z M399960 241 V94 h40 V428 h-40 V281 H0 v-40z",
+        rightbracketunder: "M399995 0 h-120 V290 H0 v120 H400000z M399995 0 h-120 V290 H0 v120 H400000z",
+        rightbracketover: "M399995 440 h-120 V150 H0 v-120 H399995z M399995 440 h-120 V150 H0 v-120 H399995z",
         rightToFrom:
             "M400000 167c-70.7-42-118-97.7-142-167h-23c-15.3 0-23 .3-23\n 1 0 1.3 5.3 13.7 16 37 18 35.3 41.3 69 70 101l7 8H0v40h399905l-7 8c-28.7 32\n-52 65.7-70 101-10.7 23.3-16 35.7-16 37 0 .7 7.7 1 23 1h23c24-69.3 71.3-125 142\n-167z M100 147v40h399900v-40zM0 341v40h399900v-40z",
         twoheadleftarrow:
@@ -536,15 +518,15 @@ var z = function (e, t, r) {
         shortrightharpoonabovebar:
             "M53,241l0,40c398570,0,399437,0,399437,0\nc4.7,-4.7,7,-9.3,7,-14c0,-9.3,-3.7,-15.3,-11,-18c-92.7,-56.7,-159,-133.7,-199,\n-231c-3.3,-9.3,-6,-14.7,-8,-16c-2,-1.3,-7,-2,-15,-2c-10.7,0,-16.7,2,-18,6\nc-2,2.7,-1,9.7,3,21c15.3,42,36.7,81.8,64,119.5c27.3,37.7,58,69.2,92,94.5z\nM500 241 v40 H399408 v-40z M500 435 v40 H400000 v-40z",
     },
-    T = function (e, t) {
+    E = function (e, t) {
         switch (e) {
             case "lbrack":
                 return (
                     "M403 1759 V84 H666 V0 H319 V1759 v" +
                     t +
-                    " v1759 h347 v-84\nH403z M403 1759 V0 H319 V1759 v" +
+                    " v1759 v84 h347 v-84\nH403z M403 1759 V0 H319 V1759 v" +
                     t +
-                    " v1759 h84z"
+                    " v1759 v84 h84z"
                 );
             case "rbrack":
                 return (
@@ -628,9 +610,15 @@ var z = function (e, t, r) {
                 throw Error("Unknown stretchy delimiter.");
         }
     };
-class E {
+class F {
     constructor(e) {
-        ((this.children = e),
+        ((this.children = void 0),
+            (this.classes = void 0),
+            (this.height = void 0),
+            (this.depth = void 0),
+            (this.maxFontSize = void 0),
+            (this.style = void 0),
+            (this.children = e),
             (this.classes = []),
             (this.height = 0),
             (this.depth = 0),
@@ -650,7 +638,12 @@ class E {
         return e;
     }
     toText() {
-        return this.children.map((e) => e.toText()).join("");
+        return this.children
+            .map((e) => {
+                if ("toText" in e) return e.toText();
+                throw Error("Expected MathDomNode with toText, got " + e.constructor.name);
+            })
+            .join("");
     }
 }
 var B = {
@@ -667,30 +660,38 @@ var B = {
         sp: 1 / 65536,
         px: 1.00375,
     },
-    F = { ex: !0, em: !0, mu: !0 },
-    q = function (e) {
-        return ("string" != typeof e && (e = e.unit), e in B || e in F || "ex" === e);
+    q = { ex: !0, em: !0, mu: !0 },
+    I = function (e) {
+        return ("string" != typeof e && (e = e.unit), e in B || e in q || "ex" === e);
     },
-    I = function (e, t) {
-        var r, a;
+    j = function (e, t) {
+        var r, n;
         if (e.unit in B) r = B[e.unit] / t.fontMetrics().ptPerEm / t.sizeMultiplier;
         else if ("mu" === e.unit) r = t.fontMetrics().cssEmPerMu;
         else {
-            if (((a = t.style.isTight() ? t.havingStyle(t.style.text()) : t), "ex" === e.unit))
-                r = a.fontMetrics().xHeight;
-            else if ("em" === e.unit) r = a.fontMetrics().quad;
-            else throw new n("Invalid unit: '" + e.unit + "'");
-            a !== t && (r *= a.sizeMultiplier / t.sizeMultiplier);
+            if (((n = t.style.isTight() ? t.havingStyle(t.style.text()) : t), "ex" === e.unit))
+                r = n.fontMetrics().xHeight;
+            else if ("em" === e.unit) r = n.fontMetrics().quad;
+            else throw new a("Invalid unit: '" + e.unit + "'");
+            n !== t && (r *= n.sizeMultiplier / t.sizeMultiplier);
         }
         return Math.min(e.number * r, t.maxSize);
     },
-    H = function (e) {
+    L = function (e) {
         return +e.toFixed(4) + "em";
     },
-    L = function (e) {
+    N = function (e) {
         return e.filter((e) => e).join(" ");
     },
-    O = function (e, t, r) {
+    O = function (e) {
+        var t = "";
+        for (var r of Object.keys(e)) {
+            var a = e[r];
+            void 0 !== a && (t += o(r) + ":" + a + ";");
+        }
+        return t;
+    },
+    H = function (e, t, r) {
         if (
             ((this.classes = e || []),
             (this.attributes = {}),
@@ -701,34 +702,45 @@ var B = {
             t)
         ) {
             t.style.isTight() && this.classes.push("mtight");
-            var n = t.getColor();
-            n && (this.style.color = n);
+            var a = t.getColor();
+            a && (this.style.color = a);
         }
     },
-    j = function (e) {
+    J = function (e) {
         var t = document.createElement(e);
-        for (var r of ((t.className = L(this.classes)), Object.keys(this.style))) t.style[r] = this.style[r];
-        for (var n of Object.keys(this.attributes)) t.setAttribute(n, this.attributes[n]);
+        for (var r of ((t.className = N(this.classes)),
+        Object.assign(t.style, this.style),
+        Object.keys(this.attributes)))
+            t.setAttribute(r, this.attributes[r]);
         for (var a = 0; a < this.children.length; a++) t.appendChild(this.children[a].toNode());
         return t;
     },
-    N = /[\s"'>/=\x00-\x1f]/,
-    J = function (e) {
+    P = /[\s"'>/=\x00-\x1f]/,
+    U = function (e) {
         var t = "<" + e;
-        this.classes.length && (t += ' class="' + u(L(this.classes)) + '"');
-        var r = "";
-        for (var a of Object.keys(this.style)) r += l(a) + ":" + this.style[a] + ";";
-        for (var i of (r && (t += ' style="' + u(r) + '"'), Object.keys(this.attributes))) {
-            if (N.test(i)) throw new n("Invalid attribute name '" + i + "'");
-            t += " " + i + '="' + u(this.attributes[i]) + '"';
+        this.classes.length && (t += ' class="' + c(N(this.classes)) + '"');
+        var r = O(this.style);
+        for (var n of (r && (t += ' style="' + c(r) + '"'), Object.keys(this.attributes))) {
+            if (P.test(n)) throw new a("Invalid attribute name '" + n + "'");
+            t += " " + n + '="' + c(this.attributes[n]) + '"';
         }
         t += ">";
-        for (var s = 0; s < this.children.length; s++) t += this.children[s].toMarkup();
+        for (var i = 0; i < this.children.length; i++) t += this.children[i].toMarkup();
         return t + ("</" + e + ">");
     };
-class P {
-    constructor(e, t, r, n) {
-        (O.call(this, e, r, n), (this.children = t || []));
+class $ {
+    constructor(e, t, r, a) {
+        ((this.children = void 0),
+            (this.attributes = void 0),
+            (this.classes = void 0),
+            (this.height = void 0),
+            (this.depth = void 0),
+            (this.width = void 0),
+            (this.maxFontSize = void 0),
+            (this.style = void 0),
+            (this.italic = void 0),
+            H.call(this, e, r, a),
+            (this.children = t || []));
     }
     setAttribute(e, t) {
         this.attributes[e] = t;
@@ -737,15 +749,24 @@ class P {
         return this.classes.includes(e);
     }
     toNode() {
-        return j.call(this, "span");
-    }
-    toMarkup() {
         return J.call(this, "span");
     }
+    toMarkup() {
+        return U.call(this, "span");
+    }
 }
-class U {
-    constructor(e, t, r, n) {
-        (O.call(this, t, n), (this.children = r || []), this.setAttribute("href", e));
+class W {
+    constructor(e, t, r, a) {
+        ((this.children = void 0),
+            (this.attributes = void 0),
+            (this.classes = void 0),
+            (this.height = void 0),
+            (this.depth = void 0),
+            (this.maxFontSize = void 0),
+            (this.style = void 0),
+            H.call(this, t, a),
+            (this.children = r || []),
+            this.setAttribute("href", e));
     }
     setAttribute(e, t) {
         this.attributes[e] = t;
@@ -754,15 +775,22 @@ class U {
         return this.classes.includes(e);
     }
     toNode() {
-        return j.call(this, "a");
-    }
-    toMarkup() {
         return J.call(this, "a");
     }
+    toMarkup() {
+        return U.call(this, "a");
+    }
 }
-class $ {
+class V {
     constructor(e, t, r) {
-        ((this.alt = t),
+        ((this.src = void 0),
+            (this.alt = void 0),
+            (this.classes = void 0),
+            (this.height = void 0),
+            (this.depth = void 0),
+            (this.maxFontSize = void 0),
+            (this.style = void 0),
+            (this.alt = t),
             (this.src = e),
             (this.classes = ["mord"]),
             (this.height = 0),
@@ -775,38 +803,44 @@ class $ {
     }
     toNode() {
         var e = document.createElement("img");
-        for (var t of ((e.src = this.src), (e.alt = this.alt), (e.className = "mord"), Object.keys(this.style)))
-            e.style[t] = this.style[t];
-        return e;
+        return ((e.src = this.src), (e.alt = this.alt), (e.className = "mord"), Object.assign(e.style, this.style), e);
     }
     toMarkup() {
-        var e = '<img src="' + u(this.src) + '" alt="' + u(this.alt) + '"',
-            t = "";
-        for (var r of Object.keys(this.style)) t += l(r) + ":" + this.style[r] + ";";
-        return (t && (e += ' style="' + u(t) + '"'), (e += "'/>"));
+        var e = '<img src="' + c(this.src) + '" alt="' + c(this.alt) + '"',
+            t = O(this.style);
+        return (t && (e += ' style="' + c(t) + '"'), (e += "'/>"));
     }
 }
-var W = { "\xee": "\u0131\u0302", "\xef": "\u0131\u0308", "\xed": "\u0131\u0301", "\xec": "\u0131\u0300" };
-class V {
-    constructor(e, t, r, n, a, i, s, l) {
-        ((this.text = e),
+var Z = { "\xee": "\u0131\u0302", "\xef": "\u0131\u0308", "\xed": "\u0131\u0301", "\xec": "\u0131\u0300" };
+class X {
+    constructor(e, t, r, a, n, i, s, l) {
+        ((this.text = void 0),
+            (this.height = void 0),
+            (this.depth = void 0),
+            (this.italic = void 0),
+            (this.skew = void 0),
+            (this.width = void 0),
+            (this.maxFontSize = void 0),
+            (this.classes = void 0),
+            (this.style = void 0),
+            (this.text = e),
             (this.height = t || 0),
             (this.depth = r || 0),
-            (this.italic = n || 0),
-            (this.skew = a || 0),
+            (this.italic = a || 0),
+            (this.skew = n || 0),
             (this.width = i || 0),
             (this.classes = s || []),
             (this.style = l || {}),
             (this.maxFontSize = 0));
         var o = (function (e) {
-            for (var t = 0; t < C.length; t++)
-                for (var r = C[t], n = 0; n < r.blocks.length; n++) {
-                    var a = r.blocks[n];
-                    if (e >= a[0] && e <= a[1]) return r.name;
+            for (var t = 0; t < _.length; t++)
+                for (var r = _[t], a = 0; a < r.blocks.length; a++) {
+                    var n = r.blocks[a];
+                    if (e >= n[0] && e <= n[1]) return r.name;
                 }
             return null;
         })(this.text.charCodeAt(0));
-        (o && this.classes.push(o + "_fallback"), /[\xee\xef\xed\xec]/.test(this.text) && (this.text = W[this.text]));
+        (o && this.classes.push(o + "_fallback"), /[\xee\xef\xed\xec]/.test(this.text) && (this.text = Z[this.text]));
     }
     hasClass(e) {
         return this.classes.includes(e);
@@ -814,27 +848,28 @@ class V {
     toNode() {
         var e = document.createTextNode(this.text),
             t = null;
-        for (var r of (this.italic > 0 && ((t = document.createElement("span")).style.marginRight = H(this.italic)),
-        this.classes.length > 0 && ((t = t || document.createElement("span")).className = L(this.classes)),
-        Object.keys(this.style)))
-            (t = t || document.createElement("span")).style[r] = this.style[r];
-        return t ? (t.appendChild(e), t) : e;
+        return (this.italic > 0 && ((t = document.createElement("span")).style.marginRight = L(this.italic)),
+        this.classes.length > 0 && ((t = t || document.createElement("span")).className = N(this.classes)),
+        Object.keys(this.style).length > 0 &&
+            Object.assign((t = t || document.createElement("span")).style, this.style),
+        t)
+            ? (t.appendChild(e), t)
+            : e;
     }
     toMarkup() {
         var e = !1,
             t = "<span";
-        this.classes.length && ((e = !0), (t += ' class="'), (t += u(L(this.classes))), (t += '"'));
+        this.classes.length && ((e = !0), (t += ' class="'), (t += c(N(this.classes))), (t += '"'));
         var r = "";
-        for (var n of (this.italic > 0 && (r += "margin-right:" + H(this.italic) + ";"), Object.keys(this.style)))
-            r += l(n) + ":" + this.style[n] + ";";
-        r && ((e = !0), (t += ' style="' + u(r) + '"'));
-        var a = u(this.text);
+        (this.italic > 0 && (r += "margin-right:" + L(this.italic) + ";"),
+            (r += O(this.style)) && ((e = !0), (t += ' style="' + c(r) + '"')));
+        var a = c(this.text);
         return e ? ((t += ">"), (t += a), (t += "</span>")) : a;
     }
 }
-class X {
+class G {
     constructor(e, t) {
-        ((this.children = e || []), (this.attributes = t || {}));
+        ((this.children = void 0), (this.attributes = void 0), (this.children = e || []), (this.attributes = t || {}));
     }
     toNode() {
         var e = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -844,27 +879,27 @@ class X {
     }
     toMarkup() {
         var e = '<svg xmlns="http://www.w3.org/2000/svg"';
-        for (var t of Object.keys(this.attributes)) e += " " + t + '="' + u(this.attributes[t]) + '"';
+        for (var t of Object.keys(this.attributes)) e += " " + t + '="' + c(this.attributes[t]) + '"';
         e += ">";
         for (var r = 0; r < this.children.length; r++) e += this.children[r].toMarkup();
         return e + "</svg>";
     }
 }
-class Z {
+class Y {
     constructor(e, t) {
-        ((this.pathName = e), (this.alternate = t));
+        ((this.pathName = void 0), (this.alternate = void 0), (this.pathName = e), (this.alternate = t));
     }
     toNode() {
         var e = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        return (this.alternate ? e.setAttribute("d", this.alternate) : e.setAttribute("d", M[this.pathName]), e);
+        return (this.alternate ? e.setAttribute("d", this.alternate) : e.setAttribute("d", T[this.pathName]), e);
     }
     toMarkup() {
-        return this.alternate ? '<path d="' + u(this.alternate) + '"/>' : '<path d="' + u(M[this.pathName]) + '"/>';
+        return this.alternate ? '<path d="' + c(this.alternate) + '"/>' : '<path d="' + c(T[this.pathName]) + '"/>';
     }
 }
-class Y {
+class K {
     constructor(e) {
-        this.attributes = e || {};
+        ((this.attributes = void 0), (this.attributes = e || {}));
     }
     toNode() {
         var e = document.createElementNS("http://www.w3.org/2000/svg", "line");
@@ -873,11 +908,11 @@ class Y {
     }
     toMarkup() {
         var e = "<line";
-        for (var t of Object.keys(this.attributes)) e += " " + t + '="' + u(this.attributes[t]) + '"';
+        for (var t of Object.keys(this.attributes)) e += " " + t + '="' + c(this.attributes[t]) + '"';
         return e + "/>";
     }
 }
-var G = {
+var Q = {
         "AMS-Regular": {
             32: [0, 0, 0, 0, 0.25],
             65: [0, 0.68889, 0, 0, 0.72222],
@@ -2953,7 +2988,7 @@ var G = {
             9251: [0.11111, 0.21944, 0, 0, 0.525],
         },
     },
-    K = {
+    ee = {
         slant: [0.25, 0.25, 0.25],
         space: [0, 0, 0],
         stretch: [0, 0, 0],
@@ -2989,7 +3024,7 @@ var G = {
         fboxsep: [0.3, 0.3, 0.3],
         fboxrule: [0.04, 0.04, 0.04],
     },
-    Q = {
+    et = {
         "\xc5": "A",
         "\xd0": "D",
         "\xde": "o",
@@ -3061,23 +3096,21 @@ var G = {
         ю: "m",
         я: "r",
     };
-function ee(e, t, r) {
-    if (!G[t]) throw Error("Font metrics not found for font: " + t + ".");
-    var n = e.charCodeAt(0),
-        a = G[t][n];
+function er(e, t, r) {
+    if (!Q[t]) throw Error("Font metrics not found for font: " + t + ".");
+    var a = e.charCodeAt(0),
+        n = Q[t][a];
     if (
-        (!a && e[0] in Q && ((n = Q[e[0]].charCodeAt(0)), (a = G[t][n])),
-        !a && "text" === r && D(n) && (a = G[t][77]),
-        a)
+        (!n && e[0] in et && ((a = et[e[0]].charCodeAt(0)), (n = Q[t][a])),
+        !n && "text" === r && z(a) && (n = Q[t][77]),
+        n)
     )
-        return { depth: a[0], height: a[1], italic: a[2], skew: a[3], width: a[4] };
+        return { depth: n[0], height: n[1], italic: n[2], skew: n[3], width: n[4] };
 }
-var et = {},
-    er = { bin: 1, close: 1, inner: 1, open: 1, punct: 1, rel: 1 },
-    en = { "accent-token": 1, mathord: 1, "op-token": 1, spacing: 1, textord: 1 },
-    ea = { math: {}, text: {} };
-function ei(e, t, r, n, a, i) {
-    ((ea[e][a] = { font: t, group: r, replace: n }), i && n && (ea[e][n] = ea[e][a]));
+var ea = {},
+    en = { math: {}, text: {} };
+function ei(e, t, r, a, n, i) {
+    ((en[e][n] = { font: t, group: r, replace: a }), i && a && (en[e][a] = en[e][n]));
 }
 var es = "math",
     el = "text",
@@ -3543,8 +3576,8 @@ var es = "math",
     ei(el, eo, eg, "\xa0", " "),
     ei(el, eo, eg, "\xa0", "\\space"),
     ei(el, eo, eg, "\xa0", "\\nobreakspace"),
-    ei(es, eo, eg, null, "\\nobreak"),
-    ei(es, eo, eg, null, "\\allowbreak"),
+    ei(es, eo, eg, "", "\\nobreak"),
+    ei(es, eo, eg, "", "\\allowbreak"),
     ei(es, eo, ef, ",", ","),
     ei(es, eo, ef, ";", ";"),
     ei(es, "ams", "bin", "\u22BC", "\\barwedge", !0),
@@ -3691,11 +3724,11 @@ for (var ex = '0123456789/@."', ey = 0; ey < ex.length; ey++) {
     ei(es, eo, eb, ew, ew);
 }
 for (var ek = '0123456789!@*()-=+";:?/.,', eA = 0; eA < ek.length; eA++) {
-    var eR = ek.charAt(eA);
-    ei(el, eo, eb, eR, eR);
+    var eC = ek.charAt(eA);
+    ei(el, eo, eb, eC, eC);
 }
-for (var eC = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", e_ = 0; e_ < eC.length; e_++) {
-    var eD = eC.charAt(e_);
+for (var eR = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", e_ = 0; e_ < eR.length; e_++) {
+    var eD = eR.charAt(e_);
     (ei(es, eo, em, eD, eD), ei(el, eo, eb, eD, eD));
 }
 (ei(es, "ams", eb, "C", "\u2102"),
@@ -3714,184 +3747,209 @@ for (var eC = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", e_ = 0; e_
     ei(el, "ams", eb, "Z", "\u2124"),
     ei(es, eo, em, "h", "\u210E"),
     ei(el, eo, em, "h", "\u210E"));
-for (var ez = "", eS = 0; eS < eC.length; eS++) {
-    var eM = eC.charAt(eS);
-    (ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56320 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56372 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56424 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56580 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56684 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56736 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56788 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56840 + eS))),
-        ei(el, eo, eb, eM, ez),
-        ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56944 + eS))),
-        ei(el, eo, eb, eM, ez),
-        eS < 26 &&
-            (ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56632 + eS))),
-            ei(el, eo, eb, eM, ez),
-            ei(es, eo, em, eM, (ez = String.fromCharCode(55349, 56476 + eS))),
-            ei(el, eo, eb, eM, ez)));
+for (var ez = 0; ez < eR.length; ez++) {
+    var eS = eR.charAt(ez);
+    (ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56320 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56372 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56424 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56580 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56684 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56736 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56788 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56840 + ez))),
+        ei(el, eo, eb, eS, s),
+        ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56944 + ez))),
+        ei(el, eo, eb, eS, s),
+        ez < 26 &&
+            (ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56632 + ez))),
+            ei(el, eo, eb, eS, s),
+            ei(es, eo, em, eS, (s = String.fromCharCode(55349, 56476 + ez))),
+            ei(el, eo, eb, eS, s)));
 }
-(ei(es, eo, em, "k", (ez = String.fromCharCode(55349, 56668))), ei(el, eo, eb, "k", ez));
-for (var eT = 0; eT < 10; eT++) {
-    var eE = eT.toString();
-    (ei(es, eo, em, eE, (ez = String.fromCharCode(55349, 57294 + eT))),
-        ei(el, eo, eb, eE, ez),
-        ei(es, eo, em, eE, (ez = String.fromCharCode(55349, 57314 + eT))),
-        ei(el, eo, eb, eE, ez),
-        ei(es, eo, em, eE, (ez = String.fromCharCode(55349, 57324 + eT))),
-        ei(el, eo, eb, eE, ez),
-        ei(es, eo, em, eE, (ez = String.fromCharCode(55349, 57334 + eT))),
-        ei(el, eo, eb, eE, ez));
+(ei(es, eo, em, "k", (s = String.fromCharCode(55349, 56668))), ei(el, eo, eb, "k", s));
+for (var eM = 0; eM < 10; eM++) {
+    var eT = eM.toString();
+    (ei(es, eo, em, eT, (s = String.fromCharCode(55349, 57294 + eM))),
+        ei(el, eo, eb, eT, s),
+        ei(es, eo, em, eT, (s = String.fromCharCode(55349, 57314 + eM))),
+        ei(el, eo, eb, eT, s),
+        ei(es, eo, em, eT, (s = String.fromCharCode(55349, 57324 + eM))),
+        ei(el, eo, eb, eT, s),
+        ei(es, eo, em, eT, (s = String.fromCharCode(55349, 57334 + eM))),
+        ei(el, eo, eb, eT, s));
 }
-for (var eB = "\xd0\xde\xfe", eF = 0; eF < eB.length; eF++) {
-    var eq = eB.charAt(eF);
-    (ei(es, eo, em, eq, eq), ei(el, eo, eb, eq, eq));
+for (var eE = "\xd0\xde\xfe", eF = 0; eF < eE.length; eF++) {
+    var eB = eE.charAt(eF);
+    (ei(es, eo, em, eB, eB), ei(el, eo, eb, eB, eB));
 }
-var eI = [
-        ["mathbf", "textbf", "Main-Bold"],
-        ["mathbf", "textbf", "Main-Bold"],
-        ["mathnormal", "textit", "Math-Italic"],
-        ["mathnormal", "textit", "Math-Italic"],
-        ["boldsymbol", "boldsymbol", "Main-BoldItalic"],
-        ["boldsymbol", "boldsymbol", "Main-BoldItalic"],
-        ["mathscr", "textscr", "Script-Regular"],
-        ["", "", ""],
-        ["", "", ""],
-        ["", "", ""],
-        ["mathfrak", "textfrak", "Fraktur-Regular"],
-        ["mathfrak", "textfrak", "Fraktur-Regular"],
-        ["mathbb", "textbb", "AMS-Regular"],
-        ["mathbb", "textbb", "AMS-Regular"],
-        ["mathboldfrak", "textboldfrak", "Fraktur-Regular"],
-        ["mathboldfrak", "textboldfrak", "Fraktur-Regular"],
-        ["mathsf", "textsf", "SansSerif-Regular"],
-        ["mathsf", "textsf", "SansSerif-Regular"],
-        ["mathboldsf", "textboldsf", "SansSerif-Bold"],
-        ["mathboldsf", "textboldsf", "SansSerif-Bold"],
-        ["mathitsf", "textitsf", "SansSerif-Italic"],
-        ["mathitsf", "textitsf", "SansSerif-Italic"],
-        ["", "", ""],
-        ["", "", ""],
-        ["mathtt", "texttt", "Typewriter-Regular"],
-        ["mathtt", "texttt", "Typewriter-Regular"],
+var eq = { mathClass: "mathbf", textClass: "textbf", font: "Main-Bold" },
+    eI = { mathClass: "mathnormal", textClass: "textit", font: "Math-Italic" },
+    ej = { mathClass: "boldsymbol", textClass: "boldsymbol", font: "Main-BoldItalic" },
+    eL = { mathClass: "", textClass: "", font: "" },
+    eN = { mathClass: "mathfrak", textClass: "textfrak", font: "Fraktur-Regular" },
+    eO = { mathClass: "mathbb", textClass: "textbb", font: "AMS-Regular" },
+    eH = { mathClass: "mathboldfrak", textClass: "textboldfrak", font: "Fraktur-Regular" },
+    eJ = { mathClass: "mathsf", textClass: "textsf", font: "SansSerif-Regular" },
+    eP = { mathClass: "mathboldsf", textClass: "textboldsf", font: "SansSerif-Bold" },
+    eU = { mathClass: "mathitsf", textClass: "textitsf", font: "SansSerif-Italic" },
+    e$ = { mathClass: "mathtt", textClass: "texttt", font: "Typewriter-Regular" },
+    eW = [
+        eq,
+        eq,
+        eI,
+        eI,
+        ej,
+        ej,
+        { mathClass: "mathscr", textClass: "textscr", font: "Script-Regular" },
+        eL,
+        eL,
+        eL,
+        eN,
+        eN,
+        eO,
+        eO,
+        eH,
+        eH,
+        eJ,
+        eJ,
+        eP,
+        eP,
+        eU,
+        eU,
+        eL,
+        eL,
+        e$,
+        e$,
     ],
-    eH = [
-        ["mathbf", "textbf", "Main-Bold"],
-        ["", "", ""],
-        ["mathsf", "textsf", "SansSerif-Regular"],
-        ["mathboldsf", "textboldsf", "SansSerif-Bold"],
-        ["mathtt", "texttt", "Typewriter-Regular"],
-    ],
-    eL = function (e, t, r) {
-        if (ea[r][e]) {
-            var n = ea[r][e].replace;
-            n && (e = n);
+    eV = [eq, eL, eJ, eP, e$];
+function eZ(e) {
+    var t = e.strict,
+        r = e.errorCode,
+        n = e.errorMsg,
+        i = e.token,
+        s = e.report,
+        l = t;
+    if ("function" == typeof t)
+        if (s) l = t(r, n, i);
+        else
+            try {
+                l = t(r, n, i);
+            } catch (e) {
+                l = "error";
+            }
+    switch (l) {
+        case !0:
+        case "error":
+            if (!s) return !0;
+            throw new a("LaTeX-incompatible input and strict mode is set to 'error': " + (n + " [") + r + "]", i);
+        case !1:
+        case "ignore":
+            if (!s) return !1;
+            break;
+        default:
+            if (
+                ("u" > typeof console &&
+                    console.warn("LaTeX-incompatible input and strict mode is set to 'warn': " + (n + " [") + r + "]"),
+                !s)
+            )
+                return !1;
+    }
+}
+var eX = function (e, t, r) {
+        if (en[r][e]) {
+            var a = en[r][e].replace;
+            a && (e = a);
         }
-        return { value: e, metrics: ee(e, t, r) };
+        return { value: e, metrics: er(e, t, r) };
     },
-    eO = function (e, t, r, n, a) {
+    eG = function (e, t, r, a, n) {
         var i,
-            s = eL(e, t, r),
+            s = eX(e, t, r),
             l = s.metrics;
         if (((e = s.value), l)) {
             var o = l.italic;
-            (("text" === r || (n && "mathit" === n.font)) && (o = 0),
-                (i = new V(e, l.height, l.depth, o, l.skew, l.width, a)));
+            (("text" === r || (a && "mathit" === a.font)) && (o = 0),
+                (i = new X(e, l.height, l.depth, o, l.skew, l.width, n)));
         } else
-            ("u" > typeof console &&
-                console.warn("No character metrics " + ("for '" + e + "' in style '" + t + "' and mode '") + r + "'"),
-                (i = new V(e, 0, 0, 0, 0, 0, a)));
-        if (n) {
-            ((i.maxFontSize = n.sizeMultiplier), n.style.isTight() && i.classes.push("mtight"));
-            var h = n.getColor();
-            h && (i.style.color = h);
-        }
-        return i;
+            (eZ({
+                strict: a.strict,
+                errorCode: "symbolNotInFont",
+                errorMsg: "No character metrics for '" + e + "' in style '" + t + "' and mode '" + r + "'",
+                report: !0,
+            }),
+                (i = new X(e, 0, 0, 0, 0, 0, n)));
+        ((i.maxFontSize = a.sizeMultiplier), a.style.isTight() && i.classes.push("mtight"));
+        var h = a.getColor();
+        return (h && (i.style.color = h), i);
     },
-    ej = function (e, t, r, n) {
-        return (void 0 === n && (n = []), "boldsymbol" === r.font && eL(e, "Main-Bold", t).metrics)
-            ? eO(e, "Main-Bold", t, r, n.concat(["mathbf"]))
-            : "\\" === e || "main" === ea[t][e].font
-              ? eO(e, "Main-Regular", t, r, n)
-              : eO(e, "AMS-Regular", t, r, n.concat(["amsrm"]));
+    eY = function (e, t, r, a) {
+        return (void 0 === a && (a = []), "boldsymbol" === r.font && eX(e, "Main-Bold", t).metrics)
+            ? eG(e, "Main-Bold", t, r, a.concat(["mathbf"]))
+            : "\\" === e || "main" === en[t][e].font
+              ? eG(e, "Main-Regular", t, r, a)
+              : eG(e, "AMS-Regular", t, r, a.concat(["amsrm"]));
     },
-    eN = function (e, t, r) {
-        var a = e.mode,
+    eK = function (e, t) {
+        var r = "mathord" === e.type ? "mathord" : "textord",
+            n = e.mode,
             i = e.text,
             s = ["mord"],
-            l = "math" === a || ("text" === a && t.font),
-            o = l ? t.font : t.fontFamily,
-            h = "",
-            u = "";
-        if (
-            (55349 === i.charCodeAt(0) &&
-                ([h, u] = ((e, t) => {
-                    var r = (e.charCodeAt(0) - 55296) * 1024 + (e.charCodeAt(1) - 56320) + 65536,
-                        a = +("math" !== t);
-                    if (119808 <= r && r < 120484) {
-                        var i = Math.floor((r - 119808) / 26);
-                        return [eI[i][2], eI[i][a]];
-                    }
-                    if (120782 <= r && r <= 120831) {
-                        var s = Math.floor((r - 120782) / 10);
-                        return [eH[s][2], eH[s][a]];
-                    }
-                    if (120485 === r || 120486 === r) return [eI[0][2], eI[0][a]];
-                    if (120486 < r && r < 120782) return ["", ""];
-                    throw new n("Unsupported character: " + e);
-                })(i, a)),
-            h.length > 0)
-        )
-            return eO(i, h, a, t, s.concat(u));
-        if (o) {
-            if ("boldsymbol" === o) {
-                var c,
-                    m,
-                    p =
-                        "textord" !== r && eL(i, "Math-BoldItalic", a).metrics
+            l = t.font,
+            o = t.fontFamily,
+            h = t.fontWeight,
+            u = t.fontShape,
+            c = "math" === n || ("text" === n && !!l),
+            m = c ? l : o,
+            p = "",
+            d = "";
+        if (55349 === i.charCodeAt(0)) {
+            var f = ((e) => {
+                var t = (e.charCodeAt(0) - 55296) * 1024 + (e.charCodeAt(1) - 56320) + 65536;
+                if (119808 <= t && t < 120484) return eW[Math.floor((t - 119808) / 26)];
+                if (120782 <= t && t <= 120831) return eV[Math.floor((t - 120782) / 10)];
+                if (120485 === t || 120486 === t) return eW[0];
+                if (120486 < t && t < 120782) return eL;
+                throw new a("Unsupported character: " + e);
+            })(i);
+            ((p = f.font), (d = f[n + "Class"]));
+        }
+        if (p) return eG(i, p, n, t, s.concat(d));
+        if (m) {
+            if ("boldsymbol" === m) {
+                var g,
+                    b,
+                    v =
+                        "textord" !== r && eX(i, "Math-BoldItalic", n).metrics
                             ? { fontName: "Math-BoldItalic", fontClass: "boldsymbol" }
                             : { fontName: "Main-Bold", fontClass: "mathbf" };
-                ((c = p.fontName), (m = [p.fontClass]));
-            } else
-                l
-                    ? ((c = e1[o].fontName), (m = [o]))
-                    : ((c = e0(o, t.fontWeight, t.fontShape)), (m = [o, t.fontWeight, t.fontShape]));
-            if (eL(i, c, a).metrics) return eO(i, c, a, t, s.concat(m));
-            if (ev.hasOwnProperty(i) && "Typewriter" === c.slice(0, 10)) {
-                for (var d = [], f = 0; f < i.length; f++) d.push(eO(i[f], c, a, t, s.concat(m)));
-                return eZ(d);
+                ((g = v.fontName), (b = [v.fontClass]));
+            } else c ? ((g = tr[l].fontName), (b = [l])) : ((g = tt(o, h, u)), (b = [o, h, u]));
+            if (eX(i, g, n).metrics) return eG(i, g, n, t, s.concat(b));
+            if (Object.prototype.hasOwnProperty.call(ev, i) && "Typewriter" === g.slice(0, 10)) {
+                for (var x = [], y = 0; y < i.length; y++) x.push(eG(i[y], g, n, t, s.concat(b)));
+                return e7(x);
             }
         }
-        if ("mathord" === r) return eO(i, "Math-Italic", a, t, s.concat(["mathnormal"]));
+        if ("mathord" === r) return eG(i, "Math-Italic", n, t, s.concat(["mathnormal"]));
         if ("textord" === r) {
-            var g = ea[a][i] && ea[a][i].font;
-            if ("ams" === g)
-                return eO(
-                    i,
-                    e0("amsrm", t.fontWeight, t.fontShape),
-                    a,
-                    t,
-                    s.concat("amsrm", t.fontWeight, t.fontShape),
-                );
-            if ("main" === g || !g)
-                return eO(i, e0("textrm", t.fontWeight, t.fontShape), a, t, s.concat(t.fontWeight, t.fontShape));
-            var b = e0(g, t.fontWeight, t.fontShape);
-            return eO(i, b, a, t, s.concat(b, t.fontWeight, t.fontShape));
+            var w = en[n][i] && en[n][i].font;
+            if ("ams" === w) return eG(i, tt("amsrm", h, u), n, t, s.concat("amsrm", h, u));
+            if ("main" === w || !w) return eG(i, tt("textrm", h, u), n, t, s.concat(h, u));
+            var k = tt(w, h, u);
+            return eG(i, k, n, t, s.concat(k, h, u));
         }
         throw Error("unexpected type: " + r + " in makeOrd");
     },
-    eJ = (e, t) => {
+    eQ = (e, t) => {
         if (
-            L(e.classes) !== L(t.classes) ||
+            N(e.classes) !== N(t.classes) ||
             e.skew !== t.skew ||
             e.maxFontSize !== t.maxFontSize ||
             (0 !== e.italic && e.hasClass("mathnormal"))
@@ -3901,70 +3959,70 @@ var eI = [
             var r = e.classes[0];
             if ("mbin" === r || "mord" === r) return !1;
         }
-        for (var n of Object.keys(e.style)) if (e.style[n] !== t.style[n]) return !1;
-        for (var a of Object.keys(t.style)) if (e.style[a] !== t.style[a]) return !1;
+        for (var a of Object.keys(e.style)) if (e.style[a] !== t.style[a]) return !1;
+        for (var n of Object.keys(t.style)) if (e.style[n] !== t.style[n]) return !1;
         return !0;
     },
-    eP = (e) => {
+    e0 = (e) => {
         for (var t = 0; t < e.length - 1; t++) {
             var r = e[t],
-                n = e[t + 1];
-            r instanceof V &&
-                n instanceof V &&
-                eJ(r, n) &&
-                ((r.text += n.text),
-                (r.height = Math.max(r.height, n.height)),
-                (r.depth = Math.max(r.depth, n.depth)),
-                (r.italic = n.italic),
+                a = e[t + 1];
+            r instanceof X &&
+                a instanceof X &&
+                eQ(r, a) &&
+                ((r.text += a.text),
+                (r.height = Math.max(r.height, a.height)),
+                (r.depth = Math.max(r.depth, a.depth)),
+                (r.italic = a.italic),
                 e.splice(t + 1, 1),
                 t--);
         }
         return e;
     },
-    eU = function (e) {
-        for (var t = 0, r = 0, n = 0, a = 0; a < e.children.length; a++) {
-            var i = e.children[a];
-            (i.height > t && (t = i.height), i.depth > r && (r = i.depth), i.maxFontSize > n && (n = i.maxFontSize));
+    e1 = function (e) {
+        for (var t = 0, r = 0, a = 0, n = 0; n < e.children.length; n++) {
+            var i = e.children[n];
+            (i.height > t && (t = i.height), i.depth > r && (r = i.depth), i.maxFontSize > a && (a = i.maxFontSize));
         }
-        ((e.height = t), (e.depth = r), (e.maxFontSize = n));
+        ((e.height = t), (e.depth = r), (e.maxFontSize = a));
     },
-    e$ = function (e, t, r, n) {
-        var a = new P(e, t, r, n);
-        return (eU(a), a);
+    e4 = function (e, t, r, a) {
+        var n = new $(e, t, r, a);
+        return (e1(n), n);
     },
-    eW = (e, t, r, n) => new P(e, t, r, n),
-    eV = function (e, t, r) {
-        var n = e$([e], [], t);
+    e5 = (e, t, r, a) => new $(e, t, r, a),
+    e3 = function (e, t, r) {
+        var a = e4([e], [], t);
         return (
-            (n.height = Math.max(r || t.fontMetrics().defaultRuleThickness, t.minRuleThickness)),
-            (n.style.borderBottomWidth = H(n.height)),
-            (n.maxFontSize = 1),
-            n
+            (a.height = Math.max(r || t.fontMetrics().defaultRuleThickness, t.minRuleThickness)),
+            (a.style.borderBottomWidth = L(a.height)),
+            (a.maxFontSize = 1),
+            a
         );
     },
-    eX = function (e, t, r, n) {
-        var a = new U(e, t, r, n);
-        return (eU(a), a);
+    e6 = function (e, t, r, a) {
+        var n = new W(e, t, r, a);
+        return (e1(n), n);
     },
-    eZ = function (e) {
-        var t = new E(e);
-        return (eU(t), t);
+    e7 = function (e) {
+        var t = new F(e);
+        return (e1(t), t);
     },
-    eY = function (e, t) {
-        return e instanceof E ? e$([], [e], t) : e;
+    e2 = function (e, t) {
+        return e instanceof F ? e4([], [e], t) : e;
     },
-    eG = function (e) {
+    e8 = function (e) {
         if ("individualShift" === e.positionType) {
             for (
-                var t, r = e.children, n = [r[0]], a = -r[0].shift - r[0].elem.depth, i = a, s = 1;
+                var t, r = e.children, a = [r[0]], n = -r[0].shift - r[0].elem.depth, i = n, s = 1;
                 s < r.length;
                 s++
             ) {
                 var l = -r[s].shift - i - r[s].elem.depth,
                     o = l - (r[s - 1].elem.height + r[s - 1].elem.depth);
-                ((i += l), n.push({ type: "kern", size: o }), n.push(r[s]));
+                ((i += l), a.push({ type: "kern", size: o }), a.push(r[s]));
             }
-            return { children: n, depth: a };
+            return { children: a, depth: n };
         }
         if ("top" === e.positionType) {
             for (var h = e.positionData, u = 0; u < e.children.length; u++) {
@@ -3982,78 +4040,78 @@ var eI = [
         }
         return { children: e.children, depth: t };
     },
-    eK = function (e, t) {
-        for (var r, { children: n, depth: a } = eG(e), i = 0, s = 0; s < n.length; s++) {
-            var l = n[s];
-            if ("elem" === l.type) {
-                var o = l.elem;
-                i = Math.max(i, o.maxFontSize, o.height);
+    e9 = function (e, t) {
+        for (var r, a = e8(e), n = a.children, i = a.depth, s = 0, l = 0; l < n.length; l++) {
+            var o = n[l];
+            if ("elem" === o.type) {
+                var h = o.elem;
+                s = Math.max(s, h.maxFontSize, h.height);
             }
         }
-        i += 2;
-        var h = e$(["pstrut"], []);
-        h.style.height = H(i);
-        for (var u = [], c = a, m = a, p = a, d = 0; d < n.length; d++) {
-            var f = n[d];
-            if ("kern" === f.type) p += f.size;
+        s += 2;
+        var u = e4(["pstrut"], []);
+        u.style.height = L(s);
+        for (var c = [], m = i, p = i, d = i, f = 0; f < n.length; f++) {
+            var g = n[f];
+            if ("kern" === g.type) d += g.size;
             else {
-                var g = f.elem,
-                    b = e$(f.wrapperClasses || [], [h, g], void 0, f.wrapperStyle || {});
-                ((b.style.top = H(-i - p - g.depth)),
-                    f.marginLeft && (b.style.marginLeft = f.marginLeft),
-                    f.marginRight && (b.style.marginRight = f.marginRight),
-                    u.push(b),
-                    (p += g.height + g.depth));
+                var b = g.elem,
+                    v = e4(g.wrapperClasses || [], [u, b], void 0, g.wrapperStyle || {});
+                ((v.style.top = L(-s - d - b.depth)),
+                    g.marginLeft && (v.style.marginLeft = g.marginLeft),
+                    g.marginRight && (v.style.marginRight = g.marginRight),
+                    c.push(v),
+                    (d += b.height + b.depth));
             }
-            ((c = Math.min(c, p)), (m = Math.max(m, p)));
+            ((m = Math.min(m, d)), (p = Math.max(p, d)));
         }
-        var v = e$(["vlist"], u);
-        if (((v.style.height = H(m)), c < 0)) {
-            var x = e$([], []),
-                y = e$(["vlist"], [x]);
-            y.style.height = H(-c);
-            var w = e$(["vlist-s"], [new V("\u200B")]);
-            r = [e$(["vlist-r"], [v, w]), e$(["vlist-r"], [y])];
-        } else r = [e$(["vlist-r"], [v])];
-        var k = e$(["vlist-t"], r);
-        return (2 === r.length && k.classes.push("vlist-t2"), (k.height = m), (k.depth = -c), k);
+        var x = e4(["vlist"], c);
+        if (((x.style.height = L(p)), m < 0)) {
+            var y = e4([], []),
+                w = e4(["vlist"], [y]);
+            w.style.height = L(-m);
+            var k = e4(["vlist-s"], [new X("\u200B")]);
+            r = [e4(["vlist-r"], [x, k]), e4(["vlist-r"], [w])];
+        } else r = [e4(["vlist-r"], [x])];
+        var A = e4(["vlist-t"], r);
+        return (2 === r.length && A.classes.push("vlist-t2"), (A.height = p), (A.depth = -m), A);
     },
-    eQ = (e, t) => {
-        var r = e$(["mspace"], [], t),
-            n = I(e, t);
-        return ((r.style.marginRight = H(n)), r);
+    te = (e, t) => {
+        var r = e4(["mspace"], [], t),
+            a = j(e, t);
+        return ((r.style.marginRight = L(a)), r);
     },
-    e0 = function (e, t, r) {
-        var n = "";
+    tt = (e, t, r) => {
+        var a;
         switch (e) {
             case "amsrm":
-                n = "AMS";
+                a = "AMS";
                 break;
             case "textrm":
-                n = "Main";
+                a = "Main";
                 break;
             case "textsf":
-                n = "SansSerif";
+                a = "SansSerif";
                 break;
             case "texttt":
-                n = "Typewriter";
+                a = "Typewriter";
                 break;
             default:
-                n = e;
+                a = e;
         }
         return (
-            n +
+            a +
             "-" +
             ("textbf" === t && "textit" === r
                 ? "BoldItalic"
                 : "textbf" === t
                   ? "Bold"
-                  : "textit" === t
+                  : "textit" === r
                     ? "Italic"
                     : "Regular")
         );
     },
-    e1 = {
+    tr = {
         mathbf: { variant: "bold", fontName: "Main-Bold" },
         mathrm: { variant: "normal", fontName: "Main-Regular" },
         textit: { variant: "italic", fontName: "Main-Italic" },
@@ -4067,101 +4125,79 @@ var eI = [
         mathsf: { variant: "sans-serif", fontName: "SansSerif-Regular" },
         mathtt: { variant: "monospace", fontName: "Typewriter-Regular" },
     },
-    e4 = {
+    ta = {
         vec: ["vec", 0.471, 0.714],
         oiintSize1: ["oiintSize1", 0.957, 0.499],
         oiintSize2: ["oiintSize2", 1.472, 0.659],
         oiiintSize1: ["oiiintSize1", 1.304, 0.499],
         oiiintSize2: ["oiiintSize2", 1.98, 0.659],
     },
-    e5 = function (e, t) {
-        var [r, n, a] = e4[e],
-            i = eW(
-                ["overlay"],
+    tn = function (e, t) {
+        var r = ta[e],
+            a = r[0],
+            n = r[1],
+            i = r[2],
+            s = e5(
+                ["katex-overlay"],
                 [
-                    new X([new Z(r)], {
-                        width: H(n),
-                        height: H(a),
-                        style: "width:" + H(n),
-                        viewBox: "0 0 " + 1e3 * n + " " + 1e3 * a,
+                    new G([new Y(a)], {
+                        width: L(n),
+                        height: L(i),
+                        style: "width:" + L(n),
+                        viewBox: "0 0 " + 1e3 * n + " " + 1e3 * i,
                         preserveAspectRatio: "xMinYMin",
                     }),
                 ],
                 t,
             );
-        return ((i.height = a), (i.style.height = H(a)), (i.style.width = H(n)), i);
+        return ((s.height = i), (s.style.height = L(i)), (s.style.width = L(n)), s);
     },
-    e3 = { number: 3, unit: "mu" },
-    e6 = { number: 4, unit: "mu" },
-    e7 = { number: 5, unit: "mu" },
-    e2 = {
-        mord: { mop: e3, mbin: e6, mrel: e7, minner: e3 },
-        mop: { mord: e3, mop: e3, mrel: e7, minner: e3 },
-        mbin: { mord: e6, mop: e6, mopen: e6, minner: e6 },
-        mrel: { mord: e7, mop: e7, mopen: e7, minner: e7 },
+    ti = { number: 3, unit: "mu" },
+    ts = { number: 4, unit: "mu" },
+    tl = { number: 5, unit: "mu" },
+    to = {
+        mord: { mop: ti, mbin: ts, mrel: tl, minner: ti },
+        mop: { mord: ti, mop: ti, mrel: tl, minner: ti },
+        mbin: { mord: ts, mop: ts, mopen: ts, minner: ts },
+        mrel: { mord: tl, mop: tl, mopen: tl, minner: tl },
         mopen: {},
-        mclose: { mop: e3, mbin: e6, mrel: e7, minner: e3 },
-        mpunct: { mord: e3, mop: e3, mrel: e7, mopen: e3, mclose: e3, mpunct: e3, minner: e3 },
-        minner: { mord: e3, mop: e3, mbin: e6, mrel: e7, mopen: e3, mpunct: e3, minner: e3 },
+        mclose: { mop: ti, mbin: ts, mrel: tl, minner: ti },
+        mpunct: { mord: ti, mop: ti, mrel: tl, mopen: ti, mclose: ti, mpunct: ti, minner: ti },
+        minner: { mord: ti, mop: ti, mbin: ts, mrel: tl, mopen: ti, mpunct: ti, minner: ti },
     },
-    e8 = {
-        mord: { mop: e3 },
-        mop: { mord: e3, mop: e3 },
+    th = {
+        mord: { mop: ti },
+        mop: { mord: ti, mop: ti },
         mbin: {},
         mrel: {},
         mopen: {},
-        mclose: { mop: e3 },
+        mclose: { mop: ti },
         mpunct: {},
-        minner: { mop: e3 },
+        minner: { mop: ti },
     },
-    e9 = {},
-    te = {},
-    tt = {};
-function tr(e) {
-    for (
-        var { type: t, names: r, props: n, handler: a, htmlBuilder: i, mathmlBuilder: s } = e,
-            l = {
-                type: t,
-                numArgs: n.numArgs,
-                argTypes: n.argTypes,
-                allowedInArgument: !!n.allowedInArgument,
-                allowedInText: !!n.allowedInText,
-                allowedInMath: void 0 === n.allowedInMath || n.allowedInMath,
-                numOptionalArgs: n.numOptionalArgs || 0,
-                infix: !!n.infix,
-                primitive: !!n.primitive,
-                handler: a,
-            },
-            o = 0;
-        o < r.length;
-        ++o
-    )
-        e9[r[o]] = l;
-    t && (i && (te[t] = i), s && (tt[t] = s));
+    tu = {},
+    tc = {},
+    tm = {};
+function tp(e) {
+    for (var t = e.type, r = e.names, a = e.htmlBuilder, n = e.mathmlBuilder, i = 0; i < r.length; ++i) tu[r[i]] = e;
+    t && (a && (tc[t] = a), n && (tm[t] = n));
 }
-function tn(e) {
-    var { type: t, htmlBuilder: r, mathmlBuilder: n } = e;
-    tr({
-        type: t,
-        names: [],
-        props: { numArgs: 0 },
-        handler() {
-            throw Error("Should never be called.");
-        },
-        htmlBuilder: r,
-        mathmlBuilder: n,
-    });
+function td(e) {
+    var t = e.type,
+        r = e.htmlBuilder,
+        a = e.mathmlBuilder;
+    (r && (tc[t] = r), a && (tm[t] = a));
 }
-var ta = function (e) {
+var tf = function (e) {
         return "ordgroup" === e.type && 1 === e.body.length ? e.body[0] : e;
     },
-    ti = function (e) {
+    tg = function (e) {
         return "ordgroup" === e.type ? e.body : [e];
     },
-    ts = new Set(["leftmost", "mbin", "mopen", "mrel", "mop", "mpunct"]),
-    tl = new Set(["rightmost", "mrel", "mclose", "mpunct"]),
-    to = { display: R.DISPLAY, text: R.TEXT, script: R.SCRIPT, scriptscript: R.SCRIPTSCRIPT },
-    th = {
+    tb = new Set(["leftmost", "mbin", "mopen", "mrel", "mop", "mpunct"]),
+    tv = new Set(["rightmost", "mrel", "mclose", "mpunct"]),
+    tx = { display: R.DISPLAY, text: R.TEXT, script: R.SCRIPT, scriptscript: R.SCRIPTSCRIPT },
+    ty = {
         mord: "mord",
         mop: "mop",
         mbin: "mbin",
@@ -4171,72 +4207,72 @@ var ta = function (e) {
         mpunct: "mpunct",
         minner: "minner",
     },
-    tu = function (e, t, r, n) {
-        void 0 === n && (n = [null, null]);
-        for (var a = [], i = 0; i < e.length; i++) {
-            var s = tg(e[i], t);
-            if (s instanceof E) {
+    tw = function (e, t, r, a) {
+        void 0 === a && (a = [null, null]);
+        for (var n = [], i = 0; i < e.length; i++) {
+            var s = tD(e[i], t);
+            if (s instanceof F) {
                 var l = s.children;
-                a.push(...l);
-            } else a.push(s);
+                n.push(...l);
+            } else n.push(s);
         }
-        if ((eP(a), !r)) return a;
+        if ((e0(n), !r)) return n;
         var o = t;
         if (1 === e.length) {
             var h = e[0];
-            "sizing" === h.type ? (o = t.havingSize(h.size)) : "styling" === h.type && (o = t.havingStyle(to[h.style]));
+            "sizing" === h.type ? (o = t.havingSize(h.size)) : "styling" === h.type && (o = t.havingStyle(tx[h.style]));
         }
-        var u = e$([n[0] || "leftmost"], [], t),
-            c = e$([n[1] || "rightmost"], [], t),
+        var u = e4([a[0] || "leftmost"], [], t),
+            c = e4([a[1] || "rightmost"], [], t),
             m = "root" === r;
         return (
-            tc(
-                a,
+            tk(
+                n,
                 (e, t) => {
                     var r = t.classes[0],
-                        n = e.classes[0];
-                    "mbin" === r && tl.has(n)
+                        a = e.classes[0];
+                    "mbin" === r && tv.has(a)
                         ? (t.classes[0] = "mord")
-                        : "mbin" === n && ts.has(r) && (e.classes[0] = "mord");
+                        : "mbin" === a && tb.has(r) && (e.classes[0] = "mord");
                 },
                 { node: u },
                 c,
                 m,
             ),
-            tc(
-                a,
+            tk(
+                n,
                 (e, t) => {
                     var r,
-                        n,
-                        a = td(t),
-                        i = td(e),
+                        a,
+                        n = tR(t),
+                        i = tR(e),
                         s =
-                            a && i
+                            n && i
                                 ? e.hasClass("mtight")
-                                    ? null == (r = e8[a])
+                                    ? null == (r = th[n])
                                         ? void 0
                                         : r[i]
-                                    : null == (n = e2[a])
+                                    : null == (a = to[n])
                                       ? void 0
-                                      : n[i]
+                                      : a[i]
                                 : null;
-                    if (s) return eQ(s, o);
+                    if (s) return te(s, o);
                 },
                 { node: u },
                 c,
                 m,
             ),
-            a
+            n
         );
     },
-    tc = function (e, t, r, n, a) {
-        n && e.push(n);
+    tk = function (e, t, r, a, n) {
+        a && e.push(a);
         for (var i = 0; i < e.length; i++) {
-            let n;
+            let a;
             var s = e[i],
-                l = tm(s);
+                l = tA(s);
             if (l) {
-                tc(l.children, t, r, null, a);
+                tk(l.children, t, r, null, n);
                 continue;
             }
             var o = !s.hasClass("mspace");
@@ -4244,82 +4280,90 @@ var ta = function (e) {
                 var h = t(s, r.node);
                 h && (r.insertAfter ? r.insertAfter(h) : (e.unshift(h), i++));
             }
-            (o ? (r.node = s) : a && s.hasClass("newline") && (r.node = e$(["leftmost"])),
-                (n = i),
+            (o ? (r.node = s) : n && s.hasClass("katex-newline") && (r.node = e4(["leftmost"])),
+                (a = i),
                 (r.insertAfter = (t) => {
-                    (e.splice(n + 1, 0, t), i++);
+                    (e.splice(a + 1, 0, t), i++);
                 }));
         }
-        n && e.pop();
+        a && e.pop();
     },
-    tm = function (e) {
-        return e instanceof E || e instanceof U || (e instanceof P && e.hasClass("enclosing")) ? e : null;
+    tA = function (e) {
+        return e instanceof F || e instanceof W || (e instanceof $ && e.hasClass("enclosing")) ? e : null;
     },
-    tp = function (e, t) {
-        var r = tm(e);
+    tC = function (e, t) {
+        var r = tA(e);
         if (r) {
-            var n = r.children;
-            if (n.length) {
-                if ("right" === t) return tp(n[n.length - 1], "right");
-                else if ("left" === t) return tp(n[0], "left");
+            var a = r.children;
+            if (a.length) {
+                if ("right" === t) return tC(a[a.length - 1], "right");
+                else if ("left" === t) return tC(a[0], "left");
             }
         }
         return e;
     },
-    td = function (e, t) {
-        return e ? (t && (e = tp(e, t)), th[e.classes[0]] || null) : null;
+    tR = function (e, t) {
+        return e ? (t && (e = tC(e, t)), ty[e.classes[0]] || null) : null;
     },
-    tf = function (e, t) {
+    t_ = function (e, t) {
         var r = ["nulldelimiter"].concat(e.baseSizingClasses());
-        return e$(t.concat(r));
+        return e4(t.concat(r));
     },
-    tg = function (e, t, r) {
-        if (!e) return e$();
-        if (te[e.type]) {
-            var a = te[e.type](e, t);
+    tD = function (e, t, r) {
+        if (!e) return e4();
+        if (tc[e.type]) {
+            var n = tc[e.type](e, t);
             if (r && t.size !== r.size) {
-                a = e$(t.sizingClasses(r), [a], t);
+                n = e4(t.sizingClasses(r), [n], t);
                 var i = t.sizeMultiplier / r.sizeMultiplier;
-                ((a.height *= i), (a.depth *= i));
+                ((n.height *= i), (n.depth *= i));
             }
-            return a;
+            return n;
         }
-        throw new n("Got group of unknown type: '" + e.type + "'");
+        throw new a("Got group of unknown type: '" + e.type + "'");
     };
-function tb(e, t) {
-    var r = e$(["base"], e, t),
-        n = e$(["strut"]);
+function tz(e, t) {
+    var r = e4(["katex-base"], e, t),
+        a = e4(["katex-strut"]);
     return (
-        (n.style.height = H(r.height + r.depth)),
-        r.depth && (n.style.verticalAlign = H(-r.depth)),
-        r.children.unshift(n),
+        (a.style.height = L(r.height + r.depth)),
+        r.depth && (a.style.verticalAlign = L(-r.depth)),
+        r.children.unshift(a),
         r
     );
 }
-function tv(e, t) {
+function tS(e, t) {
     var r,
-        n,
-        a = null;
-    1 === e.length && "tag" === e[0].type && ((a = e[0].tag), (e = e[0].body));
-    var i = tu(e, t, "root");
-    2 === i.length && i[1].hasClass("tag") && (r = i.pop());
+        a,
+        n = null;
+    1 === e.length && "tag" === e[0].type && ((n = e[0].tag), (e = e[0].body));
+    var i = tw(e, t, "root");
+    2 === i.length && i[1].hasClass("katex-tag") && (r = i.pop());
     for (var s = [], l = [], o = 0; o < i.length; o++)
         if ((l.push(i[o]), i[o].hasClass("mbin") || i[o].hasClass("mrel") || i[o].hasClass("allowbreak"))) {
-            for (var h = !1; o < i.length - 1 && i[o + 1].hasClass("mspace") && !i[o + 1].hasClass("newline");)
+            for (var h = !1; o < i.length - 1 && i[o + 1].hasClass("mspace") && !i[o + 1].hasClass("katex-newline");)
                 (o++, l.push(i[o]), i[o].hasClass("nobreak") && (h = !0));
-            h || (s.push(tb(l, t)), (l = []));
-        } else i[o].hasClass("newline") && (l.pop(), l.length > 0 && (s.push(tb(l, t)), (l = [])), s.push(i[o]));
-    (l.length > 0 && s.push(tb(l, t)), a ? (((n = tb(tu(a, t, !0), t)).classes = ["tag"]), s.push(n)) : r && s.push(r));
-    var u = e$(["katex-html"], s);
-    if ((u.setAttribute("aria-hidden", "true"), n)) {
-        var c = n.children[0];
-        ((c.style.height = H(u.height + u.depth)), u.depth && (c.style.verticalAlign = H(-u.depth)));
+            h || (s.push(tz(l, t)), (l = []));
+        } else i[o].hasClass("katex-newline") && (l.pop(), l.length > 0 && (s.push(tz(l, t)), (l = [])), s.push(i[o]));
+    (l.length > 0 && s.push(tz(l, t)),
+        n ? (((a = tz(tw(n, t, !0), t)).classes = ["katex-tag"]), s.push(a)) : r && s.push(r));
+    var u = e4(["katex-html"], s);
+    if ((u.setAttribute("aria-hidden", "true"), a)) {
+        var c = a.children[0];
+        ((c.style.height = L(u.height + u.depth)), u.depth && (c.style.verticalAlign = L(-u.depth)));
     }
     return u;
 }
-class tx {
+class tM {
     constructor(e, t, r) {
-        ((this.type = e), (this.attributes = {}), (this.children = t || []), (this.classes = r || []));
+        ((this.type = void 0),
+            (this.attributes = void 0),
+            (this.children = void 0),
+            (this.classes = void 0),
+            (this.type = e),
+            (this.attributes = {}),
+            (this.children = t || []),
+            (this.classes = r || []));
     }
     setAttribute(e, t) {
         this.attributes[e] = t;
@@ -4329,50 +4373,57 @@ class tx {
     }
     toNode() {
         var e = document.createElementNS("http://www.w3.org/1998/Math/MathML", this.type);
-        for (var t in this.attributes)
-            Object.prototype.hasOwnProperty.call(this.attributes, t) && e.setAttribute(t, this.attributes[t]);
-        this.classes.length > 0 && (e.className = L(this.classes));
-        for (var r = 0; r < this.children.length; r++)
-            if (this.children[r] instanceof ty && this.children[r + 1] instanceof ty) {
+        for (var t of Object.entries(this.attributes)) {
+            var r = t[0],
+                a = t[1];
+            e.setAttribute(r, a);
+        }
+        this.classes.length > 0 && (e.className = N(this.classes));
+        for (var n = 0; n < this.children.length; n++)
+            if (this.children[n] instanceof tT && this.children[n + 1] instanceof tT) {
                 for (
-                    var n = this.children[r].toText() + this.children[++r].toText();
-                    this.children[r + 1] instanceof ty;
+                    var i = this.children[n].toText() + this.children[++n].toText();
+                    this.children[n + 1] instanceof tT;
                 )
-                    n += this.children[++r].toText();
-                e.appendChild(new ty(n).toNode());
-            } else e.appendChild(this.children[r].toNode());
+                    i += this.children[++n].toText();
+                e.appendChild(new tT(i).toNode());
+            } else e.appendChild(this.children[n].toNode());
         return e;
     }
     toMarkup() {
         var e = "<" + this.type;
-        for (var t in this.attributes)
-            Object.prototype.hasOwnProperty.call(this.attributes, t) &&
-                ((e += " " + t + '="'), (e += u(this.attributes[t])), (e += '"'));
-        (this.classes.length > 0 && (e += ' class ="' + u(L(this.classes)) + '"'), (e += ">"));
-        for (var r = 0; r < this.children.length; r++) e += this.children[r].toMarkup();
+        for (var t of Object.entries(this.attributes)) {
+            var r = t[0],
+                a = t[1];
+            ((e += " " + r + '="'), (e += c(a)), (e += '"'));
+        }
+        (this.classes.length > 0 && (e += ' class ="' + c(N(this.classes)) + '"'), (e += ">"));
+        for (var n = 0; n < this.children.length; n++) e += this.children[n].toMarkup();
         return e + ("</" + this.type + ">");
     }
     toText() {
         return this.children.map((e) => e.toText()).join("");
     }
 }
-class ty {
+class tT {
     constructor(e) {
-        this.text = e;
+        ((this.text = void 0), (this.text = e));
     }
     toNode() {
         return document.createTextNode(this.text);
     }
     toMarkup() {
-        return u(this.toText());
+        return c(this.toText());
     }
     toText() {
         return this.text;
     }
 }
-class tw {
+class tE {
     constructor(e) {
-        ((this.width = e),
+        ((this.width = void 0),
+            (this.character = void 0),
+            (this.width = e),
             e >= 0.05555 && e <= 0.05556
                 ? (this.character = "\u200A")
                 : e >= 0.1666 && e <= 0.1667
@@ -4394,69 +4445,77 @@ class tw {
     toNode() {
         if (this.character) return document.createTextNode(this.character);
         var e = document.createElementNS("http://www.w3.org/1998/Math/MathML", "mspace");
-        return (e.setAttribute("width", H(this.width)), e);
+        return (e.setAttribute("width", L(this.width)), e);
     }
     toMarkup() {
-        return this.character ? "<mtext>" + this.character + "</mtext>" : '<mspace width="' + H(this.width) + '"/>';
+        return this.character ? "<mtext>" + this.character + "</mtext>" : '<mspace width="' + L(this.width) + '"/>';
     }
     toText() {
         return this.character ? this.character : " ";
     }
 }
-var tk = new Set(["\\imath", "\\jmath"]),
-    tA = new Set(["mrow", "mtable"]),
-    tR = function (e, t, r) {
+var tF = new Set(["\\imath", "\\jmath"]),
+    tB = new Set(["mrow", "mtable"]),
+    tq = function (e, t, r) {
+        var a, n;
         return (
-            ea[t][e] &&
-                ea[t][e].replace &&
+            en[t][e] &&
+                en[t][e].replace &&
                 55349 !== e.charCodeAt(0) &&
                 !(
-                    ev.hasOwnProperty(e) &&
-                    r &&
-                    ((r.fontFamily && "tt" === r.fontFamily.slice(4, 6)) || (r.font && "tt" === r.font.slice(4, 6)))
+                    Object.prototype.hasOwnProperty.call(ev, e) &&
+                    ((null == r || null == (a = r.fontFamily) ? void 0 : a.slice(4, 6)) === "tt" ||
+                        (null == r || null == (n = r.font) ? void 0 : n.slice(4, 6)) === "tt")
                 ) &&
-                (e = ea[t][e].replace),
-            new ty(e)
+                (e = en[t][e].replace),
+            new tT(e)
         );
     },
-    tC = function (e) {
-        return 1 === e.length ? e[0] : new tx("mrow", e);
+    tI = function (e) {
+        return 1 === e.length ? e[0] : new tM("mrow", e);
     },
-    t_ = function (e, t) {
-        if ("texttt" === t.fontFamily) return "monospace";
-        if ("textsf" === t.fontFamily)
-            if ("textit" === t.fontShape && "textbf" === t.fontWeight) return "sans-serif-bold-italic";
-            else if ("textit" === t.fontShape) return "sans-serif-italic";
-            else if ("textbf" === t.fontWeight) return "bold-sans-serif";
-            else return "sans-serif";
-        if ("textit" === t.fontShape && "textbf" === t.fontWeight) return "bold-italic";
-        if ("textit" === t.fontShape) return "italic";
-        if ("textbf" === t.fontWeight) return "bold";
+    tj = {
+        mathit: "italic",
+        boldsymbol: (e) => ("textord" === e.type ? "bold" : "bold-italic"),
+        mathbf: "bold",
+        mathbb: "double-struck",
+        mathsfit: "sans-serif-italic",
+        mathfrak: "fraktur",
+        mathscr: "script",
+        mathcal: "script",
+        mathsf: "sans-serif",
+        mathtt: "monospace",
+    },
+    tL = (e, t) => {
+        if ("text" === e.mode) {
+            if ("texttt" === t.fontFamily) return "monospace";
+            else if ("textsf" === t.fontFamily)
+                if ("textit" === t.fontShape && "textbf" === t.fontWeight) return "sans-serif-bold-italic";
+                else if ("textit" === t.fontShape) return "sans-serif-italic";
+                else if ("textbf" === t.fontWeight) return "bold-sans-serif";
+                else return "sans-serif";
+            else if ("textit" === t.fontShape && "textbf" === t.fontWeight) return "bold-italic";
+            else if ("textit" === t.fontShape) return "italic";
+            else if ("textbf" === t.fontWeight) return "bold";
+        }
         var r = t.font;
         if (!r || "mathnormal" === r) return null;
-        var n = e.mode;
-        if ("mathit" === r) return "italic";
-        if ("boldsymbol" === r) return "textord" === e.type ? "bold" : "bold-italic";
-        if ("mathbf" === r) return "bold";
-        if ("mathbb" === r) return "double-struck";
-        if ("mathsfit" === r) return "sans-serif-italic";
-        else if ("mathfrak" === r) return "fraktur";
-        else if ("mathscr" === r || "mathcal" === r) return "script";
-        else if ("mathsf" === r) return "sans-serif";
-        else if ("mathtt" === r) return "monospace";
-        var a = e.text;
-        if (tk.has(a)) return null;
-        if (ea[n][a]) {
-            var i = ea[n][a].replace;
-            i && (a = i);
+        var a = e.mode,
+            n = tj[r];
+        if (n) return "function" == typeof n ? n(e) : n;
+        var i = e.text;
+        if (tF.has(i)) return null;
+        if (en[a][i]) {
+            var s = en[a][i].replace;
+            s && (i = s);
         }
-        return ee(a, e1[r].fontName, n) ? e1[r].variant : null;
+        return er(i, tr[r].fontName, a) ? tr[r].variant : null;
     };
-function tD(e) {
+function tN(e) {
     if (!e) return !1;
     if ("mi" === e.type && 1 === e.children.length) {
         var t = e.children[0];
-        return t instanceof ty && "." === t.text;
+        return t instanceof tT && "." === t.text;
     }
     if (
         "mo" !== e.type ||
@@ -4467,85 +4526,85 @@ function tD(e) {
     )
         return !1;
     var r = e.children[0];
-    return r instanceof ty && "," === r.text;
+    return r instanceof tT && "," === r.text;
 }
-var tz = function (e, t, r) {
+var tO = function (e, t, r) {
         if (1 === e.length) {
-            var n,
-                a = tM(e[0], t);
+            var a,
+                n = tJ(e[0], t);
             return (
                 r &&
-                    a instanceof tx &&
-                    "mo" === a.type &&
-                    (a.setAttribute("lspace", "0em"), a.setAttribute("rspace", "0em")),
-                [a]
+                    n instanceof tM &&
+                    "mo" === n.type &&
+                    (n.setAttribute("lspace", "0em"), n.setAttribute("rspace", "0em")),
+                [n]
             );
         }
         for (var i = [], s = 0; s < e.length; s++) {
-            var l = tM(e[s], t);
-            if (l instanceof tx && n instanceof tx) {
+            var l = tJ(e[s], t);
+            if (l instanceof tM && a instanceof tM) {
                 if (
                     "mtext" === l.type &&
-                    "mtext" === n.type &&
-                    l.getAttribute("mathvariant") === n.getAttribute("mathvariant")
+                    "mtext" === a.type &&
+                    l.getAttribute("mathvariant") === a.getAttribute("mathvariant")
                 ) {
-                    n.children.push(...l.children);
+                    a.children.push(...l.children);
                     continue;
-                } else if ("mn" === l.type && "mn" === n.type) {
-                    n.children.push(...l.children);
+                } else if ("mn" === l.type && "mn" === a.type) {
+                    a.children.push(...l.children);
                     continue;
-                } else if (tD(l) && "mn" === n.type) {
-                    n.children.push(...l.children);
+                } else if (tN(l) && "mn" === a.type) {
+                    a.children.push(...l.children);
                     continue;
-                } else if ("mn" === l.type && tD(n)) ((l.children = [...n.children, ...l.children]), i.pop());
+                } else if ("mn" === l.type && tN(a)) ((l.children = [...a.children, ...l.children]), i.pop());
                 else if (
                     ("msup" === l.type || "msub" === l.type) &&
                     l.children.length >= 1 &&
-                    ("mn" === n.type || tD(n))
+                    ("mn" === a.type || tN(a))
                 ) {
                     var o = l.children[0];
-                    o instanceof tx && "mn" === o.type && ((o.children = [...n.children, ...o.children]), i.pop());
-                } else if ("mi" === n.type && 1 === n.children.length) {
-                    var h = n.children[0];
+                    o instanceof tM && "mn" === o.type && ((o.children = [...a.children, ...o.children]), i.pop());
+                } else if ("mi" === a.type && 1 === a.children.length) {
+                    var h = a.children[0];
                     if (
-                        h instanceof ty &&
+                        h instanceof tT &&
                         "\u0338" === h.text &&
                         ("mo" === l.type || "mi" === l.type || "mn" === l.type)
                     ) {
                         var u = l.children[0];
-                        u instanceof ty &&
+                        u instanceof tT &&
                             u.text.length > 0 &&
                             ((u.text = u.text.slice(0, 1) + "\u0338" + u.text.slice(1)), i.pop());
                     }
                 }
             }
-            (i.push(l), (n = l));
+            (i.push(l), (a = l));
         }
         return i;
     },
-    tS = function (e, t, r) {
-        return tC(tz(e, t, r));
+    tH = function (e, t, r) {
+        return tI(tO(e, t, r));
     },
-    tM = function (e, t) {
-        if (!e) return new tx("mrow");
-        if (tt[e.type]) return tt[e.type](e, t);
-        throw new n("Got group of unknown type: '" + e.type + "'");
+    tJ = function (e, t) {
+        if (!e) return new tM("mrow");
+        if (tm[e.type]) return tm[e.type](e, t);
+        throw new a("Got group of unknown type: '" + e.type + "'");
     };
-function tT(e, t, r, n, a) {
+function tP(e, t, r, a, n) {
     var i,
-        s = tz(e, r);
-    i = 1 === s.length && s[0] instanceof tx && tA.has(s[0].type) ? s[0] : new tx("mrow", s);
-    var l = new tx("annotation", [new ty(t)]);
+        s = tO(e, r);
+    i = 1 === s.length && s[0] instanceof tM && tB.has(s[0].type) ? s[0] : new tM("mrow", s);
+    var l = new tM("annotation", [new tT(t)]);
     l.setAttribute("encoding", "application/x-tex");
-    var o = new tx("semantics", [i, l]),
-        h = new tx("math", [o]);
+    var o = new tM("semantics", [i, l]),
+        h = new tM("math", [o]);
     return (
         h.setAttribute("xmlns", "http://www.w3.org/1998/Math/MathML"),
-        n && h.setAttribute("display", "block"),
-        e$([a ? "katex" : "katex-mathml"], [h])
+        a && h.setAttribute("display", "block"),
+        e4([n ? "katex" : "katex-mathml"], [h])
     );
 }
-var tE = [
+var tU = [
         [1, 1, 1],
         [2, 1, 1],
         [3, 1, 1],
@@ -4558,24 +4617,39 @@ var tE = [
         [10, 8, 7],
         [11, 10, 9],
     ],
-    tB = [0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.44, 1.728, 2.074, 2.488],
-    tF = function (e, t) {
-        return t.size < 2 ? e : tE[e - 1][t.size - 1];
+    t$ = [0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.44, 1.728, 2.074, 2.488],
+    tW = function (e, t) {
+        return t.size < 2 ? e : tU[e - 1][t.size - 1];
     };
-class tq {
+class tV {
     constructor(e) {
-        ((this.style = e.style),
+        ((this.style = void 0),
+            (this.color = void 0),
+            (this.size = void 0),
+            (this.textSize = void 0),
+            (this.phantom = void 0),
+            (this.font = void 0),
+            (this.fontFamily = void 0),
+            (this.fontWeight = void 0),
+            (this.fontShape = void 0),
+            (this.sizeMultiplier = void 0),
+            (this.maxSize = void 0),
+            (this.minRuleThickness = void 0),
+            (this._fontMetrics = void 0),
+            (this.strict = void 0),
+            (this.style = e.style),
             (this.color = e.color),
-            (this.size = e.size || tq.BASESIZE),
+            (this.size = e.size || tV.BASESIZE),
             (this.textSize = e.textSize || this.size),
             (this.phantom = !!e.phantom),
             (this.font = e.font || ""),
             (this.fontFamily = e.fontFamily || ""),
             (this.fontWeight = e.fontWeight || ""),
             (this.fontShape = e.fontShape || ""),
-            (this.sizeMultiplier = tB[this.size - 1]),
+            (this.sizeMultiplier = t$[this.size - 1]),
             (this.maxSize = e.maxSize),
             (this.minRuleThickness = e.minRuleThickness),
+            (this.strict = e.strict),
             (this._fontMetrics = void 0));
     }
     extend(e) {
@@ -4591,11 +4665,12 @@ class tq {
             fontShape: this.fontShape,
             maxSize: this.maxSize,
             minRuleThickness: this.minRuleThickness,
+            strict: this.strict,
         };
-        return (Object.assign(t, e), new tq(t));
+        return (Object.assign(t, e), new tV(t));
     }
     havingStyle(e) {
-        return this.style === e ? this : this.extend({ style: e, size: tF(this.textSize, e) });
+        return this.style === e ? this : this.extend({ style: e, size: tW(this.textSize, e) });
     }
     havingCrampedStyle() {
         return this.havingStyle(this.style.cramp());
@@ -4603,12 +4678,12 @@ class tq {
     havingSize(e) {
         return this.size === e && this.textSize === e
             ? this
-            : this.extend({ style: this.style.text(), size: e, textSize: e, sizeMultiplier: tB[e - 1] });
+            : this.extend({ style: this.style.text(), size: e, textSize: e, sizeMultiplier: t$[e - 1] });
     }
     havingBaseStyle(e) {
         e = e || this.style.text();
-        var t = tF(tq.BASESIZE, e);
-        return this.size === t && this.textSize === tq.BASESIZE && this.style === e
+        var t = tW(tV.BASESIZE, e);
+        return this.size === t && this.textSize === tV.BASESIZE && this.style === e
             ? this
             : this.extend({ style: e, size: t });
     }
@@ -4647,21 +4722,21 @@ class tq {
         return this.extend({ fontShape: e, font: "" });
     }
     sizingClasses(e) {
-        return e.size !== this.size ? ["sizing", "reset-size" + e.size, "size" + this.size] : [];
+        return e.size !== this.size ? ["katex-sizing", "reset-size" + e.size, "size" + this.size] : [];
     }
     baseSizingClasses() {
-        return this.size !== tq.BASESIZE ? ["sizing", "reset-size" + this.size, "size" + tq.BASESIZE] : [];
+        return this.size !== tV.BASESIZE ? ["katex-sizing", "reset-size" + this.size, "size" + tV.BASESIZE] : [];
     }
     fontMetrics() {
         return (
             this._fontMetrics ||
                 (this._fontMetrics = (function (e) {
                     var t;
-                    if (!et[(t = e >= 5 ? 0 : e >= 3 ? 1 : 2)]) {
-                        var r = (et[t] = { cssEmPerMu: K.quad[t] / 18 });
-                        for (var n in K) K.hasOwnProperty(n) && (r[n] = K[n][t]);
+                    if (!ea[(t = e >= 5 ? 0 : e >= 3 ? 1 : 2)]) {
+                        var r = (ea[t] = { cssEmPerMu: ee.quad[t] / 18 });
+                        for (var a of Object.keys(ee)) r[a] = ee[a][t];
                     }
-                    return et[t];
+                    return ea[t];
                 })(this.size)),
             this._fontMetrics
         );
@@ -4670,33 +4745,33 @@ class tq {
         return this.phantom ? "transparent" : this.color;
     }
 }
-tq.BASESIZE = 6;
-var tI = function (e) {
-        return new tq({
+tV.BASESIZE = 6;
+var tZ = (e) =>
+        new tV({
             style: e.displayMode ? R.DISPLAY : R.TEXT,
             maxSize: e.maxSize,
             minRuleThickness: e.minRuleThickness,
-        });
-    },
-    tH = function (e, t) {
+            strict: e.strict,
+        }),
+    tX = function (e, t) {
         if (t.displayMode) {
             var r = ["katex-display"];
-            (t.leqno && r.push("leqno"), t.fleqn && r.push("fleqn"), (e = e$(r, [e])));
+            (t.leqno && r.push("leqno"), t.fleqn && r.push("fleqn"), (e = e4(r, [e])));
         }
         return e;
     },
-    tL = function (e, t, r) {
-        var n = tI(r);
+    tG = function (e, t, r) {
+        var a = tZ(r);
         return "mathml" === r.output
-            ? tT(e, t, n, r.displayMode, !0)
-            : tH(
+            ? tP(e, t, a, r.displayMode, !0)
+            : tX(
                   "html" === r.output
-                      ? e$(["katex"], [tv(e, n)])
-                      : e$(["katex"], [tT(e, t, n, r.displayMode, !1), tv(e, n)]),
+                      ? e4(["katex"], [tS(e, a)])
+                      : e4(["katex"], [tP(e, t, a, r.displayMode, !1), tS(e, a)]),
                   r,
               );
     },
-    tO = {
+    tY = {
         widehat: "^",
         widecheck: "\u02C7",
         widetilde: "~",
@@ -4742,11 +4817,11 @@ var tI = function (e) {
         "\\cdleftarrow": "\u2190",
         "\\cdlongequal": "=",
     },
-    tj = function (e) {
-        var t = new tx("mo", [new ty(tO[e.replace(/^\\/, "")])]);
+    tK = function (e) {
+        var t = new tM("mo", [new tT(tY[e.replace(/^\\/, "")])]);
         return (t.setAttribute("stretchy", "true"), t);
     },
-    tN = {
+    tQ = {
         overrightarrow: [["rightarrow"], 0.888, 522, "xMaxYMin"],
         overleftarrow: [["leftarrow"], 0.888, 522, "xMinYMin"],
         underrightarrow: [["rightarrow"], 0.888, 522, "xMaxYMin"],
@@ -4790,157 +4865,173 @@ var tI = function (e) {
         xrightequilibrium: [["baraboveshortleftharpoon", "rightharpoonaboveshortbar"], 1.75, 716],
         xleftequilibrium: [["shortbaraboveleftharpoon", "shortrightharpoonabovebar"], 1.75, 716],
     },
-    tJ = new Set(["widehat", "widecheck", "widetilde", "utilde"]),
-    tP = function (e, t) {
-        var {
-            span: r,
-            minWidth: n,
-            height: a,
-        } = (function () {
-            var r = 4e5,
-                n = e.label.slice(1);
-            if (tJ.has(n)) {
-                var a,
-                    i,
-                    s,
-                    l = "ordgroup" === e.base.type ? e.base.body.length : 1;
-                if (l > 5)
-                    "widehat" === n || "widecheck" === n
-                        ? ((a = 420), (r = 2364), (s = 0.42), (i = n + "4"))
-                        : ((a = 312), (r = 2340), (s = 0.34), (i = "tilde4"));
-                else {
-                    var o = [1, 1, 2, 2, 3, 3][l];
-                    "widehat" === n || "widecheck" === n
-                        ? ((r = [0, 1062, 2364, 2364, 2364][o]),
-                          (a = [0, 239, 300, 360, 420][o]),
-                          (s = [0, 0.24, 0.3, 0.3, 0.36, 0.42][o]),
-                          (i = n + o))
-                        : ((r = [0, 600, 1033, 2339, 2340][o]),
-                          (a = [0, 260, 286, 306, 312][o]),
-                          (s = [0, 0.26, 0.286, 0.3, 0.306, 0.34][o]),
-                          (i = "tilde" + o));
+    t0 = new Set(["widehat", "widecheck", "widetilde", "utilde"]),
+    t1 = function (e, t) {
+        var r = (function () {
+                var r = 4e5,
+                    a = e.label.slice(1);
+                if (t0.has(a) && "base" in e) {
+                    var n,
+                        i,
+                        s,
+                        l = "ordgroup" === e.base.type ? e.base.body.length : 1;
+                    if (l > 5)
+                        "widehat" === a || "widecheck" === a
+                            ? ((n = 420), (r = 2364), (s = 0.42), (i = a + "4"))
+                            : ((n = 312), (r = 2340), (s = 0.34), (i = "tilde4"));
+                    else {
+                        var o = [1, 1, 2, 2, 3, 3][l];
+                        "widehat" === a || "widecheck" === a
+                            ? ((r = [0, 1062, 2364, 2364, 2364][o]),
+                              (n = [0, 239, 300, 360, 420][o]),
+                              (s = [0, 0.24, 0.3, 0.3, 0.36, 0.42][o]),
+                              (i = a + o))
+                            : ((r = [0, 600, 1033, 2339, 2340][o]),
+                              (n = [0, 260, 286, 306, 312][o]),
+                              (s = [0, 0.26, 0.286, 0.3, 0.306, 0.34][o]),
+                              (i = "tilde" + o));
+                    }
+                    return {
+                        span: e5(
+                            [],
+                            [
+                                new G([new Y(i)], {
+                                    width: "100%",
+                                    height: L(s),
+                                    viewBox: "0 0 " + r + " " + n,
+                                    preserveAspectRatio: "none",
+                                }),
+                            ],
+                            t,
+                        ),
+                        minWidth: 0,
+                        height: s,
+                    };
                 }
-                return {
-                    span: eW(
-                        [],
-                        [
-                            new X([new Z(i)], {
-                                width: "100%",
-                                height: H(s),
-                                viewBox: "0 0 " + r + " " + a,
-                                preserveAspectRatio: "none",
-                            }),
-                        ],
-                        t,
-                    ),
-                    minWidth: 0,
-                    height: s,
-                };
-            }
-            var h,
-                u,
-                c = [],
-                m = tN[n],
-                [p, d, f] = m,
-                g = f / 1e3,
-                b = p.length;
-            if (1 === b) ((h = ["hide-tail"]), (u = [m[3]]));
-            else if (2 === b) ((h = ["halfarrow-left", "halfarrow-right"]), (u = ["xMinYMin", "xMaxYMin"]));
-            else if (3 === b)
-                ((h = ["brace-left", "brace-center", "brace-right"]), (u = ["xMinYMin", "xMidYMin", "xMaxYMin"]));
-            else
-                throw Error(
-                    "Correct katexImagesData or update code here to support\n                    " + b + " children.",
-                );
-            for (var v = 0; v < b; v++) {
-                var x = new X([new Z(p[v])], {
-                        width: "400em",
-                        height: H(g),
-                        viewBox: "0 0 " + r + " " + f,
-                        preserveAspectRatio: u[v] + " slice",
-                    }),
-                    y = eW([h[v]], [x], t);
-                if (1 === b) return { span: y, minWidth: d, height: g };
-                ((y.style.height = H(g)), c.push(y));
-            }
-            return { span: e$(["stretchy"], c, t), minWidth: d, height: g };
-        })();
-        return ((r.height = a), (r.style.height = H(a)), n > 0 && (r.style.minWidth = H(n)), r);
+                var h,
+                    u,
+                    c = [],
+                    m = tQ[a];
+                if (!m) throw Error('No SVG data for "' + a + '".');
+                var p = m[0],
+                    d = m[1],
+                    f = m[2],
+                    g = f / 1e3,
+                    b = p.length;
+                if (1 === b) {
+                    if (4 !== m.length) throw Error('Expected 4-tuple for single-path SVG data "' + a + '".');
+                    ((h = ["hide-tail"]), (u = [m[3]]));
+                } else if (2 === b) ((h = ["halfarrow-left", "halfarrow-right"]), (u = ["xMinYMin", "xMaxYMin"]));
+                else if (3 === b)
+                    ((h = ["brace-left", "brace-center", "brace-right"]), (u = ["xMinYMin", "xMidYMin", "xMaxYMin"]));
+                else
+                    throw Error(
+                        "Correct katexImagesData or update code here to support\n                    " +
+                            b +
+                            " children.",
+                    );
+                for (var v = 0; v < b; v++) {
+                    var x = new G([new Y(p[v])], {
+                            width: "400em",
+                            height: L(g),
+                            viewBox: "0 0 " + r + " " + f,
+                            preserveAspectRatio: u[v] + " slice",
+                        }),
+                        y = e5([h[v]], [x], t);
+                    if (1 === b) return { span: y, minWidth: d, height: g };
+                    ((y.style.height = L(g)), c.push(y));
+                }
+                return { span: e4(["katex-stretchy"], c, t), minWidth: d, height: g };
+            })(),
+            a = r.span,
+            n = r.minWidth,
+            i = r.height;
+        return ((a.height = i), (a.style.height = L(i)), n > 0 && (a.style.minWidth = L(n)), a);
     },
-    tU = function (e, t, r, n, a) {
+    t4 = function (e, t, r, a, n) {
         var i,
-            s = e.height + e.depth + r + n;
+            s = e.height + e.depth + r + a;
         if (/fbox|color|angl/.test(t)) {
-            if (((i = e$(["stretchy", t], [], a)), "fbox" === t)) {
-                var l = a.color && a.getColor();
+            if (((i = e4(["katex-stretchy", t], [], n)), "fbox" === t)) {
+                var l = n.color && n.getColor();
                 l && (i.style.borderColor = l);
             }
         } else {
             var o = [];
             (/^[bx]cancel$/.test(t) &&
-                o.push(new Y({ x1: "0", y1: "0", x2: "100%", y2: "100%", "stroke-width": "0.046em" })),
+                o.push(new K({ x1: "0", y1: "0", x2: "100%", y2: "100%", "stroke-width": "0.046em" })),
                 /^x?cancel$/.test(t) &&
-                    o.push(new Y({ x1: "0", y1: "100%", x2: "100%", y2: "0", "stroke-width": "0.046em" })),
-                (i = eW([], [new X(o, { width: "100%", height: H(s) })], a)));
+                    o.push(new K({ x1: "0", y1: "100%", x2: "100%", y2: "0", "stroke-width": "0.046em" })),
+                (i = e5([], [new G(o, { width: "100%", height: L(s) })], n)));
         }
-        return ((i.height = s), (i.style.height = H(s)), i);
-    };
-function t$(e, t) {
+        return ((i.height = s), (i.style.height = L(s)), i);
+    },
+    t5 = new Set(["bin", "close", "inner", "open", "punct", "rel"]),
+    t3 = new Set(["accent-token", "mathord", "op-token", "spacing", "textord"]);
+function t6(e, t) {
     if (!e || e.type !== t)
         throw Error("Expected node of type " + t + ", but got " + (e ? "node of type " + e.type : String(e)));
     return e;
 }
-function tW(e) {
-    var t = tV(e);
+function t7(e) {
+    var t = t2(e);
     if (!t) throw Error("Expected node of symbol group type, but got " + (e ? "node of type " + e.type : String(e)));
     return t;
 }
-function tV(e) {
-    return e && ("atom" === e.type || en.hasOwnProperty(e.type)) ? e : null;
+function t2(e) {
+    return "atom" === e.type || t3.has(e.type) ? e : null;
 }
-var tX = (e) =>
-        e instanceof V
+function t8(e, t, r) {
+    var n = "";
+    for (var i of e.body)
+        if ("textord" === i.type) n += i.text;
+        else if (r && "spacing" === i.type && " " === i.text) n += " ";
+        else throw new a(t, e);
+    return n;
+}
+var t9 = (e) =>
+        e instanceof X
             ? e
-            : (e instanceof P || e instanceof U || e instanceof E) && 1 === e.children.length
-              ? tX(e.children[0])
+            : (e instanceof $ || e instanceof W || e instanceof F) && 1 === e.children.length
+              ? t9(e.children[0])
               : void 0,
-    tZ = (e, t) => {
+    re = (e, t) => {
         e && "supsub" === e.type
-            ? ((l = (o = t$(e.base, "accent")).base),
+            ? ((l = (o = t6(e.base, "accent")).base),
               (e.base = l),
               (h = (function (e) {
-                  if (e instanceof P) return e;
+                  if (e instanceof $) return e;
                   throw Error("Expected span<HtmlDomNode> but got " + String(e) + ".");
-              })(tg(e, t))),
+              })(tD(e, t))),
               (e.base = o))
-            : (l = (o = t$(e, "accent")).base);
-        var r = tg(l, t.havingCrampedStyle()),
-            n = o.isShifty && p(l),
-            a = 0;
-        n && (a = null != (u = null == (c = tX(r)) ? void 0 : c.skew) ? u : 0);
+            : (l = (o = t6(e, "accent")).base);
+        var r = tD(l, t.havingCrampedStyle()),
+            a = o.isShifty && d(l),
+            n = 0;
+        a && (n = null != (u = null == (c = t9(r)) ? void 0 : c.skew) ? u : 0);
         var i = "\\c" === o.label,
             s = i ? r.height + r.depth : Math.min(r.height, t.fontMetrics().xHeight);
         if (o.isStretchy)
-            f = eK({
+            f = e9({
                 positionType: "firstBaseline",
                 children: [
                     { type: "elem", elem: r },
                     {
                         type: "elem",
-                        elem: (f = tP(o, t)),
+                        elem: (f = t1(o, t)),
                         wrapperClasses: ["svg-align"],
-                        wrapperStyle: a > 0 ? { width: "calc(100% - " + H(2 * a) + ")", marginLeft: H(2 * a) } : void 0,
+                        wrapperStyle: n > 0 ? { width: "calc(100% - " + L(2 * n) + ")", marginLeft: L(2 * n) } : void 0,
                     },
                 ],
             });
         else {
             "\\vec" === o.label
-                ? ((m = e5("vec", t)), (d = e4.vec[1]))
+                ? ((m = tn("vec", t)), (p = ta.vec[1]))
                 : (((m = (function (e) {
-                      if (e instanceof V) return e;
+                      if (e instanceof X) return e;
                       throw Error("Expected symbolNode but got " + String(e) + ".");
-                  })((m = eN({ type: "textord", mode: o.mode, text: o.label }, t, "textord")))).italic = 0),
-                  (d = m.width),
+                  })((m = eK({ type: "textord", mode: o.mode, text: o.label }, t)))).italic = 0),
+                  (p = m.width),
                   i && (s += m.depth));
             var l,
                 o,
@@ -4948,15 +5039,15 @@ var tX = (e) =>
                 u,
                 c,
                 m,
-                d,
-                f = e$(["accent-body"], [m]),
+                p,
+                f = e4(["accent-body"], [m]),
                 g = "\\textcircled" === o.label;
             g && (f.classes.push("accent-full"), (s = r.height));
-            var b = a;
-            (g || (b -= d / 2),
-                (f.style.left = H(b)),
+            var b = n;
+            (g || (b -= p / 2),
+                (f.style.left = L(b)),
                 "\\textcircled" === o.label && (f.style.top = ".2em"),
-                (f = eK({
+                (f = e9({
                     positionType: "firstBaseline",
                     children: [
                         { type: "elem", elem: r },
@@ -4965,15 +5056,10 @@ var tX = (e) =>
                     ],
                 })));
         }
-        var v = e$(["mord", "accent"], [f], t);
+        var v = e4(["mord", "katex-accent"], [f], t);
         return h ? ((h.children[0] = v), (h.height = Math.max(v.height, h.height)), (h.classes[0] = "mord"), h) : v;
     },
-    tY = (e, t) => {
-        var r = e.isStretchy ? tj(e.label) : new tx("mo", [tR(e.label, e.mode)]),
-            n = new tx("mover", [tM(e.base, t), r]);
-        return (n.setAttribute("accent", "true"), n);
-    },
-    tG = new RegExp(
+    rt = new RegExp(
         [
             "\\acute",
             "\\grave",
@@ -4990,7 +5076,7 @@ var tX = (e) =>
             .map((e) => "\\" + e)
             .join("|"),
     );
-(tr({
+(tp({
     type: "accent",
     names: [
         "\\acute",
@@ -5016,37 +5102,44 @@ var tX = (e) =>
         "\\overleftharpoon",
         "\\overrightharpoon",
     ],
-    props: { numArgs: 1 },
+    numArgs: 1,
     handler: (e, t) => {
-        var r = ta(t[0]),
-            n = !tG.test(e.funcName),
-            a = !n || "\\widehat" === e.funcName || "\\widetilde" === e.funcName || "\\widecheck" === e.funcName;
-        return { type: "accent", mode: e.parser.mode, label: e.funcName, isStretchy: n, isShifty: a, base: r };
+        var r = tf(t[0]),
+            a = !rt.test(e.funcName),
+            n = !a || "\\widehat" === e.funcName || "\\widetilde" === e.funcName || "\\widecheck" === e.funcName;
+        return { type: "accent", mode: e.parser.mode, label: e.funcName, isStretchy: a, isShifty: n, base: r };
     },
-    htmlBuilder: tZ,
-    mathmlBuilder: tY,
+    htmlBuilder: re,
+    mathmlBuilder: (e, t) => {
+        var r = e.isStretchy ? tK(e.label) : new tM("mo", [tq(e.label, e.mode)]),
+            a = new tM("mover", [tJ(e.base, t), r]);
+        return (a.setAttribute("accent", "true"), a);
+    },
 }),
-    tr({
+    tp({
         type: "accent",
         names: ["\\'", "\\`", "\\^", "\\~", "\\=", "\\u", "\\.", '\\"', "\\c", "\\r", "\\H", "\\v", "\\textcircled"],
-        props: { numArgs: 1, allowedInText: !0, allowedInMath: !0, argTypes: ["primitive"] },
+        numArgs: 1,
+        allowedInText: !0,
+        allowedInMath: !0,
+        argTypes: ["primitive"],
         handler: (e, t) => {
             var r = t[0],
-                n = e.parser.mode;
+                a = e.parser.mode;
             return (
-                "math" === n &&
-                    (e.parser.settings.reportNonstrict(
-                        "mathVsTextAccents",
-                        "LaTeX's accent " + e.funcName + " works only in text mode",
-                    ),
-                    (n = "text")),
-                { type: "accent", mode: n, label: e.funcName, isStretchy: !1, isShifty: !0, base: r }
+                "math" === a &&
+                    (eZ({
+                        strict: e.parser.settings.strict,
+                        errorCode: "mathVsTextAccents",
+                        errorMsg: "LaTeX's accent " + e.funcName + " works only in text mode",
+                        report: !0,
+                    }),
+                    (a = "text")),
+                { type: "accent", mode: a, label: e.funcName, isStretchy: !1, isShifty: !0, base: r }
             );
         },
-        htmlBuilder: tZ,
-        mathmlBuilder: tY,
     }),
-    tr({
+    tp({
         type: "accentUnder",
         names: [
             "\\underleftarrow",
@@ -5056,25 +5149,26 @@ var tX = (e) =>
             "\\underlinesegment",
             "\\utilde",
         ],
-        props: { numArgs: 1 },
+        numArgs: 1,
         handler: (e, t) => {
-            var { parser: r, funcName: n } = e,
-                a = t[0];
-            return { type: "accentUnder", mode: r.mode, label: n, base: a };
+            var r = e.parser,
+                a = e.funcName,
+                n = t[0];
+            return { type: "accentUnder", mode: r.mode, label: a, base: n };
         },
         htmlBuilder: (e, t) => {
-            var r = tg(e.base, t),
-                n = tP(e, t),
-                a = 0.12 * ("\\utilde" === e.label);
-            return e$(
+            var r = tD(e.base, t),
+                a = t1(e, t),
+                n = 0.12 * ("\\utilde" === e.label);
+            return e4(
                 ["mord", "accentunder"],
                 [
-                    eK({
+                    e9({
                         positionType: "top",
                         positionData: r.height,
                         children: [
-                            { type: "elem", elem: n, wrapperClasses: ["svg-align"] },
-                            { type: "kern", size: a },
+                            { type: "elem", elem: a, wrapperClasses: ["svg-align"] },
+                            { type: "kern", size: n },
                             { type: "elem", elem: r },
                         ],
                     }),
@@ -5083,42 +5177,16 @@ var tX = (e) =>
             );
         },
         mathmlBuilder: (e, t) => {
-            var r = tj(e.label),
-                n = new tx("munder", [tM(e.base, t), r]);
-            return (n.setAttribute("accentunder", "true"), n);
+            var r = tK(e.label),
+                a = new tM("munder", [tJ(e.base, t), r]);
+            return (a.setAttribute("accentunder", "true"), a);
         },
     }));
-var tK = (e) => {
-    var t = new tx("mpadded", e ? [e] : []);
+var rr = (e) => {
+    var t = new tM("mpadded", e ? [e] : []);
     return (t.setAttribute("width", "+0.6em"), t.setAttribute("lspace", "0.3em"), t);
 };
-function tQ(e, t) {
-    var r = tu(e.body, t, !0);
-    return e$([e.mclass], r, t);
-}
-function t0(e, t) {
-    var r,
-        n = tz(e.body, t);
-    return (
-        "minner" === e.mclass
-            ? (r = new tx("mpadded", n))
-            : "mord" === e.mclass
-              ? e.isCharacterBox
-                  ? ((r = n[0]).type = "mi")
-                  : (r = new tx("mi", n))
-              : (e.isCharacterBox ? ((r = n[0]).type = "mo") : (r = new tx("mo", n)),
-                "mbin" === e.mclass
-                    ? ((r.attributes.lspace = "0.22em"), (r.attributes.rspace = "0.22em"))
-                    : "mpunct" === e.mclass
-                      ? ((r.attributes.lspace = "0em"), (r.attributes.rspace = "0.17em"))
-                      : "mopen" === e.mclass || "mclose" === e.mclass
-                        ? ((r.attributes.lspace = "0em"), (r.attributes.rspace = "0em"))
-                        : "minner" === e.mclass &&
-                          ((r.attributes.lspace = "0.0556em"), (r.attributes.width = "+0.1111em"))),
-        r
-    );
-}
-(tr({
+(tp({
     type: "xArrow",
     names: [
         "\\xleftarrow",
@@ -5147,88 +5215,118 @@ function t0(e, t) {
         "\\\\cdleftarrow",
         "\\\\cdlongequal",
     ],
-    props: { numArgs: 1, numOptionalArgs: 1 },
+    numArgs: 1,
+    numOptionalArgs: 1,
     handler(e, t, r) {
-        var { parser: n, funcName: a } = e;
-        return { type: "xArrow", mode: n.mode, label: a, body: t[0], below: r[0] };
+        var a = e.parser,
+            n = e.funcName;
+        return { type: "xArrow", mode: a.mode, label: n, body: t[0], below: r[0] };
     },
     htmlBuilder(e, t) {
         var r,
-            n,
-            a = t.style,
-            i = t.havingStyle(a.sup()),
-            s = eY(tg(e.body, i, t), t),
+            a,
+            n = t.style,
+            i = t.havingStyle(n.sup()),
+            s = e2(tD(e.body, i, t), t),
             l = "\\x" === e.label.slice(0, 2) ? "x" : "cd";
         (s.classes.push(l + "-arrow-pad"),
-            e.below && ((i = t.havingStyle(a.sub())), (r = eY(tg(e.below, i, t), t)).classes.push(l + "-arrow-pad")));
-        var o = tP(e, t),
+            e.below && ((i = t.havingStyle(n.sub())), (r = e2(tD(e.below, i, t), t)).classes.push(l + "-arrow-pad")));
+        var o = t1(e, t),
             h = -t.fontMetrics().axisHeight + 0.5 * o.height,
             u = -t.fontMetrics().axisHeight - 0.5 * o.height - 0.111;
         if (((s.depth > 0.25 || "\\xleftequilibrium" === e.label) && (u -= s.depth), r)) {
             var c = -t.fontMetrics().axisHeight + r.height + 0.5 * o.height + 0.111;
-            n = eK({
+            a = e9({
                 positionType: "individualShift",
                 children: [
                     { type: "elem", elem: s, shift: u },
-                    { type: "elem", elem: o, shift: h },
+                    { type: "elem", elem: o, shift: h, wrapperClasses: ["svg-align"] },
                     { type: "elem", elem: r, shift: c },
                 ],
             });
         } else
-            n = eK({
+            a = e9({
                 positionType: "individualShift",
                 children: [
                     { type: "elem", elem: s, shift: u },
-                    { type: "elem", elem: o, shift: h },
+                    { type: "elem", elem: o, shift: h, wrapperClasses: ["svg-align"] },
                 ],
             });
-        return (n.children[0].children[0].children[1].classes.push("svg-align"), e$(["mrel", "x-arrow"], [n], t));
+        return e4(["mrel", "x-arrow"], [a], t);
     },
     mathmlBuilder(e, t) {
         var r,
-            n = tj(e.label);
-        if ((n.setAttribute("minsize", "x" === e.label.charAt(0) ? "1.75em" : "3.0em"), e.body)) {
-            var a = tK(tM(e.body, t));
-            r = e.below ? new tx("munderover", [n, tK(tM(e.below, t)), a]) : new tx("mover", [n, a]);
-        } else r = e.below ? new tx("munder", [n, tK(tM(e.below, t))]) : new tx("mover", [n, (r = tK())]);
+            a = tK(e.label);
+        if ((a.setAttribute("minsize", "x" === e.label.charAt(0) ? "1.75em" : "3.0em"), e.body)) {
+            var n = rr(tJ(e.body, t));
+            r = e.below ? new tM("munderover", [a, rr(tJ(e.below, t)), n]) : new tM("mover", [a, n]);
+        } else r = e.below ? new tM("munder", [a, rr(tJ(e.below, t))]) : new tM("mover", [a, (r = rr())]);
         return r;
     },
 }),
-    tr({
+    tp({
         type: "mclass",
         names: ["\\mathord", "\\mathbin", "\\mathrel", "\\mathopen", "\\mathclose", "\\mathpunct", "\\mathinner"],
-        props: { numArgs: 1, primitive: !0 },
+        numArgs: 1,
+        primitive: !0,
         handler(e, t) {
-            var { parser: r, funcName: n } = e,
-                a = t[0];
-            return { type: "mclass", mode: r.mode, mclass: "m" + n.slice(5), body: ti(a), isCharacterBox: p(a) };
+            var r = e.parser,
+                a = e.funcName,
+                n = t[0];
+            return { type: "mclass", mode: r.mode, mclass: "m" + a.slice(5), body: tg(n), isCharacterBox: d(n) };
         },
-        htmlBuilder: tQ,
-        mathmlBuilder: t0,
+        htmlBuilder: function (e, t) {
+            var r = tw(e.body, t, !0);
+            return e4([e.mclass], r, t);
+        },
+        mathmlBuilder: function (e, t) {
+            var r,
+                a = tO(e.body, t);
+            return (
+                "minner" === e.mclass
+                    ? (r = new tM("mpadded", a))
+                    : "mord" === e.mclass
+                      ? e.isCharacterBox
+                          ? ((r = a[0]).type = "mi")
+                          : (r = new tM("mi", a))
+                      : (e.isCharacterBox ? ((r = a[0]).type = "mo") : (r = new tM("mo", a)),
+                        "mbin" === e.mclass
+                            ? ((r.attributes.lspace = "0.22em"), (r.attributes.rspace = "0.22em"))
+                            : "mpunct" === e.mclass
+                              ? ((r.attributes.lspace = "0em"), (r.attributes.rspace = "0.17em"))
+                              : ("mopen" === e.mclass || "mclose" === e.mclass) &&
+                                ((r.attributes.lspace = "0em"), (r.attributes.rspace = "0em"))),
+                r
+            );
+        },
     }));
-var t1 = (e) => {
+var ra = (e) => {
     var t = "ordgroup" === e.type && e.body.length ? e.body[0] : e;
     return "atom" === t.type && ("bin" === t.family || "rel" === t.family) ? "m" + t.family : "mord";
 };
-(tr({
+(tp({
     type: "mclass",
     names: ["\\@binrel"],
-    props: { numArgs: 2 },
-    handler(e, t) {
-        var { parser: r } = e;
-        return { type: "mclass", mode: r.mode, mclass: t1(t[0]), body: ti(t[1]), isCharacterBox: p(t[1]) };
-    },
+    numArgs: 2,
+    handler: (e, t) => ({
+        type: "mclass",
+        mode: e.parser.mode,
+        mclass: ra(t[0]),
+        body: tg(t[1]),
+        isCharacterBox: d(t[1]),
+    }),
 }),
-    tr({
+    tp({
         type: "mclass",
         names: ["\\stackrel", "\\overset", "\\underset"],
-        props: { numArgs: 2 },
+        numArgs: 2,
         handler(e, t) {
             var r,
-                { parser: n, funcName: a } = e,
+                a = e.parser,
+                n = e.funcName,
                 i = t[1],
                 s = t[0];
-            r = "\\stackrel" !== a ? t1(i) : "mrel";
+            r = "\\stackrel" !== n ? ra(i) : "mrel";
             var l = {
                     type: "op",
                     mode: i.mode,
@@ -5236,40 +5334,33 @@ var t1 = (e) => {
                     alwaysHandleSupSub: !0,
                     parentIsSupSub: !1,
                     symbol: !1,
-                    suppressBaseShift: "\\stackrel" !== a,
-                    body: ti(i),
+                    suppressBaseShift: "\\stackrel" !== n,
+                    body: tg(i),
                 },
-                o = {
-                    type: "supsub",
-                    mode: s.mode,
-                    base: l,
-                    sup: "\\underset" === a ? null : s,
-                    sub: "\\underset" === a ? s : null,
-                };
-            return { type: "mclass", mode: n.mode, mclass: r, body: [o], isCharacterBox: p(o) };
+                o =
+                    "\\underset" === n
+                        ? { type: "supsub", mode: s.mode, base: l, sub: s }
+                        : { type: "supsub", mode: s.mode, base: l, sup: s };
+            return { type: "mclass", mode: a.mode, mclass: r, body: [o], isCharacterBox: d(o) };
         },
-        htmlBuilder: tQ,
-        mathmlBuilder: t0,
     }),
-    tr({
+    tp({
         type: "pmb",
         names: ["\\pmb"],
-        props: { numArgs: 1, allowedInText: !0 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "pmb", mode: r.mode, mclass: t1(t[0]), body: ti(t[0]) };
-        },
+        numArgs: 1,
+        allowedInText: !0,
+        handler: (e, t) => ({ type: "pmb", mode: e.parser.mode, mclass: ra(t[0]), body: tg(t[0]) }),
         htmlBuilder(e, t) {
-            var r = tu(e.body, t, !0),
-                n = e$([e.mclass], r, t);
-            return ((n.style.textShadow = "0.02em 0.01em 0.04px"), n);
+            var r = tw(e.body, t, !0),
+                a = e4([e.mclass], r, t);
+            return ((a.style.textShadow = "0.02em 0.01em 0.04px"), a);
         },
         mathmlBuilder(e, t) {
-            var r = new tx("mstyle", tz(e.body, t));
+            var r = new tM("mstyle", tO(e.body, t));
             return (r.setAttribute("style", "text-shadow: 0.02em 0.01em 0.04px"), r);
         },
     }));
-var t4 = {
+var rn = {
         ">": "\\\\cdrightarrow",
         "<": "\\\\cdleftarrow",
         "=": "\\\\cdlongequal",
@@ -5278,129 +5369,134 @@ var t4 = {
         "|": "\\Vert",
         ".": "no arrow",
     },
-    t5 = () => ({ type: "styling", body: [], mode: "math", style: "display" }),
-    t3 = (e) => "textord" === e.type && "@" === e.text,
-    t6 = (e, t) => ("mathord" === e.type || "atom" === e.type) && e.text === t;
-(tr({
+    ri = () => ({ type: "styling", body: [], mode: "math", style: "display", resetFont: !0 }),
+    rs = (e) => "textord" === e.type && "@" === e.text,
+    rl = (e, t) => ("mathord" === e.type || "atom" === e.type) && e.text === t;
+(tp({
     type: "cdlabel",
     names: ["\\\\cdleft", "\\\\cdright"],
-    props: { numArgs: 1 },
+    numArgs: 1,
     handler(e, t) {
-        var { parser: r, funcName: n } = e;
-        return { type: "cdlabel", mode: r.mode, side: n.slice(4), label: t[0] };
+        var r = e.parser,
+            a = e.funcName;
+        return { type: "cdlabel", mode: r.mode, side: a.slice(4), label: t[0] };
     },
     htmlBuilder(e, t) {
         var r = t.havingStyle(t.style.sup()),
-            n = eY(tg(e.label, r, t), t);
+            a = e2(tD(e.label, r, t), t);
         return (
-            n.classes.push("cd-label-" + e.side), (n.style.bottom = H(0.8 - n.depth)), (n.height = 0), (n.depth = 0), n
+            a.classes.push("cd-label-" + e.side), (a.style.bottom = L(0.8 - a.depth)), (a.height = 0), (a.depth = 0), a
         );
     },
     mathmlBuilder(e, t) {
-        var r = new tx("mrow", [tM(e.label, t)]);
+        var r = new tM("mrow", [tJ(e.label, t)]);
         return (
-            (r = new tx("mpadded", [r])).setAttribute("width", "0"),
+            (r = new tM("mpadded", [r])).setAttribute("width", "0"),
             "left" === e.side && r.setAttribute("lspace", "-1width"),
             r.setAttribute("voffset", "0.7em"),
-            (r = new tx("mstyle", [r])).setAttribute("displaystyle", "false"),
+            (r = new tM("mstyle", [r])).setAttribute("displaystyle", "false"),
             r.setAttribute("scriptlevel", "1"),
             r
         );
     },
 }),
-    tr({
+    tp({
         type: "cdlabelparent",
         names: ["\\\\cdparent"],
-        props: { numArgs: 1 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "cdlabelparent", mode: r.mode, fragment: t[0] };
-        },
+        numArgs: 1,
+        handler: (e, t) => ({ type: "cdlabelparent", mode: e.parser.mode, fragment: t[0] }),
         htmlBuilder(e, t) {
-            var r = eY(tg(e.fragment, t), t);
+            var r = e2(tD(e.fragment, t), t);
             return (r.classes.push("cd-vert-arrow"), r);
         },
-        mathmlBuilder: (e, t) => new tx("mrow", [tM(e.fragment, t)]),
+        mathmlBuilder: (e, t) => new tM("mrow", [tJ(e.fragment, t)]),
     }),
-    tr({
+    tp({
         type: "textord",
         names: ["\\@char"],
-        props: { numArgs: 1, allowedInText: !0 },
+        numArgs: 1,
+        allowedInText: !0,
         handler(e, t) {
-            for (var r, { parser: a } = e, i = t$(t[0], "ordgroup").body, s = "", l = 0; l < i.length; l++)
-                s += t$(i[l], "textord").text;
-            var o = parseInt(s);
-            if (isNaN(o)) throw new n("\\@char has non-numeric argument " + s);
-            if (o < 0 || o >= 1114111) throw new n("\\@char with invalid code point " + s);
+            var r,
+                n = e.parser,
+                i = t8(t6(t[0], "ordgroup"), "\\@char has non-numeric argument"),
+                s = parseInt(i);
+            if (isNaN(s)) throw new a("\\@char has non-numeric argument " + i);
+            if (s < 0 || s > 1114111) throw new a("\\@char with invalid code point " + i);
             return (
-                o <= 65535
-                    ? (r = String.fromCharCode(o))
-                    : ((o -= 65536), (r = String.fromCharCode((o >> 10) + 55296, (1023 & o) + 56320))),
-                { type: "textord", mode: a.mode, text: r }
+                s <= 65535
+                    ? (r = String.fromCharCode(s))
+                    : ((s -= 65536), (r = String.fromCharCode((s >> 10) + 55296, (1023 & s) + 56320))),
+                { type: "textord", mode: n.mode, text: r }
             );
         },
-    }));
-var t7 = (e, t) => eZ(tu(e.body, t.withColor(e.color), !1)),
-    t2 = (e, t) => {
-        var r = new tx("mstyle", tz(e.body, t.withColor(e.color)));
-        return (r.setAttribute("mathcolor", e.color), r);
-    };
-(tr({
-    type: "color",
-    names: ["\\textcolor"],
-    props: { numArgs: 2, allowedInText: !0, argTypes: ["color", "original"] },
-    handler(e, t) {
-        var { parser: r } = e,
-            n = t$(t[0], "color-token").color,
-            a = t[1];
-        return { type: "color", mode: r.mode, color: n, body: ti(a) };
-    },
-    htmlBuilder: t7,
-    mathmlBuilder: t2,
-}),
-    tr({
+    }),
+    tp({
+        type: "color",
+        names: ["\\textcolor"],
+        numArgs: 2,
+        allowedInText: !0,
+        argTypes: ["color", "original"],
+        handler(e, t) {
+            var r = e.parser,
+                a = t6(t[0], "color-token").color,
+                n = t[1];
+            return { type: "color", mode: r.mode, color: a, body: tg(n) };
+        },
+        htmlBuilder: (e, t) => e7(tw(e.body, t.withColor(e.color), !1)),
+        mathmlBuilder: (e, t) => {
+            var r = new tM("mstyle", tO(e.body, t.withColor(e.color)));
+            return (r.setAttribute("mathcolor", e.color), r);
+        },
+    }),
+    tp({
         type: "color",
         names: ["\\color"],
-        props: { numArgs: 1, allowedInText: !0, argTypes: ["color"] },
+        numArgs: 1,
+        allowedInText: !0,
+        argTypes: ["color"],
         handler(e, t) {
-            var { parser: r, breakOnTokenText: n } = e,
-                a = t$(t[0], "color-token").color;
-            r.gullet.macros.set("\\current@color", a);
-            var i = r.parseExpression(!0, n);
-            return { type: "color", mode: r.mode, color: a, body: i };
+            var r = e.parser,
+                a = e.breakOnTokenText,
+                n = t6(t[0], "color-token").color;
+            r.gullet.macros.set("\\current@color", n);
+            var i = r.parseExpression(!0, a);
+            return { type: "color", mode: r.mode, color: n, body: i };
         },
-        htmlBuilder: t7,
-        mathmlBuilder: t2,
     }),
-    tr({
+    tp({
         type: "cr",
         names: ["\\\\"],
-        props: { numArgs: 0, numOptionalArgs: 0, allowedInText: !0 },
-        handler(e, t, r) {
-            var { parser: n } = e,
-                a = "[" === n.gullet.future().text ? n.parseSizeGroup(!0) : null,
-                i =
-                    !n.settings.displayMode ||
-                    !n.settings.useStrictBehavior(
-                        "newLineInDisplayMode",
-                        "In LaTeX, \\\\ or \\newline does nothing in display mode",
-                    );
-            return { type: "cr", mode: n.mode, newLine: i, size: a && t$(a, "size").value };
+        numArgs: 0,
+        numOptionalArgs: 0,
+        allowedInText: !0,
+        handler(e) {
+            var t = e.parser,
+                r = "[" === t.gullet.future().text ? t.parseSizeGroup(!0) : null,
+                a =
+                    !t.settings.displayMode ||
+                    !eZ({
+                        strict: t.settings.strict,
+                        errorCode: "newLineInDisplayMode",
+                        errorMsg: "In LaTeX, \\\\ or \\newline does nothing in display mode",
+                        report: !1,
+                    });
+            return { type: "cr", mode: t.mode, newLine: a, size: r && t6(r, "size").value };
         },
         htmlBuilder(e, t) {
-            var r = e$(["mspace"], [], t);
-            return (e.newLine && (r.classes.push("newline"), e.size && (r.style.marginTop = H(I(e.size, t)))), r);
+            var r = e4(["mspace"], [], t);
+            return (e.newLine && (r.classes.push("katex-newline"), e.size && (r.style.marginTop = L(j(e.size, t)))), r);
         },
         mathmlBuilder(e, t) {
-            var r = new tx("mspace");
+            var r = new tM("mspace");
             return (
                 e.newLine &&
-                    (r.setAttribute("linebreak", "newline"), e.size && r.setAttribute("height", H(I(e.size, t)))),
+                    (r.setAttribute("linebreak", "newline"), e.size && r.setAttribute("height", L(j(e.size, t)))),
                 r
             );
         },
     }));
-var t8 = {
+var ro = {
         "\\global": "\\global",
         "\\long": "\\\\globallong",
         "\\\\globallong": "\\\\globallong",
@@ -5411,42 +5507,47 @@ var t8 = {
         "\\let": "\\\\globallet",
         "\\futurelet": "\\\\globalfuture",
     },
-    t9 = (e) => {
+    rh = (e) => {
         var t = e.text;
-        if (/^(?:[\\{}$&#^_]|EOF)$/.test(t)) throw new n("Expected a control sequence", e);
+        if (/^(?:[\\{}$&#^_]|EOF)$/.test(t)) throw new a("Expected a control sequence", e);
         return t;
     },
-    re = (e, t, r, n) => {
-        var a = e.gullet.macros.get(r.text);
-        (null == a &&
-            ((r.noexpand = !0), (a = { tokens: [r], numArgs: 0, unexpandable: !e.gullet.isExpandable(r.text) })),
-            e.gullet.macros.set(t, a, n));
+    ru = (e, t, r, a) => {
+        var n = e.gullet.macros.get(r.text);
+        (null == n &&
+            ((r.noexpand = !0), (n = { tokens: [r], numArgs: 0, unexpandable: !e.gullet.isExpandable(r.text) })),
+            e.gullet.macros.set(t, n, a));
     };
-(tr({
+(tp({
     type: "internal",
     names: ["\\global", "\\long", "\\\\globallong"],
-    props: { numArgs: 0, allowedInText: !0 },
+    numArgs: 0,
+    allowedInText: !0,
     handler(e) {
-        var { parser: t, funcName: r } = e;
+        var t = e.parser,
+            r = e.funcName;
         t.consumeSpaces();
-        var a = t.fetch();
-        if (t8[a.text])
+        var n = t.fetch();
+        if (ro[n.text])
             return (
-                ("\\global" === r || "\\\\globallong" === r) && (a.text = t8[a.text]), t$(t.parseFunction(), "internal")
+                ("\\global" === r || "\\\\globallong" === r) && (n.text = ro[n.text]), t6(t.parseFunction(), "internal")
             );
-        throw new n("Invalid token after macro prefix", a);
+        throw new a("Invalid token after macro prefix", n);
     },
 }),
-    tr({
+    tp({
         type: "internal",
         names: ["\\def", "\\gdef", "\\edef", "\\xdef"],
-        props: { numArgs: 0, allowedInText: !0, primitive: !0 },
+        numArgs: 0,
+        allowedInText: !0,
+        primitive: !0,
         handler(e) {
             var t,
-                { parser: r, funcName: a } = e,
+                r = e.parser,
+                n = e.funcName,
                 i = r.gullet.popToken(),
                 s = i.text;
-            if (/^(?:[\\{}$&#^_]|EOF)$/.test(s)) throw new n("Expected a control sequence", i);
+            if (/^(?:[\\{}$&#^_]|EOF)$/.test(s)) throw new a("Expected a control sequence", i);
             for (var l = 0, o = [[]]; "{" !== r.gullet.future().text;)
                 if ("#" === (i = r.gullet.popToken()).text) {
                     if ("{" === r.gullet.future().text) {
@@ -5454,111 +5555,117 @@ var t8 = {
                         break;
                     }
                     if (((i = r.gullet.popToken()), !/^[1-9]$/.test(i.text)))
-                        throw new n('Invalid argument number "' + i.text + '"');
-                    if (parseInt(i.text) !== l + 1) throw new n('Argument number "' + i.text + '" out of order');
+                        throw new a('Invalid argument number "' + i.text + '"');
+                    if (parseInt(i.text) !== l + 1) throw new a('Argument number "' + i.text + '" out of order');
                     (l++, o.push([]));
-                } else if ("EOF" === i.text) throw new n("Expected a macro definition");
+                } else if ("EOF" === i.text) throw new a("Expected a macro definition");
                 else o[l].push(i.text);
-            var { tokens: h } = r.gullet.consumeArg();
+            var h = r.gullet.consumeArg().tokens;
             return (
                 t && h.unshift(t),
-                ("\\edef" === a || "\\xdef" === a) && (h = r.gullet.expandTokens(h)).reverse(),
-                r.gullet.macros.set(s, { tokens: h, numArgs: l, delimiters: o }, a === t8[a]),
+                ("\\edef" === n || "\\xdef" === n) && (h = r.gullet.expandTokens(h)).reverse(),
+                r.gullet.macros.set(s, { tokens: h, numArgs: l, delimiters: o }, n === ro[n]),
                 { type: "internal", mode: r.mode }
             );
         },
     }),
-    tr({
+    tp({
         type: "internal",
         names: ["\\let", "\\\\globallet"],
-        props: { numArgs: 0, allowedInText: !0, primitive: !0 },
+        numArgs: 0,
+        allowedInText: !0,
+        primitive: !0,
         handler(e) {
             var t,
-                { parser: r, funcName: n } = e,
-                a = t9(r.gullet.popToken());
+                r = e.parser,
+                a = e.funcName,
+                n = rh(r.gullet.popToken());
             r.gullet.consumeSpaces();
             var i =
                 ("=" === (t = r.gullet.popToken()).text &&
                     " " === (t = r.gullet.popToken()).text &&
                     (t = r.gullet.popToken()),
                 t);
-            return (re(r, a, i, "\\\\globallet" === n), { type: "internal", mode: r.mode });
+            return (ru(r, n, i, "\\\\globallet" === a), { type: "internal", mode: r.mode });
         },
     }),
-    tr({
+    tp({
         type: "internal",
         names: ["\\futurelet", "\\\\globalfuture"],
-        props: { numArgs: 0, allowedInText: !0, primitive: !0 },
+        numArgs: 0,
+        allowedInText: !0,
+        primitive: !0,
         handler(e) {
-            var { parser: t, funcName: r } = e,
-                n = t9(t.gullet.popToken()),
-                a = t.gullet.popToken(),
+            var t = e.parser,
+                r = e.funcName,
+                a = rh(t.gullet.popToken()),
+                n = t.gullet.popToken(),
                 i = t.gullet.popToken();
             return (
-                re(t, n, i, "\\\\globalfuture" === r),
+                ru(t, a, i, "\\\\globalfuture" === r),
                 t.gullet.pushToken(i),
-                t.gullet.pushToken(a),
+                t.gullet.pushToken(n),
                 { type: "internal", mode: t.mode }
             );
         },
     }));
-var rt = function (e, t, r) {
-        var n = ee((ea.math[e] && ea.math[e].replace) || e, t, r);
-        if (!n) throw Error("Unsupported symbol " + e + " and font size " + t + ".");
-        return n;
+var rc = function (e, t, r) {
+        var a = er((en.math[e] && en.math[e].replace) || e, t, r);
+        if (!a) throw Error("Unsupported symbol " + e + " and font size " + t + ".");
+        return a;
     },
-    rr = function (e, t, r, n) {
-        var a = r.havingBaseStyle(t),
-            i = e$(n.concat(a.sizingClasses(r)), [e], r),
-            s = a.sizeMultiplier / r.sizeMultiplier;
-        return ((i.height *= s), (i.depth *= s), (i.maxFontSize = a.sizeMultiplier), i);
+    rm = function (e, t, r, a) {
+        var n = r.havingBaseStyle(t),
+            i = e4(a.concat(n.sizingClasses(r)), [e], r),
+            s = n.sizeMultiplier / r.sizeMultiplier;
+        return ((i.height *= s), (i.depth *= s), (i.maxFontSize = n.sizeMultiplier), i);
     },
-    rn = function (e, t, r) {
-        var n = t.havingBaseStyle(r),
-            a = (1 - t.sizeMultiplier / n.sizeMultiplier) * t.fontMetrics().axisHeight;
-        (e.classes.push("delimcenter"), (e.style.top = H(a)), (e.height -= a), (e.depth += a));
+    rp = function (e, t, r) {
+        var a = t.havingBaseStyle(r),
+            n = (1 - t.sizeMultiplier / a.sizeMultiplier) * t.fontMetrics().axisHeight;
+        (e.classes.push("delimcenter"), (e.style.top = L(n)), (e.height -= n), (e.depth += n));
     },
-    ra = function (e, t, r, n, a, i) {
-        var s = rr(eO(e, "Main-Regular", a, n), t, n, i);
-        return (r && rn(s, n, t), s);
+    rd = function (e, t, r, a, n, i) {
+        var s = rm(eG(e, "Main-Regular", n, a), t, a, i);
+        return (r && rp(s, a, t), s);
     },
-    ri = function (e, t, r, n, a, i) {
-        var s = eO(e, "Size" + t + "-Regular", a, n),
-            l = rr(e$(["delimsizing", "size" + t], [s], n), R.TEXT, n, i);
-        return (r && rn(l, n, R.TEXT), l);
+    rf = function (e, t, r, a, n, i) {
+        var s = eG(e, "Size" + t + "-Regular", n, a),
+            l = rm(e4(["delimsizing", "size" + t], [s], a), R.TEXT, a, i);
+        return (r && rp(l, a, R.TEXT), l);
     },
-    rs = function (e, t, r) {
+    rg = function (e, t, r, a) {
         return {
             type: "elem",
-            elem: e$(
+            elem: e4(
                 ["delimsizinginner", "Size1-Regular" === t ? "delim-size1" : "delim-size4"],
-                [e$([], [eO(e, t, r)])],
+                [e4([], [eG(e, t, r, a)])],
             ),
         };
     },
-    rl = function (e, t, r) {
-        var n = G["Size4-Regular"][e.charCodeAt(0)]
-                ? G["Size4-Regular"][e.charCodeAt(0)][4]
-                : G["Size1-Regular"][e.charCodeAt(0)][4],
-            a = eW(
+    rb = function (e, t, r) {
+        var a = Q["Size4-Regular"][e.charCodeAt(0)]
+                ? Q["Size4-Regular"][e.charCodeAt(0)][4]
+                : Q["Size1-Regular"][e.charCodeAt(0)][4],
+            n = e5(
                 [],
                 [
-                    new X([new Z("inner", S(e, Math.round(1e3 * t)))], {
-                        width: H(n),
-                        height: H(t),
-                        style: "width:" + H(n),
-                        viewBox: "0 0 " + 1e3 * n + " " + Math.round(1e3 * t),
+                    new G([new Y("inner", M(e, Math.round(1e3 * t)))], {
+                        width: L(a),
+                        height: L(t),
+                        style: "width:" + L(a),
+                        viewBox: "0 0 " + 1e3 * a + " " + Math.round(1e3 * t),
                         preserveAspectRatio: "xMinYMin",
                     }),
                 ],
                 r,
             );
-        return ((a.height = t), (a.style.height = H(t)), (a.style.width = H(n)), { type: "elem", elem: a });
+        return ((n.height = t), (n.style.height = L(t)), (n.style.width = L(a)), { type: "elem", elem: n });
     },
-    ro = { type: "kern", size: -0.008 },
-    rh = new Set(["|", "\\lvert", "\\rvert", "\\vert"]),
-    ru = new Set(["\\|", "\\lVert", "\\rVert", "\\Vert"]),
-    rc = function (e, t, r, n, a, i) {
+    rv = { type: "kern", size: -0.008 },
+    rx = new Set(["|", "\\lvert", "\\rvert", "\\vert"]),
+    ry = new Set(["\\|", "\\lVert", "\\rVert", "\\Vert"]),
+    rw = function (e, t, r, a, n, i) {
         var s,
             l,
             o,
@@ -5579,9 +5686,9 @@ var rt = function (e, t, r) {
                     ? ((s = "\\uparrow"), (o = "\u23D0"), (h = "\\downarrow"))
                     : "\\Updownarrow" === e
                       ? ((s = "\\Uparrow"), (o = "\u2016"), (h = "\\Downarrow"))
-                      : rh.has(e)
+                      : rx.has(e)
                         ? ((o = "\u2223"), (u = "vert"), (c = 333))
-                        : ru.has(e)
+                        : ry.has(e)
                           ? ((o = "\u2225"), (u = "doublevert"), (c = 556))
                           : "[" === e || "\\lbrack" === e
                             ? ((s = "\u23A1"),
@@ -5663,98 +5770,98 @@ var rt = function (e, t, r) {
                                                       (h = "\u23A9"),
                                                       (o = "\u23AA"),
                                                       (m = "Size4-Regular"));
-        var p = rt(s, m, a),
+        var p = rc(s, m, n),
             d = p.height + p.depth,
-            f = rt(o, m, a),
+            f = rc(o, m, n),
             g = f.height + f.depth,
-            b = rt(h, m, a),
+            b = rc(h, m, n),
             v = b.height + b.depth,
             x = 0,
             y = 1;
         if (null !== l) {
-            var w = rt(l, m, a);
+            var w = rc(l, m, n);
             ((x = w.height + w.depth), (y = 2));
         }
         var k = d + v + x,
             A = Math.max(0, Math.ceil((t - k) / (y * g))),
             C = k + A * y * g,
-            _ = n.fontMetrics().axisHeight;
-        r && (_ *= n.sizeMultiplier);
+            _ = a.fontMetrics().axisHeight;
+        r && (_ *= a.sizeMultiplier);
         var D = C / 2 - _,
             z = [];
         if (u.length > 0) {
             var S = Math.round(1e3 * C),
-                M = T(u, Math.round(1e3 * (C - d - v))),
-                E = new Z(u, M),
-                B = H(c / 1e3),
-                F = H(S / 1e3),
-                q = eW([], [new X([E], { width: B, height: F, viewBox: "0 0 " + c + " " + S })], n);
-            ((q.height = S / 1e3), (q.style.width = B), (q.style.height = F), z.push({ type: "elem", elem: q }));
+                M = E(u, Math.round(1e3 * (C - d - v))),
+                T = new Y(u, M),
+                F = L(c / 1e3),
+                B = L(S / 1e3),
+                q = e5([], [new G([T], { width: F, height: B, viewBox: "0 0 " + c + " " + S })], a);
+            ((q.height = S / 1e3), (q.style.width = F), (q.style.height = B), z.push({ type: "elem", elem: q }));
         } else {
-            if ((z.push(rs(h, m, a)), z.push(ro), null === l)) z.push(rl(o, C - d - v + 0.016, n));
+            if ((z.push(rg(h, m, n, a)), z.push(rv), null === l)) z.push(rb(o, C - d - v + 0.016, a));
             else {
                 var I = (C - d - v - x) / 2 + 0.016;
-                (z.push(rl(o, I, n)), z.push(ro), z.push(rs(l, m, a)), z.push(ro), z.push(rl(o, I, n)));
+                (z.push(rb(o, I, a)), z.push(rv), z.push(rg(l, m, n, a)), z.push(rv), z.push(rb(o, I, a)));
             }
-            (z.push(ro), z.push(rs(s, m, a)));
+            (z.push(rv), z.push(rg(s, m, n, a)));
         }
-        var L = n.havingBaseStyle(R.TEXT);
-        return rr(
-            e$(["delimsizing", "mult"], [eK({ positionType: "bottom", positionData: D, children: z })], L),
+        var j = a.havingBaseStyle(R.TEXT);
+        return rm(
+            e4(["delimsizing", "mult"], [e9({ positionType: "bottom", positionData: D, children: z })], j),
             R.TEXT,
-            n,
+            a,
             i,
         );
     },
-    rm = function (e, t, r, n, a) {
-        var i = z(e, n, r);
-        return eW(
+    rk = function (e, t, r, a, n) {
+        var i = S(e, a, r);
+        return e5(
             ["hide-tail"],
             [
-                new X([new Z(e, i)], {
+                new G([new Y(e, i)], {
                     width: "400em",
-                    height: H(t),
+                    height: L(t),
                     viewBox: "0 0 400000 " + r,
                     preserveAspectRatio: "xMinYMin slice",
                 }),
             ],
-            a,
-        );
-    },
-    rp = function (e, t) {
-        var r,
             n,
-            a = t.havingBaseSizing(),
-            i = rA("\\surd", e * a.sizeMultiplier, rw, a),
-            s = a.sizeMultiplier,
-            l = Math.max(0, t.minRuleThickness - t.fontMetrics().sqrtRuleThickness),
-            o = 0,
-            h = 0,
-            u = 0;
-        return (
-            "small" === i.type
-                ? ((u = 1e3 + 1e3 * l + 80),
-                  e < 1 ? (s = 1) : e < 1.4 && (s = 0.7),
-                  (o = (1 + l + 0.08) / s),
-                  (h = (1 + l) / s),
-                  ((r = rm("sqrtMain", o, u, l, t)).style.minWidth = "0.853em"),
-                  (n = 0.833 / s))
-                : "large" === i.type
-                  ? ((u = 1080 * rb[i.size]),
-                    (h = (rb[i.size] + l) / s),
-                    (o = (rb[i.size] + l + 0.08) / s),
-                    ((r = rm("sqrtSize" + i.size, o, u, l, t)).style.minWidth = "1.02em"),
-                    (n = 1 / s))
-                  : ((o = e + l + 0.08),
-                    (h = e + l),
-                    ((r = rm("sqrtTall", o, (u = Math.floor(1e3 * e + l) + 80), l, t)).style.minWidth = "0.742em"),
-                    (n = 1.056)),
-            (r.height = h),
-            (r.style.height = H(o)),
-            { span: r, advanceWidth: n, ruleWidth: (t.fontMetrics().sqrtRuleThickness + l) * s }
         );
     },
-    rd = new Set([
+    rA = function (e, t) {
+        var r,
+            a,
+            n,
+            i,
+            s,
+            l = t.havingBaseSizing(),
+            o = rF("\\surd", e * l.sizeMultiplier, rT, l),
+            h = l.sizeMultiplier,
+            u = Math.max(0, t.minRuleThickness - t.fontMetrics().sqrtRuleThickness);
+        return (
+            "small" === o.type
+                ? ((i = 1e3 + 1e3 * u + 80),
+                  e < 1 ? (h = 1) : e < 1.4 && (h = 0.7),
+                  (a = (1 + u + 0.08) / h),
+                  (n = (1 + u) / h),
+                  ((r = rk("sqrtMain", a, i, u, t)).style.minWidth = "0.853em"),
+                  (s = 0.833 / h))
+                : "large" === o.type
+                  ? ((i = 1080 * rD[o.size]),
+                    (n = (rD[o.size] + u) / h),
+                    (a = (rD[o.size] + u + 0.08) / h),
+                    ((r = rk("sqrtSize" + o.size, a, i, u, t)).style.minWidth = "1.02em"),
+                    (s = 1 / h))
+                  : ((a = e + u + 0.08),
+                    (n = e + u),
+                    ((r = rk("sqrtTall", a, (i = Math.floor(1e3 * e + u) + 80), u, t)).style.minWidth = "0.742em"),
+                    (s = 1.056)),
+            (r.height = n),
+            (r.style.height = L(a)),
+            { span: r, advanceWidth: s, ruleWidth: (t.fontMetrics().sqrtRuleThickness + u) * h }
+        );
+    },
+    rC = new Set([
         "(",
         "\\lparen",
         ")",
@@ -5777,7 +5884,7 @@ var rt = function (e, t, r) {
         "\u2309",
         "\\surd",
     ]),
-    rf = new Set([
+    rR = new Set([
         "\\uparrow",
         "\\downarrow",
         "\\updownarrow",
@@ -5801,20 +5908,20 @@ var rt = function (e, t, r) {
         "\u23B0",
         "\u23B1",
     ]),
-    rg = new Set(["<", ">", "\\langle", "\\rangle", "/", "\\backslash", "\\lt", "\\gt"]),
-    rb = [0, 1.2, 1.8, 2.4, 3],
-    rv = function (e, t, r, a, i) {
+    r_ = new Set(["<", ">", "\\langle", "\\rangle", "/", "\\backslash", "\\lt", "\\gt"]),
+    rD = [0, 1.2, 1.8, 2.4, 3],
+    rz = function (e, t, r, n, i) {
         if (
             ("<" === e || "\\lt" === e || "\u27E8" === e
                 ? (e = "\\langle")
                 : (">" === e || "\\gt" === e || "\u27E9" === e) && (e = "\\rangle"),
-            rd.has(e) || rg.has(e))
+            rC.has(e) || r_.has(e))
         )
-            return ri(e, t, !1, r, a, i);
-        if (rf.has(e)) return rc(e, rb[t], !1, r, a, i);
-        throw new n("Illegal delimiter: '" + e + "'");
+            return rf(e, t, !1, r, n, i);
+        if (rR.has(e)) return rw(e, rD[t], !1, r, n, i);
+        throw new a("Illegal delimiter: '" + e + "'");
     },
-    rx = [
+    rS = [
         { type: "small", style: R.SCRIPTSCRIPT },
         { type: "small", style: R.SCRIPT },
         { type: "small", style: R.TEXT },
@@ -5823,13 +5930,13 @@ var rt = function (e, t, r) {
         { type: "large", size: 3 },
         { type: "large", size: 4 },
     ],
-    ry = [
+    rM = [
         { type: "small", style: R.SCRIPTSCRIPT },
         { type: "small", style: R.SCRIPT },
         { type: "small", style: R.TEXT },
         { type: "stack" },
     ],
-    rw = [
+    rT = [
         { type: "small", style: R.SCRIPTSCRIPT },
         { type: "small", style: R.SCRIPT },
         { type: "small", style: R.TEXT },
@@ -5839,41 +5946,41 @@ var rt = function (e, t, r) {
         { type: "large", size: 4 },
         { type: "stack" },
     ],
-    rk = function (e) {
+    rE = function (e) {
         if ("small" === e.type) return "Main-Regular";
         if ("large" === e.type) return "Size" + e.size + "-Regular";
         if ("stack" === e.type) return "Size4-Regular";
         throw Error("Add support for delim type '" + e.type + "' here.");
     },
-    rA = function (e, t, r, n) {
-        for (var a = Math.min(2, 3 - n.style.size), i = a; i < r.length; i++) {
+    rF = function (e, t, r, a) {
+        for (var n = Math.min(2, 3 - a.style.size), i = n; i < r.length; i++) {
             var s = r[i];
             if ("stack" === s.type) break;
-            var l = rt(e, rk(s), "math"),
+            var l = rc(e, rE(s), "math"),
                 o = l.height + l.depth;
-            if (("small" === s.type && (o *= n.havingBaseStyle(s.style).sizeMultiplier), o > t)) return s;
+            if (("small" === s.type && (o *= a.havingBaseStyle(s.style).sizeMultiplier), o > t)) return s;
         }
         return r[r.length - 1];
     },
-    rR = function (e, t, r, n, a, i) {
+    rB = function (e, t, r, a, n, i) {
         "<" === e || "\\lt" === e || "\u27E8" === e
             ? (e = "\\langle")
             : (">" === e || "\\gt" === e || "\u27E9" === e) && (e = "\\rangle");
-        var s = rg.has(e) ? rx : rd.has(e) ? rw : ry,
-            l = rA(e, t, s, n);
+        var s = r_.has(e) ? rS : rC.has(e) ? rT : rM,
+            l = rF(e, t, s, a);
         return "small" === l.type
-            ? ra(e, l.style, r, n, a, i)
+            ? rd(e, l.style, r, a, n, i)
             : "large" === l.type
-              ? ri(e, l.size, r, n, a, i)
-              : rc(e, t, r, n, a, i);
+              ? rf(e, l.size, r, a, n, i)
+              : rw(e, t, r, a, n, i);
     },
-    rC = function (e, t, r, n, a, i) {
-        var s = n.fontMetrics().axisHeight * n.sizeMultiplier,
-            l = 5 / n.fontMetrics().ptPerEm,
+    rq = function (e, t, r, a, n, i) {
+        var s = a.fontMetrics().axisHeight * a.sizeMultiplier,
+            l = 5 / a.fontMetrics().ptPerEm,
             o = Math.max(t - s, r + s);
-        return rR(e, Math.max((o / 500) * 901, 2 * o - l), !0, n, a, i);
+        return rB(e, Math.max((o / 500) * 901, 2 * o - l), !0, a, n, i);
     },
-    r_ = {
+    rI = {
         "\\bigl": { mclass: "mopen", size: 1 },
         "\\Bigl": { mclass: "mopen", size: 2 },
         "\\biggl": { mclass: "mopen", size: 3 },
@@ -5891,7 +5998,7 @@ var rt = function (e, t, r) {
         "\\bigg": { mclass: "mord", size: 3 },
         "\\Bigg": { mclass: "mord", size: 4 },
     },
-    rD = new Set([
+    rj = new Set([
         "(",
         "\\lparen",
         ")",
@@ -5946,16 +6053,19 @@ var rt = function (e, t, r) {
         "\\Updownarrow",
         ".",
     ]);
-function rz(e, t) {
-    var r = tV(e);
-    if (r && rD.has(r.text)) return r;
-    if (r) throw new n("Invalid delimiter '" + r.text + "' after '" + t.funcName + "'", e);
-    throw new n("Invalid delimiter type '" + e.type + "'", e);
+function rL(e) {
+    return "isMiddle" in e;
 }
-function rS(e) {
+function rN(e, t) {
+    var r = t2(e);
+    if (r && rj.has(r.text)) return r;
+    if (r) throw new a("Invalid delimiter '" + r.text + "' after '" + t.funcName + "'", e);
+    throw new a("Invalid delimiter type '" + e.type + "'", e);
+}
+function rO(e) {
     if (!e.body) throw Error("Bug: The leftright ParseNode wasn't fully parsed.");
 }
-(tr({
+(tp({
     type: "delimsizing",
     names: [
         "\\bigl",
@@ -5975,110 +6085,116 @@ function rS(e) {
         "\\bigg",
         "\\Bigg",
     ],
-    props: { numArgs: 1, argTypes: ["primitive"] },
+    numArgs: 1,
+    argTypes: ["primitive"],
     handler: (e, t) => {
-        var r = rz(t[0], e);
+        var r = rN(tf(t[0]), e);
         return {
             type: "delimsizing",
             mode: e.parser.mode,
-            size: r_[e.funcName].size,
-            mclass: r_[e.funcName].mclass,
+            size: rI[e.funcName].size,
+            mclass: rI[e.funcName].mclass,
             delim: r.text,
         };
     },
-    htmlBuilder: (e, t) => ("." === e.delim ? e$([e.mclass]) : rv(e.delim, e.size, t, e.mode, [e.mclass])),
+    htmlBuilder: (e, t) => ("." === e.delim ? e4([e.mclass]) : rz(e.delim, e.size, t, e.mode, [e.mclass])),
     mathmlBuilder: (e) => {
         var t = [];
-        "." !== e.delim && t.push(tR(e.delim, e.mode));
-        var r = new tx("mo", t);
+        "." !== e.delim && t.push(tq(e.delim, e.mode));
+        var r = new tM("mo", t);
         ("mopen" === e.mclass || "mclose" === e.mclass
             ? r.setAttribute("fence", "true")
             : r.setAttribute("fence", "false"),
             r.setAttribute("stretchy", "true"));
-        var n = H(rb[e.size]);
-        return (r.setAttribute("minsize", n), r.setAttribute("maxsize", n), r);
+        var a = L(rD[e.size]);
+        return (r.setAttribute("minsize", a), r.setAttribute("maxsize", a), r);
     },
 }),
-    tr({
+    tp({
         type: "leftright-right",
         names: ["\\right"],
-        props: { numArgs: 1, primitive: !0 },
+        numArgs: 1,
+        primitive: !0,
         handler: (e, t) => {
             var r = e.parser.gullet.macros.get("\\current@color");
-            if (r && "string" != typeof r) throw new n("\\current@color set to non-string in \\right");
-            return { type: "leftright-right", mode: e.parser.mode, delim: rz(t[0], e).text, color: r };
+            if (r && "string" != typeof r) throw new a("\\current@color set to non-string in \\right");
+            return { type: "leftright-right", mode: e.parser.mode, delim: rN(t[0], e).text, color: r };
         },
     }),
-    tr({
+    tp({
         type: "leftright",
         names: ["\\left"],
-        props: { numArgs: 1, primitive: !0 },
+        numArgs: 1,
+        primitive: !0,
         handler: (e, t) => {
-            var r = rz(t[0], e),
-                n = e.parser;
-            ++n.leftrightDepth;
-            var a = n.parseExpression(!1);
-            (--n.leftrightDepth, n.expect("\\right", !1));
-            var i = t$(n.parseFunction(), "leftright-right");
-            return { type: "leftright", mode: n.mode, body: a, left: r.text, right: i.delim, rightColor: i.color };
+            var r = rN(t[0], e),
+                a = e.parser;
+            ++a.leftrightDepth;
+            var n = a.parseExpression(!1);
+            (--a.leftrightDepth, a.expect("\\right", !1));
+            var i = t6(a.parseFunction(), "leftright-right");
+            return { type: "leftright", mode: a.mode, body: n, left: r.text, right: i.delim, rightColor: i.color };
         },
         htmlBuilder: (e, t) => {
-            rS(e);
-            for (var r, n, a = tu(e.body, t, !0, ["mopen", "mclose"]), i = 0, s = 0, l = !1, o = 0; o < a.length; o++)
-                a[o].isMiddle ? (l = !0) : ((i = Math.max(a[o].height, i)), (s = Math.max(a[o].depth, s)));
+            rO(e);
+            for (var r, a, n = tw(e.body, t, !0, ["mopen", "mclose"]), i = 0, s = 0, l = !1, o = 0; o < n.length; o++)
+                rL(n[o]) ? (l = !0) : ((i = Math.max(n[o].height, i)), (s = Math.max(n[o].depth, s)));
             if (
                 ((i *= t.sizeMultiplier),
                 (s *= t.sizeMultiplier),
-                (r = "." === e.left ? tf(t, ["mopen"]) : rC(e.left, i, s, t, e.mode, ["mopen"])),
-                a.unshift(r),
+                (r = "." === e.left ? t_(t, ["mopen"]) : rq(e.left, i, s, t, e.mode, ["mopen"])),
+                n.unshift(r),
                 l)
             )
-                for (var h = 1; h < a.length; h++) {
-                    var u = a[h].isMiddle;
-                    u && (a[h] = rC(u.delim, i, s, u.options, e.mode, []));
+                for (var h = 1; h < n.length; h++) {
+                    var u = n[h];
+                    if (rL(u)) {
+                        var c = u.isMiddle;
+                        n[h] = rq(c.delim, i, s, c.options, e.mode, []);
+                    }
                 }
-            if ("." === e.right) n = tf(t, ["mclose"]);
+            if ("." === e.right) a = t_(t, ["mclose"]);
             else {
-                var c = e.rightColor ? t.withColor(e.rightColor) : t;
-                n = rC(e.right, i, s, c, e.mode, ["mclose"]);
+                var m = e.rightColor ? t.withColor(e.rightColor) : t;
+                a = rq(e.right, i, s, m, e.mode, ["mclose"]);
             }
-            return (a.push(n), e$(["minner"], a, t));
+            return (n.push(a), e4(["minner"], n, t));
         },
         mathmlBuilder: (e, t) => {
-            rS(e);
-            var r = tz(e.body, t);
+            rO(e);
+            var r = tO(e.body, t);
             if ("." !== e.left) {
-                var n = new tx("mo", [tR(e.left, e.mode)]);
-                (n.setAttribute("fence", "true"), r.unshift(n));
+                var a = new tM("mo", [tq(e.left, e.mode)]);
+                (a.setAttribute("fence", "true"), r.unshift(a));
             }
             if ("." !== e.right) {
-                var a = new tx("mo", [tR(e.right, e.mode)]);
-                (a.setAttribute("fence", "true"), e.rightColor && a.setAttribute("mathcolor", e.rightColor), r.push(a));
+                var n = new tM("mo", [tq(e.right, e.mode)]);
+                (n.setAttribute("fence", "true"), e.rightColor && n.setAttribute("mathcolor", e.rightColor), r.push(n));
             }
-            return tC(r);
+            return tI(r);
         },
     }),
-    tr({
+    tp({
         type: "middle",
         names: ["\\middle"],
-        props: { numArgs: 1, primitive: !0 },
+        numArgs: 1,
+        primitive: !0,
         handler: (e, t) => {
-            var r = rz(t[0], e);
-            if (!e.parser.leftrightDepth) throw new n("\\middle without preceding \\left", r);
+            var r = rN(t[0], e);
+            if (!e.parser.leftrightDepth) throw new a("\\middle without preceding \\left", r);
             return { type: "middle", mode: e.parser.mode, delim: r.text };
         },
         htmlBuilder: (e, t) => {
             var r;
-            if ("." === e.delim) r = tf(t, []);
-            else {
-                r = rv(e.delim, 1, t, e.mode, []);
-                var n = { delim: e.delim, options: t };
-                r.isMiddle = n;
-            }
-            return r;
+            return (
+                "." === e.delim
+                    ? (r = t_(t, []))
+                    : ((r = rz(e.delim, 1, t, e.mode, [])).isMiddle = { delim: e.delim, options: t }),
+                r
+            );
         },
         mathmlBuilder: (e, t) => {
-            var r = new tx("mo", ["\\vert" === e.delim || "|" === e.delim ? tR("|", "text") : tR(e.delim, e.mode)]);
+            var r = new tM("mo", ["\\vert" === e.delim || "|" === e.delim ? tq("|", "text") : tq(e.delim, e.mode)]);
             return (
                 r.setAttribute("fence", "true"),
                 r.setAttribute("lspace", "0.05em"),
@@ -6086,233 +6202,263 @@ function rS(e) {
                 r
             );
         },
-    }));
-var rM = (e, t) => {
-        var r,
-            n,
-            a = eY(tg(e.body, t), t),
-            i = e.label.slice(1),
-            s = t.sizeMultiplier,
-            l = 0,
-            o = p(e.body);
-        if ("sout" === i)
-            (((r = e$(["stretchy", "sout"])).height = t.fontMetrics().defaultRuleThickness / s),
-                (l = -0.5 * t.fontMetrics().xHeight));
-        else if ("phase" === i) {
-            var h = I({ number: 0.6, unit: "pt" }, t),
-                u = I({ number: 0.35, unit: "ex" }, t);
-            s /= t.havingBaseSizing().sizeMultiplier;
-            var c = a.height + a.depth + h + u;
-            a.style.paddingLeft = H(c / 2 + h);
-            var m = Math.floor(1e3 * c * s);
-            (((r = eW(
-                ["hide-tail"],
-                [
-                    new X(
-                        [new Z("phase", "M400000 " + m + " H0 L" + m / 2 + " 0 l65 45 L145 " + (m - 80) + " H400000z")],
-                        {
-                            width: "400em",
-                            height: H(m / 1e3),
-                            viewBox: "0 0 400000 " + m,
-                            preserveAspectRatio: "xMinYMin slice",
-                        },
-                    ),
-                ],
-                t,
-            )).style.height = H(c)),
-                (l = a.depth + h + u));
-        } else {
-            /cancel/.test(i)
-                ? o || a.classes.push("cancel-pad")
-                : "angl" === i
-                  ? a.classes.push("anglpad")
-                  : a.classes.push("boxpad");
-            var d = 0,
-                f = 0,
-                g = 0;
-            (/box/.test(i)
-                ? ((g = Math.max(t.fontMetrics().fboxrule, t.minRuleThickness)),
-                  (f = d = t.fontMetrics().fboxsep + ("colorbox" === i ? 0 : g)))
-                : "angl" === i
-                  ? ((d = 4 * (g = Math.max(t.fontMetrics().defaultRuleThickness, t.minRuleThickness))),
-                    (f = Math.max(0, 0.25 - a.depth)))
-                  : (f = d = 0.2 * !!o),
-                (r = tU(a, i, d, f, t)),
-                /fbox|boxed|fcolorbox/.test(i)
-                    ? ((r.style.borderStyle = "solid"), (r.style.borderWidth = H(g)))
-                    : "angl" === i &&
-                      0.049 !== g &&
-                      ((r.style.borderTopWidth = H(g)), (r.style.borderRightWidth = H(g))),
-                (l = a.depth + f),
-                e.backgroundColor &&
-                    ((r.style.backgroundColor = e.backgroundColor),
-                    e.borderColor && (r.style.borderColor = e.borderColor)));
-        }
-        return ((n = e.backgroundColor
-            ? eK({
-                  positionType: "individualShift",
-                  children: [
-                      { type: "elem", elem: r, shift: l },
-                      { type: "elem", elem: a, shift: 0 },
-                  ],
-              })
-            : eK({
-                  positionType: "individualShift",
-                  children: [
-                      { type: "elem", elem: a, shift: 0 },
-                      { type: "elem", elem: r, shift: l, wrapperClasses: /cancel|phase/.test(i) ? ["svg-align"] : [] },
-                  ],
-              })),
-        /cancel/.test(i) && ((n.height = a.height), (n.depth = a.depth)),
-        /cancel/.test(i) && !o)
-            ? e$(["mord", "cancel-lap"], [n], t)
-            : e$(["mord"], [n], t);
-    },
-    rT = (e, t) => {
-        var r = 0,
-            n = new tx(e.label.includes("colorbox") ? "mpadded" : "menclose", [tM(e.body, t)]);
-        switch (e.label) {
-            case "\\cancel":
-                n.setAttribute("notation", "updiagonalstrike");
-                break;
-            case "\\bcancel":
-                n.setAttribute("notation", "downdiagonalstrike");
-                break;
-            case "\\phase":
-                n.setAttribute("notation", "phasorangle");
-                break;
-            case "\\sout":
-                n.setAttribute("notation", "horizontalstrike");
-                break;
-            case "\\fbox":
-                n.setAttribute("notation", "box");
-                break;
-            case "\\angl":
-                n.setAttribute("notation", "actuarial");
-                break;
-            case "\\fcolorbox":
-            case "\\colorbox":
-                if (
-                    ((r = t.fontMetrics().fboxsep * t.fontMetrics().ptPerEm),
-                    n.setAttribute("width", "+" + 2 * r + "pt"),
-                    n.setAttribute("height", "+" + 2 * r + "pt"),
-                    n.setAttribute("lspace", r + "pt"),
-                    n.setAttribute("voffset", r + "pt"),
-                    "\\fcolorbox" === e.label)
-                ) {
-                    var a = Math.max(t.fontMetrics().fboxrule, t.minRuleThickness);
-                    n.setAttribute("style", "border: " + H(a) + " solid " + e.borderColor);
-                }
-                break;
-            case "\\xcancel":
-                n.setAttribute("notation", "updiagonalstrike downdiagonalstrike");
-        }
-        return (e.backgroundColor && n.setAttribute("mathbackground", e.backgroundColor), n);
-    };
-(tr({
-    type: "enclose",
-    names: ["\\colorbox"],
-    props: { numArgs: 2, allowedInText: !0, argTypes: ["color", "text"] },
-    handler(e, t, r) {
-        var { parser: n, funcName: a } = e,
-            i = t$(t[0], "color-token").color,
-            s = t[1];
-        return { type: "enclose", mode: n.mode, label: a, backgroundColor: i, body: s };
-    },
-    htmlBuilder: rM,
-    mathmlBuilder: rT,
-}),
-    tr({
+    }),
+    tp({
+        type: "enclose",
+        names: ["\\colorbox"],
+        numArgs: 2,
+        allowedInText: !0,
+        argTypes: ["color", "hbox"],
+        handler(e, t, r) {
+            var a = e.parser,
+                n = e.funcName,
+                i = t6(t[0], "color-token").color,
+                s = t[1];
+            return { type: "enclose", mode: a.mode, label: n, backgroundColor: i, body: s };
+        },
+        htmlBuilder: (e, t) => {
+            var r,
+                a = e2(tD(e.body, t), t),
+                n = e.label.slice(1),
+                i = t.sizeMultiplier,
+                s = d(e.body);
+            if ("sout" === n)
+                (((c = e4(["katex-stretchy", "katex-sout"])).height = t.fontMetrics().defaultRuleThickness / i),
+                    (m = -0.5 * t.fontMetrics().xHeight));
+            else if ("phase" === n) {
+                var l = j({ number: 0.6, unit: "pt" }, t),
+                    o = j({ number: 0.35, unit: "ex" }, t);
+                i /= t.havingBaseSizing().sizeMultiplier;
+                var h = a.height + a.depth + l + o;
+                a.style.paddingLeft = L(h / 2 + l);
+                var u = Math.floor(1e3 * h * i);
+                (((c = e5(
+                    ["hide-tail"],
+                    [
+                        new G(
+                            [
+                                new Y(
+                                    "phase",
+                                    "M400000 " + u + " H0 L" + u / 2 + " 0 l65 45 L145 " + (u - 80) + " H400000z",
+                                ),
+                            ],
+                            {
+                                width: "400em",
+                                height: L(u / 1e3),
+                                viewBox: "0 0 400000 " + u,
+                                preserveAspectRatio: "xMinYMin slice",
+                            },
+                        ),
+                    ],
+                    t,
+                )).style.height = L(h)),
+                    (m = a.depth + l + o));
+            } else {
+                /cancel/.test(n)
+                    ? s || a.classes.push("cancel-pad")
+                    : "angl" === n
+                      ? a.classes.push("anglpad")
+                      : a.classes.push("boxpad");
+                var c,
+                    m,
+                    p,
+                    f,
+                    g = 0;
+                (/box/.test(n)
+                    ? ((g = Math.max(t.fontMetrics().fboxrule, t.minRuleThickness)),
+                      (f = p = t.fontMetrics().fboxsep + ("colorbox" === n ? 0 : g)))
+                    : "angl" === n
+                      ? ((p = 4 * (g = Math.max(t.fontMetrics().defaultRuleThickness, t.minRuleThickness))),
+                        (f = Math.max(0, 0.25 - a.depth)))
+                      : (f = p = 0.2 * !!s),
+                    (c = t4(a, n, p, f, t)),
+                    /fbox|boxed|fcolorbox/.test(n)
+                        ? ((c.style.borderStyle = "solid"), (c.style.borderWidth = L(g)))
+                        : "angl" === n &&
+                          0.049 !== g &&
+                          ((c.style.borderTopWidth = L(g)), (c.style.borderRightWidth = L(g))),
+                    (m = a.depth + f),
+                    e.backgroundColor &&
+                        ((c.style.backgroundColor = e.backgroundColor),
+                        e.borderColor && (c.style.borderColor = e.borderColor)));
+            }
+            return ((r = e.backgroundColor
+                ? e9({
+                      positionType: "individualShift",
+                      children: [
+                          { type: "elem", elem: c, shift: m },
+                          { type: "elem", elem: a, shift: 0 },
+                      ],
+                  })
+                : e9({
+                      positionType: "individualShift",
+                      children: [
+                          { type: "elem", elem: a, shift: 0 },
+                          {
+                              type: "elem",
+                              elem: c,
+                              shift: m,
+                              wrapperClasses: /cancel|phase/.test(n) ? ["svg-align"] : [],
+                          },
+                      ],
+                  })),
+            /cancel/.test(n) && ((r.height = a.height), (r.depth = a.depth)),
+            /cancel/.test(n) && !s)
+                ? e4(["mord", "cancel-lap"], [r], t)
+                : e4(["mord"], [r], t);
+        },
+        mathmlBuilder: (e, t) => {
+            var r,
+                a = new tM(e.label.includes("colorbox") ? "mpadded" : "menclose", [tJ(e.body, t)]);
+            switch (e.label) {
+                case "\\cancel":
+                    a.setAttribute("notation", "updiagonalstrike");
+                    break;
+                case "\\bcancel":
+                    a.setAttribute("notation", "downdiagonalstrike");
+                    break;
+                case "\\phase":
+                    a.setAttribute("notation", "phasorangle");
+                    break;
+                case "\\sout":
+                    a.setAttribute("notation", "horizontalstrike");
+                    break;
+                case "\\fbox":
+                    a.setAttribute("notation", "box");
+                    break;
+                case "\\angl":
+                    a.setAttribute("notation", "actuarial");
+                    break;
+                case "\\fcolorbox":
+                case "\\colorbox":
+                    if (
+                        ((r = t.fontMetrics().fboxsep * t.fontMetrics().ptPerEm),
+                        a.setAttribute("width", "+" + 2 * r + "pt"),
+                        a.setAttribute("height", "+" + 2 * r + "pt"),
+                        a.setAttribute("lspace", r + "pt"),
+                        a.setAttribute("voffset", r + "pt"),
+                        "\\fcolorbox" === e.label)
+                    ) {
+                        var n = Math.max(t.fontMetrics().fboxrule, t.minRuleThickness);
+                        a.setAttribute("style", "border: " + L(n) + " solid " + e.borderColor);
+                    }
+                    break;
+                case "\\xcancel":
+                    a.setAttribute("notation", "updiagonalstrike downdiagonalstrike");
+            }
+            return (e.backgroundColor && a.setAttribute("mathbackground", e.backgroundColor), a);
+        },
+    }),
+    tp({
         type: "enclose",
         names: ["\\fcolorbox"],
-        props: { numArgs: 3, allowedInText: !0, argTypes: ["color", "color", "text"] },
+        numArgs: 3,
+        allowedInText: !0,
+        argTypes: ["color", "color", "hbox"],
         handler(e, t, r) {
-            var { parser: n, funcName: a } = e,
-                i = t$(t[0], "color-token").color,
-                s = t$(t[1], "color-token").color,
+            var a = e.parser,
+                n = e.funcName,
+                i = t6(t[0], "color-token").color,
+                s = t6(t[1], "color-token").color,
                 l = t[2];
-            return { type: "enclose", mode: n.mode, label: a, backgroundColor: s, borderColor: i, body: l };
+            return { type: "enclose", mode: a.mode, label: n, backgroundColor: s, borderColor: i, body: l };
         },
-        htmlBuilder: rM,
-        mathmlBuilder: rT,
     }),
-    tr({
+    tp({
         type: "enclose",
         names: ["\\fbox"],
-        props: { numArgs: 1, argTypes: ["hbox"], allowedInText: !0 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "enclose", mode: r.mode, label: "\\fbox", body: t[0] };
-        },
+        numArgs: 1,
+        argTypes: ["hbox"],
+        allowedInText: !0,
+        handler: (e, t) => ({ type: "enclose", mode: e.parser.mode, label: "\\fbox", body: t[0] }),
     }),
-    tr({
+    tp({
         type: "enclose",
         names: ["\\cancel", "\\bcancel", "\\xcancel", "\\phase"],
-        props: { numArgs: 1 },
+        numArgs: 1,
         handler(e, t) {
-            var { parser: r, funcName: n } = e,
-                a = t[0];
-            return { type: "enclose", mode: r.mode, label: n, body: a };
+            var r = e.parser,
+                a = e.funcName,
+                n = t[0];
+            return { type: "enclose", mode: r.mode, label: a, body: n };
         },
-        htmlBuilder: rM,
-        mathmlBuilder: rT,
     }),
-    tr({
+    tp({
         type: "enclose",
         names: ["\\sout"],
-        props: { numArgs: 1, allowedInText: !0 },
+        numArgs: 1,
+        allowedInText: !0,
         handler(e, t) {
-            var { parser: r, funcName: n } = e;
-            "math" === r.mode && r.settings.reportNonstrict("mathVsSout", "LaTeX's \\sout works only in text mode");
-            var a = t[0];
-            return { type: "enclose", mode: r.mode, label: n, body: a };
+            var r = e.parser,
+                a = e.funcName;
+            "math" === r.mode &&
+                eZ({
+                    strict: r.settings.strict,
+                    errorCode: "mathVsSout",
+                    errorMsg: "LaTeX's \\sout works only in text mode",
+                    report: !0,
+                });
+            var n = t[0];
+            return { type: "enclose", mode: r.mode, label: a, body: n };
         },
-        htmlBuilder: rM,
-        mathmlBuilder: rT,
     }),
-    tr({
+    tp({
         type: "enclose",
         names: ["\\angl"],
-        props: { numArgs: 1, argTypes: ["hbox"], allowedInText: !1 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "enclose", mode: r.mode, label: "\\angl", body: t[0] };
-        },
+        numArgs: 1,
+        argTypes: ["hbox"],
+        allowedInText: !1,
+        handler: (e, t) => ({ type: "enclose", mode: e.parser.mode, label: "\\angl", body: t[0] }),
     }));
-var rE = {};
-function rB(e) {
+var rH = {};
+function rJ(e) {
     for (
-        var { type: t, names: r, props: n, handler: a, htmlBuilder: i, mathmlBuilder: s } = e,
-            l = { type: t, numArgs: n.numArgs || 0, allowedInText: !1, numOptionalArgs: 0, handler: a },
+        var t = e.type,
+            r = e.names,
+            a = e.props,
+            n = e.handler,
+            i = e.htmlBuilder,
+            s = e.mathmlBuilder,
+            l = { type: t, numArgs: a.numArgs || 0, allowedInText: !1, numOptionalArgs: 0, handler: n },
             o = 0;
         o < r.length;
         ++o
     )
-        rE[r[o]] = l;
-    (i && (te[t] = i), s && (tt[t] = s));
+        rH[r[o]] = l;
+    (i && (tc[t] = i), s && (tm[t] = s));
 }
-var rF = {};
-class rq {
+var rP = {};
+class rU {
     constructor(e, t, r) {
-        ((this.lexer = e), (this.start = t), (this.end = r));
+        ((this.lexer = void 0),
+            (this.start = void 0),
+            (this.end = void 0),
+            (this.lexer = e),
+            (this.start = t),
+            (this.end = r));
     }
     static range(e, t) {
         return t
             ? e && e.loc && t.loc && e.loc.lexer === t.loc.lexer
-                ? new rq(e.loc.lexer, e.loc.start, t.loc.end)
+                ? new rU(e.loc.lexer, e.loc.start, t.loc.end)
                 : null
             : e && e.loc;
     }
 }
-class rI {
+class r$ {
     constructor(e, t) {
-        ((this.text = e), (this.loc = t));
+        ((this.text = void 0),
+            (this.loc = void 0),
+            (this.noexpand = void 0),
+            (this.treatAsRelax = void 0),
+            (this.text = e),
+            (this.loc = t));
     }
     range(e, t) {
-        return new rI(t, rq.range(this, e));
+        return new r$(t, rU.range(this, e));
     }
 }
-function rH(e) {
+function rW(e) {
     var t = [];
     e.consumeSpaces();
     var r = e.fetch().text;
@@ -6323,30 +6469,28 @@ function rH(e) {
         (e.consume(), t.push("\\hdashline" === r), e.consumeSpaces(), (r = e.fetch().text));
     return t;
 }
-var rL = (e) => {
-        if (!e.parser.settings.displayMode) throw new n("{" + e.envName + "} can be used only in display mode.");
+var rV = (e) => {
+        if (!e.parser.settings.displayMode) throw new a("{" + e.envName + "} can be used only in display mode.");
     },
-    rO = new Set(["gather", "gather*"]);
-function rj(e) {
+    rZ = new Set(["gather", "gather*"]);
+function rX(e) {
     if (!e.includes("ed")) return !e.includes("*");
 }
-function rN(e, t, r) {
-    var {
-        hskipBeforeAndAfter: a,
-        addJot: i,
-        cols: s,
-        arraystretch: l,
-        colSeparationType: o,
-        autoTag: h,
-        singleRow: u,
-        emptySingleRow: c,
-        maxNumCols: m,
-        leqno: p,
-    } = t;
+function rG(e, t, r) {
+    var n = t.hskipBeforeAndAfter,
+        i = t.addJot,
+        s = t.cols,
+        l = t.arraystretch,
+        o = t.colSeparationType,
+        h = t.autoTag,
+        u = t.singleRow,
+        c = t.emptySingleRow,
+        m = t.maxNumCols,
+        p = t.leqno;
     if ((e.gullet.beginGroup(), u || e.gullet.macros.set("\\cr", "\\\\\\relax"), !l)) {
         var d = e.gullet.expandMacroAsText("\\arraystretch");
         if (null == d) l = 1;
-        else if (!(l = parseFloat(d)) || l < 0) throw new n("Invalid \\arraystretch: " + d);
+        else if (!(l = parseFloat(d)) || l < 0) throw new a("Invalid \\arraystretch: " + d);
     }
     e.gullet.beginGroup();
     var f = [],
@@ -6360,42 +6504,50 @@ function rN(e, t, r) {
     function w() {
         x &&
             (e.gullet.macros.get("\\df@tag")
-                ? (x.push(e.subparse([new rI("\\df@tag")])), e.gullet.macros.set("\\df@tag", void 0, !0))
+                ? (x.push(e.subparse([new r$("\\df@tag")])), e.gullet.macros.set("\\df@tag", void 0, !0))
                 : x.push(!!h && "1" === e.gullet.macros.get("\\@eqnsw")));
     }
-    for (y(), v.push(rH(e)); ;) {
+    for (y(), v.push(rW(e)); ;) {
         var k = e.parseExpression(!1, u ? "\\end" : "\\\\");
         (e.gullet.endGroup(), e.gullet.beginGroup());
         var A = { type: "ordgroup", mode: e.mode, body: k };
-        (r && (A = { type: "styling", mode: e.mode, style: r, body: [A] }), f.push(A));
-        var R = e.fetch().text;
-        if ("&" === R) {
+        (r && (A = { type: "styling", mode: e.mode, style: r, resetFont: !0, body: [A] }), f.push(A));
+        var C = e.fetch().text;
+        if ("&" === C) {
             if (m && f.length === m)
-                if (u || o) throw new n("Too many tab characters: &", e.nextToken);
-                else e.settings.reportNonstrict("textEnv", "Too few columns specified in the {array} column argument.");
+                if (u || o) throw new a("Too many tab characters: &", e.nextToken);
+                else
+                    eZ({
+                        strict: e.settings.strict,
+                        errorCode: "textEnv",
+                        errorMsg: "Too few columns specified in the {array} column argument.",
+                        report: !0,
+                    });
             e.consume();
-        } else if ("\\end" === R) {
+        } else if ("\\end" === C) {
             (w(),
-                1 === f.length &&
-                    "styling" === A.type &&
-                    1 === A.body.length &&
-                    "ordgroup" === A.body[0].type &&
-                    0 === A.body[0].body.length &&
-                    (g.length > 1 || !c) &&
+                1 !== f.length ||
+                    "styling" !== A.type ||
+                    1 !== A.body.length ||
+                    "ordgroup" !== A.body[0].type ||
+                    0 !== A.body[0].body.length ||
+                    (!(g.length > 1) && c) ||
+                    Array.isArray(null == x ? void 0 : x[x.length - 1]) ||
+                    (h && (null == x ? void 0 : x[x.length - 1]) === !0) ||
                     g.pop(),
                 v.length < g.length + 1 && v.push([]));
             break;
-        } else if ("\\\\" === R) {
+        } else if ("\\\\" === C) {
             e.consume();
-            var C = void 0;
-            (" " !== e.gullet.future().text && (C = e.parseSizeGroup(!0)),
-                b.push(C ? C.value : null),
+            var R = void 0;
+            (" " !== e.gullet.future().text && (R = e.parseSizeGroup(!0)),
+                b.push(R ? R.value : null),
                 w(),
-                v.push(rH(e)),
+                v.push(rW(e)),
                 (f = []),
                 g.push(f),
                 y());
-        } else throw new n("Expected & or \\\\ or \\cr or \\end", e.nextToken);
+        } else throw new a("Expected & or \\\\ or \\cr or \\end", e.nextToken);
     }
     return (
         e.gullet.endGroup(),
@@ -6408,7 +6560,7 @@ function rN(e, t, r) {
             body: g,
             cols: s,
             rowGaps: b,
-            hskipBeforeAndAfter: a,
+            hskipBeforeAndAfter: n,
             hLinesBeforeRow: v,
             colSeparationType: o,
             tags: x,
@@ -6416,12 +6568,12 @@ function rN(e, t, r) {
         }
     );
 }
-function rJ(e) {
+function rY(e) {
     return "d" === e.slice(0, 1) ? "display" : "text";
 }
-var rP = function (e, t) {
+var rK = function (e, t) {
         var r = e.body.length,
-            a = e.hLinesBeforeRow,
+            n = e.hLinesBeforeRow,
             i = 0,
             s = Array(r),
             l = [],
@@ -6431,7 +6583,7 @@ var rP = function (e, t) {
         e.colSeparationType &&
             "small" === e.colSeparationType &&
             (u = 0.2778 * (t.havingStyle(R.SCRIPT).sizeMultiplier / t.sizeMultiplier));
-        var c = "CD" === e.colSeparationType ? I({ number: 3, unit: "ex" }, t) : 12 * h,
+        var c = "CD" === e.colSeparationType ? j({ number: 3, unit: "ex" }, t) : 12 * h,
             m = 3 * h,
             p = e.arraystretch * c,
             d = 0.7 * p,
@@ -6440,88 +6592,90 @@ var rP = function (e, t) {
         function b(e) {
             for (var t = 0; t < e.length; ++t) (t > 0 && (g += 0.25), l.push({ pos: g, isDashed: e[t] }));
         }
-        for (b(a[0]), F = 0; F < e.body.length; ++F) {
-            var v = e.body[F],
+        for (b(n[0]), B = 0; B < e.body.length; ++B) {
+            var v = e.body[B],
                 x = d,
                 y = f;
             i < v.length && (i = v.length);
-            var w = Array(v.length);
+            var w = { cells: Array(v.length), height: 0, depth: 0, pos: 0 };
             for (q = 0; q < v.length; ++q) {
-                var k = tg(v[q], t);
-                (y < k.depth && (y = k.depth), x < k.height && (x = k.height), (w[q] = k));
+                var k = tD(v[q], t);
+                (y < k.depth && (y = k.depth), x < k.height && (x = k.height), (w.cells[q] = k));
             }
-            var A = e.rowGaps[F],
+            var A = e.rowGaps[B],
                 C = 0;
-            (A && (C = I(A, t)) > 0 && (y < (C += f) && (y = C), (C = 0)),
-                e.addJot && F < e.body.length - 1 && (y += m),
+            (A && (C = j(A, t)) > 0 && (y < (C += f) && (y = C), (C = 0)),
+                e.addJot && B < e.body.length - 1 && (y += m),
                 (w.height = x),
                 (w.depth = y),
                 (w.pos = g += x),
                 (g += y + C),
-                (s[F] = w),
-                b(a[F + 1]));
+                (s[B] = w),
+                b(n[B + 1]));
         }
         var _ = g / 2 + t.fontMetrics().axisHeight,
             D = e.cols || [],
             z = [],
             S = [];
         if (e.tags && e.tags.some((e) => e))
-            for (F = 0; F < r; ++F) {
-                var M = s[F],
+            for (B = 0; B < r; ++B) {
+                var M = s[B],
                     T = M.pos - _,
-                    E = e.tags[F],
-                    B = void 0;
-                (((B = !0 === E ? e$(["eqn-num"], [], t) : !1 === E ? e$([], [], t) : e$([], tu(E, t, !0), t)).depth =
+                    E = e.tags[B],
+                    F = void 0;
+                (((F = !0 === E ? e4(["eqn-num"], [], t) : !1 === E ? e4([], [], t) : e4([], tw(E, t, !0), t)).depth =
                     M.depth),
-                    (B.height = M.height),
-                    S.push({ type: "elem", elem: B, shift: T }));
+                    (F.height = M.height),
+                    S.push({ type: "elem", elem: F, shift: T }));
             }
-        for (q = 0, O = 0; q < i || O < D.length; ++q, ++O) {
+        for (q = 0, N = 0; q < i || N < D.length; ++q, ++N) {
             for (
-                var F, q, L, O, j, N, J, P, U, $, W = D[O], V = !0;
-                (null == (N = W) ? void 0 : N.type) === "separator";
+                var B, q, I, N, O, H, J, P, U, $, W = D[N], V = !0;
+                (null == (H = W) ? void 0 : H.type) === "separator";
             ) {
                 if (
-                    (V || (((L = e$(["arraycolsep"], [])).style.width = H(t.fontMetrics().doubleRuleSep)), z.push(L)),
+                    (V || (((I = e4(["arraycolsep"], [])).style.width = L(t.fontMetrics().doubleRuleSep)), z.push(I)),
                     "|" === W.separator || ":" === W.separator)
                 ) {
-                    var X = "|" === W.separator ? "solid" : "dashed",
-                        Z = e$(["vertical-separator"], [], t);
-                    ((Z.style.height = H(g)),
-                        (Z.style.borderRightWidth = H(o)),
-                        (Z.style.borderRightStyle = X),
-                        (Z.style.margin = "0 " + H(-o / 2)));
-                    var Y = g - _;
-                    (Y && (Z.style.verticalAlign = H(-Y)), z.push(Z));
-                } else throw new n("Invalid separator type: " + W.separator);
-                ((W = D[++O]), (V = !1));
+                    var Z = "|" === W.separator ? "solid" : "dashed",
+                        X = e4(["vertical-separator"], [], t);
+                    ((X.style.height = L(g)),
+                        (X.style.borderRightWidth = L(o)),
+                        (X.style.borderRightStyle = Z),
+                        (X.style.margin = "0 " + L(-o / 2)));
+                    var G = g - _;
+                    (G && (X.style.verticalAlign = L(-G)), z.push(X));
+                } else throw new a("Invalid separator type: " + W.separator);
+                ((W = D[++N]), (V = !1));
             }
             if (!(q >= i)) {
-                var G = void 0;
+                var Y = void 0;
                 (q > 0 || e.hskipBeforeAndAfter) &&
-                    0 !== (G = null != (J = null == (P = W) ? void 0 : P.pregap) ? J : u) &&
-                    (((L = e$(["arraycolsep"], [])).style.width = H(G)), z.push(L));
+                    0 !== (Y = null != (J = null == (P = W) ? void 0 : P.pregap) ? J : u) &&
+                    (((I = e4(["arraycolsep"], [])).style.width = L(Y)), z.push(I));
                 var K = [];
-                for (F = 0; F < r; ++F) {
-                    var Q = s[F],
-                        ee = Q[q];
+                for (B = 0; B < r; ++B) {
+                    var Q = s[B],
+                        ee = Q.cells[q];
                     if (ee) {
                         var et = Q.pos - _;
                         ((ee.depth = Q.depth), (ee.height = Q.height), K.push({ type: "elem", elem: ee, shift: et }));
                     }
                 }
-                var er = eK({ positionType: "individualShift", children: K }),
-                    en = e$(["col-align-" + ((null == (j = W) ? void 0 : j.align) || "c")], [er]);
-                (z.push(en),
+                var er = e9({ positionType: "individualShift", children: K }),
+                    ea = e4(["col-align-" + ((null == (O = W) ? void 0 : O.align) || "c")], [er]);
+                (z.push(ea),
                     (q < i - 1 || e.hskipBeforeAndAfter) &&
-                        0 !== (G = null != (U = null == ($ = W) ? void 0 : $.postgap) ? U : u) &&
-                        (((L = e$(["arraycolsep"], [])).style.width = H(G)), z.push(L)));
+                        0 !== (Y = null != (U = null == ($ = W) ? void 0 : $.postgap) ? U : u) &&
+                        (((I = e4(["arraycolsep"], [])).style.width = L(Y)), z.push(I)));
             }
         }
-        var ea = e$(["mtable"], z);
+        var en = e4(["mtable"], z);
         if (l.length > 0) {
             for (
-                var ei = eV("hline", t, o), es = eV("hdashline", t, o), el = [{ type: "elem", elem: ea, shift: 0 }];
+                var ei = e3("katex-hline", t, o),
+                    es = e3("katex-hdashline", t, o),
+                    el = [{ type: "elem", elem: en, shift: 0 }];
                 l.length > 0;
             ) {
                 var eo = l.pop(),
@@ -6530,26 +6684,26 @@ var rP = function (e, t) {
                     ? el.push({ type: "elem", elem: es, shift: eh })
                     : el.push({ type: "elem", elem: ei, shift: eh });
             }
-            ea = eK({ positionType: "individualShift", children: el });
+            en = e9({ positionType: "individualShift", children: el });
         }
         return 0 === S.length
-            ? e$(["mord"], [ea], t)
-            : eZ([ea, e$(["tag"], [eK({ positionType: "individualShift", children: S })], t)]);
+            ? e4(["mord"], [en], t)
+            : e7([en, e4(["katex-tag"], [e9({ positionType: "individualShift", children: S })], t)]);
     },
-    rU = { c: "center ", l: "left ", r: "right " },
-    r$ = function (e, t) {
+    rQ = { c: "center ", l: "left ", r: "right " },
+    r0 = function (e, t) {
         for (
-            var r = [], n = new tx("mtd", [], ["mtr-glue"]), a = new tx("mtd", [], ["mml-eqn-num"]), i = 0;
+            var r = [], a = new tM("mtd", [], ["mtr-glue"]), n = new tM("mtd", [], ["mml-eqn-num"]), i = 0;
             i < e.body.length;
             i++
         ) {
-            for (var s = e.body[i], l = [], o = 0; o < s.length; o++) l.push(new tx("mtd", [tM(s[o], t)]));
-            (e.tags && e.tags[i] && (l.unshift(n), l.push(n), e.leqno ? l.unshift(a) : l.push(a)),
-                r.push(new tx("mtr", l)));
+            for (var s = e.body[i], l = [], o = 0; o < s.length; o++) l.push(new tM("mtd", [tJ(s[o], t)]));
+            (e.tags && e.tags[i] && (l.unshift(a), l.push(a), e.leqno ? l.unshift(n) : l.push(n)),
+                r.push(new tM("mtr", l)));
         }
-        var h = new tx("mtable", r),
+        var h = new tM("mtable", r),
             u = 0.5 === e.arraystretch ? 0.1 : 0.16 + e.arraystretch - 1 + 0.09 * !!e.addJot;
-        h.setAttribute("rowspacing", H(u));
+        h.setAttribute("rowspacing", L(u));
         var c = "",
             m = "";
         if (e.cols && e.cols.length > 0) {
@@ -6563,7 +6717,7 @@ var rP = function (e, t) {
             for (var v = g; v < b; v++) {
                 var x = p[v];
                 "align" === x.type
-                    ? ((m += rU[x.align]), f && (d += "none "), (f = !0))
+                    ? ((m += rQ[x.align]), f && (d += "none "), (f = !0))
                     : "separator" === x.type && f && ((d += "|" === x.separator ? "solid " : "dashed "), (f = !1));
             }
             (h.setAttribute("columnalign", m.trim()), /[sd]/.test(d) && h.setAttribute("columnlines", d.trim()));
@@ -6580,80 +6734,81 @@ var rP = function (e, t) {
                     ? h.setAttribute("columnspacing", "0.5em")
                     : h.setAttribute("columnspacing", "1em");
         var A = "",
-            R = e.hLinesBeforeRow;
-        c += (R[0].length > 0 ? "left " : "") + (R[R.length - 1].length > 0 ? "right " : "");
-        for (var C = 1; C < R.length - 1; C++) A += 0 === R[C].length ? "none " : R[C][0] ? "dashed " : "solid ";
+            C = e.hLinesBeforeRow;
+        c += (C[0].length > 0 ? "left " : "") + (C[C.length - 1].length > 0 ? "right " : "");
+        for (var R = 1; R < C.length - 1; R++) A += 0 === C[R].length ? "none " : C[R][0] ? "dashed " : "solid ";
         return (
             /[sd]/.test(A) && h.setAttribute("rowlines", A.trim()),
-            "" !== c && (h = new tx("menclose", [h])).setAttribute("notation", c.trim()),
-            e.arraystretch && e.arraystretch < 1 && (h = new tx("mstyle", [h])).setAttribute("scriptlevel", "1"),
+            "" !== c && (h = new tM("menclose", [h])).setAttribute("notation", c.trim()),
+            e.arraystretch && e.arraystretch < 1 && (h = new tM("mstyle", [h])).setAttribute("scriptlevel", "1"),
             h
         );
     },
-    rW = function (e, t) {
-        e.envName.includes("ed") || rL(e);
+    r1 = function (e, t) {
+        e.envName.includes("ed") || rV(e);
         var r = [],
-            a = e.envName.includes("at") ? "alignat" : "align",
-            i = "split" === e.envName,
-            s = rN(
+            n = "split" === e.envName,
+            i = rG(
                 e.parser,
                 {
                     cols: r,
                     addJot: !0,
-                    autoTag: i ? void 0 : rj(e.envName),
+                    autoTag: n ? void 0 : rX(e.envName),
                     emptySingleRow: !0,
-                    colSeparationType: a,
-                    maxNumCols: i ? 2 : void 0,
+                    colSeparationType: e.envName.includes("at") ? "alignat" : "align",
+                    maxNumCols: n ? 2 : void 0,
                     leqno: e.parser.settings.leqno,
                 },
                 "display",
             ),
+            s = 0,
             l = 0,
-            o = 0,
-            h = { type: "ordgroup", mode: e.mode, body: [] };
+            o = { type: "ordgroup", mode: e.mode, body: [] };
         if (t[0] && "ordgroup" === t[0].type) {
-            for (var u = "", c = 0; c < t[0].body.length; c++) u += t$(t[0].body[c], "textord").text;
-            o = 2 * (l = Number(u));
+            var h = "Number of columns should be a positive integer",
+                u = t8(t[0], h);
+            if (!/^[0-9]+$/.test(u) || 1 > Number(u)) throw new a(h, t[0]);
+            l = 2 * (s = Number(u));
         }
-        var m = !o;
-        s.body.forEach(function (e) {
+        var c = !l;
+        i.body.forEach(function (e) {
             for (var t = 1; t < e.length; t += 2) {
-                var r = t$(e[t], "styling");
-                t$(r.body[0], "ordgroup").body.unshift(h);
+                var r = t6(e[t], "styling");
+                t6(r.body[0], "ordgroup").body.unshift(o);
             }
-            if (m) o < e.length && (o = e.length);
+            if (c) l < e.length && (l = e.length);
             else {
-                var a = e.length / 2;
-                if (l < a) throw new n("Too many math in a row: expected " + l + ", but got " + a, e[0]);
+                var n = e.length / 2;
+                if (s < n) throw new a("Too many math in a row: expected " + s + ", but got " + n, e[0]);
             }
         });
-        for (var p = 0; p < o; ++p) {
-            var d = "r",
-                f = 0;
-            (p % 2 == 1 ? (d = "l") : p > 0 && m && (f = 1),
-                (r[p] = { type: "align", align: d, pregap: f, postgap: 0 }));
+        for (var m = 0; m < l; ++m) {
+            var p = "r",
+                d = 0;
+            (m % 2 == 1 ? (p = "l") : m > 0 && c && (d = 1),
+                (r[m] = { type: "align", align: p, pregap: d, postgap: 0 }));
         }
-        return ((s.colSeparationType = m ? "align" : "alignat"), s);
+        return ((i.colSeparationType = c ? "align" : "alignat"), i);
     };
-(rB({
+(rJ({
     type: "array",
     names: ["array", "darray"],
     props: { numArgs: 1 },
     handler(e, t) {
-        var r = (tV(t[0]) ? [t[0]] : t$(t[0], "ordgroup").body).map(function (e) {
-                var t = tW(e).text;
+        var r = (t2(t[0]) ? [t[0]] : t6(t[0], "ordgroup").body).map(function (e) {
+                var t = t7(e).text;
                 if ("lcr".includes(t)) return { type: "align", align: t };
                 if ("|" === t) return { type: "separator", separator: "|" };
                 if (":" === t) return { type: "separator", separator: ":" };
-                throw new n("Unknown column alignment: " + t, e);
+                throw new a("Unknown column alignment: " + t, e);
             }),
-            a = { cols: r, hskipBeforeAndAfter: !0, maxNumCols: r.length };
-        return rN(e.parser, a, rJ(e.envName));
+            n = { cols: r, hskipBeforeAndAfter: !0, maxNumCols: r.length };
+        return rG(e.parser, n, rY(e.envName));
     },
-    htmlBuilder: rP,
-    mathmlBuilder: r$,
+    htmlBuilder: rK,
+    mathmlBuilder: r0,
 }),
-    rB({
+    rJ({
         type: "array",
         names: [
             "matrix",
@@ -6680,64 +6835,64 @@ var rP = function (e, t) {
                     Vmatrix: ["\\Vert", "\\Vert"],
                 }[e.envName.replace("*", "")],
                 r = "c",
-                a = { hskipBeforeAndAfter: !1, cols: [{ type: "align", align: r }] };
+                n = { hskipBeforeAndAfter: !1, cols: [{ type: "align", align: r }] };
             if ("*" === e.envName.charAt(e.envName.length - 1)) {
                 var i = e.parser;
                 if ((i.consumeSpaces(), "[" === i.fetch().text)) {
                     if ((i.consume(), i.consumeSpaces(), (r = i.fetch().text), !"lcr".includes(r)))
-                        throw new n("Expected l or c or r", i.nextToken);
+                        throw new a("Expected l or c or r", i.nextToken);
                     (i.consume(),
                         i.consumeSpaces(),
                         i.expect("]"),
                         i.consume(),
-                        (a.cols = [{ type: "align", align: r }]));
+                        (n.cols = [{ type: "align", align: r }]));
                 }
             }
-            var s = rN(e.parser, a, rJ(e.envName)),
+            var s = rG(e.parser, n, rY(e.envName)),
                 l = Math.max(0, ...s.body.map((e) => e.length));
             return (
                 (s.cols = Array(l).fill({ type: "align", align: r })),
                 t ? { type: "leftright", mode: e.mode, body: [s], left: t[0], right: t[1], rightColor: void 0 } : s
             );
         },
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["smallmatrix"],
         props: { numArgs: 0 },
         handler(e) {
-            var t = rN(e.parser, { arraystretch: 0.5 }, "script");
+            var t = rG(e.parser, { arraystretch: 0.5 }, "script");
             return ((t.colSeparationType = "small"), t);
         },
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["subarray"],
         props: { numArgs: 1 },
         handler(e, t) {
-            var r = (tV(t[0]) ? [t[0]] : t$(t[0], "ordgroup").body).map(function (e) {
-                var t = tW(e).text;
+            var r = (t2(t[0]) ? [t[0]] : t6(t[0], "ordgroup").body).map(function (e) {
+                var t = t7(e).text;
                 if ("lc".includes(t)) return { type: "align", align: t };
-                throw new n("Unknown column alignment: " + t, e);
+                throw new a("Unknown column alignment: " + t, e);
             });
-            if (r.length > 1) throw new n("{subarray} can contain only one column");
-            var a = rN(e.parser, { cols: r, hskipBeforeAndAfter: !1, arraystretch: 0.5 }, "script");
-            if (a.body.length > 0 && a.body[0].length > 1) throw new n("{subarray} can contain only one column");
-            return a;
+            if (r.length > 1) throw new a("{subarray} can contain only one column");
+            var n = rG(e.parser, { cols: r, hskipBeforeAndAfter: !1, arraystretch: 0.5 }, "script");
+            if (n.body.length > 0 && n.body[0].length > 1) throw new a("{subarray} can contain only one column");
+            return n;
         },
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["cases", "dcases", "rcases", "drcases"],
         props: { numArgs: 0 },
         handler(e) {
-            var t = rN(
+            var t = rG(
                 e.parser,
                 {
                     arraystretch: 1.2,
@@ -6746,7 +6901,7 @@ var rP = function (e, t) {
                         { type: "align", align: "l", pregap: 0, postgap: 0 },
                     ],
                 },
-                rJ(e.envName),
+                rY(e.envName),
             );
             return {
                 type: "leftright",
@@ -6757,68 +6912,68 @@ var rP = function (e, t) {
                 rightColor: void 0,
             };
         },
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["align", "align*", "aligned", "split"],
         props: { numArgs: 0 },
-        handler: rW,
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        handler: r1,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["gathered", "gather", "gather*"],
         props: { numArgs: 0 },
         handler(e) {
-            rO.has(e.envName) && rL(e);
+            rZ.has(e.envName) && rV(e);
             var t = {
                 cols: [{ type: "align", align: "c" }],
                 addJot: !0,
                 colSeparationType: "gather",
-                autoTag: rj(e.envName),
+                autoTag: rX(e.envName),
                 emptySingleRow: !0,
                 leqno: e.parser.settings.leqno,
             };
-            return rN(e.parser, t, "display");
+            return rG(e.parser, t, "display");
         },
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["alignat", "alignat*", "alignedat"],
         props: { numArgs: 1 },
-        handler: rW,
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        handler: r1,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["equation", "equation*"],
         props: { numArgs: 0 },
         handler(e) {
-            rL(e);
+            rV(e);
             var t = {
-                autoTag: rj(e.envName),
+                autoTag: rX(e.envName),
                 emptySingleRow: !0,
                 singleRow: !0,
                 maxNumCols: 1,
                 leqno: e.parser.settings.leqno,
             };
-            return rN(e.parser, t, "display");
+            return rG(e.parser, t, "display");
         },
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    rB({
+    rJ({
         type: "array",
         names: ["CD"],
         props: { numArgs: 0 },
         handler: (e) => (
-            rL(e),
+            rV(e),
             (function (e) {
                 var t = [];
                 for (e.gullet.beginGroup(), e.gullet.macros.set("\\cr", "\\\\\\relax"), e.gullet.beginGroup(); ;) {
@@ -6828,13 +6983,13 @@ var rP = function (e, t) {
                     else if ("\\end" === r) {
                         0 === t[t.length - 1].length && t.pop();
                         break;
-                    } else throw new n("Expected \\\\ or \\cr or \\end", e.nextToken);
+                    } else throw new a("Expected \\\\ or \\cr or \\end", e.nextToken);
                 }
-                for (var a = [], i = [a], s = 0; s < t.length; s++) {
-                    for (var l = t[s], o = t5(), h = 0; h < l.length; h++)
-                        if (t3(l[h])) {
-                            a.push(o);
-                            var u = tW(l[(h += 1)]).text,
+                for (var n = [], i = [n], s = 0; s < t.length; s++) {
+                    for (var l = t[s], o = ri(), h = 0; h < l.length; h++)
+                        if (rs(l[h])) {
+                            n.push(o);
+                            var u = t7(l[(h += 1)]).text,
                                 c = [, ,];
                             if (
                                 ((c[0] = { type: "ordgroup", mode: "math", body: [] }),
@@ -6844,38 +6999,38 @@ var rP = function (e, t) {
                             else if ("<>AV".includes(u))
                                 for (var m = 0; m < 2; m++) {
                                     for (var p = !0, d = h + 1; d < l.length; d++) {
-                                        if (t6(l[d], u)) {
+                                        if (rl(l[d], u)) {
                                             ((p = !1), (h = d));
                                             break;
                                         }
-                                        if (t3(l[d]))
-                                            throw new n("Missing a " + u + " character to complete a CD arrow.", l[d]);
+                                        if (rs(l[d]))
+                                            throw new a("Missing a " + u + " character to complete a CD arrow.", l[d]);
                                         c[m].body.push(l[d]);
                                     }
-                                    if (p) throw new n("Missing a " + u + " character to complete a CD arrow.", l[h]);
+                                    if (p) throw new a("Missing a " + u + " character to complete a CD arrow.", l[h]);
                                 }
-                            else throw new n('Expected one of "<>AV=|." after @', l[h]);
+                            else throw new a('Expected one of "<>AV=|." after @', l[h]);
                             var f = {
                                 type: "styling",
                                 body: [
                                     (function (e, t, r) {
-                                        var n = t4[e];
-                                        switch (n) {
+                                        var a = rn[e];
+                                        switch (a) {
                                             case "\\\\cdrightarrow":
                                             case "\\\\cdleftarrow":
-                                                return r.callFunction(n, [t[0]], [t[1]]);
+                                                return r.callFunction(a, [t[0]], [t[1]]);
                                             case "\\uparrow":
                                             case "\\downarrow":
-                                                var a = r.callFunction("\\\\cdleft", [t[0]], []),
+                                                var n = r.callFunction("\\\\cdleft", [t[0]], []),
                                                     i = r.callFunction(
                                                         "\\Big",
-                                                        [{ type: "atom", text: n, mode: "math", family: "rel" }],
+                                                        [{ type: "atom", text: a, mode: "math", family: "rel" }],
                                                         [],
                                                     ),
                                                     s = r.callFunction("\\\\cdright", [t[1]], []);
                                                 return r.callFunction(
                                                     "\\\\cdparent",
-                                                    [{ type: "ordgroup", mode: "math", body: [a, i, s] }],
+                                                    [{ type: "ordgroup", mode: "math", body: [n, i, s] }],
                                                     [],
                                                 );
                                             case "\\\\cdlongequal":
@@ -6893,10 +7048,11 @@ var rP = function (e, t) {
                                 ],
                                 mode: "math",
                                 style: "display",
+                                resetFont: !0,
                             };
-                            (a.push(f), (o = t5()));
+                            (n.push(f), (o = ri()));
                         } else o.body.push(l[h]);
-                    (s % 2 == 0 ? a.push(o) : a.shift(), (a = []), i.push(a));
+                    (s % 2 == 0 ? n.push(o) : n.shift(), (n = []), i.push(n));
                 }
                 (e.gullet.endGroup(), e.gullet.endGroup());
                 var g = Array(i[0].length).fill({ type: "align", align: "c", pregap: 0.25, postgap: 0.25 });
@@ -6913,55 +7069,51 @@ var rP = function (e, t) {
                 };
             })(e.parser)
         ),
-        htmlBuilder: rP,
-        mathmlBuilder: r$,
+        htmlBuilder: rK,
+        mathmlBuilder: r0,
     }),
-    (rF["\\nonumber"] = "\\gdef\\@eqnsw{0}"),
-    (rF["\\notag"] = "\\nonumber"),
-    tr({
+    (rP["\\nonumber"] = "\\gdef\\@eqnsw{0}"),
+    (rP["\\notag"] = "\\nonumber"),
+    tp({
         type: "text",
         names: ["\\hline", "\\hdashline"],
-        props: { numArgs: 0, allowedInText: !0, allowedInMath: !0 },
+        numArgs: 0,
+        allowedInText: !0,
+        allowedInMath: !0,
         handler(e, t) {
-            throw new n(e.funcName + " valid only within array environment");
+            throw new a(e.funcName + " valid only within array environment");
         },
     }),
-    tr({
+    tp({
         type: "environment",
         names: ["\\begin", "\\end"],
-        props: { numArgs: 1, argTypes: ["text"] },
+        numArgs: 1,
+        argTypes: ["text"],
         handler(e, t) {
-            var { parser: r, funcName: a } = e,
+            var r = e.parser,
+                n = e.funcName,
                 i = t[0];
-            if ("ordgroup" !== i.type) throw new n("Invalid environment name", i);
-            for (var s = "", l = 0; l < i.body.length; ++l) s += t$(i.body[l], "textord").text;
-            if ("\\begin" === a) {
-                if (!rE.hasOwnProperty(s)) throw new n("No such environment: " + s, i);
-                var o = rE[s],
-                    { args: h, optArgs: u } = r.parseArguments("\\begin{" + s + "}", o),
+            if ("ordgroup" !== i.type) throw new a("Invalid environment name", i);
+            var s = t8(i, "Environment name should contain only text characters and spaces", !0);
+            if ("\\begin" === n) {
+                if (!Object.prototype.hasOwnProperty.call(rH, s)) throw new a("No such environment: " + s, i);
+                var l = rH[s],
+                    o = r.parseArguments("\\begin{" + s + "}", l),
+                    h = o.args,
+                    u = o.optArgs,
                     c = { mode: r.mode, envName: s, parser: r },
-                    m = o.handler(c, h, u);
+                    m = l.handler(c, h, u);
                 r.expect("\\end", !1);
                 var p = r.nextToken,
-                    d = t$(r.parseFunction(), "environment");
-                if (d.name !== s) throw new n("Mismatch: \\begin{" + s + "} matched by \\end{" + d.name + "}", p);
+                    d = t6(r.parseFunction(), "environment");
+                if (d.name !== s) throw new a("Mismatch: \\begin{" + s + "} matched by \\end{" + d.name + "}", p);
                 return m;
             }
             return { type: "environment", mode: r.mode, name: s, nameGroup: i };
         },
     }));
-var rV = (e, t) => {
-        var r = e.font,
-            n = t.withFont(r);
-        return tg(e.body, n);
-    },
-    rX = (e, t) => {
-        var r = e.font,
-            n = t.withFont(r);
-        return tM(e.body, n);
-    },
-    rZ = { "\\Bbb": "\\mathbb", "\\bold": "\\mathbf", "\\frak": "\\mathfrak", "\\bm": "\\boldsymbol" };
-(tr({
+var r4 = { "\\Bbb": "\\mathbb", "\\bold": "\\mathbf", "\\frak": "\\mathfrak" };
+(tp({
     type: "font",
     names: [
         "\\mathrm",
@@ -6979,52 +7131,63 @@ var rV = (e, t) => {
         "\\bold",
         "\\frak",
     ],
-    props: { numArgs: 1, allowedInArgument: !0 },
+    numArgs: 1,
+    allowedInArgument: !0,
     handler: (e, t) => {
-        var { parser: r, funcName: n } = e,
-            a = ta(t[0]),
-            i = n;
-        return (i in rZ && (i = rZ[i]), { type: "font", mode: r.mode, font: i.slice(1), body: a });
+        var r = e.parser,
+            a = e.funcName,
+            n = tf(t[0]),
+            i = a in r4 ? r4[a] : a;
+        return { type: "font", mode: r.mode, font: i.slice(1), body: n };
     },
-    htmlBuilder: rV,
-    mathmlBuilder: rX,
+    htmlBuilder: (e, t) => {
+        var r = e.font,
+            a = t.withFont(r);
+        return tD(e.body, a);
+    },
+    mathmlBuilder: (e, t) => {
+        var r = e.font,
+            a = t.withFont(r);
+        return tJ(e.body, a);
+    },
 }),
-    tr({
+    tp({
         type: "mclass",
         names: ["\\boldsymbol", "\\bm"],
-        props: { numArgs: 1 },
+        numArgs: 1,
         handler: (e, t) => {
-            var { parser: r } = e,
-                n = t[0];
+            var r = e.parser,
+                a = t[0];
             return {
                 type: "mclass",
                 mode: r.mode,
-                mclass: t1(n),
-                body: [{ type: "font", mode: r.mode, font: "boldsymbol", body: n }],
-                isCharacterBox: p(n),
+                mclass: ra(a),
+                body: [{ type: "font", mode: r.mode, font: "boldsymbol", body: a }],
+                isCharacterBox: d(a),
             };
         },
     }),
-    tr({
+    tp({
         type: "font",
         names: ["\\rm", "\\sf", "\\tt", "\\bf", "\\it", "\\cal"],
-        props: { numArgs: 0, allowedInText: !0 },
+        numArgs: 0,
+        allowedInText: !0,
         handler: (e, t) => {
-            var { parser: r, funcName: n, breakOnTokenText: a } = e,
-                { mode: i } = r,
-                s = r.parseExpression(!0, a);
+            var r = e.parser,
+                a = e.funcName,
+                n = e.breakOnTokenText,
+                i = r.mode,
+                s = r.parseExpression(!0, n);
             return {
                 type: "font",
                 mode: i,
-                font: "math" + n.slice(1),
+                font: "math" + a.slice(1),
                 body: { type: "ordgroup", mode: r.mode, body: s },
             };
         },
-        htmlBuilder: rV,
-        mathmlBuilder: rX,
     }));
-var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } : e);
-(tr({
+var r5 = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } : e);
+(tp({
     type: "genfrac",
     names: [
         "\\cfrac",
@@ -7038,15 +7201,17 @@ var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } :
         "\\\\bracefrac",
         "\\\\brackfrac",
     ],
-    props: { numArgs: 2, allowedInArgument: !0 },
+    numArgs: 2,
+    allowedInArgument: !0,
     handler: (e, t) => {
         var r,
-            { parser: n, funcName: a } = e,
+            a = e.parser,
+            n = e.funcName,
             i = t[0],
             s = t[1],
             l = null,
             o = null;
-        switch (a) {
+        switch (n) {
             case "\\cfrac":
             case "\\dfrac":
             case "\\frac":
@@ -7070,14 +7235,14 @@ var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } :
             default:
                 throw Error("Unrecognized genfrac command");
         }
-        var h = "\\cfrac" === a,
+        var h = "\\cfrac" === n,
             u = null;
         return (
-            h || a.startsWith("\\d") ? (u = "display") : a.startsWith("\\t") && (u = "text"),
-            rY(
+            h || n.startsWith("\\d") ? (u = "display") : n.startsWith("\\t") && (u = "text"),
+            r5(
                 {
                     type: "genfrac",
-                    mode: n.mode,
+                    mode: a.mode,
                     numer: i,
                     denom: s,
                     continued: h,
@@ -7092,8 +7257,8 @@ var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } :
     },
     htmlBuilder: (e, t) => {
         var r,
-            n,
             a,
+            n,
             i,
             s,
             l,
@@ -7106,41 +7271,41 @@ var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } :
             d = p.fracNum(),
             f = p.fracDen();
         r = t.havingStyle(d);
-        var g = tg(e.numer, r, t);
+        var g = tD(e.numer, r, t);
         if (e.continued) {
             var b = 8.5 / t.fontMetrics().ptPerEm,
                 v = 3.5 / t.fontMetrics().ptPerEm;
             ((g.height = g.height < b ? b : g.height), (g.depth = g.depth < v ? v : g.depth));
         }
         r = t.havingStyle(f);
-        var x = tg(e.denom, r, t);
+        var x = tD(e.denom, r, t);
         if (
             (e.hasBarLine
-                ? (e.barSize ? ((a = I(e.barSize, t)), (n = eV("frac-line", t, a))) : (n = eV("frac-line", t)),
-                  (a = n.height),
-                  (i = n.height))
-                : ((n = null), (a = 0), (i = t.fontMetrics().defaultRuleThickness)),
+                ? (e.barSize ? ((n = j(e.barSize, t)), (a = e3("frac-line", t, n))) : (a = e3("frac-line", t)),
+                  (n = a.height),
+                  (i = a.height))
+                : ((a = null), (n = 0), (i = t.fontMetrics().defaultRuleThickness)),
             p.size === R.DISPLAY.size
-                ? ((s = t.fontMetrics().num1), (l = a > 0 ? 3 * i : 7 * i), (o = t.fontMetrics().denom1))
-                : (a > 0 ? ((s = t.fontMetrics().num2), (l = i)) : ((s = t.fontMetrics().num3), (l = 3 * i)),
+                ? ((s = t.fontMetrics().num1), (l = n > 0 ? 3 * i : 7 * i), (o = t.fontMetrics().denom1))
+                : (n > 0 ? ((s = t.fontMetrics().num2), (l = i)) : ((s = t.fontMetrics().num3), (l = 3 * i)),
                   (o = t.fontMetrics().denom2)),
-            n)
+            a)
         ) {
             var y = t.fontMetrics().axisHeight;
-            (s - g.depth - (y + 0.5 * a) < l && (s += l - (s - g.depth - (y + 0.5 * a))),
-                y - 0.5 * a - (x.height - o) < l && (o += l - (y - 0.5 * a - (x.height - o))),
-                (h = eK({
+            (s - g.depth - (y + 0.5 * n) < l && (s += l - (s - g.depth - (y + 0.5 * n))),
+                y - 0.5 * n - (x.height - o) < l && (o += l - (y - 0.5 * n - (x.height - o))),
+                (h = e9({
                     positionType: "individualShift",
                     children: [
                         { type: "elem", elem: x, shift: o },
-                        { type: "elem", elem: n, shift: -(y - 0.5 * a) },
+                        { type: "elem", elem: a, shift: -(y - 0.5 * n) },
                         { type: "elem", elem: g, shift: -s },
                     ],
                 })));
         } else {
             var w = s - g.depth - (x.height - o);
             (w < l && ((s += 0.5 * (l - w)), (o += 0.5 * (l - w))),
-                (h = eK({
+                (h = e9({
                     positionType: "individualShift",
                     children: [
                         { type: "elem", elem: x, shift: o },
@@ -7158,46 +7323,49 @@ var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } :
                     : p.size === R.SCRIPTSCRIPT.size
                       ? t.havingStyle(R.SCRIPT).fontMetrics().delim2
                       : t.fontMetrics().delim2),
-            (c = null == e.leftDelim ? tf(t, ["mopen"]) : rR(e.leftDelim, u, !0, t.havingStyle(p), e.mode, ["mopen"])),
+            (c = null == e.leftDelim ? t_(t, ["mopen"]) : rB(e.leftDelim, u, !0, t.havingStyle(p), e.mode, ["mopen"])),
             (m = e.continued
-                ? e$([])
+                ? e4([])
                 : null == e.rightDelim
-                  ? tf(t, ["mclose"])
-                  : rR(e.rightDelim, u, !0, t.havingStyle(p), e.mode, ["mclose"])),
-            e$(["mord"].concat(r.sizingClasses(t)), [c, e$(["mfrac"], [h]), m], t)
+                  ? t_(t, ["mclose"])
+                  : rB(e.rightDelim, u, !0, t.havingStyle(p), e.mode, ["mclose"])),
+            e4(["mord"].concat(r.sizingClasses(t)), [c, e4(["mfrac"], [h]), m], t)
         );
     },
     mathmlBuilder: (e, t) => {
-        var r = new tx("mfrac", [tM(e.numer, t), tM(e.denom, t)]);
+        var r = new tM("mfrac", [tJ(e.numer, t), tJ(e.denom, t)]);
         if (e.hasBarLine) {
             if (e.barSize) {
-                var n = I(e.barSize, t);
-                r.setAttribute("linethickness", H(n));
+                var a = j(e.barSize, t);
+                r.setAttribute("linethickness", L(a));
             }
         } else r.setAttribute("linethickness", "0px");
         if (null != e.leftDelim || null != e.rightDelim) {
-            var a = [];
+            var n = [];
             if (null != e.leftDelim) {
-                var i = new tx("mo", [new ty(e.leftDelim.replace("\\", ""))]);
-                (i.setAttribute("fence", "true"), a.push(i));
+                var i = new tM("mo", [new tT(e.leftDelim.replace("\\", ""))]);
+                (i.setAttribute("fence", "true"), n.push(i));
             }
-            if ((a.push(r), null != e.rightDelim)) {
-                var s = new tx("mo", [new ty(e.rightDelim.replace("\\", ""))]);
-                (s.setAttribute("fence", "true"), a.push(s));
+            if ((n.push(r), null != e.rightDelim)) {
+                var s = new tM("mo", [new tT(e.rightDelim.replace("\\", ""))]);
+                (s.setAttribute("fence", "true"), n.push(s));
             }
-            return tC(a);
+            return tI(n);
         }
         return r;
     },
 }),
-    tr({
+    tp({
         type: "infix",
         names: ["\\over", "\\choose", "\\atop", "\\brace", "\\brack"],
-        props: { numArgs: 0, infix: !0 },
+        numArgs: 0,
+        infix: !0,
         handler(e) {
             var t,
-                { parser: r, funcName: n, token: a } = e;
-            switch (n) {
+                r = e.parser,
+                a = e.funcName,
+                n = e.token;
+            switch (a) {
                 case "\\over":
                     t = "\\frac";
                     break;
@@ -7216,41 +7384,43 @@ var rY = (e, t) => (t ? { type: "styling", mode: e.mode, style: t, body: [e] } :
                 default:
                     throw Error("Unrecognized infix genfrac command");
             }
-            return { type: "infix", mode: r.mode, replaceWith: t, token: a };
+            return { type: "infix", mode: r.mode, replaceWith: t, token: n };
         },
     }));
-var rG = ["display", "text", "script", "scriptscript"],
-    rK = function (e) {
+var r3 = ["display", "text", "script", "scriptscript"],
+    r6 = function (e) {
         var t = null;
         return (e.length > 0 && (t = "." === (t = e) ? null : t), t);
     };
-(tr({
+(tp({
     type: "genfrac",
     names: ["\\genfrac"],
-    props: { numArgs: 6, allowedInArgument: !0, argTypes: ["math", "math", "size", "text", "math", "math"] },
+    numArgs: 6,
+    allowedInArgument: !0,
+    argTypes: ["math", "math", "size", "text", "math", "math"],
     handler(e, t) {
         var r,
-            { parser: n } = e,
-            a = t[4],
+            a = e.parser,
+            n = t[4],
             i = t[5],
-            s = ta(t[0]),
-            l = "atom" === s.type && "open" === s.family ? rK(s.text) : null,
-            o = ta(t[1]),
-            h = "atom" === o.type && "close" === o.family ? rK(o.text) : null,
-            u = t$(t[2], "size"),
+            s = tf(t[0]),
+            l = "atom" === s.type && "open" === s.family ? r6(s.text) : null,
+            o = tf(t[1]),
+            h = "atom" === o.type && "close" === o.family ? r6(o.text) : null,
+            u = t6(t[2], "size"),
             c = null;
         r = !!u.isBlank || (c = u.value).number > 0;
         var m = null,
             p = t[3];
         return (
             "ordgroup" === p.type
-                ? p.body.length > 0 && (m = rG[Number(t$(p.body[0], "textord").text)])
-                : (m = rG[Number((p = t$(p, "textord")).text)]),
-            rY(
+                ? p.body.length > 0 && (m = r3[Number(t6(p.body[0], "textord").text)])
+                : (m = r3[Number((p = t6(p, "textord")).text)]),
+            r5(
                 {
                     type: "genfrac",
-                    mode: n.mode,
-                    numer: a,
+                    mode: a.mode,
+                    numer: n,
                     denom: i,
                     continued: !1,
                     hasBarLine: r,
@@ -7263,80 +7433,86 @@ var rG = ["display", "text", "script", "scriptscript"],
         );
     },
 }),
-    tr({
+    tp({
         type: "infix",
         names: ["\\above"],
-        props: { numArgs: 1, argTypes: ["size"], infix: !0 },
+        numArgs: 1,
+        argTypes: ["size"],
+        infix: !0,
         handler(e, t) {
-            var { parser: r, funcName: n, token: a } = e;
+            var r = e.parser;
+            e.funcName;
+            var a = e.token;
             return {
                 type: "infix",
                 mode: r.mode,
                 replaceWith: "\\\\abovefrac",
-                size: t$(t[0], "size").value,
+                size: t6(t[0], "size").value,
                 token: a,
             };
         },
     }),
-    tr({
+    tp({
         type: "genfrac",
         names: ["\\\\abovefrac"],
-        props: { numArgs: 3, argTypes: ["math", "size", "math"] },
+        numArgs: 3,
+        argTypes: ["math", "size", "math"],
         handler: (e, t) => {
-            var { parser: r, funcName: n } = e,
-                a = t[0],
-                i = t$(t[1], "infix").size;
-            if (!i) throw Error("\\\\abovefrac expected size, but got " + String(i));
-            var s = t[2],
-                l = i.number > 0;
+            var r = e.parser;
+            e.funcName;
+            var a = t[0],
+                n = t6(t[1], "infix").size;
+            if (!n) throw Error("\\\\abovefrac expected size, but got " + String(n));
+            var i = t[2],
+                s = n.number > 0;
             return {
                 type: "genfrac",
                 mode: r.mode,
                 numer: a,
-                denom: s,
+                denom: i,
                 continued: !1,
-                hasBarLine: l,
-                barSize: i,
+                hasBarLine: s,
+                barSize: n,
                 leftDelim: null,
                 rightDelim: null,
             };
         },
     }));
-var rQ = (e, t) => {
+var r7 = (e, t) => {
     var r,
-        n,
         a,
+        n,
         i = t.style;
     "supsub" === e.type
-        ? ((r = e.sup ? tg(e.sup, t.havingStyle(i.sup()), t) : tg(e.sub, t.havingStyle(i.sub()), t)),
-          (n = t$(e.base, "horizBrace")))
-        : (n = t$(e, "horizBrace"));
-    var s = tg(n.base, t.havingBaseStyle(R.DISPLAY)),
-        l = tP(n, t);
+        ? ((r = e.sup ? tD(e.sup, t.havingStyle(i.sup()), t) : tD(e.sub, t.havingStyle(i.sub()), t)),
+          (a = t6(e.base, "horizBrace")))
+        : (a = t6(e, "horizBrace"));
+    var s = tD(a.base, t.havingBaseStyle(R.DISPLAY)),
+        l = t1(a, t);
     if (
-        (n.isOver
-            ? (a = eK({
+        ((n = a.isOver
+            ? e9({
                   positionType: "firstBaseline",
                   children: [
                       { type: "elem", elem: s },
                       { type: "kern", size: 0.1 },
-                      { type: "elem", elem: l },
+                      { type: "elem", elem: l, wrapperClasses: ["svg-align"] },
                   ],
-              })).children[0].children[0].children[1].classes.push("svg-align")
-            : (a = eK({
+              })
+            : e9({
                   positionType: "bottom",
                   positionData: s.depth + 0.1 + l.height,
                   children: [
-                      { type: "elem", elem: l },
+                      { type: "elem", elem: l, wrapperClasses: ["svg-align"] },
                       { type: "kern", size: 0.1 },
                       { type: "elem", elem: s },
                   ],
-              })).children[0].children[0].children[0].classes.push("svg-align"),
+              })),
         r)
     ) {
-        var o = e$(["minner", n.isOver ? "mover" : "munder"], [a], t);
-        a = n.isOver
-            ? eK({
+        var o = e4(["minner", a.isOver ? "mover" : "munder"], [n], t);
+        n = a.isOver
+            ? e9({
                   positionType: "firstBaseline",
                   children: [
                       { type: "elem", elem: o },
@@ -7344,7 +7520,7 @@ var rQ = (e, t) => {
                       { type: "elem", elem: r },
                   ],
               })
-            : eK({
+            : e9({
                   positionType: "bottom",
                   positionData: o.depth + 0.2 + r.height + r.depth,
                   children: [
@@ -7354,152 +7530,178 @@ var rQ = (e, t) => {
                   ],
               });
     }
-    return e$(["minner", n.isOver ? "mover" : "munder"], [a], t);
+    return e4(["minner", a.isOver ? "mover" : "munder"], [n], t);
 };
-(tr({
+(tp({
     type: "horizBrace",
     names: ["\\overbrace", "\\underbrace", "\\overbracket", "\\underbracket"],
-    props: { numArgs: 1 },
+    numArgs: 1,
     handler(e, t) {
-        var { parser: r, funcName: n } = e;
-        return { type: "horizBrace", mode: r.mode, label: n, isOver: n.includes("\\over"), base: t[0] };
+        var r = e.parser,
+            a = e.funcName;
+        return { type: "horizBrace", mode: r.mode, label: a, isOver: a.includes("\\over"), base: t[0] };
     },
-    htmlBuilder: rQ,
+    htmlBuilder: r7,
     mathmlBuilder: (e, t) => {
-        var r = tj(e.label);
-        return new tx(e.isOver ? "mover" : "munder", [tM(e.base, t), r]);
+        var r = tK(e.label);
+        return new tM(e.isOver ? "mover" : "munder", [tJ(e.base, t), r]);
     },
 }),
-    tr({
+    tp({
         type: "href",
         names: ["\\href"],
-        props: { numArgs: 2, argTypes: ["url", "original"], allowedInText: !0 },
+        numArgs: 2,
+        argTypes: ["url", "original"],
+        allowedInText: !0,
         handler: (e, t) => {
-            var { parser: r } = e,
-                n = t[1],
-                a = t$(t[0], "url").url;
-            return r.settings.isTrusted({ command: "\\href", url: a })
-                ? { type: "href", mode: r.mode, href: a, body: ti(n) }
+            var r = e.parser,
+                a = t[1],
+                n = t6(t[0], "url").url;
+            return r.settings.isTrusted({ command: "\\href", url: n })
+                ? { type: "href", mode: r.mode, href: n, body: tg(a) }
                 : r.formatUnsupportedCmd("\\href");
         },
         htmlBuilder: (e, t) => {
-            var r = tu(e.body, t, !1);
-            return eX(e.href, [], r, t);
+            var r = tw(e.body, t, !1);
+            return e6(e.href, [], r, t);
         },
         mathmlBuilder: (e, t) => {
-            var r = tS(e.body, t);
-            return (r instanceof tx || (r = new tx("mrow", [r])), r.setAttribute("href", e.href), r);
+            var r = tH(e.body, t);
+            return (r instanceof tM || (r = new tM("mrow", [r])), r.setAttribute("href", e.href), r);
         },
     }),
-    tr({
+    tp({
         type: "href",
         names: ["\\url"],
-        props: { numArgs: 1, argTypes: ["url"], allowedInText: !0 },
+        numArgs: 1,
+        argTypes: ["url"],
+        allowedInText: !0,
         handler: (e, t) => {
-            var { parser: r } = e,
-                n = t$(t[0], "url").url;
-            if (!r.settings.isTrusted({ command: "\\url", url: n })) return r.formatUnsupportedCmd("\\url");
-            for (var a = [], i = 0; i < n.length; i++) {
-                var s = n[i];
-                ("~" === s && (s = "\\textasciitilde"), a.push({ type: "textord", mode: "text", text: s }));
+            var r = e.parser,
+                a = t6(t[0], "url").url;
+            if (!r.settings.isTrusted({ command: "\\url", url: a })) return r.formatUnsupportedCmd("\\url");
+            for (var n = [], i = 0; i < a.length; i++) {
+                var s = a[i];
+                ("~" === s && (s = "\\textasciitilde"), n.push({ type: "textord", mode: "text", text: s }));
             }
-            var l = { type: "text", mode: r.mode, font: "\\texttt", body: a };
-            return { type: "href", mode: r.mode, href: n, body: ti(l) };
+            var l = { type: "text", mode: r.mode, font: "\\texttt", body: n };
+            return { type: "href", mode: r.mode, href: a, body: tg(l) };
         },
     }),
-    tr({
+    tp({
         type: "hbox",
         names: ["\\hbox"],
-        props: { numArgs: 1, argTypes: ["text"], allowedInText: !0, primitive: !0 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "hbox", mode: r.mode, body: ti(t[0]) };
-        },
-        htmlBuilder: (e, t) => eZ(tu(e.body, t, !1)),
-        mathmlBuilder: (e, t) => new tx("mrow", tz(e.body, t)),
+        numArgs: 1,
+        argTypes: ["text"],
+        allowedInText: !0,
+        primitive: !0,
+        handler: (e, t) => ({ type: "hbox", mode: e.parser.mode, body: tg(t[0]) }),
+        htmlBuilder: (e, t) => e7(tw(e.body, t.withFont(""), !1)),
+        mathmlBuilder: (e, t) => new tM("mrow", tO(e.body, t.withFont(""))),
     }),
-    tr({
+    tp({
         type: "html",
         names: ["\\htmlClass", "\\htmlId", "\\htmlStyle", "\\htmlData"],
-        props: { numArgs: 2, argTypes: ["raw", "original"], allowedInText: !0 },
+        numArgs: 2,
+        argTypes: ["raw", "original"],
+        allowedInText: !0,
         handler: (e, t) => {
             var r,
-                { parser: a, funcName: i, token: s } = e,
-                l = t$(t[0], "raw").string,
-                o = t[1];
-            a.settings.strict &&
-                a.settings.reportNonstrict("htmlExtension", "HTML extension is disabled on strict mode");
-            var h = {};
+                n = e.parser,
+                i = e.funcName;
+            e.token;
+            var s = t6(t[0], "raw").string,
+                l = t[1];
+            n.settings.strict &&
+                eZ({
+                    strict: n.settings.strict,
+                    errorCode: "htmlExtension",
+                    errorMsg: "HTML extension is disabled on strict mode",
+                    report: !0,
+                });
+            var o = {};
             switch (i) {
                 case "\\htmlClass":
-                    ((h.class = l), (r = { command: "\\htmlClass", class: l }));
+                    ((o.class = s), (r = { command: "\\htmlClass", class: s }));
                     break;
                 case "\\htmlId":
-                    ((h.id = l), (r = { command: "\\htmlId", id: l }));
+                    ((o.id = s), (r = { command: "\\htmlId", id: s }));
                     break;
                 case "\\htmlStyle":
-                    ((h.style = l), (r = { command: "\\htmlStyle", style: l }));
+                    ((o.style = s), (r = { command: "\\htmlStyle", style: s }));
                     break;
                 case "\\htmlData":
-                    for (var u = l.split(","), c = 0; c < u.length; c++) {
-                        var m = u[c],
-                            p = m.indexOf("=");
-                        if (p < 0) throw new n("\\htmlData key/value '" + m + "' missing equals sign");
-                        var d = m.slice(0, p),
-                            f = m.slice(p + 1);
-                        h["data-" + d.trim()] = f;
+                    for (var h = [], u = "", c = 0; c < s.length; c++)
+                        s.startsWith("{,}", c)
+                            ? ((u += ","), (c += 2))
+                            : "," === s[c]
+                              ? (h.push(u), (u = ""))
+                              : (u += s[c]);
+                    h.push(u);
+                    for (var m = 0; m < h.length; m++) {
+                        var p = h[m],
+                            d = p.indexOf("=");
+                        if (d < 0) throw new a("\\htmlData key/value '" + p + "' missing equals sign");
+                        var f = p.slice(0, d),
+                            g = p.slice(d + 1);
+                        o["data-" + f.trim()] = g;
                     }
-                    r = { command: "\\htmlData", attributes: h };
+                    r = { command: "\\htmlData", attributes: o };
                     break;
                 default:
                     throw Error("Unrecognized html command");
             }
-            return a.settings.isTrusted(r)
-                ? { type: "html", mode: a.mode, attributes: h, body: ti(o) }
-                : a.formatUnsupportedCmd(i);
+            return n.settings.isTrusted(r)
+                ? { type: "html", mode: n.mode, attributes: o, body: tg(l) }
+                : n.formatUnsupportedCmd(i);
         },
         htmlBuilder: (e, t) => {
-            var r = tu(e.body, t, !1),
-                n = ["enclosing"];
-            e.attributes.class && n.push(...e.attributes.class.trim().split(/\s+/));
-            var a = e$(n, r, t);
-            for (var i in e.attributes)
-                "class" !== i && e.attributes.hasOwnProperty(i) && a.setAttribute(i, e.attributes[i]);
-            return a;
+            var r = tw(e.body, t, !1),
+                a = ["enclosing"];
+            e.attributes.class && a.push(...e.attributes.class.trim().split(/\s+/));
+            var n = e4(a, r, t);
+            for (var i of Object.entries(e.attributes)) {
+                var s = i[0],
+                    l = i[1];
+                "class" !== s && n.setAttribute(s, l);
+            }
+            return n;
         },
-        mathmlBuilder: (e, t) => tS(e.body, t),
+        mathmlBuilder: (e, t) => tH(e.body, t),
     }),
-    tr({
+    tp({
         type: "htmlmathml",
         names: ["\\html@mathml"],
-        props: { numArgs: 2, allowedInArgument: !0, allowedInText: !0 },
-        handler: (e, t) => {
-            var { parser: r } = e;
-            return { type: "htmlmathml", mode: r.mode, html: ti(t[0]), mathml: ti(t[1]) };
-        },
-        htmlBuilder: (e, t) => eZ(tu(e.html, t, !1)),
-        mathmlBuilder: (e, t) => tS(e.mathml, t),
+        numArgs: 2,
+        allowedInArgument: !0,
+        allowedInText: !0,
+        handler: (e, t) => ({ type: "htmlmathml", mode: e.parser.mode, html: tg(t[0]), mathml: tg(t[1]) }),
+        htmlBuilder: (e, t) => e7(tw(e.html, t, !1)),
+        mathmlBuilder: (e, t) => tH(e.mathml, t),
     }));
-var r0 = function (e) {
+var r2 = function (e) {
     if (/^[-+]? *(\d+(\.\d*)?|\.\d+)$/.test(e)) return { number: +e, unit: "bp" };
     var t = /([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/.exec(e);
-    if (!t) throw new n("Invalid size: '" + e + "' in \\includegraphics");
+    if (!t) throw new a("Invalid size: '" + e + "' in \\includegraphics");
     var r = { number: +(t[1] + t[2]), unit: t[3] };
-    if (!q(r)) throw new n("Invalid unit: '" + r.unit + "' in \\includegraphics.");
+    if (!I(r)) throw new a("Invalid unit: '" + r.unit + "' in \\includegraphics.");
     return r;
 };
-(tr({
+(tp({
     type: "includegraphics",
     names: ["\\includegraphics"],
-    props: { numArgs: 1, numOptionalArgs: 1, argTypes: ["raw", "url"], allowedInText: !1 },
+    numArgs: 1,
+    numOptionalArgs: 1,
+    argTypes: ["raw", "url"],
+    allowedInText: !1,
     handler: (e, t, r) => {
-        var { parser: a } = e,
+        var n = e.parser,
             i = { number: 0, unit: "em" },
             s = { number: 0.9, unit: "em" },
             l = { number: 0, unit: "em" },
             o = "";
         if (r[0])
-            for (var h = t$(r[0], "raw").string.split(","), u = 0; u < h.length; u++) {
+            for (var h = t6(r[0], "raw").string.split(","), u = 0; u < h.length; u++) {
                 var c = h[u].split("=");
                 if (2 === c.length) {
                     var m = c[1].trim();
@@ -7508,133 +7710,159 @@ var r0 = function (e) {
                             o = m;
                             break;
                         case "width":
-                            i = r0(m);
+                            i = r2(m);
                             break;
                         case "height":
-                            s = r0(m);
+                            s = r2(m);
                             break;
                         case "totalheight":
-                            l = r0(m);
+                            l = r2(m);
                             break;
                         default:
-                            throw new n("Invalid key: '" + c[0] + "' in \\includegraphics.");
+                            throw new a("Invalid key: '" + c[0] + "' in \\includegraphics.");
                     }
                 }
             }
-        var p = t$(t[0], "url").url;
+        var p = t6(t[0], "url").url;
         return ("" === o && (o = (o = (o = p).replace(/^.*[\\/]/, "")).substring(0, o.lastIndexOf("."))),
-        a.settings.isTrusted({ command: "\\includegraphics", url: p }))
-            ? { type: "includegraphics", mode: a.mode, alt: o, width: i, height: s, totalheight: l, src: p }
-            : a.formatUnsupportedCmd("\\includegraphics");
+        n.settings.isTrusted({ command: "\\includegraphics", url: p }))
+            ? { type: "includegraphics", mode: n.mode, alt: o, width: i, height: s, totalheight: l, src: p }
+            : n.formatUnsupportedCmd("\\includegraphics");
     },
     htmlBuilder: (e, t) => {
-        var r = I(e.height, t),
-            n = 0;
-        e.totalheight.number > 0 && (n = I(e.totalheight, t) - r);
-        var a = 0;
-        e.width.number > 0 && (a = I(e.width, t));
-        var i = { height: H(r + n) };
-        (a > 0 && (i.width = H(a)), n > 0 && (i.verticalAlign = H(-n)));
-        var s = new $(e.src, e.alt, i);
-        return ((s.height = r), (s.depth = n), s);
+        var r = j(e.height, t),
+            a = 0;
+        e.totalheight.number > 0 && (a = j(e.totalheight, t) - r);
+        var n = 0;
+        e.width.number > 0 && (n = j(e.width, t));
+        var i = { height: L(r + a) };
+        (n > 0 && (i.width = L(n)), a > 0 && (i.verticalAlign = L(-a)));
+        var s = new V(e.src, e.alt, i);
+        return ((s.height = r), (s.depth = a), s);
     },
     mathmlBuilder: (e, t) => {
-        var r = new tx("mglyph", []);
+        var r = new tM("mglyph", []);
         r.setAttribute("alt", e.alt);
-        var n = I(e.height, t),
-            a = 0;
+        var a = j(e.height, t),
+            n = 0;
         if (
-            (e.totalheight.number > 0 && ((a = I(e.totalheight, t) - n), r.setAttribute("valign", H(-a))),
-            r.setAttribute("height", H(n + a)),
+            (e.totalheight.number > 0 && ((n = j(e.totalheight, t) - a), r.setAttribute("valign", L(-n))),
+            r.setAttribute("height", L(a + n)),
             e.width.number > 0)
         ) {
-            var i = I(e.width, t);
-            r.setAttribute("width", H(i));
+            var i = j(e.width, t);
+            r.setAttribute("width", L(i));
         }
         return (r.setAttribute("src", e.src), r);
     },
 }),
-    tr({
+    tp({
         type: "kern",
         names: ["\\kern", "\\mkern", "\\hskip", "\\mskip"],
-        props: { numArgs: 1, argTypes: ["size"], primitive: !0, allowedInText: !0 },
+        numArgs: 1,
+        argTypes: ["size"],
+        primitive: !0,
+        allowedInText: !0,
         handler(e, t) {
-            var { parser: r, funcName: n } = e,
-                a = t$(t[0], "size");
+            var r = e.parser,
+                a = e.funcName,
+                n = t6(t[0], "size");
             if (r.settings.strict) {
-                var i = "m" === n[1],
-                    s = "mu" === a.value.unit;
+                var i = "m" === a[1],
+                    s = "mu" === n.value.unit;
                 i
                     ? (s ||
-                          r.settings.reportNonstrict(
-                              "mathVsTextUnits",
-                              "LaTeX's " + n + " supports only mu units, not " + a.value.unit + " units",
-                          ),
+                          eZ({
+                              strict: r.settings.strict,
+                              errorCode: "mathVsTextUnits",
+                              errorMsg: "LaTeX's " + a + " supports only mu units, not " + n.value.unit + " units",
+                              report: !0,
+                          }),
                       "math" !== r.mode &&
-                          r.settings.reportNonstrict("mathVsTextUnits", "LaTeX's " + n + " works only in math mode"))
-                    : s && r.settings.reportNonstrict("mathVsTextUnits", "LaTeX's " + n + " doesn't support mu units");
+                          eZ({
+                              strict: r.settings.strict,
+                              errorCode: "mathVsTextUnits",
+                              errorMsg: "LaTeX's " + a + " works only in math mode",
+                              report: !0,
+                          }))
+                    : s &&
+                      eZ({
+                          strict: r.settings.strict,
+                          errorCode: "mathVsTextUnits",
+                          errorMsg: "LaTeX's " + a + " doesn't support mu units",
+                          report: !0,
+                      });
             }
-            return { type: "kern", mode: r.mode, dimension: a.value };
+            return { type: "kern", mode: r.mode, dimension: n.value };
         },
-        htmlBuilder: (e, t) => eQ(e.dimension, t),
-        mathmlBuilder: (e, t) => new tw(I(e.dimension, t)),
+        htmlBuilder: (e, t) => te(e.dimension, t),
+        mathmlBuilder: (e, t) => new tE(j(e.dimension, t)),
     }),
-    tr({
+    tp({
         type: "lap",
         names: ["\\mathllap", "\\mathrlap", "\\mathclap"],
-        props: { numArgs: 1, allowedInText: !0 },
+        numArgs: 1,
+        allowedInText: !0,
         handler: (e, t) => {
-            var { parser: r, funcName: n } = e,
-                a = t[0];
-            return { type: "lap", mode: r.mode, alignment: n.slice(5), body: a };
+            var r = e.parser,
+                a = e.funcName,
+                n = t[0];
+            return { type: "lap", mode: r.mode, alignment: a.slice(5), body: n };
         },
         htmlBuilder: (e, t) => {
             "clap" === e.alignment
-                ? ((r = e$([], [tg(e.body, t)])), (r = e$(["inner"], [r], t)))
-                : (r = e$(["inner"], [tg(e.body, t)]));
+                ? ((r = e4([], [tD(e.body, t)])), (r = e4(["katex-inner"], [r], t)))
+                : (r = e4(["katex-inner"], [tD(e.body, t)]));
             var r,
-                n = e$(["fix"], []),
-                a = e$([e.alignment], [r, n], t),
-                i = e$(["strut"]);
+                a = e4(["katex-fix"], []),
+                n = e4([e.alignment], [r, a], t),
+                i = e4(["katex-strut"]);
             return (
-                (i.style.height = H(a.height + a.depth)),
-                a.depth && (i.style.verticalAlign = H(-a.depth)),
-                a.children.unshift(i),
-                (a = e$(["thinbox"], [a], t)),
-                e$(["mord", "vbox"], [a], t)
+                (i.style.height = L(n.height + n.depth)),
+                n.depth && (i.style.verticalAlign = L(-n.depth)),
+                n.children.unshift(i),
+                (n = e4(["katex-thinbox"], [n], t)),
+                e4(["mord", "katex-vbox"], [n], t)
             );
         },
         mathmlBuilder: (e, t) => {
-            var r = new tx("mpadded", [tM(e.body, t)]);
+            var r = new tM("mpadded", [tJ(e.body, t)]);
             if ("rlap" !== e.alignment) {
-                var n = "llap" === e.alignment ? "-1" : "-0.5";
-                r.setAttribute("lspace", n + "width");
+                var a = "llap" === e.alignment ? "-1" : "-0.5";
+                r.setAttribute("lspace", a + "width");
             }
             return (r.setAttribute("width", "0px"), r);
         },
     }),
-    tr({
+    tp({
         type: "styling",
         names: ["\\(", "$"],
-        props: { numArgs: 0, allowedInText: !0, allowedInMath: !1 },
+        numArgs: 0,
+        allowedInText: !0,
+        allowedInMath: !1,
         handler(e, t) {
-            var { funcName: r, parser: n } = e,
-                a = n.mode;
-            n.switchMode("math");
+            var r = e.funcName,
+                a = e.parser,
+                n = a.mode;
+            a.switchMode("math");
             var i = "\\(" === r ? "\\)" : "$",
-                s = n.parseExpression(!1, i);
-            return (n.expect(i), n.switchMode(a), { type: "styling", mode: n.mode, style: "text", body: s });
+                s = a.parseExpression(!1, i);
+            return (
+                a.expect(i), a.switchMode(n), { type: "styling", mode: a.mode, style: "text", resetFont: !0, body: s }
+            );
         },
     }),
-    tr({
+    tp({
         type: "text",
         names: ["\\)", "\\]"],
-        props: { numArgs: 0, allowedInText: !0, allowedInMath: !1 },
+        numArgs: 0,
+        allowedInText: !0,
+        allowedInMath: !1,
         handler(e, t) {
-            throw new n("Mismatched " + e.funcName);
+            throw new a("Mismatched " + e.funcName);
         },
     }));
-var r1 = (e, t) => {
+var r8 = (e, t) => {
     switch (t.style.size) {
         case R.DISPLAY.size:
             return e.display;
@@ -7648,142 +7876,127 @@ var r1 = (e, t) => {
             return e.text;
     }
 };
-tr({
+tp({
     type: "mathchoice",
     names: ["\\mathchoice"],
-    props: { numArgs: 4, primitive: !0 },
-    handler: (e, t) => {
-        var { parser: r } = e;
-        return {
-            type: "mathchoice",
-            mode: r.mode,
-            display: ti(t[0]),
-            text: ti(t[1]),
-            script: ti(t[2]),
-            scriptscript: ti(t[3]),
-        };
-    },
-    htmlBuilder: (e, t) => eZ(tu(r1(e, t), t, !1)),
-    mathmlBuilder: (e, t) => tS(r1(e, t), t),
+    numArgs: 4,
+    primitive: !0,
+    handler: (e, t) => ({
+        type: "mathchoice",
+        mode: e.parser.mode,
+        display: tg(t[0]),
+        text: tg(t[1]),
+        script: tg(t[2]),
+        scriptscript: tg(t[3]),
+    }),
+    htmlBuilder: (e, t) => e7(tw(r8(e, t), t, !1)),
+    mathmlBuilder: (e, t) => tH(r8(e, t), t),
 });
-var r4 = (e, t, r, n, a, i, s) => {
-        e = e$([], [e]);
+var r9 = (e, t, r, a, n, i, s) => {
+        e = e4([], [e]);
         var l,
             o,
             h,
-            u = r && p(r);
+            u = r && d(r);
         if (t) {
-            var c = tg(t, n.havingStyle(a.sup()), n);
-            o = { elem: c, kern: Math.max(n.fontMetrics().bigOpSpacing1, n.fontMetrics().bigOpSpacing3 - c.depth) };
+            var c = tD(t, a.havingStyle(n.sup()), a);
+            o = { elem: c, kern: Math.max(a.fontMetrics().bigOpSpacing1, a.fontMetrics().bigOpSpacing3 - c.depth) };
         }
         if (r) {
-            var m = tg(r, n.havingStyle(a.sub()), n);
-            l = { elem: m, kern: Math.max(n.fontMetrics().bigOpSpacing2, n.fontMetrics().bigOpSpacing4 - m.height) };
+            var m = tD(r, a.havingStyle(n.sub()), a);
+            l = { elem: m, kern: Math.max(a.fontMetrics().bigOpSpacing2, a.fontMetrics().bigOpSpacing4 - m.height) };
         }
         if (o && l)
-            h = eK({
+            h = e9({
                 positionType: "bottom",
-                positionData: n.fontMetrics().bigOpSpacing5 + l.elem.height + l.elem.depth + l.kern + e.depth + s,
+                positionData: a.fontMetrics().bigOpSpacing5 + l.elem.height + l.elem.depth + l.kern + e.depth + s,
                 children: [
-                    { type: "kern", size: n.fontMetrics().bigOpSpacing5 },
-                    { type: "elem", elem: l.elem, marginLeft: H(-i) },
+                    { type: "kern", size: a.fontMetrics().bigOpSpacing5 },
+                    { type: "elem", elem: l.elem, marginLeft: L(-i) },
                     { type: "kern", size: l.kern },
                     { type: "elem", elem: e },
                     { type: "kern", size: o.kern },
-                    { type: "elem", elem: o.elem, marginLeft: H(i) },
-                    { type: "kern", size: n.fontMetrics().bigOpSpacing5 },
+                    { type: "elem", elem: o.elem, marginLeft: L(i) },
+                    { type: "kern", size: a.fontMetrics().bigOpSpacing5 },
                 ],
             });
         else if (l)
-            h = eK({
+            h = e9({
                 positionType: "top",
                 positionData: e.height - s,
                 children: [
-                    { type: "kern", size: n.fontMetrics().bigOpSpacing5 },
-                    { type: "elem", elem: l.elem, marginLeft: H(-i) },
+                    { type: "kern", size: a.fontMetrics().bigOpSpacing5 },
+                    { type: "elem", elem: l.elem, marginLeft: L(-i) },
                     { type: "kern", size: l.kern },
                     { type: "elem", elem: e },
                 ],
             });
         else {
             if (!o) return e;
-            h = eK({
+            h = e9({
                 positionType: "bottom",
                 positionData: e.depth + s,
                 children: [
                     { type: "elem", elem: e },
                     { type: "kern", size: o.kern },
-                    { type: "elem", elem: o.elem, marginLeft: H(i) },
-                    { type: "kern", size: n.fontMetrics().bigOpSpacing5 },
+                    { type: "elem", elem: o.elem, marginLeft: L(i) },
+                    { type: "kern", size: a.fontMetrics().bigOpSpacing5 },
                 ],
             });
         }
-        var d = [h];
+        var p = [h];
         if (l && 0 !== i && !u) {
-            var f = e$(["mspace"], [], n);
-            ((f.style.marginRight = H(i)), d.unshift(f));
+            var f = e4(["mspace"], [], a);
+            ((f.style.marginRight = L(i)), p.unshift(f));
         }
-        return e$(["mop", "op-limits"], d, n);
+        return e4(["mop", "op-limits"], p, a);
     },
-    r5 = new Set(["\\smallint"]),
-    r3 = (e, t) => {
+    ae = new Set(["\\smallint"]),
+    at = (e, t) => {
         var r,
-            n,
             a,
+            n,
             i,
-            s = !1;
-        "supsub" === e.type ? ((r = e.sup), (n = e.sub), (a = t$(e.base, "op")), (s = !0)) : (a = t$(e, "op"));
-        var l = t.style,
+            s,
+            l,
             o = !1;
-        if ((l.size === R.DISPLAY.size && a.symbol && !r5.has(a.name) && (o = !0), a.symbol)) {
-            var h = o ? "Size2-Regular" : "Size1-Regular",
-                u = "";
-            if (
-                (("\\oiint" === a.name || "\\oiiint" === a.name) &&
-                    ((u = a.name.slice(1)), (a.name = "oiint" === u ? "\\iint" : "\\iiint")),
-                (i = eO(a.name, h, "math", t, ["mop", "op-symbol", o ? "large-op" : "small-op"])),
-                u.length > 0)
-            ) {
-                var c = i.italic;
-                ((i = eK({
-                    positionType: "individualShift",
-                    children: [
-                        { type: "elem", elem: i, shift: 0 },
-                        { type: "elem", elem: e5(u + "Size" + (o ? "2" : "1"), t), shift: 0.08 * !!o },
-                    ],
-                })),
-                    (a.name = "\\" + u),
+        "supsub" === e.type ? ((r = e.sup), (a = e.sub), (n = t6(e.base, "op")), (o = !0)) : (n = t6(e, "op"));
+        var h = t.style,
+            u = !1;
+        if ((h.size === R.DISPLAY.size && n.symbol && !ae.has(n.name) && (u = !0), n.symbol)) {
+            var c = u ? "Size2-Regular" : "Size1-Regular",
+                m = "";
+            (("\\oiint" === n.name || "\\oiiint" === n.name) &&
+                ((m = n.name.slice(1)), (n.name = "oiint" === m ? "\\iint" : "\\iiint")),
+                (s = (i = eG(n.name, c, "math", t, ["mop", "op-symbol", u ? "large-op" : "small-op"])).italic),
+                m.length > 0 &&
+                    ((i = e9({
+                        positionType: "individualShift",
+                        children: [
+                            { type: "elem", elem: i, shift: 0 },
+                            { type: "elem", elem: tn(m + "Size" + (u ? "2" : "1"), t), shift: 0.08 * !!u },
+                        ],
+                    })),
+                    (n.name = "\\" + m),
                     i.classes.unshift("mop"),
-                    (i.italic = c));
-            }
-        } else if (a.body) {
-            var m = tu(a.body, t, !0);
-            1 === m.length && m[0] instanceof V ? ((i = m[0]).classes[0] = "mop") : (i = e$(["mop"], m, t));
+                    (i.italic = s)));
+        } else if (n.body) {
+            var p = tw(n.body, t, !0);
+            1 === p.length && p[0] instanceof X ? ((i = p[0]).classes[0] = "mop") : (i = e4(["mop"], p, t));
         } else {
-            for (var p = [], d = 1; d < a.name.length; d++) p.push(ej(a.name[d], a.mode, t));
-            i = e$(["mop"], p, t);
+            for (var d = [], f = 1; f < n.name.length; f++) d.push(eY(n.name[f], n.mode, t));
+            i = e4(["mop"], d, t);
         }
-        var f = 0,
-            g = 0;
-        return ((i instanceof V || "\\oiint" === a.name || "\\oiiint" === a.name) &&
-            !a.suppressBaseShift &&
-            ((f = (i.height - i.depth) / 2 - t.fontMetrics().axisHeight), (g = i.italic || 0)),
-        s)
-            ? r4(i, r, n, t, l, g, f)
-            : (f && ((i.style.position = "relative"), (i.style.top = H(f))), i);
+        var g = 0,
+            b = 0;
+        return ((i instanceof X || "\\oiint" === n.name || "\\oiiint" === n.name) &&
+            !n.suppressBaseShift &&
+            ((g = (i.height - i.depth) / 2 - t.fontMetrics().axisHeight), (b = null != (l = i.italic) ? l : 0)),
+        o)
+            ? r9(i, r, a, t, h, b, g)
+            : (g && ((i.style.position = "relative"), (i.style.top = L(g))), i);
     },
-    r6 = (e, t) => {
-        var r;
-        if (e.symbol) ((r = new tx("mo", [tR(e.name, e.mode)])), r5.has(e.name) && r.setAttribute("largeop", "false"));
-        else if (e.body) r = new tx("mo", tz(e.body, t));
-        else {
-            r = new tx("mi", [new ty(e.name.slice(1))]);
-            var n = new tx("mo", [tR("\u2061", "text")]);
-            r = e.parentIsSupSub ? new tx("mrow", [r, n]) : new E([r, n]);
-        }
-        return r;
-    },
-    r7 = {
+    ar = {
         "\u220F": "\\prod",
         "\u2210": "\\coprod",
         "\u2211": "\\sum",
@@ -7797,7 +8010,7 @@ var r4 = (e, t, r, n, a, i, s) => {
         "\u2A04": "\\biguplus",
         "\u2A06": "\\bigsqcup",
     };
-(tr({
+(tp({
     type: "op",
     names: [
         "\\coprod",
@@ -7827,31 +8040,40 @@ var r4 = (e, t, r, n, a, i, s) => {
         "\u2A04",
         "\u2A06",
     ],
-    props: { numArgs: 0 },
+    numArgs: 0,
     handler: (e, t) => {
-        var { parser: r, funcName: n } = e,
-            a = n;
+        var r = e.parser,
+            a = e.funcName;
         return (
-            1 === a.length && (a = r7[a]),
+            1 === a.length && (a = ar[a]),
             { type: "op", mode: r.mode, limits: !0, parentIsSupSub: !1, symbol: !0, name: a }
         );
     },
-    htmlBuilder: r3,
-    mathmlBuilder: r6,
+    htmlBuilder: at,
+    mathmlBuilder: (e, t) => {
+        var r;
+        if (e.symbol) ((r = new tM("mo", [tq(e.name, e.mode)])), ae.has(e.name) && r.setAttribute("largeop", "false"));
+        else if (e.body) r = new tM("mo", tO(e.body, t));
+        else {
+            r = new tM("mi", [new tT(e.name.slice(1))]);
+            var a = new tM("mo", [tq("\u2061", "text")]);
+            r = e.parentIsSupSub ? new tM("mrow", [r, a]) : new F([r, a]);
+        }
+        return r;
+    },
 }),
-    tr({
+    tp({
         type: "op",
         names: ["\\mathop"],
-        props: { numArgs: 1, primitive: !0 },
+        numArgs: 1,
+        primitive: !0,
         handler: (e, t) => {
-            var { parser: r } = e,
-                n = t[0];
-            return { type: "op", mode: r.mode, limits: !1, parentIsSupSub: !1, symbol: !1, body: ti(n) };
+            var r = e.parser,
+                a = t[0];
+            return { type: "op", mode: r.mode, limits: !1, parentIsSupSub: !1, symbol: !1, body: tg(a) };
         },
-        htmlBuilder: r3,
-        mathmlBuilder: r6,
     }));
-var r2 = {
+var aa = {
     "\u222B": "\\int",
     "\u222C": "\\iint",
     "\u222D": "\\iiint",
@@ -7859,7 +8081,7 @@ var r2 = {
     "\u222F": "\\oiint",
     "\u2230": "\\oiiint",
 };
-(tr({
+(tp({
     type: "op",
     names: [
         "\\arcsin",
@@ -7895,26 +8117,24 @@ var r2 = {
         "\\tg",
         "\\th",
     ],
-    props: { numArgs: 0 },
+    numArgs: 0,
     handler(e) {
-        var { parser: t, funcName: r } = e;
+        var t = e.parser,
+            r = e.funcName;
         return { type: "op", mode: t.mode, limits: !1, parentIsSupSub: !1, symbol: !1, name: r };
     },
-    htmlBuilder: r3,
-    mathmlBuilder: r6,
 }),
-    tr({
+    tp({
         type: "op",
         names: ["\\det", "\\gcd", "\\inf", "\\lim", "\\max", "\\min", "\\Pr", "\\sup"],
-        props: { numArgs: 0 },
+        numArgs: 0,
         handler(e) {
-            var { parser: t, funcName: r } = e;
+            var t = e.parser,
+                r = e.funcName;
             return { type: "op", mode: t.mode, limits: !0, parentIsSupSub: !1, symbol: !1, name: r };
         },
-        htmlBuilder: r3,
-        mathmlBuilder: r6,
     }),
-    tr({
+    tp({
         type: "op",
         names: [
             "\\int",
@@ -7930,33 +8150,32 @@ var r2 = {
             "\u222F",
             "\u2230",
         ],
-        props: { numArgs: 0, allowedInArgument: !0 },
+        numArgs: 0,
+        allowedInArgument: !0,
         handler(e) {
-            var { parser: t, funcName: r } = e,
-                n = r;
+            var t = e.parser,
+                r = e.funcName;
             return (
-                1 === n.length && (n = r2[n]),
-                { type: "op", mode: t.mode, limits: !1, parentIsSupSub: !1, symbol: !0, name: n }
+                1 === r.length && (r = aa[r]),
+                { type: "op", mode: t.mode, limits: !1, parentIsSupSub: !1, symbol: !0, name: r }
             );
         },
-        htmlBuilder: r3,
-        mathmlBuilder: r6,
     }));
-var r8 = (e, t) => {
+var an = (e, t) => {
     var r,
-        n,
         a,
+        n,
         i,
         s = !1;
     if (
         ("supsub" === e.type
-            ? ((r = e.sup), (n = e.sub), (a = t$(e.base, "operatorname")), (s = !0))
-            : (a = t$(e, "operatorname")),
-        a.body.length > 0)
+            ? ((r = e.sup), (a = e.sub), (n = t6(e.base, "operatorname")), (s = !0))
+            : (n = t6(e, "operatorname")),
+        n.body.length > 0)
     ) {
         for (
-            var l = tu(
-                    a.body.map((e) => {
+            var l = tw(
+                    n.body.map((e) => {
                         var t = ("text" in e) ? e.text : void 0;
                         return "string" == typeof t ? { type: "textord", mode: e.mode, text: t } : e;
                     }),
@@ -7968,45 +8187,35 @@ var r8 = (e, t) => {
             o++
         ) {
             var h = l[o];
-            h instanceof V && (h.text = h.text.replace(/\u2212/, "-").replace(/\u2217/, "*"));
+            h instanceof X && (h.text = h.text.replace(/\u2212/, "-").replace(/\u2217/, "*"));
         }
-        i = e$(["mop"], l, t);
-    } else i = e$(["mop"], [], t);
-    return s ? r4(i, r, n, t, t.style, 0, 0) : i;
+        i = e4(["mop"], l, t);
+    } else i = e4(["mop"], [], t);
+    return s ? r9(i, r, a, t, t.style, 0, 0) : i;
 };
-function r9(e, t, r) {
-    for (var n = tu(e, t, !1), a = t.sizeMultiplier / r.sizeMultiplier, i = 0; i < n.length; i++) {
-        var s = n[i].classes.indexOf("sizing");
-        (s < 0
-            ? Array.prototype.push.apply(n[i].classes, t.sizingClasses(r))
-            : n[i].classes[s + 1] === "reset-size" + t.size && (n[i].classes[s + 1] = "reset-size" + r.size),
-            (n[i].height *= a),
-            (n[i].depth *= a));
-    }
-    return eZ(n);
-}
-(tr({
+(tp({
     type: "operatorname",
     names: ["\\operatorname@", "\\operatornamewithlimits"],
-    props: { numArgs: 1 },
+    numArgs: 1,
     handler: (e, t) => {
-        var { parser: r, funcName: n } = e,
-            a = t[0];
+        var r = e.parser,
+            a = e.funcName,
+            n = t[0];
         return {
             type: "operatorname",
             mode: r.mode,
-            body: ti(a),
-            alwaysHandleSupSub: "\\operatornamewithlimits" === n,
+            body: tg(n),
+            alwaysHandleSupSub: "\\operatornamewithlimits" === a,
             limits: !1,
             parentIsSupSub: !1,
         };
     },
-    htmlBuilder: r8,
+    htmlBuilder: an,
     mathmlBuilder: (e, t) => {
-        for (var r = tz(e.body, t.withFont("mathrm")), n = !0, a = 0; a < r.length; a++) {
-            var i = r[a];
-            if (i instanceof tw);
-            else if (i instanceof tx)
+        for (var r = tO(e.body, t.withFont("mathrm")), a = !0, n = 0; n < r.length; n++) {
+            var i = r[n];
+            if (i instanceof tE);
+            else if (i instanceof tM)
                 switch (i.type) {
                     case "mi":
                     case "mn":
@@ -8015,51 +8224,51 @@ function r9(e, t, r) {
                         break;
                     case "mo":
                         var s = i.children[0];
-                        1 === i.children.length && s instanceof ty
+                        1 === i.children.length && s instanceof tT
                             ? (s.text = s.text.replace(/\u2212/, "-").replace(/\u2217/, "*"))
-                            : (n = !1);
+                            : (a = !1);
                         break;
                     default:
-                        n = !1;
+                        a = !1;
                 }
-            else n = !1;
+            else a = !1;
         }
-        n && (r = [new ty(r.map((e) => e.toText()).join(""))]);
-        var l = new tx("mi", r);
+        a && (r = [new tT(r.map((e) => e.toText()).join(""))]);
+        var l = new tM("mi", r);
         l.setAttribute("mathvariant", "normal");
-        var o = new tx("mo", [tR("\u2061", "text")]);
-        return e.parentIsSupSub ? new tx("mrow", [l, o]) : new E([l, o]);
+        var o = new tM("mo", [tq("\u2061", "text")]);
+        return e.parentIsSupSub ? new tM("mrow", [l, o]) : new F([l, o]);
     },
 }),
-    (rF["\\operatorname"] = "\\@ifstar\\operatornamewithlimits\\operatorname@"),
-    tn({
+    (rP["\\operatorname"] = "\\@ifstar\\operatornamewithlimits\\operatorname@"),
+    td({
         type: "ordgroup",
-        htmlBuilder: (e, t) => (e.semisimple ? eZ(tu(e.body, t, !1)) : e$(["mord"], tu(e.body, t, !0), t)),
-        mathmlBuilder: (e, t) => tS(e.body, t, !0),
+        htmlBuilder: (e, t) => (e.semisimple ? e7(tw(e.body, t, !1)) : e4(["mord"], tw(e.body, t, !0), t)),
+        mathmlBuilder: (e, t) => tH(e.body, t, !0),
     }),
-    tr({
+    tp({
         type: "overline",
         names: ["\\overline"],
-        props: { numArgs: 1 },
+        numArgs: 1,
         handler(e, t) {
-            var { parser: r } = e,
-                n = t[0];
-            return { type: "overline", mode: r.mode, body: n };
+            var r = e.parser,
+                a = t[0];
+            return { type: "overline", mode: r.mode, body: a };
         },
         htmlBuilder(e, t) {
-            var r = tg(e.body, t.havingCrampedStyle()),
-                n = eV("overline-line", t),
-                a = t.fontMetrics().defaultRuleThickness;
-            return e$(
-                ["mord", "overline"],
+            var r = tD(e.body, t.havingCrampedStyle()),
+                a = e3("overline-line", t),
+                n = t.fontMetrics().defaultRuleThickness;
+            return e4(
+                ["mord", "katex-overline"],
                 [
-                    eK({
+                    e9({
                         positionType: "firstBaseline",
                         children: [
                             { type: "elem", elem: r },
-                            { type: "kern", size: 3 * a },
-                            { type: "elem", elem: n },
-                            { type: "kern", size: a },
+                            { type: "kern", size: 3 * n },
+                            { type: "elem", elem: a },
+                            { type: "kern", size: n },
                         ],
                     }),
                 ],
@@ -8067,125 +8276,149 @@ function r9(e, t, r) {
             );
         },
         mathmlBuilder(e, t) {
-            var r = new tx("mo", [new ty("\u203E")]);
+            var r = new tM("mo", [new tT("\u203E")]);
             r.setAttribute("stretchy", "true");
-            var n = new tx("mover", [tM(e.body, t), r]);
-            return (n.setAttribute("accent", "true"), n);
+            var a = new tM("mover", [tJ(e.body, t), r]);
+            return (a.setAttribute("accent", "true"), a);
         },
     }),
-    tr({
+    tp({
         type: "phantom",
         names: ["\\phantom"],
-        props: { numArgs: 1, allowedInText: !0 },
+        numArgs: 1,
+        allowedInText: !0,
         handler: (e, t) => {
-            var { parser: r } = e,
-                n = t[0];
-            return { type: "phantom", mode: r.mode, body: ti(n) };
+            var r = e.parser,
+                a = t[0];
+            return { type: "phantom", mode: r.mode, body: tg(a) };
         },
-        htmlBuilder: (e, t) => eZ(tu(e.body, t.withPhantom(), !1)),
-        mathmlBuilder: (e, t) => new tx("mphantom", tz(e.body, t)),
+        htmlBuilder: (e, t) => e7(tw(e.body, t.withPhantom(), !1)),
+        mathmlBuilder: (e, t) => new tM("mphantom", tO(e.body, t)),
     }),
-    (rF["\\hphantom"] = "\\smash{\\phantom{#1}}"),
-    tr({
+    (rP["\\hphantom"] = "\\smash{\\phantom{#1}}"),
+    tp({
         type: "vphantom",
         names: ["\\vphantom"],
-        props: { numArgs: 1, allowedInText: !0 },
+        numArgs: 1,
+        allowedInText: !0,
         handler: (e, t) => {
-            var { parser: r } = e,
-                n = t[0];
-            return { type: "vphantom", mode: r.mode, body: n };
+            var r = e.parser,
+                a = t[0];
+            return { type: "vphantom", mode: r.mode, body: a };
         },
         htmlBuilder: (e, t) => {
-            var r = e$(["inner"], [tg(e.body, t.withPhantom())]),
-                n = e$(["fix"], []);
-            return e$(["mord", "rlap"], [r, n], t);
+            var r = e4(["katex-inner"], [tD(e.body, t.withPhantom())]),
+                a = e4(["katex-fix"], []);
+            return e4(["mord", "rlap"], [r, a], t);
         },
         mathmlBuilder: (e, t) => {
-            var r = new tx("mphantom", tz(ti(e.body), t)),
-                n = new tx("mpadded", [r]);
-            return (n.setAttribute("width", "0px"), n);
+            var r = new tM("mphantom", tO(tg(e.body), t)),
+                a = new tM("mpadded", [r]);
+            return (a.setAttribute("width", "0px"), a);
         },
     }),
-    tr({
+    tp({
         type: "raisebox",
         names: ["\\raisebox"],
-        props: { numArgs: 2, argTypes: ["size", "hbox"], allowedInText: !0 },
+        numArgs: 2,
+        argTypes: ["size", "hbox"],
+        allowedInText: !0,
         handler(e, t) {
-            var { parser: r } = e,
-                n = t$(t[0], "size").value,
-                a = t[1];
-            return { type: "raisebox", mode: r.mode, dy: n, body: a };
+            var r = e.parser,
+                a = t6(t[0], "size").value,
+                n = t[1];
+            return { type: "raisebox", mode: r.mode, dy: a, body: n };
         },
         htmlBuilder(e, t) {
-            var r = tg(e.body, t);
-            return eK({ positionType: "shift", positionData: -I(e.dy, t), children: [{ type: "elem", elem: r }] });
+            var r = tD(e.body, t);
+            return e9({ positionType: "shift", positionData: -j(e.dy, t), children: [{ type: "elem", elem: r }] });
         },
         mathmlBuilder(e, t) {
-            var r = new tx("mpadded", [tM(e.body, t)]),
-                n = e.dy.number + e.dy.unit;
-            return (r.setAttribute("voffset", n), r);
+            var r = new tM("mpadded", [tJ(e.body, t)]),
+                a = e.dy.number + e.dy.unit;
+            return (r.setAttribute("voffset", a), r);
         },
-    }),
-    tr({
+    }));
+var ai = (e, t) => ({ type: "reflectbox", mode: e.parser.mode, body: t[0] });
+function as(e, t, r) {
+    for (var a = tw(e, t, !1), n = t.sizeMultiplier / r.sizeMultiplier, i = 0; i < a.length; i++) {
+        var s = a[i].classes.indexOf("katex-sizing");
+        (s < 0
+            ? Array.prototype.push.apply(a[i].classes, t.sizingClasses(r))
+            : a[i].classes[s + 1] === "reset-size" + t.size && (a[i].classes[s + 1] = "reset-size" + r.size),
+            (a[i].height *= n),
+            (a[i].depth *= n));
+    }
+    return e7(a);
+}
+(tp({
+    type: "reflectbox",
+    names: ["\\reflectbox"],
+    numArgs: 1,
+    argTypes: ["hbox"],
+    allowedInText: !0,
+    handler: ai,
+    htmlBuilder: (e, t) => e4(["mord", "reflectbox"], [tD(e.body, t)], t),
+    mathmlBuilder: (e, t) => tJ(e.body, t),
+}),
+    tp({ type: "reflectbox", names: ["\\mathreflectbox"], numArgs: 1, argTypes: ["math"], handler: ai }),
+    tp({
         type: "internal",
         names: ["\\relax"],
-        props: { numArgs: 0, allowedInText: !0, allowedInArgument: !0 },
-        handler(e) {
-            var { parser: t } = e;
-            return { type: "internal", mode: t.mode };
-        },
+        numArgs: 0,
+        allowedInText: !0,
+        allowedInArgument: !0,
+        handler: (e) => ({ type: "internal", mode: e.parser.mode }),
     }),
-    tr({
+    tp({
         type: "rule",
         names: ["\\rule"],
-        props: {
-            numArgs: 2,
-            numOptionalArgs: 1,
-            allowedInText: !0,
-            allowedInMath: !0,
-            argTypes: ["size", "size", "size"],
-        },
+        numArgs: 2,
+        numOptionalArgs: 1,
+        allowedInText: !0,
+        allowedInMath: !0,
+        argTypes: ["size", "size", "size"],
         handler(e, t, r) {
-            var { parser: n } = e,
-                a = r[0],
-                i = t$(t[0], "size"),
-                s = t$(t[1], "size");
-            return { type: "rule", mode: n.mode, shift: a && t$(a, "size").value, width: i.value, height: s.value };
+            var a = e.parser,
+                n = r[0],
+                i = t6(t[0], "size"),
+                s = t6(t[1], "size");
+            return { type: "rule", mode: a.mode, shift: n && t6(n, "size").value, width: i.value, height: s.value };
         },
         htmlBuilder(e, t) {
-            var r = e$(["mord", "rule"], [], t),
-                n = I(e.width, t),
-                a = I(e.height, t),
-                i = e.shift ? I(e.shift, t) : 0;
+            var r = e4(["mord", "katex-rule"], [], t),
+                a = j(e.width, t),
+                n = j(e.height, t),
+                i = e.shift ? j(e.shift, t) : 0;
             return (
-                (r.style.borderRightWidth = H(n)),
-                (r.style.borderTopWidth = H(a)),
-                (r.style.bottom = H(i)),
-                (r.width = n),
-                (r.height = a + i),
+                (r.style.borderRightWidth = L(a)),
+                (r.style.borderTopWidth = L(n)),
+                (r.style.bottom = L(i)),
+                (r.width = a),
+                (r.height = n + i),
                 (r.depth = -i),
-                (r.maxFontSize = 1.125 * a * t.sizeMultiplier),
+                (r.maxFontSize = 1.125 * n * t.sizeMultiplier),
                 r
             );
         },
         mathmlBuilder(e, t) {
-            var r = I(e.width, t),
-                n = I(e.height, t),
-                a = e.shift ? I(e.shift, t) : 0,
+            var r = j(e.width, t),
+                a = j(e.height, t),
+                n = e.shift ? j(e.shift, t) : 0,
                 i = (t.color && t.getColor()) || "black",
-                s = new tx("mspace");
-            (s.setAttribute("mathbackground", i), s.setAttribute("width", H(r)), s.setAttribute("height", H(n)));
-            var l = new tx("mpadded", [s]);
+                s = new tM("mspace");
+            (s.setAttribute("mathbackground", i), s.setAttribute("width", L(r)), s.setAttribute("height", L(a)));
+            var l = new tM("mpadded", [s]);
             return (
-                a >= 0
-                    ? l.setAttribute("height", H(a))
-                    : (l.setAttribute("height", H(a)), l.setAttribute("depth", H(-a))),
-                l.setAttribute("voffset", H(a)),
+                n >= 0
+                    ? l.setAttribute("height", L(n))
+                    : (l.setAttribute("height", L(n)), l.setAttribute("depth", L(-n))),
+                l.setAttribute("voffset", L(n)),
                 l
             );
         },
     }));
-var ne = [
+var al = [
     "\\tiny",
     "\\sixptsize",
     "\\scriptsize",
@@ -8198,234 +8431,254 @@ var ne = [
     "\\huge",
     "\\Huge",
 ];
-(tr({
+(tp({
     type: "sizing",
-    names: ne,
-    props: { numArgs: 0, allowedInText: !0 },
+    names: al,
+    numArgs: 0,
+    allowedInText: !0,
     handler: (e, t) => {
-        var { breakOnTokenText: r, funcName: n, parser: a } = e,
-            i = a.parseExpression(!1, r);
-        return { type: "sizing", mode: a.mode, size: ne.indexOf(n) + 1, body: i };
+        var r = e.breakOnTokenText,
+            a = e.funcName,
+            n = e.parser,
+            i = n.parseExpression(!1, r);
+        return { type: "sizing", mode: n.mode, size: al.indexOf(a) + 1, body: i };
     },
     htmlBuilder: (e, t) => {
         var r = t.havingSize(e.size);
-        return r9(e.body, r, t);
+        return as(e.body, r, t);
     },
     mathmlBuilder: (e, t) => {
         var r = t.havingSize(e.size),
-            n = new tx("mstyle", tz(e.body, r));
-        return (n.setAttribute("mathsize", H(r.sizeMultiplier)), n);
+            a = new tM("mstyle", tO(e.body, r));
+        return (a.setAttribute("mathsize", L(r.sizeMultiplier)), a);
     },
 }),
-    tr({
+    tp({
         type: "smash",
         names: ["\\smash"],
-        props: { numArgs: 1, numOptionalArgs: 1, allowedInText: !0 },
+        numArgs: 1,
+        numOptionalArgs: 1,
+        allowedInText: !0,
         handler: (e, t, r) => {
-            var { parser: n } = e,
-                a = !1,
+            var a,
+                n = e.parser,
                 i = !1,
-                s = r[0] && t$(r[0], "ordgroup");
-            if (s)
-                for (var l = "", o = 0; o < s.body.length; ++o)
-                    if ("t" === (l = tW(s.body[o]).text)) a = !0;
-                    else if ("b" === l) i = !0;
+                s = !1,
+                l = r[0] && t6(r[0], "ordgroup");
+            if (l)
+                for (var o = 0; o < l.body.length; ++o)
+                    if ("t" === (a = t7(l.body[o]).text)) i = !0;
+                    else if ("b" === a) s = !0;
                     else {
-                        ((a = !1), (i = !1));
+                        ((i = !1), (s = !1));
                         break;
                     }
-            else ((a = !0), (i = !0));
+            else ((i = !0), (s = !0));
             var h = t[0];
-            return { type: "smash", mode: n.mode, body: h, smashHeight: a, smashDepth: i };
+            return { type: "smash", mode: n.mode, body: h, smashHeight: i, smashDepth: s };
         },
         htmlBuilder: (e, t) => {
-            var r = e$([], [tg(e.body, t)]);
+            var r = e4([], [tD(e.body, t)]);
             if (!e.smashHeight && !e.smashDepth) return r;
             if ((e.smashHeight && (r.height = 0), e.smashDepth && (r.depth = 0), e.smashHeight && e.smashDepth))
-                return e$(["mord", "smash"], [r], t);
+                return e4(["mord", "katex-smash"], [r], t);
             if (r.children)
-                for (var n = 0; n < r.children.length; n++)
-                    (e.smashHeight && (r.children[n].height = 0), e.smashDepth && (r.children[n].depth = 0));
-            return e$(["mord"], [eK({ positionType: "firstBaseline", children: [{ type: "elem", elem: r }] })], t);
+                for (var a = 0; a < r.children.length; a++)
+                    (e.smashHeight && (r.children[a].height = 0), e.smashDepth && (r.children[a].depth = 0));
+            return e4(["mord"], [e9({ positionType: "firstBaseline", children: [{ type: "elem", elem: r }] })], t);
         },
         mathmlBuilder: (e, t) => {
-            var r = new tx("mpadded", [tM(e.body, t)]);
+            var r = new tM("mpadded", [tJ(e.body, t)]);
             return (
                 e.smashHeight && r.setAttribute("height", "0px"), e.smashDepth && r.setAttribute("depth", "0px"), r
             );
         },
     }),
-    tr({
+    tp({
         type: "sqrt",
         names: ["\\sqrt"],
-        props: { numArgs: 1, numOptionalArgs: 1 },
+        numArgs: 1,
+        numOptionalArgs: 1,
         handler(e, t, r) {
-            var { parser: n } = e,
-                a = r[0],
+            var a = e.parser,
+                n = r[0],
                 i = t[0];
-            return { type: "sqrt", mode: n.mode, body: i, index: a };
+            return { type: "sqrt", mode: a.mode, body: i, index: n };
         },
         htmlBuilder(e, t) {
-            var r = tg(e.body, t.havingCrampedStyle());
-            (0 === r.height && (r.height = t.fontMetrics().xHeight), (r = eY(r, t)));
-            var n = t.fontMetrics().defaultRuleThickness,
-                a = n;
-            t.style.id < R.TEXT.id && (a = t.fontMetrics().xHeight);
-            var i = n + a / 4,
-                { span: s, ruleWidth: l, advanceWidth: o } = rp(r.height + r.depth + i + n, t),
-                h = s.height - l;
-            h > r.height + r.depth + i && (i = (i + h - r.height - r.depth) / 2);
-            var u = s.height - r.height - i - l;
-            r.style.paddingLeft = H(o);
-            var c = eK({
+            var r = tD(e.body, t.havingCrampedStyle());
+            (0 === r.height && (r.height = t.fontMetrics().xHeight), (r = e2(r, t)));
+            var a = t.fontMetrics().defaultRuleThickness,
+                n = a;
+            t.style.id < R.TEXT.id && (n = t.fontMetrics().xHeight);
+            var i = a + n / 4,
+                s = rA(r.height + r.depth + i + a, t),
+                l = s.span,
+                o = s.ruleWidth,
+                h = s.advanceWidth,
+                u = l.height - o;
+            u > r.height + r.depth + i && (i = (i + u - r.height - r.depth) / 2);
+            var c = l.height - r.height - i - o;
+            r.style.paddingLeft = L(h);
+            var m = e9({
                 positionType: "firstBaseline",
                 children: [
                     { type: "elem", elem: r, wrapperClasses: ["svg-align"] },
-                    { type: "kern", size: -(r.height + u) },
-                    { type: "elem", elem: s },
-                    { type: "kern", size: l },
+                    { type: "kern", size: -(r.height + c) },
+                    { type: "elem", elem: l },
+                    { type: "kern", size: o },
                 ],
             });
-            if (!e.index) return e$(["mord", "sqrt"], [c], t);
-            var m = t.havingStyle(R.SCRIPTSCRIPT),
-                p = tg(e.index, m, t),
-                d = e$(
-                    ["root"],
+            if (!e.index) return e4(["mord", "sqrt"], [m], t);
+            var p = t.havingStyle(R.SCRIPTSCRIPT),
+                d = tD(e.index, p, t),
+                f = e4(
+                    ["katex-root"],
                     [
-                        eK({
+                        e9({
                             positionType: "shift",
-                            positionData: -(0.6 * (c.height - c.depth)),
-                            children: [{ type: "elem", elem: p }],
+                            positionData: -(0.6 * (m.height - m.depth)),
+                            children: [{ type: "elem", elem: d }],
                         }),
                     ],
                 );
-            return e$(["mord", "sqrt"], [d, c], t);
+            return e4(["mord", "sqrt"], [f, m], t);
         },
         mathmlBuilder(e, t) {
-            var { body: r, index: n } = e;
-            return n ? new tx("mroot", [tM(r, t), tM(n, t)]) : new tx("msqrt", [tM(r, t)]);
+            var r = e.body,
+                a = e.index;
+            return a ? new tM("mroot", [tJ(r, t), tJ(a, t)]) : new tM("msqrt", [tJ(r, t)]);
         },
     }));
-var nt = { display: R.DISPLAY, text: R.TEXT, script: R.SCRIPT, scriptscript: R.SCRIPTSCRIPT };
-tr({
+var ao = { display: R.DISPLAY, text: R.TEXT, script: R.SCRIPT, scriptscript: R.SCRIPTSCRIPT };
+tp({
     type: "styling",
     names: ["\\displaystyle", "\\textstyle", "\\scriptstyle", "\\scriptscriptstyle"],
-    props: { numArgs: 0, allowedInText: !0, primitive: !0 },
+    numArgs: 0,
+    allowedInText: !0,
+    primitive: !0,
     handler(e, t) {
-        var { breakOnTokenText: r, funcName: n, parser: a } = e,
-            i = a.parseExpression(!0, r),
-            s = n.slice(1, n.length - 5);
-        return { type: "styling", mode: a.mode, style: s, body: i };
+        var r = e.breakOnTokenText,
+            a = e.funcName,
+            n = e.parser,
+            i = n.parseExpression(!0, r),
+            s = a.slice(1, a.length - 5);
+        if (!(s in ao)) throw Error("Unknown style: " + s);
+        return { type: "styling", mode: n.mode, style: s, body: i };
     },
     htmlBuilder(e, t) {
-        var r = nt[e.style],
-            n = t.havingStyle(r).withFont("");
-        return r9(e.body, n, t);
+        var r = ao[e.style],
+            a = t.havingStyle(r);
+        return (e.resetFont && (a = a.withFont("")), as(e.body, a, t));
     },
     mathmlBuilder(e, t) {
-        var r = nt[e.style],
-            n = t.havingStyle(r),
-            a = new tx("mstyle", tz(e.body, n)),
+        var r = ao[e.style],
+            a = t.havingStyle(r);
+        e.resetFont && (a = a.withFont(""));
+        var n = new tM("mstyle", tO(e.body, a)),
             i = { display: ["0", "true"], text: ["0", "false"], script: ["1", "false"], scriptscript: ["2", "false"] }[
                 e.style
             ];
-        return (a.setAttribute("scriptlevel", i[0]), a.setAttribute("displaystyle", i[1]), a);
+        return (n.setAttribute("scriptlevel", i[0]), n.setAttribute("displaystyle", i[1]), n);
     },
 });
-var nr = function (e, t) {
+var ah = function (e, t) {
     var r = e.base;
     if (!r) return null;
-    if ("op" === r.type) return r.limits && (t.style.size === R.DISPLAY.size || r.alwaysHandleSupSub) ? r3 : null;
+    if ("op" === r.type) return r.limits && (t.style.size === R.DISPLAY.size || r.alwaysHandleSupSub) ? at : null;
     if ("operatorname" === r.type)
-        return r.alwaysHandleSupSub && (t.style.size === R.DISPLAY.size || r.limits) ? r8 : null;
-    if ("accent" === r.type) return p(r.base) ? tZ : null;
-    if ("horizBrace" === r.type) return !e.sub === r.isOver ? rQ : null;
+        return r.alwaysHandleSupSub && (t.style.size === R.DISPLAY.size || r.limits) ? an : null;
+    if ("accent" === r.type) return d(r.base) ? re : null;
+    if ("horizBrace" === r.type) return !e.sub === r.isOver ? r7 : null;
     else return null;
 };
-(tn({
+(td({
     type: "supsub",
     htmlBuilder(e, t) {
         var r,
-            n,
-            a,
-            i,
-            s = nr(e, t);
-        if (s) return s(e, t);
-        var { base: l, sup: o, sub: h } = e,
-            u = tg(l, t),
-            c = t.fontMetrics(),
-            m = 0,
-            d = 0,
-            f = l && p(l);
-        if (o) {
-            var g = t.havingStyle(t.style.sup());
-            ((r = tg(o, g, t)), f || (m = u.height - (g.fontMetrics().supDrop * g.sizeMultiplier) / t.sizeMultiplier));
+            a = ah(e, t);
+        if (a) return a(e, t);
+        var n = e.base,
+            i = e.sup,
+            s = e.sub,
+            l = tD(n, t),
+            o = t.fontMetrics(),
+            h = 0,
+            u = 0,
+            c = n && d(n);
+        if (i) {
+            var m = t.havingStyle(t.style.sup());
+            ((v = tD(i, m, t)), c || (h = l.height - (m.fontMetrics().supDrop * m.sizeMultiplier) / t.sizeMultiplier));
         }
-        if (h) {
-            var b = t.havingStyle(t.style.sub());
-            ((n = tg(h, b, t)), f || (d = u.depth + (b.fontMetrics().subDrop * b.sizeMultiplier) / t.sizeMultiplier));
+        if (s) {
+            var p = t.havingStyle(t.style.sub());
+            ((x = tD(s, p, t)), c || (u = l.depth + (p.fontMetrics().subDrop * p.sizeMultiplier) / t.sizeMultiplier));
         }
-        a = t.style === R.DISPLAY ? c.sup1 : t.style.cramped ? c.sup3 : c.sup2;
-        var v = t.sizeMultiplier,
-            x = H(0.5 / c.ptPerEm / v),
-            y = null;
-        if (n) {
-            var w =
-                e.base &&
-                "op" === e.base.type &&
-                e.base.name &&
-                ("\\oiint" === e.base.name || "\\oiiint" === e.base.name);
-            (u instanceof V || w) && (y = H(-u.italic));
+        y = t.style === R.DISPLAY ? o.sup1 : t.style.cramped ? o.sup3 : o.sup2;
+        var f = t.sizeMultiplier,
+            g = L(0.5 / o.ptPerEm / f),
+            b = null;
+        if (x) {
+            var v,
+                x,
+                y,
+                w,
+                k =
+                    e.base &&
+                    "op" === e.base.type &&
+                    e.base.name &&
+                    ("\\oiint" === e.base.name || "\\oiiint" === e.base.name);
+            (l instanceof X || k) && (b = L(-(null != (w = l.italic) ? w : 0)));
         }
-        if (r && n) {
-            ((m = Math.max(m, a, r.depth + 0.25 * c.xHeight)), (d = Math.max(d, c.sub2)));
-            var k = 4 * c.defaultRuleThickness;
-            if (m - r.depth - (n.height - d) < k) {
-                d = k - (m - r.depth) + n.height;
-                var A = 0.8 * c.xHeight - (m - r.depth);
-                A > 0 && ((m += A), (d -= A));
+        if (v && x) {
+            ((h = Math.max(h, y, v.depth + 0.25 * o.xHeight)), (u = Math.max(u, o.sub2)));
+            var A = 4 * o.defaultRuleThickness;
+            if (h - v.depth - (x.height - u) < A) {
+                u = A - (h - v.depth) + x.height;
+                var C = 0.8 * o.xHeight - (h - v.depth);
+                C > 0 && ((h += C), (u -= C));
             }
-            i = eK({
+            r = e9({
                 positionType: "individualShift",
                 children: [
-                    { type: "elem", elem: n, shift: d, marginRight: x, marginLeft: y },
-                    { type: "elem", elem: r, shift: -m, marginRight: x },
+                    { type: "elem", elem: x, shift: u, marginRight: g, marginLeft: b },
+                    { type: "elem", elem: v, shift: -h, marginRight: g },
                 ],
             });
-        } else if (n)
-            i = eK({
+        } else if (x)
+            r = e9({
                 positionType: "shift",
-                positionData: (d = Math.max(d, c.sub1, n.height - 0.8 * c.xHeight)),
-                children: [{ type: "elem", elem: n, marginLeft: y, marginRight: x }],
+                positionData: (u = Math.max(u, o.sub1, x.height - 0.8 * o.xHeight)),
+                children: [{ type: "elem", elem: x, marginLeft: b, marginRight: g }],
             });
-        else if (r)
-            i = eK({
+        else if (v)
+            r = e9({
                 positionType: "shift",
-                positionData: -(m = Math.max(m, a, r.depth + 0.25 * c.xHeight)),
-                children: [{ type: "elem", elem: r, marginRight: x }],
+                positionData: -(h = Math.max(h, y, v.depth + 0.25 * o.xHeight)),
+                children: [{ type: "elem", elem: v, marginRight: g }],
             });
         else throw Error("supsub must have either sup or sub.");
-        return e$([td(u, "right") || "mord"], [u, e$(["msupsub"], [i])], t);
+        return e4([tR(l, "right") || "mord"], [l, e4(["msupsub"], [r])], t);
     },
     mathmlBuilder(e, t) {
         var r,
-            n,
-            a = !1;
-        (e.base && "horizBrace" === e.base.type && !!e.sup === e.base.isOver && ((a = !0), (r = e.base.isOver)),
+            a,
+            n = !1;
+        (e.base && "horizBrace" === e.base.type && !!e.sup === e.base.isOver && ((n = !0), (r = e.base.isOver)),
             e.base && ("op" === e.base.type || "operatorname" === e.base.type) && (e.base.parentIsSupSub = !0));
-        var i = [tM(e.base, t)];
-        if ((e.sub && i.push(tM(e.sub, t)), e.sup && i.push(tM(e.sup, t)), a)) n = r ? "mover" : "munder";
+        var i = [tJ(e.base, t)];
+        if ((e.sub && i.push(tJ(e.sub, t)), e.sup && i.push(tJ(e.sup, t)), n)) a = r ? "mover" : "munder";
         else if (e.sub)
             if (e.sup) {
                 var s = e.base;
-                n =
+                a =
                     (s && "op" === s.type && s.limits && t.style === R.DISPLAY) ||
                     (s && "operatorname" === s.type && s.alwaysHandleSupSub && (t.style === R.DISPLAY || s.limits))
                         ? "munderover"
                         : "msubsup";
             } else {
                 var l = e.base;
-                n =
+                a =
                     (l && "op" === l.type && l.limits && (t.style === R.DISPLAY || l.alwaysHandleSupSub)) ||
                     (l && "operatorname" === l.type && l.alwaysHandleSupSub && (l.limits || t.style === R.DISPLAY))
                         ? "munder"
@@ -8433,23 +8686,23 @@ var nr = function (e, t) {
             }
         else {
             var o = e.base;
-            n =
+            a =
                 (o && "op" === o.type && o.limits && (t.style === R.DISPLAY || o.alwaysHandleSupSub)) ||
                 (o && "operatorname" === o.type && o.alwaysHandleSupSub && (o.limits || t.style === R.DISPLAY))
                     ? "mover"
                     : "msup";
         }
-        return new tx(n, i);
+        return new tM(a, i);
     },
 }),
-    tn({
+    td({
         type: "atom",
-        htmlBuilder: (e, t) => ej(e.text, e.mode, t, ["m" + e.family]),
+        htmlBuilder: (e, t) => eY(e.text, e.mode, t, ["m" + e.family]),
         mathmlBuilder(e, t) {
-            var r = new tx("mo", [tR(e.text, e.mode)]);
+            var r = new tM("mo", [tq(e.text, e.mode)]);
             if ("bin" === e.family) {
-                var n = t_(e, t);
-                "bold-italic" === n && r.setAttribute("mathvariant", n);
+                var a = tL(e, t);
+                "bold-italic" === a && r.setAttribute("mathvariant", a);
             } else
                 "punct" === e.family
                     ? r.setAttribute("separator", "true")
@@ -8457,104 +8710,109 @@ var nr = function (e, t) {
             return r;
         },
     }));
-var nn = { mi: "italic", mn: "normal", mtext: "normal" };
-(tn({
+var au = { mi: "italic", mn: "normal", mtext: "normal" };
+(td({
     type: "mathord",
-    htmlBuilder: (e, t) => eN(e, t, "mathord"),
+    htmlBuilder: (e, t) => eK(e, t),
     mathmlBuilder(e, t) {
-        var r = new tx("mi", [tR(e.text, e.mode, t)]),
-            n = t_(e, t) || "italic";
-        return (n !== nn[r.type] && r.setAttribute("mathvariant", n), r);
+        var r = new tM("mi", [tq(e.text, e.mode, t)]),
+            a = tL(e, t) || "italic";
+        return (a !== au[r.type] && r.setAttribute("mathvariant", a), r);
     },
 }),
-    tn({
+    td({
         type: "textord",
-        htmlBuilder: (e, t) => eN(e, t, "textord"),
+        htmlBuilder: (e, t) => eK(e, t),
         mathmlBuilder(e, t) {
             var r,
-                n = tR(e.text, e.mode, t),
-                a = t_(e, t) || "normal";
+                a = tq(e.text, e.mode, t),
+                n = tL(e, t) || "normal";
             return (
-                a !==
-                    nn[
+                n !==
+                    au[
                         (r =
                             "text" === e.mode
-                                ? new tx("mtext", [n])
+                                ? new tM("mtext", [a])
                                 : /[0-9]/.test(e.text)
-                                  ? new tx("mn", [n])
+                                  ? new tM("mn", [a])
                                   : "\\prime" === e.text
-                                    ? new tx("mo", [n])
-                                    : new tx("mi", [n])).type
-                    ] && r.setAttribute("mathvariant", a),
+                                    ? new tM("mo", [a])
+                                    : new tM("mi", [a])).type
+                    ] && r.setAttribute("mathvariant", n),
                 r
             );
         },
     }));
-var na = { "\\nobreak": "nobreak", "\\allowbreak": "allowbreak" },
-    ni = {
-        " ": {},
-        "\\ ": {},
-        "~": { className: "nobreak" },
-        "\\space": {},
-        "\\nobreakspace": { className: "nobreak" },
-    };
-tn({
+var ac = new Map([
+        ["\\nobreak", "nobreak"],
+        ["\\allowbreak", "allowbreak"],
+    ]),
+    am = new Map([
+        [" ", {}],
+        ["\\ ", {}],
+        ["~", { className: "nobreak" }],
+        ["\\space", {}],
+        ["\\nobreakspace", { className: "nobreak" }],
+    ]);
+td({
     type: "spacing",
     htmlBuilder(e, t) {
-        if (ni.hasOwnProperty(e.text)) {
-            var r = ni[e.text].className || "";
-            if ("text" !== e.mode) return e$(["mspace", r], [ej(e.text, e.mode, t)], t);
-            var a = eN(e, t, "textord");
-            return (a.classes.push(r), a);
+        var r = am.get(e.text),
+            n = ac.get(e.text);
+        if (r) {
+            var i = r.className || "";
+            if ("text" !== e.mode) return e4(["mspace", i], [eY(e.text, e.mode, t)], t);
+            var s = eK(e, t);
+            return (s.classes.push(i), s);
         }
-        if (na.hasOwnProperty(e.text)) return e$(["mspace", na[e.text]], [], t);
-        throw new n('Unknown type of space "' + e.text + '"');
+        if (n) return e4(["mspace", n], [], t);
+        throw new a('Unknown type of space "' + e.text + '"');
     },
     mathmlBuilder(e, t) {
         var r;
-        if (ni.hasOwnProperty(e.text)) r = new tx("mtext", [new ty("\xa0")]);
-        else if (na.hasOwnProperty(e.text)) return new tx("mspace");
-        else throw new n('Unknown type of space "' + e.text + '"');
+        if (am.has(e.text)) r = new tM("mtext", [new tT("\xa0")]);
+        else if (ac.has(e.text)) return new tM("mspace");
+        else throw new a('Unknown type of space "' + e.text + '"');
         return r;
     },
 });
-var ns = () => {
-    var e = new tx("mtd", []);
+var ap = () => {
+    var e = new tM("mtd", []);
     return (e.setAttribute("width", "50%"), e);
 };
-tn({
+td({
     type: "tag",
     mathmlBuilder(e, t) {
-        var r = new tx("mtable", [
-            new tx("mtr", [ns(), new tx("mtd", [tS(e.body, t)]), ns(), new tx("mtd", [tS(e.tag, t)])]),
+        var r = new tM("mtable", [
+            new tM("mtr", [ap(), new tM("mtd", [tH(e.body, t)]), ap(), new tM("mtd", [tH(e.tag, t)])]),
         ]);
         return (r.setAttribute("width", "100%"), r);
     },
 });
-var nl = {
+var ad = {
         "\\text": void 0,
         "\\textrm": "textrm",
         "\\textsf": "textsf",
         "\\texttt": "texttt",
         "\\textnormal": "textrm",
     },
-    no = { "\\textbf": "textbf", "\\textmd": "textmd" },
-    nh = { "\\textit": "textit", "\\textup": "textup" },
-    nu = (e, t) => {
+    af = { "\\textbf": "textbf", "\\textmd": "textmd" },
+    ag = { "\\textit": "textit", "\\textup": "textup" },
+    ab = (e, t) => {
         var r = e.font;
         return r
-            ? nl[r]
-                ? t.withTextFontFamily(nl[r])
-                : no[r]
-                  ? t.withTextFontWeight(no[r])
+            ? ad[r]
+                ? t.withTextFontFamily(ad[r])
+                : af[r]
+                  ? t.withTextFontWeight(af[r])
                   : "\\emph" === r
                     ? "textit" === t.fontShape
                         ? t.withTextFontShape("textup")
                         : t.withTextFontShape("textit")
-                    : t.withTextFontShape(nh[r])
+                    : t.withTextFontShape(ag[r])
             : t;
     };
-(tr({
+(tp({
     type: "text",
     names: [
         "\\text",
@@ -8568,43 +8826,45 @@ var nl = {
         "\\textup",
         "\\emph",
     ],
-    props: { numArgs: 1, argTypes: ["text"], allowedInArgument: !0, allowedInText: !0 },
+    numArgs: 1,
+    argTypes: ["text"],
+    allowedInArgument: !0,
+    allowedInText: !0,
     handler(e, t) {
-        var { parser: r, funcName: n } = e,
-            a = t[0];
-        return { type: "text", mode: r.mode, body: ti(a), font: n };
+        var r = e.parser,
+            a = e.funcName,
+            n = t[0];
+        return { type: "text", mode: r.mode, body: tg(n), font: a };
     },
     htmlBuilder(e, t) {
-        var r = nu(e, t);
-        return e$(["mord", "text"], tu(e.body, r, !0), r);
+        var r = ab(e, t);
+        return e4(["mord", "text"], tw(e.body, r, !0), r);
     },
     mathmlBuilder(e, t) {
-        var r = nu(e, t);
-        return tS(e.body, r);
+        var r = ab(e, t);
+        return tH(e.body, r);
     },
 }),
-    tr({
+    tp({
         type: "underline",
         names: ["\\underline"],
-        props: { numArgs: 1, allowedInText: !0 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "underline", mode: r.mode, body: t[0] };
-        },
+        numArgs: 1,
+        allowedInText: !0,
+        handler: (e, t) => ({ type: "underline", mode: e.parser.mode, body: t[0] }),
         htmlBuilder(e, t) {
-            var r = tg(e.body, t),
-                n = eV("underline-line", t),
-                a = t.fontMetrics().defaultRuleThickness;
-            return e$(
-                ["mord", "underline"],
+            var r = tD(e.body, t),
+                a = e3("underline-line", t),
+                n = t.fontMetrics().defaultRuleThickness;
+            return e4(
+                ["mord", "katex-underline"],
                 [
-                    eK({
+                    e9({
                         positionType: "top",
                         positionData: r.height,
                         children: [
-                            { type: "kern", size: a },
-                            { type: "elem", elem: n },
-                            { type: "kern", size: 3 * a },
+                            { type: "kern", size: n },
+                            { type: "elem", elem: a },
+                            { type: "kern", size: 3 * n },
                             { type: "elem", elem: r },
                         ],
                     }),
@@ -8613,70 +8873,77 @@ var nl = {
             );
         },
         mathmlBuilder(e, t) {
-            var r = new tx("mo", [new ty("\u203E")]);
+            var r = new tM("mo", [new tT("\u203E")]);
             r.setAttribute("stretchy", "true");
-            var n = new tx("munder", [tM(e.body, t), r]);
-            return (n.setAttribute("accentunder", "true"), n);
+            var a = new tM("munder", [tJ(e.body, t), r]);
+            return (a.setAttribute("accentunder", "true"), a);
         },
     }),
-    tr({
+    tp({
         type: "vcenter",
         names: ["\\vcenter"],
-        props: { numArgs: 1, argTypes: ["original"], allowedInText: !1 },
-        handler(e, t) {
-            var { parser: r } = e;
-            return { type: "vcenter", mode: r.mode, body: t[0] };
-        },
+        numArgs: 1,
+        argTypes: ["original"],
+        allowedInText: !1,
+        handler: (e, t) => ({ type: "vcenter", mode: e.parser.mode, body: t[0] }),
         htmlBuilder(e, t) {
-            var r = tg(e.body, t),
-                n = t.fontMetrics().axisHeight;
-            return eK({
+            var r = tD(e.body, t),
+                a = t.fontMetrics().axisHeight;
+            return e9({
                 positionType: "shift",
-                positionData: 0.5 * (r.height - n - (r.depth + n)),
+                positionData: 0.5 * (r.height - a - (r.depth + a)),
                 children: [{ type: "elem", elem: r }],
             });
         },
-        mathmlBuilder: (e, t) => new tx("mpadded", [tM(e.body, t)], ["vcenter"]),
+        mathmlBuilder(e, t) {
+            var r = new tM("mpadded", [tJ(e.body, t)], ["vcenter"]);
+            return new tM("mrow", [r]);
+        },
     }),
-    tr({
+    tp({
         type: "verb",
         names: ["\\verb"],
-        props: { numArgs: 0, allowedInText: !0 },
+        numArgs: 0,
+        allowedInText: !0,
         handler(e, t, r) {
-            throw new n("\\verb ended by end of line instead of matching delimiter");
+            throw new a("\\verb ended by end of line instead of matching delimiter");
         },
         htmlBuilder(e, t) {
-            for (var r = nc(e), n = [], a = t.havingStyle(t.style.text()), i = 0; i < r.length; i++) {
+            for (var r = av(e), a = [], n = t.havingStyle(t.style.text()), i = 0; i < r.length; i++) {
                 var s = r[i];
                 ("~" === s && (s = "\\textasciitilde"),
-                    n.push(eO(s, "Typewriter-Regular", e.mode, a, ["mord", "texttt"])));
+                    a.push(eG(s, "Typewriter-Regular", e.mode, n, ["mord", "texttt"])));
             }
-            return e$(["mord", "text"].concat(a.sizingClasses(t)), eP(n), a);
+            return e4(["mord", "text"].concat(n.sizingClasses(t)), e0(a), n);
         },
         mathmlBuilder(e, t) {
-            var r = new tx("mtext", [new ty(nc(e))]);
+            var r = new tM("mtext", [new tT(av(e))]);
             return (r.setAttribute("mathvariant", "monospace"), r);
         },
     }));
-var nc = (e) => e.body.replace(/ /g, e.star ? "\u2423" : "\xa0"),
-    nm = "[ \r\n	]",
-    np = "[\u0300-\u036F]",
-    nd = RegExp(np + "+$"),
-    nf =
+var av = (e) => e.body.replace(/ /g, e.star ? "\u2423" : "\xa0"),
+    ax = "[ \r\n	]",
+    ay = "[\u0300-\u036F]",
+    aw = RegExp(ay + "+$"),
+    ak =
         "(" +
-        nm +
+        ax +
         "+)|\\\\(\n|[ \r	]+\n?)[ \r	]*|([!-\\[\\]-\u2027\u202A-\uD7FF\uF900-\uFFFF]" +
-        np +
+        ay +
         "*|[\uD800-\uDBFF][\uDC00-\uDFFF]" +
-        np +
+        ay +
         "*|\\\\verb\\*([^]).*?\\4|\\\\verb([^*a-zA-Z]).*?\\5|(\\\\[a-zA-Z@]+)" +
-        nm +
+        ax +
         "*|\\\\[^\uD800-\uDFFF])";
-class ng {
+class aA {
     constructor(e, t) {
-        ((this.input = e),
+        ((this.input = void 0),
+            (this.settings = void 0),
+            (this.tokenRegex = void 0),
+            (this.catcodes = void 0),
+            (this.input = e),
             (this.settings = t),
-            (this.tokenRegex = RegExp(nf, "g")),
+            (this.tokenRegex = RegExp(ak, "g")),
             (this.catcodes = { "%": 14, "~": 13 }));
     }
     setCatcode(e, t) {
@@ -8685,31 +8952,37 @@ class ng {
     lex() {
         var e = this.input,
             t = this.tokenRegex.lastIndex;
-        if (t === e.length) return new rI("EOF", new rq(this, t, t));
+        if (t === e.length) return new r$("EOF", new rU(this, t, t));
         var r = this.tokenRegex.exec(e);
         if (null === r || r.index !== t)
-            throw new n("Unexpected character: '" + e[t] + "'", new rI(e[t], new rq(this, t, t + 1)));
-        var a = r[6] || r[3] || (r[2] ? "\\ " : " ");
-        if (14 === this.catcodes[a]) {
+            throw new a("Unexpected character: '" + e[t] + "'", new r$(e[t], new rU(this, t, t + 1)));
+        var n = r[6] || r[3] || (r[2] ? "\\ " : " ");
+        if (14 === this.catcodes[n]) {
             var i = e.indexOf("\n", this.tokenRegex.lastIndex);
             return (
                 -1 === i
                     ? ((this.tokenRegex.lastIndex = e.length),
-                      this.settings.reportNonstrict(
-                          "commentAtEnd",
-                          "% comment has no terminating newline; LaTeX would fail because of commenting the end of math mode (e.g. $)",
-                      ))
+                      eZ({
+                          strict: this.settings.strict,
+                          errorCode: "commentAtEnd",
+                          errorMsg:
+                              "% comment has no terminating newline; LaTeX would fail because of commenting the end of math mode (e.g. $)",
+                          report: !0,
+                      }))
                     : (this.tokenRegex.lastIndex = i + 1),
                 this.lex()
             );
         }
-        return new rI(a, new rq(this, t, this.tokenRegex.lastIndex));
+        return new r$(n, new rU(this, t, this.tokenRegex.lastIndex));
     }
 }
-class nb {
+class aC {
     constructor(e, t) {
         (void 0 === e && (e = {}),
             void 0 === t && (t = {}),
+            (this.current = void 0),
+            (this.builtins = void 0),
+            (this.undefStack = void 0),
             (this.current = t),
             (this.builtins = e),
             (this.undefStack = []));
@@ -8719,47 +8992,56 @@ class nb {
     }
     endGroup() {
         if (0 === this.undefStack.length)
-            throw new n(
+            throw new a(
                 "Unbalanced namespace destruction: attempt to pop global namespace; please report this as a bug",
             );
         var e = this.undefStack.pop();
-        for (var t in e) e.hasOwnProperty(t) && (null == e[t] ? delete this.current[t] : (this.current[t] = e[t]));
+        for (var t of Object.keys(e)) void 0 === e[t] ? delete this.current[t] : (this.current[t] = e[t]);
     }
     endGroups() {
         for (; this.undefStack.length > 0;) this.endGroup();
     }
     has(e) {
-        return this.current.hasOwnProperty(e) || this.builtins.hasOwnProperty(e);
+        return (
+            Object.prototype.hasOwnProperty.call(this.current, e) ||
+            Object.prototype.hasOwnProperty.call(this.builtins, e)
+        );
     }
     get(e) {
-        return this.current.hasOwnProperty(e) ? this.current[e] : this.builtins[e];
+        return Object.prototype.hasOwnProperty.call(this.current, e)
+            ? this.current[e]
+            : Object.prototype.hasOwnProperty.call(this.builtins, e)
+              ? this.builtins[e]
+              : void 0;
     }
     set(e, t, r) {
         if ((void 0 === r && (r = !1), r)) {
-            for (var n = 0; n < this.undefStack.length; n++) delete this.undefStack[n][e];
+            for (var a = 0; a < this.undefStack.length; a++) delete this.undefStack[a][e];
             this.undefStack.length > 0 && (this.undefStack[this.undefStack.length - 1][e] = t);
         } else {
-            var a = this.undefStack[this.undefStack.length - 1];
-            a && !a.hasOwnProperty(e) && (a[e] = this.current[e]);
+            var n = this.undefStack[this.undefStack.length - 1];
+            n &&
+                !Object.prototype.hasOwnProperty.call(n, e) &&
+                (n[e] = Object.prototype.hasOwnProperty.call(this.current, e) ? this.current[e] : void 0);
         }
         null == t ? delete this.current[e] : (this.current[e] = t);
     }
 }
-((rF["\\noexpand"] = function (e) {
+((rP["\\noexpand"] = function (e) {
     var t = e.popToken();
     return (e.isExpandable(t.text) && ((t.noexpand = !0), (t.treatAsRelax = !0)), { tokens: [t], numArgs: 0 });
 }),
-    (rF["\\expandafter"] = function (e) {
+    (rP["\\expandafter"] = function (e) {
         var t = e.popToken();
         return (e.expandOnce(!0), { tokens: [t], numArgs: 0 });
     }),
-    (rF["\\@firstoftwo"] = function (e) {
+    (rP["\\@firstoftwo"] = function (e) {
         return { tokens: e.consumeArgs(2)[0], numArgs: 0 };
     }),
-    (rF["\\@secondoftwo"] = function (e) {
+    (rP["\\@secondoftwo"] = function (e) {
         return { tokens: e.consumeArgs(2)[1], numArgs: 0 };
     }),
-    (rF["\\@ifnextchar"] = function (e) {
+    (rP["\\@ifnextchar"] = function (e) {
         var t = e.consumeArgs(3);
         e.consumeSpaces();
         var r = e.future();
@@ -8767,12 +9049,12 @@ class nb {
             ? { tokens: t[1], numArgs: 0 }
             : { tokens: t[2], numArgs: 0 };
     }),
-    (rF["\\@ifstar"] = "\\@ifnextchar *{\\@firstoftwo{#1}}"),
-    (rF["\\TextOrMath"] = function (e) {
+    (rP["\\@ifstar"] = "\\@ifnextchar *{\\@firstoftwo{#1}}"),
+    (rP["\\TextOrMath"] = function (e) {
         var t = e.consumeArgs(2);
         return "text" === e.mode ? { tokens: t[0], numArgs: 0 } : { tokens: t[1], numArgs: 0 };
     }));
-var nv = {
+var aR = {
     0: 0,
     1: 1,
     2: 2,
@@ -8796,44 +9078,44 @@ var nv = {
     f: 15,
     F: 15,
 };
-rF["\\char"] = function (e) {
+rP["\\char"] = function (e) {
     var t,
         r,
-        a = e.popToken(),
+        n = e.popToken(),
         i = 0;
-    if ("'" === a.text) ((t = 8), (a = e.popToken()));
-    else if ('"' === a.text) ((t = 16), (a = e.popToken()));
-    else if ("`" === a.text)
-        if ("\\" === (a = e.popToken()).text[0]) i = a.text.charCodeAt(1);
-        else if ("EOF" === a.text) throw new n("\\char` missing argument");
-        else i = a.text.charCodeAt(0);
+    if ("'" === n.text) ((t = 8), (n = e.popToken()));
+    else if ('"' === n.text) ((t = 16), (n = e.popToken()));
+    else if ("`" === n.text)
+        if ("\\" === (n = e.popToken()).text[0]) i = n.text.charCodeAt(1);
+        else if ("EOF" === n.text) throw new a("\\char` missing argument");
+        else i = n.text.charCodeAt(0);
     else t = 10;
     if (t) {
-        if (null == (i = nv[a.text]) || i >= t) throw new n("Invalid base-" + t + " digit " + a.text);
-        for (; null != (r = nv[e.future().text]) && r < t;) ((i *= t), (i += r), e.popToken());
+        if (null == (i = aR[n.text]) || i >= t) throw new a("Invalid base-" + t + " digit " + n.text);
+        for (; null != (r = aR[e.future().text]) && r < t;) ((i *= t), (i += r), e.popToken());
     }
     return "\\@char{" + i + "}";
 };
-var nx = (e, t, r, a) => {
+var a_ = (e, t, r, n) => {
     var i = e.consumeArg().tokens;
-    if (1 !== i.length) throw new n("\\newcommand's first argument must be a macro name");
+    if (1 !== i.length) throw new a("\\newcommand's first argument must be a macro name");
     var s = i[0].text,
         l = e.isDefined(s);
-    if (l && !t) throw new n("\\newcommand{" + s + "} attempting to redefine " + s + "; use \\renewcommand");
-    if (!l && !r) throw new n("\\renewcommand{" + s + "} when command " + s + " does not yet exist; use \\newcommand");
+    if (l && !t) throw new a("\\newcommand{" + s + "} attempting to redefine " + s + "; use \\renewcommand");
+    if (!l && !r) throw new a("\\renewcommand{" + s + "} when command " + s + " does not yet exist; use \\newcommand");
     var o = 0;
     if (1 === (i = e.consumeArg().tokens).length && "[" === i[0].text) {
         for (var h = "", u = e.expandNextToken(); "]" !== u.text && "EOF" !== u.text;)
             ((h += u.text), (u = e.expandNextToken()));
-        if (!h.match(/^\s*[0-9]+\s*$/)) throw new n("Invalid number of arguments: " + h);
+        if (!h.match(/^\s*[0-9]+\s*$/)) throw new a("Invalid number of arguments: " + h);
         ((o = parseInt(h)), (i = e.consumeArg().tokens));
     }
-    return ((l && a) || e.macros.set(s, { tokens: i, numArgs: o }), "");
+    return ((l && n) || e.macros.set(s, { tokens: i, numArgs: o }), "");
 };
-((rF["\\newcommand"] = (e) => nx(e, !1, !0, !1)),
-    (rF["\\renewcommand"] = (e) => nx(e, !0, !1, !1)),
-    (rF["\\providecommand"] = (e) => nx(e, !0, !0, !0)),
-    (rF["\\message"] = (e) => (
+((rP["\\newcommand"] = (e) => a_(e, !1, !0, !1)),
+    (rP["\\renewcommand"] = (e) => a_(e, !0, !1, !1)),
+    (rP["\\providecommand"] = (e) => a_(e, !0, !0, !0)),
+    (rP["\\message"] = (e) => (
         console.log(
             e
                 .consumeArgs(1)[0]
@@ -8843,7 +9125,7 @@ var nx = (e, t, r, a) => {
         ),
         ""
     )),
-    (rF["\\errmessage"] = (e) => (
+    (rP["\\errmessage"] = (e) => (
         console.error(
             e
                 .consumeArgs(1)[0]
@@ -8853,87 +9135,87 @@ var nx = (e, t, r, a) => {
         ),
         ""
     )),
-    (rF["\\show"] = (e) => {
+    (rP["\\show"] = (e) => {
         var t = e.popToken(),
             r = t.text;
-        return (console.log(t, e.macros.get(r), e9[r], ea.math[r], ea.text[r]), "");
+        return (console.log(t, e.macros.get(r), tu[r], en.math[r], en.text[r]), "");
     }),
-    (rF["\\bgroup"] = "{"),
-    (rF["\\egroup"] = "}"),
-    (rF["~"] = "\\nobreakspace"),
-    (rF["\\lq"] = "`"),
-    (rF["\\rq"] = "'"),
-    (rF["\\aa"] = "\\r a"),
-    (rF["\\AA"] = "\\r A"),
-    (rF["\\textcopyright"] = "\\html@mathml{\\textcircled{c}}{\\char`\xa9}"),
-    (rF["\\copyright"] = "\\TextOrMath{\\textcopyright}{\\text{\\textcopyright}}"),
-    (rF["\\textregistered"] = "\\html@mathml{\\textcircled{\\scriptsize R}}{\\char`\xae}"),
-    (rF["\u212C"] = "\\mathscr{B}"),
-    (rF["\u2130"] = "\\mathscr{E}"),
-    (rF["\u2131"] = "\\mathscr{F}"),
-    (rF["\u210B"] = "\\mathscr{H}"),
-    (rF["\u2110"] = "\\mathscr{I}"),
-    (rF["\u2112"] = "\\mathscr{L}"),
-    (rF["\u2133"] = "\\mathscr{M}"),
-    (rF["\u211B"] = "\\mathscr{R}"),
-    (rF["\u212D"] = "\\mathfrak{C}"),
-    (rF["\u210C"] = "\\mathfrak{H}"),
-    (rF["\u2128"] = "\\mathfrak{Z}"),
-    (rF["\\Bbbk"] = "\\Bbb{k}"),
-    (rF["\\llap"] = "\\mathllap{\\textrm{#1}}"),
-    (rF["\\rlap"] = "\\mathrlap{\\textrm{#1}}"),
-    (rF["\\clap"] = "\\mathclap{\\textrm{#1}}"),
-    (rF["\\mathstrut"] = "\\vphantom{(}"),
-    (rF["\\underbar"] = "\\underline{\\text{#1}}"),
-    (rF["\\not"] = '\\html@mathml{\\mathrel{\\mathrlap\\@not}\\nobreak}{\\char"338}'),
-    (rF["\\neq"] = "\\html@mathml{\\mathrel{\\not=}}{\\mathrel{\\char`\u2260}}"),
-    (rF["\\ne"] = "\\neq"),
-    (rF["\u2260"] = "\\neq"),
-    (rF["\\notin"] = "\\html@mathml{\\mathrel{{\\in}\\mathllap{/\\mskip1mu}}}{\\mathrel{\\char`\u2209}}"),
-    (rF["\u2209"] = "\\notin"),
-    (rF["\u2258"] =
+    (rP["\\bgroup"] = "{"),
+    (rP["\\egroup"] = "}"),
+    (rP["~"] = "\\nobreakspace"),
+    (rP["\\lq"] = "`"),
+    (rP["\\rq"] = "'"),
+    (rP["\\aa"] = "\\r a"),
+    (rP["\\AA"] = "\\r A"),
+    (rP["\\textcopyright"] = "\\html@mathml{\\textcircled{c}}{\\char`\xa9}"),
+    (rP["\\copyright"] = "\\TextOrMath{\\textcopyright}{\\text{\\textcopyright}}"),
+    (rP["\\textregistered"] = "\\html@mathml{\\textcircled{\\scriptsize R}}{\\char`\xae}"),
+    (rP["\u212C"] = "\\mathscr{B}"),
+    (rP["\u2130"] = "\\mathscr{E}"),
+    (rP["\u2131"] = "\\mathscr{F}"),
+    (rP["\u210B"] = "\\mathscr{H}"),
+    (rP["\u2110"] = "\\mathscr{I}"),
+    (rP["\u2112"] = "\\mathscr{L}"),
+    (rP["\u2133"] = "\\mathscr{M}"),
+    (rP["\u211B"] = "\\mathscr{R}"),
+    (rP["\u212D"] = "\\mathfrak{C}"),
+    (rP["\u210C"] = "\\mathfrak{H}"),
+    (rP["\u2128"] = "\\mathfrak{Z}"),
+    (rP["\\Bbbk"] = "\\Bbb{k}"),
+    (rP["\\llap"] = "\\mathllap{\\textrm{#1}}"),
+    (rP["\\rlap"] = "\\mathrlap{\\textrm{#1}}"),
+    (rP["\\clap"] = "\\mathclap{\\textrm{#1}}"),
+    (rP["\\mathstrut"] = "\\vphantom{(}"),
+    (rP["\\underbar"] = "\\underline{\\text{#1}}"),
+    (rP["\\not"] = '\\html@mathml{\\mathrel{\\mathrlap\\@not}\\nobreak}{\\char"338}'),
+    (rP["\\neq"] = "\\html@mathml{\\mathrel{\\not=}}{\\mathrel{\\char`\u2260}}"),
+    (rP["\\ne"] = "\\neq"),
+    (rP["\u2260"] = "\\neq"),
+    (rP["\\notin"] = "\\html@mathml{\\mathrel{{\\in}\\mathllap{/\\mskip1mu}}}{\\mathrel{\\char`\u2209}}"),
+    (rP["\u2209"] = "\\notin"),
+    (rP["\u2258"] =
         "\\html@mathml{\\mathrel{=\\kern{-1em}\\raisebox{0.4em}{$\\scriptsize\\frown$}}}{\\mathrel{\\char`\u2258}}"),
-    (rF["\u2259"] = "\\html@mathml{\\stackrel{\\tiny\\wedge}{=}}{\\mathrel{\\char`\u2258}}"),
-    (rF["\u225A"] = "\\html@mathml{\\stackrel{\\tiny\\vee}{=}}{\\mathrel{\\char`\u225A}}"),
-    (rF["\u225B"] = "\\html@mathml{\\stackrel{\\scriptsize\\star}{=}}{\\mathrel{\\char`\u225B}}"),
-    (rF["\u225D"] = "\\html@mathml{\\stackrel{\\tiny\\mathrm{def}}{=}}{\\mathrel{\\char`\u225D}}"),
-    (rF["\u225E"] = "\\html@mathml{\\stackrel{\\tiny\\mathrm{m}}{=}}{\\mathrel{\\char`\u225E}}"),
-    (rF["\u225F"] = "\\html@mathml{\\stackrel{\\tiny?}{=}}{\\mathrel{\\char`\u225F}}"),
-    (rF["\u27C2"] = "\\perp"),
-    (rF["\u203C"] = "\\mathclose{!\\mkern-0.8mu!}"),
-    (rF["\u220C"] = "\\notni"),
-    (rF["\u231C"] = "\\ulcorner"),
-    (rF["\u231D"] = "\\urcorner"),
-    (rF["\u231E"] = "\\llcorner"),
-    (rF["\u231F"] = "\\lrcorner"),
-    (rF["\xa9"] = "\\copyright"),
-    (rF["\xae"] = "\\textregistered"),
-    (rF["\\ulcorner"] = '\\html@mathml{\\@ulcorner}{\\mathop{\\char"231c}}'),
-    (rF["\\urcorner"] = '\\html@mathml{\\@urcorner}{\\mathop{\\char"231d}}'),
-    (rF["\\llcorner"] = '\\html@mathml{\\@llcorner}{\\mathop{\\char"231e}}'),
-    (rF["\\lrcorner"] = '\\html@mathml{\\@lrcorner}{\\mathop{\\char"231f}}'),
-    (rF["\\vdots"] = "{\\varvdots\\rule{0pt}{15pt}}"),
-    (rF["\u22EE"] = "\\vdots"),
-    (rF["\\varGamma"] = "\\mathit{\\Gamma}"),
-    (rF["\\varDelta"] = "\\mathit{\\Delta}"),
-    (rF["\\varTheta"] = "\\mathit{\\Theta}"),
-    (rF["\\varLambda"] = "\\mathit{\\Lambda}"),
-    (rF["\\varXi"] = "\\mathit{\\Xi}"),
-    (rF["\\varPi"] = "\\mathit{\\Pi}"),
-    (rF["\\varSigma"] = "\\mathit{\\Sigma}"),
-    (rF["\\varUpsilon"] = "\\mathit{\\Upsilon}"),
-    (rF["\\varPhi"] = "\\mathit{\\Phi}"),
-    (rF["\\varPsi"] = "\\mathit{\\Psi}"),
-    (rF["\\varOmega"] = "\\mathit{\\Omega}"),
-    (rF["\\substack"] = "\\begin{subarray}{c}#1\\end{subarray}"),
-    (rF["\\colon"] = "\\nobreak\\mskip2mu\\mathpunct{}\\mathchoice{\\mkern-3mu}{\\mkern-3mu}{}{}{:}\\mskip6mu\\relax"),
-    (rF["\\boxed"] = "\\fbox{$\\displaystyle{#1}$}"),
-    (rF["\\iff"] = "\\DOTSB\\;\\Longleftrightarrow\\;"),
-    (rF["\\implies"] = "\\DOTSB\\;\\Longrightarrow\\;"),
-    (rF["\\impliedby"] = "\\DOTSB\\;\\Longleftarrow\\;"),
-    (rF["\\dddot"] = "{\\overset{\\raisebox{-0.1ex}{\\normalsize ...}}{#1}}"),
-    (rF["\\ddddot"] = "{\\overset{\\raisebox{-0.1ex}{\\normalsize ....}}{#1}}"));
-var ny = {
+    (rP["\u2259"] = "\\html@mathml{\\stackrel{\\tiny\\wedge}{=}}{\\mathrel{\\char`\u2258}}"),
+    (rP["\u225A"] = "\\html@mathml{\\stackrel{\\tiny\\vee}{=}}{\\mathrel{\\char`\u225A}}"),
+    (rP["\u225B"] = "\\html@mathml{\\stackrel{\\scriptsize\\star}{=}}{\\mathrel{\\char`\u225B}}"),
+    (rP["\u225D"] = "\\html@mathml{\\stackrel{\\tiny\\mathrm{def}}{=}}{\\mathrel{\\char`\u225D}}"),
+    (rP["\u225E"] = "\\html@mathml{\\stackrel{\\tiny\\mathrm{m}}{=}}{\\mathrel{\\char`\u225E}}"),
+    (rP["\u225F"] = "\\html@mathml{\\stackrel{\\tiny?}{=}}{\\mathrel{\\char`\u225F}}"),
+    (rP["\u27C2"] = "\\perp"),
+    (rP["\u203C"] = "\\mathclose{!\\mkern-0.8mu!}"),
+    (rP["\u220C"] = "\\notni"),
+    (rP["\u231C"] = "\\ulcorner"),
+    (rP["\u231D"] = "\\urcorner"),
+    (rP["\u231E"] = "\\llcorner"),
+    (rP["\u231F"] = "\\lrcorner"),
+    (rP["\xa9"] = "\\copyright"),
+    (rP["\xae"] = "\\textregistered"),
+    (rP["\\ulcorner"] = '\\html@mathml{\\@ulcorner}{\\mathop{\\char"231c}}'),
+    (rP["\\urcorner"] = '\\html@mathml{\\@urcorner}{\\mathop{\\char"231d}}'),
+    (rP["\\llcorner"] = '\\html@mathml{\\@llcorner}{\\mathop{\\char"231e}}'),
+    (rP["\\lrcorner"] = '\\html@mathml{\\@lrcorner}{\\mathop{\\char"231f}}'),
+    (rP["\\vdots"] = "{\\varvdots\\rule{0pt}{15pt}}"),
+    (rP["\u22EE"] = "\\vdots"),
+    (rP["\\varGamma"] = "\\mathit{\\Gamma}"),
+    (rP["\\varDelta"] = "\\mathit{\\Delta}"),
+    (rP["\\varTheta"] = "\\mathit{\\Theta}"),
+    (rP["\\varLambda"] = "\\mathit{\\Lambda}"),
+    (rP["\\varXi"] = "\\mathit{\\Xi}"),
+    (rP["\\varPi"] = "\\mathit{\\Pi}"),
+    (rP["\\varSigma"] = "\\mathit{\\Sigma}"),
+    (rP["\\varUpsilon"] = "\\mathit{\\Upsilon}"),
+    (rP["\\varPhi"] = "\\mathit{\\Phi}"),
+    (rP["\\varPsi"] = "\\mathit{\\Psi}"),
+    (rP["\\varOmega"] = "\\mathit{\\Omega}"),
+    (rP["\\substack"] = "\\begin{subarray}{c}#1\\end{subarray}"),
+    (rP["\\colon"] = "\\nobreak\\mskip2mu\\mathpunct{}\\mathchoice{\\mkern-3mu}{\\mkern-3mu}{}{}{:}\\mskip6mu\\relax"),
+    (rP["\\boxed"] = "\\fbox{$\\displaystyle{#1}$}"),
+    (rP["\\iff"] = "\\DOTSB\\;\\Longleftrightarrow\\;"),
+    (rP["\\implies"] = "\\DOTSB\\;\\Longrightarrow\\;"),
+    (rP["\\impliedby"] = "\\DOTSB\\;\\Longleftarrow\\;"),
+    (rP["\\dddot"] = "{\\overset{\\raisebox{-0.1ex}{\\normalsize ...}}{#1}}"),
+    (rP["\\ddddot"] = "{\\overset{\\raisebox{-0.1ex}{\\normalsize ....}}{#1}}"));
+var aD = {
         ",": "\\dotsc",
         "\\not": "\\dotsb",
         "+": "\\dotsb",
@@ -8982,20 +9264,20 @@ var ny = {
         "\\idotsint": "\\dotsi",
         "\\DOTSX": "\\dotsx",
     },
-    nw = new Set(["bin", "rel"]);
-rF["\\dots"] = function (e) {
+    az = new Set(["bin", "rel"]);
+rP["\\dots"] = function (e) {
     var t = "\\dotso",
         r = e.expandAfterFuture().text;
     return (
-        r in ny
-            ? (t = ny[r])
+        r in aD
+            ? (t = aD[r])
             : "\\not" === r.slice(0, 4)
               ? (t = "\\dotsb")
-              : r in ea.math && nw.has(ea.math[r].group) && (t = "\\dotsb"),
+              : r in en.math && az.has(en.math[r].group) && (t = "\\dotsb"),
         t
     );
 };
-var nk = {
+var aS = {
     ")": !0,
     "]": !0,
     "\\rbrack": !0,
@@ -9016,310 +9298,318 @@ var nk = {
     ".": !0,
     ",": !0,
 };
-((rF["\\dotso"] = function (e) {
-    return e.future().text in nk ? "\\ldots\\," : "\\ldots";
+((rP["\\dotso"] = function (e) {
+    return e.future().text in aS ? "\\ldots\\," : "\\ldots";
 }),
-    (rF["\\dotsc"] = function (e) {
+    (rP["\\dotsc"] = function (e) {
         var t = e.future().text;
-        return t in nk && "," !== t ? "\\ldots\\," : "\\ldots";
+        return t in aS && "," !== t ? "\\ldots\\," : "\\ldots";
     }),
-    (rF["\\cdots"] = function (e) {
-        return e.future().text in nk ? "\\@cdots\\," : "\\@cdots";
+    (rP["\\cdots"] = function (e) {
+        return e.future().text in aS ? "\\@cdots\\," : "\\@cdots";
     }),
-    (rF["\\dotsb"] = "\\cdots"),
-    (rF["\\dotsm"] = "\\cdots"),
-    (rF["\\dotsi"] = "\\!\\cdots"),
-    (rF["\\dotsx"] = "\\ldots\\,"),
-    (rF["\\DOTSI"] = "\\relax"),
-    (rF["\\DOTSB"] = "\\relax"),
-    (rF["\\DOTSX"] = "\\relax"),
-    (rF["\\tmspace"] = "\\TextOrMath{\\kern#1#3}{\\mskip#1#2}\\relax"),
-    (rF["\\,"] = "\\tmspace+{3mu}{.1667em}"),
-    (rF["\\thinspace"] = "\\,"),
-    (rF["\\>"] = "\\mskip{4mu}"),
-    (rF["\\:"] = "\\tmspace+{4mu}{.2222em}"),
-    (rF["\\medspace"] = "\\:"),
-    (rF["\\;"] = "\\tmspace+{5mu}{.2777em}"),
-    (rF["\\thickspace"] = "\\;"),
-    (rF["\\!"] = "\\tmspace-{3mu}{.1667em}"),
-    (rF["\\negthinspace"] = "\\!"),
-    (rF["\\negmedspace"] = "\\tmspace-{4mu}{.2222em}"),
-    (rF["\\negthickspace"] = "\\tmspace-{5mu}{.277em}"),
-    (rF["\\enspace"] = "\\kern.5em "),
-    (rF["\\enskip"] = "\\hskip.5em\\relax"),
-    (rF["\\quad"] = "\\hskip1em\\relax"),
-    (rF["\\qquad"] = "\\hskip2em\\relax"),
-    (rF["\\tag"] = "\\@ifstar\\tag@literal\\tag@paren"),
-    (rF["\\tag@paren"] = "\\tag@literal{({#1})}"),
-    (rF["\\tag@literal"] = (e) => {
-        if (e.macros.get("\\df@tag")) throw new n("Multiple \\tag");
+    (rP["\\dotsb"] = "\\cdots"),
+    (rP["\\dotsm"] = "\\cdots"),
+    (rP["\\dotsi"] = "\\!\\cdots"),
+    (rP["\\dotsx"] = "\\ldots\\,"),
+    (rP["\\DOTSI"] = "\\relax"),
+    (rP["\\DOTSB"] = "\\relax"),
+    (rP["\\DOTSX"] = "\\relax"),
+    (rP["\\tmspace"] = "\\TextOrMath{\\kern#1#3}{\\mskip#1#2}\\relax"),
+    (rP["\\,"] = "\\tmspace+{3mu}{.1667em}"),
+    (rP["\\thinspace"] = "\\,"),
+    (rP["\\>"] = "\\mskip{4mu}"),
+    (rP["\\:"] = "\\tmspace+{4mu}{.2222em}"),
+    (rP["\\medspace"] = "\\:"),
+    (rP["\\;"] = "\\tmspace+{5mu}{.2777em}"),
+    (rP["\\thickspace"] = "\\;"),
+    (rP["\\!"] = "\\tmspace-{3mu}{.1667em}"),
+    (rP["\\negthinspace"] = "\\!"),
+    (rP["\\negmedspace"] = "\\tmspace-{4mu}{.2222em}"),
+    (rP["\\negthickspace"] = "\\tmspace-{5mu}{.277em}"),
+    (rP["\\enspace"] = "\\kern.5em "),
+    (rP["\\enskip"] = "\\hskip.5em\\relax"),
+    (rP["\\quad"] = "\\hskip1em\\relax"),
+    (rP["\\qquad"] = "\\hskip2em\\relax"),
+    (rP["\\tag"] = "\\@ifstar\\tag@literal\\tag@paren"),
+    (rP["\\tag@paren"] = "\\tag@literal{({#1})}"),
+    (rP["\\tag@literal"] = (e) => {
+        if (e.macros.get("\\df@tag")) throw new a("Multiple \\tag");
         return "\\gdef\\df@tag{\\text{#1}}";
     }),
-    (rF["\\bmod"] =
+    (rP["\\bmod"] =
         "\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5mu}\\mathbin{\\rm mod}\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5mu}"),
-    (rF["\\pod"] = "\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern8mu}{\\mkern8mu}{\\mkern8mu}(#1)"),
-    (rF["\\pmod"] = "\\pod{{\\rm mod}\\mkern6mu#1}"),
-    (rF["\\mod"] = "\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}{\\rm mod}\\,\\,#1"),
-    (rF["\\newline"] = "\\\\\\relax"),
-    (rF["\\TeX"] = "\\textrm{\\html@mathml{T\\kern-.1667em\\raisebox{-.5ex}{E}\\kern-.125emX}{TeX}}"));
-var nA = H(G["Main-Regular"][84][1] - 0.7 * G["Main-Regular"][65][1]);
-((rF["\\LaTeX"] =
-    "\\textrm{\\html@mathml{L\\kern-.36em\\raisebox{" + nA + "}{\\scriptstyle A}\\kern-.15em\\TeX}{LaTeX}}"),
-    (rF["\\KaTeX"] =
-        "\\textrm{\\html@mathml{K\\kern-.17em\\raisebox{" + nA + "}{\\scriptstyle A}\\kern-.15em\\TeX}{KaTeX}}"),
-    (rF["\\hspace"] = "\\@ifstar\\@hspacer\\@hspace"),
-    (rF["\\@hspace"] = "\\hskip #1\\relax"),
-    (rF["\\@hspacer"] = "\\rule{0pt}{0pt}\\hskip #1\\relax"),
-    (rF["\\ordinarycolon"] = ":"),
-    (rF["\\vcentcolon"] = "\\mathrel{\\mathop\\ordinarycolon}"),
-    (rF["\\dblcolon"] =
+    (rP["\\pod"] = "\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern8mu}{\\mkern8mu}{\\mkern8mu}(#1)"),
+    (rP["\\pmod"] = "\\pod{{\\rm mod}\\mkern6mu#1}"),
+    (rP["\\mod"] = "\\allowbreak\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}{\\rm mod}\\,\\,#1"),
+    (rP["\\newline"] = "\\\\\\relax"),
+    (rP["\\TeX"] = "\\textrm{\\html@mathml{T\\kern-.1667em\\raisebox{-.5ex}{E}\\kern-.125emX}{TeX}}"));
+var aM = L(Q["Main-Regular"][84][1] - 0.7 * Q["Main-Regular"][65][1]);
+((rP["\\LaTeX"] =
+    "\\textrm{\\html@mathml{L\\kern-.36em\\raisebox{" + aM + "}{\\scriptstyle A}\\kern-.15em\\TeX}{LaTeX}}"),
+    (rP["\\KaTeX"] =
+        "\\textrm{\\html@mathml{K\\kern-.17em\\raisebox{" + aM + "}{\\scriptstyle A}\\kern-.15em\\TeX}{KaTeX}}"),
+    (rP["\\hspace"] = "\\@ifstar\\@hspacer\\@hspace"),
+    (rP["\\@hspace"] = "\\hskip #1\\relax"),
+    (rP["\\@hspacer"] = "\\rule{0pt}{0pt}\\hskip #1\\relax"),
+    (rP["\\ordinarycolon"] = ":"),
+    (rP["\\vcentcolon"] = "\\mathrel{\\mathop\\ordinarycolon}"),
+    (rP["\\dblcolon"] =
         '\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-.9mu}\\vcentcolon}}{\\mathop{\\char"2237}}'),
-    (rF["\\coloneqq"] = '\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2254}}'),
-    (rF["\\Coloneqq"] =
+    (rP["\\coloneqq"] = '\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2254}}'),
+    (rP["\\Coloneqq"] =
         '\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}=}}{\\mathop{\\char"2237\\char"3d}}'),
-    (rF["\\coloneq"] =
+    (rP["\\coloneq"] =
         '\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}{\\mathop{\\char"3a\\char"2212}}'),
-    (rF["\\Coloneq"] =
+    (rP["\\Coloneq"] =
         '\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}{\\mathop{\\char"2237\\char"2212}}'),
-    (rF["\\eqqcolon"] = '\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2255}}'),
-    (rF["\\Eqqcolon"] =
+    (rP["\\eqqcolon"] = '\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2255}}'),
+    (rP["\\Eqqcolon"] =
         '\\html@mathml{\\mathrel{=\\mathrel{\\mkern-1.2mu}\\dblcolon}}{\\mathop{\\char"3d\\char"2237}}'),
-    (rF["\\eqcolon"] =
+    (rP["\\eqcolon"] =
         '\\html@mathml{\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\vcentcolon}}{\\mathop{\\char"2239}}'),
-    (rF["\\Eqcolon"] =
+    (rP["\\Eqcolon"] =
         '\\html@mathml{\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\dblcolon}}{\\mathop{\\char"2212\\char"2237}}'),
-    (rF["\\colonapprox"] =
+    (rP["\\colonapprox"] =
         '\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\approx}}{\\mathop{\\char"3a\\char"2248}}'),
-    (rF["\\Colonapprox"] =
+    (rP["\\Colonapprox"] =
         '\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\approx}}{\\mathop{\\char"2237\\char"2248}}'),
-    (rF["\\colonsim"] =
+    (rP["\\colonsim"] =
         '\\html@mathml{\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\sim}}{\\mathop{\\char"3a\\char"223c}}'),
-    (rF["\\Colonsim"] =
+    (rP["\\Colonsim"] =
         '\\html@mathml{\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\sim}}{\\mathop{\\char"2237\\char"223c}}'),
-    (rF["\u2237"] = "\\dblcolon"),
-    (rF["\u2239"] = "\\eqcolon"),
-    (rF["\u2254"] = "\\coloneqq"),
-    (rF["\u2255"] = "\\eqqcolon"),
-    (rF["\u2A74"] = "\\Coloneqq"),
-    (rF["\\ratio"] = "\\vcentcolon"),
-    (rF["\\coloncolon"] = "\\dblcolon"),
-    (rF["\\colonequals"] = "\\coloneqq"),
-    (rF["\\coloncolonequals"] = "\\Coloneqq"),
-    (rF["\\equalscolon"] = "\\eqqcolon"),
-    (rF["\\equalscoloncolon"] = "\\Eqqcolon"),
-    (rF["\\colonminus"] = "\\coloneq"),
-    (rF["\\coloncolonminus"] = "\\Coloneq"),
-    (rF["\\minuscolon"] = "\\eqcolon"),
-    (rF["\\minuscoloncolon"] = "\\Eqcolon"),
-    (rF["\\coloncolonapprox"] = "\\Colonapprox"),
-    (rF["\\coloncolonsim"] = "\\Colonsim"),
-    (rF["\\simcolon"] = "\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\vcentcolon}"),
-    (rF["\\simcoloncolon"] = "\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\dblcolon}"),
-    (rF["\\approxcolon"] = "\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\vcentcolon}"),
-    (rF["\\approxcoloncolon"] = "\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\dblcolon}"),
-    (rF["\\notni"] = "\\html@mathml{\\not\\ni}{\\mathrel{\\char`\u220C}}"),
-    (rF["\\limsup"] = "\\DOTSB\\operatorname*{lim\\,sup}"),
-    (rF["\\liminf"] = "\\DOTSB\\operatorname*{lim\\,inf}"),
-    (rF["\\injlim"] = "\\DOTSB\\operatorname*{inj\\,lim}"),
-    (rF["\\projlim"] = "\\DOTSB\\operatorname*{proj\\,lim}"),
-    (rF["\\varlimsup"] = "\\DOTSB\\operatorname*{\\overline{lim}}"),
-    (rF["\\varliminf"] = "\\DOTSB\\operatorname*{\\underline{lim}}"),
-    (rF["\\varinjlim"] = "\\DOTSB\\operatorname*{\\underrightarrow{lim}}"),
-    (rF["\\varprojlim"] = "\\DOTSB\\operatorname*{\\underleftarrow{lim}}"),
-    (rF["\\gvertneqq"] = "\\html@mathml{\\@gvertneqq}{\u2269}"),
-    (rF["\\lvertneqq"] = "\\html@mathml{\\@lvertneqq}{\u2268}"),
-    (rF["\\ngeqq"] = "\\html@mathml{\\@ngeqq}{\u2271}"),
-    (rF["\\ngeqslant"] = "\\html@mathml{\\@ngeqslant}{\u2271}"),
-    (rF["\\nleqq"] = "\\html@mathml{\\@nleqq}{\u2270}"),
-    (rF["\\nleqslant"] = "\\html@mathml{\\@nleqslant}{\u2270}"),
-    (rF["\\nshortmid"] = "\\html@mathml{\\@nshortmid}{\u2224}"),
-    (rF["\\nshortparallel"] = "\\html@mathml{\\@nshortparallel}{\u2226}"),
-    (rF["\\nsubseteqq"] = "\\html@mathml{\\@nsubseteqq}{\u2288}"),
-    (rF["\\nsupseteqq"] = "\\html@mathml{\\@nsupseteqq}{\u2289}"),
-    (rF["\\varsubsetneq"] = "\\html@mathml{\\@varsubsetneq}{\u228A}"),
-    (rF["\\varsubsetneqq"] = "\\html@mathml{\\@varsubsetneqq}{\u2ACB}"),
-    (rF["\\varsupsetneq"] = "\\html@mathml{\\@varsupsetneq}{\u228B}"),
-    (rF["\\varsupsetneqq"] = "\\html@mathml{\\@varsupsetneqq}{\u2ACC}"),
-    (rF["\\imath"] = "\\html@mathml{\\@imath}{\u0131}"),
-    (rF["\\jmath"] = "\\html@mathml{\\@jmath}{\u0237}"),
-    (rF["\\llbracket"] = "\\html@mathml{\\mathopen{[\\mkern-3.2mu[}}{\\mathopen{\\char`\u27E6}}"),
-    (rF["\\rrbracket"] = "\\html@mathml{\\mathclose{]\\mkern-3.2mu]}}{\\mathclose{\\char`\u27E7}}"),
-    (rF["\u27E6"] = "\\llbracket"),
-    (rF["\u27E7"] = "\\rrbracket"),
-    (rF["\\lBrace"] = "\\html@mathml{\\mathopen{\\{\\mkern-3.2mu[}}{\\mathopen{\\char`\u2983}}"),
-    (rF["\\rBrace"] = "\\html@mathml{\\mathclose{]\\mkern-3.2mu\\}}}{\\mathclose{\\char`\u2984}}"),
-    (rF["\u2983"] = "\\lBrace"),
-    (rF["\u2984"] = "\\rBrace"),
-    (rF["\\minuso"] =
+    (rP["\u2237"] = "\\dblcolon"),
+    (rP["\u2239"] = "\\eqcolon"),
+    (rP["\u2254"] = "\\coloneqq"),
+    (rP["\u2255"] = "\\eqqcolon"),
+    (rP["\u2A74"] = "\\Coloneqq"),
+    (rP["\\ratio"] = "\\vcentcolon"),
+    (rP["\\coloncolon"] = "\\dblcolon"),
+    (rP["\\colonequals"] = "\\coloneqq"),
+    (rP["\\coloncolonequals"] = "\\Coloneqq"),
+    (rP["\\equalscolon"] = "\\eqqcolon"),
+    (rP["\\equalscoloncolon"] = "\\Eqqcolon"),
+    (rP["\\colonminus"] = "\\coloneq"),
+    (rP["\\coloncolonminus"] = "\\Coloneq"),
+    (rP["\\minuscolon"] = "\\eqcolon"),
+    (rP["\\minuscoloncolon"] = "\\Eqcolon"),
+    (rP["\\coloncolonapprox"] = "\\Colonapprox"),
+    (rP["\\coloncolonsim"] = "\\Colonsim"),
+    (rP["\\simcolon"] = "\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\vcentcolon}"),
+    (rP["\\simcoloncolon"] = "\\mathrel{\\sim\\mathrel{\\mkern-1.2mu}\\dblcolon}"),
+    (rP["\\approxcolon"] = "\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\vcentcolon}"),
+    (rP["\\approxcoloncolon"] = "\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\dblcolon}"),
+    (rP["\\notni"] = "\\html@mathml{\\not\\ni}{\\mathrel{\\char`\u220C}}"),
+    (rP["\\limsup"] = "\\DOTSB\\operatorname*{lim\\,sup}"),
+    (rP["\\liminf"] = "\\DOTSB\\operatorname*{lim\\,inf}"),
+    (rP["\\injlim"] = "\\DOTSB\\operatorname*{inj\\,lim}"),
+    (rP["\\projlim"] = "\\DOTSB\\operatorname*{proj\\,lim}"),
+    (rP["\\varlimsup"] = "\\DOTSB\\operatorname*{\\overline{lim}}"),
+    (rP["\\varliminf"] = "\\DOTSB\\operatorname*{\\underline{lim}}"),
+    (rP["\\varinjlim"] = "\\DOTSB\\operatorname*{\\underrightarrow{lim}}"),
+    (rP["\\varprojlim"] = "\\DOTSB\\operatorname*{\\underleftarrow{lim}}"),
+    (rP["\\gvertneqq"] = "\\html@mathml{\\@gvertneqq}{\u2269}"),
+    (rP["\\lvertneqq"] = "\\html@mathml{\\@lvertneqq}{\u2268}"),
+    (rP["\\ngeqq"] = "\\html@mathml{\\@ngeqq}{\u2271}"),
+    (rP["\\ngeqslant"] = "\\html@mathml{\\@ngeqslant}{\u2271}"),
+    (rP["\\nleqq"] = "\\html@mathml{\\@nleqq}{\u2270}"),
+    (rP["\\nleqslant"] = "\\html@mathml{\\@nleqslant}{\u2270}"),
+    (rP["\\nshortmid"] = "\\html@mathml{\\@nshortmid}{\u2224}"),
+    (rP["\\nshortparallel"] = "\\html@mathml{\\@nshortparallel}{\u2226}"),
+    (rP["\\nsubseteqq"] = "\\html@mathml{\\@nsubseteqq}{\u2288}"),
+    (rP["\\nsupseteqq"] = "\\html@mathml{\\@nsupseteqq}{\u2289}"),
+    (rP["\\varsubsetneq"] = "\\html@mathml{\\@varsubsetneq}{\u228A}"),
+    (rP["\\varsubsetneqq"] = "\\html@mathml{\\@varsubsetneqq}{\u2ACB}"),
+    (rP["\\varsupsetneq"] = "\\html@mathml{\\@varsupsetneq}{\u228B}"),
+    (rP["\\varsupsetneqq"] = "\\html@mathml{\\@varsupsetneqq}{\u2ACC}"),
+    (rP["\\imath"] = "\\html@mathml{\\@imath}{\u0131}"),
+    (rP["\\jmath"] = "\\html@mathml{\\@jmath}{\u0237}"),
+    (rP["\\llbracket"] = "\\html@mathml{\\mathopen{[\\mkern-3.2mu[}}{\\mathopen{\\char`\u27E6}}"),
+    (rP["\\rrbracket"] = "\\html@mathml{\\mathclose{]\\mkern-3.2mu]}}{\\mathclose{\\char`\u27E7}}"),
+    (rP["\u27E6"] = "\\llbracket"),
+    (rP["\u27E7"] = "\\rrbracket"),
+    (rP["\\lBrace"] = "\\html@mathml{\\mathopen{\\{\\mkern-3.2mu[}}{\\mathopen{\\char`\u2983}}"),
+    (rP["\\rBrace"] = "\\html@mathml{\\mathclose{]\\mkern-3.2mu\\}}}{\\mathclose{\\char`\u2984}}"),
+    (rP["\u21A4"] = "\\mapsfrom"),
+    (rP["\\mapsfrom"] = "\\html@mathml{\\mathrel{\\mathreflectbox{\\mapsto}}}{\\mathrel{\\char`\u21A4}}"),
+    (rP["\u2983"] = "\\lBrace"),
+    (rP["\u2984"] = "\\rBrace"),
+    (rP["\\minuso"] =
         "\\mathbin{\\html@mathml{{\\mathrlap{\\mathchoice{\\kern{0.145em}}{\\kern{0.145em}}{\\kern{0.1015em}}{\\kern{0.0725em}}\\circ}{-}}}{\\char`\u29B5}}"),
-    (rF["\u29B5"] = "\\minuso"),
-    (rF["\\darr"] = "\\downarrow"),
-    (rF["\\dArr"] = "\\Downarrow"),
-    (rF["\\Darr"] = "\\Downarrow"),
-    (rF["\\lang"] = "\\langle"),
-    (rF["\\rang"] = "\\rangle"),
-    (rF["\\uarr"] = "\\uparrow"),
-    (rF["\\uArr"] = "\\Uparrow"),
-    (rF["\\Uarr"] = "\\Uparrow"),
-    (rF["\\N"] = "\\mathbb{N}"),
-    (rF["\\R"] = "\\mathbb{R}"),
-    (rF["\\Z"] = "\\mathbb{Z}"),
-    (rF["\\alef"] = "\\aleph"),
-    (rF["\\alefsym"] = "\\aleph"),
-    (rF["\\Alpha"] = "\\mathrm{A}"),
-    (rF["\\Beta"] = "\\mathrm{B}"),
-    (rF["\\bull"] = "\\bullet"),
-    (rF["\\Chi"] = "\\mathrm{X}"),
-    (rF["\\clubs"] = "\\clubsuit"),
-    (rF["\\cnums"] = "\\mathbb{C}"),
-    (rF["\\Complex"] = "\\mathbb{C}"),
-    (rF["\\Dagger"] = "\\ddagger"),
-    (rF["\\diamonds"] = "\\diamondsuit"),
-    (rF["\\empty"] = "\\emptyset"),
-    (rF["\\Epsilon"] = "\\mathrm{E}"),
-    (rF["\\Eta"] = "\\mathrm{H}"),
-    (rF["\\exist"] = "\\exists"),
-    (rF["\\harr"] = "\\leftrightarrow"),
-    (rF["\\hArr"] = "\\Leftrightarrow"),
-    (rF["\\Harr"] = "\\Leftrightarrow"),
-    (rF["\\hearts"] = "\\heartsuit"),
-    (rF["\\image"] = "\\Im"),
-    (rF["\\infin"] = "\\infty"),
-    (rF["\\Iota"] = "\\mathrm{I}"),
-    (rF["\\isin"] = "\\in"),
-    (rF["\\Kappa"] = "\\mathrm{K}"),
-    (rF["\\larr"] = "\\leftarrow"),
-    (rF["\\lArr"] = "\\Leftarrow"),
-    (rF["\\Larr"] = "\\Leftarrow"),
-    (rF["\\lrarr"] = "\\leftrightarrow"),
-    (rF["\\lrArr"] = "\\Leftrightarrow"),
-    (rF["\\Lrarr"] = "\\Leftrightarrow"),
-    (rF["\\Mu"] = "\\mathrm{M}"),
-    (rF["\\natnums"] = "\\mathbb{N}"),
-    (rF["\\Nu"] = "\\mathrm{N}"),
-    (rF["\\Omicron"] = "\\mathrm{O}"),
-    (rF["\\plusmn"] = "\\pm"),
-    (rF["\\rarr"] = "\\rightarrow"),
-    (rF["\\rArr"] = "\\Rightarrow"),
-    (rF["\\Rarr"] = "\\Rightarrow"),
-    (rF["\\real"] = "\\Re"),
-    (rF["\\reals"] = "\\mathbb{R}"),
-    (rF["\\Reals"] = "\\mathbb{R}"),
-    (rF["\\Rho"] = "\\mathrm{P}"),
-    (rF["\\sdot"] = "\\cdot"),
-    (rF["\\sect"] = "\\S"),
-    (rF["\\spades"] = "\\spadesuit"),
-    (rF["\\sub"] = "\\subset"),
-    (rF["\\sube"] = "\\subseteq"),
-    (rF["\\supe"] = "\\supseteq"),
-    (rF["\\Tau"] = "\\mathrm{T}"),
-    (rF["\\thetasym"] = "\\vartheta"),
-    (rF["\\weierp"] = "\\wp"),
-    (rF["\\Zeta"] = "\\mathrm{Z}"),
-    (rF["\\argmin"] = "\\DOTSB\\operatorname*{arg\\,min}"),
-    (rF["\\argmax"] = "\\DOTSB\\operatorname*{arg\\,max}"),
-    (rF["\\plim"] = "\\DOTSB\\mathop{\\operatorname{plim}}\\limits"),
-    (rF["\\bra"] = "\\mathinner{\\langle{#1}|}"),
-    (rF["\\ket"] = "\\mathinner{|{#1}\\rangle}"),
-    (rF["\\braket"] = "\\mathinner{\\langle{#1}\\rangle}"),
-    (rF["\\Bra"] = "\\left\\langle#1\\right|"),
-    (rF["\\Ket"] = "\\left|#1\\right\\rangle"));
-var nR = (e) => (t) => {
+    (rP["\u29B5"] = "\\minuso"),
+    (rP["\\darr"] = "\\downarrow"),
+    (rP["\\dArr"] = "\\Downarrow"),
+    (rP["\\Darr"] = "\\Downarrow"),
+    (rP["\\lang"] = "\\langle"),
+    (rP["\\rang"] = "\\rangle"),
+    (rP["\\uarr"] = "\\uparrow"),
+    (rP["\\uArr"] = "\\Uparrow"),
+    (rP["\\Uarr"] = "\\Uparrow"),
+    (rP["\\N"] = "\\mathbb{N}"),
+    (rP["\\R"] = "\\mathbb{R}"),
+    (rP["\\Z"] = "\\mathbb{Z}"),
+    (rP["\\alef"] = "\\aleph"),
+    (rP["\\alefsym"] = "\\aleph"),
+    (rP["\\Alpha"] = "\\mathrm{A}"),
+    (rP["\\Beta"] = "\\mathrm{B}"),
+    (rP["\\bull"] = "\\bullet"),
+    (rP["\\Chi"] = "\\mathrm{X}"),
+    (rP["\\clubs"] = "\\clubsuit"),
+    (rP["\\cnums"] = "\\mathbb{C}"),
+    (rP["\\Complex"] = "\\mathbb{C}"),
+    (rP["\\Dagger"] = "\\ddagger"),
+    (rP["\\diamonds"] = "\\diamondsuit"),
+    (rP["\\empty"] = "\\emptyset"),
+    (rP["\\Epsilon"] = "\\mathrm{E}"),
+    (rP["\\Eta"] = "\\mathrm{H}"),
+    (rP["\\exist"] = "\\exists"),
+    (rP["\\harr"] = "\\leftrightarrow"),
+    (rP["\\hArr"] = "\\Leftrightarrow"),
+    (rP["\\Harr"] = "\\Leftrightarrow"),
+    (rP["\\hearts"] = "\\heartsuit"),
+    (rP["\\image"] = "\\Im"),
+    (rP["\\infin"] = "\\infty"),
+    (rP["\\Iota"] = "\\mathrm{I}"),
+    (rP["\\isin"] = "\\in"),
+    (rP["\\Kappa"] = "\\mathrm{K}"),
+    (rP["\\larr"] = "\\leftarrow"),
+    (rP["\\lArr"] = "\\Leftarrow"),
+    (rP["\\Larr"] = "\\Leftarrow"),
+    (rP["\\lrarr"] = "\\leftrightarrow"),
+    (rP["\\lrArr"] = "\\Leftrightarrow"),
+    (rP["\\Lrarr"] = "\\Leftrightarrow"),
+    (rP["\\Mu"] = "\\mathrm{M}"),
+    (rP["\\natnums"] = "\\mathbb{N}"),
+    (rP["\\Nu"] = "\\mathrm{N}"),
+    (rP["\\Omicron"] = "\\mathrm{O}"),
+    (rP["\\plusmn"] = "\\pm"),
+    (rP["\\rarr"] = "\\rightarrow"),
+    (rP["\\rArr"] = "\\Rightarrow"),
+    (rP["\\Rarr"] = "\\Rightarrow"),
+    (rP["\\real"] = "\\Re"),
+    (rP["\\reals"] = "\\mathbb{R}"),
+    (rP["\\Reals"] = "\\mathbb{R}"),
+    (rP["\\Rho"] = "\\mathrm{P}"),
+    (rP["\\sdot"] = "\\cdot"),
+    (rP["\\sect"] = "\\S"),
+    (rP["\\spades"] = "\\spadesuit"),
+    (rP["\\sub"] = "\\subset"),
+    (rP["\\sube"] = "\\subseteq"),
+    (rP["\\supe"] = "\\supseteq"),
+    (rP["\\Tau"] = "\\mathrm{T}"),
+    (rP["\\thetasym"] = "\\vartheta"),
+    (rP["\\weierp"] = "\\wp"),
+    (rP["\\Zeta"] = "\\mathrm{Z}"),
+    (rP["\\argmin"] = "\\DOTSB\\operatorname*{arg\\,min}"),
+    (rP["\\argmax"] = "\\DOTSB\\operatorname*{arg\\,max}"),
+    (rP["\\plim"] = "\\DOTSB\\mathop{\\operatorname{plim}}\\limits"),
+    (rP["\\bra"] = "\\mathinner{\\langle{#1}|}"),
+    (rP["\\ket"] = "\\mathinner{|{#1}\\rangle}"),
+    (rP["\\braket"] = "\\mathinner{\\langle{#1}\\rangle}"),
+    (rP["\\Bra"] = "\\left\\langle#1\\right|"),
+    (rP["\\Ket"] = "\\left|#1\\right\\rangle"));
+var aT = (e) => (t) => {
     var r = t.consumeArg().tokens,
-        n = t.consumeArg().tokens,
         a = t.consumeArg().tokens,
+        n = t.consumeArg().tokens,
         i = t.consumeArg().tokens,
         s = t.macros.get("|"),
         l = t.macros.get("\\|");
     t.macros.beginGroup();
     var o = (t) => (r) => {
-        e && (r.macros.set("|", s), a.length && r.macros.set("\\|", l));
+        e && (r.macros.set("|", s), n.length && r.macros.set("\\|", l));
         var i = t;
         return (
-            !t && a.length && "|" === r.future().text && (r.popToken(), (i = !0)), { tokens: i ? a : n, numArgs: 0 }
+            !t && n.length && "|" === r.future().text && (r.popToken(), (i = !0)), { tokens: i ? n : a, numArgs: 0 }
         );
     };
-    (t.macros.set("|", o(!1)), a.length && t.macros.set("\\|", o(!0)));
+    (t.macros.set("|", o(!1)), n.length && t.macros.set("\\|", o(!0)));
     var h = t.consumeArg().tokens,
         u = t.expandTokens([...i, ...h, ...r]);
     return (t.macros.endGroup(), { tokens: u.reverse(), numArgs: 0 });
 };
-((a = nR(!1)),
-    (rF["\\bra@ket"] = a),
-    (i = nR(!0)),
-    (rF["\\bra@set"] = i),
-    (rF["\\Braket"] = "\\bra@ket{\\left\\langle}{\\,\\middle\\vert\\,}{\\,\\middle\\vert\\,}{\\right\\rangle}"),
-    (rF["\\Set"] = "\\bra@set{\\left\\{\\:}{\\;\\middle\\vert\\;}{\\;\\middle\\Vert\\;}{\\:\\right\\}}"),
-    (rF["\\set"] = "\\bra@set{\\{\\,}{\\mid}{}{\\,\\}}"),
-    (rF["\\angln"] = "{\\angl n}"),
-    (rF["\\blue"] = "\\textcolor{##6495ed}{#1}"),
-    (rF["\\orange"] = "\\textcolor{##ffa500}{#1}"),
-    (rF["\\pink"] = "\\textcolor{##ff00af}{#1}"),
-    (rF["\\red"] = "\\textcolor{##df0030}{#1}"),
-    (rF["\\green"] = "\\textcolor{##28ae7b}{#1}"),
-    (rF["\\gray"] = "\\textcolor{gray}{#1}"),
-    (rF["\\purple"] = "\\textcolor{##9d38bd}{#1}"),
-    (rF["\\blueA"] = "\\textcolor{##ccfaff}{#1}"),
-    (rF["\\blueB"] = "\\textcolor{##80f6ff}{#1}"),
-    (rF["\\blueC"] = "\\textcolor{##63d9ea}{#1}"),
-    (rF["\\blueD"] = "\\textcolor{##11accd}{#1}"),
-    (rF["\\blueE"] = "\\textcolor{##0c7f99}{#1}"),
-    (rF["\\tealA"] = "\\textcolor{##94fff5}{#1}"),
-    (rF["\\tealB"] = "\\textcolor{##26edd5}{#1}"),
-    (rF["\\tealC"] = "\\textcolor{##01d1c1}{#1}"),
-    (rF["\\tealD"] = "\\textcolor{##01a995}{#1}"),
-    (rF["\\tealE"] = "\\textcolor{##208170}{#1}"),
-    (rF["\\greenA"] = "\\textcolor{##b6ffb0}{#1}"),
-    (rF["\\greenB"] = "\\textcolor{##8af281}{#1}"),
-    (rF["\\greenC"] = "\\textcolor{##74cf70}{#1}"),
-    (rF["\\greenD"] = "\\textcolor{##1fab54}{#1}"),
-    (rF["\\greenE"] = "\\textcolor{##0d923f}{#1}"),
-    (rF["\\goldA"] = "\\textcolor{##ffd0a9}{#1}"),
-    (rF["\\goldB"] = "\\textcolor{##ffbb71}{#1}"),
-    (rF["\\goldC"] = "\\textcolor{##ff9c39}{#1}"),
-    (rF["\\goldD"] = "\\textcolor{##e07d10}{#1}"),
-    (rF["\\goldE"] = "\\textcolor{##a75a05}{#1}"),
-    (rF["\\redA"] = "\\textcolor{##fca9a9}{#1}"),
-    (rF["\\redB"] = "\\textcolor{##ff8482}{#1}"),
-    (rF["\\redC"] = "\\textcolor{##f9685d}{#1}"),
-    (rF["\\redD"] = "\\textcolor{##e84d39}{#1}"),
-    (rF["\\redE"] = "\\textcolor{##bc2612}{#1}"),
-    (rF["\\maroonA"] = "\\textcolor{##ffbde0}{#1}"),
-    (rF["\\maroonB"] = "\\textcolor{##ff92c6}{#1}"),
-    (rF["\\maroonC"] = "\\textcolor{##ed5fa6}{#1}"),
-    (rF["\\maroonD"] = "\\textcolor{##ca337c}{#1}"),
-    (rF["\\maroonE"] = "\\textcolor{##9e034e}{#1}"),
-    (rF["\\purpleA"] = "\\textcolor{##ddd7ff}{#1}"),
-    (rF["\\purpleB"] = "\\textcolor{##c6b9fc}{#1}"),
-    (rF["\\purpleC"] = "\\textcolor{##aa87ff}{#1}"),
-    (rF["\\purpleD"] = "\\textcolor{##7854ab}{#1}"),
-    (rF["\\purpleE"] = "\\textcolor{##543b78}{#1}"),
-    (rF["\\mintA"] = "\\textcolor{##f5f9e8}{#1}"),
-    (rF["\\mintB"] = "\\textcolor{##edf2df}{#1}"),
-    (rF["\\mintC"] = "\\textcolor{##e0e5cc}{#1}"),
-    (rF["\\grayA"] = "\\textcolor{##f6f7f7}{#1}"),
-    (rF["\\grayB"] = "\\textcolor{##f0f1f2}{#1}"),
-    (rF["\\grayC"] = "\\textcolor{##e3e5e6}{#1}"),
-    (rF["\\grayD"] = "\\textcolor{##d6d8da}{#1}"),
-    (rF["\\grayE"] = "\\textcolor{##babec2}{#1}"),
-    (rF["\\grayF"] = "\\textcolor{##888d93}{#1}"),
-    (rF["\\grayG"] = "\\textcolor{##626569}{#1}"),
-    (rF["\\grayH"] = "\\textcolor{##3b3e40}{#1}"),
-    (rF["\\grayI"] = "\\textcolor{##21242c}{#1}"),
-    (rF["\\kaBlue"] = "\\textcolor{##314453}{#1}"),
-    (rF["\\kaGreen"] = "\\textcolor{##71B307}{#1}"));
-var nC = { "^": !0, _: !0, "\\limits": !0, "\\nolimits": !0 };
-class n_ {
+((n = aT(!1)),
+    (rP["\\bra@ket"] = n),
+    (i = aT(!0)),
+    (rP["\\bra@set"] = i),
+    (rP["\\Braket"] = "\\bra@ket{\\left\\langle}{\\,\\middle\\vert\\,}{\\,\\middle\\vert\\,}{\\right\\rangle}"),
+    (rP["\\Set"] = "\\bra@set{\\left\\{\\:}{\\;\\middle\\vert\\;}{\\;\\middle\\Vert\\;}{\\:\\right\\}}"),
+    (rP["\\set"] = "\\bra@set{\\{\\,}{\\mid}{}{\\,\\}}"),
+    (rP["\\angln"] = "{\\angl n}"),
+    (rP["\\blue"] = "\\textcolor{##6495ed}{#1}"),
+    (rP["\\orange"] = "\\textcolor{##ffa500}{#1}"),
+    (rP["\\pink"] = "\\textcolor{##ff00af}{#1}"),
+    (rP["\\red"] = "\\textcolor{##df0030}{#1}"),
+    (rP["\\green"] = "\\textcolor{##28ae7b}{#1}"),
+    (rP["\\gray"] = "\\textcolor{gray}{#1}"),
+    (rP["\\purple"] = "\\textcolor{##9d38bd}{#1}"),
+    (rP["\\blueA"] = "\\textcolor{##ccfaff}{#1}"),
+    (rP["\\blueB"] = "\\textcolor{##80f6ff}{#1}"),
+    (rP["\\blueC"] = "\\textcolor{##63d9ea}{#1}"),
+    (rP["\\blueD"] = "\\textcolor{##11accd}{#1}"),
+    (rP["\\blueE"] = "\\textcolor{##0c7f99}{#1}"),
+    (rP["\\tealA"] = "\\textcolor{##94fff5}{#1}"),
+    (rP["\\tealB"] = "\\textcolor{##26edd5}{#1}"),
+    (rP["\\tealC"] = "\\textcolor{##01d1c1}{#1}"),
+    (rP["\\tealD"] = "\\textcolor{##01a995}{#1}"),
+    (rP["\\tealE"] = "\\textcolor{##208170}{#1}"),
+    (rP["\\greenA"] = "\\textcolor{##b6ffb0}{#1}"),
+    (rP["\\greenB"] = "\\textcolor{##8af281}{#1}"),
+    (rP["\\greenC"] = "\\textcolor{##74cf70}{#1}"),
+    (rP["\\greenD"] = "\\textcolor{##1fab54}{#1}"),
+    (rP["\\greenE"] = "\\textcolor{##0d923f}{#1}"),
+    (rP["\\goldA"] = "\\textcolor{##ffd0a9}{#1}"),
+    (rP["\\goldB"] = "\\textcolor{##ffbb71}{#1}"),
+    (rP["\\goldC"] = "\\textcolor{##ff9c39}{#1}"),
+    (rP["\\goldD"] = "\\textcolor{##e07d10}{#1}"),
+    (rP["\\goldE"] = "\\textcolor{##a75a05}{#1}"),
+    (rP["\\redA"] = "\\textcolor{##fca9a9}{#1}"),
+    (rP["\\redB"] = "\\textcolor{##ff8482}{#1}"),
+    (rP["\\redC"] = "\\textcolor{##f9685d}{#1}"),
+    (rP["\\redD"] = "\\textcolor{##e84d39}{#1}"),
+    (rP["\\redE"] = "\\textcolor{##bc2612}{#1}"),
+    (rP["\\maroonA"] = "\\textcolor{##ffbde0}{#1}"),
+    (rP["\\maroonB"] = "\\textcolor{##ff92c6}{#1}"),
+    (rP["\\maroonC"] = "\\textcolor{##ed5fa6}{#1}"),
+    (rP["\\maroonD"] = "\\textcolor{##ca337c}{#1}"),
+    (rP["\\maroonE"] = "\\textcolor{##9e034e}{#1}"),
+    (rP["\\purpleA"] = "\\textcolor{##ddd7ff}{#1}"),
+    (rP["\\purpleB"] = "\\textcolor{##c6b9fc}{#1}"),
+    (rP["\\purpleC"] = "\\textcolor{##aa87ff}{#1}"),
+    (rP["\\purpleD"] = "\\textcolor{##7854ab}{#1}"),
+    (rP["\\purpleE"] = "\\textcolor{##543b78}{#1}"),
+    (rP["\\mintA"] = "\\textcolor{##f5f9e8}{#1}"),
+    (rP["\\mintB"] = "\\textcolor{##edf2df}{#1}"),
+    (rP["\\mintC"] = "\\textcolor{##e0e5cc}{#1}"),
+    (rP["\\grayA"] = "\\textcolor{##f6f7f7}{#1}"),
+    (rP["\\grayB"] = "\\textcolor{##f0f1f2}{#1}"),
+    (rP["\\grayC"] = "\\textcolor{##e3e5e6}{#1}"),
+    (rP["\\grayD"] = "\\textcolor{##d6d8da}{#1}"),
+    (rP["\\grayE"] = "\\textcolor{##babec2}{#1}"),
+    (rP["\\grayF"] = "\\textcolor{##888d93}{#1}"),
+    (rP["\\grayG"] = "\\textcolor{##626569}{#1}"),
+    (rP["\\grayH"] = "\\textcolor{##3b3e40}{#1}"),
+    (rP["\\grayI"] = "\\textcolor{##21242c}{#1}"),
+    (rP["\\kaBlue"] = "\\textcolor{##314453}{#1}"),
+    (rP["\\kaGreen"] = "\\textcolor{##71B307}{#1}"));
+var aE = { "^": !0, _: !0, "\\limits": !0, "\\nolimits": !0 };
+class aF {
     constructor(e, t, r) {
-        ((this.settings = t),
+        ((this.settings = void 0),
+            (this.expansionCount = void 0),
+            (this.lexer = void 0),
+            (this.macros = void 0),
+            (this.stack = void 0),
+            (this.mode = void 0),
+            (this.settings = t),
             (this.expansionCount = 0),
             this.feed(e),
-            (this.macros = new nb(rF, t.macros)),
+            (this.macros = new aC(rP, t.macros)),
             (this.mode = r),
             (this.stack = []));
     }
     feed(e) {
-        this.lexer = new ng(e, this.settings);
+        this.lexer = new aA(e, this.settings);
     }
     switchMode(e) {
         this.mode = e;
@@ -9346,12 +9636,18 @@ class n_ {
         this.stack.push(...e);
     }
     scanArgument(e) {
-        var t, r, n;
         if (e) {
             if ((this.consumeSpaces(), "[" !== this.future().text)) return null;
-            ((t = this.popToken()), ({ tokens: n, end: r } = this.consumeArg(["]"])));
-        } else ({ tokens: n, start: t, end: r } = this.consumeArg());
-        return (this.pushToken(new rI("EOF", r.loc)), this.pushTokens(n), new rI("", rq.range(t, r)));
+            var t,
+                r,
+                a = this.popToken(),
+                n = this.consumeArg(["]"]);
+            ((r = n.tokens), (t = n.end));
+        } else {
+            var i = this.consumeArg();
+            ((r = i.tokens), (a = i.start), (t = i.end));
+        }
+        return (this.pushToken(new r$("EOF", t.loc)), this.pushTokens(r), new r$("", rU.range(a, t)));
     }
     consumeSpaces() {
         for (;;)
@@ -9361,25 +9657,25 @@ class n_ {
     consumeArg(e) {
         var t,
             r = [],
-            a = e && e.length > 0;
-        a || this.consumeSpaces();
+            n = e && e.length > 0;
+        n || this.consumeSpaces();
         var i = this.future(),
             s = 0,
             l = 0;
         do {
             if (((t = this.popToken()), r.push(t), "{" === t.text)) ++s;
             else if ("}" === t.text) {
-                if (-1 == --s) throw new n("Extra }", t);
+                if (-1 == --s) throw new a("Extra }", t);
             } else if ("EOF" === t.text)
-                throw new n("Unexpected end of input in a macro argument, expected '" + (e && a ? e[l] : "}") + "'", t);
-            if (e && a)
+                throw new a("Unexpected end of input in a macro argument, expected '" + (e && n ? e[l] : "}") + "'", t);
+            if (e && n)
                 if ((0 === s || (1 === s && "{" === e[l])) && t.text === e[l]) {
                     if (++l === e.length) {
                         r.splice(-l, l);
                         break;
                     }
                 } else l = 0;
-        } while (0 !== s || a);
+        } while (0 !== s || n);
         return (
             "{" === i.text && "}" === r[r.length - 1].text && (r.pop(), r.shift()),
             r.reverse(),
@@ -9388,10 +9684,10 @@ class n_ {
     }
     consumeArgs(e, t) {
         if (t) {
-            if (t.length !== e + 1) throw new n("The length of delimiters doesn't match the number of args!");
-            for (var r = t[0], a = 0; a < r.length; a++) {
+            if (t.length !== e + 1) throw new a("The length of delimiters doesn't match the number of args!");
+            for (var r = t[0], n = 0; n < r.length; n++) {
                 var i = this.popToken();
-                if (r[a] !== i.text) throw new n("Use of the macro doesn't match its definition", i);
+                if (r[n] !== i.text) throw new a("Use of the macro doesn't match its definition", i);
             }
         }
         for (var s = [], l = 0; l < e; l++) s.push(this.consumeArg(t && t[l + 1]).tokens);
@@ -9399,28 +9695,28 @@ class n_ {
     }
     countExpansion(e) {
         if (((this.expansionCount += e), this.expansionCount > this.settings.maxExpand))
-            throw new n("Too many expansions: infinite loop or need to increase maxExpand setting");
+            throw new a("Too many expansions: infinite loop or need to increase maxExpand setting");
     }
     expandOnce(e) {
         var t = this.popToken(),
             r = t.text,
-            a = t.noexpand ? null : this._getExpansion(r);
-        if (null == a || (e && a.unexpandable)) {
-            if (e && null == a && "\\" === r[0] && !this.isDefined(r)) throw new n("Undefined control sequence: " + r);
+            n = t.noexpand ? null : this._getExpansion(r);
+        if (null == n || (e && n.unexpandable)) {
+            if (e && null == n && "\\" === r[0] && !this.isDefined(r)) throw new a("Undefined control sequence: " + r);
             return (this.pushToken(t), !1);
         }
         this.countExpansion(1);
-        var i = a.tokens,
-            s = this.consumeArgs(a.numArgs, a.delimiters);
-        if (a.numArgs) {
+        var i = n.tokens,
+            s = this.consumeArgs(n.numArgs, n.delimiters);
+        if (n.numArgs) {
             i = i.slice();
             for (var l = i.length - 1; l >= 0; --l) {
                 var o = i[l];
                 if ("#" === o.text) {
-                    if (0 === l) throw new n("Incomplete placeholder at end of macro body", o);
+                    if (0 === l) throw new a("Incomplete placeholder at end of macro body", o);
                     if ("#" === (o = i[--l]).text) i.splice(l + 1, 1);
                     else if (/^[1-9]$/.test(o.text)) i.splice(l, 2, ...s[o.text - 1]);
-                    else throw new n("Not a valid argument number", o);
+                    else throw new a("Not a valid argument number", o);
                 }
             }
         }
@@ -9437,15 +9733,15 @@ class n_ {
             }
     }
     expandMacro(e) {
-        return this.macros.has(e) ? this.expandTokens([new rI(e)]) : void 0;
+        return this.macros.has(e) ? this.expandTokens([new r$(e)]) : void 0;
     }
     expandTokens(e) {
         var t = [],
             r = this.stack.length;
         for (this.pushTokens(e); this.stack.length > r;)
             if (!1 === this.expandOnce(!0)) {
-                var n = this.stack.pop();
-                (n.treatAsRelax && ((n.noexpand = !1), (n.treatAsRelax = !1)), t.push(n));
+                var a = this.stack.pop();
+                (a.treatAsRelax && ((a.noexpand = !1), (a.treatAsRelax = !1)), t.push(a));
             }
         return (this.countExpansion(t.length), t);
     }
@@ -9460,34 +9756,34 @@ class n_ {
             var r = this.lexer.catcodes[e];
             if (null != r && 13 !== r) return;
         }
-        var n = "function" == typeof t ? t(this) : t;
-        if ("string" == typeof n) {
-            var a = 0;
-            if (n.includes("#")) for (var i = n.replace(/##/g, ""); i.includes("#" + (a + 1));) ++a;
-            for (var s = new ng(n, this.settings), l = [], o = s.lex(); "EOF" !== o.text;) (l.push(o), (o = s.lex()));
-            return (l.reverse(), { tokens: l, numArgs: a });
+        var a = "function" == typeof t ? t(this) : t;
+        if ("string" == typeof a) {
+            var n = 0;
+            if (a.includes("#")) for (var i = a.replace(/##/g, ""); i.includes("#" + (n + 1));) ++n;
+            for (var s = new aA(a, this.settings), l = [], o = s.lex(); "EOF" !== o.text;) (l.push(o), (o = s.lex()));
+            return (l.reverse(), { tokens: l, numArgs: n });
         }
-        return n;
+        return a;
     }
     isDefined(e) {
         return (
             this.macros.has(e) ||
-            e9.hasOwnProperty(e) ||
-            ea.math.hasOwnProperty(e) ||
-            ea.text.hasOwnProperty(e) ||
-            nC.hasOwnProperty(e)
+            Object.prototype.hasOwnProperty.call(tu, e) ||
+            Object.prototype.hasOwnProperty.call(en.math, e) ||
+            Object.prototype.hasOwnProperty.call(en.text, e) ||
+            Object.prototype.hasOwnProperty.call(aE, e)
         );
     }
     isExpandable(e) {
         var t = this.macros.get(e);
         return null != t
             ? "string" == typeof t || "function" == typeof t || !t.unexpandable
-            : e9.hasOwnProperty(e) && !e9[e].primitive;
+            : Object.prototype.hasOwnProperty.call(tu, e) && !tu[e].primitive;
     }
 }
-var nD =
+var aB =
         /^[\u208a\u208b\u208c\u208d\u208e\u2080\u2081\u2082\u2083\u2084\u2085\u2086\u2087\u2088\u2089\u2090\u2091\u2095\u1d62\u2c7c\u2096\u2097\u2098\u2099\u2092\u209a\u1d63\u209b\u209c\u1d64\u1d65\u2093\u1d66\u1d67\u1d68\u1d69\u1d6a]/,
-    nz = Object.freeze({
+    aq = Object.freeze({
         "\u208A": "+",
         "\u208B": "-",
         "\u208C": "=",
@@ -9591,7 +9887,7 @@ var nD =
         ᵡ: "\u03C7",
         ᶿ: "\u03B8",
     }),
-    nS = {
+    aI = {
         "\u0301": { text: "\\'", math: "\\acute" },
         "\u0300": { text: "\\`", math: "\\grave" },
         "\u0308": { text: '\\"', math: "\\ddot" },
@@ -9605,7 +9901,7 @@ var nD =
         "\u030B": { text: "\\H" },
         "\u0327": { text: "\\c" },
     },
-    nM = {
+    aj = {
         "\xe1": "a\u0301",
         "\xe0": "a\u0300",
         "\xe4": "a\u0308",
@@ -9951,17 +10247,22 @@ var nD =
         Ώ: "\u03A9\u0301",
         Ὼ: "\u03A9\u0300",
     };
-class nT {
+class aL {
     constructor(e, t) {
-        ((this.mode = "math"),
-            (this.gullet = new n_(e, t, this.mode)),
+        ((this.mode = void 0),
+            (this.gullet = void 0),
+            (this.settings = void 0),
+            (this.leftrightDepth = void 0),
+            (this.nextToken = void 0),
+            (this.mode = "math"),
+            (this.gullet = new aF(e, t, this.mode)),
             (this.settings = t),
             (this.leftrightDepth = 0),
             (this.nextToken = null));
     }
     expect(e, t) {
         if ((void 0 === t && (t = !0), this.fetch().text !== e))
-            throw new n("Expected '" + e + "', got '" + this.fetch().text + "'", this.fetch());
+            throw new a("Expected '" + e + "', got '" + this.fetch().text + "'", this.fetch());
         t && this.consume();
     }
     consume() {
@@ -9985,29 +10286,29 @@ class nT {
     }
     subparse(e) {
         var t = this.nextToken;
-        (this.consume(), this.gullet.pushToken(new rI("}")), this.gullet.pushTokens(e));
+        (this.consume(), this.gullet.pushToken(new r$("}")), this.gullet.pushTokens(e));
         var r = this.parseExpression(!1);
         return (this.expect("}"), (this.nextToken = t), r);
     }
     parseExpression(e, t) {
         for (var r = []; ;) {
             "math" === this.mode && this.consumeSpaces();
-            var n = this.fetch();
-            if (nT.endOfExpression.has(n.text) || (t && n.text === t) || (e && e9[n.text] && e9[n.text].infix)) break;
-            var a = this.parseAtom(t);
-            if (a) {
-                if ("internal" === a.type) continue;
+            var a = this.fetch();
+            if (aL.endOfExpression.has(a.text) || (t && a.text === t) || (e && tu[a.text] && tu[a.text].infix)) break;
+            var n = this.parseAtom(t);
+            if (n) {
+                if ("internal" === n.type) continue;
             } else break;
-            r.push(a);
+            r.push(n);
         }
         return ("text" === this.mode && this.formLigatures(r), this.handleInfixNodes(r));
     }
     handleInfixNodes(e) {
         for (var t = -1, r = 0; r < e.length; r++) {
-            var a = e[r];
-            if ("infix" === a.type) {
-                if (-1 !== t) throw new n("only one infix operator per group", a.token);
-                ((t = r), (i = a.replaceWith));
+            var n = e[r];
+            if ("infix" === n.type) {
+                if (-1 !== t) throw new a("only one infix operator per group", n.token);
+                ((t = r), (i = n.replaceWith));
             }
         }
         if (-1 === t || !i) return e;
@@ -10025,51 +10326,51 @@ class nT {
     handleSupSubscript(e) {
         var t,
             r = this.fetch(),
-            a = r.text;
+            n = r.text;
         (this.consume(), this.consumeSpaces());
         do t = this.parseGroup(e);
         while ((null == t ? void 0 : t.type) === "internal");
-        if (!t) throw new n("Expected group after '" + a + "'", r);
+        if (!t) throw new a("Expected group after '" + n + "'", r);
         return t;
     }
     formatUnsupportedCmd(e) {
         for (var t = [], r = 0; r < e.length; r++) t.push({ type: "textord", mode: "text", text: e[r] });
-        var n = { type: "text", mode: this.mode, body: t };
-        return { type: "color", mode: this.mode, color: this.settings.errorColor, body: [n] };
+        var a = { type: "text", mode: this.mode, body: t };
+        return { type: "color", mode: this.mode, color: this.settings.errorColor, body: [a] };
     }
     parseAtom(e) {
         var t,
             r,
-            a = this.parseGroup("atom", e);
-        if ((null == a ? void 0 : a.type) === "internal" || "text" === this.mode) return a;
+            n = this.parseGroup("atom", e);
+        if ((null == n ? void 0 : n.type) === "internal" || "text" === this.mode) return n;
         for (;;) {
             this.consumeSpaces();
             var i = this.fetch();
             if ("\\limits" === i.text || "\\nolimits" === i.text) {
-                if (a && "op" === a.type) ((a.limits = "\\limits" === i.text), (a.alwaysHandleSupSub = !0));
-                else if (a && "operatorname" === a.type) a.alwaysHandleSupSub && (a.limits = "\\limits" === i.text);
-                else throw new n("Limit controls must follow a math operator", i);
+                if (n && "op" === n.type) ((n.limits = "\\limits" === i.text), (n.alwaysHandleSupSub = !0));
+                else if (n && "operatorname" === n.type) n.alwaysHandleSupSub && (n.limits = "\\limits" === i.text);
+                else throw new a("Limit controls must follow a math operator", i);
                 this.consume();
             } else if ("^" === i.text) {
-                if (t) throw new n("Double superscript", i);
+                if (t) throw new a("Double superscript", i);
                 t = this.handleSupSubscript("superscript");
             } else if ("_" === i.text) {
-                if (r) throw new n("Double subscript", i);
+                if (r) throw new a("Double subscript", i);
                 r = this.handleSupSubscript("subscript");
             } else if ("'" === i.text) {
-                if (t) throw new n("Double superscript", i);
+                if (t) throw new a("Double superscript", i);
                 var s = { type: "textord", mode: this.mode, text: "\\prime" },
                     l = [s];
                 for (this.consume(); "'" === this.fetch().text;) (l.push(s), this.consume());
                 ("^" === this.fetch().text && l.push(this.handleSupSubscript("superscript")),
                     (t = { type: "ordgroup", mode: this.mode, body: l }));
-            } else if (nz[i.text]) {
-                var o = nD.test(i.text),
+            } else if (aq[i.text]) {
+                var o = aB.test(i.text),
                     h = [];
-                for (h.push(new rI(nz[i.text])), this.consume(); ;) {
+                for (h.push(new r$(aq[i.text])), this.consume(); ;) {
                     var u = this.fetch().text;
-                    if (!nz[u] || nD.test(u) !== o) break;
-                    (h.unshift(new rI(nz[u])), this.consume());
+                    if (!aq[u] || aB.test(u) !== o) break;
+                    (h.unshift(new r$(aq[u])), this.consume());
                 }
                 var c = this.subparse(h);
                 o
@@ -10077,41 +10378,52 @@ class nT {
                     : (t = { type: "ordgroup", mode: "math", body: c });
             } else break;
         }
-        return t || r ? { type: "supsub", mode: this.mode, base: a, sup: t, sub: r } : a;
+        return t && r
+            ? { type: "supsub", mode: this.mode, base: n, sup: t, sub: r }
+            : t
+              ? { type: "supsub", mode: this.mode, base: n, sup: t }
+              : r
+                ? { type: "supsub", mode: this.mode, base: n, sub: r }
+                : n;
     }
     parseFunction(e, t) {
         var r = this.fetch(),
-            a = r.text,
-            i = e9[a];
+            n = r.text,
+            i = tu[n];
         if (!i) return null;
         if ((this.consume(), t && "atom" !== t && !i.allowedInArgument))
-            throw new n("Got function '" + a + "' with no arguments" + (t ? " as " + t : ""), r);
+            throw new a("Got function '" + n + "' with no arguments" + (t ? " as " + t : ""), r);
         if ("text" !== this.mode || i.allowedInText) {
             if ("math" === this.mode && !1 === i.allowedInMath)
-                throw new n("Can't use function '" + a + "' in math mode", r);
-        } else throw new n("Can't use function '" + a + "' in text mode", r);
-        var { args: s, optArgs: l } = this.parseArguments(a, i);
-        return this.callFunction(a, s, l, r, e);
+                throw new a("Can't use function '" + n + "' in math mode", r);
+        } else throw new a("Can't use function '" + n + "' in text mode", r);
+        var s = this.parseArguments(n, i),
+            l = s.args,
+            o = s.optArgs;
+        return this.callFunction(n, l, o, r, e);
     }
-    callFunction(e, t, r, a, i) {
-        var s = e9[e];
-        if (s && s.handler) return s.handler({ funcName: e, parser: this, token: a, breakOnTokenText: i }, t, r);
-        throw new n("No function handler for " + e);
+    callFunction(e, t, r, n, i) {
+        var s = tu[e];
+        if (s && s.handler) return s.handler({ funcName: e, parser: this, token: n, breakOnTokenText: i }, t, r);
+        throw new a("No function handler for " + e);
     }
     parseArguments(e, t) {
-        var r = t.numArgs + t.numOptionalArgs;
-        if (0 === r) return { args: [], optArgs: [] };
-        for (var a = [], i = [], s = 0; s < r; s++) {
-            var l = t.argTypes && t.argTypes[s],
-                o = s < t.numOptionalArgs;
-            (("primitive" in t && t.primitive && null == l) || ("sqrt" === t.type && 1 === s && null == i[0])) &&
-                (l = "primitive");
-            var h = this.parseGroupOfType("argument to '" + e + "'", l, o);
-            if (o) i.push(h);
-            else if (null != h) a.push(h);
-            else throw new n("Null argument, please report this as a bug");
+        var r = null != (o = t.numOptionalArgs) ? o : 0,
+            n = t.numArgs + r;
+        if (0 === n) return { args: [], optArgs: [] };
+        for (var i = [], s = [], l = 0; l < n; l++) {
+            var o,
+                h,
+                u = null == (h = t.argTypes) ? void 0 : h[l],
+                c = l < r;
+            (("primitive" in t && t.primitive && null == u) || ("sqrt" === t.type && 1 === l && null == s[0])) &&
+                (u = "primitive");
+            var m = this.parseGroupOfType("argument to '" + e + "'", u, c);
+            if (c) s.push(m);
+            else if (null != m) i.push(m);
+            else throw new a("Null argument, please report this as a bug");
         }
-        return { args: a, optArgs: i };
+        return { args: i, optArgs: s };
     }
     parseGroupOfType(e, t, r) {
         switch (t) {
@@ -10125,47 +10437,52 @@ class nT {
             case "text":
                 return this.parseArgumentGroup(r, t);
             case "hbox":
-                var a = this.parseArgumentGroup(r, "text");
-                return null != a ? { type: "styling", mode: a.mode, body: [a], style: "text" } : null;
+                var n = this.parseArgumentGroup(r, "text");
+                return null != n ? { type: "styling", mode: n.mode, body: [n], style: "text", resetFont: !0 } : null;
             case "raw":
-                var i = this.parseStringGroup("raw", r);
-                return null != i ? { type: "raw", mode: "text", string: i.text } : null;
+                this.gullet.consumeSpaces();
+                var i = this.gullet.lexer.catcodes["%"];
+                this.gullet.lexer.setCatcode("%", 12);
+                var s = this.parseStringGroup(r);
+                return (
+                    this.gullet.lexer.setCatcode("%", i),
+                    null != s ? { type: "raw", mode: "text", string: s.text } : null
+                );
             case "primitive":
-                if (r) throw new n("A primitive argument cannot be optional");
-                var s = this.parseGroup(e);
-                if (null == s) throw new n("Expected group as " + e, this.fetch());
-                return s;
+                if (r) throw new a("A primitive argument cannot be optional");
+                var l = this.parseGroup(e);
+                if (null == l) throw new a("Expected group as " + e, this.fetch());
+                return l;
             case "original":
-            case null:
             case void 0:
                 return this.parseArgumentGroup(r);
             default:
-                throw new n("Unknown group type as " + e, this.fetch());
+                throw new a("Unknown group type as " + e, this.fetch());
         }
     }
     consumeSpaces() {
         for (; " " === this.fetch().text;) this.consume();
     }
-    parseStringGroup(e, t) {
-        var r,
-            n = this.gullet.scanArgument(t);
-        if (null == n) return null;
-        for (var a = ""; "EOF" !== (r = this.fetch()).text;) ((a += r.text), this.consume());
-        return (this.consume(), (n.text = a), n);
+    parseStringGroup(e) {
+        var t,
+            r = this.gullet.scanArgument(e);
+        if (null == r) return null;
+        for (var a = ""; "EOF" !== (t = this.fetch()).text;) ((a += t.text), this.consume());
+        return (this.consume(), (r.text = a), r);
     }
     parseRegexGroup(e, t) {
-        for (var r, a = this.fetch(), i = a, s = ""; "EOF" !== (r = this.fetch()).text && e.test(s + r.text);)
+        for (var r, n = this.fetch(), i = n, s = ""; "EOF" !== (r = this.fetch()).text && e.test(s + r.text);)
             ((s += (i = r).text), this.consume());
-        if ("" === s) throw new n("Invalid " + t + ": '" + a.text + "'", a);
-        return a.range(i, s);
+        if ("" === s) throw new a("Invalid " + t + ": '" + n.text + "'", n);
+        return n.range(i, s);
     }
     parseColorGroup(e) {
-        var t = this.parseStringGroup("color", e);
+        var t = this.parseStringGroup(e);
         if (null == t) return null;
         var r = /^(#[a-f0-9]{3,4}|#[a-f0-9]{6}|#[a-f0-9]{8}|[a-f0-9]{6}|[a-z]+)$/i.exec(t.text);
-        if (!r) throw new n("Invalid color: '" + t.text + "'", t);
-        var a = r[0];
-        return (/^[0-9a-f]{6}$/i.test(a) && (a = "#" + a), { type: "color-token", mode: this.mode, color: a });
+        if (!r) throw new a("Invalid color: '" + t.text + "'", t);
+        var n = r[0];
+        return (/^[0-9a-f]{6}$/i.test(n) && (n = "#" + n), { type: "color-token", mode: this.mode, color: n });
     }
     parseSizeGroup(e) {
         var t,
@@ -10174,38 +10491,40 @@ class nT {
             (this.gullet.consumeSpaces(),
             !(t =
                 e || "{" === this.gullet.future().text
-                    ? this.parseStringGroup("size", e)
+                    ? this.parseStringGroup(e)
                     : this.parseRegexGroup(/^[-+]? *(?:$|\d+|\d+\.\d*|\.\d*) *[a-z]{0,2} *$/, "size")))
         )
             return null;
         e || 0 !== t.text.length || ((t.text = "0pt"), (r = !0));
-        var a = /([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/.exec(t.text);
-        if (!a) throw new n("Invalid size: '" + t.text + "'", t);
-        var i = { number: +(a[1] + a[2]), unit: a[3] };
-        if (!q(i)) throw new n("Invalid unit: '" + i.unit + "'", t);
+        var n = /([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/.exec(t.text);
+        if (!n) throw new a("Invalid size: '" + t.text + "'", t);
+        var i = { number: +(n[1] + n[2]), unit: n[3] };
+        if (!I(i)) throw new a("Invalid unit: '" + i.unit + "'", t);
         return { type: "size", mode: this.mode, value: i, isBlank: r };
     }
     parseUrlGroup(e) {
+        var t = this.gullet.lexer.catcodes["%"],
+            r = this.gullet.lexer.catcodes["~"];
         (this.gullet.lexer.setCatcode("%", 13), this.gullet.lexer.setCatcode("~", 12));
-        var t = this.parseStringGroup("url", e);
-        if ((this.gullet.lexer.setCatcode("%", 14), this.gullet.lexer.setCatcode("~", 13), null == t)) return null;
-        var r = t.text.replace(/\\([#$%&~_^{}])/g, "$1");
-        return { type: "url", mode: this.mode, url: r };
+        var a = this.parseStringGroup(e);
+        if ((this.gullet.lexer.setCatcode("%", t), this.gullet.lexer.setCatcode("~", r), null == a)) return null;
+        var n = a.text.replace(/\\([#$%&~_^{}])/g, "$1");
+        return { type: "url", mode: this.mode, url: n };
     }
     parseArgumentGroup(e, t) {
         var r = this.gullet.scanArgument(e);
         if (null == r) return null;
-        var n = this.mode;
+        var a = this.mode;
         (t && this.switchMode(t), this.gullet.beginGroup());
-        var a = this.parseExpression(!1, "EOF");
+        var n = this.parseExpression(!1, "EOF");
         (this.expect("EOF"), this.gullet.endGroup());
-        var i = { type: "ordgroup", mode: this.mode, loc: r.loc, body: a };
-        return (t && this.switchMode(n), i);
+        var i = { type: "ordgroup", mode: this.mode, loc: r.loc, body: n };
+        return (t && this.switchMode(a), i);
     }
     parseGroup(e, t) {
         var r,
-            a = this.fetch(),
-            i = a.text;
+            n = this.fetch(),
+            i = n.text;
         if ("{" === i || "\\begingroup" === i) {
             this.consume();
             var s = "{" === i ? "}" : "\\endgroup";
@@ -10217,38 +10536,38 @@ class nT {
                 (r = {
                     type: "ordgroup",
                     mode: this.mode,
-                    loc: rq.range(a, o),
+                    loc: rU.range(n, o),
                     body: l,
                     semisimple: "\\begingroup" === i || void 0,
                 }));
         } else if (
             null == (r = this.parseFunction(t, e) || this.parseSymbol()) &&
             "\\" === i[0] &&
-            !nC.hasOwnProperty(i)
+            !Object.prototype.hasOwnProperty.call(aE, i)
         ) {
-            if (this.settings.throwOnError) throw new n("Undefined control sequence: " + i, a);
+            if (this.settings.throwOnError) throw new a("Undefined control sequence: " + i, n);
             ((r = this.formatUnsupportedCmd(i)), this.consume());
         }
         return r;
     }
     formLigatures(e) {
         for (var t = e.length - 1, r = 0; r < t; ++r) {
-            var n = e[r];
-            if ("textord" === n.type) {
-                var a = n.text,
+            var a = e[r];
+            if ("textord" === a.type) {
+                var n = a.text,
                     i = e[r + 1];
                 if (i && "textord" === i.type) {
-                    if ("-" === a && "-" === i.text) {
+                    if ("-" === n && "-" === i.text) {
                         var s = e[r + 2];
                         r + 1 < t && s && "textord" === s.type && "-" === s.text
-                            ? (e.splice(r, 3, { type: "textord", mode: "text", loc: rq.range(n, s), text: "---" }),
+                            ? (e.splice(r, 3, { type: "textord", mode: "text", loc: rU.range(a, s), text: "---" }),
                               (t -= 2))
-                            : (e.splice(r, 2, { type: "textord", mode: "text", loc: rq.range(n, i), text: "--" }),
+                            : (e.splice(r, 2, { type: "textord", mode: "text", loc: rU.range(a, i), text: "--" }),
                               (t -= 1));
                     }
-                    ("'" === a || "`" === a) &&
-                        i.text === a &&
-                        (e.splice(r, 2, { type: "textord", mode: "text", loc: rq.range(n, i), text: a + a }), (t -= 1));
+                    ("'" === n || "`" === n) &&
+                        i.text === n &&
+                        (e.splice(r, 2, { type: "textord", mode: "text", loc: rU.range(a, i), text: n + n }), (t -= 1));
                 }
             }
         }
@@ -10259,68 +10578,77 @@ class nT {
         if (/^\\verb[^a-zA-Z]/.test(t)) {
             this.consume();
             var r = t.slice(5),
-                a = "*" === r.charAt(0);
-            if ((a && (r = r.slice(1)), r.length < 2 || r.charAt(0) !== r.slice(-1)))
-                throw new n("\\verb assertion failed --\n                    please report what input caused this bug");
-            return { type: "verb", mode: "text", body: (r = r.slice(1, -1)), star: a };
+                n = "*" === r.charAt(0);
+            if ((n && (r = r.slice(1)), r.length < 2 || r.charAt(0) !== r.slice(-1)))
+                throw new a("\\verb assertion failed --\n                    please report what input caused this bug");
+            return { type: "verb", mode: "text", body: (r = r.slice(1, -1)), star: n };
         }
-        nM.hasOwnProperty(t[0]) &&
-            !ea[this.mode][t[0]] &&
+        Object.prototype.hasOwnProperty.call(aj, t[0]) &&
+            !en[this.mode][t[0]] &&
             (this.settings.strict &&
                 "math" === this.mode &&
-                this.settings.reportNonstrict(
-                    "unicodeTextInMathMode",
-                    'Accented Unicode text character "' + t[0] + '" used in math mode',
-                    e,
-                ),
-            (t = nM[t[0]] + t.slice(1)));
-        var i = nd.exec(t);
+                eZ({
+                    strict: this.settings.strict,
+                    errorCode: "unicodeTextInMathMode",
+                    errorMsg: 'Accented Unicode text character "' + t[0] + '" used in math mode',
+                    report: !0,
+                    token: e,
+                }),
+            (t = aj[t[0]] + t.slice(1)));
+        var i = aw.exec(t);
         if (
             (i && ("i" === (t = t.substring(0, i.index)) ? (t = "\u0131") : "j" === t && (t = "\u0237")),
-            ea[this.mode][t])
+            en[this.mode][t])
         ) {
             this.settings.strict &&
                 "math" === this.mode &&
-                eB.includes(t) &&
-                this.settings.reportNonstrict(
-                    "unicodeTextInMathMode",
-                    'Latin-1/Unicode text character "' + t[0] + '" used in math mode',
-                    e,
-                );
+                eE.includes(t) &&
+                eZ({
+                    strict: this.settings.strict,
+                    errorCode: "unicodeTextInMathMode",
+                    errorMsg: 'Latin-1/Unicode text character "' + t[0] + '" used in math mode',
+                    report: !0,
+                    token: e,
+                });
             var s,
-                l = ea[this.mode][t].group,
-                o = rq.range(e);
-            s = er.hasOwnProperty(l)
-                ? { type: "atom", mode: this.mode, family: l, loc: o, text: t }
-                : { type: l, mode: this.mode, loc: o, text: t };
+                l,
+                o = en[this.mode][t].group,
+                h = rU.range(e);
+            s = l = t5.has(o)
+                ? { type: "atom", mode: this.mode, family: o, loc: h, text: t }
+                : { type: o, mode: this.mode, loc: h, text: t };
         } else {
             if (!(t.charCodeAt(0) >= 128)) return null;
             (this.settings.strict &&
-                (D(t.charCodeAt(0))
+                (z(t.charCodeAt(0))
                     ? "math" === this.mode &&
-                      this.settings.reportNonstrict(
-                          "unicodeTextInMathMode",
-                          'Unicode text character "' + t[0] + '" used in math mode',
-                          e,
-                      )
-                    : this.settings.reportNonstrict(
-                          "unknownSymbol",
-                          'Unrecognized Unicode character "' + t[0] + '" (' + t.charCodeAt(0) + ")",
-                          e,
-                      )),
-                (s = { type: "textord", mode: "text", loc: rq.range(e), text: t }));
+                      eZ({
+                          strict: this.settings.strict,
+                          errorCode: "unicodeTextInMathMode",
+                          errorMsg: 'Unicode text character "' + t[0] + '" used in math mode',
+                          report: !0,
+                          token: e,
+                      })
+                    : eZ({
+                          strict: this.settings.strict,
+                          errorCode: "unknownSymbol",
+                          errorMsg: 'Unrecognized Unicode character "' + t[0] + '" (' + t.charCodeAt(0) + ")",
+                          report: !0,
+                          token: e,
+                      })),
+                (s = { type: "textord", mode: "text", loc: rU.range(e), text: t }));
         }
         if ((this.consume(), i))
-            for (var h = 0; h < i[0].length; h++) {
-                var u = i[0][h];
-                if (!nS[u]) throw new n("Unknown accent ' " + u + "'", e);
-                var c = nS[u][this.mode] || nS[u].text;
-                if (!c) throw new n("Accent " + u + " unsupported in " + this.mode + " mode", e);
+            for (var u = 0; u < i[0].length; u++) {
+                var c = i[0][u];
+                if (!aI[c]) throw new a("Unknown accent ' " + c + "'", e);
+                var m = aI[c][this.mode] || aI[c].text;
+                if (!m) throw new a("Accent " + c + " unsupported in " + this.mode + " mode", e);
                 s = {
                     type: "accent",
                     mode: this.mode,
-                    loc: rq.range(e),
-                    label: c,
+                    loc: rU.range(e),
+                    label: m,
                     isStretchy: !1,
                     isShifty: !0,
                     base: s,
@@ -10329,78 +10657,78 @@ class nT {
         return s;
     }
 }
-nT.endOfExpression = new Set(["}", "\\endgroup", "\\end", "\\right", "&"]);
-var nE = function (e, t) {
+aL.endOfExpression = new Set(["}", "\\endgroup", "\\end", "\\right", "&"]);
+var aN = function (e, t) {
         if (!("string" == typeof e || e instanceof String))
             throw TypeError("KaTeX can only parse string typed expression");
-        var r = new nT(e, t);
+        var r = new aL(e, t);
         delete r.gullet.macros.current["\\df@tag"];
-        var a = r.parse();
+        var n = r.parse();
         if (
             (delete r.gullet.macros.current["\\current@color"],
             delete r.gullet.macros.current["\\color"],
             r.gullet.macros.get("\\df@tag"))
         ) {
-            if (!t.displayMode) throw new n("\\tag works only in display equations");
-            a = [{ type: "tag", mode: "text", body: a, tag: r.subparse([new rI("\\df@tag")]) }];
+            if (!t.displayMode) throw new a("\\tag works only in display equations");
+            n = [{ type: "tag", mode: "text", body: n, tag: r.subparse([new r$("\\df@tag")]) }];
         }
-        return a;
+        return n;
     },
-    nB = function (e, t, r) {
+    aO = function (e, t, r) {
         t.textContent = "";
-        var n = nq(e, r).toNode();
-        t.appendChild(n);
+        var a = aJ(e, r).toNode();
+        t.appendChild(a);
     };
 "u" > typeof document &&
     "CSS1Compat" !== document.compatMode &&
     ("u" > typeof console &&
         console.warn("Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype."),
-    (nB = function () {
-        throw new n("KaTeX doesn't work in quirks mode.");
+    (aO = function () {
+        throw new a("KaTeX doesn't work in quirks mode.");
     }));
-var nF = function (e, t, r) {
-        if (r.throwOnError || !(e instanceof n)) throw e;
-        var a = e$(["katex-error"], [new V(t)]);
-        return (a.setAttribute("title", e.toString()), a.setAttribute("style", "color:" + r.errorColor), a);
+var aH = function (e, t, r) {
+        if (r.throwOnError || !(e instanceof a)) throw e;
+        var n = e4(["katex-error"], [new X(t)]);
+        return (n.setAttribute("title", e.toString()), n.setAttribute("style", "color:" + r.errorColor), n);
     },
-    nq = function (e, t) {
-        var r = new f(t);
+    aJ = function (e, t) {
+        var r = new g(t);
         try {
-            var n = nE(e, r);
-            return tL(n, e, r);
+            var a = aN(e, r);
+            return tG(a, e, r);
         } catch (t) {
-            return nF(t, e, r);
+            return aH(t, e, r);
         }
     },
-    nI = {
-        version: "0.16.44",
-        render: nB,
+    aP = {
+        version: "0.19.1",
+        render: aO,
         renderToString: function (e, t) {
-            return nq(e, t).toMarkup();
+            return aJ(e, t).toMarkup();
         },
-        ParseError: n,
-        SETTINGS_SCHEMA: d,
+        ParseError: a,
+        SETTINGS_SCHEMA: f,
         __parse: function (e, t) {
-            return nE(e, new f(t));
+            return aN(e, new g(t));
         },
-        __renderToDomTree: nq,
+        __renderToDomTree: aJ,
         __renderToHTMLTree: function (e, t) {
             var r,
-                n = new f(t);
+                a = new g(t);
             try {
-                return ((r = nE(e, n)), tH(e$(["katex"], [tv(r, tI(n))]), n));
+                return ((r = aN(e, a)), tX(e4(["katex"], [tS(r, tZ(a))]), a));
             } catch (t) {
-                return nF(t, e, n);
+                return aH(t, e, a);
             }
         },
         __setFontMetrics: function (e, t) {
-            G[e] = t;
+            Q[e] = t;
         },
         __defineSymbol: ei,
-        __defineFunction: tr,
+        __defineFunction: tp,
         __defineMacro: function (e, t) {
-            rF[e] = t;
+            rP[e] = t;
         },
-        __domTree: { Span: P, Anchor: U, SymbolNode: V, SvgNode: X, PathNode: Z, LineNode: Y },
+        __domTree: { Span: $, Anchor: W, SymbolNode: X, SvgNode: G, PathNode: Y, LineNode: K },
     };
-r.d(t, {}, { Ay: nI });
+r.d(t, {}, { Ay: aP });

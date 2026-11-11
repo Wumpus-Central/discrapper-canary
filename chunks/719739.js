@@ -5262,7 +5262,7 @@ var td = a(994484),
 let tp = ["Wumpus", "Discord Staff", "Design Systems Team"],
     tm = { label: "Text", type: "text", defaultValue: "This is a toast message" };
 var ty = a(992241),
-    tx = a(87304);
+    tx = a(381275);
 let tv = Object.assign(
     function (e) {
         let { children: l, "aria-label": a, "aria-labelledby": o } = e;
