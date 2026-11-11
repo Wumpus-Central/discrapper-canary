@@ -1,36 +1,36 @@
 var i = n(462887),
-    s = n(817281),
-    r = n(850333),
-    l = n(644235),
-    a = n(773527),
-    c = n(973654),
-    o = n(413599),
-    u = n(185928);
+    r = n(817281),
+    c = n(47671),
+    d = n(644235),
+    s = n(773527),
+    u = n(973654),
+    a = n(413599),
+    l = n(185928);
 n.d(
     t,
     {},
     {
         V: function (e) {
             if (
-                (s.Ay.setShouldSyncAppearanceSettings(!1),
-                null == o.A.getSyncedClientTheme(u.Fc.LIGHT) && null == o.A.getSyncedClientTheme(u.Fc.DARK))
+                (r.Ay.setShouldSyncAppearanceSettings(!1),
+                null == a.A.getSyncedClientTheme(l.Fc.LIGHT) && null == a.A.getSyncedClientTheme(l.Fc.DARK))
             ) {
-                let t = o.A.theme,
-                    n = null == e ? t : (0, l.Zu)(t),
-                    s = (0, i.M)(n) ? u.Fc.DARK : u.Fc.LIGHT,
-                    d = r.A.gradientPreset?.id,
-                    m = !r.A.isPreview || (0, a.oB)(d) ? d : void 0;
-                ((0, c.NA)({ [s]: n }),
+                let t = a.A.theme,
+                    n = null == e ? t : (0, d.Zu)(t),
+                    r = (0, i.M)(n) ? l.Fc.DARK : l.Fc.LIGHT,
+                    E = c.A.gradientPreset?.id,
+                    T = !c.A.isPreview || (0, s.oB)(E) ? E : void 0;
+                ((0, u.NA)({ [r]: n }),
                     null != e
-                        ? (0, c.qX)(s, { customUserThemeSettings: e })
-                        : null != m
-                          ? (0, c.qX)(s, { backgroundGradientPresetId: m })
-                          : (0, c.qX)(s, { theme: n }));
+                        ? (0, u.qX)(r, { customUserThemeSettings: e })
+                        : null != T
+                          ? (0, u.qX)(r, { backgroundGradientPresetId: T })
+                          : (0, u.qX)(r, { theme: n }));
             }
-            ((0, c.ZM)(!0), (0, c.k7)(u.Q_.ON));
+            ((0, u.ZM)(!0), (0, u.k7)(l.Q_.ON));
         },
         i: function () {
-            ((0, c.k7)(u.Q_.OFF), (0, c.ZM)(!1));
+            ((0, u.k7)(l.Q_.OFF), (0, u.ZM)(!1));
         },
     },
 );

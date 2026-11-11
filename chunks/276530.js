@@ -1,4 +1,4 @@
-n.d(t, { default: () => e7 });
+n.d(t, { default: () => e6 });
 var i = n(477900),
     s = n(582128),
     r = n(613412),
@@ -914,13 +914,13 @@ var ew = n(46653),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "671062",
-        s = "2a32daba9b2e1c9bed63e63c3a93be63f4c49d7a".substring(0, 7),
+        n = "671069",
+        s = "1269bbae421569eaa21fcbe13fc94e9d688d5fb8".substring(0, 7),
         r = eW.A?.app.getVersion(),
         l = eW.A?.app.getBuildNumber(),
         c = eW.A?.app.getAppArch(),
         o = eV.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eQ.A)("1794356670648", !1) : null,
+        u = null != o ? (0, eQ.A)("1794357033597", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = eX()?.os?.toString();
@@ -1028,7 +1028,7 @@ function e1(e) {
         }),
     });
 }
-function e2() {
+function e5() {
     let e = s.useRef(null);
     return (0, i.jsxs)("div", {
         children: [
@@ -1085,13 +1085,13 @@ function e2() {
         ],
     });
 }
-var e5 = n(402651),
-    e3 = n(669067),
-    e8 = n(830543),
-    e9 = n(953056);
-let e4 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
-    e6 = new Map([[eL.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e7(e) {
+var e2 = n(402651),
+    e9 = n(669067),
+    e4 = n(830543),
+    e3 = n(953056);
+let e8 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
+    e7 = new Map([[eL.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e6(e) {
     let { target: t, ...n } = e,
         l = eR.A.useField("query"),
         a = s.useCallback(() => {
@@ -1100,12 +1100,12 @@ function e7(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eD.default.getCurrentUser() && (g(!0), (0, e8.default)());
+            null == eD.default.getCurrentUser() && (g(!0), (0, e4.default)());
         }
         return (
             ew.default.addChangeListener(e),
             () => {
-                (ew.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
+                (ew.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
@@ -1115,17 +1115,17 @@ function e7(e) {
               partialRoot: eO.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e2,
+              sidebarFooter: e5,
               onViewChange: function (e) {
-                  e4.has(e) || (0, e3._)(e);
-                  let t = e6.get(e);
+                  e8.has(e) || (0, e9._)(e);
+                  let t = e7.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e5.A.getField("source") },
+                          properties: { source: e2.A.getField("source") },
                       }),
-                      e5.A.setState({ source: void 0 }));
+                      e2.A.setState({ source: void 0 }));
               },
               target: t,
               defaultTarget: eL.X.ACCOUNT_PANEL,
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e9.P,
+            className: e3.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e9.t,
+        className: e3.t,
         children: [
             (0, i.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: G.intl.string(G.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: G.intl.string(G.t.XclvsB) }),

@@ -1,0 +1,216 @@
+.preview_TcSroI {
+    height: 272px;
+    position: relative;
+    width: 360px;
+    zoom: .85;
+    --custom-preview-card-border: var(--opacity-white-16);
+    --custom-preview-card-shadow: var(--shadow-high)
+}
+
+.theme-light .preview_TcSroI {
+    --custom-preview-card-border: var(--opacity-black-4);
+    --custom-preview-card-shadow: 0 12px 32px var(--opacity-black-20), 0 2px 6px var(--opacity-black-8)
+}
+
+.profileCard_TcSroI {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: var(--background-base-low);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 0 2px var(--custom-preview-card-border), var(--custom-preview-card-shadow);
+    display: flex;
+    flex-direction: column;
+    inset-inline-start: 0;
+    outline: 1px solid transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: rotate(-2.63deg) translateZ(0);
+    width: 300px
+}
+
+.banner_TcSroI {
+    border-radius: 0
+}
+
+.avatar_TcSroI {
+    inset-inline-start: var(--space-16);
+    position: absolute;
+    top: 61px
+}
+
+.profileName_TcSroI {
+    color: var(--text-strong);
+    padding: 40px var(--space-16) var(--space-16)
+}
+
+.appIcon_TcSroI {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 23px;
+    height: 96px;
+    inset-inline-start: 247px;
+    top: 62px;
+    transform: rotate(15deg) translateZ(0);
+    width: 96px
+}
+
+.appIcon_TcSroI,
+.messageCard_TcSroI {
+    box-shadow: 0 0 0 2px var(--custom-preview-card-border), var(--custom-preview-card-shadow);
+    outline: 1px solid transparent;
+    position: absolute
+}
+
+.messageCard_TcSroI {
+    background: var(--background-base-lower);
+    border-radius: var(--radius-md);
+    inset-inline-start: 84px;
+    overflow: hidden;
+    padding-block: var(--space-4);
+    top: 184px;
+    transform: rotate(3.36deg);
+    width: 269px
+}
+
+.root_kxCM2B {
+    border-radius: inherit;
+    display: flex;
+    height: 597px;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
+    margin-top: calc(var(--custom-modal-padding-top)*-1);
+    max-height: 100%;
+    overflow: hidden
+}
+
+.sidebar_kxCM2B {
+    background: var(--background-base-low);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: var(--space-24);
+    position: relative
+}
+
+.banner_kxCM2B {
+    aspect-ratio: 2640/740;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    pointer-events: none
+}
+
+.banner_kxCM2B:after {
+    background: linear-gradient(to top, var(--background-base-low), transparent);
+    content: "";
+    inset: 0;
+    position: absolute
+}
+
+.bannerImage_kxCM2B {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.header_kxCM2B {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding-top: 72px;
+    position: relative
+}
+
+.header_kxCM2B>:first-child {
+    margin-bottom: var(--space-8)
+}
+
+.rows_kxCM2B {
+    flex-direction: column;
+    gap: var(--space-24)
+}
+
+.row_kxCM2B,
+.rows_kxCM2B {
+    display: flex
+}
+
+.row_kxCM2B {
+    align-items: center;
+    gap: var(--space-12)
+}
+
+.rowSwitch_kxCM2B {
+    flex: 1;
+    min-width: 0
+}
+
+.rowIcon_kxCM2B {
+    background-size: cover;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: var(--space-32);
+    width: var(--space-32)
+}
+
+.fontRowIcon_kxCM2B {
+    align-items: center;
+    background: var(--background-brand);
+    display: flex;
+    justify-content: center
+}
+
+.footer_kxCM2B {
+    margin-top: auto;
+    padding-top: var(--space-24)
+}
+
+.editor_kxCM2B {
+    align-items: center;
+    background: var(--background-base-lowest);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.editorGradient_kxCM2B,
+.editorShade_kxCM2B {
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.editorShade_kxCM2B {
+    background: linear-gradient(180deg, var(--opacity-black-24) 0, var(--background-scrim-lightbox) 100%)
+}
+
+.theme-light .editorGradient_kxCM2B {
+    opacity: .32
+}
+
+.theme-light .editorShade_kxCM2B {
+    display: none
+}
+
+.logo_kxCM2B {
+    inset-inline-start: var(--space-16);
+    position: absolute;
+    top: 13px;
+    width: var(--space-64)
+}
+
+.closeButton_kxCM2B {
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: var(--space-8)
+}
+
+/*# sourceMappingURL=0dc504ed8299314c.css.map*/

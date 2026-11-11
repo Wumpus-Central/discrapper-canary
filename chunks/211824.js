@@ -1,17 +1,21 @@
 n.d(t, {
-    Q3: () => f,
-    xG: () => T,
+    u: () => p,
+    I$: () => I,
+    Q3: () => h,
+    xG: () => N,
     vl: () => _,
     AA: () => E,
+    DD: () => C,
     tK: () => u,
     j: () => A,
-    Fg: () => g,
-    pp: () => p,
-    PC: () => N,
-    Sp: () => m,
-    zv: () => S,
-    vB: () => h,
-    S9: () => I,
+    Fg: () => O,
+    pp: () => g,
+    PC: () => L,
+    Sp: () => S,
+    zv: () => R,
+    U1: () => f,
+    vB: () => m,
+    S9: () => T,
 });
 var i,
     r,
@@ -25,25 +29,28 @@ let u = "/quests/special-events/1549285425984831508/enroll",
     _ = s.x.HEXAGON,
     E = Object.freeze({ fontId: _, effectId: a.z.SOLID, colors: [] }),
     A = "https://dis.gd/vice-city-theme-available-in-discord",
-    f = "1560067021281042513";
-d.LW.DEFAULT;
-var h =
+    f = "1560067021281042513",
+    h = f,
+    I = { theme: "system" },
+    p = d.LW.DEFAULT;
+var m =
         (((i = {}).DISPLAY_NAME_STYLE = "display_name_style"),
         (i.CLIENT_THEME = "client_theme"),
         (i.APP_ICON = "app_icon"),
         i),
-    I = (((r = {}).HIDDEN = "hidden"), (r.LOCKED = "locked"), (r.SELECTABLE = "selectable"), r);
-let p = Object.freeze({ client_theme: "client_theme", display_name_style: "display_name_font", app_icon: "app_icon" }),
-    m = Object.freeze({
+    T = (((r = {}).HIDDEN = "hidden"), (r.LOCKED = "locked"), (r.SELECTABLE = "selectable"), r);
+let g = Object.freeze({ client_theme: "client_theme", display_name_style: "display_name_font", app_icon: "app_icon" }),
+    S = Object.freeze({
         display_name_style: o.bb.DISPLAY_NAME_STYLES,
         client_theme: o.bb.CLIENT_THEMES,
         app_icon: o.bb.APP_ICONS,
     }),
-    T = new Set([l.ju.HEXAGON]);
-(Date.parse("2026-11-16T18:00:00+00:00"), Date.parse("2026-11-22T18:00:00+00:00"));
-let g = Date.parse("2026-12-13T18:00:00+00:00"),
-    S = Date.parse("2027-02-20T18:00:00+00:00"),
-    N = Object.freeze({
+    N = new Set([l.ju.HEXAGON]);
+Date.parse("2026-11-16T18:00:00+00:00");
+let C = Date.parse("2026-11-22T18:00:00+00:00"),
+    O = Date.parse("2026-12-13T18:00:00+00:00"),
+    R = Date.parse("2027-02-20T18:00:00+00:00"),
+    L = Object.freeze({
         display_name_style: c.PremiumTypes.TIER_2,
         client_theme: c.PremiumTypes.TIER_2,
         app_icon: c.PremiumTypes.TIER_2,

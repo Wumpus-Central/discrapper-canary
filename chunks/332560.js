@@ -16,6 +16,16 @@ var r,
         (r.USER_PROFILE = "USER_PROFILE"),
         (r.GUILD_PROFILE = "GUILD_PROFILE"),
         r);
+function l(t) {
+    let { content: e, sourceQuestContent: n = e, contentSurface: r } = t;
+    (0, o.Qg)({
+        adContentId: c.Q3,
+        adCreativeType: i.p.QUEST_HOME_HERO,
+        event: s.HAw.QUEST_CONTENT_VIEWED,
+        properties: { ...(0, E.fF)(e), ...(0, _.A)(), content_surface: r },
+        sourceQuestContent: n,
+    });
+}
 n.d(
     e,
     {},
@@ -31,19 +41,10 @@ n.d(
                 ad_content_id: c.Q3,
             });
         },
+        TW: l,
         UF: function (t, e, n) {
             a.useEffect(() => {
-                n &&
-                    (function (t) {
-                        let { content: e, sourceQuestContent: n = e, contentSurface: r } = t;
-                        (0, o.Qg)({
-                            adContentId: c.Q3,
-                            adCreativeType: i.p.QUEST_HOME_HERO,
-                            event: s.HAw.QUEST_CONTENT_VIEWED,
-                            properties: { ...(0, E.fF)(e), ...(0, _.A)(), content_surface: r },
-                            sourceQuestContent: n,
-                        });
-                    })({ content: t, contentSurface: e });
+                n && l({ content: t, contentSurface: e });
             }, [t, e, n]);
         },
         rl: O,

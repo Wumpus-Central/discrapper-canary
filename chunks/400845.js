@@ -31,31 +31,33 @@ function c(e) {
         }
         return {
             definition: e,
-            useConfig: function (e) {
-                let n = s(d, e),
-                    a = s("user", e),
-                    [l, c] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(d, n, o, a), [n, a]),
-                    _ = c?.variantId,
-                    A = c?.trackedVariantId ?? _,
-                    f = c?.revision,
-                    h = c?.isOverride,
-                    I = c?.exposureTrackingEnabled,
-                    p = c?.useAsEligibility,
-                    m = E(c),
-                    T = null == m;
+            useConfig: function (e, n) {
+                let a = s(d, e),
+                    l = s("user", e),
+                    [c, _] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(d, a, o, l), [a, l]),
+                    A = _?.variantId,
+                    f = _?.trackedVariantId ?? A,
+                    h = _?.revision,
+                    I = _?.isOverride,
+                    p = _?.exposureTrackingEnabled,
+                    m = _?.useAsEligibility,
+                    T = E(_),
+                    g = null == T,
+                    S = n?.autoTrackExposure !== !1;
                 return ((0, i.useEffect)(() => {
-                    null == l ||
-                        null == A ||
-                        null == f ||
-                        !1 !== h ||
-                        !0 !== I ||
-                        !0 === p ||
-                        T ||
-                        t.trackExperimentExposure(l, o, e.location, d, f, A, n);
-                }, [n, l, A, f, e.location, h, I, p, T]),
-                null == _ || !0 === p || null == m)
+                    S &&
+                        null != c &&
+                        null != f &&
+                        null != h &&
+                        !1 === I &&
+                        !0 === p &&
+                        !0 !== m &&
+                        !g &&
+                        t.trackExperimentExposure(c, o, e.location, d, h, f, a);
+                }, [S, a, c, f, h, e.location, I, p, m, g]),
+                null == A || !0 === m || null == T)
                     ? u
-                    : m;
+                    : T;
             },
             getConfig: function (e, i) {
                 let r = n(d, e),

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     cursor: pointer;
     flex-shrink: 0;
-    height: 355px;
+    height: var(--custom-quest-home-hero-shelf-card-height, 355px);
     overflow: clip;
     width: 300px
 }
@@ -178,6 +178,100 @@
     inset-inline-start: 0;
     padding: var(--space-16);
     position: absolute
+}
+
+.card_bVDW54 {
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-xl);
+    box-sizing: border-box;
+    gap: var(--space-20);
+    max-height: 385px;
+    min-height: 355px;
+    overflow: clip;
+    width: 620px
+}
+
+.card_bVDW54,
+.media_bVDW54 {
+    display: flex;
+    flex-shrink: 0;
+    position: relative
+}
+
+.media_bVDW54 {
+    align-items: center;
+    background-color: var(--background-mod-muted);
+    justify-content: center;
+    overflow: hidden;
+    width: 300px
+}
+
+.mediaGlow_bVDW54 {
+    background-image: linear-gradient(#c000fc, #ff5798);
+    border-radius: 50%;
+    bottom: -124.6px;
+    filter: blur(66px);
+    height: 403.95px;
+    inset-inline: 0;
+    margin-inline: auto;
+    opacity: .18;
+    position: absolute;
+    transform: rotate(-137.77deg);
+    width: 363.23px
+}
+
+.bundleArt_bVDW54 {
+    position: relative
+}
+
+.content_bVDW54 {
+    gap: var(--space-16);
+    min-width: 0;
+    padding-block: calc(var(--space-16) + var(--space-12)) calc(var(--space-16) + var(--space-4));
+    padding-inline-end: var(--space-16)
+}
+
+.content_bVDW54,
+.detailsFade_bVDW54 {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.details_bVDW54,
+.detailsFade_bVDW54 {
+    min-height: 0
+}
+
+.details_bVDW54 {
+    flex: 1
+}
+
+.shelf_cXclnA {
+    --custom-quest-home-hero-shelf-card-height: 100%
+}
+
+.background_cXclnA {
+    background-image: linear-gradient(var(--card-background-default), var(--card-background-default));
+    isolation: isolate
+}
+
+.gradient_cXclnA:after,
+.gradient_cXclnA:before {
+    content: "";
+    inset: 0;
+    opacity: .1;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1
+}
+
+.gradient_cXclnA:before {
+    background-image: linear-gradient(to top, transparent, var(--bg-gradient-hexagon-promo-2))
+}
+
+.gradient_cXclnA:after {
+    background-image: linear-gradient(to top, transparent, 24%, var(--bg-gradient-hexagon-4))
 }
 
 @keyframes loadingSkeletonPulse_TCo9Gp {
@@ -496,4 +590,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=f362efb8f17e98ec.css.map*/
+/*# sourceMappingURL=719461654218579a.css.map*/
