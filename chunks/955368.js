@@ -627,12 +627,20 @@ function Z(e) {
             onRest: () => {
                 t_(!0);
             },
+            onChange: {
+                controlBarAnimSpring: (e) => {
+                    1 === e && t_(!0);
+                },
+            },
         })),
         rr = (0, l.useRef)(null),
         [{ captionHeightSpring: rl }, ra] = (0, f.z)(() => ({ from: { captionHeightSpring: 0 }, config: W }));
     (l.useEffect(
         () => (
-            ra({ captionHeightSpring: t1 && null != nv ? (rr.current?.clientHeight ?? 0) : 0, immediate: t8 }),
+            ra({
+                captionHeightSpring: t1 && null != nv ? (rr.current?.clientHeight ?? 0) : 0,
+                default: { immediate: t8 },
+            }),
             () => {
                 rl.stop();
             }
@@ -641,7 +649,7 @@ function Z(e) {
     ),
         l.useEffect(
             () => (
-                rn({ controlBarAnimSpring: nW || tj ? 1 : 0, immediate: t8 }),
+                rn({ controlBarAnimSpring: nW || tj ? 1 : 0, default: { immediate: t8 } }),
                 () => {
                     rt.stop();
                 }
