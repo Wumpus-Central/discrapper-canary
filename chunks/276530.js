@@ -1,4 +1,4 @@
-n.d(t, { default: () => e7 });
+n.d(t, { default: () => e6 });
 var i = n(477900),
     s = n(582128),
     r = n(613412),
@@ -914,13 +914,13 @@ var ew = n(46653),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "670976",
-        s = "9e8acd2b9faca4e9acb6b84d18c354c9ad02e377".substring(0, 7),
+        n = "670977",
+        s = "23df31664bb2818978e4e0e6e21f7c871a1d836f".substring(0, 7),
         r = eW.A?.app.getVersion(),
         l = eW.A?.app.getBuildNumber(),
         c = eW.A?.app.getAppArch(),
         o = eV.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eQ.A)("1794354669306", !1) : null,
+        u = null != o ? (0, eQ.A)("1794354677826", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = eX()?.os?.toString();
@@ -1087,11 +1087,11 @@ function e2() {
 }
 var e5 = n(402651),
     e8 = n(669067),
-    e9 = n(830543),
+    e3 = n(830543),
     e4 = n(953056);
-let e3 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
-    e6 = new Map([[eL.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e7(e) {
+let e9 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
+    e7 = new Map([[eL.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e6(e) {
     let { target: t, ...n } = e,
         l = eR.A.useField("query"),
         a = s.useCallback(() => {
@@ -1100,7 +1100,7 @@ function e7(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == eD.default.getCurrentUser() && (g(!0), (0, e9.default)());
+            null == eD.default.getCurrentUser() && (g(!0), (0, e3.default)());
         }
         return (
             ew.default.addChangeListener(e),
@@ -1117,8 +1117,8 @@ function e7(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e3.has(e) || (0, e8._)(e);
-                  let t = e6.get(e);
+                  e9.has(e) || (0, e8._)(e);
+                  let t = e7.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
