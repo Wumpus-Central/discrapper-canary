@@ -67,13 +67,22 @@
 }
 
 .variantRow_5gwPwi {
-    align-items: center;
     border-bottom: 1px solid var(--border-subtle);
-    display: grid;
     grid-column: 1/-1;
     grid-template-columns: subgrid;
     overflow-wrap: anywhere;
     padding-block: var(--space-8)
+}
+
+.dismissalRow_5gwPwi,
+.variantRow_5gwPwi {
+    align-items: center;
+    display: grid
+}
+
+.dismissalRow_5gwPwi {
+    gap: var(--space-8);
+    grid-template-columns: minmax(0, 1fr) auto
 }
 
 .row_urSing {
@@ -573,4 +582,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=030593d7a568ab47.css.map*/
+/*# sourceMappingURL=e39e9a42ff7b8baf.css.map*/

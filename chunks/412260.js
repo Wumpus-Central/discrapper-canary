@@ -43,7 +43,7 @@ let g = !1,
     L = null,
     y = [],
     D = (0, _.L_)((e, t, i, r) => {
-        let { resolveCampaignComponents: a } = n(811784);
+        let { resolveCampaignComponents: a } = n(547515);
         return a(e.components, t, i, e.endDate, r);
     });
 function b() {
