@@ -17,5 +17,6 @@ var i,
         (i.XBOX_PARTNER_PASS = "xboxPartnerPass"),
         (i.MACARON = "macaron"),
         (i.CODE_BLURPLE = "codeBlurple"),
+        (i.HEXAGON_CAMPAIGN = "hexagonCampaign"),
         i);
 n.d(t, {}, { N: a });

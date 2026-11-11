@@ -7790,7 +7790,7 @@ let cQ = (0, h.zZ)(S.X.REDEEM_GIFT_CATEGORY, {
         buildLayout: () => [c$],
     });
 var c1 = n(659758),
-    c2 = n(839667),
+    c2 = n(529403),
     c3 = n(517352),
     c4 = n(831259),
     c5 = n(462887),

@@ -1,0 +1,50 @@
+.child_onI6o8 {
+    align-items: center;
+    background: pink;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    height: 100px;
+    justify-content: center;
+    padding: 12px;
+    width: 100px
+}
+
+.badgeRow_MShoFQ {
+    align-items: center;
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-between;
+    margin-top: var(--space-192);
+    width: 100%
+}
+
+.badgeTrigger_MShoFQ {
+    align-items: center;
+    display: inline-flex;
+    height: var(--space-24);
+    justify-content: center;
+    width: var(--space-24)
+}
+
+.badgeTriggerImg_MShoFQ {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.bentoArt_Gs7kvf {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    padding: var(--space-24);
+    width: 100%
+}
+
+/*# sourceMappingURL=2a179d3e09671a66.css.map*/

@@ -1,52 +1,62 @@
-var r,
-    a = n(582128),
-    i = n(323889),
-    _ = n(69114),
-    o = n(561844),
-    E = n(590202),
-    u = n(129230),
-    c = n(211824),
-    s = n(652215),
-    O =
-        (((r = {}).FONT_PICKER = "FONT_PICKER"),
-        (r.PROFILE_ROW_PROMO = "PROFILE_ROW_PROMO"),
-        (r.NON_NITRO_CARD = "NON_NITRO_CARD"),
-        (r.THEME_PICKER = "THEME_PICKER"),
-        (r.APP_ICON_PICKER = "APP_ICON_PICKER"),
-        (r.USER_PROFILE = "USER_PROFILE"),
-        (r.GUILD_PROFILE = "GUILD_PROFILE"),
-        r);
-function l(t) {
-    let { content: e, sourceQuestContent: n = e, contentSurface: r } = t;
-    (0, o.Qg)({
-        adContentId: c.Q3,
-        adCreativeType: i.p.QUEST_HOME_HERO,
-        event: s.HAw.QUEST_CONTENT_VIEWED,
-        properties: { ...(0, E.fF)(e), ...(0, _.A)(), content_surface: r },
-        sourceQuestContent: n,
+var e,
+    O = E(582128),
+    n = E(323889),
+    R = E(69114),
+    I = E(561844),
+    C = E(590202),
+    a = E(129230),
+    T = E(211824),
+    c = E(652215),
+    p =
+        (((e = {}).FONT_PICKER = "FONT_PICKER"),
+        (e.PROFILE_ROW_PROMO = "PROFILE_ROW_PROMO"),
+        (e.NON_NITRO_CARD = "NON_NITRO_CARD"),
+        (e.THEME_PICKER = "THEME_PICKER"),
+        (e.APP_ICON_PICKER = "APP_ICON_PICKER"),
+        (e.USER_PROFILE = "USER_PROFILE"),
+        (e.GUILD_PROFILE = "GUILD_PROFILE"),
+        e);
+function P(_) {
+    let { content: t, sourceQuestContent: E = t, contentSurface: e } = _;
+    (0, I.Qg)({
+        adContentId: T.Q3,
+        adCreativeType: n.p.QUEST_HOME_HERO,
+        event: c.HAw.QUEST_CONTENT_VIEWED,
+        properties: { ...(0, C.fF)(t), ...(0, R.A)(), content_surface: e },
+        sourceQuestContent: E,
     });
 }
-n.d(
-    e,
+E.d(
+    t,
     {},
     {
-        Cy: function (t) {
-            let { perks: e, content: n, sourceQuestContent: r = n, contentSurface: a } = t;
-            u.default.track(s.HAw.QUEST_PROMOTIONAL_EVENT_USER_ACTION, {
-                ...(0, o.dz)(r, i.p.QUEST_HOME_HERO),
-                actions: e.map((t) => c.pp[t]),
-                content_id: n,
-                content_name: (0, E.jO)(n),
-                content_surface: a,
-                ad_content_id: c.Q3,
+        Cy: function (_) {
+            let { perks: t, content: E, sourceQuestContent: e = E, contentSurface: O } = _;
+            a.default.track(c.HAw.QUEST_PROMOTIONAL_EVENT_USER_ACTION, {
+                ...(0, I.dz)(e, n.p.QUEST_HOME_HERO),
+                actions: t.map((_) => T.pp[_]),
+                content_id: E,
+                content_name: (0, C.jO)(E),
+                content_surface: O,
+                ad_content_id: T.Q3,
             });
         },
-        TW: l,
-        UF: function (t, e, n) {
-            a.useEffect(() => {
-                n && l({ content: t, contentSurface: e });
-            }, [t, e, n]);
+        TW: P,
+        UF: function (_, t, E) {
+            O.useEffect(() => {
+                E && P({ content: _, contentSurface: t });
+            }, [_, t, E]);
         },
-        rl: O,
+        iM: async function (_) {
+            let { content: t, questContentCTA: E, sourceQuestContent: e = t } = _;
+            (0, I.Qg)({
+                adContentId: T.Q3,
+                adCreativeType: n.p.QUEST_HOME_HERO,
+                event: c.HAw.QUEST_CONTENT_CLICKED,
+                properties: await (0, I.LW)({ questContent: t, questContentCTA: E }),
+                sourceQuestContent: e,
+            });
+        },
+        rl: p,
     },
 );

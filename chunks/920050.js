@@ -15,6 +15,7 @@
             EARLY_ACCESS_CARD_ID: "earlyAccess",
             ENTRANCE_SOUNDS_CARD_ID: "entranceSounds",
             HD_VIDEO_CARD_ID: "hdVideo",
+            HEXAGON_CAMPAIGN_CARD_ID: "hexagonCampaign",
             LARGE_UPLOADS_CARD_ID: "largeUploads",
             LOGITECH_3PP_CARD_ID: "logitech3PP",
             MORE_EMOJIS_CARD_ID: "moreEmojis",
