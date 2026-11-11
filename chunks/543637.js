@@ -1,6 +1,6 @@
 i.d(n, { default: () => I });
-var e,
-    a = i(477900),
+var a,
+    e = i(477900),
     l = i(582128),
     r = i(189213),
     u = i(141628),
@@ -14,19 +14,19 @@ var e,
     T = i(673383),
     S = i(752222),
     O = i(792996),
-    p = (((e = {}).GO_TO_SERVER = "GO_TO_SERVER"), (e.CLOSE = "CLOSE"), e);
+    p = (((a = {}).GO_TO_SERVER = "GO_TO_SERVER"), (a.CLOSE = "CLOSE"), a);
 function I(t) {
-    let { code: n, result: i, character: e, transitionState: I, onClose: N } = t,
+    let { code: n, result: i, transitionState: a, onClose: I } = t,
         m = (0, g.A)(n),
         {
-            title: A,
-            subtitle: _,
-            cta: R,
-            isWaitingForGuild: G,
+            title: N,
+            subtitle: A,
+            cta: _,
+            isWaitingForGuild: R,
         } = (function (t, n, i) {
-            let e = (0, g.A)(t),
-                a = e?.guildId,
-                r = (0, s.bG)([E.A], () => null != a && null != E.A.getGuild(a)),
+            let a = (0, g.A)(t),
+                e = a?.guildId,
+                r = (0, s.bG)([E.A], () => null != e && null != E.A.getGuild(e)),
                 [u, o] = l.useState(!1),
                 c =
                     null != n &&
@@ -52,7 +52,7 @@ function I(t) {
                 ? null
                 : {
                       ...(function (t, n, i) {
-                          let { joinStatus: e, failureReason: a, guildJoinStatus: l } = t,
+                          let { joinStatus: a, failureReason: e, guildJoinStatus: l } = t,
                               { onClose: r, onGoToServer: u } = i,
                               { noun: o } = n,
                               c = { type: "CLOSE", text: O.intl.string(O.t.cpT0Cq), action: r },
@@ -60,11 +60,11 @@ function I(t) {
                                   null != u
                                       ? { type: "GO_TO_SERVER", text: O.intl.string(S.default.H1wMHV), action: u }
                                       : c;
-                          if (e === T.Ti.JOINED)
+                          if (a === T.Ti.JOINED)
                               return (function (t, n, i) {
-                                  let { noun: e, orgName: a, characterName: l } = n,
+                                  let { noun: a, orgName: e, characterName: l } = n,
                                       { goToServerCta: r, closeCta: u } = i,
-                                      o = O.intl.formatToPlainString(S.default["w/spGp"], { noun: e });
+                                      o = O.intl.formatToPlainString(S.default["w/spGp"], { noun: a });
                                   switch (t) {
                                       case T.gc.NEW_MEMBER:
                                       case T.gc.ALREADY_MEMBER:
@@ -73,13 +73,13 @@ function I(t) {
                                               subtitle:
                                                   null != l
                                                       ? O.intl.formatToPlainString(S.default.PLA9Om, {
-                                                            noun: e,
-                                                            orgName: a,
+                                                            noun: a,
+                                                            orgName: e,
                                                             characterName: l,
                                                         })
                                                       : O.intl.formatToPlainString(S.default.WF9Qgb, {
-                                                            noun: e,
-                                                            orgName: a,
+                                                            noun: a,
+                                                            orgName: e,
                                                         }),
                                               cta: r,
                                           };
@@ -87,8 +87,8 @@ function I(t) {
                                           return {
                                               title: o,
                                               subtitle: O.intl.formatToPlainString(S.default["9K7Jdt"], {
-                                                  noun: e,
-                                                  orgName: a,
+                                                  noun: a,
+                                                  orgName: e,
                                               }),
                                               cta: r,
                                           };
@@ -96,8 +96,8 @@ function I(t) {
                                           return {
                                               title: o,
                                               subtitle: O.intl.formatToPlainString(S.default.ODHuua, {
-                                                  noun: e,
-                                                  orgName: a,
+                                                  noun: a,
+                                                  orgName: e,
                                               }),
                                               cta: u,
                                           };
@@ -106,14 +106,14 @@ function I(t) {
                                           return {
                                               title: o,
                                               subtitle: O.intl.formatToPlainString(S.default.Qo94hd, {
-                                                  noun: e,
-                                                  orgName: a,
+                                                  noun: a,
+                                                  orgName: e,
                                               }),
                                               cta: u,
                                           };
                                   }
                               })(l, n, { goToServerCta: s, closeCta: c });
-                          switch (a) {
+                          switch (e) {
                               case T.z1.ALREADY_JOINED:
                                   return {
                                       title: O.intl.formatToPlainString(S.default["1PMPYk"], { noun: o }),
@@ -138,46 +138,46 @@ function I(t) {
                       })(
                           n,
                           {
-                              noun: (0, d.A)({ displayNoun: e?.displayNoun ?? null, lowercase: !0 }),
-                              orgName: e?.organization.name ?? "",
-                              characterName: n.characterName,
+                              noun: (0, d.A)({ displayNoun: a?.displayNoun ?? null, lowercase: !0 }),
+                              orgName: a?.organization.name ?? "",
+                              characterName: n.character?.name ?? null,
                           },
                           {
                               onClose: i,
                               onGoToServer:
                                   r || c
                                       ? function () {
-                                            null != a && r && (i(), (0, f.u)(a));
+                                            null != e && r && (i(), (0, f.u)(e));
                                         }
                                       : null,
                           },
                       ),
                       isWaitingForGuild: c,
                   };
-        })(n, i, N);
+        })(n, i, I);
     if (null == m) return null;
-    let P = R.type === p.GO_TO_SERVER,
-        C = [
+    let G = _.type === p.GO_TO_SERVER,
+        P = [
             {
-                text: R.text,
+                text: _.text,
                 variant: "primary",
-                icon: P ? u.ExperimentalGameControllerLinkIcon : void 0,
-                loading: G,
-                onClick: R.action,
+                icon: G ? u.ExperimentalGameControllerLinkIcon : void 0,
+                loading: R,
+                onClick: _.action,
             },
         ];
     return i.joinStatus === T.Ti.JOINED
-        ? (0, a.jsx)(o.k, {
-              transitionState: I,
-              onClose: N,
-              title: A,
-              subtitle: _,
+        ? (0, e.jsx)(o.k, {
+              transitionState: a,
+              onClose: I,
+              title: N,
+              subtitle: A,
               graphic: {
                   type: "dynamic",
                   component: c.DynamicGraphicComponent.GAME_ORGANIZATION_JOIN_SUCCESS,
-                  props: { character: e, organizationIconUrl: m.organization.iconUrl },
+                  props: { character: i.character, organizationIconUrl: m.organization.iconUrl },
               },
-              actions: C,
+              actions: P,
           })
-        : (0, a.jsx)(r.a, { transitionState: I, onClose: N, title: A, subtitle: _, actions: C });
+        : (0, e.jsx)(r.a, { transitionState: a, onClose: I, title: N, subtitle: A, actions: P });
 }

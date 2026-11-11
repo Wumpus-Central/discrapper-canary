@@ -329,11 +329,11 @@ function G(e) {
                             game_organization_join_failure_reason: s,
                             guild_join_status: o,
                         } = await r.A.acceptGameOrganizationInvite(l, e?.id);
-                        ((i = { joinStatus: a, failureReason: s, guildJoinStatus: o, characterName: e?.name ?? null }),
+                        ((i = { joinStatus: a, failureReason: s, guildJoinStatus: o, character: e }),
                             (0, c.mM)(
                                 async () => {
-                                    let { default: a } = await n.e(172470).then(n.bind(n, 543637));
-                                    return (n) => (0, t.jsx)(a, { code: l, result: i, character: e, ...n });
+                                    let { default: e } = await n.e(172470).then(n.bind(n, 543637));
+                                    return (n) => (0, t.jsx)(e, { code: l, result: i, ...n });
                                 },
                                 { modalKey: u.Vi },
                             ));
