@@ -22,5 +22,6 @@ var i,
         (i[(i.GAME_TIME = 20)] = "GAME_TIME"),
         (i[(i.GAME_VARIETY = 21)] = "GAME_VARIETY"),
         (i[(i.STAFF = 22)] = "STAFF"),
+        (i[(i.ORB_VOID = 23)] = "ORB_VOID"),
         i);
 n.d(t, {}, { $: r });
