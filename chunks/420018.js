@@ -4262,7 +4262,7 @@ function od(e) {
             onItemClick: A,
             renderChildren: p,
             isNew: g,
-            shopExpiresAt: x,
+            shopUnpublishedAt: x,
         } = e,
         { trackUserProfileWishlistAction: f } = (0, rW.NJ)(),
         I = s.useId(),
@@ -4522,7 +4522,7 @@ function oj(e) {
                     })
                     .map((e) => {
                         let { item: n } = e;
-                        return n.shopExpiresAt;
+                        return n.shopUnpublishedAt;
                     }),
             [b],
         ),
@@ -4557,7 +4557,7 @@ function oj(e) {
                                       source: s,
                                       onItemClick: s === am.uS.WISHLIST ? () => I(i) : void 0,
                                       isNew: s === am.uS.WISHLIST && f(i),
-                                      shopExpiresAt: d && s === am.uS.WISHLIST ? i.shopExpiresAt : void 0,
+                                      shopUnpublishedAt: d && s === am.uS.WISHLIST ? i.shopUnpublishedAt : void 0,
                                   },
                                   i.skuId,
                               );

@@ -4820,7 +4820,7 @@ function a1(e) {
         } = e,
         S = l.useRef(null),
         N = l.useId(),
-        k = (0, aq.Ay)(E ? r.shopExpiresAt : void 0),
+        k = (0, aq.Ay)(E ? r.shopUnpublishedAt : void 0),
         T = l.useRef(x);
     (l.useEffect(() => {
         T.current = x;
@@ -5684,7 +5684,7 @@ function oQ(e) {
     let { items: t, profileOwner: n, guildId: r, showEditingControls: s, ackedAt: o } = e,
         u = C.default.getCurrentUser(),
         { labelsEnabled: d } = (0, oz.Zf)("UserProfileModalV2WishlistGrid"),
-        c = l.useMemo(() => t.filter(aq.Ge).map((e) => e.shopExpiresAt), [t]),
+        c = l.useMemo(() => t.filter(aq.Ge).map((e) => e.shopUnpublishedAt), [t]),
         g = (0, aq.SJ)(c),
         { defaultWishlistId: f } = (0, a.cf)([ee.A], () => ({ defaultWishlistId: ee.A.getFirstWishlistId(n.id) })),
         { isDragging: m } = (0, aA.V)((e) => ({ isDragging: e.isDragging() })),
