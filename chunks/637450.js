@@ -3813,6 +3813,8 @@ class t0 extends L.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", tv, "STEP_STATUS_"],
             },
+            { no: 6, name: "paused_at", kind: "message", T: () => tE.D },
+            { no: 7, name: "paused_duration", kind: "message", T: () => v },
         ]);
     }
     create(e) {
@@ -3844,6 +3846,12 @@ class t0 extends L.G {
                 case 5:
                     r.status = e.int32();
                     break;
+                case 6:
+                    r.pausedAt = tE.D.internalBinaryRead(e, e.uint32(), n, r.pausedAt);
+                    break;
+                case 7:
+                    r.pausedDuration = v.internalBinaryRead(e, e.uint32(), n, r.pausedDuration);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -3860,7 +3868,10 @@ class t0 extends L.G {
         (e.holdDuration && v.internalBinaryWrite(e.holdDuration, t.tag(2, C.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.requireManualApproval && t.tag(3, C.O0.Varint).bool(e.requireManualApproval),
             e.startedAt && tE.D.internalBinaryWrite(e.startedAt, t.tag(4, C.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.status && t.tag(5, C.O0.Varint).int32(e.status));
+            0 !== e.status && t.tag(5, C.O0.Varint).int32(e.status),
+            e.pausedAt && tE.D.internalBinaryWrite(e.pausedAt, t.tag(6, C.O0.LengthDelimited).fork(), n).join(),
+            e.pausedDuration &&
+                v.internalBinaryWrite(e.pausedDuration, t.tag(7, C.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
