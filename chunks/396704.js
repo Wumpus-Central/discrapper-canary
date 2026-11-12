@@ -14,13 +14,13 @@ var a = n(855986),
     g = n(619006),
     h = n(50268),
     x = n(34457),
-    A = n(576705),
-    p = n(292024),
+    p = n(576705),
+    A = n(292024),
     b = n(792996);
 function f(e, t, l) {
-    let s = (0, a.bG)([A.A], () => {
-            let n = A.A.getHighestRole(e);
-            return !A.A.isRoleHigher(e, n, t);
+    let s = (0, a.bG)([p.A], () => {
+            let n = p.A.getHighestRole(e);
+            return !p.A.isRoleHigher(e, n, t);
         }),
         f = [],
         j = t.tags?.guild_connections === null,
@@ -46,7 +46,7 @@ function f(e, t, l) {
                 "duplicate-role",
             ),
         );
-    let v = (0, p.A)(e, t);
+    let v = (0, A.A)(e, t);
     null != v && f.push(v);
     let I = (0, h.A)({ id: t.id, label: b.intl.string(b.t.sMsaLg) });
     if ((null != I && f.push(I), !s && !E && !C)) {

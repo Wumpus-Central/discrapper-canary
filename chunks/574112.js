@@ -6,7 +6,7 @@
     se: () => G,
     v0: () => b,
     b6: () => Q,
-    pu: () => U,
+    pu: () => k,
     Ps: () => q,
     bg: () => L,
     UR: () => v,
@@ -31,29 +31,29 @@ var r = n(115560),
     E = n(188567),
     T = n(723702),
     _ = n(914313),
-    C = n(561844),
-    I = n(590202),
+    I = n(561844),
+    C = n(590202),
     p = n(506988);
 function S(e, t, n) {
     switch (e) {
-        case C.Dq.MAIN_CTA:
+        case I.Dq.MAIN_CTA:
             (0, a.r)({
                 type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                questContentCTA: I.Cy.GAME_STORE_OPEN_GAME_LINK,
+                questContentCTA: C.Cy.GAME_STORE_OPEN_GAME_LINK,
                 ...n,
                 ...t,
             });
             break;
-        case C.Dq.RATING_STAT:
+        case I.Dq.RATING_STAT:
             (0, a.r)({
                 type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                questContentCTA: I.Cy.GAME_STORE_OPEN_REVIEWS,
+                questContentCTA: C.Cy.GAME_STORE_OPEN_REVIEWS,
                 ...n,
                 ...t,
             });
             break;
-        case C.Dq.SEE_MORE:
-            (0, a.r)({ type: s.F.CLICK_INTERNAL, questContentCTA: I.Cy.EXPAND, ...n, ...t });
+        case I.Dq.SEE_MORE:
+            (0, a.r)({ type: s.F.CLICK_INTERNAL, questContentCTA: C.Cy.EXPAND, ...n, ...t });
     }
 }
 var m = n(651892),
@@ -127,7 +127,7 @@ function M(e) {
     }
     return null;
 }
-function k(e) {
+function U(e) {
     let {
         link: t,
         directLink: n,
@@ -140,7 +140,7 @@ function k(e) {
     } = e;
     return (_.OO.getConfig({ location: "quest_open_game_link" }).enabled, s && (0, o.A)(t), Promise.resolve(!1));
 }
-function U(e, t) {
+function k(e, t) {
     let n,
         i,
         l,
@@ -165,7 +165,7 @@ function U(e, t) {
     let { impressionId: A } = t,
         T = null != A ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     (E._.dispatch(h.jej.QUEST_GAME_LINK_OPENED),
-        k({
+        U({
             link: o,
             directLink: f,
             inlineStoreParams:
@@ -173,7 +173,7 @@ function U(e, t) {
                     ? null
                     : M({ url: (0, m.Jx)(e.config), android: i.android, ios: i.ios }),
             trackOverlayEvent: (n, r, u, i, l) =>
-                (0, C.eA)({
+                (0, I.eA)({
                     quest: e,
                     trackingCtx: t,
                     inlineStoreAppId: r,
@@ -204,7 +204,7 @@ function U(e, t) {
                       type: s.F.CLICK_INTERNAL,
                       adCreativeType: u.p.QUEST,
                       adCreativeId: e.id,
-                      questContentCTA: I.Cy.OPEN_CUSTOM_APP_STORE,
+                      questContentCTA: C.Cy.OPEN_CUSTOM_APP_STORE,
                       surfaceId: t.content,
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
@@ -242,7 +242,7 @@ function D(e, t) {
                       type: s.F.CLICK_INTERNAL,
                       adCreativeType: u,
                       adCreativeId: r,
-                      questContentCTA: I.Cy.OPEN_CUSTOM_APP_STORE,
+                      questContentCTA: C.Cy.OPEN_CUSTOM_APP_STORE,
                       surfaceId: t.content,
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
@@ -263,12 +263,12 @@ function D(e, t) {
             ((0, o.A)(f), g(!1));
             return;
         }
-        k({
+        U({
             link: f,
             directLink: A,
             inlineStoreParams: m,
             trackOverlayEvent: (e, n, i, l, o) =>
-                (0, C.YE)({
+                (0, I.YE)({
                     adContentId: r,
                     adCreativeType: u,
                     trackingCtx: t,

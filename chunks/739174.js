@@ -11,8 +11,8 @@ var i = n(477900),
     g = n(97808),
     h = n(778712),
     x = n(866665),
-    A = n(194261),
-    p = n(442433),
+    p = n(194261),
+    A = n(442433),
     b = n(392054),
     f = n(168186),
     j = n(47167),
@@ -50,7 +50,7 @@ function M(e) {
             },
             [m, t, n],
         ),
-        A = l.useCallback(
+        p = l.useCallback(
             (e) => {
                 n !== m && o(e);
             },
@@ -59,7 +59,7 @@ function M(e) {
     return null == g || null == h
         ? null
         : (0, i.jsxs)("div", {
-              onContextMenu: A,
+              onContextMenu: p,
               className: R.Cv,
               children: [
                   (0, i.jsx)(g, {
@@ -85,7 +85,7 @@ function _(e) {
             (e) => {
                 null != t &&
                     null != d &&
-                    (0, p.L3)(e, async () => {
+                    (0, A.L3)(e, async () => {
                         let { default: e } = await n.e(41072).then(n.bind(n, 165747));
                         return (n) => (0, i.jsx)(e, { ...n, guild: t, role: d });
                     });
@@ -153,7 +153,7 @@ function W(e) {
         text: t,
         children: (0, i.jsx)("div", {
             className: R.hz,
-            children: (0, i.jsx)(A.LockIcon, { size: "xs", color: "currentColor" }),
+            children: (0, i.jsx)(p.LockIcon, { size: "xs", color: "currentColor" }),
         }),
     });
 }
@@ -167,7 +167,7 @@ n.d(
             o()(d, "No lockTooltipText provided while isLocked=true");
             let u = l.useCallback(
                 (e) => {
-                    (0, p.L3)(e, async () => {
+                    (0, A.L3)(e, async () => {
                         let { default: e } = await n.e(715687).then(n.bind(n, 646938));
                         return (t) => (0, i.jsx)(e, { ...t, id: s, label: L.intl.string(L.t.oJ1Muw) });
                     });

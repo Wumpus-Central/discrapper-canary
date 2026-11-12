@@ -1,4 +1,4 @@
-n.d(t, { A: () => ep });
+n.d(t, { A: () => eA });
 var i,
     l = n(477900),
     s = n(582128),
@@ -12,8 +12,8 @@ var i,
     g = n(821609),
     h = n(866665),
     x = n(392054),
-    A = n(168186),
-    p = n(495273),
+    p = n(168186),
+    A = n(495273),
     b = n(696451),
     f = n(317525),
     j = n(71393),
@@ -111,7 +111,7 @@ function ec(e) {
     let u = (0, c.bG)([f.A], () => f.A.getSortedRoles(i)),
         [m, g] = s.useState(new Set()),
         h = s.useMemo(() => {
-            let e = (0, A.Ap)(i),
+            let e = (0, p.Ap)(i),
                 t = u.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
             return Object.values(r)
                 .filter((e) => e.canRead)
@@ -144,7 +144,7 @@ function ec(e) {
                     }
                 });
         }, [i, r, u]),
-        p = s.useCallback(
+        A = s.useCallback(
             (e, t) => {
                 n({}, [(0, J.Eu)(e, t)]);
             },
@@ -176,7 +176,7 @@ function ec(e) {
                       guild: d,
                       commandId: t,
                       onChange: (t) => b(e.id, e.type, t),
-                      onRemove: () => p(e.id, e.type),
+                      onRemove: () => A(e.id, e.type),
                       overwrite: e,
                       integration: E,
                       canShowMigrationTooltip: v,
@@ -202,9 +202,9 @@ function ed(e) {
             canShowMigrationTooltip: d,
             hasAccessToMutatePermissions: u,
         } = e,
-        m = o.id === n.id || o.id === (0, A.Ap)(n.id),
+        m = o.id === n.id || o.id === (0, p.Ap)(n.id),
         g = c?.application?.bot?.username,
-        p = !o.canWrite || !u,
+        A = !o.canWrite || !u,
         b = K.default.getId();
     u
         ? o.canWrite ||
@@ -224,12 +224,12 @@ function ed(e) {
     let j = s.useRef(null),
         N = (0, l.jsx)(h.m, {
             text: t,
-            shouldShow: p,
+            shouldShow: A,
             position: "left",
             children: (0, l.jsx)("div", {
                 ref: j,
                 children: (0, l.jsx)(ea, {
-                    isDisabled: p,
+                    isDisabled: A,
                     currentValue: o.permission,
                     onChange: f
                         ? (e) => {
@@ -259,7 +259,7 @@ function ed(e) {
             children: [
                 (0, l.jsx)("div", {
                     className: eo.MB,
-                    children: (0, l.jsx)(X.A, { guild: n, id: o.id, type: o.type, isLocked: p, lockTooltipText: t }),
+                    children: (0, l.jsx)(X.A, { guild: n, id: o.id, type: o.type, isLocked: A, lockTooltipText: t }),
                 }),
                 (0, l.jsxs)("div", {
                     className: eo.ev,
@@ -295,8 +295,8 @@ var em = n(157559),
         i),
     ex = n(636547);
 n(73510);
-var eA = n(160253);
-function ep(e) {
+var ep = n(160253);
+function eA(e) {
     let {
             applicationId: t,
             commandId: i,
@@ -317,7 +317,7 @@ function ep(e) {
                 return (
                     null != e &&
                     null != t &&
-                    (0, A.zl)({
+                    (0, p.zl)({
                         PermissionStore: N.A,
                         guild: e,
                         selfMember: t,
@@ -344,7 +344,7 @@ function ep(e) {
                     null != t &&
                     null != n &&
                     (null != i
-                        ? (0, A.zl)({
+                        ? (0, p.zl)({
                               PermissionStore: N.A,
                               guild: t,
                               selfMember: n,
@@ -352,7 +352,7 @@ function ep(e) {
                               commandLevelPermissions: e,
                               defaultMemberPermissions: w?.defaultMemberPermissions,
                           })
-                        : (0, A.zl)({ PermissionStore: N.A, guild: t, selfMember: n, applicationLevelPermissions: e }))
+                        : (0, p.zl)({ PermissionStore: N.A, guild: t, selfMember: n, applicationLevelPermissions: e }))
                 );
             },
             [a, w, i, T],
@@ -367,7 +367,7 @@ function ep(e) {
                     if (e.type === x.RA.USER) i = eh.REMOVE_SELF;
                     else {
                         let t = e.id;
-                        if (((i = eh.REMOVE_ROLE), (0, p.N8)(a, t))) l = "@everyone";
+                        if (((i = eh.REMOVE_ROLE), (0, A.N8)(a, t))) l = "@everyone";
                         else {
                             let e = f.A.getRole(a, t);
                             l = null != e ? e.name : "role";
@@ -375,7 +375,7 @@ function ep(e) {
                     }
                 } else {
                     let t = Object.values(e)[0].id;
-                    if (((i = eh.DENY_ROLE), (0, p.N8)(a, t))) l = "@everyone";
+                    if (((i = eh.DENY_ROLE), (0, A.N8)(a, t))) l = "@everyone";
                     else {
                         let e = f.A.getRole(a, t);
                         l = null != e ? e.name : "role";
@@ -457,7 +457,7 @@ function ep(e) {
                     let { default: e } = await n.e(529384).then(n.bind(n, 519387)),
                         t = w.defaultMemberPermissions;
                     return (
-                        o.aI(t, A.Cq) && (t = k.xBc.ADMINISTRATOR),
+                        o.aI(t, p.Cq) && (t = k.xBc.ADMINISTRATOR),
                         (n) => (0, l.jsx)(e, { ...n, defaultMemberPermissions: t })
                     );
                 }),
@@ -492,10 +492,10 @@ function ep(e) {
                 : null,
             L
                 ? (0, l.jsxs)("div", {
-                      className: eA.Yg,
+                      className: ep.Yg,
                       children: [
-                          (0, l.jsx)(m.CircleInformationIcon, { size: "sm", color: "currentColor", className: eA.Kk }),
-                          (0, l.jsx)("span", { className: eA.iU, children: O.intl.format(O.t["2889Gq"], {}) }),
+                          (0, l.jsx)(m.CircleInformationIcon, { size: "sm", color: "currentColor", className: ep.Kk }),
+                          (0, l.jsx)("span", { className: ep.iU, children: O.intl.format(O.t["2889Gq"], {}) }),
                           (0, l.jsx)(g.$, {
                               variant: "secondary",
                               size: "sm",
@@ -529,7 +529,7 @@ function ep(e) {
                             inModal: v,
                             title: e.title,
                             children: (0, l.jsx)("div", {
-                                className: v ? void 0 : eA.qI,
+                                className: v ? void 0 : ep.qI,
                                 children: (0, l.jsx)(ec, {
                                     guildId: a,
                                     commandId: i,
@@ -558,7 +558,7 @@ function eb(e) {
                     name: (0, v.m1)(e.channel, y.default, T.A),
                     canManage: N.A.can(k.xBc.MANAGE_ROLES, e.channel),
                 }));
-                return (i.unshift({ id: (0, A.Ap)(e), name: O.intl.string(O.t["7YqSGx"]), canManage: !0 }), i);
+                return (i.unshift({ id: (0, p.Ap)(e), name: O.intl.string(O.t["7YqSGx"]), canManage: !0 }), i);
             }, [e]),
             [n, i] = s.useState(""),
             l = s.useMemo(() => {

@@ -1,4 +1,4 @@
-(n.d(t, { bg: () => p, FW: () => I, RH: () => C }), n(134528), n(947204));
+(n.d(t, { bg: () => p, FW: () => C, RH: () => I }), n(134528), n(947204));
 var r,
     u = (((r = {}).AD_ATTRIBUTION_KIT = "aak"), r),
     i = n(626584),
@@ -19,7 +19,7 @@ function T(e, t) {
 function _(e) {
     null != e && (0, o.bg)(e).catch(() => {});
 }
-function C(e) {
+function I(e) {
     let { impressionId: t, metadataSealed: n, framework: r } = e,
         u = { framework: r, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
     (A.set(t, u),
@@ -32,7 +32,7 @@ function C(e) {
                     T(t, u));
                 return;
             }
-            let C = await (async function (e) {
+            let I = await (async function (e) {
                 let { metadataSealed: t, impressionId: n, specs: r, signal: u } = e;
                 try {
                     return (
@@ -52,12 +52,12 @@ function C(e) {
                 }
             })({ metadataSealed: n, impressionId: t, specs: [i], signal: u.signAbort.signal });
             if (!E(t, u)) return;
-            let I = null != C ? (C.at(0)?.payload ?? null) : null;
-            if (null == I) {
+            let C = null != I ? (I.at(0)?.payload ?? null) : null;
+            if (null == C) {
                 ((0, l.$8)(l.vI.SIGN_FAILED, r, t), A.delete(t));
                 return;
             }
-            let p = await (0, o.EO)(t, r, JSON.stringify(I));
+            let p = await (0, o.EO)(t, r, JSON.stringify(C));
             if (!E(t, u)) return void _(p);
             if (null == p) {
                 ((0, l.$8)(l.vI.NO_TOKEN, r, t), A.delete(t));
@@ -68,7 +68,7 @@ function C(e) {
             T(t, u);
         })));
 }
-async function I(e) {
+async function C(e) {
     let { impressionId: t } = e,
         n = (0, o.BU)();
     if (null == n || null == d[n]) return;

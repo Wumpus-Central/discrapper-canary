@@ -12,8 +12,8 @@ var i = n(582128),
     g = n(317525),
     h = n(71393),
     x = n(576705),
-    A = n(287809),
-    p = n(403362),
+    p = n(287809),
+    A = n(403362),
     b = n(803378),
     f = n(200662),
     j = n(652215);
@@ -66,7 +66,7 @@ n.d(
                         let n = (0, o.bG)([h.A], () => h.A.getGuild(e), [e]);
                         s()(null != n, "guild must be present to be editing its integration settings");
                         let l = (0, o.bG)([x.A], () => x.A.getHighestRole(n), [n]),
-                            a = (0, o.bG)([A.default], () => A.default.getCurrentUser()?.id);
+                            a = (0, o.bG)([p.default], () => p.default.getCurrentUser()?.id);
                         s()(null != a, "useComputePermissions: currentUserId must not be null");
                         let r = a === n.ownerId,
                             {
@@ -99,7 +99,7 @@ n.d(
                                     Object.fromEntries(
                                         c
                                             .map(m.A.getChannel)
-                                            .filter(p.Vq)
+                                            .filter(A.Vq)
                                             .map((e) => [e.id, e]),
                                     ),
                                 [c],
@@ -110,18 +110,18 @@ n.d(
                                     Object.fromEntries(
                                         b
                                             .map((t) => g.A.getRole(e, t))
-                                            .filter(p.Vq)
+                                            .filter(A.Vq)
                                             .map((e) => [e.id, e]),
                                     ),
                                 [b, e],
                             ),
                             C = (0, o.cf)(
-                                [A.default],
+                                [p.default],
                                 () =>
                                     Object.fromEntries(
                                         f
-                                            .map(A.default.getUser)
-                                            .filter(p.Vq)
+                                            .map(p.default.getUser)
+                                            .filter(A.Vq)
                                             .map((e) => [e.id, e]),
                                     ),
                                 [f],

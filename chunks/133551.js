@@ -12,8 +12,8 @@ var i,
     g = n(270003),
     h = n(225419),
     x = n(503698),
-    A = n.n(x),
-    p = n(785007),
+    p = n.n(x),
+    A = n(785007),
     b = n(789645),
     f = n(933832),
     j = n(88187),
@@ -24,9 +24,9 @@ var i,
 let I = Object.keys(v);
 function T(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a, permissionName: r } = e,
-        { ref: o, ...c } = (0, p._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
+        { ref: o, ...c } = (0, A._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
     return (0, l.jsx)("div", {
-        className: A()(C.Os, { [C.r9]: s }),
+        className: p()(C.Os, { [C.r9]: s }),
         ref: o,
         id: a,
         ...c,
@@ -62,9 +62,9 @@ function y(e) {
             ((i = E.intl.string(E.t.ujC3ZS)), (t = j.SlashIcon), (n = C.le));
     }
     let c = null != o ? E.intl.formatToPlainString(E.t.KgPfJx, { permissionName: o, action: i }) : i,
-        d = (0, p.Gx)({ isSelected: r, label: c });
+        d = (0, A.Gx)({ isSelected: r, label: c });
     return (0, l.jsx)(N.D, {
-        className: A()(C.AS, n, { [C.wH]: r }),
+        className: p()(C.AS, n, { [C.wH]: r }),
         onClick: () => a(s),
         ...d,
         children: (0, l.jsx)(t, { color: "currentColor", size: "xs" }),
@@ -117,8 +117,8 @@ class w extends s.PureComponent {
         let { title: n, description: i, flag: s } = e,
             { permissions: a, locked: r, permissionRender: g } = this.props,
             x = g?.(s),
-            A = !!(r || x),
-            p = "string" == typeof x && "" !== x ? o.DenyIcon : void 0,
+            p = !!(r || x),
+            A = "string" == typeof x && "" !== x ? o.DenyIcon : void 0,
             b =
                 null == a
                     ? (0, l.jsx)(
@@ -127,8 +127,8 @@ class w extends s.PureComponent {
                               label: n,
                               permissionName: n,
                               description: (0, h.Nk)(i),
-                              icon: p,
-                              disabled: A,
+                              icon: A,
+                              disabled: p,
                               value: this.getOverwriteValue(s),
                               onChange: (e) => this.handleChange(s, e),
                           },
@@ -139,8 +139,8 @@ class w extends s.PureComponent {
                           {
                               label: n,
                               description: (0, h.Nk)(i),
-                              icon: p,
-                              disabled: A,
+                              icon: A,
+                              disabled: p,
                               checked: this.getPermissionValue(s, a),
                               onChange: (e) => this.handleChange(s, e),
                           },
