@@ -1,3 +1,35 @@
+.grid_w_ioCB {
+    align-items: start;
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: 1fr
+}
+
+@container guild-space-page (min-width: 800px) {
+    .grid_w_ioCB {
+        grid-template-columns: 2fr 1fr
+    }
+
+    .column_w_ioCB:first-child {
+        grid-column: 1
+    }
+
+    .column_w_ioCB:nth-child(2) {
+        grid-column: 2
+    }
+}
+
+.column_w_ioCB {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    min-width: 0
+}
+
+.column_w_ioCB:empty {
+    display: none
+}
+
 .header_ESecGU {
     align-items: flex-end;
     background-color: var(--background-surface-high);
@@ -143,4 +175,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=b5838910488778f8.css.map*/
+/*# sourceMappingURL=b023e7665772ed62.css.map*/

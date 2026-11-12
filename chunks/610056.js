@@ -629,7 +629,7 @@ let e6 = (0, F.Fe)({
             n.e(505866),
             n.e(291329),
             n.e(64769),
-            n.e(329172),
+            n.e(506933),
             n.e(992956),
             n.e(880150),
             n.e(490743),
@@ -649,7 +649,7 @@ let e6 = (0, F.Fe)({
             n.e(678749),
             n.e(327545),
             n.e(163466),
-            n.e(940298),
+            n.e(520218),
             n.e(738015),
             n.e(234017),
             n.e(629972),
@@ -726,7 +726,6 @@ let e6 = (0, F.Fe)({
             n.e(787672),
             n.e(522517),
             n.e(996830),
-            n.e(165595),
             n.e(401590),
             n.e(213653),
             n.e(466354),
@@ -736,6 +735,7 @@ let e6 = (0, F.Fe)({
             n.e(263765),
             n.e(776750),
             n.e(76705),
+            n.e(165595),
             n.e(967288),
             n.e(494768),
             n.e(401827),
@@ -904,7 +904,7 @@ function e7(e) {
         children: (0, i.jsx)(W.A, { className: e3.dx, obscured: !0 === A, children: f }),
     });
 }
-function e4(e) {
+function e8(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, f.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, f.bG)([$.default, z.default], () => (null != $.default.getId() ? z.default.getCurrentUser() : null)),
@@ -971,7 +971,7 @@ function e4(e) {
         })
     );
 }
-function e8(e) {
+function e4(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = b.A.get(t),
@@ -1287,7 +1287,7 @@ function te(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e9, {}) };
         case "CONNECT_ACCOUNT":
-            ((t = (0, i.jsx)(e4, { clientId: A, platformType: eE, platformName: tu })),
+            ((t = (0, i.jsx)(e8, { clientId: A, platformType: eE, platformName: tu })),
                 (tA = !1),
                 (tf = !1),
                 (th = !1),
@@ -1319,7 +1319,7 @@ function te(e) {
                 children: [
                     null != ex &&
                         eF &&
-                        (0, i.jsx)(e8, {
+                        (0, i.jsx)(e4, {
                             platformType: ex.type,
                             platformName: tu,
                             connectedAccount: ex,
