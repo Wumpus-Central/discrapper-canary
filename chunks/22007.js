@@ -1,15 +1,15 @@
 var e = r(278416),
     u = r(403581),
-    i = r(604913);
+    l = r(604913);
 r.d(
     t,
     {},
     {
         s: function (n) {
             switch (n) {
-                case i.cR.TAG:
+                case l.cR.TAG:
                     return e.TagIcon;
-                case i.cR.NITRO:
+                case l.cR.NITRO:
                     return u.NitroWheelIcon;
                 default:
                     return null;

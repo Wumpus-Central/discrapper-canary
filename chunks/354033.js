@@ -15,8 +15,8 @@ var i = n(503698),
     f = n(371794),
     E = n(500345),
     S = n(599941),
-    I = n(320137),
-    g = n(417360),
+    g = n(320137),
+    I = n(417360),
     y = n(759625),
     A = n(2242),
     P = n(792996),
@@ -29,9 +29,9 @@ n.d(
         X: function (e) {
             let { onClose: t, listing: n, guildId: i } = e,
                 r = (0, a.bG)([C.A], () => C.A.getGuild(i), [i]),
-                o = (0, I.A)(i).filter((e) => e.roles.includes(n.role_id)),
+                o = (0, g.A)(i).filter((e) => e.roles.includes(n.role_id)),
                 u = n.role_benefits.benefits.filter(E.B1).slice(0, null === o.length ? 4 : 3),
-                p = (0, g.A)(u).slice(0, null === o.length ? 4 : 3);
+                p = (0, I.A)(u).slice(0, null === o.length ? 4 : 3);
             return (0, l.jsxs)("div", {
                 className: v.RP,
                 children: [

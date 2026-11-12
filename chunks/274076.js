@@ -25,11 +25,11 @@ n.d(
                     setSoundEffect: E,
                 } = (0, s.Pv)(),
                 S = (0, u.lo)(n, t),
-                I = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-                g = S !== u.tB.DEFAULT;
+                g = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+                I = S !== u.tB.DEFAULT;
             return (0, l.jsxs)("div", {
                 children: [
-                    g &&
+                    I &&
                         (0, l.jsxs)("div", {
                             className: p.Os,
                             children: [
@@ -47,7 +47,7 @@ n.d(
                                               })
                                             : (0, l.jsx)(a.y, { className: p.u1 }),
                                 }),
-                                I &&
+                                g &&
                                     (0, l.jsxs)("div", {
                                         className: r()(p.b7, p.Ow),
                                         children: [

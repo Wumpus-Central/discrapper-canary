@@ -1,4 +1,4 @@
-r.d(t, { i: () => O });
+r.d(t, { i: () => k });
 var n = r(290309),
     i = r(575241),
     o = r(582128);
@@ -276,18 +276,18 @@ var h = !1,
     y = r(370725),
     b = r(723651),
     m = r(816885);
-function I(e, t, r) {
+function D(e, t, r) {
     return (
         t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
-var D = (function () {
+var I = (function () {
         var e;
         function t(e) {
             var r = this;
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            (I(
+            (D(
                 this,
                 "hooks",
                 (0, y.i)({
@@ -305,21 +305,21 @@ var D = (function () {
                     },
                 }),
             ),
-                I(this, "handlerId", null),
-                I(this, "dragSourceRef", null),
-                I(this, "dragSourceNode", void 0),
-                I(this, "dragSourceOptionsInternal", null),
-                I(this, "dragSourceUnsubscribe", void 0),
-                I(this, "dragPreviewRef", null),
-                I(this, "dragPreviewNode", void 0),
-                I(this, "dragPreviewOptionsInternal", null),
-                I(this, "dragPreviewUnsubscribe", void 0),
-                I(this, "lastConnectedHandlerId", null),
-                I(this, "lastConnectedDragSource", null),
-                I(this, "lastConnectedDragSourceOptions", null),
-                I(this, "lastConnectedDragPreview", null),
-                I(this, "lastConnectedDragPreviewOptions", null),
-                I(this, "backend", void 0),
+                D(this, "handlerId", null),
+                D(this, "dragSourceRef", null),
+                D(this, "dragSourceNode", void 0),
+                D(this, "dragSourceOptionsInternal", null),
+                D(this, "dragSourceUnsubscribe", void 0),
+                D(this, "dragPreviewRef", null),
+                D(this, "dragPreviewNode", void 0),
+                D(this, "dragPreviewOptionsInternal", null),
+                D(this, "dragPreviewUnsubscribe", void 0),
+                D(this, "lastConnectedHandlerId", null),
+                D(this, "lastConnectedDragSource", null),
+                D(this, "lastConnectedDragSourceOptions", null),
+                D(this, "lastConnectedDragPreview", null),
+                D(this, "lastConnectedDragPreviewOptions", null),
+                D(this, "backend", void 0),
                 (this.backend = e));
         }
         return (
@@ -495,7 +495,7 @@ var D = (function () {
         );
     })(),
     S = r(648850);
-function O(e, t) {
+function k(e, t) {
     var r,
         a,
         u,
@@ -505,12 +505,12 @@ function O(e, t) {
         y,
         b,
         m,
-        I = (0, f.I)(e, t);
+        D = (0, f.I)(e, t);
     (0, l.V)(
-        !I.begin,
+        !D.begin,
         "useDrag::spec.begin was deprecated in v14. Replace spec.begin() with spec.item(). (see more here - https://react-dnd.github.io/react-dnd/docs/api/use-drag)",
     );
-    var O =
+    var k =
             ((r = (0, s.u)()),
             (0, o.useMemo)(
                 function () {
@@ -518,13 +518,13 @@ function O(e, t) {
                 },
                 [r],
             )),
-        k =
-            ((a = I.options),
-            (u = I.previewOptions),
+        O =
+            ((a = D.options),
+            (u = D.previewOptions),
             (g = (0, s.u)()),
             (h = (0, o.useMemo)(
                 function () {
-                    return new D(g.getBackend());
+                    return new I(g.getBackend());
                 },
                 [g],
             )),
@@ -557,23 +557,23 @@ function O(e, t) {
         (p = (0, s.u)()),
         (y = (0, o.useMemo)(
             function () {
-                return new c(I, O, k);
+                return new c(D, k, O);
             },
-            [O, k],
+            [k, O],
         )),
         (0, o.useEffect)(
             function () {
-                y.spec = I;
+                y.spec = D;
             },
-            [I],
+            [D],
         ),
         (b = y),
         (m = (0, o.useMemo)(
             function () {
-                var e = I.type;
+                var e = D.type;
                 return ((0, l.V)(null != e, "spec.type must be defined"), e);
             },
-            [I],
+            [D],
         )),
         (0, i.E)(
             function () {
@@ -632,24 +632,24 @@ function O(e, t) {
                             })(),
                         r = t[0],
                         i = t[1];
-                    return (O.receiveHandlerId(r), k.receiveHandlerId(r), i);
+                    return (k.receiveHandlerId(r), O.receiveHandlerId(r), i);
                 }
             },
-            [p, O, k, b, m],
+            [p, k, O, b, m],
         ),
         [
-            (0, S.j)(I.collect, O, k),
+            (0, S.j)(D.collect, k, O),
             (0, o.useMemo)(
                 function () {
-                    return k.hooks.dragSource();
+                    return O.hooks.dragSource();
                 },
-                [k],
+                [O],
             ),
             (0, o.useMemo)(
                 function () {
-                    return k.hooks.dragPreview();
+                    return O.hooks.dragPreview();
                 },
-                [k],
+                [O],
             ),
         ]
     );

@@ -1,4 +1,4 @@
-n.d(t, { iB: () => E, Y0: () => S, A: () => I });
+n.d(t, { iB: () => E, Y0: () => S, A: () => g });
 var l = n(582128),
     i = n(164636),
     r = n(316363),
@@ -166,9 +166,9 @@ function S(e) {
         n,
         { paymentSourceId: i, setPaymentSourceId: a, location: u, isReady: d = !0, subscriptionPaymentSourceId: E } = e,
         { enabled: S } = (0, s.c)({ location: u }),
-        { enabled: I } = (0, o.U)({ location: u }),
+        { enabled: g } = (0, o.U)({ location: u }),
         {
-            pendingPaymentSourceId: g,
+            pendingPaymentSourceId: I,
             hasInitialPaymentSourceSeed: y,
             hasAddedPaymentSourceThisSession: A,
             applyWalletBalance: P,
@@ -190,7 +190,7 @@ function S(e) {
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             dropdownPaymentSources: e.getDropdownPaymentSources(),
             storeGiftCardWallet: e.getGiftCardWallet(),
-            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: I, giftCardsEnabled: S }),
+            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: g, giftCardsEnabled: S }),
         })),
         R = S ? N : null,
         O = j ? null : R,
@@ -209,13 +209,13 @@ function S(e) {
                 subscriptionPaymentSourceId: E,
                 giftCardWallet: O,
                 isReady: d,
-                pendingPaymentSourceId: g,
+                pendingPaymentSourceId: I,
                 paymentSourceId: i,
                 giftCardsEnabled: S,
                 hasInitialPaymentSourceSeed: y,
                 hasAddedPaymentSourceThisSession: A,
             }),
-            [T, b, E, O, d, g, i, S, y, A],
+            [T, b, E, O, d, I, i, S, y, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new p(U), [U])),
@@ -321,7 +321,7 @@ function S(e) {
         isSplitPaymentMode: j,
     };
 }
-function I(e) {
+function g(e) {
     let { location: t, message: n } = e,
         o = (0, i.bG)([a.A], () => {
             let e = a.A.getPremiumTypeSubscription();

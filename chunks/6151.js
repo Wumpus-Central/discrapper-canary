@@ -27,8 +27,8 @@ l.d(
                     value: t,
                     options: l,
                     onChange: E,
-                    onNew: y,
-                    noticeMessage: N,
+                    onNew: N,
+                    noticeMessage: y,
                     newPaymentMethodOptionLabel: T,
                     disabled: I = !1,
                     error: C,
@@ -81,9 +81,9 @@ l.d(
                 }, [l, T]),
                 _ = r.useCallback(
                     (e) => {
-                        e === g ? y() : null != e && E(e);
+                        e === g ? N() : null != e && E(e);
                     },
-                    [y, E],
+                    [N, E],
                 ),
                 D = (0, n.jsxs)(n.Fragment, {
                     children: [
@@ -100,7 +100,7 @@ l.d(
                             fullWidth: !0,
                             variant: "unsupported_payment_modal_card",
                         }),
-                        null != N
+                        null != y
                             ? (0, n.jsxs)("div", {
                                   className: b.T4,
                                   children: [
@@ -111,7 +111,7 @@ l.d(
                                       (0, n.jsx)(x.E, {
                                           variant: "body-xs/normal",
                                           color: "text-feedback-info",
-                                          children: "string" == typeof N ? p.A.parse(N, !1, { allowLinks: !0 }) : N,
+                                          children: "string" == typeof y ? p.A.parse(y, !1, { allowLinks: !0 }) : y,
                                       }),
                                   ],
                               })
@@ -121,7 +121,7 @@ l.d(
             return 0 !== l.length || I
                 ? D
                 : (0, n.jsx)(h.D, {
-                      onClick: y,
+                      onClick: N,
                       "aria-label": j.intl.string(v.default.rNF29q),
                       className: b.OV,
                       children: D,

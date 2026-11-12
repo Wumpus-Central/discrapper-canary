@@ -327,7 +327,7 @@ function Y(e) {
         null
     );
 }
-function q() {
+function z() {
     let e = (0, c.Ay)((e) => e.step),
         t = r.useRef(e),
         {
@@ -365,7 +365,7 @@ function q() {
               ],
           }));
 }
-var z = n(428865),
+var q = n(428865),
     Q = n(624210),
     V = n(949192);
 class X {
@@ -375,7 +375,7 @@ class X {
         ((this.checkoutStore = e), (this.isPatchingRef = t));
     }
     shouldPatchOrder(e) {
-        return !(0, z.L)(e);
+        return !(0, q.L)(e);
     }
     persistedPaymentSourceId(e) {
         let t = e.billing_facet;
@@ -834,7 +834,7 @@ function ev(e) {
                 paymentSources: M,
                 initialPaymentSourceId: i.sharedCheckoutParams.initialPaymentSourceId,
             }),
-            N && (0, l.jsx)(q, {}),
+            N && (0, l.jsx)(z, {}),
             j && (0, l.jsx)(T, {}),
             U && (0, l.jsx)(B, {}),
             w && (0, l.jsx)(F, {}),

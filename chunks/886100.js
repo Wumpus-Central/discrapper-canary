@@ -17,9 +17,9 @@ var n,
         (n.ADD_WIDGET_PREVIEW_CONTAINED = "add_widget_preview_contained"),
         n),
     u = l(108089);
-let m = s.createContext(null);
-function c() {
-    let e = s.useContext(m);
+let c = s.createContext(null);
+function m() {
+    let e = s.useContext(c);
     if (null == e) throw Error("useLayoutRendererContext must be used within a LayoutRenderer");
     return e;
 }
@@ -67,8 +67,8 @@ function T(e) {
             imagePosition: o = "right",
             hideLabel: u = !1,
         } = e,
-        { resolveFieldValue: m, numberFormat: d, renderText: f } = c(),
-        h = (0, x.Hx)(t, m, d, s, u);
+        { resolveFieldValue: c, numberFormat: d, renderText: f } = m(),
+        h = (0, x.Hx)(t, c, d, s, u);
     if ("hidden" === h.status) return null;
     if ("skeleton" === h.status) return (0, a.jsx)(N, { variant: l, className: i });
     let T = null != h.icon ? (0, a.jsx)(_, { media: h.icon, variant: l }) : null;
@@ -84,7 +84,7 @@ function T(e) {
 var E = l(640056);
 function I(e) {
     let { variant: t = "default", textColor: l } = e,
-        { surfaceConfig: n } = c(),
+        { surfaceConfig: n } = m(),
         s = "badge" === t;
     return (0, a.jsx)("div", {
         className: E.z,
@@ -137,7 +137,7 @@ function C(e) {
 var O = l(170118);
 function S(e) {
     let { small: t = !1 } = e,
-        { surfaceConfig: l, resolveFieldValue: n } = c(),
+        { surfaceConfig: l, resolveFieldValue: n } = m(),
         s = n(l.components.contained_image?.fields.image, [y.o.MEDIA]);
     return (0, a.jsx)(C, {
         small: t,
@@ -162,7 +162,7 @@ function M(e) {
 var D = l(506619),
     R = l(15555);
 function G(e) {
-    let { surfaceConfig: t, resolveFieldValue: l } = c(),
+    let { surfaceConfig: t, resolveFieldValue: l } = m(),
         n = l(t.components.hero_image?.fields.image, [y.o.MEDIA]);
     return (0, a.jsx)(C, {
         ...e,
@@ -175,20 +175,20 @@ function G(e) {
         }),
     });
 }
-var w = l(123292),
-    P = l(402233);
+var P = l(123292),
+    w = l(402233);
 function k(e) {
     let { image: t } = e,
-        { header: l, surfaceConfig: n, onClick: s } = c();
+        { header: l, surfaceConfig: n, onClick: s } = m();
     return (0, a.jsxs)("div", {
-        className: P.zr,
+        className: w.zr,
         children: [
             (0, a.jsxs)("div", {
-                className: P.rf,
+                className: w.rf,
                 children: [
                     l,
                     (0, a.jsxs)("div", {
-                        className: P.Qs,
+                        className: w.Qs,
                         children: [
                             (0, a.jsx)(T, {
                                 component: n.components.stat,
@@ -196,7 +196,7 @@ function k(e) {
                                 lineClamp: 1,
                                 required: !0,
                             }),
-                            (0, a.jsx)(w.Q, {
+                            (0, a.jsx)(P.Q, {
                                 textVariant: "body-xs/normal",
                                 variant: "secondary",
                                 text: "View All Stats",
@@ -212,7 +212,7 @@ function k(e) {
 }
 var L = l(425367);
 function U() {
-    let { surfaceConfig: e, resolveFieldValue: t } = c(),
+    let { surfaceConfig: e, resolveFieldValue: t } = m(),
         l = t(e.components.contained_image?.fields.image, [y.o.MEDIA]);
     return (0, a.jsx)(k, {
         image: (0, a.jsx)("div", {
@@ -224,23 +224,23 @@ function U() {
         }),
     });
 }
-var W = l(853512);
-function B() {
-    let { surfaceConfig: e, resolveFieldValue: t } = c(),
+var B = l(853512);
+function W() {
+    let { surfaceConfig: e, resolveFieldValue: t } = m(),
         l = t(e.components.hero_image?.fields.image, [y.o.MEDIA]);
     return (0, a.jsx)(k, {
         image:
             null != l
                 ? (0, a.jsx)("div", {
-                      className: W.Xr,
-                      children: (0, a.jsx)(M, { media: l.media, className: v()(W.c8, D.g) }),
+                      className: B.Xr,
+                      children: (0, a.jsx)(M, { media: l.media, className: v()(B.c8, D.g) }),
                   })
-                : (0, a.jsx)(A, { className: W.pm }),
+                : (0, a.jsx)(A, { className: B.pm }),
     });
 }
 var F = l(193396);
 function V(e) {
-    let { resolveFieldValue: t } = c(),
+    let { resolveFieldValue: t } = m(),
         l = t(e.componentConfig?.fields.image, [y.o.MEDIA]),
         n = t(e.componentConfig?.fields.name, [y.o.STRING]),
         s = t(e.componentConfig?.fields.description, [y.o.STRING]);
@@ -270,7 +270,7 @@ function V(e) {
     });
 }
 function $() {
-    let { surfaceConfig: e } = c();
+    let { surfaceConfig: e } = m();
     return (0, a.jsxs)("div", {
         className: F.zr,
         children: [
@@ -283,14 +283,14 @@ function $() {
 }
 var H = l(141255);
 function q() {
-    let { surfaceConfig: e, resolveFieldValue: t } = c(),
+    let { surfaceConfig: e, resolveFieldValue: t } = m(),
         l = s.useId(),
         n = t(e.components.objective?.fields.image, [y.o.MEDIA]),
         i = t(e.components.objective?.fields.name, [y.o.STRING]),
         r = t(e.components.objective?.fields.description, [y.o.STRING]),
         o = t(e.components.progress?.fields.current, [y.o.NUMBER]),
         u = t(e.components.progress?.fields.max, [y.o.NUMBER]),
-        m = (0, x.eq)(o, u);
+        c = (0, x.eq)(o, u);
     return (0, a.jsxs)("div", {
         className: H.zr,
         children: [
@@ -307,7 +307,7 @@ function q() {
                         "aria-valuenow": o?.value ?? 0,
                         "aria-valuemax": u?.value ?? 1,
                         "aria-valuetext": null != u && null != o ? `${o.value} of ${u.value}` : void 0,
-                        children: (0, a.jsx)("div", { className: H.qB, style: { "--custom-progress": `${m}%` } }),
+                        children: (0, a.jsx)("div", { className: H.qB, style: { "--custom-progress": `${c}%` } }),
                     }),
                     (0, a.jsxs)("div", {
                         className: H.P_,
@@ -349,10 +349,10 @@ function q() {
         ],
     });
 }
-var Y = l(620376);
-function z(e) {
+var z = l(620376);
+function Y(e) {
     let { component: t, required: l = !1 } = e,
-        { resolveFieldValue: n, numberFormat: s, durationFormat: i, renderText: r } = c(),
+        { resolveFieldValue: n, numberFormat: s, durationFormat: i, renderText: r } = m(),
         o = (0, x.CZ)(
             t,
             n,
@@ -374,11 +374,11 @@ function z(e) {
     return null == o
         ? null
         : (0, a.jsxs)("div", {
-              className: Y.k,
+              className: z.k,
               children: [
                   "value" === o.value.status
                       ? (0, a.jsxs)("div", {
-                            className: Y.U,
+                            className: z.U,
                             children: [
                                 (0, a.jsx)(p.E, {
                                     variant: "body-sm/medium",
@@ -405,22 +405,22 @@ function z(e) {
 }
 var Q = l(374205);
 function J() {
-    let { surfaceConfig: e } = c();
+    let { surfaceConfig: e } = m();
     return (0, a.jsxs)("div", {
         className: Q.w,
         children: [
-            (0, a.jsx)(z, { component: e.components.stat_1, required: !0 }),
-            (0, a.jsx)(z, { component: e.components.stat_2, required: !0 }),
-            (0, a.jsx)(z, { component: e.components.stat_3, required: !0 }),
-            (0, a.jsx)(z, { component: e.components.stat_4, required: !0 }),
-            (0, a.jsx)(z, { component: e.components.stat_5, required: !0 }),
-            (0, a.jsx)(z, { component: e.components.stat_6, required: !0 }),
+            (0, a.jsx)(Y, { component: e.components.stat_1, required: !0 }),
+            (0, a.jsx)(Y, { component: e.components.stat_2, required: !0 }),
+            (0, a.jsx)(Y, { component: e.components.stat_3, required: !0 }),
+            (0, a.jsx)(Y, { component: e.components.stat_4, required: !0 }),
+            (0, a.jsx)(Y, { component: e.components.stat_5, required: !0 }),
+            (0, a.jsx)(Y, { component: e.components.stat_6, required: !0 }),
         ],
     });
 }
 var X = l(892203);
 function Z() {
-    let { surfaceConfig: e } = c();
+    let { surfaceConfig: e } = m();
     return (0, a.jsxs)("div", {
         className: X.Q,
         children: [
@@ -454,7 +454,7 @@ function Z() {
 }
 var K = l(828575);
 function ee() {
-    let { surfaceConfig: e, resolveFieldValue: t, header: l } = c(),
+    let { surfaceConfig: e, resolveFieldValue: t, header: l } = m(),
         n = t(e.components.contained_image?.fields.image, [y.o.MEDIA]);
     return (0, a.jsxs)("div", {
         className: K.zr,
@@ -469,7 +469,7 @@ function ee() {
 }
 var et = l(775176);
 function el() {
-    let { surfaceConfig: e, resolveFieldValue: t, header: l } = c(),
+    let { surfaceConfig: e, resolveFieldValue: t, header: l } = m(),
         n = t(e.components.hero_image?.fields.image, [y.o.MEDIA]);
     return (0, a.jsxs)("div", {
         className: et.zr,
@@ -499,7 +499,7 @@ let en = {
         [o.WIDGET_BOTTOM_COLLECTION]: () => (0, a.jsx)($, {}),
     },
     [r.m.MINI_PROFILE]: {
-        [o.MINI_PROFILE_HERO_STAT]: () => (0, a.jsx)(B, {}),
+        [o.MINI_PROFILE_HERO_STAT]: () => (0, a.jsx)(W, {}),
         [o.MINI_PROFILE_CONTAINED_STAT]: () => (0, a.jsx)(U, {}),
     },
     [r.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, a.jsx)(I, { ...e }) },
@@ -515,7 +515,7 @@ function ea(e) {
             resolutionContext: n,
             locale: r,
             header: o,
-            onClick: c,
+            onClick: m,
             renderText: d,
             layoutProps: v,
         } = e,
@@ -525,14 +525,14 @@ function ea(e) {
     let f = en[t]?.[l.layout];
     return null == f
         ? null
-        : (0, a.jsx)(m.Provider, {
+        : (0, a.jsx)(c.Provider, {
               value: {
                   surfaceConfig: l,
                   locale: r,
                   numberFormat: p,
                   durationFormat: x,
                   header: o,
-                  onClick: c,
+                  onClick: m,
                   renderText: d,
                   resolutionContext: n,
                   resolveFieldValue: (0, y.J)(n),

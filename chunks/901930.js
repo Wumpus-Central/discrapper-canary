@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(975571),
     E = n(166532),
     S = n(652215),
-    I = n(792996),
-    g = n(665956);
+    g = n(792996),
+    I = n(665956);
 function y(e) {
     let { planError: t, hasSelectedPaymentElementSourceType: n } = e,
         { paymentError: o } = (0, d.o)(),
@@ -30,7 +30,7 @@ function y(e) {
         _ = i.useCallback(() => {
             (0, C.A)(x, r.s7, () =>
                 (0, a.P0)({
-                    text: I.intl.formatToPlainString(g.default.D1BwNC, { count: x.length }),
+                    text: g.intl.formatToPlainString(I.default.D1BwNC, { count: x.length }),
                     variant: "critical",
                 }),
             );
@@ -40,19 +40,19 @@ function y(e) {
     return (
         null != v &&
             v instanceof u.Ey &&
-            (v.code === c.tG.CARD_DECLINED && T && (b = `${v.message} ${I.intl.string(I.t.iWvwQS)}`),
-            v.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (b = I.intl.string(I.t.ypuSd8)),
-            v.code === S.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (b = I.intl.string(I.t.mXMmWE)),
-            v.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (b = I.intl.string(I.t.mC1Fjz)),
+            (v.code === c.tG.CARD_DECLINED && T && (b = `${v.message} ${g.intl.string(g.t.iWvwQS)}`),
+            v.code === c.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (b = g.intl.string(g.t.ypuSd8)),
+            v.code === S.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (b = g.intl.string(g.t.mXMmWE)),
+            v.code === c.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (b = g.intl.string(g.t.mC1Fjz)),
             (v.code === c.tG.BILLING_SPENDING_LIMIT_REACHED || v.code === c.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-                (b = I.intl.format(I.t["mv/fF2"], {
+                (b = g.intl.format(g.t["mv/fF2"], {
                     guardianHook: (e, t) =>
                         x.length > 0
                             ? (0, l.jsx)(s.Anchor, { onClick: _, children: e }, t)
                             : (0, l.jsx)(i.Fragment, { children: e }, t),
                 })),
             v.code === c.tG.INVALID_BILLING_ADDRESS &&
-                (b = I.intl.format(I.t.KXodvL, {
+                (b = g.intl.format(g.t.KXodvL, {
                     helpdeskArticle: f.A.getArticleURL(S.MVz.BILLING).concat(S.bNI.INVALID_BILLING_ADDRESS),
                 }))),
         { error: v, errorMessage: b }

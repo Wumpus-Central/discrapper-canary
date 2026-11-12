@@ -1,4 +1,4 @@
-r.d(t, { H: () => D });
+r.d(t, { H: () => I });
 var n = r(290309),
     i = r(204581),
     o = r(575241),
@@ -315,8 +315,8 @@ var m = (function () {
             t
         );
     })(),
-    I = r(648850);
-function D(e, t) {
+    D = r(648850);
+function I(e, t) {
     var r,
         c,
         f,
@@ -325,9 +325,9 @@ function D(e, t) {
         v,
         y,
         b,
-        D,
+        I,
         S = (0, d.I)(e, t),
-        O =
+        k =
             ((r = (0, i.u)()),
             (0, u.useMemo)(
                 function () {
@@ -335,7 +335,7 @@ function D(e, t) {
                 },
                 [r],
             )),
-        k =
+        O =
             ((c = S.options),
             (f = (0, i.u)()),
             (g = (0, u.useMemo)(
@@ -361,9 +361,9 @@ function D(e, t) {
         (p = (0, i.u)()),
         (v = (0, u.useMemo)(
             function () {
-                return new s(S, O);
+                return new s(S, k);
             },
-            [O],
+            [k],
         )),
         (0, u.useEffect)(
             function () {
@@ -373,7 +373,7 @@ function D(e, t) {
         ),
         (y = v),
         (b = S.accept),
-        (D = (0, u.useMemo)(
+        (I = (0, u.useMemo)(
             function () {
                 return ((0, a.V)(null != S.accept, "accept must be defined"), Array.isArray(b) ? b : [b]);
             },
@@ -385,7 +385,7 @@ function D(e, t) {
                     t =
                         (function (e) {
                             if (Array.isArray(e)) return e;
-                        })((e = (0, n.l)(D, y, p))) ||
+                        })((e = (0, n.l)(I, y, p))) ||
                         (function (e) {
                             var t,
                                 r,
@@ -432,25 +432,25 @@ function D(e, t) {
                         })(),
                     r = t[0],
                     i = t[1];
-                return (O.receiveHandlerId(r), k.receiveHandlerId(r), i);
+                return (k.receiveHandlerId(r), O.receiveHandlerId(r), i);
             },
             [
                 p,
-                O,
-                y,
                 k,
-                D.map(function (e) {
+                y,
+                O,
+                I.map(function (e) {
                     return e.toString();
                 }).join("|"),
             ],
         ),
         [
-            (0, I.j)(S.collect, O, k),
+            (0, D.j)(S.collect, k, O),
             (0, u.useMemo)(
                 function () {
-                    return k.hooks.dropTarget();
+                    return O.hooks.dropTarget();
                 },
-                [k],
+                [O],
             ),
         ]
     );

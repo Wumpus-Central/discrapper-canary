@@ -13,7 +13,7 @@ l.d(
             if (null == e) return r ? { value: { status: "skeleton" }, label: { status: "skeleton" } } : null;
             let o = t(e.fields.value, [a.o.STRING, a.o.NUMBER]),
                 u = t(e.fields.label, [a.o.STRING]),
-                m = t(e.fields.icon, [a.o.MEDIA]);
+                c = t(e.fields.icon, [a.o.MEDIA]);
             if (null == o) i = { status: "skeleton" };
             else
                 i = {
@@ -24,7 +24,7 @@ l.d(
                             : o.presentationType === n.P.DURATION
                               ? s(o.value)
                               : l.format(o.value),
-                    icon: m?.media ?? null,
+                    icon: c?.media ?? null,
                 };
             return {
                 value: i,
@@ -45,8 +45,8 @@ l.d(
             if (null == i && null == r) return { status: "skeleton" };
             let o = t(e.fields.icon, [a.o.MEDIA]),
                 u = null == r || "" === r.value ? "" : `${"number" == typeof r.value ? l.format(r.value) : r.value}: `,
-                m = null == i || "" === i.value ? "\u2013" : "number" == typeof i.value ? l.format(i.value) : i.value;
-            return { status: "value", text: `${u}${m}`, icon: o?.media ?? null };
+                c = null == i || "" === i.value ? "\u2013" : "number" == typeof i.value ? l.format(i.value) : i.value;
+            return { status: "value", text: `${u}${c}`, icon: o?.media ?? null };
         },
         eq: function (e, t) {
             return null == e ? 0 : null == t ? s(e.value) : 0 === t.value ? 0 : s(e.value / t.value);

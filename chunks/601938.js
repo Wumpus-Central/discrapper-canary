@@ -17,8 +17,8 @@ var r = n(477900),
     x = n(846957),
     h = n(929283),
     A = n(842385),
-    E = n(761365),
-    _ = n(844266);
+    _ = n(761365),
+    E = n(844266);
 function C(e) {
     let { responsive: t } = e;
     return !0 !== t;
@@ -31,14 +31,14 @@ function b(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: s()(_.mA, { [_.zj]: (l || u) && !n, [_.Ge]: o }),
-                children: (0, r.jsx)(k, { product: t, isCardHovered: n }),
+                className: s()(E.mA, { [E.zj]: (l || u) && !n, [E.Ge]: o }),
+                children: (0, r.jsx)(R, { product: t, isCardHovered: n }),
             }),
-            l && (0, r.jsx)(R, { hidden: n }),
+            l && (0, r.jsx)(k, { hidden: n }),
         ],
     });
 }
-function k(e) {
+function R(e) {
     let t,
         { product: n, isCardHovered: i } = e,
         s = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
@@ -52,11 +52,11 @@ function k(e) {
         case a.R.PROFILE_EFFECT:
             return (0, r.jsx)(f.A, { skuId: d.skuId, isHighlighted: i, removeSetHeight: !0, hideBackground: !0 });
         case a.R.PROFILE_FRAME:
-            return (0, r.jsx)("div", { className: _.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
+            return (0, r.jsx)("div", { className: E.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
         case a.R.AVATAR_DECORATION:
             return (0, r.jsx)(h.i, { item: d, user: s, isHighlighted: i, avatarSize: u._3.SIZE_120 });
         case a.R.NAMEPLATE:
-            return (0, r.jsx)(E.A, { nameplate: d, user: s, isHighlighted: i });
+            return (0, r.jsx)(_.A, { nameplate: d, user: s, isHighlighted: i });
         case a.R.BUNDLE:
             return (0, r.jsx)(A.X, { product: n, user: s, isHighlighted: i });
         case a.R.EXTERNAL_SKU:
@@ -65,14 +65,14 @@ function k(e) {
             return null;
     }
 }
-function R(e) {
+function k(e) {
     let { hidden: t } = e;
     return (0, r.jsx)(o.CheckmarkLargeBoldIcon, {
         size: "custom",
         color: d.A.colors.INTERACTIVE_TEXT_ACTIVE,
         width: 40,
         height: 40,
-        className: s()(_.zo, { [_.R]: t }),
+        className: s()(E.zo, { [E.R]: t }),
     });
 }
 let y = function (e) {

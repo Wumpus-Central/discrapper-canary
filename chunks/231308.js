@@ -186,8 +186,8 @@ function G(e) {
         { theme: Z } = (0, o.wR)(),
         W = (0, u.bG)([_.A], () => (null != m ? _.A.get(m.id) : null)),
         Y = (0, I.b2)(R),
-        q = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    function z(e) {
+        z = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
+    function q(e) {
         return B
             ? H.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, N.DP)(), totalSeats: 5 })
             : e.skuId === k.pe.TIER_0
@@ -271,7 +271,7 @@ function G(e) {
                         variant: "body-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
-                        children: z(e),
+                        children: q(e),
                     }),
                     (0, r.jsx)(c.E, {
                         variant: "body-md/medium",
@@ -288,7 +288,7 @@ function G(e) {
                 variant: "body-md/medium",
                 color: "interactive-text-default",
                 className: F.Qq,
-                children: z(e),
+                children: q(e),
             })));
     }
     let [Q, V] = i.useState(!1),
@@ -316,14 +316,14 @@ function G(e) {
                     : H.intl.string(H.t.TkTvBz)),
         M)
     )
-        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
+        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || z, onClose: X, buttonLoading: Q });
     let J = (0, S.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
             !J && (0, r.jsx)(b, { type: $(), theme: Z }),
             t,
-            y || q
+            y || z
                 ? null
                 : (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,

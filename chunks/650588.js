@@ -20,8 +20,8 @@ n.d(
         A: function (e) {
             let { onSelect: t, sound: n } = e,
                 [r, S] = i.useState(!1),
-                I = i.useRef(null),
-                g = a()(f.Qq, f.Ow);
+                g = i.useRef(null),
+                I = a()(f.Qq, f.Ow);
             function y(e) {
                 (S(!1), t?.(e));
             }
@@ -41,7 +41,7 @@ n.d(
                 });
             }
             return (0, l.jsx)(u.Y, {
-                targetElementRef: I,
+                targetElementRef: g,
                 shouldShow: r,
                 position: "bottom",
                 align: "left",
@@ -68,7 +68,7 @@ n.d(
                     (0, l.jsx)(d.D, {
                         className: a()(f.kL, f.Ow),
                         onClick: () => S(!0),
-                        innerRef: I,
+                        innerRef: g,
                         children:
                             null == n
                                 ? (0, l.jsxs)("div", {
@@ -82,7 +82,7 @@ n.d(
                                               height: 14,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: C.intl.string(C.t.aThJz8),
@@ -93,13 +93,13 @@ n.d(
                                       className: f.hQ,
                                       children: [
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.emojiName,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.name,

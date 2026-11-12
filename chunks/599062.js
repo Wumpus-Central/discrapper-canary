@@ -26,7 +26,7 @@ n.d(
                     return e?.isStaff() || e?.isStaffPersonal();
                 }),
                 S = 1 === n ? p.tV : p.Df,
-                I = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
+                g = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
             return (0, i.jsxs)("div", {
                 className: S,
                 children: [
@@ -36,7 +36,7 @@ n.d(
                         variant: "heading-xl/semibold",
                         children: m.intl.string(m.t.i5SQ74),
                     }),
-                    (0, i.jsx)(o.E, { className: p.h_, variant: "body-md/normal", children: I }),
+                    (0, i.jsx)(o.E, { className: p.h_, variant: "body-md/normal", children: g }),
                     E &&
                         null != l &&
                         (0, i.jsx)(o.E, { variant: "body-md/normal", children: "staff-only debug: " + l }),

@@ -48,11 +48,11 @@ function S(e) {
         }),
     });
 }
-function I() {
+function g() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(C.H, { actions: e });
 }
-var g = n(636950);
+var I = n(636950);
 function y() {
     let [e, t] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
@@ -60,14 +60,14 @@ function y() {
             (0, l.jsx)(s.A, {}),
             (0, l.jsx)(o.dZ, {
                 children: (0, l.jsx)(S, {
-                    className: g.r,
+                    className: I.r,
                     isEmailResent: e,
                     resendEmail: async function () {
                         (t(!0), await (0, d.lo)());
                     },
                 }),
             }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(I, {}) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(g, {}) }),
         ],
     });
 }
@@ -171,10 +171,10 @@ function z(e) {
         { subscriptionTier: f } = m,
         E = (0, x.Hp)(),
         S = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: I, subscriptionPriceOptionsLoading: g } = (0, H.Jn)(),
+        { hasFetchedRelatedSubscriptionPlans: g, subscriptionPriceOptionsLoading: I } = (0, H.Jn)(),
         { isGift: y } = (0, b.Pv)(),
         T = (0, D.A)({ isGift: y, skuId: s }),
-        N = !S || !I || g || !a,
+        N = !S || !g || I || !a,
         j = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(Z.tv));
     (0, v.A)(
         "Payment Modal",
@@ -182,8 +182,8 @@ function z(e) {
         5,
         {
             hasFetchedSubscriptions: S,
-            hasFetchedSubscriptionPlans: I,
-            subscriptionPriceOptionsLoading: g,
+            hasFetchedSubscriptionPlans: g,
+            subscriptionPriceOptionsLoading: I,
             hasFetchedPaymentSources: a,
         },
         { tags: { app_context: "billing" } },

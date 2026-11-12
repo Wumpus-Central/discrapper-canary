@@ -27,13 +27,13 @@ n.d(
                     currentText: m,
                     className: p,
                     innerClassName: h,
-                    disableThemedBackground: I = !1,
+                    disableThemedBackground: g = !1,
                 } = e,
-                [g, y] = i.useState(r ?? m),
-                [A, P] = i.useState((0, c.x7)(g)),
+                [I, y] = i.useState(r ?? m),
+                [A, P] = i.useState((0, c.x7)(I)),
                 v = i.useRef(!1);
             function x(e, t, l) {
-                t !== g && (y(t), P(l), n(t));
+                t !== I && (y(t), P(l), n(t));
             }
             function _() {
                 return new Promise((e) => {
@@ -65,7 +65,7 @@ n.d(
                                         maxCharacterCount: 190,
                                         onChange: x,
                                         channel: E,
-                                        textValue: g,
+                                        textValue: I,
                                         richValue: A,
                                         type: u.oU.CUSTOM_GIFT,
                                         onBlur: () => {
@@ -76,7 +76,7 @@ n.d(
                                         },
                                         focused: v.current,
                                         onSubmit: _,
-                                        disableThemedBackground: I,
+                                        disableThemedBackground: g,
                                     }),
                                     (0, l.jsx)(o.A, {
                                         id: S,

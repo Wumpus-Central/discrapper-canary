@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(773669),
     E = n(97352),
     S = n(45938),
-    I = n(448645),
-    g = n(580630),
+    g = n(448645),
+    I = n(580630),
     y = n(371710),
     A = n(529412),
     P = n(742655),
@@ -45,20 +45,20 @@ function N(e) {
             isRecurringGift: e.isRecurringGift,
             setIsRecurringGift: e.setIsRecurringGift,
         })),
-        { setSelectedGiftingPromotionRewards: I } = (0, C.Pv)(),
-        g = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
+        { setSelectedGiftingPromotionRewards: g } = (0, C.Pv)(),
+        I = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
         y = i.useMemo(
             () => [
-                { isRecurring: !0, label: g },
+                { isRecurring: !0, label: I },
                 { isRecurring: !1, label: x.default["hs/Nr+"] },
             ],
-            [g],
+            [I],
         ),
         A = i.useCallback(
             (e) => {
-                (f(t), S(e), e && I([]));
+                (f(t), S(e), e && g([]));
             },
-            [t, f, S, I],
+            [t, f, S, g],
         );
     return o
         ? (0, l.jsxs)("div", {
@@ -109,7 +109,7 @@ var j = n(35587),
     O = n(268431);
 function M(e, t) {
     let n = e.interval === v.WT.YEAR ? _.t.ECT4A5 : _.t.v9QeON;
-    return _.intl.format(n, { price: (0, g.$g)(t.amount, t.currency) });
+    return _.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });
 }
 function L(e) {
     return { type: "badge", textBadgeVariant: "body-sm/medium", text: e };
@@ -176,13 +176,13 @@ function w(e) {
         { discountOffer: q, discountAmountOff: z, applicablePlan: $ } = H,
         Q = (0, c.bG)([E.A], () => E.A.get(u));
     o()(null != Q, "Missing subscriptionPlan");
-    let J = (0, I.m6)(Q.id),
+    let J = (0, g.m6)(Q.id),
         X = Z && J === v.PremiumTypes.TIER_2,
         ee = (0, A.qi)({ location: `PremiumSwitchPlanSelectOption${X ? "" : "-DISABLED"}` }),
         et = Z && (!X || !ee || T),
         en = (0, j.Sq)(),
-        el = (0, I.L_)({ planId: u, isGift: Y, priceOptions: b, subscriptionPlan: Q }),
-        ei = (0, I.y8)(u, !1, Y, b),
+        el = (0, g.L_)({ planId: u, isGift: Y, priceOptions: b, subscriptionPlan: Q }),
+        ei = (0, g.y8)(u, !1, Y, b),
         er = null != el && !L,
         ea = i.useCallback(() => {
             let e = k(s, Q, {
@@ -209,7 +209,7 @@ function w(e) {
                   : null;
         }, [B, en, Q, s, er, Y, u, el, b, D]),
         es = i.useMemo(
-            () => (0, I.D8)(Q.interval, Y, R, Q.intervalCount, Z, J),
+            () => (0, g.D8)(Q.interval, Y, R, Q.intervalCount, Z, J),
             [Q.interval, Q.intervalCount, Y, R, Z, J],
         ),
         eo = F && Z && (0, y.dI)(u),
@@ -220,7 +220,7 @@ function w(e) {
             {
                 priceSubtext: n
                     ? _.intl.string(x.default["0llBr2"])
-                    : _.intl.formatToPlainString(_.t.ori2Jm, { currencyAmount: (0, g.$g)(ei.amount, ei.currency) }),
+                    : _.intl.formatToPlainString(_.t.ori2Jm, { currencyAmount: (0, I.$g)(ei.amount, ei.currency) }),
                 priceInterval: n ? _.intl.string(r ? x.default.mqaMxh : x.default.JUUvJw) : null,
             }),
         ec = null != $ && u === $;
@@ -231,12 +231,12 @@ function w(e) {
             ? _.intl.format(_.t.hXcaLT, {
                   price:
                       w && null != z && ec
-                          ? (0, g.$g)(ei.amount - z, ei.currency)
+                          ? (0, I.$g)(ei.amount - z, ei.currency)
                           : D
-                            ? (0, g.$g)(0, ei.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                            : (0, g.$g)(ei.amount, ei.currency),
+                            ? (0, I.$g)(0, ei.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                            : (0, I.$g)(ei.amount, ei.currency),
               })
-            : (0, g.$g)(ei.amount, ei.currency),
+            : (0, I.$g)(ei.amount, ei.currency),
         ep = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)("div", {
@@ -268,7 +268,7 @@ function w(e) {
                                                 children: eo
                                                     ? eu.priceSubtext
                                                     : _.intl.format(_.t.ori2Jm, {
-                                                          currencyAmount: (0, g.$g)(ei.amount, ei.currency),
+                                                          currencyAmount: (0, I.$g)(ei.amount, ei.currency),
                                                       }),
                                             }),
                                     ],
@@ -325,12 +325,12 @@ function w(e) {
                                     ? e.interval === v.WT.YEAR
                                         ? _.intl.format(_.t["EQmTl+"], {
                                               numYears: a?.discount.intervalCount ?? 1,
-                                              regularPrice: (0, g.$g)(n.amount, n.currency),
+                                              regularPrice: (0, I.$g)(n.amount, n.currency),
                                           })
                                         : _.intl.format(_.t["VeE/4E"], {
                                               numMonths: a?.discount.intervalCount ?? 1,
-                                              discountedPrice: (0, g.$g)(n.amount - r, n.currency),
-                                              regularPrice: (0, g.$g)(n.amount, n.currency),
+                                              discountedPrice: (0, I.$g)(n.amount - r, n.currency),
+                                              regularPrice: (0, I.$g)(n.amount, n.currency),
                                           })
                                     : i
                                       ? M(e, n)

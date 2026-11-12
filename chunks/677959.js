@@ -1,7 +1,7 @@
 l.d(t, {
     s7: () => H,
     ch: () => $.c,
-    ec: () => N,
+    ec: () => y,
     Z4: () => F,
     jw: () => I.jw,
     a6: () => I.a6,
@@ -176,19 +176,19 @@ function g(e) {
     });
 }
 var E = l(682901),
-    y = l(792996);
-function N(e) {
+    N = l(792996);
+function y(e) {
     let t,
         { premiumType: l, size: n, className: a, tag: s = "span", ...i } = e;
     switch (l) {
         case E.PremiumTypes.TIER_0:
-            t = y.intl.string(y.t["t9uG/o"]);
+            t = N.intl.string(N.t["t9uG/o"]);
             break;
         case E.PremiumTypes.TIER_1:
-            t = y.intl.string(y.t.FSOz78);
+            t = N.intl.string(N.t.FSOz78);
             break;
         case E.PremiumTypes.TIER_2:
-            t = y.intl.string(y.t.lG6a5x);
+            t = N.intl.string(N.t.lG6a5x);
     }
     return (0, r.jsx)(m.E, { tag: s, variant: `nitro-${n}`, className: a, ...i, children: t });
 }
@@ -208,7 +208,7 @@ var A = l(596034),
     w = l(140624),
     O = l(685254);
 function M(e) {
-    let { text: t = y.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: a } = e;
+    let { text: t = N.intl.string(w.default.iBFPMf), onClick: l, className: n, analytics: a } = e;
     return (0, r.jsxs)(_.D, {
         className: i()(O.U, n),
         onClick: function () {
@@ -234,7 +234,7 @@ function F(e) {
                       onComplete: (e) => {
                           let l = (0, G.$g)(e.amount, e.currency);
                           ((0, S.P0)({
-                              text: y.intl.formatToPlainString(w.default["66Wi6B"], { price: l }),
+                              text: N.intl.formatToPlainString(w.default["66Wi6B"], { price: l }),
                               variant: "success",
                               position: "top",
                           }),

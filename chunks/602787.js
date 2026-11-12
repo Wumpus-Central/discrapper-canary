@@ -59,8 +59,8 @@ n.d(
                     null != E.discount &&
                     null != E.discount.planIds &&
                     E.discount.planIds.some((e) => c.hd[e].skuId === t),
-                I = !!(C && null != E && S),
-                g = l.useMemo(
+                g = !!(C && null != E && S),
+                I = l.useMemo(
                     () => null != E && null != E.discount && null != e && (0, a.Ro)(e, E.discount.id),
                     [E, e],
                 );
@@ -69,12 +69,12 @@ n.d(
                     isPremium: n,
                     isPremiumGroupPurchase: u,
                     isEligibleForTrial: f,
-                    isEligibleForDiscount: I,
+                    isEligibleForDiscount: g,
                     userTrialOffer: h,
                     discountOffer: E,
-                    currentInvoiceHasMatchingDiscountOffer: g,
+                    currentInvoiceHasMatchingDiscountOffer: I,
                 }),
-                [n, u, f, I, h, E, g],
+                [n, u, f, g, h, E, I],
             );
         },
     },

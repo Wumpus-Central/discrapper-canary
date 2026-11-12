@@ -24,42 +24,42 @@ n.d(
             let {
                     product: t,
                     primary: n,
-                    selectedVariantIndex: E,
-                    returnRef: _,
+                    selectedVariantIndex: _,
+                    returnRef: E,
                     onSuccess: C,
                     tooltipDelay: b,
-                    fullWidth: k = !1,
-                    fullWidthLabel: R,
+                    fullWidth: R = !1,
+                    fullWidthLabel: k,
                     giftRecipient: y,
-                    giftingOrigin: j = h.vQ.SHOP_PAGE,
-                    onTrackClick: S,
-                    tabIndex: T,
+                    giftingOrigin: S = h.vQ.SHOP_PAGE,
+                    onTrackClick: j,
+                    tabIndex: O,
                 } = e,
-                { analyticsLocations: O } = (0, d.Ay)(),
+                { analyticsLocations: T } = (0, d.Ay)(),
                 N = i.useRef(null),
-                V = (0, v.uM)(),
-                L = (0, f.A)();
-            function P(e) {
+                P = (0, v.uM)(),
+                V = (0, f.A)();
+            function L(e) {
                 (e.stopPropagation(),
                     I.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: V?.sessionId,
+                        collectibles_shop_session_id: P?.sessionId,
                         sku_id: t.skuId,
-                        page_section: V?.pageSection,
-                        page_category: V?.pageCategory,
+                        page_section: P?.pageSection,
+                        page_category: P?.pageCategory,
                         tile_type: s.R[t.type],
-                        tile_position: String(V?.tilePosition),
+                        tile_position: String(P?.tilePosition),
                         cta_name: "gift button",
-                        page_type: L ?? "home",
+                        page_type: V ?? "home",
                     }),
-                    S?.(g.sH.SEND_AS_GIFT),
+                    j?.(g.sH.SEND_AS_GIFT),
                     (0, c.A)({
-                        skuId: (0, m.Y)({ product: t, selectedVariantIndex: E }),
+                        skuId: (0, m.Y)({ product: t, selectedVariantIndex: _ }),
                         isGift: !0,
                         giftRecipient: y,
-                        giftingOrigin: j,
-                        analyticsLocations: O,
-                        discoverySessionId: V?.sessionId,
-                        returnRef: _,
+                        giftingOrigin: S,
+                        analyticsLocations: T,
+                        discoverySessionId: P?.sessionId,
+                        returnRef: E,
                         onClose:
                             null != C
                                 ? (e) => {
@@ -68,14 +68,14 @@ n.d(
                                 : void 0,
                     }));
             }
-            if (k)
+            if (R)
                 return (0, r.jsx)(a.$, {
                     variant: n ? "primary" : "secondary",
                     icon: l.GiftIcon,
-                    onClick: P,
-                    text: R ?? A.intl.string(A.t.gmnzqM),
+                    onClick: L,
+                    text: k ?? A.intl.string(A.t.gmnzqM),
                     fullWidth: !0,
-                    tabIndex: T,
+                    tabIndex: O,
                 });
             let D = A.intl.string(A.t["JCFN/y"]);
             return (0, r.jsx)(u.m, {
@@ -90,8 +90,8 @@ n.d(
                     variant: n ? "primary" : "secondary",
                     icon: l.GiftIcon,
                     size: "md",
-                    onClick: P,
-                    tabIndex: T,
+                    onClick: L,
+                    tabIndex: O,
                 }),
             });
         },

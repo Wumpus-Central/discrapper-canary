@@ -1,7 +1,7 @@
 var i = l(855986),
     n = l(945810),
     r = l(71393),
-    s = l(246338);
+    a = l(246338);
 l.d(
     t,
     {},
@@ -14,7 +14,7 @@ l.d(
         },
         r: function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            return (0, i.bG)([r.A, n.Bt], () => t && (0, s.XF)(r.A.getGuildsArray(), e), [e, t]);
+            return (0, i.bG)([r.A, n.Bt], () => t && (0, a.XF)(r.A.getGuildsArray(), e), [e, t]);
         },
     },
 );

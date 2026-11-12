@@ -1,36 +1,36 @@
 let r;
-function a(e) {
+function i(e) {
     return Intl.getCanonicalLocales(e);
 }
-t.d(n, { Y: () => B });
-var i = t(162929);
-new i.W(10);
-let s = new i.W(0);
-function o(e, n) {
-    let t = n && n.cache ? n.cache : f,
-        r = n && n.serializer ? n.serializer : d;
+n.d(t, { Y: () => U });
+var a = n(162929);
+new a.W(10);
+let s = new a.W(0);
+function o(e, t) {
+    let n = t && t.cache ? t.cache : f,
+        r = t && t.serializer ? t.serializer : d;
     return (
-        n && n.strategy
-            ? n.strategy
-            : function (e, n) {
-                  var t, r;
-                  let a = 1 === e.length ? u : l;
-                  return ((t = n.cache.create()), (r = n.serializer), a.bind(this, e, t, r));
+        t && t.strategy
+            ? t.strategy
+            : function (e, t) {
+                  var n, r;
+                  let i = 1 === e.length ? u : l;
+                  return ((n = t.cache.create()), (r = t.serializer), i.bind(this, e, n, r));
               }
-    )(e, { cache: t, serializer: r });
+    )(e, { cache: n, serializer: r });
 }
-function u(e, n, t, r) {
-    let a = null == r || "number" == typeof r || "boolean" == typeof r ? r : t(r),
-        i = n.get(a);
-    return (void 0 === i && ((i = e.call(this, r)), n.set(a, i)), i);
+function u(e, t, n, r) {
+    let i = null == r || "number" == typeof r || "boolean" == typeof r ? r : n(r),
+        a = t.get(i);
+    return (void 0 === a && ((a = e.call(this, r)), t.set(i, a)), a);
 }
-function l(e, n, t) {
+function l(e, t, n) {
     let r = Array.prototype.slice.call(arguments, 3),
-        a = t(r),
-        i = n.get(a);
-    return (void 0 === i && ((i = e.apply(this, r)), n.set(a, i)), i);
+        i = n(r),
+        a = t.get(i);
+    return (void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a);
 }
-new i.W(-0);
+new a.W(-0);
 let d = function () {
     return JSON.stringify(arguments);
 };
@@ -42,8 +42,8 @@ class c {
     get(e) {
         return this.cache[e];
     }
-    set(e, n) {
-        this.cache[e] = n;
+    set(e, t) {
+        this.cache[e] = t;
     }
 }
 let f = {
@@ -51,23 +51,23 @@ let f = {
             return new c();
         },
     },
-    _ = {
-        variadic: function (e, n) {
-            var t, r;
-            return ((t = n.cache.create()), (r = n.serializer), l.bind(this, e, t, r));
+    h = {
+        variadic: function (e, t) {
+            var n, r;
+            return ((n = t.cache.create()), (r = t.serializer), l.bind(this, e, n, r));
         },
-        monadic: function (e, n) {
-            var t, r;
-            return ((t = n.cache.create()), (r = n.serializer), u.bind(this, e, t, r));
+        monadic: function (e, t) {
+            var n, r;
+            return ((n = t.cache.create()), (r = t.serializer), u.bind(this, e, n, r));
         },
     };
-function h(e, n, t = Error) {
-    if (!e) throw new t(n);
+function p(e, t, n = Error) {
+    if (!e) throw new n(t);
 }
-let p = o((...e) => new Intl.NumberFormat(...e), { strategy: _.variadic });
-(o((...e) => new Intl.PluralRules(...e), { strategy: _.variadic }),
-    o((...e) => new Intl.Locale(...e), { strategy: _.variadic }));
-let m = o((...e) => new Intl.ListFormat(...e), { strategy: _.variadic });
+let _ = o((...e) => new Intl.NumberFormat(...e), { strategy: h.variadic });
+(o((...e) => new Intl.PluralRules(...e), { strategy: h.variadic }),
+    o((...e) => new Intl.Locale(...e), { strategy: h.variadic }));
+let m = o((...e) => new Intl.ListFormat(...e), { strategy: h.variadic });
 function y(e) {
     if (null == e) throw TypeError("undefined/null cannot be converted to object");
     return Object(e);
@@ -75,38 +75,38 @@ function y(e) {
 function g(e) {
     return "function" == typeof e;
 }
-function w(e, n, t, r, a) {
+function w(e, t, n, r, i) {
     if ("object" != typeof e) throw TypeError("Options must be an object");
-    let i = e[n];
-    if (void 0 !== i) {
-        if ("boolean" !== t && "string" !== t) throw TypeError("invalid type");
+    let a = e[t];
+    if (void 0 !== a) {
+        if ("boolean" !== n && "string" !== n) throw TypeError("invalid type");
         if (
-            ("boolean" === t && (i = !!i),
-            "string" === t &&
-                (i = (function (e) {
+            ("boolean" === n && (a = !!a),
+            "string" === n &&
+                (a = (function (e) {
                     if ("symbol" == typeof e) throw TypeError("Cannot convert a Symbol value to a string");
                     return String(e);
-                })(i)),
-            void 0 !== r && !r.filter((e) => e == i).length)
+                })(a)),
+            void 0 !== r && !r.filter((e) => e == a).length)
         )
-            throw RangeError(`${i} is not within ${r.join(", ")}`);
-        return i;
+            throw RangeError(`${a} is not within ${r.join(", ")}`);
+        return a;
     }
-    return a;
+    return i;
 }
 let v = new WeakMap();
-function b(e, n) {
-    let t = v.get(e);
-    t || ((t = new Set(e)), v.set(e, t));
-    let r = n;
+function b(e, t) {
+    let n = v.get(e);
+    n || ((n = new Set(e)), v.set(e, n));
+    let r = t;
     for (;;) {
-        if (t.has(r)) return r;
+        if (n.has(r)) return r;
         let e = r.lastIndexOf("-");
         if (!~e) return;
         (e >= 2 && "-" === r[e - 2] && (e -= 2), (r = r.slice(0, e)));
     }
 }
-let S = {
+let k = {
         "written-new": [
             { paradigmLocales: { _locales: "en en_GB es es_419 pt_BR pt_PT" } },
             { $enUS: { _value: "AS+CA+GU+MH+MP+PH+PR+UM+US+VI" } },
@@ -489,7 +489,7 @@ let S = {
             { "*-*-*": { _desired: "*-*-*", _distance: "4" } },
         ],
     },
-    z = {
+    S = {
         "001": [
             "001",
             "001-status-grouping",
@@ -1650,60 +1650,60 @@ let S = {
             "ZW",
         ],
     },
-    k = /-u(?:-[0-9a-z]{2,8})+/gi;
-function E(e, n, t = Error) {
-    if (!e) throw new t(n);
+    z = /-u(?:-[0-9a-z]{2,8})+/gi;
+function E(e, t, n = Error) {
+    if (!e) throw new n(t);
 }
-function T(e, n, t) {
-    let [r, a, i] = n.split("-"),
+function O(e, t, n) {
+    let [r, i, a] = t.split("-"),
         s = !0;
-    if (i && "$" === i[0]) {
-        let n = "!" !== i[1],
-            r = (n ? t[i.slice(1)] : t[i.slice(2)]).map((e) => z[e] || [e]).reduce((e, n) => [...e, ...n], []);
-        s &&= r.indexOf(e.region || "") > -1 == n;
-    } else s &&= !e.region || "*" === i || i === e.region;
-    return ((s &&= !e.script || "*" === a || a === e.script), (s &&= !e.language || "*" === r || r === e.language));
+    if (a && "$" === a[0]) {
+        let t = "!" !== a[1],
+            r = (t ? n[a.slice(1)] : n[a.slice(2)]).map((e) => S[e] || [e]).reduce((e, t) => [...e, ...t], []);
+        s &&= r.indexOf(e.region || "") > -1 == t;
+    } else s &&= !e.region || "*" === a || a === e.region;
+    return ((s &&= !e.script || "*" === i || i === e.script), (s &&= !e.language || "*" === r || r === e.language));
 }
 function A(e) {
     return [e.language, e.script, e.region].filter(Boolean).join("-");
 }
-function M(e, n, t) {
-    for (let r of t.matches) {
-        let a = T(e, r.desired, t.matchVariables) && T(n, r.supported, t.matchVariables);
-        if ((r.oneway || a || (a = T(e, r.supported, t.matchVariables) && T(n, r.desired, t.matchVariables)), a)) {
-            let a = 10 * r.distance;
-            if (t.paradigmLocales.indexOf(A(e)) > -1 != t.paradigmLocales.indexOf(A(n)) > -1) return a - 1;
-            return a;
+function T(e, t, n) {
+    for (let r of n.matches) {
+        let i = O(e, r.desired, n.matchVariables) && O(t, r.supported, n.matchVariables);
+        if ((r.oneway || i || (i = O(e, r.supported, n.matchVariables) && O(t, r.desired, n.matchVariables)), i)) {
+            let i = 10 * r.distance;
+            if (n.paradigmLocales.indexOf(A(e)) > -1 != n.paradigmLocales.indexOf(A(t)) > -1) return i - 1;
+            return i;
         }
     }
     throw Error("No matching distance found");
 }
-let O = o(
-        function (e, n) {
-            let t = new Intl.Locale(e).maximize(),
-                a = new Intl.Locale(n).maximize(),
-                i = { language: t.language, script: t.script || "", region: t.region || "" },
-                s = { language: a.language, script: a.script || "", region: a.region || "" },
+let M = o(
+        function (e, t) {
+            let n = new Intl.Locale(e).maximize(),
+                i = new Intl.Locale(t).maximize(),
+                a = { language: n.language, script: n.script || "", region: n.region || "" },
+                s = { language: i.language, script: i.script || "", region: i.region || "" },
                 o = 0,
                 u = (function () {
                     if (!r) {
-                        let e = S["written-new"]["0"]?.paradigmLocales?._locales.split(" "),
-                            n = S["written-new"].slice(1, 5);
+                        let e = k["written-new"]["0"]?.paradigmLocales?._locales.split(" "),
+                            t = k["written-new"].slice(1, 5);
                         r = {
-                            matches: S["written-new"].slice(5).map((e) => {
-                                let n = Object.keys(e)[0],
-                                    t = e[n];
+                            matches: k["written-new"].slice(5).map((e) => {
+                                let t = Object.keys(e)[0],
+                                    n = e[t];
                                 return {
-                                    supported: n,
-                                    desired: t._desired,
-                                    distance: +t._distance,
-                                    oneway: "true" === t.oneway,
+                                    supported: t,
+                                    desired: n._desired,
+                                    distance: +n._distance,
+                                    oneway: "true" === n.oneway,
                                 };
                             }, {}),
-                            matchVariables: n.reduce((e, n) => {
-                                let t = Object.keys(n)[0],
-                                    r = n[t];
-                                return ((e[t.slice(1)] = r._value.split("+")), e);
+                            matchVariables: t.reduce((e, t) => {
+                                let n = Object.keys(t)[0],
+                                    r = t[n];
+                                return ((e[n.slice(1)] = r._value.split("+")), e);
                             }, {}),
                             paradigmLocales: [
                                 ...e,
@@ -1714,29 +1714,29 @@ let O = o(
                     return r;
                 })();
             return (
-                i.language !== s.language &&
-                    (o += M(
-                        { language: t.language, script: "", region: "" },
-                        { language: a.language, script: "", region: "" },
+                a.language !== s.language &&
+                    (o += T(
+                        { language: n.language, script: "", region: "" },
+                        { language: i.language, script: "", region: "" },
                         u,
                     )),
-                i.script !== s.script &&
-                    (o += M(
-                        { language: t.language, script: i.script, region: "" },
-                        { language: a.language, script: s.script, region: "" },
+                a.script !== s.script &&
+                    (o += T(
+                        { language: n.language, script: a.script, region: "" },
+                        { language: i.language, script: s.script, region: "" },
                         u,
                     )),
-                i.region !== s.region && (o += M(i, s, u)),
+                a.region !== s.region && (o += T(a, s, u)),
                 o
             );
         },
         { serializer: (e) => `${e[0]}|${e[1]}` },
     ),
-    L = new WeakMap();
-function C(e) {
+    x = new WeakMap();
+function P(e) {
     return Intl.getCanonicalLocales(e)[0];
 }
-let N = [
+let $ = [
         "years",
         "months",
         "weeks",
@@ -1748,7 +1748,7 @@ let N = [
         "microseconds",
         "nanoseconds",
     ],
-    x = [
+    L = [
         {
             valueField: "years",
             styleSlot: "years",
@@ -1814,125 +1814,125 @@ let N = [
             numberFormatUnit: "nanosecond",
         },
     ],
-    D = new WeakMap();
-function P(e) {
-    let n = D.get(e);
-    return (n || ((n = Object.create(null)), D.set(e, n)), n);
+    I = new WeakMap();
+function C(e) {
+    let t = I.get(e);
+    return (t || ((t = Object.create(null)), I.set(e, t)), t);
 }
-function I(e, n) {
-    let t = [],
+function N(e, t) {
+    let n = [],
         r = !1,
-        a = !1,
-        i = P(e),
-        s = i.dataLocale,
-        o = B.localeData[s];
+        i = !1,
+        a = C(e),
+        s = a.dataLocale,
+        o = U.localeData[s];
     if (!o) throw TypeError("Invalid locale");
-    let u = i.numberingSystem,
+    let u = a.numberingSystem,
         l = o.digitalFormat[u];
-    for (let e = 0; e < x.length && !r; e++) {
-        let s = x[e],
-            o = n[s.valueField],
-            u = i[s.styleSlot],
-            d = i[s.displaySlot],
+    for (let e = 0; e < L.length && !r; e++) {
+        let s = L[e],
+            o = t[s.valueField],
+            u = a[s.styleSlot],
+            d = a[s.displaySlot],
             { unit: c, numberFormatUnit: f } = s,
-            _ = Object.create(null);
+            h = Object.create(null);
         ("seconds" === c || "milliseconds" === c || "microseconds" === c) &&
-            "numeric" === ("seconds" === c ? i.milliseconds : "milliseconds" === c ? i.microseconds : i.nanoseconds) &&
+            "numeric" === ("seconds" === c ? a.milliseconds : "milliseconds" === c ? a.microseconds : a.nanoseconds) &&
             ("seconds" === c
-                ? (o += n.milliseconds / 1e3 + n.microseconds / 1e6 + n.nanoseconds / 1e9)
+                ? (o += t.milliseconds / 1e3 + t.microseconds / 1e6 + t.nanoseconds / 1e9)
                 : "milliseconds" === c
-                  ? (o += n.microseconds / 1e3 + n.nanoseconds / 1e6)
-                  : (o += n.nanoseconds / 1e3),
-            void 0 === i.fractionalDigits
-                ? ((_.maximumFractionDigits = 9), (_.minimumFractionDigits = 0))
-                : ((_.maximumFractionDigits = i.fractionalDigits), (_.minimumFractionDigits = i.fractionalDigits)),
-            (_.roundingMode = "trunc"),
+                  ? (o += t.microseconds / 1e3 + t.nanoseconds / 1e6)
+                  : (o += t.nanoseconds / 1e3),
+            void 0 === a.fractionalDigits
+                ? ((h.maximumFractionDigits = 9), (h.minimumFractionDigits = 0))
+                : ((h.maximumFractionDigits = a.fractionalDigits), (h.minimumFractionDigits = a.fractionalDigits)),
+            (h.roundingMode = "trunc"),
             (r = !0));
         if (0 !== o || "auto" !== d) {
             let e;
-            ((_.numberingSystem = i.numberingSystem),
-                "2-digit" === u && (_.minimumIntegerDigits = 2),
-                "2-digit" !== u && "numeric" !== u && ((_.style = "unit"), (_.unit = f), (_.unitDisplay = u)));
-            let n = p(i.locale, _);
-            (a ? (e = t[t.length - 1]).push({ type: "literal", value: l }) : (e = []),
-                n.formatToParts(o).forEach(({ type: n, value: t }) => {
-                    e.push({ type: n, value: t, unit: f });
+            ((h.numberingSystem = a.numberingSystem),
+                "2-digit" === u && (h.minimumIntegerDigits = 2),
+                "2-digit" !== u && "numeric" !== u && ((h.style = "unit"), (h.unit = f), (h.unitDisplay = u)));
+            let t = _(a.locale, h);
+            (i ? (e = n[n.length - 1]).push({ type: "literal", value: l }) : (e = []),
+                t.formatToParts(o).forEach(({ type: t, value: n }) => {
+                    e.push({ type: t, value: n, unit: f });
                 }),
-                a || (("2-digit" === u || "numeric" === u) && (a = !0), t.push(e)));
-        } else a = !1;
+                i || (("2-digit" === u || "numeric" === u) && (i = !0), n.push(e)));
+        } else i = !1;
     }
     let d = Object.create(null);
     d.type = "unit";
-    let c = i.style;
+    let c = a.style;
     ("digital" === c && (c = "short"), (d.style = c));
-    let f = m(i.locale, d),
-        _ = [];
-    for (let e of t) {
-        let n = "";
-        for (let { value: t } of e) n += t;
-        _.push(n);
+    let f = m(a.locale, d),
+        h = [];
+    for (let e of n) {
+        let t = "";
+        for (let { value: n } of e) t += n;
+        h.push(t);
     }
-    let y = f.formatToParts(_),
+    let y = f.formatToParts(h),
         g = 0,
-        w = t.length,
+        w = n.length,
         v = [];
-    for (let { type: e, value: n } of y)
+    for (let { type: e, value: t } of y)
         if ("element" === e) {
-            for (let e of (h(g < w, "Index out of bounds"), t[g])) v.push(e);
+            for (let e of (p(g < w, "Index out of bounds"), n[g])) v.push(e);
             g++;
-        } else (h("literal" === e, "Type must be literal"), v.push({ type: "literal", value: n }));
+        } else (p("literal" === e, "Type must be literal"), v.push({ type: "literal", value: t }));
     return v;
 }
-function Z(e) {
-    let n = (function e(n) {
-        if ("number" == typeof n) return new i.W(n);
-        if ("bigint" == typeof n) return new i.W(n.toString());
-        if ((h("symbol" != typeof n, "Symbol is not supported", TypeError), void 0 === n)) return new i.W(0 / 0);
-        if (null === n || 0 === n) return s;
-        if (!0 === n) return new i.W(1);
-        if ("string" == typeof n)
+function D(e) {
+    let t = (function e(t) {
+        if ("number" == typeof t) return new a.W(t);
+        if ("bigint" == typeof t) return new a.W(t.toString());
+        if ((p("symbol" != typeof t, "Symbol is not supported", TypeError), void 0 === t)) return new a.W(0 / 0);
+        if (null === t || 0 === t) return s;
+        if (!0 === t) return new a.W(1);
+        if ("string" == typeof t)
             try {
-                return new i.W(n);
+                return new a.W(t);
             } catch {
-                return new i.W(0 / 0);
+                return new a.W(0 / 0);
             }
-        h("object" == typeof n, "object expected", TypeError);
-        let t = (function (e, n) {
+        p("object" == typeof t, "object expected", TypeError);
+        let n = (function (e, t) {
             if ("object" == typeof e && null != e) {
-                let t,
+                let n,
                     r = Symbol.toPrimitive in e ? e[Symbol.toPrimitive] : void 0;
                 if (void 0 !== r) {
-                    void 0 === n
-                        ? (t = "default")
-                        : "string" === n
-                          ? (t = "string")
-                          : (h("number" === n, 'preferredType must be "string" or "number"'), (t = "number"));
-                    let a = r.call(e, t);
-                    if ("object" != typeof a) return a;
+                    void 0 === t
+                        ? (n = "default")
+                        : "string" === t
+                          ? (n = "string")
+                          : (p("number" === t, 'preferredType must be "string" or "number"'), (n = "number"));
+                    let i = r.call(e, n);
+                    if ("object" != typeof i) return i;
                     throw TypeError("Cannot convert exotic object to primitive.");
                 }
-                for (let t of (void 0 === n && (n = "number"),
-                "string" === n ? ["toString", "valueOf"] : ["valueOf", "toString"])) {
-                    let n = e[t];
-                    if (g(n)) {
-                        let t = n.call(e);
-                        if ("object" != typeof t) return t;
+                for (let n of (void 0 === t && (t = "number"),
+                "string" === t ? ["toString", "valueOf"] : ["valueOf", "toString"])) {
+                    let t = e[n];
+                    if (g(t)) {
+                        let n = t.call(e);
+                        if ("object" != typeof n) return n;
                     }
                 }
                 throw TypeError("Cannot convert object to primitive value");
             }
             return e;
-        })(n, "number");
-        return (h("object" != typeof t, "object expected", TypeError), e(t));
+        })(t, "number");
+        return (p("object" != typeof n, "object expected", TypeError), e(n));
     })(e);
-    return (h(n.isInteger(), `${e} is not an integer`), n.toNumber());
+    return (p(t.isInteger(), `${e} is not an integer`), t.toNumber());
 }
-function $(e) {
+function Z(e) {
     if ("object" != typeof e) {
         if ("string" == typeof e) throw RangeError("Invalid duration format");
         throw TypeError("Invalid duration");
     }
-    let n = {
+    let t = {
         years: 0,
         months: 0,
         weeks: 0,
@@ -1945,16 +1945,16 @@ function $(e) {
         nanoseconds: 0,
     };
     if (
-        (void 0 !== e.days && (n.days = Z(e.days)),
-        void 0 !== e.hours && (n.hours = Z(e.hours)),
-        void 0 !== e.microseconds && (n.microseconds = Z(e.microseconds)),
-        void 0 !== e.milliseconds && (n.milliseconds = Z(e.milliseconds)),
-        void 0 !== e.minutes && (n.minutes = Z(e.minutes)),
-        void 0 !== e.months && (n.months = Z(e.months)),
-        void 0 !== e.nanoseconds && (n.nanoseconds = Z(e.nanoseconds)),
-        void 0 !== e.seconds && (n.seconds = Z(e.seconds)),
-        void 0 !== e.weeks && (n.weeks = Z(e.weeks)),
-        void 0 !== e.years && (n.years = Z(e.years)),
+        (void 0 !== e.days && (t.days = D(e.days)),
+        void 0 !== e.hours && (t.hours = D(e.hours)),
+        void 0 !== e.microseconds && (t.microseconds = D(e.microseconds)),
+        void 0 !== e.milliseconds && (t.milliseconds = D(e.milliseconds)),
+        void 0 !== e.minutes && (t.minutes = D(e.minutes)),
+        void 0 !== e.months && (t.months = D(e.months)),
+        void 0 !== e.nanoseconds && (t.nanoseconds = D(e.nanoseconds)),
+        void 0 !== e.seconds && (t.seconds = D(e.seconds)),
+        void 0 !== e.weeks && (t.weeks = D(e.weeks)),
+        void 0 !== e.years && (t.years = D(e.years)),
         void 0 === e.years &&
             void 0 === e.months &&
             void 0 === e.weeks &&
@@ -1969,24 +1969,24 @@ function $(e) {
         throw TypeError("Invalid duration format");
     if (
         !(function (e) {
-            let n = (function (e) {
-                for (let n of N) {
-                    if (e[n] < 0) return -1;
-                    if (e[n] > 0) return 1;
+            let t = (function (e) {
+                for (let t of $) {
+                    if (e[t] < 0) return -1;
+                    if (e[t] > 0) return 1;
                 }
                 return 0;
             })(e);
-            for (let t of N) {
-                let r = e[t];
-                if ((h(isFinite(Number(r)), `${t} is not finite`), (r < 0 && n > 0) || (r > 0 && n < 0))) return !1;
+            for (let n of $) {
+                let r = e[n];
+                if ((p(isFinite(Number(r)), `${n} is not finite`), (r < 0 && t > 0) || (r > 0 && t < 0))) return !1;
             }
             return !0;
-        })(n)
+        })(t)
     )
         throw RangeError("Invalid duration format");
-    return n;
+    return t;
 }
-let G = [
+let j = [
         "adlm",
         "ahom",
         "arab",
@@ -2853,7 +2853,7 @@ let G = [
         "zh-Latn": { nu: ["latn"] },
         zu: { nu: ["latn"] },
     },
-    F = [
+    G = [
         "locale",
         "style",
         "years",
@@ -2879,7 +2879,7 @@ let G = [
         "numberingSystem",
         "fractionalDigits",
     ],
-    j = [
+    F = [
         {
             styleSlot: "years",
             displaySlot: "yearsDisplay",
@@ -2951,100 +2951,100 @@ let G = [
             digitalDefault: "numeric",
         },
     ];
-class B {
-    constructor(e, n) {
-        if (!(this && this instanceof B ? this.constructor : void 0))
+class U {
+    constructor(e, t) {
+        if (!(this && this instanceof U ? this.constructor : void 0))
             throw TypeError("Intl.DurationFormat must be called with 'new'");
-        let t = a(e),
+        let n = i(e),
             r = Object.create(null),
-            i = void 0 === n ? Object.create(null) : y(n),
-            s = w(i, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
-            o = w(i, "numberingSystem", "string", void 0, void 0);
-        if (void 0 !== o && 0 > G.indexOf(o)) throw RangeError(`Invalid numberingSystems: ${o}`);
+            a = void 0 === t ? Object.create(null) : y(t),
+            s = w(a, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
+            o = w(a, "numberingSystem", "string", void 0, void 0);
+        if (void 0 !== o && 0 > j.indexOf(o)) throw RangeError(`Invalid numberingSystems: ${o}`);
         ((r.nu = o), (r.localeMatcher = s));
-        let { localeData: u, availableLocales: l } = B,
-            d = (function (e, n, t, r, a, i) {
+        let { localeData: u, availableLocales: l } = U,
+            d = (function (e, t, n, r, i, a) {
                 let s, o;
-                if ("lookup" === t.localeMatcher)
-                    s = (function (e, n, t) {
+                if ("lookup" === n.localeMatcher)
+                    s = (function (e, t, n) {
                         let r = { locale: "" };
-                        for (let t of n) {
-                            let n = t.replace(k, ""),
-                                a = b(e, n);
-                            if (a) return ((r.locale = a), t !== n && (r.extension = t.slice(n.length, t.length)), r);
+                        for (let n of t) {
+                            let t = n.replace(z, ""),
+                                i = b(e, t);
+                            if (i) return ((r.locale = i), n !== t && (r.extension = n.slice(t.length, n.length)), r);
                         }
-                        return ((r.locale = t()), r);
-                    })(Array.from(e), n, i);
+                        return ((r.locale = n()), r);
+                    })(Array.from(e), t, a);
                 else {
                     var u;
-                    let t, r, a, o, l;
+                    let n, r, i, o, l;
                     ((u = Array.from(e)),
-                        (a = []),
-                        (o = n.reduce((e, n) => {
-                            let t = n.replace(k, "");
-                            return (a.push(t), (e[t] = n), e);
+                        (i = []),
+                        (o = t.reduce((e, t) => {
+                            let n = t.replace(z, "");
+                            return (i.push(n), (e[n] = t), e);
                         }, {})),
-                        (l = (function (e, n, t = 838) {
+                        (l = (function (e, t, n = 838) {
                             let r = 1 / 0,
-                                a = { matchedDesiredLocale: "", distances: {} },
-                                i = L.get(n);
-                            i ||
-                                ((i = n.map((e) => {
+                                i = { matchedDesiredLocale: "", distances: {} },
+                                a = x.get(t);
+                            a ||
+                                ((a = t.map((e) => {
                                     try {
                                         return Intl.getCanonicalLocales([e])[0] || e;
                                     } catch {
                                         return e;
                                     }
                                 })),
-                                L.set(n, i));
-                            let s = new Set(i);
-                            for (let n = 0; n < e.length; n++) {
-                                let t = e[n];
-                                if (s.has(t)) {
-                                    let e = 0 + 40 * n;
+                                x.set(t, a));
+                            let s = new Set(a);
+                            for (let t = 0; t < e.length; t++) {
+                                let n = e[t];
+                                if (s.has(n)) {
+                                    let e = 0 + 40 * t;
                                     if (
-                                        ((a.distances[t] = { [t]: e }),
+                                        ((i.distances[n] = { [n]: e }),
                                         e < r &&
-                                            ((r = e), (a.matchedDesiredLocale = t), (a.matchedSupportedLocale = t)),
-                                        0 === n)
+                                            ((r = e), (i.matchedDesiredLocale = n), (i.matchedSupportedLocale = n)),
+                                        0 === t)
                                     )
-                                        return a;
+                                        return i;
                                 }
                             }
-                            for (let n = 0; n < e.length; n++) {
-                                let t = e[n];
+                            for (let t = 0; t < e.length; t++) {
+                                let n = e[t];
                                 try {
-                                    let e = new Intl.Locale(t).maximize().toString();
-                                    if (e !== t) {
-                                        let i = (function (e) {
-                                            let n = [],
-                                                t = e;
-                                            for (; t;) {
-                                                n.push(t);
-                                                let e = t.lastIndexOf("-");
+                                    let e = new Intl.Locale(n).maximize().toString();
+                                    if (e !== n) {
+                                        let a = (function (e) {
+                                            let t = [],
+                                                n = e;
+                                            for (; n;) {
+                                                t.push(n);
+                                                let e = n.lastIndexOf("-");
                                                 if (-1 === e) break;
-                                                t = t.substring(0, e);
+                                                n = n.substring(0, e);
                                             }
-                                            return n;
+                                            return t;
                                         })(e);
-                                        for (let o = 0; o < i.length; o++) {
-                                            let u = i[o];
-                                            if (u !== t && s.has(u)) {
-                                                let i;
+                                        for (let o = 0; o < a.length; o++) {
+                                            let u = a[o];
+                                            if (u !== n && s.has(u)) {
+                                                let a;
                                                 try {
-                                                    i =
+                                                    a =
                                                         new Intl.Locale(u).maximize().toString() === e
-                                                            ? 0 + 40 * n
-                                                            : 10 * o + 40 * n;
+                                                            ? 0 + 40 * t
+                                                            : 10 * o + 40 * t;
                                                 } catch {
-                                                    i = 10 * o + 40 * n;
+                                                    a = 10 * o + 40 * t;
                                                 }
-                                                (a.distances[t] || (a.distances[t] = {}),
-                                                    (a.distances[t][u] = i),
-                                                    i < r &&
-                                                        ((r = i),
-                                                        (a.matchedDesiredLocale = t),
-                                                        (a.matchedSupportedLocale = u)));
+                                                (i.distances[n] || (i.distances[n] = {}),
+                                                    (i.distances[n][u] = a),
+                                                    a < r &&
+                                                        ((r = a),
+                                                        (i.matchedDesiredLocale = n),
+                                                        (i.matchedSupportedLocale = u)));
                                                 break;
                                             }
                                         }
@@ -3052,122 +3052,122 @@ class B {
                                 } catch {}
                             }
                             return (
-                                (a.matchedSupportedLocale && 0 === r) ||
-                                    (e.forEach((e, t) => {
-                                        (a.distances[e] || (a.distances[e] = {}),
-                                            i.forEach((i, s) => {
-                                                let o = n[s],
-                                                    u = O(e, i) + 0 + 40 * t;
-                                                ((a.distances[e][o] = u),
+                                (i.matchedSupportedLocale && 0 === r) ||
+                                    (e.forEach((e, n) => {
+                                        (i.distances[e] || (i.distances[e] = {}),
+                                            a.forEach((a, s) => {
+                                                let o = t[s],
+                                                    u = M(e, a) + 0 + 40 * n;
+                                                ((i.distances[e][o] = u),
                                                     u < r &&
                                                         ((r = u),
-                                                        (a.matchedDesiredLocale = e),
-                                                        (a.matchedSupportedLocale = o)));
+                                                        (i.matchedDesiredLocale = e),
+                                                        (i.matchedSupportedLocale = o)));
                                             }));
                                     }),
-                                    r >= t && ((a.matchedDesiredLocale = void 0), (a.matchedSupportedLocale = void 0))),
-                                a
+                                    r >= n && ((i.matchedDesiredLocale = void 0), (i.matchedSupportedLocale = void 0))),
+                                i
                             );
-                        })(a, u)).matchedSupportedLocale &&
+                        })(i, u)).matchedSupportedLocale &&
                             l.matchedDesiredLocale &&
-                            ((t = l.matchedSupportedLocale),
+                            ((n = l.matchedSupportedLocale),
                             (r = o[l.matchedDesiredLocale].slice(l.matchedDesiredLocale.length) || void 0)),
-                        (s = t ? { locale: t, extension: r } : { locale: i() }));
+                        (s = n ? { locale: n, extension: r } : { locale: a() }));
                 }
-                null == s && (s = { locale: i(), extension: "" });
+                null == s && (s = { locale: a(), extension: "" });
                 let l = s.locale,
-                    d = a[l],
+                    d = i[l],
                     c = { locale: "en", dataLocale: l };
                 o = s.extension
                     ? (function (e) {
-                          let n;
+                          let t;
                           (E(e === e.toLowerCase(), "Expected extension to be lowercase"),
                               E("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension"));
-                          let t = [],
+                          let n = [],
                               r = [],
-                              a = e.length,
-                              i = 3;
-                          for (; i < a;) {
+                              i = e.length,
+                              a = 3;
+                          for (; a < i;) {
                               let s,
-                                  o = e.indexOf("-", i);
-                              s = -1 === o ? a - i : o - i;
-                              let u = e.slice(i, i + s);
+                                  o = e.indexOf("-", a);
+                              s = -1 === o ? i - a : o - a;
+                              let u = e.slice(a, a + s);
                               (E(s >= 2, "Expected a subtag to have at least 2 characters"),
-                                  void 0 === n && 2 != s
-                                      ? -1 === t.indexOf(u) && t.push(u)
+                                  void 0 === t && 2 != s
+                                      ? -1 === n.indexOf(u) && n.push(u)
                                       : 2 === s
-                                        ? ((n = { key: u, value: "" }),
-                                          void 0 === r.find((e) => e.key === n?.key) && r.push(n))
-                                        : n?.value === ""
-                                          ? (n.value = u)
-                                          : (E(void 0 !== n, "Expected keyword to be defined"), (n.value += "-" + u)),
-                                  (i += s + 1));
+                                        ? ((t = { key: u, value: "" }),
+                                          void 0 === r.find((e) => e.key === t?.key) && r.push(t))
+                                        : t?.value === ""
+                                          ? (t.value = u)
+                                          : (E(void 0 !== t, "Expected keyword to be defined"), (t.value += "-" + u)),
+                                  (a += s + 1));
                           }
-                          return { attributes: t, keywords: r };
+                          return { attributes: n, keywords: r };
                       })(s.extension).keywords
                     : [];
                 let f = [];
                 for (let e of r) {
-                    let n,
+                    let t,
                         r = d?.[e] ?? [];
                     E(Array.isArray(r), `keyLocaleData for ${e} must be an array`);
-                    let a = r[0];
-                    E(void 0 === a || "string" == typeof a, "value must be a string or undefined");
-                    let i = o.find((n) => n.key === e);
-                    if (i) {
-                        let t = i.value;
-                        "" !== t
-                            ? r.indexOf(t) > -1 && (n = { key: e, value: (a = t) })
-                            : r.indexOf("true") > -1 && (n = { key: e, value: (a = "true") });
+                    let i = r[0];
+                    E(void 0 === i || "string" == typeof i, "value must be a string or undefined");
+                    let a = o.find((t) => t.key === e);
+                    if (a) {
+                        let n = a.value;
+                        "" !== n
+                            ? r.indexOf(n) > -1 && (t = { key: e, value: (i = n) })
+                            : r.indexOf("true") > -1 && (t = { key: e, value: (i = "true") });
                     }
-                    let s = t[e];
+                    let s = n[e];
                     (E(null == s || "string" == typeof s, "optionsValue must be a string or undefined"),
                         "string" == typeof s &&
                             "" ===
-                                (s = (function (e, n) {
-                                    let t = n.toLowerCase();
-                                    return (E(void 0 !== e, "ukey must be defined"), t);
+                                (s = (function (e, t) {
+                                    let n = t.toLowerCase();
+                                    return (E(void 0 !== e, "ukey must be defined"), n);
                                 })(e.toLowerCase(), s)) &&
                             (s = "true"),
-                        s !== a && r.indexOf(s) > -1 && ((a = s), (n = void 0)),
-                        n && f.push(n),
-                        (c[e] = a));
+                        s !== i && r.indexOf(s) > -1 && ((i = s), (t = void 0)),
+                        t && f.push(t),
+                        (c[e] = i));
                 }
                 return (
                     f.length > 0 &&
-                        (l = (function (e, n, t) {
+                        (l = (function (e, t, n) {
                             E(-1 === e.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
                             let r = "-u";
-                            for (let e of n) r += `-${e}`;
-                            for (let e of t) {
-                                let { key: n, value: t } = e;
-                                ((r += `-${n}`), "" !== t && (r += `-${t}`));
+                            for (let e of t) r += `-${e}`;
+                            for (let e of n) {
+                                let { key: t, value: n } = e;
+                                ((r += `-${t}`), "" !== n && (r += `-${n}`));
                             }
-                            if ("-u" === r) return C(e);
-                            let a = e.indexOf("-x-");
-                            return C(-1 === a ? e + r : e.slice(0, a) + r + e.slice(a));
+                            if ("-u" === r) return P(e);
+                            let i = e.indexOf("-x-");
+                            return P(-1 === i ? e + r : e.slice(0, i) + r + e.slice(i));
                         })(l, [], f)),
                     (c.locale = l),
                     c
                 );
-            })(l, t, r, ["nu"], u, B.getDefaultLocale),
+            })(l, n, r, ["nu"], u, U.getDefaultLocale),
             c = d.locale,
-            f = P(this);
+            f = C(this);
         ((f.initializedDurationFormat = !0), (f.locale = c), (f.numberingSystem = d.nu));
-        let _ = w(i, "style", "string", ["long", "short", "narrow", "digital"], "short");
-        ((f.style = _), (f.dataLocale = d.dataLocale));
-        let h = "";
-        (j.forEach((e) => {
-            let { styleSlot: n, displaySlot: t, unit: r, values: a, digitalDefault: s } = e,
-                o = (function (e, n, t, r, a, i) {
-                    let s = w(n, e, "string", r, void 0),
+        let h = w(a, "style", "string", ["long", "short", "narrow", "digital"], "short");
+        ((f.style = h), (f.dataLocale = d.dataLocale));
+        let p = "";
+        (F.forEach((e) => {
+            let { styleSlot: t, displaySlot: n, unit: r, values: i, digitalDefault: s } = e,
+                o = (function (e, t, n, r, i, a) {
+                    let s = w(t, e, "string", r, void 0),
                         o = "always";
                     void 0 === s &&
-                        ("digital" === t
-                            ? ("hours" !== e && "minutes" !== e && "seconds" !== e && (o = "auto"), (s = a))
-                            : ((o = "auto"), (s = "numeric" === i || "2-digit" === i ? "numeric" : t)));
-                    let u = w(n, `${e}Display`, "string", ["always", "auto"], o);
-                    if ("numeric" === i || "2-digit" === i) {
+                        ("digital" === n
+                            ? ("hours" !== e && "minutes" !== e && "seconds" !== e && (o = "auto"), (s = i))
+                            : ((o = "auto"), (s = "numeric" === a || "2-digit" === a ? "numeric" : n)));
+                    let u = w(t, `${e}Display`, "string", ["always", "auto"], o);
+                    if ("numeric" === a || "2-digit" === a) {
                         if ("numeric" !== s && "2-digit" !== s)
                             throw RangeError("Can't mix numeric and non-numeric styles");
                         if (
@@ -3181,78 +3181,78 @@ class B {
                             );
                     }
                     return { style: s, display: u };
-                })(r, i, _, a, s, h);
-            ((f[n] = o.style),
-                (f[t] = o.display),
+                })(r, a, h, i, s, p);
+            ((f[t] = o.style),
+                (f[n] = o.display),
                 ("hours" === r || "minutes" === r || "seconds" === r || "milliseconds" === r || "microseconds" === r) &&
-                    (h = o.style));
+                    (p = o.style));
         }),
-            (f.fractionalDigits = (function (e, n, t) {
-                var r = e[n];
-                if (void 0 === r) return t;
-                let a = Number(r);
-                if (isNaN(a) || a < 0 || a > 9) throw RangeError(`${a} is outside of range [0, 9]`);
-                return Math.floor(a);
-            })(i, "fractionalDigits", void 0)));
+            (f.fractionalDigits = (function (e, t, n) {
+                var r = e[t];
+                if (void 0 === r) return n;
+                let i = Number(r);
+                if (isNaN(i) || i < 0 || i > 9) throw RangeError(`${i} is outside of range [0, 9]`);
+                return Math.floor(i);
+            })(a, "fractionalDigits", void 0)));
     }
     resolvedOptions() {
         if (
             "object" != typeof this ||
-            !(function (e, n) {
+            !(function (e, t) {
                 if (!g(e)) return !1;
-                if ("object" != typeof n) return !1;
-                let t = e.prototype;
-                if ("object" != typeof t)
+                if ("object" != typeof t) return !1;
+                let n = e.prototype;
+                if ("object" != typeof n)
                     throw TypeError("OrdinaryHasInstance called on an object with an invalid prototype property.");
-                return Object.prototype.isPrototypeOf.call(t, n);
-            })(B, this)
+                return Object.prototype.isPrototypeOf.call(n, t);
+            })(U, this)
         )
             throw TypeError("Method Intl.DurationFormat.prototype.resolvedOptions called on incompatible receiver");
-        let e = P(this),
-            n = {};
-        for (let t of F) {
-            let r = e[t];
-            ("fractionalDigits" === t ? void 0 !== r && (r = Number(r)) : h(void 0 !== r, `Missing internal slot ${t}`),
-                (n[t] = r));
+        let e = C(this),
+            t = {};
+        for (let n of G) {
+            let r = e[n];
+            ("fractionalDigits" === n ? void 0 !== r && (r = Number(r)) : p(void 0 !== r, `Missing internal slot ${n}`),
+                (t[n] = r));
+        }
+        return t;
+    }
+    formatToParts(e) {
+        if (void 0 === C(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
+        let t = N(this, Z(e)),
+            n = [];
+        for (let { type: e, unit: r, value: i } of t) {
+            let t = { type: e, value: i };
+            (r && (t.unit = r), n.push(t));
         }
         return n;
     }
-    formatToParts(e) {
-        if (void 0 === P(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
-        let n = I(this, $(e)),
-            t = [];
-        for (let { type: e, unit: r, value: a } of n) {
-            let n = { type: e, value: a };
-            (r && (n.unit = r), t.push(n));
-        }
-        return t;
-    }
     format(e) {
-        if (void 0 === P(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
-        let n = I(this, $(e)),
-            t = "";
-        for (let { value: e } of n) t += e;
-        return t;
+        if (void 0 === C(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
+        let t = N(this, Z(e)),
+            n = "";
+        for (let { value: e } of t) n += e;
+        return n;
     }
-    static supportedLocalesOf(e, n) {
-        return (function (e, n, t) {
-            void 0 !== t && w((t = y(t)), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
+    static supportedLocalesOf(e, t) {
+        return (function (e, t, n) {
+            void 0 !== n && w((n = y(n)), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
             var r = Array.from(e);
-            let a = [];
-            for (let e of n) {
-                let n = b(r, e.replace(k, ""));
-                n && a.push(n);
+            let i = [];
+            for (let e of t) {
+                let t = b(r, e.replace(z, ""));
+                t && i.push(t);
             }
-            return a;
-        })(B.availableLocales, a(e), n);
+            return i;
+        })(U.availableLocales, i(e), t);
     }
     static __defaultLocale = "en";
     static availableLocales = new Set();
-    static localeData = Object.keys(R).reduce((e, n) => {
-        B.availableLocales.add(n);
-        let t = R[n].nu;
-        return ((e[n] = { nu: t, digitalFormat: R[n].separator || t.reduce((e, n) => ((e[n] = ":"), e), {}) }), e);
+    static localeData = Object.keys(R).reduce((e, t) => {
+        U.availableLocales.add(t);
+        let n = R[t].nu;
+        return ((e[t] = { nu: n, digitalFormat: R[t].separator || n.reduce((e, t) => ((e[t] = ":"), e), {}) }), e);
     }, {});
-    static getDefaultLocale = () => B.__defaultLocale;
+    static getDefaultLocale = () => U.__defaultLocale;
     static polyfilled = !0;
 }

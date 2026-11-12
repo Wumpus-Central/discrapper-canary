@@ -47,10 +47,10 @@ l.d(
                                       return n;
                                   })(o)
                                 : 1,
-                        m =
+                        c =
                             ((i = Math.max(Math.min(n(Math.abs((s = e / u))) - 1, 0), -15)),
                             (Math.floor(s * (r = 10 ** -i)) / r) * u);
-                    return l.format(Number.isFinite(m) ? m : e);
+                    return l.format(Number.isFinite(c) ? c : e);
                 },
             };
         },

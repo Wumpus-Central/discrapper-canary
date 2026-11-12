@@ -23,11 +23,11 @@ n.d(
                     primaryCTAButtonProps: E,
                     onBackClick: S,
                 } = e,
-                { hasPaymentSources: I } = (0, u.j)(),
-                { isExpressCheckoutEnabled: g } = (0, c.t4)((e) => ({
+                { hasPaymentSources: g } = (0, u.j)(),
+                { isExpressCheckoutEnabled: I } = (0, c.t4)((e) => ({
                     isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
                 })),
-                y = I || g ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
+                y = g || I ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
                 A = i.useCallback(() => t(y), [t, y]),
                 P = i.useMemo(
                     () =>

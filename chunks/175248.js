@@ -1,6 +1,6 @@
 var r = n(477900),
-    i = n(582128),
-    s = n(855986),
+    s = n(582128),
+    i = n(855986),
     l = n(772707),
     u = n(289873),
     a = n(885574),
@@ -24,9 +24,9 @@ n.d(
         },
         QuestRewardModalUnverified: function (e) {
             let { transitionState: t, onClose: n } = e,
-                c = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.email),
-                [T, _] = i.useState({ status: "unknown" });
-            i.useEffect(() => {
+                c = (0, i.bG)([f.default], () => f.default.getCurrentUser()?.email),
+                [T, _] = s.useState({ status: "unknown" });
+            s.useEffect(() => {
                 (_({ status: "loading" }),
                     d.A.verifyResend().then(
                         () => _({ status: "success" }),

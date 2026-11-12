@@ -43,8 +43,8 @@ var l = n(477900),
     Z = n(869038),
     W = n(793574),
     Y = n(688810),
-    q = n(590180),
-    z = n(450047),
+    z = n(590180),
+    q = n(450047),
     Q = n(61750),
     V = n(192308),
     X = n(780964),
@@ -106,8 +106,8 @@ function er(e) {
             leading: (0, l.jsx)(S.A, { user: e, size: m._3.SIZE_20 }),
             disabled: k && C.length >= i && !C.includes(e.id),
         })),
-        ea = (0, z.D)(d),
-        [es, ...eu] = (0, c.yK)([q.A], () => d.map((e) => q.A.getProduct(e)).filter((e) => null != e));
+        ea = (0, q.D)(d),
+        [es, ...eu] = (0, c.yK)([z.A], () => d.map((e) => z.A.getProduct(e)).filter((e) => null != e));
     function ec(e) {
         e.length <= i && y(e);
     }
@@ -297,11 +297,11 @@ function ec(e) {
         W = g?.productLine === ea.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionRewards: Y,
-            openGiftingBadgePostPurchaseModal: q,
-            canShowGiftingBadgePostPurchase: z,
+            openGiftingBadgePostPurchaseModal: z,
+            canShowGiftingBadgePostPurchase: q,
         } = (0, O.Pv)(),
         Q = (0, v.Mq)(A) && Y.length > 0,
-        V = z && 0 === Y.length;
+        V = q && 0 === Y.length;
     function X() {
         return null != A ? A.skuId : null != g ? g.id : null;
     }
@@ -379,8 +379,8 @@ function ec(e) {
                 deliveryReady: s,
                 privateGiftLink: 1 === n ? J() : null,
                 rewardSkuIds: Y,
-                canShowGiftingBadgePostPurchase: z,
-                openGiftingBadgePostPurchaseModal: q,
+                canShowGiftingBadgePostPurchase: q,
+                openGiftingBadgePostPurchaseModal: z,
                 onClose: R,
             })
           : (0, l.jsxs)(l.Fragment, {
@@ -431,7 +431,7 @@ function ec(e) {
                                               (0, l.jsx)(ed, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      (R(), (0, _.bz)(), V && q());
+                                                      (R(), (0, _.bz)(), V && z());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: eu.yF }),
@@ -460,7 +460,7 @@ function ec(e) {
                                         fullWidth: !0,
                                         text: et.intl.string(et.t.PDTjLN),
                                         onClick: () => {
-                                            (R(), q());
+                                            (R(), z());
                                         },
                                     }),
                                 }),

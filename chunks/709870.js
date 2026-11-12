@@ -6,14 +6,14 @@ r.d(
     {},
     {
         $: function (n) {
-            let { orbsAmount: t, openGiftingBadgePostPurchaseModal: i } = n;
+            let { orbsAmount: t, openGiftingBadgePostPurchaseModal: l } = n;
             (0, u.mM)(async () => {
                 let { NitroOrbsBonusDefaultModal: n, NitroOrbsBonusGiftingModal: u } = await Promise.all([
                     r.e(393137),
                     r.e(789428),
                 ]).then(r.bind(r, 717983));
-                return null != i
-                    ? (n) => (0, e.jsx)(u, { orbsAmount: t, openGiftingBadgePostPurchaseModal: i, ...n })
+                return null != l
+                    ? (n) => (0, e.jsx)(u, { orbsAmount: t, openGiftingBadgePostPurchaseModal: l, ...n })
                     : (r) => (0, e.jsx)(n, { orbsAmount: t, ...r });
             });
         },
