@@ -711,9 +711,9 @@ let e2 = function (e) {
               }),
           });
 };
-var e6 = l(191711),
+var e9 = l(191711),
     e5 = l(226658);
-function e9(e) {
+function e6(e) {
     let { loadId: t } = e,
         l = y.A.useField("categoryId"),
         s = eJ(),
@@ -767,13 +767,13 @@ function e9(e) {
                       color: "text-subtle",
                       children: E.intl.string(E.t.f09BQJ),
                   }),
-                  (0, a.jsx)(e6.A, {
+                  (0, a.jsx)(e9.A, {
                       items: o,
                       title: r,
                       onSelect: c,
                       selected: `${l}`,
                       "aria-label": E.intl.string(E.t.Ng5cTK),
-                      variant: e6.H.FILLED,
+                      variant: e9.H.FILLED,
                   }),
               ],
           });
@@ -802,8 +802,8 @@ let e3 = function (e) {
         ],
     });
 };
-var e8 = l(890497),
-    e7 = l(118216);
+var e7 = l(890497),
+    e8 = l(118216);
 function te(e) {
     let { loadId: t } = e,
         l = (0, i.bG)([ez.default], () => (0, C.Kv)([ez.default])),
@@ -824,8 +824,8 @@ function te(e) {
         ),
         c = n.useMemo(() => (0, G.tO)().map((e) => ({ id: e.code, value: e.code, label: e.name })), []);
     return (0, a.jsx)("div", {
-        className: e7.k,
-        children: (0, a.jsx)(e8.Z, {
+        className: e8.k,
+        children: (0, a.jsx)(e7.Z, {
             selectionMode: "single",
             label: E.intl.string(E.t.Ng5cTK),
             hideLabel: !0,
@@ -935,7 +935,7 @@ function tr(e) {
                                     !f &&
                                         (0, a.jsxs)("div", {
                                             className: tt.eW,
-                                            children: [(0, a.jsx)(e9, { loadId: t }), (0, a.jsx)(te, { loadId: t })],
+                                            children: [(0, a.jsx)(e6, { loadId: t }), (0, a.jsx)(te, { loadId: t })],
                                         }),
                                     m && (0, a.jsx)(e3, { loadId: t }),
                                 ],
@@ -1288,7 +1288,7 @@ var to = l(475340),
     tN = l(326369),
     tI = l(422069),
     tv = l(49491),
-    tE = l(611656),
+    tE = l(459778),
     tp = l(281018),
     tR = l(311043),
     tT = l(202163),
@@ -1496,25 +1496,25 @@ function t1() {
 function t2() {
     return (0, a.jsx)(tQ, { title: E.intl.string(E.t.Pc6FRV), children: (0, a.jsx)(t1, {}) });
 }
-function t6() {
+function t9() {
     return (0, a.jsx)(tQ, { title: E.intl.string(E.t.qpGTIa), children: (0, a.jsx)(tJ, {}) });
 }
 var t5 = l(541830);
-let t9 = null;
+let t6 = null;
 class t4 extends i.Ay.Store {
     static displayName = "GlobalDiscoveryGamesStore";
     getTrendingGames() {
-        return t9;
+        return t6;
     }
 }
 let t3 = new t4(T.h, {
     LOGOUT: function () {
-        if (null == t9) return !1;
-        t9 = null;
+        if (null == t6) return !1;
+        t6 = null;
     },
     GLOBAL_DISCOVERY_GAMES_TRENDING_FETCH_SUCCESS: function (e) {
         let { data: t } = e;
-        t9 = {
+        t6 = {
             week: t.week,
             games: t.games.map((e) => {
                 let { game: t, ...l } = e;
@@ -1523,8 +1523,8 @@ let t3 = new t4(T.h, {
         };
     },
 });
-var t8 = l(201989),
-    t7 = l(864202),
+var t7 = l(201989),
+    t8 = l(864202),
     le = l(602999),
     lt =
         (((s = {})[(s.ADVENTURE = 1)] = "ADVENTURE"),
@@ -1597,13 +1597,13 @@ function lr() {
                     t
                         .map((e, t) =>
                             (function (e, t, l, s) {
-                                if (!(0, t8.R)(t, s)) return null;
+                                if (!(0, t7.R)(t, s)) return null;
                                 let a =
                                     null != l &&
                                     (function (e, t, l) {
                                         if (0 !== e || null == t) return !1;
-                                        let s = (0, t7.default)(t.slice(0, 10)),
-                                            a = (0, t7.default)(l);
+                                        let s = (0, t8.default)(t.slice(0, 10)),
+                                            a = (0, t8.default)(l);
                                         return s > (0, le.default)(a, 7) && s <= a;
                                     })(e.total_players_pct_change, t.firstReleaseDate, l);
                                 return { entry: e, game: t, isNewRelease: a };
@@ -1712,7 +1712,7 @@ function lh() {
                     (0, a.jsx)(lm, {}),
                     (0, a.jsx)(t2, {}),
                     (0, a.jsx)(tW, {}),
-                    (0, a.jsx)(t6, {}),
+                    (0, a.jsx)(t9, {}),
                     (0, a.jsx)(t$, {}),
                 ],
             }),

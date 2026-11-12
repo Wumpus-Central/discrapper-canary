@@ -3346,7 +3346,7 @@ function iI() {
                 }),
             });
 }
-var iN = n(611656),
+var iN = n(459778),
     iE = n(281018),
     iy = n(987070);
 let iA = { "--custom-similar-games-per-page": 8, "--custom-cover-min-width": "60px" };
