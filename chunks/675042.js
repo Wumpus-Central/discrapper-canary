@@ -704,7 +704,7 @@ if (null == e7 || "0.0.0" !== e7.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671488, Version Hash: 55d4df5a39683cdec4f787da3affa5619cff724b`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671490, Version Hash: f264094b8ec05c75aa86aec7768dd4f94c7d12db`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -776,7 +776,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671488";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671490";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
         let s = ej?.processUtils?.getLastCrash;
@@ -15868,7 +15868,7 @@ let I4 = "isHideDevBanner",
                     className: tc()(I8.Wz, I8.mr),
                     children: [
                         (0, P.jsx)(I7, { className: I8.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671488" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671490" }),
                         (0, P.jsx)(r, {}),
                     ],
                 })
@@ -42599,7 +42599,7 @@ class Mz extends eE.Ay.Store {
         return 0;
     }
     canWriteCaches(e) {
-        return (0, Mo.wR)()
+        return (0, Mo.w)()
             ? !!e || (MK.log("Not writing cache because never connected"), !1)
             : (MK.log("Not writing cache because not authenticated"), !1);
     }
@@ -43780,7 +43780,7 @@ let U2 = [
     {
         path: [j.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
-            return (0, Mo.wR)() || ei.default.getLoginStatus() === j.aUe.LOGGING_IN || !ei.default.allowLogoutRedirect()
+            return (0, Mo.w)() || ei.default.getLoginStatus() === j.aUe.LOGGING_IN || !ei.default.allowLogoutRedirect()
                 ? UJ(e)
                 : (0, P.jsx)(U$, { applicationId: e.match.params.applicationId });
         },
@@ -47861,9 +47861,9 @@ let GK = (0, rt.Fe)({
                 n.e(797641),
                 n.e(444861),
                 n.e(57641),
+                n.e(649232),
                 n.e(942148),
                 n.e(139283),
-                n.e(906516),
                 n.e(329995),
                 n.e(579023),
                 n.e(179582),
@@ -47883,7 +47883,7 @@ let GK = (0, rt.Fe)({
                 n.e(874821),
                 n.e(815537),
                 n.e(444861),
-                n.e(906516),
+                n.e(649232),
                 n.e(213419),
             ]).then(n.bind(n, 268126)),
         webpackId: 268126,

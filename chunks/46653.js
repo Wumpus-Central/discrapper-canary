@@ -211,10 +211,10 @@ class ed extends l.Ay.Store {
         return M;
     }
     getToken() {
-        return (0, g.gf)();
+        return (0, g.g)();
     }
     isAuthenticated() {
-        return (0, g.wR)();
+        return (0, g.w)();
     }
     getFingerprint() {
         return U;

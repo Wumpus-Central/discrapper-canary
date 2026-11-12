@@ -11,9 +11,7 @@ n.d(
         C: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { passProps: !0 };
             function o(o) {
-                return !(0, a.wR)() &&
-                    r.default.getLoginStatus() !== l.aUe.LOGGING_IN &&
-                    r.default.allowLogoutRedirect()
+                return !(0, a.w)() && r.default.getLoginStatus() !== l.aUe.LOGGING_IN && r.default.allowLogoutRedirect()
                     ? null != t
                         ? (0, i.jsx)(t, { renderRedirect: (0, i.jsx)(s.A, {}) })
                         : (0, i.jsx)(s.A, {})

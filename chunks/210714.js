@@ -87,7 +87,7 @@ let u = new (class {
                 ...(0, i.$)(),
             });
             try {
-                c.Ay.appFirstRenderAfterReadyPayload((0, _.wR)());
+                c.Ay.appFirstRenderAfterReadyPayload((0, _.w)());
             } catch (e) {}
             (0, a.K)();
         });
