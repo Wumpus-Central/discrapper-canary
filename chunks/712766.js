@@ -1,18 +1,19 @@
-(n.d(t, { A: () => j }), n(938796));
+(n.d(t, { A: () => K }), n(938796));
 var i,
     r,
     a = n(665260),
     s = n(855986),
     l = n(205693),
     o = n(73153),
-    d = n(652896),
-    c = n(46653),
-    u = n(495867),
-    _ = n(753181),
-    E = n(972347),
-    A = n(507821),
-    f = n(626584),
-    h =
+    d = n(644727),
+    c = n(652896),
+    u = n(46653),
+    _ = n(495867),
+    E = n(753181),
+    A = n(972347),
+    f = n(507821),
+    h = n(626584),
+    I =
         (((i = {}).Connect = "connect"),
         (i.Disconnect = "disconnect"),
         (i.Key = "key"),
@@ -23,7 +24,7 @@ var i,
         (i.Drop = "drop"),
         (i.Log = "log"),
         i),
-    I =
+    p =
         (((r = {}).Connect = "connect"),
         (r.SendKey = "sendKey"),
         (r.SendMouseMove = "sendMouseMove"),
@@ -35,7 +36,7 @@ var i,
         (r.Close = "close"),
         r);
 (n(323874), n(14289), n(35956));
-class p extends E.A {
+class m extends A.A {
     worker;
     userId;
     rtc;
@@ -45,14 +46,14 @@ class p extends E.A {
     constructor(e, t) {
         (super(),
             (this.userId = t),
-            (this.logger = new f.A("InputConnection")),
+            (this.logger = new h.A("InputConnection")),
             (this.rtc = e),
             (this.webTransportAck = this.onWebTransportAck.bind(this)),
-            this.on(h.Connect, () => {
+            this.on(I.Connect, () => {
                 this.state = 2;
             }),
-            this.on(h.Disconnect, this.onDisconnect.bind(this)),
-            this.on(h.Log, this.onLogMessage.bind(this)),
+            this.on(I.Disconnect, this.onDisconnect.bind(this)),
+            this.on(I.Log, this.onLogMessage.bind(this)),
             (this.worker = new Worker(
                 new URL("/assets/" + n.u(126501), n.b),
                 Object.assign({}, { name: "input-worker" }, { type: void 0 }),
@@ -67,25 +68,25 @@ class p extends E.A {
     }
     connect() {
         ((this.state = 1),
-            this.rtc.on(A.q.WebTransportAck, this.webTransportAck),
+            this.rtc.on(f.q.WebTransportAck, this.webTransportAck),
             this.rtc.startWebTransport(),
             setTimeout(() => {
                 1 === this.state &&
                     (this.logger.info("Timed out connecting"),
-                    this.rtc.off(A.q.WebTransportAck, this.webTransportAck),
-                    this.emit(h.Disconnect));
+                    this.rtc.off(f.q.WebTransportAck, this.webTransportAck),
+                    this.emit(I.Disconnect));
             }, 1e4));
     }
     onWebTransportAck(e, t) {
-        this.rtc.off(A.q.WebTransportAck, this.webTransportAck);
+        this.rtc.off(f.q.WebTransportAck, this.webTransportAck);
         let n = this.rtc.getVoiceAddress();
         if (null == n) {
-            (this.logger.info("Failed to get SFU address"), this.emit(h.Disconnect));
+            (this.logger.info("Failed to get SFU address"), this.emit(I.Disconnect));
             return;
         }
         let i = `https://${n.address}:${n.port}/?token=${e}`;
         (this.logger.info(`Starting WebTransport connection to ${n.address}:${n.port}`),
-            this.worker?.postMessage([I.Connect, i, t, this.userId]));
+            this.worker?.postMessage([p.Connect, i, t, this.userId]));
     }
     onLogMessage(e) {
         this.logger.log(e);
@@ -94,32 +95,32 @@ class p extends E.A {
         ((this.state = 0), this.worker?.terminate());
     }
     setHosting(e) {
-        this.worker?.postMessage([I.SetHosting, e]);
+        this.worker?.postMessage([p.SetHosting, e]);
     }
     sendKey(e, t, n) {
-        this.worker?.postMessage([I.SendKey, e, t, n]);
+        this.worker?.postMessage([p.SendKey, e, t, n]);
     }
     sendMouseMove(e, t, n) {
-        this.worker?.postMessage([I.SendMouseMove, e, t, n]);
+        this.worker?.postMessage([p.SendMouseMove, e, t, n]);
     }
     sendMouseButton(e, t, n) {
-        this.worker?.postMessage([I.SendMouseButton, e, t, n]);
+        this.worker?.postMessage([p.SendMouseButton, e, t, n]);
     }
     sendGrab(e, t) {
-        this.worker?.postMessage([I.SendGrab, e, t]);
+        this.worker?.postMessage([p.SendGrab, e, t]);
     }
     sendGrabAllow(e) {
-        this.worker?.postMessage([I.SendGrabAllow, e]);
+        this.worker?.postMessage([p.SendGrabAllow, e]);
     }
     sendDrop(e) {
-        this.worker?.postMessage([I.SendDrop, e]);
+        this.worker?.postMessage([p.SendDrop, e]);
     }
     close() {
-        this.worker?.postMessage([I.Close]);
+        this.worker?.postMessage([p.Close]);
     }
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-let m = {
+let T = {
     Escape: 27,
     Digit0: 48,
     Digit1: 49,
@@ -196,7 +197,7 @@ let m = {
     ArrowLeft: 37,
     ArrowRight: 39,
 };
-class T {
+class g {
     connection;
     keyHandler;
     mouseHandler;
@@ -224,11 +225,11 @@ class T {
             (this.releaseHandler = this._handleRelease.bind(this)),
             (this.disconnectHandler = this._dropController.bind(this)),
             (this.pointerLockChangeHandler = this._handlePointerLockChange.bind(this)),
-            (this.logger = new f.A(`InputGuest(${t})`)),
-            e.on(h.Connect, this.connectHandler),
-            e.on(h.GrabAllow, this.grabAllowHandler),
-            e.on(h.Drop, this.releaseHandler),
-            e.on(h.Disconnect, this.disconnectHandler),
+            (this.logger = new h.A(`InputGuest(${t})`)),
+            e.on(I.Connect, this.connectHandler),
+            e.on(I.GrabAllow, this.grabAllowHandler),
+            e.on(I.Drop, this.releaseHandler),
+            e.on(I.Disconnect, this.disconnectHandler),
             e.isConnected && this._handleConnect());
     }
     get host() {
@@ -246,9 +247,9 @@ class T {
     _handleKeyEvent(e) {
         (e.preventDefault(), this.isMouseCaptured && "Escape" === e.code)
             ? this._dropController()
-            : null == m[e.code]
+            : null == T[e.code]
               ? this.logger.log(`Unhandled key code ${e.code}`)
-              : this.connection.sendKey(this.sessionId, m[e.code], "keydown" === e.type);
+              : this.connection.sendKey(this.sessionId, T[e.code], "keydown" === e.type);
     }
     _handleMouseEvent(e) {
         (e.preventDefault(),
@@ -299,42 +300,41 @@ class T {
     }
     shutdown() {
         ((this.isShutdown = !0),
+            this.logger.log(`Sending drop to ${this._host}`),
             this.connection.sendDrop(this.sessionId),
             this._releaseMouse(),
             document.removeEventListener("keydown", this.keyHandler, !0),
             document.removeEventListener("keyup", this.keyHandler, !0),
-            this.connection.off(h.Connect, this.connectHandler),
-            this.connection.off(h.GrabAllow, this.grabAllowHandler),
-            this.connection.off(h.Drop, this.releaseHandler),
-            this.connection.off(h.Disconnect, this.disconnectHandler));
+            this.connection.off(I.Connect, this.connectHandler),
+            this.connection.off(I.GrabAllow, this.grabAllowHandler),
+            this.connection.off(I.Drop, this.releaseHandler),
+            this.connection.off(I.Disconnect, this.disconnectHandler));
     }
 }
-var g = n(805048),
-    S = n(719129);
-let N = (0, n(945810).mj)({
-    name: "2026-11-pass-the-controller",
-    kind: "guild",
-    defaultConfig: { enabled: !1, allowWrestling: !1 },
-    variations: { 1: { enabled: !0, allowWrestling: !1 }, 2: { enabled: !0, allowWrestling: !0 } },
-});
-class C {
+var S = n(805048),
+    N = n(719129),
+    C = n(775456);
+class O {
     pid;
     connection;
     guildId;
-    onHolderChange;
+    onGrab;
+    onDrop;
     keyHandler;
     mouseButtonHandler;
     mouseMoveHandler;
     grabHandler;
     dropHandler;
+    logger;
     hook;
     holderSessionId = null;
     holderUserId = null;
-    constructor(e, t, n, i) {
+    constructor(e, t, n, i, r) {
         ((this.pid = t),
             (this.connection = e),
             (this.guildId = n),
-            (this.onHolderChange = i),
+            (this.onGrab = i),
+            (this.onDrop = r),
             (this.hook = null),
             this._connectHook(t),
             (this.keyHandler = this._handleKey.bind(this)),
@@ -342,15 +342,16 @@ class C {
             (this.mouseMoveHandler = this._handleMouseMove.bind(this)),
             (this.grabHandler = this._handleGrab.bind(this)),
             (this.dropHandler = this._handleDrop.bind(this)),
-            e.on(h.Key, this.keyHandler),
-            e.on(h.MouseButton, this.mouseButtonHandler),
-            e.on(h.MouseMove, this.mouseMoveHandler),
-            e.on(h.Grab, this.grabHandler),
-            e.on(h.Drop, this.dropHandler),
+            (this.logger = new h.A("InputHost")),
+            e.on(I.Key, this.keyHandler),
+            e.on(I.MouseButton, this.mouseButtonHandler),
+            e.on(I.MouseMove, this.mouseMoveHandler),
+            e.on(I.Grab, this.grabHandler),
+            e.on(I.Drop, this.dropHandler),
             e.setHosting(!0));
     }
     async _connectHook(e) {
-        this.hook = await (0, S.Vz)(e, this._handleHookConnect.bind(this), () => {});
+        this.hook = await (0, N.Vz)(e, this._handleHookConnect.bind(this), () => {});
     }
     _handleHookConnect() {
         null != this.hook && this.hook.sendCommand(JSON.stringify({ message: "inject_input", inject: !0 }));
@@ -365,7 +366,7 @@ class C {
             if (
                 !(
                     null != this.guildId &&
-                    N.getConfig({ guildId: this.guildId, location: "_handleGrab" }).allowWrestling
+                    C.A.getConfig({ guildId: this.guildId, location: "_handleGrab" }).allowWrestling
                 )
             )
                 return void this.connection.sendDrop(t);
@@ -374,18 +375,18 @@ class C {
         ((this.holderSessionId = t),
             (this.holderUserId = e),
             this.connection.sendGrabAllow(t),
-            this.onHolderChange((0, g.C)(e.toString())));
+            this.onGrab((0, S.C)(e.toString())));
     }
     _handleDrop(e) {
-        e === this.holderSessionId &&
-            ((this.holderSessionId = null), (this.holderUserId = null), this.onHolderChange(null));
+        (this.logger.log(`Received drop for session ${e}`),
+            e === this.holderSessionId && ((this.holderSessionId = null), (this.holderUserId = null), this.onDrop()));
     }
     takeBackController() {
         null != this.holderSessionId &&
             (this.connection.sendDrop(this.holderSessionId),
             (this.holderSessionId = null),
             (this.holderUserId = null),
-            this.onHolderChange(null));
+            this.onDrop());
     }
     _handleKey(e, t, n) {
         null != this.hook &&
@@ -405,177 +406,181 @@ class C {
     shutdown() {
         (null != this.holderSessionId && this.connection.sendDrop(this.holderSessionId),
             this.connection.setHosting(!1),
-            this.connection.off(h.Key, this.keyHandler),
-            this.connection.off(h.MouseButton, this.mouseButtonHandler),
-            this.connection.off(h.MouseMove, this.mouseMoveHandler),
-            this.connection.off(h.Grab, this.grabHandler),
-            this.connection.off(h.Drop, this.dropHandler),
+            this.connection.off(I.Key, this.keyHandler),
+            this.connection.off(I.MouseButton, this.mouseButtonHandler),
+            this.connection.off(I.MouseMove, this.mouseMoveHandler),
+            this.connection.off(I.Grab, this.grabHandler),
+            this.connection.off(I.Drop, this.dropHandler),
             null != this.hook &&
                 (this.hook.sendCommand(JSON.stringify({ message: "inject_input", inject: !1 })),
                 this.hook.destroy(),
                 (this.hook = null)));
     }
 }
-var O = n(652215),
-    R = n(55010);
-let L = null,
-    y = null,
-    D = null,
+var R = n(565886),
+    L = n(652215),
+    y = n(55010);
+let D = null,
     b = null,
-    v = new Set();
-function P(e, t, n) {
-    return (0, d._z)({ streamType: null != t ? R.U4.GUILD : R.U4.CALL, guildId: t, channelId: n, ownerId: e });
+    v = null,
+    P = null,
+    M = new Set();
+function U(e, t, n) {
+    return (0, c._z)({ streamType: null != t ? y.U4.GUILD : y.U4.CALL, guildId: t, channelId: n, ownerId: e });
 }
-function M(e) {
-    e !== b && ((b = e), H.emitChange());
+function w(e) {
+    e !== P && ((P = e), Y.emitChange());
 }
-function U() {
-    if (null != L) return L;
-    let e = u.A.getRTCConnection();
+function G() {
+    null != P && ((P = null), Y.emitChange());
+}
+function x() {
+    if (null != D) return D;
+    let e = _.A.getRTCConnection();
     if (null == e) return null;
-    let t = new p(e, c.default.getId());
+    let t = new m(e, u.default.getId());
     return (
-        t.on(h.Disconnect, () => {
-            L === t &&
-                (null != y &&
+        t.on(I.Disconnect, () => {
+            D === t &&
+                (null != b &&
                     o.h.dispatch({
                         type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: y.streamKey,
+                        streamKey: b.streamKey,
                         isHost: !0,
-                        host: c.default.getId(),
+                        host: u.default.getId(),
                         active: !1,
                     }),
-                null != D &&
+                null != v &&
                     o.h.dispatch({
                         type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: D.streamKey,
+                        streamKey: v.streamKey,
                         isHost: !1,
-                        host: D.inputGuest.host,
+                        host: v.inputGuest.host,
                         active: !1,
                     }));
         }),
         t.connect(),
-        (L = t)
+        (D = t)
     );
 }
-function w() {
-    null != L && null == y && null == D && (L.close(), (L = null));
-}
-function G(e) {
-    return y?.streamKey === e && (y.inputHost.shutdown(), (y = null), (b = null), w(), !0);
-}
-function x() {
-    null != D &&
-        (_.A.getRTCConnection(D.streamKey)?.setAvSyncEnabled(D.inputGuest.host, !0),
-        D.inputGuest.shutdown(),
-        (D = null));
-}
-function k(e) {
-    return D?.streamKey === e && (x(), w(), !0);
+function k() {
+    null != D && null == b && null == v && (D.close(), (D = null));
 }
 function F(e) {
-    let t = G(e),
-        n = k(e);
+    return b?.streamKey === e && (b.inputHost.shutdown(), (b = null), (P = null), k(), !0);
+}
+function B() {
+    null != v &&
+        (E.A.getRTCConnection(v.streamKey)?.setAvSyncEnabled(v.inputGuest.host, !0),
+        v.inputGuest.shutdown(),
+        (v = null));
+}
+function V(e) {
+    return v?.streamKey === e && (B(), k(), !0);
+}
+function H(e) {
+    let t = F(e),
+        n = V(e);
     return t || n;
 }
-function B(e) {
-    let t = v.delete(e),
-        n = k(e);
+function j(e) {
+    let t = M.delete(e),
+        n = V(e);
     return t || n;
 }
-class V extends s.Ay.Store {
+class W extends s.Ay.Store {
     initialize() {
-        this.waitFor(c.default, u.A, _.A);
+        this.waitFor(u.default, _.A, d.Ay, E.A);
     }
     static displayName = "PassTheControllerStore";
     isSelfPassingController(e) {
-        return y?.streamKey === e;
+        return b?.streamKey === e;
     }
     isStreamPassingController(e) {
-        return v.has(e);
+        return M.has(e);
     }
     isSelfHoldingController(e) {
-        return D?.streamKey === e;
+        return v?.streamKey === e;
     }
     getInputGuest(e) {
-        return D?.streamKey === e ? D.inputGuest : null;
+        return v?.streamKey === e ? v.inputGuest : null;
     }
     getControllerHolderId(e) {
-        return y?.streamKey === e ? b : null;
+        return b?.streamKey === e ? P : null;
     }
     getGuestStreamKey() {
-        return D?.streamKey ?? null;
+        return v?.streamKey ?? null;
     }
     getGuestHostId(e) {
-        return D?.streamKey === e ? D.inputGuest.host : null;
+        return v?.streamKey === e ? v.inputGuest.host : null;
     }
     getHostStreamKeys() {
-        return v;
+        return M;
     }
 }
-let H = new V(o.h, {
+let Y = new W(o.h, {
         CONNECTION_OPEN: function () {
-            (v.clear(), (b = null));
+            (M.clear(), (P = null));
         },
         PASS_THE_CONTROLLER_UPDATE: function (e) {
             let { streamKey: t, isHost: n, host: i, active: r } = e;
             return n
                 ? r
                     ? (function (e) {
-                          if (y?.streamKey === e) return !1;
-                          let t = _.A.getStreamPid(e);
-                          if (null == t) return !1;
-                          let n = U();
+                          if (b?.streamKey === e) return !1;
+                          let t = E.A.getStreamPid(e);
+                          if (null == t || (0, R.X)(e)) return !1;
+                          let n = x();
                           return (
                               null != n &&
-                              (y?.inputHost.shutdown(),
-                              (b = null),
-                              (y = { streamKey: e, inputHost: new C(n, t, (0, d.Iy)(e).guildId ?? null, M) }),
+                              (b?.inputHost.shutdown(),
+                              (P = null),
+                              (b = { streamKey: e, inputHost: new O(n, t, (0, c.Iy)(e).guildId ?? null, w, G) }),
                               !0)
                           );
                       })(t)
-                    : G(t)
+                    : F(t)
                 : r
                   ? (function (e, t) {
-                        if (D?.streamKey === e) return !1;
-                        let n = U();
+                        if (v?.streamKey === e) return !1;
+                        let n = x();
                         return (
                             null != n &&
-                            (x(),
-                            _.A.getRTCConnection(e)?.setAvSyncEnabled(t, !1),
-                            (D = { streamKey: e, inputGuest: new T(n, t, e) }),
+                            (B(),
+                            E.A.getRTCConnection(e)?.setAvSyncEnabled(t, !1),
+                            (v = { streamKey: e, inputGuest: new g(n, t, e) }),
                             !0)
                         );
                     })(t, i)
-                  : k(t);
+                  : V(t);
         },
         PASS_THE_CONTROLLER_TAKE_BACK: function (e) {
-            if (y?.streamKey !== e.streamKey || null == b) return !1;
-            y.inputHost.takeBackController();
+            if (b?.streamKey !== e.streamKey || null == P) return !1;
+            b.inputHost.takeBackController();
         },
         STREAM_DELETE: function (e) {
-            return D?.streamKey === e.streamKey && e.reason === O.H2B.USER_REQUESTED ? B(e.streamKey) : F(e.streamKey);
+            return v?.streamKey === e.streamKey && e.reason === L.H2B.USER_REQUESTED ? j(e.streamKey) : H(e.streamKey);
         },
         STREAM_START: function (e) {
             let { streamType: t, guildId: n, channelId: i } = e,
-                r = (0, d._z)({ streamType: t, guildId: n, channelId: i, ownerId: c.default.getId() });
-            return y?.streamKey === r && _.A.getStreamPid(r) !== y.inputHost.pid && G(r);
+                r = (0, c._z)({ streamType: t, guildId: n, channelId: i, ownerId: u.default.getId() });
+            return b?.streamKey === r && E.A.getStreamPid(r) !== b.inputHost.pid && F(r);
         },
         STREAM_STOP: function (e) {
-            return F(e.streamKey);
+            return H(e.streamKey);
         },
         RTC_CONNECTION_FLAGS: function (e) {
             let { flags: t, userId: n, guildId: i, channelId: r } = e,
-                s = P(n, i, r);
-            (0, a.Lt)(t, O.Ajs.PASS_THE_CONTROLLER_HOST) ? v.add(s) : B(s);
+                s = U(n, i, r);
+            (0, a.Lt)(t, L.Ajs.PASS_THE_CONTROLLER_HOST) ? M.add(s) : j(s);
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, guildId: n, channelId: i, context: r } = e;
-            return r === l.x.DEFAULT && (null != y && t === b && y.inputHost.takeBackController(), B(P(t, n, i)));
+            return r === l.x.DEFAULT && (null != b && t === P && b.inputHost.takeBackController(), j(U(t, n, i)));
         },
         RTC_CONNECTION_STATE: function (e) {
-            if (e.context !== l.x.DEFAULT || e.state !== O.S7L.DISCONNECTED || 0 === v.size) return !1;
-            v.clear();
+            if (e.context !== l.x.DEFAULT || e.state !== L.S7L.DISCONNECTED || 0 === M.size) return !1;
+            M.clear();
         },
     }),
-    j = H;
+    K = Y;
