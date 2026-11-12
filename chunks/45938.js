@@ -80,12 +80,13 @@ n.d(
         },
         GM: async function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
             try {
-                let i = (
+                let r = (
                     await (0, f.aP)({
                         url: h.Rsh.GIFT_CODE_RESOLVE(e),
-                        query: { with_application: t, with_subscription_plan: n },
+                        query: { with_application: t, with_subscription_plan: n, with_gift_subscription_agreement: i },
                         oldFormErrors: !0,
                         rejectWithError: !1,
                     })
@@ -95,16 +96,16 @@ n.d(
                         h.HAw.GIFT_CODE_RESOLVED,
                         {
                             resolved: !0,
-                            gift_code: i.code,
-                            gift_code_max_uses: i.max_uses,
-                            sku_id: i.store_listing.sku.id,
-                            sku_type: i.store_listing.sku.type,
-                            application_id: i.store_listing.sku.application_id,
-                            store_title: i.store_listing.sku.name,
+                            gift_code: r.code,
+                            gift_code_max_uses: r.max_uses,
+                            sku_id: r.store_listing.sku.id,
+                            sku_type: r.store_listing.sku.type,
+                            application_id: r.store_listing.sku.application_id,
+                            store_title: r.store_listing.sku.name,
                         },
                         { flush: !0 },
                     ),
-                    i
+                    r
                 );
             } catch (t) {
                 throw (u.default.track(h.HAw.GIFT_CODE_RESOLVED, { resolved: !1, gift_code: e }), new l.A(t));

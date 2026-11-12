@@ -30,6 +30,7 @@ class _ extends s.A {
     subscriptionTrial;
     promotion;
     giftStyle;
+    giftSubscriptionAgreement;
     static createFromServer(e) {
         return new _({
             userId: null != e.user ? e.user.id : null,
@@ -49,6 +50,7 @@ class _ extends s.A {
             giftStyle: e.gift_style,
             subscriptionTrial: null != e.subscription_trial ? l.A.createFromServer(e.subscription_trial) : null,
             promotion: null != e.promotion ? o.A.createFromServer(e.promotion) : null,
+            giftSubscriptionAgreement: e.gift_subscription_agreement,
         });
     }
     constructor(e) {
@@ -69,7 +71,8 @@ class _ extends s.A {
             (this.flags = e.flags),
             (this.subscriptionTrial = e.subscriptionTrial),
             (this.promotion = e.promotion),
-            (this.giftStyle = e.giftStyle));
+            (this.giftStyle = e.giftStyle),
+            (this.giftSubscriptionAgreement = e.giftSubscriptionAgreement));
     }
     isExpired() {
         let e = this.expiresAt;
