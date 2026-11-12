@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { createStringInterpolator: () => A }));
+(r.r(t), r.d(t, { createStringInterpolator: () => P }));
 var n,
     i = function () {
         return (i =
@@ -24,8 +24,8 @@ var c = RegExp("rgb" + u(s, s, s)),
     h = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     m = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     v = /^#([0-9a-fA-F]{6})$/,
-    y = /^#([0-9a-fA-F]{8})$/,
-    g = r(672722);
+    g = /^#([0-9a-fA-F]{8})$/,
+    y = r(672722);
 function b(e, t, r) {
     var n = (1 - Math.abs(2 * r - 1)) * t,
         i = n * (1 - Math.abs(((e / 60) % 2) - 1)),
@@ -72,15 +72,15 @@ function x(e) {
                     : null
                 : (t = v.exec(e))
                   ? parseInt(t[1] + "ff", 16) >>> 0
-                  : g.colorNames && void 0 !== g.colorNames[e]
-                    ? g.colorNames[e]
+                  : y.colorNames && void 0 !== y.colorNames[e]
+                    ? y.colorNames[e]
                     : (t = c.exec(e))
                       ? ((w(t[1]) << 24) | (w(t[2]) << 16) | (w(t[3]) << 8) | 255) >>> 0
                       : (t = f.exec(e))
                         ? ((w(t[1]) << 24) | (w(t[2]) << 16) | (w(t[3]) << 8) | S(t[4])) >>> 0
                         : (t = h.exec(e))
                           ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + "ff", 16) >>> 0
-                          : (t = y.exec(e))
+                          : (t = g.exec(e))
                             ? parseInt(t[1], 16) >>> 0
                             : (t = m.exec(e))
                               ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
@@ -104,11 +104,11 @@ function x(e) {
 var C = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
     k = /(#(?:[0-9a-f]{2}){2,4}|(#[0-9a-f]{3})|(rgb|hsl)a?\((-?\d+%?[,\s]+){2,3}\s*[\d\.]+%?\))/gi,
     T = /rgba\(([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+)\)/gi,
-    P = function (e, t, r, n, i) {
+    M = function (e, t, r, n, i) {
         return "rgba(" + Math.round(t) + ", " + Math.round(r) + ", " + Math.round(n) + ", " + i + ")";
     },
-    A = function (e) {
-        n || (n = g.colorNames ? RegExp("(" + Object.keys(g.colorNames).join("|") + ")", "g") : /^\b$/);
+    P = function (e) {
+        n || (n = y.colorNames ? RegExp("(" + Object.keys(y.colorNames).join("|") + ")", "g") : /^\b$/);
         var t = e.output.map(function (e) {
                 return (0, o.oq)(e).replace(k, x).replace(n, x);
             }),
@@ -131,6 +131,6 @@ var C = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
                 .replace(C, function () {
                     return String(s[r++](e));
                 })
-                .replace(T, P);
+                .replace(T, M);
         };
     };

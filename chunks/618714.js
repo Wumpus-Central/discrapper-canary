@@ -1,5 +1,6 @@
 var n;
 ((n = function () {
+    "use strict";
     var e,
         t,
         n,
@@ -16,8 +17,8 @@ var n;
         h = !1,
         m = 7,
         v = 35,
-        y = 125,
-        g = 0,
+        g = 125,
+        y = 0,
         b = 0,
         w = 0,
         _ = {
@@ -31,7 +32,7 @@ var n;
         },
         S =
             ((e = function () {
-                ((m = 22), (y = 66), (v = 0));
+                ((m = 22), (g = 66), (v = 0));
             }),
             (i = function () {
                 var r = Date.now() - n;
@@ -41,7 +42,7 @@ var n;
                 ((n = Date.now()), t || (t = setTimeout(i, 99)));
             });
     function E() {
-        (125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), k())), S());
+        (125 != g && ((m = 7), (g = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), k())), S());
     }
     function x() {
         ((l = null), (s = setTimeout(T, 0)));
@@ -51,7 +52,7 @@ var n;
     }
     function k() {
         h ||
-            ((a = y - (Date.now() - b)),
+            ((a = g - (Date.now() - b)),
             (o = Date.now()),
             (h = !0),
             v && a < v && (a = v),
@@ -66,10 +67,10 @@ var n;
             for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) ((e = d.shift()), w++, e && e(_));
         d.length ? k() : (p = 0);
     }
-    function P(e) {
-        return (g++, d.push(e), k(), g);
+    function M(e) {
+        return (y++, d.push(e), k(), y);
     }
-    function A(e) {
+    function P(e) {
         var t = e - 1 - w;
         d[t] && (d[t] = null);
     }
@@ -97,8 +98,8 @@ var n;
             })(u.requestIdleCallback);
         }
     else
-        ((u.requestIdleCallback = P),
-            (u.cancelIdleCallback = A),
+        ((u.requestIdleCallback = M),
+            (u.cancelIdleCallback = P),
             u.document &&
                 document.addEventListener &&
                 (u.addEventListener("scroll", E, !0),
@@ -114,7 +115,7 @@ var n;
                         subtree: !0,
                         attributes: !0,
                     })));
-    return { request: P, cancel: A };
+    return { request: M, cancel: P };
 }),
     "function" == typeof define && define.amd
         ? define([], n)

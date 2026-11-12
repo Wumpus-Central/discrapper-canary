@@ -85,23 +85,23 @@ r.d(
                         [p, l],
                     );
                 d?.validationDetails.valid && (d = void 0);
-                let y = (0, n.useContext)(s),
-                    g = (0, n.useMemo)(
-                        () => (i ? (Array.isArray(i) ? i.flatMap((e) => u(y[e])) : u(y[i])) : []),
-                        [y, i],
+                let g = (0, n.useContext)(s),
+                    y = (0, n.useMemo)(
+                        () => (i ? (Array.isArray(i) ? i.flatMap((e) => u(g[e])) : u(g[i])) : []),
+                        [g, i],
                     ),
-                    [b, w] = (0, n.useState)(y),
+                    [b, w] = (0, n.useState)(g),
                     [_, S] = (0, n.useState)(!1);
-                y !== b && (w(y), S(!1));
-                let E = (0, n.useMemo)(() => c(_ ? [] : g), [_, g]),
+                g !== b && (w(g), S(!1));
+                let E = (0, n.useMemo)(() => c(_ ? [] : y), [_, y]),
                     x = (0, n.useRef)(a),
                     [C, k] = (0, n.useState)(a),
                     T = (0, n.useRef)(a),
-                    [P, A] = (0, n.useState)(!1);
+                    [M, P] = (0, n.useState)(!1);
                 return (
                     (0, n.useEffect)(() => {
-                        if (!P) return;
-                        A(!1);
+                        if (!M) return;
+                        P(!1);
                         let e = v || d || x.current;
                         f(e, T.current) || ((T.current = e), k(e));
                     }),
@@ -112,10 +112,10 @@ r.d(
                             "aria" !== h || f(C, e) ? (x.current = e) : k(e);
                         },
                         resetValidation() {
-                            (f(a, T.current) || ((T.current = a), k(a)), "native" === h && A(!1), S(!0));
+                            (f(a, T.current) || ((T.current = a), k(a)), "native" === h && P(!1), S(!0));
                         },
                         commitValidation() {
-                            ("native" === h && A(!0), S(!0));
+                            ("native" === h && P(!0), S(!0));
                         },
                     }
                 );

@@ -8,13 +8,13 @@ let n = r(864886),
     c = r(738018),
     f = r(569671);
 e.exports = (e, t, r, d) => {
-    let p, h, m, v, y;
+    let p, h, m, v, g;
     switch (((e = new n(e, d)), (t = new a(t, d)), r)) {
         case ">":
-            ((p = l), (h = c), (m = u), (v = ">"), (y = ">="));
+            ((p = l), (h = c), (m = u), (v = ">"), (g = ">="));
             break;
         case "<":
-            ((p = u), (h = f), (m = l), (v = "<"), (y = "<="));
+            ((p = u), (h = f), (m = l), (v = "<"), (g = "<="));
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');
@@ -32,9 +32,9 @@ e.exports = (e, t, r, d) => {
                     p(e.semver, a.semver, d) ? (a = e) : m(e.semver, s.semver, d) && (s = e));
             }),
             a.operator === v ||
-                a.operator === y ||
+                a.operator === g ||
                 ((!s.operator || s.operator === v) && h(e, s.semver)) ||
-                (s.operator === y && m(e, s.semver)))
+                (s.operator === g && m(e, s.semver)))
         )
             return !1;
     }

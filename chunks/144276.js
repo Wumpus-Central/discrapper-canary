@@ -18,8 +18,8 @@ r.d(
                     isReadOnly: h = !1,
                     value: m,
                     name: v,
-                    form: y,
-                    children: g,
+                    form: g,
+                    children: y,
                     isRequired: b,
                     validationBehavior: w = "aria",
                     "aria-label": _,
@@ -29,19 +29,19 @@ r.d(
                     onPressEnd: C,
                     onPressChange: k,
                     onPress: T,
-                    onPressUp: P,
-                    onClick: A,
+                    onPressUp: M,
+                    onClick: P,
                 } = e,
-                I = (0, d.KZ)({ ...e, value: t.isSelected }),
-                { isInvalid: M, validationErrors: O, validationDetails: R } = I.displayValidation;
-            (0, l.X)(e, I, r);
+                A = (0, d.KZ)({ ...e, value: t.isSelected }),
+                { isInvalid: I, validationErrors: O, validationDetails: R } = A.displayValidation;
+            (0, l.X)(e, A, r);
             let { pressProps: L, isPressed: D } = (0, u.d)({
                     onPressStart: x,
                     onPressEnd: C,
                     onPressChange: k,
                     onPress: T,
-                    onPressUp: P,
-                    onClick: A,
+                    onPressUp: M,
+                    onClick: P,
                     isDisabled: p,
                 }),
                 [F, N] = (0, f.useState)(!1),
@@ -57,53 +57,53 @@ r.d(
                             : (C?.(e), k?.(!1), N(!1));
                     },
                     onPressUp(e) {
-                        "keyboard" === e.pointerType || "virtual" === e.pointerType ? e.continuePropagation() : P?.(e);
+                        "keyboard" === e.pointerType || "virtual" === e.pointerType ? e.continuePropagation() : M?.(e);
                     },
-                    onClick: A,
+                    onClick: P,
                     onPress(n) {
                         if ("keyboard" === n.pointerType || "virtual" === n.pointerType)
                             return void n.continuePropagation();
                         (T?.(n), t.toggle(), r.current?.focus());
                         let { [d.Lf]: i } = e,
-                            { commitValidation: o } = i || I;
+                            { commitValidation: o } = i || A;
                         o();
                     },
                     isDisabled: p || h,
                 }),
                 { focusableProps: B } = (0, a.Wc)(e, r),
                 U = (0, o.v)(L, B),
-                V = (0, n.$)(e, { labelable: !0 });
+                $ = (0, n.$)(e, { labelable: !0 });
             (0, s.F)(r, t.defaultSelected, t.setSelected);
-            let $ = (0, c.L)(),
-                K = (0, c.L)();
+            let V = (0, c.L)(),
+                H = (0, c.L)();
             return {
                 labelProps: (0, o.v)(j, { onClick: (e) => e.preventDefault() }),
-                inputProps: (0, o.v)(V, {
+                inputProps: (0, o.v)($, {
                     checked: t.isSelected,
                     "aria-required": (b && "aria" === w) || void 0,
                     required: b && "native" === w,
-                    "aria-invalid": M || "invalid" === e.validationState || void 0,
+                    "aria-invalid": I || "invalid" === e.validationState || void 0,
                     "aria-errormessage": e["aria-errormessage"],
                     "aria-controls": e["aria-controls"],
                     "aria-readonly": h || void 0,
-                    "aria-describedby": [$.id, K.id, E].filter(Boolean).join(" ") || void 0,
+                    "aria-describedby": [V.id, H.id, E].filter(Boolean).join(" ") || void 0,
                     onChange: (e) => {
                         (e.stopPropagation(), t.setSelected((0, i.wt)(e).checked));
                     },
                     disabled: p,
                     ...(null == m ? {} : { value: m }),
                     name: v,
-                    form: y,
+                    form: g,
                     type: "checkbox",
                     ...U,
                 }),
-                descriptionProps: $,
-                errorMessageProps: K,
+                descriptionProps: V,
+                errorMessageProps: H,
                 isSelected: t.isSelected,
                 isPressed: D || F,
                 isDisabled: p,
                 isReadOnly: h,
-                isInvalid: M || "invalid" === e.validationState,
+                isInvalid: I || "invalid" === e.validationState,
                 validationErrors: O,
                 validationDetails: R,
             };

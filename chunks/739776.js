@@ -1,13 +1,13 @@
-var t = i(855986),
-    a = i(73153);
-let r = {
+var i = n(855986),
+    r = n(73153);
+let a = {
         hasAppliedPerk: !1,
         hasVisitedDisplayNameStyles: !1,
         previousPerkValues: {},
         hasRestoredExpiredClientTheme: !1,
     },
-    p = r;
-class l extends t.Ay.PersistedStore {
+    s = a;
+class l extends i.Ay.PersistedStore {
     static displayName = "HexagonCampaignPersistedStore";
     static persistKey = "HexagonCampaignPersistedStore";
     static migrations = [
@@ -16,45 +16,45 @@ class l extends t.Ay.PersistedStore {
         (e) => ({ ...e, hasRestoredExpiredClientTheme: e?.hasRestoredExpiredClientTheme ?? !1 }),
     ];
     initialize(e) {
-        null != e && (p = { ...r, ...e });
+        null != e && (s = { ...a, ...e });
     }
     getState() {
-        return p;
+        return s;
     }
     get hasAppliedPerk() {
-        return p.hasAppliedPerk;
+        return s.hasAppliedPerk;
     }
     get hasVisitedDisplayNameStyles() {
-        return p.hasVisitedDisplayNameStyles;
+        return s.hasVisitedDisplayNameStyles;
     }
     get previousPerkValues() {
-        return p.previousPerkValues;
+        return s.previousPerkValues;
     }
     get hasRestoredExpiredClientTheme() {
-        return p.hasRestoredExpiredClientTheme;
+        return s.hasRestoredExpiredClientTheme;
     }
 }
-let n = new l(a.h, {
+let o = new l(r.h, {
     HEXAGON_CAMPAIGN_PERK_APPLIED: function () {
-        p = { ...p, hasAppliedPerk: !0 };
+        s = { ...s, hasAppliedPerk: !0 };
     },
     HEXAGON_CAMPAIGN_APPLIED_PERKS_CLEARED: function () {
-        p = { ...p, hasAppliedPerk: !1 };
+        s = { ...s, hasAppliedPerk: !1 };
     },
     HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES_VISITED: function () {
-        if (p.hasVisitedDisplayNameStyles) return !1;
-        p = { ...p, hasVisitedDisplayNameStyles: !0 };
+        if (s.hasVisitedDisplayNameStyles) return !1;
+        s = { ...s, hasVisitedDisplayNameStyles: !0 };
     },
     HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED: function (e) {
-        let { previousPerkValues: s } = e;
-        p = { ...p, previousPerkValues: { ...p.previousPerkValues, ...s } };
+        let { previousPerkValues: t } = e;
+        s = { ...s, previousPerkValues: { ...s.previousPerkValues, ...t } };
     },
     HEXAGON_CAMPAIGN_EXPIRED_CLIENT_THEME_RESTORED: function () {
-        if (p.hasRestoredExpiredClientTheme) return !1;
-        p = { ...p, hasRestoredExpiredClientTheme: !0 };
+        if (s.hasRestoredExpiredClientTheme) return !1;
+        s = { ...s, hasRestoredExpiredClientTheme: !0 };
     },
     LOGOUT: function () {
-        p = r;
+        s = a;
     },
 });
-i.d(s, {}, { A: n });
+n.d(t, {}, { A: o });

@@ -1,4 +1,5 @@
 !(function (t) {
+    "use strict";
     var r,
         n = Object.prototype,
         i = n.hasOwnProperty,
@@ -26,7 +27,7 @@
                 if (l === p) throw Error("Generator is already running");
                 if (l === h) {
                     if ("throw" === e) throw t;
-                    return A();
+                    return P();
                 }
                 for (s.method = e, s.arg = t; ;) {
                     var n = s.delegate;
@@ -97,16 +98,16 @@
         h = "completed",
         m = {};
     function v() {}
-    function y() {}
     function g() {}
+    function y() {}
     var b = {};
     b[a] = function () {
         return this;
     };
     var w = Object.getPrototypeOf,
-        _ = w && w(w(P([])));
+        _ = w && w(w(M([])));
     _ && _ !== n && i.call(_, a) && (b = _);
-    var S = (g.prototype = v.prototype = Object.create(b));
+    var S = (y.prototype = v.prototype = Object.create(b));
     function E(e) {
         ["next", "throw", "return"].forEach(function (t) {
             e[t] = function (e) {
@@ -162,7 +163,7 @@
     function T(e) {
         ((this.tryEntries = [{ tryLoc: "root" }]), e.forEach(C, this), this.reset(!0));
     }
-    function P(e) {
+    function M(e) {
         if (e) {
             var t = e[a];
             if (t) return t.call(e);
@@ -176,23 +177,23 @@
                 return (o.next = o);
             }
         }
-        return { next: A };
+        return { next: P };
     }
-    function A() {
+    function P() {
         return { value: r, done: !0 };
     }
-    ((y.prototype = S.constructor = g),
-        (g.constructor = y),
-        (g[l] = y.displayName = "GeneratorFunction"),
+    ((g.prototype = S.constructor = y),
+        (y.constructor = g),
+        (y[l] = g.displayName = "GeneratorFunction"),
         (u.isGeneratorFunction = function (e) {
             var t = "function" == typeof e && e.constructor;
-            return !!t && (t === y || "GeneratorFunction" === (t.displayName || t.name));
+            return !!t && (t === g || "GeneratorFunction" === (t.displayName || t.name));
         }),
         (u.mark = function (e) {
             return (
                 Object.setPrototypeOf
-                    ? Object.setPrototypeOf(e, g)
-                    : ((e.__proto__ = g), l in e || (e[l] = "GeneratorFunction")),
+                    ? Object.setPrototypeOf(e, y)
+                    : ((e.__proto__ = y), l in e || (e[l] = "GeneratorFunction")),
                 (e.prototype = Object.create(S)),
                 e
             );
@@ -235,7 +236,7 @@
                 }
             );
         }),
-        (u.values = P),
+        (u.values = M),
         (T.prototype = {
             constructor: T,
             reset: function (e) {
@@ -331,7 +332,7 @@
             },
             delegateYield: function (e, t, n) {
                 return (
-                    (this.delegate = { iterator: P(e), resultName: t, nextLoc: n }),
+                    (this.delegate = { iterator: M(e), resultName: t, nextLoc: n }),
                     "next" === this.method && (this.arg = r),
                     m
                 );

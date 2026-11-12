@@ -45,13 +45,13 @@ var n = r(788409),
         strictNullHandling: !1,
     },
     h = {},
-    m = function e(t, r, o, a, s, u, f, d, m, v, y, g, b, w, _, S, E, x) {
-        for (var C, k, T = t, P = x, A = 0, I = !1; void 0 !== (P = P.get(h)) && !I;) {
-            var M = P.get(t);
-            if (((A += 1), void 0 !== M))
-                if (M === A) throw RangeError("Cyclic object value");
-                else I = !0;
-            void 0 === P.get(h) && (A = 0);
+    m = function e(t, r, o, a, s, u, f, d, m, v, g, y, b, w, _, S, E, x) {
+        for (var C, k, T = t, M = x, P = 0, A = !1; void 0 !== (M = M.get(h)) && !A;) {
+            var I = M.get(t);
+            if (((P += 1), void 0 !== I))
+                if (I === P) throw RangeError("Cyclic object value");
+                else A = !0;
+            void 0 === M.get(h) && (P = 0);
         }
         if (
             ("function" == typeof v
@@ -86,7 +86,7 @@ var n = r(788409),
         else if (l(v)) k = v;
         else {
             var R = Object.keys(T);
-            k = y ? R.sort(y) : R;
+            k = g ? R.sort(g) : R;
         }
         var L = d ? String(r).replace(/\./g, "%2E") : String(r),
             D = a && l(T) && 1 === T.length ? L + "[]" : L;
@@ -95,12 +95,12 @@ var n = r(788409),
             var N = k[F],
                 j = "object" == typeof N && N && void 0 !== N.value ? N.value : T[N];
             if (!f || null !== j) {
-                var B = g && d ? String(N).replace(/\./g, "%2E") : String(N),
-                    U = l(T) ? ("function" == typeof o ? o(D, B) : D) : D + (g ? "." + B : "[" + B + "]");
-                x.set(t, A);
-                var V = n();
-                (V.set(h, x),
-                    c(O, e(j, U, o, a, s, u, f, d, "comma" === o && S && l(T) ? null : m, v, y, g, b, w, _, S, E, V)));
+                var B = y && d ? String(N).replace(/\./g, "%2E") : String(N),
+                    U = l(T) ? ("function" == typeof o ? o(D, B) : D) : D + (y ? "." + B : "[" + B + "]");
+                x.set(t, P);
+                var $ = n();
+                ($.set(h, x),
+                    c(O, e(j, U, o, a, s, u, f, d, "comma" === o && S && l(T) ? null : m, v, g, y, b, w, _, S, E, $)));
             }
         }
         return O;
@@ -172,12 +172,12 @@ e.exports = function (e, t) {
     (r || (r = Object.keys(i)), o.sort && r.sort(o.sort));
     for (var d = n(), p = 0; p < r.length; ++p) {
         var h = r[p],
-            y = i[h];
-        (o.skipNulls && null === y) ||
+            g = i[h];
+        (o.skipNulls && null === g) ||
             c(
                 a,
                 m(
-                    y,
+                    g,
                     h,
                     u,
                     f,
@@ -198,10 +198,10 @@ e.exports = function (e, t) {
                 ),
             );
     }
-    var g = a.join(o.delimiter),
+    var y = a.join(o.delimiter),
         b = !0 === o.addQueryPrefix ? "?" : "";
     return (
         o.charsetSentinel && ("iso-8859-1" === o.charset ? (b += "utf8=%26%2310003%3B&") : (b += "utf8=%E2%9C%93&")),
-        g.length > 0 ? b + g : ""
+        y.length > 0 ? b + y : ""
     );
 };

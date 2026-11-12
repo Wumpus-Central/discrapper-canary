@@ -61,14 +61,14 @@ var m = h(function (e, t) {
             i = void 0 === r ? m : r,
             c = e.replace,
             v = e.to,
-            y = e.innerRef,
-            g = (0, l.A)(e, ["component", "replace", "to", "innerRef"]);
+            g = e.innerRef,
+            y = (0, l.A)(e, ["component", "replace", "to", "innerRef"]);
         return o.createElement(n.XZ.Consumer, null, function (e) {
             e || (0, u.A)(!1);
             var r = e.history,
                 n = d(f(v, e.location), e.location),
                 l = n ? r.createHref(n) : "",
-                m = (0, s.A)({}, g, {
+                m = (0, s.A)({}, y, {
                     href: l,
                     navigate: function () {
                         var t = f(v, e.location),
@@ -76,15 +76,15 @@ var m = h(function (e, t) {
                         (c || n ? r.replace : r.push)(t);
                     },
                 });
-            return (p !== h ? (m.ref = t || y) : (m.innerRef = y), o.createElement(i, m));
+            return (p !== h ? (m.ref = t || g) : (m.innerRef = g), o.createElement(i, m));
         });
     }),
-    y = function (e) {
+    g = function (e) {
         return e;
     },
-    g = o.forwardRef;
-(void 0 === g && (g = y),
-    g(function (e, t) {
+    y = o.forwardRef;
+(void 0 === y && (y = g),
+    y(function (e, t) {
         var r = e["aria-current"],
             i = void 0 === r ? "page" : r,
             a = e.activeClassName,
@@ -119,22 +119,22 @@ var m = h(function (e, t) {
                 a = d(f(x, r), r),
                 l = a.pathname,
                 T = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-                P = T ? (0, n.B6)(r.pathname, { path: T, exact: m, sensitive: _, strict: S }) : null,
-                A = !!(b ? b(P, r) : P),
-                I = "function" == typeof h ? h(A) : h,
-                M = "function" == typeof E ? E(A) : E;
-            A &&
-                ((I = (function () {
+                M = T ? (0, n.B6)(r.pathname, { path: T, exact: m, sensitive: _, strict: S }) : null,
+                P = !!(b ? b(M, r) : M),
+                A = "function" == typeof h ? h(P) : h,
+                I = "function" == typeof E ? E(P) : E;
+            P &&
+                ((A = (function () {
                     for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
                     return t
                         .filter(function (e) {
                             return e;
                         })
                         .join(" ");
-                })(I, c)),
-                (M = (0, s.A)({}, M, p)));
-            var O = (0, s.A)({ "aria-current": (A && i) || null, className: I, style: M, to: a }, k);
-            return (y !== g ? (O.ref = t || C) : (O.innerRef = C), o.createElement(v, O));
+                })(A, c)),
+                (I = (0, s.A)({}, I, p)));
+            var O = (0, s.A)({ "aria-current": (P && i) || null, className: A, style: I, to: a }, k);
+            return (g !== y ? (O.ref = t || C) : (O.innerRef = C), o.createElement(v, O));
         });
     }),
     r.d(t, {}, { Kd: c, N_: v }));

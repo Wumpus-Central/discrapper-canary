@@ -42,8 +42,8 @@ t.default = (function () {
                     h = { type: "literal", value: "{", description: '"{"' },
                     m = { type: "literal", value: ",", description: '","' },
                     v = { type: "literal", value: "}", description: '"}"' },
-                    y = "number",
-                    g = { type: "literal", value: "number", description: '"number"' },
+                    g = "number",
+                    y = { type: "literal", value: "number", description: '"number"' },
                     b = "date",
                     w = { type: "literal", value: "date", description: '"date"' },
                     _ = "time",
@@ -53,10 +53,10 @@ t.default = (function () {
                     C = "selectordinal",
                     k = { type: "literal", value: "selectordinal", description: '"selectordinal"' },
                     T = "select",
-                    P = { type: "literal", value: "select", description: '"select"' },
-                    A = { type: "literal", value: "=", description: '"="' },
-                    I = "offset:",
-                    M = { type: "literal", value: "offset:", description: '"offset:"' },
+                    M = { type: "literal", value: "select", description: '"select"' },
+                    P = { type: "literal", value: "=", description: '"="' },
+                    A = "offset:",
+                    I = { type: "literal", value: "offset:", description: '"offset:"' },
                     O = { type: "other", description: "whitespace" },
                     R = /^[ \t\n\r]/,
                     L = { type: "class", value: "[ \\t\\n\\r]", description: "[ \\t\\n\\r]" },
@@ -66,17 +66,17 @@ t.default = (function () {
                     j = /^[0-9a-f]/i,
                     B = { type: "class", value: "[0-9a-f]i", description: "[0-9a-f]i" },
                     U = { type: "literal", value: "0", description: '"0"' },
-                    V = /^[1-9]/,
-                    $ = { type: "class", value: "[1-9]", description: "[1-9]" },
-                    K = /^[^{}\\\0-\x1F \t\n\r]/,
-                    H = {
+                    $ = /^[1-9]/,
+                    V = { type: "class", value: "[1-9]", description: "[1-9]" },
+                    H = /^[^{}\\\0-\x1F \t\n\r]/,
+                    K = {
                         type: "class",
                         value: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                         description: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                     },
                     z = { type: "literal", value: "\\\\", description: '"\\\\\\\\"' },
-                    G = { type: "literal", value: "\\#", description: '"\\\\#"' },
-                    W = { type: "literal", value: "\\{", description: '"\\\\{"' },
+                    W = { type: "literal", value: "\\#", description: '"\\\\#"' },
+                    G = { type: "literal", value: "\\{", description: '"\\\\{"' },
                     q = { type: "literal", value: "\\}", description: '"\\\\}"' },
                     Y = { type: "literal", value: "\\u", description: '"\\\\u"' },
                     X = 0,
@@ -129,7 +129,7 @@ t.default = (function () {
                         })()) !== l && (r = { type: "messageTextElement", value: r }),
                         (e = r) === l &&
                             (e = (function () {
-                                var e, r, n, i, o, a, s, u, c, f, A, I, M, O, R, L;
+                                var e, r, n, i, o, a, s, u, c, f, P, A, I, O, R, L;
                                 if (
                                     ((e = X),
                                     123 === t.charCodeAt(X) ? ((r = "{"), X++) : ((r = l), 0 === et && er(h)),
@@ -168,29 +168,29 @@ t.default = (function () {
                                                     o !== l &&
                                                     (a = eu()) !== l &&
                                                     (((f = X),
-                                                    t.substr(X, 6) === y
-                                                        ? ((A = y), (X += 6))
-                                                        : ((A = l), 0 === et && er(g)),
-                                                    A === l &&
+                                                    t.substr(X, 6) === g
+                                                        ? ((P = g), (X += 6))
+                                                        : ((P = l), 0 === et && er(y)),
+                                                    P === l &&
                                                         (t.substr(X, 4) === b
-                                                            ? ((A = b), (X += 4))
-                                                            : ((A = l), 0 === et && er(w)),
-                                                        A === l &&
+                                                            ? ((P = b), (X += 4))
+                                                            : ((P = l), 0 === et && er(w)),
+                                                        P === l &&
                                                             (t.substr(X, 4) === _
-                                                                ? ((A = _), (X += 4))
-                                                                : ((A = l), 0 === et && er(S)))),
-                                                    A !== l &&
+                                                                ? ((P = _), (X += 4))
+                                                                : ((P = l), 0 === et && er(S)))),
+                                                    P !== l &&
                                                         eu() !== l &&
-                                                        ((I = X),
+                                                        ((A = X),
                                                         44 === t.charCodeAt(X)
-                                                            ? ((M = ","), X++)
-                                                            : ((M = l), 0 === et && er(m)),
-                                                        M !== l && (O = eu()) !== l && (R = eh()) !== l
-                                                            ? (I = M = [M, O, R])
-                                                            : ((X = I), (I = l)),
-                                                        I === l && (I = null),
-                                                        I !== l))
-                                                        ? (f = A = { type: A + "Format", style: (L = I) && L[2] })
+                                                            ? ((I = ","), X++)
+                                                            : ((I = l), 0 === et && er(m)),
+                                                        I !== l && (O = eu()) !== l && (R = eh()) !== l
+                                                            ? (A = I = [I, O, R])
+                                                            : ((X = A), (A = l)),
+                                                        A === l && (A = null),
+                                                        A !== l))
+                                                        ? (f = P = { type: P + "Format", style: (L = A) && L[2] })
                                                         : ((X = f), (f = l)),
                                                     (c = f) === l &&
                                                         (c = (function () {
@@ -247,7 +247,7 @@ t.default = (function () {
                                                                 ((e = X),
                                                                 t.substr(X, 6) === T
                                                                     ? ((r = T), (X += 6))
-                                                                    : ((r = l), 0 === et && er(P)),
+                                                                    : ((r = l), 0 === et && er(M)),
                                                                 r !== l)
                                                             )
                                                                 if (eu() !== l)
@@ -310,7 +310,7 @@ t.default = (function () {
                         eu() !== l &&
                             ((a = X),
                             (s = X),
-                            61 === t.charCodeAt(X) ? ((u = "="), X++) : ((u = l), 0 === et && er(A)),
+                            61 === t.charCodeAt(X) ? ((u = "="), X++) : ((u = l), 0 === et && er(P)),
                             u !== l && (c = ed()) !== l ? (s = u = [u, c]) : ((X = s), (s = l)),
                             s !== l && (s = t.substring(a, X)),
                             (a = s) === l && (a = eh()),
@@ -333,7 +333,7 @@ t.default = (function () {
                     if (
                         ((e = X),
                         ((o = X),
-                        t.substr(X, 7) === I ? ((a = I), (X += 7)) : ((a = l), 0 === et && er(M)),
+                        t.substr(X, 7) === A ? ((a = A), (X += 7)) : ((a = l), 0 === et && er(I)),
                         a !== l && eu() !== l && (s = ed()) !== l)
                             ? (o = a = s)
                             : ((X = o), (o = l)),
@@ -382,7 +382,7 @@ t.default = (function () {
                         if (
                             ((e = X),
                             (r = X),
-                            V.test(t.charAt(X)) ? ((n = t.charAt(X)), X++) : ((n = l), 0 === et && er($)),
+                            $.test(t.charAt(X)) ? ((n = t.charAt(X)), X++) : ((n = l), 0 === et && er(V)),
                             n !== l)
                         ) {
                             for (i = [], o = ec(); o !== l;) (i.push(o), (o = ec()));
@@ -395,18 +395,18 @@ t.default = (function () {
                 function ep() {
                     var e, r, n, i, o, a, s, u;
                     return (
-                        K.test(t.charAt(X)) ? ((e = t.charAt(X)), X++) : ((e = l), 0 === et && er(H)),
+                        H.test(t.charAt(X)) ? ((e = t.charAt(X)), X++) : ((e = l), 0 === et && er(K)),
                         e === l &&
                             ((e = X),
                             "\\\\" === t.substr(X, 2) ? ((r = "\\\\"), (X += 2)) : ((r = l), 0 === et && er(z)),
                             r !== l && (r = "\\"),
                             (e = r) === l &&
                                 ((e = X),
-                                "\\#" === t.substr(X, 2) ? ((r = "\\#"), (X += 2)) : ((r = l), 0 === et && er(G)),
+                                "\\#" === t.substr(X, 2) ? ((r = "\\#"), (X += 2)) : ((r = l), 0 === et && er(W)),
                                 r !== l && (r = "\\#"),
                                 (e = r) === l &&
                                     ((e = X),
-                                    "\\{" === t.substr(X, 2) ? ((r = "\\{"), (X += 2)) : ((r = l), 0 === et && er(W)),
+                                    "\\{" === t.substr(X, 2) ? ((r = "\\{"), (X += 2)) : ((r = l), 0 === et && er(G)),
                                     r !== l && (r = "{"),
                                     (e = r) === l))) &&
                             ((e = X),

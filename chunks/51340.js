@@ -14,7 +14,7 @@ let h = (0, c.createContext)({}),
         [e, t] = (0, n.JT)(e, t, h);
         let r = e,
             { isPending: s } = r,
-            { buttonProps: m, isPressed: y } = (0, a.s)(e, t);
+            { buttonProps: m, isPressed: g } = (0, a.s)(e, t);
         m = (function (e, t) {
             if (t) {
                 for (let t in e) t.startsWith("on") && !v.test(t) && (e[t] = void 0);
@@ -22,11 +22,11 @@ let h = (0, c.createContext)({}),
             }
             return e;
         })(m, s);
-        let { focusProps: g, isFocused: b, isFocusVisible: w } = (0, f.o)(e),
+        let { focusProps: y, isFocused: b, isFocusVisible: w } = (0, f.o)(e),
             { hoverProps: _, isHovered: S } = (0, d.M)({ ...e, isDisabled: e.isDisabled || s }),
             E = {
                 isHovered: S,
-                isPressed: (r.isPressed || y) && !s,
+                isPressed: (r.isPressed || g) && !s,
                 isFocused: b,
                 isFocusVisible: w,
                 isDisabled: e.isDisabled || !1,
@@ -37,19 +37,19 @@ let h = (0, c.createContext)({}),
             k = (0, p.Bi)(),
             T = m["aria-labelledby"];
         s && (T ? (T = `${T} ${k}`) : m["aria-label"] && (T = `${C} ${k}`));
-        let P = (0, c.useRef)(s);
+        let M = (0, c.useRef)(s);
         (0, c.useEffect)(() => {
             let e = { "aria-labelledby": T || C };
-            (!P.current && b && s ? (0, o.iP)(e, "assertive") : P.current && b && !s && (0, o.iP)(e, "assertive"),
-                (P.current = s));
+            (!M.current && b && s ? (0, o.iP)(e, "assertive") : M.current && b && !s && (0, o.iP)(e, "assertive"),
+                (M.current = s));
         }, [s, b, T, C]);
-        let A = (0, l.$)(e, { global: !0 });
+        let P = (0, l.$)(e, { global: !0 });
         return (
-            delete A.onClick,
+            delete P.onClick,
             c.createElement(
                 n.tT.button,
                 {
-                    ...(0, u.v)(A, x, m, g, _),
+                    ...(0, u.v)(P, x, m, y, _),
                     type: "submit" === m.type && s ? "button" : m.type,
                     id: C,
                     ref: t,

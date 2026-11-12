@@ -170,7 +170,7 @@ class v {
         );
     }
 }
-function y(e, t) {
+function g(e, t) {
     let r = e.alpha;
     return new v(
         (1 - r) * t.red + r * e.red,
@@ -179,7 +179,7 @@ function y(e, t) {
         e.alpha + t.alpha * (1 - e.alpha),
     );
 }
-function g(e) {
+function y(e) {
     if (e) return parseInt(e) > 0 ? e : void 0;
 }
 class b {
@@ -242,10 +242,10 @@ class b {
     }
     getBorderRadius(e) {
         var t, r, n, i, o, a, s, l;
-        let u = null != (r = g(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? r : "0",
-            c = null != (i = g(null == (n = e.styles[0]) ? void 0 : n.borderTopRightRadius)) ? i : "0",
-            f = null != (a = g(null == (o = e.styles[0]) ? void 0 : o.borderBottomRightRadius)) ? a : "0",
-            d = null != (l = g(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : "0";
+        let u = null != (r = y(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? r : "0",
+            c = null != (i = y(null == (n = e.styles[0]) ? void 0 : n.borderTopRightRadius)) ? i : "0",
+            f = null != (a = y(null == (o = e.styles[0]) ? void 0 : o.borderBottomRightRadius)) ? a : "0",
+            d = null != (l = y(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : "0";
         if ("0" !== u || "0" !== c || "0" !== f || "0" !== d) return `${u} ${c} ${f} ${d}`;
     }
     makePositionFromDOMRect(e) {
@@ -289,7 +289,7 @@ class b {
                         t.push(e);
                     }
                 }
-                return (t.push(new v(255, 255, 255, 1)), t.reduce(y));
+                return (t.push(new v(255, 255, 255, 1)), t.reduce(g));
             })(this.targetAncestry);
             t = {
                 ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
@@ -342,7 +342,7 @@ function k() {
         (x = requestAnimationFrame(k)));
 }
 let T = !1,
-    P = {
+    M = {
         get ringsEnabled() {
             return T;
         },
@@ -356,7 +356,7 @@ let T = !1,
             ((E = !1), null != x && cancelAnimationFrame(x));
         },
     };
-function A() {
+function P() {
     let e = o.useContext(_),
         [, t] = o.useState({});
     return (
@@ -369,12 +369,12 @@ function A() {
             ),
             [e],
         ),
-        P.ringsEnabled && e.visible
+        M.ringsEnabled && e.visible
             ? (0, a.jsx)("div", { className: d("focus-rings-ring", e.className), style: e.getStyle() })
             : null
     );
 }
-let I =
+let A =
     "u" > typeof window && (null == (i = window.document) ? void 0 : i.createElement) != null
         ? o.useLayoutEffect
         : o.useEffect;
@@ -382,7 +382,7 @@ r.d(
     t,
     {},
     {
-        oP: P,
+        oP: M,
         vN: function (e) {
             let {
                 within: t = !1,
@@ -408,27 +408,27 @@ r.d(
                     ));
             let h = o.useRef(!1),
                 [m, v] = o.useState(!1),
-                y = o.useContext(_),
-                g = o.Children.only(f),
-                { onBlur: b, onFocus: w, ...S } = g.props,
+                g = o.useContext(_),
+                y = o.Children.only(f),
+                { onBlur: b, onFocus: w, ...S } = y.props,
                 E = o.useMemo(() => ({ className: l, offset: i }), [l, i]);
-            (I(() => {
-                r && y.invalidate();
+            (A(() => {
+                r && g.invalidate();
             }),
                 o.useEffect(() => {
-                    r || y.hide();
-                }, [r, y]),
+                    r || g.hide();
+                }, [r, g]),
                 o.useEffect(
                     () => () => {
-                        h.current && y.hide();
+                        h.current && g.hide();
                     },
-                    [y],
+                    [g],
                 ),
                 o.useEffect(() => {
                     let e = null == s ? void 0 : s.current;
-                    null == n || null == e || ((h.current = n), n ? y.showElement(e, E) : !1 === n && y.hide());
-                }, [n, E, y, s]),
-                I(() => {
+                    null == n || null == e || ((h.current = n), n ? g.showElement(e, E) : !1 === n && g.hide());
+                }, [n, E, g, s]),
+                A(() => {
                     if (null != n) return;
                     let e = null == a ? void 0 : a.current,
                         r = null == s ? void 0 : s.current;
@@ -443,40 +443,40 @@ r.d(
                     function i(e) {
                         if (null != r) {
                             if (e.currentTarget === e.target) {
-                                ((h.current = !0), y.showElement(r, E));
+                                ((h.current = !0), g.showElement(r, E));
                                 return;
                             }
-                            (v(!0), t && y.showElement(r, E));
+                            (v(!0), t && g.showElement(r, E));
                         }
                     }
                     function o() {
-                        (y.hide(), (h.current = !1), v(!1));
+                        (g.hide(), (h.current = !1), v(!1));
                     }
-                }, [t, E, n, y, a, s]));
+                }, [t, E, n, g, a, s]));
             let x = o.useCallback(
                     (e) => {
-                        (y.hide(), (h.current = !1), v(!1), null == b || b(e));
+                        (g.hide(), (h.current = !1), v(!1), null == b || b(e));
                     },
-                    [b, y],
+                    [b, g],
                 ),
                 C = o.useCallback(
                     (e) => {
                         let r = null == s ? void 0 : s.current;
                         (e.currentTarget === e.target
-                            ? ((h.current = !0), y.showElement(null != r ? r : e.currentTarget, E))
-                            : (v(!0), t && y.showElement(null != r ? r : e.currentTarget, E)),
+                            ? ((h.current = !0), g.showElement(null != r ? r : e.currentTarget, E))
+                            : (v(!0), t && g.showElement(null != r ? r : e.currentTarget, E)),
                             null == w || w(e));
                     },
-                    [s, t, w, y, E],
+                    [s, t, w, g, E],
                 );
             return r && null == a && null == n
-                ? o.cloneElement(g, {
+                ? o.cloneElement(y, {
                       ...S,
                       className: d(S.className, h.current ? u : void 0, m ? c : void 0),
                       onBlur: x,
                       onFocus: C,
                   })
-                : g;
+                : y;
         },
         xp: function (e) {
             let { containerRef: t, children: r, themeOptions: n } = e,
@@ -485,7 +485,7 @@ r.d(
                 o.useEffect(() => {
                     (i.current.setContainer(t.current), i.current.setThemeOptions(n));
                 }, [t.current]),
-                (0, a.jsxs)(_.Provider, { value: i.current, children: [r, (0, a.jsx)(A, {})] })
+                (0, a.jsxs)(_.Provider, { value: i.current, children: [r, (0, a.jsx)(P, {})] })
             );
         },
     },

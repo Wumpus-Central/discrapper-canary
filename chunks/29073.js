@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     nd: "panel__y8rI_",
     jx: "panelWithPopouts__y8rI_",
     wx: "header__y8rI_",

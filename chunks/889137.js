@@ -134,10 +134,10 @@ function v(...e) {
         }),
     });
 }
-function y(e) {
+function g(e) {
     return "number" == typeof e;
 }
-function g(e) {
+function y(e) {
     return "string" == typeof e;
 }
 function b(e) {
@@ -154,55 +154,55 @@ let w = f(
                 _(
                     p(
                         e,
-                        m((e) => g(e) && e.startsWith(t)),
+                        m((e) => y(e) && e.startsWith(t)),
                     ),
                 ),
             endsWith: (t) =>
                 _(
                     p(
                         e,
-                        m((e) => g(e) && e.endsWith(t)),
+                        m((e) => y(e) && e.endsWith(t)),
                     ),
                 ),
             minLength: (t) =>
                 _(
                     p(
                         e,
-                        m((e) => g(e) && e.length >= t),
+                        m((e) => y(e) && e.length >= t),
                     ),
                 ),
             maxLength: (t) =>
                 _(
                     p(
                         e,
-                        m((e) => g(e) && e.length <= t),
+                        m((e) => y(e) && e.length <= t),
                     ),
                 ),
             includes: (t) =>
                 _(
                     p(
                         e,
-                        m((e) => g(e) && e.includes(t)),
+                        m((e) => y(e) && e.includes(t)),
                     ),
                 ),
             regex: (t) =>
                 _(
                     p(
                         e,
-                        m((e) => g(e) && !!e.match(t)),
+                        m((e) => y(e) && !!e.match(t)),
                     ),
                 ),
         }),
-    S = _(m(g)),
-    E = (e, t) => m((r) => y(r) && e <= r && t >= r),
-    x = (e) => m((t) => y(t) && t < e),
-    C = (e) => m((t) => y(t) && t > e),
-    k = (e) => m((t) => y(t) && t <= e),
-    T = (e) => m((t) => y(t) && t >= e),
-    P = () => m((e) => y(e) && Number.isInteger(e)),
-    A = () => m((e) => y(e) && Number.isFinite(e)),
-    I = () => m((e) => y(e) && e > 0),
-    M = () => m((e) => y(e) && e < 0),
+    S = _(m(y)),
+    E = (e, t) => m((r) => g(r) && e <= r && t >= r),
+    x = (e) => m((t) => g(t) && t < e),
+    C = (e) => m((t) => g(t) && t > e),
+    k = (e) => m((t) => g(t) && t <= e),
+    T = (e) => m((t) => g(t) && t >= e),
+    M = () => m((e) => g(e) && Number.isInteger(e)),
+    P = () => m((e) => g(e) && Number.isFinite(e)),
+    A = () => m((e) => g(e) && e > 0),
+    I = () => m((e) => g(e) && e < 0),
     O = (e) =>
         Object.assign(f(e), {
             between: (t, r) => O(p(e, E(t, r))),
@@ -210,12 +210,12 @@ let w = f(
             gt: (t) => O(p(e, C(t))),
             lte: (t) => O(p(e, k(t))),
             gte: (t) => O(p(e, T(t))),
-            int: () => O(p(e, P())),
-            finite: () => O(p(e, A())),
-            positive: () => O(p(e, I())),
-            negative: () => O(p(e, M())),
+            int: () => O(p(e, M())),
+            finite: () => O(p(e, P())),
+            positive: () => O(p(e, A())),
+            negative: () => O(p(e, I())),
         }),
-    R = O(m(y)),
+    R = O(m(g)),
     L = (e, t) => m((r) => b(r) && e <= r && t >= r),
     D = (e) => m((t) => b(t) && t < e),
     F = (e) => m((t) => b(t) && t > e),
@@ -223,23 +223,23 @@ let w = f(
     j = (e) => m((t) => b(t) && t >= e),
     B = () => m((e) => b(e) && e > 0),
     U = () => m((e) => b(e) && e < 0),
-    V = (e) =>
+    $ = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => V(p(e, L(t, r))),
-            lt: (t) => V(p(e, D(t))),
-            gt: (t) => V(p(e, F(t))),
-            lte: (t) => V(p(e, N(t))),
-            gte: (t) => V(p(e, j(t))),
-            positive: () => V(p(e, B())),
-            negative: () => V(p(e, U())),
+            between: (t, r) => $(p(e, L(t, r))),
+            lt: (t) => $(p(e, D(t))),
+            gt: (t) => $(p(e, F(t))),
+            lte: (t) => $(p(e, N(t))),
+            gte: (t) => $(p(e, j(t))),
+            positive: () => $(p(e, B())),
+            negative: () => $(p(e, U())),
         }),
-    $ = V(m(b)),
-    K = f(
+    V = $(m(b)),
+    H = f(
         m(function (e) {
             return "boolean" == typeof e;
         }),
     ),
-    H = f(
+    K = f(
         m(function (e) {
             return "symbol" == typeof e;
         }),
@@ -249,8 +249,8 @@ let w = f(
             return null == e;
         }),
     ),
-    G = { matched: !1, value: void 0 };
-class W {
+    W = { matched: !1, value: void 0 };
+class G {
     constructor(e, t) {
         ((this.input = void 0), (this.state = void 0), (this.input = e), (this.state = t));
     }
@@ -270,13 +270,13 @@ class W {
             u =
                 n.some((e) => l(e, this.input, s)) && (!t || t(this.input))
                     ? { matched: !0, value: r(i ? (o in a ? a[o] : a) : this.input, this.input) }
-                    : G;
-        return new W(this.input, u);
+                    : W;
+        return new G(this.input, u);
     }
     when(e, t) {
         if (this.state.matched) return this;
         let r = !!e(this.input);
-        return new W(this.input, r ? { matched: !0, value: t(this.input, this.input) } : G);
+        return new G(this.input, r ? { matched: !0, value: t(this.input, this.input) } : W);
     }
     otherwise(e) {
         return this.state.matched ? this.state.value : e(this.input);
@@ -417,10 +417,10 @@ r.d(
             gt: C,
             lte: k,
             gte: T,
-            int: P,
-            finite: A,
-            positive: I,
-            negative: M,
+            int: M,
+            finite: P,
+            positive: A,
+            negative: I,
             number: R,
             betweenBigInt: L,
             ltBigInt: D,
@@ -429,9 +429,9 @@ r.d(
             gteBigInt: j,
             positiveBigInt: B,
             negativeBigInt: U,
-            bigint: $,
-            boolean: K,
-            symbol: H,
+            bigint: V,
+            boolean: H,
+            symbol: K,
             nullish: z,
             instanceOf: function (e) {
                 return f(m((t) => t instanceof e));
@@ -457,7 +457,7 @@ r.d(
             },
         },
         YW: function (e) {
-            return new W(e, G);
+            return new G(e, W);
         },
     },
 );

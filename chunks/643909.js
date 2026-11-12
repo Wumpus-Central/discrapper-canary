@@ -1,4 +1,5 @@
 !(function (e, t) {
+    "use strict";
     function r(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -197,7 +198,7 @@
                     [i, r, e, o],
                 ));
         },
-        y = function (e) {
+        g = function (e) {
             var r = t.useRef(e);
             return (
                 t.useEffect(
@@ -209,12 +210,12 @@
                 r.current
             );
         },
-        g = function (e) {
+        y = function (e) {
             return null !== e && "object" === i(e);
         },
         b = "[object Object]",
         w = function e(t, r) {
-            if (!g(t) || !g(r)) return t === r;
+            if (!y(t) || !y(r)) return t === r;
             var n = Array.isArray(t);
             if (n !== Array.isArray(r)) return !1;
             var i = Object.prototype.toString.call(t) === b;
@@ -234,9 +235,9 @@
             );
         },
         _ = function (e, t, r) {
-            return g(e)
+            return y(e)
                 ? Object.keys(e).reduce(function (i, a) {
-                      var s = !g(t) || !w(e[a], t[a]);
+                      var s = !y(t) || !w(e[a], t[a]);
                       return r.includes(a)
                           ? (s &&
                                 console.warn(
@@ -255,7 +256,7 @@
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
             if (
                 null === e ||
-                (g(e) &&
+                (y(e) &&
                     "function" == typeof e.elements &&
                     "function" == typeof e.createToken &&
                     "function" == typeof e.createPaymentMethod &&
@@ -266,7 +267,7 @@
         },
         x = function (e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-            if (g(e) && "function" == typeof e.then)
+            if (y(e) && "function" == typeof e.then)
                 return {
                     tag: "async",
                     stripePromise: Promise.resolve(e).then(function (e) {
@@ -299,7 +300,7 @@
                 );
             return e;
         },
-        P = function (e) {
+        M = function (e) {
             var r = e.stripe,
                 n = e.options,
                 i = e.children,
@@ -341,7 +342,7 @@
                 },
                 [o, l, n],
             );
-            var c = y(r);
+            var c = g(r);
             t.useEffect(
                 function () {
                     null !== c &&
@@ -352,7 +353,7 @@
                 },
                 [c, r],
             );
-            var f = y(n);
+            var f = g(n);
             return (
                 t.useEffect(
                     function () {
@@ -372,15 +373,15 @@
                 t.createElement(k.Provider, { value: l }, i)
             );
         };
-    P.propTypes = { stripe: m.any, options: m.object };
-    var A = function (e) {
+    M.propTypes = { stripe: m.any, options: m.object };
+    var P = function (e) {
             return T(t.useContext(k), e);
         },
-        I = function (e) {
-            return (0, e.children)(A("mounts <ElementsConsumer>"));
+        A = function (e) {
+            return (0, e.children)(P("mounts <ElementsConsumer>"));
         };
-    I.propTypes = { children: m.func.isRequired };
-    var M = ["on", "session"],
+    A.propTypes = { children: m.func.isRequired };
+    var I = ["on", "session"],
         O = t.createContext(null);
     O.displayName = "CheckoutSdkContext";
     var R = function (e, t) {
@@ -398,7 +399,7 @@
     var D = function (e, t) {
             if (!e) return null;
             (e.on, e.session);
-            var r = a(e, M);
+            var r = a(e, I);
             return t ? Object.assign(t, r) : Object.assign(e.session(), r);
         },
         F = function (e) {
@@ -459,7 +460,7 @@
                 },
                 [o, f, n, u],
             );
-            var m = y(r);
+            var m = g(r);
             t.useEffect(
                 function () {
                     null !== m &&
@@ -470,8 +471,8 @@
                 },
                 [m, r],
             );
-            var v = y(n),
-                g = y(f.checkoutSdk);
+            var v = g(n),
+                y = g(f.checkoutSdk);
             (t.useEffect(
                 function () {
                     if (f.checkoutSdk) {
@@ -480,11 +481,11 @@
                             r = null == v || null == (e = v.elementsOptions) ? void 0 : e.appearance,
                             i = null == n || null == (t = n.elementsOptions) ? void 0 : t.appearance,
                             o = !w(i, r),
-                            a = !g && f.checkoutSdk;
+                            a = !y && f.checkoutSdk;
                         i && (o || a) && f.checkoutSdk.changeAppearance(i);
                     }
                 },
-                [n, v, f.checkoutSdk, g],
+                [n, v, f.checkoutSdk, y],
             ),
                 t.useEffect(
                     function () {
@@ -539,7 +540,7 @@
                               p = r.onReady,
                               h = r.onChange,
                               m = r.onEscape,
-                              g = r.onClick,
+                              y = r.onClick,
                               b = r.onLoadError,
                               w = r.onLoaderStart,
                               S = r.onNetworksChange,
@@ -548,49 +549,49 @@
                               C = r.onShippingAddressChange,
                               k = r.onShippingRateChange,
                               T = N("mounts <".concat(n, ">")),
-                              P = "elements" in T ? T.elements : null,
-                              A = "checkoutSdk" in T ? T.checkoutSdk : null,
-                              I = s(t.useState(null), 2),
-                              M = I[0],
-                              O = I[1],
+                              M = "elements" in T ? T.elements : null,
+                              P = "checkoutSdk" in T ? T.checkoutSdk : null,
+                              A = s(t.useState(null), 2),
+                              I = A[0],
+                              O = A[1],
                               R = t.useRef(null),
                               L = t.useRef(null);
-                          (v(M, "blur", f),
-                              v(M, "focus", d),
-                              v(M, "escape", m),
-                              v(M, "click", g),
-                              v(M, "loaderror", b),
-                              v(M, "loaderstart", w),
-                              v(M, "networkschange", S),
-                              v(M, "confirm", E),
-                              v(M, "cancel", x),
-                              v(M, "shippingaddresschange", C),
-                              v(M, "shippingratechange", k),
-                              v(M, "change", h),
+                          (v(I, "blur", f),
+                              v(I, "focus", d),
+                              v(I, "escape", m),
+                              v(I, "click", y),
+                              v(I, "loaderror", b),
+                              v(I, "loaderstart", w),
+                              v(I, "networkschange", S),
+                              v(I, "confirm", E),
+                              v(I, "cancel", x),
+                              v(I, "shippingaddresschange", C),
+                              v(I, "shippingratechange", k),
+                              v(I, "change", h),
                               p &&
                                   (i =
                                       "expressCheckout" === e
                                           ? p
                                           : function () {
-                                                p(M);
+                                                p(I);
                                             }),
-                              v(M, "ready", i),
+                              v(I, "ready", i),
                               t.useLayoutEffect(
                                   function () {
-                                      if (null === R.current && null !== L.current && (P || A)) {
+                                      if (null === R.current && null !== L.current && (M || P)) {
                                           var t = null;
-                                          if (A)
+                                          if (P)
                                               switch (e) {
                                                   case "payment":
-                                                      t = A.createPaymentElement(c);
+                                                      t = P.createPaymentElement(c);
                                                       break;
                                                   case "address":
                                                       if ("mode" in c) {
                                                           var r = c.mode,
                                                               i = a(c, j);
-                                                          if ("shipping" === r) t = A.createShippingAddressElement(i);
+                                                          if ("shipping" === r) t = P.createShippingAddressElement(i);
                                                           else if ("billing" === r)
-                                                              t = A.createBillingAddressElement(i);
+                                                              t = P.createBillingAddressElement(i);
                                                           else
                                                               throw Error(
                                                                   "Invalid options.mode. mode must be 'billing' or 'shipping'.",
@@ -601,10 +602,10 @@
                                                           );
                                                       break;
                                                   case "expressCheckout":
-                                                      t = A.createExpressCheckoutElement(c);
+                                                      t = P.createExpressCheckoutElement(c);
                                                       break;
                                                   case "currencySelector":
-                                                      t = A.createCurrencySelectorElement();
+                                                      t = P.createCurrencySelectorElement();
                                                       break;
                                                   default:
                                                       throw Error(
@@ -614,13 +615,13 @@
                                                           ),
                                                       );
                                               }
-                                          else P && (t = P.create(e, c));
+                                          else M && (t = M.create(e, c));
                                           ((R.current = t), O(t), t && t.mount(L.current));
                                       }
                                   },
-                                  [P, A, c],
+                                  [M, P, c],
                               ));
-                          var D = y(c);
+                          var D = g(c);
                           return (
                               t.useEffect(
                                   function () {
@@ -667,23 +668,23 @@
             );
         },
         U = "u" < typeof window,
-        V = t.createContext(null);
-    V.displayName = "EmbeddedCheckoutProviderContext";
-    var $ = function () {
-            var e = t.useContext(V);
+        $ = t.createContext(null);
+    $.displayName = "EmbeddedCheckoutProviderContext";
+    var V = function () {
+            var e = t.useContext($);
             if (!e) throw Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
             return e;
         },
-        K = U
+        H = U
             ? function (e) {
                   var r = e.id,
                       n = e.className;
-                  return ($(), t.createElement("div", { id: r, className: n }));
+                  return (V(), t.createElement("div", { id: r, className: n }));
               }
             : function (e) {
                   var r = e.id,
                       n = e.className,
-                      i = $().embeddedCheckout,
+                      i = V().embeddedCheckout,
                       o = t.useRef(!1),
                       a = t.useRef(null);
                   return (
@@ -704,10 +705,10 @@
                       t.createElement("div", { ref: a, id: r, className: n })
                   );
               },
-        H = B("auBankAccount", U),
+        K = B("auBankAccount", U),
         z = B("card", U),
-        G = B("cardNumber", U),
-        W = B("cardExpiry", U),
+        W = B("cardNumber", U),
+        G = B("cardExpiry", U),
         q = B("cardCvc", U),
         Y = B("fpxBank", U),
         X = B("iban", U),
@@ -727,16 +728,16 @@
     ((e.AddressElement = eo),
         (e.AffirmMessageElement = el),
         (e.AfterpayClearpayMessageElement = eu),
-        (e.AuBankAccountElement = H),
+        (e.AuBankAccountElement = K),
         (e.CardCvcElement = q),
         (e.CardElement = z),
-        (e.CardExpiryElement = W),
-        (e.CardNumberElement = G),
+        (e.CardExpiryElement = G),
+        (e.CardNumberElement = W),
         (e.CheckoutProvider = F),
         (e.CurrencySelectorElement = er),
-        (e.Elements = P),
-        (e.ElementsConsumer = I),
-        (e.EmbeddedCheckout = K),
+        (e.Elements = M),
+        (e.ElementsConsumer = A),
+        (e.EmbeddedCheckout = H),
         (e.EmbeddedCheckoutProvider = function (e) {
             var r = e.stripe,
                 n = e.options,
@@ -794,7 +795,7 @@
                     },
                     [l],
                 ));
-            var d = y(r);
+            var d = g(r);
             t.useEffect(
                 function () {
                     null !== d &&
@@ -805,7 +806,7 @@
                 },
                 [d, r],
             );
-            var p = y(n);
+            var p = g(n);
             return (
                 t.useEffect(
                     function () {
@@ -848,7 +849,7 @@
                     },
                     [p, n],
                 ),
-                t.createElement(V.Provider, { value: c }, i)
+                t.createElement($.Provider, { value: c }, i)
             );
         }),
         (e.EpsBankElement = Q),
@@ -872,7 +873,7 @@
             return e;
         }),
         (e.useElements = function () {
-            return A("calls useElements()").elements;
+            return P("calls useElements()").elements;
         }),
         (e.useStripe = function () {
             return N("calls useStripe()").stripe;

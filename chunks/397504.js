@@ -1,54 +1,54 @@
-var s = i(873298),
-    n = i(817281),
-    c = i(823459),
-    r = i(47671),
-    m = i(644235),
-    o = i(270746),
-    a = i(413599),
-    u = i(964404),
-    d = i(253932),
-    l = i(471865),
-    p = i(773527),
-    P = i(385803),
-    I = i(185928);
-i.d(
+var i = n(873298),
+    r = n(817281),
+    a = n(823459),
+    s = n(47671),
+    l = n(644235),
+    o = n(270746),
+    d = n(413599),
+    c = n(964404),
+    u = n(253932),
+    _ = n(471865),
+    E = n(773527),
+    A = n(385803),
+    f = n(185928);
+n.d(
     t,
     {},
     {
         P: function () {
-            (!a.A.isSameAsDeviceThemeEnabled() && (0, p.oB)(r.A.gradientPreset?.id)) ||
-                (0, l.fv)({
+            (!d.A.isSameAsDeviceThemeEnabled() && (0, E.oB)(s.A.gradientPreset?.id)) ||
+                (0, _.fv)({
                     clientTheme: (function () {
-                        let e = r.A.gradientPreset;
-                        if (a.A.isSameAsDeviceThemeEnabled())
-                            return null == e || (0, p.oB)(e.id)
-                                ? { theme: a.A.theme }
+                        let e = s.A.gradientPreset;
+                        if (d.A.isSameAsDeviceThemeEnabled())
+                            return null == e || (0, E.oB)(e.id)
+                                ? { theme: d.A.theme }
                                 : { theme: e.theme, backgroundGradientPresetId: e.id };
                         if (null != e) return { theme: e.theme, backgroundGradientPresetId: e.id };
-                        let { customUserThemeSettings: t } = d.eh.getSetting();
-                        return (0, m.lo)(t)
-                            ? { theme: a.A.theme, customThemeSettings: t }
-                            : u.Ay.useSystemTheme === I.Q_.ON
+                        let { customUserThemeSettings: t } = u.eh.getSetting();
+                        return (0, l.lo)(t)
+                            ? { theme: d.A.theme, customThemeSettings: t }
+                            : c.Ay.useSystemTheme === f.Q_.ON
                               ? { theme: "system" }
-                              : { theme: a.A.theme };
+                              : { theme: d.A.theme };
                     })(),
                 });
         },
         e: function (e, t) {
-            let { theme: i, backgroundGradientPresetId: r, customThemeSettings: a } = e,
-                u = null != r ? P.ag[r] : null;
-            if (null != u) {
-                ((0, o.X8)({ isPersisted: !0, analyticsLocations: t, themeName: s.ju[u.id] }),
-                    (0, c.bc)(u.id),
-                    (0, n.u_)({ backgroundGradientPresetId: u.id, theme: u.theme }));
+            let { theme: n, backgroundGradientPresetId: s, customThemeSettings: d } = e,
+                c = null != s ? A.ag[s] : null;
+            if (null != c) {
+                ((0, o.X8)({ isPersisted: !0, analyticsLocations: t, themeName: i.ju[c.id] }),
+                    (0, a.bc)(c.id),
+                    (0, r.u_)({ backgroundGradientPresetId: c.id, theme: c.theme }));
                 return;
             }
-            if (((0, c.Py)(), "system" !== i && (0, m.lo)(a))) {
+            if (((0, a.Py)(), "system" !== n && (0, l.lo)(d))) {
                 ((0, o.X8)({ isPersisted: !0, analyticsLocations: t, themeName: "custom theme" }),
-                    (0, n.u_)({ theme: i, customUserThemeSettings: a }));
+                    (0, r.u_)({ theme: n, customUserThemeSettings: d }));
                 return;
             }
-            ((0, o.X8)({ isPersisted: !0, analyticsLocations: t, themeName: `default ${i}` }), (0, n.u_)({ theme: i }));
+            ((0, o.X8)({ isPersisted: !0, analyticsLocations: t, themeName: `default ${n}` }), (0, r.u_)({ theme: n }));
         },
     },
 );

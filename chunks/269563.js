@@ -51,8 +51,8 @@ var d = /[ \xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/,
     h = /[\t-\r \x85\u200E\u200F\u2028\u2029]/i,
     m = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
     v = /^(@+)?(\+|#+)?[rs]?$/g,
-    y = /(\*)(0+)|(#+)(0+)|(0+)/g,
-    g = /^(0+)$/;
+    g = /(\*)(0+)|(#+)(0+)|(0+)/g,
+    y = /^(0+)$/;
 function b(e) {
     var t = {};
     return (
@@ -386,10 +386,10 @@ function C(e, t) {
 }
 var k = !!String.prototype.startsWith && "_a".startsWith("a", 1),
     T = !!String.fromCodePoint,
-    P = !!Object.fromEntries,
-    A = !!String.prototype.codePointAt,
-    I = !!String.prototype.trimStart,
-    M = !!String.prototype.trimEnd,
+    M = !!Object.fromEntries,
+    P = !!String.prototype.codePointAt,
+    A = !!String.prototype.trimStart,
+    I = !!String.prototype.trimEnd,
     O = Number.isSafeInteger
         ? Number.isSafeInteger
         : function (e) {
@@ -421,7 +421,7 @@ var L = k
               }
               return n;
           },
-    F = P
+    F = M
         ? Object.fromEntries
         : function (e) {
               for (var t = {}, r = 0; r < e.length; r++) {
@@ -432,7 +432,7 @@ var L = k
               }
               return t;
           },
-    N = A
+    N = P
         ? function (e, t) {
               return e.codePointAt(t);
           }
@@ -446,14 +446,14 @@ var L = k
                       : ((i - 55296) << 10) + (r - 56320) + 65536;
               }
           },
-    j = I
+    j = A
         ? function (e) {
               return e.trimStart();
           }
         : function (e) {
               return e.replace(E, "");
           },
-    B = M
+    B = I
         ? function (e) {
               return e.trimEnd();
           }
@@ -464,10 +464,10 @@ function U(e, t) {
     return new RegExp(e, t);
 }
 if (R) {
-    var V = U("([^\\p{White_Space}\\p{Pattern_Syntax}]*)", "yu");
+    var $ = U("([^\\p{White_Space}\\p{Pattern_Syntax}]*)", "yu");
     c = function (e, t) {
         var r;
-        return ((V.lastIndex = t), null != (r = V.exec(e)[1]) ? r : "");
+        return (($.lastIndex = t), null != (r = $.exec(e)[1]) ? r : "");
     };
 } else
     c = function (e, t) {
@@ -476,7 +476,7 @@ if (R) {
                 i = N(e, t);
             if (
                 void 0 === i ||
-                H(i) ||
+                K(i) ||
                 ((n = i) >= 33 && n <= 35) ||
                 36 === n ||
                 (n >= 37 && n <= 39) ||
@@ -731,7 +731,7 @@ if (R) {
         }
         return D.apply(void 0, r);
     };
-var $ = (function () {
+var V = (function () {
     function e(e, t) {
         (void 0 === t && (t = {}),
             (this.message = e),
@@ -758,7 +758,7 @@ var $ = (function () {
                     var l = this.clonePosition();
                     (this.bump(), n.push({ type: s.pound, location: C(l, this.clonePosition()) }));
                 } else if (60 !== i || this.ignoreTag || 47 !== this.peek())
-                    if (60 === i && !this.ignoreTag && K(this.peek() || 0)) {
+                    if (60 === i && !this.ignoreTag && H(this.peek() || 0)) {
                         var o = this.parseTag(e, t);
                         if (o.err) return o;
                         n.push(o.val);
@@ -787,7 +787,7 @@ var $ = (function () {
             var o = i.val,
                 l = this.clonePosition();
             if (!this.bumpIf("</")) return this.error(a.UNCLOSED_TAG, C(r, this.clonePosition()));
-            if (this.isEOF() || !K(this.char())) return this.error(a.INVALID_TAG, C(l, this.clonePosition()));
+            if (this.isEOF() || !H(this.char())) return this.error(a.INVALID_TAG, C(l, this.clonePosition()));
             var u = this.clonePosition();
             return n !== this.parseTagName()
                 ? this.error(a.UNMATCHED_CLOSING_TAG, C(u, this.clonePosition()))
@@ -848,7 +848,7 @@ var $ = (function () {
         }),
         (e.prototype.tryParseLeftAngleBracket = function () {
             var e;
-            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && (K((e = this.peek() || 0)) || 47 === e))
+            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && (H((e = this.peek() || 0)) || 47 === e))
                 ? null
                 : (this.bump(), "<");
         }),
@@ -946,17 +946,17 @@ var $ = (function () {
                             return this.error(a.EXPECT_ARGUMENT_STYLE, C(this.clonePosition(), this.clonePosition()));
                         d = { style: v, styleLocation: C(h, this.clonePosition()) };
                     }
-                    var y = this.tryParseArgumentClose(n);
-                    if (y.err) return y;
-                    var g = C(n, this.clonePosition());
+                    var g = this.tryParseArgumentClose(n);
+                    if (g.err) return g;
+                    var y = C(n, this.clonePosition());
                     if (d && L(null == d ? void 0 : d.style, "::", 0)) {
                         var b = j(d.style.slice(2));
                         if ("number" === u) {
                             var m = this.parseNumberSkeletonFromString(b, d.styleLocation);
                             if (m.err) return m;
-                            return { val: { type: s.number, value: r, location: g, style: m.val }, err: null };
+                            return { val: { type: s.number, value: r, location: y, style: m.val }, err: null };
                         }
-                        if (0 === b.length) return this.error(a.EXPECT_DATE_TIME_SKELETON, g);
+                        if (0 === b.length) return this.error(a.EXPECT_DATE_TIME_SKELETON, y);
                         var w,
                             _ = b;
                         this.locale &&
@@ -1111,7 +1111,7 @@ var $ = (function () {
                                 : {},
                         };
                         return {
-                            val: { type: "date" === u ? s.date : s.time, value: r, location: g, style: v },
+                            val: { type: "date" === u ? s.date : s.time, value: r, location: y, style: v },
                             err: null,
                         };
                     }
@@ -1119,7 +1119,7 @@ var $ = (function () {
                         val: {
                             type: "number" === u ? s.number : "date" === u ? s.date : s.time,
                             value: r,
-                            location: g,
+                            location: y,
                             style: null != (i = null == d ? void 0 : d.style) ? i : null,
                         },
                         err: null,
@@ -1149,11 +1149,11 @@ var $ = (function () {
                     }
                     var T = this.tryParsePluralOrSelectOptions(e, u, t, x);
                     if (T.err) return T;
-                    var y = this.tryParseArgumentClose(n);
-                    if (y.err) return y;
-                    var P = C(n, this.clonePosition());
+                    var g = this.tryParseArgumentClose(n);
+                    if (g.err) return g;
+                    var M = C(n, this.clonePosition());
                     if ("select" === u)
-                        return { val: { type: s.select, value: r, options: F(T.val), location: P }, err: null };
+                        return { val: { type: s.select, value: r, options: F(T.val), location: M }, err: null };
                     return {
                         val: {
                             type: s.plural,
@@ -1161,7 +1161,7 @@ var $ = (function () {
                             options: F(T.val),
                             offset: k,
                             pluralType: "plural" === u ? "cardinal" : "ordinal",
-                            location: P,
+                            location: M,
                         },
                         err: null,
                     };
@@ -1321,7 +1321,7 @@ var $ = (function () {
                                               throw RangeError(
                                                   "integer-width stems only accept a single optional option",
                                               );
-                                          n.options[0].replace(y, function (e, r, n, i, o, a) {
+                                          n.options[0].replace(g, function (e, r, n, i, o, a) {
                                               if (r) t.minimumIntegerDigits = n.length;
                                               else if (i && o)
                                                   throw Error("We currently do not support maximum integer digits");
@@ -1331,7 +1331,7 @@ var $ = (function () {
                                           });
                                           continue;
                                   }
-                                  if (g.test(n.stem)) {
+                                  if (y.test(n.stem)) {
                                       t.minimumIntegerDigits = n.stem.length;
                                       continue;
                                   }
@@ -1379,7 +1379,7 @@ var $ = (function () {
                                               ("+!" === r
                                                   ? ((t.signDisplay = "always"), (e = e.slice(2)))
                                                   : "+?" === r && ((t.signDisplay = "exceptZero"), (e = e.slice(2))),
-                                              !g.test(e))
+                                              !y.test(e))
                                           )
                                               throw Error("Malformed concise eng/scientific notation");
                                           t.minimumIntegerDigits = e.length;
@@ -1507,7 +1507,7 @@ var $ = (function () {
             }
         }),
         (e.prototype.bumpSpace = function () {
-            for (; !this.isEOF() && H(this.char());) this.bump();
+            for (; !this.isEOF() && K(this.char());) this.bump();
         }),
         (e.prototype.peek = function () {
             if (this.isEOF()) return null;
@@ -1519,15 +1519,15 @@ var $ = (function () {
         e
     );
 })();
-function K(e) {
+function H(e) {
     return (e >= 97 && e <= 122) || (e >= 65 && e <= 90);
 }
-function H(e) {
+function K(e) {
     return (e >= 9 && e <= 13) || 32 === e || 133 === e || (e >= 8206 && e <= 8207) || 8232 === e || 8233 === e;
 }
 function z(e, t) {
     void 0 === t && (t = {});
-    var r = new $(e, (t = (0, f.Cl)({ shouldParseSkeletons: !0, requiresOtherClause: !0 }, t))).parse();
+    var r = new V(e, (t = (0, f.Cl)({ shouldParseSkeletons: !0, requiresOtherClause: !0 }, t))).parse();
     if (r.err) {
         var n = SyntaxError(a[r.err.kind]);
         throw ((n.location = r.err.location), (n.originalMessage = r.err.message), n);

@@ -86,11 +86,11 @@ var n =
                         void 0 !== e.extrapolateLeft
                             ? (v = e.extrapolateLeft)
                             : void 0 !== e.extrapolate && (v = e.extrapolate);
-                        var y = "extend";
+                        var g = "extend";
                         return (
                             void 0 !== e.extrapolateRight
-                                ? (y = e.extrapolateRight)
-                                : void 0 !== e.extrapolate && (y = e.extrapolate),
+                                ? (g = e.extrapolateRight)
+                                : void 0 !== e.extrapolate && (g = e.extrapolate),
                             function (e) {
                                 a("number" == typeof e, "Cannot interpolation an input which is not a number");
                                 var t = (function (e, t) {
@@ -115,7 +115,7 @@ var n =
                                             (l = o(l)),
                                             -1 / 0 === n ? (l = -l) : 1 / 0 === i ? (l += n) : (l = l * (i - n) + n),
                                             l);
-                                })(e, h[t], h[t + 1], p[t], p[t + 1], m, v, y);
+                                })(e, h[t], h[t + 1], p[t], p[t + 1], m, v, g);
                             }
                         );
                     },

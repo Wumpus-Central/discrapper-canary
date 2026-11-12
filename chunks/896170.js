@@ -118,10 +118,10 @@ function l(e, t, r) {
                                       d = i,
                                       m = c.minRanking,
                                       v = c.maxRanking,
-                                      y = c.threshold;
+                                      g = c.threshold;
                                   return (
                                       f < m && f >= a.MATCHES ? (f = m) : f > v && (f = v),
-                                      f > n && ((n = f), (o = r), (s = y), (d = l)),
+                                      f > n && ((n = f), (o = r), (s = g), (d = l)),
                                       { rankedValue: d, rank: n, keyIndex: o, keyThreshold: s }
                                   );
                               },
@@ -129,8 +129,8 @@ function l(e, t, r) {
                           )
                         : { rankedValue: l, rank: u(l, p, h), keyIndex: -1, keyThreshold: h.threshold }),
                 v = m.rank,
-                y = m.keyThreshold;
-            return (v >= (void 0 === y ? c : y) && e.push((0, n.A)({}, m, { item: i, index: s })), e);
+                g = m.keyThreshold;
+            return (v >= (void 0 === g ? c : g) && e.push((0, n.A)({}, m, { item: i, index: s })), e);
         }, []),
     ).map(function (e) {
         return e.item;

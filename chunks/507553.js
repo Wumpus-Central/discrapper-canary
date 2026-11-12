@@ -300,7 +300,7 @@ function v(e) {
     let { collection: t, document: r } = (function (e) {
         let [t] = (0, d.useState)(() => new a(e?.() || new (0, n.Wk)()));
         return {
-            collection: g(
+            collection: y(
                 (0, d.useCallback)((e) => t.subscribe(e), [t]),
                 (0, d.useCallback)(() => {
                     let e = t.getCollection();
@@ -315,14 +315,14 @@ function v(e) {
         d.Fragment,
         null,
         d.createElement(u.jZ, null, d.createElement(m.Provider, { value: r }, e.content)),
-        d.createElement(y, { render: e.children, collection: t }),
+        d.createElement(g, { render: e.children, collection: t }),
     );
 }
-function y(e) {
+function g(e) {
     let { collection: t, render: r } = e;
     return r(t);
 }
-let g =
+let y =
         "function" == typeof d.useSyncExternalStore
             ? d.useSyncExternalStore
             : function (e, t, r) {

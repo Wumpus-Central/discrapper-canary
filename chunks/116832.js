@@ -19,8 +19,8 @@ r.d(
             let {
                     index: r = 0,
                     isRequired: v,
-                    validationState: y,
-                    isInvalid: g,
+                    validationState: g,
+                    isInvalid: y,
                     trackRef: b,
                     inputRef: w,
                     orientation: _ = t.orientation,
@@ -30,12 +30,12 @@ r.d(
                 x = e.isDisabled || t.isDisabled,
                 C = "vertical" === _,
                 { direction: k } = (0, d.Y)(),
-                { addGlobalListener: T, removeGlobalListener: P } = (0, u.A)(),
-                A = o.S.get(t),
-                { labelProps: I, fieldProps: M } = (0, f.M)({
+                { addGlobalListener: T, removeGlobalListener: M } = (0, u.A)(),
+                P = o.S.get(t),
+                { labelProps: A, fieldProps: I } = (0, f.M)({
                     ...e,
                     id: (0, o.h)(t, r),
-                    "aria-labelledby": `${A.id} ${e["aria-labelledby"] ?? ""}`.trim(),
+                    "aria-labelledby": `${P.id} ${e["aria-labelledby"] ?? ""}`.trim(),
                 }),
                 O = t.values[r],
                 R = (0, m.useCallback)(() => {
@@ -104,36 +104,36 @@ r.d(
                     (0, a.v)(e, { onFocus: () => t.setFocusedThumb(r), onBlur: () => t.setFocusedThumb(void 0) }),
                     w,
                 ),
-                V = (0, m.useRef)(void 0),
-                $ = (e) => {
+                $ = (0, m.useRef)(void 0),
+                V = (e) => {
                     (R(),
-                        (V.current = e),
+                        ($.current = e),
                         t.setThumbDragging(r, !0),
-                        T(window, "mouseup", K, !1),
-                        T(window, "touchend", K, !1),
-                        T(window, "pointerup", K, !1));
+                        T(window, "mouseup", H, !1),
+                        T(window, "touchend", H, !1),
+                        T(window, "pointerup", H, !1));
                 },
-                K = (e) => {
-                    (e.pointerId ?? e.changedTouches?.[0].identifier) === V.current &&
+                H = (e) => {
+                    (e.pointerId ?? e.changedTouches?.[0].identifier) === $.current &&
                         (R(),
                         t.setThumbDragging(r, !1),
-                        P(window, "mouseup", K, !1),
-                        P(window, "touchend", K, !1),
-                        P(window, "pointerup", K, !1));
+                        M(window, "mouseup", H, !1),
+                        M(window, "touchend", H, !1),
+                        M(window, "pointerup", H, !1));
                 },
-                H = t.getThumbPercent(r);
-            (C || "rtl" === k) && (H = 1 - H);
+                K = t.getThumbPercent(r);
+            (C || "rtl" === k) && (K = 1 - K);
             let z = x
                 ? {}
                 : (0, a.v)(j, B, {
                       onMouseDown: (e) => {
-                          0 !== e.button || e.altKey || e.ctrlKey || e.metaKey || $();
+                          0 !== e.button || e.altKey || e.ctrlKey || e.metaKey || V();
                       },
                       onPointerDown: (e) => {
-                          0 !== e.button || e.altKey || e.ctrlKey || e.metaKey || $(e.pointerId);
+                          0 !== e.button || e.altKey || e.ctrlKey || e.metaKey || V(e.pointerId);
                       },
                       onTouchStart: (e) => {
-                          $(e.changedTouches[0].identifier);
+                          V(e.changedTouches[0].identifier);
                       },
                   });
             return (
@@ -141,7 +141,7 @@ r.d(
                     t.setThumbValue(r, e);
                 }),
                 {
-                    inputProps: (0, a.v)(U, M, {
+                    inputProps: (0, a.v)(U, I, {
                         type: "range",
                         tabIndex: x ? void 0 : 0,
                         min: t.getThumbMinValue(r),
@@ -154,10 +154,10 @@ r.d(
                         "aria-orientation": _,
                         "aria-valuetext": t.getThumbValueLabel(r),
                         "aria-required": v || void 0,
-                        "aria-invalid": g || "invalid" === y || void 0,
+                        "aria-invalid": y || "invalid" === g || void 0,
                         "aria-errormessage": e["aria-errormessage"],
-                        "aria-describedby": [A["aria-describedby"], e["aria-describedby"]].filter(Boolean).join(" "),
-                        "aria-details": [A["aria-details"], e["aria-details"]].filter(Boolean).join(" "),
+                        "aria-describedby": [P["aria-describedby"], e["aria-describedby"]].filter(Boolean).join(" "),
+                        "aria-details": [P["aria-details"], e["aria-details"]].filter(Boolean).join(" "),
                         onChange: (e) => {
                             t.setThumbValue(r, parseFloat((0, i.wt)(e).value));
                         },
@@ -166,12 +166,12 @@ r.d(
                         ...z,
                         style: {
                             position: "absolute",
-                            [C ? "top" : "left"]: `${100 * H}%`,
+                            [C ? "top" : "left"]: `${100 * K}%`,
                             transform: "translate(-50%, -50%)",
                             touchAction: "none",
                         },
                     },
-                    labelProps: I,
+                    labelProps: A,
                     isDragging: t.isThumbDragging(r),
                     isDisabled: x,
                     isFocused: L,

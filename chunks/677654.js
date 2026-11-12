@@ -1,4 +1,4 @@
-r.d(t, { C: () => y, Y: () => g });
+r.d(t, { C: () => g, Y: () => y });
 let n = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
     i = new Set([
         "ae",
@@ -79,11 +79,11 @@ function v(e) {
         r = p();
     return s.createElement(h.Provider, { value: r }, t);
 }
-function y(e) {
+function g(e) {
     let { locale: t, children: r } = e;
     return t ? s.createElement(m, { locale: t, children: r }) : s.createElement(v, { children: r });
 }
-function g() {
+function y() {
     let e = p();
     return (0, s.useContext)(h) || e;
 }

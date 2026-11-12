@@ -12,8 +12,8 @@ let d = null,
     h = new Map(),
     m = !1,
     v = !1,
-    y = { Tab: !0, Escape: !0 };
-function g(e, t) {
+    g = { Tab: !0, Escape: !0 };
+function y(e, t) {
     for (let r of p) r(e, t);
 }
 function b(e) {
@@ -25,12 +25,12 @@ function b(e) {
             "Control" === e.key ||
             "Shift" === e.key ||
             "Meta" === e.key ||
-            ((d = "keyboard"), g("keyboard", e)));
+            ((d = "keyboard"), y("keyboard", e)));
 }
 function w(e) {
     ((d = "pointer"),
         "pointerType" in e && e.pointerType,
-        ("mousedown" === e.type || "pointerdown" === e.type) && ((m = !0), g("pointer", e)));
+        ("mousedown" === e.type || "pointerdown" === e.type) && ((m = !0), y("pointer", e)));
 }
 function _(e) {
     !u.Fe.isOpening && (0, l.Y)(e) && ((m = !0), (d = "virtual"));
@@ -42,7 +42,7 @@ function S(e) {
         (0, i.wt)(e) !== r &&
         !a.lR &&
         e.isTrusted &&
-        (m || v || ((d = "virtual"), g("virtual", e)), (m = !1), (v = !1));
+        (m || v || ((d = "virtual"), y("virtual", e)), (m = !1), (v = !1));
 }
 function E() {
     a.lR || ((m = !1), (v = !0));
@@ -114,7 +114,7 @@ r.d(
     {},
     {
         Cl: function (e) {
-            ((d = e), g(e, null));
+            ((d = e), y(e, null));
         },
         K7: function (e, t, r) {
             (x(),
@@ -138,7 +138,7 @@ r.d(
                                 (h instanceof d && h.isContentEditable)) &&
                                 "keyboard" === t &&
                                 n instanceof p &&
-                                !y[n.key]) ||
+                                !g[n.key]) ||
                                 e(k()));
                     };
                     return (

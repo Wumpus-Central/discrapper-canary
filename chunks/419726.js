@@ -13,8 +13,8 @@ let f = (0, c.createContext)(null),
         [e, t] = (0, n.JT)(e, t, f);
         let { value: d = 0, minValue: p = 0, maxValue: h = 100, isIndeterminate: m = !1 } = e;
         d = (0, u.qE)(d, p, h);
-        let [v, y] = (0, n._E)(!e["aria-label"] && !e["aria-labelledby"]),
-            { progressBarProps: g, labelProps: b } = (function (e) {
+        let [v, g] = (0, n._E)(!e["aria-label"] && !e["aria-labelledby"]),
+            { progressBarProps: y, labelProps: b } = (function (e) {
                 let {
                         value: t = 0,
                         minValue: r = 0,
@@ -28,10 +28,10 @@ let f = (0, c.createContext)(null),
                 t = (0, u.qE)(t, r, n);
                 let m = n - r,
                     v = 0 === m ? 0 : (t - r) / m,
-                    y = (0, l.J)(f);
+                    g = (0, l.J)(f);
                 if (!c && !i) {
                     let e = "percent" === f.style ? v : t;
-                    i = y.format(e);
+                    i = g.format(e);
                 }
                 return {
                     progressBarProps: (0, a.v)(d, {
@@ -44,18 +44,18 @@ let f = (0, c.createContext)(null),
                     }),
                     labelProps: p,
                 };
-            })({ ...e, label: y }),
+            })({ ...e, label: g }),
             w = h - p;
         m || (r = 0 === w ? 0 : ((d - p) / w) * 100);
         let _ = (0, n.Sl)({
                 ...e,
                 defaultClassName: "react-aria-ProgressBar",
-                values: { percentage: r, valueText: g["aria-valuetext"], isIndeterminate: m },
+                values: { percentage: r, valueText: y["aria-valuetext"], isIndeterminate: m },
             }),
             S = (0, o.$)(e, { global: !0 });
         return c.createElement(
             n.tT.div,
-            { ...(0, a.v)(S, _, g), ref: t, slot: e.slot || void 0 },
+            { ...(0, a.v)(S, _, y), ref: t, slot: e.slot || void 0 },
             c.createElement(i.I.Provider, { value: { ...b, ref: v, elementType: "span" } }, _.children),
         );
     });

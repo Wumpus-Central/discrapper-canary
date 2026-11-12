@@ -1,4 +1,4 @@
-r.d(t, { t: () => K });
+r.d(t, { t: () => H });
 var n,
     i,
     o,
@@ -84,8 +84,8 @@ var u = (function () {
     h = "u" > typeof window ? window : {},
     m = new Map(),
     v = /auto|scroll/,
-    y = /^tb|vertical/,
-    g = /msie|trident/i.test(h.navigator && h.navigator.userAgent),
+    g = /^tb|vertical/,
+    y = /msie|trident/i.test(h.navigator && h.navigator.userAgent),
     b = function (e) {
         return parseFloat(e || "0");
     },
@@ -108,8 +108,8 @@ var u = (function () {
         if (f(e)) return (m.set(e, _), _);
         var t = getComputedStyle(e),
             r = c(e) && e.ownerSVGElement && e.getBBox(),
-            n = !g && "border-box" === t.boxSizing,
-            i = y.test(t.writingMode || ""),
+            n = !y && "border-box" === t.boxSizing,
+            i = g.test(t.writingMode || ""),
             o = !r && v.test(t.overflowY || ""),
             a = !r && v.test(t.overflowX || ""),
             s = r ? 0 : b(t.paddingTop),
@@ -123,18 +123,18 @@ var u = (function () {
             C = p + l,
             k = s + d,
             T = x + S,
-            P = h + E,
-            A = a ? e.offsetHeight - P - e.clientHeight : 0,
-            I = o ? e.offsetWidth - T - e.clientWidth : 0,
-            M = r ? r.width : b(t.width) - (n ? C + T : 0) - I,
-            O = r ? r.height : b(t.height) - (n ? k + P : 0) - A,
-            R = M + C + I + T,
-            L = O + k + A + P,
+            M = h + E,
+            P = a ? e.offsetHeight - M - e.clientHeight : 0,
+            A = o ? e.offsetWidth - T - e.clientWidth : 0,
+            I = r ? r.width : b(t.width) - (n ? C + T : 0) - A,
+            O = r ? r.height : b(t.height) - (n ? k + M : 0) - P,
+            R = I + C + A + T,
+            L = O + k + P + M,
             D = Object.freeze({
-                devicePixelContentBoxSize: w(Math.round(M * devicePixelRatio), Math.round(O * devicePixelRatio), i),
+                devicePixelContentBoxSize: w(Math.round(I * devicePixelRatio), Math.round(O * devicePixelRatio), i),
                 borderBoxSize: w(R, L, i),
-                contentBoxSize: w(M, O, i),
-                contentRect: new u(p, s, M, O),
+                contentBoxSize: w(I, O, i),
+                contentRect: new u(p, s, I, O),
             });
         return (m.set(e, D), D);
     },
@@ -195,7 +195,7 @@ var u = (function () {
                     }));
             }));
     },
-    P = function () {
+    M = function () {
         var e = 0;
         for (
             T(0);
@@ -211,13 +211,13 @@ var u = (function () {
             e > 0
         );
     },
-    A = [],
-    I = function (e) {
+    P = [],
+    A = function (e) {
         if (!o) {
             var t = 0,
                 r = document.createTextNode("");
             (new MutationObserver(function () {
-                return A.splice(0).forEach(function (e) {
+                return P.splice(0).forEach(function (e) {
                     return e();
                 });
             }).observe(r, { characterData: !0 }),
@@ -225,10 +225,10 @@ var u = (function () {
                     r.textContent = "" + (t ? t-- : t++);
                 }));
         }
-        (A.push(e), o());
+        (P.push(e), o());
     },
-    M = function (e) {
-        I(function () {
+    I = function (e) {
+        A(function () {
             requestAnimationFrame(e);
         });
     },
@@ -264,10 +264,10 @@ var u = (function () {
                 var t = this;
                 D ||
                     ((D = !0),
-                    M(function () {
+                    I(function () {
                         var r = !1;
                         try {
-                            r = P();
+                            r = M();
                         } finally {
                             if (((D = !1), !O)) return;
                             r ? t.run(60) : e ? t.run(e - 1) : t.start();
@@ -338,11 +338,11 @@ var u = (function () {
             (this.callback = t));
     },
     U = new Map(),
-    V = function (e, t) {
+    $ = function (e, t) {
         for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
         return -1;
     },
-    $ = (function () {
+    V = (function () {
         function e() {}
         return (
             (e.connect = function (e, t) {
@@ -352,14 +352,14 @@ var u = (function () {
             (e.observe = function (e, t, r) {
                 if (U.has(e)) {
                     var n = U.get(e);
-                    0 > V(n.observationTargets, t) &&
+                    0 > $(n.observationTargets, t) &&
                         (n.observationTargets.push(new j(t, r && r.box)), N(1), F.schedule());
                 }
             }),
             (e.unobserve = function (e, t) {
                 if (U.has(e)) {
                     var r = U.get(e),
-                        n = V(r.observationTargets, t);
+                        n = $(r.observationTargets, t);
                     n >= 0 && (r.observationTargets.splice(n, 1), N(-1));
                 }
             }),
@@ -372,7 +372,7 @@ var u = (function () {
             e
         );
     })(),
-    K = (function () {
+    H = (function () {
         function e(e) {
             if (0 == arguments.length)
                 throw TypeError("Failed to construct 'ResizeObserver': 1 argument required, but only 0 present.");
@@ -380,7 +380,7 @@ var u = (function () {
                 throw TypeError(
                     "Failed to construct 'ResizeObserver': The callback provided as parameter 1 is not a function.",
                 );
-            $.connect(this, e);
+            V.connect(this, e);
         }
         return (
             (e.prototype.observe = function (e, t) {
@@ -392,7 +392,7 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                $.observe(this, e, t);
+                V.observe(this, e, t);
             }),
             (e.prototype.unobserve = function (e) {
                 if (0 == arguments.length)
@@ -403,10 +403,10 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                $.unobserve(this, e);
+                V.unobserve(this, e);
             }),
             (e.prototype.disconnect = function () {
-                $.disconnect(this);
+                V.disconnect(this);
             }),
             (e.toString = function () {
                 return "function ResizeObserver () { [polyfill code] }";

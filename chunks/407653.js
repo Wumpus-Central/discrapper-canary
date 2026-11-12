@@ -5,10 +5,10 @@ var a = l(514042),
     i = l(490707);
 function s(e) {
     let { projectId: t, attachmentId: l, className: r } = e,
-        { src: s, gone: u, handleError: o } = (0, i._)(t, l);
-    return null == s || u
+        { src: s, gone: o, handleError: u } = (0, i._)(t, l);
+    return null == s || o
         ? (0, n.jsx)(a.FileIcon, { size: "xs", color: "currentColor", className: r })
-        : (0, n.jsx)("img", { src: s, alt: "", className: r, onError: o });
+        : (0, n.jsx)("img", { src: s, alt: "", className: r, onError: u });
 }
 l.d(
     t,

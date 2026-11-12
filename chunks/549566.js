@@ -14,24 +14,24 @@ let n = r(74509),
         if (1 === t.length && t[0].semver === o)
             if (r.includePrerelease) return !0;
             else t = u;
-        let y = new Set();
+        let g = new Set();
         for (let t of e)
             ">" === t.operator || ">=" === t.operator
                 ? (n = f(n, t, r))
                 : "<" === t.operator || "<=" === t.operator
                   ? (i = d(i, t, r))
-                  : y.add(t.semver);
-        if (y.size > 1) return null;
+                  : g.add(t.semver);
+        if (g.size > 1) return null;
         if (n && i && ((c = s(n.semver, i.semver, r)) > 0 || (0 === c && (">=" !== n.operator || "<=" !== i.operator))))
             return null;
-        for (let e of y) {
+        for (let e of g) {
             if ((n && !a(e, String(n), r)) || (i && !a(e, String(i), r))) return null;
             for (let n of t) if (!a(e, String(n), r)) return !1;
             return !0;
         }
-        let g = !!i && !r.includePrerelease && !!i.semver.prerelease.length && i.semver,
+        let y = !!i && !r.includePrerelease && !!i.semver.prerelease.length && i.semver,
             b = !!n && !r.includePrerelease && !!n.semver.prerelease.length && n.semver;
-        for (let e of (g && 1 === g.prerelease.length && "<" === i.operator && 0 === g.prerelease[0] && (g = !1), t)) {
+        for (let e of (y && 1 === y.prerelease.length && "<" === i.operator && 0 === y.prerelease[0] && (y = !1), t)) {
             if (
                 ((v = v || ">" === e.operator || ">=" === e.operator),
                 (m = m || "<" === e.operator || "<=" === e.operator),
@@ -52,13 +52,13 @@ let n = r(74509),
             }
             if (i) {
                 if (
-                    (g &&
+                    (y &&
                         e.semver.prerelease &&
                         e.semver.prerelease.length &&
-                        e.semver.major === g.major &&
-                        e.semver.minor === g.minor &&
-                        e.semver.patch === g.patch &&
-                        (g = !1),
+                        e.semver.major === y.major &&
+                        e.semver.minor === y.minor &&
+                        e.semver.patch === y.patch &&
+                        (y = !1),
                     "<" === e.operator || "<=" === e.operator)
                 ) {
                     if ((h = d(i, e, r)) === e && h !== i) return !1;
@@ -66,7 +66,7 @@ let n = r(74509),
             }
             if (!e.operator && (i || n) && 0 !== c) return !1;
         }
-        return (!n || !m || !!i || 0 === c) && (!i || !v || !!n || 0 === c) && !b && !g && !0;
+        return (!n || !m || !!i || 0 === c) && (!i || !v || !!n || 0 === c) && !b && !y && !0;
     },
     f = (e, t, r) => {
         if (!e) return t;

@@ -7,13 +7,13 @@ let l = (0, o.createContext)(null),
     u = (0, o.forwardRef)(function (e, t) {
         let { name: r, isVisible: u = !0, children: c, className: f, style: d, render: p, ...h } = e,
             [m, v] = (0, o.useState)(u ? "visible" : "hidden"),
-            y = (0, o.useContext)(l);
-        if (!y) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
+            g = (0, o.useContext)(l);
+        if (!g) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
         (u && "hidden" === m && v("visible"),
             (t = (0, s.U)(t)),
             (0, a.N)(() => {
                 let e = t.current,
-                    n = y.current,
+                    n = g.current,
                     o = n[r],
                     a = null;
                 if (e && u && o) {
@@ -62,8 +62,8 @@ let l = (0, o.createContext)(null),
                         }
                     }
                 };
-            }, [t, y, r, u]));
-        let g = (0, n.Sl)({
+            }, [t, g, r, u]));
+        let y = (0, n.Sl)({
             children: c,
             className: f,
             style: d,
@@ -74,7 +74,7 @@ let l = (0, o.createContext)(null),
             ? null
             : o.createElement(n.tT.div, {
                   ...h,
-                  ...g,
+                  ...y,
                   ref: t,
                   "data-entering": "entering" === m || void 0,
                   "data-exiting": "exiting" === m || void 0,

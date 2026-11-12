@@ -188,8 +188,8 @@ e.exports = (function () {
                     h,
                     m,
                     v,
-                    y,
                     g,
+                    y,
                     b =
                         ((u = Array(32768)),
                         o.forEach(function (t) {
@@ -205,17 +205,17 @@ e.exports = (function () {
                         (h = 0),
                         (m = 1e6),
                         (v = 0),
-                        (y = 1e6),
-                        (g = 0),
+                        (g = 1e6),
+                        (y = 0),
                         o.forEach(function (e) {
                             ((c = e[0] >> 3),
                                 (f = e[1] >> 3),
                                 (d = e[2] >> 3),
                                 c < p ? (p = c) : c > h && (h = c),
                                 f < m ? (m = f) : f > v && (v = f),
-                                d < y ? (y = d) : d > g && (g = d));
+                                d < g ? (g = d) : d > y && (y = d));
                         }),
-                        new n(p, h, m, v, y, g, b)),
+                        new n(p, h, m, v, g, y, b)),
                     S = new r(function (e, r) {
                         return t.naturalOrder(e.count(), r.count());
                     });

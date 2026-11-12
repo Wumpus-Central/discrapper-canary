@@ -21,7 +21,7 @@ r(150433);
 var h = r(452767),
     m = r(527851),
     v = r(222574),
-    y = function (e, t, r) {
+    g = function (e, t, r) {
         if (e instanceof s) {
             var i = n({}, t),
                 o = n({}, t);
@@ -35,9 +35,9 @@ var h = r(452767),
         }
         return null;
     },
-    g = function e(t, r) {
+    y = function e(t, r) {
         return (
-            y(t, r, e) || {
+            g(t, r, e) || {
                 start: function (e) {
                     (t.stopTracking(),
                         r.toValue instanceof o ? t.track(new d(t, r.toValue, h, r, e)) : t.animate(new h(r), e));
@@ -97,14 +97,14 @@ var h = r(452767),
         return o;
     },
     _ = function (e) {
-        return g(new a(0), { toValue: 0, delay: e, duration: 0 });
+        return y(new a(0), { toValue: 0, delay: e, duration: 0 });
     };
 e.exports = {
     Value: a,
     ValueXY: s,
     decay: function e(t, r) {
         return (
-            y(t, r, e) || {
+            g(t, r, e) || {
                 start: function (e) {
                     (t.stopTracking(), t.animate(new m(r), e));
                 },
@@ -114,10 +114,10 @@ e.exports = {
             }
         );
     },
-    timing: g,
+    timing: y,
     spring: function e(t, r) {
         return (
-            y(t, r, e) || {
+            g(t, r, e) || {
                 start: function (e) {
                     (t.stopTracking(),
                         r.toValue instanceof o ? t.track(new d(t, r.toValue, v, r, e)) : t.animate(new v(r), e));

@@ -1,13 +1,13 @@
-var s = i(73153);
-i.d(
+var i = n(73153);
+n.d(
     t,
     {},
     {
         C: function (e) {
-            s.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+            i.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
         },
         U: function () {
-            s.h.dispatch({ type: "APP_ICON_EDITOR_RESET" });
+            i.h.dispatch({ type: "APP_ICON_EDITOR_RESET" });
         },
     },
 );

@@ -21,10 +21,10 @@ function v(e, t) {
         return !1;
     }
 }
-function y(e) {
+function g(e) {
     return "[object Map]" === c(e);
 }
-function g(e) {
+function y(e) {
     return "[object Set]" === c(e);
 }
 function b(e) {
@@ -90,13 +90,13 @@ function x(e) {
     (t.isBigUint64Array = function (e) {
         return "BigUint64Array" === o(e);
     }),
-    (y.working = "u" > typeof Map && y(new Map())),
+    (g.working = "u" > typeof Map && g(new Map())),
     (t.isMap = function (e) {
-        return !("u" < typeof Map) && (y.working ? y(e) : e instanceof Map);
+        return !("u" < typeof Map) && (g.working ? g(e) : e instanceof Map);
     }),
-    (g.working = "u" > typeof Set && g(new Set())),
+    (y.working = "u" > typeof Set && y(new Set())),
     (t.isSet = function (e) {
-        return !("u" < typeof Set) && (g.working ? g(e) : e instanceof Set);
+        return !("u" < typeof Set) && (y.working ? y(e) : e instanceof Set);
     }),
     (b.working = "u" > typeof WeakMap && b(new WeakMap())),
     (t.isWeakMap = function (e) {
@@ -117,16 +117,16 @@ function k(e) {
 function T(e) {
     return void 0 !== C && (void 0 === k.working && (k.working = k(new C())), k.working ? k(e) : e instanceof C);
 }
-function P(e) {
+function M(e) {
     return v(e, f);
 }
-function A(e) {
+function P(e) {
     return v(e, d);
 }
-function I(e) {
+function A(e) {
     return v(e, p);
 }
-function M(e) {
+function I(e) {
     return l && v(e, h);
 }
 function O(e) {
@@ -148,13 +148,13 @@ function O(e) {
     (t.isWebAssemblyCompiledModule = function (e) {
         return "[object WebAssembly.Module]" === c(e);
     }),
-    (t.isNumberObject = P),
-    (t.isStringObject = A),
-    (t.isBooleanObject = I),
-    (t.isBigIntObject = M),
+    (t.isNumberObject = M),
+    (t.isStringObject = P),
+    (t.isBooleanObject = A),
+    (t.isBigIntObject = I),
     (t.isSymbolObject = O),
     (t.isBoxedPrimitive = function (e) {
-        return P(e) || A(e) || I(e) || M(e) || O(e);
+        return M(e) || P(e) || A(e) || I(e) || O(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
         return "u" > typeof Uint8Array && (S(e) || T(e));

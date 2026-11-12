@@ -22,7 +22,7 @@ e.exports = class e {
             if (((this.set = this.set.filter((e) => !v(e[0]))), 0 === this.set.length)) this.set = [e];
             else if (this.set.length > 1) {
                 for (let e of this.set)
-                    if (1 === e.length && y(e[0])) {
+                    if (1 === e.length && g(e[0])) {
                         this.set = [e];
                         break;
                     }
@@ -54,7 +54,7 @@ e.exports = class e {
         if (r) return r;
         let n = this.options.loose,
             o = n ? u[c.HYPHENRANGELOOSE] : u[c.HYPHENRANGE];
-        (s("hyphen replace", (e = e.replace(o, A(this.options.includePrerelease)))),
+        (s("hyphen replace", (e = e.replace(o, P(this.options.includePrerelease)))),
             s("comparator trim", (e = e.replace(u[c.COMPARATORTRIM], f))),
             s("tilde trim", (e = e.replace(u[c.TILDETRIM], d))),
             s("caret trim", (e = e.replace(u[c.CARETTRIM], p))));
@@ -63,22 +63,22 @@ e.exports = class e {
             .map((e) => b(e, this.options))
             .join(" ")
             .split(/\s+/)
-            .map((e) => P(e, this.options));
+            .map((e) => M(e, this.options));
         (n && (l = l.filter((e) => (s("loose invalid filter", e, this.options), !!e.match(u[c.COMPARATORLOOSE])))),
             s("range list", l));
-        let y = new Map();
+        let g = new Map();
         for (let e of l.map((e) => new a(e, this.options))) {
             if (v(e)) return [e];
-            y.set(e.value, e);
+            g.set(e.value, e);
         }
-        y.size > 1 && y.has("") && y.delete("");
-        let g = [...y.values()];
-        return (i.set(t, g), g);
+        g.size > 1 && g.has("") && g.delete("");
+        let y = [...g.values()];
+        return (i.set(t, y), y);
     }
     intersects(t, r) {
         if (!(t instanceof e)) throw TypeError("a Range is required");
         return this.set.some(
-            (e) => g(e, r) && t.set.some((t) => g(t, r) && e.every((e) => t.every((t) => e.intersects(t, r)))),
+            (e) => y(e, r) && t.set.some((t) => y(t, r) && e.every((e) => t.every((t) => e.intersects(t, r)))),
         );
     }
     test(e) {
@@ -89,7 +89,7 @@ e.exports = class e {
             } catch (e) {
                 return !1;
             }
-        for (let t = 0; t < this.set.length; t++) if (I(this.set[t], e, this.options)) return !0;
+        for (let t = 0; t < this.set.length; t++) if (A(this.set[t], e, this.options)) return !0;
         return !1;
     }
 };
@@ -101,8 +101,8 @@ let i = new (r(678884))(),
     { safeRe: u, t: c, comparatorTrimReplace: f, tildeTrimReplace: d, caretTrimReplace: p } = r(64672),
     { FLAG_INCLUDE_PRERELEASE: h, FLAG_LOOSE: m } = r(376780),
     v = (e) => "<0.0.0-0" === e.value,
-    y = (e) => "" === e.value,
-    g = (e, t) => {
+    g = (e) => "" === e.value,
+    y = (e, t) => {
         let r = !0,
             n = e.slice(),
             i = n.pop();
@@ -224,8 +224,8 @@ let i = new (r(678884))(),
         });
     },
     T = (e, t) => (s("replaceStars", e, t), e.trim().replace(u[c.STAR], "")),
-    P = (e, t) => (s("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? c.GTE0PRE : c.GTE0], "")),
-    A = (e) => (t, r, n, i, o, a, s, l, u, c, f, d) => (
+    M = (e, t) => (s("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? c.GTE0PRE : c.GTE0], "")),
+    P = (e) => (t, r, n, i, o, a, s, l, u, c, f, d) => (
         (r = w(n)
             ? ""
             : w(i)
@@ -248,7 +248,7 @@ let i = new (r(678884))(),
                     : `<=${l}`),
         `${r} ${l}`.trim()
     ),
-    I = (e, t, r) => {
+    A = (e, t, r) => {
         for (let r = 0; r < e.length; r++) if (!e[r].test(t)) return !1;
         if (t.prerelease.length && !r.includePrerelease) {
             for (let r = 0; r < e.length; r++)

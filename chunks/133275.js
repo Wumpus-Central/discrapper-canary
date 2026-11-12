@@ -37,18 +37,18 @@ function a(e) {
             r.pushLiteralText(v);
             continue;
         }
-        let y = v[0];
-        if (y === i.FormatJsNodeType.Pound) {
+        let g = v[0];
+        if (g === i.FormatJsNodeType.Pound) {
             if ("number" == typeof h) {
                 let e = d.formatNumber(h);
                 r.pushLiteralText(e);
             }
             continue;
         }
-        let g = v[1];
-        if (!(g in f) && "$" !== g[0]) throw new o(g, l, y);
-        let b = f[g];
-        switch (y) {
+        let y = v[1];
+        if (!(y in f) && "$" !== y[0]) throw new o(y, l, g);
+        let b = f[y];
+        switch (g) {
             case i.FormatJsNodeType.Argument:
                 "object" == typeof b || "function" == typeof b ? r.pushObject(b) : r.pushLiteralText(String(b));
                 break;
@@ -102,10 +102,10 @@ function a(e) {
                                   keyPrefix: `${m}.${e}-control`,
                               })
                             : [];
-                if ("$" === g[0]) r.pushRichTextTag(g, i, o);
+                if ("$" === y[0]) r.pushRichTextTag(y, i, o);
                 else {
                     if ("function" != typeof b)
-                        throw `expected a function type for a Tag formatting value, ${g}. got ${typeof b}: ${b}`;
+                        throw `expected a function type for a Tag formatting value, ${y}. got ${typeof b}: ${b}`;
                     let t = b(i, `${m}.${e}`);
                     for (let e of (t = Array.isArray(t) ? t : [t]))
                         "string" == typeof e ? r.pushLiteralText(e) : r.pushObject(e);
@@ -116,7 +116,7 @@ function a(e) {
                 let t = v[2],
                     n = b in t ? t[b] : t.other;
                 if (null == n)
-                    throw `${b} is not a known option for select value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
+                    throw `${b} is not a known option for select value ${y}. Valid options are ${Object.keys(t).join(", ")}`;
                 a({
                     builder: r,
                     nodes: n,
@@ -142,7 +142,7 @@ function a(e) {
                               : t.other;
                     })();
                 if (null == o)
-                    throw `${b} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
+                    throw `${b} is not a known option for plural value ${y}. Valid options are ${Object.keys(t).join(", ")}`;
                 a({
                     builder: r,
                     nodes: o,

@@ -19,8 +19,8 @@
             h,
             m,
             v,
-            y,
             g,
+            y,
             b,
             w,
             _,
@@ -30,22 +30,22 @@
             C,
             k,
             T,
+            M,
             P,
-            A,
-            M =
+            I =
                 ((i = { r: 0, g: 0, b: 0 }),
                 (f = 1),
                 (p = null),
                 (h = null),
                 (m = null),
                 (v = !1),
-                (y = !1),
+                (g = !1),
                 "string" == typeof (n = e) &&
                     (n = (function (e) {
                         e = e.replace(o, "").replace(a, "").toLowerCase();
                         var t,
                             r = !1;
-                        if (I[e]) ((e = I[e]), (r = !0));
+                        if (A[e]) ((e = A[e]), (r = !0));
                         else if ("transparent" == e) return { r: 0, g: 0, b: 0, a: 0, format: "name" };
                         return (t = B.rgb.exec(e))
                             ? { r: t[1], g: t[2], b: t[3] }
@@ -86,12 +86,12 @@
                     })(n)),
                 "object" == typeof n &&
                     (U(n.r) && U(n.g) && U(n.b)
-                        ? ((g = n.r),
+                        ? ((y = n.r),
                           (b = n.g),
                           (w = n.b),
-                          (i = { r: 255 * R(g, 255), g: 255 * R(b, 255), b: 255 * R(w, 255) }),
+                          (i = { r: 255 * R(y, 255), g: 255 * R(b, 255), b: 255 * R(w, 255) }),
                           (v = !0),
-                          (y = "%" === String(n.r).substr(-1) ? "prgb" : "rgb"))
+                          (g = "%" === String(n.r).substr(-1) ? "prgb" : "rgb"))
                         : U(n.h) && U(n.s) && U(n.v)
                           ? ((p = N(n.s)),
                             (h = N(n.v)),
@@ -105,14 +105,14 @@
                             (C = _ - x),
                             (k = E * (1 - S)),
                             (T = E * (1 - C * S)),
-                            (P = E * (1 - (1 - C) * S)),
+                            (M = E * (1 - (1 - C) * S)),
                             (i = {
-                                r: 255 * [E, T, k, k, P, E][(A = x % 6)],
-                                g: 255 * [P, E, E, T, k, k][A],
-                                b: 255 * [k, k, P, E, E, T][A],
+                                r: 255 * [E, T, k, k, M, E][(P = x % 6)],
+                                g: 255 * [M, E, E, T, k, k][P],
+                                b: 255 * [k, k, M, E, E, T][P],
                             }),
                             (v = !0),
-                            (y = "hsv"))
+                            (g = "hsv"))
                           : U(n.h) &&
                             U(n.s) &&
                             U(n.l) &&
@@ -138,29 +138,29 @@
                                 return { r: 255 * n, g: 255 * i, b: 255 * o };
                             })(n.h, p, m)),
                             (v = !0),
-                            (y = "hsl")),
+                            (g = "hsl")),
                     n.hasOwnProperty("a") && (f = n.a)),
                 (f = O(f)),
                 {
                     ok: v,
-                    format: n.format || y,
+                    format: n.format || g,
                     r: u(255, c(i.r, 0)),
                     g: u(255, c(i.g, 0)),
                     b: u(255, c(i.b, 0)),
                     a: f,
                 });
         ((this._originalInput = e),
-            (this._r = M.r),
-            (this._g = M.g),
-            (this._b = M.b),
-            (this._a = M.a),
+            (this._r = I.r),
+            (this._g = I.g),
+            (this._b = I.b),
+            (this._a = I.a),
             (this._roundA = l(100 * this._a) / 100),
-            (this._format = r.format || M.format),
+            (this._format = r.format || I.format),
             (this._gradientType = r.gradientType),
             this._r < 1 && (this._r = l(this._r)),
             this._g < 1 && (this._g = l(this._g)),
             this._b < 1 && (this._b = l(this._b)),
-            (this._ok = M.ok),
+            (this._ok = I.ok),
             (this._tc_id = s++));
     }
     function p(e, t, r) {
@@ -221,12 +221,12 @@
     function v(e, t, r, n) {
         return [F(j(n)), F(l(e).toString(16)), F(l(t).toString(16)), F(l(r).toString(16))].join("");
     }
-    function y(e, t) {
+    function g(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = d(e).toHsl();
         return ((r.s -= t / 100), (r.s = L(r.s)), d(r));
     }
-    function g(e, t) {
+    function y(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = d(e).toHsl();
         return ((r.s += t / 100), (r.s = L(r.s)), d(r));
@@ -283,7 +283,7 @@
             r = t.h;
         return [d(e), d({ h: (r + 72) % 360, s: t.s, l: t.l }), d({ h: (r + 216) % 360, s: t.s, l: t.l })];
     }
-    function P(e, t, r) {
+    function M(e, t, r) {
         ((t = t || 6), (r = r || 30));
         var n = d(e).toHsl(),
             i = 360 / r,
@@ -291,7 +291,7 @@
         for (n.h = (n.h - ((i * t) >> 1) + 720) % 360; --t;) ((n.h = (n.h + i) % 360), o.push(d(n)));
         return o;
     }
-    function A(e, t) {
+    function P(e, t) {
         t = t || 6;
         for (var r = d(e).toHsv(), n = r.h, i = r.s, o = r.v, a = [], s = 1 / t; t--;)
             (a.push(d({ h: n, s: i, v: o })), (o = (o + s) % 1));
@@ -428,7 +428,7 @@
                       ")";
         },
         toName: function () {
-            return 0 === this._a ? "transparent" : !(this._a < 1) && (M[m(this._r, this._g, this._b, !0)] || !1);
+            return 0 === this._a ? "transparent" : !(this._a < 1) && (I[m(this._r, this._g, this._b, !0)] || !1);
         },
         toFilter: function (e) {
             var t = "#" + v(this._r, this._g, this._b, this._a),
@@ -479,10 +479,10 @@
             return this._applyModification(S, arguments);
         },
         desaturate: function () {
-            return this._applyModification(y, arguments);
+            return this._applyModification(g, arguments);
         },
         saturate: function () {
-            return this._applyModification(g, arguments);
+            return this._applyModification(y, arguments);
         },
         greyscale: function () {
             return this._applyModification(b, arguments);
@@ -494,13 +494,13 @@
             return e.apply(null, [this].concat([].slice.call(t)));
         },
         analogous: function () {
-            return this._applyCombination(P, arguments);
+            return this._applyCombination(M, arguments);
         },
         complement: function () {
             return this._applyCombination(x, arguments);
         },
         monochromatic: function () {
-            return this._applyCombination(A, arguments);
+            return this._applyCombination(P, arguments);
         },
         splitcomplement: function () {
             return this._applyCombination(T, arguments);
@@ -585,7 +585,7 @@
                 ? s
                 : ((r.includeFallbackColors = !1), d.mostReadable(e, ["#fff", "#000"], r));
         }));
-    var I = (d.names = {
+    var A = (d.names = {
             aliceblue: "f0f8ff",
             antiquewhite: "faebd7",
             aqua: "0ff",
@@ -736,11 +736,11 @@
             yellow: "ff0",
             yellowgreen: "9acd32",
         }),
-        M = (d.hexNames = (function (e) {
+        I = (d.hexNames = (function (e) {
             var t = {};
             for (var r in e) e.hasOwnProperty(r) && (t[e[r]] = r);
             return t;
-        })(I));
+        })(A));
     function O(e) {
         return ((isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e);
     }

@@ -40,22 +40,22 @@ r.d(
                 ),
                 m = (0, o.useMemo)(() => h(s(e.value)), [e.value, h]),
                 v = (0, o.useMemo)(() => h(s(e.defaultValue) ?? [r]), [e.defaultValue, r, h]),
-                y = l(e.value, e.defaultValue, e.onChange),
-                g = l(e.value, e.defaultValue, e.onChangeEnd),
-                [b, w] = (0, i.P)(m, v, y),
+                g = l(e.value, e.defaultValue, e.onChange),
+                y = l(e.value, e.defaultValue, e.onChangeEnd),
+                [b, w] = (0, i.P)(m, v, g),
                 [_] = (0, o.useState)(b),
                 [S, E] = (0, o.useState)(Array(b.length).fill(!1)),
                 x = (0, o.useRef)(Array(b.length).fill(!0)),
                 [C, k] = (0, o.useState)(void 0),
                 T = (0, o.useRef)(b),
-                P = (0, o.useRef)(S);
-            function A(e) {
+                M = (0, o.useRef)(S);
+            function P(e) {
                 return (e - r) / (u - r);
             }
-            function I(e) {
+            function A(e) {
                 return 0 === e ? r : b[e - 1];
             }
-            function M(e) {
+            function I(e) {
                 return e === b.length - 1 ? u : b[e + 1];
             }
             function O(e) {
@@ -63,8 +63,8 @@ r.d(
             }
             function R(e, r) {
                 if (t || !O(e)) return;
-                let i = I(e),
-                    o = M(e);
+                let i = A(e),
+                    o = I(e);
                 r = (0, n.BU)(r, i, o, f);
                 let s = a(T.current, e, r);
                 ((T.current = s), w(s));
@@ -107,21 +107,21 @@ r.d(
                     var n;
                     if (t || !O(e)) return;
                     r && (T.current = b);
-                    let i = P.current[e];
-                    ((P.current = a(P.current, e, r)),
-                        (n = P.current),
-                        (P.current = n),
+                    let i = M.current[e];
+                    ((M.current = a(M.current, e, r)),
+                        (n = M.current),
+                        (M.current = n),
                         E(n),
-                        g && i && !P.current.some(Boolean) && g(T.current));
+                        y && i && !M.current.some(Boolean) && y(T.current));
                 },
                 focusedThumb: C,
                 setFocusedThumb: k,
-                getThumbPercent: (e) => A(b[e]),
-                getValuePercent: A,
+                getThumbPercent: (e) => P(b[e]),
+                getValuePercent: P,
                 getThumbValueLabel: (e) => D(b[e]),
                 getFormattedValue: D,
-                getThumbMinValue: I,
-                getThumbMaxValue: M,
+                getThumbMinValue: A,
+                getThumbMaxValue: I,
                 getPercentValue: F,
                 isThumbEditable: O,
                 setThumbEditable: function (e, t) {

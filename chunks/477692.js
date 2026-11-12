@@ -19,8 +19,8 @@ r.d(
                     preventFocusOnPress: h,
                     allowFocusWhenDisabled: m,
                     onClick: v,
-                    href: y,
-                    target: g,
+                    href: g,
+                    target: y,
                     rel: b,
                     type: w = "button",
                 } = e;
@@ -40,8 +40,8 @@ r.d(
                       }
                     : {
                           role: "button",
-                          href: "a" !== s || l ? void 0 : y,
-                          target: "a" === s ? g : void 0,
+                          href: "a" !== s || l ? void 0 : g,
+                          target: "a" === s ? y : void 0,
                           type: "input" === s ? w : void 0,
                           disabled: "input" === s ? l : void 0,
                           "aria-disabled": l && "input" !== s ? l : void 0,

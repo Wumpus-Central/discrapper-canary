@@ -69,7 +69,7 @@ var n =
     v = function (e, t) {
         for (var r = 0; r < e.length; r++) if (e[r].checked && e[r].form === t) return e[r];
     },
-    y = function (e) {
+    g = function (e) {
         if (!e.name) return !0;
         var t,
             r = e.form || a(e),
@@ -93,8 +93,8 @@ var n =
         var i = v(t, e.form);
         return !i || i === e;
     },
-    g = function (e) {
-        return m(e) && "radio" === e.type && !y(e);
+    y = function (e) {
+        return m(e) && "radio" === e.type && !g(e);
     },
     b = function (e) {
         var t,
@@ -179,7 +179,7 @@ var n =
         );
     },
     x = function (e, t) {
-        return !(g(t) || 0 > d(t)) && !!E(e, t);
+        return !(y(t) || 0 > d(t)) && !!E(e, t);
     },
     C = function (e) {
         var t = parseInt(e.getAttribute("tabindex"), 10);

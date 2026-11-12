@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { Manager: () => a, Popper: () => _, Reference: () => x, usePopper: () => y }));
+(r.r(t), r.d(t, { Manager: () => a, Popper: () => _, Reference: () => x, usePopper: () => g }));
 var n = r(582128),
     i = n.createContext(),
     o = n.createContext();
@@ -44,7 +44,7 @@ var s = function (e) {
     h = r(412700),
     m = r.n(h),
     v = [],
-    y = function (e, t, r) {
+    g = function (e, t, r) {
         void 0 === r && (r = {});
         var i = n.useRef(null),
             o = {
@@ -97,11 +97,11 @@ var s = function (e) {
                 },
                 [o.onFirstUpdate, o.placement, o.strategy, o.modifiers, u],
             ),
-            y = n.useRef();
+            g = n.useRef();
         return (
             f(
                 function () {
-                    y.current && y.current.setOptions(h);
+                    g.current && g.current.setOptions(h);
                 },
                 [h],
             ),
@@ -110,9 +110,9 @@ var s = function (e) {
                     if (null != e && null != t) {
                         var n = (r.createPopper || p.n)(e, t, h);
                         return (
-                            (y.current = n),
+                            (g.current = n),
                             function () {
-                                (n.destroy(), (y.current = null));
+                                (n.destroy(), (g.current = null));
                             }
                         );
                     }
@@ -120,15 +120,15 @@ var s = function (e) {
                 [e, t, r.createPopper],
             ),
             {
-                state: y.current ? y.current.state : null,
+                state: g.current ? g.current.state : null,
                 styles: s.styles,
                 attributes: s.attributes,
-                update: y.current ? y.current.update : null,
-                forceUpdate: y.current ? y.current.forceUpdate : null,
+                update: g.current ? g.current.update : null,
+                forceUpdate: g.current ? g.current.forceUpdate : null,
             }
         );
     },
-    g = function () {},
+    y = function () {},
     b = function () {
         return Promise.resolve(null);
     },
@@ -157,7 +157,7 @@ function _(e) {
         },
         [p, _],
     );
-    var k = y(
+    var k = g(
             f || m,
             _,
             n.useMemo(
@@ -173,25 +173,25 @@ function _(e) {
             ),
         ),
         T = k.state,
-        P = k.styles,
-        A = k.forceUpdate,
-        I = k.update,
-        M = n.useMemo(
+        M = k.styles,
+        P = k.forceUpdate,
+        A = k.update,
+        I = n.useMemo(
             function () {
                 return {
                     ref: S,
-                    style: P.popper,
+                    style: M.popper,
                     placement: T ? T.placement : r,
                     hasPopperEscaped: T && T.modifiersData.hide ? T.modifiersData.hide.hasPopperEscaped : null,
                     isReferenceHidden: T && T.modifiersData.hide ? T.modifiersData.hide.isReferenceHidden : null,
-                    arrowProps: { style: P.arrow, ref: C },
-                    forceUpdate: A || g,
-                    update: I || b,
+                    arrowProps: { style: M.arrow, ref: C },
+                    forceUpdate: P || y,
+                    update: A || b,
                 };
             },
-            [S, C, r, T, P, I, A],
+            [S, C, r, T, M, A, P],
         );
-    return s(h)(M);
+    return s(h)(I);
 }
 var S = r(916822),
     E = r.n(S);

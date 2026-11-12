@@ -42,7 +42,7 @@ var v = function (e) {
             t
         );
     },
-    y = function (e) {
+    g = function (e) {
         var t = !1;
         return (
             n(m, function (r, n) {
@@ -58,7 +58,7 @@ e.exports = function (e) {
     if (!e || "object" != typeof e) return !1;
     if (!c) {
         var t = p(u(e), 8, -1);
-        return h(d, t) > -1 ? t : "Object" === t && y(e);
+        return h(d, t) > -1 ? t : "Object" === t && g(e);
     }
     return s ? v(e) : null;
 };

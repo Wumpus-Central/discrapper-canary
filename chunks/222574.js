@@ -123,16 +123,16 @@ e.exports = (function (e) {
                         this._onUpdate(e),
                         this.__active)
                     ) {
-                        var y = !1;
+                        var g = !1;
                         this._overshootClamping &&
                             0 !== this._tension &&
-                            (y = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
-                        var g = Math.abs(t) <= this._restSpeedThreshold,
+                            (g = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
+                        var y = Math.abs(t) <= this._restSpeedThreshold,
                             b = !0;
                         if (
                             (0 !== this._tension &&
                                 (b = Math.abs(this._toValue - e) <= this._restDisplacementThreshold),
-                            y || (g && b))
+                            g || (y && b))
                         ) {
                             (0 !== this._tension && this._onUpdate(this._toValue),
                                 this.__debouncedOnEnd({ finished: !0 }));

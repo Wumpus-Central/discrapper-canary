@@ -76,7 +76,7 @@ var i = r(675106),
             t
         );
     })(m),
-    y = (function (e) {
+    g = (function (e) {
         function t(t, r) {
             var n;
             return (
@@ -113,7 +113,7 @@ var i = r(675106),
             t
         );
     })(v),
-    g = { current: null },
+    y = { current: null },
     b = (function (e) {
         function t(t) {
             var r;
@@ -153,7 +153,7 @@ var i = r(675106),
             }),
             (r._addToPayload = function (e) {
                 var t = this;
-                i.getFluidConfig(e) && g.current && g.current.dependencies.add(e);
+                i.getFluidConfig(e) && y.current && y.current.dependencies.add(e);
                 var r = h(e);
                 r &&
                     i.each(r, function (e) {
@@ -196,7 +196,7 @@ var i = r(675106),
                     void 0 === t && (t = e),
                     e
                         ? e.map(function (e, r) {
-                              return (i.isAnimatedString(e) ? y : v).create(e, t[r]);
+                              return (i.isAnimatedString(e) ? g : v).create(e, t[r]);
                           })
                         : []
                 );
@@ -214,11 +214,11 @@ var i = r(675106),
         return (
             (r.setValue = function (t, r) {
                 if (t) {
-                    if (r && ((g.current = r), t.style)) {
+                    if (r && ((y.current = r), t.style)) {
                         var n = r.host.createAnimatedStyle;
                         t = s(s({}, t), {}, { style: n(t.style) });
                     }
-                    (e.prototype.setValue.call(this, t), (g.current = null));
+                    (e.prototype.setValue.call(this, t), (y.current = null));
                 }
             }),
             (r.onParentChange = function (e) {
@@ -280,7 +280,7 @@ var i = r(675106),
     (t.AnimatedArray = w),
     (t.AnimatedObject = b),
     (t.AnimatedProps = _),
-    (t.AnimatedString = y),
+    (t.AnimatedString = g),
     (t.AnimatedValue = v),
     (t.createHost = function (e, t) {
         var r = void 0 === t ? {} : t,

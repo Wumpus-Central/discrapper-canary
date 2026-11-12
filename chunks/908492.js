@@ -4,11 +4,11 @@ var a = l(435558),
     r = l.n(a),
     i = l(46054),
     s = l(932111),
-    u = l(259691);
-let o = r().once(() =>
+    o = l(259691);
+let u = r().once(() =>
     i.A.reactParserFor({
         ...i.A.defaultRules,
-        conjureFile: (0, s.hL)((e, t) => (0, n.jsx)(u.A, { attachmentId: e }, t)),
+        conjureFile: (0, s.hL)((e, t) => (0, n.jsx)(o.A, { attachmentId: e }, t)),
     }),
 );
 l.d(
@@ -17,7 +17,7 @@ l.d(
     {
         U: function () {
             for (var e = arguments.length, t = Array(e), l = 0; l < e; l++) t[l] = arguments[l];
-            return o()(...t);
+            return u()(...t);
         },
     },
 );

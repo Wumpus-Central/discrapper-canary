@@ -1,4 +1,4 @@
-r.d(t, { G: () => M });
+r.d(t, { G: () => I });
 var n = r(826171);
 class i {
     constructor(e) {
@@ -580,7 +580,7 @@ function v(e, t = n.rO.STRING) {
             return 0;
     }
 }
-class y {
+class g {
     constructor(e) {
         this.info = e;
     }
@@ -712,7 +712,7 @@ class y {
         }
     }
 }
-class g {
+class y {
     constructor(e) {
         this.info = e;
     }
@@ -870,8 +870,8 @@ function k(e, t, r) {
     return !0;
 }
 var T = r(679314);
-let P = { writeUnknownFields: !0, writerFactory: () => new A() };
-class A {
+let M = { writeUnknownFields: !0, writerFactory: () => new P() };
+class P {
     constructor(e) {
         ((this.stack = []),
             (this.textEncoder = null != e ? e : new TextEncoder()),
@@ -971,8 +971,8 @@ class A {
         return ((0, T.cV)(t.lo, t.hi, this.buf), this);
     }
 }
-var I = r(638504);
-class M {
+var A = r(638504);
+class I {
     constructor(e, t, r) {
         ((this.defaultCheckDepth = 16),
             (this.typeName = e),
@@ -981,8 +981,8 @@ class M {
             (this.refTypeCheck = new i(this)),
             (this.refJsonReader = new p(this)),
             (this.refJsonWriter = new h(this)),
-            (this.refBinReader = new y(this)),
-            (this.refBinWriter = new g(this)));
+            (this.refBinReader = new g(this)),
+            (this.refBinWriter = new y(this)));
     }
     create(e) {
         let t = (function (e) {
@@ -1052,7 +1052,7 @@ class M {
         (0, w.x)(this, e, t);
     }
     fromBinary(e, t) {
-        let r = (0, I.e)(t);
+        let r = (0, A.e)(t);
         return this.internalBinaryRead(r.readerFactory(e), e.byteLength, r);
     }
     fromJson(e, t) {
@@ -1070,7 +1070,7 @@ class M {
         return JSON.stringify(this.toJson(e, t), null, null != (r = null == t ? void 0 : t.prettySpaces) ? r : 0);
     }
     toBinary(e, t) {
-        let r = t ? Object.assign(Object.assign({}, P), t) : P;
+        let r = t ? Object.assign(Object.assign({}, M), t) : M;
         return this.internalBinaryWrite(e, r.writerFactory(), r).finish();
     }
     internalJsonRead(e, t, r) {

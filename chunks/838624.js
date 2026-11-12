@@ -20,8 +20,8 @@ r.d(
                 "aria-details": e["aria-details"],
             });
             let { direction: m } = (0, l.Y)(),
-                { addGlobalListener: v, removeGlobalListener: y } = (0, a.A)(),
-                g = (0, f.useRef)(null),
+                { addGlobalListener: v, removeGlobalListener: g } = (0, a.A)(),
+                y = (0, f.useRef)(null),
                 b = "rtl" === m,
                 w = (0, f.useRef)(null),
                 { moveProps: _ } = (0, u.f)({
@@ -33,15 +33,15 @@ r.d(
                         if (!r.current) return;
                         let { height: o, width: a } = r.current.getBoundingClientRect(),
                             s = h ? o : a;
-                        null == w.current && null != g.current && (w.current = t.getThumbPercent(g.current) * s);
+                        null == w.current && null != y.current && (w.current = t.getThumbPercent(y.current) * s);
                         let l = h ? i : n;
-                        if (((h || b) && (l = -l), (w.current += l), null != g.current && r.current)) {
+                        if (((h || b) && (l = -l), (w.current += l), null != y.current && r.current)) {
                             let e = (0, c.qE)(w.current / s, 0, 1);
-                            t.setThumbPercent(g.current, e);
+                            t.setThumbPercent(y.current, e);
                         }
                     },
                     onMoveEnd() {
-                        null != g.current && (t.setThumbDragging(g.current, !1), (g.current = null));
+                        null != y.current && (t.setThumbDragging(y.current, !1), (y.current = null));
                     },
                 }),
                 S = (0, f.useRef)(void 0),
@@ -62,23 +62,23 @@ r.d(
                                     ? p - 1
                                     : p) >= 0 && t.isThumbEditable(e)
                             ? (n.preventDefault(),
-                              (g.current = e),
+                              (y.current = e),
                               t.setFocusedThumb(e),
                               (S.current = i),
-                              t.setThumbDragging(g.current, !0),
+                              t.setThumbDragging(y.current, !0),
                               t.setThumbValue(e, d),
                               v(window, "mouseup", x, !1),
                               v(window, "touchend", x, !1),
                               v(window, "pointerup", x, !1))
-                            : (g.current = null);
+                            : (y.current = null);
                     }
                 },
                 x = (e) => {
                     (e.pointerId ?? e.changedTouches?.[0].identifier) === S.current &&
-                        (null != g.current && (t.setThumbDragging(g.current, !1), (g.current = null)),
-                        y(window, "mouseup", x, !1),
-                        y(window, "touchend", x, !1),
-                        y(window, "pointerup", x, !1));
+                        (null != y.current && (t.setThumbDragging(y.current, !1), (y.current = null)),
+                        g(window, "mouseup", x, !1),
+                        g(window, "touchend", x, !1),
+                        g(window, "pointerup", x, !1));
                 };
             return (
                 "htmlFor" in d &&

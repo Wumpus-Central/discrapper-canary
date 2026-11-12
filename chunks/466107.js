@@ -58,12 +58,12 @@ var n = r(589841),
                     h,
                     m,
                     v = c[p],
-                    y = v.indexOf("]="),
-                    g = -1 === y ? v.indexOf("=") : y + 1;
-                (-1 === g
+                    g = v.indexOf("]="),
+                    y = -1 === g ? v.indexOf("=") : g + 1;
+                (-1 === y
                     ? ((h = t.decoder(v, a.decoder, d, "key")), (m = t.strictNullHandling ? null : ""))
-                    : ((h = t.decoder(v.slice(0, g), a.decoder, d, "key")),
-                      (m = n.maybeMap(s(v.slice(g + 1), t, o(r[h]) ? r[h].length : 0), function (e) {
+                    : ((h = t.decoder(v.slice(0, y), a.decoder, d, "key")),
+                      (m = n.maybeMap(s(v.slice(y + 1), t, o(r[h]) ? r[h].length : 0), function (e) {
                           return t.decoder(e, a.decoder, d, "value");
                       }))),
                     m &&

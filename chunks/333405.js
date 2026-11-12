@@ -33,8 +33,8 @@ let v = (t = e.exports);
         if (n.XMLHttpRequest) return new n.XMLHttpRequest();
         throw Error("Browser-only version of superagent could not find XHR");
     }));
-let y = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
-function g(e) {
+let g = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
+function y(e) {
     if (!c(e)) return e;
     let t = [];
     for (let r in e)
@@ -158,7 +158,7 @@ function _(e) {
                 a = {};
             for (let e = 0, s = o.length; e < s; ++e)
                 -1 !== (t = (r = o[e]).indexOf(":")) &&
-                    ((n = r.slice(0, t).toLowerCase()), (i = y(r.slice(t + 1))), (a[n] = i));
+                    ((n = r.slice(0, t).toLowerCase()), (i = g(r.slice(t + 1))), (a[n] = i));
             return a;
         })(this.xhr.getAllResponseHeaders())),
         (this.header = this.headers),
@@ -205,7 +205,7 @@ function S(e, t) {
                 : r.callback(null, n);
         }));
 }
-((v.serializeObject = g),
+((v.serializeObject = y),
     (v.parseString = b),
     (v.types = {
         html: "text/html",
@@ -254,7 +254,7 @@ function S(e, t) {
         return this._auth(e, t, r, n);
     }),
     (S.prototype.query = function (e) {
-        return ("string" != typeof e && (e = g(e)), e && this._query.push(e), this);
+        return ("string" != typeof e && (e = y(e)), e && this._query.push(e), this);
     }),
     (S.prototype.attach = function (e, t, r) {
         if (t) {

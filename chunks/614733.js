@@ -3,8 +3,8 @@ var n = l(477900),
     r = l(855986),
     i = l(97808),
     s = l(778712),
-    u = l(290863),
-    o = l(351906),
+    o = l(290863),
+    u = l(351906),
     d = l(562153),
     c = l(644968);
 let f = { keys: ["label", "description"] };
@@ -13,10 +13,10 @@ l.d(
     {},
     {
         A: function (e, t) {
-            let l = (0, r.bG)([o.A], () => o.A.hidePersonalInformation),
+            let l = (0, r.bG)([u.A], () => u.A.hidePersonalInformation),
                 m = (0, c.B5)(e),
-                g = (0, r.cf)([u.A], () => Object.fromEntries(m.map((e) => [e.id, u.A.getStatus(e.id)])), [m]),
-                p = a.useMemo(
+                p = (0, r.cf)([o.A], () => Object.fromEntries(m.map((e) => [e.id, o.A.getStatus(e.id)])), [m]),
+                g = a.useMemo(
                     () =>
                         m.map((t) => ({
                             id: t.id,
@@ -26,16 +26,16 @@ l.d(
                                 size: s._3.SIZE_24,
                                 src: t.getAvatarURL(e, 24),
                                 "aria-hidden": !0,
-                                status: g[t.id],
+                                status: p[t.id],
                             }),
                             description: (0, c.hY)(t, l),
                         })),
-                    [e, l, g, m],
+                    [e, l, p, m],
                 ),
-                h = (0, c.S6)(e, t);
+                v = (0, c.S6)(e, t);
             return {
-                options: p,
-                onQueryChange: a.useCallback((e) => h(e.currentTarget.value), [h]),
+                options: g,
+                onQueryChange: a.useCallback((e) => v(e.currentTarget.value), [v]),
                 matchSorterOptions: f,
             };
         },

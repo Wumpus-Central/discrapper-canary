@@ -22,8 +22,8 @@ function a(e, t) {
         h = e === d ? 0 : u.top,
         m = e === d ? e.clientHeight : u.bottom,
         v = e === d ? 0 : u.left,
-        y = e === d ? e.clientWidth : u.right,
-        g = parseFloat(c.scrollMarginTop) || 0,
+        g = e === d ? e.clientWidth : u.right,
+        y = parseFloat(c.scrollMarginTop) || 0,
         b = parseFloat(c.scrollMarginBottom) || 0,
         w = parseFloat(c.scrollMarginLeft) || 0,
         _ = parseFloat(c.scrollMarginRight) || 0,
@@ -33,37 +33,37 @@ function a(e, t) {
         C = parseFloat(f.scrollPaddingRight) || 0,
         k = parseFloat(f.borderTopWidth) || 0,
         T = parseFloat(f.borderBottomWidth) || 0,
-        P = parseFloat(f.borderLeftWidth) || 0,
-        A = parseFloat(f.borderRightWidth) || 0,
-        I = l.top - g,
-        M = l.bottom + b,
+        M = parseFloat(f.borderLeftWidth) || 0,
+        P = parseFloat(f.borderRightWidth) || 0,
+        A = l.top - y,
+        I = l.bottom + b,
         O = l.left - w,
         R = l.right + _,
-        L = e === d ? 0 : P + A,
+        L = e === d ? 0 : M + P,
         D = e === d ? 0 : k + T,
         F = e === d ? 0 : e.offsetWidth - e.clientWidth - L,
         N = e === d ? 0 : e.offsetHeight - e.clientHeight - D,
         j = h + (p ? 0 : k) + S,
         B = m - (p ? 0 : T) - E - N,
-        U = v + (p ? 0 : P) + x,
-        V = y - (p ? 0 : A) - C;
-    ((0, o.un)() && (0, o.Tc)()) || "ltr" === f.direction ? (V -= F) : "rtl" === f.direction && (U += F);
-    let $ = I < j || M > B,
-        K = O < U || R > V;
-    if ($ && "start" === n) a += I - j;
-    else if ($ && "center" === n) a += (I + M) / 2 - (j + B) / 2;
-    else if ($ && "end" === n) a += M - B;
-    else if ($ && "nearest" === n) {
-        let e = I - j,
-            t = M - B;
+        U = v + (p ? 0 : M) + x,
+        $ = g - (p ? 0 : P) - C;
+    ((0, o.un)() && (0, o.Tc)()) || "ltr" === f.direction ? ($ -= F) : "rtl" === f.direction && (U += F);
+    let V = A < j || I > B,
+        H = O < U || R > $;
+    if (V && "start" === n) a += A - j;
+    else if (V && "center" === n) a += (A + I) / 2 - (j + B) / 2;
+    else if (V && "end" === n) a += I - B;
+    else if (V && "nearest" === n) {
+        let e = A - j,
+            t = I - B;
         a += Math.abs(e) <= Math.abs(t) ? e : t;
     }
-    if (K && "start" === i) s += O - U;
-    else if (K && "center" === i) s += (O + R) / 2 - (U + V) / 2;
-    else if (K && "end" === i) s += R - V;
-    else if (K && "nearest" === i) {
+    if (H && "start" === i) s += O - U;
+    else if (H && "center" === i) s += (O + R) / 2 - (U + $) / 2;
+    else if (H && "end" === i) s += R - $;
+    else if (H && "nearest" === i) {
         let e = O - U,
-            t = R - V;
+            t = R - $;
         s += Math.abs(e) <= Math.abs(t) ? e : t;
     }
     e.scrollTo({ left: s, top: a });

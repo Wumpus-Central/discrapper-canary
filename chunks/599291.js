@@ -37,7 +37,7 @@ r.d(
                 }).current;
             (0, a.useEffect)(c, []);
             let { addGlobalListener: h, removeAllGlobalListeners: m } = (0, o.A)(),
-                { hoverProps: v, triggerHoverEnd: y } = (0, a.useMemo)(() => {
+                { hoverProps: v, triggerHoverEnd: g } = (0, a.useMemo)(() => {
                     let e = (e, t) => {
                             let n = p.target;
                             ((p.pointerType = ""),
@@ -92,7 +92,7 @@ r.d(
                 }, [t, r, l, u, p, h, m]);
             return (
                 (0, a.useEffect)(() => {
-                    u && y({ currentTarget: p.target }, p.pointerType);
+                    u && g({ currentTarget: p.target }, p.pointerType);
                 }, [u]),
                 { hoverProps: v, isHovered: f }
             );
