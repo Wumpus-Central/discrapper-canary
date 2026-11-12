@@ -134,8 +134,11 @@ let S = new g(r.h, {
         null != t.subscription_plan && p(t.subscription_plan);
     },
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
-        let { entitlements: t } = e;
-        for (let e of t) null != e.subscription_plan && p(e.subscription_plan);
+        let { entitlements: t } = e,
+            n = !1;
+        for (let e of t)
+            null != e.subscription_plan && null == c[e.subscription_plan.id] && (p(e.subscription_plan), (n = !0));
+        return n;
     },
     LOGOUT: m,
 });
