@@ -26,5 +26,15 @@ n.d(
                     return null;
             }
         },
+        t$: function (e) {
+            switch (e) {
+                case r.MM.PREMIUM_GIFT_MONTH_TIER_2:
+                    return r.gD.PREMIUM_MONTH_TIER_2;
+                case r.MM.PREMIUM_GIFT_YEAR_TIER_2:
+                    return r.gD.PREMIUM_YEAR_TIER_2;
+                default:
+                    return null;
+            }
+        },
     },
 );
