@@ -19,8 +19,8 @@ var r = n(477900),
     y = n(34188),
     k = n(577473),
     w = n(403581),
-    A = n(27232),
-    E = n(812993),
+    E = n(27232),
+    A = n(812993),
     I = n(866665),
     M = n(939249),
     R = n(834730),
@@ -211,7 +211,7 @@ let Y = new Map(),
                         : t.routePath === G.BVt.APPLICATION_STORE &&
                           (ew = (0, r.jsx)(w.NitroWheelIcon, { size: "sm", color: "currentColor", className: $.PA }));
             else if ((0, D.ai)(t.guildId))
-                ew = (0, r.jsx)(A.StarIcon, { size: "sm", color: "currentColor", className: $.PA });
+                ew = (0, r.jsx)(E.StarIcon, { size: "sm", color: "currentColor", className: $.PA });
             else if (null != Q && Q.isThread()) {
                 let e = (0, j.gU)(Q);
                 null != e && (ew = (0, r.jsx)(e, { size: "sm", color: "currentColor", className: $.PA }));
@@ -223,13 +223,13 @@ let Y = new Map(),
                     (ew = (0, r.jsx)("img", { className: $.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
             }
         }
-        let eA = "channel" !== t.kind || null == J || null == Q || Q.isThread() ? null : (0, j.gU)(Q),
-            eE = null;
+        let eE = "channel" !== t.kind || null == J || null == Q || Q.isThread() ? null : (0, j.gU)(Q),
+            eA = null;
         eb > 0 &&
-            (eE = (0, r.jsx)("div", {
+            (eA = (0, r.jsx)("div", {
                 className: $.WK,
                 "aria-hidden": !0,
-                children: (0, r.jsx)(E.hV, {
+                children: (0, r.jsx)(A.hV, {
                     count: eb,
                     color: ex ? b.A.colors.BACKGROUND_MOD_STRONG.css : b.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                 }),
@@ -258,9 +258,9 @@ let Y = new Map(),
                         "aria-current": s ? "page" : void 0,
                         children: [
                             (t.pinned || null != ew) &&
-                                (0, r.jsxs)("span", { className: $.P0, children: [t.pinned && ey, ew, eE] }),
-                            null != eA &&
-                                (0, r.jsx)(eA, {
+                                (0, r.jsxs)("span", { className: $.P0, children: [t.pinned && ey, ew, eA] }),
+                            null != eE &&
+                                (0, r.jsx)(eE, {
                                     size: "xs",
                                     color: "currentColor",
                                     className: p()($.j1, { [$.Av]: o }),
@@ -342,8 +342,8 @@ function et() {
         y,
         k,
         w,
-        A,
         E,
+        A,
         I,
         M,
         R,
@@ -393,8 +393,8 @@ function et() {
         (y = l.useRef(0)),
         (k = l.useRef(0)),
         (w = l.useRef(0)),
-        (A = l.useRef(0)),
         (E = l.useRef(0)),
+        (A = l.useRef(0)),
         (I = l.useRef(0)),
         (M = l.useCallback((e, n) => {
             null != n ? t.current.set(e, n) : t.current.delete(e);
@@ -417,9 +417,9 @@ function et() {
             let r = new Map();
             if (
                 (e.forEach((e, t) => {
-                    r.set(t, e.getBoundingClientRect().left);
+                    $.some((e) => e.id === t) && r.set(t, e.getBoundingClientRect().left);
                 }),
-                n.size === r.size && Array.from(r.keys()).every((e) => n.has(e)) && !Z())
+                n.size === $.length && $.every((e) => n.has(e.id)) && !Z())
             ) {
                 let t = [];
                 if (
@@ -582,8 +582,8 @@ function et() {
             let S = Number.isFinite(v) ? v : P,
                 T = Number.isFinite(N) ? N : P + y.current;
             ((w.current = Math.min(S, P)),
-                (A.current = Math.max(T - y.current, P)),
-                (E.current = i.findIndex((e) => e.id === r)),
+                (E.current = Math.max(T - y.current, P)),
+                (A.current = i.findIndex((e) => e.id === r)),
                 (I.current = P),
                 (g.current = r),
                 (a.style.zIndex = "1"),
@@ -598,7 +598,7 @@ function et() {
                 if (g.current !== e) return;
                 let r = t.current.get(e);
                 if (null == r) return;
-                let l = Math.min(Math.max(b.current + n - p.current, w.current), A.current);
+                let l = Math.min(Math.max(b.current + n - p.current, w.current), E.current);
                 r.style.left = `${l}px`;
                 let i = x.current,
                     s = y.current,
@@ -616,7 +616,7 @@ function et() {
                     (t === o && ((f = d), (d += s + c)), (e.node.style.left = `${d}px`), (d += e.size + c));
                 }),
                     o >= i.length && (f = d),
-                    (E.current = o),
+                    (A.current = o),
                     (I.current = f));
             }, []),
             handleDragEnd: l.useCallback(() => {
@@ -624,7 +624,7 @@ function et() {
                 if (null == e) return;
                 let r = t.current.get(e),
                     l = I.current;
-                (0, F.Aq)(e, E.current);
+                (0, F.Aq)(e, A.current);
                 let i = !1;
                 function s() {
                     if (i) return;
@@ -635,7 +635,7 @@ function et() {
                         (x.current = []));
                     let e = new Map();
                     (t.current.forEach((t, n) => {
-                        e.set(n, t.getBoundingClientRect().left);
+                        _.current.some((e) => e.id === n) && e.set(n, t.getBoundingClientRect().left);
                     }),
                         (N.current = e));
                 }
