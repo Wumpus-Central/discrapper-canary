@@ -1938,8 +1938,8 @@ class e7 extends e5.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e8 = new e7();
-class e4 extends e5.G {
+let e4 = new e7();
+class e8 extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.ClientProvidedQosData", [
             { no: 1, name: "is_active", kind: "scalar", T: 8 },
@@ -1975,7 +1975,7 @@ class e4 extends e5.G {
         return (!1 !== i && (!0 == i ? e2.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e9 = new e4();
+let e9 = new e8();
 class te extends e5.G {
     constructor() {
         super("discord_protos.qos_token.v1.DerivedQosData", [
@@ -2587,7 +2587,7 @@ class th extends eJ {
                     } catch (e) {
                         ta.warn(`Failed to decode derived QOS data: ${e}`);
                     }
-                return (0, ti.ob)(e8, { clientProvided: r, derived: n });
+                return (0, ti.ob)(e4, { clientProvided: r, derived: n });
             })(e.userId, this.getIsUserActive()),
             s = r
                 ? {

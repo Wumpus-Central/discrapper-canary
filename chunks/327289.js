@@ -660,8 +660,8 @@ var e0 = n(554146),
     e6 = n(834730),
     e8 = n(789645),
     e4 = n(565645),
-    e7 = n(775602),
-    e9 = n(826673),
+    e9 = n(775602),
+    e7 = n(826673),
     te = n(371680),
     tt = n(532624),
     tn = n(531685),
@@ -673,7 +673,7 @@ function ts(e) {
         r = (0, d.RQ)((e) => e.searchQuery),
         s = (0, m.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
         a = (0, m.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
-        o = (0, m.bG)([e7.Ay], () => e7.Ay.useReducedMotion, []),
+        o = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion, []),
         u = (0, m.bG)([tn.A], () => tn.A.isFocused()),
         c = (0, m.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(ev.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
@@ -696,7 +696,7 @@ function ts(e) {
                 return (t) => (0, l.jsx)(e, { ...t });
             }));
     }
-    let f = (0, e9.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
+    let f = (0, e7.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
         p =
             null != c && (0, tl.uF)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
@@ -720,7 +720,7 @@ function ts(e) {
                   (0, l.jsx)(I.D, {
                       className: tr.b,
                       onClick: function () {
-                          return (0, e9.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
+                          return (0, e7.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
                       },
                       children: (0, l.jsx)(e8.XSmallIcon, { size: "xs", color: "currentColor" }),
                   }),
@@ -1312,14 +1312,14 @@ function tA(e) {
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e6 });
         }, [e6]),
         e4 = i.useCallback((e) => (e3(e, t) ? 65 : 32), [t, e3]),
-        e7 = i.useCallback(
+        e9 = i.useCallback(
             (e) => {
                 let t = e === eK.length - 1;
                 return eq && t ? 70 : ez && e === eH ? 20 : 0;
             },
             [eK.length, ez, eq, eH],
         ),
-        e9 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
+        e7 = i.useCallback((e, t) => (0, l.jsx)("div", { children: t }, e), []),
         te = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
@@ -1502,12 +1502,12 @@ function tA(e) {
                     renderRow: e5,
                     renderSectionHeader: te,
                     renderSectionFooter: tt,
-                    renderSection: e9,
+                    renderSection: e7,
                     renderCategoryList: ta,
                     renderHeaderAccessories: tr,
                     rowHeight: 48,
                     sectionHeaderHeight: e4,
-                    sectionFooterHeight: e7,
+                    sectionFooterHeight: e9,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,
                     renderEmptySearchState: ty,

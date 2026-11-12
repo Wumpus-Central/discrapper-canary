@@ -1,4 +1,4 @@
-n.d(t, { $: () => A, A: () => v });
+n.d(t, { $: () => x, A: () => v });
 var l,
     i = n(477900),
     s = n(582128),
@@ -11,10 +11,10 @@ var l,
     m = n(590087),
     p = n(927813),
     g = n(37965);
-let h = 20 * p.A.Millis.SECOND;
-var f = n(821589),
-    x = n(950183),
-    A = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
+let f = 20 * p.A.Millis.SECOND;
+var h = n(821589),
+    A = n(950183),
+    x = (((l = {}).CONTAIN = "contain"), (l.COVER = "cover"), (l.COVER_LANDSCAPE = "cover-landscape"), l);
 let v = s.memo(function (e) {
     let {
             streamId: t,
@@ -22,7 +22,7 @@ let v = s.memo(function (e) {
             wrapperClassName: l,
             videoComponent: r,
             className: p,
-            fit: A = "contain",
+            fit: x = "contain",
             mirror: v = !1,
             paused: E = !1,
             streamPreviewURL: C,
@@ -32,14 +32,14 @@ let v = s.memo(function (e) {
             emptyPreviewAspectRatio: _ = "16 / 9",
         } = e,
         [b, N] = s.useState(!0),
-        [y, L] = s.useState(null),
+        [y, R] = s.useState(null),
         T = s.useCallback(
             (e) => {
-                ("cover-landscape" === A && L(e), n?.(e));
+                ("cover-landscape" === x && R(e), n?.(e));
             },
-            [A, n],
+            [x, n],
         ),
-        R = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
+        L = "cover-landscape" === x ? (null == y || y.width >= y.height ? "cover" : "contain") : x;
     !(function (e) {
         let { location: t, videoSpinnerContext: n, userId: l, streamId: i, loading: r, paused: a = !1 } = e,
             [o] = s.useState(() => new d.M(t));
@@ -56,7 +56,7 @@ let v = s.memo(function (e) {
                     if (!r || a || !m.X.isIncomingVideoEnabled()) return;
                     let e = o.current;
                     return (
-                        e.start(h, () => {
+                        e.start(f, () => {
                             (0, g.Z)(t, n, p, i);
                         }),
                         () => {
@@ -75,11 +75,11 @@ let v = s.memo(function (e) {
             (N(!1), D());
         }, [D]);
     return (0, i.jsxs)("div", {
-        className: a()(x.wrapper, l),
+        className: a()(A.wrapper, l),
         children: [
             null != t &&
                 (0, i.jsx)(r, {
-                    className: a()(x.video, (0, f.t)(x, "video", R), { [x.mirror]: v }, p),
+                    className: a()(A.video, (0, h.t)(A, "video", L), { [A.mirror]: v }, p),
                     streamId: t,
                     onResize: T,
                     onReady: k,
@@ -88,19 +88,19 @@ let v = s.memo(function (e) {
             E
                 ? null
                 : (0, i.jsx)("div", {
-                      className: a()(x.previewWrapper, { [x.loading]: b }),
+                      className: a()(A.previewWrapper, { [A.loading]: b }),
                       children:
                           b &&
                           (0, i.jsxs)(s.Fragment, {
                               children: [
                                   null != C
-                                      ? (0, i.jsx)("img", { src: C, alt: "", className: x.previewImage })
+                                      ? (0, i.jsx)("img", { src: C, alt: "", className: A.previewImage })
                                       : (0, i.jsx)("div", {
-                                            className: x.emptyPreviewWrapper,
+                                            className: A.emptyPreviewWrapper,
                                             style: { aspectRatio: _ },
-                                            children: (0, i.jsx)("div", { className: x.emptyPreview }),
+                                            children: (0, i.jsx)("div", { className: A.emptyPreview }),
                                         }),
-                                  (0, i.jsx)(o.y, { className: x.spinner }),
+                                  (0, i.jsx)(o.y, { className: A.spinner }),
                               ],
                           }),
                   }),

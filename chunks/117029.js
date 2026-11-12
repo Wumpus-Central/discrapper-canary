@@ -10,10 +10,10 @@ var l = n(477900),
     m = n(92259),
     p = n(893007),
     g = n(218429),
-    h = n(964486),
-    f = n(461782),
-    x = n(754712),
-    A = n(40056),
+    f = n(964486),
+    h = n(461782),
+    A = n(754712),
+    x = n(40056),
     v = n(792996),
     E = n(950183),
     C = n(507199);
@@ -25,13 +25,13 @@ function j(e) {
 }
 let S = i.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: b } = i.useContext(f.k3),
+        { onActive: S, onPreventIdle: _, onAllowIdle: b } = i.useContext(h.k3),
         {
             enabled: N,
             zoomLevel: y,
-            minZoom: L,
+            minZoom: R,
             maxZoom: T,
-            isDragging: R,
+            isDragging: L,
             isWheeling: D,
             isSlidering: k,
             setIsSlidering: M,
@@ -42,10 +42,10 @@ let S = i.memo(function (e) {
             panOffset: V,
             setPanOffset: F,
             clampPanOffset: H,
-        } = i.useContext(A.e9),
+        } = i.useContext(x.e9),
         [U, z] = i.useState(!1),
         W = i.useRef(null),
-        $ = y > L,
+        $ = y > R,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
@@ -86,7 +86,7 @@ let S = i.memo(function (e) {
             },
             [U],
         ),
-        J = x.Ay.getVideoComponent(),
+        J = A.Ay.getVideoComponent(),
         ee = i.useMemo(() => {
             let e = null != P.current ? P.current.clientWidth : 1,
                 t = null != P.current ? P.current.clientHeight : 1,
@@ -100,20 +100,20 @@ let S = i.memo(function (e) {
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * l}%`,
                 "--custom-zoom-indicator-transition":
-                    R || U || D || k
+                    L || U || D || k
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [R, U, D, k, V, y, P]),
+        }, [L, U, D, k, V, y, P]),
         et = i.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), w(y - 0.25, A.qd, "button"));
+                (e.preventDefault(), e.stopPropagation(), w(y - 0.25, x.qd, "button"));
             },
             [w, y],
         ),
         en = i.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), w(y + 0.25, A.qd, "button"));
+                (e.preventDefault(), e.stopPropagation(), w(y + 0.25, x.qd, "button"));
             },
             [w, y],
         ),
@@ -121,7 +121,7 @@ let S = i.memo(function (e) {
         ei = i.useCallback(
             (e) => {
                 (M(!0),
-                    w(e, A.qd, "slider"),
+                    w(e, x.qd, "slider"),
                     S(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {
@@ -130,7 +130,7 @@ let S = i.memo(function (e) {
             },
             [w, S, M],
         );
-    return ((0, h.l0)(() => {
+    return ((0, f.l0)(() => {
         el.current?.stop();
     }),
     N && null != n)
@@ -178,14 +178,14 @@ let S = i.memo(function (e) {
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.MagnifyingGlassMinusIcon,
                                               onClick: et,
-                                              disabled: y <= L,
+                                              disabled: y <= R,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
-                                          minValue: L,
+                                          minValue: R,
                                           maxValue: T,
                                           step: 0.01,
                                           value: y,

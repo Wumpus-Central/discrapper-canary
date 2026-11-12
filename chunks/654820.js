@@ -14,9 +14,9 @@ n.d(
                 [u, c] = i.useState(),
                 [d, m] = i.useState(),
                 [p, g] = i.useState(),
-                [h, f] = i.useState(),
-                x = n.id.split(":").at(-1),
-                A = t === x,
+                [f, h] = i.useState(),
+                A = n.id.split(":").at(-1),
+                x = t === A,
                 v = i.useCallback((e, t, n) => {
                     var l, i;
                     let s = n ? r.Ay.getOutboundStats(t) : r.Ay.getInboundStats(e, t),
@@ -31,17 +31,17 @@ n.d(
                                 ? ((i = s.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                                 : "unknown",
                         ),
-                        f("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
+                        h("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
                 }, []);
             return (
                 i.useEffect(() => {
                     function e() {
-                        return v(x, o, A);
+                        return v(A, o, x);
                     }
                     e();
                     let t = setInterval(e, 1e3);
                     return () => clearInterval(t);
-                }, [A, x, o, v]),
+                }, [x, A, o, v]),
                 (0, l.jsxs)("div", {
                     className: a.w,
                     children: [
@@ -64,10 +64,10 @@ n.d(
                             className: a.l,
                             children: [
                                 (0, l.jsx)("span", { children: "FPS: " }),
-                                (0, l.jsx)("strong", { children: h }),
+                                (0, l.jsx)("strong", { children: f }),
                             ],
                         }),
-                        A &&
+                        x &&
                             (0, l.jsxs)("div", {
                                 className: a.l,
                                 children: [

@@ -8,11 +8,11 @@ n.d(
     {},
     {
         A: function (e) {
-            let { children: t, className: n, style: r, noBorder: a = !1, participantUserId: o, ref: c } = e;
+            let { children: t, className: n, style: r, noBorder: a = !1, participantUserId: o, ref: u } = e;
             return (0, i.jsx)("div", {
                 className: l()(n, s.V, { [s.E]: a }),
                 style: r,
-                ref: c,
+                ref: u,
                 "data-selenium-video-tile": o,
                 "data-call-tile": "",
                 children: t,

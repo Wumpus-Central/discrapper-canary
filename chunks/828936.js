@@ -11,7 +11,7 @@ class o extends i.Ay.Store {
         return null != e && a.has(e);
     }
 }
-let c = new o(r.h, {
+let u = new o(r.h, {
     APPLICATION_FRAME_UPDATE: function (e) {
         let { applicationId: t, updatedAt: n } = e,
             i = null != n ? Date.parse(n) : 0 / 0,
@@ -41,7 +41,7 @@ n.d(
     {},
     {
         l: function (e) {
-            return (0, i.bG)([c], () => c.isUpdateAvailable(e), [e]);
+            return (0, i.bG)([u], () => u.isUpdateAvailable(e), [e]);
         },
     },
 );

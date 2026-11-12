@@ -1,4 +1,4 @@
-(i.d(t, { RD: () => E }), i(321073));
+(i.d(t, { RD: () => L }), i(321073));
 var n = i(582128),
     o = i(52133),
     l = i(125822),
@@ -8,39 +8,39 @@ var n = i(582128),
     s = i(223769),
     u = i(889558),
     p = i(878118),
-    d = i(281020),
-    _ = i(975460),
+    _ = i(281020),
+    d = i(975460),
     A = i(704824);
-let h = Symbol();
-var T = i(942370),
+let T = Symbol();
+var h = i(942370),
     b = i(652215);
 let C = "AUTHORIZE_REQUEST",
-    I = [T._.RPC, T._.WEB];
-function E(e) {
+    I = [h._.RPC, h._.WEB];
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: i = !1 } = t,
-        E = (0, _.g)(e),
-        L = (0, a.bG)([p.A], () => p.A.getGloballyDisabledAuthorizationFlows()),
-        O = n.useMemo(
+        L = (0, d.g)(e),
+        S = (0, a.bG)([p.A], () => p.A.getGloballyDisabledAuthorizationFlows()),
+        E = n.useMemo(
             () => ({
                 ...t,
                 allowedFlows:
-                    null != t.allowedFlows ? t.allowedFlows.filter((e) => !L.has(e)) : I.filter((e) => !L.has(e)),
+                    null != t.allowedFlows ? t.allowedFlows.filter((e) => !S.has(e)) : I.filter((e) => !S.has(e)),
             }),
-            [t, L],
+            [t, S],
         ),
         w = (function (e, t) {
-            var i, a, p, _;
+            var i, a, p, d;
             let A,
-                E,
                 L,
-                O,
+                S,
+                E,
                 w =
                     ((i = n.useMemo(() => (null != e ? [e] : []), [e])),
                     (a = t?.allowedFlows ?? I),
                     (A = (0, l.A)(() => a, a, o.v)),
-                    (p = S),
-                    (_ = n.useCallback(
+                    (p = O),
+                    (d = n.useCallback(
                         () =>
                             i.map((e) => ({
                                 application: e,
@@ -48,34 +48,34 @@ function E(e) {
                             })),
                         [i],
                     )),
-                    (E = n.useRef(h)),
-                    (L = n.useRef(_)),
-                    (O = n.useSyncExternalStore(
+                    (L = n.useRef(T)),
+                    (S = n.useRef(d)),
+                    (E = n.useSyncExternalStore(
                         n.useCallback(
                             (e) =>
                                 p(() => {
-                                    ((E.current = h), e());
+                                    ((L.current = T), e());
                                 }),
                             [p],
                         ),
                         n.useCallback(
                             () => (
-                                L.current !== _ && ((L.current = _), (E.current = h)),
-                                E.current === h && (E.current = _()),
-                                E.current
+                                S.current !== d && ((S.current = d), (L.current = T)),
+                                L.current === T && (L.current = d()),
+                                L.current
                             ),
-                            [_],
+                            [d],
                         ),
                     )),
                     n.useMemo(
                         () =>
-                            O.map((e) => {
+                            E.map((e) => {
                                 let t = [];
                                 if (
-                                    (A.includes(T._.RPC) &&
+                                    (A.includes(h._.RPC) &&
                                         e.isSubscribedToAuthorizeRequest &&
                                         t.push({
-                                            type: T._.RPC,
+                                            type: h._.RPC,
                                             initiate(t) {
                                                 (s.A.dispatchToSubscriptions(
                                                     C,
@@ -88,27 +88,27 @@ function E(e) {
                                                         {
                                                             location_stack: t.analyticsLocations,
                                                             application_id: e.application.id,
-                                                            flow_type: T._.RPC,
+                                                            flow_type: h._.RPC,
                                                         },
                                                     ),
-                                                    (0, d.gk)(e.application.id, {
+                                                    (0, _.gk)(e.application.id, {
                                                         onSuccess: t.onSuccess,
                                                         onError: t.onError,
                                                     }));
                                             },
                                         }),
-                                    A.includes(T._.WEB) && null != e.application.connectionEntrypointUrl)
+                                    A.includes(h._.WEB) && null != e.application.connectionEntrypointUrl)
                                 ) {
                                     let i = e.application.connectionEntrypointUrl;
                                     t.push({
-                                        type: T._.WEB,
+                                        type: h._.WEB,
                                         initiate(t) {
                                             ((0, u.h)({
                                                 href: i,
                                                 onConfirm: () => {
                                                     ((0, r.A)(i),
                                                         t?.onConfirm?.(),
-                                                        (0, d.gk)(e.application.id, {
+                                                        (0, _.gk)(e.application.id, {
                                                             onSuccess: t.onSuccess,
                                                             onError: t.onError,
                                                         }));
@@ -117,38 +117,38 @@ function E(e) {
                                                 c.Ay.trackWithMetadata(b.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                                     location_stack: t.analyticsLocations,
                                                     application_id: e.application.id,
-                                                    flow_type: T._.WEB,
+                                                    flow_type: h._.WEB,
                                                 }));
                                         },
                                     });
                                 }
                                 return { context: e, availableFlows: t, preferredFlow: t.length > 0 ? t[0] : null };
                             }),
-                        [O, A],
+                        [E, A],
                     ));
             return w.length > 0 ? w[0] : null;
-        })(E, O),
+        })(L, E),
         y = w?.preferredFlow,
         R = null != y,
-        { token: f, fetched: k } = (0, A.U)(E?.parentId ?? E?.id, { disableFetch: O.disableFetch });
+        { token: f, fetched: k } = (0, A.U)(L?.parentId ?? L?.id, { disableFetch: E.disableFetch });
     return {
         fetched: k,
         hasAlreadyLinked: k && null != f,
         canStartAuthorization: R,
         startAuthorization: n.useCallback((e) => (null == y ? null : (y.initiate(e), y.type)), [y]),
-        connectionApp: E,
+        connectionApp: L,
         chosenFlow: y?.type ?? null,
         token: f,
         debug: i
             ? {
                   isSubscribedToAuthorizeRequest: w?.context?.isSubscribedToAuthorizeRequest ?? !1,
                   oauth2Token: f,
-                  hasConnectionEntrypointUrl: E?.connectionEntrypointUrl != null,
+                  hasConnectionEntrypointUrl: L?.connectionEntrypointUrl != null,
                   validFlows: w?.availableFlows?.map((e) => e.type) ?? [],
               }
             : void 0,
     };
 }
-function S(e) {
+function O(e) {
     return s.A.listenIsSubscribed(e);
 }

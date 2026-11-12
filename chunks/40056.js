@@ -31,7 +31,7 @@ let p = { x: 0, y: 0 },
         doZoom: () => {},
         wrapperRef: i.createRef(),
     }),
-    h = (0, s.debounce)((e, t, n) => {
+    f = (0, s.debounce)((e, t, n) => {
         let l = null,
             i = null;
         if (null != n && (0, o.wL)(n)) {
@@ -46,11 +46,11 @@ let p = { x: 0, y: 0 },
             share_application_id: i,
         });
     }, 2e3),
-    f = i.memo(function (e) {
+    h = i.memo(function (e) {
         let { streamKey: t, minZoom: n = 1, maxZoom: o = 5, children: u } = e,
             [c, d] = i.useState(n),
-            [m, f] = i.useState(!1),
-            [x, A] = i.useState(!1),
+            [m, h] = i.useState(!1),
+            [A, x] = i.useState(!1),
             [v, E] = i.useState(!1),
             [C, I] = i.useState(!1),
             [j, S] = i.useState(16 / 9),
@@ -60,7 +60,7 @@ let p = { x: 0, y: 0 },
         (0, a.l0)(() => {
             y.current?.stop();
         });
-        let L = i.useCallback(
+        let R = i.useCallback(
                 (e, t) => {
                     if (null == N.current) return p;
                     let n = t ?? c,
@@ -76,19 +76,19 @@ let p = { x: 0, y: 0 },
                 (e, l, i) => {
                     let a = (0, s.clamp)(e, n, o);
                     if (null == l || a === c) return;
-                    f(!0);
+                    h(!0);
                     let u = a / c;
-                    (b((e) => L({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
+                    (b((e) => R({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
                         d(a),
-                        h(a, i, t),
+                        f(a, i, t),
                         null == y.current && (y.current = new r.Ep()),
                         y.current.start(2e3, () => {
-                            f(!1);
+                            h(!1);
                         }));
                 },
-                [L, o, n, t, c],
+                [R, o, n, t, c],
             ),
-            R = i.useMemo(
+            L = i.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -96,9 +96,9 @@ let p = { x: 0, y: 0 },
                     maxZoom: o,
                     setZoomLevel: d,
                     isZooming: m,
-                    setIsZooming: f,
-                    isDragging: x,
-                    setIsDragging: A,
+                    setIsZooming: h,
+                    isDragging: A,
+                    setIsDragging: x,
                     isWheeling: v,
                     setIsWheeling: E,
                     isSlidering: C,
@@ -109,18 +109,18 @@ let p = { x: 0, y: 0 },
                     panOffset: _,
                     setPanOffset: b,
                     wrapperRef: N,
-                    clampPanOffset: L,
+                    clampPanOffset: R,
                 }),
-                [L, T, x, C, v, m, o, n, _, j, c],
+                [R, T, A, C, v, m, o, n, _, j, c],
             );
-        return (0, l.jsx)(g.Provider, { value: R, children: u });
+        return (0, l.jsx)(g.Provider, { value: L, children: u });
     });
 n.d(
     t,
     {},
     {
         Ay: function (e) {
-            return e.enableZoom ? (0, l.jsx)(f, { ...e }) : e.children;
+            return e.enableZoom ? (0, l.jsx)(h, { ...e }) : e.children;
         },
         e9: g,
         qd: p,

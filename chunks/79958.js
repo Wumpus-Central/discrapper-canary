@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     o1: "actions_IZv9tE",
     IF: "panelButtonContainer_IZv9tE",
     Q6: "activeControllerIcon_IZv9tE",

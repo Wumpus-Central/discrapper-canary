@@ -1,8 +1,8 @@
 var n = i(477900),
     s = i(582128),
-    l = i(776310),
-    a = i(21161),
-    r = i(77183);
+    r = i(776310),
+    l = i(21161),
+    a = i(77183);
 let o = { xMin: -40, xMax: 40, yMin: -40, yMax: -70 };
 function u(t, e, i) {
     return null == i ? e : (t * i) / 100;
@@ -14,21 +14,21 @@ let d = s.memo(function (t) {
             emojiURL: d,
             numBursts: c,
             particlesPerBurst: f,
-            offsetXPercentageMax: h,
-            offsetXPercentageMin: p,
+            offsetXPercentageMax: p,
+            offsetXPercentageMin: h,
             offsetYPercentageMax: m,
             offsetYPercentageMin: g,
             customConfettiCanvas: A,
-            speedValues: x = o,
-            dragCoefficientValue: y = 1.66,
-            onAnimationEnd: R,
+            speedValues: R = o,
+            dragCoefficientValue: x = 1.66,
+            onAnimationEnd: y,
         } = t,
-        [C, S] = s.useState(null),
-        { confettiCanvas: I } = s.useContext(a.x),
-        T = (0, l.f9)(A ?? I, C),
-        [j, E] = s.useState(!1);
+        [S, C] = s.useState(null),
+        { confettiCanvas: I } = s.useContext(l.x),
+        E = (0, r.f9)(A ?? I, S),
+        [b, T] = s.useState(!1);
     s.useEffect(() => {
-        j && R?.();
+        b && y?.();
     });
     let v = s.useMemo(() => {
         if (null != d) return [{ src: d, colorize: !1 }];
@@ -40,42 +40,42 @@ let d = s.memo(function (t) {
             return (
                 (t = t.map((i, n) =>
                     setTimeout(() => {
-                        (T.createMultipleConfetti(
+                        (E.createMultipleConfetti(
                             (function (t, e, i, n, s) {
-                                let l = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
-                                    a = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
+                                let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
+                                    l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
                                     d = u(t.width, 100, i),
                                     c = u(t.height, 75, s),
                                     f = u(t.width, 350, e),
-                                    h = u(t.height, 75, n),
-                                    { xMin: p, xMax: m, yMin: g, yMax: A } = l;
+                                    p = u(t.height, 75, n),
+                                    { xMin: h, xMax: m, yMin: g, yMax: A } = r;
                                 return {
-                                    ...r.Mw,
+                                    ...a.Mw,
                                     position: {
                                         type: "static-random",
                                         minValue: { x: t.left + d, y: t.top + c },
-                                        maxValue: { x: t.left + f, y: t.top + h },
+                                        maxValue: { x: t.left + f, y: t.top + p },
                                     },
                                     velocity: {
                                         type: "static-random",
-                                        minValue: { x: p, y: g },
+                                        minValue: { x: h, y: g },
                                         maxValue: { x: m, y: A },
                                     },
                                     size: { type: "static-random", minValue: 28, maxValue: 28 },
-                                    dragCoefficient: { type: "static", value: a },
+                                    dragCoefficient: { type: "static", value: l },
                                 };
-                            })(e.getBoundingClientRect(), h, p, m, g, x, y),
+                            })(e.getBoundingClientRect(), p, h, m, g, R, x),
                             f ?? 50,
                         ),
-                            n === t.length - 1 && null != R && E(!0));
+                            n === t.length - 1 && null != y && T(!0));
                     }, 60 * n),
                 )),
                 () => {
                     for (let e of t) clearTimeout(e);
                 }
             );
-        }, [T, e, c, f, h, p, m, g, x, y, R]),
-        (0, n.jsx)(l.K_, { ref: S, sprites: v ?? r.uI, colors: i ?? r._t, spriteWidth: 28, spriteHeight: 28 })
+        }, [E, e, c, f, p, h, m, g, R, x, y]),
+        (0, n.jsx)(r.K_, { ref: C, sprites: v ?? a.uI, colors: i ?? a._t, spriteWidth: 28, spriteHeight: 28 })
     );
 });
 i.d(e, {}, { A: d });

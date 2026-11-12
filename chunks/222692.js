@@ -5,7 +5,7 @@ var r = n(192308),
     s = n(625075),
     a = n(754712),
     o = n(731854),
-    c = n(792996);
+    u = n(792996);
 n.d(
     t,
     {},
@@ -18,9 +18,9 @@ n.d(
                           return (n) =>
                               (0, i.jsx)(t, {
                                   ...n,
-                                  header: c.intl.string(c.t["8jSzSe"]),
-                                  body: c.intl.string(c.t.bhqSWl),
-                                  confirmText: c.intl.string(c.t.BddRzS),
+                                  header: u.intl.string(u.t["8jSzSe"]),
+                                  body: u.intl.string(u.t.bhqSWl),
+                                  confirmText: u.intl.string(u.t.BddRzS),
                                   onConfirm: e,
                               });
                       })
@@ -29,9 +29,9 @@ n.d(
                           return (l) =>
                               (0, i.jsx)(t, {
                                   ...l,
-                                  header: c.intl.string(c.t.XLw6FF),
-                                  body: c.intl.string(c.t.wVjKGi),
-                                  confirmText: c.intl.string(c.t["BK8LK+"]),
+                                  header: u.intl.string(u.t.XLw6FF),
+                                  body: u.intl.string(u.t.wVjKGi),
+                                  confirmText: u.intl.string(u.t["BK8LK+"]),
                                   onConfirm: () => {
                                       (e?.(),
                                           (0, r.mM)(async () => {
@@ -51,13 +51,13 @@ n.d(
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,
-                              header: c.intl.string(c.t["8jSzSe"]),
-                              body: c.intl.string(c.t.UoW002),
-                              confirmText: c.intl.string(c.t.BddRzS),
+                              header: u.intl.string(u.t["8jSzSe"]),
+                              body: u.intl.string(u.t.UoW002),
+                              confirmText: u.intl.string(u.t.BddRzS),
                               children: (0, i.jsx)(l.E, {
                                   variant: "body-sm/normal",
                                   color: "text-subtle",
-                                  children: c.intl.format(c.t.BPDKoA, { helpdeskArticle: s.M }),
+                                  children: u.intl.format(u.t.BPDKoA, { helpdeskArticle: s.M }),
                               }),
                           });
                   });

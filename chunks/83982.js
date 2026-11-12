@@ -10,10 +10,10 @@ var l = n(477900),
     m = n(695366),
     p = n(367513),
     g = n(684339),
-    h = n(628983),
-    f = n(520698),
-    x = n(164617),
-    A = n(958713),
+    f = n(628983),
+    h = n(520698),
+    A = n(164617),
+    x = n(958713),
     v = n(525505),
     E = n(550946),
     C = n(697682),
@@ -24,9 +24,9 @@ var l = n(477900),
     b = n(912630),
     N = n(530804),
     y = n(46653),
-    L = n(754712),
+    R = n(754712),
     T = n(531685),
-    R = n(562153),
+    L = n(562153),
     D = n(51082),
     k = n(566566),
     M = n(289552),
@@ -56,19 +56,19 @@ n.d(
                     pulseSpeakingIndicator: H = !1,
                     paused: U = !1,
                 } = e,
-                z = L.Ay.getVideoComponent(),
+                z = R.Ay.getVideoComponent(),
                 W = (0, a.bG)([y.default], () => y.default.getId()),
                 { user: $, streamId: B, speaking: Z } = t,
                 Y = $.id === W,
                 Q = (0, D.Ay)(t),
                 K = (0, a.bG)([T.A], () => T.A.isFocused()),
                 X = (0, a.bG)([j.A], () => j.A.getWindowFocused(w.MLl.CHANNEL_CALL_POPOUT)),
-                q = (0, a.bG)([L.Ay], () => null != $.id && L.Ay.isLocalVideoDisabled($.id, (0, f.A)(t.type)), [
+                q = (0, a.bG)([R.Ay], () => null != $.id && R.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
                     $.id,
                     t.type,
                 ]),
                 J = (0, E.A)(n.guild_id, $.id),
-                ee = R.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${G.intl.string(G.t["pFO/Ph"])}` : ""),
+                ee = L.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${G.intl.string(G.t["pFO/Ph"])}` : ""),
                 et = Z && (X || K),
                 en = o < 124 ? F : V,
                 { avatarSrc: el, avatarDecorationSrc: ei } = (0, _.A)({
@@ -77,9 +77,9 @@ n.d(
                     size: en,
                     animateOnHover: !et,
                 }),
-                es = (0, a.bG)([h.A], () => h.A.getSelectedParticipant(n.id)),
+                es = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(n.id)),
                 er = (0, v.A)(O.x.DEFAULT, t.user.id),
-                ea = (0, A.A)(t.user.id),
+                ea = (0, x.A)(t.user.id),
                 eo = (0, S.e)(n, "UserTile"),
                 eu = { channel: n, selectedParticipant: es, user: $, isStageUnifiedCall: eo },
                 ec = i.useRef(eu);
@@ -90,14 +90,14 @@ n.d(
                 let { channel: e, selectedParticipant: t, user: n, isStageUnifiedCall: l } = ec.current;
                 !l && e.isGuildStageVoice() && !Q && t?.id === n.id && p.A.selectParticipant(e.id, null);
             }, [Q]),
-            s && !q && !M && Q && !u && null != z && L.Ay.supports(O.O5.VIDEO))
+            s && !q && !M && Q && !u && null != z && R.Ay.supports(O.O5.VIDEO))
                 ? null != er && null == ea
                     ? (0, l.jsx)(k.A, { avError: er, userId: t.id, width: o, selected: u })
                     : (0, l.jsx)(
                           I.A,
                           {
                               onResize: m,
-                              wrapperClassName: c !== x.N.CALL_TILE ? P.tN : void 0,
+                              wrapperClassName: c !== A.N.CALL_TILE ? P.tN : void 0,
                               className: P.Qs,
                               mirror: Y,
                               streamId: B,

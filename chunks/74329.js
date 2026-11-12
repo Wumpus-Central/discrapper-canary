@@ -5,8 +5,8 @@ var r = n(855986),
     s = n(477782),
     a = n(695366),
     o = n(652896),
-    c = n(834757),
-    u = n(46653),
+    u = n(834757),
+    c = n(46653),
     d = n(753181),
     m = n(792996);
 n.d(
@@ -14,17 +14,17 @@ n.d(
     {},
     {
         A: function (e, t, h) {
-            let g = (0, c.AO)(e),
-                f = (0, r.bG)([u.default], () => u.default.getId());
+            let g = (0, u.AO)(e),
+                f = (0, r.bG)([c.default], () => c.default.getId());
             if (null == e) return null;
-            let p = (0, o._z)(e),
-                A = d.A.getVideoStats(p) ?? {},
+            let A = (0, o._z)(e),
+                p = d.A.getVideoStats(A) ?? {},
                 E = {
-                    media_session_id: d.A.getMediaSessionId(p),
-                    rtc_connection_id: d.A.getRtcConnectionId(p),
-                    stream_region: d.A.getRegion(p),
-                    max_viewers: d.A.getMaxViewers(p),
-                    ...A,
+                    media_session_id: d.A.getMediaSessionId(A),
+                    rtc_connection_id: d.A.getRtcConnectionId(A),
+                    stream_region: d.A.getRegion(A),
+                    max_viewers: d.A.getMaxViewers(A),
+                    ...p,
                 };
             return (0, i.jsx)(s.Dr, {
                 id: "report-stream-problem",

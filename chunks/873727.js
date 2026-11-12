@@ -15,7 +15,7 @@ let a = Object.freeze({
         formFactor: "desktop",
     }),
     o = 221552 == n.j ? ["custom-theme-background", "custom-client-theme"] : null;
-function c(e) {
+function u(e) {
     switch (e) {
         case "light":
         case "midnight":
@@ -25,7 +25,7 @@ function c(e) {
             return "dark";
     }
 }
-function u() {
+function c() {
     if ("u" < typeof document || "u" < typeof window) return null;
     let e = document.documentElement,
         t = o.filter((t) => e.classList.contains(t));
@@ -56,11 +56,11 @@ n.d(
     t,
     {},
     {
-        Lq: u,
+        Lq: c,
         U0: m,
         _n: function () {
             return {
-                theme: c(r.A.theme),
+                theme: u(r.A.theme),
                 ui_density: d(),
                 message_display_compact: String(l.hH.getSetting()),
                 font_scale: String(m()),
@@ -72,8 +72,8 @@ n.d(
         },
         mB: function (e) {
             return {
-                baseTheme: c(r.A.theme),
-                customTheme: u(),
+                baseTheme: u(r.A.theme),
+                customTheme: c(),
                 uiDensity: d(),
                 messageDisplayCompact: l.hH.getSetting(),
                 fontScale: m(),
@@ -84,6 +84,6 @@ n.d(
                 formFactor: "desktop",
             };
         },
-        x4: c,
+        x4: u,
     },
 );

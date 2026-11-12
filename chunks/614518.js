@@ -12,11 +12,11 @@ let c = [],
     m = [],
     p = [],
     g = 10 * o.A.Millis.SECOND,
-    h = (0, i.debounce)(() => {
+    f = (0, i.debounce)(() => {
         let e = (0, u.fr)(m);
         (r.O.announce(e, "polite"), (m = []));
     }, 500);
-class f extends s.Ay.Store {
+class h extends s.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
     get recentlyUsedEmojis() {
         return c;
@@ -31,7 +31,7 @@ class f extends s.Ay.Store {
         return d[e];
     }
 }
-let x = new f(a.h, {
+let A = new h(a.h, {
     VOICE_CHANNEL_EFFECT_CLEAR: function (e) {
         let { userId: t } = e;
         null != d[t] && delete d[t];
@@ -46,7 +46,7 @@ let x = new f(a.h, {
             null != l &&
             ((d[n] = { emoji: t, sentAt: Date.now(), animationType: l }),
             (m = [...m, { emojiName: t.name, userId: n }]),
-            h());
+            f());
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: function () {
         let e = new Date();
@@ -65,7 +65,7 @@ n.d(
     t,
     {},
     {
-        A: x,
+        A: A,
         a: function (e) {
             null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
         },

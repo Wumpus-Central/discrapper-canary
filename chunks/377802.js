@@ -17,7 +17,7 @@ n.d(
                 o = r.useCallback(() => {
                     null != e.current && e.current.stopIfPlaying("all");
                 }, []),
-                c = r.useCallback(
+                u = r.useCallback(
                     (t) =>
                         (0, i.jsx)(l.P, {
                             ...t,
@@ -32,7 +32,7 @@ n.d(
                 play: t,
                 getDuration: r.useCallback(() => e.current?.getDuration(), []),
                 getCurrentFrame: r.useCallback(() => e.current?.getCurrentFrame() ?? null, []),
-                Component: c,
+                Component: u,
             };
         },
     },

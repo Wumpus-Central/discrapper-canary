@@ -2051,10 +2051,10 @@ let e0 = new c.A("ConnectionStore"),
 function e7() {
     j.update();
 }
-function e8() {
+function e4() {
     return (j.update(), !1);
 }
-function e4() {
+function e8() {
     return (H.update(), !1);
 }
 function e9(e) {
@@ -2064,8 +2064,8 @@ class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         (this.waitFor(f.default, h.A, I.A, p.Ay, _.A, m.A, T.A, g.Ay, S.A, N.A, A.A),
-            this.syncWith([p.Ay], e8),
-            this.syncWith([S.A], e4));
+            this.syncWith([p.Ay], e4),
+            this.syncWith([S.A], e8));
     }
     getSocket() {
         return V;

@@ -1,7 +1,7 @@
 n.d(e, { Q: () => u });
-var a = n(477900);
+var o = n(477900);
 n(582128);
-let o =
+let a =
     "https://cdn.discordapp.com/assets/content/a9d4129fe10ee310d96f95d04fbf382b9c26914a30780ebb307e908a826248f2.riv";
 var i = n(729901),
     r = n(799226);
@@ -31,13 +31,13 @@ let l = {
     };
 function u(t) {
     let { artboard: e = "box-wumpus", stateMachine: n, ...u } = t,
-        { status: c, buffer: b } = (0, r.CE)(o),
-        g = (0, r.m2)(o);
+        { status: c, buffer: g } = (0, r.CE)(a),
+        b = (0, r.m2)(a);
     return c === r.BW.Loading
         ? null
-        : (0, a.jsx)(i.w, {
-              ...(g ? { key: "override" } : {}),
-              buffer: b,
+        : (0, o.jsx)(i.w, {
+              ...(b ? { key: "override" } : {}),
+              buffer: g,
               artboard: e,
               stateMachine: n,
               artboardProperties: l,
@@ -46,4 +46,4 @@ function u(t) {
               ...u,
           });
 }
-u.riveSrc = o;
+u.riveSrc = a;

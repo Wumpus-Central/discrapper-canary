@@ -1,8 +1,8 @@
 n.d(t, {
     lg: () => H,
-    c3: () => Y,
+    c3: () => F,
     IH: () => B,
-    nG: () => F,
+    nG: () => Y,
     OS: () => G,
     Y9: () => K,
     vw: () => Z,
@@ -40,8 +40,8 @@ let S = function (e) {
           : null;
 };
 var O = n(769015),
-    U = n(168017),
-    v = n(106191),
+    v = n(168017),
+    U = n(106191),
     L = n(682163),
     R = n(376943),
     j = n(636585),
@@ -140,7 +140,7 @@ class G extends r.Component {
         });
     }
 }
-class Y extends r.Component {
+class F extends r.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
@@ -216,7 +216,7 @@ class Y extends r.Component {
         });
     }
 }
-class F extends r.Component {
+class Y extends r.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
@@ -363,7 +363,7 @@ class H extends r.Component {
 }
 function B(e) {
     let { game: t, onMouseEnter: n, onClick: r, onFocus: s, focused: l, id: a, inlineLabel: o, children: c } = e,
-        { extraChromeEnabled: d } = U.A.useConfig({ location: "quickswitcher" });
+        { extraChromeEnabled: d } = v.A.useConfig({ location: "quickswitcher" });
     return (0, i.jsx)(V, {
         id: a,
         onMouseEnter: n,
@@ -375,7 +375,7 @@ function B(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: w.zc,
-                    children: (0, i.jsx)(v.A, { game: t, iconClassName: w.bN, withBackground: d }),
+                    children: (0, i.jsx)(U.A, { game: t, iconClassName: w.bN, withBackground: d }),
                 }),
                 (0, i.jsxs)("div", {
                     className: w.UU,

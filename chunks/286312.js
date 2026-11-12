@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     Nr: "card_k0Unn4",
     Bj: "cardInfo_k0Unn4",
     jf: "statusRow_k0Unn4",

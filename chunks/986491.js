@@ -12,10 +12,10 @@ var i = n(503698),
     m = n(676030),
     p = n(71393),
     g = n(287809),
-    h = n(129230),
-    f = n(834708),
-    x = n(154486);
-let A = (0, n(945810).mj)({
+    f = n(129230),
+    h = n(834708),
+    A = n(154486);
+let x = (0, n(945810).mj)({
     name: "2026-10-hd-streaming-contextual-referrals",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -31,13 +31,13 @@ function S(e) {
         s = (0, r.bG)([g.default], () => g.default.getUser(t) ?? null, [t]),
         a = (0, r.bG)([p.A], () => (null != n ? (p.A.getGuild(n)?.premiumTier ?? null) : null), [n]),
         o = (0, m.A)(C.jQ.PRESET_VIDEO, C.on.RESOLUTION_1080, C.kn.FPS_60, s ?? void 0, a),
-        u = (0, f.d)(s),
-        c = A.useConfig({ location: "HD_STREAMING_CONTEXTUAL_UPSELL" }).enabled;
+        u = (0, h.d)(s),
+        c = x.useConfig({ location: "HD_STREAMING_CONTEXTUAL_UPSELL" }).enabled;
     return null != s && u && !o && c ? (0, l.jsx)(_, { streamer: s, idle: i }) : null;
 }
 function _(e) {
     let { streamer: t, idle: n } = e;
-    return (0, x.p)(t.id) ? (0, l.jsx)(b, { recipient: t, idle: n }) : null;
+    return (0, A.p)(t.id) ? (0, l.jsx)(b, { recipient: t, idle: n }) : null;
 }
 function b(e) {
     let { recipient: t, idle: i } = e,
@@ -51,7 +51,7 @@ function b(e) {
             icon: u.NitroWheelIcon,
             onClick: function (e) {
                 (e.stopPropagation(),
-                    h.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: r }),
+                    f.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: r }),
                     (0, a.mM)(async () => {
                         let { default: e } = await Promise.all([
                             n.e(768071),

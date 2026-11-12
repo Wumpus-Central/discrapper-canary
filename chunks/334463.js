@@ -2,19 +2,19 @@ let i, r, l;
 var s = n(855986),
     a = n(73153),
     o = n(652215),
-    c = n(806931);
-let u = new Map(),
+    u = n(806931);
+let c = new Map(),
     d = {},
     m = o.CUs.BOTTOM_RIGHT,
-    h = { [c.R8.VIDEO]: c.fG[c.R8.VIDEO], [c.R8.CAMERA_PREVIEW]: c.fG[c.R8.CAMERA_PREVIEW] };
+    h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
 class g extends s.Ay.PersistedStore {
     static displayName = "PictureInPictureStore";
     static persistKey = "PictureInPictureStore";
     static migrations = [
         (e) => ({
             pipWidths: {
-                [c.R8.VIDEO]: e.pipWidth ?? c.fG[c.R8.VIDEO],
-                [c.R8.CAMERA_PREVIEW]: c.fG[c.R8.CAMERA_PREVIEW],
+                [u.R8.VIDEO]: e.pipWidth ?? u.fG[u.R8.VIDEO],
+                [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW],
             },
             openPosition: e.openPosition ?? o.CUs.BOTTOM_RIGHT,
         }),
@@ -22,25 +22,25 @@ class g extends s.Ay.PersistedStore {
     initialize(e) {
         if (null == e) {
             ((m = o.CUs.BOTTOM_RIGHT),
-                (h = { [c.R8.VIDEO]: c.fG[c.R8.VIDEO], [c.R8.CAMERA_PREVIEW]: c.fG[c.R8.CAMERA_PREVIEW] }));
+                (h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] }));
             return;
         }
         ((m = e.openPosition), (h = e.pipWidths));
     }
     get pipWindow() {
-        return null == i && null == r && null == l ? null : u.get(i ?? r ?? l ?? "");
+        return null == i && null == r && null == l ? null : c.get(i ?? r ?? l ?? "");
     }
     get pipVideoWindow() {
-        return null == i ? null : u.get(i);
+        return null == i ? null : c.get(i);
     }
     get pipActivityWindow() {
-        return null == r ? null : u.get(r);
+        return null == r ? null : c.get(r);
     }
     get pipFrameWindow() {
-        return null == l ? null : u.get(l);
+        return null == l ? null : c.get(l);
     }
     get pipWindows() {
-        return u;
+        return c;
     }
     pipWidth(e) {
         return h[e];
@@ -55,7 +55,7 @@ class g extends s.Ay.PersistedStore {
         return d[e];
     }
     isOpen(e) {
-        return null != e && u.has(e);
+        return null != e && c.has(e);
     }
     getState() {
         return { openPosition: m, pipWidths: h };
@@ -64,9 +64,9 @@ class g extends s.Ay.PersistedStore {
 let f = new g(a.h, {
     PICTURE_IN_PICTURE_OPEN: function (e) {
         let { id: t, component: n, props: s } = e;
-        if (null != u.get(t)) return;
+        if (null != c.get(t)) return;
         let a = { id: t, component: n, position: s.position ?? m, props: s, docked: s.docked ?? !1 };
-        switch ((u.set(t, a), n)) {
+        switch ((c.set(t, a), n)) {
             case o.o1q.VIDEO:
                 null == i && (i = t);
                 break;
@@ -79,23 +79,23 @@ let f = new g(a.h, {
     },
     PICTURE_IN_PICTURE_CLOSE: function (e) {
         let { id: t } = e;
-        if (!u.has(t)) return !1;
+        if (!c.has(t)) return !1;
         {
-            u.delete(t);
-            let e = Array.from(u.keys());
+            c.delete(t);
+            let e = Array.from(c.keys());
             i === t
                 ? (i = e.find((e) => {
-                      let t = u.get(e);
+                      let t = c.get(e);
                       return null != t && t.component === o.o1q.VIDEO;
                   }))
                 : r === t
                   ? (r = e.find((e) => {
-                        let t = u.get(e);
+                        let t = c.get(e);
                         return null != t && t.component === o.o1q.ACTIVITY;
                     }))
                   : l === t &&
                     (l = e.find((e) => {
-                        let t = u.get(e);
+                        let t = c.get(e);
                         return null != t && t.component === o.o1q.FRAME;
                     }));
         }
@@ -105,10 +105,10 @@ let f = new g(a.h, {
         if (null == t || (i !== t && r !== t && l !== t)) return !1;
         {
             let e = new Map();
-            (u.forEach((t, i) => {
+            (c.forEach((t, i) => {
                 e.set(i, { ...t, position: n });
             }),
-                (u = e),
+                (c = e),
                 (m = n));
         }
     },
@@ -120,18 +120,18 @@ let f = new g(a.h, {
         let { id: t } = e;
         if (i !== t && r !== t && l !== t) return !1;
         {
-            let e = u.get(t);
+            let e = c.get(t);
             if (null == e) return !1;
-            u.set(t, { ...e, hidden: !0 });
+            c.set(t, { ...e, hidden: !0 });
         }
     },
     PICTURE_IN_PICTURE_SHOW: function (e) {
         let { id: t } = e;
         if (i !== t && r !== t && l !== t) return !1;
         {
-            let e = u.get(t);
+            let e = c.get(t);
             if (null == e) return !1;
-            u.set(t, { ...e, hidden: !1 });
+            c.set(t, { ...e, hidden: !1 });
         }
     },
     PICTURE_IN_PICTURE_UPDATE_RECT: function (e) {
@@ -140,7 +140,7 @@ let f = new g(a.h, {
     },
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: function (e) {
         let { id: t } = e,
-            n = u.get(t);
+            n = c.get(t);
         if (null != n)
             switch (n.component) {
                 case o.o1q.VIDEO:
@@ -157,7 +157,7 @@ let f = new g(a.h, {
             }
     },
     LOGOUT: function () {
-        ((i = null), (r = null), (l = null), (u = new Map()));
+        ((i = null), (r = null), (l = null), (c = new Map()));
     },
 });
 n.d(t, {}, { A: f });
