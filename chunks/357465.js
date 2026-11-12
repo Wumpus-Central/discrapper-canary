@@ -79,7 +79,7 @@ class L extends a.Component {
                                             let { default: e } = await Promise.all([
                                                 s.e(895909),
                                                 s.e(490743),
-                                                s.e(512831),
+                                                s.e(728053),
                                                 s.e(630290),
                                                 s.e(189423),
                                                 s.e(738098),

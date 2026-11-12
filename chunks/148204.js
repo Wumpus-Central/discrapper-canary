@@ -24,4 +24,8 @@ e.exports = {
     c$: "legacyLabel_Nw13mb",
     cJ: "descriptionCardExtras_Nw13mb",
     Z6: "descriptionNotice_Nw13mb",
+    uT: "unlockHiding_Nw13mb",
+    CY: "unlockRevealing_Nw13mb",
+    BI: "unlockLabel_Nw13mb",
+    Dp: "unlockLabelPlaying_Nw13mb",
 };

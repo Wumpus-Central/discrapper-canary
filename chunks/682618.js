@@ -12,6 +12,17 @@ let _ = new Map(),
 function A(e) {
     return e === o.default.getCurrentUser()?.id ? u.ME : e;
 }
+async function f(e, t) {
+    let n = t ?? o.default.getCurrentUser()?.id;
+    if (null == n) return;
+    let i = Date.now();
+    try {
+        let t = await a.Bo.get({ url: u.Rsh.USER_BADGE(A(n), e), rejectWithError: !0 });
+        s.h.dispatch({ type: "BADGE_FETCH_SUCCESS", userId: n, badge: t.body, requestedAt: i });
+    } catch (e) {
+        c.A.captureException(e);
+    }
+}
 (s.h.subscribe("LOGOUT", () => {
     (_.clear(), E.clear());
 }),
@@ -86,16 +97,17 @@ function A(e) {
                         c.A.captureException(e));
                 }
             },
-            o0: async function (e, t) {
-                let n = t ?? o.default.getCurrentUser()?.id;
-                if (null == n) return;
-                let i = Date.now();
-                try {
-                    let t = await a.Bo.get({ url: u.Rsh.USER_BADGE(A(n), e), rejectWithError: !0 });
-                    s.h.dispatch({ type: "BADGE_FETCH_SUCCESS", userId: n, badge: t.body, requestedAt: i });
-                } catch (e) {
-                    c.A.captureException(e);
-                }
+            o0: f,
+            zd: async function (e) {
+                let t = o.default.getCurrentUser()?.id;
+                if (null != t)
+                    try {
+                        (await a.Bo.post({ url: u.Rsh.USER_BADGE_ACK(e), rejectWithError: !0 }),
+                            s.h.dispatch({ type: "BADGE_ACK_SUCCESS", userId: t, badgeId: e }),
+                            f(e, t));
+                    } catch (e) {
+                        c.A.captureException(e);
+                    }
             },
         },
     ));

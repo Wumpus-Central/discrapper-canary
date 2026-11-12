@@ -8693,7 +8693,7 @@ let r4 = {
     "discord_app/images/burst_reactions/BurstReaction_Anime_v01_Lottie.lottiejson": () =>
         a.e(674149).then(a.t.bind(a, 965892, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Arcade_v01.lottiejson": () =>
-        a.e(739468).then(a.t.bind(a, 44194, 19)),
+        a.e(517087).then(a.t.bind(a, 44194, 19)),
     "discord_app/images/burst_reactions/BurstReaction_BlackHoles_v01.lottiejson": () =>
         a.e(4289).then(a.t.bind(a, 141208, 19)),
     "discord_app/images/burst_reactions/BurstReaction_BlastOff_v04.lottiejson": () =>
@@ -15864,7 +15864,7 @@ function u1() {
               ],
           });
 }
-var u2 = a(587530),
+var u2 = a(922064),
     u3 = a(653887),
     u6 = a(799226);
 function u5() {

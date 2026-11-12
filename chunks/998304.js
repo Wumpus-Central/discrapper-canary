@@ -7,7 +7,11 @@ function s(e) {
     let [t, n, i] = r()(e).rgb();
     return { r: t, g: n, b: i };
 }
-function l(e, t, n) {
+function l(e) {
+    let [t, n, i, a] = r()(e).rgba();
+    return { r: t, g: n, b: i, a };
+}
+function o(e, t, n) {
     let i,
         r,
         a = Math.max((e /= 255), (t /= 255), (n /= 255)),
@@ -30,7 +34,7 @@ function l(e, t, n) {
     }
     return { hue: 360 * i, saturation: r, lightness: l, alpha: 1 };
 }
-function o(e, t, n) {
+function d(e, t, n) {
     let i, r, s;
     if (((e /= 360), 0 === t)) i = r = s = n;
     else {
@@ -49,7 +53,7 @@ function o(e, t, n) {
     }
     return new a.A(Math.round(255 * i), Math.round(255 * r), Math.round(255 * s), 1);
 }
-function d(e, t) {
+function c(e, t) {
     let n = e.hsv,
         i = t.hsv;
     return i.s + i.v - (n.s + n.v);
@@ -78,7 +82,11 @@ function d(e, t) {
                 return `#${d}${c}${u}`;
             },
             E2: s,
-            IB: l,
+            IB: o,
+            KU: function (e, t) {
+                let { r: n, g: i, b: r, a } = l(e);
+                return `rgba(${n}, ${i}, ${r}, ${t ?? a})`;
+            },
             Ob: function (e, t, n) {
                 return "#" + (0x1000000 + (e << 16) + (t << 8) + n).toString(16).slice(1);
             },
@@ -147,8 +155,8 @@ function d(e, t) {
             WN: function (e) {
                 let { colorRGB: t, saturationFactor: n = 1 } = e;
                 if (null == t) return t;
-                let i = l(t.get("rgb.r"), t.get("rgb.g"), t.get("rgb.b"));
-                return null == i ? t?.hex() : o(i.hue, i.saturation * n, i.lightness)?.toHexString();
+                let i = o(t.get("rgb.r"), t.get("rgb.g"), t.get("rgb.b"));
+                return null == i ? t?.hex() : d(i.hue, i.saturation * n, i.lightness)?.toHexString();
             },
             cb: function (e, t) {
                 let { r: n, g: i, b: r } = s(e);
@@ -156,12 +164,12 @@ function d(e, t) {
             },
             fE: function (e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = l(e.red, e.green, e.blue);
+                    i = o(e.red, e.green, e.blue);
                 return (
                     n
                         ? (i.lightness = i.lightness + t > 1 ? 0.9 : i.lightness + t)
                         : (i.lightness = i.lightness - t < 0 ? 0.1 : i.lightness - t),
-                    o(i.hue, i.saturation, i.lightness)
+                    d(i.hue, i.saturation, i.lightness)
                 );
             },
             h6: function (e) {
@@ -201,12 +209,9 @@ function d(e, t) {
                             );
                         })(e) ?? { h: 0, s: 0, v: 0 },
                     }))
-                    .sort(d)[0].hex;
+                    .sort(c)[0].hex;
             },
-            j5: function (e) {
-                let [t, n, i, a] = r()(e).rgba();
-                return { r: t, g: n, b: i, a };
-            },
+            j5: l,
             lZ: function (e) {
                 let { foreground: t, background: n, ratio: i = 5, saturationFactor: a = 1 } = e;
                 a < 1 && ((t = t.set("hsl.s", t.get("hsl.s") * a)), (n = n.set("hsl.s", n.get("hsl.s") * a)));

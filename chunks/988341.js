@@ -7,6 +7,9 @@ function a(e) {
 }
 let s = new Set([i.$.GAME_VARIETY, i.$.GAME_TIME, i.$.STREAMING]),
     l = new Set([i.$.ACCOUNT_AGE, i.$.STREAMING, i.$.GAME_TIME, i.$.GAME_VARIETY]);
+function o(e, t) {
+    return null != t ? e.tiers.find((e) => e.key === t) : void 0;
+}
 n.d(
     t,
     {},
@@ -32,9 +35,7 @@ n.d(
             let { tier: t, isUnlocked: n, isViewingOtherUser: i, isViewerOnUpgradeableNitro: a } = e;
             return n || !a || i ? (t.milestone_text ?? "") : r.intl.string(r.t.VPu695);
         },
-        YU: function (e, t) {
-            return null != t ? e.tiers.find((e) => e.key === t) : void 0;
-        },
+        YU: o,
         hK: function (e) {
             return a(e) ? r.t.t3udZb : r.t.nPQVxb;
         },
@@ -47,6 +48,9 @@ n.d(
         jg: function (e) {
             let { tenureBadgeHideable: t } = e;
             return new Set(t ? [i.$.STAFF] : [i.$.STAFF, i.$.PREMIUM_TENURE]);
+        },
+        kD: function (e, t) {
+            return r.intl.string(null != o(e, t) ? r.t.K3TdAp : r.t["4oIsxf"]);
         },
         sC: l,
     },
