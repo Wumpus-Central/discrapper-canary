@@ -8,12 +8,12 @@ n.d(t, {
     B5: () => N,
     d: () => S,
     Mk: () => m,
-    aD: () => I,
+    aD: () => C,
     s9: () => v,
     LV: () => g,
     Ds: () => O,
     uK: () => d,
-    lk: () => C,
+    lk: () => I,
 });
 var r,
     u,
@@ -67,7 +67,7 @@ let T = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function C(e) {
+function I(e) {
     let { enabled: t } = _.useConfig({ location: e }),
         n = (0, s.z)();
     return {
@@ -75,30 +75,24 @@ function C(e) {
         multiplier: o.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
-let I = (0, a.mj)({
-    name: "2026-05-quest-home-tile-redesign",
-    kind: "user",
-    defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-    variations: {
-        0: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-        1: { useNewLayoutWithSearch: !0, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
-        2: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !0 },
-        3: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !1, ctaOnHover: !0 },
-        4: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !1 },
-    },
-});
-(0, a.mj)({
-    name: "2026-05-bounty-stale-refresh-quest-home",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-let p = (0, a.mj)({
-    name: "2026-09-mobile-quest-home-sort-priority",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
+let C = (0, a.mj)({
+        name: "2026-05-quest-home-tile-redesign",
+        kind: "user",
+        defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+        variations: {
+            0: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+            1: { useNewLayoutWithSearch: !0, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
+            2: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !0 },
+            3: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !1, ctaOnHover: !0 },
+            4: { useNewLayoutWithSearch: !0, useNewTile: !0, useNewFeaturedTiles: !0, ctaOnHover: !1 },
+        },
+    }),
+    p = (0, a.mj)({
+        name: "2026-09-mobile-quest-home-sort-priority",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    });
 var S =
     588245 != n.j
         ? (((i = {})[(i.CONTROL = 0)] = "CONTROL"),

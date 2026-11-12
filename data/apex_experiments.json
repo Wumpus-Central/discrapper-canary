@@ -1690,22 +1690,6 @@
     }
   },
   {
-    "name": "2026-05-bounty-stale-refresh-quest-home",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-05-clips-media-comments",
     "defaultConfig": {
