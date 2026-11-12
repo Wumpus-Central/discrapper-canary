@@ -1166,7 +1166,7 @@ function nx(e) {
         s = (0, E.bG)([nD.Ay], () => nD.Ay.getKeybindForAction(B.hCu.SAVE_CLIP)),
         o = null != s && s.shortcut.length > 0 ? nb.dI(s.shortcut, !0) : null,
         d = (0, tP.E)(),
-        c = (0, n_.sw)(),
+        c = (0, n_.W1)(),
         u = w.tz.useSetting(),
         _ = (0, E.bG)([x.A], () => x.A.getStatus()),
         A = !__OVERLAY__ && (!u || _ === B.clD.INVISIBLE),

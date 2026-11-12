@@ -7,10 +7,15 @@ var i = n(855986),
     d = n(448645),
     c = n(682901),
     u = n(731854);
-function _(e) {
-    return d.Ay.isPremiumAtLeast(e?.premiumType, c.PremiumTypes.TIER_2);
+function _() {
+    let e = A(s.Ay),
+        t = (0, i.bG)([r.Ay, a.A], () => a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement"));
+    return e || t;
 }
 function E(e) {
+    return d.Ay.isPremiumAtLeast(e?.premiumType, c.PremiumTypes.TIER_2);
+}
+function A(e) {
     let t = e.getMediaEngine();
     return o.xl() && t.supports(u.O5.CLIPS) && t.hasClipsV3Support();
 }
@@ -23,19 +28,19 @@ n.d(
         },
         Pm: function () {
             return (
-                (!!E(s.Ay) || !!(a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement"))) &&
-                _(l.default.getCurrentUser())
+                (!!A(s.Ay) || !!(a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement"))) &&
+                E(l.default.getCurrentUser())
             );
         },
+        W1: _,
         cx: function () {
             return !1;
         },
-        qj: _,
-        ri: E,
+        qj: E,
+        ri: A,
         sw: function () {
-            let e = E(s.Ay),
-                t = (0, i.bG)([r.Ay, a.A], () => a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement"));
-            return (0, i.bG)([l.default], () => _(l.default.getCurrentUser())) && (e || t);
+            let e = _();
+            return (0, i.bG)([l.default], () => E(l.default.getCurrentUser())) && e;
         },
     },
 );

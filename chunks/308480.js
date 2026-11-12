@@ -307,7 +307,9 @@ function Q() {
                         text: "Open capture mode menu",
                         onClick: (e) =>
                             (0, y.L3)(e, async () => {
-                                let { default: e } = await a.e(827037).then(a.bind(a, 707116));
+                                let { default: e } = await Promise.all([a.e(409495), a.e(827037)]).then(
+                                    a.bind(a, 707116),
+                                );
                                 return (t) => (0, r.jsx)(e, { ...t });
                             }),
                     }),

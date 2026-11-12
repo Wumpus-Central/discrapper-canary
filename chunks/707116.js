@@ -1,129 +1,148 @@
 var i = n(477900),
     l = n(582128),
     a = n(855986),
-    r = n(123292),
-    o = n(165862),
-    s = n(477782),
-    u = n(625903),
-    c = n(442433),
-    d = n(253932),
-    f = n(780964),
-    g = n(766075),
-    p = n(532624),
-    m = n(350535),
-    b = n(489496),
-    h = n(464132);
+    o = n(123292),
+    r = n(403581),
+    s = n(646514),
+    u = n(477782),
+    c = n(165862),
+    d = n(625903),
+    f = n(442433),
+    g = n(253932),
+    p = n(780964),
+    m = n(766075),
+    b = n(532624),
+    h = n(350535),
+    x = n(489496),
+    y = n(464132),
+    I = n(270607);
 n(696016);
-var x = n(652215),
-    y = n(683825),
-    S = n(792996);
-let k = [
-    { mode: "off", message: y.default["uO/2T5"] },
-    { mode: "manual", message: y.default.bBlUzK },
-    { mode: "auto", message: y.default["4gzBi+"] },
+var k = n(652215),
+    j = n(683825),
+    C = n(792996),
+    P = n(97580);
+let S = [
+    { mode: "off", message: j.default["uO/2T5"] },
+    { mode: "manual", message: j.default.bBlUzK },
+    { mode: "auto", message: j.default["4gzBi+"] },
 ];
-function A() {
-    return (0, a.bG)([p.Ay], () =>
-        (0, m.dI)(p.Ay.getKeybindForAction(x.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, m.OH)("alt+c"), !0),
+function v() {
+    return (0, a.bG)([b.Ay], () =>
+        (0, h.dI)(b.Ay.getKeybindForAction(k.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, h.OH)("alt+c"), !0),
     );
 }
+function _(e) {
+    let { label: t } = e;
+    return (0, i.jsxs)("div", {
+        className: P.v,
+        children: [t, (0, i.jsx)(r.NitroWheelIcon, { size: "xs", color: s.A.colors.PREMIUM_NITRO_PINK_TEXT })],
+    });
+}
 n.d(
-    e,
+    t,
     {},
     {
-        T: A,
+        T: v,
         Y: function () {
-            let { value: t } = (0, h.U)(),
-                e = A();
-            switch (t) {
+            let { value: e } = (0, y.U)(),
+                t = v();
+            switch (e) {
                 case "off":
-                    return S.intl.string(y.default["uO/2T5"]);
+                    return C.intl.string(j.default["uO/2T5"]);
                 case "manual":
-                    return e.length > 0
-                        ? S.intl.formatToPlainString(y.default.pGVUxA, { shortcut: e })
-                        : S.intl.string(y.default.ms4ibY);
+                    return t.length > 0
+                        ? C.intl.formatToPlainString(j.default.pGVUxA, { shortcut: t })
+                        : C.intl.string(j.default.ms4ibY);
                 case "auto":
-                    return e.length > 0
-                        ? S.intl.formatToPlainString(y.default.VfytEu, { shortcut: e })
-                        : S.intl.string(y.default["6ZXEjB"]);
+                    return t.length > 0
+                        ? C.intl.formatToPlainString(j.default.VfytEu, { shortcut: t })
+                        : C.intl.string(j.default["6ZXEjB"]);
             }
         },
-        default: function (t) {
-            let { onSelect: e, onClose: n = c.Z_ } = t,
-                { value: a, onChange: p } = (0, h.U)(),
-                m = d.Q$.useSetting(),
-                x = A(),
-                I = x.length > 0,
-                P = l.useMemo(
+        default: function (e) {
+            let { onSelect: t, onClose: n = f.Z_ } = e,
+                { value: a, onChange: r } = (0, y.U)(),
+                { isLocked: s, openRoadblock: b } = (0, I.B)("ClipsCaptureModeMenu"),
+                h = g.Q$.useSetting(),
+                k = v(),
+                P = k.length > 0,
+                A = s("manual"),
+                T = l.useMemo(
                     () =>
-                        (function (t) {
-                            function e(e) {
-                                (e.stopPropagation(), t(), (0, g.openUserSettings)(f.X.CLIPS_MANUAL_KEYBIND));
-                            }
-                            function n(t) {
-                                ("Enter" === t.key || " " === t.key) && (t.preventDefault(), e(t));
-                            }
-                            return (t, l) =>
-                                (0, i.jsx)(
-                                    r.Q,
-                                    { text: t, textVariant: "body-xs/medium", onClick: e, onKeyDown: n },
-                                    l,
-                                );
-                        })(n),
-                    [n],
+                        A
+                            ? () => null
+                            : (function (e) {
+                                  function t(t) {
+                                      (t.stopPropagation(), e(), (0, m.openUserSettings)(p.X.CLIPS_MANUAL_KEYBIND));
+                                  }
+                                  function n(e) {
+                                      ("Enter" === e.key || " " === e.key) && (e.preventDefault(), t(e));
+                                  }
+                                  return (e, l) =>
+                                      (0, i.jsx)(
+                                          o.Q,
+                                          { text: e, textVariant: "body-xs/medium", onClick: t, onKeyDown: n },
+                                          l,
+                                      );
+                              })(n),
+                    [A, n],
                 ),
-                j = {
+                E = {
                     off: null,
-                    manual: I
-                        ? S.intl.format(y.default.QWyKXz, { keybind: x, editKeybindHook: P })
-                        : S.intl.format(y.default["Sb+V+3"], { editKeybindHook: P }),
-                    auto: I
-                        ? S.intl.formatToPlainString(y.default.BvKcH9, { keybind: x })
-                        : S.intl.string(y.default.VWJbxP),
+                    manual: P
+                        ? C.intl.format(j.default.QWyKXz, { keybind: k, editKeybindHook: T })
+                        : C.intl.format(j.default["Sb+V+3"], { editKeybindHook: T }),
+                    auto: P
+                        ? C.intl.formatToPlainString(j.default.BvKcH9, { keybind: k })
+                        : C.intl.string(j.default.VWJbxP),
                 },
-                C = S.intl.string(y.default.eIX9be);
-            return (0, i.jsxs)(o.W, {
+                U = C.intl.string(j.default.eIX9be);
+            return (0, i.jsxs)(c.W, {
                 navId: "clips-capture-mode",
-                "aria-label": C,
+                "aria-label": U,
                 onClose: n,
-                onSelect: e,
+                onSelect: t,
                 children: [
-                    (0, i.jsx)(s.rX, {
-                        label: C,
-                        children: k.map((t) => {
-                            let { mode: e, message: n } = t;
+                    (0, i.jsx)(u.rX, {
+                        label: U,
+                        children: S.map(function (e) {
+                            var t;
+                            let { mode: l, message: o } = e,
+                                c = s(l);
                             return (0, i.jsx)(
-                                s.iD,
+                                u.iD,
                                 {
-                                    id: `clips-capture-mode-${e}`,
+                                    id: `clips-capture-mode-${l}`,
                                     group: "clips-capture-mode",
-                                    label: S.intl.string(n),
-                                    subtext: j[e],
-                                    checked: a === e,
-                                    action: () => p(e),
+                                    ...((t = C.intl.string(o)),
+                                    c ? { void_label: (0, i.jsx)(_, { label: t }) } : { label: t }),
+                                    subtext: E[l],
+                                    checked: a === l,
+                                    action: () => (c ? void (n(), b()) : r(l)),
                                 },
-                                e,
+                                l,
                             );
                         }),
                     }),
-                    (0, i.jsx)(s.rX, {
-                        children: (0, i.jsx)(s.fP, {
+                    (0, i.jsx)(u.rX, {
+                        children: (0, i.jsx)(u.fP, {
                             id: "clips-capture-mode-voice",
-                            label: S.intl.string(y.default["IxZyA+"]),
-                            subtext: S.intl.string(y.default.t23RLK),
-                            checked: m,
-                            action: (t) => (0, b.eQ)({ allowVoiceRecording: t }),
+                            label: C.intl.string(j.default["IxZyA+"]),
+                            subtext: C.intl.string(j.default.t23RLK),
+                            checked: h,
+                            action: (e) => (0, x.eQ)({ allowVoiceRecording: e }),
                         }),
                     }),
-                    (0, i.jsx)(s.rX, {
-                        children: (0, i.jsx)(s.Dr, {
-                            id: "clips-capture-mode-settings",
-                            label: S.intl.string(S.t.J1hsY2),
-                            iconLeft: u.SettingsIcon,
-                            leadingAccessory: { type: "icon", icon: u.SettingsIcon },
-                            action: () => (0, g.openUserSettings)(f.X.CLIPS_PANEL),
+                    !A &&
+                        (0, i.jsx)(u.rX, {
+                            children: (0, i.jsx)(u.Dr, {
+                                id: "clips-capture-mode-settings",
+                                label: C.intl.string(C.t.J1hsY2),
+                                iconLeft: d.SettingsIcon,
+                                leadingAccessory: { type: "icon", icon: d.SettingsIcon },
+                                action: () => (0, m.openUserSettings)(p.X.CLIPS_PANEL),
+                            }),
                         }),
-                    }),
                 ],
             });
         },

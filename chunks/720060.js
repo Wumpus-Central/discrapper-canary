@@ -826,8 +826,8 @@ function e2(e) {
 n(600253);
 var e5 = n(741934);
 n(926675);
-var e8 = n(305866),
-    e9 = n(55999),
+var e9 = n(305866),
+    e8 = n(55999),
     e6 = n(229087),
     e7 = n(394245),
     e4 = n(382701),
@@ -952,7 +952,7 @@ function te(e) {
                               (0, i.jsx)(e6.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
-                  u && (0, i.jsx)(e9.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
+                  u && (0, i.jsx)(e8.A, { tags: o, onTagsChange: R, onOpen: T, onClose: S, variant: "filled", ref: I }),
               ],
           })
         : null;
@@ -974,7 +974,7 @@ function tt(e) {
               onRequestOpen: () => a(!0),
               onRequestClose: () => a(!1),
               renderPopout: () =>
-                  (0, i.jsx)(e8.l, {
+                  (0, i.jsx)(e9.l, {
                       className: e3.Kt,
                       "aria-label": o,
                       returnRef: t,
@@ -1490,7 +1490,7 @@ function tU(e) {
                 (0, $.mM)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e(459368),
+                            n.e(409495),
                             n.e(685432),
                             n.e(269714),
                             n.e(19385),
@@ -1795,7 +1795,7 @@ function t$(e) {
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(e8.l, {
+            return (0, i.jsx)(e9.l, {
                 className: tJ.C2,
                 "aria-label": v.intl.string(v.t.uqw8wK),
                 children: (0, i.jsxs)(tW.iS, {
@@ -1881,20 +1881,20 @@ function t5(e) {
         r = d.useMemo(() => ({ expanded: a, setExpanded: s }), [a]);
     return (0, i.jsx)(t2.Provider, { value: r, children: n });
 }
-function t8() {
+function t9() {
     let e = d.useContext(t2);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var t9 = n(67438);
+var t8 = n(67438);
 function t6(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
         a = l ? v.intl.string(v.t["3FdPBT"]) : v.intl.format(v.t.W8K2GH, { maxGames: n });
     return (0, i.jsxs)("div", {
-        className: l ? t9.O : t9.k,
+        className: l ? t8.O : t8.k,
         children: [
             l && (0, i.jsx)(t0, { widget: t, widgetType: t.type }),
             (0, i.jsx)(g.E, { variant: "body-xs/normal", color: "text-subtle", children: a }),
@@ -1948,7 +1948,7 @@ function nl(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, nt.r)(),
         r = s(t),
-        { expanded: o, setExpanded: d } = t8(),
+        { expanded: o, setExpanded: d } = t9(),
         c = o ? a : a.slice(0, 2),
         u = a.length > 2,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2115,7 +2115,7 @@ function nj(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, nt.r)(),
         r = s(t),
-        { expanded: o, setExpanded: d } = t8(),
+        { expanded: o, setExpanded: d } = t9(),
         c = o ? a : a.slice(0, 8),
         u = a.length > 8,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2210,7 +2210,7 @@ function nC(e) {
 function nA(e) {
     let { userId: t, widgetType: n, ...l } = e,
         { games: a, onAddGame: s } = (0, tq.S)(n),
-        { setExpanded: r } = t8(),
+        { setExpanded: r } = t9(),
         { trackUserProfileEditAction: o } = (0, eK.NJ)(),
         c = d.useCallback(
             (e) => {
@@ -2250,7 +2250,7 @@ function nN(e) {
 }
 function ny(e) {
     let { widget: t, user: n, allowEditing: l, disableInteraction: a, ...s } = e,
-        { setExpanded: r } = t8(),
+        { setExpanded: r } = t9(),
         { shouldShowSuggestions: o, handleDismissSuggestions: c } = (function (e) {
             let [t, n] = d.useState(!1),
                 i = eV(e.type),

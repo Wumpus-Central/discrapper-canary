@@ -13917,7 +13917,7 @@ let SW = (0, h.Qx)(S.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
         if (null == i) return;
         let l = (0, SY.Xc)(e);
         (0, lN.mM)(async () => {
-            let { default: e } = await Promise.all([n.e(26411), n.e(562041), n.e(341996)]).then(n.bind(n, 32167));
+            let { default: e } = await Promise.all([n.e(462955), n.e(562041), n.e(341996)]).then(n.bind(n, 32167));
             return (t) =>
                 (0, p.jsx)(e, { ...t, direction: i.direction, affectedGuildIds: i.affectedGuildIds, settingName: l });
         });
@@ -21041,7 +21041,7 @@ let CQ = (0, h.AK)(S.X.PROFILE_PRIVACY_TO_ACTIVITY_PRIVACY_NAVIGATOR, {
             let i = (0, SY.gS)(t, e);
             null != i &&
                 (0, lN.mM)(async () => {
-                    let { default: e } = await Promise.all([n.e(26411), n.e(562041), n.e(763786)]).then(
+                    let { default: e } = await Promise.all([n.e(462955), n.e(562041), n.e(763786)]).then(
                         n.bind(n, 413201),
                     );
                     return (t) =>

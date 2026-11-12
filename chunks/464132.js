@@ -1,28 +1,42 @@
-var e = i(855986),
-    l = i(793574),
-    a = i(818349),
-    p = i(419490),
-    c = i(489496);
-function s(n) {
-    let t = (0, a.K)(n),
-        { clipsEnabled: i } = p.Ay.getState().clipsSettings;
-    (null != t.enableAutoclipping &&
-        t.enableAutoclipping !== p.Ay.getEnableAutoclipping() &&
-        c.uL(t.enableAutoclipping, !0, l.A.CLIPS_SETTINGS),
-        t.clipsEnabled !== i &&
-            c.yO({ clipsEnabled: t.clipsEnabled, trackAnalytics: !0, analyticsLocation: l.A.CLIPS_SETTINGS }));
-}
-i.d(
-    t,
+var i = l(582128),
+    n = l(855986),
+    a = l(793574),
+    c = l(287809),
+    p = l(818349),
+    s = l(734066),
+    u = l(419490),
+    b = l(489496);
+l.d(
+    e,
     {},
     {
         U: function () {
-            return {
-                value: (0, e.bG)([p.Ay], () =>
-                    (0, a.r)(p.Ay.getState().clipsSettings.clipsEnabled, p.Ay.getEnableAutoclipping()),
+            let t = (0, n.bG)([u.Ay, c.default], () =>
+                    (0, p.r)(
+                        u.Ay.getState().clipsSettings.clipsEnabled && (0, s.qj)(c.default.getCurrentUser()),
+                        u.Ay.getEnableAutoclipping(),
+                    ),
                 ),
-                onChange: s,
-            };
+                e = i.useCallback(
+                    (e) => {
+                        e !== t &&
+                            (function (t) {
+                                let e = (0, p.K)(t),
+                                    { clipsEnabled: l } = u.Ay.getState().clipsSettings;
+                                (null != e.enableAutoclipping &&
+                                    e.enableAutoclipping !== u.Ay.getEnableAutoclipping() &&
+                                    b.uL(e.enableAutoclipping, !0, a.A.CLIPS_SETTINGS),
+                                    e.clipsEnabled !== l &&
+                                        b.yO({
+                                            clipsEnabled: e.clipsEnabled,
+                                            trackAnalytics: !0,
+                                            analyticsLocation: a.A.CLIPS_SETTINGS,
+                                        }));
+                            })(e);
+                    },
+                    [t],
+                );
+            return { value: t, onChange: e };
         },
     },
 );
