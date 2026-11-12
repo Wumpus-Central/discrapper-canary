@@ -68,7 +68,7 @@ class a extends i.A {
                           collectibles:
                               null != (i = e.tenant_metadata).collectibles
                                   ? (function (e) {
-                                        var t, n, i;
+                                        var t, n, i, a;
                                         switch (e.type) {
                                             case r.hE.COLLECT_AND_CLAIM:
                                                 switch (e.subtype) {
@@ -139,51 +139,51 @@ class a extends i.A {
                                                 }
                                                 break;
                                             case r.hE.TARGETED_OFFER:
-                                                let a, o, d, c, u;
+                                                let o, d, c, u, _;
                                                 return (
                                                     (i = e.reward),
-                                                    (a = i?.storefront?.nagbar),
-                                                    (o = i?.checkout?.offer_notice),
-                                                    (c =
-                                                        null == (d = i?.collected?.override_title) || "" === d
+                                                    (o = i?.storefront?.nagbar),
+                                                    (d = i?.checkout?.offer_notice),
+                                                    (u =
+                                                        null == (c = i?.collected?.override_title) || "" === c
                                                             ? void 0
-                                                            : d),
-                                                    (u = i?.flavor),
-                                                    null == a && null == o && null == c && null == u
+                                                            : c),
+                                                    (_ = i?.flavor),
+                                                    null == o && null == d && null == u && null == _
                                                         ? { type: r.hE.TARGETED_OFFER }
                                                         : {
                                                               type: r.hE.TARGETED_OFFER,
                                                               reward: {
                                                                   storefront:
-                                                                      null != a
+                                                                      null != o
                                                                           ? {
                                                                                 nagbar: {
-                                                                                    headerText: a.header_text ?? void 0,
+                                                                                    headerText: o.header_text ?? void 0,
                                                                                     cta:
-                                                                                        null != a.cta
+                                                                                        null != o.cta
                                                                                             ? {
                                                                                                   text:
-                                                                                                      a.cta.text ??
+                                                                                                      o.cta.text ??
                                                                                                       void 0,
                                                                                               }
                                                                                             : void 0,
                                                                                     helpCenterId:
-                                                                                        a.help_center_id ?? void 0,
-                                                                                    icon: a.icon ?? void 0,
+                                                                                        o.help_center_id ?? void 0,
+                                                                                    icon: o.icon ?? void 0,
                                                                                 },
                                                                             }
                                                                           : void 0,
                                                                   checkout:
-                                                                      null != o
+                                                                      null != d
                                                                           ? {
                                                                                 offerNotice: {
-                                                                                    icon: o.icon ?? void 0,
-                                                                                    text: o.text ?? void 0,
+                                                                                    icon: d.icon ?? void 0,
+                                                                                    text: d.text ?? void 0,
                                                                                 },
                                                                             }
                                                                           : void 0,
-                                                                  collected: null != c ? { overrideTitle: c } : void 0,
-                                                                  flavor: u ?? void 0,
+                                                                  collected: null != u ? { overrideTitle: u } : void 0,
+                                                                  flavor: _ ?? void 0,
                                                               },
                                                           }
                                                 );
@@ -201,6 +201,15 @@ class a extends i.A {
                                                                 : void 0,
                                                     };
                                                 })(e);
+                                            case r.hE.COLLECTION_SEQUENCED_OFFER:
+                                                return (
+                                                    (a = e),
+                                                    {
+                                                        type: r.hE.COLLECTION_SEQUENCED_OFFER,
+                                                        collectionId: a.collection_id,
+                                                        position: a.position,
+                                                    }
+                                                );
                                         }
                                     })(i.collectibles)
                                   : void 0,
@@ -283,6 +292,10 @@ n.d(
         XF: function (e) {
             let t = e?.tenantMetadata?.collectibles;
             return t?.type === r.hE.COLLECT_AND_CLAIM ? t : void 0;
+        },
+        d3: function (e) {
+            let t = e?.tenantMetadata?.collectibles;
+            return t?.type === r.hE.COLLECTION_SEQUENCED_OFFER ? t : void 0;
         },
         ml: function (e) {
             let t = e?.tenantMetadata?.collectibles;
