@@ -1,16 +1,17 @@
 (n(321073), n(134528), n(947204));
 var l = n(714414),
     i = n(152959),
-    r = n(339200);
-let s = new Set(["line", "blockQuote"]),
-    a = { bold: "strong", italic: "em", underline: "u", strikethrough: "s", spoiler: "spoiler" },
-    o = new WeakMap(),
-    u = { blocks: [], codeBlocks: [] };
-function c(e, t) {
+    r = n(677413),
+    s = n(339200);
+let a = new Set(["line", "blockQuote"]),
+    o = { bold: "strong", italic: "em", underline: "u", strikethrough: "s", spoiler: "spoiler" },
+    u = new WeakMap(),
+    c = { blocks: [], codeBlocks: [] };
+function d(e, t) {
     if (t(e)) return e;
     for (let n of e.children) {
         if ("node" !== n.type) continue;
-        let e = c(n, t);
+        let e = d(n, t);
         if (null != e) return e;
     }
     return null;
@@ -25,71 +26,71 @@ n.d(
         p0: function (e) {
             let t = e.nativeMarkdownSyntax;
             if (null == t) return null;
-            if (!(0, i.YK)()) return u;
-            let n = o.get(e);
+            if (!(0, i.YK)()) return c;
+            let n = u.get(e);
             if (null != n && n.children === e.children && n.syntax === t) return n.document;
-            let d = (function (e) {
+            let h = (function (e) {
                     let t = [[]];
                     for (let n = 0; n < e.length; n++) {
                         let l = e[n];
-                        r.AS.isInTypes(l, s)
+                        s.AS.isInTypes(l, a)
                             ? t[t.length - 1].push({
                                   index: n,
                                   prefix: "blockQuote" === l.type ? "> " : "",
-                                  serializedChildren: r.cv.serializeMarkdownChildren(l),
+                                  serializedChildren: s.cv.serializeMarkdownChildren(l),
                               })
                             : t[t.length - 1].length > 0 && t.push([]);
                     }
                     return t.filter((e) => e.length > 0);
                 })(e.children),
-                h = e.children
+                m = e.children
                     .map((e) => {
                         var t;
-                        return r.AS.isInTypes(e, s)
-                            ? `\x01${("blockQuote" === (t = e).type ? "> " : "") + r.cv.serializeMarkdownChildren(t).join("")}`
+                        return s.AS.isInTypes(e, a)
+                            ? `\x01${("blockQuote" === (t = e).type ? "> " : "") + s.cv.serializeMarkdownChildren(t).join("")}`
                             : "\x02";
                     })
                     .join("\n");
-            if (null != n && n.key === h && n.syntax === t) return ((n.children = e.children), n.document);
-            let m = (function (e, t, n) {
+            if (null != n && n.key === m && n.syntax === t) return ((n.children = e.children), n.document);
+            let f = (function (e, t, n) {
                 let i = { blocks: Array(t).fill(null), codeBlocks: [] },
-                    r = 0;
+                    s = 0;
                 for (let t of e)
-                    r +=
+                    s +=
                         (function (e, t, n, i) {
-                            let r,
-                                s = t.map((e) => {
+                            let s,
+                                a = t.map((e) => {
                                     let { prefix: t, serializedChildren: n } = e;
                                     return t + n.join("");
                                 }),
-                                o = s.join("\n");
+                                u = a.join("\n");
                             try {
-                                if (((r = (0, l.IS)(o, i)), o.includes("```"))) {
-                                    let e = (0, l.IS)(o + "\n```", i);
-                                    null != c(e, (t) => "code_block" === t.kind.type && t.span.end === e.span.end) &&
-                                        (r = e);
+                                if (((s = (0, l.IS)(u, i)), u.includes("```"))) {
+                                    let e = (0, l.IS)(u + "\n```", i);
+                                    null != d(e, (t) => "code_block" === t.kind.type && t.span.end === e.span.end) &&
+                                        (s = e);
                                 }
                             } catch {
-                                return o.length;
+                                return u.length;
                             }
-                            let u = [],
-                                d = 0;
+                            let c = [],
+                                h = 0;
                             for (let e = 0; e < t.length; e++) {
-                                let n = d + s[e].length;
-                                (u.push({ start: d, contentStart: d + t[e].prefix.length, end: n }), (d = n + 1));
+                                let n = h + a[e].length;
+                                (c.push({ start: h, contentStart: h + t[e].prefix.length, end: n }), (h = n + 1));
                             }
-                            function h(e) {
-                                let t = u.findIndex((t) => {
+                            function m(e) {
+                                let t = c.findIndex((t) => {
                                     let { end: n } = t;
                                     return e <= n;
                                 });
                                 return -1 === t ? null : t;
                             }
-                            let m = new Set();
+                            let f = new Set();
                             for (let l of (function (e) {
                                 let t = [];
                                 return (
-                                    c(e, (e) => {
+                                    d(e, (e) => {
                                         if ("code_block" !== e.kind.type) return !1;
                                         let n = e.children.filter((e) => "token" === e.type),
                                             l = n.filter((e) => "code_fence" === e.kind.type),
@@ -111,21 +112,21 @@ n.d(
                                     }),
                                     t
                                 );
-                            })(r)) {
-                                let i = h(l.openStart);
+                            })(s)) {
+                                let i = m(l.openStart);
                                 if (null == i) continue;
-                                let r = h(l.closeStart);
-                                for (let e = i + 1; e < (r ?? t.length); e++) m.add(e);
+                                let r = m(l.closeStart);
+                                for (let e = i + 1; e < (r ?? t.length); e++) f.add(e);
                                 e.codeBlocks.push({
                                     openLine: t[i].index,
                                     closeLine: null != r ? t[r].index : null,
                                     lang: l.lang,
                                     onOwnLine: l.onOwnLine,
                                     openEnd: n + l.openEnd,
-                                    closeStart: n + Math.min(l.closeStart, o.length),
+                                    closeStart: n + Math.min(l.closeStart, u.length),
                                 });
                             }
-                            let f = (function (e) {
+                            let p = (function (e) {
                                     let t = [];
                                     function n(e, n) {
                                         let l = t.at(-1);
@@ -150,7 +151,7 @@ n.d(
                                                 s = i;
                                             switch (r.type) {
                                                 case "modifier":
-                                                    s = [...i, a[r.value.kind]];
+                                                    s = [...i, o[r.value.kind]];
                                                     break;
                                                 case "code":
                                                     s = [...i, "inlineCode"];
@@ -161,101 +162,115 @@ n.d(
                                                 case "small":
                                                     s = [...i, "subtext"];
                                             }
-                                            let o = !1,
+                                            let a = !1,
                                                 u = !1;
                                             for (let i = 0; i < t.children.length; i++) {
-                                                let a = t.children[i];
-                                                if ("node" === a.type) {
-                                                    (e(a, s), (u = !1));
+                                                let o = t.children[i];
+                                                if ("node" === o.type) {
+                                                    (e(o, s), (u = !1));
                                                     continue;
                                                 }
-                                                switch (("whitespace" !== a.kind.type && (u = !1), a.kind.type)) {
+                                                switch (("whitespace" !== o.kind.type && (u = !1), o.kind.type)) {
                                                     case "delimiter":
-                                                        l(a, a.kind.value.side, s);
+                                                        l(o, o.kind.value.side, s);
                                                         break;
                                                     case "code_delimiter":
-                                                        l(a, 0 === i ? "open" : "close", s);
+                                                        l(o, 0 === i ? "open" : "close", s);
                                                         break;
                                                     case "escape":
-                                                        l(a, "open", []);
+                                                        l(o, "open", []);
                                                         break;
                                                     case "code_fence":
-                                                        n(a, ["codeBlockSyntax"]);
+                                                        n(o, ["codeBlockSyntax"]);
                                                         break;
                                                     case "language":
-                                                        n(a, ["codeBlockLang"]);
+                                                        n(o, ["codeBlockLang"]);
                                                         break;
                                                     case "code_content":
-                                                        n(a, "code_block" === r.type ? ["codeBlockText"] : s);
+                                                        n(o, "code_block" === r.type ? ["codeBlockText"] : s);
                                                         break;
                                                     case "small_marker":
-                                                        (l(a, "open", s), (u = !0));
+                                                        (l(o, "open", s), (u = !0));
                                                         break;
                                                     case "link_open":
-                                                        l(a, "open", s);
+                                                        l(o, "open", s);
                                                         break;
                                                     case "link_close":
-                                                        (l(a, "close", s), (o = !0));
+                                                        (l(o, "close", s), (a = !0));
                                                         break;
                                                     case "destination_open":
                                                     case "destination_close":
                                                     case "title":
-                                                        l(a, "close", s);
+                                                        l(o, "close", s);
                                                         break;
                                                     case "url":
-                                                        o ? l(a, "close", s) : n(a, s);
+                                                        a ? l(o, "close", s) : n(o, s);
                                                         break;
                                                     case "whitespace":
-                                                        u ? l(a, "open", s) : o ? l(a, "close", s) : n(a, s);
+                                                        u ? l(o, "open", s) : a ? l(o, "close", s) : n(o, s);
                                                         break;
                                                     case "line_ending":
                                                     case "indent":
                                                     case "quote_prefix":
                                                     case "list_marker":
                                                     case "heading_marker":
-                                                        n(a, []);
+                                                        n(o, []);
                                                         break;
                                                     default:
-                                                        n(a, s);
+                                                        n(o, s);
                                                 }
                                             }
                                         })(e, []),
                                         t
                                     );
-                                })(r),
-                                p = 0;
+                                })(s),
+                                g = 0;
                             for (let l = 0; l < t.length; l++) {
-                                let { contentStart: i, end: r } = u[l],
-                                    s = [];
-                                for (; p < f.length && f[p].start < r;) {
-                                    let e = f[p],
+                                let { contentStart: i, end: s } = c[l],
+                                    o = [];
+                                for (; g < p.length && p[g].start < s;) {
+                                    let e = p[g],
                                         t = e.start + e.text.length,
                                         n = Math.max(e.start, i),
-                                        a = Math.min(t, r);
+                                        r = Math.min(t, s);
                                     if (
-                                        (a > n &&
-                                            !(m.has(l) && e.attributes.includes("codeBlockText")) &&
-                                            s.push({
+                                        (r > n &&
+                                            !(f.has(l) && e.attributes.includes("codeBlockText")) &&
+                                            o.push({
                                                 ...e,
-                                                text: e.text.slice(n - e.start, a - e.start),
+                                                text: e.text.slice(n - e.start, r - e.start),
                                                 start: n - i,
                                             }),
-                                        t > r)
+                                        t > s)
                                     )
                                         break;
-                                    p++;
+                                    g++;
                                 }
+                                let u = 0 === t[l].index && "" === t[l].prefix && r.U1.test(a[l]);
                                 e.blocks[t[l].index] = {
                                     start: n + i,
                                     serializedChildren: t[l].serializedChildren,
-                                    entries: s,
+                                    entries: u
+                                        ? o.flatMap((e) => {
+                                              let t = r.f5.length - e.start;
+                                              if (t <= 0) return [e];
+                                              let n = {
+                                                  ...e,
+                                                  text: e.text.slice(0, t),
+                                                  attributes: [...e.attributes, "silentPrefix"],
+                                              };
+                                              return t >= e.text.length
+                                                  ? [n]
+                                                  : [n, { ...e, text: e.text.slice(t), start: r.f5.length }];
+                                          })
+                                        : o,
                                 };
                             }
-                            return o.length;
-                        })(i, t, r, n) + 1;
+                            return u.length;
+                        })(i, t, s, n) + 1;
                 return i;
-            })(d, e.children.length, t);
-            return (o.set(e, { children: e.children, syntax: t, key: h, document: m }), m);
+            })(h, e.children.length, t);
+            return (u.set(e, { children: e.children, syntax: t, key: m, document: f }), f);
         },
         tA: function (e, t) {
             let n = (function (e, t) {
