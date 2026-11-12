@@ -1,5 +1,5 @@
-t.r(p);
+p.r(t);
 let a = JSON.parse(
-    '{"9dS734":["Checkpoint QA"],"yLZjcu":["Open Checkpoint"],"kPBZ5M":["Open Checkpoint (Fake Data)"],"UwiUbM":["Open Checkpoint (Global Stats)"],"BYW9oX":["Open Checkpoint (Zero Stats)"],"2DL3aX":["Reset Checkpoint"]}',
+    '{"j5X4PU":["Compact Assets"],"9dS734":["Checkpoint QA"],"FbmMyu":["No Character"],"yLZjcu":["Open Checkpoint"],"kPBZ5M":["Open Checkpoint (Fake Data)"],"UwiUbM":["Open Checkpoint (Global Stats)"],"58TARv":["Open Checkpoint (Unavailable)"],"BYW9oX":["Open Checkpoint (Zero Stats)"],"r0B3ck":["Options"],"2DL3aX":["Reset Checkpoint"],"kXGgZf":["Settings"]}',
 );
-t.d(p, {}, { default: a });
+p.d(t, {}, { default: a });
