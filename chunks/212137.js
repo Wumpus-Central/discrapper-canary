@@ -1,12 +1,12 @@
-var l = n(288106),
-    r = n(65238),
-    s = n(5377);
+var l = n(65238),
+    r = n(5377),
+    s = n(248180);
 n.d(
     t,
     {},
     {
         RJ: function (e) {
-            return (0, s.Tf)(Date.now(), e);
+            return (0, r.Tf)(Date.now(), e);
         },
         lF: function (e) {
             let { days: t, hours: n, minutes: l, seconds: r } = e;
@@ -14,20 +14,20 @@ n.d(
         },
         rX: function (e, t) {
             let n = Date.now(),
-                s = (0, r.NN)(e),
-                a = e?.rewardConfig?.discount,
+                r = (0, l.NN)(e),
+                a = (0, s.S)(e),
                 i = e?.endsAt;
             return null == e ||
                 null == t ||
-                null == s ||
-                s.collectionId !== t ||
-                a?.type !== l.RP.PERCENT ||
-                a.amount <= 0 ||
+                null == r ||
+                r.collectionId !== t ||
+                null == a ||
+                a <= 0 ||
                 null == i ||
                 i.getTime() <= n ||
                 (null != e.startsAt && e.startsAt.getTime() > n)
                 ? null
-                : { percentOff: a.amount, endsAt: i, countdownStyle: s.countdownStyle };
+                : { percentOff: a, endsAt: i, countdownStyle: r.countdownStyle };
         },
         z0: function (e) {
             let { days: t, hours: n, minutes: l, seconds: r } = e;

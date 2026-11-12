@@ -2,35 +2,32 @@ var e = r(288106),
     u = r(604913),
     l = r(993408),
     i = r(623373),
-    a = r(792996);
-function o(n) {
-    return n?.tenantMetadata?.collectibles?.type === u.hE.TARGETED_OFFER;
-}
+    a = r(248180),
+    o = r(792996);
 function c(n) {
-    let t = n?.rewardConfig?.discount;
-    return t?.type === e.RP.PERCENT ? t.amount : null;
+    return n?.tenantMetadata?.collectibles?.type === u.hE.TARGETED_OFFER;
 }
 r.d(
     t,
     {},
     {
-        Dj: o,
+        Dj: c,
         Jl: function (n) {
-            if (!o(n)) return !1;
+            if (!c(n)) return !1;
             let t = n?.rewardConfig?.discount;
             return null != t && t.fiatEnabled;
         },
         MX: function (n) {
-            return o(n) && n?.rewardConfig?.discount != null
-                ? 100 === c(n)
-                    ? a.intl.string(a.t["302tKP"])
-                    : a.intl.string(a.t["7EGhnE"])
+            return c(n) && n?.rewardConfig?.discount != null
+                ? 100 === (0, a.S)(n)
+                    ? o.intl.string(o.t["302tKP"])
+                    : o.intl.string(o.t["7EGhnE"])
                 : null;
         },
         PY: function (n, t) {
             let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-            if (o(r)) return r;
-            if (null == t || t.rewardStatus !== e.GM.EARNED || !o(t)) return null;
+            if (c(r)) return r;
+            if (null == t || t.rewardStatus !== e.GM.EARNED || !c(t)) return null;
             let u = t.rewardConfig?.discount;
             return null == u ||
                 (0, l.G0)(n) ||
@@ -40,7 +37,6 @@ r.d(
                 ? null
                 : t;
         },
-        Sd: c,
         aJ: function (n) {
             return n === u.Pz.NITRO ? "nitro-pink" : "collectibles";
         },

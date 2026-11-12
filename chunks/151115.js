@@ -17,5 +17,9 @@ n.d(
                     return null;
             }
         },
+        g: function (e, t) {
+            let n = t?.rewardConfig?.discount?.id;
+            return null != n && e?.getDiscountIdIfExists() === String(n);
+        },
     },
 );
