@@ -238,6 +238,7 @@ function z(e) {
                                   value: Array.isArray(t) ? t : [],
                                   onSelectionChange: (t) => $(e.key, t),
                                   selectionMode: "multiple",
+                                  wrapTags: !0,
                                   disabled: _,
                                   fullWidth: !0,
                               })
@@ -516,7 +517,13 @@ function O(e) {
         className: R._6,
         children: [
             !0 === t.multiple
-                ? (0, n.jsx)(m.Z, { ...g, selectionMode: "multiple", value: c, onSelectionChange: (e) => i(e ?? []) })
+                ? (0, n.jsx)(m.Z, {
+                      ...g,
+                      selectionMode: "multiple",
+                      wrapTags: !0,
+                      value: c,
+                      onSelectionChange: (e) => i(e ?? []),
+                  })
                 : (0, n.jsx)(m.Z, { ...g, selectionMode: "single", value: c[0], onSelectionChange: (e) => i(e ?? "") }),
             null != l ? (0, n.jsx)(b.A, { text: l, variant: "body-xs/normal", color: "text-muted" }) : null,
         ],
