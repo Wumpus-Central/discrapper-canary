@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => C }));
+(n.r(t), n.d(t, { default: () => F }));
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -6,19 +6,19 @@ var r = n(477900),
     s = n(95362),
     c = n(834730),
     h = n(9578),
-    u = n(889558);
+    o = n(889558);
 n(321073);
-var o = n(376347),
+var u = n(376347),
     d = n(905032),
-    p = n(486889),
-    g = n(694403),
-    m = n(417964);
-let x = new o.A({ html: !1, linkify: !1, typographer: !1 }).use(d.h, {
+    m = n(486889),
+    p = n(694403),
+    g = n(417964);
+let f = new u.A({ html: !1, linkify: !1, typographer: !1 }).use(d.h, {
         allow_space: !1,
         allow_digits: !1,
         allow_labels: !1,
     }),
-    f = new Set([
+    x = new Set([
         "h1",
         "h2",
         "h3",
@@ -42,7 +42,7 @@ let x = new o.A({ html: !1, linkify: !1, typographer: !1 }).use(d.h, {
     ]),
     k = /(?:https?|steam):\/\/[^\s<]/i;
 function y(e) {
-    return k.test((0, m.El)(e));
+    return k.test((0, g.El)(e));
 }
 function b(e) {
     return { type: "element", tag: "span", attrs: {}, children: e };
@@ -56,17 +56,17 @@ function j(e) {
 }
 function _(e) {
     let { attrs: t, children: n } = e,
-        r = (0, g.W1)(t.href ?? "");
+        r = (0, p.W1)(t.href ?? "");
     if ("autolink" === e.markup)
         return null == r ? j(e) : { type: "link", href: r.target, title: r.displayTarget, children: [r.displayTarget] };
-    let l = (0, m.Fd)(e.text).trim(),
-        a = (0, m.Fd)(t.title ?? "").trim();
-    if (null == r || !0 === e.hasMath || (n.length > 0 && "" === l) || y(l) || y(a) || (0, p.F9)(l) || (0, p.F9)(a))
+    let l = (0, g.Fd)(e.text).trim(),
+        a = (0, g.Fd)(t.title ?? "").trim();
+    if (null == r || !0 === e.hasMath || (n.length > 0 && "" === l) || y(l) || y(a) || (0, m.F9)(l) || (0, m.F9)(a))
         return j(e);
     let i = "" !== a ? a : "" !== l ? l : r.displayTarget;
     return { type: "link", href: r.target, title: i, children: n.length > 0 ? n : [r.displayTarget] };
 }
-function N(e) {
+function w(e) {
     let t = e.pop(),
         n = e[e.length - 1];
     if (((n.text += t.text), !0 === t.hasMath && (n.hasMath = !0), t.hidden)) n.children.push(...t.children);
@@ -74,7 +74,7 @@ function N(e) {
         n.children.push(
             "a" === t.tag
                 ? _(t)
-                : f.has(t.tag)
+                : x.has(t.tag)
                   ? {
                         type: "element",
                         tag: t.tag,
@@ -87,16 +87,34 @@ function N(e) {
         );
 }
 var M = n(13746);
+let N = [
+    "\\def",
+    "\\gdef",
+    "\\edef",
+    "\\xdef",
+    "\\global",
+    "\\long",
+    "\\let",
+    "\\futurelet",
+    "\\newcommand",
+    "\\renewcommand",
+    "\\providecommand",
+    "\\show",
+    "\\message",
+    "\\errmessage",
+];
 function v(e, t, n) {
-    if (e.length > 2048 || n.expressions <= 0 || e.length > n.characters) return null;
+    if (e.length > 2048 || n.expressions <= 0 || e.length > n.characters || n.elements <= 0 || n.milliseconds <= 0)
+        return null;
     (n.expressions--, (n.characters -= e.length));
     let r = 0;
     for (let t of e) {
         if ("{" === t && ++r > 64) return null;
         "}" === t && (r = Math.max(0, r - 1));
     }
+    let l = performance.now();
     try {
-        let n = M.Ay.renderToString(e, {
+        let r = M.Ay.renderToString(e, {
             displayMode: t,
             throwOnError: !1,
             trust: !1,
@@ -104,33 +122,64 @@ function v(e, t, n) {
             output: "htmlAndMathml",
             maxSize: 20,
             maxExpand: 1e3,
+            macros: (function () {
+                let e = {};
+                for (let t of N)
+                    e[t] = () => {
+                        throw new M.Ay.ParseError(`${t} is disabled`);
+                    };
+                return e;
+            })(),
         });
-        return n.includes('class="katex-error"') ? null : n;
+        if (r.includes('class="katex-error"')) return null;
+        let l = (function (e, t) {
+            let n = 0,
+                r = 0,
+                l = 0;
+            for (let a = e.indexOf("<"); -1 !== a; a = e.indexOf("<", a + 1)) {
+                if ("/" === e[a + 1]) {
+                    r--;
+                    continue;
+                }
+                if (
+                    (n++,
+                    (l = Math.max(l, r + 1)),
+                    "/" !== e[e.indexOf(">", a) - 1] && r++,
+                    n > t.elements || l > t.depth)
+                )
+                    return null;
+            }
+            return { elements: n, depth: l };
+        })(r, { elements: Math.min(1e4, n.elements), depth: 256 });
+        if (null == l) return null;
+        return ((n.elements -= l.elements), r);
     } catch {
         return null;
+    } finally {
+        n.milliseconds -= performance.now() - l;
     }
 }
-var w = n(540168),
-    S = n(176002),
+var S = n(540168),
+    E = n(176002),
     T = n(165648);
-function E(e) {
-    let { content: t, html: n } = e;
-    return null == n
-        ? (0, r.jsx)("code", { className: "inline", children: t })
-        : (0, r.jsx)("span", { className: S.Dy, dangerouslySetInnerHTML: { __html: n } });
-}
 function A(e) {
     let { content: t, html: n } = e;
     return null == n
-        ? (0, r.jsx)(w.d, { language: "latex", text: t })
-        : (0, r.jsx)(s.Ip, {
-              className: i()(S.Dy, S.$S),
-              orientation: "auto",
-              tabIndex: 0,
-              children: (0, r.jsx)("span", { className: S.uM, dangerouslySetInnerHTML: { __html: n } }),
-          });
+        ? (0, r.jsx)("code", { className: "inline", children: t })
+        : (0, r.jsx)("span", { className: E.Dy, dangerouslySetInnerHTML: { __html: n } });
 }
 function C(e) {
+    let { content: t, html: n } = e;
+    return null == n
+        ? (0, r.jsx)(S.d, { language: "latex", text: t })
+        : (0, r.jsx)(s.Ip, {
+              className: i()(E.Dy, E.$S),
+              orientation: "auto",
+              tabIndex: 0,
+              children: (0, r.jsx)("span", { className: E.uM, dangerouslySetInnerHTML: { __html: n } }),
+          });
+}
+function F(e) {
     let { text: t, notice: n } = e,
         a = l.useMemo(
             () =>
@@ -143,13 +192,13 @@ function C(e) {
                                     return (function (t, n, a) {
                                         let { tag: s, attrs: c } = t,
                                             h = e(t.children, a),
-                                            u = i()(S.p_, { [S.J2]: !0 === t.loose });
+                                            o = i()(E.p_, { [E.J2]: !0 === t.loose });
                                         switch (s) {
                                             case "blockquote":
                                                 return (0, r.jsxs)(
                                                     "div",
                                                     {
-                                                        className: i()(T.h, S.aV),
+                                                        className: i()(T.h, E.aV),
                                                         children: [
                                                             (0, r.jsx)("div", { className: T.r }),
                                                             (0, r.jsx)("blockquote", { children: h }),
@@ -158,7 +207,7 @@ function C(e) {
                                                     n,
                                                 );
                                             case "ul":
-                                                return (0, r.jsx)("ul", { className: u, children: h }, n);
+                                                return (0, r.jsx)("ul", { className: o, children: h }, n);
                                             case "ol": {
                                                 let e = null != c.start ? parseInt(c.start) : 0 / 0,
                                                     t = Number.isNaN(e) ? 1 : e,
@@ -166,7 +215,7 @@ function C(e) {
                                                 return (0, r.jsx)(
                                                     "ol",
                                                     {
-                                                        className: u,
+                                                        className: o,
                                                         start: 1 === t ? void 0 : t,
                                                         style: { "--totalCharacters": l },
                                                         children: h,
@@ -194,7 +243,7 @@ function C(e) {
                                         {
                                             href: t.href,
                                             title: t.title,
-                                            trusted: () => (0, u.m)(t.href, t.title),
+                                            trusted: () => (0, o.m)(t.href, t.title),
                                             children: e(t.children, a),
                                         },
                                         n,
@@ -202,11 +251,11 @@ function C(e) {
                                 case "inlineCode":
                                     return (0, r.jsx)("code", { className: "inline", children: t.content }, n);
                                 case "inlineMath":
-                                    return (0, r.jsx)(E, { content: t.content, html: v(t.content, t.display, a) }, n);
+                                    return (0, r.jsx)(A, { content: t.content, html: v(t.content, t.display, a) }, n);
                                 case "mathBlock":
-                                    return (0, r.jsx)(A, { content: t.content, html: v(t.content, !0, a) }, n);
+                                    return (0, r.jsx)(C, { content: t.content, html: v(t.content, !0, a) }, n);
                                 case "codeBlock":
-                                    return (0, r.jsx)(w.d, { language: t.language, text: t.content }, n);
+                                    return (0, r.jsx)(S.d, { language: t.language, text: t.content }, n);
                                 case "br":
                                     return (0, r.jsx)("br", {}, n);
                                 case "hr":
@@ -252,7 +301,7 @@ function C(e) {
                                 continue;
                             }
                             if (-1 === a.nesting) {
-                                r.length > 1 && N(r);
+                                r.length > 1 && w(r);
                                 continue;
                             }
                             switch (a.type) {
@@ -324,18 +373,18 @@ function C(e) {
                                     "" !== a.content && (i.children.push(a.content), (i.text += a.content));
                             }
                         }
-                        for (; r.length > 1;) N(r);
+                        for (; r.length > 1;) w(r);
                         return (n.remaining <= 0 && r[0].children.push("\u2026"), r[0].children);
-                    })(x.parse(t, {}), { remaining: 5e3 }),
-                    { expressions: 128, characters: 16384 },
+                    })(f.parse(t, {}), { remaining: 5e3 }),
+                    { expressions: 128, characters: 16384, elements: 5e4, milliseconds: 250 },
                 ),
             [t],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", { className: i()(T.PT, S.l_), children: a }),
+            (0, r.jsx)("div", { className: i()(T.PT, E.l_), children: a }),
             "" !== n
-                ? (0, r.jsx)(c.E, { variant: "body-sm/normal", color: "text-subtle", className: S.VX, children: n })
+                ? (0, r.jsx)(c.E, { variant: "body-sm/normal", color: "text-subtle", className: E.VX, children: n })
                 : null,
         ],
     });
