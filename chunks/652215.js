@@ -1830,7 +1830,7 @@ let nx = Object.freeze({
         HARMFUL_LINKS: "https://dis.gd/phish",
         SLASH_COMMANDS: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps",
         GUILD_ONBOARDING_EXAMPLES: "https://support.discord.com/hc/en-us/articles/10394859532823",
-        ROLE_SUBSCRIPTION_STORE_PAGE: (e) => `https:${window.GLOBAL_ENV.MARKETING_ENDPOINT}/servers/${e}`,
+        ROLE_SUBSCRIPTION_STORE_PAGE: (e) => `https://${tF.U2}/servers/${e}`,
         INVITES_HELP: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
         SAFETY_CENTER: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/safetycenter`,
     }),

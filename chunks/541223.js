@@ -12289,7 +12289,7 @@ let uG = function (e) {
     };
 var uD = n(840280),
     uO = n(839386);
-let uM = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/";
+let uM = `https://${ef.U2_}/servers/`;
 function uk() {
     let {
             guild: e,
