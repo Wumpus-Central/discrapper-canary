@@ -19,8 +19,6 @@ t.exports = {
     es: "otherGhost_C77viY",
     Xy: "otherRow_C77viY",
     $0: "noImage_C77viY",
-    X_: "linkConfigure_C77viY",
-    $y: "linkBuild_C77viY",
     Pu: "otherInput_C77viY",
     fI: "clarificationOpen_C77viY",
     Oh: "clarificationClosing_C77viY",

@@ -2,39 +2,57 @@
     padding-top: var(--space-12)
 }
 
-.row_grK-Uf {
+.sectionTitle_grK-Uf {
+    margin: 0
+}
+
+.link_grK-Uf {
     background: var(--background-mod-subtle);
     border-radius: var(--radius-md);
-    gap: var(--space-12);
+    flex-direction: column;
+    gap: var(--space-4);
     padding: var(--space-12)
 }
 
-.iconPlaceholder_grK-Uf,
+.link_grK-Uf,
 .row_grK-Uf {
-    align-items: center;
     display: flex
 }
 
-.iconPlaceholder_grK-Uf {
-    background: var(--background-mod-strong);
-    border-radius: calc(var(--space-40)/4);
-    flex: 0 0 auto;
-    height: var(--space-40);
-    justify-content: center;
-    width: var(--space-40)
+.row_grK-Uf {
+    align-items: center;
+    gap: var(--space-12);
+    min-height: var(--space-32)
 }
 
-.body_grK-Uf {
-    display: flex;
+.name_grK-Uf {
     flex: 1;
-    flex-direction: column;
-    gap: var(--space-4);
     min-width: 0
 }
 
 .trigger_grK-Uf {
     align-items: center;
     display: inline-flex
+}
+
+.details_grK-Uf {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0;
+    padding-inline-start: calc(var(--space-20) + var(--space-8))
+}
+
+.settings_grK-Uf {
+    align-items: center;
+    display: grid;
+    gap: var(--space-8) var(--space-12);
+    grid-template-columns: minmax(0, 1fr) calc(var(--space-160) + var(--space-16))
+}
+
+.select_grK-Uf,
+.settingLabel_grK-Uf {
+    min-width: 0
 }
 
 .ends_tfXQFl {
@@ -1084,4 +1102,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=8b0fb93320f2910c.css.map*/
+/*# sourceMappingURL=b3292b712d4db0c8.css.map*/
