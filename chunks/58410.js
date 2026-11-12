@@ -1,6 +1,7 @@
 t.exports = {
     z: "summary_NgozOX",
     zH: "details_NgozOX",
+    gz: "globalDetails_NgozOX",
     R_: "heading_NgozOX",
     Vy: "display_NgozOX",
     M1: "stats_NgozOX",
