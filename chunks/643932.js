@@ -721,10 +721,10 @@ var eZ = l(619517),
     e8 = l(516521),
     e4 = l(532197),
     e6 = l(837344);
-let e5 = { CENTER: e6.Hu, LEFT: e6.Vl };
-class e7 extends n.PureComponent {
-    static Align = e5;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e5.CENTER };
+let e7 = { CENTER: e6.Hu, LEFT: e6.Vl };
+class e5 extends n.PureComponent {
+    static Align = e7;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e7.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -1045,14 +1045,14 @@ class td extends n.PureComponent {
                 this.renderCarousel(),
                 (0, i.jsx)("div", {
                     className: tt.X$,
-                    children: (0, i.jsx)(e7, {
+                    children: (0, i.jsx)(e5, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: s,
                         onSetItem: (e) => this.setItem(e, !0),
                         paginationContainerClass: tt.XG,
-                        align: e.length < 6 ? e7.Align.LEFT : e7.Align.CENTER,
+                        align: e.length < 6 ? e5.Align.LEFT : e5.Align.CENTER,
                     }),
                 }),
             ],
@@ -1608,8 +1608,8 @@ var t1 = l(449054),
     t8 = l(664343),
     t4 = l(950305),
     t6 = l(573435),
-    t5 = l(714991),
-    t7 = l(776231),
+    t7 = l(714991),
+    t5 = l(776231),
     t2 = l(537975),
     t3 = l(882553),
     t9 = l(937495),
@@ -1618,7 +1618,7 @@ function lt(e) {
     let { guild: t, className: l, onClick: n } = e,
         s = (0, t$.Ay)(),
         r = (0, t2.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
-        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t7.mZ)() }),
+        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t5.mZ)() }),
         c =
             null != o
                 ? o
@@ -1665,7 +1665,7 @@ function lt(e) {
                     (0, i.jsxs)("div", {
                         className: t3.Y_,
                         children: [
-                            (0, i.jsx)(t5.A, { className: t3.n2, guild: t, tooltipColor: t8.ST.Colors.PRIMARY }),
+                            (0, i.jsx)(t7.A, { className: t3.n2, guild: t, tooltipColor: t8.ST.Colors.PRIMARY }),
                             (0, i.jsx)(h.D, { variant: "heading-sm/semibold", className: t3.J5, children: t.name }),
                         ],
                     }),
@@ -2058,8 +2058,8 @@ var lk = l(607399),
     l8 = l(957565),
     l4 = l(692848),
     l6 = l(108861);
-let l5 = "start_application_install",
-    l7 = "launch_activity";
+let l7 = "start_application_install",
+    l5 = "launch_activity";
 function l2(e) {
     let { renderDropdown: t, size: l } = e,
         s = n.useRef(null);
@@ -2106,8 +2106,8 @@ function l3(e) {
             }, [t])),
             n.useEffect(() => {
                 let e = new URL(location.href);
-                if (l && "true" === e.searchParams.get(l5)) {
-                    e.searchParams.delete(l5);
+                if (l && "true" === e.searchParams.get(l7)) {
+                    e.searchParams.delete(l7);
                     let t = e.pathname + e.search;
                     ((0, f.bG)(t), s && a());
                 }
@@ -2136,7 +2136,7 @@ function l3(e) {
                             source: "product_page",
                             device_platform: lk.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            U({ [l5]: "true" }));
+                            U({ [l7]: "true" }));
                     }
                 }, [t, a, l]),
                 canInstall: s,
@@ -2243,9 +2243,9 @@ let ie = function (e) {
                 });
             n.useEffect(() => {
                 let e = new URL(location.href),
-                    t = "true" === e.searchParams.get(l7);
+                    t = "true" === e.searchParams.get(l5);
                 if (u && r && t && null != i && null != h) {
-                    e.searchParams.delete(l7);
+                    e.searchParams.delete(l5);
                     let t = e.pathname + e.search;
                     ((0, f.bG)(t), m());
                 }
@@ -2253,7 +2253,7 @@ let ie = function (e) {
             let p = n.useCallback(async () => {
                 if (null != i) {
                     if ((O(D.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void U({ [l7]: "true" });
+                        return void U({ [l5]: "true" });
                     await m();
                 }
             }, [l, i, u, m]);
@@ -3180,7 +3180,11 @@ function iZ(e) {
         children: [
             (0, i.jsx)("div", {
                 className: i$.w$,
-                children: (0, i.jsx)(j.XQ, { icon: d.ArrowLargeLeftIcon, onClick: s }),
+                children: (0, i.jsx)(j.XQ, {
+                    icon: d.ArrowLargeLeftIcon,
+                    "aria-label": M.intl.string(M.t["13/7kX"]),
+                    onClick: s,
+                }),
             }),
             (0, i.jsx)(h.D, {
                 variant: "heading-lg/semibold",
@@ -3409,7 +3413,11 @@ let iJ = function () {
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           es
-                                              ? (0, i.jsx)(j.XQ, { icon: d.ArrowLargeLeftIcon, onClick: ej })
+                                              ? (0, i.jsx)(j.XQ, {
+                                                    icon: d.ArrowLargeLeftIcon,
+                                                    "aria-label": M.intl.string(M.t["13/7kX"]),
+                                                    onClick: ej,
+                                                })
                                               : (0, i.jsx)(j.T4, { icon: u.AppsIcon }),
                                           es
                                               ? (0, i.jsx)(h.D, {

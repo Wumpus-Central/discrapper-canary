@@ -22,10 +22,11 @@ l.d(
             return (0, n.jsx)(t, { className: u.Kk, color: c.A.colors.TEXT_STRONG, size: "md" });
         },
         XQ: function (e) {
-            let { onClick: t, icon: l } = e;
+            let { onClick: t, icon: l, "aria-label": i } = e;
             return (0, n.jsx)(d.D, {
                 className: u.gb,
                 onClick: t,
+                "aria-label": i,
                 children: (0, n.jsx)(l, { color: "currentColor", size: "sm" }),
             });
         },

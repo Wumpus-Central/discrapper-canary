@@ -6,5 +6,6 @@ var i,
         (i.DETECTION_REPORT = "detection_report"),
         (i.CHAT_MENTION = "chat_mention"),
         (i.INTEREST_PICKER = "interest_picker"),
+        (i.GLOBAL_DISCOVERY_GAMES = "global_discovery_games"),
         i);
-E.d(_, {}, { K: t });
+E.d(e, {}, { K: t });

@@ -22,34 +22,37 @@ l.d(
                     onClear: g,
                     onBlur: x,
                     onSubmit: v,
+                    onKeyDown: j,
+                    inputProps: A,
                 } = e,
-                j = n.useRef(null),
-                A = n.useCallback(
+                C = n.useRef(null),
+                I = n.useCallback(
                     (e) => {
-                        "Enter" === e.key && v();
+                        (j?.(e), "Enter" !== e.key || e.defaultPrevented || v());
                     },
-                    [v],
+                    [j, v],
                 ),
-                C = n.useCallback(() => {
-                    (p(), setTimeout(() => j.current?.focus()));
+                f = n.useCallback(() => {
+                    (p(), setTimeout(() => C.current?.focus()));
                 }, [p]);
             return t === u.Um.COLLAPSED
                 ? (0, i.jsx)(r.D, {
                       className: h.qc,
-                      onClick: C,
+                      onClick: f,
                       children: (0, i.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
                   })
                 : (0, i.jsx)("div", {
                       className: a()(h.ON, { [h.Nz]: t === u.Um.FLOATING }),
                       children: (0, i.jsx)(d.I, {
                           size: "sm",
-                          ref: j,
+                          ref: C,
                           query: l,
                           placeholder: s,
                           onChange: m,
                           onClear: g,
-                          onKeyDown: A,
+                          onKeyDown: I,
                           onBlur: x,
+                          inputProps: A,
                       }),
                   });
         },

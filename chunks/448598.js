@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672265, Version Hash: 8189c08b7afbc381a2f7b5034d819f5e617564c3`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672283, Version Hash: 5da90bd256013b9df8f2c8562a81784543bc0ecb`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672265";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672283";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -5462,7 +5462,7 @@ function ls(e) {
                     (s2.A.resetState(), s3.A.resetState());
                     return;
                 case lt.GlobalDiscoveryTab.GAMES:
-                    if (a) return void s9.A.resetState();
+                    if (a) return void s9.Ay.resetState();
                     return (0, le.transitionToGlobalDiscovery)({ tab: t });
                 default:
                     return (0, le.transitionToGlobalDiscovery)({ tab: t });
@@ -15864,7 +15864,7 @@ let I4 = "isHideDevBanner",
                     className: td()(I7.Wz, I7.mr),
                     children: [
                         (0, v.jsx)(I5, { className: I7.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672265" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672283" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -22469,7 +22469,7 @@ let gV = (0, tW.Fe)({
                 n.e(231541),
                 n.e(429224),
                 n.e(883316),
-                n.e(759115),
+                n.e(619699),
                 n.e(324469),
                 n.e(70379),
                 n.e(417333),
@@ -22622,8 +22622,8 @@ let gV = (0, tW.Fe)({
                 n.e(505468),
                 n.e(373169),
                 n.e(914289),
-            ]).then(n.bind(n, 300290)),
-        webpackId: 300290,
+            ]).then(n.bind(n, 867540)),
+        webpackId: 867540,
         name: "GlobalDiscovery",
         renderLoader: rt.Bj,
     }),
