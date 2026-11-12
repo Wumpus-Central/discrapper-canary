@@ -1,4 +1,4 @@
-l.d(t, { lB: () => ay, playgroundConfig: () => av });
+l.d(t, { lB: () => af, playgroundConfig: () => ag });
 var a,
     n = l(700623),
     i = l(318254),
@@ -3017,34 +3017,35 @@ function lk() {
     });
 }
 var lR = l(683071),
-    lM = l(942340),
-    lN = l(211528),
-    lD = l(316363),
-    lO = l(783327),
-    lL = l(626584),
-    lV = l(276858),
-    lB = l(624479),
-    lU = l(408278),
-    lw = l(957565),
-    lG = l(247329);
-function lH(e) {
+    lM = l(380034),
+    lN = l(942340),
+    lD = l(211528),
+    lO = l(316363),
+    lL = l(783327),
+    lV = l(626584),
+    lB = l(276858),
+    lU = l(624479),
+    lw = l(408278),
+    lG = l(957565),
+    lH = l(247329);
+function lW(e) {
     let { label: t, value: l } = e;
     return (0, s.jsxs)("div", {
-        className: lG.I,
+        className: lH.I,
         children: [
             (0, s.jsxs)(y.E, { variant: "body-sm/medium", children: [t, ":"] }),
             (0, s.jsx)(y.E, { variant: "body-sm/normal", children: l }),
-            (0, s.jsx)(lU.K, {
+            (0, s.jsx)(lw.K, {
                 size: "sm",
                 "aria-label": "Copy Link",
                 variant: "icon-only",
-                icon: lB.CopyIcon,
-                onClick: () => (0, lw.C)(l),
+                icon: lU.CopyIcon,
+                onClick: () => (0, lG.C)(l),
             }),
         ],
     });
 }
-function lW(e) {
+function l$(e) {
     let { children: t, stepConfigs: l, bodyClassName: a } = e;
     return (0, s.jsx)(S.M, {
         stepConfigs: l,
@@ -3053,15 +3054,15 @@ function lW(e) {
         children: (0, s.jsx)("div", { className: a, children: t }),
     });
 }
-var l$ = l(887072);
-let lF = new lL.A("PaymentElement.web.stories"),
-    lY = {
+var lF = l(887072);
+let lY = new lV.A("PaymentElement.web.stories"),
+    lz = {
         key: m.pn.ADD_PAYMENT_STEPS,
         renderStep: () => (0, s.jsx)("div", {}),
         options: { renderHeader: !1, hideDefaultModalBody: !0 },
     };
-function lz() {
-    let { elementsAppearanceOptions: e } = (0, lM.E)();
+function lK() {
+    let { elementsAppearanceOptions: e } = (0, lN.E)();
     return (0, s.jsxs)("div", {
         children: [
             (0, s.jsx)(eg.D, {
@@ -3072,69 +3073,71 @@ function lz() {
             (0, s.jsx)("div", {
                 children: Object.entries(e).map((e) => {
                     let [t, l] = e;
-                    return (0, s.jsx)(lH, { label: t, value: l }, t);
+                    return (0, s.jsx)(lW, { label: t, value: l }, t);
                 }),
             }),
         ],
     });
 }
-function lK(e) {
+function lq(e) {
     let [t, l] = u.useState(0);
     return (0, s.jsx)(S.M, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, u.createElement)(lq, { ...e, key: t, forceRemount: () => l(t + 1) }),
+        children: (0, u.createElement)(lX, { ...e, key: t, forceRemount: () => l(t + 1) }),
     });
 }
-function lq(e) {
+function lX(e) {
     let {
             linkEnabled: t,
-            theme: l,
-            colorText: a,
-            colorBackground: n,
-            inputBackgroundColor: i,
-            tabBackgroundColor: r,
-            tabSelectedBackgroundColor: o,
-            storyType: d,
-            forceRemount: c,
+            layout: l,
+            theme: a,
+            colorText: n,
+            colorBackground: i,
+            inputBackgroundColor: r,
+            tabBackgroundColor: o,
+            tabSelectedBackgroundColor: d,
+            storyType: c,
+            forceRemount: p,
         } = e,
-        p = (0, lO.S)(),
-        { setLinkWalletEnabled: b, linkWalletEnabled: h } = (0, lD.t4)((e) => ({
+        b = (0, lL.S)(),
+        { setLinkWalletEnabled: h, linkWalletEnabled: x } = (0, lO.t4)((e) => ({
             setLinkWalletEnabled: e.setLinkWalletEnabled,
             linkWalletEnabled: e.linkWalletEnabled,
         }));
     u.useEffect(() => {
-        h !== t && (b(t), c());
-    }, [t, h, b, c]);
-    let { stripePaymentElementProps: x, stripeAddressElementProps: y } = (0, lV.wD)({
+        x !== t && (h(t), p());
+    }, [t, x, h, p]);
+    let { stripePaymentElementProps: y, stripeAddressElementProps: f } = (0, lB.wD)({
             step: m.pn.PAYMENT_ELEMENT,
             handleStepChange: M.tEg,
             onBillingAddressChange: M.tEg,
-            logger: lF,
+            logger: lY,
             shouldLogOnChangeEvents: !0,
             continueSessionToInitialStep: void 0,
         }),
         {
-            elementsOptions: f,
-            isLoading: v,
-            setupError: g,
-            customPaymentMethodIdsToSourceTypes: E,
-        } = (0, lM.p)({
+            elementsOptions: v,
+            isLoading: g,
+            setupError: E,
+            customPaymentMethodIdsToSourceTypes: S,
+        } = (0, lN.p)({
             onSetupError: (e) => {
-                lF.info("Stripe Payment Element options setup error: ", e);
+                lY.info("Stripe Payment Element options setup error: ", e);
             },
             elementsAppearanceOptions: {
-                theme: l,
-                colorText: a,
-                colorBackground: n,
-                inputBackgroundColor: i,
-                tabBackgroundColor: r,
-                tabSelectedBackgroundColor: o,
+                theme: a,
+                colorText: n,
+                colorBackground: i,
+                inputBackgroundColor: r,
+                tabBackgroundColor: o,
+                tabSelectedBackgroundColor: d,
+                compact: "accordion" === l,
             },
         });
-    return v || null != g || null == p
-        ? (0, s.jsx)(lV.eR, {})
+    return g || null != E || null == b
+        ? (0, s.jsx)(lB.eR, {})
         : (0, s.jsxs)("div", {
               children: [
                   (0, s.jsx)("div", {
@@ -3147,34 +3150,35 @@ function lq(e) {
                       }),
                   }),
                   (0, s.jsxs)("div", {
-                      className: l$.ny,
+                      className: lF.ny,
                       children: [
-                          (0, s.jsx)(lz, {}),
-                          (0, s.jsx)(lW, {
-                              stepConfigs: [lY],
+                          (0, s.jsx)(lK, {}),
+                          (0, s.jsx)(l$, {
+                              stepConfigs: [lz],
                               children: (0, s.jsx)("div", {
-                                  className: O()(l$.o6, "joined-payment-address-elements" === d ? l$.fF : l$.u1),
+                                  className: O()(lF.o6, "joined-payment-address-elements" === c ? lF.fF : lF.u1),
                                   children: (0, s.jsxs)(lS.Elements, {
-                                      stripe: p,
-                                      options: f,
+                                      stripe: b,
+                                      options: v,
                                       children: [
-                                          "stripe-address-element" === d
+                                          "stripe-address-element" === c
                                               ? (0, s.jsx)("div", {
                                                     className: q.R,
-                                                    children: (0, s.jsx)(lN.Wf, {
-                                                        ...x,
-                                                        customPaymentMethodIdsToSourceTypes: E,
+                                                    children: (0, s.jsx)(lD.Wf, {
+                                                        ...y,
+                                                        customPaymentMethodIdsToSourceTypes: S,
                                                         step: m.pn.PAYMENT_ELEMENT,
                                                     }),
                                                 })
-                                              : (0, s.jsx)(lN.Wf, {
-                                                    ...x,
-                                                    customPaymentMethodIdsToSourceTypes: E,
+                                              : (0, s.jsx)(lD.Wf, {
+                                                    ...y,
+                                                    customPaymentMethodIdsToSourceTypes: S,
                                                     step: m.pn.PAYMENT_ELEMENT,
+                                                    layout: "accordion" === l ? lM.AK : void 0,
                                                 }),
-                                          ("joined-payment-address-elements" === d || "stripe-address-element" === d) &&
-                                              (0, s.jsx)(lN.KS, {
-                                                  ...y,
+                                          ("joined-payment-address-elements" === c || "stripe-address-element" === c) &&
+                                              (0, s.jsx)(lD.KS, {
+                                                  ...f,
                                                   billingAddressInfo: {
                                                       email: "",
                                                       name: "",
@@ -3195,8 +3199,17 @@ function lq(e) {
               ],
           });
 }
-let lX = {
+let lJ = {
         linkEnabled: { label: "Stripe Link enabled", type: "boolean", defaultValue: !0 },
+        layout: {
+            label: "Layout",
+            type: "select",
+            options: [
+                { label: "Tabs", value: "tabs" },
+                { label: "Accordion (experiment treatment)", value: "accordion" },
+            ],
+            defaultValue: "tabs",
+        },
         theme: {
             label: "Theme",
             type: "select",
@@ -3209,32 +3222,32 @@ let lX = {
         tabBackgroundColor: { label: "Tab Background Color", type: "text", defaultValue: "#00000014" },
         tabSelectedBackgroundColor: { label: "Tab Selected Background Color", type: "text", defaultValue: "#5865f2" },
     },
-    lJ = {
+    lZ = {
         name: "Joined Payment + Address",
         id: "joined-payment-address-elements",
         component: function (e) {
-            return (0, s.jsx)(lK, { ...e, storyType: "joined-payment-address-elements" });
+            return (0, s.jsx)(lq, { ...e, storyType: "joined-payment-address-elements" });
         },
-        controls: { ...lX },
+        controls: { ...lJ },
     },
-    lZ = {
+    lQ = {
         name: "Stripe Payment Element",
         id: "stripe-payment-element",
         component: function (e) {
-            return (0, s.jsx)(lK, { ...e, storyType: "stripe-payment-element" });
+            return (0, s.jsx)(lq, { ...e, storyType: "stripe-payment-element" });
         },
-        controls: { ...lX },
+        controls: { ...lJ },
     },
-    lQ = {
+    l0 = {
         name: "Stripe Address Element",
         id: "stripe-address-element",
         component: function (e) {
-            return (0, s.jsx)(lK, { ...e, storyType: "stripe-address-element" });
+            return (0, s.jsx)(lq, { ...e, storyType: "stripe-address-element" });
         },
-        controls: { ...lX },
+        controls: { ...lJ },
     };
-var l0 = l(786826);
-let l1 = {
+var l1 = l(786826);
+let l2 = {
     title: "RichTextArea",
     stories: [
         {
@@ -3255,7 +3268,7 @@ let l1 = {
                     [p, m] = u.useState("");
                 return (0, s.jsx)("div", {
                     style: { maxWidth: 480, padding: 24 },
-                    children: (0, s.jsx)(l0.f, {
+                    children: (0, s.jsx)(l1.f, {
                         label: t,
                         placeholder: l,
                         minLength: a,
@@ -3285,14 +3298,14 @@ let l1 = {
     ],
 };
 l(321073);
-var l2 = l(96337),
-    l8 = l(997101),
-    l3 = l(597770),
-    l6 = l(278416),
-    l4 = l(169797),
-    l9 = l(677959),
-    l7 = l(812745);
-let l5 = {
+var l8 = l(96337),
+    l3 = l(997101),
+    l6 = l(597770),
+    l4 = l(278416),
+    l9 = l(169797),
+    l7 = l(677959),
+    l5 = l(812745);
+let ae = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
         component: function (e) {
@@ -3313,23 +3326,23 @@ let l5 = {
             return (0, s.jsxs)("div", {
                 className: q.Cd,
                 children: [
-                    (0, s.jsx)(l9.q7, {
+                    (0, s.jsx)(l7.q7, {
                         selection: b,
                         onChange: h,
                         planOptions: [
                             {
                                 id: 0,
-                                title: (0, s.jsx)(l9.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                                title: (0, s.jsx)(l7.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: l,
                                 primaryText: a,
-                                subtext: i ? (0, s.jsx)(l9.Lo, { strikethrough: r, price: n }) : void 0,
+                                subtext: i ? (0, s.jsx)(l7.Lo, { strikethrough: r, price: n }) : void 0,
                             },
                             {
                                 id: 1,
-                                title: (0, s.jsx)(l9.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                                title: (0, s.jsx)(l7.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: o,
                                 primaryText: d,
-                                subtext: p ? (0, s.jsx)(l9.Lo, { strikethrough: m, price: c }) : void 0,
+                                subtext: p ? (0, s.jsx)(l7.Lo, { strikethrough: m, price: c }) : void 0,
                             },
                         ],
                     }),
@@ -3363,7 +3376,7 @@ let l5 = {
             },
         },
     },
-    ae = {
+    at = {
         name: "Primitive: Subscription Details Accordion",
         id: "unified-checkout-subscription-details",
         component: function (e) {
@@ -3418,7 +3431,7 @@ let l5 = {
                     : [];
             return (0, s.jsx)("div", {
                 className: q.SG,
-                children: (0, s.jsx)(l9._D, {
+                children: (0, s.jsx)(l7._D, {
                     label: t,
                     totalLineItemLabel: "" !== l ? l : void 0,
                     totalLineItemLabelSubText: "" !== a ? a : void 0,
@@ -3484,14 +3497,14 @@ let l5 = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     },
-    at = { "nitro-wheel": r.NitroWheelIcon, gift: l3.GiftIcon, orbs: i.OrbsIcon },
-    al = l2.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    aa = {
+    al = { "nitro-wheel": r.NitroWheelIcon, gift: l6.GiftIcon, orbs: i.OrbsIcon },
+    aa = l8.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    an = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? l6.TagIcon : void 0;
+                i = a ? l4.TagIcon : void 0;
             return (0, s.jsxs)(ec.B, {
                 gap: 16,
                 align: "center",
@@ -3506,7 +3519,7 @@ let l5 = {
                         onClick: () =>
                             (0, ev.qf)(
                                 (e) =>
-                                    (0, s.jsx)(l4.oH, {
+                                    (0, s.jsx)(l9.oH, {
                                         ...e,
                                         ...n,
                                         title: n.title,
@@ -3514,7 +3527,7 @@ let l5 = {
                                         primaryButtonProps: {
                                             onClick: e.onClose,
                                             text: t,
-                                            icon: "none" !== l ? at[l] : void 0,
+                                            icon: "none" !== l ? al[l] : void 0,
                                         },
                                         onBackClick: e.onClose,
                                         children: (0, s.jsx)(ec.B, {
@@ -3545,7 +3558,7 @@ let l5 = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: l8.d.US, options: al },
+            countryCode: { label: "Country Code", type: "select", defaultValue: l3.d.US, options: aa },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3562,7 +3575,7 @@ let l5 = {
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    an = {
+    ai = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3571,33 +3584,33 @@ let l5 = {
         intervalCount: 1,
         startDate: new Date(),
     },
-    ai = {
-        [l9.I0.Subscription]: { type: l9.I0.Subscription, ...an },
-        [l9.I0.SubscriptionApplication]: { type: l9.I0.SubscriptionApplication, ...an },
-        [l9.I0.GuildProductOneTimePurchase]: { type: l9.I0.GuildProductOneTimePurchase, ...an },
-        [l9.I0.PremiumAppsOneTimePurchase]: { type: l9.I0.PremiumAppsOneTimePurchase, ...an },
-        [l9.I0.SubscriptionTrial]: { type: l9.I0.SubscriptionTrial, ...an },
-        [l9.I0.OrbsRedemption]: { type: l9.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
-        [l9.I0.Shop]: { type: l9.I0.Shop, purchaseButtonText: "Purchase" },
-        [l9.I0.GiftNitro]: { type: l9.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
-        [l9.I0.GiftShop]: { type: l9.I0.GiftShop, purchaseButtonText: "Buy Gift" },
-        [l9.I0.GiftGameShop]: {
-            type: l9.I0.GiftGameShop,
+    ar = {
+        [l7.I0.Subscription]: { type: l7.I0.Subscription, ...ai },
+        [l7.I0.SubscriptionApplication]: { type: l7.I0.SubscriptionApplication, ...ai },
+        [l7.I0.GuildProductOneTimePurchase]: { type: l7.I0.GuildProductOneTimePurchase, ...ai },
+        [l7.I0.PremiumAppsOneTimePurchase]: { type: l7.I0.PremiumAppsOneTimePurchase, ...ai },
+        [l7.I0.SubscriptionTrial]: { type: l7.I0.SubscriptionTrial, ...ai },
+        [l7.I0.OrbsRedemption]: { type: l7.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
+        [l7.I0.Shop]: { type: l7.I0.Shop, purchaseButtonText: "Purchase" },
+        [l7.I0.GiftNitro]: { type: l7.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
+        [l7.I0.GiftShop]: { type: l7.I0.GiftShop, purchaseButtonText: "Buy Gift" },
+        [l7.I0.GiftGameShop]: {
+            type: l7.I0.GiftGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
             shouldAppendDisclaimer: !1,
         },
-        [l9.I0.OrbsGameShop]: {
-            type: l9.I0.OrbsGameShop,
+        [l7.I0.OrbsGameShop]: {
+            type: l7.I0.OrbsGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
             shouldAppendDisclaimer: !1,
         },
     },
-    ar = {
+    ao = {
         title: "Unified Checkout",
         stories: [
-            aa,
+            an,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -3613,7 +3626,7 @@ let l5 = {
                         l && a && n.push({ id: 3, label: "Discount Applied", amount: -100 }),
                         (0, s.jsx)("div", {
                             className: q.SG,
-                            children: (0, s.jsx)(l9.Vm, { label: t, lineItems: n, currency: M.Yri.USD }),
+                            children: (0, s.jsx)(l7.Vm, { label: t, lineItems: n, currency: M.Yri.USD }),
                         })
                     );
                 },
@@ -3623,8 +3636,8 @@ let l5 = {
                     hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
                 },
             },
-            l5,
             ae,
+            at,
             {
                 name: "Primitive: Purchase Item",
                 id: "unified-checkout-purchase-item",
@@ -3643,7 +3656,7 @@ let l5 = {
                     function p(e, p) {
                         let m = ta.default.getCurrentUser(),
                             b = eB.A.getGuildsArray()[0];
-                        return (0, s.jsx)(l9.f7, {
+                        return (0, s.jsx)(l7.f7, {
                             header: l ? t : void 0,
                             headerIconSrc: "https://cdn.discordapp.com/embed/avatars/1.png",
                             label: `${a} ${p}`,
@@ -3664,11 +3677,11 @@ let l5 = {
                     return (0, s.jsxs)("div", {
                         className: q.SG,
                         children: [
-                            p(l9.JW, "Nitro"),
-                            p(l9.DH, "Nitro Basic"),
-                            p(l9.a6, "Boost"),
-                            p(l9.jw, "App"),
-                            p(l9.oo, "Nitro Credit"),
+                            p(l7.JW, "Nitro"),
+                            p(l7.DH, "Nitro Basic"),
+                            p(l7.a6, "Boost"),
+                            p(l7.jw, "App"),
+                            p(l7.oo, "Nitro Credit"),
                         ],
                     });
                 },
@@ -3699,15 +3712,15 @@ let l5 = {
                 component: function (e) {
                     let { disabled: t, error: l, errorMessage: a } = e,
                         n = [
-                            { id: "visa-1234", label: "Visa ending in 1234", icon: l7.Be.VISA },
-                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: l7.Be.MASTERCARD },
-                            { id: "paypal", label: "user@example.com", icon: l7.Be.PAYPAL },
-                            { id: "amex-9012", label: "Amex ending in 9012", icon: l7.Be.AMEX },
+                            { id: "visa-1234", label: "Visa ending in 1234", icon: l5.Be.VISA },
+                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: l5.Be.MASTERCARD },
+                            { id: "paypal", label: "user@example.com", icon: l5.Be.PAYPAL },
+                            { id: "amex-9012", label: "Amex ending in 9012", icon: l5.Be.AMEX },
                         ],
                         [i, r] = u.useState(n[0].id);
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(l9.v7, {
+                            (0, s.jsx)(l7.v7, {
                                 value: i,
                                 options: n,
                                 onChange: r,
@@ -3738,8 +3751,8 @@ let l5 = {
                 component: function (e) {
                     let { type: t, immediateDelivery: l, paysafecard: a } = e,
                         [n, i] = u.useState(!1);
-                    return (0, s.jsx)(l9._P, {
-                        variant: ai[t],
+                    return (0, s.jsx)(l7._P, {
+                        variant: ar[t],
                         immediateDelivery: l ? { value: n, onChange: i } : void 0,
                         paymentSourceType: a ? M.hes.PAYSAFE_CARD : M.hes.CARD,
                     });
@@ -3748,16 +3761,16 @@ let l5 = {
                     type: {
                         label: "Type",
                         type: "select",
-                        defaultValue: l9.I0.Subscription,
+                        defaultValue: l7.I0.Subscription,
                         options: [
-                            { label: "Subscription", value: l9.I0.Subscription },
-                            { label: "Subscription Trial", value: l9.I0.SubscriptionTrial },
-                            { label: "Orbs Redemption", value: l9.I0.OrbsRedemption },
-                            { label: "Shop", value: l9.I0.Shop },
-                            { label: "Nitro Gift", value: l9.I0.GiftNitro },
-                            { label: "Shop Gift", value: l9.I0.GiftShop },
-                            { label: "Game Shop Gift", value: l9.I0.GiftGameShop },
-                            { label: "Orbs Game Shop Gift", value: l9.I0.OrbsGameShop },
+                            { label: "Subscription", value: l7.I0.Subscription },
+                            { label: "Subscription Trial", value: l7.I0.SubscriptionTrial },
+                            { label: "Orbs Redemption", value: l7.I0.OrbsRedemption },
+                            { label: "Shop", value: l7.I0.Shop },
+                            { label: "Nitro Gift", value: l7.I0.GiftNitro },
+                            { label: "Shop Gift", value: l7.I0.GiftShop },
+                            { label: "Game Shop Gift", value: l7.I0.GiftGameShop },
+                            { label: "Orbs Game Shop Gift", value: l7.I0.OrbsGameShop },
                         ],
                     },
                     immediateDelivery: { label: "Immediate Delivery", type: "boolean", defaultValue: !1 },
@@ -3771,10 +3784,10 @@ let l5 = {
                     return (0, s.jsxs)("div", {
                         children: [
                             (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Stateless Component:" }),
-                            (0, s.jsx)(l9.y, { onClick: M.tEg }),
+                            (0, s.jsx)(l7.y, { onClick: M.tEg }),
                             (0, s.jsx)("br", {}),
                             (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Link with Modal:" }),
-                            (0, s.jsx)(l9.Z4, { onComplete: M.tEg }),
+                            (0, s.jsx)(l7.Z4, { onComplete: M.tEg }),
                         ],
                     });
                 },
@@ -3785,8 +3798,8 @@ let l5 = {
                 component: function () {
                     let [e, t] = u.useState("yearly");
                     return (0, s.jsx)("div", {
-                        children: (0, s.jsx)(l9.me, {
-                            headingComponent: (0, s.jsx)(l9.ec, {
+                        children: (0, s.jsx)(l7.me, {
+                            headingComponent: (0, s.jsx)(l7.ec, {
                                 size: "sm",
                                 color: "text-strong",
                                 premiumType: ew.PremiumTypes.TIER_2,
@@ -3806,10 +3819,10 @@ let l5 = {
                 id: "checkout-store-country-row",
                 component: function (e) {
                     let { storeCountry: t } = e;
-                    return (0, s.jsx)(l9.s7, { storeCountry: t });
+                    return (0, s.jsx)(l7.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: l8.d.US, options: al },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: l3.d.US, options: aa },
                 },
             },
             {
@@ -3817,7 +3830,7 @@ let l5 = {
                 id: "checkout-store-relocation-notice",
                 component: function (e) {
                     let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: a } = e;
-                    return (0, s.jsx)(l9.ch, {
+                    return (0, s.jsx)(l7.ch, {
                         relocationCountry: t,
                         relocationCurrencyCode: l,
                         willForfeitGiftCardBalance: a,
@@ -3828,8 +3841,8 @@ let l5 = {
                     relocationCountry: {
                         label: "Relocation Country",
                         type: "select",
-                        defaultValue: l8.d.US,
-                        options: al,
+                        defaultValue: l3.d.US,
+                        options: aa,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                     willForfeitGiftCardBalance: {
@@ -3841,16 +3854,16 @@ let l5 = {
             },
         ],
     };
-var ao = l(917445),
-    as = l(702422),
-    au = l(734057),
-    ad = l(890497),
-    ac = l(711014),
-    ap = l(427262),
-    am = l(198498);
-function ab(e) {
+var as = l(917445),
+    au = l(702422),
+    ad = l(734057),
+    ac = l(890497),
+    ap = l(711014),
+    am = l(427262),
+    ab = l(198498);
+function ah(e) {
     let { label: t, options: l, value: a, onChange: n } = e;
-    return (0, s.jsx)(ad.Z, {
+    return (0, s.jsx)(ac.Z, {
         label: t,
         selectionMode: "single",
         options: l,
@@ -3859,12 +3872,12 @@ function ab(e) {
         placeholder: 0 === l.length ? "Waiting for client to connect\u2026" : void 0,
     });
 }
-function ah(e) {
+function ax(e) {
     let { children: t } = e;
-    return (0, s.jsx)("div", { className: am.t, children: t });
+    return (0, s.jsx)("div", { className: ab.t, children: t });
 }
-let ax = "default";
-var ay =
+let ay = "default";
+var af =
     588245 != l.j
         ? (((a = {}).PAYMENTS = "payments"),
           (a.VIRTUAL_CURRENCY = "virtual-currency"),
@@ -3872,8 +3885,8 @@ var ay =
           (a.IDENTITY = "identity"),
           a)
         : null;
-let af = ["Revenue Storybook", "Revenue Playground"],
-    av = {
+let av = ["Revenue Storybook", "Revenue Playground"],
+    ag = {
         playgroundBaseUrl: "revenue",
         collections: [
             {
@@ -3881,7 +3894,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                 name: "Payments",
                 groups: [
                     eY,
-                    ar,
+                    ao,
                     {
                         title: "Gift Card",
                         stories: [
@@ -3939,7 +3952,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                             },
                         ],
                     },
-                    { title: "Payment Elements", stories: [lZ, lQ, lJ] },
+                    { title: "Payment Elements", stories: [lQ, l0, lZ] },
                     {
                         title: "Add Payment (Legacy Checkout)",
                         stories: [
@@ -4128,7 +4141,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                         ],
                     },
                 ],
-                tags: af,
+                tags: av,
                 IconComponent: n.BillIcon,
             },
             {
@@ -4191,7 +4204,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                         ],
                     },
                 ],
-                tags: af,
+                tags: av,
                 IconComponent: i.OrbsIcon,
             },
             {
@@ -4566,7 +4579,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                     },
                     { title: "Clips", stories: [to] },
                 ],
-                tags: af,
+                tags: av,
                 IconComponent: r.NitroWheelIcon,
             },
             {
@@ -4664,7 +4677,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                         ],
                     },
                     { title: "Profile Banner", stories: [er] },
-                    l1,
+                    l2,
                     {
                         title: "User Profile Embeds",
                         stories: [
@@ -4683,19 +4696,19 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                                         let t = ta.default.getUser(e);
                                                         return null == t
                                                             ? null
-                                                            : { id: e, label: ap.Ay.getName(t), value: e };
+                                                            : { id: e, label: am.Ay.getName(t), value: e };
                                                     })
                                                     .filter((e) => null != e)
                                                     .sort((e, t) => e.label.localeCompare(t.label));
                                                 return null == t
                                                     ? l
                                                     : [
-                                                          { id: t.id, label: `${ap.Ay.getName(t)} (You)`, value: t.id },
+                                                          { id: t.id, label: `${am.Ay.getName(t)} (You)`, value: t.id },
                                                           ...l.filter((e) => e.value !== t.id),
                                                       ];
                                             }, [e, t])),
                                         n =
-                                            ((l = (0, es.yK)([ac.Ay], () => ac.Ay.getFlattenedGuildIds())),
+                                            ((l = (0, es.yK)([ap.Ay], () => ap.Ay.getFlattenedGuildIds())),
                                             u.useMemo(
                                                 () =>
                                                     l.reduce((e, t) => {
@@ -4709,30 +4722,30 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                                 [l],
                                             )),
                                         [i, r] = u.useState(),
-                                        [o, d] = u.useState(ax),
+                                        [o, d] = u.useState(ay),
                                         c = i ?? a[0]?.value,
                                         p = u.useMemo(
                                             () => [
                                                 { id: "dm", label: "DM", value: "dm" },
-                                                { id: ax, label: "Default (main profile)", value: ax },
+                                                { id: ay, label: "Default (main profile)", value: ay },
                                                 ...n,
                                             ],
                                             [n],
                                         ),
                                         m = (0, es.bG)(
-                                            [au.A],
+                                            [ad.A],
                                             () =>
                                                 null == c
                                                     ? void 0
-                                                    : (au.A.getDMFromUserId(c) ??
-                                                      au.A.getSortedPrivateChannels()[0]?.id),
+                                                    : (ad.A.getDMFromUserId(c) ??
+                                                      ad.A.getSortedPrivateChannels()[0]?.id),
                                             [c],
                                         ),
-                                        b = o === ax || "dm" === o ? void 0 : o,
+                                        b = o === ay || "dm" === o ? void 0 : o,
                                         h = "dm" === o ? m : void 0;
                                     return (
                                         u.useEffect(() => {
-                                            null != c && (0, ao.A)(c, void 0, { guildId: b });
+                                            null != c && (0, as.A)(c, void 0, { guildId: b });
                                         }, [c, b]),
                                         (0, s.jsxs)(ec.B, {
                                             direction: "vertical",
@@ -4742,13 +4755,13 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                                     direction: "horizontal",
                                                     gap: 8,
                                                     children: [
-                                                        (0, s.jsx)(ab, {
+                                                        (0, s.jsx)(ah, {
                                                             label: "User",
                                                             options: a,
                                                             value: c,
                                                             onChange: r,
                                                         }),
-                                                        (0, s.jsx)(ab, {
+                                                        (0, s.jsx)(ah, {
                                                             label: "Context",
                                                             options: p,
                                                             value: o,
@@ -4756,10 +4769,10 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                                                         }),
                                                     ],
                                                 }),
-                                                (0, s.jsx)(ah, {
+                                                (0, s.jsx)(ax, {
                                                     children:
                                                         null != c &&
-                                                        (0, s.jsx)(as.G, { userId: c, guildId: b, channelId: h }),
+                                                        (0, s.jsx)(au.G, { userId: c, guildId: b, channelId: h }),
                                                 }),
                                             ],
                                         })
@@ -4770,7 +4783,7 @@ let af = ["Revenue Storybook", "Revenue Playground"],
                         ],
                     },
                 ],
-                tags: af,
+                tags: av,
                 IconComponent: o.UserIcon,
             },
         ],

@@ -6044,6 +6044,24 @@
     }
   },
   {
+    "name": "2026-11-payment-element-accordion-layout",
+    "kind": "user",
+    "defaultConfig": {
+      "accordionLayout": false,
+      "compactAppearance": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "accordionLayout": true,
+        "compactAppearance": true
+      }
+    }
+  },
+  {
     "name": "2026-11-profile-embed-rendering-mobile",
     "kind": "user",
     "defaultConfig": {

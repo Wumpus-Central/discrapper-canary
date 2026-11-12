@@ -10,8 +10,9 @@ var l = n(582128),
     d = n(908166),
     h = n(818348);
 let f = new s.A("useStripePaymentElementOptions"),
-    p = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" };
-function m() {
+    p = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" },
+    m = { spacingUnit: "3px", fontSizeSm: "13px" };
+function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, r.r)(i.A.colors.MODAL_BACKGROUND),
         n = (0, r.r)(i.A.colors.TEXT_STRONG),
@@ -23,22 +24,24 @@ function m() {
         d = e.inputBackgroundColor ?? a.hex(),
         h = s.hex(),
         f = e.tabBackgroundColor ?? a.hex(),
-        m = e.tabSelectedBackgroundColor ?? null;
+        C = e.tabSelectedBackgroundColor ?? null,
+        y = e.compact ?? !1;
     return {
         elementsAppearance: l.useMemo(
             () => ({
                 theme: u,
-                variables: { colorText: c, colorBackground: o },
+                variables: { colorText: c, colorBackground: o, ...(y ? m : {}) },
                 rules: {
                     ".Label": { ...p, color: c, marginBottom: "8px" },
                     ".Input": { backgroundColor: d, borderColor: h, borderWidth: "1px", borderStyle: "solid" },
                     ".Error": { ...p },
                     ".CheckboxInput": { border: `1px solid ${h}` },
                     ".Tab": { backgroundColor: f },
-                    ...(null != m ? { ".Tab--selected": { backgroundColor: m } } : {}),
+                    ...(null != C ? { ".Tab--selected": { backgroundColor: C } } : {}),
+                    ".AccordionItem": { backgroundColor: o, borderColor: h },
                 },
             }),
-            [u, c, o, d, h, f, m],
+            [u, c, o, d, h, f, C, y],
         ),
         elementsAppearanceOptions: {
             theme: u,
@@ -53,12 +56,12 @@ n.d(
     t,
     {},
     {
-        E: m,
+        E: C,
         p: function (e) {
             let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
                 [r, i] = l.useState(void 0),
                 [s, p] = l.useState(null),
-                [C, y] = l.useState(!0),
+                [m, y] = l.useState(!0),
                 [E, _] = l.useState([]),
                 { createSetupIntentDeduped: g } = (0, d.x)(),
                 [S, I] = l.useState([]),
@@ -98,11 +101,11 @@ n.d(
             (0, a.Ay)(() => {
                 x();
             });
-            let { elementsAppearance: v, elementsAppearanceOptions: R } = m(n),
+            let { elementsAppearance: v, elementsAppearanceOptions: R } = C(n),
                 T = (0, c.PU)(),
                 M = l.useMemo(
                     () =>
-                        C
+                        m
                             ? null
                             : {
                                   clientSecret: r,
@@ -111,7 +114,7 @@ n.d(
                                   customPaymentMethods: A,
                                   paymentMethodCreation: "manual",
                               },
-                    [v, T, r, A, C],
+                    [v, T, r, A, m],
                 ),
                 b = {
                     setupError: s,
@@ -120,7 +123,7 @@ n.d(
                     paymentMethodOrder: S,
                     elementsAppearanceOptions: R,
                 };
-            return null == r || null == M || C
+            return null == r || null == M || m
                 ? { ...b, isLoading: !0, elementsOptions: M, setupIntentSecret: r }
                 : { ...b, isLoading: !1, elementsOptions: M, setupIntentSecret: r };
         },
