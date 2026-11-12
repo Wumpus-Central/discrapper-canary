@@ -460,24 +460,25 @@ function ec(e) {
             ...{
                 ...W,
                 handlePaymentFailure: (t) => {
-                    let { error: n } = t,
-                        { code: a, paymentId: s } = n;
-                    if (a !== r.tG.CONFIRMATION_REQUIRED && a !== r.tG.AUTHENTICATION_REQUIRED) {
+                    let { error: n, loadId: a } = t;
+                    if (a !== i().contextMetadata.loadId) return;
+                    let { code: s, paymentId: l } = n;
+                    if (s !== r.tG.CONFIRMATION_REQUIRED && s !== r.tG.AUTHENTICATION_REQUIRED) {
                         i().isAwaitingPaymentAuthentication && e({ isAwaitingPaymentAuthentication: !1 });
                         return;
                     }
                     i().isAwaitingPaymentAuthentication ||
                         (e({
                             isAwaitingPaymentAuthentication: !0,
-                            awaitingPaymentId: s ?? null,
+                            awaitingPaymentId: l ?? null,
                             paymentAuthWasCancelled: !1,
                         }),
-                        a === r.tG.AUTHENTICATION_REQUIRED &&
+                        s === r.tG.AUTHENTICATION_REQUIRED &&
                             (async function (e) {
                                 if (null == e) return;
                                 let { error: t } = await (0, V.ap)(e);
                                 null != t && (0, B.pM)(Error(t), { extra: { authenticationError: t } });
-                            })(s));
+                            })(l));
                 },
                 handlePaymentUpdate: (t) => {
                     let { payment: n } = t;

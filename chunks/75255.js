@@ -11,7 +11,7 @@ n.d(
         A: {
             redeemGiftCode: async function (e) {
                 let { code: t, options: n = o, onRedeemed: d, onError: c } = e,
-                    { channelId: u = null, paymentSource: _ = null } = n;
+                    { channelId: u = null, paymentSource: _ = null, loadId: E } = n;
                 r.h.dispatch({ type: "GIFT_CODE_REDEEM", code: t });
                 try {
                     let e = await i.Bo.post({
@@ -27,7 +27,7 @@ n.d(
                     );
                 } catch (n) {
                     let e = new a.Ey(n);
-                    throw (r.h.dispatch({ type: "GIFT_CODE_REDEEM_FAILURE", code: t, error: e }), c?.(e), e);
+                    throw (r.h.dispatch({ type: "GIFT_CODE_REDEEM_FAILURE", code: t, error: e, loadId: E }), c?.(e), e);
                 }
             },
         },

@@ -765,7 +765,7 @@ function eQ(e) {
                                                         n.e(50097),
                                                         n.e(143549),
                                                         n.e(571998),
-                                                        n.e(188545),
+                                                        n.e(322942),
                                                         n.e(154630),
                                                         n.e(860177),
                                                         n.e(284898),
@@ -972,11 +972,11 @@ function e1(e) {
 }
 var e2 = n(34188),
     e8 = n(700623),
-    e7 = n(177953),
-    e3 = n(825484),
+    e3 = n(177953),
+    e7 = n(825484),
     e4 = n(683071),
-    e6 = n(900797),
-    e9 = n(847374),
+    e9 = n(900797),
+    e6 = n(847374),
     e5 = n(10716),
     te = n(164636),
     tt = n(150934),
@@ -1311,7 +1311,7 @@ function tb(e) {
         className: tI.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e7.GroupIcon, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.GroupIcon, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(b.E, {
                 variant: "body-sm/semibold",
                 color: "interactive-text-default",
@@ -1347,7 +1347,7 @@ function tT(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Z$)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e7.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1423,8 +1423,8 @@ function tL(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.ChevronSmallUpIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e9.ChevronSmallDownIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e9.ChevronSmallUpIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e6.ChevronSmallDownIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1531,10 +1531,10 @@ var tY = n(111042),
     t1 = n(594061),
     t2 = n(811091),
     t8 = n(630248),
-    t7 = n(355097);
-function t3(e, t) {
+    t3 = n(355097);
+function t7(e, t) {
     o.useEffect(() => {
-        t1.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t1.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1579,8 +1579,8 @@ function t3(e, t) {
     }, [s, l, n, t]);
 }
 var t4 = n(785728),
-    t6 = n(712440),
-    t9 = n(733110),
+    t9 = n(712440),
+    t6 = n(733110),
     t5 = n(73153);
 let ne = 10 * K.A.Millis.MINUTE,
     nt = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -2219,11 +2219,11 @@ function n0(e) {
 var n1 = n(984516),
     n2 = n(935573),
     n8 = n(651753),
-    n7 = n(485845),
-    n3 = n(994369),
+    n3 = n(485845),
+    n7 = n(994369),
     n4 = n(240591),
-    n6 = n(46477);
-function n9(e, t) {
+    n9 = n(46477);
+function n6(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2521,7 +2521,7 @@ function lA(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n9(c, {
+                    return n6(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2534,8 +2534,8 @@ function lA(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n6.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n6._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n9.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n9._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2552,13 +2552,13 @@ function lA(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n6.zl(e, m, {
+                                    n9.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n6.CA.ALLOWED
+                                    }) === n9.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2658,7 +2658,7 @@ function lA(e) {
                                     }),
                             ));
                     } else a && (u = m);
-                    return n9(u, {
+                    return n6(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2673,20 +2673,20 @@ function lA(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n6.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n6._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n9.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n9._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n6.zl(e, d, {
+                                            n9.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n6.CA.ALLOWED,
+                                            }) === n9.CA.ALLOWED,
                                     )
                                 );
                             }),
@@ -2738,24 +2738,24 @@ function lA(e) {
                             query: n,
                             guildId: r,
                             page: c,
-                            integrationType: n7.b.USER_INSTALL,
+                            integrationType: n3.b.USER_INSTALL,
                             minUserInstallCommandCount: 1,
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
                             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                            source: n3.V.APP_LAUNCHER,
+                            source: n7.V.APP_LAUNCHER,
                         }),
                         totalPages:
                             n8.A.getSearchResults({
                                 query: n,
                                 guildId: r,
                                 page: c,
-                                integrationType: n7.b.USER_INSTALL,
+                                integrationType: n3.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n3.V.APP_LAUNCHER,
+                                source: n7.V.APP_LAUNCHER,
                             })?.totalPages ?? 0,
                     }),
                     [n, r, c, a],
@@ -2769,12 +2769,12 @@ function lA(e) {
                                     query: n,
                                     guildId: r,
                                     page: t + 1,
-                                    integrationType: n7.b.USER_INSTALL,
+                                    integrationType: n3.b.USER_INSTALL,
                                     minUserInstallCommandCount: 1,
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
                                     excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                    source: n3.V.APP_LAUNCHER,
+                                    source: n7.V.APP_LAUNCHER,
                                 })?.results ?? [],
                         ),
                     [m, r, n, c, a],
@@ -2797,12 +2797,12 @@ function lA(e) {
                             guildId: l,
                             options: {
                                 page: n,
-                                integrationType: n7.b.USER_INSTALL,
+                                integrationType: n3.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n3.V.APP_LAUNCHER,
+                                source: n7.V.APP_LAUNCHER,
                             },
                         });
                     },
@@ -3190,13 +3190,13 @@ function lb(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t9.A], () => t9.A.getFetchState());
+                        s = (0, A.bG)([t6.A], () => t6.A.getFetchState());
                     o.useEffect(() => {
-                        i && s === t9.FetchState.NOT_FETCHED && t6.A.fetch();
+                        i && s === t6.FetchState.NOT_FETCHED && t9.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t9.A], () =>
+                    let a = (0, A.yK)([t6.A], () =>
                             i
-                                ? t9.A.getNewestTokens().filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
+                                ? t6.A.getNewestTokens().filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
                                 : [],
                         ),
                         r = t.filter((e) => e.id !== ea.Ik.FRECENCY && e.id !== ea.Ik.BUILT_IN),
@@ -3205,7 +3205,7 @@ function lb(e) {
                             let e = [];
                             return (c && e.push(nl.gq), e);
                         }, [c]),
-                        u = t3(r, a),
+                        u = t7(r, a),
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3384,7 +3384,7 @@ function lL(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t3(
+                c = t7(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

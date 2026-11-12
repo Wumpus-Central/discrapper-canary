@@ -1,162 +1,172 @@
-var l = n(477900),
-    o = n(582128),
-    i = n(503698),
-    r = n.n(i),
-    u = n(683071),
-    a = n(725836),
-    s = n(176702),
-    c = n(580133),
-    d = n(169797),
-    C = n(744615);
-n(652215);
-var p = n(379912),
-    h = n(792996),
-    m = n(66414);
-function f(e) {
-    let { className: t, shouldShowUnifiedHeader: n, headerBadgeConfig: o } = e;
+var l = t(477900),
+    n = t(582128),
+    r = t(503698),
+    s = t.n(r);
+if (529845 == t.j) var i = t(815390);
+var u = t(683071),
+    o = t(725836),
+    c = t(176702),
+    h = t(580133),
+    d = t(169797),
+    m = t(744615),
+    p = t(652215),
+    A = t(379912),
+    E = t(792996),
+    y = t(66414);
+function C(e) {
+    let { className: a, shouldShowUnifiedHeader: t, headerBadgeConfig: n } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            n ? (0, l.jsx)(a.UY, { children: (0, l.jsx)(c.f, { headerBadgeConfig: o }) }) : null,
-            (0, l.jsx)(d.DJ, { className: r()(m.g4, t) }),
+            t ? (0, l.jsx)(o.UY, { children: (0, l.jsx)(h.f, { headerBadgeConfig: n }) }) : null,
+            (0, l.jsx)(d.DJ, { className: s()(y.g4, a) }),
         ],
     });
 }
-function E(e) {
+function P(e) {
     return null != e && "object" == typeof e && "message" in e && "type" in e
         ? (0, l.jsx)(u.w, { type: e.type, hidden: e.hidden, message: e.message, role: e.role }, e.key)
-        : (0, l.jsx)(o.Fragment, { children: e.directContent }, e.key);
-}
-function _(e) {
-    return null == e || "" === e;
-}
-function A(e) {
-    let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
-        { errorMessage: i, richNotices: r } = (0, s.u)(),
-        a = o.useRef(null);
-    return (
-        o.useEffect(() => {
-            _(i) || null == a.current || a.current.scrollIntoView({ behavior: "smooth" });
-        }, [i]),
-        o.useMemo(() => {
-            if (!(!_(i) || r.length > 0 || null != t)) return null;
-            let e = (0, l.jsxs)(l.Fragment, {
-                children: [_(i) ? null : (0, l.jsx)(u.w, { type: "critical", message: i, role: "alert" }), r.map(E)],
-            });
-            return (0, l.jsx)("div", {
-                ref: a,
-                className: m.dD,
-                children: n
-                    ? (0, l.jsxs)(l.Fragment, { children: [t, e] })
-                    : (0, l.jsxs)(l.Fragment, { children: [e, t] }),
-            });
-        }, [i, r, t, n])
-    );
+        : (0, l.jsx)(n.Fragment, { children: e.directContent }, e.key);
 }
 function g(e) {
-    return o.useMemo(
+    return null == e || "" === e;
+}
+function x(e) {
+    let { children: a, showUpperNoticesAboveGlobalNotices: t = !1 } = e,
+        { errorMessage: r, richNotices: s } = (0, c.u)(),
+        i = n.useRef(null);
+    return (
+        n.useEffect(() => {
+            g(r) || null == i.current || i.current.scrollIntoView({ behavior: "smooth" });
+        }, [r]),
+        n.useMemo(() => {
+            if (!(!g(r) || s.length > 0 || null != a)) return null;
+            let e = (0, l.jsxs)(l.Fragment, {
+                children: [g(r) ? null : (0, l.jsx)(u.w, { type: "critical", message: r, role: "alert" }), s.map(P)],
+            });
+            return (0, l.jsx)("div", {
+                ref: i,
+                className: y.dD,
+                children: t
+                    ? (0, l.jsxs)(l.Fragment, { children: [a, e] })
+                    : (0, l.jsxs)(l.Fragment, { children: [e, a] }),
+            });
+        }, [r, s, a, t])
+    );
+}
+function f(e) {
+    return n.useMemo(
         () =>
             null == e
                 ? null
                 : Array.isArray(e)
                   ? 0 === e.length
                       ? null
-                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => E(e)) })
+                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => P(e)) })
                   : null != e
-                    ? E(e)
+                    ? P(e)
                     : null,
         [e],
     );
 }
-function y(e) {
-    let { footerInlineNoticeProps: t } = e,
-        n = g(t);
-    return null == n ? null : (0, l.jsx)("div", { className: m.Uu, children: n });
-}
 function T(e) {
-    let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: i } = e,
-        r = g(t);
-    return o.useMemo(
+    let { footerInlineNoticeProps: a } = e,
+        t = f(a);
+    return null == t ? null : (0, l.jsx)("div", { className: y.Uu, children: t });
+}
+function _(e) {
+    let { upperInlineNoticeProps: a, shouldShowGlobalNotices: t, showUpperNoticesAboveGlobalNotices: r } = e,
+        s = f(a);
+    return n.useMemo(
         () =>
-            null != r || n
-                ? n
-                    ? null != r
-                        ? (0, l.jsx)(A, { showUpperNoticesAboveGlobalNotices: i, children: r })
-                        : (0, l.jsx)(A, {})
-                    : (0, l.jsx)("div", { className: m.dD, children: r })
+            null != s || t
+                ? t
+                    ? null != s
+                        ? (0, l.jsx)(x, { showUpperNoticesAboveGlobalNotices: r, children: s })
+                        : (0, l.jsx)(x, {})
+                    : (0, l.jsx)("div", { className: y.dD, children: s })
                 : null,
-        [n, r, i],
+        [t, s, r],
     );
 }
-function S(e) {
-    let { children: t } = e;
-    return (0, l.jsx)("div", { className: m.uh, children: t });
+function M(e) {
+    let { children: a } = e;
+    return (0, l.jsx)("div", { className: y.uh, children: a });
 }
-n.d(
-    t,
+t.d(
+    a,
     {},
     {
-        Ed: f,
+        Ed: C,
         T_: function (e) {
             let {
-                    upperInlineNoticeProps: t,
-                    upperInlineNoticeContent: n,
-                    planSelectContent: i,
-                    purchaseItemContent: u,
-                    subscriptionDetailsContent: s,
-                    isStepLoading: d,
-                    paymentMethodContent: E,
-                    invoiceSummaryContent: _,
-                    promotionalNoticeContent: A,
+                    upperInlineNoticeProps: a,
+                    upperInlineNoticeContent: t,
+                    planSelectContent: r,
+                    purchaseItemContent: i,
+                    subscriptionDetailsContent: u,
+                    isStepLoading: c,
+                    paymentMethodContent: d,
+                    invoiceSummaryContent: p,
+                    promotionalNoticeContent: P,
                     tenantProvidesPromotionalNoticeContainer: g,
-                    legalContent: N,
-                    invoiceTotalDueLabel: O = h.intl.string(p.default.R0cZsM),
-                    invoiceTotalDueValue: k,
-                    shouldShowGlobalNotices: I,
-                    showUpperNoticesAboveGlobalNotices: v,
-                    footerInlineNoticeProps: x,
-                    footerInlineNoticeContent: w,
-                    headerBadgeConfig: F,
-                    className: P,
+                    legalContent: x,
+                    invoiceTotalDueLabel: f = E.intl.string(A.default.R0cZsM),
+                    invoiceTotalDueValue: v,
+                    shouldShowGlobalNotices: S,
+                    showUpperNoticesAboveGlobalNotices: I,
+                    footerInlineNoticeProps: N,
+                    footerInlineNoticeContent: R,
+                    headerBadgeConfig: j,
+                    className: L,
                 } = e,
-                { setCheckoutFooterLineItemNode: j } = (0, a.ck)(),
-                b = o.useMemo(() => (null == A ? null : g ? A : (0, l.jsx)(S, { children: A })), [A, g]);
-            return d
-                ? (0, l.jsx)(f, { className: P, shouldShowUnifiedHeader: !0 })
+                { setCheckoutFooterLineItemNode: k } = (0, o.ck)(),
+                b = n.useMemo(() => (null == P ? null : g ? P : (0, l.jsx)(M, { children: P })), [P, g]);
+            return c
+                ? (0, l.jsx)(C, { className: L, shouldShowUnifiedHeader: !0 })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)("div", {
-                              className: r()(P, { [m.pg]: null == _ }),
+                              className: s()(L, { [y.pg]: null == p }),
                               children: [
-                                  null != n
-                                      ? n
-                                      : (0, l.jsx)(T, {
-                                            upperInlineNoticeProps: t,
-                                            shouldShowGlobalNotices: I,
-                                            showUpperNoticesAboveGlobalNotices: v,
+                                  null != t
+                                      ? t
+                                      : (0, l.jsx)(_, {
+                                            upperInlineNoticeProps: a,
+                                            shouldShowGlobalNotices: S,
+                                            showUpperNoticesAboveGlobalNotices: I,
                                         }),
+                                  r,
+                                  null != r && null != i && (0, l.jsx)("div", { className: y.ls }),
                                   i,
-                                  null != i && null != u && (0, l.jsx)("div", { className: m.ls }),
-                                  u,
-                                  null != s && (0, l.jsx)("div", { className: m.P3, children: s }),
-                                  (0, l.jsx)("div", { className: m.Jv, children: E }),
-                                  null != _ && (0, l.jsx)("div", { className: m.ZF, children: _ }),
+                                  null != u && (0, l.jsx)("div", { className: y.P3, children: u }),
+                                  (0, l.jsx)("div", { className: y.Jv, children: d }),
+                                  null != p && (0, l.jsx)("div", { className: y.ZF, children: p }),
                               ],
                           }),
-                          (0, l.jsx)(a.UY, { children: (0, l.jsx)(c.f, { headerBadgeConfig: F }) }),
-                          (0, l.jsxs)(a.bx, {
+                          (0, l.jsx)(o.UY, { children: (0, l.jsx)(h.f, { headerBadgeConfig: j }) }),
+                          (0, l.jsxs)(o.bx, {
                               children: [
-                                  (0, l.jsx)("div", { ref: j }),
-                                  null != O && null != k && (0, l.jsx)(C.Qf, { className: m.NR, label: O, value: k }),
+                                  (0, l.jsx)("div", { ref: k }),
+                                  null != f && null != v && (0, l.jsx)(m.Qf, { className: y.NR, label: f, value: v }),
                                   b,
-                                  N,
-                                  null != w ? w : (0, l.jsx)(y, { footerInlineNoticeProps: x }),
+                                  x,
+                                  null != R ? R : (0, l.jsx)(T, { footerInlineNoticeProps: N }),
                               ],
                           }),
                       ],
                   });
         },
-        Wl: y,
-        iA: S,
-        zJ: T,
+        Wl: T,
+        iA: M,
+        yg: function () {
+            return (0, l.jsx)(d.Jg, {
+                transitionState: i.i.ENTERED,
+                onClose: p.tEg,
+                size: "md",
+                isModalContentLoading: !0,
+                children: (0, l.jsx)(C, { shouldShowUnifiedHeader: !0 }),
+            });
+        },
+        zJ: _,
     },
 );

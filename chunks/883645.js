@@ -16,6 +16,9 @@ function d(e) {
     return e.setStep;
 }
 function m(e) {
+    return e.steps;
+}
+function E(e) {
     return e.stepsHistory;
 }
 s.d(
@@ -24,7 +27,7 @@ s.d(
     {
         Ay: c,
         BQ: function () {
-            return c(m);
+            return c(E);
         },
         Gf: function (e) {
             let { stepConfigs: t, breadcrumbs: s, children: a } = e,
@@ -55,6 +58,9 @@ s.d(
                     );
                 }, [t, s]);
             return (0, n.jsx)(o, { value: i, children: a });
+        },
+        S1: function () {
+            return c(m);
         },
         Z8: function () {
             let { step: e, stepConfigs: t } = c();

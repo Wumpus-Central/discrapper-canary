@@ -185,7 +185,7 @@ n.d(
                 if (
                     ((n.code === l.tG.CONFIRMATION_REQUIRED || n.code === l.tG.AUTHENTICATION_REQUIRED) &&
                         a.h.dispatch({ type: "SKU_PURCHASE_AWAIT_CONFIRMATION", skuId: t, isGift: m }),
-                    a.h.dispatch({ type: "SKU_PURCHASE_FAIL", applicationId: e, skuId: t, error: n }),
+                    a.h.dispatch({ type: "SKU_PURCHASE_FAIL", loadId: S, applicationId: e, skuId: t, error: n }),
                     n.code !== l.tG.CONFIRMATION_REQUIRED)
                 )
                     throw n;

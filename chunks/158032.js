@@ -44,7 +44,7 @@ n.d(
                     e
                 );
             } catch (e) {
-                throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_SUBSCRIBE_FAIL", error: e }), e);
+                throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_SUBSCRIBE_FAIL", loadId: c, error: e }), e);
             }
         },
         ET: function () {
@@ -68,7 +68,7 @@ n.d(
                     ),
                     a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" }));
             } catch (e) {
-                throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_FAIL", error: e }), e);
+                throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_FAIL", loadId: u, error: e }), e);
             }
         },
         U: async function (e, t, n) {
