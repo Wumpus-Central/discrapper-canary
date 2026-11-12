@@ -4,6 +4,7 @@ e.exports = {
     Qw: "titleText_KUkQ06",
     Io: "pill_KUkQ06",
     SP: "pillGradient_KUkQ06",
+    u8: "lightPill_KUkQ06",
     Cr: "headerLabelCell_KUkQ06",
     nx: "labelCell_KUkQ06",
     Hn: "cell_KUkQ06",
@@ -22,4 +23,6 @@ e.exports = {
     wN: "gradientBackgroundContainer_KUkQ06",
     kQ: "gradientBackgroundPosition_KUkQ06",
     oG: "nitroWheelIconColor_KUkQ06",
+    Db: "lightInnerGradient_KUkQ06 gradientBackgroundPosition_KUkQ06",
+    _5: "lightOuterGradient_KUkQ06 gradientBackgroundPosition_KUkQ06",
 };

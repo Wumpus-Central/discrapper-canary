@@ -21,20 +21,22 @@ n.d(
                 a = r.useMemo(
                     () => A.intl.format(A.t["tw/SSq"], { nitroTierName: (0, u.Dd)(E.PremiumTypes.TIER_2), onClick: t }),
                     [t],
-                );
+                ),
+                h = (0, i.jsx)(c.A, {
+                    size: "sm",
+                    variantOverride: (0, o.q)(n) ? "primary" : void 0,
+                    subscriptionTier: E.pe.TIER_2,
+                    buttonTextOverride: A.intl.string(A.t.pj0XBN),
+                    premiumModalAnalyticsLocation: {
+                        section: _.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
+                        object: _.ZSU.BUTTON_CTA,
+                    },
+                });
             return (0, i.jsxs)("div", {
                 className: s()(f.Du, f.D7, (0, o.q)(n) && f.B9),
                 children: [
                     (0, i.jsx)(d.E, { variant: "body-sm/medium", color: "text-default", children: a }),
-                    (0, i.jsx)(c.A, {
-                        size: "sm",
-                        subscriptionTier: E.pe.TIER_2,
-                        buttonTextOverride: A.intl.string(A.t.pj0XBN),
-                        premiumModalAnalyticsLocation: {
-                            section: _.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
-                            object: _.ZSU.BUTTON_CTA,
-                        },
-                    }),
+                    (0, o.q)(n) ? (0, i.jsx)("div", { className: f.xF, children: h }) : h,
                 ],
             });
         },

@@ -112,7 +112,7 @@ function V(e) {
             (0, i.jsxs)("div", {
                 className: G.KS,
                 children: [
-                    (0, i.jsx)(x.NitroWheelIcon, { colorClass: G.oG }),
+                    (0, i.jsx)(x.NitroWheelIcon, { size: "refresh_sm", colorClass: G.oG }),
                     (0, i.jsx)(m.D, { variant: "heading-xs/semibold", children: n }),
                 ],
             }),
@@ -378,7 +378,7 @@ let z = function (e) {
     if (r) t = null;
     else {
         let e = null != H ? k.intl.string(k.t.IBYG5U) : k.intl.string(k.t.TR2B4T);
-        t = (0, i.jsx)(T.R, { className: l()(G.Io, { [G.SP]: !x }), text: e });
+        t = (0, i.jsx)(T.R, { disableGradient: x, className: l()(G.Io, { [G.SP]: !x, [G.u8]: x }), text: e });
     }
     let $ = V === P.pe.TIER_0 || c === P.PremiumTypes.TIER_0;
     return (0, i.jsx)(f.f5, {
@@ -400,16 +400,25 @@ let z = function (e) {
                             children: [
                                 !$ && t,
                                 (0, i.jsx)("div", { className: G.xQ }),
-                                (0, i.jsxs)("div", {
+                                (0, i.jsx)("div", {
                                     className: G.wN,
-                                    children: [
-                                        (0, i.jsx)("img", { src: w, alt: "", className: G.kQ }),
-                                        (0, i.jsx)("img", {
-                                            src: "/assets/6162a665edda48d4.svg",
-                                            alt: "",
-                                            className: G.kQ,
-                                        }),
-                                    ],
+                                    children: x
+                                        ? (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)("div", { className: G._5 }),
+                                                  (0, i.jsx)("div", { className: G.Db }),
+                                              ],
+                                          })
+                                        : (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)("img", { src: w, alt: "", className: G.kQ }),
+                                                  (0, i.jsx)("img", {
+                                                      src: "/assets/6162a665edda48d4.svg",
+                                                      alt: "",
+                                                      className: G.kQ,
+                                                  }),
+                                              ],
+                                          }),
                                 }),
                             ],
                         }),

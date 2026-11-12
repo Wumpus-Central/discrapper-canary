@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 671989, Version Hash: 891509624df121de56fecb3117deb4df81f51b38`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 671991, Version Hash: 1ae0144d04371572d2a78a63e8e44e89e3dc7bce`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671989";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671991";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -2198,7 +2198,7 @@ var i8 = n(289873),
 let rn = (0, re.qT)({
     createPromise: () =>
         Promise.all([
-            n.e(389321),
+            n.e(697395),
             n.e(394692),
             n.e(272788),
             n.e(709976),
@@ -4342,9 +4342,7 @@ let sa = (0, re.Fe)({
                 n.e(25839),
                 n.e(683084),
                 n.e(927808),
-                n.e(178396),
-                n.e(389321),
-                n.e(809321),
+                n.e(697395),
                 n.e(716860),
                 n.e(888213),
                 n.e(150183),
@@ -10627,7 +10625,7 @@ let EA =
                             n.e(203112),
                             n.e(876364),
                             n.e(668756),
-                            n.e(389321),
+                            n.e(697395),
                             n.e(996907),
                             n.e(816027),
                             n.e(562772),
@@ -15869,7 +15867,7 @@ let I8 = "isHideDevBanner",
                     className: td()(I7.Wz, I7.mr),
                     children: [
                         (0, v.jsx)(I5, { className: I7.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "671989" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "671991" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -26779,7 +26777,7 @@ let NL = (0, re.Fe)({
                 n.e(203112),
                 n.e(876364),
                 n.e(668756),
-                n.e(389321),
+                n.e(697395),
                 n.e(996907),
                 n.e(816027),
                 n.e(562772),
@@ -45352,9 +45350,8 @@ let wN = (0, tW.Fe)({
             n.e(25839),
             n.e(683084),
             n.e(927808),
-            n.e(178396),
-            n.e(389321),
-            n.e(809321),
+            n.e(306670),
+            n.e(697395),
             n.e(716860),
             n.e(888213),
             n.e(886807),
