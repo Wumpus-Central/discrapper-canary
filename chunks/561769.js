@@ -16,8 +16,8 @@ var r,
     x = n(722258),
     h = n(57020),
     A = n(758836),
-    E = n(652215);
-let _ = i.createContext({
+    _ = n(652215);
+let E = i.createContext({
     flattenProductVariants: void 0,
     productOverride: void 0,
     prioritizedCurrency: void 0,
@@ -31,6 +31,7 @@ var C =
     (r.NITRO_EXCLUSIVE = "nitro_exclusive"),
     (r.BADGE_OVERRIDE = "badge_override"),
     (r.DYNAMIC = "dynamic"),
+    (r.PROMO_DISCOUNT = "promo_discount"),
     r);
 n.d(
     t,
@@ -42,7 +43,7 @@ n.d(
         },
         UU: function (e, t, n) {
             return (r) => {
-                o.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                o.default.track(_.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: n?.sessionId,
                     sku_id: e.skuId,
                     page_type: t,
@@ -57,7 +58,7 @@ n.d(
             };
         },
         Vm: function (e) {
-            let { flattenProductVariants: t, productOverride: n } = i.useContext(_),
+            let { flattenProductVariants: t, productOverride: n } = i.useContext(E),
                 { legacyProduct: r, storefrontProduct: s } = (0, a.cf)(
                     [c.A, u.A],
                     () => {
@@ -87,17 +88,17 @@ n.d(
             return n ?? r ?? o;
         },
         gZ: function () {
-            return i.useContext(_).prioritizedCurrency;
+            return i.useContext(E).prioritizedCurrency;
         },
         ql: function (e, t, n) {
             let r = (0, I.Mk)(),
                 s = r?.tab,
                 u = (0, d.uM)(),
-                { standalonePreview: o, flattenProductVariants: v } = i.useContext(_),
+                { standalonePreview: o, flattenProductVariants: v } = i.useContext(E),
                 { analyticsLocations: p } = (0, l.Ay)(t),
                 A = (0, a.bG)([c.A], () => c.A.getCategoryForProduct(e.skuId)),
-                E = (0, f.Q)(e),
-                C = (0, m.rb)(e, E).skuId,
+                _ = (0, f.Q)(e),
+                C = (0, m.rb)(e, _).skuId,
                 b = i.useRef(null);
             return i.useCallback(
                 (r) => {
@@ -133,6 +134,6 @@ n.d(
                 [e, C, s, A, o, v, t, p, n, u?.cardId, u?.sessionId, u?.tilePosition],
             );
         },
-        v3: _,
+        v3: E,
     },
 );
