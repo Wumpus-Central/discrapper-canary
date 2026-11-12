@@ -26,8 +26,8 @@ var r = a(477900),
     C = a(48763),
     T = a(792996),
     R = a(350363),
-    O = a(852717),
-    y = a(241802);
+    y = a(852717),
+    O = a(241802);
 let M = {
     "--custom-checkpoint-card-logo-size": "44px",
     "--custom-checkpoint-card-footer-height": "28px",
@@ -35,7 +35,7 @@ let M = {
 };
 function k(e) {
     let { src: t } = e;
-    return (0, r.jsx)("img", { src: t, alt: "", className: y.Gl });
+    return (0, r.jsx)("img", { src: t, alt: "", className: O.Gl });
 }
 function L() {
     return (0, r.jsx)(d.UnknownGameIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
@@ -43,14 +43,14 @@ function L() {
 function D(e) {
     let { character: t } = e;
     return (0, r.jsx)("div", {
-        className: y.Ij,
+        className: O.Ij,
         children: (0, r.jsx)(l.E, { variant: "footnote/normal", color: "text-overlay-dark", children: t }),
     });
 }
 function P(e) {
     let { icon: t, stat: a } = e;
     return (0, r.jsxs)("li", {
-        className: y.N8,
+        className: O.N8,
         children: [
             t,
             (0, r.jsx)(l.E, {
@@ -80,7 +80,7 @@ function U(e) {
         ),
         p = i.useMemo(() => (null != l ? (0, r.jsx)(k, { src: l }) : (0, r.jsx)(D, { character: s })), [l, s]);
     return (0, r.jsxs)("ul", {
-        className: y.M1,
+        className: O.M1,
         children: [
             (0, r.jsx)(P, {
                 icon: (0, r.jsx)(u.MicrophoneIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
@@ -101,7 +101,7 @@ function U(e) {
             }),
             null != t.topEmojiName && null != n
                 ? (0, r.jsx)(P, {
-                      icon: (0, r.jsx)(g.A, { emojiId: n.emojiId, emojiName: n.emojiName, alt: "", className: y.Gl }),
+                      icon: (0, r.jsx)(g.A, { emojiId: n.emojiId, emojiName: n.emojiName, alt: "", className: O.Gl }),
                       stat: t.topEmojiName,
                   })
                 : null,
@@ -125,12 +125,12 @@ function H(e) {
             (0, r.jsx)(l.E, {
                 variant: "display-xs",
                 color: "text-overlay-dark",
-                className: y.K8,
+                className: O.K8,
                 children: T.intl.string(R.default["CdU/PF"]),
             }),
             t
                 ? (0, r.jsx)("div", {
-                      className: y.wC,
+                      className: O.wC,
                       "aria-hidden": !0,
                       children: (0, r.jsx)(p.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
                   })
@@ -142,18 +142,18 @@ function G(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
         ? (0, r.jsx)(m.m, {
-              text: T.intl.string(O.default.UjtEWE),
+              text: T.intl.string(y.default.UjtEWE),
               caretConfig: { align: "end" },
               ariaHidden: !0,
               children: (0, r.jsx)(x.D, {
-                  className: n()(y.qr, y.vk),
+                  className: n()(O.qr, O.vk),
                   onClick: a,
-                  "aria-label": T.intl.string(O.default.UjtEWE),
+                  "aria-label": T.intl.string(y.default.UjtEWE),
                   children: (0, r.jsx)(H, { isCheckpointEnabled: t }),
               }),
           })
         : (0, r.jsx)("div", {
-              className: y.qr,
+              className: O.qr,
               "aria-hidden": !0,
               children: (0, r.jsx)(H, { isCheckpointEnabled: t }),
           });
@@ -171,12 +171,12 @@ a.d(
             return (0, r.jsxs)(I.A, {
                 cardColorPalette: d,
                 size: C.W.SM,
-                className: n()(y.Nr, { [y.Q9]: l }),
+                className: n()(O.Nr, { [O.Q9]: l }),
                 style: M,
                 children: [
-                    (0, r.jsx)(o.A, { children: T.intl.string(O.default.Og2R9d) }),
+                    (0, r.jsx)(o.A, { children: T.intl.string(y.default.Og2R9d) }),
                     (0, r.jsx)(E.A, {}),
-                    (0, r.jsx)(S.A, { variant: null != s ? "full" : "short", className: y.Ss }),
+                    (0, r.jsx)(S.A, { variant: null != s ? "full" : "short", className: O.Ss }),
                     null != s && null != h
                         ? (0, r.jsx)(j.A, { powerLevel: h.powerLevel, powerLevelUnits: h.powerLevelUnits })
                         : null,

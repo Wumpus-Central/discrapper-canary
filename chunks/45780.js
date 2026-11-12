@@ -1,18 +1,18 @@
 var i = n(855986),
     l = n(554146),
-    r = n(594061),
-    a = n(617617),
+    a = n(594061),
+    r = n(617617),
     s = n(129230),
     o = n(460288),
     u = n(652215),
     c = n(49999),
     d = n(355097);
 function m(e, t) {
-    let n = a.A.getDismissedGuildContent(t);
+    let n = r.A.getDismissedGuildContent(t);
     return null != n && (0, o.c0)(n, e);
 }
-function f(e, t, n, i, a) {
-    ((0, r.TG)(
+function f(e, t, n, i, r) {
+    ((0, a.TG)(
         n,
         (i) => {
             let l = m(t, n);
@@ -25,7 +25,7 @@ function f(e, t, n, i, a) {
             s.default.track(u.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: l.V[t],
                 guild_id: n,
-                action: a ?? c.i.UNKNOWN,
+                action: r ?? c.i.UNKNOWN,
             }));
 }
 n.d(
@@ -33,7 +33,7 @@ n.d(
     {},
     {
         G$: function (e, t) {
-            return (0, i.bG)([a.A], () => m(e, t));
+            return (0, i.bG)([r.A], () => m(e, t));
         },
         _$: function (e, t, n, i) {
             f(!0, e, t, n, i);

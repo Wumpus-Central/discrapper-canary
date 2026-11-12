@@ -1,8 +1,8 @@
 n.d(t, { A: () => D });
 var i = n(477900),
     l = n(582128),
-    r = n(613412),
-    a = n(855986),
+    a = n(613412),
+    r = n(855986),
     s = n(620632),
     o = n(192308),
     u = n(830215),
@@ -27,8 +27,8 @@ var i = n(477900),
     N = n(975571),
     j = n(652215),
     R = n(792996),
-    O = n(690807);
-let M = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
+    M = n(690807);
+let O = N.A.getArticleURL(j.MVz.VERIFICATION_FAQ);
 class P extends l.PureComponent {
     static defaultProps = { types: [j.Fz7.CAPTCHA], onCaptchaVerify: j.tEg, onLogout: j.tEg };
     renderFields() {
@@ -44,7 +44,7 @@ class P extends l.PureComponent {
     render() {
         return (0, i.jsxs)(y.B, {
             gap: 16,
-            className: O.Ot,
+            className: M.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
@@ -52,7 +52,7 @@ class P extends l.PureComponent {
                 (0, i.jsxs)(y.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: v()(O.kL, { [O.Fr]: _.Fr }),
+                    className: v()(M.kL, { [M.Fr]: _.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -63,9 +63,9 @@ class P extends l.PureComponent {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: O.Sl }),
+                                (0, i.jsx)("div", { className: M.Sl }),
                                 (0, i.jsxs)(y.B, {
-                                    className: O.FS,
+                                    className: M.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
@@ -77,7 +77,7 @@ class P extends l.PureComponent {
                                         }),
                                         (0, i.jsx)(S.E, {
                                             variant: "body-md/normal",
-                                            children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: M }),
+                                            children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
                                     ],
                                 }),
@@ -100,7 +100,7 @@ class P extends l.PureComponent {
                     children: [
                         (0, i.jsx)(S.E, {
                             variant: "body-sm/normal",
-                            className: O.qr,
+                            className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
                         }),
                         (0, i.jsxs)(y.B, {
@@ -111,13 +111,13 @@ class P extends l.PureComponent {
                             children: [
                                 (0, i.jsx)(S.E, {
                                     variant: "body-sm/semibold",
-                                    className: O.qr,
+                                    className: M.qr,
                                     children: R.intl.format(R.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: v()(O.qr, O.mf), children: "\u2022" }),
+                                (0, i.jsx)("div", { className: v()(M.qr, M.mf), children: "\u2022" }),
                                 (0, i.jsx)(S.E, {
                                     variant: "body-sm/semibold",
-                                    className: O.qr,
+                                    className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
@@ -135,7 +135,7 @@ class P extends l.PureComponent {
 var k = n(87404),
     L = n(53516);
 function D() {
-    let { action: e, theme: t } = (0, a.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
+    let { action: e, theme: t } = (0, r.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
         x = E.A.getVerificationTypes(e),
         [v, _] = l.useState(0),
         b = (0, m.Ay)(x);
@@ -154,8 +154,8 @@ function D() {
     return (
         (0, p.A)(
             {
-                type: r.ImpressionTypes.MODAL,
-                name: r.ImpressionNames.USER_ACTION_REQUIRED,
+                type: a.ImpressionTypes.MODAL,
+                name: a.ImpressionNames.USER_ACTION_REQUIRED,
                 properties: { verification_type: x[0], verification_types: x },
             },
             {},

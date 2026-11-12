@@ -68,7 +68,7 @@ function T(e) {
     });
 }
 var M = n(13792);
-let L = function (e) {
+let b = function (e) {
     let { type: t, theme: n } = e;
     return (0, r.jsx)("div", {
         className: M.Eq,
@@ -90,7 +90,7 @@ let L = function (e) {
         }),
     });
 };
-var b = n(585121),
+var L = n(585121),
     k = n(682901),
     N = n(88001),
     j = n(652215),
@@ -291,9 +291,9 @@ function G(e) {
                 children: z(e),
             })));
     }
-    let [V, Q] = i.useState(!1),
+    let [Q, V] = i.useState(!1),
         X = i.useCallback(() => {
-            null != f && (f(), G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT && Q(!0));
+            null != f && (f(), G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT && V(!0));
         }, [f, G]);
     function $() {
         return j.NcF.has(v ?? j.hes.UNKNOWN)
@@ -316,19 +316,19 @@ function G(e) {
                     : H.intl.string(H.t.TkTvBz)),
         M)
     )
-        return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: V });
+        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
     let J = (0, S.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
-            !J && (0, r.jsx)(L, { type: $(), theme: Z }),
+            !J && (0, r.jsx)(b, { type: $(), theme: Z }),
             t,
             y || q
                 ? null
                 : (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
                       className: F.x6,
-                      children: (0, r.jsx)(d.$, { variant: "primary", text: n, onClick: X, loading: V }),
+                      children: (0, r.jsx)(d.$, { variant: "primary", text: n, onClick: X, loading: Q }),
                   }),
         ],
     });

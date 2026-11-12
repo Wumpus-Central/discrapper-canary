@@ -1,7 +1,7 @@
 var i = n(582128),
     l = n(855986),
-    r = n(596344),
-    a = n(403362),
+    a = n(596344),
+    r = n(403362),
     s = n(419490),
     o = n(458977),
     u = n(110742),
@@ -12,13 +12,13 @@ n.d(
     {
         A: function (e) {
             let { attachment: t, messageId: n, channelId: d, guildId: m, width: f, height: p } = e,
-                h = (0, l.bG)([r.A], () => (null != d && null != n ? r.A.getMessage(d, n) : void 0), [d, n]),
+                h = (0, l.bG)([a.A], () => (null != d && null != n ? a.A.getMessage(d, n) : void 0), [d, n]),
                 g = i.useMemo(() => (0, u.Vi)(t), [t]),
                 { enableDistributedClips: A } = o.A.useConfig({ location: "useMultiSourceConfig" }),
                 C = (0, l.bG)([s.Ay], () => s.Ay.getMatchingPOVReferences(t.id), [t.id]),
-                E = (0, l.yK)([r.A], () =>
-                    C.map((e) => r.A.getMessage(e.channelId, e.messageId))
-                        .filter(a.Vq)
+                E = (0, l.yK)([a.A], () =>
+                    C.map((e) => a.A.getMessage(e.channelId, e.messageId))
+                        .filter(r.Vq)
                         .sort((e, t) => e.id.localeCompare(t.id))
                         .slice(0, 3),
                 );

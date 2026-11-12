@@ -1,7 +1,7 @@
 var i = n(73153),
     l = n(574332),
-    r = n(21599),
-    a = n(976860),
+    a = n(21599),
+    r = n(976860),
     s = n(46653),
     o = n(129230),
     u = n(723702),
@@ -11,10 +11,10 @@ var i = n(73153),
     f = n(652215);
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        m = (0, r.LO)(n?.targetChannelId),
-        p = (0, r.LO)(n?.targetMessageId),
-        h = (0, r.LO)(n?.guildScheduledEventId),
-        g = (0, r.WU)({ baseCode: e, targetChannelId: m, targetMessageId: p, guildScheduledEventId: h }),
+        m = (0, a.LO)(n?.targetChannelId),
+        p = (0, a.LO)(n?.targetMessageId),
+        h = (0, a.LO)(n?.guildScheduledEventId),
+        g = (0, a.WU)({ baseCode: e, targetChannelId: m, targetMessageId: p, guildScheduledEventId: h }),
         { invite: A } = await l.Ay.resolveInvite(g, t);
     if (null == A) throw new d.A({ errorCode: f.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
     return (
@@ -33,7 +33,7 @@ async function p(e, t) {
               })
             : (n?.installationId != null &&
                   l.Ay.setReceivedInstallationIdForInviteCode(A.code, String(n.installationId)),
-              (0, a.bG)(f.BVt.INVITE(g))),
+              (0, r.bG)(f.BVt.INVITE(g))),
         u.isPlatformEmbedded && c.Ay.focus(),
         { invite: A, code: e }
     );
