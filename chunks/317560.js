@@ -16,7 +16,7 @@ n.d(
                 analyticsLocations: d,
                 analyticsContext: m,
                 contextKey: p,
-                onClose: h,
+                onClose: C,
             } = e;
             (0, i.mM)(
                 async () => {
@@ -87,7 +87,7 @@ n.d(
                     contextKey: p,
                     allowsNavigation: o,
                     onCloseCallback: () => {
-                        h?.();
+                        C?.();
                     },
                 },
             );

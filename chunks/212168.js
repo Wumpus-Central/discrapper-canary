@@ -1,8 +1,8 @@
 var i,
     a = n(477900);
 n(582128);
-var r = n(503698),
-    l = n.n(r),
+var l = n(503698),
+    r = n.n(l),
     s = n(489088),
     o = (((i = {}).PREMIUM = "premium"), (i.LIMITED = "limited"), (i.NEW_UPSELL = "newUpsell"), i);
 let d = {
@@ -19,7 +19,7 @@ n.d(
                 children: t,
                 type: n = "premium",
                 isShown: i,
-                hasBackground: r = !1,
+                hasBackground: l = !1,
                 className: o,
                 backgroundClassName: c,
                 ref: u,
@@ -28,8 +28,8 @@ n.d(
             let { border: f, background: m } = d[n];
             return (0, a.jsx)("div", {
                 ref: u,
-                className: l()(f, o),
-                children: (0, a.jsx)("div", { className: l()(r ? m : s.Tp, c), children: t }),
+                className: r()(f, o),
+                children: (0, a.jsx)("div", { className: r()(l ? m : s.Tp, c), children: t }),
             });
         },
         i: o,

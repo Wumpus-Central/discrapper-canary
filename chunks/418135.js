@@ -1,8 +1,8 @@
 n.d(t, { A: () => c });
 var i = n(580630),
     a = n(935399),
-    r = n(855986),
-    l = n(73825),
+    l = n(855986),
+    r = n(73825),
     s = n(97352),
     o = n(448645),
     d = n(682901);
@@ -10,13 +10,13 @@ function c(e) {
     let t = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = (0, o.mH)(d.pe.TIER_2),
-            { plan: n, isFetchingPlan: i } = (0, r.cf)([s.A], () => ({
+            { plan: n, isFetchingPlan: i } = (0, l.cf)([s.A], () => ({
                 plan: s.A.get(d.gD.PREMIUM_GROUP_MONTH),
                 isFetchingPlan: s.A.isFetchingForSKU(t),
             }));
         if (
             ((0, a.Ay)(() => {
-                e || null != n || i || (0, l.ur)(t);
+                e || null != n || i || (0, r.ur)(t);
             }),
             e || null == n)
         )

@@ -1,11 +1,11 @@
-var l = n(855986),
-    o = n(734057);
-n.d(
-    t,
+var l = t(855986),
+    n = t(734057);
+t.d(
+    a,
     {},
     {
         A: function (e) {
-            return (0, l.yK)([o.A], () => e.filter((e) => o.A.hasChannel(e.ref_id)), [e]);
+            return (0, l.yK)([n.A], () => e.filter((e) => n.A.hasChannel(e.ref_id)), [e]);
         },
     },
 );

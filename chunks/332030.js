@@ -58,8 +58,8 @@ let N = function (e) {
 var S = s(573359),
     I = s(423814),
     T = s(77528),
-    C = s(795269),
-    f = s(221549);
+    f = s(795269),
+    C = s(221549);
 let x = function (e) {
     let { discountAmount: t } = e,
         s = (0, T.V)(),
@@ -69,7 +69,7 @@ let x = function (e) {
         void 0 !== t
             ? (a = L.intl.formatToPlainString(L.t.iiLbvu, { percent: t }))
             : r && (a = L.intl.string(L.t.gtNqJQ)),
-        (0, n.jsx)("div", { className: f.f, children: (0, n.jsx)(C.R, { text: a }) })
+        (0, n.jsx)("div", { className: C.f, children: (0, n.jsx)(f.R, { text: a }) })
     );
 };
 var g = s(682901),
@@ -119,9 +119,9 @@ let w = function (e) {
             isPremiumGroupPurchase: N = !1,
             forceBrandRefreshHeader: T = !1,
         } = e,
-        C = p === g.PremiumTypes.TIER_2,
-        f = (0, I.O)(),
-        O = f?.discount?.amount,
+        f = p === g.PremiumTypes.TIER_2,
+        C = (0, I.O)(),
+        O = C?.discount?.amount,
         { startedPaymentFlowWithPaymentSources: D, isInOneStepSubscriptionCheckout: w } = (0, m.t4)((e) => ({
             startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
             isInOneStepSubscriptionCheckout: e.getIsInOneStepSubscriptionCheckout({ isTrial: _ }),
@@ -144,8 +144,8 @@ let w = function (e) {
         W = k?.sectionHeaderText?.() ?? k?.label,
         V = (null == B || B !== E.pn.PLAN_SELECT) && null != W && null != B,
         H = w && V && B === E.pn.REVIEW,
-        Y = C ? "nitro-pink" : "nitro-green",
-        z = N ? (0, y.DP)() : C ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
+        Y = f ? "nitro-pink" : "nitro-green",
+        z = N ? (0, y.DP)() : f ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
         K = j.kL,
         X = a()(j.N1, R.headerGradient);
     return U
@@ -157,7 +157,7 @@ let w = function (e) {
                       color: Y,
                       className: a()(X, { [j.s1]: !V }),
                       children: [
-                          (0, n.jsx)(b, { isTier2: C }),
+                          (0, n.jsx)(b, { isTier2: f }),
                           !t &&
                               (0, n.jsx)(l.s_, {
                                   "data-migration-pending": !0,
@@ -165,7 +165,7 @@ let w = function (e) {
                                   onClick: r,
                                   className: j.Ep,
                               }),
-                          (0, n.jsx)("img", { src: C ? v : P, alt: "", className: H ? j.i_ : j.kX }),
+                          (0, n.jsx)("img", { src: f ? v : P, alt: "", className: H ? j.i_ : j.kX }),
                           (0, n.jsxs)("div", {
                               className: j.FS,
                               children: [

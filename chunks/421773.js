@@ -1,13 +1,13 @@
 var l = n(582128),
-    r = n(451988);
+    i = n(451988);
 n.d(
     t,
     {},
     {
         A: function (e, t) {
-            let [n, i] = l.useState(!1),
-                a = l.useRef(new r.J_(t, () => i(!1))),
-                s = l.useRef(new r.J_(e, () => i(!0))),
+            let [n, r] = l.useState(!1),
+                a = l.useRef(new i.J_(t, () => r(!1))),
+                s = l.useRef(new i.J_(e, () => r(!0))),
                 o = l.useCallback(() => {
                     (a.current.cancel(), s.current.cancel());
                 }, []);
@@ -17,7 +17,7 @@ n.d(
             }, [o]);
             return {
                 isHovered: n,
-                setIsHovered: i,
+                setIsHovered: r,
                 onMouseEnter: l.useCallback(() => {
                     (o(), s.current.delay());
                 }, [o]),

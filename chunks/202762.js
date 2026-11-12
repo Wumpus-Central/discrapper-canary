@@ -1,6 +1,6 @@
 var l = n(115560),
-    r = n(620632),
-    i = n(73153),
+    i = n(620632),
+    r = n(73153),
     a = n(960960),
     s = n(88592),
     u = n(716357),
@@ -26,25 +26,25 @@ n.d(
             let l = {
                     header: n,
                     widgets: t.widgets.map((e) => {
-                        let { id: t, type: n, position: l, config: r } = e,
-                            i = { type: n, position: l, config: (0, c.y0)(r) };
-                        return ((0, c.Ny)(t) || (i.id = t), i);
+                        let { id: t, type: n, position: l, config: i } = e,
+                            r = { type: n, position: l, config: (0, c.y0)(i) };
+                        return ((0, c.Ny)(t) || (r.id = t), r);
                     }),
                 },
                 u = s.A.getEditSessionId(e),
                 f = s.A.getInitialDraft(e)?.widgets ?? [],
-                m = new Set(
+                h = new Set(
                     t.widgets.map((e) => {
                         let { id: t } = e;
                         return t;
                     }),
                 ),
-                h = g++;
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: h });
+                m = g++;
+            r.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_START", guildId: e, requestId: m });
             try {
-                let { body: n } = await r.Bo.put({ url: o.Rsh.GUILD_SPACE(e), body: l, rejectWithError: !0 });
+                let { body: n } = await i.Bo.put({ url: o.Rsh.GUILD_SPACE(e), body: l, rejectWithError: !0 });
                 return (
-                    i.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: e, space: n }),
+                    r.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: e, space: n }),
                     null != u &&
                         (0, d.nn)(e, u, {
                             widgetCount: t.widgets.length,
@@ -54,38 +54,38 @@ n.d(
                             }).length,
                             deletedWidgetCount: f.filter((e) => {
                                 let { id: t } = e;
-                                return !m.has(t);
+                                return !h.has(t);
                             }).length,
                             bannerChanged: void 0 !== t.header.custom_banner,
                         }),
                     !0
                 );
-            } catch (r) {
-                let n = (0, c.GE)(r, t.widgets),
+            } catch (i) {
+                let n = (0, c.GE)(i, t.widgets),
                     l = n?.message;
                 if (null != n) {
                     let t = a.A.getWidget(e, n.type)?.name;
                     null != t && (l = `${t}: ${n.message}`);
                 }
                 return (
-                    i.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: h, errorMessage: l }),
+                    r.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: m, errorMessage: l }),
                     !1
                 );
             }
         },
         GP: function (e, t) {
             let n = f(e, t);
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_REMOVE_WIDGET", guildId: e, widgetId: t });
+            r.h.dispatch({ type: "GUILD_SPACE_EDIT_REMOVE_WIDGET", guildId: e, widgetId: t });
             let l = s.A.getEditSessionId(e),
-                r = s.A.getDraft(e);
+                i = s.A.getDraft(e);
             null != l &&
-                null != r &&
+                null != i &&
                 null != n &&
                 null == f(e, t) &&
-                (0, d.jM)(e, l, { widget: n, widgetCount: r.widgets.length });
+                (0, d.jM)(e, l, { widget: n, widgetCount: i.widgets.length });
         },
         Vk: function (e, t, n) {
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG", guildId: e, widgetId: t, config: n });
+            r.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG", guildId: e, widgetId: t, config: n });
         },
         Wd: function (e) {
             let t,
@@ -96,22 +96,22 @@ n.d(
                 if (null == n && "error" !== a.A.getFetchStatus(e)) return;
                 t = (0, c.Ac)(n ?? []);
             }
-            let r = (0, l.A)();
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: n, seedWidgets: t, editSessionId: r });
+            let i = (0, l.A)();
+            r.h.dispatch({ type: "GUILD_SPACE_EDIT_START", guildId: e, space: n, seedWidgets: t, editSessionId: i });
             let o = s.A.getDraft(e);
-            null != o && (0, d.Fh)(e, r, { widgetCount: o.widgets.length, isNewHub: null != t });
+            null != o && (0, d.Fh)(e, i, { widgetCount: o.widgets.length, isNewHub: null != t });
         },
         iX: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.pb.USER,
                 n = s.A.getEditSessionId(e),
                 l = s.A.getDraft(e),
-                r = s.A.hasChanges(e);
-            (i.h.dispatch({ type: "GUILD_SPACE_EDIT_CANCEL", guildId: e }),
-                null != n && null != l && (0, d.P7)(e, n, { reason: t, hadChanges: r, widgetCount: l.widgets.length }));
+                i = s.A.hasChanges(e);
+            (r.h.dispatch({ type: "GUILD_SPACE_EDIT_CANCEL", guildId: e }),
+                null != n && null != l && (0, d.P7)(e, n, { reason: t, hadChanges: i, widgetCount: l.widgets.length }));
         },
         j0: function (e, t, n, l) {
-            let r = f(e, t)?.position;
-            i.h.dispatch({
+            let i = f(e, t)?.position;
+            r.h.dispatch({
                 type: "GUILD_SPACE_EDIT_MOVE_WIDGET",
                 guildId: e,
                 widgetId: t,
@@ -120,20 +120,20 @@ n.d(
             });
             let a = s.A.getEditSessionId(e),
                 u = f(e, t);
-            if (null == a || null == r || null == u) return;
+            if (null == a || null == i || null == u) return;
             let c = u.position;
-            (r.column !== c.column || r.order !== c.order) && (0, d.Js)(e, a, { widget: u, from: r, to: c });
+            (i.column !== c.column || i.order !== c.order) && (0, d.Js)(e, a, { widget: u, from: i, to: c });
         },
-        lr: function (e, t, n, l, r) {
+        lr: function (e, t, n, l, i) {
             let a = (0, c.ox)(t, n, l);
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_ADD_WIDGET", guildId: e, widget: a, insertionTarget: r });
+            r.h.dispatch({ type: "GUILD_SPACE_EDIT_ADD_WIDGET", guildId: e, widget: a, insertionTarget: i });
             let u = s.A.getEditSessionId(e),
                 o = f(e, a.id),
                 g = s.A.getDraft(e)?.widgets.length ?? 0;
             return (null != u && null != o && (0, d.qg)(e, u, { widget: o, widgetCount: g }), a.id);
         },
         pC: function (e, t) {
-            i.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_HEADER", guildId: e, customBanner: t });
+            r.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_HEADER", guildId: e, customBanner: t });
         },
     },
 );

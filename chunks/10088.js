@@ -12,7 +12,7 @@ class o extends l.Ay.Store {
         return r;
     }
 }
-let u = new o(i.h, {
+let c = new o(i.h, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
         ((a[t] = s.fAW.OPENING), null === r && (r = s.fAW.OPENING));
@@ -26,4 +26,4 @@ let u = new o(i.h, {
         ((a[t] = s.fAW.OPEN_FAIL), (null === r || r === s.fAW.OPENING) && (r = s.fAW.OPEN_FAIL));
     },
 });
-n.d(t, {}, { A: u });
+n.d(t, {}, { A: c });

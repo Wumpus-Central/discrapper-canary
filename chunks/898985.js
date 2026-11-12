@@ -4,7 +4,7 @@ var n = s(582128),
     r = s(430571),
     o = s(842671),
     c = s(792996);
-let u = {
+let i = {
         [l.z.SOLID]: o.default.OpWJ3f,
         [l.z.GRADIENT]: o.default["i9e/u1"],
         [l.z.NEON]: o.default.x68b1F,
@@ -13,7 +13,7 @@ let u = {
         [l.z.GUMMY]: o.default.x9Gtie,
         [l.z.PRISM]: o.default["/M7psm"],
     },
-    i = {
+    u = {
         [l.z.SOLID]: 3,
         [l.z.GRADIENT]: 2.5,
         [l.z.GLOW]: 2.5,
@@ -27,15 +27,15 @@ s.d(
     t,
     {},
     {
-        J: u,
+        J: i,
         _: function (e) {
             let t = (0, r.A)()[e];
             return n.useMemo(
                 () => ({
-                    name: c.intl.string(u[e] ?? o.default.OpWJ3f),
+                    name: c.intl.string(i[e] ?? o.default.OpWJ3f),
                     defaultColors: t,
                     previewStyles: { fontId: a.x.DEFAULT, effectId: e, colors: t },
-                    minContrastRatio: i[e] ?? 3,
+                    minContrastRatio: u[e] ?? 3,
                 }),
                 [e, t],
             );

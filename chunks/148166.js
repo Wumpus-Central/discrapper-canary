@@ -11,9 +11,9 @@ l.d(
         R: function (e) {
             let { src: t, isCircular: l, FallbackIcon: s, children: o } = e,
                 [c, u] = i.useState(t),
-                [m, h] = i.useState(!1);
+                [m, x] = i.useState(!1);
             return (
-                c !== t && (u(t), h(!1)),
+                c !== t && (u(t), x(!1)),
                 (0, n.jsxs)("span", {
                     className: a()(d.xX, { [d.A6]: l }),
                     children: [
@@ -32,7 +32,7 @@ l.d(
                                   alt: "",
                                   "aria-hidden": !0,
                                   loading: "lazy",
-                                  onError: () => h(!0),
+                                  onError: () => x(!0),
                               }),
                         o,
                     ],

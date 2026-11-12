@@ -14,13 +14,13 @@ l.d(
         A: function (e) {
             let { onPublish: t } = e,
                 [l, m] = i.useState(!1),
-                [h, f] = i.useState(!1),
-                x = i.useCallback(async () => {
-                    (m(!0), f(!1));
+                [x, h] = i.useState(!1),
+                f = i.useCallback(async () => {
+                    (m(!0), h(!1));
                     try {
                         (await t(), s.O.announce(c.intl.string(o.default.pDzipI)));
                     } catch {
-                        f(!0);
+                        h(!0);
                     } finally {
                         m(!1);
                     }
@@ -29,7 +29,7 @@ l.d(
                 className: u.lm,
                 children: [
                     (0, n.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor", className: u.Kk }),
-                    h
+                    x
                         ? (0, n.jsx)(r.E, {
                               variant: "body-sm/medium",
                               color: "text-feedback-critical",
@@ -48,7 +48,7 @@ l.d(
                         size: "sm",
                         text: c.intl.string(o.default["yul+0g"]),
                         loading: l,
-                        onClick: x,
+                        onClick: f,
                     }),
                 ],
             });

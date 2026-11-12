@@ -1,7 +1,7 @@
 var i = n(477900),
     a = n(582128),
-    r = n(517352),
-    l = n(793574),
+    l = n(517352),
+    r = n(793574),
     s = n(688810),
     o = n(975571),
     d = n(713271),
@@ -23,8 +23,8 @@ n.d(
         A: function (e) {
             let { enabled: t } = m.A.useConfig({ location: e }),
                 { enabled: n } = f.A.useConfig({ location: e }),
-                { assetUrl: O } = (0, g.A)(r.oW.MARKETING_PAGE_REWARDS_BENTO_BOX),
-                { analyticsLocations: T } = (0, s.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX);
+                { assetUrl: O } = (0, g.A)(l.oW.MARKETING_PAGE_REWARDS_BENTO_BOX),
+                { analyticsLocations: T } = (0, s.Ay)(r.A.PREMIUM_MARKETING_BENTO_BOX);
             return (0, a.useMemo)(
                 () =>
                     t && n && null != O

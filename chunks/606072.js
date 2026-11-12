@@ -9,16 +9,16 @@ var n,
     c = l(641216),
     u = l(153488),
     m = l(71393),
-    h = l(115063),
-    f = l(652215);
-function x(e, t) {
+    x = l(115063),
+    h = l(652215);
+function f(e, t) {
     let { useTitle: l, useDisabled: n } = t;
     return (0, r.zD)("guild_space_sharing_modal_guild_activity_sharing_setting", {
         useTitle: l,
         useSubtitle: () => (0, s.bG)([m.A], () => m.A.getGuild(e)?.name),
         useValue: () => !d.JG.useSetting().includes(e),
         setValue: (t) => {
-            let l = (0, h.Kk)();
+            let l = (0, x.Kk)();
             (t ? l.delete(e) : l.add(e), d.JG.updateSetting([...l]));
         },
         useDisabled: n,
@@ -36,14 +36,14 @@ l.d(
     t,
     {},
     {
-        F6: x,
+        F6: f,
         T4: function (e) {
             i.useEffect(j, []);
             let t = d.tz.useSetting(),
                 l = !d.JG.useSetting().includes(e),
                 { hasFetchedConsents: n, hasPersonalizationConsent: a } = (0, s.cf)([u.A], () => ({
                     hasFetchedConsents: u.A.fetchedConsents,
-                    hasPersonalizationConsent: u.A.hasConsented(f.YAq.PERSONALIZATION),
+                    hasPersonalizationConsent: u.A.hasConsented(h.YAq.PERSONALIZATION),
                 })),
                 r = null,
                 o = !t || !l;
@@ -63,7 +63,7 @@ l.d(
                 i = [];
             return (
                 ("activity_sharing" === n || "all" === n) &&
-                    (i.push(o._), i.push(x(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
+                    (i.push(o._), i.push(f(t, { useTitle: l, useDisabled: () => !d.tz.useSetting() }))),
                 ("personalization" === n || "all" === n) && i.push(c._),
                 i
             );

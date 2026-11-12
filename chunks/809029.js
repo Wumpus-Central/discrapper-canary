@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(448645),
     m = n(615396),
     p = n(120700),
-    h = n(660505),
-    C = n(558620),
+    C = n(660505),
+    h = n(558620),
     f = n(316363),
     E = n(602787),
     S = n(379912),
@@ -51,7 +51,7 @@ n.d(
                     premiumTenantParams: e.getTenantParams(p.C.PREMIUM_CHECKOUT) ?? {},
                 })),
                 { subscriptionTier: L } = j,
-                k = (0, C.A)(),
+                k = (0, h.A)(),
                 w = e.handlePaymentSourceAdd,
                 D = null != R,
                 U = null == M && null == L,
@@ -157,7 +157,7 @@ n.d(
                     }),
                     [Q, q, K, G, T, b],
                 );
-            return (0, l.jsx)(h.Y, { ...e, renderStepBody: V, tenantCheckoutFooterProps: J, isTrial: t });
+            return (0, l.jsx)(C.Y, { ...e, renderStepBody: V, tenantCheckoutFooterProps: J, isTrial: t });
         },
     },
 );

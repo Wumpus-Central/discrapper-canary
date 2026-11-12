@@ -1,15 +1,15 @@
-var l = n(582128),
-    o = n(855986),
-    i = n(121681),
-    r = n(492494);
-let u = [];
-n.d(
-    t,
+var l = t(582128),
+    n = t(855986),
+    r = t(121681),
+    s = t(492494);
+let i = [];
+t.d(
+    a,
     {},
     {
         A: function (e) {
-            let t = (0, o.bG)([i.Ay], () => i.Ay.getGuildEmoji(e), [e]);
-            return l.useMemo(() => (null == t ? u : t.filter((t) => (0, r.Eg)(t, e))), [t, e]);
+            let a = (0, n.bG)([r.Ay], () => r.Ay.getGuildEmoji(e), [e]);
+            return l.useMemo(() => (null == a ? i : a.filter((a) => (0, s.Eg)(a, e))), [a, e]);
         },
     },
 );

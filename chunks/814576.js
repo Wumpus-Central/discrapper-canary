@@ -19,8 +19,8 @@ var l = n(477900),
     d = n(834730),
     m = n(726656),
     p = n(558620),
-    h = n(316363),
-    C = n(602787),
+    C = n(316363),
+    h = n(602787),
     f = n(773444),
     E = n(418200),
     S = n(97352),
@@ -102,13 +102,13 @@ function K(e) {
             setQuantity: c,
             setSelectedPlanId: m,
             checkoutPriceOptions: p,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             quantity: e.quantity,
             setQuantity: e.setQuantity,
             setSelectedPlanId: e.setSelectedPlanId,
             checkoutPriceOptions: e.checkoutPriceOptions,
         })),
-        C = a
+        h = a
             .filter((e) => null != e && (0, N.bM)(e.id))
             .map((e) => ({
                 plan: e,
@@ -119,7 +119,7 @@ function K(e) {
                 savingsPercent: (0, y.L_)({ planId: e.id, isGift: !0, priceOptions: p, subscriptionPlan: e }),
             })),
         { presets: f, defaultCustomQuantity: E } = B(
-            C.find((e) => {
+            h.find((e) => {
                 let { plan: n } = e;
                 return n.id === t;
             })?.plan,
@@ -151,7 +151,7 @@ function K(e) {
                 role: "radiogroup",
                 children: (0, l.jsx)("div", {
                     className: U.bH,
-                    children: C.map((e) => {
+                    children: h.map((e) => {
                         let { plan: n, label: i, savingsPercent: r } = e,
                             a = n.id === t,
                             s = H(r);
@@ -416,9 +416,9 @@ var eu = n(781949),
     ed = n(274076),
     em = n(813267),
     ep = n(948388),
-    eh = n(652215);
+    eC = n(652215);
 n(26279);
-var eC = n(818348),
+var eh = n(818348),
     ef = n(305828);
 function eE(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
@@ -473,7 +473,7 @@ function eS(e, t) {
     }
 }
 function eg() {
-    let { userTrialOffer: e } = (0, C.i)(),
+    let { userTrialOffer: e } = (0, h.i)(),
         t = e?.subscriptionTrial,
         { daysCount: n, copy: l } = i.useMemo(
             () =>
@@ -493,13 +493,13 @@ function eI(e) {
             setSelectedPlanId: d,
             checkoutPriceOptions: m,
             activeSubscription: f,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
             checkoutPriceOptions: e.checkoutPriceOptions,
             activeSubscription: e.activeSubscription,
         })),
-        { userTrialOffer: I, isEligibleForTrial: A, discountOffer: P } = (0, C.i)(),
+        { userTrialOffer: I, isEligibleForTrial: A, discountOffer: P } = (0, h.i)(),
         v = (0, er.YJ)(P),
         {
             isGift: x,
@@ -511,7 +511,7 @@ function eI(e) {
             setSelectedGiftingPromotionRewards: M,
         } = (0, E.Pv)(),
         L = (0, p.A)(),
-        k = (0, h.t4)((e) => e.getIsRecurringGiftCheckout());
+        k = (0, C.t4)((e) => e.getIsRecurringGiftCheckout());
     (0, j.r)(k);
     let w = (0, b.kz)(L, x && !k && (0, g.Ik)(_), O);
     a()(void 0 !== f, "should not be undefined");
@@ -542,7 +542,7 @@ function eI(e) {
     let { ref: z, ...$ } = (0, o._u)(),
         Q = H?.id != null ? (0, y.y8)(H.id, !1, x, W) : void 0,
         { ipCountryCode: J } = (0, el.A)(),
-        X = "HR" === J && null != Q && Q.currency === eC.Yr.EUR,
+        X = "HR" === J && null != Q && Q.currency === eh.Yr.EUR,
         ee = (0, y.J$)(W.paymentSourceId),
         et = !x && (Y || (null != G && A && null != r)),
         { copy: en } = eg();
@@ -605,12 +605,12 @@ function eA(e) {
             selectedPlanPrice: d,
             useCompactGiftComponents: m,
             isRecurringGiftEnabled: p,
-            quantityPresetsSelector: C,
+            quantityPresetsSelector: h,
             showTotal: f,
             switchPlanSelectComponent: E,
             warningComponent: S,
         } = e,
-        I = (0, h.t4)((e) => e.hasClearedDefaultGiftMessage);
+        I = (0, C.t4)((e) => e.hasClearedDefaultGiftMessage);
     function y(e) {
         return (0, l.jsxs)(u.B, {
             gap: 8,
@@ -624,8 +624,8 @@ function eA(e) {
             ],
         });
     }
-    return null != C
-        ? (0, l.jsxs)(l.Fragment, { children: [C, S] })
+    return null != h
+        ? (0, l.jsxs)(l.Fragment, { children: [h, S] })
         : (0, g.Ik)(t)
           ? (0, l.jsxs)("div", {
                 className: ef.mh,
@@ -699,14 +699,14 @@ function ev(e) {
             isEligibleForTrial: d,
             isRecurringGiftEnabled: m,
         } = e,
-        { currentPremiumSubscriptionForCheckout: p } = (0, h.t4)((e) => ({
+        { currentPremiumSubscriptionForCheckout: p } = (0, C.t4)((e) => ({
             currentPremiumSubscriptionForCheckout: e.isGift ? null : e.activeSubscription,
         })),
-        { onKeyDown: C, ...f } = s,
+        { onKeyDown: h, ...f } = s,
         E = i.useCallback(
             (e) => {
                 var t;
-                if (!m) return void C(e);
+                if (!m) return void h(e);
                 let n =
                     (t = e.key) === R.dh.ARROW_DOWN || t === R.dh.ARROW_RIGHT
                         ? 1
@@ -724,7 +724,7 @@ function ev(e) {
                     r[(a + n + r.length) % r.length].click(),
                     requestAnimationFrame(() => l.querySelector('[role="radio"][aria-checked="true"]')?.focus()));
             },
-            [m, C],
+            [m, h],
         ),
         S = i.useMemo(() => (m ? (0, x.RG)(n) : n), [m, n]),
         g = i.useMemo(
@@ -773,7 +773,7 @@ function e_(e) {
     return t && null != n
         ? (0, l.jsx)(m.A, {
               message: D.intl.formatToPlainString(D.t["9hnZoK"], {
-                  kunaPriceWithCurrency: (0, A.$g)(7.5345 * n.amount, eC.Yr.HRK),
+                  kunaPriceWithCurrency: (0, A.$g)(7.5345 * n.amount, eh.Yr.HRK),
               }),
           })
         : null;
@@ -783,7 +783,7 @@ function eT() {
     return (0, l.jsx)(m.A, {
         message: e
             ? D.intl.string(D.t.jHqrJW)
-            : D.intl.format(D.t.Om31w8, { documentationLink: I.A.getArticleURL(eh.MVz.LOCALIZED_PRICING) }),
+            : D.intl.format(D.t.Om31w8, { documentationLink: I.A.getArticleURL(eC.MVz.LOCALIZED_PRICING) }),
     });
 }
 function eb(e) {
@@ -827,7 +827,7 @@ function eN(e) {
         } = e,
         {
             skuId: p,
-            selectedPlan: C,
+            selectedPlan: h,
             premiumSubscription: S,
             premiumSubscriptionPlan: g,
             isEligibleForBOGOPromotion: I,
@@ -851,12 +851,12 @@ function eN(e) {
             canContinue: Z,
             trialPeriodCopy: q,
         } = eI({ selectedPlanId: n, priceOptions: a, planOptions: s, subscriptionPeriodEnd: o, showTotal: u }),
-        { discountAmountOff: z, applicablePlan: $, discountOffer: Q } = (0, h.t4)((e) => e.premiumDiscountInfo),
+        { discountAmountOff: z, applicablePlan: $, discountOffer: Q } = (0, C.t4)((e) => e.premiumDiscountInfo),
         J =
             (0, T.u)({ location: "PremiumSwitchPlanSelectBody" }) &&
             (0, x.Cu)({ isGift: y, giftRecipient: j, planOptions: s });
     !(function (e) {
-        let { hasClearedDefaultGiftMessage: t, setHasClearedDefaultGiftMessage: n } = (0, h.t4)((e) => ({
+        let { hasClearedDefaultGiftMessage: t, setHasClearedDefaultGiftMessage: n } = (0, C.t4)((e) => ({
                 hasClearedDefaultGiftMessage: e.hasClearedDefaultGiftMessage,
                 setHasClearedDefaultGiftMessage: e.setHasClearedDefaultGiftMessage,
             })),
@@ -867,7 +867,7 @@ function eN(e) {
     })(J);
     let X = (0, P.ds)(),
         { enabled: ee } = _.A.useConfig({ location: "PremiumSwitchPlanSelectBody" }),
-        et = (0, N.MW)({ isGift: y, giftRecipient: j, selectedPlanId: C?.id });
+        et = (0, N.MW)({ isGift: y, giftRecipient: j, selectedPlanId: h?.id });
     function en() {
         return (0, l.jsx)(ev, {
             disabled: t,
@@ -877,7 +877,7 @@ function eN(e) {
             isGift: y,
             isPrepaid: F,
             premiumSubscription: S,
-            selectedPlan: C,
+            selectedPlan: h,
             thePriceOptions: v,
             shouldShowTrialOrDiscountLayout: G,
             isEligibleForTrial: b,
@@ -900,13 +900,13 @@ function eN(e) {
             selectedGiftStyle: M,
             isPrepaid: F,
             canContinue: Z,
-            selectedPlan: C,
+            selectedPlan: h,
             selectedPlanPrice: W,
             useCompactGiftComponents: m,
             isRecurringGiftEnabled: J,
             quantityPresetsSelector:
-                et && ee && null != C && null != W
-                    ? (0, l.jsx)(K, { selectedPlanId: C.id, planOptions: s, unitPrice: W })
+                et && ee && null != h && null != W
+                    ? (0, l.jsx)(K, { selectedPlanId: h.id, planOptions: s, unitPrice: W })
                     : null,
             showTotal: u,
             switchPlanSelectComponent: en(),
@@ -954,7 +954,7 @@ function eN(e) {
                             ],
                         });
                     if (i && null != z && null != w && null != $ && n === $) {
-                        let e = C?.interval === k.WT.YEAR,
+                        let e = h?.interval === k.WT.YEAR,
                             t = (0, A.$g)(w.amount - z, w.currency),
                             n = (0, A.$g)(w.amount, w.currency);
                         return (0, l.jsxs)("div", {
@@ -981,7 +981,7 @@ function eN(e) {
                 })(U, b, L),
             en(),
             eb({
-                selectedPlan: C,
+                selectedPlan: h,
                 selectedPlanPrice: W,
                 isPrepaid: F,
                 shouldShowHRKEuroWarning: V,

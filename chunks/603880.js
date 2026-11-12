@@ -24,12 +24,12 @@ function A(e) {
             tabIndex: A,
             children: j,
             locked: p = !1,
-            disabled: N = !1,
+            disabled: b = !1,
         } = e,
-        [b, S] = r.useState((0, x.gG)(t).name),
+        [N, S] = r.useState((0, x.gG)(t).name),
         C = t === g.Ic.PIRATE;
     return (0, l.jsx)(c.m, {
-        text: b,
+        text: N,
         onTooltipShow: () =>
             C &&
             S(
@@ -47,9 +47,9 @@ function A(e) {
             children: [
                 (0, l.jsx)(u.D, {
                     role: "radio",
-                    "aria-label": b,
+                    "aria-label": N,
                     "aria-checked": m,
-                    "aria-disabled": N,
+                    "aria-disabled": b,
                     tabIndex: A ?? (m ? 0 : -1),
                     className: s()(y.Ni, { [y.wH]: m }, n),
                     onClick: m ? f.tEg : () => a?.(t),

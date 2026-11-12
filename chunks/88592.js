@@ -1,6 +1,6 @@
 var l = n(811315),
-    r = n.n(l),
-    i = n(855986),
+    i = n.n(l),
+    r = n(855986),
     a = n(73153),
     s = n(754674);
 let u = {};
@@ -8,7 +8,7 @@ function d(e) {
     let t = u[e];
     return t?.saveStatus === "saving" ? void 0 : t;
 }
-class c extends i.Ay.Store {
+class c extends r.Ay.Store {
     static displayName = "GuildSpaceEditorStore";
     getDraft(e) {
         return u[e]?.draft;
@@ -21,7 +21,7 @@ class c extends i.Ay.Store {
     }
     hasChanges(e) {
         let t = u[e];
-        return null != t && !r()(t.initialDraft, t.draft);
+        return null != t && !i()(t.initialDraft, t.draft);
     }
     isEditing(e) {
         return null != u[e];
@@ -35,46 +35,46 @@ class c extends i.Ay.Store {
 }
 let o = new c(a.h, {
     GUILD_SPACE_EDIT_START: function (e) {
-        let { guildId: t, space: n, seedWidgets: l = [], editSessionId: r } = e,
-            i = { header: n.header, widgets: (0, s.W$)(n.widgets) };
+        let { guildId: t, space: n, seedWidgets: l = [], editSessionId: i } = e,
+            r = { header: n.header, widgets: (0, s.W$)(n.widgets) };
         u[t] = {
-            editSessionId: r,
-            initialDraft: i,
-            draft: l.length > 0 ? { ...i, widgets: (0, s.W$)([...n.widgets, ...l]) } : i,
+            editSessionId: i,
+            initialDraft: r,
+            draft: l.length > 0 ? { ...r, widgets: (0, s.W$)([...n.widgets, ...l]) } : r,
             saveStatus: "idle",
         };
     },
     GUILD_SPACE_EDIT_ADD_WIDGET: function (e) {
         let { guildId: t, widget: n, insertionTarget: l } = e,
-            r = d(t);
-        if (null == r) return !1;
-        r.draft = { ...r.draft, widgets: (0, s.QD)(r.draft.widgets, n, l) };
-    },
-    GUILD_SPACE_EDIT_MOVE_WIDGET: function (e) {
-        let { guildId: t, widgetId: n, targetColumn: l, targetIndex: r } = e,
             i = d(t);
         if (null == i) return !1;
-        let a = (0, s.Gm)(i.draft.widgets, n, l, r);
+        i.draft = { ...i.draft, widgets: (0, s.QD)(i.draft.widgets, n, l) };
+    },
+    GUILD_SPACE_EDIT_MOVE_WIDGET: function (e) {
+        let { guildId: t, widgetId: n, targetColumn: l, targetIndex: i } = e,
+            r = d(t);
+        if (null == r) return !1;
+        let a = (0, s.Gm)(r.draft.widgets, n, l, i);
         if (null == a) return !1;
-        i.draft = { ...i.draft, widgets: a };
+        r.draft = { ...r.draft, widgets: a };
     },
     GUILD_SPACE_EDIT_REMOVE_WIDGET: function (e) {
         let { guildId: t, widgetId: n } = e,
             l = d(t);
         if (null == l) return !1;
-        let r = l.draft.widgets.filter((e) => {
+        let i = l.draft.widgets.filter((e) => {
             let { id: t } = e;
             return t !== n;
         });
-        if (r.length === l.draft.widgets.length) return !1;
-        l.draft = { ...l.draft, widgets: (0, s.W$)(r) };
+        if (i.length === l.draft.widgets.length) return !1;
+        l.draft = { ...l.draft, widgets: (0, s.W$)(i) };
     },
     GUILD_SPACE_EDIT_UPDATE_WIDGET_CONFIG: function (e) {
         let { guildId: t, widgetId: n, config: l } = e,
-            r = d(t);
-        if (null == r) return !1;
-        let i = r.draft.widgets.map((e) => (e.id === n ? { ...e, config: l } : e));
-        r.draft = { ...r.draft, widgets: i };
+            i = d(t);
+        if (null == i) return !1;
+        let r = i.draft.widgets.map((e) => (e.id === n ? { ...e, config: l } : e));
+        i.draft = { ...i.draft, widgets: r };
     },
     GUILD_SPACE_EDIT_UPDATE_HEADER: function (e) {
         let { guildId: t, customBanner: n } = e,
@@ -90,9 +90,9 @@ let o = new c(a.h, {
     },
     GUILD_SPACE_EDIT_SAVE_FAILURE: function (e) {
         let { guildId: t, requestId: n, errorMessage: l } = e,
-            r = u[t];
-        if (r?.activeSaveRequestId !== n) return !1;
-        (delete r.activeSaveRequestId, (r.saveStatus = "error"), (r.saveErrorMessage = l));
+            i = u[t];
+        if (i?.activeSaveRequestId !== n) return !1;
+        (delete i.activeSaveRequestId, (i.saveStatus = "error"), (i.saveErrorMessage = l));
     },
     GUILD_SPACE_EDIT_CANCEL: function (e) {
         let { guildId: t } = e;

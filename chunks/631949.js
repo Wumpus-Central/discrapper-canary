@@ -1,1 +1,1 @@
-r.exports = { Nr: "card_OQEDys", rb: "mainContent_OQEDys", C: "copy_OQEDys" };
+s.exports = { Nr: "card_OQEDys", rb: "mainContent_OQEDys", C: "copy_OQEDys" };

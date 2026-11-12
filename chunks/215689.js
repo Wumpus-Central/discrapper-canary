@@ -4,8 +4,8 @@ var l = n(582128),
     r = n(696451),
     a = n(486020),
     o = n(338932),
-    u = n(940622),
-    c = n(601255),
+    c = n(940622),
+    u = n(601255),
     d = n(476324);
 n.d(
     t,
@@ -16,10 +16,10 @@ n.d(
                 [f, p] = l.useState(!1),
                 { canAnimate: E } = (0, o.T)(f, g),
                 A = (0, i.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
-                _ = (0, c.A)(
+                _ = (0, u.A)(
                     (0, s.lw)({ userValue: t?.avatarDecoration, guildValue: A?.avatarDecoration, guildId: n }),
                 ),
-                x = (0, u.VU)(),
+                x = (0, c.VU)(),
                 j = l.useMemo(
                     () =>
                         null != x && "" !== x

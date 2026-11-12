@@ -1,6 +1,6 @@
 t.d(n, { Ay: () => I, Wz: () => v, $J: () => j, p3: () => g });
-var r = t(477900),
-    l = t(582128),
+var l = t(477900),
+    r = t(582128),
     i = t(146849),
     a = t(647660),
     u = t(129230),
@@ -17,7 +17,7 @@ function g(e) {
     let {
         hideSimpleEmbedContent: n = !0,
         formatInline: t = !1,
-        noStyleAndInteraction: r = !1,
+        noStyleAndInteraction: l = !1,
         allowHeading: i = !1,
         allowList: a = !1,
         allowLinks: u = !1,
@@ -26,11 +26,11 @@ function g(e) {
         viewingChannelId: c,
         restrictedPreview: d = !1,
     } = e;
-    return l.useMemo(
+    return r.useMemo(
         () => ({
             hideSimpleEmbedContent: n,
             formatInline: t,
-            noStyleAndInteraction: r,
+            noStyleAndInteraction: l,
             allowHeading: i,
             allowList: a,
             allowLinks: u,
@@ -39,18 +39,18 @@ function g(e) {
             viewingChannelId: c,
             restrictedPreview: d,
         }),
-        [n, t, r, i, a, u, s, o, c, d],
+        [n, t, l, i, a, u, s, o, c, d],
     );
 }
 function v(e, n) {
-    let { restrictedPreview: t, ...r } = n;
-    return (0, c.Ay)(e, { ...r, allowGameMentions: !0, postProcessor: t ? h.A : void 0 });
+    let { restrictedPreview: t, ...l } = n;
+    return (0, c.Ay)(e, { ...l, allowGameMentions: !0, postProcessor: t ? h.A : void 0 });
 }
 function j(e) {
     if (null != e.customRenderedContent) return e.customRenderedContent;
     if (e.isUnsupported) return { content: p.intl.string(p.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
     if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(f.pr7.LOADING))
-        return { content: (0, r.jsx)(m.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+        return { content: (0, l.jsx)(m.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
     if (e.type === f.lAJ.CHANGELOG) {
         let { renderChangelogMessageMarkup: n } = t(550997);
         return n(e, x, {
@@ -70,7 +70,7 @@ function I(e) {
         x = (0, s.U)(n),
         I = n.author?.id,
         { viewingChannelId: y, formatInline: A, noStyleAndInteraction: C } = c,
-        k = l.useMemo(
+        k = r.useMemo(
             () => ({
                 messageId: m,
                 channelId: p,
@@ -82,15 +82,15 @@ function I(e) {
             }),
             [m, p, y, x, I, A, C],
         );
-    return l.useMemo(() => {
+    return r.useMemo(() => {
         let e = j(n);
         return null != e
             ? e.content
             : h
-              ? (0, r.jsx)(l.Suspense, {
-                    children: (0, r.jsx)(d.O.Provider, {
+              ? (0, l.jsx)(r.Suspense, {
+                    children: (0, l.jsx)(d.O.Provider, {
                         value: k,
-                        children: (0, r.jsx)(a.A, {
+                        children: (0, l.jsx)(a.A, {
                             content: n.content,
                             parsed: u,
                             allowJumboEmoji: !A && n.type !== f.lAJ.MEDIA_MENTION_MESSAGE,

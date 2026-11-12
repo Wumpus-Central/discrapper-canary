@@ -1,26 +1,26 @@
-var a = n(477900);
-n(582128);
-var i = n(503698),
-    u = n.n(i),
-    s = n(810729);
-let d = { sm: s.nz, md: s.a };
-function t(l) {
-    let { className: e, width: n } = l;
-    return (0, a.jsx)("div", { "aria-hidden": !0, className: u()(s.qf, e), style: { width: n } });
+var n = l(477900);
+l(582128);
+var s = l(503698),
+    r = l.n(s),
+    i = l(810729);
+let t = { sm: i.nz, md: i.a };
+function d(e) {
+    let { className: a, width: l } = e;
+    return (0, n.jsx)("div", { "aria-hidden": !0, className: r()(i.qf, a), style: { width: l } });
 }
-n.d(
-    e,
+l.d(
+    a,
     {},
     {
-        Ay: t,
-        pv: function (l) {
-            let { className: e, size: n = "md" } = l;
-            return (0, a.jsx)(t, { className: u()(s.x6, d[n], e) });
+        Ay: d,
+        pv: function (e) {
+            let { className: a, size: l = "md" } = e;
+            return (0, n.jsx)(d, { className: r()(i.x6, t[l], a) });
         },
-        qT: function (l) {
-            let { animationDelayMs: e, children: n, className: i } = l,
-                u = null != e ? { "--custom-game-profile-skeleton-animation-delay": `${e}ms` } : void 0;
-            return (0, a.jsx)("div", { "aria-hidden": !0, className: i, style: u, children: n });
+        qT: function (e) {
+            let { animationDelayMs: a, children: l, className: s } = e,
+                r = null != a ? { "--custom-game-profile-skeleton-animation-delay": `${a}ms` } : void 0;
+            return (0, n.jsx)("div", { "aria-hidden": !0, className: s, style: r, children: l });
         },
     },
 );

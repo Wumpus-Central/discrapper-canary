@@ -18,7 +18,7 @@ function m() {
             .some((e) => e.showActivity),
     );
 }
-function h(e) {
+function x(e) {
     let { isSharingActivityInGuild: t, hasFetchedConsents: l, hasPersonalizationConsent: n } = (0, d.T4)(e);
     return { isSpotifyConnected: u(), hasFetchedConsents: l, isContributing: m() && t && n };
 }
@@ -27,14 +27,14 @@ l.d(
     {},
     {
         B6: u,
-        MX: h,
+        MX: x,
         WK: m,
         XG: function () {
             return a.A.getAccounts().filter(c);
         },
         qL: function (e, t) {
             let l = (0, i.bG)([r.default], () => r.default.getCurrentUser()?.id),
-                { isContributing: a, hasFetchedConsents: d } = h(e),
+                { isContributing: a, hasFetchedConsents: d } = x(e),
                 c = s.jP.useSetting(),
                 u = !a || c === o.clD.OFFLINE || c === o.clD.INVISIBLE;
             return {

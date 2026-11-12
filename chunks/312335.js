@@ -125,8 +125,8 @@ class T extends o.PureComponent {
         });
     }
 }
-var C =
-    (((a = C || {}).IDLE_ENTRY = "idle_entry"),
+var f =
+    (((a = f || {}).IDLE_ENTRY = "idle_entry"),
     (a.IDLE_LOOP = "idle_loop"),
     (a.BOOST_START = "boost_start"),
     (a.BOOST_LOOP = "boost_loop"),
@@ -134,7 +134,7 @@ var C =
     (a.VICTORY = "victory"),
     (a.ERROR = "error"),
     a);
-let f = {
+let C = {
     idle_entry: { BEG: 0, END: 50 },
     idle_loop: { BEG: 50, END: 230, shouldForcePlayAfter: !0 },
     boost_start: { BEG: 230, END: 275 },
@@ -176,7 +176,7 @@ let g = Object.freeze({
     ERROR: { toValue: 1, duration: 1500, delay: 1e3 },
 });
 class y extends o.PureComponent {
-    static Scenes = C;
+    static Scenes = f;
     static getNextScene(e) {
         switch (e) {
             case y.Scenes.IDLE_ENTRY:
@@ -293,7 +293,7 @@ class y extends o.PureComponent {
                     className: L.AI,
                     importData: this.importData,
                     nextScene: s ? "idle_loop" : t,
-                    sceneSegments: f,
+                    sceneSegments: C,
                     onScenePlay: this.handleScenePlay,
                     onSceneComplete: n,
                     pauseWhileUnfocused: !1,

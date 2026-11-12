@@ -4,8 +4,8 @@ var l = n(582128),
     r = n(688810),
     a = n(139286),
     o = n(129230),
-    u = n(448645),
-    c = n(652215),
+    c = n(448645),
+    u = n(652215),
     d = n(682901);
 let h = {
     emoji_picker: { upsellType: d.e.DEFAULT_EMOJI_PICKER, location: s.A.DEFAULT_EMOJI_PICKER_UPSELL },
@@ -27,15 +27,15 @@ n.d(
                 { analyticsLocations: s } = (0, r.Ay)(i);
             l.useEffect(() => {
                 t ||
-                    o.default.track(c.HAw.PREMIUM_UPSELL_VIEWED, {
+                    o.default.track(u.HAw.PREMIUM_UPSELL_VIEWED, {
                         type: n,
                         location_stack: s,
-                        sku_id: (0, u.mH)(u.Ay.getSkuIdForPremiumType(d.PremiumTypes.TIER_2)),
+                        sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(d.PremiumTypes.TIER_2)),
                     });
             }, [s, t, n]);
         },
         $q: function (e) {
-            o.default.track(c.HAw.DEFAULT_EMOJI_PACK_UPDATE, { pack_id: e, action: "add" });
+            o.default.track(u.HAw.DEFAULT_EMOJI_PACK_UPDATE, { pack_id: e, action: "add" });
         },
         Vg: h,
         i3: function (e) {
@@ -49,7 +49,7 @@ n.d(
             );
         },
         nj: function (e) {
-            o.default.track(c.HAw.DEFAULT_EMOJI_PACK_UPDATE, { pack_id: e, action: "remove" });
+            o.default.track(u.HAw.DEFAULT_EMOJI_PACK_UPDATE, { pack_id: e, action: "remove" });
         },
     },
 );

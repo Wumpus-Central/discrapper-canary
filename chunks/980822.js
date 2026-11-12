@@ -1,17 +1,17 @@
-var u = a(582128),
-    d = a(429913),
-    e = a(454908);
-a.d(
-    n,
+var l = t(582128),
+    u = t(429913),
+    a = t(454908);
+t.d(
+    e,
     {},
     {
-        A: function (l) {
-            let { applicationId: n, gameId: a } = l,
-                i = (0, d.h)(null == a ? n : void 0),
-                s = null == a && null != n && null == i,
-                c = u.useMemo(() => (null != a ? a : null == i ? null : i.getCanonicalGameId()), [a, i]),
-                { data: o, isLoading: t } = (0, e.I)(c);
-            return { gameId: c, gameRecord: o ?? null, isLoading: s || t };
+        A: function (n) {
+            let { applicationId: e, gameId: t } = n,
+                i = (0, u.h)(null == t ? e : void 0),
+                r = null == t && null != e && null == i,
+                o = l.useMemo(() => (null != t ? t : null == i ? null : i.getCanonicalGameId()), [t, i]),
+                { data: c, isLoading: s } = (0, a.I)(o);
+            return { gameId: o, gameRecord: c ?? null, isLoading: r || s };
         },
     },
 );

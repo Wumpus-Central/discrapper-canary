@@ -9,8 +9,8 @@ var l = n(477900),
     d = n(942340),
     m = n(550238),
     p = n(648335),
-    h = n(211528),
-    C = n(316363),
+    C = n(211528),
+    h = n(316363),
     f = n(783327),
     E = n(856383),
     S = n(240248),
@@ -38,7 +38,7 @@ function _(e) {
             paymentElementSelectedType: d,
             paymentMethodOrder: m,
             addressElementKey: p,
-            analyticsContext: C,
+            analyticsContext: h,
             paymentElementFooter: f,
             layout: E,
         } = e,
@@ -75,20 +75,20 @@ function _(e) {
                     [A.JD]: d === y.he.PAYPAL,
                 }),
                 children: [
-                    (0, l.jsx)(h.Wf, {
+                    (0, l.jsx)(C.Wf, {
                         ...o,
                         paymentMethodOrder: m,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
                         layout: E,
-                        analyticsContext: C,
+                        analyticsContext: h,
                     }),
                     x && f,
                 ],
             }),
             (0, l.jsx)("div", {
                 className: s()(A.K_, _ ? A.RK : [A.R, A.vg]),
-                children: (0, l.jsx)(h.KS, {
+                children: (0, l.jsx)(C.KS, {
                     ...u,
                     internalKey: p,
                     renderAsStandaloneElement: b,
@@ -120,11 +120,11 @@ n.d(
                     customPaymentMethodIdsToSourceTypes: m,
                     paymentMethodOrder: p,
                 } = (0, d.p)({ onSetupError: t, elementsAppearanceOptions: { compact: a } }),
-                h = (0, f.S)();
-            return o || null != u || null == h
+                C = (0, f.S)();
+            return o || null != u || null == C
                 ? (0, l.jsx)(T, {})
                 : (0, l.jsx)(r.Elements, {
-                      stripe: h,
+                      stripe: C,
                       options: s,
                       children: (0, l.jsx)(_, {
                           ...n,
@@ -162,7 +162,7 @@ n.d(
             i.useEffect(() => {
                 t === g.pn.PAYMENT_ELEMENT && (d.current = null);
             }, [t]);
-            let k = (0, C.t4)((e) => e.linkWalletEnabled),
+            let k = (0, h.t4)((e) => e.linkWalletEnabled),
                 w = i.useMemo(() => (k ? b : b.filter((e) => "link" !== e)), [k]),
                 D = i.useMemo(
                     () => ({
@@ -186,7 +186,7 @@ n.d(
                                     ...r
                                 } = e,
                                 o = r.isNewAddress,
-                                u = (0, h.ZB)(n);
+                                u = (0, C.ZB)(n);
                             (s &&
                                 null != l &&
                                 l.log("AddressElement onChange event:", {

@@ -1,7 +1,7 @@
 function l(e, t) {
     return e.position.order - t.position.order;
 }
-function r(e) {
+function i(e) {
     return [
         e
             .filter((e) => {
@@ -17,7 +17,7 @@ function r(e) {
             .sort(l),
     ];
 }
-function i(e) {
+function r(e) {
     return e.flatMap((e, t) =>
         e.map((e, n) =>
             e.position.column === t && e.position.order === n ? e : { ...e, position: { column: t, order: n } },
@@ -34,7 +34,7 @@ n.d(
                 return n === t;
             });
             if (null == a) return null;
-            let s = r(e),
+            let s = i(e),
                 o = [
                     s[0].filter((e) => {
                         let { id: n } = e;
@@ -46,17 +46,17 @@ n.d(
                     }),
                 ],
                 u = o[+(1 === n)];
-            return (u.splice(Math.max(0, Math.min(l, u.length)), 0, a), i(o));
+            return (u.splice(Math.max(0, Math.min(l, u.length)), 0, a), r(o));
         },
         O6: function (e, t, n, l) {
-            let r =
+            let i =
                     null == l
                         ? e
                         : e.filter((e) => {
                               let { id: t } = e;
                               return t !== l;
                           }),
-                i = (
+                r = (
                     null == l
                         ? t
                         : t.filter((e) => {
@@ -64,22 +64,22 @@ n.d(
                               return t !== l;
                           })
                 )[n];
-            if (null == i) return r.length;
-            let a = r.findIndex((e) => {
+            if (null == r) return i.length;
+            let a = i.findIndex((e) => {
                 let { id: t } = e;
-                return t === i.id;
+                return t === r.id;
             });
-            return -1 === a ? r.length : a;
+            return -1 === a ? i.length : a;
         },
         QD: function (e, t, n) {
-            let l = r(e),
+            let l = i(e),
                 a = l[+(n?.column === 1)],
                 s = n?.index ?? a.length;
-            return (a.splice(Math.max(0, Math.min(s, a.length)), 0, t), i(l));
+            return (a.splice(Math.max(0, Math.min(s, a.length)), 0, t), r(l));
         },
-        Rl: r,
+        Rl: i,
         W$: function (e) {
-            return i(r(e));
+            return r(i(e));
         },
     },
 );

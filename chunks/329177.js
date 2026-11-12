@@ -1,8 +1,8 @@
 n.r(t);
 var l = n(477900);
 n(582128);
-var r = n(646514),
-    i = n(996682),
+var i = n(646514),
+    r = n(996682),
     a = n(27989);
 n.d(
     t,
@@ -13,18 +13,18 @@ n.d(
                     size: t = "md",
                     width: n,
                     height: s,
-                    color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: u = "",
                     ...d
                 } = e,
                 c = (0, a.J)(t),
-                f = c?.width ?? n,
-                _ = c?.height ?? s;
+                _ = c?.width ?? n,
+                f = c?.height ?? s;
             return (0, l.jsx)("svg", {
-                ...(0, i.A)(d),
+                ...(0, r.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: f,
-                height: _,
+                width: _,
+                height: f,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: (0, l.jsx)("path", {

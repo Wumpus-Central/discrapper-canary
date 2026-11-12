@@ -4,19 +4,19 @@ n.d(
     {},
     {
         X_: function (e, t, n) {
-            let r = (0, l.jV)(e, t),
-                i = null != n && null != n.primaryColor && null != n.secondaryColor;
-            return r && i ? n : null;
+            let i = (0, l.jV)(e, t),
+                r = null != n && null != n.primaryColor && null != n.secondaryColor;
+            return i && r ? n : null;
         },
         gn: function (e, t, n) {
-            let r = (0, l.Ay)(e, t),
-                i = null != n && null != n.primaryColor && null != n.secondaryColor;
-            return r && i ? n : null;
+            let i = (0, l.Ay)(e, t),
+                r = null != n && null != n.primaryColor && null != n.secondaryColor;
+            return i && r ? n : null;
         },
         hH: function (e, t, n) {
-            let r = (0, l.aF)(e, t),
-                i = null != n && null != n.primaryColor && null != n.secondaryColor;
-            return r && i ? n : null;
+            let i = (0, l.aF)(e, t),
+                r = null != n && null != n.primaryColor && null != n.secondaryColor;
+            return i && r ? n : null;
         },
     },
 );

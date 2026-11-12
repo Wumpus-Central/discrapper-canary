@@ -5,7 +5,7 @@ let a = (0, i.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    r = (0, i.mj)({
+    l = (0, i.mj)({
         kind: "user",
         name: "2026-09-youtube-3p-nagbar",
         defaultConfig: { enabled: !1 },
@@ -25,6 +25,6 @@ n.d(
                 { enabled: n } = a.useConfig({ location: t });
             return n;
         },
-        zA: r,
+        zA: l,
     },
 );

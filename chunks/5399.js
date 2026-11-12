@@ -1,31 +1,31 @@
-var a = n(582128),
-    i = n(744700);
-n.d(
-    e,
+var n = l(582128),
+    s = l(744700);
+l.d(
+    a,
     {},
     {
-        Ay: function (l, e) {
-            let [n, i] = a.useState({}),
-                u = [l, e].find((l) => null != l && "failed" !== n[l]) ?? null,
-                s = a.useCallback((l, e) => {
-                    null != l && i((n) => (null != n[l] ? n : { ...n, [l]: e }));
+        Ay: function (e, a) {
+            let [l, s] = n.useState({}),
+                r = [e, a].find((e) => null != e && "failed" !== l[e]) ?? null,
+                i = n.useCallback((e, a) => {
+                    null != e && s((l) => (null != l[e] ? l : { ...l, [e]: a }));
                 }, []),
-                d = a.useCallback(() => {
-                    s(u, "loaded");
-                }, [u, s]),
-                t = a.useCallback(() => {
-                    s(u, "failed");
-                }, [u, s]);
+                t = n.useCallback(() => {
+                    i(r, "loaded");
+                }, [r, i]),
+                d = n.useCallback(() => {
+                    i(r, "failed");
+                }, [r, i]);
             return {
-                imageUrl: u,
-                isCover: null != u && u === l,
-                isLoading: null != u && "loaded" !== n[u],
-                handleLoad: d,
-                handleError: t,
+                imageUrl: r,
+                isCover: null != r && r === e,
+                isLoading: null != r && "loaded" !== l[r],
+                handleLoad: t,
+                handleError: d,
             };
         },
-        zu: function (l) {
-            return null != ((0, i.h)(l.media?.cover) ? "cover" : (0, i.h)(l.media?.icon) ? "icon" : null);
+        zu: function (e) {
+            return null != ((0, s.h)(e.media?.cover) ? "cover" : (0, s.h)(e.media?.icon) ? "icon" : null);
         },
     },
 );

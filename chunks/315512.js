@@ -1,7 +1,7 @@
 var i = n(477900),
     a = n(582128),
-    r = n(517352),
-    l = n(793574),
+    l = n(517352),
+    r = n(793574),
     s = n(688810),
     o = n(975571),
     d = n(920050),
@@ -23,8 +23,8 @@ n.d(
     {
         A: function () {
             let { enabled: e } = g.A.useConfig({ location: "useThirdPartyPartnerPerkCards" }),
-                { component: t } = (0, b.A)(r.oW.PREMIUM_HOME_REWARDS_PERK_CARD),
-                { analyticsLocations: n } = (0, s.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
+                { component: t } = (0, b.A)(l.oW.PREMIUM_HOME_REWARDS_PERK_CARD),
+                { analyticsLocations: n } = (0, s.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
                 T = (0, u.T)(null != t ? (0, c.Co)(t) : null);
             return (0, a.useMemo)(
                 () =>

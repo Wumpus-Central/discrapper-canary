@@ -1,8 +1,8 @@
 var i = n(477900);
 n(582128);
 var a = n(517352),
-    r = n(793574),
-    l = n(920050),
+    l = n(793574),
+    r = n(920050),
     s = n(757036),
     o = n(933730),
     d = n(60163),
@@ -25,8 +25,8 @@ n.d(
                 assetUrl: null != b ? b : void 0,
                 ctaType: g ? o.g.NAVIGATE_TO_PERK : o.g.OPEN_PAYMENT_MODAL,
                 ctaTextOverride: g ? f.intl.string(c.default.vlafDc) : void 0,
-                perkCardId: l.CODE_BLURPLE_CARD_ID,
-                analyticsLocation: r.A.CODE_BLURPLE_PREMIUM_TAB_POPOVER,
+                perkCardId: r.CODE_BLURPLE_CARD_ID,
+                analyticsLocation: l.A.CODE_BLURPLE_PREMIUM_TAB_POPOVER,
                 children: m,
             });
         },

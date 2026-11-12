@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(328056),
     m = n(834730),
     p = n(28863),
-    h = n(683071),
-    C = n(891197),
+    C = n(683071),
+    h = n(891197),
     f = n(695537),
     E = n(901930),
     S = n(725836),
@@ -36,9 +36,9 @@ function x() {
     return null != e
         ? (0, l.jsx)("div", {
               className: P.l,
-              children: (0, l.jsx)(h.w, { type: "critical", message: t, role: "alert" }),
+              children: (0, l.jsx)(C.w, { type: "critical", message: t, role: "alert" }),
           })
-        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(C.N, {}), (0, l.jsx)(v, {})] });
+        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(h.N, {}), (0, l.jsx)(v, {})] });
 }
 function _() {
     return (0, l.jsxs)(l.Fragment, {
@@ -57,8 +57,8 @@ function N(e) {
             isTrial: r,
             handleStepChange: m,
             analyticsData: p,
-            analyticsLocation: h,
-            handlePaymentSourceAdd: C,
+            analyticsLocation: C,
+            handlePaymentSourceAdd: h,
         } = e,
         {
             paymentSourceId: f,
@@ -91,9 +91,9 @@ function N(e) {
         M = (0, l.jsx)(d.U, {
             ...n,
             onBack: R,
-            onPaymentSourceAdd: C,
+            onPaymentSourceAdd: h,
             disableSubmit: N,
-            analyticsLocation: h,
+            analyticsLocation: C,
             baseAnalyticsData: p,
             handleStepChange: m,
             postPurchaseStep: o.pn.CONFIRM,

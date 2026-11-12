@@ -1,31 +1,31 @@
-var n = l(855986),
-    i = l(73153);
-let s = {};
+var l = n(855986),
+    i = n(73153);
+let r = {};
 function a(e) {
-    let t = s[e];
-    return (null == t && ((t = { fetchStatus: "idle" }), (s[e] = t)), t);
+    let t = r[e];
+    return (null == t && ((t = { fetchStatus: "idle" }), (r[e] = t)), t);
 }
-class r extends n.Ay.Store {
+class s extends l.Ay.Store {
     static displayName = "GuildSpaceCatalogStore";
     getWidgets(e) {
-        return s[e]?.widgets;
+        return r[e]?.widgets;
     }
     getWidget(e, t) {
-        return s[e]?.widgets?.find((e) => e.type === t);
+        return r[e]?.widgets?.find((e) => e.type === t);
     }
     getFetchStatus(e) {
-        return s[e]?.fetchStatus ?? "idle";
+        return r[e]?.fetchStatus ?? "idle";
     }
 }
-let d = new r(i.h, {
+let u = new s(i.h, {
     GUILD_SPACE_CATALOG_FETCH_START: function (e) {
         let { guildId: t } = e;
         a(t).fetchStatus = "loading";
     },
     GUILD_SPACE_CATALOG_FETCH_SUCCESS: function (e) {
-        let { guildId: t, widgets: l } = e,
-            n = a(t);
-        ((n.widgets = l), (n.fetchStatus = "success"));
+        let { guildId: t, widgets: n } = e,
+            l = a(t);
+        ((l.widgets = n), (l.fetchStatus = "success"));
     },
     GUILD_SPACE_CATALOG_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
@@ -33,13 +33,13 @@ let d = new r(i.h, {
     },
     GUILD_DELETE: function (e) {
         let {
-            guild: { id: t, unavailable: l },
+            guild: { id: t, unavailable: n },
         } = e;
-        if (l || null == s[t]) return !1;
-        delete s[t];
+        if (n || null == r[t]) return !1;
+        delete r[t];
     },
     LOGOUT: function () {
-        s = {};
+        r = {};
     },
 });
-l.d(t, {}, { A: d });
+n.d(t, {}, { A: u });

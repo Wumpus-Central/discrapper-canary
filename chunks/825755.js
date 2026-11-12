@@ -9,8 +9,8 @@ let a = "",
     d = "",
     m = "",
     p = "",
-    h = "",
     C = "",
+    h = "",
     f = "",
     E = "",
     S = "",
@@ -28,8 +28,8 @@ function v() {
         (d = "US"),
         (m = ""),
         (p = ""),
-        (h = ""),
         (C = ""),
+        (h = ""),
         (f = ""),
         (E = ""),
         (S = ""),
@@ -83,7 +83,7 @@ class b extends l.Ay.Store {
         return u;
     }
     getBillingAddressInfo() {
-        return { name: m, email: p, country: d, line1: h, line2: C, city: f, postalCode: E, state: S };
+        return { name: m, email: p, country: d, line1: C, line2: h, city: f, postalCode: E, state: S };
     }
     get isBillingAddressInfoValid() {
         return g;
@@ -102,8 +102,8 @@ let N = new b(i.h, {
         (null != t.name && "" !== t.name && (m = t.name),
             (d = t.country),
             (m = t.name),
-            (h = t.line1),
-            (C = t.line2),
+            (C = t.line1),
+            (h = t.line2),
             (f = t.city),
             (E = t.postalCode),
             (S = t.state),
@@ -119,8 +119,8 @@ let N = new b(i.h, {
             (s = n),
             (m = l.name),
             (d = l.country),
-            (h = l.line1),
-            (C = l.line2),
+            (C = l.line1),
+            (h = l.line2),
             (f = l.city),
             (E = l.postalCode),
             (S = l.state),
