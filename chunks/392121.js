@@ -83,6 +83,7 @@ let r = (0, n(945810).mj)({
         i.M.GAME_SHOP_NEW_BADGE,
         i.M.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
         i.M.MOBILE_SHOP_BROWSE_ALL_NITRO_UPSELL,
+        i.M.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR,
         i.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
         i.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA,
         i.M.FAVORITES_SERVER_ONBOARDING_INTRO,
@@ -405,6 +406,7 @@ let l = {
     895: { is_server_arbitrated: !1 },
     896: { is_server_arbitrated: !1 },
     897: { is_server_arbitrated: !1 },
+    899: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
