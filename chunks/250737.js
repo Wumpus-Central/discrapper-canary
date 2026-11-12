@@ -21,7 +21,7 @@ n.d(
                       label: h ? u.intl.string(u.t.xXYKiP) : u.intl.string(u.t.dilOF6),
                       action: function () {
                           (0, r.mM)(async () => {
-                              let { default: i } = await Promise.all([n.e(164474), n.e(483504)]).then(
+                              let { default: i } = await Promise.all([n.e(164474), n.e(261123)]).then(
                                   n.bind(n, 872243),
                               );
                               return (n) =>

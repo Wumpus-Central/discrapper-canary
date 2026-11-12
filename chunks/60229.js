@@ -17,4 +17,5 @@ e.exports = {
     ON: "searchBar_4T6RB7",
     O6: "removeButtonContainer_4T6RB7",
     B2: "appChannelPermissionsNotice_4T6RB7",
+    Qw: "permissionSearch_4T6RB7",
 };

@@ -4,7 +4,5 @@ e.exports = {
     MT: "searchContainer_kyu-6S",
     eZ: "permissionsWrapper_kyu-6S",
     FS: "clearButtonWrapper_kyu-6S",
-    pb: "noResultsContainer_kyu-6S",
-    wV: "noResults_kyu-6S",
     p2: "permissionsForm_kyu-6S",
 };

@@ -129,8 +129,14 @@
     margin-top: var(--space-40)
 }
 
-.appChannelPermissionsNotice_4T6RB7 {
+.appChannelPermissionsNotice_4T6RB7,
+.permissionSearch_4T6RB7 {
     margin-bottom: var(--space-24)
+}
+
+.permissionSearch_4T6RB7 {
+    align-items: center;
+    display: flex
 }
 
 .advancedModeDivider_vNURip {
@@ -298,4 +304,4 @@
     color: GrayText
 }
 
-/*# sourceMappingURL=ff77ce8ed236049e.css.map*/
+/*# sourceMappingURL=8cd644fc212a893c.css.map*/

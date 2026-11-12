@@ -19687,14 +19687,11 @@ function x0(e) {
         ],
     });
 }
-var x1 = n(133551),
-    x2 = n(558393),
-    x3 = n(29205);
-function x5(e) {
-    let { className: t } = e;
-    return (0, A.jsx)("div", { className: ee()(x3.S, t) });
-}
-var x6 = n(263703);
+var x1 = n(163826),
+    x2 = n(743696),
+    x3 = n(133551),
+    x5 = n(558393),
+    x6 = n(263703);
 function x4(e) {
     let { guild: t, role: n, locked: i } = e,
         l = (0, L.bG)([H.default], () => H.default.getCurrentUser()),
@@ -19719,14 +19716,7 @@ function x4(e) {
 }
 function x9(e) {
     let { guild: t, role: n, specs: i, locked: l } = e;
-    if (0 === i.length)
-        return (0, A.jsxs)("div", {
-            className: x6.pb,
-            children: [
-                (0, A.jsx)(x5, { className: x6.wV }),
-                (0, A.jsx)(D.E, { variant: "body-sm/normal", children: K.intl.string(K.t.DEBGqA) }),
-            ],
-        });
+    if (0 === i.length) return (0, A.jsx)(x2.A, {});
     function s(e) {
         return em.A.can(e, t)
             ? !em.A.can(e, t, null, { [n.id]: { ...n, permissions: sZ.TF(n.permissions, e) } }) &&
@@ -19739,7 +19729,7 @@ function x9(e) {
             (0, A.jsx)(x4, { guild: t, role: n, locked: l }),
             i.map((e, t) =>
                 (0, A.jsx)(
-                    x1.A,
+                    x3.A,
                     {
                         className: x6.p2,
                         spec: e,
@@ -19760,39 +19750,29 @@ function x9(e) {
 function x7(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l, setRoleNameFocusRoleId: s, initialSearchQuery: r } = e,
         [a, o] = G.useState(r ?? ""),
-        d = G.useMemo(() => x2.A.generateGuildPermissionSpec(t), [t])
-            .map((e) => ({
-                ...e,
-                permissions: e.permissions.filter((e) => {
-                    let t = a.trimStart().toLowerCase();
-                    return (
-                        e.title.toLowerCase().includes(t) ||
-                        (null != e.description && e.description.toString().toLowerCase().includes(t))
-                    );
-                }),
-            }))
-            .filter((e) => e.permissions.length > 0),
-        c = d.reduce((e, t) => e + t.permissions.length, 0),
-        u = "" !== a.trimStart(),
-        { headerHeight: m, headerRef: g } = hD(0),
-        { scrolledToTop: h, handleScroll: x } = h4(),
-        E = G.useRef(!1);
+        d = G.useMemo(() => x5.A.generateGuildPermissionSpec(t), [t]),
+        c = G.useMemo(() => (0, x1.M)(d, a), [d, a]),
+        u = c.reduce((e, t) => e + t.permissions.length, 0),
+        m = "" !== a.trimStart(),
+        { headerHeight: g, headerRef: h } = hD(0),
+        { scrolledToTop: x, handleScroll: E } = h4(),
+        j = G.useRef(!1);
     return (
         G.useEffect(() => {
-            E.current ||
+            j.current ||
                 "" === a.trimStart() ||
-                (sb.default.track(ef.HAw.SEARCH_STARTED, { search_type: "Permissions" }), (E.current = !0));
+                (sb.default.track(ef.HAw.SEARCH_STARTED, { search_type: "Permissions" }), (j.current = !0));
         }, [a]),
         (0, A.jsx)(nj.Gt, {
             className: x6.XG,
-            style: { scrollPaddingTop: m },
-            onScroll: x,
+            style: { scrollPaddingTop: g },
+            onScroll: E,
             children: (0, A.jsxs)("div", {
                 className: h8.Q,
                 children: [
                     (0, A.jsxs)("div", {
-                        className: ee()(h8.wx, h8.ln, { [h8.l6]: !h }),
-                        ref: g,
+                        className: ee()(h8.wx, h8.ln, { [h8.l6]: !x }),
+                        ref: h,
                         children: [
                             (0, A.jsx)(h9, {
                                 guild: t,
@@ -19817,9 +19797,9 @@ function x7(e) {
                     (0, A.jsx)(mF.A, {
                         "aria-live": "polite",
                         role: "status",
-                        children: u ? K.intl.formatToPlainString(K.t["I+eHql"], { count: c }) : "",
+                        children: m ? K.intl.formatToPlainString(K.t["I+eHql"], { count: u }) : "",
                     }),
-                    (0, A.jsx)(x9, { guild: t, role: n, specs: d, locked: i }),
+                    (0, A.jsx)(x9, { guild: t, role: n, specs: c, locked: i }),
                 ],
             }),
         })

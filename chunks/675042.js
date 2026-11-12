@@ -704,7 +704,7 @@ if (null == e7 || "0.0.0" !== e7.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671646, Version Hash: 1509e311798f60d0164635d5e0ade10ecf65c862`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 671654, Version Hash: 26b84e93caff7037d11c62c737f6c3013e4ea04d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -776,7 +776,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671646";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671654";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eV.Ay.setCrashInformation(eG.du.BuildNumber, r);
         let s = ej?.processUtils?.getLastCrash;
@@ -10851,7 +10851,8 @@ let Ef =
                             n.e(304419),
                             n.e(622936),
                             n.e(45268),
-                            n.e(617281),
+                            n.e(291532),
+                            n.e(3069),
                             n.e(733199),
                             n.e(603977),
                             n.e(655327),
@@ -11287,7 +11288,7 @@ let Ef =
                             n.e(916373),
                             n.e(528038),
                             n.e(81398),
-                            n.e(616658),
+                            n.e(608464),
                             n.e(702210),
                             n.e(118504),
                             n.e(8458),
@@ -11320,7 +11321,7 @@ let Ef =
                             n.e(96961),
                             n.e(114751),
                             n.e(852694),
-                            n.e(695152),
+                            n.e(483504),
                             n.e(317699),
                             n.e(257032),
                             n.e(952831),
@@ -15868,7 +15869,7 @@ let I4 = "isHideDevBanner",
                     className: tc()(I8.Wz, I8.mr),
                     children: [
                         (0, P.jsx)(I7, { className: I8.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671646" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "671654" }),
                         (0, P.jsx)(r, {}),
                     ],
                 })
@@ -26617,8 +26618,9 @@ let NN = (0, rt.Fe)({
                 n.e(876364),
                 n.e(179028),
                 n.e(733199),
+                n.e(291532),
                 n.e(860350),
-                n.e(617281),
+                n.e(3069),
                 n.e(658520),
                 n.e(860596),
                 n.e(142651),
@@ -26690,7 +26692,7 @@ let NN = (0, rt.Fe)({
                 n.e(676376),
                 n.e(271203),
                 n.e(675933),
-                n.e(616658),
+                n.e(608464),
                 n.e(384951),
                 n.e(524521),
                 n.e(386861),
@@ -26937,7 +26939,8 @@ let NN = (0, rt.Fe)({
                 n.e(304419),
                 n.e(622936),
                 n.e(45268),
-                n.e(617281),
+                n.e(291532),
+                n.e(3069),
                 n.e(733199),
                 n.e(603977),
                 n.e(655327),
@@ -27366,7 +27369,7 @@ let NN = (0, rt.Fe)({
                 n.e(916373),
                 n.e(528038),
                 n.e(81398),
-                n.e(616658),
+                n.e(608464),
                 n.e(702210),
                 n.e(118504),
                 n.e(8458),
@@ -27397,7 +27400,7 @@ let NN = (0, rt.Fe)({
                 n.e(96961),
                 n.e(114751),
                 n.e(852694),
-                n.e(695152),
+                n.e(483504),
                 n.e(952831),
                 n.e(677602),
                 n.e(806979),

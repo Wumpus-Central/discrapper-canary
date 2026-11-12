@@ -271,14 +271,14 @@ var ej = n(128376),
     eJ = n(807098),
     e0 = n(637706),
     e1 = n(788883),
-    e6 = n(7667);
-function e3(e) {
+    e3 = n(7667);
+function e6(e) {
     let { guildId: t, marketingComponent: n, targetElementRef: i, markAsDismissed: a } = e,
         { id: r, componentType: d, promotionId: u } = n,
         { surface: c } = n,
         { analyticsLocations: A } = (0, C.Ay)(),
         h = (0, eJ.T)(c.asset),
-        { terms: E } = (0, e6.A)(u),
+        { terms: E } = (0, e3.A)(u),
         m = l.useCallback(() => {
             a(el.i.DISMISS);
         }, [a]),
@@ -506,7 +506,7 @@ let td = l.memo(function (e) {
                     if (null == e) return i();
                     return (0, s.jsx)(to, {
                         renderPopout: (t) =>
-                            (0, s.jsx)(e3, {
+                            (0, s.jsx)(e6, {
                                 guildId: n.id,
                                 marketingComponent: e,
                                 targetElementRef: t,
@@ -793,8 +793,8 @@ var tz = n(503698),
     tJ = n(116085),
     t0 = n(597601),
     t1 = n(451394),
-    t6 = n(104171),
-    t3 = n(47167),
+    t3 = n(104171),
+    t6 = n(47167),
     t8 = n(713654),
     t7 = n(976860),
     t5 = n(129095),
@@ -885,7 +885,7 @@ let nA = l.memo(function (e) {
 });
 function nh(e) {
     let { guildEvent: t, channel: n } = e,
-        i = (0, t3.Ay)(n),
+        i = (0, t6.Ay)(n),
         l = (0, r.yK)(
             [R.Ay],
             () =>
@@ -930,7 +930,7 @@ function nm(e) {
         i = (0, no.oF)(t),
         a = null != i ? (0, na.y)(i, !0) : null,
         r = (0, no.WN)(t),
-        o = (0, t3.Ay)(r),
+        o = (0, t6.Ay)(r),
         d = (0, t8.gU)(r),
         { startTime: u, endTime: c } = (0, nr.Ay)(t),
         { startDateTimeString: A, upcomingEvent: h, diffMinutes: E } = (0, nd.CC)(u.toISOString(), c?.toISOString()),
@@ -1072,7 +1072,7 @@ function nC(e) {
 }
 function n_(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, t3.Ay)(n),
+        i = (0, t6.Ay)(n),
         l = (0, r.yK)([N.A], () => [...new Set(N.A.getMutableParticipants(n.id, S.ip.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
@@ -1140,7 +1140,7 @@ function nN(e) {
                       ? (0, s.jsxs)("div", {
                             className: tQ()(nc.fI, nc.pF),
                             children: [
-                                (0, s.jsx)(t6.Ay, { guildId: o, users: d, showUserPopout: !0, size: t6.DN.SIZE_16 }),
+                                (0, s.jsx)(t3.Ay, { guildId: o, users: d, showUserPopout: !0, size: t3.DN.SIZE_16 }),
                                 (0, s.jsx)(tn.E, {
                                     color: "none",
                                     variant: "body-xs/normal",
@@ -1477,7 +1477,7 @@ class nJ extends r.Ay.Store {
 }
 let n0 = new nJ(m.h),
     n1 = "lastHiddenChannelNotice",
-    n6 = [
+    n3 = [
         {
             type: j.n5X.GUILD_BOOSTING,
             store: nZ,
@@ -1489,7 +1489,7 @@ let n0 = new nJ(m.h),
         { type: j.n5X.QUICKSWITCHER, store: nW.A, dismissibleContentType: o.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: j.n5X.GAME_CLAIM, dismissibleContentType: o.M.GAME_CLAIM_COACHMARK },
     ],
-    n3 = n6.map((e) => e.store).filter(nt.Vq),
+    n6 = n3.map((e) => e.store).filter(nt.Vq),
     n8 = new Set([o.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, o.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n7(e) {
     e.stopPropagation();
@@ -1523,11 +1523,11 @@ function n2(e) {
         [g, I] = (0, q.ww)(m, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
         _ = (0, r.yK)(
-            n3,
+            n6,
             () =>
                 C
                     ? []
-                    : n6
+                    : n3
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
                               return !0 === n?.channelNoticePredicate(A, h) && !n8.has(t);
@@ -1886,7 +1886,8 @@ class ir extends l.PureComponent {
                     n.e(304419),
                     n.e(622936),
                     n.e(45268),
-                    n.e(617281),
+                    n.e(291532),
+                    n.e(3069),
                     n.e(733199),
                     n.e(603977),
                     n.e(655327),
@@ -2273,7 +2274,7 @@ class ir extends l.PureComponent {
                     n.e(916373),
                     n.e(528038),
                     n.e(81398),
-                    n.e(616658),
+                    n.e(608464),
                     n.e(702210),
                     n.e(118504),
                     n.e(8458),
@@ -2304,7 +2305,7 @@ class ir extends l.PureComponent {
                     n.e(995210),
                     n.e(96961),
                     n.e(114751),
-                    n.e(695152),
+                    n.e(483504),
                     n.e(317699),
                     n.e(257032),
                     n.e(952831),
@@ -2592,7 +2593,7 @@ function io(e) {
         w = (0, r.bG)([eX.A], () => eX.A.isUnavailable(b)),
         B = (0, r.bG)([em.default], () => em.default.getCurrentUser()),
         { analyticsLocations: k } = (0, C.Ay)(I.A.GUILD_HEADER),
-        X = (0, Q.Ay)((e) => n6.some((t) => e.currentlyShown.has(t.dismissibleContentType))),
+        X = (0, Q.Ay)((e) => n3.some((t) => e.currentlyShown.has(t.dismissibleContentType))),
         V = z(G),
         K = (0, E.re)(E.DX),
         F = (0, r.bG)([eK.A], () => eK.A.hasLayers()),
@@ -2742,17 +2743,17 @@ function io(e) {
         eJ = (0, ex.A)(b),
         e0 = !1 === eV && e$ && null != eJ,
         e1 = (0, eG.A)(b),
-        e6 = !1 === eV && e$ && null != e1,
-        e3 = [];
-    (J && e3.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-        Z && e3.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        ea && e3.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === eV && e3.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
-        ez && e3.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
-        eq && e3.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        eS && e3.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
+        e3 = !1 === eV && e$ && null != e1,
+        e6 = [];
+    (J && e6.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+        Z && e6.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+        ea && e6.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        !1 === eV && e6.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
+        ez && e6.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
+        eq && e6.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        eS && e6.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let e8 = (0, Q.uW)([
-            ...e3,
+            ...e6,
             o.M.GUILD_HEADER_COACHMARK,
             o.M.GAME_SERVER_NEW_GAMES_COACHMARK,
             o.M.BOOST_TO_UNLOCK_COACHMARK,
@@ -2774,7 +2775,7 @@ function io(e) {
                 markAsDismissed: l,
             };
         })(e7 ? null : b),
-        [e2, e9] = (0, q.kn)(e7 ? [] : e3, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [e2, e9] = (0, q.kn)(e7 ? [] : e6, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
         [e4, te] = (0, eD.vB)(eQ && !1 === eV && !(0, $.ai)(b) && !e7, el.m.GUILD_HEADER_TOOLTIPS),
         [tt, tn] = (0, q.D8)(
             e0 && !e7 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
@@ -2783,7 +2784,7 @@ function io(e) {
             el.m.GUILD_HEADER_TOOLTIPS,
         ),
         [ti, ts] = (0, q.D8)(
-            e6 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            e3 && !e7 ? o.M.EXPIRING_POWERUP_COACHMARK : null,
             b,
             { cooldownDurationMs: eL.mD },
             el.m.GUILD_HEADER_TOOLTIPS,
