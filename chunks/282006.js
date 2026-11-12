@@ -27,8 +27,8 @@ let f = a.memo(function (e) {
                             n.e(474172),
                             n.e(489218),
                             n.e(912875),
-                            n.e(862782),
                             n.e(55348),
+                            n.e(862782),
                             n.e(733743),
                         ]).then(n.bind(n, 455538));
                         return (l) => (0, t.jsx)(e, { ...l, imageUrl: j.src });

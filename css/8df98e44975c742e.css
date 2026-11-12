@@ -1,0 +1,57 @@
+.root_sf7_MP {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    width: 100%
+}
+
+.picker_sf7_MP {
+    max-width: 360px
+}
+
+.layout_sf7_MP {
+    align-items: start;
+    display: grid;
+    gap: var(--space-24);
+    grid-template-columns: minmax(360px, 3fr) minmax(280px, 2fr);
+    width: 100%
+}
+
+.column_sf7_MP {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+.surface_sf7_MP {
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-24)
+}
+
+.checks_sf7_MP {
+    white-space: pre-line
+}
+
+.toolbar_sf7_MP {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8)
+}
+
+.code_sf7_MP {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-default);
+    font-family: var(--font-code);
+    margin: 0;
+    max-height: 480px;
+    overflow: auto;
+    padding: var(--space-12);
+    white-space: pre-wrap;
+    word-break: break-word
+}
+
+/*# sourceMappingURL=8df98e44975c742e.css.map*/
