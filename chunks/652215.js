@@ -3647,6 +3647,7 @@ var ih =
         (eP.ACTIVITY_SHELF_CLOSE = "activity_shelf_close"),
         (eP.ACTIVITY_IFRAME_MOUNT = "activity_iframe_mount"),
         (eP.ACTIVITY_IFRAME_UNMOUNT = "activity_iframe_unmount"),
+        (eP.FRAME_OPENED = "frame_opened"),
         (eP.ACTIVITY_HANDSHAKE = "activity_handshake"),
         (eP.ACTIVITY_INSTANCE_EMBED_CLICKED = "activity_instance_embed_clicked"),
         (eP.ACTIVITY_CLOSED_RPC_ERROR = "activity_closed_rpc_error"),
