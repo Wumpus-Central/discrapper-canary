@@ -190,11 +190,6 @@ let r = {
         inlineRequire: () => n(976639).A,
         neverLoadBeforeConnectionOpen: !0,
     },
-    HexagonCampaignExpiredPerkRestoreManager: {
-        actions: ["POST_CONNECTION_OPEN", "CURRENT_USER_UPDATE"],
-        inlineRequire: () => n(72573).Ay,
-        neverLoadBeforeConnectionOpen: !0,
-    },
     HolidayEventsManager: {
         actions: ["NOTIFICATIONS_SET_DISABLED_SOUNDS"],
         inlineRequire: () => n(289739).A,

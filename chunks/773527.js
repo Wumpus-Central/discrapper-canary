@@ -1,17 +1,16 @@
 n.d(t, {
-    U5: () => C,
-    cC: () => A,
-    Qv: () => N,
-    Jy: () => g,
-    Rd: () => O,
-    z9: () => T,
-    oB: () => p,
-    n2: () => S,
-    Tn: () => R,
-    YY: () => h,
-    sD: () => m,
-    Aq: () => f,
-    VX: () => I,
+    U5: () => g,
+    cC: () => _,
+    Qv: () => T,
+    Jy: () => p,
+    Rd: () => S,
+    z9: () => I,
+    oB: () => f,
+    n2: () => m,
+    Tn: () => N,
+    YY: () => A,
+    sD: () => h,
+    Aq: () => E,
 });
 var i,
     r = n(508425),
@@ -23,64 +22,58 @@ var i,
     l = n(76573),
     o = n(350972),
     d = n(948325),
-    c = n(927813),
-    u = n(474090),
-    _ = n(211824);
-let E = 3 * c.A.Millis.DAY;
-function A(e, t) {
-    return null != t && (0, u.CC)(t, _.PC[e]) ? _.zv : _.Fg;
+    c = n(474090),
+    u = n(211824);
+function _(e, t) {
+    return null != t && (0, c.CC)(t, u.PC[e]) ? u.zv : u.Fg;
 }
-function f() {
+function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-    return e >= _.DD;
+    return e >= u.DD;
 }
-function h(e, t) {
+function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-    return n >= A(e, t);
+    return n >= _(e, t);
+}
+function f(e) {
+    return null != e && u.xG.has(e);
+}
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return A(e, null, t);
 }
 function I(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-    return t >= e - E && t < e;
-}
-function p(e) {
-    return null != e && _.xG.has(e);
-}
-function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-    return h(e, null, t);
-}
-function T(e) {
     return e === o.aS.HEXAGON;
 }
-function g(e) {
-    return e?.fontId === _.vl;
+function p(e) {
+    return e?.fontId === u.vl;
 }
-function S(e) {
+function m(e) {
     let { fontId: t, effectId: n, colors: i } = e;
-    return t === _.vl && n === r.z.SOLID && 0 === i.length;
+    return t === u.vl && n === r.z.SOLID && 0 === i.length;
 }
-function N(e) {
+function T(e) {
     let { currentDisplayNameStyles: t, previousDisplayNameStyles: n, canUsePremiumProfileCustomization: i } = e;
     if (!i || null == t) return null;
     let s = { ...t, fontId: n?.fontId ?? a.x.DEFAULT };
     return s.fontId === a.x.DEFAULT && s.effectId === r.z.SOLID && 0 === s.colors.length ? null : s;
 }
-function C(e) {
+function g(e) {
     let { perk: t, premiumType: n, isCampaignEnabled: i, now: r = Date.now() } = e;
     return !i ||
         (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-            return e >= _.zv;
+            return e >= u.zv;
         })(r)
-        ? _.S9.HIDDEN
-        : h(t, n, r)
-          ? _.S9.LOCKED
-          : _.S9.SELECTABLE;
+        ? u.S9.HIDDEN
+        : A(t, n, r)
+          ? u.S9.LOCKED
+          : u.S9.SELECTABLE;
 }
-function O(e, t) {
-    let n = (0, d.kQ)(e?.perks, _.Sp[t]);
+function S(e, t) {
+    let n = (0, d.kQ)(e?.perks, u.Sp[t]);
     return null != n && n.includes(l.g$.SOURCE_HEXAGON_CAMPAIGN);
 }
-function R(e) {
-    return null != e && e.id === _.U1 && e.features.includes(s.CUSTOM_INTRO_CARD);
+function N(e) {
+    return null != e && e.id === u.U1 && e.features.includes(s.CUSTOM_INTRO_CARD);
 }

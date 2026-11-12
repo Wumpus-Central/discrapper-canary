@@ -1,8 +1,8 @@
-var s = e(477900),
-    n = e(582128),
-    l = e(192308),
-    a = e(885377),
-    r = e(792996);
+var s = i(477900),
+    n = i(582128),
+    l = i(192308),
+    a = i(885377),
+    r = i(792996);
 class c extends n.Component {
     cancel = () => {
         let { onClose: t } = this.props;
@@ -13,29 +13,31 @@ class c extends n.Component {
         (t?.(),
             (0, l.mM)(async () => {
                 let { default: t } = await Promise.all([
-                    e.e(144909),
-                    e.e(213042),
-                    e.e(188941),
-                    e.e(319623),
-                    e.e(121007),
-                ]).then(e.bind(e, 110744));
-                return (i) => (0, s.jsx)(t, { ...i });
+                    i.e(144909),
+                    i.e(213042),
+                    i.e(188941),
+                    i.e(349619),
+                    i.e(627323),
+                    i.e(319623),
+                    i.e(121007),
+                ]).then(i.bind(i, 110744));
+                return (e) => (0, s.jsx)(t, { ...e });
             }));
     };
     render() {
         let { transitionState: t } = this.props,
-            i = this.props.title ?? r.intl.string(r.t.Nn0Px8),
-            e = this.props.body ?? r.intl.string(r.t["7btfmI"]);
+            e = this.props.title ?? r.intl.string(r.t.Nn0Px8),
+            i = this.props.body ?? r.intl.string(r.t["7btfmI"]);
         return (0, s.jsx)(a.A, {
             transitionState: t,
             onClose: async () => await this.cancel(),
-            "aria-label": i,
-            title: i,
+            "aria-label": e,
+            title: e,
             premiumModalType: a.A.Types.UNCLAIMED,
             primary: { onClick: this.claimAccount, label: r.intl.string(r.t.fiNVin) },
             secondary: { onClick: this.cancel, label: r.intl.string(r.t.oEAioF) },
-            children: e,
+            children: i,
         });
     }
 }
-e.d(i, {}, { default: c });
+i.d(e, {}, { default: c });
