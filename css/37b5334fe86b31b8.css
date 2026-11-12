@@ -204,7 +204,7 @@
 }
 
 .cardContentWithoutSubtitle_i8iX4X {
-    margin-block-start: 8px
+    margin-block-start: var(--space-8)
 }
 
 .winnerFlare_i8iX4X {
@@ -663,4 +663,4 @@
     }
 }
 
-/*# sourceMappingURL=351adb0afa83f727.css.map*/
+/*# sourceMappingURL=37b5334fe86b31b8.css.map*/

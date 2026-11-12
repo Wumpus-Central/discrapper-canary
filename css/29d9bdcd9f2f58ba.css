@@ -126,16 +126,16 @@
     --custom-countdown-banner-shadow: 0 0 26px hsla(0, 0%, 100%, .5), 0 8px 24px rgba(0, 0, 0, .45);
     --custom-countdown-filter: drop-shadow(0 0 7px hsla(0, 0%, 100%, .45));
     --custom-countdown-tile-background: var(--neutral-95);
-    --custom-countdown-numeral-color: var(--white);
+    --custom-countdown-numeral-color: var(--text-overlay-light);
     --custom-countdown-colon-color: var(--neutral-95);
     --custom-countdown-copy-color: var(--neutral-95);
     --custom-countdown-copy-shadow: none;
     --control-overlay-primary-background-default: var(--neutral-95);
     --control-overlay-primary-background-hover: var(--neutral-90);
     --control-overlay-primary-background-active: var(--neutral-85);
-    --control-overlay-primary-text-default: var(--white);
-    --control-overlay-primary-text-hover: var(--white);
-    --control-overlay-primary-text-active: var(--white)
+    --control-overlay-primary-text-default: var(--text-overlay-light);
+    --control-overlay-primary-text-hover: var(--text-overlay-light);
+    --control-overlay-primary-text-active: var(--text-overlay-light)
 }
 
 .dark_oX1O9t,
@@ -146,7 +146,7 @@
     --custom-countdown-banner-shadow: 0 0 26px hsla(0, 0%, 100%, .5), var(--shadow-high);
     --custom-countdown-filter: drop-shadow(0 0 6px var(--opacity-white-40));
     --custom-countdown-tile-background: var(--white);
-    --custom-countdown-numeral-color: var(--black);
+    --custom-countdown-numeral-color: var(--text-overlay-dark);
     --custom-countdown-colon-color: var(--white);
     --custom-countdown-copy-color: var(--neutral-2);
     --custom-countdown-copy-shadow: 0 1px 8px var(--opacity-black-60)
@@ -426,4 +426,4 @@
     background: #a8a9aa
 }
 
-/*# sourceMappingURL=a6ee9ce080db914b.css.map*/
+/*# sourceMappingURL=29d9bdcd9f2f58ba.css.map*/
