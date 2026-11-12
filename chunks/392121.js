@@ -115,6 +115,7 @@ let r = (0, n(945810).mj)({
         i.M.PINOT_MEMBER_COACHMARK,
         i.M.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE,
         i.M.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
+        i.M.HEXAGON_CAMPAIGN_PERKS_EXPIRED_PROMO_SHEET,
     ]);
 function s(e) {
     return (
@@ -407,6 +408,8 @@ let l = {
     896: { is_server_arbitrated: !1 },
     897: { is_server_arbitrated: !1 },
     899: { is_server_arbitrated: !1 },
+    900: { is_server_arbitrated: !1 },
+    901: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
