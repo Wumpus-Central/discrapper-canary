@@ -1,4 +1,4 @@
-s.d(t, { A: () => f });
+s.d(t, { A: () => j });
 var n = s(477900),
     i = s(582128),
     a = s(289873),
@@ -6,7 +6,7 @@ var n = s(477900),
     r = s(61387),
     o = s(710969),
     c = s(814793),
-    d = s(562293),
+    d = s(508380),
     u = s(221596),
     m = s(792996);
 function x(e) {
@@ -19,7 +19,7 @@ function x(e) {
     });
 }
 var h = s(127219);
-function E(e) {
+function f(e) {
     let { questId: t } = e;
     return (0, n.jsx)(d.i, {
         questId: t,
@@ -28,9 +28,9 @@ function E(e) {
         questContent: l.uF.NOT_SHAREABLE_QUEST_EMBED,
     });
 }
-var j = s(107543),
+var E = s(107543),
     g = s(980322);
-function f(e) {
+function j(e) {
     let { questId: t } = e,
         {
             quests: s,
@@ -38,14 +38,14 @@ function f(e) {
             isFetchingCurrentQuests: u,
         } = (0, r.mL)({ fetchPolicy: "cache-or-network", callerSource: "embed" }),
         m = i.useMemo(() => (0, o.vc)(t, s, d), [t, s, d]),
-        f = i.useMemo(() => d.find((e) => e.id === t), [t, d]);
+        j = i.useMemo(() => d.find((e) => e.id === t), [t, d]);
     return u
         ? (0, n.jsx)(a.y, { className: g.u })
         : null == m
-          ? null != f
+          ? null != j
               ? (0, n.jsx)(x, { questId: t })
               : (0, n.jsx)(h.l, { questId: t, reason: h.o.NOT_FOUND })
           : (0, c.E0)(m.config)
-            ? (0, n.jsx)(j.M, { quest: m, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, m.id)
-            : (0, n.jsx)(E, { questId: t });
+            ? (0, n.jsx)(E.M, { quest: m, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, m.id)
+            : (0, n.jsx)(f, { questId: t });
 }
