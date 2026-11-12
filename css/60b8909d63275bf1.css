@@ -1,0 +1,16 @@
+.roleDotSlot_N7pWzQ {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.selectedNames_N7pWzQ {
+    flex: 1;
+    min-width: 0
+}
+
+.roleList_N7pWzQ {
+    max-height: calc(var(--space-32)*10)
+}
+
+/*# sourceMappingURL=60b8909d63275bf1.css.map*/

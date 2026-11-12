@@ -1,7 +1,7 @@
 var i = n(477900),
-    r = n(582128),
+    a = n(582128),
     l = n(503698),
-    a = n.n(l),
+    r = n.n(l),
     o = n(91871),
     s = n.n(o),
     c = n(855986),
@@ -11,47 +11,48 @@ var i = n(477900),
     h = n(858899),
     m = n(331322),
     f = n(683438),
-    p = n(834730),
-    S = n(150934),
-    j = n(140735),
+    j = n(834730),
+    p = n(95362),
+    x = n(150934),
+    S = n(140735),
     A = n(148149),
-    x = n(775602),
+    y = n(775602),
     E = n(149468),
-    y = n(266891),
+    b = n(266891),
     _ = n(676608),
-    b = n(46653),
+    N = n(46653),
     R = n(696451),
-    D = n(317525),
-    v = n(71393),
-    N = n(576705),
-    P = n(287809),
-    O = n(129230),
-    C = n(403362),
-    L = n(427262),
+    C = n(317525),
+    D = n(71393),
+    v = n(576705),
+    O = n(287809),
+    L = n(129230),
+    P = n(403362),
+    k = n(427262),
     T = n(504049),
-    k = n(543079),
-    M = n(652215),
-    w = n(778712),
-    z = n(792996),
-    I = n(911888);
-function q(t) {
-    let { action: e, hasRoles: n, autoFocusSearch: r, searchQuery: l, onSearchChange: a } = t;
+    M = n(543079),
+    w = n(652215),
+    I = n(778712),
+    q = n(792996),
+    z = n(911888);
+function B(t) {
+    let { action: e, hasRoles: n, autoFocusSearch: a, searchQuery: l, onSearchChange: r } = t;
     return (0, i.jsx)(m.B, {
         direction: "vertical",
-        padding: { top: 16 },
+        padding: { top: "md" },
         children: n
             ? (0, i.jsx)(f.I, {
-                  autoFocus: r,
+                  autoFocus: a,
                   query: l,
-                  onChange: a,
-                  onClear: () => a(""),
-                  placeholder: z.intl.string(z.t.Sojqsr),
-                  "aria-label": z.intl.string(z.t.Sojqsr),
+                  onChange: r,
+                  onClear: () => r(""),
+                  placeholder: q.intl.string(q.t.Sojqsr),
+                  "aria-label": q.intl.string(q.t.Sojqsr),
               })
-            : (0, i.jsx)(p.E, {
+            : (0, i.jsx)(j.E, {
                   variant: "body-md/normal",
                   color: "text-subtle",
-                  children: z.intl.string(e === T.Nj.ADD_ROLE ? z.t.v65TBm : z.t["2U13qa"]),
+                  children: q.intl.string(e === T.Nj.ADD_ROLE ? q.t.v65TBm : q.t["2U13qa"]),
               }),
     });
 }
@@ -61,11 +62,11 @@ n.d(
     {
         default: function (t) {
             let { guildId: e, userIds: n, transitionState: l, onClose: o } = t,
-                [f, B] = r.useState(T.Nj.ADD_ROLE),
-                [K, U] = r.useState(""),
-                [V, X] = r.useState(!0),
-                [H, Y] = r.useState(() => ({ [T.Nj.ADD_ROLE]: new Set(), [T.Nj.REMOVE_ROLE]: new Set() })),
-                G = (0, c.cf)(
+                [f, H] = a.useState(T.Nj.ADD_ROLE),
+                [K, V] = a.useState(""),
+                [U, X] = a.useState(!0),
+                [Y, G] = a.useState(() => ({ [T.Nj.ADD_ROLE]: new Set(), [T.Nj.REMOVE_ROLE]: new Set() })),
+                J = (0, c.cf)(
                     [R.Ay],
                     () => {
                         let t = {};
@@ -77,110 +78,122 @@ n.d(
                     },
                     [e, n],
                 ),
-                [J, Z] = r.useState(null),
-                Q = r.useCallback((t) => J?.openUserList(t.currentTarget), [J]),
-                W = (0, c.yK)([P.default], () => [...n].map((t) => P.default.getUser(t)).filter(C.Vq), [n]),
-                F = (0, c.yK)([R.Ay], () => W.slice(0, 3).map((t) => R.Ay.getNick(e, t.id) ?? L.Ay.getName(t)), [e, W]),
-                $ = (0, c.yK)(
-                    [D.A, v.A, N.A],
+                [Z, Q] = a.useState(null),
+                W = a.useCallback((t) => Z?.openUserList(t.currentTarget), [Z]),
+                F = (0, c.yK)([O.default], () => [...n].map((t) => O.default.getUser(t)).filter(P.Vq), [n]),
+                $ = (0, c.yK)([R.Ay], () => F.slice(0, 3).map((t) => R.Ay.getNick(e, t.id) ?? k.Ay.getName(t)), [e, F]),
+                tt = (0, c.yK)(
+                    [C.A, D.A, v.A],
                     () => {
-                        let t = v.A.getGuild(e);
+                        let t = D.A.getGuild(e);
                         if (null == t) return [];
-                        let n = N.A.getHighestRole(t);
-                        return D.A.getSortedRoles(e).filter((e) => (0, y.m)(t, n, e));
+                        let n = v.A.getHighestRole(t);
+                        return C.A.getSortedRoles(e).filter((e) => (0, b.m)(t, n, e));
                     },
                     [e],
                 ),
-                tt = (0, c.bG)([x.Ay], () => x.Ay.roleStyle),
-                te = (0, _.Ay)(e, null),
-                tn = r.useMemo(
+                te = (0, c.bG)([y.Ay], () => y.Ay.roleStyle),
+                tn = (0, _.Ay)(e, null),
+                ti = a.useMemo(
                     () =>
                         new Map(
-                            $.map((t) => {
+                            tt.map((t) => {
                                 var e;
-                                let n, r;
+                                let n, a;
                                 return [
                                     t.id,
-                                    ((e = "dot" === tt),
-                                    (n = t.colorString ?? M.TpD),
-                                    (r = te ? t.colorStrings : null),
+                                    ((e = "dot" === te),
+                                    (n = t.colorString ?? w.TpD),
+                                    (a = tn ? t.colorStrings : null),
                                     function (t) {
                                         let { className: l } = t;
                                         return (0, i.jsx)("span", {
-                                            className: a()(l, I.S),
+                                            className: r()(l, z.SI),
                                             "aria-hidden": !0,
                                             children: e
-                                                ? (0, i.jsx)(g.W, { color: n, colors: r, background: !1, tooltip: !1 })
-                                                : (0, i.jsx)(g.R, { color: n, colors: r ?? null }),
+                                                ? (0, i.jsx)(g.W, { color: n, colors: a, background: !1, tooltip: !1 })
+                                                : (0, i.jsx)(g.R, { color: n, colors: a ?? null }),
                                         });
                                     }),
                                 ];
                             }),
                         ),
-                    [$, tt, te],
+                    [tt, te, tn],
                 ),
-                ti = r.useMemo(() => (f === T.Nj.ADD_ROLE ? $ : $.filter((t) => (G[t.id] ?? 0) > 0)), [f, $, G]),
-                tr = r.useMemo(
-                    () => ("" === K ? ti : ti.filter((t) => s()(K.toLowerCase(), t.name.toLowerCase()))),
-                    [ti, K],
+                ta = a.useMemo(() => (f === T.Nj.ADD_ROLE ? tt : tt.filter((t) => (J[t.id] ?? 0) > 0)), [f, tt, J]),
+                tl = a.useMemo(
+                    () => ("" === K ? ta : ta.filter((t) => s()(K.toLowerCase(), t.name.toLowerCase()))),
+                    [ta, K],
                 ),
-                tl = r.useMemo(() => ti.filter((t) => H[f].has(t.id)), [ti, H, f]),
-                ta = tl.length >= 10;
-            function to() {
-                return (0, i.jsx)(q, {
+                tr = a.useMemo(() => ta.filter((t) => Y[f].has(t.id)), [ta, Y, f]),
+                to = tr.length >= 10;
+            function ts() {
+                return (0, i.jsx)(B, {
                     action: f,
-                    hasRoles: ti.length > 0,
-                    autoFocusSearch: V,
+                    hasRoles: ta.length > 0,
+                    autoFocusSearch: U,
                     searchQuery: K,
-                    onSearchChange: U,
+                    onSearchChange: V,
                 });
             }
-            let ts = null;
+            let tc = null;
             return (
-                ti.length > 0 && 0 === tr.length
-                    ? (ts = z.intl.string(z.t["Xe+fJM"]))
-                    : ti.length > 0 &&
-                      (ts = (0, i.jsx)(m.B, {
-                          direction: "vertical",
-                          gap: 12,
-                          role: "group",
-                          "aria-label": z.intl.string(f === T.Nj.ADD_ROLE ? z.t["/LCz1j"] : z.t.xdpeXG),
-                          children: tr.map((t) =>
-                              (0, i.jsx)(
-                                  S.S,
-                                  {
-                                      label: t.name,
-                                      leadingIcon: tn.get(t.id),
-                                      description:
-                                          f === T.Nj.REMOVE_ROLE
-                                              ? z.intl.formatToPlainString(z.t.Pb7gE6, {
-                                                    held: G[t.id] ?? 0,
-                                                    total: n.size,
-                                                })
-                                              : void 0,
-                                      checked: H[f].has(t.id),
-                                      disabled: ta && !H[f].has(t.id),
-                                      onChange: (e) => {
-                                          var n;
-                                          return (
-                                              (n = t.id),
-                                              void Y((t) => {
-                                                  let i = new Set(t[f]);
-                                                  return (e ? i.add(n) : i.delete(n), { ...t, [f]: i });
-                                              })
-                                          );
+                ta.length > 0 && 0 === tl.length
+                    ? (tc = q.intl.string(q.t["Xe+fJM"]))
+                    : ta.length > 0 &&
+                      (tc = (0, i.jsx)(p.Ip, {
+                          className: z.r9,
+                          children: (0, i.jsx)(m.B, {
+                              direction: "vertical",
+                              gap: 12,
+                              role: "group",
+                              "aria-label": q.intl.string(f === T.Nj.ADD_ROLE ? q.t["/LCz1j"] : q.t.xdpeXG),
+                              children: tl.map((t) =>
+                                  (0, i.jsx)(
+                                      x.S,
+                                      {
+                                          label:
+                                              f === T.Nj.REMOVE_ROLE
+                                                  ? q.intl.format(q.t["0Cbkgq"], {
+                                                        roleName: t.name,
+                                                        held: J[t.id] ?? 0,
+                                                        total: n.size,
+                                                        countHook: (t) =>
+                                                            (0, i.jsx)(j.E, {
+                                                                tag: "span",
+                                                                variant: "body-md/normal",
+                                                                color: "text-subtle",
+                                                                "aria-hidden": !0,
+                                                                children: t,
+                                                            }),
+                                                        accessibleCountHook: (t) => (0, i.jsx)(S.A, { children: t }),
+                                                    })
+                                                  : t.name,
+                                          leadingIcon: ti.get(t.id),
+                                          checked: Y[f].has(t.id),
+                                          disabled: to && !Y[f].has(t.id),
+                                          onChange: (e) => {
+                                              var n;
+                                              return (
+                                                  (n = t.id),
+                                                  void G((t) => {
+                                                      let i = new Set(t[f]);
+                                                      return (e ? i.add(n) : i.delete(n), { ...t, [f]: i });
+                                                  })
+                                              );
+                                          },
                                       },
-                                  },
-                                  t.id,
+                                      t.id,
+                                  ),
                               ),
-                          ),
+                          }),
                       })),
                 (0, i.jsx)(u.a, {
                     transitionState: l,
                     onClose: o,
-                    title: z.intl.formatToPlainString(z.t.maeAjm, { count: n.size }),
-                    notice: ta
-                        ? { type: "info", role: "status", message: z.intl.formatToPlainString(z.t.ydcz2f, { max: 10 }) }
+                    title: q.intl.formatToPlainString(q.t.maeAjm, { count: n.size }),
+                    notice: to
+                        ? { type: "info", role: "status", message: q.intl.formatToPlainString(q.t.ydcz2f, { max: 10 }) }
                         : void 0,
                     input: (0, i.jsxs)(m.B, {
                         direction: "vertical",
@@ -192,102 +205,105 @@ n.d(
                                 align: "center",
                                 children: [
                                     (0, i.jsx)(d.A, {
-                                        ref: Z,
-                                        users: W,
+                                        ref: Q,
+                                        users: F,
                                         maxUsers: 3,
                                         guildId: e,
-                                        size: w._3.SIZE_20,
-                                        "aria-label": z.intl.string(z.t.t6QKaP),
+                                        size: I._3.SIZE_20,
+                                        "aria-label": q.intl.string(q.t.t6QKaP),
                                     }),
-                                    (0, i.jsxs)(p.E, {
+                                    (0, i.jsxs)(j.E, {
                                         variant: "body-sm/normal",
                                         color: "text-subtle",
+                                        className: z.IV,
+                                        lineClamp: 1,
+                                        title: $.join(", "),
                                         children: [
-                                            (0, i.jsxs)(j.A, { children: [z.intl.string(z.t.sqCqvs), " "] }),
+                                            (0, i.jsxs)(S.A, { children: [q.intl.string(q.t.sqCqvs), " "] }),
                                             (function (t, e, n) {
-                                                let [i, r, l] = t;
+                                                let [i, a, l] = t;
                                                 return e <= 3 && t.length === e
                                                     ? 1 === e
-                                                        ? z.intl.formatToPlainString(z.t["J+Wpst"], { first: i })
+                                                        ? q.intl.formatToPlainString(q.t["J+Wpst"], { first: i })
                                                         : 2 === e
-                                                          ? z.intl.formatToPlainString(z.t.gwRP0Y, {
+                                                          ? q.intl.formatToPlainString(q.t.gwRP0Y, {
                                                                 first: i,
-                                                                second: r,
+                                                                second: a,
                                                             })
-                                                          : z.intl.formatToPlainString(z.t.QDB5et, {
+                                                          : q.intl.formatToPlainString(q.t.QDB5et, {
                                                                 first: i,
-                                                                second: r,
+                                                                second: a,
                                                                 third: l,
                                                             })
-                                                    : z.intl.format(z.t.Xj4dhN, {
+                                                    : q.intl.format(q.t.Xj4dhN, {
                                                           first: i,
-                                                          second: r,
+                                                          second: a,
                                                           count: e - 2,
                                                           onOpen: n,
                                                       });
-                                            })(F, n.size, Q),
+                                            })($, n.size, W),
                                         ],
                                     }),
                                 ],
                             }),
                             (0, i.jsx)(A.t, {
-                                "aria-label": z.intl.string(z.t.HLUgs8),
+                                "aria-label": q.intl.string(q.t.HLUgs8),
                                 selectedId: f,
                                 onChange: (t) => {
-                                    (X(!1), B(t));
+                                    (X(!1), H(t));
                                 },
                                 items: [
-                                    { id: T.Nj.ADD_ROLE, label: z.intl.string(z.t.OYkgVk), panel: to },
-                                    { id: T.Nj.REMOVE_ROLE, label: z.intl.string(z.t.N86XcP), panel: to },
+                                    { id: T.Nj.ADD_ROLE, label: q.intl.string(q.t.OYkgVk), panel: ts },
+                                    { id: T.Nj.REMOVE_ROLE, label: q.intl.string(q.t.N86XcP), panel: ts },
                                 ],
                             }),
                         ],
                     }),
                     actions: [
-                        { variant: "secondary", text: z.intl.string(z.t["ETE/oC"]), onClick: o },
+                        { variant: "secondary", text: q.intl.string(q.t["ETE/oC"]), onClick: o },
                         {
                             variant: f === T.Nj.ADD_ROLE ? "primary" : "critical-primary",
-                            text: z.intl.formatToPlainString(f === T.Nj.ADD_ROLE ? z.t["nHzh/X"] : z.t.K3ZhuJ, {
-                                count: tl.length,
+                            text: q.intl.formatToPlainString(f === T.Nj.ADD_ROLE ? q.t["nHzh/X"] : q.t.K3ZhuJ, {
+                                count: tr.length,
                             }),
-                            disabled: 0 === tl.length,
+                            disabled: 0 === tr.length,
                             onClick: function () {
                                 let t = [...n];
-                                (O.default.track(M.HAw.BULK_MODERATION_ACTION_STARTED, {
+                                (L.default.track(w.HAw.BULK_MODERATION_ACTION_STARTED, {
                                     ...(0, E.H$)(e),
                                     action_type: f,
                                     target_user_ids: t,
-                                    mod_user_id: b.default.getId(),
+                                    mod_user_id: N.default.getId(),
                                     location: "MemberSafetyPageActionNotice",
                                 }),
                                     (async function (t, e, n, i) {
-                                        (0, h.P0)({ text: z.intl.string(z.t["JZ0+/0"]) });
+                                        (0, h.P0)({ text: q.intl.string(q.t["JZ0+/0"]) });
                                         try {
                                             !(function (t) {
                                                 let { succeeded: e, failed: n } = t;
                                                 0 === e
                                                     ? (0, h.P0)({
-                                                          text: z.intl.string(z.t.aYi2eS),
+                                                          text: q.intl.string(q.t.aYi2eS),
                                                           variant: "critical",
                                                       })
                                                     : n > 0
                                                       ? (0, h.P0)({
-                                                            text: z.intl.formatToPlainString(z.t.XGfY0Z, {
+                                                            text: q.intl.formatToPlainString(q.t.XGfY0Z, {
                                                                 succeeded: e,
                                                                 failed: n,
                                                             }),
                                                         })
                                                       : (0, h.P0)({
-                                                            text: z.intl.formatToPlainString(z.t.MWvxdK, { count: e }),
+                                                            text: q.intl.formatToPlainString(q.t.MWvxdK, { count: e }),
                                                             variant: "success",
                                                         });
-                                            })(await (0, k.V)(t, e, n, i));
+                                            })(await (0, M.V)(t, e, n, i));
                                         } catch {
-                                            (0, h.P0)({ text: z.intl.string(z.t.aYi2eS), variant: "critical" });
+                                            (0, h.P0)({ text: q.intl.string(q.t.aYi2eS), variant: "critical" });
                                         }
                                     })(
                                         e,
-                                        tl.map((t) => t.id),
+                                        tr.map((t) => t.id),
                                         f,
                                         t,
                                     ),
@@ -295,7 +311,7 @@ n.d(
                             },
                         },
                     ],
-                    children: ts,
+                    children: tc,
                 })
             );
         },
