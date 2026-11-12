@@ -1,4 +1,4 @@
-l.d(t, { A: () => e3 });
+l.d(t, { A: () => e9 });
 var n = l(477900),
     a = l(582128),
     i = l(621466),
@@ -1089,8 +1089,9 @@ let eY = a.memo(function (e) {
         }),
     });
 });
-var eZ = l(591246);
-function eQ(e) {
+var eZ = l(765548),
+    eQ = l(591246);
+function eq(e) {
     let {
             label: t,
             text: l,
@@ -1111,23 +1112,20 @@ function eQ(e) {
             let t = e.getBoundingClientRect();
             return 0 === t.width ? 0 : c / t.width;
         }, [c]),
-        j = a.useCallback(
-            (e) => {
-                let t = h.current;
-                if (null == t) return;
-                let l = (e.clientX - t.clientX) * b();
-                if ("start" === t.mode) m((0, v.clamp)(t.initialStart + l, 0, t.initialEnd - 1), t.initialEnd);
-                else if ("end" === t.mode) {
-                    let e = (0, v.clamp)(t.initialEnd + l, t.initialStart + 1, c);
-                    m(t.initialStart, e);
-                } else {
-                    let e = t.initialEnd - t.initialStart,
-                        n = (0, v.clamp)(t.initialStart + l, 0, c - e);
-                    m(n, n + e);
-                }
-            },
-            [b, m, c],
-        ),
+        j = (0, eZ.A)((e) => {
+            let t = h.current;
+            if (null == t) return;
+            let l = (e.clientX - t.clientX) * b();
+            if ("start" === t.mode) m((0, v.clamp)(t.initialStart + l, 0, t.initialEnd - 1), t.initialEnd);
+            else if ("end" === t.mode) {
+                let e = (0, v.clamp)(t.initialEnd + l, t.initialStart + 1, c);
+                m(t.initialStart, e);
+            } else {
+                let e = t.initialEnd - t.initialStart,
+                    n = (0, v.clamp)(t.initialStart + l, 0, c - e);
+                m(n, n + e);
+            }
+        }),
         y = a.useCallback(() => {
             ((h.current = null), g(null));
         }, []);
@@ -1190,24 +1188,24 @@ function eQ(e) {
         w = 0 === c ? 0 : (r / c) * 100,
         A = 0 === c ? 0 : ((o - r) / c) * 100;
     return (0, n.jsx)("div", {
-        className: eZ.nM,
+        className: eQ.nM,
         children: (0, n.jsxs)("div", {
             ref: f,
-            className: eZ.hz,
+            className: eQ.hz,
             children: [
                 (0, n.jsx)(eA.vN, {
                     children: (0, n.jsx)(s.D, {
-                        className: p()(eZ.u4, { [eZ.jX]: u }),
+                        className: p()(eQ.u4, { [eQ.jX]: u }),
                         style: { left: `${w}%`, width: `${A}%`, backgroundColor: i },
                         onMouseDown: C("move"),
                         onKeyDown: N,
                         "aria-label": t,
                         children: (0, n.jsx)("div", {
-                            className: eZ.Kq,
+                            className: eQ.Kq,
                             children: (0, n.jsx)(G.E, {
                                 variant: "body-sm/medium",
                                 color: "none",
-                                className: eZ.Vd,
+                                className: eQ.Vd,
                                 children: l,
                             }),
                         }),
@@ -1215,7 +1213,7 @@ function eQ(e) {
                 }),
                 (0, n.jsx)(eA.vN, {
                     children: (0, n.jsx)("button", {
-                        className: eZ.YQ,
+                        className: eQ.YQ,
                         style: { left: `${w}%` },
                         onMouseDown: C("start"),
                         onKeyDown: k,
@@ -1225,12 +1223,12 @@ function eQ(e) {
                         "aria-valuenow": r,
                         "aria-valuemax": o - 1,
                         "aria-label": t,
-                        children: (0, n.jsx)("div", { className: eZ.gt }),
+                        children: (0, n.jsx)("div", { className: eQ.gt }),
                     }),
                 }),
                 (0, n.jsx)(eA.vN, {
                     children: (0, n.jsx)("button", {
-                        className: eZ.JZ,
+                        className: eQ.JZ,
                         style: { left: `${w + A}%` },
                         onMouseDown: C("end"),
                         onKeyDown: E,
@@ -1240,29 +1238,29 @@ function eQ(e) {
                         "aria-valuenow": o,
                         "aria-valuemax": c,
                         "aria-label": t,
-                        children: (0, n.jsx)("div", { className: eZ.gt }),
+                        children: (0, n.jsx)("div", { className: eQ.gt }),
                     }),
                 }),
             ],
         }),
     });
 }
-var eq = l(302034),
-    eJ = l(503535);
-function e0(e) {
+var eJ = l(302034),
+    e0 = l(503535);
+function e1(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),
         l = Math.floor(e % 60),
         n = Math.floor((e % 1) * 100);
     return ((t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (n = n < 10 ? "0" + n : n), `${t}:${l}.${n}`);
 }
-function e1(e) {
+function e5(e) {
     let t = Math.floor(e / 60),
         l = ea.intl.formatToPlainString(ea.t.iXLF9W, { minutes: t }),
         n = ea.intl.formatToPlainString(ea.t.geSp4K, { seconds: e % 60 });
     return `${l} ${n}`;
 }
-function e5(e) {
+function e3(e) {
     let { voiceAudioTracks: t, transitionState: l } = e,
         {
             useCurrentTime: i,
@@ -1420,38 +1418,38 @@ function e5(e) {
             background: `linear-gradient(to right, var(--black-500) ${er}%, transparent ${er}%, transparent ${es}%, var(--black-500) ${es}%)`,
         };
     return (0, n.jsxs)("div", {
-        className: eJ.f4,
+        className: e0.f4,
         children: [
-            (0, n.jsx)("div", { className: eJ.qs }),
+            (0, n.jsx)("div", { className: e0.qs }),
             (0, n.jsxs)("div", {
-                className: eJ.lx,
+                className: e0.lx,
                 children: [
                     (0, n.jsx)("div", {
-                        className: eJ.k2,
+                        className: e0.k2,
                         children: (0, n.jsx)("div", {
                             ref: S,
-                            className: eJ.re,
+                            className: e0.re,
                             children: (0, n.jsxs)(G.E, {
                                 variant: "body-xs/medium",
-                                className: eJ.g7,
+                                className: e0.g7,
                                 color: "text-muted",
                                 children: [
-                                    (0, n.jsx)("span", { className: eJ.$k, children: e0(et) }),
-                                    (0, n.jsx)("span", { className: eJ.xW, children: " / " }),
-                                    e0(u),
+                                    (0, n.jsx)("span", { className: e0.$k, children: e1(et) }),
+                                    (0, n.jsx)("span", { className: e0.xW, children: " / " }),
+                                    e1(u),
                                 ],
                             }),
                         }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: eJ.s2,
+                        className: e0.s2,
                         children: [
                             (0, n.jsx)(X.K, {
                                 size: "sm",
                                 variant: "icon-only",
                                 icon: eN.SkipBackwardIcon,
                                 onClick: el,
-                                "aria-label": ea.intl.string(eq.default["dRVF+Z"]),
+                                "aria-label": ea.intl.string(eJ.default["dRVF+Z"]),
                             }),
                             (0, n.jsx)(X.K, {
                                 size: "sm",
@@ -1465,14 +1463,14 @@ function e5(e) {
                                 variant: "icon-only",
                                 icon: ew.SkipForwardIcon,
                                 onClick: en,
-                                "aria-label": ea.intl.string(eq.default.yV2FLL),
+                                "aria-label": ea.intl.string(eJ.default.yV2FLL),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, n.jsxs)("div", {
-                className: eJ.fL,
+                className: e0.fL,
                 ref: H,
                 children: [
                     (0, n.jsx)(eY, { onMouseDown: Y, videoLength: r, clip: b, noBottomMargin: !0, compact: !0 }),
@@ -1480,29 +1478,29 @@ function e5(e) {
                         onMouseDown: Y,
                         voiceAudioTracks: t,
                         clipId: b.id,
-                        className: eJ.ou,
+                        className: e0.ou,
                         alwaysRenderContainer: !0,
                     }),
                     (0, n.jsx)("div", {
-                        className: eJ.iI,
+                        className: e0.iI,
                         children: (0, n.jsxs)("div", {
-                            className: eJ.Qp,
+                            className: e0.Qp,
                             children: [
-                                (0, n.jsx)("div", { className: eJ.bd }),
+                                (0, n.jsx)("div", { className: e0.bd }),
                                 (0, n.jsx)("div", {
-                                    className: eJ.PH,
+                                    className: e0.PH,
                                     children: (0, n.jsxs)("div", {
-                                        className: p()(eJ.IO, { [eJ.Dg]: null != I }),
+                                        className: p()(e0.IO, { [e0.Dg]: null != I }),
                                         onMouseDown: Y,
                                         children: [
-                                            (0, n.jsx)("canvas", { className: eJ.Ay, ref: z }),
+                                            (0, n.jsx)("canvas", { className: e0.Ay, ref: z }),
                                             (0, n.jsx)(eA.vN, {
                                                 children: (0, n.jsx)("div", {
                                                     tabIndex: 0,
                                                     ref: T,
-                                                    className: eJ.lG,
+                                                    className: e0.lG,
                                                     children: (0, n.jsx)("svg", {
-                                                        className: eJ.$6,
+                                                        className: e0.$6,
                                                         width: "10",
                                                         height: "7.5",
                                                         viewBox: "0 0 8 6",
@@ -1515,9 +1513,9 @@ function e5(e) {
                                                     }),
                                                 }),
                                             }),
-                                            (0, n.jsx)("div", { className: eJ.QT, style: eo }),
+                                            (0, n.jsx)("div", { className: e0.QT, style: eo }),
                                             (0, n.jsxs)("div", {
-                                                className: eJ.Ws,
+                                                className: e0.Ws,
                                                 style: {
                                                     left: null != r ? `${(o / r) * 100}%` : "0",
                                                     right: null != r ? `${((r - c) / r) * 100}%` : "0",
@@ -1525,20 +1523,20 @@ function e5(e) {
                                                 children: [
                                                     (0, n.jsx)(eA.vN, {
                                                         children: (0, n.jsxs)("button", {
-                                                            className: eJ.uI,
+                                                            className: e0.uI,
                                                             onMouseDown: Z("start"),
                                                             onKeyDown: V,
                                                             role: "slider",
                                                             tabIndex: 0,
                                                             "aria-valuemin": 0,
                                                             "aria-valuenow": o,
-                                                            "aria-valuetext": e1(o),
+                                                            "aria-valuetext": e5(o),
                                                             "aria-valuemax": c - 0.1,
                                                             "aria-label": ea.intl.string(ea.t["+BTvw8"]),
                                                             children: [
-                                                                (0, n.jsx)("div", { className: eJ.FV }),
+                                                                (0, n.jsx)("div", { className: e0.FV }),
                                                                 (0, n.jsxs)("svg", {
-                                                                    className: eJ.lm,
+                                                                    className: e0.lm,
                                                                     width: "8",
                                                                     height: "56",
                                                                     viewBox: "0 0 8 56",
@@ -1558,20 +1556,20 @@ function e5(e) {
                                                     }),
                                                     (0, n.jsx)(eA.vN, {
                                                         children: (0, n.jsxs)("button", {
-                                                            className: eJ.H1,
+                                                            className: e0.H1,
                                                             onMouseDown: Z("end"),
                                                             onKeyDown: K,
                                                             role: "slider",
                                                             tabIndex: 0,
                                                             "aria-valuemin": o + 0.1,
                                                             "aria-valuenow": c,
-                                                            "aria-valuetext": e1(c),
+                                                            "aria-valuetext": e5(c),
                                                             "aria-valuemax": r,
                                                             "aria-label": ea.intl.string(ea.t.bBgBYo),
                                                             children: [
-                                                                (0, n.jsx)("div", { className: eJ.kn }),
+                                                                (0, n.jsx)("div", { className: e0.kn }),
                                                                 (0, n.jsxs)("svg", {
-                                                                    className: eJ.mN,
+                                                                    className: e0.mN,
                                                                     width: "8",
                                                                     height: "56",
                                                                     viewBox: "0 0 8 56",
@@ -1596,7 +1594,7 @@ function e5(e) {
                                 }),
                                 C.map((e) =>
                                     (0, n.jsx)(
-                                        eQ,
+                                        eq,
                                         {
                                             label: (function (e) {
                                                 switch (e) {
@@ -1637,7 +1635,7 @@ function e5(e) {
         ],
     });
 }
-function e3(e) {
+function e9(e) {
     let { transitionState: t, onBack: l } = e,
         {
             cropStart: m,
@@ -1774,7 +1772,7 @@ function e3(e) {
                                       }),
                                       (0, n.jsx)("div", {
                                           className: eo.fL,
-                                          children: (0, n.jsx)(e5, { transitionState: t, voiceAudioTracks: L }),
+                                          children: (0, n.jsx)(e3, { transitionState: t, voiceAudioTracks: L }),
                                       }),
                                   ],
                               }),
