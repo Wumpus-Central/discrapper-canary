@@ -4457,7 +4457,6 @@ function id(e) {
                 children:
                     null != r
                         ? tp.intl.format(t_.default["4FXB/m"], {
-                              numDays: a,
                               percent: r,
                               percentHook: (e, t) => (0, i.jsx)(rw, { children: e }, t),
                           })
@@ -4751,7 +4750,6 @@ function iU(e) {
                 children:
                     null != r
                         ? tp.intl.format(t_.default.TOMBAW, {
-                              numMessages: a,
                               percent: r,
                               percentHook: (e, t) => (0, i.jsx)(rw, { children: e }, t),
                           })
@@ -5250,7 +5248,6 @@ function so(e) {
                 children:
                     null != r
                         ? tp.intl.format(t_.default.RqXsIs, {
-                              numMinutes: a,
                               percent: r,
                               percentHook: (e, t) => (0, i.jsx)(rw, { children: e }, t),
                           })
