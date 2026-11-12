@@ -294,9 +294,9 @@ let e3 = [
 e2("open-unavailable", e1.default["58TARv"], eX.UNAVAILABLE);
 let e6 = ["reset"];
 var e8 = n(852717),
-    e5 = n(641214);
-function e7() {
-    return (0, i.jsx)(eD.y, { type: eD.t.SPINNING_CIRCLE_SIMPLE, className: e5.u1, itemClassName: e5.$N });
+    e7 = n(641214);
+function e5() {
+    return (0, i.jsx)(eD.y, { type: eD.t.SPINNING_CIRCLE_SIMPLE, className: e7.u1, itemClassName: e7.$N });
 }
 function e9(e) {
     let { onClose: t } = e,
@@ -313,9 +313,9 @@ function e9(e) {
         })(n),
         a = (0, c.bG)([eY.A], () => eY.A.isFetching);
     return (0, i.jsx)(eK, {
-        icon: a ? e7 : ew.ExperimentalCheckpointIcon,
+        icon: a ? e5 : ew.ExperimentalCheckpointIcon,
         label: eV.intl.string(e8.default["8hclXY"]),
-        sublabel: (0, i.jsx)("span", { className: e5.$B, children: eV.intl.string(e8.default.BFc4lY) }),
+        sublabel: (0, i.jsx)("span", { className: e7.$B, children: eV.intl.string(e8.default.BFc4lY) }),
         onClick: async function () {
             (await (0, eq.D)("user_profile_account_popout"), t());
         },
@@ -326,7 +326,7 @@ function e9(e) {
                       return (0, i.jsx)(eW, {
                           navId: "checkpoint-qa-submenu",
                           "aria-label": eV.intl.string(e1.default["9dS734"]),
-                          className: e5.gn,
+                          className: e7.gn,
                           onClose: n,
                           children: l.map((e) =>
                               (0, i.jsx)(
@@ -695,7 +695,7 @@ let t8 = {
         [t3.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
         [t3.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
-    t5 = {
+    t7 = {
         [t3.Ac.PREMIUM_TENURE_1_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm",
             light: "https://cdn.discordapp.com/assets/content/f09f5aa678c2d463109f0ca84a572646c1b6b21974865e84ac92f3c3a3f50b87.webm",
@@ -729,7 +729,7 @@ let t8 = {
             light: "https://cdn.discordapp.com/assets/content/c5e4aed8b111912db02d0aa12a73d162720f27aaf432000378344e94cde1ec65.webm",
         },
     };
-var t7 = n(570484);
+var t5 = n(570484);
 let t9 = l.lazy(() => Promise.all([n.e(969274), n.e(924832)]).then(n.bind(n, 748579)));
 function t4() {
     let e = (0, c.bG)([t$.Ay], () => t$.Ay.useReducedMotion),
@@ -739,7 +739,7 @@ function t4() {
                 t = (0, tZ.M)((0, tJ.Ay)());
             if (null == e) return null;
             let n = t8[e],
-                i = t5[e],
+                i = t7[e],
                 l = {
                     currentBadge: (0, t0.e0)(e),
                     currentBadgeTextGradient: t ? n?.dark : n?.light,
@@ -765,10 +765,10 @@ function ne(e) {
     return (0, i.jsx)(tq.Ok, {
         containerRef: n,
         children: (0, i.jsxs)("div", {
-            className: t7.i,
+            className: t5.i,
             children: [
                 (0, i.jsx)("div", {
-                    className: t7.b,
+                    className: t5.b,
                     children: (0, i.jsx)(to.m, {
                         text: eV.intl.string(eV.t.cpT0Cq),
                         children: (0, i.jsx)(tu.K, {
@@ -1031,23 +1031,23 @@ var nw = n(290863),
     n3 = n(429913),
     n6 = n(334074),
     n8 = n(633075),
-    n5 = n(667049),
-    n7 = n(46653),
+    n7 = n(667049),
+    n5 = n(46653),
     n9 = n(90165),
     n4 = n(49999),
     ie = n(518477);
 function it(e) {
     let { targetElementRef: t, onClose: a } = e,
         [r, s] = l.useState(!1),
-        o = (0, c.bG)([n7.default], () => n7.default.getId()),
+        o = (0, c.bG)([n5.default], () => n5.default.getId()),
         { eligibleApplications: u, markAsDismissed: m } = (function () {
             let e = (0, c.yK)([n1.A], () => n1.A.getFeaturedApplicationIds());
             ((0, n2.A)(e),
                 l.useEffect(() => {
                     (0, n0.X)();
                 }, []));
-            let t = (0, c.bG)([n7.default], () => n7.default.getId()),
-                n = (0, n5.A)(t),
+            let t = (0, c.bG)([n5.default], () => n5.default.getId()),
+                n = (0, n7.A)(t),
                 i = l.useMemo(() => n.filter((e) => e instanceof n8.R), [n]),
                 a = (0, n3.A)(e),
                 r = l.useMemo(() => a.filter(nG.Vq), [a]),
@@ -2268,28 +2268,28 @@ var i1 = n(45780),
     i3 = n(71393),
     i6 = n(685073),
     i8 = n(73153);
-let i5 = { lastSeenInfos: {} },
-    i7 = i5;
+let i7 = { lastSeenInfos: {} },
+    i5 = i7;
 class i9 extends c.Ay.PersistedStore {
     static displayName = "GuildTagChangedCoachmarkStore";
     static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        i7 = e ?? i5;
+        i5 = e ?? i7;
     }
     getState() {
-        return i7;
+        return i5;
     }
     getGuildLastSeenInfo(e) {
-        return i7.lastSeenInfos[e] ?? null;
+        return i5.lastSeenInfos[e] ?? null;
     }
 }
 let i4 = new i9(i8.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
-        i7.lastSeenInfos[t] = n;
+        i5.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        i7 = i5;
+        i5 = i7;
     },
 });
 var le = n(514661);
@@ -3033,8 +3033,8 @@ function l8(e) {
         actions: [{ text: eV.intl.string(eV.t.eOoTMX), variant: "primary", onClick: o }],
     });
 }
-var l5 = n(415443);
-function l7(e) {
+var l7 = n(415443);
+function l5(e) {
     let t,
         n,
         {
@@ -3063,7 +3063,7 @@ function l7(e) {
         }, [r]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, l5.A)("1794505830353", !0);
+        let e = (0, l7.A)("1794506006681", !0);
         t =
             null != e
                 ? eV.intl.formatToPlainString(eV.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -4400,7 +4400,7 @@ function aa(e) {
         S = (0, Y.K)(v);
     function N() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return (0, i.jsx)(l7, {
+        return (0, i.jsx)(l5, {
             webBuildOverride: c,
             onClick: A,
             onContextMenu: C,
@@ -4476,7 +4476,7 @@ function as() {
         n,
         a,
         r = (0, c.bG)([eR.default], () => eR.default.getCurrentUser()),
-        s = (0, c.bG)([n7.default], () => n7.default.getId()),
+        s = (0, c.bG)([n5.default], () => n5.default.getId()),
         {
             activities: m,
             streaming: f,

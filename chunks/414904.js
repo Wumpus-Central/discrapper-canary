@@ -2,8 +2,8 @@ l.d(t, { default: () => F });
 var i = l(477900),
     n = l(582128),
     r = l(540185),
-    s = l(855986),
-    a = l(554146),
+    a = l(855986),
+    s = l(554146),
     d = l(834730),
     c = l(224640),
     o = l(20742),
@@ -21,7 +21,7 @@ var i = l(477900),
 function N(e) {
     let { onOpen: t } = e,
         r = (0, j.r)("ConjureCustomWidgetAddOption"),
-        s = n.useCallback(() => {
+        a = n.useCallback(() => {
             (t?.(),
                 (0, g.mM)(
                     async () => {
@@ -45,7 +45,7 @@ function N(e) {
     return r
         ? (0, i.jsxs)(f.D, {
               className: y.u,
-              onClick: s,
+              onClick: a,
               children: [
                   (0, i.jsx)(p.MagicWandIcon, { size: "md", color: x.A.colors.ICON_SUBTLE }),
                   (0, i.jsx)(d.E, {
@@ -61,9 +61,9 @@ var v = l(387580),
     S = l(763314),
     E = l(826673),
     U = l(287809),
-    P = l(403362);
+    w = l(403362);
 l(321073);
-var w = l(633075),
+var P = l(633075),
     I = l(210598),
     k = l(116281),
     C = l(503698),
@@ -72,15 +72,15 @@ var w = l(633075),
     R = l(140735),
     L = l(661439),
     W = l(429913),
-    H = l(90165),
-    D = l(297520),
-    M = l(976527);
-function _(e) {
+    q = l(90165),
+    H = l(297520),
+    K = l(976527);
+function D(e) {
     let {
             applicationWidgets: t,
             dense: l,
             handleAddWidget: r,
-            isSubmitting: a,
+            isSubmitting: s,
             trackUserProfileEditAction: c,
             highlightedApplicationIds: o,
         } = e,
@@ -90,10 +90,10 @@ function _(e) {
         (0, L.X)();
     }, []);
     let g = (0, W.A)(t.map((e) => e.applicationId)),
-        f = (0, s.yK)([H.A], () =>
+        f = (0, a.yK)([q.A], () =>
             g.map((e) => {
                 let t = e?.getCanonicalGameId();
-                return null != t ? H.A.getLastPlayedDateTime(t) : null;
+                return null != t ? q.A.getLastPlayedDateTime(t) : null;
             }),
         ),
         p = n.useMemo(() => {
@@ -133,7 +133,7 @@ function _(e) {
                   });
         }, [p, u]);
     return (0, i.jsxs)("div", {
-        className: M.kL,
+        className: K.kL,
         children: [
             l &&
                 (0, i.jsxs)(i.Fragment, {
@@ -155,16 +155,16 @@ function _(e) {
             x.length > 0
                 ? (0, i.jsx)("ul", {
                       "aria-label": b.intl.string(b.t.mW75GT),
-                      className: G()(M.Vg, { [M.i0]: l }),
+                      className: G()(K.Vg, { [K.i0]: l }),
                       children: x.map((e) => {
                           let { widget: t, isHighlighted: n } = e;
                           return (0, i.jsx)(
                               "li",
                               {
-                                  children: (0, i.jsx)(D.A, {
+                                  children: (0, i.jsx)(H.A, {
                                       widget: t,
                                       onAddWidget: r,
-                                      loading: a,
+                                      loading: s,
                                       size: l ? "small" : "default",
                                       trackUserProfileEditAction: c,
                                       isHighlighted: n,
@@ -175,7 +175,7 @@ function _(e) {
                       }),
                   })
                 : (0, i.jsx)("div", {
-                      className: M.wV,
+                      className: K.wV,
                       children: (0, i.jsx)(d.E, {
                           variant: "body-md/medium",
                           color: "text-subtle",
@@ -185,12 +185,12 @@ function _(e) {
         ],
     });
 }
-var q = l(49999),
-    B = l(901366);
-function K(e) {
+var M = l(49999),
+    _ = l(901366);
+function B(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
-        className: B.HY,
+        className: _.HY,
         children: (0, i.jsx)(d.E, { variant: "body-md/medium", color: "text-subtle", children: t }),
     });
 }
@@ -198,13 +198,13 @@ function V(e) {
     let { widgets: t, onAddWidget: l, isSubmitting: n, trackUserProfileEditAction: r } = e;
     return (0, i.jsxs)("ul", {
         "aria-label": b.intl.string(b.t["+EIBSA"]),
-        className: B.Gm,
+        className: _.Gm,
         children: [
             t.map((e) =>
                 (0, i.jsx)(
                     "li",
                     {
-                        children: (0, i.jsx)(D.A, {
+                        children: (0, i.jsx)(H.A, {
                             widget: e,
                             onAddWidget: l,
                             loading: n,
@@ -221,23 +221,23 @@ function V(e) {
 function Y(e) {
     let { offers: t, onClose: l, trackUserProfileEditAction: n } = e;
     return (0, i.jsx)("div", {
-        className: B.Gm,
+        className: _.Gm,
         children: t.map((e) => {
-            let { guildId: t, guildName: r, widgets: s } = e;
+            let { guildId: t, guildName: r, widgets: a } = e;
             return (0, i.jsxs)(
                 "section",
                 {
-                    className: B.Gm,
+                    className: _.Gm,
                     children: [
                         (0, i.jsx)(d.E, { variant: "body-sm/semibold", color: "text-subtle", children: r }),
                         (0, i.jsx)("ul", {
                             "aria-label": r,
-                            className: B.Gm,
-                            children: s.map((e) =>
+                            className: _.Gm,
+                            children: a.map((e) =>
                                 (0, i.jsx)(
                                     "li",
                                     {
-                                        children: (0, i.jsx)(D.A, {
+                                        children: (0, i.jsx)(H.A, {
                                             widget: e,
                                             trackUserProfileEditAction: n,
                                             onSelect: () => {
@@ -261,22 +261,24 @@ function F(e) {
         { onClose: l, trackUserProfileEditAction: d, highlightedApplicationIds: g, initialCategory: f, ...p } = e;
     n.useEffect(
         () => () => {
-            (0, E.Dr)(a.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: q.i.AUTO_DISMISS });
+            (0, E.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: M.i.AUTO_DISMISS });
         },
         [],
     );
-    let x = (0, s.bG)([U.default], () => U.default.getCurrentUser()),
+    let x = (0, a.bG)([U.default], () => U.default.getCurrentUser()),
         j = (function () {
             let e = (0, k.A)(),
-                [t, l] = n.useState(e);
-            return (e.length > t.length && l(e), n.useMemo(() => t, [t, void 0]));
+                [t, l] = n.useState(e),
+                i = new Set(t.map((e) => e.getUniqueKey())),
+                r = e.filter((e) => !i.has(e.getUniqueKey()));
+            return (r.length > 0 && l([...t, ...r]), n.useMemo(() => t, [t, void 0]));
         })(),
         { applicationWidgets: y, interestsWidgets: N } = n.useMemo(
             () =>
                 (function (e) {
                     let t = [],
                         l = [];
-                    for (let i of e) i instanceof w.R ? t.push(i) : l.push(i);
+                    for (let i of e) i instanceof P.R ? t.push(i) : l.push(i);
                     return { applicationWidgets: t, interestsWidgets: l };
                 })(j),
             [j],
@@ -315,9 +317,9 @@ function F(e) {
                       hasServerWidgets: O,
                       highlightedApplicationIds: g,
                   }),
-        [H, D] = n.useState(!1),
-        M = n.useCallback(() => {
-            (D(!0), l());
+        [q, H] = n.useState(!1),
+        K = n.useCallback(() => {
+            (H(!0), l());
         }, [l]);
     if (null == x) return null;
     let F = b.intl.string(b.t["grUgR+"]),
@@ -332,7 +334,7 @@ function F(e) {
                 case "fromYourServers":
                     return A.default.OUrOHL;
                 default:
-                    (0, P.xb)(e);
+                    (0, w.xb)(e);
             }
         })(W),
         z = (g?.length ?? 0) > 0;
@@ -342,36 +344,36 @@ function F(e) {
                 ? "fromYourServers" === W
                     ? O
                         ? (0, i.jsx)("div", {
-                              className: B.lU,
+                              className: _.lU,
                               children: (0, i.jsx)(Y, { offers: S, onClose: l, trackUserProfileEditAction: d }),
                           })
-                        : (0, i.jsx)(K, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
+                        : (0, i.jsx)(B, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
                     : "gameStats" === W
                       ? C
                           ? (0, i.jsx)("div", {
-                                className: B.lU,
-                                children: (0, i.jsx)(_, {
+                                className: _.lU,
+                                children: (0, i.jsx)(D, {
                                     applicationWidgets: y,
                                     dense: y.length >= 20,
-                                    handleAddWidget: M,
-                                    isSubmitting: H,
+                                    handleAddWidget: K,
+                                    isSubmitting: q,
                                     trackUserProfileEditAction: d,
                                     highlightedApplicationIds: g,
                                 }),
                             })
-                          : (0, i.jsx)(K, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
+                          : (0, i.jsx)(B, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
                       : G
                         ? (0, i.jsx)("div", {
-                              className: B.lU,
+                              className: _.lU,
                               children: (0, i.jsx)(V, {
                                   widgets: N,
-                                  onAddWidget: M,
-                                  isSubmitting: H,
+                                  onAddWidget: K,
+                                  isSubmitting: q,
                                   trackUserProfileEditAction: d,
                               }),
                           })
-                        : (0, i.jsx)(K, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
-                : (0, i.jsx)(K, { children: b.intl.string(b.t["1nkDOs"]) })),
+                        : (0, i.jsx)(B, { children: b.intl.format(b.t.mcdIFp, { tabName: b.intl.string(T) }) })
+                : (0, i.jsx)(B, { children: b.intl.string(b.t["1nkDOs"]) })),
         (0, i.jsxs)(c.d, {
             size: "lg",
             onClose: l,
@@ -380,10 +382,10 @@ function F(e) {
             children: [
                 (0, i.jsx)(o.rQ, { title: F }),
                 (0, i.jsxs)("div", {
-                    className: B.rf,
+                    className: _.rf,
                     children: [
                         (0, i.jsxs)(u.V, {
-                            className: B.C$,
+                            className: _.C$,
                             type: "side",
                             orientation: "vertical",
                             selectedItem: W,
@@ -393,7 +395,7 @@ function F(e) {
                             "aria-label": b.intl.string(b.t.bKOzux),
                             children: [
                                 (0, i.jsxs)(u.V.Item, {
-                                    className: B.pc,
+                                    className: _.pc,
                                     id: "interests",
                                     "aria-label": b.intl.string(b.t.NpchGq),
                                     children: [
@@ -404,7 +406,7 @@ function F(e) {
                                     ],
                                 }),
                                 (0, i.jsxs)(u.V.Item, {
-                                    className: B.pc,
+                                    className: _.pc,
                                     id: "gameStats",
                                     "aria-label": b.intl.string(b.t.EKR8Ps),
                                     children: [
@@ -414,7 +416,7 @@ function F(e) {
                                 }),
                                 O
                                     ? (0, i.jsx)(u.V.Item, {
-                                          className: B.pc,
+                                          className: _.pc,
                                           id: "fromYourServers",
                                           "aria-label": b.intl.string(A.default.OUrOHL),
                                           children: b.intl.string(A.default.OUrOHL),
@@ -425,8 +427,8 @@ function F(e) {
                         (0, i.jsx)(u.V.Panel, {
                             id: W,
                             "aria-label": b.intl.string(T),
-                            className: B.Qs,
-                            children: (0, i.jsx)(h.Gt, { className: B.XG, fade: !0, children: t }),
+                            className: _.Qs,
+                            children: (0, i.jsx)(h.Gt, { className: _.XG, fade: !0, children: t }),
                         }),
                     ],
                 }),
