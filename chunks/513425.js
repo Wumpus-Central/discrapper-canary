@@ -363,6 +363,7 @@ let v = new O(r.h, {
                 ...e,
                 finished: !0,
                 finished_at: Date.now(),
+                settledAsIdle: void 0,
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
@@ -376,6 +377,34 @@ let v = new O(r.h, {
         if (null == n) return !1;
         let i = (0, l.iW)("assistant", "");
         ((i.finished = !0), (i.finished_at = Date.now()), (i.interrupted = !0), _.set(t, [...n, i]));
+    },
+    CONJURE_CHAT_RUNNING_TURN_SET: function (e) {
+        let { projectId: t, turnId: n } = e,
+            i = _.get(t);
+        if (null == i) return !1;
+        let r = i.map((e, t) => {
+            if (null != n && !0 === e.settledAsIdle && (0, o.s3)(e, n)) {
+                let { finished: t, finished_at: n, settledAsIdle: i, ...r } = e;
+                return r;
+            }
+            return "assistant" !== e.role ||
+                (0, o.B5)(e) ||
+                (0, o.BL)(e) ||
+                (null != n && (0, o.s3)(e, n)) ||
+                (function (e, t) {
+                    let n = e[t];
+                    if (null != n.turn_id || n.steps.length > 0) return !1;
+                    for (let n = t - 1; n >= 0; n--) {
+                        if ("user" === e[n].role) return !0;
+                        if (!(0, o.B5)(e[n])) break;
+                    }
+                    return !1;
+                })(i, t)
+                ? e
+                : { ...e, finished: !0, finished_at: Date.now(), provisionalTodo: void 0, settledAsIdle: !0 };
+        });
+        if (r.every((e, t) => e === i[t])) return !1;
+        (_.set(t, r), N(t));
     },
     CONJURE_CHAT_STOP_REQUESTED: function (e) {
         let { projectId: t } = e,
