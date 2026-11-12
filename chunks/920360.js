@@ -1,9 +1,9 @@
 l.d(t, { A: () => tj });
 var n,
     i = l(477900),
-    C = l(582128),
-    s = l(503698),
-    a = l.n(s),
+    s = l(582128),
+    C = l(503698),
+    a = l.n(C),
     r = l(812729),
     d = l.n(r),
     o = l(164636),
@@ -25,9 +25,9 @@ var n,
     L = l(636670),
     D = l(792996),
     R = l(602083);
-function S(e) {
+function E(e) {
     let { searchState: t } = e,
-        l = C.useMemo(
+        l = s.useMemo(
             () => ({
                 [M.IY.LOADING]: null,
                 [M.IY.SUCCESS_STILL_INDEXING]: { icon: null, message: D.intl.string(D.t.AXPbZr) },
@@ -47,31 +47,31 @@ function S(e) {
               ],
           });
 }
-var E = l(811315),
-    N = l.n(E),
-    I = l(939249),
+var N = l(811315),
+    I = l.n(N),
+    S = l(939249),
     y = l(783977),
     Z = l(646514),
     _ = l(866665),
     w = l(658675),
     U = l(265872),
-    T = l(71393),
-    k = l(576705),
-    O = l(70738),
+    k = l(71393),
+    O = l(576705),
+    T = l(70738),
     F = l(587426),
     G = l(134413),
-    P = l(536637),
-    B = l.n(P),
+    B = l(536637),
+    P = l.n(B),
     q = l(156828),
-    Y = l(165862),
-    z = l(477782),
-    K = l(320448),
-    W = l(921853),
-    $ = l(282054),
+    z = l(165862),
+    Y = l(477782),
+    $ = l(320448),
+    K = l(921853),
+    W = l(282054),
     Q = l(652215),
     X = l(351114);
 let J = "MMM Do, YYYY",
-    ee = B()("2015-05-15").local(),
+    ee = P()("2015-05-15").local(),
     et = (0, q.Fe)({ createPromise: () => Promise.resolve().then(l.bind(l, 939538)), webpackId: 939538 });
 var el =
     (((n = {})[(n.ALL = 0)] = "ALL"),
@@ -88,7 +88,7 @@ function en(e) {
             startDateLabel: t,
             endDateLabel: l,
             afterDate: n,
-            beforeDate: s,
+            beforeDate: C,
             selectedOption: r,
             isCustomDateRange: d,
             menuName: o,
@@ -107,7 +107,7 @@ function en(e) {
             { id: 5, option: { input: 4, unit: "w" }, label: D.intl.string(D.t.kQTwT0) },
             { id: 6, option: { input: 3, unit: "M" }, label: D.intl.string(D.t.EPuP0s) },
         ],
-        [x, f] = C.useState(!1),
+        [x, f] = s.useState(!1),
         j =
             7 !== r
                 ? null
@@ -118,35 +118,35 @@ function en(e) {
                     : null != l
                       ? D.intl.formatToPlainString(D.t.YvNhsd, { date: l })
                       : null,
-        p = C.useCallback(() => {
+        p = s.useCallback(() => {
             (f(!0), m());
         }, [m]),
-        v = C.useCallback(
+        v = s.useCallback(
             (e) => {
                 h(e);
             },
             [h],
         ),
-        V = C.useCallback(
+        V = s.useCallback(
             (e) => {
                 H(e);
             },
             [H],
         ),
-        b = C.useCallback(() => {
-            (null == s && null == n && u(0, null), f(!1));
-        }, [n, s, u]);
-    return (0, i.jsx)(Y.W, {
+        b = s.useCallback(() => {
+            (null == C && null == n && u(0, null), f(!1));
+        }, [n, C, u]);
+    return (0, i.jsx)(z.W, {
         "data-menu-needs-migration": !0,
         navId: `member-safety-guild-member-${o}-menu`,
         onClose: c,
         "aria-label": D.intl.string(D.t.k9m8Rg),
         onSelect: Q.tEg,
-        children: (0, i.jsx)(z.rX, {
+        children: (0, i.jsx)(Y.rX, {
             children: x
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(z.Dr, {
+                          (0, i.jsx)(Y.Dr, {
                               id: "back",
                               action: b,
                               dontCloseOnAction: !0,
@@ -155,7 +155,7 @@ function en(e) {
                                       ...e,
                                       className: X.W6,
                                       children: [
-                                          (0, i.jsx)(W.ChevronSmallLeftIcon, {
+                                          (0, i.jsx)(K.ChevronSmallLeftIcon, {
                                               size: "custom",
                                               color: "currentColor",
                                               width: 16,
@@ -169,39 +169,39 @@ function en(e) {
                                       ],
                                   }),
                           }),
-                          (0, i.jsx)(z.Dr, {
+                          (0, i.jsx)(Y.Dr, {
                               id: "after-date-menu-item",
                               label: D.intl.string(D.t.RDqVOD),
                               subtext: t,
                               subMenuClassName: X.aD,
-                              children: (0, i.jsx)(z.Dr, {
+                              children: (0, i.jsx)(Y.Dr, {
                                   id: "after-date-picker",
                                   render: (e) =>
                                       (0, i.jsx)(et, {
                                           ...e,
                                           calendarClassName: X.BJ,
-                                          value: d && null != n ? B()(n) : void 0,
+                                          value: d && null != n ? P()(n) : void 0,
                                           onSelect: v,
-                                          maxDate: B()().local(),
+                                          maxDate: P()().local(),
                                           minDate: ee,
                                       }),
                               }),
                           }),
-                          (0, i.jsx)(z.Dr, {
+                          (0, i.jsx)(Y.Dr, {
                               id: "before-date-menu-item",
                               label: D.intl.string(D.t.jF54hQ),
                               subtext: l,
                               subMenuClassName: X.aD,
-                              children: (0, i.jsx)(z.Dr, {
+                              children: (0, i.jsx)(Y.Dr, {
                                   id: "before-date-picker",
                                   render: (e) =>
                                       (0, i.jsx)(et, {
                                           ...e,
                                           calendarClassName: X.BJ,
-                                          value: d && null != s ? B()(s) : void 0,
+                                          value: d && null != C ? P()(C) : void 0,
                                           onSelect: V,
-                                          maxDate: B()().local(),
-                                          minDate: d && null != n ? B()(n) : ee,
+                                          maxDate: P()().local(),
+                                          minDate: d && null != n ? P()(n) : ee,
                                       }),
                               }),
                           }),
@@ -212,7 +212,7 @@ function en(e) {
                           g.map((e) => {
                               let { id: t, option: l, label: n } = e;
                               return (0, i.jsx)(
-                                  z.iD,
+                                  Y.iD,
                                   {
                                       group: `member-safety-guild-member-${o}-menu`,
                                       id: `guild-member-${o}-option-${t}`,
@@ -223,8 +223,8 @@ function en(e) {
                                   `option-${t}`,
                               );
                           }),
-                          (0, i.jsx)(z.bX, {}),
-                          (0, i.jsx)(z.Dr, {
+                          (0, i.jsx)(Y.bX, {}),
+                          (0, i.jsx)(Y.Dr, {
                               id: `guild-member-${o}-custom-option}`,
                               action: p,
                               dontCloseOnAction: !0,
@@ -250,8 +250,8 @@ function en(e) {
                                               ],
                                           }),
                                           7 === r
-                                              ? (0, i.jsx)($.A, { foreground: X.QE, width: 18, height: 18 })
-                                              : (0, i.jsx)(K.ChevronSmallRightIcon, {
+                                              ? (0, i.jsx)(W.A, { foreground: X.QE, width: 18, height: 18 })
+                                              : (0, i.jsx)($.ChevronSmallRightIcon, {
                                                     size: "custom",
                                                     color: "currentColor",
                                                     width: 16,
@@ -268,16 +268,16 @@ function en(e) {
 }
 function ei(e) {
     let { guildId: t, onClose: l } = e,
-        n = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], N()),
-        { selectedAccountAgeOption: C } = n,
-        { afterDate: s, beforeDate: a, optionId: r } = C,
+        n = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], I()),
+        { selectedAccountAgeOption: s } = n,
+        { afterDate: C, beforeDate: a, optionId: r } = s,
         d = r === el.CUSTOM,
-        c = d && null != s ? B()(s).format(J) : null,
-        u = d && null != a ? B()(a).format(J) : null;
+        c = d && null != C ? P()(C).format(J) : null,
+        u = d && null != a ? P()(a).format(J) : null;
     return (0, i.jsx)(en, {
         startDateLabel: c,
         endDateLabel: u,
-        afterDate: s,
+        afterDate: C,
         beforeDate: a,
         selectedOption: r,
         isCustomDateRange: d,
@@ -285,13 +285,13 @@ function ei(e) {
         accessibilityLabel: D.intl.string(D.t["D++Tgf"]),
         onClose: l,
         onSelectDateOption: function (e, l) {
-            let i = null != l ? B()().subtract(l.input, l.unit).valueOf() : null;
+            let i = null != l ? P()().subtract(l.input, l.unit).valueOf() : null;
             (0, V.Ld)(t, { ...n, selectedAccountAgeOption: { optionId: e, afterDate: i, beforeDate: null } });
         },
         onToggleCustomDateRange: function () {
             (0, V.Ld)(t, {
                 ...n,
-                selectedAccountAgeOption: { optionId: el.CUSTOM, afterDate: d ? s : null, beforeDate: d ? a : null },
+                selectedAccountAgeOption: { optionId: el.CUSTOM, afterDate: d ? C : null, beforeDate: d ? a : null },
             });
         },
         onSelectStartDate: function (e) {
@@ -303,20 +303,20 @@ function ei(e) {
         onSelectEndDate: function (e) {
             (0, V.Ld)(t, {
                 ...n,
-                selectedAccountAgeOption: { optionId: el.CUSTOM, afterDate: s, beforeDate: e.valueOf() },
+                selectedAccountAgeOption: { optionId: el.CUSTOM, afterDate: C, beforeDate: e.valueOf() },
             });
         },
     });
 }
-var eC = l(565787),
-    es = l(953822),
+var es = l(565787),
+    eC = l(953822),
     ea = l(60270),
     er = l(353182),
     ed = l(953727);
 function eo(e) {
-    let { width: t = 24, height: l = 24, color: n = "currentColor", ...C } = e;
+    let { width: t = 24, height: l = 24, color: n = "currentColor", ...s } = e;
     return (0, i.jsxs)("svg", {
-        ...(0, ed.A)(C),
+        ...(0, ed.A)(s),
         width: t,
         height: l,
         viewBox: "0 0 23 21",
@@ -340,44 +340,44 @@ function eo(e) {
         ],
     });
 }
-let ec = (0, eC.k)(eo);
+let ec = (0, es.k)(eo);
 function eu(e) {
     let { guildId: t, onClose: l } = e,
-        n = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], N()),
-        s = (0, p.Tj)(t),
-        a = C.useCallback(() => {
-            (n.requireUnusualDmActivity || s(p.Zp.UNUSUAL_DM_ACTIVITY),
+        n = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], I()),
+        C = (0, p.Tj)(t),
+        a = s.useCallback(() => {
+            (n.requireUnusualDmActivity || C(p.Zp.UNUSUAL_DM_ACTIVITY),
                 (0, V.Ld)(t, { ...n, requireUnusualDmActivity: !n.requireUnusualDmActivity }));
-        }, [t, n, s]),
-        r = C.useCallback(() => {
-            (n.requireCommunicationDisabled || s(p.Zp.COMMUNICATION_DISABLED),
+        }, [t, n, C]),
+        r = s.useCallback(() => {
+            (n.requireCommunicationDisabled || C(p.Zp.COMMUNICATION_DISABLED),
                 (0, V.Ld)(t, { ...n, requireCommunicationDisabled: !n.requireCommunicationDisabled }));
-        }, [t, n, s]),
-        d = C.useCallback(() => {
-            (n.requireUnusualAccountActivity || s(p.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
+        }, [t, n, C]),
+        d = s.useCallback(() => {
+            (n.requireUnusualAccountActivity || C(p.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
                 (0, V.Ld)(t, { ...n, requireUnusualAccountActivity: !n.requireUnusualAccountActivity }));
-        }, [t, n, s]),
-        c = C.useCallback(() => {
-            (n.requireUsernameQuarantined || s(p.Zp.USERNAME_QUARANTINED),
+        }, [t, n, C]),
+        c = s.useCallback(() => {
+            (n.requireUsernameQuarantined || C(p.Zp.USERNAME_QUARANTINED),
                 (0, V.Ld)(t, { ...n, requireUsernameQuarantined: !n.requireUsernameQuarantined }));
-        }, [t, n, s]);
-    return (0, i.jsx)(Y.W, {
+        }, [t, n, C]);
+    return (0, i.jsx)(z.W, {
         "data-menu-migrated": !0,
         navId: "member-safety-flags",
         onClose: l,
         "aria-label": D.intl.string(D.t.k9m8Rg),
         onSelect: Q.tEg,
-        children: (0, i.jsxs)(z.rX, {
+        children: (0, i.jsxs)(Y.rX, {
             children: [
-                (0, i.jsx)(z.sL, {
+                (0, i.jsx)(Y.sL, {
                     id: "toggle-require-unusual-dm-activity",
                     label: D.intl.string(D.t.ZRnON3),
-                    leftIcon: es.ChatWarningIcon,
-                    leadingAccessory: { type: "icon", icon: es.ChatWarningIcon },
+                    leftIcon: eC.ChatWarningIcon,
+                    leadingAccessory: { type: "icon", icon: eC.ChatWarningIcon },
                     action: a,
                     checked: n.requireUnusualDmActivity,
                 }),
-                (0, i.jsx)(z.sL, {
+                (0, i.jsx)(Y.sL, {
                     id: "toggle-require-communication-disabled",
                     label: D.intl.string(D.t.z3wbj8),
                     leftIcon: ea.ClockWarningIcon,
@@ -387,7 +387,7 @@ function eu(e) {
                 }),
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(z.sL, {
+                        (0, i.jsx)(Y.sL, {
                             id: "toggle-require-unusual-account-activity",
                             label: D.intl.string(D.t.DIQsD9),
                             leftIcon: ec,
@@ -395,7 +395,7 @@ function eu(e) {
                             action: d,
                             checked: n.requireUnusualAccountActivity,
                         }),
-                        (0, i.jsx)(z.sL, {
+                        (0, i.jsx)(Y.sL, {
                             id: "toggle-require-username-quarantined",
                             label: D.intl.string(D.t.Jloklk),
                             leftIcon: er.ChatXIcon,
@@ -411,16 +411,16 @@ function eu(e) {
 }
 function em(e) {
     let { guildId: t, onClose: l } = e,
-        n = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], N()),
-        { selectedJoinDateOption: C } = n,
-        { afterDate: s, beforeDate: a, optionId: r } = C,
+        n = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], I()),
+        { selectedJoinDateOption: s } = n,
+        { afterDate: C, beforeDate: a, optionId: r } = s,
         d = r === el.CUSTOM,
-        c = d && null != s ? B()(s).format(J) : null,
-        u = d && null != a ? B()(a).format(J) : null;
+        c = d && null != C ? P()(C).format(J) : null,
+        u = d && null != a ? P()(a).format(J) : null;
     return (0, i.jsx)(en, {
         startDateLabel: c,
         endDateLabel: u,
-        afterDate: s,
+        afterDate: C,
         beforeDate: a,
         selectedOption: r,
         isCustomDateRange: d,
@@ -428,13 +428,13 @@ function em(e) {
         accessibilityLabel: D.intl.string(D.t.XMVinX),
         onClose: l,
         onSelectDateOption: function (e, l) {
-            let i = null != l ? B()().subtract(l.input, l.unit).valueOf() : null;
+            let i = null != l ? P()().subtract(l.input, l.unit).valueOf() : null;
             (0, V.Ld)(t, { ...n, selectedJoinDateOption: { optionId: e, afterDate: i, beforeDate: null } });
         },
         onToggleCustomDateRange: function () {
             (0, V.Ld)(t, {
                 ...n,
-                selectedJoinDateOption: { optionId: el.CUSTOM, afterDate: d ? s : null, beforeDate: d ? a : null },
+                selectedJoinDateOption: { optionId: el.CUSTOM, afterDate: d ? C : null, beforeDate: d ? a : null },
             });
         },
         onSelectStartDate: function (e) {
@@ -446,7 +446,7 @@ function em(e) {
         onSelectEndDate: function (e) {
             (0, V.Ld)(t, {
                 ...n,
-                selectedJoinDateOption: { optionId: el.CUSTOM, afterDate: s, beforeDate: e.valueOf() },
+                selectedJoinDateOption: { optionId: el.CUSTOM, afterDate: C, beforeDate: e.valueOf() },
             });
         },
     });
@@ -463,40 +463,40 @@ var eh = l(311567),
 function eb(e) {
     let { guildId: t, onClose: l } = e,
         n = (0, p.hs)(t),
-        [s, a] = C.useState(""),
-        r = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], N()),
+        [C, a] = s.useState(""),
+        r = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], I()),
         d = (0, o.bG)([h.Ay], () => h.Ay.roleStyle),
         c = (0, ef.r)(Z.A.unsafe_rawColors.PRIMARY_300).hex(),
         u = (0, ep.jV)(t, null),
         m = (0, ex.yK)([eV.A], () => eV.A.getSortedRoles(t).filter((e) => !(0, ev.Oy)(e)), [t]),
-        H = C.useMemo(() => ("" === s ? m : m.filter((e) => eg()(s.toLowerCase(), e.name.toLowerCase()))), [m, s]),
-        g = C.useCallback(
+        H = s.useMemo(() => ("" === C ? m : m.filter((e) => eg()(C.toLowerCase(), e.name.toLowerCase()))), [m, C]),
+        g = s.useCallback(
             (e) => {
                 let l = new Set(r.selectedRoleIds);
                 (l.has(e) ? l.delete(e) : l.add(e), (0, V.Ld)(t, { selectedRoleIds: l }), n(l));
             },
             [t, r.selectedRoleIds, n],
         );
-    return (0, i.jsx)(Y.W, {
+    return (0, i.jsx)(z.W, {
         "data-menu-migrated": !0,
         navId: "member-safety-roles",
         onClose: l,
         "aria-label": D.intl.string(D.t.ZveC7e),
         onSelect: Q.tEg,
-        children: (0, i.jsxs)(z.rX, {
+        children: (0, i.jsxs)(Y.rX, {
             children: [
-                (0, i.jsx)(z.aK, {
+                (0, i.jsx)(Y.aK, {
                     id: "members-table-role-search",
                     control: (e, t) =>
                         (0, i.jsx)(ej.V, {
                             ...e,
-                            query: s,
+                            query: C,
                             onChange: a,
                             ref: t,
                             placeholder: D.intl.string(D.t.ZveC7e),
                         }),
                 }),
-                (0, i.jsx)(z.bX, {}),
+                (0, i.jsx)(Y.bX, {}),
                 H.map((e) => {
                     let t = e.colorString ?? c,
                         l =
@@ -504,7 +504,7 @@ function eb(e) {
                                 ? e.colorStrings
                                 : null;
                     return (0, i.jsx)(
-                        z.sL,
+                        Y.sL,
                         {
                             id: `role-${e.id}`,
                             label: e.name,
@@ -527,13 +527,13 @@ function eb(e) {
 var eA = l(307877),
     eM = l(917089);
 function eL(e) {
-    let { label: t, onFilter: l, isFiltered: n, isSorted: C, className: s, ref: r, ...d } = e,
+    let { label: t, onFilter: l, isFiltered: n, isSorted: s, className: C, ref: r, ...d } = e,
         o = n ? "text-strong" : "text-default";
     return (
-        C && (o = "text-brand"),
+        s && (o = "text-brand"),
         (0, i.jsx)("th", {
-            className: a()(eA.P1, s),
-            children: (0, i.jsxs)(I.D, {
+            className: a()(eA.P1, C),
+            children: (0, i.jsxs)(S.D, {
                 ...d,
                 innerRef: r,
                 onClick: l,
@@ -558,13 +558,13 @@ function eL(e) {
 }
 function eD(e) {
     let { guildId: t, currentPagedMembers: l } = e,
-        n = C.useRef(null),
-        s = C.useRef(null),
-        r = C.useRef(null),
-        d = C.useRef(null),
-        c = C.useRef(null),
-        u = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], N()),
-        m = (0, o.bG)([k.A, T.A], () => k.A.can(Q.xBc.MANAGE_GUILD, T.A.getGuild(t)), [t]),
+        n = s.useRef(null),
+        C = s.useRef(null),
+        r = s.useRef(null),
+        d = s.useRef(null),
+        c = s.useRef(null),
+        u = (0, o.bG)([v.A], () => v.A.getSearchStateByGuildId(t), [t], I()),
+        m = (0, o.bG)([O.A, k.A], () => O.A.can(Q.xBc.MANAGE_GUILD, k.A.getGuild(t)), [t]),
         { selectedUserIds: h, addUsers: H, clearSelection: g } = (0, F.A)(t),
         x =
             u.requireUnusualDmActivity ||
@@ -573,19 +573,19 @@ function eD(e) {
             u.requireUsernameQuarantined,
         f = u.selectedRoleIds.size > 0,
         j = null != u.selectedJoinDateOption.afterDate,
-        p = u.selectedSort === O.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
+        p = u.selectedSort === T.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
         V = null != u.selectedAccountAgeOption.afterDate,
-        b = u.selectedSort === O.mF.ORDER_BY_USER_ID_ASC || u.selectedSort === O.mF.ORDER_BY_USER_ID_DESC,
+        b = u.selectedSort === T.mF.ORDER_BY_USER_ID_ASC || u.selectedSort === T.mF.ORDER_BY_USER_ID_DESC,
         A = null != u.selectedSourceInviteCode && "" !== u.selectedSourceInviteCode,
         M = null != u.selectedJoinSourceType,
         L = A || M,
-        R = (0, G.vA)(t),
-        S = C.useMemo(() => l.filter((e) => (0, G.Ph)(t, R, e)), [R, l, t]),
-        E = S.length > 0,
-        y = 0 === S.filter((e) => !h.has(e)).length,
-        Z = C.useCallback(() => {
-            E && (y ? g() : H(S));
-        }, [E, y, g, H, S]);
+        { canAccessBulkActions: R, canAccessBulkBan: E, canAccessBulkRole: N } = (0, G.lN)(t),
+        y = s.useMemo(() => l.filter((e) => N || (E && (0, G.Ph)(t, e))), [E, N, l, t]),
+        Z = y.length > 0,
+        B = 0 === y.filter((e) => !h.has(e)).length,
+        P = s.useCallback(() => {
+            Z && (B ? g() : H(y));
+        }, [Z, B, g, H, y]);
     return (0, i.jsx)("thead", {
         children: (0, i.jsxs)("tr", {
             className: eA.Yk,
@@ -594,12 +594,12 @@ function eD(e) {
                     (0, i.jsx)("th", {
                         className: a()(eA.P1, eM.y2),
                         children: (0, i.jsx)(_.m, {
-                            shouldShow: !E,
+                            shouldShow: !Z,
                             text: D.intl.string(D.t.tJEY0G),
-                            children: (0, i.jsx)(I.D, {
-                                onClick: Z,
+                            children: (0, i.jsx)(S.D, {
+                                onClick: P,
                                 className: eA.WV,
-                                children: (0, i.jsx)(w.P, { checked: y, disabled: !E }),
+                                children: (0, i.jsx)(w.P, { checked: B, disabled: !Z }),
                             }),
                         }),
                     }),
@@ -631,7 +631,7 @@ function eD(e) {
                                   },
                               }),
                               (0, i.jsx)(U.Y, {
-                                  targetElementRef: s,
+                                  targetElementRef: C,
                                   animation: U.Y.Animation.FADE,
                                   position: "bottom",
                                   spacing: 4,
@@ -643,7 +643,7 @@ function eD(e) {
                                   children: (e) => {
                                       let { onClick: t, ...l } = e;
                                       return (0, i.jsx)(eL, {
-                                          ref: s,
+                                          ref: C,
                                           label: D.intl.string(D.t.sPph4O),
                                           onFilter: t,
                                           isFiltered: V,
@@ -749,57 +749,57 @@ function eD(e) {
     });
 }
 var eR = l(435558),
-    eS = l(307301),
-    eE = l(463930),
-    eN = l(950305),
-    eI = l(530005),
+    eE = l(307301),
+    eN = l(463930),
+    eI = l(950305),
+    eS = l(530005),
     ey = l(966327),
     eZ = l(396583),
     e_ = l(576470),
     ew = l(229527),
     eU = l(316031),
-    eT = l(474196),
-    ek = l(985925),
-    eO = l(534400),
+    ek = l(474196),
+    eO = l(985925),
+    eT = l(534400),
     eF = l(694318),
     eG = l(967144),
-    eP = l(799704),
-    eB = l(287809),
+    eB = l(799704),
+    eP = l(287809),
     eq = l(881548),
-    eY = l(562153),
-    ez = l(811091),
-    eK = l(427262),
-    eW = l(157347),
-    e$ = l(120692),
+    ez = l(562153),
+    eY = l(811091),
+    e$ = l(427262),
+    eK = l(157347),
+    eW = l(120692),
     eQ = l(615300),
     eX = l(717421),
     eJ = l(475743);
 let e1 = { duration: 100, easing: eQ.A.Easing.inOut(eQ.A.Easing.back()), clamp: !0 },
     e3 = { duration: 2e3, easing: eQ.A.Easing.quad, clamp: !0 };
 function e8(e) {
-    let { value: t, children: l, equalityFn: n = N(), style: s, ...a } = e,
+    let { value: t, children: l, equalityFn: n = I(), style: C, ...a } = e,
         r = (0, eJ.Ay)(t),
         [{ spring: d }, o] = (0, eX.z)(() => ({ spring: 0 }), "animate-always"),
         c = (0, ef.r)(Z.A.colors.BACKGROUND_BASE_LOW).hex(),
         u = (0, ef.r)(Z.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        m = C.useCallback(() => {
+        m = s.useCallback(() => {
             (o({ spring: 1, config: e1 }), o({ spring: 0, config: e3, delay: 300 }));
         }, [o]);
-    C.useEffect(() => {
+    s.useEffect(() => {
         null == t || null == r || n(t, r) || m();
     }, [m, t, r, n]);
     let h = d?.to({ range: [0, 1], output: [`${c}00`, `${u}27`] }),
-        H = null != s ? { ...s, backgroundColor: h } : { backgroundColor: h };
-    return (0, i.jsx)(e$.animated.tr, { ...a, style: H, children: l });
+        H = null != C ? { ...C, backgroundColor: h } : { backgroundColor: h };
+    return (0, i.jsx)(eW.animated.tr, { ...a, style: H, children: l });
 }
 var e4 = l(589935),
     e5 = l(950072),
     e2 = l(746080),
     e9 = l(486974);
-let e7 = C.memo(function (e) {
+let e7 = s.memo(function (e) {
         let { member: t } = e,
-            l = C.useMemo(() => (0, eU.n)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-            n = C.useMemo(
+            l = s.useMemo(() => (0, eU.n)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+            n = s.useMemo(
                 () => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)),
                 [t.communicationDisabledUntil],
             );
@@ -809,7 +809,7 @@ let e7 = C.memo(function (e) {
                 t.hasUnusualDmActivity &&
                     (0, i.jsx)(_.m, {
                         text: D.intl.string(D.t.QrfVTp),
-                        children: (0, i.jsx)(es.ChatWarningIcon, {
+                        children: (0, i.jsx)(eC.ChatWarningIcon, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -855,22 +855,22 @@ let e7 = C.memo(function (e) {
             ],
         });
     }),
-    e6 = C.memo(function (e) {
+    e6 = s.memo(function (e) {
         let { member: t, highestRole: l } = e,
-            n = (0, o.bG)([T.A], () => T.A.getGuild(t.guildId), [t.guildId]),
-            s = t.roles.length - 1,
-            r = C.useMemo(() => new Intl.NumberFormat(D.intl.currentLocale).format(s), [s]),
+            n = (0, o.bG)([k.A], () => k.A.getGuild(t.guildId), [t.guildId]),
+            C = t.roles.length - 1,
+            r = s.useMemo(() => new Intl.NumberFormat(D.intl.currentLocale).format(C), [C]),
             d = (0, M.Cy)(t),
             c = (0, M.Cy)(t, !0),
-            u = (0, o.bG)([k.A], () => k.A.can(Q.xBc.MANAGE_ROLES, n), [n]);
+            u = (0, o.bG)([O.A], () => O.A.can(Q.xBc.MANAGE_ROLES, n), [n]);
         return null == n
             ? null
             : (0, i.jsxs)("div", {
                   className: eM.yk,
                   children: [
                       null != l && (0, i.jsx)(e5.A, { className: a()(eM.Zf, eM.Lc), role: l, guildId: t.guildId }),
-                      s > 0 &&
-                          (0, i.jsx)(I.D, {
+                      C > 0 &&
+                          (0, i.jsx)(S.D, {
                               className: eM.yt,
                               onClick: (e) => c(e),
                               children: (0, i.jsx)(_.m, {
@@ -885,10 +885,10 @@ let e7 = C.memo(function (e) {
                       u &&
                           (0, i.jsx)(_.m, {
                               text: D.intl.string(D.t.h3pSLR),
-                              children: (0, i.jsx)(I.D, {
+                              children: (0, i.jsx)(S.D, {
                                   onClick: d,
                                   className: a()(eM.yt, eM.$g),
-                                  children: (0, i.jsx)(eS.PlusSmallIcon, {
+                                  children: (0, i.jsx)(eE.PlusSmallIcon, {
                                       size: "custom",
                                       color: "currentColor",
                                       className: eM.fd,
@@ -900,7 +900,7 @@ let e7 = C.memo(function (e) {
                   ],
               });
     }),
-    e0 = C.memo(function (e) {
+    e0 = s.memo(function (e) {
         let { member: t, user: l } = e,
             n = (0, eG.gn)(t?.guildId, t?.userId, t?.colorStrings ?? null);
         return null == l || null == t
@@ -916,13 +916,13 @@ let e7 = C.memo(function (e) {
                               children: (0, i.jsxs)("div", {
                                   className: eM.VW,
                                   children: [
-                                      (0, i.jsx)(eE.g, {
-                                          name: eY.Ay.getName(t.guildId, null, l),
+                                      (0, i.jsx)(eN.g, {
+                                          name: ez.Ay.getName(t.guildId, null, l),
                                           colorString: t.colorString ?? null,
                                           colorStrings: n,
                                           className: eM.bc,
                                       }),
-                                      (0, i.jsx)(eO.Ay, {
+                                      (0, i.jsx)(eT.Ay, {
                                           primaryGuild: l?.primaryGuild,
                                           userId: l?.id,
                                           contextGuildId: t.guildId,
@@ -938,7 +938,7 @@ let e7 = C.memo(function (e) {
                               variant: "body-xs/normal",
                               color: "text-default",
                               tag: "span",
-                              children: eK.Ay.getUserTag(l),
+                              children: e$.Ay.getUserTag(l),
                           }),
                       }),
                   ],
@@ -946,43 +946,43 @@ let e7 = C.memo(function (e) {
     });
 function te(e) {
     return {
-        short: null == e ? null : (0, eW.hL)(e, eW.wN.JOINED_AT),
-        long: new Date(e ?? 0).toLocaleDateString(D.intl.currentLocale, eW.wp),
+        short: null == e ? null : (0, eK.hL)(e, eK.wN.JOINED_AT),
+        long: new Date(e ?? 0).toLocaleDateString(D.intl.currentLocale, eK.wp),
     };
 }
 function tt(e) {
     let { member: t, showLongDate: l, isSortedBy: n } = e,
-        [s, a] = C.useState(null);
-    (C.useEffect(() => {
+        [C, a] = s.useState(null);
+    (s.useEffect(() => {
         a(te(t.joinedAtTimestamp));
     }, [t.joinedAtTimestamp]),
         (0, eZ.A)(() => {
             a(te(t.joinedAtTimestamp));
         }, 1e4));
     let r = n ? "text-brand" : "text-default";
-    return s?.short == null
+    return C?.short == null
         ? null
         : l
           ? (0, i.jsx)("div", {
                 className: eM.__invalid_joinedAtContainer,
-                children: (0, i.jsx)(A.E, { variant: "body-sm/medium", color: r, children: s.long }),
+                children: (0, i.jsx)(A.E, { variant: "body-sm/medium", color: r, children: C.long }),
             })
           : (0, i.jsx)("div", {
                 className: eM.__invalid_joinedAtContainer,
                 children: (0, i.jsx)(_.m, {
                     align: "left",
-                    __unsupportedReactNodeAsText: s.long,
-                    children: (0, i.jsx)(A.E, { variant: "body-sm/medium", color: r, children: s.short }),
+                    __unsupportedReactNodeAsText: C.long,
+                    children: (0, i.jsx)(A.E, { variant: "body-sm/medium", color: r, children: C.short }),
                 }),
             });
 }
-let tl = C.memo(function (e) {
+let tl = s.memo(function (e) {
         let { member: t, showLongDate: l, isSortedBy: n } = e,
-            { accountCreationDateShort: s, accountCreationDateLong: a } = C.useMemo(() => {
-                let e = ez.default.extractTimestamp(t.userId);
+            { accountCreationDateShort: C, accountCreationDateLong: a } = s.useMemo(() => {
+                let e = eY.default.extractTimestamp(t.userId);
                 return {
-                    accountCreationDateShort: (0, eW.hL)(e, eW.wN.ACCOUNT_AGE),
-                    accountCreationDateLong: new Date(e).toLocaleDateString(D.intl.currentLocale, eW.OA),
+                    accountCreationDateShort: (0, eK.hL)(e, eK.wN.ACCOUNT_AGE),
+                    accountCreationDateLong: new Date(e).toLocaleDateString(D.intl.currentLocale, eK.OA),
                 };
             }, [t.userId]),
             r = n ? "text-brand" : "text-default";
@@ -991,51 +991,52 @@ let tl = C.memo(function (e) {
             : (0, i.jsx)(_.m, {
                   align: "left",
                   __unsupportedReactNodeAsText: a,
-                  children: (0, i.jsx)(A.E, { variant: "body-sm/medium", color: r, children: s }),
+                  children: (0, i.jsx)(A.E, { variant: "body-sm/medium", color: r, children: C }),
               });
     }),
-    tn = C.memo(function (e) {
+    tn = s.memo(function (e) {
         let {
                 member: t,
                 user: l,
                 highestRole: n,
-                isHoldingAdvancedInfoKey: s,
+                isHoldingAdvancedInfoKey: C,
                 onOpenModerationMenu: r,
                 onOpenMemberView: d,
                 compact: c,
                 hasModViewPanelAccess: u,
             } = e,
-            m = (0, o.bG)([k.A, T.A], () => k.A.can(Q.xBc.MANAGE_GUILD, T.A.getGuild(t.guildId)), [t.guildId]),
+            m = (0, o.bG)([O.A, k.A], () => O.A.can(Q.xBc.MANAGE_GUILD, k.A.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: h, addUsers: H, removeUser: g } = (0, F.A)(t.guildId),
-            x = (0, G.vA)(t.guildId),
-            f = (0, G.O6)(t.guildId, x, t.userId),
-            j = (0, o.bG)(
+            { canAccessBulkActions: x, canAccessBulkBan: f, canAccessBulkRole: j } = (0, G.lN)(t.guildId),
+            p = (0, G.O6)(t.guildId, t.userId),
+            V = j || (f && p),
+            b = (0, o.bG)(
                 [v.A],
-                () => v.A.getSearchStateByGuildId(t.guildId).selectedSort ?? O.mF.ORDER_BY_UNSPECIFIED,
+                () => v.A.getSearchStateByGuildId(t.guildId).selectedSort ?? T.mF.ORDER_BY_UNSPECIFIED,
                 [t.guildId],
-                N(),
+                I(),
             ),
-            p = C.useCallback(
+            A = s.useCallback(
                 (e) => {
                     (e.stopPropagation(),
                         e.preventDefault(),
-                        null != t && f && (h.has(t.userId) ? g(t.userId) : H([t.userId])));
+                        null != t && V && (h.has(t.userId) ? g(t.userId) : H([t.userId])));
                 },
-                [H, f, t, g, h],
+                [H, V, t, g, h],
             ),
-            V = j === O.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
-            b = j === O.mF.ORDER_BY_USER_ID_ASC || j === O.mF.ORDER_BY_USER_ID_DESC;
+            M = b === T.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
+            L = b === T.mF.ORDER_BY_USER_ID_ASC || b === T.mF.ORDER_BY_USER_ID_DESC;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 x &&
                     (0, i.jsx)("td", {
                         children: (0, i.jsx)(_.m, {
-                            shouldShow: !f,
-                            ariaHidden: f,
+                            shouldShow: !V,
+                            ariaHidden: V,
                             text: D.intl.string(D.t["Se4c7+"]),
-                            children: (0, i.jsx)(I.D, {
-                                onClick: p,
-                                children: (0, i.jsx)(w.P, { checked: h.has(t.userId), disabled: !f }),
+                            children: (0, i.jsx)(S.D, {
+                                onClick: A,
+                                children: (0, i.jsx)(w.P, { checked: h.has(t.userId), disabled: !V }),
                             }),
                         }),
                     }),
@@ -1045,11 +1046,11 @@ let tl = C.memo(function (e) {
                 }),
                 (0, i.jsx)("td", {
                     className: a()(eM.qp, { [eM.oE]: c }),
-                    children: (0, i.jsx)(tt, { showLongDate: s, member: t, isSortedBy: V }),
+                    children: (0, i.jsx)(tt, { showLongDate: C, member: t, isSortedBy: M }),
                 }),
                 (0, i.jsx)("td", {
                     className: a()(eM.qp, { [eM.oE]: c }),
-                    children: (0, i.jsx)(tl, { showLongDate: s, member: t, isSortedBy: b }),
+                    children: (0, i.jsx)(tl, { showLongDate: C, member: t, isSortedBy: L }),
                 }),
                 m &&
                     (0, i.jsx)("td", {
@@ -1069,12 +1070,12 @@ let tl = C.memo(function (e) {
                             (0, i.jsx)(_.m, {
                                 asContainer: !0,
                                 text: u ? D.intl.string(D.t.nHfkf4) : D.intl.string(D.t.uTre2y),
-                                children: (0, i.jsx)(I.D, {
+                                children: (0, i.jsx)(S.D, {
                                     onClick: d,
                                     className: eM.x6,
                                     children: u
                                         ? (0, i.jsx)(eq.A, { width: ti, height: ti })
-                                        : (0, i.jsx)(eN.UserIcon, {
+                                        : (0, i.jsx)(eI.UserIcon, {
                                               size: "custom",
                                               color: "currentColor",
                                               width: ti,
@@ -1085,10 +1086,10 @@ let tl = C.memo(function (e) {
                             (0, i.jsx)(_.m, {
                                 asContainer: !0,
                                 text: D.intl.string(D.t.x8Nn4M),
-                                children: (0, i.jsx)(I.D, {
+                                children: (0, i.jsx)(S.D, {
                                     onClick: r,
                                     className: eM.x6,
-                                    children: (0, i.jsx)(eI.MoreVerticalIcon, {
+                                    children: (0, i.jsx)(eS.MoreVerticalIcon, {
                                         size: "custom",
                                         color: "currentColor",
                                         width: ti,
@@ -1103,56 +1104,56 @@ let tl = C.memo(function (e) {
         });
     }),
     ti = 18,
-    tC = ["sourceInviteCode", "joinSourceType", "inviterId", "integrationType", "joinedAt", "joinedAtTimestamp"],
-    ts = C.memo(function (e) {
+    ts = ["sourceInviteCode", "joinSourceType", "inviterId", "integrationType", "joinedAt", "joinedAtTimestamp"],
+    tC = s.memo(function (e) {
         let {
                 userId: t,
                 guildId: l,
                 style: n,
-                rowSelected: s,
+                rowSelected: C,
                 isLoading: r = !1,
                 isHoldingAdvancedInfoKey: d = !1,
                 compact: c = !1,
             } = e,
             { analyticsLocations: u } = (0, H.Ay)(),
-            m = (0, o.bG)([eP.Ay], () => eP.Ay.getGuildSidebarState(l), [l]),
+            m = (0, o.bG)([eB.Ay], () => eB.Ay.getGuildSidebarState(l), [l]),
             h = m?.details.userId === t,
             g = (0, o.bG)([v.A], () => v.A.getEnhancedMember(l, t), [l, t]),
             x = (0, M.YH)(g),
-            f = (0, o.bG)([eB.default], () => eB.default.getUser(t), [t]),
-            j = (0, ek.q)(l),
+            f = (0, o.bG)([eP.default], () => eP.default.getUser(t), [t]),
+            j = (0, eO.q)(l),
             p = (0, M.UY)(g ?? void 0),
-            V = C.useCallback(
+            V = s.useCallback(
                 (e) => {
                     (e.stopPropagation(), e.preventDefault(), p(e));
                 },
                 [p],
             ),
-            b = C.useCallback(
+            b = s.useCallback(
                 (e) => {
                     (e.stopPropagation(), e.preventDefault(), null != g && (0, M.Ko)(g, u));
                 },
                 [g, u],
             ),
-            A = C.useCallback(
+            A = s.useCallback(
                 (e) => {
                     (e.stopPropagation(),
                         e.preventDefault(),
                         null != g &&
                             (j
-                                ? (0, eT.z)(g.guildId, g.userId, e2.VV.MEMBER_SAFETY, { modViewPanel: e9.g.INFO })
+                                ? (0, ek.z)(g.guildId, g.userId, e2.VV.MEMBER_SAFETY, { modViewPanel: e9.g.INFO })
                                 : (0, M.Ko)(g, u)));
                 },
                 [g, u, j],
             ),
-            L = C.useCallback((e, t) => N()((0, eR.omit)(e, tC), (0, eR.omit)(t, tC)), []);
+            L = s.useCallback((e, t) => I()((0, eR.omit)(e, ts), (0, eR.omit)(t, ts)), []);
         return null == g
             ? null
             : (0, i.jsx)(e8, {
                   role: "row",
                   value: g,
                   style: n,
-                  className: a()(eM.yF, eM.iA, s && eM.wH, h && eM.qb, r && eM.Lq),
+                  className: a()(eM.yF, eM.iA, C && eM.wH, h && eM.qb, r && eM.Lq),
                   equalityFn: L,
                   onClick: b,
                   onContextMenu: V,
@@ -1172,20 +1173,20 @@ var ta = l(551816),
     tr = l(299720);
 function td(e) {
     let { guild: t, onSubmit: n } = e,
-        s = (0, o.bG)([v.A], () => v.A.getMembersCountByGuildId(t.id, ta.Tu.NEW_GUILD_MEMBER), [t.id]),
+        C = (0, o.bG)([v.A], () => v.A.getMembersCountByGuildId(t.id, ta.Tu.NEW_GUILD_MEMBER), [t.id]),
         a = (0, o.bG)(
             [v.A],
             () => {
                 let e = v.A.getNewMemberTimestamp(t.id);
-                return B()(e).format("h:mm A");
+                return P()(e).format("h:mm A");
             },
             [t.id],
         ),
         r = (0, o.bG)([v.A], () => v.A.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        d = C.useCallback(() => {
+        d = s.useCallback(() => {
             ((0, V.UD)(t.id), n?.());
         }, [t.id, n]),
-        u = C.useCallback(() => {
+        u = s.useCallback(() => {
             r
                 ? d()
                 : (0, c.mM)(async () => {
@@ -1193,11 +1194,11 @@ function td(e) {
                       return (t) => (0, i.jsx)(e, { ...t, onConfirm: d });
                   });
         }, [d, r]),
-        m = new Intl.NumberFormat(D.intl.currentLocale).format(s),
+        m = new Intl.NumberFormat(D.intl.currentLocale).format(C),
         h = (0, G.Y0)(t.id),
-        H = (0, G.vA)(t.id),
-        g = C.useMemo(() => 1 + +!!h + +!!H, [h, H]);
-    return 0 === s
+        { canAccessBulkActions: H } = (0, G.lN)(t.id),
+        g = s.useMemo(() => 1 + +!!h + +!!H, [h, H]);
+    return 0 === C
         ? null
         : (0, i.jsxs)("tr", {
               className: tr.iS,
@@ -1216,7 +1217,7 @@ function td(e) {
                       colSpan: 2,
                       children: (0, i.jsx)("div", {
                           className: eM.$E,
-                          children: (0, i.jsx)(I.D, {
+                          children: (0, i.jsx)(S.D, {
                               onClick: u,
                               className: tr.Fu,
                               children: (0, i.jsxs)(A.E, {
@@ -1225,7 +1226,7 @@ function td(e) {
                                   className: tr.Lb,
                                   children: [
                                       (0, i.jsx)("div", { children: D.intl.string(D.t.rkyOzK) }),
-                                      (0, i.jsx)(eN.UserIcon, {
+                                      (0, i.jsx)(eI.UserIcon, {
                                           size: "custom",
                                           color: "currentColor",
                                           width: 16,
@@ -1252,13 +1253,13 @@ function tg(e) {
 function tx(e) {
     return e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key);
 }
-let tf = C.memo(
+let tf = s.memo(
         function (e) {
             let {
                     members: t,
                     guild: l,
                     className: n,
-                    searchState: s,
+                    searchState: C,
                     compact: r,
                     onSelectRow: d,
                     onResetForNewMembers: H,
@@ -1267,18 +1268,18 @@ let tf = C.memo(
                 x = (0, o.bG)([j.A], () => j.A.hasPendingBulkBan(l.id), [l.id]),
                 p = (0, c.Rv)(),
                 b = (0, f.j)(),
-                [A, L] = C.useState(!1),
-                [R, E] = C.useState(!1),
-                N = !p && A && R;
-            (C.useEffect(() => {
-                b || (L(!1), E(!1));
+                [A, L] = s.useState(!1),
+                [R, N] = s.useState(!1),
+                I = !p && A && R;
+            (s.useEffect(() => {
+                b || (L(!1), N(!1));
             }, [b]),
-                C.useLayoutEffect(() => {
+                s.useLayoutEffect(() => {
                     function e(e) {
-                        (tg(e) && L(!0), tx(e) && E(!0));
+                        (tg(e) && L(!0), tx(e) && N(!0));
                     }
                     function t(e) {
-                        (tg(e) && L(!1), tx(e) && E(!1));
+                        (tg(e) && L(!1), tx(e) && N(!1));
                     }
                     return (
                         window.addEventListener("keydown", e),
@@ -1288,24 +1289,24 @@ let tf = C.memo(
                         }
                     );
                 }, []),
-                C.useEffect(() => {
+                s.useEffect(() => {
                     (0, V.jo)(l.id, t);
                 }, [l.id, t]));
-            let I = t.length > 30,
+            let S = t.length > 30,
                 y = (0, u.p)(t, {
                     key: (e) => e,
-                    trail: I ? 5 : 15,
+                    trail: S ? 5 : 15,
                     from(e) {
                         let t = v.A.getEnhancedMember(l.id, e),
                             n = v.A.getLastRefreshTimestamp(l.id),
                             i = null == t || 0 === n,
-                            C = null != t && t.refreshTimestamp === n;
-                        return i || !C ? th : I ? tm : tu;
+                            s = null != t && t.refreshTimestamp === n;
+                        return i || !s ? th : S ? tm : tu;
                     },
                     enter: th,
                     config: tH,
                 }),
-                Z = !g && s === M.IY.LOADING;
+                Z = !g && C === M.IY.LOADING;
             return (0, i.jsxs)("table", {
                 className: a()(tc.tp, n),
                 children: [
@@ -1336,19 +1337,19 @@ let tf = C.memo(
                     (0, i.jsx)("tbody", {
                         className: a()({ [tc.u6]: x }),
                         children:
-                            s === M.IY.SUCCESS_FULL || s === M.IY.LOADING
+                            C === M.IY.SUCCESS_FULL || C === M.IY.LOADING
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(td, { guild: l, onSubmit: H }),
                                           y((e, t) =>
                                               (0, i.jsx)(
-                                                  ts,
+                                                  tC,
                                                   {
                                                       userId: t,
                                                       guildId: l.id,
                                                       style: e,
                                                       onSelect: d,
-                                                      isHoldingAdvancedInfoKey: N,
+                                                      isHoldingAdvancedInfoKey: I,
                                                       compact: r,
                                                       isLoading: Z,
                                                   },
@@ -1357,7 +1358,7 @@ let tf = C.memo(
                                           ),
                                       ],
                                   })
-                                : (0, i.jsx)("td", { colSpan: 7, children: (0, i.jsx)(S, { searchState: s }) }),
+                                : (0, i.jsx)("td", { colSpan: 7, children: (0, i.jsx)(E, { searchState: C }) }),
                     }),
                 ],
             });
@@ -1366,17 +1367,17 @@ let tf = C.memo(
             let l = d()(e.members, t.members),
                 n = e.guild.id === t.guild.id,
                 i = e.searchState === t.searchState,
-                C = e.compact === t.compact;
-            return l && n && i && C;
+                s = e.compact === t.compact;
+            return l && n && i && s;
         },
     ),
     tj = function (e) {
         var t;
-        let { guild: l, className: n, searchState: s, compact: a, onSelectRow: r, onResetForNewMembers: d } = e,
+        let { guild: l, className: n, searchState: C, compact: a, onSelectRow: r, onResetForNewMembers: d } = e,
             c = (0, o.cf)([v.A], () => v.A.getPaginationStateByGuildId(l.id), [l.id]),
             [u] = (0, o.bG)([v.A], () => v.A.getPagedMembersByGuildId(l.id), [l.id], x.D);
         ((t = l.id),
-            C.useEffect(
+            s.useEffect(
                 () => (
                     b.Cf(t),
                     () => {
@@ -1385,24 +1386,24 @@ let tf = C.memo(
                 ),
                 [t],
             ),
-            C.useEffect(() => {
+            s.useEffect(() => {
                 (0, V.uO)(l.id);
             }, [l.id]));
-        let m = C.useDeferredValue(u[c.currentPage] ?? []);
-        C.useEffect(() => {
+        let m = s.useDeferredValue(u[c.currentPage] ?? []);
+        s.useEffect(() => {
             (0, g.m)(l.id, m);
         }, [l.id, m]);
         let { analyticsLocations: h } = (0, H.Ay)(),
             f = h?.[0] ?? null;
         return (
-            C.useEffect(() => {
+            s.useEffect(() => {
                 (0, p.KW)(l.id, f);
             }, [l.id, f]),
             (0, i.jsx)(tf, {
                 members: m,
                 guild: l,
                 className: n,
-                searchState: s,
+                searchState: C,
                 compact: a,
                 onSelectRow: r,
                 onResetForNewMembers: d,

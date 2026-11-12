@@ -251,7 +251,7 @@ let r = {
             "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING",
             "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH",
         ],
-        inlineRequire: () => n(636496).Ay,
+        inlineRequire: () => n(811977).Ay,
     },
     MemberSafetyStoreBatchUpdateManager: {
         actions: [

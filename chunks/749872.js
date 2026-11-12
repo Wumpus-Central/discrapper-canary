@@ -1,8 +1,8 @@
-l.d(t, { A: () => q });
+l.d(t, { A: () => z });
 var n = l(477900),
     i = l(582128),
-    C = l(649852),
-    s = l.n(C),
+    s = l(649852),
+    C = l.n(s),
     a = l(811315),
     r = l.n(a),
     d = l(164636),
@@ -15,71 +15,72 @@ var n = l(477900),
     g = l(71393),
     x = l(576705),
     f = l(287809),
-    j = l(504049),
-    p = l(134413),
-    v = l(406318),
-    V = l(221950),
-    b = l(435558),
-    A = l.n(b),
-    M = l(855986),
-    L = l(189213),
-    D = l(771871),
-    R = l(95362),
-    S = l(890497),
-    E = l(834730),
-    N = l(73153),
-    I = l(620632),
-    y = l(652215);
-let Z = {
+    j = l(633340),
+    p = l(504049),
+    v = l(134413),
+    V = l(406318),
+    b = l(221950),
+    A = l(435558),
+    M = l.n(A),
+    L = l(855986),
+    D = l(189213),
+    R = l(771871),
+    E = l(95362),
+    N = l(890497),
+    I = l(834730),
+    S = l(73153),
+    y = l(620632),
+    Z = l(652215);
+let _ = {
     async updateEstimate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             l = arguments.length > 2 ? arguments[2] : void 0;
         return (
-            await I.Bo.get({
-                url: y.Rsh.GUILD_PRUNE(e),
+            await y.Bo.get({
+                url: Z.Rsh.GUILD_PRUNE(e),
                 query: { days: t, include_roles: l },
                 oldFormErrors: !0,
-                rejectWithError: (0, I.fT)(),
+                rejectWithError: (0, y.fT)(),
             })
         ).body.pruned;
     },
     async updateEstimateV2(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             l = arguments.length > 2 ? arguments[2] : void 0;
-        await I.Bo.get({
-            url: y.Rsh.GUILD_PRUNE_V2(e),
+        await y.Bo.get({
+            url: Z.Rsh.GUILD_PRUNE_V2(e),
             query: { days: t, include_roles: l },
             oldFormErrors: !0,
-            rejectWithError: (0, I.fT)(),
+            rejectWithError: (0, y.fT)(),
         });
     },
     prune: (e, t, l) =>
-        I.Bo.post({
-            url: y.Rsh.GUILD_PRUNE(e),
+        y.Bo.post({
+            url: Z.Rsh.GUILD_PRUNE(e),
             body: { days: t, compute_prune_count: !1, include_roles: l },
             oldFormErrors: !0,
-            rejectWithError: (0, I.fT)(),
+            rejectWithError: (0, y.fT)(),
         }),
 };
-var _ = l(34457),
-    w = l(317525);
-function U(e, t, l) {
+var w = l(34457),
+    U = l(317525);
+function k(e, t, l) {
     let n = [...l].sort().join(",");
     return `${e}:${t}:${n}`;
 }
-let T = (0, l(196765).v)((e) => ({
+let O = (0, l(196765).v)((e) => ({
     entries: {},
-    setPreview(t, l, n, i, C) {
-        let s = U(t, l, n);
+    setPreview(t, l, n, i, s) {
+        let C = k(t, l, n);
         e((e) => {
             let t = { ...e.entries },
                 l = {},
                 n = Date.now();
             for (let [e, i] of Object.entries(t)) n - i.cachedAt < 36e5 && (l[e] = i);
-            let a = l[s];
+            let a = l[C];
             return (
                 (null == a || (a.count <= i && !a.isFinished)) &&
-                    (l[s] = { count: i, isFinished: C, cachedAt: Date.now() }),
+                    (l[C] = { count: i, isFinished: s, cachedAt: Date.now() }),
                 { entries: l }
             );
         });
@@ -88,18 +89,18 @@ let T = (0, l(196765).v)((e) => ({
         e({ entries: {} });
     },
 }));
-var k = l(792996),
-    O = l(208005);
-function F(e) {
+var T = l(792996),
+    F = l(208005);
+function G(e) {
     var t;
     let l,
-        { guild: C, transitionState: s, onClose: a } = e,
+        { guild: s, transitionState: C, onClose: a } = e,
         [r, d] = i.useState(7),
         [o, c] = i.useState([]),
         { count: u, isLoading: m } =
-            ((t = C.id),
-            (l = T((e) => {
-                let l = U(t, r, o),
+            ((t = s.id),
+            (l = O((e) => {
+                let l = k(t, r, o),
                     n = e.entries[l];
                 return null != n && Date.now() - n.cachedAt < 36e5 ? n : null;
             })),
@@ -107,153 +108,161 @@ function F(e) {
     (i.useEffect(() => {
         function e(e) {
             var t, l;
-            if (e.guildId !== C.id || !e.prune.isPreview) return;
+            if (e.guildId !== s.id || !e.prune.isPreview) return;
             let n = e.prune.days,
                 i = e.prune.includeRoles,
-                s = Number(e.prune.pruneCount);
-            ((t = e.guildId), (l = e.prune.isFinished), T.getState().setPreview(t, n, i, s, l));
+                C = Number(e.prune.pruneCount);
+            ((t = e.guildId), (l = e.prune.isFinished), O.getState().setPreview(t, n, i, C, l));
         }
         return (
-            N.h.subscribe("GUILD_PRUNE_UPDATE", e),
+            S.h.subscribe("GUILD_PRUNE_UPDATE", e),
             () => {
-                N.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
+                S.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
             }
         );
-    }, [C.id, r, o]),
+    }, [s.id, r, o]),
         i.useEffect(() => {
-            null == u && Z.updateEstimateV2(C.id, r, o);
-        }, [C.id, r, o, u]));
+            null == u && _.updateEstimateV2(s.id, r, o);
+        }, [s.id, r, o, u]));
     let h = i.useCallback(() => {
-            (Z.prune(C.id, r, o), a(), T.getState().clear());
-        }, [C.id, r, o, a]),
-        H = (0, M.yK)(
-            [x.A, w.A],
+            (_.prune(s.id, r, o), a(), O.getState().clear());
+        }, [s.id, r, o, a]),
+        H = (0, L.yK)(
+            [x.A, U.A],
             () => {
-                let e = x.A.getHighestRole(C);
-                return A()(w.A.getSortedRoles(C.id))
-                    .filter((t) => !(0, _.Oy)(t) && x.A.isRoleHigher(C, e, t))
+                let e = x.A.getHighestRole(s);
+                return M()(U.A.getSortedRoles(s.id))
+                    .filter((t) => !(0, w.Oy)(t) && x.A.isRoleHigher(s, e, t))
                     .map((e) => {
                         let { id: t, name: l } = e;
                         return { id: t, label: l, value: t };
                     })
                     .value();
             },
-            [C],
+            [s],
         );
-    return (0, n.jsx)(L.a, {
-        title: `${k.intl.string(k.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
+    return (0, n.jsx)(D.a, {
+        title: `${T.intl.string(T.t.zbyz7p)}\u{2014}${null != s ? s.name : ""}`,
         actions: [
-            { text: k.intl.string(k.t["ETE/oC"]), onClick: a, variant: "secondary" },
-            { text: k.intl.string(k.t["2mIlKQ"]), onClick: h },
+            { text: T.intl.string(T.t["ETE/oC"]), onClick: a, variant: "secondary" },
+            { text: T.intl.string(T.t["2mIlKQ"]), onClick: h },
         ],
         onClose: async () => {
             await a();
         },
-        transitionState: s,
+        transitionState: C,
         children: (0, n.jsxs)("div", {
-            className: O.Q,
+            className: F.Q,
             children: [
-                (0, n.jsx)(D.z, {
-                    label: k.intl.string(k.t.YccTvK),
+                (0, n.jsx)(R.z, {
+                    label: T.intl.string(T.t.YccTvK),
                     value: String(r),
                     options: [
-                        { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 7 }), value: "7" },
-                        { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 30 }), value: "30" },
+                        { name: T.intl.formatToPlainString(T.t.FM1dHS, { days: 7 }), value: "7" },
+                        { name: T.intl.formatToPlainString(T.t.FM1dHS, { days: 30 }), value: "30" },
                     ],
                     onChange: function (e) {
                         d(Number(e));
                     },
                 }),
-                (0, n.jsx)(R.Ip, {
-                    className: O.X,
-                    children: (0, n.jsx)(S.Z, {
+                (0, n.jsx)(E.Ip, {
+                    className: F.X,
+                    children: (0, n.jsx)(N.Z, {
                         selectionMode: "multiple",
-                        label: k.intl.string(k.t.buoe17),
+                        label: T.intl.string(T.t.buoe17),
                         maxOptionsVisible: 10,
                         value: o,
                         onSelectionChange: (e) => c(e),
                         options: H,
                     }),
                 }),
-                (0, n.jsx)(E.E, {
+                (0, n.jsx)(I.E, {
                     variant: "body-sm/normal",
                     children:
                         o.length > 0
-                            ? k.intl.format(m ? k.t.xSDcLk : k.t["5WxHHp"], { members: u ?? -1, days: r })
-                            : k.intl.format(m ? k.t["98cHOp"] : k.t.f13az9, { members: u ?? -1, days: r }),
+                            ? T.intl.format(m ? T.t.xSDcLk : T.t["5WxHHp"], { members: u ?? -1, days: r })
+                            : T.intl.format(m ? T.t["98cHOp"] : T.t.f13az9, { members: u ?? -1, days: r }),
                 }),
             ],
         }),
     });
 }
-let G = function (e) {
-    return (0, M.bG)(
+let B = function (e) {
+    return (0, L.bG)(
         [g.A, x.A, f.default],
-        () => (0, p.dQ)(g.A.getGuild(e.guild.id) ?? e.guild, f.default.getCurrentUser(), x.A),
+        () => (0, v.dQ)(g.A.getGuild(e.guild.id) ?? e.guild, f.default.getCurrentUser(), x.A),
         [e.guild],
     )
-        ? (0, n.jsx)(F, { ...e })
+        ? (0, n.jsx)(G, { ...e })
         : null;
 };
 var P = l(779662),
-    B = l(60433);
-let q = function (e) {
-    let { guild: t, ref: l } = e,
-        C = i.useRef(null),
-        a = (0, d.bG)([v.A], () => v.A.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        b = (0, d.bG)(
+    q = l(60433);
+let z = function (e) {
+    let { guild: t, ref: s } = e,
+        a = i.useRef(null),
+        A = (0, d.bG)([V.A], () => V.A.hasDefaultSearchStateByGuildId(t.id), [t.id]),
+        M = (0, d.bG)(
             [g.A, x.A, f.default],
-            () => (0, p.dQ)(g.A.getGuild(t.id) ?? t, f.default.getCurrentUser(), x.A),
+            () => (0, v.dQ)(g.A.getGuild(t.id) ?? t, f.default.getCurrentUser(), x.A),
             [t],
         ),
-        A = i.useCallback(() => {
-            null != t && b && (0, o.mM)(async () => (e) => (0, n.jsx)(G, { ...e, guild: t }));
-        }, [t, b]),
-        M = (0, d.bG)([v.A], () => v.A.getSearchStateByGuildId(t.id), [t.id], r()),
-        L = (0, j.Ks)(t.id),
-        [D, R] = i.useState(M.query),
-        S = i.useCallback(
+        L = j.A.useConfig({ guildId: t.id, location: "Members page select by list" }).enabled,
+        { canAccessBulkActions: D } = (0, v.lN)(t.id),
+        R = i.useCallback(() => {
+            (0, o.mM)(async () => {
+                let { default: e } = await l.e(721654).then(l.bind(l, 224789));
+                return (l) => (0, n.jsx)(e, { ...l, guildId: t.id });
+            });
+        }, [t.id]),
+        E = i.useCallback(() => {
+            null != t && M && (0, o.mM)(async () => (e) => (0, n.jsx)(B, { ...e, guild: t }));
+        }, [t, M]),
+        N = (0, d.bG)([V.A], () => V.A.getSearchStateByGuildId(t.id), [t.id], r()),
+        I = (0, p.Ks)(t.id),
+        [S, y] = i.useState(N.query),
+        Z = i.useCallback(
             (e) => {
                 let l = e.trim();
-                (l.length > 0 && L(), (0, V.Ld)(t.id, { query: l }));
+                (l.length > 0 && I(), (0, b.Ld)(t.id, { query: l }));
             },
-            [t.id, L],
+            [t.id, I],
         ),
-        E = i.useMemo(() => s()(S, 300), [S]),
-        N = i.useCallback(
+        _ = i.useMemo(() => C()(Z, 300), [Z]),
+        w = i.useCallback(
             (e) => {
-                (R(e), E(e));
+                (y(e), _(e));
             },
-            [E],
+            [_],
         ),
-        I = i.useCallback(() => {
-            (R(""), S(""));
-        }, [S]);
+        U = i.useCallback(() => {
+            (y(""), Z(""));
+        }, [Z]);
     return (
-        i.useImperativeHandle(l, () => ({
+        i.useImperativeHandle(s, () => ({
             resetSearchText() {
-                R("");
+                y("");
             },
         })),
         (0, n.jsxs)("div", {
-            className: B.db,
+            className: q.db,
             children: [
                 (0, n.jsx)("div", {
-                    className: B.wL,
-                    children: a
-                        ? (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: k.intl.string(k.t.y12ALM) })
-                        : (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: k.intl.string(k.t.BUqwK8) }),
+                    className: q.wL,
+                    children: A
+                        ? (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: T.intl.string(T.t.y12ALM) })
+                        : (0, n.jsx)(c.D, { variant: "heading-sm/medium", children: T.intl.string(T.t.BUqwK8) }),
                 }),
                 (0, n.jsx)("div", {
-                    className: B.Rt,
+                    className: q.Rt,
                     children: (0, n.jsx)("div", {
-                        className: B.wL,
+                        className: q.wL,
                         children: (0, n.jsx)(u.I, {
                             size: "sm",
-                            query: D,
-                            placeholder: k.intl.string(k.t["NVoAM+"]),
-                            onChange: N,
-                            onClear: I,
+                            query: S,
+                            placeholder: T.intl.string(T.t["NVoAM+"]),
+                            onChange: w,
+                            onClear: U,
                             autoComplete: "off",
                             inputProps: { autoCapitalize: "none", autoCorrect: "off", spellCheck: "false" },
                         }),
@@ -261,7 +270,7 @@ let q = function (e) {
                 }),
                 (0, n.jsx)("div", {
                     children: (0, n.jsx)(m.Y, {
-                        targetElementRef: C,
+                        targetElementRef: a,
                         animation: m.Y.Animation.FADE,
                         position: "bottom",
                         spacing: 4,
@@ -274,8 +283,8 @@ let q = function (e) {
                             let { onClick: t, ...l } = e;
                             return (0, n.jsx)(h.$, {
                                 ...l,
-                                buttonRef: C,
-                                text: k.intl.string(k.t.XvNMNk),
+                                buttonRef: a,
+                                text: T.intl.string(T.t.XvNMNk),
                                 onClick: t,
                                 size: "sm",
                                 variant: "secondary",
@@ -284,19 +293,29 @@ let q = function (e) {
                         },
                     }),
                 }),
+                L &&
+                    D &&
+                    (0, n.jsx)("div", {
+                        children: (0, n.jsx)(h.$, {
+                            text: T.intl.string(T.t.w6lmZW),
+                            onClick: R,
+                            size: "sm",
+                            variant: "secondary",
+                        }),
+                    }),
                 (0, n.jsx)("div", {
-                    className: B.nw,
+                    className: q.nw,
                     children:
-                        b &&
+                        M &&
                         (0, n.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: B.__invalid_pruneButton,
+                            className: q.__invalid_pruneButton,
                             children: (0, n.jsx)(h.$, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: k.intl.string(k.t["2mIlKQ"]),
-                                onClick: A,
-                                "aria-label": k.intl.string(k.t.zbyz7p),
+                                text: T.intl.string(T.t["2mIlKQ"]),
+                                onClick: E,
+                                "aria-label": T.intl.string(T.t.zbyz7p),
                             }),
                         }),
                 }),

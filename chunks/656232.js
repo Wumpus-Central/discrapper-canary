@@ -507,8 +507,8 @@ var ez = n(633965),
     e6 = n(757780),
     e5 = n(263715),
     e7 = n(967198),
-    e8 = n(173860),
-    e4 = n(383394),
+    e4 = n(173860),
+    e8 = n(383394),
     e9 = n(131677),
     te = n(73153);
 let tt = {};
@@ -555,8 +555,8 @@ function tu(e) {
             tc(e2.Ay.getGuildFolders(), e9.A.getUnreadPrivateChannelIds(), ed.default.getStoreChangeSentinel()),
         ),
         a = (0, _.bG)([tr.A], () => tr.A.isFocused()),
-        s = (0, _.bG)([e4.A], () => e4.A.getExpandedFolders());
-    return (0, i.jsx)(e8.A, {
+        s = (0, _.bG)([e8.A], () => e8.A.getExpandedFolders());
+    return (0, i.jsx)(e4.A, {
         ...n,
         ref: t,
         items: r,
@@ -1153,8 +1153,8 @@ function t5(e) {
     });
 }
 var t7 = n(565787),
-    t8 = n(791606),
-    t4 = n(486020),
+    t4 = n(791606),
+    t8 = n(486020),
     t9 = n(183588);
 function ne(e) {
     let [t, a] = r.useState(!1),
@@ -1165,7 +1165,7 @@ function ne(e) {
             children: (0, i.jsx)(W.Q, {
                 className: t9.o,
                 selected: t,
-                lowerBadge: (0, i.jsx)(tf.fk, { icon: (0, t7.k)(t8.A), disableColor: !0, className: t9._ }),
+                lowerBadge: (0, i.jsx)(tf.fk, { icon: (0, t7.k)(t4.A), disableColor: !0, className: t9._ }),
                 children: (0, i.jsx)(Y.j, {
                     name: e.name,
                     onMouseEnter: function () {
@@ -1182,7 +1182,7 @@ function ne(e) {
                     },
                     icon:
                         null != e.icon
-                            ? t4.Ay.getGuildIconURL({ id: e.id, icon: e.icon, canAnimate: !1, size: 42 })
+                            ? t8.Ay.getGuildIconURL({ id: e.id, icon: e.icon, canAnimate: !1, size: 42 })
                             : null,
                     ...s,
                 }),
@@ -1469,7 +1469,7 @@ let nJ = r.memo(function (e) {
         { id: p, name: m, color: T, children: g } = h,
         S = r.useMemo(() => g.map((e) => e.id), [g]),
         N = (0, Z.A)((e) => e.guildId),
-        C = (0, _.bG)([e4.A], () => e4.A.isFolderExpanded(p)),
+        C = (0, _.bG)([e8.A], () => e8.A.isFolderExpanded(p)),
         O = (0, nz.y)(h),
         R =
             ((t = (0, _.bG)([tE.A], () => tE.A.getGuildId())),
@@ -1551,8 +1551,8 @@ var n6 = n(347951),
 function n7(e) {
     return (0, _.bG)([n5.A], () => n5.A.getGuildMediaState(e), [e]);
 }
-var n8 = n(126600),
-    n4 = n(607399),
+var n4 = n(126600),
+    n8 = n(607399),
     n9 = n(164636),
     ie = n(817281),
     it = n(879982),
@@ -2457,6 +2457,7 @@ function ib(e, t) {
             n.e(531741),
             n.e(390213),
             n.e(939171),
+            n.e(144472),
             n.e(465157),
             n.e(490010),
             n.e(140667),
@@ -2694,7 +2695,7 @@ let iv = r.memo(function (e) {
               ) ?? void 0)
         : null == M && null != O && (M = (0, J.eW)({ guildJoinRequestStatus: O }) ?? void 0);
     let U = e.lowerBadgeSize ?? { width: (0, tf.o6)(m) },
-        [{ dragging: w }, x] = (0, n8.i)({
+        [{ dragging: w }, x] = (0, n4.i)({
             type: e5.PJ.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
@@ -2713,7 +2714,7 @@ let iv = r.memo(function (e) {
         [H, j] = r.useState(!1),
         [K, X] = r.useState(!1),
         [z] = r.useState(() => new A.J_(70, () => X(!0))),
-        Z = (0, ir.nr)() && !n4.Fr;
+        Z = (0, ir.nr)() && !n8.Fr;
     r.useEffect(() => () => z.cancel(), [z]);
     let ee = r.useCallback(() => {
             null != o ? (0, tg.pX)(o, { state: iD }) : (0, ii.u)(b, { state: iD });

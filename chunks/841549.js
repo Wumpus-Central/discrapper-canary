@@ -22,6 +22,7 @@ n.d(
                         n.e(624198),
                         n.e(715038),
                         n.e(939171),
+                        n.e(144472),
                         n.e(495861),
                         n.e(649520),
                         n.e(825486),
@@ -41,9 +42,13 @@ n.d(
         Mg: function (e, l) {
             let { user: a, guildId: i, analyticsLocations: u, onCloseContextMenu: s, isViewOnly: o } = l;
             (0, t.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e(926132), n.e(146652), n.e(70515), n.e(283767)]).then(
-                    n.bind(n, 414506),
-                );
+                let { default: e } = await Promise.all([
+                    n.e(926132),
+                    n.e(146652),
+                    n.e(144472),
+                    n.e(70515),
+                    n.e(283767),
+                ]).then(n.bind(n, 414506));
                 return (l) =>
                     (0, r.jsx)(e, {
                         ...l,
@@ -276,6 +281,7 @@ n.d(
                               n.e(252229),
                               n.e(245996),
                               n.e(939171),
+                              n.e(144472),
                               n.e(700792),
                               n.e(552172),
                               n.e(529422),

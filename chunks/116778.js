@@ -946,15 +946,15 @@ function e4(e) {
         })
     );
 }
-var e6 = s(956972),
-    e5 = s(138298);
+var e5 = s(956972),
+    e6 = s(138298);
 function e9(e) {
     let { guildId: l } = e,
         s = (0, d.bG)([R.A], () => R.A.getGuild(l)),
         { analyticsLocations: t } = (0, m.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([T.Ay], () => T.Ay.getGuildSidebarState(l), [l]),
         a = i.useCallback(() => {
-            e5.A.closeGuildSidebar(l);
+            e6.A.closeGuildSidebar(l);
         }, [l]),
         c = null != r;
     return null != s && c && null != r
@@ -963,7 +963,7 @@ function e9(e) {
               children: (0, n.jsx)("div", {
                   className: eZ.__invalid_sidebarContainer,
                   style: { width: 480 },
-                  children: (0, n.jsx)(e6.default, {
+                  children: (0, n.jsx)(e5.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -973,10 +973,10 @@ function e9(e) {
         : null;
 }
 var e8 = s(856768),
-    e2 = s(120692),
-    e1 = s(164636),
+    e1 = s(120692),
+    e2 = s(164636),
     e3 = s(717421),
-    le = s(636496),
+    le = s(811977),
     ll = s(406318),
     ls = s(189552),
     lt = s(920360),
@@ -985,16 +985,16 @@ var e8 = s(856768),
 function lr(e) {
     let { guild: l } = e,
         s = (0, le.Ms)(l.id),
-        t = (0, e3.z)({ height: 3 * !!s, config: e2.config.stiff });
+        t = (0, e3.z)({ height: 3 * !!s, config: e1.config.stiff });
     return (0, n.jsx)("div", {
         className: eD.NQ,
-        children: (0, n.jsx)(e2.animated.div, { className: eD.b0, style: t }),
+        children: (0, n.jsx)(e1.animated.div, { className: eD.b0, style: t }),
     });
 }
 function la(e) {
     let { guild: l, className: s, onPageChange: t, onMemberSelect: r } = e,
         d = l.id,
-        c = (0, e1.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e2.bG)([ll.A], () => ll.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, le.Ms)(d),
         m = (0, le.Wl)(d),
         x = i.useCallback(

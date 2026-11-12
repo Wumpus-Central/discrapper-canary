@@ -305,6 +305,7 @@ let eD = s.memo(function (e) {
                             n.e(576665),
                             n.e(624198),
                             n.e(245996),
+                            n.e(144472),
                             n.e(529422),
                             n.e(823427),
                             n.e(307059),
@@ -400,7 +401,7 @@ function e6(e) {
 var e5 = n(866665),
     e3 = n(786889),
     e8 = n(90075);
-let e9 = function () {
+let e7 = function () {
     return (0, l.jsx)(e5.m, {
         text: es.intl.string(es.t.GMZqSi),
         children: (0, l.jsx)("div", {
@@ -409,7 +410,7 @@ let e9 = function () {
         }),
     });
 };
-var e7 = n(145131);
+var e9 = n(145131);
 let te = 16 / 9;
 function tt(e) {
     let {
@@ -445,13 +446,13 @@ function tt(e) {
                         blocked: A,
                         ignored: m,
                         channel: i,
-                        className: e7.V,
+                        className: e9.V,
                         inCall: !0,
                         popoutType: u,
                         pulseSpeakingIndicator: !h.enabled,
                         width: o,
                         onContextMenu: d,
-                        children: c && (0, l.jsx)(e9, {}),
+                        children: c && (0, l.jsx)(e7, {}),
                     },
                     x,
                 ),
@@ -501,14 +502,14 @@ function tn(e) {
             blocked: A,
             ignored: x,
             channel: i,
-            className: e7.V,
+            className: e9.V,
             inCall: !0,
             popoutType: u,
             onClick: f,
             onContextMenu: c,
             pulseSpeakingIndicator: !p.enabled,
             width: a,
-            children: r && n.type === ew.lp.USER && (0, l.jsx)(e9, {}),
+            children: r && n.type === ew.lp.USER && (0, l.jsx)(e7, {}),
         },
         h,
     );
@@ -590,6 +591,7 @@ let tl = s.memo(function (e) {
                                 n.e(576665),
                                 n.e(624198),
                                 n.e(245996),
+                                n.e(144472),
                                 n.e(529422),
                                 n.e(823427),
                                 n.e(307059),
@@ -688,6 +690,7 @@ function tA(e) {
                     n.e(576665),
                     n.e(624198),
                     n.e(245996),
+                    n.e(144472),
                     n.e(529422),
                     n.e(823427),
                     n.e(307059),

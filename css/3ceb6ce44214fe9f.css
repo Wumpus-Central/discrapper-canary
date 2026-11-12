@@ -18,9 +18,27 @@
     z-index: 100
 }
 
-.buttonContainer_UyQMSC {
+.fitContent_UyQMSC {
+    max-width: 100%;
+    width: -moz-max-content;
+    width: max-content
+}
+
+.inFlow_UyQMSC {
+    position: relative
+}
+
+.selectionRow_UyQMSC {
+    gap: var(--space-32)
+}
+
+.buttonContainer_UyQMSC,
+.selectionRow_UyQMSC {
     align-items: center;
-    display: flex;
+    display: flex
+}
+
+.buttonContainer_UyQMSC {
     gap: 8px
 }
 
@@ -110,4 +128,4 @@
     margin-inline-end: 4px
 }
 
-/*# sourceMappingURL=c8e685df22976daa.css.map*/
+/*# sourceMappingURL=3ceb6ce44214fe9f.css.map*/

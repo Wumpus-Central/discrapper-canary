@@ -5185,6 +5185,22 @@
     }
   },
   {
+    "kind": "guild",
+    "name": "2026-10-guild-bulk-role-actions",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-10-guild-tooltip-lazy-content",
     "defaultConfig": {
