@@ -135,7 +135,7 @@ let G = new (class {
     recordQuestRequestAttempt(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             i = Symbol(),
-            r = null != n ? (c.A.deliveryAdDecisionByPlacement.get(n) ?? null) : null,
+            r = null != n ? (c.A.getAdDecisionsForPlacement(n)[0] ?? null) : null,
             a = {
                 timeoutId: setTimeout(() => {
                     let e = this.pendingRequests.get(i);

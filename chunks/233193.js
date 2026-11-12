@@ -1,7 +1,7 @@
 n.d(t, { Dp: () => T, kW: () => _, r8: () => p });
 var r = n(582128),
-    i = n(323889),
-    s = n(855986),
+    s = n(323889),
+    i = n(855986),
     l = n(157695),
     u = n(107195),
     a = n(183636),
@@ -29,7 +29,7 @@ var A = n(971276),
     C = n(977416);
 let E = 30 * o.A.Millis.SECOND;
 function g(e, t, n) {
-    if (!(0, A.s)() || (null != e && e.fetchedAt + e.ttlMillis >= Date.now())) return;
+    if (!(0, A.s)() || (0, u.sv)(e)) return;
     if ("focused" !== a.A.getState()) {
         null != e && (0, c.Fr)(t, e.ttlMillis);
         return;
@@ -39,7 +39,7 @@ function g(e, t, n) {
     (r || (0, c.N1)(), (0, c.r8)(t, n, r));
 }
 function T(e) {
-    return (0, s.bG)([l.A], () => l.A.deliveryAdDecisionByPlacement.get(e) ?? null, [e]);
+    return (0, i.bG)([l.A], () => l.A.getAdDecisionsForPlacement(e)[0] ?? null, [e]);
 }
 function _(e) {
     let t = (0, r.useRef)(null),
@@ -48,7 +48,7 @@ function _(e) {
         (null != t.current && clearInterval(t.current),
             g(n, e, "questBar-open"),
             (t.current = setInterval(() => {
-                g(l.A.deliveryAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
+                g(l.A.getAdDecisionsForPlacement(e)[0] ?? null, e, "questBar-interval");
             }, E)));
         let r = t.current;
         return () => {
@@ -57,10 +57,10 @@ function _(e) {
     }, [n, e]);
 }
 function p(e, t) {
-    let n = (0, s.bG)([d.A], () => d.A.getQuestPreviewOverride(t), [t]),
+    let n = (0, i.bG)([d.A], () => d.A.getQuestPreviewOverride(t), [t]),
         l = T(e),
         a = (0, u.Yz)(l?.creative),
-        o = (0, s.bG)([d.A], () => (null != a ? (d.A.quests.get(a) ?? null) : null), [a]),
+        o = (0, i.bG)([d.A], () => (null != a ? (d.A.quests.get(a) ?? null) : null), [a]),
         c = null == o || (0, C.Ic)(o) ? null : o,
         f = n ?? c,
         A = (0, u.I4)(l?.creative),
@@ -68,12 +68,12 @@ function p(e, t) {
     return (0, r.useMemo)(
         () =>
             null != f
-                ? { type: i.p.QUEST, quest: f }
+                ? { type: s.p.QUEST, quest: f }
                 : null != A
-                  ? { type: i.p.BOUNTY, bounty: A }
+                  ? { type: s.p.BOUNTY, bounty: A }
                   : null != E
-                    ? { type: i.p.PLAYABLE, playable: E }
-                    : { type: i.p.NO_FILL },
+                    ? { type: s.p.PLAYABLE, playable: E }
+                    : { type: s.p.NO_FILL },
         [f, A, E],
     );
 }

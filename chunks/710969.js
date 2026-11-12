@@ -42,8 +42,8 @@ function p(e, t) {
         return null != n ? h(n) : null;
     })(e, t);
     if (null != n) return n;
-    let i = r.A.deliveryAdDecisionByPlacement.get(e);
-    return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? h(i) : null == i ? null : h(i);
+    let i = r.A.getAdDecisionsForPlacement(e)[0] ?? null;
+    return null == i ? null : h(i);
 }
 n.d(
     t,

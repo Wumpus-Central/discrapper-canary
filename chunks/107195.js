@@ -31,5 +31,9 @@ n.d(
         Yz: function (e) {
             return e?.type === i.p.QUEST ? e.questId : null;
         },
+        sv: function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+            return null != e && e.fetchedAt + e.ttlMillis >= t;
+        },
     },
 );
