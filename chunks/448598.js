@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 671957, Version Hash: 9521ec521b5591db43a422417edbffa6d64645be`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 671970, Version Hash: a1b76a412b4162f4f9149a08f9cf6dedb98a4a98`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671957";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "671970";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -14372,7 +14372,7 @@ let hz = function (e) {
                     onClick: function () {
                         (a(rE.i.TAKE_ACTION),
                             (0, tY.mM)(async () => {
-                                let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
+                                let { default: e } = await Promise.all([
                                     n.e(489361),
                                     n.e(227853),
                                     n.e(470126),
@@ -14395,7 +14395,7 @@ let hz = function (e) {
                                     n.e(88683),
                                     n.e(983513),
                                     n.e(216806),
-                                    n.e(310734),
+                                    n.e(363094),
                                     n.e(324469),
                                     n.e(70379),
                                     n.e(417333),
@@ -14427,8 +14427,8 @@ let hz = function (e) {
                                     n.e(594161),
                                     n.e(435432),
                                     n.e(80347),
-                                    n.e(830554),
-                                ]).then(n.bind(n, 673761));
+                                    n.e(52513),
+                                ]).then(n.bind(n, 336888));
                                 return (t) =>
                                     (0, v.jsx)(e, {
                                         ...t,
@@ -15868,7 +15868,7 @@ let I8 = "isHideDevBanner",
                     className: td()(I7.Wz, I7.mr),
                     children: [
                         (0, v.jsx)(I5, { className: I7.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "671957" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "671970" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
