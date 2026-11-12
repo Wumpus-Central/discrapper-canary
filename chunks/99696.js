@@ -100,9 +100,12 @@ l.d(
             s.default.track(i.HAw.GIFT_CARD_REDEMPTION_FAILED, { source: e.source, load_id: e.loadId });
         },
         tn: function (e) {
-            return e?.body?.code === i.t02.GIFT_CARD_ALREADY_REDEEMED
+            let t = e?.body?.code;
+            return t === i.t02.GIFT_CARD_ALREADY_REDEEMED
                 ? o.intl.string(c.default.uo9YsP)
-                : o.intl.string(c.default.EUKPip);
+                : t === i.t02.GIFT_CARD_REDEMPTION_UNAVAILABLE
+                  ? o.intl.string(c.default["aFr+i6"])
+                  : o.intl.string(c.default.EUKPip);
         },
     },
 );
