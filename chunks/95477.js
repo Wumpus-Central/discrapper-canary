@@ -63,7 +63,7 @@ function D(e) {
         }
     return (0, i.jsx)("div", {
         className: L.icon,
-        children: (0, i.jsx)(t, { size: "md" === n ? "xs" : "xxs", color: o.A.colors.ICON_STRONG }),
+        children: (0, i.jsx)(t, { size: "md" === n ? "xs" : "xxs", color: o.A.colors.INPUT_ICON_DEFAULT }),
     });
 }
 function b(e) {

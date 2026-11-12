@@ -118,6 +118,9 @@ class F extends a.Ay.PersistedStore {
     get isPreview() {
         return L;
     }
+    get isUpsellGradientPreview() {
+        return D;
+    }
     get isCoachmark() {
         return y;
     }
