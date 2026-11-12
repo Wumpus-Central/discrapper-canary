@@ -1,4 +1,4 @@
-t.d(n, { playgroundConfig: () => tC });
+t.d(n, { playgroundConfig: () => t_ });
 var i,
     r,
     a,
@@ -32,7 +32,7 @@ class y extends m.G {
             { no: 3, name: "locales", kind: "scalar", repeat: 2, T: 9 },
             { no: 4, name: "pages", kind: "message", repeat: 1, T: () => v },
             { no: 5, name: "scores", kind: "message", repeat: 1, T: () => eh },
-            { no: 6, name: "randomized_page_groups", kind: "message", repeat: 1, T: () => x },
+            { no: 6, name: "randomized_page_groups", kind: "message", repeat: 1, T: () => b },
             { no: 7, name: "end_message", kind: "message", T: () => g.X },
             { no: 8, name: "next_id", kind: "scalar", T: 13 },
         ]);
@@ -67,7 +67,7 @@ class y extends m.G {
                     r.scores.push(eh.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 6:
-                    r.randomizedPageGroups.push(x.internalBinaryRead(e, e.uint32(), t));
+                    r.randomizedPageGroups.push(b.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 7:
                     r.endMessage = g.X.internalBinaryRead(e, e.uint32(), t, r.endMessage);
@@ -94,7 +94,7 @@ class y extends m.G {
         for (let i = 0; i < e.scores.length; i++)
             eh.internalBinaryWrite(e.scores[i], n.tag(5, c.O0.LengthDelimited).fork(), t).join();
         for (let i = 0; i < e.randomizedPageGroups.length; i++)
-            x.internalBinaryWrite(e.randomizedPageGroups[i], n.tag(6, c.O0.LengthDelimited).fork(), t).join();
+            b.internalBinaryWrite(e.randomizedPageGroups[i], n.tag(6, c.O0.LengthDelimited).fork(), t).join();
         (e.endMessage && g.X.internalBinaryWrite(e.endMessage, n.tag(7, c.O0.LengthDelimited).fork(), t).join(),
             0 !== e.nextId && n.tag(8, c.O0.Varint).uint32(e.nextId));
         let i = t.writeUnknownFields;
@@ -152,16 +152,16 @@ class w extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let x = new w();
-class b extends m.G {
+let b = new w();
+class x extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.Page", [
             { no: 1, name: "id", kind: "scalar", T: 13 },
             { no: 2, name: "show_if", kind: "message", T: () => ey },
-            { no: 3, name: "end_if", kind: "message", T: () => I },
-            { no: 4, name: "questions", kind: "message", oneof: "kind", T: () => $ },
-            { no: 5, name: "conjoint", kind: "message", oneof: "kind", T: () => B },
-            { no: 6, name: "maxdiff", kind: "message", oneof: "kind", T: () => F },
+            { no: 3, name: "end_if", kind: "message", T: () => $ },
+            { no: 4, name: "questions", kind: "message", oneof: "kind", T: () => O },
+            { no: 5, name: "conjoint", kind: "message", oneof: "kind", T: () => I },
+            { no: 6, name: "maxdiff", kind: "message", oneof: "kind", T: () => S },
         ]);
     }
     create(e) {
@@ -185,22 +185,22 @@ class b extends m.G {
                     r.showIf = ey.internalBinaryRead(e, e.uint32(), t, r.showIf);
                     break;
                 case 3:
-                    r.endIf = I.internalBinaryRead(e, e.uint32(), t, r.endIf);
+                    r.endIf = $.internalBinaryRead(e, e.uint32(), t, r.endIf);
                     break;
                 case 4:
                     r.kind = {
                         oneofKind: "questions",
-                        questions: $.internalBinaryRead(e, e.uint32(), t, r.kind.questions),
+                        questions: O.internalBinaryRead(e, e.uint32(), t, r.kind.questions),
                     };
                     break;
                 case 5:
                     r.kind = {
                         oneofKind: "conjoint",
-                        conjoint: B.internalBinaryRead(e, e.uint32(), t, r.kind.conjoint),
+                        conjoint: I.internalBinaryRead(e, e.uint32(), t, r.kind.conjoint),
                     };
                     break;
                 case 6:
-                    r.kind = { oneofKind: "maxdiff", maxdiff: F.internalBinaryRead(e, e.uint32(), t, r.kind.maxdiff) };
+                    r.kind = { oneofKind: "maxdiff", maxdiff: S.internalBinaryRead(e, e.uint32(), t, r.kind.maxdiff) };
                     break;
                 default:
                     let a = t.readUnknownField;
@@ -215,18 +215,18 @@ class b extends m.G {
     internalBinaryWrite(e, n, t) {
         (0 !== e.id && n.tag(1, c.O0.Varint).uint32(e.id),
             e.showIf && ey.internalBinaryWrite(e.showIf, n.tag(2, c.O0.LengthDelimited).fork(), t).join(),
-            e.endIf && I.internalBinaryWrite(e.endIf, n.tag(3, c.O0.LengthDelimited).fork(), t).join(),
+            e.endIf && $.internalBinaryWrite(e.endIf, n.tag(3, c.O0.LengthDelimited).fork(), t).join(),
             "questions" === e.kind.oneofKind &&
-                $.internalBinaryWrite(e.kind.questions, n.tag(4, c.O0.LengthDelimited).fork(), t).join(),
+                O.internalBinaryWrite(e.kind.questions, n.tag(4, c.O0.LengthDelimited).fork(), t).join(),
             "conjoint" === e.kind.oneofKind &&
-                B.internalBinaryWrite(e.kind.conjoint, n.tag(5, c.O0.LengthDelimited).fork(), t).join(),
+                I.internalBinaryWrite(e.kind.conjoint, n.tag(5, c.O0.LengthDelimited).fork(), t).join(),
             "maxdiff" === e.kind.oneofKind &&
-                F.internalBinaryWrite(e.kind.maxdiff, n.tag(6, c.O0.LengthDelimited).fork(), t).join());
+                S.internalBinaryWrite(e.kind.maxdiff, n.tag(6, c.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let v = new b();
+let v = new x();
 class T extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.EndIf", [
@@ -271,11 +271,11 @@ class T extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let I = new T();
-class O extends m.G {
+let $ = new T();
+class j extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.QuestionPage", [
-            { no: 1, name: "questions", kind: "message", repeat: 1, T: () => K },
+            { no: 1, name: "questions", kind: "message", repeat: 1, T: () => q },
             { no: 2, name: "randomize_questions", kind: "scalar", T: 8 },
         ]);
     }
@@ -294,7 +294,7 @@ class O extends m.G {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
-                    r.questions.push(K.internalBinaryRead(e, e.uint32(), t));
+                    r.questions.push(q.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 2:
                     r.randomizeQuestions = e.bool();
@@ -311,14 +311,14 @@ class O extends m.G {
     }
     internalBinaryWrite(e, n, t) {
         for (let i = 0; i < e.questions.length; i++)
-            K.internalBinaryWrite(e.questions[i], n.tag(1, c.O0.LengthDelimited).fork(), t).join();
+            q.internalBinaryWrite(e.questions[i], n.tag(1, c.O0.LengthDelimited).fork(), t).join();
         !1 !== e.randomizeQuestions && n.tag(2, c.O0.Varint).bool(e.randomizeQuestions);
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let $ = new O();
-class j extends m.G {
+let O = new j();
+class B extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.ConjointPage", [
             { no: 1, name: "export_label", kind: "scalar", T: 9 },
@@ -327,7 +327,7 @@ class j extends m.G {
             { no: 4, name: "task_count", kind: "scalar", T: 13 },
             { no: 5, name: "concepts_per_task", kind: "scalar", T: 13 },
             { no: 6, name: "include_none_option", kind: "scalar", T: 8 },
-            { no: 7, name: "exclusions", kind: "message", repeat: 1, T: () => D },
+            { no: 7, name: "exclusions", kind: "message", repeat: 1, T: () => U },
             { no: 8, name: "randomize_feature_order", kind: "scalar", T: 8 },
             {
                 no: 9,
@@ -380,7 +380,7 @@ class j extends m.G {
                     r.includeNoneOption = e.bool();
                     break;
                 case 7:
-                    r.exclusions.push(D.internalBinaryRead(e, e.uint32(), t));
+                    r.exclusions.push(U.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 8:
                     r.randomizeFeatureOrder = e.bool();
@@ -410,7 +410,7 @@ class j extends m.G {
             0 !== e.conceptsPerTask && n.tag(5, c.O0.Varint).uint32(e.conceptsPerTask),
             !1 !== e.includeNoneOption && n.tag(6, c.O0.Varint).bool(e.includeNoneOption));
         for (let i = 0; i < e.exclusions.length; i++)
-            D.internalBinaryWrite(e.exclusions[i], n.tag(7, c.O0.LengthDelimited).fork(), t).join();
+            U.internalBinaryWrite(e.exclusions[i], n.tag(7, c.O0.LengthDelimited).fork(), t).join();
         (!1 !== e.randomizeFeatureOrder && n.tag(8, c.O0.Varint).bool(e.randomizeFeatureOrder),
             0 !== e.display && n.tag(9, c.O0.Varint).int32(e.display),
             e.conceptLabel &&
@@ -419,7 +419,7 @@ class j extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let B = new j();
+let I = new B();
 class N extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.ConjointFeature", [
@@ -539,8 +539,8 @@ let L = new _();
 class W extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.ConjointExclusion", [
-            { no: 1, name: "first", kind: "message", T: () => E },
-            { no: 2, name: "second", kind: "message", T: () => E },
+            { no: 1, name: "first", kind: "message", T: () => C },
+            { no: 2, name: "second", kind: "message", T: () => C },
         ]);
     }
     create(e) {
@@ -558,10 +558,10 @@ class W extends m.G {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
-                    r.first = E.internalBinaryRead(e, e.uint32(), t, r.first);
+                    r.first = C.internalBinaryRead(e, e.uint32(), t, r.first);
                     break;
                 case 2:
-                    r.second = E.internalBinaryRead(e, e.uint32(), t, r.second);
+                    r.second = C.internalBinaryRead(e, e.uint32(), t, r.second);
                     break;
                 default:
                     let a = t.readUnknownField;
@@ -574,14 +574,14 @@ class W extends m.G {
         return r;
     }
     internalBinaryWrite(e, n, t) {
-        (e.first && E.internalBinaryWrite(e.first, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
-            e.second && E.internalBinaryWrite(e.second, n.tag(2, c.O0.LengthDelimited).fork(), t).join());
+        (e.first && C.internalBinaryWrite(e.first, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
+            e.second && C.internalBinaryWrite(e.second, n.tag(2, c.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let D = new W();
-class U extends m.G {
+let U = new W();
+class D extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.FeatureLevel", [
             { no: 1, name: "feature_id", kind: "scalar", T: 13 },
@@ -625,13 +625,13 @@ class U extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let E = new U();
-class C extends m.G {
+let C = new D();
+class E extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.MaxDiffPage", [
             { no: 1, name: "export_label", kind: "scalar", T: 9 },
             { no: 2, name: "text", kind: "message", T: () => g.X },
-            { no: 3, name: "items", kind: "message", repeat: 1, T: () => q },
+            { no: 3, name: "items", kind: "message", repeat: 1, T: () => P },
             { no: 4, name: "items_per_set", kind: "scalar", T: 13 },
             { no: 5, name: "set_count", kind: "scalar", T: 13 },
             { no: 6, name: "most_label", kind: "message", T: () => g.X },
@@ -660,7 +660,7 @@ class C extends m.G {
                     r.text = g.X.internalBinaryRead(e, e.uint32(), t, r.text);
                     break;
                 case 3:
-                    r.items.push(q.internalBinaryRead(e, e.uint32(), t));
+                    r.items.push(P.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 4:
                     r.itemsPerSet = e.uint32();
@@ -691,7 +691,7 @@ class C extends m.G {
         ("" !== e.exportLabel && n.tag(1, c.O0.LengthDelimited).string(e.exportLabel),
             e.text && g.X.internalBinaryWrite(e.text, n.tag(2, c.O0.LengthDelimited).fork(), t).join());
         for (let i = 0; i < e.items.length; i++)
-            q.internalBinaryWrite(e.items[i], n.tag(3, c.O0.LengthDelimited).fork(), t).join();
+            P.internalBinaryWrite(e.items[i], n.tag(3, c.O0.LengthDelimited).fork(), t).join();
         (0 !== e.itemsPerSet && n.tag(4, c.O0.Varint).uint32(e.itemsPerSet),
             0 !== e.setCount && n.tag(5, c.O0.Varint).uint32(e.setCount),
             e.mostLabel && g.X.internalBinaryWrite(e.mostLabel, n.tag(6, c.O0.LengthDelimited).fork(), t).join(),
@@ -702,8 +702,8 @@ class C extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let F = new C();
-class S extends m.G {
+let S = new E();
+class F extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.MaxDiffItem", [
             { no: 1, name: "id", kind: "scalar", T: 13 },
@@ -747,8 +747,8 @@ class S extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let q = new S();
-class P extends m.G {
+let P = new F();
+class K extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.Question", [
             { no: 1, name: "id", kind: "scalar", T: 13 },
@@ -757,8 +757,8 @@ class P extends m.G {
             { no: 4, name: "required", kind: "scalar", T: 8 },
             { no: 5, name: "show_if", kind: "message", T: () => ey },
             { no: 6, name: "pinned", kind: "scalar", T: 8 },
-            { no: 7, name: "single_choice", kind: "message", oneof: "kind", T: () => Q },
-            { no: 8, name: "dropdown", kind: "message", oneof: "kind", T: () => Q },
+            { no: 7, name: "single_choice", kind: "message", oneof: "kind", T: () => A },
+            { no: 8, name: "dropdown", kind: "message", oneof: "kind", T: () => A },
             { no: 9, name: "multi_choice", kind: "message", oneof: "kind", T: () => X },
             { no: 10, name: "rank", kind: "message", oneof: "kind", T: () => Z },
             { no: 11, name: "free_text", kind: "message", oneof: "kind", T: () => et },
@@ -802,13 +802,13 @@ class P extends m.G {
                 case 7:
                     r.kind = {
                         oneofKind: "singleChoice",
-                        singleChoice: Q.internalBinaryRead(e, e.uint32(), t, r.kind.singleChoice),
+                        singleChoice: A.internalBinaryRead(e, e.uint32(), t, r.kind.singleChoice),
                     };
                     break;
                 case 8:
                     r.kind = {
                         oneofKind: "dropdown",
-                        dropdown: Q.internalBinaryRead(e, e.uint32(), t, r.kind.dropdown),
+                        dropdown: A.internalBinaryRead(e, e.uint32(), t, r.kind.dropdown),
                     };
                     break;
                 case 9:
@@ -853,9 +853,9 @@ class P extends m.G {
             e.showIf && ey.internalBinaryWrite(e.showIf, n.tag(5, c.O0.LengthDelimited).fork(), t).join(),
             !1 !== e.pinned && n.tag(6, c.O0.Varint).bool(e.pinned),
             "singleChoice" === e.kind.oneofKind &&
-                Q.internalBinaryWrite(e.kind.singleChoice, n.tag(7, c.O0.LengthDelimited).fork(), t).join(),
+                A.internalBinaryWrite(e.kind.singleChoice, n.tag(7, c.O0.LengthDelimited).fork(), t).join(),
             "dropdown" === e.kind.oneofKind &&
-                Q.internalBinaryWrite(e.kind.dropdown, n.tag(8, c.O0.LengthDelimited).fork(), t).join(),
+                A.internalBinaryWrite(e.kind.dropdown, n.tag(8, c.O0.LengthDelimited).fork(), t).join(),
             "multiChoice" === e.kind.oneofKind &&
                 X.internalBinaryWrite(e.kind.multiChoice, n.tag(9, c.O0.LengthDelimited).fork(), t).join(),
             "rank" === e.kind.oneofKind &&
@@ -872,7 +872,7 @@ class P extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let K = new P();
+let q = new K();
 class V extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.ChoiceSource", [
@@ -929,11 +929,11 @@ class V extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let A = new V();
-class G extends m.G {
+let G = new V();
+class Q extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.SingleChoiceQuestion", [
-            { no: 1, name: "choice_source", kind: "message", T: () => A },
+            { no: 1, name: "choice_source", kind: "message", T: () => G },
         ]);
     }
     create(e) {
@@ -949,7 +949,7 @@ class G extends m.G {
             a = e.pos + n;
         for (; e.pos < a;) {
             let [n, i] = e.tag();
-            if (1 === n) r.choiceSource = A.internalBinaryRead(e, e.uint32(), t, r.choiceSource);
+            if (1 === n) r.choiceSource = G.internalBinaryRead(e, e.uint32(), t, r.choiceSource);
             else {
                 let a = t.readUnknownField;
                 if ("throw" === a)
@@ -961,16 +961,16 @@ class G extends m.G {
         return r;
     }
     internalBinaryWrite(e, n, t) {
-        e.choiceSource && A.internalBinaryWrite(e.choiceSource, n.tag(1, c.O0.LengthDelimited).fork(), t).join();
+        e.choiceSource && G.internalBinaryWrite(e.choiceSource, n.tag(1, c.O0.LengthDelimited).fork(), t).join();
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let Q = new G();
+let A = new Q();
 class M extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.MultiChoiceQuestion", [
-            { no: 1, name: "choice_source", kind: "message", T: () => A },
+            { no: 1, name: "choice_source", kind: "message", T: () => G },
             { no: 2, name: "min_selected", kind: "message", T: () => f.ZQ },
             { no: 3, name: "max_selected", kind: "message", T: () => f.ZQ },
         ]);
@@ -990,7 +990,7 @@ class M extends m.G {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
-                    r.choiceSource = A.internalBinaryRead(e, e.uint32(), t, r.choiceSource);
+                    r.choiceSource = G.internalBinaryRead(e, e.uint32(), t, r.choiceSource);
                     break;
                 case 2:
                     r.minSelected = f.ZQ.internalBinaryRead(e, e.uint32(), t, r.minSelected);
@@ -1009,7 +1009,7 @@ class M extends m.G {
         return r;
     }
     internalBinaryWrite(e, n, t) {
-        (e.choiceSource && A.internalBinaryWrite(e.choiceSource, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
+        (e.choiceSource && G.internalBinaryWrite(e.choiceSource, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
             e.minSelected && f.ZQ.internalBinaryWrite(e.minSelected, n.tag(2, c.O0.LengthDelimited).fork(), t).join(),
             e.maxSelected && f.ZQ.internalBinaryWrite(e.maxSelected, n.tag(3, c.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
@@ -1020,7 +1020,7 @@ let X = new M();
 class z extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RankQuestion", [
-            { no: 1, name: "choice_source", kind: "message", T: () => A },
+            { no: 1, name: "choice_source", kind: "message", T: () => G },
             { no: 2, name: "rank_top", kind: "message", T: () => f.ZQ },
         ]);
     }
@@ -1039,7 +1039,7 @@ class z extends m.G {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
-                    r.choiceSource = A.internalBinaryRead(e, e.uint32(), t, r.choiceSource);
+                    r.choiceSource = G.internalBinaryRead(e, e.uint32(), t, r.choiceSource);
                     break;
                 case 2:
                     r.rankTop = f.ZQ.internalBinaryRead(e, e.uint32(), t, r.rankTop);
@@ -1055,7 +1055,7 @@ class z extends m.G {
         return r;
     }
     internalBinaryWrite(e, n, t) {
-        (e.choiceSource && A.internalBinaryWrite(e.choiceSource, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
+        (e.choiceSource && G.internalBinaryWrite(e.choiceSource, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
             e.rankTop && f.ZQ.internalBinaryWrite(e.rankTop, n.tag(2, c.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
@@ -1561,15 +1561,15 @@ let ep = new eg();
 class ek extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.Condition", [
-            { no: 1, name: "all_of", kind: "message", oneof: "kind", T: () => ex },
-            { no: 2, name: "any_of", kind: "message", oneof: "kind", T: () => ex },
-            { no: 3, name: "none_of", kind: "message", oneof: "kind", T: () => ex },
+            { no: 1, name: "all_of", kind: "message", oneof: "kind", T: () => eb },
+            { no: 2, name: "any_of", kind: "message", oneof: "kind", T: () => eb },
+            { no: 3, name: "none_of", kind: "message", oneof: "kind", T: () => eb },
             { no: 4, name: "selected", kind: "message", oneof: "kind", T: () => ev },
-            { no: 5, name: "matrix_selected", kind: "message", oneof: "kind", T: () => eI },
-            { no: 6, name: "ranked_within", kind: "message", oneof: "kind", T: () => e$ },
-            { no: 7, name: "answered", kind: "message", oneof: "kind", T: () => eB },
+            { no: 5, name: "matrix_selected", kind: "message", oneof: "kind", T: () => e$ },
+            { no: 6, name: "ranked_within", kind: "message", oneof: "kind", T: () => eO },
+            { no: 7, name: "answered", kind: "message", oneof: "kind", T: () => eI },
             { no: 8, name: "compare", kind: "message", oneof: "kind", T: () => eL },
-            { no: 10, name: "score_band", kind: "message", oneof: "kind", T: () => eD },
+            { no: 10, name: "score_band", kind: "message", oneof: "kind", T: () => eU },
             { no: 11, name: "displayed", kind: "message", oneof: "kind", T: () => eR },
         ]);
     }
@@ -1588,13 +1588,13 @@ class ek extends m.G {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
-                    r.kind = { oneofKind: "allOf", allOf: ex.internalBinaryRead(e, e.uint32(), t, r.kind.allOf) };
+                    r.kind = { oneofKind: "allOf", allOf: eb.internalBinaryRead(e, e.uint32(), t, r.kind.allOf) };
                     break;
                 case 2:
-                    r.kind = { oneofKind: "anyOf", anyOf: ex.internalBinaryRead(e, e.uint32(), t, r.kind.anyOf) };
+                    r.kind = { oneofKind: "anyOf", anyOf: eb.internalBinaryRead(e, e.uint32(), t, r.kind.anyOf) };
                     break;
                 case 3:
-                    r.kind = { oneofKind: "noneOf", noneOf: ex.internalBinaryRead(e, e.uint32(), t, r.kind.noneOf) };
+                    r.kind = { oneofKind: "noneOf", noneOf: eb.internalBinaryRead(e, e.uint32(), t, r.kind.noneOf) };
                     break;
                 case 4:
                     r.kind = {
@@ -1605,19 +1605,19 @@ class ek extends m.G {
                 case 5:
                     r.kind = {
                         oneofKind: "matrixSelected",
-                        matrixSelected: eI.internalBinaryRead(e, e.uint32(), t, r.kind.matrixSelected),
+                        matrixSelected: e$.internalBinaryRead(e, e.uint32(), t, r.kind.matrixSelected),
                     };
                     break;
                 case 6:
                     r.kind = {
                         oneofKind: "rankedWithin",
-                        rankedWithin: e$.internalBinaryRead(e, e.uint32(), t, r.kind.rankedWithin),
+                        rankedWithin: eO.internalBinaryRead(e, e.uint32(), t, r.kind.rankedWithin),
                     };
                     break;
                 case 7:
                     r.kind = {
                         oneofKind: "answered",
-                        answered: eB.internalBinaryRead(e, e.uint32(), t, r.kind.answered),
+                        answered: eI.internalBinaryRead(e, e.uint32(), t, r.kind.answered),
                     };
                     break;
                 case 8:
@@ -1626,7 +1626,7 @@ class ek extends m.G {
                 case 10:
                     r.kind = {
                         oneofKind: "scoreBand",
-                        scoreBand: eD.internalBinaryRead(e, e.uint32(), t, r.kind.scoreBand),
+                        scoreBand: eU.internalBinaryRead(e, e.uint32(), t, r.kind.scoreBand),
                     };
                     break;
                 case 11:
@@ -1647,23 +1647,23 @@ class ek extends m.G {
     }
     internalBinaryWrite(e, n, t) {
         ("allOf" === e.kind.oneofKind &&
-            ex.internalBinaryWrite(e.kind.allOf, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
+            eb.internalBinaryWrite(e.kind.allOf, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
             "anyOf" === e.kind.oneofKind &&
-                ex.internalBinaryWrite(e.kind.anyOf, n.tag(2, c.O0.LengthDelimited).fork(), t).join(),
+                eb.internalBinaryWrite(e.kind.anyOf, n.tag(2, c.O0.LengthDelimited).fork(), t).join(),
             "noneOf" === e.kind.oneofKind &&
-                ex.internalBinaryWrite(e.kind.noneOf, n.tag(3, c.O0.LengthDelimited).fork(), t).join(),
+                eb.internalBinaryWrite(e.kind.noneOf, n.tag(3, c.O0.LengthDelimited).fork(), t).join(),
             "selected" === e.kind.oneofKind &&
                 ev.internalBinaryWrite(e.kind.selected, n.tag(4, c.O0.LengthDelimited).fork(), t).join(),
             "matrixSelected" === e.kind.oneofKind &&
-                eI.internalBinaryWrite(e.kind.matrixSelected, n.tag(5, c.O0.LengthDelimited).fork(), t).join(),
+                e$.internalBinaryWrite(e.kind.matrixSelected, n.tag(5, c.O0.LengthDelimited).fork(), t).join(),
             "rankedWithin" === e.kind.oneofKind &&
-                e$.internalBinaryWrite(e.kind.rankedWithin, n.tag(6, c.O0.LengthDelimited).fork(), t).join(),
+                eO.internalBinaryWrite(e.kind.rankedWithin, n.tag(6, c.O0.LengthDelimited).fork(), t).join(),
             "answered" === e.kind.oneofKind &&
-                eB.internalBinaryWrite(e.kind.answered, n.tag(7, c.O0.LengthDelimited).fork(), t).join(),
+                eI.internalBinaryWrite(e.kind.answered, n.tag(7, c.O0.LengthDelimited).fork(), t).join(),
             "compare" === e.kind.oneofKind &&
                 eL.internalBinaryWrite(e.kind.compare, n.tag(8, c.O0.LengthDelimited).fork(), t).join(),
             "scoreBand" === e.kind.oneofKind &&
-                eD.internalBinaryWrite(e.kind.scoreBand, n.tag(10, c.O0.LengthDelimited).fork(), t).join(),
+                eU.internalBinaryWrite(e.kind.scoreBand, n.tag(10, c.O0.LengthDelimited).fork(), t).join(),
             "displayed" === e.kind.oneofKind &&
                 eR.internalBinaryWrite(e.kind.displayed, n.tag(11, c.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
@@ -1708,8 +1708,8 @@ class ew extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let ex = new ew();
-class eb extends m.G {
+let eb = new ew();
+class ex extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.SelectedCondition", [
             { no: 1, name: "question_id", kind: "scalar", T: 13 },
@@ -1758,7 +1758,7 @@ class eb extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let ev = new eb();
+let ev = new ex();
 class eT extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.MatrixSelectedCondition", [
@@ -1816,8 +1816,8 @@ class eT extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eI = new eT();
-class eO extends m.G {
+let e$ = new eT();
+class ej extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RankedWithinCondition", [
             { no: 1, name: "question_id", kind: "scalar", T: 13 },
@@ -1866,8 +1866,8 @@ class eO extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let e$ = new eO();
-class ej extends m.G {
+let eO = new ej();
+class eB extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.AnsweredCondition", [
             { no: 1, name: "question_id", kind: "scalar", T: 13 },
@@ -1903,7 +1903,7 @@ class ej extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eB = new ej();
+let eI = new eB();
 class eN extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.DisplayedCondition", [
@@ -2045,20 +2045,20 @@ class eW extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eD = new eW();
-var eU =
+let eU = new eW();
+var eD =
         (((a = {})[(a.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (a[(a.ALL = 1)] = "ALL"),
         (a[(a.SOME = 2)] = "SOME"),
         (a[(a.NONE = 3)] = "NONE"),
         a),
-    eE =
+    eC =
         (((o = {})[(o.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (o[(o.IN_PROGRESS = 1)] = "IN_PROGRESS"),
         (o[(o.COMPLETE = 2)] = "COMPLETE"),
         (o[(o.ENDED = 3)] = "ENDED"),
         o),
-    eC =
+    eE =
         (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (s[(s.REQUIRED = 1)] = "REQUIRED"),
         (s[(s.TOO_LONG = 2)] = "TOO_LONG"),
@@ -2067,12 +2067,12 @@ var eU =
         (s[(s.INVALID = 5)] = "INVALID"),
         (s[(s.STALE = 6)] = "STALE"),
         s);
-class eF extends m.G {
+class eS extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.SubmitRequest", [
             { no: 1, name: "page_id", kind: "scalar", T: 13 },
             { no: 2, name: "revision", kind: "scalar", T: 13 },
-            { no: 3, name: "answers", kind: "message", repeat: 1, T: () => eP },
+            { no: 3, name: "answers", kind: "message", repeat: 1, T: () => eK },
         ]);
     }
     create(e) {
@@ -2096,7 +2096,7 @@ class eF extends m.G {
                     r.revision = e.uint32();
                     break;
                 case 3:
-                    r.answers.push(eP.internalBinaryRead(e, e.uint32(), t));
+                    r.answers.push(eK.internalBinaryRead(e, e.uint32(), t));
                     break;
                 default:
                     let a = t.readUnknownField;
@@ -2112,17 +2112,17 @@ class eF extends m.G {
         (0 !== e.pageId && n.tag(1, c.O0.Varint).uint32(e.pageId),
             0 !== e.revision && n.tag(2, c.O0.Varint).uint32(e.revision));
         for (let i = 0; i < e.answers.length; i++)
-            eP.internalBinaryWrite(e.answers[i], n.tag(3, c.O0.LengthDelimited).fork(), t).join();
+            eK.internalBinaryWrite(e.answers[i], n.tag(3, c.O0.LengthDelimited).fork(), t).join();
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eS = new eF();
-class eq extends m.G {
+let eF = new eS();
+class eP extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.Answer", [
             { no: 1, name: "choices", kind: "message", oneof: "kind", T: () => eV },
-            { no: 2, name: "ranked", kind: "message", oneof: "kind", T: () => eG },
+            { no: 2, name: "ranked", kind: "message", oneof: "kind", T: () => eQ },
             { no: 3, name: "text", kind: "message", oneof: "kind", T: () => eM },
             { no: 4, name: "number", kind: "message", oneof: "kind", T: () => ez },
             { no: 5, name: "matrix", kind: "message", oneof: "kind", T: () => eY },
@@ -2148,7 +2148,7 @@ class eq extends m.G {
                     r.kind = { oneofKind: "choices", choices: eV.internalBinaryRead(e, e.uint32(), t, r.kind.choices) };
                     break;
                 case 2:
-                    r.kind = { oneofKind: "ranked", ranked: eG.internalBinaryRead(e, e.uint32(), t, r.kind.ranked) };
+                    r.kind = { oneofKind: "ranked", ranked: eQ.internalBinaryRead(e, e.uint32(), t, r.kind.ranked) };
                     break;
                 case 3:
                     r.kind = { oneofKind: "text", text: eM.internalBinaryRead(e, e.uint32(), t, r.kind.text) };
@@ -2182,7 +2182,7 @@ class eq extends m.G {
         ("choices" === e.kind.oneofKind &&
             eV.internalBinaryWrite(e.kind.choices, n.tag(1, c.O0.LengthDelimited).fork(), t).join(),
             "ranked" === e.kind.oneofKind &&
-                eG.internalBinaryWrite(e.kind.ranked, n.tag(2, c.O0.LengthDelimited).fork(), t).join(),
+                eQ.internalBinaryWrite(e.kind.ranked, n.tag(2, c.O0.LengthDelimited).fork(), t).join(),
             "text" === e.kind.oneofKind &&
                 eM.internalBinaryWrite(e.kind.text, n.tag(3, c.O0.LengthDelimited).fork(), t).join(),
             "number" === e.kind.oneofKind &&
@@ -2197,8 +2197,8 @@ class eq extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eP = new eq();
-class eK extends m.G {
+let eK = new eP();
+class eq extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.ChoicesAnswer", [
             { no: 1, name: "question_id", kind: "scalar", T: 13 },
@@ -2281,8 +2281,8 @@ class eK extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eV = new eK();
-class eA extends m.G {
+let eV = new eq();
+class eG extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RankedAnswer", [
             { no: 1, name: "question_id", kind: "scalar", T: 13 },
@@ -2331,8 +2331,8 @@ class eA extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eG = new eA();
-class eQ extends m.G {
+let eQ = new eG();
+class eA extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.TextAnswer", [
             { no: 1, name: "question_id", kind: "scalar", T: 13 },
@@ -2376,7 +2376,7 @@ class eQ extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let eM = new eQ();
+let eM = new eA();
 class eX extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.NumberAnswer", [
@@ -2572,7 +2572,7 @@ class e2 extends m.G {
                 no: 3,
                 name: "anchor",
                 kind: "enum",
-                T: () => ["discord_protos.discord_surveys.v1.MaxDiffAnchor", eU, "MAX_DIFF_ANCHOR_"],
+                T: () => ["discord_protos.discord_surveys.v1.MaxDiffAnchor", eD, "MAX_DIFF_ANCHOR_"],
             },
         ]);
     }
@@ -2671,7 +2671,7 @@ class e8 extends m.G {
                 no: 1,
                 name: "status",
                 kind: "enum",
-                T: () => ["discord_protos.discord_surveys.v1.SessionStatus", eE, "SESSION_STATUS_"],
+                T: () => ["discord_protos.discord_surveys.v1.SessionStatus", eC, "SESSION_STATUS_"],
             },
             { no: 2, name: "page_id", kind: "scalar", T: 13 },
             { no: 3, name: "revision", kind: "scalar", T: 13 },
@@ -2680,7 +2680,7 @@ class e8 extends m.G {
             { no: 6, name: "conjoint", kind: "message", oneof: "content", T: () => nT },
             { no: 7, name: "maxdiff", kind: "message", oneof: "content", T: () => nW },
             { no: 8, name: "end_message", kind: "scalar", T: 9 },
-            { no: 9, name: "submitted_answers", kind: "message", repeat: 1, T: () => eP },
+            { no: 9, name: "submitted_answers", kind: "message", repeat: 1, T: () => eK },
             { no: 10, name: "errors", kind: "message", repeat: 1, T: () => nn },
         ]);
     }
@@ -2740,7 +2740,7 @@ class e8 extends m.G {
                     r.endMessage = e.string();
                     break;
                 case 9:
-                    r.submittedAnswers.push(eP.internalBinaryRead(e, e.uint32(), t));
+                    r.submittedAnswers.push(eK.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 10:
                     r.errors.push(nn.internalBinaryRead(e, e.uint32(), t));
@@ -2768,7 +2768,7 @@ class e8 extends m.G {
                 nW.internalBinaryWrite(e.content.maxdiff, n.tag(7, c.O0.LengthDelimited).fork(), t).join(),
             "" !== e.endMessage && n.tag(8, c.O0.LengthDelimited).string(e.endMessage));
         for (let i = 0; i < e.submittedAnswers.length; i++)
-            eP.internalBinaryWrite(e.submittedAnswers[i], n.tag(9, c.O0.LengthDelimited).fork(), t).join();
+            eK.internalBinaryWrite(e.submittedAnswers[i], n.tag(9, c.O0.LengthDelimited).fork(), t).join();
         for (let i = 0; i < e.errors.length; i++)
             nn.internalBinaryWrite(e.errors[i], n.tag(10, c.O0.LengthDelimited).fork(), t).join();
         let i = t.writeUnknownFields;
@@ -2832,7 +2832,7 @@ class ne extends m.G {
                 no: 5,
                 name: "code",
                 kind: "enum",
-                T: () => ["discord_protos.discord_surveys.v1.SubmitErrorCode", eC, "SUBMIT_ERROR_CODE_"],
+                T: () => ["discord_protos.discord_surveys.v1.SubmitErrorCode", eE, "SUBMIT_ERROR_CODE_"],
             },
             { no: 6, name: "message", kind: "scalar", T: 9 },
         ]);
@@ -2942,7 +2942,7 @@ class nr extends m.G {
             { no: 8, name: "free_text", kind: "message", oneof: "kind", T: () => ng },
             { no: 9, name: "scale", kind: "message", oneof: "kind", T: () => nk },
             { no: 10, name: "matrix", kind: "message", oneof: "kind", T: () => nw },
-            { no: 11, name: "info", kind: "message", oneof: "kind", T: () => nb },
+            { no: 11, name: "info", kind: "message", oneof: "kind", T: () => nx },
         ]);
     }
     create(e) {
@@ -3002,7 +3002,7 @@ class nr extends m.G {
                     r.kind = { oneofKind: "matrix", matrix: nw.internalBinaryRead(e, e.uint32(), t, r.kind.matrix) };
                     break;
                 case 11:
-                    r.kind = { oneofKind: "info", info: nb.internalBinaryRead(e, e.uint32(), t, r.kind.info) };
+                    r.kind = { oneofKind: "info", info: nx.internalBinaryRead(e, e.uint32(), t, r.kind.info) };
                     break;
                 default:
                     let a = t.readUnknownField;
@@ -3033,7 +3033,7 @@ class nr extends m.G {
             "matrix" === e.kind.oneofKind &&
                 nw.internalBinaryWrite(e.kind.matrix, n.tag(10, c.O0.LengthDelimited).fork(), t).join(),
             "info" === e.kind.oneofKind &&
-                nb.internalBinaryWrite(e.kind.info, n.tag(11, c.O0.LengthDelimited).fork(), t).join());
+                nx.internalBinaryWrite(e.kind.info, n.tag(11, c.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
@@ -3394,7 +3394,7 @@ class ny extends m.G {
     }
 }
 let nw = new ny();
-class nx extends m.G {
+class nb extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedInfoQuestion", []);
     }
@@ -3414,7 +3414,7 @@ class nx extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let nb = new nx();
+let nx = new nb();
 class nv extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedConjoint", [
@@ -3425,8 +3425,8 @@ class nv extends m.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_surveys.v1.ConjointDisplay", p, "CONJOINT_DISPLAY_"],
             },
-            { no: 3, name: "features", kind: "message", repeat: 1, T: () => nO },
-            { no: 4, name: "tasks", kind: "message", repeat: 1, T: () => nj },
+            { no: 3, name: "features", kind: "message", repeat: 1, T: () => nj },
+            { no: 4, name: "tasks", kind: "message", repeat: 1, T: () => nB },
             { no: 5, name: "include_none_option", kind: "scalar", T: 8 },
         ]);
     }
@@ -3451,10 +3451,10 @@ class nv extends m.G {
                     r.display = e.int32();
                     break;
                 case 3:
-                    r.features.push(nO.internalBinaryRead(e, e.uint32(), t));
+                    r.features.push(nj.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 4:
-                    r.tasks.push(nj.internalBinaryRead(e, e.uint32(), t));
+                    r.tasks.push(nB.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 5:
                     r.includeNoneOption = e.bool();
@@ -3473,16 +3473,16 @@ class nv extends m.G {
         ("" !== e.text && n.tag(1, c.O0.LengthDelimited).string(e.text),
             0 !== e.display && n.tag(2, c.O0.Varint).int32(e.display));
         for (let i = 0; i < e.features.length; i++)
-            nO.internalBinaryWrite(e.features[i], n.tag(3, c.O0.LengthDelimited).fork(), t).join();
+            nj.internalBinaryWrite(e.features[i], n.tag(3, c.O0.LengthDelimited).fork(), t).join();
         for (let i = 0; i < e.tasks.length; i++)
-            nj.internalBinaryWrite(e.tasks[i], n.tag(4, c.O0.LengthDelimited).fork(), t).join();
+            nB.internalBinaryWrite(e.tasks[i], n.tag(4, c.O0.LengthDelimited).fork(), t).join();
         !1 !== e.includeNoneOption && n.tag(5, c.O0.Varint).bool(e.includeNoneOption);
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
 let nT = new nv();
-class nI extends m.G {
+class n$ extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedConjointFeature", [
             { no: 1, name: "id", kind: "scalar", T: 13 },
@@ -3531,8 +3531,8 @@ class nI extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let nO = new nI();
-class n$ extends m.G {
+let nj = new n$();
+class nO extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedConjointTask", [
             { no: 1, name: "concepts", kind: "message", repeat: 1, T: () => nN },
@@ -3569,8 +3569,8 @@ class n$ extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let nj = new n$();
-class nB extends m.G {
+let nB = new nO();
+class nI extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedConjointConcept", [
             { no: 1, name: "label", kind: "scalar", T: 9 },
@@ -3615,7 +3615,7 @@ class nB extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let nN = new nB();
+let nN = new nI();
 class nR extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedConjointLevel", [
@@ -3677,7 +3677,7 @@ class nL extends m.G {
             { no: 1, name: "text", kind: "scalar", T: 9 },
             { no: 2, name: "most_label", kind: "scalar", T: 9 },
             { no: 3, name: "least_label", kind: "scalar", T: 9 },
-            { no: 4, name: "sets", kind: "message", repeat: 1, T: () => nU },
+            { no: 4, name: "sets", kind: "message", repeat: 1, T: () => nD },
             { no: 5, name: "anchor_question_text", kind: "scalar", T: 9 },
         ]);
     }
@@ -3705,7 +3705,7 @@ class nL extends m.G {
                     r.leastLabel = e.string();
                     break;
                 case 4:
-                    r.sets.push(nU.internalBinaryRead(e, e.uint32(), t));
+                    r.sets.push(nD.internalBinaryRead(e, e.uint32(), t));
                     break;
                 case 5:
                     r.anchorQuestionText = e.string();
@@ -3725,14 +3725,14 @@ class nL extends m.G {
             "" !== e.mostLabel && n.tag(2, c.O0.LengthDelimited).string(e.mostLabel),
             "" !== e.leastLabel && n.tag(3, c.O0.LengthDelimited).string(e.leastLabel));
         for (let i = 0; i < e.sets.length; i++)
-            nU.internalBinaryWrite(e.sets[i], n.tag(4, c.O0.LengthDelimited).fork(), t).join();
+            nD.internalBinaryWrite(e.sets[i], n.tag(4, c.O0.LengthDelimited).fork(), t).join();
         "" !== e.anchorQuestionText && n.tag(5, c.O0.LengthDelimited).string(e.anchorQuestionText);
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
 let nW = new nL();
-class nD extends m.G {
+class nU extends m.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedMaxDiffSet", [
             { no: 1, name: "items", kind: "message", repeat: 1, T: () => nu },
@@ -3769,11 +3769,11 @@ class nD extends m.G {
         return (!1 !== i && (!0 == i ? c.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let nU = new nD();
-var nE = t(691885),
-    nC = t(821609),
-    nF = t(834730);
-function nS(e) {
+let nD = new nU();
+var nC = t(691885),
+    nE = t(821609),
+    nS = t(834730);
+function nF(e) {
     let { kind: n } = e;
     switch (n.oneofKind) {
         case "conjoint":
@@ -3794,19 +3794,23 @@ function nS(e) {
             return 0;
     }
 }
-function nq(e, n) {
-    return e.answers.find((e) => nS(e) === n);
-}
-function nP(e) {
-    return eS.create({ pageId: e.pageId, revision: e.revision, answers: e.submittedAnswers });
+function nP(e, n) {
+    return e.answers.find((e) => nF(e) === n);
 }
 function nK(e) {
+    let n = e.errors.some((e) => {
+        let { code: n } = e;
+        return n === eE.STALE;
+    });
+    return eF.create({ pageId: e.pageId, revision: e.revision, answers: n ? [] : e.submittedAnswers });
+}
+function nq(e) {
     return Array.from(e).length;
 }
 var nV = t(911608),
-    nA = t(683071),
-    nG = t(95477),
-    nQ = t(771871),
+    nG = t(683071),
+    nQ = t(95477),
+    nA = t(771871),
     nM = t(150934),
     nX = t(140735),
     nz = t(873631),
@@ -3824,19 +3828,17 @@ function nJ(e, n) {
                       return t === e.questionId;
                   })?.kind
                 : void 0;
-    if (e.code === eC.STALE) return nZ.intl.string(nz.default.e1yaew);
-    if (e.code === eC.TOO_LONG && 0 === e.questionId) return nZ.intl.string(nz.default.TCLow1);
     if ("conjoint" === t.oneofKind) return nZ.intl.string(nz.default.BrvdvV);
     if ("maxdiff" === t.oneofKind) return nZ.intl.string(nz.default.soVhAf);
     switch (e.code) {
-        case eC.REQUIRED:
+        case eE.REQUIRED:
             if (0 !== e.choiceId) return nZ.intl.string(nz.default.vYs6bp);
             return nZ.intl.string(0 !== e.rowId ? nz.default.LkpNt8 : nz.default.S0yew2);
-        case eC.TOO_LONG:
+        case eE.TOO_LONG:
             return nZ.intl.string(nz.default.UvbGfF);
-        case eC.TOO_FEW:
-        case eC.TOO_MANY: {
-            let n = e.code === eC.TOO_FEW;
+        case eE.TOO_FEW:
+        case eE.TOO_MANY: {
+            let n = e.code === eE.TOO_FEW;
             if (i?.oneofKind === "rank")
                 return nZ.intl.formatToPlainString(nz.default["3ncMZW"], {
                     count: i.rank.rankTop?.value ?? i.rank.choices.length,
@@ -3846,19 +3848,9 @@ function nJ(e, n) {
                 if (null != e)
                     return nZ.intl.formatToPlainString(n ? nz.default.BE1zNg : nz.default.WapWNF, { count: e.value });
             }
-            if (i?.oneofKind === "singleChoice" || i?.oneofKind === "dropdown")
-                return nZ.intl.string(nz.default.GDQLtv);
             return nZ.intl.string(nz.default["6vETgO"]);
         }
         default:
-            if (
-                i?.oneofKind === "multiChoice" &&
-                i.multiChoice.choices.some((n) => {
-                    let { id: t, exclusive: i } = n;
-                    return i && t === e.choiceId;
-                })
-            )
-                return nZ.intl.string(nz.default.uai7DF);
             return nZ.intl.string(nz.default["6vETgO"]);
     }
 }
@@ -3878,7 +3870,7 @@ function n1(e) {
         "aria-describedby": d.length > 0 ? o : void 0,
         "aria-invalid": i.length > 0 || void 0,
         children: [
-            (0, l.jsxs)(nF.E, {
+            (0, l.jsxs)(nS.E, {
                 id: a,
                 variant: "body-md/semibold",
                 color: "text-strong",
@@ -3894,10 +3886,10 @@ function n1(e) {
                         }),
                 ],
             }),
-            null != t && "" !== t && (0, l.jsx)(nF.E, { variant: "body-sm/normal", color: "text-muted", children: t }),
+            null != t && "" !== t && (0, l.jsx)(nS.E, { variant: "body-sm/normal", color: "text-muted", children: t }),
             s,
             d.length > 0 &&
-                (0, l.jsx)(nF.E, {
+                (0, l.jsx)(nS.E, {
                     id: o,
                     variant: "body-sm/medium",
                     color: "text-feedback-critical",
@@ -3929,7 +3921,7 @@ function n3(e) {
             "div",
             {
                 className: "dropdown" === u ? void 0 : n0.Vq,
-                children: (0, l.jsx)(nG.k, {
+                children: (0, l.jsx)(nQ.k, {
                     label: nZ.intl.formatToPlainString(nz.default.Q2yZXD, { choice: e.text }),
                     value: m[e.id] ?? "",
                     onChange: (n) => {
@@ -3963,7 +3955,7 @@ function n3(e) {
     if ("single" === u)
         n = (0, l.jsx)("div", {
             className: n0.R$,
-            children: (0, l.jsx)(nQ.z, {
+            children: (0, l.jsx)(nA.z, {
                 "aria-labelledby": c,
                 options: i.choices.map((e) => ({ name: e.text, value: e.id })),
                 value: h[0] ?? null,
@@ -3971,7 +3963,7 @@ function n3(e) {
             }),
         });
     else if ("dropdown" === u)
-        n = (0, l.jsx)(nE.l, {
+        n = (0, l.jsx)(nC.l, {
             label: t.text,
             hideLabel: !0,
             selectionMode: "single",
@@ -4085,7 +4077,7 @@ function n5(e) {
         className: n0.Cz,
         children: [
             "" !== t.text &&
-                (0, l.jsx)(nF.E, {
+                (0, l.jsx)(nS.E, {
                     variant: "body-md/semibold",
                     color: "text-strong",
                     children: (0, l.jsx)("span", { dir: "auto", children: t.text }),
@@ -4103,7 +4095,7 @@ function n5(e) {
                             role: "radiogroup",
                             "aria-labelledby": d,
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     id: d,
                                     variant: "body-sm/semibold",
                                     color: "text-muted",
@@ -4137,7 +4129,7 @@ function n5(e) {
                                                         htmlFor: `${r}-${n}`,
                                                         className: n0.RM,
                                                         children: [
-                                                            (0, l.jsx)(nF.E, {
+                                                            (0, l.jsx)(nS.E, {
                                                                 variant: "body-md/semibold",
                                                                 color: "text-strong",
                                                                 children: (0, l.jsx)("span", {
@@ -4150,7 +4142,7 @@ function n5(e) {
                                                                     "div",
                                                                     {
                                                                         children: [
-                                                                            (0, l.jsx)(nF.E, {
+                                                                            (0, l.jsx)(nS.E, {
                                                                                 variant: "body-xs/normal",
                                                                                 color: "text-muted",
                                                                                 children: (0, l.jsx)("span", {
@@ -4190,7 +4182,7 @@ function n5(e) {
                                             (0, l.jsx)("label", {
                                                 htmlFor: `${r}-none`,
                                                 className: n0.W8,
-                                                children: (0, l.jsx)(nF.E, {
+                                                children: (0, l.jsx)(nS.E, {
                                                     variant: "body-md/medium",
                                                     color: "currentColor",
                                                     children: nZ.intl.string(nz.default.WwU3lH),
@@ -4215,7 +4207,7 @@ function n6(e) {
         className: n0.wK,
         children: [
             (0, l.jsx)("input", { className: n0.aF, type: "radio", name: n, checked: i, onChange: r }),
-            (0, l.jsx)(nQ.T, { checked: i, disabled: !1 }),
+            (0, l.jsx)(nA.T, { checked: i, disabled: !1 }),
             (0, l.jsx)(nX.A, { children: t }),
         ],
     });
@@ -4263,7 +4255,7 @@ function n7(e) {
                                             children: [
                                                 (0, l.jsx)("span", { dir: "auto", children: e.text }),
                                                 null != i &&
-                                                    (0, l.jsx)(nF.E, {
+                                                    (0, l.jsx)(nS.E, {
                                                         id: c,
                                                         variant: "body-xs/medium",
                                                         color: "text-feedback-critical",
@@ -4321,13 +4313,13 @@ function tn(e) {
     let { pageId: n, maxdiff: t, answer: i, onChange: r } = e,
         { sets: a, mostLabel: o, leastLabel: s, anchorQuestionText: d } = t,
         c = a.map((e, n) => i?.picksPerSet[n] ?? te),
-        u = i?.anchor ?? eU.UNSPECIFIED,
+        u = i?.anchor ?? eD.UNSPECIFIED,
         h = `native-survey-maxdiff-${n}-anchor`;
     return (0, l.jsxs)("div", {
         className: n0.Cz,
         children: [
             "" !== t.text &&
-                (0, l.jsx)(nF.E, {
+                (0, l.jsx)(nS.E, {
                     variant: "body-md/semibold",
                     color: "text-strong",
                     children: (0, l.jsx)("span", { dir: "auto", children: t.text }),
@@ -4360,7 +4352,7 @@ function tn(e) {
                                 "aria-labelledby": `${h}-heading`,
                                 children: [
                                     a.length > 1
-                                        ? (0, l.jsx)(nF.E, {
+                                        ? (0, l.jsx)(nS.E, {
                                               id: `${h}-heading`,
                                               variant: "body-sm/semibold",
                                               color: "text-muted",
@@ -4440,7 +4432,7 @@ function tn(e) {
                         (0, l.jsxs)("section", {
                             className: n0._W,
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     id: h,
                                     variant: "body-md/semibold",
                                     color: "text-strong",
@@ -4448,13 +4440,13 @@ function tn(e) {
                                 }),
                                 (0, l.jsx)("div", {
                                     className: n0.R$,
-                                    children: (0, l.jsx)(nQ.z, {
+                                    children: (0, l.jsx)(nA.z, {
                                         "aria-labelledby": h,
-                                        value: u === eU.UNSPECIFIED ? null : u,
+                                        value: u === eD.UNSPECIFIED ? null : u,
                                         options: [
-                                            { name: nZ.intl.string(nz.default["3XYsdu"]), value: eU.ALL },
-                                            { name: nZ.intl.string(nz.default.LRkHAo), value: eU.SOME },
-                                            { name: nZ.intl.string(nz.default.EcbOOg), value: eU.NONE },
+                                            { name: nZ.intl.string(nz.default["3XYsdu"]), value: eD.ALL },
+                                            { name: nZ.intl.string(nz.default.LRkHAo), value: eD.SOME },
+                                            { name: nZ.intl.string(nz.default.EcbOOg), value: eD.NONE },
                                         ],
                                         onChange: (e) => r({ pageId: n, picksPerSet: c, anchor: e }),
                                     }),
@@ -4533,7 +4525,7 @@ function tm(e) {
         className: n9()(n0.IL, { [n0.ho]: u, [n0.ne]: "before" === f, [n0.O3]: "after" === f }),
         children: [
             (0, l.jsx)(th, { drag: h, text: t.text, hintId: o }),
-            (0, l.jsx)(nF.E, {
+            (0, l.jsx)(nS.E, {
                 variant: "body-md/semibold",
                 color: "text-strong",
                 className: n0.mW,
@@ -4576,7 +4568,7 @@ function tf(e) {
         children: [
             (0, l.jsx)(th, { drag: s, text: t.text, hintId: r }),
             (0, l.jsx)("span", { className: n0.n4, dir: "auto", children: t.text }),
-            (0, l.jsx)(nC.$, {
+            (0, l.jsx)(nE.$, {
                 size: "sm",
                 variant: "primary",
                 text: nZ.intl.string(nz.default.ShDjDb),
@@ -4638,13 +4630,13 @@ function tg(e) {
                         },
                         className: n9()(n0.QY, n0.KQ, { [n0.yz]: f.active, [n0.eE]: f.refused }),
                         children: [
-                            (0, l.jsx)(nF.E, {
+                            (0, l.jsx)(nS.E, {
                                 variant: "body-sm/semibold",
                                 color: "text-default",
                                 children: nZ.intl.string(nz.default["kS/htE"]),
                             }),
                             0 === a.length
-                                ? (0, l.jsx)(nF.E, {
+                                ? (0, l.jsx)(nS.E, {
                                       variant: "body-sm/normal",
                                       color: "text-muted",
                                       className: n0.IF,
@@ -4681,7 +4673,7 @@ function tg(e) {
                                       }),
                                   }),
                             f.refused &&
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     variant: "body-sm/medium",
                                     color: "text-feedback-critical",
                                     role: "status",
@@ -4696,13 +4688,13 @@ function tg(e) {
                             },
                             className: n9()(n0.QY, n0.KQ, { [n0.yz]: p.active }),
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-default",
                                     children: nZ.intl.string(nz.default["+WjZ1W"]),
                                 }),
                                 0 === c.length
-                                    ? (0, l.jsx)(nF.E, {
+                                    ? (0, l.jsx)(nS.E, {
                                           variant: "body-sm/normal",
                                           color: "text-muted",
                                           className: n0.IF,
@@ -4777,7 +4769,7 @@ function tp(e) {
                                         (0, l.jsx)("label", {
                                             htmlFor: h,
                                             className: n0.W8,
-                                            children: (0, l.jsx)(nF.E, {
+                                            children: (0, l.jsx)(nS.E, {
                                                 variant: "body-md/medium",
                                                 color: "currentColor",
                                                 children: e,
@@ -4793,13 +4785,13 @@ function tp(e) {
                         (0, l.jsxs)("div", {
                             className: n0.YK,
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     id: d,
                                     variant: "body-xs/normal",
                                     color: "text-muted",
                                     children: (0, l.jsx)("span", { dir: "auto", children: t.minLabel }),
                                 }),
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     id: c,
                                     variant: "body-xs/normal",
                                     color: "text-muted",
@@ -4838,7 +4830,7 @@ function ty(e) {
                       rows: 4,
                       inputRef: c,
                   })
-                : (0, l.jsx)(nG.k, {
+                : (0, l.jsx)(nQ.k, {
                       "aria-labelledby": a,
                       value: o,
                       onChange: u,
@@ -4906,7 +4898,7 @@ function tw(e) {
             return null;
     }
 }
-function tx(e) {
+function tb(e) {
     let { page: n, request: t, onRequestChange: i, errors: r, onSubmit: a, submitting: o } = e,
         { content: s, pageId: c, progress: u } = n;
     if (
@@ -4918,11 +4910,11 @@ function tx(e) {
             });
             document.getElementById(null != e ? nY(e.questionId) : nH)?.focus();
         }, [r]),
-        n.status === eE.COMPLETE || n.status === eE.ENDED)
+        n.status === eC.COMPLETE || n.status === eC.ENDED)
     )
         return (0, l.jsx)("div", {
             className: n0.MY,
-            children: (0, l.jsx)(nF.E, {
+            children: (0, l.jsx)(nS.E, {
                 variant: "body-md/normal",
                 color: "text-default",
                 children: (0, l.jsx)("span", { dir: "auto", children: n.endMessage }),
@@ -4930,13 +4922,13 @@ function tx(e) {
         });
     function h(e, n) {
         let r;
-        i(((r = t.answers.filter((n) => nS(n) !== e)), { ...t, answers: null != n ? [...r, n] : r }));
+        i(((r = t.answers.filter((n) => nF(n) !== e)), { ...t, answers: null != n ? [...r, n] : r }));
     }
-    let m = r.filter((e) => {
+    let m = r.find((e) => {
             let { questionId: n } = e;
             return 0 === n;
         }),
-        f = nq(t, c)?.kind,
+        f = nP(t, c)?.kind,
         g = (u?.pageIndex ?? 0) + 1,
         p = Math.max(u?.estimatedPageCount ?? 1, g),
         k = nZ.intl.formatToPlainString(nz.default.onSd4S, { current: g, total: p });
@@ -4949,12 +4941,14 @@ function tx(e) {
                 (0, l.jsx)("div", {
                     id: nH,
                     tabIndex: -1,
-                    children: (0, l.jsx)(nA.w, {
+                    children: (0, l.jsx)(nG.w, {
                         type: "critical",
                         role: "alert",
                         message:
-                            m.length > 0
-                                ? m.map((e) => nJ(e, n)).join(" ")
+                            null != m
+                                ? "" !== m.message
+                                    ? m.message
+                                    : nJ(m, n)
                                 : nZ.intl.formatToPlainString(nz.default.HwqwCr, { count: r.length }),
                     }),
                 }),
@@ -4964,7 +4958,7 @@ function tx(e) {
                         tw,
                         {
                             question: e,
-                            answer: nq(t, e.id),
+                            answer: nP(t, e.id),
                             errors: r.filter((n) => {
                                 let { questionId: t } = n;
                                 return t === e.id;
@@ -4995,7 +4989,7 @@ function tx(e) {
                 }),
             (0, l.jsx)("div", {
                 className: n0.qr,
-                children: (0, l.jsx)(nC.$, {
+                children: (0, l.jsx)(nE.$, {
                     variant: "primary",
                     text: nZ.intl.string(
                         !(function (e) {
@@ -5012,444 +5006,330 @@ function tx(e) {
         ],
     });
 }
-function tb(e, n, t, i) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-    return { id: e, name: n, errors: [nn.create({ pageId: 10, code: t, message: i, ...r })] };
-}
-let tv = tb("required", "REQUIRED: no answer", eC.REQUIRED, "This question is required.", { questionId: 11 });
-function tT(e) {
+function tx(e) {
     return e9.create({
-        status: eE.IN_PROGRESS,
+        status: eC.IN_PROGRESS,
         pageId: 10,
         revision: 1,
         progress: { pageIndex: 0, estimatedPageCount: 1 },
         content: { oneofKind: "questions", questions: { questions: [na.create({ id: 11, required: !0, ...e })] } },
     });
 }
-function tI(e, n) {
+function tv(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return nd.create({ id: e, text: n, ...t });
 }
-let tO = [tI(14, "Minecraft"), tI(12, "Fortnite"), tI(15, "Valorant"), tI(13, "League of Legends")],
-    t$ = tb("unknown-choice", "INVALID: a choice that wasn\u2019t shown", eC.INVALID, "Unknown choice.", {
-        questionId: 11,
-        choiceId: 99,
-    }),
-    tj = tb("one-choice", "TOO_MANY: more than one choice", eC.TOO_MANY, "Select one choice.", { questionId: 11 });
-function tB(e, n) {
+function tT(e, n) {
     return n_.create({ text: e, imageUrl: n?.url ?? "", imageAltText: n?.alt ?? "" });
 }
-function tN(e) {
+function t$(e) {
     return n_.create({ text: `$${e}`, price: { value: e } });
 }
-let tR = [
-        tb("conjoint-required", "REQUIRED: no option chosen", eC.REQUIRED, "Choose an option in every task."),
-        tb("conjoint-unknown", "INVALID: an option that wasn\u2019t shown", eC.INVALID, "Unknown option."),
-    ],
-    t_ = [
-        {
-            id: "single-choice",
-            name: "Single choice",
-            page: tT({
-                text: "Which game do you play most on Discord?",
-                kind: { oneofKind: "singleChoice", singleChoice: { choices: tO } },
-            }),
-            serverErrors: [tv, t$, tj],
-        },
-        {
-            id: "dropdown",
-            name: "Dropdown",
-            page: tT({
-                text: "Where do you live?",
-                kind: {
-                    oneofKind: "dropdown",
-                    dropdown: {
-                        choices: [
-                            tI(21, "Brazil"),
-                            tI(22, "Canada"),
-                            tI(23, "Germany"),
-                            tI(24, "India"),
-                            tI(25, "Japan"),
-                            tI(26, "United States"),
-                        ],
-                    },
+let tj = [
+    {
+        id: "single-choice",
+        name: "Single choice",
+        page: tx({
+            text: "Which game do you play most on Discord?",
+            kind: {
+                oneofKind: "singleChoice",
+                singleChoice: {
+                    choices: [tv(14, "Minecraft"), tv(12, "Fortnite"), tv(15, "Valorant"), tv(13, "League of Legends")],
                 },
-            }),
-            serverErrors: [tv, t$, tj],
-        },
-        {
-            id: "multi-choice",
-            name: "Multiple choice (1 to 3, with an exclusive choice)",
-            page: tT({
-                text: "Which of these have you used in the last month?",
-                kind: {
-                    oneofKind: "multiChoice",
-                    multiChoice: {
-                        choices: [
-                            tI(33, "Voice channels"),
-                            tI(31, "Stage channels"),
-                            tI(34, "Screen share"),
-                            tI(32, "Activities"),
-                            tI(36, "None of these", { exclusive: !0 }),
-                        ],
-                        minSelected: { value: 1 },
-                        maxSelected: { value: 3 },
-                    },
+            },
+        }),
+    },
+    {
+        id: "dropdown",
+        name: "Dropdown",
+        page: tx({
+            text: "Where do you live?",
+            kind: {
+                oneofKind: "dropdown",
+                dropdown: {
+                    choices: [
+                        tv(21, "Brazil"),
+                        tv(22, "Canada"),
+                        tv(23, "Germany"),
+                        tv(24, "India"),
+                        tv(25, "Japan"),
+                        tv(26, "United States"),
+                    ],
                 },
-            }),
-            serverErrors: [
-                tv,
-                tb("too-few", "TOO_FEW: fewer than the minimum", eC.TOO_FEW, "Select at least 1.", { questionId: 11 }),
-                tb("too-many", "TOO_MANY: more than the maximum", eC.TOO_MANY, "Select at most 3.", { questionId: 11 }),
-                tb(
-                    "exclusive",
-                    "INVALID: the exclusive choice combined with others",
-                    eC.INVALID,
-                    "This choice can\u2019t be combined with others.",
-                    { questionId: 11, choiceId: 36 },
-                ),
-                tb("twice", "INVALID: a choice selected twice", eC.INVALID, "Choice selected twice.", {
-                    questionId: 11,
+            },
+        }),
+    },
+    {
+        id: "multi-choice",
+        name: "Multiple choice (1 to 3, with an exclusive choice)",
+        page: tx({
+            text: "Which of these have you used in the last month?",
+            kind: {
+                oneofKind: "multiChoice",
+                multiChoice: {
+                    choices: [
+                        tv(33, "Voice channels"),
+                        tv(31, "Stage channels"),
+                        tv(34, "Screen share"),
+                        tv(32, "Activities"),
+                        tv(36, "None of these", { exclusive: !0 }),
+                    ],
+                    minSelected: { value: 1 },
+                    maxSelected: { value: 3 },
+                },
+            },
+        }),
+    },
+    {
+        id: "choice-other",
+        name: "Multiple choice with \u201COther\u201D text",
+        page: tx({
+            text: "How did you hear about Discord?",
+            kind: {
+                oneofKind: "multiChoice",
+                multiChoice: {
+                    choices: [
+                        tv(41, "A friend"),
+                        tv(44, "Other", { allowText: !0, textMaxLength: { value: 80 } }),
+                        tv(42, "A game"),
+                        tv(43, "Social media"),
+                    ],
+                },
+            },
+        }),
+    },
+    {
+        id: "rank",
+        name: "Rank (top 3 of 5)",
+        page: tx({
+            text: "Rank the three things you\u2019d most like us to improve.",
+            kind: {
+                oneofKind: "rank",
+                rank: {
+                    choices: [
+                        { id: 53, text: "Voice quality" },
+                        { id: 51, text: "Notifications" },
+                        { id: 55, text: "Search" },
+                        { id: 52, text: "Server discovery" },
+                        { id: 54, text: "Mobile app speed" },
+                    ],
+                    rankTop: { value: 3 },
+                },
+            },
+        }),
+    },
+    {
+        id: "matrix",
+        name: "Matrix",
+        page: tx({
+            text: "How satisfied are you with each of these?",
+            kind: {
+                oneofKind: "matrix",
+                matrix: {
+                    rows: [
+                        { id: 61, text: "Text chat" },
+                        { id: 62, text: "Voice chat" },
+                        { id: 63, text: "Video calls" },
+                        { id: 64, text: "Screen share" },
+                    ],
+                    scale: [
+                        { id: 81, text: "Very dissatisfied" },
+                        { id: 82, text: "Dissatisfied" },
+                        { id: 83, text: "Neutral" },
+                        { id: 84, text: "Satisfied" },
+                        { id: 85, text: "Very satisfied" },
+                    ],
+                },
+            },
+        }),
+    },
+    {
+        id: "scale",
+        name: "Scale (1 to 5)",
+        page: tx({
+            text: "How easy was it to find what you were looking for?",
+            kind: {
+                oneofKind: "scale",
+                scale: { minValue: 1, maxValue: 5, minLabel: "Very hard", maxLabel: "Very easy", nps: !1 },
+            },
+        }),
+    },
+    {
+        id: "nps",
+        name: "NPS (0 to 10)",
+        page: tx({
+            text: "How likely are you to recommend Discord to a friend?",
+            kind: {
+                oneofKind: "scale",
+                scale: {
+                    minValue: 0,
+                    maxValue: 10,
+                    minLabel: "Not at all likely",
+                    maxLabel: "Extremely likely",
+                    nps: !0,
+                },
+            },
+        }),
+    },
+    {
+        id: "text-single",
+        name: "Text, single line",
+        page: tx({
+            text: "What do your friends call your squad?",
+            kind: { oneofKind: "freeText", freeText: { multiline: !1, maxLength: { value: 300 } } },
+        }),
+    },
+    {
+        id: "text-multi",
+        name: "Text, multi-line",
+        page: tx({
+            text: "Anything else you\u2019d like to tell us?",
+            kind: { oneofKind: "freeText", freeText: { multiline: !0, maxLength: { value: 300 } } },
+        }),
+    },
+    {
+        id: "info",
+        name: "Info text",
+        page: tx({
+            text: "Thanks for helping make Discord better. The next questions are about voice chat.",
+            required: !1,
+            kind: { oneofKind: "info", info: {} },
+        }),
+    },
+    {
+        id: "conjoint",
+        name: "Conjoint",
+        page: e9.create({
+            status: eC.IN_PROGRESS,
+            pageId: 10,
+            revision: 1,
+            progress: { pageIndex: 0, estimatedPageCount: 1 },
+            content: {
+                oneofKind: "conjoint",
+                conjoint: nT.create({
+                    text: "Which of these plans would you pick?",
+                    features: [
+                        { id: 200, label: "Plan", priceCurrency: "" },
+                        { id: 210, label: "Perk", priceCurrency: "" },
+                        { id: 220, label: "Monthly price", priceCurrency: "USD" },
+                    ],
+                    includeNoneOption: !0,
+                    tasks: [
+                        {
+                            concepts: [
+                                {
+                                    label: "Plan 1",
+                                    levels: [
+                                        tT("Basic"),
+                                        tT("Animated avatar", {
+                                            url: "https://cdn.discordapp.com/embed/avatars/0.png",
+                                            alt: "A blue Discord avatar",
+                                        }),
+                                        t$(2.99),
+                                    ],
+                                },
+                                {
+                                    label: "Plan 2",
+                                    levels: [
+                                        tT("Full"),
+                                        tT("Custom profile theme", {
+                                            url: "https://cdn.discordapp.com/embed/avatars/1.png",
+                                            alt: "A grey Discord avatar",
+                                        }),
+                                        t$(9.99),
+                                    ],
+                                },
+                                { label: "Plan 3", levels: [tT("Basic"), tT("Bigger uploads"), t$(4.99)] },
+                            ],
+                        },
+                    ],
                 }),
-            ],
-        },
-        {
-            id: "choice-other",
-            name: "Multiple choice with \u201COther\u201D text",
-            page: tT({
-                text: "How did you hear about Discord?",
-                kind: {
-                    oneofKind: "multiChoice",
-                    multiChoice: {
-                        choices: [
-                            tI(41, "A friend"),
-                            tI(44, "Other", { allowText: !0, textMaxLength: { value: 80 } }),
-                            tI(42, "A game"),
-                            tI(43, "Social media"),
-                        ],
-                    },
+            },
+        }),
+    },
+    {
+        id: "maxdiff",
+        name: "MaxDiff",
+        page: e9.create({
+            status: eC.IN_PROGRESS,
+            pageId: 10,
+            revision: 1,
+            progress: { pageIndex: 0, estimatedPageCount: 1 },
+            content: {
+                oneofKind: "maxdiff",
+                maxdiff: {
+                    text: "Which of these matter most and least to you?",
+                    mostLabel: "Most important",
+                    leastLabel: "Least important",
+                    sets: [
+                        {
+                            items: [
+                                { id: 401, text: "Faster app start" },
+                                { id: 402, text: "Better noise suppression" },
+                                { id: 403, text: "More emoji slots" },
+                                { id: 404, text: "Message scheduling" },
+                            ],
+                        },
+                    ],
+                    anchorQuestionText: "How many of these would you actually use?",
                 },
-            }),
-            serverErrors: [
-                tv,
-                tb("choice-text-too-long", "TOO_LONG: the \u201COther\u201D text", eC.TOO_LONG, "Text is too long.", {
-                    questionId: 11,
-                    choiceId: 44,
-                }),
-                tb(
-                    "text-for-plain-choice",
-                    "INVALID: text for a choice that takes none",
-                    eC.INVALID,
-                    "Text for a choice that takes none.",
-                    { questionId: 11, choiceId: 41 },
-                ),
-            ],
-        },
-        {
-            id: "rank",
-            name: "Rank (top 3 of 5)",
-            page: tT({
-                text: "Rank the three things you\u2019d most like us to improve.",
-                kind: {
-                    oneofKind: "rank",
-                    rank: {
-                        choices: [
-                            { id: 53, text: "Voice quality" },
-                            { id: 51, text: "Notifications" },
-                            { id: 55, text: "Search" },
-                            { id: 52, text: "Server discovery" },
-                            { id: 54, text: "Mobile app speed" },
-                        ],
-                        rankTop: { value: 3 },
-                    },
-                },
-            }),
-            serverErrors: [
-                tv,
-                tb("rank-too-few", "TOO_FEW: fewer than 3 ranked", eC.TOO_FEW, "Rank 3 choices.", { questionId: 11 }),
-                tb(
-                    "rank-invalid",
-                    "INVALID: a choice ranked twice or not shown",
-                    eC.INVALID,
-                    "Rank each choice once.",
-                    { questionId: 11 },
-                ),
-            ],
-        },
-        {
-            id: "matrix",
-            name: "Matrix",
-            page: tT({
-                text: "How satisfied are you with each of these?",
-                kind: {
-                    oneofKind: "matrix",
-                    matrix: {
-                        rows: [
-                            { id: 61, text: "Text chat" },
-                            { id: 62, text: "Voice chat" },
-                            { id: 63, text: "Video calls" },
-                            { id: 64, text: "Screen share" },
-                        ],
-                        scale: [
-                            { id: 81, text: "Very dissatisfied" },
-                            { id: 82, text: "Dissatisfied" },
-                            { id: 83, text: "Neutral" },
-                            { id: 84, text: "Satisfied" },
-                            { id: 85, text: "Very satisfied" },
-                        ],
-                    },
-                },
-            }),
-            serverErrors: [
-                tv,
-                tb("row-missing", "REQUIRED: a row left out", eC.REQUIRED, "Answer every row.", {
-                    questionId: 11,
-                    rowId: 62,
-                }),
-                tb(
-                    "unknown-point",
-                    "INVALID: a scale point that wasn\u2019t shown",
-                    eC.INVALID,
-                    "Unknown scale point.",
-                    { questionId: 11, rowId: 63, choiceId: 99 },
-                ),
-                tb(
-                    "unknown-row",
-                    "INVALID: a row that wasn\u2019t shown, or one answered twice",
-                    eC.INVALID,
-                    "Unknown or repeated row.",
-                    { questionId: 11, rowId: 99 },
-                ),
-            ],
-        },
-        {
-            id: "scale",
-            name: "Scale (1 to 5)",
-            page: tT({
-                text: "How easy was it to find what you were looking for?",
-                kind: {
-                    oneofKind: "scale",
-                    scale: { minValue: 1, maxValue: 5, minLabel: "Very hard", maxLabel: "Very easy", nps: !1 },
-                },
-            }),
-            serverErrors: [
-                tv,
-                tb("out-of-range", "INVALID: a value outside the scale", eC.INVALID, "Value is out of range.", {
-                    questionId: 11,
-                }),
-            ],
-        },
-        {
-            id: "nps",
-            name: "NPS (0 to 10)",
-            page: tT({
-                text: "How likely are you to recommend Discord to a friend?",
-                kind: {
-                    oneofKind: "scale",
-                    scale: {
-                        minValue: 0,
-                        maxValue: 10,
-                        minLabel: "Not at all likely",
-                        maxLabel: "Extremely likely",
-                        nps: !0,
-                    },
-                },
-            }),
-            serverErrors: [
-                tv,
-                tb("out-of-range", "INVALID: a value outside the scale", eC.INVALID, "Value is out of range.", {
-                    questionId: 11,
-                }),
-            ],
-        },
-        {
-            id: "text-single",
-            name: "Text, single line",
-            page: tT({
-                text: "What do your friends call your squad?",
-                kind: { oneofKind: "freeText", freeText: { multiline: !1, maxLength: { value: 300 } } },
-            }),
-            serverErrors: [
-                tv,
-                tb("text-too-long", "TOO_LONG: over the length limit", eC.TOO_LONG, "Text is too long.", {
-                    questionId: 11,
-                }),
-            ],
-        },
-        {
-            id: "text-multi",
-            name: "Text, multi-line",
-            page: tT({
-                text: "Anything else you\u2019d like to tell us?",
-                kind: { oneofKind: "freeText", freeText: { multiline: !0, maxLength: { value: 300 } } },
-            }),
-            serverErrors: [
-                tv,
-                tb("text-too-long", "TOO_LONG: over the length limit", eC.TOO_LONG, "Text is too long.", {
-                    questionId: 11,
-                }),
-            ],
-        },
-        {
-            id: "info",
-            name: "Info text",
-            page: tT({
-                text: "Thanks for helping make Discord better. The next questions are about voice chat.",
-                required: !1,
-                kind: { oneofKind: "info", info: {} },
-            }),
-            serverErrors: [
-                tb("info-answered", "INVALID: an answer for info text", eC.INVALID, "Wrong answer type.", {
-                    questionId: 11,
-                }),
-            ],
-        },
-        {
-            id: "conjoint",
-            name: "Conjoint",
-            page: e9.create({
-                status: eE.IN_PROGRESS,
-                pageId: 10,
-                revision: 1,
-                progress: { pageIndex: 0, estimatedPageCount: 1 },
-                content: {
-                    oneofKind: "conjoint",
-                    conjoint: nT.create({
-                        text: "Which of these plans would you pick?",
-                        features: [
-                            { id: 200, label: "Plan", priceCurrency: "" },
-                            { id: 210, label: "Perk", priceCurrency: "" },
-                            { id: 220, label: "Monthly price", priceCurrency: "USD" },
-                        ],
-                        includeNoneOption: !0,
-                        tasks: [
-                            {
-                                concepts: [
-                                    {
-                                        label: "Plan 1",
-                                        levels: [
-                                            tB("Basic"),
-                                            tB("Animated avatar", {
-                                                url: "https://cdn.discordapp.com/embed/avatars/0.png",
-                                                alt: "A blue Discord avatar",
-                                            }),
-                                            tN(2.99),
-                                        ],
-                                    },
-                                    {
-                                        label: "Plan 2",
-                                        levels: [
-                                            tB("Full"),
-                                            tB("Custom profile theme", {
-                                                url: "https://cdn.discordapp.com/embed/avatars/1.png",
-                                                alt: "A grey Discord avatar",
-                                            }),
-                                            tN(9.99),
-                                        ],
-                                    },
-                                    { label: "Plan 3", levels: [tB("Basic"), tB("Bigger uploads"), tN(4.99)] },
-                                ],
-                            },
-                        ],
-                    }),
-                },
-            }),
-            serverErrors: tR,
-        },
-        {
-            id: "maxdiff",
-            name: "MaxDiff",
-            page: e9.create({
-                status: eE.IN_PROGRESS,
-                pageId: 10,
-                revision: 1,
-                progress: { pageIndex: 0, estimatedPageCount: 1 },
-                content: {
-                    oneofKind: "maxdiff",
-                    maxdiff: {
-                        text: "Which of these matter most and least to you?",
-                        mostLabel: "Most important",
-                        leastLabel: "Least important",
-                        sets: [
-                            {
-                                items: [
-                                    { id: 401, text: "Faster app start" },
-                                    { id: 402, text: "Better noise suppression" },
-                                    { id: 403, text: "More emoji slots" },
-                                    { id: 404, text: "Message scheduling" },
-                                ],
-                            },
-                        ],
-                        anchorQuestionText: "How many of these would you actually use?",
-                    },
-                },
-            }),
-            serverErrors: [
-                tb("maxdiff-required", "REQUIRED: the set isn\u2019t answered", eC.REQUIRED, "Answer every set."),
-                tb(
-                    "maxdiff-same-item",
-                    "INVALID: the same item for most and least",
-                    eC.INVALID,
-                    "Pick two different items from the set.",
-                ),
-                tb(
-                    "maxdiff-anchor",
-                    "REQUIRED: the follow-up question isn\u2019t answered",
-                    eC.REQUIRED,
-                    "Answer the follow-up question.",
-                ),
-            ],
-        },
-    ];
-var tL = t(52479);
-let tW = "none";
-function tD(e) {
+            },
+        }),
+    },
+];
+var tO = t(52479);
+let tB = "none";
+function tI(e) {
     return JSON.stringify(e, null, 2);
 }
-function tU(e) {
+function tN(e) {
     let { questionId: n, rowId: t, choiceId: i, code: r } = e,
         a = [0 !== n ? `question ${n}` : "page", 0 !== t ? `row ${t}` : null, 0 !== i ? `choice ${i}` : null]
             .filter((e) => null != e)
             .join(", ");
-    return `${eC[r]} on ${a}`;
+    return `${eE[r]} on ${a}`;
 }
-function tE(e) {
-    var n;
-    let { fixture: t } = e,
-        [i, r] = d.useState(t.page),
-        [a, o] = d.useState(() => nP(t.page)),
-        [s, c] = d.useState([]),
-        [u, h] = d.useState(tW),
-        [m, f] = d.useState(null),
-        [g, p] = d.useState(0),
-        k = [
-            ...t.serverErrors,
-            ...((n = t.page),
-            [
+function tR(e) {
+    let { fixture: n } = e,
+        [t, i] = d.useState(n.page),
+        [r, a] = d.useState(() => nK(n.page)),
+        [o, s] = d.useState([]),
+        [c, u] = d.useState(tB),
+        [h, m] = d.useState(null),
+        [f, g] = d.useState(0),
+        p = (function (e) {
+            function n(n, t) {
+                return nn.create({ pageId: e.pageId, code: n, message: t });
+            }
+            return [
                 {
                     id: "stale",
                     name: "STALE: the page is out of date",
-                    stale: !0,
-                    errors: [nn.create({ pageId: n.pageId, code: eC.STALE, message: "This page is out of date." })],
+                    error: n(eE.STALE, "This page is out of date."),
                 },
                 {
-                    id: "response-too-long",
-                    name: "TOO_LONG (page): the whole response is over its size limit",
-                    errors: [nn.create({ pageId: n.pageId, code: eC.TOO_LONG, message: "Your answers are too long." })],
+                    id: "too-long",
+                    name: "TOO_LONG: the response is over its size limit",
+                    error: n(eE.TOO_LONG, "Your answers are too long."),
                 },
-            ]),
-        ];
+                {
+                    id: "invalid",
+                    name: "INVALID: anything else",
+                    error: n(eE.INVALID, "Something went wrong with your answers. Please try again."),
+                },
+            ];
+        })(n.page);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", {
-                className: tL.MT,
+                className: tO.MT,
                 children: (0, l.jsx)(
-                    tx,
+                    tb,
                     {
-                        page: i,
-                        request: a,
-                        onRequestChange: o,
-                        errors: s,
+                        page: t,
+                        request: r,
+                        onRequestChange: a,
+                        errors: o,
                         onSubmit: function () {
                             let e = (function (e, n) {
                                 let { pageId: t, content: i } = e,
@@ -5488,7 +5368,7 @@ function tE(e) {
                                                         }
                                                     })(n)
                                                 ) {
-                                                    e.required && t(eC.REQUIRED, { questionId: i });
+                                                    e.required && t(eE.REQUIRED, { questionId: i });
                                                     return;
                                                 }
                                                 let a = n?.kind;
@@ -5509,19 +5389,19 @@ function tE(e) {
                                                             let { minSelected: r, maxSelected: a } = e;
                                                             (null != r &&
                                                                 n.length < r.value &&
-                                                                t(eC.TOO_FEW, { questionId: i }),
+                                                                t(eE.TOO_FEW, { questionId: i }),
                                                                 null != a &&
                                                                     n.length > a.value &&
-                                                                    t(eC.TOO_MANY, { questionId: i }));
+                                                                    t(eE.TOO_MANY, { questionId: i }));
                                                         }
                                                         for (let r of e.choices) {
                                                             let e = a.choices.textByChoiceId[r.id];
                                                             r.allowText && n.includes(r.id) && "" === (e ?? "").trim()
-                                                                ? t(eC.REQUIRED, { questionId: i, choiceId: r.id })
+                                                                ? t(eE.REQUIRED, { questionId: i, choiceId: r.id })
                                                                 : null != e &&
                                                                   null != r.textMaxLength &&
-                                                                  nK(e) > r.textMaxLength.value &&
-                                                                  t(eC.TOO_LONG, { questionId: i, choiceId: r.id });
+                                                                  nq(e) > r.textMaxLength.value &&
+                                                                  t(eE.TOO_LONG, { questionId: i, choiceId: r.id });
                                                         }
                                                         return;
                                                     }
@@ -5529,15 +5409,15 @@ function tE(e) {
                                                         let e = r.rank.rankTop?.value ?? r.rank.choices.length;
                                                         a?.oneofKind === "ranked" &&
                                                             a.ranked.rankedChoiceIds.length < e &&
-                                                            t(eC.TOO_FEW, { questionId: i });
+                                                            t(eE.TOO_FEW, { questionId: i });
                                                         return;
                                                     }
                                                     case "freeText": {
                                                         let { maxLength: e } = r.freeText;
                                                         a?.oneofKind === "text" &&
                                                             null != e &&
-                                                            nK(a.text.text) > e.value &&
-                                                            t(eC.TOO_LONG, { questionId: i });
+                                                            nq(a.text.text) > e.value &&
+                                                            t(eE.TOO_LONG, { questionId: i });
                                                         return;
                                                     }
                                                     case "matrix": {
@@ -5550,137 +5430,141 @@ function tE(e) {
                                                         );
                                                         for (let e of r.matrix.rows)
                                                             n.has(e.id) ||
-                                                                t(eC.REQUIRED, { questionId: i, rowId: e.id });
+                                                                t(eE.REQUIRED, { questionId: i, rowId: e.id });
                                                         return;
                                                     }
                                                 }
-                                            })(e, nq(n, e.id), a);
+                                            })(e, nP(n, e.id), a);
                                         break;
                                     case "conjoint": {
-                                        let e = nq(n, t)?.kind;
+                                        let e = nP(n, t)?.kind;
                                         (e?.oneofKind === "conjoint" ? e.conjoint.chosenConceptIndexes : []).length !==
-                                            i.conjoint.tasks.length && a(eC.REQUIRED);
+                                            i.conjoint.tasks.length && a(eE.REQUIRED);
                                         break;
                                     }
                                     case "maxdiff": {
-                                        let e = nq(n, t)?.kind,
+                                        let e = nP(n, t)?.kind,
                                             r = e?.oneofKind === "maxdiff" ? e.maxdiff : null,
                                             o = r?.picksPerSet ?? [],
                                             s =
                                                 "" !== i.maxdiff.anchorQuestionText &&
-                                                (r?.anchor ?? eU.UNSPECIFIED) === eU.UNSPECIFIED;
+                                                (r?.anchor ?? eD.UNSPECIFIED) === eD.UNSPECIFIED;
                                         (o.length !== i.maxdiff.sets.length ||
                                             o.some((e) => {
                                                 let { mostItemId: n, leastItemId: t } = e;
                                                 return 0 === n || 0 === t;
                                             }) ||
                                             s) &&
-                                            a(eC.REQUIRED);
+                                            a(eE.REQUIRED);
                                     }
                                 }
                                 return r;
-                            })(i, a);
-                            if ((c(e), e.length > 0)) return void f(null);
-                            let n = k.find((e) => {
+                            })(t, r);
+                            if ((s(e), e.length > 0)) return void m(null);
+                            let n = p.find((e) => {
                                 let { id: n } = e;
-                                return n === u;
+                                return n === c;
                             });
-                            if (null == n) return void f({ kind: "accepted", sent: a });
-                            let t = e9.create({
-                                ...i,
-                                revision: !0 === n.stale ? i.revision + 1 : i.revision,
-                                submittedAnswers: !0 === n.stale ? [] : a.answers,
-                                errors: n.errors,
-                            });
-                            (f({ kind: "rejected", sent: a, response: t }), r(t), o(nP(t)), c(t.errors));
+                            if (null == n) return void m({ kind: "accepted", sent: r });
+                            let o = (function (e, n, t) {
+                                let { error: i } = t,
+                                    r = i.code === eE.STALE;
+                                return e9.create({
+                                    ...e,
+                                    revision: r ? e.revision + 1 : e.revision,
+                                    submittedAnswers: r ? [] : n.answers,
+                                    errors: [i],
+                                });
+                            })(t, r, n);
+                            (m({ kind: "rejected", sent: r, response: o }), i(o), a(nK(o)), s(o.errors));
                         },
                     },
-                    `${i.revision}-${g}`,
+                    `${t.revision}-${f}`,
                 ),
             }),
             (0, l.jsxs)("div", {
-                className: tL.fi,
+                className: tO.fi,
                 children: [
-                    (0, l.jsx)(nE.l, {
+                    (0, l.jsx)(nC.l, {
                         label: "Simulate server error",
                         description:
                             "Submit runs the client checks first. If they pass, the server answers with this instead of accepting.",
                         selectionMode: "single",
                         options: [
-                            { id: tW, label: "None: the server accepts", value: tW },
-                            ...k.map((e) => {
+                            { id: tB, label: "None: the server accepts", value: tB },
+                            ...p.map((e) => {
                                 let { id: n, name: t } = e;
                                 return { id: n, label: t, value: n };
                             }),
                         ],
-                        value: u,
-                        onSelectionChange: (e) => h(e ?? tW),
+                        value: c,
+                        onSelectionChange: (e) => u(e ?? tB),
                     }),
                     (0, l.jsx)("div", {
-                        className: tL.KE,
-                        children: (0, l.jsx)(nC.$, {
+                        className: tO.KE,
+                        children: (0, l.jsx)(nE.$, {
                             size: "sm",
                             variant: "secondary",
                             text: "Reset page",
                             onClick: function () {
-                                (r(t.page), o(nP(t.page)), c([]), f(null), p((e) => e + 1));
+                                (i(n.page), a(nK(n.page)), s([]), m(null), g((e) => e + 1));
                             },
                         }),
                     }),
-                    s.length > 0 &&
+                    o.length > 0 &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-strong",
                                     children:
-                                        m?.kind === "rejected"
+                                        h?.kind === "rejected"
                                             ? "Errors from the server"
                                             : "Errors from the client checks",
                                 }),
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     variant: "mono-md/normal",
                                     color: "text-feedback-warning",
-                                    className: tL.AV,
-                                    children: s.map(tU).join("\n"),
+                                    className: tO.AV,
+                                    children: o.map(tN).join("\n"),
                                 }),
                             ],
                         }),
-                    null != m &&
+                    null != h &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-strong",
                                     children:
-                                        "accepted" === m.kind ? "Sent SubmitRequest (accepted)" : "Sent SubmitRequest",
+                                        "accepted" === h.kind ? "Sent SubmitRequest (accepted)" : "Sent SubmitRequest",
                                 }),
                                 (0, l.jsx)("pre", {
-                                    className: tL.aY,
+                                    className: tO.aY,
                                     "aria-label": "Sent SubmitRequest",
-                                    children: tD(eS.toJson(m.sent, { useProtoFieldName: !0 })),
+                                    children: tI(eF.toJson(h.sent, { useProtoFieldName: !0 })),
                                 }),
                             ],
                         }),
-                    m?.kind === "rejected" &&
+                    h?.kind === "rejected" &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(nF.E, {
+                                (0, l.jsx)(nS.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-strong",
                                     children: "Server response: RenderedPage errors",
                                 }),
                                 (0, l.jsx)("pre", {
-                                    className: tL.aY,
+                                    className: tO.aY,
                                     "aria-label": "Server response",
-                                    children: tD(e9.toJson(m.response, { useProtoFieldName: !0 }).errors ?? []),
+                                    children: tI(e9.toJson(h.response, { useProtoFieldName: !0 }).errors ?? []),
                                 }),
                             ],
                         }),
                     (0, l.jsxs)("details", {
                         children: [
                             (0, l.jsx)("summary", {
-                                children: (0, l.jsx)(nF.E, {
+                                children: (0, l.jsx)(nS.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-strong",
                                     tag: "span",
@@ -5688,8 +5572,8 @@ function tE(e) {
                                 }),
                             }),
                             (0, l.jsx)("pre", {
-                                className: tL.aY,
-                                children: tD(e9.toJson(i, { useProtoFieldName: !0 })),
+                                className: tO.aY,
+                                children: tI(e9.toJson(t, { useProtoFieldName: !0 })),
                             }),
                         ],
                     }),
@@ -5698,7 +5582,7 @@ function tE(e) {
         ],
     });
 }
-let tC = {
+let t_ = {
     collections: [
         {
             id: "native-surveys",
@@ -5711,31 +5595,31 @@ let tC = {
                             name: "Survey page",
                             id: "survey-page",
                             component: function () {
-                                let [e, n] = d.useState(t_["0"].id),
+                                let [e, n] = d.useState(tj["0"].id),
                                     t =
-                                        t_.find((n) => {
+                                        tj.find((n) => {
                                             let { id: t } = n;
                                             return t === e;
-                                        }) ?? t_["0"];
+                                        }) ?? tj["0"];
                                 return (0, l.jsxs)("div", {
-                                    className: tL.zr,
+                                    className: tO.zr,
                                     children: [
                                         (0, l.jsx)("div", {
-                                            className: tL.Nz,
-                                            children: (0, l.jsx)(nE.l, {
+                                            className: tO.Nz,
+                                            children: (0, l.jsx)(nC.l, {
                                                 label: "Question type",
                                                 selectionMode: "single",
-                                                options: t_.map((e) => {
+                                                options: tj.map((e) => {
                                                     let { id: n, name: t } = e;
                                                     return { id: n, label: t, value: n };
                                                 }),
                                                 value: e,
-                                                onSelectionChange: (e) => n(e ?? t_["0"].id),
+                                                onSelectionChange: (e) => n(e ?? tj["0"].id),
                                             }),
                                         }),
                                         (0, l.jsx)("div", {
-                                            className: tL.Zp,
-                                            children: (0, l.jsx)(tE, { fixture: t }, t.id),
+                                            className: tO.Zp,
+                                            children: (0, l.jsx)(tR, { fixture: t }, t.id),
                                         }),
                                     ],
                                 });
