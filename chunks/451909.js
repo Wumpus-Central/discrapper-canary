@@ -386,7 +386,10 @@ function J(e, t) {
                       .filter(b.Vq)
                       .value()
                 : [],
-        E = I.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, L.default, O.A) })),
+        E =
+            null != i
+                ? I.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, L.default, O.A) }))
+                : [],
         A = c.Ay.getDisambiguatedEmojiContext(i),
         f = A.getEscapedCustomEmoticonNames(),
         h = A.getCustomEmoji(),
