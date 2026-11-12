@@ -81,8 +81,9 @@ var er = n(728666),
     ed = n(612413),
     eo = n(682901);
 n(92737);
-var ec = n(88001),
-    eu = n(652215),
+var ec = n(88001);
+n(675772);
+var eu = n(652215),
     em = n(221596),
     eb = n(355097),
     ep = n(691450),
@@ -440,7 +441,9 @@ let eL = new Set([g.N.MACARON, g.N.YOUTUBE, g.N.XBOX_PARTNER_PASS, g.N.CODE_BLUR
                     name: g.N.YOUTUBE,
                     caption: (0, i.jsx)("img", { src: eC.A, alt: "YouTube Premium" }),
                     title: I.intl.string(eN.default["BdIVB+"]),
-                    description: I.intl.format(eN.default["3jY5i3"], {
+                    description: I.intl.format(eN.default["cCl3+a"], {
+                        discountPercentage: 20,
+                        months: 6,
                         helpCenterUrl: H.A.getArticleURL(eu.MVz.YOUTUBE_PROMOTION),
                     }),
                     previewImage: eD[g.N.YOUTUBE].thumbnail,

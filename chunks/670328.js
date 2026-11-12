@@ -1,8 +1,8 @@
 (n.d(t, { ThirdPartyPromotionsModal: () => eC, P: () => eR }), n(321073));
 var i,
     a = n(477900),
-    r = n(582128),
-    l = n(855986),
+    l = n(582128),
+    r = n(855986),
     s = n(52133),
     o = n(189213),
     d = n(366010),
@@ -24,23 +24,23 @@ var i,
     N = n(194261),
     h = n(534514),
     v = n(251843),
-    x = n(341973);
-function I(e) {
+    I = n(341973);
+function x(e) {
     let { title: t, body: n, asset: i } = e;
     return (0, a.jsx)("div", {
-        className: x.lA,
+        className: I.lA,
         children: (0, a.jsxs)("div", {
-            className: x.LV,
+            className: I.LV,
             children: [
                 (0, a.jsxs)("div", {
-                    className: x.JN,
+                    className: I.JN,
                     children: [
                         (0, a.jsx)("div", {
-                            className: x.MC,
+                            className: I.MC,
                             children: (0, a.jsx)(N.LockIcon, { size: "refresh_sm" }),
                         }),
                         (0, a.jsxs)("div", {
-                            className: x.yO,
+                            className: I.yO,
                             children: [
                                 (0, a.jsx)(h.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
                                 (0, a.jsx)(h.D, { variant: "heading-xs/medium", color: "text-subtle", children: n }),
@@ -50,14 +50,14 @@ function I(e) {
                 }),
                 null != i &&
                     (0, a.jsx)("div", {
-                        className: x.R4,
+                        className: I.R4,
                         children: (0, a.jsx)(v._, {
                             src: i,
-                            className: x.Ys,
+                            className: I.Ys,
                             width: 100,
                             height: 100,
                             zoomable: !1,
-                            imageClassName: x.EM,
+                            imageClassName: I.EM,
                         }),
                     }),
             ],
@@ -67,9 +67,9 @@ function I(e) {
 var M = n(947641),
     y = n(646514),
     L = n(408278),
-    j = n(624479),
-    U = n(821609),
-    S = n(695366),
+    S = n(624479),
+    j = n(821609),
+    U = n(695366),
     D = n(914410),
     B = n(5377),
     k = n(975571),
@@ -82,12 +82,12 @@ function W() {
     let e = (0, B.N5)(),
         t = (0, B.P6)();
     return (0, a.jsxs)("div", {
-        className: `${x.G9} ${x.sQ}`,
+        className: `${I.G9} ${I.sQ}`,
         children: [
             (0, a.jsx)(f.E, {
                 variant: "body-sm/normal",
                 color: "text-muted",
-                className: x.kT,
+                className: I.kT,
                 children: V.intl.format(Y.default["65EEvD"], { days: t }),
             }),
             (0, a.jsx)(D.Ay, {
@@ -100,15 +100,15 @@ function W() {
 }
 function K(e) {
     let { children: t } = e;
-    return (0, a.jsx)("div", { className: x.oP, children: (0, a.jsx)("div", { className: x.t0, children: t }) });
+    return (0, a.jsx)("div", { className: I.oP, children: (0, a.jsx)("div", { className: I.t0, children: t }) });
 }
 let F = (e) => {
     let { recurrence: t, analyticsLocations: n = [] } = e,
         i = (0, a.jsx)(M.CheckmarkLargeBoldIcon, { color: y.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
-        l = (0, a.jsx)("span", {
-            className: x.nP,
+        r = (0, a.jsx)("span", {
+            className: I.nP,
             children: (0, a.jsx)(L.K, {
-                icon: j.CopyIcon,
+                icon: S.CopyIcon,
                 size: "sm",
                 variant: "icon-only",
                 "aria-label": "",
@@ -125,15 +125,15 @@ let F = (e) => {
                 },
             }),
         }),
-        [s, o] = r.useState(() => l);
+        [s, o] = l.useState(() => r);
     if (null != t.code)
         return (0, a.jsx)("div", {
-            className: x.oP,
+            className: I.oP,
             children: (0, a.jsxs)("div", {
-                className: x.t0,
+                className: I.t0,
                 children: [
                     (0, a.jsx)("div", {
-                        className: x.cD,
+                        className: I.cD,
                         children: (0, a.jsx)(f.E, {
                             variant: "body-md/medium",
                             color: "text-strong",
@@ -141,7 +141,7 @@ let F = (e) => {
                         }),
                     }),
                     s,
-                    (0, a.jsx)(U.$, {
+                    (0, a.jsx)(j.$, {
                         variant: "secondary",
                         size: "sm",
                         text:
@@ -164,13 +164,13 @@ let F = (e) => {
             }),
         });
 };
-function z(e) {
+function X(e) {
     let {
         recurrence: t,
         canBeClaimed: n,
         hasClaimError: i,
-        setCode: r,
-        setHasClaimError: l,
+        setCode: l,
+        setHasClaimError: r,
         className: s,
         analyticsLocations: o = [],
         onClaim: d,
@@ -181,8 +181,8 @@ function z(e) {
         ? i
             ? (0, a.jsx)("div", {
                   className: s,
-                  children: (0, a.jsx)(U.$, {
-                      icon: S.CircleErrorIcon,
+                  children: (0, a.jsx)(j.$, {
+                      icon: U.CircleErrorIcon,
                       variant: "critical-secondary",
                       size: "sm",
                       disabled: !0,
@@ -191,7 +191,7 @@ function z(e) {
               })
             : (0, a.jsx)("div", {
                   className: s,
-                  children: (0, a.jsx)(U.$, {
+                  children: (0, a.jsx)(j.$, {
                       icon: N.LockIcon,
                       variant: "secondary",
                       size: "sm",
@@ -208,23 +208,23 @@ function z(e) {
                                 }).then((e) => ((0, O.LI)(e), e.code))
                           )
                               .then((e) => {
-                                  null != e && r(e);
+                                  null != e && l(e);
                               })
                               .catch((e) => {
-                                  !1 === (null != c && c(e)) && (l(!0), w.A.captureException(e));
+                                  !1 === (null != c && c(e)) && (r(!0), w.A.captureException(e));
                               });
                       },
                   }),
               })
         : null;
 }
-var X = (((i = {}).INLINE = "inline"), (i.FOOTER = "footer"), i);
+var z = (((i = {}).INLINE = "inline"), (i.FOOTER = "footer"), i);
 function q(e) {
     let {
             recurrence: t,
             titleClassName: n,
             partnerLogo: i,
-            showPartnerImage: l = !1,
+            showPartnerImage: r = !1,
             roundPromotionImage: s = !1,
             titleVariant: o = "primary",
             claimButtonPlacement: d = "inline",
@@ -235,21 +235,21 @@ function q(e) {
             isClaiming: b,
             hideClaimButton: A = !1,
         } = e,
-        [p, P] = r.useState(t.code),
-        [E, _] = r.useState(!1),
+        [p, P] = l.useState(t.code),
+        [E, _] = l.useState(!1),
         O = null == p;
     return (0, a.jsxs)("div", {
-        className: x.lA,
+        className: I.lA,
         children: [
             (0, a.jsxs)("div", {
-                className: x.LV,
+                className: I.LV,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: x.JN,
+                        className: I.JN,
                         children: [
                             i,
                             (0, a.jsxs)("div", {
-                                className: null != n ? `${x.yO} ${n}` : x.yO,
+                                className: null != n ? `${I.yO} ${n}` : I.yO,
                                 children: [
                                     (0, a.jsx)(h.D, {
                                         variant: "secondary" === o ? "heading-sm/semibold" : "heading-lg/semibold",
@@ -288,7 +288,7 @@ function q(e) {
                             }),
                             "inline" === d &&
                                 !1 === A &&
-                                (0, a.jsx)(z, {
+                                (0, a.jsx)(X, {
                                     recurrence: t,
                                     canBeClaimed: O,
                                     hasClaimError: E,
@@ -301,13 +301,13 @@ function q(e) {
                                 }),
                         ],
                     }),
-                    l &&
+                    r &&
                         (0, a.jsx)("div", {
-                            className: x.R4,
+                            className: I.R4,
                             children: (0, a.jsx)(v._, {
                                 src: t.asset ?? "",
-                                className: x.Ys,
-                                imageClassName: s || t.partnerId === R.XY ? x.Cy : void 0,
+                                className: I.Ys,
+                                imageClassName: s || t.partnerId === R.XY ? I.Cy : void 0,
                                 width: 100,
                                 height: 100,
                                 zoomable: !1,
@@ -321,13 +321,13 @@ function q(e) {
                 null == p &&
                 !1 === A &&
                 (0, a.jsx)(K, {
-                    children: (0, a.jsx)(z, {
+                    children: (0, a.jsx)(X, {
                         recurrence: t,
                         canBeClaimed: O,
                         hasClaimError: E,
                         setCode: P,
                         setHasClaimError: _,
-                        className: x.qx,
+                        className: I.qx,
                         analyticsLocations: f,
                         onClaim: m,
                         onClaimError: g,
@@ -337,8 +337,8 @@ function q(e) {
         ],
     });
 }
-function $(e) {
-    let { promotion: t, claimButtonPlacement: n = X.INLINE, analyticsLocations: i } = e;
+function J(e) {
+    let { promotion: t, claimButtonPlacement: n = z.INLINE, analyticsLocations: i } = e;
     return (0, a.jsx)(q, {
         recurrence: t,
         titleVariant: "secondary",
@@ -348,18 +348,19 @@ function $(e) {
         analyticsLocations: i,
     });
 }
-var J = n(517352),
-    Q = n(325499);
+var Q = n(517352),
+    $ = n(325499);
 (n(398523), n(881373));
-var Z = n(721157),
-    ee = n(712620),
+var Z = n(721157);
+n(675772);
+var ee = n(712620),
     et = n(749962),
     en = n(524698),
     ei = n(770300),
     ea = n(855e3);
-let er =
+let el =
         "https://cdn.discordapp.com/assets/content/a95525ff6082a74538cbdc2d99c11fb59fe43718b018db01cfc02114785ad8fe.png",
-    el =
+    er =
         "https://cdn.discordapp.com/assets/content/c93472f5033e3079579ad496c9a54a95faa23623f5b1d11590d536c861f52e7c.svg",
     es =
         "https://cdn.discordapp.com/assets/content/6bbac5a155872455d86969ce5309725d9aa0317ba3b104b3027716e70040e11f.webp",
@@ -372,7 +373,7 @@ function ec() {
     return V.intl.formatToPlainString(V.t.p7BkHh, { discountPercentage: 20 });
 }
 function eu() {
-    return (0, Q.i)("ThirdPartyPromotionPartnerConfigs") ? V.intl.string(V.t.nmvvaN) : V.intl.string(V.t.igiSKe);
+    return (0, $.i)("ThirdPartyPromotionPartnerConfigs") ? V.intl.string(V.t.nmvvaN) : V.intl.string(V.t.igiSKe);
 }
 let ef = {
     [R.KS]: {
@@ -386,16 +387,16 @@ let ef = {
     },
     [R.XY]: {
         getLockedPreview: () => ({
-            title: (0, Q.i)("ThirdPartyPromotionPartnerConfigs")
+            title: (0, $.i)("ThirdPartyPromotionPartnerConfigs")
                 ? V.intl.formatToPlainString(Y.default.PF1aT5, { discountPercentage: 30 })
                 : V.intl.formatToPlainString(Y.default.LsJ9hj, { discountPercent: 30 }),
-            body: (0, Q.i)("ThirdPartyPromotionPartnerConfigs")
+            body: (0, $.i)("ThirdPartyPromotionPartnerConfigs")
                 ? V.intl.formatToPlainString(Y.default.KoKwMn, {})
                 : V.intl.formatToPlainString(Y.default.Yl5ww1, {}),
-            asset: el,
+            asset: er,
         }),
         landingUrl: "https://www.logitech.com/",
-        recurringCardAsset: el,
+        recurringCardAsset: er,
         outboundConfigs: {
             type: "multiple_promo",
             configsByOutboundTitle: {
@@ -417,7 +418,7 @@ let ef = {
     [R.NC]: {
         getLockedPreview: () => ({
             title: V.intl.string(en.default.CwMGMb),
-            body: V.intl.string(en.default.TgHy6p),
+            body: V.intl.formatToPlainString(en.default["7b+4f6"], { discountPercentage: 20, months: 6 }),
             asset: eo,
         }),
         landingUrl: "https://www.youtube.com/redeem",
@@ -426,9 +427,9 @@ let ef = {
             type: "single_promo",
             config: {
                 getTitle: () => V.intl.string(en.default.CwMGMb),
-                getBody: () => V.intl.string(en.default.TgHy6p),
+                getBody: () => V.intl.formatToPlainString(en.default["7b+4f6"], { discountPercentage: 20, months: 6 }),
                 getRedeemCtaText: () => V.intl.string(en.default.KfOPbQ),
-                claimButtonPlacement: X.FOOTER,
+                claimButtonPlacement: z.FOOTER,
             },
         },
         showSectionHeaders: !1,
@@ -436,16 +437,16 @@ let ef = {
     [R.P_]: {
         getLockedPreview: () => ({
             title: V.intl.string(ea.default.ecPCdG),
-            body: V.intl.string(ea.default.evF0PO),
-            asset: er,
+            body: V.intl.string(ea.default["2370GD"]),
+            asset: el,
         }),
         outboundConfigs: {
             type: "single_promo",
             config: {
                 getTitle: () => V.intl.string(ea.default.ecPCdG),
-                getAsset: () => er,
-                getBody: () => V.intl.string(ea.default.evF0PO),
-                claimButtonPlacement: X.FOOTER,
+                getAsset: () => el,
+                getBody: () => V.intl.string(ea.default["2370GD"]),
+                claimButtonPlacement: z.FOOTER,
             },
         },
         showSectionHeaders: !1,
@@ -454,7 +455,7 @@ let ef = {
         getLockedPreview: () => ({
             title: V.intl.string(ei.default.xDMrVa),
             body: V.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
-            asset: (0, Z.VO)(R.Bt, J.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, G.NJ8.DARK),
+            asset: (0, Z.VO)(R.Bt, Q.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, G.NJ8.DARK),
         }),
         showSectionHeaders: !1,
         outboundConfigs: {
@@ -462,17 +463,17 @@ let ef = {
             config: {
                 getTitle: () => V.intl.string(ei.default.xDMrVa),
                 getBody: () => V.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
-                getAsset: (e, t) => (0, Z.VO)(R.Bt, J.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, t),
+                getAsset: (e, t) => (0, Z.VO)(R.Bt, Q.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, t),
                 getClaimCtaText: () => V.intl.string(et.default["lbyFG+"]),
                 getRedeemCtaText: () => V.intl.string(et.default["6rwUm2"]),
-                claimButtonPlacement: X.FOOTER,
+                claimButtonPlacement: z.FOOTER,
             },
         },
     },
 };
 var em = n(831768);
 function eg() {
-    return (0, a.jsx)(I, {
+    return (0, a.jsx)(x, {
         title: V.intl.string(em.default.oDfh3O),
         body: V.intl.string(em.default.nDEuO1),
         asset: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
@@ -505,13 +506,13 @@ function eP(e) {
     let n,
         i,
         { records: s, claimedOutboundPromotionCodeMap: o, theme: m } = e,
-        [g, b] = r.useState(!1),
+        [g, b] = l.useState(!1),
         p = [...s].sort((e, t) => (t.startDate > e.startDate ? 1 : -1)),
         E = g ? p : p.slice(0, 1),
         _ = !g && p.length > 1,
         O =
             ((t = s[0]?.partnerId ?? ""),
-            (n = (0, l.bG)([P.A], () => (0, d.M)(P.A.theme))),
+            (n = (0, r.bG)([P.A], () => (0, d.M)(P.A.theme))),
             null == (i = ef[t]?.logos) ? void 0 : n ? i.dark : i.light);
     return (0, a.jsxs)("div", {
         children: [
@@ -539,7 +540,7 @@ function eP(e) {
                                 }),
                             partnerLogo: O,
                             showPartnerImage: !0,
-                            claimButtonPlacement: X.FOOTER,
+                            claimButtonPlacement: z.FOOTER,
                             footerContent: (0, a.jsx)(W, {}),
                             analyticsLocations: [A.A.THIRD_PARTY_PROMOTIONS_MODAL],
                         },
@@ -549,7 +550,7 @@ function eP(e) {
             }),
             _ &&
                 (0, a.jsx)(u.D, {
-                    className: x.K8,
+                    className: I.K8,
                     onClick: () => {
                         b(!0);
                     },
@@ -565,15 +566,15 @@ function eP(e) {
 function eE(e) {
     let { partnerId: t } = e,
         n = ef[t]?.getLockedPreview?.() ?? null;
-    return null == n ? null : (0, a.jsx)(I, { title: n.title, body: n.body, asset: n.asset });
+    return null == n ? null : (0, a.jsx)(x, { title: n.title, body: n.body, asset: n.asset });
 }
 function e_(e) {
     let {
             partnerIds: t,
             title: n,
             subtitle: i,
-            modalTeaser: r,
-            showXboxCard: l = !1,
+            modalTeaser: l,
+            showXboxCard: r = !1,
             transitionState: s,
             onClose: d,
             analyticsLocationsProp: u,
@@ -603,9 +604,9 @@ function e_(e) {
                       (0, a.jsxs)(c.B, {
                           direction: "vertical",
                           gap: 12,
-                          children: [l && (0, a.jsx)(eg, {}), t.map((e) => (0, a.jsx)(eE, { partnerId: e }, e))],
+                          children: [r && (0, a.jsx)(eg, {}), t.map((e) => (0, a.jsx)(eE, { partnerId: e }, e))],
                       }),
-                      (0, a.jsx)(eO, { modalTeaser: r }),
+                      (0, a.jsx)(eO, { modalTeaser: l }),
                   ],
               }),
           })
@@ -616,10 +617,10 @@ function eO(e) {
     if (null == t) return null;
     let n = t.icon ?? g.NitroWheelIcon;
     return (0, a.jsxs)("div", {
-        className: x.ar,
+        className: I.ar,
         children: [
             (0, a.jsxs)("div", {
-                className: x.Uv,
+                className: I.Uv,
                 children: [
                     (0, a.jsx)(n, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
                     (0, a.jsx)(f.E, {
@@ -634,9 +635,9 @@ function eO(e) {
     });
 }
 function eT(e) {
-    let { partnerIds: t, title: n, subtitle: i, modalTeaser: r, transitionState: s, onClose: d } = e,
-        u = (0, l.bG)([P.A], () => P.A.theme),
-        [g, b] = (0, l.bG)(
+    let { partnerIds: t, title: n, subtitle: i, modalTeaser: l, transitionState: s, onClose: d } = e,
+        u = (0, r.bG)([P.A], () => P.A.theme),
+        [g, b] = (0, r.bG)(
             [C.A],
             () => {
                 let e = [],
@@ -647,8 +648,8 @@ function eT(e) {
                         function a(e) {
                             return null != ed(i, e.outboundTitle);
                         }
-                        let r = C.A.getPromotionsByPartner(t);
-                        (e.push(...r.recurring.filter(a)), n.push(...r.oneTime.filter(a)));
+                        let l = C.A.getPromotionsByPartner(t);
+                        (e.push(...l.recurring.filter(a)), n.push(...l.oneTime.filter(a)));
                     }),
                     [e, n]
                 );
@@ -670,7 +671,7 @@ function eT(e) {
                 let t = ep(e, E[e.id] ?? null, u),
                     n = ed(ef[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
                 return (0, a.jsx)(
-                    $,
+                    J,
                     {
                         promotion: t,
                         claimButtonPlacement: n?.claimButtonPlacement,
@@ -687,7 +688,7 @@ function eT(e) {
         transitionState: s,
         onClose: d,
         children: (0, a.jsxs)("div", {
-            className: x.kL,
+            className: I.kL,
             children: [
                 g.length > 0 &&
                     (0, a.jsxs)(c.B, {
@@ -706,7 +707,7 @@ function eT(e) {
                 b.length > 0 &&
                     (_
                         ? (0, a.jsx)("div", {
-                              className: x.E7,
+                              className: I.E7,
                               children: (0, a.jsxs)(c.B, {
                                   direction: "vertical",
                                   gap: 12,
@@ -722,7 +723,7 @@ function eT(e) {
                               }),
                           })
                         : R),
-                (0, a.jsx)(eO, { modalTeaser: r }),
+                (0, a.jsx)(eO, { modalTeaser: l }),
             ],
         }),
     });
@@ -732,8 +733,8 @@ function eC(e) {
         partnerIds: t,
         isLocked: n = !1,
         title: i,
-        subtitle: r,
-        modalTeaser: l,
+        subtitle: l,
+        modalTeaser: r,
         showXboxCard: s,
         transitionState: o,
         onClose: d,
@@ -743,21 +744,21 @@ function eC(e) {
         ? (0, a.jsx)(e_, {
               partnerIds: t,
               title: i,
-              subtitle: r,
-              modalTeaser: l,
+              subtitle: l,
+              modalTeaser: r,
               showXboxCard: s,
               transitionState: o,
               onClose: d,
               analyticsLocationsProp: c,
           })
-        : (0, a.jsx)(eT, { partnerIds: t, title: i, subtitle: r, modalTeaser: l, transitionState: o, onClose: d });
+        : (0, a.jsx)(eT, { partnerIds: t, title: i, subtitle: l, modalTeaser: r, transitionState: o, onClose: d });
 }
 function eR(e) {
     let {
             partnerIds: t,
             isLocked: i = !1,
-            title: r,
-            subtitle: l,
+            title: l,
+            subtitle: r,
             modalTeaser: s,
             showXboxCard: o,
             analyticsLocations: d,
@@ -774,8 +775,8 @@ function eR(e) {
                         ...n,
                         partnerIds: t,
                         isLocked: i,
-                        title: r,
-                        subtitle: l,
+                        title: l,
+                        subtitle: r,
                         modalTeaser: s,
                         showXboxCard: o,
                         analyticsLocations: d,

@@ -2,8 +2,8 @@ n.d(t, { A: () => b });
 var i = n(477900);
 n(582128);
 var a = n(793574),
-    r = n(975571),
-    l = n(757036),
+    l = n(975571),
+    r = n(757036),
     s = n(933730),
     o = n(722793),
     d = n(275357),
@@ -18,22 +18,19 @@ function b(e) {
         b,
         A,
         { targetElementRef: p, dismissPopover: P, children: E } = e,
-        _ = (0, l.L)(),
+        _ = (0, r.L)(),
         { phase: O } = o.A.useConfig({ location: "PremiumTabPopover" });
     return (
         _
-            ? ((t = g.intl.string(m.default["er+5dl"])),
+            ? ((t = g.intl.string(m.default.IoM52w)),
               (n =
                   O === o.H.PHASE_ONE
                       ? g.intl.format(f.default["4y7mjC"], { rewardPercentage: 10 })
-                      : g.intl.format(m.default.b9LwCb, { rewardPercentage: 10 })),
+                      : g.intl.format(m.default["iIK+QI"], { rewardPercentage: 10 })),
               (b = s.g.NAVIGATE_TO_PERK),
               (A = g.intl.string(u.default.vlafDc)))
-            : ((t = g.intl.string(m.default["er+5dl"])),
-              (n = g.intl.format(m.default.xL7Cfe, {
-                  rewardPercentage: 10,
-                  termsUrl: r.A.getArticleURL(c.MVz.BEST_BUY_PROMOTION),
-              })),
+            : ((t = g.intl.string(m.default.IoM52w)),
+              (n = g.intl.format(m.default.GPbgSS, { termsUrl: l.A.getArticleURL(c.MVz.BEST_BUY_PROMOTION) })),
               (b = s.g.OPEN_PAYMENT_MODAL)),
         (0, i.jsx)(s.A, {
             targetElementRef: p,
