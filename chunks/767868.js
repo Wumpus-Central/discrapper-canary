@@ -7,7 +7,7 @@ var s = n(477900),
     o = n(91982),
     a = n(544180),
     d = n(723702),
-    c = n(343559),
+    c = n(153229),
     _ = n(506988),
     E = n(405670),
     v = n(760914),
@@ -678,7 +678,7 @@ function eE(e) {
             handleSeek: e0,
         } = (0, o.Yr)({ getCurrentVideoTime: eZ, onAnalytics: eB, emitIntervalMs: o.KI, minSegmentDurationMs: o._4 }),
         e1 = (0, r.useRef)(null),
-        e7 = r.useCallback(
+        e2 = r.useCallback(
             (e, t) => {
                 switch ((e$(e, t), e)) {
                     case l.Q6.PLAYING:
@@ -712,7 +712,7 @@ function eE(e) {
             },
             [e$, eN, eM, eG],
         ),
-        e2 = r.useCallback(() => {
+        e7 = r.useCallback(() => {
             ex(eA);
         }, [ex, eA]),
         e8 = r.useCallback(
@@ -800,8 +800,8 @@ function eE(e) {
         initialTimeSec: ef,
         maxSeekableTimeSec: eO,
         captionTrackUrl: tn?.url,
-        onPlayerStateChange: e7,
-        onLoadStart: e2,
+        onPlayerStateChange: e2,
+        onLoadStart: e7,
         onLoadEnd: e8,
         onFirstFrame: e9,
         onBufferingStart: eF,
