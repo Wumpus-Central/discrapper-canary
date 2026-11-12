@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672086, Version Hash: 7be1acf7a41ba7fe4d502014938398690ee64340`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672090, Version Hash: 2535e3c70f30eb9ea0cf4fc3f3eaa6cbd52bd0a6`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672086";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672090";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15717,7 +15717,7 @@ let IX = eh.memo(function (e) {
                             ? (0, v.jsxs)(
                                   "div",
                                   {
-                                      ref: I,
+                                      ref: o ? I : void 0,
                                       children: [
                                           (0, v.jsx)(h4, {
                                               nitroTabButtonRef: f,
@@ -15872,7 +15872,7 @@ let I4 = "isHideDevBanner",
                     className: td()(I7.Wz, I7.mr),
                     children: [
                         (0, v.jsx)(I5, { className: I7.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672086" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672090" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
