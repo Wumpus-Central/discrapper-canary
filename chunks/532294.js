@@ -14,7 +14,7 @@ let l = [
         [r.K.RARE]: "#EF3054",
         [r.K.EPIC]: "#7D53DE",
         [r.K.ULTRA]: "#FC7A1E",
-        [r.K.NITRO]: "url(#checkpointRarityBadgeNitroGradient)",
+        [r.K.NITRO]: "#ABACB2",
     },
     d = {
         [r.K.DEFAULT]: a.default.bP4GV1,
@@ -39,7 +39,6 @@ n.d(
         bI: "#3BD4F2",
         iG: d,
         ow: "#1482A7",
-        uz: ["#DFDFDF", "#5E5E5E"],
         wk: s,
         zj: "#3FC7D2",
     },
