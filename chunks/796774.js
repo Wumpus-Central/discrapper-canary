@@ -19,9 +19,10 @@ var h = n(652215),
 let m = !1;
 function T(e) {
     return new Promise((t) => {
-        s.h.subscribe(e, function n() {
-            (s.h.unsubscribe(e, n), setTimeout(t, 0));
-        });
+        function n() {
+            (e.forEach((e) => s.h.unsubscribe(e, n)), setTimeout(t, 0));
+        }
+        e.forEach((e) => s.h.subscribe(e, n));
     });
 }
 n.d(
@@ -39,7 +40,7 @@ n.d(
                 (function () {
                     if (!E.A.shouldFetchDefaultSounds()) return Promise.resolve();
                     s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
-                    let e = T("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+                    let e = T(["SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"]);
                     return (
                         !(async function () {
                             try {
@@ -61,7 +62,7 @@ n.d(
                 (function () {
                     let e = (0, f.I)();
                     if (0 === e.length) return Promise.resolve();
-                    let t = T("SOUNDBOARD_SOUNDS_RECEIVED");
+                    let t = T(["SOUNDBOARD_SOUNDS_RECEIVED"]);
                     return (
                         s.h.dispatch({ type: "GUILD_SOUNDBOARD_FETCH" }),
                         s.h.dispatch({ type: "REQUEST_SOUNDBOARD_SOUNDS", guildIds: e }),
