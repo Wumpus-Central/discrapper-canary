@@ -5,7 +5,7 @@ n.d(
     t,
     {},
     {
-        L: function (e, t) {
+        L0: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
             if (null != n) return n;
             switch (t?.tenantMetadata?.collectibles?.type) {
@@ -17,7 +17,10 @@ n.d(
                     return null;
             }
         },
-        g: function (e, t) {
+        fP: function (e) {
+            return e?.rewardConfig?.discount?.fiatEnabled === !0;
+        },
+        g5: function (e, t) {
             let n = t?.rewardConfig?.discount?.id;
             return null != n && e?.getDiscountIdIfExists() === String(n);
         },

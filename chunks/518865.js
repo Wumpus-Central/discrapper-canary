@@ -4,21 +4,16 @@ var e = r(288106),
     i = r(623373),
     a = r(248180),
     o = r(792996);
-function c(n) {
+function s(n) {
     return n?.tenantMetadata?.collectibles?.type === u.hE.TARGETED_OFFER;
 }
 r.d(
     t,
     {},
     {
-        Dj: c,
-        Jl: function (n) {
-            if (!c(n)) return !1;
-            let t = n?.rewardConfig?.discount;
-            return null != t && t.fiatEnabled;
-        },
+        Dj: s,
         MX: function (n) {
-            return c(n) && n?.rewardConfig?.discount != null
+            return s(n) && n?.rewardConfig?.discount != null
                 ? 100 === (0, a.S)(n)
                     ? o.intl.string(o.t["302tKP"])
                     : o.intl.string(o.t["7EGhnE"])
@@ -26,8 +21,8 @@ r.d(
         },
         PY: function (n, t) {
             let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-            if (c(r)) return r;
-            if (null == t || t.rewardStatus !== e.GM.EARNED || !c(t)) return null;
+            if (s(r)) return r;
+            if (null == t || t.rewardStatus !== e.GM.EARNED || !s(t)) return null;
             let u = t.rewardConfig?.discount;
             return null == u ||
                 (0, l.G0)(n) ||
