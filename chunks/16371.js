@@ -5,8 +5,8 @@ var n = s(477900),
     r = s.n(a),
     o = s(508425),
     c = s(559949),
-    u = s(855986),
-    i = s(602853),
+    i = s(855986),
+    u = s(602853),
     d = s(646514),
     m = s(84571),
     f = s(36075),
@@ -15,10 +15,10 @@ var n = s(477900),
     z = s(310784),
     O = s.n(z),
     y = s(998304),
-    N = s(898985),
-    A = s(824994),
-    I = s(922301),
-    g = s(501803);
+    N = s(501803),
+    A = s(898985),
+    I = s(824994),
+    g = s(922301);
 s(750656);
 let T = "--custom-display-name-styles-main-color";
 s(321073);
@@ -32,11 +32,11 @@ function G(e) {
             let e = 0,
                 l = 0,
                 c = [],
-                u = [];
-            function i() {
-                if (0 === u.length) return;
-                let e = u;
-                ((u = []),
+                i = [];
+            function u() {
+                if (0 === i.length) return;
+                let e = i;
+                ((i = []),
                     null != r
                         ? c.push((0, n.jsx)("span", { className: r, children: e }, `word-${c.length}`))
                         : c.push(...e));
@@ -46,16 +46,16 @@ function G(e) {
                     S.lastIndex = 0;
                     let d = S.test(t);
                     if (0 === t.trim().length) {
-                        (i(), c.push((0, n.jsx)("span", { children: t }, `space-${r}`)));
+                        (u(), c.push((0, n.jsx)("span", { children: t }, `space-${r}`)));
                         return;
                     }
                     let m = null != o && o.length > 0 && !d ? o[e % o.length] : void 0,
                         f = null != m ? { color: m } : void 0;
                     (null == a || d || (f = { ...f, "--custom-letter-index": l }),
-                        u.push((0, n.jsx)("span", { className: d ? s : a, style: f, children: t }, r)),
+                        i.push((0, n.jsx)("span", { className: d ? s : a, style: f, children: t }, r)),
                         !d && (e++, l++));
                 }),
-                i(),
+                u(),
                 c
             );
         }, [t, o, s, a, r]);
@@ -73,7 +73,7 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
         let {
                 userName: t,
                 displayNameStyles: s,
-                effectDisplayType: a = I.G.STATIC,
+                effectDisplayType: a = g.G.STATIC,
                 inProfile: c = !1,
                 textClassName: p,
                 loop: z = !1,
@@ -84,29 +84,31 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                 textVariant: R,
             } = e,
             C = (0, D.a)({ displayNameStyles: s }),
-            { useReducedMotion: P } = (0, u.cf)([h.Ay], () => ({ useReducedMotion: h.Ay.useReducedMotion })),
-            W = (0, A.W)({ location: "UserNameWithEffects" }),
-            _ = (0, i.r)(d.A.colors.BACKGROUND_BASE_LOW).hex(),
+            { useReducedMotion: P } = (0, i.cf)([h.Ay], () => ({ useReducedMotion: h.Ay.useReducedMotion })),
+            W = (0, I.W)({ location: "UserNameWithEffects" }),
+            _ = (0, u.r)(d.A.colors.BACKGROUND_BASE_LOW).hex(),
             w = s?.effectId ?? o.z.SOLID,
             U = (0, m.O)(t),
             k = (0, f.CR)(U, w === o.z.TOON ? L.Zg : void 0),
             $ = (function (e) {
                 let { displayNameStyles: t, backgroundColor: s } = e,
-                    n = (0, u.bG)([h.Ay], () => (h.Ay.desaturateUserColors ? h.Ay.saturation : 1)),
+                    n = (0, i.bG)([h.Ay], () => (h.Ay.desaturateUserColors ? h.Ay.saturation : 1)),
                     a = t?.effectId ?? o.z.SOLID,
-                    r = (0, N._)(a);
+                    r = (0, A._)(a);
                 return l.useMemo(
                     () =>
                         null == t
                             ? []
-                            : t.colors.map((e) =>
-                                  (0, y.lZ)({
-                                      foreground: O()(e),
-                                      background: a === o.z.TOON ? O()("#333") : O()(s),
-                                      ratio: r.minContrastRatio,
-                                      saturationFactor: n,
-                                  }).hex(),
-                              ),
+                            : t.colors
+                                  .filter(N.fF)
+                                  .map((e) =>
+                                      (0, y.lZ)({
+                                          foreground: O()(e),
+                                          background: a === o.z.TOON ? O()("#333") : O()(s),
+                                          ratio: r.minContrastRatio,
+                                          saturationFactor: n,
+                                      }).hex(),
+                                  ),
                     [t, a, r.minContrastRatio, n, s],
                 );
             })({ displayNameStyles: W ? s : null, backgroundColor: _ });
@@ -118,11 +120,11 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                         fontOpacity: r = 1,
                         nameLength: c = 0,
                     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                    u = {};
+                    i = {};
                 switch (e) {
                     case o.z.GRADIENT:
                     case o.z.GLOW:
-                        u =
+                        i =
                             0 === (s = t).length
                                 ? {}
                                 : {
@@ -136,7 +138,7 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                     case o.z.PRISM:
                         ((n = t),
                             (l = c),
-                            (u =
+                            (i =
                                 0 === n.length
                                     ? {}
                                     : {
@@ -155,7 +157,7 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                     case o.z.SOLID:
                     default:
                         t.length > 0 &&
-                            (u = (function (e) {
+                            (i = (function (e) {
                                 let {
                                     main: t,
                                     light1: s,
@@ -164,7 +166,7 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                                     dark2: a,
                                     toonStroke: r,
                                     neonStroke: o,
-                                } = (0, g.$0)(e);
+                                } = (0, N.$0)(e);
                                 return {
                                     [T]: t,
                                     "--custom-display-name-styles-light-1-color": s,
@@ -177,7 +179,7 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                             })(t[0]));
                 }
                 return {
-                    ...u,
+                    ...i,
                     "--custom-display-name-styles-wrap": a ? "wrap" : "nowrap",
                     "--custom-display-name-styles-font-opacity": r,
                 };
@@ -202,8 +204,8 @@ let j = [c.x.CHERRY_BOMB, c.x.CHICLE],
                         return L.QJ;
                 }
             })(w),
-            F = a !== I.G.PLAIN,
-            B = a === I.G.ANIMATED && !P,
+            F = a !== g.G.PLAIN,
+            B = a === g.G.ANIMATED && !P,
             H = (0, n.jsx)("div", {
                 className: r()(L.kL, C, p, {
                     [L.rD]: F,

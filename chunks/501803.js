@@ -3,12 +3,13 @@ n.d(t, {
     cf: () => p,
     Fj: () => _,
     $0: () => A,
-    gN: () => S,
+    gN: () => N,
     as: () => E,
-    Xr: () => C,
+    Xr: () => O,
     UZ: () => T,
-    eT: () => N,
-    mT: () => g,
+    fF: () => g,
+    eT: () => C,
+    mT: () => S,
     nO: () => m,
     A5: () => c,
     xo: () => f,
@@ -101,9 +102,12 @@ function T(e) {
     return r().hsl(e, 0.78, 0.72).num();
 }
 function g(e) {
-    return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
+    return Number.isInteger(e) && e >= 0 && e <= 0xffffff;
 }
-function S(e, t) {
+function S(e) {
+    return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors.filter(g) };
+}
+function N(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],
         i = e.filter((e) => !d.fY.includes(e)),
         r = i.length > 0 ? i : e,
@@ -111,10 +115,10 @@ function S(e, t) {
         s = (0, d.ii)(n);
     return { fontId: a, effectId: n, colors: [...s[Math.floor(Math.random() * s.length)]] };
 }
-function N(e, t) {
+function C(e, t) {
     return e.effectId === a.z.SOLID && e.colors.length > 0 && e.colors[0] === t ? { ...e, colors: [] } : e;
 }
-function C(e) {
+function O(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);
