@@ -111,9 +111,9 @@ let O =
         "https://cdn.discordapp.com/assets/content/aada5b40828140b41a56df82e81783cd43fd60e30ac1eb3c9f93a087b95dcf03.mp3",
     k =
         "https://cdn.discordapp.com/assets/content/04536b9e5b26d0b6e85116ce546b7d5ba97da31e7de7a1e02da262bcd5249bb0.mp3",
-    L =
+    D =
         "https://cdn.discordapp.com/assets/content/82d771ff521a99ea8e26239d2f2e48ae847e39575bc5bce396739b430b8a6fda.mp3",
-    D = [O, y, M, k, L];
+    L = [O, y, M, k, D];
 function P(e) {
     return e !== I.gr.HOME && null == (0, I.UG)(e).statsScreen;
 }
@@ -1648,8 +1648,8 @@ let ej = /^tex_(aura|base_\d+|outfit)_/,
         tex_wearable_11_deviantTail_smoke_idle_spritesheet: ey,
     },
     ek = [1, 1.25, 1.5, 1.75, 2, 3],
-    eL = Math.min(...ek),
-    eD = Math.max(...ek);
+    eD = Math.min(...ek),
+    eL = Math.max(...ek);
 function eP(e, t) {
     let { url: a, width: r, height: i, widthAt1x: s } = e_[e];
     if (null == s) return a;
@@ -1779,9 +1779,9 @@ function e0(e) {
             let e = ed.A.windowSize();
             return (function (e, t) {
                 let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (a) return eL;
+                if (a) return eD;
                 let r = Math.max(e / 945, t / 532) * (0, eI.A)();
-                return ek.find((e) => e >= r) ?? eD;
+                return ek.find((e) => e >= r) ?? eL;
             })(e.width, e.height);
         }),
         [c, d] = f.useState(n);
@@ -2187,8 +2187,8 @@ function tk(e) {
         a = f.useMemo(() => ({ "--custom-checkpoint-rarity-background": t === tO.K.NITRO ? tM : W.Zy[t] }), [t]);
     return (0, i.jsx)(tb, { className: ty.q, style: a, children: tp.intl.string(W.iG[t]) });
 }
-var tL = a(829870);
-function tD(e) {
+var tD = a(829870);
+function tL(e) {
     let { asset: t, hideRarity: a } = e,
         r =
             t.status === tR.eP.NITRO_LOCKED
@@ -2206,10 +2206,10 @@ function tD(e) {
                   })
                 : (0, w.Oq)(t);
     return (0, i.jsxs)("div", {
-        className: tL.z,
+        className: tD.z,
         children: [
             (0, i.jsxs)("div", {
-                className: tL.D,
+                className: tD.D,
                 children: [
                     (0, i.jsx)(td.E, {
                         tag: "div",
@@ -2350,7 +2350,7 @@ function tX(e) {
                     }),
                 ],
             }),
-            null != o && (0, i.jsx)(tD, { asset: o, hideRarity: l }),
+            null != o && (0, i.jsx)(tL, { asset: o, hideRarity: l }),
         ],
     });
 }
@@ -2713,8 +2713,8 @@ function an(e) {
                 },
             }),
         k = f.useId(),
-        L = null != u ? k : void 0,
-        D = null != v ? (0, w.cq)(v) : null;
+        D = null != u ? k : void 0,
+        L = null != v ? (0, w.cq)(v) : null;
     function P(e) {
         null != u ? Y(u) : h || (c(e), S());
     }
@@ -2733,7 +2733,7 @@ function an(e) {
             "aria-selected": t,
             "aria-controls": t ? l : void 0,
             "aria-disabled": null != u,
-            "aria-describedby": L,
+            "aria-describedby": D,
             disabled: h,
             tabIndex: t ? 0 : -1,
             onClick: () => G(e),
@@ -2815,8 +2815,8 @@ function an(e) {
                         ...F("more"),
                         ref: m,
                         "aria-label":
-                            null != D
-                                ? tp.intl.formatToPlainString(t_.default.QX1VPx, { category: D })
+                            null != L
+                                ? tp.intl.formatToPlainString(t_.default.QX1VPx, { category: L })
                                 : tp.intl.string(t_.default.jepsQ6),
                         "aria-haspopup": "menu",
                         "aria-expanded": I,
@@ -2827,7 +2827,7 @@ function an(e) {
                                 tag: "span",
                                 variant: "heading-sm/semibold",
                                 color: "none",
-                                children: D ?? tp.intl.string(t_.default["iXpQc+"]),
+                                children: L ?? tp.intl.string(t_.default["iXpQc+"]),
                             }),
                             (0, i.jsx)(t2.ChevronSmallRightIcon, { size: "refresh_sm", color: "currentColor" }),
                         ],
@@ -3095,15 +3095,15 @@ var aR = a(477155),
     ay = a(417270),
     aM = a(935286),
     ak = a(405433),
-    aL = a(289873),
-    aD = a(621466);
+    aD = a(289873),
+    aL = a(621466);
 function aP(e, t) {
     let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     f.useEffect(() => {
         if (!a) return (window.addEventListener("keydown", r), () => window.removeEventListener("keydown", r));
         function r(a) {
-            (0, aD.vq)(a.target, HTMLTextAreaElement) ||
-                (0, aD.vq)(a.target, HTMLInputElement) ||
+            (0, aL.vq)(a.target, HTMLTextAreaElement) ||
+                (0, aL.vq)(a.target, HTMLInputElement) ||
                 (a.key === e && t(a));
         }
     }, [e, t, a]);
@@ -3169,26 +3169,25 @@ function aB(e) {
             size: n,
             className: c,
             disabled: d = !1,
-            sound: l = aT,
         } = e,
         {
-            playSound: o,
-            onPointerDown: u,
-            onKeyDown: h,
-            onClickWithSound: f,
-        } = aG({ source: l, onClick: s, disabled: d });
+            playSound: l,
+            onPointerDown: o,
+            onKeyDown: u,
+            onClickWithSound: h,
+        } = aG({ source: aT, onClick: s, disabled: d });
     return (
         aP(
             "ArrowRight",
             function (e) {
-                (e.repeat || o(), s());
+                (e.repeat || l(), s());
             },
             d,
         ),
         (0, i.jsx)(ea, {
-            onPointerDown: u,
-            onKeyDown: h,
-            onClick: f,
+            onPointerDown: o,
+            onKeyDown: u,
+            onClick: h,
             size: n,
             className: _()(aF.A4, aF.K2, c),
             "aria-disabled": d,
@@ -3282,29 +3281,55 @@ function aX(e) {
 }
 function aQ(e) {
     let { onNext: t, navigate: a, isRouteBlocked: r, blockedTraitDescriptionId: n } = e,
-        c = (0, p.bG)([o.A], () => o.A.isSaving);
-    async function d() {
+        c = (0, p.bG)([o.A], () => o.A.isSaving),
+        d = c || r;
+    async function u() {
         if (c) return;
         let e = (0, K.XI)(o.A.selectedCharacterTraits);
         (await (0, l.yE)(e)) ? t() : (0, s.P0)({ text: tp.intl.string(tp.t.fEptJP), variant: "critical" });
     }
-    return (0, i.jsxs)(aB, {
-        size: "custom",
-        className: aF.GA,
-        "aria-label": tp.intl.string(tp.t["R3BPH+"]),
-        "aria-describedby": n,
-        onClick: function () {
-            a(d);
-        },
-        disabled: c || r,
-        sound: "https://cdn.discordapp.com/assets/content/1514d999969512ff06ade75018213676ebaf3698af26c0b1b7d3243ec480f920.mp3",
-        children: [
-            (0, i.jsx)(tu, { variant: "mono-md/normal", className: aF.Pf, children: tp.intl.string(tp.t["R3BPH+"]) }),
-            c
-                ? (0, i.jsx)(aL.y, { type: aL.t.SPINNING_CIRCLE_SIMPLE, className: aF.u1, itemClassName: aF.$N })
-                : (0, i.jsx)(aM.ArrowSmallRightIcon, { size: "refresh_sm", color: "currentColor" }),
-        ],
+    function h() {
+        a(u);
+    }
+    let {
+        playSound: f,
+        onPointerDown: b,
+        onKeyDown: m,
+        onClickWithSound: x,
+    } = aG({
+        source: "https://cdn.discordapp.com/assets/content/1514d999969512ff06ade75018213676ebaf3698af26c0b1b7d3243ec480f920.mp3",
+        onClick: h,
+        disabled: d,
     });
+    return (
+        aP(
+            "ArrowRight",
+            function (e) {
+                (e.repeat || f(), h());
+            },
+            d,
+        ),
+        (0, i.jsxs)(ea, {
+            onPointerDown: b,
+            onKeyDown: m,
+            onClick: x,
+            size: "custom",
+            className: _()(aF.A4, aF.K2, aF.GA),
+            "aria-disabled": d,
+            "aria-describedby": n,
+            "aria-label": tp.intl.string(tp.t["R3BPH+"]),
+            children: [
+                (0, i.jsx)(tu, {
+                    variant: "mono-md/normal",
+                    className: aF.Pf,
+                    children: tp.intl.string(tp.t["R3BPH+"]),
+                }),
+                c
+                    ? (0, i.jsx)(aD.y, { type: aD.t.SPINNING_CIRCLE_SIMPLE, className: aF.u1, itemClassName: aF.$N })
+                    : (0, i.jsx)(aM.ArrowSmallRightIcon, { size: "refresh_sm", color: "currentColor" }),
+            ],
+        })
+    );
 }
 function aZ(e) {
     let { activeRoute: t, blockedTrait: a, blockedTraitDescriptionId: r, onBack: s, onNext: n, onReplay: c } = e,
@@ -3776,8 +3801,8 @@ function ry(e) {
 }
 var rM = a(445199),
     rk = a(205524),
-    rL = a(690521),
-    rD = a(152321);
+    rD = a(690521),
+    rL = a(152321);
 let rP = [0, 0, 2],
     rU = [0, 1, 0],
     rH = [0, 0, 0],
@@ -3965,7 +3990,7 @@ function rz(e) {
     }, [a, d, n]);
     (f.useEffect(() => {
         null != n &&
-            ((d.current.crossOrigin = "anonymous"), (d.current.src = (0, rL.Ez)(a, 256)), (d.current.onload = C));
+            ((d.current.crossOrigin = "anonymous"), (d.current.src = (0, rD.Ez)(a, 256)), (d.current.onload = C));
     }, [a, C, d, n]),
         f.useEffect(
             () => (
@@ -4017,13 +4042,13 @@ function rz(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("canvas", {
-                    className: _()(rD.Ji, { [rD.q4]: !u }),
+                    className: _()(rL.Ji, { [rL.q4]: !u }),
                     ref: s,
                     height: 512,
                     width: 512,
                     onMouseDown: T,
                 }),
-                (0, i.jsx)("canvas", { className: rD.R, ref: c, height: 256, width: 256 }),
+                (0, i.jsx)("canvas", { className: rL.R, ref: c, height: 256, width: 256 }),
             ],
         })
     );
@@ -4615,7 +4640,7 @@ function iy(e) {
 }
 var iM = a(842807);
 let ik = [];
-function iL(e) {
+function iD(e) {
     let { gameStats: t } = e,
         a = Math.round(t?.totalGamesPlayed ?? 0),
         r = (0, E.bD)(t?.totalGamesPlayedPercentile),
@@ -4665,7 +4690,7 @@ function iL(e) {
         ],
     });
 }
-function iD(e) {
+function iL(e) {
     let { gameStats: t } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -4705,7 +4730,7 @@ function iP() {
     return (0, i.jsx)(a1, {
         children: (0, i.jsx)("div", {
             className: _()(iM.kL, { [iM.TF]: r }),
-            children: r ? (0, i.jsx)(iD, { gameStats: a }) : (0, i.jsx)(iL, { gameStats: e }),
+            children: r ? (0, i.jsx)(iL, { gameStats: a }) : (0, i.jsx)(iD, { gameStats: e }),
         }),
     });
 }
@@ -5547,7 +5572,7 @@ function sA(e) {
                     (r.current?.(), a.current.forEach((e) => e.pause()));
                 }, []);
             return (
-                f.useEffect(() => ((a.current = new Map(D.map((e) => [e, new Audio(e)]))), i), [i]),
+                f.useEffect(() => ((a.current = new Map(L.map((e) => [e, new Audio(e)]))), i), [i]),
                 f.useEffect(() => {
                     a.current.forEach((a) => {
                         ((a.muted = e), (a.volume = t));
@@ -5587,11 +5612,11 @@ function sA(e) {
                     return (
                         a === I.gr.INTRODUCTION
                             ? (r.push({ source: O, delayMs: 0 }),
-                              r.push({ source: L, delayMs: 2500 }),
+                              r.push({ source: D, delayMs: 2500 }),
                               r.push({ source: y, delayMs: 2800 }))
                             : P(t) && U(a)
                               ? r.push({ source: M, delayMs: 0 })
-                              : U(t) && P(a) && (r.push({ source: k, delayMs: 0 }), r.push({ source: L, delayMs: 0 })),
+                              : U(t) && P(a) && (r.push({ source: k, delayMs: 0 }), r.push({ source: D, delayMs: 0 })),
                         r
                     );
                 })({ previousRoute: n, route: e });
