@@ -1,7 +1,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 });
 var n,
     i = r(582128),
-    o = r(158513),
+    o = r(519385),
     a = i && "object" == typeof i && "default" in i ? i : { default: i };
 function s(e) {
     var t = e || l(),
@@ -65,21 +65,21 @@ function m(e) {
         p = e.riveLoaded,
         m = void 0 !== p && p,
         v = e.canvasElem,
-        y = e.containerRef,
-        g = e.options,
+        g = e.containerRef,
+        y = e.options,
         b = e.onCanvasHasResized,
         w = e.artboardBounds,
-        _ = h(void 0 === g ? {} : g),
+        _ = h(void 0 === y ? {} : y),
         S = i.useState({ height: 0, width: 0 }),
         E = S[0],
         x = E.height,
         C = E.width,
         k = S[1],
         T = i.useState({ height: 0, width: 0 }),
-        P = T[0],
-        A = P.height,
-        I = P.width,
-        M = T[1],
+        M = T[0],
+        P = M.height,
+        A = M.width,
+        I = T[1],
         O = i.useState(!0),
         R = O[0],
         L = O[1],
@@ -124,47 +124,47 @@ function m(e) {
                 function () {
                     var e = u.current;
                     if (!t) return void e.disconnect();
-                    var r = y.current;
+                    var r = g.current;
                     return (
-                        y.current && f && e.observe(y.current),
+                        g.current && f && e.observe(g.current),
                         function () {
                             (e.disconnect(), r && f && e.unobserve(r));
                         }
                     );
                 },
-                [y, u],
+                [g, u],
             ),
             n),
         U = s(j),
-        V = null != w ? w : {},
-        $ = V.maxX,
-        K = V.maxY,
-        H = i.useCallback(
+        $ = null != w ? w : {},
+        V = $.maxX,
+        H = $.maxY,
+        K = i.useCallback(
             function () {
                 var e,
                     t,
                     r,
                     n,
-                    i = null != (e = null == (r = y.current) ? void 0 : r.clientWidth) ? e : 0,
-                    o = null != (t = null == (n = y.current) ? void 0 : n.clientHeight) ? t : 0;
+                    i = null != (e = null == (r = g.current) ? void 0 : r.clientWidth) ? e : 0,
+                    o = null != (t = null == (n = g.current) ? void 0 : n.clientHeight) ? t : 0;
                 return D && w ? { width: i, height: (w.maxY / w.maxX) * i } : { width: i, height: o };
             },
-            [y, D, $, K],
+            [g, D, V, H],
         );
     (i.useEffect(
         function () {
-            if (F && y.current && m) {
-                var e = H(),
+            if (F && g.current && m) {
+                var e = K(),
                     t = e.width,
                     r = e.height,
                     n = !1;
                 if (v) {
                     var i = t !== C || r !== x;
                     if (
-                        (_.fitCanvasToArtboardHeight && i && ((y.current.style.height = r + "px"), (n = !0)),
+                        (_.fitCanvasToArtboardHeight && i && ((g.current.style.height = r + "px"), (n = !0)),
                         _.useDevicePixelRatio)
                     ) {
-                        var o = t * U !== I || r * U !== A;
+                        var o = t * U !== A || r * U !== P;
                         if (i || o) {
                             var a = U * t,
                                 s = U * r;
@@ -172,20 +172,20 @@ function m(e) {
                                 (v.height = s),
                                 (v.style.width = t + "px"),
                                 (v.style.height = r + "px"),
-                                M({ width: a, height: s }),
+                                I({ width: a, height: s }),
                                 (n = !0));
                         }
-                    } else i && ((v.width = t), (v.height = r), M({ width: t, height: r }), (n = !0));
+                    } else i && ((v.width = t), (v.height = r), I({ width: t, height: r }), (n = !0));
                     k({ width: t, height: r });
                 }
                 (b && (R || n) && b && b(), R && L(!1));
             }
         },
-        [v, y, B, U, H, R, L, A, I, x, C, b, F, D, N, m],
+        [v, g, B, U, K, R, L, P, A, x, C, b, F, D, N, m],
     ),
         i.useEffect(
             function () {
-                M({ width: 0, height: 0 });
+                I({ width: 0, height: 0 });
             },
             [v],
         ));
@@ -195,8 +195,8 @@ var v = (function () {
         var t = e.prototype;
         return ((t.observe = function () {}), (t.unobserve = function () {}), (t.disconnect = function () {}), e);
     })(),
-    y = globalThis.IntersectionObserver || v,
-    g = (function () {
+    g = globalThis.IntersectionObserver || v,
+    y = (function () {
         function e() {
             var e = this;
             ((this.elementsMap = new Map()),
@@ -206,7 +206,7 @@ var v = (function () {
                         r && r(t);
                     });
                 }),
-                (this.observer = new y(this.onObserved)));
+                (this.observer = new g(this.onObserved)));
         }
         var t = e.prototype;
         return (
@@ -220,7 +220,7 @@ var v = (function () {
         );
     })(),
     b = function () {
-        return (n || (n = new g()), n);
+        return (n || (n = new y()), n);
     };
 function w() {
     return (w =
@@ -269,27 +269,27 @@ function E(e, t) {
         d = f[0],
         p = f[1],
         v = !!e,
-        y = h(t),
-        g = s(),
+        g = h(t),
+        y = s(),
         E = i.useCallback(
             function () {
                 if (d) {
                     if (d.layout && d.layout.fit === o.Fit.Layout && n) {
-                        var e = g * d.layout.layoutScaleFactor;
-                        ((d.devicePixelRatioUsed = g),
+                        var e = y * d.layout.layoutScaleFactor;
+                        ((d.devicePixelRatioUsed = y),
                             (d.artboardWidth = (null == n ? void 0 : n.width) / e),
                             (d.artboardHeight = (null == n ? void 0 : n.height) / e));
                     }
                     (d.startRendering(), d.resizeToCanvas());
                 }
             },
-            [d, g],
+            [d, y],
         );
     m({
         riveLoaded: !!d,
         canvasElem: n,
         containerRef: u,
-        options: y,
+        options: g,
         onCanvasHasResized: E,
         artboardBounds: null == d ? void 0 : d.bounds,
     });
@@ -302,7 +302,7 @@ function E(e, t) {
                 var t,
                     r = null != d;
                 if (null == d) {
-                    var i = y.useOffscreenRenderer,
+                    var i = g.useOffscreenRenderer,
                         a = e.onRiveReady,
                         s = _(e, ["onRiveReady"]);
                     ((t = new o.Rive(w({ useOffscreenRenderer: i }, s, { canvas: n }))),
@@ -331,7 +331,7 @@ function E(e, t) {
             }, []),
         },
         T = k.observe,
-        P = k.unobserve;
+        M = k.unobserve;
     (i.useEffect(
         function () {
             var e,
@@ -350,7 +350,7 @@ function E(e, t) {
                 };
             return (
                 n &&
-                    !1 !== y.shouldUseIntersectionObserver &&
+                    !1 !== g.shouldUseIntersectionObserver &&
                     T(n, function (n) {
                         (n.isIntersecting ? d && d.startRendering() : d && d.stopRendering(),
                             (t = !n.isIntersecting),
@@ -358,11 +358,11 @@ function E(e, t) {
                             n.isIntersecting || 0 !== n.boundingClientRect.width || (e = setTimeout(r, 10)));
                     }),
                 function () {
-                    n && P(n);
+                    n && M(n);
                 }
             );
         },
-        [T, P, d, n, y.shouldUseIntersectionObserver],
+        [T, M, d, n, g.shouldUseIntersectionObserver],
     ),
         i.useEffect(
             function () {
@@ -377,24 +377,24 @@ function E(e, t) {
                 null != c.current && c.current.cleanup();
             };
         }, []));
-    var A = null == e ? void 0 : e.animations;
+    var P = null == e ? void 0 : e.animations;
     i.useEffect(
         function () {
             d &&
-                A &&
+                P &&
                 (d.isPlaying
-                    ? (d.stop(d.animationNames), d.play(A))
-                    : d.isPaused && (d.stop(d.animationNames), d.pause(A)));
+                    ? (d.stop(d.animationNames), d.play(P))
+                    : d.isPaused && (d.stop(d.animationNames), d.pause(P)));
         },
-        [A, d],
+        [P, d],
     );
-    var I = i.useCallback(
+    var A = i.useCallback(
         function (e) {
             return a.default.createElement(S, w({ setContainerRef: C, setCanvasRef: x }, e));
         },
         [x, C],
     );
-    return { canvas: n, container: u.current, setCanvasRef: x, setContainerRef: C, rive: d, RiveComponent: I };
+    return { canvas: n, container: u.current, setCanvasRef: x, setContainerRef: C, rive: d, RiveComponent: A };
 }
 var x = new WeakSet();
 function C(e) {
@@ -429,7 +429,7 @@ function T() {
             return e;
         }).apply(this, arguments);
 }
-function P(e, t, r) {
+function M(e, t, r) {
     var n = i.useState(null),
         o = n[0],
         a = n[1],
@@ -476,7 +476,7 @@ function P(e, t, r) {
         },
         [t, e, v],
     );
-    var y = i.useCallback(
+    var g = i.useCallback(
             function (e) {
                 if (o && p.current === t)
                     try {
@@ -491,16 +491,16 @@ function P(e, t, r) {
             },
             [o, t],
         ),
-        g = i.useMemo(
+        y = i.useMemo(
             function () {
-                return m.current.buildPropertyOperations(y);
+                return m.current.buildPropertyOperations(g);
             },
-            [y],
+            [g],
         ),
-        b = T({ value: l }, g);
+        b = T({ value: l }, y);
     return (r.getExtendedData && (b.extendedData = f), b);
 }
-function A(e, t, r, n, i, o, a) {
+function P(e, t, r, n, i, o, a) {
     try {
         var s = e[o](a),
             l = s.value;
@@ -708,10 +708,10 @@ function A(e, t, r, n, i, o, a) {
                             return new Promise(function (n, i) {
                                 var o = t.apply(e, r);
                                 function a(e) {
-                                    A(o, n, i, a, s, "next", e);
+                                    P(o, n, i, a, s, "next", e);
                                 }
                                 function s(e) {
-                                    A(o, n, i, a, s, "throw", e);
+                                    P(o, n, i, a, s, "throw", e);
                                 }
                                 a(void 0);
                             });
@@ -811,7 +811,7 @@ function A(e, t, r, n, i, o, a) {
     }),
     (t.useViewModelInstanceArtboard = function (e, t) {
         return {
-            setValue: P(e, t, {
+            setValue: M(e, t, {
                 getProperty: i.useCallback(function (e, t) {
                     return e.artboard(t);
                 }, []),
@@ -830,7 +830,7 @@ function A(e, t, r, n, i, o, a) {
         };
     }),
     (t.useViewModelInstanceBoolean = function (e, t) {
-        var r = P(e, t, {
+        var r = M(e, t, {
             getProperty: i.useCallback(function (e, t) {
                 return e.boolean(t);
             }, []),
@@ -851,7 +851,7 @@ function A(e, t, r, n, i, o, a) {
         return { value: r.value, setValue: r.setValue };
     }),
     (t.useViewModelInstanceColor = function (e, t) {
-        var r = P(e, t, {
+        var r = M(e, t, {
             getProperty: i.useCallback(function (e, t) {
                 return e.color(t);
             }, []),
@@ -899,7 +899,7 @@ function A(e, t, r, n, i, o, a) {
         };
     }),
     (t.useViewModelInstanceEnum = function (e, t) {
-        var r = P(e, t, {
+        var r = M(e, t, {
             getProperty: i.useCallback(function (e, t) {
                 return e.enum(t);
             }, []),
@@ -924,7 +924,7 @@ function A(e, t, r, n, i, o, a) {
     }),
     (t.useViewModelInstanceFont = function (e, t) {
         return {
-            setValue: P(e, t, {
+            setValue: M(e, t, {
                 getProperty: i.useCallback(function (e, t) {
                     return e.font(t);
                 }, []),
@@ -944,7 +944,7 @@ function A(e, t, r, n, i, o, a) {
     }),
     (t.useViewModelInstanceImage = function (e, t) {
         return {
-            setValue: P(e, t, {
+            setValue: M(e, t, {
                 getProperty: i.useCallback(function (e, t) {
                     return e.image(t);
                 }, []),
@@ -965,7 +965,7 @@ function A(e, t, r, n, i, o, a) {
     (t.useViewModelInstanceList = function (e, t) {
         var r,
             n = i.useState(0)[1],
-            o = P(e, t, {
+            o = M(e, t, {
                 getProperty: i.useCallback(function (e, t) {
                     return e.list(t);
                 }, []),
@@ -1032,7 +1032,7 @@ function A(e, t, r, n, i, o, a) {
         };
     }),
     (t.useViewModelInstanceNumber = function (e, t) {
-        var r = P(e, t, {
+        var r = M(e, t, {
             getProperty: i.useCallback(function (e, t) {
                 return e.number(t);
             }, []),
@@ -1053,7 +1053,7 @@ function A(e, t, r, n, i, o, a) {
         return { value: r.value, setValue: r.setValue };
     }),
     (t.useViewModelInstanceString = function (e, t) {
-        var r = P(e, t, {
+        var r = M(e, t, {
             getProperty: i.useCallback(function (e, t) {
                 return e.string(t);
             }, []),
@@ -1076,7 +1076,7 @@ function A(e, t, r, n, i, o, a) {
     (t.useViewModelInstanceTrigger = function (e, t, r) {
         var n = (null != r ? r : {}).onTrigger;
         return {
-            trigger: P(e, t, {
+            trigger: M(e, t, {
                 getProperty: i.useCallback(function (e, t) {
                     return e.trigger(t);
                 }, []),

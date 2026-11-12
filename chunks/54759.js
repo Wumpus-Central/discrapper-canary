@@ -6,7 +6,7 @@ let d =
 var o = r(729901),
     i = r(611361),
     l = r(799226),
-    c = r(270597);
+    c = r(752540);
 let u = {
         "Gem L1": { reducedMotion: "boolean" },
         Sparkle_Tiny: { reducedMotion: "boolean" },

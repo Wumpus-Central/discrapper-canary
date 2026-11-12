@@ -6,7 +6,7 @@ let i =
 var o = n(729901),
     d = n(611361),
     l = n(799226),
-    h = n(270597);
+    h = n(752540);
 let c = {
         "Tab Gradient Dawn": {
             Color_GradientCenter: "color",

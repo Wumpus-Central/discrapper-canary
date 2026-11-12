@@ -6,7 +6,7 @@ let a =
 var o = n(729901),
     d = n(611361),
     s = n(799226),
-    u = n(270597);
+    u = n(752540);
 let b = {
         "Artboard 2": {
             reducedMotion: "boolean",

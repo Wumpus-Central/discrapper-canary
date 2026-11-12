@@ -6,7 +6,7 @@ let r =
 var _ = c(729901),
     i = c(611361),
     d = c(799226),
-    o = c(270597);
+    o = c(752540);
 let h = {
         Game_Server_Hosting_Main: { reducedMotion: "boolean" },
         c_chara_5: {},

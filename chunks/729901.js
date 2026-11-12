@@ -1,8 +1,8 @@
-n.d(t, { w: () => O });
+n.d(t, { w: () => R });
 var i,
     r = n(477900),
     a = n(582128),
-    s = n(848837),
+    s = n(32677),
     l = n(971940),
     o = n(941861),
     d = n(844222),
@@ -17,26 +17,27 @@ function E(e) {
 let A = E(l.Fit),
     f = E(l.Alignment);
 var h = n(611361),
-    I = n(51906),
-    p = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
-let m = new Map();
-function T(e) {
+    I = n(781013),
+    p = n(51906),
+    m = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
+let T = new Map();
+function g(e) {
     e.listeners.forEach((e) => e());
 }
-function g(e, t) {
+function S(e, t) {
     (null != t.removalTimer && clearTimeout(t.removalTimer),
         (t.removalTimer = setTimeout(() => {
             var n, i;
             return (
                 (n = e),
                 void (((i = t).removalTimer = null),
-                i.consumers > 0 || m.get(n) !== i || (m.delete(n), i.riveFile.cleanup()))
+                i.consumers > 0 || T.get(n) !== i || (T.delete(n), i.riveFile.cleanup()))
             );
         }, 3e4)));
 }
-let S = { status: "disabled", riveFile: null },
-    N = { status: "loading", riveFile: null };
-function C(e) {
+let N = { status: "disabled", riveFile: null },
+    C = { status: "loading", riveFile: null };
+function O(e) {
     let { className: t, style: n } = e;
     return (0, r.jsx)("div", {
         className: t,
@@ -44,7 +45,7 @@ function C(e) {
         "aria-hidden": !0,
     });
 }
-function O(e) {
+function R(e) {
     let t = (function () {
             let e = (0, c.G9)().experiments?.enabledExperiments,
                 [t] = a.useState(() => e?.includes("rive-web-perf") ?? !1);
@@ -55,19 +56,19 @@ function O(e) {
             return (a.useLayoutEffect(() => {
                 if (null == e) return;
                 let t = (function (e) {
-                    let t = m.get(e);
+                    let t = T.get(e);
                     if (null != t) return t;
                     let n = new l.RiveFile({ buffer: e }),
                         i = { riveFile: n, status: "loading", consumers: 0, removalTimer: null, listeners: new Set() };
                     return (
                         n.on(l.EventType.Load, () => {
-                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && g(e, i), T(i));
+                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && S(e, i), g(i));
                         }),
                         n.on(l.EventType.LoadError, () => {
-                            ((i.status = "error"), m.get(e) === i && m.delete(e), T(i));
+                            ((i.status = "error"), T.get(e) === i && T.delete(e), g(i));
                         }),
-                        m.set(e, i),
-                        (0, I.yO)(n.init()),
+                        T.set(e, i),
+                        (0, p.yO)(n.init()),
                         i
                     );
                 })(e);
@@ -88,107 +89,109 @@ function O(e) {
                     () => {
                         (t.listeners.delete(i),
                             (t.consumers -= 1),
-                            0 === t.consumers && "loaded" === t.status && g(e, t));
+                            0 === t.consumers && "loaded" === t.status && S(e, t));
                     }
                 );
             }, [e]),
             null == e)
-                ? S
+                ? N
                 : null == t || t.buffer !== e
-                  ? N
+                  ? C
                   : t.value;
         })(t && null == e.assetLoader ? e.buffer : null);
-    return n.status === p.Loading
-        ? (0, r.jsx)(C, { className: e.className, style: e.style })
-        : (0, r.jsx)(R, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
+    return n.status === m.Loading
+        ? (0, r.jsx)(O, { className: e.className, style: e.style })
+        : (0, r.jsx)(L, { ...e, isRiveWebPerfEnabled: t, sharedRiveFile: n.riveFile ?? void 0 });
 }
-function R(e) {
-    var t, n;
-    let i,
-        s,
+function L(e) {
+    var t, n, i, s;
+    let u,
+        _,
+        E,
+        p,
         {
-            isRiveWebPerfEnabled: u,
-            sharedRiveFile: _,
-            buffer: E,
-            autoplay: I = !0,
-            className: p,
-            fit: m,
-            alignment: T,
-            style: g,
-            eventTargetRef: S,
-            artboard: N,
-            withReducedMotion: C = "halt",
-            ref: O,
-            artboardProperties: R,
-            artboardViewModelInstances: L,
-            defaultViewModelInstance: y,
-            renderDataBinding: D,
-            touchScrollEnabled: b = !0,
-            listenOnDocumentBody: v,
-            eventCapture: P,
-            assetLoader: M,
-            onLoad: U,
-            stateMachine: w,
-            artboardStateMachines: G,
+            isRiveWebPerfEnabled: m,
+            sharedRiveFile: T,
+            buffer: g,
+            autoplay: S = !0,
+            className: N,
+            fit: C,
+            alignment: O,
+            style: R,
+            eventTargetRef: L,
+            artboard: y,
+            withReducedMotion: D = "halt",
+            ref: b,
+            artboardProperties: v,
+            artboardViewModelInstances: P,
+            defaultViewModelInstance: M,
+            renderDataBinding: U,
+            touchScrollEnabled: w = !0,
+            listenOnDocumentBody: G,
+            eventCapture: x,
+            assetLoader: k,
+            onLoad: F,
+            stateMachine: B,
+            artboardStateMachines: V,
         } = e,
-        x = a.useContext(d.C),
-        k = (0, o.Rs)(),
-        F = (0, c.G9)().isWindowFocused?.() ?? k,
-        [B, V] = (0, o.Xb)(3e4),
-        [H, j] = a.useState(void 0),
-        W = a.useMemo(() => {
-            if (u && null != G) return G[N ?? ""];
-        }, [u, G, N]),
-        Y = null != W,
-        [K] = a.useState(y),
-        $ = (L?.[N ?? ""] ?? []).length > 0,
-        X = null != D || null != K || $,
-        z = a.useRef(null),
-        q = a.useRef(!1),
-        { rive: Q, RiveComponent: J } = (0, l.useRive)(
+        H = a.useContext(d.C),
+        j = (0, o.Rs)(),
+        W = (0, c.G9)().isWindowFocused?.() ?? j,
+        [Y, K] = (0, o.Xb)(3e4),
+        [$, X] = a.useState(void 0),
+        z = a.useMemo(() => {
+            if (m && null != V) return V[y ?? ""];
+        }, [m, V, y]),
+        q = null != z,
+        [Q] = a.useState(M),
+        J = (P?.[y ?? ""] ?? []).length > 0,
+        Z = null != U || null != Q || J,
+        ee = a.useRef(null),
+        et = a.useRef(!1),
+        { rive: en, RiveComponent: ei } = (0, l.useRive)(
             {
-                eventTarget: S?.current,
-                ...(null != _ ? { riveFile: _ } : { buffer: E }),
-                autoplay: I,
-                stateMachines: null != w ? [w] : Y ? W : H,
-                artboard: N,
-                autoBind: !!Y || !!X || void 0,
-                enableAutoSleep: u,
+                eventTarget: L?.current,
+                ...(null != T ? { riveFile: T } : { buffer: g }),
+                autoplay: S,
+                stateMachines: null != B ? [B] : q ? z : $,
+                artboard: y,
+                autoBind: !!q || !!Z || void 0,
+                enableAutoSleep: m,
                 useOffscreenRenderer: !0,
                 layout: new l.Layout({
-                    fit: null != m ? A[m] : l.Fit.Cover,
-                    alignment: null != T ? f[T] : l.Alignment.Center,
+                    fit: null != C ? A[C] : l.Fit.Cover,
+                    alignment: null != O ? f[O] : l.Alignment.Center,
                 }),
-                isTouchScrollEnabled: b,
-                listenOnDocumentBody: v,
-                eventCapture: P,
-                assetLoader: M,
-                onLoad: U,
+                isTouchScrollEnabled: w,
+                listenOnDocumentBody: G,
+                eventCapture: x,
+                assetLoader: k,
+                onLoad: F,
             },
-            { ...(u ? { shouldUseIntersectionObserver: !1 } : {}) },
+            { ...(m ? { shouldUseIntersectionObserver: !1 } : {}) },
         );
     a.useImperativeHandle(
-        O,
+        b,
         () => ({
             play: () => {
-                ((q.current = !1), Q?.play());
+                ((et.current = !1), en?.play());
             },
             pause: () => {
-                ((q.current = !0), Q?.pause());
+                ((et.current = !0), en?.pause());
             },
-            stop: () => Q?.stop(),
+            stop: () => en?.stop(),
             getPlaybackState: () =>
-                null == Q
+                null == en
                     ? null
                     : {
-                          isPlaying: Q.isPlaying,
-                          isPaused: Q.isPaused,
-                          isAutoSleeping: Q.isAutoSleeping ?? !1,
-                          isRenderScheduled: null != Q.frameRequestId,
-                          fps: Q.fps,
+                          isPlaying: en.isPlaying,
+                          isPaused: en.isPaused,
+                          isAutoSleeping: en.isAutoSleeping ?? !1,
+                          isRenderScheduled: null != en.frameRequestId,
+                          fps: en.fps,
                       },
             getProperties: () => {
-                let e = Q?.viewModelInstance,
+                let e = en?.viewModelInstance,
                     t = (t, n) => {
                         let i = "enumType" === n ? "enum" : n;
                         return {
@@ -213,9 +216,9 @@ function R(e) {
                 );
             },
             getArtboards: () => {
-                if (null == Q) return [];
+                if (null == en) return [];
                 let e = new Set(),
-                    t = Q.riveFile.getInstance();
+                    t = en.riveFile.getInstance();
                 for (let n = 0; n < t.artboardCount(); n++) {
                     let i = t.artboardByIndex(n);
                     e.add(i.name);
@@ -223,114 +226,114 @@ function R(e) {
                 return Array.from(e);
             },
         }),
-        [Q],
+        [en],
     );
-    let Z = X && (Y || null != w || null != H) ? Q : null,
-        ee = (0, l.useViewModel)(Z),
-        et = (0, l.useViewModelInstance)(ee, null != K ? { name: K, rive: Z } : { useDefault: !0, rive: Z }),
-        en =
-            ((t = Q),
-            (n = V),
-            (i = a.useRef(null)),
+    let er = Z && (q || null != B || null != $) ? en : null,
+        ea = (0, l.useViewModel)(er),
+        es = (0, l.useViewModelInstance)(ea, null != Q ? { name: Q, rive: er } : { useDefault: !0, rive: er }),
+        el =
+            ((t = en),
+            (n = K),
+            (u = a.useRef(null)),
             a.useEffect(
                 () => (
-                    (i.current = t),
+                    (u.current = t),
                     () => {
-                        i.current = null;
+                        u.current = null;
                     }
                 ),
                 [t],
             ),
-            (s = a.useRef(!1)),
+            (_ = a.useRef(!1)),
             a.useCallback(() => {
                 null == t ||
-                    s.current ||
-                    ((s.current = !0),
+                    _.current ||
+                    ((_.current = !0),
                     queueMicrotask(() => {
-                        ((s.current = !1),
-                            i.current === t &&
+                        ((_.current = !1),
+                            u.current === t &&
                                 (n(), t.wakeFromAutoSleep?.(), t.isPlaying || (t.artboard?.advance(0), t.drawFrame())));
                     }));
             }, [t, n]));
     (a.useEffect(() => {
-        if (null != Q && "short-loop" === C && x.reducedMotion.enabled) {
+        if (null != en && "short-loop" === D && H.reducedMotion.enabled) {
             function e() {
-                null != Q &&
-                    Q.isPlaying &&
-                    (z.current = setTimeout(() => {
-                        Q.pause();
+                null != en &&
+                    en.isPlaying &&
+                    (ee.current = setTimeout(() => {
+                        en.pause();
                     }, 5e3));
             }
             function t() {
-                clearTimeout(z.current);
+                clearTimeout(ee.current);
             }
             return (
-                Q.on(l.EventType.Play, e),
-                Q.on(l.EventType.Pause, t),
-                Q.on(l.EventType.Stop, t),
+                en.on(l.EventType.Play, e),
+                en.on(l.EventType.Pause, t),
+                en.on(l.EventType.Stop, t),
                 () => {
-                    (Q.off(l.EventType.Play, e), Q.off(l.EventType.Pause, t), Q.off(l.EventType.Stop, t));
+                    (en.off(l.EventType.Play, e), en.off(l.EventType.Pause, t), en.off(l.EventType.Stop, t));
                 }
             );
         }
-    }, [Q, C, x.reducedMotion.enabled]),
+    }, [en, D, H.reducedMotion.enabled]),
         a.useLayoutEffect(() => {
-            if (null != Q) {
-                "layout" === m && Q.resizeDrawingSurfaceToCanvas();
+            if (null != en) {
+                "layout" === C && en.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != Q.canvas &&
-                        (Q.resizeDrawingSurfaceToCanvas(),
-                        Q.isPlaying || (Q.startRendering(), requestAnimationFrame(() => Q.stopRendering())));
+                    null != en.canvas &&
+                        (en.resizeDrawingSurfaceToCanvas(),
+                        en.isPlaying || (en.startRendering(), requestAnimationFrame(() => en.stopRendering())));
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [Q, m]),
+        }, [en, C]),
         a.useEffect(() => {
-            if (null == Q || !x.reducedMotion.enabled) return;
-            let e = Q.canvas;
+            if (null == en || !H.reducedMotion.enabled) return;
+            let e = (0, I.b)(en);
             if (null == e) return;
             let t = new (e.ownerDocument.defaultView ?? window).ResizeObserver(() => {
-                (Q.resizeDrawingSurfaceToCanvas(),
-                    Q.isPlaying || (Q.startRendering(), requestAnimationFrame(() => Q.stopRendering())));
+                (en.resizeDrawingSurfaceToCanvas(),
+                    en.isPlaying || (en.startRendering(), requestAnimationFrame(() => en.stopRendering())));
             });
             return (t.observe(e), () => t.disconnect());
-        }, [Q, x.reducedMotion.enabled]),
+        }, [en, H.reducedMotion.enabled]),
         a.useEffect(() => {
-            Y ||
-                (null != Q &&
-                    null == H &&
-                    null == w &&
-                    (j(Q.stateMachineNames),
-                    Q.reset({ stateMachines: Q.stateMachineNames, autoplay: I, artboard: N, autoBind: !0 }),
-                    Q.setupRiveListeners()));
-        }, [Q, I, H, N, w, Y]));
-    let ei = a.useRef(I);
+            q ||
+                (null != en &&
+                    null == $ &&
+                    null == B &&
+                    (X(en.stateMachineNames),
+                    en.reset({ stateMachines: en.stateMachineNames, autoplay: S, artboard: y, autoBind: !0 }),
+                    en.setupRiveListeners()));
+        }, [en, S, $, y, B, q]));
+    let eo = a.useRef(S);
     a.useEffect(() => {
-        (I && !ei.current && (q.current = !1), (ei.current = I));
-    }, [I]);
-    let er = a.useRef(0);
+        (S && !eo.current && (et.current = !1), (eo.current = S));
+    }, [S]);
+    let ed = a.useRef(0);
     (a.useEffect(() => {
-        if (null == Q) return;
+        if (null == en) return;
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
-                ((er.current = t.data),
+                ((ed.current = t.data),
                 t.data > 0 &&
-                    ("halt" === C && x.reducedMotion.enabled && Q.isPlaying && Q.pause(),
-                    Q.off(l.EventType.Advance, e)));
+                    ("halt" === D && H.reducedMotion.enabled && en.isPlaying && en.pause(),
+                    en.off(l.EventType.Advance, e)));
         };
         return (
-            Q.on(l.EventType.Advance, e),
-            I && !q.current && Q.play(),
+            en.on(l.EventType.Advance, e),
+            S && !et.current && en.play(),
             () => {
-                Q.off(l.EventType.Advance, e);
+                en.off(l.EventType.Advance, e);
             }
         );
-    }, [Q, x.reducedMotion.enabled, C, I]),
+    }, [en, H.reducedMotion.enabled, D, S]),
         a.useEffect(() => {
-            V();
-        }, [V, N, m, T, R]),
-        (function (e) {
+            K();
+        }, [K, y, C, O, v]));
+    let { playBriefly: ec } = (function (e) {
             let {
                     rive: t,
                     autoplay: n,
@@ -339,52 +342,106 @@ function R(e) {
                     isUserIdle: s,
                     lastFrameRef: d,
                     isPausedByCallerRef: c,
+                    canPlayBriefly: u,
                 } = e,
-                u = i ? t?.canvas : null,
-                _ = (0, o.Cz)(u),
-                E = r && !s && (!i || _),
-                A = a.useRef(!1),
-                f = a.useRef(null);
+                _ = i && null != t ? (0, I.b)(t) : null,
+                E = (0, o.Cz)(_),
+                A = r && !s && (!i || E),
+                f = a.useRef(!1),
+                h = a.useRef(null);
             a.useEffect(() => {
                 if (null == t) return;
-                t !== f.current && ((f.current = t), i && (A.current = n));
+                t !== h.current && ((h.current = t), i && (f.current = n));
                 let e = null,
                     r = c.current;
                 return (
-                    ((!E && A.current) || r) && t.isPlaying
+                    ((!A && f.current && !0 !== t.isPlayingUntilSettled) || r) && t.isPlaying
                         ? d.current > 0
                             ? t.pause()
                             : ((e = (n) => {
                                   "number" != typeof n.data ||
                                       n.data <= 0 ||
                                       (null != e && t.off(l.EventType.Advance, e),
-                                      (!E || c.current) && t.isPlaying && t.pause());
+                                      (!A || c.current) && t.isPlaying && t.pause());
                               }),
                               t.on(l.EventType.Advance, e))
-                        : E && !r && !t.isPlaying && A.current && t.play(),
+                        : A && !r && !t.isPlaying && f.current
+                          ? t.play()
+                          : A && !r && !0 === t.isPlayingUntilSettled && t.play(),
                     () => {
                         (null != e && t.off(l.EventType.Advance, e),
-                            null != t && E && (A.current = null != t.frameRequestId || !0 === t.isAutoSleeping));
+                            null != t && A && (f.current = null != t.frameRequestId || !0 === t.isAutoSleeping));
                     }
                 );
-            }, [t, E, d, n, i, c]);
+            }, [t, A, d, n, i, c]);
+            let p = !A && (!r || s) && (!i || E) && u,
+                m = a.useRef(p);
+            return (
+                a.useEffect(() => {
+                    m.current = p;
+                }, [p]),
+                {
+                    playBriefly: a.useCallback(() => {
+                        null == t ||
+                            (t.isPlaying && !0 !== t.isPlayingUntilSettled) ||
+                            (m.current && f.current && !c.current && t.playUntilSettled?.());
+                    }, [t, c]),
+                }
+            );
         })({
-            rive: Q,
-            autoplay: I,
-            isRiveWebPerfEnabled: u,
-            isFocused: F,
-            isUserIdle: B,
-            lastFrameRef: er,
-            isPausedByCallerRef: q,
-        }));
-    let ea = a.useMemo(
-        () => ({ instance: et, rive: Q, reducedMotionEnabled: x.reducedMotion.enabled, playIfNeeded: en }),
-        [et, Q, x.reducedMotion.enabled, en],
-    );
+            rive: en,
+            autoplay: S,
+            isRiveWebPerfEnabled: m,
+            isFocused: W,
+            isUserIdle: Y,
+            lastFrameRef: ed,
+            isPausedByCallerRef: et,
+            canPlayBriefly: !H.reducedMotion.enabled || "play" === D,
+        }),
+        eu =
+            ((i = en),
+            (s = ec),
+            (E = a.useRef(null)),
+            a.useEffect(
+                () => (
+                    (E.current = i),
+                    () => {
+                        E.current = null;
+                    }
+                ),
+                [i],
+            ),
+            (p = a.useRef(null)),
+            a.useCallback(
+                (e) => {
+                    if (null != i) {
+                        if (null != p.current) {
+                            p.current.frameTime ??= e;
+                            return;
+                        }
+                        ((p.current = { frameTime: e }),
+                            queueMicrotask(() => {
+                                let e = p.current;
+                                ((p.current = null), null != e && E.current === i && (i.redrawNow?.(e.frameTime), s()));
+                            }));
+                    }
+                },
+                [i, s],
+            )),
+        e_ = a.useMemo(
+            () => ({
+                instance: es,
+                rive: en,
+                reducedMotionEnabled: H.reducedMotion.enabled,
+                playIfNeeded: el,
+                showColorChange: eu,
+            }),
+            [es, en, H.reducedMotion.enabled, el, eu],
+        );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(J, { className: p, style: g, "aria-hidden": !0 }),
-            null != D ? (0, r.jsx)(h.j.Provider, { value: ea, children: D() }) : null,
+            (0, r.jsx)(ei, { className: N, style: R, "aria-hidden": !0 }),
+            null != U ? (0, r.jsx)(h.j.Provider, { value: e_, children: U() }) : null,
         ],
     });
 }

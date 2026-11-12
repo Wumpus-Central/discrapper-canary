@@ -6,7 +6,7 @@ let r =
 var g = a(729901),
     n = a(611361),
     m = a(799226),
-    u = a(270597);
+    u = a(752540);
 let f = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     },

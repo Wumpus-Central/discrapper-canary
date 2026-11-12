@@ -6,7 +6,7 @@ let r =
 var d = o(729901),
     i = o(611361),
     s = o(799226),
-    c = o(270597);
+    c = o(752540);
 let l = {
         "Boost Server": { reducedMotion: "boolean" },
         "Boost Crystal": { reducedMotion: "boolean" },

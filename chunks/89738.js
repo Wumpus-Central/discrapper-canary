@@ -23,14 +23,14 @@
             for (var r = e.length, n = []; r--;) n[r] = t(e[r]);
             return n;
         }
-        function y(e, t) {
+        function g(e, t) {
             var r = e.split("@"),
                 n = "";
             return (
                 r.length > 1 && ((n = r[0] + "@"), (e = r[1])), n + v((e = e.replace(f, ".")).split("."), t).join(".")
             );
         }
-        function g(e) {
+        function y(e) {
             for (var t, r, n = [], i = 0, o = e.length; i < o;)
                 (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < o
                     ? (64512 & (r = e.charCodeAt(i++))) == 56320
@@ -71,8 +71,8 @@
                 d = [],
                 h = e.length,
                 v = 0,
-                y = 128,
-                g = 72;
+                g = 128,
+                y = 72;
             for ((n = e.lastIndexOf("-")) < 0 && (n = 0), i = 0; i < n; ++i)
                 (e.charCodeAt(i) >= 128 && m("not-basic"), d.push(e.charCodeAt(i)));
             for (o = n > 0 ? n + 1 : 0; o < h;) {
@@ -90,16 +90,16 @@
                             u > p((0x7fffffff - v) / s)) &&
                             m("overflow"),
                         (v += u * s),
-                        !(u < (c = l <= g ? 1 : l >= g + 26 ? 26 : l - g));
+                        !(u < (c = l <= y ? 1 : l >= y + 26 ? 26 : l - y));
                     l += 36
                 ) {
                     (s > p(0x7fffffff / (f = 36 - c)) && m("overflow"), (s *= f));
                 }
-                ((g = _(v - a, (r = d.length + 1), 0 == a)),
-                    p(v / r) > 0x7fffffff - y && m("overflow"),
-                    (y += p(v / r)),
+                ((y = _(v - a, (r = d.length + 1), 0 == a)),
+                    p(v / r) > 0x7fffffff - g && m("overflow"),
+                    (g += p(v / r)),
                     (v %= r),
-                    d.splice(v++, 0, y));
+                    d.splice(v++, 0, g));
             }
             return b(d);
         }
@@ -117,10 +117,10 @@
                 f,
                 d,
                 v,
-                y,
+                g,
                 b,
                 S = [];
-            for (d = (e = g(e)).length, t = 128, r = 0, o = 72, a = 0; a < d; ++a) (f = e[a]) < 128 && S.push(h(f));
+            for (d = (e = y(e)).length, t = 128, r = 0, o = 72, a = 0; a < d; ++a) (f = e[a]) < 128 && S.push(h(f));
             for (n = i = S.length, i && S.push("-"); n < d;) {
                 for (s = 0x7fffffff, a = 0; a < d; ++a) (f = e[a]) >= t && f < s && (s = f);
                 for (
@@ -130,7 +130,7 @@
                 )
                     if (((f = e[a]) < t && ++r > 0x7fffffff && m("overflow"), f == t)) {
                         for (l = r, u = 36; !(l < (c = u <= o ? 1 : u >= o + 26 ? 26 : u - o)); u += 36)
-                            ((b = l - c), (y = 36 - c), S.push(h(w(c + (b % y), 0))), (l = p(b / y)));
+                            ((b = l - c), (g = 36 - c), S.push(h(w(c + (b % g), 0))), (l = p(b / g)));
                         (S.push(h(w(l, 0))), (o = _(r, v, n == i)), (r = 0), ++n);
                     }
                 (++r, ++t);
@@ -140,16 +140,16 @@
         if (
             ((s = {
                 version: "1.4.1",
-                ucs2: { decode: g, encode: b },
+                ucs2: { decode: y, encode: b },
                 decode: S,
                 encode: E,
                 toASCII: function (e) {
-                    return y(e, function (e) {
+                    return g(e, function (e) {
                         return c.test(e) ? "xn--" + E(e) : e;
                     });
                 },
                 toUnicode: function (e) {
-                    return y(e, function (e) {
+                    return g(e, function (e) {
                         return u.test(e) ? S(e.slice(4).toLowerCase()) : e;
                     });
                 },

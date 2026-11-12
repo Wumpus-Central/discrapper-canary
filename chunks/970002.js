@@ -4,7 +4,7 @@ var i = n(477900),
     s = n(729901),
     l = n(611361),
     o = n(799226),
-    d = n(270597);
+    d = n(752540);
 let c = {
         Base: { EntryTrigger: "trigger", ExitTrigger: "trigger", PosX: "number", PosY: "number" },
         "Nitro Illustration \u2014 Star": {},

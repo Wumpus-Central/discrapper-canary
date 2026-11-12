@@ -53,7 +53,7 @@ let m =
 var S = n(729901),
     M = n(611361),
     C = n(799226),
-    B = n(270597);
+    B = n(752540);
 let f = {
         Main: {
             reducedMotion: "boolean",
