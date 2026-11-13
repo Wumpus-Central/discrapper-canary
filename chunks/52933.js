@@ -1,7 +1,7 @@
 var s = t(477900),
     l = t(503698),
-    i = t.n(l),
-    a = t(805251),
+    a = t.n(l),
+    i = t(805251),
     r = t(866665),
     c = t(366605),
     d = t(431527),
@@ -9,21 +9,21 @@ var s = t(477900),
     u = t(422844),
     h = t(691060),
     m = t(376310),
-    g = t(746080),
-    x = t(792996),
-    f = t(240103);
-function j(e) {
+    x = t(746080),
+    g = t(792996),
+    j = t(240103);
+function f(e) {
     let { channel: n, isNew: t } = e,
         s = (0, h.kt)(n),
         l = s.slice(void 0, 3),
-        i = s.slice(3),
-        a = s.length > 3 ? s.length - 3 : 0,
-        r = n.hasFlag(g.lx.PINNED),
+        a = s.slice(3),
+        i = s.length > 3 ? s.length - 3 : 0,
+        r = n.hasFlag(x.lx.PINNED),
         c = l.length > 0 || r || t;
     return {
         shownTags: l,
-        remainingTags: i,
-        moreTagsCount: a,
+        remainingTags: a,
+        moreTagsCount: i,
         isPinned: r,
         shouldRenderTagsRow: c,
         forumPostContainsTags: s.length > 0,
@@ -36,30 +36,30 @@ t.d(
         Ay: function (e) {
             let { channel: n, isNew: t, tagsClassName: l, className: h } = e,
                 {
-                    shownTags: g,
-                    remainingTags: A,
-                    moreTagsCount: v,
+                    shownTags: x,
+                    remainingTags: v,
+                    moreTagsCount: A,
                     isPinned: p,
                     shouldRenderTagsRow: N,
-                } = j({ channel: n, isNew: t }),
+                } = f({ channel: n, isNew: t }),
                 { enabled: b } = o.A.useConfig({ location: "forum-post-tags" }),
                 { tagFilter: y } = (0, u.R)(n.id),
-                C = (0, m.cq)(g);
+                C = (0, m.cq)(x);
             return N
                 ? (0, s.jsxs)("div", {
-                      className: i()(f._A, h),
+                      className: a()(j._A, h),
                       children: [
                           t
                               ? (0, s.jsx)("div", {
-                                    className: f.Ad,
-                                    children: (0, s.jsx)(a.E, { type: "new", variant: "primary" }),
+                                    className: j.Ad,
+                                    children: (0, s.jsx)(i.E, { type: "new", variant: "primary" }),
                                 })
                               : null,
                           p &&
                               (0, s.jsx)("div", {
-                                  className: f.Ne,
+                                  className: j.Ne,
                                   children: (0, s.jsx)(r.m, {
-                                      text: x.intl.string(x.t["1QLRYb"]),
+                                      text: g.intl.string(g.t["1QLRYb"]),
                                       children: (0, s.jsx)(c.PinIcon, {
                                           size: "custom",
                                           width: 16,
@@ -71,24 +71,24 @@ t.d(
                           b
                               ? (0, s.jsx)(d.C, {
                                     variant: "filter",
-                                    label: x.intl.string(x.t["P/y+sj"]),
+                                    label: g.intl.string(g.t["P/y+sj"]),
                                     items: C,
                                     size: "xs",
                                 })
-                              : g.map((e) =>
+                              : x.map((e) =>
                                     (0, s.jsx)(
                                         m.Ay,
-                                        { tag: e, size: m.Ay.Sizes.SMALL, className: i()(l, { [f.At]: y.has(e.id) }) },
+                                        { tag: e, size: m.Ay.Sizes.SMALL, className: a()(l, { [j.At]: y.has(e.id) }) },
                                         e.id,
                                     ),
                                 ),
-                          v > 0
-                              ? (0, s.jsx)(m.q6, { tags: A, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: b })
+                          A > 0
+                              ? (0, s.jsx)(m.q6, { tags: v, count: A, size: m.Ay.Sizes.SMALL, useManaTagGroup: b })
                               : null,
                       ],
                   })
                 : null;
         },
-        BA: j,
+        BA: f,
     },
 );

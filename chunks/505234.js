@@ -1,19 +1,19 @@
 var s = t(477900);
 t(582128);
 var l = t(621466),
-    i = t(442433);
+    a = t(442433);
 t.d(
     n,
     {},
     {
         A: function (e) {
-            let { facepileRef: n, goToThread: a, channel: r } = e;
+            let { facepileRef: n, goToThread: i, channel: r } = e;
             return {
                 handleLeftClick: function (e) {
-                    ((0, l.vq)(e.target) && n.current?.contains(e.target)) || a(r, e.shiftKey);
+                    ((0, l.vq)(e.target) && n.current?.contains(e.target)) || i(r, e.shiftKey);
                 },
                 handleRightClick: function (e) {
-                    return (0, i.L3)(e, async () => {
+                    return (0, a.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             t.e(926132),
                             t.e(393336),

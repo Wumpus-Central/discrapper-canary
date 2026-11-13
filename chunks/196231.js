@@ -43,9 +43,9 @@ n.d(
                 y = a?.categorySkuId;
             null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
             let b = y ?? n?.skuId ?? "",
-                { handleCardVisibilityChange: S } = (0, m.Z)(b, d, "marketing featured block"),
-                A = (0, f.s4)(n, a, c),
-                I = r.useRef(null),
+                { handleCardVisibilityChange: A } = (0, m.Z)(b, d, "marketing featured block"),
+                I = (0, f.s4)(n, a, c),
+                S = r.useRef(null),
                 k = a?.bodyText,
                 j = n?.isOrbsExclusive,
                 L = a?.name ?? n?.name,
@@ -74,13 +74,13 @@ n.d(
                     R("shop marketing tile", null);
                 }, [R]);
             return (0, l.jsx)(s.L, {
-                innerRef: I,
-                onChange: S,
+                innerRef: S,
+                onChange: A,
                 threshold: 0,
                 children: (0, l.jsx)(h.Ay, {
                     layout: t,
-                    innerRef: I,
-                    backgroundImageUrl: A,
+                    innerRef: S,
+                    backgroundImageUrl: I,
                     title:
                         null != k
                             ? { text: k, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }

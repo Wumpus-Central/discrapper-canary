@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     Nr: "card_PQuVz8",
     Kk: "icon_PQuVz8",
     pq: "info_PQuVz8",

@@ -5,11 +5,11 @@ t.d(
     {},
     {
         A: function (e) {
-            let { firstMessage: n, formatInline: t = !0, noStyleAndInteraction: i = !0 } = e,
-                a = n?.content != null && "" !== n.content,
-                { hasSpoilerEmbeds: r, content: c } = (0, s.A)(a ? n : null, {
+            let { firstMessage: n, formatInline: t = !0, noStyleAndInteraction: a = !0 } = e,
+                i = n?.content != null && "" !== n.content,
+                { hasSpoilerEmbeds: r, content: c } = (0, s.A)(i ? n : null, {
                     formatInline: t,
-                    noStyleAndInteraction: i,
+                    noStyleAndInteraction: a,
                     allowHeading: !0,
                     allowList: !0,
                 }),

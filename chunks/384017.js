@@ -1,7 +1,7 @@
 t.exports = {
-    $O: "clarification_C77viY " + e(29073).nd,
+    $O: "clarification_C77viY " + _(29073).nd,
     rf: "body_C77viY",
-    wx: "header_C77viY " + e(29073).wx,
+    wx: "header_C77viY " + _(29073).wx,
     uK: "option_C77viY",
     qO: "optionBody_C77viY",
     h4: "optionSelected_C77viY",

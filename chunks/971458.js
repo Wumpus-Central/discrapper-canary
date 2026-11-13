@@ -66,25 +66,25 @@ function y(e) {
         _ = r.useRef(null),
         y = r.useRef(null),
         b = r.useRef(!1),
-        { isHovered: S, setIsHovered: A, onMouseEnter: I, onMouseLeave: k, cancelTimers: j } = (0, x.A)(100, 100),
+        { isHovered: A, setIsHovered: I, onMouseEnter: S, onMouseLeave: k, cancelTimers: j } = (0, x.A)(100, 100),
         L = r.useCallback(() => {
-            ((b.current = f.Ay.keyboardModeEnabled), I());
-        }, [I]),
+            ((b.current = f.Ay.keyboardModeEnabled), S());
+        }, [S]),
         N = r.useCallback(() => {
-            (j(), A(!0), (b.current = f.Ay.keyboardModeEnabled));
-        }, [j, A]),
+            (j(), I(!0), (b.current = f.Ay.keyboardModeEnabled));
+        }, [j, I]),
         O = r.useCallback(
             (e) => {
                 (j(),
                     b.current && !f.Ay.keyboardModeEnabled && (0, p.uS)(),
-                    A(!1),
+                    I(!1),
                     e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : _.current?.focus())));
             },
-            [j, A],
+            [j, I],
         ),
         R = r.useCallback(() => {
-            S ? O(!1) : N();
-        }, [S, N, O]),
+            A ? O(!1) : N();
+        }, [A, N, O]),
         T = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
@@ -94,21 +94,21 @@ function y(e) {
         M = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), S ? (O(!1), requestAnimationFrame(N)) : N());
+                    (e.preventDefault(), e.stopPropagation(), A ? (O(!1), requestAnimationFrame(N)) : N());
             },
-            [S, N, O],
+            [A, N, O],
         ),
         D = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
         B = (0, l.jsx)(m.ChevronSmallDownIcon, {
             size: "sm",
             color: "currentColor",
-            className: a()(E.OW, { [E.g3]: S }),
+            className: a()(E.OW, { [E.g3]: A }),
         });
     return (0, l.jsx)("li", {
         className: E.I,
         children: (0, l.jsx)(g.Y, {
             targetElementRef: _,
-            shouldShow: S,
+            shouldShow: A,
             position: "bottom",
             align: "left",
             spacing: 4,
@@ -117,7 +117,7 @@ function y(e) {
             animation: g.Y.Animation.NONE,
             renderPopout: () =>
                 (0, l.jsx)("div", {
-                    onMouseEnter: I,
+                    onMouseEnter: S,
                     onMouseLeave: k,
                     children: (0, l.jsx)(h.W, {
                         navId: o,
@@ -199,26 +199,26 @@ function y(e) {
     });
 }
 var b = n(765671);
-let S = 'a[href], [role="button"]';
-function A(e, t) {
-    let n = Array.from(e.querySelectorAll(S)),
+let A = 'a[href], [role="button"]';
+function I(e, t) {
+    let n = Array.from(e.querySelectorAll(A)),
         l = n.indexOf(document.activeElement);
     -1 !== l && n[l + t]?.focus();
 }
-function I(e) {
+function S(e) {
     switch (e.key) {
         case "ArrowRight":
-            (e.preventDefault(), A(e.currentTarget, 1));
+            (e.preventDefault(), I(e.currentTarget, 1));
             return;
         case "ArrowLeft":
-            (e.preventDefault(), A(e.currentTarget, -1));
+            (e.preventDefault(), I(e.currentTarget, -1));
             return;
         case "Home":
-            (e.preventDefault(), e.currentTarget.querySelector(S)?.focus());
+            (e.preventDefault(), e.currentTarget.querySelector(A)?.focus());
             return;
         case "End": {
             e.preventDefault();
-            let t = e.currentTarget.querySelectorAll(S);
+            let t = e.currentTarget.querySelectorAll(A);
             t[t.length - 1]?.focus();
         }
     }
@@ -267,7 +267,7 @@ function k(e) {
             }),
             h &&
                 (0, l.jsx)("ul", {
-                    onKeyDown: I,
+                    onKeyDown: S,
                     className: E.P_,
                     children: p.map((e) => (0, l.jsx)(C, { navId: m, option: e, selectedKey: n }, e.key)),
                 }),

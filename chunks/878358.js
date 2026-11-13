@@ -118,7 +118,7 @@ function U(e) {
         ],
     });
 }
-function H(e) {
+function G(e) {
     let { isCheckpointEnabled: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -138,7 +138,7 @@ function H(e) {
         ],
     });
 }
-function G(e) {
+function H(e) {
     let { isCheckpointEnabled: t, onClick: a } = e;
     return t && null != a
         ? (0, r.jsx)(m.m, {
@@ -149,13 +149,13 @@ function G(e) {
                   className: n()(O.qr, O.vk),
                   onClick: a,
                   "aria-label": T.intl.string(y.default.UjtEWE),
-                  children: (0, r.jsx)(H, { isCheckpointEnabled: t }),
+                  children: (0, r.jsx)(G, { isCheckpointEnabled: t }),
               }),
           })
         : (0, r.jsx)("div", {
               className: O.qr,
               "aria-hidden": !0,
-              children: (0, r.jsx)(H, { isCheckpointEnabled: t }),
+              children: (0, r.jsx)(G, { isCheckpointEnabled: t }),
           });
 }
 a.d(
@@ -182,7 +182,7 @@ a.d(
                         : null,
                     null != s ? (0, r.jsx)(w.A, { character: s }) : null,
                     null != h ? (0, r.jsx)(U, { stats: h }) : null,
-                    (0, r.jsx)(G, { isCheckpointEnabled: u, onClick: a }),
+                    (0, r.jsx)(H, { isCheckpointEnabled: u, onClick: a }),
                 ],
             });
         },
