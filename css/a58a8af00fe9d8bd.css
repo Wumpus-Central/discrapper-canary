@@ -290,6 +290,17 @@
     clip-path: inset(0 calc(var(--space-32)*-1))
 }
 
+.heroBlockTakeover_XBXDcd:has(>.responsive_XBXDcd.banner_XBXDcd) {
+    position: relative
+}
+
+.heroBlockTakeover_XBXDcd:has(>.responsive_XBXDcd.banner_XBXDcd)>.responsive_XBXDcd.banner_XBXDcd {
+    top: 0;
+    inset-inline: calc(var(--space-32)*-1);
+    max-height: 100%;
+    width: calc(100% + var(--space-32)*2)
+}
+
 .heroBlockEmptyCards_XBXDcd {
     min-height: 350px
 }
@@ -872,4 +883,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=429c21ad7f0e1142.css.map*/
+/*# sourceMappingURL=a58a8af00fe9d8bd.css.map*/

@@ -93,8 +93,8 @@ function G(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "f219336915bd4b4f8dbad0cdbd9b4300d29a920a" !== e.body.hash) {
-                let e = new Date("1794611692942"),
+            if (null != e.body && "2b3e3f789f93f420b6c6b74bc41c9977b88e571d" !== e.body.hash) {
+                let e = new Date("1794611945823"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eR(n.hours);
