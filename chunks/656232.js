@@ -1,4 +1,4 @@
-n.d(t, { A: () => i8 });
+n.d(t, { A: () => i4 });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -508,8 +508,8 @@ var eq = n(633965),
     e6 = n(723702),
     e5 = n(757780),
     e7 = n(263715),
-    e8 = n(967198),
-    e4 = n(173860),
+    e4 = n(967198),
+    e8 = n(173860),
     e9 = n(383394),
     te = n(131677),
     tt = n(73153);
@@ -558,7 +558,7 @@ function t_(e) {
         ),
         a = (0, _.bG)([ta.A], () => ta.A.isFocused()),
         s = (0, _.bG)([e9.A], () => e9.A.getExpandedFolders());
-    return (0, i.jsx)(e4.A, {
+    return (0, i.jsx)(e8.A, {
         ...n,
         ref: t,
         items: r,
@@ -831,8 +831,12 @@ class tG extends r.PureComponent {
                       n.e(491001),
                       n.e(451162),
                       n.e(229787),
+                      n.e(142867),
                       n.e(88342),
+                      n.e(96539),
                       n.e(576665),
+                      n.e(495786),
+                      n.e(717479),
                       n.e(311802),
                       n.e(698965),
                       n.e(382563),
@@ -1120,12 +1124,12 @@ function t7(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function t8(e) {
+function t4(e) {
     let { onClick: t, ...n } = e,
         r = (0, tq.P)("guild_list_add_server");
     return (0, i.jsx)(tY, { ...n, onClick: () => t(r), tooltip: ey.intl.string(r ? ey.t.riOUtB : ey.t.l5WIbf) });
 }
-function t4(e) {
+function t8(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, _.yK)([e2.A], () => e2.A.getGuildsArray()),
         s = (0, _.bG)([eC.default], () => eC.default.getCurrentUser()),
@@ -1153,7 +1157,7 @@ function t4(e) {
             children: [
                 c
                     ? (0, i.jsx)(tY, { ...E, onClick: () => u(!1), tooltip: ey.intl.string(ey.t.l5WIbf) })
-                    : (0, i.jsx)(t8, { ...E, onClick: u }),
+                    : (0, i.jsx)(t4, { ...E, onClick: u }),
                 null != n &&
                     (0, i.jsx)(t2.Ay, {
                         name: ey.intl.string(ey.t["45xjM5"]),
@@ -1559,10 +1563,10 @@ function n7(e) {
         );
     return t ? n : void 0;
 }
-var n8 = n(347951),
-    n4 = n(34162);
+var n4 = n(347951),
+    n8 = n(34162);
 function n9(e) {
-    return (0, _.bG)([n4.A], () => n4.A.getGuildMediaState(e), [e]);
+    return (0, _.bG)([n8.A], () => n8.A.getGuildMediaState(e), [e]);
 }
 var ie = n(126600),
     it = n(607399),
@@ -1886,7 +1890,7 @@ function iL(e) {
         o = null != l ? (0, i.jsx)(iR, { guildJoinRequestStatus: l }) : null,
         d = (0, i.jsx)(iO, { guild: t }),
         c = (0, _.bG)([iI.A], () => iI.A.isViewingRoles(t.id)),
-        u = (0, n8.Ig)(t),
+        u = (0, n4.Ig)(t),
         E =
             n && r
                 ? (function () {
@@ -2333,15 +2337,19 @@ function iM(e, t) {
             n.e(857467),
             n.e(977547),
             n.e(508371),
+            n.e(142867),
             n.e(885434),
             n.e(88342),
             n.e(586127),
             n.e(554241),
+            n.e(96539),
             n.e(41250),
             n.e(724303),
             n.e(179049),
             n.e(132737),
+            n.e(495786),
             n.e(53102),
+            n.e(717479),
             n.e(344502),
             n.e(146070),
             n.e(836863),
@@ -2400,7 +2408,6 @@ function iM(e, t) {
             n.e(256769),
             n.e(553984),
             n.e(902564),
-            n.e(142867),
             n.e(884601),
             n.e(782969),
             n.e(30441),
@@ -2415,7 +2422,6 @@ function iM(e, t) {
             n.e(408362),
             n.e(741678),
             n.e(504370),
-            n.e(96539),
             n.e(225575),
             n.e(676156),
             n.e(852617),
@@ -2425,11 +2431,10 @@ function iM(e, t) {
             n.e(787139),
             n.e(737021),
             n.e(775951),
-            n.e(495786),
             n.e(428967),
             n.e(731751),
             n.e(254506),
-            n.e(378873),
+            n.e(62613),
             n.e(874342),
             n.e(138830),
             n.e(258033),
@@ -2913,7 +2918,7 @@ let iG = r.memo(function (e) {
         h = nQ(nq(r.useMemo(() => [a], [a]))),
         I = E + h.unreadCount,
         p = 0 === E && h.unreadCount > 0,
-        m = (0, n8.Ig)(s) && 0 === I,
+        m = (0, n4.Ig)(s) && 0 === I,
         T = r.useMemo(
             () =>
                 null != n
@@ -2970,7 +2975,7 @@ function i$(e) {
         r = (0, _.bG)([n5.A], () => n5.A.getRequest(n)),
         a = (0, _.bG)([n5.A], () => n5.A.getJoinRequestGuild(n), [n]),
         s = (0, _.bG)([ta.A], () => ta.A.isFocused()),
-        l = (0, _.bG)([e8.A], () => e8.A.getGuildId());
+        l = (0, _.bG)([e4.A], () => e4.A.getGuildId());
     return null == a
         ? null
         : (0, i.jsx)(iU, {
@@ -3056,7 +3061,7 @@ function iz(e) {
 function iq(e) {
     let { onActivate: t } = e,
         [n, a] = r.useState(!1),
-        s = (0, _.bG)([e8.A], () => e8.A.getGuildId()),
+        s = (0, _.bG)([e4.A], () => e4.A.getGuildId()),
         l = (0, _.bG)([n5.A], () => n5.A.hasFetchedRequestToJoinGuilds),
         o = (0, iY.A)(),
         d = (0, iV.Ay)(s),
@@ -3337,7 +3342,7 @@ function i5(e) {
             }),
             d,
             (0, i.jsx)(nW, {}),
-            r ? null : (0, i.jsx)(t4, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
+            r ? null : (0, i.jsx)(t8, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
             r ? null : t,
             n ? null : (0, i.jsx)(tX, {}),
         ],
@@ -3462,13 +3467,13 @@ function i7(e) {
         r.useEffect(() => {
             let e = null;
             function n() {
-                let n = e8.A.getGuildId();
+                let n = e4.A.getGuildId();
                 n !== e && ((e = n ?? null), t(n ?? null, !1));
             }
             return (
-                e8.A.addChangeListener(n),
+                e4.A.addChangeListener(n),
                 () => {
-                    e8.A.removeChangeListener(n);
+                    e4.A.removeChangeListener(n);
                 }
             );
         }, [t]));
@@ -3588,7 +3593,7 @@ function i7(e) {
         }),
     });
 }
-let i8 = r.memo(
+let i4 = r.memo(
     function (e) {
         let t = (0, N.A)("guildsnav");
         return (0, i.jsx)(c.hD, { navigator: t, children: (0, i.jsx)(i7, { ...e }) });
