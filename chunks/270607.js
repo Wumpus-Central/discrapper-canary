@@ -10,7 +10,7 @@ var i = n(477900),
     f = n(682901);
 function g() {
     (0, o.mM)(async () => {
-        let { default: e } = await n.e(614146).then(n.bind(n, 503257));
+        let { default: e } = await Promise.all([n.e(669779), n.e(614146)]).then(n.bind(n, 503257));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }

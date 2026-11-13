@@ -6,6 +6,7 @@ e.exports = {
     Ny: "traitCard_MIigO5",
     GX: "videoCard_MIigO5",
     f1: "videoPoster_MIigO5",
+    IG: "videoPosterImage_MIigO5",
     UX: "cardFooter_MIigO5",
     wE: "videoAction_MIigO5",
     mB: "traitIcon_MIigO5",

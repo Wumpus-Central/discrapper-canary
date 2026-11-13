@@ -21,19 +21,23 @@
 }
 
 .art__vwHFq {
-    align-items: center;
     background: var(--background-surface-higher);
-    display: flex;
     height: 280px;
-    justify-content: center
+    position: relative
+}
+
+.art__vwHFq:after {
+    background: linear-gradient(180deg, rgba(19, 20, 22, 0) 0, var(--background-surface-high) 100%), linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
+    content: "";
+    inset: 0;
+    position: absolute
 }
 
 .artImage__vwHFq {
-    box-sizing: border-box;
+    display: block;
     height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    padding: var(--space-32);
+    -o-object-fit: cover;
+    object-fit: cover;
     width: 100%
 }
 
@@ -106,4 +110,4 @@
     }
 }
 
-/*# sourceMappingURL=1efd986f340e7cfb.css.map*/
+/*# sourceMappingURL=148781e776f40bde.css.map*/

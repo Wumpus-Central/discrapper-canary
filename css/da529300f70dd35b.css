@@ -713,13 +713,6 @@
     position: relative
 }
 
-.asset_Yr443h:after {
-    background-color: var(--background-scrim);
-    content: "";
-    inset: 0;
-    position: absolute
-}
-
 .assetImage_Yr443h {
     height: 100%;
     inset: 0;
@@ -735,4 +728,4 @@
     }
 }
 
-/*# sourceMappingURL=507a1e333c615f71.css.map*/
+/*# sourceMappingURL=da529300f70dd35b.css.map*/

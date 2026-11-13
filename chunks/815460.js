@@ -8,9 +8,10 @@ function s(e, t) {
                 n.e(114386),
                 n.e(885653),
                 n.e(538733),
+                n.e(206394),
                 n.e(704457),
-                n.e(220411),
-            ]).then(n.bind(n, 633906));
+                n.e(108528),
+            ]).then(n.bind(n, 729331));
             return (n) => (0, i.jsx)(t, { ...n, ...e });
         },
         { modalKey: "clips-ea-announcement", onCloseCallback: t },

@@ -458,35 +458,48 @@
 }
 
 .videoPoster_MIigO5 {
-    align-items: center;
-    background: radial-gradient(circle at 70% 20%, var(--background-brand), transparent 55%), linear-gradient(135deg, var(--background-brand), var(--background-base-lowest));
-    color: var(--text-overlay-light);
     inset: 0;
-    justify-content: center
+    position: absolute
 }
 
-.cardFooter_MIigO5,
-.videoPoster_MIigO5 {
-    display: flex;
+.videoPoster_MIigO5:after {
+    background: linear-gradient(180deg, transparent 50%, color-mix(in srgb, var(--background-brand) 50%, transparent)), linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
+    content: "";
+    inset: 0;
     position: absolute
+}
+
+.videoPosterImage_MIigO5 {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
 }
 
 .cardFooter_MIigO5 {
     inset-inline: 0;
     bottom: 0;
     flex-direction: column;
-    gap: var(--space-8);
-    padding: var(--space-12)
+    padding: var(--space-12);
+    position: absolute
 }
 
+.cardFooter_MIigO5,
 .videoAction_MIigO5 {
-    align-items: center;
-    color: var(--text-overlay-light);
     display: flex;
     gap: var(--space-8)
 }
 
+.videoAction_MIigO5 {
+    align-items: center;
+    color: var(--text-overlay-light)
+}
+
 .traitCard_MIigO5 {
+    background-image: url("https://cdn.discordapp.com/assets/content/6cc055e03471551fd9f2adb7929f6dbfb04ef4acd6923662ab7797742136dd2d.webp");
+    background-position: 50%;
+    background-size: cover;
     border-style: dashed;
     color: var(--text-muted)
 }
@@ -604,7 +617,7 @@
 }
 
 .radialCard_MIigO5 {
-    background: var(--background-base-lower);
+    background-color: var(--background-base-lower);
     inset-inline-start: calc(50% - 232px);
     opacity: .5;
     position: absolute;
@@ -854,4 +867,4 @@
     padding: var(--space-8) 0
 }
 
-/*# sourceMappingURL=61b7c42cb374ea97.css.map*/
+/*# sourceMappingURL=8e53f6d1b38ace79.css.map*/

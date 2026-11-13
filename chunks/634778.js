@@ -7807,7 +7807,7 @@ let c$ = (0, h.zZ)(S.X.REDEEM_GIFT_CATEGORY, {
         buildLayout: () => [c1],
     });
 var c3 = n(659758),
-    c5 = n(529403),
+    c5 = n(415904),
     c4 = n(517352),
     c6 = n(831259),
     c8 = n(462887),

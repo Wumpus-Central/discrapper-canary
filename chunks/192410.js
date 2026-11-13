@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672987, Version Hash: dcd934231ba619499c547fa3cc955e9e59911c16`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672997, Version Hash: 354f86e9114efa0946bbddb24e242b13ac1d0e0b`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672987";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672997";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -2251,6 +2251,7 @@ let rn = (0, re.qT)({
             n.e(276814),
             n.e(569468),
             n.e(501888),
+            n.e(206394),
             n.e(507127),
             n.e(384820),
             n.e(888205),
@@ -2267,7 +2268,7 @@ let rn = (0, re.qT)({
             n.e(313052),
             n.e(334624),
             n.e(971508),
-            n.e(143295),
+            n.e(581450),
             n.e(439518),
             n.e(706687),
             n.e(503177),
@@ -4864,6 +4865,7 @@ let sa = (0, re.Fe)({
                 n.e(704374),
                 n.e(501888),
                 n.e(186546),
+                n.e(206394),
                 n.e(168031),
                 n.e(547298),
                 n.e(271203),
@@ -4950,7 +4952,7 @@ let sa = (0, re.Fe)({
                 n.e(334624),
                 n.e(971508),
                 n.e(816799),
-                n.e(143295),
+                n.e(581450),
                 n.e(352351),
                 n.e(293285),
                 n.e(46071),
@@ -15999,7 +16001,7 @@ let pm = "isHideDevBanner",
                     className: td()(pp.Wz, pp.mr),
                     children: [
                         (0, v.jsx)(pI, { className: pp.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672987" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672997" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -16213,27 +16215,44 @@ function pY(e) {
           });
 }
 var pK = n(201805),
-    p$ = n(465794),
-    pX = n(923566),
-    pz = n(171251),
-    pq = n(826685),
-    pQ = n(876474),
-    pJ = n(190443),
-    pZ = n(688976),
-    p0 = n(253146);
+    p$ = n(804564),
+    pX = n(465794),
+    pz = n(923566),
+    pq = n(171251),
+    pQ = n(826685),
+    pJ = n(876474),
+    pZ = n(190443),
+    p0 = n(688976);
 let p1 = +iu.A.Millis.MINUTE,
     p2 = rF.M.AUTOCLIPPING_EARLY_ACCESS_FREE_USER_POST_SESSION_OPT_OUT,
-    p3 = { [pz.w]: pZ.aV, [pQ.m]: pZ.BE, [pq.b]: pZ._b, [pJ.e]: pZ.bf };
+    p3 = {
+        [pq.w]: {
+            tintClassName: p0.aV,
+            artSrc: "https://cdn.discordapp.com/assets/content/33bc6ca3e533f8a66da305965888a879c1da148309bce08401a0922c83fb348d.png",
+        },
+        [pJ.m]: {
+            tintClassName: p0.BE,
+            artSrc: "https://cdn.discordapp.com/assets/content/ab83f84c9cab4b5657cea628bb76f4c4b7afcca57c149ccc31023844d74ed036.png",
+        },
+        [pQ.b]: {
+            tintClassName: p0._b,
+            artSrc: "https://cdn.discordapp.com/assets/content/ff149c042220a98d06085dcf0819e4d6b294b93e8750129e06d36a43d4564a30.png",
+        },
+        [pZ.e]: {
+            tintClassName: p0.bf,
+            artSrc: "https://cdn.discordapp.com/assets/content/e94b31652f69a481aaa8455a5ace314413e4dce10a9d90f16009e3cdbe123f06.png",
+        },
+    };
 function p6(e) {
     let { suppressed: t } = e,
-        { isOpen: n, applicationId: i } = (0, pX.o9)(),
+        { isOpen: n, applicationId: i } = (0, pz.o9)(),
         { gameRecord: r } = (0, pG.Ay)(i),
         a = (0, e_.bG)([ek.default], () => (0, l7.YE)(ek.default.getCurrentUser(), l1.PremiumTypes.TIER_2)),
         s = n && null != i && !a && !t,
         [l, o] = (0, rc.kn)(s ? [p2] : [], { bypassAutoDismiss: !0 }),
         d = eh.useCallback(
             (e) => {
-                (e === pj.USER && o(rE.i.USER_DISMISS), (0, pX.eM)());
+                (e === pj.USER && o(rE.i.USER_DISMISS), (0, pz.eM)());
             },
             [o],
         );
@@ -16242,7 +16261,7 @@ function p6(e) {
         duration: p1,
         onDismiss: d,
         dismissAriaLabel: tN.intl.string(tN.t.cpT0Cq),
-        wrapperClassName: pZ.nd,
+        wrapperClassName: p0.nd,
         renderBody: () => {
             var e;
             let t,
@@ -16250,32 +16269,37 @@ function p6(e) {
                     title: n,
                     body: a,
                     tintClassName: s,
+                    artSrc: l,
                 } = ((e = r?.name),
                 null == (t = null != i ? p3[i] : void 0) || null == e || "" === e
                     ? {
                           title: tN.intl.string(If.default.rc1kmR),
                           body: tN.intl.string(If.default.ycsC9o),
-                          tintClassName: pZ.lf,
+                          tintClassName: p0.lf,
+                          artSrc: null,
                       }
                     : {
                           title: tN.intl.formatToPlainString(If.default.IvZiNg, { gameName: e }),
                           body: tN.intl.formatToPlainString(If.default.HfvOSC, { gameName: e }),
-                          tintClassName: t,
+                          tintClassName: t.tintClassName,
+                          artSrc: t.artSrc,
                       });
             return (0, v.jsxs)("div", {
-                className: pZ.rf,
+                className: p0.rf,
                 children: [
-                    (0, v.jsx)("div", { className: td()(pZ.tB, s), "aria-hidden": "true" }),
-                    (0, v.jsx)("img", { className: pZ.Qw, src: p0, alt: "" }),
+                    (0, v.jsx)("div", { className: td()(p0.tB, s), "aria-hidden": "true" }),
+                    null != l
+                        ? (0, v.jsx)("img", { className: p0.Qw, src: l, alt: "" })
+                        : (0, v.jsx)(p$.f, { alt: "", ariaHidden: !0, width: 180, height: 120 }),
                     (0, v.jsx)(uJ.E, { type: "early_access", variant: "inverted", icon: ax.NitroWheelIcon }),
                     (0, v.jsxs)("div", {
-                        className: pZ.C,
+                        className: p0.C,
                         children: [
                             (0, v.jsx)(rB.E, { variant: "body-md/medium", color: "text-strong", children: n }),
                             (0, v.jsx)(rB.E, { variant: "body-sm/normal", color: "text-muted", children: a }),
                         ],
                     }),
-                    (0, v.jsx)(p$.A, { subscriptionTier: l1.pe.TIER_2, onClick: pX.eM, fullWidth: !0 }),
+                    (0, v.jsx)(pX.A, { subscriptionTier: l1.pe.TIER_2, onClick: pz.eM, fullWidth: !0 }),
                 ],
             });
         },
@@ -46361,6 +46385,7 @@ let wj = (0, tW.Fe)({
             n.e(501888),
             n.e(186546),
             n.e(960816),
+            n.e(206394),
             n.e(55266),
             n.e(168031),
             n.e(694138),
@@ -46495,7 +46520,7 @@ let wj = (0, tW.Fe)({
             n.e(356675),
             n.e(375966),
             n.e(124981),
-            n.e(143295),
+            n.e(581450),
             n.e(352351),
             n.e(293285),
             n.e(46071),
@@ -46657,10 +46682,11 @@ let wj = (0, tW.Fe)({
             n.e(165836),
             n.e(152253),
             n.e(415046),
+            n.e(669779),
             n.e(713085),
             n.e(486381),
             n.e(306265),
-            n.e(773953),
+            n.e(171470),
             n.e(942148),
             n.e(294923),
             n.e(766507),
