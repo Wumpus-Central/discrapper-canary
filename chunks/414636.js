@@ -1,56 +1,56 @@
-n.d(t, { gE: () => U, p7: () => O, n8: () => I });
-var l = n(477900),
-    r = n(582128),
-    i = n(855986),
-    a = n(477782),
-    s = n(403581),
-    d = n(793574),
-    c = n(688810),
-    u = n(917445),
-    o = n(287809),
-    y = n(245175),
-    m = n(708645),
-    E = n(609425),
-    f = n(834730),
-    x = n(646514),
-    p = n(913563),
-    h = n(898985),
-    _ = n(16371),
-    v = n(842671),
-    N = n(792996),
-    g = n(547961);
-function j(e) {
-    let { displayNameStyles: t } = e,
-        { name: n } = (0, h._)(t.effectId),
-        r = N.intl.string((0, p.A)(t.fontId));
+t.d(n, { gE: () => U, p7: () => O, n8: () => I });
+var l = t(477900),
+    r = t(582128),
+    i = t(855986),
+    a = t(477782),
+    s = t(403581),
+    d = t(793574),
+    c = t(688810),
+    u = t(917445),
+    o = t(287809),
+    y = t(245175),
+    m = t(708645),
+    E = t(609425),
+    f = t(834730),
+    h = t(646514),
+    x = t(913563),
+    p = t(898985),
+    g = t(16371),
+    v = t(842671),
+    _ = t(792996),
+    j = t(547961);
+function N(e) {
+    let { displayNameStyles: n } = e,
+        { name: t } = (0, p._)(n.effectId),
+        r = _.intl.string((0, x.A)(n.fontId));
     return (0, l.jsxs)("div", {
-        className: g.nM,
+        className: j.nM,
         children: [
             (0, l.jsx)("div", {
-                className: g.Vs,
+                className: j.Vs,
                 "aria-hidden": !0,
                 children: (0, l.jsx)(f.E, {
                     variant: "body-lg/semibold",
                     color: "none",
-                    children: (0, l.jsx)(_.A, { userName: "Gg", displayNameStyles: t }),
+                    children: (0, l.jsx)(g.A, { userName: "Gg", displayNameStyles: n }),
                 }),
             }),
             (0, l.jsxs)("div", {
-                className: g.Qq,
+                className: j.Qq,
                 children: [
                     (0, l.jsx)(f.E, {
                         variant: "body-sm/semibold",
                         color: "text-default",
-                        children: N.intl.format(v.default.DC7gJB, { fontName: r, effectName: n }),
+                        children: _.intl.format(v.default.DC7gJB, { fontName: r, effectName: t }),
                     }),
                     (0, l.jsxs)("div", {
-                        className: g.VA,
+                        className: j.VA,
                         children: [
-                            (0, l.jsx)(s.NitroWheelIcon, { size: "xs", color: x.A.colors.TEXT_SUBTLE }),
+                            (0, l.jsx)(s.NitroWheelIcon, { size: "xs", color: h.A.colors.TEXT_SUBTLE }),
                             (0, l.jsx)(f.E, {
                                 variant: "body-xs/normal",
                                 color: "text-subtle",
-                                children: N.intl.string(v.default.M4qsJL),
+                                children: _.intl.string(v.default.M4qsJL),
                             }),
                         ],
                     }),
@@ -59,8 +59,8 @@ function j(e) {
         ],
     });
 }
-var b = n(805251),
-    A = n(32014);
+var b = t(805251),
+    A = t(32014);
 function M() {
     return (0, l.jsxs)("div", {
         className: A.w,
@@ -68,66 +68,68 @@ function M() {
             (0, l.jsx)(f.E, {
                 variant: "body-sm/medium",
                 color: "text-muted",
-                children: N.intl.string(v.default.NJLgMs),
+                children: _.intl.string(v.default.NJLgMs),
             }),
             (0, l.jsx)(b.E, { type: "beta", variant: "primary" }),
         ],
     });
 }
-var F = n(259065);
-function L(e, t, n) {
+var F = t(259065);
+function L(e, n, t) {
     let l = (0, m.uh)(),
-        a = (0, E.A)({ userId: e.id, guildId: t }),
-        { analyticsLocations: s } = (0, c.Ay)(n),
+        a = (0, E.A)({ userId: e.id, guildId: n }),
+        { analyticsLocations: s } = (0, c.Ay)(t),
         d = (0, i.bG)([o.default], () => o.default.getCurrentUser()?.id),
         f = !(0, y.rA)(l, y.yw.OFF) && null != a;
     r.useEffect(() => {
         f && null != d && (0, u.A)(d, void 0, { waitForRefetch: !1 }).catch(() => {});
     }, [f, d]);
-    let x = r.useCallback(() => {
+    let h = r.useCallback(() => {
         null != a && (0, F.L)({ analyticsLocations: s, tryOnDisplayNameStyles: a, tryOnStyleOwner: e });
     }, [s, a, e]);
-    return { placement: l, tryOnDisplayNameStyles: a, openTryOnEditor: x };
+    return { placement: l, tryOnDisplayNameStyles: a, openTryOnEditor: h };
 }
-function O(e, t) {
-    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: i } = L(e, t, d.A.USER_PROFILE_OVERFLOW_MENU);
-    return (0, y.rA)(n, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
+function O(e, n) {
+    let { placement: t, tryOnDisplayNameStyles: r, openTryOnEditor: i } = L(e, n, d.A.USER_PROFILE_OVERFLOW_MENU);
+    return (0, y.rA)(t, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
         ? (0, l.jsx)(a.Dr, {
               id: "try-display-name-style",
-              label: N.intl.string(v.default.NJLgMs),
+              label: _.intl.string(v.default.NJLgMs),
               badge: { type: "beta", variant: "primary" },
               leadingAccessory: { type: "icon", icon: s.NitroWheelIcon },
               action: i,
           })
         : null;
 }
-function U(e, t) {
-    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: i } = L(e, t, []);
-    return (0, y.rA)(n, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
+function U(e, n) {
+    let { placement: t, tryOnDisplayNameStyles: r, openTryOnEditor: i } = L(e, n, []);
+    return (0, y.rA)(t, y.yw.TOP_LEVEL_MENU_ITEM) && null != r
         ? (0, l.jsx)(a.Dr, {
               id: "try-display-name-style",
-              label: N.intl.string(v.default.NJLgMs),
+              label: _.intl.string(v.default.NJLgMs),
               leadingAccessory: { type: "icon", icon: s.NitroWheelIcon },
               action: i,
           })
         : null;
 }
-function I(e, t) {
-    let { placement: n, tryOnDisplayNameStyles: r, openTryOnEditor: i } = L(e, t, d.A.USER_PROFILE_OVERFLOW_MENU);
-    return (0, y.rA)(n, y.yw.SUBMENU) && null != r
+function I(e, n) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.A.USER_PROFILE_OVERFLOW_MENU,
+        { placement: i, tryOnDisplayNameStyles: s, openTryOnEditor: c } = L(e, n, r);
+    return (0, y.rA)(i, y.yw.SUBMENU) && null != s
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(a.Dr, {
                       id: "try-display-name-style-header",
                       navigable: !1,
-                      render: () => (0, l.jsx)(M, {}),
+                      render: () => (0, l.jsxs)(l.Fragment, { children: [t, (0, l.jsx)(M, {})] }),
                   }),
                   (0, l.jsx)(a.Dr, {
                       id: "try-display-name-style-row",
                       navigable: !0,
                       keepItemStyles: !0,
-                      render: () => (0, l.jsx)(j, { displayNameStyles: r }),
-                      action: i,
+                      render: () => (0, l.jsx)(N, { displayNameStyles: s }),
+                      action: c,
                   }),
               ],
           })
