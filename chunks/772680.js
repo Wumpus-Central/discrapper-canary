@@ -49,12 +49,13 @@ n.d(
         RI: async function (e) {
             let { applicationId: t, onSuccess: n, onError: r } = e;
             try {
-                (await i.Bo.post({
+                let e = await i.Bo.post({
                     url: o.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
                     body: { application_id: t },
                     rejectWithError: !0,
-                }),
-                    n?.());
+                });
+                if (e.body?.status === "already_awarded") return;
+                n?.();
             } catch (e) {
                 r?.(e);
             }

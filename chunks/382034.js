@@ -15,11 +15,11 @@ var i = n(477900),
     h = n(792996),
     I = n(971656);
 function p(e) {
-    return null != e && !e.scopes.includes(l.F.SDK_SOCIAL_LAYER) && e.application.id === E.T.ACTIVISION_APPLICATION_ID;
+    return null != e && !e.scopes.includes(l.F.SDK_SOCIAL_LAYER) && e.application.id === E.Tr.ACTIVISION_APPLICATION_ID;
 }
 let m = function (e) {
     let { markAsDismissed: t, recurringDismiss: n, noticeType: a } = e,
-        l = E.T.CALL_OF_DUTY_APPLICATION_ID,
+        l = E.Tr.CALL_OF_DUTY_APPLICATION_ID,
         m = (0, u.h)(l),
         T = m?.name,
         { startAuthorization: g, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),

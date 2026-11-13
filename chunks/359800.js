@@ -21,7 +21,7 @@ n.d(
                         A(!0);
                         let a = t(...r);
                         return (
-                            a === s._.RPC &&
+                            a === s._M.RPC &&
                                 g &&
                                 (0, l.mM)(
                                     async () => {

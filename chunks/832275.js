@@ -16,7 +16,7 @@ l.d(
                     function () {
                         for (var l = arguments.length, n = Array(l), r = 0; r < l; r++) n[r] = arguments[r];
                         let c = e(...n),
-                            d = c === a._.RPC;
+                            d = c === a._M.RPC;
                         return (
                             o(),
                             s(d),

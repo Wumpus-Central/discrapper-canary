@@ -9,4 +9,4 @@ let l =
               BLOONS_TD_BATTLES_2_APPLICATION_ID: "939116807078420520",
           }
         : null;
-i.d(t, {}, { T: l, _: o });
+i.d(t, {}, { Tr: l, _M: o });

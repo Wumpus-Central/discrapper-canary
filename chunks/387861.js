@@ -839,7 +839,7 @@ let t5 = a.memo(function (e) {
                 : (0, r.jsx)(t7, {
                       runningGame: _,
                       startAuthorization: function () {
-                          N({ analyticsLocations: y }) === tZ._.RPC &&
+                          N({ analyticsLocations: y }) === tZ._M.RPC &&
                               (Z(!0),
                               null != q.current && clearTimeout(q.current),
                               (q.current = setTimeout(() => {
@@ -1837,7 +1837,7 @@ let n8 = (0, C.A)(function (e) {
             connectionApp: J,
             startAuthorization: Z,
             token: ee,
-        } = (0, eA.RD)(M, { allowedFlows: [tZ._.RPC, tZ._.WEB] }),
+        } = (0, eA.RD)(M, { allowedFlows: [tZ._M.RPC, tZ._M.WEB] }),
         [et, en] = a.useState(null),
         ei = null != et,
         er = a.useCallback(

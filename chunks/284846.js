@@ -16,7 +16,7 @@ n.d(
                     hasAlreadyLinked: c,
                     canStartAuthorization: f,
                     startAuthorization: g,
-                } = (0, r.RD)(e ? s : null, { allowedFlows: [a._.WEB] }),
+                } = (0, r.RD)(e ? s : null, { allowedFlows: [a._M.WEB] }),
                 m = (0, i.z)(g, c, { showInGameModal: !1, showToastOnSuccess: !0 });
             return {
                 isInGameQuest: e,
