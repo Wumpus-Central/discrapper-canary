@@ -1,138 +1,154 @@
 var r,
     i = a(402102),
-    s = a(127639),
-    n = a(855986),
+    n = a(127639),
+    s = a(855986),
     c = a(73153),
     d = a(287809),
     l = a(474090),
     o = a(817379),
-    u =
+    u = a(847011),
+    h = a(201779),
+    f =
         (((r = {})[(r.INIT = 0)] = "INIT"),
         (r[(r.FETCHING = 1)] = "FETCHING"),
         (r[(r.SUCCESS = 2)] = "SUCCESS"),
         (r[(r.ERROR = 3)] = "ERROR"),
         r);
-let h = { volume: 1, isMuted: !1, progress: null },
-    f = {},
-    b = { ...h },
-    _ = null,
-    p = null,
+let b = { volume: 1, isMuted: !1, progress: null },
+    p = {},
+    _ = { ...b },
     m = null,
-    x = !1,
+    x = null,
     g = null,
-    A = 0,
+    A = !1,
     v = null,
-    w = !1;
-class I extends n.Ay.PersistedStore {
+    w = 0,
+    I = null,
+    E = !1;
+class j extends s.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
-    static migrations = [(e) => ({ ...e, progress: null }), (e) => ({ volume: 1, ...e })];
+    static migrations = [
+        (e) => ({ ...e, progress: null }),
+        (e) => ({ volume: 1, ...e }),
+        (e) => ({ ...e, progress: null != e.progress ? { ...e.progress, availability: i.u.FULL } : null }),
+    ];
     getState() {
-        return b;
-    }
-    initialize(e) {
-        (this.waitFor(d.default), null != e && (b = { ...b, ...e }));
-    }
-    get volume() {
-        return b.volume;
-    }
-    get isMuted() {
-        return b.isMuted;
-    }
-    get stats() {
         return _;
     }
-    get globalStats() {
-        return p;
+    initialize(e) {
+        (this.waitFor(d.default), null != e && (_ = { ..._, ...e }));
     }
-    get character() {
+    get volume() {
+        return _.volume;
+    }
+    get isMuted() {
+        return _.isMuted;
+    }
+    get stats() {
         return m;
     }
-    get compactAssets() {
+    get globalStats() {
         return x;
     }
-    get availability() {
+    get character() {
         return g;
     }
-    get isCharacterCreatorEnabled() {
-        return g === i.u.FULL;
-    }
-    get fetchState() {
+    get compactAssets() {
         return A;
     }
-    get isFetching() {
-        return 1 === A;
+    get availability() {
+        return v;
     }
-    get isSaving() {
+    get isCharacterCreatorEnabled() {
+        return v === i.u.FULL;
+    }
+    get fetchState() {
         return w;
     }
+    get isFetching() {
+        return 1 === w;
+    }
+    get isSaving() {
+        return E;
+    }
     get progress() {
-        return b.progress;
+        return _.progress;
     }
     get selectedCharacterTraits() {
-        return v ?? m ?? f;
+        return I ?? g ?? p;
     }
 }
-let E = new I(c.h, {
+let S = new j(c.h, {
     CHECKPOINT_TOGGLE_MUTE: function () {
-        b.isMuted = !b.isMuted;
+        _.isMuted = !_.isMuted;
     },
     CHECKPOINT_SET_VOLUME: function (e) {
         let { volume: t } = e;
-        if (b.volume === t && !b.isMuted) return !1;
-        ((b.volume = t), (b.isMuted = !1));
+        if (_.volume === t && !_.isMuted) return !1;
+        ((_.volume = t), (_.isMuted = !1));
     },
     CHECKPOINT_FETCH_START: function () {
-        A = 1;
+        w = 1;
     },
     CHECKPOINT_FETCH_SUCCESS: function (e) {
-        ((_ = e.stats),
-            (p = e.globalStats),
-            (m = e.character),
-            (x = e.compactAssets),
-            (g = e.availability),
-            (A = 2),
-            g === i.u.FULL && null == m && null != b.progress
-                ? ((v = (function (e) {
-                      let t = (0, l.ki)(d.default.getCurrentUser()),
-                          a = {};
-                      for (let r of Object.values(s.V)) {
-                          let i = e[r];
-                          null == i || (0, o.tS)(r, i, { stats: _, hasNitro: t, savedCharacter: m }) || (a[r] = i);
-                      }
-                      return a;
-                  })(b.progress.selectedCharacterTraits)),
-                  (b.progress = { ...b.progress, selectedCharacterTraits: v }))
-                : (v = null));
+        var t, a;
+        ((m = e.stats),
+            (x = e.globalStats),
+            (g = e.character),
+            (A = e.compactAssets),
+            (v = e.availability),
+            (w = 2),
+            (_.progress =
+                ((t = _.progress), (a = v), null == t || a === i.u.UNAVAILABLE || t.availability === a ? t : null)),
+            (I = null));
+        let { progress: r } = _;
+        v === i.u.FULL &&
+            null == g &&
+            null != r &&
+            ((I = (function (e) {
+                let t = (0, l.ki)(d.default.getCurrentUser()),
+                    a = {};
+                for (let r of Object.values(n.V)) {
+                    let i = e[r];
+                    null == i || (0, o.tS)(r, i, { stats: m, hasNitro: t, savedCharacter: g }) || (a[r] = i);
+                }
+                return a;
+            })(r.selectedCharacterTraits)),
+            (_.progress = { ...r, selectedCharacterTraits: I }));
     },
     CHECKPOINT_FETCH_FAILED: function () {
-        A = 3;
+        w = 3;
     },
     CHECKPOINT_COMPLETE_START: function () {
-        w = !0;
+        E = !0;
     },
     CHECKPOINT_COMPLETE_SUCCESS: function (e) {
-        ((m = e.character), (v = null), (w = !1));
+        ((g = e.character), (I = null), (E = !1));
     },
     CHECKPOINT_COMPLETE_FAILED: function () {
-        w = !1;
+        E = !1;
     },
     CHECKPOINT_RESET_SUCCESS: function () {
-        ((m = null), (v = null), (b.progress = null));
+        ((g = null), (I = null), (_.progress = null));
     },
     CHECKPOINT_SELECT_CHARACTER_TRAIT: function (e) {
-        ((v = { ...(v ?? m ?? f), [e.trait]: e.optionId }),
-            null != b.progress && (b.progress = { ...b.progress, selectedCharacterTraits: v }));
+        ((I = { ...(I ?? g ?? p), [e.trait]: e.optionId }),
+            null != _.progress && (_.progress = { ..._.progress, selectedCharacterTraits: I }));
     },
     CHECKPOINT_SAVE_PROGRESS: function (e) {
-        let { stage: t } = e,
-            a = v ?? m ?? f,
-            { progress: r } = b;
-        if (r?.stage === t && r.selectedCharacterTraits === a) return !1;
-        b.progress = { stage: t, selectedCharacterTraits: a };
+        let { stage: t } = e;
+        if (null == v) return !1;
+        let a = v === i.u.FULL;
+        if (!(0, u.E1)({ stats: m, character: g, isCharacterCreatorEnabled: a })) return !1;
+        let { progress: r } = _;
+        if (r?.stage === h.s9.SUMMARY) return !1;
+        let n = I ?? g ?? p;
+        if (r?.stage === t && r.selectedCharacterTraits === n) return !1;
+        _.progress = { stage: t, selectedCharacterTraits: n, availability: v };
     },
     LOGOUT: function () {
-        ((b = { ...h }), (_ = null), (p = null), (m = null), (x = !1), (g = null), (A = 0), (v = null), (w = !1));
+        ((_ = { ...b }), (m = null), (x = null), (g = null), (A = !1), (v = null), (w = 0), (I = null), (E = !1));
     },
 });
-a.d(t, {}, { A: E, T: u });
+a.d(t, {}, { A: S, T: f });
