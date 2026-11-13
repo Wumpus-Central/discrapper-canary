@@ -18,10 +18,10 @@ var l = n(477900),
     A = n(140735),
     j = n(534514),
     p = n(707554),
-    b = n(964486);
+    N = n(964486);
 (n(667532), n(134528), n(947204));
-var N = n(503698),
-    S = n.n(N),
+var b = n(503698),
+    S = n.n(b),
     C = n(607399),
     E = n(408278),
     I = n(477155),
@@ -566,7 +566,7 @@ function ej(e) {
           });
 }
 var ep = n(639876);
-function eb(e) {
+function eN(e) {
     let { currentPanelKey: t, root: n, onClose: i, footer: s, emptyState: a, searchBar: o } = e,
         c = R.A.useField("showNavigationMobile"),
         u = r.useRef(null),
@@ -629,10 +629,10 @@ function eb(e) {
         }, [n.layout]),
         v = (0, M.NC)(),
         y = (0, U.A)("settings-sidebar", u, { orientation: W.Gl.VERTICAL, defaultFocused: t }),
-        [b, N] = r.useState(!1),
+        [N, b] = r.useState(!1),
         I = r.useCallback(() => {
             let e = u.current?.getScrollerNode();
-            N(null != e && e.scrollTop > 12);
+            b(null != e && e.scrollTop > 12);
         }, []),
         P = r.useId();
     return (0, l.jsx)(k.N, {
@@ -652,7 +652,7 @@ function eb(e) {
                     (0, l.jsxs)(p.F, {
                         children: [
                             (0, l.jsxs)("div", {
-                                className: S()(ep.gM, { [ep.to]: b }),
+                                className: S()(ep.gM, { [ep.to]: N }),
                                 children: [
                                     C.Fr &&
                                         (0, l.jsx)("div", {
@@ -668,7 +668,7 @@ function eb(e) {
                                     (0, l.jsx)("div", {
                                         children: x.map((e) =>
                                             (0, l.jsx)(
-                                                eN,
+                                                eb,
                                                 { section: e, visibleContent: m, dismissibleBadges: g },
                                                 e.key,
                                             ),
@@ -719,7 +719,7 @@ function eb(e) {
             }),
     });
 }
-function eN(e) {
+function eb(e) {
     let { section: t, visibleContent: n, dismissibleBadges: r } = e;
     return (0, l.jsx)("div", {
         className: ep.uW,
@@ -783,20 +783,20 @@ function ek(e) {
             let e = f.entry(g ?? v)?.parentPanelKey;
             if (null != e) return f.getPanelOrThrow(e);
         }, [g, f, v]),
-        { navigateWithValidation: N } = (0, eC.L_)(),
-        S = r.useMemo(() => () => N(s), [N, s]);
+        { navigateWithValidation: b } = (0, eC.L_)(),
+        S = r.useMemo(() => () => b(s), [b, s]);
     r.useEffect(() => {
         B.A.init({
             accessibleDirectory: f,
             onViewChange: c,
             navigateWithValidation: (e, t) => {
-                (null == x.entry(e) && h?.(), N(t));
+                (null == x.entry(e) && h?.(), b(t));
             },
             closeWithValidation: S,
         });
-    }, [f, N, c, h, x, S]);
+    }, [f, b, c, h, x, S]);
     let [C, E] = r.useState(!0);
-    (0, b.Ay)(
+    (0, N.Ay)(
         () => (
             B.A.navigate(v, { animatePanelScroll: !1, animateSidebarScroll: !1, showNavigationMobile: null == n }),
             E(!1),
@@ -817,7 +817,7 @@ function ek(e) {
                 (0, l.jsx)(A.A, { children: (0, l.jsx)(j.D, { variant: "body-sm/semibold", children: T }) }),
                 (0, l.jsxs)(p.F, {
                     children: [
-                        (0, l.jsx)(eb, {
+                        (0, l.jsx)(eN, {
                             currentPanelKey: g,
                             root: m,
                             onClose: S,
@@ -850,8 +850,8 @@ function ew(e) {
             ...h
         } = e,
         [A, j] = r.useState(!1),
-        [p, b] = r.useState(1.4),
-        N = r.useRef(null),
+        [p, N] = r.useState(1.4),
+        b = r.useRef(null),
         S = (0, g.bG)([f.Ay], () => f.Ay.useReducedMotion),
         C = (0, g.bG)([v.A], () => v.A.isFocused());
     return (
@@ -860,12 +860,12 @@ function ew(e) {
                 let { intensity: t, duration: n } = e;
                 !S &&
                     C &&
-                    (j(!0), b(t ?? 1.4), clearTimeout(N.current), (N.current = setTimeout(() => j(!1), n ?? 1e3)));
+                    (j(!0), N(t ?? 1.4), clearTimeout(b.current), (b.current = setTimeout(() => j(!1), n ?? 1e3)));
             }
             return (
                 y._.subscribe(eT.jej.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    (y._.unsubscribe(eT.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(N.current));
+                    (y._.unsubscribe(eT.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(b.current));
                 }
             );
         }, [S, C]),
@@ -914,13 +914,13 @@ var eM = n(46653),
 function eJ() {
     let e = (0, eW.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "673456",
-        r = "c7a9e6b550deebcf7b05fd9feba6edf7dbc6ce48".substring(0, 7),
+        n = "673461",
+        r = "4c7ec8468ddf3d658223bb4777c55d9ee09f700b".substring(0, 7),
         i = e$.A?.app.getVersion(),
         s = e$.A?.app.getBuildNumber(),
         o = e$.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eQ.A)("1794607643761", !1) : null,
+        u = null != c ? (0, eQ.A)("1794607812236", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         h = (function () {
             let e = eV()?.os?.toString();
@@ -1088,8 +1088,8 @@ function e5() {
 var e2 = n(402651),
     e3 = n(669067),
     e6 = n(830543),
-    e4 = n(953056);
-let e8 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
+    e8 = n(953056);
+let e4 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
     e7 = new Map([[eB.X.SESSIONS_PANEL, i.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e9(e) {
     let { target: t, ...n } = e,
@@ -1117,7 +1117,7 @@ function e9(e) {
               emptyState: tt,
               sidebarFooter: e5,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e3._)(e);
+                  e4.has(e) || (0, e3._)(e);
                   let t = e7.get(e);
                   (null != t &&
                       (0, c.x)({
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, l.jsx)("div", {
-            className: e4.P,
+            className: e8.P,
             children: (0, l.jsx)(s.I, { size: "md", query: e, onFocus: n, onBlur: i, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, l.jsxs)("div", {
-        className: e4.t,
+        className: e8.t,
         children: [
             (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: F.intl.string(F.t.zihbmv) }),
             (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: F.intl.string(F.t.XclvsB) }),
