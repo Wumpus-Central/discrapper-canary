@@ -28,7 +28,7 @@ i.d(
             }
             static getAppVersion() {
                 try {
-                    return "673447";
+                    return "673456";
                 } catch {
                     return "unknown";
                 }
