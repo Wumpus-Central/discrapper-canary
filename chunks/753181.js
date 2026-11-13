@@ -952,6 +952,13 @@ let es = new ea(
                       (Q[n] = null),
                       delete Z[n]);
               },
+              STREAM_WATCH: function (e) {
+                  let { streamKey: t, analyticsLocations: n } = e;
+                  return (
+                      (0, G.Iy)(t).ownerId !== N.default.getId() &&
+                      ((z[t] = { appContext: z[t]?.appContext, analyticsLocations: n }), !1)
+                  );
+              },
               STREAM_CREATE: function (e) {
                   let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: s, viewerIds: l } = e,
                       o = en[t],

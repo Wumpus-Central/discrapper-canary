@@ -39,7 +39,7 @@ function y(e, t) {
                 let { ownerId: t } = e;
                 return t !== f.default.getId();
             }).length >= 2;
-    (l.h.dispatch({ type: "STREAM_WATCH", streamKey: r, allowMultiple: a }),
+    (l.h.dispatch({ type: "STREAM_WATCH", streamKey: r, allowMultiple: a, analyticsLocations: t?.analyticsLocations }),
         null != n && (0, u.c6)(!0, n, i),
         (t?.forceFocus !== !0 && (a || t?.noFocus)) || C.A.selectParticipant(e.channelId, r));
 }

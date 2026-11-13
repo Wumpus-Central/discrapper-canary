@@ -3834,6 +3834,7 @@ var ih =
         (eP.PREMIUM_BEST_OF_VIEW_TIME = "premium_best_of_view_time"),
         (eP.VIDEO_STREAM_ENDED = "video_stream_ended"),
         (eP.VIDEO_STREAM_STARTED = "video_stream_started"),
+        (eP.STREAM_WATCH_PROMPT_PIP_DISMISSED = "stream_watch_prompt_pip_dismissed"),
         (eP.RECEIVER_FIRST_FRAME_DELIVERED = "receiver_first_frame_delivered"),
         (eP.STREAMER_FIRST_FRAME_ENCRYPTED = "streamer_first_frame_encrypted"),
         (eP.STREAM_WARNING_TRIGGERED = "stream_warning_triggered"),
