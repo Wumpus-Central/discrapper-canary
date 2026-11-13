@@ -85,8 +85,25 @@ n.d(
                                         ...i,
                                         header: { title: t.title, subtitle: t.subtitle, iconUrl: t.icon_url },
                                         items: n.map((e) => {
-                                            let { game_id: t, cover_url: n, server: i, ...r } = e;
-                                            return { ...r, gameId: t, coverUrl: n, server: null == i ? null : _(i) };
+                                            let {
+                                                game_id: t,
+                                                cover_url: n,
+                                                server: i,
+                                                description: r,
+                                                hero_url: a,
+                                                l30_rank: s,
+                                                ...l
+                                            } = e;
+                                            return {
+                                                ...l,
+                                                gameId: t,
+                                                description: "string" == typeof r && "" !== r.trim() ? r : null,
+                                                heroUrl: "string" == typeof a ? a : null,
+                                                l30Rank:
+                                                    "number" == typeof s && Number.isSafeInteger(s) && s > 0 ? s : null,
+                                                coverUrl: n,
+                                                server: null == i ? null : _(i),
+                                            };
                                         }),
                                     };
                                 }
