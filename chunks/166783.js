@@ -293,10 +293,10 @@ let e3 = [
 ];
 e2("open-unavailable", e1.default["58TARv"], eX.UNAVAILABLE);
 let e6 = ["reset"];
-var e5 = n(852717),
-    e8 = n(641214);
+var e8 = n(852717),
+    e5 = n(641214);
 function e7() {
-    return (0, i.jsx)(eD.y, { type: eD.t.SPINNING_CIRCLE_SIMPLE, className: e8.u1, itemClassName: e8.$N });
+    return (0, i.jsx)(eD.y, { type: eD.t.SPINNING_CIRCLE_SIMPLE, className: e5.u1, itemClassName: e5.$N });
 }
 function e9(e) {
     let { onClose: t } = e,
@@ -314,8 +314,8 @@ function e9(e) {
         a = (0, c.bG)([eY.A], () => eY.A.isFetching);
     return (0, i.jsx)(eK, {
         icon: a ? e7 : ew.ExperimentalCheckpointIcon,
-        label: eV.intl.string(e5.default["8hclXY"]),
-        sublabel: (0, i.jsx)("span", { className: e8.$B, children: eV.intl.string(e5.default.BFc4lY) }),
+        label: eV.intl.string(e8.default["8hclXY"]),
+        sublabel: (0, i.jsx)("span", { className: e5.$B, children: eV.intl.string(e8.default.BFc4lY) }),
         onClick: async function () {
             (await (0, eq.D)("user_profile_account_popout"), t());
         },
@@ -326,7 +326,7 @@ function e9(e) {
                       return (0, i.jsx)(eW, {
                           navId: "checkpoint-qa-submenu",
                           "aria-label": eV.intl.string(e1.default["9dS734"]),
-                          className: e8.gn,
+                          className: e5.gn,
                           onClose: n,
                           children: l.map((e) =>
                               (0, i.jsx)(
@@ -685,7 +685,7 @@ function t6() {
     }
     return null;
 }
-let t5 = {
+let t8 = {
         [t3.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
         [t3.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
         [t3.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
@@ -695,7 +695,7 @@ let t5 = {
         [t3.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
         [t3.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
-    t8 = {
+    t5 = {
         [t3.Ac.PREMIUM_TENURE_1_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm",
             light: "https://cdn.discordapp.com/assets/content/f09f5aa678c2d463109f0ca84a572646c1b6b21974865e84ac92f3c3a3f50b87.webm",
@@ -738,8 +738,8 @@ function t4() {
             let e = t6(),
                 t = (0, tZ.M)((0, tJ.Ay)());
             if (null == e) return null;
-            let n = t5[e],
-                i = t8[e],
+            let n = t8[e],
+                i = t5[e],
                 l = {
                     currentBadge: (0, t0.e0)(e),
                     currentBadgeTextGradient: t ? n?.dark : n?.light,
@@ -748,7 +748,7 @@ function t4() {
                 a = t3.sp.indexOf(e);
             if (a > 0) {
                 let e = t3.sp[a - 1],
-                    n = t5[e];
+                    n = t8[e];
                 ((l.prevBadge = (0, t0.e0)(e)), (l.prevBadgeTextGradient = t ? n?.dark : n?.light));
             }
             return l;
@@ -1030,8 +1030,8 @@ var nw = n(290863),
     n2 = n(352003),
     n3 = n(429913),
     n6 = n(334074),
-    n5 = n(633075),
-    n8 = n(667049),
+    n8 = n(633075),
+    n5 = n(667049),
     n7 = n(46653),
     n9 = n(90165),
     n4 = n(49999),
@@ -1047,8 +1047,8 @@ function it(e) {
                     (0, n0.X)();
                 }, []));
             let t = (0, c.bG)([n7.default], () => n7.default.getId()),
-                n = (0, n8.A)(t),
-                i = l.useMemo(() => n.filter((e) => e instanceof n5.R), [n]),
+                n = (0, n5.A)(t),
+                i = l.useMemo(() => n.filter((e) => e instanceof n8.R), [n]),
                 a = (0, n3.A)(e),
                 r = l.useMemo(() => a.filter(nG.Vq), [a]),
                 s = (0, c.cf)([n9.A], () => {
@@ -2268,14 +2268,14 @@ var i1 = n(45780),
     i2 = n(696451),
     i3 = n(71393),
     i6 = n(685073),
-    i5 = n(73153);
-let i8 = { lastSeenInfos: {} },
-    i7 = i8;
+    i8 = n(73153);
+let i5 = { lastSeenInfos: {} },
+    i7 = i5;
 class i9 extends c.Ay.PersistedStore {
     static displayName = "GuildTagChangedCoachmarkStore";
     static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        i7 = e ?? i8;
+        i7 = e ?? i5;
     }
     getState() {
         return i7;
@@ -2284,13 +2284,13 @@ class i9 extends c.Ay.PersistedStore {
         return i7.lastSeenInfos[e] ?? null;
     }
 }
-let i4 = new i9(i5.h, {
+let i4 = new i9(i8.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
         i7.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        i7 = i8;
+        i7 = i5;
     },
 });
 var le = n(514661);
@@ -2299,7 +2299,7 @@ function ln(e) {
     let t = (0, c.bG)([i3.A], () => i3.A.getGuild(e.guildId));
     function n(n) {
         (t?.profile?.tag != null &&
-            i5.h.dispatch({
+            i8.h.dispatch({
                 type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
                 guildId: t.id,
                 lastSeenInfo: { tag: t.profile.tag },
@@ -2686,7 +2686,7 @@ class lI extends c.Ay.Store {
         return lS[e] ?? !1;
     }
 }
-let lN = new lI(i5.h, {
+let lN = new lI(i8.h, {
     CALL_FEEDBACK_TUTORIAL_SHOW: function (e) {
         let { tutorialKey: t } = e;
         lS[t] = !0;
@@ -3000,7 +3000,7 @@ function l2(e) {
 }
 var l3 = n(873298),
     l6 = n(840387);
-function l5(e) {
+function l8(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         a = (0, l6.Z)(),
         r = ny.KP.useSetting(),
@@ -3034,7 +3034,7 @@ function l5(e) {
         actions: [{ text: eV.intl.string(eV.t.eOoTMX), variant: "primary", onClick: o }],
     });
 }
-var l8 = n(415443);
+var l5 = n(415443);
 function l7(e) {
     let t,
         n,
@@ -3064,7 +3064,7 @@ function l7(e) {
         }, [r]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, l8.A)("1794604569301", !0);
+        let e = (0, l5.A)("1794605409308", !0);
         t =
             null != e
                 ? eV.intl.formatToPlainString(eV.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -3099,7 +3099,7 @@ function l7(e) {
                                   children: (0, i.jsx)(I.hm, { markAsDismissed: n, targetElementRef: m }),
                               })
                             : t === d.M.PRIVATE_PROFILE_COACHMARK
-                              ? (0, i.jsx)(l5, { markAsDismissed: n, targetElementRef: m })
+                              ? (0, i.jsx)(l8, { markAsDismissed: n, targetElementRef: m })
                               : t === d.M.GIFT_CARDS_MARKETING_COACHMARK
                                 ? (0, i.jsx)(lX, { markAsDismissed: n, targetElementRef: m })
                                 : t === d.M.CONSOLE_CONNECTION_COACHMARK
