@@ -179,12 +179,12 @@ n.d(
                 r = A(n);
             if (null != s) {
                 let e = s.games?.length ?? 0;
-                if ((!l && e >= r) || (s.games ?? []).some((e) => e.gameId === i.gameId)) return;
+                if ((!l && e >= r) || (s.games ?? []).some((e) => e.gameId === i.gameId)) return !1;
             }
             let d = { gameId: i.gameId, comment: i.comment, tags: i.tags };
             t = null != s ? [d, ...(s.games ?? [])] : [d];
             let u = G(new _.Yy({ ...(s ?? { type: n }), games: t }));
-            (p.A.setPendingWidgets(u), g.I.fetchMany([i.gameId]));
+            return (p.A.setPendingWidgets(u), g.I.fetchMany([i.gameId]), !0);
         },
         iu: function (e) {
             return P()?.clips.some((t) => t.id === e && "uploading" === t.status) ?? !1;
