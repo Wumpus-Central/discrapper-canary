@@ -2412,13 +2412,12 @@ function lS(e) {
                 l = (0, O.Li)(),
                 r = i.useRef(!1);
             i.useEffect(() => {
-                if (!l) {
+                if (!l || null != n) {
                     r.current = !1;
                     return;
                 }
                 !e ||
                     L.A.isLoading() ||
-                    null != n ||
                     r.current ||
                     ((r.current = !0),
                     (async function () {
