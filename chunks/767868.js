@@ -787,7 +787,7 @@ function eE(e) {
         ref: P,
         parentTransitionState: T,
         autoplay: D,
-        progressClassName: ei ? ec.V : ec.s,
+        progressClassName: ei ? ec.Vw : ec.so,
         persistTimeline: !0,
         persistPlayhead: !1,
         pauseOnLostVisibility: !Q,

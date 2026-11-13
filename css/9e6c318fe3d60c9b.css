@@ -1,0 +1,94 @@
+.timer_u6I9zX {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    position: relative;
+    width: 32px
+}
+
+.ring_u6I9zX {
+    inset: 0;
+    position: absolute
+}
+
+.backdrop_u6I9zX {
+    fill: var(--control-overlay-secondary-background-default)
+}
+
+.progress_u6I9zX {
+    fill: none;
+    stroke: #2ecc71;
+    stroke-linecap: round;
+    transition: stroke-dashoffset .5s cubic-bezier(.455, .03, .515, .955)
+}
+
+.progressJump_u6I9zX {
+    transition: none
+}
+
+.progressEmpty_u6I9zX {
+    visibility: hidden
+}
+
+.check_u6I9zX,
+.seconds_u6I9zX {
+    position: relative
+}
+
+.check_u6I9zX {
+    height: 20px;
+    width: 20px
+}
+
+.checkDisc_u6I9zX,
+.checkMark_u6I9zX {
+    inset: 0;
+    position: absolute
+}
+
+.checkDisc_u6I9zX {
+    background: #2ecc71;
+    border-radius: 50%
+}
+
+@keyframes checkDiscPop_u6I9zX {
+    0% {
+        animation-timing-function: cubic-bezier(.15, .21, .58, 1);
+        transform: scale(0)
+    }
+
+    53.4% {
+        animation-timing-function: cubic-bezier(.61, 0, .58, 1);
+        transform: scale(1.65)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes checkMarkPop_u6I9zX {
+    0% {
+        transform: scale(0)
+    }
+
+    33.4% {
+        transform: scale(1.25)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.full-motion .animateIn_u6I9zX .checkDisc_u6I9zX {
+    animation: checkDiscPop_u6I9zX .5s both
+}
+
+.full-motion .animateIn_u6I9zX .checkMark_u6I9zX {
+    animation: checkMarkPop_u6I9zX .5s ease-in-out 167ms both
+}
+
+/*# sourceMappingURL=9e6c318fe3d60c9b.css.map*/

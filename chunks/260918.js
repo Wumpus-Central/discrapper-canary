@@ -1,90 +1,102 @@
-t.d(e, { A: () => m });
-var l = t(477900),
-    o = t(582128),
-    i = t(717421),
-    r = t(503698),
-    a = t.n(r),
+t.d(n, { A: () => p });
+var i = t(477900),
+    l = t(582128),
+    a = t(717421),
+    o = t(503698),
+    r = t.n(o),
     s = t(120692),
-    u = t(939249),
-    d = t(834730),
+    d = t(939249),
+    u = t(834730),
     c = t(91982);
 t(500522);
 var x = t(668327);
 let h = { duration: 250 },
-    p = function (n) {
+    v = function (e) {
         let {
-                currentPx: e,
+                currentPx: n,
                 trackBackground: t,
-                indicator: r,
-                isAnimated: p,
-                isCompleted: v,
-                icon: m,
+                indicator: o,
+                isAnimated: v,
+                isCompleted: m,
+                icon: p,
                 expansionSpring: f,
                 onClick: g,
                 onMouseEnter: P,
-                onMouseLeave: C,
-            } = n,
-            { label: k, targetSec: b, leftPx: E, rightPx: M, index: S } = r,
-            [_, j] = o.useState(!1),
-            w = E - 4,
-            y = e >= w ? Math.min(1, (e - w) / (M - w)) : 0,
-            B = 0 === S && !v,
-            { fill: K } = (0, i.z)({
-                fill: 100 * y,
+                onMouseLeave: j,
+            } = e,
+            { label: C, targetSec: k, leftPx: E, rightPx: N, index: b } = o,
+            [M, _] = l.useState(!1),
+            S = E - 4,
+            w = n >= S ? Math.min(1, (n - S) / (N - S)) : 0,
+            y = 0 === b && !m,
+            B = !y,
+            { fill: K } = (0, a.z)({
+                fill: 100 * w,
                 config: h,
                 onRest: () => {
-                    y <= 0 && j(!1);
+                    w <= 0 && _(!1);
                 },
                 onStart: () => {
-                    j(!0);
+                    _(!0);
                 },
             });
-        function A(n) {
-            return n.stopPropagation();
+        function A(e) {
+            return e.stopPropagation();
         }
-        let R =
+        let I =
             null != g
-                ? (n) => {
-                      (n.stopPropagation(), g());
+                ? (e) => {
+                      (e.stopPropagation(), g());
                   }
                 : void 0;
-        return (0, l.jsxs)(s.animated.div, {
-            className: a()(x.ck, { [x.a]: B && _, [x.C9]: !B && _ }),
+        return (0, i.jsxs)(s.animated.div, {
+            className: r()(x.ck, { [x.a]: y, [x.C9]: B }),
             style: {
-                left: p ? f.to((n) => E - n) : E,
-                "--custom-indicator-size": p ? f.to((n) => `${26 + 2 * n}px`) : "26px",
-                "--custom-indicator-fill": K.to((n) => n),
+                left: v ? f.to((e) => E - e) : E,
+                "--custom-indicator-size": v ? f.to((e) => `${26 + 2 * e}px`) : "26px",
+                "--custom-indicator-fill": K.to((e) => e),
                 backgroundColor: t,
             },
             onMouseDown: A,
             children: [
-                (0, l.jsx)(u.D, {
+                M && (0, i.jsx)("div", { className: x.y4, "aria-hidden": "true" }),
+                M &&
+                    y &&
+                    (0, i.jsxs)("div", {
+                        className: x.qE,
+                        "aria-hidden": "true",
+                        children: [
+                            (0, i.jsx)("div", { className: x.x_, children: (0, i.jsx)("div", { className: x.pI }) }),
+                            (0, i.jsx)("div", { className: x.Nv, children: (0, i.jsx)("div", { className: x.pI }) }),
+                        ],
+                    }),
+                (0, i.jsx)(d.D, {
                     className: x.E6,
                     "data-testid": "ad-video-reward-indicator",
-                    onClick: R,
+                    onClick: I,
                     onMouseDown: A,
                     onMouseEnter: P,
-                    onMouseLeave: C,
-                    children: m,
+                    onMouseLeave: j,
+                    children: p,
                 }),
-                (0, l.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: x.Ru,
                     role: "tooltip",
-                    "aria-label": null != k ? `${(0, c.rB)(b)} - ${k}` : (0, c.rB)(b),
+                    "aria-label": null != C ? `${(0, c.rB)(k)} - ${C}` : (0, c.rB)(k),
                     children: [
-                        (0, l.jsx)(d.E, {
+                        (0, i.jsx)(u.E, {
                             variant: "body-xs/normal",
                             color: "text-overlay-light",
-                            children: (0, c.rB)(b),
+                            children: (0, c.rB)(k),
                         }),
-                        null != k &&
-                            (0, l.jsxs)(l.Fragment, {
+                        null != C &&
+                            (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, l.jsx)("span", { className: x.AE, "aria-hidden": "true" }),
-                                    (0, l.jsx)(d.E, {
+                                    (0, i.jsx)("span", { className: x.AE, "aria-hidden": "true" }),
+                                    (0, i.jsx)(u.E, {
                                         variant: "body-xs/normal",
                                         color: "text-overlay-light",
-                                        children: k,
+                                        children: C,
                                     }),
                                 ],
                             }),
@@ -93,46 +105,46 @@ let h = { duration: 250 },
             ],
         });
     },
-    v = { tension: 500, friction: 30, clamp: !0 };
-function m(n) {
-    let { targetSec: e, label: t, isCompleted: r, icon: a, clickable: s = !1 } = n,
-        [u, d] = o.useState(null),
-        c = o.useRef(null),
-        [{ expansion: x }, h] = (0, i.z)(() => ({
+    m = { tension: 500, friction: 30, clamp: !0 };
+function p(e) {
+    let { targetSec: n, label: t, isCompleted: o, icon: r, clickable: s = !1 } = e,
+        [d, u] = l.useState(null),
+        c = l.useRef(null),
+        [{ expansion: x }, h] = (0, a.z)(() => ({
             expansion: 0,
-            config: v,
+            config: m,
             onRest: () => {
-                null == c.current && d(null);
+                null == c.current && u(null);
             },
         })),
-        m = o.useCallback(
-            (n) => {
-                ((c.current = n), null != n ? (d(n), h({ expansion: 4 })) : h({ expansion: 0 }));
+        p = l.useCallback(
+            (e) => {
+                ((c.current = e), null != e ? (u(e), h({ expansion: 4 })) : h({ expansion: 0 }));
             },
             [h],
         ),
-        f = o.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4, align: "end", clickable: s }], [e, s]),
-        g = o.useCallback(
-            (n, o, i, s) => {
-                let d = { leftPx: n.leftPx, rightPx: n.rightPx, targetSec: e, index: n.index, label: t };
-                return (0, l.jsx)(
-                    p,
+        f = l.useMemo(() => [{ index: 0, timeSec: n, widthPx: 32, gapPx: 4, align: "end", clickable: s }], [n, s]),
+        g = l.useCallback(
+            (e, l, a, s) => {
+                let u = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: n, index: e.index, label: t };
+                return (0, i.jsx)(
+                    v,
                     {
-                        currentPx: o,
+                        currentPx: l,
                         trackBackground: s,
-                        indicator: d,
-                        isAnimated: u === n.index,
-                        isCompleted: r,
-                        icon: a,
+                        indicator: u,
+                        isAnimated: d === e.index,
+                        isCompleted: o,
+                        icon: r,
                         expansionSpring: x,
-                        onMouseEnter: () => m(n.index),
-                        onMouseLeave: () => m(null),
-                        onClick: i,
+                        onMouseEnter: () => p(e.index),
+                        onMouseLeave: () => p(null),
+                        onClick: a,
                     },
-                    `indicator-${n.index}`,
+                    `indicator-${e.index}`,
                 );
             },
-            [e, t, u, r, a, x, m],
+            [n, t, d, o, r, x, p],
         );
-    return { indicators: f, animatingIndex: u, expansionSpring: x, hoverExpansionPx: 4, renderIndicator: g };
+    return { indicators: f, animatingIndex: d, expansionSpring: x, hoverExpansionPx: 4, renderIndicator: g };
 }

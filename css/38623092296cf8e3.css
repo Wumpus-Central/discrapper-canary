@@ -1,0 +1,154 @@
+.progressColors_1tbovV {
+    --custom-ad-video-fill-start: #f5fef6;
+    --custom-ad-video-fill-end: #d1f9d3;
+    --custom-ad-video-glow-green: rgba(18, 201, 25, .8);
+    --custom-ad-video-white: var(--white)
+}
+
+.inProgress_1tbovV {
+    --custom-timeline-fill-bg: linear-gradient(90deg, var(--custom-ad-video-fill-start) 0%, var(--custom-ad-video-fill-end) 100%);
+    --custom-timeline-glow-shadow: -2px 0 12px 2px var(--custom-ad-video-glow-green), 0 0 33px 2px var(--custom-ad-video-white)
+}
+
+.completed_1tbovV,
+.inProgress_1tbovV {}
+
+.completed_1tbovV {
+    --custom-timeline-fill-bg: var(--white);
+    --custom-timeline-glow-blend-mode: soft-light;
+    --custom-timeline-glow-shadow: -2px 0 14px 3px transparent, -5px 0 22px 0 transparent, 0 0 27.8px 1px var(--custom-ad-video-white)
+}
+
+.rewardIndicatorContainer_6ar50M {
+    --custom-stroke-width: 3px;
+    --custom-indicator-arc-mask: conic-gradient(from 270deg at 50% 50%, #000 calc(var(--custom-indicator-fill)*1.8deg), transparent calc(var(--custom-indicator-fill)*1.8deg), transparent calc(360deg - var(--custom-indicator-fill)*1.8deg), #000 calc(360deg - var(--custom-indicator-fill)*1.8deg));
+    --custom-indicator-fill-color: transparent;
+    align-items: center;
+    background-color: var(--progressbar-track-background);
+    border-radius: 50%;
+    display: flex;
+    height: var(--custom-indicator-size);
+    justify-content: center;
+    padding: var(--custom-stroke-width);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--custom-indicator-size);
+    will-change: transform
+}
+
+.rewardIndicatorContainerGreenFill_6ar50M {
+    --custom-indicator-fill-color: var(--custom-ad-video-fill-end)
+}
+
+.rewardIndicatorContainerWhiteFill_6ar50M {
+    --custom-indicator-fill-color: var(--custom-ad-video-white)
+}
+
+.rewardProgressFill_6ar50M {
+    background-color: var(--custom-indicator-fill-color);
+    border-radius: 50%;
+    -webkit-mask-image: var(--custom-indicator-arc-mask);
+    mask-image: var(--custom-indicator-arc-mask);
+    z-index: 1
+}
+
+.rewardProgressFill_6ar50M,
+.rewardProgressGlow_6ar50M {
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.rewardProgressGlow_6ar50M {
+    z-index: 0
+}
+
+.rewardProgressGlowGreen_6ar50M,
+.rewardProgressGlowWhite_6ar50M {
+    inset: 0;
+    position: absolute
+}
+
+.rewardProgressGlowGreen_6ar50M {
+    --custom-indicator-glow-blur: 5.5px;
+    --custom-indicator-glow-color: var(--custom-ad-video-glow-green);
+    --custom-indicator-glow-spread: 4px;
+    --custom-indicator-glow-width: 10px
+}
+
+.rewardProgressGlowGreen_6ar50M,
+.rewardProgressGlowWhite_6ar50M {
+    filter: blur(var(--custom-indicator-glow-blur));
+    opacity: .45
+}
+
+.rewardProgressGlowWhite_6ar50M {
+    --custom-indicator-glow-blur: 9.5px;
+    --custom-indicator-glow-color: var(--custom-ad-video-white);
+    --custom-indicator-glow-spread: 5px;
+    --custom-indicator-glow-width: 12px
+}
+
+.rewardProgressGlowSource_6ar50M {
+    background-color: var(--custom-indicator-glow-color);
+    border-radius: 50%;
+    inset: calc(0px - var(--custom-indicator-glow-spread));
+    -webkit-mask-composite: source-in, xor;
+    mask-composite: intersect;
+    -webkit-mask-image: radial-gradient(farthest-side, transparent calc(100% - var(--custom-indicator-glow-width)), #000 calc(100% - var(--custom-indicator-glow-width) + .5px)), var(--custom-indicator-arc-mask);
+    mask-image: radial-gradient(farthest-side, transparent calc(100% - var(--custom-indicator-glow-width)), #000 calc(100% - var(--custom-indicator-glow-width) + .5px)), var(--custom-indicator-arc-mask);
+    position: absolute
+}
+
+.rewardIndicatorContainer_6ar50M:after {
+    background-color: var(--black);
+    border-radius: 50%;
+    content: "";
+    inset: var(--custom-stroke-width);
+    position: absolute;
+    z-index: 2
+}
+
+.rewardIconWrapper_6ar50M {
+    border-radius: 50%;
+    inset: var(--custom-stroke-width);
+    justify-content: center;
+    overflow: hidden;
+    z-index: 3
+}
+
+.rewardIconWrapper_6ar50M,
+.rewardTooltip_6ar50M {
+    align-items: center;
+    display: flex;
+    position: absolute
+}
+
+.rewardTooltip_6ar50M {
+    background: rgba(0, 0, 0, .4);
+    border-radius: 99px;
+    bottom: calc(100% + 6px);
+    gap: 10px;
+    inset-inline-start: 50%;
+    opacity: 0;
+    padding: 8px 16px;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity .15s ease-in-out;
+    white-space: nowrap;
+    z-index: 10
+}
+
+.rewardIndicatorContainer_6ar50M:has(:focus-visible) .rewardTooltip_6ar50M,
+.rewardIndicatorContainer_6ar50M:hover .rewardTooltip_6ar50M {
+    opacity: 1
+}
+
+.rewardTooltipDivider_6ar50M {
+    background: hsla(0, 0%, 100%, .12);
+    height: 10px;
+    width: 2px
+}
+
+/*# sourceMappingURL=38623092296cf8e3.css.map*/
