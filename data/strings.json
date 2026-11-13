@@ -28166,6 +28166,7 @@
   "uKOgr9": "You’re in the top {percent, number}% of players. Congrats? Or condolences.",
   "4FXB/m": "You’re in the $[top {percent, number}%](percentHook) of players. Congrats? Or condolences.",
   "N32w+2": "{numUsers} players never skipped a game day. If you slacked off, there’s always next year.",
+  "7nfXWu": "Some players never skipped a game day. If you slacked off, there’s always next year.",
   "dx4+NI": "Players without skip days",
   "4N5p4D": "Game days",
   "hcNhyq": "Only you can see your Checkpoint (unless you choose to share it). $[Learn More](learnMoreHook)",

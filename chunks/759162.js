@@ -4452,7 +4452,7 @@ function ic(e) {
                     (0, i.jsx)(rT, { value: t }),
                 ],
             }),
-            (0, i.jsx)(ra, { children: tf.intl.format(th.default["N32w+2"], { numUsers: (0, F.wj)(t) }) }),
+            (0, i.jsx)(ra, { children: tf.intl.string(th.default["7nfXWu"]) }),
         ],
     });
 }
