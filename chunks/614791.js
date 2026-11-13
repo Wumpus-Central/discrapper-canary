@@ -4,6 +4,9 @@ i.d(
     e,
     {},
     {
+        n: function (t, e) {
+            return "" !== (e ? t.acknowledgedBadgeCopy : t.badgeCopy).trim();
+        },
         z: function (t) {
             if ("premiumTab" !== t.properties.properties.oneofKind) return null;
             let { premiumTab: e } = t.properties.properties,

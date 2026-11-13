@@ -1,10 +1,10 @@
-var l = n(477900),
-    o = n(582128),
+var o = n(477900),
+    l = n(582128),
     i = n(503698),
     d = n.n(i),
     t = n(517352),
-    u = n(855986),
-    c = n(554146),
+    c = n(855986),
+    u = n(554146),
     r = n(646514),
     a = n(403581),
     p = n(404374),
@@ -32,10 +32,10 @@ function b() {
         p = (0, f.Q)(),
         O = r?.promotionId ?? "",
         b = null != a && null != p,
-        k = (0, u.bG)([h.A], () => (0, _.u$)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, O).isDismissed),
+        k = (0, c.bG)([h.A], () => (0, _.u$)(u.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, O).isDismissed),
         w =
-            b && null != r && null != a
-                ? (0, l.jsx)(m.A, {
+            b && null != r && null != a && (0, T.n)(a, k)
+                ? (0, o.jsx)(m.A, {
                       componentId: r.id,
                       componentType: r.componentType,
                       promotionId: r.promotionId,
@@ -45,17 +45,17 @@ function b() {
                   })
                 : null;
     return (
-        o.useEffect(() => {
+        l.useEffect(() => {
             s &&
                 b &&
                 !k &&
-                (0, I.qr)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, O, { dismissAction: R.i.AUTO_DISMISS });
+                (0, I.qr)(u.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, O, { dismissAction: R.i.AUTO_DISMISS });
         }, [s, b, k, O]),
-        null != w
+        b
             ? (e = w)
             : null != i
-              ? (e = (0, l.jsx)(g.fY, { isTabSelected: s, userDiscount: i, includesAmountOff: !1 }))
-              : null == n || d || (e = (0, l.jsx)(g.Ag, { isTabSelected: s, trialOffer: n })),
+              ? (e = (0, o.jsx)(g.fY, { isTabSelected: s, userDiscount: i, includesAmountOff: !1 }))
+              : null == n || d || (e = (0, o.jsx)(g.Ag, { isTabSelected: s, trialOffer: n })),
         e
     );
 }
@@ -64,18 +64,18 @@ n.d(
     {},
     {
         A: function (e) {
-            let { decoration: s, label: n, isSelected: o } = e,
+            let { decoration: s, label: n, isSelected: l } = e,
                 i =
-                    b(o) ??
+                    b(l) ??
                     s ??
-                    (0, l.jsx)(a.NitroWheelIcon, {
+                    (0, o.jsx)(a.NitroWheelIcon, {
                         size: "sm",
-                        color: o ? r.A.unsafe_rawColors.WHITE.css : p.k0.PREMIUM_TIER_2,
+                        color: l ? r.A.unsafe_rawColors.WHITE.css : p.k0.PREMIUM_TIER_2,
                     });
-            return (0, l.jsxs)(l.Fragment, {
+            return (0, o.jsxs)(o.Fragment, {
                 children: [
-                    (0, l.jsxs)("div", { className: d()(O.gj, { [O.wH]: o }), children: [n, i] }),
-                    (0, l.jsx)("div", { className: d()(O.Tp, { [O._I]: o }) }),
+                    (0, o.jsxs)("div", { className: d()(O.gj, { [O.wH]: l }), children: [n, i] }),
+                    (0, o.jsx)("div", { className: d()(O.Tp, { [O._I]: l }) }),
                 ],
             });
         },
