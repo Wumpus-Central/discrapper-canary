@@ -29436,6 +29436,7 @@
   "BaZ6nt": "Accept Invite",
   "WmxMAI": "You’ll automatically be added to the {displayNoun, select, GUILD {guild’s linked server, and can unlock special guild features}other {linked server, and can unlock special features}}",
   "MEQJ1m": "Linked channels that connect chat across the game and Discord.",
+  "7GnQoE": "Members with appropriate perms can send guild invites from Discord.",
   "yFqGy8": "What you’ll get",
   "IIR/NZ": "Unfortunately something went wrong. Check out the server linked to this {noun}, {guildName}, instead.",
   "lXyJMS": "You don’t have any eligible characters to join this {noun}. Check out the server linked to this {noun}, {guildName}, instead.",

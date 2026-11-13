@@ -1,0 +1,193 @@
+.card_PQuVz8 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    padding: var(--space-16)
+}
+
+.card_PQuVz8,
+.icon_PQuVz8 {
+    border-radius: var(--radius-lg)
+}
+
+.icon_PQuVz8 {
+    flex-shrink: 0
+}
+
+.info_PQuVz8 {
+    flex: 1;
+    min-width: 0
+}
+
+.dot_PQuVz8 {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: var(--size-12);
+    width: var(--size-12)
+}
+
+.onlineDot_PQuVz8 {
+    background-color: var(--icon-feedback-positive)
+}
+
+.membersDot_PQuVz8 {
+    background-color: var(--text-muted)
+}
+
+.scroller_mmRDkt {
+    cursor: grab;
+    display: flex;
+    margin-inline: calc(var(--custom-modal-padding)*-1);
+    overscroll-behavior-x: contain;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-padding-inline: var(--custom-modal-padding);
+    scroll-snap-type: x mandatory
+}
+
+.has-webkit-scrollbar .scroller_mmRDkt {
+    margin-inline-end: calc((var(--custom-modal-padding) - var(--space-16))*-1)
+}
+
+.reduce-motion .scroller_mmRDkt {
+    scroll-behavior: auto
+}
+
+.dragging_mmRDkt {
+    cursor: grabbing;
+    scroll-behavior: auto;
+    scroll-snap-type: none
+}
+
+.settling_mmRDkt {
+    scroll-snap-type: none
+}
+
+.cards_mmRDkt {
+    display: flex;
+    flex: none;
+    gap: var(--space-12);
+    list-style: none;
+    margin: 0;
+    padding-block: 0;
+    padding-inline: var(--custom-modal-padding);
+    width: -moz-max-content;
+    width: max-content
+}
+
+.has-webkit-scrollbar .cards_mmRDkt {
+    padding-inline-end: calc(var(--custom-modal-padding) - var(--space-16))
+}
+
+.card_mmRDkt {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    flex: 0 0 260px;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding: var(--space-16);
+    scroll-snap-align: start
+}
+
+.card_mmRDkt,
+.dots_mmRDkt {
+    display: flex
+}
+
+.dots_mmRDkt {
+    gap: var(--space-8);
+    justify-content: center
+}
+
+.dot_mmRDkt {
+    background-color: var(--icon-muted);
+    border-radius: var(--radius-round);
+    height: var(--size-8);
+    position: relative;
+    transition: width var(--motion-spring-subtle-duration) var(--motion-spring-subtle), background-color var(--motion-spring-subtle-duration) var(--motion-spring-subtle);
+    width: var(--size-8)
+}
+
+.dot_mmRDkt:before {
+    content: "";
+    inset: calc(var(--space-8)*-1) calc(var(--space-4)*-1);
+    position: absolute
+}
+
+.reduce-motion .dot_mmRDkt {
+    transition: background-color var(--motion-spring-subtle-duration) var(--motion-spring-subtle)
+}
+
+.activeDot_mmRDkt {
+    background-color: var(--text-brand);
+    width: calc(var(--size-16) - 1px)
+}
+
+.centeredText_L3IVKa {
+    text-align: center
+}
+
+.title_hoUSYf {
+    text-align: center
+}
+
+.cards_hoUSYf {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.card_hoUSYf {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-16);
+    outline: none;
+    padding: var(--space-12)
+}
+
+.card_hoUSYf[data-hovered]:not([data-disabled], [data-selected]) {
+    background-color: var(--background-mod-normal)
+}
+
+.card_hoUSYf[data-selected] {
+    background-color: var(--togglebutton-background-selected);
+    border-color: var(--background-brand)
+}
+
+.card_hoUSYf[data-disabled] {
+    cursor: not-allowed
+}
+
+.characterIcon_hoUSYf {
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    height: var(--size-48);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--size-48)
+}
+
+.labels_hoUSYf {
+    flex: 1;
+    min-width: 0
+}
+
+.centeredText_YumanG {
+    text-align: center
+}
+
+.organizationIcon_YumanG {
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+    height: var(--size-64);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--size-64)
+}
+
+/*# sourceMappingURL=8a32e39c14d375ff.css.map*/
