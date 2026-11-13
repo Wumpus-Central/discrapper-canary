@@ -15879,8 +15879,9 @@ function fW(e) {
                 underlineLinks: aE.Ay.alwaysShowLinkDecorations,
             })),
             d = F.hH.useSetting(),
-            m = (0, fz.C)(),
-            f = (0, c.bG)(
+            m = (0, c.bG)([sD.A], () => sD.A.hidePersonalInformation),
+            f = (0, fz.C)(),
+            h = (0, c.bG)(
                 [ep.A, eD.A],
                 () =>
                     eD.A.isBuilderPreviewMobile() &&
@@ -15889,25 +15890,26 @@ function fW(e) {
                         : "desktop",
                 [t],
             ),
-            h = i.useRef(!1),
             g = i.useRef(!1),
-            p = i.useRef(null),
-            x = i.useCallback(() => {
+            p = i.useRef(!1),
+            x = i.useRef(null),
+            v = i.useCallback(() => {
                 let l = (0, mF.n5)(e, t);
                 if (null == l) return;
-                p.current = l;
+                x.current = l;
                 let i = {
                     revision: ++fB,
                     baseTheme: n,
                     customTheme: (0, fO.Lq)(),
-                    uiDensity: m,
+                    uiDensity: f,
                     messageDisplayCompact: d,
                     fontScale: a,
                     reducedMotion: r,
                     highContrast: s,
                     forcedColors: u,
                     underlineLinks: o,
-                    formFactor: f,
+                    formFactor: h,
+                    hidePersonalInformation: m,
                 };
                 (0, mv.W)(l, "set-env", i, {
                     timeoutMs: 6e3,
@@ -15915,51 +15917,51 @@ function fW(e) {
                     sourceMatch: "origin",
                     label: "viewer environment",
                 }).catch(() => {});
-            }, [n, u, a, f, t, s, d, e, r, m, o]),
-            v = i.useRef(x);
+            }, [n, u, a, h, t, m, s, d, e, r, f, o]),
+            j = i.useRef(v);
         i.useLayoutEffect(() => {
-            v.current = x;
+            j.current = v;
         });
-        let j = i.useCallback(() => {
-            h.current ||
-                ((h.current = !0),
+        let b = i.useCallback(() => {
+            g.current ||
+                ((g.current = !0),
                 queueMicrotask(() => {
-                    ((h.current = !1), g.current || v.current());
+                    ((g.current = !1), p.current || j.current());
                 }));
         }, []);
         (i.useEffect(
             () => (
-                (g.current = !1),
+                (p.current = !1),
                 () => {
-                    g.current = !0;
+                    p.current = !0;
                 }
             ),
             [],
         ),
             i.useEffect(() => {
-                j();
-            }, [l, j]),
+                b();
+            }, [l, b]),
             i.useLayoutEffect(() => {
-                (x(), j());
-            }, [j, x]),
+                (v(), b());
+            }, [b, v]),
             i.useLayoutEffect(() => {
                 let n = (0, mF.n5)(e, t);
-                null != n && n !== p.current && j();
+                null != n && n !== x.current && b();
             }),
             i.useEffect(() => {
                 function n(n) {
-                    n.target === (0, mF.n5)(e, t) && ((p.current = null), j());
+                    n.target === (0, mF.n5)(e, t) && ((x.current = null), b());
                 }
                 return (document.addEventListener("load", n, !0), () => document.removeEventListener("load", n, !0));
-            }, [t, e, j]),
+            }, [t, e, b]),
             i.useEffect(() => {
-                let e = new MutationObserver(j);
+                let e = new MutationObserver(b);
                 return (
                     e.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "style"] }),
                     e.observe(document.head, { childList: !0, subtree: !0, characterData: !0 }),
                     () => e.disconnect()
                 );
-            }, [j]));
+            }, [b]));
     })(p, j),
         i.useEffect(() => {
             if (null != t) return (0, fM.Ng)(t, () => (0, mF.n5)(p, j));

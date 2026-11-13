@@ -1,8 +1,9 @@
 var i = n(775602),
     r = n(413599),
     l = n(253932),
-    s = n(157146);
-let a = Object.freeze({
+    s = n(351906),
+    a = n(157146);
+let o = Object.freeze({
         baseTheme: "dark",
         customTheme: null,
         uiDensity: "default",
@@ -13,9 +14,10 @@ let a = Object.freeze({
         forcedColors: !1,
         underlineLinks: !1,
         formFactor: "desktop",
+        hidePersonalInformation: !1,
     }),
-    o = 221552 == n.j ? ["custom-theme-background", "custom-client-theme"] : null;
-function u(e) {
+    u = 221552 == n.j ? ["custom-theme-background", "custom-client-theme"] : null;
+function c(e) {
     switch (e) {
         case "light":
         case "midnight":
@@ -25,10 +27,10 @@ function u(e) {
             return "dark";
     }
 }
-function c() {
+function d() {
     if ("u" < typeof document || "u" < typeof window) return null;
     let e = document.documentElement,
-        t = o.filter((t) => e.classList.contains(t));
+        t = u.filter((t) => e.classList.contains(t));
     if (0 === t.length) return null;
     let n = window.getComputedStyle(e),
         i = {};
@@ -39,51 +41,53 @@ function c() {
     let r = n.getPropertyValue("--background-gradient-chat").trim();
     return ("" !== r && (i["--background-gradient-chat"] = r), { classNames: t, variables: i });
 }
-function d() {
+function m() {
     let e =
         "u" > typeof window && "function" == typeof window.matchMedia
-            ? window.matchMedia(s.U).matches
+            ? window.matchMedia(a.U).matches
                 ? "cozy"
                 : "compact"
             : "cozy";
-    return (0, s.d)(l.Xi.getSetting(), e);
+    return (0, a.d)(l.Xi.getSetting(), e);
 }
-function m() {
+function h() {
     let e = i.Ay.fontScale;
-    return Number.isFinite(e) ? Math.round(100 * e) / 100 : a.fontScale;
+    return Number.isFinite(e) ? Math.round(100 * e) / 100 : o.fontScale;
 }
 n.d(
     t,
     {},
     {
-        Lq: c,
-        U0: m,
+        Lq: d,
+        U0: h,
         _n: function () {
             return {
-                theme: u(r.A.theme),
-                ui_density: d(),
+                theme: c(r.A.theme),
+                ui_density: m(),
                 message_display_compact: String(l.hH.getSetting()),
-                font_scale: String(m()),
+                font_scale: String(h()),
                 reduced_motion: String(i.Ay.useReducedMotion),
                 high_contrast: String(i.Ay.isHighContrastModeEnabled),
                 forced_colors: String(i.Ay.useForcedColors),
                 underline_links: String(i.Ay.alwaysShowLinkDecorations),
+                hide_personal_information: String(s.A.hidePersonalInformation),
             };
         },
         mB: function (e) {
             return {
-                baseTheme: u(r.A.theme),
-                customTheme: c(),
-                uiDensity: d(),
+                baseTheme: c(r.A.theme),
+                customTheme: d(),
+                uiDensity: m(),
                 messageDisplayCompact: l.hH.getSetting(),
-                fontScale: m(),
+                fontScale: h(),
                 reducedMotion: e,
                 highContrast: i.Ay.isHighContrastModeEnabled,
                 forcedColors: i.Ay.useForcedColors,
                 underlineLinks: i.Ay.alwaysShowLinkDecorations,
                 formFactor: "desktop",
+                hidePersonalInformation: s.A.hidePersonalInformation,
             };
         },
-        x4: u,
+        x4: c,
     },
 );
