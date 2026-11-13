@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => ee }));
+(n.r(t), n.d(t, { default: () => et }));
 var r = n(477900),
     l = n(582128),
     i = n(855986),
@@ -10,26 +10,26 @@ var r = n(477900),
     d = n(931519),
     f = n(716099),
     h = n(503698),
-    m = n.n(h),
-    g = n(646514),
+    g = n.n(h),
+    m = n(646514),
     p = n(366605),
     b = n(214947),
     x = n(34188),
-    C = n(577473),
-    y = n(403581),
-    k = n(27232),
-    w = n(812993),
-    E = n(866665),
-    A = n(939249),
-    I = n(834730),
-    M = n(329921),
+    y = n(577473),
+    C = n(403581),
+    A = n(27232),
+    k = n(812993),
+    I = n(866665),
+    E = n(939249),
+    M = n(834730),
+    w = n(329921),
     R = n(789645),
     v = n(442433),
     N = n(571694),
     P = n(47167),
-    T = n(713654),
-    j = n(5180),
-    S = n(682163),
+    S = n(713654),
+    T = n(5180),
+    j = n(682163),
     D = n(734057),
     z = n(71393),
     B = n(218461),
@@ -122,8 +122,8 @@ let X = new Map(),
                 nodeRef: ed,
                 handlePointerDown: ef,
                 handlePointerMove: eh,
-                handlePointerUp: em,
-                handleClickCapture: eg,
+                handlePointerUp: eg,
+                handleClickCapture: em,
             } = (function (e) {
                 let { itemId: t, onDragStart: n, onDragMove: r, onDragEnd: i } = e,
                     s = l.useRef(null),
@@ -181,7 +181,7 @@ let X = new Map(),
             {
                 mentionCount: eb,
                 isLowImportanceMention: ex,
-                showUnreadDot: eC,
+                showUnreadDot: ey,
             } = (0, i.cf)(
                 [B.Ay, L.Ay],
                 () => {
@@ -196,75 +196,75 @@ let X = new Map(),
                 },
                 [t],
             ),
-            ey = (0, r.jsx)(p.PinIcon, { size: "sm", color: "currentColor", className: U.PA }),
-            ek = null;
+            eC = (0, r.jsx)(p.PinIcon, { size: "sm", color: "currentColor", className: U.PA }),
+            eA = null;
         if (!t.pinned) {
             if ("route" === t.kind)
                 t.routePath === F.BVt.FRIENDS
-                    ? (ek = (0, r.jsx)(b.FriendsIcon, { size: "sm", color: "currentColor", className: U.PA }))
+                    ? (eA = (0, r.jsx)(b.FriendsIcon, { size: "sm", color: "currentColor", className: U.PA }))
                     : t.routePath === F.BVt.COLLECTIBLES_SHOP
-                      ? (ek = (0, r.jsx)(x.ShopIcon, { size: "sm", color: "currentColor", className: U.PA }))
+                      ? (eA = (0, r.jsx)(x.ShopIcon, { size: "sm", color: "currentColor", className: U.PA }))
                       : t.routePath === F.BVt.QUEST_HOME
-                        ? (ek = (0, r.jsx)(C.QuestsIcon, { size: "sm", color: "currentColor", className: U.PA }))
+                        ? (eA = (0, r.jsx)(y.QuestsIcon, { size: "sm", color: "currentColor", className: U.PA }))
                         : t.routePath === F.BVt.APPLICATION_STORE &&
-                          (ek = (0, r.jsx)(y.NitroWheelIcon, { size: "sm", color: "currentColor", className: U.PA }));
-            else if ((0, j.ai)(t.guildId))
-                ek = (0, r.jsx)(k.StarIcon, { size: "sm", color: "currentColor", className: U.PA });
+                          (eA = (0, r.jsx)(C.NitroWheelIcon, { size: "sm", color: "currentColor", className: U.PA }));
+            else if ((0, T.ai)(t.guildId))
+                eA = (0, r.jsx)(A.StarIcon, { size: "sm", color: "currentColor", className: U.PA });
             else if (null != Q && Q.isThread()) {
-                let e = (0, T.gU)(Q);
-                null != e && (ek = (0, r.jsx)(e, { size: "sm", color: "currentColor", className: U.PA }));
+                let e = (0, S.gU)(Q);
+                null != e && (eA = (0, r.jsx)(e, { size: "sm", color: "currentColor", className: U.PA }));
             } else if (null != J)
-                ek = (0, r.jsx)(S.Ay, { guild: J, size: S.Ay.Sizes.SMOL, active: !0, className: U.$f });
+                eA = (0, r.jsx)(j.Ay, { guild: J, size: j.Ay.Sizes.SMOL, active: !0, className: U.$f });
             else if (null != Q && (Q.isDM() || Q.isGroupDM())) {
                 let e = null != ee ? ee.getAvatarURL(void 0, 18) : (0, N.Y)(Q, 18);
                 null != e &&
-                    (ek = (0, r.jsx)("img", { className: U.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
+                    (eA = (0, r.jsx)("img", { className: U.ro, src: e, alt: "", "aria-hidden": !0, draggable: !1 }));
             }
         }
-        let ew = "channel" !== t.kind || null == J || null == Q || Q.isThread() ? null : (0, T.gU)(Q),
-            eE = null;
+        let ek = "channel" !== t.kind || null == J || null == Q || Q.isThread() ? null : (0, S.gU)(Q),
+            eI = null;
         eb > 0 &&
-            (eE = (0, r.jsx)("div", {
+            (eI = (0, r.jsx)("div", {
                 className: U.WK,
                 "aria-hidden": !0,
-                children: (0, r.jsx)(w.hV, {
+                children: (0, r.jsx)(k.hV, {
                     count: eb,
-                    color: ex ? g.A.colors.BACKGROUND_MOD_STRONG.css : g.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                    color: ex ? m.A.colors.BACKGROUND_MOD_STRONG.css : m.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                 }),
             }));
-        let eA = null != J ? G.intl.formatToPlainString(G.t.HPMTD3, { channelName: en, guildName: J.name }) : en;
+        let eE = null != J ? G.intl.formatToPlainString(G.t.HPMTD3, { channelName: en, guildName: J.name }) : en;
         return (0, r.jsxs)("div", {
             ref: ep,
-            className: m()(U.Mf, { [U.yR]: s, [U.MY]: Z, [U.nE]: u }),
+            className: g()(U.Mf, { [U.yR]: s, [U.MY]: Z, [U.nE]: u }),
             onPointerDown: ef,
             onPointerMove: eh,
-            onPointerUp: em,
-            onPointerCancel: em,
-            onClickCapture: eg,
+            onPointerUp: eg,
+            onPointerCancel: eg,
+            onClickCapture: em,
             onContextMenu: es,
             onDoubleClick: (e) => e.stopPropagation(),
             children: [
-                (0, r.jsx)(E.m, {
+                (0, r.jsx)(I.m, {
                     position: "bottom",
-                    text: eA,
+                    text: eE,
                     delay: 500,
                     shouldShow: !ea && !u,
                     ariaHidden: null == J,
-                    children: (0, r.jsxs)(A.D, {
+                    children: (0, r.jsxs)(E.D, {
                         className: U.eg,
                         onClick: er,
                         onAuxClick: ei,
                         "aria-current": s ? "page" : void 0,
                         children: [
-                            (t.pinned || null != ek) &&
-                                (0, r.jsxs)("span", { className: U.P0, children: [t.pinned && ey, ek, eE] }),
-                            null != ew &&
-                                (0, r.jsx)(ew, {
+                            (t.pinned || null != eA) &&
+                                (0, r.jsxs)("span", { className: U.P0, children: [t.pinned && eC, eA, eI] }),
+                            null != ek &&
+                                (0, r.jsx)(ek, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: m()(U.j1, { [U.Av]: o }),
+                                    className: g()(U.j1, { [U.Av]: o }),
                                 }),
-                            (0, r.jsxs)(I.E, {
+                            (0, r.jsxs)(M.E, {
                                 variant: "body-sm/medium",
                                 color: "none",
                                 className: U.HA,
@@ -277,18 +277,18 @@ let X = new Map(),
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               !s &&
-                                  eC &&
+                                  ey &&
                                   (0, r.jsx)("div", {
                                       className: U.XE,
                                       "aria-hidden": !0,
-                                      children: (0, r.jsx)(M.N, { variant: "neutral" }),
+                                      children: (0, r.jsx)(w.N, { variant: "neutral" }),
                                   }),
-                              (0, r.jsx)(E.m, {
+                              (0, r.jsx)(I.m, {
                                   position: "bottom",
                                   text: G.intl.string(G.t.In6PEK),
                                   keyboardShortcut: c.nK.binds["0"],
                                   ariaHidden: !0,
-                                  children: (0, r.jsx)(A.D, {
+                                  children: (0, r.jsx)(E.D, {
                                       className: U.b,
                                       onClick: () => el("close_button"),
                                       onPointerDown: (e) => e.stopPropagation(),
@@ -303,20 +303,19 @@ let X = new Map(),
         });
     });
 n(321073);
-let K = "left 150ms ease-out";
-function W() {
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-function Z(e, t) {
+var K = n(333007),
+    W = n(717421),
+    Z = n(775602);
+function q(e, t) {
     ((e.style.flexGrow = "0"),
         (e.style.flexShrink = "0"),
         (e.style.flexBasis = `${t}px`),
         (e.style.maxWidth = `${t}px`));
 }
-function q(e) {
+function Q(e) {
     ((e.style.flexGrow = ""), (e.style.flexShrink = ""), (e.style.flexBasis = ""), (e.style.maxWidth = ""));
 }
-function Q(e) {
+function J(e) {
     ((e.style.position = ""),
         (e.style.boxSizing = ""),
         (e.style.left = ""),
@@ -328,43 +327,14 @@ function Q(e) {
         (e.style.boxShadow = ""),
         (e.style.transition = ""));
 }
-var J = n(266553);
-function ee() {
-    let e,
-        t,
-        n,
-        h,
-        m,
-        g,
-        p,
-        b,
-        x,
-        C,
-        y,
-        k,
-        w,
-        E,
-        A,
-        I,
-        M,
-        R,
-        v,
-        N,
-        P,
-        T,
-        j,
-        S,
-        D,
-        z,
-        B,
-        L,
-        O,
-        {
-            tabs: F,
-            activeTabId: U,
-            isVisible: $,
-            isAtMaxTabs: X,
-            maxTabs: Y,
+var ee = n(266553);
+function et() {
+    let {
+            tabs: e,
+            activeTabId: t,
+            isVisible: n,
+            isAtMaxTabs: h,
+            maxTabs: g,
         } = (0, i.cf)([d.A], () => ({
             tabs: d.A.getTabs(),
             activeTabId: d.A.getActiveTabId(),
@@ -372,346 +342,378 @@ function ee() {
             isAtMaxTabs: d.A.isAtMaxTabs(),
             maxTabs: d.A.getMaxTabs(),
         })),
-        V = (0, i.bG)([u.Ay], () => u.Ay.getVoiceChannelId()),
+        m = (0, i.bG)([u.Ay], () => u.Ay.getVoiceChannelId()),
         {
-            setStripRef: ee,
-            registerTabNode: et,
-            setNewTabButtonRef: en,
-            handleDragStart: er,
-            handleDragMove: el,
-            handleDragEnd: ei,
-            handleCloseStart: es,
-        } = ((e = l.useRef(null)),
-        (t = l.useRef(new Map())),
-        (n = l.useRef(null)),
-        (h = l.useRef(null)),
-        (m = l.useRef(0)),
-        (g = l.useRef(0)),
-        (p = l.useRef([])),
-        (b = l.useRef(0)),
-        (x = l.useRef(0)),
-        (C = l.useRef(0)),
-        (y = l.useRef(0)),
-        (k = l.useRef(0)),
-        (w = l.useRef(0)),
-        (E = l.useRef(0)),
-        (A = l.useCallback((e, n) => {
-            null != n ? t.current.set(e, n) : t.current.delete(e);
-        }, [])),
-        (I = l.useCallback((e) => {
-            n.current = e;
-        }, [])),
-        (M = l.useCallback((t) => {
-            e.current = t;
-        }, [])),
-        (R = l.useRef(new Map())),
-        (v = F.map((e) => e.id).join(",")),
-        l.useLayoutEffect(() => {
-            if (null != h.current) return;
-            let e = t.current,
-                n = R.current;
-            e.forEach((e) => {
-                ((e.style.transition = ""), (e.style.transform = ""));
-            });
-            let r = new Map();
-            if (
-                (e.forEach((e, t) => {
-                    F.some((e) => e.id === t) && r.set(t, e.getBoundingClientRect().left);
-                }),
-                n.size === F.length && F.every((e) => n.has(e.id)) && !W())
-            ) {
-                let t = [];
+            setStripRef: p,
+            registerTabNode: b,
+            setNewTabButtonRef: x,
+            handleDragStart: y,
+            handleDragMove: C,
+            handleDragEnd: A,
+            handleCloseStart: k,
+        } = (function (e) {
+            let [, t] = (0, W.z)(() => ({ progress: 0, config: { duration: 150 } })),
+                n = l.useRef(null);
+            l.useEffect(() => () => n.current?.(!1), []);
+            let r = l.useRef(null),
+                i = l.useRef(new Map()),
+                s = l.useRef(null),
+                a = l.useRef(null),
+                u = l.useRef(0),
+                o = l.useRef(0),
+                c = l.useRef([]),
+                f = l.useRef(0),
+                h = l.useRef(0),
+                g = l.useRef(0),
+                m = l.useRef(0),
+                p = l.useRef(0),
+                b = l.useRef(0),
+                x = l.useRef(0),
+                y = l.useCallback((e, t) => {
+                    null != t ? i.current.set(e, t) : i.current.delete(e);
+                }, []),
+                C = l.useCallback((e) => {
+                    s.current = e;
+                }, []),
+                A = l.useCallback((e) => {
+                    r.current = e;
+                }, []),
+                k = l.useRef(new Map()),
+                I = e.map((e) => e.id).join(",");
+            l.useLayoutEffect(() => {
+                if (null != a.current) return;
+                let t = i.current,
+                    n = k.current;
+                t.forEach((e) => {
+                    ((e.style.transition = ""), (e.style.transform = ""));
+                });
+                let r = new Map();
                 if (
-                    (e.forEach((e, l) => {
-                        let i = n.get(l),
-                            s = r.get(l);
-                        if (null == i || null == s) return;
-                        let a = i - s;
-                        Math.abs(a) > 0.5 && t.push({ node: e, delta: a });
+                    (t.forEach((t, n) => {
+                        e.some((e) => e.id === n) && r.set(n, t.getBoundingClientRect().left);
                     }),
-                    t.length > 0)
+                    n.size === e.length && e.every((e) => n.has(e.id)) && !Z.Ay.useReducedMotion)
                 ) {
-                    for (let { node: e, delta: n } of t) e.style.transform = `translateX(${n}px)`;
-                    for (let { node: e } of (t[0].node.offsetHeight, t))
-                        ((e.style.transition = "transform 150ms ease-out"),
-                            (e.style.transform = ""),
-                            e.addEventListener(
-                                "transitionend",
-                                () => {
-                                    e.style.transition = "";
-                                },
-                                { once: !0 },
-                            ));
+                    let e = [];
+                    if (
+                        (t.forEach((t, l) => {
+                            let i = n.get(l),
+                                s = r.get(l);
+                            if (null == i || null == s) return;
+                            let a = i - s;
+                            Math.abs(a) > 0.5 && e.push({ node: t, delta: a });
+                        }),
+                        e.length > 0)
+                    ) {
+                        for (let { node: t, delta: n } of e) t.style.transform = `translateX(${n}px)`;
+                        for (let { node: t } of (e[0].node.offsetHeight, e))
+                            ((t.style.transition = "transform 150ms ease-out"),
+                                (t.style.transform = ""),
+                                t.addEventListener(
+                                    "transitionend",
+                                    () => {
+                                        t.style.transition = "";
+                                    },
+                                    { once: !0 },
+                                ));
+                    }
                 }
-            }
-            R.current = r;
-        }, [v]),
-        (N = l.useRef(!1)),
-        (P = l.useRef(!1)),
-        (T = l.useRef(new Map())),
-        (j = l.useCallback(() => {
-            let e = new Map();
-            return (
-                T.current.forEach((t, n) => {
-                    (clearTimeout(t), e.set(n, n.getBoundingClientRect().width));
-                }),
-                e.forEach((e, t) => {
-                    ((t.style.transition = ""), Z(t, e));
-                }),
-                T.current.clear(),
-                e
-            );
-        }, [])),
-        (S = l.useCallback((e) => {
-            if (W()) return;
-            let t = [];
-            if (
-                (e.forEach((e, n) => {
-                    let r = n.getBoundingClientRect().width;
-                    Math.abs(r - e) > 0.5 && t.push({ node: n, from: e, to: r });
-                }),
-                0 !== t.length)
-            ) {
-                for (let { node: e, from: n } of t) ((e.style.transition = ""), Z(e, n));
-                for (let { node: e, to: n } of (t[0].node.offsetWidth, t)) {
-                    ((e.style.transition = "flex-basis 150ms ease-out, max-width 150ms ease-out"), Z(e, n));
-                    let t = setTimeout(() => {
-                        (T.current.delete(e), (e.style.transition = ""), q(e));
-                    }, 150);
-                    T.current.set(e, t);
-                }
-            }
-        }, [])),
-        l.useEffect(() => {
-            let e = T.current;
-            return () => e.forEach((e) => clearTimeout(e));
-        }, []),
-        (D = l.useCallback(() => {
-            ((P.current = !0), j());
-            let e = new Map();
-            (t.current.forEach((t) => {
-                "" === t.style.flexBasis && e.set(t, t.getBoundingClientRect().width);
-            }),
-                e.forEach((e, t) => Z(t, e)));
-        }, [j])),
-        (z = l.useCallback(() => {
-            ((P.current = !1), j());
-            let e = new Map();
-            (t.current.forEach((t) => e.set(t, t.getBoundingClientRect().width)), t.current.forEach(q), S(e));
-        }, [j, S])),
-        l.useEffect(() => {
-            function t(t) {
-                if (!P.current) return;
-                let n = e.current;
-                if (null == n) return;
-                let r = n.getBoundingClientRect(),
-                    l =
-                        t.clientX >= r.left - 32 &&
-                        t.clientX <= r.right + 32 &&
-                        t.clientY >= r.top - 32 &&
-                        t.clientY <= r.bottom + 32;
-                l !== N.current && ((N.current = l), l || z());
-            }
-            return (window.addEventListener("mousemove", t), () => window.removeEventListener("mousemove", t));
-        }, [z]),
-        (B = l.useCallback(() => {
-            let t = e.current,
-                n = null != t && t.matches(":hover");
-            ((N.current = n), n && D());
-        }, [D])),
-        (L = l.useRef(F)),
-        l.useLayoutEffect(() => {
-            L.current = F;
-        }, [F]),
-        (O = l.useCallback((r, l) => {
-            let i = L.current,
-                s = e.current,
-                a = t.current.get(r);
-            if (null == s || null == a) return;
-            let u = s.getBoundingClientRect(),
-                o = parseFloat(getComputedStyle(s).columnGap);
-            C.current = Number.isFinite(o) ? o : 0;
-            let c = [];
-            i.forEach((e) => {
-                let n = t.current.get(e.id);
-                null != n && c.push({ id: e.id, node: n });
-            });
-            let d = new Map();
-            c.forEach((e) => {
-                let { node: t } = e;
-                return d.set(t, t.getBoundingClientRect());
-            });
-            let f = n.current;
-            (null != f && d.set(f, f.getBoundingClientRect()),
-                d.forEach((e, t) => {
-                    ((t.style.position = "absolute"),
-                        (t.style.boxSizing = "border-box"),
-                        (t.style.left = `${e.left - u.left}px`),
-                        (t.style.top = `${e.top - u.top}px`),
-                        (t.style.width = `${e.width}px`),
-                        (t.style.height = `${e.height}px`),
-                        (t.style.margin = "0"));
-                }));
-            let A = W(),
-                I = [],
-                M = 1 / 0,
-                R = i.find((e) => e.id === r)?.pinned === !0,
-                v = 1 / 0,
-                N = -1 / 0;
-            (c.forEach((e) => {
-                let { id: t, node: n } = e,
-                    l = d.get(n);
-                if (null == l) return;
-                let s = l.left - u.left;
-                if (
-                    ((M = Math.min(M, s)),
-                    i.find((e) => e.id === t)?.pinned === R && ((v = Math.min(v, s)), (N = Math.max(N, s + l.width))),
-                    t === r)
-                ) {
-                    x.current = l.width;
-                    return;
-                }
-                (A || (n.style.transition = K), I.push({ node: n, size: l.width, center: s + l.width / 2 }));
-            }),
-                (p.current = I),
-                (b.current = Number.isFinite(M) ? M : 0),
-                (m.current = l));
-            let P = parseFloat(a.style.left);
-            g.current = P;
-            let T = Number.isFinite(v) ? v : P,
-                j = Number.isFinite(N) ? N : P + x.current;
-            ((y.current = Math.min(T, P)),
-                (k.current = Math.max(j - x.current, P)),
-                (w.current = i.findIndex((e) => e.id === r)),
-                (E.current = P),
-                (h.current = r),
-                (a.style.zIndex = "1"),
-                (a.style.boxShadow = "0 4px 12px var(--elevation-high)"));
-        }, [])),
-        {
-            setStripRef: M,
-            registerTabNode: A,
-            setNewTabButtonRef: I,
-            handleDragStart: O,
-            handleDragMove: l.useCallback((e, n) => {
-                if (h.current !== e) return;
-                let r = t.current.get(e);
-                if (null == r) return;
-                let l = Math.min(Math.max(g.current + n - m.current, y.current), k.current);
-                r.style.left = `${l}px`;
-                let i = p.current,
-                    s = x.current,
-                    a = l + s,
-                    u = g.current + s / 2,
-                    o = 0;
-                for (let e of i) {
-                    let t = e.center > u ? a : l;
-                    e.center < t && o++;
-                }
-                let c = C.current,
-                    d = b.current,
-                    f = d;
-                (i.forEach((e, t) => {
-                    (t === o && ((f = d), (d += s + c)), (e.node.style.left = `${d}px`), (d += e.size + c));
-                }),
-                    o >= i.length && (f = d),
-                    (w.current = o),
-                    (E.current = f));
-            }, []),
-            handleDragEnd: l.useCallback(() => {
-                let e = h.current;
-                if (null == e) return;
-                let r = t.current.get(e),
-                    l = E.current;
-                (0, _.Aq)(e, w.current);
-                let i = !1;
-                function s() {
-                    if (i) return;
-                    ((i = !0),
-                        t.current.forEach(Q),
-                        null != n.current && Q(n.current),
-                        (h.current = null),
-                        (p.current = []));
+                k.current = r;
+            }, [I]);
+            let E = l.useRef(!1),
+                M = l.useRef(!1),
+                w = l.useRef(new Map()),
+                R = l.useCallback(() => {
                     let e = new Map();
-                    (t.current.forEach((t, n) => {
-                        L.current.some((e) => e.id === n) && e.set(n, t.getBoundingClientRect().left);
+                    return (
+                        w.current.forEach((t, n) => {
+                            (clearTimeout(t), e.set(n, n.getBoundingClientRect().width));
+                        }),
+                        e.forEach((e, t) => {
+                            ((t.style.transition = ""), q(t, e));
+                        }),
+                        w.current.clear(),
+                        e
+                    );
+                }, []),
+                v = l.useCallback((e) => {
+                    if (Z.Ay.useReducedMotion) return;
+                    let t = [];
+                    if (
+                        (e.forEach((e, n) => {
+                            let r = n.getBoundingClientRect().width;
+                            Math.abs(r - e) > 0.5 && t.push({ node: n, from: e, to: r });
+                        }),
+                        0 !== t.length)
+                    ) {
+                        for (let { node: e, from: n } of t) ((e.style.transition = ""), q(e, n));
+                        for (let { node: e, to: n } of (t[0].node.offsetWidth, t)) {
+                            ((e.style.transition = "flex-basis 150ms ease-out, max-width 150ms ease-out"), q(e, n));
+                            let t = setTimeout(() => {
+                                (w.current.delete(e), (e.style.transition = ""), Q(e));
+                            }, 150);
+                            w.current.set(e, t);
+                        }
+                    }
+                }, []);
+            l.useEffect(() => {
+                let e = w.current;
+                return () => e.forEach((e) => clearTimeout(e));
+            }, []);
+            let N = l.useCallback(() => {
+                    ((M.current = !0), R());
+                    let e = new Map();
+                    (i.current.forEach((t) => {
+                        "" === t.style.flexBasis && e.set(t, t.getBoundingClientRect().width);
                     }),
-                        (R.current = e));
+                        e.forEach((e, t) => q(t, e)));
+                }, [R]),
+                P = l.useCallback(() => {
+                    ((M.current = !1), R());
+                    let e = new Map();
+                    (i.current.forEach((t) => e.set(t, t.getBoundingClientRect().width)), i.current.forEach(Q), v(e));
+                }, [R, v]);
+            l.useEffect(() => {
+                function e(e) {
+                    if (!M.current) return;
+                    let t = r.current;
+                    if (null == t) return;
+                    let n = t.getBoundingClientRect(),
+                        l =
+                            e.clientX >= n.left - 32 &&
+                            e.clientX <= n.right + 32 &&
+                            e.clientY >= n.top - 32 &&
+                            e.clientY <= n.bottom + 32;
+                    l !== E.current && ((E.current = l), l || P());
                 }
-                let a = null != r ? parseFloat(r.style.left) : 0 / 0;
-                null == r || W() || !Number.isFinite(a) || 0.5 > Math.abs(a - l)
-                    ? s()
-                    : ((r.style.transition = K),
-                      (r.style.left = `${l}px`),
-                      r.addEventListener("transitionend", s, { once: !0 }),
-                      setTimeout(s, 200));
-            }, []),
-            handleCloseStart: B,
-        }),
-        [ea, eu] = l.useState(() => new Map()),
-        [eo, ec] = l.useState(F);
-    if (eo !== F) {
-        let e = eo.filter((e) => !F.some((t) => t.id === e.id));
-        (e.length > 0 &&
-            eu((t) => {
-                let n = new Map(t);
-                return (e.forEach((e) => n.set(e.id, { tab: e, index: eo.indexOf(e) })), n);
+                return (window.addEventListener("mousemove", e), () => window.removeEventListener("mousemove", e));
+            }, [P]);
+            let S = l.useCallback(() => {
+                    let e = r.current,
+                        t = null != e && e.matches(":hover");
+                    ((E.current = t), t && N());
+                }, [N]),
+                T = l.useRef(e);
+            l.useLayoutEffect(() => {
+                T.current = e;
+            }, [e]);
+            let j = l.useCallback((e, t) => {
+                let n = T.current,
+                    l = r.current,
+                    d = i.current.get(e);
+                if (null == l || null == d) return;
+                let y = l.getBoundingClientRect(),
+                    C = parseFloat(getComputedStyle(l).columnGap);
+                g.current = Number.isFinite(C) ? C : 0;
+                let A = [];
+                n.forEach((e) => {
+                    let t = i.current.get(e.id);
+                    null != t && A.push({ id: e.id, node: t });
+                });
+                let k = new Map();
+                A.forEach((e) => {
+                    let { node: t } = e;
+                    return k.set(t, t.getBoundingClientRect());
+                });
+                let I = s.current;
+                (null != I && k.set(I, I.getBoundingClientRect()),
+                    k.forEach((e, t) => {
+                        ((t.style.position = "absolute"),
+                            (t.style.boxSizing = "border-box"),
+                            (t.style.left = `${e.left - y.left}px`),
+                            (t.style.top = `${e.top - y.top}px`),
+                            (t.style.width = `${e.width}px`),
+                            (t.style.height = `${e.height}px`),
+                            (t.style.margin = "0"));
+                    }));
+                let E = Z.Ay.useReducedMotion,
+                    M = [],
+                    w = 1 / 0,
+                    R = n.find((t) => t.id === e)?.pinned === !0,
+                    v = 1 / 0,
+                    N = -1 / 0;
+                (A.forEach((t) => {
+                    let { id: r, node: l } = t,
+                        i = k.get(l);
+                    if (null == i) return;
+                    let s = i.left - y.left;
+                    if (
+                        ((w = Math.min(w, s)),
+                        n.find((e) => e.id === r)?.pinned === R &&
+                            ((v = Math.min(v, s)), (N = Math.max(N, s + i.width))),
+                        r === e)
+                    ) {
+                        h.current = i.width;
+                        return;
+                    }
+                    (E || (l.style.transition = "left 150ms ease-out"),
+                        M.push({ node: l, size: i.width, center: s + i.width / 2 }));
+                }),
+                    (c.current = M),
+                    (f.current = Number.isFinite(w) ? w : 0),
+                    (u.current = t));
+                let P = parseFloat(d.style.left);
+                o.current = P;
+                let S = Number.isFinite(v) ? v : P,
+                    j = Number.isFinite(N) ? N : P + h.current;
+                ((m.current = Math.min(S, P)),
+                    (p.current = Math.max(j - h.current, P)),
+                    (b.current = n.findIndex((t) => t.id === e)),
+                    (x.current = P),
+                    (a.current = e),
+                    (d.style.zIndex = "1"),
+                    (d.style.boxShadow = "0 4px 12px var(--elevation-high)"));
+            }, []);
+            return {
+                setStripRef: A,
+                registerTabNode: y,
+                setNewTabButtonRef: C,
+                handleDragStart: j,
+                handleDragMove: l.useCallback((e, t) => {
+                    if (a.current !== e) return;
+                    let n = i.current.get(e);
+                    if (null == n) return;
+                    let r = Math.min(Math.max(o.current + t - u.current, m.current), p.current);
+                    n.style.left = `${r}px`;
+                    let l = c.current,
+                        s = h.current,
+                        d = r + s,
+                        y = o.current + s / 2,
+                        C = 0;
+                    for (let e of l) {
+                        let t = e.center > y ? d : r;
+                        e.center < t && C++;
+                    }
+                    let A = g.current,
+                        k = f.current,
+                        I = k;
+                    (l.forEach((e, t) => {
+                        (t === C && ((I = k), (k += s + A)), (e.node.style.left = `${k}px`), (k += e.size + A));
+                    }),
+                        C >= l.length && (I = k),
+                        (b.current = C),
+                        (x.current = I));
+                }, []),
+                handleDragEnd: l.useCallback(async () => {
+                    let e = a.current;
+                    if (null == e) return;
+                    let r = i.current.get(e),
+                        l = null != r ? parseFloat(r.style.left) : 0 / 0,
+                        u = x.current,
+                        o = T.current.filter((t) => t.id !== e).map((e) => e.id),
+                        f = o.slice(b.current),
+                        h = o.slice(0, b.current).reverse(),
+                        g = !1,
+                        m = function () {
+                            let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+                            if (g) return;
+                            ((g = !0), (n.current = null));
+                            let r = d.A.getTabs(),
+                                l = r.find((t) => t.id === e),
+                                u = r.filter((t) => t.id !== e),
+                                o = (e) => u.some((t) => t.id === e && t.pinned === l?.pinned),
+                                m = f.find(o),
+                                p = h.find(o),
+                                b =
+                                    null != m
+                                        ? u.findIndex((e) => e.id === m)
+                                        : null != p
+                                          ? u.findIndex((e) => e.id === p) + 1
+                                          : u.length,
+                                x = () => (0, _.Aq)(e, b);
+                            (t ? (0, K.flushSync)(x) : x(),
+                                i.current.forEach(J),
+                                null != s.current && J(s.current),
+                                (a.current = null),
+                                (c.current = []));
+                            let y = new Map();
+                            (i.current.forEach((e, t) => {
+                                T.current.some((e) => e.id === t) && y.set(t, e.getBoundingClientRect().left);
+                            }),
+                                (k.current = y));
+                        };
+                    (null == r ||
+                        !Number.isFinite(l) ||
+                        Z.Ay.useReducedMotion ||
+                        ((n.current = m),
+                        await t({
+                            from: { progress: 0 },
+                            to: { progress: 1 },
+                            reset: !0,
+                            onChange: (e) => {
+                                let { progress: t } = e;
+                                g || (r.style.left = `${l + (u - l) * t}px`);
+                            },
+                        })),
+                        m());
+                }, [t]),
+                handleCloseStart: S,
+            };
+        })(e),
+        [I, E] = l.useState(() => new Map()),
+        [M, w] = l.useState(e);
+    if (M !== e) {
+        let t = M.filter((t) => !e.some((e) => e.id === t.id));
+        (t.length > 0 &&
+            E((e) => {
+                let n = new Map(e);
+                return (t.forEach((e) => n.set(e.id, { tab: e, index: M.indexOf(e) })), n);
             }),
-            ec(F));
+            w(e));
     }
-    let ed = l.useRef(0);
+    let R = l.useRef(0);
     l.useLayoutEffect(() => {
-        (ea.size > ed.current && es(), (ed.current = ea.size));
-    }, [ea, es]);
-    let ef = l.useCallback((e) => {
-        eu((t) => {
+        (I.size > R.current && k(), (R.current = I.size));
+    }, [I, k]);
+    let v = l.useCallback((e) => {
+        E((t) => {
             let n = new Map(t);
             return (n.delete(e), n);
         });
     }, []);
-    if (!$) return null;
-    let eh = X ? G.intl.formatToPlainString(G.t["I8l3Z+"], { count: Y }) : void 0,
-        em = F.length > 1,
-        eg = [...F];
+    if (!n) return null;
+    let N = h ? G.intl.formatToPlainString(G.t["I8l3Z+"], { count: g }) : void 0,
+        P = e.length > 1,
+        S = [...e];
     return (
-        ea.forEach((e) => {
+        I.forEach((e) => {
             let { tab: t, index: n } = e;
-            return eg.splice(Math.min(n, eg.length), 0, t);
+            return S.splice(Math.min(n, S.length), 0, t);
         }),
         (0, r.jsxs)("div", {
-            ref: ee,
-            className: J.$,
+            ref: p,
+            className: ee.$,
             role: "group",
             "aria-label": G.intl.string(G.t.es0PkU),
             onDoubleClick: () => o.Ay.maximize(),
             children: [
-                eg.map((e) =>
+                S.map((e) =>
                     (0, r.jsx)(
                         H,
                         {
                             tab: e,
-                            isActive: e.id === U,
-                            closable: em,
-                            isExiting: ea.has(e.id),
-                            isConnectedVoiceChannel: "channel" === e.kind && e.channelId === V,
-                            registerTabNode: et,
-                            onDragStart: er,
-                            onDragMove: el,
-                            onDragEnd: ei,
-                            onExited: ef,
+                            isActive: e.id === t,
+                            closable: P,
+                            isExiting: I.has(e.id),
+                            isConnectedVoiceChannel: "channel" === e.kind && e.channelId === m,
+                            registerTabNode: b,
+                            onDragStart: y,
+                            onDragMove: C,
+                            onDragEnd: A,
+                            onExited: v,
                         },
                         e.id,
                     ),
                 ),
                 (0, r.jsx)("div", {
-                    ref: en,
-                    className: J.Y,
+                    ref: x,
+                    className: ee.Y,
                     children: (0, r.jsx)(a.A, {
                         icon: s.PlusLargeIcon,
                         onClick: () => (0, f.k)("new_tab_button"),
-                        disabled: null != eh,
-                        tooltip: eh ?? G.intl.string(G.t.GR7NIF),
-                        tooltipKeyboardShortcut: null == eh ? c.T3.binds["0"] : void 0,
+                        disabled: null != N,
+                        tooltip: N ?? G.intl.string(G.t.GR7NIF),
+                        tooltipKeyboardShortcut: null == N ? c.T3.binds["0"] : void 0,
                     }),
                 }),
             ],
