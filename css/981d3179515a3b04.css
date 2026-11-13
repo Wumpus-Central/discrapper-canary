@@ -690,4 +690,60 @@
     min-block-size: calc(var(--space-32) + var(--space-8))
 }
 
-/*# sourceMappingURL=7aafa7cc6c08aaba.css.map*/
+.card_IL4opx {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    flex: 0 0 auto;
+    margin-block-end: var(--space-8);
+    padding: var(--space-16)
+}
+
+.scoreRow_IL4opx {
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
+.scoreRow_IL4opx,
+.stars_IL4opx {
+    align-items: center;
+    display: flex
+}
+
+.option_IL4opx {
+    cursor: pointer;
+    display: flex;
+    padding: var(--space-4);
+    position: relative
+}
+
+.input_IL4opx {
+    cursor: pointer;
+    inset: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute
+}
+
+.input_IL4opx:disabled {
+    cursor: default
+}
+
+.star_IL4opx {
+    border-radius: var(--radius-xs);
+    color: var(--icon-muted);
+    display: flex;
+    pointer-events: none;
+    transition: color .12s ease-out
+}
+
+.input_IL4opx:focus-visible+.star_IL4opx {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 1px
+}
+
+.lit_IL4opx {
+    color: var(--icon-brand)
+}
+
+/*# sourceMappingURL=981d3179515a3b04.css.map*/

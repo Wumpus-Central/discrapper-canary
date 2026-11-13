@@ -402,7 +402,7 @@ function eK(e) {
 }
 var eH = n(823894),
     ez = n(682901),
-    eq = n(768857);
+    eq = n(991238);
 function e$() {
     (Z.default.track(eC.HAw.PREMIUM_PROMOTION_OPENED, { location_section: eC.JJy.EMPTY_STICKER_PICKER_UPSELL }),
         en(!0));

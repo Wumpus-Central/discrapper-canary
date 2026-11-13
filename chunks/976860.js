@@ -6,24 +6,26 @@ var s = n(830845),
     d = n(824865),
     c = n(652215);
 let u = new l.A("Routing/Utils"),
-    _ = [c.dSh.DEVELOPER_PORTAL];
+    _ = [c.dSh.DEVELOPER_PORTAL],
+    E = new Set();
 __OVERLAY__
     ? (i = (0, s.sC)())
     : (i = (0, s.zR)()).block((e, t) => {
-          if ("POP" === t && !f()) return !1;
+          if ("POP" === t && !h()) return !1;
+          for (let t of E) if (t(e.pathname)) return !1;
       });
-let E = !1,
-    A = i.listen((e, t) => {
-        "REPLACE" !== t && ((E = !0), A());
+let A = !1,
+    f = i.listen((e, t) => {
+        "REPLACE" !== t && ((A = !0), f());
     });
-function f() {
+function h() {
     if (o._.hasSubscribers(c.jej.MODAL_CLOSE)) {
         let { doesTopModalAllowNavigation: e } = n(192308);
         if (!e()) return !1;
     }
     return (n(712687).A.close(), !0);
 }
-function h(e, t) {
+function I(e, t) {
     return (
         !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
         (u.log(`${t} - route to external path ${e}`),
@@ -32,18 +34,18 @@ function h(e, t) {
         !0)
     );
 }
-function I(e, t) {
+function p(e, t) {
     return null == e || "" === e || e === t ? "" : e.startsWith(t) ? e : t + e;
 }
-function p(e, t) {
+function m(e, t) {
     let n;
-    if (h(e, "assign")) return;
+    if (I(e, "assign")) return;
     let s = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`),
         l = { pathname: s.pathname, search: s.search, hash: s.hash, ...t };
     u.log(`transitionTo - Transitioning to ${e}`);
     let o = t?.source,
         d = t?.sourceLocationStack;
-    ((n = i.location).pathname === l.pathname && n.search === I(l.search, "?") && n.hash === I(l.hash, "#")
+    ((n = i.location).pathname === l.pathname && n.search === p(l.search, "?") && n.hash === p(l.hash, "#")
         ? i.replace(l)
         : null == t
           ? i.push(e)
@@ -62,7 +64,7 @@ n.d(
             return i;
         },
         MX: function () {
-            return E;
+            return A;
         },
         PR: function () {
             return r;
@@ -85,29 +87,37 @@ n.d(
             else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
             return e;
         },
-        TX: f,
+        TX: h,
         UC: function () {
             return a;
         },
         aX: function () {
-            f() && ((r = null), i.goBack());
+            h() && ((r = null), i.goBack());
         },
         bG: function (e, t, n) {
-            h(e, "replace") ||
+            I(e, "replace") ||
                 (u.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
         },
         m: function (e) {
             return (null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF));
         },
-        pX: p,
+        mw: function (e) {
+            return (
+                E.add(e),
+                () => {
+                    E.delete(e);
+                }
+            );
+        },
+        pX: m,
         sY: function () {
-            f() && ((r = null), i.goForward());
+            h() && ((r = null), i.goForward());
         },
         uh: function (e, t, n, i) {
             (u.log(
                 `transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`,
             ),
-                p(c.BVt.CHANNEL(e, t, n), i));
+                m(c.BVt.CHANNEL(e, t, n), i));
         },
     },
 );

@@ -44,6 +44,11 @@
                         throw Error("WebSocket not open");
                     this.socket.send(JSON.stringify(e));
                 }
+                sendPublishEval(e) {
+                    if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
+                        throw Error("WebSocket not open");
+                    this.socket.send(JSON.stringify(e));
+                }
                 sendUserMessage(e, t, n) {
                     let {
                         templateId: r,
