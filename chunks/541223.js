@@ -13080,61 +13080,68 @@ function uP() {
                                               ],
                                           }),
                                           h
-                                              ? (0, A.jsxs)("div", {
-                                                    className: uO.D4,
-                                                    children: [
-                                                        (0, A.jsx)(M.D, {
-                                                            variant: "heading-md/semibold",
-                                                            children: K.intl.string(uD.default["4R5duO"]),
-                                                        }),
-                                                        H.flatMap((t) => {
-                                                            let { items: n } = t;
-                                                            return n.map((t) =>
-                                                                (0, A.jsx)(
-                                                                    uh,
-                                                                    {
-                                                                        checked: t.completed,
-                                                                        children: (0, A.jsx)(eY.D, {
-                                                                            className: uO.aK,
-                                                                            onClick: () =>
-                                                                                (function (t) {
-                                                                                    var n;
-                                                                                    if (null == o) return;
-                                                                                    ((n = o.id),
-                                                                                        sb.default.track(
-                                                                                            ef.HAw
-                                                                                                .GUILD_SETTINGS_SWP_HINT_CLICKED,
-                                                                                            {
-                                                                                                guild_id: n,
-                                                                                                automatic: h,
-                                                                                                hint: t,
-                                                                                            },
-                                                                                        ));
-                                                                                    let a = {
-                                                                                        [uS.COVER_IMAGE]: i,
-                                                                                        [uS.SHORT_DESCRIPTION]: l,
-                                                                                        [uS.ABOUT]: r,
-                                                                                        [uS.REASONS_TO_JOIN]: s,
-                                                                                    };
-                                                                                    a[t].current?.scrollIntoView({
-                                                                                        behavior: e ? "auto" : "smooth",
-                                                                                        block: "center",
-                                                                                    });
-                                                                                })(t.hint),
-                                                                            children: (0, A.jsx)(D.E, {
-                                                                                tag: "span",
-                                                                                variant: "body-md/normal",
-                                                                                color: "text-brand",
-                                                                                children: t.description,
-                                                                            }),
-                                                                        }),
-                                                                    },
-                                                                    t.hint,
-                                                                ),
-                                                            );
-                                                        }),
-                                                    ],
+                                              ? H.every((e) => {
+                                                    let { items: t } = e;
+                                                    return t.every((e) => e.completed);
                                                 })
+                                                  ? null
+                                                  : (0, A.jsxs)("div", {
+                                                        className: uO.D4,
+                                                        children: [
+                                                            (0, A.jsx)(M.D, {
+                                                                variant: "heading-md/semibold",
+                                                                children: K.intl.string(uD.default["4R5duO"]),
+                                                            }),
+                                                            H.flatMap((t) => {
+                                                                let { items: n } = t;
+                                                                return n.map((t) =>
+                                                                    (0, A.jsx)(
+                                                                        uh,
+                                                                        {
+                                                                            checked: t.completed,
+                                                                            children: (0, A.jsx)(eY.D, {
+                                                                                className: uO.aK,
+                                                                                onClick: () =>
+                                                                                    (function (t) {
+                                                                                        var n;
+                                                                                        if (null == o) return;
+                                                                                        ((n = o.id),
+                                                                                            sb.default.track(
+                                                                                                ef.HAw
+                                                                                                    .GUILD_SETTINGS_SWP_HINT_CLICKED,
+                                                                                                {
+                                                                                                    guild_id: n,
+                                                                                                    automatic: h,
+                                                                                                    hint: t,
+                                                                                                },
+                                                                                            ));
+                                                                                        let a = {
+                                                                                            [uS.COVER_IMAGE]: i,
+                                                                                            [uS.SHORT_DESCRIPTION]: l,
+                                                                                            [uS.ABOUT]: r,
+                                                                                            [uS.REASONS_TO_JOIN]: s,
+                                                                                        };
+                                                                                        a[t].current?.scrollIntoView({
+                                                                                            behavior: e
+                                                                                                ? "auto"
+                                                                                                : "smooth",
+                                                                                            block: "center",
+                                                                                        });
+                                                                                    })(t.hint),
+                                                                                children: (0, A.jsx)(D.E, {
+                                                                                    tag: "span",
+                                                                                    variant: "body-md/normal",
+                                                                                    color: "text-brand",
+                                                                                    children: t.description,
+                                                                                }),
+                                                                            }),
+                                                                        },
+                                                                        t.hint,
+                                                                    ),
+                                                                );
+                                                            }),
+                                                        ],
+                                                    })
                                               : null,
                                           !h &&
                                               !g.isPublished &&
