@@ -3340,12 +3340,14 @@ class ih {
         return i;
     }
     getAnchorFixData() {
-        for (let e of [this.focusAnchor, this.isLoading() ? null : this.messageFetchAnchor, this.automaticAnchor]) {
-            if (null == e) continue;
-            let t = this.getElementFromMessageId(e.id);
-            if (!(0, ie.vq)(t)) continue;
-            let n = e === this.messageFetchAnchor ? e.offsetHeight - t.offsetHeight : 0;
-            return { node: t, fixedScrollTop: t.offsetTop - (e.offsetFromTop + n) };
+        let e = this.ref.current?.getScrollerNode();
+        if (null == e) return null;
+        for (let t of [this.focusAnchor, this.isLoading() ? null : this.messageFetchAnchor, this.automaticAnchor]) {
+            if (null == t) continue;
+            let n = this.getElementFromMessageId(t.id);
+            if (!(0, ie.vq)(n)) continue;
+            let l = t === this.messageFetchAnchor ? t.offsetHeight - n.offsetHeight : 0;
+            return { node: n, fixedScrollTop: io(n, e) - (t.offsetFromTop + l) };
         }
         return null;
     }
