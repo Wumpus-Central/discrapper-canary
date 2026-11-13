@@ -4738,6 +4738,7 @@ var ih =
         (eP.GUILD_SHOP_EMBED_CLICKED = "guild_shop_embed_clicked"),
         (eP.MESSAGE_ACTION_SHEET_OPENED = "message_action_sheet_opened"),
         (eP.MESSAGE_ACTION_SHEET_OPTION_PRESSED = "message_action_sheet_option_pressed"),
+        (eP.GUILD_ACTION_SHEET_OPTION_PRESSED = "guild_action_sheet_option_pressed"),
         (eP.SNOWSGIVING_PAGE_CTA_CLICKED = "snowsgiving_page_cta_clicked"),
         (eP.REACTION_ACTION_SHEET_OPENED = "reaction_action_sheet_opened"),
         (eP.MESSAGE_EMBEDS_ACTION_COMPLETED = "message_embeds_action_completed"),
