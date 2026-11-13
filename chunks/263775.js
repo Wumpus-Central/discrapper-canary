@@ -30,11 +30,14 @@ function c(e, t) {
     );
 }
 function u(e) {
-    let { groupName: t, bypassAutoDismiss: n = !1 } =
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { candidate: a, visibleContent: s, markAsDismissed: l } = (0, r.tE)(e, t),
-        o = null != s ? a : null;
-    return (c(s, l, n, null != o ? (0, i.JK)(o).guildId : void 0), [s, l]);
+    let {
+            groupName: t,
+            bypassAutoDismiss: n = !1,
+            deduplicateImpressions: a,
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { candidate: s, visibleContent: l, markAsDismissed: o } = (0, r.tE)(e, t, a),
+        d = null != l ? s : null;
+    return (c(l, o, n, null != d ? (0, i.JK)(d).guildId : void 0), [l, o]);
 }
 function _(e, t) {
     let [n, r] = u(

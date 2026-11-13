@@ -5287,6 +5287,22 @@
     }
   },
   {
+    "name": "2026-10-meta-quest-app-upsell-coachmark",
+    "kind": "user",
+    "defaultConfig": {
+      "showCoachmark": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showCoachmark": true
+      }
+    }
+  },
+  {
     "name": "2026-10-native-markdown-setting",
     "kind": "user",
     "defaultConfig": {

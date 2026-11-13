@@ -41,9 +41,9 @@ let S = {};
 function N(e) {
     return "single_use" === e.kind || "single_use_guild" === e.kind;
 }
-function C(e, t) {
-    let n = e.filter((e) => "snowflake_bound_guild" !== e.kind || "" !== e.scope.snowflakeId),
-        u = (function (e) {
+function C(e, t, n) {
+    let u = e.filter((e) => "snowflake_bound_guild" !== e.kind || "" !== e.scope.snowflakeId),
+        C = (function (e) {
             let t = e.some((e) => {
                     let { kind: t } = e;
                     return "single_use" === t;
@@ -59,18 +59,18 @@ function C(e, t) {
                 }),
                 o = (0, r.yK)([l.A], () => i.map((e) => l.A.getGuildDismissedContentState(e)));
             return { dismissedContents: a, recurringStates: s, guildStates: new Map(i.map((e, t) => [e, o[t]])) };
-        })(n),
-        C = (0, A.Sg)(
-            n.filter(N).map((e) => {
+        })(u),
+        O = (0, A.Sg)(
+            u.filter(N).map((e) => {
                 let { content: t } = e;
                 return t;
             }),
         ),
-        O = (0, r.bG)([l.A], () => l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)),
-        R =
-            n.find(
+        R = (0, r.bG)([l.A], () => l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)),
+        L =
+            u.find(
                 (e) =>
-                    (!N(e) || C.includes(e.content)) &&
+                    (!N(e) || O.includes(e.content)) &&
                     (function (e, t, n) {
                         var i, r, a, s;
                         let { dismissedContents: l, recurringStates: o, guildStates: d } = t,
@@ -108,35 +108,47 @@ function C(e, t) {
                             case "time_recurring_snowflake_bound":
                                 return !(0, E.j6)(e.content, e.scope.snowflakeId, e.scope.timeRecurringConfig);
                         }
-                    })(e, u, O),
+                    })(e, C, R),
             ) ?? null,
-        { version: L, snowflakeId: y } = null != R ? (0, _.JK)(R) : S,
-        D = n.some((e) => !(0, _.vv)(e)),
-        b = (0, r.bG)([o.A], () => (D ? o.A.getGuildId() : null)),
-        v = null != R && (0, _.vv)(R) ? R.scope.guildId : b,
-        P = R?.content ?? null,
-        M = (function (e, t, n, o, c) {
-            let u = (0, p.Ay)((t) => null != e && t.currentlyShown.has(e)),
-                [_, A] = (0, s.eK)(),
-                f = null != e && (0, E.NZ)(e, _, A),
-                h = (0, r.bG)([I.A], () => null != e && I.A.hasUserHitDCCap(e, t)),
-                m = i.useRef(t);
+        { version: y, snowflakeId: D } = null != L ? (0, _.JK)(L) : S,
+        b = u.some((e) => !(0, _.vv)(e)),
+        v = (0, r.bG)([o.A], () => (b ? o.A.getGuildId() : null)),
+        P = null != L && (0, _.vv)(L) ? L.scope.guildId : v,
+        M = L?.content ?? null,
+        U = (function (e, t, n, o) {
+            let { version: c, snowflakeId: u, deduplicateImpressions: _ } = o,
+                A = (0, p.Ay)((t) => null != e && t.currentlyShown.has(e)),
+                [f, h] = (0, s.eK)(),
+                m = null != e && (0, E.NZ)(e, f, h),
+                S = (0, r.bG)([I.A], () => null != e && I.A.hasUserHitDCCap(e, t)),
+                N = i.useRef(t);
             return (
-                (m.current = t),
+                (N.current = t),
                 i.useEffect(() => {
                     if (null != e) {
                         var t;
                         return (
                             l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS) ||
-                                ((t = m.current),
+                                ((t = N.current),
                                 d.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
                                     content_type: a.M[e],
                                     group_name: n ?? null,
-                                    latest_version: o ?? null,
+                                    latest_version: c ?? null,
                                     guild_id: t ?? null,
-                                    snowflake_id: c ?? null,
+                                    snowflake_id: u ?? null,
                                 })),
-                            (0, E.Vh)(e, { groupName: n, guildId: m.current, version: o, snowflakeId: c }, _, A),
+                            (0, E.Vh)(
+                                e,
+                                {
+                                    groupName: n,
+                                    guildId: N.current,
+                                    version: c,
+                                    snowflakeId: u,
+                                    deduplicateImpressions: _,
+                                },
+                                f,
+                                h,
+                            ),
                             () => {
                                 if (null == e) return;
                                 let t = !I.A.hasUserHitDCCap();
@@ -144,13 +156,13 @@ function C(e, t) {
                             }
                         );
                     }
-                }, [e, n, h, f, o, c]),
-                u && null != e ? e : null
+                }, [e, n, S, m, c, u, _]),
+                A && null != e ? e : null
             );
-        })(P, v, t, L, y),
-        U = i.useCallback(
+        })(M, P, t, { version: y, snowflakeId: D, deduplicateImpressions: n }),
+        w = i.useCallback(
             (e, n) => {
-                null != R &&
+                null != L &&
                     (function (e, t) {
                         switch (e.kind) {
                             case "single_use":
@@ -169,11 +181,11 @@ function C(e, t) {
                             case "snowflake_bound_guild":
                                 return (0, m.in)(e.content, e.scope.snowflakeId, e.scope.guildId, t);
                         }
-                    })(R, { dismissAction: e, groupName: t, guildId: v, forceTrack: n });
+                    })(L, { dismissAction: e, groupName: t, guildId: P, forceTrack: n });
             },
-            [P, t, v, L, y],
+            [M, t, P, y, D],
         );
-    return { candidate: R, visibleContent: M, markAsDismissed: U };
+    return { candidate: L, visibleContent: U, markAsDismissed: w };
 }
 function O(e, t) {
     let { visibleContent: n, markAsDismissed: i } = C(e, t);

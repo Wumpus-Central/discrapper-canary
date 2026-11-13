@@ -204,7 +204,8 @@ function B(e, t, n, i) {
             content: e,
             groupName: t?.groupName,
             onAdded: (n) => {
-                ((0, _.rF)(e, t?.guildId), z(e, t, n), t?.onShown?.());
+                let i = t?.deduplicateImpressions === !0 && null != E.A.getRenderedAtTimestamp(e);
+                ((0, _.rF)(e, t?.guildId), i || z(e, t, n), t?.onShown?.());
             },
         }));
 }

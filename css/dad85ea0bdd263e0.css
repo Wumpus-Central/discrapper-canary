@@ -1,0 +1,171 @@
+.container_9-OcBK {
+    background-color: var(--card-background-default);
+    border-radius: 12px;
+    padding: 16px
+}
+
+.card_9-OcBK {
+    border-radius: 12px;
+    min-height: 80px;
+    padding: 16px
+}
+
+.card_9-OcBK,
+.content_9-OcBK {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.content_9-OcBK {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+.emojiContainer_9-OcBK {
+    flex-shrink: 0;
+    font-size: 32px;
+    line-height: 32px
+}
+
+.statusText_9-OcBK {
+    flex: 1;
+    text-align: center;
+    word-break: break-word
+}
+
+.container_2D_9Ek {
+    background-color: var(--card-background-default);
+    padding: 16px
+}
+
+.card_2D_9Ek,
+.container_2D_9Ek {
+    border-radius: 12px
+}
+
+.card_2D_9Ek {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px
+}
+
+.gameIcon_2D_9Ek {
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 72px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 72px
+}
+
+.gameInfo_2D_9Ek {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden
+}
+
+.badge_2D_9Ek {
+    align-items: center;
+    background-color: var(--brand-experiment-15a);
+    border-radius: 4px;
+    display: inline-flex;
+    padding: 4px 8px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.container_5RxyqA {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 12px
+}
+
+.titleContainer_5RxyqA {
+    background-color: var(--card-secondary-bg);
+    padding: 16px
+}
+
+.title_5RxyqA {
+    color: var(--text-strong);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px
+}
+
+.messagesContainer_5RxyqA {
+    padding-top: 16px
+}
+
+.eventContainer_5RxyqA,
+.messagesContainer_5RxyqA {
+    background-color: var(--card-background-default)
+}
+
+.eventContainer_5RxyqA {
+    border-radius: 12px;
+    padding: 20px
+}
+
+.eventTimeAndUser_5RxyqA {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.eventTitle_5RxyqA {
+    margin-bottom: 4px
+}
+
+.eventDescription_5RxyqA {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.eventDivider_5RxyqA {
+    background-color: var(--border-subtle);
+    border: none;
+    height: 1px;
+    margin: 12px 0;
+    width: 100%
+}
+
+.eventInfoContainer_5RxyqA {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.eventLocationRow_5RxyqA {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.eventIcon_5RxyqA {
+    flex-shrink: 0
+}
+
+.eventLocationText_5RxyqA {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.eventLocationText_5RxyqA em {
+    font-style: italic
+}
+
+/*# sourceMappingURL=dad85ea0bdd263e0.css.map*/
