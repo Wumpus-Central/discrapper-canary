@@ -37,7 +37,7 @@ async function _(e, t) {
     try {
         let e = await r.Bo.post({
             url: u.Rsh.EMBEDDED_SURVEY_ACTION,
-            query: { force_survey_id: n },
+            query: { force_survey_id: n, supports_native: !0 },
             body: l,
             rejectWithError: !0,
         });

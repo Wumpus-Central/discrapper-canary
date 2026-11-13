@@ -627,6 +627,8 @@
   "EMBEDDED_SURVEY_RESPONSE": "/users/@me/embedded-surveys/:param/responses",
   "EMBEDDED_SURVEY_ACTION": "/users/@me/embedded-survey/action",
   "USER_SURVEY_SEEN": "/users/@me/survey/:param/seen",
+  "SURVEY_SESSION": "/surveys/:param/session",
+  "SURVEY_SESSION_SUBMIT": "/surveys/:param/session/submit",
   "GUILD_EVENTS": "/guild-events",
   "GUILD_EVENT": "/guilds/:param/scheduled-events/:param",
   "GUILD_EVENT_IMAGE": "/guild-events/:param/images/:param./:param",

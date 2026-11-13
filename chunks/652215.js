@@ -1436,6 +1436,8 @@ let nL = Object.freeze({
         EMBEDDED_SURVEY_RESPONSE: (e) => `/users/@me/embedded-surveys/${e}/responses`,
         EMBEDDED_SURVEY_ACTION: "/users/@me/embedded-survey/action",
         USER_SURVEY_SEEN: (e) => `/users/@me/survey/${e}/seen`,
+        SURVEY_SESSION: (e) => `/surveys/${e}/session`,
+        SURVEY_SESSION_SUBMIT: (e) => `/surveys/${e}/session/submit`,
         GUILD_EVENTS: "/guild-events",
         GUILD_EVENT: (e, t) => `/guilds/${e}/scheduled-events/${t}`,
         GUILD_EVENT_IMAGE: (e, t, n) => `/guild-events/${e}/images/${t}.${n}`,

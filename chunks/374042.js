@@ -11,6 +11,7 @@ n.d(
         B: function (e, t) {
             var n = {};
             return (
+                (n.supports_native = !0),
                 null != e && (n.survey_override = e),
                 null != t && (n.disable_auto_seen = t),
                 l.A.get({
