@@ -1918,6 +1918,7 @@ class eH extends v.G {
             { no: 24, name: "notify_friends_on_profile_update", kind: "message", T: () => P._t },
             { no: 25, name: "notify_friends_on_come_online", kind: "message", T: () => P._t },
             { no: 26, name: "notify_server_members_on_go_live", kind: "message", T: () => P._t },
+            { no: 27, name: "notify_friends_on_custom_status_update", kind: "message", T: () => P._t },
         ]);
     }
     create(e) {
@@ -2108,6 +2109,14 @@ class eH extends v.G {
                         r.notifyServerMembersOnGoLive,
                     );
                     break;
+                case 27:
+                    r.notifyFriendsOnCustomStatusUpdate = P._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.notifyFriendsOnCustomStatusUpdate,
+                    );
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2227,6 +2236,10 @@ class eH extends v.G {
             e.notifyServerMembersOnGoLive &&
                 P._t
                     .internalBinaryWrite(e.notifyServerMembersOnGoLive, t.tag(26, y.O0.LengthDelimited).fork(), n)
+                    .join(),
+            e.notifyFriendsOnCustomStatusUpdate &&
+                P._t
+                    .internalBinaryWrite(e.notifyFriendsOnCustomStatusUpdate, t.tag(27, y.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
