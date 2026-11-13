@@ -2985,7 +2985,7 @@ let sx = (0, h.Tf)(S.X.DISCORD_STATS_POPOUT, {
     },
 });
 var sI = n(114129),
-    s_ = n(442325),
+    s_ = n(931519),
     sN = n(858760);
 let sb = (0, h.zD)(S.X.ENABLE_TABS_EXPERIENCE, {
     useTitle: () => "Enable tabs experience",

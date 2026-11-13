@@ -1,6 +1,6 @@
 var i = n(439372),
     r = n(114129),
-    a = n(442325),
+    a = n(931519),
     s = n(254838);
 class l extends i.A {
     knownTabs = [];

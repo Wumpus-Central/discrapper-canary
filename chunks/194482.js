@@ -26,7 +26,7 @@ let E = r().throttle(function () {
     (0, u.i)(i, r === i ? null : r, !1);
 }, 50);
 var A = n(114129),
-    f = n(442325);
+    f = n(931519);
 function h(e, t) {
     return !!e.includes("tab") && !!f.A.isEnabled() && !(f.A.getTabs().length <= 1) && ((0, A.TC)(t), !0);
 }

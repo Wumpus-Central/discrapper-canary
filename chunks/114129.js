@@ -9,7 +9,7 @@ var i,
     u = n(378570),
     _ = n(734057),
     E = n(309010),
-    A = n(442325),
+    A = n(931519),
     f = n(652215),
     h = n(746080);
 function I(e, t) {
@@ -54,8 +54,9 @@ function g(e, t, n, i) {
         friends_tab_count: a.friends,
         shop_tab_count: a.shop,
         quests_tab_count: a.quests,
+        nitro_tab_count: a.nitro,
         conjure_tab_count: a.conjure,
-        other_page_tab_count: a.other + a.nitro,
+        other_page_tab_count: a.other,
     });
 }
 function S(e, t) {
@@ -140,11 +141,10 @@ n.d(
             return null == t ? null : (S({ ...t.entries[t.index], active: !0, fresh: !0 }, e)?.id ?? null);
         },
         RL: function (e, t, n) {
-            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-                a = A.A.getTabs().find((t) => t.id === e)?.pinned;
-            r.h.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId: e, pinned: t, scope: i });
-            let s = A.A.getTabs().find((t) => t.id === e);
-            null != s && a !== s.pinned && R(s, n);
+            let i = A.A.getTabs().find((t) => t.id === e)?.pinned;
+            r.h.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId: e, pinned: t });
+            let a = A.A.getTabs().find((t) => t.id === e);
+            null != a && i !== a.pinned && R(a, n);
         },
         TC: function (e) {
             let t = A.A.getTabs();
