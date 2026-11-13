@@ -531,6 +531,17 @@
     text-align: start
 }
 
+.full-motion .content_ZjlY6O {
+    animation: fadeIn_ZjlY6O var(--custom-checkpoint-intro-fade-in-duration) cubic-bezier(.33, 1, .68, 1) var(--custom-checkpoint-intro-fade-in-delay) both
+}
+
+@keyframes fadeIn_ZjlY6O {
+    0% {
+        opacity: 0;
+        transform: translateY(var(--space-12))
+    }
+}
+
 .year_ZjlY6O {
     align-items: center;
     color: var(--custom-checkpoint-primary);
@@ -551,4 +562,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=40799.8f637c888ce5dc60.css.map*/
+/*# sourceMappingURL=40799.b2fc7beaff11e09b.css.map*/
