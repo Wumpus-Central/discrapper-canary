@@ -3,11 +3,11 @@ var n = l(582128),
     r = l(73153),
     i = l(183011),
     s = l(989145);
-let o = 221552 == l.j ? [] : null,
-    u = new Set();
+let u = 221552 == l.j ? [] : null,
+    o = new Set();
 function d(e) {
-    u.has(e) ||
-        (u.add(e),
+    o.has(e) ||
+        (o.add(e),
         (0, s.Y7)(e)
             .then((t) => {
                 r.h.dispatch({
@@ -19,7 +19,7 @@ function d(e) {
             .catch((e) => {
                 console.error("[conjure] stored attachment list failed", e);
             })
-            .finally(() => u.delete(e)));
+            .finally(() => o.delete(e)));
 }
 l.d(
     t,
@@ -40,7 +40,7 @@ l.d(
             );
         },
         rU: function (e) {
-            return (0, a.bG)([i.A], () => i.A.getAttachments(e) ?? o, [e]);
+            return (0, a.bG)([i.A], () => i.A.getAttachments(e) ?? u, [e]);
         },
     },
 );

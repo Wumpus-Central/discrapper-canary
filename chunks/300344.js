@@ -3,8 +3,8 @@ var n = l(582128),
     r = l(47167),
     i = l(713654),
     s = l(808728),
-    o = l(994500),
-    u = l(287809),
+    u = l(994500),
+    o = l(287809),
     d = l(246338);
 l.d(
     t,
@@ -19,7 +19,7 @@ l.d(
                         : (0, d.Lp)(l, t).map((e) => ({
                               id: e.id,
                               value: e.id,
-                              label: (0, r.m1)(e, u.default, o.A),
+                              label: (0, r.m1)(e, o.default, u.A),
                               leading: (0, i.gU)(e),
                           })),
                 [l, t],

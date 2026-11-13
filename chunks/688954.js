@@ -1,5 +1,5 @@
 (n(323874), n(14289), n(35956));
-var i = n(649121);
+var r = n(649121);
 n.d(
     t,
     {},
@@ -7,23 +7,23 @@ n.d(
         h: async function (e, t) {
             let {
                 query: n,
-                json: r,
-                headers: s,
-                ...a
+                json: s,
+                headers: i,
+                ...l
             } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            function l(e) {
-                let { ticket: i, baseUrl: l } = e,
-                    c = `${l}${t}?${new URLSearchParams({ ticket: i, ...n })}`;
-                return void 0 === r
-                    ? fetch(c, { ...a, headers: s })
-                    : fetch(c, {
-                          ...a,
-                          headers: { ...s, "content-type": "application/json" },
-                          body: JSON.stringify(r),
+            function a(e) {
+                let { ticket: r, baseUrl: a } = e,
+                    u = `${a}${t}?${new URLSearchParams({ ticket: r, ...n })}`;
+                return void 0 === s
+                    ? fetch(u, { ...l, headers: i })
+                    : fetch(u, {
+                          ...l,
+                          headers: { ...i, "content-type": "application/json" },
+                          body: JSON.stringify(s),
                       });
             }
-            let c = await l(await (0, i.BK)(e));
-            return 401 !== c.status ? c : ((0, i.yn)(e), l(await (0, i.BK)(e)));
+            let u = await a(await (0, r.BK)(e));
+            return 401 !== u.status ? u : ((0, r.yn)(e), a(await (0, r.BK)(e)));
         },
     },
 );

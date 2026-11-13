@@ -39,10 +39,10 @@ function y(t) {
 function k(t) {
     return t ? O.t.klYWbT : O.t.ziB0HF;
 }
-function X(t) {
+function M(t) {
     return t ? O.t["4JS2QJ"] : O.t.AwuMRS;
 }
-function M(t) {
+function X(t) {
     return t ? O.t.GFdaUK : O.t.NIimTt;
 }
 function U(t) {
@@ -188,10 +188,10 @@ function U(t) {
                         : c || null != l
                           ? g
                               ? O.t.enQ3jU
-                              : X(m)
+                              : M(m)
                           : g
                             ? O.t["e+K3xJ"]
-                            : M(m),
+                            : X(m),
                     {
                         gameTitle: o,
                         streamingDurationRequirement: s,
@@ -233,8 +233,8 @@ function U(t) {
                             ? y({ hasRewardDuration: null != l, shouldShowGameProfileLink: g })
                             : k(g)
                         : c || null != l
-                          ? X(g)
-                          : M(g),
+                          ? M(g)
+                          : X(g),
                     {
                         gameTitle: o,
                         targetMinutes: s,
@@ -287,7 +287,7 @@ function U(t) {
                             : f || null != u
                               ? m
                                   ? O.t.enQ3jU
-                                  : X(d)
+                                  : M(d)
                               : m
                                 ? O.t["03VJqu"]
                                 : d
