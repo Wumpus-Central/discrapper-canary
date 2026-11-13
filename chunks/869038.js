@@ -13,25 +13,23 @@ var i = n(620632),
     f = n(652215),
     h = n(682901);
 async function I(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     r.h.dispatch({ type: "GIFT_CODE_RESOLVE", code: e });
     try {
-        let s = await (0, E.GM)(e, t, n, i);
-        if (null != s.application_id && s.application_id !== h.tv) {
-            let e = o.A.getApplication(s.application_id);
+        let n = await (0, E.GM)(e, t);
+        if (null != n.application_id && n.application_id !== h.tv) {
+            let e = o.A.getApplication(n.application_id);
             if (null == e)
                 try {
-                    await l.Ay.fetchApplication(s.application_id);
+                    await l.Ay.fetchApplication(n.application_id);
                 } catch (e) {}
         }
-        if (s.application_id === f.FYj) {
-            await (0, c.Jp)(s.sku_id);
-            let e = u.A.getProduct(s.sku_id);
+        if (n.application_id === f.FYj) {
+            await (0, c.Jp)(n.sku_id);
+            let e = u.A.getProduct(n.sku_id);
             if (e?.items.some(_.g) === !0) throw new a.eR("Client update required to redeem this gift");
         }
-        return (r.h.dispatch({ type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: s }), { giftCode: s });
+        return (r.h.dispatch({ type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: n }), { giftCode: n });
     } catch (t) {
         throw (r.h.dispatch({ type: "GIFT_CODE_RESOLVE_FAILURE", code: e, error: t }), t);
     }

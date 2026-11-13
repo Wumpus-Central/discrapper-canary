@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673408, Version Hash: bbf67fe23761e504096d6c18ea6d218caa41d4bc`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673409, Version Hash: 5fb21f24714543abf64f9b7674503f2f74d808c8`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673408";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673409";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15897,7 +15897,7 @@ let p_ = "isHideDevBanner",
                     className: td()(pu.Wz, pu.mr),
                     children: [
                         (0, v.jsx)(pc, { className: pu.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673408" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673409" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -38980,7 +38980,11 @@ let bY = {
                 args: { code: t },
             } = e;
             return new Promise((e, i) => {
-                tX.Ay.resolveGiftCode(t, !0, !0, !0)
+                tX.Ay.resolveGiftCode(t, {
+                    withApplication: !0,
+                    withSubscriptionPlan: !0,
+                    withGiftSubscriptionAgreement: !0,
+                })
                     .then((i) => {
                         let { giftCode: r } = i;
                         (eB.Ay.focus(),
@@ -44095,7 +44099,7 @@ let wu = [
                 { giftCode: n } = t.params;
             return (
                 (0, s$.B)(() => {
-                    (0, tX.GM)(n, !0, !0, !0)
+                    (0, tX.GM)(n, { withApplication: !0, withSubscriptionPlan: !0, withGiftSubscriptionAgreement: !0 })
                         .then((e) => {
                             let { giftCode: t } = e;
                             null != t && (0, Rd.h)({ processedCode: t.code });

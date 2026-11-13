@@ -79,9 +79,11 @@ n.d(
             u.default.track(h.HAw.GIFT_CODE_COPIED, { ...(0, o.A)(t, !1, !1), ...e.analyticsData });
         },
         GM: async function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            let {
+                withApplication: t = !1,
+                withSubscriptionPlan: n = !1,
+                withGiftSubscriptionAgreement: i = !1,
+            } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
                 let r = (
                     await (0, f.aP)({

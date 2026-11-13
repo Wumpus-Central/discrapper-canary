@@ -7705,7 +7705,7 @@ class cQ extends x.Component {
                 } catch {}
             let e = (0, ca.Vd)(t);
             if (null == e) return void this.setState({ hasError: !0 });
-            let i = await cu.Ay.resolveGiftCode(e, !1, !0, !0);
+            let i = await cu.Ay.resolveGiftCode(e, { withSubscriptionPlan: !0, withGiftSubscriptionAgreement: !0 });
             if (null != i && null != i.giftCode.promotion)
                 throw (this.setState({ isPromoCode: !0 }), Error("Cannnot redeem promotion code as gift"));
             (td.default.track(_.HAw.OPEN_MODAL, {

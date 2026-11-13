@@ -54,7 +54,10 @@ function N(e) {
     let i = e.type === _.lAJ.CUSTOM_GIFT || (null != e.author && e.author.id === u.default.getId());
     return (
         n.forEach((e) => {
-            f.includes(e) || I.includes(e) || (C({ code: e }), o.Ay.resolveGiftCode(e, !1, !0, i).catch(_.FXj));
+            f.includes(e) ||
+                I.includes(e) ||
+                (C({ code: e }),
+                o.Ay.resolveGiftCode(e, { withSubscriptionPlan: !0, withGiftSubscriptionAgreement: i }).catch(_.FXj));
         }),
         !1
     );

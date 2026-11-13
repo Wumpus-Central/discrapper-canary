@@ -15,13 +15,13 @@ var n = i(477900),
     g = i(793574),
     A = i(688810),
     R = i(627363),
-    x = i(587895),
-    y = i(590180),
-    S = i(993408),
+    S = i(587895),
+    x = i(590180),
+    y = i(993408),
     C = i(674658),
     I = i(778712),
-    E = i(97808),
-    b = i(289873),
+    b = i(97808),
+    E = i(289873),
     T = i(242874),
     v = i(446263),
     j = i(287809),
@@ -33,8 +33,8 @@ var n = i(477900),
     k = i(842385),
     L = i(864449);
 let M = I._3.SIZE_152,
-    F = (0, N.Te)(M);
-function w(t) {
+    w = (0, N.Te)(M);
+function F(t) {
     let { responsive: e } = t;
     return !0 !== e;
 }
@@ -45,10 +45,10 @@ function U(t) {
             avatarDecorationSrc: s,
             avatarPlaceholderSrc: r,
             eventHandlers: l,
-        } = (0, O.A)({ user: i, avatarDecorationOverride: e, size: F });
+        } = (0, O.A)({ user: i, avatarDecorationOverride: e, size: w });
     return (0, n.jsx)("div", {
         className: L._P,
-        children: (0, n.jsx)(E.eu, { ...l, "aria-label": e.label, src: r, avatarDecoration: s, size: M }),
+        children: (0, n.jsx)(b.eu, { ...l, "aria-label": e.label, src: r, avatarDecoration: s, size: M }),
     });
 }
 function D(t) {
@@ -57,7 +57,7 @@ function D(t) {
 }
 function H(t) {
     let { item: e } = t;
-    return (0, n.jsx)("div", { className: L.pI, children: (0, n.jsx)(G.A, { frame: e, filterLayer: w }) });
+    return (0, n.jsx)("div", { className: L.pI, children: (0, n.jsx)(G.A, { frame: e, filterLayer: F }) });
 }
 function V(t) {
     let { item: e } = t;
@@ -79,7 +79,7 @@ function z(t) {
 let q = function (t) {
     let { giftCode: e } = t,
         { product: i, isFetching: s } = (0, C.q)(e.skuId, !0);
-    if (s || null == i) return (0, n.jsx)("div", { className: L.dc, children: (0, n.jsx)(b.y, {}) });
+    if (s || null == i) return (0, n.jsx)("div", { className: L.dc, children: (0, n.jsx)(E.y, {}) });
     if (i.type === a.R.BUNDLE) return 0 === i.items.length ? null : (0, n.jsx)(z, { product: i });
     let r = i?.items[0];
     switch (r?.type) {
@@ -130,7 +130,7 @@ var ti = i(946261),
     tg = i(50302),
     tA = i(792996),
     tR = i(368773);
-function tx(t) {
+function tS(t) {
     let { openedGift: e } = t,
         { createMultipleConfettiAt: i } = s.useContext(W.x);
     return (
@@ -140,7 +140,7 @@ function tx(t) {
         null
     );
 }
-function ty(t) {
+function tx(t) {
     let { step: e, soundId: i } = t;
     return (
         s.useEffect(() => {
@@ -151,7 +151,7 @@ function ty(t) {
         null
     );
 }
-class tS extends s.Component {
+class ty extends s.Component {
     state = {
         error: null,
         accepted: !1,
@@ -166,7 +166,7 @@ class tS extends s.Component {
         let { application: t, sku: e, customGiftMessage: i, giftCode: n, emojiName: s } = this.props;
         null == t && null != e && R.Ay.fetchApplication(e.applicationId);
         let r = null != i || null != n.giftStyle,
-            l = (0, S.hU)(n),
+            l = (0, y.hU)(n),
             a = null != s ? to.Ay.getURL(s) : void 0;
         (this.setState({ isCustomGift: r, isCollectiblesGift: l, emojiURL: a, opened: l }), this.trackStepAnalytics());
     }
@@ -335,10 +335,10 @@ class tS extends s.Component {
                 soundId: A,
             } = this.props,
             R = j.default.getUser(r.userId),
-            { isCustomGift: x, isCollectiblesGift: y, accepted: S, opened: C, emojiURL: I } = this.state,
-            E = j.default.getCurrentUser(),
-            b = this.step === tt.frR.ERROR,
-            T = r?.userId != null && null != E && E?.id != null && r.userId === E.id;
+            { isCustomGift: S, isCollectiblesGift: x, accepted: y, opened: C, emojiURL: I } = this.state,
+            b = j.default.getCurrentUser(),
+            E = this.step === tt.frR.ERROR,
+            T = r?.userId != null && null != b && b?.id != null && r.userId === b.id;
         switch (this.step) {
             case tt.frR.ERROR:
                 h?.(r, !1);
@@ -358,54 +358,54 @@ class tS extends s.Component {
                     parentComponent: "GiftCodeModal",
                     children: [
                         null != r.giftStyle &&
+                            !S &&
                             !x &&
-                            !y &&
                             (0, n.jsx)(v.A, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: r.giftStyle,
                                 className: tR.C9,
                             }),
-                        !x && (0, n.jsx)("div", { className: tR.Dv }),
-                        !y && (0, n.jsx)(u.s_, { "data-migration-pending": !0, onClick: s, className: tR.b }),
+                        !S && (0, n.jsx)("div", { className: tR.Dv }),
+                        !x && (0, n.jsx)(u.s_, { "data-migration-pending": !0, onClick: s, className: tR.b }),
                         (0, n.jsxs)(u.$m, {
                             "data-migration-pending": !0,
-                            className: l()({ [tR.Qs]: !x, [tR.Fl]: x }),
+                            className: l()({ [tR.Qs]: !S, [tR.Fl]: S }),
                             children: [
-                                !y && (null == r.giftStyle || (x && S))
+                                !x && (null == r.giftStyle || (S && y))
                                     ? (0, n.jsx)(Y.A, { size: Y.M.LARGE, game: t, skuId: r.skuId })
                                     : null,
                                 (0, n.jsxs)(d.D, {
                                     id: a,
-                                    className: l()({ [tR.Ry]: x && !S, [tR.wx]: !x || S }),
+                                    className: l()({ [tR.Ry]: S && !y, [tR.wx]: !S || y }),
                                     variant: "heading-xs/semibold",
                                     children: [
                                         (0, n.jsx)("div", {
-                                            className: l()({ [tR.Qw]: x }),
+                                            className: l()({ [tR.Qw]: S }),
                                             children: this.firstHeaderText,
                                         }),
                                         (0, n.jsx)("div", { children: this.secondHeaderText }),
                                     ],
                                 }),
-                                !(x && !S) &&
+                                !(S && !y) &&
                                     (0, n.jsx)(c.E, {
                                         className: tR.rf,
                                         variant: "body-sm/normal",
                                         children: this.bodyText,
                                     }),
-                                x &&
-                                    !y &&
+                                S &&
+                                    !x &&
                                     null != r.giftStyle &&
-                                    !S &&
-                                    !b &&
+                                    !y &&
+                                    !E &&
                                     (0, n.jsx)(v.A, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
                                         className: tR.l$,
                                         giftStyle: r.giftStyle,
                                     }),
-                                this.state.opened && !b && y && (0, n.jsx)(q, { giftCode: r }),
-                                b &&
+                                this.state.opened && !E && x && (0, n.jsx)(q, { giftCode: r }),
+                                E &&
                                     (0, n.jsx)(c.E, {
                                         className: tR.rf,
                                         variant: "body-md/normal",
@@ -419,10 +419,10 @@ class tS extends s.Component {
                                         role: "alert",
                                         children: tA.intl.string(tA.t.fEptJP),
                                     }),
-                                x &&
+                                S &&
                                     this.state.opened &&
                                     !this.state.accepted &&
-                                    !b &&
+                                    !E &&
                                     null != m &&
                                     "" !== m &&
                                     !T &&
@@ -460,21 +460,21 @@ class tS extends s.Component {
                 null != r.giftStyle &&
                     !p &&
                     this.step !== tt.frR.ERROR &&
-                    !S &&
+                    !y &&
                     !e &&
                     C &&
                     (null == g || null == I
-                        ? (0, n.jsx)(tx, { openedGift: !0 })
+                        ? (0, n.jsx)(tS, { openedGift: !0 })
                         : (0, n.jsx)(tp.A, { confettiTarget: this.modalRef.current, emojiURL: I })),
-                !S && !e && C && null != A && (0, n.jsx)(ty, { soundId: A, step: this.step }),
+                !y && !e && C && null != A && (0, n.jsx)(tx, { soundId: A, step: this.step }),
             ],
         });
     }
 }
-let tC = o.Ay.connectStores([tr.A, ta.A, x.A, ts.A, tl.A, m.Ay, y.A], (t) => {
+let tC = o.Ay.connectStores([tr.A, ta.A, S.A, ts.A, tl.A, m.Ay, x.A], (t) => {
         let { giftCode: e } = t,
             i = ta.A.get(e.skuId),
-            n = null != i ? x.A.getApplication(i.applicationId) : null,
+            n = null != i ? S.A.getApplication(i.applicationId) : null,
             s = m.Ay.useReducedMotion;
         return {
             sku: i,
@@ -573,7 +573,7 @@ let tC = o.Ay.connectStores([tr.A, ta.A, x.A, ts.A, tl.A, m.Ay, y.A], (t) => {
         }, [r, h, a, o, l, u, d, c, f, e]),
         h)
             ? null
-            : (0, n.jsx)(tS, { ...t });
+            : (0, n.jsx)(ty, { ...t });
     }),
     tI = function (t) {
         let { channelContext: e, code: i, customGiftMessage: r, emojiName: l, soundId: a, onClose: u, ...d } = t,
@@ -581,24 +581,24 @@ let tC = o.Ay.connectStores([tr.A, ta.A, x.A, ts.A, tl.A, m.Ay, y.A], (t) => {
             f = (0, o.bG)([ts.A], () => ts.A.get(i)),
             { analyticsLocations: p } = (0, A.Ay)(g.A.GIFT_CODE_MODAL),
             { product: m } = (0, C.q)(f?.skuId, !0),
-            [R, x] = s.useState(!1),
-            y = null != f && f.isSubscription && void 0 === f.giftSubscriptionAgreement,
+            [R, S] = s.useState(!1),
+            x = null != f && f.isSubscription && void 0 === f.giftSubscriptionAgreement,
             I = s.useCallback(
                 () =>
-                    h.Ay.resolveGiftCode(i, !1, !0, !0).then(
+                    h.Ay.resolveGiftCode(i, { withSubscriptionPlan: !0, withGiftSubscriptionAgreement: !0 }).then(
                         (t) => {
                             let { giftCode: e } = t;
-                            return x(void 0 === e.gift_subscription_agreement);
+                            return S(void 0 === e.gift_subscription_agreement);
                         },
                         (t) => {
-                            (x(!0), h.Ay.reportUnexpectedGiftCodeError(t));
+                            (S(!0), h.Ay.reportUnexpectedGiftCodeError(t));
                         },
                     ),
                 [i],
             );
         return (s.useEffect(() => {
-            y && I();
-        }, [y, I]),
+            x && I();
+        }, [x, I]),
         null == f)
             ? null
             : (0, n.jsx)(tC, {
@@ -612,10 +612,10 @@ let tC = o.Ay.connectStores([tr.A, ta.A, x.A, ts.A, tl.A, m.Ay, y.A], (t) => {
                   analyticsLocations: p,
                   giftSubscriptionAgreementFailed: R,
                   onResolveGiftSubscriptionAgreement: () => {
-                      (x(!1), I());
+                      (S(!1), I());
                   },
                   onClose: u,
-                  collectiblesItemType: (0, S.oj)(m),
+                  collectiblesItemType: (0, y.oj)(m),
                   onAccept:
                       null != m
                           ? () => {
