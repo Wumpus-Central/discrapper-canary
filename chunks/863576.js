@@ -54,7 +54,7 @@ function H(e) {
               direction: "horizontal",
               align: "center",
               gap: 8,
-              padding: { left: 12, right: 12 },
+              padding: { left: 16, right: 12 },
               fullWidth: !1,
               children: [
                   (0, l.jsxs)(b.B, {
@@ -62,7 +62,7 @@ function H(e) {
                       direction: "vertical",
                       align: "start",
                       gap: 12,
-                      padding: { top: 12, bottom: 12 },
+                      padding: { top: 16, bottom: 16 },
                       fullWidth: !1,
                       children: [
                           (0, l.jsxs)(b.B, {
