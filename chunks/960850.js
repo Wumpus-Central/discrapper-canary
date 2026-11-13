@@ -16,18 +16,23 @@ n.d(
             return c(e, s.A);
         },
         VI: function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (e >= l.A.Seconds.HOUR) {
-                let n = Math.floor(e / l.A.Seconds.HOUR),
-                    i = Math.floor((e - n * l.A.Seconds.HOUR) / l.A.Seconds.MINUTE),
-                    r = e - n * l.A.Seconds.HOUR - i * l.A.Seconds.MINUTE;
-                return d.intl.formatToPlainString(t ? d.t.oEwLez : d.t["3hz51F"], { hours: n, minutes: i, seconds: r });
-            }
-            if (!(e >= 60)) return d.intl.formatToPlainString(t ? d.t["9yE8Ga"] : d.t.IWntYg, { seconds: e });
-            {
-                let n = Math.floor(e / 60);
-                return d.intl.formatToPlainString(t ? d.t.DARKYm : d.t.sY3wlG, { minutes: n, seconds: e - 60 * n });
-            }
+            let t,
+                n,
+                i,
+                r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                {
+                    hours: a,
+                    minutes: s,
+                    seconds: o,
+                } = ((t = Math.floor(e / l.A.Seconds.HOUR)),
+                (n = Math.floor((e - t * l.A.Seconds.HOUR) / l.A.Seconds.MINUTE)),
+                (i = e - t * l.A.Seconds.HOUR - n * l.A.Seconds.MINUTE),
+                { hours: t, minutes: n, seconds: i });
+            return a > 0
+                ? d.intl.formatToPlainString(r ? d.t.oEwLez : d.t["3hz51F"], { hours: a, minutes: s, seconds: o })
+                : s > 0
+                  ? d.intl.formatToPlainString(r ? d.t.DARKYm : d.t.sY3wlG, { minutes: s, seconds: o })
+                  : d.intl.formatToPlainString(r ? d.t["9yE8Ga"] : d.t.IWntYg, { seconds: e });
         },
         _i: function (e) {
             return (0, a.bG)([s.A], () => c(e, s.A));
