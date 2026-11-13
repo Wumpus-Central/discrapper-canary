@@ -4314,10 +4314,10 @@ function od(e) {
                 ((n = N ? (0, a8.T)(t) : z.intl.formatToPlainString(z.t.ZBB4Ty, { productName: (0, a8.T)(t) })),
                 !0 === g ? z.intl.formatToPlainString(z.t.s9RZ1r, { label: n }) : n),
             "aria-describedby": null != E ? I : void 0,
+            topLeftContent: null != E ? (0, l.jsx)(on.A, { id: I, countdown: E, variant: "sidebar" }) : void 0,
             onHoverOrFocusChange: L,
             children: [
                 !0 === g && (0, l.jsx)(a3.N, { className: oa.Pf }),
-                null != E && (0, l.jsx)(on.A, { id: I, countdown: E, variant: "sidebar" }),
                 v &&
                     (0, l.jsx)(oe.A, {
                         spec: j,

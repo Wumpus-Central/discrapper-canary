@@ -40,51 +40,52 @@ t.d(
                     user: t,
                     guildId: l,
                     spec: c,
-                    children: v,
-                    cardStyle: b,
-                    skuPreviewStyle: m,
-                    skuAssetClassName: y,
-                    disableHoverOrFocus: N,
-                    disableRiveHover: A,
-                    onHoverOrFocusChange: k,
-                    onClick: C,
-                    "aria-label": P,
-                    "aria-describedby": z,
+                    topLeftContent: v,
+                    children: b,
+                    cardStyle: m,
+                    skuPreviewStyle: y,
+                    skuAssetClassName: N,
+                    disableHoverOrFocus: A,
+                    disableRiveHover: k,
+                    onHoverOrFocusChange: C,
+                    onClick: P,
+                    "aria-label": z,
+                    "aria-describedby": F,
                 } = i,
-                F = s.useRef(null),
-                { isHoveringOrFocusing: S } = (0, p.A)(F),
-                w = s.useRef(k),
-                G = (0, a.bG)([h.A], () => h.A.getApplication(e.applicationId));
+                S = s.useRef(null),
+                { isHoveringOrFocusing: w } = (0, p.A)(S),
+                G = s.useRef(C),
+                _ = (0, a.bG)([h.A], () => h.A.getApplication(e.applicationId));
             return (
                 s.useEffect(() => {
-                    w.current = k;
-                }, [k]),
+                    G.current = C;
+                }, [C]),
                 s.useEffect(() => {
-                    w.current?.(S);
-                }, [S]),
+                    G.current?.(w);
+                }, [w]),
                 (0, n.jsxs)(o.s, {
-                    ref: F,
-                    className: r()(j.Nr, b),
-                    onClick: C,
-                    "aria-label": P,
-                    "aria-describedby": z,
+                    ref: S,
+                    className: r()(j.Nr, m),
+                    onClick: P,
+                    "aria-label": z,
+                    "aria-describedby": F,
                     style: I(c),
                     children: [
                         (0, n.jsx)(u.A, { children: (0, n.jsx)(d.H, { children: (0, f.T)(e) }) }),
                         (0, n.jsx)("div", {
-                            className: r()(j.ev, m),
+                            className: r()(j.ev, y),
                             children: (0, n.jsx)(x.Ay, {
                                 sku: e,
-                                isFocused: !N && S,
+                                isFocused: !A && w,
                                 user: t,
                                 guildId: l,
-                                eventTargetRef: A ? void 0 : F,
-                                assetClassName: y,
-                                disableHover: A,
+                                eventTargetRef: k ? void 0 : S,
+                                assetClassName: N,
+                                disableHover: k,
                             }),
                         }),
-                        (0, n.jsx)(g.P, { spec: c, application: G }),
-                        v,
+                        v ?? (0, n.jsx)(g.P, { spec: c, application: _ }),
+                        b,
                     ],
                 })
             );

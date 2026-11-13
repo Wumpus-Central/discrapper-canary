@@ -4908,9 +4908,9 @@ function a8(e) {
                     (n = G ? (0, ak.T)(t) : eW.intl.formatToPlainString(eW.t.ZBB4Ty, { productName: (0, ak.T)(t) })),
                     !0 === y ? eW.intl.formatToPlainString(eW.t.s9RZ1r, { label: n }) : n),
                 "aria-describedby": null != k ? N : void 0,
+                topLeftContent: null != k ? (0, i.jsx)(aZ.A, { id: N, countdown: k, variant: "profile" }) : void 0,
                 children: [
                     !0 === y && (0, i.jsx)(r1.N, { className: a1.Pf }),
-                    null != k && (0, i.jsx)(aZ.A, { id: N, countdown: k, variant: "profile" }),
                     j,
                     M && (0, i.jsx)(aX.A, { spec: a5, onClick: D, isHoveringOrFocusing: h, label: U, icon: F }),
                     b && (0, i.jsx)(aq.gS, { isHoveringOrFocusing: h }),
