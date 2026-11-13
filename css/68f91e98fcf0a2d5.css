@@ -172,6 +172,22 @@
     white-space: nowrap
 }
 
+.promoter_kY8v10 {
+    min-width: 0
+}
+
+.progress_kY8v10,
+.promoterIcon_kY8v10 {
+    flex-shrink: 0
+}
+
+.promoterName_kY8v10 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
 .viewQuestCta_kY8v10 {
     bottom: 0;
     inset-inline-end: 0;
@@ -606,4 +622,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=8748197fa5e669e0.css.map*/
+/*# sourceMappingURL=68f91e98fcf0a2d5.css.map*/

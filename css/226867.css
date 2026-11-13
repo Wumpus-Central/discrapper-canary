@@ -181,8 +181,16 @@
 }
 
 .selectionGroup_dbxnkK {
-    margin-top: 16px;
+    margin-top: 16px
+}
+
+.limitedTimeSelectionGroup_dbxnkK,
+.selectionGroup_dbxnkK {
     width: var(--custom-in-app-icon-editor-content-width)
+}
+
+.limitedTimeSelectionGroup_dbxnkK {
+    margin-top: var(--space-32)
 }
 
 .editorFooter_dbxnkK {
@@ -859,4 +867,4 @@
     }
 }
 
-/*# sourceMappingURL=226867.23cd51038dd18494.css.map*/
+/*# sourceMappingURL=226867.e8e787df73a59037.css.map*/

@@ -26,8 +26,8 @@ var l = a(477900),
     b = a(527212),
     L = a(915614),
     _ = a(290863),
-    T = a(652215),
-    C = a(236814),
+    C = a(652215),
+    T = a(236814),
     B = a(996988),
     k = a(701256),
     M = a(792996),
@@ -38,12 +38,12 @@ function G(e) {
         r = (0, b.Ay)(s.id, null),
         n = (0, j.bG)([_.A], () => _.A.getStatus(s.id)),
         c = s.globalName ?? s.username,
-        u = (0, C.gG)(i),
+        u = (0, T.gG)(i),
         o = t.useMemo(
             () =>
                 (0, S.rh)({
                     ...(0, P.Ay)({ channelId: "1337", content: M.intl.string(k.default["U/irIt"]) }),
-                    state: T.cmJ.SENT,
+                    state: C.cmJ.SENT,
                     id: "0",
                 }),
             [],
@@ -84,6 +84,7 @@ function G(e) {
                     isGroupStart: !0,
                     hideSimpleEmbedContent: !0,
                     hideGuildTag: !0,
+                    usernameClassName: D.um,
                 }),
             }),
         ],
@@ -130,7 +131,7 @@ function em(e) {
             isSaving: b,
             previewDisplayNameStyles: L,
             previewAppIconId: _,
-            apply: T,
+            apply: C,
         } = (function (e) {
             let { sourceQuestContent: s, savingRef: a } = e,
                 l = (0, j.bG)([K.default], () => K.default.getCurrentUser()),
@@ -233,17 +234,17 @@ function em(e) {
             };
         })({ sourceQuestContent: x, savingRef: p }),
         B = t.useCallback(async () => {
-            let e = await T();
+            let e = await C();
             if (null != e) {
                 if (!e) return void (0, n.P0)({ text: M.intl.string(M.t.F8FvUy), variant: "critical" });
                 (a(),
                     Object.values(S).some(Boolean) &&
                         (0, n.P0)({ text: M.intl.string(k.default.fX2UkH), variant: "success" }));
             }
-        }, [T, a, S]);
+        }, [C, a, S]);
     if (null == y) return null;
     let D = M.intl.string(k.default.rZmLDm),
-        O = (0, C.gG)(A.aS.HEXAGON),
+        O = (0, T.gG)(A.aS.HEXAGON),
         U = [
             {
                 perk: el.vB.CLIENT_THEME,

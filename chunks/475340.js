@@ -1037,14 +1037,17 @@ function tW(e) {
                                     direction: "horizontal",
                                     gap: 4,
                                     fullWidth: !1,
+                                    className: tq.tv,
                                     children: [
                                         (0, r.jsx)(tS.CircleCheckIcon, {
                                             size: "xs",
                                             color: e1.A.colors.ICON_MUTED.css,
+                                            className: tq.K3,
                                         }),
                                         (0, r.jsx)(J.E, {
                                             variant: "body-sm/normal",
                                             color: "text-muted",
+                                            className: tq.eA,
                                             children: n.config.messages.gamePublisher,
                                         }),
                                     ],
@@ -1053,6 +1056,7 @@ function tW(e) {
                                     direction: "horizontal",
                                     gap: 4,
                                     fullWidth: !1,
+                                    className: tq.qB,
                                     children: [
                                         (0, tQ.pv)(n.config) === tv.Z.VIDEO
                                             ? (0, r.jsx)(tp.CirclePlayIcon, {

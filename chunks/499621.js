@@ -19,5 +19,9 @@ e.exports = {
     tw: "shelfCardQuestDetails_kY8v10",
     Tr: "progressWrapper_kY8v10",
     Ht: "rewardName_kY8v10",
+    tv: "promoter_kY8v10",
+    qB: "progress_kY8v10",
+    K3: "promoterIcon_kY8v10",
+    eA: "promoterName_kY8v10",
     um: "viewQuestCta_kY8v10",
 };

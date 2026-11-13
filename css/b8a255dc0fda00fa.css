@@ -73,6 +73,15 @@
     width: 269px
 }
 
+.messageCard_TcSroI .messageUsername_TcSroI {
+    display: inline-block;
+    max-width: calc(100% - 4.5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap
+}
+
 .root_kxCM2B {
     border-radius: inherit;
     display: flex;
@@ -213,4 +222,4 @@
     top: var(--space-8)
 }
 
-/*# sourceMappingURL=0dc504ed8299314c.css.map*/
+/*# sourceMappingURL=b8a255dc0fda00fa.css.map*/

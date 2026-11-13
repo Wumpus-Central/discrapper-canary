@@ -6,4 +6,5 @@ r.exports = {
     vR: "profileName_TcSroI",
     Z2: "appIcon_TcSroI",
     W1: "messageCard_TcSroI",
+    um: "messageUsername_TcSroI",
 };
