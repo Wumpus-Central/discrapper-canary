@@ -32,8 +32,16 @@ function u(e) {
     }
 }
 function _(e) {
-    let { guild_id: t, icon_url: n, online: i, members: r, ...a } = e;
-    return { ...a, guildId: t, iconUrl: n, online: Number(i), members: Number(r) };
+    let { guild_id: t, icon_url: n, online: i, members: r, description: a, partnered: s, ...l } = e;
+    return {
+        ...l,
+        guildId: t,
+        iconUrl: n,
+        description: "string" == typeof a ? a : null,
+        partnered: !0 === s,
+        online: Number(i),
+        members: Number(r),
+    };
 }
 function E(e) {
     return (o.warn(`Rejected Waterwheels card: ${e}`), { ok: !1, reason: e });
