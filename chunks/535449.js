@@ -1015,6 +1015,7 @@ let en = {
                                         [c, m, s],
                                     ));
                                 let b = {
+                                    id: C,
                                     Icon: void 0,
                                     text: l,
                                     tooltip: null,

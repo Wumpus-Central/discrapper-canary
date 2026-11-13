@@ -235,6 +235,7 @@ function eD(e) {
             return null == e
                 ? null
                 : {
+                      id: e.id,
                       Icon: (0, ek.LZ)(e.pdp?.icon ?? null),
                       text: "",
                       tooltip: null,

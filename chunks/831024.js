@@ -2,16 +2,16 @@ var n = t(582128),
     l = t(240248),
     u = t(936785),
     a = t(879043),
-    o = t(556766),
-    s = t(25082),
-    i = t(792996);
+    i = t(556766),
+    o = t(25082),
+    s = t(792996);
 t.d(
     r,
     {},
     {
         u: function (e) {
             let { surface: r, applicationId: t } = e,
-                c = (0, o.m)(t),
+                c = (0, i.m)(t),
                 d = n.useMemo(() => (null == c ? null : (Object.values(c)[0] ?? null)), [c]),
                 m = (0, a.j)(d, "storefront.headerText"),
                 f = (0, a.j)(d, "vcStream.tooltip");
@@ -24,6 +24,7 @@ t.d(
                         case "storefront_banner":
                             if ((0, l.uJ)(m)) return null;
                             return {
+                                id: d.id,
                                 Icon: (0, u.LZ)(d.pdp?.icon ?? null),
                                 text: m,
                                 tooltip: null,
@@ -34,8 +35,9 @@ t.d(
                             };
                         case "storefront_badge":
                             return {
+                                id: d.id,
                                 Icon: (0, u.LZ)("TAG"),
-                                text: i.intl.string(s.default.hriMCc),
+                                text: s.intl.string(o.default.hriMCc),
                                 tooltip: (0, l.uJ)(f) ? null : f,
                                 endsAt: e,
                                 flavor: d.flavor,
@@ -46,6 +48,7 @@ t.d(
                             let r = d.vcStream?.label;
                             if ((0, l.uJ)(r)) return null;
                             return {
+                                id: d.id,
                                 Icon: (0, u.LZ)(d.vcStream?.icon ?? null),
                                 text: r,
                                 tooltip: f,

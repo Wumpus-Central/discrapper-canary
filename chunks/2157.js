@@ -35,6 +35,7 @@ function m(e) {
                     let t = (0, r.Ew)(g, f.amount);
                     if ((0, i.uJ)(t)) return null;
                     return {
+                        id: h.id,
                         Icon: (0, r.LZ)(h.checkout?.icon ?? null),
                         text: t,
                         tooltip: (0, r.Ew)(I, f.amount),
@@ -49,6 +50,7 @@ function m(e) {
                         n = (0, r.Ew)(E, f?.amount ?? null);
                     if ((0, i.uJ)(n)) return null;
                     return {
+                        id: h.id,
                         Icon: (0, r.LZ)(t?.icon ?? null),
                         text: n,
                         tooltip: (0, r.Ew)(S, f?.amount ?? null),
@@ -66,6 +68,7 @@ function m(e) {
                         a = (0, r.Ew)(n, f.amount);
                     if ((0, i.uJ)(a)) return null;
                     return {
+                        id: h.id,
                         Icon: (0, r.LZ)("TAG"),
                         text: d.intl.string(c.default.hriMCc),
                         tooltip: (0, r.Ew)(l, f.amount),

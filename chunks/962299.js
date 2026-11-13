@@ -2,8 +2,8 @@ var r = n(477900),
     s = n(582128),
     o = n(503698),
     c = n.n(o),
-    l = n(834730),
-    i = n(28863),
+    i = n(834730),
+    l = n(28863),
     a = n(403581),
     u = n(821609),
     d = n(812095),
@@ -27,13 +27,13 @@ function S(t) {
         className: c()(A.FS, o),
         children: [
             null != e && (0, r.jsx)(e, { size: "xs", color: "currentColor", className: A.Kk }),
-            (0, r.jsxs)(l.E, {
+            (0, r.jsxs)(i.E, {
                 variant: "body-sm/normal",
                 color: "currentColor",
                 children: [
                     (0, d.U)(n),
                     null != s &&
-                        (0, r.jsx)(i.Anchor, {
+                        (0, r.jsx)(l.Anchor, {
                             href: s,
                             target: "_blank",
                             className: A.nf,
@@ -63,9 +63,9 @@ n.d(
         M: function (t) {
             let { applicationId: e, analyticsLocations: n } = t,
                 o = (0, N.u)({ surface: "storefront_banner", applicationId: e }),
-                l = (0, k.Pc)(o),
-                i = o?.endsAt ?? null,
-                d = (0, v.tm)(i),
+                i = (0, k.Pc)(o),
+                l = o?.endsAt ?? null,
+                d = (0, v.tm)(l),
                 j = (0, f.h)(o),
                 p = s.useCallback(() => {
                     (0, m.A)({
@@ -76,8 +76,8 @@ n.d(
                     });
                 }, [n, e, o]);
             if (null == o || (d && o.rewardStatus !== x.GM.EARNED)) return null;
-            let L = e === I.S3 ? (0, I.X3)(e) : void 0;
-            if ((0, k.ad)(l))
+            let L = e === I.S3 && o.id === I.ZX ? (0, I.X3)(e) : void 0;
+            if ((0, k.ad)(i))
                 return (0, r.jsx)(b.A, {
                     color: "nitro-pink",
                     sticky: !0,

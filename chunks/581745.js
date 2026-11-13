@@ -1443,17 +1443,18 @@ var nv = n(521058);
 function nb() {
     let { storefrontPromotion: e } = W();
     if (null == e || "nitro" !== e.flavor) return null;
-    let { endsAt: t, flavor: n, pdp: l, rewardRequirements: i, storefront: a } = e;
-    if (null == a || (0, tc.uJ)(a.headerText)) return null;
-    let s = {
-        Icon: (0, nh.LZ)(l?.icon ?? null),
-        text: a.headerText,
+    let { id: t, endsAt: n, flavor: l, pdp: i, rewardRequirements: a, storefront: s } = e;
+    if (null == s || (0, tc.uJ)(s.headerText)) return null;
+    let o = {
+        id: t,
+        Icon: (0, nh.LZ)(i?.icon ?? null),
+        text: s.headerText,
         tooltip: null,
-        endsAt: (0, nh.RD)(t),
-        flavor: n,
-        rewardRequirements: i,
+        endsAt: (0, nh.RD)(n),
+        flavor: l,
+        rewardRequirements: a,
     };
-    return (0, r.jsx)(nj, { className: nv.v, promotion: s });
+    return (0, r.jsx)(nj, { className: nv.v, promotion: o });
 }
 let nI = [0, 1, 2, 3],
     nN = { placement: nl.Ye.GAME_PROFILE };
