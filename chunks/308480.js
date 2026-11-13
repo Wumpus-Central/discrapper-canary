@@ -8774,7 +8774,7 @@ let r4 = {
     "discord_app/images/burst_reactions/BurstReaction_Bubbles_v03.lottiejson": () =>
         a.e(91770).then(a.t.bind(a, 95553, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Portal_v03.lottiejson": () =>
-        a.e(196515).then(a.t.bind(a, 956481, 19)),
+        a.e(196515).then(a.t.bind(a, 178862, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Slime_v02.lottiejson": () =>
         a.e(109302).then(a.t.bind(a, 16341, 19)),
     "discord_app/images/burst_reactions/mobile/fullscreen/SuperReactions_Mobile_Send_Slime_v1.lottiejson": () =>
@@ -15865,7 +15865,7 @@ function u1() {
               ],
           });
 }
-var u2 = a(922064),
+var u2 = a(970905),
     u3 = a(653887),
     u6 = a(799226);
 function u5() {

@@ -10,7 +10,7 @@ let i, r, a, s, l, o, d, c, u;
         SpanTtiNames: () => ee.wJ,
         analyticsTrackingStoreMaker: () => J,
         encodeProperties: () => p,
-        extendSuperProperties: () => eT,
+        extendSuperProperties: () => eg,
         getBrowser: () => eh,
         getCampaignParams: () => em,
         getDevice: () => eI,
@@ -36,8 +36,8 @@ function p(e) {
 (n(142703), n(667532), n(321073));
 var m = n(115560);
 n(423034);
-var g = n(80703),
-    T = n(855986),
+var T = n(80703),
+    g = n(855986),
     S = n(620632),
     N = n(187207),
     C = n(611599),
@@ -268,7 +268,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             c = (function (e) {
                                 if (null != r) return r;
                                 let t = e.fingerprint ?? a();
-                                return null != t ? (0, g.d)(t) : null;
+                                return null != t ? (0, T.d)(t) : null;
                             })(d);
                         if ((null != c && (d.properties.client_uuid = K.generate(c)), X.push(d), X.length > 1e4)) {
                             let e = X.length - 1e4;
@@ -283,7 +283,7 @@ let Y = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 let { analyticsToken: t, userId: n } = e;
                 return (null == i && null != t && ((i = t), (r = n), f({ shouldFlushOnNextTick: !1 })), !1);
             }));
-        class C extends T.Ay.Store {
+        class C extends g.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
@@ -440,7 +440,7 @@ function em(e) {
         t
     );
 }
-function eg() {
+function eT() {
     let e,
         t = {};
     return (
@@ -490,12 +490,12 @@ if (null == a)
                     es.w.set(ec, 1));
             }
             let t = es.w.get(eu);
-            null == t && ((t = eg()), es.w.set(eu, t));
+            null == t && ((t = eT()), es.w.set(eu, t));
             let n = el.u.get(eu);
             if (null == n) {
                 var i;
                 let e;
-                ((i = eg()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), el.u.set(eu, n));
+                ((i = eT()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), el.u.set(eu, n));
             }
             return {
                 ...e,
@@ -525,7 +525,7 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function eT(e) {
+function eg(e) {
     s = p((a = { ...a, ...e }));
 }
 function eS() {
@@ -534,12 +534,12 @@ function eS() {
 function eN() {
     return s;
 }
-eT(
+eg(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("673036", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("673054", 10))) || (l.client_build_number = d),
     null == (c = eE?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
