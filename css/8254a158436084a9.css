@@ -250,7 +250,8 @@
     transform: translateX(-100%)
 }
 
-.full-motion .highlight_edinHs:after {
+.full-motion .row_edinHs:focus-within .highlight_edinHs:after,
+.full-motion .row_edinHs:hover .highlight_edinHs:after {
     animation: guildSpaceChannelRowShine_edinHs 2.6s ease-in-out infinite
 }
 
@@ -752,4 +753,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=eeab8c6e57b1e622.css.map*/
+/*# sourceMappingURL=8254a158436084a9.css.map*/
