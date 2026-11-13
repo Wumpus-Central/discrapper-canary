@@ -1,21 +1,22 @@
 i.d(t, { c: () => T });
 var n = i(855986),
-    r = i(71393),
-    l = i(927813),
+    l = i(71393),
+    r = i(927813),
     a = i(669610),
     d = i(73153),
     o = i(951217);
 let u = {},
-    A = {},
+    g = {},
     I = {},
-    _ = {};
-function g(e) {
-    ((I[e.id] = e), (_[e.guildId] = e), delete A[e.guildId], delete u[e.guildId]);
+    _ = {},
+    A = {};
+function c(e) {
+    ((I[e.id] = e), (_[e.guildId] = e), delete g[e.guildId], delete u[e.guildId]);
 }
 function G(e) {
-    (delete I[e.id], delete _[e.guildId], delete A[e.guildId], delete u[e.guildId]);
+    (delete I[e.id], delete _[e.guildId], delete A[e.guildId], delete g[e.guildId], delete u[e.guildId]);
 }
-class c extends n.Ay.Store {
+class E extends n.Ay.Store {
     static displayName = "GameOrganizationStore";
     getGameOrganization(e) {
         return I[e];
@@ -23,32 +24,35 @@ class c extends n.Ay.Store {
     getGameOrganizationByGuildId(e) {
         return null == e ? null : (_[e] ?? null);
     }
+    getDisplayNounByGuildId(e) {
+        return null == e ? null : (A[e] ?? null);
+    }
     isLoadingForGuild(e) {
         return null != e && (u[e] ?? !1);
     }
     getErrorForGuild(e) {
-        return null == e ? null : (A[e] ?? null);
+        return null == e ? null : (g[e] ?? null);
     }
 }
-let E = new c(d.h, {
+let s = new E(d.h, {
     GAME_ORGANIZATION_FETCH_START: function (e) {
         let { guildId: t } = e;
         u[t] = !0;
     },
     GAME_ORGANIZATION_FETCH_SUCCESS: function (e) {
-        let { gameOrganization: t } = e;
-        g(t);
+        let { gameOrganization: t, displayNoun: i } = e;
+        (c(t), (A[t.guildId] = i));
     },
     GAME_ORGANIZATION_FETCH_FAILURE: function (e) {
         let { guildId: t, error: i } = e;
-        (delete u[t], (A[t] = i));
+        (delete u[t], (g[t] = i));
     },
     GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function (e) {
         let {
-                invite: { game_organization: t },
+                invite: { game_organization: t, application_config: i },
             } = e,
-            i = (0, o.p)(t);
-        (g(i), delete A[i.guildId]);
+            n = (0, o.p)(t);
+        (c(n), null != i && (A[n.guildId] = i.display_noun), delete g[n.guildId]);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
@@ -66,18 +70,18 @@ let E = new c(d.h, {
         return null != i && (G(i), !0);
     },
 });
-var s = i(652215);
-let O = 5 * l.A.Seconds.MINUTE,
-    N = 15 * l.A.Seconds.SECOND,
-    T = (0, n.UT)(E, {
-        getQueryId: s.fic.GAME_ORGANIZATION,
-        get: (e) => E.getGameOrganizationByGuildId(e),
+var p = i(652215);
+let N = 5 * r.A.Seconds.MINUTE,
+    O = 15 * r.A.Seconds.SECOND,
+    T = (0, n.UT)(s, {
+        getQueryId: p.fic.GAME_ORGANIZATION,
+        get: (e) => s.getGameOrganizationByGuildId(e),
         load: (e) => {
-            let t = r.A.getGuild(e);
+            let t = l.A.getGuild(e);
             return null == t || null == t.linkedGameOrganization ? Promise.resolve(void 0) : (0, a.G)(e);
         },
-        getIsLoading: (e) => E.isLoadingForGuild(e),
-        getError: (e) => E.getErrorForGuild(e),
-        staleAfter: O,
-        failureStaleAfter: N,
+        getIsLoading: (e) => s.isLoadingForGuild(e),
+        getError: (e) => s.getErrorForGuild(e),
+        staleAfter: N,
+        failureStaleAfter: O,
     });
