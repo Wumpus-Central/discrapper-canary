@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672573, Version Hash: 53f1df8e679f987e5b0d7bc6791725872f59eab7`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672583, Version Hash: 3c911dd1ab3feda431d05d9dd581ceb1c7b25cec`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672573";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672583";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15993,7 +15993,7 @@ let ph = "isHideDevBanner",
                     className: td()(pf.Wz, pf.mr),
                     children: [
                         (0, v.jsx)(pA, { className: pf.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672573" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672583" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -43879,28 +43879,35 @@ let U8 = t7((e) => {
             })
         );
     }),
-    we = e_.Ay.connectStores([sK.A, pc.A, en.default], () => ({
+    we = e_.Ay.connectStores([sK.A, pc.A, en.default, ek.default], () => ({
         isConnected: sK.A.isConnected(),
+        hasCurrentUser: null != ek.default.getCurrentUser(),
         defaultRoute: pc.A.defaultRoute,
         defaultRouteFallback: pc.A.fallbackRoute,
         token: en.default.getToken(),
     }))(
         class extends eh.Component {
             render() {
-                let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: i } = this.props;
-                if (null == n) return (0, v.jsx)(tx.rd, { to: H.BVt.DEFAULT_LOGGED_OUT });
-                if (e) {
+                let {
+                    isConnected: e,
+                    hasCurrentUser: t,
+                    defaultRoute: n,
+                    token: i,
+                    defaultRouteFallback: r,
+                } = this.props;
+                if (null == i) return (0, v.jsx)(tx.rd, { to: H.BVt.DEFAULT_LOGGED_OUT });
+                if (e && t) {
                     if ((0, f2.dc)("SessionRedirector"))
                         return (
                             IB.A.getState().setUtmCurrentContext({ utmContentCurrent: hF.jD }),
                             (0, v.jsx)(tx.rd, { to: H.BVt.QUEST_HOME })
                         );
-                    let e = wl(t);
+                    let e = wl(n);
                     return null == e ||
                         ((e.params.guildId === H.ME || null != eJ.A.getGuild(e.params.guildId)) &&
                             null != nm.A.getChannel(e.params.channelId))
-                        ? (0, v.jsx)(tx.rd, { to: t })
-                        : (0, v.jsx)(tx.rd, { to: i });
+                        ? (0, v.jsx)(tx.rd, { to: n })
+                        : (0, v.jsx)(tx.rd, { to: r });
                 }
                 return null;
             }
